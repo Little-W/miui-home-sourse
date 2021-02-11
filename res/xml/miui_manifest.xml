@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest miui:name="com.miui.home" miui:level="1" xmlns:miui="http://schemas.android.com/apk/res/miui">
+    <modules>
+        <module miui:name="com.mi.android.globalpersonalassistant" miui:minLevel="1" miui:dependencyType="optional" />
+    </modules>
+</manifest>

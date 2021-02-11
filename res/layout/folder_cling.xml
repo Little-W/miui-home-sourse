@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miui.home.launcher.FolderCling android:id="@id/folder_cling" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.launcher.FitSystemWindowView android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/folder" />
+        <include android:layout_gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/small_icons_recommend_screen" />
+    </com.miui.home.launcher.FitSystemWindowView>
+</com.miui.home.launcher.FolderCling>

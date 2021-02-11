@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miui.home.launcher.commercial.recommend.SmallIconsRecommendScreen android:orientation="vertical" android:id="@id/recommend_screen" android:paddingBottom="@dimen/recommend_grid_padding_bottom" android:visibility="invisible" android:clickable="true" android:animationCache="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/recommend_header" />
+    <com.miui.home.launcher.commercial.recommend.RecommendAppsThumbnailView android:layout_gravity="center_horizontal" android:id="@id/recommend_apps" android:clipToPadding="false" android:animationCache="false" android:layout_width="@dimen/folder_content_width" android:layout_height="@dimen/recommend_panel_height" />
+</com.miui.home.launcher.commercial.recommend.SmallIconsRecommendScreen>

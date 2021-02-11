@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="miuix_sbl_action_indeterminate_distance">199.0dip</dimen>
+    <dimen name="miuix_sbl_action_simple_enter">500.0dip</dimen>
+    <dimen name="miuix_sbl_action_simple_trigger">636.0dip</dimen>
+    <dimen name="miuix_sbl_action_upindeterminate_distance">133.0dip</dimen>
+    <dimen name="miuix_sbl_indicator_locked_body_height">73.0dip</dimen>
+    <dimen name="miuix_sbl_indicator_locked_body_margintop">40.0dip</dimen>
+    <dimen name="miuix_sbl_indicator_locked_body_width">98.0dip</dimen>
+    <dimen name="miuix_sbl_indicator_locked_header_height">40.0dip</dimen>
+    <dimen name="miuix_sbl_indicator_locked_header_width">60.0dip</dimen>
+    <dimen name="miuix_sbl_indicator_locked_labe_margintop">24.0dip</dimen>
+    <dimen name="miuix_sbl_indicator_locked_labe_textsize">36.0sp</dimen>
+    <dimen name="miuix_sbl_indicator_locked_layout_padding_bottom">100.0dip</dimen>
+    <dimen name="miuix_sbl_tracking_progress_bg_height">60.0dip</dimen>
+    <dimen name="miuix_sbl_tracking_progress_bg_marginbottom">40.0dip</dimen>
+    <dimen name="miuix_sbl_tracking_progress_bg_marginleft">38.0dip</dimen>
+    <dimen name="miuix_sbl_tracking_progress_bg_marginright">38.0dip</dimen>
+    <dimen name="miuix_sbl_tracking_progress_bg_margintop">40.0dip</dimen>
+    <dimen name="miuix_sbl_tracking_progress_bg_radius_width">90.0dip</dimen>
+    <dimen name="miuix_sbl_tracking_progress_bg_stroke_width">4.0dip</dimen>
+    <dimen name="miuix_sbl_tracking_progress_bg_width">60.0dip</dimen>
+    <dimen name="miuix_sbl_tracking_progress_labe_marginbottom">40.0dip</dimen>
+    <dimen name="miuix_sbl_tracking_progress_labe_margintop">114.0dip</dimen>
+    <dimen name="miuix_sbl_tracking_progress_labe_textsize">36.0sp</dimen>
+    <dimen name="miuix_sbl_tracking_uo_progress_labe_margintleft">14.0dip</dimen>
+    <dimen name="miuix_sbl_tracking_up_progress_bg_marginbottom">40.0dip</dimen>
+    <dimen name="miuix_sbl_tracking_up_progress_bg_margintop">40.0dip</dimen>
+</resources>

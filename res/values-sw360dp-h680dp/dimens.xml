@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="quick_call_icon_icon_padding_top">20.0dip</dimen>
+</resources>

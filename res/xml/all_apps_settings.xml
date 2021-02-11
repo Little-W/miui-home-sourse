@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="desktop_mode_settings" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.settings.preference.DesktopModePreference android:key="desktop_mode" />
+    <PreferenceCategory android:key="classic_settings">
+        <com.miui.home.settings.preference.ListPreference android:title="@string/launcher_slide_up_title" android:key="launcher_slide_up" />
+        <com.miui.home.settings.preference.CheckBoxPreference android:persistent="false" android:title="@string/launcher_sliding_up_gesture" android:key="launcher_slide_up_global_pref" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:key="drawer_settings">
+        <com.miui.home.settings.preference.CheckBoxPreference android:persistent="false" android:title="@string/recommend_app" android:key="key_recommend_apps" android:summary="@string/show_most_popular_apps_you_used" android:defaultValue="false" />
+        <com.miui.home.settings.preference.ValuePreference android:title="@string/manager_group_settings" android:key="key_app_category" />
+        <com.miui.home.settings.preference.ValuePreference android:title="@string/drawer_background" android:key="key_drawer_background" />
+        <com.miui.home.settings.preference.ListPreference android:title="@string/all_apps_setting_scroll_bar" android:key="fast_scroller_style" />
+        <com.miui.home.settings.preference.CheckBoxPreference android:persistent="false" android:title="@string/auto_add_app_shortcut" android:key="key_auto_add_new_app_shortcut" android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

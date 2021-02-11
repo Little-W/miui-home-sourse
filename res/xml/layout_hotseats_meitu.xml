@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorites
+  xmlns:launcher="http://schemas.android.com/apk/res/com.miui.home">
+    <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:container="-101" launcher:packageName="com.android.contacts" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:container="-101" launcher:packageName="com.android.mms" launcher:x="1" launcher:y="0" />
+    <favorite launcher:className="com.android.browser.BrowserActivity" launcher:container="-101" launcher:packageName="com.android.browser" launcher:x="2" launcher:y="0" />
+    <favorite launcher:className="com.mtlab.camera.CameraActivity" launcher:container="-101" launcher:packageName="com.mlab.cam" launcher:x="3" launcher:y="0" />
+</favorites>

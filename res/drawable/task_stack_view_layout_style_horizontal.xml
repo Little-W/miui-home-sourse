@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="1004.0dip" android:width="464.0dip" android:viewportWidth="464.0" android:viewportHeight="1004.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group>
+        <clip-path android:pathData="M0,50.88C0,33.26 0,24.45 3.37,17.7C6.47,11.5 11.5,6.47 17.7,3.37C24.45,0 33.26,0 50.88,0H412.51C430.13,0 438.93,0 445.69,3.37C451.89,6.47 456.91,11.5 460.01,17.7C463.39,24.45 463.39,33.26 463.39,50.88V953.12C463.39,970.74 463.39,979.55 460.01,986.3C456.91,992.5 451.89,997.53 445.69,1000.63C438.93,1004 430.13,1004 412.51,1004H50.88C33.26,1004 24.45,1004 17.7,1000.63C11.5,997.53 6.47,992.5 3.37,986.3C0,979.55 0,970.74 0,953.12V50.88Z" />
+        <path android:fillColor="@drawable/$task_stack_view_layout_style_horizontal__0" android:pathData="M0,0h463.39v1004h-463.39z" />
+        <path android:fillColor="#ffffffff" android:pathData="M396.88,254L607.98,254A20.59,20.59 0,0 1,628.57 274.59L628.57,777.41A20.59,20.59 0,0 1,607.98 798L396.88,798A20.59,20.59 0,0 1,376.29 777.41L376.29,274.59A20.59,20.59 0,0 1,396.88 254z" android:strokeAlpha="0.9" android:fillAlpha="0.9" />
+        <path android:fillColor="#ff65d0ff" android:pathData="M391.31,185L417.31,185A15,15 0,0 1,432.31 200L432.31,226A15,15 0,0 1,417.31 241L391.31,241A15,15 0,0 1,376.31 226L376.31,200A15,15 0,0 1,391.31 185z" />
+        <path android:fillColor="#ffffffff" android:pathData="M-144.59,254L66.5,254A20.59,20.59 0,0 1,87.1 274.59L87.1,777.41A20.59,20.59 0,0 1,66.5 798L-144.59,798A20.59,20.59 0,0 1,-165.19 777.41L-165.19,274.59A20.59,20.59 0,0 1,-144.59 254z" android:strokeAlpha="0.9" android:fillAlpha="0.9" />
+        <path android:fillColor="#fff3cc80" android:pathData="M121,185L147,185A15,15 0,0 1,162 200L162,226A15,15 0,0 1,147 241L121,241A15,15 0,0 1,106 226L106,200A15,15 0,0 1,121 185z" />
+        <path android:fillColor="#ffffffff" android:pathData="M126.57,254L337.67,254A20.59,20.59 0,0 1,358.27 274.59L358.27,777.41A20.59,20.59 0,0 1,337.67 798L126.57,798A20.59,20.59 0,0 1,105.98 777.41L105.98,274.59A20.59,20.59 0,0 1,126.57 254z" android:strokeAlpha="0.9" android:fillAlpha="0.9" />
+    </group>
+</vector>

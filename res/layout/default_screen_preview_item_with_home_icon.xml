@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miui.home.launcher.DefaultScreenPreviewBorder android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.miui.home.launcher.ThumbnailContainer android:id="@id/thumbnail" android:layout_width="@dimen/default_screen_preview_thumbnail_view_width" android:layout_height="@dimen/default_screen_preview_thumbnail_view_height" />
+        <ImageView android:layout_gravity="center" android:id="@id/home_icon" android:background="@drawable/default_screen_home_icon_layout_background" android:layout_width="fill_parent" android:layout_height="@dimen/default_screen_home_layout_height" android:src="@drawable/default_screen_home_icon" android:scaleType="center" android:tint="@color/default_screen_home_icon_color_light" android:tintMode="src_in" />
+    </LinearLayout>
+</com.miui.home.launcher.DefaultScreenPreviewBorder>

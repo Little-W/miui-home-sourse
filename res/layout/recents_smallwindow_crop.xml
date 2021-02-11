@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miui.home.recents.views.RecentsSmallWindowCrop android:id="@id/recents_smallwindow_crop" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center|right|top" android:id="@id/recents_smallwindow" android:layout_width="107.629974dip" android:layout_height="107.629974dip">
+        <View android:id="@id/recents_smallwindow_background" android:background="@drawable/recents_smallwindow_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginStart="17.0dip">
+            <View android:id="@id/smallwindow_icon" android:background="@drawable/smallwindow_icon" android:layout_width="21.089996dip" android:layout_height="23.269989dip" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/smallwindow_text_color" android:id="@id/recents_smallwindow_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.1799927dip" android:text="@string/recents_smallwindow_text" android:singleLine="true" android:layout_above="@id/smallwindow_icon" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:alpha="0.0" android:fontFamily="mipro-medium" />
+        </RelativeLayout>
+    </FrameLayout>
+</com.miui.home.recents.views.RecentsSmallWindowCrop>

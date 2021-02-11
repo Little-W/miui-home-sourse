@@ -1,0 +1,43 @@
+.class Lcom/tencent/matrix/AppActiveMatrixDelegate$_lancet;
+.super Ljava/lang/Object;
+
+
+# direct methods
+.method static com_miui_home_launcher_aop_LogHooker_md(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 0
+    .annotation runtime Lme/ele/lancet/base/annotations/Proxy;
+        value = "d"
+    .end annotation
+
+    .annotation runtime Lme/ele/lancet/base/annotations/TargetClass;
+        value = "com.tencent.matrix.util.MatrixLog"
+    .end annotation
+
+    return-void
+.end method
+
+.method static com_miui_home_launcher_aop_LogHooker_me(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 0
+    .annotation runtime Lme/ele/lancet/base/annotations/Proxy;
+        value = "e"
+    .end annotation
+
+    .annotation runtime Lme/ele/lancet/base/annotations/TargetClass;
+        value = "com.tencent.matrix.util.MatrixLog"
+    .end annotation
+
+    return-void
+.end method
+
+.method static com_miui_home_launcher_aop_LogHooker_mi(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .locals 0
+    .annotation runtime Lme/ele/lancet/base/annotations/Proxy;
+        value = "i"
+    .end annotation
+
+    .annotation runtime Lme/ele/lancet/base/annotations/TargetClass;
+        value = "com.tencent.matrix.util.MatrixLog"
+    .end annotation
+
+    return-void
+.end method

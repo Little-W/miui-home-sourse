@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="all_apps_list_padding_side">16.0dip</dimen>
+    <dimen name="all_apps_section_title_padding_horizontal">32.0dip</dimen>
+    <dimen name="edit_mode_workspace_thumbnail_view_height">112.0dip</dimen>
+    <dimen name="edit_mode_workspace_thumbnail_view_width">70.0dip</dimen>
+    <dimen name="editing_entry_thumbnail_view_height">90.0dip</dimen>
+    <dimen name="editing_panel_height">120.0dip</dimen>
+    <dimen name="folder_content_padding_left">0.0dip</dimen>
+    <dimen name="folder_content_width">406.0dip</dimen>
+    <dimen name="hotseats_height">127.0dip</dimen>
+    <dimen name="hotseats_height_land">95.0dip</dimen>
+    <dimen name="hotseats_height_land_navigation">70.0dip</dimen>
+    <dimen name="hotseats_height_navigation">70.0dip</dimen>
+    <dimen name="hotseats_padding_side">0.0dip</dimen>
+    <dimen name="search_bar_margin_bottom">34.0dip</dimen>
+    <dimen name="search_bar_margin_top">28.0dip</dimen>
+    <dimen name="status_bar_height">18.199982dip</dimen>
+    <dimen name="workspace_cell_height">90.0dip</dimen>
+    <dimen name="workspace_cell_padding_side">12.0dip</dimen>
+    <dimen name="workspace_cell_padding_side_rotatable">32.0dip</dimen>
+    <dimen name="workspace_cell_padding_top">16.0dip</dimen>
+    <dimen name="workspace_cell_width">85.0dip</dimen>
+    <dimen name="workspace_icon_text_notification_size">12.0sp</dimen>
+    <dimen name="workspace_widget_cell_min_height">80.0dip</dimen>
+    <dimen name="workspace_widget_cell_padding_bottom">110.0dip</dimen>
+    <dimen name="workspace_widget_cell_padding_top">0.0dip</dimen>
+</resources>

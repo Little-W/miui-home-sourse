@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="config_icon_height">61.0dip</dimen>
+    <item type="dimen" name="config_icon_height_theme_version_0">@dimen/config_icon_height</item>
+    <dimen name="config_icon_width">61.0dip</dimen>
+    <item type="dimen" name="config_icon_width_theme_version_0">@dimen/config_icon_width</item>
+    <dimen name="editing_panel_height">122.0dip</dimen>
+    <dimen name="folder_bottom_padding">128.0dip</dimen>
+    <dimen name="folder_top_padding">74.0dip</dimen>
+    <dimen name="hotseats_height">89.5dip</dimen>
+    <dimen name="hotseats_padding_side">8.0dip</dimen>
+    <dimen name="recommend_loading_item_padding">24.0dip</dimen>
+    <dimen name="toggle_size">34.0dip</dimen>
+    <dimen name="workspace_cell_height">83.0dip</dimen>
+    <dimen name="workspace_cell_padding_side">12.0dip</dimen>
+    <dimen name="workspace_cell_width">78.0dip</dimen>
+    <dimen name="folder_preview_height">41.0dip</dimen>
+    <dimen name="folder_preview_width">41.0dip</dimen>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="config_dragViewScale">109.99756%</fraction>
+    <fraction name="normal_edit_mode_screen_scale_ratio">88.0%</fraction>
+    <fraction name="quick_edit_mode_screen_scale_ratio">93.00001%</fraction>
+    <fraction name="recents_horizontal_layout_task_view_scale">54.4%</fraction>
+    <fraction name="search_bar_light_threshold">8.000004%</fraction>
+</resources>
