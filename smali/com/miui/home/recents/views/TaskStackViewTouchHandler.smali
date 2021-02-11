@@ -1562,6 +1562,18 @@
     return v1
 .end method
 
+.method private logf()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
+
+    check-cast v0, Lcom/miui/home/recents/views/MyTaskStackView;
+
+    invoke-virtual {v0}, Lcom/miui/home/recents/views/MyTaskStackView;->fakeEventWithDelay()V
+
+    return-void
+.end method
+
 .method private maybeHideRecentsFromBackgroundTap(FF)V
     .locals 2
 
@@ -2579,6 +2591,7 @@
 
     invoke-virtual {v0, p1, v1, v2}, Lcom/miui/home/recents/views/TaskStackView;->getLayoutTaskTransforms(FLjava/util/ArrayList;Ljava/util/ArrayList;)V
 
+    invoke-direct {p0}, Lcom/miui/home/recents/views/TaskStackViewTouchHandler;->logf()V
     :cond_2
     return-void
 .end method

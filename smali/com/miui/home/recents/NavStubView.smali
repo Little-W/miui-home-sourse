@@ -7179,7 +7179,9 @@
     sget-object v1, Lcom/miui/home/launcher/LauncherState;->OVERVIEW:Lcom/miui/home/recents/OverviewState;
 
     invoke-virtual {v1}, Lcom/miui/home/recents/OverviewState;->getOverviewBackgroundAlpha()F
-
+    
+    invoke-virtual {p0}, Lcom/miui/home/recents/NavStubView;->sendFakeEvent()V
+    
     move-result v1
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/miui/home/launcher/Launcher;->updateOverviewBackgroundAlpha(FJ)V
@@ -16808,5 +16810,24 @@
     iput-boolean p1, p0, Lcom/miui/home/recents/NavStubView;->mIsSafeArea:Z
 
     :cond_1
+    return-void
+.end method
+.method public sendFakeEvent()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/miui/home/recents/NavStubView;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getRecentsView()Lcom/miui/home/recents/views/RecentsView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/recents/views/RecentsView;->getTaskStackView()Lcom/miui/home/recents/views/TaskStackView;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/miui/home/recents/views/MyTaskStackView;
+
+    invoke-virtual {v0}, Lcom/miui/home/recents/views/MyTaskStackView;->fakeEventWithDelay()V
+
     return-void
 .end method

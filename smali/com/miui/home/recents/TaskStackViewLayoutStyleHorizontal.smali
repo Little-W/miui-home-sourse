@@ -32,16 +32,16 @@
     invoke-direct {p0}, Lcom/miui/home/recents/TaskStackViewLayoutStyle;-><init>()V
 
     .line 26
-    new-instance v0, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;
+    new-instance v0, Lcom/miui/home/recents/views/MyTaskStackViewsAlgorithmHorizontal;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/MyTaskStackViewsAlgorithmHorizontal;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal;->mTaskStackLayoutAlgorithm:Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;
 
     .line 27
-    new-instance v0, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;
+    new-instance v0, Lcom/miui/home/recents/views/MyTaskStackViewsAlgorithmHorizontal;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/MyTaskStackViewsAlgorithmHorizontal;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal;->mStableLayoutAlgorithm:Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;
 
