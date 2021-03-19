@@ -39,15 +39,15 @@
 # static fields
 .field private static final MIUI_HOME_SPLASH_PATH:Ljava/lang/String;
 
-.field private static sConfigurationChanged:Z = false
+.field private static sConfigurationChanged:Z
 
-.field private static sEnteredSceneScreen:Z = false
+.field private static sEnteredSceneScreen:Z
 
 .field private static final sIsClipTransitionDevice:Z
 
-.field private static sIsDefaultThemeApplied:Z = false
+.field private static sIsDefaultThemeApplied:Z
 
-.field private static sPrefShowIconShadow:Z = false
+.field private static sPrefShowIconShadow:Z
 
 
 # instance fields

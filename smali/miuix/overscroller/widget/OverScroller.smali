@@ -13,7 +13,7 @@
 
 
 # static fields
-.field private static SCROLL_BOOST_SS_ENABLE:Z = false
+.field private static SCROLL_BOOST_SS_ENABLE:Z
 
 
 # instance fields

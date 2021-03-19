@@ -18,7 +18,7 @@
 
 
 # static fields
-.field private static sEnableLoadingAnim:Z = false
+.field private static sEnableLoadingAnim:Z
 
 
 # instance fields

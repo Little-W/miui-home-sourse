@@ -508,12 +508,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x3f4ccccd    # 0.8f
+    const v0, 0x3f900000    # 1.125f
 
     return v0
 
     :cond_0
-    const/high16 v0, 0x3f800000    # 1.0f
+    const/high16 v0, 0x3f900000    # 1.125f
 
     return v0
 .end method

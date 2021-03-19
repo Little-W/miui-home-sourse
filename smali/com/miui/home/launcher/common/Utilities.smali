@@ -42,7 +42,7 @@
 
 .field private static final HAS_UPDATE_APPLICATION_BY_SYSTEM:Z
 
-.field public static LOW_MEMORY_DEVICES:Ljava/util/Set; = null
+.field public static LOW_MEMORY_DEVICES:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -52,7 +52,7 @@
     .end annotation
 .end field
 
-.field public static USE_SIMPLE_ANIMATION_EFFECT_DEVICES:Ljava/util/Set; = null
+.field public static USE_SIMPLE_ANIMATION_EFFECT_DEVICES:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -62,7 +62,7 @@
     .end annotation
 .end field
 
-.field public static USE_SMOOTH_ANIMATION_EFFECT_DEVICES:Ljava/util/Set; = null
+.field public static USE_SMOOTH_ANIMATION_EFFECT_DEVICES:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -72,7 +72,7 @@
     .end annotation
 .end field
 
-.field private static mIncompatibleAppList:Ljava/util/List; = null
+.field private static mIncompatibleAppList:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -84,23 +84,23 @@
 
 .field private static final mMetrics:Landroid/util/DisplayMetrics;
 
-.field private static sBoostGPUInstance:Ljava/lang/Object; = null
+.field private static sBoostGPUInstance:Ljava/lang/Object;
 
-.field private static sBoostMethod:Ljava/lang/reflect/Method; = null
+.field private static sBoostMethod:Ljava/lang/reflect/Method;
 
 .field private static final sCanvas:Landroid/graphics/Canvas;
 
-.field private static sDefaultAnimatorInterPolator:Landroid/view/animation/Interpolator; = null
+.field private static sDefaultAnimatorInterPolator:Landroid/view/animation/Interpolator;
 
-.field private static sHasShowScreenLockedToast:Z = false
+.field private static sHasShowScreenLockedToast:Z
 
-.field private static sIconDarkShadowPaint:Landroid/graphics/Paint; = null
+.field private static sIconDarkShadowPaint:Landroid/graphics/Paint;
 
-.field private static sIconShadowBlurPaint:Landroid/graphics/Paint; = null
+.field private static sIconShadowBlurPaint:Landroid/graphics/Paint;
 
 .field private static final sInverseMatrix:Landroid/graphics/Matrix;
 
-.field private static sIsStaging:Z = false
+.field private static sIsStaging:Z
 
 .field private static sMQueueField:Ljava/lang/reflect/Field;
 
@@ -7357,13 +7357,7 @@
     .locals 2
 
     .line 2302
-    sget-object v0, Lcom/miui/home/launcher/common/Utilities;->USE_SMOOTH_ANIMATION_EFFECT_DEVICES:Ljava/util/Set;
-
-    sget-object v1, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
+    const/4 v0, 0x1
 
     return v0
 .end method

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static sHadShowTip:Ljava/util/Map; = null
+.field private static sHadShowTip:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -15,7 +15,7 @@
     .end annotation
 .end field
 
-.field private static sIsHaveWorkUser:Z = false
+.field private static sIsHaveWorkUser:Z
 
 
 # direct methods

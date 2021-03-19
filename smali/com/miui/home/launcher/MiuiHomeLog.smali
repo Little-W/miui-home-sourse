@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static sIsDebugLogEnable:Z = false
+.field private static sIsDebugLogEnable:Z
 
 .field private static sRecordedLogHashMap:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
