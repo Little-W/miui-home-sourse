@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="announce_for_drag">
+        <item quantity="other">%1$d տարրերի տեղափոխում</item>
+        <item quantity="one">%1$d տարրի տեղափոխում</item>
+    </plurals>
+    <plurals name="announce_for_unread">
+        <item quantity="other">%2$s չընթերցված՝ %1$s-ից</item>
+        <item quantity="one">%2$s չընթերցված՝ %1$s-ից</item>
+    </plurals>
+    <plurals name="delete_wallpapers_message">
+        <item quantity="other">Ջնջե՞լ %1$d ֆոնային պատկերները:</item>
+        <item quantity="one">Ջնջե՞լ %1$d ֆոնային պատկերը:</item>
+    </plurals>
+    <plurals name="editing_mode_title">
+        <item quantity="other">Ընտրված %1$d տարրերը</item>
+        <item quantity="one">Ընտրված %1$d տարրը</item>
+    </plurals>
+    <plurals name="remove_dialog_title_multi_format">
+        <item quantity="other">Հեռացնե՞լ %1$d հավելվածները Գլխավոր էկրանից:</item>
+        <item quantity="one">Հեռացնե՞լ %1$d հավելվածը Գլխավոր էկրանից:</item>
+    </plurals>
+    <plurals name="scroll_tip_format_when_announce_accessibility">
+        <item quantity="other">Էջ %1$d, %2$d հավելվածներ:</item>
+        <item quantity="one">Էջ %1$d, %2$d հավելված:</item>
+    </plurals>
+    <plurals name="uninstall_dialog_title_multi_format">
+        <item quantity="other">Ապատեղադրե՞լ %1$d հավելվածները:</item>
+        <item quantity="one">Ապատեղադրե՞լ %1$d հավելվածը:</item>
+    </plurals>
+    <plurals name="uninstall_result_multi_failed">
+        <item quantity="other">Չի հաջողվում ապատեղադրել %1$d հավելվածները</item>
+        <item quantity="one">Չի հաջողվում ապատեղադրել %1$d հավելվածը</item>
+    </plurals>
+    <plurals name="uninstall_result_multi_succeeded">
+        <item quantity="other">%1$d հավելվածները ապատեղադրվել են</item>
+        <item quantity="one">%1$d հավելված ապատեղադրվել է</item>
+    </plurals>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/all_apps_title_padding_side" android:paddingEnd="@dimen/all_apps_title_padding_side"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/market_app_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:scaleType="fitXY" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+    <com.miui.home.launcher.util.typeface.TypefaceIconView android:textSize="14.0sp" android:id="@id/arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" launcher:pattern="@integer/icon" />
+    <TextView android:textColor="@color/alpha60white" android:ellipsize="end" android:id="@id/search_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_centerVertical="true" android:layout_marginStart="12.0dip" android:layout_toEndOf="@id/market_app_icon" style="@style/text_small_style" />
+</RelativeLayout>

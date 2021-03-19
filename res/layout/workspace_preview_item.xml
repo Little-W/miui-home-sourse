@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miui.home.launcher.ThumbnailContainerBorder android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.launcher.ThumbnailContainer android:id="@id/thumbnail" android:layout_width="@dimen/edit_mode_workspace_thumbnail_view_width" android:layout_height="@dimen/edit_mode_workspace_thumbnail_view_height" />
+</com.miui.home.launcher.ThumbnailContainerBorder>

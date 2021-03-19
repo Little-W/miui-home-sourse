@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="config_icon_height">84.0dip</dimen>
+    <dimen name="config_icon_width">84.0dip</dimen>
+    <dimen name="edit_mode_application_checkbox_margin_end">0.0dip</dimen>
+    <dimen name="edit_mode_application_checkbox_margin_top">0.0dip</dimen>
+    <dimen name="editing_entry_thumbnail_view_height">149.5dip</dimen>
+    <dimen name="editing_entry_thumbnail_view_margin_left_right">191.5dip</dimen>
+    <dimen name="editing_panel_height">180.0dip</dimen>
+    <dimen name="folder_content_width">524.0dip</dimen>
+    <dimen name="hotseats_height">137.0dip</dimen>
+    <dimen name="hotseats_height_land">127.0dip</dimen>
+    <dimen name="hotseats_padding_side">0.0dip</dimen>
+    <dimen name="recommend_grid_padding_bottom">50.0dip</dimen>
+    <dimen name="recommend_loading_item_padding">30.0dip</dimen>
+    <dimen name="recommend_panel_height">130.0dip</dimen>
+    <dimen name="search_bar_height">50.0dip</dimen>
+    <dimen name="thumbnail_title_text_size">13.0dip</dimen>
+    <dimen name="uninstall_buttons_width">350.0dip</dimen>
+    <dimen name="uninstall_dialog_button_text_size">13.0sp</dimen>
+    <dimen name="widget_cell_height">174.5dip</dimen>
+    <dimen name="widget_cell_padding">41.659973dip</dimen>
+    <dimen name="widget_cell_preview_width_height">137.0dip</dimen>
+    <dimen name="widget_cell_sub_title_height">37.5dip</dimen>
+    <dimen name="widget_cell_width">137.0dip</dimen>
+    <dimen name="widget_line_padding_top">41.5dip</dimen>
+    <dimen name="workspace_cell_height">115.0dip</dimen>
+    <dimen name="workspace_cell_padding_side_rotatable">36.0dip</dimen>
+    <dimen name="workspace_cell_padding_top">36.0dip</dimen>
+    <dimen name="workspace_cell_width">97.0dip</dimen>
+    <dimen name="workspace_icon_text_notification_size">15.0sp</dimen>
+    <dimen name="workspace_icon_text_size">14.0sp</dimen>
+    <dimen name="workspace_widget_cell_min_height">115.0dip</dimen>
+    <dimen name="workspace_widget_cell_min_width">115.0dip</dimen>
+    <dimen name="folder_preview_height">57.0dip</dimen>
+    <dimen name="folder_preview_width">57.0dip</dimen>
+</resources>

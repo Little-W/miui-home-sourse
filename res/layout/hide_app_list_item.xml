@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="?android:listPreferredItemPaddingLeft" android:paddingTop="@dimen/miuix_preference_item_padding_top" android:paddingRight="?android:listPreferredItemPaddingRight" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="start|center" android:id="@id/app_icon" android:layout_width="@android:dimen/app_icon_size" android:layout_height="@android:dimen/app_icon_size" android:scaleType="fitXY" android:layout_marginEnd="23.399994dip" />
+    <TextView android:textSize="@dimen/miuix_preference_normal_text_size" android:textStyle="normal" android:textColor="@color/launcher_icon_management_text_color" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/app_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:fontFamily="sans-serif-medium" android:textDirection="locale" />
+    <miui.widget.SlidingButton android:layout_gravity="end|center" android:id="@id/hide_switch" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

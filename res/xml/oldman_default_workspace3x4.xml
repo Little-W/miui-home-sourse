@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <folder launcher:screen="2" launcher:title="com.miui.home:string/default_folder_title_tools" launcher:x="1" launcher:y="2" />
+    <folder launcher:screen="2" launcher:title="com.miui.home:string/default_folder_title_other_apps" launcher:x="2" launcher:y="2" />
+    <clock2x4 launcher:screen="1" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.miui.weather2.ActivityWeatherMain" launcher:packageName="com.miui.weather2" launcher:screen="1" launcher:x="0" launcher:y="2" />
+    <favorite launcher:className="com.miui.gallery.activity.HomePageActivity" launcher:packageName="com.miui.gallery" launcher:screen="1" launcher:x="1" launcher:y="2" />
+    <favorite launcher:className="com.android.calendar.homepage.AllInOneActivity" launcher:packageName="com.android.calendar" launcher:screen="1" launcher:x="2" launcher:y="2" />
+    <favorite launcher:className="com.android.contacts.activities.PeopleActivity" launcher:packageName="com.android.contacts" launcher:screen="1" launcher:x="0" launcher:y="3" />
+    <favorite launcher:className="com.android.deskclock.DeskClockTabActivity" launcher:packageName="com.android.deskclock" launcher:screen="1" launcher:x="1" launcher:y="3" />
+    <favorite launcher:className="com.miui.calculator.cal.CalculatorActivity" launcher:packageName="com.miui.calculator" launcher:screen="1" launcher:x="2" launcher:y="3" />
+    <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:screen="2" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.miui.player.ui.MusicBrowserActivity" launcher:packageName="com.miui.player" launcher:screen="2" launcher:x="1" launcher:y="0" />
+    <favorite launcher:className="com.miui.video.HomeActivity" launcher:packageName="com.miui.video" launcher:screen="2" launcher:x="2" launcher:y="0" />
+    <toggle launcher:screen="2" launcher:toggleId="11" launcher:x="0" launcher:y="1" />
+    <favorite launcher:className="com.miui.securityscan.MainActivity" launcher:packageName="com.miui.securitycenter" launcher:screen="2" launcher:x="1" launcher:y="1" />
+    <favorite launcher:className="com.android.settings.MiuiSettings" launcher:packageName="com.android.settings" launcher:screen="2" launcher:x="2" launcher:y="1" />
+    <favorite launcher:className="com.android.settings.MainSettings" launcher:packageName="com.android.settings" launcher:screen="2" launcher:x="2" launcher:y="1" />
+    <favorite launcher:className="com.xiaomi.market.ui.MarketTabActivity" launcher:packageName="com.xiaomi.market" launcher:screen="2" launcher:x="0" launcher:y="2" />
+    <shortcut launcher:action="com.xiaomi.mitime.action.RemoteAssistance" launcher:className="com.xiaomi.mitime.activity.RemoteAssistanceActivity" launcher:iconResource="com.xiaomi.mitime:drawable/remote_icon" launcher:packageName="com.xiaomi.mitime" launcher:screen="2" launcher:title="com.xiaomi.mitime:string/title_remote_assistance" launcher:x="0" launcher:y="3" />
+    <include layout="@xml/oldman_layout_folder_tools" />
+    <include layout="@xml/oldman_layout_folder_other" />
+    <include layout="@xml/oldman_layout_hotseats" />
+</favorites>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/all_apps_search_fd_color"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners android:radius="@dimen/all_apps_search_market_size" />
+            <solid android:color="@color/all_apps_search_bg_color" />
+        </shape>
+    </item>
+</ripple>

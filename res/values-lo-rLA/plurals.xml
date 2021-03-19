@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="announce_for_drag">
+        <item quantity="other">ກຳລັງລາກ %1$d ລາຍການ</item>
+    </plurals>
+    <plurals name="announce_for_unread">
+        <item quantity="other">%2$s ຍັງບໍ່ໄດ້ອ່ານຈາກ %1$s</item>
+    </plurals>
+    <plurals name="delete_wallpapers_message">
+        <item quantity="other">ລົບ %1$d ພາບພື້ນຫຼັງບໍ?</item>
+    </plurals>
+    <plurals name="editing_mode_title">
+        <item quantity="other">ເລືອກ %1$d ລາຍການແລ້ວ</item>
+    </plurals>
+    <plurals name="remove_dialog_title_multi_format">
+        <item quantity="other">ລົບ %1$d ແອັບ​ຈາກໜ້າ​ຈໍຫຼັກ​?</item>
+    </plurals>
+    <plurals name="scroll_tip_format_when_announce_accessibility">
+        <item quantity="other">ໜ້າ %1$d, %2$d ແອັບ.</item>
+    </plurals>
+    <plurals name="uninstall_dialog_title_multi_format">
+        <item quantity="other">ຖອນການຕິດຕັ້ງ %1$d ແອັບບໍ?</item>
+    </plurals>
+    <plurals name="uninstall_result_multi_failed">
+        <item quantity="other">ບໍ່ສາມາດຖອນການຕິດຕັ້ງ %1$d ແອັບໄດ້</item>
+    </plurals>
+    <plurals name="uninstall_result_multi_succeeded">
+        <item quantity="other">ຖອນການຕິດຕັ້ງ %1$d ແອັບແລ້ວ</item>
+    </plurals>
+</resources>

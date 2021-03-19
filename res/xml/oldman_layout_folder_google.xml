@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <favorite launcher:className="com.google.android.googlequicksearchbox.SearchActivity" launcher:container="2" launcher:packageName="com.google.android.googlequicksearchbox" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.chrome.Main" launcher:container="2" launcher:packageName="com.android.chrome" launcher:x="1" launcher:y="0" />
+    <favorite launcher:className="com.google.android.gm.ConversationListActivityGmail" launcher:container="2" launcher:packageName="com.google.android.gm" launcher:x="2" launcher:y="0" />
+    <favorite launcher:className="com.google.android.maps.MapsActivity" launcher:container="2" launcher:packageName="com.google.android.apps.maps" launcher:x="3" launcher:y="0" />
+    <favorite launcher:className="com.google.android.youtube.app.honeycomb.Shell$HomeActivity" launcher:container="2" launcher:packageName="com.google.android.youtube" launcher:x="4" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.docs.app.NewMainProxyActivity" launcher:container="2" launcher:packageName="com.google.android.apps.docs" launcher:x="5" launcher:y="0" />
+    <favorite launcher:className="com.android.music.activitymanagement.TopLevelActivity" launcher:container="2" launcher:packageName="com.google.android.music" launcher:x="6" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.youtube.music.activities.MusicActivity" launcher:container="2" launcher:packageName="com.google.android.apps.youtube.music" launcher:x="7" launcher:y="0" />
+    <favorite launcher:className="com.google.android.youtube.videos.EntryPoint" launcher:container="2" launcher:packageName="com.google.android.videos" launcher:x="8" launcher:y="0" />
+    <favorite launcher:className="com.google.android.talk.SigningInActivity" launcher:container="2" launcher:packageName="com.google.android.talk" launcher:x="9" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.tachyon.MainActivity" launcher:container="2" launcher:packageName="com.google.android.apps.tachyon" launcher:x="9" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.photos.onboarding.IntroActivity" launcher:container="2" launcher:packageName="com.google.android.apps.photos" launcher:x="10" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.photos.home.HomeActivity" launcher:container="2" launcher:packageName="com.google.android.apps.photos" launcher:x="11" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.plus.phone.ConversationListActivity" launcher:container="2" launcher:packageName="com.google.android.apps.plus" launcher:x="12" launcher:y="0" />
+    <favorite launcher:className="com.google.android.googlequicksearchbox.VoiceSearchActivity" launcher:container="2" launcher:packageName="com.google.android.googlequicksearchbox" launcher:x="13" launcher:y="0" />
+    <favorite launcher:className="com.google.android.gms.app.settings.GoogleSettingsActivity" launcher:container="2" launcher:packageName="com.google.android.gms" launcher:x="14" launcher:y="0" />
+    <favorite launcher:className="com.google.apps.dots.android.app.activity.CurrentsStartActivity" launcher:container="2" launcher:packageName="com.google.android.apps.magazines" launcher:x="15" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.plus.phone.HomeActivity" launcher:container="2" launcher:packageName="com.google.android.apps.plus" launcher:x="16" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.books.app.BooksActivity" launcher:container="2" launcher:packageName="com.google.android.apps.books" launcher:x="17" launcher:y="0" />
+    <favorite launcher:className="com.google.android.gms.games.ui.destination.main.MainActivity" launcher:container="2" launcher:packageName="com.google.android.play.games" launcher:x="18" launcher:y="0" />
+    <favorite launcher:className="com.android.inputmethod.latin.setup.SetupActivity" launcher:container="2" launcher:packageName="com.google.android.inputmethod.latin" launcher:x="19" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.inputmethod.libs.framework.core.LauncherActivity" launcher:container="2" launcher:packageName="com.google.android.apps.inputmethod.zhuyin" launcher:x="20" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.inputmethod.libs.framework.core.LauncherActivity" launcher:container="2" launcher:packageName="com.google.android.apps.inputmethod.hindi" launcher:x="21" launcher:y="0" />
+    <favorite launcher:className="com.android.contacts.activities.PeopleActivity" launcher:container="2" launcher:packageName="com.google.android.contacts" launcher:x="22" launcher:y="0" />
+    <favorite launcher:className="com.android.calendar.event.LaunchInfoActivity" launcher:container="2" launcher:packageName="com.google.android.calendar" launcher:x="23" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.nbu.paisa.user.launcher.LauncherActivity" launcher:container="2" launcher:packageName="com.google.android.apps.nbu.paisa.user" launcher:x="24" launcher:y="0" />
+    <favorite launcher:className="com.google.commerce.tapandpay.android.cardlist.CardListActivity" launcher:container="2" launcher:packageName="com.google.android.apps.walletnfcrel" launcher:x="24" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.subscriptions.red.LauncherActivity" launcher:container="2" launcher:packageName="com.google.android.apps.subscriptions.red" launcher:x="25" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.googleassistant.AssistantActivity" launcher:container="2" launcher:packageName="com.google.android.apps.googleassistant" launcher:x="26" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.nbu.paisa.user.launcher.LauncherActivity" launcher:container="2" launcher:packageName="com.google.android.apps.nbu.paisa.user" launcher:x="27" launcher:y="0" />
+    <favorite launcher:className="com.google.android.apps.podcasts.PodcastsActivity" launcher:container="2" launcher:packageName="com.google.android.apps.podcasts" launcher:x="28" launcher:y="0" />
+</favorites>

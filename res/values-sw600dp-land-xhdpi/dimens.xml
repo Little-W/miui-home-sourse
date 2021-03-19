@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="edit_mode_workspace_thumbnail_view_height">70.0dip</dimen>
+    <dimen name="edit_mode_workspace_thumbnail_view_width">112.0dip</dimen>
+    <dimen name="editing_panel_height">100.0dip</dimen>
+    <dimen name="fastscroll_letter_side_padding_bottom">16.0dip</dimen>
+    <dimen name="fastscroll_letter_side_padding_top">16.0dip</dimen>
+    <dimen name="folder_bottom_padding">60.0dip</dimen>
+    <dimen name="folder_top_padding">40.0dip</dimen>
+</resources>

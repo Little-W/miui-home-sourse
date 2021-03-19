@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="announce_for_drag">
+        <item quantity="other">Tempiama %1$d elementų</item>
+        <item quantity="one">Tempiamas %1$d elementas</item>
+        <item quantity="few">Tempiami %1$d elementai</item>
+        <item quantity="many">Tempiama %1$d elemento</item>
+    </plurals>
+    <plurals name="announce_for_unread">
+        <item quantity="other">%2$s neskaitytų nuo %1$s</item>
+        <item quantity="one">%2$s neskaitytas nuo %1$s</item>
+        <item quantity="few">%2$s neskaityti nuo %1$s</item>
+        <item quantity="many">%2$s neskaityto nuo %1$s</item>
+    </plurals>
+    <plurals name="delete_wallpapers_message">
+        <item quantity="other">Trinti %1$d fonų?</item>
+        <item quantity="one">Trinti %1$d foną?</item>
+        <item quantity="few">Trinti %1$d fonus?</item>
+        <item quantity="many">Trinti %1$d fono?</item>
+    </plurals>
+    <plurals name="editing_mode_title">
+        <item quantity="other">Pasirinkta %1$d elementų</item>
+        <item quantity="one">Pasirinktas %1$d elementas</item>
+        <item quantity="few">Pasirinkti %1$d elementai</item>
+        <item quantity="many">Pasirinkta %1$d elemento</item>
+    </plurals>
+    <plurals name="remove_dialog_title_multi_format">
+        <item quantity="other">Pašalinti %1$d programų iš pagrindinio ekrano?</item>
+        <item quantity="one">Pašalinti %1$d programą iš pagrindinio ekrano?</item>
+        <item quantity="few">Pašalinti %1$d programas iš pagrindinio ekrano?</item>
+        <item quantity="many">Pašalinti %1$d programas iš pagrindinio ekrano?</item>
+    </plurals>
+    <plurals name="scroll_tip_format_when_announce_accessibility">
+        <item quantity="other">%1$d puslapis, %2$d programų.</item>
+        <item quantity="one">%1$d puslapis, %2$d programa.</item>
+        <item quantity="few">%1$d puslapis, %2$d programos.</item>
+        <item quantity="many">%1$d puslapis, %2$d programos.</item>
+    </plurals>
+    <plurals name="uninstall_dialog_title_multi_format">
+        <item quantity="other">Išdiegti %1$d programų?</item>
+        <item quantity="one">Išdiegti %1$d programą?</item>
+        <item quantity="few">Išdiegti %1$d programas?</item>
+        <item quantity="many">Išdiegti %1$d programos?</item>
+    </plurals>
+    <plurals name="uninstall_result_multi_failed">
+        <item quantity="other">Nepavyko išdiegti %1$d programų</item>
+        <item quantity="one">Nepavyko išdiegti %1$d programos</item>
+        <item quantity="few">Nepavyko išdiegti %1$d programų</item>
+        <item quantity="many">Nepavyko išdiegti %1$d programos</item>
+    </plurals>
+    <plurals name="uninstall_result_multi_succeeded">
+        <item quantity="other">%1$d programų išdiegta</item>
+        <item quantity="one">%1$d programa išdiegta</item>
+        <item quantity="few">%1$d programos išdiegtos</item>
+        <item quantity="many">%1$d programos išdiegta</item>
+    </plurals>
+</resources>

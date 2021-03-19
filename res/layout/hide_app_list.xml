@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ProgressBar android:layout_gravity="center" android:id="@id/loading_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateTint="@color/ui_mode_20_black" />
+    <miuix.springback.view.SpringBackLayout android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" app:scrollableView="@id/hide_app_recycler">
+        <miuix.recyclerview.widget.RecyclerView android:id="@id/hide_app_recycler" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </miuix.springback.view.SpringBackLayout>
+</FrameLayout>

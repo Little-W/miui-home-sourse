@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.miui.home.launcher.view.RatioImageView android:layout_gravity="center_horizontal" android:id="@id/preview" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" app:ratio="0.51" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/color_list" android:padding="18.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/all_apps_color_mode_transparency_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/drawer_background_transparency" android:layout_marginStart="28.0dip" />
+    <com.miui.home.launcher.allapps.settings.DrawerBackgroundAlphaSeekBar android:id="@id/drawer_background_alpha_seek_bar" android:paddingTop="24.0dip" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="8.0dip" android:paddingEnd="8.0dip" app:entries="@array/drawer_alpha" />
+    <Button android:id="@id/apply" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="28.0dip" android:text="@string/apply_text" style="@miui:style/Widget.Button.Warning" />
+</LinearLayout>

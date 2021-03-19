@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="announce_for_drag">
+        <item quantity="other">Povlačenje %1$d stavki</item>
+        <item quantity="one">Povlačenje %1$d stavke</item>
+        <item quantity="few">Povlačenje %1$d stavke</item>
+    </plurals>
+    <plurals name="announce_for_unread">
+        <item quantity="other">%2$s nepročitanih od %1$s</item>
+        <item quantity="one">%2$s nepročitano od %1$s</item>
+        <item quantity="few">%2$s nepročitana od %1$s</item>
+    </plurals>
+    <plurals name="delete_wallpapers_message">
+        <item quantity="other">Izbrisati %1$d pozadina?</item>
+        <item quantity="one">Izbrisati %1$d pozadinu?</item>
+        <item quantity="few">Izbrisati %1$d pozadine?</item>
+    </plurals>
+    <plurals name="editing_mode_title">
+        <item quantity="other">Odabrano je %1$d stavki</item>
+        <item quantity="one">Odabrana je %1$d stavka</item>
+        <item quantity="few">Odabrane su %1$d stavke</item>
+    </plurals>
+    <plurals name="remove_dialog_title_multi_format">
+        <item quantity="other">Ukloni %1$d aplikacija sa Početnog ekrana?</item>
+        <item quantity="one">Ukloni %1$d aplikaciju sa Početnog ekrana?</item>
+        <item quantity="few">Ukloni %1$d aplikacije sa Početnog ekrana?</item>
+    </plurals>
+    <plurals name="scroll_tip_format_when_announce_accessibility">
+        <item quantity="other">Stranica %1$d, %2$d aplikacija.</item>
+        <item quantity="one">Stranica %1$d, %2$d aplikacija.</item>
+        <item quantity="few">Stranica %1$d, %2$d aplikacije.</item>
+    </plurals>
+    <plurals name="uninstall_dialog_title_multi_format">
+        <item quantity="other">Deinstaliraj %1$d aplikacija?</item>
+        <item quantity="one">Deinstaliraj %1$d aplikaciju?</item>
+        <item quantity="few">Deinstaliraj %1$d aplikacije?</item>
+    </plurals>
+    <plurals name="uninstall_result_multi_failed">
+        <item quantity="other">Nije moguće deinstalirati %1$d aplikacija</item>
+        <item quantity="one">Nije moguće deinstalirati %1$d aplikaciju</item>
+        <item quantity="few">Nije moguće deinstalirati %1$d aplikacije</item>
+    </plurals>
+    <plurals name="uninstall_result_multi_succeeded">
+        <item quantity="other">Deinstalirano je %1$d aplikacija</item>
+        <item quantity="one">Deinstalirana je %1$d aplikacija</item>
+        <item quantity="few">Deinstalirano je %1$d aplikacija</item>
+    </plurals>
+</resources>

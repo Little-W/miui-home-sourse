@@ -1,0 +1,50 @@
+<MamlScript frameRate="60" screenWidth="1080" resDensity="440" extraResources="sw720-den320::0.667,sw1536-den320::0.933,sw1440-den640::1.222" extraScales="sw720-den320:0.667,sw1536-den320:0.933,sw1440-den640:1.222" scaleByDensity="true">
+    <ExternalCommands>
+        <Trigger action="init,resume">
+            <TickListenerCommand target="icon" command="set" function="'tick'" />
+        </Trigger>
+    </ExternalCommands>
+    <Function name="tick">
+        <!-- 给app发命令 -->
+        <ExternCommand command="tick" />
+    </Function>
+    <Pbr name="icon" x = "0" y = "0" w="#view_width" h="#view_height">
+        <Cust>
+            <Final
+                name="iconFinal"
+                toneMapping="linear"
+                cameraFrustumProjection="0, 1, 1, 0, 0, 1, 'ortho'"
+                matPath="materials/icon.filamat">
+                <Uniform
+                    name="icon"
+                    type="image"
+                    premultiplied = '0'
+                    params="'iconBitmap', 'bitmap'"
+                />
+                <Uniform
+                    name="light"
+                    type="image"
+                    params="'lightBitmap', 'bitmap'"
+                />
+               <Uniform
+                    name="percentage"
+                    type="float"
+                    refresh="true"
+                    params="#icon_percent"
+                />
+                <Uniform
+                    name="uTime"
+                    type="float"
+                    refresh="true"
+                    params="#uTime"
+                />
+                <Uniform
+                    name="uWavePer"
+                    type="float"
+                    refresh="true"
+                    params="#uWavePer"
+                />
+            </Final>
+        </Cust>
+    </Pbr>
+</MamlScript>

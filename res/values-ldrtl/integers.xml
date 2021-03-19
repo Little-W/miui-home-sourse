@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="icon">0x0000E00D</integer>
+    <integer name="quit">0x0000E009</integer>
+</resources>
