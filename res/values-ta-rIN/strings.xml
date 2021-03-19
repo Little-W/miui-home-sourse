@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">இந்த வகையை நீக்கவா?</string>
     <string name="delete_screen">திரையை நீக்கு</string>
     <string name="delete_wallpaper_message">%1$d வால்பேப்பரை நீக்கவா?</string>
+    <string name="deleted_system_applications">நிறுவல்நீக்கப்பட்ட முறைமை செயலிகள்</string>
     <string name="deselect_all">தேர்தெடுக்கப்பட்ட அனைத்தையும் நீக்கு</string>
     <string name="disable_wallpaper_scroll">பக்க ஸ்க்ரோலிங்கை அணை</string>
     <string name="download_action">பதிவிறக்கு</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">தேர்ந்தெடுத்த செயலிகளில் அத்தியாவசியமான முறைமை அம்சங்கள் இருக்கின்றன. நீங்கள் அவற்றின் முகப்புத்திரை குறுக்குவழிகளை மட்டுமே அகற்ற முடியும்.</string>
     <string name="remove_dialog_title_format">முகப்புத் திரையிலிருந்து ”%s” ஐ அகற்றவா?</string>
     <string name="remove_invalidate_gadget_tips">நீங்கள் பயன்படுத்தும் விட்ஜெட்களில் ஒன்று இப்போது கிடைக்கவில்லை. நீங்கள் வேறொன்றைச் சேர்க்கலாம்.</string>
+    <string name="remove_sys_app_content">நீங்கள் மீண்டும் முகப்புத் திரை குறுக்குவழியை அமைப்புகள் > செயலிகள் > முகப்பு திரை குறுக்குவழிகளை நிர்வகிக்கவும் என்பதில் இருந்து சேர்க்க முடியும். இப்போது அகற்ற விரும்புகிறீர்களா?</string>
+    <string name="remove_sys_app_title">முகப்பு திரை குறுக்குவழியை அகற்றவா?</string>
     <string name="reset_cate_tip_content">நீங்கள் தொடர்ந்தால், இயல்புநிலை செயலி குழுக்கள் மீட்டெடுக்கப்படும். இருந்தாலும் தொடரவா?</string>
     <string name="reset_cate_tip_title">இயல்புநிலை குழுக்களை மீட்டமை</string>
     <string name="reset_description_first_time">2 மணிநேரத்திற்குள் %1$s இலிருந்து தளவமைப்பை மீட்டெடுக்கலாம்</string>

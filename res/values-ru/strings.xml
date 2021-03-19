@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Удалить эту категорию?</string>
     <string name="delete_screen">Удалить экран</string>
     <string name="delete_wallpaper_message">Удалить обои (%1$d)?</string>
+    <string name="deleted_system_applications">Удаленные системные приложения</string>
     <string name="deselect_all">Снять выбор</string>
     <string name="disable_wallpaper_scroll">Отключить прокрутку обоев</string>
     <string name="download_action">Загрузить</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Выбранные приложения выполняют важные системные функции. Вы можете удалить только ярлык на рабочем столе.</string>
     <string name="remove_dialog_title_format">Удалить \"%s\" с рабочего стола?</string>
     <string name="remove_invalidate_gadget_tips">Один из используемых вами виджетов больше не доступен. Вы можете выбрать другой виджет.</string>
+    <string name="remove_sys_app_content">Чтобы восстановить ярлык на рабочем столе, перейдите в Настройки > Приложения > Управление ярлыками на рабочем столе. Удалить ярлык?</string>
+    <string name="remove_sys_app_title">Удалить ярлык с рабочего стола?</string>
     <string name="reset_cate_tip_content">Будут восстановлены группы приложений по умолчанию. Продолжить?</string>
     <string name="reset_cate_tip_title">Восстановить группы по умолчанию</string>
     <string name="reset_description_first_time">Вы можете восстановить макет с %1$s в течение 2 часов</string>

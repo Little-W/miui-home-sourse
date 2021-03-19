@@ -109,7 +109,7 @@
     .line 90
     invoke-virtual {p1}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    const p2, 0x7f0800c9
+    const p2, 0x7f0800ce
 
     .line 91
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
@@ -218,7 +218,7 @@
 
     if-eqz p2, :cond_1
 
-    const p2, 0x7f0800c0
+    const p2, 0x7f0800c5
 
     .line 150
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
@@ -228,7 +228,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f080147
+    const p2, 0x7f08014e
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundResource(I)V
 

@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Obrisati ovu kategoriju?</string>
     <string name="delete_screen">Izbriši tipku zaslona</string>
     <string name="delete_wallpaper_message">Izbrisati (%1$d) sliku pozadine ?</string>
+    <string name="deleted_system_applications">Deinstalirane aplikacija sustava</string>
     <string name="deselect_all">Poništi sve</string>
     <string name="disable_wallpaper_scroll">Isključi pomicanje slike</string>
     <string name="download_action">Preuzmi</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Odabrane datoteke sadrže osnovne značajke sustava. Možete ukloniti samo njihove prečice na Početnom zaslonu.</string>
     <string name="remove_dialog_title_format">Ukloniti \"%s\" sa Početnog zaslona?</string>
     <string name="remove_invalidate_gadget_tips">Jedan od widgeta koji koristite više nije dostupan. Možete dodati još jedan.</string>
+    <string name="remove_sys_app_content">Moći ćete dodati prečicu Početnog zaslona ponovno u Postavkama > Aplikacije > Upravljaj prečicama Početnog zaslona. Ukloniti sada?</string>
+    <string name="remove_sys_app_title">Ukloniti prečicu Početnog zaslona?</string>
     <string name="reset_cate_tip_content">Ako nastavite, zadane grupe aplikacija bit će vraćene. I dalje nastaviti?</string>
     <string name="reset_cate_tip_title">Vraćanje zadanih skupina</string>
     <string name="reset_description_first_time">Možete vratiti izgled iz %1$s unutar 2 sata</string>

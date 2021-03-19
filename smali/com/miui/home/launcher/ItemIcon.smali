@@ -1217,7 +1217,7 @@
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
 
-    const v1, 0x7f080144
+    const v1, 0x7f080149
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
@@ -3214,7 +3214,7 @@
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
 
-    const v1, 0x7f080144
+    const v1, 0x7f080149
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 

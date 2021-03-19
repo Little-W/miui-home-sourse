@@ -45,7 +45,7 @@
     .line 124
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController$DeleteObserver$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
-    const v1, 0x7f100107
+    const v1, 0x7f100108
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->showError(I)V
 

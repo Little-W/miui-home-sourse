@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">આ કૅટેગરી કાઢી નાખીએ?</string>
     <string name="delete_screen">સ્ક્રીન કાઢી નાંખો</string>
     <string name="delete_wallpaper_message">%1$d વૉલપેપર હટાવીએ?</string>
+    <string name="deleted_system_applications">અનઇન્સ્ટોલ કરેલ સિસ્ટમ એપ્સ</string>
     <string name="deselect_all">તમામ પસંદગીઓ દૂર કરો</string>
     <string name="disable_wallpaper_scroll">સાઇડ સ્ક્રોલિંગ બંધ કરો</string>
     <string name="download_action">ડાઉનલોડ કરો</string>
@@ -394,7 +395,7 @@
     <string name="navigation_type_full_screen">જેસ્ચર</string>
     <string name="navigation_type_title">સિસ્ટમ નેવિગેશન</string>
     <string name="navigation_type_virtual_key">બટન</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">નેટવર્ક સાથે કનેક્ટ કરી શક્યાં નથી. ફરીથી પ્રયાસ કરો.</string>
     <string name="no_detail_page">કોઈ વિગતો પેજ નથી</string>
     <string name="no_space_toast">પૂરતું સ્થાન નથી</string>
     <string name="no_space_toast_when_click_widget">આ પેજ પર પૂરતી જગ્યા નથી. બીજા પેજ પર આઇટમ ખેંચીને લઈ જવાનો પ્રયાસ કરો.</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">પસંદ કરેલી એપ્લિકેશનમાં આવશ્યક સિસ્ટમ ફીચર્સ શામેલ છે. તમે ફક્ત તેમના હોમ સ્ક્રીન શોર્ટકટ્સને દૂર કરી શકો છો.</string>
     <string name="remove_dialog_title_format">હોમ સ્ક્રીન પર \"%s\" ને દૂર કરીએ?</string>
     <string name="remove_invalidate_gadget_tips">તમે ઉપયોગ કરી રહ્યાં છો તેમાંથી એક વિજેટ હવે ઉપલબ્ધ નથી. તમે બીજું એક ઉમેરી શકો છો.</string>
+    <string name="remove_sys_app_content">તમે ફરીથી સેટિંગ્સ > Apps > માં હોમ સ્ક્રીન શૉર્ટકટ ઉમેરી શકશો હોમ સ્ક્રીન શોર્ટકટ્સ મેનેજ કરો. હમણાં દૂર કરીએ?</string>
+    <string name="remove_sys_app_title">હોમ સ્ક્રીન શૉર્ટકટ દૂર કરીએ?</string>
     <string name="reset_cate_tip_content">જો તમે ચાલુ રાખશો, તો ડિફૉલ્ટ ઍપ્લિકેશન ગ્રૂપ રિસ્ટોર કરવામાં આવશે. તેમ છતાં ચાલુ રાખીએ?</string>
     <string name="reset_cate_tip_title">ડિફૉલ્ટ ગ્રૂપ રિસ્ટોર કરો</string>
     <string name="reset_description_first_time">તમે 2 કલાકમાં %1$sમાંથી આઇકન રિસ્ટોર કરી શકો છો</string>
@@ -497,7 +500,7 @@
     <string name="reset_scene_prompt">સ્ક્રીન ડિફૉલ્ટ લેઆઉટ પર રીસેટ થશે.</string>
     <string name="reset_title">રિસ્ટોર કરો</string>
     <string name="restore_icon_successful">સફળતાપૂર્વક ઉમેર્યું</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">રશિયા</string>
     <string name="screen_cells_config_title">હોમ સ્ક્રીન લેઆઉટ</string>
     <string name="screen_locked_toast">હોમ સ્ક્રીન લૅ-આઉટ લૉક કરેલ છે.</string>
     <string name="screen_number">%d સ્ક્રીન</string>
@@ -506,7 +509,7 @@
     <string name="select_all">બધુ પસંદ કરો</string>
     <string name="select_frame">ફ્રેમ</string>
     <string name="select_photo">ફોટો</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">સર્વર ભૂલ આવી, એક-બે મિનિટ રાહ જુઓ અને ફરીથી પ્રયાસ કરો.</string>
     <string name="setting_wallpaper_tip">સમાયોજિત કરવા માટે પિંચ અથવા સ્વાઇપ કરો</string>
     <string name="settings">સેટિંગ</string>
     <string name="settings_shortcut">સેટિંગ</string>

@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Eliminar esta categoria?</string>
     <string name="delete_screen">Eliminar ecrã</string>
     <string name="delete_wallpaper_message">Eliminar %1$d papel de parede?</string>
+    <string name="deleted_system_applications">Aplicações de sistema desinstaladas</string>
     <string name="deselect_all">Desmarcar tudo</string>
     <string name="disable_wallpaper_scroll">Desligar efeito de movimento</string>
     <string name="download_action">Transferir</string>
@@ -423,7 +424,7 @@
     <string name="navigation_type_full_screen">Gestos</string>
     <string name="navigation_type_title">Navegação do sistema</string>
     <string name="navigation_type_virtual_key">Botões</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">Não foi possível ligar à rede. Tente novamente.</string>
     <string name="no_detail_page">Sem página de detalhes</string>
     <string name="no_space_toast">Sem espaço suficiente</string>
     <string name="no_space_toast_when_click_widget">Sem espaço disponível nesta página. Tente arrastar este item para uma página diferente.</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">As aplicações selecionadas contêm funcionalidades essenciais do sistema. Só pode remover os seus atalhos do Ecrã inicial.</string>
     <string name="remove_dialog_title_format">Remover \"%s\" do Ecrã inicial?</string>
     <string name="remove_invalidate_gadget_tips">Um dos widgets que utiliza não está mais disponível. Pode adicionar outro.</string>
+    <string name="remove_sys_app_content">Ainda poderá adicionar o atalho no Ecrã inicial novamente em Definições > Aplicações > Gerir atalhos do Ecrã inicial. Remover agora?</string>
+    <string name="remove_sys_app_title">Remover o atalho do Ecrã inicial?</string>
     <string name="reset_cate_tip_content">Se continuar, os grupos de aplicações predefinidos vão ser restaurados. Continuar na mesma?</string>
     <string name="reset_cate_tip_title">Restaurar grupos predefinidos</string>
     <string name="reset_description_first_time">Pode restaurar a disposição de %1$s em 2 horas</string>
@@ -528,7 +531,7 @@
     <string name="reset_scene_prompt">O ecrã será reiniciado para o layout predefinido.</string>
     <string name="reset_title">Restaurar</string>
     <string name="restore_icon_successful">Adicionado com sucesso</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">Rússia</string>
     <string name="screen_cells_config_title">Disposição do Ecrã inicial</string>
     <string name="screen_locked_toast">A disposição do Ecrã inicial está bloqueada.</string>
     <string name="screen_number">%d ecrã</string>
@@ -538,7 +541,7 @@
     <string name="select_all">Selecionar tudo</string>
     <string name="select_frame">Fotograma</string>
     <string name="select_photo">Foto</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">Ocorreu um erro no servidor. Espere um minuto ou dois e tente novamente.</string>
     <string name="setting_wallpaper_tip">Amplie ou deslize para ajustar</string>
     <string name="settings">Definições</string>
     <string name="settings_shortcut">Definições</string>

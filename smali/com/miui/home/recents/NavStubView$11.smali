@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 0
 
-    .line 2512
+    .line 2518
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iput-object p2, p0, Lcom/miui/home/recents/NavStubView$11;->val$icon:Lcom/miui/home/launcher/ShortcutIcon;
@@ -44,15 +44,15 @@
 
     if-eqz p1, :cond_0
 
-    .line 2544
+    .line 2550
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v0, p1}, Lcom/miui/home/recents/NavStubView;->access$4200(Lcom/miui/home/recents/NavStubView;Lcom/miui/home/launcher/ShortcutIcon;)V
 
-    .line 2545
+    .line 2551
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->onEnterHomeAnimFinish()V
 
-    .line 2548
+    .line 2554
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -60,7 +60,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 2549
+    .line 2555
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iget-object v0, v0, Lcom/miui/home/recents/NavStubView;->mFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
@@ -76,7 +76,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 2521
+    .line 2527
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
 
     move-result-object v0
@@ -85,7 +85,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/LauncherIconImageView;->setAlpha(F)V
 
-    .line 2522
+    .line 2528
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->onEnterHomeAnimStart()V
 
     :cond_0
@@ -97,12 +97,12 @@
 .method public onAnimationCancel(Lcom/miui/home/recents/util/RectFSpringAnim;)V
     .locals 0
 
-    .line 2529
+    .line 2535
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/NavStubView$11;->onAnimationEnd(Lcom/miui/home/recents/util/RectFSpringAnim;)V
 
     const/4 p1, 0x1
 
-    .line 2530
+    .line 2536
     iput-boolean p1, p0, Lcom/miui/home/recents/NavStubView$11;->isCancel:Z
 
     return-void
@@ -111,14 +111,14 @@
 .method public onAnimationEnd(Lcom/miui/home/recents/util/RectFSpringAnim;)V
     .locals 2
 
-    .line 2535
+    .line 2541
     iget-boolean p1, p0, Lcom/miui/home/recents/NavStubView$11;->isCancel:Z
 
     if-eqz p1, :cond_0
 
     return-void
 
-    .line 2539
+    .line 2545
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -126,14 +126,14 @@
 
     invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$4100(Lcom/miui/home/recents/NavStubView;Z)V
 
-    .line 2540
+    .line 2546
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/NavStubView;->finishAppToHome(Z)V
 
-    .line 2542
+    .line 2548
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$11;->val$icon:Lcom/miui/home/launcher/ShortcutIcon;
@@ -144,7 +144,7 @@
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 2555
+    .line 2561
     invoke-static {}, Lcom/miui/home/recents/util/TraceUtils;->endSection()V
 
     return-void
@@ -155,17 +155,17 @@
 
     const-string p1, "appToHomeAnimFromGesture"
 
-    .line 2517
+    .line 2523
     invoke-static {p1}, Lcom/miui/home/recents/util/TraceUtils;->beginSection(Ljava/lang/String;)V
 
-    .line 2518
+    .line 2524
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$11;->this$0:Lcom/miui/home/recents/NavStubView;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$4100(Lcom/miui/home/recents/NavStubView;Z)V
 
-    .line 2519
+    .line 2525
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$11;->val$icon:Lcom/miui/home/launcher/ShortcutIcon;

@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/RemoteShortcutInfo;)V
     .locals 0
 
-    .line 7628
+    .line 7653
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$74;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$74;->val$info:Lcom/miui/home/launcher/RemoteShortcutInfo;
@@ -42,14 +42,14 @@
 .method public run()V
     .locals 11
 
-    .line 7631
+    .line 7656
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$74;->val$info:Lcom/miui/home/launcher/RemoteShortcutInfo;
 
     const-wide/16 v1, -0x64
 
     iput-wide v1, v0, Lcom/miui/home/launcher/RemoteShortcutInfo;->container:J
 
-    .line 7632
+    .line 7657
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$74;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1, v0}, Lcom/miui/home/launcher/Launcher;->access$9600(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/RemoteShortcutInfo;)Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
@@ -58,7 +58,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 7634
+    .line 7659
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$74;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-wide v4, v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->screenId:J
@@ -73,7 +73,7 @@
 
     invoke-virtual/range {v2 .. v10}, Lcom/miui/home/launcher/Launcher;->addItemToWorkspace(Lcom/miui/home/launcher/ItemInfo;JJIILjava/lang/Runnable;)V
 
-    .line 7636
+    .line 7661
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$74;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$500(Lcom/miui/home/launcher/Launcher;)Landroid/os/Handler;

@@ -877,7 +877,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080091
+    const v1, 0x7f080096
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1787,7 +1787,7 @@
     .line 67
     iget-object v0, p0, Lcom/miui/home/launcher/HotSeats;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f080125
+    const v1, 0x7f08012a
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/common/Utilities;->loadThemeCompatibleDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 

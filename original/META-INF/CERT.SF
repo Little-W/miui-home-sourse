@@ -1,6 +1,6 @@
 Signature-Version: 1.0
 X-Android-APK-Signed: 2
-SHA1-Digest-Manifest: 5T0Ilsp22Kr2fyTP6ISijOtcHpw=
+SHA1-Digest-Manifest: fA4HdIS15pjeVlhJiK/B/hIhtpA=
 Created-By: 1.0 (Android SignApk)
 
 Name: res/drawable/miuix_preference_ic_detail_disconnected_dark.xml
@@ -29,7 +29,7 @@ Name: res/drawable-440dpi-v4/ic_task_unlock.webp
 SHA1-Digest: oqU8LpUtXMXOl4DOd/R5HQ6iFL8=
 
 Name: res/drawable/uninstall_dialog_cancel_btn.xml
-SHA1-Digest: J62r/bz1ZTFCaZdIULwoFLDEfCg=
+SHA1-Digest: egeOjSqQw3L2wODpiLD77Rn17uc=
 
 Name: res/drawable-night-xhdpi-v8/ic_task_lock.png
 SHA1-Digest: khZTjYFEZi+gb7nAlxCcX6CSTdU=
@@ -55,7 +55,7 @@ Name: res/drawable-night-v8/$navigation_bar_guide_app_quick_switch_wit
 SHA1-Digest: DJ/9lA1Q2jQ/gzCtNiz0yhp1Woc=
 
 Name: res/drawable/notification_bg_low.xml
-SHA1-Digest: hDtl9Qu8BxNY+QAlGciGYHdyPbE=
+SHA1-Digest: eQ3ko51sOTxx6gZcTj1m4JLg2pQ=
 
 Name: res/drawable-xhdpi-v4/abc_ic_star_black_48dp.png
 SHA1-Digest: FtlphNkBunKHFyn4YCJf+uB9r5Y=
@@ -96,7 +96,7 @@ SHA1-Digest: nm1kAFp3bvo80cbzy8d87FPGm/g=
 
 Name: res/drawable/miuix_preference_item_radio_two_state_background.xm
  l
-SHA1-Digest: YXvVESrjIqiQRrBpj1fm6ALMP8c=
+SHA1-Digest: 9WZF/BlecoRsBXO0AfJ+KB1ZUwk=
 
 Name: res/layout/miuix_preference_widget_switch.xml
 SHA1-Digest: n7oNq6/yRohPxgo70eGKAuhG9rg=
@@ -154,7 +154,7 @@ Name: res/drawable-xxxhdpi-v4/free_style_edit_bottom_tab_right_normal.
 SHA1-Digest: 31V9M+B7GTlD59k0wKVf+RAoJHc=
 
 Name: res/drawable/miuix_preference_middle_item_radio_bg_dark.xml
-SHA1-Digest: ccpuhZDbD5/VYdqGDC+6PHLy4Ok=
+SHA1-Digest: a/RsdjHv4GIxYvyB5XiLfid+eaI=
 
 Name: res/drawable-v24/miuix_preference_btn_radio_arrow_on.xml
 SHA1-Digest: j6CKSy4HxNotnlxEilKBBwUcN7s=
@@ -163,7 +163,7 @@ Name: res/drawable/$navigation_bar_guide_back_without_gs_line__0.xml
 SHA1-Digest: V9RqhhieQd2j72k5x91sh9Sa3tc=
 
 Name: res/drawable/miuix_appcompat_text_select_handle_left.xml
-SHA1-Digest: ngcUfYRukLBUoubNlkchitLsZBY=
+SHA1-Digest: q18WGsVnND3bATT6LuNhwb+ftXc=
 
 Name: res/color/abc_primary_text_disable_only_material_light.xml
 SHA1-Digest: CCN61xfLRwXcn9PAtLISvyWXtW8=
@@ -191,14 +191,14 @@ Name: res/drawable-mdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
 SHA1-Digest: vJlJKFFzdqRH7aobZJqh22UTsro=
 
 Name: res/drawable/home_preference_item_bg.xml
-SHA1-Digest: r3MXNqFIDDq6p2fbFlb3GwTpAlc=
+SHA1-Digest: x/ASxYJ7VOosSwAqO5hsd5hf0Ss=
 
 Name: res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.
  png
 SHA1-Digest: mn9silK1Kz/x6FpOnam2pfxvaFw=
 
 Name: res/layout/application.xml
-SHA1-Digest: e6WO/nosSeuPOsNhAV2AD3ddty0=
+SHA1-Digest: K2oKHuiiLn//rbpLfqWIJCnD5Wk=
 
 Name: kotlin/UseExperimental.kotlin_metadata
 SHA1-Digest: pFVAtNyArTK4rdhbc/VNsnPJqv0=
@@ -230,7 +230,7 @@ Name: res/drawable-anydpi-v24/miuix_sbl_simple_indicator_locked_header
 SHA1-Digest: aG7PY4lzok2RN8MAq8hVkWMQYHA=
 
 Name: res/drawable/miuix_preference_item_background_dark.xml
-SHA1-Digest: 2x5zO0+QEu9dixfy58ryqTk8tis=
+SHA1-Digest: OemWCRPxj8GbtzKTZ4KNH7Wb9S0=
 
 Name: res/drawable-hdpi-v4/free_style_edit_nothing_icon.webp
 SHA1-Digest: tiPHQCpYn/o1g/pwrgMAGnPwev4=
@@ -242,7 +242,7 @@ Name: kotlin/reflect/KMutableProperty2.kotlin_metadata
 SHA1-Digest: CcCd7+Tf9ZUlHik7isZx3i1WPJw=
 
 Name: res/drawable/miuix_appcompat_text_select_handle_middle.xml
-SHA1-Digest: ZTGT/xzEDvhv8rHl4rsfcUIeVpQ=
+SHA1-Digest: Qr4ym8uviL6a58mUSLab+KFudns=
 
 Name: res/drawable-hdpi-v4/abc_ic_star_black_36dp.png
 SHA1-Digest: 5eU75xlD5NF9nxHXpUHFwQBWZc4=
@@ -291,7 +291,7 @@ Name: lib/armeabi-v7a/libgltfio-jni.so
 SHA1-Digest: w0riARZufSbAvUHYLmH4mM03DFI=
 
 Name: res/layout/icon_customize_scale.xml
-SHA1-Digest: 3JGvABCXVtIZWLY8jkZ/uDkbro8=
+SHA1-Digest: cmm00Mt+BEAatZQy1YK+x+uMY7U=
 
 Name: kotlin/coroutines/Continuation.kotlin_metadata
 SHA1-Digest: ntsC/YnBc5TP9Gsz5oWznk8qi9s=
@@ -331,7 +331,7 @@ Name: res/layout/horizontal_shortcut_menu_item_container.xml
 SHA1-Digest: zkZJDYaEbvRn2xAdVmFhbhM1Gh4=
 
 Name: res/drawable/free_style_edit_bottom_tab_left.xml
-SHA1-Digest: N+ZEZrNu8sTsQwSzhwiwKmhA5gM=
+SHA1-Digest: Keeoh6vqnIiRD3I09JknGi6zZ3c=
 
 Name: res/drawable-xhdpi-v4/free_style_apps_cancel_n.webp
 SHA1-Digest: Q812P4i5YpV3zisHkUoRm5Wr2GQ=
@@ -340,7 +340,7 @@ Name: res/drawable/icon_jeejen_launcher.png
 SHA1-Digest: aWWWw2al6pW8ukrVSmfd/5nDwQc=
 
 Name: res/drawable/free_style_apps_ok_btn.xml
-SHA1-Digest: FDCfpc8NaZm7k9EV1R8Px945a8A=
+SHA1-Digest: Ckp9Rhm2r4eHE9yDhzsjXlGQYH8=
 
 Name: res/drawable-xhdpi-v4/miuix_appcompat_text_select_handle_left_da
  rk.9.png
@@ -420,13 +420,13 @@ Name: res/drawable-xhdpi-v4/thumbnail_entry_setting_n_dark.webp
 SHA1-Digest: rr/yQ9Zph41jkuaY7LTsdX55v2U=
 
 Name: res/xml/launcher_personal_assistant_setting_preferences.xml
-SHA1-Digest: 4pgfeiCGgpRLuAs/un2ldgFQchg=
+SHA1-Digest: vmi49mbrT1mMikDJuwHdFzVGNzM=
 
 Name: kotlin/collections/IndexingIterator.kotlin_metadata
 SHA1-Digest: 78Eintoe4JeqJLMyegwyVCjC9vI=
 
 Name: res/drawable/miuix_preference_last_item_bg_light.xml
-SHA1-Digest: OyOeWptSO+/6gsiB4VTynjk/MA0=
+SHA1-Digest: Frg0HEUp7gDasj9zKieKwEtb84o=
 
 Name: res/drawable-xxhdpi-v4/abc_text_select_handle_right_mtrl_light.p
  ng
@@ -436,11 +436,8 @@ Name: res/drawable-hdpi-v21/miuix_sbl_simple_indicator_locked_body_blu
  e.png
 SHA1-Digest: O37/cJHduBbFG6gioBNcJMHCKVA=
 
-Name: res/drawable-xxxhdpi-v4/icon_search_dark.png
-SHA1-Digest: BB60kQsype/vEkUCIjDL3h5NLKE=
-
 Name: res/drawable/miuix_preference_single_item_radio_bg_dark.xml
-SHA1-Digest: 3xsxFklFo718jxnapEhC+5xEf4g=
+SHA1-Digest: 30XVdenSr6pou6VpDSTuTXJ/JGo=
 
 Name: res/drawable-xhdpi-v4/gadget_clear_broom_00005.png
 SHA1-Digest: 3M89jNlen/UXoHJ5WM7VTijS/FY=
@@ -450,10 +447,10 @@ SHA1-Digest: LymKz3WydvWVVGzKbXxes90GcIk=
 
 Name: res/drawable-night-v8/miuix_appcompat_text_select_handle_middle.
  xml
-SHA1-Digest: hti0a5lwELrvsgSjw1PY3vitWxQ=
+SHA1-Digest: gVQDJbIQV9EjNpH71h7NACpuvkI=
 
 Name: res/drawable/miuix_preference_first_item_radio_bg_light.xml
-SHA1-Digest: zS3/LifU5T7PgmhoLShW2exLtj0=
+SHA1-Digest: Uk2o1M6n66MzVrHJ34B30wV9DQY=
 
 Name: res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_dark.pn
  g
@@ -496,7 +493,7 @@ Name: res/layout/launcher_action_bar.xml
 SHA1-Digest: xZoP6AqvOY0JPIRkLi147LzLTJs=
 
 Name: res/layout/task_stack_view_layout_style_container.xml
-SHA1-Digest: 5tlXf4aopntZc0VHXKMvDyWF1O4=
+SHA1-Digest: pygbS2xXZFedxjCL2SsE/7zDffg=
 
 Name: kotlin/WasExperimental.kotlin_metadata
 SHA1-Digest: /oWB+btIDv5riLwIOvaagmqubv4=
@@ -508,9 +505,6 @@ SHA1-Digest: s72pKmSwwJeQO7hXMFlqBLvHvHs=
 Name: res/drawable-xxhdpi-v4/no_space_bg.9.png
 SHA1-Digest: 7PmH6iq6FdJS4f4F3jzNXmJh2IY=
 
-Name: res/drawable-xxxhdpi-v4/icon_xiaoai_light.png
-SHA1-Digest: JQ3wxjRy62GIVjTE0VuXfn+Gwnw=
-
 Name: kotlin/collections/EmptyIterator.kotlin_metadata
 SHA1-Digest: owr+If+Gha+skbYLVlCnfmgaNts=
 
@@ -518,14 +512,14 @@ Name: res/drawable/drawer_bg_preview_color_system_normal.xml
 SHA1-Digest: wN6GQn4fyudtb205k/0bE0qZZy0=
 
 Name: res/drawable/workspace_seekpoint_dark.xml
-SHA1-Digest: V+dlKHUcBsGSzHUQGevDvGmfoGc=
+SHA1-Digest: 45dNzWRwt/2qjjhOIN7r+J6zFH0=
 
 Name: res/drawable-xhdpi-v4/free_style_edit_bottom_tab_middle_normal.9
  .png
 SHA1-Digest: coxn0xtRzw554zqAuSWImQx61NE=
 
 Name: res/layout/miuix_preference_connect_widget_layout.xml
-SHA1-Digest: VroTgXdYHRTWdxyWNMe6KC/0JR8=
+SHA1-Digest: OZ/wlXzzr56xAdwEHIioqym6ogM=
 
 Name: res/layout/abc_alert_dialog_material.xml
 SHA1-Digest: rX2ZZLIvDdIDO9ipL8V9G4qfGqQ=
@@ -549,10 +543,13 @@ Name: res/drawable/miuix_appcompat_arrow_popup_right_dark.xml
 SHA1-Digest: 9U0hw5S0m9EuPtiBK+O+NpZGlXQ=
 
 Name: res/layout/free_style_edit_bar.xml
-SHA1-Digest: lPavmh9FT8ULknNU5DSxZMXmQ/8=
+SHA1-Digest: 3wFxiIrEp2m/7uOGHIfjbeXSb9M=
 
 Name: res/drawable-xhdpi-v4/folder_background.9.png
 SHA1-Digest: oegM97zrN6l6K4wBehBmgwQAoy4=
+
+Name: res/drawable-xhdpi-v4/icon_xiaoai_light_default.png
+SHA1-Digest: 1NIM4Bb0Y08muf5GuervF0340vI=
 
 Name: res/drawable-xhdpi-v4/abc_text_select_handle_middle_mtrl_dark.pn
  g
@@ -583,7 +580,7 @@ Name: res/drawable-xhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
 SHA1-Digest: KlzG3JqNbUR49SiNBicsCPVTmfE=
 
 Name: res/drawable/miuix_appcompat_ic_visibility_selector_light.xml
-SHA1-Digest: blcCaunWvhy9F7Y6vilY9OSd3Kk=
+SHA1-Digest: kl/ce8h97yNwwLNc6N3bmKWvcCU=
 
 Name: kotlin/coroutines/experimental/CombinedContext.kotlin_metadata
 SHA1-Digest: y95FMxAJ7dD9h1RSjFDZIt2l9B0=
@@ -592,7 +589,7 @@ Name: res/drawable-xxxhdpi-v4/widget_resize_handle_bottom.webp
 SHA1-Digest: qIAMTqvSGC+eDdwTUg2Wr/IRwBk=
 
 Name: res/drawable/miuix_preference_first_item_radio_two_state_bg.xml
-SHA1-Digest: RJosJInuandIpO1Wer1WhHRLgIw=
+SHA1-Digest: rqtlfpTStKI7G2Hs33yOc4AKXY8=
 
 Name: res/drawable-xhdpi-v4/uninstall_dialog_left_btn_n.9.png
 SHA1-Digest: lPVGOqFMhyCfCCr/PzX5DnqL/nY=
@@ -600,6 +597,9 @@ SHA1-Digest: lPVGOqFMhyCfCCr/PzX5DnqL/nY=
 Name: res/drawable-ldpi-v21/miuix_sbl_simple_indicator_locked_header_g
  ray.png
 SHA1-Digest: rjkrA46iiXor+bT9Kqp5pskoay0=
+
+Name: res/drawable/icon_xiaoai_light.xml
+SHA1-Digest: RTtXX/GdAxYirtzXLRjDMsWpvW4=
 
 Name: res/drawable-xhdpi-v4/folder_scrollbar_v.9.png
 SHA1-Digest: 3DRs2Knv9mE9qUOvB2m9sfWFAPg=
@@ -624,6 +624,9 @@ SHA1-Digest: gcNZjtnCNJUrzMTRD5Sd9W3JoBM=
 
 Name: res/drawable/miuix_preference_middle_item_bg_dark_normal.xml
 SHA1-Digest: Kjm+CYy8AQ9WnGPECE2P662uwdI=
+
+Name: res/drawable-xxhdpi-v4/icon_xiaoai_light_default.png
+SHA1-Digest: 7AkUVLW5msPPZcT2pMFQSe34fl4=
 
 Name: res/drawable/miuix_appcompat_list_item_bg_dropdown_popup_middle_
  dark.xml
@@ -660,6 +663,9 @@ SHA1-Digest: e9wci7bIIXJTAFibxq9OhTmVMtI=
 Name: res/drawable-xhdpi-v4/screen_view_slide_bar.9.png
 SHA1-Digest: MopHrLDzimeApD/9yaemIv3ekGs=
 
+Name: res/drawable/search_bar_left_baidu_blue.xml
+SHA1-Digest: V2QgRPIJFuZsvxGtJiLgq+hRjQw=
+
 Name: res/drawable-xxxhdpi-v4/abc_ic_menu_share_mtrl_alpha.png
 SHA1-Digest: inKiiAaRqdYVz1OEfHB1GSgHGIg=
 
@@ -667,7 +673,7 @@ Name: res/drawable-xxxhdpi-v4/gadget_google_search_voice_btn_n.webp
 SHA1-Digest: d7s3iyzt6QCj2SwJRe6tU4TvhLg=
 
 Name: res/layout/free_style_loading.xml
-SHA1-Digest: qHRwylVzc4c1f3mgUACG/enaOAQ=
+SHA1-Digest: 3Wy3EmfziZ9LYt5tDbcUVHsMBus=
 
 Name: res/layout/miuix_appcompat_select_dropdown_popup_singlechoice.xm
  l
@@ -688,9 +694,6 @@ SHA1-Digest: FHcIojaLpf9p3NCL+MMeIQaWk8c=
 Name: res/drawable/navigation_bar_guide_app_quick_switch.xml
 SHA1-Digest: 2Tmuw/ChcxEUcQoF+r57/N/Phmw=
 
-Name: res/drawable-xxhdpi-v4/icon_xiaoai_dark.png
-SHA1-Digest: Rtq1jIReNgNvHzZpogtNnKUpW7s=
-
 Name: res/drawable-xxhdpi-v4/miuix_appcompat_progressbar_indeterminate
  _circle_dark.png
 SHA1-Digest: wZ8Pw6+cheaoTox5TSBZWmaJWo8=
@@ -699,7 +702,7 @@ Name: kotlin/collections/MutableMapWithDefaultImpl.kotlin_metadata
 SHA1-Digest: xfwHAbjcWsUdEF/2i7R9vi0jIEE=
 
 Name: res/drawable/drawer_bg_preview_color_light.xml
-SHA1-Digest: N3sJy9kFlFD6GxJ3e0XKzBfz5Eg=
+SHA1-Digest: NqeNQzDAYuUQ6VnBOQ0evSWi1z8=
 
 Name: res/drawable-440dpi-v4/miuix_appcompat_text_select_handle_middle
  _light.9.png
@@ -762,9 +765,6 @@ SHA1-Digest: cK13mafAwPTWsx5FboX6jI8pzIw=
 
 Name: res/drawable-hdpi-v4/abc_list_pressed_holo_light.9.png
 SHA1-Digest: Ez3WCGnJwPKCv1TiKa5gtNlhb1E=
-
-Name: res/drawable-xhdpi-v4/icon_search_light.png
-SHA1-Digest: +hP3Eh0tmHMeyuovBWIP+jDMlIw=
 
 Name: res/drawable-440dpi-v4/miuix_appcompat_text_select_handle_middle
  _dark.9.png
@@ -840,7 +840,7 @@ Name: res/drawable-xhdpi-v4/recents_icon_garbage_cleanup.png
 SHA1-Digest: HxUw8Z2uXVREq7zPAtjghyVT53g=
 
 Name: res/layout/free_style_edit_bar_free_button_item.xml
-SHA1-Digest: R+h26Ze3hNv01e6XYxt91ivoQ5A=
+SHA1-Digest: Wyx8wWeHmWDN0I0K18Cn7kc3H3E=
 
 Name: res/drawable-mdpi-v4/abc_text_select_handle_middle_mtrl_light.pn
  g
@@ -856,7 +856,7 @@ Name: res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png
 SHA1-Digest: 4ujcSC4Blk4sOy0+A2+f9R5ecyE=
 
 Name: res/layout/miuix_sbl_trigger_loading_progress.xml
-SHA1-Digest: l99NEGuM18VDJwsWiBI5nG+BHEk=
+SHA1-Digest: f4nqDAugvXXhP2xDz9QakUiMPtQ=
 
 Name: res/drawable-ldrtl-xxxhdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.pn
  g
@@ -866,7 +866,7 @@ Name: res/drawable-xxhdpi-v4/gadget_google_search_voice_btn_p.webp
 SHA1-Digest: YAad36/V5USnQvFmAjl+EzD5trg=
 
 Name: res/layout/fragment_drawer_background.xml
-SHA1-Digest: sCt93QkEkOfzPLEngPNjz3aw1b4=
+SHA1-Digest: QGyEIIWc5WJIkbsz5Pxm1K2q+PA=
 
 Name: res/drawable/$task_stack_view_layout_style_vertical__0.xml
 SHA1-Digest: LQqisck4FS3JU/YNVyhlMtItHq0=
@@ -893,7 +893,7 @@ Name: res/drawable-anydpi-v23/miuix_preference_category_bg_light.xml
 SHA1-Digest: 57KMDFGfDwm0wyNKgGdPcqWX92Y=
 
 Name: res/xml/all_apps_settings.xml
-SHA1-Digest: 89E26WyxVEGj6VIgUV3vz6t4VhE=
+SHA1-Digest: CYMp64wnSnL6cTzC2kGE8ioTf/Q=
 
 Name: res/color/all_apps_select_input_text_dark.xml
 SHA1-Digest: b0A3YYItfIyqLk40uQvpL6jQqTI=
@@ -915,7 +915,7 @@ Name: res/drawable-hdpi-v4/abc_ic_star_black_48dp.png
 SHA1-Digest: QbDpX67R5eyTWuNm150bgcl3Sgw=
 
 Name: res/drawable/miuix_preference_middle_item_radio_two_state_bg.xml
-SHA1-Digest: B1txFsL6gNtd0FmLm7Qryq16c/A=
+SHA1-Digest: gVfVBUgdYHZ1F8ykUi5CU31vwZU=
 
 Name: res/color/miuix_preference_list_text_dark.xml
 SHA1-Digest: mleXeg7pZiK1lTOAPJWwqnGoAUI=
@@ -939,7 +939,7 @@ Name: kotlin/coroutines/coroutines.kotlin_builtins
 SHA1-Digest: cmy3peJy1Zdf5inD2qNB1hpYdmY=
 
 Name: AndroidManifest.xml
-SHA1-Digest: olxrthu5nBX7ATaa69m8PBnnZc0=
+SHA1-Digest: H6oOAmNXhVA7eyUb8lO6lXcH1uk=
 
 Name: kotlin/comparisons/NaturalOrderComparator.kotlin_metadata
 SHA1-Digest: J4XFJHg92Qtx42mu4hwkJnf7oXw=
@@ -989,6 +989,9 @@ SHA1-Digest: zYN+/BX1Y4pqloqcgOwIw1pNPEs=
 Name: res/drawable-440dpi-v4/gadget_clear_button_bg.png
 SHA1-Digest: V0zuesrXPDMbsyJPDyaNmvcJe8k=
 
+Name: res/drawable-440dpi-v4/icon_search_dark_default.png
+SHA1-Digest: j3KnJ1gxEA4i5UmA9cjJTRlztm0=
+
 Name: res/drawable-xhdpi-v4/abc_text_select_handle_middle_mtrl_light.p
  ng
 SHA1-Digest: Dqkh9sO8jeixbUIrngveNDs1Q7w=
@@ -1012,21 +1015,21 @@ Name: res/drawable-mdpi-v4/abc_text_select_handle_left_mtrl_light.png
 SHA1-Digest: jEtv5fNe5zMTwAdDEwTqqcIg9Bo=
 
 Name: res/drawable/notification_bg.xml
-SHA1-Digest: euM20qahm8GwlZa0bJlFYqzQ0rY=
+SHA1-Digest: GpBD1GHSZh0nzmiV9qZe7uemTt4=
 
 Name: kotlin/time/DurationUnit.kotlin_metadata
 SHA1-Digest: ac1YSnerY/J1TIhjSFmu/hl3Vto=
 
 Name: res/drawable-night-v8/miuix_appcompat_text_select_handle_left.xm
  l
-SHA1-Digest: MC2ZQmBdILhamN3xNfClJXQlw2o=
+SHA1-Digest: pfGpfGHGk04KXS6ieunJct30VG0=
 
 Name: res/drawable/miuix_appcompat_progressbar_horizontal_primary_dark
  .xml
 SHA1-Digest: m7x8vLPYWw65elQSHscO4nS6ctM=
 
 Name: res/drawable/miuix_preference_single_item_bg_light.xml
-SHA1-Digest: 9ai8BMdBhho0RJRQO+JMXlw+opI=
+SHA1-Digest: WN0GxMEHPsjQZIXmrOO0VZWhC/A=
 
 Name: res/layout/fragment_works_apps_list.xml
 SHA1-Digest: BAxS3RsfNGXnpmiF9b4wtFHf6WU=
@@ -1092,7 +1095,7 @@ Name: kotlin/text/Typography.kotlin_metadata
 SHA1-Digest: 00IPrrV0rs3kLgTHw0rRpzkKSgg=
 
 Name: res/drawable/miuix_preference_single_item_radio_two_state_bg.xml
-SHA1-Digest: PXG+VKOkKHyxs+dRTwuvHyKfdYE=
+SHA1-Digest: c3HW39yWF8hQ5jPVWcSX/yhP7H4=
 
 Name: res/drawable-hdpi-v4/gadget_google_search_voice_btn_n.webp
 SHA1-Digest: 1vNg6MhFn9DY3/eeHycdF7D95NA=
@@ -1110,7 +1113,7 @@ Name: res/drawable-xhdpi-v4/gadget_clear_broom_00003.png
 SHA1-Digest: vOT6kHV0sd2J5c5HJQm/I+w63aw=
 
 Name: res/drawable/thumbnail_entry_tools.xml
-SHA1-Digest: MepoSgCN9Fmap8LktK5r5jJ3AcQ=
+SHA1-Digest: PfY8wHTSX1tYfVlXCeAQuFzD01E=
 
 Name: res/drawable-xxxhdpi-v4/screen_view_arrow_left.png
 SHA1-Digest: jDdFHcsJMbAO7C9IMyWyzll6OuU=
@@ -1137,7 +1140,7 @@ Name: res/drawable/action_bar_back_light.xml
 SHA1-Digest: BiWAAAU3SQ7ClW94NZIuie7WMRI=
 
 Name: res/drawable/miuix_preference_item_radio_background_light.xml
-SHA1-Digest: /KQTXLc1VOjJP1e9EIickCFfIm4=
+SHA1-Digest: JRumjKKdGl/9AFEPU8ncr/nmClM=
 
 Name: res/drawable-xxxhdpi-v4/free_style_apps_ok_p.webp
 SHA1-Digest: k2zGndFG87YdqniPYxhVhbD/e/U=
@@ -1190,22 +1193,22 @@ Name: res/drawable-xxxhdpi-v4/recommend_background.9.png
 SHA1-Digest: 4NSUi2UE9VfMdeMCxYCSuvikIPU=
 
 Name: res/drawable/miuix_appcompat_edit_text_clear_btn_dark.xml
-SHA1-Digest: 08gHnClOpyJlcDkTbTVcQ8cu9O0=
+SHA1-Digest: oFD5Dstk2iKYLc35zbgM0msSZWQ=
 
 Name: res/layout/top_menu_container.xml
 SHA1-Digest: puWu3melfIrq8JHJ3gn5CvGj7z0=
 
 Name: res/drawable/free_style_edit_bottom_tab_middle.xml
-SHA1-Digest: Vey8x+/ZIAepmy37puuPS7Agmck=
+SHA1-Digest: PcNJoTxgYq5mzfRb5N4gnNNrbNQ=
 
 Name: res/xml/launcher_slideup_setting_preferences.xml
-SHA1-Digest: CjSKQWxvHzKVcHLfdq3TV7vTw5E=
+SHA1-Digest: o8//VkstL4rX9UNB+nPOFCcSApo=
 
 Name: res/drawable-xhdpi-v4/notifications_clear_all.webp
 SHA1-Digest: Rw0xP34HjwYfPk6inP3s4CprxXA=
 
 Name: res/layout/miuix_sbl_trigger_up_layout.xml
-SHA1-Digest: +OeDwCP//OEFEsM+kHoRcDAixCE=
+SHA1-Digest: jjMae56J+2JAu1eViazK2hhKSgk=
 
 Name: res/drawable-xhdpi-v4/thumbnail_entry_setting_p.webp
 SHA1-Digest: 5cWPaAcvllZBiQs1ws/Sli6wUBE=
@@ -1225,9 +1228,6 @@ SHA1-Digest: VnGPmz/EbIcCMntV8KUWGcL6L7o=
 Name: res/layout/drop_target_bar.xml
 SHA1-Digest: HZpStA65MpMT7DH84FXWUm0FpJk=
 
-Name: res/drawable-440dpi-v4/icon_xiaoai_dark.png
-SHA1-Digest: 41fnnOPQoAcjBPCOvg/O+JxEW24=
-
 Name: com/miui/msa/global/guessyoulike/v1/GlobalFolderInfo.aidl
 SHA1-Digest: U39VzUNv/C8sxfBkprAGMwT5zKY=
 
@@ -1238,7 +1238,7 @@ Name: res/drawable-xhdpi-v4/screen_view_arrow_left.png
 SHA1-Digest: ErIQpl+/WQ1F9vaefqtaCMSwnS8=
 
 Name: res/layout/miuix_sbl_trigger_layout.xml
-SHA1-Digest: vWyE+XoqKP7n1K0vXoSt4xXyFgY=
+SHA1-Digest: MiNjoXD5pccovj1wpA09w1pUPd0=
 
 Name: res/drawable-xxhdpi-v4/gadget_clear_broom_00009.png
 SHA1-Digest: AxhNWlahv6o54k4sxcx5dBion3o=
@@ -1355,13 +1355,13 @@ Name: res/drawable-xhdpi-v4/thumbnail_entry_setting_p_dark.webp
 SHA1-Digest: QqoiI8uI0IUBfwJ2Q41H27HQAgo=
 
 Name: res/layout/recommend_header.xml
-SHA1-Digest: 6SJKQgBbrQCDt1szi7SeSWTrPGI=
+SHA1-Digest: fovR++x3DpilyrHjJ9pyKd2WqYg=
 
 Name: res/layout/miuix_preference_category_layout.xml
 SHA1-Digest: 4KLZ9I1j5S7DJ8rwVidVEXwH8bE=
 
 Name: res/xml/task_stack_view_layout_style_fragment.xml
-SHA1-Digest: onGVr7g83DVP4oJ5HsX05CBieP0=
+SHA1-Digest: VXgobWIg8jvpwlb027Pw8s4Qvbw=
 
 Name: res/drawable-v24/miuix_sbl_simple_indicator_locked_header_gray.x
  ml
@@ -1406,7 +1406,7 @@ Name: res/layout/abc_cascading_menu_item_layout.xml
 SHA1-Digest: R1x6d6nUI1Hg9OKHjkP05hYeBrc=
 
 Name: res/drawable/drawer_bg_preview_color_system.xml
-SHA1-Digest: uynhLlNXbFl91KYnMGOSRtL18Uc=
+SHA1-Digest: IyNYK+piW5UvE00O1Imug8iwPUg=
 
 Name: res/drawable-xhdpi-v4/recents_screening.webp
 SHA1-Digest: KUgwFZfotV1Lybbe6ifV8ayIGrU=
@@ -1442,7 +1442,7 @@ Name: res/drawable-xhdpi-v4/gadget_clear_broom_00016.png
 SHA1-Digest: hvTkVx1klzTsaAZpTXXC6CcYA8M=
 
 Name: res/drawable/free_style_bottom_checkbox.xml
-SHA1-Digest: VsMoQNXk7Utcx72gZasHAPt3l8c=
+SHA1-Digest: Y0QULTav3rARAtDp1o8XckM5Cl8=
 
 Name: res/drawable-xxhdpi-v4/abc_textfield_default_mtrl_alpha.9.png
 SHA1-Digest: 3j+3IE1u1WhAXSyrAicO4ruaaAU=
@@ -1473,7 +1473,7 @@ Name: res/drawable/button_complete_background.png
 SHA1-Digest: yhZPfK1XOxpTzkOj3c6BcL4zFOw=
 
 Name: res/drawable/miuix_preference_item_background_light.xml
-SHA1-Digest: n/GUDTe4lz7NO0jjt/SpR3Ra+Ls=
+SHA1-Digest: eL5pHCmvVSXnVvfpcps20ANrJJ8=
 
 Name: kotlin/contracts/ConditionalEffect.kotlin_metadata
 SHA1-Digest: MxNnrGFdUmpqlYINk7l5RhlQdFQ=
@@ -1485,7 +1485,7 @@ Name: res/color/switch_thumb_material_dark.xml
 SHA1-Digest: 8IJDkH1g0Wrzc8llyrR2wEfbzbM=
 
 Name: res/layout/recents_recommend_view.xml
-SHA1-Digest: VgCCA9BUGg/OYQ45wlY3wUzl6ZE=
+SHA1-Digest: +8bxEyWTPmR5WqMfVvqsBlmGzNg=
 
 Name: res/drawable-440dpi-v4/gadget_clear_broom_00011.png
 SHA1-Digest: 3dVt/UM0FM24wNaBxIl0aDMzXTM=
@@ -1514,6 +1514,9 @@ SHA1-Digest: srQd6sydi3vcAX5NZnRhVThSiQc=
 Name: res/drawable-xhdpi-v4/smallwindow_icon.png
 SHA1-Digest: ny9V0fBOoZj4ajmkK9Z9erL8o/M=
 
+Name: res/drawable-xxhdpi-v4/icon_xiaoai_dark_default.png
+SHA1-Digest: LINHUdGw2mW7e0TG+prTW9Ix0UM=
+
 Name: res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png
 SHA1-Digest: rPKbb20RGbvShI5/3oDbpeRZyYE=
 
@@ -1523,8 +1526,8 @@ SHA1-Digest: QHQgoF3m7FlwHEI02KkUv35XO4k=
 Name: META-INF/androidx.vectordrawable_vectordrawable.version
 SHA1-Digest: 34KpDjBzdkt0mOT6lWJ1Fv3YmF0=
 
-Name: res/drawable-xhdpi-v4/icon_xiaoai_dark.png
-SHA1-Digest: 76ERBnGD5U8ng3o6Cok+xWbEYOU=
+Name: res/drawable-440dpi-v4/icon_xiaoai_light_default.png
+SHA1-Digest: mPyxeAXw2W0Ml5gTH5MStdTUVFk=
 
 Name: res/drawable-hdpi-v4/workspace_seekpoint_normal.webp
 SHA1-Digest: 3HOgf+gBStS0QUtw2Ary8m55llQ=
@@ -1536,7 +1539,7 @@ Name: res/drawable-440dpi-v4/popup.9.png
 SHA1-Digest: pA4eMYCnASKevQLsTnOLpCKHb0Y=
 
 Name: res/drawable/miuix_appcompat_progressbar_indeterminate_light.xml
-SHA1-Digest: dCe/oieDZ5R3Kwc12N61J6BYmmA=
+SHA1-Digest: E8GFaPY9y2SrJIxMESt9BGLZwFw=
 
 Name: res/drawable/ic_launcher.png
 SHA1-Digest: RdU2XiztvA9ZogklJ22HzpYtHhw=
@@ -1557,7 +1560,7 @@ Name: res/anim/btn_checkbox_to_unchecked_icon_null_animation.xml
 SHA1-Digest: mJzabJ52TEM5DVO7GDhrHD51T5g=
 
 Name: res/layout/recents_task_view.xml
-SHA1-Digest: ypQmKzAWdkmsJjBAQa9pZv9yS+U=
+SHA1-Digest: 7/I2QphSmkI6pgpzIDFv/f/d+eM=
 
 Name: META-INF/androidx.core_core.version
 SHA1-Digest: +rEJzQzfLvWVgq0bkp6fKHyIUVM=
@@ -1591,7 +1594,7 @@ Name: res/drawable-mdpi-v4/abc_ic_star_half_black_48dp.png
 SHA1-Digest: zE/R5xsR97x8GBTk7wQpVwZn2kA=
 
 Name: res/layout/exit_multi_window_btn.xml
-SHA1-Digest: 8y9z+Sc6jUMrKtz9q/1Z+Zr7+qk=
+SHA1-Digest: a71WvSG4bcASZNFf5AtscCYpA/I=
 
 Name: kotlin/internal/AccessibleLateinitPropertyLiteral.kotlin_metadat
  a
@@ -1610,7 +1613,7 @@ Name: res/drawable-v26/miuix_sbl_loading_progress_circle_light_svg.xml
 SHA1-Digest: dulYis0xtuLMmlutU/0MD6BOf6I=
 
 Name: res/drawable/free_style_apps_cancel_btn.xml
-SHA1-Digest: Nf6PBoUNgqXXIb3Wi3AX9ulrBqU=
+SHA1-Digest: dV2ouZvysCL9Mp9mgHcD58iw88U=
 
 Name: res/drawable-hdpi-v4/notification_bg_low_pressed.9.png
 SHA1-Digest: hlGgjwCibYSJn0dDvquLScOoXss=
@@ -1618,14 +1621,11 @@ SHA1-Digest: hlGgjwCibYSJn0dDvquLScOoXss=
 Name: res/drawable-xxxhdpi-v4/widget_resize_frame_holo.9.png
 SHA1-Digest: LD4YBHQ6d7GviJfBom5m4LSIdlY=
 
-Name: res/drawable-xxhdpi-v4/icon_xiaoai_light.png
-SHA1-Digest: Nhn8dZGeQ50jB9ASYnDFcLECQ48=
-
 Name: res/drawable-xxxhdpi-v4/gadget_clock_12_icon.webp
 SHA1-Digest: wu3iFhW25MDo7kwlct4hfKwCoXU=
 
 Name: classes.dex
-SHA1-Digest: J0Y19kmN0DNLXKZHCBhVlDXAihg=
+SHA1-Digest: 32JN7m+dBwPvLi+ywWPeu7V5/dk=
 
 Name: res/drawable/miuix_appcompat_ic_invisible_light.xml
 SHA1-Digest: Rb6Y4BCk14Z6XVh56f2aG0Ocor4=
@@ -1646,6 +1646,9 @@ SHA1-Digest: xcQ0bHWRc+R9tuxQ3wgY1a2eY0k=
 Name: res/xml/oldman_layout_hotseats.xml
 SHA1-Digest: Mch6fejWYt1e0H+PcNT4ARBPKVw=
 
+Name: res/drawable/search_bar_left_baidu_white.xml
+SHA1-Digest: seUIeeLySRAEhjr+TPPi0ivNHEY=
+
 Name: META-INF/androidx.localbroadcastmanager_localbroadcastmanager.ve
  rsion
 SHA1-Digest: wLuW6zDe08ZmwxIzdZ/tZuEu5Bs=
@@ -1661,7 +1664,7 @@ Name: res/drawable-hdpi-v4/icon_assistant_none.webp
 SHA1-Digest: FougS3Orw6x3Ihfh/26iN03z35I=
 
 Name: res/xml/icon_customize_container.xml
-SHA1-Digest: BC5hfldJTXciLQVZL3kf4OTeD6g=
+SHA1-Digest: 82+exdY/qqFPEZSpYNPfVlP+SnI=
 
 Name: res/drawable-night-xxhdpi-v8/ic_task_unlock.png
 SHA1-Digest: OxQPsLqAQD5Y/G07kXmp17591WI=
@@ -1680,7 +1683,7 @@ Name: res/drawable-xxhdpi-v4/miuix_appcompat_text_select_handle_left_l
 SHA1-Digest: 9BE9oVZGT/o/b2w3hXHm3yrSQdo=
 
 Name: res/drawable/miuix_preference_single_item_bg_dark.xml
-SHA1-Digest: HQeeq9CCCLpYQwVtWA4j61ELAH8=
+SHA1-Digest: +mtu4EHwdHMZwGsiPI4g/Qne/Ow=
 
 Name: res/color/miuix_preference_list_secondary_text_dark.xml
 SHA1-Digest: AMl8DoVCR0LRfDLG79eGLuD5jcw=
@@ -1725,7 +1728,7 @@ Name: res/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png
 SHA1-Digest: ITuAj9GLxIU8m+qyHDgR794ap3w=
 
 Name: res/drawable/miuix_appcompat_text_select_handle_right.xml
-SHA1-Digest: q0S8hrz/nPjIJrndOjkGTDK5XUk=
+SHA1-Digest: mI6bda3lzNF7GeXYEkQPKqQ7198=
 
 Name: res/drawable/sample_footer_loading.png
 SHA1-Digest: SZ+9uqlvmwozD99sWNovxmLcRP8=
@@ -1746,7 +1749,7 @@ Name: res/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png
 SHA1-Digest: SDtzZHfzLgRkZ6N3YB64TUFx5k8=
 
 Name: res/layout/search_bar_settings.xml
-SHA1-Digest: qSLJFkYg5YDGDG5rc4fFbBX+sPk=
+SHA1-Digest: qPvZ0t3Kp7U5ANxV5arn5SVJGPg=
 
 Name: res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_light.9.pn
  g
@@ -1765,6 +1768,9 @@ SHA1-Digest: pPrNp4eGk7zCWWf7yltXYIrmgQc=
 Name: kotlin/collections/CollectionsKt.kotlin_metadata
 SHA1-Digest: a4syCbFsac/umGewgVs0BHXuYi8=
 
+Name: res/drawable/search_bar_right_microphone_blue.xml
+SHA1-Digest: fnK9kvr0Oo1LT8F5TJ7C3gaWctU=
+
 Name: res/drawable-mdpi-v4/abc_list_pressed_holo_dark.9.png
 SHA1-Digest: hs0J/rLgnwuKb/4gw9svczihW+E=
 
@@ -1775,7 +1781,7 @@ Name: kotlin/ranges/ULongRange.kotlin_metadata
 SHA1-Digest: D/nUmkJ1ELLUQN1Ewim1a16FpRE=
 
 Name: res/drawable/gadget_broom_animation.xml
-SHA1-Digest: /Y4qV6NU670xm/2vfBVGH/1DtXY=
+SHA1-Digest: 72uAaRyMUSsOyvr+dNH3fTNBAZk=
 
 Name: res/drawable-xxxhdpi-v4/free_style_icon_folder.webp
 SHA1-Digest: 7Tiss8IL5/8VKyWI+1/CHPcd6fU=
@@ -1811,7 +1817,7 @@ Name: res/drawable-xxhdpi-v4/gadget_google_search_preview.webp
 SHA1-Digest: W0JANuO9LaM02auXCZa+dbp8OF4=
 
 Name: res/drawable/miuix_appcompat_arrow_popup_top_middle_dark.xml
-SHA1-Digest: ECVehmWlTHymowby4WtRoF+07Jc=
+SHA1-Digest: V0L97mk/Jt0cuzlLxWtOvRXUb1E=
 
 Name: res/drawable-xxxhdpi-v4/recommend_xout.png
 SHA1-Digest: 3eeZdHi5xkEGGWay0EFkK3LyPUA=
@@ -1821,6 +1827,9 @@ SHA1-Digest: z+sOrf8MkDIEYPl3BUz6L+BTLE8=
 
 Name: res/xml/business_default_workspace4x6_private_model.xml
 SHA1-Digest: EzvVMe3jl+HoI0I3p37v5sDt5qw=
+
+Name: res/drawable-xxxhdpi-v4/icon_xiaoai_light_default.png
+SHA1-Digest: CLc5+BG4j5fP7VsWQab9NidWDDs=
 
 Name: res/raw/app_category
 SHA1-Digest: CRinSP3kIPhALig3p0+TbQWmHIo=
@@ -1838,7 +1847,7 @@ Name: res/drawable-hdpi-v4/transition_effect_classic.webp
 SHA1-Digest: 9HDd1IV+7S9mp6+/ANQWrirc1VE=
 
 Name: res/drawable/uninstall_dialog_confirm_btn.xml
-SHA1-Digest: AmfQUHENgAF/mSILLgPmvrtGtOk=
+SHA1-Digest: 89Z+VXo/n6eyvLZyXLtwlk2oQMg=
 
 Name: kotlin/text/IndentKt.kotlin_metadata
 SHA1-Digest: 8+Ig0+gIy0ojaeNBA0tqCrUrCpo=
@@ -1864,6 +1873,9 @@ SHA1-Digest: BxQUWrxgdKKWp1LnSg4jPudsfN4=
 Name: res/drawable-hdpi-v4/free_style_apps_application_bg_s.9.png
 SHA1-Digest: fXkE4Ssaflms5gr/R3dqbF+0O/U=
 
+Name: res/drawable/bg_search_bar_white85_black5.xml
+SHA1-Digest: R9i6e9hrtEWlmE/rLP6JunTFq94=
+
 Name: kotlin/Result.kotlin_metadata
 SHA1-Digest: frRFi2oIo0e0Yr2gpT5OuBn6aW4=
 
@@ -1877,7 +1889,7 @@ Name: res/drawable/bg_search_bar_input_light.xml
 SHA1-Digest: SsQvWMduLPySJlrVczQO96osrWo=
 
 Name: res/layout/small_window_edit.xml
-SHA1-Digest: VhOqoIVSYq/F7nUJbP1XZsNvE0k=
+SHA1-Digest: 1nWYTGbq38GBm3DCUH2waLaLOYk=
 
 Name: res/layout/small_window_edit_icon.xml
 SHA1-Digest: dy7fCZkvpipbids/bSCLFLRDeuI=
@@ -1902,7 +1914,7 @@ Name: res/drawable/miuix_appcompat_list_item_bg_dropdown_popup_first_l
 SHA1-Digest: oMcVaojo0hUM2pxZTpqb8nAfA04=
 
 Name: res/drawable/miuix_appcompat_ic_visibility_selector_dark.xml
-SHA1-Digest: EykPgD+PKME3EEP2EU7P/4hHycg=
+SHA1-Digest: oMU6nfOPG5eErVPjUPeLhKYuli0=
 
 Name: res/drawable/anti_touch_bar.9.png
 SHA1-Digest: fl4zt4YqRt01xloIrg3A6YxCCKE=
@@ -2013,7 +2025,7 @@ Name: kotlin/sequences/SequencesKt.kotlin_metadata
 SHA1-Digest: F4nQXnIxB6V8LIWKqWHQt/xSW24=
 
 Name: res/drawable/recent_menu_bg.xml
-SHA1-Digest: 6mXkosGEnePBdKCz8F7hbesCRz0=
+SHA1-Digest: htxddCMukEBIk5duorN4YQMGHfo=
 
 Name: res/drawable-hdpi-v4/abc_list_focused_holo.9.png
 SHA1-Digest: z5rmTEqRHuMsX24l4sP3B88dR3Q=
@@ -2125,6 +2137,9 @@ SHA1-Digest: ki1G9PGJWnIOQhJov4FL0d8wGY0=
 Name: res/drawable-xhdpi-v4/notification_bg_normal.9.png
 SHA1-Digest: VLNXFzqJn8hvw7NJ233yGma3RqA=
 
+Name: res/drawable/search_bar_right_xiaoai_colorful.xml
+SHA1-Digest: VC3E6kGw/daxjhUeS/sVtqmpOi4=
+
 Name: res/drawable-xhdpi-v4/thumbnail_entry_set_wallpaper_n_dark.webp
 SHA1-Digest: ITNcdKOae87Ip9JLECEBsHSv1ws=
 
@@ -2209,10 +2224,7 @@ Name: res/drawable-xxhdpi-v4/free_style_edit_bottom_tab_right_selected
 SHA1-Digest: VJCqOozMKCVT9pmHpvYy5f0G/Po=
 
 Name: res/layout/recommend_switch.xml
-SHA1-Digest: FJ/EHN+GHPQzhAVqGD/aExeina8=
-
-Name: res/drawable-xhdpi-v4/icon_xiaoai_light.png
-SHA1-Digest: nwzHkmBqmISJkz3Rvl1boEqPpUI=
+SHA1-Digest: NY49HMwQ+lYJIpl68I5uOLXtkVI=
 
 Name: res/color/visual_check_text_color.xml
 SHA1-Digest: d9iQTrxiQ1tY2GEL612JlWXJn8Y=
@@ -2251,7 +2263,7 @@ Name: res/color/miuix_compat_list_text_dark.xml
 SHA1-Digest: DvcwHgTjyLSfLyCiMNUhhkpi/pQ=
 
 Name: res/drawable/recent_task_bg.xml
-SHA1-Digest: 44Dg4saYaHieYxvhPlot0CFgCWM=
+SHA1-Digest: uejYZDWCkmmAN8xhqA9jYRlGqyw=
 
 Name: res/drawable-hdpi-v4/icon_folder.webp
 SHA1-Digest: LL6AobPdyqJDK/No3LAgeQ1+p54=
@@ -2327,7 +2339,7 @@ Name: res/drawable/abc_btn_check_material.xml
 SHA1-Digest: gsvK6dc6keq/rzy5WdxFaagZfws=
 
 Name: res/drawable/miuix_preference_last_item_radio_bg_light.xml
-SHA1-Digest: 1AcKb3eaCSJS2kTi4me+MXffj7Y=
+SHA1-Digest: SQrBdOM+OR6oOsWDmWYdsIcYbcE=
 
 Name: kotlin/UShortArrayKt.kotlin_metadata
 SHA1-Digest: JB+Vou1xSDpJ5stwQUJUBiZOqoU=
@@ -2352,6 +2364,9 @@ SHA1-Digest: S7itzVXEjO/xXp2q2BS2c9tM3tI=
 
 Name: kotlin/NullPointerException.kotlin_metadata
 SHA1-Digest: wcjttjneLlLs5uk5pqquhsjk66g=
+
+Name: res/drawable-440dpi-v4/icon_xiaoai_dark_default.png
+SHA1-Digest: Pk53dpjGzq/9Q+ya1MVNodyQkGY=
 
 Name: res/drawable-ldrtl-hdpi-v17/abc_ic_menu_copy_mtrl_am_alpha.png
 SHA1-Digest: nqxFTHIyt1k31oTQzMBPMAnZrEM=
@@ -2414,7 +2429,7 @@ Name: res/drawable/abc_seekbar_track_material.xml
 SHA1-Digest: 9h9nB4ZeyuXiGRRqFJocRq2nu1U=
 
 Name: res/drawable-ldrtl/uninstall_dialog_confirm_btn.xml
-SHA1-Digest: 2Mk9W5TD4Qk/6MJifkqtcsfJwDo=
+SHA1-Digest: DwOeyhFm0vF2MKnx6q7rWS1h+Aw=
 
 Name: res/drawable-xxxhdpi-v4/thumbnail_entry_setting_n.webp
 SHA1-Digest: swLoHxlCGRXQeClsjdDqYVW2j38=
@@ -2429,7 +2444,7 @@ Name: res/drawable-hdpi-v4/hotseat_background.9.png
 SHA1-Digest: JaVwi0aLAY1bA8KIriLiRJ4YLb0=
 
 Name: res/layout/navigation_bar_type_container.xml
-SHA1-Digest: fIbmznECeyDxum7Fhz1aQb2+CR8=
+SHA1-Digest: cLWE9BdWCph93F/VDepxNFt49GY=
 
 Name: kotlin/jvm/JvmSuppressWildcards.kotlin_metadata
 SHA1-Digest: snpWaJOc30p4kH/Qlmwr0aUkuWA=
@@ -2563,10 +2578,10 @@ Name: res/drawable/abc_switch_thumb_material.xml
 SHA1-Digest: YnLPDa5SXkfTwiw5LwDugEhAhso=
 
 Name: res/layout/recommend_icon.xml
-SHA1-Digest: wQbK/FygrQXSg68wSVVnTRawRow=
+SHA1-Digest: QBFD+4Rw926nmdwjJ0bXB/+amPw=
 
 Name: res/drawable/miuix_preference_btn_radio_arrow.xml
-SHA1-Digest: 7WApYIFV3uIKOualHh5WGhaNL48=
+SHA1-Digest: r/Jir25lQ1fjHHxGtWg0ows8StQ=
 
 Name: res/drawable-xxhdpi-v4/free_style_icon_drawer.webp
 SHA1-Digest: qjN0TxmQnflF57BsaLI+H+Rvf8o=
@@ -2593,7 +2608,7 @@ Name: res/drawable-440dpi-v4/wallpaper_mask.9.png
 SHA1-Digest: DtzdCclZCOvewUL2NXJAyfMxJ/s=
 
 Name: res/drawable/btn_radio_on_to_off_mtrl_animation.xml
-SHA1-Digest: stwsTVb5dox2SmsZ7qaBx2tidzM=
+SHA1-Digest: hebNq5SZWeY6WDef6OpnctdAIFo=
 
 Name: res/drawable-440dpi-v4/gadget_clear_broom_00009.png
 SHA1-Digest: NJnJfGSYJp3Anbrum5wzrvRcAMk=
@@ -2616,9 +2631,6 @@ SHA1-Digest: zmleuJzikLsXFLW67tASvftmmmM=
 Name: res/drawable/miuix_appcompat_ic_visible_dark.xml
 SHA1-Digest: Tlvn0yxDTVZwla2X/F3dMs+M4dY=
 
-Name: res/drawable-xxhdpi-v4/icon_search_light.png
-SHA1-Digest: 1y831vkk46rvyz3/mSDZUILvwzg=
-
 Name: res/drawable-night-v8/navigation_bar_guide_app_menu.xml
 SHA1-Digest: GhwZSTHQ9nV1HxQ2MwMkR7Bs1e8=
 
@@ -2626,7 +2638,7 @@ Name: res/color/default_screen_home_icon_color_dark.xml
 SHA1-Digest: Jl9meUWIpktMFoMm64CFlU0UeQI=
 
 Name: res/drawable/miuix_appcompat_progressbar_horizontal_dark.xml
-SHA1-Digest: QbbTQ0lc4nd1KL9oozwuk8F6NrY=
+SHA1-Digest: Bsorcm1g+v6fLlbsEw6eueofM78=
 
 Name: res/drawable/contacts_default_portrait2.xml
 SHA1-Digest: ke4jybBaGEP4Fsu694EOTECSueU=
@@ -2701,14 +2713,14 @@ Name: res/drawable-xxxhdpi-v4/free_style_edit_bottom_bar_slide_bar.9.p
 SHA1-Digest: 7+ZafWvxKym4uu12ZioXsAw+U+k=
 
 Name: res/layout/recents_smallwindow_crop.xml
-SHA1-Digest: bt+EWpmtkcW3YYlkZIQDlrjWPhk=
+SHA1-Digest: UuyosKFbGkCsTM4imSPpUxvpUfU=
 
 Name: res/drawable/miuix_preference_single_item_radio_two_state_bg_pre
  ssed.xml
 SHA1-Digest: f6fbccbrmoLeBJGJBvDPPspnrl0=
 
 Name: res/drawable/abc_btn_check_material_anim.xml
-SHA1-Digest: sdK9vcpYfg0H8sYnNKuFZosg6m8=
+SHA1-Digest: ZSsMk7LAbSFkvyMFqOl5/Dzg3qU=
 
 Name: res/drawable-xhdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
 SHA1-Digest: Ygg4xpx6mqpH4auM/FyDz19gyHc=
@@ -2804,6 +2816,9 @@ SHA1-Digest: TuzD7aiiYxozzJP4GfTs2ikKcDU=
 Name: res/layout-watch-v20/abc_alert_dialog_button_bar_material.xml
 SHA1-Digest: 8s6HnrWdORFtWIy6e9K2xxW4sHk=
 
+Name: res/drawable/search_bar_right_xiaoai_white.xml
+SHA1-Digest: A6w4rtaR9s20BQpGTfTHrgPdaic=
+
 Name: res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
 SHA1-Digest: fnkne9XWnuqM1yhMI+5Xc4n/ET8=
 
@@ -2846,7 +2861,7 @@ Name: res/drawable-440dpi-v4/recommend_icon_bg.webp
 SHA1-Digest: lm2LduNm62lYxS82I5gA58dEmgc=
 
 Name: res/layout/launcher_menu.xml
-SHA1-Digest: OlMtk8YGdx4s0J6pPT64DKwQbFE=
+SHA1-Digest: k9ySxvHpMO71cq5QWFUBLeRTsf4=
 
 Name: res/drawable-xhdpi-v4/error_background.9.png
 SHA1-Digest: qmMNGrBJ/m2GBkrmqajBlvDYNRc=
@@ -2876,7 +2891,7 @@ Name: res/anim/abc_shrink_fade_out_from_bottom.xml
 SHA1-Digest: q5dRlJdzVfd3aD0ls3xda+uaOxE=
 
 Name: res/drawable/miuix_preference_category_bg_no_title_dark.xml
-SHA1-Digest: fekzhVhbvF+3VoJhqIox3ATqRaA=
+SHA1-Digest: Wu3xCko5eixM7gbr7vgVfSUSeVQ=
 
 Name: kotlin/text/MatchGroupCollection.kotlin_metadata
 SHA1-Digest: JfenlmIdjN1lowRQSvtACdoUXlU=
@@ -2885,7 +2900,7 @@ Name: res/drawable/btn_radio_on_mtrl.xml
 SHA1-Digest: 3JBv/It0UMnnV6ucgTDD38Xb568=
 
 Name: res/layout/recents_empty.xml
-SHA1-Digest: mXeOnGbiuATOJ40oWE7v/yVnVSE=
+SHA1-Digest: qMMidnQfHFKzOb8IRB7FM8oUduU=
 
 Name: res/drawable-xxhdpi-v4/icon_folder.webp
 SHA1-Digest: JQFKprn0QuUsYxkqPg8gAZiaK4Q=
@@ -2928,7 +2943,7 @@ Name: res/drawable-xhdpi-v4/new_install_notification.webp
 SHA1-Digest: hExFDHOf9YQ/GKd4omOqtDO/H5w=
 
 Name: res/drawable/desktop_mode_icon_frame_status.xml
-SHA1-Digest: TZbpUEoV5gDKIiN6Nw9klFYZvQc=
+SHA1-Digest: m3mn9HelatnWQLRlQ8zPVK/6ne8=
 
 Name: res/drawable-godzillaui-xxhdpi-v8/icon_notification_bg.9.png
 SHA1-Digest: GMf/uPqqjFfmMTcnsrmTRF3V4mY=
@@ -2971,7 +2986,7 @@ Name: res/drawable-xhdpi-v4/recommend_divider.9.png
 SHA1-Digest: aK2O/ga01r/OW906Xo2TpXI1bV4=
 
 Name: res/drawable/thumbnail_entry_set_wallpaper_dark.xml
-SHA1-Digest: kfbnsVWEnZaUK+UEc3umVNeVygg=
+SHA1-Digest: FYG4zXSngYs8MTVoxH06E2vG+JQ=
 
 Name: res/drawable-mdpi-v4/abc_ic_star_half_black_36dp.png
 SHA1-Digest: ZXAwjCRHDKMA1FtoZL8+AhM9yvI=
@@ -3053,7 +3068,7 @@ Name: com/miui/msa/global/guessyoulike/v1/GlobalCloudAdConfig.aidl
 SHA1-Digest: 9yxb8xFpEWfRXjKTOgQPlSNqI/Y=
 
 Name: res/drawable/miuix_preference_category_bg_no_title_light.xml
-SHA1-Digest: KFakBsanNLAx4jpyE0HBdP7UFtc=
+SHA1-Digest: h2qUBe1NcoydnPcf5lppWU3Q3fk=
 
 Name: res/drawable-night-440dpi-v8/home_settings_search_n.webp
 SHA1-Digest: cHfKtrbZrL8URItX3jwxIsPNP9Q=
@@ -3102,7 +3117,7 @@ Name: res/drawable/ic_task_lock.webp
 SHA1-Digest: URCWsr4Fwl0PJu9EchqcLjkWK3c=
 
 Name: res/drawable-v23/miuix_appcompat_seekbar_progress_light.xml
-SHA1-Digest: 45012k+apomuFC7Q/Guvs6XezfQ=
+SHA1-Digest: dtRTVxnq/qIa8byxMidSr1BqUAY=
 
 Name: res/drawable-xxxhdpi-v21/miuix_sbl_simple_indicator_locked_body_
  gray.png
@@ -3118,10 +3133,10 @@ Name: res/drawable-xxhdpi-v4/thumbnail_entry_setting_p_dark.webp
 SHA1-Digest: 6YS2WEsG+VMlSypci5JSKNTSBTE=
 
 Name: res/layout/gadget_google_search.xml
-SHA1-Digest: ybHjL/TnmZaWFexGABKj0GUrEf8=
+SHA1-Digest: 8dt1JJN7K+XkDHPc3U7+bN7rNg4=
 
 Name: res/drawable-ldrtl/uninstall_dialog_cancel_btn.xml
-SHA1-Digest: hki8yu4g/NbuHpDtT/eSITgjU7Y=
+SHA1-Digest: C6eTXYO2Lu1o/zVkWZp+hwT3Oyo=
 
 Name: res/drawable-hdpi-v4/folder_scrollbar_v.9.png
 SHA1-Digest: HMo32U8ovHGBUT3W3/KHP+WBB6o=
@@ -3181,7 +3196,7 @@ Name: res/drawable/abc_spinner_textfield_background_material.xml
 SHA1-Digest: SkLNWUBa6XwNwGbfVHHncNfcJJw=
 
 Name: res/layout/no_space_toast.xml
-SHA1-Digest: ij9d/vqxJNdVqhvpnLnhGXaxXVM=
+SHA1-Digest: Cfhtpk0lwaIr53hjXvQE0JS8iQw=
 
 Name: res/drawable-xhdpi-v4/gadget_clear_broom_00009.png
 SHA1-Digest: K5vGevBH8qmxP0kSr+gdVWNUnjQ=
@@ -3196,7 +3211,7 @@ Name: kotlin/collections/IteratorsKt.kotlin_metadata
 SHA1-Digest: rEgvYokjjQ2MFM60L53A4NVA9CA=
 
 Name: res/layout/appwidget_error.xml
-SHA1-Digest: EUsgCUP+s23NLcJHpYTBzWz2C6k=
+SHA1-Digest: bzAmnY/sRddPyNDW3TjmZrp57Js=
 
 Name: res/drawable-xxhdpi-v4/folder_scrollbar_v.9.png
 SHA1-Digest: Q7s6zJzCsoRh6nacnOMHitbhjSM=
@@ -3261,10 +3276,13 @@ SHA1-Digest: EMSpEOlQjah8Tigcn2hx1fu7Uqo=
 
 Name: res/drawable/btn_checkbox_checked_to_unchecked_mtrl_animation.xm
  l
-SHA1-Digest: XRJ3mDAbAqGh2ae3Og/jyPxAi7Y=
+SHA1-Digest: KeQfnU5zlJYZWzSoiIM0yq4Y6kc=
 
 Name: res/drawable-sw720dp-xhdpi-v13/recommend_loading_item.webp
 SHA1-Digest: EzlZHqxiJ26Lc/Cy2TSFedbL+tw=
+
+Name: res/drawable-xhdpi-v4/icon_xiaoai_dark_default.png
+SHA1-Digest: eq6Xw20q6TzJWmYekuaGJgpoyb4=
 
 Name: res/drawable-xhdpi-v4/miuix_sbl_tracking_progress_circle_bg.png
 SHA1-Digest: 1xB72KkWggU4W4N3c2eCF+yKrQM=
@@ -3280,6 +3298,9 @@ SHA1-Digest: z9lEuYfS880fQq26hrunsJi85aA=
 
 Name: res/drawable-xxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png
 SHA1-Digest: fezVxa8Z79AMhE7DWj2Dvk2oKQ4=
+
+Name: res/drawable/bg_search_bar_d9_15_non.xml
+SHA1-Digest: 0NDdTNMHu/tdIgc61YHuE8os/Rw=
 
 Name: META-INF/androidx.sqlite_sqlite.version
 SHA1-Digest: gxMpLM6Ww9nGNEGpktVUiFUaKFo=
@@ -3305,6 +3326,12 @@ SHA1-Digest: CZwS8rj67Crie4BIbSxhJns4fA0=
 Name: res/drawable/miuix_compat_arrow_up_down_integrated.xml
 SHA1-Digest: tL12hI6orEWw+F1UThTtqsohqdI=
 
+Name: res/drawable-xxxhdpi-v4/icon_search_light_default.png
+SHA1-Digest: oVRFLC5wN8n2+Z+UpIqDduc0YCs=
+
+Name: res/drawable-xxxhdpi-v4/icon_xiaoai_dark_default.png
+SHA1-Digest: zt1v7l8YOeoc6vB9MZD8fvpOzj0=
+
 Name: res/drawable/miuix_preference_category_bg_first_no_title_dark.xm
  l
 SHA1-Digest: fAFwCKi52KiwFLvaNyRAXBDxMZ4=
@@ -3313,7 +3340,7 @@ Name: res/drawable-xhdpi-v4/recommend_xout.png
 SHA1-Digest: 8YSpocxT2ZK5OvuvNGU+a52XyG8=
 
 Name: res/layout/small_window_split.xml
-SHA1-Digest: XytL7p3cWpzybiJYOQ2nP16Azoc=
+SHA1-Digest: uBIDo+QLJV+nbwPsjkQn4MosJVE=
 
 Name: res/drawable-ldrtl/action_bar_back_pressed_light.xml
 SHA1-Digest: 99ZuUYvZgJXOcaMDsiiKRtL/4CQ=
@@ -3335,7 +3362,7 @@ SHA1-Digest: 0+aW+QviDY7ahOOnzt9c8+FG+nU=
 
 Name: res/drawable/miuix_appcompat_list_item_bg_dropdown_popup_dark.xm
  l
-SHA1-Digest: R44sLqoq5pRIioVH7IZbhKe1DGo=
+SHA1-Digest: tpnJpS7cUVnGLd4nAmH3vk53t64=
 
 Name: res/drawable/abc_btn_default_mtrl_shape.xml
 SHA1-Digest: Q4G+8krBdgsd+l/ACthjaSRB4Vo=
@@ -3365,7 +3392,7 @@ Name: kotlin/collections/MutableCollectionsKt.kotlin_metadata
 SHA1-Digest: ZKKBgQFZpdM+XRCoUtSAL8ZVPrU=
 
 Name: res/layout/recents_task_view_header.xml
-SHA1-Digest: b9QYtrIPyRQBOOxH+Ff1DNUzozk=
+SHA1-Digest: rcz2aPqXxLG4mTEAVe88RCKRBkI=
 
 Name: res/drawable-xxhdpi-v4/workspace_seekpoint_highlight.webp
 SHA1-Digest: ZQnveHOWtp0KruA6Abk4WK2qBzY=
@@ -3469,6 +3496,9 @@ Name: res/drawable-xxhdpi-v4/miuix_appcompat_text_select_handle_left_d
  ark.9.png
 SHA1-Digest: UQOhWOzzHaWWxurV+Au+H+h+oWs=
 
+Name: res/drawable/icon_search_light.xml
+SHA1-Digest: lN0ydeSHavPkc9SMWV8kXkHj37E=
+
 Name: res/drawable/abc_cab_background_top_material.xml
 SHA1-Digest: RSVQqe3rNkgdJEzWbqPCKYwERuQ=
 
@@ -3484,14 +3514,14 @@ SHA1-Digest: kGXQBCsdQRYVENeSVQfY48BKh98=
 Name: res/drawable-xxxhdpi-v4/workspace_assistantpoint_dark.webp
 SHA1-Digest: lqcQb3Pob3GefkiCoKj2yKI+un4=
 
+Name: res/drawable-440dpi-v4/icon_search_light_default.png
+SHA1-Digest: iGFZVkE4uojypUl4npeba8Hw/fg=
+
 Name: res/drawable-xxhdpi-v4/icon_notification_bg.9.png
 SHA1-Digest: p6jg6QoeiQKKV6uBnMBIXYE8zR0=
 
 Name: res/drawable-xhdpi-v4/speed_of_light.png
 SHA1-Digest: mXJGLFCgnZB7q2/RJJd3Ov51AbY=
-
-Name: res/drawable-xxxhdpi-v4/icon_xiaoai_dark.png
-SHA1-Digest: 9vaa4hFXgjIw00JacLW+mnrlvTg=
 
 Name: res/layout/miuix_preference_widget_checkbox.xml
 SHA1-Digest: UzchMMd8QcB6iDZicHJ5ges1EW8=
@@ -3506,7 +3536,7 @@ Name: res/drawable-night-xhdpi-v8/ic_task_small_window.png
 SHA1-Digest: edL4FNbsSfSy0uFr+jUOyT/Kv04=
 
 Name: res/drawable/miuix_appcompat_progressbar_indeterminate_dark.xml
-SHA1-Digest: 5hPDwsDJ1lPWEyfJF6GGmyL7v60=
+SHA1-Digest: s1YhbOr81iD3tgtTwvZAatNJkV4=
 
 Name: META-INF/androidx.legacy_legacy-support-core-ui.version
 SHA1-Digest: BrovuIvOpCRJZm5b7BNdTwe8ekM=
@@ -3523,6 +3553,9 @@ SHA1-Digest: DpKLy1PbPvNESh0RfaWJH0aNHHI=
 Name: res/drawable/miuix_preference_first_item_radio_bg_dark_normal.xm
  l
 SHA1-Digest: GywfhjdcTroxe9DIHY4Xe9g5ajs=
+
+Name: res/drawable/search_bar_left_search_white.xml
+SHA1-Digest: k9l4i9DrHzmP4FHj6nJyczKMICk=
 
 Name: res/drawable-xxhdpi-v4/ic_task_small_window.webp
 SHA1-Digest: XeWTFvRf4bUvHyQD6EWaPBlQOLM=
@@ -3546,14 +3579,14 @@ Name: res/drawable-xxxhdpi-v4/free_style_apps_title_bg.webp
 SHA1-Digest: 6vJ3QZMApki0ST1cDmkSMY8u78E=
 
 Name: res/layout/free_style_apps_select.xml
-SHA1-Digest: Ngsyaz04dnpFjp/iwcuqBma7BaM=
+SHA1-Digest: wP/NOWmP0IrrfOEdgAwKSPZIn0o=
 
 Name: res/drawable-xxxhdpi-v4/abc_text_select_handle_left_mtrl_light.p
  ng
 SHA1-Digest: PAxGeDK6s8p8BPzxJDmFLhuvCBo=
 
 Name: res/layout/folder_header.xml
-SHA1-Digest: ZtpaotEqDSv8anplrQWRpIEzt30=
+SHA1-Digest: nDgFSzErsXCSsj26Zp74LeKVb+0=
 
 Name: res/drawable-hdpi-v4/checkbox_normal.webp
 SHA1-Digest: PratH1QoMlNFAKyiYnX9qFUfc8c=
@@ -3622,6 +3655,9 @@ SHA1-Digest: yUsKMwkbPlsQpcVCx3nl84OHEiM=
 
 Name: kotlin/collections/State.kotlin_metadata
 SHA1-Digest: o0MdGjE98QZPPNjNTiRU3PbZoUs=
+
+Name: res/drawable-xxhdpi-v4/icon_search_light_default.png
+SHA1-Digest: wMnIFD+/neOMocU3ch2X8AZr2eU=
 
 Name: res/drawable/ic_work_dark.xml
 SHA1-Digest: j5bm2KMPsOcgwPMRYm8aKeXn2p8=
@@ -3838,13 +3874,13 @@ Name: res/color/miuix_preference_primary_text_light.xml
 SHA1-Digest: WSWInaHNEfShyLQbQOMtlBsOZUs=
 
 Name: res/drawable/drawer_bg_preview_color_dark.xml
-SHA1-Digest: hb4GT3EZZNABLA+6roEuALcj6uc=
+SHA1-Digest: KVzBWnjeugjhFBGYe35eNVdFqgY=
 
 Name: res/drawable/ic_task_multi.webp
 SHA1-Digest: byZcmhSNjhJEuXsfpNRJvg2DBUw=
 
 Name: res/drawable/thumbnail_entry_tools_dark.xml
-SHA1-Digest: ga6OsWKu2twBv2lWwWde7swJizw=
+SHA1-Digest: TKjzPpf98vChvT9zVKYHg9boRJA=
 
 Name: res/drawable/default_screen_home_icon_layout_background.xml
 SHA1-Digest: AmwbmXESok8wbSKw0jj+M7Gp45k=
@@ -3903,7 +3939,7 @@ Name: kotlin/UShortArray.kotlin_metadata
 SHA1-Digest: BwKO4ztQ/JArUblwZpfu/ubo9vA=
 
 Name: res/layout/miuix_sbl_trigger_tracking_progress.xml
-SHA1-Digest: lOjrxCIxOL9k1AY62XYG18ew0+Q=
+SHA1-Digest: AeFiGc7QQEwiAcAGACx7D1siLYg=
 
 Name: res/drawable-xxhdpi-v4/edit_mode_checkbox_on.webp
 SHA1-Digest: dI+e9ccL5HUxyyXx2f99whRAWaE=
@@ -3978,11 +4014,8 @@ SHA1-Digest: WI6k25I2AuDv/OBRJmGRcvVwUU4=
 Name: res/drawable-440dpi-v4/recents_icon_security_scan.png
 SHA1-Digest: Gf4Bn1hs3bXrccP7P5PHzKQl+bk=
 
-Name: res/drawable-xhdpi-v4/icon_search_dark.png
-SHA1-Digest: KgX3LRuSAV8w5UcGBUUM/2s5ISQ=
-
 Name: res/layout/default_screen_preview_item_with_home_icon.xml
-SHA1-Digest: yoiz223yycioqzFvdSvLpPRYidM=
+SHA1-Digest: 8B00T5Tw8rC7F8gX/LcKQrYtZwg=
 
 Name: res/drawable-440dpi-v4/ic_task_setting.webp
 SHA1-Digest: +ZEZD6U2aBh0xwOgneW8pJoY778=
@@ -3991,7 +4024,7 @@ Name: res/drawable-hdpi-v4/gadget_google_search_google_btn_p.webp
 SHA1-Digest: qbkBce6fOD949RucZduQsz3fEAE=
 
 Name: res/layout/small_window_textview_container.xml
-SHA1-Digest: Am129jWdRCva5QwKsawW0fIEE/E=
+SHA1-Digest: 2kAzLGNYNlmcLTvce2cFSDWc03k=
 
 Name: res/drawable-xxxhdpi-v4/icon_selection_s.webp
 SHA1-Digest: q98mWMV3b76ZEcMr8aNRUuwwP3c=
@@ -4012,7 +4045,7 @@ Name: res/drawable/list_item_bg_pressed_light.xml
 SHA1-Digest: NkOaF3loT2RHJ9iJnrTDTigmkxM=
 
 Name: res/drawable/thumbnail_entry_setting_dark.xml
-SHA1-Digest: fIOtpJZ02rnGhSpqK6F/jL3mfAQ=
+SHA1-Digest: Tq38CQSTcwCFBMXHJCSfcv1hsN4=
 
 Name: kotlin/SuccessOrFailureKt.kotlin_metadata
 SHA1-Digest: hcRH/qfXhjdx7IkR/EzaZqTm5VA=
@@ -4121,7 +4154,7 @@ Name: res/layout/icon_message.xml
 SHA1-Digest: FZoMEWPPUMix0LotWqfTydZpe5Q=
 
 Name: res/drawable/gadget_google_search_voice_btn.xml
-SHA1-Digest: wu9WO5fy7HpeqRqc3hZ5kE7kuiA=
+SHA1-Digest: JglSBEZ4Isg7MLp9/jqOqIdTMxo=
 
 Name: res/xml/meitu_default_workspace4x5.xml
 SHA1-Digest: uwhaZxD//JV63ssto9fHPOkeb5w=
@@ -4145,7 +4178,7 @@ Name: res/drawable/miuix_appcompat_arrow_popup_bg_light.xml
 SHA1-Digest: b49UI7xzpxzBFiUwSVRp1g1U0iQ=
 
 Name: res/layout/desktop_mode.xml
-SHA1-Digest: Um12sYu095OSEdfpTfxGcFHktJE=
+SHA1-Digest: KuXr4a0+9A4m5492IXn/foFuMKM=
 
 Name: res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
 SHA1-Digest: ZMcwudVDoUT8fuUQX58XOmOX7Qk=
@@ -4170,10 +4203,7 @@ Name: res/drawable-xxhdpi-v4/miuix_appcompat_text_select_handle_middle
 SHA1-Digest: nOAzjhMkXCEszYXLEmuy3lJPDEw=
 
 Name: res/drawable/notification_tile_bg.xml
-SHA1-Digest: eUdJKER/oc8l2bwPU352wDyRBY0=
-
-Name: res/drawable-xxxhdpi-v4/icon_search_light.png
-SHA1-Digest: 8tFLdikUWsdXLP1idSCKXRlAeD0=
+SHA1-Digest: Zm+XG/gLtReed7uGxTEM2Bl2OGs=
 
 Name: res/drawable/miuix_appcompat_arrow_popup_top_right_light.xml
 SHA1-Digest: bQK8wDGYkTe/hpce05oBuIKqlys=
@@ -4194,7 +4224,7 @@ Name: res/drawable-xhdpi-v4/ic_task_small_window.webp
 SHA1-Digest: 4G8xHwpYYdcDQ9vcPgAAkIhjrkA=
 
 Name: res/layout/shortcut_menu.xml
-SHA1-Digest: WyPjYWVzcncDGRoQ3Lv58kOxcPE=
+SHA1-Digest: 1jWe1yunFH6aRHy8cXTRxl+Sg2M=
 
 Name: res/drawable-440dpi-v4/gadget_clear_broom_00016.png
 SHA1-Digest: 8Dh9TVcJw2v0jX/d+ek6ve1PJBo=
@@ -4300,7 +4330,7 @@ Name: res/drawable-hdpi-v4/uninstall_dialog_right_btn_n.9.png
 SHA1-Digest: n641oUIVZOixUPwi3cbhFyGB5cc=
 
 Name: res/drawable/miuix_preference_middle_item_radio_bg_light.xml
-SHA1-Digest: egqDWe5TzbByc6c16gA+DsTVB9M=
+SHA1-Digest: 0C3HmqgC6CU4rWPCN3XEAQ2zozs=
 
 Name: kotlin/collections/Grouping.kotlin_metadata
 SHA1-Digest: KreDoKQaPgprBxchxUw75+VCMOI=
@@ -4331,9 +4361,6 @@ SHA1-Digest: BjpN5kXVkbb0MaNSXVCt7iyVzzg=
 
 Name: res/drawable-440dpi-v4/ic_quick_switch_empty.webp
 SHA1-Digest: QdDPDu5NgZB84awAuXpDfq2EPVc=
-
-Name: res/drawable-440dpi-v4/icon_search_dark.png
-SHA1-Digest: VSblhFWeiHOrNBEpgLzHYtY7+Ts=
 
 Name: res/drawable-sw720dp-xhdpi-v13/recommend_divider.9.png
 SHA1-Digest: g5yLCdlz1hwGh+ZROYmjJq7p1SY=
@@ -4418,14 +4445,11 @@ SHA1-Digest: m00Wj6Inxz/EKEeNQdJaHcF1hy8=
 Name: res/drawable-xhdpi-v4/abc_list_selector_disabled_holo_dark.9.png
 SHA1-Digest: h5sYCFnMFVk+Imcy7T4AFfYFQfM=
 
-Name: res/drawable-xxhdpi-v4/icon_search_dark.png
-SHA1-Digest: GYIe/cZikhQAPoDwHt6oAH+riXE=
-
 Name: res/color/miuix_compat_list_secondary_text_dark.xml
 SHA1-Digest: vXADslU2y3DY47cikhmwXcmS8Cc=
 
 Name: res/layout/small_window_header.xml
-SHA1-Digest: NhK5WPctpQVOhPtr9kPyogBiyWY=
+SHA1-Digest: H3ZEVWgGJ9LhRyd+l9g7+OGlLRw=
 
 Name: kotlin/time/TestTimeSource.kotlin_metadata
 SHA1-Digest: ZZWHABCGILZfYQrRCUzMRtIqCp4=
@@ -4461,7 +4485,7 @@ Name: res/layout/activity_customize_category.xml
 SHA1-Digest: iGarO+Vx6DHqZ+r+vLI2OxGaDqU=
 
 Name: res/drawable/miuix_preference_item_radio_background_dark.xml
-SHA1-Digest: aogB1+VF1IjjTje8gaMnI1K8jKc=
+SHA1-Digest: G6tVIwvjrJmdSWtweEWamQORhDc=
 
 Name: res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png
 SHA1-Digest: VW+74R1Hvl4mKIUXFrQ1+5K+/cE=
@@ -4496,6 +4520,9 @@ SHA1-Digest: mfVPtZne9/93Y7GpxcG1e0/EgCA=
 Name: res/drawable/recents_icon_garbage_cleanup.png
 SHA1-Digest: 2jwfBDRtuVOK7v3qiwW0Dsv6Nxg=
 
+Name: res/drawable-xhdpi-v4/icon_search_dark_default.png
+SHA1-Digest: yCddDxs4HwLnG4Km3SNTObGSidM=
+
 Name: res/drawable-xhdpi-v4/workspace_seekpoint_highlight.webp
 SHA1-Digest: jW4fR+ALoDAESKsUijMVpLq5g+c=
 
@@ -4521,7 +4548,7 @@ Name: res/drawable/miuix_appcompat_arrow_popup_right_light.xml
 SHA1-Digest: GkLlKji/p/y0ox+BUoKk+yLsc9A=
 
 Name: res/xml/settings_drawer.xml
-SHA1-Digest: tU2Al6tjVLqzM02EoLEUaTnBfnY=
+SHA1-Digest: 6ebSWS2+Brf7KOMdq73wIl7xgIE=
 
 Name: res/drawable-night-440dpi-v8/ic_task_unlock.png
 SHA1-Digest: 8hRM6oRccIs/1KWQMmr5UFz3Ia8=
@@ -4589,13 +4616,16 @@ Name: res/drawable-xxhdpi-v4/recommend_background.9.png
 SHA1-Digest: kLHbm4DTXmGYH8vteiJTo9mYuv8=
 
 Name: res/drawable/miuix_preference_last_item_bg_dark.xml
-SHA1-Digest: LgIL1oIYWut/pur580YahzVxAgc=
+SHA1-Digest: 5s8QLGR0qbxQN17VVVb9MMQe7Lo=
 
 Name: com/miui/msa/internal/preinstall/v1/IImageCallback.aidl
 SHA1-Digest: P5JyIvP9Y3O2W3bo53m/VChANjU=
 
 Name: res/drawable-440dpi-v4/edit_mode_checkbox_on.webp
 SHA1-Digest: YJCLV8PcyL3y3rnHemuZuH2DYP8=
+
+Name: res/drawable-xhdpi-v4/icon_search_light_default.png
+SHA1-Digest: FNfXBEwKPcnUV6QIGoI7qI/23+s=
 
 Name: META-INF/androidx.appcompat_appcompat-resources.version
 SHA1-Digest: L1WSnCxLg4cpL9uEb+hKu7Q2iL0=
@@ -4615,7 +4645,7 @@ Name: res/drawable-mdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
 SHA1-Digest: dwSvORL1Qk8clJtQs9C0N0LJ7TE=
 
 Name: res/drawable/miuix_preference_first_item_bg_light.xml
-SHA1-Digest: l1t6L83kkxq9eKcRfpXE/UmM6Oc=
+SHA1-Digest: rit6xdkA7tCoDRMuQYCtq706U/I=
 
 Name: kotlin/coroutines/experimental/SequenceBuilder.kotlin_metadata
 SHA1-Digest: 5lbe/cWpKvzDyWxLh/4osOi3T6s=
@@ -4650,6 +4680,9 @@ SHA1-Digest: kt9iIx9ALU6VjbtHO2b8ns6F6HA=
 
 Name: lib/armeabi-v7a/libfilament-utils-jni.so
 SHA1-Digest: WCTRCYbpELdw0bcrqHQSoAyW9z0=
+
+Name: res/drawable/bg_search_bar_black20_white10.xml
+SHA1-Digest: KZP4MpsmwElydCVUIA0j1rVMR5A=
 
 Name: com/miui/msa/global/guessyoulike/v1/GlobalColudControlInfo.aidl
 SHA1-Digest: 24gVSR77N1sgXg7UyGZj6wOu8t8=
@@ -4688,7 +4721,7 @@ Name: res/drawable/miuix_appcompat_list_item_bg_dropdown_popup_first_d
 SHA1-Digest: x/XLeYHx06Jcplyw1lL8wOe0VGk=
 
 Name: res/drawable/thumbnail_entry_setting.xml
-SHA1-Digest: gzWMq0Bh85ow83bXgeKkiU263PE=
+SHA1-Digest: M/oL7ND1gyHHzS0C7bCxJ3Wssm8=
 
 Name: res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png
 SHA1-Digest: rSfiuPx2H1NYOeY4GaO1qwFYRjE=
@@ -4701,7 +4734,7 @@ Name: res/drawable-xxhdpi-v4/free_style_edit_bottom_bar_bg_tile.png
 SHA1-Digest: guc/TLsPDGp9QywgsyPEc/KVdls=
 
 Name: res/xml/launcher_pulldown_setting_preferences.xml
-SHA1-Digest: 4Uc8wXRcG6icK7uqmNfMjJL97D0=
+SHA1-Digest: oCUM1UyKdnhoR14g5vyNArILa3A=
 
 Name: res/drawable-hdpi-v4/workspace_seekpoint_highlight.webp
 SHA1-Digest: hSQeqggBrkAMaJq0tl9LLx/S5QI=
@@ -4746,7 +4779,7 @@ Name: META-INF/androidx.work_work-runtime.version
 SHA1-Digest: KxQne1CHJpvKZPmoq69cRy97Rh4=
 
 Name: res/drawable/abc_btn_radio_material_anim.xml
-SHA1-Digest: F5cfSSDV6uK5Pp6CHlBcnoIp/+0=
+SHA1-Digest: 6s8gYPZd4zzt4D5/b3yjm/kvGGs=
 
 Name: META-INF/androidx.appcompat_appcompat.version
 SHA1-Digest: Sibj0VVmL7B67oBCzlyitRpAkSE=
@@ -4766,9 +4799,6 @@ SHA1-Digest: CqrQ3H+ATX/jn/ZoRtomlyYyK+c=
 
 Name: res/drawable/recent_tv_small_window_background.xml
 SHA1-Digest: 17V3FIG12N8OVrDkSjvH4qwvDRQ=
-
-Name: res/drawable-440dpi-v4/icon_xiaoai_light.png
-SHA1-Digest: kl43dEBF30VdV7GctgvDXiOvuPY=
 
 Name: res/layout/preference_material.xml
 SHA1-Digest: V/uuJexsN2PZLnkBQ/RwLIK/CnM=
@@ -4802,7 +4832,10 @@ Name: res/anim/global_search_open_enter.xml
 SHA1-Digest: vGhgGYAQCwFK4YMqDqkK31Bx74s=
 
 Name: res/drawable/miuix_appcompat_progressbar_horizontal_light.xml
-SHA1-Digest: BGRvOQWR/fIQLkik1rv2k+3mknI=
+SHA1-Digest: CqpV+/ZU1i+xNMwC6lupJyJTCI0=
+
+Name: res/drawable-xxxhdpi-v4/icon_search_dark_default.png
+SHA1-Digest: Q5Dn5Sy0kjtdf+30MLGWZkRka4E=
 
 Name: res/drawable-xhdpi-v4/icon_launcher_notification.png
 SHA1-Digest: mcLw/VW6350q7Rzh55LGvOXt9CA=
@@ -4814,7 +4847,7 @@ Name: res/drawable-xhdpi-v4/gadget_clear_broom_00017.png
 SHA1-Digest: CkVQFIKv3E+KsrFTjSvVQ6rLGQk=
 
 Name: res/drawable/miuix_preference_category_background_dark.xml
-SHA1-Digest: /gwIK0fWGIQBP/Mi8s3t03IlGUM=
+SHA1-Digest: CTESSbeCL11TcsfCPF+V6b3qiSs=
 
 Name: res/layout/widgets_list_row_view.xml
 SHA1-Digest: BCiImZKK5lOMN3uRh9k4jXJxVbk=
@@ -4827,6 +4860,9 @@ SHA1-Digest: 3okHtjvskN+urF42J46aa113am4=
 
 Name: res/drawable/icon_category_add.xml
 SHA1-Digest: R1tORe6Z752GIoB5cJXvT8NIdBY=
+
+Name: res/drawable/bg_search_bar_e3_25_non.xml
+SHA1-Digest: +pExwvoxNlCDJ55Mj+j/0YGfl+E=
 
 Name: res/drawable-xhdpi-v4/gadget_clear_broom_00002.png
 SHA1-Digest: d6F+peAi+GjeIMPr5ceUquqmKIU=
@@ -4845,7 +4881,7 @@ Name: res/drawable/miuix_preference_middle_item_radio_two_state_bg_pre
 SHA1-Digest: a7etGCVCk2TjPfdVOzGs761I8Es=
 
 Name: res/drawable/thumbnail_entry_set_wallpaper.xml
-SHA1-Digest: s1i41lt8aBwNSBBY/zudVYu/he4=
+SHA1-Digest: MC5SazM5mBOtggy1emMnknBeUWc=
 
 Name: res/drawable-xxhdpi-v4/free_style_apps_button_bg.9.png
 SHA1-Digest: 40H2kiLdsJlJbwqbuJQOmvK2vI0=
@@ -4912,7 +4948,7 @@ Name: kotlin/reflect/KClass.kotlin_metadata
 SHA1-Digest: qJuITNFgsoHyHSeN1tM3Fw6uGgw=
 
 Name: res/drawable/miuix_appcompat_edit_text_clear_btn_light.xml
-SHA1-Digest: wy8OYJajN20y6vdFzFbIvuJ/DFc=
+SHA1-Digest: kyosQEQXQJjZ6gLyTiJ3gZVd6mQ=
 
 Name: res/drawable-night-v8/navigation_bar_guide_home.xml
 SHA1-Digest: tKs9VPsbMqsgo5ABIkGSauiv8NY=
@@ -4946,7 +4982,7 @@ Name: res/drawable-xxxhdpi-v4/folder_setting_rename_bg_dark.9.png
 SHA1-Digest: q6C0PS1ERiedw8Dq0GXyXj4zIqM=
 
 Name: res/layout/item_category.xml
-SHA1-Digest: 4oXTzCpZkjdNhAyTRrykblK7FWs=
+SHA1-Digest: 4IU9vK6czetVxlUpU9b6KwqRavk=
 
 Name: res/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png
 SHA1-Digest: bbOFIF9qsdffn4byEEbQbKinDn8=
@@ -4961,7 +4997,7 @@ Name: res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_015.png
 SHA1-Digest: lhisDaprlUhlQTH+gRzBgtywArM=
 
 Name: res/drawable/miuix_preference_middle_item_bg_dark.xml
-SHA1-Digest: vNRzNoFPc9iWIOCIFo6dOKSZHMk=
+SHA1-Digest: X35tQ/dcAm8uKecK2tR/vAZOlQ8=
 
 Name: res/drawable/contacts_default_portrait8.xml
 SHA1-Digest: x0Ai6MgDLF/9WFWkbtH9gudNl44=
@@ -4977,7 +5013,7 @@ Name: res/interpolator/btn_radio_to_on_mtrl_animation_interpolator_0.x
 SHA1-Digest: WQdRqR8q8DhPjyZRXxoZzEztFRw=
 
 Name: res/layout/application_progress.xml
-SHA1-Digest: fPWEuWhW861uo0Lhz+QaV8LO41g=
+SHA1-Digest: eQS+ZV8vZ5kUW4dN44rdzzqJYRQ=
 
 Name: res/color/miuix_appcompat_dropdown_popup_list_item_bg_dark.xml
 SHA1-Digest: aucoVPpRkKFU0EngWFbWZzA+4ho=
@@ -5140,11 +5176,11 @@ Name: res/layout/free_style_apps_application.xml
 SHA1-Digest: nJ72j+9S7R0s7bjNGZ1H58+5MtU=
 
 Name: res/layout/recents_container.xml
-SHA1-Digest: U1ISqPDEanSB6EuNEPXi5LhxJSM=
+SHA1-Digest: BUbEivH7sStFuC4g/lrkaw6uQh4=
 
 Name: res/drawable/miuix_appcompat_list_item_bg_dropdown_popup_light.x
  ml
-SHA1-Digest: VT3LH0sBPYx7N8CwckB52zYe7rs=
+SHA1-Digest: YVVd9QNqhtucEHnvj4rAu4W4Ims=
 
 Name: res/drawable-night-v8/navigation_bar_guide_recent.xml
 SHA1-Digest: FRUrfokB0u+dxw2IPyk3blupSgw=
@@ -5172,10 +5208,10 @@ Name: res/layout/miuix_appcompat_arrow_popup_view.xml
 SHA1-Digest: LliFLITO+ElmKecaWXvu9Qd97LA=
 
 Name: res/layout/immersion_popup_menu_item.xml
-SHA1-Digest: 05wRDe0pL/1Pq6SsDh2HYcydB5U=
+SHA1-Digest: pKSkenpWLE8vH/5XHeZuk4Vulrg=
 
 Name: res/layout/miuix_preference_layout.xml
-SHA1-Digest: 5OKag1cOCPKob9uHuqGe44GzF4M=
+SHA1-Digest: wOiOELmPrTRXCD9QAe3EtJaEjtc=
 
 Name: kotlin/coroutines/intrinsics/CoroutinesIntrinsicsHKt.kotlin_meta
  data
@@ -5198,7 +5234,7 @@ Name: kotlin/native/concurrent/ThreadLocal.kotlin_metadata
 SHA1-Digest: 4cZfRawgNczNuBp5Ra4jy8yFpk4=
 
 Name: res/drawable/menu_cell_type_btn.xml
-SHA1-Digest: Pf/h5s1B8CgKzesxXXBqjTVyc2s=
+SHA1-Digest: FAVFyI6pr7UB4DVy06DtBMdF0xw=
 
 Name: kotlin/reflect/reflect.kotlin_builtins
 SHA1-Digest: pfNambiw1Ih0IOACTjphhI4MvRw=
@@ -5228,7 +5264,7 @@ Name: res/drawable-xxhdpi-v4/gadget_clear_broom_00015.png
 SHA1-Digest: mzIf6WBvR4WpprsivLKZDtZzV5k=
 
 Name: res/layout/work_tab_footer.xml
-SHA1-Digest: +K665aZz37GRfM9YXA9Xe32wPi0=
+SHA1-Digest: w8yF+q4+in2vKtq42fzKCekHgTs=
 
 Name: res/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml
 SHA1-Digest: uyHd3O5+w4pKCUPVIrMRll4ft9Y=
@@ -5252,7 +5288,7 @@ Name: res/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
 SHA1-Digest: HYDPd61Ck9Ifum3cvWl+fOfD9xk=
 
 Name: resources.arsc
-SHA1-Digest: yTakZPMTwBJQcoJvxzgdlQWoOmU=
+SHA1-Digest: /jPFE5ytJJnTXAhEyL7SEhQVhjE=
 
 Name: res/drawable-xhdpi-v4/recommend_icon_bg.webp
 SHA1-Digest: FULZhREBBZWEUUurO14eHjNcsvQ=
@@ -5286,7 +5322,7 @@ Name: res/layout/miuix_preference_widget_seekbar.xml
 SHA1-Digest: EINrnc8Ye5qGdFoxunOWpP4Owqc=
 
 Name: res/layout/small_window_container.xml
-SHA1-Digest: VgSmKLPOrtg8uzn+2ArxwG2NlcA=
+SHA1-Digest: qLTr0HH1jiWFDzyqb3tG6WcPYo8=
 
 Name: res/drawable-hdpi-v4/abc_spinner_mtrl_am_alpha.9.png
 SHA1-Digest: MuDk0UcFnx7gJ2ytzl7cWntOgPg=
@@ -5325,7 +5361,7 @@ Name: res/layout/folder_icon.xml
 SHA1-Digest: u0lRv+FQxU550PGZC0a7+v8qACw=
 
 Name: res/drawable/miuix_preference_single_item_radio_bg_light.xml
-SHA1-Digest: zutsNkclZ/P7v7yRcKigPGbN5z0=
+SHA1-Digest: L/kCroCAaAkCwm7+G4/NUJAT2VQ=
 
 Name: res/anim/abc_fade_in.xml
 SHA1-Digest: XXaSktKiWqcfhbVCAylwxGU9L2s=
@@ -5360,7 +5396,7 @@ Name: res/drawable/miuix_appcompat_arrow_popup_bottom_middle_dark.xml
 SHA1-Digest: yc/Ep75biW+JOWMsv9lTwLaJkW8=
 
 Name: res/drawable/miuix_sbl_loading_progress_circle_light.xml
-SHA1-Digest: qqk1MFCj4AnhArIt3Jz00YDa480=
+SHA1-Digest: jqLcG6tt/Z3nioZpqivvUsGJFbE=
 
 Name: kotlin/ranges/RangesKt.kotlin_metadata
 SHA1-Digest: 8lQFIroQCBieUZ29AO985stGGTY=
@@ -5369,7 +5405,7 @@ Name: res/drawable-hdpi-v4/abc_text_select_handle_left_mtrl_light.png
 SHA1-Digest: giCuh0+nyVZK2Qtgcwsq6MU/YIs=
 
 Name: res/drawable/free_style_edit_bottom_bar_bg.xml
-SHA1-Digest: pLWB6p8l1RQkPLGmxMNgS00e58c=
+SHA1-Digest: C+CIT2SPKpVswnkiiaUS3sD8WG0=
 
 Name: kotlin/collections/MapsKt.kotlin_metadata
 SHA1-Digest: beQTfwFRQulD6ILveM/z7D5j444=
@@ -5422,7 +5458,7 @@ Name: kotlin/coroutines/experimental/SequenceBuilderKt.kotlin_metadata
 SHA1-Digest: hmmpsYU3YlkGDR4L7yDhvZQLhbk=
 
 Name: res/drawable/navigation_bar_type_item_icon_bg_selector.xml
-SHA1-Digest: 2SCFMKoUuexkXLKJYbUbz59Vbp0=
+SHA1-Digest: F3cCwP+uwXzMPWOFDcsuAXyKzEE=
 
 Name: res/drawable-xhdpi-v4/abc_text_select_handle_left_mtrl_dark.png
 SHA1-Digest: mMc2vLuahJ9g89/mLStEyPQTEdM=
@@ -5482,7 +5518,7 @@ Name: res/color/miuix_preference_secondary_text_dark.xml
 SHA1-Digest: 55WvMeIsFPf0Z9mYXIquWtSH4so=
 
 Name: res/drawable/gadget_google_search_google_btn.xml
-SHA1-Digest: bS/Rs2Xs18TGvFsKoq/cbrUD0rE=
+SHA1-Digest: XygJ3QrlKT9gCEjP/qfd9Z88cYI=
 
 Name: kotlin/collections/collections.kotlin_builtins
 SHA1-Digest: hGzyGYoe+Vc1UOnD9Mg4kY4ZXxY=
@@ -5618,14 +5654,14 @@ Name: kotlin/collections/ReversedList.kotlin_metadata
 SHA1-Digest: MNEcs1gbMaR+xZLp1s+nDqTn56E=
 
 Name: res/drawable/list_item_bg_light.xml
-SHA1-Digest: HVx4Gwq9lHTCsgsolLwhFD6pYPQ=
+SHA1-Digest: TDAhgq6A7675F7hb103lD8rOakk=
 
 Name: res/drawable-anydpi-v21/miuix_sbl_tracking_progress_circle_bg.xm
  l
 SHA1-Digest: fw+TQHPKhWBJXXYfux8+sIZnYlo=
 
 Name: res/drawable/miuix_preference_first_item_bg_dark.xml
-SHA1-Digest: B/bzlSUB7cpRbrN77hZQxHL06b4=
+SHA1-Digest: pLhzYjLr0jmviyhHK+R2enho6CE=
 
 Name: META-INF/kotlin-stdlib-common.kotlin_module
 SHA1-Digest: 3MOirKTrubAkFZtuKAgRHUWb8To=
@@ -5635,9 +5671,6 @@ SHA1-Digest: ExFQGoZ+jrIdV6vzKhaIUqgnOhQ=
 
 Name: res/drawable-xxhdpi-v4/gesture_back_arrow.webp
 SHA1-Digest: 1twCg1tjp4oSsA9yZRZRW7xL9bA=
-
-Name: res/drawable-440dpi-v4/icon_search_light.png
-SHA1-Digest: +NDGpb3Np7dbGDyGKUkDqGw4S5U=
 
 Name: res/drawable-xhdpi-v4/gadget_clear_button_bg.png
 SHA1-Digest: tG7eDVqBChuVCsqwvJIdW1KSzpU=
@@ -5676,7 +5709,7 @@ Name: kotlin/TuplesKt.kotlin_metadata
 SHA1-Digest: B4779Q5j1jlpIumVqCNl/AnCITo=
 
 Name: res/layout/float_frame_view.xml
-SHA1-Digest: sc9ucVvEOLxy5eKV6Q1oABssxpk=
+SHA1-Digest: GQaXO7VS5IKrcJmvVx2gVcgDSew=
 
 Name: res/drawable-xhdpi-v4/abc_textfield_search_default_mtrl_alpha.9.
  png
@@ -5737,7 +5770,7 @@ Name: res/drawable-440dpi-v4/gesture_back_arrow.webp
 SHA1-Digest: syHcgYCfoF0zrZczNkGummhnlls=
 
 Name: res/drawable/miuix_preference_category_background_light.xml
-SHA1-Digest: zGjX0p1+d3iv55k5NI/NdvBElaQ=
+SHA1-Digest: 91cGU1ieKK5DJ0oyr3AfKwqb78M=
 
 Name: res/layout/abc_screen_toolbar.xml
 SHA1-Digest: tPQr757UxZm4ZS4AZx+hvrhGyig=
@@ -5746,7 +5779,7 @@ Name: res/drawable/abc_btn_borderless_material.xml
 SHA1-Digest: TA+0fDx/GX2fez3uBIhjoXwhA5A=
 
 Name: res/layout/resource_canary_toast_wait_for_heapdump.xml
-SHA1-Digest: c0jsKpSqtaQ1yyO4TubljJRpeRo=
+SHA1-Digest: hb2NhgszL22lN8aZgoWuWlH8hgM=
 
 Name: res/color-v23/abc_color_highlight_material.xml
 SHA1-Digest: hVbZZMEaQIviLgaC0oS/gTko6ag=
@@ -5803,6 +5836,9 @@ SHA1-Digest: wiMfRXn9cL+MfA1vQbnqC4vNjgo=
 Name: res/drawable-mdpi-v21/miuix_sbl_simple_indicator_locked_header_g
  ray.png
 SHA1-Digest: AMH2kqD02lk+aRE1OMUFMjKopPY=
+
+Name: res/drawable/icon_xiaoai_dark.xml
+SHA1-Digest: b99fGJn8/c3fx95/BCCPQpNwuio=
 
 Name: res/drawable-440dpi-v4/ic_task_small_window.webp
 SHA1-Digest: Gu1vOhAwSghCE5pwj5mszFWYdbQ=
@@ -5982,7 +6018,7 @@ Name: res/drawable-xhdpi-v4/free_style_icon_app.webp
 SHA1-Digest: PAJxaJ0fzllI978uWoTthJYOTec=
 
 Name: res/layout/miuix_preference_text.xml
-SHA1-Digest: vCwSGY3OVf0/9QBmqkbK7dZjMEY=
+SHA1-Digest: 1Yxo4jJicfVhICwLGyqGgE4vDe4=
 
 Name: res/drawable-mdpi-v4/abc_textfield_search_activated_mtrl_alpha.9
  .png
@@ -5992,7 +6028,7 @@ Name: res/drawable-xxhdpi-v4/free_style_apps_title_bg.webp
 SHA1-Digest: pI8q/K7DBYjkqbGohs31Cjj4gJ8=
 
 Name: res/layout/folder_grid.xml
-SHA1-Digest: E4N1qClcpABor0brokn2+IdmRG0=
+SHA1-Digest: A6kCjfov2fWjOyWi1hoUap0Mt8k=
 
 Name: kotlin/annotation/annotation.kotlin_builtins
 SHA1-Digest: u2/Z7uzWXgLQ8saGO/SXitO0nP8=
@@ -6017,6 +6053,9 @@ SHA1-Digest: QzYtrVNEpMwEcoXCKbR1CQ5v3YY=
 
 Name: res/layout/free_style_scene_screen.xml
 SHA1-Digest: CLV5HsZVaFzE82MN+EtD/EslCH0=
+
+Name: res/drawable/search_bar_right_microphone_white.xml
+SHA1-Digest: bpocNb3VL9xhh4ihp9+9eVvfvUs=
 
 Name: res/drawable-xhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
 SHA1-Digest: IwDVeTuY2Dqj6ZB2xCCjLhfe7mg=
@@ -6055,13 +6094,13 @@ Name: kotlin/collections/AbstractMutableSet.kotlin_metadata
 SHA1-Digest: XCBURD8AgBU3zwhgTv0+cZWHogk=
 
 Name: res/drawable/home_list_item_overstepped_light.xml
-SHA1-Digest: /bGfnvTSnHl84NVxgIQTTDe/XJ8=
+SHA1-Digest: ZA0dR2rXyO8dwvXg76+JfcaWIJI=
 
 Name: res/drawable/home_preference_secondary_text_light.xml
 SHA1-Digest: fpkEPsJSoE7pecRDCrEhNmmTvtY=
 
 Name: res/xml/navigation_bar_type_settings.xml
-SHA1-Digest: 11uHOhzS1gtFziQtJBk4IsSM/iQ=
+SHA1-Digest: 0V2x7JXsP8gzUEn2lAQ0C/+ViPk=
 
 Name: kotlin/ranges/ClosedDoubleRange.kotlin_metadata
 SHA1-Digest: X1xxk27v/SNOyUxVywA4FDK9OeE=
@@ -6119,7 +6158,7 @@ Name: res/drawable-hdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
 SHA1-Digest: qRCYZUzk2ijqbaq6h2ixzc8HbFg=
 
 Name: res/drawable-v23/miuix_appcompat_seekbar_progress_dark.xml
-SHA1-Digest: mIRTk1q9/bzWXvYWU6fL5OZ/Bh4=
+SHA1-Digest: h6FHrUY6T2EaC6sZRumCtEe9tPE=
 
 Name: res/drawable-xxhdpi-v4/gadget_clear_broom_00019.png
 SHA1-Digest: dYwfdr4hs6JioZFwL8WBfwHBYy0=
@@ -6149,16 +6188,16 @@ Name: res/layout/miuix_sbl_trigger_base_layout.xml
 SHA1-Digest: bLyJ6mEIW8N4OECm5XmeJV1FTrE=
 
 Name: res/layout/miuix_sbl_simple_indicator.xml
-SHA1-Digest: S11lstSljFEzOWstZhmmeVCO9Fg=
+SHA1-Digest: HzlCRzpyiYshqN3iS6MDq9V7dSA=
 
 Name: res/drawable-xxxhdpi-v4/widget_toggle_small_icon.webp
 SHA1-Digest: VGD+/e01RrCqM/mBd0AfWH7ekFI=
 
 Name: res/drawable/btn_radio_off_to_on_mtrl_animation.xml
-SHA1-Digest: lNBnSiAJSQQtu8/HJGqO21ockBE=
+SHA1-Digest: OsDmX7WfKhP9vkft/w72+gXttBo=
 
 Name: res/layout/layout_search_bar.xml
-SHA1-Digest: AGrLzfeuJT+v00hOKafsx9f3OtI=
+SHA1-Digest: tXkNFbwqP/raWKJYz6sLdPO7Ips=
 
 Name: res/drawable-xxxhdpi-v4/gadget_google_search_icon.webp
 SHA1-Digest: hpB0lZ9KcYlPUgkevx6W7Ga0pww=
@@ -6198,7 +6237,7 @@ Name: res/drawable-xxxhdpi-v4/free_style_icon_app.webp
 SHA1-Digest: mcPAoqh4hDJ0Yy1wwdAu4e+NALA=
 
 Name: res/drawable/miuix_preference_ic_bg_connect.xml
-SHA1-Digest: saDNX10cRFf4N9lHBPMyyvXqUXY=
+SHA1-Digest: QMeD3u2DcIbxn7wjCuuuPgSYr30=
 
 Name: res/drawable-xxxhdpi-v4/default_downloading_icon.webp
 SHA1-Digest: KZlSPHEgQ0HoU2qry03D1UmTB+A=
@@ -6214,14 +6253,17 @@ SHA1-Digest: vK8qEx+zPuCHitVVR+eyI1+y5S8=
 
 Name: res/drawable-night-v8/miuix_appcompat_text_select_handle_right.x
  ml
-SHA1-Digest: ykBM/2vtrMM/kSp6DBMI68o87ss=
+SHA1-Digest: JHOq4Slsr0dubhWubjgXkXSFDpc=
+
+Name: res/drawable/search_bar_left_search_blue.xml
+SHA1-Digest: 5E4G3DgcfbVAfX/12+zfVFK96TI=
 
 Name: res/drawable-hdpi-v4/free_style_apps_single_select_bottom_bg.9.p
  ng
 SHA1-Digest: Uk4CCW5mGw2F/cbySxp9oaA13tY=
 
 Name: res/xml/launcher_settings.xml
-SHA1-Digest: HPxWgHyak4wHrBvjU4QVrfOmUkw=
+SHA1-Digest: EQDJQ2eCo2s9pFQJVet6v0F9eAs=
 
 Name: res/drawable/miuix_appcompat_list_item_bg_dropdown_popup_single_
  dark.xml
@@ -6301,7 +6343,7 @@ Name: assets/app_cate/cat_10.json
 SHA1-Digest: zyA7UM68nyKCp84Vxcw9p0Hq07I=
 
 Name: res/drawable/miuix_preference_last_item_radio_bg_dark.xml
-SHA1-Digest: ay06iEcqhyLoleJVH7fZKjm7i7Y=
+SHA1-Digest: nAOOn6xE/dwvsBkbGN+R6ojuc+Q=
 
 Name: kotlin/time/TimeMark.kotlin_metadata
 SHA1-Digest: PcAjWKjf0Za5DHP/ysNFxBcQJv0=
@@ -6335,7 +6377,7 @@ Name: res/drawable-xxxhdpi-v4/thumbnail_entry_setting_p.webp
 SHA1-Digest: w/jUcPVs2iqxVuUhgKbBsQyvUZ0=
 
 Name: res/drawable/workspace_seekpoint.xml
-SHA1-Digest: 3o/ZoMP9RiVJto6lU1RFTH0HCw8=
+SHA1-Digest: tNjVg806YapFZYbud4DWa0ltbBk=
 
 Name: res/drawable/bg_item_category.xml
 SHA1-Digest: GgHG5x1X9Dn1wCzGJg4aXA9cAiE=
@@ -6385,6 +6427,9 @@ SHA1-Digest: UASA70CXfr6eqSe2O5L5qZrlWL8=
 Name: res/drawable-xxhdpi-v4/gadget_clear_broom_00028.png
 SHA1-Digest: /c021KaZU/AUDOpFRCIJAQC/GF0=
 
+Name: res/drawable/bg_search_bar_black8_white11.xml
+SHA1-Digest: XP+JqyCzrRUY8L35DYFphsHke2s=
+
 Name: kotlin/coroutines/EmptyCoroutineContext.kotlin_metadata
 SHA1-Digest: vnUDbj+lLPirQOUKkPZLMAAYOtM=
 
@@ -6401,7 +6446,7 @@ Name: res/drawable-xxhdpi-v4/screen_view_arrow_right_gray.png
 SHA1-Digest: OdKfojXAIBcSc+aqwlXknEfSfK0=
 
 Name: res/layout/fragment_category_setting.xml
-SHA1-Digest: CCaduMflrKNXYufsN2hTmgaCYkc=
+SHA1-Digest: EZOpjw+/mDWmRLRByo0N1AAOhVo=
 
 Name: res/layout/miuix_appcompat_guide_popup_view.xml
 SHA1-Digest: +sBwKoiCGbFvbox8gQeXtOMvuRo=
@@ -6503,13 +6548,13 @@ Name: res/drawable-xxhdpi-v4/home_settings_feed_s.png
 SHA1-Digest: 1xXjsvtXeJJnV1d744XSOxYDB/w=
 
 Name: res/layout/shortcut_uninstall_dialog.xml
-SHA1-Digest: 3F+oxQGzxv/maxsR/zq0DkJ4gL8=
+SHA1-Digest: o3xrPzdt0QrZrqiQJ0KQrbu6BTY=
 
 Name: res/drawable-xxhdpi-v4/transition_effect_fade_out.webp
 SHA1-Digest: Cyn1VxwiZBmow/5scZKxaDvZ/I0=
 
 Name: res/layout/folder.xml
-SHA1-Digest: GBxiTFAOwJXcchu/sYf6UA7IhB4=
+SHA1-Digest: u3YfUUgT7BhUFCq4n39LuBHUKH0=
 
 Name: kotlin/jvm/JvmWildcard.kotlin_metadata
 SHA1-Digest: F8zaeKRrs2fF0SY7LYFHBEi3WSQ=
@@ -6537,7 +6582,7 @@ SHA1-Digest: 6Ktgb5HFiEtuvI/jGAx6ToeTbfg=
 
 Name: res/drawable/btn_checkbox_unchecked_to_checked_mtrl_animation.xm
  l
-SHA1-Digest: 8UawulQ2wsjL0w2hV9mSx4IMcO0=
+SHA1-Digest: HA+XfmcDVl0E7W6Z4SnTsAe0iow=
 
 Name: kotlin/contracts/CallsInPlace.kotlin_metadata
 SHA1-Digest: iQRkzH1hZYwC7eu29TzSaPynlTc=
@@ -6574,7 +6619,7 @@ Name: res/drawable-hdpi-v4/abc_list_pressed_holo_dark.9.png
 SHA1-Digest: PG2UveY5b2vs5JAAJYWAtloi10g=
 
 Name: res/layout/gadget_error_display.xml
-SHA1-Digest: KZvzJvUC9w3lHxW8J6Pl52dDlKc=
+SHA1-Digest: XQJ/FTxS4u5tMwANJ2hljaN1afw=
 
 Name: res/drawable-xxxhdpi-v4/thumbnail_item_bg_dark.webp
 SHA1-Digest: Pg/UiUAr29JDAPBdJ69lfLp86Yk=
@@ -6590,7 +6635,7 @@ Name: kotlin/collections/MutableMapWithDefault.kotlin_metadata
 SHA1-Digest: ZT4qU82G/mhyQdfSe80lPIeSr0s=
 
 Name: res/layout/elderly_man_shortcut_icon.xml
-SHA1-Digest: H+2vsvsfQuPGHOunKaKDM861MGQ=
+SHA1-Digest: j2vgFO+Ie/8Te5IrwBV1wNBuLDw=
 
 Name: res/drawable/miuix_appcompat_popup_mask_4.png
 SHA1-Digest: OtOVirs9vPbYsl++NGBB6MlYpX8=
@@ -6611,7 +6656,7 @@ Name: res/drawable/shortcut_menu_remove_icon.xml
 SHA1-Digest: biKpkHTrvL9mhyAaGUDnQqi1MBk=
 
 Name: res/layout/uninstall_dialog.xml
-SHA1-Digest: ka6M4oCWRZFgf5UTWBD5vPwNBD4=
+SHA1-Digest: ARunOyx7MBlO1iJzqkgzzp0g2xE=
 
 Name: kotlin/collections/MapAccessorsKt.kotlin_metadata
 SHA1-Digest: xCskNjnhzUf5GcEKHWUB4UOq9D0=
@@ -6688,7 +6733,7 @@ Name: res/drawable-xxhdpi-v4/abc_btn_radio_to_on_mtrl_000.png
 SHA1-Digest: ycXiJ7g1XDwZNYF8OiLagssfXOA=
 
 Name: res/layout/all_apps_empty_search.xml
-SHA1-Digest: HxsoM9vYhNA2VF7PCj3LYWsGKPM=
+SHA1-Digest: d/RiDqBdB0Y/SlGpSGzKEKyXKPk=
 
 Name: res/color/all_apps_setting_button_light.xml
 SHA1-Digest: VWHaaya+GMfH9zaLj8pUEouIpZA=
@@ -6743,7 +6788,7 @@ Name: res/drawable-xxxhdpi-v4/menu_button_s.9.png
 SHA1-Digest: cGeLD9rS/2m2tnjmYdPlDYqxoKM=
 
 Name: res/drawable/free_style_edit_bottom_tab_right.xml
-SHA1-Digest: q00ARv29rtgBKmK0BwlZTmI8l+I=
+SHA1-Digest: 5jp/XwzfRMZzwj+Yib24CoU9HLg=
 
 Name: res/drawable-xxxhdpi-v4/folder_setting_rename_bg_light.9.png
 SHA1-Digest: yyTm37vnrDbakXpgB1uGUQPDQn4=
@@ -6818,6 +6863,9 @@ SHA1-Digest: VfwUUXX6IwrW930TYyG8Zmx5yM0=
 Name: kotlin/jvm/JvmStatic.kotlin_metadata
 SHA1-Digest: KSmcad2jtyRnFsE3f37rsC6NG1Q=
 
+Name: res/drawable-xxhdpi-v4/icon_search_dark_default.png
+SHA1-Digest: e1o1c2X+Hc4JPkr8xJ32kfK0cmg=
+
 Name: res/drawable/miuix_preference_single_item_bg_dark_normal.xml
 SHA1-Digest: mjXDjS82Sh8XUNqlnAOxC3/zEDc=
 
@@ -6840,7 +6888,7 @@ Name: res/drawable-hdpi-v4/gadget_error_bg.9.png
 SHA1-Digest: SpgTbZribUxYm7d/zUVE9Xkyt+M=
 
 Name: res/drawable/miuix_preference_last_item_radio_two_state_bg.xml
-SHA1-Digest: r3migb4xN9xQZ0yckR/dmLSYaU4=
+SHA1-Digest: vH8FsByZXm1ywM13YUPjks1ytuM=
 
 Name: res/drawable/background.xml
 SHA1-Digest: zNyOOCf9MIGewnZwuvW6srY3Xps=
@@ -6874,10 +6922,10 @@ Name: kotlin/Experimental.kotlin_metadata
 SHA1-Digest: nGvjeRW8HVDi+RjLJsRA2WnbnqE=
 
 Name: res/drawable/miuix_preference_first_item_radio_bg_dark.xml
-SHA1-Digest: Reu2VijJ00XM9Itu86ix3RS0Z8E=
+SHA1-Digest: +Dlah87TsyHslTel+uW8rnh/4X4=
 
 Name: res/layout/miuix_compat_simple_spinner_layout.xml
-SHA1-Digest: 68P74/6GcSZdfxEEWloqpPOlvFY=
+SHA1-Digest: klXMACI/0Be11VgjeFjA0Q4Voug=
 
 Name: res/color-v23/abc_tint_switch_track.xml
 SHA1-Digest: 3PbTAd9FJ7v3zc0NuTI9SwDxJlg=
@@ -6891,6 +6939,9 @@ SHA1-Digest: 88vK3WwdFxbhwWhDXfywniWE/kQ=
 
 Name: res/drawable/miuix_preference_first_last_divider_line_dark.xml
 SHA1-Digest: BhClYrFU+qjTKtAk1nylPkshWv0=
+
+Name: res/drawable/search_bar_right_xiaoai_blue.xml
+SHA1-Digest: Los5v3m2A8bhVI+9zCuGraDoJhA=
 
 Name: res/layout/select_dialog_singlechoice_material.xml
 SHA1-Digest: +V1AWMo92vrJVxhBKPfEpf+OK64=
@@ -6959,7 +7010,10 @@ Name: res/drawable-night-xxxhdpi-v8/ic_task_multi.webp
 SHA1-Digest: cAlKSoFwCdMF2zcu7wTU62pzJGQ=
 
 Name: res/drawable/miuix_appcompat_arrow_popup_top_middle_light.xml
-SHA1-Digest: DTCPCDcSZI07VBWT+ZzvTXie8A4=
+SHA1-Digest: pbePP4CcsJZSGIw1Yp6tfkczKec=
+
+Name: res/drawable/icon_search_dark.xml
+SHA1-Digest: sEY5r3EyyUbKRi3PNiEwxpccI24=
 
 Name: kotlin/jvm/Strictfp.kotlin_metadata
 SHA1-Digest: s96VkLS9OJMT1nnc4IvcJtiRWo0=
@@ -6989,7 +7043,7 @@ Name: res/drawable-xhdpi-v4/default_screen_home_icon.png
 SHA1-Digest: Gjgx6gqRBMYCCCzLvj3XMop8YG8=
 
 Name: res/drawable/miuix_preference_middle_item_bg_light.xml
-SHA1-Digest: vbLCmQEDMt+rqZyeL6VSzmkb7Sw=
+SHA1-Digest: QvzFcsiryvDNE0oKZt+lYv2UXBA=
 
 Name: res/drawable/miuix_preference_single_item_radio_bg_dark_normal.x
  ml
@@ -7008,7 +7062,7 @@ Name: res/drawable-xxhdpi-v4/gadget_clear_broom_00000.png
 SHA1-Digest: ss/75TdDPd8E8iQUzc0UlSsNbFM=
 
 Name: res/layout/miuix_compat_simple_spinner_layout_integrated.xml
-SHA1-Digest: XrpZPtIYPM3F37V4VWw4vm3NV+4=
+SHA1-Digest: CzqS8TpRxfQLHg/XSpV7lZ5QK1w=
 
 Name: res/drawable/$navigation_bar_guide_recent__0.xml
 SHA1-Digest: mv5VQb6sCAMLbUVJ0LNl8N+ul+s=

@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;Landroid/graphics/RectF;)V
     .locals 0
 
-    .line 2087
+    .line 2090
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$9;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iput-object p2, p0, Lcom/miui/home/recents/NavStubView$9;->val$startRectF:Landroid/graphics/RectF;
@@ -39,7 +39,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 4
 
-    .line 2090
+    .line 2093
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$9;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$9;->val$startRectF:Landroid/graphics/RectF;

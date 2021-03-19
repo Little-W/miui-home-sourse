@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">ही कॅटॅगरी डिलीट करायची?</string>
     <string name="delete_screen">स्क्रीन डिलीट करा</string>
     <string name="delete_wallpaper_message">%1$d वॉलपेपर डिलीट करायचा?</string>
+    <string name="deleted_system_applications">अनइनस्टॉल केलेले सिस्टीम एप्स</string>
     <string name="deselect_all">सर्व निवड रद्द करा</string>
     <string name="disable_wallpaper_scroll">साइड-स्क्रोलिंग बंद करा</string>
     <string name="download_action">डाऊनलोड</string>
@@ -394,7 +395,7 @@
     <string name="navigation_type_full_screen">जेश्चर्स</string>
     <string name="navigation_type_title">सिस्टिम नॅव्हिगेशन</string>
     <string name="navigation_type_virtual_key">बटणे</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">नेटवर्कशी कनेक्ट करता आले नाही, पुन्हा प्रयत्न करा.</string>
     <string name="no_detail_page">तपशील पेज नाही</string>
     <string name="no_space_toast">पुरेशी जागा नाही</string>
     <string name="no_space_toast_when_click_widget">या पेजवर पुरेशी जागा नाही. हा आयटम वेगळ्या पेजवर ओढण्याचा प्रयत्न करा.</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">निवडलेल्या एप्समध्ये आवश्यक सिस्टीम वैशिष्ट्ये आहेत. आपण केवळ त्यांचे होम स्क्रीन शॉर्टकट काढू शकता.</string>
     <string name="remove_dialog_title_format">\"%s\" होम स्क्रीनवरुन काढायचे?</string>
     <string name="remove_invalidate_gadget_tips">आपण वापरता त्यापैकी एक विजेट यापुढे उपलब्ध नाही. आपण आणखी एक जोडू शकता.</string>
+    <string name="remove_sys_app_content">आपण सेटिंग्ज > एप्स > होम स्क्रीन शॉर्टकटमध्ये पुन्हाहोम स्क्रीन शॉर्टकट जोडू शकाल. आता काढायचे?</string>
+    <string name="remove_sys_app_title">होम स्क्रीन शॉर्टकट काढून टाकायचा?</string>
     <string name="reset_cate_tip_content">तुम्ही सुरु ठेवल्यास डिफॉल्ट एप ग्रुप रिस्टोर केले जातील. तरीही सुरू ठेवायचे?</string>
     <string name="reset_cate_tip_title">डिफॉल्ट ग्रुप्स रिस्टोर करा</string>
     <string name="reset_description_first_time">तुम्ही %1$s पासूनचा हा लेआऊट 2 तासांच्या आत रिस्टोर करू शकता</string>
@@ -497,7 +500,7 @@
     <string name="reset_scene_prompt">स्क्रीन डिफॉल्ट लेआऊटवर रिसेट होईल.</string>
     <string name="reset_title">रिस्टोर</string>
     <string name="restore_icon_successful">यशस्वीपणे जोडले</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">रशिया</string>
     <string name="screen_cells_config_title">होम स्क्रीन लेआऊट</string>
     <string name="screen_locked_toast">होम स्क्रीन लेआऊट लॉक केला आहे.</string>
     <string name="screen_number">%d स्क्रीन</string>
@@ -506,7 +509,7 @@
     <string name="select_all">सर्व निवडा</string>
     <string name="select_frame">फ्रेम</string>
     <string name="select_photo">फोटो</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">एक सर्व्हर एरर आली. एक दोन मिनिटे प्रतिक्षा करा आणि पुन्हा प्रयत्न करा.</string>
     <string name="setting_wallpaper_tip">अॅडजस्ट करण्यासाठी पिंच किंवा स्वाइप करा</string>
     <string name="settings">सेटिंग्ज</string>
     <string name="settings_shortcut">सेटिंग्ज</string>

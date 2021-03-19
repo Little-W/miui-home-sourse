@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">ဤအမျိုးအစားအုပ်စုကို ဖျက်ပစ်မလား။</string>
     <string name="delete_screen">မျက်နှာပြင်အား ဖျက်မည်</string>
     <string name="delete_wallpaper_message">နောက်ခံပုံ %1$d အား ဖျက်ပစ်မလား?</string>
+    <string name="deleted_system_applications">စနစ်အက်(ပ်)များ ဖြုတ်ပြီးပါပြီ</string>
     <string name="deselect_all">အားလုံး မရွေးတော့ပါ</string>
     <string name="disable_wallpaper_scroll">ဘေး-အထက်အောက်ရွှေ့ခြင်းကို ပိတ်ပါ</string>
     <string name="download_action">ဒေါင်းလုဒ်လုပ်မည်</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">ရွေးချယ်ထားသော အက်ပ်များတွင် မရှိမဖြစ်လိုအပ်သော စနစ်ပိုင်းဆိုင်ရာ အထူးပြုလုပ်ချက်များ ပါဝင်သည်။ ၎င်းတို့၏ ပင်မမျက်နှာပြင်ရှော့ကဒ်များကိုသာ သင်ဖယ်ရှားနိုင်ပါသည်။</string>
     <string name="remove_dialog_title_format">ပင်မမျက်နှာပြင်မှ %s ကို ဖယ်ရှားမလား။</string>
     <string name="remove_invalidate_gadget_tips">သင်သုံးသော ဝိဂျက်တစ်ခု မရရှိနိုင်တော့ပါ။ နောက်တစ်ခု ထည့်နိုင်ပါသည်။</string>
+    <string name="remove_sys_app_content">ပင်မမျက်နှာပြင်ရှော့ကတ်ကို ဆက်တင် > အက်(ပ်)များ > ပင်မမျက်နှာပြင်ရှော့ကတ်များစီမံခန့်ခွဲရန်တွင် ပြန်ထည့်နိုင်သည်။ ယခုဖြုတ်လိုသလား။</string>
+    <string name="remove_sys_app_title">ပင်မမျက်နှာပြင်ရှော့ကတ်မှ ဖြုတ်လိုသလား။</string>
     <string name="reset_cate_tip_content">ဆက်လုပ်ပါက အက်ပ်များအား မူလအုပ်စုအတိုင်း ပြန်လည်ထားရှိပေးပါမည်။ မည်သို့ပင်ဆိုစေ ဆက်လုပ်မလား။</string>
     <string name="reset_cate_tip_title">မူလအုပ်စုအတိုင်း ပြန်လည်ထားရှိမည်</string>
     <string name="reset_description_first_time">အပြင်အဆင်အား %1$s မှ နှစ်နာရီအတွင်း ပြန်လည်ရယူနိုင်ပါသည်</string>

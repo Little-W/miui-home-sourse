@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Slet denne kategori?</string>
     <string name="delete_screen">Slet skærm</string>
     <string name="delete_wallpaper_message">Slet %1$d baggrundsbillede?</string>
+    <string name="deleted_system_applications">Afinstallerede systemapps</string>
     <string name="deselect_all">Vælg alle fra</string>
     <string name="disable_wallpaper_scroll">Slå side-scrolling fra</string>
     <string name="download_action">Download</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Valgte apps indeholder absolut nødvendige systemfunktioner. Du kan kun fjerne deres startskærms-genveje.</string>
     <string name="remove_dialog_title_format">Fjern \"%s\" fra startskærmen?</string>
     <string name="remove_invalidate_gadget_tips">En af de widgets, du bruger, er ikke længere tilgængelig. Du kan tilføre en anden.</string>
+    <string name="remove_sys_app_content">Du vil kunne tilføje startskærmsgenvejen igen i Indstillinger > Apps > Administrer starskærmsgenveje. Fjern nu?</string>
+    <string name="remove_sys_app_title">Fjern startskærmsgenvejen?</string>
     <string name="reset_cate_tip_content">Hvis du fortsætter, gendannes standard-appgrupperne. Fortsæt alligevel?</string>
     <string name="reset_cate_tip_title">Gendan standardgrupper</string>
     <string name="reset_description_first_time">Du kan gendanne layoutet fra %1$s indenfor to timer</string>

@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">এই বিভাগটি মুছবেন?</string>
     <string name="delete_screen">স্ক্রিন মুছুন</string>
     <string name="delete_wallpaper_message">%1$d ওয়ালপেপার মুছতে চান?</string>
+    <string name="deleted_system_applications">Uninstalled system apps</string>
     <string name="deselect_all">কিছুই নির্বাচন করবেন না</string>
     <string name="disable_wallpaper_scroll">সাইড-স্ক্রোলিং বন্ধ করুন</string>
     <string name="download_action">ডাউনলোড করুন</string>
@@ -394,7 +395,7 @@
     <string name="navigation_type_full_screen">জেশ্চার</string>
     <string name="navigation_type_title">সিস্টেম নেভিগেশন</string>
     <string name="navigation_type_virtual_key">বোতাম</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">নেটওয়ার্কের সাথে কানেক্ট করা যাচ্ছে না।আবার চেষ্টা করুন।</string>
     <string name="no_detail_page">কোনো বিবরণ নেই</string>
     <string name="no_space_toast">পর্যাপ্ত জায়গা নেই</string>
     <string name="no_space_toast_when_click_widget">এই পৃষ্ঠাতে পর্যাপ্ত জায়গা নেই।অন্য একটি পৃষ্ঠাতে টেনে নিয়ে যান।</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">নির্বাচিত কিছু অ্যাপে প্রয়োজনীয় সিস্টেম ফিচার আছে। আপনি সেগুলি হোম স্ক্রিন শর্টকাট থেকে সরাতে পারেন।</string>
     <string name="remove_dialog_title_format">হোম স্ক্রিন থেকে \"%s\" সরাবেন?</string>
     <string name="remove_invalidate_gadget_tips">আপনি যে উইজেটগুলো ব্যবহার করেন সেগুলো আর উপলব্ধ নেই।আপনি অন্য একটি যোগ করে দেখতা পারেন।</string>
+    <string name="remove_sys_app_content">"You'll be able to add the Home screen shortcut again in Settings > Apps > Manage Home screen shortcuts. Remove now?"</string>
+    <string name="remove_sys_app_title">Remove the Home screen shortcut?</string>
     <string name="reset_cate_tip_content">যদি আপনি চালিয়ে যেতে চান তাহলে ডিফল্ট অ্যাপ গ্রুপ ফিরিয়ে আনা হবে।আপনি কি চালিয়ে যেতে চান?</string>
     <string name="reset_cate_tip_title">ডিফল্ট গ্রুপ ফিরিয়ে আনুন</string>
     <string name="reset_description_first_time">%1$s থেকে 2 ঘণ্টার মধ্য়ে আপনি লেআউট ফিরিয়ে আনতে পারবেন।</string>
@@ -497,7 +500,7 @@
     <string name="reset_scene_prompt">স্ক্রিনটি ডিফল্ট বিন্যাসে রিসেট হবে।</string>
     <string name="reset_title">ফিরিয়ে আনুন</string>
     <string name="restore_icon_successful">সফলভাবে যোগ করা হয়েছে</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">রাশিয়া</string>
     <string name="screen_cells_config_title">মূখ্য স্ক্রিন লেআউট</string>
     <string name="screen_locked_toast">মূখ্য স্ক্রিন লেআউট লক করা আছে</string>
     <string name="screen_number">%d স্ক্রিন</string>
@@ -506,7 +509,7 @@
     <string name="select_all">সব নির্বাচন করুন</string>
     <string name="select_frame">ফ্রেম</string>
     <string name="select_photo">ছবি</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">একটি সার্ভার ত্রুটি হয়েছে।এক মিনিট অপেক্ষা করে আবার চেষ্টা করে দেখুন।</string>
     <string name="setting_wallpaper_tip">সিঙ্ক করার জন্য টিউন বা সোয়াইপ করুন</string>
     <string name="settings">সেটিংস</string>
     <string name="settings_shortcut">সেটিংস</string>

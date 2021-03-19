@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Törli ezt a kategóriát?</string>
     <string name="delete_screen">Képernyő törlése</string>
     <string name="delete_wallpaper_message">Törli az %1$d háttérképet?</string>
+    <string name="deleted_system_applications">Törölt rendszeralkalmazások</string>
     <string name="deselect_all">Kijelölések törlése</string>
     <string name="disable_wallpaper_scroll">Háttérkép görgetés kikapcsolása</string>
     <string name="download_action">Letöltés</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">A kiválasztott alkalmazások alapvető rendszerfunkciókat tartalmaznak. Csak a Kezdőképernyőn megjelenő ikonjukat távolíthatja el.</string>
     <string name="remove_dialog_title_format">\"%s\" eltávolítása a Kezdőképernyőről?</string>
     <string name="remove_invalidate_gadget_tips">Az egyik ön által használt widget már nem elérhető. Hozzáadhat egy másikat.</string>
+    <string name="remove_sys_app_content">Ismét hozzáadhatja a parancsikont a Kezdőképernyőhöz a Beállítások > Alkalmazások > Kezdőképernyő kezelése menüpontban. Eltávolítja most?</string>
+    <string name="remove_sys_app_title">Eltávolítja a parancsikont a Kezdőképernyőről?</string>
     <string name="reset_cate_tip_content">Ha folytatja, az alapértelmezett alkalmazáscsoportok visszaállításra kerülnek. Mégsi folytatja?</string>
     <string name="reset_cate_tip_title">Alapértelmezett csoportok visszaállítása</string>
     <string name="reset_description_first_time">Vissza tudja állítani az elrendezést innen: %1$s 2 órán belül</string>

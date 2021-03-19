@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">ഈ വിഭാഗം മായ്ക്കണോ?</string>
     <string name="delete_screen">സ്ക്രീൻ മായ്ക്കുക</string>
     <string name="delete_wallpaper_message">%1$d വാൾപേപ്പർ മായ്ക്കട്ടെ?</string>
+    <string name="deleted_system_applications">അൺഇൻസ്റ്റാൾ ചെയ്ത സിസ്റ്റം ആപ്പുകൾ</string>
     <string name="deselect_all">എല്ലാത്തിന്റെയും തിരഞ്ഞെടുപ്പ് മാറ്റുക</string>
     <string name="disable_wallpaper_scroll">സൈഡ് സ്ക്രോളിംഗ് ഓഫ് ചെയ്യുക</string>
     <string name="download_action">ഡൗൺലോഡ്</string>
@@ -394,7 +395,7 @@
     <string name="navigation_type_full_screen">ആംഗ്യങ്ങൾ</string>
     <string name="navigation_type_title">സിസ്റ്റം നാവിഗേഷൻ</string>
     <string name="navigation_type_virtual_key">ബട്ടണുകൾ</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">നെറ്റ്‌വര്‍ക്കുമായി കണക്റ്റുചെയ്യാനായില്ല. വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="no_detail_page">വിശദാംശങ്ങൾ പേജ് ഇല്ല</string>
     <string name="no_space_toast">മതിയായ ഇടമില്ല</string>
     <string name="no_space_toast_when_click_widget">ഈ പേജിൽ മതിയായ ഇടമില്ല. ഈ ഇനം മറ്റൊരു പേജിലേക്ക് ഡ്രാഗ് ചെയ്യാൻ ശ്രമിക്കുക.</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">തിരഞ്ഞെടുത്ത ആപ്പുകളിൽ അവശ്യ സിസ്റ്റം ഫീച്ചറുകൾ അടങ്ങിയിരിക്കുന്നു. നിങ്ങൾക്ക് അവരുടെ ഹോം സ്‌ക്രീൻ എളുപ്പവഴികൾ മാത്രമേ നീക്കംചെയ്യാനാകൂ.</string>
     <string name="remove_dialog_title_format">ഹോം സ്ക്രീനിനിൽ നിന്ന് \" %s\" നീക്കംചെയ്യണോ?</string>
     <string name="remove_invalidate_gadget_tips">നിങ്ങൾ ഉപയോഗിക്കുന്ന വിജറ്റുകളിൽ ഒന്ന് മേലിൽ ലഭ്യമല്ല. നിങ്ങൾക്ക് മറ്റൊന്ന് ചേർക്കാൻ കഴിയും.</string>
+    <string name="remove_sys_app_content">ക്രമീകരണം > ആപ്പുകൾ > ഹോം സ്‌ക്രീൻ എളുപ്പവഴികൾ മാനേജുചെയ്യുക എന്നതിൽ ഹോം സ്‌ക്രീൻ എളുപ്പവഴികൾ വീണ്ടും ചേർക്കാൻ കഴിയും. ഇപ്പോൾ നീക്കംചെയ്യണോ?</string>
+    <string name="remove_sys_app_title">ഹോം സ്ക്രീൻ എളുപ്പവഴി നീക്കംചെയ്യണോ?</string>
     <string name="reset_cate_tip_content">നിങ്ങൾ തുടരുകയാണെങ്കിൽ, ഡിഫോൾട്ട് ആപ്പ് ഗ്രൂപ്പുകൾ പുനഃസ്ഥാപിക്കും. എന്തായാലും തുടരണോ?</string>
     <string name="reset_cate_tip_title">ഡിഫോൾട്ട് ഗ്രൂപ്പുകൾ പുനഃസ്ഥാപിക്കുക</string>
     <string name="reset_description_first_time">2 മണിക്കൂറിനുള്ളിൽ %1$s-ൽ നിന്നും നിങ്ങൾക്ക് ലേഔട്ട് പുനസ്ഥാപിക്കാം</string>
@@ -497,7 +500,7 @@
     <string name="reset_scene_prompt">സ്ക്രീൻ ഡിഫോൾട്ട് ലേഔട്ടിലേക്ക് പുനക്രമീകരിക്കും.</string>
     <string name="reset_title">പുനസ്ഥാപിക്കുക</string>
     <string name="restore_icon_successful">ചേർത്തു</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">റഷ്യ</string>
     <string name="screen_cells_config_title">ഹോം സ്ക്രീൻ ലേഔട്ട്</string>
     <string name="screen_locked_toast">ഹോം സ്ക്രീന്‍ ലേഔട്ട് ലോക്കുചെയ്തു.</string>
     <string name="screen_number">%d സ്ക്രീൻ</string>
@@ -506,7 +509,7 @@
     <string name="select_all">എല്ലാം തിരഞ്ഞെടുക്കുക</string>
     <string name="select_frame">ഫ്രെയിം</string>
     <string name="select_photo">ഫോട്ടോ</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">ഒരു സെർവർ പിശക് സംഭവിച്ചു. ഒന്നോ രണ്ടോ മിനിറ്റ് കാത്തിരുന്ന് വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="setting_wallpaper_tip">ക്രമീകരിക്കാൻ പിഞ്ച് അല്ലെങ്കിൽ സ്വൈപ്പുചെയ്യുക</string>
     <string name="settings">ക്രമീകരണം</string>
     <string name="settings_shortcut">ക്രമീകരണം</string>

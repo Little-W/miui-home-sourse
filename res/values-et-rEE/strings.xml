@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">Kustuta see kategooria?</string>
     <string name="delete_screen">Kustuta ekraan</string>
     <string name="delete_wallpaper_message">Kustuta %1$d taustapilt?</string>
+    <string name="deleted_system_applications">Desinstallitud süsteemirakendused</string>
     <string name="deselect_all">Kustuta kõik valikud</string>
     <string name="disable_wallpaper_scroll">Lülita küljekerimine välja</string>
     <string name="download_action">Lae alla</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">Valitud rakendused sisaldavad vajalikke süsteemi funktsioone. Võid eemaldada ainult nende avakuva otseteed.</string>
     <string name="remove_dialog_title_format">Kas eemaldada \"%s\" avakuvalt?</string>
     <string name="remove_invalidate_gadget_tips">Üks teie kasutatud vidinatest pole enam saadaval. Võite lisada veel ühe.</string>
+    <string name="remove_sys_app_content">Avakuva otsetee saate uuesti lisada asukohas Seaded > Rakendused > Avakuva otseteede haldamine. Eemaldada kohe?</string>
+    <string name="remove_sys_app_title">Eemaldada avaekraani otsetee?</string>
     <string name="reset_cate_tip_content">Kui jätkate, taastatakse rakenduste vaikegrupid. Jätka ikkagi?</string>
     <string name="reset_cate_tip_title">Taasta vaikimisi grupid</string>
     <string name="reset_description_first_time">Võid taastada paigutuse siit: %1$s 2 tunni jooksul</string>

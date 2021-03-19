@@ -26,16 +26,16 @@
 .method public constructor <init>(JII)V
     .locals 0
 
-    .line 232
+    .line 236
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 233
+    .line 237
     iput-wide p1, p0, Lcom/miui/home/launcher/ScreenUtils$ScreenInfo;->screenId:J
 
-    .line 234
+    .line 238
     iput p3, p0, Lcom/miui/home/launcher/ScreenUtils$ScreenInfo;->screenOrder:I
 
-    .line 235
+    .line 239
     iput p4, p0, Lcom/miui/home/launcher/ScreenUtils$ScreenInfo;->screenType:I
 
     return-void

@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">এই বৰ্গটো বিলোপ কৰিবনে?</string>
     <string name="delete_screen">স্ক্ৰীণ বিলোপ</string>
     <string name="delete_wallpaper_message">%1$d খন ৱালেপপাৰ বিলোপ কৰিবনে?</string>
+    <string name="deleted_system_applications">আনইনষ্টল কৰা ছিষ্টেম এপসমূহ</string>
     <string name="deselect_all">সকলো চয়নহীন কৰক</string>
     <string name="disable_wallpaper_scroll">"ছাইড-স্ক্ৰ'লিং অফ কৰক"</string>
     <string name="download_action">ডাউনলোড</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">চয়নিত এপসমূহে আৱশ্যকীয় ছিষ্টেম বৈশিষ্ট্য বহন কৰে। আপুনি সেইবিলাকৰ কেৱল গৃহ স্ক্ৰীণ চৰ্টকাটসমূহহে আঁতৰাব পাৰে।</string>
     <string name="remove_dialog_title_format">\"%s\"ক গৃহ স্ক্ৰীণৰ পৰা আঁতৰাবনে?</string>
     <string name="remove_invalidate_gadget_tips">আপুনি ব্যৱহাৰ কৰা এটা ৱিজেট আগলৈ উপলব্ধ নহয়। আপুনি অন্য এটা যোগ কৰিব পাৰে।</string>
+    <string name="remove_sys_app_content">"আপুনি ছেটিংছ > এপসমূহ > গৃহ স্ক্ৰীণ চৰ্টকাট ব্যৱস্থাপনত গৃহ স্ক্ৰীণ চৰ্টকাটটো পুনৰ যোগ কৰিবলৈ সক্ষম হ'ব। এতিয়া আঁতৰাবনে?"</string>
+    <string name="remove_sys_app_title">গৃহ স্ক্ৰীণ চৰ্টকাটটো আঁতৰাবনে?</string>
     <string name="reset_cate_tip_content">"জাৰী ৰাখিলে, ডিফ'ল্ট এপ গোটসমূহ পুনঃস্থাপিত হ'ব। যিকোনো প্ৰকাৰে জাৰী ৰাখিবনে?"</string>
     <string name="reset_cate_tip_title">"ডি'ফল্ট গোট পুনঃস্থাপন কৰক"</string>
     <string name="reset_description_first_time">আপুনি লেআউটটো 2 ঘণ্টাৰ ভিতৰত %1$s-ৰ পৰা পুনঃস্থাপন কৰিব পাৰে</string>

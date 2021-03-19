@@ -3065,7 +3065,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100258
+    const v1, 0x7f10025b
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -3088,7 +3088,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100257
+    const v1, 0x7f10025a
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -3102,7 +3102,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100259
+    const v1, 0x7f10025c
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -5839,88 +5839,6 @@
     return-object p0
 .end method
 
-.method private static getSecondSpaceId(Landroid/content/Context;)I
-    .locals 10
-
-    .line 2263
-    const-class v0, Landroid/provider/Settings$Secure;
-
-    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const-string v2, "getIntForUser"
-
-    const/4 v3, 0x4
-
-    new-array v4, v3, [Ljava/lang/Class;
-
-    const-class v5, Landroid/content/ContentResolver;
-
-    const/4 v6, 0x0
-
-    aput-object v5, v4, v6
-
-    const-class v5, Ljava/lang/String;
-
-    const/4 v7, 0x1
-
-    aput-object v5, v4, v7
-
-    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const/4 v8, 0x2
-
-    aput-object v5, v4, v8
-
-    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const/4 v9, 0x3
-
-    aput-object v5, v4, v9
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    .line 2265
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    aput-object p0, v3, v6
-
-    const-string p0, "second_user_id"
-
-    aput-object p0, v3, v7
-
-    sget p0, Lcom/miui/home/launcher/common/StaticCommon;->sUserHandleUserNullId:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    aput-object p0, v3, v8
-
-    sget p0, Lcom/miui/home/launcher/common/StaticCommon;->sUserHandleCurrentUserId:I
-
-    .line 2266
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    aput-object p0, v3, v9
-
-    .line 2263
-    invoke-static {v0, v1, v2, v4, v3}, Lcom/miui/launcher/utils/ReflectUtils;->callStaticMethod(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Integer;
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    return p0
-.end method
-
 .method public static getSpecifiedSizeDrawable(Landroid/graphics/drawable/Drawable;Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
     .locals 7
 
@@ -6576,178 +6494,6 @@
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->isUserUnlocked(Landroid/os/UserHandle;)Z
 
     move-result v0
-
-    return v0
-.end method
-
-.method public static isFirstEnterSecondSpace(Landroid/content/Context;)Z
-    .locals 11
-
-    const/4 v0, 0x0
-
-    .line 2240
-    :try_start_0
-    invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->getSecondSpaceId(Landroid/content/Context;)I
-
-    move-result v1
-
-    .line 2241
-    invoke-static {}, Lmiui/os/UserHandle;->myUserId()I
-
-    move-result v2
-
-    if-eq v2, v1, :cond_0
-
-    const-string p0, "Launcher.Utilities"
-
-    const-string v1, "not current user"
-
-    .line 2242
-    invoke-static {p0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v0
-
-    .line 2245
-    :cond_0
-    sget v2, Lcom/miui/home/launcher/common/StaticCommon;->sUserHandleUserNullId:I
-
-    if-ne v1, v2, :cond_1
-
-    const-string p0, "Launcher.Utilities"
-
-    const-string v1, "not create second space"
-
-    .line 2246
-    invoke-static {p0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return v0
-
-    :cond_1
-    const-string v2, "Launcher.Utilities"
-
-    .line 2249
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "secondSpaceId:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2250
-    const-class v2, Landroid/provider/Settings$Secure;
-
-    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const-string v4, "getIntForUser"
-
-    const/4 v5, 0x4
-
-    new-array v6, v5, [Ljava/lang/Class;
-
-    const-class v7, Landroid/content/ContentResolver;
-
-    aput-object v7, v6, v0
-
-    const-class v7, Ljava/lang/String;
-
-    const/4 v8, 0x1
-
-    aput-object v7, v6, v8
-
-    sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const/4 v9, 0x2
-
-    aput-object v7, v6, v9
-
-    sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const/4 v10, 0x3
-
-    aput-object v7, v6, v10
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    .line 2252
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    aput-object p0, v5, v0
-
-    const-string p0, "user_setup_complete"
-
-    aput-object p0, v5, v8
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    aput-object p0, v5, v9
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    aput-object p0, v5, v10
-
-    .line 2250
-    invoke-static {v2, v3, v4, v6, v5}, Lcom/miui/launcher/utils/ReflectUtils;->callStaticMethod(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Integer;
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    const-string v1, "Launcher.Utilities"
-
-    .line 2253
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "user_setup_complete:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-nez p0, :cond_2
-
-    move v0, v8
-
-    :cond_2
-    return v0
-
-    :catch_0
-    move-exception p0
-
-    const-string v1, "Launcher.Utilities"
-
-    const-string v2, "isFirstEnterSecondSpace"
-
-    .line 2256
-    invoke-static {v1, v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
 .end method
@@ -7712,7 +7458,7 @@
 
     move-result-object p0
 
-    const v0, 0x7f080100
+    const v0, 0x7f080105
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -7780,7 +7526,7 @@
 
     move-result-object p0
 
-    const v0, 0x7f080260
+    const v0, 0x7f080272
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -9178,7 +8924,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100227
+    const v1, 0x7f10022a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

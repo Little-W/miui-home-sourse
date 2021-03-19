@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3357
+    .line 3382
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$26;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 1
 
-    .line 3360
+    .line 3385
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$26;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getApplicationContext()Landroid/content/Context;
@@ -50,19 +50,19 @@
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/DeviceConfig;->loadScreenSize(Landroid/content/Context;Landroid/content/res/Resources;)V
 
-    .line 3361
+    .line 3386
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenSizeChanged()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 3362
+    .line 3387
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$26;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->onScreenSizeChanged()V
 
-    .line 3364
+    .line 3389
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$26;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -72,7 +72,7 @@
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->performLayoutNow(Landroid/view/View;)V
 
-    .line 3365
+    .line 3390
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$26;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
@@ -81,7 +81,7 @@
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->performLayoutNow(Landroid/view/View;)V
 
-    .line 3366
+    .line 3391
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$26;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3600(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/search/SearchEdgeLayout;

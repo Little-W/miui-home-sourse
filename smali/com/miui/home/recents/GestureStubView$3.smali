@@ -24,7 +24,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 344
+    .line 374
     invoke-static {}, Lcom/miui/home/recents/GestureStubView$EventPosition;->values()[Lcom/miui/home/recents/GestureStubView$EventPosition;
 
     move-result-object v0
@@ -56,7 +56,7 @@
     :try_start_1
     sget-object v2, Lcom/miui/home/recents/GestureStubView$3;->$SwitchMap$com$miui$home$recents$GestureStubView$EventPosition:[I
 
-    sget-object v3, Lcom/miui/home/recents/GestureStubView$EventPosition;->ALIGN_NOTCH:Lcom/miui/home/recents/GestureStubView$EventPosition;
+    sget-object v3, Lcom/miui/home/recents/GestureStubView$EventPosition;->BELOW_NOTCH:Lcom/miui/home/recents/GestureStubView$EventPosition;
 
     invoke-virtual {v3}, Lcom/miui/home/recents/GestureStubView$EventPosition;->ordinal()I
 
@@ -70,7 +70,7 @@
     :try_start_2
     sget-object v2, Lcom/miui/home/recents/GestureStubView$3;->$SwitchMap$com$miui$home$recents$GestureStubView$EventPosition:[I
 
-    sget-object v3, Lcom/miui/home/recents/GestureStubView$EventPosition;->BELOW_NOTCH:Lcom/miui/home/recents/GestureStubView$EventPosition;
+    sget-object v3, Lcom/miui/home/recents/GestureStubView$EventPosition;->ALIGN_NOTCH:Lcom/miui/home/recents/GestureStubView$EventPosition;
 
     invoke-virtual {v3}, Lcom/miui/home/recents/GestureStubView$EventPosition;->ordinal()I
 
@@ -82,7 +82,7 @@
     :try_end_2
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 222
+    .line 221
     :catch_2
     invoke-static {}, Lcom/miui/home/recents/GestureBackArrowView$ReadyState;->values()[Lcom/miui/home/recents/GestureBackArrowView$ReadyState;
 

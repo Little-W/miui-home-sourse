@@ -3421,7 +3421,7 @@
 
     new-instance p3, Lcom/miui/home/recents/messages/AllTaskViewsDismissedEvent;
 
-    const p4, 0x7f1001fa
+    const p4, 0x7f1001fb
 
     const/4 p5, 0x0
 
@@ -3526,7 +3526,7 @@
 
     new-instance v1, Lcom/miui/home/recents/messages/AllTaskViewsDismissedEvent;
 
-    const v3, 0x7f1001fa
+    const v3, 0x7f1001fb
 
     .line 1036
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/TaskStack;->getTaskCount()I

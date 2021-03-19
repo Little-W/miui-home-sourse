@@ -35,7 +35,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100236
+    const v1, 0x7f100239
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -48,7 +48,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080244
+    const v1, 0x7f080256
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -279,14 +279,14 @@
 
     invoke-direct {v0, p1}, Lmiui/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f10023a
+    const v1, 0x7f10023d
 
     .line 139
     invoke-virtual {v0, v1}, Lmiui/app/AlertDialog$Builder;->setTitle(I)Lmiui/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f100238
+    const v1, 0x7f10023b
 
     .line 140
     invoke-virtual {v0, v1}, Lmiui/app/AlertDialog$Builder;->setMessage(I)Lmiui/app/AlertDialog$Builder;
@@ -297,7 +297,7 @@
 
     invoke-direct {v1, p0, p1, p2, p3}, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$ShareAppShortcutMenuItem$JysaqrL2S1Uwoi4tEHc5hXC_gtY;-><init>(Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;Lcom/miui/home/launcher/Launcher;Ljava/io/File;Ljava/lang/String;)V
 
-    const p2, 0x7f100239
+    const p2, 0x7f10023c
 
     .line 141
     invoke-virtual {v0, p2, v1}, Lmiui/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;

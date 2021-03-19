@@ -217,6 +217,7 @@
     <string name="delete_category_dialog_title">确定删除该分组？</string>
     <string name="delete_screen">删除屏幕</string>
     <string name="delete_wallpaper_message">确认要删除所选的壁纸?</string>
+    <string name="deleted_system_applications">已删除的系统应用</string>
     <string name="deselect_all">全不选</string>
     <string name="disable_wallpaper_scroll">关闭壁纸滚动模式</string>
     <string name="download_action">下载</string>
@@ -515,6 +516,8 @@
     <string name="remove_dialog_message">应用包含系统必要功能，仅支持移除桌面图标</string>
     <string name="remove_dialog_title_format">移除\"%s\"</string>
     <string name="remove_invalidate_gadget_tips">桌面中有插件已不再提供，请重新添加</string>
+    <string name="remove_sys_app_content">您正在移除系统应用图标，移除后，您可在设置-应用设置-桌面图标管理中重新添加，确定移除？</string>
+    <string name="remove_sys_app_title">是否移除系统应用图标？</string>
     <string name="reset_cate_tip_content">重置后应用分组将恢复至初始化状态，是否继续？</string>
     <string name="reset_cate_tip_title">重置</string>
     <string name="reset_description_first_time">两小时内可恢复到%1$s时的布局</string>

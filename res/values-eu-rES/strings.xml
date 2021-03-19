@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">Kategoria hau ezabatu?</string>
     <string name="delete_screen">Pantaila ezabatu</string>
     <string name="delete_wallpaper_message">%1$d horma-papera ezabatu?</string>
+    <string name="deleted_system_applications">Desinstalatutako sistemaren aplikazioak</string>
     <string name="deselect_all">Deshautatu guztiak</string>
     <string name="disable_wallpaper_scroll">Tokialdatze-aldekoa desaktibatuta</string>
     <string name="download_action">Deskargatu</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">Hautatutako aplikazioek sistemaren oinarrizko ezaugarriak dituzte. Haien Hasierako pantailaren lasterbideak bakarrik ezabatu ditzakezu.</string>
     <string name="remove_dialog_title_format">\"%s\" Hasierako pantailatik ezabatu?</string>
     <string name="remove_invalidate_gadget_tips">Erabiltzen dituzun osagarriren bat jadanik ez dago eskuragarri. Beste bat gehitu dezakezu.</string>
+    <string name="remove_sys_app_content">Hasierako pantailaren lasterbidea berriro gehitu ahal izango duzu hemen: Ezarpenak > Aplikazioak > Kudeatu Hasierako pantailaren lasterbideak. Ezabatu orain?</string>
+    <string name="remove_sys_app_title">Hasierako pantailaren lasterbidea ezabatu?</string>
     <string name="reset_cate_tip_content">Jarraitzen baduzu, aplikazio talde lehenetsiak berrezarriko dira. Hala ere jarraitu?</string>
     <string name="reset_cate_tip_title">Berrezarri talde lehenetsiak</string>
     <string name="reset_description_first_time">Planoa %1$s -tik berrezarri dezakezu 2 ordu barru</string>

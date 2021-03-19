@@ -213,7 +213,7 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 0
+    .locals 1
 
     .line 49
     invoke-direct {p0}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->launcherGlobalSearchSetting()V
@@ -232,7 +232,9 @@
 
     move-result p1
 
-    invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackSearchBarSettingClick(I)V
+    const/4 v0, -0x1
+
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackSearchBarSettingClick(II)V
 
     return-void
 .end method

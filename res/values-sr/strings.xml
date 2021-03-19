@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Обрисати ову категорију?</string>
     <string name="delete_screen">Обриши екран</string>
     <string name="delete_wallpaper_message">Обрисати %1$d позадину?</string>
+    <string name="deleted_system_applications">Деинсталиране системске апликације</string>
     <string name="deselect_all">Опозови све</string>
     <string name="disable_wallpaper_scroll">Искључи померање слике</string>
     <string name="download_action">Преузми</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Изабране апликације садрже неопходне системске функције. Можете уклонити само њихове пречице на Почетном екрану.</string>
     <string name="remove_dialog_title_format">Уклонити \"%s\" са Почетног екрана?</string>
     <string name="remove_invalidate_gadget_tips">Један од виџета који користите више није доступан. Можете додати други.</string>
+    <string name="remove_sys_app_content">Моћи ћете поново да додате пречицу на Почетни екран у Подешавања > Апликације > Управљање пречицама на Почетном екрану. Уклонити сада?</string>
+    <string name="remove_sys_app_title">Уклонити пречицу с Почетног екрана?</string>
     <string name="reset_cate_tip_content">Ако наставите, задате групе апликација ће бити враћене. Ипак вратити?</string>
     <string name="reset_cate_tip_title">Врати задате групе</string>
     <string name="reset_description_first_time">Изглед можете вратити из %1$s у року од 2 часа</string>

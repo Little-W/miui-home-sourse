@@ -202,7 +202,7 @@
     .line 352
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings;->mRecentsShowRecommendCheckBoxPref:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
-    const v0, 0x7f10023e
+    const v0, 0x7f100241
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setTitle(I)V
 
@@ -292,7 +292,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f1001ed
+    const v0, 0x7f1001ee
 
     .line 390
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/MiuiHomeSettings;->getString(I)Ljava/lang/String;
@@ -339,12 +339,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f1001b1
+    const v1, 0x7f1001b2
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f1001b7
+    const v1, 0x7f1001b8
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -624,7 +624,7 @@
     :cond_0
     const-string p1, "com.android.settings.FullScreenDisplaySettings"
 
-    const v1, 0x7f1001b2
+    const v1, 0x7f1001b3
 
     .line 209
     invoke-virtual {p0}, Lcom/miui/home/settings/MiuiHomeSettings;->getContext()Landroid/content/Context;
@@ -907,7 +907,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1001c7
+    const v2, 0x7f1001c8
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -926,12 +926,12 @@
 
     if-eqz v2, :cond_0
 
-    const v2, 0x7f1001c6
+    const v2, 0x7f1001c7
 
     goto :goto_0
 
     :cond_0
-    const v2, 0x7f1001c5
+    const v2, 0x7f1001c6
 
     :goto_0
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -942,7 +942,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1001c3
+    const v1, 0x7f1001c4
 
     new-instance v2, Lcom/miui/home/settings/MiuiHomeSettings$14;
 
@@ -953,7 +953,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1001c4
+    const v1, 0x7f1001c5
 
     new-instance v2, Lcom/miui/home/settings/MiuiHomeSettings$13;
 
@@ -1551,7 +1551,7 @@
     .line 188
     iget-object v0, p0, Lcom/miui/home/settings/MiuiHomeSettings;->mOpenPersonalAssistant:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
-    const v1, 0x7f100258
+    const v1, 0x7f10025b
 
     invoke-virtual {v0, v1}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setTitle(I)V
 
@@ -2385,7 +2385,7 @@
     .line 442
     iget-object v0, p0, Lcom/miui/home/settings/MiuiHomeSettings;->mScreenCellsConfig:Lcom/miui/home/settings/preference/ListPreference;
 
-    const v1, 0x7f100227
+    const v1, 0x7f10022a
 
     invoke-virtual {v0, v1}, Lcom/miui/home/settings/preference/ListPreference;->setDisableTips(I)V
 

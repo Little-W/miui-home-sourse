@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3426
+    .line 3451
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$31;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -37,14 +37,14 @@
 
     const-string p1, "content://com.miui.home.launcher.settings/preference"
 
-    .line 3431
+    .line 3456
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$31;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const-string v1, ""
 
     invoke-static {v0, v1, p1}, Lcom/miui/launcher/utils/PortableUtils;->updateCurrentWallpaperInfo(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3432
+    .line 3457
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$31;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/WallpaperUtils;->getLockWallpaperProvider(Landroid/content/Context;)Ljava/lang/String;
@@ -53,7 +53,7 @@
 
     if-nez p1, :cond_0
 
-    .line 3434
+    .line 3459
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$31;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$4200(Lcom/miui/home/launcher/Launcher;)V
@@ -63,26 +63,26 @@
     :cond_0
     const-string v0, "com.miui.home.none_provider"
 
-    .line 3435
+    .line 3460
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-nez p1, :cond_2
 
-    .line 3436
+    .line 3461
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->isDefaultLockStyle()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 3437
+    .line 3462
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$31;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/WallpaperUtils;->backupLockScreenSrc(Landroid/content/Context;)V
 
-    .line 3439
+    .line 3464
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$31;->this$0:Lcom/miui/home/launcher/Launcher;
 

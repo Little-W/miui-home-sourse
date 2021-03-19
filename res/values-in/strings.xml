@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Hapus kategori ini?</string>
     <string name="delete_screen">Hapus layar</string>
     <string name="delete_wallpaper_message">Hapus %1$d wallpaper?</string>
+    <string name="deleted_system_applications">Apl sistem yang ter-unsintal</string>
     <string name="deselect_all">Batal pilih</string>
     <string name="disable_wallpaper_scroll">Gulir samping nonaktif</string>
     <string name="download_action">Unduh</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Apl terpilih mengandung fitur sistem yang penting. Anda hanya dapat menghapus pintasan pada Layar utama.</string>
     <string name="remove_dialog_title_format">Hapus \"%s\" dari Layar utama?</string>
     <string name="remove_invalidate_gadget_tips">Salah satu widget yang Anda gunakan tidak lagi tersedia. Anda dapat menambahkan yang lain.</string>
+    <string name="remove_sys_app_content">Anda dapat menambahkan pintasan Layar utama lagi di Setelan > Aplikasi > Kelola pintasan Layar utama. Hapus sekarang?</string>
+    <string name="remove_sys_app_title">Hapus pintasan di Layar utama?</string>
     <string name="reset_cate_tip_content">Jika Anda lanjutkan, grup apl bawaan akan dipulihkan. Tetap lanjutkan?</string>
     <string name="reset_cate_tip_title">Pulihkan grup bawaan</string>
     <string name="reset_description_first_time">Anda dapat pulihkan tata letak dari %1$s dalam 2 jam</string>

@@ -84,16 +84,14 @@
 
 .field private mTaskStackViewLayoutStyle:Lcom/miui/home/recents/TaskStackViewLayoutStyle;
 
-.field private mThumbnailBlurManager:Lcom/miui/home/recents/ThumbnailBlurManager;
-
 .field private final mWindowManager:Landroid/view/WindowManager;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 7
+    .locals 8
 
-    .line 123
+    .line 121
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
@@ -113,8 +111,10 @@
 
     const-string v6, "com.android.provision.activities.CongratulationActivity"
 
+    const-string v7, "com.xiaomi.misubscreenui.SubScreenMainActivity"
+
     .line 85
-    filled-new-array/range {v1 .. v6}, [Ljava/lang/String;
+    filled-new-array/range {v1 .. v7}, [Ljava/lang/String;
 
     move-result-object v1
 
@@ -122,32 +122,32 @@
 
     const-string v1, ""
 
-    .line 93
+    .line 94
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNoBackActListStr:Ljava/lang/String;
 
     const-string v1, ""
 
-    .line 95
+    .line 96
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNoHomeActListStr:Ljava/lang/String;
 
     const-string v1, ""
 
-    .line 97
+    .line 98
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNoBackAndHomeActListStr:Ljava/lang/String;
 
     const-string v1, ""
 
-    .line 99
+    .line 100
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mHotZoneChangeActListStr:Ljava/lang/String;
 
-    .line 117
+    .line 116
     new-instance v1, Lcom/miui/home/recents/RecentsReceiver;
 
     invoke-direct {v1}, Lcom/miui/home/recents/RecentsReceiver;-><init>()V
 
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mRecentsReceiver:Lcom/miui/home/recents/RecentsReceiver;
 
-    .line 366
+    .line 363
     new-instance v1, Lcom/miui/home/recents/BaseRecentsImpl$4;
 
     new-instance v2, Landroid/os/Handler;
@@ -162,14 +162,14 @@
 
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mHideGestureLineListener:Landroid/database/ContentObserver;
 
-    .line 378
+    .line 375
     new-instance v1, Lcom/miui/home/recents/BaseRecentsImpl$5;
 
     invoke-direct {v1, p0}, Lcom/miui/home/recents/BaseRecentsImpl$5;-><init>(Lcom/miui/home/recents/BaseRecentsImpl;)V
 
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mActivityStateObserver:Lcom/miui/home/recents/ActivityObserverLauncher$ActivityObserverCallback;
 
-    .line 390
+    .line 387
     new-instance v1, Lcom/miui/home/recents/BaseRecentsImpl$6;
 
     new-instance v2, Landroid/os/Handler;
@@ -184,7 +184,7 @@
 
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mForceImmersiveNavBarListener:Landroid/database/ContentObserver;
 
-    .line 400
+    .line 397
     new-instance v1, Lcom/miui/home/recents/BaseRecentsImpl$7;
 
     new-instance v2, Landroid/os/Handler;
@@ -199,7 +199,7 @@
 
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mElderlyModeObserver:Landroid/database/ContentObserver;
 
-    .line 515
+    .line 512
     new-instance v1, Lcom/miui/home/recents/BaseRecentsImpl$8;
 
     new-instance v2, Landroid/os/Handler;
@@ -214,7 +214,7 @@
 
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mDriveModeObserver:Landroid/database/ContentObserver;
 
-    .line 522
+    .line 519
     new-instance v1, Lcom/miui/home/recents/BaseRecentsImpl$9;
 
     new-instance v2, Landroid/os/Handler;
@@ -229,24 +229,24 @@
 
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mAppSwitchAnimChangeListener:Landroid/database/ContentObserver;
 
-    .line 538
+    .line 535
     new-instance v1, Lcom/miui/home/recents/BaseRecentsImpl$10;
 
     invoke-direct {v1, p0}, Lcom/miui/home/recents/BaseRecentsImpl$10;-><init>(Lcom/miui/home/recents/BaseRecentsImpl;)V
 
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 577
+    .line 574
     new-instance v1, Lcom/miui/home/recents/BaseRecentsImpl$11;
 
     invoke-direct {v1, p0}, Lcom/miui/home/recents/BaseRecentsImpl$11;-><init>(Lcom/miui/home/recents/BaseRecentsImpl;)V
 
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mFsgReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 588
+    .line 585
     iput-boolean v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mIsStatusBarExpansion:Z
 
-    .line 721
+    .line 718
     new-instance v1, Lcom/miui/home/recents/BaseRecentsImpl$12;
 
     iget-object v2, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mHandler:Landroid/os/Handler;
@@ -255,27 +255,27 @@
 
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mCloudDataObserver:Landroid/database/ContentObserver;
 
-    .line 735
+    .line 732
     new-instance v1, Lcom/miui/home/recents/BaseRecentsImpl$13;
 
     invoke-direct {v1, p0}, Lcom/miui/home/recents/BaseRecentsImpl$13;-><init>(Lcom/miui/home/recents/BaseRecentsImpl;)V
 
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mReadCloudRunnable:Ljava/lang/Runnable;
 
-    .line 890
+    .line 866
     iput v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mSystemUiFlags:I
 
-    .line 908
+    .line 884
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mLastConfiguration:Landroid/content/res/Configuration;
 
-    .line 124
+    .line 122
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
-    .line 125
+    .line 123
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     const-string v1, "window"
@@ -290,7 +290,7 @@
 
     const-string v0, "keyguard"
 
-    .line 126
+    .line 124
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -299,7 +299,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mKM:Landroid/app/KeyguardManager;
 
-    .line 127
+    .line 125
     new-instance v0, Lcom/miui/home/recents/BaseRecentsImpl$H;
 
     const/4 v1, 0x0
@@ -308,57 +308,46 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mHandler:Landroid/os/Handler;
 
-    .line 129
+    .line 127
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->addFsgGestureWindow()V
 
-    .line 130
+    .line 128
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "com.android.systemui.taskmanager.Clear"
 
-    .line 131
+    .line 129
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 132
+    .line 130
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mRecentsReceiver:Lcom/miui/home/recents/RecentsReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 133
-    new-instance v0, Lcom/miui/home/recents/ThumbnailBlurManager;
-
-    iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
-
-    iget-object v2, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mHandler:Landroid/os/Handler;
-
-    invoke-direct {v0, v1, v2}, Lcom/miui/home/recents/ThumbnailBlurManager;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
-
-    iput-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mThumbnailBlurManager:Lcom/miui/home/recents/ThumbnailBlurManager;
-
-    .line 135
+    .line 132
     invoke-static {p1}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->getTaskStackViewLayoutStyle(Landroid/content/Context;)I
 
     move-result v0
 
     invoke-direct {p0, v0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->setTaskStackViewLayoutStyle(ILandroid/content/Context;)V
 
-    .line 137
+    .line 134
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->registerCloudDataObserver()V
 
-    .line 139
+    .line 136
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->registerScreeningModeObserver()V
 
-    .line 140
+    .line 137
     invoke-direct {p0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->initHideGestureLine(Landroid/content/Context;)V
 
-    .line 141
+    .line 138
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->registerSuperSavePowerObserver()V
 
-    .line 142
+    .line 139
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->registerRecentsLayoutStyleObserver()V
 
     return-void
@@ -601,7 +590,7 @@
 .method private addBackStubWindow()V
     .locals 2
 
-    .line 471
+    .line 468
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->BACKGROUND_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v1, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$ZoIb2O5eFfZFslkXbL95t1IswoM;
@@ -616,19 +605,19 @@
 .method private addFsgGestureWindow()V
     .locals 11
 
-    .line 265
+    .line 262
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isHasNavigationBar()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mHasNavigationBar:Z
 
-    .line 267
+    .line 264
     iget-boolean v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mHasNavigationBar:Z
 
     if-eqz v0, :cond_3
 
-    .line 268
+    .line 265
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -641,7 +630,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 270
+    .line 267
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -650,7 +639,7 @@
 
     const-string v1, "force_fsg_nav_bar"
 
-    .line 271
+    .line 268
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -659,10 +648,10 @@
 
     const/4 v3, 0x0
 
-    .line 270
+    .line 267
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 272
+    .line 269
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -671,17 +660,17 @@
 
     const-string v1, "hide_gesture_line"
 
-    .line 273
+    .line 270
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mHideGestureLineListener:Landroid/database/ContentObserver;
 
-    .line 272
+    .line 269
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 274
+    .line 271
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -690,17 +679,17 @@
 
     const-string v1, "drive_mode_drive_mode"
 
-    .line 275
+    .line 272
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mDriveModeObserver:Landroid/database/ContentObserver;
 
-    .line 274
+    .line 271
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 276
+    .line 273
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -709,17 +698,17 @@
 
     const-string v1, "show_gesture_appswitch_feature"
 
-    .line 277
+    .line 274
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mAppSwitchAnimChangeListener:Landroid/database/ContentObserver;
 
-    .line 276
+    .line 273
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 278
+    .line 275
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -728,32 +717,32 @@
 
     const-string v1, "elderly_mode"
 
-    .line 279
+    .line 276
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mElderlyModeObserver:Landroid/database/ContentObserver;
 
-    .line 278
+    .line 275
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 281
+    .line 278
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.USER_SWITCHED"
 
-    .line 282
+    .line 279
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.USER_PRESENT"
 
-    .line 283
+    .line 280
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 284
+    .line 281
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -762,22 +751,22 @@
 
     invoke-virtual {v1, v2, v0, v4, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 287
+    .line 284
     new-instance v8, Landroid/content/IntentFilter;
 
     invoke-direct {v8}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v0, "com.android.systemui.fsgesture"
 
-    .line 288
+    .line 285
     invoke-virtual {v8, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v0, "android.intent.action.USER_SWITCHED"
 
-    .line 289
+    .line 286
     invoke-virtual {v8, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 290
+    .line 287
     iget-object v5, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     iget-object v6, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mFsgReceiver:Landroid/content/BroadcastReceiver;
@@ -792,7 +781,7 @@
 
     invoke-static/range {v5 .. v10}, Lcom/miui/launcher/utils/LauncherUtils;->registerReceiverAsUser(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)V
 
-    .line 292
+    .line 289
     invoke-static {}, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->getInstance()Lcom/miui/home/recents/ActivityObserverLauncherImpl;
 
     move-result-object v0
@@ -801,10 +790,10 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->addCallback(Lcom/miui/home/recents/ActivityObserverLauncher$ActivityObserverCallback;)V
 
-    .line 294
+    .line 291
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->readCloudDataForFsg()V
 
-    .line 296
+    .line 293
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -817,7 +806,7 @@
 
     move-result v0
 
-    .line 297
+    .line 294
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -832,7 +821,7 @@
 
     iput-boolean v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mHideGestureLine:Z
 
-    .line 299
+    .line 296
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -859,7 +848,7 @@
     :goto_0
     iput-boolean v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mDisabledByDriveMode:Z
 
-    .line 300
+    .line 297
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -884,14 +873,14 @@
     :goto_1
     iput-boolean v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mIsInAnotherPro:Z
 
-    .line 301
+    .line 298
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->getDefaultHomePackageName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 302
+    .line 299
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -918,17 +907,17 @@
     :goto_2
     iput-boolean v2, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mIsUseMiuiHomeAsDefaultHome:Z
 
-    .line 303
+    .line 300
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/miui/home/recents/OverviewComponentObserver;->getInstance(Landroid/content/Context;)Lcom/miui/home/recents/OverviewComponentObserver;
 
-    .line 304
+    .line 301
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->updateUseLauncherRecentsAndFsGesture()V
 
     if-eqz v0, :cond_3
 
-    .line 306
+    .line 303
     iget-boolean v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mDisabledByDriveMode:Z
 
     if-nez v0, :cond_3
@@ -945,13 +934,13 @@
 
     const-string v1, "navstubview will be added: addFsgGestureWindow"
 
-    .line 307
+    .line 304
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
+    .line 305
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->createAndAddNavStubView()V
 
-    .line 309
+    .line 306
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->showBackStubWindow()V
 
     :cond_3
@@ -961,7 +950,7 @@
 .method private clearBackStubWindow()V
     .locals 2
 
-    .line 499
+    .line 496
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->BACKGROUND_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v1, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$cCVUnENNDjy5qqj7bZf5088MTNY;
@@ -976,7 +965,7 @@
 .method private createAndAddNavStubView()V
     .locals 2
 
-    .line 323
+    .line 320
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->GESTURE_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v1, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$dd-vXYW4zcjC8-w1GMSZPMaj3CE;
@@ -993,7 +982,7 @@
 
     const/4 v0, 0x0
 
-    .line 783
+    .line 780
     invoke-direct {p0, v0}, Lcom/miui/home/recents/BaseRecentsImpl;->getTopActivity(Z)Landroid/content/ComponentName;
 
     move-result-object v0
@@ -1004,7 +993,7 @@
 .method private getTopActivity(Z)Landroid/content/ComponentName;
     .locals 4
 
-    .line 788
+    .line 785
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->getDisplayCount(Landroid/content/Context;)I
@@ -1017,7 +1006,7 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 789
+    .line 786
     invoke-static {}, Lcom/miui/home/smallwindow/SmallWindowStateHelper;->isInSmallWindowMode()Z
 
     move-result v0
@@ -1026,7 +1015,7 @@
 
     if-nez p1, :cond_0
 
-    .line 790
+    .line 787
     invoke-static {}, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->getInstance()Lcom/miui/home/recents/ActivityObserverLauncherImpl;
 
     move-result-object p1
@@ -1037,7 +1026,7 @@
 
     const-string v0, "RecentsImpl"
 
-    .line 791
+    .line 788
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1062,7 +1051,7 @@
     :goto_0
     if-nez p1, :cond_2
 
-    .line 794
+    .line 791
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/miui/home/recents/RecentsModel;->getInstance(Landroid/content/Context;)Lcom/miui/home/recents/RecentsModel;
@@ -1077,13 +1066,13 @@
 
     return-object v1
 
-    .line 798
+    .line 795
     :cond_1
     iget-object p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
     const-string v0, "RecentsImpl"
 
-    .line 799
+    .line 796
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1107,7 +1096,7 @@
 .method private hideBackStubWindow()V
     .locals 2
 
-    .line 691
+    .line 688
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->BACKGROUND_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v1, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$PjruglwnYqTkXXPpW0tLe_ds2Bc;
@@ -1122,7 +1111,7 @@
 .method private hideNavStubView()V
     .locals 2
 
-    .line 358
+    .line 355
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->GESTURE_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v1, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$H3njI-j_ay7eOyOVNetRbqurkso;
@@ -1137,7 +1126,7 @@
 .method private initGestureStub(I)V
     .locals 1
 
-    .line 481
+    .line 478
     new-instance p1, Lcom/miui/home/recents/GestureStubView;
 
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
@@ -1146,14 +1135,14 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubLeft:Lcom/miui/home/recents/GestureStubView;
 
-    .line 482
+    .line 479
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubLeft:Lcom/miui/home/recents/GestureStubView;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/miui/home/recents/BaseRecentsImpl;->setDefaultProperty(Lcom/miui/home/recents/GestureStubView;I)V
 
-    .line 484
+    .line 481
     new-instance p1, Lcom/miui/home/recents/GestureStubView;
 
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
@@ -1162,14 +1151,14 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubRight:Lcom/miui/home/recents/GestureStubView;
 
-    .line 485
+    .line 482
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubRight:Lcom/miui/home/recents/GestureStubView;
 
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lcom/miui/home/recents/BaseRecentsImpl;->setDefaultProperty(Lcom/miui/home/recents/GestureStubView;I)V
 
-    .line 486
+    .line 483
     invoke-virtual {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->adaptToTopActivity()V
 
     return-void
@@ -1178,7 +1167,7 @@
 .method private initHideGestureLine(Landroid/content/Context;)V
     .locals 3
 
-    .line 209
+    .line 206
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -1193,7 +1182,7 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 210
+    .line 207
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
@@ -1211,7 +1200,7 @@
 .method private isAllowUpdateFsgStateFromKeyguard(Ljava/lang/String;)Z
     .locals 2
 
-    .line 661
+    .line 658
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1225,7 +1214,7 @@
     :cond_0
     const-string v0, "com.mfashiongallery.emag.morning.MorningGreetActivity:com.android.deskclock.activity.AlarmAlertFullScreenActivity"
 
-    .line 664
+    .line 661
     invoke-virtual {v0, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -1238,7 +1227,7 @@
 .method private isCloudProviderExist()Z
     .locals 2
 
-    .line 204
+    .line 201
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1247,7 +1236,7 @@
 
     sget-object v1, Lcom/miui/launcher/utils/MiuiSettingsUtils;->URI_CLOUD_ALL_DATA_NOTIFY:Landroid/net/Uri;
 
-    .line 205
+    .line 202
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->acquireUnstableContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
 
     move-result-object v0
@@ -1268,7 +1257,7 @@
 .method private isUseLauncherRecentsAndFsGesture()Z
     .locals 1
 
-    .line 315
+    .line 312
     iget-boolean v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mIsUseMiuiHomeAsDefaultHome:Z
 
     return v0
@@ -1277,23 +1266,23 @@
 .method public static synthetic lambda$addBackStubWindow$6(Lcom/miui/home/recents/BaseRecentsImpl;)V
     .locals 1
 
-    .line 472
+    .line 469
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubLeft:Lcom/miui/home/recents/GestureStubView;
 
     if-nez v0, :cond_0
 
     const/4 v0, -0x1
 
-    .line 473
+    .line 470
     invoke-direct {p0, v0}, Lcom/miui/home/recents/BaseRecentsImpl;->initGestureStub(I)V
 
-    .line 475
+    .line 472
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubLeft:Lcom/miui/home/recents/GestureStubView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/GestureStubView;->showGestureStub()V
 
-    .line 476
+    .line 473
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubRight:Lcom/miui/home/recents/GestureStubView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/GestureStubView;->showGestureStub()V
@@ -1304,7 +1293,7 @@
 .method public static synthetic lambda$clearBackStubWindow$7(Lcom/miui/home/recents/BaseRecentsImpl;)V
     .locals 2
 
-    .line 501
+    .line 498
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubLeft:Lcom/miui/home/recents/GestureStubView;
 
@@ -1312,26 +1301,26 @@
 
     if-eqz v0, :cond_0
 
-    .line 502
+    .line 499
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubLeft:Lcom/miui/home/recents/GestureStubView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/GestureStubView;->clearGestureStub()V
 
-    .line 503
+    .line 500
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubLeft:Lcom/miui/home/recents/GestureStubView;
 
-    .line 505
+    .line 502
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubRight:Lcom/miui/home/recents/GestureStubView;
 
     if-eqz v0, :cond_1
 
-    .line 506
+    .line 503
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubRight:Lcom/miui/home/recents/GestureStubView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/GestureStubView;->clearGestureStub()V
 
-    .line 507
+    .line 504
     iput-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubRight:Lcom/miui/home/recents/GestureStubView;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1341,7 +1330,7 @@
     :catch_0
     move-exception v0
 
-    .line 510
+    .line 507
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1
@@ -1352,7 +1341,7 @@
 .method public static synthetic lambda$createAndAddNavStubView$2(Lcom/miui/home/recents/BaseRecentsImpl;)V
     .locals 3
 
-    .line 324
+    .line 321
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     if-nez v0, :cond_1
@@ -1361,10 +1350,10 @@
 
     const-string v1, "createAndAddNavStubView"
 
-    .line 325
+    .line 322
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 326
+    .line 323
     new-instance v0, Lcom/miui/home/recents/NavStubView;
 
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
@@ -1373,21 +1362,21 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
-    .line 327
+    .line 324
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     iget v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mSystemUiFlags:I
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/NavStubView;->onSystemUiFlagsChanged(I)V
 
-    .line 328
+    .line 325
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 329
+    .line 326
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
@@ -1396,7 +1385,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/NavStubView;->setLauncher(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 331
+    .line 328
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
@@ -1404,12 +1393,12 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/NavStubView;->setHideGestureLine(Z)V
 
-    .line 332
+    .line 329
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
-    .line 333
+    .line 330
     invoke-virtual {v1}, Lcom/miui/home/recents/NavStubView;->getHotSpaceHeight()I
 
     move-result v2
@@ -1418,7 +1407,7 @@
 
     move-result-object v2
 
-    .line 332
+    .line 329
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_1
@@ -1430,7 +1419,7 @@
 
     const-string v0, "RecentsImpl"
 
-    .line 705
+    .line 702
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1447,21 +1436,21 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 706
+    .line 703
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubLeft:Lcom/miui/home/recents/GestureStubView;
 
     if-eqz v0, :cond_0
 
-    .line 707
+    .line 704
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/GestureStubView;->disableTouch(Z)V
 
-    .line 709
+    .line 706
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubRight:Lcom/miui/home/recents/GestureStubView;
 
     if-eqz v0, :cond_1
 
-    .line 710
+    .line 707
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/GestureStubView;->disableTouch(Z)V
 
     :cond_1
@@ -1475,24 +1464,24 @@
 
     const-string v1, "hideBackStubWindow"
 
-    .line 692
+    .line 689
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 693
+    .line 690
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubLeft:Lcom/miui/home/recents/GestureStubView;
 
     if-eqz v0, :cond_0
 
-    .line 694
+    .line 691
     invoke-virtual {v0}, Lcom/miui/home/recents/GestureStubView;->hideGestureStubDelay()V
 
-    .line 697
+    .line 694
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubRight:Lcom/miui/home/recents/GestureStubView;
 
     if-eqz v0, :cond_1
 
-    .line 698
+    .line 695
     invoke-virtual {v0}, Lcom/miui/home/recents/GestureStubView;->hideGestureStubDelay()V
 
     :cond_1
@@ -1502,7 +1491,7 @@
 .method public static synthetic lambda$hideNavStubView$5(Lcom/miui/home/recents/BaseRecentsImpl;)V
     .locals 2
 
-    .line 359
+    .line 356
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     if-eqz v0, :cond_0
@@ -1511,10 +1500,10 @@
 
     const-string v1, "hideNavStubView"
 
-    .line 360
+    .line 357
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
+    .line 358
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     const/16 v1, 0x8
@@ -1528,15 +1517,15 @@
 .method public static synthetic lambda$onSystemUiFlagsChanged$11(Lcom/miui/home/recents/BaseRecentsImpl;I)V
     .locals 1
 
-    .line 893
+    .line 869
     iput p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mSystemUiFlags:I
 
-    .line 894
+    .line 870
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     if-eqz v0, :cond_0
 
-    .line 895
+    .line 871
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/NavStubView;->onSystemUiFlagsChanged(I)V
 
     :cond_0
@@ -1546,7 +1535,7 @@
 .method public static synthetic lambda$registerCloudDataObserver$0(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 147
+    .line 144
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->isCloudProviderExist()Z
 
     move-result p1
@@ -1561,14 +1550,14 @@
 .method public static synthetic lambda$registerCloudDataObserver$1(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/Boolean;)V
     .locals 3
 
-    .line 149
+    .line 146
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 150
+    .line 147
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1590,7 +1579,7 @@
 .method public static synthetic lambda$removeNavStubView$3(Lcom/miui/home/recents/BaseRecentsImpl;)V
     .locals 2
 
-    .line 340
+    .line 337
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     if-eqz v0, :cond_0
@@ -1599,10 +1588,10 @@
 
     const-string v1, "removeNavStubView"
 
-    .line 341
+    .line 338
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
+    .line 339
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mWindowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
@@ -1611,7 +1600,7 @@
 
     const/4 v0, 0x0
 
-    .line 343
+    .line 340
     iput-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     :cond_0
@@ -1621,12 +1610,12 @@
 .method public static synthetic lambda$requestApplyInsetsOfNavStubView$12(Lcom/miui/home/recents/BaseRecentsImpl;)V
     .locals 1
 
-    .line 902
+    .line 878
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     if-eqz v0, :cond_0
 
-    .line 903
+    .line 879
     invoke-virtual {v0}, Lcom/miui/home/recents/NavStubView;->requestApplyInsets()V
 
     :cond_0
@@ -1638,7 +1627,7 @@
 
     const-string v0, "RecentsImpl"
 
-    .line 673
+    .line 670
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1665,7 +1654,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 675
+    .line 672
     iget-boolean v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mHasNavigationBar:Z
 
     if-eqz v0, :cond_2
@@ -1674,7 +1663,7 @@
 
     if-nez v0, :cond_2
 
-    .line 676
+    .line 673
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1687,32 +1676,32 @@
 
     move-result v0
 
-    .line 677
+    .line 674
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubLeft:Lcom/miui/home/recents/GestureStubView;
 
     if-nez v1, :cond_0
 
     if-eqz v0, :cond_0
 
-    .line 678
+    .line 675
     invoke-direct {p0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->initGestureStub(I)V
 
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 681
+    .line 678
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubLeft:Lcom/miui/home/recents/GestureStubView;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/GestureStubView;->showGestureStub()V
 
-    .line 682
+    .line 679
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mGestureStubRight:Lcom/miui/home/recents/GestureStubView;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/GestureStubView;->showGestureStub()V
 
     goto :goto_0
 
-    .line 684
+    .line 681
     :cond_1
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->hideBackStubWindow()V
 
@@ -1724,7 +1713,7 @@
 .method public static synthetic lambda$showNavStubView$4(Lcom/miui/home/recents/BaseRecentsImpl;)V
     .locals 2
 
-    .line 350
+    .line 347
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     if-eqz v0, :cond_0
@@ -1733,10 +1722,10 @@
 
     const-string v1, "showNavStubView"
 
-    .line 351
+    .line 348
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
+    .line 349
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     const/4 v1, 0x0
@@ -1750,7 +1739,7 @@
 .method private readCloudDataForFsg()V
     .locals 2
 
-    .line 731
+    .line 728
     invoke-static {}, Lcom/miui/home/launcher/common/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1759,7 +1748,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 732
+    .line 729
     invoke-static {}, Lcom/miui/home/launcher/common/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -1774,7 +1763,7 @@
 .method private registerCloudDataObserver()V
     .locals 3
 
-    .line 146
+    .line 143
     new-instance v0, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$fDPNA50hhg1TcKAdq3chg7QH6YY;
 
     invoke-direct {v0, p0}, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$fDPNA50hhg1TcKAdq3chg7QH6YY;-><init>(Lcom/miui/home/recents/BaseRecentsImpl;)V
@@ -1793,12 +1782,12 @@
 .method private registerRecentsLayoutStyleObserver()V
     .locals 4
 
-    .line 157
+    .line 154
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mLayoutStyleObserver:Landroid/database/ContentObserver;
 
     if-nez v0, :cond_0
 
-    .line 158
+    .line 155
     new-instance v0, Lcom/miui/home/recents/BaseRecentsImpl$1;
 
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mHandler:Landroid/os/Handler;
@@ -1807,7 +1796,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mLayoutStyleObserver:Landroid/database/ContentObserver;
 
-    .line 164
+    .line 161
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1816,7 +1805,7 @@
 
     const-string v1, "task_stack_view_layout_style"
 
-    .line 165
+    .line 162
     invoke-static {v1}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -1825,7 +1814,7 @@
 
     iget-object v3, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mLayoutStyleObserver:Landroid/database/ContentObserver;
 
-    .line 164
+    .line 161
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     :cond_0
@@ -1835,12 +1824,12 @@
 .method private registerScreeningModeObserver()V
     .locals 4
 
-    .line 218
+    .line 215
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mCastModeObserver:Landroid/database/ContentObserver;
 
     if-nez v0, :cond_0
 
-    .line 219
+    .line 216
     new-instance v0, Lcom/miui/home/recents/BaseRecentsImpl$3;
 
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mHandler:Landroid/os/Handler;
@@ -1849,7 +1838,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mCastModeObserver:Landroid/database/ContentObserver;
 
-    .line 249
+    .line 246
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
@@ -1869,7 +1858,7 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 251
+    .line 248
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mCastModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v3}, Landroid/database/ContentObserver;->onChange(Z)V
@@ -1880,12 +1869,12 @@
 .method private registerSuperSavePowerObserver()V
     .locals 4
 
-    .line 187
+    .line 184
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mSuperSavePowerObserver:Landroid/database/ContentObserver;
 
     if-nez v0, :cond_0
 
-    .line 188
+    .line 185
     new-instance v0, Lcom/miui/home/recents/BaseRecentsImpl$2;
 
     new-instance v1, Landroid/os/Handler;
@@ -1900,7 +1889,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mSuperSavePowerObserver:Landroid/database/ContentObserver;
 
-    .line 197
+    .line 194
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
@@ -1910,7 +1899,7 @@
 
     const-string v1, "power_supersave_mode_open"
 
-    .line 198
+    .line 195
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -1919,10 +1908,10 @@
 
     const/4 v3, 0x0
 
-    .line 197
+    .line 194
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 200
+    .line 197
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mSuperSavePowerObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v3}, Landroid/database/ContentObserver;->onChange(Z)V
@@ -1933,7 +1922,7 @@
 .method private removeNavStubView()V
     .locals 2
 
-    .line 339
+    .line 336
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->GESTURE_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v1, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$Axbn503pPWhOfHfOytu52o1swwU;
@@ -1948,7 +1937,7 @@
 .method private setDefaultProperty(Lcom/miui/home/recents/GestureStubView;I)V
     .locals 3
 
-    .line 490
+    .line 487
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1972,16 +1961,16 @@
     :cond_0
     xor-int/lit8 v0, v2, 0x1
 
-    .line 492
+    .line 489
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/GestureStubView;->disableQuickSwitch(Z)V
 
-    .line 493
+    .line 490
     invoke-virtual {p1, v1}, Lcom/miui/home/recents/GestureStubView;->enableGestureBackAnimation(Z)V
 
-    .line 494
+    .line 491
     invoke-virtual {p1, p2}, Lcom/miui/home/recents/GestureStubView;->setGestureStubPosition(I)V
 
-    .line 495
+    .line 492
     invoke-virtual {p1}, Lcom/miui/home/recents/GestureStubView;->adaptAndRender()V
 
     return-void
@@ -1990,7 +1979,7 @@
 .method private setTaskStackViewLayoutStyle(ILandroid/content/Context;)V
     .locals 1
 
-    .line 171
+    .line 168
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mTaskStackViewLayoutStyle:Lcom/miui/home/recents/TaskStackViewLayoutStyle;
 
     if-eqz v0, :cond_0
@@ -2001,7 +1990,7 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 172
+    .line 169
     :cond_0
     invoke-static {p1, p2}, Lcom/miui/home/recents/TaskStackViewLayoutStyle;->create(ILandroid/content/Context;)Lcom/miui/home/recents/TaskStackViewLayoutStyle;
 
@@ -2011,7 +2000,7 @@
 
     const-string p1, "RecentsImpl"
 
-    .line 173
+    .line 170
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2038,7 +2027,7 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
+    .line 171
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -2058,7 +2047,7 @@
 
     const/4 v0, -0x1
 
-    .line 668
+    .line 665
     invoke-direct {p0, v0}, Lcom/miui/home/recents/BaseRecentsImpl;->showBackStubWindow(I)V
 
     return-void
@@ -2067,7 +2056,7 @@
 .method private showBackStubWindow(I)V
     .locals 2
 
-    .line 672
+    .line 669
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->BACKGROUND_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v1, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$5HMhFp3kwocquWhIVEJyOtgVW8Y;
@@ -2082,7 +2071,7 @@
 .method private showNavStubView()V
     .locals 2
 
-    .line 349
+    .line 346
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->GESTURE_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v1, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$BHp_tKhsx8HSVty1VPDCGHASdYY;
@@ -2097,14 +2086,14 @@
 .method private updateFsgWindowState()V
     .locals 4
 
-    .line 442
+    .line 439
     iget-boolean v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mHasNavigationBar:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 445
+    .line 442
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
@@ -2120,7 +2109,7 @@
 
     const-string v1, "RecentsImpl"
 
-    .line 446
+    .line 443
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2155,7 +2144,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 449
+    .line 446
     iget-boolean v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mDisabledByDriveMode:Z
 
     if-nez v0, :cond_2
@@ -2164,7 +2153,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 451
+    .line 448
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
@@ -2174,13 +2163,13 @@
 
     const-string v1, "navstubview will be added: updateFsgWindowState"
 
-    .line 452
+    .line 449
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 453
+    .line 450
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->createAndAddNavStubView()V
 
-    .line 455
+    .line 452
     :cond_1
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->addBackStubWindow()V
     :try_end_0
@@ -2191,7 +2180,7 @@
     :catch_0
     move-exception v0
 
-    .line 457
+    .line 454
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -2202,13 +2191,13 @@
 
     const-string v1, "navstubview will be removed: updateFsgWindowState"
 
-    .line 461
+    .line 458
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 462
+    .line 459
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->removeNavStubView()V
 
-    .line 463
+    .line 460
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->clearBackStubWindow()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
@@ -2218,7 +2207,7 @@
     :catch_1
     move-exception v0
 
-    .line 465
+    .line 462
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0
@@ -2230,14 +2219,14 @@
 
     const-string v0, "typefrom_status_bar_expansion"
 
-    .line 591
+    .line 588
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 592
+    .line 589
     iput-boolean p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mIsStatusBarExpansion:Z
 
     :cond_0
@@ -2247,7 +2236,7 @@
 .method private updateUseLauncherRecentsAndFsGesture()V
     .locals 2
 
-    .line 319
+    .line 316
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->isUseLauncherRecentsAndFsGesture()Z
@@ -2266,7 +2255,7 @@
 
     const/4 v0, 0x0
 
-    .line 771
+    .line 768
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/BaseRecentsImpl;->adaptToTopActivity(Z)V
 
     return-void
@@ -2275,14 +2264,14 @@
 .method public adaptToTopActivity(Z)V
     .locals 3
 
-    .line 775
+    .line 772
     invoke-direct {p0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->getTopActivity(Z)Landroid/content/ComponentName;
 
     move-result-object p1
 
     const-string v0, "RecentsImpl"
 
-    .line 776
+    .line 773
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2301,7 +2290,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 778
+    .line 775
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object p1
@@ -2315,7 +2304,7 @@
 .method public disableBackStubWindow(Z)V
     .locals 2
 
-    .line 704
+    .line 701
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->BACKGROUND_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v1, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$E2--ewl5JQ1mk1oB1Nx1VDruiIA;
@@ -2330,7 +2319,7 @@
 .method public getNavStubView()Lcom/miui/home/recents/NavStubView;
     .locals 1
 
-    .line 261
+    .line 258
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     return-object v0
@@ -2339,7 +2328,7 @@
 .method public getTaskStackViewLayoutStyle()Lcom/miui/home/recents/TaskStackViewLayoutStyle;
     .locals 1
 
-    .line 179
+    .line 176
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mTaskStackViewLayoutStyle:Lcom/miui/home/recents/TaskStackViewLayoutStyle;
 
     return-object v0
@@ -2348,7 +2337,7 @@
 .method public isTaskStackViewLayoutStyleVertical()Z
     .locals 1
 
-    .line 183
+    .line 180
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mTaskStackViewLayoutStyle:Lcom/miui/home/recents/TaskStackViewLayoutStyle;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/TaskStackViewLayoutStyle;->getStyleValue()I
@@ -2379,12 +2368,12 @@
         }
     .end annotation
 
-    .line 716
+    .line 713
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     if-eqz v0, :cond_0
 
-    .line 717
+    .line 714
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/NavStubView;->modifyTransformVisible(Ljava/util/ArrayList;)V
 
     :cond_0
@@ -2394,7 +2383,7 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 3
 
-    .line 910
+    .line 886
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mLastConfiguration:Landroid/content/res/Configuration;
 
     invoke-virtual {v0, p1}, Landroid/content/res/Configuration;->updateFrom(Landroid/content/res/Configuration;)I
@@ -2433,7 +2422,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 915
+    .line 891
     :cond_2
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
@@ -2449,13 +2438,13 @@
 
     if-eqz v0, :cond_3
 
-    .line 918
+    .line 894
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->onThemeChanged()V
 
     :cond_3
     if-eqz v1, :cond_4
 
-    .line 921
+    .line 897
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->onLanguageChange()V
 
     :cond_4
@@ -2469,7 +2458,7 @@
 
     const/4 p1, 0x1
 
-    .line 766
+    .line 763
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->adaptToTopActivity(Z)V
 
     :cond_0
@@ -2481,7 +2470,7 @@
 
     const-string v0, "RecentsImpl"
 
-    .line 805
+    .line 802
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2506,10 +2495,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 807
+    .line 804
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mLastResumedClassName:Ljava/lang/String;
 
-    .line 808
+    .line 805
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     if-eqz v0, :cond_8
@@ -2528,7 +2517,7 @@
 
     goto :goto_2
 
-    .line 813
+    .line 810
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mLocalCtrlActs:[Ljava/lang/String;
 
@@ -2543,7 +2532,7 @@
 
     aget-object v4, v0, v3
 
-    .line 814
+    .line 811
     invoke-static {v4, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -2560,27 +2549,27 @@
     :cond_2
     const-string v0, "com.miui.home.launcher.Launcher:com.miui.personalassistant.fake.FakeStartActivity:com.miui.personalassistant.fake.FakeEndActivity"
 
-    .line 819
+    .line 816
     invoke-virtual {v0, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 820
+    .line 817
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    .line 822
+    .line 819
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->notifyBackGestureStatus()V
 
     :cond_3
     return-void
 
-    .line 827
+    .line 824
     :cond_4
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNoBackActListStr:Ljava/lang/String;
 
@@ -2590,15 +2579,15 @@
 
     if-eqz v0, :cond_5
 
-    .line 828
+    .line 825
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->hideBackStubWindow()V
 
-    .line 829
+    .line 826
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->showNavStubView()V
 
     goto :goto_1
 
-    .line 830
+    .line 827
     :cond_5
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNoHomeActListStr:Ljava/lang/String;
 
@@ -2608,18 +2597,18 @@
 
     if-eqz v0, :cond_6
 
-    .line 831
+    .line 828
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->hideNavStubView()V
 
-    .line 832
+    .line 829
     invoke-virtual {p0, v2}, Lcom/miui/home/recents/BaseRecentsImpl;->disableBackStubWindow(Z)V
 
-    .line 833
+    .line 830
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->showBackStubWindow()V
 
     goto :goto_1
 
-    .line 834
+    .line 831
     :cond_6
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNoBackAndHomeActListStr:Ljava/lang/String;
 
@@ -2629,28 +2618,28 @@
 
     if-eqz p1, :cond_7
 
-    .line 835
+    .line 832
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->hideNavStubView()V
 
-    .line 836
+    .line 833
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->hideBackStubWindow()V
 
     goto :goto_1
 
-    .line 838
+    .line 835
     :cond_7
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->showNavStubView()V
 
-    .line 839
+    .line 836
     invoke-virtual {p0, v2}, Lcom/miui/home/recents/BaseRecentsImpl;->disableBackStubWindow(Z)V
 
-    .line 840
+    .line 837
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->showBackStubWindow()V
 
     :goto_1
     const-string p1, "lithium"
 
-    .line 843
+    .line 840
     sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2665,7 +2654,7 @@
 .method public onSystemUiFlagsChanged(I)V
     .locals 2
 
-    .line 892
+    .line 868
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->GESTURE_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v1, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$NJiQwHFShlCduXMBxxG4S4j4Q_g;
@@ -2680,7 +2669,7 @@
 .method public requestApplyInsetsOfNavStubView()V
     .locals 2
 
-    .line 901
+    .line 877
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->GESTURE_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v1, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$FlVTKCMvTDvLGH4yqDhI4937XeE;
@@ -2697,7 +2686,7 @@
 
     const-string v0, "RecentsImpl"
 
-    .line 432
+    .line 429
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2722,18 +2711,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 434
+    .line 431
     iget-boolean v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mIsUseMiuiHomeAsDefaultHome:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 435
+    .line 432
     iput-boolean p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mIsUseMiuiHomeAsDefaultHome:Z
 
-    .line 436
+    .line 433
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->updateUseLauncherRecentsAndFsGesture()V
 
-    .line 437
+    .line 434
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->updateFsgWindowState()V
 
     :cond_0
@@ -2743,12 +2732,12 @@
 .method public setLauncher(Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 255
+    .line 252
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     if-eqz v0, :cond_0
 
-    .line 256
+    .line 253
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/NavStubView;->setLauncher(Lcom/miui/home/launcher/Launcher;)V
 
     :cond_0
@@ -2758,7 +2747,7 @@
 .method public updateFsgWindowVisibilityState(ZLjava/lang/String;)V
     .locals 4
 
-    .line 597
+    .line 594
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2773,7 +2762,7 @@
 
     const-string v1, "RecentsImpl"
 
-    .line 598
+    .line 595
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2818,7 +2807,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 603
+    .line 600
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
     if-eqz v1, :cond_7
@@ -2834,7 +2823,7 @@
     :cond_0
     const-string v0, "typefrom_home"
 
-    .line 607
+    .line 604
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2847,7 +2836,7 @@
 
     return-void
 
-    .line 611
+    .line 608
     :cond_1
     invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/BaseRecentsImpl;->updateStatusBarExpansion(ZLjava/lang/String;)V
 
@@ -2855,7 +2844,7 @@
 
     const/4 p1, -0x1
 
-    .line 615
+    .line 612
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -2957,30 +2946,30 @@
     :goto_0
     packed-switch p1, :pswitch_data_0
 
-    .line 637
+    .line 634
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->showNavStubView()V
 
-    .line 638
+    .line 635
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->showBackStubWindow()V
 
     goto :goto_1
 
-    .line 633
+    .line 630
     :pswitch_0
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->hideBackStubWindow()V
 
     goto :goto_1
 
-    .line 629
+    .line 626
     :pswitch_1
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->showBackStubWindow()V
 
-    .line 630
+    .line 627
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->hideNavStubView()V
 
     goto :goto_1
 
-    .line 623
+    .line 620
     :pswitch_2
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mKM:Landroid/app/KeyguardManager;
 
@@ -2990,19 +2979,19 @@
 
     if-nez p1, :cond_6
 
-    .line 624
+    .line 621
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->hideNavStubView()V
 
-    .line 625
+    .line 622
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->showBackStubWindow()V
 
     goto :goto_1
 
-    .line 618
+    .line 615
     :pswitch_3
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->hideNavStubView()V
 
-    .line 619
+    .line 616
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->hideBackStubWindow()V
 
     goto :goto_1
@@ -3010,7 +2999,7 @@
     :cond_3
     const-string p1, "typefrom_keyguard"
 
-    .line 642
+    .line 639
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -3027,17 +3016,17 @@
 
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl;->mLastResumedClassName:Ljava/lang/String;
 
-    .line 643
+    .line 640
     invoke-direct {p0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->isAllowUpdateFsgStateFromKeyguard(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 644
+    .line 641
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->showNavStubView()V
 
-    .line 645
+    .line 642
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->showBackStubWindow()V
 
     goto :goto_1
@@ -3045,14 +3034,14 @@
     :cond_4
     const-string p1, "typefrom_home"
 
-    .line 646
+    .line 643
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_5
 
-    .line 647
+    .line 644
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->getTopActivity()Landroid/content/ComponentName;
 
     move-result-object p1
@@ -3061,7 +3050,7 @@
 
     const-string p2, "com.miui.home.launcher.Launcher:com.miui.personalassistant.fake.FakeStartActivity:com.miui.personalassistant.fake.FakeEndActivity"
 
-    .line 648
+    .line 645
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object p1
@@ -3072,15 +3061,15 @@
 
     if-eqz p1, :cond_6
 
-    .line 649
+    .line 646
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->showNavStubView()V
 
-    .line 650
+    .line 647
     invoke-direct {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->hideBackStubWindow()V
 
     goto :goto_1
 
-    .line 653
+    .line 650
     :cond_5
     invoke-virtual {p0}, Lcom/miui/home/recents/BaseRecentsImpl;->adaptToTopActivity()V
 

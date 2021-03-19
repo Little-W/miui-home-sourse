@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 3575
+    .line 3581
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$ScrollingClickGestureListener;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/Workspace$1;)V
     .locals 0
 
-    .line 3575
+    .line 3581
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Workspace$ScrollingClickGestureListener;-><init>(Lcom/miui/home/launcher/Workspace;)V
 
     return-void
@@ -44,7 +44,7 @@
 .method public onSingleTapUp(Landroid/view/MotionEvent;)Z
     .locals 8
 
-    .line 3578
+    .line 3584
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$ScrollingClickGestureListener;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getTouchState()I
@@ -57,7 +57,7 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 3579
+    .line 3585
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$ScrollingClickGestureListener;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getCurrentCellLayout()Lcom/miui/home/launcher/CellLayout;
@@ -66,14 +66,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 3580
+    .line 3586
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result v2
 
     if-lez v2, :cond_1
 
-    .line 3581
+    .line 3587
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
     move-result v2
@@ -83,21 +83,21 @@
     :goto_0
     if-ge v3, v2, :cond_1
 
-    .line 3583
+    .line 3589
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
     if-eqz v4, :cond_0
 
-    .line 3584
+    .line 3590
     invoke-virtual {v4}, Landroid/view/View;->isClickable()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 3585
+    .line 3591
     iget-object v5, p0, Lcom/miui/home/launcher/Workspace$ScrollingClickGestureListener;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {v5}, Lcom/miui/home/launcher/Workspace;->access$2000(Lcom/miui/home/launcher/Workspace;)Landroid/graphics/Rect;
@@ -106,7 +106,7 @@
 
     invoke-virtual {v4, v5}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
-    .line 3586
+    .line 3592
     iget-object v5, p0, Lcom/miui/home/launcher/Workspace$ScrollingClickGestureListener;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {v5}, Lcom/miui/home/launcher/Workspace;->access$2000(Lcom/miui/home/launcher/Workspace;)Landroid/graphics/Rect;
@@ -131,7 +131,7 @@
 
     if-eqz v5, :cond_0
 
-    .line 3587
+    .line 3593
     invoke-virtual {v4}, Landroid/view/View;->performClick()Z
 
     goto :goto_1

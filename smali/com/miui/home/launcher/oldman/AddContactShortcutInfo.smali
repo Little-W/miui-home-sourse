@@ -26,7 +26,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/oldman/AddContactShortcutInfo;->mIntent:Landroid/content/Intent;
 
-    const v0, 0x7f100173
+    const v0, 0x7f100174
 
     .line 17
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;

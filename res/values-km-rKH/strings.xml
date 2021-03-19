@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">លុបចោលប្រភេទនេះឬ?</string>
     <string name="delete_screen">លុបអេក្រង់ចោល​</string>
     <string name="delete_wallpaper_message">លុបរូបភាពសម្រាប់ផ្ទៃអក្រង់ចំនួន %1$dចោល​?</string>
+    <string name="deleted_system_applications">កម្មវិធីប្រព័ន្ធដែលបានលុបចេញ</string>
     <string name="deselect_all">លែង​ជ្រើសរើស​ទាំងអស់</string>
     <string name="disable_wallpaper_scroll">បិទការបង្វែរផ្នែកចំហៀង</string>
     <string name="download_action">ទាញ​យក</string>
@@ -394,7 +395,7 @@
     <string name="navigation_type_full_screen">កាយវិការ</string>
     <string name="navigation_type_title">ការរុករកប្រព័ន្ធ</string>
     <string name="navigation_type_virtual_key">ប៊ូតុង</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">មិនអាចតភ្ជាប់បណ្តាញបាន។ សូមព្យាយាមម្តងទៀត។</string>
     <string name="no_detail_page">គ្មាន​ទំព័រ​​អំពីព័ត៌មានលម្អិត</string>
     <string name="no_space_toast">គ្មានទំហំគ្រប់គ្រាន់</string>
     <string name="no_space_toast_when_click_widget">មិនមានទំហំគ្រប់គ្រាន់នៅលើទំព័រនេះទេ។ សូមព្យាយាមអូសធាតុនេះទៅទំព័រផ្សេង។</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">កម្មវិធីដែលបានជ្រើសរើសដែលមានលក្ខណៈពិសេសនៃប្រព័ន្ធសំខាន់ៗ។ អ្នកអាចយកចេញបានតែផ្លូវកាត់អេក្រង់ដើមរបស់ពួកវាប៉ុណ្ណោះ។</string>
     <string name="remove_dialog_title_format">យក \"%s\" ចេញពីអេក្រង់ដើមឬ?</string>
     <string name="remove_invalidate_gadget_tips">ធាតុក្រាហ្វិកមួយដែលអ្នកប្រើមិនអាចប្រើបានទៀតទេ។ អ្នកអាចបន្ថែមធាតុក្រាហ្វិកមួយផ្សេងទៀតបាន។</string>
+    <string name="remove_sys_app_content">អ្នកនឹងអាចបន្ថែមផ្លូវកាត់អេក្រង់ដើមម្តងទៀតនៅក្នុង សំណុំកំណត់ > កម្មវិធី > គ្រប់គ្រងផ្លូវកាត់អេក្រង់ដើម។ យកចេញឥឡូវឬ?</string>
+    <string name="remove_sys_app_title">យកផ្លូវកាត់អេក្រង់ដើមចេញឬ?</string>
     <string name="reset_cate_tip_content">បើអ្នកបន្តទៅមុខទៀត លំនាំដើមក្រុមកម្មវិធីនឹងស្តារឡើងវិញ។ នៅតែបន្តឬ?</string>
     <string name="reset_cate_tip_title">ស្តារក្រុមលំនាំដើមឡើងវិញ</string>
     <string name="reset_description_first_time">អ្នកអាចស្តារប្លង់ពី %1$s ក្នុងរយៈពេល 2 ម៉ោង</string>
@@ -497,7 +500,7 @@
     <string name="reset_scene_prompt">​អេក្រង់​នឹងប្ដូរ​កំណត់ទៅ​ជា​ប្លង់​តាម​លំនាំដើម។</string>
     <string name="reset_title">ស្ដារឡើងវិញ</string>
     <string name="restore_icon_successful">បានបន្ថែមដោយ​ជោគជ័យ</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">រុស៊ី</string>
     <string name="screen_cells_config_title">ប្លង់​​អេក្រង់ដើម</string>
     <string name="screen_locked_toast">មាន​ការចាក់សោ​ប្លង់​​អេក្រង់ដើម.</string>
     <string name="screen_number">%d អេក្រង់</string>
@@ -506,7 +509,7 @@
     <string name="select_all">ជ្រើសរើសទាំងអស់</string>
     <string name="select_frame">ស៊ុម</string>
     <string name="select_photo">រូបថត</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">កំហុសម៉ាស៊ីនមេបានកើតឡើង។ សូមរង់ចាំពីរបីនាទី ហើយព្យាយាមម្តងទៀត។</string>
     <string name="setting_wallpaper_tip">សង្កត់ ឬ​វាស​ម្រាមដៃ​ដើម្បី​កែតម្រូវ</string>
     <string name="settings">សំណុំ​កំណត់</string>
     <string name="settings_shortcut">សំណុំ​កំណត់</string>

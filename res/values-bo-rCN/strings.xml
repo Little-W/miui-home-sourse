@@ -189,6 +189,7 @@
     <string name="delete_category_dialog_title">ཚན་པ་དེ་སུབ་རྒྱུ་གཏན་འཁེལ་ཡིན་ནམ།</string>
     <string name="delete_screen">བརྙན་ཤེལ་སུབ་པ།</string>
     <string name="delete_wallpaper_message">བདམས་པའི་རྩིག་ཤོག་སུབ་རྒྱུ་གཏན་འཁེལ་ཡིན་ནམ།</string>
+    <string name="deleted_system_applications">སུབ་ཟིན་པའི་བརྒྱུད་ཁོངས་ཉེར་སྤྱོད།</string>
     <string name="deselect_all">ཡོངས་མི་འདེམ།</string>
     <string name="disable_wallpaper_scroll">རྩིག་ཤོག་འཁོར་སྐྱོད་དཔེ་ཚུལ་ཁ་རྒྱག</string>
     <string name="download_action">ཕབ་ལེན།</string>
@@ -484,6 +485,8 @@
     <string name="remove_dialog_message">ཉེར་སྤྱོད་ལ་བརྒྱུད་ཁོངས་ཀྱི་དགོས་ངེས་བྱེད་ནུས་དང་། ཅོག་ངོས་ཀྱི་པར་རིས་སྤོ་བ་ཁོ་ན་རྒྱབ་སྐྱོར་བྱེད།</string>
     <string name="remove_dialog_title_format">\"%s\"སྤོ་སྒུལ།</string>
     <string name="remove_invalidate_gadget_tips">ཅོག་ངོས་སུ་སྒར་ཆས་ད་ནི་མཁོ་འདོན་མེད་བྱེད་པས། སྔོན་ལ་ཡང་བསྐྱར་བསྣན་རོགས།</string>
+    <string name="remove_sys_app_content">ཁྱེད་ཀྱིས་ད་ལྟ་བརྒྱུད་ཁོངས་ཉེཉར་སྤྱོད་ཀྱི་རིས་རྟགས་སྤོ་དོར་བྱེད་བཞིན་ཡོད། སྤོ་དོར་བྱས་རྗེས་ཁྱེད་ཀྱིས་སྒྲིག་འགོད-ཉེར་སྤྱོད་སྒྲིག་འགོད-ཅོག་ངོས་རིས་རྟགས་དོ་དམ་ནས་ཡང་བསྐྱར་བསྣན་དགོས། སྤོ་དོར་བྱེད་དམ།</string>
+    <string name="remove_sys_app_title">བརྒྱུད་ཁོངས་ཉེར་སྤྱོད་ཀྱི་རྟགས་རིས་སྤོ་དོར་བྱེད་དམ།</string>
     <string name="reset_cate_tip_content">བསྐྱར་སྒྲིག་བྱས་རྗེས་ཉེར་སྤྱོད་ཚན་པ་ཐོག་མའི་རྣམ་པར་བསྐྱར་གསོ་བྱེད་པས། མུ་མཐུད་དུ་བྱེད་རྒྱུ་ཡིན་ནམ།</string>
     <string name="reset_cate_tip_title">བསྐྱར་སྒྲིག</string>
     <string name="reset_description_first_time">ཆུ་ཚོད་གཉིས་ནང་%1$sསྐབས་ཀྱི་བཀོད་སྒྲིག་ལ་སླར་གསོ་བྱེད་ཐུབ།</string>

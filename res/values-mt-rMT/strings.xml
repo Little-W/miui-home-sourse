@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">Trid tħassar dil-kategorija?</string>
     <string name="delete_screen">Neħħi l-iskrin</string>
     <string name="delete_wallpaper_message">Trid tħassar %1$d wallpaper?</string>
+    <string name="deleted_system_applications">App tas-sistema mneħħija</string>
     <string name="deselect_all">"Neħħi l-għażla ta' kollox"</string>
     <string name="disable_wallpaper_scroll">Itfi l-karattertistika li tħalli l-istampi jiċċalqu fil-ġenb</string>
     <string name="download_action">Niżżel</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">"L-apps magħżula joffru faċilitajiet meħtieġa mis-sistema. Tista' tneħħi biss ix-shortcuts tagħhom minn fuq l-Iskrin prinċipali."</string>
     <string name="remove_dialog_title_format">Trid tneħħi \"%s\" mill-Iskrin prinċipali?</string>
     <string name="remove_invalidate_gadget_tips">"Waħda mill-wiġits li tuża m'għadhiex disponibbli. Tista' żżid oħra minflokha."</string>
+    <string name="remove_sys_app_content">"Se tkun tista' żżid mill-ġdid ix-shortcut tal-Iskrin prinċipali minn Għażliet > Apps > Immaniġġja x-shortcuts tal-Iskrin prinċipali. Trid tneħħiha issa?"</string>
+    <string name="remove_sys_app_title">Trid tneħħi x-shortcut tal-Iskrin prinċipali?</string>
     <string name="reset_cate_tip_content">Jekk tkompli, il-gruppi komuni tal-apps se jiġu rkuprati. Trid tkompli xorta waħda?</string>
     <string name="reset_cate_tip_title">Irkupra l-gruppi komuni</string>
     <string name="reset_description_first_time">"Int tista' treġġa' lura t-tqassim tal-paġna minn %1$s fi żmien 2 siegħat"</string>

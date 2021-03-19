@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">Ջնջե՞լ այս կարգավիճակը:</string>
     <string name="delete_screen">Ջնջել էկրանը</string>
     <string name="delete_wallpaper_message">Ջնջե՞լ %1$d ֆոնային պատկերը:</string>
+    <string name="deleted_system_applications">Ապատեղադրված համակարգի հավելվածներ</string>
     <string name="deselect_all">Ընտրությունից հանել բոլորը</string>
     <string name="disable_wallpaper_scroll">Անջատել թերթումը</string>
     <string name="download_action">Ներբեռնել</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">Ընտրված ծրագրերը պարունակում են համակարգի էական հատկություններ: Կարող եք հեռացնել միայն նրանց Հիմնական էկրանի դյուրանցումները:</string>
     <string name="remove_dialog_title_format">Հեռացնե՞լ «%s»-ը Գլխավոր էկրանից:</string>
     <string name="remove_invalidate_gadget_tips">Ձեր օգտագործած հարմարանքներից մեկը այլևս հասանելի չէ: Կարող եք ավելացնել ևս մեկը:</string>
+    <string name="remove_sys_app_content">Դուք կարող եք կրկին ավելացնել Հիմնական էկրանի դյուրանցումը Կարգավորումներում > Հավելվածներ > Կառավարեք հիմնական էկրանի դյուրանցումները: Հեռացնե՞լ հիմա:</string>
+    <string name="remove_sys_app_title">Հեռացնե՞լ պիտակ Գլխավոր էկրանին։</string>
     <string name="reset_cate_tip_content">Եթե շարունակվի, ապա վերականգնվելու է լռելյայն հավելվածների խմբերը: Շարունակե՞լ այնուամենայնիվ:</string>
     <string name="reset_cate_tip_title">Վերականգնել լռելյայն խմբերը</string>
     <string name="reset_description_first_time">Դուք կարող եք վերականգնել %1$s-ի դասավորությունը 2 ժամվա ընթացքում</string>

@@ -21,16 +21,16 @@
 
 .field public static final background:I = 0x7f08007b
 
-.field public static final button_complete_background:I = 0x7f08008f
+.field public static final button_complete_background:I = 0x7f080094
 
-.field public static final edit:I = 0x7f0800b0
+.field public static final edit:I = 0x7f0800b5
 
-.field public static final item_background:I = 0x7f08014c
+.field public static final item_background:I = 0x7f080155
 
-.field public static final recent_tv_small_window_background:I = 0x7f08021d
+.field public static final recent_tv_small_window_background:I = 0x7f080226
 
-.field public static final remove:I = 0x7f080230
+.field public static final remove:I = 0x7f080239
 
-.field public static final sample_footer_loading:I = 0x7f080231
+.field public static final sample_footer_loading:I = 0x7f08023a
 
-.field public static final split:I = 0x7f080248
+.field public static final split:I = 0x7f08025a

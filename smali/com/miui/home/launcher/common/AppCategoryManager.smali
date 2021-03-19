@@ -649,7 +649,7 @@
 
     move-result v1
 
-    const v2, 0x7f10010b
+    const v2, 0x7f10010c
 
     if-eqz v1, :cond_6
 

@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;)V
     .locals 0
 
-    .line 4540
+    .line 4565
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$46;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$46;->val$pkgName:Ljava/lang/String;
@@ -42,7 +42,7 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    .line 4542
+    .line 4567
     new-instance p1, Landroid/content/Intent;
 
     const-string p2, "android.intent.action.VIEW"
@@ -73,10 +73,10 @@
 
     const-string v0, "com.xiaomi.market.ui.AppDetailActivity"
 
-    .line 4543
+    .line 4568
     invoke-virtual {p1, p2, v0}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4545
+    .line 4570
     :try_start_0
     iget-object p2, p0, Lcom/miui/home/launcher/Launcher$46;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -95,7 +95,7 @@
     :catch_0
     move-exception p1
 
-    .line 4547
+    .line 4572
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0

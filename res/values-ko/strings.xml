@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">이 카테고리를 삭제하시겠습니까?</string>
     <string name="delete_screen">화면 삭제</string>
     <string name="delete_wallpaper_message">%1$d개의 배경화면을 삭제하시겠습니까?</string>
+    <string name="deleted_system_applications">시스템 앱 설치 제거</string>
     <string name="deselect_all">모두 선택 해제</string>
     <string name="disable_wallpaper_scroll">사이드 스크롤링 끄기</string>
     <string name="download_action">다운로드</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">선택된 앱에 필수 시스템 기능이 포함되어 있습니다. 홈 화면 바로가기만 제거하실 수 있습니다.</string>
     <string name="remove_dialog_title_format">\"%s\"을(를) 홈 화면에서 제거하시겠습니까?</string>
     <string name="remove_invalidate_gadget_tips">한개의 위젯을 더 이상 사용하실 수 없습니다. 새로운 항목을 추가하실 수 있습니다.</string>
+    <string name="remove_sys_app_content">홈 화면 바로가기를 설정 > 앱 > 홈 화면 바로가기 관리에서 다시 추가하실 수 있습니다. 지금 제거하시겠습니까?</string>
+    <string name="remove_sys_app_title">홈 화면 바로가기를 제거하시겠습니까?</string>
     <string name="reset_cate_tip_content">게속하시면 기본 앱 그룹이 복구될 것입니다. 그래도 계속하시겠습니까?</string>
     <string name="reset_cate_tip_title">기본 그룹 복구</string>
     <string name="reset_description_first_time">%1$s부터 2시간 이내에 레이아웃을 복구하실 수 있습니다.</string>

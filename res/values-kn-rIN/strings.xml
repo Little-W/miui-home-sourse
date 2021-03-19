@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">ಈ ವರ್ಗ ಅಳಿಸುವುದೇ?</string>
     <string name="delete_screen">ಸ್ಕ್ರೀನ್‌ ಅಳಿಸು</string>
     <string name="delete_wallpaper_message">%1$d ವಾಲ್‌ಪೇಪರ್‌ಗಳನ್ನು ಅಳಿಸುವುದೇ?</string>
+    <string name="deleted_system_applications">ಅನ್‌ಇನ್‌ಸ್ಟಾಲ್‌ ಆಗಿರುವ ಸಿಸ್ಟಂ ಆ್ಯಪ್‌‌ಗಳು</string>
     <string name="deselect_all">ಎಲ್ಲದರ ಆಯ್ಕೆ ರದ್ದುಮಾಡಿ</string>
     <string name="disable_wallpaper_scroll">ಸೈಡ್-ಸ್ಕ್ರೋಲಿಂಗ್ ಆಫ್‌ ಮಾಡಿ</string>
     <string name="download_action">ಡೌನ್‌ಲೋಡ್</string>
@@ -394,7 +395,7 @@
     <string name="navigation_type_full_screen">ಗೆಶ್ಚರ್‌ಗಳು</string>
     <string name="navigation_type_title">ಸಿಸ್ಟಂ ನ್ಯಾವಿಗೇಷನ್</string>
     <string name="navigation_type_virtual_key">ಬಟನ್‌ಗಳು</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">ನೆಟ್‌ವರ್ಕ್‌ಗೆ ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಮರು ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="no_detail_page">ವಿವರಗಳ ಪುಟ ಇಲ್ಲ</string>
     <string name="no_space_toast">ಸ್ಥಳ ಸಾಕಷ್ಟಿಲ್ಲ</string>
     <string name="no_space_toast_when_click_widget">ಈ ಪುಟದಲ್ಲಿ ಸಾಕಷ್ಟು ಸ್ಥಳಾವಕಾಶವಿಲ್ಲ. ಈ ಐಟಂ ಅನ್ನು ಬೇರೊಂದು ಪುಟಕ್ಕೆ ಎಳೆಯಲು ಪ್ರಯತ್ನಿಸಿ.</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">ಆಯ್ದ ಆ್ಯಪ್‌ಗಳು ಅತ್ಯವಶ್ಯಕ ಸಿಸ್ಟಂ ಫೀಚರ್‌ಗಳನ್ನು ಒಳಗೊಂಡಿವೆ. ನೀವು ಅವುಗಳ ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳನ್ನು ಮಾತ್ರ ತೆಗೆದುಹಾಕಬಹುದು.</string>
     <string name="remove_dialog_title_format">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ನಿಂದ \"%s\" ತೆಗೆದುಹಾಕುವುದೇ?</string>
     <string name="remove_invalidate_gadget_tips">ನೀವು ಬಳಸುವ ವಿಜೆಟ್‌ಗಳಲ್ಲಿ ಒಂದು ಲಭ್ಯವಿಲ್ಲ. ನೀವು ಬೇರೊಂದನ್ನು ಸೇರಿಸಬಹುದು.</string>
+    <string name="remove_sys_app_content">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಶಾರ್ಟ್‌ಕಟ್‌ ಅನ್ನು ನೀವು ಮತ್ತೊಮ್ಮೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ಆ್ಯಪ್‌ಗಳು > ಹೋಮ್‌ಸ್ಕ್ರೀನ್‌ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಿ ಯಲ್ಲಿ ಸೇರಿಸಬಹುದು. ತೆಗೆದುಹಾಕಬೇಕೇ?</string>
+    <string name="remove_sys_app_title">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಶಾರ್ಟ್‌ಕಟ್‌‌ ತೆಗೆದುಹಾಕಬೇಕೇ?</string>
     <string name="reset_cate_tip_content">ನೀವು ಮುಂದುವರಿದರೆ, ಡೀಫಾಲ್ಟ್‌ ಆ್ಯಪ್‌ ಗುಂಪುಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಲಾಗುತ್ತದೆ. ಮುಂದುವರಿಸುವುದೇ?</string>
     <string name="reset_cate_tip_title">ಡೀಫಾಲ್ಟ್ ಗುಂಪುಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಿ</string>
     <string name="reset_description_first_time">2 ವಾರಗಳಲ್ಲಿ ನೀವು %1$s ಲೇಔಟ್‌ ಅನ್ನು ಮರುಸ್ಥಾಪಿಸಿ</string>
@@ -497,7 +500,7 @@
     <string name="reset_scene_prompt">ಸ್ಕ್ರೀನ್ ಅನ್ನು ಡೀಫಾಲ್ಟ್ ಲೇಔಟ್‌ಗೆ ಮರುನಿಗದಿಗೊಳಿಸಲಾಗುವುದು.</string>
     <string name="reset_title">ಮರುಸ್ಥಾಪಿಸು</string>
     <string name="restore_icon_successful">ಸೇರಿಸಲಾಗಿದೆ</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">ರಷ್ಯಾ</string>
     <string name="screen_cells_config_title">ಹೋಮ್‌ ಸ್ಕ್ರೀನ್‌ ಲೇಔಟ್‌</string>
     <string name="screen_locked_toast">ಮುಖಪುಟ ಲೇಔಟ್‌ ಲಾಕ್ ಮಾಡಿ.</string>
     <string name="screen_number">%d ಸ್ಕ್ರೀನ್‌</string>
@@ -506,7 +509,7 @@
     <string name="select_all">ಎಲ್ಲಾ ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="select_frame">ಫ್ರೇಮ್</string>
     <string name="select_photo">ಫೋಟೋ</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">ಸರ್ವರ್‌ ದೋಷ ಎದುರಾಗಿದೆ. ಒಂದೆರಡು ನಿಮಿಷ ಕಾಯಿರಿ, ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="setting_wallpaper_tip">ಸರಿಹೊಂದಿಸಲು ಪಿಂಚ್‌ ಮಾಡಿ ಅಥವಾ ಸ್ವೈಪ್ ಮಾಡಿ</string>
     <string name="settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="settings_shortcut">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>

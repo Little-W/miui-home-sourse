@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Vols eliminar aquesta categoria?</string>
     <string name="delete_screen">Suprimeix la pantalla</string>
     <string name="delete_wallpaper_message">Vols suprimir %1$d fons de pantalla?</string>
+    <string name="deleted_system_applications">"S'ha desinstal·lat les aplicacions del sistema"</string>
     <string name="deselect_all">Desseleccioneu-ho tot</string>
     <string name="disable_wallpaper_scroll">Desactiva el desplaçament lateral</string>
     <string name="download_action">Baixa</string>
@@ -423,7 +424,7 @@
     <string name="navigation_type_full_screen">Gestos</string>
     <string name="navigation_type_title">Navegació del sistema</string>
     <string name="navigation_type_virtual_key">Botons</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">"No s'ha pogut connectar a la xarxa, proveu-ho de nou més tard."</string>
     <string name="no_detail_page">No hi ha pàgina de detalls</string>
     <string name="no_space_toast">No hi ha prou espai</string>
     <string name="no_space_toast_when_click_widget">"No hi ha prou espai en aquesta pàgina. Proveu d'arrossegar aquest element a una pàgina diferent."</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">"Les aplicacions seleccionades contenen funcions essencials del sistema. Només podeu eliminar les dreceres de la Pantalla d'Inici."</string>
     <string name="remove_dialog_title_format">"Voleu eliminar \"%s\" de la Pantalla d'Inici?"</string>
     <string name="remove_invalidate_gadget_tips">Un dels ginys que utilitzeu ja no està disponible. Podeu afegir-ne un altre.</string>
+    <string name="remove_sys_app_content">"Podreu afegir la drecera de la pantalla d'inici de nou a Configuració > Aplicacions > Gestioneu les dreceres de la pantalla d'inici. Voleu suprimir-la ara?"</string>
+    <string name="remove_sys_app_title">"Voleu eliminar la drecera en la Pantalla d'Inici?"</string>
     <string name="reset_cate_tip_content">"Si continues, es restauraran els grups d'aplicacions per defecte. Segur que vols continuar?"</string>
     <string name="reset_cate_tip_title">Restaurar els grups per defecte</string>
     <string name="reset_description_first_time">Podeu restaurar la disposició des de%1$s en 2 hores</string>
@@ -528,7 +531,7 @@
     <string name="reset_scene_prompt">La pantalla es restablirà a la disposició per defecte.</string>
     <string name="reset_title">Restaura</string>
     <string name="restore_icon_successful">"S'ha afegit amb èxit"</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">Rússia</string>
     <string name="screen_cells_config_title">"Disposició de la Pantalla d'Inici"</string>
     <string name="screen_locked_toast">"La disposició de la Pantalla d'Inici està bloquejada."</string>
     <string name="screen_number">Pantalla %d</string>
@@ -538,7 +541,7 @@
     <string name="select_all">Seleccioneu-ho tot</string>
     <string name="select_frame">Marc</string>
     <string name="select_photo">Foto</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">"S'ha produït un error al servidor. Espera un parell de minuts i torna-ho a provar."</string>
     <string name="setting_wallpaper_tip">Prem o llisca per ajustar</string>
     <string name="settings">Configuració</string>
     <string name="settings_shortcut">Configuració</string>

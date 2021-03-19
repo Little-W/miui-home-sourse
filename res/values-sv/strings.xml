@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Ta bort den här kategorin?</string>
     <string name="delete_screen">Ta bort skärm</string>
     <string name="delete_wallpaper_message">Ta bort %1$d bakgrundsbild?</string>
+    <string name="deleted_system_applications">Avinstallerade systemappar</string>
     <string name="deselect_all">Välj ingen</string>
     <string name="disable_wallpaper_scroll">Avaktivera sidskrollning</string>
     <string name="download_action">Ladda ner</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Valda appar innehåller viktiga systemfunktioner. Du kan endast ta bort deras hemskärmsgenvägar.</string>
     <string name="remove_dialog_title_format">Ta bort \"%s\" från hemskärmen?</string>
     <string name="remove_invalidate_gadget_tips">En av widgetarna du använder är inte längre tillgänglig. Du kan lägga till en annan.</string>
+    <string name="remove_sys_app_content">Du kommer kunna lägga till genvägen på Hemskärmen igen i Inställningar > Appar > Hantera genvägar på Hemskärmen. Ta bort nu?</string>
+    <string name="remove_sys_app_title">Ta bort genvägen på Hemskärmen?</string>
     <string name="reset_cate_tip_content">Om du fortsätter, återställs standardappgrupper. Fortsätt ändå?</string>
     <string name="reset_cate_tip_title">Återställ standardgrupper</string>
     <string name="reset_description_first_time">Du kan återställa layouten från %1$s inom 2 timmar</string>

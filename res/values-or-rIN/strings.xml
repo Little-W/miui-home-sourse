@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">ଏହି କ୍ୟାଟାଗୋରୀ ଡିଲିଟ୍ କରିବେ?</string>
     <string name="delete_screen">ସ୍କ୍ରିନ୍‌ ବିଲୋପ କରନ୍ତୁ</string>
     <string name="delete_wallpaper_message">%1$d ୱାଲ୍‌ପେପର୍‌ ବିଲୋପ କରିବେ କି?</string>
+    <string name="deleted_system_applications">ଅଣସଂସ୍ଥାପିତ ସିଷ୍ଟମ୍ ଆପ୍ସ</string>
     <string name="deselect_all">ସମସ୍ତ ଅଚୟନ କରନ୍ତୁ</string>
     <string name="disable_wallpaper_scroll">ସାଇଡ୍‌ ସ୍କ୍ରଲିଂ ବନ୍ଦ କରନ୍ତୁ</string>
     <string name="download_action">ଡାଉନଲୋଡ୍‍</string>
@@ -394,7 +395,7 @@
     <string name="navigation_type_full_screen">ଜେଶ୍ଚର୍‌</string>
     <string name="navigation_type_title">ସିଷ୍ଟମ୍ ନେଭିଗେସନ</string>
     <string name="navigation_type_virtual_key">ବଟନ୍‌ଗୁଡ଼ିକ</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">ନେଟୱାର୍କ୍ ସଂଯୋଗ ହୋଇପାରିଲା ନାହିଁ | ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ |</string>
     <string name="no_detail_page">କୌଣସି ବିବରଣୀ ପୃଷ୍ଠା ନାହିଁ</string>
     <string name="no_space_toast">ପର୍ଯ୍ୟାପ୍ତ ସ୍ଥାନ ନାହିଁ</string>
     <string name="no_space_toast_when_click_widget">ଏହି ପୃଷ୍ଠାରେ ଯଥେଷ୍ଟ ଜାଗା ନାହିଁ। ଏହି ଆଇଟମକୁ ଭିନ୍ନ ଏକ ପୃଷ୍ଠାକୁ ଡ୍ରାଗ୍ କରିବାକୁ ଚେଷ୍ଟା କରନ୍ତୁ।</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">ଚୟନିତ ଆପ୍ସରେ ଜରୁରୀ ସିଷ୍ଟମ ଫିଚରଗୁଡ଼ିକ ଅଛି। ଆପଣ କେବଳ ସେଗୁଡ଼ିକର ହୋମ ସ୍କ୍ରିନ୍ ସର୍ଟକଟ୍ ହଟାଇ ପାରିବେ।</string>
     <string name="remove_dialog_title_format">ହୋମ୍‌ ସ୍କ୍ରିନରୁ \"%s\"କୁ ହଟାଇବେ?</string>
     <string name="remove_invalidate_gadget_tips">ଆପଣ ବ୍ୟବହାର କରୁଥିବା ଗୋଟିଏ ୱିଜେଟ୍ ଆଉ ଉପଲବ୍ଧ ନାହିଁ। ଆପଣ ଅନ୍ୟ ଗୋଟିଏ ଯୋଗ କରିପାରିବେ।</string>
+    <string name="remove_sys_app_content">ଆପଣ ସେଟିଂସ୍ > ଆପ୍ସ > ହୋମ ସ୍କ୍ରିନ୍ ସର୍ଟକଟ୍ ପରିଚାଳନା କରନ୍ତୁରେ ପୁଣି ହୋମ ସ୍କ୍ରିନ୍ ସର୍ଟକଟ୍ ଯୋଗ କରିବାକୁ ସକ୍ଷମ ହେବେ। ଏବେ କାଢ଼ିବେ?</string>
+    <string name="remove_sys_app_title">ହୋମ ସ୍କ୍ରିନ୍ ସର୍ଟକଟ୍ କାଢ଼ିବେ?</string>
     <string name="reset_cate_tip_content">ଆପଣ ଯଦି ଜାରି ରଖନ୍ତି, ଡିଫଲ୍ଟ ଆପ୍ ଗ୍ରୁପ୍ ରିଷ୍ଟୋର ହେବ | ଯେ କୌଣସି ଭାବେ ଆଗକୁ ବଢ଼ିବେ?</string>
     <string name="reset_cate_tip_title">ଡିଫଲ୍ଟ୍‌ ଗ୍ରୁପ୍ ରିଷ୍ଟୋର କରନ୍ତୁ</string>
     <string name="reset_description_first_time">2 ଘଣ୍ଟା ଭିତରେ ଆପଣ %1$sରୁ ଲେଆଉଟ ରିଷ୍ଟୋର କରିପାରିବେ</string>
@@ -506,7 +509,7 @@
     <string name="select_all">ସମସ୍ତ ଚୟନ କରନ୍ତୁ</string>
     <string name="select_frame">ଫ୍ରେମ୍‌</string>
     <string name="select_photo">ଫଟୋ</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">ଏକ ସର୍ଭର ତ୍ରୁଟି ଘଟିଛି| ଗୋଟିଏ ବା ଦୁଇ ମିନିଟ ଅପେକ୍ଷା କରନ୍ତୁ ଏବଂ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ |</string>
     <string name="setting_wallpaper_tip">ଆଡ୍‌ଜଷ୍ଟ କରିବା ପାଇଁ ପିଞ୍ଚ ବା ସ୍ୱାଇପ୍‌ କରନ୍ତୁ</string>
     <string name="settings">ସେଟିଂସ୍‌</string>
     <string name="settings_shortcut">ସେଟିଂସ୍‌</string>

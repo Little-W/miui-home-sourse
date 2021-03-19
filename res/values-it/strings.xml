@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Eliminare questa categoria?</string>
     <string name="delete_screen">Elimina schermo</string>
     <string name="delete_wallpaper_message">Eliminare %1$d sfondo?</string>
+    <string name="deleted_system_applications">App di sistema disinstallate</string>
     <string name="deselect_all">Deseleziona tutto</string>
     <string name="disable_wallpaper_scroll">Disattiva scorrimento laterale</string>
     <string name="download_action">Scarica</string>
@@ -423,7 +424,7 @@
     <string name="navigation_type_full_screen">Gesti</string>
     <string name="navigation_type_title">Navigazione di sistema</string>
     <string name="navigation_type_virtual_key">Tasti</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">Impossibile connettersi alla rete. Riprova.</string>
     <string name="no_detail_page">Nessuna pagina dettagli</string>
     <string name="no_space_toast">Spazio di archiviazione insufficiente</string>
     <string name="no_space_toast_when_click_widget">Spazio insufficiente su questa pagina. Prova a trascinare questo elemento su una pagina diversa.</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Le app selezionate contengono funzionalità di sistema essenziali. Puoi solo rimuovere i collegamenti dalla schermata Home.</string>
     <string name="remove_dialog_title_format">Rimuovere \"%s\" dalla schermata Home?</string>
     <string name="remove_invalidate_gadget_tips">Uno dei widget che usi non è più disponibile. Puoi aggiungerne un altro.</string>
+    <string name="remove_sys_app_content">Potrai aggiungere di nuovo il collegamento sulla schermata Home in Impostazioni > App > Gestisci i collegamenti sulla schermata Home. Rimuovere ora?</string>
+    <string name="remove_sys_app_title">Rimuovere il collegamento sulla schermata Home?</string>
     <string name="reset_cate_tip_content">Se continui, i gruppi di app predefiniti saranno ripristinati. Continuare comunque?</string>
     <string name="reset_cate_tip_title">Ripristina i gruppi predefiniti</string>
     <string name="reset_description_first_time">È possibile ripristinare il layout da %1$s entro 2 ore</string>
@@ -538,7 +541,7 @@
     <string name="select_all">Seleziona tutto</string>
     <string name="select_frame">Cornice</string>
     <string name="select_photo">Foto</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">Si è verificato un errore del server. Aspetta un minuto o due e riprova.</string>
     <string name="setting_wallpaper_tip">Pizzica o esegui uno swipe per regolare</string>
     <string name="settings">Impostazioni</string>
     <string name="settings_shortcut">Impostazioni</string>

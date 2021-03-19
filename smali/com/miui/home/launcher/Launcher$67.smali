@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 7065
+    .line 7090
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 7068
+    .line 7093
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/IBackAnimView;
@@ -47,7 +47,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 7069
+    .line 7094
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$300(Lcom/miui/home/launcher/Launcher;)Z
@@ -56,7 +56,7 @@
 
     if-nez v0, :cond_0
 
-    .line 7070
+    .line 7095
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/IBackAnimView;
@@ -65,7 +65,7 @@
 
     invoke-interface {v0}, Lcom/miui/home/launcher/IBackAnimView;->onBackAnimStart()V
 
-    .line 7072
+    .line 7097
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -77,14 +77,14 @@
 
     invoke-interface {v0, v1}, Lcom/miui/home/launcher/IBackAnimView;->updateBackAnim(Ljava/lang/String;)V
 
-    .line 7073
+    .line 7098
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$102(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 7074
+    .line 7099
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x0

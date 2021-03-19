@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Izbrisati ovu kategoriju?</string>
     <string name="delete_screen">Izbriši ekran</string>
     <string name="delete_wallpaper_message">Izbrisati %1$d pozadinu?</string>
+    <string name="deleted_system_applications">Deinstalirane aplikacije sistema</string>
     <string name="deselect_all">Poništi odabir</string>
     <string name="disable_wallpaper_scroll">Isključi pomjeranje slike</string>
     <string name="download_action">Preuzmi</string>
@@ -423,7 +424,7 @@
     <string name="navigation_type_full_screen">Geste</string>
     <string name="navigation_type_title">Sistemska navigacija</string>
     <string name="navigation_type_virtual_key">Tipke</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">Ne mogu se povezati na mrežu. Pokušajte ponovo.</string>
     <string name="no_detail_page">Stranica bez detalja</string>
     <string name="no_space_toast">Nema dovoljno prostora</string>
     <string name="no_space_toast_when_click_widget">Nema dovoljno prostora na ovoj stranici. Pokušajte prevući ovu stavku na drugu stranicu.</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Odabrane aplikacije sadrže neophodne opcije sistema. Možete ukloniti samo njihove prečice na Početnom ekranu.</string>
     <string name="remove_dialog_title_format">Ukloni \"%s\" sa Početnog ekrana?</string>
     <string name="remove_invalidate_gadget_tips">Jedan od widget-a koje koristite više nije dostupan. Možete dodati još jedan.</string>
+    <string name="remove_sys_app_content">Prečicu na Početnom ekranu ćete moći ponovo dodati u Postavke > Aplikacije > Upravljaj prečicama na Početnom ekranu. Ukloniti sada?</string>
+    <string name="remove_sys_app_title">Ukloni prečicu na Početnom ekranu?</string>
     <string name="reset_cate_tip_content">Ako nastavite, zadane grupe aplikacije će biti vraćene. Svejedno nastaviti?</string>
     <string name="reset_cate_tip_title">Vratiti zadane grupe</string>
     <string name="reset_description_first_time">Možete vratiti izgled iz %1$s u okviru 2 sata</string>
@@ -528,7 +531,7 @@
     <string name="reset_scene_prompt">Ekran će biti vraćen na zadani raspored.</string>
     <string name="reset_title">Vrati</string>
     <string name="restore_icon_successful">Uspješno dodano</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">Rusija</string>
     <string name="screen_cells_config_title">Raspored početnog ekrana</string>
     <string name="screen_locked_toast">Izgled Početnog ekrana je zaključan.</string>
     <string name="screen_number">%d ekran</string>
@@ -538,7 +541,7 @@
     <string name="select_all">Izaberi sve</string>
     <string name="select_frame">Okvir</string>
     <string name="select_photo">Fotografija</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">Došlo je do greške servera. Pričekajte minutu ili dvije i pokušajte ponovo.</string>
     <string name="setting_wallpaper_tip">Uhvati prstom ili prevuci za podešavanje</string>
     <string name="settings">Postavke</string>
     <string name="settings_shortcut">Postavke</string>

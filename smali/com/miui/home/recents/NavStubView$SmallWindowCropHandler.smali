@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/home/recents/NavStubView;Landroid/os/Looper;)V
     .locals 0
 
-    .line 3908
+    .line 3923
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$SmallWindowCropHandler;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 3909
+    .line 3924
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -36,14 +36,14 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 3914
+    .line 3929
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 3928
+    .line 3943
     :pswitch_0
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$SmallWindowCropHandler;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -51,7 +51,7 @@
 
     goto :goto_0
 
-    .line 3925
+    .line 3940
     :pswitch_1
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$SmallWindowCropHandler;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -59,7 +59,7 @@
 
     goto :goto_0
 
-    .line 3922
+    .line 3937
     :pswitch_2
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$SmallWindowCropHandler;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -67,7 +67,7 @@
 
     goto :goto_0
 
-    .line 3919
+    .line 3934
     :pswitch_3
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$SmallWindowCropHandler;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -79,7 +79,7 @@
 
     goto :goto_0
 
-    .line 3916
+    .line 3931
     :pswitch_4
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$SmallWindowCropHandler;->this$0:Lcom/miui/home/recents/NavStubView;
 

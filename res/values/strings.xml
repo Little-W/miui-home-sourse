@@ -222,6 +222,7 @@
     <string name="delete_category_dialog_title">Delete this category?</string>
     <string name="delete_screen">Delete screen</string>
     <string name="delete_wallpaper_message">Delete %1$d wallpaper?</string>
+    <string name="deleted_system_applications">Uninstalled system apps</string>
     <string name="deselect_all">Deselect all</string>
     <string name="dialog_work_profile_button_1">Next</string>
     <string name="dialog_work_profile_button_2">Got it</string>
@@ -539,6 +540,8 @@
     <string name="remove_dialog_message">Selected apps contain essential system features. You can only remove their Home screen shortcuts.</string>
     <string name="remove_dialog_title_format">Remove \"%s\" from Home screen?</string>
     <string name="remove_invalidate_gadget_tips">One of the widgets you use is no longer available. You can add another one.</string>
+    <string name="remove_sys_app_content">"You'll be able to add the Home screen shortcut again in Settings > Apps > Manage Home screen shortcuts. Remove now?"</string>
+    <string name="remove_sys_app_title">Remove the Home screen shortcut?</string>
     <string name="reset_cate_tip_content">If you continue, default app groups will be restored. Continue anyway?</string>
     <string name="reset_cate_tip_title">Restore default groups</string>
     <string name="reset_description_first_time">You can restore the layout from %1$s within 2 hours</string>

@@ -273,7 +273,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView;->TAG:Ljava/lang/String;
 
-    const p1, 0x7f08027c
+    const p1, 0x7f08028e
 
     .line 73
     iput p1, p0, Lcom/miui/home/launcher/ScreenView;->mSeekPointResId:I
@@ -535,7 +535,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView;->TAG:Ljava/lang/String;
 
-    const p1, 0x7f08027c
+    const p1, 0x7f08028e
 
     .line 73
     iput p1, p0, Lcom/miui/home/launcher/ScreenView;->mSeekPointResId:I
@@ -6358,7 +6358,7 @@
     .line 1020
     iget-object v9, p0, Lcom/miui/home/launcher/ScreenView;->mContext:Landroid/content/Context;
 
-    const v10, 0x7f100228
+    const v10, 0x7f10022b
 
     new-array v11, v7, [Ljava/lang/Object;
 
@@ -7782,9 +7782,9 @@
 .method public setSlideBarPosition(Landroid/widget/FrameLayout$LayoutParams;)V
     .locals 3
 
-    const v0, 0x7f080236
+    const v0, 0x7f08023f
 
-    const v1, 0x7f080237
+    const v1, 0x7f080240
 
     const/4 v2, 0x0
 

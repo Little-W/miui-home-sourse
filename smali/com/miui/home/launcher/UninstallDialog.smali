@@ -694,12 +694,12 @@
 
     if-eqz v0, :cond_0
 
-    const v2, 0x7f10026e
+    const v2, 0x7f100271
 
     goto :goto_0
 
     :cond_0
-    const v2, 0x7f10025d
+    const v2, 0x7f100260
 
     :goto_0
     invoke-virtual {v1, v2}, Landroid/widget/Button;->setText(I)V
@@ -777,11 +777,11 @@
     move-result-object v4
 
     :goto_1
-    const v5, 0x7f100273
+    const v5, 0x7f100276
 
-    const v6, 0x7f100218
+    const v6, 0x7f100219
 
-    const v7, 0x7f10026f
+    const v7, 0x7f100272
 
     const/4 v8, 0x1
 
@@ -893,7 +893,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/UninstallDialog;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f100219
+    const v3, 0x7f10021a
 
     .line 165
     invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -924,7 +924,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/UninstallDialog;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f100270
+    const v6, 0x7f100273
 
     .line 170
     invoke-virtual {v3, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -984,7 +984,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f100275
+    const v3, 0x7f100278
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1004,7 +1004,7 @@
     .line 179
     iget-object v0, p0, Lcom/miui/home/launcher/UninstallDialog;->mDescription:Landroid/widget/TextView;
 
-    const v1, 0x7f100274
+    const v1, 0x7f100277
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

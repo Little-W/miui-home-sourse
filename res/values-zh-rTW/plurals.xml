@@ -19,12 +19,12 @@
         <item quantity="other">第%1$d頁共%2$d項</item>
     </plurals>
     <plurals name="uninstall_dialog_title_multi_format">
-        <item quantity="other">移除%1$d個應用</item>
+        <item quantity="other">移除%1$d個應用程式</item>
     </plurals>
     <plurals name="uninstall_result_multi_failed">
-        <item quantity="other">%1$d個應用無法刪除</item>
+        <item quantity="other">%1$d個應用程式無法刪除</item>
     </plurals>
     <plurals name="uninstall_result_multi_succeeded">
-        <item quantity="other">成功刪除%d個應用</item>
+        <item quantity="other">成功刪除%d個應用程式</item>
     </plurals>
 </resources>

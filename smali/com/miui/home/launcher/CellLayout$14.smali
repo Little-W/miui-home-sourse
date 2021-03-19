@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 3312
+    .line 3313
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public process(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 3315
+    .line 3316
     invoke-static {p1}, Lcom/miui/home/launcher/graphics/drawable/MamlCompat;->onPause(Landroid/graphics/drawable/Drawable;)V
 
     return-void

@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">Избришете ја оваа категорија?</string>
     <string name="delete_screen">Избришете екран</string>
     <string name="delete_wallpaper_message">Да се избрише %1$d позадина?</string>
+    <string name="deleted_system_applications">Деинсталирани системски апл.</string>
     <string name="deselect_all">Одселектирајте ги сите</string>
     <string name="disable_wallpaper_scroll">Исклучете странично прелистување</string>
     <string name="download_action">Превземете</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">Одбраните апл. ги содржат основните системски функции. Можете само да ги отстраните кратенките од нивниот Почетен екран.</string>
     <string name="remove_dialog_title_format">Отстрани \"%s\" од Почетен екран?</string>
     <string name="remove_invalidate_gadget_tips">Еден од додатоците кои ги користевте не е повеќе достапен. Може да додадете нов.</string>
+    <string name="remove_sys_app_content">Ќе можете да ја додадете кратенката на Почетен екран повторно во Нагодувања > Апл. > Управувај со кратенки на Почетен екран. Отстранете сега?</string>
+    <string name="remove_sys_app_title">Отстранете кратенка на Почетен екран?</string>
     <string name="reset_cate_tip_content">Ако продолжите, стандардните апл групи ќе бидат повратени. Продолжи секако?</string>
     <string name="reset_cate_tip_title">Врати ги стандардните групи</string>
     <string name="reset_description_first_time">Можете да го вратите изгледот од %1$s во рок од 2 часа</string>

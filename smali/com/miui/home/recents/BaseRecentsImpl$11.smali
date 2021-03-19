@@ -28,7 +28,7 @@
 .method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;)V
     .locals 0
 
-    .line 577
+    .line 574
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$11;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -49,7 +49,7 @@
 
     const-string p1, "com.android.systemui.fsgesture"
 
-    .line 580
+    .line 577
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -64,19 +64,19 @@
 
     const/4 v0, 0x0
 
-    .line 581
+    .line 578
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
     const-string v0, "typeFrom"
 
-    .line 582
+    .line 579
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 583
+    .line 580
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$11;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/recents/BaseRecentsImpl;->updateFsgWindowVisibilityState(ZLjava/lang/String;)V

@@ -22,10 +22,10 @@
 .method private constructor <init>(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;Landroid/os/Handler;)V
     .locals 0
 
-    .line 124
+    .line 148
     iput-object p1, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout$XiaoaiObserver;->this$0:Lcom/miui/home/launcher/SearchBarXiaoaiLayout;
 
-    .line 125
+    .line 149
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -34,7 +34,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;Landroid/os/Handler;Lcom/miui/home/launcher/SearchBarXiaoaiLayout$1;)V
     .locals 0
 
-    .line 123
+    .line 147
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout$XiaoaiObserver;-><init>(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;Landroid/os/Handler;)V
 
     return-void
@@ -45,13 +45,13 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 130
+    .line 154
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 131
+    .line 155
     iget-object p1, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout$XiaoaiObserver;->this$0:Lcom/miui/home/launcher/SearchBarXiaoaiLayout;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->access$100(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)V
+    invoke-static {p1}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->access$400(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)V
 
     return-void
 .end method

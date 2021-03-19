@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
     .locals 0
 
-    .line 683
+    .line 681
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$RecentsHandler;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -35,10 +35,10 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 686
+    .line 684
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 687
+    .line 685
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/16 v0, 0x3e8
@@ -47,7 +47,7 @@
 
     goto :goto_0
 
-    .line 689
+    .line 687
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$RecentsHandler;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 

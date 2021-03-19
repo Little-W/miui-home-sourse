@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">გსურთ ამ კატეგორიის წაშლა?</string>
     <string name="delete_screen">ეკრანის წაშლა</string>
     <string name="delete_wallpaper_message">წავშალო %1$d ფონი?</string>
+    <string name="deleted_system_applications">დეინსტალირებული სისტემური აპლიკაციები</string>
     <string name="deselect_all">მონიშვნის გაუქმება</string>
     <string name="disable_wallpaper_scroll">side-scrolling -ის გამორთვა</string>
     <string name="download_action">გადმოწერა</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">მონიშნული აპლიკაციები შეიცავს სისტემის არსებით ფუნქციებს. მათი მხოლოდ საწყისი ეკრანის მალსახმობების წაშლა შეგიძლიათ.</string>
     <string name="remove_dialog_title_format">წავშალო \"%s\" მთავარი ეკრანიდან?</string>
     <string name="remove_invalidate_gadget_tips">თქვენს მიერ გამოყენებული ვიჯეტის გამოყენება აღარ არის ხელმისაწვდომი. შეგიძლიათ დაამატოთ კიდევ ერთი.</string>
+    <string name="remove_sys_app_content">თქვენ შეძლებთ მთავარი ეკრანის მალსახმობის დამატებას ისევ პარამეტრებში > აპლიკაიციები > მთავარი ეკრანის მალსახმობების მართვა. წაიშალოს ახლავე?</string>
+    <string name="remove_sys_app_title">წავშალო მთავარი ეკრანის მალსახმობი?</string>
     <string name="reset_cate_tip_content">თუ გააგრძელებთ, ძირითადი აპლიკაციის ჯგუფები აღდგება. გსურთ გაგრძელება?</string>
     <string name="reset_cate_tip_title">ძირითადი ჯგუფების აღდგენა</string>
     <string name="reset_description_first_time">თქვენ შეგიძლიათ აღადგინოთ განლაგება %1$s –დან 2 საათის განმავლობაში</string>

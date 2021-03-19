@@ -941,6 +941,42 @@
     return-object p2
 .end method
 
+.method public fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/String;",
+            "Ljava/lang/Class<",
+            "TT;>;)TT;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/mi/google/gson/JsonSyntaxException;
+        }
+    .end annotation
+
+    .line 773
+    invoke-virtual {p0, p1, p2}, Lcom/mi/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 774
+    invoke-static {p2}, Lcom/mi/google/gson/internal/Primitives;->wrap(Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p1}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
 .method public fromJson(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;

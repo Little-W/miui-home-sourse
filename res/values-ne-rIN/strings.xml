@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">यो कोटी मेटाउनुहुने?</string>
     <string name="delete_screen">स्क्रिन मेटाउनुहोस्</string>
     <string name="delete_wallpaper_message">%1$d वालपेपर मेट्ने?</string>
+    <string name="deleted_system_applications">सिस्टम एप्स अनइन्स्टल गर्नुहोस्</string>
     <string name="deselect_all">सबै चयन हटाउनुहोस्</string>
     <string name="disable_wallpaper_scroll">छेउ-स्क्रोलिङ अफ गर्नुहोस्</string>
     <string name="download_action">डाउनलोड गर्नुहोस्</string>
@@ -394,7 +395,7 @@
     <string name="navigation_type_full_screen">इसाराहरू</string>
     <string name="navigation_type_title">सिस्टम नेभिगेसन</string>
     <string name="navigation_type_virtual_key">बटनहरू</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">नेटवर्कमा जडान गर्न सकिएन। फेरि प्रयास गर्नुहोस्।</string>
     <string name="no_detail_page">विवरण पृष्ठ छैन</string>
     <string name="no_space_toast">पर्याप्त खाली ठाउँ छैन</string>
     <string name="no_space_toast_when_click_widget">यस पृष्ठमा पर्याप्त स्थान छैन। यस वस्तुलाई फरक पृष्ठमा तान्नुहोस्।</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">चयनित एपहरूमा आवश्यक आवश्यक सिस्टम फिचरहरू समावेश गर्दछ। तपाईं तिनीहरूको होम स्क्रिन शर्टकटहरू मात्र हटाउन सक्नुहुनेछ।</string>
     <string name="remove_dialog_title_format">होम स्क्रिनबाट \"%s\" हटाउनुहुन्छ?</string>
     <string name="remove_invalidate_gadget_tips">तपाईले प्रयोग गर्ने एउटा विजेट अब उपलब्ध छैन। तपाईं अर्को थप्न सक्नुहुन्छ।</string>
+    <string name="remove_sys_app_content">तपाईं सेटिंग्स > एप्स > Manaहोम स्क्रिन सर्टकर्ट प्रबन्धन गर्नुहोस् मा होम स्क्रिन सर्टकर्ट थप्न सक्नुहुनेछ. अहिले हटाउनुहुन्छ?</string>
+    <string name="remove_sys_app_title">होम स्क्रिन सर्टकट हटाउनुहुन्छ?</string>
     <string name="reset_cate_tip_content">यदि तपाईं जारी राख्नुहुन्छ भने, पूर्वनिर्धारित एप ग्रुपहरू पुनर्स्थापित हुनेछन्। जे भए पनि जारी राख्नुहुन्छ?</string>
     <string name="reset_cate_tip_title">पूर्वनिर्धारित ग्रुप पुन: भण्डारण गर्नुहोस्</string>
     <string name="reset_description_first_time">तपाईंले लेआउट %1$s 2 घण्टा भित्र बहाल गर्न सक्नुहुन्छ।</string>
@@ -497,7 +500,7 @@
     <string name="reset_scene_prompt">स्क्रिनलाई पूर्वनिर्धारित सजावटमा रिसेट गरिनेछ।</string>
     <string name="reset_title">पुन: भण्डारण गर्नुहोस्</string>
     <string name="restore_icon_successful">सफलतापूर्वक थपियो</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">रूस</string>
     <string name="screen_cells_config_title">होम स्क्रिन सजावट</string>
     <string name="screen_locked_toast">होम स्क्रिन सजावट लक गरिएको छ।</string>
     <string name="screen_number">%d स्क्रिन</string>
@@ -506,7 +509,7 @@
     <string name="select_all">सबै चयन गर्नुहोस्</string>
     <string name="select_frame">फ्रेम</string>
     <string name="select_photo">फोटो</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">सरभरमा त्रुटि देखा पर्यो। एक वा दुई मिनेट पर्खनुहोस् र फेरि प्रयास गर्नुहोस्</string>
     <string name="setting_wallpaper_tip">समायोजन गर्नको लागि पिन्च वा स्वाइप गर्नुहोस्</string>
     <string name="settings">सेटिङहरू</string>
     <string name="settings_shortcut">सेटिङहरू</string>

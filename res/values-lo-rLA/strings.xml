@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">ລົບໝວດໝູ່ນີ້ບໍ?</string>
     <string name="delete_screen">ລົບໜ້າຈໍ</string>
     <string name="delete_wallpaper_message">ລົບ %1$d ພາບພື້ນຫຼັງບໍ?</string>
+    <string name="deleted_system_applications">ຖອນການຕິດຕັ້ງແອັບລະບົບແລ້ວ</string>
     <string name="deselect_all">​ຍົກ​ເລີກ​ການ​ເລືອກ​ທັງ​ໝົດ</string>
     <string name="disable_wallpaper_scroll">ປິດການເລື່ອນດ້ານຂ້າງ</string>
     <string name="download_action">ດາວໂຫຼດ</string>
@@ -394,7 +395,7 @@
     <string name="navigation_type_full_screen">ທ່າທາງ</string>
     <string name="navigation_type_title">ການນຳທາງລະບົບ</string>
     <string name="navigation_type_virtual_key">ປຸ່ມ</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">​ບໍ່​ສາ​ມາດ​ເຊື່ອ​ມ​ຕໍ່​ກັບ​ເຄືອ​ຂ່າຍ​ໄດ້. ລອງອີກຄັ້ງ.</string>
     <string name="no_detail_page">ບໍ່ມີໜ້າລາຍລະອຽດ</string>
     <string name="no_space_toast">​ພື້ນ​ທີ່​ບໍ່​ພຽງ​ພໍ</string>
     <string name="no_space_toast_when_click_widget">​ພື້ນ​ທີ່​​ບໍ່ພຽງ​ພໍ​ໃນໜ້ານີ້. ລອງລາກລາຍການນີ້ໄປທີ່ໜ້າອື່ນ.</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">ແອັບທີ່ເລືອກປະກອບມີຄຸນສົມບັດລະບົບທີ່ສຳຄັນ. ທ່ານສາມາດລົບປຸ່ມລັດໜ້າຈໍຫຼັກຂອງແອັບອອກເທົ່ານັ້ນ.</string>
     <string name="remove_dialog_title_format">ລົບ \"%s\" ​ຈາກໜ້າ​ຈໍຫຼັກ​?</string>
     <string name="remove_invalidate_gadget_tips">Widget ທີ່ທ່ານໃຊ້ບໍ່ສາມາດໃຊ້ງານໄດ້ແລ້ວ. ທ່ານສາມາດເພີ່ມອັນອື່ນໆໄດ້.</string>
+    <string name="remove_sys_app_content">ທ່ານສາມາດເພີ່ມປຸ່ມລັດໜ້າຈໍຫຼັກໄດ້ອີກຄັ້ງໃນການຕັ້ງຄ່າ > ແອັບ > ຈັດການປຸ່ມລັດໜ້າຈໍຫຼັກ. ລົບອອກ?</string>
+    <string name="remove_sys_app_title">ລົບປຸ່ມລັດໜ້າຈໍຫຼັກອອກ?</string>
     <string name="reset_cate_tip_content">ຖ້າທ່ານດຳເນີນການຕໍ່, ຄ່າເລີ່ມຕົ້ນກຸ່ມແອັບຈະຖືກກູ້ຄືນ. ດຳເນີນການຕໍ່ໄປບໍ?</string>
     <string name="reset_cate_tip_title">​ກູ້​ຄືນກຸ່ມ​ເລ​ີ່ມ​ຕົ້ນ</string>
     <string name="reset_description_first_time">ທ່ານສາມາດກູ້ຄືນຮູບແບບການຈັດວາງຈາກ %1$s ພາຍໃນ 2 ຊົ່ວໂມງ</string>
@@ -497,7 +500,7 @@
     <string name="reset_scene_prompt">ໜ້າຈໍຈະຖືກຣີເຊັດເປັນຮູບແບບການຈັດວາງເລີ່ມຕົ້ນ.</string>
     <string name="reset_title">​ກູ້​ຄືນ​</string>
     <string name="restore_icon_successful">ເພີ່ມສຳເລັດແລ້ວ</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">ຣັດເຊຍ</string>
     <string name="screen_cells_config_title">ຮູບແບບການຈັດວາງໜ້າຈໍຫຼັກ</string>
     <string name="screen_locked_toast">ລັອກການຈັດວາງໜ້າຈໍຫຼັກໄວ້ແລ້ວ.</string>
     <string name="screen_number">ໜ້າຈໍ %d</string>
@@ -506,7 +509,7 @@
     <string name="select_all">​ເລືອກ​ທັງ​ໝົດ</string>
     <string name="select_frame">ຂອບ</string>
     <string name="select_photo">ຮູບ​ພາບ</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">ເຊີບເວີເກີດຄວາມຜິດພາດ. ລໍຖ້າໜຶ່ງຫຼືສອງນາທີແລະລອງອີກຄັ້ງ.</string>
     <string name="setting_wallpaper_tip">ຈີບຫຼືປັດເພື່ອປັບພາບ</string>
     <string name="settings">ການຕັ້ງຄ່າ</string>
     <string name="settings_shortcut">​ການ​ຕັ້ງ​ຄ່າ</string>

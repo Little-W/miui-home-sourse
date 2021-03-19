@@ -884,12 +884,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f08007f
+    const v0, 0x7f080081
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f08007e
+    const v0, 0x7f080080
 
     .line 373
     :goto_0

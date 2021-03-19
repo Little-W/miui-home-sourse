@@ -1,5 +1,5 @@
 !!brut.androlib.meta.MetaInfo
-apkFileName: origin.apk
+apkFileName: MiuiHome_test-4.22.0.2994-03111941.apk
 compressionType: false
 doNotCompress:
 - resources.arsc
@@ -406,5 +406,5 @@ usesFramework:
   tag: null
 version: 2.5.0-dirty
 versionInfo:
-  versionCode: '422002973'
-  versionName: ALPHA-4.22.0.2973-03051048
+  versionCode: '422002994'
+  versionName: ALPHA-4.22.0.2994-03111941

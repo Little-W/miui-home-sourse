@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Poistetaanko tämä kategoria?</string>
     <string name="delete_screen">Poista näyttö</string>
     <string name="delete_wallpaper_message">Poistetaanko %1$d taustakuva?</string>
+    <string name="deleted_system_applications">Poistetut järjestelmäsovellukset</string>
     <string name="deselect_all">Kumoa kaikkien valinta</string>
     <string name="disable_wallpaper_scroll">Poista sivuttain-vieritys käytöstä</string>
     <string name="download_action">Lataa</string>
@@ -471,7 +472,7 @@
     <string name="pref_render_in_truecolor_summary">Turning off this feature improves drawing performance.</string>
     <string name="pref_render_in_truecolor_title">Korkealaatuinen grafiikka</string>
     <string name="pref_screen_transformation_type_title">Näytön siirtymisen efekti</string>
-    <string name="pref_wallpaper_scroll_type_title">Taustakuvan kohdistaminen</string>
+    <string name="pref_wallpaper_scroll_type_title">Taustakuvan tasaaminen</string>
     <string name="preference_copied">%1$s kopioitiin leikepöydälle.</string>
     <string name="preferences_general_title">Lisäasetukset</string>
     <string name="preferences_title">Käynnistysohjelman asetukset</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Valitut sovellukset sisältävät järjestelmän tärkeimmät ominaisuudet. Voit poistaa vain niiden aloitusnäytön pikavalinnat.</string>
     <string name="remove_dialog_title_format">Poistetaanko \"%s\" aloitusnäytöltä?</string>
     <string name="remove_invalidate_gadget_tips">Yksi käyttämistäsi widgeteistä ei ole enää saatavilla. Voit lisätä toisen.</string>
+    <string name="remove_sys_app_content">Voit lisätä aloitusnäytön pikavalinnan uudelleen kohdassa Asetukset > Sovellukset > Hallitse aloitusnäytön pikavalintoja. Poistetaanko nyt?</string>
+    <string name="remove_sys_app_title">Poistetaanko aloitusnäytön pikavalinta?</string>
     <string name="reset_cate_tip_content">Jos jatkat, oletussovellusryhmät palautuvat. Jatketaanko silti?</string>
     <string name="reset_cate_tip_title">Palauta oletusryhmät</string>
     <string name="reset_description_first_time">Voit palauttaa sijoittelun paikasta %1$s 2 tunnin sisällä</string>

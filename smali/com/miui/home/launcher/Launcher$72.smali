@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 7497
+    .line 7522
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$72;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 7500
+    .line 7525
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$72;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$9100(Lcom/miui/home/launcher/Launcher;)Lcom/android/systemui/fsgesture/IFsGestureService;
@@ -58,14 +58,14 @@
 
     if-eqz v0, :cond_5
 
-    .line 7501
+    .line 7526
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->showBackGestureInEditingMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 7502
+    .line 7527
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$72;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$9200(Lcom/miui/home/launcher/Launcher;)Z
@@ -82,7 +82,7 @@
 
     if-nez v0, :cond_5
 
-    .line 7503
+    .line 7528
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$72;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -94,7 +94,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$72;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 7504
+    .line 7529
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->isFolderShowing()Z
 
     move-result v1
@@ -125,7 +125,7 @@
 
     sget-object v2, Lcom/miui/home/launcher/LauncherState;->OVERVIEW:Lcom/miui/home/recents/OverviewState;
 
-    .line 7505
+    .line 7530
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
 
     move-result v1
@@ -153,13 +153,13 @@
     :goto_0
     const/4 v1, 0x1
 
-    .line 7503
+    .line 7528
     :goto_1
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$9400(Lcom/miui/home/launcher/Launcher;Z)V
 
     goto :goto_2
 
-    .line 7508
+    .line 7533
     :cond_4
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$72;->this$0:Lcom/miui/home/launcher/Launcher;
 

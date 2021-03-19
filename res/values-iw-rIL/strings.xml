@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">למחוק את הקטגוריה הזו?</string>
     <string name="delete_screen">מחק מסך</string>
     <string name="delete_wallpaper_message">למחוק טפט %1$d?</string>
+    <string name="deleted_system_applications">יישומי מערכת שהוסרו</string>
     <string name="deselect_all">נקה בחירה מהכל</string>
     <string name="disable_wallpaper_scroll">מנע גלילה הצידה</string>
     <string name="download_action">הורדה</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">יישומים נבחרים מכילים תכונות מערכת חיוניות. אתה יכול להסיר ממסך הבית רק את קיצורי הדרך שלהם.</string>
     <string name="remove_dialog_title_format">להסיר את \"%s\" ממסך הבית?</string>
     <string name="remove_invalidate_gadget_tips">"אחד מהוויג'טים אינו זמין יותר. תוכל להוסיף אחד אחר."</string>
+    <string name="remove_sys_app_content">ניתן יהיה להוסיף את הקיצור למסך הבית מחדש תחת הגדרות > יישומים > ניהול קיצורי מסך הבית. להסיר עכשיו?</string>
+    <string name="remove_sys_app_title">להסיר את הקיצור ממסך הבית?</string>
     <string name="reset_cate_tip_content">המשך יביא לשחזור קבוצות ברירת המחדל לאפליקציות. להמשיך בכל זאת?</string>
     <string name="reset_cate_tip_title">שחזר את קבוצות ברירת המחדל</string>
     <string name="reset_description_first_time">ניתן לשחזר את הפריסה מ-%1$sבתוך שעתיים</string>

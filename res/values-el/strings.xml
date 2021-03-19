@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Διαγραφή αυτής της κατηγορίας;</string>
     <string name="delete_screen">Διαγραφή οθόνης</string>
     <string name="delete_wallpaper_message">Διαγραφή %1$d ταπετσαρίας;</string>
+    <string name="deleted_system_applications">Απεγκατεστημένες εφαρμογές συστήματος</string>
     <string name="deselect_all">Αποεπιλογή όλων</string>
     <string name="disable_wallpaper_scroll">Απενεργοποίηση πλάγιου ξεφυλλίσματος</string>
     <string name="download_action">Λήψη</string>
@@ -423,7 +424,7 @@
     <string name="navigation_type_full_screen">Χειρονομίες</string>
     <string name="navigation_type_title">Πλοήγηση συστήματος</string>
     <string name="navigation_type_virtual_key">Πλήκτρα</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">Αδυναμία σύνδεσης στο δίκτυο. Προσπαθήστε ξανά.</string>
     <string name="no_detail_page">Σελίδα χωρίς λεπτομέρειες</string>
     <string name="no_space_toast">Ανεπαρκής χώρος</string>
     <string name="no_space_toast_when_click_widget">Δεν υπάρχει αρκετός χώρος σε αυτή τη σελίδα. Προσπαθήστε να σύρετε αυτό το αντικείμενο σε άλλη σελίδα.</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Οι επιλεγμένες εφαρμογές περιέχουν βασικές λειτουργίες συστήματος. Μπορείτε να καταργήσετε μόνο τις Συντομεύσεις αρχικής οθόνης τους.</string>
     <string name="remove_dialog_title_format">Αφαίρεση \"%s\" από την Αρχική οθόνη;</string>
     <string name="remove_invalidate_gadget_tips">Ένα από τα widgets που χρησιμοποιείτε πλέον δεν διατίθεται. Μπορείτε να προσθέσετε ένα άλλο.</string>
+    <string name="remove_sys_app_content">Θα μπορείτε να προσθέσετε ξανά τη Συντόμευση αρχικής οθόνης στις Ρυθμίσεις > Εφαρμογές > Διαχείριση Συντομεύσεων αρχικής οθόνης. Αφαίρεση τώρα;</string>
+    <string name="remove_sys_app_title">Αφαίρεση Συντόμευσης αρχικής οθόνης;</string>
     <string name="reset_cate_tip_content">"Εάν συνεχίσετε, οι προεπιλεγμένες ομάδες εφαρμογών θα επανέλθουν. Συνέχεια παρ' όλα αυτά;"</string>
     <string name="reset_cate_tip_title">Επαναφορά προεπιλεγμένων ομάδων</string>
     <string name="reset_description_first_time">Μπορείτε να επαναφέρετε την διάταξη από %1$s μέσα σε 2 ώρες</string>
@@ -528,7 +531,7 @@
     <string name="reset_scene_prompt">Θα γίνει επαναφορά της οθόνης στην προεπιλεγμένη διάταξη.</string>
     <string name="reset_title">Επαναφορά</string>
     <string name="restore_icon_successful">Επιτυχία προσθήκης</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">Ρωσία</string>
     <string name="screen_cells_config_title">Διάταξη Αρχικής οθόνης</string>
     <string name="screen_locked_toast">Η διάταξη αρχικής οθόνης είναι κλειδωμένη.</string>
     <string name="screen_number">%d οθόνη</string>
@@ -538,7 +541,7 @@
     <string name="select_all">Επιλογή όλων</string>
     <string name="select_frame">Πλαίσιο</string>
     <string name="select_photo">Φωτογραφία</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">Παρουσιάστηκε σφάλμα διακομιστή. Περιμένετε ένα ή δύο λεπτά και προσπαθήστε ξανά.</string>
     <string name="setting_wallpaper_tip">Τσιμπήστε ή σαρώστε για διόρθωση</string>
     <string name="settings">Ρυθμίσεις</string>
     <string name="settings_shortcut">Ρυθμίσεις</string>

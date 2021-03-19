@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">Ushbu kategoriya o‘chirilsinmi?</string>
     <string name="delete_screen">Ekranni o‘chirish</string>
     <string name="delete_wallpaper_message">%1$d ta fon rasmi o‘chirilsinmi?</string>
+    <string name="deleted_system_applications">Tizim ilovalari o‘chirildi</string>
     <string name="deselect_all">Barchasini olib tashlash</string>
     <string name="disable_wallpaper_scroll">Fon rasmlarni o‘tkazishni o‘chirish</string>
     <string name="download_action">Yuklab olish</string>
@@ -394,7 +395,7 @@
     <string name="navigation_type_full_screen">Ishoralar</string>
     <string name="navigation_type_title">Tizim navigatsiyasi</string>
     <string name="navigation_type_virtual_key">Tugmalar</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">Tarmoqqa bog‘lanib bo‘lmadi. Takrorlang.</string>
     <string name="no_detail_page">Ma’lumotlar sahifasi yo‘q</string>
     <string name="no_space_toast">Joy yetarli emas</string>
     <string name="no_space_toast_when_click_widget">Ushbu sahifada joy yetarli emas. Ushbu ob‘ektni boshqa sahifaga ko‘chirib ko‘ring.</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">Tanlangan ilovalarda muhim tizim xususiyatlari mavjud. Siz faqat ularning Bosh ekran yorliqlarini olib tashlashingiz mumkin.</string>
     <string name="remove_dialog_title_format">\"%s\" Bosh ekrandan olib tashlansinmi?</string>
     <string name="remove_invalidate_gadget_tips">Siz foydalanadigan vidjetlardan biri endi mavjud emas. Siz boshqasini qo‘shishingiz mumkin.</string>
+    <string name="remove_sys_app_content">Bosh ekran yorlig‘ini yana Sozlamalar > Ilovalar > Bosh ekran yorliqlarini boshqarish bo‘limiga qo‘shishingiz mumkin. Hozir olib tashlansinmi?</string>
+    <string name="remove_sys_app_title">Yorliqni Bosh ekrandan o‘chirish?</string>
     <string name="reset_cate_tip_content">Agar davom ettirsangiz, birlamchi ilova guruhlari tiklanadi. Baribir davom etilsinmi?</string>
     <string name="reset_cate_tip_title">Birlamchi guruhlarga tiklash</string>
     <string name="reset_description_first_time">Ko‘rinishlarni %1$sdan 2 soat ichida tiklasangiz bo‘ladi</string>
@@ -497,7 +500,7 @@
     <string name="reset_scene_prompt">Bosh ekran birlamchiga qayta tiklanadi.</string>
     <string name="reset_title">Tiklash</string>
     <string name="restore_icon_successful">Muvaffaqiyatli qo‘shildi</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">Rossiya</string>
     <string name="screen_cells_config_title">Bosh ekran tori</string>
     <string name="screen_locked_toast">Bosh ekran ko‘rinishi qulflangan.</string>
     <string name="screen_number">%d ekran</string>
@@ -506,7 +509,7 @@
     <string name="select_all">Barchasini tanlash</string>
     <string name="select_frame">Ramka</string>
     <string name="select_photo">Rasm</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">Server xatosi. Birozdan keyin qaytadan ko‘ring.</string>
     <string name="setting_wallpaper_tip">Suring yoki kattaligini o‘zgartiring</string>
     <string name="settings">Sozlamalar</string>
     <string name="settings_shortcut">Sozlamalar</string>

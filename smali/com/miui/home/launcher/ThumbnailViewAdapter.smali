@@ -48,8 +48,8 @@
 
     :array_0
     .array-data 4
-        0x7f08025e
-        0x7f08025f
+        0x7f080270
+        0x7f080271
     .end array-data
 .end method
 

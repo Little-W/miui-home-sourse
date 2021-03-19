@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">इस कैटगरी को हटाएं?</string>
     <string name="delete_screen">स्क्रीन हटाएं</string>
     <string name="delete_wallpaper_message">%1$d वॉलपेपर हटाना चाहते हैं?</string>
+    <string name="deleted_system_applications">अनइंस्टॉल किए गए सिस्टम ऐप्स</string>
     <string name="deselect_all">सभी अचयनित करें</string>
     <string name="disable_wallpaper_scroll">साइड-स्क्रॉलिंग बंद करे</string>
     <string name="download_action">डाउनलोड करें</string>
@@ -423,7 +424,7 @@
     <string name="navigation_type_full_screen">इशारे</string>
     <string name="navigation_type_title">सिस्टम नेविगेशन</string>
     <string name="navigation_type_virtual_key">बटन</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">नेटवर्क से कनेक्ट नहीं किया जा सका, फिर से कोशिश करें</string>
     <string name="no_detail_page">विवरण पेज उपलब्ध नहीं</string>
     <string name="no_space_toast">पर्याप्त स्थान नहीं</string>
     <string name="no_space_toast_when_click_widget">इस पृष्ठ में पर्याप्त खाली जगह नहीं है. इस आइटम को दूसरे पृष्ठ पर ले जाकर देखें.</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">चुने गए ऐप्स में आवश्यक सिस्टम फ़ीचर हैं. आप सिर्फ़ इनके होम स्क्रीन शॉर्टकट को हटा सकते हैं.</string>
     <string name="remove_dialog_title_format">\"%s\" को होम स्क्रीन से निकालें?</string>
     <string name="remove_invalidate_gadget_tips">आपके द्वारा इस्तेमाल किए जा रहे विजेट में से एक अब उपलब्ध नहीं है. आप कोई नया विजेट जोड़ सकते हैं.</string>
+    <string name="remove_sys_app_content">आप होम स्क्रीन शॉर्टकट को दोबारा जोड़ सकते हैं. ऐसा आप सेटिंग्स > ऐप्स > होम स्क्रीन शॉर्टकट प्रबंधित करें में जाकर कर पाएंगे. अभी निकालें?</string>
+    <string name="remove_sys_app_title">क्या आप होम स्क्रीन शॉर्टकट को निकालना चाहते हैं?</string>
     <string name="reset_cate_tip_content">अगर आप जारी रखते हैं, तो डिफ़ॉल्ट ऐप्प समूह रीस्टोर कर दिए जाएंगे. फिर भी जारी रखें?</string>
     <string name="reset_cate_tip_title">डिफ़ॉल्ट समूहों को रीस्टोर करें</string>
     <string name="reset_description_first_time">आप लेआउट %1$s के 2 घंटे के भीतर पुनर्स्थापित कर सकते हैं</string>
@@ -528,7 +531,7 @@
     <string name="reset_scene_prompt">स्क्रीन डिफ़ॉल्ट लेआउट पर रीसेट हो जाएगा.</string>
     <string name="reset_title">पुनर्स्थापित करें</string>
     <string name="restore_icon_successful">जोड़ दिया गया है</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">रूस</string>
     <string name="screen_cells_config_title">होम स्क्रीन लेआउट</string>
     <string name="screen_locked_toast">होम स्क्रीन लेआउट लॉक है.</string>
     <string name="screen_number">%d स्क्रीन</string>
@@ -538,7 +541,7 @@
     <string name="select_all">सभी का चयन करें</string>
     <string name="select_frame">फ्रेम</string>
     <string name="select_photo">फ़ोटो</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">एक सर्वर त्रुटि आई है. कुछ देर रूककर फिर से कोशिश करें.</string>
     <string name="setting_wallpaper_tip">एडजस्ट करने के लिए चुटकी या स्वाइप करे</string>
     <string name="settings">सेटिंग्स</string>
     <string name="settings_shortcut">सेटिंग्स</string>

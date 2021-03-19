@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">Bu kateqoriya silinsin?</string>
     <string name="delete_screen">Ekranı sil</string>
     <string name="delete_wallpaper_message">%1$d divar kağızı silinsin?</string>
+    <string name="deleted_system_applications">Silinən sistem tətbiqləri</string>
     <string name="deselect_all">Bütün seçimləri ləğv et</string>
     <string name="disable_wallpaper_scroll">Üfüqi sürüşdürməni söndür</string>
     <string name="download_action">Endir</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">Seçilmiş tətbiqlər əsas sistem xüsusiyyətlərini ehtiva edir. Yalnız onların Əsas ekran qısayollarını silə bilərsiniz.</string>
     <string name="remove_dialog_title_format">%s Əsas ekrandan silinsin?</string>
     <string name="remove_invalidate_gadget_tips">İstifadə etdiyiniz vidjetlərdən biri artıq mövcud deyil. Başqa birini əlavə edə bilərsiniz.</string>
+    <string name="remove_sys_app_content">Tənzimləmələr > Tətbiqlər > Əsas ekran qısayollarını idarə et menysundan təkrar Əsas ekran qısayolunu əlavə edə biləcəksiniz. Hər halda silinsin?</string>
+    <string name="remove_sys_app_title">Əsas ekran qısayolu silinsin?</string>
     <string name="reset_cate_tip_content">Davam etsəniz, varsayılan tətbiq qrupları bərpa ediləcək. Hər halda davam edilisin?</string>
     <string name="reset_cate_tip_title">Varsayılan qrupları bərpa et</string>
     <string name="reset_description_first_time">Düzülüşü %1$s mənbəsindən 2 saat ərzində bərpa edə bilərsiniz</string>

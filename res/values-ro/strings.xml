@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Ștergeți această categorie?</string>
     <string name="delete_screen">Șterge ecran</string>
     <string name="delete_wallpaper_message">Şterge %1$d imagine de fundal?</string>
+    <string name="deleted_system_applications">Aplicații de sistem dezinstalate</string>
     <string name="deselect_all">Deselectează tot</string>
     <string name="disable_wallpaper_scroll">Dezactivați defilare pe margine</string>
     <string name="download_action">Descarcă</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Aplicațiile selectate conțin funcții esențiale ale sistemului. Puteți elimina doar comenzile rapide ale Ecranului principal.</string>
     <string name="remove_dialog_title_format">Eliminați \"%s\" din Ecranul principal?</string>
     <string name="remove_invalidate_gadget_tips">Unul dintre widget-urile pe care le utilizați nu mai este disponibil. Puteți adăuga altul.</string>
+    <string name="remove_sys_app_content">Veți putea adăuga din nou comanda rapidă pe Ecranul principal în Setări > Aplicații > Gestionează comenzi rapide pe Ecranul principal. Eliminați acum?</string>
+    <string name="remove_sys_app_title">Eliminați comanda rapidă pentru Ecranul principal?</string>
     <string name="reset_cate_tip_content">Dacă veți continua, grupurile implicite de aplicații vor fi restabilite. Continuați oricum?</string>
     <string name="reset_cate_tip_title">Restabiliți grupurile implicite</string>
     <string name="reset_description_first_time">Puteți restabili aspectul de la %1$s în decurs de 2 ore</string>

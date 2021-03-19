@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Dzēst šo kategoriju?</string>
     <string name="delete_screen">Dzēst ekrānu</string>
     <string name="delete_wallpaper_message">Dzēst %1$d ekrāna tapeti?</string>
+    <string name="deleted_system_applications">Atinstalētās sistēmas lietotnes</string>
     <string name="deselect_all">Neizvēlēt nevienu</string>
     <string name="disable_wallpaper_scroll">Izslēgt sānisku ritināšanu</string>
     <string name="download_action">Lejupielāde</string>
@@ -423,7 +424,7 @@
     <string name="navigation_type_full_screen">Žesti</string>
     <string name="navigation_type_title">Sistēmas navigācija</string>
     <string name="navigation_type_virtual_key">Pogas</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">Neizdevās pieslēgties tīklam. Mēģināt vēlreiz.</string>
     <string name="no_detail_page">Nav informācijas lappuses</string>
     <string name="no_space_toast">Nepietiek atmiņas</string>
     <string name="no_space_toast_when_click_widget">Šajā lapā nav pietiekami daudz vietas. Mēģiniet vilkt šo vienumu uz citu lapu.</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Izvēlētājās lietotnēs ir būtiskas sistēmas funkcijas. Varat noņemt tikai viņu Sākuma ekrāna saīsnes.</string>
     <string name="remove_dialog_title_format">Noņemt \"%s\" no Sākuma ekrāna?</string>
     <string name="remove_invalidate_gadget_tips">Viens no jūsu izmantotajiem logrīkiem vairs nav pieejams. Jūs varat pievienot vēl vienu.</string>
+    <string name="remove_sys_app_content">Jums būs iespējams atkal pievienot Sākuma ekrāna saīsni sadaļā Iestatījumi > Lietotnes > Pārvaldīt Sākuma ekrāna saīsnes. Noņemt tagad?</string>
+    <string name="remove_sys_app_title">Noņemt Sākuma ekrāna saīsni?</string>
     <string name="reset_cate_tip_content">Ja jūs turpināt, noklusējuma lietotņu grupas tiks atjaunotas. Vienalga turpināt?</string>
     <string name="reset_cate_tip_title">Atjaunot noklusējuma grupas</string>
     <string name="reset_description_first_time">Jūs varat atjaunot izkārtojumu no %1$s divu strundu laikā</string>
@@ -528,7 +531,7 @@
     <string name="reset_scene_prompt">Ekrāns tiks atiestatīts noklusējuma izkārtojumā.</string>
     <string name="reset_title">Atjaunot</string>
     <string name="restore_icon_successful">Veiksmīgi pievienots</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">Krievija</string>
     <string name="screen_cells_config_title">Sākuma ekrāna izkārtojums</string>
     <string name="screen_locked_toast">Sākuma ekrāna izkārtojums ir fiksēts.</string>
     <string name="screen_number">%d ekrāns</string>
@@ -538,7 +541,7 @@
     <string name="select_all">Izvēlēt visus</string>
     <string name="select_frame">Rāmis</string>
     <string name="select_photo">Foto</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">Radās servera kļūda. Pagaidiet pāris minūtes un mēģiniet vēlreiz.</string>
     <string name="setting_wallpaper_tip">Savelciet vai pavelciet, lai pielāgotu</string>
     <string name="settings">Iestatījumi</string>
     <string name="settings_shortcut">Iestatījumi</string>

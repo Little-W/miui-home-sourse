@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">¿Eliminar esta categoría?</string>
     <string name="delete_screen">Eliminar pantalla</string>
     <string name="delete_wallpaper_message">¿Eliminar %1$d fondo de pantalla?</string>
+    <string name="deleted_system_applications">Aplicaciones del sistema desinstaladas</string>
     <string name="deselect_all">Deseleccionar todo</string>
     <string name="disable_wallpaper_scroll">Desactivar desplazamiento entre pantallas</string>
     <string name="download_action">Descargar</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Las aplicaciones seleccionadas contienen funciones esenciales del sistema. Solo puedes eliminar tus accesos directos de la Pantalla de inicio.</string>
     <string name="remove_dialog_title_format">¿Eliminar \"%s\" de la Pantalla de inicio?</string>
     <string name="remove_invalidate_gadget_tips">Uno de los widgets que utilizas ya no está disponible. Puedes añadir otro.</string>
+    <string name="remove_sys_app_content">Podrás volver a añadir el acceso directo a la Pantalla de inicio en Ajustes > Aplicaciones > Gestionar accesos directos en la Pantalla de inicio. ¿Eliminar ahora?</string>
+    <string name="remove_sys_app_title">¿Eliminar el acceso directo de la Pantalla de inicio?</string>
     <string name="reset_cate_tip_content">Si continúas, los grupos de aplicaciones por defecto serán restaurados. ¿Continuar de todas formas?</string>
     <string name="reset_cate_tip_title">Restaurar grupos por defecto</string>
     <string name="reset_description_first_time">Puede restaurar el diseño de %1$s en 2 horas</string>

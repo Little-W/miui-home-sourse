@@ -189,6 +189,7 @@
     <string name="delete_category_dialog_title">بۇ گۇرۇپپىنى ئۆچۈرەمسىز؟</string>
     <string name="delete_screen">ئېكران ئۆچۈرۈش</string>
     <string name="delete_wallpaper_message">تاللىغان تەگلىكنى ئۆچۈرەمسىز؟</string>
+    <string name="deleted_system_applications">ئۆچۈرۈلگەن سىستېما ئەپلىرى</string>
     <string name="deselect_all">ھەممىنى تاللىماسلىق</string>
     <string name="disable_wallpaper_scroll">تەگلىك دومىلاش ھالىتىنى تاقاش</string>
     <string name="download_action">چۈشۈرۈش</string>
@@ -484,6 +485,8 @@
     <string name="remove_dialog_message">ئەپ سىستېما زۆرۈر ئىقتىدارىنى ئۆز ئىچىگە ئالغان، پەقەت ئېكران سىنبەلگىسىنى چىقىرىۋېتىشنى قوللايدۇ</string>
     <string name="remove_dialog_title_format">\"%s\" نى چىقىرىۋېتىش</string>
     <string name="remove_invalidate_gadget_tips">ئۈستەلدىكى قىستۇرمىنى تەمىنلىمىدى،قايتا قوشۇڭ</string>
+    <string name="remove_sys_app_content">سىستېما سىنبەلگىسىنى چىقىرىۋاتىدۇ، چىقىرىۋەتكەندىن كېيىن، تەڭشەك-ئەپ تەڭشىكى-ئېكران يۈزى سىنبەلگىسىنى باشقۇرۇشدىن قايتىدىن قوشسىڭىز بولىدۇ، چىقىرامسىز؟</string>
+    <string name="remove_sys_app_title">سىستېما ئەپ سىنبەلگىسىنى يۆتكەمسىز؟</string>
     <string name="reset_cate_tip_content">ئەسلىگە كەلتۈرگەندىن كېيىن ئەپنى گۇرۇپپىغا ئايرىش دەسلەپكى ھالەتكە قايتىدۇ،داۋاملاشتۇرامسىز؟</string>
     <string name="reset_cate_tip_title">ئەسلىگە قايتۇرۇش</string>
     <string name="reset_description_first_time">ئىككى سائەت ئىچىدە %1$s دىكى ئورۇنلاشتۇرۇشنى ئەسلىگە كەلتۈرەلەيدۇ</string>

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/GestureStubView;)V
     .locals 0
 
-    .line 171
+    .line 170
     iput-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 197
+    .line 196
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->access$100(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GestureStubView$H;
@@ -51,7 +51,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/GestureStubView$H;->removeMessages(I)V
 
-    .line 198
+    .line 197
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->access$100(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GestureStubView$H;
@@ -62,7 +62,7 @@
 
     goto :goto_0
 
-    .line 200
+    .line 199
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
@@ -74,7 +74,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/GestureBackArrowView;->setReadyFinish(Lcom/miui/home/recents/GestureBackArrowView$ReadyState;)V
 
-    .line 202
+    .line 201
     :goto_0
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
@@ -90,14 +90,14 @@
 .method public onSwipeStart(ZF)V
     .locals 5
 
-    .line 174
+    .line 173
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/miui/home/recents/GestureStubView;->access$402(Lcom/miui/home/recents/GestureStubView;Z)Z
 
-    .line 175
+    .line 174
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$200(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GestureBackArrowView;
@@ -108,14 +108,14 @@
 
     invoke-virtual {v0, v2}, Lcom/miui/home/recents/GestureBackArrowView;->setArrowFeedBackDone(Z)V
 
-    .line 176
+    .line 175
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$500(Lcom/miui/home/recents/GestureStubView;)V
 
     const-string v0, "GestureStubView"
 
-    .line 179
+    .line 178
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,7 +134,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 183
+    .line 182
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->access$200(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GestureBackArrowView;
@@ -143,12 +143,12 @@
 
     invoke-virtual {p1, v2}, Lcom/miui/home/recents/GestureBackArrowView;->setVisibility(I)V
 
-    .line 184
+    .line 183
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->access$600(Lcom/miui/home/recents/GestureStubView;)V
 
-    .line 185
+    .line 184
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->access$700(Lcom/miui/home/recents/GestureStubView;)Z
@@ -157,14 +157,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 186
+    .line 185
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {p1, p2}, Lcom/miui/home/recents/GestureStubView;->access$800(Lcom/miui/home/recents/GestureStubView;F)[I
 
     move-result-object p1
 
-    .line 187
+    .line 186
     iget-object p2, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {p2}, Lcom/miui/home/recents/GestureStubView;->access$200(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GestureBackArrowView;
@@ -189,7 +189,7 @@
 
     goto :goto_0
 
-    .line 189
+    .line 188
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
@@ -215,7 +215,7 @@
 
     const-string v1, "onSwipeStop"
 
-    .line 208
+    .line 207
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
@@ -224,7 +224,7 @@
 
     if-nez p3, :cond_1
 
-    .line 210
+    .line 209
     iget-object p3, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {p3}, Lcom/miui/home/recents/GestureStubView;->access$200(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GestureBackArrowView;
@@ -248,13 +248,13 @@
     :goto_0
     move p3, v1
 
-    .line 211
+    .line 210
     :goto_1
     iget-object v2, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {v2, v0}, Lcom/miui/home/recents/GestureStubView;->access$402(Lcom/miui/home/recents/GestureStubView;Z)Z
 
-    .line 212
+    .line 211
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$100(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GestureStubView$H;
@@ -277,7 +277,7 @@
 
     invoke-virtual {v0, v2, v3, v4}, Lcom/miui/home/recents/GestureStubView$H;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 214
+    .line 213
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     const/16 v2, 0x14
@@ -288,7 +288,7 @@
 
     if-nez v0, :cond_3
 
-    .line 215
+    .line 214
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$1000(Lcom/miui/home/recents/GestureStubView;)Z
@@ -297,7 +297,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 216
+    .line 215
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$200(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GestureBackArrowView;
@@ -310,7 +310,7 @@
 
     goto :goto_2
 
-    .line 218
+    .line 217
     :cond_2
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
@@ -326,7 +326,7 @@
     :goto_2
     if-eqz p1, :cond_5
 
-    .line 222
+    .line 221
     sget-object p1, Lcom/miui/home/recents/GestureStubView$3;->$SwitchMap$com$miui$home$recents$GestureBackArrowView$ReadyState:[I
 
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
@@ -349,7 +349,7 @@
 
     goto :goto_3
 
-    .line 227
+    .line 226
     :pswitch_0
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
@@ -371,7 +371,7 @@
 
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
-    .line 228
+    .line 227
     invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->access$1400(Lcom/miui/home/recents/GestureStubView;)Landroid/content/Context;
 
     move-result-object p1
@@ -388,7 +388,7 @@
 
     if-nez p1, :cond_5
 
-    .line 229
+    .line 228
     :cond_4
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
@@ -402,7 +402,7 @@
 
     goto :goto_3
 
-    .line 224
+    .line 223
     :pswitch_1
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
@@ -410,7 +410,7 @@
 
     invoke-static {p1, v0, p3}, Lcom/miui/home/recents/GestureStubView;->access$1100(Lcom/miui/home/recents/GestureStubView;IZ)V
 
-    .line 235
+    .line 234
     :cond_5
     :goto_3
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
@@ -423,7 +423,7 @@
 
     invoke-virtual {p1, p3}, Lcom/miui/home/recents/GestureStubView$H;->removeMessages(I)V
 
-    .line 236
+    .line 235
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->access$200(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GestureBackArrowView;
@@ -436,12 +436,12 @@
 
     iget-object p3, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
-    .line 237
+    .line 236
     invoke-static {p3}, Lcom/miui/home/recents/GestureStubView;->access$1700(Lcom/miui/home/recents/GestureStubView;)Landroid/animation/Animator$AnimatorListener;
 
     move-result-object p3
 
-    .line 236
+    .line 235
     invoke-virtual {p1, p2, p3}, Lcom/miui/home/recents/GestureBackArrowView;->onActionUp(FLandroid/animation/Animator$AnimatorListener;)V
 
     return-void
@@ -462,17 +462,17 @@
 
     const-string v1, "onSwipeStopDirect"
 
-    .line 243
+    .line 242
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 246
+    .line 245
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/miui/home/recents/GestureStubView;->access$402(Lcom/miui/home/recents/GestureStubView;Z)Z
 
-    .line 247
+    .line 246
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     const/4 v1, 0x4

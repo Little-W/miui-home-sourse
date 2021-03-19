@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">Padam kategori ini?</string>
     <string name="delete_screen">Padam skrin</string>
     <string name="delete_wallpaper_message">Buang %1$d latar hias?</string>
+    <string name="deleted_system_applications">Apl sistem yang dinyahpasang</string>
     <string name="deselect_all">Nyahpilih semua</string>
     <string name="disable_wallpaper_scroll">Matikan pusingan tepi</string>
     <string name="download_action">Muat turun</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">Apl terpilih mengandungi ciri sistem penting. Anda hanya boleh memadam pintasan Skrin Utama mereka.</string>
     <string name="remove_dialog_title_format">Padam %s dari Skrin Utama?</string>
     <string name="remove_invalidate_gadget_tips">Salah satu widget yang anda gunakan tidak lagi tersedia. Anda boleh menambah yang lain.</string>
+    <string name="remove_sys_app_content">Anda dapat menambahkan pintasan Skrin Utama sekali lagi dalam Tetapan > Apl > Urus pintasan Skrin Utama. Alih keluar sekarang?</string>
+    <string name="remove_sys_app_title">Padam pintasan Skrin Utama?</string>
     <string name="reset_cate_tip_content">Jika anda meneruskan, kumpulan apl lalai akan dipulihkan. Teruskan?</string>
     <string name="reset_cate_tip_title">Pulihkan kumpulan lalai</string>
     <string name="reset_description_first_time">Awda boleh memulih semula susun atur dari %1$s dalam tempoh 2 jam</string>

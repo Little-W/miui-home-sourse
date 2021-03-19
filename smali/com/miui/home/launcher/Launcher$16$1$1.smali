@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher$16$1;)V
     .locals 0
 
-    .line 2553
+    .line 2578
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$16$1$1;->this$2:Lcom/miui/home/launcher/Launcher$16$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 5
 
-    .line 2555
+    .line 2580
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$16$1$1;->this$2:Lcom/miui/home/launcher/Launcher$16$1;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$16$1;->this$1:Lcom/miui/home/launcher/Launcher$16;
@@ -57,7 +57,7 @@
 
     move-result-object v0
 
-    .line 2556
+    .line 2581
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$16$1$1;->this$2:Lcom/miui/home/launcher/Launcher$16$1;
 
     iget-object v1, v1, Lcom/miui/home/launcher/Launcher$16$1;->this$1:Lcom/miui/home/launcher/Launcher$16;
@@ -68,7 +68,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/FolderGridView;->smoothScrollToPosition(I)V
 
-    .line 2558
+    .line 2583
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$16$1$1;->this$2:Lcom/miui/home/launcher/Launcher$16$1;
 
     iget-object v1, v1, Lcom/miui/home/launcher/Launcher$16$1;->this$1:Lcom/miui/home/launcher/Launcher$16;
@@ -95,7 +95,7 @@
 
     double-to-int v1, v1
 
-    .line 2559
+    .line 2584
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
 
     move-result v2
@@ -111,7 +111,7 @@
     :cond_0
     const/16 v1, 0x1e
 
-    .line 2565
+    .line 2590
     :goto_0
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$16$1$1;->this$2:Lcom/miui/home/launcher/Launcher$16$1;
 
@@ -125,14 +125,14 @@
 
     invoke-static {v2, v3}, Lcom/miui/home/launcher/Launcher;->access$2802(Lcom/miui/home/launcher/Launcher;I)I
 
-    .line 2566
+    .line 2591
     new-instance v2, Lcom/miui/home/launcher/Launcher$16$1$1$1;
 
     invoke-direct {v2, p0, v0, v1}, Lcom/miui/home/launcher/Launcher$16$1$1$1;-><init>(Lcom/miui/home/launcher/Launcher$16$1$1;Lcom/miui/home/launcher/FolderGridView;I)V
 
     int-to-long v3, v1
 
-    .line 2582
+    .line 2607
     invoke-virtual {v0, v2, v3, v4}, Lcom/miui/home/launcher/FolderGridView;->postOnAnimationDelayed(Ljava/lang/Runnable;J)V
 
     return-void

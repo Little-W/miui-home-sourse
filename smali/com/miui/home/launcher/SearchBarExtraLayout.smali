@@ -109,3 +109,14 @@
 
     return-void
 .end method
+
+.method public refreshStyle()V
+    .locals 1
+
+    .line 40
+    iget-object v0, p0, Lcom/miui/home/launcher/SearchBarExtraLayout;->mXiaoaiLayout:Lcom/miui/home/launcher/SearchBarXiaoaiLayout;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->refreshStyle()V
+
+    return-void
+.end method

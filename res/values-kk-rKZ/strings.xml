@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">Осы категория жойылсын ба?</string>
     <string name="delete_screen">Экранды жою</string>
     <string name="delete_wallpaper_message">%1$d тұсқағаз жойылсын ба?</string>
+    <string name="deleted_system_applications">Жойылған жүйе қолданбалары</string>
     <string name="deselect_all">Таңдауды алып тастау</string>
     <string name="disable_wallpaper_scroll">Тұсқағаздарды айналдыруды ажырату</string>
     <string name="download_action">Жүктеу</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">Таңдалған қолданбаларда жүйенің маңызды функциялары бар. Сіз олардың Басты экран таңбашасын ғана жоя аласыз.</string>
     <string name="remove_dialog_title_format">\"%s\" Басты экраннан жойылсын ба?</string>
     <string name="remove_invalidate_gadget_tips">Сіз қолданатын виджеттердің бірі енді қол жетімді емес. Тағы біреуін қосуға болады.</string>
+    <string name="remove_sys_app_content">Сіз Басты экран таңбашасын қайтадан Параметрлер > Қолданбалар > Басты экран таңбашаларын басқару жолы арқылы қоса аласыз. Қазір жойылсын ба?</string>
+    <string name="remove_sys_app_title">Басты экран таңбашасы жойылсын ба?</string>
     <string name="reset_cate_tip_content">Егер жалғастырсаңыз, әдепкі қолданба топтары қалпына келтіріледі. Бәрібір жалғастырғыңыз келеді ме?</string>
     <string name="reset_cate_tip_title">Әдепкі топтарды қалпына келтіру</string>
     <string name="reset_description_first_time">Макетті %1$s 2 сағат ішінде қалпына келтіре аласыз</string>

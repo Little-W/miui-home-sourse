@@ -704,7 +704,7 @@
     .line 140
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mMenuTransEffect:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f080150
+    const v1, 0x7f080159
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
@@ -719,7 +719,7 @@
     .line 143
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mMenuTransEffect:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f08014f
+    const v1, 0x7f080158
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 

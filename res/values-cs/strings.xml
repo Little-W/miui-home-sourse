@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Odstranit tuto kategorii?</string>
     <string name="delete_screen">Odstranit obrazovku</string>
     <string name="delete_wallpaper_message">Odstranit %1$d tapetu?</string>
+    <string name="deleted_system_applications">Odinstalované systémové aplikace</string>
     <string name="deselect_all">Zrušit výběr</string>
     <string name="disable_wallpaper_scroll">Zakázat posouvání tapety</string>
     <string name="download_action">Stáhnout</string>
@@ -423,7 +424,7 @@
     <string name="navigation_type_full_screen">Gesta</string>
     <string name="navigation_type_title">Systémová navigace</string>
     <string name="navigation_type_virtual_key">Tlačítka</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">Nelze se připojit k síti. Zkuste to znovu později.</string>
     <string name="no_detail_page">Žádná stránka s podrobnostmi</string>
     <string name="no_space_toast">Nedostatek místa</string>
     <string name="no_space_toast_when_click_widget">Na této stránce není dostatek volného místa. Zkuste položku přesunout na jinou stránku.</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Vybrané aplikace obsahují základní systémové funkce. Můžete odebrat pouze jejich zástupce z Domovské obrazovky.</string>
     <string name="remove_dialog_title_format">Odebrat \"%s\" z Domovské obrazovky?</string>
     <string name="remove_invalidate_gadget_tips">Jeden z widgetů, který využíváte již není dostupný. Můžete místo něj přidat jiný.</string>
+    <string name="remove_sys_app_content">Zástupce na Domovské obrazovce budete moci znovu přidat v Nastavení > Aplikace > Správa zástupců na Domovské obrazovce. Odebrat nyní?</string>
+    <string name="remove_sys_app_title">Odebrat zástupce z Domovské obrazovky?</string>
     <string name="reset_cate_tip_content">Při pokračování budou skupiny aplikací obnoveny do výchozího nastavení. Přesto pokračovat?</string>
     <string name="reset_cate_tip_title">Obnovit výchozí skupiny</string>
     <string name="reset_description_first_time">Rozložení můžete obnovit do 2 hodin od %1$s</string>
@@ -528,7 +531,7 @@
     <string name="reset_scene_prompt">Obrazovka bude obnovena do výchozího rozložení.</string>
     <string name="reset_title">Obnovit</string>
     <string name="restore_icon_successful">Úspěšně přidáno</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">Rusko</string>
     <string name="screen_cells_config_title">Rozložení Domovské obrazovky</string>
     <string name="screen_locked_toast">Rozložení Domovské obrazovky je uzamčeno.</string>
     <string name="screen_number">%d obrazovka</string>
@@ -538,7 +541,7 @@
     <string name="select_all">Vybrat vše</string>
     <string name="select_frame">Rámeček</string>
     <string name="select_photo">Fotografie</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">Došlo k chybě serveru. Počkejte chvíli a zkuste to znovu.</string>
     <string name="setting_wallpaper_tip">Upravte tapetu stažením nebo roztažením</string>
     <string name="settings">Nastavení</string>
     <string name="settings_shortcut">Nastavení</string>

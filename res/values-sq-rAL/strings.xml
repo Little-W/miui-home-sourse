@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">Fshi këtë kategori?</string>
     <string name="delete_screen">Fshij ekranin</string>
     <string name="delete_wallpaper_message">Fshij %1$d imazhin e sfondit?</string>
+    <string name="deleted_system_applications">Aplikacione sistemi te cinstaluara</string>
     <string name="deselect_all">"Ç'zgjidh të gjithë"</string>
     <string name="disable_wallpaper_scroll">Fik lëvizjen anësore</string>
     <string name="download_action">Shkarko</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">Aplikacionet e zgjedhura përmbajnë veçori thelbësore të sistemit. Mund të hiqni vetëm shkurtesat e tyre të Ekranit Home.</string>
     <string name="remove_dialog_title_format">Të hiqet \"%s\" nga ekrani bazë?</string>
     <string name="remove_invalidate_gadget_tips">Një nga widget-ët që përdor ti nuk disponohet më. Mund të shtosh një tjetër.</string>
+    <string name="remove_sys_app_content">Do të jeni në gjendje të shtoni përsëri shkurtoren e Ekranit baze në Cilësimet > Aplikacionet > Menaxho shkurtoret e ekranit bazë. Të hiqet tani?</string>
+    <string name="remove_sys_app_title">Të hiqet shkurtorja e Ekranit baze?</string>
     <string name="reset_cate_tip_content">Nëse vazhdon, aplikacioni i parazgjedhur do të rivendoset. Vazhdo gjithsesi?</string>
     <string name="reset_cate_tip_title">Rikthe grupet e parazgjedhur</string>
     <string name="reset_description_first_time">Mund të rikthesh strukturën nga %1$s brenda 2 orësh</string>

@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Выдаліць гэтую катэгорыю?</string>
     <string name="delete_screen">Выдаліць экран</string>
     <string name="delete_wallpaper_message">Выдаліць шпалеры (%1$d)?</string>
+    <string name="deleted_system_applications">Неўсталяваныя сістэмныя праграмы</string>
     <string name="deselect_all">Зняць выбар</string>
     <string name="disable_wallpaper_scroll">Адключыць пракрутку шпалер</string>
     <string name="download_action">Спампаваць</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Выбраныя праграмы ўтрымліваюць важныя сістэмныя функцыі. Вы можаце выдаліць толькі іх ярлыкі з працоўнага стала.</string>
     <string name="remove_dialog_title_format">Выдаліць %s з Працоўнага стала?</string>
     <string name="remove_invalidate_gadget_tips">Адзін з выкарыстоўваных вамі віджэтаў больш не даступны. Вы можаце выбраць іншы віджэт.</string>
+    <string name="remove_sys_app_content">Вы зноў зможаце дадаць ярлык на галоўны экран у Наладах > Праграмы > Кіраванне ярлыкамі на Галоўным экране. Выдаліць зараз?</string>
+    <string name="remove_sys_app_title">Выдаліць ярлык з Галоўнага экрана?</string>
     <string name="reset_cate_tip_content">Будуць адноўлены групы праграм па змаўчанні. Усё роўна працягнуць?</string>
     <string name="reset_cate_tip_title">Аднавіць групы па змаўчанні</string>
     <string name="reset_description_first_time">Вы можаце аднавіць макет з %1$s на працягу 2 гадзін</string>

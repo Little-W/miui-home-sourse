@@ -146,7 +146,7 @@
 .method static synthetic lambda$null$0(Lcom/miui/home/launcher/Launcher;)V
     .locals 2
 
-    const v0, 0x7f100233
+    const v0, 0x7f100236
 
     const/4 v1, 0x0
 

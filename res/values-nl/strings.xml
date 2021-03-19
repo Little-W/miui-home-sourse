@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Deze categorie verwijderen?</string>
     <string name="delete_screen">Scherm verwijderen</string>
     <string name="delete_wallpaper_message">%1$d achtergrond verwijderen?</string>
+    <string name="deleted_system_applications">Verwijderde systeem-apps</string>
     <string name="deselect_all">Alles deselecteren</string>
     <string name="disable_wallpaper_scroll">Achtergrond scrollen uitschakelen</string>
     <string name="download_action">Downloaden</string>
@@ -252,7 +253,7 @@
     <string name="editing_tips">Startscherm bewerken</string>
     <string name="emptyplaylist">Tik om nummers toe te voegen</string>
     <string name="enable_wallpaper_scroll">Achtergrond scrollen inschakelen</string>
-    <string name="encryption">Encryptie</string>
+    <string name="encryption">Versleuteling</string>
     <string name="expand_button_title">Geavanceerd</string>
     <string name="failed_to_delete_temporary">Kan niet verwijderen</string>
     <string name="failed_to_drop">Kan niet verplaatsen</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Geselecteerde apps bevatten essentiële systeemfuncties. U kunt alleen hun Startscherm snelkoppelingen verwijderen.</string>
     <string name="remove_dialog_title_format">\"%s\" verwijderen uit het Startscherm?</string>
     <string name="remove_invalidate_gadget_tips">Een van de widgets die u gebruikt is niet meer beschikbaar. U kunt een andere toevoegen.</string>
+    <string name="remove_sys_app_content">U kunt de Startscherm snelkoppeling opnieuw toevoegen in Instellingen > Apps > Startscherm snelkoppelingen beheren. Nu verwijderen?</string>
+    <string name="remove_sys_app_title">Startscherm snelkoppeling verwijderen?</string>
     <string name="reset_cate_tip_content">Als u verdergaat, zullen alle standaard app-groepen worden hersteld. Toch verdergaan?</string>
     <string name="reset_cate_tip_title">Standaard groepen herstellen</string>
     <string name="reset_description_first_time">U kunt de lay-out van %1$s binnen 2 uur herstellen</string>

@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Xóa thể loại này?</string>
     <string name="delete_screen">Xóa màn hình</string>
     <string name="delete_wallpaper_message">Xóa %1$d hình nền?</string>
+    <string name="deleted_system_applications">Ứng dụng hệ thống đã gỡ cài đặt</string>
     <string name="deselect_all">Bỏ chọn tất cả</string>
     <string name="disable_wallpaper_scroll">Tắt cuộn ảnh hình nền</string>
     <string name="download_action">Tải xuống</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Các ứng dụng đã chọn chứa tính năng hệ thống cần thiết. Bạn chỉ có thể xóa lối tắt trên Màn hình chính.</string>
     <string name="remove_dialog_title_format">Xóa \"%s\" khỏi Màn hình chính?</string>
     <string name="remove_invalidate_gadget_tips">Một trong những tiện ích bạn sử dụng không còn tồn tại. Bạn có thể thêm cái khác.</string>
+    <string name="remove_sys_app_content">Bạn sẽ có thể thêm lại lối tắt Màn hình chính trong Cài đặt > Ứng dụng > Quản lý lối tắt Màn hình chính. Xóa ngay?</string>
+    <string name="remove_sys_app_title">Xóa lối tắt Màn hình chính?</string>
     <string name="reset_cate_tip_content">Nếu bạn tiếp tục, các nhóm ứng dụng mặc định sẽ được khôi phục. Vẫn tiếp tục?</string>
     <string name="reset_cate_tip_title">Khôi phục nhóm mặc định</string>
     <string name="reset_description_first_time">Bạn có thể khôi phục bố cục từ %1$s trong vòng 2 giờ</string>

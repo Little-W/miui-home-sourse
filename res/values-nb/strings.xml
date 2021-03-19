@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Slette denne kategorien?</string>
     <string name="delete_screen">Slett skjerm</string>
     <string name="delete_wallpaper_message">Slette %1$d bakgrunn?</string>
+    <string name="deleted_system_applications">Avinstallerte systemapper</string>
     <string name="deselect_all">Fjern alle valg</string>
     <string name="disable_wallpaper_scroll">Skru av siderulling</string>
     <string name="download_action">Last ned</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Utvalgte apper inneholder viktige systemfunksjoner. Du kan bare fjerne snarveiene på startskjermen.</string>
     <string name="remove_dialog_title_format">Fjern \"%s\" fra hjemmeskjermen?</string>
     <string name="remove_invalidate_gadget_tips">En av widgetene du bruker er ikke lenger tilgjengelig. Du kan legge til en annen.</string>
+    <string name="remove_sys_app_content">Du kan legge til snarveien på startskjermen igjen under Innstillinger > Apper > Administrer snarveier på startskjermen. Fjerne nå?</string>
+    <string name="remove_sys_app_title">Fjerne snarveien på startskjermen?</string>
     <string name="reset_cate_tip_content">Hvis du fortsetter, blir alle appgrupper gjenopprettet. Fortsette likevel?</string>
     <string name="reset_cate_tip_title">Gjenopprett standardgrupper</string>
     <string name="reset_description_first_time">Du kan gjenopprette oppsettet fra %1$s innen 2 timer</string>

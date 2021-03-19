@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">このカテゴリーを削除しますか？</string>
     <string name="delete_screen">画面を削除</string>
     <string name="delete_wallpaper_message">%1$d枚の壁紙を削除しますか？</string>
+    <string name="deleted_system_applications">アンインストールしたシステムアプリ</string>
     <string name="deselect_all">すべての選択を解除</string>
     <string name="disable_wallpaper_scroll">サイドスクロールをオフにする</string>
     <string name="download_action">ダウンロード</string>
@@ -423,7 +424,7 @@
     <string name="navigation_type_full_screen">ジェスチャー</string>
     <string name="navigation_type_title">システムナビゲーション</string>
     <string name="navigation_type_virtual_key">ボタン</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">ネットワークに接続できませんでした。もう一度お試しください。</string>
     <string name="no_detail_page">詳細ページはありません</string>
     <string name="no_space_toast">スペースが足りません</string>
     <string name="no_space_toast_when_click_widget">このページには十分なスペースがありません。このアイテムを別のページにドラッグしてください。</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">選択したアプリには、システムに不可欠な機能が含まれています。ホーム画面のショートカットだけを削除することができます。</string>
     <string name="remove_dialog_title_format">\"%s\"をホーム画面から削除しますか？</string>
     <string name="remove_invalidate_gadget_tips">使用しているウィジェットの1つが使用できなくなりました。別のものを追加できます。</string>
+    <string name="remove_sys_app_content">ホーム画面ショートカットは、[設定] > [アプリ] > [ホーム画面ショートカットを管理] から再度追加することができます。今すぐ削除しますか？</string>
+    <string name="remove_sys_app_title">ホーム画面ショートカットを削除しますか？</string>
     <string name="reset_cate_tip_content">続けると、デフォルトのアプリグループが復元されます。続けてもよろしいですか？</string>
     <string name="reset_cate_tip_title">デフォルトのグループを復元</string>
     <string name="reset_description_first_time">%1$sから2時間以内にレイアウトを復元できます</string>
@@ -528,7 +531,7 @@
     <string name="reset_scene_prompt">画面はデフォルトのレイアウトにリセットされます。</string>
     <string name="reset_title">復元</string>
     <string name="restore_icon_successful">正常に追加されました</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">ロシア</string>
     <string name="screen_cells_config_title">ホーム画面のレイアウト</string>
     <string name="screen_locked_toast">ホーム画面のレイアウトはロックされています。</string>
     <string name="screen_number">%d番目の画面</string>
@@ -538,7 +541,7 @@
     <string name="select_all">すべて選択</string>
     <string name="select_frame">フレーム</string>
     <string name="select_photo">写真</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">サーバーエラーが発生しました。1、2分待ってからもう一度お試しください。</string>
     <string name="setting_wallpaper_tip">ピンチまたはスワイプして調整</string>
     <string name="settings">設定</string>
     <string name="settings_shortcut">設定</string>

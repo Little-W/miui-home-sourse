@@ -122,7 +122,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/view/LauncherActionBar;
 
-    const v1, 0x7f100287
+    const v1, 0x7f10028a
 
     .line 39
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/view/LauncherActionBar;->setTitle(I)V

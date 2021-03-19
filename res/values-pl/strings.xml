@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Usunąć tę kategorię?</string>
     <string name="delete_screen">Usuń ekran</string>
     <string name="delete_wallpaper_message">Usunąć %1$d tapetę?</string>
+    <string name="deleted_system_applications">Odinstalowane aplikacje systemowe</string>
     <string name="deselect_all">Odznacz wszystko</string>
     <string name="disable_wallpaper_scroll">Wyłącz przewijanie tapety</string>
     <string name="download_action">Pobierz</string>
@@ -423,7 +424,7 @@
     <string name="navigation_type_full_screen">Gesty</string>
     <string name="navigation_type_title">Nawigacja systemowa</string>
     <string name="navigation_type_virtual_key">Przyciski</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">Nie udało się połączyć z siecią. Spróbuj ponownie.</string>
     <string name="no_detail_page">Brak strony szczegółów</string>
     <string name="no_space_toast">Brak wystarczającej ilości miejsca</string>
     <string name="no_space_toast_when_click_widget">Niewystarczająca ilość miejsca na tej stronie. Spróbuj przeciągnąć element na inną stronę.</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Wybrane aplikacje zawierają istotne funkcje systemowe. Możesz usunąć ich skróty tylko z ekranu głównego.</string>
     <string name="remove_dialog_title_format">Usunąć \"%s\" z Ekranu głównego?</string>
     <string name="remove_invalidate_gadget_tips">Jeden z widżetów, z którego korzystasz, nie jest już dostępny. Możesz dodać inny.</string>
+    <string name="remove_sys_app_content">Będziesz mógł ponownie dodać skrót do ekranu głównego w Ustawienia > Aplikacje > Zarządzaj skrótami na ekranie głównym. Usunąć teraz?</string>
+    <string name="remove_sys_app_title">Usunąć skrót z ekranu głównego?</string>
     <string name="reset_cate_tip_content">Jeśli będziesz kontynuować, zostaną przywrócone domyślne grupy aplikacji. Kontynuować mimo to?</string>
     <string name="reset_cate_tip_title">Przywróć domyślne grupy</string>
     <string name="reset_description_first_time">Możesz przywrócić układ z %1$s w ciągu 2 godzin</string>
@@ -528,7 +531,7 @@
     <string name="reset_scene_prompt">Zostanie przywrócony domyślny motyw pulpitu</string>
     <string name="reset_title">Przywróć</string>
     <string name="restore_icon_successful">Pomyślnie dodano</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">Rosja</string>
     <string name="screen_cells_config_title">Układ ekranu głównego</string>
     <string name="screen_locked_toast">Układ ekranu głównego jest zablokowany.</string>
     <string name="screen_number">Ekran %d</string>
@@ -538,7 +541,7 @@
     <string name="select_all">Zaznacz wszystko</string>
     <string name="select_frame">Ramka</string>
     <string name="select_photo">Zdjęcie</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">Wystąpił błąd po stronie serwera. Poczekaj minutę lub dwie i spróbuj ponownie.</string>
     <string name="setting_wallpaper_tip">Uszczypnij i przesuń, aby dostosować</string>
     <string name="settings">Ustawienia</string>
     <string name="settings_shortcut">Ustawienia</string>

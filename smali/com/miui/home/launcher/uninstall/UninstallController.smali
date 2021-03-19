@@ -499,7 +499,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/uninstall/DeleteDialog;->setPositiveConsumer(Ljava/util/function/Consumer;)V
 
-    const p0, 0x7f10026e
+    const p0, 0x7f100271
 
     .line 243
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/uninstall/DeleteDialog;->setPositiveButTitle(I)V
@@ -841,7 +841,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/uninstall/RemoveDialog;->setPositiveConsumer(Ljava/util/function/Consumer;)V
 
-    const p1, 0x7f10025d
+    const p1, 0x7f100260
 
     .line 140
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/uninstall/RemoveDialog;->setPositiveButTitle(I)V

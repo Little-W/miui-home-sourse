@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">حذف هذه الفئة؟</string>
     <string name="delete_screen">حذف الشاشة</string>
     <string name="delete_wallpaper_message">حذف %1$d خلفية؟</string>
+    <string name="deleted_system_applications">إلغاء تثبيت تطبيقات النظام</string>
     <string name="deselect_all">الغاء تحديد الكل</string>
     <string name="disable_wallpaper_scroll">إيقاف التمرير الجانبي</string>
     <string name="download_action">تنزيل</string>
@@ -335,7 +336,7 @@
     <string name="is_setting_wallpaper_message">جارٍ تعيين خلفية الشاشة…</string>
     <string name="is_system_wallpaper_message">لا يمكن حذف موارد النظام</string>
     <string name="key_shortcut_settings_title">إختصارات الأزرار</string>
-    <string name="launcher_icon_management">مدير الاختصارات على الشاشة الرئيسية</string>
+    <string name="launcher_icon_management">إدارة اختصارات الشاشة الرئيسية</string>
     <string name="launcher_not_exist">حدث خطأ ما، ارجع إلى الشاشة الرئيسية ثم حاول مجددا.</string>
     <string name="launcher_pull_down_title">مرّر لأسفل على الشاشة الرئيسية</string>
     <string name="launcher_search_bar_title">شريط البحث على الشاشة الرئيسية</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">تحتوي التطبيقات المحددة على وظائف النظام الأساسية. يمكنك فقط إزالة اختصاراتهم من الشاشة الرئيسية.</string>
     <string name="remove_dialog_title_format">هل ترغب في إزالة \"%s\" من الشاشة الرئيسية؟</string>
     <string name="remove_invalidate_gadget_tips">أحدى التطبيقات المصغرة التي تستخدمها لم تعد متاحة. يمكنك إضافة واحد آخر.</string>
+    <string name="remove_sys_app_content">ستتمكن من إعادة إضافة الاختصار على الشاشة الرئيسية من الإعدادات > التطبيقات > إدارة اختصارات الشاشة الرئيسية. هل ترغب إزالته الآن؟</string>
+    <string name="remove_sys_app_title">هل تريد إزالة الاختصار من الشاشة الرئيسية؟</string>
     <string name="reset_cate_tip_content">سيتم استعادة مجموعات التطبيق الافتراضية. هل تريد المتابعة؟</string>
     <string name="reset_cate_tip_title">استعادة المجموعات الافتراضيه</string>
     <string name="reset_description_first_time">يمكنك استعادة التنسيق من %1$s خلال ساعتين</string>

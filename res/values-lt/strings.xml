@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Trinti šią kategoriją?</string>
     <string name="delete_screen">Trinti ekraną</string>
     <string name="delete_wallpaper_message">Trinti %1$d foną?</string>
+    <string name="deleted_system_applications">Išdiegtos sisteminės programos</string>
     <string name="deselect_all">Atžymėti viską</string>
     <string name="disable_wallpaper_scroll">Išjungti šoninį slinkimą</string>
     <string name="download_action">Atsiųsti</string>
@@ -423,7 +424,7 @@
     <string name="navigation_type_full_screen">Gestai</string>
     <string name="navigation_type_title">Sistemos naršymas</string>
     <string name="navigation_type_virtual_key">Mygtukai</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">Nepavyksta prisijungti prie tinklo. Bandykite dar kartą.</string>
     <string name="no_detail_page">Nėra išsam. info puslapio</string>
     <string name="no_space_toast">Trūksta vietos</string>
     <string name="no_space_toast_when_click_widget">Šiame puslapyje nepakanka vietos. Pamėginkite vilkti šį elementą į kitą puslapį.</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Pasirinktose programose pateiktos būtinosios sisteminės funkcijos. Gali būti pašalintos tik šių programų pagrindinio ekrano nuorodos.</string>
     <string name="remove_dialog_title_format">Pašalinti „%s“ iš pagrindinio ekrano?</string>
     <string name="remove_invalidate_gadget_tips">Vienas iš valdiklių nepasiekiamas. Vietoj jo galite pridėti kitą.</string>
+    <string name="remove_sys_app_content">Vėl galėsite pridėti pagrindinio ekrano nuorodą skiltyje parametrai > programos > tvarkyti pagrindinio ekrano nuorodas. Pašalinti dabar?</string>
+    <string name="remove_sys_app_title">Pašalinti pagrindinio ekrano nuorodą?</string>
     <string name="reset_cate_tip_content">Jei tęsite, bus atkurtos numatytosios programų grupės. Vis tiek tęsti?</string>
     <string name="reset_cate_tip_title">Atstatyti numatytąsias grupes</string>
     <string name="reset_description_first_time">Galite atkurti išdėstymą per 2 valandas iš %1$s</string>
@@ -528,7 +531,7 @@
     <string name="reset_scene_prompt">Ekranas bus atstatytas į numatytąjį išdėstymą.</string>
     <string name="reset_title">Atkurti</string>
     <string name="restore_icon_successful">Sėkmingai sukurta</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">Rusija</string>
     <string name="screen_cells_config_title">Pagrindinio ekrano išdėstymas</string>
     <string name="screen_locked_toast">Pagrindinio ekrano išdėstymas įtvirtintas.</string>
     <string name="screen_number">%d ekranas</string>
@@ -538,7 +541,7 @@
     <string name="select_all">Žymėti viską</string>
     <string name="select_frame">Rėmas</string>
     <string name="select_photo">Nuotrauka</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">Įvyko serverio klaida. Minutėlę palaukite ir pabandykite dar kartą.</string>
     <string name="setting_wallpaper_tip">Suimkite arba slinkite, kad derintumėte</string>
     <string name="settings">Parametrai</string>
     <string name="settings_shortcut">Parametrai</string>

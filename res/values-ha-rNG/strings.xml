@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">A share wannan sashi?</string>
     <string name="delete_screen">Cire allon</string>
     <string name="delete_wallpaper_message">Share%1$d hoton fuskar allon?</string>
+    <string name="deleted_system_applications">Manhajar sistem da aka cire</string>
     <string name="deselect_all">Cire alamar zabi ma duka</string>
     <string name="disable_wallpaper_scroll">Kashe gungurawa na gefe</string>
     <string name="download_action">Saukewa</string>
@@ -394,7 +395,7 @@
     <string name="navigation_type_full_screen">Tabin umarni</string>
     <string name="navigation_type_title">Sistem na kewayawa</string>
     <string name="navigation_type_virtual_key">Madanni</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">Ya kasa hadawa da hanyar sadarwa. Sake gwadawa.</string>
     <string name="no_detail_page">Babu shafin karin bayani</string>
     <string name="no_space_toast">Babu isashen sarari</string>
     <string name="no_space_toast_when_click_widget">Babu isashen sarari akan wannan shafin. Yi kokari ka ja wannan abu zuwa wani shafi daban.</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">Manhajar da aka zaɓa sun ƙunshi mahimman fasali na sistem. Kuna iya cire Gajeren hanyan Allon farkon su.</string>
     <string name="remove_dialog_title_format">Cire\"%s\" daga Allon farko?</string>
     <string name="remove_invalidate_gadget_tips">Babu daya daga cikin wijet din da kake amfani dashi. Ka na iya kara wani daban.</string>
+    <string name="remove_sys_app_content">Za ku iya ƙara Gajeren hanyan Allon farko a cikin Saittuna > Manhaja >; Sarrafa Gajeren hanyan Allon farko. Cire yanzu?</string>
+    <string name="remove_sys_app_title">Ya cire gajeren hanyan Allon farko?</string>
     <string name="reset_cate_tip_content">Idan ka ci gaba, za sake maido da kungiyar manhaja na asali. Ya ci gaba duk da haka?</string>
     <string name="reset_cate_tip_title">Miado da kungiya na asali</string>
     <string name="reset_description_first_time">Ka na iya maido na nunawa daga %1$s tsakanin awowi 2</string>
@@ -497,7 +500,7 @@
     <string name="reset_scene_prompt">Allon zai sake seti zuwa siffa na asali.</string>
     <string name="reset_title">Maidowa</string>
     <string name="restore_icon_successful">An kara a jerin waƙoƙi</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">Rasha</string>
     <string name="screen_cells_config_title">Nunin Allon farko</string>
     <string name="screen_locked_toast">An kulle nunin allon kulle.</string>
     <string name="screen_number">Allon %d</string>
@@ -506,7 +509,7 @@
     <string name="select_all">Zabi duka</string>
     <string name="select_frame">Firam</string>
     <string name="select_photo">Hoto</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">Kuskure na saba ya auku. Dakata minti daya ko biyu sai ka gwada kuma.</string>
     <string name="setting_wallpaper_tip">Tsunkule ko kuma ka jawo dan saitawa daidai</string>
     <string name="settings">Saittuna</string>
     <string name="settings_shortcut">Saittuna</string>

@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">این دسته‌بندی حذف شود؟</string>
     <string name="delete_screen">حذف نمایشگر</string>
     <string name="delete_wallpaper_message">%1$d تصویر زمینه حذف شود؟</string>
+    <string name="deleted_system_applications">برنامه‌های سیستمی حذف شده</string>
     <string name="deselect_all">لغو انتخاب همه</string>
     <string name="disable_wallpaper_scroll">خاموش کردن طومار کنار</string>
     <string name="download_action">دانلود</string>
@@ -306,7 +307,7 @@
     <string name="is_setting_wallpaper_message">درحال تنظیم تصویر زمینه…</string>
     <string name="is_system_wallpaper_message">حذف منابع سیستمی ممکن نیست</string>
     <string name="key_shortcut_settings_title">میان‌برهای دکمه‌ها</string>
-    <string name="launcher_icon_management">مدیریت میان‌بر صفحه اصلی</string>
+    <string name="launcher_icon_management">مدیریت میان‌برهای صفحه اصلی</string>
     <string name="launcher_not_exist">خطایی رخ داد. به صفحه اصلی بازگشته و دوباره تلاش کنید.</string>
     <string name="launcher_pull_down_title">پایین کشیدن صفحه اصلی</string>
     <string name="launcher_search_bar_title">نوار جستجوی صفحه اصلی</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">برنامه‌های انتخاب شده حاوی ویژگی‌های اساسی سیستم هستند. فقط می‌توانید میانبرهای صفحه اصلی آن‌ها را حذف کنید.</string>
     <string name="remove_dialog_title_format">«%s» از صفحه اصلی حذف شود؟</string>
     <string name="remove_invalidate_gadget_tips">یکی از ابزارک‌هایی که استفاده می‌کنید دیگر موجود نیست. می‌توانید یکی دیگر را بیافزایید.</string>
+    <string name="remove_sys_app_content">شما می‌توانید میان‌بر صفحه اصلی را دوباره در تنظیمات > برنامه‌ها > مدیریت میان‌بر صفحه اصلی بیافزایید. حذف شود؟</string>
+    <string name="remove_sys_app_title">میان‌بر صفحه اصلی حذف شود؟</string>
     <string name="reset_cate_tip_content">در صورت ادامه، گروه‌های پیش‌فرض برنامه‌ها بازنشانی خواهند شد. در هر صورت ادامه یابد؟</string>
     <string name="reset_cate_tip_title">بازنشانی گروه‌های پیش‌فرض</string>
     <string name="reset_description_first_time">می‌توانید چینش را از ساعت %1$s تا ۲ ساعت دیگر بازگردانید</string>

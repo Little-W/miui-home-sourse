@@ -39,7 +39,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/util/HashSet;)V
     .locals 0
 
-    .line 5674
+    .line 5699
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$54;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$54;->val$newInstalledShortcutInfos:Ljava/util/HashSet;
@@ -54,7 +54,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 5674
+    .line 5699
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$54;->apply(Ljava/lang/Void;)Ljava/util/Map;
@@ -78,7 +78,7 @@
         }
     .end annotation
 
-    .line 5677
+    .line 5702
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$54;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1000(Lcom/miui/home/launcher/Launcher;)J

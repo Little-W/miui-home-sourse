@@ -1635,7 +1635,7 @@
 
     move-result-object v2
 
-    const v5, 0x7f10020e
+    const v5, 0x7f10020f
 
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
 
@@ -5153,33 +5153,6 @@
     return p0
 .end method
 
-.method public static getNotchWidth(Landroid/content/Context;)I
-    .locals 2
-
-    .line 2208
-    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNotch()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    const-string v0, "com.android.systemui"
-
-    const-string v1, "notch_width"
-
-    .line 2211
-    invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/DeviceConfig;->getDimenFromPkgResource(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result p0
-
-    return p0
-.end method
-
 .method private static final getOptimalDB(Landroid/content/Context;Lcom/miui/home/launcher/allapps/LauncherMode;)Ljava/io/File;
     .locals 5
 
@@ -5430,23 +5403,6 @@
     return v0
 .end method
 
-.method public static getSearchBarExpGroupInfo(Landroid/content/Context;)Ljava/lang/String;
-    .locals 1
-
-    .line 669
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    const-string v0, "key_home_screen_search_bar_exp_group_info"
-
-    invoke-static {p0, v0}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 .method public static getSearchBarHolderVerticalPadding(Landroid/content/Context;)I
     .locals 1
 
@@ -5484,23 +5440,6 @@
 
     :goto_0
     return p0
-.end method
-
-.method public static getSearchBarIconUri(Landroid/content/Context;)Ljava/lang/String;
-    .locals 1
-
-    .line 657
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    const-string v0, "key_home_screen_search_bar_icon_uri"
-
-    invoke-static {p0, v0}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method public static getSearchBarLightThreshold()F
@@ -9960,21 +9899,6 @@
     return v2
 .end method
 
-.method public static setSearchBarExpGroupInfo(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 1
-
-    .line 673
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    const-string v0, "key_home_screen_search_bar_exp_group_info"
-
-    invoke-static {p0, v0, p1}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
-
-    return-void
-.end method
-
 .method public static setSearchBarSource(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 1
 
@@ -9990,21 +9914,6 @@
     move-result p0
 
     return p0
-.end method
-
-.method public static setSearchBarStyle(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 1
-
-    .line 665
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p0
-
-    const-string v0, "key_home_screen_search_bar_style"
-
-    invoke-static {p0, v0, p1}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
-
-    return-void
 .end method
 
 .method public static setUseLauncherRecentsAndFsGesture(Landroid/content/Context;Z)V

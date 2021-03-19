@@ -20,7 +20,7 @@
 .method private static canTrackLaunchAppEvent()Z
     .locals 1
 
-    .line 130
+    .line 133
     sget-boolean v0, Lmiui/os/Build;->IS_STABLE_VERSION:Z
 
     if-nez v0, :cond_0
@@ -54,14 +54,14 @@
         }
     .end annotation
 
-    .line 182
+    .line 185
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "launch_time"
 
-    .line 183
+    .line 186
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -74,7 +74,7 @@
 
     const-string v1, "package_name"
 
-    .line 184
+    .line 187
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -99,7 +99,7 @@
         }
     .end annotation
 
-    .line 148
+    .line 151
     invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->createCommonLaunchAppParams(Lcom/miui/home/launcher/ShortcutInfo;)Ljava/util/Map;
 
     move-result-object v0
@@ -108,10 +108,10 @@
 
     const-string v2, "desktop"
 
-    .line 149
+    .line 152
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 150
+    .line 153
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object p1
@@ -126,7 +126,7 @@
 
     add-int/lit8 v2, p1, 0x1
 
-    .line 151
+    .line 154
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -135,7 +135,7 @@
 
     const-string v1, "row"
 
-    .line 152
+    .line 155
     iget v2, p0, Lcom/miui/home/launcher/ShortcutInfo;->cellY:I
 
     add-int/lit8 v2, v2, 0x1
@@ -148,7 +148,7 @@
 
     const-string v1, "column"
 
-    .line 153
+    .line 156
     iget v2, p0, Lcom/miui/home/launcher/ShortcutInfo;->cellX:I
 
     add-int/lit8 v2, v2, 0x1
@@ -161,7 +161,7 @@
 
     const-string v1, "Launcher.AnalyticalDataCollector"
 
-    .line 154
+    .line 157
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -212,7 +212,7 @@
         }
     .end annotation
 
-    .line 171
+    .line 174
     invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->createCommonLaunchAppParams(Lcom/miui/home/launcher/ShortcutInfo;)Ljava/util/Map;
 
     move-result-object v0
@@ -221,12 +221,12 @@
 
     const-string v2, "folder"
 
-    .line 172
+    .line 175
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "folder_title"
 
-    .line 173
+    .line 176
     invoke-static {p0, p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getFolderTitleByShortcutInfo(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/Launcher;)Ljava/lang/String;
 
     move-result-object v2
@@ -235,7 +235,7 @@
 
     const-string v1, "index_in_folder"
 
-    .line 174
+    .line 177
     iget v2, p0, Lcom/miui/home/launcher/ShortcutInfo;->cellX:I
 
     add-int/lit8 v2, v2, 0x1
@@ -248,7 +248,7 @@
 
     const-string v1, "Launcher.AnalyticalDataCollector"
 
-    .line 175
+    .line 178
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -267,7 +267,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 176
+    .line 179
     invoke-static {p0, p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getFolderTitleByShortcutInfo(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/Launcher;)Ljava/lang/String;
 
     move-result-object p1
@@ -286,7 +286,7 @@
 
     move-result-object p0
 
-    .line 175
+    .line 178
     invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
@@ -306,7 +306,7 @@
         }
     .end annotation
 
-    .line 162
+    .line 165
     invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->createCommonLaunchAppParams(Lcom/miui/home/launcher/ShortcutInfo;)Ljava/util/Map;
 
     move-result-object v0
@@ -315,12 +315,12 @@
 
     const-string v2, "hotseat"
 
-    .line 163
+    .line 166
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "index_in_hotseat"
 
-    .line 164
+    .line 167
     iget v2, p0, Lcom/miui/home/launcher/ShortcutInfo;->cellX:I
 
     add-int/lit8 v2, v2, 0x1
@@ -333,7 +333,7 @@
 
     const-string v1, "Launcher.AnalyticalDataCollector"
 
-    .line 165
+    .line 168
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -358,7 +358,7 @@
 .method private static extractPackageName(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 202
+    .line 205
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -367,7 +367,7 @@
 
     const/16 v0, 0x2f
 
-    .line 203
+    .line 206
     invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -376,7 +376,7 @@
 
     const/4 v1, 0x0
 
-    .line 205
+    .line 208
     invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -394,7 +394,7 @@
 
     if-eqz p0, :cond_4
 
-    .line 432
+    .line 435
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -403,14 +403,14 @@
 
     move-result-object v0
 
-    .line 433
+    .line 436
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 434
+    .line 437
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isRecommendFolder()Z
 
     move-result v0
@@ -421,7 +421,7 @@
 
     return-object p0
 
-    .line 436
+    .line 439
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isToolsFolder()Z
 
@@ -433,7 +433,7 @@
 
     return-object p0
 
-    .line 438
+    .line 441
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isGoogleFolder()Z
 
@@ -445,7 +445,7 @@
 
     return-object p0
 
-    .line 440
+    .line 443
     :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isGamesFolder()Z
 
@@ -457,7 +457,7 @@
 
     return-object p0
 
-    .line 442
+    .line 445
     :cond_3
     invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->isUserGameFolder()Z
 
@@ -480,14 +480,14 @@
 
     const-string v0, ""
 
-    .line 213
+    .line 216
     invoke-virtual {p1, p0}, Lcom/miui/home/launcher/Launcher;->getParentFolderInfo(Lcom/miui/home/launcher/ShortcutInfo;)Lcom/miui/home/launcher/FolderInfo;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 215
+    .line 218
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -510,11 +510,11 @@
     return-object v0
 .end method
 
-.method private static getParamsWithSearchBarSource(I)Ljava/util/Map;
+.method private static getParamsWithSearchBarSource(II)Ljava/util/Map;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(I)",
+            "(II)",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
@@ -522,14 +522,14 @@
         }
     .end annotation
 
-    .line 516
+    .line 519
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "source"
 
-    .line 517
+    .line 520
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v2
@@ -544,7 +544,7 @@
 
     const-string v1, "screen_index"
 
-    .line 519
+    .line 522
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -552,31 +552,58 @@
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
+    const-string p0, "search_bar_theme_show"
+
+    .line 524
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-interface {v0, p0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     const-string p0, "desktop_style"
 
-    .line 521
+    .line 525
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-static {v1}, Lcom/miui/home/launcher/DeviceConfig;->getSearchBarStyle(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->getSearchBarStyle(Landroid/content/Context;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-interface {v0, p0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p0, "exp_group_info"
-
-    .line 522
+    .line 526
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-static {v1}, Lcom/miui/home/launcher/DeviceConfig;->getSearchBarExpGroupInfo(Landroid/content/Context;)Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/miui/home/launcher/Application;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-interface {v0, p0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object p1, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->URI:Landroid/net/Uri;
+
+    const-string v1, "getSearchBarExpId"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, p1, v1, v2, v2}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+
+    move-result-object p0
+
+    const-string p1, "exp_id"
+
+    .line 527
+    invoke-virtual {p0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "exp_group_info"
+
+    .line 528
+    invoke-interface {v0, p1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object v0
 .end method
@@ -586,7 +613,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 406
+    .line 409
     iget-object v0, p0, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_0
@@ -595,7 +622,7 @@
 
     iget-object v1, p0, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
-    .line 407
+    .line 410
     invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -610,7 +637,7 @@
 
     iget-object p0, p0, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
-    .line 408
+    .line 411
     invoke-virtual {p0}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object p0
@@ -635,7 +662,7 @@
 .method public static recordLaunchApplicationEvent(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 136
+    .line 139
     invoke-static {}, Lcom/miui/home/launcher/AnalyticalDataCollector;->canTrackLaunchAppEvent()Z
 
     move-result v0
@@ -644,7 +671,7 @@
 
     return-void
 
-    .line 138
+    .line 141
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutInfo;->isInFolder()Z
 
@@ -652,7 +679,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 139
+    .line 142
     invoke-static {p0, p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->createLaunchFolderAppEvent(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/Launcher;)Ljava/util/Map;
 
     move-result-object p0
@@ -661,7 +688,7 @@
 
     goto :goto_0
 
-    .line 140
+    .line 143
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutInfo;->isInHotseat()Z
 
@@ -669,7 +696,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 141
+    .line 144
     invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->createLaunchHotseatAppEvent(Lcom/miui/home/launcher/ShortcutInfo;)Ljava/util/Map;
 
     move-result-object p0
@@ -678,7 +705,7 @@
 
     goto :goto_0
 
-    .line 143
+    .line 146
     :cond_2
     invoke-static {p0, p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->createLaunchDesktopAppEvent(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/Launcher;)Ljava/util/Map;
 
@@ -695,7 +722,7 @@
 
     const-string v0, "add_widget_to_workspace"
 
-    .line 254
+    .line 257
     invoke-static {v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     return-void
@@ -704,19 +731,19 @@
 .method public static trackAllAppsClick(Ljava/lang/String;)V
     .locals 2
 
-    .line 619
+    .line 625
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "miui_home_type"
 
-    .line 620
+    .line 626
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "all_apps_click"
 
-    .line 621
+    .line 627
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -725,19 +752,19 @@
 .method public static trackAllAppsClose(Ljava/lang/String;)V
     .locals 2
 
-    .line 581
+    .line 587
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "reason"
 
-    .line 582
+    .line 588
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "all_apps_close"
 
-    .line 583
+    .line 589
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -746,19 +773,19 @@
 .method public static trackAllAppsDelete(Ljava/lang/String;)V
     .locals 2
 
-    .line 629
+    .line 635
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "miui_home_type"
 
-    .line 630
+    .line 636
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "all_apps_delete"
 
-    .line 631
+    .line 637
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -767,24 +794,24 @@
 .method public static trackAllAppsDrag(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 640
+    .line 646
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "miui_home_type"
 
-    .line 641
+    .line 647
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "package_name"
 
-    .line 642
+    .line 648
     invoke-interface {v0, p0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "all_apps_drag"
 
-    .line 643
+    .line 649
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -793,19 +820,19 @@
 .method public static trackAllAppsIndex(Ljava/lang/String;)V
     .locals 2
 
-    .line 591
+    .line 597
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "miui_home_type"
 
-    .line 592
+    .line 598
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "all_apps_index"
 
-    .line 593
+    .line 599
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -814,14 +841,14 @@
 .method public static trackAllAppsMode()V
     .locals 3
 
-    .line 649
+    .line 655
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "miui_home_type"
 
-    .line 651
+    .line 657
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->getCurrentMode()Lcom/miui/home/launcher/allapps/LauncherMode;
 
     move-result-object v2
@@ -830,12 +857,12 @@
 
     move-result-object v2
 
-    .line 650
+    .line 656
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "all_apps_mode"
 
-    .line 652
+    .line 658
     invoke-static {v1, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -846,7 +873,7 @@
 
     const-string v0, "all_apps_open"
 
-    .line 570
+    .line 576
     invoke-static {v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     return-void
@@ -855,19 +882,19 @@
 .method public static trackAllAppsSearch(Ljava/lang/String;)V
     .locals 2
 
-    .line 607
+    .line 613
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "miui_home_type"
 
-    .line 608
+    .line 614
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "all_apps_search"
 
-    .line 609
+    .line 615
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -878,7 +905,7 @@
 
     const-string v0, "all_apps_search_view_show"
 
-    .line 599
+    .line 605
     invoke-static {v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     return-void
@@ -887,24 +914,24 @@
 .method public static trackCancelShortcutMenu(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 561
+    .line 567
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "package_name"
 
-    .line 562
+    .line 568
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "reason"
 
-    .line 563
+    .line 569
     invoke-interface {v0, p0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "cancel_shortcut_menu"
 
-    .line 564
+    .line 570
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -915,7 +942,7 @@
 
     const-string v0, "click_icon_style_item"
 
-    .line 732
+    .line 738
     invoke-static {v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     return-void
@@ -926,7 +953,7 @@
 
     const-string v0, "click_jeejen_headline"
 
-    .line 334
+    .line 337
     invoke-static {v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     return-void
@@ -935,24 +962,24 @@
 .method public static trackClickShortcutMenuItem(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 554
+    .line 560
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "package_name"
 
-    .line 555
+    .line 561
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "which"
 
-    .line 556
+    .line 562
     invoke-interface {v0, p0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "click_shortcut_menu_item"
 
-    .line 557
+    .line 563
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -961,19 +988,19 @@
 .method public static trackCloseFolderAfterBackToHome(Ljava/lang/String;)V
     .locals 2
 
-    .line 290
+    .line 293
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "miui_home_type"
 
-    .line 291
+    .line 294
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "close_folder_after_back_to_home"
 
-    .line 292
+    .line 295
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -982,24 +1009,24 @@
 .method public static trackDeletedShortCut(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 303
+    .line 306
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "package_name"
 
-    .line 304
+    .line 307
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "intent"
 
-    .line 305
+    .line 308
     invoke-interface {v0, p0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "delete_short"
 
-    .line 306
+    .line 309
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1010,7 +1037,7 @@
 
     const-string v0, "desktop_swipe_left_or_right"
 
-    .line 295
+    .line 298
     invoke-static {v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     return-void
@@ -1019,14 +1046,14 @@
 .method public static trackDragApkToCenterDeleteDropTargetEvent(I)V
     .locals 2
 
-    .line 124
+    .line 127
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "count"
 
-    .line 125
+    .line 128
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -1035,7 +1062,7 @@
 
     const-string p0, "drag_app_to_uninstall"
 
-    .line 126
+    .line 129
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1044,19 +1071,19 @@
 .method public static trackEditMode(Ljava/lang/String;)V
     .locals 2
 
-    .line 221
+    .line 224
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "miui_home_type"
 
-    .line 222
+    .line 225
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "enter_edit_mode"
 
-    .line 223
+    .line 226
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1065,19 +1092,19 @@
 .method public static trackEditModeTopMenuClickEvent(Ljava/lang/String;)V
     .locals 2
 
-    .line 118
+    .line 121
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "name"
 
-    .line 119
+    .line 122
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "click_edit_mode_top_menu"
 
-    .line 120
+    .line 123
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1086,7 +1113,7 @@
 .method public static trackEditingEntryClicked(Ljava/lang/String;)V
     .locals 0
 
-    .line 250
+    .line 253
     invoke-static {p0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     return-void
@@ -1097,7 +1124,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 723
+    .line 729
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -1109,7 +1136,7 @@
     :cond_0
     const-string p0, "other"
 
-    .line 726
+    .line 732
     :cond_1
     new-instance v0, Ljava/util/HashMap;
 
@@ -1117,12 +1144,12 @@
 
     const-string v1, "source"
 
-    .line 727
+    .line 733
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "enter_icon_customize_page"
 
-    .line 728
+    .line 734
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1131,31 +1158,31 @@
 .method public static trackFolderClick(Lcom/miui/home/launcher/FolderInfo;)V
     .locals 2
 
-    .line 412
+    .line 415
     invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getFolderTitle(Lcom/miui/home/launcher/FolderInfo;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 413
+    .line 416
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 414
+    .line 417
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "folder_title"
 
-    .line 415
+    .line 418
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "launcher_folder_click"
 
-    .line 416
+    .line 419
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     :cond_0
@@ -1165,33 +1192,33 @@
 .method public static trackFolderOpenTime(Lcom/miui/home/launcher/FolderInfo;J)V
     .locals 3
 
-    .line 421
+    .line 424
     invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getFolderTitle(Lcom/miui/home/launcher/FolderInfo;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 422
+    .line 425
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 423
+    .line 426
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "folder_title"
 
-    .line 424
+    .line 427
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "duration_time"
 
     const-wide/16 v1, 0x3e8
 
-    .line 425
+    .line 428
     div-long/2addr p1, v1
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1202,7 +1229,7 @@
 
     const-string p0, "launcher_folder_open_duration_time"
 
-    .line 426
+    .line 429
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     :cond_0
@@ -1212,14 +1239,14 @@
 .method public static trackFolderOpenWithRecommend(Z)V
     .locals 2
 
-    .line 227
+    .line 230
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "is_recommend_screen_visible"
 
-    .line 228
+    .line 231
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -1228,7 +1255,7 @@
 
     const-string p0, "folder_open"
 
-    .line 229
+    .line 232
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1237,19 +1264,19 @@
 .method public static trackFolderRecommend(Ljava/lang/String;)V
     .locals 2
 
-    .line 239
+    .line 242
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "miui_home_type"
 
-    .line 240
+    .line 243
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "network"
 
-    .line 241
+    .line 244
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getNetWorkConnectedString()Ljava/lang/String;
 
     move-result-object v1
@@ -1258,7 +1285,7 @@
 
     const-string p0, "recommend_app"
 
-    .line 242
+    .line 245
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1267,14 +1294,14 @@
 .method public static trackFolderRecommendAppShow(IILcom/miui/home/launcher/FolderInfo;)V
     .locals 3
 
-    .line 460
+    .line 463
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "screen_index"
 
-    .line 461
+    .line 464
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1293,7 +1320,7 @@
 
     const-string p0, "show_app_count"
 
-    .line 462
+    .line 465
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1312,7 +1339,7 @@
 
     const-string p0, "name"
 
-    .line 463
+    .line 466
     invoke-static {p2}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getFolderTitle(Lcom/miui/home/launcher/FolderInfo;)Ljava/lang/String;
 
     move-result-object p1
@@ -1321,7 +1348,7 @@
 
     const-string p0, "home_folder_recommend_slots_count"
 
-    .line 464
+    .line 467
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1330,31 +1357,31 @@
 .method public static trackFolderRename(Lcom/miui/home/launcher/FolderInfo;)V
     .locals 2
 
-    .line 451
+    .line 454
     invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getFolderTitle(Lcom/miui/home/launcher/FolderInfo;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 452
+    .line 455
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 453
+    .line 456
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "folder_title"
 
-    .line 454
+    .line 457
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "folder_rename"
 
-    .line 455
+    .line 458
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     :cond_0
@@ -1364,19 +1391,19 @@
 .method public static trackGadgetClick(Ljava/lang/String;)V
     .locals 2
 
-    .line 280
+    .line 283
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "gadget_title"
 
-    .line 281
+    .line 284
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "gadget_click"
 
-    .line 282
+    .line 285
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1385,19 +1412,19 @@
 .method public static trackGadgetView(Ljava/lang/String;)V
     .locals 2
 
-    .line 274
+    .line 277
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "gadget_title"
 
-    .line 275
+    .line 278
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "gadget_view_show"
 
-    .line 276
+    .line 279
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1410,7 +1437,7 @@
 
     return-void
 
-    .line 385
+    .line 388
     :cond_0
     invoke-virtual {p0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
@@ -1434,26 +1461,26 @@
     :goto_0
     const-string v0, "com.android.vending"
 
-    .line 386
+    .line 389
     invoke-static {v0, p0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 387
+    .line 390
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "package_name"
 
-    .line 388
+    .line 391
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "launch_google_play"
 
-    .line 389
+    .line 392
     invoke-static {p0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     :cond_2
@@ -1463,7 +1490,7 @@
 .method public static trackHomeComeBackEvent(Ljava/lang/String;)V
     .locals 4
 
-    .line 189
+    .line 192
     invoke-static {}, Lcom/miui/home/launcher/AnalyticalDataCollector;->canTrackLaunchAppEvent()Z
 
     move-result v0
@@ -1472,25 +1499,25 @@
 
     return-void
 
-    .line 191
+    .line 194
     :cond_0
     sget-object v0, Lcom/miui/home/launcher/AnalyticalDataCollector;->sLaunchApplicationEvent:Ljava/util/Map;
 
     if-eqz v0, :cond_1
 
-    .line 192
+    .line 195
     invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->extractPackageName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 193
+    .line 196
     sget-object v0, Lcom/miui/home/launcher/AnalyticalDataCollector;->sLaunchApplicationEvent:Ljava/util/Map;
 
     const-string v1, "return_from"
 
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 194
+    .line 197
     sget-object v0, Lcom/miui/home/launcher/AnalyticalDataCollector;->sLaunchApplicationEvent:Ljava/util/Map;
 
     const-string v1, "resume_time"
@@ -1507,7 +1534,7 @@
 
     const-string v0, "Launcher.AnalyticalDataCollector"
 
-    .line 195
+    .line 198
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1526,14 +1553,14 @@
 
     const-string p0, "launch_application"
 
-    .line 196
+    .line 199
     sget-object v0, Lcom/miui/home/launcher/AnalyticalDataCollector;->sLaunchApplicationEvent:Ljava/util/Map;
 
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     const/4 p0, 0x0
 
-    .line 197
+    .line 200
     sput-object p0, Lcom/miui/home/launcher/AnalyticalDataCollector;->sLaunchApplicationEvent:Ljava/util/Map;
 
     :cond_1
@@ -1543,19 +1570,19 @@
 .method public static trackHomeCreated(Ljava/lang/String;)V
     .locals 2
 
-    .line 310
+    .line 313
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "package_name"
 
-    .line 311
+    .line 314
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "home_activity_created"
 
-    .line 312
+    .line 315
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1564,7 +1591,7 @@
 .method public static trackHomeMoreSettingsAutoFillEmptyCells(Z)V
     .locals 2
 
-    .line 358
+    .line 361
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -1580,13 +1607,13 @@
     :cond_0
     const-string p0, "off"
 
-    .line 359
+    .line 362
     :goto_0
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "home_more_settings_auto_fill_empty_cells"
 
-    .line 360
+    .line 363
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1597,7 +1624,7 @@
 
     const-string v0, "home_more_settings_default_home"
 
-    .line 354
+    .line 357
     invoke-static {v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     return-void
@@ -1606,7 +1633,7 @@
 .method public static trackHomeMoreSettingsLockScreenCells(Z)V
     .locals 2
 
-    .line 364
+    .line 367
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -1622,13 +1649,13 @@
     :cond_0
     const-string p0, "off"
 
-    .line 365
+    .line 368
     :goto_0
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "home_more_settings_lock_screen_cells"
 
-    .line 366
+    .line 369
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1637,7 +1664,7 @@
 .method public static trackHomeMoreSettingsShowMemInfo(Z)V
     .locals 2
 
-    .line 370
+    .line 373
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -1653,13 +1680,13 @@
     :cond_0
     const-string p0, "off"
 
-    .line 371
+    .line 374
     :goto_0
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "home_more_settings_show_memory_info"
 
-    .line 372
+    .line 375
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1668,7 +1695,7 @@
 .method public static trackHomeMoreSettingsShowRecentsRecommend(Z)V
     .locals 2
 
-    .line 376
+    .line 379
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -1684,13 +1711,13 @@
     :cond_0
     const-string p0, "off"
 
-    .line 377
+    .line 380
     :goto_0
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "home_more_settings_show_recents_recommend"
 
-    .line 378
+    .line 381
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1699,7 +1726,7 @@
 .method public static trackHomeSettingSubAutoFill(Z)V
     .locals 2
 
-    .line 342
+    .line 345
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -1715,13 +1742,13 @@
     :cond_0
     const-string p0, "off"
 
-    .line 343
+    .line 346
     :goto_0
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "home_setting_sub_auto_fill"
 
-    .line 344
+    .line 347
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1730,7 +1757,7 @@
 .method public static trackHomeSettingSubClicked(Ljava/lang/String;)V
     .locals 0
 
-    .line 338
+    .line 341
     invoke-static {p0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     return-void
@@ -1739,7 +1766,7 @@
 .method public static trackHomeSettingSubLockLayout(Z)V
     .locals 2
 
-    .line 348
+    .line 351
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -1755,13 +1782,13 @@
     :cond_0
     const-string p0, "off"
 
-    .line 349
+    .line 352
     :goto_0
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "home_setting_sub_lock_layout"
 
-    .line 350
+    .line 353
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1770,19 +1797,19 @@
 .method public static trackInvalidateApplication(Ljava/lang/String;)V
     .locals 2
 
-    .line 233
+    .line 236
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "intent_uri"
 
-    .line 234
+    .line 237
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "home_invalidate_application"
 
-    .line 235
+    .line 238
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1791,7 +1818,7 @@
 .method public static trackItemMoved(Ljava/lang/String;)V
     .locals 0
 
-    .line 286
+    .line 289
     invoke-static {p0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     return-void
@@ -1800,7 +1827,7 @@
 .method public static trackLaunchAppAfterBackToHome(Ljava/lang/String;)V
     .locals 0
 
-    .line 299
+    .line 302
     invoke-static {p0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     return-void
@@ -1809,16 +1836,16 @@
 .method public static trackMiuiHomeInfo()V
     .locals 3
 
-    .line 541
+    .line 547
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "version_code"
 
-    const v2, 0x1927411d
+    const v2, 0x19274132
 
-    .line 542
+    .line 548
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1827,14 +1854,14 @@
 
     const-string v1, "version_name"
 
-    const-string v2, "ALPHA-4.22.0.2973-03051048"
+    const-string v2, "ALPHA-4.22.0.2994-03111941"
 
-    .line 543
+    .line 549
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v1, "miui_home_info"
 
-    .line 544
+    .line 550
     invoke-static {v1, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1843,19 +1870,19 @@
 .method public static trackModuleLoad(Ljava/lang/String;ZI)V
     .locals 2
 
-    .line 697
+    .line 703
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "module"
 
-    .line 698
+    .line 704
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "is_success"
 
-    .line 699
+    .line 705
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -1866,7 +1893,7 @@
 
     const-string p0, "error_code"
 
-    .line 701
+    .line 707
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -1876,7 +1903,7 @@
     :cond_0
     const-string p0, "event_module_load"
 
-    .line 703
+    .line 709
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1885,7 +1912,7 @@
 .method public static trackPersonalAssistantSwitch(Z)V
     .locals 2
 
-    .line 322
+    .line 325
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -1901,13 +1928,13 @@
     :cond_0
     const-string p0, "off"
 
-    .line 323
+    .line 326
     :goto_0
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "home_personal_assistant_switch"
 
-    .line 324
+    .line 327
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1916,14 +1943,14 @@
 .method static trackPullDownGesture()V
     .locals 3
 
-    .line 660
+    .line 666
     invoke-static {}, Lcom/miui/home/launcher/ApplicationConfig;->isFeedInstalled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 661
+    .line 667
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -1934,7 +1961,7 @@
 
     goto :goto_0
 
-    .line 663
+    .line 669
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -1946,7 +1973,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 665
+    .line 671
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -1969,7 +1996,7 @@
     :cond_2
     const-string v0, "notification_bar"
 
-    .line 671
+    .line 677
     :goto_0
     new-instance v1, Ljava/util/HashMap;
 
@@ -1977,12 +2004,12 @@
 
     const-string v2, "miui_home_type"
 
-    .line 672
+    .line 678
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "gesture_pull_down"
 
-    .line 673
+    .line 679
     invoke-static {v0, v1}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -1991,24 +2018,24 @@
 .method public static trackRestoreHiddenApp(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 716
+    .line 722
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "package_name"
 
-    .line 717
+    .line 723
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "activity_name"
 
-    .line 718
+    .line 724
     invoke-interface {v0, p0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "restore_hidden_app"
 
-    .line 719
+    .line 725
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -2017,31 +2044,31 @@
 .method public static trackScreenCellsSizeChanged(Ljava/lang/String;)V
     .locals 2
 
-    .line 264
+    .line 267
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "layout_size"
 
-    .line 265
+    .line 268
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "screen_cells__changed"
 
-    .line 266
+    .line 269
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method
 
-.method public static trackSearchBarClick(I)V
+.method public static trackSearchBarClick(II)V
     .locals 1
 
     const-string v0, "search_bar_click"
 
-    .line 496
-    invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getParamsWithSearchBarSource(I)Ljava/util/Map;
+    .line 499
+    invoke-static {p0, p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getParamsWithSearchBarSource(II)Ljava/util/Map;
 
     move-result-object p0
 
@@ -2050,13 +2077,13 @@
     return-void
 .end method
 
-.method public static trackSearchBarSettingClick(I)V
+.method public static trackSearchBarSettingClick(II)V
     .locals 1
 
     const-string v0, "search_bar_setting_click"
 
-    .line 512
-    invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getParamsWithSearchBarSource(I)Ljava/util/Map;
+    .line 515
+    invoke-static {p0, p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getParamsWithSearchBarSource(II)Ljava/util/Map;
 
     move-result-object p0
 
@@ -2065,13 +2092,13 @@
     return-void
 .end method
 
-.method public static trackSearchBarSettingShow(I)V
+.method public static trackSearchBarSettingShow(II)V
     .locals 1
 
     const-string v0, "search_bar_setting_show"
 
-    .line 508
-    invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getParamsWithSearchBarSource(I)Ljava/util/Map;
+    .line 511
+    invoke-static {p0, p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getParamsWithSearchBarSource(II)Ljava/util/Map;
 
     move-result-object p0
 
@@ -2080,13 +2107,13 @@
     return-void
 .end method
 
-.method public static trackSearchBarShow(I)V
+.method public static trackSearchBarShow(II)V
     .locals 1
 
     const-string v0, "search_bar_show"
 
-    .line 492
-    invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getParamsWithSearchBarSource(I)Ljava/util/Map;
+    .line 495
+    invoke-static {p0, p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getParamsWithSearchBarSource(II)Ljava/util/Map;
 
     move-result-object p0
 
@@ -2100,12 +2127,12 @@
 
     const/4 v0, -0x1
 
-    .line 484
-    invoke-static {v0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getParamsWithSearchBarSource(I)Ljava/util/Map;
+    .line 487
+    invoke-static {v0, v0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getParamsWithSearchBarSource(II)Ljava/util/Map;
 
     move-result-object v0
 
-    .line 485
+    .line 488
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
@@ -2116,7 +2143,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 486
+    .line 489
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
@@ -2137,7 +2164,7 @@
     :goto_0
     const-string v2, "support"
 
-    .line 487
+    .line 490
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -2146,13 +2173,34 @@
 
     const-string v1, "search_bar_support"
 
-    .line 488
+    .line 491
     invoke-static {v1, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method
 
 .method public static trackSearchBarTransferClick(Ljava/lang/String;)V
+    .locals 2
+
+    .line 539
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    const-string v1, "miui_home_type"
+
+    .line 540
+    invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string p0, "search_bar_transfer_click"
+
+    .line 541
+    invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
+
+    return-void
+.end method
+
+.method public static trackSearchBarTransferShow(Ljava/lang/String;)V
     .locals 2
 
     .line 533
@@ -2165,7 +2213,7 @@
     .line 534
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p0, "search_bar_transfer_click"
+    const-string p0, "search_bar_transfer_show"
 
     .line 535
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
@@ -2173,34 +2221,13 @@
     return-void
 .end method
 
-.method public static trackSearchBarTransferShow(Ljava/lang/String;)V
-    .locals 2
-
-    .line 527
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    const-string v1, "miui_home_type"
-
-    .line 528
-    invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string p0, "search_bar_transfer_show"
-
-    .line 529
-    invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
-
-    return-void
-.end method
-
-.method public static trackSearchBarXiaoAiClick(I)V
+.method public static trackSearchBarXiaoAiClick(II)V
     .locals 1
 
     const-string v0, "search_bar_xiaoai_click"
 
-    .line 504
-    invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getParamsWithSearchBarSource(I)Ljava/util/Map;
+    .line 507
+    invoke-static {p0, p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getParamsWithSearchBarSource(II)Ljava/util/Map;
 
     move-result-object p0
 
@@ -2209,13 +2236,13 @@
     return-void
 .end method
 
-.method public static trackSearchBarXiaoAiShow(I)V
+.method public static trackSearchBarXiaoAiShow(II)V
     .locals 1
 
     const-string v0, "search_bar_xiaoai_show"
 
-    .line 500
-    invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getParamsWithSearchBarSource(I)Ljava/util/Map;
+    .line 503
+    invoke-static {p0, p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->getParamsWithSearchBarSource(II)Ljava/util/Map;
 
     move-result-object p0
 
@@ -2227,7 +2254,7 @@
 .method public static trackShowDefaultLauncherSetting(Z)V
     .locals 2
 
-    .line 328
+    .line 331
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -2243,13 +2270,13 @@
     :cond_0
     const-string p0, "hide"
 
-    .line 329
+    .line 332
     :goto_0
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "show_default_launcher_setting"
 
-    .line 330
+    .line 333
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -2260,7 +2287,7 @@
 
     const-string v0, "market_show_dialog"
 
-    .line 246
+    .line 249
     invoke-static {v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     return-void
@@ -2269,19 +2296,19 @@
 .method public static trackShowingShortcutMenuWhenDropIcon(Ljava/lang/String;)V
     .locals 2
 
-    .line 548
+    .line 554
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "package_name"
 
-    .line 549
+    .line 555
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "showing_shortcut_menu_when_drop_icon"
 
-    .line 550
+    .line 556
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -2290,7 +2317,7 @@
 .method static trackSlideUpGesture()V
     .locals 3
 
-    .line 678
+    .line 684
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isDrawerMode()Z
 
     move-result v0
@@ -2301,7 +2328,7 @@
 
     goto :goto_0
 
-    .line 680
+    .line 686
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/ApplicationConfig;->isFeedInstalled()Z
 
@@ -2309,7 +2336,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 681
+    .line 687
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -2320,7 +2347,7 @@
 
     goto :goto_0
 
-    .line 683
+    .line 689
     :cond_1
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -2332,7 +2359,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 685
+    .line 691
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -2355,7 +2382,7 @@
     :cond_3
     const-string v0, "no_action"
 
-    .line 691
+    .line 697
     :goto_0
     new-instance v1, Ljava/util/HashMap;
 
@@ -2363,12 +2390,12 @@
 
     const-string v2, "miui_home_type"
 
-    .line 692
+    .line 698
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v0, "gesture_slide_up"
 
-    .line 693
+    .line 699
     invoke-static {v0, v1}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -2377,14 +2404,14 @@
 .method static trackSlidingOperationSwitch()V
     .locals 3
 
-    .line 468
+    .line 471
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "status"
 
-    .line 469
+    .line 472
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v2
@@ -2407,7 +2434,7 @@
 
     const-string v1, "sliding_operation_switch"
 
-    .line 470
+    .line 473
     invoke-static {v1, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -2416,19 +2443,19 @@
 .method public static trackTransitionEffectChanged(Ljava/lang/String;)V
     .locals 2
 
-    .line 258
+    .line 261
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "miui_home_type"
 
-    .line 259
+    .line 262
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "transition_effect_changed"
 
-    .line 260
+    .line 263
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -2439,7 +2466,7 @@
 
     const-string v0, "use_multi_select"
 
-    .line 270
+    .line 273
     invoke-static {v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     return-void
@@ -2448,7 +2475,7 @@
 .method public static trackVerticalGesture(Z)V
     .locals 2
 
-    .line 316
+    .line 319
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -2464,13 +2491,13 @@
     :cond_0
     const-string p0, "status_bar"
 
-    .line 317
+    .line 320
     :goto_0
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "home_vertical_gesture"
 
-    .line 318
+    .line 321
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -2479,24 +2506,24 @@
 .method public static trackWhenHideOrUninstallApp(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 707
+    .line 713
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     const-string v1, "package_name"
 
-    .line 708
+    .line 714
     invoke-interface {v0, v1, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "activity_name"
 
-    .line 709
+    .line 715
     invoke-interface {v0, p0, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p0, "is_hide_app"
 
-    .line 710
+    .line 716
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -2505,10 +2532,10 @@
 
     const-string p0, "source"
 
-    .line 711
+    .line 717
     invoke-interface {v0, p0, p4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 712
+    .line 718
     invoke-static {p3, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
@@ -2517,7 +2544,7 @@
 .method public static trackWidgetClick(Landroid/appwidget/AppWidgetProviderInfo;)V
     .locals 0
 
-    .line 394
+    .line 397
     invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->isGoogleSearchWidget(Landroid/appwidget/AppWidgetProviderInfo;)Z
 
     move-result p0
@@ -2526,7 +2553,7 @@
 
     const-string p0, "click_google_search_widget"
 
-    .line 395
+    .line 398
     invoke-static {p0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     :cond_0
@@ -2536,7 +2563,7 @@
 .method public static trackWidgetRemove(Landroid/appwidget/AppWidgetProviderInfo;)V
     .locals 0
 
-    .line 400
+    .line 403
     invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->isGoogleSearchWidget(Landroid/appwidget/AppWidgetProviderInfo;)Z
 
     move-result p0
@@ -2545,7 +2572,7 @@
 
     const-string p0, "google_search_widget"
 
-    .line 401
+    .line 404
     invoke-static {p0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;)V
 
     :cond_0

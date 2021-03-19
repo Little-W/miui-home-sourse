@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">ఈ విభాగాన్ని తొలగించాలా?</string>
     <string name="delete_screen">స్క్రీన్‌ని తొలగించు</string>
     <string name="delete_wallpaper_message">%1$d వాల్‌పేపర్‌ను తొలగించాలా?</string>
+    <string name="deleted_system_applications">అన్ఇన్‌స్టాల్ అయిన సిస్టమ్ యాప్స్</string>
     <string name="deselect_all">అన్నింటి ఎంపికను తీసివేయి</string>
     <string name="disable_wallpaper_scroll">ప్రక్కవైపు స్క్రోలింగ్‌ను ఆఫ్ చేయి</string>
     <string name="download_action">డౌన్‌లోడ్ చేయి</string>
@@ -394,7 +395,7 @@
     <string name="navigation_type_full_screen">సంజ్ఞలు</string>
     <string name="navigation_type_title">సిస్టమ్ నావిగేషన్</string>
     <string name="navigation_type_virtual_key">బటన్‌లు</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">నెట్‌వర్క్‌కు కనెక్ట్ చేయలేకపోయాము. మళ్లీ ప్రయత్నించండి.</string>
     <string name="no_detail_page">వివరాల పేజీ లేదు</string>
     <string name="no_space_toast">తగినంత ఖాళీ స్థలం లేదు</string>
     <string name="no_space_toast_when_click_widget">ఈ పేజీపై తగినంత ఖాళీ ప్రదేశం లేదు. ఈ అంశాన్ని మరో పేజీపైకి లాగేందుకు ప్రయత్నించండి.</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">ఎంపిక చేసిన యాప్‌లు అత్యవసర సిస్టమ్ ఫీచర్‌లను కలిగి ఉన్నాయి. మీరు వాటి హోమ్ స్క్రీన్ సత్వరమార్గాలను మాత్రమే తీసివేయగలరు.</string>
     <string name="remove_dialog_title_format">హోమ్ స్క్రీన్ నుంచి \"%s\"ని తీసివేయాలనుకుంటున్నారా?</string>
     <string name="remove_invalidate_gadget_tips">మీరు ఉపయోగించే విడ్జెట్‌లలో ఒకటి ఇకపై అందుబాటులో ఉండదు. మీరు మరో దానిని జోడించవచ్చు.</string>
+    <string name="remove_sys_app_content">మీరు హోమ్ స్క్రీన్ సత్వరమార్గాన్ని మళ్లీ సెట్టింగ్‌లు > యాప్‌లు > హోమ్ స్క్రీన్ సత్వరమార్గాలను నిర్వహించండి వద్ద జోడించగలరు. ఇప్పుడే తీసివేయాలా?</string>
+    <string name="remove_sys_app_title">హోమ్ స్క్రీన్ సత్వరమార్గాన్ని తీసివేయాలా?</string>
     <string name="reset_cate_tip_content">మీరు కొనసాగినట్లయితే, డిఫాల్ట్ యాప్ సమూహాలను పునరుద్ధరించబడతాయి. ఏదేమైనా కొనసాగాలా?</string>
     <string name="reset_cate_tip_title">డిఫాల్ట్ సమూహాలను పునరుద్ధరించండి</string>
     <string name="reset_description_first_time">మీరు లేఅవుట్‌ని %1$s నుండి 2 గంటల్లోగా పునరుద్ధరించవచ్చు</string>
@@ -497,7 +500,7 @@
     <string name="reset_scene_prompt">డిఫాల్ట్ లేఅవుట్‌కి స్క్రీన్ రీసెట్ చేయబడుతుంది.</string>
     <string name="reset_title">పునరుద్ధరించు</string>
     <string name="restore_icon_successful">విజయవంతంగా జోడించబడింది</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">రష్యా</string>
     <string name="screen_cells_config_title">హోమ్ స్క్రీన్ లేఅవుట్</string>
     <string name="screen_locked_toast">హోమ్ స్క్రీన్ లేఅవుట్ లాక్ అయింది.</string>
     <string name="screen_number">%d స్క్రీన్</string>
@@ -506,7 +509,7 @@
     <string name="select_all">అన్నీ ఎంచుకోండి</string>
     <string name="select_frame">ఫ్రేమ్</string>
     <string name="select_photo">ఫోటో</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">ఒక సర్వర్ లోపం సంభవించింది, ఒక నిమిషం లేదా రెండు నిమిషాలు వేచి ఉండి, మళ్ళీ ప్రయత్నించండి.</string>
     <string name="setting_wallpaper_tip">సర్దుబాటు చేయడానికి నొక్కండి లేదా స్వైప్ చేయండి</string>
     <string name="settings">సెట్టింగ్‌లు</string>
     <string name="settings_shortcut">సెట్టింగ్‌లు</string>

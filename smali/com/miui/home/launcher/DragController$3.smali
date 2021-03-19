@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DragController;Lcom/miui/home/launcher/DropTarget;)V
     .locals 0
 
-    .line 961
+    .line 955
     iput-object p1, p0, Lcom/miui/home/launcher/DragController$3;->this$0:Lcom/miui/home/launcher/DragController;
 
     iput-object p2, p0, Lcom/miui/home/launcher/DragController$3;->val$currentTarget:Lcom/miui/home/launcher/DropTarget;
@@ -51,7 +51,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 961
+    .line 955
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragController$3;->get()Ljava/lang/String;
 
     move-result-object v0
@@ -62,7 +62,7 @@
 .method public get()Ljava/lang/String;
     .locals 4
 
-    .line 964
+    .line 958
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -77,7 +77,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/DragController$3;->val$currentTarget:Lcom/miui/home/launcher/DropTarget;
 
-    .line 965
+    .line 959
     invoke-interface {v2}, Lcom/miui/home/launcher/DropTarget;->getOnDropAnnounce()Lcom/miui/home/launcher/DropTarget$OnDropAnnounce;
 
     move-result-object v2
@@ -98,7 +98,7 @@
 
     const v2, 0x7f100063
 
-    .line 964
+    .line 958
     invoke-virtual {v0, v2, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

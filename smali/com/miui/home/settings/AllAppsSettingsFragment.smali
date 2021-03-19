@@ -78,7 +78,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100146
+    const v1, 0x7f100147
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -91,7 +91,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100145
+    const v1, 0x7f100146
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -104,7 +104,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100147
+    const v1, 0x7f100148
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -405,7 +405,7 @@
 
     invoke-direct {v1, p0}, Lcom/miui/home/settings/AllAppsSettingsFragment$2;-><init>(Lcom/miui/home/settings/AllAppsSettingsFragment;)V
 
-    const v2, 0x7f100154
+    const v2, 0x7f100155
 
     .line 237
     invoke-virtual {v0, v2, v1}, Lmiui/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;

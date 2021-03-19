@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Vymazať túto kategóriu?</string>
     <string name="delete_screen">Vymazať obrazovku</string>
     <string name="delete_wallpaper_message">Vymazať %1$d tapetu?</string>
+    <string name="deleted_system_applications">Odinštalované systémové aplikácie</string>
     <string name="deselect_all">Zrušiť výber</string>
     <string name="disable_wallpaper_scroll">Zakázať posúvanie tapety</string>
     <string name="download_action">Stiahnuť</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Vybrané aplikácie obsahujú základné funkcie systému. Môžete odstrániť iba ich odkazy na Domovskej obrazovke.</string>
     <string name="remove_dialog_title_format">Odstrániť \"%s\" z Domovskej obrazovky?</string>
     <string name="remove_invalidate_gadget_tips">Jeden z používaných widgetov už viac nie je dostupný. Môžete pridať ďalší.</string>
+    <string name="remove_sys_app_content">Odkaz na Domovskej obrazovke budete môcť znova pridať v Nastaveniach > Aplikácie > Spravovať odkazy na Domovskej obrazovke. Odstrániť teraz?</string>
+    <string name="remove_sys_app_title">Odstrániť odkaz na Domovskej obrazovke?</string>
     <string name="reset_cate_tip_content">Ak budete pokračovať, predvolené skupiny aplikácií budú obnovené. Chcete pokračovať?</string>
     <string name="reset_cate_tip_title">Obnoviť predvolené skupiny</string>
     <string name="reset_description_first_time">Rozloženie môžete obnoviť od %1$s do 2 hodín</string>

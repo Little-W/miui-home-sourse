@@ -3916,7 +3916,7 @@
     .line 962
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f100220
+    const v2, 0x7f100223
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

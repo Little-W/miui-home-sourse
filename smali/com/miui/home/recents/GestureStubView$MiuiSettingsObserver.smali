@@ -22,10 +22,10 @@
 .method constructor <init>(Lcom/miui/home/recents/GestureStubView;Landroid/os/Handler;)V
     .locals 0
 
-    .line 1146
+    .line 1159
     iput-object p1, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
-    .line 1147
+    .line 1160
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -36,7 +36,7 @@
 .method public onChange(Z)V
     .locals 3
 
-    .line 1163
+    .line 1176
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->access$1300(Lcom/miui/home/recents/GestureStubView;)Landroid/content/ContentResolver;
@@ -51,7 +51,7 @@
 
     invoke-static {p1, v0}, Lcom/miui/home/recents/GestureStubView;->access$3402(Lcom/miui/home/recents/GestureStubView;Z)Z
 
-    .line 1164
+    .line 1177
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->access$3600(Lcom/miui/home/recents/GestureStubView;)I
@@ -87,7 +87,7 @@
 .method register()V
     .locals 3
 
-    .line 1151
+    .line 1164
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$1400(Lcom/miui/home/recents/GestureStubView;)Landroid/content/Context;
@@ -100,7 +100,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/recents/GestureStubView;->access$1302(Lcom/miui/home/recents/GestureStubView;Landroid/content/ContentResolver;)Landroid/content/ContentResolver;
 
-    .line 1152
+    .line 1165
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$1300(Lcom/miui/home/recents/GestureStubView;)Landroid/content/ContentResolver;
@@ -123,7 +123,7 @@
 .method unregister()V
     .locals 2
 
-    .line 1157
+    .line 1170
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$1400(Lcom/miui/home/recents/GestureStubView;)Landroid/content/Context;
@@ -136,7 +136,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/recents/GestureStubView;->access$1302(Lcom/miui/home/recents/GestureStubView;Landroid/content/ContentResolver;)Landroid/content/ContentResolver;
 
-    .line 1158
+    .line 1171
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$1300(Lcom/miui/home/recents/GestureStubView;)Landroid/content/ContentResolver;

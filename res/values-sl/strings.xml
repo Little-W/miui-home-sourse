@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Želite izbrisati to kategorijo?</string>
     <string name="delete_screen">Izbriši zaslon</string>
     <string name="delete_wallpaper_message">Izbrišem %1$d sliko ozadja?</string>
+    <string name="deleted_system_applications">Odstranjene sistemske aplikacije</string>
     <string name="deselect_all">Prekliči izbiro</string>
     <string name="disable_wallpaper_scroll">Izključi pomikanje slike</string>
     <string name="download_action">Prenesi</string>
@@ -423,7 +424,7 @@
     <string name="navigation_type_full_screen">Kretnje</string>
     <string name="navigation_type_title">Sistemska navigacija</string>
     <string name="navigation_type_virtual_key">Tipke</string>
-    <string name="network_error">"Couldn't connect to the network. Try again."</string>
+    <string name="network_error">Povezava z omrežjem ni uspela. Poskusite ponovno.</string>
     <string name="no_detail_page">Ni podrobnosti o strani</string>
     <string name="no_space_toast">Ni dovolj prostora</string>
     <string name="no_space_toast_when_click_widget">Na tej strani ni dovolj prostora. Poskusite premakniti ta predmet na drugo stran.</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Izberite aplikacije, ki vsebujejo osnovne sistemske funkcije. Odstranite lahko samo njihove bližnjice na Začetnem zaslonu.</string>
     <string name="remove_dialog_title_format">Želite odstraniti \"%s\" iz Začetnega zaslona?</string>
     <string name="remove_invalidate_gadget_tips">Eden od pripomočkov, ki jih uporabljate več ni na voljo. Lahko dodate drugega.</string>
+    <string name="remove_sys_app_content">Bližnjico na Začetnem zaslonu boste lahko ponovno dodali v Nastavitve > Aplikacije > Urejanje bližnjic na Začetnem zaslonu. Želite odstraniti?</string>
+    <string name="remove_sys_app_title">Želite odstraniti bližnjico na Začetnem zaslonu?</string>
     <string name="reset_cate_tip_content">Če nadaljujte, privzete skupine aplikacij bodo ponastavljene. Želite vseeno nadaljevati?</string>
     <string name="reset_cate_tip_title">Ponastavi na privzete skupine</string>
     <string name="reset_description_first_time">Razporeditev lahko obnovite iz %1$s čez 2 uri</string>
@@ -528,7 +531,7 @@
     <string name="reset_scene_prompt">Zaslon bo ponovno nastavljen na privzeto postavitev.</string>
     <string name="reset_title">Obnovi</string>
     <string name="restore_icon_successful">Uspešno dodano</string>
-    <string name="russia_preinstall_folder_name">Russia</string>
+    <string name="russia_preinstall_folder_name">Rusija</string>
     <string name="screen_cells_config_title">Postavitev Začetnega zaslona</string>
     <string name="screen_locked_toast">Razpored začetnega zaslona je zaklenjen.</string>
     <string name="screen_number">%d zaslon</string>
@@ -538,7 +541,7 @@
     <string name="select_all">Izberi vse</string>
     <string name="select_frame">Okvir</string>
     <string name="select_photo">Fotografija</string>
-    <string name="server_error">A server error occurred. Wait a minute or two and try again.</string>
+    <string name="server_error">Prišlo je do napake na strežniku. Počakajte minuto ali dve in poskusite ponovno.</string>
     <string name="setting_wallpaper_tip">Premakni ali povečaj za prilagoditev</string>
     <string name="settings">Nastavitve</string>
     <string name="settings_shortcut">Nastavitve</string>

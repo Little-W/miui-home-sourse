@@ -39,7 +39,7 @@
 .method protected getFirstViewBgResId()I
     .locals 1
 
-    const v0, 0x7f080241
+    const v0, 0x7f080253
 
     return v0
 .end method
@@ -82,7 +82,7 @@
 .method protected getLastViewBgResId()I
     .locals 1
 
-    const v0, 0x7f08023d
+    const v0, 0x7f08024f
 
     return v0
 .end method

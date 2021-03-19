@@ -221,6 +221,7 @@
     <string name="delete_category_dialog_title">Видалити цю категорію?</string>
     <string name="delete_screen">Видалити екран</string>
     <string name="delete_wallpaper_message">Видалити шпалери? (%1$d)</string>
+    <string name="deleted_system_applications">Видалені системні програми</string>
     <string name="deselect_all">Зняти вибір</string>
     <string name="disable_wallpaper_scroll">Вимкнути прокрутку шпалер</string>
     <string name="download_action">Завантажити</string>
@@ -520,6 +521,8 @@
     <string name="remove_dialog_message">Вибрані програми виконують важливі системні функції. Ви можете видалити тільки ярлик на робочому столі.</string>
     <string name="remove_dialog_title_format">Видалити \"%s\" з робочого столу?</string>
     <string name="remove_invalidate_gadget_tips">Один з використовуваних вами віджетів більше не доступний. Ви можете вибрати інший віджет.</string>
+    <string name="remove_sys_app_content">Щоб відновити ярлик на робочому столі, перейдіть до Налаштування > Програми > Керування ярликами на робочому столі. Видалити ярлик?</string>
+    <string name="remove_sys_app_title">Видалити ярлик з робочого столу?</string>
     <string name="reset_cate_tip_content">Будуть відновлені групи програм за замовчуванням. Ви хочете продовжити?</string>
     <string name="reset_cate_tip_title">Відновити групи за замовчуванням</string>
     <string name="reset_description_first_time">Ви можете відновити макет у %1$s впродовж 2 годин</string>

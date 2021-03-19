@@ -550,7 +550,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/AppsSelectView;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f10010d
+    const v3, 0x7f10010e
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

@@ -193,6 +193,7 @@
     <string name="delete_category_dialog_title">یہ زمرہ حذف کریں؟</string>
     <string name="delete_screen">اسکرین حذف کریں</string>
     <string name="delete_wallpaper_message">%1$d وال پیپر حذف کریں؟</string>
+    <string name="deleted_system_applications">ان انسٹال کردہ سسٹم ایپس</string>
     <string name="deselect_all">سبھی کو غیر منتخب کریں</string>
     <string name="disable_wallpaper_scroll">سائڈ اسکرولنگ بند کریں</string>
     <string name="download_action">ڈاؤن لوڈ کریں</string>
@@ -489,6 +490,8 @@
     <string name="remove_dialog_message">منتخب کردہ ایپس ضروری سسٹم خصوصیات پر مشتمل ہیں۔ آپ صرف ان کے ہوم اسکرین شارٹ کٹ ہٹا سکتے ہیں۔</string>
     <string name="remove_dialog_title_format">ہوم اسکرین سے \"%s\" کو ہٹائیں؟</string>
     <string name="remove_invalidate_gadget_tips">ایک ویجیٹ جو آپ استعمال کرتے ہیں مزید دستیاب نہیں ہے۔ آپ دوسرا شامل کر سکتے ہیں۔</string>
+    <string name="remove_sys_app_content">آپ ترتیبات > ایپس > ہوم اسکرین شارٹ کٹ منظم کریں میں دوبارہ ہوم اسکرین شارٹ کٹ شامل کر سکیں گے۔ ابھی ہٹائیں؟</string>
+    <string name="remove_sys_app_title">ہوم اسکرین شارٹ کٹ ہٹائیں؟</string>
     <string name="reset_cate_tip_content">اگر آپ جاری رکھتے ہیں, تو ڈیفالٹ ایپ گروپس کو بحال کر دیا جائے گا۔ پھر بھی جاری رکھیں؟</string>
     <string name="reset_cate_tip_title">ڈیفالٹ گروپ بحال کریں</string>
     <string name="reset_description_first_time">آپ 2 گھنٹوں کے اندر %1$s سے لے آؤٹ بحال کر سکتے ہیں</string>

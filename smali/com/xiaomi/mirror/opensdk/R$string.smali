@@ -69,13 +69,13 @@
 
 .field public static final abc_toolbar_collapse_description:I = 0x7f10001a
 
-.field public static final menu_new_display_open:I = 0x7f100180
+.field public static final menu_new_display_open:I = 0x7f100181
 
-.field public static final menu_pc_open:I = 0x7f100181
+.field public static final menu_pc_open:I = 0x7f100182
 
-.field public static final search_menu_title:I = 0x7f10022a
+.field public static final search_menu_title:I = 0x7f10022d
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f10024c
+.field public static final status_bar_notification_info_overflow:I = 0x7f10024f
 
 
 # direct methods
