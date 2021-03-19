@@ -335,7 +335,7 @@
 
     :cond_2
     :goto_0
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/high16 v1, 0x0
 
     const/4 v3, 0x0
 

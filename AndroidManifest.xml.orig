@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" android:sharedUserId="@string/sharedUserId" package="com.miui.home" platformBuildVersionCode="422002994" platformBuildVersionName="ALPHA-4.22.0.2994-03111941">
+    <uses-permission android:name="miui.permission.powerkeeper.HIDDEN_MODE_PROVIDER"/>
+    <permission android:description="@string/permdesc_install_shortcut" android:label="@string/permlab_install_shortcut" android:name="com.android.launcher.permission.INSTALL_SHORTCUT" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
+    <permission android:description="@string/permdesc_uninstall_shortcut" android:label="@string/permlab_uninstall_shortcut" android:name="com.miui.home.launcher.permission.UNINSTALL_SHORTCUT" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
+    <permission android:description="@string/permdesc_install_widget" android:label="@string/permlab_install_widget" android:name="com.miui.home.launcher.permission.INSTALL_WIDGET" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
+    <permission android:description="@string/permdesc_uninstall_widget" android:label="@string/permlab_uninstall_widget" android:name="com.miui.home.launcher.permission.UNINSTALL_WIDGET" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
+    <permission android:description="@string/permdesc_read_settings" android:label="@string/permlab_read_settings" android:name="com.android.launcher.permission.READ_SETTINGS" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:description="@string/permdesc_write_settings" android:label="@string/permlab_write_settings" android:name="com.android.launcher.permission.WRITE_SETTINGS" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.miui.home.launcher.permission.LOADING_STATUS" android:protectionLevel="normal"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER_COMPONENT"/>
+    <uses-permission android:name="android.permission.BIND_WALLPAPER"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BIND_APPWIDGET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"/>
+    <uses-permission android:name="android.permission.DUMP"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_FRAME_BUFFER"/>
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS"/>
+    <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS"/>
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <uses-permission android:name="com.android.SystemUI.permission.TIGGER_TOGGLE"/>
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+    <uses-permission android:name="com.miui.notes.permission.ACCESS_NOTE"/>
+    <uses-permission android:name="android.permission.SET_PROCESS_LIMIT"/>
+    <uses-permission android:name="miui.permission.SHELL"/>
+    <uses-permission android:name="miui.permission.EXTRA_NETWORK"/>
+    <uses-permission android:name="android.permission.MANAGE_ACTIVITY_STACKS"/>
+    <uses-permission android:name="miui.permission.USE_INTERNAL_GENERAL_API"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <uses-permission android:name="com.android.systemui.permission.NOTIFICATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="com.android.settings.permission.POWER_MODE_CHANGE"/>
+    <uses-permission android:name="android.miui.permission.SHELL"/>
+    <uses-permission android:name="miui.os.permisson.INIT_MIUI_ENVIRONMENT"/>
+    <uses-permission android:name="com.xiaomi.gallery.permission.CLOUD"/>
+    <uses-permission android:name="com.miui.calendar.permission.READ_CALENDAR"/>
+    <uses-permission android:name="com.xiaomi.calendar.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="com.android.settings.permission.CLOUD_SETTINGS_PROVIDER"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS"/>
+    <uses-permission android:name="android.permission.MANAGE_USERS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="miui.personalassistant.ACCESS_PROVIDER"/>
+    <uses-permission android:name="miui.personalassistant.RECEIVE_TRANSPROXY_DATA"/>
+    <uses-permission android:name="com.miui.yellowpage.permission.ACCESS_YELLOWPAGE"/>
+    <uses-permission android:name="android.permission.READ_MIPOCKET"/>
+    <uses-permission android:name="miui.permission.READ_STEPS"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="miui.personalassistant.permission.READ_ASSISTANT_PROVIDER"/>
+    <uses-permission android:name="miui.personalassistant.permission.RECEIVE_TRANSPROXY_DATA"/>
+    <uses-permission android:name="com.xiaomi.xmsf.permission.USE_XMSF_UPLOAD"/>
+    <uses-permission android:name="android.permission.SET_PREFERRED_APPLICATIONS"/>
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/>
+    <uses-permission android:name="com.miui.securitycenter.permission.ACCESS_SECURITY_CENTER_PROVIDER"/>
+    <uses-permission android:name="android.permission.ACCESS_THEME"/>
+    <uses-permission android:name="com.miui.weather2.permission.WRITE_DB"/>
+    <uses-permission android:name="com.android.provision.provider.READ_PROVIDER"/>
+    <uses-permission android:name="com.miui.securitycore.permission.XSPACE_DUAL"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="com.android.updater.permission.ACCESS_UPDATESERVICE"/>
+    <uses-permission android:name="com.miui.systemAdSolution.adSwitch.PROVIDER"/>
+    <uses-permission android:name="android.permission.START_TASKS_FROM_RECENTS"/>
+    <uses-permission android:name="android.permission.CONTROL_REMOTE_APP_TRANSITION_ANIMATIONS"/>
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW"/>
+    <uses-permission android:name="android.permission.REAL_GET_TASKS"/>
+    <uses-permission android:name="android.permission.GET_DETAILED_TASKS"/>
+    <uses-permission android:name="android.permission.INJECT_EVENTS"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.STATUS_BAR_SERVICE"/>
+    <uses-permission android:name="miui.permission.USE_INTERNAL_GENERAL_API"/>
+    <uses-permission android:name="android.permission.SET_ACTIVITY_WATCHER"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="miui.autoinstall.config.permission.AUTOINSTALL"/>
+    <uses-permission android:name="com.miui.home.launcher.permission.LOADING_STATUS"/>
+    <uses-permission android:name="com.mi.health.permission.DEFAULT_READ_DATA"/>
+    <uses-permission android:name="com.mi.health.permission.DEFAULT_WRITE_DATA"/>
+    <uses-permission android:name="com.xiaomi.market.sdk.UPDATE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="com.miui.permission.REGION_SAMPLING"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:backupAgent="com.miui.home.launcher.backup.LauncherBackupAgent" android:directBootAware="true" android:hardwareAccelerated="@bool/config_hardwareAccelerated" android:icon="@drawable/icon_launcher" android:label="@string/application_name" android:largeHeap="true" android:name="com.miui.home.launcher.Application" android:process="@string/process" android:requestLegacyExternalStorage="true" android:supportsRtl="true" android:theme="@style/BaseTheme" android:usesCleartextTraffic="true">
+        <meta-data android:name="notch.config" android:value="portrait"/>
+        <meta-data android:name="com.android.launcher3.launcher_dump_provider" android:value="com.miui.home.launcher.LauncherProvider"/>
+        <meta-data android:name="supportRecents" android:value="true"/>
+        <meta-data android:name="miui.supports_wallpaper_zoom_out" android:value="true"/>
+        <meta-data android:name="com.android.thememanager.PRIV_PATH_RES" android:value="true"/>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:excludeFromRecents="true" android:launchMode="singleTask" android:name="com.miui.home.launcher.Launcher" android:resizeableActivity="true" android:resumeWhilePausing="true" android:screenOrientation="portrait" android:stateNotNeeded="true" android:taskAffinity="" android:theme="@style/LauncherTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.MONKEY"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.miui.home.launcher.SecondaryDisplayLauncher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.SECONDARY_HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.miui.home.launcher.IconReorganizeMonitor">
+            <intent-filter>
+                <action android:name="com.miui.home.action.CLEAR_BACKUP"/>
+                <action android:name="com.miui.home.action.RESET_HOME"/>
+                <action android:name="com.miui.home.action.AUTO_FILL_CURRENT"/>
+                <action android:name="com.miui.home.action.AUTO_FILL_ALL"/>
+                <action android:name="com.miui.home.action.AUTO_FOLDER_ALL"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.miui.home.launcher.InstallShortcutReceiver" android:permission="com.android.launcher.permission.INSTALL_SHORTCUT">
+            <intent-filter>
+                <action android:name="com.android.launcher.action.INSTALL_SHORTCUT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:excludeFromRecents="true" android:label="@string/action_add_to_workspace" android:name="com.miui.home.launcher.AddItemActivity" android:showForAllUsers="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.content.pm.action.CONFIRM_PIN_SHORTCUT"/>
+                <action android:name="android.content.pm.action.CONFIRM_PIN_APPWIDGET"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.miui.home.launcher.UninstallShortcutReceiver" android:permission="com.miui.home.launcher.permission.UNINSTALL_SHORTCUT">
+            <intent-filter>
+                <action android:name="com.miui.home.launcher.action.UNINSTALL_SHORTCUT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.miui.home.launcher.InstallWidgetReceiver" android:permission="com.miui.home.launcher.permission.INSTALL_WIDGET">
+            <intent-filter>
+                <action android:name="com.miui.home.launcher.action.INSTALL_WIDGET"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.miui.home.launcher.UninstallWidgetReceiver" android:permission="com.miui.home.launcher.permission.UNINSTALL_WIDGET">
+            <intent-filter>
+                <action android:name="com.miui.home.launcher.action.UNINSTALL_WIDGET"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.miui.home.launcher.IronSource.IronSourcePreInstallReceiver" android:permission="miui.permission.USE_INTERNAL_GENERAL_API">
+            <intent-filter>
+                <action android:name="com.miui.sec.external.intent.action.PRE_INSTALL"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.miui.home.launcher.settings" android:exported="true" android:name="com.miui.home.launcher.LauncherProvider" android:readPermission="com.android.launcher.permission.READ_SETTINGS" android:writePermission="com.android.launcher.permission.WRITE_SETTINGS"/>
+        <provider android:authorities="com.miui.home.app.hide" android:exported="true" android:name="com.miui.home.launcher.HideAppProvider" android:readPermission="com.android.launcher.permission.READ_SETTINGS" android:writePermission="com.android.launcher.permission.WRITE_SETTINGS"/>
+        <provider android:authorities="com.miui.home.search.style" android:exported="true" android:name="com.miui.home.launcher.SearchBarStyleProvider" android:readPermission="com.android.launcher.permission.READ_SETTINGS" android:writePermission="com.android.launcher.permission.WRITE_SETTINGS"/>
+        <provider android:authorities="com.miui.home.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+        <service android:name="com.miui.home.launcher.AnalyticalDataCollectorJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:exported="true" android:name="com.miui.home.launcher.snapshot.HomeSnapshotHelperService">
+            <intent-filter>
+                <action android:name="com.miui.home.snapshot_helper_intent"/>
+            </intent-filter>
+        </service>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="miui.maml.MamlConfigSettings" android:screenOrientation="portrait" android:theme="@miui:style/Theme.Light" android:uiOptions="splitActionBarWhenNarrow"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="miui.maml.ThirdAppPicker" android:screenOrientation="portrait" android:theme="@miui:style/Theme.Light" android:uiOptions="splitActionBarWhenNarrow"/>
+        <activity android:launchMode="singleTop" android:name="com.miui.home.settings.MiuiHomeSettingActivity" android:screenOrientation="portrait" android:theme="@style/MIUIXPreference">
+            <intent-filter>
+                <action android:name="com.miui.home.Setting"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.miui.home.settings.DefaultHomeSettings">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/defalut_launcher_title" android:launchMode="singleTop" android:name="com.miui.home.settings.DefaultHomeWithJeejenSettings">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.miui.home.settings.AllAppsSettingsActivity" android:screenOrientation="portrait" android:theme="@style/MIUIXPreference">
+            <intent-filter>
+                <action android:name="com.miui.home.action.ALL_APPS_SETTINGS"/>
+                <action android:name="com.miui.home.action.LAUNCHER_SLIDEUP_SETTING"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/home_switch_personal_assistant" android:launchMode="singleTop" android:name="com.miui.home.settings.LauncherPersonalAssistantSettingActivity" android:permission="miui.permission.USE_INTERNAL_GENERAL_API" android:theme="@style/MIUIXPreference">
+            <intent-filter>
+                <action android:name="com.miui.home.action.LAUNCHER_PERSONAL_ASSISTANT_SETTING"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:exported="true" android:name="com.miui.home.launcher.cloudbackup.BackupRestoreHomeService" android:permission="miui.permission.USE_INTERNAL_GENERAL_API">
+            <intent-filter>
+                <action android:name="com.miui.home.action.BACKUP_HOME"/>
+                <action android:name="com.miui.home.action.RESTORE_HOME"/>
+            </intent-filter>
+        </service>
+        <service android:name="miui.maml.elements.MusicListenerService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.MusicListenerService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="true" android:name="com.miui.home.launcher.cloudbackup.MiuiHomeCloudBackupService" android:permission="com.xiaomi.permission.CLOUD_MANAGER">
+            <intent-filter>
+                <action android:name="miui.action.CLOUD_BACKUP_SETTINGS"/>
+                <action android:name="miui.action.CLOUD_RESTORE_SETTINGS"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.miui.home.launcher.LanguageReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="orientation|screenSize" android:name="com.miui.newhome.business.ui.PhotoActivity" android:permission="miui.permission.USE_INTERNAL_GENERAL_API" android:taskAffinity="com.miui.newhome" android:theme="@style/Theme.Photos">
+            <intent-filter>
+                <action android:name="miui.home.action.PHOTO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="com.miui.home.settings.SettingsSearchProvider" android:exported="true" android:grantUriPermissions="true" android:multiprocess="false" android:name="com.miui.home.settings.SettingsSearchProvider">
+            <intent-filter>
+                <action android:name="miui.intent.action.SETTINGS_SEARCH_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <receiver android:name="com.miui.home.launcher.PackageClearDataReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.miui.home.launcher.category" android:exported="true" android:name="com.miui.home.launcher.CategoryProvider" android:readPermission="com.android.launcher.permission.READ_SETTINGS" android:writePermission="com.android.launcher.permission.WRITE_SETTINGS"/>
+        <activity android:label="@string/navigation_type_title" android:launchMode="singleTop" android:name="com.miui.home.recents.settings.NavigationBarTypeActivity" android:screenOrientation="portrait" android:theme="@style/MIUIXPreference">
+            <intent-filter>
+                <action android:name="com.miui.home.action.navigation_bar_type_settings"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/recents_layout_style" android:launchMode="singleTop" android:name="com.miui.home.recents.settings.TaskStackViewLayoutStyleActivity" android:screenOrientation="portrait" android:theme="@style/MIUIXPreference">
+            <intent-filter>
+                <action android:name="com.miui.home.recents.task_stack_view_layout_style"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.miui.home.settings.IconCustomizeActivity" android:screenOrientation="portrait" android:theme="@style/MIUIXPreference" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="com.miui.home.action.ICON_CUSTOMIZE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.miui.home.launcher.allapps.settings.CategorySettingActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="com.miui.home.action.CATEGORY_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.miui.home.launcher.allapps.settings.DrawerBackgroundActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+            <intent-filter>
+                <action android:name="com.miui.home.action.DRAWER_COLOR_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="com.miui.home.launcher.allapps.category.AppCategoryAddActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity android:launchMode="singleTop" android:name="com.miui.home.launcher.allapps.category.AppCategorySelectActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <service android:directBootAware="true" android:name="com.miui.home.recents.TouchInteractionService" android:permission="android.permission.STATUS_BAR_SERVICE">
+            <intent-filter>
+                <action android:name="android.intent.action.QUICKSTEP_SERVICE"/>
+            </intent-filter>
+        </service>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.miui.home.recents.RecentsActivity" android:resizeableActivity="true" android:resumeWhilePausing="true" android:screenOrientation="behind" android:stateNotNeeded="true" android:taskAffinity="" android:theme="@style/RecentsTheme"/>
+        <activity android:name="com.miui.home.launcher.DebugActivity"/>
+        <activity android:name="com.miui.home.settings.AllHideAppActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.miui.home.settings.action.ALL_HIDE_APP_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.miui.home.launcher.oldman.ElderlyManModeChangedReceiver">
+            <intent-filter>
+                <action android:name="com.xiaomi.action.ELDERLY_MODE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.tencent.matrix.resource.CanaryWorkerService" android:permission="android.permission.BIND_JOB_SERVICE" android:process=":res_can_worker"/>
+        <service android:exported="false" android:name="com.tencent.matrix.resource.CanaryResultService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name="com.market.sdk.DownloadCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.miui.home.selfupdate.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.market.sdk.LazyFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/xiaomi_update_sdk_file_paths"/>
+        </provider>
+        <provider android:authorities="com.miui.home.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:name="androidx.work.impl.foreground.SystemForegroundService"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="preference" android:value="1.0"/>
+        <meta-data android:name="recyclerview" android:value="1.0"/>
+        <meta-data android:name="springback" android:value="1.0"/>
+        <meta-data android:name="nest" android:value="1.0"/>
+        <meta-data android:name="dynamicoverscroller" android:value="1.0"/>
+        <meta-data android:name="recyclerview_animator" android:value="1.0"/>
+        <meta-data android:name="folme" android:value="1.0"/>
+        <service android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <meta-data android:name="animation" android:value="1.0"/>
+        <meta-data android:name="compat" android:value="1.0"/>
+        <meta-data android:name="spring" android:value="1.0"/>
+        <meta-data android:name="core" android:value="1.0"/>
+        <meta-data android:name="com.miui.maml.sdk" android:value="true"/>
+    </application>
+</manifest>
