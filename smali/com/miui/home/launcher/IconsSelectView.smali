@@ -37,7 +37,7 @@
     .line 79
     iput-boolean p2, p0, Lcom/miui/home/launcher/IconsSelectView;->mCanSelectMultiple:Z
 
-    const v0, 0x7f0d0047
+    const v0, 0x7f0d004c
 
     .line 81
     invoke-static {p1, v0, p0}, Lcom/miui/home/launcher/IconsSelectView;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
@@ -84,7 +84,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/IconsSelectView;->mBtnCancel:Landroid/widget/TextView;
 
-    const p1, 0x7f0a00cb
+    const p1, 0x7f0a00cc
 
     .line 87
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/IconsSelectView;->findViewById(I)Landroid/view/View;
@@ -109,7 +109,7 @@
     .line 90
     invoke-virtual {p1}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    const p2, 0x7f0800ce
+    const p2, 0x7f0800dd
 
     .line 91
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
@@ -218,7 +218,7 @@
 
     if-eqz p2, :cond_1
 
-    const p2, 0x7f0800c5
+    const p2, 0x7f0800d4
 
     .line 150
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->setBackgroundResource(I)V
@@ -228,7 +228,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f08014e
+    const p2, 0x7f08015f
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundResource(I)V
 

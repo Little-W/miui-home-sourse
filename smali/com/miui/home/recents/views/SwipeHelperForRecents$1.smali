@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/SwipeHelperForRecents;FF)V
     .locals 0
 
-    .line 260
+    .line 266
     iput-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$1;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     invoke-direct {p0, p2, p3}, Lcom/miui/home/recents/util/InOutRangeDetector;-><init>(FF)V
@@ -30,10 +30,10 @@
     return-void
 .end method
 
-.method static synthetic lambda$onOutRange$0(Lcom/miui/home/recents/views/TaskView;ZLcom/android/systemui/shared/recents/model/Task;)V
+.method static synthetic lambda$onOutRange$305(Lcom/miui/home/recents/views/TaskView;ZLcom/android/systemui/shared/recents/model/Task;)V
     .locals 1
 
-    .line 269
+    .line 275
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskView;->getHeaderView()Lcom/miui/home/recents/views/TaskViewHeader;
 
     move-result-object v0
@@ -42,13 +42,13 @@
 
     const/4 v0, 0x1
 
-    .line 270
+    .line 276
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->performHapticFeedback(I)Z
 
-    .line 271
+    .line 277
     iget-object p0, p2, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
-    .line 272
+    .line 278
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getTopComponentIfItIsSetting()Landroid/content/ComponentName;
 
     move-result-object p0
@@ -57,7 +57,7 @@
 
     move-result-object p0
 
-    .line 271
+    .line 277
     invoke-static {p0, p1}, Lcom/miui/home/launcher/AnalyticalDataCollectorForRecents;->sendSwipeLockTaskEvent(Ljava/lang/String;Z)V
 
     return-void
@@ -68,7 +68,7 @@
 .method public onOutRange()V
     .locals 4
 
-    .line 263
+    .line 269
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$1;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->access$000(Lcom/miui/home/recents/views/SwipeHelperForRecents;)Landroid/view/View;
@@ -79,7 +79,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 264
+    .line 270
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$1;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->access$000(Lcom/miui/home/recents/views/SwipeHelperForRecents;)Landroid/view/View;
@@ -88,20 +88,20 @@
 
     check-cast v0, Lcom/miui/home/recents/views/TaskView;
 
-    .line 265
+    .line 271
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object v1
 
-    .line 266
+    .line 272
     iget-boolean v2, v1, Lcom/android/systemui/shared/recents/model/Task;->isLocked:Z
 
     xor-int/lit8 v2, v2, 0x1
 
-    .line 267
-    new-instance v3, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$1$qZoKuSvYnTaSnbF8uv_BurOdSAA;
+    .line 273
+    new-instance v3, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$1$hsxaMnry4hCAg-Y5xvLWeRBJ6CM;
 
-    invoke-direct {v3, v0, v2, v1}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$1$qZoKuSvYnTaSnbF8uv_BurOdSAA;-><init>(Lcom/miui/home/recents/views/TaskView;ZLcom/android/systemui/shared/recents/model/Task;)V
+    invoke-direct {v3, v0, v2, v1}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$1$hsxaMnry4hCAg-Y5xvLWeRBJ6CM;-><init>(Lcom/miui/home/recents/views/TaskView;ZLcom/android/systemui/shared/recents/model/Task;)V
 
     invoke-static {v1, v2, v3}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->lockOrUnlockApp(Lcom/android/systemui/shared/recents/model/Task;ZLjava/lang/Runnable;)V
 

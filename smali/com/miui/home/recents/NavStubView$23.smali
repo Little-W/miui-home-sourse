@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 2343
+    .line 2352
     invoke-static {}, Lcom/miui/home/recents/NavStubView$ModeGesture;->values()[Lcom/miui/home/recents/NavStubView$ModeGesture;
 
     move-result-object v0

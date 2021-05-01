@@ -352,7 +352,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$updateNewInstalledShortcutInfosFromProvider$0(Lcom/miui/home/launcher/newInstallIndicator/Global/GlobalNewInstallIndicatorController;Ljava/util/HashSet;Ljava/util/HashSet;Lcom/miui/home/launcher/newInstallIndicator/Global/RomPreinstallAppData;)V
+.method public static synthetic lambda$updateNewInstalledShortcutInfosFromProvider$392(Lcom/miui/home/launcher/newInstallIndicator/Global/GlobalNewInstallIndicatorController;Ljava/util/HashSet;Ljava/util/HashSet;Lcom/miui/home/launcher/newInstallIndicator/Global/RomPreinstallAppData;)V
     .locals 1
 
     if-eqz p3, :cond_1
@@ -1069,9 +1069,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/home/launcher/newInstallIndicator/Global/-$$Lambda$GlobalNewInstallIndicatorController$cwJZaIzwWYW5piqzA5iztE5vbLQ;
+    new-instance v1, Lcom/miui/home/launcher/newInstallIndicator/Global/-$$Lambda$GlobalNewInstallIndicatorController$7KBJNXwVdPesqTBilC7hbQyMhn4;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/miui/home/launcher/newInstallIndicator/Global/-$$Lambda$GlobalNewInstallIndicatorController$cwJZaIzwWYW5piqzA5iztE5vbLQ;-><init>(Lcom/miui/home/launcher/newInstallIndicator/Global/GlobalNewInstallIndicatorController;Ljava/util/HashSet;Ljava/util/HashSet;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/miui/home/launcher/newInstallIndicator/Global/-$$Lambda$GlobalNewInstallIndicatorController$7KBJNXwVdPesqTBilC7hbQyMhn4;-><init>(Lcom/miui/home/launcher/newInstallIndicator/Global/GlobalNewInstallIndicatorController;Ljava/util/HashSet;Ljava/util/HashSet;)V
 
     .line 189
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V

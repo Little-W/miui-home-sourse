@@ -130,7 +130,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onBindViewHolder$0(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$QueryResult;
+.method public static synthetic lambda$onBindViewHolder$365(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$QueryResult;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -199,7 +199,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$onBindViewHolder$1(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$QueryResult;
+.method public static synthetic lambda$onBindViewHolder$366(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$QueryResult;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -260,7 +260,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$onBindViewHolder$2(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$QueryResult;
+.method public static synthetic lambda$onBindViewHolder$367(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$QueryResult;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -325,7 +325,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$onBindViewHolder$3(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$QueryResult;
+.method public static synthetic lambda$onBindViewHolder$368(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$QueryResult;
     .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -478,7 +478,7 @@
     return-object v0
 .end method
 
-.method static synthetic lambda$setViewHolderAsync$4(Ljava/util/concurrent/Callable;Ljava/lang/Void;)Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$QueryResult;
+.method static synthetic lambda$setViewHolderAsync$369(Ljava/util/concurrent/Callable;Ljava/lang/Void;)Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$QueryResult;
     .locals 0
 
     .line 210
@@ -504,7 +504,7 @@
     return-object p0
 .end method
 
-.method static synthetic lambda$setViewHolderAsync$5(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;Lcom/miui/home/launcher/ItemInfo;Landroid/graphics/Matrix;Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$QueryResult;)V
+.method static synthetic lambda$setViewHolderAsync$370(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;Lcom/miui/home/launcher/ItemInfo;Landroid/graphics/Matrix;Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$QueryResult;)V
     .locals 2
 
     .line 216
@@ -605,7 +605,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070277
+    const v1, 0x7f07027b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -639,7 +639,7 @@
 
     move-result-object p0
 
-    const p1, 0x7f070278
+    const p1, 0x7f07027c
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -723,13 +723,13 @@
     .end annotation
 
     .line 208
-    new-instance v0, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$gXiCENJ3KJZRZI7vIK5UIGLBDdA;
+    new-instance v0, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$TDyVreVU5f_xUGHOHlbC-1IlvRA;
 
-    invoke-direct {v0, p3}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$gXiCENJ3KJZRZI7vIK5UIGLBDdA;-><init>(Ljava/util/concurrent/Callable;)V
+    invoke-direct {v0, p3}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$TDyVreVU5f_xUGHOHlbC-1IlvRA;-><init>(Ljava/util/concurrent/Callable;)V
 
-    new-instance p3, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$eevKl4e-LOCx_nxtsdgcsFP92gI;
+    new-instance p3, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$nqkqrrLvGmY4qY78Ky6wsCtkO0g;
 
-    invoke-direct {p3, p1, p0, p2}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$eevKl4e-LOCx_nxtsdgcsFP92gI;-><init>(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;Lcom/miui/home/launcher/ItemInfo;Landroid/graphics/Matrix;)V
+    invoke-direct {p3, p1, p0, p2}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$nqkqrrLvGmY4qY78Ky6wsCtkO0g;-><init>(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;Lcom/miui/home/launcher/ItemInfo;Landroid/graphics/Matrix;)V
 
     const/4 p0, 0x0
 
@@ -885,7 +885,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f070277
+    const v4, 0x7f07027b
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -897,9 +897,9 @@
     if-eqz v4, :cond_0
 
     .line 107
-    new-instance v4, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$mmLym3PqsbXzhbPZmaMDgneNL80;
+    new-instance v4, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$CJLW1bj4_aPg6Xp8DehBvvseUAI;
 
-    invoke-direct {v4, p0, v0, v3, v3}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$mmLym3PqsbXzhbPZmaMDgneNL80;-><init>(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)V
+    invoke-direct {v4, p0, v0, v3, v3}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$CJLW1bj4_aPg6Xp8DehBvvseUAI;-><init>(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)V
 
     invoke-static {v0, p1, v2, v4}, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->setViewHolderAsync(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;Landroid/graphics/Matrix;Ljava/util/concurrent/Callable;)V
 
@@ -912,9 +912,9 @@
     if-eqz v4, :cond_1
 
     .line 117
-    new-instance v4, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$-fFoFSL3bo3bdamyQ1B_7Ui83lk;
+    new-instance v4, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$v6f4kutk_KrEIAp7M-Fzxp72b98;
 
-    invoke-direct {v4, p0, v0, v3, v3}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$-fFoFSL3bo3bdamyQ1B_7Ui83lk;-><init>(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)V
+    invoke-direct {v4, p0, v0, v3, v3}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$v6f4kutk_KrEIAp7M-Fzxp72b98;-><init>(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)V
 
     invoke-static {v0, p1, v2, v4}, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->setViewHolderAsync(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;Landroid/graphics/Matrix;Ljava/util/concurrent/Callable;)V
 
@@ -927,9 +927,9 @@
     if-eqz v4, :cond_2
 
     .line 129
-    new-instance v4, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$yvD4JezgDAdtQJ3ouyhyJbS6oNc;
+    new-instance v4, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$em3TTkEM71f5xyLRN1M3GG3nv3w;
 
-    invoke-direct {v4, p0, v0, v3, v3}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$yvD4JezgDAdtQJ3ouyhyJbS6oNc;-><init>(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)V
+    invoke-direct {v4, p0, v0, v3, v3}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$em3TTkEM71f5xyLRN1M3GG3nv3w;-><init>(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)V
 
     invoke-static {v0, p1, v2, v4}, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->setViewHolderAsync(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;Landroid/graphics/Matrix;Ljava/util/concurrent/Callable;)V
 
@@ -942,9 +942,9 @@
     if-eqz v4, :cond_3
 
     .line 142
-    new-instance v4, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$PNMeEdg-n-rpKRQ9p70DFo5BkO8;
+    new-instance v4, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$kZ_x1wDDxjBl_6hSP5xS1XopHXE;
 
-    invoke-direct {v4, p0, v0, v3, v3}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$PNMeEdg-n-rpKRQ9p70DFo5BkO8;-><init>(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)V
+    invoke-direct {v4, p0, v0, v3, v3}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsHorizontalAdapter$kZ_x1wDDxjBl_6hSP5xS1XopHXE;-><init>(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;Lcom/miui/home/launcher/ItemInfo;II)V
 
     invoke-static {v0, p1, v2, v4}, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->setViewHolderAsync(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;Landroid/graphics/Matrix;Ljava/util/concurrent/Callable;)V
 
@@ -972,7 +972,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f070275
+    const v0, 0x7f070279
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1006,7 +1006,7 @@
     .line 88
     iget-object p2, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v0, 0x7f0d00d2
+    const v0, 0x7f0d00d7
 
     const/4 v1, 0x0
 

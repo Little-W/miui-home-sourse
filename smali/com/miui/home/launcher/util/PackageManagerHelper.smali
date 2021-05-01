@@ -24,7 +24,7 @@
     .line 179
     invoke-virtual {v0, p0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    if-eqz p2, :cond_2
+    if-eqz p2, :cond_1
 
     const-string p0, "base_intent"
 
@@ -33,68 +33,27 @@
 
     goto :goto_0
 
-    .line 184
     :cond_0
-    sget-boolean p0, Lmiui/os/Build;->IS_TABLET:Z
-
-    if-eqz p0, :cond_1
-
-    const-string p0, "com.android.settings"
-
-    const-string p2, "com.android.settings.applications.InstalledAppDetailsTop"
-
-    .line 185
-    invoke-virtual {v0, p0, p2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    goto :goto_0
-
-    :cond_1
     const-string p0, "miui.intent.action.APP_MANAGER_APPLICATION_DETAIL"
 
-    .line 187
+    .line 184
     invoke-virtual {v0, p0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 190
-    :cond_2
+    :cond_1
     :goto_0
-    sget-boolean p0, Lmiui/os/Build;->IS_TABLET:Z
-
-    if-eqz p0, :cond_4
-
-    const-string p0, "is_xspace_app"
-
-    const/16 p2, 0x3e7
-
-    if-ne p3, p2, :cond_3
-
-    const/4 p2, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    const/4 p2, 0x0
-
-    .line 191
-    :goto_1
-    invoke-virtual {v0, p0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    goto :goto_2
-
-    :cond_4
     const-string p0, "miui.intent.extra.USER_ID"
 
-    .line 193
+    .line 186
     invoke-virtual {v0, p0, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    :goto_2
     const-string p0, "package_name"
 
-    .line 195
+    .line 187
     invoke-virtual {v0, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 p0, 0x10800000
 
-    .line 196
+    .line 188
     invoke-virtual {v0, p0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     return-object v0

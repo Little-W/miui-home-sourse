@@ -63,13 +63,13 @@
     .end annotation
 
     .line 250
-    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$_2gTYyRHGpIS21NPXdYTzHjkrSM;
+    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$Rr8dsHlRczAMASJ6IL28-jFrFbc;
 
-    invoke-direct {v0, p2}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$_2gTYyRHGpIS21NPXdYTzHjkrSM;-><init>(Ljava/util/function/Supplier;)V
+    invoke-direct {v0, p2}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$Rr8dsHlRczAMASJ6IL28-jFrFbc;-><init>(Ljava/util/function/Supplier;)V
 
-    new-instance p2, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$xxwVmn9yNMNNLyWuDT9l-1bIE0s;
+    new-instance p2, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$SykwJmNgtJrhuXTGuMOELWwzMe4;
 
-    invoke-direct {p2, p1}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$xxwVmn9yNMNNLyWuDT9l-1bIE0s;-><init>(Landroidx/preference/CheckBoxPreference;)V
+    invoke-direct {p2, p1}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$SykwJmNgtJrhuXTGuMOELWwzMe4;-><init>(Landroidx/preference/CheckBoxPreference;)V
 
     const/4 p1, 0x0
 
@@ -101,9 +101,9 @@
     if-eqz p1, :cond_0
 
     .line 179
-    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$gWoXBFweduJELZ-bYhcjtVaEIT0;
+    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$zssUs9DBrY2as5mDg9VSP_ZItr4;
 
-    invoke-direct {v0, p2}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$gWoXBFweduJELZ-bYhcjtVaEIT0;-><init>(Ljava/util/function/Consumer;)V
+    invoke-direct {v0, p2}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$zssUs9DBrY2as5mDg9VSP_ZItr4;-><init>(Ljava/util/function/Consumer;)V
 
     invoke-virtual {p1, v0}, Landroidx/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
@@ -122,9 +122,9 @@
     if-eqz p1, :cond_0
 
     .line 168
-    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$WX0MFrKU-Eso0k6tfott8QWY6FQ;
+    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$wVzdv66l-D9Pj0HpAzTbL4rgE5g;
 
-    invoke-direct {v0, p2}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$WX0MFrKU-Eso0k6tfott8QWY6FQ;-><init>(Ljava/lang/Runnable;)V
+    invoke-direct {v0, p2}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$wVzdv66l-D9Pj0HpAzTbL4rgE5g;-><init>(Ljava/lang/Runnable;)V
 
     invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
@@ -138,9 +138,9 @@
     const-string v0, "navigation_guide_home"
 
     .line 128
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$1JPg0YTE_mEX5bNxSSmgaeassRE;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$dMgjntaN1LSOK9GuyItlfwxiYhY;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$1JPg0YTE_mEX5bNxSSmgaeassRE;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$dMgjntaN1LSOK9GuyItlfwxiYhY;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->initClickPreference(Ljava/lang/String;Ljava/lang/Runnable;)Landroidx/preference/Preference;
 
@@ -151,9 +151,9 @@
     const-string v0, "navigation_guide_recent"
 
     .line 134
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$zN6bEjdHB7fi6e9SEPEHF6Oo5xQ;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$lwzJZgmq085MusBvbCir8-2FO2E;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$zN6bEjdHB7fi6e9SEPEHF6Oo5xQ;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$lwzJZgmq085MusBvbCir8-2FO2E;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->initClickPreference(Ljava/lang/String;Ljava/lang/Runnable;)Landroidx/preference/Preference;
 
@@ -164,9 +164,9 @@
     const-string v0, "navigation_guide_back"
 
     .line 140
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$VGg8SbDiH7_21ht7QDc-vdgJ208;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$mfLwysHPoTLKqSc952kFwsxh3A8;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$VGg8SbDiH7_21ht7QDc-vdgJ208;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$mfLwysHPoTLKqSc952kFwsxh3A8;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->initClickPreference(Ljava/lang/String;Ljava/lang/Runnable;)Landroidx/preference/Preference;
 
@@ -177,9 +177,9 @@
     const-string v0, "navigation_guide_app_menu"
 
     .line 147
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$d_hec78IlsuK758cYxTn6g7N4bQ;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$B9bn0bjkjVwru0OylkgPm3fprus;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$d_hec78IlsuK758cYxTn6g7N4bQ;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$B9bn0bjkjVwru0OylkgPm3fprus;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->initClickPreference(Ljava/lang/String;Ljava/lang/Runnable;)Landroidx/preference/Preference;
 
@@ -190,9 +190,9 @@
     const-string v0, "navigation_guide_appswitch"
 
     .line 152
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$jUeTyOvKiFuvaW82iVWYSdpjwlo;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$QerUzz6SP2T1HoCc0_eFNnq3kw8;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$jUeTyOvKiFuvaW82iVWYSdpjwlo;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$QerUzz6SP2T1HoCc0_eFNnq3kw8;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->initClickPreference(Ljava/lang/String;Ljava/lang/Runnable;)Landroidx/preference/Preference;
 
@@ -203,9 +203,9 @@
     const-string v0, "navigation_guide_app_quick_switch"
 
     .line 158
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$z6Hwz2cMk-xXfjRNGYl8Tpiokbc;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$pc8Yh4W6d7SAWmQDwBvX-ST6cpI;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$z6Hwz2cMk-xXfjRNGYl8Tpiokbc;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$pc8Yh4W6d7SAWmQDwBvX-ST6cpI;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->initClickPreference(Ljava/lang/String;Ljava/lang/Runnable;)Landroidx/preference/Preference;
 
@@ -237,9 +237,9 @@
     const-string v0, "switch_screen_button_order"
 
     .line 102
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$mac2uedFWYXjE5sraRMdus_yC0M;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$seN_gSNRkT5UX1GICzA-wRpnfjk;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$mac2uedFWYXjE5sraRMdus_yC0M;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$seN_gSNRkT5UX1GICzA-wRpnfjk;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->initCheckboxPreferenceItem(Ljava/lang/String;Ljava/util/function/Consumer;)Landroidx/preference/CheckBoxPreference;
 
@@ -263,7 +263,7 @@
 
     const-string v1, "com.android.settings.KeyShortcutSettingsFragment"
 
-    const v2, 0x7f100159
+    const v2, 0x7f10015a
 
     .line 106
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->getContext()Landroid/content/Context;
@@ -310,9 +310,9 @@
     const-string v0, "fsg_mistake_touch"
 
     .line 110
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$KdC7k3MUJjSvgwQvuk13eaJUkYM;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$9qWy5mBFsZgZCUr4vmbqJJESnbE;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$KdC7k3MUJjSvgwQvuk13eaJUkYM;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$9qWy5mBFsZgZCUr4vmbqJJESnbE;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->initCheckboxPreferenceItem(Ljava/lang/String;Ljava/util/function/Consumer;)Landroidx/preference/CheckBoxPreference;
 
@@ -323,9 +323,9 @@
     const-string v0, "navigation_hide_gesture_line"
 
     .line 114
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$MksvKbIVVg-WQrunKQv-XrvN-xg;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$TAkSVWA_-AWP-Gw_OzXKSIcCaIc;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$MksvKbIVVg-WQrunKQv-XrvN-xg;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$TAkSVWA_-AWP-Gw_OzXKSIcCaIc;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->initCheckboxPreferenceItem(Ljava/lang/String;Ljava/util/function/Consumer;)Landroidx/preference/CheckBoxPreference;
 
@@ -336,9 +336,9 @@
     const-string v0, "navigation_appswitch_anim"
 
     .line 123
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$gHwDIH2Vrnqj_Zym2iVwAQKgM-c;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$ANvEsdHPBd4urteKNmBsdRhs3IU;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$gHwDIH2Vrnqj_Zym2iVwAQKgM-c;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$ANvEsdHPBd4urteKNmBsdRhs3IU;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->initCheckboxPreferenceItem(Ljava/lang/String;Ljava/util/function/Consumer;)Landroidx/preference/CheckBoxPreference;
 
@@ -404,7 +404,7 @@
     return v2
 .end method
 
-.method static synthetic lambda$asyncSetCheckboxPreferenceCheckedStatus$18(Ljava/util/function/Supplier;Ljava/lang/Void;)Ljava/lang/Boolean;
+.method static synthetic lambda$asyncSetCheckboxPreferenceCheckedStatus$565(Ljava/util/function/Supplier;Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 0
 
     .line 250
@@ -417,7 +417,7 @@
     return-object p0
 .end method
 
-.method static synthetic lambda$asyncSetCheckboxPreferenceCheckedStatus$19(Landroidx/preference/CheckBoxPreference;Ljava/lang/Boolean;)V
+.method static synthetic lambda$asyncSetCheckboxPreferenceCheckedStatus$566(Landroidx/preference/CheckBoxPreference;Ljava/lang/Boolean;)V
     .locals 0
 
     .line 251
@@ -430,7 +430,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$initCheckboxPreferenceItem$11(Ljava/util/function/Consumer;Landroidx/preference/Preference;Ljava/lang/Object;)Z
+.method static synthetic lambda$initCheckboxPreferenceItem$558(Ljava/util/function/Consumer;Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 0
 
     .line 180
@@ -441,7 +441,7 @@
     return p0
 .end method
 
-.method static synthetic lambda$initClickPreference$10(Ljava/lang/Runnable;Landroidx/preference/Preference;)Z
+.method static synthetic lambda$initClickPreference$557(Ljava/lang/Runnable;Landroidx/preference/Preference;)Z
     .locals 0
 
     .line 169
@@ -452,7 +452,7 @@
     return p0
 .end method
 
-.method public static synthetic lambda$initGuidePreferences$4(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+.method public static synthetic lambda$initGuidePreferences$551(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
     .locals 3
 
     const-string v0, "home"
@@ -480,7 +480,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initGuidePreferences$5(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+.method public static synthetic lambda$initGuidePreferences$552(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
     .locals 3
 
     const-string v0, "recents"
@@ -508,7 +508,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initGuidePreferences$6(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+.method public static synthetic lambda$initGuidePreferences$553(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
     .locals 3
 
     const-string v0, "back"
@@ -543,7 +543,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initGuidePreferences$7(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+.method public static synthetic lambda$initGuidePreferences$554(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
     .locals 2
 
     const-string v0, "in_app_function"
@@ -564,7 +564,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initGuidePreferences$8(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+.method public static synthetic lambda$initGuidePreferences$555(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
     .locals 3
 
     .line 153
@@ -581,7 +581,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f10019f
+    const v2, 0x7f1001a0
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -600,7 +600,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initGuidePreferences$9(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+.method public static synthetic lambda$initGuidePreferences$556(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
     .locals 2
 
     const-string v0, "quick_switch"
@@ -621,7 +621,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initSettingPreferences$0(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;Ljava/lang/Object;)V
+.method public static synthetic lambda$initSettingPreferences$547(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;Ljava/lang/Object;)V
     .locals 1
 
     .line 103
@@ -638,7 +638,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initSettingPreferences$1(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;Ljava/lang/Object;)V
+.method public static synthetic lambda$initSettingPreferences$548(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;Ljava/lang/Object;)V
     .locals 0
 
     .line 111
@@ -653,7 +653,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initSettingPreferences$2(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;Ljava/lang/Object;)V
+.method public static synthetic lambda$initSettingPreferences$549(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;Ljava/lang/Object;)V
     .locals 1
 
     .line 115
@@ -692,7 +692,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initSettingPreferences$3(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;Ljava/lang/Object;)V
+.method public static synthetic lambda$initSettingPreferences$550(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;Ljava/lang/Object;)V
     .locals 0
 
     .line 124
@@ -707,7 +707,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$showNoGestureLineLearnDialog$20(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;Lcom/miui/home/recents/settings/GestureLearnAlertDialog$DismissStatus;)V
+.method public static synthetic lambda$showNoGestureLineLearnDialog$567(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;Lcom/miui/home/recents/settings/GestureLearnAlertDialog$DismissStatus;)V
     .locals 1
 
     .line 261
@@ -739,7 +739,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$updatePreferenceVisibility$12(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;Ljava/lang/Void;)Ljava/lang/Boolean;
+.method public static synthetic lambda$updatePreferenceVisibility$559(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 0
 
     .line 198
@@ -756,7 +756,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$updatePreferenceVisibility$13(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;Ljava/lang/Boolean;)V
+.method public static synthetic lambda$updatePreferenceVisibility$560(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;Ljava/lang/Boolean;)V
     .locals 0
 
     .line 199
@@ -769,7 +769,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$updateSettingPreferencesCheckedState$14(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)Ljava/lang/Boolean;
+.method public static synthetic lambda$updateSettingPreferencesCheckedState$561(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)Ljava/lang/Boolean;
     .locals 1
 
     .line 240
@@ -786,7 +786,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$updateSettingPreferencesCheckedState$15(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)Ljava/lang/Boolean;
+.method public static synthetic lambda$updateSettingPreferencesCheckedState$562(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)Ljava/lang/Boolean;
     .locals 1
 
     .line 241
@@ -801,7 +801,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$updateSettingPreferencesCheckedState$16(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)Ljava/lang/Boolean;
+.method public static synthetic lambda$updateSettingPreferencesCheckedState$563(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)Ljava/lang/Boolean;
     .locals 1
 
     .line 243
@@ -818,7 +818,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$updateSettingPreferencesCheckedState$17(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)Ljava/lang/Boolean;
+.method public static synthetic lambda$updateSettingPreferencesCheckedState$564(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)Ljava/lang/Boolean;
     .locals 1
 
     .line 245
@@ -897,12 +897,12 @@
 
     invoke-direct {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f1001aa
+    const v1, 0x7f1001ab
 
     .line 257
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setTitle(I)V
 
-    const v1, 0x7f1001a9
+    const v1, 0x7f1001aa
 
     .line 258
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setMessage(I)V
@@ -913,9 +913,9 @@
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setPositiveButtonIntentAction(Ljava/lang/String;)V
 
     .line 260
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$rSpNfLbf65xpkcKrs2JeEXIDBdU;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$fThtoJ3TpfS91gEJBTChSYPzcKE;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$rSpNfLbf65xpkcKrs2JeEXIDBdU;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$fThtoJ3TpfS91gEJBTChSYPzcKE;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setClickDialogButtonConsume(Ljava/util/function/Consumer;)V
 
@@ -933,12 +933,12 @@
 
     if-eqz p1, :cond_0
 
-    const v1, 0x7f100198
+    const v1, 0x7f100199
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f100199
+    const v1, 0x7f10019a
 
     :goto_0
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setSummary(I)V
@@ -948,12 +948,12 @@
 
     if-eqz p1, :cond_1
 
-    const v1, 0x7f080202
+    const v1, 0x7f080214
 
     goto :goto_1
 
     :cond_1
-    const v1, 0x7f080201
+    const v1, 0x7f080213
 
     :goto_1
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -963,12 +963,12 @@
 
     if-eqz p1, :cond_2
 
-    const v1, 0x7f080207
+    const v1, 0x7f080219
 
     goto :goto_2
 
     :cond_2
-    const v1, 0x7f080206
+    const v1, 0x7f080218
 
     :goto_2
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -978,12 +978,12 @@
 
     if-eqz p1, :cond_3
 
-    const v1, 0x7f080205
+    const v1, 0x7f080217
 
     goto :goto_3
 
     :cond_3
-    const v1, 0x7f080204
+    const v1, 0x7f080216
 
     :goto_3
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -993,12 +993,12 @@
 
     if-eqz p1, :cond_4
 
-    const v1, 0x7f080209
+    const v1, 0x7f08021b
 
     goto :goto_4
 
     :cond_4
-    const v1, 0x7f080208
+    const v1, 0x7f08021a
 
     :goto_4
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -1008,12 +1008,12 @@
 
     if-eqz p1, :cond_5
 
-    const p1, 0x7f080200
+    const p1, 0x7f080212
 
     goto :goto_5
 
     :cond_5
-    const p1, 0x7f0801ff
+    const p1, 0x7f080211
 
     :goto_5
     invoke-virtual {v0, p1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -1162,13 +1162,13 @@
     invoke-virtual {v1, v3}, Landroidx/preference/Preference;->setVisible(Z)V
 
     .line 198
-    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$j8-YWNpl5P90hDkkN_4tYbasJes;
+    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$Msp3O1WWO3_0cd_h5FVVsl6zEYE;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$j8-YWNpl5P90hDkkN_4tYbasJes;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$Msp3O1WWO3_0cd_h5FVVsl6zEYE;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$LPwvdshGhTpz1DPe2lkOtEAwoDY;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$9o5lu2OQlXLd4FPMJ_w53xaBz1c;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$LPwvdshGhTpz1DPe2lkOtEAwoDY;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$9o5lu2OQlXLd4FPMJ_w53xaBz1c;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     const/4 v2, 0x0
 
@@ -1183,18 +1183,18 @@
     .line 240
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mSwitchScreenButtonOrder:Landroidx/preference/CheckBoxPreference;
 
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$XzlGomXbSelglBvnVMoCVjhia2I;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$bDRBGbCtONOdrDcLxPmVHOW0ZLU;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$XzlGomXbSelglBvnVMoCVjhia2I;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$bDRBGbCtONOdrDcLxPmVHOW0ZLU;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->asyncSetCheckboxPreferenceCheckedStatus(Landroidx/preference/CheckBoxPreference;Ljava/util/function/Supplier;)V
 
     .line 241
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mMistakeTouch:Landroidx/preference/CheckBoxPreference;
 
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$VWAiI4eJ3blTuUvI6BMaRszh8o0;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$oCeY9aTOkbW4FP3VcI0iqDdVkGQ;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$VWAiI4eJ3blTuUvI6BMaRszh8o0;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$oCeY9aTOkbW4FP3VcI0iqDdVkGQ;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->asyncSetCheckboxPreferenceCheckedStatus(Landroidx/preference/CheckBoxPreference;Ljava/util/function/Supplier;)V
 
@@ -1206,9 +1206,9 @@
     .line 243
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mHideGestureLine:Landroidx/preference/CheckBoxPreference;
 
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$V1Q-dSTKGGkBiOn8dWsZpoHHgT4;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$1iTPvhMEvZ9RAoZeOovEV74F9TU;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$V1Q-dSTKGGkBiOn8dWsZpoHHgT4;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$1iTPvhMEvZ9RAoZeOovEV74F9TU;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->asyncSetCheckboxPreferenceCheckedStatus(Landroidx/preference/CheckBoxPreference;Ljava/util/function/Supplier;)V
 
@@ -1218,9 +1218,9 @@
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mAppSwitchFeature:Landroidx/preference/CheckBoxPreference;
 
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$dkAMm2yfehdCMmlVjApPNScZAzE;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$X-D1-BtXevjBNASGs1y589jyiMY;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$dkAMm2yfehdCMmlVjApPNScZAzE;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavigationBarTypePreferenceFragment$X-D1-BtXevjBNASGs1y589jyiMY;-><init>(Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;)V
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->asyncSetCheckboxPreferenceCheckedStatus(Landroidx/preference/CheckBoxPreference;Ljava/util/function/Supplier;)V
 

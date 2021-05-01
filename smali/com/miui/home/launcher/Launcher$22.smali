@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3340
+    .line 3354
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$22;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,54 +35,44 @@
 .method public onChange(Z)V
     .locals 1
 
-    .line 3343
+    .line 3357
     invoke-static {}, Lcom/miui/home/smallwindow/SmallWindowStateHelper;->isInSmallWindowMode()Z
 
     move-result p1
 
-    .line 3344
+    .line 3358
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$22;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/smallwindow/SmallWindowStateHelper;->updateSmallWindowState(Landroid/content/Context;)V
 
-    .line 3345
+    .line 3359
     invoke-static {}, Lcom/miui/home/smallwindow/SmallWindowStateHelper;->isInSmallWindowMode()Z
 
     move-result v0
 
     if-eq p1, v0, :cond_0
 
-    .line 3346
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$22;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/miui/home/recents/RecentsModel;->getInstance(Landroid/content/Context;)Lcom/miui/home/recents/RecentsModel;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/recents/RecentsModel;->clearCurrentTaskInfo()V
-
-    .line 3347
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$22;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3200(Lcom/miui/home/launcher/Launcher;)V
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    .line 3350
-    invoke-static {}, Lcom/miui/home/smallwindow/SmallWindowStateHelper;->isInSmallWindowMode()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
+    .line 3360
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$22;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 3351
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/miui/home/recents/RecentsModel;->getInstance(Landroid/content/Context;)Lcom/miui/home/recents/RecentsModel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/recents/RecentsModel;->clearCurrentTaskInfo()V
+
+    .line 3361
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$22;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3200(Lcom/miui/home/launcher/Launcher;)V
+
+    .line 3362
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$22;->this$0:Lcom/miui/home/launcher/Launcher;
+
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3300(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherApplication;
 
     move-result-object p1
@@ -91,9 +81,9 @@
 
     move-result-object p1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_0
 
-    .line 3352
+    .line 3363
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$22;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3300(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherApplication;
@@ -108,6 +98,6 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/BaseRecentsImpl;->adaptToTopActivity(Z)V
 
-    :cond_1
+    :cond_0
     return-void
 .end method

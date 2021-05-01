@@ -32,12 +32,12 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 19
+    .line 20
     invoke-direct {p0, p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const p1, 0x7f0d0055
+    const p1, 0x7f0d005a
 
-    .line 20
+    .line 21
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/preference/IconCustomizeSaclePreference;->setLayoutResource(I)V
 
     return-void
@@ -48,7 +48,7 @@
 .method public final getCurrentSetIconSizeValue()Ljava/lang/Float;
     .locals 1
 
-    .line 46
+    .line 48
     iget-object v0, p0, Lcom/miui/home/settings/preference/IconCustomizeSaclePreference;->mIconSizeBar:Lcom/miui/home/settings/IconSizeSeekBar;
 
     if-eqz v0, :cond_0
@@ -73,12 +73,31 @@
 .method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
     .locals 4
 
-    .line 24
+    .line 25
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
+
+    const-string v0, "IconCustomizeSaclePreference"
+
+    .line 26
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onBindViewHolder: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 25
+    .line 27
     new-array v0, v0, [Landroid/view/View;
 
     const/4 v1, 0x0
@@ -103,7 +122,7 @@
 
     const v0, 0x7f0a0189
 
-    .line 26
+    .line 28
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
@@ -115,14 +134,14 @@
 
     iput-object v1, p0, Lcom/miui/home/settings/preference/IconCustomizeSaclePreference;->mIconSizeBar:Lcom/miui/home/settings/IconSizeSeekBar;
 
-    .line 27
+    .line 29
     iget-object p1, p0, Lcom/miui/home/settings/preference/IconCustomizeSaclePreference;->mIconSizeBar:Lcom/miui/home/settings/IconSizeSeekBar;
 
     if-eqz p1, :cond_2
 
     invoke-virtual {p1, v3}, Lcom/miui/home/settings/IconSizeSeekBar;->setBackgroundColor(I)V
 
-    .line 28
+    .line 30
     :cond_2
     iget-object p1, p0, Lcom/miui/home/settings/preference/IconCustomizeSaclePreference;->mIconSizeBar:Lcom/miui/home/settings/IconSizeSeekBar;
 
@@ -137,7 +156,7 @@
     :cond_3
     return-void
 
-    .line 26
+    .line 28
     :cond_4
     new-instance p1, Lkotlin/TypeCastException;
 
@@ -151,7 +170,7 @@
 .method public onProgressChanged(Landroid/widget/SeekBar;IZ)V
     .locals 0
 
-    .line 32
+    .line 34
     iget-object p1, p0, Lcom/miui/home/settings/preference/IconCustomizeSaclePreference;->mListener:Lcom/miui/home/settings/preference/IconCustomizeSaclePreference$IconSizeChangeListener;
 
     if-eqz p1, :cond_1
@@ -199,7 +218,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 42
+    .line 44
     iput-object p1, p0, Lcom/miui/home/settings/preference/IconCustomizeSaclePreference;->mListener:Lcom/miui/home/settings/preference/IconCustomizeSaclePreference$IconSizeChangeListener;
 
     return-void

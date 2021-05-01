@@ -115,7 +115,7 @@
     return-object p1
 .end method
 
-.method static synthetic lambda$showUserPresentAnimation$0(Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;ZLandroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;)V
+.method static synthetic lambda$showUserPresentAnimation$371(Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;ZLandroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;)V
     .locals 0
 
     .line 62
@@ -144,27 +144,27 @@
 .method public endAnimation(Landroid/view/View;)V
     .locals 1
 
-    const v0, 0x7f0a01f5
+    const v0, 0x7f0a01f7
 
     .line 35
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Spring;->endAnimation(Landroid/view/View;I)V
 
-    const v0, 0x7f0a01f6
+    const v0, 0x7f0a01f8
 
     .line 36
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Spring;->endAnimation(Landroid/view/View;I)V
 
-    const v0, 0x7f0a01f7
+    const v0, 0x7f0a01f9
 
     .line 37
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Spring;->endAnimation(Landroid/view/View;I)V
 
-    const v0, 0x7f0a01f8
+    const v0, 0x7f0a01fa
 
     .line 38
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Spring;->endAnimation(Landroid/view/View;I)V
 
-    const v0, 0x7f0a01f9
+    const v0, 0x7f0a01fb
 
     .line 39
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Spring;->endAnimation(Landroid/view/View;I)V
@@ -178,7 +178,7 @@
     .line 51
     sget-object v2, Landroidx/dynamicanimation/animation/DynamicAnimation;->ALPHA:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    const v3, 0x7f0a01f5
+    const v3, 0x7f0a01f7
 
     const/high16 v4, 0x3f800000    # 1.0f
 
@@ -197,7 +197,7 @@
     .line 53
     sget-object v2, Landroidx/dynamicanimation/animation/DynamicAnimation;->SCALE_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    const v3, 0x7f0a01f6
+    const v3, 0x7f0a01f8
 
     const v5, 0x3f547ae1    # 0.83f
 
@@ -210,7 +210,7 @@
     .line 55
     sget-object v2, Landroidx/dynamicanimation/animation/DynamicAnimation;->SCALE_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    const v3, 0x7f0a01f7
+    const v3, 0x7f0a01f9
 
     invoke-direct/range {v0 .. v6}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Spring;->getSpringAnimation(Landroid/view/View;Landroidx/dynamicanimation/animation/FloatPropertyCompat;IFFF)Landroidx/dynamicanimation/animation/SpringAnimation;
 
@@ -219,7 +219,7 @@
     .line 57
     sget-object v2, Landroidx/dynamicanimation/animation/DynamicAnimation;->TRANSLATION_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    const v3, 0x7f0a01f8
+    const v3, 0x7f0a01fa
 
     const/4 v4, 0x0
 
@@ -230,20 +230,20 @@
     .line 59
     sget-object v2, Landroidx/dynamicanimation/animation/DynamicAnimation;->TRANSLATION_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    const v3, 0x7f0a01f9
+    const v3, 0x7f0a01fb
 
     invoke-direct/range {v0 .. v6}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Spring;->getSpringAnimation(Landroid/view/View;Landroidx/dynamicanimation/animation/FloatPropertyCompat;IFFF)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     move-result-object v13
 
     .line 61
-    new-instance v0, Lcom/miui/home/launcher/compat/-$$Lambda$UserPresentAnimationCompatV12Spring$R5FU2NArQhySJmDXFcVZhSf9TRc;
+    new-instance v0, Lcom/miui/home/launcher/compat/-$$Lambda$UserPresentAnimationCompatV12Spring$gJyA-rLUyFBjLLhS2pWdUNgm7h8;
 
     move-object v7, v0
 
     move/from16 v11, p3
 
-    invoke-direct/range {v7 .. v13}, Lcom/miui/home/launcher/compat/-$$Lambda$UserPresentAnimationCompatV12Spring$R5FU2NArQhySJmDXFcVZhSf9TRc;-><init>(Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;ZLandroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;)V
+    invoke-direct/range {v7 .. v13}, Lcom/miui/home/launcher/compat/-$$Lambda$UserPresentAnimationCompatV12Spring$gJyA-rLUyFBjLLhS2pWdUNgm7h8;-><init>(Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;ZLandroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;)V
 
     move/from16 v1, p2
 

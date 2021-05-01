@@ -213,15 +213,6 @@
     return v0
 .end method
 
-.method public isIconCellBackground()Z
-    .locals 1
-
-    .line 63
-    iget-boolean v0, p0, Lcom/miui/home/launcher/CellBackground;->mIsIconCellBackground:Z
-
-    return v0
-.end method
-
 .method public setEnableAutoLayoutAnimation(Z)V
     .locals 0
 

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen android:title="@string/recents_layout_style"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.miui.home.recents.settings.TaskStackViewLayoutStyleContainerPreference android:key="task_stack_view_layout_style_container_preference" />
+<PreferenceScreen
+    android:title="@string/recents_layout_style"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.recents.settings.TaskStackViewLayoutStyleContainerPreference
+        android:key="task_stack_view_layout_style_container_preference" />
 </PreferenceScreen>

@@ -37,7 +37,7 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 57
+    .line 58
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog$init$1$1;->this$0:Lcom/miui/home/launcher/uninstall/BaseUninstallDialog$init$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog$init$1;->this$0:Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;

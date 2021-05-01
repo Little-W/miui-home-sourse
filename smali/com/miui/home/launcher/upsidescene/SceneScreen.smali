@@ -3203,7 +3203,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditModeBottomBar:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
-    const v0, 0x7f0a00cf
+    const v0, 0x7f0a00d1
 
     .line 183
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
@@ -3916,7 +3916,7 @@
     .line 962
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f100223
+    const v2, 0x7f100224
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

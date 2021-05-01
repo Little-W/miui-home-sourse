@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/commercial/recommend/RecommendController;)V
     .locals 0
 
-    .line 421
+    .line 443
     iput-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$2;->this$0:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,17 +33,17 @@
     return-void
 .end method
 
-.method public static synthetic lambda$run$0(Lcom/miui/home/launcher/commercial/recommend/RecommendController$2;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)V
+.method public static synthetic lambda$run$205(Lcom/miui/home/launcher/commercial/recommend/RecommendController$2;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)V
     .locals 3
 
-    .line 426
+    .line 448
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$2;->this$0:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     iget-object v1, v0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mFolderInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-wide v1, v1, Lcom/miui/home/launcher/FolderInfo;->id:J
 
-    invoke-static {p1, v1, v2}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->access$300(Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;J)Lcom/miui/home/launcher/CommercialRemoteShortcutInfo;
+    invoke-static {p1, v1, v2}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->access$100(Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;J)Lcom/miui/home/launcher/CommercialRemoteShortcutInfo;
 
     move-result-object p1
 
@@ -57,33 +57,31 @@
 .method public run()V
     .locals 2
 
-    .line 423
+    .line 445
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$2;->this$0:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->clearContents()V
 
-    .line 424
+    .line 446
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$2;->this$0:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->access$100(Lcom/miui/home/launcher/commercial/recommend/RecommendController;)Ljava/util/List;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mRecommendInfoList:Ljava/util/List;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->stream(Ljava/util/Collection;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$2$XInUQDI2uqDO0JTg-4Icyhn-2Uk;
+    new-instance v1, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$2$BmXV71nZYWkGOTA5ryIYozlcBmI;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$2$XInUQDI2uqDO0JTg-4Icyhn-2Uk;-><init>(Lcom/miui/home/launcher/commercial/recommend/RecommendController$2;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$2$BmXV71nZYWkGOTA5ryIYozlcBmI;-><init>(Lcom/miui/home/launcher/commercial/recommend/RecommendController$2;)V
 
-    .line 425
+    .line 447
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 429
+    .line 451
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$2;->this$0:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->access$200(Lcom/miui/home/launcher/commercial/recommend/RecommendController;)V
+    invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->preloadAndRefresh()V
 
     return-void
 .end method

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/SwipeHelperForRecents;FF)V
     .locals 0
 
-    .line 315
+    .line 321
     iput-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$3;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     invoke-direct {p0, p2, p3}, Lcom/miui/home/recents/util/InOutRangeDetector;-><init>(FF)V
@@ -35,7 +35,7 @@
 .method public onOutRange()V
     .locals 2
 
-    .line 318
+    .line 324
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$3;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->access$000(Lcom/miui/home/recents/views/SwipeHelperForRecents;)Landroid/view/View;

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1;)V
     .locals 0
 
-    .line 213
+    .line 210
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1$1;->this$1:Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -37,7 +37,7 @@
 
     if-nez p2, :cond_0
 
-    .line 217
+    .line 214
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1$1;->this$1:Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1;->this$0:Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;
@@ -46,7 +46,7 @@
 
     invoke-virtual {p1, p0}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->removeOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
-    .line 218
+    .line 215
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1$1;->this$1:Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1;->this$0:Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;

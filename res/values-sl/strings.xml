@@ -52,7 +52,7 @@
     <string name="added_all_category">Vse aplikacije so bile uspešno dodane</string>
     <string name="alexa_notification_add">Dodaj</string>
     <string name="alexa_notification_cancel">Ne zdaj</string>
-    <string name="alexa_notification_content">Želite dodati bližnjico do Alexe v Vsebinski center?</string>
+    <string name="alexa_notification_content">Želite dodati bližnjico do Alexe v Nadzornem centru?</string>
     <string name="all_app_category_all">Vse</string>
     <string name="all_app_category_communication">Komunikacija</string>
     <string name="all_app_category_default">Kategorija</string>
@@ -206,6 +206,7 @@
     <string name="defalut_launcher_title">Privzeti zaganjalnik</string>
     <string name="default_folder_title_claro">Claro</string>
     <string name="default_folder_title_game">Igre</string>
+    <string name="default_folder_title_hot">Priljubljene aplikacije</string>
     <string name="default_folder_title_meitu">Meitu aplikacije</string>
     <string name="default_folder_title_microsoft">Microsoft</string>
     <string name="default_folder_title_other_apps">Ostale aplikacije</string>

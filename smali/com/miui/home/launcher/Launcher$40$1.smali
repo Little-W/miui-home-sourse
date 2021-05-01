@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher$40;Landroid/content/Intent;Landroid/content/Context;)V
     .locals 0
 
-    .line 3628
+    .line 3640
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
@@ -41,10 +41,10 @@
     return-void
 .end method
 
-.method public static synthetic lambda$run$0(Lcom/miui/home/launcher/Launcher$40$1;Landroid/content/Intent;)V
+.method public static synthetic lambda$run$41(Lcom/miui/home/launcher/Launcher$40$1;Landroid/content/Intent;)V
     .locals 1
 
-    .line 3729
+    .line 3740
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -61,7 +61,7 @@
 
     const-string v0, "android.provider.Telephony.SECRET_CODE"
 
-    .line 3631
+    .line 3643
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -78,7 +78,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 3632
+    .line 3644
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     invoke-virtual {v0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
@@ -91,19 +91,19 @@
 
     const-string v3, "4663"
 
-    .line 3633
+    .line 3645
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 3634
+    .line 3646
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 3635
+    .line 3647
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v1, v1, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -114,10 +114,10 @@
 
     const/high16 v1, 0x10000000
 
-    .line 3636
+    .line 3648
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 3637
+    .line 3649
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v1, v1, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -129,14 +129,14 @@
     :cond_0
     const-string v3, "362253564"
 
-    .line 3638
+    .line 3650
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 3639
+    .line 3651
     invoke-static {v1}, Lcom/miui/home/launcher/MiuiHomeLog;->setDebugLogState(Z)V
 
     goto/16 :goto_1
@@ -144,49 +144,22 @@
     :cond_1
     const-string v1, "3472253564"
 
-    .line 3640
+    .line 3652
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_17
 
-    .line 3641
+    .line 3653
     invoke-static {v2}, Lcom/miui/home/launcher/MiuiHomeLog;->setDebugLogState(Z)V
 
     goto/16 :goto_1
 
     :cond_2
-    const-string v0, "com.android.finger.fast.unlock"
-
-    .line 3643
-    iget-object v3, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
-
-    invoke-virtual {v3}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 3644
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
-
-    iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    iget-object v0, v0, Lcom/miui/home/launcher/Launcher;->mUnlockAnimationStateMachine:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->onFingerFastUnlock()V
-
-    goto/16 :goto_1
-
-    :cond_3
     const-string v0, "android.intent.action.USER_PRESENT"
 
-    .line 3645
+    .line 3655
     iget-object v3, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     invoke-virtual {v3}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -197,23 +170,23 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
-    .line 3646
+    .line 3656
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0, v2}, Lcom/miui/home/launcher/Launcher;->access$4300(Lcom/miui/home/launcher/Launcher;Z)V
 
-    .line 3647
+    .line 3657
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$4800(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 3648
+    .line 3658
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -222,14 +195,14 @@
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->onUserPresent()V
 
-    .line 3649
+    .line 3659
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->usingFsGesture()Z
 
     move-result v0
 
     if-eqz v0, :cond_17
 
-    .line 3650
+    .line 3660
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isSupportRecentsAndFsGesture()Z
 
     move-result v0
@@ -242,12 +215,12 @@
 
     sget-object v1, Lcom/miui/home/launcher/LauncherState;->FEED_OVERLAY_STATE:Lcom/miui/home/launcher/overlay/feed/FeedOverlayState;
 
-    .line 3651
+    .line 3661
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
 
     move-result v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_3
 
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
@@ -261,8 +234,8 @@
 
     if-eqz v0, :cond_17
 
-    .line 3652
-    :cond_4
+    .line 3662
+    :cond_3
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -271,10 +244,10 @@
 
     goto/16 :goto_1
 
-    :cond_5
+    :cond_4
     const-string v0, "android.intent.action.SCREEN_OFF"
 
-    .line 3654
+    .line 3664
     iget-object v3, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     invoke-virtual {v3}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -287,7 +260,7 @@
 
     if-eqz v0, :cond_7
 
-    .line 3655
+    .line 3665
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -296,7 +269,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_5
 
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
@@ -306,7 +279,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_5
 
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
@@ -316,7 +289,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_5
 
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
@@ -326,17 +299,17 @@
 
     move-result v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_5
 
-    .line 3656
+    .line 3666
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0, v2}, Lcom/miui/home/launcher/Launcher;->closeFolder(Z)Z
 
-    .line 3658
-    :cond_6
+    .line 3668
+    :cond_5
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -347,9 +320,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_17
+    if-eqz v0, :cond_6
 
-    .line 3659
+    .line 3669
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -362,12 +335,22 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/LauncherStateManager;->goToState(Lcom/miui/home/launcher/LauncherState;Z)V
 
+    .line 3671
+    :cond_6
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
+
+    iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iget-object v0, v0, Lcom/miui/home/launcher/Launcher;->mUnlockAnimationStateMachine:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->onScreenOffFromReceiver()V
+
     goto/16 :goto_1
 
     :cond_7
     const-string v0, "android.intent.action.SYSTEM_UI_VISIBILITY_CHANGED"
 
-    .line 3661
+    .line 3672
     iget-object v3, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     invoke-virtual {v3}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -380,7 +363,7 @@
 
     if-eqz v0, :cond_9
 
-    .line 3662
+    .line 3673
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -391,7 +374,7 @@
 
     if-eqz v0, :cond_17
 
-    .line 3663
+    .line 3674
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     const-string v3, "is_show"
@@ -402,12 +385,12 @@
 
     if-eqz v0, :cond_8
 
-    .line 3664
+    .line 3675
     invoke-static {v1}, Lcom/miui/launcher/utils/MamlUtils;->setGlobalThreadPause(Z)V
 
     goto/16 :goto_1
 
-    .line 3666
+    .line 3677
     :cond_8
     invoke-static {v2}, Lcom/miui/launcher/utils/MamlUtils;->setGlobalThreadPause(Z)V
 
@@ -416,7 +399,7 @@
     :cond_9
     const-string v0, "android.miui.REQUEST_LOCKSCREEN_WALLPAPER"
 
-    .line 3669
+    .line 3680
     iget-object v3, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     invoke-virtual {v3}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -429,7 +412,7 @@
 
     if-eqz v0, :cond_f
 
-    .line 3670
+    .line 3681
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     const-string v3, "wallpaperInfo"
@@ -438,14 +421,14 @@
 
     move-result-object v0
 
-    .line 3672
+    .line 3683
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-nez v3, :cond_d
 
-    .line 3673
+    .line 3684
     invoke-static {v0}, Lcom/miui/home/launcher/common/JsonUtils;->getWallpaperInfoFromJson(Ljava/lang/String;)Lcom/miui/home/launcher/lockwallpaper/mode/WallpaperInfo;
 
     move-result-object v3
@@ -454,7 +437,7 @@
 
     if-eqz v3, :cond_a
 
-    .line 3675
+    .line 3686
     iget-object v3, v3, Lcom/miui/home/launcher/lockwallpaper/mode/WallpaperInfo;->wallpaperUri:Ljava/lang/String;
 
     goto :goto_0
@@ -462,7 +445,7 @@
     :cond_a
     move-object v3, v4
 
-    .line 3676
+    .line 3687
     :goto_0
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -470,7 +453,7 @@
 
     if-nez v5, :cond_b
 
-    .line 3677
+    .line 3688
     invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v4
@@ -478,7 +461,7 @@
     :cond_b
     if-eqz v4, :cond_c
 
-    .line 3680
+    .line 3691
     new-instance v3, Lcom/miui/home/launcher/Launcher$40$1$1;
 
     invoke-direct {v3, p0, v0}, Lcom/miui/home/launcher/Launcher$40$1$1;-><init>(Lcom/miui/home/launcher/Launcher$40$1;Ljava/lang/String;)V
@@ -487,12 +470,12 @@
 
     aput-object v4, v0, v2
 
-    .line 3704
+    .line 3715
     invoke-virtual {v3, v0}, Lcom/miui/home/launcher/Launcher$40$1$1;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     goto/16 :goto_1
 
-    .line 3706
+    .line 3717
     :cond_c
     new-instance v0, Landroid/content/Intent;
 
@@ -502,10 +485,10 @@
 
     const-string v1, "set_lock_wallpaper_result"
 
-    .line 3707
+    .line 3718
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 3708
+    .line 3719
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v1, v1, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -514,7 +497,7 @@
 
     goto/16 :goto_1
 
-    .line 3710
+    .line 3721
     :cond_d
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
@@ -526,7 +509,7 @@
 
     if-eqz v0, :cond_e
 
-    .line 3711
+    .line 3722
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     const-string v1, "showTime"
@@ -537,7 +520,7 @@
 
     move-result-wide v0
 
-    .line 3712
+    .line 3723
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v2, v2, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -546,7 +529,7 @@
 
     goto/16 :goto_1
 
-    .line 3714
+    .line 3725
     :cond_e
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
@@ -559,7 +542,7 @@
     :cond_f
     const-string v0, "miui.intent.action.MIUI_REGION_CHANGED"
 
-    .line 3716
+    .line 3727
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -572,7 +555,7 @@
 
     if-eqz v0, :cond_10
 
-    .line 3717
+    .line 3728
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -604,7 +587,7 @@
     :cond_10
     const-string v0, "com.xiaomi.mihomemanager.clearMiuiHome"
 
-    .line 3718
+    .line 3729
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -621,7 +604,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
-    .line 3719
+    .line 3730
     invoke-static {v1}, Lcom/miui/launcher/utils/LauncherUtils;->getSender(Landroid/content/Intent;)Ljava/lang/String;
 
     move-result-object v1
@@ -632,14 +615,14 @@
 
     if-eqz v0, :cond_11
 
-    .line 3720
+    .line 3731
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$context:Landroid/content/Context;
 
     const-string v1, "database_ready_pref_key"
 
     invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 3721
+    .line 3732
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -651,7 +634,7 @@
     :cond_11
     const-string v0, "android.intent.action.USER_FOREGROUND"
 
-    .line 3722
+    .line 3733
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -664,14 +647,14 @@
 
     if-eqz v0, :cond_12
 
-    .line 3723
+    .line 3734
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$5400(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 3724
+    .line 3735
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -691,7 +674,7 @@
     :cond_12
     const-string v0, "com.miui.action.appcompatibility.update"
 
-    .line 3725
+    .line 3736
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -704,7 +687,7 @@
 
     if-eqz v0, :cond_13
 
-    .line 3726
+    .line 3737
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -720,7 +703,7 @@
     :cond_13
     const-string v0, "com.android.launcher.action.UPDATE_SHORTCUT"
 
-    .line 3727
+    .line 3738
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -733,12 +716,12 @@
 
     if-eqz v0, :cond_14
 
-    .line 3728
+    .line 3739
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$Launcher$40$1$GZwnZPHD9KoYrHv3GhKOPP2Kbko;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$Launcher$40$1$qFd2Nv13XqRlsWqMwxrwD8kVrMw;
 
-    invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/-$$Lambda$Launcher$40$1$GZwnZPHD9KoYrHv3GhKOPP2Kbko;-><init>(Lcom/miui/home/launcher/Launcher$40$1;Landroid/content/Intent;)V
+    invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/-$$Lambda$Launcher$40$1$qFd2Nv13XqRlsWqMwxrwD8kVrMw;-><init>(Lcom/miui/home/launcher/Launcher$40$1;Landroid/content/Intent;)V
 
     invoke-static {v1}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -747,7 +730,7 @@
     :cond_14
     const-string v0, "android.net.conn.CONNECTIVITY_CHANGE"
 
-    .line 3731
+    .line 3742
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -760,7 +743,7 @@
 
     if-eqz v0, :cond_15
 
-    .line 3732
+    .line 3743
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->checkIsNetworkConnectedAsync()V
 
     goto :goto_1
@@ -768,7 +751,7 @@
     :cond_15
     const-string v0, "android.intent.action.TIMEZONE_CHANGED"
 
-    .line 3733
+    .line 3744
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -781,7 +764,7 @@
 
     if-eqz v0, :cond_16
 
-    .line 3734
+    .line 3745
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -793,7 +776,7 @@
     :cond_16
     const-string v0, "miui.intent.action.ad.PREINSTALL_AD_UPDATING"
 
-    .line 3735
+    .line 3746
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$40$1;->val$tmpIntent:Landroid/content/Intent;
 
     invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -806,7 +789,7 @@
 
     if-eqz v0, :cond_17
 
-    .line 3736
+    .line 3747
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40$1;->this$1:Lcom/miui/home/launcher/Launcher$40;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;

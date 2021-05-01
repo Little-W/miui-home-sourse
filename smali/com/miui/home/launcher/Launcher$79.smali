@@ -3,12 +3,12 @@
 .source "Launcher.java"
 
 # interfaces
-.implements Landroid/content/ServiceConnection;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/miui/home/launcher/Launcher;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/miui/home/launcher/Launcher;->changeAlphaScale(FFIIIIZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,33 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
+.field final synthetic val$alpha:F
+
+.field final synthetic val$iconPivotX:I
+
+.field final synthetic val$iconPivotY:I
+
+.field final synthetic val$scale:F
+
+.field final synthetic val$visible:Z
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;FFIIZ)V
     .locals 0
 
-    .line 8118
+    .line 8107
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$79;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iput p2, p0, Lcom/miui/home/launcher/Launcher$79;->val$alpha:F
+
+    iput p3, p0, Lcom/miui/home/launcher/Launcher$79;->val$scale:F
+
+    iput p4, p0, Lcom/miui/home/launcher/Launcher$79;->val$iconPivotX:I
+
+    iput p5, p0, Lcom/miui/home/launcher/Launcher$79;->val$iconPivotY:I
+
+    iput-boolean p6, p0, Lcom/miui/home/launcher/Launcher$79;->val$visible:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,86 +55,30 @@
 
 
 # virtual methods
-.method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 1
+.method public run()V
+    .locals 8
 
-    .line 8121
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$79;->this$0:Lcom/miui/home/launcher/Launcher;
+    const-string v0, "Launcher"
 
-    invoke-static {p2}, Lcom/android/systemui/fsgesture/IFsGestureService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/systemui/fsgesture/IFsGestureService;
+    const-string v1, "change shortcutMenuLayer alpha and scale by FsCallback"
 
-    move-result-object p2
+    .line 8109
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p1, p2}, Lcom/miui/home/launcher/Launcher;->access$9102(Lcom/miui/home/launcher/Launcher;Lcom/android/systemui/fsgesture/IFsGestureService;)Lcom/android/systemui/fsgesture/IFsGestureService;
+    .line 8110
+    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$79;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 8122
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$79;->this$0:Lcom/miui/home/launcher/Launcher;
+    iget v3, p0, Lcom/miui/home/launcher/Launcher$79;->val$alpha:F
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$9100(Lcom/miui/home/launcher/Launcher;)Lcom/android/systemui/fsgesture/IFsGestureService;
+    iget v4, p0, Lcom/miui/home/launcher/Launcher$79;->val$scale:F
 
-    move-result-object p1
+    iget v5, p0, Lcom/miui/home/launcher/Launcher$79;->val$iconPivotX:I
 
-    if-eqz p1, :cond_0
+    iget v6, p0, Lcom/miui/home/launcher/Launcher$79;->val$iconPivotY:I
 
-    .line 8124
-    :try_start_0
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$79;->this$0:Lcom/miui/home/launcher/Launcher;
+    iget-boolean v7, p0, Lcom/miui/home/launcher/Launcher$79;->val$visible:Z
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$9100(Lcom/miui/home/launcher/Launcher;)Lcom/android/systemui/fsgesture/IFsGestureService;
-
-    move-result-object p1
-
-    const-string p2, "com.miui.home"
-
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$79;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$9900(Lcom/miui/home/launcher/Launcher;)Lcom/android/systemui/fsgesture/IFsGestureCallback;
-
-    move-result-object v0
-
-    invoke-interface {p1, p2, v0}, Lcom/android/systemui/fsgesture/IFsGestureService;->registerCallback(Ljava/lang/String;Lcom/android/systemui/fsgesture/IFsGestureCallback;)V
-
-    .line 8125
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$79;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->notifyBackGestureStatus()V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    .line 8127
-    invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
-
-    :cond_0
-    :goto_0
-    const-string p1, "Launcher"
-
-    const-string p2, "\u8fde\u63a5Service \u6210\u529f"
-
-    .line 8130
-    invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method public onServiceDisconnected(Landroid/content/ComponentName;)V
-    .locals 1
-
-    .line 8135
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$79;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$10000(Lcom/miui/home/launcher/Launcher;)V
-
-    const-string p1, "Launcher"
-
-    const-string v0, "\u8fde\u63a5Service \u5931\u8d25"
-
-    .line 8136
-    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual/range {v2 .. v7}, Lcom/miui/home/launcher/Launcher;->changeShortcutMenuLayerAlphaScale(FFIIZ)V
 
     return-void
 .end method

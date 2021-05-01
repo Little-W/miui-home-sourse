@@ -154,7 +154,7 @@
     return p0
 .end method
 
-.method static synthetic lambda$showNext$1(Landroid/content/DialogInterface;I)V
+.method static synthetic lambda$showNext$410(Landroid/content/DialogInterface;I)V
     .locals 0
 
     .line 55
@@ -163,7 +163,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$showWorkProfileTipsOnDrawer$0(Ljava/util/function/Consumer;Landroid/content/Context;Landroid/content/DialogInterface;I)V
+.method static synthetic lambda$showWorkProfileTipsOnDrawer$409(Ljava/util/function/Consumer;Landroid/content/Context;Landroid/content/DialogInterface;I)V
     .locals 0
 
     .line 38
@@ -193,23 +193,23 @@
 
     invoke-direct {v0, p0, v1}, Lmiui/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const p0, 0x7f100291
+    const p0, 0x7f100294
 
     .line 52
     invoke-virtual {v0, p0}, Lmiui/app/AlertDialog$Builder;->setTitle(I)Lmiui/app/AlertDialog$Builder;
 
     move-result-object p0
 
-    const v0, 0x7f100290
+    const v0, 0x7f100293
 
     .line 53
     invoke-virtual {p0, v0}, Lmiui/app/AlertDialog$Builder;->setMessage(I)Lmiui/app/AlertDialog$Builder;
 
     move-result-object p0
 
-    sget-object v0, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$Yx0QgB3cFnQPbiBvVb_a-TtQvbw;->INSTANCE:Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$Yx0QgB3cFnQPbiBvVb_a-TtQvbw;
+    sget-object v0, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$BwGOnuTxkgpprjX8veiYyCmdDak;->INSTANCE:Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$BwGOnuTxkgpprjX8veiYyCmdDak;
 
-    const v1, 0x7f10028e
+    const v1, 0x7f100291
 
     .line 54
     invoke-virtual {p0, v1, v0}, Lmiui/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;
@@ -261,12 +261,12 @@
 
     if-eqz p2, :cond_2
 
-    const p2, 0x7f100290
+    const p2, 0x7f100293
 
     goto :goto_0
 
     :cond_2
-    const p2, 0x7f10028d
+    const p2, 0x7f100290
 
     .line 70
     :goto_0
@@ -321,25 +321,25 @@
 
     invoke-direct {v0, p0, v1}, Lmiui/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v1, 0x7f100291
+    const v1, 0x7f100294
 
     .line 35
     invoke-virtual {v0, v1}, Lmiui/app/AlertDialog$Builder;->setTitle(I)Lmiui/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f10028d
+    const v1, 0x7f100290
 
     .line 36
     invoke-virtual {v0, v1}, Lmiui/app/AlertDialog$Builder;->setMessage(I)Lmiui/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f10028f
+    const v1, 0x7f100292
 
-    new-instance v2, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$0G66q0Cnr7qJdQWnTXtdJKIiaVI;
+    new-instance v2, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$l1m7t_IB1RZ3tsbVbtLdFZBJD2s;
 
-    invoke-direct {v2, p1, p0}, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$0G66q0Cnr7qJdQWnTXtdJKIiaVI;-><init>(Ljava/util/function/Consumer;Landroid/content/Context;)V
+    invoke-direct {v2, p1, p0}, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$l1m7t_IB1RZ3tsbVbtLdFZBJD2s;-><init>(Ljava/util/function/Consumer;Landroid/content/Context;)V
 
     .line 37
     invoke-virtual {v0, v1, v2}, Lmiui/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;

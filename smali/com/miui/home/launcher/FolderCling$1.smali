@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderCling;)V
     .locals 0
 
-    .line 204
+    .line 207
     iput-object p1, p0, Lcom/miui/home/launcher/FolderCling$1;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public run()V
     .locals 5
 
-    .line 207
+    .line 210
     iget-object v0, p0, Lcom/miui/home/launcher/FolderCling$1;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/FolderCling;->setVisibility(I)V
 
-    .line 208
+    .line 211
     iget-object v0, p0, Lcom/miui/home/launcher/FolderCling$1;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderCling;->access$000(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Folder;
@@ -74,7 +74,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/FolderCling$1;->this$0:Lcom/miui/home/launcher/FolderCling;
 
-    .line 209
+    .line 212
     invoke-static {v3}, Lcom/miui/home/launcher/FolderCling;->access$000(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Folder;
 
     move-result-object v3
@@ -89,10 +89,10 @@
 
     move-result v4
 
-    .line 208
+    .line 211
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/miui/home/launcher/Folder;->setPadding(IIII)V
 
-    .line 210
+    .line 213
     iget-object v0, p0, Lcom/miui/home/launcher/FolderCling$1;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderCling;->access$300(Lcom/miui/home/launcher/FolderCling;)Lmiui/widget/SlidingButton;

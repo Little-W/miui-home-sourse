@@ -2,27 +2,34 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/concurrent/Callable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/concurrent/Callable<",
+        "Lcom/xiaomi/onetrack/a/j;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Z
+.field final synthetic a:Ljava/lang/String;
 
-.field final synthetic b:Ljava/util/Map;
-
-.field final synthetic c:Lcom/xiaomi/onetrack/a/f;
+.field final synthetic b:Lcom/xiaomi/onetrack/a/f;
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/onetrack/a/f;ZLjava/util/Map;)V
+.method constructor <init>(Lcom/xiaomi/onetrack/a/f;Ljava/lang/String;)V
     .locals 0
 
-    .line 307
-    iput-object p1, p0, Lcom/xiaomi/onetrack/a/i;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 126
+    iput-object p1, p0, Lcom/xiaomi/onetrack/a/i;->b:Lcom/xiaomi/onetrack/a/f;
 
-    iput-boolean p2, p0, Lcom/xiaomi/onetrack/a/i;->a:Z
-
-    iput-object p3, p0, Lcom/xiaomi/onetrack/a/i;->b:Ljava/util/Map;
+    iput-object p2, p0, Lcom/xiaomi/onetrack/a/i;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,118 +38,278 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public a()Lcom/xiaomi/onetrack/a/j;
+    .locals 10
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
 
-    .line 311
+    const/4 v0, 0x0
+
     :try_start_0
-    iget-boolean v0, p0, Lcom/xiaomi/onetrack/a/i;->a:Z
+    const-string v4, "app_id=?"
 
-    if-nez v0, :cond_0
+    .line 132
+    iget-object v1, p0, Lcom/xiaomi/onetrack/a/i;->b:Lcom/xiaomi/onetrack/a/f;
 
-    .line 312
-    iget-object v0, p0, Lcom/xiaomi/onetrack/a/i;->b:Ljava/util/Map;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/h/s;->a(Ljava/util/Map;Z)Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    .line 313
-    invoke-static {}, Lcom/xiaomi/onetrack/h/aa;->u()Ljava/lang/String;
+    invoke-static {v1}, Lcom/xiaomi/onetrack/a/f;->a(Lcom/xiaomi/onetrack/a/f;)Lcom/xiaomi/onetrack/a/e;
 
     move-result-object v1
 
-    .line 314
-    invoke-static {}, Lcom/xiaomi/onetrack/h/aa;->w()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "uid"
-
-    .line 315
-    invoke-virtual {v0, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    const-string v1, "uid_type"
-
-    .line 316
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 317
-    iget-object v1, p0, Lcom/xiaomi/onetrack/a/i;->c:Lcom/xiaomi/onetrack/a/f;
-
-    const-string v2, "ot_logout"
-
-    invoke-static {v1, v2}, Lcom/xiaomi/onetrack/a/f;->b(Lcom/xiaomi/onetrack/a/f;Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-virtual {v1}, Lcom/xiaomi/onetrack/a/e;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
-    .line 318
-    iget-object v2, p0, Lcom/xiaomi/onetrack/a/i;->c:Lcom/xiaomi/onetrack/a/f;
+    const-string v2, "events_cloud"
 
-    invoke-static {v2}, Lcom/xiaomi/onetrack/a/f;->a(Lcom/xiaomi/onetrack/a/f;)Lcom/xiaomi/onetrack/Configuration;
+    const/4 v3, 0x0
 
-    move-result-object v2
+    const/4 v5, 0x1
 
-    iget-object v3, p0, Lcom/xiaomi/onetrack/a/i;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 133
+    new-array v5, v5, [Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/xiaomi/onetrack/a/f;->c(Lcom/xiaomi/onetrack/a/f;)Lcom/xiaomi/onetrack/OneTrack$IEventHook;
+    const/4 v6, 0x0
 
-    move-result-object v3
+    iget-object v7, p0, Lcom/xiaomi/onetrack/a/i;->a:Ljava/lang/String;
 
-    invoke-static {v0, v2, v3, v1}, Lcom/xiaomi/onetrack/a/c;->d(Lorg/json/JSONObject;Lcom/xiaomi/onetrack/Configuration;Lcom/xiaomi/onetrack/OneTrack$IEventHook;Lorg/json/JSONObject;)Ljava/lang/String;
+    aput-object v7, v5, v6
 
-    move-result-object v0
+    const/4 v6, 0x0
 
-    .line 319
-    iget-object v1, p0, Lcom/xiaomi/onetrack/a/i;->c:Lcom/xiaomi/onetrack/a/f;
+    const/4 v7, 0x0
 
-    invoke-static {v1}, Lcom/xiaomi/onetrack/a/f;->d(Lcom/xiaomi/onetrack/a/f;)Lcom/xiaomi/onetrack/a/d;
+    const/4 v8, 0x0
+
+    invoke-virtual/range {v1 .. v8}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
-
-    const-string v2, "ot_logout"
-
-    invoke-interface {v1, v2, v0}, Lcom/xiaomi/onetrack/a/d;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 321
-    :cond_0
-    invoke-static {}, Lcom/xiaomi/onetrack/h/aa;->v()V
-
-    .line 322
-    invoke-static {}, Lcom/xiaomi/onetrack/h/aa;->x()V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    const-string v2, "app_id"
+
+    .line 136
+    invoke-interface {v1, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v2
+
+    const-string v3, "cloud_data"
+
+    .line 137
+    invoke-interface {v1, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v3
+
+    const-string v4, "data_hash"
+
+    .line 138
+    invoke-interface {v1, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v4
+
+    const-string v5, "timestamp"
+
+    .line 139
+    invoke-interface {v1, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v5
+
+    .line 141
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_2
+
+    .line 142
+    new-instance v6, Lcom/xiaomi/onetrack/a/j;
+
+    invoke-direct {v6}, Lcom/xiaomi/onetrack/a/j;-><init>()V
+
+    .line 143
+    invoke-interface {v1, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, v6, Lcom/xiaomi/onetrack/a/j;->a:Ljava/lang/String;
+
+    .line 144
+    invoke-interface {v1, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 145
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    .line 146
+    new-instance v3, Lorg/json/JSONObject;
+
+    invoke-direct {v3, v2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    iput-object v3, v6, Lcom/xiaomi/onetrack/a/j;->e:Lorg/json/JSONObject;
+
+    .line 148
+    :cond_0
+    iget-object v2, v6, Lcom/xiaomi/onetrack/a/j;->e:Lorg/json/JSONObject;
+
+    invoke-static {v2}, Lcom/xiaomi/onetrack/a/f;->a(Lorg/json/JSONObject;)I
+
+    move-result v2
+
+    int-to-long v2, v2
+
+    iput-wide v2, v6, Lcom/xiaomi/onetrack/a/j;->b:J
+
+    .line 149
+    invoke-interface {v1, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, v6, Lcom/xiaomi/onetrack/a/j;->d:Ljava/lang/String;
+
+    .line 150
+    invoke-interface {v1, v5}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v2
+
+    iput-wide v2, v6, Lcom/xiaomi/onetrack/a/j;->c:J
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    if-eqz v1, :cond_1
+
+    .line 158
+    :try_start_2
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     goto :goto_0
 
     :catch_0
+    const-string v0, "ConfigDbManager"
+
+    const-string v1, "getConfig  cursor.close"
+
+    .line 160
+    invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1
+    :goto_0
+    return-object v6
+
+    :cond_2
+    if-eqz v1, :cond_3
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v2
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v1
+
+    move-object v9, v1
+
+    move-object v1, v0
+
+    move-object v0, v9
+
+    goto :goto_4
+
+    :catch_2
+    move-exception v2
+
+    move-object v1, v0
+
+    :goto_1
+    :try_start_3
+    const-string v3, "ConfigDbManager"
+
+    .line 154
+    invoke-virtual {v2}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v3, v2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    if-eqz v1, :cond_3
+
+    .line 158
+    :goto_2
+    :try_start_4
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
+
+    goto :goto_3
+
+    :catch_3
+    const-string v1, "ConfigDbManager"
+
+    const-string v2, "getConfig  cursor.close"
+
+    .line 160
+    invoke-static {v1, v2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3
+    :goto_3
+    return-object v0
+
+    :catchall_1
     move-exception v0
 
-    const-string v1, "OneTrackImp"
+    :goto_4
+    if-eqz v1, :cond_4
 
-    .line 324
-    new-instance v2, Ljava/lang/StringBuilder;
+    .line 158
+    :try_start_5
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_4
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    goto :goto_5
 
-    const-string v3, "logout error:"
+    :catch_4
+    const-string v1, "ConfigDbManager"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "getConfig  cursor.close"
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    .line 160
+    invoke-static {v1, v2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 163
+    :cond_4
+    :goto_5
+    throw v0
+.end method
+
+.method public synthetic call()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .line 126
+    invoke-virtual {p0}, Lcom/xiaomi/onetrack/a/i;->a()Lcom/xiaomi/onetrack/a/j;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/xiaomi/onetrack/h/q;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    return-void
+    return-object v0
 .end method

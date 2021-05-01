@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/TaskViewHeader;Z)V
     .locals 0
 
-    .line 207
+    .line 209
     iput-object p1, p0, Lcom/miui/home/recents/views/TaskViewHeader$1;->this$0:Lcom/miui/home/recents/views/TaskViewHeader;
 
     iput-boolean p2, p0, Lcom/miui/home/recents/views/TaskViewHeader$1;->val$isShow:Z
@@ -39,12 +39,12 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 210
+    .line 212
     iget-boolean p1, p0, Lcom/miui/home/recents/views/TaskViewHeader$1;->val$isShow:Z
 
     if-nez p1, :cond_0
 
-    .line 211
+    .line 213
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskViewHeader$1;->this$0:Lcom/miui/home/recents/views/TaskViewHeader;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/TaskViewHeader;->access$000(Lcom/miui/home/recents/views/TaskViewHeader;)Landroid/widget/ImageView;
@@ -55,7 +55,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 213
+    .line 215
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskViewHeader$1;->this$0:Lcom/miui/home/recents/views/TaskViewHeader;
 

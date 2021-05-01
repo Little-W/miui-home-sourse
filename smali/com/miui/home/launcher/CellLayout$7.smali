@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 1395
+    .line 1315
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$7;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 1398
+    .line 1318
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$7;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->canBeDeleted()Z
@@ -47,7 +47,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1399
+    .line 1319
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$7;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->deleteSelf()V

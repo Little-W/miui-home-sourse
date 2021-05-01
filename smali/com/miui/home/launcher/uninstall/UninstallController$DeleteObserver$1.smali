@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/uninstall/UninstallController$DeleteObserver;Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 121
+    .line 123
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/UninstallController$DeleteObserver$1;->this$0:Lcom/miui/home/launcher/uninstall/UninstallController$DeleteObserver;
 
     iput-object p2, p0, Lcom/miui/home/launcher/uninstall/UninstallController$DeleteObserver$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
@@ -42,10 +42,10 @@
 .method public run()V
     .locals 2
 
-    .line 124
+    .line 126
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController$DeleteObserver$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
-    const v1, 0x7f100108
+    const v1, 0x7f100109
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->showError(I)V
 

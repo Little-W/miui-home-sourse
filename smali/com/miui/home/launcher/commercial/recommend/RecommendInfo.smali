@@ -25,45 +25,45 @@
 .method public constructor <init>(Lcom/miui/msa/global/guessyoulike/v1/GlobalFolderRecommendAdInfo;)V
     .locals 3
 
-    .line 31
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
+    .line 43
     invoke-virtual {p1}, Lcom/miui/msa/global/guessyoulike/v1/GlobalFolderRecommendAdInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mPackageName:Ljava/lang/String;
 
-    .line 33
+    .line 44
     invoke-virtual {p1}, Lcom/miui/msa/global/guessyoulike/v1/GlobalFolderRecommendAdInfo;->getTitle()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mTitle:Ljava/lang/String;
 
-    .line 34
+    .line 45
     invoke-virtual {p1}, Lcom/miui/msa/global/guessyoulike/v1/GlobalFolderRecommendAdInfo;->getIconUri()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mIconUri:Ljava/lang/String;
 
-    .line 35
+    .line 46
     invoke-virtual {p1}, Lcom/miui/msa/global/guessyoulike/v1/GlobalFolderRecommendAdInfo;->getCacheTime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mCacheTime:J
 
-    .line 36
+    .line 47
     invoke-virtual {p1}, Lcom/miui/msa/global/guessyoulike/v1/GlobalFolderRecommendAdInfo;->getEndTimeInMills()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mEndTimeInMills:J
 
-    .line 37
+    .line 48
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,12 +84,101 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mId:Ljava/lang/String;
 
-    .line 38
+    .line 49
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {p1}, Lcom/miui/msa/global/guessyoulike/v1/GlobalFolderRecommendAdInfo;->getTagId()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mTagId:Ljava/lang/String;
+
+    .line 50
+    iput-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mData:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;)V
+    .locals 3
+
+    .line 31
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 32
+    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mPackageName:Ljava/lang/String;
+
+    .line 33
+    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;->getTitle()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mTitle:Ljava/lang/String;
+
+    .line 34
+    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;->getIconUri()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mIconUri:Ljava/lang/String;
+
+    .line 35
+    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;->getCacheTime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mCacheTime:J
+
+    .line 36
+    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;->getEndTimeInMills()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mEndTimeInMills:J
+
+    .line 37
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;->getId()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mId:Ljava/lang/String;
+
+    .line 38
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;->getTagId()Ljava/lang/String;
 
     move-result-object v1
 
@@ -111,101 +200,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/miui/msa/internal/preinstall/v1/FolderRecommendAdInfo;)V
-    .locals 3
-
-    .line 20
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 21
-    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v1/FolderRecommendAdInfo;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mPackageName:Ljava/lang/String;
-
-    .line 22
-    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v1/FolderRecommendAdInfo;->getTitle()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mTitle:Ljava/lang/String;
-
-    .line 23
-    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v1/FolderRecommendAdInfo;->getIconUri()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mIconUri:Ljava/lang/String;
-
-    .line 24
-    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v1/FolderRecommendAdInfo;->getCacheTime()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mCacheTime:J
-
-    .line 25
-    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v1/FolderRecommendAdInfo;->getEndTimeInMills()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mEndTimeInMills:J
-
-    .line 26
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v1/FolderRecommendAdInfo;->getId()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mId:Ljava/lang/String;
-
-    .line 27
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v1/FolderRecommendAdInfo;->getTagId()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mTagId:Ljava/lang/String;
-
-    .line 28
-    iput-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mData:Ljava/lang/Object;
-
-    return-void
-.end method
-
 
 # virtual methods
 .method public getCacheTime()J
     .locals 2
 
-    .line 55
+    .line 66
     iget-wide v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mCacheTime:J
 
     return-wide v0
@@ -214,7 +214,7 @@
 .method public getData()Ljava/lang/Object;
     .locals 1
 
-    .line 63
+    .line 74
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mData:Ljava/lang/Object;
 
     return-object v0
@@ -223,7 +223,7 @@
 .method public getEndTimeInMills()J
     .locals 2
 
-    .line 59
+    .line 70
     iget-wide v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mEndTimeInMills:J
 
     return-wide v0
@@ -232,7 +232,7 @@
 .method public getIconUri()Ljava/lang/String;
     .locals 1
 
-    .line 51
+    .line 62
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mIconUri:Ljava/lang/String;
 
     return-object v0
@@ -241,7 +241,7 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .line 67
+    .line 78
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mId:Ljava/lang/String;
 
     return-object v0
@@ -250,7 +250,7 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 1
 
-    .line 43
+    .line 54
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mPackageName:Ljava/lang/String;
 
     return-object v0
@@ -259,7 +259,7 @@
 .method public getTagId()Ljava/lang/String;
     .locals 1
 
-    .line 71
+    .line 82
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mTagId:Ljava/lang/String;
 
     return-object v0
@@ -268,7 +268,7 @@
 .method public getTitle()Ljava/lang/String;
     .locals 1
 
-    .line 47
+    .line 58
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->mTitle:Ljava/lang/String;
 
     return-object v0

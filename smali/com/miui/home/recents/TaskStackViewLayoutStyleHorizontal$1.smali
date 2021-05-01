@@ -35,7 +35,7 @@
 .method constructor <init>(Landroid/view/View;FFFFF)V
     .locals 0
 
-    .line 98
+    .line 96
     iput-object p1, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$v:Landroid/view/View;
 
     iput p2, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$startScale:F
@@ -58,7 +58,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 3
 
-    .line 101
+    .line 99
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -69,12 +69,12 @@
 
     move-result p1
 
-    .line 102
+    .line 100
     iget-object v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$v:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setScaleY(F)V
 
-    .line 103
+    .line 101
     iget v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$startScale:F
 
     sub-float p1, v0, p1
@@ -85,7 +85,7 @@
 
     div-float/2addr p1, v0
 
-    .line 104
+    .line 102
     iget-object v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$v:Landroid/view/View;
 
     iget v1, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$startAlpha:F
@@ -98,7 +98,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 105
+    .line 103
     iget-object v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$v:Landroid/view/View;
 
     iget v1, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$startTransY:F
@@ -111,7 +111,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 106
+    .line 104
     iget-object v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$v:Landroid/view/View;
 
     const/high16 v1, -0x3ee00000    # -10.0f

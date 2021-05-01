@@ -10,6 +10,34 @@
 
 
 # direct methods
+.method public static final asCollection([Ljava/lang/Object;)Ljava/util/Collection;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">([TT;)",
+            "Ljava/util/Collection<",
+            "TT;>;"
+        }
+    .end annotation
+
+    const-string v0, "$this$asCollection"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 54
+    new-instance v0, Lkotlin/collections/ArrayAsCollection;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lkotlin/collections/ArrayAsCollection;-><init>([Ljava/lang/Object;Z)V
+
+    check-cast v0, Ljava/util/Collection;
+
+    return-object v0
+.end method
+
 .method public static final emptyList()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;

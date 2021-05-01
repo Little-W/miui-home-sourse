@@ -944,7 +944,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0600af
+    const v2, 0x7f0600b2
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -964,7 +964,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0600ae
+    const v2, 0x7f0600b1
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1473,7 +1473,7 @@
     .line 179
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->setChildrenDrawingOrderEnabled(Z)V
 
-    const v0, 0x7f0a00cb
+    const v0, 0x7f0a00cc
 
     .line 180
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
@@ -1484,7 +1484,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
-    const v0, 0x7f0a00c9
+    const v0, 0x7f0a00ca
 
     .line 181
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
@@ -1541,7 +1541,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a00cc
+    const v0, 0x7f0a00cd
 
     .line 188
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
@@ -1593,7 +1593,7 @@
     .line 194
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0800bd
+    const v1, 0x7f0800cc
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/common/Utilities;->loadThemeCompatibleDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1613,7 +1613,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f10027a
+    const v1, 0x7f10027d
 
     .line 198
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;

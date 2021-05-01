@@ -37,7 +37,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Z)V
     .locals 0
 
-    .line 3792
+    .line 3802
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$41;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-boolean p2, p0, Lcom/miui/home/launcher/Launcher$41;->val$force:Z
@@ -52,12 +52,12 @@
 .method public apply(Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 2
 
-    .line 3795
+    .line 3805
     invoke-static {}, Lcom/miui/home/launcher/gadget/DualClockUtils;->shouldUseDualClock()Z
 
     move-result p1
 
-    .line 3796
+    .line 3806
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$41;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$5800(Lcom/miui/home/launcher/Launcher;)Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -79,14 +79,14 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 3801
+    .line 3811
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
 
-    .line 3797
+    .line 3807
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$41;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -97,7 +97,7 @@
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 3798
+    .line 3808
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$41;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -106,7 +106,7 @@
 
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/gadget/DualClockUtils;->setDualClockLastModifiedTime(Landroid/content/Context;J)V
 
-    .line 3799
+    .line 3809
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$41;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/gadget/DualClockUtils;->updateBackup(Landroid/content/Context;)Z
@@ -123,7 +123,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 3792
+    .line 3802
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$41;->apply(Ljava/lang/Void;)Ljava/lang/Boolean;

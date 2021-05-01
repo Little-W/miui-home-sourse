@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onChange$0(Lcom/miui/home/launcher/ApplicationsMessage$1;Ljava/lang/Void;)Ljava/lang/String;
+.method public static synthetic lambda$onChange$94(Lcom/miui/home/launcher/ApplicationsMessage$1;Ljava/lang/Void;)Ljava/lang/String;
     .locals 3
 
     const/4 p1, 0x0
@@ -182,7 +182,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$onChange$1(Lcom/miui/home/launcher/ApplicationsMessage$1;Ljava/lang/String;)V
+.method public static synthetic lambda$onChange$95(Lcom/miui/home/launcher/ApplicationsMessage$1;Ljava/lang/String;)V
     .locals 8
 
     :try_start_0
@@ -295,13 +295,13 @@
     .locals 2
 
     .line 85
-    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$1$3CfSFQ6cftzV24w1Apw86pvU7pA;
+    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$1$er6uEnbBqRqKsAV5uovD_Q6KqUo;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$1$3CfSFQ6cftzV24w1Apw86pvU7pA;-><init>(Lcom/miui/home/launcher/ApplicationsMessage$1;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$1$er6uEnbBqRqKsAV5uovD_Q6KqUo;-><init>(Lcom/miui/home/launcher/ApplicationsMessage$1;)V
 
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$1$qVeCU5hIImUKe2OeIORbCtjZieI;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$1$AjoS08oF_fLVL-E7tvkCkVgK8Zs;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$1$qVeCU5hIImUKe2OeIORbCtjZieI;-><init>(Lcom/miui/home/launcher/ApplicationsMessage$1;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$1$AjoS08oF_fLVL-E7tvkCkVgK8Zs;-><init>(Lcom/miui/home/launcher/ApplicationsMessage$1;)V
 
     const/4 v1, 0x0
 

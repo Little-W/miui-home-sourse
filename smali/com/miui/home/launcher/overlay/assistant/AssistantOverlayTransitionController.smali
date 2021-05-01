@@ -221,7 +221,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherStateManager;->cancelAnimation()V
+    invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherStateManager;->cancelPlaybackController()V
 
     :goto_1
     return-void

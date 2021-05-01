@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 37
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,18 +24,18 @@
         }
     .end annotation
 
-    .line 90
-    new-instance v0, Lcom/miui/home/launcher/allapps/-$$Lambda$LauncherMode$vpKTABrWCmfWhut2HUAVuuatli8;
+    .line 91
+    new-instance v0, Lcom/miui/home/launcher/allapps/-$$Lambda$LauncherMode$3gMteirfgAebaALtSLMquqgDAgY;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/-$$Lambda$LauncherMode$vpKTABrWCmfWhut2HUAVuuatli8;-><init>(Lcom/miui/home/launcher/allapps/LauncherMode;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/-$$Lambda$LauncherMode$3gMteirfgAebaALtSLMquqgDAgY;-><init>(Lcom/miui/home/launcher/allapps/LauncherMode;)V
 
     return-object v0
 .end method
 
-.method public static synthetic lambda$getRestoreFileFilter$0(Lcom/miui/home/launcher/allapps/LauncherMode;Landroid/net/Uri;)Z
+.method public static synthetic lambda$getRestoreFileFilter$124(Lcom/miui/home/launcher/allapps/LauncherMode;Landroid/net/Uri;)Z
     .locals 1
 
-    .line 90
+    .line 91
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/LauncherMode;->getRestoreFileSuffix()Ljava/lang/String;
 
     move-result-object v0
@@ -60,7 +60,7 @@
 .method public backupDatabaseFile(Landroid/content/Context;)Landroid/os/Bundle;
     .locals 2
 
-    .line 99
+    .line 100
     :try_start_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDatabaseName()Ljava/lang/String;
 
@@ -70,28 +70,28 @@
 
     move-result-object p1
 
-    .line 100
+    .line 101
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 101
+    .line 102
     invoke-virtual {p1}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object v0
 
     const/16 v1, 0x1f6
 
-    invoke-static {v0, v1}, Landroid/miui/Shell;->chmod(Ljava/lang/String;I)Z
+    invoke-static {v0, v1}, Landroid/system/Os;->chmod(Ljava/lang/String;I)V
 
-    .line 102
+    .line 103
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 103
+    .line 104
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v1
@@ -112,7 +112,7 @@
 
     move-result-object v0
 
-    .line 102
+    .line 103
     invoke-static {p1, v0}, Lcom/miui/home/launcher/cloudbackup/BackupRestoreHomeService;->createFileInfoBundle(Ljava/io/File;Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
@@ -124,7 +124,7 @@
     :catch_0
     move-exception p1
 
-    .line 106
+    .line 107
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -146,7 +146,7 @@
         }
     .end annotation
 
-    .line 66
+    .line 67
     invoke-interface {p1, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
     move-result p1
@@ -169,7 +169,7 @@
         }
     .end annotation
 
-    .line 44
+    .line 45
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -187,7 +187,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 45
+    .line 46
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -214,7 +214,7 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 48
+    .line 49
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutInfo;->getUser()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -227,7 +227,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 49
+    .line 50
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutInfo;->getUser()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -242,7 +242,7 @@
 
     if-nez v1, :cond_2
 
-    .line 50
+    .line 51
     :cond_1
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutInfo;->getUser()Landroid/os/UserHandle;
 
@@ -256,7 +256,7 @@
 
     if-nez v1, :cond_0
 
-    .line 51
+    .line 52
     :cond_2
     iget-object v1, v0, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
 
@@ -272,12 +272,12 @@
 
     const-string p2, "step1: found the same shortcut, not add again"
 
-    .line 52
+    .line 53
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 55
+    .line 56
     :cond_3
     iget-object v1, v0, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
 
@@ -291,7 +291,7 @@
 
     iget-object v1, p2, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
 
-    .line 56
+    .line 57
     invoke-virtual {v0, v1}, Landroid/content/Intent;->filterEquals(Landroid/content/Intent;)Z
 
     move-result v0
@@ -302,7 +302,7 @@
 
     const-string p2, "step2: found the same shortcut, not add again"
 
-    .line 57
+    .line 58
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
@@ -327,7 +327,7 @@
         }
     .end annotation
 
-    .line 70
+    .line 71
     new-instance p3, Lcom/miui/home/launcher/util/ComponentKey;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutInfo;->getComponentName()Landroid/content/ComponentName;
@@ -354,14 +354,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 170
+    .line 171
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->canShowShortcutMenu()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 171
+    .line 172
     invoke-static {}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuManager;->isAndroidVersionSupportShortcutMenu()Z
 
     move-result p1
@@ -382,7 +382,7 @@
 .method public getBackupFileSuffix()Ljava/lang/String;
     .locals 2
 
-    .line 78
+    .line 79
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -407,7 +407,7 @@
 .method public getCurrentDefaultScreenId()J
     .locals 2
 
-    .line 197
+    .line 198
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCurrentDefaultScreenIdFromPreference()J
 
     move-result-wide v0
@@ -418,7 +418,7 @@
 .method public getDefaultWorkspaceNamePrefix()Ljava/lang/String;
     .locals 2
 
-    .line 94
+    .line 95
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -443,7 +443,7 @@
 .method public getIconSizeScale()F
     .locals 1
 
-    .line 193
+    .line 194
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object v0
@@ -458,7 +458,7 @@
 .method public getLauncherCellCountInstance()Lcom/miui/home/launcher/compat/LauncherCellCount;
     .locals 1
 
-    .line 137
+    .line 138
     invoke-static {}, Lcom/miui/home/launcher/compat/LauncherCellCountCompat;->getInstance()Lcom/miui/home/launcher/compat/LauncherCellCount;
 
     move-result-object v0
@@ -469,7 +469,7 @@
 .method public getLauncherDatabaseDir(Landroid/content/Context;)Ljava/io/File;
     .locals 1
 
-    .line 74
+    .line 75
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/LauncherMode;->getModeName()Ljava/lang/String;
 
     move-result-object v0
@@ -484,7 +484,7 @@
 .method public getLauncherDatabasePath(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
-    .line 82
+    .line 83
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/LauncherMode;->getLauncherDatabaseDir(Landroid/content/Context;)Ljava/io/File;
@@ -506,7 +506,7 @@
 
     const-string v1, "notification_bar"
 
-    .line 141
+    .line 142
     invoke-static {p1, v0, v1}, Lcom/miui/home/settings/LauncherGestureController;->getSystemString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -517,7 +517,7 @@
 .method protected getRestoreFileSuffix()Ljava/lang/String;
     .locals 1
 
-    .line 86
+    .line 87
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/LauncherMode;->getModeName()Ljava/lang/String;
 
     move-result-object v0
@@ -538,7 +538,7 @@
 
     const-string v0, "launcher_slideup_gesture"
 
-    .line 147
+    .line 148
     invoke-static {}, Lcom/miui/home/launcher/ApplicationConfig;->isFeedSupport()Z
 
     move-result v1
@@ -552,7 +552,7 @@
     :cond_0
     const-string v1, "global_search"
 
-    .line 146
+    .line 147
     :goto_0
     invoke-static {p1, v0, v1}, Lcom/miui/home/settings/LauncherGestureController;->getSystemString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -568,12 +568,12 @@
 
     const/4 v1, 0x1
 
-    .line 185
+    .line 186
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 184
+    .line 185
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -584,7 +584,7 @@
 .method public isAutoFillEmptyEnable(Landroid/content/Context;)Z
     .locals 0
 
-    .line 161
+    .line 162
     invoke-static {p1}, Lcom/miui/launcher/utils/LauncherUtils;->enableAutoFillEmpty(Landroid/content/Context;)Z
 
     move-result p1
@@ -595,7 +595,7 @@
 .method public isHomeSupportSearchBar(Landroid/content/Context;)Z
     .locals 1
 
-    .line 189
+    .line 190
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-nez v0, :cond_0
@@ -634,14 +634,14 @@
 .method public isPersonalAssistantOn(Landroid/content/Context;)Z
     .locals 2
 
-    .line 175
+    .line 176
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 176
+    .line 177
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
@@ -657,7 +657,7 @@
 
     const/4 v1, 0x1
 
-    .line 178
+    .line 179
     invoke-static {p1, v0, v1}, Lcom/miui/launcher/utils/LauncherUtils;->getBooleanValueFromMiuiSettings(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result p1
@@ -668,7 +668,7 @@
 .method public isScreenCellsLocked(Landroid/content/Context;)Z
     .locals 0
 
-    .line 165
+    .line 166
     invoke-static {p1}, Lcom/miui/launcher/utils/LauncherUtils;->isScreenCellsLocked(Landroid/content/Context;)Z
 
     move-result p1
@@ -688,12 +688,12 @@
         }
     .end annotation
 
-    .line 112
+    .line 113
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/LauncherMode;->getLauncherDatabaseDir(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 113
+    .line 114
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -710,21 +710,21 @@
 
     const-string p2, "failed to create database folder"
 
-    .line 114
+    .line 115
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 117
+    .line 118
     :cond_0
     invoke-static {v0}, Lcom/miui/home/launcher/cloudbackup/BackupRestoreHomeService;->deleteContents(Ljava/io/File;)V
 
-    .line 118
+    .line 119
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/LauncherMode;->getRestoreFileFilter()Ljava/util/function/Predicate;
 
     move-result-object v1
 
-    .line 119
+    .line 120
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -743,20 +743,20 @@
 
     check-cast v2, Landroid/net/Uri;
 
-    .line 120
+    .line 121
     invoke-interface {v1, v2}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 122
+    .line 123
     :try_start_0
     invoke-virtual {v2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 123
+    .line 124
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/LauncherMode;->getBackupFileSuffix()Ljava/lang/String;
 
     move-result-object v4
@@ -767,12 +767,12 @@
 
     if-gtz v4, :cond_2
 
-    .line 125
+    .line 126
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v4
 
-    .line 127
+    .line 128
     :cond_2
     new-instance v5, Ljava/io/File;
 
@@ -788,7 +788,7 @@
 
     const-string v3, "Launcher.Backup"
 
-    .line 128
+    .line 129
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -812,7 +812,7 @@
     :catch_0
     move-exception v2
 
-    .line 130
+    .line 131
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

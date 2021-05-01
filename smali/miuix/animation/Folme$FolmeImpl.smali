@@ -31,11 +31,16 @@
 .method private varargs constructor <init>([Lmiuix/animation/IAnimTarget;)V
     .locals 0
 
-    .line 105
+    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 106
+    .line 105
     iput-object p1, p0, Lmiuix/animation/Folme$FolmeImpl;->mTargets:[Lmiuix/animation/IAnimTarget;
+
+    const/4 p1, 0x0
+
+    .line 106
+    invoke-static {p1}, Lmiuix/animation/Folme;->access$000(Z)V
 
     return-void
 .end method
@@ -43,7 +48,7 @@
 .method synthetic constructor <init>([Lmiuix/animation/IAnimTarget;Lmiuix/animation/Folme$1;)V
     .locals 0
 
-    .line 95
+    .line 94
     invoke-direct {p0, p1}, Lmiuix/animation/Folme$FolmeImpl;-><init>([Lmiuix/animation/IAnimTarget;)V
 
     return-void

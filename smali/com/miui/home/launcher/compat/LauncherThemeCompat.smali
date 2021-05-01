@@ -26,63 +26,63 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 15
+    .line 16
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->sInstanceLock:Ljava/lang/Object;
 
-    .line 17
+    .line 18
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->CLASSIC_DEVICE_V10:Ljava/util/HashSet;
 
-    .line 20
+    .line 21
     sget-object v0, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->CLASSIC_DEVICE_V10:Ljava/util/HashSet;
 
     const-string v1, "pyxis"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 21
+    .line 22
     sget-object v0, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->CLASSIC_DEVICE_V10:Ljava/util/HashSet;
 
     const-string v1, "laurus"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 22
+    .line 23
     sget-object v0, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->CLASSIC_DEVICE_V10:Ljava/util/HashSet;
 
     const-string v1, "ginkgo"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 23
+    .line 24
     sget-object v0, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->CLASSIC_DEVICE_V10:Ljava/util/HashSet;
 
     const-string v1, "begonia"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 24
+    .line 25
     sget-object v0, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->CLASSIC_DEVICE_V10:Ljava/util/HashSet;
 
     const-string v1, "olive"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 25
+    .line 26
     sget-object v0, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->CLASSIC_DEVICE_V10:Ljava/util/HashSet;
 
     const-string v1, "crux"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 26
+    .line 27
     sget-object v0, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->CLASSIC_DEVICE_V10:Ljava/util/HashSet;
 
     const-string v1, "willow"
@@ -95,7 +95,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 13
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -104,36 +104,32 @@
 .method public static getInstance(Landroid/content/Context;)Lcom/miui/home/launcher/compat/LauncherThemeCompat;
     .locals 3
 
-    .line 30
+    .line 31
     sget-object v0, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->sInstanceLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 31
+    .line 32
     :try_start_0
     sget-object v1, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->sInstance:Lcom/miui/home/launcher/compat/LauncherThemeCompat;
 
     if-nez v1, :cond_2
 
-    .line 32
+    .line 33
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 33
+    .line 34
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
-    .line 35
+    .line 36
     :cond_0
-    sget-object v1, Lcom/miui/home/launcher/DeviceConfig;->IS_MIUI_10:Ljava/lang/Boolean;
-
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v1
+    sget-boolean v1, Lcom/miui/home/launcher/common/Utilities;->IS_MIUI_10:Z
 
     if-eqz v1, :cond_1
 
@@ -141,14 +137,14 @@
 
     sget-object v2, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
-    .line 36
+    .line 37
     invoke-virtual {v1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 37
+    .line 38
     new-instance v1, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;
 
     invoke-direct {v1, p0}, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;-><init>(Landroid/content/Context;)V
@@ -157,7 +153,7 @@
 
     goto :goto_0
 
-    .line 39
+    .line 40
     :cond_1
     new-instance v1, Lcom/miui/home/launcher/compat/LauncherThemeCompatClassic;
 
@@ -165,7 +161,7 @@
 
     sput-object v1, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->sInstance:Lcom/miui/home/launcher/compat/LauncherThemeCompat;
 
-    .line 42
+    .line 43
     :cond_2
     :goto_0
     sget-object p0, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->sInstance:Lcom/miui/home/launcher/compat/LauncherThemeCompat;
@@ -177,7 +173,7 @@
     :catchall_0
     move-exception p0
 
-    .line 43
+    .line 44
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -196,7 +192,7 @@
 .method isThemeOverride(I)Z
     .locals 1
 
-    .line 51
+    .line 52
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getThemeValues()Lmiui/content/res/ThemeValues;
 
     move-result-object v0

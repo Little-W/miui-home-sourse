@@ -1,10 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.recents.views.TaskViewHeader android:id="@id/task_view_header" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/recents_task_view_header_height"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <com.miui.home.recents.views.FixedSizeImageView android:id="@id/icon" android:paddingTop="0.0dip" android:paddingBottom="@dimen/recents_task_view_header_button_padding" android:layout_width="@dimen/recents_task_view_header_height" android:layout_height="fill_parent" android:contentDescription="@string/recents_app_info_button_label" android:paddingStart="0.0dip" android:paddingEnd="@dimen/recents_task_view_header_app_info_spacing" />
-        <com.miui.home.recents.views.AlphaOptimizedTextView android:textSize="@dimen/recents_task_view_header_title_text_size" android:textColor="@color/task_manager_text" android:ellipsize="end" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/recents_empty_message" android:fontFamily="sans-serif-medium" android:layout_marginEnd="@dimen/recents_task_view_header_title_margin_end" />
-        <com.miui.home.recents.views.FixedSizeImageView android:layout_gravity="center_vertical" android:id="@id/lock_imageView" android:padding="@dimen/recents_task_view_header_button_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_task_lock" />
+<com.miui.home.recents.views.TaskViewHeader
+    android:id="@id/task_view_header"
+    android:visibility="visible"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/recents_task_view_header_height"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.miui.home.recents.views.FixedSizeImageView
+            android:id="@id/icon"
+            android:paddingTop="0.0dip"
+            android:paddingBottom="@dimen/recents_task_view_header_button_padding"
+            android:layout_width="@dimen/recents_task_view_header_height"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/recents_app_info_button_label"
+            android:paddingStart="0.0dip"
+            android:paddingEnd="@dimen/recents_task_view_header_app_info_spacing" />
+        <com.miui.home.recents.views.AlphaOptimizedTextView
+            android:textSize="@dimen/recents_task_view_header_title_text_size"
+            android:textColor="@color/task_manager_text"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:id="@id/title"
+            android:fadingEdge="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/recents_empty_message"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginEnd="@dimen/recents_task_view_header_title_margin_end" />
+        <com.miui.home.recents.views.FixedSizeImageView
+            android:layout_gravity="center_vertical"
+            android:id="@id/lock_imageView"
+            android:padding="@dimen/recents_task_view_header_button_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_task_lock" />
     </LinearLayout>
-    <TextView android:textSize="@dimen/recents_task_view_header_title_text_size" android:textColor="@color/task_manager_text" android:layout_gravity="center" android:id="@id/dismiss_task" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recents_dimiss_task" />
+    <TextView
+        android:textSize="@dimen/recents_task_view_header_title_text_size"
+        android:textColor="@color/task_manager_text"
+        android:layout_gravity="center"
+        android:id="@id/dismiss_task"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recents_dimiss_task" />
 </com.miui.home.recents.views.TaskViewHeader>

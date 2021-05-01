@@ -14,5 +14,8 @@
 
 
 # virtual methods
-.method public abstract fillGAID(Ljava/lang/String;)Z
+.method public abstract isCustomDauEvent(Ljava/lang/String;)Z
+.end method
+
+.method public abstract isRecommendEvent(Ljava/lang/String;)Z
 .end method

@@ -32,7 +32,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 3837
+    .line 3847
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -47,38 +47,38 @@
 
     const/4 v0, 0x0
 
-    .line 3840
+    .line 3850
     aget-object p1, p1, v0
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v1
 
-    .line 3841
+    .line 3851
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$5902(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 3842
+    .line 3852
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v0, 0x0
 
     iput-object v0, p1, Lcom/miui/home/launcher/Launcher;->mPreviewComponent:Ljava/lang/String;
 
-    .line 3843
+    .line 3853
     iput-object v0, p1, Lcom/miui/home/launcher/Launcher;->mDialogComponent:Ljava/lang/String;
 
-    .line 3844
+    .line 3854
     invoke-static {p1}, Lcom/miui/home/launcher/WallpaperUtils;->getLockWallpaperProvider(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string v3, "com.xiaomi.ad.LockScreenAdProvider"
 
-    .line 3846
+    .line 3856
     iget-object v4, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v4}, Lcom/miui/home/launcher/WallpaperUtils;->hasValidProvider(Landroid/content/Context;)Z
@@ -87,10 +87,10 @@
 
     if-nez v4, :cond_0
 
-    .line 3847
+    .line 3857
     sget-object p1, Lcom/miui/home/launcher/WallpaperUtils;->sDefaultLockWallpaperProvider:Ljava/lang/String;
 
-    .line 3850
+    .line 3860
     :cond_0
     iget-object v4, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -118,7 +118,7 @@
 
     if-nez v4, :cond_1
 
-    .line 3851
+    .line 3861
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1, v1, v2}, Lcom/miui/home/launcher/Launcher;->access$6000(Lcom/miui/home/launcher/Launcher;J)Landroid/os/Bundle;
@@ -130,14 +130,14 @@
     :cond_1
     const-string v4, "content://com.miui.home.launcher.settings/preference"
 
-    .line 3855
+    .line 3865
     iget-object v5, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v5, v4}, Lcom/miui/launcher/utils/PortableUtils;->getCurrentWallpaperInfo(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 3859
+    .line 3869
     :try_start_0
     new-instance v5, Lcom/miui/home/launcher/lockwallpaper/mode/RequestInfo;
 
@@ -145,22 +145,22 @@
 
     const/4 v6, 0x2
 
-    .line 3860
+    .line 3870
     iput v6, v5, Lcom/miui/home/launcher/lockwallpaper/mode/RequestInfo;->mode:I
 
-    .line 3861
+    .line 3871
     invoke-static {v4}, Lcom/miui/home/launcher/common/JsonUtils;->getWallpaperInfoFromJson(Ljava/lang/String;)Lcom/miui/home/launcher/lockwallpaper/mode/WallpaperInfo;
 
     move-result-object v6
 
     iput-object v6, v5, Lcom/miui/home/launcher/lockwallpaper/mode/RequestInfo;->currentWallpaperInfo:Lcom/miui/home/launcher/lockwallpaper/mode/WallpaperInfo;
 
-    .line 3862
+    .line 3872
     invoke-static {v5}, Lcom/miui/home/launcher/common/JsonUtils;->getJsonStringFromRequestInfo(Lcom/miui/home/launcher/lockwallpaper/mode/RequestInfo;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 3863
+    .line 3873
     iget-object v7, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -181,28 +181,28 @@
 
     move-result-object p1
 
-    .line 3865
+    .line 3875
     invoke-static {p1}, Lcom/miui/home/launcher/common/JsonUtils;->getResultInfoFromJson(Ljava/lang/String;)Lcom/miui/home/launcher/lockwallpaper/mode/ResultInfo;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    .line 3867
+    .line 3877
     iget-object v6, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-object v7, p1, Lcom/miui/home/launcher/lockwallpaper/mode/ResultInfo;->previewComponent:Ljava/lang/String;
 
     iput-object v7, v6, Lcom/miui/home/launcher/Launcher;->mPreviewComponent:Ljava/lang/String;
 
-    .line 3868
+    .line 3878
     iget-object v6, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-object v7, p1, Lcom/miui/home/launcher/lockwallpaper/mode/ResultInfo;->dialogComponent:Ljava/lang/String;
 
     iput-object v7, v6, Lcom/miui/home/launcher/Launcher;->mDialogComponent:Ljava/lang/String;
 
-    .line 3869
+    .line 3879
     iget-object v6, p1, Lcom/miui/home/launcher/lockwallpaper/mode/ResultInfo;->wallpaperInfos:Ljava/util/List;
 
     invoke-static {v6}, Lcom/miui/home/launcher/common/JsonUtils;->getJsonArrayFromWallpaperInfos(Ljava/util/List;)Lorg/json/JSONArray;
@@ -211,7 +211,7 @@
 
     if-eqz v6, :cond_2
 
-    .line 3871
+    .line 3881
     invoke-virtual {v6}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
 
     move-result-object v6
@@ -223,19 +223,19 @@
     :cond_2
     move-object v6, v0
 
-    .line 3874
+    .line 3884
     :goto_0
     :try_start_1
     iget-object p1, p1, Lcom/miui/home/launcher/lockwallpaper/mode/ResultInfo;->wallpaperInfos:Ljava/util/List;
 
     iput-object p1, v5, Lcom/miui/home/launcher/lockwallpaper/mode/RequestInfo;->wallpaperInfos:Ljava/util/List;
 
-    .line 3875
+    .line 3885
     invoke-static {v5}, Lcom/miui/home/launcher/common/JsonUtils;->getJsonStringFromRequestInfo(Lcom/miui/home/launcher/lockwallpaper/mode/RequestInfo;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 3876
+    .line 3886
     iget-object v5, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -258,14 +258,14 @@
 
     move-result-object p1
 
-    .line 3877
+    .line 3887
     invoke-static {p1}, Lcom/miui/home/launcher/common/JsonUtils;->getResultInfoFromJson(Ljava/lang/String;)Lcom/miui/home/launcher/lockwallpaper/mode/ResultInfo;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    .line 3879
+    .line 3889
     iget-object p1, p1, Lcom/miui/home/launcher/lockwallpaper/mode/ResultInfo;->wallpaperInfos:Ljava/util/List;
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/JsonUtils;->getJsonArrayFromWallpaperInfos(Ljava/util/List;)Lorg/json/JSONArray;
@@ -274,7 +274,7 @@
 
     if-eqz p1, :cond_4
 
-    .line 3881
+    .line 3891
     invoke-virtual {p1}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -302,13 +302,13 @@
 
     move-object v6, v0
 
-    .line 3886
+    .line 3896
     :goto_2
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v5, v0
 
-    .line 3888
+    .line 3898
     :goto_3
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -330,7 +330,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 3837
+    .line 3847
     check-cast p1, [Ljava/lang/Long;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$43;->doInBackground([Ljava/lang/Long;)Landroid/os/Bundle;
@@ -343,7 +343,7 @@
 .method protected onPostExecute(Landroid/os/Bundle;)V
     .locals 3
 
-    .line 3893
+    .line 3903
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x0
@@ -352,7 +352,7 @@
 
     if-nez p1, :cond_0
 
-    .line 3895
+    .line 3905
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$6400(Lcom/miui/home/launcher/Launcher;)V
@@ -362,14 +362,14 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 3899
+    .line 3909
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-object v2, v2, Lcom/miui/home/launcher/Launcher;->mPreviewComponent:Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
-    .line 3900
+    .line 3910
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher;->mPreviewComponent:Ljava/lang/String;
@@ -381,31 +381,31 @@
     :cond_1
     if-nez v0, :cond_2
 
-    .line 3903
+    .line 3913
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$6400(Lcom/miui/home/launcher/Launcher;)V
 
     return-void
 
-    .line 3906
+    .line 3916
     :cond_2
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 3907
+    .line 3917
     invoke-virtual {v2, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     const/high16 v0, 0x10000000
 
-    .line 3908
+    .line 3918
     invoke-virtual {v2, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 3909
+    .line 3919
     invoke-virtual {v2, p1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 3910
+    .line 3920
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
     new-instance v0, Landroid/os/Handler;
@@ -420,7 +420,7 @@
 
     move-result-object p1
 
-    .line 3912
+    .line 3922
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$43;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -437,7 +437,7 @@
 
     const-string v1, "start activity failed."
 
-    .line 3914
+    .line 3924
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -447,7 +447,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 3837
+    .line 3847
     check-cast p1, Landroid/os/Bundle;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$43;->onPostExecute(Landroid/os/Bundle;)V

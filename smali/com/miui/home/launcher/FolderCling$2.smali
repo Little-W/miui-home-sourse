@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderCling;)V
     .locals 0
 
-    .line 291
+    .line 294
     iput-object p1, p0, Lcom/miui/home/launcher/FolderCling$2;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 294
+    .line 297
     iget-object v0, p0, Lcom/miui/home/launcher/FolderCling$2;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderCling;->access$400(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Launcher;
@@ -47,7 +47,7 @@
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->closeFolder()Z
 
-    .line 295
+    .line 298
     iget-object v0, p0, Lcom/miui/home/launcher/FolderCling$2;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderCling;->access$000(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Folder;
@@ -58,7 +58,7 @@
 
     move-result-object v0
 
-    .line 296
+    .line 299
     iget-object v1, p0, Lcom/miui/home/launcher/FolderCling$2;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v1}, Lcom/miui/home/launcher/FolderCling;->access$000(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Folder;
@@ -69,7 +69,7 @@
 
     move-result-object v1
 
-    .line 297
+    .line 300
     iget-object v2, p0, Lcom/miui/home/launcher/FolderCling$2;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v2}, Lcom/miui/home/launcher/FolderCling;->access$000(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Folder;
@@ -80,7 +80,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 298
+    .line 301
     iget-object v2, p0, Lcom/miui/home/launcher/FolderCling$2;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/FolderCling;->getContext()Landroid/content/Context;
@@ -97,20 +97,20 @@
 
     if-nez v2, :cond_0
 
-    .line 299
+    .line 302
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/ShortcutInfo;->copyPosition(Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 300
+    .line 303
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->finishPending()V
 
-    .line 301
+    .line 304
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->findMyPendingSource()Lcom/miui/home/launcher/PendingSource;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/ShortcutInfo;->startPending(Lcom/miui/home/launcher/PendingSource;)V
 
-    .line 302
+    .line 305
     iget-object v0, v0, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
 
     invoke-interface {v0}, Lcom/miui/home/launcher/Folder$FolderCallback;->deleteSelf()V

@@ -40,7 +40,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initialize$0(Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;Landroid/view/View;)V
+.method public static synthetic lambda$initialize$121(Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;Landroid/view/View;)V
     .locals 1
 
     .line 68
@@ -188,9 +188,9 @@
     .line 68
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->mInputClear:Landroid/view/View;
 
-    new-instance p3, Lcom/miui/home/launcher/allapps/search/-$$Lambda$AllAppsSearchBarController$IsEWLkuX5wVP_jBeKX-NYhuEnEs;
+    new-instance p3, Lcom/miui/home/launcher/allapps/search/-$$Lambda$AllAppsSearchBarController$yqK59RGCUXlRhADC064N4iryZl8;
 
-    invoke-direct {p3, p0}, Lcom/miui/home/launcher/allapps/search/-$$Lambda$AllAppsSearchBarController$IsEWLkuX5wVP_jBeKX-NYhuEnEs;-><init>(Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;)V
+    invoke-direct {p3, p0}, Lcom/miui/home/launcher/allapps/search/-$$Lambda$AllAppsSearchBarController$yqK59RGCUXlRhADC064N4iryZl8;-><init>(Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;)V
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

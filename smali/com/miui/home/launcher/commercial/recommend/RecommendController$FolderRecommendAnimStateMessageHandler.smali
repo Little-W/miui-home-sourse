@@ -34,17 +34,17 @@
 .method private constructor <init>(Lcom/miui/home/launcher/commercial/recommend/RecommendController;)V
     .locals 0
 
-    .line 370
+    .line 392
     iput-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$FolderRecommendAnimStateMessageHandler;->this$0:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 372
+    .line 394
     iput-boolean p1, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$FolderRecommendAnimStateMessageHandler;->mIsRecommendScreenAnimating:Z
 
-    .line 373
+    .line 395
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -57,7 +57,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/commercial/recommend/RecommendController;Lcom/miui/home/launcher/commercial/recommend/RecommendController$1;)V
     .locals 0
 
-    .line 370
+    .line 392
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendController$FolderRecommendAnimStateMessageHandler;-><init>(Lcom/miui/home/launcher/commercial/recommend/RecommendController;)V
 
     return-void
@@ -70,7 +70,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 385
+    .line 407
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -81,7 +81,7 @@
 
     if-nez p1, :cond_2
 
-    .line 386
+    .line 408
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -90,7 +90,7 @@
 
     goto :goto_0
 
-    .line 389
+    .line 411
     :cond_0
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
@@ -102,14 +102,14 @@
 
     if-eqz p1, :cond_1
 
-    .line 390
+    .line 412
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
 
     invoke-virtual {p1, p0}, Lorg/greenrobot/eventbus/EventBus;->unregister(Ljava/lang/Object;)V
 
-    .line 392
+    .line 414
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$FolderRecommendAnimStateMessageHandler;->mAfterRecommendScreenShowAnimRunnables:Ljava/util/List;
 
@@ -126,7 +126,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 398
+    .line 420
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/FolderRecommendScreenAnimStateMessage;->getAnimState()I
 
     move-result p1
@@ -139,7 +139,7 @@
 
     const-string v0, "FolderRecommendAnimStateMessageHandler, default"
 
-    .line 416
+    .line 438
     invoke-static {p1, v0}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
@@ -147,16 +147,16 @@
     :pswitch_0
     const/4 p1, 0x1
 
-    .line 400
+    .line 422
     iput-boolean p1, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$FolderRecommendAnimStateMessageHandler;->mIsRecommendScreenAnimating:Z
 
     goto :goto_1
 
-    .line 404
+    .line 426
     :pswitch_1
     iput-boolean v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$FolderRecommendAnimStateMessageHandler;->mIsRecommendScreenAnimating:Z
 
-    .line 405
+    .line 427
     :goto_0
     iget-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$FolderRecommendAnimStateMessageHandler;->mAfterRecommendScreenShowAnimRunnables:Ljava/util/List;
 
@@ -166,7 +166,7 @@
 
     if-ge v0, p1, :cond_0
 
-    .line 406
+    .line 428
     iget-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$FolderRecommendAnimStateMessageHandler;->mAfterRecommendScreenShowAnimRunnables:Ljava/util/List;
 
     invoke-interface {p1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -175,14 +175,14 @@
 
     check-cast p1, Ljava/lang/Runnable;
 
-    .line 407
+    .line 429
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 412
+    .line 434
     :pswitch_2
     iput-boolean v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$FolderRecommendAnimStateMessageHandler;->mIsRecommendScreenAnimating:Z
 
@@ -203,19 +203,19 @@
 .method public runAfterRecommendScreenShowAnim(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 376
+    .line 398
     iget-boolean v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$FolderRecommendAnimStateMessageHandler;->mIsRecommendScreenAnimating:Z
 
     if-eqz v0, :cond_0
 
-    .line 377
+    .line 399
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$FolderRecommendAnimStateMessageHandler;->mAfterRecommendScreenShowAnimRunnables:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 379
+    .line 401
     :cond_0
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 

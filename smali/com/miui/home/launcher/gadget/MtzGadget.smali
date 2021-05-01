@@ -42,7 +42,7 @@
 
     move-result v0
 
-    const v1, 0x7f0d002c
+    const v1, 0x7f0d002d
 
     if-eqz v0, :cond_2
 
@@ -82,7 +82,7 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    const v0, 0x7f100196
+    const v0, 0x7f100197
 
     .line 40
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
@@ -361,7 +361,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d002c
+    const v1, 0x7f0d002d
 
     invoke-static {v0, v1, p0}, Lcom/miui/home/launcher/gadget/MtzGadget;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 

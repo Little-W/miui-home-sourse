@@ -362,7 +362,7 @@
     return v0
 .end method
 
-.method public static synthetic lambda$refreshMemoryUsed$0(Lcom/miui/home/launcher/gadget/ClearButton;Ljava/lang/Void;)Ljava/lang/Integer;
+.method public static synthetic lambda$refreshMemoryUsed$381(Lcom/miui/home/launcher/gadget/ClearButton;Ljava/lang/Void;)Ljava/lang/Integer;
     .locals 0
 
     .line 195
@@ -377,7 +377,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$refreshMemoryUsed$1(Lcom/miui/home/launcher/gadget/ClearButton;Landroid/animation/Animator$AnimatorListener;Ljava/lang/Integer;)V
+.method public static synthetic lambda$refreshMemoryUsed$382(Lcom/miui/home/launcher/gadget/ClearButton;Landroid/animation/Animator$AnimatorListener;Ljava/lang/Integer;)V
     .locals 3
 
     .line 197
@@ -616,11 +616,11 @@
     .line 57
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0d004e
+    const v1, 0x7f0d0053
 
     invoke-static {v0, v1, p0}, Lcom/miui/home/launcher/gadget/ClearButton;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0a00ed
+    const v0, 0x7f0a00f0
 
     .line 58
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
@@ -661,7 +661,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mClearIcon:Lcom/miui/home/launcher/common/ClearIconImageView;
 
-    const v0, 0x7f0a00ec
+    const v0, 0x7f0a00ef
 
     .line 63
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
@@ -788,13 +788,13 @@
     .locals 2
 
     .line 194
-    new-instance v0, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$rL7BVG-vct2OHrKyXhx2rO58qFU;
+    new-instance v0, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$2pPRp0iqFXqk0A4snUYm_tQ5J6M;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$rL7BVG-vct2OHrKyXhx2rO58qFU;-><init>(Lcom/miui/home/launcher/gadget/ClearButton;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$2pPRp0iqFXqk0A4snUYm_tQ5J6M;-><init>(Lcom/miui/home/launcher/gadget/ClearButton;)V
 
-    new-instance v1, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$S9Ug4pjSsPuJ1HGX53hl2llQHkY;
+    new-instance v1, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$_3cmtfvxWLYsiaZB2GEQqyvdJ6k;
 
-    invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$S9Ug4pjSsPuJ1HGX53hl2llQHkY;-><init>(Lcom/miui/home/launcher/gadget/ClearButton;Landroid/animation/Animator$AnimatorListener;)V
+    invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$_3cmtfvxWLYsiaZB2GEQqyvdJ6k;-><init>(Lcom/miui/home/launcher/gadget/ClearButton;Landroid/animation/Animator$AnimatorListener;)V
 
     const/4 p1, 0x0
 

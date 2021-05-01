@@ -36,7 +36,7 @@
 
     const/4 v0, 0x0
 
-    const v1, 0x7f0d0060
+    const v1, 0x7f0d0065
 
     invoke-virtual {p1, v1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -64,7 +64,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f10017c
+    const v1, 0x7f10017d
 
     .line 22
     invoke-virtual {p1, v1, v0}, Lmiui/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;
@@ -148,5 +148,34 @@
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->closeFolder()Z
 
     :cond_1
+    return-void
+.end method
+
+.method public removeSelfByFragmentManager()V
+    .locals 1
+
+    .line 45
+    invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherMenuDialog;->isAdded()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 46
+    invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherMenuDialog;->getFragmentManager()Landroid/app/FragmentManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/app/FragmentTransaction;->remove(Landroid/app/Fragment;)Landroid/app/FragmentTransaction;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
+
+    :cond_0
     return-void
 .end method

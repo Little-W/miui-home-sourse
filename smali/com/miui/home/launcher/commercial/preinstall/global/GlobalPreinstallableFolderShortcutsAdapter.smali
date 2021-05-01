@@ -114,7 +114,7 @@
     return-object p0
 .end method
 
-.method static synthetic lambda$loadDrawable$0(Lcom/miui/home/launcher/ShortcutInfo;Ljava/lang/Void;)Landroid/graphics/drawable/Drawable;
+.method static synthetic lambda$loadDrawable$439(Lcom/miui/home/launcher/ShortcutInfo;Ljava/lang/Void;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
     .line 57
@@ -131,7 +131,7 @@
     return-object p0
 .end method
 
-.method static synthetic lambda$loadDrawable$1(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;Landroid/graphics/drawable/Drawable;)V
+.method static synthetic lambda$loadDrawable$440(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
     .line 59
@@ -302,13 +302,13 @@
     .locals 2
 
     .line 55
-    new-instance v0, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalPreinstallableFolderShortcutsAdapter$Cl4CdKR_XxyPMslI420-ApnhCOE;
+    new-instance v0, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalPreinstallableFolderShortcutsAdapter$4bVh3sTSoo4QktcBxPWjk_FXGmg;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalPreinstallableFolderShortcutsAdapter$Cl4CdKR_XxyPMslI420-ApnhCOE;-><init>(Lcom/miui/home/launcher/ShortcutInfo;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalPreinstallableFolderShortcutsAdapter$4bVh3sTSoo4QktcBxPWjk_FXGmg;-><init>(Lcom/miui/home/launcher/ShortcutInfo;)V
 
-    new-instance v1, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalPreinstallableFolderShortcutsAdapter$IctTpEV7JhwR69LjiWdgt4DnHsQ;
+    new-instance v1, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalPreinstallableFolderShortcutsAdapter$6kWXSBGgTFzQDCEtro0ycfNxWx8;
 
-    invoke-direct {v1, p1, p2}, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalPreinstallableFolderShortcutsAdapter$IctTpEV7JhwR69LjiWdgt4DnHsQ;-><init>(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;)V
+    invoke-direct {v1, p1, p2}, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalPreinstallableFolderShortcutsAdapter$6kWXSBGgTFzQDCEtro0ycfNxWx8;-><init>(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;)V
 
     const/4 p1, 0x0
 

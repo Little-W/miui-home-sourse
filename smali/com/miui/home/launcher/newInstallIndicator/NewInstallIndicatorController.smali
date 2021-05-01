@@ -48,7 +48,7 @@
     return-object v0
 .end method
 
-.method static synthetic lambda$getShortcutInfosInFolders$0(Ljava/util/HashSet;Lcom/miui/home/launcher/FolderInfo;)Z
+.method static synthetic lambda$getShortcutInfosInFolders$388(Ljava/util/HashSet;Lcom/miui/home/launcher/FolderInfo;)Z
     .locals 1
 
     if-eqz p0, :cond_0
@@ -77,7 +77,7 @@
     return p0
 .end method
 
-.method static synthetic lambda$getShortcutInfosInFolders$3(Ljava/util/HashSet;Lcom/miui/home/launcher/FolderInfo;)V
+.method static synthetic lambda$getShortcutInfosInFolders$391(Ljava/util/HashSet;Lcom/miui/home/launcher/FolderInfo;)V
     .locals 1
 
     .line 59
@@ -89,16 +89,16 @@
 
     move-result-object p1
 
-    sget-object v0, Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$QTPNiyGhWXWu_ewrUGTJkIYkvzo;->INSTANCE:Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$QTPNiyGhWXWu_ewrUGTJkIYkvzo;
+    sget-object v0, Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$eDg-MzmCO46Bu45VBBtAeevnCPE;->INSTANCE:Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$eDg-MzmCO46Bu45VBBtAeevnCPE;
 
     .line 60
     invoke-interface {p1, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p1
 
-    new-instance v0, Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$MyLrHkV4Rb-_QLFom4up5mNWPZA;
+    new-instance v0, Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$LFDImdnRRpqsQaVEATOcPRJCktk;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$MyLrHkV4Rb-_QLFom4up5mNWPZA;-><init>(Ljava/util/HashSet;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$LFDImdnRRpqsQaVEATOcPRJCktk;-><init>(Ljava/util/HashSet;)V
 
     .line 61
     invoke-interface {p1, v0}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
@@ -106,7 +106,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$null$1(Lcom/miui/home/launcher/ShortcutInfo;)Z
+.method static synthetic lambda$null$389(Lcom/miui/home/launcher/ShortcutInfo;)Z
     .locals 0
 
     .line 60
@@ -117,7 +117,7 @@
     return p0
 .end method
 
-.method static synthetic lambda$null$2(Ljava/util/HashSet;Lcom/miui/home/launcher/ShortcutInfo;)V
+.method static synthetic lambda$null$390(Ljava/util/HashSet;Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 0
 
     .line 61
@@ -190,18 +190,18 @@
 
     move-result-object p1
 
-    new-instance v1, Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$D2eqh1hesVnXhR5fxk2vxJpOTTU;
+    new-instance v1, Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$ZD14eDDoCUd0WGexvKkdBI_8dck;
 
-    invoke-direct {v1, p2}, Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$D2eqh1hesVnXhR5fxk2vxJpOTTU;-><init>(Ljava/util/HashSet;)V
+    invoke-direct {v1, p2}, Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$ZD14eDDoCUd0WGexvKkdBI_8dck;-><init>(Ljava/util/HashSet;)V
 
     .line 57
     invoke-interface {p1, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object p1
 
-    new-instance p2, Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$c0e9BCgxy-wJ_yHyPiBvRugVUOE;
+    new-instance p2, Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$b47DCcPYPUX9T2m9_r55w7r0yPg;
 
-    invoke-direct {p2, v0}, Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$c0e9BCgxy-wJ_yHyPiBvRugVUOE;-><init>(Ljava/util/HashSet;)V
+    invoke-direct {p2, v0}, Lcom/miui/home/launcher/newInstallIndicator/-$$Lambda$NewInstallIndicatorController$b47DCcPYPUX9T2m9_r55w7r0yPg;-><init>(Ljava/util/HashSet;)V
 
     .line 58
     invoke-interface {p1, p2}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V

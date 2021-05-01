@@ -66,7 +66,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onAnimationStart$0(Lcom/miui/home/recents/LauncherAnimationRunner;Ljava/lang/Runnable;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)V
+.method public static synthetic lambda$onAnimationStart$326(Lcom/miui/home/recents/LauncherAnimationRunner;Ljava/lang/Runnable;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)V
     .locals 2
 
     .line 60
@@ -221,9 +221,9 @@
 
     .line 59
     :cond_0
-    new-instance v0, Lcom/miui/home/recents/-$$Lambda$LauncherAnimationRunner$YORJleb52E4o6UuHrM4Hr0O5ZUs;
+    new-instance v0, Lcom/miui/home/recents/-$$Lambda$LauncherAnimationRunner$wqT07_vMEPJeJvRo1WFPGWYubDw;
 
-    invoke-direct {v0, p0, p2, p1}, Lcom/miui/home/recents/-$$Lambda$LauncherAnimationRunner$YORJleb52E4o6UuHrM4Hr0O5ZUs;-><init>(Lcom/miui/home/recents/LauncherAnimationRunner;Ljava/lang/Runnable;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)V
+    invoke-direct {v0, p0, p2, p1}, Lcom/miui/home/recents/-$$Lambda$LauncherAnimationRunner$wqT07_vMEPJeJvRo1WFPGWYubDw;-><init>(Lcom/miui/home/recents/LauncherAnimationRunner;Ljava/lang/Runnable;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)V
 
     .line 65
     iget-boolean p1, p0, Lcom/miui/home/recents/LauncherAnimationRunner;->mStartAtFrontOfQueue:Z

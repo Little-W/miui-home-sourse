@@ -89,7 +89,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onBindViewHolder$0(Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;ILandroid/view/View;)V
+.method public static synthetic lambda$onBindViewHolder$353(Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;ILandroid/view/View;)V
     .locals 2
 
     .line 130
@@ -143,9 +143,9 @@
     .line 130
     iget-object v0, p1, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter$ViewHolder;->textView:Landroid/widget/TextView;
 
-    new-instance v1, Lcom/miui/home/launcher/view/-$$Lambda$LabelSeekBar$LabelAdapter$VyIkax_oXR-uP-huCVR7bsgj6qE;
+    new-instance v1, Lcom/miui/home/launcher/view/-$$Lambda$LabelSeekBar$LabelAdapter$v6J0qL3VpK4p7HFPvqz1dcOKuRE;
 
-    invoke-direct {v1, p0, p2}, Lcom/miui/home/launcher/view/-$$Lambda$LabelSeekBar$LabelAdapter$VyIkax_oXR-uP-huCVR7bsgj6qE;-><init>(Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;I)V
+    invoke-direct {v1, p0, p2}, Lcom/miui/home/launcher/view/-$$Lambda$LabelSeekBar$LabelAdapter$v6J0qL3VpK4p7HFPvqz1dcOKuRE;-><init>(Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;I)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -194,7 +194,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0062
+    const v1, 0x7f0d0067
 
     const/4 v2, 0x0
 

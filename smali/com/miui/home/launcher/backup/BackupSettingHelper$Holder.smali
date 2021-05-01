@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static sInstance:Lcom/miui/home/launcher/backup/BackupSettingHelper;
+.field private static final sInstance:Lcom/miui/home/launcher/backup/BackupSettingHelper;
 
 
 # direct methods

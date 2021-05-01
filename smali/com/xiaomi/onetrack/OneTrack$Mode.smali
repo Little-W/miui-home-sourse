@@ -39,7 +39,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .line 30
+    .line 31
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$Mode;
 
     const-string v1, "APP"
@@ -52,7 +52,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/OneTrack$Mode;->APP:Lcom/xiaomi/onetrack/OneTrack$Mode;
 
-    .line 31
+    .line 32
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$Mode;
 
     const-string v1, "PLUGIN"
@@ -65,7 +65,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/OneTrack$Mode;->PLUGIN:Lcom/xiaomi/onetrack/OneTrack$Mode;
 
-    .line 32
+    .line 33
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$Mode;
 
     const-string v1, "SDK"
@@ -80,7 +80,7 @@
 
     const/4 v0, 0x3
 
-    .line 29
+    .line 30
     new-array v0, v0, [Lcom/xiaomi/onetrack/OneTrack$Mode;
 
     sget-object v1, Lcom/xiaomi/onetrack/OneTrack$Mode;->APP:Lcom/xiaomi/onetrack/OneTrack$Mode;
@@ -110,10 +110,10 @@
         }
     .end annotation
 
-    .line 35
+    .line 36
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 36
+    .line 37
     iput-object p3, p0, Lcom/xiaomi/onetrack/OneTrack$Mode;->a:Ljava/lang/String;
 
     return-void
@@ -122,7 +122,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/onetrack/OneTrack$Mode;
     .locals 1
 
-    .line 29
+    .line 30
     const-class v0, Lcom/xiaomi/onetrack/OneTrack$Mode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -137,7 +137,7 @@
 .method public static values()[Lcom/xiaomi/onetrack/OneTrack$Mode;
     .locals 1
 
-    .line 29
+    .line 30
     sget-object v0, Lcom/xiaomi/onetrack/OneTrack$Mode;->b:[Lcom/xiaomi/onetrack/OneTrack$Mode;
 
     invoke-virtual {v0}, [Lcom/xiaomi/onetrack/OneTrack$Mode;->clone()Ljava/lang/Object;
@@ -154,7 +154,7 @@
 .method public getType()Ljava/lang/String;
     .locals 1
 
-    .line 40
+    .line 41
     iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack$Mode;->a:Ljava/lang/String;
 
     return-object v0

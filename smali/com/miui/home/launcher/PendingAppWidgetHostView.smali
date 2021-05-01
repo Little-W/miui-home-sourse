@@ -24,7 +24,7 @@
     .line 20
     iput-object p3, p0, Lcom/miui/home/launcher/PendingAppWidgetHostView;->mWidgetInfo:Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
-    const p2, 0x7f0601c6
+    const p2, 0x7f0601ca
 
     .line 21
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -60,7 +60,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d002d
+    const v1, 0x7f0d002e
 
     const/4 v2, 0x0
 
@@ -73,7 +73,7 @@
     .line 34
     iget-object v0, p0, Lcom/miui/home/launcher/PendingAppWidgetHostView;->mDefaultView:Landroid/view/View;
 
-    const v1, 0x7f0a00ef
+    const v1, 0x7f0a00f2
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

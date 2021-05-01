@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="editing_panel_height">124.0dip</dimen>
-    <dimen name="hotseats_padding_bottom">0.0dip</dimen>
-    <dimen name="workspace_cell_height">90.0dip</dimen>
-    <dimen name="workspace_cell_width">78.0dip</dimen>
-    <dimen name="workspace_icon_text_notification_size">13.0dip</dimen>
-    <dimen name="workspace_icon_text_size">15.0dip</dimen>
-</resources>

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nAllHideAppActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AllHideAppActivity.kt\ncom/miui/home/settings/AllHideAppActivity\n*L\n1#1,104:1\n*E\n"
+    value = "SMAP\nAllHideAppActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AllHideAppActivity.kt\ncom/miui/home/settings/AllHideAppActivity\n*L\n1#1,110:1\n*E\n"
 .end annotation
 
 
@@ -205,7 +205,7 @@
 .method private final initView()V
     .locals 3
 
-    const v0, 0x7f0a00dc
+    const v0, 0x7f0a00de
 
     .line 70
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/AllHideAppActivity;->findViewById(I)Landroid/view/View;
@@ -302,50 +302,66 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/uninstall/UninstallController;->isUninstallValid(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Launcher;)Z
+    invoke-direct {p0, v0, v1}, Lcom/miui/home/settings/AllHideAppActivity;->isUninstallAppValid(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Launcher;)Z
 
     move-result v0
 
     const/4 v1, 0x0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     .line 88
     invoke-virtual {p1}, Lcom/miui/home/launcher/AppInfo;->getThirdApplicationConfig()Lcom/miui/home/launcher/ThirdApplicationConfig;
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
+
+    .line 89
+    sget-boolean v2, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+
+    if-eqz v2, :cond_0
 
     const-string v2, "it"
 
-    .line 89
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/ThirdApplicationConfig;->getGlobalHideAppItem()Z
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_0
+    const-string v2, "it"
+
     invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ThirdApplicationConfig;->getHideAppItem()Z
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    :goto_0
+    if-eqz v2, :cond_3
 
-    .line 90
+    .line 91
     invoke-virtual {v0}, Lcom/miui/home/launcher/ThirdApplicationConfig;->getProhibitHiddenActivities()[Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 92
+    .line 93
     array-length v2, v0
 
     move v3, v1
 
-    :goto_0
-    if-ge v3, v2, :cond_1
+    :goto_1
+    if-ge v3, v2, :cond_2
 
     aget-object v4, v0, v3
 
-    .line 93
+    .line 94
     check-cast v4, Ljava/lang/CharSequence;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/AppInfo;->getClassName()Ljava/lang/String;
@@ -358,22 +374,62 @@
 
     move-result v4
 
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_1
 
     return v1
 
-    :cond_0
+    :cond_1
     add-int/lit8 v3, v3, 0x1
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_1
+    :cond_2
     const/4 p1, 0x1
 
     return p1
 
-    :cond_2
+    :cond_3
     return v1
+.end method
+
+.method private final isUninstallAppValid(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Launcher;)Z
+    .locals 1
+
+    if-eqz p2, :cond_1
+
+    .line 108
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ItemInfo;->isApplicatoin()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 107
+    invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->isHybirdApp(Lcom/miui/home/launcher/ItemInfo;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 108
+    :cond_0
+    check-cast p2, Landroid/content/Context;
+
+    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/ItemInfo;->canBeDeleted(Landroid/content/Context;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
 .end method
 
 .method private final updateHideAppList(Ljava/util/List;)V
@@ -425,12 +481,12 @@
     .line 31
     invoke-super {p0, p1}, Lmiui/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const p1, 0x7f0d0051
+    const p1, 0x7f0d0056
 
     .line 32
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllHideAppActivity;->setContentView(I)V
 
-    const p1, 0x7f10015a
+    const p1, 0x7f10015b
 
     .line 33
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllHideAppActivity;->setTitle(I)V

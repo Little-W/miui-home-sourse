@@ -52,7 +52,7 @@
     move-result-object v3
 
     .line 112
-    invoke-static {v3}, Lcom/xiaomi/onetrack/h/s;->b(Ljava/lang/Object;)Z
+    invoke-static {v3}, Lcom/xiaomi/onetrack/util/r;->b(Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -104,7 +104,7 @@
     move-result-object v7
 
     .line 121
-    invoke-static {v7}, Lcom/xiaomi/onetrack/h/s;->b(Ljava/lang/Object;)Z
+    invoke-static {v7}, Lcom/xiaomi/onetrack/util/r;->b(Ljava/lang/Object;)Z
 
     move-result v8
 
@@ -183,7 +183,7 @@
     move-result-object v3
 
     .line 37
-    invoke-static {v3}, Lcom/xiaomi/onetrack/h/s;->b(Ljava/lang/Object;)Z
+    invoke-static {v3}, Lcom/xiaomi/onetrack/util/r;->b(Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -227,7 +227,7 @@
     move-result-object v7
 
     .line 44
-    invoke-static {v7}, Lcom/xiaomi/onetrack/h/s;->b(Ljava/lang/Object;)Z
+    invoke-static {v7}, Lcom/xiaomi/onetrack/util/r;->b(Ljava/lang/Object;)Z
 
     move-result v8
 
@@ -286,7 +286,7 @@
     move-result-object v5
 
     .line 55
-    invoke-static {v5}, Lcom/xiaomi/onetrack/h/s;->b(Ljava/lang/Object;)Z
+    invoke-static {v5}, Lcom/xiaomi/onetrack/util/r;->b(Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -312,14 +312,14 @@
 
     .line 63
     :cond_8
-    sget-boolean v3, Lcom/xiaomi/onetrack/h/q;->a:Z
+    sget-boolean v3, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     if-eqz v3, :cond_1
 
     const-string v3, "DataConverter"
 
     .line 64
-    invoke-static {v3, v2}, Lcom/xiaomi/onetrack/h/s;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/xiaomi/onetrack/util/r;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -349,7 +349,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/xiaomi/onetrack/h/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_9
     return-object v0
@@ -398,7 +398,7 @@
     move-result-object v3
 
     .line 87
-    invoke-static {v3}, Lcom/xiaomi/onetrack/h/s;->b(Ljava/lang/Object;)Z
+    invoke-static {v3}, Lcom/xiaomi/onetrack/util/r;->b(Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -429,14 +429,14 @@
 
     .line 93
     :cond_3
-    sget-boolean v3, Lcom/xiaomi/onetrack/h/q;->a:Z
+    sget-boolean v3, Lcom/xiaomi/onetrack/util/p;->a:Z
 
     if-eqz v3, :cond_1
 
     const-string v3, "DataConverter"
 
     .line 94
-    invoke-static {v3, v2}, Lcom/xiaomi/onetrack/h/s;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/xiaomi/onetrack/util/r;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -466,7 +466,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/xiaomi/onetrack/h/q;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/xiaomi/onetrack/util/p;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     return-object v0

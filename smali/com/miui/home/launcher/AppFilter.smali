@@ -184,7 +184,9 @@
 
     .line 37
     :cond_1
-    sget-boolean v0, Lmiui/os/Build;->IS_TABLET:Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
+
+    move-result v0
 
     if-eqz v0, :cond_2
 

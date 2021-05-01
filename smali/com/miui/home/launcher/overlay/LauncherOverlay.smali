@@ -4,9 +4,6 @@
 
 
 # virtual methods
-.method public abstract getServerVersion()I
-.end method
-
 .method public abstract hideOverlay(Z)V
 .end method
 

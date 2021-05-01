@@ -148,7 +148,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f070089
+    const p2, 0x7f07008a
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -396,7 +396,7 @@
 .method private searchDropTarget()V
     .locals 1
 
-    const v0, 0x7f0a01ed
+    const v0, 0x7f0a01ef
 
     .line 89
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DropTargetBar;->findViewById(I)Landroid/view/View;

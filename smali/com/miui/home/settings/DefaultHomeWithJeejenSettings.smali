@@ -157,7 +157,7 @@
     .line 41
     invoke-super {p0, p1}, Lcom/miui/home/settings/DefaultHomeSettings;->onCreate(Landroid/os/Bundle;)V
 
-    const p1, 0x7f0d00be
+    const p1, 0x7f0d00c3
 
     .line 42
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/DefaultHomeWithJeejenSettings;->setContentView(I)V
@@ -173,7 +173,7 @@
 
     iput-object p1, p0, Lcom/miui/home/settings/DefaultHomeWithJeejenSettings;->mContainer:Landroid/widget/LinearLayout;
 
-    const p1, 0x7f0a00db
+    const p1, 0x7f0a00dd
 
     .line 45
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/DefaultHomeWithJeejenSettings;->findViewById(I)Landroid/view/View;
@@ -218,7 +218,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100263
+    const v1, 0x7f100266
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -226,7 +226,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/CheckedTextView;->setText(Ljava/lang/CharSequence;)V
 
-    const p1, 0x7f0a00e4
+    const p1, 0x7f0a00e6
 
     .line 59
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/DefaultHomeWithJeejenSettings;->findViewById(I)Landroid/view/View;
@@ -245,7 +245,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080144
+    const v1, 0x7f080155
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

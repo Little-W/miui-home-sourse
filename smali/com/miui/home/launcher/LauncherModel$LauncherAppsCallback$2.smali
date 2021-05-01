@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 323
+    .line 327
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$2;->this$1:Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$2;->val$packageName:Ljava/lang/String;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 4
 
-    .line 325
+    .line 329
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
@@ -55,14 +55,14 @@
 
     const-string v1, "android.intent.extra.PACKAGES"
 
-    .line 326
+    .line 330
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$2;->val$packageName:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "package"
 
-    .line 327
+    .line 331
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$2;->val$packageName:Ljava/lang/String;
 
     const/4 v3, 0x0
@@ -73,7 +73,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 328
+    .line 332
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$2;->this$1:Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;
 
     iget-object v1, v1, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;

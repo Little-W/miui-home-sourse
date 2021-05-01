@@ -35,10 +35,10 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 388
+    .line 389
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 389
+    .line 390
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
@@ -51,7 +51,7 @@
 .method synthetic constructor <init>(Lmiuix/animation/controller/FolmeTouch$1;)V
     .locals 0
 
-    .line 388
+    .line 389
     invoke-direct {p0}, Lmiuix/animation/controller/FolmeTouch$InnerViewTouchListener;-><init>()V
 
     return-void
@@ -62,7 +62,7 @@
 .method varargs addTouch(Lmiuix/animation/controller/FolmeTouch;[Lmiuix/animation/base/AnimConfig;)V
     .locals 1
 
-    .line 392
+    .line 393
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch$InnerViewTouchListener;->mTouchMap:Ljava/util/WeakHashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -73,7 +73,7 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 3
 
-    .line 402
+    .line 403
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch$InnerViewTouchListener;->mTouchMap:Ljava/util/WeakHashMap;
 
     invoke-virtual {v0}, Ljava/util/WeakHashMap;->entrySet()Ljava/util/Set;
@@ -97,21 +97,21 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 403
+    .line 404
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lmiuix/animation/controller/FolmeTouch;
 
-    .line 404
+    .line 405
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, [Lmiuix/animation/base/AnimConfig;
 
-    .line 405
+    .line 406
     invoke-static {v2, p1, p2, v1}, Lmiuix/animation/controller/FolmeTouch;->access$700(Lmiuix/animation/controller/FolmeTouch;Landroid/view/View;Landroid/view/MotionEvent;[Lmiuix/animation/base/AnimConfig;)V
 
     goto :goto_0

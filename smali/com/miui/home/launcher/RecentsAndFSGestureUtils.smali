@@ -741,7 +741,7 @@
     return p0
 .end method
 
-.method static synthetic lambda$lockOrUnlockApp$0(Lcom/android/systemui/shared/recents/model/Task;ZLjava/lang/Void;)Ljava/lang/Boolean;
+.method static synthetic lambda$lockOrUnlockApp$375(Lcom/android/systemui/shared/recents/model/Task;ZLjava/lang/Void;)Ljava/lang/Boolean;
     .locals 0
 
     .line 167
@@ -770,7 +770,7 @@
     return-object p0
 .end method
 
-.method static synthetic lambda$lockOrUnlockApp$1(Lcom/android/systemui/shared/recents/model/Task;ZLjava/lang/Runnable;Ljava/lang/Boolean;)V
+.method static synthetic lambda$lockOrUnlockApp$376(Lcom/android/systemui/shared/recents/model/Task;ZLjava/lang/Runnable;Ljava/lang/Boolean;)V
     .locals 1
 
     .line 169
@@ -824,13 +824,13 @@
     .locals 2
 
     .line 165
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$RecentsAndFSGestureUtils$U478jG3SIGRHUcH65DY0OP9BwNc;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$RecentsAndFSGestureUtils$P9b6i-jYnd6VGr17zv-CMx8C0JM;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$RecentsAndFSGestureUtils$U478jG3SIGRHUcH65DY0OP9BwNc;-><init>(Lcom/android/systemui/shared/recents/model/Task;Z)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$RecentsAndFSGestureUtils$P9b6i-jYnd6VGr17zv-CMx8C0JM;-><init>(Lcom/android/systemui/shared/recents/model/Task;Z)V
 
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$RecentsAndFSGestureUtils$Q9HlFyVQg_QRd8dXcSzZyOMY2wk;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$RecentsAndFSGestureUtils$lYoFhJUdLHADfeZaU2hf2BoKye0;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/miui/home/launcher/-$$Lambda$RecentsAndFSGestureUtils$Q9HlFyVQg_QRd8dXcSzZyOMY2wk;-><init>(Lcom/android/systemui/shared/recents/model/Task;ZLjava/lang/Runnable;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/miui/home/launcher/-$$Lambda$RecentsAndFSGestureUtils$lYoFhJUdLHADfeZaU2hf2BoKye0;-><init>(Lcom/android/systemui/shared/recents/model/Task;ZLjava/lang/Runnable;)V
 
     const/4 p0, 0x0
 

@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.shortcuts.ShortcutMenu android:layout_gravity="center|left|top" android:orientation="vertical" android:id="@id/shortcut_menu" android:padding="@dimen/shortcut_menu_shadow_padding" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.miui.home.launcher.shortcuts.AppShortcutMenu android:orientation="vertical" android:id="@id/app_shortcut_menu" android:background="@drawable/shortcut_menu_round_rectangle_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="@dimen/shortcut_menu_elevation" />
-    <View android:id="@id/transparent_space" android:layout_width="fill_parent" android:layout_height="@dimen/shortcut_menu_transparent_space_height" />
-    <com.miui.home.launcher.shortcuts.SystemShortcutMenu android:orientation="horizontal" android:id="@id/system_shortcut_menu" android:background="@drawable/shortcut_menu_round_rectangle_bg" android:layout_width="@dimen/system_shortcut_menu_width" android:layout_height="wrap_content" android:elevation="@dimen/shortcut_menu_elevation" />
+<com.miui.home.launcher.shortcuts.ShortcutMenu
+    android:layout_gravity="center|left|top"
+    android:orientation="vertical"
+    android:id="@id/shortcut_menu"
+    android:padding="@dimen/shortcut_menu_shadow_padding"
+    android:visibility="gone"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.launcher.shortcuts.AppShortcutMenu
+        android:orientation="vertical"
+        android:id="@id/app_shortcut_menu"
+        android:background="@drawable/shortcut_menu_round_rectangle_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/shortcut_menu_elevation" />
+    <View
+        android:id="@id/transparent_space"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/shortcut_menu_transparent_space_height" />
+    <com.miui.home.launcher.shortcuts.SystemShortcutMenu
+        android:orientation="horizontal"
+        android:id="@id/system_shortcut_menu"
+        android:background="@drawable/shortcut_menu_round_rectangle_bg"
+        android:layout_width="@dimen/system_shortcut_menu_width"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/shortcut_menu_elevation" />
 </com.miui.home.launcher.shortcuts.ShortcutMenu>

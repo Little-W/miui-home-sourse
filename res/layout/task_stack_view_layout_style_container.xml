@@ -1,16 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.recents.settings.MonospacedChildViewVisualCheckGroup android:paddingTop="@dimen/settings_visual_check_group_padding_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/settings_visual_check_group_padding_left_or_right" android:paddingEnd="@dimen/settings_visual_check_group_padding_left_or_right"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <miuix.visual.check.VisualCheckBox android:orientation="vertical" android:id="@id/vertical_layout" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <miuix.visual.check.BorderLayout android:padding="@dimen/settings_visual_check_box_border_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <com.miui.home.settings.FixedAspectRatioLottieAnimView android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/task_stack_view_layout_style_vertical" android:scaleType="fitXY" app:aspectRatio="2.17" />
+<com.miui.home.recents.settings.MonospacedChildViewVisualCheckGroup
+    android:paddingTop="@dimen/settings_visual_check_group_padding_top"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/settings_visual_check_group_padding_left_or_right"
+    android:paddingEnd="@dimen/settings_visual_check_group_padding_left_or_right"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <miuix.visual.check.VisualCheckBox
+        android:orientation="vertical"
+        android:id="@id/vertical_layout"
+        android:focusable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <miuix.visual.check.BorderLayout
+            android:padding="@dimen/settings_visual_check_box_border_padding"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.miui.home.settings.FixedAspectRatioLottieAnimView
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:src="@drawable/task_stack_view_layout_style_vertical"
+                android:scaleType="fitXY"
+                app:aspectRatio="2.17" />
         </miuix.visual.check.BorderLayout>
-        <miuix.visual.check.VisualCheckedTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/recents_layout_style_vertical" style="@style/SettingsVisualCheckBoxTitle" />
+        <miuix.visual.check.VisualCheckedTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recents_layout_style_vertical"
+            style="@style/SettingsVisualCheckBoxTitle" />
     </miuix.visual.check.VisualCheckBox>
-    <miuix.visual.check.VisualCheckBox android:orientation="vertical" android:id="@id/horizontal_layout" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <miuix.visual.check.BorderLayout android:padding="@dimen/settings_visual_check_box_border_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <com.miui.home.settings.FixedAspectRatioLottieAnimView android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/task_stack_view_layout_style_horizontal" android:scaleType="fitXY" app:aspectRatio="2.17" />
+    <miuix.visual.check.VisualCheckBox
+        android:orientation="vertical"
+        android:id="@id/horizontal_layout"
+        android:focusable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <miuix.visual.check.BorderLayout
+            android:padding="@dimen/settings_visual_check_box_border_padding"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.miui.home.settings.FixedAspectRatioLottieAnimView
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:src="@drawable/task_stack_view_layout_style_horizontal"
+                android:scaleType="fitXY"
+                app:aspectRatio="2.17" />
         </miuix.visual.check.BorderLayout>
-        <miuix.visual.check.VisualCheckedTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/recents_layout_style_horizontal" style="@style/SettingsVisualCheckBoxTitle" />
+        <miuix.visual.check.VisualCheckedTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recents_layout_style_horizontal"
+            style="@style/SettingsVisualCheckBoxTitle" />
     </miuix.visual.check.VisualCheckBox>
 </com.miui.home.recents.settings.MonospacedChildViewVisualCheckGroup>

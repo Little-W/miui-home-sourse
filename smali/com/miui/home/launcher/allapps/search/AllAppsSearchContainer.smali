@@ -120,7 +120,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$onFinishInflate$0(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;Landroid/view/View;Z)V
+.method public static synthetic lambda$onFinishInflate$208(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;Landroid/view/View;Z)V
     .locals 0
 
     if-eqz p2, :cond_0
@@ -342,9 +342,9 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
     .line 55
-    new-instance v0, Lcom/miui/home/launcher/allapps/search/-$$Lambda$AllAppsSearchContainer$JSf-ND5xTpwY09mnY9cmzkqCs2U;
+    new-instance v0, Lcom/miui/home/launcher/allapps/search/-$$Lambda$AllAppsSearchContainer$6tZqU7P7trDb5ZjMLapiPF6WIiU;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/search/-$$Lambda$AllAppsSearchContainer$JSf-ND5xTpwY09mnY9cmzkqCs2U;-><init>(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/search/-$$Lambda$AllAppsSearchContainer$6tZqU7P7trDb5ZjMLapiPF6WIiU;-><init>(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="folder_bottom_padding">106.0dip</dimen>
-    <dimen name="hotseats_margin_top">12.0dip</dimen>
-    <dimen name="hotseats_margin_top_search_bar">4.0dip</dimen>
-    <dimen name="search_bar_height">42.0dip</dimen>
-    <dimen name="search_bar_margin_bottom">24.0dip</dimen>
-    <dimen name="search_bar_margin_top">16.0dip</dimen>
-</resources>

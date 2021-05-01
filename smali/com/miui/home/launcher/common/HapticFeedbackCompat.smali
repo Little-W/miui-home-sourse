@@ -90,7 +90,7 @@
     throw v1
 .end method
 
-.method static synthetic lambda$performBackground$0(Ljava/lang/Runnable;)V
+.method static synthetic lambda$performBackground$465(Ljava/lang/Runnable;)V
     .locals 2
 
     .line 56
@@ -124,9 +124,9 @@
     .locals 1
 
     .line 54
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompat$JgXRB9bOEAnox5ZbDXD0GAimj1E;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompat$ZVG0z0nVgGT8bNrpvHXSxbxu3L4;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompat$JgXRB9bOEAnox5ZbDXD0GAimj1E;-><init>(Ljava/lang/Runnable;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompat$ZVG0z0nVgGT8bNrpvHXSxbxu3L4;-><init>(Ljava/lang/Runnable;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->postAtFrontOfQueue(Ljava/lang/Runnable;)V
 

@@ -257,7 +257,7 @@
     .line 66
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d002c
+    const v1, 0x7f0d002d
 
     const/4 v2, 0x0
 

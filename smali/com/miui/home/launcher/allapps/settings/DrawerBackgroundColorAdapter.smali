@@ -97,7 +97,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onBindViewHolder$0(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;Lcom/miui/home/launcher/allapps/AllAppsColorMode;ILandroid/view/View;)V
+.method public static synthetic lambda$onBindViewHolder$350(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;Lcom/miui/home/launcher/allapps/AllAppsColorMode;ILandroid/view/View;)V
     .locals 2
 
     .line 54
@@ -174,9 +174,9 @@
     .line 53
     iget-object v1, p1, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    new-instance v2, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundColorAdapter$m-VlAXms-XTE2KSCHdYT9-J7Mew;
+    new-instance v2, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundColorAdapter$I5cHxtcT1I7B37Hny7_vOjIA3B8;
 
-    invoke-direct {v2, p0, v0, p2}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundColorAdapter$m-VlAXms-XTE2KSCHdYT9-J7Mew;-><init>(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;Lcom/miui/home/launcher/allapps/AllAppsColorMode;I)V
+    invoke-direct {v2, p0, v0, p2}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundColorAdapter$I5cHxtcT1I7B37Hny7_vOjIA3B8;-><init>(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;Lcom/miui/home/launcher/allapps/AllAppsColorMode;I)V
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -271,7 +271,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d005c
+    const v1, 0x7f0d0061
 
     const/4 v2, 0x0
 

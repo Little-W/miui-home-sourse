@@ -24,6 +24,8 @@
 
 .field private mBadgeLayer:Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$BadgeLayer;
 
+.field private mColorFilter:Landroid/graphics/ColorFilter;
+
 .field private final mComponentName:Landroid/content/ComponentName;
 
 .field private mForegroundLayers:Ljava/util/List;
@@ -576,7 +578,7 @@
 .method public getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
     .locals 1
 
-    .line 689
+    .line 707
     iget-object v0, p0, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;->mLayerState:Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$LayerState;
 
     return-object v0
@@ -764,57 +766,88 @@
 .end method
 
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 2
+    .locals 3
 
-    .line 673
-    invoke-super {p0, p1}, Landroid/graphics/drawable/AdaptiveIconDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    .line 684
+    iget-object v0, p0, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;->mColorFilter:Landroid/graphics/ColorFilter;
 
-    .line 674
-    iget-object v0, p0, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;->mBackgroundLayer:Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;
+    if-eq v0, p1, :cond_0
 
-    if-eqz v0, :cond_0
+    .line 685
+    iput-object p1, p0, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;->mColorFilter:Landroid/graphics/ColorFilter;
 
-    .line 675
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    .line 677
-    :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;->mForegroundLayers:Ljava/util/List;
-
-    if-eqz v0, :cond_1
-
-    .line 678
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;
-
-    .line 679
-    invoke-virtual {v1, p1}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 682
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 688
+    :goto_0
+    invoke-super {p0, p1}, Landroid/graphics/drawable/AdaptiveIconDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    .line 689
+    iget-object v1, p0, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;->mBackgroundLayer:Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;
+
+    if-eqz v1, :cond_1
+
+    .line 690
+    invoke-virtual {v1, p1}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    .line 692
     :cond_1
-    iget-object v0, p0, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;->mBadgeLayer:Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$BadgeLayer;
+    iget-object v1, p0, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;->mForegroundLayers:Ljava/util/List;
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_2
 
-    .line 683
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$BadgeLayer;->setColorFilter(Landroid/graphics/ColorFilter;)V
+    .line 693
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
+    move-result-object v1
+
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;
+
+    .line 694
+    invoke-virtual {v2, p1}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    goto :goto_1
+
+    .line 697
     :cond_2
+    iget-object v1, p0, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;->mBadgeLayer:Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$BadgeLayer;
+
+    if-eqz v1, :cond_3
+
+    .line 698
+    invoke-virtual {v1, p1}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$BadgeLayer;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    :cond_3
+    if-eqz v0, :cond_4
+
+    .line 701
+    invoke-virtual {p0}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;->superInvalidateSelf()V
+
+    :cond_4
+    return-void
+.end method
+
+.method public superInvalidateSelf()V
+    .locals 0
+
+    .line 676
+    invoke-super {p0}, Landroid/graphics/drawable/AdaptiveIconDrawable;->invalidateSelf()V
+
     return-void
 .end method

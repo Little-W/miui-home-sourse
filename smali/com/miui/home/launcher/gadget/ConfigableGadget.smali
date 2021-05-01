@@ -28,7 +28,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 28
+    .line 29
     const-class v0, Lcom/miui/home/launcher/gadget/ConfigableGadget;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
@@ -45,7 +45,7 @@
 
     const/4 v0, 0x0
 
-    .line 33
+    .line 34
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/gadget/ConfigableGadget;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -56,7 +56,7 @@
 
     const/4 v0, 0x0
 
-    .line 37
+    .line 38
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/home/launcher/gadget/ConfigableGadget;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -65,12 +65,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 41
+    .line 42
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/launcher/gadget/Gadget;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x1
 
-    .line 30
+    .line 31
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -83,7 +83,7 @@
 .method static synthetic access$000()Ljava/lang/String;
     .locals 1
 
-    .line 27
+    .line 28
     sget-object v0, Lcom/miui/home/launcher/gadget/ConfigableGadget;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -94,17 +94,17 @@
 .method public getItemId()J
     .locals 2
 
-    .line 89
+    .line 90
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/ConfigableGadget;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 90
+    .line 91
     instance-of v0, v0, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     if-eqz v0, :cond_0
 
-    .line 91
+    .line 92
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/ConfigableGadget;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -136,17 +136,17 @@
 .method public onCreate()V
     .locals 2
 
-    .line 46
+    .line 47
     invoke-virtual {p0, p0}, Lcom/miui/home/launcher/gadget/ConfigableGadget;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 47
+    .line 48
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/ConfigableGadget;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
-    .line 48
+    .line 49
     new-instance v1, Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getGadgetId()I
@@ -163,7 +163,7 @@
 .method public onDeleted()V
     .locals 5
 
-    .line 53
+    .line 54
     sget-object v0, Lcom/miui/home/launcher/gadget/ConfigableGadget;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -186,7 +186,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
+    .line 55
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/ConfigableGadget;->mBackupManager:Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;
@@ -203,7 +203,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 55
+    .line 56
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     return-void
@@ -214,7 +214,7 @@
 
     const/4 v0, 0x1
 
-    .line 77
+    .line 78
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0

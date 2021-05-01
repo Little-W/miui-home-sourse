@@ -27,12 +27,12 @@
 .method constructor <init>(Lcom/miui/home/launcher/install/AutoInstallsLayout;Landroid/content/res/Resources;)V
     .locals 0
 
-    .line 373
+    .line 378
     iput-object p1, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$ShortcutParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 374
+    .line 379
     iput-object p2, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$ShortcutParser;->mIconRes:Landroid/content/res/Resources;
 
     return-void
@@ -51,7 +51,7 @@
 
     const/4 v3, 0x0
 
-    .line 379
+    .line 384
     invoke-static {v1, v2, v3}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$600(Landroid/content/res/XmlResourceParser;Ljava/lang/String;I)I
 
     move-result v2
@@ -62,12 +62,12 @@
 
     const-string v2, "title"
 
-    .line 382
+    .line 387
     invoke-static {v1, v2}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 383
+    .line 388
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
@@ -78,7 +78,7 @@
 
     const-string v2, "Ignoring shortcut, can\'t get title"
 
-    .line 384
+    .line 389
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-wide v4
@@ -88,7 +88,7 @@
 
     goto :goto_0
 
-    .line 388
+    .line 393
     :cond_1
     iget-object v6, v0, Lcom/miui/home/launcher/install/AutoInstallsLayout$ShortcutParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
@@ -105,7 +105,7 @@
     :goto_0
     const-string v2, "icon"
 
-    .line 391
+    .line 396
     invoke-static {v1, v2, v3}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$600(Landroid/content/res/XmlResourceParser;Ljava/lang/String;I)I
 
     move-result v2
@@ -114,12 +114,12 @@
 
     const-string v2, "icon"
 
-    .line 395
+    .line 400
     invoke-static {v1, v2}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 396
+    .line 401
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
@@ -130,7 +130,7 @@
 
     const-string v2, "Ignoring shortcut, can\'t get icon from name"
 
-    .line 397
+    .line 402
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-wide v4
@@ -138,7 +138,7 @@
     :cond_2
     const/16 v4, 0x3a
 
-    .line 400
+    .line 405
     invoke-virtual {v2, v4}, Ljava/lang/String;->indexOf(I)I
 
     move-result v4
@@ -153,7 +153,7 @@
 
     goto :goto_1
 
-    .line 402
+    .line 407
     :cond_3
     iget-object v3, v0, Lcom/miui/home/launcher/install/AutoInstallsLayout$ShortcutParser;->mIconRes:Landroid/content/res/Resources;
 
@@ -167,12 +167,12 @@
 
     const-string v2, "Ignoring shortcut, can\'t load icon from resource"
 
-    .line 404
+    .line 409
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-wide v4
 
-    .line 407
+    .line 412
     :cond_4
     iget-object v3, v0, Lcom/miui/home/launcher/install/AutoInstallsLayout$ShortcutParser;->mIconRes:Landroid/content/res/Resources;
 
@@ -180,7 +180,7 @@
 
     move-result-object v3
 
-    .line 408
+    .line 413
     iget-object v4, v0, Lcom/miui/home/launcher/install/AutoInstallsLayout$ShortcutParser;->mIconRes:Landroid/content/res/Resources;
 
     invoke-virtual {v4, v2}, Landroid/content/res/Resources;->getResourcePackageName(I)Ljava/lang/String;
@@ -194,35 +194,35 @@
     :goto_1
     const-string v2, "packageName"
 
-    .line 410
+    .line 415
     invoke-static {v1, v2}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
     const-string v2, "className"
 
-    .line 411
+    .line 416
     invoke-static {v1, v2}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
     const-string v2, "action"
 
-    .line 412
+    .line 417
     invoke-static {v1, v2}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v13
 
     const-string v2, "url"
 
-    .line 413
+    .line 418
     invoke-static {v1, v2}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v14
 
     const-string v2, "retained"
 
-    .line 414
+    .line 419
     invoke-static {v1, v2}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -239,7 +239,7 @@
 
     move-object/from16 v7, p3
 
-    .line 415
+    .line 420
     invoke-static/range {v6 .. v15}, Lcom/miui/home/launcher/LauncherProvider$DatabaseHelper;->addUriShortcut(Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)J
 
     move-result-wide v1

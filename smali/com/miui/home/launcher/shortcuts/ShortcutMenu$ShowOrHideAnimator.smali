@@ -24,36 +24,36 @@
 .method public constructor <init>(Lcom/miui/home/launcher/shortcuts/ShortcutMenu;FF)V
     .locals 2
 
-    .line 438
+    .line 434
     iput-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
-    .line 439
+    .line 435
     invoke-direct {p0, p2, p3}, Lcom/miui/home/launcher/common/DirectionState;-><init>(FF)V
 
-    .line 436
+    .line 432
     new-instance p2, Landroid/animation/ValueAnimator;
 
     invoke-direct {p2}, Landroid/animation/ValueAnimator;-><init>()V
 
     iput-object p2, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->mValueAnimator:Landroid/animation/ValueAnimator;
 
-    .line 440
+    .line 436
     iget-object p2, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     const-wide/16 v0, 0xc8
 
     invoke-virtual {p2, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 441
+    .line 437
     iget-object p2, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->mValueAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance p3, Lcom/miui/home/launcher/shortcuts/-$$Lambda$ShortcutMenu$ShowOrHideAnimator$i7CFXFzjKuvhQ0yMrElSiS5nl1w;
+    new-instance p3, Lcom/miui/home/launcher/shortcuts/-$$Lambda$ShortcutMenu$ShowOrHideAnimator$wplZW1W-HFBtr4iTn7N_hQSvcz4;
 
-    invoke-direct {p3, p0}, Lcom/miui/home/launcher/shortcuts/-$$Lambda$ShortcutMenu$ShowOrHideAnimator$i7CFXFzjKuvhQ0yMrElSiS5nl1w;-><init>(Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;)V
+    invoke-direct {p3, p0}, Lcom/miui/home/launcher/shortcuts/-$$Lambda$ShortcutMenu$ShowOrHideAnimator$wplZW1W-HFBtr4iTn7N_hQSvcz4;-><init>(Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;)V
 
     invoke-virtual {p2, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 447
+    .line 443
     iget-object p2, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     new-instance p3, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator$1;
@@ -65,10 +65,10 @@
     return-void
 .end method
 
-.method public static synthetic lambda$new$0(Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;Landroid/animation/ValueAnimator;)V
+.method public static synthetic lambda$new$214(Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    .line 442
+    .line 438
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -79,7 +79,7 @@
 
     move-result p1
 
-    .line 443
+    .line 439
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->getEnd()F
@@ -90,12 +90,12 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->access$000(Lcom/miui/home/launcher/shortcuts/ShortcutMenu;F)V
 
-    .line 444
+    .line 440
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->setScaleX(F)V
 
-    .line 445
+    .line 441
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->setScaleY(F)V
@@ -108,7 +108,7 @@
 .method public getCurrent()F
     .locals 1
 
-    .line 496
+    .line 492
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getScaleX()F
@@ -121,12 +121,12 @@
 .method protected onDirectionChanged()V
     .locals 2
 
-    .line 467
+    .line 463
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 468
+    .line 464
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->getCurrent()F
 
     move-result v0
@@ -139,12 +139,12 @@
 
     if-nez v0, :cond_0
 
-    .line 469
+    .line 465
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->resetVisibility()V
 
     goto :goto_0
 
-    .line 470
+    .line 466
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->getCurrent()F
 
@@ -158,7 +158,7 @@
 
     if-nez v0, :cond_1
 
-    .line 471
+    .line 467
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->getEnd()F
@@ -167,7 +167,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->access$000(Lcom/miui/home/launcher/shortcuts/ShortcutMenu;F)V
 
-    .line 472
+    .line 468
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->getEnd()F
@@ -176,7 +176,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->setScaleX(F)V
 
-    .line 473
+    .line 469
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->getEnd()F
@@ -185,7 +185,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->setScaleY(F)V
 
-    .line 474
+    .line 470
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     const/4 v1, 0x0
@@ -204,24 +204,24 @@
 
     const-string v1, "show ShortcutMenu"
 
-    .line 480
+    .line 476
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 481
+    .line 477
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->setVisibility(I)V
 
-    .line 482
+    .line 478
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     sget-object v2, Lcom/miui/home/launcher/common/Ease$Cubic;->easeOut:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v0, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 483
+    .line 479
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     const/4 v2, 0x2
@@ -244,7 +244,7 @@
 
     invoke-virtual {v0, v2}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    .line 484
+    .line 480
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
@@ -255,14 +255,14 @@
 .method protected onGoToStart()V
     .locals 4
 
-    .line 489
+    .line 485
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     sget-object v1, Lcom/miui/home/launcher/common/Ease$Cubic;->easeIn:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 490
+    .line 486
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     const/4 v1, 0x2
@@ -287,7 +287,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    .line 491
+    .line 487
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->mValueAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
@@ -298,7 +298,7 @@
 .method public resetVisibility()V
     .locals 2
 
-    .line 458
+    .line 454
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->getStart()F
@@ -307,7 +307,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->access$000(Lcom/miui/home/launcher/shortcuts/ShortcutMenu;F)V
 
-    .line 459
+    .line 455
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->getStart()F
@@ -316,7 +316,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->setScaleX(F)V
 
-    .line 460
+    .line 456
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->getStart()F
@@ -325,14 +325,14 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->setScaleY(F)V
 
-    .line 461
+    .line 457
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->setVisibility(I)V
 
-    .line 462
+    .line 458
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->resetDirection()V
 
     return-void

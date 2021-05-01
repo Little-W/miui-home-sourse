@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onFinishInflate$0(Lcom/miui/home/launcher/allapps/AllAppsCategoryContainer;Landroid/view/View;Z)V
+.method public static synthetic lambda$onFinishInflate$207(Lcom/miui/home/launcher/allapps/AllAppsCategoryContainer;Landroid/view/View;Z)V
     .locals 0
 
     if-eqz p2, :cond_1
@@ -413,9 +413,9 @@
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsCategoryContainer;->mEditContainer:Lcom/miui/home/launcher/allapps/category/AllAppsCategoryEditContainer;
 
     .line 44
-    new-instance v0, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsCategoryContainer$V3PAcSEfvGGDiJ8vnnKJbntEfYw;
+    new-instance v0, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsCategoryContainer$HQpb5GKv4HzcEOcB2Yrw7LvkBtI;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsCategoryContainer$V3PAcSEfvGGDiJ8vnnKJbntEfYw;-><init>(Lcom/miui/home/launcher/allapps/AllAppsCategoryContainer;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsCategoryContainer$HQpb5GKv4HzcEOcB2Yrw7LvkBtI;-><init>(Lcom/miui/home/launcher/allapps/AllAppsCategoryContainer;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/AllAppsCategoryContainer;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 

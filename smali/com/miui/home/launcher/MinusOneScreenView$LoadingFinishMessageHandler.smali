@@ -59,12 +59,12 @@
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f0600f2
+    const p1, 0x7f0600f5
 
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f0600f0
+    const p1, 0x7f0600f3
 
     goto :goto_0
 
@@ -76,12 +76,12 @@
 
     if-eqz p1, :cond_2
 
-    const p1, 0x7f0600f1
+    const p1, 0x7f0600f4
 
     goto :goto_0
 
     :cond_2
-    const p1, 0x7f0600ef
+    const p1, 0x7f0600f2
 
     .line 372
     :goto_0

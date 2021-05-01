@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/widget/FrameLayout;)V
     .locals 0
 
-    .line 6347
+    .line 6362
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$60;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$60;->val$group:Landroid/widget/FrameLayout;
@@ -42,7 +42,7 @@
 .method public onDismiss()V
     .locals 2
 
-    .line 6349
+    .line 6364
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$60;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DragLayer;

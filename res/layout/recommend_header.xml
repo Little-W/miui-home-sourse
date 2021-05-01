@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_gravity="center_horizontal" android:id="@id/folder_recommend_header" android:background="@drawable/recommend_divider" android:paddingBottom="@dimen/recommend_header_padding_bottom" android:animationCache="false" android:layout_width="@dimen/folder_content_width" android:layout_height="wrap_content" android:paddingStart="@dimen/folder_edit_text_margin_left" android:paddingEnd="@dimen/folder_edit_text_margin_right"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:layout_gravity="start|center" android:id="@id/recommend_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/recommend_apps_notice" style="@style/FolderTitle.recommend" />
-    <FrameLayout android:layout_gravity="end|center" android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <ImageView android:id="@id/recommend_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/recommend_refresh" android:scaleType="fitCenter" android:contentDescription="@string/recommend_refresh" />
-        <ImageView android:id="@id/recommend_xout" android:padding="6.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/recommend_xout" android:scaleType="fitCenter" android:contentDescription="@string/recommend_xout" />
+<FrameLayout
+    android:layout_gravity="center_horizontal"
+    android:id="@id/folder_recommend_header"
+    android:background="@drawable/recommend_divider"
+    android:paddingBottom="@dimen/recommend_header_padding_bottom"
+    android:animationCache="false"
+    android:layout_width="@dimen/folder_content_width"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/folder_edit_text_margin_left"
+    android:paddingEnd="@dimen/folder_edit_text_margin_right"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_gravity="start|center"
+        android:id="@id/recommend_title"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/recommend_apps_notice"
+        style="@style/FolderTitle.recommend" />
+    <FrameLayout
+        android:layout_gravity="end|center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@id/recommend_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recommend_refresh"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/recommend_refresh" />
+        <ImageView
+            android:id="@id/recommend_xout"
+            android:padding="6.0dip"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recommend_xout"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/recommend_xout" />
     </FrameLayout>
 </FrameLayout>

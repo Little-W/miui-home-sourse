@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ItemInfo;)V
     .locals 0
 
-    .line 6461
+    .line 6480
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$62;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$62;->val$deletedInfo:Lcom/miui/home/launcher/ItemInfo;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 6464
+    .line 6483
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$62;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$8400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DragController;
@@ -57,7 +57,7 @@
 
     const-string v0, "Launcher"
 
-    .line 6465
+    .line 6484
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,7 +86,7 @@
 
     return-void
 
-    .line 6468
+    .line 6487
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$62;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -94,12 +94,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$8502(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 6469
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$62;->val$deletedInfo:Lcom/miui/home/launcher/ItemInfo;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/DeviceConfig;->correntCellPositionRuntime(Lcom/miui/home/launcher/ItemInfo;)V
-
-    .line 6470
+    .line 6488
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$62;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
@@ -110,7 +105,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Workspace;->fillEmptyCellAuto(Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 6471
+    .line 6489
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$62;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x0

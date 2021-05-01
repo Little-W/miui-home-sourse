@@ -82,7 +82,7 @@
     return-object p0
 .end method
 
-.method public static synthetic lambda$registerReceiver$0(Lcom/miui/home/launcher/gadget/Clock;)V
+.method public static synthetic lambda$registerReceiver$377(Lcom/miui/home/launcher/gadget/Clock;)V
     .locals 3
 
     .line 81
@@ -117,7 +117,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$unregisterReceiver$1(Lcom/miui/home/launcher/gadget/Clock;)V
+.method public static synthetic lambda$unregisterReceiver$378(Lcom/miui/home/launcher/gadget/Clock;)V
     .locals 2
 
     .line 92
@@ -159,9 +159,9 @@
     .locals 1
 
     .line 80
-    new-instance v0, Lcom/miui/home/launcher/gadget/-$$Lambda$Clock$3Ely00aSXHSrIL7OGrOKytVVVBM;
+    new-instance v0, Lcom/miui/home/launcher/gadget/-$$Lambda$Clock$M0WCL5jNe-rSeWyGHxMGyxd_1XY;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/-$$Lambda$Clock$3Ely00aSXHSrIL7OGrOKytVVVBM;-><init>(Lcom/miui/home/launcher/gadget/Clock;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/-$$Lambda$Clock$M0WCL5jNe-rSeWyGHxMGyxd_1XY;-><init>(Lcom/miui/home/launcher/gadget/Clock;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -172,9 +172,9 @@
     .locals 1
 
     .line 90
-    new-instance v0, Lcom/miui/home/launcher/gadget/-$$Lambda$Clock$T-TIbEyBca75V_atmX6QEt-eLzY;
+    new-instance v0, Lcom/miui/home/launcher/gadget/-$$Lambda$Clock$S54rJlFNr9EnXxjsUFRPrO2YQxk;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/-$$Lambda$Clock$T-TIbEyBca75V_atmX6QEt-eLzY;-><init>(Lcom/miui/home/launcher/gadget/Clock;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/-$$Lambda$Clock$S54rJlFNr9EnXxjsUFRPrO2YQxk;-><init>(Lcom/miui/home/launcher/gadget/Clock;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

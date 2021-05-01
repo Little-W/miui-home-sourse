@@ -85,19 +85,19 @@
 
 .field public static final expanded_menu:I = 0x7f0a00be
 
-.field public static final home:I = 0x7f0a00de
+.field public static final home:I = 0x7f0a00e0
 
-.field public static final homeAsUp:I = 0x7f0a00df
+.field public static final homeAsUp:I = 0x7f0a00e1
 
-.field public static final icon:I = 0x7f0a00e4
+.field public static final icon:I = 0x7f0a00e6
 
-.field public static final ifRoom:I = 0x7f0a00ee
+.field public static final ifRoom:I = 0x7f0a00f1
 
-.field public static final image:I = 0x7f0a00ef
+.field public static final image:I = 0x7f0a00f2
 
-.field public static final indicator_container:I = 0x7f0a00f1
+.field public static final indicator_container:I = 0x7f0a00f5
 
-.field public static final info:I = 0x7f0a00f4
+.field public static final info:I = 0x7f0a00f8
 
 .field public static final line1:I = 0x7f0a010a
 
@@ -199,10 +199,10 @@
 
 .field public static final topPanel:I = 0x7f0a01da
 
-.field public static final up:I = 0x7f0a01ef
+.field public static final up:I = 0x7f0a01f1
 
-.field public static final useLogo:I = 0x7f0a01f0
+.field public static final useLogo:I = 0x7f0a01f2
 
-.field public static final withText:I = 0x7f0a0203
+.field public static final withText:I = 0x7f0a0205
 
-.field public static final wrap_content:I = 0x7f0a020a
+.field public static final wrap_content:I = 0x7f0a020c

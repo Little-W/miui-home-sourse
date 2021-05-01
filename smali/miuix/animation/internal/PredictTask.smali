@@ -22,7 +22,7 @@
 .end method
 
 .method public static predictDuration(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)J
-    .locals 8
+    .locals 9
 
     .line 23
     new-instance v0, Lmiuix/animation/internal/TransitionInfo;
@@ -56,16 +56,16 @@
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v7
+    move-result-object v8
 
     :goto_1
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -73,12 +73,14 @@
 
     const/4 v6, 0x0
 
+    const/4 v7, 0x1
+
     move-wide v2, p2
 
     move-wide v4, p0
 
     .line 30
-    invoke-static/range {v1 .. v6}, Lmiuix/animation/internal/AnimRunnerTask;->doAnimationFrame(Lmiuix/animation/internal/AnimTask;JJZ)V
+    invoke-static/range {v1 .. v7}, Lmiuix/animation/internal/AnimRunnerTask;->doAnimationFrame(Lmiuix/animation/internal/AnimTask;JJZZ)V
 
     goto :goto_1
 

@@ -299,7 +299,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$onFinishInflate$0(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;Landroid/view/View;Z)V
+.method public static synthetic lambda$onFinishInflate$294(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;Landroid/view/View;Z)V
     .locals 0
 
     if-eqz p2, :cond_0
@@ -838,9 +838,9 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 89
-    new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryListContainer$DutaGjhjLIKiEGRvtRlUVfA3R50;
+    new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryListContainer$H29RTpZ8_8ysGBXzplwtDXsT-C4;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryListContainer$DutaGjhjLIKiEGRvtRlUVfA3R50;-><init>(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryListContainer$H29RTpZ8_8ysGBXzplwtDXsT-C4;-><init>(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 

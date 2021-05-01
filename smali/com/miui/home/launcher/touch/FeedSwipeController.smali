@@ -404,7 +404,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$startAnim$0(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;)V
+.method public static synthetic lambda$startAnim$173(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;)V
     .locals 0
 
     .line 343
@@ -413,7 +413,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$startAnim$1(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;Ljava/lang/Runnable;)V
+.method public static synthetic lambda$startAnim$174(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;Ljava/lang/Runnable;)V
     .locals 0
 
     .line 346
@@ -833,9 +833,9 @@
     .line 343
     iget-object p7, p0, Lcom/miui/home/launcher/touch/FeedSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
-    new-instance v0, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$vvfnAOToMbaWQXwg3iNZzbFPyNc;
+    new-instance v0, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$IAW8hJclobrn_-YJt14L5DB2My4;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$vvfnAOToMbaWQXwg3iNZzbFPyNc;-><init>(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$IAW8hJclobrn_-YJt14L5DB2My4;-><init>(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;)V
 
     invoke-virtual {p7, v0}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->setEndAction(Ljava/lang/Runnable;)V
 
@@ -845,9 +845,9 @@
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/touch/FeedSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
-    new-instance v1, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$3AsGgls2fwRP_uSmSIKhkCm0kFs;
+    new-instance v1, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$jp4pV93JkJpxp2HpW9FG3XcCHpg;
 
-    invoke-direct {v1, p0, p1, p7}, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$3AsGgls2fwRP_uSmSIKhkCm0kFs;-><init>(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;Ljava/lang/Runnable;)V
+    invoke-direct {v1, p0, p1, p7}, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$jp4pV93JkJpxp2HpW9FG3XcCHpg;-><init>(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;Ljava/lang/Runnable;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->setEndAction(Ljava/lang/Runnable;)V
 

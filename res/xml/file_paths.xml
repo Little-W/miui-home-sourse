@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <files-path name="share_images" path="images/" />
-    <files-path name="home_preview.png" path="." />
-    <files-path name="pa_header" path="/images/assistant" />
-    <root-path name="data_app" path="/data/app/" />
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <files-path
+        name="share_images"
+        path="images/" />
+    <files-path
+        name="home_preview.png"
+        path="." />
+    <files-path
+        name="pa_header"
+        path="/images/assistant" />
+    <root-path
+        name="data_app"
+        path="/data/app/" />
 </paths>

@@ -20,17 +20,17 @@
 .method constructor <init>(Lmiuix/animation/IAnimTarget;)V
     .locals 1
 
-    .line 27
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
+    .line 20
     new-instance v0, Lmiuix/animation/controller/StateManager;
 
     invoke-direct {v0}, Lmiuix/animation/controller/StateManager;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/controller/FolmeState;->mStateMgr:Lmiuix/animation/controller/StateManager;
 
-    .line 23
+    .line 22
     new-instance v0, Lmiuix/animation/base/AnimConfigLink;
 
     invoke-direct {v0}, Lmiuix/animation/base/AnimConfigLink;-><init>()V
@@ -39,10 +39,10 @@
 
     const/4 v0, 0x1
 
-    .line 25
+    .line 24
     iput-boolean v0, p0, Lmiuix/animation/controller/FolmeState;->mEnableAnim:Z
 
-    .line 28
+    .line 27
     iput-object p1, p0, Lmiuix/animation/controller/FolmeState;->mTarget:Lmiuix/animation/IAnimTarget;
 
     return-void
@@ -51,27 +51,33 @@
 .method private fromTo(Ljava/lang/Object;Ljava/lang/Object;Lmiuix/animation/base/AnimConfigLink;)Lmiuix/animation/IStateStyle;
     .locals 3
 
-    .line 102
+    .line 101
     iget-boolean v0, p0, Lmiuix/animation/controller/FolmeState;->mEnableAnim:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 103
+    .line 102
     iget-object v0, p0, Lmiuix/animation/controller/FolmeState;->mStateMgr:Lmiuix/animation/controller/StateManager;
 
-    invoke-virtual {v0, p2}, Lmiuix/animation/controller/StateManager;->setup(Ljava/lang/Object;)V
+    invoke-virtual {v0, p2}, Lmiuix/animation/controller/StateManager;->setup(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
+
+    if-eqz p1, :cond_0
 
     .line 104
+    invoke-virtual {p0, p1}, Lmiuix/animation/controller/FolmeState;->setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+
+    .line 106
+    :cond_0
     invoke-virtual {p0, p2}, Lmiuix/animation/controller/FolmeState;->getState(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
-    .line 105
+    .line 107
     iget-object v1, p0, Lmiuix/animation/controller/FolmeState;->mStateMgr:Lmiuix/animation/controller/StateManager;
 
     invoke-virtual {v1, v0, p3}, Lmiuix/animation/controller/StateManager;->addTempConfig(Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)V
 
-    .line 106
+    .line 108
     invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
     move-result-object v1
@@ -88,22 +94,22 @@
 
     invoke-virtual {v1, v2, p1, p2, p3}, Lmiuix/animation/internal/AnimRunner;->run(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)V
 
-    .line 107
+    .line 109
     iget-object p1, p0, Lmiuix/animation/controller/FolmeState;->mStateMgr:Lmiuix/animation/controller/StateManager;
 
     invoke-virtual {p1, v0}, Lmiuix/animation/controller/StateManager;->clearTempState(Lmiuix/animation/controller/AnimState;)V
 
-    .line 108
+    .line 110
     invoke-virtual {p3}, Lmiuix/animation/base/AnimConfigLink;->clear()V
 
-    :cond_0
+    :cond_1
     return-object p0
 .end method
 
 .method private getConfigLink()Lmiuix/animation/base/AnimConfigLink;
     .locals 1
 
-    .line 182
+    .line 184
     iget-object v0, p0, Lmiuix/animation/controller/FolmeState;->mConfigLink:Lmiuix/animation/base/AnimConfigLink;
 
     return-object v0
@@ -112,14 +118,14 @@
 .method private setTo(Ljava/lang/Object;Lmiuix/animation/base/AnimConfigLink;)Lmiuix/animation/IStateStyle;
     .locals 2
 
-    .line 46
+    .line 45
     iget-object v0, p0, Lmiuix/animation/controller/FolmeState;->mTarget:Lmiuix/animation/IAnimTarget;
 
     if-nez v0, :cond_0
 
     return-object p0
 
-    .line 49
+    .line 48
     :cond_0
     instance-of v1, p1, Ljava/lang/Integer;
 
@@ -131,7 +137,7 @@
 
     goto :goto_0
 
-    .line 52
+    .line 51
     :cond_1
     new-instance v1, Lmiuix/animation/controller/FolmeState$1;
 
@@ -145,7 +151,7 @@
     :goto_0
     const/4 v0, 0x2
 
-    .line 50
+    .line 49
     new-array v0, v0, [Ljava/lang/Object;
 
     const/4 v1, 0x0
@@ -168,7 +174,7 @@
 .method public addListener(Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/IStateStyle;
     .locals 1
 
-    .line 224
+    .line 232
     iget-object v0, p0, Lmiuix/animation/controller/FolmeState;->mStateMgr:Lmiuix/animation/controller/StateManager;
 
     invoke-virtual {v0, p1}, Lmiuix/animation/controller/StateManager;->addListener(Lmiuix/animation/listener/TransitionListener;)V
@@ -179,7 +185,7 @@
 .method public addState(Lmiuix/animation/controller/AnimState;)V
     .locals 1
 
-    .line 207
+    .line 215
     iget-object v0, p0, Lmiuix/animation/controller/FolmeState;->mStateMgr:Lmiuix/animation/controller/StateManager;
 
     invoke-virtual {v0, p1}, Lmiuix/animation/controller/StateManager;->addState(Lmiuix/animation/controller/AnimState;)V
@@ -190,7 +196,7 @@
 .method public cancel()V
     .locals 3
 
-    .line 125
+    .line 127
     invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
     move-result-object v0
@@ -209,7 +215,7 @@
 .method public varargs cancel([Lmiuix/animation/property/FloatProperty;)V
     .locals 2
 
-    .line 130
+    .line 132
     invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
     move-result-object v0
@@ -224,7 +230,7 @@
 .method public clean()V
     .locals 0
 
-    .line 120
+    .line 122
     invoke-virtual {p0}, Lmiuix/animation/controller/FolmeState;->cancel()V
 
     return-void
@@ -233,31 +239,31 @@
 .method public varargs end([Ljava/lang/Object;)V
     .locals 3
 
-    .line 144
+    .line 146
     array-length v0, p1
 
     if-lez v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 145
+    .line 147
     aget-object v1, p1, v0
 
     instance-of v1, v1, Lmiuix/animation/property/FloatProperty;
 
     if-eqz v1, :cond_0
 
-    .line 146
+    .line 148
     array-length v1, p1
 
     new-array v1, v1, [Lmiuix/animation/property/FloatProperty;
 
-    .line 147
+    .line 149
     array-length v2, p1
 
     invoke-static {p1, v0, v1, v0, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 148
+    .line 150
     invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
     move-result-object p1
@@ -268,18 +274,18 @@
 
     goto :goto_0
 
-    .line 150
+    .line 152
     :cond_0
     array-length v1, p1
 
     new-array v1, v1, [Ljava/lang/String;
 
-    .line 151
+    .line 153
     array-length v2, p1
 
     invoke-static {p1, v0, v1, v0, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 152
+    .line 154
     invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
     move-result-object p1
@@ -296,12 +302,12 @@
 .method public varargs fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
     .locals 6
 
-    .line 94
+    .line 93
     invoke-direct {p0}, Lmiuix/animation/controller/FolmeState;->getConfigLink()Lmiuix/animation/base/AnimConfigLink;
 
     move-result-object v0
 
-    .line 95
+    .line 94
     array-length v1, p3
 
     const/4 v2, 0x0
@@ -313,7 +319,7 @@
 
     aget-object v4, p3, v3
 
-    .line 96
+    .line 95
     new-array v5, v2, [Z
 
     invoke-virtual {v0, v4, v5}, Lmiuix/animation/base/AnimConfigLink;->add(Lmiuix/animation/base/AnimConfig;[Z)V
@@ -322,7 +328,7 @@
 
     goto :goto_0
 
-    .line 98
+    .line 97
     :cond_0
     invoke-direct {p0, p1, p2, v0}, Lmiuix/animation/controller/FolmeState;->fromTo(Ljava/lang/Object;Ljava/lang/Object;Lmiuix/animation/base/AnimConfigLink;)Lmiuix/animation/IStateStyle;
 
@@ -334,7 +340,7 @@
 .method public getState(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
     .locals 1
 
-    .line 202
+    .line 210
     iget-object v0, p0, Lmiuix/animation/controller/FolmeState;->mStateMgr:Lmiuix/animation/controller/StateManager;
 
     invoke-virtual {v0, p1}, Lmiuix/animation/controller/StateManager;->getState(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
@@ -347,7 +353,7 @@
 .method public getTarget()Lmiuix/animation/IAnimTarget;
     .locals 1
 
-    .line 32
+    .line 31
     iget-object v0, p0, Lmiuix/animation/controller/FolmeState;->mTarget:Lmiuix/animation/IAnimTarget;
 
     return-object v0
@@ -356,17 +362,17 @@
 .method public varargs predictDuration([Ljava/lang/Object;)J
     .locals 4
 
-    .line 172
+    .line 174
     invoke-virtual {p0}, Lmiuix/animation/controller/FolmeState;->getTarget()Lmiuix/animation/IAnimTarget;
 
     move-result-object v0
 
-    .line 173
+    .line 175
     invoke-direct {p0}, Lmiuix/animation/controller/FolmeState;->getConfigLink()Lmiuix/animation/base/AnimConfigLink;
 
     move-result-object v1
 
-    .line 174
+    .line 176
     iget-object v2, p0, Lmiuix/animation/controller/FolmeState;->mStateMgr:Lmiuix/animation/controller/StateManager;
 
     invoke-virtual {v2, v0, v1, p1}, Lmiuix/animation/controller/StateManager;->getToState(Lmiuix/animation/IAnimTarget;Lmiuix/animation/base/AnimConfigLink;[Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
@@ -375,17 +381,17 @@
 
     const/4 v2, 0x0
 
-    .line 175
+    .line 177
     invoke-static {v0, v2, p1, v1}, Lmiuix/animation/internal/PredictTask;->predictDuration(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)J
 
     move-result-wide v2
 
-    .line 176
+    .line 178
     iget-object v0, p0, Lmiuix/animation/controller/FolmeState;->mStateMgr:Lmiuix/animation/controller/StateManager;
 
     invoke-virtual {v0, p1}, Lmiuix/animation/controller/StateManager;->clearTempState(Lmiuix/animation/controller/AnimState;)V
 
-    .line 177
+    .line 179
     invoke-virtual {v1}, Lmiuix/animation/base/AnimConfigLink;->clear()V
 
     return-wide v2
@@ -396,7 +402,7 @@
 
     const/4 v0, 0x0
 
-    .line 37
+    .line 36
     new-array v0, v0, [Lmiuix/animation/base/AnimConfig;
 
     invoke-virtual {p0, p1, v0}, Lmiuix/animation/controller/FolmeState;->setTo(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
@@ -409,7 +415,7 @@
 .method public varargs setTo(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
     .locals 0
 
-    .line 42
+    .line 41
     invoke-static {p2}, Lmiuix/animation/base/AnimConfigLink;->linkConfig([Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/base/AnimConfigLink;
 
     move-result-object p2
@@ -424,12 +430,12 @@
 .method public varargs setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
     .locals 3
 
-    .line 159
+    .line 161
     invoke-direct {p0}, Lmiuix/animation/controller/FolmeState;->getConfigLink()Lmiuix/animation/base/AnimConfigLink;
 
     move-result-object v0
 
-    .line 160
+    .line 162
     iget-object v1, p0, Lmiuix/animation/controller/FolmeState;->mStateMgr:Lmiuix/animation/controller/StateManager;
 
     invoke-virtual {p0}, Lmiuix/animation/controller/FolmeState;->getTarget()Lmiuix/animation/IAnimTarget;
@@ -440,7 +446,7 @@
 
     move-result-object p1
 
-    .line 161
+    .line 163
     invoke-direct {p0, p1, v0}, Lmiuix/animation/controller/FolmeState;->setTo(Ljava/lang/Object;Lmiuix/animation/base/AnimConfigLink;)Lmiuix/animation/IStateStyle;
 
     return-object p0
@@ -449,7 +455,7 @@
 .method public varargs to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
     .locals 3
 
-    .line 74
+    .line 73
     instance-of v0, p1, Lmiuix/animation/controller/AnimState;
 
     if-nez v0, :cond_2
@@ -464,7 +470,7 @@
 
     goto :goto_0
 
-    .line 76
+    .line 75
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -478,27 +484,27 @@
 
     if-eqz v0, :cond_1
 
-    .line 77
+    .line 76
     invoke-static {p1}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 78
+    .line 77
     array-length v2, p2
 
     add-int/2addr v2, v0
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 79
+    .line 78
     invoke-static {p1, v1, v2, v1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 80
+    .line 79
     array-length p1, p2
 
     invoke-static {p2, v1, v2, v0, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 81
+    .line 80
     invoke-virtual {p0, v2}, Lmiuix/animation/controller/FolmeState;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object p1
@@ -508,7 +514,7 @@
     :cond_1
     const/4 v0, 0x2
 
-    .line 83
+    .line 82
     new-array v0, v0, [Ljava/lang/Object;
 
     aput-object p1, v0, v1
@@ -527,7 +533,7 @@
     :goto_0
     const/4 v0, 0x0
 
-    .line 75
+    .line 74
     invoke-virtual {p0, p1}, Lmiuix/animation/controller/FolmeState;->getState(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -542,7 +548,7 @@
 .method public varargs to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
     .locals 3
 
-    .line 167
+    .line 169
     iget-object v0, p0, Lmiuix/animation/controller/FolmeState;->mStateMgr:Lmiuix/animation/controller/StateManager;
 
     invoke-virtual {p0}, Lmiuix/animation/controller/FolmeState;->getTarget()Lmiuix/animation/IAnimTarget;

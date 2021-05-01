@@ -209,7 +209,7 @@
 
     iget-object v0, p0, Lcom/miui/home/settings/HideAppAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0052
+    const v1, 0x7f0d0057
 
     const/4 v2, 0x0
 
@@ -217,7 +217,7 @@
 
     move-result-object p1
 
-    const-string v0, "mLayoutInflater.inflate(\u2026list_item, parent, false)"
+    const-string v0, "mLayoutInflater.inflate(…list_item, parent, false)"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

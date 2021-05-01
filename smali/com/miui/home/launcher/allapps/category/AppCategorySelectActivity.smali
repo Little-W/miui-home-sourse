@@ -20,7 +20,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onDelete$0(Lcom/miui/home/launcher/allapps/category/AppCategorySelectActivity;ILjava/util/Collection;Landroid/content/DialogInterface;I)V
+.method public static synthetic lambda$onDelete$349(Lcom/miui/home/launcher/allapps/category/AppCategorySelectActivity;ILjava/util/Collection;Landroid/content/DialogInterface;I)V
     .locals 0
 
     .line 81
@@ -242,11 +242,11 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectActivity$B2g3zYpwq8o4qh3j54XozsR0y9s;
+    new-instance v1, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectActivity$rHqHM9XZ0wA4KGbUE2xUfevcIyA;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectActivity$B2g3zYpwq8o4qh3j54XozsR0y9s;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectActivity;ILjava/util/Collection;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectActivity$rHqHM9XZ0wA4KGbUE2xUfevcIyA;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectActivity;ILjava/util/Collection;)V
 
-    const p1, 0x7f1000d9
+    const p1, 0x7f1000da
 
     .line 80
     invoke-virtual {v0, p1, v1}, Lmiui/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;

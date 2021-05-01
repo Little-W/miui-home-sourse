@@ -26,7 +26,7 @@
     .locals 1
 
     .line 183
-    sget-object v0, Lcom/miui/home/launcher/shortcuts/-$$Lambda$ShortcutMenuManager$ZrgueqS6wgAOVnOWhuHs6CKBymk;->INSTANCE:Lcom/miui/home/launcher/shortcuts/-$$Lambda$ShortcutMenuManager$ZrgueqS6wgAOVnOWhuHs6CKBymk;
+    sget-object v0, Lcom/miui/home/launcher/shortcuts/-$$Lambda$ShortcutMenuManager$eQmiwyyfdiT9cQy1ZIV-KuHHVFY;->INSTANCE:Lcom/miui/home/launcher/shortcuts/-$$Lambda$ShortcutMenuManager$eQmiwyyfdiT9cQy1ZIV-KuHHVFY;
 
     sput-object v0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuManager;->SHORTCUT_RANK_COMPARATOR:Ljava/util/Comparator;
 
@@ -536,7 +536,7 @@
     return v0
 .end method
 
-.method static synthetic lambda$static$0(Lcom/miui/launcher/common/ShortcutInfoCompat;Lcom/miui/launcher/common/ShortcutInfoCompat;)I
+.method static synthetic lambda$static$406(Lcom/miui/launcher/common/ShortcutInfoCompat;Lcom/miui/launcher/common/ShortcutInfoCompat;)I
     .locals 2
 
     .line 185

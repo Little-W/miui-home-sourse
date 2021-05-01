@@ -86,7 +86,7 @@
 .method private isPredefinedProperty(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 127
+    .line 132
     instance-of v0, p1, Lmiuix/animation/property/ValueProperty;
 
     if-nez v0, :cond_1
@@ -116,6 +116,12 @@
 
 
 # virtual methods
+.method public clean()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public createProperty(Ljava/lang/String;Ljava/lang/Class;)Lmiuix/animation/property/FloatProperty;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -128,7 +134,7 @@
         }
     .end annotation
 
-    .line 116
+    .line 121
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     if-eq p2, v0, :cond_1
@@ -167,7 +173,7 @@
 .method public getFloatProperty(Ljava/lang/String;)Lmiuix/animation/property/FloatProperty;
     .locals 1
 
-    .line 133
+    .line 138
     sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
     invoke-virtual {p0, p1, v0}, Lmiuix/animation/ValueTarget;->createProperty(Ljava/lang/String;Ljava/lang/Class;)Lmiuix/animation/property/FloatProperty;

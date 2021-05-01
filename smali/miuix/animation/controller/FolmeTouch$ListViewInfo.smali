@@ -24,7 +24,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 308
+    .line 309
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lmiuix/animation/controller/FolmeTouch$1;)V
     .locals 0
 
-    .line 308
+    .line 309
     invoke-direct {p0}, Lmiuix/animation/controller/FolmeTouch$ListViewInfo;-><init>()V
 
     return-void

@@ -25,7 +25,7 @@
 .method constructor <init>(Lmiuix/animation/controller/FolmeTouch;)V
     .locals 0
 
-    .line 271
+    .line 272
     iput-object p1, p0, Lmiuix/animation/controller/FolmeTouch$4;->this$0:Lmiuix/animation/controller/FolmeTouch;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 274
+    .line 275
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch$4;->this$0:Lmiuix/animation/controller/FolmeTouch;
 
     invoke-static {v0, p1}, Lmiuix/animation/controller/FolmeTouch;->access$200(Lmiuix/animation/controller/FolmeTouch;Landroid/view/View;)V

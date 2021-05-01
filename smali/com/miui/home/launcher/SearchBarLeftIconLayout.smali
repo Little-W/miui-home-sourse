@@ -98,12 +98,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080081
+    const v0, 0x7f080090
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f080080
+    const v0, 0x7f08008f
 
     :goto_0
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarLeftIconLayout;->setBackgroundResource(I)V

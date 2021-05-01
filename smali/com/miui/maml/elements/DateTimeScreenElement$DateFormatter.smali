@@ -218,7 +218,7 @@
     .line 76
     iget-object v3, p0, Lcom/miui/maml/elements/DateTimeScreenElement$DateFormatter;->mCalendar:Lmiui/date/Calendar;
 
-    const-string v5, "N\u6708e"
+    const-string v5, "N月e"
 
     invoke-virtual {v3, v5}, Lmiui/date/Calendar;->format(Ljava/lang/CharSequence;)Ljava/lang/String;
 

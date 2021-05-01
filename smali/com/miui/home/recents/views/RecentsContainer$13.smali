@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
     .locals 0
 
-    .line 759
+    .line 780
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$13;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public accept(Ljava/lang/Long;)V
     .locals 8
 
-    .line 762
+    .line 783
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$13;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
@@ -60,7 +60,7 @@
 
     move-result-object v0
 
-    .line 763
+    .line 784
     iget-object v1, p0, Lcom/miui/home/recents/views/RecentsContainer$13;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-static {v1}, Lcom/miui/home/recents/views/RecentsContainer;->access$1300(Lcom/miui/home/recents/views/RecentsContainer;)J
@@ -73,7 +73,7 @@
 
     move-result-object v1
 
-    .line 764
+    .line 785
     iget-object v2, p0, Lcom/miui/home/recents/views/RecentsContainer$13;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-static {v2}, Lcom/miui/home/recents/views/RecentsContainer;->access$1400(Lcom/miui/home/recents/views/RecentsContainer;)Landroid/widget/TextView;
@@ -94,7 +94,7 @@
 
     aput-object v1, v6, v4
 
-    const v7, 0x7f100251
+    const v7, 0x7f100254
 
     invoke-virtual {v3, v7, v6}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -102,7 +102,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 766
+    .line 787
     iget-object v2, p0, Lcom/miui/home/recents/views/RecentsContainer$13;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-static {v2}, Lcom/miui/home/recents/views/RecentsContainer;->access$1500(Lcom/miui/home/recents/views/RecentsContainer;)Landroid/widget/TextView;
@@ -121,7 +121,7 @@
 
     aput-object v1, v6, v4
 
-    const v7, 0x7f100252
+    const v7, 0x7f100255
 
     invoke-virtual {v3, v7, v6}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -129,7 +129,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 769
+    .line 790
     iget-object v2, p0, Lcom/miui/home/recents/views/RecentsContainer$13;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-static {v2}, Lcom/miui/home/recents/views/RecentsContainer;->access$1400(Lcom/miui/home/recents/views/RecentsContainer;)Landroid/widget/TextView;
@@ -148,7 +148,7 @@
 
     iget-object v2, p0, Lcom/miui/home/recents/views/RecentsContainer$13;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
-    .line 770
+    .line 791
     invoke-static {v2}, Lcom/miui/home/recents/views/RecentsContainer;->access$1500(Lcom/miui/home/recents/views/RecentsContainer;)Landroid/widget/TextView;
 
     move-result-object v2
@@ -174,7 +174,7 @@
     :goto_0
     move v2, v4
 
-    .line 771
+    .line 792
     :goto_1
     iget-object v3, p0, Lcom/miui/home/recents/views/RecentsContainer$13;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
@@ -194,7 +194,7 @@
     :goto_2
     invoke-virtual {v3, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 772
+    .line 793
     iget-object v2, p0, Lcom/miui/home/recents/views/RecentsContainer$13;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-static {v2}, Lcom/miui/home/recents/views/RecentsContainer;->access$1700(Lcom/miui/home/recents/views/RecentsContainer;)Lcom/miui/home/recents/views/CircleAndTickAnimView;
@@ -227,7 +227,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 759
+    .line 780
     check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/RecentsContainer$13;->accept(Ljava/lang/Long;)V

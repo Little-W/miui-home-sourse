@@ -47,15 +47,23 @@
     .end annotation
 .end field
 
+.field static mCpuLevel:I
+
 .field private static mGetDeviceLevel:Ljava/lang/reflect/Method;
 
 .field private static mGetDeviceLevelForWhole:Ljava/lang/reflect/Method;
 
+.field static mGpuLevel:I
+
 .field private static mIsSupportPrune:Ljava/lang/reflect/Method;
+
+.field private static mLastVersion:I
 
 .field static mLevel:I
 
 .field private static mPerf:Ljava/lang/Object;
+
+.field static mRamLevel:I
 
 .field static mTotalRam:I
 
@@ -91,49 +99,63 @@
     .line 99
     sput v0, Lmiuix/animation/utils/DeviceUtils;->mLevel:I
 
-    const v0, 0x7fffffff
+    .line 100
+    sput v0, Lmiuix/animation/utils/DeviceUtils;->mCpuLevel:I
 
     .line 101
+    sput v0, Lmiuix/animation/utils/DeviceUtils;->mGpuLevel:I
+
+    .line 102
+    sput v0, Lmiuix/animation/utils/DeviceUtils;->mRamLevel:I
+
+    const v0, 0x7fffffff
+
+    .line 104
     sput v0, Lmiuix/animation/utils/DeviceUtils;->mTotalRam:I
 
     const/4 v0, 0x0
 
-    .line 464
+    .line 500
     sput-object v0, Lmiuix/animation/utils/DeviceUtils;->mConstructor:Ljava/lang/reflect/Constructor;
 
-    .line 465
+    .line 501
     sput-object v0, Lmiuix/animation/utils/DeviceUtils;->mPerf:Ljava/lang/Object;
 
-    .line 467
+    .line 503
     sput-object v0, Lmiuix/animation/utils/DeviceUtils;->mGetDeviceLevel:Ljava/lang/reflect/Method;
 
-    .line 468
+    .line 504
     sput-object v0, Lmiuix/animation/utils/DeviceUtils;->mGetDeviceLevelForWhole:Ljava/lang/reflect/Method;
 
-    .line 469
+    .line 505
     sput-object v0, Lmiuix/animation/utils/DeviceUtils;->mIsSupportPrune:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 
-    .line 474
+    .line 510
     sput v1, Lmiuix/animation/utils/DeviceUtils;->DEV_STANDARD_VERSION:I
 
-    .line 476
+    .line 511
+    sget v2, Lmiuix/animation/utils/DeviceUtils;->DEV_STANDARD_VERSION:I
+
+    sput v2, Lmiuix/animation/utils/DeviceUtils;->mLastVersion:I
+
+    .line 513
     sput v1, Lmiuix/animation/utils/DeviceUtils;->TYPE_RAM:I
 
     const/4 v2, 0x2
 
-    .line 477
+    .line 514
     sput v2, Lmiuix/animation/utils/DeviceUtils;->TYPE_CPU:I
 
     const/4 v3, 0x3
 
-    .line 478
+    .line 515
     sput v3, Lmiuix/animation/utils/DeviceUtils;->TYPE_GPU:I
 
     const/4 v3, 0x0
 
-    .line 487
+    .line 524
     :try_start_0
     new-instance v4, Ldalvik/system/PathClassLoader;
 
@@ -147,7 +169,7 @@
 
     sput-object v4, Lmiuix/animation/utils/DeviceUtils;->perfClassLoader:Ldalvik/system/PathClassLoader;
 
-    .line 488
+    .line 525
     sget-object v4, Lmiuix/animation/utils/DeviceUtils;->perfClassLoader:Ldalvik/system/PathClassLoader;
 
     const-string v5, "com.miui.performance.DeviceLevelUtils"
@@ -158,7 +180,7 @@
 
     sput-object v4, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
-    .line 489
+    .line 526
     sget-object v4, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     new-array v5, v1, [Ljava/lang/Class;
@@ -173,7 +195,7 @@
 
     sput-object v4, Lmiuix/animation/utils/DeviceUtils;->mConstructor:Ljava/lang/reflect/Constructor;
 
-    .line 492
+    .line 529
     new-array v2, v2, [Ljava/lang/Class;
 
     sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -184,7 +206,7 @@
 
     aput-object v4, v2, v1
 
-    .line 493
+    .line 530
     sget-object v4, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v5, "getDeviceLevel"
@@ -195,14 +217,14 @@
 
     sput-object v2, Lmiuix/animation/utils/DeviceUtils;->mGetDeviceLevel:Ljava/lang/reflect/Method;
 
-    .line 495
+    .line 532
     new-array v2, v1, [Ljava/lang/Class;
 
     sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     aput-object v4, v2, v3
 
-    .line 496
+    .line 533
     sget-object v4, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v5, "getDeviceLevel"
@@ -213,7 +235,7 @@
 
     sput-object v2, Lmiuix/animation/utils/DeviceUtils;->mGetDeviceLevelForWhole:Ljava/lang/reflect/Method;
 
-    .line 499
+    .line 536
     sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "isSupportPrune"
@@ -226,7 +248,7 @@
 
     sput-object v2, Lmiuix/animation/utils/DeviceUtils;->mIsSupportPrune:Ljava/lang/reflect/Method;
 
-    .line 502
+    .line 539
     sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "DEVICE_LEVEL_FOR_RAM"
@@ -245,7 +267,7 @@
 
     sput v2, Lmiuix/animation/utils/DeviceUtils;->TYPE_RAM:I
 
-    .line 503
+    .line 540
     sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "DEVICE_LEVEL_FOR_CPU"
@@ -264,7 +286,7 @@
 
     sput v2, Lmiuix/animation/utils/DeviceUtils;->TYPE_CPU:I
 
-    .line 504
+    .line 541
     sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "DEVICE_LEVEL_FOR_GPU"
@@ -283,7 +305,7 @@
 
     sput v2, Lmiuix/animation/utils/DeviceUtils;->TYPE_GPU:I
 
-    .line 507
+    .line 544
     sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "LOW_DEVICE"
@@ -302,7 +324,7 @@
 
     sput v2, Lmiuix/animation/utils/DeviceUtils;->LOW:I
 
-    .line 508
+    .line 545
     sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "MIDDLE_DEVICE"
@@ -321,7 +343,7 @@
 
     sput v2, Lmiuix/animation/utils/DeviceUtils;->MIDDLE:I
 
-    .line 509
+    .line 546
     sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "HIGH_DEVICE"
@@ -340,7 +362,7 @@
 
     sput v2, Lmiuix/animation/utils/DeviceUtils;->HIGH:I
 
-    .line 510
+    .line 547
     sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "DEVICE_LEVEL_UNKNOWN"
@@ -368,7 +390,7 @@
 
     const-string v4, "DeviceUtils"
 
-    .line 513
+    .line 550
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -385,7 +407,7 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 516
+    .line 553
     :goto_0
     sget-object v2, Lmiuix/animation/utils/DeviceUtils;->applicationContext:Landroid/content/Context;
 
@@ -394,7 +416,7 @@
     :try_start_1
     const-string v2, "android.app.ActivityThread"
 
-    .line 518
+    .line 555
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
@@ -419,12 +441,12 @@
 
     sput-object v2, Lmiuix/animation/utils/DeviceUtils;->application:Landroid/app/Application;
 
-    .line 519
+    .line 556
     sget-object v2, Lmiuix/animation/utils/DeviceUtils;->application:Landroid/app/Application;
 
     if-eqz v2, :cond_0
 
-    .line 520
+    .line 557
     sget-object v2, Lmiuix/animation/utils/DeviceUtils;->application:Landroid/app/Application;
 
     invoke-virtual {v2}, Landroid/app/Application;->getApplicationContext()Landroid/content/Context;
@@ -442,7 +464,7 @@
 
     const-string v4, "DeviceUtils"
 
-    .line 523
+    .line 560
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -459,7 +481,7 @@
 
     invoke-static {v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 527
+    .line 564
     :cond_0
     :goto_1
     sget-object v2, Lmiuix/animation/utils/DeviceUtils;->applicationContext:Landroid/content/Context;
@@ -469,7 +491,7 @@
     :try_start_2
     const-string v2, "android.app.AppGlobals"
 
-    .line 529
+    .line 566
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
@@ -494,12 +516,12 @@
 
     sput-object v0, Lmiuix/animation/utils/DeviceUtils;->application:Landroid/app/Application;
 
-    .line 530
+    .line 567
     sget-object v0, Lmiuix/animation/utils/DeviceUtils;->application:Landroid/app/Application;
 
     if-eqz v0, :cond_1
 
-    .line 531
+    .line 568
     sget-object v0, Lmiuix/animation/utils/DeviceUtils;->application:Landroid/app/Application;
 
     invoke-virtual {v0}, Landroid/app/Application;->getApplicationContext()Landroid/content/Context;
@@ -517,7 +539,7 @@
 
     const-string v2, "DeviceUtils"
 
-    .line 534
+    .line 571
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -534,7 +556,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 539
+    .line 576
     :cond_1
     :goto_2
     :try_start_3
@@ -542,7 +564,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 540
+    .line 577
     sget-object v0, Lmiuix/animation/utils/DeviceUtils;->mConstructor:Ljava/lang/reflect/Constructor;
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -566,7 +588,7 @@
 
     const-string v1, "DeviceUtils"
 
-    .line 543
+    .line 580
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -583,7 +605,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 544
+    .line 581
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_2
@@ -594,19 +616,19 @@
 .method private static createCpuInfo(Ljava/lang/String;)Lmiuix/animation/utils/DeviceUtils$CpuInfo;
     .locals 5
 
-    .line 357
+    .line 393
     new-instance v0, Lmiuix/animation/utils/DeviceUtils$CpuInfo;
 
     invoke-direct {v0}, Lmiuix/animation/utils/DeviceUtils$CpuInfo;-><init>()V
 
-    .line 358
+    .line 394
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p0
 
     iput p0, v0, Lmiuix/animation/utils/DeviceUtils$CpuInfo;->id:I
 
-    .line 359
+    .line 395
     sget-object p0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const-string v1, "/sys/devices/system/cpu/cpu%d/cpufreq/cpuinfo_max_freq"
@@ -629,14 +651,14 @@
 
     move-result-object p0
 
-    .line 360
+    .line 396
     invoke-static {p0}, Lmiuix/animation/utils/DeviceUtils;->getContentFromFileInfo(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 362
+    .line 398
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p0
@@ -650,7 +672,7 @@
 .method private static decideLevel(Lmiuix/animation/utils/DeviceUtils$CpuStats;)V
     .locals 5
 
-    .line 310
+    .line 346
     iget v0, p0, Lmiuix/animation/utils/DeviceUtils$CpuStats;->level:I
 
     const/4 v1, -0x1
@@ -659,7 +681,7 @@
 
     return-void
 
-    .line 313
+    .line 349
     :cond_0
     iget v0, p0, Lmiuix/animation/utils/DeviceUtils$CpuStats;->bigCoreCount:I
 
@@ -673,7 +695,7 @@
 
     if-lt v0, v1, :cond_3
 
-    .line 314
+    .line 350
     iget v0, p0, Lmiuix/animation/utils/DeviceUtils$CpuStats;->maxFreq:I
 
     const v1, 0x2932e0
@@ -682,40 +704,40 @@
 
     const/4 v0, 0x2
 
-    .line 315
+    .line 351
     iput v0, p0, Lmiuix/animation/utils/DeviceUtils$CpuStats;->level:I
 
     goto :goto_0
 
-    .line 316
+    .line 352
     :cond_1
     iget v0, p0, Lmiuix/animation/utils/DeviceUtils$CpuStats;->maxFreq:I
 
     if-le v0, v4, :cond_2
 
-    .line 317
+    .line 353
     iput v2, p0, Lmiuix/animation/utils/DeviceUtils$CpuStats;->level:I
 
     goto :goto_0
 
-    .line 319
+    .line 355
     :cond_2
     iput v3, p0, Lmiuix/animation/utils/DeviceUtils$CpuStats;->level:I
 
     goto :goto_0
 
-    .line 321
+    .line 357
     :cond_3
     iget v0, p0, Lmiuix/animation/utils/DeviceUtils$CpuStats;->maxFreq:I
 
     if-le v0, v4, :cond_4
 
-    .line 322
+    .line 358
     iput v2, p0, Lmiuix/animation/utils/DeviceUtils$CpuStats;->level:I
 
     goto :goto_0
 
-    .line 324
+    .line 360
     :cond_4
     iput v3, p0, Lmiuix/animation/utils/DeviceUtils$CpuStats;->level:I
 
@@ -735,7 +757,7 @@
         }
     .end annotation
 
-    .line 293
+    .line 329
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -753,7 +775,7 @@
 
     check-cast v0, Lmiuix/animation/utils/DeviceUtils$CpuInfo;
 
-    .line 294
+    .line 330
     iget v1, v0, Lmiuix/animation/utils/DeviceUtils$CpuInfo;->architecture:I
 
     const/16 v2, 0x8
@@ -762,10 +784,10 @@
 
     const/4 v1, 0x0
 
-    .line 295
+    .line 331
     iput v1, p0, Lmiuix/animation/utils/DeviceUtils$CpuStats;->level:I
 
-    .line 297
+    .line 333
     :cond_0
     iget v1, v0, Lmiuix/animation/utils/DeviceUtils$CpuInfo;->maxFreq:I
 
@@ -773,12 +795,12 @@
 
     if-le v1, v2, :cond_1
 
-    .line 298
+    .line 334
     iget v1, v0, Lmiuix/animation/utils/DeviceUtils$CpuInfo;->maxFreq:I
 
     iput v1, p0, Lmiuix/animation/utils/DeviceUtils$CpuStats;->maxFreq:I
 
-    .line 300
+    .line 336
     :cond_1
     iget v0, v0, Lmiuix/animation/utils/DeviceUtils$CpuInfo;->maxFreq:I
 
@@ -786,7 +808,7 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 301
+    .line 337
     iget v0, p0, Lmiuix/animation/utils/DeviceUtils$CpuStats;->bigCoreCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -795,7 +817,7 @@
 
     goto :goto_0
 
-    .line 303
+    .line 339
     :cond_2
     iget v0, p0, Lmiuix/animation/utils/DeviceUtils$CpuStats;->smallCoreCount:I
 
@@ -805,7 +827,7 @@
 
     goto :goto_0
 
-    .line 306
+    .line 342
     :cond_3
     invoke-static {p0}, Lmiuix/animation/utils/DeviceUtils;->decideLevel(Lmiuix/animation/utils/DeviceUtils$CpuStats;)V
 
@@ -817,7 +839,7 @@
 
     const/4 v0, 0x0
 
-    .line 389
+    .line 425
     :try_start_0
     new-instance v1, Ljava/io/FileInputStream;
 
@@ -826,7 +848,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 390
+    .line 426
     :try_start_1
     new-instance p0, Ljava/io/BufferedReader;
 
@@ -836,18 +858,18 @@
 
     invoke-direct {p0, v2}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 391
+    .line 427
     invoke-virtual {p0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 392
+    .line 428
     invoke-virtual {p0}, Ljava/io/BufferedReader;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 399
+    .line 435
     :try_start_2
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_2
@@ -874,7 +896,7 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 402
+    .line 438
     :catch_1
     :cond_0
     throw p0
@@ -885,7 +907,7 @@
     :catch_3
     if-eqz v1, :cond_1
 
-    .line 399
+    .line 435
     :try_start_4
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -901,14 +923,14 @@
 
     const-string v0, "CPU implementer"
 
-    .line 368
+    .line 404
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 369
+    .line 405
     invoke-static {p1}, Lmiuix/animation/utils/DeviceUtils;->toInt(Ljava/lang/String;)I
 
     move-result p0
@@ -920,14 +942,14 @@
     :cond_0
     const-string v0, "CPU architecture"
 
-    .line 370
+    .line 406
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 371
+    .line 407
     invoke-static {p1}, Lmiuix/animation/utils/DeviceUtils;->toInt(Ljava/lang/String;)I
 
     move-result p0
@@ -939,14 +961,14 @@
     :cond_1
     const-string v0, "CPU part"
 
-    .line 372
+    .line 408
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
-    .line 373
+    .line 409
     invoke-static {p1}, Lmiuix/animation/utils/DeviceUtils;->toInt(Ljava/lang/String;)I
 
     move-result p0
@@ -969,12 +991,12 @@
         }
     .end annotation
 
-    .line 329
+    .line 365
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 331
+    .line 367
     :try_start_0
     new-instance v1, Ljava/util/Scanner;
 
@@ -988,7 +1010,7 @@
 
     const/4 v2, 0x0
 
-    .line 333
+    .line 369
     :cond_0
     :goto_0
     invoke-virtual {v1}, Ljava/util/Scanner;->hasNextLine()Z
@@ -997,7 +1019,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 334
+    .line 370
     invoke-virtual {v1}, Ljava/util/Scanner;->nextLine()Ljava/lang/String;
 
     move-result-object v3
@@ -1008,14 +1030,14 @@
 
     move-result-object v3
 
-    .line 335
+    .line 371
     array-length v4, v3
 
     const/4 v5, 0x1
 
     if-le v4, v5, :cond_0
 
-    .line 336
+    .line 372
     invoke-static {v3, v0, v2}, Lmiuix/animation/utils/DeviceUtils;->parseLine([Ljava/lang/String;Ljava/util/List;Lmiuix/animation/utils/DeviceUtils$CpuInfo;)Lmiuix/animation/utils/DeviceUtils$CpuInfo;
 
     move-result-object v2
@@ -1031,7 +1053,7 @@
 
     const-string v3, "getChipSetFromCpuInfo failed"
 
-    .line 340
+    .line 376
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1
@@ -1041,12 +1063,12 @@
 .method private static getCpuLevel()I
     .locals 3
 
-    .line 206
+    .line 242
     invoke-static {}, Lmiuix/animation/utils/DeviceUtils;->getHardwareInfo()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 208
+    .line 244
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -1057,21 +1079,21 @@
 
     const-string v1, "Qualcomm"
 
-    .line 209
+    .line 245
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 210
+    .line 246
     invoke-static {v0}, Lmiuix/animation/utils/DeviceUtils;->getQualcommCpuLevel(Ljava/lang/String;)I
 
     move-result v0
 
     goto :goto_0
 
-    .line 212
+    .line 248
     :cond_0
     invoke-static {v0}, Lmiuix/animation/utils/DeviceUtils;->getMtkCpuLevel(Ljava/lang/String;)I
 
@@ -1085,7 +1107,7 @@
     :goto_0
     if-ne v0, v2, :cond_2
 
-    .line 216
+    .line 252
     invoke-static {}, Lmiuix/animation/utils/DeviceUtils;->getCpuStats()Lmiuix/animation/utils/DeviceUtils$CpuStats;
 
     move-result-object v0
@@ -1099,17 +1121,17 @@
 .method public static getCpuStats()Lmiuix/animation/utils/DeviceUtils$CpuStats;
     .locals 4
 
-    .line 283
+    .line 319
     invoke-static {}, Lmiuix/animation/utils/DeviceUtils;->getCpuInfoList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 284
+    .line 320
     new-instance v1, Lmiuix/animation/utils/DeviceUtils$CpuStats;
 
     invoke-direct {v1}, Lmiuix/animation/utils/DeviceUtils$CpuStats;-><init>()V
 
-    .line 285
+    .line 321
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v2
@@ -1120,10 +1142,10 @@
 
     const/4 v2, 0x0
 
-    .line 286
+    .line 322
     iput v2, v1, Lmiuix/animation/utils/DeviceUtils$CpuStats;->level:I
 
-    .line 288
+    .line 324
     :cond_0
     invoke-static {v1, v0}, Lmiuix/animation/utils/DeviceUtils;->doCpuStats(Lmiuix/animation/utils/DeviceUtils$CpuStats;Ljava/util/List;)V
 
@@ -1133,7 +1155,7 @@
 .method public static getDeviceLevel()I
     .locals 1
 
-    .line 130
+    .line 133
     sget v0, Lmiuix/animation/utils/DeviceUtils;->DEV_STANDARD_VERSION:I
 
     invoke-static {v0}, Lmiuix/animation/utils/DeviceUtils;->getDeviceLevel(I)I
@@ -1144,21 +1166,41 @@
 .end method
 
 .method public static getDeviceLevel(I)I
-    .locals 1
+    .locals 2
 
-    .line 134
+    .line 137
+    sget v0, Lmiuix/animation/utils/DeviceUtils;->mLastVersion:I
+
+    const/4 v1, -0x1
+
+    if-ne v0, p0, :cond_0
+
+    sget v0, Lmiuix/animation/utils/DeviceUtils;->mLevel:I
+
+    if-eq v0, v1, :cond_0
+
+    return v0
+
+    .line 140
+    :cond_0
+    sput p0, Lmiuix/animation/utils/DeviceUtils;->mLastVersion:I
+
+    .line 141
     invoke-static {p0}, Lmiuix/animation/utils/DeviceUtils;->getDeviceLevel2(I)I
 
     move-result p0
 
-    const/4 v0, -0x1
+    sput p0, Lmiuix/animation/utils/DeviceUtils;->mLevel:I
 
-    if-eq p0, v0, :cond_0
+    .line 142
+    sget p0, Lmiuix/animation/utils/DeviceUtils;->mLevel:I
+
+    if-eq p0, v1, :cond_1
 
     return p0
 
-    .line 138
-    :cond_0
+    .line 145
+    :cond_1
     invoke-static {}, Lmiuix/animation/utils/DeviceUtils;->getDeviceLevel1()I
 
     move-result p0
@@ -1167,22 +1209,83 @@
 .end method
 
 .method public static getDeviceLevel(II)I
-    .locals 1
+    .locals 2
 
-    .line 142
+    .line 149
+    sget v0, Lmiuix/animation/utils/DeviceUtils;->TYPE_CPU:I
+
+    const/4 v1, -0x1
+
+    if-ne p1, v0, :cond_0
+
+    .line 150
+    sget v0, Lmiuix/animation/utils/DeviceUtils;->mLastVersion:I
+
+    if-ne v0, p0, :cond_2
+
+    sget v0, Lmiuix/animation/utils/DeviceUtils;->mCpuLevel:I
+
+    if-eq v0, v1, :cond_2
+
+    return v0
+
+    .line 153
+    :cond_0
+    sget v0, Lmiuix/animation/utils/DeviceUtils;->TYPE_GPU:I
+
+    if-ne p1, v0, :cond_1
+
+    .line 154
+    sget v0, Lmiuix/animation/utils/DeviceUtils;->mLastVersion:I
+
+    if-ne v0, p0, :cond_2
+
+    sget v0, Lmiuix/animation/utils/DeviceUtils;->mGpuLevel:I
+
+    if-eq v0, v1, :cond_2
+
+    return v0
+
+    .line 157
+    :cond_1
+    sget v0, Lmiuix/animation/utils/DeviceUtils;->TYPE_RAM:I
+
+    if-ne p1, v0, :cond_2
+
+    .line 158
+    sget v0, Lmiuix/animation/utils/DeviceUtils;->mLastVersion:I
+
+    if-ne v0, p0, :cond_2
+
+    sget v0, Lmiuix/animation/utils/DeviceUtils;->mRamLevel:I
+
+    if-eq v0, v1, :cond_2
+
+    return v0
+
+    .line 162
+    :cond_2
     invoke-static {p0, p1}, Lmiuix/animation/utils/DeviceUtils;->getDeviceLevel2(II)I
+
+    move-result v0
+
+    if-eq v0, v1, :cond_3
+
+    .line 164
+    invoke-static {p0, v0, p1}, Lmiuix/animation/utils/DeviceUtils;->setDeviceLevel(III)I
 
     move-result p0
 
-    const/4 v0, -0x1
-
-    if-eq p0, v0, :cond_0
-
     return p0
 
-    .line 146
-    :cond_0
+    .line 166
+    :cond_3
     invoke-static {p1}, Lmiuix/animation/utils/DeviceUtils;->getDeviceLevel1(I)I
+
+    move-result v0
+
+    .line 167
+    invoke-static {p0, v0, p1}, Lmiuix/animation/utils/DeviceUtils;->setDeviceLevel(III)I
 
     move-result p0
 
@@ -1192,7 +1295,7 @@
 .method private static getDeviceLevel1()I
     .locals 5
 
-    .line 178
+    .line 214
     sget v0, Lmiuix/animation/utils/DeviceUtils;->mLevel:I
 
     const/4 v1, -0x1
@@ -1201,7 +1304,7 @@
 
     return v0
 
-    .line 181
+    .line 217
     :cond_0
     invoke-static {}, Lmiuix/animation/utils/DeviceUtils;->isMiuiLite()Z
 
@@ -1211,12 +1314,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 182
+    .line 218
     sput v1, Lmiuix/animation/utils/DeviceUtils;->mLevel:I
 
     goto :goto_0
 
-    .line 184
+    .line 220
     :cond_1
     sget v0, Lmiuix/animation/utils/DeviceUtils;->TYPE_CPU:I
 
@@ -1224,14 +1327,14 @@
 
     move-result v0
 
-    .line 185
+    .line 221
     sget v2, Lmiuix/animation/utils/DeviceUtils;->TYPE_RAM:I
 
     invoke-static {v2}, Lmiuix/animation/utils/DeviceUtils;->getDeviceLevel1(I)I
 
     move-result v2
 
-    .line 186
+    .line 222
     sget v3, Lmiuix/animation/utils/DeviceUtils;->DEV_STANDARD_VERSION:I
 
     sget v4, Lmiuix/animation/utils/DeviceUtils;->TYPE_GPU:I
@@ -1242,7 +1345,7 @@
 
     const/4 v4, 0x3
 
-    .line 187
+    .line 223
     new-array v4, v4, [I
 
     aput v0, v4, v1
@@ -1261,7 +1364,7 @@
 
     sput v0, Lmiuix/animation/utils/DeviceUtils;->mLevel:I
 
-    .line 189
+    .line 225
     :goto_0
     sget v0, Lmiuix/animation/utils/DeviceUtils;->mLevel:I
 
@@ -1271,12 +1374,12 @@
 .method private static getDeviceLevel1(I)I
     .locals 1
 
-    .line 157
+    .line 193
     sget v0, Lmiuix/animation/utils/DeviceUtils;->TYPE_RAM:I
 
     if-ne p0, v0, :cond_2
 
-    .line 158
+    .line 194
     invoke-static {}, Lmiuix/animation/utils/DeviceUtils;->getTotalRam()I
 
     move-result p0
@@ -1305,13 +1408,13 @@
 
     return p0
 
-    .line 166
+    .line 202
     :cond_2
     sget v0, Lmiuix/animation/utils/DeviceUtils;->TYPE_CPU:I
 
     if-ne p0, v0, :cond_3
 
-    .line 167
+    .line 203
     invoke-static {}, Lmiuix/animation/utils/DeviceUtils;->getCpuLevel()I
 
     move-result p0
@@ -1327,7 +1430,7 @@
 .method private static getDeviceLevel2(I)I
     .locals 4
 
-    .line 417
+    .line 453
     :try_start_0
     sget-object v0, Lmiuix/animation/utils/DeviceUtils;->mGetDeviceLevelForWhole:Ljava/lang/reflect/Method;
 
@@ -1349,7 +1452,7 @@
 
     move-result-object p0
 
-    .line 418
+    .line 454
     check-cast p0, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
@@ -1365,7 +1468,7 @@
 
     const-string v0, "DeviceUtils"
 
-    .line 420
+    .line 456
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1388,7 +1491,7 @@
 
     const/4 p0, -0x1
 
-    .line 422
+    .line 458
     :goto_0
     invoke-static {p0}, Lmiuix/animation/utils/DeviceUtils;->transDeviceLevel(I)I
 
@@ -1400,7 +1503,7 @@
 .method private static getDeviceLevel2(II)I
     .locals 4
 
-    .line 434
+    .line 470
     :try_start_0
     sget-object v0, Lmiuix/animation/utils/DeviceUtils;->mGetDeviceLevel:Ljava/lang/reflect/Method;
 
@@ -1430,7 +1533,7 @@
 
     move-result-object p0
 
-    .line 435
+    .line 471
     check-cast p0, Ljava/lang/Integer;
 
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
@@ -1446,7 +1549,7 @@
 
     const-string p1, "DeviceUtils"
 
-    .line 437
+    .line 473
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1469,7 +1572,7 @@
 
     const/4 p0, -0x1
 
-    .line 439
+    .line 475
     :goto_0
     invoke-static {p0}, Lmiuix/animation/utils/DeviceUtils;->transDeviceLevel(I)I
 
@@ -1481,7 +1584,7 @@
 .method private static getHardwareInfo()Ljava/lang/String;
     .locals 4
 
-    .line 223
+    .line 259
     :try_start_0
     new-instance v0, Ljava/util/Scanner;
 
@@ -1493,7 +1596,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/Scanner;-><init>(Ljava/io/File;)V
 
-    .line 224
+    .line 260
     :cond_0
     invoke-virtual {v0}, Ljava/util/Scanner;->hasNextLine()Z
 
@@ -1501,12 +1604,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 225
+    .line 261
     invoke-virtual {v0}, Ljava/util/Scanner;->nextLine()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 226
+    .line 262
     invoke-virtual {v0}, Ljava/util/Scanner;->hasNextLine()Z
 
     move-result v2
@@ -1515,19 +1618,19 @@
 
     const-string v2, ": "
 
-    .line 227
+    .line 263
     invoke-virtual {v1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 228
+    .line 264
     array-length v2, v1
 
     const/4 v3, 0x1
 
     if-le v2, v3, :cond_0
 
-    .line 229
+    .line 265
     aget-object v0, v1, v3
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1541,7 +1644,7 @@
 
     const-string v2, "getChipSetFromCpuInfo failed"
 
-    .line 234
+    .line 270
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1
@@ -1553,7 +1656,7 @@
 .method private static varargs getMinLevel([I)I
     .locals 5
 
-    .line 193
+    .line 229
     array-length v0, p0
 
     const/4 v1, -0x1
@@ -1565,10 +1668,10 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 196
+    .line 232
     aget v2, p0, v0
 
-    .line 197
+    .line 233
     array-length v3, p0
 
     :goto_0
@@ -1594,14 +1697,14 @@
 .method private static getMtkCpuLevel(Ljava/lang/String;)I
     .locals 3
 
-    .line 269
+    .line 305
     sget-object v0, Lmiuix/animation/utils/DeviceUtils;->MT_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object p0
 
-    .line 271
+    .line 307
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v0
@@ -1624,12 +1727,12 @@
 
     if-eqz p0, :cond_1
 
-    .line 272
+    .line 308
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 273
+    .line 309
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result p0
@@ -1658,14 +1761,14 @@
 .method public static getQualcommCpuLevel(Ljava/lang/String;)I
     .locals 6
 
-    .line 240
+    .line 276
     sget-object v0, Lmiuix/animation/utils/DeviceUtils;->SM_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object p0
 
-    .line 242
+    .line 278
     invoke-virtual {p0}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v0
@@ -1682,14 +1785,14 @@
 
     const/4 v2, 0x2
 
-    .line 243
+    .line 279
     invoke-virtual {p0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p0
 
     if-eqz p0, :cond_5
 
-    .line 244
+    .line 280
     sget-object v3, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
@@ -1698,7 +1801,7 @@
 
     const-string v3, "sm"
 
-    .line 245
+    .line 281
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -1709,7 +1812,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 246
+    .line 282
     invoke-virtual {p0, v5, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -1735,14 +1838,14 @@
     :cond_2
     const-string v2, "sdm"
 
-    .line 254
+    .line 290
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    .line 255
+    .line 291
     invoke-virtual {p0, v5, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
@@ -1761,7 +1864,7 @@
     :cond_4
     const-string p0, "msm"
 
-    .line 261
+    .line 297
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1797,19 +1900,19 @@
         }
     .end annotation
 
-    .line 564
+    .line 601
     invoke-virtual {p0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object p0
 
     const/4 p1, 0x1
 
-    .line 565
+    .line 602
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
     const/4 p1, 0x0
 
-    .line 566
+    .line 603
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1820,7 +1923,7 @@
 .method public static getTotalRam()I
     .locals 5
 
-    .line 104
+    .line 107
     sget v0, Lmiuix/animation/utils/DeviceUtils;->mTotalRam:I
 
     const v1, 0x7fffffff
@@ -1832,14 +1935,14 @@
     :try_start_0
     const-string v1, "miui.util.HardwareInfo"
 
-    .line 106
+    .line 109
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
     const-string v2, "getTotalPhysicalMemory"
 
-    .line 107
+    .line 110
     new-array v3, v0, [Ljava/lang/Class;
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
@@ -1848,7 +1951,7 @@
 
     const/4 v2, 0x0
 
-    .line 108
+    .line 111
     new-array v3, v0, [Ljava/lang/Object;
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -1863,7 +1966,7 @@
 
     const-wide/16 v3, 0x400
 
-    .line 109
+    .line 112
     div-long/2addr v1, v3
 
     div-long/2addr v1, v3
@@ -1883,17 +1986,17 @@
 
     const-string v2, "DeviceUtils"
 
-    .line 111
+    .line 114
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
+    .line 115
     sput v0, Lmiuix/animation/utils/DeviceUtils;->mTotalRam:I
 
-    .line 115
+    .line 118
     :cond_0
     :goto_0
     sget v0, Lmiuix/animation/utils/DeviceUtils;->mTotalRam:I
@@ -1907,21 +2010,21 @@
     :try_start_0
     const-string v0, "miui.os.Build"
 
-    .line 120
+    .line 123
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v1, "IS_MIUI_LITE_VERSION"
 
-    .line 121
+    .line 124
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 122
+    .line 125
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1943,7 +2046,7 @@
 
     const-string v2, "getDeviceLevel failed"
 
-    .line 124
+    .line 127
     invoke-static {v1, v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v0, 0x0
@@ -1968,7 +2071,7 @@
 
     const/4 v0, 0x1
 
-    .line 346
+    .line 382
     aget-object v0, p0, v0
 
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -1977,7 +2080,7 @@
 
     const/4 v1, 0x0
 
-    .line 347
+    .line 383
     aget-object v2, p0, v1
 
     const-string v3, "processor"
@@ -1994,12 +2097,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 348
+    .line 384
     invoke-static {v0}, Lmiuix/animation/utils/DeviceUtils;->createCpuInfo(Ljava/lang/String;)Lmiuix/animation/utils/DeviceUtils$CpuInfo;
 
     move-result-object p2
 
-    .line 349
+    .line 385
     invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -2007,7 +2110,7 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 351
+    .line 387
     aget-object p0, p0, v1
 
     invoke-static {p0, v0, p2}, Lmiuix/animation/utils/DeviceUtils;->getCpuInfo(Ljava/lang/String;Ljava/lang/String;Lmiuix/animation/utils/DeviceUtils$CpuInfo;)V
@@ -2017,12 +2120,65 @@
     return-object p2
 .end method
 
+.method private static setDeviceLevel(III)I
+    .locals 0
+
+    .line 172
+    sput p0, Lmiuix/animation/utils/DeviceUtils;->mLastVersion:I
+
+    .line 173
+    sget p0, Lmiuix/animation/utils/DeviceUtils;->TYPE_CPU:I
+
+    if-ne p2, p0, :cond_0
+
+    .line 174
+    sput p1, Lmiuix/animation/utils/DeviceUtils;->mCpuLevel:I
+
+    .line 175
+    sget p0, Lmiuix/animation/utils/DeviceUtils;->mCpuLevel:I
+
+    return p0
+
+    .line 176
+    :cond_0
+    sget p0, Lmiuix/animation/utils/DeviceUtils;->TYPE_GPU:I
+
+    if-ne p2, p0, :cond_1
+
+    .line 177
+    sput p1, Lmiuix/animation/utils/DeviceUtils;->mGpuLevel:I
+
+    .line 178
+    sget p0, Lmiuix/animation/utils/DeviceUtils;->mGpuLevel:I
+
+    return p0
+
+    .line 179
+    :cond_1
+    sget p0, Lmiuix/animation/utils/DeviceUtils;->TYPE_RAM:I
+
+    if-ne p2, p0, :cond_2
+
+    .line 180
+    sput p1, Lmiuix/animation/utils/DeviceUtils;->mRamLevel:I
+
+    .line 181
+    sget p0, Lmiuix/animation/utils/DeviceUtils;->mRamLevel:I
+
+    return p0
+
+    :cond_2
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
 .method private static toInt(Ljava/lang/String;)I
     .locals 1
 
     const-string v0, "0x"
 
-    .line 378
+    .line 414
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -2031,7 +2187,7 @@
 
     const/4 v0, 0x2
 
-    .line 379
+    .line 415
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
@@ -2044,7 +2200,7 @@
 
     return p0
 
-    .line 381
+    .line 417
     :cond_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -2056,7 +2212,7 @@
 .method private static transDeviceLevel(I)I
     .locals 1
 
-    .line 549
+    .line 586
     sget v0, Lmiuix/animation/utils/DeviceUtils;->LOW:I
 
     if-ne p0, v0, :cond_0
@@ -2065,7 +2221,7 @@
 
     return p0
 
-    .line 551
+    .line 588
     :cond_0
     sget v0, Lmiuix/animation/utils/DeviceUtils;->MIDDLE:I
 
@@ -2075,7 +2231,7 @@
 
     return p0
 
-    .line 553
+    .line 590
     :cond_1
     sget v0, Lmiuix/animation/utils/DeviceUtils;->HIGH:I
 

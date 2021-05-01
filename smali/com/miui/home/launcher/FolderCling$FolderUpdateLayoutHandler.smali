@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/FolderCling;)V
     .locals 0
 
-    .line 671
+    .line 667
     iput-object p1, p0, Lcom/miui/home/launcher/FolderCling$FolderUpdateLayoutHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/FolderCling;Lcom/miui/home/launcher/FolderCling$1;)V
     .locals 0
 
-    .line 671
+    .line 667
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/FolderCling$FolderUpdateLayoutHandler;-><init>(Lcom/miui/home/launcher/FolderCling;)V
 
     return-void
@@ -47,7 +47,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 674
+    .line 670
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$FolderUpdateLayoutHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderCling;->access$400(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Launcher;

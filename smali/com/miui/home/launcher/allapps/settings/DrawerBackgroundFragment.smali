@@ -153,7 +153,7 @@
 
     move-result-object p2
 
-    const v1, 0x7f0600d0
+    const v1, 0x7f0600d3
 
     .line 136
     invoke-virtual {p1, v1}, Landroid/content/Context;->getColor(I)I
@@ -191,7 +191,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$null$0(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;)Landroid/graphics/drawable/Drawable;
+.method public static synthetic lambda$null$351(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;)Landroid/graphics/drawable/Drawable;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -217,13 +217,13 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$onViewCreated$1(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;)V
+.method public static synthetic lambda$onViewCreated$352(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;)V
     .locals 2
 
     .line 73
-    new-instance v0, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundFragment$1ukOPRq0inmYgnkyGOV1VRxtczE;
+    new-instance v0, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundFragment$zcI6CM-PV184Yu0zo3l38QoOE3E;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundFragment$1ukOPRq0inmYgnkyGOV1VRxtczE;-><init>(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundFragment$zcI6CM-PV184Yu0zo3l38QoOE3E;-><init>(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;)V
 
     invoke-static {v0}, Lio/reactivex2/Observable;->fromCallable(Ljava/util/concurrent/Callable;)Lio/reactivex2/Observable;
 
@@ -416,7 +416,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f1000e9
+    const v0, 0x7f1000ea
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->setTitle(I)V
 
@@ -427,7 +427,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const p3, 0x7f0d0042
+    const p3, 0x7f0d0047
 
     const/4 v0, 0x0
 
@@ -654,9 +654,9 @@
     .line 73
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mPreview:Landroid/widget/ImageView;
 
-    new-instance p2, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundFragment$kZk0fbh6j3u5Tp7GIk4RYKihiec;
+    new-instance p2, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundFragment$XAwKNDwC3-oAB4GmHSceMhmr-O4;
 
-    invoke-direct {p2, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundFragment$kZk0fbh6j3u5Tp7GIk4RYKihiec;-><init>(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;)V
+    invoke-direct {p2, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundFragment$XAwKNDwC3-oAB4GmHSceMhmr-O4;-><init>(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;)V
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->post(Ljava/lang/Runnable;)Z
 

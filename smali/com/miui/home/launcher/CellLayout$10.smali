@@ -1,33 +1,27 @@
-.class Lcom/miui/home/launcher/CellLayout$10;
+.class final Lcom/miui/home/launcher/CellLayout$10;
 .super Ljava/lang/Object;
 .source "CellLayout.java"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lcom/miui/home/launcher/CellLayout$DrawableWorker;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/CellLayout;->showEmptyCellMark(Z)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/launcher/CellLayout;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
-# instance fields
-.field final synthetic this$0:Lcom/miui/home/launcher/CellLayout;
-
-
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
+.method constructor <init>()V
     .locals 0
 
-    .line 3085
-    iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$10;->this$0:Lcom/miui/home/launcher/CellLayout;
-
+    .line 3095
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,72 +29,33 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 2
+.method public process(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
 
-    .line 3088
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    .line 3098
+    invoke-static {p1}, Lcom/miui/home/launcher/graphics/drawable/MamlCompat;->onResume(Landroid/graphics/drawable/Drawable;)V
 
-    move-result-object p1
+    return-void
+.end method
 
-    check-cast p1, Ljava/lang/Float;
+.method public process(Lcom/miui/home/launcher/ShortcutIcon;)V
+    .locals 1
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    .line 3102
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
 
-    move-result p1
+    move-result-object v0
 
-    .line 3089
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$10;->this$0:Lcom/miui/home/launcher/CellLayout;
+    check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$2200(Lcom/miui/home/launcher/CellLayout;)Z
-
-    move-result v0
+    .line 3103
+    instance-of v0, v0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$10;->this$0:Lcom/miui/home/launcher/CellLayout;
-
-    .line 3090
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$2300(Lcom/miui/home/launcher/CellLayout;)I
-
-    move-result v0
-
-    rsub-int v0, v0, 0xff
-
-    int-to-float v0, v0
-
-    mul-float/2addr v0, p1
-
-    goto :goto_0
+    .line 3104
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->onProgressStatusChanged()V
 
     :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$10;->this$0:Lcom/miui/home/launcher/CellLayout;
-
-    .line 3091
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$2300(Lcom/miui/home/launcher/CellLayout;)I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    sub-float/2addr v1, p1
-
-    mul-float/2addr v0, v1
-
-    :goto_0
-    float-to-int p1, v0
-
-    .line 3092
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$10;->this$0:Lcom/miui/home/launcher/CellLayout;
-
-    invoke-static {v0, p1}, Lcom/miui/home/launcher/CellLayout;->access$2400(Lcom/miui/home/launcher/CellLayout;I)V
-
-    .line 3093
-    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$10;->this$0:Lcom/miui/home/launcher/CellLayout;
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->invalidate()V
-
     return-void
 .end method

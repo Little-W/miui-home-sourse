@@ -166,7 +166,7 @@
 
     move-result-object v0
 
-    const-string v1, "Gson().fromJson(appList,\u2026ideAppBean?>?>() {}.type)"
+    const-string v1, "Gson().fromJson(appList,…ideAppBean?>?>() {}.type)"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

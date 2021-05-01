@@ -202,7 +202,7 @@
     .line 352
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings;->mRecentsShowRecommendCheckBoxPref:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
-    const v0, 0x7f100241
+    const v0, 0x7f100243
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setTitle(I)V
 
@@ -292,7 +292,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f1001ee
+    const v0, 0x7f1001ef
 
     .line 390
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/MiuiHomeSettings;->getString(I)Ljava/lang/String;
@@ -339,12 +339,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f1001b2
+    const v1, 0x7f1001b3
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f1001b8
+    const v1, 0x7f1001b9
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -394,13 +394,13 @@
     .locals 3
 
     .line 316
-    new-instance v0, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$gHPMpoBJ8eWaaDiV6t98uu7hGls;
+    new-instance v0, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$GvP8sgOkAlz7cajffRfX0ke40rw;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$gHPMpoBJ8eWaaDiV6t98uu7hGls;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$GvP8sgOkAlz7cajffRfX0ke40rw;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
 
-    new-instance v1, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$jjgZihgrBNg-6HdeMTDmean30RU;
+    new-instance v1, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$48JFn-JDnmEW-f5W1A_nN5F5Sig;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$jjgZihgrBNg-6HdeMTDmean30RU;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$48JFn-JDnmEW-f5W1A_nN5F5Sig;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
 
     const/4 v2, 0x0
 
@@ -524,7 +524,7 @@
     return v0
 .end method
 
-.method public static synthetic lambda$initPrivacyThumbnailBlurPref$6(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/Void;)Ljava/lang/String;
+.method public static synthetic lambda$initPrivacyThumbnailBlurPref$508(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/Void;)Ljava/lang/String;
     .locals 0
 
     .line 317
@@ -539,7 +539,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$initPrivacyThumbnailBlurPref$7(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/String;)V
+.method public static synthetic lambda$initPrivacyThumbnailBlurPref$509(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/String;)V
     .locals 2
 
     if-eqz p1, :cond_0
@@ -567,7 +567,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onCreatePreferences$0(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/Void;)Ljava/lang/Boolean;
+.method public static synthetic lambda$onCreatePreferences$502(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 0
 
     .line 204
@@ -582,7 +582,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$onCreatePreferences$1(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/Boolean;)V
+.method public static synthetic lambda$onCreatePreferences$503(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/Boolean;)V
     .locals 3
 
     const-string v0, "MiuiHomeSettings"
@@ -624,7 +624,7 @@
     :cond_0
     const-string p1, "com.android.settings.FullScreenDisplaySettings"
 
-    const v1, 0x7f1001b3
+    const v1, 0x7f1001b4
 
     .line 209
     invoke-virtual {p0}, Lcom/miui/home/settings/MiuiHomeSettings;->getContext()Landroid/content/Context;
@@ -643,7 +643,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onCreatePreferences$2(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/Void;)Ljava/lang/Boolean;
+.method public static synthetic lambda$onCreatePreferences$504(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 2
 
     .line 215
@@ -690,7 +690,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$onCreatePreferences$3(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/Boolean;)V
+.method public static synthetic lambda$onCreatePreferences$505(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/Boolean;)V
     .locals 0
 
     .line 219
@@ -706,7 +706,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onCreatePreferences$4(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/Void;)Ljava/lang/Boolean;
+.method public static synthetic lambda$onCreatePreferences$506(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 0
 
     .line 228
@@ -721,7 +721,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$onCreatePreferences$5(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/Boolean;)V
+.method public static synthetic lambda$onCreatePreferences$507(Lcom/miui/home/settings/MiuiHomeSettings;Ljava/lang/Boolean;)V
     .locals 0
 
     .line 230
@@ -747,7 +747,9 @@
     move-result-object p0
 
     .line 635
-    sget-boolean v0, Lmiui/os/Build;->IS_TABLET:Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
+
+    move-result v0
 
     const/4 v1, 0x1
 
@@ -907,7 +909,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1001c8
+    const v2, 0x7f1001c9
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
@@ -926,12 +928,12 @@
 
     if-eqz v2, :cond_0
 
-    const v2, 0x7f1001c7
+    const v2, 0x7f1001c8
 
     goto :goto_0
 
     :cond_0
-    const v2, 0x7f1001c6
+    const v2, 0x7f1001c7
 
     :goto_0
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
@@ -942,7 +944,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1001c4
+    const v1, 0x7f1001c5
 
     new-instance v2, Lcom/miui/home/settings/MiuiHomeSettings$14;
 
@@ -953,7 +955,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1001c5
+    const v1, 0x7f1001c6
 
     new-instance v2, Lcom/miui/home/settings/MiuiHomeSettings$13;
 
@@ -1100,7 +1102,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0600cb
+    const v2, 0x7f0600ce
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1551,7 +1553,7 @@
     .line 188
     iget-object v0, p0, Lcom/miui/home/settings/MiuiHomeSettings;->mOpenPersonalAssistant:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
-    const v1, 0x7f10025b
+    const v1, 0x7f10025e
 
     invoke-virtual {v0, v1}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setTitle(I)V
 
@@ -1597,13 +1599,13 @@
     invoke-virtual {v0, v2}, Landroidx/preference/PreferenceCategory;->setVisible(Z)V
 
     .line 203
-    new-instance v0, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$78gWGzBuDpqdcb6uItbJkJJG5hA;
+    new-instance v0, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$FYwDEi07ynDgOtTHd6Gwwgnz_uQ;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$78gWGzBuDpqdcb6uItbJkJJG5hA;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$FYwDEi07ynDgOtTHd6Gwwgnz_uQ;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
 
-    new-instance v2, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$o2daXsgdYLFKJ2bgjw0tuHyelw8;
+    new-instance v2, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$8eZwzADkEeCgQgS19Sc5pCyCNLE;
 
-    invoke-direct {v2, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$o2daXsgdYLFKJ2bgjw0tuHyelw8;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
+    invoke-direct {v2, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$8eZwzADkEeCgQgS19Sc5pCyCNLE;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
 
     invoke-static {v0, v2, v1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->execParallel(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;)V
 
@@ -1616,13 +1618,13 @@
     if-lt v0, v2, :cond_7
 
     .line 214
-    new-instance v0, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$HlErdis230QzTsZc5DK0ddSYIss;
+    new-instance v0, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$o9rBGUi9fMfLqSOpsAGD40F55Iw;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$HlErdis230QzTsZc5DK0ddSYIss;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$o9rBGUi9fMfLqSOpsAGD40F55Iw;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
 
-    new-instance v2, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$UEX_dSjRCWFH9qDlCLrDNDSUp7E;
+    new-instance v2, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$VMeqtV0kvwOTvWRsVVetgqwFMw8;
 
-    invoke-direct {v2, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$UEX_dSjRCWFH9qDlCLrDNDSUp7E;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
+    invoke-direct {v2, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$VMeqtV0kvwOTvWRsVVetgqwFMw8;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
 
     invoke-static {v0, v2, v1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->execParallel(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;)V
 
@@ -1639,13 +1641,13 @@
     if-eqz v0, :cond_8
 
     .line 227
-    new-instance v0, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$m-Fb8i4HaSyBCOclY1axDI5WCQE;
+    new-instance v0, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$IIoB4xTSmjTjloUTGdbPfoWjb0Y;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$m-Fb8i4HaSyBCOclY1axDI5WCQE;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$IIoB4xTSmjTjloUTGdbPfoWjb0Y;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
 
-    new-instance v2, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$br6-Tg8Ln_eNPAe5OZ8YHZoJlb8;
+    new-instance v2, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$SfZJz6y_yC2aq_kn6l45piGTYwg;
 
-    invoke-direct {v2, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$br6-Tg8Ln_eNPAe5OZ8YHZoJlb8;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
+    invoke-direct {v2, p0}, Lcom/miui/home/settings/-$$Lambda$MiuiHomeSettings$SfZJz6y_yC2aq_kn6l45piGTYwg;-><init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
 
     invoke-static {v0, v2, v1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->execParallel(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;)V
 
@@ -2385,7 +2387,7 @@
     .line 442
     iget-object v0, p0, Lcom/miui/home/settings/MiuiHomeSettings;->mScreenCellsConfig:Lcom/miui/home/settings/preference/ListPreference;
 
-    const v1, 0x7f10022a
+    const v1, 0x7f10022b
 
     invoke-virtual {v0, v1}, Lcom/miui/home/settings/preference/ListPreference;->setDisableTips(I)V
 

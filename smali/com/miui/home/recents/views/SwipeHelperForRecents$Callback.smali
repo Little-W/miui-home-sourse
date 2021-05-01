@@ -18,6 +18,9 @@
 .method public abstract canChildBeDismissed(Landroid/view/View;)Z
 .end method
 
+.method public abstract cancelDismissTaskViewAnimIfNeed()Z
+.end method
+
 .method public abstract checkToBeginDrag(Landroid/view/View;)Z
 .end method
 

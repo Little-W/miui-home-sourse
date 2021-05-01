@@ -162,9 +162,9 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "MIUI SDK\u53d1\u751f\u9519\u8bef"
+    const-string v0, "MIUI SDK发生错误"
 
-    const-string v1, "\u8bf7\u91cd\u65b0\u5b89\u88c5MIUI SDK\u518d\u8fd0\u884c\u672c\u7a0b\u5e8f\u3002"
+    const-string v1, "请重新安装MIUI SDK再运行本程序\u3002"
 
     goto :goto_0
 
@@ -209,9 +209,9 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "MIUI SDK\u7248\u672c\u8fc7\u4f4e"
+    const-string v0, "MIUI SDK版本过低"
 
-    const-string v1, "\u8bf7\u5148\u5347\u7ea7MIUI SDK\u518d\u8fd0\u884c\u672c\u7a0b\u5e8f\u3002"
+    const-string v1, "请先升级MIUI SDK再运行本程序\u3002"
 
     goto :goto_0
 
@@ -246,9 +246,9 @@
 
     if-eqz v0, :cond_2
 
-    const-string v0, "MIUI SDK\u7248\u672c\u8fc7\u4f4e"
+    const-string v0, "MIUI SDK版本过低"
 
-    const-string v1, "\u8bf7\u5148\u5347\u7ea7MIUI SDK\u518d\u8fd0\u884c\u672c\u7a0b\u5e8f\u3002\u662f\u5426\u73b0\u5728\u5347\u7ea7\uff1f"
+    const-string v1, "请先升级MIUI SDK再运行本程序\u3002是否现在升级\uff1f"
 
     goto :goto_1
 
@@ -288,9 +288,9 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "\u6ca1\u6709\u627e\u5230MIUI SDK"
+    const-string v0, "没有找到MIUI SDK"
 
-    const-string v1, "\u8bf7\u5148\u5b89\u88c5MIUI SDK\u518d\u8fd0\u884c\u672c\u7a0b\u5e8f\u3002"
+    const-string v1, "请先安装MIUI SDK再运行本程序\u3002"
 
     goto :goto_0
 
@@ -375,9 +375,9 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "MIUI SDK\u6b63\u5728\u66f4\u65b0"
+    const-string v0, "MIUI SDK正在更新"
 
-    const-string v1, "\u8bf7\u7a0d\u5019..."
+    const-string v1, "请稍候..."
 
     goto :goto_0
 
@@ -417,9 +417,9 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "MIUI SDK\u66f4\u65b0\u5931\u8d25"
+    const-string v0, "MIUI SDK更新失败"
 
-    const-string v1, "\u8bf7\u7a0d\u540e\u91cd\u8bd5\u3002"
+    const-string v1, "请稍后重试\u3002"
 
     goto :goto_0
 
@@ -457,9 +457,9 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "MIUI SDK\u66f4\u65b0\u5b8c\u6210"
+    const-string v0, "MIUI SDK更新完成"
 
-    const-string v1, "\u8bf7\u91cd\u65b0\u8fd0\u884c\u672c\u7a0b\u5e8f\u3002"
+    const-string v1, "请重新运行本程序\u3002"
 
     goto :goto_0
 

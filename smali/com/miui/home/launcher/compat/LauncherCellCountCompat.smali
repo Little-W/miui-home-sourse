@@ -13,7 +13,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 16
+    .line 17
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -26,7 +26,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 13
+    .line 14
     invoke-direct {p0}, Lcom/miui/home/launcher/compat/LauncherCellCount;-><init>()V
 
     return-void
@@ -35,18 +35,33 @@
 .method public static getInstance()Lcom/miui/home/launcher/compat/LauncherCellCount;
     .locals 4
 
-    .line 19
+    .line 20
     sget-object v0, Lcom/miui/home/launcher/compat/LauncherCellCountCompat;->sInstanceLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 20
+    .line 21
     :try_start_0
     sget-object v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompat;->sInstance:Lcom/miui/home/launcher/compat/LauncherCellCount;
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_5
 
-    .line 21
+    .line 22
+    sget-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->IS_SB_BUILD:Z
+
+    if-eqz v1, :cond_0
+
+    .line 23
+    new-instance v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompatCustDevice;
+
+    invoke-direct {v1}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatCustDevice;-><init>()V
+
+    sput-object v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompat;->sInstance:Lcom/miui/home/launcher/compat/LauncherCellCount;
+
+    goto :goto_0
+
+    .line 24
+    :cond_0
     sget-object v1, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
     const-string v2, "Lotus"
@@ -55,9 +70,9 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
-    .line 22
+    .line 25
     new-instance v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompatDeviceLotus;
 
     invoke-direct {v1}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatDeviceLotus;-><init>()V
@@ -66,8 +81,8 @@
 
     goto :goto_0
 
-    .line 23
-    :cond_0
+    .line 26
+    :cond_1
     sget-object v1, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
     const-string v2, "laurus"
@@ -76,9 +91,9 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    .line 24
+    .line 27
     new-instance v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompatDevicesLaurus;
 
     invoke-direct {v1}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatDevicesLaurus;-><init>()V
@@ -87,8 +102,8 @@
 
     goto :goto_0
 
-    .line 25
-    :cond_1
+    .line 28
+    :cond_2
     sget-object v1, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
     const-string v2, "grus"
@@ -97,9 +112,9 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
-    .line 26
+    .line 29
     new-instance v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompatDeviceGrus;
 
     invoke-direct {v1}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatDeviceGrus;-><init>()V
@@ -108,8 +123,8 @@
 
     goto :goto_0
 
-    .line 27
-    :cond_2
+    .line 30
+    :cond_3
     sget-object v1, Lcom/miui/home/launcher/common/PhoneDeviceUtils;->DANDELION_SERIES:Landroid/util/ArraySet;
 
     sget-object v2, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
@@ -118,9 +133,9 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
-    .line 28
+    .line 31
     new-instance v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompatDevicesDandelion;
 
     invoke-direct {v1}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatDevicesDandelion;-><init>()V
@@ -129,8 +144,8 @@
 
     goto :goto_0
 
-    .line 30
-    :cond_3
+    .line 33
+    :cond_4
     new-instance v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompatResource;
 
     invoke-direct {v1}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatResource;-><init>()V
@@ -140,7 +155,7 @@
     :goto_0
     const-string v1, "Launcher.CellCount"
 
-    .line 32
+    .line 35
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -167,8 +182,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 34
-    :cond_4
+    .line 37
+    :cond_5
     sget-object v1, Lcom/miui/home/launcher/compat/LauncherCellCountCompat;->sInstance:Lcom/miui/home/launcher/compat/LauncherCellCount;
 
     monitor-exit v0
@@ -178,7 +193,7 @@
     :catchall_0
     move-exception v1
 
-    .line 35
+    .line 38
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

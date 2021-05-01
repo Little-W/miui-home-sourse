@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$getOnClickListener$0(Lcom/miui/home/launcher/shortcuts/AppShortcutMenuItem;Landroid/view/View;)V
+.method public static synthetic lambda$getOnClickListener$407(Lcom/miui/home/launcher/shortcuts/AppShortcutMenuItem;Landroid/view/View;)V
     .locals 3
 
     const-string v0, "ShortcutMenu"
@@ -159,9 +159,9 @@
     .locals 1
 
     .line 40
-    new-instance v0, Lcom/miui/home/launcher/shortcuts/-$$Lambda$AppShortcutMenuItem$VAFbIG2lK1-oYgzuTAesDRjUmlU;
+    new-instance v0, Lcom/miui/home/launcher/shortcuts/-$$Lambda$AppShortcutMenuItem$hcLDYFiWHTPuOjP-MAooZDYXhXA;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/shortcuts/-$$Lambda$AppShortcutMenuItem$VAFbIG2lK1-oYgzuTAesDRjUmlU;-><init>(Lcom/miui/home/launcher/shortcuts/AppShortcutMenuItem;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/shortcuts/-$$Lambda$AppShortcutMenuItem$hcLDYFiWHTPuOjP-MAooZDYXhXA;-><init>(Lcom/miui/home/launcher/shortcuts/AppShortcutMenuItem;)V
 
     return-object v0
 .end method

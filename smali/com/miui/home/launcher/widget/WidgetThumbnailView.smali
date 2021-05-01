@@ -92,7 +92,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f07027c
+    const p2, 0x7f070280
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -105,7 +105,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0701dc
+    const p2, 0x7f0701e0
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -178,7 +178,7 @@
     return v3
 .end method
 
-.method static synthetic lambda$resetAdapter$0(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)V
+.method static synthetic lambda$resetAdapter$209(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)V
     .locals 0
 
     .line 184
@@ -547,9 +547,9 @@
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetThumbnailView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 184
-    new-instance v1, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetThumbnailView$tOqg4H2OTzL7b0jD9mGhvPGcytA;
+    new-instance v1, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetThumbnailView$zpnvrYNmmLZpGTlampV1bna1DFY;
 
-    invoke-direct {v1, v0}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetThumbnailView$tOqg4H2OTzL7b0jD9mGhvPGcytA;-><init>(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)V
+    invoke-direct {v1, v0}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetThumbnailView$zpnvrYNmmLZpGTlampV1bna1DFY;-><init>(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)V
 
     invoke-static {v1}, Lcom/miui/home/launcher/common/BackgroundThread;->postAtFrontOfQueue(Ljava/lang/Runnable;)V
 

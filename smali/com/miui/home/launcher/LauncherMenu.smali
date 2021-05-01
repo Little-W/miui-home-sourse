@@ -688,11 +688,7 @@
     invoke-static {v1, v0, v2}, Lcom/miui/home/launcher/common/Utilities;->changeDrawableRadius(Landroid/graphics/drawable/Drawable;FF)V
 
     .line 138
-    sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->IS_MIUI_10:Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
+    sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->IS_MIUI_10:Z
 
     if-eqz v0, :cond_0
 
@@ -704,7 +700,7 @@
     .line 140
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mMenuTransEffect:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f080159
+    const v1, 0x7f08016b
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
@@ -719,7 +715,7 @@
     .line 143
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mMenuTransEffect:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f080158
+    const v1, 0x7f08016a
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
@@ -805,7 +801,9 @@
 
     .line 225
     :goto_0
-    sget-boolean v0, Lmiui/os/Build;->IS_TABLET:Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
+
+    move-result v0
 
     if-eqz v0, :cond_2
 

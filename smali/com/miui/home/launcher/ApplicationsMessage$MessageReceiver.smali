@@ -44,7 +44,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$null$0(Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;Landroid/content/ComponentName;ZLandroid/content/Intent;I)V
+.method public static synthetic lambda$null$96(Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;Landroid/content/ComponentName;ZLandroid/content/Intent;I)V
     .locals 7
 
     if-nez p1, :cond_0
@@ -147,7 +147,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onReceive$1(Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;Landroid/content/Intent;)V
+.method public static synthetic lambda$onReceive$97(Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;Landroid/content/Intent;)V
     .locals 9
 
     const-string v0, "Launcher.ApplicationsMessage"
@@ -301,7 +301,7 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$MessageReceiver$H9BMskOLLEItr7k5-r7W1V_CCTI;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$MessageReceiver$NbKJNfdhcms6--94A39KnrzCsXM;
 
     move-object v3, v1
 
@@ -309,7 +309,7 @@
 
     move-object v7, p1
 
-    invoke-direct/range {v3 .. v8}, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$MessageReceiver$H9BMskOLLEItr7k5-r7W1V_CCTI;-><init>(Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;Landroid/content/ComponentName;ZLandroid/content/Intent;I)V
+    invoke-direct/range {v3 .. v8}, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$MessageReceiver$NbKJNfdhcms6--94A39KnrzCsXM;-><init>(Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;Landroid/content/ComponentName;ZLandroid/content/Intent;I)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->runOnUiThread(Ljava/lang/Runnable;)V
     :try_end_0
@@ -369,9 +369,9 @@
     .locals 0
 
     .line 126
-    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$MessageReceiver$i37jdjaqEyTxzQiNKZia9JTHIws;
+    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$MessageReceiver$ZRDawobAa6Lk5qOjoBShBhxoXvg;
 
-    invoke-direct {p1, p0, p2}, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$MessageReceiver$i37jdjaqEyTxzQiNKZia9JTHIws;-><init>(Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;Landroid/content/Intent;)V
+    invoke-direct {p1, p0, p2}, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$MessageReceiver$ZRDawobAa6Lk5qOjoBShBhxoXvg;-><init>(Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;Landroid/content/Intent;)V
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

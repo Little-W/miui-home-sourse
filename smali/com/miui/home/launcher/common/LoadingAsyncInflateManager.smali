@@ -25,7 +25,7 @@
 
     invoke-direct {v6}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    sget-object v7, Lcom/miui/home/launcher/common/-$$Lambda$LoadingAsyncInflateManager$jDTNZgHD7zOOu47pguOIc5Lj8z4;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$LoadingAsyncInflateManager$jDTNZgHD7zOOu47pguOIc5Lj8z4;
+    sget-object v7, Lcom/miui/home/launcher/common/-$$Lambda$LoadingAsyncInflateManager$9UpyNJywcBoHm2L6Z-_LNPmOUWw;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$LoadingAsyncInflateManager$9UpyNJywcBoHm2L6Z-_LNPmOUWw;
 
     const/4 v1, 0x4
 
@@ -54,7 +54,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$inflateViewAsync$1(Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;Ljava/util/function/Supplier;)Landroid/view/View;
+.method public static synthetic lambda$inflateViewAsync$143(Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;Ljava/util/function/Supplier;)Landroid/view/View;
     .locals 1
 
     .line 30
@@ -81,7 +81,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$inflateViewAsync$2(Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;Ljava/util/function/Consumer;Landroid/view/View;)V
+.method public static synthetic lambda$inflateViewAsync$144(Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;Ljava/util/function/Consumer;Landroid/view/View;)V
     .locals 1
 
     if-eqz p1, :cond_0
@@ -112,7 +112,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$new$0(Ljava/lang/Runnable;)Ljava/lang/Thread;
+.method static synthetic lambda$new$142(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 2
 
     .line 16
@@ -174,13 +174,13 @@
     iput v0, p0, Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;->mJobCount:I
 
     .line 29
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$LoadingAsyncInflateManager$RRPpmGewhafvkxl44yzL240f2AY;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$LoadingAsyncInflateManager$bDkGP8lPMu-qMuCXIjV2k8MvnmU;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$LoadingAsyncInflateManager$RRPpmGewhafvkxl44yzL240f2AY;-><init>(Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;Ljava/util/function/Supplier;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$LoadingAsyncInflateManager$bDkGP8lPMu-qMuCXIjV2k8MvnmU;-><init>(Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;Ljava/util/function/Supplier;)V
 
-    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$LoadingAsyncInflateManager$FgJXeGIWAz2emTGqk8us9Xy8PrI;
+    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$LoadingAsyncInflateManager$jxk6AQEzjxhidPCBol3Yeb4941M;
 
-    invoke-direct {p1, p0, p2}, Lcom/miui/home/launcher/common/-$$Lambda$LoadingAsyncInflateManager$FgJXeGIWAz2emTGqk8us9Xy8PrI;-><init>(Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;Ljava/util/function/Consumer;)V
+    invoke-direct {p1, p0, p2}, Lcom/miui/home/launcher/common/-$$Lambda$LoadingAsyncInflateManager$jxk6AQEzjxhidPCBol3Yeb4941M;-><init>(Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;Ljava/util/function/Consumer;)V
 
     iget-object p2, p0, Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;->mThreadPoolExecutor:Ljava/util/concurrent/ThreadPoolExecutor;
 

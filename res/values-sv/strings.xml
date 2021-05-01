@@ -206,6 +206,7 @@
     <string name="defalut_launcher_title">Hemskärmsapp</string>
     <string name="default_folder_title_claro">Claro</string>
     <string name="default_folder_title_game">Spel</string>
+    <string name="default_folder_title_hot">Populära appar</string>
     <string name="default_folder_title_meitu">Meitu apps</string>
     <string name="default_folder_title_microsoft">Microsoft</string>
     <string name="default_folder_title_other_apps">Andra appar</string>
@@ -347,7 +348,7 @@
     <string name="launcher_title">Hemskärm &amp; senast använda appar</string>
     <string name="like">Lägg till i favoriter</string>
     <string name="liked">Tillagd i favoriter</string>
-    <string name="loading_desktop">Vänta lite...</string>
+    <string name="loading_desktop">Vänta lite…</string>
     <string name="loading_wallpaper">Vänta lite…</string>
     <string name="local_apps">Lokala appar</string>
     <string name="local_wallpaper">Nedladdat</string>

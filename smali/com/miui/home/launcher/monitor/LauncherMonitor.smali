@@ -44,7 +44,7 @@
     return-object v0
 .end method
 
-.method static synthetic lambda$dumpHeap$0(Ljava/lang/Void;)Ljava/io/File;
+.method static synthetic lambda$dumpHeap$577(Ljava/lang/Void;)Ljava/io/File;
     .locals 0
 
     .line 86
@@ -57,7 +57,7 @@
     return-object p0
 .end method
 
-.method static synthetic lambda$dumpHeap$1(Ljava/io/File;)V
+.method static synthetic lambda$dumpHeap$578(Ljava/io/File;)V
     .locals 4
 
     const/4 v0, 0x1
@@ -123,9 +123,9 @@
     .locals 4
 
     .line 85
-    sget-object v0, Lcom/miui/home/launcher/monitor/-$$Lambda$LauncherMonitor$3tzeMglXNy5IN4qY1d-CgpMEEFM;->INSTANCE:Lcom/miui/home/launcher/monitor/-$$Lambda$LauncherMonitor$3tzeMglXNy5IN4qY1d-CgpMEEFM;
+    sget-object v0, Lcom/miui/home/launcher/monitor/-$$Lambda$LauncherMonitor$y62uwI7r0f9qDZFGiytF1QD-mjU;->INSTANCE:Lcom/miui/home/launcher/monitor/-$$Lambda$LauncherMonitor$y62uwI7r0f9qDZFGiytF1QD-mjU;
 
-    sget-object v1, Lcom/miui/home/launcher/monitor/-$$Lambda$LauncherMonitor$St8YJooFUsiAEcjS7qFbZRWgNlA;->INSTANCE:Lcom/miui/home/launcher/monitor/-$$Lambda$LauncherMonitor$St8YJooFUsiAEcjS7qFbZRWgNlA;
+    sget-object v1, Lcom/miui/home/launcher/monitor/-$$Lambda$LauncherMonitor$vK62p0xmrSDjPtX2U0dCTL6gqBI;->INSTANCE:Lcom/miui/home/launcher/monitor/-$$Lambda$LauncherMonitor$vK62p0xmrSDjPtX2U0dCTL6gqBI;
 
     sget-object v2, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->DEBUG_EXECUTOR:Ljava/util/concurrent/Executor;
 

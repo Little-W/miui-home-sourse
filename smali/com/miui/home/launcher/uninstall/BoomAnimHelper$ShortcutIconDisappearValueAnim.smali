@@ -79,9 +79,9 @@
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ShortcutIcon;->setPivotX(F)V
 
     .line 129
-    new-instance v0, Lcom/miui/home/launcher/uninstall/-$$Lambda$BoomAnimHelper$ShortcutIconDisappearValueAnim$UtT5hmakbhIGoW-JpboorZ6d3m4;
+    new-instance v0, Lcom/miui/home/launcher/uninstall/-$$Lambda$BoomAnimHelper$ShortcutIconDisappearValueAnim$FvFLkAQWOcP_xC8h9Lm7yRh88xw;
 
-    invoke-direct {v0, p1, p2}, Lcom/miui/home/launcher/uninstall/-$$Lambda$BoomAnimHelper$ShortcutIconDisappearValueAnim$UtT5hmakbhIGoW-JpboorZ6d3m4;-><init>(Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;)V
+    invoke-direct {v0, p1, p2}, Lcom/miui/home/launcher/uninstall/-$$Lambda$BoomAnimHelper$ShortcutIconDisappearValueAnim$FvFLkAQWOcP_xC8h9Lm7yRh88xw;-><init>(Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$ShortcutIconDisappearValueAnim;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -96,7 +96,7 @@
     .end array-data
 .end method
 
-.method static synthetic lambda$new$0(Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;Landroid/animation/ValueAnimator;)V
+.method static synthetic lambda$new$455(Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;Landroid/animation/ValueAnimator;)V
     .locals 2
 
     .line 130

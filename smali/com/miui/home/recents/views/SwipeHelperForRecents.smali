@@ -142,7 +142,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f07024e
+    const p2, 0x7f070252
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -192,7 +192,7 @@
 .method private adjustTransDelta(F)F
     .locals 6
 
-    .line 492
+    .line 501
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCallback:Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;
 
     iget-object v1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
@@ -203,7 +203,7 @@
 
     if-nez v0, :cond_2
 
-    .line 495
+    .line 504
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getSize(Landroid/view/View;)F
@@ -214,7 +214,7 @@
 
     mul-float/2addr v1, v0
 
-    .line 497
+    .line 506
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
     move-result v2
@@ -248,7 +248,7 @@
 
     mul-double/2addr v2, v4
 
-    .line 500
+    .line 509
     invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v2
@@ -261,13 +261,13 @@
 
     goto :goto_1
 
-    .line 502
+    .line 511
     :cond_2
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mVerticalSwipe:Lcom/miui/home/recents/views/VerticalSwipe;
 
     if-eqz v0, :cond_3
 
-    .line 503
+    .line 512
     invoke-virtual {v0}, Lcom/miui/home/recents/views/VerticalSwipe;->getCurTransY()F
 
     move-result p1
@@ -292,7 +292,7 @@
 
     move v2, p2
 
-    .line 364
+    .line 370
     invoke-direct/range {v0 .. v6}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->dismissChild(Landroid/view/View;FLjava/lang/Runnable;JZ)V
 
     return-void
@@ -301,7 +301,7 @@
 .method private dismissChild(Landroid/view/View;FLjava/lang/Runnable;JZ)V
     .locals 6
 
-    .line 384
+    .line 390
     invoke-virtual {p1}, Landroid/view/View;->getLayoutDirection()I
 
     move-result v0
@@ -326,7 +326,7 @@
 
     if-nez v4, :cond_2
 
-    .line 387
+    .line 393
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getTranslation(Landroid/view/View;)F
 
     move-result v5
@@ -352,7 +352,7 @@
     :goto_1
     if-nez v4, :cond_4
 
-    .line 390
+    .line 396
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getTranslation(Landroid/view/View;)F
 
     move-result v4
@@ -373,7 +373,7 @@
     :cond_4
     move p6, v1
 
-    .line 393
+    .line 399
     :goto_2
     invoke-static {p2}, Ljava/lang/Math;->abs(F)F
 
@@ -385,7 +385,7 @@
 
     if-gez v0, :cond_5
 
-    .line 394
+    .line 400
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getTranslation(Landroid/view/View;)F
 
     move-result p2
@@ -415,7 +415,7 @@
 
     goto :goto_4
 
-    .line 402
+    .line 408
     :cond_7
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getNewPosForDismissChild(Landroid/view/View;)F
 
@@ -423,7 +423,7 @@
 
     goto :goto_5
 
-    .line 400
+    .line 406
     :cond_8
     :goto_4
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getNewPosForDismissChild(Landroid/view/View;)F
@@ -432,7 +432,7 @@
 
     neg-float p2, p2
 
-    .line 405
+    .line 411
     :goto_5
     iget-boolean p6, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mDisableHwLayers:Z
 
@@ -442,10 +442,10 @@
 
     const/4 v0, 0x0
 
-    .line 406
+    .line 412
     invoke-virtual {p1, p6, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 409
+    .line 415
     :cond_9
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getViewTranslationAnimator(Landroid/view/View;F)Landroid/animation/ObjectAnimator;
 
@@ -457,28 +457,28 @@
 
     if-lez p6, :cond_a
 
-    .line 411
+    .line 417
     invoke-virtual {p2, p4, p5}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 413
+    .line 419
     :cond_a
-    new-instance p4, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$aN-HSdeeBCwJ7i0nJy1Hh-2FTJU;
+    new-instance p4, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$qd6eR75usAn7vSEkmqLsCpYALJY;
 
-    invoke-direct {p4, p0, p1}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$aN-HSdeeBCwJ7i0nJy1Hh-2FTJU;-><init>(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;)V
+    invoke-direct {p4, p0, p1}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$qd6eR75usAn7vSEkmqLsCpYALJY;-><init>(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;)V
 
     invoke-virtual {p2, p4}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 415
+    .line 421
     new-instance p4, Lcom/miui/home/recents/views/SwipeHelperForRecents$4;
 
     invoke-direct {p4, p0, p1, p3}, Lcom/miui/home/recents/views/SwipeHelperForRecents$4;-><init>(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;Ljava/lang/Runnable;)V
 
     invoke-virtual {p2, p4}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 437
+    .line 446
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->prepareDismissAnimation(Landroid/view/View;Ljava/lang/Object;)V
 
-    .line 438
+    .line 447
     invoke-virtual {p2}, Landroid/animation/ObjectAnimator;->start()V
 
     return-void
@@ -497,7 +497,7 @@
 
     const/4 v0, 0x3
 
-    .line 587
+    .line 596
     new-array v0, v0, [Lcom/miui/home/recents/util/InOutRangeDetector;
 
     iget-object v1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mTaskDismissDetector:Lcom/miui/home/recents/util/InOutRangeDetector;
@@ -518,7 +518,7 @@
 
     aput-object v1, v0, v2
 
-    .line 588
+    .line 597
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -527,7 +527,7 @@
 
     move-result-object v0
 
-    .line 589
+    .line 598
     invoke-interface {v0, p1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
     return-void
@@ -536,14 +536,14 @@
 .method private getFalsingThreshold()I
     .locals 2
 
-    .line 593
+    .line 602
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCallback:Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;
 
     invoke-interface {v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;->getFalsingThresholdFactor()F
 
     move-result v0
 
-    .line 594
+    .line 603
     iget v1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mFalsingThreshold:I
 
     int-to-float v1, v1
@@ -558,7 +558,7 @@
 .method private getMaxVelocity()F
     .locals 2
 
-    .line 598
+    .line 607
     iget v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->MAX_DISMISS_VELOCITY:I
 
     int-to-float v0, v0
@@ -573,12 +573,12 @@
 .method private getNewPosForDismissChild(Landroid/view/View;)F
     .locals 1
 
-    .line 368
+    .line 374
     iget v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mSwipeDirection:I
 
     if-nez v0, :cond_0
 
-    .line 369
+    .line 375
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getSize(Landroid/view/View;)F
 
     move-result p1
@@ -640,7 +640,7 @@
 .method private getSwipeFarEnoughDistance()F
     .locals 2
 
-    .line 622
+    .line 631
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     invoke-direct {p0, v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getViewSize(Landroid/view/View;)F
@@ -865,7 +865,7 @@
 .method private isDismissGesture(Landroid/view/MotionEvent;)Z
     .locals 4
 
-    .line 626
+    .line 635
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCallback:Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;
 
     invoke-interface {v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;->isAntiFalsingNeeded()Z
@@ -892,7 +892,7 @@
     :goto_0
     if-nez v0, :cond_3
 
-    .line 628
+    .line 637
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getPos(Landroid/view/MotionEvent;)F
 
     move-result v0
@@ -907,7 +907,7 @@
 
     if-nez v0, :cond_3
 
-    .line 629
+    .line 638
     invoke-virtual {p0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->swipedFastEnough()Z
 
     move-result v0
@@ -933,7 +933,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 630
+    .line 639
     :cond_2
     :goto_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
@@ -946,7 +946,7 @@
 
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
-    .line 631
+    .line 640
     invoke-interface {p1, v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;->canChildBeDismissed(Landroid/view/View;)Z
 
     move-result p1
@@ -962,7 +962,7 @@
 .method private isLockOrUnlockTaskViewSwipe(F)Z
     .locals 2
 
-    .line 635
+    .line 644
     iget v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mSwipeDirection:I
 
     const/4 v1, 0x1
@@ -987,7 +987,7 @@
 .method private isScaleSmallEnoughForDismiss()Z
     .locals 2
 
-    .line 618
+    .line 627
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getScaleX()F
@@ -1014,7 +1014,7 @@
 .method private isSwipedFarEnoughForDismiss()Z
     .locals 2
 
-    .line 614
+    .line 623
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getTranslation(Landroid/view/View;)F
@@ -1044,10 +1044,10 @@
     return v0
 .end method
 
-.method public static synthetic lambda$dismissChild$0(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;Landroid/animation/ValueAnimator;)V
+.method public static synthetic lambda$dismissChild$306(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;Landroid/animation/ValueAnimator;)V
     .locals 0
 
-    .line 414
+    .line 420
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result p2
@@ -1065,37 +1065,37 @@
     return-void
 .end method
 
-.method static synthetic lambda$onTouchEvent$2(FLcom/miui/home/recents/util/InOutRangeDetector;)V
+.method static synthetic lambda$onTouchEvent$308(FLcom/miui/home/recents/util/InOutRangeDetector;)V
     .locals 0
 
     if-eqz p1, :cond_0
 
-    .line 550
+    .line 559
     invoke-virtual {p1, p0}, Lcom/miui/home/recents/util/InOutRangeDetector;->onChange(F)V
 
     :cond_0
     return-void
 .end method
 
-.method public static synthetic lambda$snapChild$1(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;F)V
+.method public static synthetic lambda$snapChild$307(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;F)V
     .locals 1
 
     const/4 v0, 0x0
 
-    .line 456
+    .line 465
     iput-boolean v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mSnappingChild:Z
 
-    .line 457
+    .line 466
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->updateSwipeProgressFromOffset(Landroid/view/View;)V
 
-    .line 458
+    .line 467
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCallback:Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;
 
     invoke-interface {v0, p1, p2}, Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;->onChildSnappedBack(Landroid/view/View;F)V
 
     const/4 p1, 0x0
 
-    .line 459
+    .line 468
     iput-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrentAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     return-void
@@ -1171,14 +1171,14 @@
 .method private snapChild(Landroid/view/View;F)V
     .locals 5
 
-    .line 450
+    .line 459
     instance-of v0, p1, Lcom/miui/home/recents/views/TaskView;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 453
+    .line 462
     :cond_0
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
@@ -1202,9 +1202,9 @@
     const/4 v2, 0x0
 
     :goto_0
-    new-instance v4, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$hijYoRScuED9YDP7G4o-MNAzUyI;
+    new-instance v4, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$qQGHBDl-qMWwSf6_roIk9rwOgaE;
 
-    invoke-direct {v4, p0, p1, p2}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$hijYoRScuED9YDP7G4o-MNAzUyI;-><init>(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;F)V
+    invoke-direct {v4, p0, p1, p2}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$qQGHBDl-qMWwSf6_roIk9rwOgaE;-><init>(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;F)V
 
     invoke-virtual {v0, v1, v2, v4}, Lcom/miui/home/recents/util/SpringAnimationUtils;->startTaskViewSnapAnim(Lcom/miui/home/recents/views/TaskView;ZLjava/lang/Runnable;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
@@ -1214,14 +1214,14 @@
 
     return-void
 
-    .line 464
+    .line 473
     :cond_2
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->prepareSnapBackAnimation(Landroid/view/View;Ljava/lang/Object;)V
 
-    .line 465
+    .line 474
     iput-boolean v3, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mSnappingChild:Z
 
-    .line 466
+    .line 475
     iput-object p2, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrentAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     return-void
@@ -1320,7 +1320,7 @@
 .method protected getEscapeVelocity()F
     .locals 2
 
-    .line 602
+    .line 611
     invoke-virtual {p0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getUnscaledEscapeVelocity()F
 
     move-result v0
@@ -1386,7 +1386,7 @@
 .method protected getUnscaledEscapeVelocity()F
     .locals 1
 
-    .line 606
+    .line 615
     iget v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->SWIPE_ESCAPE_VELOCITY:F
 
     return v0
@@ -1450,38 +1450,38 @@
 
     goto/16 :goto_0
 
-    .line 326
+    .line 332
     :pswitch_0
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
-    .line 327
+    .line 333
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 328
+    .line 334
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getPos(Landroid/view/MotionEvent;)F
 
     move-result v0
 
-    .line 329
+    .line 335
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getPerpendicularPos(Landroid/view/MotionEvent;)F
 
     move-result v2
 
-    .line 330
+    .line 336
     iget v3, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mInitialTouchPos:F
 
     sub-float/2addr v0, v3
 
-    .line 331
+    .line 337
     iget v3, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mPerpendicularInitialTouchPos:F
 
     sub-float/2addr v2, v3
 
-    .line 332
+    .line 338
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result v3
@@ -1490,9 +1490,9 @@
 
     cmpl-float v3, v3, v4
 
-    if-lez v3, :cond_4
+    if-lez v3, :cond_5
 
-    .line 333
+    .line 339
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
@@ -1503,9 +1503,9 @@
 
     cmpl-float v0, v0, v2
 
-    if-lez v0, :cond_4
+    if-lez v0, :cond_5
 
-    .line 334
+    .line 340
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCallback:Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;
 
     iget-object v2, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
@@ -1514,26 +1514,26 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
-    .line 335
+    .line 341
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCallback:Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;
 
     iget-object v2, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     invoke-interface {v0, v2}, Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;->onBeginDrag(Landroid/view/View;)V
 
-    .line 336
+    .line 342
     iput-boolean v1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mDragging:Z
 
-    .line 337
+    .line 343
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getPos(Landroid/view/MotionEvent;)F
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mInitialTouchPos:F
 
-    .line 338
+    .line 344
     iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getTranslation(Landroid/view/View;)F
@@ -1544,31 +1544,31 @@
 
     goto/16 :goto_0
 
-    .line 346
+    .line 352
     :pswitch_1
     iget-boolean p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mDragging:Z
 
-    .line 347
+    .line 353
     iput-boolean v2, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mDragging:Z
 
     const/4 v0, 0x0
 
-    .line 348
+    .line 354
     iput-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
-    .line 349
+    .line 355
     iput-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mVerticalSwipe:Lcom/miui/home/recents/views/VerticalSwipe;
 
-    .line 350
+    .line 356
     iput-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mTaskViewLockDetector:Lcom/miui/home/recents/util/InOutRangeDetector;
 
-    .line 351
+    .line 357
     iput-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mTaskViewHeaderVisibleDetector:Lcom/miui/home/recents/util/InOutRangeDetector;
 
-    .line 352
+    .line 358
     iput-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mTaskDismissDetector:Lcom/miui/home/recents/util/InOutRangeDetector;
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_5
 
     return v1
 
@@ -1606,34 +1606,58 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
-    .line 252
-    iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
+    .line 251
+    iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCallback:Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;
 
-    if-eqz v0, :cond_4
+    invoke-interface {v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;->cancelDismissTaskViewAnimIfNeed()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     .line 253
+    iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
+
+    if-nez v0, :cond_1
+
+    .line 255
+    iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCallback:Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;
+
+    invoke-interface {v0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;->getChildAtPosition(Landroid/view/MotionEvent;)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
+
+    .line 258
+    :cond_1
+    iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
+
+    if-eqz v0, :cond_5
+
+    .line 259
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->onDownUpdate(Landroid/view/View;)V
 
-    .line 254
+    .line 260
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 255
+    .line 261
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getPos(Landroid/view/MotionEvent;)F
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mInitialTouchPos:F
 
-    .line 256
+    .line 262
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getPerpendicularPos(Landroid/view/MotionEvent;)F
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mPerpendicularInitialTouchPos:F
 
-    .line 257
+    .line 263
     iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getTranslation(Landroid/view/View;)F
@@ -1642,21 +1666,21 @@
 
     iput p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mTranslation:F
 
-    .line 258
+    .line 264
     iget p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mSwipeDirection:I
 
-    if-ne p1, v1, :cond_3
+    if-ne p1, v1, :cond_4
 
-    .line 259
+    .line 265
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->canLockTaskView()Z
 
     move-result p1
 
     const v0, -0x800001
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
-    .line 260
+    .line 266
     new-instance p1, Lcom/miui/home/recents/views/SwipeHelperForRecents$1;
 
     iget-object v1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
@@ -1673,18 +1697,18 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mTaskViewLockDetector:Lcom/miui/home/recents/util/InOutRangeDetector;
 
-    .line 278
-    :cond_1
+    .line 284
+    :cond_2
     iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     instance-of v1, p1, Lcom/miui/home/recents/views/TaskView;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
-    .line 279
+    .line 285
     check-cast p1, Lcom/miui/home/recents/views/TaskView;
 
-    .line 280
+    .line 286
     new-instance v1, Lcom/miui/home/recents/views/VerticalSwipe;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getWidth()I
@@ -1707,8 +1731,8 @@
 
     iput-object v1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mVerticalSwipe:Lcom/miui/home/recents/views/VerticalSwipe;
 
-    .line 282
-    :cond_2
+    .line 288
+    :cond_3
     new-instance p1, Lcom/miui/home/recents/views/SwipeHelperForRecents$2;
 
     const/4 v1, 0x0
@@ -1719,8 +1743,8 @@
 
     goto :goto_0
 
-    .line 315
-    :cond_3
+    .line 321
+    :cond_4
     new-instance p1, Lcom/miui/home/recents/views/SwipeHelperForRecents$3;
 
     invoke-direct {p0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getSwipeFarEnoughDistance()F
@@ -1737,8 +1761,8 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mTaskDismissDetector:Lcom/miui/home/recents/util/InOutRangeDetector;
 
-    .line 356
-    :cond_4
+    .line 362
+    :cond_5
     :goto_0
     iget-boolean p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mDragging:Z
 
@@ -1762,7 +1786,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 5
 
-    .line 509
+    .line 518
     iget-boolean v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mDragging:Z
 
     const/4 v1, 0x0
@@ -1771,7 +1795,7 @@
 
     if-nez v0, :cond_1
 
-    .line 510
+    .line 519
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCallback:Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;
 
     invoke-interface {v0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;->getChildAtPosition(Landroid/view/MotionEvent;)Landroid/view/View;
@@ -1780,7 +1804,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 514
+    .line 523
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     return v2
@@ -1788,13 +1812,13 @@
     :cond_0
     return v1
 
-    .line 524
+    .line 533
     :cond_1
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 525
+    .line 534
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -1803,13 +1827,13 @@
 
     goto/16 :goto_1
 
-    .line 529
+    .line 538
     :pswitch_0
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     if-eqz v0, :cond_8
 
-    .line 530
+    .line 539
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getPos(Landroid/view/MotionEvent;)F
 
     move-result p1
@@ -1818,12 +1842,12 @@
 
     sub-float/2addr p1, v0
 
-    .line 531
+    .line 540
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
 
-    .line 532
+    .line 541
     invoke-direct {p0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getFalsingThreshold()I
 
     move-result v1
@@ -1834,29 +1858,29 @@
 
     if-ltz v0, :cond_2
 
-    .line 533
+    .line 542
     iput-boolean v2, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mTouchAboveFalsingThreshold:Z
 
-    .line 535
+    .line 544
     :cond_2
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mVerticalSwipe:Lcom/miui/home/recents/views/VerticalSwipe;
 
     if-eqz v0, :cond_3
 
-    .line 536
+    .line 545
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/views/VerticalSwipe;->calculate(F)V
 
-    .line 537
+    .line 546
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     instance-of v1, v0, Lcom/miui/home/recents/views/TaskView;
 
     if-eqz v1, :cond_3
 
-    .line 538
+    .line 547
     check-cast v0, Lcom/miui/home/recents/views/TaskView;
 
-    .line 539
+    .line 548
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
     move-result-object v1
@@ -1867,7 +1891,7 @@
 
     invoke-virtual {v1, v3}, Lcom/miui/home/recents/util/SpringAnimationUtils;->cancelAllSpringAnimation(Lcom/miui/home/recents/util/SpringAnimationImpl;)V
 
-    .line 540
+    .line 549
     iget-object v1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mVerticalSwipe:Lcom/miui/home/recents/views/VerticalSwipe;
 
     invoke-virtual {v1}, Lcom/miui/home/recents/views/VerticalSwipe;->getCurAlpha()F
@@ -1876,7 +1900,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/TaskView;->setAlpha(F)V
 
-    .line 541
+    .line 550
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskView;->getWidth()I
 
     move-result v1
@@ -1887,7 +1911,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/TaskView;->setPivotX(F)V
 
-    .line 542
+    .line 551
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskView;->getHeight()I
 
     move-result v1
@@ -1898,7 +1922,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/TaskView;->setPivotY(F)V
 
-    .line 543
+    .line 552
     iget-object v1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mVerticalSwipe:Lcom/miui/home/recents/views/VerticalSwipe;
 
     invoke-virtual {v1}, Lcom/miui/home/recents/views/VerticalSwipe;->getCurScale()F
@@ -1907,7 +1931,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/TaskView;->setScaleX(F)V
 
-    .line 544
+    .line 553
     iget-object v1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mVerticalSwipe:Lcom/miui/home/recents/views/VerticalSwipe;
 
     invoke-virtual {v1}, Lcom/miui/home/recents/views/VerticalSwipe;->getCurScale()F
@@ -1916,20 +1940,20 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/TaskView;->setScaleY(F)V
 
-    .line 547
+    .line 556
     :cond_3
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->adjustTransDelta(F)F
 
     move-result p1
 
-    .line 548
-    new-instance v0, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$Ozj3kGFpdvcXcVMpxeTqb44_weg;
+    .line 557
+    new-instance v0, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$YkEEEPWxLuSpLh973nh10OLv3HU;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$Ozj3kGFpdvcXcVMpxeTqb44_weg;-><init>(F)V
+    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$YkEEEPWxLuSpLh973nh10OLv3HU;-><init>(F)V
 
     invoke-direct {p0, v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->forAllDetectors(Ljava/util/function/Consumer;)V
 
-    .line 553
+    .line 562
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     iget v1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mTranslation:F
@@ -1938,7 +1962,7 @@
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->setTranslation(Landroid/view/View;F)V
 
-    .line 554
+    .line 563
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     iget v1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mTranslation:F
@@ -1949,7 +1973,7 @@
 
     goto :goto_1
 
-    .line 559
+    .line 568
     :pswitch_1
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
@@ -1957,7 +1981,7 @@
 
     goto :goto_1
 
-    .line 562
+    .line 571
     :cond_4
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mVelocityTracker:Landroid/view/VelocityTracker;
 
@@ -1969,21 +1993,21 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    .line 563
+    .line 572
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-direct {p0, v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getVelocity(Landroid/view/VelocityTracker;)F
 
     move-result v0
 
-    .line 565
+    .line 574
     iget-object v3, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCallback:Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;
 
     iget-object v4, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     invoke-interface {v3, v4}, Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;->onDragEnd(Landroid/view/View;)V
 
-    .line 566
+    .line 575
     iget-object v3, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     invoke-virtual {p0, v3}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getTranslation(Landroid/view/View;)F
@@ -1996,33 +2020,33 @@
 
     if-nez v3, :cond_7
 
-    .line 567
+    .line 576
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->isDismissGesture(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
     if-eqz p1, :cond_5
 
-    .line 569
+    .line 578
     iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     invoke-direct {p0, p1, v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->dismissChild(Landroid/view/View;F)V
 
-    .line 570
+    .line 579
     invoke-direct {p0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->isSwipedFarEnoughForDismiss()Z
 
     move-result p1
 
     if-nez p1, :cond_6
 
-    .line 571
+    .line 580
     iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     invoke-virtual {p1, v2}, Landroid/view/View;->performHapticFeedback(I)Z
 
     goto :goto_0
 
-    .line 575
+    .line 584
     :cond_5
     iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCallback:Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;
 
@@ -2030,7 +2054,7 @@
 
     invoke-interface {p1, v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;->onDragCancelled(Landroid/view/View;)V
 
-    .line 576
+    .line 585
     iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     const/4 v0, 0x0
@@ -2041,10 +2065,10 @@
     :goto_0
     const/4 p1, 0x0
 
-    .line 578
+    .line 587
     iput-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
-    .line 580
+    .line 589
     :cond_7
     iput-boolean v1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mDragging:Z
 
@@ -2094,21 +2118,21 @@
 .method protected swipedFastEnough()Z
     .locals 5
 
-    .line 639
+    .line 648
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-direct {p0, v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getVelocity(Landroid/view/VelocityTracker;)F
 
     move-result v0
 
-    .line 640
+    .line 649
     iget-object v1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mCurrView:Landroid/view/View;
 
     invoke-virtual {p0, v1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->getTranslation(Landroid/view/View;)F
 
     move-result v1
 
-    .line 641
+    .line 650
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result v2

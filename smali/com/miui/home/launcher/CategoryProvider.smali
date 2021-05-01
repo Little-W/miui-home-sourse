@@ -120,7 +120,7 @@
     return-void
 
     :cond_0
-    const v0, 0x19274132
+    const v0, 0x192741b2
 
     .line 137
     invoke-static {}, Lcom/miui/home/launcher/CategorySettingHelper;->getInstance()Lcom/miui/home/launcher/CategorySettingHelper;

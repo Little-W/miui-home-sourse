@@ -1,56 +1,45 @@
-.class Lcom/miui/home/launcher/CellLayout$11;
-.super Landroid/animation/AnimatorListenerAdapter;
+.class final Lcom/miui/home/launcher/CellLayout$11;
+.super Ljava/lang/Object;
 .source "CellLayout.java"
+
+# interfaces
+.implements Lcom/miui/home/launcher/CellLayout$DrawableWorker;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/CellLayout;->showEmptyCellMark(Z)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/launcher/CellLayout;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
-# instance fields
-.field final synthetic this$0:Lcom/miui/home/launcher/CellLayout;
-
-
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
+.method constructor <init>()V
     .locals 0
 
-    .line 3096
-    iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$11;->this$0:Lcom/miui/home/launcher/CellLayout;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    .line 3109
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+.method public process(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
 
-    .line 3099
-    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$11;->this$0:Lcom/miui/home/launcher/CellLayout;
+    return-void
+.end method
 
-    invoke-static {p1}, Lcom/miui/home/launcher/CellLayout;->access$2200(Lcom/miui/home/launcher/CellLayout;)Z
+.method public process(Lcom/miui/home/launcher/ShortcutIcon;)V
+    .locals 0
 
-    move-result p1
+    .line 3115
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->updateMamlDownloadVisible()V
 
-    if-nez p1, :cond_0
-
-    .line 3100
-    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$11;->this$0:Lcom/miui/home/launcher/CellLayout;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/CellLayout;->setWillNotDraw(Z)V
-
-    :cond_0
     return-void
 .end method

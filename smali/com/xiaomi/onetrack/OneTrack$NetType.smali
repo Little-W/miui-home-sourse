@@ -49,7 +49,7 @@
 .method static constructor <clinit>()V
     .locals 11
 
-    .line 64
+    .line 65
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$NetType;
 
     const-string v1, "NOT_CONNECTED"
@@ -62,7 +62,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/OneTrack$NetType;->NOT_CONNECTED:Lcom/xiaomi/onetrack/OneTrack$NetType;
 
-    .line 65
+    .line 66
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$NetType;
 
     const-string v1, "MOBILE_2G"
@@ -75,7 +75,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/OneTrack$NetType;->MOBILE_2G:Lcom/xiaomi/onetrack/OneTrack$NetType;
 
-    .line 66
+    .line 67
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$NetType;
 
     const-string v1, "MOBILE_3G"
@@ -88,7 +88,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/OneTrack$NetType;->MOBILE_3G:Lcom/xiaomi/onetrack/OneTrack$NetType;
 
-    .line 67
+    .line 68
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$NetType;
 
     const-string v1, "MOBILE_4G"
@@ -101,7 +101,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/OneTrack$NetType;->MOBILE_4G:Lcom/xiaomi/onetrack/OneTrack$NetType;
 
-    .line 68
+    .line 69
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$NetType;
 
     const-string v1, "MOBILE_5G"
@@ -114,7 +114,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/OneTrack$NetType;->MOBILE_5G:Lcom/xiaomi/onetrack/OneTrack$NetType;
 
-    .line 69
+    .line 70
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$NetType;
 
     const-string v1, "WIFI"
@@ -127,7 +127,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/OneTrack$NetType;->WIFI:Lcom/xiaomi/onetrack/OneTrack$NetType;
 
-    .line 70
+    .line 71
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$NetType;
 
     const-string v1, "ETHERNET"
@@ -140,7 +140,7 @@
 
     sput-object v0, Lcom/xiaomi/onetrack/OneTrack$NetType;->ETHERNET:Lcom/xiaomi/onetrack/OneTrack$NetType;
 
-    .line 71
+    .line 72
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack$NetType;
 
     const-string v1, "UNKNOWN"
@@ -155,7 +155,7 @@
 
     const/16 v0, 0x8
 
-    .line 63
+    .line 64
     new-array v0, v0, [Lcom/xiaomi/onetrack/OneTrack$NetType;
 
     sget-object v1, Lcom/xiaomi/onetrack/OneTrack$NetType;->NOT_CONNECTED:Lcom/xiaomi/onetrack/OneTrack$NetType;
@@ -205,10 +205,10 @@
         }
     .end annotation
 
-    .line 75
+    .line 76
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 76
+    .line 77
     iput-object p3, p0, Lcom/xiaomi/onetrack/OneTrack$NetType;->a:Ljava/lang/String;
 
     return-void
@@ -217,7 +217,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/onetrack/OneTrack$NetType;
     .locals 1
 
-    .line 63
+    .line 64
     const-class v0, Lcom/xiaomi/onetrack/OneTrack$NetType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -232,7 +232,7 @@
 .method public static values()[Lcom/xiaomi/onetrack/OneTrack$NetType;
     .locals 1
 
-    .line 63
+    .line 64
     sget-object v0, Lcom/xiaomi/onetrack/OneTrack$NetType;->b:[Lcom/xiaomi/onetrack/OneTrack$NetType;
 
     invoke-virtual {v0}, [Lcom/xiaomi/onetrack/OneTrack$NetType;->clone()Ljava/lang/Object;
@@ -249,7 +249,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 80
+    .line 81
     iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack$NetType;->a:Ljava/lang/String;
 
     return-object v0

@@ -384,7 +384,7 @@
 
     move-result-object v2
 
-    const-string v3, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
+    const-string v3, "(this as java.lang.Strin…ing(startIndex, endIndex)"
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -413,7 +413,7 @@
 
     move-result-object p1
 
-    const-string v2, "StringBuilder(capacity).\u2026builderAction).toString()"
+    const-string v2, "StringBuilder(capacity).…builderAction).toString()"
 
     invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

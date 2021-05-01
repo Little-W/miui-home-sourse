@@ -187,7 +187,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$onReceive$0(Lcom/miui/home/launcher/install/InstallApkReceiver;Landroid/content/Context;Landroid/content/Intent;)V
+.method public static synthetic lambda$onReceive$454(Lcom/miui/home/launcher/install/InstallApkReceiver;Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
     const-string v0, "notification"
@@ -423,9 +423,9 @@
     .locals 1
 
     .line 53
-    new-instance v0, Lcom/miui/home/launcher/install/-$$Lambda$InstallApkReceiver$_fY0XISzmFZyW8cj-VMa0KU8nTY;
+    new-instance v0, Lcom/miui/home/launcher/install/-$$Lambda$InstallApkReceiver$d7rHgYgzyAfHMiengRxGxdM8vAg;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/install/-$$Lambda$InstallApkReceiver$_fY0XISzmFZyW8cj-VMa0KU8nTY;-><init>(Lcom/miui/home/launcher/install/InstallApkReceiver;Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/install/-$$Lambda$InstallApkReceiver$d7rHgYgzyAfHMiengRxGxdM8vAg;-><init>(Lcom/miui/home/launcher/install/InstallApkReceiver;Landroid/content/Context;Landroid/content/Intent;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -619,7 +619,7 @@
 
     move-result-object p1
 
-    const v2, 0x7f080146
+    const v2, 0x7f080157
 
     .line 103
     invoke-virtual {p1, v2}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;

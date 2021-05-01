@@ -85,7 +85,7 @@
 
     move-result-object p0
 
-    const-string v0, "java.util.Collections.si\u2026(pair.first, pair.second)"
+    const-string v0, "java.util.Collections.si…(pair.first, pair.second)"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -143,7 +143,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "with(entries.iterator().\u2026ingletonMap(key, value) }"
+    const-string v0, "with(entries.iterator().…ingletonMap(key, value) }"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

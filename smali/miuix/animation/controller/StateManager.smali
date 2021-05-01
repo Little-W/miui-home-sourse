@@ -135,14 +135,14 @@
 .method private varargs getStateByArgs(Ljava/lang/Object;[Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
     .locals 2
 
-    .line 200
+    .line 216
     array-length v0, p2
 
     if-lez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 201
+    .line 217
     aget-object v1, p2, v0
 
     invoke-direct {p0, v1, v0}, Lmiuix/animation/controller/StateManager;->getState(Ljava/lang/Object;Z)Lmiuix/animation/controller/AnimState;
@@ -151,7 +151,7 @@
 
     if-nez v0, :cond_1
 
-    .line 203
+    .line 219
     invoke-direct {p0, p2}, Lmiuix/animation/controller/StateManager;->getStateByName([Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
@@ -165,7 +165,7 @@
     :goto_0
     if-nez v0, :cond_2
 
-    .line 207
+    .line 223
     invoke-virtual {p0, p1}, Lmiuix/animation/controller/StateManager;->getState(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
@@ -179,10 +179,10 @@
 
     const/4 v0, 0x0
 
-    .line 213
+    .line 229
     aget-object v0, p1, v0
 
-    .line 214
+    .line 230
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -198,7 +198,7 @@
     :cond_0
     move-object p1, v2
 
-    .line 215
+    .line 231
     :goto_0
     instance-of v1, v0, Ljava/lang/String;
 
@@ -208,7 +208,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 216
+    .line 232
     invoke-direct {p0, v0, v3}, Lmiuix/animation/controller/StateManager;->getState(Ljava/lang/Object;Z)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -222,7 +222,7 @@
 .method private varargs setAnimState(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;[Ljava/lang/Object;)V
     .locals 1
 
-    .line 223
+    .line 239
     iget-object v0, p0, Lmiuix/animation/controller/StateManager;->mStateHelper:Lmiuix/animation/controller/StateHelper;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lmiuix/animation/controller/StateHelper;->parse(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;[Ljava/lang/Object;)V
@@ -235,7 +235,7 @@
 .method public addListener(Lmiuix/animation/listener/TransitionListener;)V
     .locals 3
 
-    .line 80
+    .line 91
     invoke-virtual {p0}, Lmiuix/animation/controller/StateManager;->getCurrentState()Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
@@ -275,12 +275,12 @@
 .method public addTempConfig(Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)V
     .locals 1
 
-    .line 187
+    .line 203
     iget-object v0, p0, Lmiuix/animation/controller/StateManager;->mToState:Lmiuix/animation/controller/AnimState;
 
     if-eq p1, v0, :cond_0
 
-    .line 188
+    .line 204
     invoke-virtual {v0}, Lmiuix/animation/controller/AnimState;->getConfig()Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
@@ -298,7 +298,7 @@
 .method public clearTempState(Lmiuix/animation/controller/AnimState;)V
     .locals 1
 
-    .line 193
+    .line 209
     iget-object v0, p0, Lmiuix/animation/controller/StateManager;->mToState:Lmiuix/animation/controller/AnimState;
 
     if-eq p1, v0, :cond_0
@@ -307,7 +307,7 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 194
+    .line 210
     :cond_0
     invoke-virtual {p1}, Lmiuix/animation/controller/AnimState;->clear()V
 
@@ -318,17 +318,17 @@
 .method public getCurrentState()Lmiuix/animation/controller/AnimState;
     .locals 1
 
-    .line 180
+    .line 196
     iget-object v0, p0, Lmiuix/animation/controller/StateManager;->mCurTag:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
-    .line 181
+    .line 197
     iget-object v0, p0, Lmiuix/animation/controller/StateManager;->mToState:Lmiuix/animation/controller/AnimState;
 
     iput-object v0, p0, Lmiuix/animation/controller/StateManager;->mCurTag:Ljava/lang/Object;
 
-    .line 183
+    .line 199
     :cond_0
     iget-object v0, p0, Lmiuix/animation/controller/StateManager;->mCurTag:Ljava/lang/Object;
 
@@ -399,11 +399,45 @@
     return p1
 .end method
 
-.method public setup(Ljava/lang/Object;)V
-    .locals 0
+.method public setup(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
+    .locals 1
 
-    .line 76
-    iput-object p1, p0, Lmiuix/animation/controller/StateManager;->mCurTag:Ljava/lang/Object;
+    .line 77
+    instance-of v0, p1, Lmiuix/animation/controller/AnimState;
 
-    return-void
+    if-eqz v0, :cond_0
+
+    .line 78
+    check-cast p1, Lmiuix/animation/controller/AnimState;
+
+    move-object v0, p1
+
+    goto :goto_0
+
+    .line 80
+    :cond_0
+    iget-object v0, p0, Lmiuix/animation/controller/StateManager;->mStateMap:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmiuix/animation/controller/AnimState;
+
+    if-nez v0, :cond_1
+
+    .line 82
+    new-instance v0, Lmiuix/animation/controller/AnimState;
+
+    invoke-direct {v0, p1}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
+
+    .line 83
+    invoke-virtual {p0, v0}, Lmiuix/animation/controller/StateManager;->addState(Lmiuix/animation/controller/AnimState;)V
+
+    .line 86
+    :cond_1
+    :goto_0
+    iput-object v0, p0, Lmiuix/animation/controller/StateManager;->mCurTag:Ljava/lang/Object;
+
+    return-object v0
 .end method

@@ -29,7 +29,7 @@
     .line 24
     new-instance v0, Lcom/miui/home/recents/util/MainThreadInitializedObject;
 
-    sget-object v1, Lcom/miui/home/recents/-$$Lambda$SystemUiProxyWrapper$9hQJDBFbbF2O39p42OCGvdsSVlo;->INSTANCE:Lcom/miui/home/recents/-$$Lambda$SystemUiProxyWrapper$9hQJDBFbbF2O39p42OCGvdsSVlo;
+    sget-object v1, Lcom/miui/home/recents/-$$Lambda$SystemUiProxyWrapper$gcX4WLZ9Hlee2V9FTl2FVmiaEWc;->INSTANCE:Lcom/miui/home/recents/-$$Lambda$SystemUiProxyWrapper$gcX4WLZ9Hlee2V9FTl2FVmiaEWc;
 
     invoke-direct {v0, v1}, Lcom/miui/home/recents/util/MainThreadInitializedObject;-><init>(Lcom/miui/home/recents/util/MainThreadInitializedObject$ObjectProvider;)V
 
@@ -45,31 +45,31 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 20
-    new-instance v0, Lcom/miui/home/recents/-$$Lambda$SystemUiProxyWrapper$JTaWkTkRT6U18upfHCVBROZfPLc;
+    new-instance v0, Lcom/miui/home/recents/-$$Lambda$SystemUiProxyWrapper$a34-MuaSVCrOVm47H2JWFOgeEj4;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/recents/-$$Lambda$SystemUiProxyWrapper$JTaWkTkRT6U18upfHCVBROZfPLc;-><init>(Lcom/miui/home/recents/SystemUiProxyWrapper;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/-$$Lambda$SystemUiProxyWrapper$a34-MuaSVCrOVm47H2JWFOgeEj4;-><init>(Lcom/miui/home/recents/SystemUiProxyWrapper;)V
 
     iput-object v0, p0, Lcom/miui/home/recents/SystemUiProxyWrapper;->mSystemUiProxyDeathRecipient:Landroid/os/IBinder$DeathRecipient;
 
     return-void
 .end method
 
-.method public static synthetic lambda$new$1(Lcom/miui/home/recents/SystemUiProxyWrapper;)V
+.method public static synthetic lambda$new$343(Lcom/miui/home/recents/SystemUiProxyWrapper;)V
     .locals 2
 
     .line 21
     sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->MAIN_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$SystemUiProxyWrapper$azpBX6zwklZLe78owXRfW0KroOw;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$SystemUiProxyWrapper$HzwNiIw_YyN60pE8_7Iq0FNu98s;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/-$$Lambda$SystemUiProxyWrapper$azpBX6zwklZLe78owXRfW0KroOw;-><init>(Lcom/miui/home/recents/SystemUiProxyWrapper;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/-$$Lambda$SystemUiProxyWrapper$HzwNiIw_YyN60pE8_7Iq0FNu98s;-><init>(Lcom/miui/home/recents/SystemUiProxyWrapper;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method public static synthetic lambda$null$0(Lcom/miui/home/recents/SystemUiProxyWrapper;)V
+.method public static synthetic lambda$null$342(Lcom/miui/home/recents/SystemUiProxyWrapper;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -80,7 +80,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$static$2(Landroid/os/Bundle;)Lcom/miui/home/recents/SystemUiProxyWrapper;
+.method static synthetic lambda$static$344(Landroid/os/Bundle;)Lcom/miui/home/recents/SystemUiProxyWrapper;
     .locals 3
 
     const-string v0, "extra_miui_sysui_proxy"

@@ -178,6 +178,7 @@
     <string name="defalut_launcher_title">Ընդհանուր գործարկման սարք</string>
     <string name="default_folder_title_claro">Claro</string>
     <string name="default_folder_title_game">Խաղեր</string>
+    <string name="default_folder_title_hot">Հայտնի հավելվածներ</string>
     <string name="default_folder_title_meitu">Meitu հավելվածներ</string>
     <string name="default_folder_title_microsoft">Microsoft</string>
     <string name="default_folder_title_other_apps">Այլ հավելվածներ</string>

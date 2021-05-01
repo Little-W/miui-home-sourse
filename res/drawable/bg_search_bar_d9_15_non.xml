@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ripple android:color="#26d9d9d9"
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<ripple
+    android:color="#26d9d9d9"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape>
-            <corners android:radius="@dimen/search_bar_height" />
-            <solid android:color="#26d9d9d9" />
+            <corners
+                android:radius="@dimen/search_bar_height" />
+            <solid
+                android:color="#26d9d9d9" />
         </shape>
     </item>
 </ripple>

@@ -112,7 +112,7 @@
     return v0
 .end method
 
-.method public static synthetic lambda$onReceive$0(Lcom/miui/home/launcher/IconReorganizeMonitor;Landroid/content/Context;)V
+.method public static synthetic lambda$onReceive$497(Lcom/miui/home/launcher/IconReorganizeMonitor;Landroid/content/Context;)V
     .locals 0
 
     .line 56
@@ -121,7 +121,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onReceive$1(Lcom/miui/home/launcher/IconReorganizeMonitor;Landroid/content/Context;)V
+.method public static synthetic lambda$onReceive$498(Lcom/miui/home/launcher/IconReorganizeMonitor;Landroid/content/Context;)V
     .locals 0
 
     .line 63
@@ -269,9 +269,9 @@
     if-eqz v2, :cond_1
 
     .line 56
-    new-instance p2, Lcom/miui/home/launcher/-$$Lambda$IconReorganizeMonitor$wD-2YzCrxNweqrd_ISK_gXpl1zE;
+    new-instance p2, Lcom/miui/home/launcher/-$$Lambda$IconReorganizeMonitor$x9lbIyfos7sarAhVXgYT2F--VUo;
 
-    invoke-direct {p2, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$IconReorganizeMonitor$wD-2YzCrxNweqrd_ISK_gXpl1zE;-><init>(Lcom/miui/home/launcher/IconReorganizeMonitor;Landroid/content/Context;)V
+    invoke-direct {p2, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$IconReorganizeMonitor$x9lbIyfos7sarAhVXgYT2F--VUo;-><init>(Lcom/miui/home/launcher/IconReorganizeMonitor;Landroid/content/Context;)V
 
     invoke-static {p2}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -302,9 +302,9 @@
     if-eqz v0, :cond_3
 
     .line 63
-    new-instance p2, Lcom/miui/home/launcher/-$$Lambda$IconReorganizeMonitor$KnPg966IaY92XS-jGM4Ps_xSW2A;
+    new-instance p2, Lcom/miui/home/launcher/-$$Lambda$IconReorganizeMonitor$Y976SIITsb4fxthpOFV_C85LyCk;
 
-    invoke-direct {p2, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$IconReorganizeMonitor$KnPg966IaY92XS-jGM4Ps_xSW2A;-><init>(Lcom/miui/home/launcher/IconReorganizeMonitor;Landroid/content/Context;)V
+    invoke-direct {p2, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$IconReorganizeMonitor$Y976SIITsb4fxthpOFV_C85LyCk;-><init>(Lcom/miui/home/launcher/IconReorganizeMonitor;Landroid/content/Context;)V
 
     invoke-static {p2}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -580,7 +580,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f1001c1
+    const v4, 0x7f1001c2
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -623,7 +623,7 @@
 
     if-eqz v5, :cond_1
 
-    const v5, 0x7f100220
+    const v5, 0x7f100221
 
     .line 134
     invoke-virtual {p0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -633,7 +633,7 @@
     goto :goto_0
 
     :cond_1
-    const v5, 0x7f100221
+    const v5, 0x7f100222
 
     .line 135
     invoke-virtual {p0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -680,7 +680,7 @@
 
     const/4 v7, 0x4
 
-    const v8, 0x7f100151
+    const v8, 0x7f100152
 
     .line 144
     invoke-virtual {p0, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -713,7 +713,7 @@
     invoke-direct {v7, p0}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
 
     :goto_1
-    const v8, 0x7f080145
+    const v8, 0x7f080156
 
     .line 151
     invoke-virtual {v7, v8}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
@@ -752,7 +752,7 @@
 
     const/4 v1, -0x1
 
-    const v3, 0x7f100224
+    const v3, 0x7f100225
 
     .line 158
     invoke-virtual {p0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;

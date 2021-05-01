@@ -74,7 +74,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f100150
+    const v0, 0x7f100151
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setTitle(I)V
 
@@ -85,7 +85,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f10014f
+    const v0, 0x7f100150
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setSummary(I)V
 

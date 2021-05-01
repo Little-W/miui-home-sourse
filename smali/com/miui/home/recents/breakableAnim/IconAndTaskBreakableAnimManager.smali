@@ -205,41 +205,34 @@
     .line 88
     iget-object v0, p0, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->mCurrentAnim:Ljava/lang/Object;
 
+    check-cast v0, Lcom/miui/home/recents/util/RectFSpringAnim;
+
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
     goto :goto_0
 
-    :cond_0
-    new-instance v0, Lcom/miui/home/recents/breakableAnim/IconAndTaskAnimParam;
-
-    iget-object v1, p0, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->mCurrentAnim:Ljava/lang/Object;
-
-    check-cast v1, Lcom/miui/home/recents/util/RectFSpringAnim;
-
     .line 89
-    invoke-virtual {v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->getCurrentRectF()Landroid/graphics/RectF;
+    :cond_0
+    new-instance v1, Lcom/miui/home/recents/breakableAnim/IconAndTaskAnimParam;
 
-    move-result-object v1
+    .line 90
+    invoke-virtual {v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->getCurrentRectF()Landroid/graphics/RectF;
 
-    iget-object v2, p0, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->mCurrentAnim:Ljava/lang/Object;
+    move-result-object v2
 
-    check-cast v2, Lcom/miui/home/recents/util/RectFSpringAnim;
-
-    invoke-virtual {v2}, Lcom/miui/home/recents/util/RectFSpringAnim;->getCurrentRadius()F
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->mCurrentAnim:Ljava/lang/Object;
-
-    check-cast v3, Lcom/miui/home/recents/util/RectFSpringAnim;
-
-    invoke-virtual {v3}, Lcom/miui/home/recents/util/RectFSpringAnim;->getCurrentAlpha()F
+    invoke-virtual {v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->getCurrentRadius()F
 
     move-result v3
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/miui/home/recents/breakableAnim/IconAndTaskAnimParam;-><init>(Landroid/graphics/RectF;FF)V
+    invoke-virtual {v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->getCurrentAlpha()F
+
+    move-result v0
+
+    invoke-direct {v1, v2, v3, v0}, Lcom/miui/home/recents/breakableAnim/IconAndTaskAnimParam;-><init>(Landroid/graphics/RectF;FF)V
+
+    move-object v0, v1
 
     :goto_0
     return-object v0
@@ -259,7 +252,7 @@
 .method public isAnimChainOn()Z
     .locals 1
 
-    .line 99
+    .line 100
     iget-object v0, p0, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->mCurrentAnim:Ljava/lang/Object;
 
     if-eqz v0, :cond_0

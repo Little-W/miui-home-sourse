@@ -206,6 +206,7 @@
     <string name="defalut_launcher_title">デフォルトのランチャー</string>
     <string name="default_folder_title_claro">Claro</string>
     <string name="default_folder_title_game">ゲーム</string>
+    <string name="default_folder_title_hot">人気のアプリ</string>
     <string name="default_folder_title_meitu">Meitu アプリ</string>
     <string name="default_folder_title_microsoft">Microsoft</string>
     <string name="default_folder_title_other_apps">その他のアプリ</string>
@@ -298,7 +299,7 @@
     <string name="gadget_power_clear_button_label">ディープクリーン</string>
     <string name="gadget_search_label">検索</string>
     <string name="gadget_weather_app_not_installed">タップしてMIUIの天気アプリをダウンロード</string>
-    <string name="gadget_weather_aqi_title">空気質:</string>
+    <string name="gadget_weather_aqi_title">大気汚染指数 (AQI) :</string>
     <string name="gadget_weather_download_message">アプリコンテンツ: %1$s (%2$s) をダウンロードする必要があります。ダウンロード完了後、アプリを再起動してください。</string>
     <string name="gadget_weather_download_start">ダウンロード</string>
     <string name="gadget_weather_download_title">ダウンロード</string>

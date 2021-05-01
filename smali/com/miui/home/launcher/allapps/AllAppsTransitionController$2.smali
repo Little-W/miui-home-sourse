@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/AllAppsTransitionController;)V
     .locals 0
 
-    .line 173
+    .line 174
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController$2;->this$0:Lcom/miui/home/launcher/allapps/AllAppsTransitionController;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/anim/AnimationSuccessListener;-><init>()V
@@ -35,10 +35,15 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 181
+    .line 182
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController$2;->this$0:Lcom/miui/home/launcher/allapps/AllAppsTransitionController;
 
     invoke-static {p1}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->access$300(Lcom/miui/home/launcher/allapps/AllAppsTransitionController;)V
+
+    const/4 p1, 0x0
+
+    .line 183
+    iput-boolean p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController$2;->mCancelled:Z
 
     return-void
 .end method
@@ -46,7 +51,7 @@
 .method public onAnimationSuccess(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 176
+    .line 177
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController$2;->this$0:Lcom/miui/home/launcher/allapps/AllAppsTransitionController;
 
     invoke-static {p1}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->access$200(Lcom/miui/home/launcher/allapps/AllAppsTransitionController;)V

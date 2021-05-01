@@ -103,7 +103,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onBackPressed$3(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/content/DialogInterface;I)V
+.method public static synthetic lambda$onBackPressed$300(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/content/DialogInterface;I)V
     .locals 0
 
     .line 283
@@ -112,7 +112,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onBackPressed$4(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/content/DialogInterface;I)V
+.method public static synthetic lambda$onBackPressed$301(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/content/DialogInterface;I)V
     .locals 0
 
     .line 284
@@ -121,7 +121,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onViewCreated$0(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/view/View;)V
+.method public static synthetic lambda$onViewCreated$297(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/view/View;)V
     .locals 1
 
     .line 139
@@ -134,7 +134,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onViewCreated$1(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/view/View;)V
+.method public static synthetic lambda$onViewCreated$298(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/view/View;)V
     .locals 0
 
     .line 143
@@ -143,7 +143,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onViewCreated$2(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/view/View;)V
+.method public static synthetic lambda$onViewCreated$299(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/view/View;)V
     .locals 0
 
     .line 144
@@ -497,9 +497,9 @@
 
     const v1, 0x7f1000af
 
-    new-instance v2, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$KZoDRb95m-IcS1Pf_eaD6EpkhNU;
+    new-instance v2, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$JnAp-Jb25FGUHXTJxDcy1_tGhYw;
 
-    invoke-direct {v2, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$KZoDRb95m-IcS1Pf_eaD6EpkhNU;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;)V
+    invoke-direct {v2, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$JnAp-Jb25FGUHXTJxDcy1_tGhYw;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;)V
 
     .line 283
     invoke-virtual {v0, v1, v2}, Lmiui/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;
@@ -508,9 +508,9 @@
 
     const v1, 0x7f1000ae
 
-    new-instance v2, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$CSExbwl9CONCQJjmF6i97HqcvKs;
+    new-instance v2, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$v6zvsnv-NnDgI_m7Q6jwm6J9n2A;
 
-    invoke-direct {v2, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$CSExbwl9CONCQJjmF6i97HqcvKs;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;)V
+    invoke-direct {v2, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$v6zvsnv-NnDgI_m7Q6jwm6J9n2A;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;)V
 
     .line 284
     invoke-virtual {v0, v1, v2}, Lmiui/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;
@@ -763,7 +763,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const p3, 0x7f0d0041
+    const p3, 0x7f0d0046
 
     const/4 v0, 0x0
 
@@ -1003,9 +1003,9 @@
     .line 139
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleClear:Landroid/widget/ImageView;
 
-    new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$K0vomCpBHG9Q-A6wvYJ6V2q_seg;
+    new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$iDEiH9kMa0sg_Mtzr3mJ0sKtK_c;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$K0vomCpBHG9Q-A6wvYJ6V2q_seg;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$iDEiH9kMa0sg_Mtzr3mJ0sKtK_c;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;)V
 
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -1034,18 +1034,18 @@
     .line 143
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mBack:Lcom/miui/home/launcher/util/typeface/TypefaceIconView;
 
-    new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$uqq2-92gkLmajjufVnNRDUbobGM;
+    new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$3m_NTSyWVqnhnLT1hpP-qLl_5P0;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$uqq2-92gkLmajjufVnNRDUbobGM;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$3m_NTSyWVqnhnLT1hpP-qLl_5P0;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;)V
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/util/typeface/TypefaceIconView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 144
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mSave:Lcom/miui/home/launcher/util/typeface/TypefaceIconView;
 
-    new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$xmTXLQQ9p10wtO05TJcXsUAQSnk;
+    new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$qGKdo-XE6tsINrLT3iuaiAddgOE;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$xmTXLQQ9p10wtO05TJcXsUAQSnk;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$qGKdo-XE6tsINrLT3iuaiAddgOE;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;)V
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/util/typeface/TypefaceIconView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

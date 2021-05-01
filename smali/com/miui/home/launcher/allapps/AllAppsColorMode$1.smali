@@ -31,7 +31,7 @@
 .method public getPreviewBackground(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    const v0, 0x7f0800af
+    const v0, 0x7f0800be
 
     .line 31
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -49,7 +49,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f1000eb
+    const v0, 0x7f1000ec
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

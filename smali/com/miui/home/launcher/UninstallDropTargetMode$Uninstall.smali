@@ -68,7 +68,7 @@
     return p1
 .end method
 
-.method static synthetic lambda$onClick$0(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)Z
+.method static synthetic lambda$onClick$211(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)Z
     .locals 1
 
     .line 66
@@ -105,7 +105,7 @@
 .method public getIconResId()I
     .locals 1
 
-    const v0, 0x7f0800b9
+    const v0, 0x7f0800c8
 
     return v0
 .end method
@@ -113,7 +113,7 @@
 .method public getLabelResId()I
     .locals 1
 
-    const v0, 0x7f1000fc
+    const v0, 0x7f1000fd
 
     return v0
 .end method
@@ -131,9 +131,9 @@
     .end annotation
 
     .line 65
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$UninstallDropTargetMode$Uninstall$WFTSW9YpFUbRzYmmrV5T7fL7QY0;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$UninstallDropTargetMode$Uninstall$L70tbYL1LuPKG7Krd9zGosGEjnM;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/launcher/-$$Lambda$UninstallDropTargetMode$Uninstall$WFTSW9YpFUbRzYmmrV5T7fL7QY0;-><init>(Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/launcher/-$$Lambda$UninstallDropTargetMode$Uninstall$L70tbYL1LuPKG7Krd9zGosGEjnM;-><init>(Lcom/miui/home/launcher/Launcher;)V
 
     invoke-static {p2, v0}, Lcom/miui/home/launcher/UninstallDropTargetMode$Uninstall;->filterValidatedInfos(Ljava/util/List;Ljava/util/function/Predicate;)Ljava/util/List;
 

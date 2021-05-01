@@ -803,7 +803,7 @@
 
     mul-double/2addr v0, v2
 
-    .line 410
+    .line 414
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v0
@@ -816,17 +816,17 @@
 .method private endDirectly()V
     .locals 2
 
-    .line 610
+    .line 614
     iget-boolean v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAnimsStarted:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 611
+    .line 615
     iput-boolean v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRequestEnd:Z
 
-    .line 612
+    .line 616
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAllAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -846,7 +846,7 @@
 
     check-cast v1, Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    .line 613
+    .line 617
     invoke-static {v1}, Lcom/miui/home/launcher/animate/SpringAnimationReflectUtils;->end(Landroidx/dynamicanimation/animation/SpringAnimation;)V
 
     goto :goto_0
@@ -858,45 +858,45 @@
 .method private getInitVelocity(Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;)F
     .locals 1
 
-    .line 364
+    .line 368
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERX:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     if-ne p1, v0, :cond_0
 
-    .line 365
+    .line 369
     iget p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mLeftVelocity:F
 
     return p1
 
-    .line 366
+    .line 370
     :cond_0
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERY:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     if-ne p1, v0, :cond_1
 
-    .line 367
+    .line 371
     iget p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTopVelocity:F
 
     return p1
 
-    .line 368
+    .line 372
     :cond_1
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_WIDTH:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     if-ne p1, v0, :cond_2
 
-    .line 369
+    .line 373
     iget p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mWidthVelocity:F
 
     return p1
 
-    .line 370
+    .line 374
     :cond_2
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_RATIO:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     if-ne p1, v0, :cond_3
 
-    .line 371
+    .line 375
     iget p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRatioVelocity:F
 
     return p1
@@ -910,7 +910,7 @@
 .method private getModifyResponse(F)F
     .locals 1
 
-    .line 441
+    .line 445
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isUseSmoothAnimationEffect()Z
 
     move-result v0
@@ -924,7 +924,7 @@
 
     mul-float/2addr p1, v0
 
-    .line 442
+    .line 446
     :goto_0
     invoke-static {}, Lcom/miui/home/recents/TransitionAnimDurationHelper;->getInstance()Lcom/miui/home/recents/TransitionAnimDurationHelper;
 
@@ -942,7 +942,7 @@
 .method private getPropertyVelocity(Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;)F
     .locals 2
 
-    .line 356
+    .line 360
     invoke-virtual {p1}, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->getVelocity()F
 
     move-result v0
@@ -953,14 +953,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 357
+    .line 361
     invoke-virtual {p1}, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->getVelocity()F
 
     move-result p1
 
     return p1
 
-    .line 359
+    .line 363
     :cond_0
     invoke-direct {p0, p1}, Lcom/miui/home/recents/util/RectFSpringAnim;->getInitVelocity(Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;)F
 
@@ -972,7 +972,7 @@
 .method private getWidthProgress()F
     .locals 3
 
-    .line 766
+    .line 770
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTargetRect:Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
@@ -993,7 +993,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 767
+    .line 771
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentWidth:F
 
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
@@ -1032,10 +1032,10 @@
 .method private initAllAnimations()V
     .locals 3
 
-    .line 459
+    .line 463
     invoke-direct {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->modifyStartRectAccordingVelocity()V
 
-    .line 461
+    .line 465
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Landroid/graphics/RectF;->centerX()F
@@ -1044,14 +1044,14 @@
 
     iput v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentCenterX:F
 
-    .line 462
+    .line 466
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTargetRect:Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Landroid/graphics/RectF;->centerX()F
 
     move-result v0
 
-    .line 463
+    .line 467
     new-instance v1, Landroidx/dynamicanimation/animation/SpringAnimation;
 
     sget-object v2, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERX:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
@@ -1064,26 +1064,26 @@
 
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterXDamping:F
 
-    .line 465
+    .line 469
     invoke-virtual {v2, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v0
 
     iget v2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterXStiffness:F
 
-    .line 466
+    .line 470
     invoke-virtual {v0, v2}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v0
 
-    .line 464
+    .line 468
     invoke-virtual {v1, v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     move-result-object v0
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentCenterX:F
 
-    .line 467
+    .line 471
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1092,7 +1092,7 @@
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mLeftVelocity:F
 
-    .line 468
+    .line 472
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1101,18 +1101,18 @@
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterXMinVisibleChange:F
 
-    .line 469
+    .line 473
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setMinimumVisibleChange(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
 
     check-cast v0, Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$gymaTrdTb20H6jExWmno5qjsSPI;
+    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$1mh3TCO6Bh6I2vMuzxsybyodvvA;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$gymaTrdTb20H6jExWmno5qjsSPI;-><init>(Lcom/miui/home/recents/util/RectFSpringAnim;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$1mh3TCO6Bh6I2vMuzxsybyodvvA;-><init>(Lcom/miui/home/recents/util/RectFSpringAnim;)V
 
-    .line 470
+    .line 474
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1121,7 +1121,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectCenterXAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    .line 475
+    .line 479
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Landroid/graphics/RectF;->centerY()F
@@ -1130,14 +1130,14 @@
 
     iput v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentCenterY:F
 
-    .line 476
+    .line 480
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTargetRect:Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Landroid/graphics/RectF;->centerY()F
 
     move-result v0
 
-    .line 477
+    .line 481
     new-instance v1, Landroidx/dynamicanimation/animation/SpringAnimation;
 
     sget-object v2, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERY:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
@@ -1150,26 +1150,26 @@
 
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterYDamping:F
 
-    .line 479
+    .line 483
     invoke-virtual {v2, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v0
 
     iget v2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterYStiffness:F
 
-    .line 480
+    .line 484
     invoke-virtual {v0, v2}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v0
 
-    .line 478
+    .line 482
     invoke-virtual {v1, v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     move-result-object v0
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentCenterY:F
 
-    .line 481
+    .line 485
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1178,7 +1178,7 @@
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTopVelocity:F
 
-    .line 482
+    .line 486
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1187,18 +1187,18 @@
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterYMinVisibleChange:F
 
-    .line 483
+    .line 487
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setMinimumVisibleChange(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
 
     check-cast v0, Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$fTET6p6UExhO8J7A9fnkEke3tA4;
+    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$hVgymMTmMpOCzRUzSxs3eqQ9Sls;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$fTET6p6UExhO8J7A9fnkEke3tA4;-><init>(Lcom/miui/home/recents/util/RectFSpringAnim;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$hVgymMTmMpOCzRUzSxs3eqQ9Sls;-><init>(Lcom/miui/home/recents/util/RectFSpringAnim;)V
 
-    .line 484
+    .line 488
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1207,7 +1207,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectCenterYAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    .line 489
+    .line 493
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
@@ -1216,14 +1216,14 @@
 
     iput v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentWidth:F
 
-    .line 490
+    .line 494
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTargetRect:Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
 
     move-result v0
 
-    .line 491
+    .line 495
     new-instance v1, Landroidx/dynamicanimation/animation/SpringAnimation;
 
     sget-object v2, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_WIDTH:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
@@ -1236,26 +1236,26 @@
 
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mWidthDamping:F
 
-    .line 493
+    .line 497
     invoke-virtual {v2, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v0
 
     iget v2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mWidthStiffness:F
 
-    .line 494
+    .line 498
     invoke-virtual {v0, v2}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v0
 
-    .line 492
+    .line 496
     invoke-virtual {v1, v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     move-result-object v0
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentWidth:F
 
-    .line 495
+    .line 499
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1264,7 +1264,7 @@
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mWidthVelocity:F
 
-    .line 496
+    .line 500
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1273,18 +1273,18 @@
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mWidthMinVisibleChange:F
 
-    .line 497
+    .line 501
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setMinimumVisibleChange(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
 
     check-cast v0, Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$KMz_BT1H9T14SFrj73bWrU9uods;
+    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$UyJsc0TeKCikWmmsofQJbPfhorw;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$KMz_BT1H9T14SFrj73bWrU9uods;-><init>(Lcom/miui/home/recents/util/RectFSpringAnim;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$UyJsc0TeKCikWmmsofQJbPfhorw;-><init>(Lcom/miui/home/recents/util/RectFSpringAnim;)V
 
-    .line 498
+    .line 502
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1295,10 +1295,10 @@
 
     const/4 v0, 0x0
 
-    .line 503
+    .line 507
     iput v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRatio:F
 
-    .line 504
+    .line 508
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
 
     invoke-virtual {v1}, Landroid/graphics/RectF;->isEmpty()Z
@@ -1307,7 +1307,7 @@
 
     if-nez v1, :cond_0
 
-    .line 505
+    .line 509
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
 
     invoke-virtual {v1}, Landroid/graphics/RectF;->height()F
@@ -1324,7 +1324,7 @@
 
     iput v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRatio:F
 
-    .line 508
+    .line 512
     :cond_0
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTargetRect:Landroid/graphics/RectF;
 
@@ -1334,7 +1334,7 @@
 
     if-nez v1, :cond_1
 
-    .line 509
+    .line 513
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTargetRect:Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Landroid/graphics/RectF;->height()F
@@ -1349,7 +1349,7 @@
 
     div-float/2addr v0, v1
 
-    .line 511
+    .line 515
     :cond_1
     new-instance v1, Landroidx/dynamicanimation/animation/SpringAnimation;
 
@@ -1363,26 +1363,26 @@
 
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRatioDamping:F
 
-    .line 513
+    .line 517
     invoke-virtual {v2, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v0
 
     iget v2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRatioStiffness:F
 
-    .line 514
+    .line 518
     invoke-virtual {v0, v2}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v0
 
-    .line 512
+    .line 516
     invoke-virtual {v1, v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     move-result-object v0
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRatio:F
 
-    .line 515
+    .line 519
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1391,7 +1391,7 @@
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRatioMinVisibleChange:F
 
-    .line 516
+    .line 520
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setMinimumVisibleChange(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1400,18 +1400,18 @@
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRatioVelocity:F
 
-    .line 517
+    .line 521
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
 
     check-cast v0, Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$mn0yr_5ZSsnwQbQYD7bN9wVxHMA;
+    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$ZGaUeo5Kob-rlbUKRqpDUo9lzFM;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$mn0yr_5ZSsnwQbQYD7bN9wVxHMA;-><init>(Lcom/miui/home/recents/util/RectFSpringAnim;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$ZGaUeo5Kob-rlbUKRqpDUo9lzFM;-><init>(Lcom/miui/home/recents/util/RectFSpringAnim;)V
 
-    .line 518
+    .line 522
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1420,12 +1420,12 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectRatioAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    .line 523
+    .line 527
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRadius:F
 
     iput v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRadius:F
 
-    .line 524
+    .line 528
     new-instance v0, Landroidx/dynamicanimation/animation/SpringAnimation;
 
     sget-object v1, Lcom/miui/home/recents/util/RectFSpringAnim;->RADIUS:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
@@ -1440,26 +1440,26 @@
 
     iget v2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRadiusDamping:F
 
-    .line 526
+    .line 530
     invoke-virtual {v1, v2}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v1
 
     iget v2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRadiusStiffness:F
 
-    .line 527
+    .line 531
     invoke-virtual {v1, v2}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v1
 
-    .line 525
+    .line 529
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     move-result-object v0
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRadius:F
 
-    .line 528
+    .line 532
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1468,7 +1468,7 @@
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRadiusMinVisibleChange:F
 
-    .line 529
+    .line 533
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setMinimumVisibleChange(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1477,18 +1477,18 @@
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRadiusVelocity:F
 
-    .line 530
+    .line 534
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
 
     check-cast v0, Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$jA7RwvNg9TwlAqIrjMe3c-WNfXg;
+    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$BtgpO33JTBpeAaTdx5_S8zK5CXE;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$jA7RwvNg9TwlAqIrjMe3c-WNfXg;-><init>(Lcom/miui/home/recents/util/RectFSpringAnim;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$BtgpO33JTBpeAaTdx5_S8zK5CXE;-><init>(Lcom/miui/home/recents/util/RectFSpringAnim;)V
 
-    .line 531
+    .line 535
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1497,12 +1497,12 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRadiusAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    .line 536
+    .line 540
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartAlpha:F
 
     iput v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentAlpha:F
 
-    .line 537
+    .line 541
     new-instance v0, Landroidx/dynamicanimation/animation/SpringAnimation;
 
     sget-object v1, Lcom/miui/home/recents/util/RectFSpringAnim;->ALPHA:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
@@ -1517,26 +1517,26 @@
 
     iget v2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAlphaDamping:F
 
-    .line 539
+    .line 543
     invoke-virtual {v1, v2}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v1
 
     iget v2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAlphaStiffness:F
 
-    .line 540
+    .line 544
     invoke-virtual {v1, v2}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     move-result-object v1
 
-    .line 538
+    .line 542
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setSpring(Landroidx/dynamicanimation/animation/SpringForce;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     move-result-object v0
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentAlpha:F
 
-    .line 541
+    .line 545
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartValue(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1545,7 +1545,7 @@
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAlphaMinVisibleChange:F
 
-    .line 542
+    .line 546
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setMinimumVisibleChange(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1554,18 +1554,18 @@
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAlphaVelocity:F
 
-    .line 543
+    .line 547
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
 
     check-cast v0, Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$fw74GGU1CgfU-vCKsSGqpQJHnr4;
+    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$6hyi41p4oHUEOr3Ly8bsaCiKFGw;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$fw74GGU1CgfU-vCKsSGqpQJHnr4;-><init>(Lcom/miui/home/recents/util/RectFSpringAnim;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$6hyi41p4oHUEOr3Ly8bsaCiKFGw;-><init>(Lcom/miui/home/recents/util/RectFSpringAnim;)V
 
-    .line 544
+    .line 548
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     move-result-object v0
@@ -1574,62 +1574,62 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAlphaAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    .line 549
+    .line 553
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAllAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 550
+    .line 554
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAllAnimations:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectCenterXAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 551
+    .line 555
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAllAnimations:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectCenterYAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 552
+    .line 556
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAllAnimations:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectWidthAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 553
+    .line 557
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAllAnimations:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectRatioAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 554
+    .line 558
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAllAnimations:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRadiusAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 555
+    .line 559
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAllAnimations:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAlphaAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 556
+    .line 560
     invoke-direct {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->initAllProperty()V
 
     const/4 v0, 0x1
 
-    .line 558
+    .line 562
     iput-boolean v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAnimsStarted:Z
 
-    .line 559
+    .line 563
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAnimatorListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -1651,12 +1651,12 @@
 
     const/4 v2, 0x0
 
-    .line 560
+    .line 564
     invoke-interface {v1, v2}, Landroid/animation/Animator$AnimatorListener;->onAnimationStart(Landroid/animation/Animator;)V
 
     goto :goto_0
 
-    .line 562
+    .line 566
     :cond_2
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectFSpringAnimListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -1677,7 +1677,7 @@
 
     check-cast v1, Lcom/miui/home/recents/util/RectFSpringAnim$RectFSpringAnimListener;
 
-    .line 563
+    .line 567
     invoke-interface {v1, p0}, Lcom/miui/home/recents/util/RectFSpringAnim$RectFSpringAnimListener;->onAnimationStart(Lcom/miui/home/recents/util/RectFSpringAnim;)V
 
     goto :goto_1
@@ -1689,32 +1689,32 @@
 .method private initAllProperty()V
     .locals 1
 
-    .line 568
+    .line 572
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERX:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->init()V
 
-    .line 569
+    .line 573
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERY:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->init()V
 
-    .line 570
+    .line 574
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_WIDTH:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->init()V
 
-    .line 571
+    .line 575
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_RATIO:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->init()V
 
-    .line 572
+    .line 576
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RADIUS:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->init()V
 
-    .line 573
+    .line 577
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->ALPHA:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->init()V
@@ -1730,85 +1730,85 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initAllAnimations$0(Lcom/miui/home/recents/util/RectFSpringAnim;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
+.method public static synthetic lambda$initAllAnimations$216(Lcom/miui/home/recents/util/RectFSpringAnim;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
     .locals 0
 
     const/4 p1, 0x1
 
-    .line 471
+    .line 475
     iput-boolean p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectCenterXAnimEnded:Z
 
-    .line 472
+    .line 476
     invoke-direct {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->maybeOnEnd()V
 
     return-void
 .end method
 
-.method public static synthetic lambda$initAllAnimations$1(Lcom/miui/home/recents/util/RectFSpringAnim;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
+.method public static synthetic lambda$initAllAnimations$217(Lcom/miui/home/recents/util/RectFSpringAnim;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
     .locals 0
 
     const/4 p1, 0x1
 
-    .line 485
+    .line 489
     iput-boolean p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectCenterYAnimEnded:Z
 
-    .line 486
+    .line 490
     invoke-direct {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->maybeOnEnd()V
 
     return-void
 .end method
 
-.method public static synthetic lambda$initAllAnimations$2(Lcom/miui/home/recents/util/RectFSpringAnim;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
+.method public static synthetic lambda$initAllAnimations$218(Lcom/miui/home/recents/util/RectFSpringAnim;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
     .locals 0
 
     const/4 p1, 0x1
 
-    .line 499
+    .line 503
     iput-boolean p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectWidthAnimEnded:Z
 
-    .line 500
+    .line 504
     invoke-direct {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->maybeOnEnd()V
 
     return-void
 .end method
 
-.method public static synthetic lambda$initAllAnimations$3(Lcom/miui/home/recents/util/RectFSpringAnim;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
+.method public static synthetic lambda$initAllAnimations$219(Lcom/miui/home/recents/util/RectFSpringAnim;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
     .locals 0
 
     const/4 p1, 0x1
 
-    .line 519
+    .line 523
     iput-boolean p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectRatioAnimEnded:Z
 
-    .line 520
+    .line 524
     invoke-direct {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->maybeOnEnd()V
 
     return-void
 .end method
 
-.method public static synthetic lambda$initAllAnimations$4(Lcom/miui/home/recents/util/RectFSpringAnim;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
+.method public static synthetic lambda$initAllAnimations$220(Lcom/miui/home/recents/util/RectFSpringAnim;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
     .locals 0
 
     const/4 p1, 0x1
 
-    .line 532
+    .line 536
     iput-boolean p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRadiusAnimEnded:Z
 
-    .line 533
+    .line 537
     invoke-direct {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->maybeOnEnd()V
 
     return-void
 .end method
 
-.method public static synthetic lambda$initAllAnimations$5(Lcom/miui/home/recents/util/RectFSpringAnim;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
+.method public static synthetic lambda$initAllAnimations$221(Lcom/miui/home/recents/util/RectFSpringAnim;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
     .locals 0
 
     const/4 p1, 0x1
 
-    .line 545
+    .line 549
     iput-boolean p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAlphaAnimEnded:Z
 
-    .line 546
+    .line 550
     invoke-direct {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->maybeOnEnd()V
 
     return-void
@@ -1822,10 +1822,10 @@
     return-void
 .end method
 
-.method public static synthetic lambda$updateEndRectF$6(Lcom/miui/home/recents/util/RectFSpringAnim;Landroid/graphics/RectF;)V
+.method public static synthetic lambda$updateEndRectF$222(Lcom/miui/home/recents/util/RectFSpringAnim;Landroid/graphics/RectF;)V
     .locals 0
 
-    .line 645
+    .line 649
     invoke-direct {p0, p1}, Lcom/miui/home/recents/util/RectFSpringAnim;->updateEndRectFDirectly(Landroid/graphics/RectF;)V
 
     return-void
@@ -1834,7 +1834,7 @@
 .method private maybeOnEnd()V
     .locals 3
 
-    .line 797
+    .line 801
     iget-boolean v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAnimsStarted:Z
 
     if-eqz v0, :cond_1
@@ -1865,10 +1865,10 @@
 
     const/4 v0, 0x0
 
-    .line 799
+    .line 803
     iput-boolean v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAnimsStarted:Z
 
-    .line 800
+    .line 804
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAnimatorListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -1890,12 +1890,12 @@
 
     const/4 v2, 0x0
 
-    .line 801
+    .line 805
     invoke-interface {v1, v2}, Landroid/animation/Animator$AnimatorListener;->onAnimationEnd(Landroid/animation/Animator;)V
 
     goto :goto_0
 
-    .line 803
+    .line 807
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectFSpringAnimListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -1916,7 +1916,7 @@
 
     check-cast v1, Lcom/miui/home/recents/util/RectFSpringAnim$RectFSpringAnimListener;
 
-    .line 804
+    .line 808
     invoke-interface {v1, p0}, Lcom/miui/home/recents/util/RectFSpringAnim$RectFSpringAnimListener;->onAnimationEnd(Lcom/miui/home/recents/util/RectFSpringAnim;)V
 
     goto :goto_1
@@ -1928,7 +1928,7 @@
 .method private modifyStartRectAccordingVelocity()V
     .locals 8
 
-    .line 446
+    .line 450
     iget-boolean v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAnimsStarted:Z
 
     if-nez v0, :cond_1
@@ -1947,7 +1947,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 447
+    .line 451
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/LauncherApplication;
 
     move-result-object v0
@@ -1968,7 +1968,7 @@
 
     div-float v0, v1, v0
 
-    .line 449
+    .line 453
     iget-object v2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
 
     iget v2, v2, Landroid/graphics/RectF;->left:F
@@ -1985,7 +1985,7 @@
 
     add-float/2addr v2, v3
 
-    .line 450
+    .line 454
     iget-object v3, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
 
     iget v3, v3, Landroid/graphics/RectF;->top:F
@@ -2000,7 +2000,7 @@
 
     add-float/2addr v3, v5
 
-    .line 451
+    .line 455
     iget-object v5, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
 
     invoke-virtual {v5}, Landroid/graphics/RectF;->width()F
@@ -2017,7 +2017,7 @@
 
     add-float/2addr v5, v6
 
-    .line 452
+    .line 456
     iget-object v6, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
 
     invoke-virtual {v6}, Landroid/graphics/RectF;->isEmpty()Z
@@ -2033,7 +2033,7 @@
     :cond_0
     iget-object v6, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
 
-    .line 453
+    .line 457
     invoke-virtual {v6}, Landroid/graphics/RectF;->height()F
 
     move-result v6
@@ -2056,7 +2056,7 @@
 
     add-float v0, v6, v7
 
-    .line 454
+    .line 458
     :goto_0
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
 
@@ -2075,7 +2075,7 @@
 .method private needUpdateCurrentAnim(Landroidx/dynamicanimation/animation/SpringAnimation;)Z
     .locals 5
 
-    .line 623
+    .line 627
     iget-boolean v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mNeedUpdateAllAnim:Z
 
     const/4 v1, 0x1
@@ -2091,7 +2091,7 @@
 
     return v0
 
-    .line 629
+    .line 633
     :cond_1
     iget-object v2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAllAnimations:Ljava/util/ArrayList;
 
@@ -2116,7 +2116,7 @@
 
     if-eq v3, p1, :cond_3
 
-    .line 631
+    .line 635
     invoke-virtual {v3}, Landroidx/dynamicanimation/animation/SpringAnimation;->isRunning()Z
 
     move-result v4
@@ -2137,7 +2137,7 @@
 .method private onUpdate()V
     .locals 6
 
-    .line 743
+    .line 747
     iget-boolean v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAnimsStarted:Z
 
     if-eqz v0, :cond_2
@@ -2154,7 +2154,7 @@
 
     goto :goto_1
 
-    .line 747
+    .line 751
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mOnUpdateListeners:Ljava/util/List;
 
@@ -2164,14 +2164,14 @@
 
     if-nez v0, :cond_1
 
-    .line 748
+    .line 752
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mPreviousRect:Landroid/graphics/RectF;
 
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRect:Landroid/graphics/RectF;
 
     invoke-virtual {v0, v1}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 749
+    .line 753
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRect:Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentCenterX:F
@@ -2186,7 +2186,7 @@
 
     iput v1, v0, Landroid/graphics/RectF;->left:F
 
-    .line 750
+    .line 754
     iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentCenterY:F
 
     iget v4, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRatio:F
@@ -2199,7 +2199,7 @@
 
     iput v1, v0, Landroid/graphics/RectF;->top:F
 
-    .line 751
+    .line 755
     iget v1, v0, Landroid/graphics/RectF;->left:F
 
     iget v2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentWidth:F
@@ -2208,7 +2208,7 @@
 
     iput v1, v0, Landroid/graphics/RectF;->right:F
 
-    .line 752
+    .line 756
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRect:Landroid/graphics/RectF;
 
     iget v1, v0, Landroid/graphics/RectF;->top:F
@@ -2223,7 +2223,7 @@
 
     iput v1, v0, Landroid/graphics/RectF;->bottom:F
 
-    .line 754
+    .line 758
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mOnUpdateListeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2243,7 +2243,7 @@
 
     check-cast v1, Lcom/miui/home/recents/util/RectFSpringAnim$OnUpdateListener;
 
-    .line 755
+    .line 759
     new-instance v2, Landroid/graphics/RectF;
 
     iget-object v3, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRect:Landroid/graphics/RectF;
@@ -2273,10 +2273,10 @@
 .method private startAllAnim()V
     .locals 2
 
-    .line 587
+    .line 591
     invoke-direct {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->initAllAnimations()V
 
-    .line 588
+    .line 592
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mLooperExecutor:Lcom/miui/home/library/utils/LooperExecutor;
 
     invoke-virtual {v0}, Lcom/miui/home/library/utils/LooperExecutor;->getHandler()Landroid/os/Handler;
@@ -2293,12 +2293,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 589
+    .line 593
     invoke-direct {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->startAllAnimDirectly()V
 
     goto :goto_0
 
-    .line 591
+    .line 595
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mLooperExecutor:Lcom/miui/home/library/utils/LooperExecutor;
 
@@ -2315,7 +2315,7 @@
 .method private startAllAnimDirectly()V
     .locals 2
 
-    .line 596
+    .line 600
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAllAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -2335,7 +2335,7 @@
 
     check-cast v1, Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    .line 597
+    .line 601
     invoke-static {v1}, Lcom/miui/home/launcher/animate/SpringAnimationReflectUtils;->start(Landroidx/dynamicanimation/animation/SpringAnimation;)V
 
     goto :goto_0
@@ -2347,32 +2347,32 @@
 .method private updateEndRectFDirectly(Landroid/graphics/RectF;)V
     .locals 4
 
-    .line 650
+    .line 654
     iput-object p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTargetRect:Landroid/graphics/RectF;
 
-    .line 651
+    .line 655
     invoke-virtual {p1}, Landroid/graphics/RectF;->centerX()F
 
     move-result v0
 
-    .line 652
+    .line 656
     invoke-virtual {p1}, Landroid/graphics/RectF;->centerY()F
 
     move-result v1
 
-    .line 653
+    .line 657
     invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
 
     move-result v2
 
-    .line 655
+    .line 659
     invoke-virtual {p1}, Landroid/graphics/RectF;->isEmpty()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 656
+    .line 660
     invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
 
     move-result v3
@@ -2388,7 +2388,7 @@
     :cond_0
     const/4 v3, 0x0
 
-    .line 658
+    .line 662
     :goto_0
     iget-object p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectCenterXAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
@@ -2398,18 +2398,18 @@
 
     if-eqz p1, :cond_1
 
-    .line 659
+    .line 663
     iget-object p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectCenterXAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->animateToFinalPosition(F)V
 
     goto :goto_1
 
-    .line 661
+    .line 665
     :cond_1
     iput v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentCenterX:F
 
-    .line 664
+    .line 668
     :goto_1
     iget-object p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectCenterYAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
@@ -2419,18 +2419,18 @@
 
     if-eqz p1, :cond_2
 
-    .line 665
+    .line 669
     iget-object p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectCenterYAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {p1, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->animateToFinalPosition(F)V
 
     goto :goto_2
 
-    .line 667
+    .line 671
     :cond_2
     iput v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentCenterY:F
 
-    .line 670
+    .line 674
     :goto_2
     iget-object p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectWidthAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
@@ -2440,18 +2440,18 @@
 
     if-eqz p1, :cond_3
 
-    .line 671
+    .line 675
     iget-object p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectWidthAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {p1, v2}, Landroidx/dynamicanimation/animation/SpringAnimation;->animateToFinalPosition(F)V
 
     goto :goto_3
 
-    .line 673
+    .line 677
     :cond_3
     iput v2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentWidth:F
 
-    .line 676
+    .line 680
     :goto_3
     iget-object p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectRatioAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
@@ -2461,18 +2461,18 @@
 
     if-eqz p1, :cond_4
 
-    .line 677
+    .line 681
     iget-object p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectRatioAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
     invoke-virtual {p1, v3}, Landroidx/dynamicanimation/animation/SpringAnimation;->animateToFinalPosition(F)V
 
     goto :goto_4
 
-    .line 679
+    .line 683
     :cond_4
     iput v3, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRatio:F
 
-    .line 682
+    .line 686
     :goto_4
     invoke-virtual {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->isRunning()Z
 
@@ -2480,7 +2480,7 @@
 
     if-nez p1, :cond_5
 
-    .line 683
+    .line 687
     invoke-direct {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->onUpdate()V
 
     :cond_5
@@ -2492,7 +2492,7 @@
 .method public addAnimatorListener(Landroid/animation/Animator$AnimatorListener;)V
     .locals 1
 
-    .line 418
+    .line 422
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAnimatorListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -2503,7 +2503,7 @@
 .method public addAnimatorListener(Lcom/miui/home/recents/util/RectFSpringAnim$RectFSpringAnimListener;)V
     .locals 1
 
-    .line 422
+    .line 426
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectFSpringAnimListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
@@ -2514,7 +2514,7 @@
 .method public addOnUpdateListener(Lcom/miui/home/recents/util/RectFSpringAnim$OnUpdateListener;)V
     .locals 1
 
-    .line 414
+    .line 418
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mOnUpdateListeners:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -2527,13 +2527,13 @@
 
     const/4 v0, 0x1
 
-    .line 718
+    .line 722
     iput-boolean v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRequestCancel:Z
 
-    .line 719
+    .line 723
     invoke-virtual {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->end()V
 
-    .line 720
+    .line 724
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mLooperExecutor:Lcom/miui/home/library/utils/LooperExecutor;
 
     invoke-virtual {v0}, Lcom/miui/home/library/utils/LooperExecutor;->getHandler()Landroid/os/Handler;
@@ -2550,12 +2550,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 721
+    .line 725
     invoke-virtual {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->cancelDirectly()V
 
     goto :goto_0
 
-    .line 723
+    .line 727
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mLooperExecutor:Lcom/miui/home/library/utils/LooperExecutor;
 
@@ -2572,7 +2572,7 @@
 .method public cancelDirectly()V
     .locals 3
 
-    .line 728
+    .line 732
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAnimatorListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
@@ -2594,12 +2594,12 @@
 
     const/4 v2, 0x0
 
-    .line 729
+    .line 733
     invoke-interface {v1, v2}, Landroid/animation/Animator$AnimatorListener;->onAnimationCancel(Landroid/animation/Animator;)V
 
     goto :goto_0
 
-    .line 731
+    .line 735
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectFSpringAnimListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
@@ -2620,7 +2620,7 @@
 
     check-cast v1, Lcom/miui/home/recents/util/RectFSpringAnim$RectFSpringAnimListener;
 
-    .line 732
+    .line 736
     invoke-interface {v1, p0}, Lcom/miui/home/recents/util/RectFSpringAnim$RectFSpringAnimListener;->onAnimationCancel(Lcom/miui/home/recents/util/RectFSpringAnim;)V
 
     goto :goto_1
@@ -2632,7 +2632,7 @@
 .method public copyCurrentAnimState()Lcom/miui/home/recents/util/RectFSpringAnim;
     .locals 8
 
-    .line 329
+    .line 333
     new-instance v7, Lcom/miui/home/recents/util/RectFSpringAnim;
 
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRect:Landroid/graphics/RectF;
@@ -2651,65 +2651,65 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/miui/home/recents/util/RectFSpringAnim;-><init>(Landroid/graphics/RectF;Landroid/graphics/RectF;FFFF)V
 
-    .line 330
+    .line 334
     invoke-virtual {v7, p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->setVelocity(Lcom/miui/home/recents/util/RectFSpringAnim;)V
 
-    .line 331
+    .line 335
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterXDamping:F
 
     iput v0, v7, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterXDamping:F
 
-    .line 332
+    .line 336
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterXStiffness:F
 
     iput v0, v7, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterXStiffness:F
 
-    .line 333
+    .line 337
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterYDamping:F
 
     iput v0, v7, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterYDamping:F
 
-    .line 334
+    .line 338
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterYStiffness:F
 
     iput v0, v7, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterYStiffness:F
 
-    .line 335
+    .line 339
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mWidthDamping:F
 
     iput v0, v7, Lcom/miui/home/recents/util/RectFSpringAnim;->mWidthDamping:F
 
-    .line 336
+    .line 340
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mWidthStiffness:F
 
     iput v0, v7, Lcom/miui/home/recents/util/RectFSpringAnim;->mWidthStiffness:F
 
-    .line 337
+    .line 341
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRatioDamping:F
 
     iput v0, v7, Lcom/miui/home/recents/util/RectFSpringAnim;->mRatioDamping:F
 
-    .line 338
+    .line 342
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRatioStiffness:F
 
     iput v0, v7, Lcom/miui/home/recents/util/RectFSpringAnim;->mRatioStiffness:F
 
-    .line 339
+    .line 343
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRadiusDamping:F
 
     iput v0, v7, Lcom/miui/home/recents/util/RectFSpringAnim;->mRadiusDamping:F
 
-    .line 340
+    .line 344
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRadiusStiffness:F
 
     iput v0, v7, Lcom/miui/home/recents/util/RectFSpringAnim;->mRadiusStiffness:F
 
-    .line 341
+    .line 345
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAlphaDamping:F
 
     iput v0, v7, Lcom/miui/home/recents/util/RectFSpringAnim;->mAlphaDamping:F
 
-    .line 342
+    .line 346
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAlphaStiffness:F
 
     iput v0, v7, Lcom/miui/home/recents/util/RectFSpringAnim;->mAlphaStiffness:F
@@ -2720,7 +2720,7 @@
 .method public end()V
     .locals 2
 
-    .line 602
+    .line 606
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mLooperExecutor:Lcom/miui/home/library/utils/LooperExecutor;
 
     invoke-virtual {v0}, Lcom/miui/home/library/utils/LooperExecutor;->getHandler()Landroid/os/Handler;
@@ -2737,12 +2737,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 603
+    .line 607
     invoke-direct {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->endDirectly()V
 
     goto :goto_0
 
-    .line 605
+    .line 609
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mLooperExecutor:Lcom/miui/home/library/utils/LooperExecutor;
 
@@ -2759,7 +2759,7 @@
 .method public getCenterXProgress()F
     .locals 3
 
-    .line 774
+    .line 778
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTargetRect:Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Landroid/graphics/RectF;->centerX()F
@@ -2780,7 +2780,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 775
+    .line 779
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentCenterX:F
 
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
@@ -2819,7 +2819,7 @@
 .method public getCurrentAlpha()F
     .locals 1
 
-    .line 696
+    .line 700
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentAlpha:F
 
     return v0
@@ -2828,7 +2828,7 @@
 .method public getCurrentRadius()F
     .locals 1
 
-    .line 692
+    .line 696
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRadius:F
 
     return v0
@@ -2837,42 +2837,26 @@
 .method public getCurrentRectF()Landroid/graphics/RectF;
     .locals 1
 
-    .line 688
+    .line 692
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRect:Landroid/graphics/RectF;
 
     return-object v0
 .end method
 
-.method public getDimAlphaByCurrentWidth(F)F
-    .locals 3
-
-    .line 700
-    invoke-static {}, Lcom/miui/home/recents/DimLayer;->getInstance()Lcom/miui/home/recents/DimLayer;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentWidth:F
-
-    .line 701
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    .line 700
-    invoke-virtual {v0, v1, v2, p1}, Lcom/miui/home/recents/DimLayer;->getDimAlphaByRectProgress(FFF)F
-
-    move-result p1
-
-    return p1
-.end method
-
 .method public getPreviousRect()Landroid/graphics/RectF;
     .locals 1
 
-    .line 761
+    .line 765
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mPreviousRect:Landroid/graphics/RectF;
+
+    return-object v0
+.end method
+
+.method public getStartRect()Landroid/graphics/RectF;
+    .locals 1
+
+    .line 310
+    iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
 
     return-object v0
 .end method
@@ -2880,7 +2864,7 @@
 .method public isClosedToTarget(F)Z
     .locals 2
 
-    .line 737
+    .line 741
     iget v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentCenterX:F
 
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTargetRect:Landroid/graphics/RectF;
@@ -2907,7 +2891,7 @@
 
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTargetRect:Landroid/graphics/RectF;
 
-    .line 738
+    .line 742
     invoke-virtual {v1}, Landroid/graphics/RectF;->centerY()F
 
     move-result v1
@@ -2930,7 +2914,7 @@
 
     iget-object v1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTargetRect:Landroid/graphics/RectF;
 
-    .line 739
+    .line 743
     invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
 
     move-result v1
@@ -2963,7 +2947,7 @@
 .method public isRequestCancel()Z
     .locals 1
 
-    .line 793
+    .line 797
     iget-boolean v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRequestCancel:Z
 
     return v0
@@ -2972,7 +2956,7 @@
 .method public isRequestEnd()Z
     .locals 1
 
-    .line 789
+    .line 793
     iget-boolean v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRequestEnd:Z
 
     return v0
@@ -2981,7 +2965,7 @@
 .method public isRunning()Z
     .locals 1
 
-    .line 713
+    .line 717
     iget-boolean v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAnimsStarted:Z
 
     if-eqz v0, :cond_1
@@ -3004,7 +2988,7 @@
 
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectWidthAnim:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    .line 714
+    .line 718
     invoke-virtual {v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->isRunning()Z
 
     move-result v0
@@ -3050,7 +3034,7 @@
 .method public isStart()Z
     .locals 1
 
-    .line 709
+    .line 713
     iget-boolean v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAnimsStarted:Z
 
     return v0
@@ -3059,7 +3043,7 @@
 .method public removeAnimatorListener(Landroid/animation/Animator$AnimatorListener;)V
     .locals 1
 
-    .line 426
+    .line 430
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAnimatorListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
@@ -3070,7 +3054,7 @@
 .method public removeAnimatorListener(Lcom/miui/home/recents/util/RectFSpringAnim$RectFSpringAnimListener;)V
     .locals 1
 
-    .line 430
+    .line 434
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRectFSpringAnimListeners:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
@@ -3081,20 +3065,20 @@
 .method public setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
     .locals 1
 
-    .line 384
+    .line 388
     invoke-direct {p0, p3}, Lcom/miui/home/recents/util/RectFSpringAnim;->getModifyResponse(F)F
 
     move-result p3
 
-    .line 385
+    .line 389
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERX:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     if-ne p1, v0, :cond_0
 
-    .line 386
+    .line 390
     iput p2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterXDamping:F
 
-    .line 387
+    .line 391
     invoke-direct {p0, p3}, Lcom/miui/home/recents/util/RectFSpringAnim;->calculateStiffFromResponse(F)F
 
     move-result p1
@@ -3103,16 +3087,16 @@
 
     goto :goto_0
 
-    .line 388
+    .line 392
     :cond_0
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERY:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     if-ne p1, v0, :cond_1
 
-    .line 389
+    .line 393
     iput p2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterYDamping:F
 
-    .line 390
+    .line 394
     invoke-direct {p0, p3}, Lcom/miui/home/recents/util/RectFSpringAnim;->calculateStiffFromResponse(F)F
 
     move-result p1
@@ -3121,16 +3105,16 @@
 
     goto :goto_0
 
-    .line 391
+    .line 395
     :cond_1
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_WIDTH:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     if-ne p1, v0, :cond_2
 
-    .line 392
+    .line 396
     iput p2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mWidthDamping:F
 
-    .line 393
+    .line 397
     invoke-direct {p0, p3}, Lcom/miui/home/recents/util/RectFSpringAnim;->calculateStiffFromResponse(F)F
 
     move-result p1
@@ -3139,16 +3123,16 @@
 
     goto :goto_0
 
-    .line 394
+    .line 398
     :cond_2
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_RATIO:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     if-ne p1, v0, :cond_3
 
-    .line 395
+    .line 399
     iput p2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRatioDamping:F
 
-    .line 396
+    .line 400
     invoke-direct {p0, p3}, Lcom/miui/home/recents/util/RectFSpringAnim;->calculateStiffFromResponse(F)F
 
     move-result p1
@@ -3157,16 +3141,16 @@
 
     goto :goto_0
 
-    .line 397
+    .line 401
     :cond_3
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RADIUS:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     if-ne p1, v0, :cond_4
 
-    .line 398
+    .line 402
     iput p2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRadiusDamping:F
 
-    .line 399
+    .line 403
     invoke-direct {p0, p3}, Lcom/miui/home/recents/util/RectFSpringAnim;->calculateStiffFromResponse(F)F
 
     move-result p1
@@ -3175,16 +3159,16 @@
 
     goto :goto_0
 
-    .line 400
+    .line 404
     :cond_4
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->ALPHA:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     if-ne p1, v0, :cond_5
 
-    .line 401
+    .line 405
     iput p2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mAlphaDamping:F
 
-    .line 402
+    .line 406
     invoke-direct {p0, p3}, Lcom/miui/home/recents/util/RectFSpringAnim;->calculateStiffFromResponse(F)F
 
     move-result p1
@@ -3199,16 +3183,16 @@
 .method public setMinimumVisibleChange(FFFF)V
     .locals 0
 
-    .line 434
+    .line 438
     iput p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterXMinVisibleChange:F
 
-    .line 435
+    .line 439
     iput p2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCenterYMinVisibleChange:F
 
-    .line 436
+    .line 440
     iput p3, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mWidthMinVisibleChange:F
 
-    .line 437
+    .line 441
     iput p4, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRatioMinVisibleChange:F
 
     return-void
@@ -3217,7 +3201,7 @@
 .method public setMoveToTargetRectWhenAnimEnd(Z)V
     .locals 0
 
-    .line 705
+    .line 709
     iput-boolean p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mMoveToTargetRectWhenAnimEnd:Z
 
     return-void
@@ -3226,7 +3210,7 @@
 .method public setStartAlpha(F)V
     .locals 0
 
-    .line 325
+    .line 329
     iput p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartAlpha:F
 
     return-void
@@ -3235,7 +3219,7 @@
 .method public setStartRadius(F)V
     .locals 0
 
-    .line 321
+    .line 325
     iput p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRadius:F
 
     return-void
@@ -3244,19 +3228,19 @@
 .method public setStartRect(Landroid/graphics/RectF;)V
     .locals 2
 
-    .line 310
+    .line 314
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0, p1}, Landroid/graphics/RectF;-><init>(Landroid/graphics/RectF;)V
 
     iput-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
 
-    .line 311
+    .line 315
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mCurrentRect:Landroid/graphics/RectF;
 
     invoke-virtual {v0, p1}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 312
+    .line 316
     iget-object p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mStartRect:Landroid/graphics/RectF;
 
     invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
@@ -3282,7 +3266,7 @@
     :cond_0
     const-string p1, "RectFSpringAnim"
 
-    .line 313
+    .line 317
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3301,7 +3285,7 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 315
+    .line 319
     new-instance p1, Landroid/graphics/RectF;
 
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mDefaultRect:Landroid/graphics/RectF;
@@ -3317,16 +3301,16 @@
 .method public setVelocity(FFFF)V
     .locals 0
 
-    .line 377
+    .line 381
     iput p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mLeftVelocity:F
 
-    .line 378
+    .line 382
     iput p2, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTopVelocity:F
 
-    .line 379
+    .line 383
     iput p3, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mWidthVelocity:F
 
-    .line 380
+    .line 384
     iput p4, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mRatioVelocity:F
 
     return-void
@@ -3337,7 +3321,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 348
+    .line 352
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERX:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     invoke-direct {p1, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->getPropertyVelocity(Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;)F
@@ -3346,7 +3330,7 @@
 
     iput v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mLeftVelocity:F
 
-    .line 349
+    .line 353
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERY:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     invoke-direct {p1, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->getPropertyVelocity(Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;)F
@@ -3355,7 +3339,7 @@
 
     iput v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mTopVelocity:F
 
-    .line 350
+    .line 354
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_WIDTH:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     invoke-direct {p1, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->getPropertyVelocity(Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;)F
@@ -3364,7 +3348,7 @@
 
     iput v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mWidthVelocity:F
 
-    .line 351
+    .line 355
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_RATIO:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     invoke-direct {p1, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->getPropertyVelocity(Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;)F
@@ -3380,12 +3364,12 @@
 .method public startInGestureThread()V
     .locals 1
 
-    .line 577
+    .line 581
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->GESTURE_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     iput-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mLooperExecutor:Lcom/miui/home/library/utils/LooperExecutor;
 
-    .line 578
+    .line 582
     invoke-direct {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->startAllAnim()V
 
     return-void
@@ -3394,12 +3378,12 @@
 .method public startInMainThread()V
     .locals 1
 
-    .line 582
+    .line 586
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     iput-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mLooperExecutor:Lcom/miui/home/library/utils/LooperExecutor;
 
-    .line 583
+    .line 587
     invoke-direct {p0}, Lcom/miui/home/recents/util/RectFSpringAnim;->startAllAnim()V
 
     return-void
@@ -3408,7 +3392,7 @@
 .method public updateEndRectF(Landroid/graphics/RectF;)V
     .locals 2
 
-    .line 642
+    .line 646
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mLooperExecutor:Lcom/miui/home/library/utils/LooperExecutor;
 
     invoke-virtual {v0}, Lcom/miui/home/library/utils/LooperExecutor;->getHandler()Landroid/os/Handler;
@@ -3425,18 +3409,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 643
+    .line 647
     invoke-direct {p0, p1}, Lcom/miui/home/recents/util/RectFSpringAnim;->updateEndRectFDirectly(Landroid/graphics/RectF;)V
 
     goto :goto_0
 
-    .line 645
+    .line 649
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim;->mLooperExecutor:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$5Dy5RGu-wBCaaBw0exUraL27NII;
+    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$a6uCvAQNz10h_s4OR3B51hxtJss;
 
-    invoke-direct {v1, p0, p1}, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$5Dy5RGu-wBCaaBw0exUraL27NII;-><init>(Lcom/miui/home/recents/util/RectFSpringAnim;Landroid/graphics/RectF;)V
+    invoke-direct {v1, p0, p1}, Lcom/miui/home/recents/util/-$$Lambda$RectFSpringAnim$a6uCvAQNz10h_s4OR3B51hxtJss;-><init>(Lcom/miui/home/recents/util/RectFSpringAnim;Landroid/graphics/RectF;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 

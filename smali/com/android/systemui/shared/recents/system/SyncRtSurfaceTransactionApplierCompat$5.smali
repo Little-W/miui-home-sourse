@@ -27,7 +27,7 @@
 .method constructor <init>(Landroid/view/View;Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 186
+    .line 189
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$5;->val$targetView:Landroid/view/View;
 
     iput-object p2, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$5;->val$callback:Ljava/util/function/Consumer;
@@ -42,12 +42,12 @@
 .method public onViewAttachedToWindow(Landroid/view/View;)V
     .locals 2
 
-    .line 189
+    .line 192
     iget-object p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$5;->val$targetView:Landroid/view/View;
 
     invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    .line 190
+    .line 193
     iget-object p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$5;->val$callback:Ljava/util/function/Consumer;
 
     new-instance v0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;

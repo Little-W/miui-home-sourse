@@ -92,9 +92,9 @@
     invoke-direct {v2, v1, p3, p4, v3}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;-><init>(Landroid/animation/AnimatorSet;JLcom/miui/home/launcher/util/LauncherStateSwitch;)V
 
     .line 132
-    new-instance p3, Lcom/miui/home/recents/-$$Lambda$LauncherActivityControllerHelper$W58YcUVau0hE_xVTTIqyV37BNNM;
+    new-instance p3, Lcom/miui/home/recents/-$$Lambda$LauncherActivityControllerHelper$zR-eUJH32DCz69ne_b_YRQuVVrw;
 
-    invoke-direct {p3, p1, v2, v0, p2}, Lcom/miui/home/recents/-$$Lambda$LauncherActivityControllerHelper$W58YcUVau0hE_xVTTIqyV37BNNM;-><init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/anim/AnimatorPlaybackController;Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/LauncherState;)V
+    invoke-direct {p3, p1, v2, v0, p2}, Lcom/miui/home/recents/-$$Lambda$LauncherActivityControllerHelper$zR-eUJH32DCz69ne_b_YRQuVVrw;-><init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/anim/AnimatorPlaybackController;Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/LauncherState;)V
 
     invoke-virtual {v2, p3}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->setEndAction(Ljava/lang/Runnable;)V
 
@@ -163,7 +163,7 @@
     return-object v0
 .end method
 
-.method static synthetic lambda$createActivityControllerInternal$0(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/anim/AnimatorPlaybackController;Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/LauncherState;)V
+.method static synthetic lambda$createActivityControllerInternal$546(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/anim/AnimatorPlaybackController;Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/LauncherState;)V
     .locals 4
 
     .line 133

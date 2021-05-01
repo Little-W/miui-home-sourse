@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;Landroid/os/Handler;)V
     .locals 0
 
-    .line 363
+    .line 365
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$4;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -30,10 +30,10 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onChange$0(Lcom/miui/home/recents/BaseRecentsImpl$4;)V
+.method public static synthetic lambda$onChange$184(Lcom/miui/home/recents/BaseRecentsImpl$4;)V
     .locals 2
 
-    .line 368
+    .line 370
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$4;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$400(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/NavStubView;
@@ -42,7 +42,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 369
+    .line 371
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$4;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$400(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/NavStubView;
@@ -64,7 +64,7 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 366
+    .line 368
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$4;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -83,12 +83,12 @@
 
     iput-boolean v0, p1, Lcom/miui/home/recents/BaseRecentsImpl;->mHideGestureLine:Z
 
-    .line 367
+    .line 369
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->GESTURE_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance v0, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$4$utJSBwCwHixisX_WrVIoosmONL8;
+    new-instance v0, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$4$2rK0U494626-4ucB1Cnj05TqCug;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$4$utJSBwCwHixisX_WrVIoosmONL8;-><init>(Lcom/miui/home/recents/BaseRecentsImpl$4;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$4$2rK0U494626-4ucB1Cnj05TqCug;-><init>(Lcom/miui/home/recents/BaseRecentsImpl$4;)V
 
     invoke-virtual {p1, v0}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 

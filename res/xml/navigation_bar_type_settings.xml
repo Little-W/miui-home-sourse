@@ -1,24 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen android:title="@string/navigation_type_title"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:miuisettings="http://schemas.android.com/apk/miuisettings">
-    <PreferenceCategory android:title="@string/navigation_type_title">
-        <com.miui.home.recents.settings.NavBarTypeContainerPreference android:key="nav_bar_type_container_preference" />
+<PreferenceScreen
+    android:title="@string/navigation_type_title"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:miuisettings="http://schemas.android.com/apk/miuisettings">
+    <PreferenceCategory
+        android:title="@string/navigation_type_title">
+        <com.miui.home.recents.settings.NavBarTypeContainerPreference
+            android:key="nav_bar_type_container_preference" />
     </PreferenceCategory>
-    <PreferenceCategory android:key="navigation_setting_category">
-        <com.miui.home.settings.preference.CheckBoxPreference android:title="@string/navigation_guide_hide_gesture_line_title" android:key="navigation_hide_gesture_line" android:summary="@string/navigation_guide_hide_gesture_line_summary" />
-        <com.miui.home.settings.preference.CheckBoxPreference android:title="@string/fsg_mistake_touch_title" android:key="fsg_mistake_touch" android:summary="@string/fsg_mistake_touch_summary" />
-        <com.miui.home.settings.preference.CheckBoxPreference android:title="@string/navigation_guide_appswitch_anim_title" android:key="navigation_appswitch_anim" android:summary="@string/navigation_guide_appswitch_anim_summary" />
-        <com.miui.home.settings.preference.CheckBoxPreference android:title="@string/switch_screen_button_order" android:key="switch_screen_button_order" android:summary="@string/switch_screen_button_order_desc" />
-        <com.miui.home.settings.preference.ValuePreference android:title="@string/key_shortcut_settings_title" android:key="button_shortcut" />
-        <com.miui.home.settings.preference.ValuePreference android:title="@string/auto_disable_screenbuttons_title" android:key="audo_disable_screen_buttons" android:summary="@string/auto_disable_screenbuttons_summary" />
+    <PreferenceCategory
+        android:key="navigation_setting_category">
+        <com.miui.home.settings.preference.CheckBoxPreference
+            android:title="@string/navigation_guide_hide_gesture_line_title"
+            android:key="navigation_hide_gesture_line"
+            android:summary="@string/navigation_guide_hide_gesture_line_summary" />
+        <com.miui.home.settings.preference.CheckBoxPreference
+            android:title="@string/fsg_mistake_touch_title"
+            android:key="fsg_mistake_touch"
+            android:summary="@string/fsg_mistake_touch_summary" />
+        <com.miui.home.settings.preference.CheckBoxPreference
+            android:title="@string/navigation_guide_appswitch_anim_title"
+            android:key="navigation_appswitch_anim"
+            android:summary="@string/navigation_guide_appswitch_anim_summary" />
+        <com.miui.home.settings.preference.CheckBoxPreference
+            android:title="@string/switch_screen_button_order"
+            android:key="switch_screen_button_order"
+            android:summary="@string/switch_screen_button_order_desc" />
+        <com.miui.home.settings.preference.ValuePreference
+            android:title="@string/key_shortcut_settings_title"
+            android:key="button_shortcut" />
+        <com.miui.home.settings.preference.ValuePreference
+            android:title="@string/auto_disable_screenbuttons_title"
+            android:key="audo_disable_screen_buttons"
+            android:summary="@string/auto_disable_screenbuttons_summary" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/navigation_guide_settings" android:key="navigation_guide_category">
-        <Preference android:icon="@drawable/navigation_bar_guide_home_without_gs_line" android:layout="@layout/navigation_guide_item" android:title="@string/navigation_guide_home_title" android:key="navigation_guide_home" android:summary="@string/navigation_guide_home_summary" miuisettings:showIcon="true" />
-        <Preference android:icon="@drawable/navigation_bar_guide_recent_without_gs_line" android:layout="@layout/navigation_guide_item" android:title="@string/navigation_guide_recent_title" android:key="navigation_guide_recent" android:summary="@string/navigation_guide_recent_summary" miuisettings:showIcon="true" />
-        <Preference android:icon="@drawable/navigation_bar_guide_back_without_gs_line" android:layout="@layout/navigation_guide_item" android:title="@string/navigation_guide_back_title" android:key="navigation_guide_back" android:summary="@string/navigation_guide_back_summary" miuisettings:showIcon="true" />
-        <Preference android:icon="@drawable/navigation_bar_guide_app_menu_without_gs_line" android:layout="@layout/navigation_guide_item" android:title="@string/navigation_guide_app_title" android:key="navigation_guide_app_menu" android:summary="@string/navigation_guide_app_summary" miuisettings:showIcon="true" />
-        <Preference android:icon="@drawable/navigation_bar_guide_appswitch" android:layout="@layout/navigation_guide_item_without_arrow" android:title="@string/navigation_guide_appswitch_title" android:key="navigation_guide_appswitch" android:summary="@string/navigation_guide_appswitch_summary" miuisettings:showIcon="true" />
-        <Preference android:icon="@drawable/navigation_bar_guide_app_quick_switch_without_gs_line" android:layout="@layout/navigation_guide_item" android:title="@string/navigation_guide_app_quick_switch_title" android:key="navigation_guide_app_quick_switch" android:summary="@string/navigation_guide_app_quick_switch_summary" miuisettings:showIcon="true" />
+    <PreferenceCategory
+        android:title="@string/navigation_guide_settings"
+        android:key="navigation_guide_category">
+        <Preference
+            android:icon="@drawable/navigation_bar_guide_home_without_gs_line"
+            android:layout="@layout/navigation_guide_item"
+            android:title="@string/navigation_guide_home_title"
+            android:key="navigation_guide_home"
+            android:summary="@string/navigation_guide_home_summary"
+            miuisettings:showIcon="true" />
+        <Preference
+            android:icon="@drawable/navigation_bar_guide_recent_without_gs_line"
+            android:layout="@layout/navigation_guide_item"
+            android:title="@string/navigation_guide_recent_title"
+            android:key="navigation_guide_recent"
+            android:summary="@string/navigation_guide_recent_summary"
+            miuisettings:showIcon="true" />
+        <Preference
+            android:icon="@drawable/navigation_bar_guide_back_without_gs_line"
+            android:layout="@layout/navigation_guide_item"
+            android:title="@string/navigation_guide_back_title"
+            android:key="navigation_guide_back"
+            android:summary="@string/navigation_guide_back_summary"
+            miuisettings:showIcon="true" />
+        <Preference
+            android:icon="@drawable/navigation_bar_guide_app_menu_without_gs_line"
+            android:layout="@layout/navigation_guide_item"
+            android:title="@string/navigation_guide_app_title"
+            android:key="navigation_guide_app_menu"
+            android:summary="@string/navigation_guide_app_summary"
+            miuisettings:showIcon="true" />
+        <Preference
+            android:icon="@drawable/navigation_bar_guide_appswitch"
+            android:layout="@layout/navigation_guide_item_without_arrow"
+            android:title="@string/navigation_guide_appswitch_title"
+            android:key="navigation_guide_appswitch"
+            android:summary="@string/navigation_guide_appswitch_summary"
+            miuisettings:showIcon="true" />
+        <Preference
+            android:icon="@drawable/navigation_bar_guide_app_quick_switch_without_gs_line"
+            android:layout="@layout/navigation_guide_item"
+            android:title="@string/navigation_guide_app_quick_switch_title"
+            android:key="navigation_guide_app_quick_switch"
+            android:summary="@string/navigation_guide_app_quick_switch_summary"
+            miuisettings:showIcon="true" />
     </PreferenceCategory>
 </PreferenceScreen>

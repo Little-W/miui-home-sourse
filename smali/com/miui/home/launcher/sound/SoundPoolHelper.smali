@@ -64,7 +64,7 @@
     .line 30
     iget-object v0, p0, Lcom/miui/home/launcher/sound/SoundPoolHelper;->mSoundPool:Landroid/media/SoundPool;
 
-    sget-object v1, Lcom/miui/home/launcher/sound/-$$Lambda$SoundPoolHelper$a9_6UUgcowQAXHvA2cX0yknWevo;->INSTANCE:Lcom/miui/home/launcher/sound/-$$Lambda$SoundPoolHelper$a9_6UUgcowQAXHvA2cX0yknWevo;
+    sget-object v1, Lcom/miui/home/launcher/sound/-$$Lambda$SoundPoolHelper$yWiPEVQLB6w0qncTH30QUW1RwmY;->INSTANCE:Lcom/miui/home/launcher/sound/-$$Lambda$SoundPoolHelper$yWiPEVQLB6w0qncTH30QUW1RwmY;
 
     invoke-virtual {v0, v1}, Landroid/media/SoundPool;->setOnLoadCompleteListener(Landroid/media/SoundPool$OnLoadCompleteListener;)V
 
@@ -99,7 +99,16 @@
     return-void
 .end method
 
-.method static synthetic lambda$new$0(Landroid/media/SoundPool;II)V
+.method static synthetic access$000(Lcom/miui/home/launcher/sound/SoundPoolHelper;)V
+    .locals 0
+
+    .line 13
+    invoke-direct {p0}, Lcom/miui/home/launcher/sound/SoundPoolHelper;->releaseInner()V
+
+    return-void
+.end method
+
+.method static synthetic lambda$new$140(Landroid/media/SoundPool;II)V
     .locals 1
 
     const-string p0, "Launcher.SoundPoolHelper"
@@ -124,7 +133,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$playAsync$1(Lcom/miui/home/launcher/sound/SoundPoolHelper;IF)V
+.method public static synthetic lambda$playAsync$141(Lcom/miui/home/launcher/sound/SoundPoolHelper;IF)V
     .locals 2
 
     .line 43
@@ -219,6 +228,42 @@
     return-void
 .end method
 
+.method private releaseInner()V
+    .locals 3
+
+    const-string v0, "Launcher.SoundPoolHelper"
+
+    .line 67
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "release\uff0cmSoundPool = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/miui/home/launcher/sound/SoundPoolHelper;->mSoundPool:Landroid/media/SoundPool;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 68
+    iget-object v0, p0, Lcom/miui/home/launcher/sound/SoundPoolHelper;->mSoundPool:Landroid/media/SoundPool;
+
+    if-eqz v0, :cond_0
+
+    .line 69
+    invoke-virtual {v0}, Landroid/media/SoundPool;->release()V
+
+    :cond_0
+    return-void
+.end method
+
 
 # virtual methods
 .method public playAsync(I)V
@@ -236,26 +281,24 @@
     .locals 1
 
     .line 42
-    new-instance v0, Lcom/miui/home/launcher/sound/-$$Lambda$SoundPoolHelper$XcQZ064kHtdlZaOaKhVLzeqkXu8;
+    new-instance v0, Lcom/miui/home/launcher/sound/-$$Lambda$SoundPoolHelper$la-5wJZVqSh4ujs_D9B64HGHS18;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/sound/-$$Lambda$SoundPoolHelper$XcQZ064kHtdlZaOaKhVLzeqkXu8;-><init>(Lcom/miui/home/launcher/sound/SoundPoolHelper;IF)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/sound/-$$Lambda$SoundPoolHelper$la-5wJZVqSh4ujs_D9B64HGHS18;-><init>(Lcom/miui/home/launcher/sound/SoundPoolHelper;IF)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method public release()V
+.method public releaseAsync()V
     .locals 1
 
     .line 58
-    iget-object v0, p0, Lcom/miui/home/launcher/sound/SoundPoolHelper;->mSoundPool:Landroid/media/SoundPool;
+    new-instance v0, Lcom/miui/home/launcher/sound/SoundPoolHelper$1;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/sound/SoundPoolHelper$1;-><init>(Lcom/miui/home/launcher/sound/SoundPoolHelper;)V
 
-    .line 59
-    invoke-virtual {v0}, Landroid/media/SoundPool;->release()V
+    invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
-    :cond_0
     return-void
 .end method

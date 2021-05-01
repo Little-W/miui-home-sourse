@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="edit_mode_workspace_thumbnail_view_height">93.5dip</dimen>
-    <dimen name="edit_mode_workspace_thumbnail_view_width">128.0dip</dimen>
-    <dimen name="editing_entry_thumbnail_view_height">144.0dip</dimen>
-    <dimen name="editing_entry_thumbnail_view_margin_left_right">342.0dip</dimen>
-    <dimen name="editing_panel_height">140.0dip</dimen>
-</resources>

@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method static synthetic lambda$null$1()Z
+.method static synthetic lambda$null$458()Z
     .locals 1
 
     .line 95
@@ -27,7 +27,7 @@
     return v0
 .end method
 
-.method static synthetic lambda$startUserGuide$0(Landroid/content/Context;Ljava/util/HashSet;Ljava/lang/Void;)Lcom/miui/home/launcher/ShortcutIcon;
+.method static synthetic lambda$startUserGuide$457(Landroid/content/Context;Ljava/util/HashSet;Ljava/lang/Void;)Lcom/miui/home/launcher/ShortcutIcon;
     .locals 4
 
     .line 33
@@ -158,7 +158,7 @@
     return-object v0
 .end method
 
-.method static synthetic lambda$startUserGuide$2(Landroid/content/Context;Lcom/miui/home/launcher/ShortcutIcon;)V
+.method static synthetic lambda$startUserGuide$459(Landroid/content/Context;Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 5
 
     if-eqz p1, :cond_1
@@ -379,7 +379,7 @@
 
     move-result-object p0
 
-    sget-object p1, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$zC_QdZnvjGirts1nGS7P-VNUUys;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$zC_QdZnvjGirts1nGS7P-VNUUys;
+    sget-object p1, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$6YFe5hs5GrvAcSD2ARmUoJHLNKk;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$6YFe5hs5GrvAcSD2ARmUoJHLNKk;
 
     invoke-virtual {p0, v0, v3, p1}, Lcom/market/sdk/homeguide/AppstoreUserGuide;->tryShowUserGuide(Landroid/graphics/Bitmap;Lcom/market/sdk/homeguide/HomeUserGuideData;Lcom/market/sdk/homeguide/Interceptor;)V
 
@@ -407,13 +407,13 @@
     .end annotation
 
     .line 32
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$t7BlaIGKgmkt9kUWL6MRc3mAIFo;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$c0QVlBTcd0T-VjqJ46WX3eZKo2s;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$t7BlaIGKgmkt9kUWL6MRc3mAIFo;-><init>(Landroid/content/Context;Ljava/util/HashSet;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$c0QVlBTcd0T-VjqJ46WX3eZKo2s;-><init>(Landroid/content/Context;Ljava/util/HashSet;)V
 
-    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$zCup2OULrhcJJao3PwWnOq-cLLI;
+    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$MMUTIg6zJRNOTUpuJO4V-jpG0Ec;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$zCup2OULrhcJJao3PwWnOq-cLLI;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$MMUTIg6zJRNOTUpuJO4V-jpG0Ec;-><init>(Landroid/content/Context;)V
 
     const/4 p0, 0x0
 

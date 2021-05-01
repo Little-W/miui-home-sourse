@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/commercial/recommend/RecommendController;Lcom/miui/home/launcher/CommercialRemoteShortcutInfo;)V
     .locals 0
 
-    .line 339
+    .line 361
     iput-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$1;->this$0:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     iput-object p2, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$1;->val$item:Lcom/miui/home/launcher/CommercialRemoteShortcutInfo;
@@ -51,7 +51,7 @@
 .method public test(Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)Z
     .locals 1
 
-    .line 342
+    .line 364
     invoke-virtual {p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -72,7 +72,7 @@
 .method public bridge synthetic test(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 339
+    .line 361
     check-cast p1, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendController$1;->test(Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)Z

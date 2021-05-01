@@ -17,7 +17,15 @@
 
 
 # virtual methods
-.method public fillGAID(Ljava/lang/String;)Z
+.method public isCustomDauEvent(Ljava/lang/String;)Z
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public isRecommendEvent(Ljava/lang/String;)Z
     .locals 0
 
     const/4 p1, 0x0

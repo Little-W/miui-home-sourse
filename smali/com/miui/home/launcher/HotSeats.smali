@@ -500,7 +500,7 @@
     return p1
 .end method
 
-.method public static synthetic lambda$pushItem$0(Lcom/miui/home/launcher/HotSeats;Lcom/miui/home/launcher/ItemInfo;)Landroid/view/View;
+.method public static synthetic lambda$pushItem$117(Lcom/miui/home/launcher/HotSeats;Lcom/miui/home/launcher/ItemInfo;)Landroid/view/View;
     .locals 1
 
     .line 445
@@ -513,7 +513,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$pushItem$1(Lcom/miui/home/launcher/HotSeats;IZZLandroid/view/View;)V
+.method public static synthetic lambda$pushItem$118(Lcom/miui/home/launcher/HotSeats;IZZLandroid/view/View;)V
     .locals 0
 
     .line 446
@@ -877,7 +877,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080096
+    const v1, 0x7f0800a5
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -999,7 +999,7 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 631
+    .line 628
     iget-object v0, p0, Lcom/miui/home/launcher/HotSeats;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getMinusOneScreenView()Lcom/miui/home/launcher/MinusOneScreenView;
@@ -1012,7 +1012,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/HotSeats;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 632
+    .line 629
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getMinusOneScreenView()Lcom/miui/home/launcher/MinusOneScreenView;
 
     move-result-object v0
@@ -1025,7 +1025,7 @@
 
     return v1
 
-    .line 635
+    .line 632
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/HotSeats;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -1037,7 +1037,7 @@
 
     return v1
 
-    .line 638
+    .line 635
     :cond_1
     invoke-super {p0, p1}, Lcom/miui/home/launcher/ScreenView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -1106,7 +1106,7 @@
         }
     .end annotation
 
-    .line 647
+    .line 644
     invoke-static {p0}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawableUtils;->getAllShortcutIconsFromParent(Landroid/view/ViewGroup;)Ljava/util/List;
 
     move-result-object v0
@@ -1787,7 +1787,7 @@
     .line 67
     iget-object v0, p0, Lcom/miui/home/launcher/HotSeats;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f08012a
+    const v1, 0x7f080139
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/common/Utilities;->loadThemeCompatibleDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -2038,16 +2038,10 @@
     return-void
 .end method
 
-.method public onScreenOrientationChanged()V
-    .locals 0
-
-    return-void
-.end method
-
 .method public onScreenSizeChanged()V
     .locals 0
 
-    .line 642
+    .line 639
     invoke-virtual {p0}, Lcom/miui/home/launcher/HotSeats;->requestLayout()V
 
     return-void
@@ -2056,7 +2050,7 @@
 .method protected onVerticalFling(IFF)V
     .locals 2
 
-    .line 626
+    .line 623
     iget-object v0, p0, Lcom/miui/home/launcher/HotSeats;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -2087,7 +2081,7 @@
 .method protected onVerticalGesture(ILandroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 621
+    .line 618
     iget-object v0, p0, Lcom/miui/home/launcher/HotSeats;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -2215,13 +2209,13 @@
 
     move-result-object p5
 
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$HotSeats$u2cxphkmcv_v15ofcEm7QGD8c1g;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$HotSeats$K70KBWO6iQBPUc_0L4crs4YCw0I;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$HotSeats$u2cxphkmcv_v15ofcEm7QGD8c1g;-><init>(Lcom/miui/home/launcher/HotSeats;Lcom/miui/home/launcher/ItemInfo;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$HotSeats$K70KBWO6iQBPUc_0L4crs4YCw0I;-><init>(Lcom/miui/home/launcher/HotSeats;Lcom/miui/home/launcher/ItemInfo;)V
 
-    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$HotSeats$eCL4DkfJrmTELJ9G0AGe5SOQhpg;
+    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$HotSeats$RbTu2ny8T7n-DxC4r-ymr7gqIz4;
 
-    invoke-direct {p1, p0, p2, p3, p4}, Lcom/miui/home/launcher/-$$Lambda$HotSeats$eCL4DkfJrmTELJ9G0AGe5SOQhpg;-><init>(Lcom/miui/home/launcher/HotSeats;IZZ)V
+    invoke-direct {p1, p0, p2, p3, p4}, Lcom/miui/home/launcher/-$$Lambda$HotSeats$RbTu2ny8T7n-DxC4r-ymr7gqIz4;-><init>(Lcom/miui/home/launcher/HotSeats;IZZ)V
 
     invoke-virtual {p5, v0, p1}, Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;->inflateViewAsync(Ljava/util/function/Supplier;Ljava/util/function/Consumer;)V
 

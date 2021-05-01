@@ -146,7 +146,7 @@
     return p0
 .end method
 
-.method static synthetic lambda$onBindViewHolder$0(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;Landroid/graphics/drawable/Drawable;)V
+.method static synthetic lambda$onBindViewHolder$321(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
     .line 124
@@ -160,7 +160,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onBindViewHolder$1(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;Lcom/miui/home/launcher/AppInfo;Landroid/view/View;)V
+.method public static synthetic lambda$onBindViewHolder$322(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;Lcom/miui/home/launcher/AppInfo;Landroid/view/View;)V
     .locals 1
 
     const/4 p3, 0x1
@@ -492,9 +492,9 @@
 
     move-result-object v3
 
-    new-instance v4, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectAdapter$4FX0jzEc3aPYcIsM0RoayGuvdtQ;
+    new-instance v4, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectAdapter$pE-lv_fvGnEcLKSqgM9Wdz9nQrA;
 
-    invoke-direct {v4, p1}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectAdapter$4FX0jzEc3aPYcIsM0RoayGuvdtQ;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;)V
+    invoke-direct {v4, p1}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectAdapter$pE-lv_fvGnEcLKSqgM9Wdz9nQrA;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;)V
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/miui/home/launcher/AppInfo;->getIconAsync(Landroid/content/Context;Lcom/miui/home/launcher/IconCache;Landroid/graphics/drawable/Drawable;Ljava/util/function/Consumer;)V
 
@@ -535,9 +535,9 @@
     .line 131
     iget-object p2, p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->itemView:Landroid/view/View;
 
-    new-instance v1, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectAdapter$cQU2JFoletsvvrgenri9S2QoPEc;
+    new-instance v1, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectAdapter$fBWZIHXkfCLBIrkCUqmhEtXZxHU;
 
-    invoke-direct {v1, p0, p1, v0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectAdapter$cQU2JFoletsvvrgenri9S2QoPEc;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;Lcom/miui/home/launcher/AppInfo;)V
+    invoke-direct {v1, p0, p1, v0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectAdapter$fBWZIHXkfCLBIrkCUqmhEtXZxHU;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;Lcom/miui/home/launcher/AppInfo;)V
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -656,7 +656,7 @@
     :pswitch_2
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d002a
+    const v1, 0x7f0d002b
 
     invoke-virtual {p2, v1, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 

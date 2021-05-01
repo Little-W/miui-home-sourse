@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/install/AutoInstallsLayout;)V
     .locals 1
 
-    .line 530
+    .line 535
     invoke-static {p1}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$1100(Lcom/miui/home/launcher/install/AutoInstallsLayout;)Landroid/util/ArrayMap;
 
     move-result-object v0
@@ -58,12 +58,12 @@
         }
     .end annotation
 
-    .line 533
+    .line 538
     iput-object p1, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$FolderParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 534
+    .line 539
     iput-object p2, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$FolderParser;->mFolderElements:Landroid/util/ArrayMap;
 
     return-void
@@ -84,14 +84,14 @@
 
     const/4 v1, 0x0
 
-    .line 540
+    .line 545
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$600(Landroid/content/res/XmlResourceParser;Ljava/lang/String;I)I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 542
+    .line 547
     iget-object v2, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$FolderParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
     invoke-static {v2}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$700(Lcom/miui/home/launcher/install/AutoInstallsLayout;)Landroid/content/res/Resources;
@@ -107,19 +107,19 @@
     :cond_0
     const-string v0, "title"
 
-    .line 544
+    .line 549
     invoke-static {p1, v0}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 545
+    .line 550
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 546
+    .line 551
     iget-object v0, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$FolderParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
     invoke-static {v0}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$400(Lcom/miui/home/launcher/install/AutoInstallsLayout;)Landroid/content/Context;
@@ -130,7 +130,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f10010c
+    const v2, 0x7f10010d
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -140,14 +140,14 @@
     :goto_0
     const-string v2, "title"
 
-    .line 549
+    .line 555
     invoke-virtual {p3, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "label"
 
     const-string v2, "title"
 
-    .line 550
+    .line 556
     invoke-static {p1, v2}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -158,7 +158,7 @@
 
     const/4 v2, 0x2
 
-    .line 551
+    .line 557
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -169,7 +169,7 @@
 
     const/4 v3, 0x1
 
-    .line 552
+    .line 558
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -178,7 +178,7 @@
 
     const-string v0, "spanY"
 
-    .line 553
+    .line 559
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -189,7 +189,7 @@
 
     const/4 v3, 0x0
 
-    .line 554
+    .line 560
     invoke-static {p2, v0, v3, p3}, Lcom/miui/home/launcher/LauncherProvider;->safelyInsertDatabase(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide v3
@@ -204,14 +204,14 @@
 
     const-string p2, "Unable to add folder"
 
-    .line 556
+    .line 562
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     const-wide/16 p1, -0x1
 
     return-wide p1
 
-    .line 560
+    .line 566
     :cond_2
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
@@ -219,7 +219,7 @@
 
     const-string v5, "profileId"
 
-    .line 561
+    .line 567
     invoke-virtual {p3, v5}, Landroid/content/ContentValues;->getAsLong(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v5
@@ -228,7 +228,7 @@
 
     move-result-wide v5
 
-    .line 563
+    .line 569
     :goto_1
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->next()I
 
@@ -238,7 +238,7 @@
 
     if-ne v7, v8, :cond_4
 
-    .line 564
+    .line 570
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v8
@@ -256,13 +256,13 @@
 
     goto :goto_1
 
-    .line 568
+    .line 574
     :cond_5
     invoke-virtual {p3}, Landroid/content/ContentValues;->clear()V
 
     const-string v7, "profileId"
 
-    .line 569
+    .line 575
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v8
@@ -271,7 +271,7 @@
 
     const-string v7, "container"
 
-    .line 570
+    .line 576
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v8
@@ -282,14 +282,14 @@
 
     add-int/lit8 v8, v1, 0x1
 
-    .line 571
+    .line 577
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-virtual {p3, v7, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 573
+    .line 579
     iget-object v1, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$FolderParser;->mFolderElements:Landroid/util/ArrayMap;
 
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
@@ -304,14 +304,14 @@
 
     if-eqz v1, :cond_6
 
-    .line 575
+    .line 581
     invoke-interface {v1, p1, p2, p3}, Lcom/miui/home/launcher/install/AutoInstallsLayout$TagParser;->parseAndAdd(Landroid/content/res/XmlResourceParser;Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;)J
 
     move v1, v8
 
     goto :goto_1
 
-    .line 577
+    .line 583
     :cond_6
     new-instance p2, Ljava/lang/RuntimeException;
 

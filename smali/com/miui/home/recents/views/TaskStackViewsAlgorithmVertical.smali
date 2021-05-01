@@ -151,7 +151,7 @@
 
     .line 127
     :goto_0
-    invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmVertical;->isLandscape()Z
+    invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmVertical;->isLandscapeVisually()Z
 
     move-result p1
 
@@ -654,7 +654,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmVertical;->isLandscape()Z
+    invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmVertical;->isLandscapeVisually()Z
 
     move-result v0
 
@@ -725,7 +725,7 @@
 
     .line 139
     :cond_0
-    invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmVertical;->isLandscape()Z
+    invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmVertical;->isLandscapeVisually()Z
 
     move-result v0
 
@@ -1035,7 +1035,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070201
+    const v1, 0x7f070205
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

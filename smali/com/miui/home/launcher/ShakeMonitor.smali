@@ -64,7 +64,7 @@
     iput-object v0, p0, Lcom/miui/home/launcher/ShakeMonitor;->mFolderStateChangedMessageHandler:Lcom/miui/home/launcher/ShakeMonitor$FolderStateChangedMessageHandler;
 
     .line 45
-    sget-object v0, Lcom/miui/home/launcher/-$$Lambda$ShakeMonitor$EmoSNv4qS86GTMJXodQ6SJQ8qCw;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$ShakeMonitor$EmoSNv4qS86GTMJXodQ6SJQ8qCw;
+    sget-object v0, Lcom/miui/home/launcher/-$$Lambda$ShakeMonitor$sbay_8bo8sZ_reWgZTX8UrY0ymI;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$ShakeMonitor$sbay_8bo8sZ_reWgZTX8UrY0ymI;
 
     iput-object v0, p0, Lcom/miui/home/launcher/ShakeMonitor;->mShowShakeToast:Ljava/lang/Runnable;
 
@@ -102,7 +102,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$new$1()V
+.method static synthetic lambda$new$162()V
     .locals 3
 
     .line 46
@@ -133,9 +133,9 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 49
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ShakeMonitor$MQ0zsydjROex-xIQbO39-eoctY8;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ShakeMonitor$83aYTyEsYkdrACF4xJmsJKMW_Ww;
 
-    invoke-direct {v1, v0}, Lcom/miui/home/launcher/-$$Lambda$ShakeMonitor$MQ0zsydjROex-xIQbO39-eoctY8;-><init>(Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {v1, v0}, Lcom/miui/home/launcher/-$$Lambda$ShakeMonitor$83aYTyEsYkdrACF4xJmsJKMW_Ww;-><init>(Lcom/miui/home/launcher/Launcher;)V
 
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->useLauncherToRunOnUiThread(Ljava/lang/Runnable;)Z
 
@@ -143,10 +143,10 @@
     return-void
 .end method
 
-.method static synthetic lambda$null$0(Lcom/miui/home/launcher/Launcher;)V
+.method static synthetic lambda$null$161(Lcom/miui/home/launcher/Launcher;)V
     .locals 2
 
-    const v0, 0x7f100236
+    const v0, 0x7f100238
 
     const/4 v1, 0x0
 
@@ -156,7 +156,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onEditModeStateChanged$2(Lcom/miui/home/launcher/ShakeMonitor;)V
+.method public static synthetic lambda$onEditModeStateChanged$163(Lcom/miui/home/launcher/ShakeMonitor;)V
     .locals 3
 
     .line 54
@@ -337,9 +337,9 @@
     .locals 1
 
     .line 54
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ShakeMonitor$2nZTxdcDkotzApymKl_tF3xriuU;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ShakeMonitor$Mic1Y17PK7vSo_R7bilvfChF3xU;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$ShakeMonitor$2nZTxdcDkotzApymKl_tF3xriuU;-><init>(Lcom/miui/home/launcher/ShakeMonitor;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$ShakeMonitor$Mic1Y17PK7vSo_R7bilvfChF3xU;-><init>(Lcom/miui/home/launcher/ShakeMonitor;)V
 
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/ShakeMonitor;->startOrStopMonitor(Ljava/lang/Runnable;)V
 

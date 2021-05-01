@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/recents/NavStubView;->lambda$resetTaskView$6()V
+    value = Lcom/miui/home/recents/NavStubView;->lambda$resetTaskView$234()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

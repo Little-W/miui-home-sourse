@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method static synthetic lambda$tellThemeLockWallpaperPath$0(Ljava/lang/String;Landroid/content/Context;)V
+.method static synthetic lambda$tellThemeLockWallpaperPath$461(Ljava/lang/String;Landroid/content/Context;)V
     .locals 3
 
     const-string v0, "content://com.android.thememanager.provider/lockscreen"
@@ -34,9 +34,9 @@
     .locals 1
 
     .line 23
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$ThemeUtils$STWK4TI6q5m33hNbaDrz4yR-X8o;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$ThemeUtils$oHjNn9gRNdPhHMrM4x9F9GCpEqE;
 
-    invoke-direct {v0, p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$ThemeUtils$STWK4TI6q5m33hNbaDrz4yR-X8o;-><init>(Ljava/lang/String;Landroid/content/Context;)V
+    invoke-direct {v0, p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$ThemeUtils$oHjNn9gRNdPhHMrM4x9F9GCpEqE;-><init>(Ljava/lang/String;Landroid/content/Context;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

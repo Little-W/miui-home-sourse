@@ -88,7 +88,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onChange$0(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;II)V
+.method public static synthetic lambda$onChange$316(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;II)V
     .locals 10
 
     .line 224
@@ -509,13 +509,13 @@
 
     move-result-object v1
 
-    new-instance v12, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$O0oJNP8-UJawB7BHQePMWLeLHl8;
+    new-instance v12, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$TLJRglRoeqe0ZV2zVE345QC3ZBs;
 
     move-object v2, v12
 
     move-object v3, p0
 
-    invoke-direct/range {v2 .. v11}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$O0oJNP8-UJawB7BHQePMWLeLHl8;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;II)V
+    invoke-direct/range {v2 .. v11}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$TLJRglRoeqe0ZV2zVE345QC3ZBs;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;II)V
 
     invoke-virtual {v1, v12}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

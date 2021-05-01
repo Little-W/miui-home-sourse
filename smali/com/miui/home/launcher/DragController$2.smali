@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DragController;)V
     .locals 0
 
-    .line 947
+    .line 966
     iput-object p1, p0, Lcom/miui/home/launcher/DragController$2;->this$0:Lcom/miui/home/launcher/DragController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 947
+    .line 966
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragController$2;->get()Ljava/lang/String;
 
     move-result-object v0
@@ -58,7 +58,7 @@
 .method public get()Ljava/lang/String;
     .locals 4
 
-    .line 950
+    .line 969
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -73,7 +73,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/DragController$2;->this$0:Lcom/miui/home/launcher/DragController;
 
-    .line 951
+    .line 970
     invoke-static {v2}, Lcom/miui/home/launcher/DragController;->access$000(Lcom/miui/home/launcher/DragController;)Lcom/miui/home/launcher/DragObject;
 
     move-result-object v2
@@ -88,7 +88,7 @@
 
     const v2, 0x7f100063
 
-    .line 950
+    .line 969
     invoke-virtual {v0, v2, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

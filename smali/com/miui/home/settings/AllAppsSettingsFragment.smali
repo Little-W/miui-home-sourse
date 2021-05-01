@@ -78,7 +78,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100147
+    const v1, 0x7f100148
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -91,7 +91,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100146
+    const v1, 0x7f100147
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -104,7 +104,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100148
+    const v1, 0x7f100149
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -315,7 +315,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onCreatePreferences$0(Lcom/miui/home/settings/AllAppsSettingsFragment;Ljava/lang/Void;)Ljava/lang/Void;
+.method public static synthetic lambda$onCreatePreferences$499(Lcom/miui/home/settings/AllAppsSettingsFragment;Ljava/lang/Void;)Ljava/lang/Void;
     .locals 0
 
     .line 117
@@ -330,7 +330,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$onCreatePreferences$1(Lcom/miui/home/settings/AllAppsSettingsFragment;Ljava/lang/Void;)V
+.method public static synthetic lambda$onCreatePreferences$500(Lcom/miui/home/settings/AllAppsSettingsFragment;Ljava/lang/Void;)V
     .locals 1
 
     .line 120
@@ -405,7 +405,7 @@
 
     invoke-direct {v1, p0}, Lcom/miui/home/settings/AllAppsSettingsFragment$2;-><init>(Lcom/miui/home/settings/AllAppsSettingsFragment;)V
 
-    const v2, 0x7f100155
+    const v2, 0x7f100156
 
     .line 237
     invoke-virtual {v0, v2, v1}, Lmiui/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;
@@ -662,13 +662,13 @@
     invoke-virtual {p1, v2}, Landroidx/preference/PreferenceCategory;->removePreference(Landroidx/preference/Preference;)Z
 
     .line 116
-    new-instance p1, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$SG5FSG_DFTev2p_bqPDdoaakadE;
+    new-instance p1, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$mddXq_PL-kfvp4aryEHXfiiPWN8;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$SG5FSG_DFTev2p_bqPDdoaakadE;-><init>(Lcom/miui/home/settings/AllAppsSettingsFragment;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$mddXq_PL-kfvp4aryEHXfiiPWN8;-><init>(Lcom/miui/home/settings/AllAppsSettingsFragment;)V
 
-    new-instance v2, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$fsZqevwVoVrq6EG1aSdtNO7AsZU;
+    new-instance v2, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$CNqxbt7RyJI3EDhl7g-RJnnePxs;
 
-    invoke-direct {v2, p0}, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$fsZqevwVoVrq6EG1aSdtNO7AsZU;-><init>(Lcom/miui/home/settings/AllAppsSettingsFragment;)V
+    invoke-direct {v2, p0}, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$CNqxbt7RyJI3EDhl7g-RJnnePxs;-><init>(Lcom/miui/home/settings/AllAppsSettingsFragment;)V
 
     const/4 v3, 0x0
 

@@ -26,7 +26,7 @@
 .method constructor <init>(Lcom/miui/home/recents/util/RemoteAnimationTargetSet;ZLcom/miui/home/recents/views/TaskView;)V
     .locals 0
 
-    .line 188
+    .line 189
     iput-object p1, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$openingTargets:Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
 
     iput-boolean p2, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$skipViewChanges:Z
@@ -38,12 +38,12 @@
     return-void
 .end method
 
-.method static synthetic lambda$onAnimationEnd$0(Lcom/miui/home/recents/views/TaskView;)V
+.method static synthetic lambda$onAnimationEnd$518(Lcom/miui/home/recents/views/TaskView;)V
     .locals 1
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 201
+    .line 202
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->setChildrenViewAlpha(F)V
 
     return-void
@@ -54,28 +54,28 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 199
+    .line 200
     iget-object p1, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$openingTargets:Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->release()V
 
-    .line 200
+    .line 201
     iget-boolean p1, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$skipViewChanges:Z
 
     if-nez p1, :cond_0
 
-    .line 201
+    .line 202
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     iget-object v0, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$taskView:Lcom/miui/home/recents/views/TaskView;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$1$nRsKTMBDeLDFN1AMfmALFf31QPw;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$1$iRBdgPYqcW1r8bXk8rc9E3FIHjY;
 
-    invoke-direct {v1, v0}, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$1$nRsKTMBDeLDFN1AMfmALFf31QPw;-><init>(Lcom/miui/home/recents/views/TaskView;)V
+    invoke-direct {v1, v0}, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$1$iRBdgPYqcW1r8bXk8rc9E3FIHjY;-><init>(Lcom/miui/home/recents/views/TaskView;)V
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 203
+    .line 204
     :cond_0
     invoke-static {}, Lcom/miui/home/recents/util/TraceUtils;->endSection()V
 
@@ -87,10 +87,10 @@
 
     const-string p1, "openAppAnimFromRecents"
 
-    .line 191
+    .line 192
     invoke-static {p1}, Lcom/miui/home/recents/util/TraceUtils;->beginSection(Ljava/lang/String;)V
 
-    .line 192
+    .line 193
     iget-object p1, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$openingTargets:Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
 
     if-eqz p1, :cond_0
@@ -101,7 +101,7 @@
 
     if-nez p1, :cond_0
 
-    .line 193
+    .line 194
     invoke-static {}, Lcom/miui/home/recents/DimLayer;->getInstance()Lcom/miui/home/recents/DimLayer;
 
     move-result-object p1

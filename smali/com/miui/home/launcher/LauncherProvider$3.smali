@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherProvider;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 697
+    .line 682
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherProvider$3;->this$0:Lcom/miui/home/launcher/LauncherProvider;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherProvider$3;->val$runnable:Ljava/lang/Runnable;
@@ -42,23 +42,23 @@
 .method public run()V
     .locals 2
 
-    .line 700
+    .line 685
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherProvider$3;->val$runnable:Ljava/lang/Runnable;
 
     monitor-enter v0
 
-    .line 701
+    .line 686
     :try_start_0
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherProvider$3;->val$runnable:Ljava/lang/Runnable;
 
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    .line 702
+    .line 687
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherProvider$3;->val$runnable:Ljava/lang/Runnable;
 
     invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
-    .line 703
+    .line 688
     monitor-exit v0
 
     return-void

@@ -3,12 +3,12 @@
 .source "FolderIcon.java"
 
 # interfaces
-.implements Lio/reactivex2/functions/Consumer;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/FolderIcon;->loadItemIcons(Z)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/launcher/FolderIcon;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,30 +16,17 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lio/reactivex2/functions/Consumer<",
-        "Landroid/graphics/drawable/Drawable;",
-        ">;"
-    }
-.end annotation
-
 
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/FolderIcon;
 
-.field final synthetic val$currentIndex:I
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/FolderIcon;I)V
+.method constructor <init>(Lcom/miui/home/launcher/FolderIcon;)V
     .locals 0
 
-    .line 323
+    .line 326
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$5;->this$0:Lcom/miui/home/launcher/FolderIcon;
-
-    iput p2, p0, Lcom/miui/home/launcher/FolderIcon$5;->val$currentIndex:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,42 +35,47 @@
 
 
 # virtual methods
-.method public accept(Landroid/graphics/drawable/Drawable;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
+.method public run()V
+    .locals 3
 
-    .line 326
+    .line 329
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$5;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$300(Lcom/miui/home/launcher/FolderIcon;)[Lcom/miui/home/launcher/FolderIcon$PreviewIconView;
+    invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$200(Lcom/miui/home/launcher/FolderIcon;)Landroid/animation/ValueAnimator;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/miui/home/launcher/FolderIcon$5;->val$currentIndex:I
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    aget-object v0, v0, v1
+    .line 330
+    iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$5;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$300(Lcom/miui/home/launcher/FolderIcon;)Lcom/miui/home/launcher/Launcher;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public bridge synthetic accept(Ljava/lang/Object;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;
 
-    .line 323
-    check-cast p1, Landroid/graphics/drawable/Drawable;
+    move-result-object v0
 
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderIcon$5;->accept(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0}, Lcom/miui/home/launcher/FolderCling;->prepareAutoOpening()V
+
+    .line 331
+    iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$5;->this$0:Lcom/miui/home/launcher/FolderIcon;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$300(Lcom/miui/home/launcher/FolderIcon;)Lcom/miui/home/launcher/Launcher;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/launcher/FolderIcon$5;->this$0:Lcom/miui/home/launcher/FolderIcon;
+
+    invoke-static {v1}, Lcom/miui/home/launcher/FolderIcon;->access$400(Lcom/miui/home/launcher/FolderIcon;)Lcom/miui/home/launcher/FolderInfo;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/Launcher;->openFolder(Lcom/miui/home/launcher/FolderInfo;Landroid/view/View;)V
 
     return-void
 .end method

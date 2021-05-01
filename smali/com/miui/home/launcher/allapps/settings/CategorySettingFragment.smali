@@ -54,7 +54,7 @@
     return-object p0
 .end method
 
-.method public static synthetic lambda$onClick$1(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;Landroid/content/DialogInterface;I)V
+.method public static synthetic lambda$onClick$355(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;Landroid/content/DialogInterface;I)V
     .locals 0
 
     .line 125
@@ -110,7 +110,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onViewCreated$0(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;Landroid/view/View;)V
+.method public static synthetic lambda$onViewCreated$354(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;Landroid/view/View;)V
     .locals 1
 
     .line 88
@@ -127,7 +127,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$removeCategory$2(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;ILandroid/content/DialogInterface;I)V
+.method public static synthetic lambda$removeCategory$356(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;ILandroid/content/DialogInterface;I)V
     .locals 1
 
     .line 181
@@ -294,23 +294,23 @@
 
     invoke-direct {p1, v0, v1}, Lmiui/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v0, 0x7f10021f
+    const v0, 0x7f100220
 
     .line 122
     invoke-virtual {p1, v0}, Lmiui/app/AlertDialog$Builder;->setTitle(I)Lmiui/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    const v0, 0x7f10021e
+    const v0, 0x7f10021f
 
     .line 123
     invoke-virtual {p1, v0}, Lmiui/app/AlertDialog$Builder;->setMessage(I)Lmiui/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    new-instance v0, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$ART2aIcoi0uR2tyXp0IXAWCr264;
+    new-instance v0, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$EGBlC0Uz4TvRf0EFneE9_rbOH8I;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$ART2aIcoi0uR2tyXp0IXAWCr264;-><init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$EGBlC0Uz4TvRf0EFneE9_rbOH8I;-><init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;)V
 
     const v1, 0x104000a
 
@@ -357,7 +357,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f10016f
+    const v0, 0x7f100170
 
     invoke-virtual {p1, v0}, Landroid/app/Activity;->setTitle(I)V
 
@@ -487,7 +487,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const p3, 0x7f0d0040
+    const p3, 0x7f0d0045
 
     const/4 v0, 0x0
 
@@ -627,9 +627,9 @@
     .line 87
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategorySwitchContainer:Landroid/widget/LinearLayout;
 
-    new-instance v0, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$o6hmby-2HnTU_IkkQFeWbJESsw8;
+    new-instance v0, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$hxU5Pw7ZXgmQij3qQQo7r-DV3e4;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$o6hmby-2HnTU_IkkQFeWbJESsw8;-><init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$hxU5Pw7ZXgmQij3qQQo7r-DV3e4;-><init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;)V
 
     invoke-virtual {p2, v0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -757,25 +757,25 @@
 
     invoke-direct {v0, v1, v2}, Lmiui/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v1, 0x7f1000db
+    const v1, 0x7f1000dc
 
     .line 178
     invoke-virtual {v0, v1}, Lmiui/app/AlertDialog$Builder;->setTitle(I)Lmiui/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f1000da
+    const v1, 0x7f1000db
 
     .line 179
     invoke-virtual {v0, v1}, Lmiui/app/AlertDialog$Builder;->setMessage(I)Lmiui/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$xTsy2jZ8LlQrea_S5VYzM8Q26Lk;
+    new-instance v1, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$ygiZRw6GugJ0Xa1JUzd7kIUJko8;
 
-    invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$xTsy2jZ8LlQrea_S5VYzM8Q26Lk;-><init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;I)V
+    invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$ygiZRw6GugJ0Xa1JUzd7kIUJko8;-><init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;I)V
 
-    const p1, 0x7f1000d9
+    const p1, 0x7f1000da
 
     .line 180
     invoke-virtual {v0, p1, v1}, Lmiui/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;

@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.DefaultScreenPreviewView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/default_screen_preview_actionBar" layout="@layout/launcher_action_bar" />
-    <ScrollView android:id="@id/default_screen_scroll_view" android:paddingTop="@dimen/preview_view_screen_first_line_padding_top" android:paddingBottom="@dimen/default_screen_preview_padding" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/default_screen_preview_padding" android:paddingEnd="@dimen/default_screen_preview_padding">
-        <com.miui.home.launcher.view.FixedChildSizeGridView android:id="@id/preview_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+<com.miui.home.launcher.DefaultScreenPreviewView
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/default_screen_preview_actionBar"
+        layout="@layout/launcher_action_bar" />
+    <ScrollView
+        android:id="@id/default_screen_scroll_view"
+        android:paddingTop="@dimen/preview_view_screen_first_line_padding_top"
+        android:paddingBottom="@dimen/default_screen_preview_padding"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingStart="@dimen/default_screen_preview_padding"
+        android:paddingEnd="@dimen/default_screen_preview_padding">
+        <com.miui.home.launcher.view.FixedChildSizeGridView
+            android:id="@id/preview_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
     </ScrollView>
 </com.miui.home.launcher.DefaultScreenPreviewView>

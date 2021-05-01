@@ -66,7 +66,7 @@
     move-result-object v1
 
     :goto_0
-    const-string v2, "try {\n            java.l\u2026AULT_KEEP_ALIVE\n        }"
+    const-string v2, "try {\n            java.l…AULT_KEEP_ALIVE\n        }"
 
     .line 22
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V

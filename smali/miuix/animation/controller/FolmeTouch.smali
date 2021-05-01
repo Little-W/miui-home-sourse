@@ -31,6 +31,8 @@
 
 
 # instance fields
+.field private mClearTint:Z
+
 .field private mClickInvoked:Z
 
 .field private mClickListener:Landroid/view/View$OnClickListener;
@@ -116,7 +118,7 @@
 .method public varargs constructor <init>([Lmiuix/animation/IAnimTarget;)V
     .locals 6
 
-    .line 83
+    .line 84
     invoke-direct {p0, p1}, Lmiuix/animation/controller/FolmeBase;-><init>([Lmiuix/animation/IAnimTarget;)V
 
     const/4 v0, 0x2
@@ -147,21 +149,24 @@
 
     iput-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mUpConfig:Lmiuix/animation/base/AnimConfig;
 
-    .line 73
-    new-instance v1, Lmiuix/animation/controller/FolmeTouch$1;
+    const/4 v1, 0x0
 
-    invoke-direct {v1, p0}, Lmiuix/animation/controller/FolmeTouch$1;-><init>(Lmiuix/animation/controller/FolmeTouch;)V
+    .line 72
+    iput-boolean v1, p0, Lmiuix/animation/controller/FolmeTouch;->mClearTint:Z
 
-    iput-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mDefListener:Lmiuix/animation/listener/TransitionListener;
+    .line 74
+    new-instance v2, Lmiuix/animation/controller/FolmeTouch$1;
 
-    .line 84
-    array-length v1, p1
+    invoke-direct {v2, p0}, Lmiuix/animation/controller/FolmeTouch$1;-><init>(Lmiuix/animation/controller/FolmeTouch;)V
 
-    const/4 v2, 0x0
+    iput-object v2, p0, Lmiuix/animation/controller/FolmeTouch;->mDefListener:Lmiuix/animation/listener/TransitionListener;
 
-    if-lez v1, :cond_0
+    .line 85
+    array-length v2, p1
 
-    aget-object p1, p1, v2
+    if-lez v2, :cond_0
+
+    aget-object p1, p1, v1
 
     goto :goto_0
 
@@ -171,13 +176,13 @@
     :goto_0
     invoke-direct {p0, p1}, Lmiuix/animation/controller/FolmeTouch;->initScaleDist(Lmiuix/animation/IAnimTarget;)V
 
-    .line 86
+    .line 87
     sget-object p1, Lmiuix/animation/property/ViewProperty;->SCALE_X:Lmiuix/animation/property/ViewProperty;
 
-    .line 87
-    sget-object v1, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
+    .line 88
+    sget-object v2, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 89
+    .line 90
     iget-object v3, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     sget-object v4, Lmiuix/animation/ITouchStyle$TouchType;->UP:Lmiuix/animation/ITouchStyle$TouchType;
@@ -188,46 +193,46 @@
 
     const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
-    .line 90
+    .line 91
     invoke-virtual {v3, p1, v4, v5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
-    .line 91
-    invoke-virtual {p1, v1, v4, v5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+    .line 92
+    invoke-virtual {p1, v2, v4, v5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
-    .line 94
+    .line 95
     invoke-direct {p0}, Lmiuix/animation/controller/FolmeTouch;->setTintColor()V
-
-    .line 96
-    iget-object p1, p0, Lmiuix/animation/controller/FolmeTouch;->mDownConfig:Lmiuix/animation/base/AnimConfig;
-
-    new-array v1, v0, [F
-
-    fill-array-data v1, :array_0
-
-    const/4 v3, -0x2
-
-    invoke-static {v3, v1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
 
     .line 97
     iget-object p1, p0, Lmiuix/animation/controller/FolmeTouch;->mDownConfig:Lmiuix/animation/base/AnimConfig;
 
-    const/4 v1, 0x1
+    new-array v2, v0, [F
 
-    new-array v1, v1, [Lmiuix/animation/listener/TransitionListener;
+    fill-array-data v2, :array_0
+
+    const/4 v3, -0x2
+
+    invoke-static {v3, v2}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v2}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
+
+    .line 98
+    iget-object p1, p0, Lmiuix/animation/controller/FolmeTouch;->mDownConfig:Lmiuix/animation/base/AnimConfig;
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Lmiuix/animation/listener/TransitionListener;
 
     iget-object v4, p0, Lmiuix/animation/controller/FolmeTouch;->mDefListener:Lmiuix/animation/listener/TransitionListener;
 
-    aput-object v4, v1, v2
+    aput-object v4, v2, v1
 
-    invoke-virtual {p1, v1}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
+    invoke-virtual {p1, v2}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
-    .line 99
+    .line 100
     iget-object p1, p0, Lmiuix/animation/controller/FolmeTouch;->mUpConfig:Lmiuix/animation/base/AnimConfig;
 
     new-array v1, v0, [F
@@ -246,7 +251,7 @@
 
     fill-array-data v0, :array_2
 
-    .line 100
+    .line 101
     invoke-virtual {p1, v1, v2, v3, v0}, Lmiuix/animation/base/AnimConfig;->setSpecial(Lmiuix/animation/property/FloatProperty;J[F)Lmiuix/animation/base/AnimConfig;
 
     return-void
@@ -347,7 +352,7 @@
 .method private varargs bindListView(Landroid/view/View;Z[Lmiuix/animation/base/AnimConfig;)Z
     .locals 4
 
-    .line 298
+    .line 299
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     invoke-interface {v0}, Lmiuix/animation/controller/IFolmeStateStyle;->getTarget()Lmiuix/animation/IAnimTarget;
@@ -368,14 +373,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 299
+    .line 300
     invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogEnabled()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 300
+    .line 301
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -394,7 +399,7 @@
 
     invoke-static {v2, v1}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 302
+    .line 303
     :cond_0
     iget-object v0, v0, Lmiuix/animation/controller/FolmeTouch$ListViewInfo;->listView:Landroid/widget/AbsListView;
 
@@ -411,27 +416,27 @@
 .method private varargs doHandleTouchOf(Landroid/view/View;Landroid/view/View$OnClickListener;Landroid/view/View$OnLongClickListener;Z[Lmiuix/animation/base/AnimConfig;)V
     .locals 6
 
-    .line 237
+    .line 238
     invoke-direct {p0, p2, p3}, Lmiuix/animation/controller/FolmeTouch;->setClickAndLongClickListener(Landroid/view/View$OnClickListener;Landroid/view/View$OnLongClickListener;)V
 
-    .line 238
+    .line 239
     invoke-direct {p0, p1, p5}, Lmiuix/animation/controller/FolmeTouch;->handleViewTouch(Landroid/view/View;[Lmiuix/animation/base/AnimConfig;)V
 
-    .line 240
+    .line 241
     invoke-direct {p0, p1}, Lmiuix/animation/controller/FolmeTouch;->setTouchView(Landroid/view/View;)Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 241
+    .line 242
     invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogEnabled()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 242
+    .line 243
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -452,7 +457,7 @@
 
     invoke-static {p2, p3}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 244
+    .line 245
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->isClickable()Z
 
@@ -460,10 +465,10 @@
 
     const/4 p2, 0x1
 
-    .line 245
+    .line 246
     invoke-virtual {p1, p2}, Landroid/view/View;->setClickable(Z)V
 
-    .line 246
+    .line 247
     new-instance p2, Lmiuix/animation/controller/FolmeTouch$3;
 
     move-object v0, p2
@@ -478,7 +483,7 @@
 
     invoke-direct/range {v0 .. v5}, Lmiuix/animation/controller/FolmeTouch$3;-><init>(Lmiuix/animation/controller/FolmeTouch;ZLandroid/view/View;[Lmiuix/animation/base/AnimConfig;Z)V
 
-    .line 254
+    .line 255
     invoke-static {p1, p2}, Lmiuix/animation/utils/CommonUtils;->runOnPreDraw(Landroid/view/View;Ljava/lang/Runnable;)V
 
     :cond_1
@@ -490,7 +495,7 @@
 
     const/4 v0, 0x1
 
-    .line 683
+    .line 694
     new-array v0, v0, [Lmiuix/animation/base/AnimConfig;
 
     iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mDownConfig:Lmiuix/animation/base/AnimConfig;
@@ -511,14 +516,14 @@
 .method private getListViewInfo(Landroid/view/View;)Lmiuix/animation/controller/FolmeTouch$ListViewInfo;
     .locals 4
 
-    .line 314
+    .line 315
     new-instance v0, Lmiuix/animation/controller/FolmeTouch$ListViewInfo;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lmiuix/animation/controller/FolmeTouch$ListViewInfo;-><init>(Lmiuix/animation/controller/FolmeTouch$1;)V
 
-    .line 317
+    .line 318
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v2
@@ -526,30 +531,30 @@
     :goto_0
     if-eqz v2, :cond_2
 
-    .line 319
+    .line 320
     instance-of v3, v2, Landroid/widget/AbsListView;
 
     if-eqz v3, :cond_0
 
-    .line 320
+    .line 321
     move-object v1, v2
 
     check-cast v1, Landroid/widget/AbsListView;
 
     goto :goto_1
 
-    .line 323
+    .line 324
     :cond_0
     instance-of v3, v2, Landroid/view/View;
 
     if-eqz v3, :cond_1
 
-    .line 324
+    .line 325
     move-object p1, v2
 
     check-cast p1, Landroid/view/View;
 
-    .line 326
+    .line 327
     :cond_1
     invoke-interface {v2}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
 
@@ -561,7 +566,7 @@
     :goto_1
     if-eqz v1, :cond_3
 
-    .line 329
+    .line 330
     new-instance v2, Ljava/lang/ref/WeakReference;
 
     iget-object v3, v0, Lmiuix/animation/controller/FolmeTouch$ListViewInfo;->listView:Landroid/widget/AbsListView;
@@ -570,10 +575,10 @@
 
     iput-object v2, p0, Lmiuix/animation/controller/FolmeTouch;->mListView:Ljava/lang/ref/WeakReference;
 
-    .line 330
+    .line 331
     iput-object v1, v0, Lmiuix/animation/controller/FolmeTouch$ListViewInfo;->listView:Landroid/widget/AbsListView;
 
-    .line 331
+    .line 332
     iput-object p1, v0, Lmiuix/animation/controller/FolmeTouch$ListViewInfo;->itemView:Landroid/view/View;
 
     :cond_3
@@ -583,7 +588,7 @@
 .method public static getListViewTouchListener(Landroid/widget/AbsListView;)Lmiuix/animation/controller/ListViewTouchListener;
     .locals 1
 
-    .line 337
+    .line 338
     sget v0, Lmiuix/folme/R$id;->miuix_animation_tag_touch_listener:I
 
     invoke-virtual {p0, v0}, Landroid/widget/AbsListView;->getTag(I)Ljava/lang/Object;
@@ -598,7 +603,7 @@
 .method private varargs getType([Lmiuix/animation/ITouchStyle$TouchType;)Lmiuix/animation/ITouchStyle$TouchType;
     .locals 1
 
-    .line 604
+    .line 605
     array-length v0, p1
 
     if-lez v0, :cond_0
@@ -621,7 +626,7 @@
 
     const/4 v0, 0x1
 
-    .line 687
+    .line 698
     new-array v0, v0, [Lmiuix/animation/base/AnimConfig;
 
     iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mUpConfig:Lmiuix/animation/base/AnimConfig;
@@ -642,7 +647,7 @@
 .method private handleClick(Landroid/view/View;Landroid/view/MotionEvent;)V
     .locals 2
 
-    .line 533
+    .line 534
     iget-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch;->mIsDown:Z
 
     if-eqz v0, :cond_0
@@ -659,14 +664,14 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 534
+    .line 535
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     invoke-interface {v0}, Lmiuix/animation/controller/IFolmeStateStyle;->getTarget()Lmiuix/animation/IAnimTarget;
 
     move-result-object v0
 
-    .line 535
+    .line 536
     instance-of v1, v0, Lmiuix/animation/ViewTarget;
 
     if-eqz v1, :cond_0
@@ -677,17 +682,17 @@
 
     if-eqz p1, :cond_0
 
-    .line 536
+    .line 537
     check-cast v0, Lmiuix/animation/ViewTarget;
 
     invoke-virtual {v0}, Lmiuix/animation/ViewTarget;->getTargetObject()Landroid/view/View;
 
     move-result-object p1
 
-    .line 537
+    .line 538
     invoke-virtual {p1}, Landroid/view/View;->performClick()Z
 
-    .line 538
+    .line 539
     invoke-direct {p0, p1}, Lmiuix/animation/controller/FolmeTouch;->invokeClick(Landroid/view/View;)V
 
     :cond_0
@@ -697,19 +702,19 @@
 .method private varargs handleListViewTouch(Landroid/widget/AbsListView;Landroid/view/View;Z[Lmiuix/animation/base/AnimConfig;)V
     .locals 2
 
-    .line 343
+    .line 344
     invoke-static {p1}, Lmiuix/animation/controller/FolmeTouch;->getListViewTouchListener(Landroid/widget/AbsListView;)Lmiuix/animation/controller/ListViewTouchListener;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 345
+    .line 346
     new-instance v0, Lmiuix/animation/controller/ListViewTouchListener;
 
     invoke-direct {v0, p1}, Lmiuix/animation/controller/ListViewTouchListener;-><init>(Landroid/widget/AbsListView;)V
 
-    .line 346
+    .line 347
     sget v1, Lmiuix/folme/R$id;->miuix_animation_tag_touch_listener:I
 
     invoke-virtual {p1, v1, v0}, Landroid/widget/AbsListView;->setTag(ILjava/lang/Object;)V
@@ -717,10 +722,10 @@
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 349
+    .line 350
     invoke-virtual {p1, v0}, Landroid/widget/AbsListView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 351
+    .line 352
     :cond_1
     new-instance p1, Lmiuix/animation/controller/FolmeTouch$InnerListViewTouchListener;
 
@@ -734,7 +739,7 @@
 .method private varargs handleMotionEvent(Landroid/view/View;Landroid/view/MotionEvent;[Lmiuix/animation/base/AnimConfig;)V
     .locals 1
 
-    .line 557
+    .line 558
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
@@ -743,28 +748,28 @@
 
     goto :goto_0
 
-    .line 563
+    .line 564
     :pswitch_0
     invoke-direct {p0, p2, p1, p3}, Lmiuix/animation/controller/FolmeTouch;->onEventMove(Landroid/view/MotionEvent;Landroid/view/View;[Lmiuix/animation/base/AnimConfig;)V
 
     goto :goto_1
 
-    .line 566
+    .line 567
     :pswitch_1
     invoke-direct {p0, p1, p2}, Lmiuix/animation/controller/FolmeTouch;->handleClick(Landroid/view/View;Landroid/view/MotionEvent;)V
 
     goto :goto_0
 
-    .line 559
+    .line 560
     :pswitch_2
     invoke-direct {p0, p2}, Lmiuix/animation/controller/FolmeTouch;->recordDownEvent(Landroid/view/MotionEvent;)V
 
-    .line 560
+    .line 561
     invoke-direct {p0, p3}, Lmiuix/animation/controller/FolmeTouch;->onEventDown([Lmiuix/animation/base/AnimConfig;)V
 
     goto :goto_1
 
-    .line 568
+    .line 569
     :goto_0
     invoke-direct {p0, p3}, Lmiuix/animation/controller/FolmeTouch;->onEventUp([Lmiuix/animation/base/AnimConfig;)V
 
@@ -784,7 +789,7 @@
 .method private varargs handleViewTouch(Landroid/view/View;[Lmiuix/animation/base/AnimConfig;)V
     .locals 2
 
-    .line 379
+    .line 380
     sget-object v0, Lmiuix/animation/controller/FolmeTouch;->sTouchRecord:Ljava/util/WeakHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -795,23 +800,23 @@
 
     if-nez v0, :cond_0
 
-    .line 381
+    .line 382
     new-instance v0, Lmiuix/animation/controller/FolmeTouch$InnerViewTouchListener;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lmiuix/animation/controller/FolmeTouch$InnerViewTouchListener;-><init>(Lmiuix/animation/controller/FolmeTouch$1;)V
 
-    .line 382
+    .line 383
     sget-object v1, Lmiuix/animation/controller/FolmeTouch;->sTouchRecord:Ljava/util/WeakHashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 384
+    .line 385
     :cond_0
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 385
+    .line 386
     invoke-virtual {v0, p0, p2}, Lmiuix/animation/controller/FolmeTouch$InnerViewTouchListener;->addTouch(Lmiuix/animation/controller/FolmeTouch;[Lmiuix/animation/base/AnimConfig;)V
 
     return-void
@@ -820,7 +825,7 @@
 .method private initScaleDist(Lmiuix/animation/IAnimTarget;)V
     .locals 2
 
-    .line 125
+    .line 126
     instance-of v0, p1, Lmiuix/animation/ViewTarget;
 
     if-eqz v0, :cond_0
@@ -843,7 +848,7 @@
 
     const/high16 v1, 0x41200000    # 10.0f
 
-    .line 128
+    .line 129
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -852,7 +857,7 @@
 
     move-result-object p1
 
-    .line 127
+    .line 128
     invoke-static {v0, v1, p1}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
 
     move-result p1
@@ -866,7 +871,7 @@
 .method private invokeClick(Landroid/view/View;)V
     .locals 1
 
-    .line 544
+    .line 545
     iget-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch;->mClickInvoked:Z
 
     if-nez v0, :cond_0
@@ -877,10 +882,10 @@
 
     const/4 v0, 0x1
 
-    .line 545
+    .line 546
     iput-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch;->mClickInvoked:Z
 
-    .line 546
+    .line 547
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mClickListener:Landroid/view/View$OnClickListener;
 
     invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
@@ -892,17 +897,17 @@
 .method private invokeLongClick(Landroid/view/View;)V
     .locals 1
 
-    .line 526
+    .line 527
     iget-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch;->mLongClickInvoked:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 527
+    .line 528
     iput-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch;->mLongClickInvoked:Z
 
-    .line 528
+    .line 529
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mLongClickListener:Landroid/view/View$OnLongClickListener;
 
     invoke-interface {v0, p1}, Landroid/view/View$OnLongClickListener;->onLongClick(Landroid/view/View;)Z
@@ -914,17 +919,17 @@
 .method private isInTouchSlop(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 3
 
-    .line 551
+    .line 552
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
 
-    .line 552
+    .line 553
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result p2
 
-    .line 553
+    .line 554
     iget v1, p0, Lmiuix/animation/controller/FolmeTouch;->mDownX:F
 
     iget v2, p0, Lmiuix/animation/controller/FolmeTouch;->mDownY:F
@@ -961,17 +966,17 @@
 
     if-eqz p0, :cond_1
 
-    .line 174
+    .line 175
     invoke-virtual {p0, p1}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 175
+    .line 176
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v1
 
     float-to-int v1, v1
 
-    .line 176
+    .line 177
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result p2
@@ -980,7 +985,7 @@
 
     const/4 v2, 0x0
 
-    .line 177
+    .line 178
     aget v3, p1, v2
 
     if-lt v1, v3, :cond_0
@@ -1001,7 +1006,7 @@
 
     aget p1, p1, v0
 
-    .line 178
+    .line 179
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result p0
@@ -1025,7 +1030,7 @@
 .method private isScaleSet(Lmiuix/animation/ITouchStyle$TouchType;)Z
     .locals 2
 
-    .line 600
+    .line 601
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mScaleSetMap:Ljava/util/Map;
@@ -1044,7 +1049,7 @@
 .method private varargs onEventDown([Lmiuix/animation/base/AnimConfig;)V
     .locals 2
 
-    .line 425
+    .line 426
     invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogEnabled()Z
 
     move-result v0
@@ -1055,7 +1060,7 @@
 
     const/4 v1, 0x0
 
-    .line 426
+    .line 427
     new-array v1, v1, [Ljava/lang/Object;
 
     invoke-static {v0, v1}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
@@ -1063,10 +1068,10 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 428
+    .line 429
     iput-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch;->mIsDown:Z
 
-    .line 429
+    .line 430
     invoke-virtual {p0, p1}, Lmiuix/animation/controller/FolmeTouch;->touchDown([Lmiuix/animation/base/AnimConfig;)V
 
     return-void
@@ -1075,12 +1080,12 @@
 .method private varargs onEventMove(Landroid/view/MotionEvent;Landroid/view/View;[Lmiuix/animation/base/AnimConfig;)V
     .locals 1
 
-    .line 433
+    .line 434
     iget-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch;->mIsDown:Z
 
     if-eqz v0, :cond_1
 
-    .line 434
+    .line 435
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mLocation:[I
 
     invoke-static {p2, v0, p1}, Lmiuix/animation/controller/FolmeTouch;->isOnTouchView(Landroid/view/View;[ILandroid/view/MotionEvent;)Z
@@ -1089,15 +1094,15 @@
 
     if-nez v0, :cond_0
 
-    .line 435
+    .line 436
     invoke-virtual {p0, p3}, Lmiuix/animation/controller/FolmeTouch;->touchUp([Lmiuix/animation/base/AnimConfig;)V
 
-    .line 436
+    .line 437
     invoke-direct {p0}, Lmiuix/animation/controller/FolmeTouch;->resetTouchStatus()V
 
     goto :goto_0
 
-    .line 437
+    .line 438
     :cond_0
     iget-object p3, p0, Lmiuix/animation/controller/FolmeTouch;->mLongClickTask:Lmiuix/animation/controller/FolmeTouch$LongClickTask;
 
@@ -1109,7 +1114,7 @@
 
     if-nez p1, :cond_1
 
-    .line 438
+    .line 439
     iget-object p1, p0, Lmiuix/animation/controller/FolmeTouch;->mLongClickTask:Lmiuix/animation/controller/FolmeTouch$LongClickTask;
 
     invoke-virtual {p1, p0}, Lmiuix/animation/controller/FolmeTouch$LongClickTask;->stop(Lmiuix/animation/controller/FolmeTouch;)V
@@ -1122,12 +1127,12 @@
 .method private varargs onEventUp([Lmiuix/animation/base/AnimConfig;)V
     .locals 2
 
-    .line 444
+    .line 445
     iget-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch;->mIsDown:Z
 
     if-eqz v0, :cond_1
 
-    .line 445
+    .line 446
     invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogEnabled()Z
 
     move-result v0
@@ -1138,16 +1143,16 @@
 
     const/4 v1, 0x0
 
-    .line 446
+    .line 447
     new-array v1, v1, [Ljava/lang/Object;
 
     invoke-static {v0, v1}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 448
+    .line 449
     :cond_0
     invoke-virtual {p0, p1}, Lmiuix/animation/controller/FolmeTouch;->touchUp([Lmiuix/animation/base/AnimConfig;)V
 
-    .line 449
+    .line 450
     invoke-direct {p0}, Lmiuix/animation/controller/FolmeTouch;->resetTouchStatus()V
 
     :cond_1
@@ -1157,7 +1162,7 @@
 .method private recordDownEvent(Landroid/view/MotionEvent;)V
     .locals 1
 
-    .line 464
+    .line 465
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mClickListener:Landroid/view/View$OnClickListener;
 
     if-nez v0, :cond_0
@@ -1166,7 +1171,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 465
+    .line 466
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
@@ -1174,14 +1179,14 @@
 
     iput v0, p0, Lmiuix/animation/controller/FolmeTouch;->mTouchIndex:I
 
-    .line 466
+    .line 467
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
 
     iput v0, p0, Lmiuix/animation/controller/FolmeTouch;->mDownX:F
 
-    .line 467
+    .line 468
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result p1
@@ -1190,13 +1195,13 @@
 
     const/4 p1, 0x0
 
-    .line 468
+    .line 469
     iput-boolean p1, p0, Lmiuix/animation/controller/FolmeTouch;->mClickInvoked:Z
 
-    .line 469
+    .line 470
     iput-boolean p1, p0, Lmiuix/animation/controller/FolmeTouch;->mLongClickInvoked:Z
 
-    .line 470
+    .line 471
     invoke-direct {p0}, Lmiuix/animation/controller/FolmeTouch;->startLongClickTask()V
 
     :cond_1
@@ -1206,29 +1211,29 @@
 .method private resetTouchStatus()V
     .locals 1
 
-    .line 454
+    .line 455
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mLongClickTask:Lmiuix/animation/controller/FolmeTouch$LongClickTask;
 
     if-eqz v0, :cond_0
 
-    .line 455
+    .line 456
     invoke-virtual {v0, p0}, Lmiuix/animation/controller/FolmeTouch$LongClickTask;->stop(Lmiuix/animation/controller/FolmeTouch;)V
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 457
+    .line 458
     iput-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch;->mIsDown:Z
 
-    .line 458
+    .line 459
     iput v0, p0, Lmiuix/animation/controller/FolmeTouch;->mTouchIndex:I
 
     const/4 v0, 0x0
 
-    .line 459
+    .line 460
     iput v0, p0, Lmiuix/animation/controller/FolmeTouch;->mDownX:F
 
-    .line 460
+    .line 461
     iput v0, p0, Lmiuix/animation/controller/FolmeTouch;->mDownY:F
 
     return-void
@@ -1246,7 +1251,7 @@
         }
     .end annotation
 
-    .line 154
+    .line 155
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p1
@@ -1257,7 +1262,7 @@
 
     const/4 v0, 0x0
 
-    .line 156
+    .line 157
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     :cond_0
@@ -1267,12 +1272,12 @@
 .method private resetViewTouch(Landroid/view/View;Z)V
     .locals 0
 
-    .line 412
+    .line 413
     invoke-virtual {p1, p2}, Landroid/view/View;->setClickable(Z)V
 
     const/4 p2, 0x0
 
-    .line 413
+    .line 414
     invoke-virtual {p1, p2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     return-void
@@ -1281,21 +1286,21 @@
 .method private setClickAndLongClickListener(Landroid/view/View$OnClickListener;Landroid/view/View$OnLongClickListener;)V
     .locals 3
 
-    .line 261
+    .line 262
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     invoke-interface {v0}, Lmiuix/animation/controller/IFolmeStateStyle;->getTarget()Lmiuix/animation/IAnimTarget;
 
     move-result-object v0
 
-    .line 262
+    .line 263
     instance-of v1, v0, Lmiuix/animation/ViewTarget;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    .line 263
+    .line 264
     check-cast v0, Lmiuix/animation/ViewTarget;
 
     invoke-virtual {v0}, Lmiuix/animation/ViewTarget;->getTargetObject()Landroid/view/View;
@@ -1312,7 +1317,7 @@
 
     return-void
 
-    .line 268
+    .line 269
     :cond_1
     iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mClickListener:Landroid/view/View$OnClickListener;
 
@@ -1320,7 +1325,7 @@
 
     if-nez p1, :cond_2
 
-    .line 269
+    .line 270
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     goto :goto_1
@@ -1328,26 +1333,26 @@
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 271
+    .line 272
     new-instance v1, Lmiuix/animation/controller/FolmeTouch$4;
 
     invoke-direct {v1, p0}, Lmiuix/animation/controller/FolmeTouch$4;-><init>(Lmiuix/animation/controller/FolmeTouch;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 278
+    .line 279
     :cond_3
     :goto_1
     iput-object p1, p0, Lmiuix/animation/controller/FolmeTouch;->mClickListener:Landroid/view/View$OnClickListener;
 
-    .line 279
+    .line 280
     iget-object p1, p0, Lmiuix/animation/controller/FolmeTouch;->mLongClickListener:Landroid/view/View$OnLongClickListener;
 
     if-eqz p1, :cond_4
 
     if-nez p2, :cond_4
 
-    .line 280
+    .line 281
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     goto :goto_2
@@ -1355,14 +1360,14 @@
     :cond_4
     if-eqz p2, :cond_5
 
-    .line 282
+    .line 283
     new-instance p1, Lmiuix/animation/controller/FolmeTouch$5;
 
     invoke-direct {p1, p0}, Lmiuix/animation/controller/FolmeTouch$5;-><init>(Lmiuix/animation/controller/FolmeTouch;)V
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 293
+    .line 294
     :cond_5
     :goto_2
     iput-object p2, p0, Lmiuix/animation/controller/FolmeTouch;->mLongClickListener:Landroid/view/View$OnLongClickListener;
@@ -1373,24 +1378,28 @@
 .method private setTintColor()V
     .locals 5
 
-    .line 105
+    .line 106
     iget-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch;->mSetTint:Z
+
+    if-nez v0, :cond_3
+
+    iget-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch;->mClearTint:Z
 
     if-eqz v0, :cond_0
 
-    return-void
+    goto :goto_0
 
     :cond_0
     const/16 v0, 0x14
 
     const/4 v1, 0x0
 
-    .line 108
+    .line 109
     invoke-static {v0, v1, v1, v1}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result v0
 
-    .line 109
+    .line 110
     iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     invoke-interface {v1}, Lmiuix/animation/controller/IFolmeStateStyle;->getTarget()Lmiuix/animation/IAnimTarget;
@@ -1401,18 +1410,18 @@
 
     move-result-object v1
 
-    .line 110
+    .line 111
     instance-of v2, v1, Landroid/view/View;
 
     if-eqz v2, :cond_2
 
-    .line 111
+    .line 112
     check-cast v1, Landroid/view/View;
 
-    .line 112
+    .line 113
     sget v0, Lmiuix/folme/R$color;->miuix_folme_color_touch_tint:I
 
-    .line 113
+    .line 114
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -1427,7 +1436,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 114
+    .line 115
     invoke-virtual {v2}, Landroid/app/UiModeManager;->getNightMode()I
 
     move-result v2
@@ -1436,10 +1445,10 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 115
+    .line 116
     sget v0, Lmiuix/folme/R$color;->miuix_folme_color_touch_tint_dark:I
 
-    .line 117
+    .line 118
     :cond_1
     invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
@@ -1449,11 +1458,11 @@
 
     move-result v0
 
-    .line 119
+    .line 120
     :cond_2
     sget-object v1, Lmiuix/animation/property/ViewPropertyExt;->FOREGROUND:Lmiuix/animation/property/ViewPropertyExt$ForegroundProperty;
 
-    .line 120
+    .line 121
     iget-object v2, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     sget-object v3, Lmiuix/animation/ITouchStyle$TouchType;->DOWN:Lmiuix/animation/ITouchStyle$TouchType;
@@ -1466,7 +1475,7 @@
 
     invoke-virtual {v2, v1, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
-    .line 121
+    .line 122
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     sget-object v2, Lmiuix/animation/ITouchStyle$TouchType;->UP:Lmiuix/animation/ITouchStyle$TouchType;
@@ -1480,12 +1489,16 @@
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     return-void
+
+    :cond_3
+    :goto_0
+    return-void
 .end method
 
 .method private setTouchView(Landroid/view/View;)Z
     .locals 1
 
-    .line 184
+    .line 185
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mTouchView:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
@@ -1508,7 +1521,7 @@
 
     return p1
 
-    .line 188
+    .line 189
     :cond_1
     new-instance v0, Ljava/lang/ref/WeakReference;
 
@@ -1524,20 +1537,20 @@
 .method private startLongClickTask()V
     .locals 2
 
-    .line 516
+    .line 517
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mLongClickListener:Landroid/view/View$OnLongClickListener;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 519
+    .line 520
     :cond_0
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mLongClickTask:Lmiuix/animation/controller/FolmeTouch$LongClickTask;
 
     if-nez v0, :cond_1
 
-    .line 520
+    .line 521
     new-instance v0, Lmiuix/animation/controller/FolmeTouch$LongClickTask;
 
     const/4 v1, 0x0
@@ -1546,7 +1559,7 @@
 
     iput-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mLongClickTask:Lmiuix/animation/controller/FolmeTouch$LongClickTask;
 
-    .line 522
+    .line 523
     :cond_1
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mLongClickTask:Lmiuix/animation/controller/FolmeTouch$LongClickTask;
 
@@ -1560,15 +1573,15 @@
 .method public cancel()V
     .locals 1
 
-    .line 665
+    .line 676
     invoke-super {p0}, Lmiuix/animation/controller/FolmeBase;->cancel()V
 
-    .line 666
+    .line 677
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mFontStyle:Lmiuix/animation/controller/FolmeFont;
 
     if-eqz v0, :cond_0
 
-    .line 667
+    .line 678
     invoke-virtual {v0}, Lmiuix/animation/controller/FolmeFont;->cancel()V
 
     :cond_0
@@ -1578,59 +1591,59 @@
 .method public clean()V
     .locals 3
 
-    .line 134
+    .line 135
     invoke-super {p0}, Lmiuix/animation/controller/FolmeBase;->clean()V
 
-    .line 135
+    .line 136
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mFontStyle:Lmiuix/animation/controller/FolmeFont;
 
     if-eqz v0, :cond_0
 
-    .line 136
+    .line 137
     invoke-virtual {v0}, Lmiuix/animation/controller/FolmeFont;->clean()V
 
-    .line 138
+    .line 139
     :cond_0
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mScaleSetMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 139
+    .line 140
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mTouchView:Ljava/lang/ref/WeakReference;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 140
+    .line 141
     invoke-direct {p0, v0}, Lmiuix/animation/controller/FolmeTouch;->resetView(Ljava/lang/ref/WeakReference;)Landroid/view/View;
 
-    .line 141
+    .line 142
     iput-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mTouchView:Ljava/lang/ref/WeakReference;
 
-    .line 143
+    .line 144
     :cond_1
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mListView:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_3
 
-    .line 144
+    .line 145
     invoke-direct {p0, v0}, Lmiuix/animation/controller/FolmeTouch;->resetView(Ljava/lang/ref/WeakReference;)Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 146
+    .line 147
     sget v2, Lmiuix/folme/R$id;->miuix_animation_tag_touch_listener:I
 
     invoke-virtual {v0, v2, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 148
+    .line 149
     :cond_2
     iput-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mListView:Ljava/lang/ref/WeakReference;
 
-    .line 150
+    .line 151
     :cond_3
     invoke-direct {p0}, Lmiuix/animation/controller/FolmeTouch;->resetTouchStatus()V
 
@@ -1652,7 +1665,7 @@
 
     move-object v5, p3
 
-    .line 231
+    .line 232
     invoke-direct/range {v0 .. v5}, Lmiuix/animation/controller/FolmeTouch;->doHandleTouchOf(Landroid/view/View;Landroid/view/View$OnClickListener;Landroid/view/View$OnLongClickListener;Z[Lmiuix/animation/base/AnimConfig;)V
 
     return-void
@@ -1663,7 +1676,7 @@
 
     const/4 v0, 0x0
 
-    .line 215
+    .line 216
     invoke-virtual {p0, p1, v0, p2}, Lmiuix/animation/controller/FolmeTouch;->handleTouchOf(Landroid/view/View;Z[Lmiuix/animation/base/AnimConfig;)V
 
     return-void
@@ -1674,7 +1687,7 @@
 
     const/4 v0, 0x0
 
-    .line 421
+    .line 422
     new-array v0, v0, [Lmiuix/animation/base/AnimConfig;
 
     const/4 v1, 0x0
@@ -1687,7 +1700,7 @@
 .method public setFontStyle(Lmiuix/animation/controller/FolmeFont;)V
     .locals 0
 
-    .line 162
+    .line 163
     iput-object p1, p0, Lmiuix/animation/controller/FolmeTouch;->mFontStyle:Lmiuix/animation/controller/FolmeFont;
 
     return-void
@@ -1696,12 +1709,12 @@
 .method public varargs setScale(F[Lmiuix/animation/ITouchStyle$TouchType;)Lmiuix/animation/ITouchStyle;
     .locals 3
 
-    .line 591
+    .line 592
     invoke-direct {p0, p2}, Lmiuix/animation/controller/FolmeTouch;->getType([Lmiuix/animation/ITouchStyle$TouchType;)Lmiuix/animation/ITouchStyle$TouchType;
 
     move-result-object p2
 
-    .line 592
+    .line 593
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mScaleSetMap:Ljava/util/Map;
 
     const/4 v1, 0x1
@@ -1712,7 +1725,7 @@
 
     invoke-interface {v0, p2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 593
+    .line 594
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     invoke-interface {v0, p2}, Lmiuix/animation/controller/IFolmeStateStyle;->getState(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
@@ -1723,14 +1736,14 @@
 
     float-to-double v1, p1
 
-    .line 594
+    .line 595
     invoke-virtual {p2, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
     sget-object p2, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 595
+    .line 596
     invoke-virtual {p1, p2, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     return-object p0
@@ -1739,25 +1752,25 @@
 .method public varargs touchDown([Lmiuix/animation/base/AnimConfig;)V
     .locals 5
 
-    .line 637
+    .line 648
     invoke-direct {p0}, Lmiuix/animation/controller/FolmeTouch;->setTintColor()V
 
-    .line 638
+    .line 649
     invoke-direct {p0, p1}, Lmiuix/animation/controller/FolmeTouch;->getDownConfig([Lmiuix/animation/base/AnimConfig;)[Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
 
-    .line 639
+    .line 650
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mFontStyle:Lmiuix/animation/controller/FolmeFont;
 
     if-eqz v0, :cond_0
 
-    .line 640
+    .line 651
     iget v1, p0, Lmiuix/animation/controller/FolmeTouch;->mDownWeight:I
 
     invoke-virtual {v0, v1, p1}, Lmiuix/animation/controller/FolmeFont;->to(I[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IVarFontStyle;
 
-    .line 642
+    .line 653
     :cond_0
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
@@ -1767,7 +1780,7 @@
 
     move-result-object v0
 
-    .line 643
+    .line 654
     sget-object v1, Lmiuix/animation/ITouchStyle$TouchType;->DOWN:Lmiuix/animation/ITouchStyle$TouchType;
 
     invoke-direct {p0, v1}, Lmiuix/animation/controller/FolmeTouch;->isScaleSet(Lmiuix/animation/ITouchStyle$TouchType;)Z
@@ -1776,14 +1789,14 @@
 
     if-nez v1, :cond_1
 
-    .line 644
+    .line 655
     iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     invoke-interface {v1}, Lmiuix/animation/controller/IFolmeStateStyle;->getTarget()Lmiuix/animation/IAnimTarget;
 
     move-result-object v1
 
-    .line 645
+    .line 656
     sget-object v2, Lmiuix/animation/property/ViewProperty;->WIDTH:Lmiuix/animation/property/ViewProperty;
 
     invoke-virtual {v1, v2}, Lmiuix/animation/IAnimTarget;->getValue(Lmiuix/animation/property/FloatProperty;)F
@@ -1792,17 +1805,17 @@
 
     sget-object v3, Lmiuix/animation/property/ViewProperty;->HEIGHT:Lmiuix/animation/property/ViewProperty;
 
-    .line 646
+    .line 657
     invoke-virtual {v1, v3}, Lmiuix/animation/IAnimTarget;->getValue(Lmiuix/animation/property/FloatProperty;)F
 
     move-result v1
 
-    .line 645
+    .line 656
     invoke-static {v2, v1}, Ljava/lang/Math;->max(FF)F
 
     move-result v1
 
-    .line 647
+    .line 658
     iget v2, p0, Lmiuix/animation/controller/FolmeTouch;->mScaleDist:F
 
     sub-float v2, v1, v2
@@ -1815,7 +1828,7 @@
 
     move-result v1
 
-    .line 648
+    .line 659
     sget-object v2, Lmiuix/animation/property/ViewProperty;->SCALE_X:Lmiuix/animation/property/ViewProperty;
 
     float-to-double v3, v1
@@ -1826,10 +1839,10 @@
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 649
+    .line 660
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
-    .line 651
+    .line 662
     :cond_1
     iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
@@ -1841,22 +1854,22 @@
 .method public varargs touchUp([Lmiuix/animation/base/AnimConfig;)V
     .locals 3
 
-    .line 656
+    .line 667
     invoke-direct {p0, p1}, Lmiuix/animation/controller/FolmeTouch;->getUpConfig([Lmiuix/animation/base/AnimConfig;)[Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
 
-    .line 657
+    .line 668
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mFontStyle:Lmiuix/animation/controller/FolmeFont;
 
     if-eqz v0, :cond_0
 
-    .line 658
+    .line 669
     iget v1, p0, Lmiuix/animation/controller/FolmeTouch;->mUpWeight:I
 
     invoke-virtual {v0, v1, p1}, Lmiuix/animation/controller/FolmeFont;->to(I[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IVarFontStyle;
 
-    .line 660
+    .line 671
     :cond_0
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 

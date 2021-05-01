@@ -28,7 +28,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DragLayer;Lcom/miui/home/launcher/ItemIcon;Landroid/view/View;Z)V
     .locals 0
 
-    .line 623
+    .line 624
     iput-object p1, p0, Lcom/miui/home/launcher/DragLayer$5;->this$0:Lcom/miui/home/launcher/DragLayer;
 
     iput-object p2, p0, Lcom/miui/home/launcher/DragLayer$5;->val$icon:Lcom/miui/home/launcher/ItemIcon;
@@ -47,21 +47,21 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 625
+    .line 626
     iget-object p1, p0, Lcom/miui/home/launcher/DragLayer$5;->val$icon:Lcom/miui/home/launcher/ItemIcon;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ItemIcon;->setVisibility(I)V
 
-    .line 626
+    .line 627
     iget-object p1, p0, Lcom/miui/home/launcher/DragLayer$5;->this$0:Lcom/miui/home/launcher/DragLayer;
 
     iget-object v0, p0, Lcom/miui/home/launcher/DragLayer$5;->val$wrapIconView:Landroid/view/View;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DragLayer;->removeView(Landroid/view/View;)V
 
-    .line 627
+    .line 628
     iget-boolean p1, p0, Lcom/miui/home/launcher/DragLayer$5;->val$highlightFolder:Z
 
     if-nez p1, :cond_0

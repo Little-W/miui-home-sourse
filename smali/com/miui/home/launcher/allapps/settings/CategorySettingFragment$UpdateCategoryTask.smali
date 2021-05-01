@@ -35,16 +35,16 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 219
-    new-instance p1, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$UpdateCategoryTask$DblXTpmj-lYSIEhVLj49bqP0-UM;
+    new-instance p1, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$UpdateCategoryTask$iB8RFLBElCxAAuxTdNl9i5X71pE;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$UpdateCategoryTask$DblXTpmj-lYSIEhVLj49bqP0-UM;-><init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$UpdateCategoryTask$iB8RFLBElCxAAuxTdNl9i5X71pE;-><init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;)V
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;->mUpdateCategoryRunnable:Ljava/lang/Runnable;
 
     return-void
 .end method
 
-.method public static synthetic lambda$new$0(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;)V
+.method public static synthetic lambda$new$357(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;)V
     .locals 1
 
     .line 219

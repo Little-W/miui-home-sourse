@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:visibility="visible" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.miui.home.launcher.ShortcutMenuLayer android:id="@id/shortcut_menu_layer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <include layout="@layout/launcher_background" />
-        <com.miui.home.launcher.MinusOneScreenView android:id="@id/minus_one_layer" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <FrameLayout android:id="@id/minus_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-            <include layout="@layout/drag_layer" />
+<FrameLayout
+    android:visibility="visible"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.launcher.ShortcutMenuLayer
+        android:id="@id/shortcut_menu_layer"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <include
+            layout="@layout/launcher_background" />
+        <com.miui.home.launcher.MinusOneScreenView
+            android:id="@id/minus_one_layer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <FrameLayout
+                android:id="@id/minus_container"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+            <include
+                layout="@layout/drag_layer" />
         </com.miui.home.launcher.MinusOneScreenView>
-        <include layout="@layout/shortcut_menu" />
+        <include
+            layout="@layout/shortcut_menu" />
     </com.miui.home.launcher.ShortcutMenuLayer>
-    <include layout="@layout/recents_container" />
+    <include
+        layout="@layout/recents_container" />
 </FrameLayout>

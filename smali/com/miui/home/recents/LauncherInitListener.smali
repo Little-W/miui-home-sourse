@@ -43,7 +43,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$init$0(Lcom/miui/home/recents/LauncherInitListener;Landroid/os/CancellationSignal;Lcom/miui/home/launcher/Launcher;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Landroid/animation/AnimatorSet;
+.method public static synthetic lambda$init$514(Lcom/miui/home/recents/LauncherInitListener;Landroid/os/CancellationSignal;Lcom/miui/home/launcher/Launcher;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Landroid/animation/AnimatorSet;
     .locals 2
 
     .line 38
@@ -106,9 +106,9 @@
     invoke-direct {v1}, Landroid/os/CancellationSignal;-><init>()V
 
     .line 35
-    new-instance v2, Lcom/miui/home/recents/-$$Lambda$LauncherInitListener$arlQtGkpdIwlM1-IQr3aNaoJDSo;
+    new-instance v2, Lcom/miui/home/recents/-$$Lambda$LauncherInitListener$o3ylQhxF3IPl-bPyUiZRthWHpsA;
 
-    invoke-direct {v2, p0, v1, p1}, Lcom/miui/home/recents/-$$Lambda$LauncherInitListener$arlQtGkpdIwlM1-IQr3aNaoJDSo;-><init>(Lcom/miui/home/recents/LauncherInitListener;Landroid/os/CancellationSignal;Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {v2, p0, v1, p1}, Lcom/miui/home/recents/-$$Lambda$LauncherInitListener$o3ylQhxF3IPl-bPyUiZRthWHpsA;-><init>(Lcom/miui/home/recents/LauncherInitListener;Landroid/os/CancellationSignal;Lcom/miui/home/launcher/Launcher;)V
 
     invoke-virtual {v0, v2, v1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->setRemoteAnimationProvider(Lcom/miui/home/recents/util/RemoteAnimationProvider;Landroid/os/CancellationSignal;)V
 

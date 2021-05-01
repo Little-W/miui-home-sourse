@@ -39,7 +39,7 @@
 
     move-result-object v0
 
-    const-string v1, "ServiceLoader.load(\n    \u2026.classLoader\n).iterator()"
+    const-string v1, "ServiceLoader.load(\n    ….classLoader\n).iterator()"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

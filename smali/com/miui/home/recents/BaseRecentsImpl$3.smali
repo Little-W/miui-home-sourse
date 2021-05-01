@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;Landroid/os/Handler;)V
     .locals 0
 
-    .line 216
+    .line 218
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$3;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 4
 
-    .line 221
+    .line 223
     :try_start_0
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$3;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
@@ -55,7 +55,7 @@
 
     move-result p1
 
-    .line 222
+    .line 224
     invoke-static {}, Lmiui/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -64,7 +64,7 @@
 
     if-ne p1, v2, :cond_1
 
-    .line 224
+    .line 226
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$3;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -81,14 +81,14 @@
 
     move-result-object p1
 
-    .line 225
+    .line 227
     invoke-static {p1, v0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->isLockedApplication(Ljava/lang/String;I)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 227
+    .line 229
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl$3;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -97,12 +97,12 @@
 
     invoke-static {v1, v3}, Lcom/miui/home/recents/BaseRecentsImpl;->access$302(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
-    .line 228
+    .line 230
     invoke-static {p1, v0, v2}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->updateApplicationLockedState(Ljava/lang/String;IZ)Z
 
     goto :goto_0
 
-    .line 230
+    .line 232
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$3;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
@@ -112,7 +112,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$302(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/Boolean;)Ljava/lang/Boolean;
 
-    .line 232
+    .line 234
     :goto_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$3;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
@@ -135,7 +135,7 @@
     :cond_1
     if-nez p1, :cond_3
 
-    .line 234
+    .line 236
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$3;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$300(Lcom/miui/home/recents/BaseRecentsImpl;)Ljava/lang/Boolean;
@@ -148,7 +148,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 235
+    .line 237
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$3;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -167,10 +167,10 @@
 
     move-result-object p1
 
-    .line 236
+    .line 238
     invoke-static {p1, v0, v1}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->updateApplicationLockedState(Ljava/lang/String;IZ)Z
 
-    .line 238
+    .line 240
     :cond_2
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$3;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
@@ -197,7 +197,7 @@
     :catch_0
     move-exception p1
 
-    .line 241
+    .line 243
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_3

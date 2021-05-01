@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape android:shape="rectangle"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <size android:height="178.9dip" android:width="178.9dip" />
-    <solid android:color="@color/smallwindow_crop_color" />
-    <corners android:topLeftRadius="0.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="178.9dip" android:bottomRightRadius="0.0dip" />
+<shape
+    android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <size
+        android:height="178.9dip"
+        android:width="178.9dip" />
+    <solid
+        android:color="@color/smallwindow_crop_color" />
+    <corners
+        android:topLeftRadius="0.0dip"
+        android:topRightRadius="0.0dip"
+        android:bottomLeftRadius="178.9dip"
+        android:bottomRightRadius="0.0dip" />
 </shape>

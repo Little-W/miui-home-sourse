@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.Folder android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/folder" android:clickable="true" android:clipChildren="false" android:clipToPadding="false" android:animationCache="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/folder_content_margin_top" android:layout_marginBottom="@dimen/folder_content_margin_bottom" android:importantForAccessibility="no"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="vertical" android:id="@id/background" android:background="@drawable/folder_content_bg_dark" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="37.0dip" android:paddingEnd="40.329987dip">
-        <include layout="@layout/folder_header" />
-        <com.miui.home.launcher.FolderContainer android:layout_gravity="center" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <include layout="@layout/folder_grid" />
-            <include layout="@layout/recommend_switch" />
+<com.miui.home.launcher.Folder
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@id/folder"
+    android:clickable="true"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:animationCache="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/folder_content_margin_top"
+    android:layout_marginBottom="@dimen/folder_content_margin_bottom"
+    android:importantForAccessibility="no"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/background"
+        android:background="@drawable/folder_content_bg_dark"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="37.0dip"
+        android:paddingEnd="40.329987dip">
+        <include
+            layout="@layout/folder_header" />
+        <com.miui.home.launcher.FolderContainer
+            android:layout_gravity="center"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <include
+                layout="@layout/folder_grid" />
+            <include
+                layout="@layout/recommend_switch" />
         </com.miui.home.launcher.FolderContainer>
     </LinearLayout>
 </com.miui.home.launcher.Folder>

@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto">
-    <favorite launcher:className="com.xiaomi.jr.SplashActivity" launcher:container="2" launcher:packageName="com.xiaomi.jr" launcher:x="0" launcher:y="0" />
-    <favorite launcher:className="com.xiaomi.youpin.activity.SplashActivity" launcher:container="2" launcher:packageName="com.xiaomi.youpin" launcher:x="1" launcher:y="0" />
+<favorites
+    xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <favorite
+        launcher:className="com.xiaomi.jr.SplashActivity"
+        launcher:container="2"
+        launcher:packageName="com.xiaomi.jr"
+        launcher:x="0"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.xiaomi.youpin.activity.SplashActivity"
+        launcher:container="2"
+        launcher:packageName="com.xiaomi.youpin"
+        launcher:x="1"
+        launcher:y="0" />
 </favorites>

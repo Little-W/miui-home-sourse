@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 1977
+    .line 2006
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$13;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -30,12 +30,12 @@
     return-void
 .end method
 
-.method static synthetic lambda$onAnimationEnd$0(Landroid/view/ViewGroup;)V
+.method static synthetic lambda$onAnimationEnd$36(Landroid/view/ViewGroup;)V
     .locals 1
 
     const/4 v0, 0x4
 
-    .line 1981
+    .line 2010
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     return-void
@@ -48,7 +48,7 @@
 
     const/4 p1, 0x3
 
-    .line 1980
+    .line 2009
     new-array p1, p1, [Landroid/view/ViewGroup;
 
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$13;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -89,9 +89,9 @@
 
     move-result-object p1
 
-    sget-object v0, Lcom/miui/home/launcher/-$$Lambda$Launcher$13$rQGzRnUYRcyTPny75i4u5Ev7Z7Q;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$Launcher$13$rQGzRnUYRcyTPny75i4u5Ev7Z7Q;
+    sget-object v0, Lcom/miui/home/launcher/-$$Lambda$Launcher$13$vK7lU-XSKhUpHkv_AiEuzp8d2ck;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$Launcher$13$vK7lU-XSKhUpHkv_AiEuzp8d2ck;
 
-    .line 1981
+    .line 2010
     invoke-interface {p1, v0}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
     return-void

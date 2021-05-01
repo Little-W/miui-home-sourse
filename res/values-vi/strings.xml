@@ -206,6 +206,7 @@
     <string name="defalut_launcher_title">Trình khởi chạy mặc định</string>
     <string name="default_folder_title_claro">Claro</string>
     <string name="default_folder_title_game">Trò chơi</string>
+    <string name="default_folder_title_hot">Ứng dụng phổ biến</string>
     <string name="default_folder_title_meitu">Ứng dụng Meitu</string>
     <string name="default_folder_title_microsoft">Microsoft</string>
     <string name="default_folder_title_other_apps">Ứng dụng khác</string>
@@ -551,7 +552,7 @@
     <string name="share">Chia sẻ</string>
     <string name="shortcut_share_dialog_content">Các tập tin bạn gửi từ điện thoại của bạn, cũng như người nhận được bạn chọn và xác định. Hãy chú ý khi bạn chọn tập tin để chia sẻ và chọn người nhận. Bạn không được sử dụng điện thoại của mình để truyền bất kỳ virus, phần mềm độc hại, trojans, bom hẹn giờ và các đối tượng gây hại khác cho người khác. Không sử dụng điện thoại của bạn để truyền bất kỳ phần mềm nào có thể ảnh hưởng đến việc sử dụng thường xuyên của thiết bị người nhận hoặc bất kỳ mục nào có thể làm hỏng, can thiệp, chặn hoặc loại bỏ bất kỳ dữ liệu hệ thống hoặc thông tin cá nhân nào trên thiết bị đầu cuối di động. Bạn sẽ chịu trách nhiệm cho mọi thiệt hại gây ra cho người dùng hoặc thiết bị đầu cuối di động khác. Xiaomi sẽ làm hết khả năng để đảm bảo rằng tính năng chia sẻ, cũng như công nghệ và thông tin liên quan là an toàn, hiệu quả, chính xác và đáng tin cậy. Tuy nhiên, do những hạn chế của công nghệ hiện tại, Xiaomi không đảm bảo rằng tính năng chia sẻ là hoàn hảo và sẽ đáp ứng mọi nhu cầu của bạn.</string>
     <string name="shortcut_share_dialog_positive_button">Tôi biết</string>
-    <string name="shortcut_share_dialog_title">Từ chối</string>
+    <string name="shortcut_share_dialog_title">Từ chối trách nhiệm</string>
     <string name="show_all">Hiển thị tất cả</string>
     <string name="show_mem_info_title">Hiển thị trạng thái bộ nhớ</string>
     <string name="show_most_popular_apps_you_used">Hiển thị ứng dụng được sử dụng thường xuyên nhất trong ngăn ứng dụng</string>

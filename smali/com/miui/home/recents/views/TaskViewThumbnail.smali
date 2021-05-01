@@ -229,7 +229,7 @@
 
     move-result-object p3
 
-    const p4, 0x7f0601dc
+    const p4, 0x7f0601e0
 
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -249,7 +249,7 @@
 
     move-result-object p3
 
-    const p4, 0x7f0601e0
+    const p4, 0x7f0601e4
 
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -306,7 +306,7 @@
 
     move-result p1
 
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHight()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHeight()I
 
     move-result v0
 
@@ -319,7 +319,7 @@
 
     move-result v0
 
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHight()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHeight()I
 
     move-result v1
 
@@ -335,7 +335,7 @@
 
     move-result p1
 
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHight()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHeight()I
 
     move-result v0
 
@@ -348,7 +348,7 @@
 
     move-result v0
 
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHight()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHeight()I
 
     move-result v1
 
@@ -406,7 +406,7 @@
 .method private updateThumbnailScale()V
     .locals 13
 
-    .line 296
+    .line 300
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -427,14 +427,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 297
+    .line 301
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isKeepRecentsViewPortrait()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 298
+    .line 302
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -453,7 +453,7 @@
 
     goto :goto_0
 
-    .line 300
+    .line 304
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->getContext()Landroid/content/Context;
 
@@ -474,11 +474,11 @@
     :cond_1
     move v0, v3
 
-    .line 302
+    .line 306
     :goto_0
     invoke-direct {p0, v0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->calculateInsets(Z)V
 
-    .line 308
+    .line 312
     iget-object v4, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mBitmapShader:Landroid/graphics/BitmapShader;
 
     if-eqz v4, :cond_11
@@ -487,7 +487,7 @@
 
     if-eqz v4, :cond_11
 
-    .line 311
+    .line 315
     invoke-virtual {v4}, Lcom/android/systemui/shared/recents/model/Task;->isFreeformTask()Z
 
     move-result v4
@@ -511,7 +511,7 @@
     :goto_1
     move v4, v2
 
-    .line 312
+    .line 316
     :goto_2
     iget-object v5, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mTaskViewWithoutHeaderRect:Landroid/graphics/Rect;
 
@@ -542,7 +542,7 @@
     :cond_4
     if-eqz v4, :cond_e
 
-    .line 318
+    .line 322
     iget-object v4, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
 
     iget v4, v4, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->screenOrientation:I
@@ -565,7 +565,7 @@
 
     if-eqz v0, :cond_7
 
-    .line 322
+    .line 326
     iget-object v7, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mDisplay:Landroid/view/Display;
 
     invoke-virtual {v7}, Landroid/view/Display;->getRotation()I
@@ -581,7 +581,7 @@
     :cond_6
     const/16 v7, -0x5a
 
-    .line 327
+    .line 331
     iget-object v8, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mTaskViewWithoutHeaderRect:Landroid/graphics/Rect;
 
     invoke-virtual {v8}, Landroid/graphics/Rect;->height()I
@@ -602,7 +602,7 @@
     :goto_4
     const/16 v7, 0x5a
 
-    .line 324
+    .line 328
     iget-object v8, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mTaskViewWithoutHeaderRect:Landroid/graphics/Rect;
 
     invoke-virtual {v8}, Landroid/graphics/Rect;->width()I
@@ -629,7 +629,7 @@
     :goto_5
     if-eqz v4, :cond_9
 
-    .line 333
+    .line 337
     iget-object v9, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailBitmapRect:Landroid/graphics/Rect;
 
     invoke-virtual {v9}, Landroid/graphics/Rect;->height()I
@@ -648,7 +648,7 @@
     :goto_6
     if-eqz v4, :cond_a
 
-    .line 334
+    .line 338
     iget-object v4, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailBitmapRect:Landroid/graphics/Rect;
 
     invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
@@ -664,7 +664,7 @@
 
     move-result v4
 
-    .line 335
+    .line 339
     :goto_7
     iget-object v10, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mTaskViewWithoutHeaderRect:Landroid/graphics/Rect;
 
@@ -682,7 +682,7 @@
 
     div-float/2addr v10, v9
 
-    .line 336
+    .line 340
     iget-object v12, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mTaskViewWithoutHeaderRect:Landroid/graphics/Rect;
 
     invoke-virtual {v12}, Landroid/graphics/Rect;->height()I
@@ -706,7 +706,7 @@
 
     if-lez v0, :cond_d
 
-    .line 340
+    .line 344
     :cond_c
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailBitmapSizeAfterScaled:[I
 
@@ -718,7 +718,7 @@
 
     aput v1, v0, v3
 
-    .line 341
+    .line 345
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailBitmapSizeAfterScaled:[I
 
     mul-float/2addr v4, v10
@@ -729,7 +729,7 @@
 
     goto :goto_8
 
-    .line 344
+    .line 348
     :cond_d
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailBitmapSizeAfterScaled:[I
 
@@ -739,7 +739,7 @@
 
     aput v1, v0, v3
 
-    .line 345
+    .line 349
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mTaskViewWithoutHeaderRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
@@ -757,11 +757,11 @@
 
     goto :goto_a
 
-    .line 350
+    .line 354
     :cond_e
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mTaskViewWithoutHeaderRect:Landroid/graphics/Rect;
 
-    .line 351
+    .line 355
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -780,7 +780,7 @@
 
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mTaskViewWithoutHeaderRect:Landroid/graphics/Rect;
 
-    .line 352
+    .line 356
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
     move-result v1
@@ -797,7 +797,7 @@
 
     div-float/2addr v1, v2
 
-    .line 350
+    .line 354
     invoke-static {v0, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result v0
@@ -816,7 +816,7 @@
 
     move v7, v5
 
-    .line 355
+    .line 359
     :goto_a
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
 
@@ -826,31 +826,31 @@
 
     if-eqz v1, :cond_10
 
-    .line 361
+    .line 365
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mScaleMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v1, v6, v6}, Landroid/graphics/Matrix;->setTranslate(FF)V
 
-    .line 364
+    .line 368
     :cond_10
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mScaleMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v1, v0, v0}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 365
+    .line 369
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mScaleMatrix:Landroid/graphics/Matrix;
 
     int-to-float v1, v3
 
     invoke-virtual {v0, v1, v5, v7}, Landroid/graphics/Matrix;->postRotate(FFF)Z
 
-    .line 367
+    .line 371
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mBitmapShader:Landroid/graphics/BitmapShader;
 
     if-eqz v0, :cond_11
 
-    .line 368
+    .line 372
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mBitmapShader:Landroid/graphics/BitmapShader;
 
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mScaleMatrix:Landroid/graphics/Matrix;
@@ -868,10 +868,10 @@
 
     const-string v2, "updateThumbnailScale mBitmapShader.setLocalMatrix error"
 
-    .line 371
+    .line 375
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 374
+    .line 378
     :cond_11
     :goto_b
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->invalidate()V
@@ -884,7 +884,7 @@
 .method bindToTask(Lcom/android/systemui/shared/recents/model/Task;Z)V
     .locals 0
 
-    .line 390
+    .line 394
     iput-object p1, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mTask:Lcom/android/systemui/shared/recents/model/Task;
 
     return-void
@@ -895,20 +895,20 @@
 
     const/4 v0, 0x0
 
-    .line 278
+    .line 282
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mBitmapShader:Landroid/graphics/BitmapShader;
 
-    .line 279
+    .line 283
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mDrawPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 280
+    .line 284
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailBitmapRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 281
+    .line 285
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
 
     return-void
@@ -917,7 +917,7 @@
 .method public getInsets()Landroid/graphics/Rect;
     .locals 1
 
-    .line 230
+    .line 234
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mScaledInsets:Landroid/graphics/Rect;
 
     return-object v0
@@ -926,7 +926,7 @@
 .method public getSpringAnimationImpl()Lcom/miui/home/recents/util/SpringAnimationImpl;
     .locals 1
 
-    .line 424
+    .line 428
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mSpringAnimationImpl:Lcom/miui/home/recents/util/SpringAnimationImpl;
 
     return-object v0
@@ -935,14 +935,14 @@
 .method public getSysUiStatusNavFlags()I
     .locals 2
 
-    .line 242
+    .line 246
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
-    .line 244
+    .line 248
     iget v0, v0, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->systemUiVisibility:I
 
     and-int/lit16 v0, v0, 0x2000
@@ -959,7 +959,7 @@
     :goto_0
     or-int/2addr v0, v1
 
-    .line 247
+    .line 251
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
 
     iget v1, v1, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->systemUiVisibility:I
@@ -1011,6 +1011,12 @@
 
     if-eqz v0, :cond_0
 
+    invoke-static {p0}, Lcom/miui/home/recents/util/Utilities;->isAddToLauncher(Landroid/view/View;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     .line 171
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
@@ -1044,7 +1050,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0701fd
+    const v1, 0x7f070201
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1286,10 +1292,13 @@
 
     int-to-float v7, v0
 
-    .line 209
+    .line 210
+    :try_start_0
     iget v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mCornerRadius:I
 
     int-to-float v8, v0
+
+    iget v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mCornerRadius:I
 
     int-to-float v9, v0
 
@@ -1298,6 +1307,20 @@
     move-object v3, p1
 
     invoke-virtual/range {v3 .. v10}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_3
+
+    :catch_0
+    move-exception v0
+
+    const-string v3, "TaskViewThumbnail"
+
+    const-string v4, "ondraw"
+
+    .line 213
+    invoke-static {v3, v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_3
 
@@ -1310,7 +1333,7 @@
 
     int-to-float v7, v2
 
-    .line 213
+    .line 217
     iget v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mCornerRadius:I
 
     int-to-float v8, v0
@@ -1323,7 +1346,7 @@
 
     invoke-virtual/range {v3 .. v10}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
 
-    .line 218
+    .line 222
     :goto_3
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mTask:Lcom/android/systemui/shared/recents/model/Task;
 
@@ -1343,7 +1366,7 @@
 
     int-to-float v7, v2
 
-    .line 219
+    .line 223
     iget v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mCornerRadius:I
 
     int-to-float v8, v0
@@ -1356,7 +1379,7 @@
 
     invoke-virtual/range {v3 .. v10}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
 
-    .line 221
+    .line 225
     :cond_6
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
@@ -1407,7 +1430,7 @@
 .method public reset()V
     .locals 2
 
-    .line 413
+    .line 417
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
     move-result-object v0
@@ -1418,24 +1441,24 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 414
+    .line 418
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->setAlpha(F)V
 
-    .line 415
+    .line 419
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->setScaleX(F)V
 
-    .line 416
+    .line 420
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->setScaleY(F)V
 
     const/4 v1, 0x0
 
-    .line 417
+    .line 421
     invoke-virtual {p0, v1}, Lcom/miui/home/recents/views/TaskViewThumbnail;->setTranslationX(F)V
 
-    .line 418
+    .line 422
     invoke-virtual {p0, v1}, Lcom/miui/home/recents/views/TaskViewThumbnail;->setTranslationY(F)V
 
-    .line 419
+    .line 423
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1448,7 +1471,7 @@
 
     invoke-virtual {p0, v1}, Lcom/miui/home/recents/views/TaskViewThumbnail;->setCornerRadius(I)V
 
-    .line 420
+    .line 424
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->setTaskRatio(F)V
 
     return-void
@@ -1457,10 +1480,10 @@
 .method public setCornerRadius(I)V
     .locals 0
 
-    .line 225
+    .line 229
     iput p1, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mCornerRadius:I
 
-    .line 226
+    .line 230
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->invalidate()V
 
     return-void
@@ -1469,10 +1492,10 @@
 .method public setDimAlpha(F)V
     .locals 0
 
-    .line 382
+    .line 386
     iput p1, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mDimAlpha:F
 
-    .line 383
+    .line 387
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->updateThumbnailPaintFilter()V
 
     return-void
@@ -1520,7 +1543,7 @@
 
     goto :goto_1
 
-    .line 264
+    .line 268
     :cond_0
     new-instance v0, Landroid/graphics/BitmapShader;
 
@@ -1532,24 +1555,24 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mBitmapShader:Landroid/graphics/BitmapShader;
 
-    .line 265
+    .line 269
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mDrawPaint:Landroid/graphics/Paint;
 
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mBitmapShader:Landroid/graphics/BitmapShader;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 266
+    .line 270
     iput-object p2, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
 
-    .line 267
+    .line 271
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
 
     iget p2, p2, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->scale:F
 
     iput p2, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mFullscreenThumbnailScale:F
 
-    .line 268
+    .line 272
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
 
     iget-object p2, p2, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->insets:Landroid/graphics/Rect;
@@ -1558,14 +1581,14 @@
 
     if-eqz p2, :cond_1
 
-    .line 269
+    .line 273
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailBitmapRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    .line 270
+    .line 274
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result p1
@@ -1588,12 +1611,12 @@
 
     float-to-int p1, p1
 
-    .line 269
+    .line 273
     invoke-virtual {p2, v0, v0, v1, p1}, Landroid/graphics/Rect;->set(IIII)V
 
     goto :goto_0
 
-    .line 272
+    .line 276
     :cond_1
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mThumbnailBitmapRect:Landroid/graphics/Rect;
 
@@ -1607,13 +1630,13 @@
 
     invoke-virtual {p2, v0, v0, v1, p1}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 274
+    .line 278
     :goto_0
     invoke-direct {p0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->updateThumbnailScale()V
 
     return-void
 
-    .line 260
+    .line 264
     :cond_2
     :goto_1
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->clearThumbnail()V
@@ -1626,10 +1649,10 @@
 
     const/4 v0, 0x0
 
-    .line 397
+    .line 401
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskViewThumbnail;->mTask:Lcom/android/systemui/shared/recents/model/Task;
 
-    .line 398
+    .line 402
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->clearThumbnail()V
 
     return-void
@@ -1638,7 +1661,7 @@
 .method updateThumbnailPaintFilter()V
     .locals 0
 
-    .line 288
+    .line 292
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->invalidate()V
 
     return-void

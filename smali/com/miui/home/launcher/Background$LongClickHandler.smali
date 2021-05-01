@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/Background;)V
     .locals 0
 
-    .line 107
+    .line 103
     iput-object p1, p0, Lcom/miui/home/launcher/Background$LongClickHandler;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/Background;Lcom/miui/home/launcher/Background$1;)V
     .locals 0
 
-    .line 107
+    .line 103
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Background$LongClickHandler;-><init>(Lcom/miui/home/launcher/Background;)V
 
     return-void
@@ -47,7 +47,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 111
+    .line 107
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -56,7 +56,7 @@
 
     return-void
 
-    .line 115
+    .line 111
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isElderlyManMode()Z
 
@@ -66,7 +66,7 @@
 
     return-void
 
-    .line 118
+    .line 114
     :cond_1
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isInEditing()Z
 
@@ -88,7 +88,7 @@
 
     goto :goto_0
 
-    .line 121
+    .line 117
     :cond_2
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDragController()Lcom/miui/home/launcher/DragController;
 
@@ -102,7 +102,7 @@
 
     return-void
 
-    .line 124
+    .line 120
     :cond_3
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
@@ -118,7 +118,7 @@
 
     if-nez v1, :cond_4
 
-    .line 125
+    .line 121
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;
 
     move-result-object v0
@@ -136,10 +136,10 @@
     :cond_4
     const-string v0, "long_click"
 
-    .line 126
+    .line 122
     invoke-static {v0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackEditMode(Ljava/lang/String;)V
 
-    .line 127
+    .line 123
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -150,7 +150,7 @@
 
     invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
-    .line 128
+    .line 124
     iget-object v0, p0, Lcom/miui/home/launcher/Background$LongClickHandler;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/LongClickMessage;->getRawX()F

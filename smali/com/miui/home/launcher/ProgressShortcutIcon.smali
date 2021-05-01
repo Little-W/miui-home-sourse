@@ -117,16 +117,16 @@
     iput-boolean p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mForbidUpdate:Z
 
     .line 270
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$9FeAKpimhZEQGf6mWk-YtSxeG1c;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$kmG_eN--oa_zmLDW7jXsRLMgLwQ;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$9FeAKpimhZEQGf6mWk-YtSxeG1c;-><init>(Lcom/miui/home/launcher/ProgressShortcutIcon;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$kmG_eN--oa_zmLDW7jXsRLMgLwQ;-><init>(Lcom/miui/home/launcher/ProgressShortcutIcon;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mNormalTickCallback:Lcom/miui/maml/component/MamlView$OnExternCommandListener;
 
     .line 291
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$LZSI-JFxoYL5s47Obv52MzYBajM;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$_IcTiDoyb_qkl-k80yMU9f_2SCI;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$LZSI-JFxoYL5s47Obv52MzYBajM;-><init>(Lcom/miui/home/launcher/ProgressShortcutIcon;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$_IcTiDoyb_qkl-k80yMU9f_2SCI;-><init>(Lcom/miui/home/launcher/ProgressShortcutIcon;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mPauseTickCallback:Lcom/miui/maml/component/MamlView$OnExternCommandListener;
 
@@ -164,7 +164,7 @@
     return p1
 .end method
 
-.method public static synthetic lambda$new$0(Lcom/miui/home/launcher/ProgressShortcutIcon;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
+.method public static synthetic lambda$new$396(Lcom/miui/home/launcher/ProgressShortcutIcon;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
     .locals 2
 
     const-string p2, "tick"
@@ -265,7 +265,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$new$1(Lcom/miui/home/launcher/ProgressShortcutIcon;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
+.method public static synthetic lambda$new$397(Lcom/miui/home/launcher/ProgressShortcutIcon;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
     .locals 0
 
     const-string p2, "ProgressShortcutIcon"
@@ -301,7 +301,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$startAfterDropAnimation$2(Lcom/miui/home/launcher/ProgressShortcutIcon;Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Landroid/animation/ValueAnimator;)V
+.method public static synthetic lambda$startAfterDropAnimation$398(Lcom/miui/home/launcher/ProgressShortcutIcon;Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Landroid/animation/ValueAnimator;)V
     .locals 3
 
     .line 374
@@ -534,9 +534,9 @@
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlResumeAnimation:Landroid/animation/ValueAnimator;
 
-    new-instance v2, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$YND2TESmdCpExS-z2i9URGNxDQ0;
+    new-instance v2, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$GDc7REpdtnjQZTGFa7-HaU1YGsA;
 
-    invoke-direct {v2, p0, v0}, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$YND2TESmdCpExS-z2i9URGNxDQ0;-><init>(Lcom/miui/home/launcher/ProgressShortcutIcon;Lcom/miui/home/launcher/progress/ProgressShortcutInfo;)V
+    invoke-direct {v2, p0, v0}, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$GDc7REpdtnjQZTGFa7-HaU1YGsA;-><init>(Lcom/miui/home/launcher/ProgressShortcutIcon;Lcom/miui/home/launcher/progress/ProgressShortcutInfo;)V
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -1144,7 +1144,7 @@
     goto/16 :goto_3
 
     :cond_1
-    const v0, 0x7f0a01fa
+    const v0, 0x7f0a01fc
 
     .line 153
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->findViewById(I)Landroid/view/View;

@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onAnimationEnd$0(Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;Ljava/lang/Void;)Ljava/lang/Integer;
+.method public static synthetic lambda$onAnimationEnd$379(Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;Ljava/lang/Void;)Ljava/lang/Integer;
     .locals 0
 
     .line 158
@@ -51,7 +51,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$onAnimationEnd$1(Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;ILjava/lang/Integer;)V
+.method public static synthetic lambda$onAnimationEnd$380(Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;ILjava/lang/Integer;)V
     .locals 6
 
     const/4 v0, 0x0
@@ -69,7 +69,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f100171
+    const v2, 0x7f100172
 
     const/4 v3, 0x2
 
@@ -118,7 +118,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f100170
+    const p2, 0x7f100171
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -192,13 +192,13 @@
     sub-int/2addr p1, v0
 
     .line 158
-    new-instance v0, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$3$1$1$LdfMT65YMfIFyR4Nos97BwfWPJI;
+    new-instance v0, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$3$1$1$B0Y8AqhdbC_WnCLENG6qB8V9ncU;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$3$1$1$LdfMT65YMfIFyR4Nos97BwfWPJI;-><init>(Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$3$1$1$B0Y8AqhdbC_WnCLENG6qB8V9ncU;-><init>(Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;)V
 
-    new-instance v1, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$3$1$1$uMiUFAzzaaP5_imPcahPzp1VT34;
+    new-instance v1, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$3$1$1$YhEBXO92iUXIQkOeeAf6vUta-QI;
 
-    invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$3$1$1$uMiUFAzzaaP5_imPcahPzp1VT34;-><init>(Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;I)V
+    invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$3$1$1$YhEBXO92iUXIQkOeeAf6vUta-QI;-><init>(Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;I)V
 
     const/4 p1, 0x0
 

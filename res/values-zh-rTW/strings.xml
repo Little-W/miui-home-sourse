@@ -51,7 +51,7 @@
     <string name="added_all_category">全部應用程式已增加</string>
     <string name="alexa_notification_add">增加</string>
     <string name="alexa_notification_cancel">暫時不用</string>
-    <string name="alexa_notification_content">增加Alexa快捷設置到控制中心？</string>
+    <string name="alexa_notification_content">增加Alexa快捷設定到控制中心？</string>
     <string name="all_app_category_all">全部</string>
     <string name="all_app_category_communication">社交通訊</string>
     <string name="all_app_category_default">分類</string>
@@ -203,6 +203,7 @@
     <string name="custom_wallpaper_picker">其它</string>
     <string name="defalut_launcher_title">預設桌面</string>
     <string name="default_folder_title_game">遊戲</string>
+    <string name="default_folder_title_hot">熱門</string>
     <string name="default_folder_title_meitu">美圖應用程式</string>
     <string name="default_folder_title_microsoft">微軟</string>
     <string name="default_folder_title_other_apps">其他應用程式</string>
@@ -408,7 +409,7 @@
     <string name="navigation_guide_dialog_skip">略過</string>
     <string name="navigation_guide_dialog_summary">開啟全螢幕手勢後，會全域隱藏導航鍵，同時禁用導航鍵相關的快捷操作。接下來請學習全螢幕手勢，了解如何使用手勢實現系統導航。</string>
     <string name="navigation_guide_dialog_title">全螢幕手勢學習</string>
-    <string name="navigation_guide_gesture_line_dialog_summary">隱藏提示線後會改變快速切換應用程式的手勢，請學習開啟後如何快速切換應用程式</string>
+    <string name="navigation_guide_gesture_line_dialog_summary">隱藏提醒線後會改變快速切換應用程式的手勢，請學習開啟後如何快速切換應用程式</string>
     <string name="navigation_guide_gesture_line_dialog_title">手勢學習提示</string>
     <string name="navigation_guide_hide_gesture_line_summary">使用全螢幕手勢時隱藏底部的提醒線</string>
     <string name="navigation_guide_hide_gesture_line_title">隱藏手勢提醒線</string>
@@ -503,7 +504,7 @@
     <string name="recents_title_security_scan">安全掃描</string>
     <string name="recents_tv_small_window_text">小窗應用程式</string>
     <string name="recommend_app">應用程式建議欄</string>
-    <string name="recommend_apps_default_title">暫無數據</string>
+    <string name="recommend_apps_default_title">暫無資料</string>
     <string name="recommend_apps_no_data">暫無資料</string>
     <string name="recommend_apps_no_data_toast">“猜你喜歡”暫無資料</string>
     <string name="recommend_apps_notice">猜你喜歡</string>

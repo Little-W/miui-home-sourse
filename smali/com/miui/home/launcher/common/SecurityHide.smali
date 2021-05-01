@@ -54,12 +54,12 @@
     sput-object v0, Lcom/miui/home/launcher/common/SecurityHide;->mHideItemList:Ljava/util/List;
 
     .line 25
-    sget-object v0, Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$nDOJbHmPARp8zjGd80r7UGnLND8;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$nDOJbHmPARp8zjGd80r7UGnLND8;
+    sget-object v0, Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$vO7s8s2Z_Z3erbgpuiWNl7OrkGs;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$vO7s8s2Z_Z3erbgpuiWNl7OrkGs;
 
     sput-object v0, Lcom/miui/home/launcher/common/SecurityHide;->sQueryFunc:Ljava/util/function/Function;
 
     .line 59
-    sget-object v0, Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$_gJpcmCzum8mOP42OAaH9wE5CaY;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$_gJpcmCzum8mOP42OAaH9wE5CaY;
+    sget-object v0, Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$BFNkjfO5uhzdqdiP9ul1ywGu6UM;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$BFNkjfO5uhzdqdiP9ul1ywGu6UM;
 
     sput-object v0, Lcom/miui/home/launcher/common/SecurityHide;->sConsumer:Ljava/util/function/Consumer;
 
@@ -121,7 +121,7 @@
     .line 67
     sget-object v0, Lcom/miui/home/launcher/common/SecurityHide;->sQueryFunc:Ljava/util/function/Function;
 
-    sget-object v1, Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$-Z0r6jrrLJAfGR7bExL-DIZXutU;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$-Z0r6jrrLJAfGR7bExL-DIZXutU;
+    sget-object v1, Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$oZyoWUAmHIc9pQPAo7iAy9wYSlk;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$oZyoWUAmHIc9pQPAo7iAy9wYSlk;
 
     const/4 v2, 0x0
 
@@ -130,7 +130,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$getSecurityHideItemsAsync$2(Ljava/util/ArrayList;)V
+.method static synthetic lambda$getSecurityHideItemsAsync$464(Ljava/util/ArrayList;)V
     .locals 1
 
     .line 68
@@ -152,7 +152,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$static$0(Ljava/lang/Void;)Ljava/util/ArrayList;
+.method static synthetic lambda$static$462(Ljava/lang/Void;)Ljava/util/ArrayList;
     .locals 11
 
     .line 27
@@ -356,7 +356,7 @@
     return-object p0
 .end method
 
-.method static synthetic lambda$static$1(Ljava/util/ArrayList;)V
+.method static synthetic lambda$static$463(Ljava/util/ArrayList;)V
     .locals 1
 
     if-eqz p0, :cond_0

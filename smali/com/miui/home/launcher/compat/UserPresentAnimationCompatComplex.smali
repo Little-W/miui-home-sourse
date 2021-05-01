@@ -49,21 +49,21 @@
     .line 18
     iput-wide v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mPreparedScreenId:J
 
-    .line 97
+    .line 95
     new-instance p1, Lcom/miui/home/launcher/compat/-$$Lambda$1IjkbeWbkR66ZFEqTyymtiDZ9FA;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/compat/-$$Lambda$1IjkbeWbkR66ZFEqTyymtiDZ9FA;-><init>(Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;)V
 
     iput-object p1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mPrepareConsumer:Ljava/util/function/Consumer;
 
-    .line 99
+    .line 97
     new-instance p1, Lcom/miui/home/launcher/compat/-$$Lambda$JulaMBTdELcgm--ivXAD0lzKrn4;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/compat/-$$Lambda$JulaMBTdELcgm--ivXAD0lzKrn4;-><init>(Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;)V
 
     iput-object p1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mShowConsumer:Ljava/util/function/Consumer;
 
-    .line 101
+    .line 99
     new-instance p1, Lcom/miui/home/launcher/compat/-$$Lambda$LHLCr5798S0ioKJC76RTu4nsKt8;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/compat/-$$Lambda$LHLCr5798S0ioKJC76RTu4nsKt8;-><init>(Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;)V
@@ -86,7 +86,7 @@
         }
     .end annotation
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_4
 
     if-nez p2, :cond_0
 
@@ -119,15 +119,6 @@
 
     .line 86
     :cond_1
-    invoke-virtual {p2}, Lcom/miui/home/launcher/CellLayout;->getScreenType()I
-
-    move-result p2
-
-    const/4 v1, 0x2
-
-    if-eq p2, v1, :cond_4
-
-    .line 87
     :goto_1
     iget-object p2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -141,7 +132,7 @@
 
     if-ge v0, p2, :cond_2
 
-    .line 88
+    .line 87
     iget-object p2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/HotSeats;
@@ -158,7 +149,7 @@
 
     goto :goto_1
 
-    .line 90
+    .line 89
     :cond_2
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowSearchBar()Z
 
@@ -166,7 +157,7 @@
 
     if-eqz p2, :cond_3
 
-    .line 91
+    .line 90
     iget-object p2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getSearchBar()Lcom/miui/home/launcher/SearchBar;
@@ -175,7 +166,7 @@
 
     invoke-interface {p1, p2}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    .line 93
+    .line 92
     :cond_3
     iget-object p2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -189,10 +180,9 @@
 
     invoke-interface {p1, p2}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    :cond_4
     return-void
 
-    :cond_5
+    :cond_4
     :goto_2
     return-void
 .end method
@@ -267,7 +257,7 @@
 .method protected ignoreTranslation(Landroid/view/View;)Z
     .locals 1
 
-    .line 108
+    .line 106
     instance-of v0, p1, Lcom/miui/home/launcher/ScreenView$Indicator;
 
     if-nez v0, :cond_1
@@ -459,7 +449,7 @@
 
     if-eqz p1, :cond_4
 
-    .line 113
+    .line 111
     invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
 
     move-result v0
@@ -470,10 +460,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 114
+    .line 112
     invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 116
+    .line 114
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getTranslationX()F
 
@@ -491,10 +481,10 @@
 
     if-nez v0, :cond_1
 
-    .line 117
+    .line 115
     invoke-virtual {p1, v2}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 119
+    .line 117
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
@@ -510,10 +500,10 @@
 
     if-nez v0, :cond_2
 
-    .line 120
+    .line 118
     invoke-virtual {p1, v2}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 122
+    .line 120
     :cond_2
     invoke-virtual {p1}, Landroid/view/View;->getScaleX()F
 
@@ -523,10 +513,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 123
+    .line 121
     invoke-virtual {p1, v1}, Landroid/view/View;->setScaleX(F)V
 
-    .line 125
+    .line 123
     :cond_3
     invoke-virtual {p1}, Landroid/view/View;->getScaleY()F
 
@@ -536,7 +526,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 126
+    .line 124
     invoke-virtual {p1, v1}, Landroid/view/View;->setScaleY(F)V
 
     :cond_4

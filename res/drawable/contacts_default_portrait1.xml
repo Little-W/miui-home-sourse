@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="156.0" android:viewportHeight="156.0"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
-    <path android:fillColor="@drawable/$contacts_default_portrait1__0" android:pathData="M78,78m-78,0a78,78 0,1 1,156 0a78,78 0,1 1,-156 0" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
-    <path android:fillColor="#ffffffff" android:pathData="M52.127,86.509L103.873,86.509A11,11 0,0 1,114.873 97.509L114.873,106.709A11,11 0,0 1,103.873 117.709L52.127,117.709A11,11 0,0 1,41.127 106.709L41.127,97.509A11,11 0,0 1,52.127 86.509z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
-    <path android:fillColor="#ffffffff" android:pathData="M78,58.145m-19.855,0a19.855,19.855 0,1 1,39.709 0a19.855,19.855 0,1 1,-39.709 0" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
+<vector
+    android:height="24.0dip"
+    android:width="24.0dip"
+    android:viewportWidth="156.0"
+    android:viewportHeight="156.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <path
+        android:fillColor="@drawable/$contacts_default_portrait1__0"
+        android:pathData="M78,78m-78,0a78,78 0,1 1,156 0a78,78 0,1 1,-156 0"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1.0"
+        android:fillType="evenOdd" />
+    <path
+        android:fillColor="#ffffffff"
+        android:pathData="M52.127,86.509L103.873,86.509A11,11 0,0 1,114.873 97.509L114.873,106.709A11,11 0,0 1,103.873 117.709L52.127,117.709A11,11 0,0 1,41.127 106.709L41.127,97.509A11,11 0,0 1,52.127 86.509z"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1.0"
+        android:fillType="evenOdd" />
+    <path
+        android:fillColor="#ffffffff"
+        android:pathData="M78,58.145m-19.855,0a19.855,19.855 0,1 1,39.709 0a19.855,19.855 0,1 1,-39.709 0"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1.0"
+        android:fillType="evenOdd" />
 </vector>

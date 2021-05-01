@@ -243,7 +243,7 @@
     return p0
 .end method
 
-.method public static synthetic lambda$null$0(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;)V
+.method public static synthetic lambda$null$323(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;)V
     .locals 2
 
     .line 233
@@ -256,15 +256,15 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onCreateViewHolder$1(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;Landroid/view/View;)V
+.method public static synthetic lambda$onCreateViewHolder$324(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;Landroid/view/View;)V
     .locals 2
 
     .line 232
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    new-instance v0, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsGridAdapter$uSOQPpqVudXexvqu_pvrYd_yAqw;
+    new-instance v0, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsGridAdapter$j5HCAr6cNGtxjZejGrUbdI_EW_A;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsGridAdapter$uSOQPpqVudXexvqu_pvrYd_yAqw;-><init>(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsGridAdapter$j5HCAr6cNGtxjZejGrUbdI_EW_A;-><init>(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;)V
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->mMarketSearchIntent:Landroid/content/Intent;
 
@@ -514,7 +514,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f1000f2
+    const v3, 0x7f1000f3
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -879,9 +879,9 @@
     move-result-object p1
 
     .line 231
-    new-instance p2, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsGridAdapter$jhKRaKLrD8p7Dal0G6GPgguu-9c;
+    new-instance p2, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsGridAdapter$HY50GcWBO8121KGEM5TLysC4YzE;
 
-    invoke-direct {p2, p0}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsGridAdapter$jhKRaKLrD8p7Dal0G6GPgguu-9c;-><init>(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;)V
+    invoke-direct {p2, p0}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsGridAdapter$HY50GcWBO8121KGEM5TLysC4YzE;-><init>(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;)V
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -1191,7 +1191,7 @@
 
     if-nez v3, :cond_1
 
-    const v2, 0x7f10022c
+    const v2, 0x7f10022d
 
     const/4 v3, 0x2
 

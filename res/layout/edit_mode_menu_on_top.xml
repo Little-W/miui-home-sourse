@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.multiselect.MultiSelectModeMenu android:orientation="horizontal" android:id="@id/edit_mode_menu_on_top" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.miui.home.launcher.multiselect.GroupContainer android:layout_gravity="start" android:orientation="vertical" android:id="@id/edit_mode_group_container" android:visibility="gone" android:layout_width="@dimen/edit_mode_top_menu_container_width" android:layout_height="wrap_content" android:layout_marginStart="@dimen/edit_mode_top_menu_side_button_margin_screen_edge">
-        <include layout="@layout/top_menu_container" />
+<com.miui.home.launcher.multiselect.MultiSelectModeMenu
+    android:orientation="horizontal"
+    android:id="@id/edit_mode_menu_on_top"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.launcher.multiselect.GroupContainer
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:id="@id/edit_mode_group_container"
+        android:visibility="gone"
+        android:layout_width="@dimen/edit_mode_top_menu_container_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/edit_mode_top_menu_side_button_margin_screen_edge">
+        <include
+            layout="@layout/top_menu_container" />
     </com.miui.home.launcher.multiselect.GroupContainer>
-    <com.miui.home.launcher.multiselect.FinishContainer android:layout_gravity="end" android:orientation="vertical" android:id="@id/finish_container" android:visibility="gone" android:layout_width="@dimen/edit_mode_top_menu_container_width" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/edit_mode_top_menu_side_button_margin_screen_edge">
-        <include layout="@layout/top_menu_container" />
+    <com.miui.home.launcher.multiselect.FinishContainer
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        android:id="@id/finish_container"
+        android:visibility="gone"
+        android:layout_width="@dimen/edit_mode_top_menu_container_width"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/edit_mode_top_menu_side_button_margin_screen_edge">
+        <include
+            layout="@layout/top_menu_container" />
     </com.miui.home.launcher.multiselect.FinishContainer>
 </com.miui.home.launcher.multiselect.MultiSelectModeMenu>

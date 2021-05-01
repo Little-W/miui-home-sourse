@@ -93,7 +93,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f100258
+    const v0, 0x7f10025b
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -204,7 +204,7 @@
     return p1
 .end method
 
-.method public static synthetic lambda$getFillShortcutIconConsumer$0(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/Launcher;Landroid/graphics/drawable/Drawable;)V
+.method public static synthetic lambda$getFillShortcutIconConsumer$167(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/Launcher;Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
     if-eqz p1, :cond_1
@@ -432,9 +432,9 @@
     .end annotation
 
     .line 180
-    new-instance v0, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressShortcutInfo$jqrYRMk4Qu8wTBCN0fSpmql_bYk;
+    new-instance v0, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressShortcutInfo$zG1Fs_8h_XibUB2Y11BonbNSXyg;
 
-    invoke-direct {v0, p0, p2, p1}, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressShortcutInfo$jqrYRMk4Qu8wTBCN0fSpmql_bYk;-><init>(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {v0, p0, p2, p1}, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressShortcutInfo$zG1Fs_8h_XibUB2Y11BonbNSXyg;-><init>(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/Launcher;)V
 
     return-object v0
 .end method

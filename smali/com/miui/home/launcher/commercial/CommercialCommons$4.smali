@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/RemoteShortcutInfo;Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 177
+    .line 202
     iput-object p1, p0, Lcom/miui/home/launcher/commercial/CommercialCommons$4;->val$info:Lcom/miui/home/launcher/RemoteShortcutInfo;
 
     iput-object p2, p0, Lcom/miui/home/launcher/commercial/CommercialCommons$4;->val$consumer:Ljava/util/function/Consumer;
@@ -44,7 +44,7 @@
 
     const-string p1, "CommercialCommons"
 
-    .line 180
+    .line 205
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,7 +75,7 @@
 
     const-string v0, "CommercialCommons"
 
-    .line 184
+    .line 209
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,7 +104,7 @@
 
     invoke-static {v0, p1}, Lcom/miui/home/launcher/MiuiHomeLog;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 185
+    .line 210
     iget-object p1, p0, Lcom/miui/home/launcher/commercial/CommercialCommons$4;->val$info:Lcom/miui/home/launcher/RemoteShortcutInfo;
 
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/CommercialCommons$4;->val$consumer:Ljava/util/function/Consumer;

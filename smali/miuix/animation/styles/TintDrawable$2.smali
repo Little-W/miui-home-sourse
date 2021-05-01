@@ -27,7 +27,7 @@
 .method constructor <init>(Landroid/view/View;Lmiuix/animation/styles/TintDrawable;)V
     .locals 0
 
-    .line 95
+    .line 98
     iput-object p1, p0, Lmiuix/animation/styles/TintDrawable$2;->val$view:Landroid/view/View;
 
     iput-object p2, p0, Lmiuix/animation/styles/TintDrawable$2;->val$ref:Lmiuix/animation/styles/TintDrawable;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 98
+    .line 101
     iget-object v0, p0, Lmiuix/animation/styles/TintDrawable$2;->val$view:Landroid/view/View;
 
     iget-object v1, p0, Lmiuix/animation/styles/TintDrawable$2;->val$ref:Lmiuix/animation/styles/TintDrawable;

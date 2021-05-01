@@ -37,7 +37,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/uninstall/UninstallController;Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 133
+    .line 135
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/UninstallController$1;->this$0:Lcom/miui/home/launcher/uninstall/UninstallController;
 
     iput-object p2, p0, Lcom/miui/home/launcher/uninstall/UninstallController$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
@@ -47,10 +47,10 @@
     return-void
 .end method
 
-.method public static synthetic lambda$accept$0(Lcom/miui/home/launcher/uninstall/UninstallController$1;Ljava/util/List;Lcom/miui/home/launcher/Launcher;)V
+.method public static synthetic lambda$accept$159(Lcom/miui/home/launcher/uninstall/UninstallController$1;Ljava/util/List;Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 137
+    .line 139
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController$1;->this$0:Lcom/miui/home/launcher/uninstall/UninstallController;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/uninstall/UninstallController;->hideApps(Ljava/util/List;Lcom/miui/home/launcher/Launcher;)V
@@ -63,7 +63,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 133
+    .line 135
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/uninstall/UninstallController$1;->accept(Ljava/util/List;)V
@@ -82,7 +82,7 @@
         }
     .end annotation
 
-    .line 136
+    .line 138
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController$1;->this$0:Lcom/miui/home/launcher/uninstall/UninstallController;
 
     invoke-static {v0}, Lcom/miui/home/launcher/uninstall/UninstallController;->access$000(Lcom/miui/home/launcher/uninstall/UninstallController;)Lcom/miui/home/launcher/Launcher;
@@ -91,9 +91,9 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/uninstall/UninstallController$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
-    new-instance v2, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$1$fyqcdE9xTSGIp_FSAcQRdithp7g;
+    new-instance v2, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$1$ivdY-onHq9hTbrZITCpc7Q0adGI;
 
-    invoke-direct {v2, p0, p1, v1}, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$1$fyqcdE9xTSGIp_FSAcQRdithp7g;-><init>(Lcom/miui/home/launcher/uninstall/UninstallController$1;Ljava/util/List;Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {v2, p0, p1, v1}, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$1$ivdY-onHq9hTbrZITCpc7Q0adGI;-><init>(Lcom/miui/home/launcher/uninstall/UninstallController$1;Ljava/util/List;Lcom/miui/home/launcher/Launcher;)V
 
     invoke-static {v0, p1, v2}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper;->doBoomAnim(Lcom/miui/home/launcher/Launcher;Ljava/util/List;Ljava/lang/Runnable;)V
 

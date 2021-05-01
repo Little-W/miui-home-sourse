@@ -31,11 +31,11 @@
     .line 35
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f060233
+    const v1, 0x7f060237
 
-    const v2, 0x7f060232
+    const v2, 0x7f060236
 
-    const v3, 0x7f060231
+    const v3, 0x7f060235
 
     invoke-direct {v0, v1, v1, v2, v3}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(IIII)V
 
@@ -132,17 +132,17 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f1000f9
+    const v0, 0x7f1000fa
 
     return v0
 
     :cond_0
-    const v0, 0x7f1000f6
+    const v0, 0x7f1000f7
 
     return v0
 .end method
 
-.method public static synthetic lambda$onFinishInflate$0(Lcom/miui/home/launcher/UninstallDropTarget;Landroid/view/View;)V
+.method public static synthetic lambda$onFinishInflate$128(Lcom/miui/home/launcher/UninstallDropTarget;Landroid/view/View;)V
     .locals 2
 
     .line 55
@@ -365,9 +365,9 @@
     invoke-super {p0}, Lcom/miui/home/launcher/ButtonDropTarget;->onFinishInflate()V
 
     .line 54
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$UninstallDropTarget$qJxMniHCtauvIobyuPq4h5TVoN8;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$UninstallDropTarget$h9iCzSDAaQeqrZOe1uqAa0BPZlE;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$UninstallDropTarget$qJxMniHCtauvIobyuPq4h5TVoN8;-><init>(Lcom/miui/home/launcher/UninstallDropTarget;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$UninstallDropTarget$h9iCzSDAaQeqrZOe1uqAa0BPZlE;-><init>(Lcom/miui/home/launcher/UninstallDropTarget;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/UninstallDropTarget;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

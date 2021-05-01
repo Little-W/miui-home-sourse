@@ -21,7 +21,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0800b7
+    const v2, 0x7f0800c6
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -40,7 +40,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f0800b8
+    const v1, 0x7f0800c7
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -103,20 +103,20 @@
     invoke-direct {v6}, Landroid/animation/ValueAnimator;-><init>()V
 
     .line 31
-    new-instance v7, Lcom/miui/home/launcher/view/-$$Lambda$EditCheckBoxDrawable$ZJ9e61iSnqegRCV7SNOYzLqXxaU;
+    new-instance v7, Lcom/miui/home/launcher/view/-$$Lambda$EditCheckBoxDrawable$yfG-lMgitIBnjUmLtbm2DAlOZ9M;
 
     move-object v0, v7
 
     move-object v5, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/view/-$$Lambda$EditCheckBoxDrawable$ZJ9e61iSnqegRCV7SNOYzLqXxaU;-><init>(IILandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/drawable/LayerDrawable;)V
+    invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/view/-$$Lambda$EditCheckBoxDrawable$yfG-lMgitIBnjUmLtbm2DAlOZ9M;-><init>(IILandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/drawable/LayerDrawable;)V
 
     invoke-virtual {v6, v7}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     return-object v6
 .end method
 
-.method static synthetic lambda$getCheckAnimator$0(IILandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/drawable/LayerDrawable;Landroid/animation/ValueAnimator;)V
+.method static synthetic lambda$getCheckAnimator$411(IILandroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/drawable/LayerDrawable;Landroid/animation/ValueAnimator;)V
     .locals 4
 
     .line 32

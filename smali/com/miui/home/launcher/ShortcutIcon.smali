@@ -76,9 +76,9 @@
     iput-boolean p2, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIsShowingCheckBox:Z
 
     .line 424
-    new-instance p2, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$aEVtRhkiKUiU83K81RF-iHNNXrU;
+    new-instance p2, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$V8f7dpja4P9b7VlAgzjjyb5BY_g;
 
-    invoke-direct {p2, p0}, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$aEVtRhkiKUiU83K81RF-iHNNXrU;-><init>(Lcom/miui/home/launcher/ShortcutIcon;)V
+    invoke-direct {p2, p0}, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$V8f7dpja4P9b7VlAgzjjyb5BY_g;-><init>(Lcom/miui/home/launcher/ShortcutIcon;)V
 
     iput-object p2, p0, Lcom/miui/home/launcher/ShortcutIcon;->mPerformHapticRunnable:Ljava/lang/Runnable;
 
@@ -191,7 +191,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600d5
+    const v1, 0x7f0600d8
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -349,7 +349,7 @@
     .line 260
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/ShortcutIcon;->setEnableAutoLayoutAnimation(Z)V
 
-    const p0, 0x7f0600ad
+    const p0, 0x7f0600b0
 
     .line 262
     invoke-virtual {v2, p0}, Landroid/content/res/Resources;->getColor(I)I
@@ -372,7 +372,7 @@
     .line 266
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/ShortcutIcon;->setEnableAutoLayoutAnimation(Z)V
 
-    const p0, 0x7f0600d5
+    const p0, 0x7f0600d8
 
     .line 268
     invoke-virtual {v2, p0}, Landroid/content/res/Resources;->getColor(I)I
@@ -402,9 +402,9 @@
     invoke-virtual {p3, p1}, Lcom/miui/home/launcher/ShortcutInfo;->updateBuddyIconView(Lcom/miui/home/launcher/Launcher;)V
 
     .line 278
-    new-instance p0, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$60RyNADELuCHdcEWv1bUbOTXk3U;
+    new-instance p0, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$9IJW-rlQj5aXeXobSdtdVNLss0E;
 
-    invoke-direct {p0, v0, p3, p1}, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$60RyNADELuCHdcEWv1bUbOTXk3U;-><init>(Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {p0, v0, p3, p1}, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$9IJW-rlQj5aXeXobSdtdVNLss0E;-><init>(Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/Launcher;)V
 
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->useLauncherToRunOnUiThread(Ljava/lang/Runnable;)Z
 
@@ -525,9 +525,9 @@
     .line 346
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mShowOrHideCheckBoxAnim:Landroid/animation/ValueAnimator;
 
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$cBqNGrs0AMtevPZHLn8vUjwnBGU;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$EOdrniVnlag9-WMw_UqJDVa0NDE;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$cBqNGrs0AMtevPZHLn8vUjwnBGU;-><init>(Lcom/miui/home/launcher/ShortcutIcon;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$EOdrniVnlag9-WMw_UqJDVa0NDE;-><init>(Lcom/miui/home/launcher/ShortcutIcon;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -598,7 +598,7 @@
     return v1
 .end method
 
-.method static synthetic lambda$fromXml$0(Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/Launcher;)V
+.method static synthetic lambda$fromXml$110(Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/Launcher;)V
     .locals 4
 
     .line 278
@@ -633,7 +633,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initShowOrHideCheckBoxAnim$1(Lcom/miui/home/launcher/ShortcutIcon;Landroid/animation/ValueAnimator;)V
+.method public static synthetic lambda$initShowOrHideCheckBoxAnim$111(Lcom/miui/home/launcher/ShortcutIcon;Landroid/animation/ValueAnimator;)V
     .locals 0
 
     .line 347
@@ -652,7 +652,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$new$2(Lcom/miui/home/launcher/ShortcutIcon;)V
+.method public static synthetic lambda$new$112(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 1
 
     .line 424
@@ -665,7 +665,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$resetBackAnim$3(Lcom/miui/home/launcher/ShortcutIcon;)V
+.method public static synthetic lambda$resetBackAnim$113(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 2
 
     .line 720
@@ -705,7 +705,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0700d9
+    const v2, 0x7f0700da
 
     .line 467
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1988,7 +1988,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mGeneralScaleType:Landroid/widget/ImageView$ScaleType;
 
-    const v0, 0x7f0a00e6
+    const v0, 0x7f0a00e8
 
     .line 326
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
@@ -2220,9 +2220,9 @@
 
     .line 719
     :cond_0
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$1Y8ONbQjuFr1qTehl-X2ZoZdkd8;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$l5M3snc-3EaiLtK49iMwnfo7AJc;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$1Y8ONbQjuFr1qTehl-X2ZoZdkd8;-><init>(Lcom/miui/home/launcher/ShortcutIcon;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$l5M3snc-3EaiLtK49iMwnfo7AJc;-><init>(Lcom/miui/home/launcher/ShortcutIcon;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->post(Ljava/lang/Runnable;)Z
 
@@ -2621,7 +2621,7 @@
     .line 96
     new-array v0, v0, [Landroid/view/View;
 
-    const v2, 0x7f0a00f8
+    const v2, 0x7f0a00fc
 
     .line 97
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
@@ -2630,7 +2630,7 @@
 
     aput-object v2, v0, v1
 
-    const v2, 0x7f0a00f9
+    const v2, 0x7f0a00fd
 
     .line 98
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
@@ -2643,7 +2643,7 @@
 
     const/4 v2, 0x2
 
-    const v3, 0x7f0a00fa
+    const v3, 0x7f0a00fe
 
     .line 99
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
@@ -2654,7 +2654,7 @@
 
     const/4 v2, 0x3
 
-    const v3, 0x7f0a00fb
+    const v3, 0x7f0a00ff
 
     .line 100
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;

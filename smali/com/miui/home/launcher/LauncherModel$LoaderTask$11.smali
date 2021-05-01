@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Lcom/miui/home/launcher/ItemInfo;)V
     .locals 0
 
-    .line 2119
+    .line 2146
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$11;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$11;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 2
 
-    .line 2121
+    .line 2148
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$11;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$11;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
@@ -57,7 +57,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2122
+    .line 2149
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$11;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$11;->val$info:Lcom/miui/home/launcher/ItemInfo;

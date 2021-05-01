@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/recents/NavStubView;->lambda$resetTaskView$6()V
+    value = Lcom/miui/home/recents/NavStubView;->lambda$resetTaskView$234()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -80,7 +80,7 @@
 
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$3;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$7000(Lcom/miui/home/recents/NavStubView;)F
+    invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$7900(Lcom/miui/home/recents/NavStubView;)F
 
     move-result v1
 

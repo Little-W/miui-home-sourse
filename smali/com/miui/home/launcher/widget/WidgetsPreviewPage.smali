@@ -34,7 +34,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f06024c
+    const p3, 0x7f060250
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -102,7 +102,7 @@
     .line 36
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0202
+    const v0, 0x7f0a0204
 
     .line 37
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->findViewById(I)Landroid/view/View;
@@ -113,7 +113,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->mWidgetThumbnailView:Lcom/miui/home/launcher/widget/WidgetThumbnailView;
 
-    const v0, 0x7f0a0201
+    const v0, 0x7f0a0203
 
     .line 38
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->findViewById(I)Landroid/view/View;
@@ -122,7 +122,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/view/LauncherActionBar;
 
-    const v1, 0x7f10028a
+    const v1, 0x7f10028d
 
     .line 39
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/view/LauncherActionBar;->setTitle(I)V

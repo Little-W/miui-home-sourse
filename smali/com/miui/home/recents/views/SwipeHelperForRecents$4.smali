@@ -26,7 +26,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 415
+    .line 421
     iput-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$4;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     iput-object p2, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$4;->val$animView:Landroid/view/View;
@@ -43,7 +43,23 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 423
+    .line 429
+    iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$4;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
+
+    invoke-static {p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->access$000(Lcom/miui/home/recents/views/SwipeHelperForRecents;)Landroid/view/View;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    const-string p1, "SwipeHelperForRecents"
+
+    const-string v0, "cancel dismiss anim, set to anim end state"
+
+    .line 430
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 431
     iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$4;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$4;->val$animView:Landroid/view/View;
@@ -52,13 +68,14 @@
 
     invoke-static {p1, v0, v1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->access$200(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;F)V
 
+    :cond_0
     return-void
 .end method
 
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 427
+    .line 436
     iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$4;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->access$100(Lcom/miui/home/recents/views/SwipeHelperForRecents;)Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;
@@ -69,15 +86,15 @@
 
     invoke-interface {p1, v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;->onChildDismissedEnd(Landroid/view/View;)V
 
-    .line 428
+    .line 437
     iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$4;->val$endAction:Ljava/lang/Runnable;
 
     if-eqz p1, :cond_0
 
-    .line 429
+    .line 438
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 431
+    .line 440
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$4;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
@@ -87,7 +104,7 @@
 
     if-nez p1, :cond_1
 
-    .line 432
+    .line 441
     iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$4;->val$animView:Landroid/view/View;
 
     const/4 v0, 0x0
@@ -103,7 +120,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 419
+    .line 425
     iget-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$4;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->access$100(Lcom/miui/home/recents/views/SwipeHelperForRecents;)Lcom/miui/home/recents/views/SwipeHelperForRecents$Callback;

@@ -372,7 +372,7 @@
     .line 23
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const p1, 0x7f0d002f
+    const p1, 0x7f0d0030
 
     .line 24
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/DebugActivity;->setContentView(I)V

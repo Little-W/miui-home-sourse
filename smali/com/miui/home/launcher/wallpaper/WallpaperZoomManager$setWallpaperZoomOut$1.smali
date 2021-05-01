@@ -37,7 +37,7 @@
 .method public final run()V
     .locals 6
 
-    .line 81
+    .line 82
     :try_start_0
     invoke-static {}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->access$getUPDATE_ZOOM_METHOD$p()Lmiui/reflect/Method;
 
@@ -90,7 +90,7 @@
     :catch_0
     move-exception v0
 
-    .line 83
+    .line 84
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0

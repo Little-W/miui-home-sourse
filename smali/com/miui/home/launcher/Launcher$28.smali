@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3413
+    .line 3425
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$28;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,10 +35,10 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 3416
+    .line 3428
     invoke-static {}, Lmiui/content/res/IconCustomizer;->clearCache()V
 
-    .line 3417
+    .line 3429
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$28;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3700(Lcom/miui/home/launcher/Launcher;)V

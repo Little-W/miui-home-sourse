@@ -206,6 +206,7 @@
     <string name="defalut_launcher_title">Standard Launcher</string>
     <string name="default_folder_title_claro">Claro</string>
     <string name="default_folder_title_game">Spiele</string>
+    <string name="default_folder_title_hot">Beliebte Apps</string>
     <string name="default_folder_title_meitu">Meitu-Apps</string>
     <string name="default_folder_title_microsoft">Microsoft</string>
     <string name="default_folder_title_other_apps">Weitere Apps</string>
@@ -274,7 +275,7 @@
     <string name="free_style_edit_tab_widget">Widgets</string>
     <string name="free_style_enter_tip">Wische mit zwei Fingern von oben nach unten, um Mi-Space anzuzeigen</string>
     <string name="free_style_exit_tip">Um zum Startbildschirm zurückzukehren, wische mit zwei Fingern von der Unterkante des Bildschirms nach oben</string>
-    <string name="free_style_londing_text">Augenblick…</string>
+    <string name="free_style_londing_text">Einen Moment…</string>
     <string name="fsg_mistake_touch_summary">In einigen Fällen (z. B. beim Spielen oder beim Ansehen von Videos) funktionieren Gesten erst, nachdem sie wiederholt wurden</string>
     <string name="fsg_mistake_touch_title">Gestenbestätigung</string>
     <string name="gadget_calculator_label">Rechner</string>
@@ -285,7 +286,7 @@
     <string name="gadget_clock_24_label">Uhr 4 x 2</string>
     <string name="gadget_clock_34_label">Uhr 4 x 3</string>
     <string name="gadget_clock_label">Uhr</string>
-    <string name="gadget_dual_clock_label">Dual Clock</string>
+    <string name="gadget_dual_clock_label">Dualuhr</string>
     <string name="gadget_error_text">Widget kann nicht geladen werden</string>
     <string name="gadget_google_search_label">Google Suche</string>
     <string name="gadget_load_error">Laden…</string>
@@ -583,7 +584,7 @@
     <string name="switch_personal_assistant_app_vault">Info-Assistent</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">Nichts</string>
-    <string name="switch_screen_button_order">Tastenn spiegeln</string>
+    <string name="switch_screen_button_order">Tasten spiegeln</string>
     <string name="switch_screen_button_order_desc">Zurück und Menü spiegeln</string>
     <string name="system_shortcuts_more_operation">App-Info</string>
     <string name="system_shortcuts_remove">Entfernen</string>

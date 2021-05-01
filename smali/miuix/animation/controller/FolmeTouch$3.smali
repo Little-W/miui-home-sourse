@@ -33,7 +33,7 @@
 .method constructor <init>(Lmiuix/animation/controller/FolmeTouch;ZLandroid/view/View;[Lmiuix/animation/base/AnimConfig;Z)V
     .locals 0
 
-    .line 246
+    .line 247
     iput-object p1, p0, Lmiuix/animation/controller/FolmeTouch$3;->this$0:Lmiuix/animation/controller/FolmeTouch;
 
     iput-boolean p2, p0, Lmiuix/animation/controller/FolmeTouch$3;->val$clickListenerSet:Z
@@ -54,7 +54,7 @@
 .method public run()V
     .locals 4
 
-    .line 249
+    .line 250
     iget-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch$3;->val$clickListenerSet:Z
 
     if-nez v0, :cond_0
@@ -73,7 +73,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 250
+    .line 251
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch$3;->this$0:Lmiuix/animation/controller/FolmeTouch;
 
     iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch$3;->val$view:Landroid/view/View;

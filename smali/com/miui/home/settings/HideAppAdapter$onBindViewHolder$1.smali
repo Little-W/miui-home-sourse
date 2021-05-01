@@ -72,11 +72,11 @@
 
     move-result-object p2
 
-    const-string v1, "appInfo.thirdApplicationConfig"
+    iget-object v1, p0, Lcom/miui/home/settings/HideAppAdapter$onBindViewHolder$1;->$appInfo:Lcom/miui/home/launcher/AppInfo;
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+    check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    invoke-virtual {p2}, Lcom/miui/home/launcher/ThirdApplicationConfig;->getDeleteTip()Landroid/util/Pair;
+    invoke-virtual {p2, v1}, Lcom/miui/home/launcher/ThirdApplicationConfig;->getDeleteTip(Lcom/miui/home/launcher/ShortcutInfo;)Landroid/util/Pair;
 
     move-result-object p2
 
@@ -142,7 +142,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f100260
+    const p2, 0x7f100263
 
     .line 72
     new-instance v0, Lcom/miui/home/settings/HideAppAdapter$onBindViewHolder$1$builder$2;

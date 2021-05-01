@@ -70,7 +70,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/Background;->mSpeardCircelAlphaOutAnimator:Landroid/animation/ValueAnimator;
 
-    .line 100
+    .line 96
     new-instance p1, Lcom/miui/home/launcher/Background$LongClickHandler;
 
     const/4 p2, 0x0
@@ -79,7 +79,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/Background;->mLongClickHandler:Lcom/miui/home/launcher/Background$LongClickHandler;
 
-    .line 139
+    .line 135
     new-instance p1, Lcom/miui/home/launcher/Background$1;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/Background$1;-><init>(Lcom/miui/home/launcher/Background;)V
@@ -137,10 +137,10 @@
 .method private setTouchPoint(FF)V
     .locals 0
 
-    .line 76
+    .line 72
     iput p1, p0, Lcom/miui/home/launcher/Background;->mTouchRawX:F
 
-    .line 77
+    .line 73
     iput p2, p0, Lcom/miui/home/launcher/Background;->mTouchRawY:F
 
     return-void
@@ -151,17 +151,17 @@
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 2
 
-    .line 69
+    .line 65
     iget-boolean v0, p0, Lcom/miui/home/launcher/Background;->mShowUninstallBgColor:Z
 
     if-eqz v0, :cond_0
 
-    .line 70
+    .line 66
     invoke-virtual {p0}, Lcom/miui/home/launcher/Background;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f060243
+    const v1, 0x7f060247
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -169,7 +169,7 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 72
+    .line 68
     :cond_0
     invoke-super {p0, p1}, Landroid/view/View;->dispatchDraw(Landroid/graphics/Canvas;)V
 
@@ -189,7 +189,7 @@
 
     const/4 v0, 0x2
 
-    .line 104
+    .line 100
     new-array v0, v0, [Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Background;->mLongClickHandler:Lcom/miui/home/launcher/Background$LongClickHandler;
@@ -214,7 +214,7 @@
 .method public getTouchrawX()F
     .locals 1
 
-    .line 81
+    .line 77
     iget v0, p0, Lcom/miui/home/launcher/Background;->mTouchRawX:F
 
     return v0
@@ -223,16 +223,10 @@
 .method public getTouchrawY()F
     .locals 1
 
-    .line 85
+    .line 81
     iget v0, p0, Lcom/miui/home/launcher/Background;->mTouchRawY:F
 
     return v0
-.end method
-
-.method public onScreenOrientationChanged()V
-    .locals 0
-
-    return-void
 .end method
 
 .method public onWallpaperColorChanged()V
@@ -256,10 +250,10 @@
 .method public showUninstallBgColor(Z)V
     .locals 0
 
-    .line 63
+    .line 59
     iput-boolean p1, p0, Lcom/miui/home/launcher/Background;->mShowUninstallBgColor:Z
 
-    .line 64
+    .line 60
     invoke-virtual {p0}, Lcom/miui/home/launcher/Background;->invalidate()V
 
     return-void
@@ -270,19 +264,19 @@
 
     const/4 v0, 0x2
 
-    .line 89
+    .line 85
     new-array v0, v0, [I
 
-    .line 90
+    .line 86
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Background;->getLocationOnScreen([I)V
 
-    .line 91
+    .line 87
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/Background;->setTouchPoint(FF)V
 
-    .line 92
+    .line 88
     iget-object p1, p0, Lcom/miui/home/launcher/Background;->mSpreadCircle:Lcom/miui/home/launcher/animate/SpreadCircle;
 
-    .line 93
+    .line 89
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
 
     move-result p2
@@ -296,11 +290,11 @@
     :cond_0
     iget p2, p0, Lcom/miui/home/launcher/Background;->mSpreadCircleWhiteColor:I
 
-    .line 92
+    .line 88
     :goto_0
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/animate/SpreadCircle;->setCircleColor(I)V
 
-    .line 95
+    .line 91
     iget-object p1, p0, Lcom/miui/home/launcher/Background;->mSpreadCircle:Lcom/miui/home/launcher/animate/SpreadCircle;
 
     iget p2, p0, Lcom/miui/home/launcher/Background;->mTouchRawX:F
@@ -325,7 +319,7 @@
 
     invoke-virtual {p1, p2, v1}, Lcom/miui/home/launcher/animate/SpreadCircle;->startAnimation(FF)V
 
-    .line 96
+    .line 92
     iget-object p1, p0, Lcom/miui/home/launcher/Background;->mSpeardCircelAlphaInAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
@@ -336,7 +330,7 @@
 .method public touchedAtValidArea(F)Z
     .locals 2
 
-    .line 134
+    .line 130
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceInvalidateEdgeWidth()I
 
     move-result v0
@@ -347,7 +341,7 @@
 
     if-lez v1, :cond_0
 
-    .line 136
+    .line 132
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
 
     move-result v1

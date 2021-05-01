@@ -108,7 +108,7 @@
 .end method
 
 .method public static initDataPathFroClipIcon()V
-    .locals 8
+    .locals 7
 
     const/4 v0, 0x0
 
@@ -156,8 +156,6 @@
     .line 51
     sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataForClipIcon:Ljava/lang/String;
 
-    const/4 v4, 0x1
-
     if-eqz v3, :cond_5
 
     sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataForClipIcon:Ljava/lang/String;
@@ -187,13 +185,13 @@
     .line 54
     const-class v3, Lmiui/content/res/IconCustomizer;
 
-    const-string v5, "getIconClipCornerRadius"
+    const-string v4, "getIconClipCornerRadius"
 
-    sget-object v6, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
+    sget-object v5, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    new-array v7, v2, [Ljava/lang/Class;
+    new-array v6, v2, [Ljava/lang/Class;
 
-    invoke-static {v3, v5, v6, v7}, Lmiui/reflect/Method;->of(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;)Lmiui/reflect/Method;
+    invoke-static {v3, v4, v5, v6}, Lmiui/reflect/Method;->of(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;)Lmiui/reflect/Method;
 
     move-result-object v3
 
@@ -208,13 +206,13 @@
     .line 57
     const-class v3, Lmiui/content/res/IconCustomizer;
 
-    const-string v5, "getIconClipWidth"
+    const-string v4, "getIconClipWidth"
 
-    sget-object v6, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
+    sget-object v5, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    new-array v7, v2, [Ljava/lang/Class;
+    new-array v6, v2, [Ljava/lang/Class;
 
-    invoke-static {v3, v5, v6, v7}, Lmiui/reflect/Method;->of(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;)Lmiui/reflect/Method;
+    invoke-static {v3, v4, v5, v6}, Lmiui/reflect/Method;->of(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;)Lmiui/reflect/Method;
 
     move-result-object v3
 
@@ -229,13 +227,13 @@
     .line 60
     const-class v3, Lmiui/content/res/IconCustomizer;
 
-    const-string v5, "getIconClipHeight"
+    const-string v4, "getIconClipHeight"
 
-    sget-object v6, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
+    sget-object v5, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    new-array v7, v2, [Ljava/lang/Class;
+    new-array v6, v2, [Ljava/lang/Class;
 
-    invoke-static {v3, v5, v6, v7}, Lmiui/reflect/Method;->of(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;)Lmiui/reflect/Method;
+    invoke-static {v3, v4, v5, v6}, Lmiui/reflect/Method;->of(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;)Lmiui/reflect/Method;
 
     move-result-object v3
 
@@ -245,11 +243,11 @@
     :cond_3
     sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipCornerRadiusMethod:Lmiui/reflect/Method;
 
-    const-class v5, Lmiui/content/res/IconCustomizer;
+    const-class v4, Lmiui/content/res/IconCustomizer;
 
-    new-array v6, v2, [Ljava/lang/Object;
+    new-array v5, v2, [Ljava/lang/Object;
 
-    invoke-virtual {v3, v5, v0, v6}, Lmiui/reflect/Method;->invokeFloat(Ljava/lang/Class;Ljava/lang/Object;[Ljava/lang/Object;)F
+    invoke-virtual {v3, v4, v0, v5}, Lmiui/reflect/Method;->invokeFloat(Ljava/lang/Class;Ljava/lang/Object;[Ljava/lang/Object;)F
 
     move-result v3
 
@@ -258,6 +256,23 @@
     .line 63
     sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipWidthMethod:Lmiui/reflect/Method;
 
+    const-class v4, Lmiui/content/res/IconCustomizer;
+
+    new-array v5, v2, [Ljava/lang/Object;
+
+    invoke-virtual {v3, v4, v0, v5}, Lmiui/reflect/Method;->invokeFloat(Ljava/lang/Class;Ljava/lang/Object;[Ljava/lang/Object;)F
+
+    move-result v3
+
+    const/high16 v4, 0x42c80000    # 100.0f
+
+    div-float/2addr v3, v4
+
+    sput v3, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataWidthPercent:F
+
+    .line 64
+    sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipHeightMethod:Lmiui/reflect/Method;
+
     const-class v5, Lmiui/content/res/IconCustomizer;
 
     new-array v6, v2, [Ljava/lang/Object;
@@ -266,24 +281,7 @@
 
     move-result v3
 
-    const/high16 v5, 0x42c80000    # 100.0f
-
-    div-float/2addr v3, v5
-
-    sput v3, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataWidthPercent:F
-
-    .line 64
-    sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipHeightMethod:Lmiui/reflect/Method;
-
-    const-class v6, Lmiui/content/res/IconCustomizer;
-
-    new-array v7, v2, [Ljava/lang/Object;
-
-    invoke-virtual {v3, v6, v0, v7}, Lmiui/reflect/Method;->invokeFloat(Ljava/lang/Class;Ljava/lang/Object;[Ljava/lang/Object;)F
-
-    move-result v3
-
-    div-float/2addr v3, v5
+    div-float/2addr v3, v4
 
     sput v3, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataHeightPercent:F
 
@@ -291,6 +289,8 @@
     sget v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipCornerRadius:F
 
     cmpl-float v3, v3, v1
+
+    const/4 v4, 0x1
 
     if-ltz v3, :cond_4
 
@@ -330,8 +330,7 @@
     :goto_0
     sput-boolean v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIsIconClipPathDataARect:Z
 
-    .line 68
-    :cond_5
+    .line 67
     sput-boolean v4, Lcom/miui/home/launcher/PathDataIconUtil;->sIsSupportThemeAdaptiveIcon:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -357,6 +356,7 @@
     .line 75
     sput-boolean v2, Lcom/miui/home/launcher/PathDataIconUtil;->sIsIconClipPathDataARect:Z
 
+    :cond_5
     :goto_1
     return-void
 .end method

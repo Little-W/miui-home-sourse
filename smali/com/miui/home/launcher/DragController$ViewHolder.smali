@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/home/launcher/DragController;Landroid/content/Context;)V
     .locals 0
 
-    .line 246
+    .line 253
     iput-object p1, p0, Lcom/miui/home/launcher/DragController$ViewHolder;->this$0:Lcom/miui/home/launcher/DragController;
 
-    .line 247
+    .line 254
     invoke-direct {p0, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -36,7 +36,7 @@
 .method public setMeasuredDimensionPub(II)V
     .locals 0
 
-    .line 250
+    .line 257
     invoke-super {p0, p1, p2}, Landroid/widget/ImageView;->setMeasuredDimension(II)V
 
     return-void

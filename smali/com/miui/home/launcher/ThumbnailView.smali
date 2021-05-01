@@ -137,7 +137,7 @@
     .line 122
     invoke-virtual {p1, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    const v1, 0x7f0a00e4
+    const v1, 0x7f0a00e6
 
     .line 123
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -199,7 +199,7 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v1, 0x7f0a00ce
+    const v1, 0x7f0a00d0
 
     .line 133
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

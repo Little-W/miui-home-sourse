@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.ItemIconTitleContainer android:id="@id/icon_title_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.miui.home.launcher.TitleTextView android:id="@id/icon_title" android:paddingLeft="@dimen/workspace_icon_text_padding_left" android:paddingRight="@dimen/workspace_icon_text_padding_left" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/icon_title_margin_top" style="@style/WorkspaceIconTitle" />
+<com.miui.home.launcher.ItemIconTitleContainer
+    android:id="@id/icon_title_container"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.launcher.TitleTextView
+        android:id="@id/icon_title"
+        android:paddingLeft="@dimen/workspace_icon_text_padding_left"
+        android:paddingRight="@dimen/workspace_icon_text_padding_left"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/icon_title_margin_top"
+        style="@style/WorkspaceIconTitle" />
 </com.miui.home.launcher.ItemIconTitleContainer>

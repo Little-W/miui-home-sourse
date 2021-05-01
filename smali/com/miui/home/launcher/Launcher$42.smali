@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 3804
+    .line 3814
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$42;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,21 +47,21 @@
 .method public accept(Ljava/lang/Boolean;)V
     .locals 1
 
-    .line 3807
+    .line 3817
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 3808
+    .line 3818
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$42;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v0, 0x6
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->reloadGadget(I)V
 
-    .line 3809
+    .line 3819
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$42;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/16 v0, 0x8
@@ -75,7 +75,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 3804
+    .line 3814
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$42;->accept(Ljava/lang/Boolean;)V

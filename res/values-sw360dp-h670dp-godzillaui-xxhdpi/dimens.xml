@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="hotseats_margin_top_search_bar">-4.0dip</dimen>
-    <dimen name="search_bar_margin_bottom">20.0dip</dimen>
-    <dimen name="search_bar_margin_top">8.0dip</dimen>
-</resources>

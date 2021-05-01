@@ -206,7 +206,7 @@
     .line 82
     iget-object v3, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v4, 0x7f0d0031
+    const v4, 0x7f0d0032
 
     invoke-virtual {v3, v4, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -480,7 +480,7 @@
     .line 56
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mDefaultScreenPreviewActionBar:Lcom/miui/home/launcher/view/LauncherActionBar;
 
-    const v1, 0x7f1000d7
+    const v1, 0x7f1000d8
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/view/LauncherActionBar;->setTitle(I)V
 

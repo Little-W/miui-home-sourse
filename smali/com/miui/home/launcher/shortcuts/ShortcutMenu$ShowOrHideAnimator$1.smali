@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;Lcom/miui/home/launcher/shortcuts/ShortcutMenu;)V
     .locals 0
 
-    .line 447
+    .line 443
     iput-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator$1;->this$1:Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;
 
     iput-object p2, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator$1;->val$this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
@@ -39,7 +39,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 450
+    .line 446
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator$1;->this$1:Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->getCurrent()F
@@ -56,7 +56,7 @@
 
     if-gtz p1, :cond_0
 
-    .line 451
+    .line 447
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator$1;->this$1:Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;
 
     iget-object p1, p1, Lcom/miui/home/launcher/shortcuts/ShortcutMenu$ShowOrHideAnimator;->this$0:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;

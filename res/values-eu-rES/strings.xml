@@ -178,6 +178,7 @@
     <string name="defalut_launcher_title">Lehenetsitako jaurtitzailea</string>
     <string name="default_folder_title_claro">Claro</string>
     <string name="default_folder_title_game">Jolasak</string>
+    <string name="default_folder_title_hot">Aplikazio ospetsuak</string>
     <string name="default_folder_title_meitu">Meitu aplikazioak</string>
     <string name="default_folder_title_microsoft">Microsoft</string>
     <string name="default_folder_title_other_apps">Beste aplikazioak</string>

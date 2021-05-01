@@ -52,7 +52,7 @@
     return-object v0
 .end method
 
-.method static synthetic lambda$requestCloudSettingsInfo$0(Ljava/lang/Void;)Lcom/miui/msa/internal/preinstall/v1/CNColudControlInfo;
+.method static synthetic lambda$requestCloudSettingsInfo$421(Ljava/lang/Void;)Lcom/miui/msa/internal/preinstall/v2/CNColudControlInfo;
     .locals 0
 
     .line 37
@@ -60,18 +60,18 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/miui/msa/internal/preinstall/v1/InternalPreInstallAdHelper;->getInstance(Landroid/content/Context;)Lcom/miui/msa/internal/preinstall/v1/InternalPreInstallAdHelper;
+    invoke-static {p0}, Lcom/miui/msa/internal/preinstall/v2/InternalPreInstallAdHelper;->getInstance(Landroid/content/Context;)Lcom/miui/msa/internal/preinstall/v2/InternalPreInstallAdHelper;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/miui/msa/internal/preinstall/v1/InternalPreInstallAdHelper;->getCNColudControl()Lcom/miui/msa/internal/preinstall/v1/CNColudControlInfo;
+    invoke-virtual {p0}, Lcom/miui/msa/internal/preinstall/v2/InternalPreInstallAdHelper;->getCNColudControl()Lcom/miui/msa/internal/preinstall/v2/CNColudControlInfo;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static synthetic lambda$requestCloudSettingsInfo$1(Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsController;Lcom/miui/msa/internal/preinstall/v1/CNColudControlInfo;)V
+.method public static synthetic lambda$requestCloudSettingsInfo$422(Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsController;Lcom/miui/msa/internal/preinstall/v2/CNColudControlInfo;)V
     .locals 1
 
     if-eqz p1, :cond_0
@@ -79,7 +79,7 @@
     .line 40
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsController;->mCNCloudSettingsInfo:Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsInfo;
 
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsInfo;->updateInfo(Lcom/miui/msa/internal/preinstall/v1/CNColudControlInfo;)V
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsInfo;->updateInfo(Lcom/miui/msa/internal/preinstall/v2/CNColudControlInfo;)V
 
     :cond_0
     return-void
@@ -116,30 +116,37 @@
 .end method
 
 .method public isRecommendSwitchOnAsDefault(Lcom/miui/home/launcher/FolderInfo;)Z
-    .locals 0
+    .locals 1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     .line 52
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->isRecommendFolder()Z
 
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->isHotFolder()Z
+
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
+    :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsController;->mCNCloudSettingsInfo:Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsInfo;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsInfo;->isRecommendFolderSwitchOnAsDefault()Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     const/4 p1, 0x1
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 p1, 0x0
 
     :goto_0
@@ -150,11 +157,11 @@
     .locals 3
 
     .line 35
-    sget-object v0, Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$EfeiO8oRfQjebgNYpP1sx6qgsNs;->INSTANCE:Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$EfeiO8oRfQjebgNYpP1sx6qgsNs;
+    sget-object v0, Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$Mvm2PZ1CsibtAxBXbfOHtotusyU;->INSTANCE:Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$Mvm2PZ1CsibtAxBXbfOHtotusyU;
 
-    new-instance v1, Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$A5neAhlq-I_HoCUAolBz9PtxBEA;
+    new-instance v1, Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$xNsYqypijLhRPBB0byp22FhnxYY;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$A5neAhlq-I_HoCUAolBz9PtxBEA;-><init>(Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsController;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$xNsYqypijLhRPBB0byp22FhnxYY;-><init>(Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsController;)V
 
     const/4 v2, 0x0
 

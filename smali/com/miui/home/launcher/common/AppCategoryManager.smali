@@ -579,7 +579,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initAppCategoryListAsync$0(Lcom/miui/home/launcher/common/AppCategoryManager;Landroid/content/Context;Ljava/util/HashSet;)V
+.method public static synthetic lambda$initAppCategoryListAsync$362(Lcom/miui/home/launcher/common/AppCategoryManager;Landroid/content/Context;Ljava/util/HashSet;)V
     .locals 0
 
     .line 122
@@ -649,7 +649,7 @@
 
     move-result v1
 
-    const v2, 0x7f10010c
+    const v2, 0x7f10010d
 
     if-eqz v1, :cond_6
 
@@ -846,9 +846,9 @@
     .end annotation
 
     .line 121
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$AppCategoryManager$Qcqhb57aAiubzj3bMQeiLqNhu48;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$AppCategoryManager$HrqxAnkFmRpBbJGrRauHInw1UsY;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/common/-$$Lambda$AppCategoryManager$Qcqhb57aAiubzj3bMQeiLqNhu48;-><init>(Lcom/miui/home/launcher/common/AppCategoryManager;Landroid/content/Context;Ljava/util/HashSet;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/common/-$$Lambda$AppCategoryManager$HrqxAnkFmRpBbJGrRauHInw1UsY;-><init>(Lcom/miui/home/launcher/common/AppCategoryManager;Landroid/content/Context;Ljava/util/HashSet;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

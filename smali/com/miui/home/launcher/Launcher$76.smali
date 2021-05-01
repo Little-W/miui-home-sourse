@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 7864
+    .line 7792
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$76;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,20 @@
 .method public run()V
     .locals 1
 
-    .line 7867
+    .line 7795
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$76;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/WorkspaceThumbnailView;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isFolderShowing()Z
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->invalidateThumbnails()V
+    if-eqz v0, :cond_0
 
+    .line 7796
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$76;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->closeFolder()Z
+
+    :cond_0
     return-void
 .end method

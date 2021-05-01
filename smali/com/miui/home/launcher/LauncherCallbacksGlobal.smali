@@ -169,7 +169,7 @@
     return-object v1
 .end method
 
-.method public static synthetic lambda$onCreate$0(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V
+.method public static synthetic lambda$onCreate$385(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V
     .locals 1
 
     .line 60
@@ -438,9 +438,9 @@
 
     .line 59
     :cond_0
-    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$LauncherCallbacksGlobal$0fhXC0vYacg-zzLpxXkwUoqWces;
+    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$LauncherCallbacksGlobal$C5mNUmh8fCwzloCA-2ovxCu0Vm4;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/-$$Lambda$LauncherCallbacksGlobal$0fhXC0vYacg-zzLpxXkwUoqWces;-><init>(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/-$$Lambda$LauncherCallbacksGlobal$C5mNUmh8fCwzloCA-2ovxCu0Vm4;-><init>(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V
 
     const/4 p2, 0x0
 

@@ -110,7 +110,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$trackEvent$0(Ljava/lang/String;Ljava/util/Map;)V
+.method static synthetic lambda$trackEvent$482(Ljava/lang/String;Ljava/util/Map;)V
     .locals 3
 
     .line 53
@@ -229,9 +229,9 @@
 
     .line 51
     :cond_0
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$OneTrackInterfaceUtils$BMOtGt6Rgxf5yD-Wei6IGpoNSno;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$OneTrackInterfaceUtils$VaMfblA1-qSZdBnnbMvYtG1iBrA;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$OneTrackInterfaceUtils$BMOtGt6Rgxf5yD-Wei6IGpoNSno;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$OneTrackInterfaceUtils$VaMfblA1-qSZdBnnbMvYtG1iBrA;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

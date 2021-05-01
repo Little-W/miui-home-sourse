@@ -127,7 +127,7 @@
 .method public endAnimation(Landroid/view/View;)V
     .locals 3
 
-    const v0, 0x7f0a01f2
+    const v0, 0x7f0a01f4
 
     .line 77
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -183,6 +183,100 @@
     invoke-interface {p1, v0}, Lmiuix/animation/IStateStyle;->end([Ljava/lang/Object;)V
 
     :cond_0
+    return-void
+.end method
+
+.method protected setViewPrepareInfo(Landroid/view/View;FFFFF)V
+    .locals 5
+
+    const v0, 0x7f0a01f4
+
+    .line 86
+    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    instance-of v1, v1, Lmiuix/animation/IStateStyle;
+
+    if-eqz v1, :cond_1
+
+    .line 87
+    new-instance v1, Lmiuix/animation/controller/AnimState;
+
+    invoke-direct {v1, p1}, Lmiuix/animation/controller/AnimState;-><init>(Ljava/lang/Object;)V
+
+    sget-object v2, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
+
+    float-to-double v3, p4
+
+    .line 88
+    invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object p4
+
+    sget-object v1, Lmiuix/animation/property/ViewProperty;->SCALE_X:Lmiuix/animation/property/ViewProperty;
+
+    float-to-double v2, p2
+
+    .line 89
+    invoke-virtual {p4, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object p2
+
+    sget-object p4, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
+
+    float-to-double v1, p3
+
+    .line 90
+    invoke-virtual {p2, p4, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object p2
+
+    sget-object p3, Lmiuix/animation/property/ViewProperty;->TRANSLATION_Y:Lmiuix/animation/property/ViewProperty;
+
+    float-to-double v1, p6
+
+    .line 91
+    invoke-virtual {p2, p3, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    move-result-object p2
+
+    .line 92
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Folme;->ignoreTranslation(Landroid/view/View;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_0
+
+    .line 93
+    sget-object p3, Lmiuix/animation/property/ViewProperty;->TRANSLATION_X:Lmiuix/animation/property/ViewProperty;
+
+    float-to-double p4, p5
+
+    invoke-virtual {p2, p3, p4, p5}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    .line 95
+    :cond_0
+    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lmiuix/animation/IStateStyle;
+
+    const/4 p3, 0x0
+
+    .line 96
+    new-array p3, p3, [Lmiuix/animation/base/AnimConfig;
+
+    invoke-interface {p1, p2, p3}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
+
+    goto :goto_0
+
+    .line 98
+    :cond_1
+    invoke-super/range {p0 .. p6}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->setViewPrepareInfo(Landroid/view/View;FFFFF)V
+
+    :goto_0
     return-void
 .end method
 
@@ -270,7 +364,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0a01f2
+    const v0, 0x7f0a01f4
 
     .line 62
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;

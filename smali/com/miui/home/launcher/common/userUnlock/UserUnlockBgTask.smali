@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$run$0(Lcom/miui/home/launcher/common/userUnlock/UserUnlockBgTask;Ljava/lang/Void;)Ljava/lang/Object;
+.method public static synthetic lambda$run$223(Lcom/miui/home/launcher/common/userUnlock/UserUnlockBgTask;Ljava/lang/Void;)Ljava/lang/Object;
     .locals 0
 
     .line 22
@@ -86,9 +86,9 @@
     .locals 3
 
     .line 20
-    new-instance v0, Lcom/miui/home/launcher/common/userUnlock/-$$Lambda$UserUnlockBgTask$a68H8Xv85E7u3Z9Igwjf2z7QixQ;
+    new-instance v0, Lcom/miui/home/launcher/common/userUnlock/-$$Lambda$UserUnlockBgTask$0gxdRDnoFpcbTPa8LfCq28Ll8qs;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/common/userUnlock/-$$Lambda$UserUnlockBgTask$a68H8Xv85E7u3Z9Igwjf2z7QixQ;-><init>(Lcom/miui/home/launcher/common/userUnlock/UserUnlockBgTask;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/common/userUnlock/-$$Lambda$UserUnlockBgTask$0gxdRDnoFpcbTPa8LfCq28Ll8qs;-><init>(Lcom/miui/home/launcher/common/userUnlock/UserUnlockBgTask;)V
 
     iget-object v1, p0, Lcom/miui/home/launcher/common/userUnlock/UserUnlockBgTask;->mFgConsumer:Ljava/util/function/Consumer;
 

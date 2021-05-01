@@ -84,6 +84,19 @@
     .end annotation
 .end field
 
+.field static volatile onIoHandler:Lio/reactivex2/functions/Function;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lio/reactivex2/functions/Function<",
+            "-",
+            "Lio/reactivex2/Scheduler;",
+            "+",
+            "Lio/reactivex2/Scheduler;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field static volatile onObservableAssembly:Lio/reactivex2/functions/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -599,6 +612,27 @@
     invoke-static {p0}, Lio/reactivex2/plugins/RxJavaPlugins;->uncaught(Ljava/lang/Throwable;)V
 
     return-void
+.end method
+
+.method public static onIoScheduler(Lio/reactivex2/Scheduler;)Lio/reactivex2/Scheduler;
+    .locals 1
+
+    .line 439
+    sget-object v0, Lio/reactivex2/plugins/RxJavaPlugins;->onIoHandler:Lio/reactivex2/functions/Function;
+
+    if-nez v0, :cond_0
+
+    return-object p0
+
+    .line 443
+    :cond_0
+    invoke-static {v0, p0}, Lio/reactivex2/plugins/RxJavaPlugins;->apply(Lio/reactivex2/functions/Function;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lio/reactivex2/Scheduler;
+
+    return-object p0
 .end method
 
 .method public static onSchedule(Ljava/lang/Runnable;)Ljava/lang/Runnable;

@@ -62,7 +62,7 @@
 .method protected initViews()V
     .locals 2
 
-    const v0, 0x7f0d00af
+    const v0, 0x7f0d00b4
 
     .line 46
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/RecentsActivity;->setContentView(I)V

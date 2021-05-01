@@ -80,7 +80,7 @@
     return v0
 .end method
 
-.method public static synthetic lambda$updateEveryFolderInfo$0(Lcom/miui/home/launcher/commercial/cloudSettings/global/GlobalCloudSettingsInfo;Lcom/miui/msa/global/guessyoulike/v1/GlobalCloudAdConfig;)V
+.method public static synthetic lambda$updateEveryFolderInfo$415(Lcom/miui/home/launcher/commercial/cloudSettings/global/GlobalCloudSettingsInfo;Lcom/miui/msa/global/guessyoulike/v1/GlobalCloudAdConfig;)V
     .locals 3
 
     if-eqz p1, :cond_6
@@ -486,9 +486,9 @@
 
     move-result-object p1
 
-    new-instance v0, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsInfo$KCKCuEPpPEfz5NVKAQ8Q2KW2raM;
+    new-instance v0, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsInfo$68Cu5Y-jOMVvc3k_D6a_FS7wUG4;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsInfo$KCKCuEPpPEfz5NVKAQ8Q2KW2raM;-><init>(Lcom/miui/home/launcher/commercial/cloudSettings/global/GlobalCloudSettingsInfo;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsInfo$68Cu5Y-jOMVvc3k_D6a_FS7wUG4;-><init>(Lcom/miui/home/launcher/commercial/cloudSettings/global/GlobalCloudSettingsInfo;)V
 
     invoke-interface {p1, v0}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 

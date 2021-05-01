@@ -7,17 +7,17 @@
 .method public static transformCoordinate(IILandroid/graphics/Rect;)Landroid/graphics/Rect;
     .locals 1
 
-    .line 149
+    .line 153
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0, p2}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
-    .line 150
+    .line 154
     new-instance p2, Landroid/graphics/Rect;
 
     invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
 
-    .line 151
+    .line 155
     invoke-static {p0, p1, v0}, Lcom/miui/home/launcher/util/CoordinateTransforms;->transformCoordinate(IILandroid/graphics/RectF;)Landroid/graphics/RectF;
 
     move-result-object p0
@@ -34,69 +34,78 @@
 
     return-object p2
 
-    :cond_0
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v1, 0x3
-
-    if-ne p1, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :cond_2
-    :goto_0
-    if-eqz v0, :cond_3
-
     .line 138
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHight()I
-
-    move-result v1
-
-    goto :goto_1
-
-    :cond_3
+    :cond_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
 
+    move-result v0
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHeight()I
+
     move-result v1
 
-    :goto_1
-    if-eqz v0, :cond_4
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
 
     .line 139
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
 
-    move-result v0
+    move-result v1
 
-    goto :goto_2
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHeight()I
 
-    :cond_4
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHight()I
+    move-result v2
 
-    move-result v0
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
 
-    .line 140
-    :goto_2
-    new-instance v2, Landroid/graphics/RectF;
-
-    invoke-direct {v2}, Landroid/graphics/RectF;-><init>()V
+    move-result v1
 
     .line 141
+    invoke-static {p1}, Lcom/miui/home/recents/util/RotationHelper;->isLandscapeRotation(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_1
+    move v2, v0
+
+    .line 142
+    :goto_0
+    invoke-static {p1}, Lcom/miui/home/recents/util/RotationHelper;->isLandscapeRotation(I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move v0, v1
+
+    .line 144
+    :goto_1
+    new-instance v1, Landroid/graphics/RectF;
+
+    invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
+
+    .line 145
     new-instance v3, Landroid/graphics/Matrix;
 
     invoke-direct {v3}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 142
-    invoke-static {p0, p1, v1, v0, v3}, Lcom/miui/home/launcher/util/CoordinateTransforms;->transformToRotation(IIIILandroid/graphics/Matrix;)V
+    .line 146
+    invoke-static {p0, p1, v2, v0, v3}, Lcom/miui/home/launcher/util/CoordinateTransforms;->transformToRotation(IIIILandroid/graphics/Matrix;)V
 
-    .line 144
-    invoke-virtual {v3, v2, p2}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
+    .line 148
+    invoke-virtual {v3, v1, p2}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
 
-    return-object v2
+    return-object v1
 .end method
 
 .method private static transformLogicalToPhysicalCoordinates(IIILandroid/graphics/Matrix;)V
@@ -106,7 +115,7 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 90
+    .line 91
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -130,14 +139,14 @@
     :pswitch_0
     const/high16 p0, 0x43870000    # 270.0f
 
-    .line 86
+    .line 87
     invoke-virtual {p3, p0}, Landroid/graphics/Matrix;->setRotate(F)V
 
     neg-int p0, p2
 
     int-to-float p0, p0
 
-    .line 87
+    .line 88
     invoke-virtual {p3, p0, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
     goto :goto_0
@@ -145,7 +154,7 @@
     :pswitch_1
     const/high16 p0, 0x43340000    # 180.0f
 
-    .line 82
+    .line 83
     invoke-virtual {p3, p0}, Landroid/graphics/Matrix;->setRotate(F)V
 
     neg-int p0, p1
@@ -156,7 +165,7 @@
 
     int-to-float p1, p1
 
-    .line 83
+    .line 84
     invoke-virtual {p3, p0, p1}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
     goto :goto_0
@@ -164,19 +173,19 @@
     :pswitch_2
     const/high16 p0, 0x42b40000    # 90.0f
 
-    .line 78
+    .line 79
     invoke-virtual {p3, p0}, Landroid/graphics/Matrix;->setRotate(F)V
 
     neg-int p0, p1
 
     int-to-float p0, p0
 
-    .line 79
+    .line 80
     invoke-virtual {p3, v0, p0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
 
     goto :goto_0
 
-    .line 75
+    .line 76
     :pswitch_3
     invoke-virtual {p3}, Landroid/graphics/Matrix;->reset()V
 
@@ -199,7 +208,7 @@
 
     packed-switch p0, :pswitch_data_0
 
-    .line 60
+    .line 61
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -223,12 +232,12 @@
     :pswitch_0
     const/high16 p0, 0x42b40000    # 90.0f
 
-    .line 56
+    .line 57
     invoke-virtual {p3, p0}, Landroid/graphics/Matrix;->setRotate(F)V
 
     int-to-float p0, p2
 
-    .line 57
+    .line 58
     invoke-virtual {p3, p0, v0}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
     goto :goto_0
@@ -236,14 +245,14 @@
     :pswitch_1
     const/high16 p0, 0x43340000    # 180.0f
 
-    .line 52
+    .line 53
     invoke-virtual {p3, p0}, Landroid/graphics/Matrix;->setRotate(F)V
 
     int-to-float p0, p1
 
     int-to-float p1, p2
 
-    .line 53
+    .line 54
     invoke-virtual {p3, p0, p1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
     goto :goto_0
@@ -251,17 +260,17 @@
     :pswitch_2
     const/high16 p0, 0x43870000    # 270.0f
 
-    .line 48
+    .line 49
     invoke-virtual {p3, p0}, Landroid/graphics/Matrix;->setRotate(F)V
 
     int-to-float p0, p1
 
-    .line 49
+    .line 50
     invoke-virtual {p3, v0, p0}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
     goto :goto_0
 
-    .line 45
+    .line 46
     :pswitch_3
     invoke-virtual {p3}, Landroid/graphics/Matrix;->reset()V
 
@@ -282,19 +291,19 @@
 
     if-nez p2, :cond_0
 
-    .line 126
+    .line 127
     new-instance p2, Landroid/graphics/RectF;
 
     invoke-direct {p2}, Landroid/graphics/RectF;-><init>()V
 
-    .line 128
+    .line 129
     :cond_0
     invoke-virtual {p2, p1}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 129
+    .line 130
     invoke-virtual {p0, p2}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 130
+    .line 131
     iget p0, p2, Landroid/graphics/RectF;->left:F
 
     float-to-int p0, p0
@@ -348,19 +357,19 @@
 
     move p2, p3
 
-    .line 111
+    .line 112
     :cond_3
     new-instance p3, Landroid/graphics/Matrix;
 
     invoke-direct {p3}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 112
+    .line 113
     invoke-static {p0, p2, v1, p4}, Lcom/miui/home/launcher/util/CoordinateTransforms;->transformLogicalToPhysicalCoordinates(IIILandroid/graphics/Matrix;)V
 
-    .line 113
+    .line 114
     invoke-static {p1, p2, v1, p3}, Lcom/miui/home/launcher/util/CoordinateTransforms;->transformPhysicalToLogicalCoordinates(IIILandroid/graphics/Matrix;)V
 
-    .line 114
+    .line 115
     invoke-virtual {p4, p3}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
 
     return-void

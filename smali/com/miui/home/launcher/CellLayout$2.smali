@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 242
+    .line 231
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$2;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,14 +35,14 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 245
+    .line 234
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$2;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/CellLayout;->access$102(Lcom/miui/home/launcher/CellLayout;[F)[F
 
-    .line 246
+    .line 235
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$2;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-static {p1}, Lcom/miui/home/launcher/CellLayout;->access$000(Lcom/miui/home/launcher/CellLayout;)Ljava/util/ArrayList;
@@ -71,20 +71,20 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 248
+    .line 237
     invoke-virtual {v0, v1}, Landroid/view/View;->setScaleX(F)V
 
-    .line 249
+    .line 238
     invoke-virtual {v0, v1}, Landroid/view/View;->setScaleY(F)V
 
     const/4 v1, 0x0
 
-    .line 250
+    .line 239
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
     goto :goto_0
 
-    .line 253
+    .line 242
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$2;->this$0:Lcom/miui/home/launcher/CellLayout;
 

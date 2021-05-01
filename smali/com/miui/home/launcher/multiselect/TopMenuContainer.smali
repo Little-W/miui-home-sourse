@@ -45,9 +45,9 @@
     .line 28
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f06022e
+    const v1, 0x7f060232
 
-    const v2, 0x7f06022d
+    const v2, 0x7f060231
 
     invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(II)V
 
@@ -56,9 +56,9 @@
     .line 29
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f06022c
+    const v1, 0x7f060230
 
-    const v2, 0x7f06022b
+    const v2, 0x7f06022f
 
     invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(II)V
 
@@ -67,9 +67,9 @@
     .line 30
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f060230
+    const v1, 0x7f060234
 
-    const v2, 0x7f06022f
+    const v2, 0x7f060233
 
     invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(II)V
 
@@ -78,9 +78,9 @@
     .line 31
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f060232
+    const v1, 0x7f060236
 
-    const v2, 0x7f060231
+    const v2, 0x7f060235
 
     invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(II)V
 
@@ -258,7 +258,7 @@
     return-object v0
 .end method
 
-.method static synthetic lambda$onWallpaperColorChanged$0(Lcom/miui/home/launcher/multiselect/TopMenuState;)V
+.method static synthetic lambda$onWallpaperColorChanged$127(Lcom/miui/home/launcher/multiselect/TopMenuState;)V
     .locals 0
 
     .line 196
@@ -614,7 +614,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/miui/home/launcher/multiselect/-$$Lambda$TopMenuContainer$T1wO_RwXNWMwEmFwUWU5aY58Ewo;->INSTANCE:Lcom/miui/home/launcher/multiselect/-$$Lambda$TopMenuContainer$T1wO_RwXNWMwEmFwUWU5aY58Ewo;
+    sget-object v1, Lcom/miui/home/launcher/multiselect/-$$Lambda$TopMenuContainer$80_3JEjdSro8584q93Nv5PSxl5g;->INSTANCE:Lcom/miui/home/launcher/multiselect/-$$Lambda$TopMenuContainer$80_3JEjdSro8584q93Nv5PSxl5g;
 
     .line 195
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V

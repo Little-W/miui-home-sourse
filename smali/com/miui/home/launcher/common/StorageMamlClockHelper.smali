@@ -309,6 +309,8 @@
 
     move-result-object v1
 
+    if-eqz v1, :cond_5
+
     .line 119
     array-length v2, v1
 

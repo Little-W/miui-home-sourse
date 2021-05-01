@@ -216,7 +216,7 @@
 
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/ItemIcon;->setLayerType(ILandroid/graphics/Paint;)V
 
-    const p1, 0x7f0600ac
+    const p1, 0x7f0600af
 
     .line 99
     invoke-virtual {p2, p1}, Landroid/content/res/Resources;->getColor(I)I
@@ -378,7 +378,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f070102
+    const v2, 0x7f070103
 
     .line 128
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -506,7 +506,7 @@
 
     sget-object p3, Lcom/miui/home/launcher/ItemIcon;->sTmpRect:Landroid/graphics/Rect;
 
-    const v4, 0x7f0600d2
+    const v4, 0x7f0600d5
 
     .line 142
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getColor(I)I
@@ -667,7 +667,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0700ff
+    const v4, 0x7f070100
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -727,7 +727,7 @@
 
     move-result-object v0
 
-    const v5, 0x7f0600dd
+    const v5, 0x7f0600e0
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1217,7 +1217,7 @@
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
 
-    const v1, 0x7f080149
+    const v1, 0x7f08015a
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
@@ -2369,7 +2369,7 @@
 .method protected onFinishInflate()V
     .locals 3
 
-    const v0, 0x7f0a00e5
+    const v0, 0x7f0a00e7
 
     .line 104
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2380,7 +2380,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconContainer:Landroid/widget/FrameLayout;
 
-    const v0, 0x7f0a00eb
+    const v0, 0x7f0a00ee
 
     .line 105
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2391,7 +2391,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconTile:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a00e9
+    const v0, 0x7f0a00eb
 
     .line 106
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2402,7 +2402,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
-    const v0, 0x7f0a00ea
+    const v0, 0x7f0a00ec
 
     .line 107
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2428,7 +2428,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     :cond_0
-    const v0, 0x7f0a00ec
+    const v0, 0x7f0a00ef
 
     .line 110
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -2439,7 +2439,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
-    const v0, 0x7f0a00ed
+    const v0, 0x7f0a00f0
 
     .line 111
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
@@ -3214,7 +3214,7 @@
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
 
-    const v1, 0x7f080149
+    const v1, 0x7f08015a
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
@@ -3375,24 +3375,16 @@
 .end method
 
 .method protected showMessageAnimation(Lcom/miui/home/launcher/Launcher;)V
-    .locals 3
+    .locals 2
 
     .line 251
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getForegroundTaskQueue()Lcom/miui/home/launcher/common/ForegroundTaskQueue;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
+    iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessageAnimation:Ljava/lang/Runnable;
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Workspace;->getHandler()Landroid/os/Handler;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/miui/home/launcher/ItemIcon;->mMessageAnimation:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, p1, v1, v2}, Lcom/miui/home/launcher/common/ForegroundTaskQueue;->addTask(Landroid/app/Activity;Landroid/os/Handler;Ljava/lang/Runnable;)V
+    invoke-virtual {v0, p1, v1}, Lcom/miui/home/launcher/common/ForegroundTaskQueue;->addTask(Landroid/app/Activity;Ljava/lang/Runnable;)V
 
     return-void
 .end method

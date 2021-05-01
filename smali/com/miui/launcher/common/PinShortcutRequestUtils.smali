@@ -6,6 +6,8 @@
 # static fields
 .field private static final FLAG_GET_ALL:I = 0xb
 
+.field public static final TAG:Ljava/lang/String; = "PinShortcutRequestUtils"
+
 .field private static final sCanvas:Landroid/graphics/Canvas;
 
 
@@ -13,7 +15,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 43
+    .line 44
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0}, Landroid/graphics/Canvas;-><init>()V
@@ -46,7 +48,7 @@
         }
     .end annotation
 
-    .line 90
+    .line 91
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -55,7 +57,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 91
+    .line 92
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -73,7 +75,7 @@
 
     check-cast v1, Lcom/miui/launcher/common/ShortcutInfoCompat;
 
-    .line 92
+    .line 93
     invoke-virtual {v1}, Lcom/miui/launcher/common/ShortcutInfoCompat;->getId()Ljava/lang/String;
 
     move-result-object v1
@@ -89,7 +91,7 @@
 .method public static getFullResIcon(Landroid/content/Context;Ljava/lang/Object;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 45
+    .line 46
     const-class v0, Landroid/content/pm/LauncherApps;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -102,7 +104,7 @@
 
     const/4 v0, 0x0
 
-    .line 46
+    .line 47
     invoke-virtual {p0, p1, v0}, Landroid/content/pm/LauncherApps;->getShortcutIconDrawable(Landroid/content/pm/ShortcutInfo;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
@@ -113,17 +115,17 @@
 .method public static getShortcutBitmap(Landroid/content/Context;Ljava/lang/Object;I)Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 139
+    .line 141
     invoke-static {p0, p1}, Lcom/miui/launcher/common/PinShortcutRequestUtils;->getFullResIcon(Landroid/content/Context;Ljava/lang/Object;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    .line 140
+    .line 142
     instance-of v0, p1, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 141
+    .line 143
     check-cast p1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -137,34 +139,34 @@
 
     if-eqz p1, :cond_1
 
-    .line 143
+    .line 145
     invoke-static {p0, p1, p2}, Lcom/miui/launcher/common/PinShortcutRequestUtils;->setUpDrawable(Landroid/content/Context;Landroid/graphics/drawable/Drawable;I)V
 
-    .line 144
+    .line 146
     sget-object p0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {p2, p2, p0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
-    .line 145
+    .line 147
     sget-object p2, Lcom/miui/launcher/common/PinShortcutRequestUtils;->sCanvas:Landroid/graphics/Canvas;
 
-    .line 146
+    .line 148
     invoke-virtual {p2, p0}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
     const/4 v1, 0x1
 
-    .line 147
+    .line 149
     invoke-virtual {p2, v1}, Landroid/graphics/Canvas;->save(I)I
 
-    .line 148
+    .line 150
     invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 149
+    .line 151
     invoke-virtual {p2}, Landroid/graphics/Canvas;->restore()V
 
-    .line 150
+    .line 152
     invoke-virtual {p2, v0}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
     return-object p0
@@ -176,7 +178,7 @@
 .method private static isAtLeastO()Z
     .locals 2
 
-    .line 50
+    .line 51
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
@@ -214,29 +216,29 @@
         }
     .end annotation
 
-    .line 115
+    .line 116
     new-instance v0, Landroid/content/pm/LauncherApps$ShortcutQuery;
 
     invoke-direct {v0}, Landroid/content/pm/LauncherApps$ShortcutQuery;-><init>()V
 
-    .line 116
+    .line 117
     invoke-virtual {v0, p1}, Landroid/content/pm/LauncherApps$ShortcutQuery;->setQueryFlags(I)Landroid/content/pm/LauncherApps$ShortcutQuery;
 
     if-eqz p2, :cond_0
 
-    .line 118
+    .line 119
     invoke-virtual {v0, p2}, Landroid/content/pm/LauncherApps$ShortcutQuery;->setPackage(Ljava/lang/String;)Landroid/content/pm/LauncherApps$ShortcutQuery;
 
-    .line 119
+    .line 120
     invoke-virtual {v0, p3}, Landroid/content/pm/LauncherApps$ShortcutQuery;->setActivity(Landroid/content/ComponentName;)Landroid/content/pm/LauncherApps$ShortcutQuery;
 
-    .line 120
+    .line 121
     invoke-virtual {v0, p4}, Landroid/content/pm/LauncherApps$ShortcutQuery;->setShortcutIds(Ljava/util/List;)Landroid/content/pm/LauncherApps$ShortcutQuery;
 
     :cond_0
     const/4 p1, 0x0
 
-    .line 124
+    .line 125
     :try_start_0
     invoke-virtual {p0, v0, p5}, Landroid/content/pm/LauncherApps;->getShortcuts(Landroid/content/pm/LauncherApps$ShortcutQuery;Landroid/os/UserHandle;)Ljava/util/List;
 
@@ -253,18 +255,18 @@
 
     const-string p3, "Failed to query for shortcuts"
 
-    .line 126
+    .line 127
     invoke-static {p2, p3, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     if-nez p1, :cond_1
 
-    .line 129
+    .line 130
     sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     return-object p0
 
-    .line 131
+    .line 132
     :cond_1
     new-instance p0, Ljava/util/ArrayList;
 
@@ -274,7 +276,7 @@
 
     invoke-direct {p0, p2}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 132
+    .line 133
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -292,7 +294,30 @@
 
     check-cast p2, Landroid/content/pm/ShortcutInfo;
 
-    .line 133
+    const-string p3, "PinShortcutRequestUtils"
+
+    .line 134
+    new-instance p4, Ljava/lang/StringBuilder;
+
+    invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string p5, "title="
+
+    invoke-virtual {p4, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Landroid/content/pm/ShortcutInfo;->getPackage()Ljava/lang/String;
+
+    move-result-object p5
+
+    invoke-virtual {p4, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p4
+
+    invoke-static {p3, p4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 135
     new-instance p3, Lcom/miui/launcher/common/ShortcutInfoCompat;
 
     invoke-direct {p3, p2}, Lcom/miui/launcher/common/ShortcutInfoCompat;-><init>(Ljava/lang/Object;)V
@@ -325,7 +350,7 @@
 
     const-string v0, "launcherapps"
 
-    .line 99
+    .line 100
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -344,7 +369,7 @@
 
     move-object v5, p3
 
-    .line 100
+    .line 101
     invoke-static/range {v0 .. v5}, Lcom/miui/launcher/common/PinShortcutRequestUtils;->query(Landroid/content/pm/LauncherApps;ILjava/lang/String;Landroid/content/ComponentName;Ljava/util/List;Landroid/os/UserHandle;)Ljava/util/List;
 
     move-result-object p0
@@ -369,7 +394,7 @@
 
     const-string v0, "launcherapps"
 
-    .line 109
+    .line 110
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -388,7 +413,7 @@
 
     move-object v5, p2
 
-    .line 110
+    .line 111
     invoke-static/range {v0 .. v5}, Lcom/miui/launcher/common/PinShortcutRequestUtils;->query(Landroid/content/pm/LauncherApps;ILjava/lang/String;Landroid/content/ComponentName;Ljava/util/List;Landroid/os/UserHandle;)Ljava/util/List;
 
     move-result-object p0
@@ -399,7 +424,7 @@
 .method public static setUpDrawable(Landroid/content/Context;Landroid/graphics/drawable/Drawable;I)V
     .locals 0
 
-    .line 55
+    .line 56
     :try_start_0
     invoke-static {}, Lcom/miui/launcher/common/PinShortcutRequestUtils;->isAtLeastO()Z
 
@@ -409,12 +434,12 @@
 
     const-string p0, "android.graphics.drawable.AdaptiveIconDrawable"
 
-    .line 56
+    .line 57
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p0
 
-    .line 57
+    .line 58
     invoke-virtual {p0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result p0
@@ -423,7 +448,7 @@
 
     const/4 p0, 0x0
 
-    .line 59
+    .line 60
     invoke-virtual {p1, p0, p0, p2, p2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -436,7 +461,7 @@
 .method public static startShortcut(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Rect;Landroid/os/Bundle;Landroid/os/UserHandle;)V
     .locals 6
 
-    .line 68
+    .line 69
     invoke-static {}, Lcom/miui/launcher/common/PinShortcutRequestUtils;->isAtLeastO()Z
 
     move-result v0
@@ -446,7 +471,7 @@
     :try_start_0
     const-string v0, "launcherapps"
 
-    .line 70
+    .line 71
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -478,7 +503,7 @@
 
     const-string p2, "Failed to start shortcut"
 
-    .line 73
+    .line 74
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -491,14 +516,14 @@
 
     const-string v0, "launcherapps"
 
-    .line 79
+    .line 80
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/content/pm/LauncherApps;
 
-    .line 80
+    .line 81
     invoke-static {p0, p1, p3}, Lcom/miui/launcher/common/PinShortcutRequestUtils;->queryForPinnedShortcuts(Landroid/content/Context;Ljava/lang/String;Landroid/os/UserHandle;)Ljava/util/List;
 
     move-result-object p0
@@ -507,10 +532,10 @@
 
     move-result-object p0
 
-    .line 81
+    .line 82
     invoke-interface {p0, p2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 83
+    .line 84
     :try_start_0
     invoke-virtual {v0, p1, p0, p3}, Landroid/content/pm/LauncherApps;->pinShortcuts(Ljava/lang/String;Ljava/util/List;Landroid/os/UserHandle;)V
     :try_end_0
@@ -525,7 +550,7 @@
 
     const-string p2, "Failed to unpin shortcut"
 
-    .line 85
+    .line 86
     invoke-static {p1, p2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

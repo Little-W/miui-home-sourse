@@ -233,14 +233,6 @@
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0}, Lcom/miui/home/launcher/overlay/feed/FeedOverlaySwipeController;->getServerVersion()I
-
-    move-result p1
-
-    const/4 v1, 0x3
-
-    if-ge p1, v1, :cond_1
-
     return v0
 
     .line 35

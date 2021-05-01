@@ -68,38 +68,38 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 23
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
+    .line 26
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/internal/AnimManager;->mStartAnim:Ljava/util/Set;
 
-    .line 29
+    .line 28
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/internal/AnimManager;->mUpdateMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 30
+    .line 29
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/internal/AnimManager;->mRunningInfo:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 32
+    .line 31
     new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
 
     iput-object v0, p0, Lmiuix/animation/internal/AnimManager;->mWaitState:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    .line 36
+    .line 35
     new-instance v0, Lmiuix/animation/internal/AnimManager$1;
 
     invoke-direct {v0, p0}, Lmiuix/animation/internal/AnimManager$1;-><init>(Lmiuix/animation/internal/AnimManager;)V
@@ -112,7 +112,7 @@
 .method private varargs containProperties(Lmiuix/animation/internal/TransitionInfo;[Lmiuix/animation/property/FloatProperty;)Z
     .locals 4
 
-    .line 88
+    .line 91
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -124,7 +124,7 @@
 
     aget-object v3, p2, v2
 
-    .line 89
+    .line 92
     invoke-virtual {p1, v3}, Lmiuix/animation/internal/TransitionInfo;->containsProperty(Lmiuix/animation/property/FloatProperty;)Z
 
     move-result v3
@@ -147,10 +147,10 @@
 .method private pendState(Lmiuix/animation/internal/TransitionInfo;)Z
     .locals 4
 
-    .line 154
-    iget-object v0, p1, Lmiuix/animation/internal/TransitionInfo;->config:Lmiuix/animation/base/AnimConfig;
+    .line 157
+    iget-object v0, p1, Lmiuix/animation/internal/TransitionInfo;->to:Lmiuix/animation/controller/AnimState;
 
-    iget-wide v0, v0, Lmiuix/animation/base/AnimConfig;->flags:J
+    iget-wide v0, v0, Lmiuix/animation/controller/AnimState;->flags:J
 
     const-wide/16 v2, 0x1
 
@@ -160,7 +160,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 155
+    .line 158
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mWaitState:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
@@ -178,7 +178,7 @@
 .method private removeSameAnim(Lmiuix/animation/internal/TransitionInfo;)V
     .locals 6
 
-    .line 115
+    .line 118
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mRunningInfo:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
@@ -206,23 +206,23 @@
 
     goto :goto_0
 
-    .line 119
+    .line 122
     :cond_0
     iget-object v2, v1, Lmiuix/animation/internal/TransitionInfo;->updateList:Ljava/util/List;
 
-    .line 120
+    .line 123
     iget-object v3, p0, Lmiuix/animation/internal/AnimManager;->mUpdateList:Ljava/util/List;
 
     if-nez v3, :cond_1
 
-    .line 121
+    .line 124
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Lmiuix/animation/internal/AnimManager;->mUpdateList:Ljava/util/List;
 
-    .line 123
+    .line 126
     :cond_1
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -242,7 +242,7 @@
 
     check-cast v3, Lmiuix/animation/listener/UpdateInfo;
 
-    .line 124
+    .line 127
     iget-object v4, p1, Lmiuix/animation/internal/TransitionInfo;->to:Lmiuix/animation/controller/AnimState;
 
     iget-object v5, v3, Lmiuix/animation/listener/UpdateInfo;->property:Lmiuix/animation/property/FloatProperty;
@@ -253,14 +253,14 @@
 
     if-nez v4, :cond_2
 
-    .line 125
+    .line 128
     iget-object v4, p0, Lmiuix/animation/internal/AnimManager;->mUpdateList:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 128
+    .line 131
     :cond_3
     iget-object v2, p0, Lmiuix/animation/internal/AnimManager;->mUpdateList:Ljava/util/List;
 
@@ -274,12 +274,12 @@
 
     const/4 v3, 0x4
 
-    .line 129
+    .line 132
     invoke-virtual {p0, v1, v2, v3}, Lmiuix/animation/internal/AnimManager;->notifyTransitionEnd(Lmiuix/animation/internal/TransitionInfo;II)V
 
     goto :goto_0
 
-    .line 130
+    .line 133
     :cond_4
     iget-object v2, p0, Lmiuix/animation/internal/AnimManager;->mUpdateList:Ljava/util/List;
 
@@ -295,24 +295,24 @@
 
     if-eq v2, v3, :cond_5
 
-    .line 131
+    .line 134
     iget-object v2, p0, Lmiuix/animation/internal/AnimManager;->mUpdateList:Ljava/util/List;
 
     iput-object v2, v1, Lmiuix/animation/internal/TransitionInfo;->updateList:Ljava/util/List;
 
     const/4 v2, 0x0
 
-    .line 132
+    .line 135
     iput-object v2, p0, Lmiuix/animation/internal/AnimManager;->mUpdateList:Ljava/util/List;
 
     const/4 v2, 0x0
 
-    .line 133
+    .line 136
     invoke-virtual {v1, v2}, Lmiuix/animation/internal/TransitionInfo;->setupTasks(Z)V
 
     goto :goto_0
 
-    .line 135
+    .line 138
     :cond_5
     iget-object v1, p0, Lmiuix/animation/internal/AnimManager;->mUpdateList:Ljava/util/List;
 
@@ -327,7 +327,7 @@
 .method private setTargetValue(Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)V
     .locals 7
 
-    .line 173
+    .line 176
     invoke-virtual {p1}, Lmiuix/animation/controller/AnimState;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -347,19 +347,19 @@
 
     move-result-object v1
 
-    .line 174
+    .line 177
     invoke-virtual {p1, v1}, Lmiuix/animation/controller/AnimState;->getTempProperty(Ljava/lang/Object;)Lmiuix/animation/property/FloatProperty;
 
     move-result-object v1
 
-    .line 175
+    .line 178
     iget-object v2, p0, Lmiuix/animation/internal/AnimManager;->mTarget:Lmiuix/animation/IAnimTarget;
 
     invoke-virtual {p1, v2, v1}, Lmiuix/animation/controller/AnimState;->get(Lmiuix/animation/IAnimTarget;Lmiuix/animation/property/FloatProperty;)D
 
     move-result-wide v2
 
-    .line 176
+    .line 179
     iget-object v4, p0, Lmiuix/animation/internal/AnimManager;->mTarget:Lmiuix/animation/IAnimTarget;
 
     iget-object v4, v4, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
@@ -374,18 +374,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 178
+    .line 181
     iget-object v4, v4, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iput-wide v2, v4, Lmiuix/animation/internal/AnimInfo;->setToValue:D
 
-    .line 180
+    .line 183
     :cond_0
     instance-of v4, v1, Lmiuix/animation/property/IIntValueProperty;
 
     if-eqz v4, :cond_1
 
-    .line 181
+    .line 184
     iget-object v4, p0, Lmiuix/animation/internal/AnimManager;->mTarget:Lmiuix/animation/IAnimTarget;
 
     move-object v5, v1
@@ -398,7 +398,7 @@
 
     goto :goto_1
 
-    .line 183
+    .line 186
     :cond_1
     iget-object v4, p0, Lmiuix/animation/internal/AnimManager;->mTarget:Lmiuix/animation/IAnimTarget;
 
@@ -406,7 +406,7 @@
 
     invoke-virtual {v4, v1, v5}, Lmiuix/animation/IAnimTarget;->setValue(Lmiuix/animation/property/FloatProperty;F)V
 
-    .line 185
+    .line 188
     :goto_1
     iget-object v4, p0, Lmiuix/animation/internal/AnimManager;->mTarget:Lmiuix/animation/IAnimTarget;
 
@@ -414,7 +414,7 @@
 
     goto :goto_0
 
-    .line 187
+    .line 190
     :cond_2
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mTarget:Lmiuix/animation/IAnimTarget;
 
@@ -428,22 +428,22 @@
 .method public clear()V
     .locals 1
 
-    .line 60
+    .line 63
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mStartAnim:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 61
+    .line 64
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mUpdateMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    .line 62
+    .line 65
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mRunningInfo:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    .line 63
+    .line 66
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mWaitState:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->clear()V
@@ -454,7 +454,7 @@
 .method public getTotalAnimCount()I
     .locals 3
 
-    .line 68
+    .line 71
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mRunningInfo:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
@@ -480,7 +480,7 @@
 
     check-cast v2, Lmiuix/animation/internal/TransitionInfo;
 
-    .line 69
+    .line 72
     invoke-virtual {v2}, Lmiuix/animation/internal/TransitionInfo;->getAnimCount()I
 
     move-result v2
@@ -504,7 +504,7 @@
         }
     .end annotation
 
-    .line 52
+    .line 55
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mRunningInfo:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
@@ -529,7 +529,7 @@
 
     check-cast v1, Lmiuix/animation/internal/TransitionInfo;
 
-    .line 53
+    .line 56
     iget-object v2, v1, Lmiuix/animation/internal/TransitionInfo;->updateList:Ljava/util/List;
 
     if-eqz v2, :cond_0
@@ -542,7 +542,7 @@
 
     if-nez v2, :cond_0
 
-    .line 54
+    .line 57
     invoke-interface {p1, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -554,7 +554,7 @@
 .method public getUpdateInfo(Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/listener/UpdateInfo;
     .locals 2
 
-    .line 199
+    .line 202
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mUpdateMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -565,12 +565,12 @@
 
     if-nez v0, :cond_0
 
-    .line 201
+    .line 204
     new-instance v0, Lmiuix/animation/listener/UpdateInfo;
 
     invoke-direct {v0, p1}, Lmiuix/animation/listener/UpdateInfo;-><init>(Lmiuix/animation/property/FloatProperty;)V
 
-    .line 202
+    .line 205
     iget-object v1, p0, Lmiuix/animation/internal/AnimManager;->mUpdateMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -590,7 +590,7 @@
 .method public getVelocity(Lmiuix/animation/property/FloatProperty;)D
     .locals 2
 
-    .line 191
+    .line 194
     invoke-virtual {p0, p1}, Lmiuix/animation/internal/AnimManager;->getUpdateInfo(Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/listener/UpdateInfo;
 
     move-result-object p1
@@ -603,7 +603,7 @@
 .method public varargs isAnimRunning([Lmiuix/animation/property/FloatProperty;)Z
     .locals 3
 
-    .line 75
+    .line 78
     invoke-static {p1}, Lmiuix/animation/utils/CommonUtils;->isArrayEmpty([Ljava/lang/Object;)Z
 
     move-result v0
@@ -614,7 +614,7 @@
 
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mRunningInfo:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 76
+    .line 79
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->isEmpty()Z
 
     move-result v0
@@ -632,7 +632,7 @@
     :cond_0
     return v1
 
-    .line 79
+    .line 82
     :cond_1
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mRunningInfo:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -657,7 +657,7 @@
 
     check-cast v2, Lmiuix/animation/internal/TransitionInfo;
 
-    .line 80
+    .line 83
     invoke-direct {p0, v2, p1}, Lmiuix/animation/internal/AnimManager;->containProperties(Lmiuix/animation/internal/TransitionInfo;[Lmiuix/animation/property/FloatProperty;)Z
 
     move-result v2
@@ -675,14 +675,14 @@
 .method notifyTransitionEnd(Lmiuix/animation/internal/TransitionInfo;II)V
     .locals 2
 
-    .line 141
+    .line 144
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mRunningInfo:Ljava/util/concurrent/ConcurrentHashMap;
 
     iget-object v1, p1, Lmiuix/animation/internal/TransitionInfo;->key:Ljava/lang/Object;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 142
+    .line 145
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mStartAnim:Ljava/util/Set;
 
     iget-object v1, p1, Lmiuix/animation/internal/TransitionInfo;->key:Ljava/lang/Object;
@@ -693,7 +693,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 143
+    .line 146
     sget-object v0, Lmiuix/animation/internal/TransitionInfo;->sMap:Ljava/util/Map;
 
     iget v1, p1, Lmiuix/animation/internal/TransitionInfo;->id:I
@@ -704,25 +704,25 @@
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 144
+    .line 147
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mTarget:Lmiuix/animation/IAnimTarget;
 
     iget-object v0, v0, Lmiuix/animation/IAnimTarget;->handler:Lmiuix/animation/internal/TargetHandler;
 
     iget p1, p1, Lmiuix/animation/internal/TransitionInfo;->id:I
 
-    .line 145
+    .line 148
     invoke-virtual {v0, p2, p1, p3}, Lmiuix/animation/internal/TargetHandler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 146
+    .line 149
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
     :cond_0
     const/4 p1, 0x0
 
-    .line 148
+    .line 151
     new-array p1, p1, [Lmiuix/animation/property/FloatProperty;
 
     invoke-virtual {p0, p1}, Lmiuix/animation/internal/AnimManager;->isAnimRunning([Lmiuix/animation/property/FloatProperty;)Z
@@ -731,7 +731,7 @@
 
     if-nez p1, :cond_1
 
-    .line 149
+    .line 152
     iget-object p1, p0, Lmiuix/animation/internal/AnimManager;->mUpdateMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
@@ -743,7 +743,7 @@
 .method public runUpdate()V
     .locals 2
 
-    .line 44
+    .line 47
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mTarget:Lmiuix/animation/IAnimTarget;
 
     iget-object v1, p0, Lmiuix/animation/internal/AnimManager;->mUpdateTask:Ljava/lang/Runnable;
@@ -756,7 +756,7 @@
 .method public setTarget(Lmiuix/animation/IAnimTarget;)V
     .locals 0
 
-    .line 48
+    .line 51
     iput-object p1, p0, Lmiuix/animation/internal/AnimManager;->mTarget:Lmiuix/animation/IAnimTarget;
 
     return-void
@@ -765,14 +765,14 @@
 .method public setTo(Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)V
     .locals 5
 
-    .line 162
+    .line 165
     invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 163
+    .line 166
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -813,7 +813,7 @@
 
     invoke-static {v0, v1}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 165
+    .line 168
     :cond_0
     invoke-virtual {p1}, Lmiuix/animation/controller/AnimState;->keySet()Ljava/util/Set;
 
@@ -823,11 +823,11 @@
 
     move-result v0
 
-    const/16 v1, 0xfa0
+    const/16 v1, 0x96
 
     if-le v0, v1, :cond_1
 
-    .line 166
+    .line 169
     sget-object p2, Lmiuix/animation/internal/AnimRunner;->sRunnerHandler:Lmiuix/animation/internal/RunnerHandler;
 
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mTarget:Lmiuix/animation/IAnimTarget;
@@ -836,7 +836,7 @@
 
     goto :goto_0
 
-    .line 168
+    .line 171
     :cond_1
     invoke-direct {p0, p1, p2}, Lmiuix/animation/internal/AnimManager;->setTargetValue(Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)V
 
@@ -847,7 +847,7 @@
 .method public setVelocity(Lmiuix/animation/property/FloatProperty;F)V
     .locals 2
 
-    .line 195
+    .line 198
     invoke-virtual {p0, p1}, Lmiuix/animation/internal/AnimManager;->getUpdateInfo(Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/listener/UpdateInfo;
 
     move-result-object p1
@@ -862,22 +862,22 @@
 .method setupTransition(Lmiuix/animation/internal/TransitionInfo;)V
     .locals 2
 
-    .line 108
+    .line 111
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mRunningInfo:Ljava/util/concurrent/ConcurrentHashMap;
 
     iget-object v1, p1, Lmiuix/animation/internal/TransitionInfo;->key:Ljava/lang/Object;
 
     invoke-virtual {v0, v1, p1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 109
+    .line 112
     invoke-virtual {p1, p0}, Lmiuix/animation/internal/TransitionInfo;->initUpdateList(Lmiuix/animation/internal/TransitionInfo$IUpdateInfoCreator;)V
 
     const/4 v0, 0x1
 
-    .line 110
+    .line 113
     invoke-virtual {p1, v0}, Lmiuix/animation/internal/TransitionInfo;->setupTasks(Z)V
 
-    .line 111
+    .line 114
     invoke-direct {p0, p1}, Lmiuix/animation/internal/AnimManager;->removeSameAnim(Lmiuix/animation/internal/TransitionInfo;)V
 
     return-void
@@ -886,7 +886,7 @@
 .method public startAnim(Lmiuix/animation/internal/TransitionInfo;)V
     .locals 3
 
-    .line 97
+    .line 100
     invoke-direct {p0, p1}, Lmiuix/animation/internal/AnimManager;->pendState(Lmiuix/animation/internal/TransitionInfo;)Z
 
     move-result v0
@@ -895,7 +895,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 98
+    .line 101
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -916,7 +916,7 @@
 
     return-void
 
-    .line 101
+    .line 104
     :cond_0
     sget-object v0, Lmiuix/animation/internal/TransitionInfo;->sMap:Ljava/util/Map;
 
@@ -928,20 +928,33 @@
 
     invoke-interface {v0, v2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 102
+    .line 105
     sget-object v0, Lmiuix/animation/internal/AnimRunner;->sRunnerHandler:Lmiuix/animation/internal/RunnerHandler;
 
     const/4 v2, 0x1
 
     iget p1, p1, Lmiuix/animation/internal/TransitionInfo;->id:I
 
-    .line 103
+    .line 106
     invoke-virtual {v0, v2, p1, v1}, Lmiuix/animation/internal/RunnerHandler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object p1
 
-    .line 104
+    .line 107
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
+
+    return-void
+.end method
+
+.method public update(Z)V
+    .locals 1
+
+    .line 43
+    iget-object v0, p0, Lmiuix/animation/internal/AnimManager;->mTarget:Lmiuix/animation/IAnimTarget;
+
+    iget-object v0, v0, Lmiuix/animation/IAnimTarget;->handler:Lmiuix/animation/internal/TargetHandler;
+
+    invoke-virtual {v0, p1}, Lmiuix/animation/internal/TargetHandler;->update(Z)V
 
     return-void
 .end method

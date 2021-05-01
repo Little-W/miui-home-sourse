@@ -99,10 +99,10 @@
 .method private static doPhysicsCalculation(Lmiuix/animation/internal/AnimData;D)V
     .locals 13
 
-    .line 83
+    .line 85
     iget-wide v1, p0, Lmiuix/animation/internal/AnimData;->velocity:D
 
-    .line 84
+    .line 86
     iget-object v0, p0, Lmiuix/animation/internal/AnimData;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     iget v0, v0, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
@@ -113,14 +113,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 85
+    .line 87
     instance-of v3, v0, Lmiuix/animation/physics/SpringOperator;
 
     if-eqz v3, :cond_0
 
     iget-wide v3, p0, Lmiuix/animation/internal/AnimData;->targetValue:D
 
-    .line 86
+    .line 88
     invoke-static {v3, v4}, Lmiuix/animation/internal/AnimValueUtils;->isInvalid(D)Z
 
     move-result v3
@@ -129,7 +129,7 @@
 
     goto :goto_0
 
-    .line 90
+    .line 92
     :cond_0
     iget-object v3, p0, Lmiuix/animation/internal/AnimData;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
@@ -171,7 +171,7 @@
 
     move-result-wide v0
 
-    .line 94
+    .line 96
     iget-wide v2, p0, Lmiuix/animation/internal/AnimData;->value:D
 
     mul-double/2addr p1, v0
@@ -180,12 +180,12 @@
 
     iput-wide v2, p0, Lmiuix/animation/internal/AnimData;->value:D
 
-    .line 95
+    .line 97
     iput-wide v0, p0, Lmiuix/animation/internal/AnimData;->velocity:D
 
     goto :goto_1
 
-    .line 87
+    .line 89
     :cond_1
     :goto_0
     iget-wide p1, p0, Lmiuix/animation/internal/AnimData;->targetValue:D
@@ -194,7 +194,7 @@
 
     const-wide/16 p1, 0x0
 
-    .line 88
+    .line 90
     iput-wide p1, p0, Lmiuix/animation/internal/AnimData;->velocity:D
 
     :goto_1
@@ -210,19 +210,19 @@
 
     return-object p0
 
-    .line 118
+    .line 120
     :pswitch_0
     sget-object p0, Lmiuix/animation/styles/PropertyStyle;->sSpring:Lmiuix/animation/physics/SpringOperator;
 
     return-object p0
 
-    .line 120
+    .line 122
     :pswitch_1
     sget-object p0, Lmiuix/animation/styles/PropertyStyle;->sAccelerate:Lmiuix/animation/physics/AccelerateOperator;
 
     return-object p0
 
-    .line 122
+    .line 124
     :pswitch_2
     sget-object p0, Lmiuix/animation/styles/PropertyStyle;->sFriction:Lmiuix/animation/physics/FrictionOperator;
 
@@ -247,7 +247,7 @@
 
     move-wide v4, p5
 
-    .line 102
+    .line 104
     invoke-virtual/range {v0 .. v5}, Lmiuix/animation/physics/EquilibriumChecker;->isAtEquilibrium(IDD)Z
 
     move-result p0
@@ -264,14 +264,14 @@
 
     if-lez p3, :cond_1
 
-    .line 105
+    .line 107
     invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogEnabled()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 106
+    .line 108
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -314,7 +314,7 @@
 .method private static isUsingSpringPhy(Lmiuix/animation/internal/AnimData;)Z
     .locals 1
 
-    .line 129
+    .line 131
     iget-object p0, p0, Lmiuix/animation/internal/AnimData;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     iget p0, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->style:I
@@ -337,7 +337,7 @@
 .method private static setFinishValue(Lmiuix/animation/internal/AnimData;)V
     .locals 2
 
-    .line 76
+    .line 78
     invoke-static {p0}, Lmiuix/animation/styles/PropertyStyle;->isUsingSpringPhy(Lmiuix/animation/internal/AnimData;)Z
 
     move-result v0
@@ -346,7 +346,7 @@
 
     return-void
 
-    .line 79
+    .line 81
     :cond_0
     iget-wide v0, p0, Lmiuix/animation/internal/AnimData;->targetValue:D
 
@@ -392,18 +392,28 @@
 
     iput-wide p1, p0, Lmiuix/animation/internal/AnimData;->progress:D
 
+    .line 47
+    iget-wide p1, p0, Lmiuix/animation/internal/AnimData;->progress:D
+
+    iput-wide p1, p0, Lmiuix/animation/internal/AnimData;->value:D
+
     goto :goto_0
 
     :cond_0
     const/4 p1, 0x3
 
-    .line 48
+    .line 49
     invoke-virtual {p0, p1}, Lmiuix/animation/internal/AnimData;->setOp(B)V
 
     const-wide/high16 p1, 0x3ff0000000000000L    # 1.0
 
-    .line 49
+    .line 50
     iput-wide p1, p0, Lmiuix/animation/internal/AnimData;->progress:D
+
+    .line 51
+    iget-wide p1, p0, Lmiuix/animation/internal/AnimData;->progress:D
+
+    iput-wide p1, p0, Lmiuix/animation/internal/AnimData;->value:D
 
     :goto_0
     return-void
@@ -428,7 +438,7 @@
 
     div-float/2addr v1, v2
 
-    .line 57
+    .line 59
     invoke-static {v1}, Ljava/lang/Math;->round(F)I
 
     move-result v1
@@ -445,7 +455,7 @@
 
     div-double/2addr v2, v4
 
-    .line 62
+    .line 64
     sget-object v4, Lmiuix/animation/styles/PropertyStyle;->mCheckerLocal:Ljava/lang/ThreadLocal;
 
     const-class v5, Lmiuix/animation/physics/EquilibriumChecker;
@@ -456,7 +466,7 @@
 
     check-cast v4, Lmiuix/animation/physics/EquilibriumChecker;
 
-    .line 63
+    .line 65
     iget-object v5, v0, Lmiuix/animation/internal/AnimData;->property:Lmiuix/animation/property/FloatProperty;
 
     iget-wide v6, v0, Lmiuix/animation/internal/AnimData;->targetValue:D
@@ -472,10 +482,10 @@
     :goto_1
     if-ge v14, v1, :cond_2
 
-    .line 65
+    .line 67
     invoke-static {v0, v2, v3}, Lmiuix/animation/styles/PropertyStyle;->doPhysicsCalculation(Lmiuix/animation/internal/AnimData;D)V
 
-    .line 66
+    .line 68
     iget-object v6, v0, Lmiuix/animation/internal/AnimData;->property:Lmiuix/animation/property/FloatProperty;
 
     iget-object v5, v0, Lmiuix/animation/internal/AnimData;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
@@ -498,10 +508,10 @@
 
     const/4 v1, 0x3
 
-    .line 68
+    .line 70
     invoke-virtual {v0, v1}, Lmiuix/animation/internal/AnimData;->setOp(B)V
 
-    .line 69
+    .line 71
     invoke-static/range {p1 .. p1}, Lmiuix/animation/styles/PropertyStyle;->setFinishValue(Lmiuix/animation/internal/AnimData;)V
 
     goto :goto_2

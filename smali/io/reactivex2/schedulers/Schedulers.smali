@@ -100,3 +100,16 @@
 
     return-object v0
 .end method
+
+.method public static io()Lio/reactivex2/Scheduler;
+    .locals 1
+
+    .line 181
+    sget-object v0, Lio/reactivex2/schedulers/Schedulers;->IO:Lio/reactivex2/Scheduler;
+
+    invoke-static {v0}, Lio/reactivex2/plugins/RxJavaPlugins;->onIoScheduler(Lio/reactivex2/Scheduler;)Lio/reactivex2/Scheduler;
+
+    move-result-object v0
+
+    return-object v0
+.end method

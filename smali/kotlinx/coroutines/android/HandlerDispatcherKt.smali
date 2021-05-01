@@ -179,7 +179,7 @@
 
     move-result-object p1
 
-    const-string v4, "Handler::class.java.getD\u2026:class.javaPrimitiveType)"
+    const-string v4, "Handler::class.java.getD…:class.javaPrimitiveType)"
 
     invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0

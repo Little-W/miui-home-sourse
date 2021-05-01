@@ -17,7 +17,7 @@
     .locals 1
 
     .line 105
-    invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->isLandscape()Z
+    invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->isLandscapeVisually()Z
 
     move-result v0
 
@@ -208,7 +208,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0701f5
+    const p2, 0x7f0701f9
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -313,7 +313,7 @@
     return p1
 
     :cond_0
-    const/high16 v0, 0x0
+    const/high16 v0, 0x3f800000    # 1.0f
 
     const/4 v1, 0x0
 
@@ -493,7 +493,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->isLandscape()Z
+    invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->isLandscapeVisually()Z
 
     move-result v0
 
@@ -758,10 +758,22 @@
 .method protected scaleTaskView(Landroid/graphics/RectF;)V
     .locals 1
 
-    invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->isLandscape()Z
+    .line 125
+    invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;->isLandscapeVisually()Z
 
-    const v0, 0x3f266666    # 0.65f
+    move-result v0
 
+    if-eqz v0, :cond_0
+
+    const v0, 0x3ef5c28f    # 0.48f
+
+    goto :goto_0
+
+    :cond_0
+    const v0, 0x3f0b4396    # 0.544f
+
+    .line 124
+    :goto_0
     invoke-static {p1, v0}, Lcom/miui/home/recents/util/Utilities;->scaleRectAboutCenter(Landroid/graphics/RectF;F)V
 
     return-void

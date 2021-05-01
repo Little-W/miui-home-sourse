@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onBegin$0(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$1;)V
+.method public static synthetic lambda$onBegin$456(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$1;)V
     .locals 3
 
     const/4 v0, 0x1
@@ -83,9 +83,9 @@
 
     move-result-object p1
 
-    new-instance v0, Lcom/miui/home/launcher/uninstall/-$$Lambda$BoomByFolmeAnimator$1$w5MzKupWrcnyZeqisuPT4uINPfI;
+    new-instance v0, Lcom/miui/home/launcher/uninstall/-$$Lambda$BoomByFolmeAnimator$1$C6zj7bEVO0TOOLIWugOTkyNApQ0;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/uninstall/-$$Lambda$BoomByFolmeAnimator$1$w5MzKupWrcnyZeqisuPT4uINPfI;-><init>(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$1;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/uninstall/-$$Lambda$BoomByFolmeAnimator$1$C6zj7bEVO0TOOLIWugOTkyNApQ0;-><init>(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$1;)V
 
     const-wide/16 v1, 0x1f4
 

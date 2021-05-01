@@ -99,17 +99,17 @@
 
 .field public static final dialog_button:I = 0x7f0a0097
 
-.field public static final forever:I = 0x7f0a00d0
+.field public static final forever:I = 0x7f0a00d2
 
-.field public static final icon:I = 0x7f0a00e4
+.field public static final icon:I = 0x7f0a00e6
 
-.field public static final icon_group:I = 0x7f0a00e8
+.field public static final icon_group:I = 0x7f0a00ea
 
-.field public static final info:I = 0x7f0a00f4
+.field public static final info:I = 0x7f0a00f8
 
-.field public static final italic:I = 0x7f0a00f6
+.field public static final italic:I = 0x7f0a00fa
 
-.field public static final item_touch_helper_previous_elevation:I = 0x7f0a0106
+.field public static final item_touch_helper_previous_elevation:I = 0x7f0a0105
 
 .field public static final line1:I = 0x7f0a010a
 

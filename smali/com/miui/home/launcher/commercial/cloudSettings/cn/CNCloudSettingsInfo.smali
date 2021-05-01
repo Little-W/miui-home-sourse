@@ -23,8 +23,6 @@
     .line 12
     iput-boolean v0, p0, Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsInfo;->mIsShowXOut:Z
 
-    const/4 v0, 0x1
-
     .line 13
     iput-boolean v0, p0, Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsInfo;->mOnlyRequestWhenFolderOpen:Z
 
@@ -172,13 +170,13 @@
     return v0
 .end method
 
-.method public updateInfo(Lcom/miui/msa/internal/preinstall/v1/CNColudControlInfo;)V
+.method public updateInfo(Lcom/miui/msa/internal/preinstall/v2/CNColudControlInfo;)V
     .locals 2
 
     if-eqz p1, :cond_0
 
     .line 24
-    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v1/CNColudControlInfo;->isCloseAd()Z
+    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v2/CNColudControlInfo;->isCloseAd()Z
 
     move-result v0
 
@@ -189,7 +187,7 @@
     const-string v0, "GetAdWithOpenFolder"
 
     .line 26
-    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v1/CNColudControlInfo;->getQueryType()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v2/CNColudControlInfo;->getQueryType()Ljava/lang/String;
 
     move-result-object v1
 
@@ -201,14 +199,14 @@
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsInfo;->setOnlyRequestWhenFolderOpen(Z)V
 
     .line 27
-    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v1/CNColudControlInfo;->isOpenXout()Z
+    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v2/CNColudControlInfo;->isOpenXout()Z
 
     move-result v0
 
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsInfo;->setIsShowXOut(Z)V
 
     .line 28
-    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v1/CNColudControlInfo;->getxOutProtectionInMillis()J
+    invoke-virtual {p1}, Lcom/miui/msa/internal/preinstall/v2/CNColudControlInfo;->getxOutProtectionInMillis()J
 
     move-result-wide v0
 

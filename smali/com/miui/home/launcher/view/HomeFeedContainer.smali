@@ -407,7 +407,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070239
+    const v1, 0x7f07023d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -859,7 +859,7 @@
     return v0
 .end method
 
-.method static synthetic lambda$createNewHomeView$0(Landroid/os/Bundle;)V
+.method static synthetic lambda$createNewHomeView$20(Landroid/os/Bundle;)V
     .locals 0
 
     return-void
@@ -1070,7 +1070,7 @@
     .line 396
     iget-object p1, p0, Lcom/miui/home/launcher/view/HomeFeedContainer;->mNewHomeView:Lcom/miui/newhome/view/gestureview/NewHomeView;
 
-    sget-object p2, Lcom/miui/home/launcher/view/-$$Lambda$HomeFeedContainer$TD_pcK57XHBBuhuSPYh1Uz4pG6s;->INSTANCE:Lcom/miui/home/launcher/view/-$$Lambda$HomeFeedContainer$TD_pcK57XHBBuhuSPYh1Uz4pG6s;
+    sget-object p2, Lcom/miui/home/launcher/view/-$$Lambda$HomeFeedContainer$Nc9s2F6Way1XMI7Iiry74INR2VA;->INSTANCE:Lcom/miui/home/launcher/view/-$$Lambda$HomeFeedContainer$Nc9s2F6Way1XMI7Iiry74INR2VA;
 
     invoke-virtual {p1, p2}, Lcom/miui/newhome/view/gestureview/NewHomeView;->setFeedActionListener(Lcom/miui/newhome/view/gestureview/FeedActionListener;)V
 

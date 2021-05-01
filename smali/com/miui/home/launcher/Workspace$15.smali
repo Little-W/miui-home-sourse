@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 2419
+    .line 2368
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$15;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 .method public apply(Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 3
 
-    .line 2422
+    .line 2371
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$15;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$700(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
@@ -72,7 +72,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 2423
+    .line 2372
     instance-of v1, v0, Lcom/miui/home/launcher/FolderInfo;
 
     if-eqz v1, :cond_0
@@ -92,12 +92,12 @@
 
     check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 2424
+    .line 2373
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->getBuddyIconView()Lcom/miui/home/launcher/ShortcutIcon;
 
     move-result-object v1
 
-    .line 2425
+    .line 2374
     :goto_1
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace$15;->this$0:Lcom/miui/home/launcher/Workspace;
 
@@ -108,7 +108,7 @@
     :cond_1
     const/4 p1, 0x1
 
-    .line 2427
+    .line 2376
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -119,7 +119,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 2419
+    .line 2368
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace$15;->apply(Ljava/lang/Void;)Ljava/lang/Boolean;

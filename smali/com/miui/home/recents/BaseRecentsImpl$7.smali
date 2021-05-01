@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;Landroid/os/Handler;)V
     .locals 0
 
-    .line 397
+    .line 399
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 5
 
-    .line 400
+    .line 402
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$500(Lcom/miui/home/recents/BaseRecentsImpl;)Z
@@ -44,7 +44,7 @@
 
     if-nez p1, :cond_2
 
-    .line 401
+    .line 403
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -63,7 +63,7 @@
 
     move-result p1
 
-    .line 402
+    .line 404
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -82,7 +82,7 @@
 
     const-string v2, "RecentsImpl"
 
-    .line 403
+    .line 405
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -109,27 +109,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 408
+    .line 410
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
+    invoke-static {p1, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$700(Lcom/miui/home/recents/BaseRecentsImpl;Z)V
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p1
-
-    const-string v2, "force_fsg_nav_bar"
-
-    invoke-static {p1, v2, v1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->putBooleanToGlobal(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
-
-    .line 409
+    .line 411
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$600(Lcom/miui/home/recents/BaseRecentsImpl;)V
 
-    .line 412
+    .line 414
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
@@ -143,7 +133,7 @@
 
     goto :goto_0
 
-    .line 413
+    .line 415
     :cond_1
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
@@ -159,7 +149,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 414
+    .line 416
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -174,7 +164,7 @@
 
     const-string v1, "RecentsImpl"
 
-    .line 415
+    .line 417
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -193,22 +183,12 @@
 
     if-eq v0, p1, :cond_2
 
-    .line 418
+    .line 420
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
+    invoke-static {v0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$700(Lcom/miui/home/recents/BaseRecentsImpl;Z)V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const-string v1, "force_fsg_nav_bar"
-
-    invoke-static {v0, v1, p1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->putBooleanToGlobal(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
-
-    .line 419
+    .line 421
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$600(Lcom/miui/home/recents/BaseRecentsImpl;)V

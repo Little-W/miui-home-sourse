@@ -126,7 +126,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/TransitionEffectThumbnailView;->mResources:Landroid/content/res/Resources;
 
-    const v1, 0x7f070239
+    const v1, 0x7f07023d
 
     .line 54
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -152,7 +152,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f08028e
+    const p2, 0x7f0802a0
 
     goto :goto_0
 
@@ -313,7 +313,7 @@
     .line 124
     iget-object v0, p0, Lcom/miui/home/launcher/TransitionEffectThumbnailView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d00cd
+    const v1, 0x7f0d00d2
 
     const/4 v2, 0x0
 
@@ -489,7 +489,7 @@
 
     if-eq v0, p1, :cond_1
 
-    const v1, 0x7f0a00e4
+    const v1, 0x7f0a00e6
 
     const v2, 0x7f0a01d4
 
@@ -514,7 +514,7 @@
     .line 183
     iget-object v4, p0, Lcom/miui/home/launcher/TransitionEffectThumbnailView;->mResources:Landroid/content/res/Resources;
 
-    const v5, 0x7f060235
+    const v5, 0x7f060239
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -545,7 +545,7 @@
     .line 189
     iget-object v2, p0, Lcom/miui/home/launcher/TransitionEffectThumbnailView;->mResources:Landroid/content/res/Resources;
 
-    const v3, 0x7f060234
+    const v3, 0x7f060238
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -618,7 +618,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a00e4
+    const v1, 0x7f0a00e6
 
     .line 150
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -665,7 +665,7 @@
     .line 216
     invoke-virtual {p1, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    const v1, 0x7f0a00e4
+    const v1, 0x7f0a00e6
 
     .line 217
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -787,7 +787,7 @@
     .line 86
     iget-object v0, p0, Lcom/miui/home/launcher/TransitionEffectThumbnailView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d00ce
+    const v1, 0x7f0d00d3
 
     const/4 v2, 0x0
 

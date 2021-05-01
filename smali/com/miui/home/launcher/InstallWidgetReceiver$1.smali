@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/InstallWidgetReceiver;->lambda$onReceive$0(Landroid/content/Intent;Landroid/content/Context;)V
+    value = Lcom/miui/home/launcher/InstallWidgetReceiver;->lambda$onReceive$386(Landroid/content/Intent;Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

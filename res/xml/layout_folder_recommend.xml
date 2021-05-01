@@ -1,63 +1,343 @@
 <?xml version="1.0" encoding="utf-8"?>
 <favorites
-  xmlns:launcher="http://schemas.android.com/apk/res/com.miui.home">
-    <favorite launcher:className="com.wali.live.main.LiveMainActivity" launcher:container="2" launcher:packageName="com.wali.live" launcher:x="1" launcher:y="0" />
-    <favorite launcher:className="com.tuniu.app.PermissionCheckActivity" launcher:container="2" launcher:packageName="com.tuniu.app.ui" launcher:x="1" launcher:y="0" />
-    <favorite launcher:className="com.baidu.bainuo.app.AgreementBgActivity" launcher:container="2" launcher:packageName="com.nuomi" launcher:x="4" launcher:y="0" />
-    <favorite launcher:className="com.dianping.main.permission.PermissionActivity" launcher:container="2" launcher:packageName="com.dianping.v1" launcher:x="5" launcher:y="0" />
-    <favorite launcher:className="com.sankuai.meituan.activity.PreloadedWelcome" launcher:container="2" launcher:packageName="com.sankuai.meituan" launcher:x="6" launcher:y="0" />
-    <favorite launcher:className="com.tuan800.tao800.activities.AlertUserActivity" launcher:container="2" launcher:packageName="com.tuan800.tao800" launcher:x="8" launcher:y="0" />
-    <favorite launcher:className="com.juanpi.ui.JPWelcomeActivity" launcher:container="2" launcher:packageName="com.juanpi.ui" launcher:x="9" launcher:y="0" />
-    <favorite launcher:className="com.immomo.momo.android.activity.WelcomeActivity" launcher:container="2" launcher:packageName="com.immomo.momo" launcher:x="10" launcher:y="0" />
-    <favorite launcher:className="com.tigerbrokers.stock.ui.StartupActivity" launcher:container="2" launcher:packageName="com.tigerbrokers.stock" launcher:x="11" launcher:y="0" />
-    <favorite launcher:className="com.keniu.security.main.MainActivity" launcher:container="2" launcher:packageName="com.cleanmaster.mguard_cn" launcher:x="12" launcher:y="0" />
-    <favorite launcher:className="com.xiaomi.jr.SplashActivity" launcher:container="2" launcher:packageName="com.xiaomi.jr" launcher:x="14" launcher:y="0" />
-    <favorite launcher:className="com.tencent.sc.activity.RomQzoneSplashActivity" launcher:container="2" launcher:packageName="com.qzone" launcher:x="15" launcher:y="0" />
-    <favorite launcher:className="com.xiaomi.o2o.activity.GuideActivity" launcher:container="2" launcher:packageName="com.xiaomi.o2o" launcher:x="16" launcher:y="0" />
-    <favorite launcher:className="com.tencent.qqmusic.activity.AppStarterActivity" launcher:container="2" launcher:packageName="com.tencent.qqmusic" launcher:x="17" launcher:y="0" />
-    <command launcher:methodName="checkDevices" launcher:methodParams="ginkgo" launcher:methodResult="true">
-        <favorite launcher:className="com.duokan.free.DkReaderActivity" launcher:container="2" launcher:packageName="com.duokan.free" launcher:x="19" launcher:y="0" />
+    xmlns:launcher="http://schemas.android.com/apk/res/com.miui.home">
+    <favorite
+        launcher:className="com.wali.live.main.LiveMainActivity"
+        launcher:container="2"
+        launcher:packageName="com.wali.live"
+        launcher:x="1"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.tuniu.app.PermissionCheckActivity"
+        launcher:container="2"
+        launcher:packageName="com.tuniu.app.ui"
+        launcher:x="1"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.baidu.bainuo.app.AgreementBgActivity"
+        launcher:container="2"
+        launcher:packageName="com.nuomi"
+        launcher:x="4"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.dianping.main.permission.PermissionActivity"
+        launcher:container="2"
+        launcher:packageName="com.dianping.v1"
+        launcher:x="5"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.sankuai.meituan.activity.PreloadedWelcome"
+        launcher:container="2"
+        launcher:packageName="com.sankuai.meituan"
+        launcher:x="6"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.tuan800.tao800.activities.AlertUserActivity"
+        launcher:container="2"
+        launcher:packageName="com.tuan800.tao800"
+        launcher:x="8"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.juanpi.ui.JPWelcomeActivity"
+        launcher:container="2"
+        launcher:packageName="com.juanpi.ui"
+        launcher:x="9"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.immomo.momo.android.activity.WelcomeActivity"
+        launcher:container="2"
+        launcher:packageName="com.immomo.momo"
+        launcher:x="10"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.tigerbrokers.stock.ui.StartupActivity"
+        launcher:container="2"
+        launcher:packageName="com.tigerbrokers.stock"
+        launcher:x="11"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.keniu.security.main.MainActivity"
+        launcher:container="2"
+        launcher:packageName="com.cleanmaster.mguard_cn"
+        launcher:x="12"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.xiaomi.jr.SplashActivity"
+        launcher:container="2"
+        launcher:packageName="com.xiaomi.jr"
+        launcher:x="14"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.tencent.sc.activity.RomQzoneSplashActivity"
+        launcher:container="2"
+        launcher:packageName="com.qzone"
+        launcher:x="15"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.xiaomi.o2o.activity.GuideActivity"
+        launcher:container="2"
+        launcher:packageName="com.xiaomi.o2o"
+        launcher:x="16"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.tencent.qqmusic.activity.AppStarterActivity"
+        launcher:container="2"
+        launcher:packageName="com.tencent.qqmusic"
+        launcher:x="17"
+        launcher:y="0" />
+    <command
+        launcher:methodName="checkDevices"
+        launcher:methodParams="ginkgo"
+        launcher:methodResult="true">
+        <favorite
+            launcher:className="com.duokan.free.DkReaderActivity"
+            launcher:container="2"
+            launcher:packageName="com.duokan.free"
+            launcher:x="19"
+            launcher:y="0" />
     </command>
-    <favorite launcher:className="com.xiaomi.channel.ui.ChannelLauncherActivity" launcher:container="2" launcher:packageName="com.xiaomi.channel" launcher:x="21" launcher:y="0" />
-    <favorite launcher:className="com.miui.miuibbs.activity.WelcomeActivity" launcher:container="2" launcher:packageName="com.miui.miuibbs" launcher:x="22" launcher:y="0" />
-    <favorite launcher:className="com.miui.personalassistant.ui.PersonalAssistantActivity" launcher:container="2" launcher:packageName="com.miui.personalassistant" launcher:x="23" launcher:y="0" />
-    <favorite launcher:className="com.cmread.bplusc.bookshelf.LocalMainActivity" launcher:container="2" launcher:packageName="com.ophone.reader.ui" launcher:x="26" launcher:y="0" />
-    <favorite launcher:className="com.cmread.bplusc.bookshelf.LocalMainActivity" launcher:container="2" launcher:packageName="com.andreader.prein" launcher:x="26" launcher:y="0" />
-    <favorite launcher:className="com.aspire.mm.app.HotSaleActivity" launcher:container="2" launcher:packageName="com.aspire.mm" launcher:x="27" launcher:y="0" />
-    <favorite launcher:className="cn.com.fetion.activity.LaunchActivity" launcher:container="2" launcher:packageName="cn.com.fetion" launcher:x="27" launcher:y="0" />
-    <favorite launcher:className="com.iflytek.inputmethod.LauncherActivity" launcher:container="2" launcher:packageName="com.iflytek.inputmethod" launcher:x="29" launcher:y="0" />
-    <favorite launcher:className="com.iflytek.inputmethod.oem.WizardActivity" launcher:container="2" launcher:packageName="com.iflytek.inputmethod.oem" launcher:x="29" launcher:y="0" />
-    <favorite launcher:className="com.chinamobile.cmccwifi.WelcomeActivity" launcher:container="2" launcher:packageName="com.chinamobile.cmccwifi" launcher:x="30" launcher:y="0" />
-    <favorite launcher:className="com.autonavi.minimap.Splashy" launcher:container="2" launcher:packageName="com.autonavi.cmccmap" launcher:x="31" launcher:y="0" />
-    <favorite launcher:className="com.iflytek.viafly.SplashActivity" launcher:container="2" launcher:packageName="com.iflytek.cmcc" launcher:x="32" launcher:y="0" />
-    <favorite launcher:className="com.cmcc.mobilevideo.StartActivity" launcher:container="2" launcher:packageName="cn.cmvideo.isj" launcher:x="33" launcher:y="0" />
-    <favorite launcher:className="com.chinamobile.contacts.im.LoadingPage" launcher:container="2" launcher:packageName="com.chinamobile.contacts.im" launcher:x="35" launcher:y="0" />
-    <favorite launcher:className="cn.emagsoftware.gamehall.GameHallShowcase" launcher:container="2" launcher:packageName="cn.emagsoftware.gamehall" launcher:x="36" launcher:y="0" />
-    <favorite launcher:className="cn.cj.pe.activity.PeSplashActivity" launcher:container="2" launcher:packageName="cn.cj.pe" launcher:x="38" launcher:y="0" />
-    <favorite launcher:className="com.opera.android.OupengStartActivity" launcher:container="2" launcher:packageName="com.oupeng.browserpre.cmcc" launcher:x="40" launcher:y="0" />
-    <favorite launcher:className="com.tmall.wireless.module.launchalert.TMLaunchAlertActivity" launcher:container="2" launcher:packageName="com.tmall.wireless" launcher:x="41" launcher:y="0" />
-    <favorite launcher:className="com.tencent.mobileqq.activity.SplashActivity" launcher:container="2" launcher:packageName="com.tencent.mobileqq" launcher:x="42" launcher:y="0" />
-    <favorite launcher:className="com.didi.frame.SplashActivity" launcher:container="2" launcher:packageName="com.sdu.didi.psnger" launcher:x="43" launcher:y="0" />
-    <favorite launcher:className="com.sina.weibo.SplashActivity" launcher:container="2" launcher:packageName="com.sina.weibog3" launcher:x="44" launcher:y="0" />
-    <favorite launcher:className="com.qti.antitheftdemo.MainActivity" launcher:container="2" launcher:packageName="com.qti.antitheftdemo" launcher:x="45" launcher:y="0" />
-    <favorite launcher:className="cmccwm.mobilemusic.ui.base.SplashActivity" launcher:container="2" launcher:packageName="cmccwm.mobilemusic" launcher:x="46" launcher:y="0" />
-    <favorite launcher:className="com.chinamobile.mcloud.client.ui.logo.LogoActivity" launcher:container="2" launcher:packageName="com.chinamobile.mcloud" launcher:x="47" launcher:y="0" />
-    <favorite launcher:className="com.founder.poetry.activities.SplashActivity" launcher:container="2" launcher:packageName="com.founder.poetry" launcher:x="50" launcher:y="0" />
-    <favorite launcher:className="com.whty.activity.LoadActivity" launcher:container="2" launcher:packageName="com.whty.wicity.china" launcher:x="51" launcher:y="0" />
-    <favorite launcher:className="com.letv.android.client.activity.WelcomActivity" launcher:container="2" launcher:packageName="com.letv.android.client" launcher:x="52" launcher:y="0" />
-    <favorite launcher:className="org.cocos2dx.platform.FirstActivity" launcher:container="2" launcher:packageName="sh.lilith.dgame.jididingzhi" launcher:x="53" launcher:y="0" />
-    <favorite launcher:className="ccc71.bmw.pro.bmw_status" launcher:container="2" launcher:packageName="ccc71.bmw.pro" launcher:x="54" launcher:y="0" />
-    <favorite launcher:className="com.leadeon.cmcc.base.StartPageActivity" launcher:container="2" launcher:packageName="com.greenpoint.android.mc10086.activity" launcher:x="55" launcher:y="0" />
-    <favorite launcher:className="sogou.mobile.explorer.NoDisplayActivity" launcher:container="2" launcher:packageName="sogou.mobile.explorer" launcher:x="56" launcher:y="0" />
-    <favorite launcher:className="com.baidu.tieba.LogoActivity" launcher:container="2" launcher:packageName="com.baidu.tieba" launcher:x="57" launcher:y="0" />
-    <favorite launcher:className="com.chinasofti.rcs.ui.activity.RcsMainRCSActivity" launcher:container="2" launcher:packageName="com.chinasofti.rcs" launcher:x="59" launcher:y="0" />
-    <favorite launcher:className="com.wondertek.activity.AppFakeActivity" launcher:container="2" launcher:packageName="com.cmcc.cmvideo" launcher:x="60" launcher:y="0" />
-    <favorite launcher:className="com.android.backup.MainBackUpActivity" launcher:container="2" launcher:packageName="com.android.backup" launcher:x="61" launcher:y="0" />
-    <favorite launcher:className="com.shuqi.activity.SplashActivity" launcher:container="2" launcher:packageName="com.shuqi.controller" launcher:x="62" launcher:y="0" />
-    <favorite launcher:className="com.imohoo.shanpao.ui.first.CtaActivity" launcher:container="2" launcher:packageName="com.imohoo.shanpao" launcher:x="63" launcher:y="0" />
-    <favorite launcher:className="com.qihoo.browser.activity.SplashActivity" launcher:container="2" launcher:packageName="com.qihoo.browser" launcher:x="64" launcher:y="0" />
-    <favorite launcher:className="com.mediatek.backuprestore.MainActivity" launcher:container="2" launcher:packageName="com.mediatek.backuprestore" launcher:x="65" launcher:y="0" />
-    <command launcher:methodName="isXiaomiOrRedmiKSeries" launcher:methodResult="false">
-        <favorite launcher:className="com.mqunar.splash.SplashActivity" launcher:container="2" launcher:packageName="com.Qunar" launcher:x="66" launcher:y="0" />
+    <favorite
+        launcher:className="com.xiaomi.channel.ui.ChannelLauncherActivity"
+        launcher:container="2"
+        launcher:packageName="com.xiaomi.channel"
+        launcher:x="21"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.miui.miuibbs.activity.WelcomeActivity"
+        launcher:container="2"
+        launcher:packageName="com.miui.miuibbs"
+        launcher:x="22"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.miui.personalassistant.ui.PersonalAssistantActivity"
+        launcher:container="2"
+        launcher:packageName="com.miui.personalassistant"
+        launcher:x="23"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.cmread.bplusc.bookshelf.LocalMainActivity"
+        launcher:container="2"
+        launcher:packageName="com.ophone.reader.ui"
+        launcher:x="26"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.cmread.bplusc.bookshelf.LocalMainActivity"
+        launcher:container="2"
+        launcher:packageName="com.andreader.prein"
+        launcher:x="26"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.aspire.mm.app.HotSaleActivity"
+        launcher:container="2"
+        launcher:packageName="com.aspire.mm"
+        launcher:x="27"
+        launcher:y="0" />
+    <favorite
+        launcher:className="cn.com.fetion.activity.LaunchActivity"
+        launcher:container="2"
+        launcher:packageName="cn.com.fetion"
+        launcher:x="27"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.iflytek.inputmethod.LauncherActivity"
+        launcher:container="2"
+        launcher:packageName="com.iflytek.inputmethod"
+        launcher:x="29"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.iflytek.inputmethod.oem.WizardActivity"
+        launcher:container="2"
+        launcher:packageName="com.iflytek.inputmethod.oem"
+        launcher:x="29"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.chinamobile.cmccwifi.WelcomeActivity"
+        launcher:container="2"
+        launcher:packageName="com.chinamobile.cmccwifi"
+        launcher:x="30"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.autonavi.minimap.Splashy"
+        launcher:container="2"
+        launcher:packageName="com.autonavi.cmccmap"
+        launcher:x="31"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.iflytek.viafly.SplashActivity"
+        launcher:container="2"
+        launcher:packageName="com.iflytek.cmcc"
+        launcher:x="32"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.cmcc.mobilevideo.StartActivity"
+        launcher:container="2"
+        launcher:packageName="cn.cmvideo.isj"
+        launcher:x="33"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.chinamobile.contacts.im.LoadingPage"
+        launcher:container="2"
+        launcher:packageName="com.chinamobile.contacts.im"
+        launcher:x="35"
+        launcher:y="0" />
+    <favorite
+        launcher:className="cn.emagsoftware.gamehall.GameHallShowcase"
+        launcher:container="2"
+        launcher:packageName="cn.emagsoftware.gamehall"
+        launcher:x="36"
+        launcher:y="0" />
+    <favorite
+        launcher:className="cn.cj.pe.activity.PeSplashActivity"
+        launcher:container="2"
+        launcher:packageName="cn.cj.pe"
+        launcher:x="38"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.opera.android.OupengStartActivity"
+        launcher:container="2"
+        launcher:packageName="com.oupeng.browserpre.cmcc"
+        launcher:x="40"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.tmall.wireless.module.launchalert.TMLaunchAlertActivity"
+        launcher:container="2"
+        launcher:packageName="com.tmall.wireless"
+        launcher:x="41"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.tencent.mobileqq.activity.SplashActivity"
+        launcher:container="2"
+        launcher:packageName="com.tencent.mobileqq"
+        launcher:x="42"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.didi.frame.SplashActivity"
+        launcher:container="2"
+        launcher:packageName="com.sdu.didi.psnger"
+        launcher:x="43"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.sina.weibo.SplashActivity"
+        launcher:container="2"
+        launcher:packageName="com.sina.weibog3"
+        launcher:x="44"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.qti.antitheftdemo.MainActivity"
+        launcher:container="2"
+        launcher:packageName="com.qti.antitheftdemo"
+        launcher:x="45"
+        launcher:y="0" />
+    <favorite
+        launcher:className="cmccwm.mobilemusic.ui.base.SplashActivity"
+        launcher:container="2"
+        launcher:packageName="cmccwm.mobilemusic"
+        launcher:x="46"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.chinamobile.mcloud.client.ui.logo.LogoActivity"
+        launcher:container="2"
+        launcher:packageName="com.chinamobile.mcloud"
+        launcher:x="47"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.founder.poetry.activities.SplashActivity"
+        launcher:container="2"
+        launcher:packageName="com.founder.poetry"
+        launcher:x="50"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.whty.activity.LoadActivity"
+        launcher:container="2"
+        launcher:packageName="com.whty.wicity.china"
+        launcher:x="51"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.letv.android.client.activity.WelcomActivity"
+        launcher:container="2"
+        launcher:packageName="com.letv.android.client"
+        launcher:x="52"
+        launcher:y="0" />
+    <favorite
+        launcher:className="org.cocos2dx.platform.FirstActivity"
+        launcher:container="2"
+        launcher:packageName="sh.lilith.dgame.jididingzhi"
+        launcher:x="53"
+        launcher:y="0" />
+    <favorite
+        launcher:className="ccc71.bmw.pro.bmw_status"
+        launcher:container="2"
+        launcher:packageName="ccc71.bmw.pro"
+        launcher:x="54"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.leadeon.cmcc.base.StartPageActivity"
+        launcher:container="2"
+        launcher:packageName="com.greenpoint.android.mc10086.activity"
+        launcher:x="55"
+        launcher:y="0" />
+    <favorite
+        launcher:className="sogou.mobile.explorer.NoDisplayActivity"
+        launcher:container="2"
+        launcher:packageName="sogou.mobile.explorer"
+        launcher:x="56"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.baidu.tieba.LogoActivity"
+        launcher:container="2"
+        launcher:packageName="com.baidu.tieba"
+        launcher:x="57"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.chinasofti.rcs.ui.activity.RcsMainRCSActivity"
+        launcher:container="2"
+        launcher:packageName="com.chinasofti.rcs"
+        launcher:x="59"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.wondertek.activity.AppFakeActivity"
+        launcher:container="2"
+        launcher:packageName="com.cmcc.cmvideo"
+        launcher:x="60"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.android.backup.MainBackUpActivity"
+        launcher:container="2"
+        launcher:packageName="com.android.backup"
+        launcher:x="61"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.shuqi.activity.SplashActivity"
+        launcher:container="2"
+        launcher:packageName="com.shuqi.controller"
+        launcher:x="62"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.imohoo.shanpao.ui.first.CtaActivity"
+        launcher:container="2"
+        launcher:packageName="com.imohoo.shanpao"
+        launcher:x="63"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.qihoo.browser.activity.SplashActivity"
+        launcher:container="2"
+        launcher:packageName="com.qihoo.browser"
+        launcher:x="64"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.mediatek.backuprestore.MainActivity"
+        launcher:container="2"
+        launcher:packageName="com.mediatek.backuprestore"
+        launcher:x="65"
+        launcher:y="0" />
+    <command
+        launcher:methodName="isXiaomiOrRedmiKSeries"
+        launcher:methodResult="false">
+        <favorite
+            launcher:className="com.mqunar.splash.SplashActivity"
+            launcher:container="2"
+            launcher:packageName="com.Qunar"
+            launcher:x="66"
+            launcher:y="0" />
     </command>
 </favorites>

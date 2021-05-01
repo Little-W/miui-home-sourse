@@ -381,9 +381,9 @@
     :cond_3
     sget-object p1, Landroidx/dynamicanimation/animation/SpringAnimation;->TRANSLATION_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    new-instance p2, Lcom/miui/home/launcher/-$$Lambda$DragView$R8gCOrJdhkouiwIhLSPb-t1ynXk;
+    new-instance p2, Lcom/miui/home/launcher/-$$Lambda$DragView$IDDjy0vk3FLJU8FwLBeRgn1mMeo;
 
-    invoke-direct {p2, p0}, Lcom/miui/home/launcher/-$$Lambda$DragView$R8gCOrJdhkouiwIhLSPb-t1ynXk;-><init>(Lcom/miui/home/launcher/DragView;)V
+    invoke-direct {p2, p0}, Lcom/miui/home/launcher/-$$Lambda$DragView$IDDjy0vk3FLJU8FwLBeRgn1mMeo;-><init>(Lcom/miui/home/launcher/DragView;)V
 
     const/4 p4, 0x0
 
@@ -396,9 +396,9 @@
     .line 155
     sget-object p1, Landroidx/dynamicanimation/animation/SpringAnimation;->TRANSLATION_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    new-instance p2, Lcom/miui/home/launcher/-$$Lambda$DragView$w40zJ8NW6c9kMPh2GDUM4ZWYNlU;
+    new-instance p2, Lcom/miui/home/launcher/-$$Lambda$DragView$LXccwGAzrfQPAP9ZVSm3Aywm3VA;
 
-    invoke-direct {p2, p0}, Lcom/miui/home/launcher/-$$Lambda$DragView$w40zJ8NW6c9kMPh2GDUM4ZWYNlU;-><init>(Lcom/miui/home/launcher/DragView;)V
+    invoke-direct {p2, p0}, Lcom/miui/home/launcher/-$$Lambda$DragView$LXccwGAzrfQPAP9ZVSm3Aywm3VA;-><init>(Lcom/miui/home/launcher/DragView;)V
 
     invoke-direct {p0, p1, p4, p2}, Lcom/miui/home/launcher/DragView;->createSpringAnimation(Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;FLjava/util/function/Consumer;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
@@ -1365,9 +1365,9 @@
     invoke-virtual {p1, p2}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     .line 441
-    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$DragView$FhjA2sC3LYU0sH__cmGhDVzdyqo;
+    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$DragView$XrOLGqP5BgFhOClUt-eBvrRXhnU;
 
-    invoke-direct {p1, p3}, Lcom/miui/home/launcher/-$$Lambda$DragView$FhjA2sC3LYU0sH__cmGhDVzdyqo;-><init>(Ljava/util/function/Consumer;)V
+    invoke-direct {p1, p3}, Lcom/miui/home/launcher/-$$Lambda$DragView$XrOLGqP5BgFhOClUt-eBvrRXhnU;-><init>(Ljava/util/function/Consumer;)V
 
     invoke-virtual {v0, p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
@@ -1410,7 +1410,7 @@
     invoke-virtual {v1, v2}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
     .line 184
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$DragView$TCZ_Iu7TvSjRl2yqszaPvwfgapY;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$DragView$IMqPDMAlYaS1pufY2fVhbYDpv8I;
 
     move-object v2, v1
 
@@ -1426,7 +1426,7 @@
 
     move v9, p4
 
-    invoke-direct/range {v2 .. v9}, Lcom/miui/home/launcher/-$$Lambda$DragView$TCZ_Iu7TvSjRl2yqszaPvwfgapY;-><init>(Lcom/miui/home/launcher/DragView;FFIIII)V
+    invoke-direct/range {v2 .. v9}, Lcom/miui/home/launcher/-$$Lambda$DragView$IMqPDMAlYaS1pufY2fVhbYDpv8I;-><init>(Lcom/miui/home/launcher/DragView;FFIIII)V
 
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
@@ -1512,7 +1512,7 @@
     return v0
 .end method
 
-.method static synthetic lambda$createSpringAnimation$3(Ljava/util/function/Consumer;Landroidx/dynamicanimation/animation/DynamicAnimation;FF)V
+.method static synthetic lambda$createSpringAnimation$5(Ljava/util/function/Consumer;Landroidx/dynamicanimation/animation/DynamicAnimation;FF)V
     .locals 0
 
     float-to-int p1, p2
@@ -1527,7 +1527,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$doDragAnim$2(Lcom/miui/home/launcher/DragView;FFIIIILandroidx/dynamicanimation/animation/DynamicAnimation;FF)V
+.method public static synthetic lambda$doDragAnim$4(Lcom/miui/home/launcher/DragView;FFIIIILandroidx/dynamicanimation/animation/DynamicAnimation;FF)V
     .locals 0
 
     sub-float p7, p8, p1
@@ -1626,7 +1626,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$new$0(Lcom/miui/home/launcher/DragView;Ljava/lang/Integer;)V
+.method public static synthetic lambda$new$2(Lcom/miui/home/launcher/DragView;Ljava/lang/Integer;)V
     .locals 0
 
     .line 154
@@ -1643,7 +1643,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$new$1(Lcom/miui/home/launcher/DragView;Ljava/lang/Integer;)V
+.method public static synthetic lambda$new$3(Lcom/miui/home/launcher/DragView;Ljava/lang/Integer;)V
     .locals 0
 
     .line 156
@@ -1660,7 +1660,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$remove$4(Lcom/miui/home/launcher/DragView;)V
+.method public static synthetic lambda$remove$6(Lcom/miui/home/launcher/DragView;)V
     .locals 0
 
     .line 538
@@ -2400,9 +2400,9 @@
     if-eqz v0, :cond_2
 
     .line 537
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$DragView$WsczcW4budSAYwCCINafoznKT64;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$DragView$mUDU0cS0S7DRHMeb20a_uhIMsxc;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$DragView$WsczcW4budSAYwCCINafoznKT64;-><init>(Lcom/miui/home/launcher/DragView;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$DragView$mUDU0cS0S7DRHMeb20a_uhIMsxc;-><init>(Lcom/miui/home/launcher/DragView;)V
 
     const-wide/16 v1, 0x1e
 

@@ -16,8 +16,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/miui/home/launcher/backup/settings/BackupSettingsBase;",
-            ">;"
+            "Lcom/miui/home/launcher/backup/settings/BackupSettingsBase<",
+            "*>;>;"
         }
     .end annotation
 .end field
@@ -85,7 +85,7 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 35
-    invoke-static {}, Lcom/miui/home/launcher/ApplicationConfig;->isFeedInstalled()Z
+    invoke-static {}, Lcom/miui/home/launcher/ApplicationConfig;->isFeedSupport()Z
 
     move-result v0
 

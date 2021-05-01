@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center_vertical" android:id="@id/item" android:background="@miui:drawable/preference_item_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:layout_gravity="center" android:id="@android:id/icon" android:paddingTop="11.0dip" android:paddingBottom="11.0dip" android:layout_width="@dimen/navigation_guide_item_icon_width" android:layout_height="@dimen/navigation_guide_item_icon_height" android:scaleType="fitCenter" android:layout_marginEnd="@miui:dimen/preference_item_padding_inner" />
-    <RelativeLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="@miui:dimen/list_preferred_item_height" android:layout_weight="1.0">
-        <TextView android:textAppearance="@miui:style/TextAppearance.PreferenceList" android:ellipsize="marquee" android:id="@android:id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
-        <TextView android:textAppearance="@miui:style/TextAppearance.List.Secondary.Preference" android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_below="@android:id/title" android:layout_alignStart="@android:id/title" />
+<LinearLayout
+    android:gravity="center_vertical"
+    android:id="@id/item"
+    android:background="@268566567"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@android:id/icon"
+        android:paddingTop="11.0dip"
+        android:paddingBottom="11.0dip"
+        android:layout_width="@dimen/navigation_guide_item_icon_width"
+        android:layout_height="@dimen/navigation_guide_item_icon_height"
+        android:scaleType="fitCenter"
+        android:layout_marginEnd="@269090828" />
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="@269090826"
+        android:layout_weight="1.0">
+        <TextView
+            android:textAppearance="@269287511"
+            android:ellipsize="marquee"
+            android:id="@android:id/title"
+            android:fadingEdge="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true" />
+        <TextView
+            android:textAppearance="@269287538"
+            android:id="@android:id/summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_below="@android:id/title"
+            android:layout_alignStart="@android:id/title" />
     </RelativeLayout>
 </LinearLayout>

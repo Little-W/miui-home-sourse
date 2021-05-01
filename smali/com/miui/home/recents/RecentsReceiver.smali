@@ -332,13 +332,13 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f08009a
+    const v3, 0x7f0800a9
 
     aput v3, v1, v2
 
     new-array v0, v0, [I
 
-    const v3, 0x7f08009b
+    const v3, 0x7f0800aa
 
     aput v3, v0, v2
 

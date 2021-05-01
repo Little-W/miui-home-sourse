@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderIcon;)V
     .locals 0
 
-    .line 146
+    .line 142
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$3;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    .line 149
+    .line 145
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -49,14 +49,14 @@
 
     move-result p1
 
-    .line 150
+    .line 146
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$3;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     iget-object v0, v0, Lcom/miui/home/launcher/FolderIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/LauncherIconImageView;->setAlpha(F)V
 
-    .line 151
+    .line 147
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$3;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$000(Lcom/miui/home/launcher/FolderIcon;)Landroid/widget/ImageView;

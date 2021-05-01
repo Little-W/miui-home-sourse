@@ -32,16 +32,16 @@
     invoke-direct {p0}, Lcom/miui/home/recents/TaskStackViewLayoutStyle;-><init>()V
 
     .line 29
-    new-instance v0, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmStack;
+    new-instance v0, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmStack;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal;->mTaskStackLayoutAlgorithm:Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;
 
     .line 30
-    new-instance v0, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmStack;
+    new-instance v0, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmStack;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal;->mStableLayoutAlgorithm:Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;
 
@@ -51,7 +51,7 @@
 .method public static createScaleDismissAnimation(Landroid/view/View;F)Landroid/animation/ObjectAnimator;
     .locals 9
 
-    .line 92
+    .line 90
     sget-object v0, Landroid/view/View;->SCALE_X:Landroid/util/Property;
 
     const/4 v1, 0x1
@@ -66,22 +66,22 @@
 
     move-result-object v0
 
-    .line 93
+    .line 91
     invoke-virtual {p0}, Landroid/view/View;->getScaleX()F
 
     move-result v3
 
-    .line 94
+    .line 92
     invoke-virtual {p0}, Landroid/view/View;->getAlpha()F
 
     move-result v5
 
-    .line 95
+    .line 93
     invoke-virtual {p0}, Landroid/view/View;->getTranslationY()F
 
     move-result v6
 
-    .line 96
+    .line 94
     invoke-static {}, Lcom/miui/home/recents/views/VerticalSwipe;->getAsScreenHeightWhenDismiss()I
 
     move-result v1
@@ -96,7 +96,7 @@
 
     mul-float v7, v1, v2
 
-    .line 98
+    .line 96
     new-instance v8, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;
 
     move-object v1, v8
@@ -109,14 +109,14 @@
 
     invoke-virtual {v0, v8}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 109
+    .line 107
     sget-object p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal;->DISMISS_ALL_TASK_VIEWS_INTERPOLATOR:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, p0}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     const-wide/16 p0, 0x1c2
 
-    .line 110
+    .line 108
     invoke-virtual {v0, p0, p1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     return-object v0
@@ -170,12 +170,7 @@
 
     check-cast v2, Lcom/miui/home/recents/views/TaskView;
 
-    const/4 v3, 0x0
-
-    .line 81
-    invoke-virtual {v2, v3}, Lcom/miui/home/recents/views/TaskView;->setClipViewInStack(Z)V
-
-    .line 82
+    .line 80
     invoke-virtual {v2}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object v3
@@ -191,7 +186,7 @@
     :cond_0
     const/4 v3, 0x0
 
-    .line 85
+    .line 83
     invoke-static {v2, v3}, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal;->createScaleDismissAnimation(Landroid/view/View;F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -206,7 +201,7 @@
     :cond_1
     const-wide/16 v0, 0x1c2
 
-    .line 88
+    .line 86
     invoke-virtual {p1, p2, v0, v1}, Lcom/miui/home/recents/views/TaskStackView;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void

@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:paddingTop="@dimen/icon_padding_top" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:id="@id/icon_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
-        <com.miui.home.launcher.LauncherIconImageView android:layout_gravity="center" android:id="@id/background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" />
-        <com.miui.home.launcher.common.ClearIconImageView android:layout_gravity="center" android:id="@id/clear_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+<RelativeLayout
+    android:paddingTop="@dimen/icon_padding_top"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:id="@id/icon_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <com.miui.home.launcher.LauncherIconImageView
+            android:layout_gravity="center"
+            android:id="@id/background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter" />
+        <com.miui.home.launcher.common.ClearIconImageView
+            android:layout_gravity="center"
+            android:id="@id/clear_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </FrameLayout>
-    <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/icon_container" android:layout_centerHorizontal="true" layout="@layout/icon_title" />
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/icon_container"
+        android:layout_centerHorizontal="true"
+        layout="@layout/icon_title" />
 </RelativeLayout>

@@ -202,7 +202,7 @@
 
     iput p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMinVSpan:I
 
-    const p3, 0x7f080286
+    const p3, 0x7f080298
 
     .line 91
     invoke-virtual {p0, p3}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->setBackgroundResource(I)V
@@ -220,7 +220,7 @@
     .line 96
     iget-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftHandle:Landroid/widget/ImageView;
 
-    const p4, 0x7f080288
+    const p4, 0x7f08029a
 
     invoke-virtual {p3, p4}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -248,7 +248,7 @@
     .line 102
     iget-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightHandle:Landroid/widget/ImageView;
 
-    const v0, 0x7f080289
+    const v0, 0x7f08029b
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -274,7 +274,7 @@
     .line 108
     iget-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopHandle:Landroid/widget/ImageView;
 
-    const v0, 0x7f08028a
+    const v0, 0x7f08029c
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -300,7 +300,7 @@
     .line 114
     iget-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomHandle:Landroid/widget/ImageView;
 
-    const v0, 0x7f080287
+    const v0, 0x7f080299
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -513,12 +513,12 @@
     sub-float/2addr v1, v2
 
     .line 240
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWidgetCellCountX()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
     move-result v2
 
     .line 241
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWidgetCellCountY()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
 
     move-result v4
 

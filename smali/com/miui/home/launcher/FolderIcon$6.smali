@@ -3,12 +3,12 @@
 .source "FolderIcon.java"
 
 # interfaces
-.implements Lio/reactivex2/functions/Consumer;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/FolderIcon;->loadItemIcons(Z)V
+    value = Lcom/miui/home/launcher/FolderIcon;->deleteSelf()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,30 +16,17 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lio/reactivex2/functions/Consumer<",
-        "Ljava/lang/Throwable;",
-        ">;"
-    }
-.end annotation
-
 
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/FolderIcon;
 
-.field final synthetic val$currentIndex:I
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/FolderIcon;I)V
+.method constructor <init>(Lcom/miui/home/launcher/FolderIcon;)V
     .locals 0
 
-    .line 328
+    .line 428
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$6;->this$0:Lcom/miui/home/launcher/FolderIcon;
-
-    iput p2, p0, Lcom/miui/home/launcher/FolderIcon$6;->val$currentIndex:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,44 +35,24 @@
 
 
 # virtual methods
-.method public bridge synthetic accept(Ljava/lang/Object;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
-
-    .line 328
-    check-cast p1, Ljava/lang/Throwable;
-
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderIcon$6;->accept(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public accept(Ljava/lang/Throwable;)V
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/lang/Exception;
-        }
-    .end annotation
 
-    .line 331
-    iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$6;->this$0:Lcom/miui/home/launcher/FolderIcon;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$300(Lcom/miui/home/launcher/FolderIcon;)[Lcom/miui/home/launcher/FolderIcon$PreviewIconView;
+    .line 431
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    iget v0, p0, Lcom/miui/home/launcher/FolderIcon$6;->val$currentIndex:I
+    check-cast p1, Ljava/lang/Float;
 
-    aget-object p1, p1, v0
+    .line 432
+    iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$6;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/FolderIcon$PreviewIconView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    move-result p1
+
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderIcon;->setAlpha(F)V
 
     return-void
 .end method

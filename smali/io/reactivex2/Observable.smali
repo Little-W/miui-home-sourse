@@ -40,6 +40,37 @@
     return v0
 .end method
 
+.method public static create(Lio/reactivex2/ObservableOnSubscribe;)Lio/reactivex2/Observable;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lio/reactivex2/ObservableOnSubscribe<",
+            "TT;>;)",
+            "Lio/reactivex2/Observable<",
+            "TT;>;"
+        }
+    .end annotation
+
+    const-string v0, "source is null"
+
+    .line 1634
+    invoke-static {p0, v0}, Lio/reactivex2/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 1635
+    new-instance v0, Lio/reactivex2/internal/operators/observable/ObservableCreate;
+
+    invoke-direct {v0, p0}, Lio/reactivex2/internal/operators/observable/ObservableCreate;-><init>(Lio/reactivex2/ObservableOnSubscribe;)V
+
+    invoke-static {v0}, Lio/reactivex2/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex2/Observable;)Lio/reactivex2/Observable;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public static fromCallable(Ljava/util/concurrent/Callable;)Lio/reactivex2/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;

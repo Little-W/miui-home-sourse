@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;)V
     .locals 0
 
-    .line 75
+    .line 69
     iput-object p1, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager$2;->this$0:Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 79
+    .line 73
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager$2;->this$0:Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;
 
@@ -48,7 +48,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 80
+    .line 74
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager$2;->this$0:Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;
 
     invoke-static {v0}, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->access$000(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;)Lcom/miui/home/launcher/commercial/preinstall/global/GlobalPreinstallableFolderShortcutsAdapter;
@@ -67,7 +67,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 82
+    .line 76
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager$2;->this$0:Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;
 
     const/4 v1, 0x0
@@ -85,7 +85,7 @@
 
     const-string v2, "refresh fail"
 
-    .line 86
+    .line 80
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0

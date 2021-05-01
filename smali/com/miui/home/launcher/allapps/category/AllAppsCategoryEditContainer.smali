@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onDelete$1(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryEditContainer;ILjava/util/Collection;Landroid/content/DialogInterface;I)V
+.method public static synthetic lambda$onDelete$296(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryEditContainer;ILjava/util/Collection;Landroid/content/DialogInterface;I)V
     .locals 0
 
     .line 60
@@ -49,7 +49,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onFinishInflate$0(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryEditContainer;Landroid/view/View;Z)V
+.method public static synthetic lambda$onFinishInflate$295(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryEditContainer;Landroid/view/View;Z)V
     .locals 0
 
     if-eqz p2, :cond_0
@@ -168,11 +168,11 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryEditContainer$bYCxfDHCCtKtPQ0FOyo_5DAveg0;
+    new-instance v1, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryEditContainer$DZom1mHJR6xUGcuvD5GlVqFTTe0;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryEditContainer$bYCxfDHCCtKtPQ0FOyo_5DAveg0;-><init>(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryEditContainer;ILjava/util/Collection;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryEditContainer$DZom1mHJR6xUGcuvD5GlVqFTTe0;-><init>(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryEditContainer;ILjava/util/Collection;)V
 
-    const p1, 0x7f1000d9
+    const p1, 0x7f1000da
 
     .line 59
     invoke-virtual {v0, p1, v1}, Lmiui/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;
@@ -228,9 +228,9 @@
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->setAppCategorySelectListener(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment$AppCategorySelectListener;)V
 
     .line 38
-    new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryEditContainer$wizbWzB1tgnK42u-fWteLxgoa4U;
+    new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryEditContainer$U8BCHMcH5pEXtm3LRlgr_9uJHxM;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryEditContainer$wizbWzB1tgnK42u-fWteLxgoa4U;-><init>(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryEditContainer;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryEditContainer$U8BCHMcH5pEXtm3LRlgr_9uJHxM;-><init>(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryEditContainer;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryEditContainer;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 

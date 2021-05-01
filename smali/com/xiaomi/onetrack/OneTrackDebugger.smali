@@ -44,58 +44,6 @@
     return-void
 .end method
 
-.method private a(Landroid/content/Context;)Ljava/lang/String;
-    .locals 1
-
-    .line 52
-    invoke-static {}, Lcom/xiaomi/onetrack/h/a/a;->a()Lcom/xiaomi/onetrack/h/a/a;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/h/a/a;->a(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method private a()Ljava/util/concurrent/ConcurrentHashMap;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/concurrent/ConcurrentHashMap<",
-            "Ljava/lang/Long;",
-            "Lcom/xiaomi/onetrack/Configuration;",
-            ">;"
-        }
-    .end annotation
-
-    .line 34
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrackDebugger;->c:Ljava/util/concurrent/ConcurrentHashMap;
-
-    return-object v0
-.end method
-
-.method private b()Ljava/lang/String;
-    .locals 1
-
-    .line 56
-    invoke-static {}, Lcom/xiaomi/onetrack/h/p;->a()Lcom/xiaomi/onetrack/h/p;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/xiaomi/onetrack/h/p;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public static getInstance()Lcom/xiaomi/onetrack/OneTrackDebugger;
     .locals 2
 
@@ -147,6 +95,58 @@
 
 
 # virtual methods
+.method public getInstanceId()Ljava/lang/String;
+    .locals 1
+
+    .line 56
+    invoke-static {}, Lcom/xiaomi/onetrack/util/o;->a()Lcom/xiaomi/onetrack/util/o;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/xiaomi/onetrack/util/o;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getOaid(Landroid/content/Context;)Ljava/lang/String;
+    .locals 1
+
+    .line 52
+    invoke-static {}, Lcom/xiaomi/onetrack/util/oaid/a;->a()Lcom/xiaomi/onetrack/util/oaid/a;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/util/oaid/a;->a(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public getSdkConfig()Ljava/util/concurrent/ConcurrentHashMap;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/concurrent/ConcurrentHashMap<",
+            "Ljava/lang/Long;",
+            "Lcom/xiaomi/onetrack/Configuration;",
+            ">;"
+        }
+    .end annotation
+
+    .line 34
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrackDebugger;->c:Ljava/util/concurrent/ConcurrentHashMap;
+
+    return-object v0
+.end method
+
 .method public setSdkConfig(Lcom/xiaomi/onetrack/Configuration;)V
     .locals 3
 
@@ -178,13 +178,13 @@
     move-result-object v0
 
     .line 44
-    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->a()Landroid/content/Context;
+    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->a()Landroid/content/Context;
 
     move-result-object v1
 
     new-instance v2, Landroid/content/Intent;
 
-    invoke-static {}, Lcom/xiaomi/onetrack/f/a;->a()Landroid/content/Context;
+    invoke-static {}, Lcom/xiaomi/onetrack/e/a;->a()Landroid/content/Context;
 
     move-result-object v3
 

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view
+    android:id="@id/item_view"
+    class="com.miui.home.launcher.FolderPreviewIconAdapter$PreviewIconView"
+    style="@style/FolderIconItem"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

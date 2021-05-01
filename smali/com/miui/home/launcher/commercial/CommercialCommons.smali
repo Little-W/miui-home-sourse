@@ -39,13 +39,13 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 94
-    sget-object v0, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$1P7HYfSxUja7Gf0p-XHORaFCoYU;->INSTANCE:Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$1P7HYfSxUja7Gf0p-XHORaFCoYU;
+    .line 114
+    sget-object v0, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$SrQfDN4HxBxqWFd9QEscAOGEgbA;->INSTANCE:Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$SrQfDN4HxBxqWFd9QEscAOGEgbA;
 
     sput-object v0, Lcom/miui/home/launcher/commercial/CommercialCommons;->sIsRecommendInfoInvalid:Ljava/util/function/Predicate;
 
-    .line 100
-    sget-object v0, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$Ev77WrB1RBtP0DUM1f2R8p-uQLA;->INSTANCE:Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$Ev77WrB1RBtP0DUM1f2R8p-uQLA;
+    .line 120
+    sget-object v0, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$fq--qMsdHbBfR_hK0bpcZT-n-8Y;->INSTANCE:Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$fq--qMsdHbBfR_hK0bpcZT-n-8Y;
 
     sput-object v0, Lcom/miui/home/launcher/commercial/CommercialCommons;->sIsRecommendInfoDuplicate:Ljava/util/function/BiFunction;
 
@@ -86,20 +86,20 @@
 
     return-object p0
 
-    .line 107
+    .line 127
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 108
+    .line 128
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->stream(Ljava/util/Collection;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    new-instance v1, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$kIbygB9HSieje41VVMUyYViPwMM;
+    new-instance v1, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$7m-b8jF5PHyFc3eFqWWq8kKysn0;
 
-    invoke-direct {v1, v0, p1}, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$kIbygB9HSieje41VVMUyYViPwMM;-><init>(Ljava/util/List;Ljava/util/function/Function;)V
+    invoke-direct {v1, p1, v0}, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$7m-b8jF5PHyFc3eFqWWq8kKysn0;-><init>(Ljava/util/function/Function;Ljava/util/List;)V
 
     invoke-interface {p0, v1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
@@ -115,7 +115,7 @@
 
     goto :goto_0
 
-    .line 133
+    .line 158
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->getPackageName()Ljava/lang/String;
 
@@ -283,6 +283,120 @@
 
     :cond_0
     return-object p0
+.end method
+
+.method public static filterDuplicatesAd(Ljava/util/List;Ljava/util/List;)Z
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;",
+            ">;",
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;",
+            ">;)Z"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_5
+
+    if-nez p1, :cond_0
+
+    goto :goto_1
+
+    .line 99
+    :cond_0
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 100
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;
+
+    .line 101
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :cond_2
+    :goto_0
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;
+
+    .line 102
+    invoke-interface {v1, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_2
+
+    sget-object v6, Lcom/miui/home/launcher/commercial/CommercialCommons;->sIsRecommendInfoDuplicate:Ljava/util/function/BiFunction;
+
+    invoke-interface {v6, v3, v5}, Ljava/util/function/BiFunction;->apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Boolean;
+
+    invoke-virtual {v5}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    .line 103
+    invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 107
+    :cond_3
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    .line 108
+    invoke-interface {p0, v1}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_4
+    return v0
+
+    :cond_5
+    :goto_1
+    return v0
 .end method
 
 .method public static filterRequestedAdList(Ljava/util/List;)V
@@ -499,20 +613,20 @@
 
     return-object p0
 
-    .line 117
+    .line 142
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 118
+    .line 143
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->stream(Ljava/util/Collection;)Ljava/util/stream/Stream;
 
     move-result-object p0
 
-    new-instance v1, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$L5KhX3TYpa-5Ko3ZRs15Tfkadpc;
+    new-instance v1, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$R9zgUGaeoCWinP5AUV9JZ0_BNF0;
 
-    invoke-direct {v1, v0, p1}, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$L5KhX3TYpa-5Ko3ZRs15Tfkadpc;-><init>(Ljava/util/List;Ljava/util/function/Function;)V
+    invoke-direct {v1, v0, p1}, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$R9zgUGaeoCWinP5AUV9JZ0_BNF0;-><init>(Ljava/util/List;Ljava/util/function/Function;)V
 
     invoke-interface {p0, v1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
@@ -524,7 +638,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 199
+    .line 224
     invoke-virtual {p0}, Lcom/miui/home/launcher/RemoteShortcutInfo;->getAppId()Ljava/lang/String;
 
     move-result-object v0
@@ -535,7 +649,7 @@
 
     if-nez v0, :cond_0
 
-    .line 200
+    .line 225
     invoke-virtual {p0}, Lcom/miui/home/launcher/RemoteShortcutInfo;->getNetIconUrl()Ljava/lang/String;
 
     move-result-object p0
@@ -557,10 +671,29 @@
     return p0
 .end method
 
-.method static synthetic lambda$buildRecommendInfoList$2(Ljava/util/List;Ljava/util/function/Function;Ljava/lang/Object;)V
+.method static synthetic lambda$buildRecommendInfoList$198(Ljava/util/function/Function;Ljava/util/List;Ljava/lang/Object;)V
     .locals 0
 
-    .line 108
+    .line 129
+    invoke-interface {p0, p2}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;
+
+    if-eqz p0, :cond_0
+
+    .line 131
+    invoke-interface {p1, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method static synthetic lambda$getFromRecommendInfoList$199(Ljava/util/List;Ljava/util/function/Function;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)V
+    .locals 0
+
+    .line 143
     invoke-interface {p1, p2}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -570,25 +703,12 @@
     return-void
 .end method
 
-.method static synthetic lambda$getFromRecommendInfoList$3(Ljava/util/List;Ljava/util/function/Function;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)V
-    .locals 0
-
-    .line 118
-    invoke-interface {p1, p2}, Ljava/util/function/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method static synthetic lambda$loadIconFromCN$5(Lcom/miui/home/launcher/RemoteShortcutInfo;Lcom/miui/msa/internal/preinstall/v1/ImageCallback;)V
+.method static synthetic lambda$loadIconFromCN$201(Lcom/miui/home/launcher/RemoteShortcutInfo;Lcom/miui/msa/internal/preinstall/v1/ImageCallback;)V
     .locals 3
 
     const-string v0, "CommercialCommons"
 
-    .line 189
+    .line 214
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -609,7 +729,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 191
+    .line 216
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -618,7 +738,7 @@
 
     move-result-object v0
 
-    .line 192
+    .line 217
     invoke-virtual {p0}, Lcom/miui/home/launcher/RemoteShortcutInfo;->getNetIconUrl()Ljava/lang/String;
 
     move-result-object p0
@@ -628,12 +748,12 @@
     return-void
 .end method
 
-.method static synthetic lambda$loadIconFromGlobal$4(Lcom/miui/home/launcher/RemoteShortcutInfo;Lcom/miui/msa/global/guessyoulike/v1/GlobalImageCallback;)V
+.method static synthetic lambda$loadIconFromGlobal$200(Lcom/miui/home/launcher/RemoteShortcutInfo;Lcom/miui/msa/global/guessyoulike/v1/GlobalImageCallback;)V
     .locals 3
 
     const-string v0, "CommercialCommons"
 
-    .line 167
+    .line 192
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -654,7 +774,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 169
+    .line 194
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -663,7 +783,7 @@
 
     move-result-object v0
 
-    .line 170
+    .line 195
     invoke-virtual {p0}, Lcom/miui/home/launcher/RemoteShortcutInfo;->getNetIconUrl()Ljava/lang/String;
 
     move-result-object p0
@@ -673,12 +793,12 @@
     return-void
 .end method
 
-.method static synthetic lambda$static$0(Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)Z
+.method static synthetic lambda$static$196(Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)Z
     .locals 1
 
     if-eqz p0, :cond_1
 
-    .line 96
+    .line 116
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -689,7 +809,7 @@
 
     if-nez v0, :cond_1
 
-    .line 97
+    .line 117
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->getIconUri()Ljava/lang/String;
 
     move-result-object v0
@@ -700,7 +820,7 @@
 
     if-nez v0, :cond_1
 
-    .line 98
+    .line 118
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->getTitle()Ljava/lang/String;
 
     move-result-object p0
@@ -726,10 +846,10 @@
     return p0
 .end method
 
-.method static synthetic lambda$static$1(Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)Ljava/lang/Boolean;
+.method static synthetic lambda$static$197(Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 101
+    .line 121
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -761,22 +881,22 @@
         }
     .end annotation
 
-    .line 176
+    .line 201
     invoke-static {p0}, Lcom/miui/home/launcher/commercial/CommercialCommons;->isRemoteShortcutInfoValidForLoadIcon(Lcom/miui/home/launcher/RemoteShortcutInfo;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 177
+    .line 202
     new-instance v0, Lcom/miui/home/launcher/commercial/CommercialCommons$4;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/commercial/CommercialCommons$4;-><init>(Lcom/miui/home/launcher/RemoteShortcutInfo;Ljava/util/function/Consumer;)V
 
-    .line 188
-    new-instance p1, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$2Co2vT9Op0uMiivfEfA5fkR7XgI;
+    .line 213
+    new-instance p1, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$svIOVcwABPfw3rkJdSS-iyYdMwI;
 
-    invoke-direct {p1, p0, v0}, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$2Co2vT9Op0uMiivfEfA5fkR7XgI;-><init>(Lcom/miui/home/launcher/RemoteShortcutInfo;Lcom/miui/msa/internal/preinstall/v1/ImageCallback;)V
+    invoke-direct {p1, p0, v0}, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$svIOVcwABPfw3rkJdSS-iyYdMwI;-><init>(Lcom/miui/home/launcher/RemoteShortcutInfo;Lcom/miui/msa/internal/preinstall/v1/ImageCallback;)V
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -796,22 +916,22 @@
         }
     .end annotation
 
-    .line 153
+    .line 178
     invoke-static {p0}, Lcom/miui/home/launcher/commercial/CommercialCommons;->isRemoteShortcutInfoValidForLoadIcon(Lcom/miui/home/launcher/RemoteShortcutInfo;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 154
+    .line 179
     new-instance v0, Lcom/miui/home/launcher/commercial/CommercialCommons$3;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/commercial/CommercialCommons$3;-><init>(Lcom/miui/home/launcher/RemoteShortcutInfo;Ljava/util/function/Consumer;)V
 
-    .line 166
-    new-instance p1, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$h3TJhWj8G_AL0UCC8l0IIh45RKo;
+    .line 191
+    new-instance p1, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$ho1--PqE3183D8Bpf2Tw9tzEG4w;
 
-    invoke-direct {p1, p0, v0}, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$h3TJhWj8G_AL0UCC8l0IIh45RKo;-><init>(Lcom/miui/home/launcher/RemoteShortcutInfo;Lcom/miui/msa/global/guessyoulike/v1/GlobalImageCallback;)V
+    invoke-direct {p1, p0, v0}, Lcom/miui/home/launcher/commercial/-$$Lambda$CommercialCommons$ho1--PqE3183D8Bpf2Tw9tzEG4w;-><init>(Lcom/miui/home/launcher/RemoteShortcutInfo;Lcom/miui/msa/global/guessyoulike/v1/GlobalImageCallback;)V
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -832,7 +952,7 @@
         }
     .end annotation
 
-    .line 137
+    .line 162
     new-instance v0, Lcom/miui/home/launcher/commercial/CommercialCommons$2;
 
     invoke-direct {v0, p1, p0, p2}, Lcom/miui/home/launcher/commercial/CommercialCommons$2;-><init>(Lcom/miui/home/launcher/RemoteShortcutInfo;Landroid/net/Uri;Ljava/util/function/Consumer;)V

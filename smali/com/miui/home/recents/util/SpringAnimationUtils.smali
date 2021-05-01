@@ -14,6 +14,10 @@
 # static fields
 .field public static final THUMBNAIL_SCALE_UP:Lcom/miui/home/recents/util/SpringAnimationUtils$ViewState;
 
+.field private static final TRANSLATION_X:Ljava/lang/String; = "translationX"
+
+.field private static final TRANSLATION_Y:Ljava/lang/String; = "translationY"
+
 .field private static final sInstance:Lcom/miui/home/recents/util/SpringAnimationUtils;
 
 
@@ -1813,12 +1817,12 @@
 
     if-eqz p2, :cond_0
 
-    const-string p2, "translationX"
+    sget-object p2, Lcom/miui/home/recents/util/SpringAnimationUtils;->TRANSLATION_X:Ljava/lang/String;
 
     goto :goto_0
 
     :cond_0
-    const-string p2, "translationY"
+    sget-object p2, Lcom/miui/home/recents/util/SpringAnimationUtils;->TRANSLATION_Y:Ljava/lang/String;
 
     :goto_0
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getSpringAnimation(Lcom/miui/home/recents/util/SpringAnimationImpl;Ljava/lang/String;)Landroidx/dynamicanimation/animation/SpringAnimation;

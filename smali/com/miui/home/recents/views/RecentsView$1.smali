@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsView;)V
     .locals 0
 
-    .line 91
+    .line 92
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsView$1;->this$0:Lcom/miui/home/recents/views/RecentsView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

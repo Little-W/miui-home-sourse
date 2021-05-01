@@ -33,7 +33,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$run$0(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;Ljava/lang/Void;)Ljava/lang/Void;
+.method public static synthetic lambda$run$129(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;Ljava/lang/Void;)Ljava/lang/Void;
     .locals 2
 
     .line 58
@@ -99,7 +99,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$run$1(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;Ljava/lang/Void;)V
+.method public static synthetic lambda$run$130(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;Ljava/lang/Void;)V
     .locals 0
 
     .line 65
@@ -116,13 +116,13 @@
     .locals 3
 
     .line 57
-    new-instance v0, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$1$vBp8QSYt9evNAhcm28VQ7uSb1bc;
+    new-instance v0, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$1$IEoKpeEOGasCy35UP6Y1Mma0tYk;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$1$vBp8QSYt9evNAhcm28VQ7uSb1bc;-><init>(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$1$IEoKpeEOGasCy35UP6Y1Mma0tYk;-><init>(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;)V
 
-    new-instance v1, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$1$walLfXnXFhmqKd9IAn6FozABZD4;
+    new-instance v1, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$1$e3zeHm7gg66ikh8trcJrjcYUxY4;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$1$walLfXnXFhmqKd9IAn6FozABZD4;-><init>(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$1$e3zeHm7gg66ikh8trcJrjcYUxY4;-><init>(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;)V
 
     const/4 v2, 0x0
 

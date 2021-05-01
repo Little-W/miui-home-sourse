@@ -13,7 +13,7 @@
 .method constructor <init>(Z)V
     .locals 0
 
-    .line 229
+    .line 230
     iput-boolean p1, p0, Lcom/xiaomi/onetrack/OneTrack$1;->a:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,15 +26,15 @@
 .method public run()V
     .locals 1
 
-    .line 232
-    iget-boolean v0, p0, Lcom/xiaomi/onetrack/OneTrack$1;->a:Z
-
-    invoke-static {v0}, Lcom/xiaomi/onetrack/c/g;->a(Z)V
-
     .line 233
     iget-boolean v0, p0, Lcom/xiaomi/onetrack/OneTrack$1;->a:Z
 
-    invoke-static {v0}, Lcom/xiaomi/onetrack/c/g;->b(Z)V
+    invoke-static {v0}, Lcom/xiaomi/onetrack/b/g;->a(Z)V
+
+    .line 234
+    iget-boolean v0, p0, Lcom/xiaomi/onetrack/OneTrack$1;->a:Z
+
+    invoke-static {v0}, Lcom/xiaomi/onetrack/b/g;->b(Z)V
 
     return-void
 .end method

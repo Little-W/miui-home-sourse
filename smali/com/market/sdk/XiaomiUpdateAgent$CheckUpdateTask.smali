@@ -459,7 +459,7 @@
 
     invoke-direct {v1, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const-string v2, "%s \u65b0\u7248\u672c"
+    const-string v2, "%s 新版本"
 
     const/4 v3, 0x1
 
@@ -499,7 +499,7 @@
 
     if-eqz v2, :cond_2
 
-    const-string v2, "\u63a8\u8350\u60a8\u7acb\u5373\u5347\u7ea7\u5230\u6700\u65b0\u7684%1$s\u7248\\n\u5927\u5c0f: %2$s"
+    const-string v2, "推荐您立即升级到最新的%1$s版\\n大小: %2$s"
 
     new-array v4, v4, [Ljava/lang/Object;
 
@@ -533,7 +533,7 @@
     goto :goto_0
 
     :cond_2
-    const-string v2, "\u63a8\u8350\u60a8\u7acb\u5373\u5347\u7ea7\u5230\u6700\u65b0\u7684%1$s\u7248\\n\u589e\u91cf\u66f4\u65b0\u53ea\u9700\u4e0b\u8f7d: %2$s"
+    const-string v2, "推荐您立即升级到最新的%1$s版\\n增量更新只需下载: %2$s"
 
     new-array v4, v4, [Ljava/lang/Object;
 

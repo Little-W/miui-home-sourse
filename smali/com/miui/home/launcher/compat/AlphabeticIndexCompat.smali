@@ -125,7 +125,7 @@
 
     if-eqz p1, :cond_3
 
-    const-string p1, "\u4ed6"
+    const-string p1, "他"
 
     .line 48
     iput-object p1, p0, Lcom/miui/home/launcher/compat/AlphabeticIndexCompat;->mDefaultMiscLabel:Ljava/lang/String;
@@ -247,7 +247,7 @@
 
     if-eqz v0, :cond_1
 
-    const-string p1, "\u2026"
+    const-string p1, "…"
 
     return-object p1
 

@@ -71,7 +71,7 @@
 .method protected getLayoutResourceId()I
     .locals 1
 
-    const v0, 0x7f0d0045
+    const v0, 0x7f0d004a
 
     return v0
 .end method
@@ -85,11 +85,11 @@
     .line 31
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/WorkCategoryAppListFragment;->mSpringContainer:Lcom/miui/home/launcher/view/SpringRelativeLayout;
 
-    const v0, 0x7f0a0206
+    const v0, 0x7f0a0208
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/view/SpringRelativeLayout;->addSpringView(I)V
 
-    const p2, 0x7f0a0207
+    const p2, 0x7f0a0209
 
     .line 32
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

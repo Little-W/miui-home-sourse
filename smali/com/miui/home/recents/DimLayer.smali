@@ -335,7 +335,7 @@
 
     :cond_2
     :goto_0
-    const/high16 v1, 0x0
+    const/high16 v1, 0x3f800000    # 1.0f
 
     const/4 v3, 0x0
 
@@ -474,6 +474,15 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw p1
+.end method
+
+.method public getCurrentAlpha()F
+    .locals 1
+
+    .line 120
+    iget v0, p0, Lcom/miui/home/recents/DimLayer;->mCurrentAlpha:F
+
+    return v0
 .end method
 
 .method public getDimAlphaByRectProgress(FFF)F

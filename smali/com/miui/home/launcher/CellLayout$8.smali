@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 2163
+    .line 2084
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$8;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 2165
+    .line 2086
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$8;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
@@ -47,10 +47,10 @@
 
     const-string v1, "requestLayout after has recalculated item position"
 
-    .line 2166
+    .line 2087
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2167
+    .line 2088
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$8;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     iget-object v0, v0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;

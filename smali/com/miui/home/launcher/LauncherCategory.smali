@@ -65,7 +65,7 @@
 
     const/16 v1, 0x1f6
 
-    invoke-static {p0, v1}, Landroid/miui/Shell;->chmod(Ljava/lang/String;I)Z
+    invoke-static {p0, v1}, Landroid/system/Os;->chmod(Ljava/lang/String;I)V
 
     .line 313
     invoke-static {v0}, Lcom/miui/home/launcher/cloudbackup/BackupRestoreHomeService;->createFileInfoBundle(Ljava/io/File;)Landroid/os/Bundle;

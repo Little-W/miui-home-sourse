@@ -26,7 +26,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100260
+    const v1, 0x7f100263
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -39,7 +39,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080254
+    const v1, 0x7f080266
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -50,7 +50,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$getOnClickListener$0(Landroid/view/View;)V
+.method static synthetic lambda$getOnClickListener$405(Landroid/view/View;)V
     .locals 2
 
     .line 224
@@ -121,7 +121,7 @@
     .locals 1
 
     .line 223
-    sget-object v0, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$DeleteShortcutMenuItem$qWNkpQCZnCEfueDwODVoFg4x8pE;->INSTANCE:Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$DeleteShortcutMenuItem$qWNkpQCZnCEfueDwODVoFg4x8pE;
+    sget-object v0, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$DeleteShortcutMenuItem$p5vrNB1Jx177BVOiWZOygfBBli0;->INSTANCE:Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$DeleteShortcutMenuItem$p5vrNB1Jx177BVOiWZOygfBBli0;
 
     return-object v0
 .end method

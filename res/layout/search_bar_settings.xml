@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/search_bar_settings_text_color" android:gravity="center" android:layout_gravity="bottom|center" android:id="@id/search_bar_setting" android:background="@drawable/popup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" />
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:textSize="14.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/search_bar_settings_text_color"
+        android:gravity="center"
+        android:layout_gravity="bottom|center"
+        android:id="@id/search_bar_setting"
+        android:background="@drawable/popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:paddingStart="20.0dip"
+        android:paddingEnd="20.0dip" />
 </FrameLayout>

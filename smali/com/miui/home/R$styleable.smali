@@ -1692,7 +1692,7 @@
 
     const/16 v0, 0x1d
 
-    .line 8672
+    .line 8693
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
@@ -1701,7 +1701,7 @@
 
     const/4 v0, 0x1
 
-    .line 9104
+    .line 9125
     new-array v1, v0, [I
 
     const/4 v2, 0x0
@@ -1712,7 +1712,7 @@
 
     sput-object v1, Lcom/miui/home/R$styleable;->ActionBarLayout:[I
 
-    .line 9147
+    .line 9168
     new-array v1, v0, [I
 
     const v3, 0x101013f
@@ -1721,14 +1721,14 @@
 
     sput-object v1, Lcom/miui/home/R$styleable;->ActionMenuItemView:[I
 
-    .line 9163
+    .line 9184
     new-array v1, v2, [I
 
     sput-object v1, Lcom/miui/home/R$styleable;->ActionMenuView:[I
 
     const/4 v1, 0x6
 
-    .line 9186
+    .line 9207
     new-array v3, v1, [I
 
     fill-array-data v3, :array_1
@@ -1737,7 +1737,7 @@
 
     const/4 v3, 0x2
 
-    .line 9285
+    .line 9306
     new-array v4, v3, [I
 
     fill-array-data v4, :array_2
@@ -1746,21 +1746,21 @@
 
     const/16 v4, 0x8
 
-    .line 9341
+    .line 9362
     new-array v5, v4, [I
 
     fill-array-data v5, :array_3
 
     sput-object v5, Lcom/miui/home/R$styleable;->AlertDialog:[I
 
-    .line 9461
+    .line 9482
     new-array v5, v1, [I
 
     fill-array-data v5, :array_4
 
     sput-object v5, Lcom/miui/home/R$styleable;->AnimatedStateListDrawableCompat:[I
 
-    .line 9552
+    .line 9573
     new-array v5, v3, [I
 
     fill-array-data v5, :array_5
@@ -1769,21 +1769,21 @@
 
     const/4 v5, 0x4
 
-    .line 9599
+    .line 9620
     new-array v6, v5, [I
 
     fill-array-data v6, :array_6
 
     sput-object v6, Lcom/miui/home/R$styleable;->AnimatedStateListDrawableTransition:[I
 
-    .line 9670
+    .line 9691
     new-array v6, v5, [I
 
     fill-array-data v6, :array_7
 
     sput-object v6, Lcom/miui/home/R$styleable;->AppCompatImageView:[I
 
-    .line 9758
+    .line 9779
     new-array v6, v5, [I
 
     fill-array-data v6, :array_8
@@ -1792,7 +1792,7 @@
 
     const/4 v6, 0x7
 
-    .line 9848
+    .line 9869
     new-array v7, v6, [I
 
     fill-array-data v7, :array_9
@@ -1801,7 +1801,7 @@
 
     const/16 v7, 0x15
 
-    .line 10009
+    .line 10030
     new-array v7, v7, [I
 
     fill-array-data v7, :array_a
@@ -1810,7 +1810,7 @@
 
     const/16 v7, 0x7d
 
-    .line 10594
+    .line 10615
     new-array v7, v7, [I
 
     fill-array-data v7, :array_b
@@ -1819,14 +1819,14 @@
 
     const/16 v7, 0xd
 
-    .line 12358
+    .line 12379
     new-array v8, v7, [I
 
     fill-array-data v8, :array_c
 
     sput-object v8, Lcom/miui/home/R$styleable;->ArrowPopupView:[I
 
-    .line 12544
+    .line 12565
     new-array v8, v0, [I
 
     const v9, 0x7f040034
@@ -1835,14 +1835,14 @@
 
     sput-object v8, Lcom/miui/home/R$styleable;->AspectRatioLottieAnimView:[I
 
-    .line 12571
+    .line 12592
     new-array v8, v3, [I
 
     fill-array-data v8, :array_d
 
     sput-object v8, Lcom/miui/home/R$styleable;->BackgroundStyle:[I
 
-    .line 12610
+    .line 12631
     new-array v8, v0, [I
 
     const v9, 0x7f0400c9
@@ -1851,7 +1851,7 @@
 
     sput-object v8, Lcom/miui/home/R$styleable;->BaseRecyclerView:[I
 
-    .line 12634
+    .line 12655
     new-array v8, v0, [I
 
     const v9, 0x7f040065
@@ -1860,7 +1860,7 @@
 
     sput-object v8, Lcom/miui/home/R$styleable;->BorderLayout:[I
 
-    .line 12661
+    .line 12682
     new-array v8, v0, [I
 
     const v9, 0x7f04002c
@@ -1869,28 +1869,28 @@
 
     sput-object v8, Lcom/miui/home/R$styleable;->ButtonBarLayout:[I
 
-    .line 12711
+    .line 12732
     new-array v7, v7, [I
 
     fill-array-data v7, :array_e
 
     sput-object v7, Lcom/miui/home/R$styleable;->CardView:[I
 
-    .line 12916
+    .line 12937
     new-array v7, v4, [I
 
     fill-array-data v7, :array_f
 
     sput-object v7, Lcom/miui/home/R$styleable;->CellLayout:[I
 
-    .line 13047
+    .line 13068
     new-array v7, v1, [I
 
     fill-array-data v7, :array_10
 
     sput-object v7, Lcom/miui/home/R$styleable;->CheckBoxPreference:[I
 
-    .line 13130
+    .line 13151
     new-array v7, v0, [I
 
     const v8, 0x7f04005f
@@ -1899,7 +1899,7 @@
 
     sput-object v7, Lcom/miui/home/R$styleable;->CheckedTextView:[I
 
-    .line 13156
+    .line 13177
     new-array v7, v0, [I
 
     const v8, 0x7f0400e8
@@ -1910,35 +1910,35 @@
 
     const/4 v7, 0x3
 
-    .line 13187
+    .line 13208
     new-array v8, v7, [I
 
     fill-array-data v8, :array_11
 
     sput-object v8, Lcom/miui/home/R$styleable;->ColorStateListItem:[I
 
-    .line 13238
+    .line 13259
     new-array v8, v5, [I
 
     fill-array-data v8, :array_12
 
     sput-object v8, Lcom/miui/home/R$styleable;->CompoundButton:[I
 
-    .line 13319
+    .line 13340
     new-array v8, v3, [I
 
     fill-array-data v8, :array_13
 
     sput-object v8, Lcom/miui/home/R$styleable;->CoordinatorLayout:[I
 
-    .line 13381
+    .line 13402
     new-array v8, v6, [I
 
     fill-array-data v8, :array_14
 
     sput-object v8, Lcom/miui/home/R$styleable;->CoordinatorLayout_Layout:[I
 
-    .line 13547
+    .line 13568
     new-array v8, v0, [I
 
     const v9, 0x7f0400a1
@@ -1949,14 +1949,14 @@
 
     const/16 v8, 0xc
 
-    .line 13601
+    .line 13622
     new-array v9, v8, [I
 
     fill-array-data v9, :array_15
 
     sput-object v9, Lcom/miui/home/R$styleable;->DialogPreference:[I
 
-    .line 13768
+    .line 13789
     new-array v9, v4, [I
 
     fill-array-data v9, :array_16
@@ -1965,14 +1965,14 @@
 
     const/4 v9, 0x5
 
-    .line 13899
+    .line 13920
     new-array v10, v9, [I
 
     fill-array-data v10, :array_17
 
     sput-object v10, Lcom/miui/home/R$styleable;->DropDownPreference:[I
 
-    .line 13977
+    .line 13998
     new-array v10, v0, [I
 
     const v11, 0x7f0401d3
@@ -1981,7 +1981,7 @@
 
     sput-object v10, Lcom/miui/home/R$styleable;->EditText:[I
 
-    .line 14007
+    .line 14028
     new-array v10, v0, [I
 
     const v11, 0x7f04020a
@@ -1992,21 +1992,21 @@
 
     const/16 v10, 0x14
 
-    .line 14071
+    .line 14092
     new-array v10, v10, [I
 
     fill-array-data v10, :array_18
 
     sput-object v10, Lcom/miui/home/R$styleable;->Favorite:[I
 
-    .line 14295
+    .line 14316
     new-array v10, v7, [I
 
     fill-array-data v10, :array_19
 
     sput-object v10, Lcom/miui/home/R$styleable;->FlowLayout:[I
 
-    .line 14366
+    .line 14387
     new-array v10, v1, [I
 
     fill-array-data v10, :array_1a
@@ -2015,35 +2015,35 @@
 
     const/16 v10, 0xa
 
-    .line 14502
+    .line 14523
     new-array v11, v10, [I
 
     fill-array-data v11, :array_1b
 
     sput-object v11, Lcom/miui/home/R$styleable;->FontFamilyFont:[I
 
-    .line 14671
+    .line 14692
     new-array v11, v8, [I
 
     fill-array-data v11, :array_1c
 
     sput-object v11, Lcom/miui/home/R$styleable;->GradientColor:[I
 
-    .line 14855
+    .line 14876
     new-array v11, v3, [I
 
     fill-array-data v11, :array_1d
 
     sput-object v11, Lcom/miui/home/R$styleable;->GradientColorItem:[I
 
-    .line 14904
+    .line 14925
     new-array v11, v6, [I
 
     fill-array-data v11, :array_1e
 
     sput-object v11, Lcom/miui/home/R$styleable;->GuidePopupView:[I
 
-    .line 15031
+    .line 15052
     new-array v11, v0, [I
 
     const v12, 0x7f0400bf
@@ -2052,7 +2052,7 @@
 
     sput-object v11, Lcom/miui/home/R$styleable;->LabelSeekBar:[I
 
-    .line 15063
+    .line 15084
     new-array v11, v7, [I
 
     fill-array-data v11, :array_1f
@@ -2061,28 +2061,28 @@
 
     const/16 v11, 0x9
 
-    .line 15128
+    .line 15149
     new-array v12, v11, [I
 
     fill-array-data v12, :array_20
 
     sput-object v12, Lcom/miui/home/R$styleable;->LinearLayoutCompat:[I
 
-    .line 15298
+    .line 15319
     new-array v12, v5, [I
 
     fill-array-data v12, :array_21
 
     sput-object v12, Lcom/miui/home/R$styleable;->LinearLayoutCompat_Layout:[I
 
-    .line 15398
+    .line 15419
     new-array v12, v3, [I
 
     fill-array-data v12, :array_22
 
     sput-object v12, Lcom/miui/home/R$styleable;->ListPopupWindow:[I
 
-    .line 15450
+    .line 15471
     new-array v12, v9, [I
 
     fill-array-data v12, :array_23
@@ -2091,21 +2091,21 @@
 
     const/16 v12, 0x10
 
-    .line 15560
+    .line 15581
     new-array v13, v12, [I
 
     fill-array-data v13, :array_24
 
     sput-object v13, Lcom/miui/home/R$styleable;->LottieAnimationView:[I
 
-    .line 15762
+    .line 15783
     new-array v13, v9, [I
 
     fill-array-data v13, :array_25
 
     sput-object v13, Lcom/miui/home/R$styleable;->MamlView:[I
 
-    .line 15845
+    .line 15866
     new-array v13, v1, [I
 
     fill-array-data v13, :array_26
@@ -2114,14 +2114,14 @@
 
     const/16 v13, 0x17
 
-    .line 15992
+    .line 16013
     new-array v13, v13, [I
 
     fill-array-data v13, :array_27
 
     sput-object v13, Lcom/miui/home/R$styleable;->MenuItem:[I
 
-    .line 16369
+    .line 16390
     new-array v11, v11, [I
 
     fill-array-data v11, :array_28
@@ -2130,70 +2130,70 @@
 
     const/16 v11, 0xe
 
-    .line 16529
+    .line 16550
     new-array v13, v11, [I
 
     fill-array-data v13, :array_29
 
     sput-object v13, Lcom/miui/home/R$styleable;->MiuiDragShadow:[I
 
-    .line 16720
+    .line 16741
     new-array v13, v7, [I
 
     fill-array-data v13, :array_2a
 
     sput-object v13, Lcom/miui/home/R$styleable;->MiuixManifest:[I
 
-    .line 16783
+    .line 16804
     new-array v13, v9, [I
 
     fill-array-data v13, :array_2b
 
     sput-object v13, Lcom/miui/home/R$styleable;->MiuixManifestModule:[I
 
-    .line 16866
+    .line 16887
     new-array v13, v7, [I
 
     fill-array-data v13, :array_2c
 
     sput-object v13, Lcom/miui/home/R$styleable;->MiuixManifestUsesSdk:[I
 
-    .line 16926
+    .line 16947
     new-array v13, v6, [I
 
     fill-array-data v13, :array_2d
 
     sput-object v13, Lcom/miui/home/R$styleable;->MiuixSmoothContainerDrawable:[I
 
-    .line 17050
+    .line 17071
     new-array v13, v6, [I
 
     fill-array-data v13, :array_2e
 
     sput-object v13, Lcom/miui/home/R$styleable;->MiuixSmoothFrameLayout:[I
 
-    .line 17164
+    .line 17185
     new-array v13, v3, [I
 
     fill-array-data v13, :array_2f
 
     sput-object v13, Lcom/miui/home/R$styleable;->MiuixSmoothGradientDrawable:[I
 
-    .line 17217
+    .line 17238
     new-array v13, v5, [I
 
     fill-array-data v13, :array_30
 
     sput-object v13, Lcom/miui/home/R$styleable;->MultiSelectListPreference:[I
 
-    .line 17288
+    .line 17309
     new-array v13, v7, [I
 
     fill-array-data v13, :array_31
 
     sput-object v13, Lcom/miui/home/R$styleable;->PopupWindow:[I
 
-    .line 17340
+    .line 17361
     new-array v13, v0, [I
 
     const v14, 0x7f0401ad
@@ -2204,63 +2204,63 @@
 
     const/16 v13, 0x24
 
-    .line 17440
+    .line 17461
     new-array v13, v13, [I
 
     fill-array-data v13, :array_32
 
     sput-object v13, Lcom/miui/home/R$styleable;->Preference:[I
 
-    .line 17889
+    .line 17910
     new-array v13, v5, [I
 
     fill-array-data v13, :array_33
 
     sput-object v13, Lcom/miui/home/R$styleable;->PreferenceFragment:[I
 
-    .line 17963
+    .line 17984
     new-array v13, v5, [I
 
     fill-array-data v13, :array_34
 
     sput-object v13, Lcom/miui/home/R$styleable;->PreferenceFragmentCompat:[I
 
-    .line 18036
+    .line 18057
     new-array v13, v7, [I
 
     fill-array-data v13, :array_35
 
     sput-object v13, Lcom/miui/home/R$styleable;->PreferenceGroup:[I
 
-    .line 18098
+    .line 18119
     new-array v5, v5, [I
 
     fill-array-data v5, :array_36
 
     sput-object v5, Lcom/miui/home/R$styleable;->PreferenceImageView:[I
 
-    .line 18194
+    .line 18215
     new-array v5, v12, [I
 
     fill-array-data v5, :array_37
 
     sput-object v5, Lcom/miui/home/R$styleable;->PreferenceTheme:[I
 
-    .line 18423
+    .line 18444
     new-array v5, v3, [I
 
     fill-array-data v5, :array_38
 
     sput-object v5, Lcom/miui/home/R$styleable;->ProgressBar:[I
 
-    .line 18459
+    .line 18480
     new-array v5, v3, [I
 
     fill-array-data v5, :array_39
 
     sput-object v5, Lcom/miui/home/R$styleable;->RadioButtonPreference:[I
 
-    .line 18497
+    .line 18518
     new-array v5, v0, [I
 
     const v13, 0x7f040173
@@ -2269,7 +2269,7 @@
 
     sput-object v5, Lcom/miui/home/R$styleable;->RadioSetPreferenceCategory:[I
 
-    .line 18521
+    .line 18542
     new-array v5, v0, [I
 
     const v13, 0x7f040181
@@ -2278,14 +2278,14 @@
 
     sput-object v5, Lcom/miui/home/R$styleable;->RatioImageView:[I
 
-    .line 18546
+    .line 18567
     new-array v3, v3, [I
 
     fill-array-data v3, :array_3a
 
     sput-object v3, Lcom/miui/home/R$styleable;->RecycleListView:[I
 
-    .line 18610
+    .line 18631
     new-array v3, v8, [I
 
     fill-array-data v3, :array_3b
@@ -2294,49 +2294,49 @@
 
     const/16 v3, 0x11
 
-    .line 18810
+    .line 18831
     new-array v3, v3, [I
 
     fill-array-data v3, :array_3c
 
     sput-object v3, Lcom/miui/home/R$styleable;->SearchView:[I
 
-    .line 19120
+    .line 19141
     new-array v3, v4, [I
 
     fill-array-data v3, :array_3d
 
     sput-object v3, Lcom/miui/home/R$styleable;->SeekBar:[I
 
-    .line 19254
+    .line 19275
     new-array v3, v6, [I
 
     fill-array-data v3, :array_3e
 
     sput-object v3, Lcom/miui/home/R$styleable;->SeekBarPreference:[I
 
-    .line 19363
+    .line 19384
     new-array v3, v6, [I
 
     fill-array-data v3, :array_3f
 
     sput-object v3, Lcom/miui/home/R$styleable;->Spinner:[I
 
-    .line 19486
+    .line 19507
     new-array v3, v7, [I
 
     fill-array-data v3, :array_40
 
     sput-object v3, Lcom/miui/home/R$styleable;->SpringBackLayout:[I
 
-    .line 19559
+    .line 19580
     new-array v1, v1, [I
 
     fill-array-data v1, :array_41
 
     sput-object v1, Lcom/miui/home/R$styleable;->StateListDrawable:[I
 
-    .line 19648
+    .line 19669
     new-array v1, v0, [I
 
     const v3, 0x1010199
@@ -2345,28 +2345,28 @@
 
     sput-object v1, Lcom/miui/home/R$styleable;->StateListDrawableItem:[I
 
-    .line 19702
+    .line 19723
     new-array v1, v11, [I
 
     fill-array-data v1, :array_42
 
     sput-object v1, Lcom/miui/home/R$styleable;->SwitchCompat:[I
 
-    .line 19942
+    .line 19963
     new-array v1, v10, [I
 
     fill-array-data v1, :array_43
 
     sput-object v1, Lcom/miui/home/R$styleable;->SwitchPreference:[I
 
-    .line 20090
+    .line 20111
     new-array v1, v10, [I
 
     fill-array-data v1, :array_44
 
     sput-object v1, Lcom/miui/home/R$styleable;->SwitchPreferenceCompat:[I
 
-    .line 20249
+    .line 20270
     new-array v1, v12, [I
 
     fill-array-data v1, :array_45
@@ -2375,42 +2375,42 @@
 
     const/16 v1, 0x1e
 
-    .line 20535
+    .line 20556
     new-array v1, v1, [I
 
     fill-array-data v1, :array_46
 
     sput-object v1, Lcom/miui/home/R$styleable;->Toolbar:[I
 
-    .line 20989
+    .line 21010
     new-array v1, v7, [I
 
     fill-array-data v1, :array_47
 
     sput-object v1, Lcom/miui/home/R$styleable;->TypefaceIconView:[I
 
-    .line 21043
+    .line 21064
     new-array v1, v9, [I
 
     fill-array-data v1, :array_48
 
     sput-object v1, Lcom/miui/home/R$styleable;->View:[I
 
-    .line 21142
+    .line 21163
     new-array v1, v7, [I
 
     fill-array-data v1, :array_49
 
     sput-object v1, Lcom/miui/home/R$styleable;->ViewBackgroundHelper:[I
 
-    .line 21214
+    .line 21235
     new-array v1, v7, [I
 
     fill-array-data v1, :array_4a
 
     sput-object v1, Lcom/miui/home/R$styleable;->ViewStubCompat:[I
 
-    .line 21268
+    .line 21289
     new-array v0, v0, [I
 
     const v1, 0x7f040066
@@ -2419,7 +2419,7 @@
 
     sput-object v0, Lcom/miui/home/R$styleable;->VisualCheckGroup:[I
 
-    .line 21299
+    .line 21320
     new-array v0, v7, [I
 
     fill-array-data v0, :array_4b

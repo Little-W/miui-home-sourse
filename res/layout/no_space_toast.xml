@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.widget.NoSpaceToast android:textSize="11.299988sp" android:textColor="#ff000000" android:gravity="center" android:layout_gravity="center|left|top" android:background="@drawable/no_space_bg" android:layout_width="wrap_content" android:layout_height="43.0dip" android:maxWidth="146.66dip" android:minWidth="74.69998dip" android:text="@string/no_space_toast" android:singleLine="true"
-  xmlns:android="http://schemas.android.com/apk/res/android" />
+<com.miui.home.launcher.widget.NoSpaceToast
+    android:textSize="11.299988sp"
+    android:textColor="#ff000000"
+    android:gravity="center"
+    android:layout_gravity="center|left|top"
+    android:background="@drawable/no_space_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="43.0dip"
+    android:maxWidth="146.66dip"
+    android:minWidth="74.69998dip"
+    android:text="@string/no_space_toast"
+    android:singleLine="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

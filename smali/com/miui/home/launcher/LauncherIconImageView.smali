@@ -79,7 +79,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$invalidateDrawable$0(Lcom/miui/home/launcher/LauncherIconImageView;Landroid/graphics/drawable/Drawable;)V
+.method public static synthetic lambda$invalidateDrawable$177(Lcom/miui/home/launcher/LauncherIconImageView;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
     .line 61
@@ -119,9 +119,9 @@
 
     .line 61
     :cond_0
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$LauncherIconImageView$b0neLQiu7w0DEap9qvsDy5r9-8o;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$LauncherIconImageView$tBAxSRBYqlgt7ql9-vc2DIu9IHc;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$LauncherIconImageView$b0neLQiu7w0DEap9qvsDy5r9-8o;-><init>(Lcom/miui/home/launcher/LauncherIconImageView;Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$LauncherIconImageView$tBAxSRBYqlgt7ql9-vc2DIu9IHc;-><init>(Lcom/miui/home/launcher/LauncherIconImageView;Landroid/graphics/drawable/Drawable;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherIconImageView;->post(Ljava/lang/Runnable;)Z
 

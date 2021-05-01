@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/SwipeHelperForRecents;FF)V
     .locals 0
 
-    .line 282
+    .line 288
     iput-object p1, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$2;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     invoke-direct {p0, p2, p3}, Lcom/miui/home/recents/util/InOutRangeDetector;-><init>(FF)V
@@ -35,7 +35,7 @@
 .method public onInRange()V
     .locals 4
 
-    .line 305
+    .line 311
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$2;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->access$000(Lcom/miui/home/recents/views/SwipeHelperForRecents;)Landroid/view/View;
@@ -46,7 +46,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 306
+    .line 312
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$2;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->access$000(Lcom/miui/home/recents/views/SwipeHelperForRecents;)Landroid/view/View;
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    .line 307
+    .line 313
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskViewHeader;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -78,19 +78,19 @@
 
     invoke-direct {v1, v2, v3}, Lcom/miui/home/launcher/anim/PhysicBasedInterpolator;-><init>(FF)V
 
-    .line 308
+    .line 314
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
     const-wide/16 v1, 0xfa
 
-    .line 309
+    .line 315
     invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    .line 310
+    .line 316
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
     :cond_0
@@ -102,12 +102,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 286
+    .line 292
     invoke-virtual {p0}, Lcom/miui/home/recents/views/SwipeHelperForRecents$2;->onInRange()V
 
     goto :goto_0
 
-    .line 288
+    .line 294
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/recents/views/SwipeHelperForRecents$2;->onOutRange()V
 
@@ -118,7 +118,7 @@
 .method public onOutRange()V
     .locals 4
 
-    .line 294
+    .line 300
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$2;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->access$000(Lcom/miui/home/recents/views/SwipeHelperForRecents;)Landroid/view/View;
@@ -129,7 +129,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 295
+    .line 301
     iget-object v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents$2;->this$0:Lcom/miui/home/recents/views/SwipeHelperForRecents;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->access$000(Lcom/miui/home/recents/views/SwipeHelperForRecents;)Landroid/view/View;
@@ -142,7 +142,7 @@
 
     move-result-object v0
 
-    .line 296
+    .line 302
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskViewHeader;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -161,19 +161,19 @@
 
     invoke-direct {v1, v2, v3}, Lcom/miui/home/launcher/anim/PhysicBasedInterpolator;-><init>(FF)V
 
-    .line 297
+    .line 303
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
     const-wide/16 v1, 0xfa
 
-    .line 298
+    .line 304
     invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    .line 299
+    .line 305
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
     :cond_0

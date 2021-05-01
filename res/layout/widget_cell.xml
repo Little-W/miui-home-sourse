@@ -1,10 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.widget.WidgetCell android:background="#33ffffff" android:layout_width="@dimen/widget_cell_width" android:layout_height="@dimen/widget_cell_height"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/item_preview" android:layout_width="@dimen/widget_cell_preview_width_height" android:layout_height="@dimen/widget_cell_preview_width_height" android:scaleType="matrix" />
-    <ImageView android:id="@id/item_badge" android:layout_width="@dimen/profile_badge_size" android:layout_height="@dimen/profile_badge_size" android:layout_margin="@dimen/profile_badge_margin" android:layout_alignRight="@id/item_preview" android:layout_alignBottom="@id/item_preview" />
-    <LinearLayout android:orientation="horizontal" android:background="#4cffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/item_preview">
-        <TextView android:textSize="10.0sp" android:textColor="#ffffffff" android:gravity="start|center" android:id="@id/item_title" android:layout_width="wrap_content" android:layout_height="@dimen/widget_cell_sub_title_height" android:singleLine="true" android:layout_weight="1.0" android:textAlignment="viewStart" android:layout_marginStart="6.6999817dip" />
-        <TextView android:textSize="10.0sp" android:textColor="#ffffffff" android:gravity="end|center" android:id="@id/item_span" android:layout_width="wrap_content" android:layout_height="@dimen/widget_cell_sub_title_height" android:singleLine="true" android:layout_marginEnd="6.6999817dip" />
+<com.miui.home.launcher.widget.WidgetCell
+    android:background="#33ffffff"
+    android:layout_width="@dimen/widget_cell_width"
+    android:layout_height="@dimen/widget_cell_height"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/item_preview"
+        android:layout_width="@dimen/widget_cell_preview_width_height"
+        android:layout_height="@dimen/widget_cell_preview_width_height"
+        android:scaleType="matrix" />
+    <ImageView
+        android:id="@id/item_badge"
+        android:layout_width="@dimen/profile_badge_size"
+        android:layout_height="@dimen/profile_badge_size"
+        android:layout_margin="@dimen/profile_badge_margin"
+        android:layout_alignRight="@id/item_preview"
+        android:layout_alignBottom="@id/item_preview" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#4cffffff"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_preview">
+        <TextView
+            android:textSize="10.0sp"
+            android:textColor="#ffffffff"
+            android:gravity="start|center"
+            android:id="@id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/widget_cell_sub_title_height"
+            android:singleLine="true"
+            android:layout_weight="1.0"
+            android:textAlignment="viewStart"
+            android:layout_marginStart="6.6999817dip" />
+        <TextView
+            android:textSize="10.0sp"
+            android:textColor="#ffffffff"
+            android:gravity="end|center"
+            android:id="@id/item_span"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/widget_cell_sub_title_height"
+            android:singleLine="true"
+            android:layout_marginEnd="6.6999817dip" />
     </LinearLayout>
 </com.miui.home.launcher.widget.WidgetCell>

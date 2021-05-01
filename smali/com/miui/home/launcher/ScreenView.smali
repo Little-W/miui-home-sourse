@@ -273,7 +273,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView;->TAG:Ljava/lang/String;
 
-    const p1, 0x7f08028e
+    const p1, 0x7f0802a0
 
     .line 73
     iput p1, p0, Lcom/miui/home/launcher/ScreenView;->mSeekPointResId:I
@@ -535,7 +535,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView;->TAG:Ljava/lang/String;
 
-    const p1, 0x7f08028e
+    const p1, 0x7f0802a0
 
     .line 73
     iput p1, p0, Lcom/miui/home/launcher/ScreenView;->mSeekPointResId:I
@@ -1304,18 +1304,18 @@
     .line 459
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView;->mScrollXAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ScreenView$KNeqMPLtcofq4O5LH4hXq5MF2Ak;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ScreenView$JKp_0TrjZG4rbTPryU_TWyG6iVs;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/-$$Lambda$ScreenView$KNeqMPLtcofq4O5LH4hXq5MF2Ak;-><init>(Lcom/miui/home/launcher/ScreenView;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/-$$Lambda$ScreenView$JKp_0TrjZG4rbTPryU_TWyG6iVs;-><init>(Lcom/miui/home/launcher/ScreenView;)V
 
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     .line 460
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView;->mScrollXAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ScreenView$nJdWMXA2TtyHzoqt7eWiXp8g4q4;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ScreenView$FCo5AeQYfCz_9iTeNXxHU50Vojs;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/-$$Lambda$ScreenView$nJdWMXA2TtyHzoqt7eWiXp8g4q4;-><init>(Lcom/miui/home/launcher/ScreenView;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/-$$Lambda$ScreenView$FCo5AeQYfCz_9iTeNXxHU50Vojs;-><init>(Lcom/miui/home/launcher/ScreenView;)V
 
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
@@ -1377,7 +1377,7 @@
     return p1
 .end method
 
-.method public static synthetic lambda$initScreenView$0(Lcom/miui/home/launcher/ScreenView;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
+.method public static synthetic lambda$initScreenView$17(Lcom/miui/home/launcher/ScreenView;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
     .locals 0
 
     .line 459
@@ -1386,7 +1386,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initScreenView$1(Lcom/miui/home/launcher/ScreenView;Landroidx/dynamicanimation/animation/DynamicAnimation;FF)V
+.method public static synthetic lambda$initScreenView$18(Lcom/miui/home/launcher/ScreenView;Landroidx/dynamicanimation/animation/DynamicAnimation;FF)V
     .locals 0
 
     .line 460
@@ -2095,22 +2095,20 @@
 
     move-result-object v5
 
-    check-cast v5, Lcom/miui/home/launcher/ScreenView$SeekBarIndicator;
-
     .line 869
-    invoke-virtual {v5}, Lcom/miui/home/launcher/ScreenView$SeekBarIndicator;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v6
 
     check-cast v6, Landroid/widget/FrameLayout$LayoutParams;
 
     .line 871
-    invoke-virtual {v5}, Lcom/miui/home/launcher/ScreenView$SeekBarIndicator;->getMeasuredWidth()I
+    invoke-virtual {v5}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v7
 
     .line 872
-    invoke-virtual {v5}, Lcom/miui/home/launcher/ScreenView$SeekBarIndicator;->getMeasuredHeight()I
+    invoke-virtual {v5}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v8
 
@@ -2231,13 +2229,13 @@
     if-nez p2, :cond_7
 
     .line 913
-    invoke-virtual {v5}, Lcom/miui/home/launcher/ScreenView$SeekBarIndicator;->getHeight()I
+    invoke-virtual {v5}, Landroid/view/View;->getHeight()I
 
     move-result v9
 
     if-lez v9, :cond_7
 
-    invoke-virtual {v5}, Lcom/miui/home/launcher/ScreenView$SeekBarIndicator;->getWidth()I
+    invoke-virtual {v5}, Landroid/view/View;->getWidth()I
 
     move-result v9
 
@@ -2246,7 +2244,7 @@
     int-to-float v6, v4
 
     .line 914
-    invoke-virtual {v5, v6}, Lcom/miui/home/launcher/ScreenView$SeekBarIndicator;->setTranslationX(F)V
+    invoke-virtual {v5, v6}, Landroid/view/View;->setTranslationX(F)V
 
     goto :goto_3
 
@@ -2258,7 +2256,7 @@
     add-int/2addr v8, v6
 
     .line 917
-    invoke-virtual {v5, v10, v6, v7, v8}, Lcom/miui/home/launcher/ScreenView$SeekBarIndicator;->layout(IIII)V
+    invoke-virtual {v5, v10, v6, v7, v8}, Landroid/view/View;->layout(IIII)V
 
     move v4, v3
 
@@ -6358,7 +6356,7 @@
     .line 1020
     iget-object v9, p0, Lcom/miui/home/launcher/ScreenView;->mContext:Landroid/content/Context;
 
-    const v10, 0x7f10022b
+    const v10, 0x7f10022c
 
     new-array v11, v7, [Ljava/lang/Object;
 
@@ -7782,9 +7780,9 @@
 .method public setSlideBarPosition(Landroid/widget/FrameLayout$LayoutParams;)V
     .locals 3
 
-    const v0, 0x7f08023f
+    const v0, 0x7f080251
 
-    const v1, 0x7f080240
+    const v1, 0x7f080252
 
     const/4 v2, 0x0
 

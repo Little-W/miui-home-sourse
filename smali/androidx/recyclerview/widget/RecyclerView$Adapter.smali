@@ -240,6 +240,19 @@
     return-void
 .end method
 
+.method public final notifyItemChanged(I)V
+    .locals 2
+
+    .line 7370
+    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$Adapter;->mObservable:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, p1, v1}, Landroidx/recyclerview/widget/RecyclerView$AdapterDataObservable;->notifyItemRangeChanged(II)V
+
+    return-void
+.end method
+
 .method public final notifyItemChanged(ILjava/lang/Object;)V
     .locals 2
 

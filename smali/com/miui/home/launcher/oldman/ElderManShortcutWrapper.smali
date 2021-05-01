@@ -119,7 +119,7 @@
     return v0
 .end method
 
-.method public static synthetic lambda$getIconAsync$0(Lcom/miui/home/launcher/oldman/ElderManShortcutWrapper;Ljava/lang/Void;)Landroid/graphics/drawable/Drawable;
+.method public static synthetic lambda$getIconAsync$493(Lcom/miui/home/launcher/oldman/ElderManShortcutWrapper;Ljava/lang/Void;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
     .line 61
@@ -134,7 +134,7 @@
     return-object p1
 .end method
 
-.method static synthetic lambda$getIconAsync$1(Ljava/util/function/Consumer;Landroid/graphics/drawable/Drawable;)V
+.method static synthetic lambda$getIconAsync$494(Ljava/util/function/Consumer;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
     .line 62
@@ -187,13 +187,13 @@
     .end annotation
 
     .line 60
-    new-instance v0, Lcom/miui/home/launcher/oldman/-$$Lambda$ElderManShortcutWrapper$nhpJL5tqILB5PsLbEjrnL8Vaa5Q;
+    new-instance v0, Lcom/miui/home/launcher/oldman/-$$Lambda$ElderManShortcutWrapper$tPZzC9dBG-ABD9QJioM44Td_L7U;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/oldman/-$$Lambda$ElderManShortcutWrapper$nhpJL5tqILB5PsLbEjrnL8Vaa5Q;-><init>(Lcom/miui/home/launcher/oldman/ElderManShortcutWrapper;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/oldman/-$$Lambda$ElderManShortcutWrapper$tPZzC9dBG-ABD9QJioM44Td_L7U;-><init>(Lcom/miui/home/launcher/oldman/ElderManShortcutWrapper;)V
 
-    new-instance v1, Lcom/miui/home/launcher/oldman/-$$Lambda$ElderManShortcutWrapper$yvvjoLGmSlv7aFNrmxEgjH0sdWk;
+    new-instance v1, Lcom/miui/home/launcher/oldman/-$$Lambda$ElderManShortcutWrapper$cxRdLWcEZ9rEaoHvsDNKesJLgaw;
 
-    invoke-direct {v1, p1}, Lcom/miui/home/launcher/oldman/-$$Lambda$ElderManShortcutWrapper$yvvjoLGmSlv7aFNrmxEgjH0sdWk;-><init>(Ljava/util/function/Consumer;)V
+    invoke-direct {v1, p1}, Lcom/miui/home/launcher/oldman/-$$Lambda$ElderManShortcutWrapper$cxRdLWcEZ9rEaoHvsDNKesJLgaw;-><init>(Ljava/util/function/Consumer;)V
 
     const/4 p1, 0x0
 

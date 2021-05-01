@@ -34,7 +34,7 @@
     .line 41
     invoke-direct {p0, p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const p2, 0x7f0d0054
+    const p2, 0x7f0d0059
 
     .line 42
     invoke-virtual {p0, p2}, Lcom/miui/home/settings/preference/IconCustomizePreviewPreference;->setLayoutResource(I)V
@@ -338,7 +338,7 @@
     :cond_0
     new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
-    const v2, 0x7f0600d0
+    const v2, 0x7f0600d3
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getColor(I)I
 

@@ -88,7 +88,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$onActivityReady$0(Lcom/miui/home/launcher/anim/AnimatorPlaybackController;)V
+.method static synthetic lambda$onActivityReady$515(Lcom/miui/home/launcher/anim/AnimatorPlaybackController;)V
     .locals 2
 
     .line 73
@@ -267,21 +267,24 @@
     invoke-direct {v11, v13, v14, v15, v5}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 120
-    invoke-virtual {v8, v11, v4}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateSource(Landroid/graphics/Rect;Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)V
+    invoke-virtual {v8, v4}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateSourceStack(Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)V
 
-    .line 122
+    .line 121
+    invoke-virtual {v8, v11}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateHomeStack(Landroid/graphics/Rect;)V
+
+    .line 123
     new-instance v4, Landroid/graphics/Rect;
 
     invoke-direct {v4}, Landroid/graphics/Rect;-><init>()V
 
-    .line 123
+    .line 124
     invoke-virtual {v2}, Lcom/miui/home/launcher/BaseActivity;->getOverviewPanel()Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Lcom/miui/home/recents/views/RecentsView;
 
-    .line 124
+    .line 125
     invoke-virtual {v2}, Lcom/miui/home/recents/views/RecentsView;->getTaskStackView()Lcom/miui/home/recents/views/TaskStackView;
 
     move-result-object v2
@@ -292,13 +295,13 @@
 
     invoke-virtual {v2, v4}, Landroid/graphics/RectF;->roundOut(Landroid/graphics/Rect;)V
 
-    .line 126
+    .line 127
     invoke-virtual {v8, v4}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateTargetRect(Landroid/graphics/Rect;)V
 
-    .line 127
+    .line 128
     invoke-virtual {v8, v12}, Lcom/miui/home/recents/util/ClipAnimationHelper;->prepareAnimation(Z)V
 
-    .line 129
+    .line 130
     new-array v2, v3, [F
 
     fill-array-data v2, :array_2
@@ -307,20 +310,18 @@
 
     move-result-object v2
 
-    .line 130
+    .line 131
     invoke-virtual {v2, v6, v7}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 131
+    .line 132
     sget-object v3, Lcom/miui/home/launcher/anim/Interpolators;->LINEAR:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 132
+    .line 133
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
     return-object v1
-
-    nop
 
     :array_0
     .array-data 4
@@ -397,7 +398,7 @@
 
     move-result p2
 
-    sget-object v1, Lcom/miui/home/recents/-$$Lambda$AppToOverviewAnimationProvider$IbXHvUFhsgr77DJpx1pG8xmyPWE;->INSTANCE:Lcom/miui/home/recents/-$$Lambda$AppToOverviewAnimationProvider$IbXHvUFhsgr77DJpx1pG8xmyPWE;
+    sget-object v1, Lcom/miui/home/recents/-$$Lambda$AppToOverviewAnimationProvider$L-6l4sm1jYMxY8_5D28BVnDMWwE;->INSTANCE:Lcom/miui/home/recents/-$$Lambda$AppToOverviewAnimationProvider$L-6l4sm1jYMxY8_5D28BVnDMWwE;
 
     const/4 v2, 0x0
 

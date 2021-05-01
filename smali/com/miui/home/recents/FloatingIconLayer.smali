@@ -42,6 +42,8 @@
 
 .field private mIsAdaptiveIcon:Z
 
+.field private mIsDrawIcon:Z
+
 .field private mIsNeedReparent:Z
 
 .field private mIsOpening:Z
@@ -73,10 +75,10 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 66
+    .line 67
     new-instance v0, Lcom/miui/home/library/utils/LooperExecutor;
 
-    .line 67
+    .line 68
     invoke-static {}, Lcom/miui/home/recents/FloatingIconLayer;->getFloatingIconLooper()Landroid/os/Looper;
 
     move-result-object v1
@@ -91,7 +93,7 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 80
+    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 44
@@ -166,7 +168,7 @@
 .method private draw(I)V
     .locals 5
 
-    .line 216
+    .line 219
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isKeepRecentsViewPortrait()Z
 
     move-result v0
@@ -177,18 +179,18 @@
 
     move p1, v1
 
-    .line 219
+    .line 222
     :cond_0
     iget-boolean v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIsAdaptiveIcon:Z
 
     if-nez v0, :cond_1
 
-    .line 220
+    .line 223
     iget-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mShortcutIconRef:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_3
 
-    .line 221
+    .line 224
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -197,7 +199,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 223
+    .line 226
     iget-object v2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconSurface:Lcom/android/systemui/shared/recents/system/SurfaceCompat;
 
     iget-object v3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconRectF:Landroid/graphics/Rect;
@@ -206,7 +208,7 @@
 
     new-array v4, v4, [Landroid/graphics/drawable/Drawable;
 
-    .line 224
+    .line 227
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
 
     move-result-object v0
@@ -217,30 +219,30 @@
 
     aput-object v0, v4, v1
 
-    .line 223
+    .line 226
     invoke-static {v2, p1, v3, v4}, Lcom/android/systemui/shared/recents/system/SurfaceControlUtils;->draw(Lcom/android/systemui/shared/recents/system/SurfaceCompat;ILandroid/graphics/Rect;[Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
-    .line 228
+    .line 231
     :cond_1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 229
+    .line 232
     iget-object v2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mBackgroundLayer:Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;
 
     if-eqz v2, :cond_2
 
-    .line 230
+    .line 233
     invoke-virtual {v2}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;->getCurrentShowDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 232
+    .line 235
     :cond_2
     invoke-direct {p0}, Lcom/miui/home/recents/FloatingIconLayer;->getCurrentForegroundDrawables()Ljava/util/ArrayList;
 
@@ -248,38 +250,38 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 234
+    .line 237
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    .line 235
+    .line 238
     new-instance v2, Landroid/graphics/Rect;
 
     iget-object v3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mAdaptiveDrawableBounds:Landroid/graphics/Rect;
 
     invoke-direct {v2, v3}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 236
+    .line 239
     iget v3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mCurRectRatio:F
 
     invoke-static {v2, v3}, Lcom/miui/home/recents/util/Utilities;->scaleRectAboutCenter(Landroid/graphics/Rect;F)V
 
-    .line 237
+    .line 240
     iget-object v3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconSurface:Lcom/android/systemui/shared/recents/system/SurfaceCompat;
 
     new-array v1, v1, [Landroid/graphics/drawable/Drawable;
 
-    .line 238
+    .line 241
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Landroid/graphics/drawable/Drawable;
 
-    .line 237
+    .line 240
     invoke-static {v3, p1, v2, v0}, Lcom/android/systemui/shared/recents/system/SurfaceControlUtils;->draw(Lcom/android/systemui/shared/recents/system/SurfaceCompat;ILandroid/graphics/Rect;[Landroid/graphics/drawable/Drawable;)V
 
     :cond_3
@@ -298,12 +300,12 @@
         }
     .end annotation
 
-    .line 244
+    .line 247
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 245
+    .line 248
     iget-object v1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mForegroundLayers:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -326,14 +328,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 246
+    .line 249
     invoke-virtual {v2}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;->getCurrentShowDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    .line 247
+    .line 250
     invoke-virtual {v2}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;->getCurrentShowDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
@@ -351,7 +353,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 101
+    .line 102
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->isValid()Z
 
     move-result v0
@@ -364,15 +366,15 @@
 
     const-string v1, "getFloatingIconLayer"
 
-    .line 102
+    .line 103
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
+    .line 104
     new-instance v0, Lcom/miui/home/recents/FloatingIconLayer;
 
     invoke-direct {v0}, Lcom/miui/home/recents/FloatingIconLayer;-><init>()V
 
-    .line 104
+    .line 105
     invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/recents/FloatingIconLayer;->init(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Lcom/miui/home/launcher/ShortcutIcon;Z)V
 
     return-object v0
@@ -386,7 +388,7 @@
 .method public static getFloatingIconLayer(Lcom/miui/home/launcher/ShortcutIcon;Z)Lcom/miui/home/recents/FloatingIconLayer;
     .locals 1
 
-    .line 97
+    .line 98
     invoke-static {p0}, Lcom/android/systemui/shared/recents/system/SurfaceControlUtils;->getSurfaceControlCompat(Landroid/view/View;)Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     move-result-object v0
@@ -401,12 +403,12 @@
 .method public static getFloatingIconLooper()Landroid/os/Looper;
     .locals 3
 
-    .line 72
+    .line 73
     sget-object v0, Lcom/miui/home/recents/FloatingIconLayer;->sFloatingIconHandlerThread:Landroid/os/HandlerThread;
 
     if-nez v0, :cond_0
 
-    .line 73
+    .line 74
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "FloatingIconThread"
@@ -417,12 +419,12 @@
 
     sput-object v0, Lcom/miui/home/recents/FloatingIconLayer;->sFloatingIconHandlerThread:Landroid/os/HandlerThread;
 
-    .line 75
+    .line 76
     sget-object v0, Lcom/miui/home/recents/FloatingIconLayer;->sFloatingIconHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 77
+    .line 78
     :cond_0
     sget-object v0, Lcom/miui/home/recents/FloatingIconLayer;->sFloatingIconHandlerThread:Landroid/os/HandlerThread;
 
@@ -436,7 +438,7 @@
 .method private static getOffsetForIconBounds(ZF)I
     .locals 2
 
-    .line 143
+    .line 145
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
@@ -447,7 +449,7 @@
 
     goto :goto_0
 
-    .line 144
+    .line 146
     :cond_0
     invoke-static {}, Landroid/graphics/drawable/AdaptiveIconDrawable;->getExtraInsetFraction()F
 
@@ -470,28 +472,28 @@
 .method public static getValidFloatingIconLayer(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Lcom/miui/home/launcher/ShortcutIcon;Z)Lcom/miui/home/recents/FloatingIconLayer;
     .locals 2
 
-    .line 84
+    .line 85
     invoke-static {p1}, Lcom/android/systemui/shared/recents/system/SurfaceControlUtils;->getSurfaceControlCompat(Landroid/view/View;)Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 85
+    .line 86
     invoke-virtual {v0}, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->isValid()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 86
+    .line 87
     invoke-static {v0, p1, p2}, Lcom/miui/home/recents/FloatingIconLayer;->getFloatingIconLayer(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Lcom/miui/home/launcher/ShortcutIcon;Z)Lcom/miui/home/recents/FloatingIconLayer;
 
     move-result-object p0
 
     return-object p0
 
-    .line 88
+    .line 89
     :cond_0
     invoke-static {p0, p1, p2}, Lcom/miui/home/recents/FloatingIconLayer;->getFloatingIconLayer(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Lcom/miui/home/launcher/ShortcutIcon;Z)Lcom/miui/home/recents/FloatingIconLayer;
 
@@ -501,7 +503,7 @@
 
     const/4 p1, 0x1
 
-    .line 90
+    .line 91
     iput-boolean p1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIsNeedReparent:Z
 
     :cond_1
@@ -511,94 +513,97 @@
 .method private init(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Lcom/miui/home/launcher/ShortcutIcon;Z)V
     .locals 3
 
-    .line 111
+    .line 112
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mShortcutIconRef:Ljava/lang/ref/WeakReference;
 
-    .line 112
+    .line 113
     iput-boolean p3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIsOpening:Z
 
-    .line 113
-    invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
-
-    move-result-object p3
-
-    invoke-virtual {p3}, Lcom/miui/home/launcher/LauncherIconImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p3
-
-    iput-object p3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mDrawable:Landroid/graphics/drawable/Drawable;
+    const/4 p3, 0x0
 
     .line 114
-    iget-object p3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mDrawable:Landroid/graphics/drawable/Drawable;
+    iput-boolean p3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIsDrawIcon:Z
 
-    invoke-direct {p0, p3}, Lcom/miui/home/recents/FloatingIconLayer;->isUseAdaptiveIcon(Landroid/graphics/drawable/Drawable;)Z
-
-    move-result p3
-
-    iput-boolean p3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIsAdaptiveIcon:Z
-
-    .line 116
-    invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
-
-    move-result-object p3
-
-    invoke-virtual {p3}, Lcom/miui/home/launcher/LauncherIconImageView;->getWidth()I
-
-    move-result p3
-
-    .line 117
+    .line 115
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getHeight()I
+    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mDrawable:Landroid/graphics/drawable/Drawable;
+
+    .line 116
+    iget-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mDrawable:Landroid/graphics/drawable/Drawable;
+
+    invoke-direct {p0, v0}, Lcom/miui/home/recents/FloatingIconLayer;->isUseAdaptiveIcon(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0
 
+    iput-boolean v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIsAdaptiveIcon:Z
+
     .line 118
-    iget-object v1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconRectF:Landroid/graphics/Rect;
+    invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    invoke-virtual {v1, v2, v2, p3, v0}, Landroid/graphics/Rect;->set(IIII)V
+    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getWidth()I
+
+    move-result v0
 
     .line 119
-    iget-object v1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mValidIconRectF:Landroid/graphics/RectF;
+    invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/LauncherIconImageView;->getHeight()I
+
+    move-result v1
+
+    .line 120
+    iget-object v2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconRectF:Landroid/graphics/Rect;
+
+    invoke-virtual {v2, p3, p3, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
+
+    .line 121
+    iget-object p3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mValidIconRectF:Landroid/graphics/RectF;
 
     iget-object v2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconRectF:Landroid/graphics/Rect;
 
-    invoke-virtual {v1, v2}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {p3, v2}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 120
+    .line 122
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutIcon;->getIconTransparentEdge()I
 
     move-result p2
 
     iput p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIconTransparentEdge:I
 
-    .line 121
-    iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mValidIconRectF:Landroid/graphics/RectF;
-
-    iget v1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIconTransparentEdge:I
-
-    int-to-float v2, v1
-
-    int-to-float v1, v1
-
-    invoke-virtual {p2, v2, v1}, Landroid/graphics/RectF;->inset(FF)V
-
-    .line 122
-    iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mValidIconRectF:Landroid/graphics/RectF;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p2, v1, v1}, Landroid/graphics/RectF;->offsetTo(FF)V
-
     .line 123
+    iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mValidIconRectF:Landroid/graphics/RectF;
+
+    iget p3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIconTransparentEdge:I
+
+    int-to-float v2, p3
+
+    int-to-float p3, p3
+
+    invoke-virtual {p2, v2, p3}, Landroid/graphics/RectF;->inset(FF)V
+
+    .line 124
+    iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mValidIconRectF:Landroid/graphics/RectF;
+
+    const/4 p3, 0x0
+
+    invoke-virtual {p2, p3, p3}, Landroid/graphics/RectF;->offsetTo(FF)V
+
+    .line 125
     iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mValidIconRectF:Landroid/graphics/RectF;
 
     invoke-virtual {p2}, Landroid/graphics/RectF;->width()F
@@ -607,25 +612,25 @@
 
     float-to-int p2, p2
 
-    .line 124
-    iget-object v1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mValidIconRectF:Landroid/graphics/RectF;
+    .line 126
+    iget-object p3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mValidIconRectF:Landroid/graphics/RectF;
 
-    invoke-virtual {v1}, Landroid/graphics/RectF;->height()F
+    invoke-virtual {p3}, Landroid/graphics/RectF;->height()F
 
-    move-result v1
+    move-result p3
 
-    float-to-int v1, v1
+    float-to-int p3, p3
 
     const-string v2, "Floating Icon"
 
-    .line 126
-    invoke-static {v2, p2, v1, p1}, Lcom/android/systemui/shared/recents/system/SurfaceControlUtils;->getBufferLayer(Ljava/lang/String;IILcom/android/systemui/shared/recents/system/SurfaceControlCompat;)Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
+    .line 128
+    invoke-static {v2, p2, p3, p1}, Lcom/android/systemui/shared/recents/system/SurfaceControlUtils;->getBufferLayer(Ljava/lang/String;IILcom/android/systemui/shared/recents/system/SurfaceControlCompat;)Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconSurfaceControl:Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
-    .line 127
+    .line 129
     new-instance p1, Lcom/android/systemui/shared/recents/system/SurfaceCompat;
 
     iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconSurfaceControl:Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
@@ -634,12 +639,12 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconSurface:Lcom/android/systemui/shared/recents/system/SurfaceCompat;
 
-    .line 129
+    .line 131
     iget-boolean p1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIsAdaptiveIcon:Z
 
     if-nez p1, :cond_0
 
-    .line 130
+    .line 132
     iget-object p1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconRectF:Landroid/graphics/Rect;
 
     iget p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIconTransparentEdge:I
@@ -652,47 +657,47 @@
 
     goto :goto_0
 
-    .line 132
+    .line 134
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast p1, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;
 
-    .line 133
+    .line 135
     invoke-virtual {p1}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;->getBackgroundLayer()Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mBackgroundLayer:Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;
 
-    .line 134
+    .line 136
     invoke-virtual {p1}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;->getForegroundLayers()Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mForegroundLayers:Ljava/util/List;
 
-    .line 136
+    .line 138
     iget-boolean p1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIsAdaptiveIcon:Z
 
-    int-to-float p2, p3
+    int-to-float p2, v0
 
     invoke-static {p1, p2}, Lcom/miui/home/recents/FloatingIconLayer;->getOffsetForIconBounds(ZF)I
 
     move-result p1
 
-    .line 137
+    .line 139
     iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mAdaptiveDrawableBounds:Landroid/graphics/Rect;
 
-    neg-int v1, p1
-
-    add-int/2addr p3, p1
+    neg-int p3, p1
 
     add-int/2addr v0, p1
 
-    invoke-virtual {p2, v1, v1, p3, v0}, Landroid/graphics/Rect;->set(IIII)V
+    add-int/2addr v1, p1
 
-    .line 138
+    invoke-virtual {p2, p3, p3, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
+
+    .line 140
     iget-object p1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mAdaptiveDrawableBounds:Landroid/graphics/Rect;
 
     iget p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIconTransparentEdge:I
@@ -710,7 +715,7 @@
 .method private isUseAdaptiveIcon(Landroid/graphics/drawable/Drawable;)Z
     .locals 0
 
-    .line 310
+    .line 316
     instance-of p1, p1, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;
 
     if-eqz p1, :cond_0
@@ -732,26 +737,31 @@
     return p1
 .end method
 
-.method public static synthetic lambda$drawIcon$2(Lcom/miui/home/recents/FloatingIconLayer;I)V
+.method public static synthetic lambda$drawIcon$313(Lcom/miui/home/recents/FloatingIconLayer;I)V
     .locals 2
 
     const-string v0, "FloatingIconLayer"
 
     const-string v1, "drawIcon"
 
-    .line 210
+    .line 212
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 211
+    .line 213
     invoke-direct {p0, p1}, Lcom/miui/home/recents/FloatingIconLayer;->draw(I)V
+
+    const/4 p1, 0x1
+
+    .line 214
+    iput-boolean p1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIsDrawIcon:Z
 
     return-void
 .end method
 
-.method public static synthetic lambda$release$0(Lcom/miui/home/recents/FloatingIconLayer;)V
+.method public static synthetic lambda$release$311(Lcom/miui/home/recents/FloatingIconLayer;)V
     .locals 5
 
-    .line 149
+    .line 151
     iget-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -761,14 +771,14 @@
 
     const-string v2, "release"
 
-    .line 150
+    .line 152
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 v1, 0x1
 
-    .line 152
+    .line 154
     :try_start_1
     new-array v2, v1, [Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
@@ -780,7 +790,7 @@
 
     invoke-direct {p0, v2}, Lcom/miui/home/recents/FloatingIconLayer;->releaseSurfaceControl([Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;)V
 
-    .line 153
+    .line 155
     new-array v1, v1, [Lcom/android/systemui/shared/recents/system/SurfaceCompat;
 
     iget-object v2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconSurface:Lcom/android/systemui/shared/recents/system/SurfaceCompat;
@@ -800,10 +810,10 @@
 
     const-string v2, "release error."
 
-    .line 155
+    .line 157
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
+    .line 159
     :goto_0
     monitor-exit v0
 
@@ -819,10 +829,10 @@
     throw v1
 .end method
 
-.method public static synthetic lambda$releaseSync$1(Lcom/miui/home/recents/FloatingIconLayer;Landroid/view/View;)V
+.method public static synthetic lambda$releaseSync$312(Lcom/miui/home/recents/FloatingIconLayer;Landroid/view/View;)V
     .locals 5
 
-    .line 178
+    .line 180
     iget-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
@@ -832,14 +842,14 @@
 
     const-string v2, "releaseSync"
 
-    .line 179
+    .line 181
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p1, :cond_0
 
     const/4 v1, 0x1
 
-    .line 181
+    .line 183
     new-array v2, v1, [Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     iget-object v3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconSurfaceControl:Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
@@ -850,7 +860,7 @@
 
     invoke-direct {p0, p1, v2}, Lcom/miui/home/recents/FloatingIconLayer;->releaseSurfaceControlSync(Landroid/view/View;[Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;)V
 
-    .line 182
+    .line 184
     new-array p1, v1, [Lcom/android/systemui/shared/recents/system/SurfaceCompat;
 
     iget-object v1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconSurface:Lcom/android/systemui/shared/recents/system/SurfaceCompat;
@@ -861,11 +871,11 @@
 
     goto :goto_0
 
-    .line 184
+    .line 186
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/recents/FloatingIconLayer;->release()V
 
-    .line 186
+    .line 188
     :goto_0
     monitor-exit v0
 
@@ -884,7 +894,7 @@
 .method private varargs releaseSurface([Lcom/android/systemui/shared/recents/system/SurfaceCompat;)V
     .locals 3
 
-    .line 169
+    .line 171
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -896,7 +906,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 171
+    .line 173
     invoke-virtual {v2}, Lcom/android/systemui/shared/recents/system/SurfaceCompat;->release()V
 
     :cond_0
@@ -911,7 +921,7 @@
 .method private varargs releaseSurfaceControl([Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;)V
     .locals 4
 
-    .line 162
+    .line 164
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -921,7 +931,7 @@
 
     aget-object v2, p1, v1
 
-    .line 163
+    .line 165
     iget-object v3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mTransaction:Lcom/android/systemui/shared/recents/system/TransactionCompat;
 
     invoke-virtual {v3, v2}, Lcom/android/systemui/shared/recents/system/TransactionCompat;->remove(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;)Lcom/android/systemui/shared/recents/system/TransactionCompat;
@@ -930,7 +940,7 @@
 
     goto :goto_0
 
-    .line 165
+    .line 167
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mTransaction:Lcom/android/systemui/shared/recents/system/TransactionCompat;
 
@@ -942,17 +952,17 @@
 .method private varargs releaseSurfaceControlSync(Landroid/view/View;[Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;)V
     .locals 13
 
-    .line 192
+    .line 194
     new-instance v0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
     invoke-direct {v0, p1}, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;-><init>(Landroid/view/View;)V
 
-    .line 193
+    .line 195
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 194
+    .line 196
     array-length v1, p2
 
     const/4 v2, 0x0
@@ -966,14 +976,14 @@
 
     if-eqz v5, :cond_0
 
-    .line 195
+    .line 197
     invoke-virtual {v5}, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->isValid()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 196
+    .line 198
     new-instance v12, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams;
 
     const/4 v6, 0x0
@@ -999,7 +1009,7 @@
 
     goto :goto_0
 
-    .line 199
+    .line 201
     :cond_1
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -1007,7 +1017,7 @@
 
     if-nez p2, :cond_2
 
-    .line 200
+    .line 202
     new-array p2, v2, [Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams;
 
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -1025,12 +1035,12 @@
 .method private setMatrixAndClip(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Landroid/graphics/RectF;)V
     .locals 4
 
-    .line 289
+    .line 295
     iget-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mModifiedRectF:Landroid/graphics/RectF;
 
     invoke-virtual {v0, p2}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 290
+    .line 296
     invoke-virtual {p2}, Landroid/graphics/RectF;->height()F
 
     move-result v0
@@ -1051,7 +1061,7 @@
 
     if-lez v2, :cond_0
 
-    .line 292
+    .line 298
     iget-object v2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mModifiedRectF:Landroid/graphics/RectF;
 
     iget v3, v2, Landroid/graphics/RectF;->left:F
@@ -1060,7 +1070,7 @@
 
     iput v3, v2, Landroid/graphics/RectF;->left:F
 
-    .line 293
+    .line 299
     iget-object v2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mModifiedRectF:Landroid/graphics/RectF;
 
     iget v3, v2, Landroid/graphics/RectF;->right:F
@@ -1069,7 +1079,7 @@
 
     iput v3, v2, Landroid/graphics/RectF;->right:F
 
-    .line 295
+    .line 301
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mValidIconRectF:Landroid/graphics/RectF;
 
@@ -1077,7 +1087,7 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/RectF;->roundOut(Landroid/graphics/Rect;)V
 
-    .line 297
+    .line 303
     invoke-virtual {p2}, Landroid/graphics/RectF;->width()F
 
     move-result v0
@@ -1094,7 +1104,7 @@
 
     iput v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mCurRectRatio:F
 
-    .line 298
+    .line 304
     iget p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mCurRectRatio:F
 
     cmpg-float v0, p2, v2
@@ -1105,7 +1115,7 @@
 
     div-float/2addr v2, v1
 
-    .line 299
+    .line 305
     iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mClipRect:Landroid/graphics/Rect;
 
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
@@ -1118,20 +1128,20 @@
 
     float-to-int p2, v2
 
-    .line 300
+    .line 306
     iget-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mClipRect:Landroid/graphics/Rect;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p2, v1}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 303
+    .line 309
     :cond_1
     iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p2}, Landroid/graphics/Matrix;->reset()V
 
-    .line 304
+    .line 310
     iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mMatrix:Landroid/graphics/Matrix;
 
     iget-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mValidIconRectF:Landroid/graphics/RectF;
@@ -1142,14 +1152,14 @@
 
     invoke-virtual {p2, v0, v1, v2}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
 
-    .line 305
+    .line 311
     iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mTransaction:Lcom/android/systemui/shared/recents/system/TransactionCompat;
 
     iget-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p2, p1, v0}, Lcom/android/systemui/shared/recents/system/TransactionCompat;->setMatrix(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Landroid/graphics/Matrix;)Lcom/android/systemui/shared/recents/system/TransactionCompat;
 
-    .line 306
+    .line 312
     iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mTransaction:Lcom/android/systemui/shared/recents/system/TransactionCompat;
 
     iget-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mClipRect:Landroid/graphics/Rect;
@@ -1162,7 +1172,7 @@
 .method private showSurfaceControl(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Landroid/graphics/RectF;FF)V
     .locals 4
 
-    .line 263
+    .line 269
     iget-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconSurfaceControl:Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     if-eqz v0, :cond_3
@@ -1177,14 +1187,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 264
+    .line 270
     invoke-virtual {v0}, Lcom/android/systemui/shared/recents/system/SurfaceCompat;->isValid()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 265
+    .line 271
     iget-boolean v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIsNeedReparent:Z
 
     const/4 v1, 0x1
@@ -1195,28 +1205,28 @@
 
     if-eqz v0, :cond_1
 
-    .line 266
+    .line 272
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutIcon;
 
-    .line 267
+    .line 273
     invoke-static {v0}, Lcom/android/systemui/shared/recents/system/SurfaceControlUtils;->getSurfaceControlCompat(Landroid/view/View;)Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 268
+    .line 274
     invoke-virtual {v0}, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->isValid()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 269
+    .line 275
     iget v2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mReparentDelayCount:I
 
     sget v3, Lcom/miui/home/recents/FloatingIconLayer;->REPARENT_DELAY_COUNT:I
@@ -1225,12 +1235,12 @@
 
     add-int/2addr v2, v1
 
-    .line 270
+    .line 276
     iput v2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mReparentDelayCount:I
 
     goto :goto_0
 
-    .line 272
+    .line 278
     :cond_0
     iget-object v2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mTransaction:Lcom/android/systemui/shared/recents/system/TransactionCompat;
 
@@ -1240,24 +1250,24 @@
 
     const/4 v0, 0x0
 
-    .line 273
+    .line 279
     iput-boolean v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIsNeedReparent:Z
 
-    .line 277
+    .line 283
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconSurfaceControl:Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     invoke-direct {p0, v0, p2}, Lcom/miui/home/recents/FloatingIconLayer;->setMatrixAndClip(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Landroid/graphics/RectF;)V
 
-    .line 278
+    .line 284
     iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mTransaction:Lcom/android/systemui/shared/recents/system/TransactionCompat;
 
     iget-object v0, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconSurfaceControl:Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     invoke-virtual {p2, v0, p3}, Lcom/android/systemui/shared/recents/system/TransactionCompat;->setCornerRadius(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;F)Lcom/android/systemui/shared/recents/system/TransactionCompat;
 
-    .line 279
+    .line 285
     iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mTransaction:Lcom/android/systemui/shared/recents/system/TransactionCompat;
 
     iget-object p3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconSurfaceControl:Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
@@ -1278,21 +1288,21 @@
 
     if-eqz p1, :cond_2
 
-    .line 280
+    .line 286
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->isValid()Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 281
+    .line 287
     iget-object p2, p0, Lcom/miui/home/recents/FloatingIconLayer;->mTransaction:Lcom/android/systemui/shared/recents/system/TransactionCompat;
 
     iget-object p3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mFloatingIconSurfaceControl:Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     invoke-virtual {p2, p3, p1, v1}, Lcom/android/systemui/shared/recents/system/TransactionCompat;->setRelativeLayer(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;I)Lcom/android/systemui/shared/recents/system/TransactionCompat;
 
-    .line 283
+    .line 289
     :cond_2
     iget-object p1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mTransaction:Lcom/android/systemui/shared/recents/system/TransactionCompat;
 
@@ -1300,7 +1310,7 @@
 
     invoke-virtual {p1, p2}, Lcom/android/systemui/shared/recents/system/TransactionCompat;->show(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;)Lcom/android/systemui/shared/recents/system/TransactionCompat;
 
-    .line 285
+    .line 291
     :cond_3
     iget-object p1, p0, Lcom/miui/home/recents/FloatingIconLayer;->mTransaction:Lcom/android/systemui/shared/recents/system/TransactionCompat;
 
@@ -1316,7 +1326,7 @@
 
     const/4 v0, 0x0
 
-    .line 205
+    .line 207
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/FloatingIconLayer;->drawIcon(I)V
 
     return-void
@@ -1325,12 +1335,12 @@
 .method public drawIcon(I)V
     .locals 2
 
-    .line 209
+    .line 211
     sget-object v0, Lcom/miui/home/recents/FloatingIconLayer;->FLOATING_ICON_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$9kRGCcPPgIqzX3cs6s-WLK-n0VQ;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$ZhRymNOq2RLQ75Oafhv4pPWG0N8;
 
-    invoke-direct {v1, p0, p1}, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$9kRGCcPPgIqzX3cs6s-WLK-n0VQ;-><init>(Lcom/miui/home/recents/FloatingIconLayer;I)V
+    invoke-direct {v1, p0, p1}, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$ZhRymNOq2RLQ75Oafhv4pPWG0N8;-><init>(Lcom/miui/home/recents/FloatingIconLayer;I)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 
@@ -1340,12 +1350,12 @@
 .method public release()V
     .locals 2
 
-    .line 148
+    .line 150
     sget-object v0, Lcom/miui/home/recents/FloatingIconLayer;->FLOATING_ICON_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$5u8LAS4MlvSn3aaeGgSK0v7wWjs;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$fkRYruDhdgK_hrOeqRDsH5chnac;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$5u8LAS4MlvSn3aaeGgSK0v7wWjs;-><init>(Lcom/miui/home/recents/FloatingIconLayer;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$fkRYruDhdgK_hrOeqRDsH5chnac;-><init>(Lcom/miui/home/recents/FloatingIconLayer;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 
@@ -1355,12 +1365,12 @@
 .method public releaseSync(Landroid/view/View;)V
     .locals 2
 
-    .line 177
+    .line 179
     sget-object v0, Lcom/miui/home/recents/FloatingIconLayer;->FLOATING_ICON_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$21FlMXAC1lfKuRhN-cOHC6ogAJA;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$EgCS1Td00MWYQWwbDMdwxlN3z0Q;
 
-    invoke-direct {v1, p0, p1}, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$21FlMXAC1lfKuRhN-cOHC6ogAJA;-><init>(Lcom/miui/home/recents/FloatingIconLayer;Landroid/view/View;)V
+    invoke-direct {v1, p0, p1}, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$EgCS1Td00MWYQWwbDMdwxlN3z0Q;-><init>(Lcom/miui/home/recents/FloatingIconLayer;Landroid/view/View;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 
@@ -1370,34 +1380,42 @@
 .method public showFloatingIcon(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Landroid/graphics/RectF;FFF)V
     .locals 1
 
-    .line 254
+    .line 257
+    iget-boolean p3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mIsDrawIcon:Z
+
+    if-nez p3, :cond_0
+
+    return-void
+
+    .line 260
+    :cond_0
     iget-object p3, p0, Lcom/miui/home/recents/FloatingIconLayer;->mLock:Ljava/lang/Object;
 
     monitor-enter p3
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_2
 
-    .line 255
+    .line 261
     :try_start_0
     invoke-virtual {p2}, Landroid/graphics/RectF;->isEmpty()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     goto :goto_0
 
-    .line 258
-    :cond_0
+    .line 264
+    :cond_1
     invoke-direct {p0, p1, p2, p4, p5}, Lcom/miui/home/recents/FloatingIconLayer;->showSurfaceControl(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Landroid/graphics/RectF;FF)V
 
-    .line 259
+    .line 265
     monitor-exit p3
 
     return-void
 
-    .line 256
-    :cond_1
+    .line 262
+    :cond_2
     :goto_0
     monitor-exit p3
 
@@ -1406,7 +1424,7 @@
     :catchall_0
     move-exception p1
 
-    .line 259
+    .line 265
     monitor-exit p3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

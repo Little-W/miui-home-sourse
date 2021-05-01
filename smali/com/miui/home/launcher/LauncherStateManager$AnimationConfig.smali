@@ -34,7 +34,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 389
+    .line 393
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
@@ -43,7 +43,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;)Landroid/animation/AnimatorSet;
     .locals 0
 
-    .line 389
+    .line 393
     iget-object p0, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mCurrentAnimation:Landroid/animation/AnimatorSet;
 
     return-object p0
@@ -52,7 +52,7 @@
 .method static synthetic access$002(Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
     .locals 0
 
-    .line 389
+    .line 393
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mCurrentAnimation:Landroid/animation/AnimatorSet;
 
     return-object p1
@@ -61,7 +61,7 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;)Lcom/miui/home/launcher/LauncherState;
     .locals 0
 
-    .line 389
+    .line 393
     iget-object p0, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mTargetState:Lcom/miui/home/launcher/LauncherState;
 
     return-object p0
@@ -80,7 +80,7 @@
 
     const/4 v0, 0x0
 
-    .line 457
+    .line 469
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
     return-void
@@ -91,12 +91,12 @@
 .method public getPropertySetter(Lcom/miui/home/launcher/anim/AnimatorSetBuilder;)Lcom/miui/home/launcher/anim/PropertySetter;
     .locals 4
 
-    .line 426
+    .line 438
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mPropertySetter:Lcom/miui/home/launcher/anim/PropertySetter;
 
     if-nez v0, :cond_1
 
-    .line 427
+    .line 439
     iget-wide v0, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->duration:J
 
     const-wide/16 v2, 0x0
@@ -119,7 +119,7 @@
     :goto_0
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mPropertySetter:Lcom/miui/home/launcher/anim/PropertySetter;
 
-    .line 430
+    .line 442
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mPropertySetter:Lcom/miui/home/launcher/anim/PropertySetter;
 
@@ -129,7 +129,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 435
+    .line 447
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->playbackController:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     const/4 v1, 0x0
@@ -142,16 +142,16 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 436
+    .line 448
     iput-object v1, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->playbackController:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
-    .line 438
+    .line 450
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mCurrentAnimation:Landroid/animation/AnimatorSet;
 
     if-ne v0, p1, :cond_1
 
-    .line 439
+    .line 451
     iput-object v1, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mCurrentAnimation:Landroid/animation/AnimatorSet;
 
     :cond_1
@@ -163,74 +163,103 @@
 
     const-wide/16 v0, 0x0
 
-    .line 403
+    .line 407
     iput-wide v0, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->duration:J
 
     const/4 v2, 0x0
 
-    .line 404
+    .line 408
     iput-boolean v2, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->userControlled:Z
 
     const/4 v2, 0x0
 
-    .line 405
+    .line 409
     iput-object v2, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mPropertySetter:Lcom/miui/home/launcher/anim/PropertySetter;
 
-    .line 406
+    .line 410
     iput-object v2, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mTargetState:Lcom/miui/home/launcher/LauncherState;
 
-    .line 408
+    .line 412
     iget-object v3, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->playbackController:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     if-eqz v3, :cond_0
 
-    .line 409
+    .line 413
     invoke-virtual {v3}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->getAnimationPlayer()Landroid/animation/ValueAnimator;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 410
+    .line 414
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->playbackController:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->dispatchOnCancel()V
 
     goto :goto_0
 
-    .line 411
+    .line 415
     :cond_0
     iget-object v3, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mCurrentAnimation:Landroid/animation/AnimatorSet;
 
     if-eqz v3, :cond_1
 
-    .line 412
+    .line 416
     invoke-virtual {v3, v0, v1}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 413
+    .line 417
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mCurrentAnimation:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 416
+    .line 420
     :cond_1
     :goto_0
     iput-object v2, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mCurrentAnimation:Landroid/animation/AnimatorSet;
 
-    .line 417
+    .line 421
     iput-object v2, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->playbackController:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
-    .line 419
+    .line 423
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
     if-eqz v0, :cond_2
 
-    .line 420
+    .line 424
     invoke-virtual {v0}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;->cancel()V
 
-    .line 422
+    .line 426
     :cond_2
     iput-object v2, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
+
+    return-void
+.end method
+
+.method public resetPlaybackController()V
+    .locals 1
+
+    .line 430
+    iget-object v0, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->playbackController:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
+
+    if-eqz v0, :cond_0
+
+    .line 431
+    invoke-virtual {v0}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->getAnimationPlayer()Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
+
+    .line 432
+    iget-object v0, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->playbackController:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->dispatchOnCancel()V
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 434
+    iput-object v0, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->playbackController:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     return-void
 .end method
@@ -238,13 +267,13 @@
 .method public setAnimation(Landroid/animation/AnimatorSet;Lcom/miui/home/launcher/LauncherState;)V
     .locals 0
 
-    .line 444
+    .line 456
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mCurrentAnimation:Landroid/animation/AnimatorSet;
 
-    .line 445
+    .line 457
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mTargetState:Lcom/miui/home/launcher/LauncherState;
 
-    .line 446
+    .line 458
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mCurrentAnimation:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p1, p0}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
@@ -255,15 +284,15 @@
 .method public setDetector(Lcom/miui/home/recents/util/MultiAnimationEndDetector;)V
     .locals 1
 
-    .line 450
+    .line 462
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
-    .line 451
+    .line 463
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->mDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
     if-eqz p1, :cond_0
 
-    .line 452
+    .line 464
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$LauncherStateManager$AnimationConfig$8v-ugi0eScLLHsXcxPNF7E11lgY;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$LauncherStateManager$AnimationConfig$8v-ugi0eScLLHsXcxPNF7E11lgY;-><init>(Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;)V

@@ -37,7 +37,7 @@
 .method getDrawableResource()I
     .locals 1
 
-    const v0, 0x7f08012e
+    const v0, 0x7f08013f
 
     return v0
 .end method

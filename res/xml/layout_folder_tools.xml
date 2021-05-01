@@ -1,26 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto">
-    <favorite launcher:className="com.android.contacts.activities.PeopleActivity" launcher:container="1" launcher:packageName="com.android.contacts" launcher:x="0" launcher:y="0" />
-    <favorite launcher:className="com.miui.calculator.cal.CalculatorActivity" launcher:container="1" launcher:packageName="com.miui.calculator" launcher:x="1" launcher:y="0" />
-    <favorite launcher:className="com.android.email.activity.Welcome" launcher:container="1" launcher:packageName="com.android.email" launcher:x="3" launcher:y="0" />
-    <favorite launcher:className="com.android.deskclock.DeskClockTabActivity" launcher:container="1" launcher:packageName="com.android.deskclock" launcher:x="4" launcher:y="0" />
-    <favorite launcher:className="com.android.soundrecorder.SoundRecorder" launcher:container="1" launcher:packageName="com.android.soundrecorder" launcher:x="6" launcher:y="0" />
-    <favorite launcher:className="com.miui.screenrecorder.activity.ScreenRecorderHomeActivity" launcher:container="1" launcher:packageName="com.miui.screenrecorder" launcher:x="7" launcher:y="0" />
-    <favorite launcher:className="com.miui.compass.CompassActivity" launcher:container="1" launcher:packageName="com.miui.compass" launcher:x="8" launcher:y="0" />
-    <favorite launcher:className="com.android.updater.MainActivity" launcher:container="1" launcher:packageName="com.android.updater" launcher:x="9" launcher:y="0" />
-    <favorite launcher:className="com.xiaomi.mitv.phone.remotecontroller.HoriWidgetMainActivityV2" launcher:container="1" launcher:packageName="com.duokan.phone.remotecontroller" launcher:x="10" launcher:y="0" />
-    <favorite launcher:className="com.xiaomi.scanner.app.ScanActivity" launcher:container="1" launcher:packageName="com.xiaomi.scanner" launcher:x="11" launcher:y="0" />
-    <favorite launcher:className="com.android.providers.downloads.ui.DownloadList" launcher:container="1" launcher:packageName="com.android.providers.downloads.ui" launcher:x="12" launcher:y="0" />
-    <favorite launcher:className="com.miui.voiceassist.CTAAlertActivity" launcher:container="1" launcher:packageName="com.miui.voiceassist" launcher:x="13" launcher:y="0" />
-    <favorite launcher:className="com.xiaomi.voiceassistant.LauncherRouterActivity" launcher:container="1" launcher:packageName="com.miui.voiceassist" launcher:x="13" launcher:y="0" />
-    <favorite launcher:className="com.miui.virtualsim.ui.MainActivity" launcher:container="1" launcher:packageName="com.miui.virtualsim" launcher:x="14" launcher:y="0" />
-    <favorite launcher:className="com.mi.misupport.activity.MainActivity" launcher:container="1" launcher:packageName="com.mi.misupport" launcher:x="15" launcher:y="0" />
-    <favorite launcher:className="com.miui.bugreport.ui.MainTabActivity" launcher:container="1" launcher:packageName="com.miui.bugreport" launcher:x="16" launcher:y="0" />
-    <favorite launcher:className="com.miui.fmradio.FmActivity" launcher:container="1" launcher:packageName="com.miui.fm" launcher:x="17" launcher:y="0" />
-    <favorite launcher:className="com.xiaomi.tag.MiTagActivity" launcher:container="1" launcher:packageName="com.xiaomi.tag" launcher:x="18" launcher:y="0" />
-    <favorite launcher:className="cn.com.smartdevices.bracelet.activity.MainActivity" launcher:container="1" launcher:packageName="com.xiaomi.hm.health" launcher:x="19" launcher:y="0" />
-    <favorite launcher:className="com.android.stk.StkLauncherActivity" launcher:container="1" launcher:packageName="com.android.stk" launcher:retained="true" launcher:x="20" launcher:y="0" />
-    <favorite launcher:className="com.android.stk.StkLauncherActivity2" launcher:container="1" launcher:packageName="com.android.stk" launcher:retained="true" launcher:x="21" launcher:y="0" />
-    <favorite launcher:className="com.mi.vtalk.business.activity.loginActivity" launcher:container="1" launcher:packageName="com.mi.vtalk" launcher:retained="true" launcher:x="22" launcher:y="0" />
-    <favorite launcher:className="com.miui.huanji.MainActivity" launcher:container="1" launcher:packageName="com.miui.huanji" launcher:x="23" launcher:y="0" />
+<favorites
+    xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <favorite
+        launcher:className="com.android.contacts.activities.PeopleActivity"
+        launcher:container="1"
+        launcher:packageName="com.android.contacts"
+        launcher:x="0"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.miui.calculator.cal.CalculatorActivity"
+        launcher:container="1"
+        launcher:packageName="com.miui.calculator"
+        launcher:x="1"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.android.email.activity.Welcome"
+        launcher:container="1"
+        launcher:packageName="com.android.email"
+        launcher:x="3"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.android.deskclock.DeskClockTabActivity"
+        launcher:container="1"
+        launcher:packageName="com.android.deskclock"
+        launcher:x="4"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.android.soundrecorder.SoundRecorder"
+        launcher:container="1"
+        launcher:packageName="com.android.soundrecorder"
+        launcher:x="6"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.miui.screenrecorder.activity.ScreenRecorderHomeActivity"
+        launcher:container="1"
+        launcher:packageName="com.miui.screenrecorder"
+        launcher:x="7"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.miui.compass.CompassActivity"
+        launcher:container="1"
+        launcher:packageName="com.miui.compass"
+        launcher:x="8"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.android.updater.MainActivity"
+        launcher:container="1"
+        launcher:packageName="com.android.updater"
+        launcher:x="9"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.xiaomi.mitv.phone.remotecontroller.HoriWidgetMainActivityV2"
+        launcher:container="1"
+        launcher:packageName="com.duokan.phone.remotecontroller"
+        launcher:x="10"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.xiaomi.scanner.app.ScanActivity"
+        launcher:container="1"
+        launcher:packageName="com.xiaomi.scanner"
+        launcher:x="11"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.android.providers.downloads.ui.DownloadList"
+        launcher:container="1"
+        launcher:packageName="com.android.providers.downloads.ui"
+        launcher:x="12"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.miui.voiceassist.CTAAlertActivity"
+        launcher:container="1"
+        launcher:packageName="com.miui.voiceassist"
+        launcher:x="13"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.xiaomi.voiceassistant.LauncherRouterActivity"
+        launcher:container="1"
+        launcher:packageName="com.miui.voiceassist"
+        launcher:x="13"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.miui.virtualsim.ui.MainActivity"
+        launcher:container="1"
+        launcher:packageName="com.miui.virtualsim"
+        launcher:x="14"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.mi.misupport.activity.MainActivity"
+        launcher:container="1"
+        launcher:packageName="com.mi.misupport"
+        launcher:x="15"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.miui.bugreport.ui.MainTabActivity"
+        launcher:container="1"
+        launcher:packageName="com.miui.bugreport"
+        launcher:x="16"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.miui.fmradio.FmActivity"
+        launcher:container="1"
+        launcher:packageName="com.miui.fm"
+        launcher:x="17"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.xiaomi.tag.MiTagActivity"
+        launcher:container="1"
+        launcher:packageName="com.xiaomi.tag"
+        launcher:x="18"
+        launcher:y="0" />
+    <favorite
+        launcher:className="cn.com.smartdevices.bracelet.activity.MainActivity"
+        launcher:container="1"
+        launcher:packageName="com.xiaomi.hm.health"
+        launcher:x="19"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.android.stk.StkLauncherActivity"
+        launcher:container="1"
+        launcher:packageName="com.android.stk"
+        launcher:retained="true"
+        launcher:x="20"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.android.stk.StkLauncherActivity2"
+        launcher:container="1"
+        launcher:packageName="com.android.stk"
+        launcher:retained="true"
+        launcher:x="21"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.mi.vtalk.business.activity.loginActivity"
+        launcher:container="1"
+        launcher:packageName="com.mi.vtalk"
+        launcher:retained="true"
+        launcher:x="22"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.miui.huanji.MainActivity"
+        launcher:container="1"
+        launcher:packageName="com.miui.huanji"
+        launcher:x="23"
+        launcher:y="0" />
 </favorites>

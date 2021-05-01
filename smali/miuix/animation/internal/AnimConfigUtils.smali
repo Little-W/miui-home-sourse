@@ -1,13 +1,48 @@
-.class Lmiuix/animation/internal/AnimConfigUtils;
+.class public Lmiuix/animation/internal/AnimConfigUtils;
 .super Ljava/lang/Object;
 .source "AnimConfigUtils.java"
 
 
 # direct methods
+.method public static chooseSpeed(FF)F
+    .locals 2
+
+    float-to-double v0, p0
+
+    .line 40
+    invoke-static {v0, v1}, Lmiuix/animation/internal/AnimValueUtils;->isInvalid(D)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return p1
+
+    :cond_0
+    float-to-double v0, p1
+
+    .line 42
+    invoke-static {v0, v1}, Lmiuix/animation/internal/AnimValueUtils;->isInvalid(D)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    return p0
+
+    .line 45
+    :cond_1
+    invoke-static {p0, p1}, Ljava/lang/Math;->max(FF)F
+
+    move-result p0
+
+    return p0
+.end method
+
 .method static getDelay(Lmiuix/animation/base/AnimConfig;Lmiuix/animation/base/AnimSpecialConfig;)J
     .locals 2
 
-    .line 22
+    .line 25
     iget-wide v0, p0, Lmiuix/animation/base/AnimConfig;->delay:J
 
     if-eqz p1, :cond_0
@@ -32,7 +67,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 13
+    .line 16
     iget-object v0, p1, Lmiuix/animation/base/AnimSpecialConfig;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     if-eqz v0, :cond_0
@@ -43,19 +78,19 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 14
+    .line 17
     iget-object p0, p1, Lmiuix/animation/base/AnimSpecialConfig;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     goto :goto_0
 
-    .line 16
+    .line 19
     :cond_0
     iget-object p0, p0, Lmiuix/animation/base/AnimConfig;->ease:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     :goto_0
     if-nez p0, :cond_1
 
-    .line 18
+    .line 21
     sget-object p0, Lmiuix/animation/base/AnimConfig;->sDefEase:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     :cond_1
@@ -67,21 +102,23 @@
 
     if-eqz p1, :cond_0
 
-    .line 30
+    .line 33
     iget v0, p1, Lmiuix/animation/base/AnimSpecialConfig;->fromSpeed:F
 
-    const v1, 0x7f7fffff    # Float.MAX_VALUE
+    float-to-double v0, v0
 
-    cmpl-float v0, v0, v1
+    invoke-static {v0, v1}, Lmiuix/animation/internal/AnimValueUtils;->isInvalid(D)Z
 
-    if-eqz v0, :cond_0
+    move-result v0
 
-    .line 31
+    if-nez v0, :cond_0
+
+    .line 34
     iget p0, p1, Lmiuix/animation/base/AnimSpecialConfig;->fromSpeed:F
 
     return p0
 
-    .line 33
+    .line 36
     :cond_0
     iget p0, p0, Lmiuix/animation/base/AnimConfig;->fromSpeed:F
 
@@ -91,7 +128,7 @@
 .method static getTintMode(Lmiuix/animation/base/AnimConfig;Lmiuix/animation/base/AnimSpecialConfig;)I
     .locals 0
 
-    .line 26
+    .line 29
     iget p0, p0, Lmiuix/animation/base/AnimConfig;->tintMode:I
 
     if-eqz p1, :cond_0

@@ -37,7 +37,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 54
+    .line 56
     new-instance v0, Lcom/miui/home/recents/util/Utilities$1;
 
     const-string v1, "drawableAlpha"
@@ -46,7 +46,7 @@
 
     sput-object v0, Lcom/miui/home/recents/util/Utilities;->DRAWABLE_ALPHA:Landroid/util/Property;
 
-    .line 67
+    .line 69
     new-instance v0, Lcom/miui/home/recents/util/Utilities$2;
 
     const-class v1, Landroid/graphics/Rect;
@@ -57,7 +57,7 @@
 
     sput-object v0, Lcom/miui/home/recents/util/Utilities;->DRAWABLE_RECT:Landroid/util/Property;
 
-    .line 80
+    .line 82
     new-instance v0, Landroid/animation/RectEvaluator;
 
     new-instance v1, Landroid/graphics/Rect;
@@ -70,10 +70,10 @@
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 310
+    .line 312
     sput v0, Lcom/miui/home/recents/util/Utilities;->sTaskViewScale:F
 
-    .line 324
+    .line 326
     sput v0, Lcom/miui/home/recents/util/Utilities;->sTaskViewRadius:F
 
     return-void
@@ -84,17 +84,17 @@
 
     if-eqz p0, :cond_0
 
-    .line 169
+    .line 171
     invoke-virtual {p0}, Landroid/animation/Animator;->isStarted()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 170
+    .line 172
     invoke-static {p0}, Lcom/miui/home/recents/util/Utilities;->removeAnimationListenersRecursive(Landroid/animation/Animator;)V
 
-    .line 171
+    .line 173
     invoke-virtual {p0}, Landroid/animation/Animator;->cancel()V
 
     :cond_0
@@ -104,7 +104,7 @@
 .method public static clamp(FFF)F
     .locals 0
 
-    .line 86
+    .line 88
     invoke-static {p2, p0}, Ljava/lang/Math;->min(FF)F
 
     move-result p0
@@ -119,7 +119,7 @@
 .method public static clamp(III)I
     .locals 0
 
-    .line 93
+    .line 95
     invoke-static {p2, p0}, Ljava/lang/Math;->min(II)I
 
     move-result p0
@@ -134,7 +134,7 @@
 .method public static getAppConfiguration(Landroid/content/Context;)Landroid/content/res/Configuration;
     .locals 0
 
-    .line 231
+    .line 233
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
@@ -153,7 +153,7 @@
 .method public static getMiddleRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Landroid/graphics/RectF;
     .locals 5
 
-    .line 359
+    .line 361
     iget v0, p0, Landroid/graphics/RectF;->left:F
 
     iget v1, p1, Landroid/graphics/RectF;->left:F
@@ -164,7 +164,7 @@
 
     div-float/2addr v0, v1
 
-    .line 360
+    .line 362
     iget v2, p0, Landroid/graphics/RectF;->top:F
 
     iget v3, p1, Landroid/graphics/RectF;->top:F
@@ -173,7 +173,7 @@
 
     div-float/2addr v2, v1
 
-    .line 361
+    .line 363
     invoke-virtual {p0}, Landroid/graphics/RectF;->width()F
 
     move-result v3
@@ -186,7 +186,7 @@
 
     div-float/2addr v3, v1
 
-    .line 362
+    .line 364
     invoke-virtual {p0}, Landroid/graphics/RectF;->height()F
 
     move-result p0
@@ -199,7 +199,7 @@
 
     div-float/2addr p0, v1
 
-    .line 363
+    .line 365
     new-instance p1, Landroid/graphics/RectF;
 
     add-float/2addr v3, v0
@@ -218,7 +218,7 @@
 
     if-nez p0, :cond_1
 
-    .line 328
+    .line 330
     sget p0, Lcom/miui/home/recents/util/Utilities;->sTaskViewRadius:F
 
     cmpl-float v0, p0, v0
@@ -230,7 +230,7 @@
     :cond_0
     return p0
 
-    .line 330
+    .line 332
     :cond_1
     sget v1, Lcom/miui/home/recents/util/Utilities;->sTaskViewRadius:F
 
@@ -238,12 +238,12 @@
 
     if-nez v0, :cond_2
 
-    .line 331
+    .line 333
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070204
+    const v1, 0x7f070208
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -251,12 +251,12 @@
 
     int-to-float v0, v0
 
-    .line 333
+    .line 335
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f070203
+    const v2, 0x7f070207
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -264,7 +264,7 @@
 
     int-to-float v1, v1
 
-    .line 335
+    .line 337
     invoke-static {p0}, Lcom/miui/home/recents/util/Utilities;->getWindowCornerRadius(Landroid/content/Context;)F
 
     move-result v2
@@ -275,7 +275,7 @@
 
     mul-float/2addr v2, p0
 
-    .line 336
+    .line 338
     invoke-static {v0, v2}, Ljava/lang/Math;->max(FF)F
 
     move-result p0
@@ -286,7 +286,7 @@
 
     sput p0, Lcom/miui/home/recents/util/Utilities;->sTaskViewRadius:F
 
-    .line 338
+    .line 340
     :cond_2
     sget p0, Lcom/miui/home/recents/util/Utilities;->sTaskViewRadius:F
 
@@ -300,7 +300,7 @@
 
     if-nez p0, :cond_1
 
-    .line 314
+    .line 316
     sget p0, Lcom/miui/home/recents/util/Utilities;->sTaskViewScale:F
 
     cmpl-float v0, p0, v0
@@ -312,7 +312,7 @@
     :cond_0
     return p0
 
-    .line 316
+    .line 318
     :cond_1
     sget v1, Lcom/miui/home/recents/util/Utilities;->sTaskViewScale:F
 
@@ -320,30 +320,30 @@
 
     if-nez v0, :cond_2
 
-    .line 317
+    .line 319
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
-    .line 318
+    .line 320
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
-    const v1, 0x7f0701f8
+    const v1, 0x7f0701fc
 
     const/4 v2, 0x1
 
     invoke-virtual {p0, v1, v0, v2}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
 
-    .line 319
+    .line 321
     invoke-virtual {v0}, Landroid/util/TypedValue;->getFloat()F
 
     move-result p0
 
     sput p0, Lcom/miui/home/recents/util/Utilities;->sTaskViewScale:F
 
-    .line 321
+    .line 323
     :cond_2
     sget p0, Lcom/miui/home/recents/util/Utilities;->sTaskViewScale:F
 
@@ -359,7 +359,7 @@
 
     return v0
 
-    .line 294
+    .line 296
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -379,7 +379,7 @@
 
     if-lez v1, :cond_1
 
-    .line 296
+    .line 298
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -395,7 +395,7 @@
     :cond_1
     move v1, v2
 
-    .line 298
+    .line 300
     :goto_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -413,7 +413,7 @@
 
     if-lez v3, :cond_2
 
-    .line 300
+    .line 302
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -453,16 +453,69 @@
 .method public static isAddRecentsRecommend()Z
     .locals 1
 
-    .line 281
+    .line 283
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
+    return v0
+.end method
+
+.method public static isAddToLauncher(Landroid/view/View;)Z
+    .locals 2
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_3
+
+    .line 369
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    .line 372
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    .line 373
+    instance-of v1, p0, Lcom/miui/home/launcher/Launcher;
+
+    if-nez v1, :cond_1
+
+    instance-of v1, p0, Landroid/content/ContextWrapper;
+
+    if-eqz v1, :cond_2
+
+    check-cast p0, Landroid/content/ContextWrapper;
+
+    .line 374
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    instance-of p0, p0, Lcom/miui/home/launcher/Launcher;
+
+    if-eqz p0, :cond_2
+
+    :cond_1
+    const/4 v0, 0x1
+
+    :cond_2
+    return v0
+
+    :cond_3
+    :goto_0
     return v0
 .end method
 
 .method public static isDescendentAccessibilityFocused(Landroid/view/View;)Z
     .locals 5
 
-    .line 210
+    .line 212
     invoke-virtual {p0}, Landroid/view/View;->isAccessibilityFocused()Z
 
     move-result v0
@@ -473,7 +526,7 @@
 
     return v1
 
-    .line 214
+    .line 216
     :cond_0
     instance-of v0, p0, Landroid/view/ViewGroup;
 
@@ -481,10 +534,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 215
+    .line 217
     check-cast p0, Landroid/view/ViewGroup;
 
-    .line 216
+    .line 218
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -494,7 +547,7 @@
     :goto_0
     if-ge v3, v0, :cond_2
 
-    .line 218
+    .line 220
     invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
@@ -519,7 +572,7 @@
 .method public static isForceFSGNavBar(Landroid/content/Context;)Z
     .locals 1
 
-    .line 355
+    .line 357
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -536,7 +589,7 @@
 .method public static isHideGestureLine(Landroid/content/Context;)Z
     .locals 2
 
-    .line 350
+    .line 352
     invoke-static {p0}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->isUseGestureVersion3(Landroid/content/Context;)Z
 
     move-result v0
@@ -545,7 +598,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 351
+    .line 353
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -572,7 +625,7 @@
 
     if-nez p0, :cond_0
 
-    .line 271
+    .line 273
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -581,7 +634,7 @@
 
     return v0
 
-    .line 273
+    .line 275
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -616,12 +669,12 @@
         }
     .end annotation
 
-    .line 193
+    .line 195
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 194
+    .line 196
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -631,7 +684,7 @@
     :goto_0
     if-ge v0, p0, :cond_1
 
-    .line 198
+    .line 200
     new-instance v1, Lcom/miui/home/recents/views/TaskViewTransform;
 
     invoke-direct {v1}, Lcom/miui/home/recents/views/TaskViewTransform;-><init>()V
@@ -645,7 +698,7 @@
     :cond_0
     if-le v0, p0, :cond_1
 
-    .line 202
+    .line 204
     invoke-interface {p1, p0, v0}, Ljava/util/List;->subList(II)Ljava/util/List;
 
     move-result-object p0
@@ -659,12 +712,12 @@
 .method public static removeAnimationListenersRecursive(Landroid/animation/Animator;)V
     .locals 3
 
-    .line 179
+    .line 181
     instance-of v0, p0, Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_0
 
-    .line 180
+    .line 182
     move-object v0, p0
 
     check-cast v0, Landroid/animation/AnimatorSet;
@@ -673,7 +726,7 @@
 
     move-result-object v0
 
-    .line 181
+    .line 183
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -683,7 +736,7 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 182
+    .line 184
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -696,7 +749,7 @@
 
     goto :goto_0
 
-    .line 185
+    .line 187
     :cond_0
     invoke-virtual {p0}, Landroid/animation/Animator;->removeAllListeners()V
 
@@ -712,12 +765,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 140
+    .line 142
     invoke-virtual {p0}, Landroid/graphics/Rect;->centerX()I
 
     move-result v0
 
-    .line 141
+    .line 143
     invoke-virtual {p0}, Landroid/graphics/Rect;->centerY()I
 
     move-result v1
@@ -726,10 +779,10 @@
 
     neg-int v3, v1
 
-    .line 142
+    .line 144
     invoke-virtual {p0, v2, v3}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 143
+    .line 145
     iget v2, p0, Landroid/graphics/Rect;->left:I
 
     int-to-float v2, v2
@@ -740,7 +793,7 @@
 
     iput v2, p0, Landroid/graphics/Rect;->left:I
 
-    .line 144
+    .line 146
     iget v2, p0, Landroid/graphics/Rect;->top:I
 
     int-to-float v2, v2
@@ -751,7 +804,7 @@
 
     iput v2, p0, Landroid/graphics/Rect;->top:I
 
-    .line 145
+    .line 147
     iget v2, p0, Landroid/graphics/Rect;->right:I
 
     int-to-float v2, v2
@@ -762,7 +815,7 @@
 
     iput v2, p0, Landroid/graphics/Rect;->right:I
 
-    .line 146
+    .line 148
     iget v2, p0, Landroid/graphics/Rect;->bottom:I
 
     int-to-float v2, v2
@@ -773,7 +826,7 @@
 
     iput p1, p0, Landroid/graphics/Rect;->bottom:I
 
-    .line 147
+    .line 149
     invoke-virtual {p0, v0, v1}, Landroid/graphics/Rect;->offset(II)V
 
     :cond_0
@@ -789,12 +842,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 127
+    .line 129
     invoke-virtual {p0}, Landroid/graphics/RectF;->centerX()F
 
     move-result v0
 
-    .line 128
+    .line 130
     invoke-virtual {p0}, Landroid/graphics/RectF;->centerY()F
 
     move-result v1
@@ -803,38 +856,38 @@
 
     neg-float v3, v1
 
-    .line 129
+    .line 131
     invoke-virtual {p0, v2, v3}, Landroid/graphics/RectF;->offset(FF)V
 
-    .line 130
+    .line 132
     iget v2, p0, Landroid/graphics/RectF;->left:F
 
     mul-float/2addr v2, p1
 
     iput v2, p0, Landroid/graphics/RectF;->left:F
 
-    .line 131
+    .line 133
     iget v2, p0, Landroid/graphics/RectF;->top:F
 
     mul-float/2addr v2, p1
 
     iput v2, p0, Landroid/graphics/RectF;->top:F
 
-    .line 132
+    .line 134
     iget v2, p0, Landroid/graphics/RectF;->right:F
 
     mul-float/2addr v2, p1
 
     iput v2, p0, Landroid/graphics/RectF;->right:F
 
-    .line 133
+    .line 135
     iget v2, p0, Landroid/graphics/RectF;->bottom:F
 
     mul-float/2addr v2, p1
 
     iput v2, p0, Landroid/graphics/RectF;->bottom:F
 
-    .line 134
+    .line 136
     invoke-virtual {p0, v0, v1}, Landroid/graphics/RectF;->offset(FF)V
 
     :cond_0
@@ -844,7 +897,7 @@
 .method public static setFitInsetsTypes(Landroid/view/WindowManager$LayoutParams;I)V
     .locals 7
 
-    .line 342
+    .line 344
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
@@ -853,7 +906,7 @@
 
     return-void
 
-    .line 345
+    .line 347
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -873,7 +926,7 @@
 
     aput-object v5, v4, v6
 
-    .line 346
+    .line 348
     invoke-static {v2, v4}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v2
@@ -886,7 +939,7 @@
 
     aput-object p1, v3, v6
 
-    .line 345
+    .line 347
     invoke-static {v0, p0, v1, v2, v3}, Lcom/miui/launcher/utils/ReflectUtils;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void

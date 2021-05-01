@@ -28,12 +28,12 @@
 .method constructor <init>(Lmiuix/spring/view/SpringHelper;I)V
     .locals 0
 
-    .line 114
+    .line 128
     iput-object p1, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->this$0:Lmiuix/spring/view/SpringHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 115
+    .line 129
     iput p2, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mAxis:I
 
     return-void
@@ -42,14 +42,14 @@
 .method private obtainSpringBackDistance(F)F
     .locals 7
 
-    .line 199
+    .line 218
     invoke-virtual {p0}, Lmiuix/spring/view/SpringHelper$AxisHandler;->getSize()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 201
+    .line 220
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
@@ -60,7 +60,7 @@
 
     return p1
 
-    .line 203
+    .line 222
     :cond_0
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
@@ -80,7 +80,7 @@
 
     const-wide/high16 v3, 0x4008000000000000L    # 3.0
 
-    .line 204
+    .line 223
     invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v5
@@ -107,16 +107,16 @@
 .method private pull(I[IZ)V
     .locals 2
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
-    .line 144
+    .line 158
     invoke-virtual {p0}, Lmiuix/spring/view/SpringHelper$AxisHandler;->canScroll()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 146
+    .line 160
     iget v0, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mAllDistance:F
 
     int-to-float v1, p1
@@ -127,7 +127,7 @@
 
     if-eqz p3, :cond_0
 
-    .line 148
+    .line 162
     iget p3, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mAllDistance:F
 
     invoke-static {p3}, Ljava/lang/Math;->signum(F)F
@@ -150,15 +150,28 @@
 
     goto :goto_0
 
-    .line 150
+    .line 164
     :cond_0
+    iget p3, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mDistance:F
+
+    const/4 v0, 0x0
+
+    cmpl-float p3, p3, v0
+
+    if-nez p3, :cond_1
+
+    .line 165
+    invoke-virtual {p0}, Lmiuix/spring/view/SpringHelper$AxisHandler;->onFlingReachEdge()V
+
+    .line 167
+    :cond_1
     iget p3, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mDistance:F
 
     add-float/2addr p3, v1
 
     iput p3, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mDistance:F
 
-    .line 151
+    .line 168
     iget p3, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mDistance:F
 
     invoke-static {p3}, Ljava/lang/Math;->signum(F)F
@@ -179,7 +192,7 @@
 
     iput p3, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mAllDistance:F
 
-    .line 153
+    .line 170
     :goto_0
     iget p3, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mAxis:I
 
@@ -189,25 +202,25 @@
 
     aput v0, p2, p3
 
-    :cond_1
+    :cond_2
     return-void
 .end method
 
 .method private release(I[IZ)I
     .locals 6
 
-    .line 159
+    .line 178
     iget v0, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mDistance:F
 
-    .line 160
+    .line 179
     iget v1, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mAllDistance:F
 
-    .line 161
+    .line 180
     invoke-static {v0}, Ljava/lang/Math;->signum(F)F
 
     move-result v2
 
-    .line 163
+    .line 182
     iget v3, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mAllDistance:F
 
     int-to-float v4, p1
@@ -218,7 +231,7 @@
 
     if-eqz p3, :cond_0
 
-    .line 165
+    .line 184
     iget v3, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mAllDistance:F
 
     invoke-static {v3}, Ljava/lang/Math;->signum(F)F
@@ -239,7 +252,7 @@
 
     iput v3, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mDistance:F
 
-    .line 166
+    .line 185
     iget v3, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mAxis:I
 
     aget v4, p2, v3
@@ -250,7 +263,7 @@
 
     aput v4, p2, v3
 
-    .line 169
+    .line 188
     :cond_0
     iget v3, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mDistance:F
 
@@ -274,10 +287,10 @@
 
     if-nez p3, :cond_1
 
-    .line 172
+    .line 191
     iput v3, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mDistance:F
 
-    .line 174
+    .line 193
     :cond_1
     iget v0, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mAxis:I
 
@@ -285,11 +298,11 @@
 
     goto :goto_0
 
-    .line 176
+    .line 195
     :cond_2
     iput v4, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mDistance:F
 
-    .line 177
+    .line 196
     iget p1, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mAxis:I
 
     aget v2, p2, p1
@@ -302,7 +315,7 @@
 
     aput v0, p2, p1
 
-    .line 179
+    .line 198
     :goto_0
     iget p1, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mDistance:F
 
@@ -310,13 +323,13 @@
 
     if-nez p1, :cond_3
 
-    .line 180
+    .line 199
     iput v4, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mAllDistance:F
 
     :cond_3
     if-nez p3, :cond_4
 
-    .line 183
+    .line 202
     iget p1, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mDistance:F
 
     invoke-static {p1}, Ljava/lang/Math;->signum(F)F
@@ -344,14 +357,14 @@
 .method private unObtainSpringBackDistance(F)F
     .locals 8
 
-    .line 208
+    .line 227
     invoke-virtual {p0}, Lmiuix/spring/view/SpringHelper$AxisHandler;->getSize()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 210
+    .line 229
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
@@ -362,7 +375,7 @@
 
     return p1
 
-    .line 212
+    .line 231
     :cond_0
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
@@ -384,12 +397,12 @@
 
     const-wide v4, 0x3fe5555560000000L    # 0.6666666865348816
 
-    .line 213
+    .line 232
     invoke-static {v0, v1, v4, v5}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v4
 
-    .line 214
+    .line 233
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
     move-result p1
@@ -431,7 +444,7 @@
 .method handleNestedPreScroll([I[IZ)Z
     .locals 4
 
-    .line 123
+    .line 137
     iget v0, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mAxis:I
 
     aget v0, p1, v0
@@ -440,7 +453,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 124
+    .line 138
     invoke-virtual {p0}, Lmiuix/spring/view/SpringHelper$AxisHandler;->canScroll()Z
 
     move-result v2
@@ -460,7 +473,7 @@
     :cond_0
     float-to-int v2, v2
 
-    .line 128
+    .line 142
     invoke-static {v2}, Ljava/lang/Integer;->signum(I)I
 
     move-result v2
@@ -471,7 +484,7 @@
 
     return v1
 
-    .line 133
+    .line 147
     :cond_1
     iget v1, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->mAxis:I
 
@@ -493,7 +506,7 @@
 .method handleNestedScroll(I[II[I)V
     .locals 0
 
-    .line 138
+    .line 152
     iget-object p2, p0, Lmiuix/spring/view/SpringHelper$AxisHandler;->this$0:Lmiuix/spring/view/SpringHelper;
 
     invoke-virtual {p2}, Lmiuix/spring/view/SpringHelper;->springAvailable()Z
@@ -511,10 +524,13 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 139
+    .line 153
     :goto_0
     invoke-direct {p0, p1, p4, p2}, Lmiuix/spring/view/SpringHelper$AxisHandler;->pull(I[IZ)V
 
     :cond_1
     return-void
+.end method
+
+.method abstract onFlingReachEdge()V
 .end method

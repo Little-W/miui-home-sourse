@@ -35,7 +35,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onOverlayCall$0(Lcom/miui/home/launcher/overlay/LauncherOverlayChinese;)V
+.method public static synthetic lambda$onOverlayCall$348(Lcom/miui/home/launcher/overlay/LauncherOverlayChinese;)V
     .locals 1
 
     .line 105
@@ -52,27 +52,6 @@
 
 
 # virtual methods
-.method public getServerVersion()I
-    .locals 1
-
-    .line 164
-    iget-object v0, p0, Lcom/miui/home/launcher/overlay/LauncherOverlayChinese;->mClient:Lcom/miui/launcher/overlay/client/LauncherClient;
-
-    if-eqz v0, :cond_0
-
-    .line 165
-    invoke-virtual {v0}, Lcom/miui/launcher/overlay/client/LauncherClient;->getServerVersion()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public hideOverlay(Z)V
     .locals 1
 
@@ -147,9 +126,9 @@
 
     .line 104
     :pswitch_0
-    new-instance p1, Lcom/miui/home/launcher/overlay/-$$Lambda$LauncherOverlayChinese$qZzPkTrPabix8Shy84H1_xMRnoY;
+    new-instance p1, Lcom/miui/home/launcher/overlay/-$$Lambda$LauncherOverlayChinese$RIM6h2oKt8E3sf0VRcTrvH5gJFo;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/overlay/-$$Lambda$LauncherOverlayChinese$qZzPkTrPabix8Shy84H1_xMRnoY;-><init>(Lcom/miui/home/launcher/overlay/LauncherOverlayChinese;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/overlay/-$$Lambda$LauncherOverlayChinese$RIM6h2oKt8E3sf0VRcTrvH5gJFo;-><init>(Lcom/miui/home/launcher/overlay/LauncherOverlayChinese;)V
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

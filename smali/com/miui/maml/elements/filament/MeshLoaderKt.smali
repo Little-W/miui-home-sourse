@@ -72,7 +72,7 @@
 
     move-result-object p1
 
-    const-string v0, "IndexBuffer.Builder()\n  \u2026           .build(engine)"
+    const-string v0, "IndexBuffer.Builder()\n  …           .build(engine)"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -130,7 +130,7 @@
 
     move-result-object v2
 
-    const-string v3, "RenderableManager.Builde\u2026.boundingBox(header.aabb)"
+    const-string v3, "RenderableManager.Builde….boundingBox(header.aabb)"
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -446,7 +446,7 @@
 
     move-result-object v8
 
-    const-string v2, "VertexBuffer.Builder()\n \u2026V0, uvNormalized(header))"
+    const-string v2, "VertexBuffer.Builder()\n …V0, uvNormalized(header))"
 
     invoke-static {v8, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -647,7 +647,7 @@
 
     move-result-object v0
 
-    const-string v2, "VertexBuffer.Builder()\n \u2026           .build(engine)"
+    const-string v2, "VertexBuffer.Builder()\n …           .build(engine)"
 
     invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -670,7 +670,7 @@
 
     move-result-object v3
 
-    const-string v4, "ByteBuffer.allocateDirec\u2026(ByteOrder.nativeOrder())"
+    const-string v4, "ByteBuffer.allocateDirec…(ByteOrder.nativeOrder())"
 
     invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -748,7 +748,7 @@
 
     move-result-object v2
 
-    const-string v4, "IndexBuffer.Builder()\n  \u2026           .build(engine)"
+    const-string v4, "IndexBuffer.Builder()\n  …           .build(engine)"
 
     invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -769,7 +769,7 @@
 
     move-result-object v5
 
-    const-string v6, "ByteBuffer.allocateDirec\u2026(ByteOrder.LITTLE_ENDIAN)"
+    const-string v6, "ByteBuffer.allocateDirec…(ByteOrder.LITTLE_ENDIAN)"
 
     invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1045,7 +1045,7 @@
 
     move-result-object p0
 
-    const-string v0, "ByteBuffer.wrap(bytes).o\u2026(ByteOrder.LITTLE_ENDIAN)"
+    const-string v0, "ByteBuffer.wrap(bytes).o…(ByteOrder.LITTLE_ENDIAN)"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
 

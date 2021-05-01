@@ -141,9 +141,9 @@
     iput-object v1, p0, Lcom/miui/home/launcher/monitor/FpsReporter;->mTotalCountStringBuilder:Ljava/lang/StringBuilder;
 
     .line 130
-    new-instance v1, Lcom/miui/home/launcher/monitor/-$$Lambda$FpsReporter$0Rro5UoS9IwFEXYWae8PhpuMuSw;
+    new-instance v1, Lcom/miui/home/launcher/monitor/-$$Lambda$FpsReporter$yKLJIBT7RK9wKDoU0olENI6iZO0;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/monitor/-$$Lambda$FpsReporter$0Rro5UoS9IwFEXYWae8PhpuMuSw;-><init>(Lcom/miui/home/launcher/monitor/FpsReporter;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/monitor/-$$Lambda$FpsReporter$yKLJIBT7RK9wKDoU0olENI6iZO0;-><init>(Lcom/miui/home/launcher/monitor/FpsReporter;)V
 
     iput-object v1, p0, Lcom/miui/home/launcher/monitor/FpsReporter;->mRecordRunnable:Ljava/lang/Runnable;
 
@@ -417,7 +417,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$new$0(Lcom/miui/home/launcher/monitor/FpsReporter;)V
+.method public static synthetic lambda$new$576(Lcom/miui/home/launcher/monitor/FpsReporter;)V
     .locals 3
 
     .line 131

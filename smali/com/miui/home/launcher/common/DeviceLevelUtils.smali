@@ -634,7 +634,7 @@
     return v0
 .end method
 
-.method static synthetic lambda$showStatusBar$0(Lcom/miui/home/launcher/Launcher;JZ)V
+.method static synthetic lambda$showStatusBar$460(Lcom/miui/home/launcher/Launcher;JZ)V
     .locals 2
 
     if-eqz p0, :cond_1
@@ -702,9 +702,9 @@
     .line 150
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
-    new-instance v1, Lcom/miui/home/launcher/common/-$$Lambda$DeviceLevelUtils$PdIV6JUGx1L_P39as5j40-CGgsQ;
+    new-instance v1, Lcom/miui/home/launcher/common/-$$Lambda$DeviceLevelUtils$k-mR0JroOFAb0SM5EtoZSWlDmns;
 
-    invoke-direct {v1, p0, p2, p3, p1}, Lcom/miui/home/launcher/common/-$$Lambda$DeviceLevelUtils$PdIV6JUGx1L_P39as5j40-CGgsQ;-><init>(Lcom/miui/home/launcher/Launcher;JZ)V
+    invoke-direct {v1, p0, p2, p3, p1}, Lcom/miui/home/launcher/common/-$$Lambda$DeviceLevelUtils$k-mR0JroOFAb0SM5EtoZSWlDmns;-><init>(Lcom/miui/home/launcher/Launcher;JZ)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 

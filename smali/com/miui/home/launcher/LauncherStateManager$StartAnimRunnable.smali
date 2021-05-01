@@ -27,12 +27,12 @@
 .method public constructor <init>(Lcom/miui/home/launcher/LauncherStateManager;Landroid/animation/AnimatorSet;)V
     .locals 0
 
-    .line 376
+    .line 380
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherStateManager$StartAnimRunnable;->this$0:Lcom/miui/home/launcher/LauncherStateManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 377
+    .line 381
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherStateManager$StartAnimRunnable;->mAnim:Landroid/animation/AnimatorSet;
 
     return-void
@@ -43,7 +43,7 @@
 .method public run()V
     .locals 2
 
-    .line 382
+    .line 386
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherStateManager$StartAnimRunnable;->this$0:Lcom/miui/home/launcher/LauncherStateManager;
 
     invoke-static {v0}, Lcom/miui/home/launcher/LauncherStateManager;->access$500(Lcom/miui/home/launcher/LauncherStateManager;)Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;
@@ -60,7 +60,7 @@
 
     return-void
 
-    .line 385
+    .line 389
     :cond_0
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
 

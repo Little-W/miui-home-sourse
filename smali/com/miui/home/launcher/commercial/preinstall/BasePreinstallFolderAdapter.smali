@@ -41,12 +41,27 @@
 .method public clearPreinstallAds()V
     .locals 1
 
-    .line 110
+    .line 114
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/BasePreinstallFolderAdapter;->mShowingPreinstallList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     return-void
+.end method
+
+.method public createShortcutIcon(Landroid/view/ViewGroup;Lcom/miui/home/launcher/ShortcutInfo;)Lcom/miui/home/launcher/ShortcutIcon;
+    .locals 2
+
+    .line 100
+    iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/BasePreinstallFolderAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    const v1, 0x7f0d0026
+
+    invoke-static {v1, v0, p1, p2}, Lcom/miui/home/launcher/ShortcutIcon;->fromXml(ILcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;Lcom/miui/home/launcher/ShortcutInfo;)Lcom/miui/home/launcher/ShortcutIcon;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public enableReorder(Lcom/miui/home/launcher/ShortcutInfo;)Z
@@ -274,7 +289,7 @@
 .method public getRestCapacity()I
     .locals 2
 
-    .line 102
+    .line 106
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/BasePreinstallFolderAdapter;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->count()I
@@ -291,7 +306,7 @@
 
     return v0
 
-    .line 105
+    .line 109
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/preinstall/BasePreinstallFolderAdapter;->getMaxShowingCount()I
 
@@ -338,12 +353,8 @@
 
     move-result-object p1
 
-    const p2, 0x7f0d0026
-
     .line 83
-    iget-object v1, p0, Lcom/miui/home/launcher/commercial/preinstall/BasePreinstallFolderAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {p2, v1, p3, p1}, Lcom/miui/home/launcher/ShortcutIcon;->fromXml(ILcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;Lcom/miui/home/launcher/ShortcutInfo;)Lcom/miui/home/launcher/ShortcutIcon;
+    invoke-virtual {p0, p3, p1}, Lcom/miui/home/launcher/commercial/preinstall/BasePreinstallFolderAdapter;->createShortcutIcon(Landroid/view/ViewGroup;Lcom/miui/home/launcher/ShortcutInfo;)Lcom/miui/home/launcher/ShortcutIcon;
 
     move-result-object p2
 

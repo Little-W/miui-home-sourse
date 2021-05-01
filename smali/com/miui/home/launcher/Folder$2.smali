@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onAnimationStart$0(Lcom/miui/home/launcher/Folder$2;)V
+.method public static synthetic lambda$onAnimationStart$134(Lcom/miui/home/launcher/Folder$2;)V
     .locals 2
 
     .line 221
@@ -108,9 +108,9 @@
 
     move-result-object p1
 
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$Folder$2$0qZf_aj_SKCjur8stmvTN4gY7x4;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$Folder$2$mFhEADSAFU_b4lWsGT24rIciDDs;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$Folder$2$0qZf_aj_SKCjur8stmvTN4gY7x4;-><init>(Lcom/miui/home/launcher/Folder$2;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$Folder$2$mFhEADSAFU_b4lWsGT24rIciDDs;-><init>(Lcom/miui/home/launcher/Folder$2;)V
 
     invoke-virtual {p1, v0}, Landroid/widget/EditText;->post(Ljava/lang/Runnable;)Z
 

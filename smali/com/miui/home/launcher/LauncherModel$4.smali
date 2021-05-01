@@ -33,7 +33,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel;JLcom/miui/home/launcher/ItemInfo;Landroid/content/Context;Landroid/content/ContentResolver;)V
     .locals 0
 
-    .line 758
+    .line 762
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$4;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     iput-wide p2, p0, Lcom/miui/home/launcher/LauncherModel$4;->val$id:J
@@ -54,14 +54,14 @@
 .method public run()V
     .locals 4
 
-    .line 760
+    .line 764
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string v1, "_id"
 
-    .line 761
+    .line 765
     iget-wide v2, p0, Lcom/miui/home/launcher/LauncherModel$4;->val$id:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -70,14 +70,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 762
+    .line 766
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$4;->val$item:Lcom/miui/home/launcher/ItemInfo;
 
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$4;->val$context:Landroid/content/Context;
 
     invoke-virtual {v1, v2, v0}, Lcom/miui/home/launcher/ItemInfo;->onAddToDatabase(Landroid/content/Context;Landroid/content/ContentValues;)V
 
-    .line 763
+    .line 767
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$4;->val$cr:Landroid/content/ContentResolver;
 
     sget-object v2, Lcom/miui/home/launcher/LauncherSettings$Favorites;->CONTENT_URI:Landroid/net/Uri;

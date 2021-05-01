@@ -112,11 +112,7 @@
     .locals 2
 
     .line 52
-    sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->IS_MIUI_10:Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
+    sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->IS_MIUI_10:Z
 
     if-eqz v0, :cond_0
 
@@ -176,11 +172,7 @@
 
     if-eqz v0, :cond_2
 
-    sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->IS_MIUI_10:Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
+    sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->IS_MIUI_10:Z
 
     if-eqz v0, :cond_0
 

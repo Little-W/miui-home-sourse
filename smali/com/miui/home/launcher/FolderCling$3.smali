@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderCling;)V
     .locals 0
 
-    .line 604
+    .line 600
     iput-object p1, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;-><init>()V
@@ -38,24 +38,24 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 607
+    .line 603
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getCurrentEditState()I
 
     move-result v0
 
-    .line 608
+    .line 604
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getLastEditState()I
 
     move-result p1
 
-    .line 609
+    .line 605
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v1
 
     if-eqz v1, :cond_6
 
-    .line 610
+    .line 606
     iget-object v1, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/FolderCling;->isOpened()Z
@@ -86,7 +86,7 @@
     :goto_0
     if-ne v0, v2, :cond_1
 
-    .line 612
+    .line 608
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing(I)Z
 
     move-result p1
@@ -105,18 +105,18 @@
 
     if-eqz p1, :cond_6
 
-    .line 614
+    .line 610
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {p1, v1}, Lcom/miui/home/launcher/FolderCling;->access$1100(Lcom/miui/home/launcher/FolderCling;Z)V
 
-    .line 615
+    .line 611
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-virtual {p1, v3}, Lcom/miui/home/launcher/FolderCling;->updateRecommendScreenVisibility(Z)V
 
-    .line 616
+    .line 612
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderCling;->access$000(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Folder;
@@ -125,12 +125,12 @@
 
     invoke-virtual {p1, v4}, Lcom/miui/home/launcher/Folder;->setPressed(Z)V
 
-    .line 617
+    .line 613
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-virtual {p1, v4}, Lcom/miui/home/launcher/FolderCling;->setPressed(Z)V
 
-    .line 618
+    .line 614
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderCling;->access$000(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Folder;
@@ -141,7 +141,7 @@
 
     move-result-object p1
 
-    .line 619
+    .line 615
     iget-object v0, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderCling;->access$000(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Folder;
@@ -156,7 +156,7 @@
 
     move-result v0
 
-    .line 620
+    .line 616
     iget-object v2, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v2}, Lcom/miui/home/launcher/FolderCling;->access$400(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Launcher;
@@ -172,17 +172,17 @@
     :goto_2
     if-ge v4, v0, :cond_4
 
-    .line 622
+    .line 618
     invoke-virtual {p1, v4}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 623
+    .line 619
     instance-of v5, v2, Lcom/miui/home/launcher/ShortcutIcon;
 
     if-eqz v5, :cond_3
 
-    .line 624
+    .line 620
     check-cast v2, Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-virtual {v2, v1, v3}, Lcom/miui/home/launcher/ShortcutIcon;->setEditMode(ZZ)V
@@ -192,7 +192,7 @@
 
     goto :goto_2
 
-    .line 628
+    .line 624
     :cond_4
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 

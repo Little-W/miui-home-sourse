@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method static doAnimationFrame(Lmiuix/animation/internal/AnimTask;JJZ)V
+.method static doAnimationFrame(Lmiuix/animation/internal/AnimTask;JJZZ)V
     .locals 20
 
     .line 28
@@ -227,6 +227,8 @@
     invoke-virtual {v0, v1}, Lmiuix/animation/internal/AnimData;->to(Lmiuix/animation/listener/UpdateInfo;)V
 
     if-eqz p5, :cond_3
+
+    if-eqz p6, :cond_3
 
     if-nez v19, :cond_3
 

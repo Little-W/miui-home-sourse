@@ -80,7 +80,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$run$0(Lcom/miui/home/launcher/UninstallDialog$RemoveItemsWorker;)V
+.method public static synthetic lambda$run$292(Lcom/miui/home/launcher/UninstallDialog$RemoveItemsWorker;)V
     .locals 6
 
     const-string v0, ""
@@ -136,7 +136,7 @@
 
     move-result-object v0
 
-    const v4, 0x7f100274
+    const v4, 0x7f100277
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -232,7 +232,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100275
+    const v1, 0x7f100278
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -509,9 +509,9 @@
     :cond_6
     iget-object v0, p0, Lcom/miui/home/launcher/UninstallDialog$RemoveItemsWorker;->this$0:Lcom/miui/home/launcher/UninstallDialog;
 
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$UninstallDialog$RemoveItemsWorker$2qCiDkHkQ1cyWkU9LLGIbNcwq6Y;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$UninstallDialog$RemoveItemsWorker$mF5W_KJhjzdeCjs-dBLKdADPVFc;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/-$$Lambda$UninstallDialog$RemoveItemsWorker$2qCiDkHkQ1cyWkU9LLGIbNcwq6Y;-><init>(Lcom/miui/home/launcher/UninstallDialog$RemoveItemsWorker;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/-$$Lambda$UninstallDialog$RemoveItemsWorker$mF5W_KJhjzdeCjs-dBLKdADPVFc;-><init>(Lcom/miui/home/launcher/UninstallDialog$RemoveItemsWorker;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/UninstallDialog;->post(Ljava/lang/Runnable;)Z
 

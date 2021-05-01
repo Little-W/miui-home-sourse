@@ -153,7 +153,7 @@
 .method private isScreenViewScrolling()Z
     .locals 2
 
-    .line 133
+    .line 132
     iget-object v0, p0, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -166,7 +166,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 134
+    .line 133
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object v0
@@ -179,7 +179,7 @@
 
     return v1
 
-    .line 137
+    .line 136
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -191,7 +191,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 138
+    .line 137
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getMinusOneScreenView()Lcom/miui/home/launcher/MinusOneScreenView;
 
     move-result-object v0
@@ -209,59 +209,6 @@
 
     :goto_0
     return v1
-.end method
-
-.method private isWidgetScreenShowing()Z
-    .locals 1
-
-    .line 142
-    iget-object v0, p0, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    .line 143
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getCurrentCellLayout()Lcom/miui/home/launcher/CellLayout;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    .line 144
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getCurrentCellLayout()Lcom/miui/home/launcher/CellLayout;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->isWidgetScreenType()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
 .end method
 
 .method public static synthetic lambda$wVFqWplHzSGFTXCPQsp0npAC1vU(Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;)V
@@ -432,19 +379,19 @@
 .method public onWallpaperColorChanged()V
     .locals 3
 
-    .line 149
+    .line 142
     iget-object v0, p0, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->mCaretDrawable:Lcom/miui/home/launcher/pageindicators/CaretDrawable;
 
     if-eqz v0, :cond_1
 
-    .line 150
+    .line 143
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 151
+    .line 144
     invoke-virtual {p0}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -457,7 +404,7 @@
 
     goto :goto_0
 
-    .line 152
+    .line 145
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->getResources()Landroid/content/res/Resources;
 
@@ -469,7 +416,7 @@
 
     move-result v1
 
-    .line 150
+    .line 143
     :goto_0
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->setPaintColor(I)V
 
@@ -607,13 +554,6 @@
 
     .line 128
     invoke-direct {p0}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->isScreenViewScrolling()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 129
-    invoke-direct {p0}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->isWidgetScreenShowing()Z
 
     move-result v0
 

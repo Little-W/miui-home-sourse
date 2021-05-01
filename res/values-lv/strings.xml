@@ -206,6 +206,7 @@
     <string name="defalut_launcher_title">Noklusējuma palaidējs</string>
     <string name="default_folder_title_claro">Claro</string>
     <string name="default_folder_title_game">Spēles</string>
+    <string name="default_folder_title_hot">Populārākās lietotnes</string>
     <string name="default_folder_title_meitu">Meitu lietotnes</string>
     <string name="default_folder_title_microsoft">Microsoft</string>
     <string name="default_folder_title_other_apps">Citas lietotnes</string>

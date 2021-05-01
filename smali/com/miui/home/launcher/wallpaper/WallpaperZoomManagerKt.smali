@@ -13,12 +13,18 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 20
+    .line 21
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
 
     if-le v0, v1, :cond_0
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isMiuiLiteVersion()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -30,7 +36,7 @@
     :goto_0
     sput-boolean v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->ZOOM_ENABLED:Z
 
-    .line 21
+    .line 22
     sget-boolean v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->ZOOM_ENABLED:Z
 
     if-eqz v0, :cond_1
@@ -71,12 +77,12 @@
 .method private static final findUpdateZoomMethod()Lmiui/reflect/Method;
     .locals 6
 
-    .line 24
+    .line 25
     const-class v0, Landroid/app/WallpaperManager;
 
     const-string v1, "setWallpaperZoomOut"
 
-    .line 25
+    .line 26
     sget-object v2, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
     const/4 v3, 0x2
@@ -99,7 +105,7 @@
 
     move-result-object v2
 
-    .line 24
+    .line 25
     invoke-static {v0, v1, v2}, Lcom/miui/launcher/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmiui/reflect/Method;
 
     move-result-object v0

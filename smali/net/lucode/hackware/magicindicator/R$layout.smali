@@ -63,28 +63,28 @@
 
 .field public static final abc_select_dialog_material:I = 0x7f0d001a
 
-.field public static final notification_media_action:I = 0x7f0d008e
+.field public static final notification_media_action:I = 0x7f0d0093
 
-.field public static final notification_media_cancel_action:I = 0x7f0d008f
+.field public static final notification_media_cancel_action:I = 0x7f0d0094
 
-.field public static final notification_template_big_media:I = 0x7f0d0090
+.field public static final notification_template_big_media:I = 0x7f0d0095
 
-.field public static final notification_template_big_media_narrow:I = 0x7f0d0092
+.field public static final notification_template_big_media_narrow:I = 0x7f0d0097
 
-.field public static final notification_template_media:I = 0x7f0d0097
+.field public static final notification_template_media:I = 0x7f0d009c
 
-.field public static final notification_template_part_chronometer:I = 0x7f0d0099
+.field public static final notification_template_part_chronometer:I = 0x7f0d009e
 
-.field public static final notification_template_part_time:I = 0x7f0d009a
+.field public static final notification_template_part_time:I = 0x7f0d009f
 
-.field public static final pager_navigator_layout:I = 0x7f0d009b
+.field public static final pager_navigator_layout:I = 0x7f0d00a0
 
-.field public static final pager_navigator_layout_no_scroll:I = 0x7f0d009c
+.field public static final pager_navigator_layout_no_scroll:I = 0x7f0d00a1
 
-.field public static final select_dialog_item_material:I = 0x7f0d00bb
+.field public static final select_dialog_item_material:I = 0x7f0d00c0
 
-.field public static final select_dialog_multichoice_material:I = 0x7f0d00bc
+.field public static final select_dialog_multichoice_material:I = 0x7f0d00c1
 
-.field public static final select_dialog_singlechoice_material:I = 0x7f0d00bd
+.field public static final select_dialog_singlechoice_material:I = 0x7f0d00c2
 
-.field public static final support_simple_spinner_dropdown_item:I = 0x7f0d00c9
+.field public static final support_simple_spinner_dropdown_item:I = 0x7f0d00ce

@@ -206,6 +206,7 @@
     <string name="defalut_launcher_title">Προεπιλεγμένο launcher</string>
     <string name="default_folder_title_claro">Claro</string>
     <string name="default_folder_title_game">Παιχνίδια</string>
+    <string name="default_folder_title_hot">Δημοφιλείς εφαρμογές</string>
     <string name="default_folder_title_meitu">Εφαρμογές Meitu</string>
     <string name="default_folder_title_microsoft">Microsoft</string>
     <string name="default_folder_title_other_apps">Άλλες εφαρμογές</string>

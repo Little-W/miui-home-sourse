@@ -28,10 +28,10 @@
 .method constructor <init>(Landroid/net/Uri;)V
     .locals 3
 
-    .line 3143
+    .line 3163
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3144
+    .line 3164
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
@@ -44,7 +44,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3145
+    .line 3165
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object p1
@@ -65,20 +65,20 @@
 
     const/4 p1, 0x0
 
-    .line 3146
+    .line 3166
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherProvider$SqlArguments;->where:Ljava/lang/String;
 
-    .line 3147
+    .line 3167
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherProvider$SqlArguments;->args:[Ljava/lang/String;
 
     const-wide/16 v0, -0x1
 
-    .line 3148
+    .line 3168
     iput-wide v0, p0, Lcom/miui/home/launcher/LauncherProvider$SqlArguments;->id:J
 
     return-void
 
-    .line 3150
+    .line 3170
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -104,10 +104,10 @@
 .method constructor <init>(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)V
     .locals 3
 
-    .line 3120
+    .line 3140
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3121
+    .line 3141
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
@@ -122,7 +122,7 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 3122
+    .line 3142
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object p1
@@ -139,20 +139,20 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherProvider$SqlArguments;->table:Ljava/lang/String;
 
-    .line 3123
+    .line 3143
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherProvider$SqlArguments;->where:Ljava/lang/String;
 
-    .line 3124
+    .line 3144
     iput-object p3, p0, Lcom/miui/home/launcher/LauncherProvider$SqlArguments;->args:[Ljava/lang/String;
 
     const-wide/16 p1, -0x1
 
-    .line 3125
+    .line 3145
     iput-wide p1, p0, Lcom/miui/home/launcher/LauncherProvider$SqlArguments;->id:J
 
     goto :goto_1
 
-    .line 3126
+    .line 3146
     :cond_0
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
@@ -166,14 +166,14 @@
 
     if-ne p3, v0, :cond_3
 
-    .line 3128
+    .line 3148
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    .line 3131
+    .line 3151
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object p2
@@ -190,7 +190,7 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherProvider$SqlArguments;->table:Ljava/lang/String;
 
-    .line 3132
+    .line 3152
     invoke-static {p1}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide p1
@@ -199,7 +199,7 @@
 
     const-string p1, "favorites"
 
-    .line 3133
+    .line 3153
     iget-object p2, p0, Lcom/miui/home/launcher/LauncherProvider$SqlArguments;->table:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -208,7 +208,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 3134
+    .line 3154
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -229,7 +229,7 @@
 
     goto :goto_0
 
-    .line 3137
+    .line 3157
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -252,13 +252,13 @@
     :goto_0
     const/4 p1, 0x0
 
-    .line 3139
+    .line 3159
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherProvider$SqlArguments;->args:[Ljava/lang/String;
 
     :goto_1
     return-void
 
-    .line 3129
+    .line 3149
     :cond_2
     new-instance p2, Ljava/lang/UnsupportedOperationException;
 
@@ -280,7 +280,7 @@
 
     throw p2
 
-    .line 3127
+    .line 3147
     :cond_3
     new-instance p2, Ljava/lang/IllegalArgumentException;
 

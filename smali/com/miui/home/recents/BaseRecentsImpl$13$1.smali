@@ -33,7 +33,7 @@
 .method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl$13;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 744
+    .line 752
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$13$1;->this$1:Lcom/miui/home/recents/BaseRecentsImpl$13;
 
     iput-object p2, p0, Lcom/miui/home/recents/BaseRecentsImpl$13$1;->val$noBackActListStr:Ljava/lang/String;
@@ -54,21 +54,21 @@
 .method public run()V
     .locals 3
 
-    .line 747
+    .line 755
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$13$1;->this$1:Lcom/miui/home/recents/BaseRecentsImpl$13;
 
     iget-object v0, v0, Lcom/miui/home/recents/BaseRecentsImpl$13;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl$13$1;->val$noBackActListStr:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1602(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1702(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 748
+    .line 756
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$13$1;->this$1:Lcom/miui/home/recents/BaseRecentsImpl$13;
 
     iget-object v0, v0, Lcom/miui/home/recents/BaseRecentsImpl$13;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1600(Lcom/miui/home/recents/BaseRecentsImpl;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1700(Lcom/miui/home/recents/BaseRecentsImpl;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -78,16 +78,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 749
+    .line 757
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$13$1;->this$1:Lcom/miui/home/recents/BaseRecentsImpl$13;
 
     iget-object v0, v0, Lcom/miui/home/recents/BaseRecentsImpl$13;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     const-string v1, "com.miui.home.launcher.Launcher:com.miui.personalassistant.fake.FakeStartActivity:com.miui.personalassistant.fake.FakeEndActivity"
 
-    invoke-static {v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1602(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1702(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 752
+    .line 760
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$13$1;->this$1:Lcom/miui/home/recents/BaseRecentsImpl$13;
 
@@ -95,27 +95,27 @@
 
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl$13$1;->val$noHomeActListStr:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1702(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1802(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 753
+    .line 761
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$13$1;->this$1:Lcom/miui/home/recents/BaseRecentsImpl$13;
 
     iget-object v0, v0, Lcom/miui/home/recents/BaseRecentsImpl$13;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl$13$1;->val$noBackAndHomeActListStr:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1802(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1902(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 754
+    .line 762
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$13$1;->this$1:Lcom/miui/home/recents/BaseRecentsImpl$13;
 
     iget-object v0, v0, Lcom/miui/home/recents/BaseRecentsImpl$13;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl$13$1;->val$hotZoneChangeActListStr:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1902(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$2002(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 755
+    .line 763
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$13$1;->this$1:Lcom/miui/home/recents/BaseRecentsImpl$13;
 
     iget-object v0, v0, Lcom/miui/home/recents/BaseRecentsImpl$13;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
@@ -128,7 +128,7 @@
 
     iget-object v2, v2, Lcom/miui/home/recents/BaseRecentsImpl$13;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    invoke-static {v2}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1800(Lcom/miui/home/recents/BaseRecentsImpl;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1900(Lcom/miui/home/recents/BaseRecentsImpl;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -142,7 +142,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1802(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1902(Lcom/miui/home/recents/BaseRecentsImpl;Ljava/lang/String;)Ljava/lang/String;
 
     return-void
 .end method

@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 32
+    .line 31
     new-instance v0, Lmiuix/animation/internal/AnimRunner;
 
     const/4 v1, 0x0

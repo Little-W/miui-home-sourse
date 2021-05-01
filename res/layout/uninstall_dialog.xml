@@ -1,17 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.UninstallDialog android:id="@id/uninstall_dialog" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <LinearLayout android:orientation="vertical" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <view android:layout_gravity="center_horizontal" android:id="@id/delete_icon_container" android:layout_width="wrap_content" android:layout_height="@dimen/workspace_cell_width" android:importantForAccessibility="no" class="com.miui.home.launcher.UninstallDialog$DeleteIconContainer" />
-            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/messages" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <TextView android:layout_gravity="center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/UninstallDialog.Title" />
-                <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/description_text" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/uninstall_dialog_message" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" style="@style/UninstallDialog.Message" />
+<com.miui.home.launcher.UninstallDialog
+    android:id="@id/uninstall_dialog"
+    android:paddingBottom="20.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <view
+                android:layout_gravity="center_horizontal"
+                android:id="@id/delete_icon_container"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/workspace_cell_width"
+                android:importantForAccessibility="no"
+                class="com.miui.home.launcher.UninstallDialog$DeleteIconContainer" />
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:id="@id/messages"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/UninstallDialog.Title" />
+                <TextView
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:id="@id/description_text"
+                    android:paddingTop="5.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uninstall_dialog_message"
+                    android:paddingStart="15.0dip"
+                    android:paddingEnd="15.0dip"
+                    style="@style/UninstallDialog.Message" />
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/buttons" android:layout_width="@dimen/uninstall_buttons_width" android:layout_height="wrap_content" android:layout_marginTop="30.0dip">
-            <Button android:id="@id/btnCancel" android:background="@drawable/uninstall_dialog_cancel_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel_action" style="@style/UninstallDialog.Button" />
-            <Button android:id="@id/btnOk" android:background="@drawable/uninstall_dialog_confirm_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/uninstall" style="@style/UninstallDialog.Button" />
+        <LinearLayout
+            android:layout_gravity="bottom|center"
+            android:orientation="horizontal"
+            android:id="@id/buttons"
+            android:layout_width="@dimen/uninstall_buttons_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip">
+            <Button
+                android:id="@id/btnCancel"
+                android:background="@drawable/uninstall_dialog_cancel_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel_action"
+                style="@style/UninstallDialog.Button" />
+            <Button
+                android:id="@id/btnOk"
+                android:background="@drawable/uninstall_dialog_confirm_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/uninstall"
+                style="@style/UninstallDialog.Button" />
         </LinearLayout>
     </LinearLayout>
 </com.miui.home.launcher.UninstallDialog>

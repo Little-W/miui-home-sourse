@@ -33,7 +33,7 @@
     .line 226
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const v0, 0x7f070094
+    const v0, 0x7f070095
 
     .line 227
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
@@ -85,7 +85,7 @@
     .line 237
     iget-object p2, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelNumPaint:Landroid/graphics/Paint;
 
-    const v1, 0x7f0601bf
+    const v1, 0x7f0601c2
 
     const/4 v2, 0x0
 
@@ -110,7 +110,7 @@
     .line 240
     iget-object p2, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelNumPaint:Landroid/graphics/Paint;
 
-    const v1, 0x7f070095
+    const v1, 0x7f070096
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimension(I)F
 

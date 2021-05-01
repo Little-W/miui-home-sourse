@@ -23,31 +23,31 @@
 
 
 # instance fields
-.field private c:Lcom/xiaomi/onetrack/a/f;
+.field private c:Lcom/xiaomi/onetrack/api/f;
 
 
 # direct methods
 .method private constructor <init>(Landroid/content/Context;Lcom/xiaomi/onetrack/Configuration;)V
     .locals 1
 
-    .line 188
+    .line 189
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 189
+    .line 190
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/onetrack/f/a;->a(Landroid/content/Context;)V
-
-    .line 190
-    new-instance v0, Lcom/xiaomi/onetrack/a/f;
-
-    invoke-direct {v0, p1, p2}, Lcom/xiaomi/onetrack/a/f;-><init>(Landroid/content/Context;Lcom/xiaomi/onetrack/Configuration;)V
-
-    iput-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    invoke-static {v0}, Lcom/xiaomi/onetrack/e/a;->a(Landroid/content/Context;)V
 
     .line 191
+    new-instance v0, Lcom/xiaomi/onetrack/api/f;
+
+    invoke-direct {v0, p1, p2}, Lcom/xiaomi/onetrack/api/f;-><init>(Landroid/content/Context;Lcom/xiaomi/onetrack/Configuration;)V
+
+    iput-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
+
+    .line 192
     new-instance p1, Lcom/xiaomi/onetrack/DefaultEventHook;
 
     invoke-direct {p1}, Lcom/xiaomi/onetrack/DefaultEventHook;-><init>()V
@@ -62,16 +62,16 @@
 
     if-eqz p0, :cond_0
 
-    .line 246
+    .line 247
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/xiaomi/onetrack/f/a;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/xiaomi/onetrack/e/a;->a(Landroid/content/Context;)V
 
     return-void
 
-    .line 244
+    .line 245
     :cond_0
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -85,7 +85,7 @@
 .method public static createInstance(Landroid/content/Context;Lcom/xiaomi/onetrack/Configuration;)Lcom/xiaomi/onetrack/OneTrack;
     .locals 1
 
-    .line 195
+    .line 196
     new-instance v0, Lcom/xiaomi/onetrack/OneTrack;
 
     invoke-direct {v0, p0, p1}, Lcom/xiaomi/onetrack/OneTrack;-><init>(Landroid/content/Context;Lcom/xiaomi/onetrack/Configuration;)V
@@ -96,7 +96,7 @@
 .method public static isDisable()Z
     .locals 1
 
-    .line 207
+    .line 208
     sget-boolean v0, Lcom/xiaomi/onetrack/OneTrack;->a:Z
 
     return v0
@@ -105,7 +105,7 @@
 .method public static isUseSystemNetTrafficOnly()Z
     .locals 1
 
-    .line 215
+    .line 216
     sget-boolean v0, Lcom/xiaomi/onetrack/OneTrack;->b:Z
 
     return v0
@@ -114,7 +114,7 @@
 .method public static registerCrashHook(Landroid/content/Context;)V
     .locals 0
 
-    .line 224
+    .line 225
     invoke-static {p0}, Lcom/xiaomi/onetrack/CrashAnalysis;->a(Landroid/content/Context;)V
 
     return-void
@@ -123,7 +123,7 @@
 .method public static sdkVersion()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "1.1.6"
+    const-string v0, "1.2.4"
 
     return-object v0
 .end method
@@ -131,15 +131,15 @@
 .method public static setAccessNetworkEnable(Landroid/content/Context;Z)V
     .locals 0
 
-    .line 228
+    .line 229
     invoke-static {p0}, Lcom/xiaomi/onetrack/OneTrack;->a(Landroid/content/Context;)V
 
-    .line 229
+    .line 230
     new-instance p0, Lcom/xiaomi/onetrack/OneTrack$1;
 
     invoke-direct {p0, p1}, Lcom/xiaomi/onetrack/OneTrack$1;-><init>(Z)V
 
-    invoke-static {p0}, Lcom/xiaomi/onetrack/h/j;->a(Ljava/lang/Runnable;)V
+    invoke-static {p0}, Lcom/xiaomi/onetrack/util/i;->a(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -147,8 +147,8 @@
 .method public static setDebugMode(Z)V
     .locals 0
 
-    .line 199
-    sput-boolean p0, Lcom/xiaomi/onetrack/h/q;->a:Z
+    .line 200
+    invoke-static {p0}, Lcom/xiaomi/onetrack/util/p;->a(Z)V
 
     return-void
 .end method
@@ -156,7 +156,7 @@
 .method public static setDisable(Z)V
     .locals 0
 
-    .line 203
+    .line 204
     sput-boolean p0, Lcom/xiaomi/onetrack/OneTrack;->a:Z
 
     return-void
@@ -165,8 +165,8 @@
 .method public static setTestMode(Z)V
     .locals 0
 
-    .line 219
-    sput-boolean p0, Lcom/xiaomi/onetrack/h/q;->c:Z
+    .line 220
+    sput-boolean p0, Lcom/xiaomi/onetrack/util/p;->c:Z
 
     return-void
 .end method
@@ -176,7 +176,7 @@
 
     const/4 v0, 0x1
 
-    .line 211
+    .line 212
     sput-boolean v0, Lcom/xiaomi/onetrack/OneTrack;->b:Z
 
     return-void
@@ -187,10 +187,10 @@
 .method public clearCommonProperty()V
     .locals 1
 
-    .line 287
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 288
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0}, Lcom/xiaomi/onetrack/a/f;->a()V
+    invoke-virtual {v0}, Lcom/xiaomi/onetrack/api/f;->a()V
 
     return-void
 .end method
@@ -203,10 +203,10 @@
         }
     .end annotation
 
-    .line 319
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 320
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0}, Lcom/xiaomi/onetrack/a/f;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/xiaomi/onetrack/api/f;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -221,10 +221,10 @@
         }
     .end annotation
 
-    .line 323
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 324
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/a/f;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/api/f;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -247,7 +247,7 @@
 
     const/4 v0, 0x0
 
-    .line 271
+    .line 272
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/xiaomi/onetrack/OneTrack;->login(Ljava/lang/String;Lcom/xiaomi/onetrack/OneTrack$UserIdType;Ljava/util/Map;Z)V
 
     return-void
@@ -267,10 +267,10 @@
         }
     .end annotation
 
-    .line 267
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 268
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/xiaomi/onetrack/a/f;->a(Ljava/lang/String;Lcom/xiaomi/onetrack/OneTrack$UserIdType;Ljava/util/Map;Z)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/xiaomi/onetrack/api/f;->a(Ljava/lang/String;Lcom/xiaomi/onetrack/OneTrack$UserIdType;Ljava/util/Map;Z)V
 
     return-void
 .end method
@@ -282,7 +282,7 @@
 
     const/4 v1, 0x0
 
-    .line 275
+    .line 276
     invoke-virtual {p0, v0, v1}, Lcom/xiaomi/onetrack/OneTrack;->logout(Ljava/util/Map;Z)V
 
     return-void
@@ -300,10 +300,10 @@
         }
     .end annotation
 
-    .line 279
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 280
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1, p2}, Lcom/xiaomi/onetrack/a/f;->a(Ljava/util/Map;Z)V
+    invoke-virtual {v0, p1, p2}, Lcom/xiaomi/onetrack/api/f;->a(Ljava/util/Map;Z)V
 
     return-void
 .end method
@@ -311,10 +311,10 @@
 .method public removeCommonProperty(Ljava/lang/String;)V
     .locals 1
 
-    .line 291
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 292
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/a/f;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/api/f;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -331,10 +331,21 @@
         }
     .end annotation
 
-    .line 283
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 284
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/a/f;->c(Ljava/util/Map;)V
+    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/api/f;->c(Ljava/util/Map;)V
+
+    return-void
+.end method
+
+.method public setCustomPrivacyPolicyAccepted(Z)V
+    .locals 1
+
+    .line 338
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
+
+    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/api/f;->b(Z)V
 
     return-void
 .end method
@@ -342,10 +353,10 @@
 .method public setDynamicCommonProperty(Lcom/xiaomi/onetrack/OneTrack$ICommonPropertyProvider;)V
     .locals 1
 
-    .line 295
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 296
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/a/f;->a(Lcom/xiaomi/onetrack/OneTrack$ICommonPropertyProvider;)V
+    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/api/f;->a(Lcom/xiaomi/onetrack/OneTrack$ICommonPropertyProvider;)V
 
     return-void
 .end method
@@ -353,10 +364,10 @@
 .method public setEventHook(Lcom/xiaomi/onetrack/OneTrack$IEventHook;)V
     .locals 1
 
-    .line 332
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 333
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/a/f;->a(Lcom/xiaomi/onetrack/OneTrack$IEventHook;)V
+    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/api/f;->a(Lcom/xiaomi/onetrack/OneTrack$IEventHook;)V
 
     return-void
 .end method
@@ -364,10 +375,10 @@
 .method public setInstanceId(Ljava/lang/String;)V
     .locals 1
 
-    .line 315
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 316
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/a/f;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/api/f;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -375,10 +386,10 @@
 .method public setUserProfile(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 1
 
-    .line 303
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 304
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1, p2}, Lcom/xiaomi/onetrack/a/f;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v0, p1, p2}, Lcom/xiaomi/onetrack/api/f;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -395,10 +406,10 @@
         }
     .end annotation
 
-    .line 299
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 300
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/a/f;->a(Ljava/util/Map;)V
+    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/api/f;->a(Ljava/util/Map;)V
 
     return-void
 .end method
@@ -419,14 +430,14 @@
         }
     .end annotation
 
-    .line 254
+    .line 255
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     if-eqz p3, :cond_0
 
-    .line 256
+    .line 257
     invoke-interface {v0, p3}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
     :cond_0
@@ -434,17 +445,17 @@
 
     const-string v1, ","
 
-    .line 258
+    .line 259
     invoke-static {v1, p2}, Ljava/lang/String;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object p2
 
     invoke-interface {v0, p3, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 259
-    iget-object p2, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 260
+    iget-object p2, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {p2, p1, v0}, Lcom/xiaomi/onetrack/a/f;->a(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-virtual {p2, p1, v0}, Lcom/xiaomi/onetrack/api/f;->a(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method
@@ -462,10 +473,10 @@
         }
     .end annotation
 
-    .line 250
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 251
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1, p2}, Lcom/xiaomi/onetrack/a/f;->a(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-virtual {v0, p1, p2}, Lcom/xiaomi/onetrack/api/f;->a(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method
@@ -484,10 +495,10 @@
         }
     .end annotation
 
-    .line 263
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 264
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/xiaomi/onetrack/a/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/xiaomi/onetrack/api/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method
@@ -495,10 +506,10 @@
 .method public trackServiceQualityEvent(Lcom/xiaomi/onetrack/ServiceQualityEvent;)V
     .locals 1
 
-    .line 327
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 328
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/a/f;->a(Lcom/xiaomi/onetrack/ServiceQualityEvent;)V
+    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/api/f;->a(Lcom/xiaomi/onetrack/ServiceQualityEvent;)V
 
     return-void
 .end method
@@ -506,10 +517,10 @@
 .method public userProfileIncrement(Ljava/lang/String;Ljava/lang/Number;)V
     .locals 1
 
-    .line 311
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 312
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1, p2}, Lcom/xiaomi/onetrack/a/f;->a(Ljava/lang/String;Ljava/lang/Number;)V
+    invoke-virtual {v0, p1, p2}, Lcom/xiaomi/onetrack/api/f;->a(Ljava/lang/String;Ljava/lang/Number;)V
 
     return-void
 .end method
@@ -527,10 +538,10 @@
         }
     .end annotation
 
-    .line 307
-    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/a/f;
+    .line 308
+    iget-object v0, p0, Lcom/xiaomi/onetrack/OneTrack;->c:Lcom/xiaomi/onetrack/api/f;
 
-    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/a/f;->b(Ljava/util/Map;)V
+    invoke-virtual {v0, p1}, Lcom/xiaomi/onetrack/api/f;->b(Ljava/util/Map;)V
 
     return-void
 .end method

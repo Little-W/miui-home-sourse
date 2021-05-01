@@ -99,7 +99,7 @@
     .line 69
     iget-object v0, p0, Lcom/miui/home/recents/RecentsModel;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0601e7
+    const v1, 0x7f0601eb
 
     .line 70
     invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
@@ -109,7 +109,7 @@
     .line 71
     iget-object v1, p0, Lcom/miui/home/recents/RecentsModel;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f0601e8
+    const v2, 0x7f0601ec
 
     .line 72
     invoke-virtual {v1, v2}, Landroid/content/Context;->getColor(I)I

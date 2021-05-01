@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method static synthetic lambda$sendBroadcastToSenderAppAsync$0(Ljava/lang/String;Landroid/content/Intent;Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;Landroid/content/Context;)V
+.method static synthetic lambda$sendBroadcastToSenderAppAsync$166(Ljava/lang/String;Landroid/content/Intent;Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;Landroid/content/Context;)V
     .locals 5
 
     .line 28
@@ -98,9 +98,9 @@
     .locals 1
 
     .line 27
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$InstallShortcutBroadcastUtils$nZ0z8A54_-RCCSFQB3ch_8h32tg;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$InstallShortcutBroadcastUtils$VNuUQ3BXz4BEhpUCS94xDLOKl8Y;
 
-    invoke-direct {v0, p1, p2, p3, p0}, Lcom/miui/home/launcher/-$$Lambda$InstallShortcutBroadcastUtils$nZ0z8A54_-RCCSFQB3ch_8h32tg;-><init>(Ljava/lang/String;Landroid/content/Intent;Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;Landroid/content/Context;)V
+    invoke-direct {v0, p1, p2, p3, p0}, Lcom/miui/home/launcher/-$$Lambda$InstallShortcutBroadcastUtils$VNuUQ3BXz4BEhpUCS94xDLOKl8Y;-><init>(Ljava/lang/String;Landroid/content/Intent;Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;Landroid/content/Context;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

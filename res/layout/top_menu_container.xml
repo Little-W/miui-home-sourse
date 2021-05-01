@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/top_menu_container_imageView" style="@style/edit_mode_top_menu_imageView" />
-    <TextView android:id="@id/top_menu_container_textView" style="@style/edit_mode_top_menu_textView" />
+<LinearLayout
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@id/top_menu_container_imageView"
+        style="@style/edit_mode_top_menu_imageView" />
+    <TextView
+        android:id="@id/top_menu_container_textView"
+        style="@style/edit_mode_top_menu_textView" />
 </LinearLayout>

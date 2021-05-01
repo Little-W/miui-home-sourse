@@ -13,7 +13,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$onFinishInflate$0(Landroid/view/View;)V
+.method static synthetic lambda$onFinishInflate$215(Landroid/view/View;)V
     .locals 4
 
     .line 31
@@ -55,18 +55,18 @@
     .line 25
     invoke-super {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->onFinishInflate()V
 
-    const v0, 0x7f080162
+    const v0, 0x7f080174
 
     .line 27
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/FinishContainer;->setImageResource(I)V
 
-    const v0, 0x7f1000fb
+    const v0, 0x7f1000fc
 
     .line 28
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/FinishContainer;->setTextId(I)V
 
     .line 30
-    sget-object v0, Lcom/miui/home/launcher/multiselect/-$$Lambda$FinishContainer$7PmvLkz5MzKPmnHhL0anywnPhjM;->INSTANCE:Lcom/miui/home/launcher/multiselect/-$$Lambda$FinishContainer$7PmvLkz5MzKPmnHhL0anywnPhjM;
+    sget-object v0, Lcom/miui/home/launcher/multiselect/-$$Lambda$FinishContainer$2fRy4e61T0TkaBW_Yrq__jys7Ck;->INSTANCE:Lcom/miui/home/launcher/multiselect/-$$Lambda$FinishContainer$2fRy4e61T0TkaBW_Yrq__jys7Ck;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/FinishContainer;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

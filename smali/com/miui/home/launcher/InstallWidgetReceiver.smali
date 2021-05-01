@@ -172,7 +172,7 @@
     return p0
 .end method
 
-.method public static synthetic lambda$onReceive$0(Lcom/miui/home/launcher/InstallWidgetReceiver;Landroid/content/Intent;Landroid/content/Context;)V
+.method public static synthetic lambda$onReceive$386(Lcom/miui/home/launcher/InstallWidgetReceiver;Landroid/content/Intent;Landroid/content/Context;)V
     .locals 12
 
     .line 31
@@ -453,9 +453,9 @@
 
     .line 30
     :cond_0
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$InstallWidgetReceiver$JtFd72bHmA-6QVBEoFqd4cwsjKc;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$InstallWidgetReceiver$7VZ-40M0B7htrEHucFluCLtaW3A;
 
-    invoke-direct {v0, p0, p2, p1}, Lcom/miui/home/launcher/-$$Lambda$InstallWidgetReceiver$JtFd72bHmA-6QVBEoFqd4cwsjKc;-><init>(Lcom/miui/home/launcher/InstallWidgetReceiver;Landroid/content/Intent;Landroid/content/Context;)V
+    invoke-direct {v0, p0, p2, p1}, Lcom/miui/home/launcher/-$$Lambda$InstallWidgetReceiver$7VZ-40M0B7htrEHucFluCLtaW3A;-><init>(Lcom/miui/home/launcher/InstallWidgetReceiver;Landroid/content/Intent;Landroid/content/Context;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->postAtFrontOfQueue(Ljava/lang/Runnable;)V
 

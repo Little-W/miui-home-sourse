@@ -23,7 +23,7 @@
 
 .field public static final empty:I = 0x7f0a00b8
 
-.field public static final icon:I = 0x7f0a00e4
+.field public static final icon:I = 0x7f0a00e6
 
 .field public static final small_window:I = 0x7f0a0198
 

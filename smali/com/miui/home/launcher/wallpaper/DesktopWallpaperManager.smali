@@ -173,30 +173,12 @@
 
     iget v5, p1, Lcom/miui/home/launcher/gadget/GadgetInfo;->cellY:I
 
-    .line 178
-    invoke-virtual {v3}, Lcom/miui/home/launcher/CellLayout;->getScreenType()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    if-ne v1, v2, :cond_1
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    move v7, v1
+    const/4 v7, 0x0
 
     move-object v6, p1
 
     move-object v8, v0
 
-    .line 177
     invoke-virtual/range {v3 .. v8}, Lcom/miui/home/launcher/CellLayout;->setupLayoutParam(IILcom/miui/home/launcher/ItemInfo;ZLcom/miui/home/launcher/CellLayout$LayoutParams;)V
 
     .line 180
@@ -236,7 +218,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$updateGadgetColorByWallpaperInner$0(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;Landroid/graphics/Rect;Lcom/miui/home/launcher/gadget/GadgetInfo;Ljava/lang/Void;)Ljava/lang/Boolean;
+.method public static synthetic lambda$updateGadgetColorByWallpaperInner$131(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;Landroid/graphics/Rect;Lcom/miui/home/launcher/gadget/GadgetInfo;Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 0
 
     .line 142
@@ -269,7 +251,7 @@
     return-object p1
 .end method
 
-.method static synthetic lambda$updateGadgetColorByWallpaperInner$1(Lcom/miui/home/launcher/gadget/GadgetInfo;IILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Boolean;)V
+.method static synthetic lambda$updateGadgetColorByWallpaperInner$132(Lcom/miui/home/launcher/gadget/GadgetInfo;IILjava/lang/Object;Ljava/lang/Object;Ljava/lang/Boolean;)V
     .locals 1
 
     .line 147
@@ -325,7 +307,11 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p1, "), rect="
+    const-string p1, ")"
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", rect="
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -381,7 +367,11 @@
     :goto_0
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string p1, "), wallpaper color="
+    const-string p1, ")"
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", wallpaper color="
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -467,11 +457,11 @@
     iget v4, p1, Lcom/miui/home/launcher/gadget/GadgetInfo;->cellY:I
 
     .line 140
-    new-instance v7, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$E5JZs89_TeIvsxpKKGpgEr2nsZg;
+    new-instance v7, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$ks-7F5fVGtymCK8M-FIvEP2Flp4;
 
-    invoke-direct {v7, p0, v0, p1}, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$E5JZs89_TeIvsxpKKGpgEr2nsZg;-><init>(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;Landroid/graphics/Rect;Lcom/miui/home/launcher/gadget/GadgetInfo;)V
+    invoke-direct {v7, p0, v0, p1}, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$ks-7F5fVGtymCK8M-FIvEP2Flp4;-><init>(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;Landroid/graphics/Rect;Lcom/miui/home/launcher/gadget/GadgetInfo;)V
 
-    new-instance v0, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$6iCX7Y8Brsr7G68jqFOilWbPSMs;
+    new-instance v0, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$FvKlSbz-CmZDFDUJVE6oITsjIxE;
 
     move-object v1, v0
 
@@ -481,7 +471,7 @@
 
     move-object v6, p3
 
-    invoke-direct/range {v1 .. v6}, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$6iCX7Y8Brsr7G68jqFOilWbPSMs;-><init>(Lcom/miui/home/launcher/gadget/GadgetInfo;IILjava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct/range {v1 .. v6}, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$FvKlSbz-CmZDFDUJVE6oITsjIxE;-><init>(Lcom/miui/home/launcher/gadget/GadgetInfo;IILjava/lang/Object;Ljava/lang/Object;)V
 
     const/4 p1, 0x0
 

@@ -6,8 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/miui/home/launcher/ScreenUtils$ScreenInfo;,
-        Lcom/miui/home/launcher/ScreenUtils$ScreensQuery;
+        Lcom/miui/home/launcher/ScreenUtils$ScreenInfo;
     }
 .end annotation
 
@@ -26,14 +25,14 @@
         }
     .end annotation
 
-    .line 76
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ScreenUtils$Kyf6icQCXCi0i2oBOIhsR3UZYVg;
+    .line 74
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ScreenUtils$OfvhqB8Kq8ucQdZqxmqN2bpGckM;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$ScreenUtils$Kyf6icQCXCi0i2oBOIhsR3UZYVg;-><init>(Ljava/lang/String;Landroid/content/Context;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$ScreenUtils$OfvhqB8Kq8ucQdZqxmqN2bpGckM;-><init>(Ljava/lang/String;Landroid/content/Context;)V
 
-    new-instance p0, Lcom/miui/home/launcher/-$$Lambda$ScreenUtils$Efa_6TXkPgevPmlyGIiuoVA3nUY;
+    new-instance p0, Lcom/miui/home/launcher/-$$Lambda$ScreenUtils$4A2pbir1N2_lgWsPpawTD6r15PU;
 
-    invoke-direct {p0, p2}, Lcom/miui/home/launcher/-$$Lambda$ScreenUtils$Efa_6TXkPgevPmlyGIiuoVA3nUY;-><init>(Lcom/miui/home/launcher/common/ResultRunnable;)V
+    invoke-direct {p0, p2}, Lcom/miui/home/launcher/-$$Lambda$ScreenUtils$4A2pbir1N2_lgWsPpawTD6r15PU;-><init>(Lcom/miui/home/launcher/common/ResultRunnable;)V
 
     const/4 p1, 0x0
 
@@ -51,10 +50,10 @@
 
     const/4 v2, 0x1
 
-    .line 128
+    .line 126
     new-array v2, v2, [Ljava/lang/String;
 
-    .line 131
+    .line 129
     invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object p1
@@ -63,7 +62,7 @@
 
     aput-object p1, v2, p2
 
-    .line 128
+    .line 126
     invoke-static {p0, v0, v1, v2}, Lcom/miui/home/launcher/LauncherProvider;->safelyDeleteFromDB(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
     return-void
@@ -72,7 +71,7 @@
 .method public static deleteScreen(J)V
     .locals 2
 
-    .line 47
+    .line 45
     invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getModel()Lcom/miui/home/launcher/LauncherModel;
 
     move-result-object v0
@@ -83,7 +82,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 48
+    .line 46
     invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getModel()Lcom/miui/home/launcher/LauncherModel;
 
     move-result-object v0
@@ -122,22 +121,22 @@
 
     move-object/from16 v2, p3
 
-    .line 152
+    .line 150
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 153
+    .line 151
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 155
+    .line 153
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v5
 
-    .line 156
+    .line 154
     sget-object v6, Lcom/miui/home/launcher/LauncherSettings$Favorites;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v7, "_id"
@@ -171,7 +170,7 @@
     :try_start_0
     const-string v6, "Launcher.ScreenUtils"
 
-    .line 165
+    .line 163
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -202,33 +201,33 @@
     :goto_1
     if-eqz v5, :cond_6
 
-    .line 167
+    .line 165
     invoke-interface {v5}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v6
 
     if-eqz v6, :cond_6
 
-    .line 168
+    .line 166
     invoke-interface {v5, v12}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v6
 
-    .line 169
+    .line 167
     invoke-interface {v5, v11}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
     const/4 v9, 0x2
 
-    .line 170
+    .line 168
     invoke-interface {v5, v9}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v9
 
     const-string v10, "Launcher.ScreenUtils"
 
-    .line 171
+    .line 169
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -257,7 +256,7 @@
 
     invoke-static {v10, v13}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 173
+    .line 171
     invoke-static/range {p0 .. p0}, Lcom/miui/home/library/compat/UserManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/UserManagerCompat;
 
     move-result-object v10
@@ -278,7 +277,7 @@
 
     const-string v8, "Launcher.ScreenUtils"
 
-    .line 174
+    .line 172
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -306,7 +305,7 @@
     :cond_1
     move v9, v12
 
-    .line 180
+    .line 178
     :goto_2
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->size()I
 
@@ -314,19 +313,19 @@
 
     if-ge v9, v10, :cond_3
 
-    .line 181
+    .line 179
     invoke-interface {v1, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v10
 
     check-cast v10, Landroid/content/pm/LauncherActivityInfo;
 
-    .line 182
+    .line 180
     invoke-virtual {v10}, Landroid/content/pm/LauncherActivityInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v14
 
-    .line 183
+    .line 181
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
@@ -355,15 +354,15 @@
 
     if-eqz v11, :cond_2
 
-    .line 184
+    .line 182
     invoke-interface {v1, v10}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     add-int/lit8 v8, v0, 0x1
 
-    .line 185
+    .line 183
     invoke-virtual {v4, v0, v10}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 186
+    .line 184
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -389,7 +388,7 @@
     :goto_3
     if-nez v0, :cond_4
 
-    .line 192
+    .line 190
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -408,7 +407,7 @@
     :goto_4
     if-eqz v5, :cond_5
 
-    .line 197
+    .line 195
     invoke-interface {v5}, Landroid/database/Cursor;->close()V
 
     :cond_5
@@ -419,11 +418,11 @@
 
     invoke-interface {v5}, Landroid/database/Cursor;->close()V
 
-    .line 200
+    .line 198
     :cond_7
     invoke-interface {v2, v3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 201
+    .line 199
     invoke-interface {v1, v12, v4}, Ljava/util/List;->addAll(ILjava/util/Collection;)Z
 
     return-void
@@ -444,15 +443,15 @@
         }
     .end annotation
 
-    .line 141
+    .line 139
     invoke-static {}, Lcom/miui/home/launcher/ScreenUtils;->getLaunchableIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 142
+    .line 140
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 144
+    .line 142
     sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
@@ -466,7 +465,7 @@
     :cond_0
     const/16 p1, 0x40
 
-    .line 147
+    .line 145
     :goto_0
     invoke-static {p2}, Lcom/miui/launcher/utils/LauncherUtils;->getUserId(Landroid/os/UserHandle;)I
 
@@ -482,7 +481,7 @@
 .method public static getLaunchableIntent()Landroid/content/Intent;
     .locals 3
 
-    .line 135
+    .line 133
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
@@ -493,7 +492,7 @@
 
     const-string v1, "android.intent.category.LAUNCHER"
 
-    .line 136
+    .line 134
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     return-object v0
@@ -514,7 +513,7 @@
         }
     .end annotation
 
-    .line 101
+    .line 99
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -523,7 +522,7 @@
 
     const-string v0, "_id"
 
-    .line 102
+    .line 100
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v2
@@ -538,7 +537,7 @@
 
     aput-object p2, v4, v8
 
-    .line 106
+    .line 104
     invoke-static {p3, p4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object p2
@@ -555,7 +554,7 @@
 
     move-object v0, p1
 
-    .line 102
+    .line 100
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object p1
@@ -563,7 +562,7 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 109
+    .line 107
     :try_start_0
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -571,7 +570,7 @@
 
     if-eqz p2, :cond_1
 
-    .line 110
+    .line 108
     invoke-interface {p1, v8}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide p2
@@ -591,7 +590,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 114
+    .line 112
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
 
     :cond_0
@@ -611,7 +610,7 @@
 
     const-string v0, ""
 
-    .line 86
+    .line 84
     invoke-static {p0}, Lcom/miui/home/library/compat/LauncherAppsCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/LauncherAppsCompat;
 
     move-result-object v1
@@ -624,7 +623,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 88
+    .line 86
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -633,7 +632,7 @@
 
     move-result-object v0
 
-    .line 90
+    .line 88
     :cond_0
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -641,7 +640,7 @@
 
     if-eqz p2, :cond_1
 
-    .line 91
+    .line 89
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object p2
@@ -650,7 +649,7 @@
 
     move-result-object p1
 
-    .line 92
+    .line 90
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p2
@@ -659,7 +658,7 @@
 
     const/4 p2, 0x0
 
-    .line 93
+    .line 91
     invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -693,27 +692,27 @@
         }
     .end annotation
 
-    .line 250
+    .line 248
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 251
+    .line 249
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXMin(Landroid/content/Context;)I
 
     move-result v1
 
-    .line 252
+    .line 250
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXMax(Landroid/content/Context;)I
 
     move-result v2
 
-    .line 253
+    .line 251
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYMin(Landroid/content/Context;)I
 
     move-result v3
 
-    .line 254
+    .line 252
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYMax(Landroid/content/Context;)I
 
     move-result v4
@@ -727,7 +726,7 @@
 
     const/4 v6, 0x0
 
-    .line 256
+    .line 254
     invoke-static {p0, v5, v6}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -746,7 +745,7 @@
     :goto_1
     if-gt p0, v4, :cond_3
 
-    .line 261
+    .line 259
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -786,39 +785,27 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherModel;->isModelLoaded()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 41
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getModel()Lcom/miui/home/launcher/LauncherModel;
-
-    move-result-object v0
-
     new-instance v1, Lcom/miui/home/launcher/model/ScreenAddTask;
 
     invoke-direct {v1, p0, p1, p2}, Lcom/miui/home/launcher/model/ScreenAddTask;-><init>(III)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/LauncherModel;->enqueueModelUpdateTask(Lcom/miui/home/launcher/LauncherModel$ModelUpdateTask;)V
 
-    :cond_0
     return-void
 .end method
 
 .method public static isActivityExist(Landroid/content/Context;Landroid/content/ComponentName;)Z
     .locals 1
 
-    .line 53
+    .line 51
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 54
+    .line 52
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 55
+    .line 53
     invoke-static {p0, v0}, Lcom/miui/home/launcher/ScreenUtils;->isActivityExist(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result p0
@@ -829,7 +816,7 @@
 .method private static isActivityExist(Landroid/content/Context;Landroid/content/Intent;)Z
     .locals 1
 
-    .line 64
+    .line 62
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -840,7 +827,7 @@
 
     move-result-object p0
 
-    .line 66
+    .line 64
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -861,12 +848,12 @@
 .method public static isActivityExist(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 1
 
-    .line 59
+    .line 57
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 60
+    .line 58
     invoke-static {p0, v0}, Lcom/miui/home/launcher/ScreenUtils;->isActivityExist(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result p0
@@ -877,7 +864,7 @@
 .method public static isAlreadyInstalled(Ljava/lang/String;Landroid/content/Context;)Z
     .locals 2
 
-    .line 70
+    .line 68
     invoke-static {p1}, Lcom/miui/home/library/compat/LauncherAppsCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/LauncherAppsCompat;
 
     move-result-object p1
@@ -900,10 +887,10 @@
     return v1
 .end method
 
-.method static synthetic lambda$asynIsAlreadyInstalled$0(Ljava/lang/String;Landroid/content/Context;Ljava/lang/Void;)Ljava/lang/Boolean;
+.method static synthetic lambda$asynIsAlreadyInstalled$85(Ljava/lang/String;Landroid/content/Context;Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 77
+    .line 75
     invoke-static {p0, p1}, Lcom/miui/home/launcher/ScreenUtils;->isAlreadyInstalled(Ljava/lang/String;Landroid/content/Context;)Z
 
     move-result p0
@@ -915,119 +902,16 @@
     return-object p0
 .end method
 
-.method static synthetic lambda$asynIsAlreadyInstalled$1(Lcom/miui/home/launcher/common/ResultRunnable;Ljava/lang/Boolean;)V
+.method static synthetic lambda$asynIsAlreadyInstalled$86(Lcom/miui/home/launcher/common/ResultRunnable;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 79
+    .line 77
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/common/ResultRunnable;->setResult(Ljava/lang/Object;)V
 
-    .line 80
+    .line 78
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/ResultRunnable;->run()V
 
     return-void
-.end method
-
-.method static loadScreens(Landroid/database/sqlite/SQLiteDatabase;)Ljava/util/ArrayList;
-    .locals 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/database/sqlite/SQLiteDatabase;",
-            ")",
-            "Ljava/util/ArrayList<",
-            "Lcom/miui/home/launcher/ScreenUtils$ScreenInfo;",
-            ">;"
-        }
-    .end annotation
-
-    const-string v1, "screens"
-
-    .line 280
-    sget-object v2, Lcom/miui/home/launcher/ScreenUtils$ScreensQuery;->COLUMNS:[Ljava/lang/String;
-
-    const-string v7, "screenOrder ASC"
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    move-object v0, p0
-
-    invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object p0
-
-    .line 289
-    :try_start_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-interface {p0}, Landroid/database/Cursor;->getCount()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    .line 290
-    :goto_0
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 291
-    new-instance v1, Lcom/miui/home/launcher/ScreenUtils$ScreenInfo;
-
-    const/4 v2, 0x0
-
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v2
-
-    const/4 v4, 0x1
-
-    .line 292
-    invoke-interface {p0, v4}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v4
-
-    const/4 v5, 0x2
-
-    invoke-interface {p0, v5}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v5
-
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/miui/home/launcher/ScreenUtils$ScreenInfo;-><init>(JII)V
-
-    .line 291
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz p0, :cond_1
-
-    .line 297
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-
-    :cond_1
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    if-eqz p0, :cond_2
-
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-
-    :cond_2
-    throw v0
 .end method
 
 .method public static parseCellsSize(Ljava/lang/String;[I)Z
@@ -1038,12 +922,12 @@
     :try_start_0
     const-string v1, "x"
 
-    .line 269
+    .line 267
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 270
+    .line 268
     aget-object v1, p0, v0
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -1054,7 +938,7 @@
 
     const/4 v1, 0x1
 
-    .line 271
+    .line 269
     aget-object p0, p0, v1
 
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -1072,7 +956,7 @@
 
     const-string p1, "cells config string invalidate"
 
-    .line 274
+    .line 272
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -1081,14 +965,14 @@
 .method static removePackage(Landroid/content/Context;Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;J)V
     .locals 0
 
-    .line 121
+    .line 119
     invoke-static {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/ScreenUtils;->getPackageItemIds(Landroid/content/Context;Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;J)Ljava/util/ArrayList;
 
     move-result-object p0
 
     const/4 p2, 0x0
 
-    .line 122
+    .line 120
     :goto_0
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -1096,7 +980,7 @@
 
     if-ge p2, p3, :cond_0
 
-    .line 123
+    .line 121
     invoke-virtual {p0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p3

@@ -75,7 +75,7 @@
 
     const-string v26, "Z"
 
-    const-string v27, "\u2026"
+    const-string v27, "…"
 
     .line 36
     filled-new-array/range {v0 .. v27}, [Ljava/lang/String;

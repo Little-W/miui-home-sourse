@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/views/TaskView;)V
     .locals 0
 
-    .line 882
+    .line 904
     iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     iput-object p2, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;->val$targetTaskView:Lcom/miui/home/recents/views/TaskView;
@@ -34,19 +34,19 @@
     return-void
 .end method
 
-.method static synthetic lambda$onAnimationEnd$0(Lcom/miui/home/recents/views/TaskView;)V
+.method static synthetic lambda$onAnimationEnd$532(Lcom/miui/home/recents/views/TaskView;)V
     .locals 2
 
     if-eqz p0, :cond_0
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 896
+    .line 918
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->setChildrenViewAlpha(F)V
 
     const/4 v1, 0x0
 
-    .line 897
+    .line 919
     invoke-virtual {p0, v1, v1, v0}, Lcom/miui/home/recents/views/TaskView;->setHeaderTranslationAndAlpha(FFF)V
 
     :cond_0
@@ -58,14 +58,14 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 894
+    .line 916
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;->val$targetTaskView:Lcom/miui/home/recents/views/TaskView;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$4$Wvtq87JumeAOSY_qmuFZA_MNUNA;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$4$PbL4E3XIqfcOeABjMUujfZP79c8;
 
-    invoke-direct {v1, v0}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$4$Wvtq87JumeAOSY_qmuFZA_MNUNA;-><init>(Lcom/miui/home/recents/views/TaskView;)V
+    invoke-direct {v1, v0}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$4$PbL4E3XIqfcOeABjMUujfZP79c8;-><init>(Lcom/miui/home/recents/views/TaskView;)V
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 
@@ -75,7 +75,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 885
+    .line 907
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;->val$targetTaskView:Lcom/miui/home/recents/views/TaskView;
 
     if-eqz p1, :cond_0
@@ -86,19 +86,19 @@
 
     if-nez p1, :cond_0
 
-    .line 886
+    .line 908
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;->val$targetTaskView:Lcom/miui/home/recents/views/TaskView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/views/TaskView;->setChildrenViewAlpha(F)V
 
-    .line 887
+    .line 909
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;->val$targetTaskView:Lcom/miui/home/recents/views/TaskView;
 
     invoke-virtual {p1, v0, v0, v0}, Lcom/miui/home/recents/views/TaskView;->setHeaderTranslationAndAlpha(FFF)V
 
-    .line 889
+    .line 911
     :cond_0
     invoke-static {}, Lcom/miui/home/recents/DimLayer;->getInstance()Lcom/miui/home/recents/DimLayer;
 

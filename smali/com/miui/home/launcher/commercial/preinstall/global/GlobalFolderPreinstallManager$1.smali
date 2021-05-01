@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;)V
     .locals 0
 
-    .line 47
+    .line 41
     iput-object p1, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager$1;->this$0:Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 51
+    .line 45
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager$1;->this$0:Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;
 
@@ -48,7 +48,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 52
+    .line 46
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager$1;->this$0:Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;
 
     iget-object v1, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager$1;->this$0:Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;
@@ -59,7 +59,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->access$102(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;Ljava/util/List;)Ljava/util/List;
 
-    .line 53
+    .line 47
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager$1;->this$0:Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;
 
     invoke-static {v0}, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->access$300(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;)V
@@ -75,7 +75,7 @@
 
     const-string v2, "Load preinstall ads fail"
 
-    .line 56
+    .line 50
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0

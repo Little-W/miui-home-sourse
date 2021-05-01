@@ -142,14 +142,14 @@
     const/4 p0, -0x1
 
     :goto_1
-    const v0, 0x7f100146
+    const v0, 0x7f100147
 
     packed-switch p0, :pswitch_data_0
 
     return v0
 
     :pswitch_0
-    const p0, 0x7f100148
+    const p0, 0x7f100149
 
     return p0
 
@@ -157,7 +157,7 @@
     return v0
 
     :pswitch_2
-    const p0, 0x7f100147
+    const p0, 0x7f100148
 
     return p0
 
@@ -259,7 +259,7 @@
     return v0
 .end method
 
-.method public static synthetic lambda$onPullDownAction$0(Lcom/miui/home/settings/LauncherGestureController;)V
+.method public static synthetic lambda$onPullDownAction$116(Lcom/miui/home/settings/LauncherGestureController;)V
     .locals 1
 
     .line 105
@@ -580,9 +580,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/home/settings/-$$Lambda$LauncherGestureController$bFz7Z96nni-LLx2x7-6Wcuerd94;
+    new-instance v1, Lcom/miui/home/settings/-$$Lambda$LauncherGestureController$tgHmI0Z_KDimMwfCsfPWjUFnPO0;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/settings/-$$Lambda$LauncherGestureController$bFz7Z96nni-LLx2x7-6Wcuerd94;-><init>(Lcom/miui/home/settings/LauncherGestureController;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/settings/-$$Lambda$LauncherGestureController$tgHmI0Z_KDimMwfCsfPWjUFnPO0;-><init>(Lcom/miui/home/settings/LauncherGestureController;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/ShortcutMenuLayer;->post(Ljava/lang/Runnable;)Z
 

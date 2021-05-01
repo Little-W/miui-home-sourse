@@ -81,14 +81,15 @@
 
     sput-object p0, Lcom/miui/home/launcher/ApplicationConfig;->sAssistantApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 33
+    .line 34
+    :goto_0
     sget p0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v0, 0x1d
 
     if-lt p0, v0, :cond_1
 
-    .line 34
+    .line 35
     sget-boolean p0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_MIUI_12_5:Z
 
     xor-int/lit8 p0, p0, 0x1
@@ -96,7 +97,6 @@
     sput-boolean p0, Lcom/miui/home/launcher/ApplicationConfig;->sIsProtectedDataAppAvailable:Z
 
     :cond_1
-    :goto_0
     return-void
 .end method
 

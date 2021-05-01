@@ -33,7 +33,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 474
+    .line 475
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +42,7 @@
 .method synthetic constructor <init>(Lmiuix/animation/controller/FolmeTouch$1;)V
     .locals 0
 
-    .line 474
+    .line 475
     invoke-direct {p0}, Lmiuix/animation/controller/FolmeTouch$LongClickTask;-><init>()V
 
     return-void
@@ -53,7 +53,7 @@
 .method public run()V
     .locals 3
 
-    .line 501
+    .line 502
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch$LongClickTask;->mTouchRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -64,7 +64,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 503
+    .line 504
     iget-object v1, v0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     invoke-interface {v1}, Lmiuix/animation/controller/IFolmeStateStyle;->getTarget()Lmiuix/animation/IAnimTarget;
@@ -75,7 +75,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 504
+    .line 505
     invoke-virtual {v1}, Lmiuix/animation/IAnimTarget;->getTargetObject()Ljava/lang/Object;
 
     move-result-object v1
@@ -84,17 +84,17 @@
 
     if-eqz v1, :cond_0
 
-    .line 505
+    .line 506
     invoke-static {v0}, Lmiuix/animation/controller/FolmeTouch;->access$900(Lmiuix/animation/controller/FolmeTouch;)Landroid/view/View$OnLongClickListener;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 506
+    .line 507
     invoke-virtual {v1}, Landroid/view/View;->performLongClick()Z
 
-    .line 507
+    .line 508
     invoke-static {v0, v1}, Lmiuix/animation/controller/FolmeTouch;->access$400(Lmiuix/animation/controller/FolmeTouch;Landroid/view/View;)V
 
     :cond_0
@@ -104,19 +104,19 @@
 .method start(Lmiuix/animation/controller/FolmeTouch;)V
     .locals 3
 
-    .line 479
+    .line 480
     iget-object v0, p1, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     invoke-interface {v0}, Lmiuix/animation/controller/IFolmeStateStyle;->getTarget()Lmiuix/animation/IAnimTarget;
 
     move-result-object v0
 
-    .line 480
+    .line 481
     instance-of v1, v0, Lmiuix/animation/ViewTarget;
 
     if-eqz v1, :cond_0
 
-    .line 481
+    .line 482
     check-cast v0, Lmiuix/animation/ViewTarget;
 
     invoke-virtual {v0}, Lmiuix/animation/ViewTarget;->getTargetObject()Landroid/view/View;
@@ -125,14 +125,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 483
+    .line 484
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v1, p0, Lmiuix/animation/controller/FolmeTouch$LongClickTask;->mTouchRef:Ljava/lang/ref/WeakReference;
 
-    .line 484
+    .line 485
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
 
     move-result p1
@@ -148,19 +148,19 @@
 .method stop(Lmiuix/animation/controller/FolmeTouch;)V
     .locals 1
 
-    .line 490
+    .line 491
     iget-object p1, p1, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     invoke-interface {p1}, Lmiuix/animation/controller/IFolmeStateStyle;->getTarget()Lmiuix/animation/IAnimTarget;
 
     move-result-object p1
 
-    .line 491
+    .line 492
     instance-of v0, p1, Lmiuix/animation/ViewTarget;
 
     if-eqz v0, :cond_0
 
-    .line 492
+    .line 493
     check-cast p1, Lmiuix/animation/ViewTarget;
 
     invoke-virtual {p1}, Lmiuix/animation/ViewTarget;->getTargetObject()Landroid/view/View;
@@ -169,7 +169,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 494
+    .line 495
     invoke-virtual {p1, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     :cond_0

@@ -96,7 +96,7 @@
     .line 34
     invoke-super {p0}, Lcom/miui/home/launcher/OnLongClickWrapper;->onFinishInflate()V
 
-    const v0, 0x7f0a00e4
+    const v0, 0x7f0a00e6
 
     .line 35
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;
@@ -118,7 +118,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->iconBackground:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a00ce
+    const v0, 0x7f0a00d0
 
     .line 37
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;
@@ -258,7 +258,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0600d6
+    const v3, 0x7f0600d9
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -300,7 +300,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0600d5
+    const v3, 0x7f0600d8
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 

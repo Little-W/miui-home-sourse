@@ -229,8 +229,8 @@
     return-object v0
 .end method
 
-.method public static getSystemAnimationStatus(Landroid/content/Context;)I
-    .locals 3
+.method public static getSystemAnimationStatus(Landroid/content/Context;Z)I
+    .locals 2
 
     .line 127
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -241,15 +241,15 @@
 
     const-string v1, "default_close_unlock_animator"
 
-    const/4 v2, 0x0
+    xor-int/lit8 p1, p1, 0x1
 
     .line 128
-    invoke-static {v1, v2}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v1, p1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v1
+    move-result p1
 
     .line 127
-    invoke-static {p0, v0, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {p0, v0, p1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
 
@@ -267,11 +267,11 @@
     return p0
 .end method
 
-.method public static isSystemAnimationOpen(Landroid/content/Context;)Z
+.method public static isSystemAnimationOpen(Landroid/content/Context;Z)Z
     .locals 0
 
     .line 123
-    invoke-static {p0}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getSystemAnimationStatus(Landroid/content/Context;)I
+    invoke-static {p0, p1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getSystemAnimationStatus(Landroid/content/Context;Z)I
 
     move-result p0
 

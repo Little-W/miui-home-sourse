@@ -25,7 +25,7 @@
 .method constructor <init>(Lmiuix/animation/internal/AnimManager;)V
     .locals 0
 
-    .line 36
+    .line 35
     iput-object p1, p0, Lmiuix/animation/internal/AnimManager$1;->this$0:Lmiuix/animation/internal/AnimManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,16 +36,14 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
-    .line 39
+    .line 38
     iget-object v0, p0, Lmiuix/animation/internal/AnimManager$1;->this$0:Lmiuix/animation/internal/AnimManager;
 
-    iget-object v0, v0, Lmiuix/animation/internal/AnimManager;->mTarget:Lmiuix/animation/IAnimTarget;
+    const/4 v1, 0x1
 
-    iget-object v0, v0, Lmiuix/animation/IAnimTarget;->handler:Lmiuix/animation/internal/TargetHandler;
-
-    invoke-virtual {v0}, Lmiuix/animation/internal/TargetHandler;->update()V
+    invoke-virtual {v0, v1}, Lmiuix/animation/internal/AnimManager;->update(Z)V
 
     return-void
 .end method

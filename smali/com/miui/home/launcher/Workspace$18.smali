@@ -26,7 +26,7 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 3279
+    .line 3192
     invoke-direct {p0, p1}, Lmiuix/animation/property/FloatProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -37,7 +37,7 @@
 .method public getValue(Landroid/view/View;)F
     .locals 0
 
-    .line 3285
+    .line 3198
     invoke-virtual {p1}, Landroid/view/View;->getTranslationX()F
 
     move-result p1
@@ -48,7 +48,7 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 3279
+    .line 3192
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace$18;->getValue(Landroid/view/View;)F
@@ -61,7 +61,7 @@
 .method public setValue(Landroid/view/View;F)V
     .locals 0
 
-    .line 3281
+    .line 3194
     invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationX(F)V
 
     return-void
@@ -70,7 +70,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 3279
+    .line 3192
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/Workspace$18;->setValue(Landroid/view/View;F)V

@@ -91,7 +91,7 @@
     return-object v0
 .end method
 
-.method static synthetic lambda$makeMiuiHomeLoadClassFirst$0(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)I
+.method static synthetic lambda$makeMiuiHomeLoadClassFirst$387(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
     .line 78
@@ -190,9 +190,9 @@
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
     .line 77
-    new-instance v2, Lcom/miui/home/launcher/module/-$$Lambda$ModuleManagerCompat$DozrQDm9H3sFXlkasD4ywJPyCzQ;
+    new-instance v2, Lcom/miui/home/launcher/module/-$$Lambda$ModuleManagerCompat$-VPM6GtPeUyMjvqXHQN6sI_fk8g;
 
-    invoke-direct {v2, v1}, Lcom/miui/home/launcher/module/-$$Lambda$ModuleManagerCompat$DozrQDm9H3sFXlkasD4ywJPyCzQ;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/miui/home/launcher/module/-$$Lambda$ModuleManagerCompat$-VPM6GtPeUyMjvqXHQN6sI_fk8g;-><init>(Ljava/lang/String;)V
 
     invoke-static {v0, v2}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 

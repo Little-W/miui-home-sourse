@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ripple android:color="#d9ffffff"
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<ripple
+    android:color="#d9ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape>
-            <stroke android:width="@dimen/search_bar_stroke_width" android:color="#0d000000" />
-            <corners android:radius="@dimen/search_bar_height" />
-            <solid android:color="#d9ffffff" />
+            <stroke
+                android:width="@dimen/search_bar_stroke_width"
+                android:color="#0d000000" />
+            <corners
+                android:radius="@dimen/search_bar_height" />
+            <solid
+                android:color="#d9ffffff" />
         </shape>
     </item>
 </ripple>

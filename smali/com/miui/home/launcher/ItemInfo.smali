@@ -747,35 +747,6 @@
     return v0
 .end method
 
-.method public isWidget()Z
-    .locals 2
-
-    .line 269
-    iget v0, p0, Lcom/miui/home/launcher/ItemInfo;->itemType:I
-
-    const/4 v1, 0x4
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v1, 0x5
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    :goto_1
-    return v0
-.end method
-
 .method public load(Landroid/content/Context;Landroid/database/Cursor;)V
     .locals 1
 

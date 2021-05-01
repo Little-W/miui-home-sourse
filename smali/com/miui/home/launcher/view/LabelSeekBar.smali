@@ -64,7 +64,7 @@
     .line 31
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    const p2, 0x7f0d0063
+    const p2, 0x7f0d0068
 
     .line 33
     invoke-static {p1, p2, p0}, Lcom/miui/home/launcher/view/LabelSeekBar;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;

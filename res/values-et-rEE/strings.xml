@@ -178,6 +178,7 @@
     <string name="defalut_launcher_title">Vaikimisi launcher</string>
     <string name="default_folder_title_claro">Claro</string>
     <string name="default_folder_title_game">Mängud</string>
+    <string name="default_folder_title_hot">Populaarsed rakendused</string>
     <string name="default_folder_title_meitu">Meitu rakendused</string>
     <string name="default_folder_title_microsoft">Microsoft</string>
     <string name="default_folder_title_other_apps">Teised rakendused</string>

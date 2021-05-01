@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/ItemInfo;)V
     .locals 0
 
-    .line 1277
+    .line 1197
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$6;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     iput-object p2, p0, Lcom/miui/home/launcher/CellLayout$6;->val$dragInfo:Lcom/miui/home/launcher/ItemInfo;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 1
 
-    .line 1279
+    .line 1199
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$6;->val$dragInfo:Lcom/miui/home/launcher/ItemInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ItemInfo;->finishPending()V

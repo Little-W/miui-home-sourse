@@ -63,7 +63,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$init$0(Lcom/miui/home/launcher/RetainedList;Ljava/lang/Void;)Ljava/lang/Void;
+.method public static synthetic lambda$init$213(Lcom/miui/home/launcher/RetainedList;Ljava/lang/Void;)Ljava/lang/Void;
     .locals 8
 
     const/4 p1, 0x0
@@ -286,9 +286,9 @@
     .locals 2
 
     .line 41
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$RetainedList$WC6eIdUsf0bUtZrWSGYGBhIoJso;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$RetainedList$f6xHbtTaBKYMqUNT-0khzCFqg-Y;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$RetainedList$WC6eIdUsf0bUtZrWSGYGBhIoJso;-><init>(Lcom/miui/home/launcher/RetainedList;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$RetainedList$f6xHbtTaBKYMqUNT-0khzCFqg-Y;-><init>(Lcom/miui/home/launcher/RetainedList;)V
 
     const/4 v1, 0x0
 

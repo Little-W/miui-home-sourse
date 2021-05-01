@@ -481,7 +481,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f0d0029
+    const p2, 0x7f0d002a
 
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutsAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 

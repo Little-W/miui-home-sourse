@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher$16$1$1;Lcom/miui/home/launcher/FolderGridView;I)V
     .locals 0
 
-    .line 2591
+    .line 2618
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$16$1$1$1;->this$3:Lcom/miui/home/launcher/Launcher$16$1$1;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$16$1$1$1;->val$folderGrid:Lcom/miui/home/launcher/FolderGridView;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 3
 
-    .line 2593
+    .line 2620
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$16$1$1$1;->val$folderGrid:Lcom/miui/home/launcher/FolderGridView;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$16$1$1$1;->this$3:Lcom/miui/home/launcher/Launcher$16$1$1;
@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    .line 2594
+    .line 2621
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$16$1$1$1;->val$folderGrid:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/FolderGridView;->computeVerticalScrollOffset()I
@@ -70,7 +70,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 2595
+    .line 2622
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$16$1$1$1;->this$3:Lcom/miui/home/launcher/Launcher$16$1$1;
 
     iget-object v2, v2, Lcom/miui/home/launcher/Launcher$16$1$1;->this$2:Lcom/miui/home/launcher/Launcher$16$1;
@@ -87,7 +87,7 @@
 
     goto :goto_0
 
-    .line 2603
+    .line 2630
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$16$1$1$1;->this$3:Lcom/miui/home/launcher/Launcher$16$1$1;
 
@@ -109,7 +109,7 @@
 
     goto :goto_1
 
-    .line 2596
+    .line 2623
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$16$1$1$1;->this$3:Lcom/miui/home/launcher/Launcher$16$1$1;
@@ -126,7 +126,7 @@
 
     if-nez v0, :cond_2
 
-    .line 2597
+    .line 2624
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$16$1$1$1;->this$3:Lcom/miui/home/launcher/Launcher$16$1$1;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$16$1$1;->this$2:Lcom/miui/home/launcher/Launcher$16$1;
@@ -139,7 +139,7 @@
 
     goto :goto_1
 
-    .line 2599
+    .line 2626
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$16$1$1$1;->this$3:Lcom/miui/home/launcher/Launcher$16$1$1;
 
@@ -151,7 +151,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$2802(Lcom/miui/home/launcher/Launcher;I)I
 
-    .line 2600
+    .line 2627
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$16$1$1$1;->val$folderGrid:Lcom/miui/home/launcher/FolderGridView;
 
     iget v1, p0, Lcom/miui/home/launcher/Launcher$16$1$1$1;->val$delay:I

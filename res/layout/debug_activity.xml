@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <Button android:id="@id/dump_all" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="dump_file" android:layout_weight="1.0" android:onClick="dumpFile" />
-    <Button android:id="@id/dump_heap" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="dump_heap" android:layout_weight="1.0" android:onClick="dumpHeap" />
-    <Button android:id="@id/fps_reporter" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="fpsReporter" android:layout_weight="1.0" android:onClick="fpsReporter" />
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button
+        android:id="@id/dump_all"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="dump_file"
+        android:layout_weight="1.0"
+        android:onClick="dumpFile" />
+    <Button
+        android:id="@id/dump_heap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="dump_heap"
+        android:layout_weight="1.0"
+        android:onClick="dumpHeap" />
+    <Button
+        android:id="@id/fps_reporter"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="fpsReporter"
+        android:layout_weight="1.0"
+        android:onClick="fpsReporter" />
 </LinearLayout>

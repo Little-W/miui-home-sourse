@@ -28,7 +28,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 3283
+    .line 3363
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,29 +44,29 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onReceive$0(Lcom/miui/home/recents/NavStubView$18;)V
+.method public static synthetic lambda$onReceive$273(Lcom/miui/home/recents/NavStubView$18;)V
     .locals 2
 
-    .line 3289
+    .line 3369
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$6000(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/AntiMistakeTouchView;
+    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$6900(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/AntiMistakeTouchView;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 3290
+    .line 3370
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$6000(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/AntiMistakeTouchView;
+    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$6900(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/AntiMistakeTouchView;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 3291
-    invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$6100(Lcom/miui/home/recents/NavStubView;)Z
+    .line 3371
+    invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$7000(Lcom/miui/home/recents/NavStubView;)Z
 
     move-result v1
 
@@ -79,7 +79,7 @@
     :cond_0
     const/16 v1, 0x8
 
-    .line 3290
+    .line 3370
     :goto_0
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/AntiMistakeTouchView;->updateVisibilityState(I)V
 
@@ -92,7 +92,7 @@
 
     const-string p1, "com.android.systemui.fullscreen.statechange"
 
-    .line 3286
+    .line 3366
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -103,7 +103,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 3287
+    .line 3367
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
 
     const-string v0, "isEnter"
@@ -114,14 +114,14 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/miui/home/recents/NavStubView;->access$5902(Lcom/miui/home/recents/NavStubView;Z)Z
+    invoke-static {p1, p2}, Lcom/miui/home/recents/NavStubView;->access$6802(Lcom/miui/home/recents/NavStubView;Z)Z
 
-    .line 3288
+    .line 3368
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->GESTURE_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance p2, Lcom/miui/home/recents/-$$Lambda$NavStubView$18$lf76BJ4cxRT4TAarVfF82ovLwQE;
+    new-instance p2, Lcom/miui/home/recents/-$$Lambda$NavStubView$18$HVWX0tZHUtZK5VHUNz6Fn1g6vvc;
 
-    invoke-direct {p2, p0}, Lcom/miui/home/recents/-$$Lambda$NavStubView$18$lf76BJ4cxRT4TAarVfF82ovLwQE;-><init>(Lcom/miui/home/recents/NavStubView$18;)V
+    invoke-direct {p2, p0}, Lcom/miui/home/recents/-$$Lambda$NavStubView$18$HVWX0tZHUtZK5VHUNz6Fn1g6vvc;-><init>(Lcom/miui/home/recents/NavStubView$18;)V
 
     invoke-virtual {p1, p2}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->lambda$null$33(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutInfo;Landroid/content/pm/PackageManager;Landroid/content/Intent;Z)V
+    value = Lcom/miui/home/launcher/Launcher;->lambda$null$60(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutInfo;Landroid/content/pm/PackageManager;Landroid/content/Intent;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$info:Lcom/miui/home/launcher/ShortcutInfo;
+.field final synthetic val$cap$1:Lcom/miui/home/launcher/ShortcutInfo;
 
 .field final synthetic val$result:Ljava/lang/CharSequence;
 
@@ -29,12 +29,12 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/lang/CharSequence;Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 0
 
-    .line 6074
+    .line 6085
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$59;->val$result:Ljava/lang/CharSequence;
 
-    iput-object p3, p0, Lcom/miui/home/launcher/Launcher$59;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
+    iput-object p3, p0, Lcom/miui/home/launcher/Launcher$59;->val$cap$1:Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,20 +46,20 @@
 .method public run()V
     .locals 3
 
-    .line 6077
+    .line 6088
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->val$result:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
 
-    .line 6078
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$59;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
+    .line 6089
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$59;->val$cap$1:Lcom/miui/home/launcher/ShortcutInfo;
 
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1, v0, v2}, Lcom/miui/home/launcher/ShortcutInfo;->setLabelAndUpdateDB(Ljava/lang/CharSequence;Landroid/content/Context;)V
 
-    .line 6079
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
+    .line 6090
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->val$cap$1:Lcom/miui/home/launcher/ShortcutInfo;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
 
