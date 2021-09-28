@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
     .locals 0
 
-    .line 679
+    .line 696
     iput-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$16;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 679
+    .line 696
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/MiuiHomeSettings$16;->accept(Ljava/lang/String;)V
@@ -60,32 +60,32 @@
 
     if-eqz p1, :cond_0
 
-    .line 683
+    .line 700
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p1
 
     if-lez p1, :cond_0
 
-    .line 684
+    .line 701
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$16;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-static {p1}, Lcom/miui/home/settings/MiuiHomeSettings;->access$800(Lcom/miui/home/settings/MiuiHomeSettings;)Lcom/miui/home/settings/preference/ValuePreference;
 
     move-result-object p1
 
-    const v0, 0x7f100151
+    const v0, 0x7f1001f0
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setTitle(I)V
 
-    .line 685
+    .line 702
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$16;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-static {p1}, Lcom/miui/home/settings/MiuiHomeSettings;->access$800(Lcom/miui/home/settings/MiuiHomeSettings;)Lcom/miui/home/settings/preference/ValuePreference;
 
     move-result-object p1
 
-    const v0, 0x7f100150
+    const v0, 0x7f1001ef
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setSummary(I)V
 
@@ -96,7 +96,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 688
+    .line 705
     :goto_0
     new-instance v0, Landroid/content/Intent;
 
@@ -106,17 +106,17 @@
 
     const-string v1, "isNewIconPage"
 
-    .line 689
+    .line 706
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     const-string p1, "miref"
 
     const-string v1, "miuiHome"
 
-    .line 690
+    .line 707
     invoke-virtual {v0, p1, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 691
+    .line 708
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$16;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-static {p1}, Lcom/miui/home/settings/MiuiHomeSettings;->access$800(Lcom/miui/home/settings/MiuiHomeSettings;)Lcom/miui/home/settings/preference/ValuePreference;

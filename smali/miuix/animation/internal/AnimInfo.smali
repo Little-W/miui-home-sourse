@@ -31,21 +31,26 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 7
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, -0x1
+
+    .line 15
+    iput v0, p0, Lmiuix/animation/internal/AnimInfo;->tintMode:I
 
     const-wide v0, 0x7fefffffffffffffL    # Double.MAX_VALUE
 
-    .line 14
+    .line 16
     iput-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->startValue:D
 
-    .line 15
+    .line 17
     iput-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->targetValue:D
 
-    .line 16
+    .line 18
     iput-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->value:D
 
-    .line 17
+    .line 19
     iput-wide v0, p0, Lmiuix/animation/internal/AnimInfo;->setToValue:D
 
     return-void
@@ -56,7 +61,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 36
+    .line 38
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cell_layout_size_entries">
+        <item>4x4</item>
+        <item>4x5</item>
+    </string-array>
+    <string-array name="cell_layout_size_values">
+        <item>4x4</item>
+        <item>4x5</item>
+    </string-array>
+    <string-array name="editing_mode_entries">
+        <item>ພາບພື້ນຫຼັງ</item>
+        <item>Widget</item>
+        <item>​ການ​ຕັ້ງ​ຄ່າ</item>
+    </string-array>
+    <string-array name="gadget_weather_image">
+        <item>ແຈ່ມໃສ</item>
+        <item>ມີເມກຫຼາຍ</item>
+        <item>ມີໝອກ</item>
+        <item>​ໝອກ​ໜາ</item>
+        <item>ພາຍຸຝົນຮຸນແຮງ</item>
+        <item>​ພາ​ຍຸ​ຝົນ</item>
+        <item>ຝົນຕົກໜັກຫຼາຍ</item>
+        <item>ພາຍຸຟ້າຄະນອງ</item>
+        <item>ຝົນປອຍ</item>
+        <item>ຝົນຕົກໜັກ</item>
+        <item>ຝົນຕົກ</item>
+        <item>ຝົນຝອຍ</item>
+        <item>ຝົນລູກເຫັບ</item>
+        <item>ພາຍຸຫິມະ</item>
+        <item>ຫິມະຕົກໜາ</item>
+        <item>ຫິມະຕົກໜັກ</item>
+        <item>ຫິມະຕົກ</item>
+        <item>ຫິມະຕົກເບົາບາງ</item>
+        <item>ພາຍຸຊາຍຮຸນແຮງ</item>
+        <item>ພາຍຸຊາຍ</item>
+        <item>ພາຍຸຊາຍເບົາບາງ</item>
+        <item>ພາຍຸຊາຍ</item>
+        <item>ລູກເຫັບ</item>
+        <item>ມີຝຸ່ນລະອອງ</item>
+        <item>ເມກໝອກ</item>
+    </string-array>
+    <string-array name="gadget_weather_theme_type_entries">
+        <item>ຄ່າເລີ່ມຕົ້ນ</item>
+        <item>ຄລາສສິກ</item>
+    </string-array>
+    <string-array name="transformation_entries">
+        <item>ເລື່ອນ</item>
+        <item>ຈາງຫາຍ</item>
+        <item>ຕີລັງກາ</item>
+        <item>ພິກໜ້າ</item>
+        <item>ຮຽງຊ້ອນ</item>
+        <item>ໝຸນ</item>
+        <item>ຄິວ</item>
+    </string-array>
+    <string-array name="wallpaper_scroll_entries">
+        <item>ຄ່າເລີ່ມຕົ້ນຊຸດຮູບແບບ</item>
+        <item>ໃຈກາງ</item>
+        <item>ຊ້າຍ</item>
+        <item>ຂວາ</item>
+    </string-array>
+</resources>

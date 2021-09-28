@@ -28,17 +28,15 @@
 
     aput-object v6, v5, v7
 
-    .line 11
-    invoke-static {v3, v5}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
+    new-array v6, v4, [Ljava/lang/Object;
 
-    move-result-object v3
+    aput-object p0, v6, v7
 
-    new-array v4, v4, [Ljava/lang/Object;
+    move-object v4, v5
 
-    aput-object p0, v4, v7
+    move-object v5, v6
 
-    .line 10
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/miui/launcher/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static/range {v0 .. v5}, Lcom/miui/launcher/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

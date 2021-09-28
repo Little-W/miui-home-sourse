@@ -1,4 +1,4 @@
-.class final Landroidx/fragment/app/FragmentManagerViewModel$1;
+.class Landroidx/fragment/app/FragmentManagerViewModel$1;
 .super Ljava/lang/Object;
 .source "FragmentManagerViewModel.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

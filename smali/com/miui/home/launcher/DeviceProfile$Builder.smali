@@ -28,17 +28,17 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 30
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/DeviceProfile$Builder;->context:Landroid/content/Context;
 
     const/4 p1, -0x1
 
-    .line 31
+    .line 34
     iput p1, p0, Lcom/miui/home/launcher/DeviceProfile$Builder;->screenWidth:I
 
-    .line 32
+    .line 35
     iput p1, p0, Lcom/miui/home/launcher/DeviceProfile$Builder;->screenHeight:I
 
     return-void
@@ -49,7 +49,7 @@
 .method public final build()Lcom/miui/home/launcher/DeviceProfile;
     .locals 5
 
-    .line 35
+    .line 38
     new-instance v0, Lcom/miui/home/launcher/DeviceProfile;
 
     iget v1, p0, Lcom/miui/home/launcher/DeviceProfile$Builder;->screenWidth:I
@@ -77,7 +77,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 45
+    .line 48
     iput-object p1, p0, Lcom/miui/home/launcher/DeviceProfile$Builder;->dpc:Lcom/miui/home/launcher/DeviceConfig;
 
     return-object p0
@@ -86,10 +86,10 @@
 .method public final setScreenSize(II)Lcom/miui/home/launcher/DeviceProfile$Builder;
     .locals 0
 
-    .line 39
+    .line 42
     iput p1, p0, Lcom/miui/home/launcher/DeviceProfile$Builder;->screenWidth:I
 
-    .line 40
+    .line 43
     iput p2, p0, Lcom/miui/home/launcher/DeviceProfile$Builder;->screenHeight:I
 
     return-object p0

@@ -31,7 +31,11 @@
 
     .line 118
     :cond_0
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getModel()Lcom/miui/home/launcher/LauncherModel;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getModel()Lcom/miui/home/launcher/LauncherModel;
 
     move-result-object v0
 
@@ -256,7 +260,7 @@
 .method getDrawableResource()I
     .locals 1
 
-    const v0, 0x7f080144
+    const v0, 0x7f08016b
 
     return v0
 .end method
@@ -401,9 +405,9 @@
     .line 71
     invoke-virtual {v0, v1, v4, v3, v2}, Lcom/miui/home/launcher/Launcher;->startSearch(Ljava/lang/String;ZLandroid/os/Bundle;Z)V
 
-    const v1, 0x7f010027
+    const v1, 0x7f01002f
 
-    const v3, 0x7f010028
+    const v3, 0x7f010030
 
     .line 72
     invoke-virtual {v0, v1, v3}, Lcom/miui/home/launcher/Launcher;->overridePendingTransition(II)V

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector
-    android:height="22.0dip"
-    android:width="22.0dip"
+    android:height="@dimen/miuix_appcompat_progress_indeterminate_size"
+    android:width="@dimen/miuix_appcompat_progress_indeterminate_size"
     android:viewportWidth="66.0"
     android:viewportHeight="66.0"
     xmlns:android="http://schemas.android.com/apk/res/android">

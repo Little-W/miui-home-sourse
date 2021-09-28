@@ -3,12 +3,12 @@
 .source "Launcher.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/function/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->checkDeepShortcuts(Landroid/os/UserHandle;)V
+    value = Lcom/miui/home/launcher/Launcher;->addNewInstallIndicator()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,25 +16,33 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/function/Function<",
+        "Ljava/lang/Void;",
+        "Ljava/util/Map<",
+        "Ljava/lang/String;",
+        "Lcom/miui/launcher/common/AppUsageStat;",
+        ">;>;"
+    }
+.end annotation
+
 
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$detail:Lcom/miui/launcher/common/ShortcutInfoCompat;
-
-.field final synthetic val$intent:Landroid/content/Intent;
+.field final synthetic val$newInstalledShortcutInfos:Ljava/util/HashSet;
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/content/Intent;Lcom/miui/launcher/common/ShortcutInfoCompat;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/util/HashSet;)V
     .locals 0
 
-    .line 6039
+    .line 5818
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$58;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$58;->val$intent:Landroid/content/Intent;
-
-    iput-object p3, p0, Lcom/miui/home/launcher/Launcher$58;->val$detail:Lcom/miui/launcher/common/ShortcutInfoCompat;
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$58;->val$newInstalledShortcutInfos:Ljava/util/HashSet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,89 +51,51 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 6
+.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    .line 6041
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$58;->this$0:Lcom/miui/home/launcher/Launcher;
+    .line 5818
+    check-cast p1, Ljava/lang/Void;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherModel;
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$58;->apply(Ljava/lang/Void;)Ljava/util/Map;
 
-    move-result-object v0
+    move-result-object p1
 
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$58;->val$intent:Landroid/content/Intent;
+    return-object p1
+.end method
 
-    const/4 v2, 0x0
+.method public apply(Ljava/lang/Void;)Ljava/util/Map;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Void;",
+            ")",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Lcom/miui/launcher/common/AppUsageStat;",
+            ">;"
+        }
+    .end annotation
 
-    const/16 v3, 0xe
+    .line 5821
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$58;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/miui/home/launcher/LauncherModel;->getShortcutInfo(Landroid/content/Intent;Lcom/miui/home/launcher/CellLayout$CellInfo;I)Lcom/miui/home/launcher/ShortcutInfo;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1100(Lcom/miui/home/launcher/Launcher;)J
 
-    move-result-object v0
+    move-result-wide v0
 
-    check-cast v0, Lcom/miui/home/launcher/DeepShortcutInfo;
+    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$58;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    if-eqz v0, :cond_0
+    iget-object v3, p0, Lcom/miui/home/launcher/Launcher$58;->val$newInstalledShortcutInfos:Ljava/util/HashSet;
 
-    .line 6043
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$58;->val$detail:Lcom/miui/launcher/common/ShortcutInfoCompat;
-
-    invoke-virtual {v1}, Lcom/miui/launcher/common/ShortcutInfoCompat;->getPackage()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DeepShortcutInfo;->setIconPackage(Ljava/lang/String;)V
-
-    const-string v1, "Launcher"
-
-    const-string v2, "checkUserDeepShortcuts, add deepShortcut(%s, %s, %s)"
-
-    const/4 v3, 0x3
-
-    .line 6044
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    iget-object v5, p0, Lcom/miui/home/launcher/Launcher$58;->val$detail:Lcom/miui/launcher/common/ShortcutInfoCompat;
-
-    invoke-virtual {v5}, Lcom/miui/launcher/common/ShortcutInfoCompat;->getUserHandle()Landroid/os/UserHandle;
-
-    move-result-object v5
-
-    aput-object v5, v3, v4
-
-    const/4 v4, 0x1
-
-    iget-object v5, p0, Lcom/miui/home/launcher/Launcher$58;->val$detail:Lcom/miui/launcher/common/ShortcutInfoCompat;
-
-    invoke-virtual {v5}, Lcom/miui/launcher/common/ShortcutInfoCompat;->getPackage()Ljava/lang/String;
-
-    move-result-object v5
-
-    aput-object v5, v3, v4
-
-    const/4 v4, 0x2
-
-    iget-object v5, p0, Lcom/miui/home/launcher/Launcher$58;->val$detail:Lcom/miui/launcher/common/ShortcutInfoCompat;
-
-    invoke-virtual {v5}, Lcom/miui/launcher/common/ShortcutInfoCompat;->getId()Ljava/lang/String;
-
-    move-result-object v5
-
-    aput-object v5, v3, v4
-
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/miui/home/launcher/Launcher;->access$8000(Lcom/miui/home/launcher/Launcher;Ljava/util/HashSet;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, v0, v1, v2}, Lcom/miui/launcher/utils/PkgUsageStatsUtils;->loadAllPackageUsageStats(Landroid/content/Context;JLjava/util/ArrayList;)Ljava/util/Map;
 
-    .line 6045
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$58;->this$0:Lcom/miui/home/launcher/Launcher;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DeepShortcutInfo;->addToLauncher(Lcom/miui/home/launcher/Launcher;)V
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

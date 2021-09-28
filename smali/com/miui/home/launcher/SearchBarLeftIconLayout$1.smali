@@ -56,12 +56,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f08015d
+    const v1, 0x7f080184
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f08015b
+    const v1, 0x7f080182
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -100,18 +100,18 @@
 
     if-eqz v1, :cond_2
 
-    const-string v1, "getSearchBarLeftIcon"
-
-    const-string v2, "leftIcon"
-
     .line 57
-    iget-object v3, p0, Lcom/miui/home/launcher/SearchBarLeftIconLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarLeftIconLayout;
+    invoke-static {}, Lcom/miui/home/launcher/SearchBarStyleData;->getInstance()Lcom/miui/home/launcher/SearchBarStyleData;
 
-    invoke-static {v3}, Lcom/miui/home/launcher/SearchBarLeftIconLayout;->access$000(Lcom/miui/home/launcher/SearchBarLeftIconLayout;)Landroid/content/Context;
+    move-result-object v1
 
-    move-result-object v3
+    iget-object v2, p0, Lcom/miui/home/launcher/SearchBarLeftIconLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarLeftIconLayout;
 
-    invoke-static {v1, v2, v3}, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->getDrawableFormProvider(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v2}, Lcom/miui/home/launcher/SearchBarLeftIconLayout;->access$000(Lcom/miui/home/launcher/SearchBarLeftIconLayout;)Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/SearchBarStyleData;->getLeftIconDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 

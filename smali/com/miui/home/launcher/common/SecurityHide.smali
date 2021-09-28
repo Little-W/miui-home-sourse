@@ -54,12 +54,12 @@
     sput-object v0, Lcom/miui/home/launcher/common/SecurityHide;->mHideItemList:Ljava/util/List;
 
     .line 25
-    sget-object v0, Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$vO7s8s2Z_Z3erbgpuiWNl7OrkGs;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$vO7s8s2Z_Z3erbgpuiWNl7OrkGs;
+    sget-object v0, Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$nDOJbHmPARp8zjGd80r7UGnLND8;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$nDOJbHmPARp8zjGd80r7UGnLND8;
 
     sput-object v0, Lcom/miui/home/launcher/common/SecurityHide;->sQueryFunc:Ljava/util/function/Function;
 
-    .line 59
-    sget-object v0, Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$BFNkjfO5uhzdqdiP9ul1ywGu6UM;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$BFNkjfO5uhzdqdiP9ul1ywGu6UM;
+    .line 58
+    sget-object v0, Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$_gJpcmCzum8mOP42OAaH9wE5CaY;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$_gJpcmCzum8mOP42OAaH9wE5CaY;
 
     sput-object v0, Lcom/miui/home/launcher/common/SecurityHide;->sConsumer:Ljava/util/function/Consumer;
 
@@ -77,7 +77,7 @@
         }
     .end annotation
 
-    .line 80
+    .line 79
     sget-object v0, Lcom/miui/home/launcher/common/SecurityHide;->mHideItemList:Ljava/util/List;
 
     return-object v0
@@ -86,15 +86,15 @@
 .method public static getSecurityHideItems()V
     .locals 3
 
-    .line 74
+    .line 73
     invoke-static {}, Lcom/miui/home/library/utils/Preconditions;->assertNonUiThread()V
 
-    .line 75
+    .line 74
     sget-object v0, Lcom/miui/home/launcher/common/SecurityHide;->mHideItemList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 76
+    .line 75
     sget-object v0, Lcom/miui/home/launcher/common/SecurityHide;->sConsumer:Ljava/util/function/Consumer;
 
     sget-object v1, Lcom/miui/home/launcher/common/SecurityHide;->sQueryFunc:Ljava/util/function/Function;
@@ -105,6 +105,8 @@
 
     move-result-object v1
 
+    check-cast v1, Ljava/util/ArrayList;
+
     invoke-interface {v0, v1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     return-void
@@ -113,15 +115,15 @@
 .method public static getSecurityHideItemsAsync()V
     .locals 3
 
-    .line 66
+    .line 65
     sget-object v0, Lcom/miui/home/launcher/common/SecurityHide;->mHideItemList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 67
+    .line 66
     sget-object v0, Lcom/miui/home/launcher/common/SecurityHide;->sQueryFunc:Ljava/util/function/Function;
 
-    sget-object v1, Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$oZyoWUAmHIc9pQPAo7iAy9wYSlk;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$oZyoWUAmHIc9pQPAo7iAy9wYSlk;
+    sget-object v1, Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$-Z0r6jrrLJAfGR7bExL-DIZXutU;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$SecurityHide$-Z0r6jrrLJAfGR7bExL-DIZXutU;
 
     const/4 v2, 0x0
 
@@ -130,15 +132,15 @@
     return-void
 .end method
 
-.method static synthetic lambda$getSecurityHideItemsAsync$464(Ljava/util/ArrayList;)V
+.method static synthetic lambda$getSecurityHideItemsAsync$2(Ljava/util/ArrayList;)V
     .locals 1
 
-    .line 68
+    .line 67
     sget-object v0, Lcom/miui/home/launcher/common/SecurityHide;->sConsumer:Ljava/util/function/Consumer;
 
     invoke-interface {v0, p0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    .line 69
+    .line 68
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p0
@@ -152,8 +154,8 @@
     return-void
 .end method
 
-.method static synthetic lambda$static$462(Ljava/lang/Void;)Ljava/util/ArrayList;
-    .locals 11
+.method static synthetic lambda$static$0(Ljava/lang/Void;)Ljava/util/ArrayList;
+    .locals 12
 
     .line 27
     :try_start_0
@@ -198,141 +200,150 @@
 
     move-result-object v2
 
-    check-cast v2, Landroid/os/UserHandle;
+    move-object v8, v2
+
+    check-cast v8, Landroid/os/UserHandle;
 
     .line 32
-    invoke-static {v2}, Lcom/miui/launcher/utils/LauncherUtils;->getUserId(Landroid/os/UserHandle;)I
+    invoke-static {v8}, Lcom/miui/launcher/utils/LauncherUtils;->getUserId(Landroid/os/UserHandle;)I
+
+    move-result v9
+
+    .line 33
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    const-string v4, "getAllPrivacyApps"
+
+    const-class v5, Ljava/util/List;
+
+    const/4 v10, 0x1
+
+    new-array v6, v10, [Ljava/lang/Class;
+
+    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    const/4 v11, 0x0
+
+    aput-object v3, v6, v11
+
+    new-array v7, v10, [Ljava/lang/Object;
+
+    .line 34
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v7, v11
+
+    move-object v3, v1
+
+    .line 33
+    invoke-static/range {v2 .. v7}, Lcom/miui/launcher/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/List;
+
+    if-eqz v2, :cond_1
+
+    .line 36
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v3
 
-    .line 33
-    const-class v4, Ljava/util/List;
+    if-eqz v3, :cond_1
 
-    const/4 v5, 0x1
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    new-array v6, v5, [Ljava/lang/Class;
+    move-result-object v3
 
-    sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const/4 v8, 0x0
-
-    aput-object v7, v6, v8
-
-    invoke-static {v4, v6}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 34
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v6
-
-    const-string v7, "getAllPrivacyApps"
-
-    new-array v9, v5, [Ljava/lang/Object;
-
-    .line 35
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    aput-object v10, v9, v8
-
-    .line 34
-    invoke-static {v6, v1, v7, v4, v9}, Lcom/miui/launcher/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/util/List;
-
-    if-eqz v6, :cond_1
+    check-cast v3, Ljava/lang/String;
 
     .line 37
-    invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    new-instance v4, Lcom/miui/home/launcher/LauncherModel$PackageAndUser;
 
-    move-result-object v6
-
-    :goto_0
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_1
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/String;
+    invoke-direct {v4, v3, v8}, Lcom/miui/home/launcher/LauncherModel$PackageAndUser;-><init>(Ljava/lang/String;Landroid/os/UserHandle;)V
 
     .line 38
-    new-instance v9, Lcom/miui/home/launcher/LauncherModel$PackageAndUser;
-
-    invoke-direct {v9, v7, v2}, Lcom/miui/home/launcher/LauncherModel$PackageAndUser;-><init>(Ljava/lang/String;Landroid/os/UserHandle;)V
-
-    .line 39
-    invoke-virtual {p0, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 43
+    .line 42
     :cond_1
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v6
+    move-result-object v2
 
-    const-string v7, "getAllGameStorageApps"
+    const-string v4, "getAllGameStorageApps"
 
-    new-array v5, v5, [Ljava/lang/Object;
+    const-class v5, Ljava/util/List;
 
-    .line 44
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-array v6, v10, [Ljava/lang/Class;
 
-    move-result-object v3
+    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    aput-object v3, v5, v8
+    aput-object v3, v6, v11
+
+    new-array v7, v10, [Ljava/lang/Object;
 
     .line 43
-    invoke-static {v6, v1, v7, v4, v5}, Lcom/miui/launcher/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    check-cast v3, Ljava/util/List;
+    aput-object v3, v7, v11
+
+    move-object v3, v1
+
+    .line 42
+    invoke-static/range {v2 .. v7}, Lcom/miui/launcher/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/List;
+
+    if-eqz v2, :cond_0
+
+    .line 44
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    if-lez v3, :cond_0
+
+    .line 45
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 45
-    invoke-interface {v3}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    if-lez v4, :cond_0
-
-    .line 46
-    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
-    :goto_1
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v3, Ljava/lang/String;
 
-    move-result v4
+    .line 46
+    new-instance v4, Lcom/miui/home/launcher/LauncherModel$PackageAndUser;
 
-    if-eqz v4, :cond_0
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/String;
+    invoke-direct {v4, v3, v8}, Lcom/miui/home/launcher/LauncherModel$PackageAndUser;-><init>(Ljava/lang/String;Landroid/os/UserHandle;)V
 
     .line 47
-    new-instance v5, Lcom/miui/home/launcher/LauncherModel$PackageAndUser;
-
-    invoke-direct {v5, v4, v2}, Lcom/miui/home/launcher/LauncherModel$PackageAndUser;-><init>(Ljava/lang/String;Landroid/os/UserHandle;)V
-
-    .line 48
-    invoke-virtual {p0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -348,7 +359,7 @@
 
     const-string v1, "getSecurityHideItems"
 
-    .line 54
+    .line 53
     invoke-static {v0, v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -356,19 +367,19 @@
     return-object p0
 .end method
 
-.method static synthetic lambda$static$463(Ljava/util/ArrayList;)V
+.method static synthetic lambda$static$1(Ljava/util/ArrayList;)V
     .locals 1
 
     if-eqz p0, :cond_0
 
-    .line 60
+    .line 59
     invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 61
+    .line 60
     sget-object v0, Lcom/miui/home/launcher/common/SecurityHide;->mHideItemList:Ljava/util/List;
 
     invoke-interface {v0, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z

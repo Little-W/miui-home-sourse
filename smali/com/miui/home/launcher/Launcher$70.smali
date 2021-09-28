@@ -1,11 +1,14 @@
 .class Lcom/miui/home/launcher/Launcher$70;
-.super Lcom/miui/home/launcher/common/ResultRunnable;
+.super Ljava/lang/Object;
 .source "Launcher.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->getMatchedPackageNames([Ljava/lang/Integer;)Ljava/util/HashSet;
+    value = Lcom/miui/home/launcher/Launcher;->setCurSelectedIcon(Lcom/miui/home/launcher/IBackAnimView;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -13,32 +16,23 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/miui/home/launcher/common/ResultRunnable<",
-        "Ljava/util/HashSet<",
-        "Ljava/lang/String;",
-        ">;>;"
-    }
-.end annotation
-
 
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$itemTypeList:Ljava/util/ArrayList;
+.field final synthetic val$icon:Lcom/miui/home/launcher/IBackAnimView;
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/util/ArrayList;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/IBackAnimView;)V
     .locals 0
 
-    .line 7255
+    .line 7160
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$70;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$70;->val$itemTypeList:Ljava/util/ArrayList;
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$70;->val$icon:Lcom/miui/home/launcher/IBackAnimView;
 
-    invoke-direct {p0}, Lcom/miui/home/launcher/common/ResultRunnable;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -46,93 +40,47 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 2
 
-    .line 7258
-    new-instance v0, Ljava/util/HashSet;
+    .line 7163
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$70;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/IBackAnimView;
 
-    .line 7259
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$70;->this$0:Lcom/miui/home/launcher/Launcher;
+    move-result-object v0
 
-    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$3900(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
+    .line 7164
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$70;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v1}, Ljava/util/HashSet;->isEmpty()Z
+    const/4 v1, 0x1
 
-    move-result v1
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$402(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    if-eqz v1, :cond_0
+    .line 7165
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$70;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    const/4 v0, 0x0
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$9000(Lcom/miui/home/launcher/Launcher;)Ljava/lang/Runnable;
 
-    .line 7260
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher$70;->setResult(Ljava/lang/Object;)V
+    move-result-object v0
 
-    return-void
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 7263
+    .line 7166
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$70;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$402(Lcom/miui/home/launcher/Launcher;Z)Z
+
+    .line 7168
     :cond_0
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$70;->this$0:Lcom/miui/home/launcher/Launcher;
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$70;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$3900(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$70;->val$icon:Lcom/miui/home/launcher/IBackAnimView;
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_1
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
-
-    .line 7264
-    invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 7265
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    iget-object v4, p0, Lcom/miui/home/launcher/Launcher$70;->val$itemTypeList:Ljava/util/ArrayList;
-
-    iget v2, v2, Lcom/miui/home/launcher/ShortcutInfo;->itemType:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v4, v2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 7266
-    invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 7269
-    :cond_2
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher$70;->setResult(Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$202(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/IBackAnimView;)Lcom/miui/home/launcher/IBackAnimView;
 
     return-void
 .end method

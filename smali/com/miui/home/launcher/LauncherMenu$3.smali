@@ -41,23 +41,23 @@
     .line 91
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherMenu$3;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/LauncherMenu;->access$100(Lcom/miui/home/launcher/LauncherMenu;)Lmiui/widget/SlidingButton;
+    invoke-static {p1}, Lcom/miui/home/launcher/LauncherMenu;->access$100(Lcom/miui/home/launcher/LauncherMenu;)Lmiuix/slidingwidget/widget/SlidingButton;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherMenu$3;->this$0:Lcom/miui/home/launcher/LauncherMenu;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/LauncherMenu;->access$100(Lcom/miui/home/launcher/LauncherMenu;)Lmiui/widget/SlidingButton;
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherMenu;->access$100(Lcom/miui/home/launcher/LauncherMenu;)Lmiuix/slidingwidget/widget/SlidingButton;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lmiui/widget/SlidingButton;->isChecked()Z
+    invoke-virtual {v0}, Lmiuix/slidingwidget/widget/SlidingButton;->isChecked()Z
 
     move-result v0
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {p1, v0}, Lmiui/widget/SlidingButton;->setChecked(Z)V
+    invoke-virtual {p1, v0}, Lmiuix/slidingwidget/widget/SlidingButton;->setChecked(Z)V
 
     return-void
 .end method

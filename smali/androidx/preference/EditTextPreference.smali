@@ -7,12 +7,15 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/preference/EditTextPreference$SimpleSummaryProvider;,
-        Landroidx/preference/EditTextPreference$SavedState;
+        Landroidx/preference/EditTextPreference$SavedState;,
+        Landroidx/preference/EditTextPreference$OnBindEditTextListener;
     }
 .end annotation
 
 
 # instance fields
+.field private mOnBindEditTextListener:Landroidx/preference/EditTextPreference$OnBindEditTextListener;
+
 .field private mText:Ljava/lang/String;
 
 
@@ -87,6 +90,15 @@
 
 
 # virtual methods
+.method getOnBindEditTextListener()Landroidx/preference/EditTextPreference$OnBindEditTextListener;
+    .locals 1
+
+    .line 162
+    iget-object v0, p0, Landroidx/preference/EditTextPreference;->mOnBindEditTextListener:Landroidx/preference/EditTextPreference$OnBindEditTextListener;
+
+    return-object v0
+.end method
+
 .method public getText()Ljava/lang/String;
     .locals 1
 

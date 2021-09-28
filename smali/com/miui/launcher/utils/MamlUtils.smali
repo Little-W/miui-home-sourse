@@ -27,7 +27,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 41
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,14 +36,14 @@
 .method public static addListenerOnElement(Ljava/lang/Object;Ljava/lang/String;Lcom/miui/launcher/views/MamlButtonActionListener;)Z
     .locals 2
 
-    .line 322
+    .line 340
     instance-of v0, p0, Lmiui/maml/ScreenElementRoot;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 323
+    .line 341
     check-cast p0, Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {p0, p1}, Lmiui/maml/ScreenElementRoot;->findElement(Ljava/lang/String;)Lmiui/maml/elements/ScreenElement;
@@ -58,18 +58,18 @@
 
     const-string p1, "No clock button in this clock."
 
-    .line 325
+    .line 343
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 328
+    .line 346
     :cond_0
     new-instance p1, Lcom/miui/launcher/utils/MamlUtils$2;
 
     invoke-direct {p1, p2}, Lcom/miui/launcher/utils/MamlUtils$2;-><init>(Lcom/miui/launcher/views/MamlButtonActionListener;)V
 
-    .line 349
+    .line 367
     invoke-virtual {p0, p1}, Lmiui/maml/elements/ButtonScreenElement;->setListener(Lmiui/maml/elements/ButtonScreenElement$ButtonActionListener;)V
 
     const/4 p0, 0x1
@@ -85,19 +85,19 @@
 
     if-eqz p0, :cond_0
 
-    .line 186
+    .line 187
     instance-of v0, p1, Lmiui/maml/AnimatingDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 187
+    .line 188
     check-cast p1, Lmiui/maml/AnimatingDrawable;
 
     invoke-virtual {p1}, Lmiui/maml/AnimatingDrawable;->getFancyDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    .line 188
+    .line 189
     new-instance v0, Lcom/miui/launcher/utils/MamlUtils$1;
 
     invoke-direct {v0, p1, p0}, Lcom/miui/launcher/utils/MamlUtils$1;-><init>(Landroid/graphics/drawable/Drawable;Landroid/widget/ImageView;)V
@@ -111,12 +111,12 @@
 .method public static clearDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 204
+    .line 205
     instance-of v0, p0, Lmiui/maml/AnimatingDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 205
+    .line 206
     check-cast p0, Lmiui/maml/AnimatingDrawable;
 
     invoke-virtual {p0}, Lmiui/maml/AnimatingDrawable;->clear()V
@@ -128,7 +128,7 @@
 .method public static clearMamlCache()V
     .locals 0
 
-    .line 375
+    .line 393
     invoke-static {}, Lmiui/maml/util/AppIconsHelper;->clearCache()V
 
     return-void
@@ -137,12 +137,12 @@
 .method public static clearUpView(Landroid/view/View;)V
     .locals 1
 
-    .line 157
+    .line 158
     instance-of v0, p0, Lmiui/maml/MiAdvancedView;
 
     if-eqz v0, :cond_0
 
-    .line 158
+    .line 159
     check-cast p0, Lmiui/maml/MiAdvancedView;
 
     invoke-virtual {p0}, Lmiui/maml/MiAdvancedView;->cleanUp()V
@@ -154,12 +154,12 @@
 .method public static clearUpView(Landroid/view/View;Z)V
     .locals 1
 
-    .line 163
+    .line 164
     instance-of v0, p0, Lmiui/maml/MiAdvancedView;
 
     if-eqz v0, :cond_0
 
-    .line 164
+    .line 165
     check-cast p0, Lmiui/maml/MiAdvancedView;
 
     invoke-virtual {p0, p1}, Lmiui/maml/MiAdvancedView;->cleanUp(Z)V
@@ -169,25 +169,115 @@
 .end method
 
 .method public static containsConfig(Ljava/lang/String;)Z
-    .locals 0
+    .locals 3
 
-    .line 252
-    invoke-static {p0}, Lmiui/maml/MamlConfigSettings;->containsConfig(Ljava/lang/String;)Z
+    const/4 v0, 0x0
 
-    move-result p0
+    if-nez p0, :cond_0
 
-    return p0
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    .line 257
+    :try_start_0
+    new-instance v2, Ljava/util/zip/ZipFile;
+
+    invoke-direct {v2, p0}, Ljava/util/zip/ZipFile;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    const-string p0, "config.xml"
+
+    .line 259
+    invoke-virtual {v2, p0}, Ljava/util/zip/ZipFile;->getEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry;
+
+    move-result-object p0
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz p0, :cond_1
+
+    const/4 v0, 0x1
+
+    .line 265
+    :cond_1
+    :try_start_2
+    invoke-virtual {v2}, Ljava/util/zip/ZipFile;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+
+    :catch_0
+    return v0
+
+    :catchall_0
+    move-exception p0
+
+    move-object v1, v2
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p0
+
+    move-object v1, v2
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception p0
+
+    goto :goto_1
+
+    :catch_2
+    move-exception p0
+
+    .line 261
+    :goto_0
+    :try_start_3
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    if-eqz v1, :cond_2
+
+    .line 265
+    :try_start_4
+    invoke-virtual {v1}, Ljava/util/zip/ZipFile;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
+
+    :catch_3
+    :cond_2
+    return v0
+
+    :goto_1
+    if-eqz v1, :cond_3
+
+    :try_start_5
+    invoke-virtual {v1}, Ljava/util/zip/ZipFile;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_4
+
+    .line 269
+    :catch_4
+    :cond_3
+    throw p0
 .end method
 
 .method public static createAwesomeGadgetView(Landroid/content/Context;Ljava/lang/Object;)Landroid/view/View;
     .locals 2
 
-    .line 121
+    .line 122
     instance-of v0, p1, Lmiui/maml/ScreenElementRoot;
 
     if-eqz v0, :cond_0
 
-    .line 122
+    .line 123
     new-instance v0, Lmiui/maml/MiAdvancedView;
 
     check-cast p1, Lmiui/maml/ScreenElementRoot;
@@ -211,25 +301,25 @@
 .method public static createGlobalAdvancedView(Landroid/content/Context;Ljava/lang/Object;)Landroid/view/View;
     .locals 2
 
-    .line 109
+    .line 110
     invoke-static {}, Lmiui/maml/RenderThread;->globalThread()Lmiui/maml/RenderThread;
 
     move-result-object v0
 
-    .line 110
+    .line 111
     invoke-virtual {v0}, Lmiui/maml/RenderThread;->isStarted()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 112
+    .line 113
     :try_start_0
     invoke-virtual {v0}, Lmiui/maml/RenderThread;->start()V
     :try_end_0
     .catch Ljava/lang/IllegalThreadStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 117
+    .line 118
     :catch_0
     :cond_0
     invoke-static {p0, p1, v0}, Lcom/miui/launcher/utils/MamlUtils;->createMiAdvancedView(Landroid/content/Context;Ljava/lang/Object;Lmiui/maml/RenderThread;)Landroid/view/View;
@@ -244,7 +334,7 @@
 
     const/4 v0, 0x1
 
-    .line 98
+    .line 99
     invoke-static {v0}, Lmiui/maml/RenderThread;->globalThread(Z)Lmiui/maml/RenderThread;
 
     move-result-object v0
@@ -259,12 +349,12 @@
 .method public static createMiAdvancedView(Landroid/content/Context;Ljava/lang/Object;Lmiui/maml/RenderThread;)Landroid/view/View;
     .locals 1
 
-    .line 102
+    .line 103
     instance-of v0, p1, Lmiui/maml/ScreenElementRoot;
 
     if-eqz v0, :cond_0
 
-    .line 103
+    .line 104
     new-instance v0, Lmiui/maml/MiAdvancedView;
 
     check-cast p1, Lmiui/maml/ScreenElementRoot;
@@ -282,7 +372,7 @@
 .method public static createScreenContext(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;
     .locals 2
 
-    .line 134
+    .line 135
     new-instance v0, Lmiui/maml/ScreenContext;
 
     new-instance v1, Lmiui/maml/util/ZipResourceLoader;
@@ -293,14 +383,14 @@
 
     move-result-object p1
 
-    .line 135
+    .line 136
     invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object p1
 
     iget-object p1, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 134
+    .line 135
     invoke-virtual {v1, p1}, Lmiui/maml/util/ZipResourceLoader;->setLocal(Ljava/util/Locale;)Lmiui/maml/ResourceLoader;
 
     move-result-object p1
@@ -313,7 +403,7 @@
 .method public static createScreenContext(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
     .locals 2
 
-    .line 139
+    .line 140
     new-instance v0, Lmiui/maml/ScreenContext;
 
     new-instance v1, Lmiui/maml/util/ZipResourceLoader;
@@ -324,14 +414,14 @@
 
     move-result-object p1
 
-    .line 140
+    .line 141
     invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object p1
 
     iget-object p1, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 139
+    .line 140
     invoke-virtual {v1, p1}, Lmiui/maml/util/ZipResourceLoader;->setLocal(Ljava/util/Locale;)Lmiui/maml/ResourceLoader;
 
     move-result-object p1
@@ -344,12 +434,12 @@
 .method public static createScreenElementRoot(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .line 144
+    .line 145
     instance-of v0, p0, Lmiui/maml/ScreenContext;
 
     if-eqz v0, :cond_0
 
-    .line 145
+    .line 146
     new-instance v0, Lmiui/maml/ScreenElementRoot;
 
     check-cast p0, Lmiui/maml/ScreenContext;
@@ -367,7 +457,7 @@
 .method public static getIconDrawable(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;JLandroid/os/UserHandle;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
-    .line 311
+    .line 329
     invoke-static/range {p0 .. p5}, Lmiui/maml/util/AppIconsHelper;->getIconDrawable(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;JLandroid/os/UserHandle;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
@@ -378,12 +468,12 @@
 .method public static getManifestRoot(Ljava/lang/Object;)Lorg/w3c/dom/Element;
     .locals 1
 
-    .line 315
+    .line 333
     instance-of v0, p0, Lmiui/maml/ScreenContext;
 
     if-eqz v0, :cond_0
 
-    .line 316
+    .line 334
     check-cast p0, Lmiui/maml/ScreenContext;
 
     iget-object p0, p0, Lmiui/maml/ScreenContext;->mResourceManager:Lmiui/maml/ResourceManager;
@@ -403,12 +493,12 @@
 .method public static getQuietDrawable(Ljava/lang/Object;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 303
+    .line 321
     instance-of v0, p0, Lmiui/maml/FancyDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 304
+    .line 322
     check-cast p0, Lmiui/maml/FancyDrawable;
 
     invoke-virtual {p0}, Lmiui/maml/FancyDrawable;->getQuietDrawable()Landroid/graphics/drawable/Drawable;
@@ -426,12 +516,12 @@
 .method public static getRawAttr(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 294
+    .line 312
     instance-of v0, p0, Lmiui/maml/ScreenElementRoot;
 
     if-eqz v0, :cond_0
 
-    .line 295
+    .line 313
     check-cast p0, Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {p0, p1}, Lmiui/maml/ScreenElementRoot;->getRawAttr(Ljava/lang/String;)Ljava/lang/String;
@@ -440,13 +530,13 @@
 
     return-object p0
 
-    .line 296
+    .line 314
     :cond_0
     instance-of v0, p0, Lmiui/maml/FancyDrawable;
 
     if-eqz v0, :cond_1
 
-    .line 297
+    .line 315
     check-cast p0, Lmiui/maml/FancyDrawable;
 
     invoke-virtual {p0}, Lmiui/maml/FancyDrawable;->getRoot()Lmiui/maml/ScreenElementRoot;
@@ -468,12 +558,12 @@
 .method public static getStartDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 177
+    .line 178
     instance-of v0, p0, Lmiui/maml/FancyDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 178
+    .line 179
     check-cast p0, Lmiui/maml/FancyDrawable;
 
     invoke-virtual {p0}, Lmiui/maml/FancyDrawable;->getStartDrawable()Landroid/graphics/drawable/Drawable;
@@ -482,13 +572,13 @@
 
     return-object p0
 
-    .line 179
+    .line 180
     :cond_0
     instance-of v0, p0, Lmiui/maml/AnimatingDrawable;
 
     if-eqz v0, :cond_1
 
-    .line 180
+    .line 181
     check-cast p0, Lmiui/maml/AnimatingDrawable;
 
     invoke-virtual {p0}, Lmiui/maml/AnimatingDrawable;->getStartDrawable()Landroid/graphics/drawable/Drawable;
@@ -506,12 +596,12 @@
 .method public static initView(Landroid/view/View;)V
     .locals 1
 
-    .line 151
+    .line 152
     instance-of v0, p0, Lmiui/maml/MiAdvancedView;
 
     if-eqz v0, :cond_0
 
-    .line 152
+    .line 153
     check-cast p0, Lmiui/maml/MiAdvancedView;
 
     invoke-virtual {p0}, Lmiui/maml/MiAdvancedView;->init()V
@@ -523,7 +613,7 @@
 .method public static isFancyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 0
 
-    .line 367
+    .line 385
     instance-of p0, p0, Lmiui/maml/FancyDrawable;
 
     return p0
@@ -532,7 +622,7 @@
 .method public static isMamlDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
 
-    .line 363
+    .line 381
     instance-of v0, p0, Lmiui/maml/FancyDrawable;
 
     if-nez v0, :cond_1
@@ -559,7 +649,7 @@
 .method public static isPreparedForBackAnim(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
 
-    .line 200
+    .line 201
     instance-of v0, p0, Lmiui/maml/FancyDrawable;
 
     if-nez v0, :cond_1
@@ -586,12 +676,12 @@
 .method public static load(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 245
+    .line 246
     instance-of v0, p0, Lmiui/maml/ScreenElementRoot;
 
     if-eqz v0, :cond_0
 
-    .line 246
+    .line 247
     check-cast p0, Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {p0}, Lmiui/maml/ScreenElementRoot;->load()Z
@@ -609,12 +699,12 @@
 .method public static loadConfig(Ljava/lang/Object;)V
     .locals 1
 
-    .line 239
+    .line 240
     instance-of v0, p0, Lmiui/maml/ScreenElementRoot;
 
     if-eqz v0, :cond_0
 
-    .line 240
+    .line 241
     check-cast p0, Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {p0}, Lmiui/maml/ScreenElementRoot;->loadConfig()V
@@ -626,7 +716,7 @@
 .method public static notifyBackHome(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
     .locals 2
 
-    .line 231
+    .line 232
     instance-of v0, p0, Lmiui/maml/FancyDrawable;
 
     if-eqz v0, :cond_0
@@ -641,7 +731,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 232
+    .line 233
     invoke-virtual {v0}, Lmiui/maml/FancyDrawable;->getRoot()Lmiui/maml/ScreenElementRoot;
 
     move-result-object p0
@@ -650,13 +740,13 @@
 
     goto :goto_0
 
-    .line 233
+    .line 234
     :cond_0
     instance-of v0, p0, Lmiui/maml/AnimatingDrawable;
 
     if-eqz v0, :cond_1
 
-    .line 234
+    .line 235
     check-cast p0, Lmiui/maml/AnimatingDrawable;
 
     invoke-virtual {p0, p1}, Lmiui/maml/AnimatingDrawable;->sendCommand(Ljava/lang/String;)V
@@ -669,19 +759,19 @@
 .method public static onCommand(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 1
 
-    .line 169
+    .line 170
     instance-of v0, p0, Lmiui/maml/ScreenElementRoot;
 
     if-eqz v0, :cond_0
 
-    .line 170
+    .line 171
     check-cast p0, Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {p0, p1}, Lmiui/maml/ScreenElementRoot;->onCommand(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 171
+    .line 172
     :cond_0
     instance-of v0, p0, Lmiui/maml/FancyDrawable;
 
@@ -695,7 +785,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 172
+    .line 173
     invoke-virtual {p0}, Lmiui/maml/FancyDrawable;->getRoot()Lmiui/maml/ScreenElementRoot;
 
     move-result-object p0
@@ -710,22 +800,22 @@
 .method public static onPause(Ljava/lang/Object;)V
     .locals 1
 
-    .line 210
+    .line 211
     instance-of v0, p0, Lmiui/maml/MiAdvancedView;
 
     if-eqz v0, :cond_0
 
-    .line 211
+    .line 212
     check-cast p0, Lmiui/maml/MiAdvancedView;
 
     invoke-virtual {p0}, Lmiui/maml/MiAdvancedView;->invalidate()V
 
-    .line 212
+    .line 213
     invoke-virtual {p0}, Lmiui/maml/MiAdvancedView;->onPause()V
 
     goto :goto_0
 
-    .line 213
+    .line 214
     :cond_0
     instance-of v0, p0, Lmiui/maml/FancyDrawable;
 
@@ -739,7 +829,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 214
+    .line 215
     invoke-virtual {p0}, Lmiui/maml/FancyDrawable;->onPause()V
 
     :cond_1
@@ -750,19 +840,19 @@
 .method public static onResume(Ljava/lang/Object;)V
     .locals 1
 
-    .line 223
+    .line 224
     instance-of v0, p0, Lmiui/maml/MiAdvancedView;
 
     if-eqz v0, :cond_0
 
-    .line 224
+    .line 225
     check-cast p0, Lmiui/maml/MiAdvancedView;
 
     invoke-virtual {p0}, Lmiui/maml/MiAdvancedView;->onResume()V
 
     goto :goto_0
 
-    .line 225
+    .line 226
     :cond_0
     instance-of v0, p0, Lmiui/maml/FancyDrawable;
 
@@ -776,7 +866,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 226
+    .line 227
     invoke-virtual {p0}, Lmiui/maml/FancyDrawable;->onResume()V
 
     :cond_1
@@ -787,12 +877,12 @@
 .method public static putVariableString(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 288
+    .line 306
     instance-of v0, p0, Lmiui/maml/ScreenElementRoot;
 
     if-eqz v0, :cond_0
 
-    .line 289
+    .line 307
     check-cast p0, Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {p0}, Lmiui/maml/ScreenElementRoot;->getContext()Lmiui/maml/ScreenContext;
@@ -810,12 +900,12 @@
 .method public static requestUpdate(Ljava/lang/Object;)V
     .locals 1
 
-    .line 273
+    .line 291
     instance-of v0, p0, Lmiui/maml/ScreenElementRoot;
 
     if-eqz v0, :cond_0
 
-    .line 274
+    .line 292
     check-cast p0, Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {p0}, Lmiui/maml/ScreenElementRoot;->requestUpdate()V
@@ -827,12 +917,12 @@
 .method public static setConfig(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 1
 
-    .line 256
+    .line 274
     instance-of v0, p0, Lmiui/maml/ScreenElementRoot;
 
     if-eqz v0, :cond_0
 
-    .line 257
+    .line 275
     check-cast p0, Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {p0, p1}, Lmiui/maml/ScreenElementRoot;->setConfig(Ljava/lang/String;)V
@@ -844,12 +934,12 @@
 .method public static setDefaultFramerate(Ljava/lang/Object;F)V
     .locals 1
 
-    .line 267
+    .line 285
     instance-of v0, p0, Lmiui/maml/ScreenElementRoot;
 
     if-eqz v0, :cond_0
 
-    .line 268
+    .line 286
     check-cast p0, Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {p0, p1}, Lmiui/maml/ScreenElementRoot;->setDefaultFramerate(F)V
@@ -861,12 +951,12 @@
 .method public static setFocusable(Landroid/view/View;Z)V
     .locals 1
 
-    .line 128
+    .line 129
     instance-of v0, p0, Lmiui/maml/MiAdvancedView;
 
     if-eqz v0, :cond_0
 
-    .line 129
+    .line 130
     check-cast p0, Lmiui/maml/MiAdvancedView;
 
     invoke-virtual {p0, p1}, Lmiui/maml/MiAdvancedView;->setFocusable(Z)V
@@ -878,7 +968,7 @@
 .method public static setGlobalThreadPause(Z)V
     .locals 1
 
-    .line 371
+    .line 389
     invoke-static {}, Lmiui/maml/RenderThread;->globalThread()Lmiui/maml/RenderThread;
 
     move-result-object v0
@@ -891,14 +981,14 @@
 .method public static setOnExternCommandListener(Ljava/lang/Object;Lcom/miui/launcher/views/MamlOnExternCommandListener;)V
     .locals 1
 
-    .line 357
+    .line 375
     instance-of v0, p0, Lmiui/maml/ScreenElementRoot;
 
     if-eqz v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 358
+    .line 376
     check-cast p0, Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {p1}, Lcom/miui/launcher/views/MamlOnExternCommandListener;->getListenerDelegate()Lmiui/maml/ScreenElementRoot$OnExternCommandListener;
@@ -914,7 +1004,7 @@
 .method public static setRenderThreadPause(Z)V
     .locals 1
 
-    .line 219
+    .line 220
     invoke-static {}, Lmiui/maml/RenderThread;->globalThread()Lmiui/maml/RenderThread;
 
     move-result-object v0
@@ -927,12 +1017,12 @@
 .method public static setScaleByDensity(Ljava/lang/Object;Z)V
     .locals 1
 
-    .line 262
+    .line 280
     instance-of v0, p0, Lmiui/maml/ScreenElementRoot;
 
     if-eqz v0, :cond_0
 
-    .line 263
+    .line 281
     check-cast p0, Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {p0, p1}, Lmiui/maml/ScreenElementRoot;->setScaleByDensity(Z)V
@@ -948,7 +1038,7 @@
 
     const-string v1, "/data/system/theme/lockscreen"
 
-    .line 51
+    .line 52
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -963,7 +1053,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 54
+    .line 55
     new-instance v2, Lmiui/maml/util/ZipResourceLoader;
 
     const-string v5, "advance/"
@@ -977,7 +1067,7 @@
     :cond_0
     const-string v1, "/system/media/theme/default/gadgets/clock_classical.mrc"
 
-    .line 57
+    .line 58
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -990,7 +1080,7 @@
 
     return-object v4
 
-    .line 60
+    .line 61
     :cond_1
     new-instance v2, Lmiui/maml/util/ZipResourceLoader;
 
@@ -1000,7 +1090,7 @@
 
     move/from16 v1, p5
 
-    .line 63
+    .line 64
     :goto_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1014,7 +1104,7 @@
 
     invoke-virtual {v2, v5}, Lmiui/maml/ResourceLoader;->setLocal(Ljava/util/Locale;)Lmiui/maml/ResourceLoader;
 
-    .line 64
+    .line 65
     new-instance v5, Lmiui/maml/ScreenContext;
 
     new-instance v6, Lcom/miui/launcher/utils/MamlUtils$LockscreenElementFactory;
@@ -1025,12 +1115,12 @@
 
     invoke-direct {v5, p0, v2, v6}, Lmiui/maml/ScreenContext;-><init>(Landroid/content/Context;Lmiui/maml/ResourceLoader;Lmiui/maml/elements/ScreenElementFactory;)V
 
-    .line 65
+    .line 66
     new-instance v2, Lmiui/maml/ScreenElementRoot;
 
     invoke-direct {v2, v5}, Lmiui/maml/ScreenElementRoot;-><init>(Lmiui/maml/ScreenContext;)V
 
-    .line 66
+    .line 67
     invoke-virtual {v2}, Lmiui/maml/ScreenElementRoot;->load()Z
 
     move-result v6
@@ -1039,13 +1129,13 @@
 
     return-object v4
 
-    .line 69
+    .line 70
     :cond_2
     invoke-virtual {v2}, Lmiui/maml/ScreenElementRoot;->init()V
 
     const-string v6, "applied_light_wallpaper"
 
-    .line 71
+    .line 72
     iget-object v7, v5, Lmiui/maml/ScreenContext;->mVariables:Lmiui/maml/data/Variables;
 
     const/4 v8, 0x2
@@ -1072,7 +1162,7 @@
 
     return-object v4
 
-    .line 76
+    .line 77
     :cond_4
     new-instance v4, Landroid/graphics/Canvas;
 
@@ -1082,26 +1172,26 @@
 
     int-to-float v1, v1
 
-    .line 77
+    .line 78
     invoke-virtual {v4, v3, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 78
+    .line 79
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
-    .line 79
+    .line 80
     invoke-virtual {v2, v6, v7}, Lmiui/maml/ScreenElementRoot;->tick(J)V
 
-    .line 80
+    .line 81
     invoke-virtual {v2, v4}, Lmiui/maml/ScreenElementRoot;->render(Landroid/graphics/Canvas;)V
 
-    .line 81
+    .line 82
     invoke-virtual {v2}, Lmiui/maml/ScreenElementRoot;->finish()V
 
     const-string v1, "applied_light_wallpaper"
 
-    .line 82
+    .line 83
     iget-object v2, v5, Lmiui/maml/ScreenContext;->mVariables:Lmiui/maml/data/Variables;
 
     if-eqz p3, :cond_5
@@ -1117,25 +1207,25 @@
 .method public static updateVariable(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;D)V
     .locals 1
 
-    .line 279
+    .line 297
     instance-of v0, p1, Lmiui/maml/ScreenContext;
 
     if-eqz v0, :cond_0
 
-    .line 280
+    .line 298
     check-cast p1, Lmiui/maml/ScreenContext;
 
     iget-object p1, p1, Lmiui/maml/ScreenContext;->mVariables:Lmiui/maml/data/Variables;
 
     invoke-static {p2, p1, p3, p4}, Lmiui/maml/util/Utils;->putVariableNumber(Ljava/lang/String;Lmiui/maml/data/Variables;D)V
 
-    .line 282
+    .line 300
     :cond_0
     instance-of p1, p0, Lmiui/maml/ScreenElementRoot;
 
     if-eqz p1, :cond_1
 
-    .line 283
+    .line 301
     check-cast p0, Lmiui/maml/ScreenElementRoot;
 
     invoke-virtual {p0}, Lmiui/maml/ScreenElementRoot;->requestUpdate()V

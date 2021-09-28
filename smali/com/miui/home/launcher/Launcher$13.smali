@@ -1,6 +1,9 @@
 .class Lcom/miui/home/launcher/Launcher$13;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "Launcher.java"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # annotations
@@ -22,77 +25,85 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 2006
+    .line 2030
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$13;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
-
-    return-void
-.end method
-
-.method static synthetic lambda$onAnimationEnd$36(Landroid/view/ViewGroup;)V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    .line 2010
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    const/4 p1, 0x3
-
-    .line 2009
-    new-array p1, p1, [Landroid/view/ViewGroup;
-
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$13;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2500(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/HotSeats;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    aput-object v0, p1, v1
-
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$13;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    aput-object v0, p1, v1
-
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$13;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2600(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/SearchBar;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    aput-object v0, p1, v1
-
-    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    .line 2033
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->stream(Ljava/util/Collection;)Ljava/util/stream/Stream;
+    check-cast p1, Ljava/lang/Float;
 
-    move-result-object p1
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    sget-object v0, Lcom/miui/home/launcher/-$$Lambda$Launcher$13$vK7lU-XSKhUpHkv_AiEuzp8d2ck;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$Launcher$13$vK7lU-XSKhUpHkv_AiEuzp8d2ck;
+    move-result p1
 
-    .line 2010
-    invoke-interface {p1, v0}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
+    .line 2034
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$13;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2300(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DefaultScreenPreviewView;
+
+    move-result-object v0
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    sub-float/2addr v1, p1
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->setAlpha(F)V
+
+    .line 2035
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$13;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2300(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DefaultScreenPreviewView;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$13;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$2300(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DefaultScreenPreviewView;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->getHeight()I
+
+    move-result v1
+
+    div-int/lit8 v1, v1, 0x2
+
+    int-to-float v1, v1
+
+    mul-float/2addr v1, p1
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->setTranslationY(F)V
+
+    .line 2036
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$13;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Workspace;->setAlpha(F)V
+
+    .line 2037
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$13;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/EditingEntryThumbnailView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->setAlpha(F)V
 
     return-void
 .end method

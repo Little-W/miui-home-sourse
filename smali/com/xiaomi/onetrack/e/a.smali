@@ -3,19 +3,19 @@
 
 
 # static fields
-.field private static a:Landroid/content/Context;
+.field private static a:Landroid/content/Context; = null
 
-.field private static b:Landroid/content/Context;
+.field private static b:Landroid/content/Context; = null
 
-.field private static c:I
+.field private static c:I = 0x0
 
-.field private static d:Ljava/lang/String;
+.field private static d:Ljava/lang/String; = null
 
-.field private static e:Ljava/lang/String;
+.field private static e:Ljava/lang/String; = null
 
-.field private static f:J
+.field private static f:J = 0x0L
 
-.field private static volatile g:Z
+.field private static volatile g:Z = false
 
 
 # direct methods

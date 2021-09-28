@@ -22,7 +22,11 @@
     iput-object p2, p0, Lcom/miui/home/launcher/upsidescene/AppsSelectView;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     .line 37
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getIconCache()Lcom/miui/home/launcher/IconCache;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Application;->getIconCache()Lcom/miui/home/launcher/IconCache;
 
     move-result-object p1
 
@@ -230,7 +234,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f0d004b
+    const p3, 0x7f0d004c
 
     const/4 v0, 0x0
 
@@ -242,7 +246,7 @@
     move-result-object p2
 
     :goto_0
-    const p3, 0x7f0a01d4
+    const p3, 0x7f0a0221
 
     .line 81
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -353,7 +357,11 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getIconCache()Lcom/miui/home/launcher/IconCache;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/miui/home/launcher/Application;->getIconCache()Lcom/miui/home/launcher/IconCache;
 
     move-result-object v3
 
@@ -550,7 +558,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/AppsSelectView;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f10010f
+    const v3, 0x7f1001a1
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
 

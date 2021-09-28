@@ -49,7 +49,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onAnimationEnd$545(Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/launcher/Launcher;)V
+.method public static synthetic lambda$onAnimationEnd$0(Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/launcher/Launcher;)V
     .locals 2
 
     .line 94
@@ -163,9 +163,9 @@
 
     iget-object v1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
-    new-instance v2, Lcom/miui/home/recents/-$$Lambda$LauncherAppTransitionManagerImpl$1$5Qs9Wg82JUuRRj484_lD1tUyIRw;
+    new-instance v2, Lcom/miui/home/recents/-$$Lambda$LauncherAppTransitionManagerImpl$1$cd-KnOQ7y7OslEG26u4YtYz_suE;
 
-    invoke-direct {v2, p0, v0, v1}, Lcom/miui/home/recents/-$$Lambda$LauncherAppTransitionManagerImpl$1$5Qs9Wg82JUuRRj484_lD1tUyIRw;-><init>(Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {v2, p0, v0, v1}, Lcom/miui/home/recents/-$$Lambda$LauncherAppTransitionManagerImpl$1$cd-KnOQ7y7OslEG26u4YtYz_suE;-><init>(Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/launcher/Launcher;)V
 
     invoke-virtual {p1, v2}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 

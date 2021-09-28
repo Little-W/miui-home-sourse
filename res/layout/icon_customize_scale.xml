@@ -8,7 +8,7 @@
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView
-        android:textAppearance="@style/TextAppearance.PreferenceList"
+        android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
         android:fadingEdge="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

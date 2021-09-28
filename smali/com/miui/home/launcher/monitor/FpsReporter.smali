@@ -141,9 +141,9 @@
     iput-object v1, p0, Lcom/miui/home/launcher/monitor/FpsReporter;->mTotalCountStringBuilder:Ljava/lang/StringBuilder;
 
     .line 130
-    new-instance v1, Lcom/miui/home/launcher/monitor/-$$Lambda$FpsReporter$yKLJIBT7RK9wKDoU0olENI6iZO0;
+    new-instance v1, Lcom/miui/home/launcher/monitor/-$$Lambda$FpsReporter$0Rro5UoS9IwFEXYWae8PhpuMuSw;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/monitor/-$$Lambda$FpsReporter$yKLJIBT7RK9wKDoU0olENI6iZO0;-><init>(Lcom/miui/home/launcher/monitor/FpsReporter;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/monitor/-$$Lambda$FpsReporter$0Rro5UoS9IwFEXYWae8PhpuMuSw;-><init>(Lcom/miui/home/launcher/monitor/FpsReporter;)V
 
     iput-object v1, p0, Lcom/miui/home/launcher/monitor/FpsReporter;->mRecordRunnable:Ljava/lang/Runnable;
 
@@ -261,22 +261,17 @@
     return-object p1
 .end method
 
-.method static synthetic access$200(Lcom/miui/home/launcher/monitor/FpsReporter;)J
+.method static synthetic access$214(Lcom/miui/home/launcher/monitor/FpsReporter;J)J
     .locals 2
 
     .line 19
     iget-wide v0, p0, Lcom/miui/home/launcher/monitor/FpsReporter;->mOver30ms:J
 
+    add-long/2addr v0, p1
+
+    iput-wide v0, p0, Lcom/miui/home/launcher/monitor/FpsReporter;->mOver30ms:J
+
     return-wide v0
-.end method
-
-.method static synthetic access$202(Lcom/miui/home/launcher/monitor/FpsReporter;J)J
-    .locals 0
-
-    .line 19
-    iput-wide p1, p0, Lcom/miui/home/launcher/monitor/FpsReporter;->mOver30ms:J
-
-    return-wide p1
 .end method
 
 .method static synthetic access$308(Lcom/miui/home/launcher/monitor/FpsReporter;)I
@@ -292,22 +287,17 @@
     return v0
 .end method
 
-.method static synthetic access$400(Lcom/miui/home/launcher/monitor/FpsReporter;)J
+.method static synthetic access$414(Lcom/miui/home/launcher/monitor/FpsReporter;J)J
     .locals 2
 
     .line 19
     iget-wide v0, p0, Lcom/miui/home/launcher/monitor/FpsReporter;->mOver70ms:J
 
+    add-long/2addr v0, p1
+
+    iput-wide v0, p0, Lcom/miui/home/launcher/monitor/FpsReporter;->mOver70ms:J
+
     return-wide v0
-.end method
-
-.method static synthetic access$402(Lcom/miui/home/launcher/monitor/FpsReporter;J)J
-    .locals 0
-
-    .line 19
-    iput-wide p1, p0, Lcom/miui/home/launcher/monitor/FpsReporter;->mOver70ms:J
-
-    return-wide p1
 .end method
 
 .method static synthetic access$508(Lcom/miui/home/launcher/monitor/FpsReporter;)I
@@ -350,19 +340,18 @@
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/miui/home/launcher/monitor/FpsReporter;)I
-    .locals 0
+.method static synthetic access$914(Lcom/miui/home/launcher/monitor/FpsReporter;J)I
+    .locals 2
 
     .line 19
-    iget p0, p0, Lcom/miui/home/launcher/monitor/FpsReporter;->mTotalFrameTime:I
+    iget v0, p0, Lcom/miui/home/launcher/monitor/FpsReporter;->mTotalFrameTime:I
 
-    return p0
-.end method
+    int-to-long v0, v0
 
-.method static synthetic access$902(Lcom/miui/home/launcher/monitor/FpsReporter;I)I
-    .locals 0
+    add-long/2addr v0, p1
 
-    .line 19
+    long-to-int p1, v0
+
     iput p1, p0, Lcom/miui/home/launcher/monitor/FpsReporter;->mTotalFrameTime:I
 
     return p1
@@ -417,7 +406,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$new$576(Lcom/miui/home/launcher/monitor/FpsReporter;)V
+.method public static synthetic lambda$new$0(Lcom/miui/home/launcher/monitor/FpsReporter;)V
     .locals 3
 
     .line 131

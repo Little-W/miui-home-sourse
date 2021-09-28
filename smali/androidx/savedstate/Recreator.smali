@@ -13,6 +13,12 @@
     }
 .end annotation
 
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/savedstate/Recreator$SavedStateProvider;
+    }
+.end annotation
+
 
 # instance fields
 .field private final mOwner:Landroidx/savedstate/SavedStateRegistryOwner;

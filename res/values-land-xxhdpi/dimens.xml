@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="miuix_appcompat_action_bar_default_height">48.669983dip</dimen>
+    <dimen name="miuix_appcompat_action_bar_horizontal_padding_end">43.399994dip</dimen>
+    <dimen name="miuix_appcompat_action_bar_horizontal_padding_start">43.399994dip</dimen>
+    <dimen name="miuix_appcompat_action_bar_title_horizontal_padding">43.399994dip</dimen>
+    <dimen name="miuix_appcompat_action_button_bg_bottom_padding">9.599976dip</dimen>
+    <dimen name="miuix_appcompat_action_button_bg_top_padding">9.599976dip</dimen>
+</resources>

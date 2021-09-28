@@ -43,7 +43,7 @@
         android:layout_weight="1.0"
         style="@style/Widget.PreferenceItem">
         <androidx.appcompat.widget.AppCompatCheckedTextView
-            android:textAppearance="@style/TextAppearance.PreferenceList"
+            android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
             android:ellipsize="end"
             android:id="@android:id/title"
             android:fadingEdge="horizontal"
@@ -52,10 +52,11 @@
             android:maxLines="2"
             android:textAlignment="viewStart" />
         <androidx.appcompat.widget.AppCompatCheckedTextView
-            android:textAppearance="@style/TextAppearance.List.Secondary.Preference"
+            android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
             android:id="@android:id/summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/miuix_preference_summary_margin_top"
             android:maxLines="10"
             android:layout_below="@android:id/title"
             android:textAlignment="viewStart"

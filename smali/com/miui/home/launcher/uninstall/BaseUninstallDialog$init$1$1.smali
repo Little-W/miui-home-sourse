@@ -37,7 +37,7 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 58
+    .line 60
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog$init$1$1;->this$0:Lcom/miui/home/launcher/uninstall/BaseUninstallDialog$init$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog$init$1;->this$0:Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;
@@ -46,9 +46,9 @@
 
     iget-object v0, v0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog$init$1;->this$0:Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;
 
-    check-cast v0, Lmiui/app/AlertDialog;
+    check-cast v0, Lmiuix/appcompat/app/AlertDialog;
 
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->onPositiveClick(Lmiui/app/AlertDialog;)V
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->onPositiveClick(Lmiuix/appcompat/app/AlertDialog;)V
 
     return-void
 .end method

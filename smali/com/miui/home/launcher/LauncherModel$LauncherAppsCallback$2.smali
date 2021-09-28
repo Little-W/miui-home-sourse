@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 327
+    .line 330
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$2;->this$1:Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$2;->val$packageName:Ljava/lang/String;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 4
 
-    .line 329
+    .line 332
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
@@ -55,14 +55,14 @@
 
     const-string v1, "android.intent.extra.PACKAGES"
 
-    .line 330
+    .line 333
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$2;->val$packageName:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "package"
 
-    .line 331
+    .line 334
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$2;->val$packageName:Ljava/lang/String;
 
     const/4 v3, 0x0
@@ -73,7 +73,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 332
+    .line 335
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$2;->this$1:Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;
 
     iget-object v1, v1, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
@@ -82,11 +82,9 @@
 
     iget-object v2, v2, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/Application;
 
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher()Lcom/miui/home/launcher/Launcher;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v2
 

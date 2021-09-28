@@ -163,6 +163,31 @@
 
 
 # virtual methods
+.method public canSkipToEnd()Z
+    .locals 4
+
+    .line 196
+    iget-object v0, p0, Lmiuix/animation/physics/SpringAnimation;->mSpring:Lmiuix/animation/physics/SpringForce;
+
+    iget-wide v0, v0, Lmiuix/animation/physics/SpringForce;->mDampingRatio:D
+
+    const-wide/16 v2, 0x0
+
+    cmpl-double v0, v0, v2
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 .method public getSpring()Lmiuix/animation/physics/SpringForce;
     .locals 1
 
@@ -198,6 +223,61 @@
     .locals 0
 
     return-void
+.end method
+
+.method public skipToEnd()V
+    .locals 2
+
+    .line 178
+    invoke-virtual {p0}, Lmiuix/animation/physics/SpringAnimation;->canSkipToEnd()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 182
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_1
+
+    .line 185
+    iget-boolean v0, p0, Lmiuix/animation/physics/SpringAnimation;->mRunning:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 186
+    iput-boolean v0, p0, Lmiuix/animation/physics/SpringAnimation;->mEndRequested:Z
+
+    :cond_0
+    return-void
+
+    .line 183
+    :cond_1
+    new-instance v0, Landroid/util/AndroidRuntimeException;
+
+    const-string v1, "Animations may only be started on the main thread"
+
+    invoke-direct {v0, v1}, Landroid/util/AndroidRuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 179
+    :cond_2
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Spring animations can only come to an end when there is damping"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 .method public start()V

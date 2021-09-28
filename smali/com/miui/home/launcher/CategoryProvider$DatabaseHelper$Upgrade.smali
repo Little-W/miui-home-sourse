@@ -217,6 +217,7 @@
     :cond_0
     move p2, v5
 
+    .line 278
     :goto_0
     invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -250,92 +251,72 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    const/4 p1, 0x0
-
-    if-eqz p0, :cond_3
+    if-eqz p0, :cond_2
 
     .line 282
     :goto_1
     :try_start_1
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
-    move-result p2
+    move-result p1
 
-    if-eqz p2, :cond_3
+    if-eqz p1, :cond_2
 
-    const-string p2, "categoryId"
+    const-string p1, "categoryId"
 
     .line 283
-    invoke-interface {p0, p2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {p0, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result p2
+    move-result p1
 
-    invoke-interface {p0, p2}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {p0, p1}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result p2
+    move-result p1
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p2
+    move-result-object p1
 
-    invoke-virtual {v0, p2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
     goto :goto_1
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_2
 
     :catch_0
     move-exception p1
 
+    if-eqz p0, :cond_1
+
     .line 277
     :try_start_2
-    throw p1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :goto_2
-    if-eqz p0, :cond_2
-
-    if-eqz p1, :cond_1
-
-    .line 286
-    :try_start_3
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
-    :try_end_3
-    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+    :try_end_2
+    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    goto :goto_3
+    goto :goto_2
 
     :catch_1
     move-exception p0
 
-    :try_start_4
+    :try_start_3
     invoke-virtual {p1, p0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    goto :goto_3
-
     :cond_1
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    :goto_2
+    throw p1
 
     :cond_2
-    :goto_3
-    throw p2
+    if-eqz p0, :cond_3
 
-    :cond_3
-    if-eqz p0, :cond_4
-
+    .line 286
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    goto :goto_4
+    goto :goto_3
 
     :catch_2
     move-exception p0
@@ -343,8 +324,8 @@
     .line 287
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    :cond_4
-    :goto_4
+    :cond_3
+    :goto_3
     return-object v0
 .end method
 
@@ -397,92 +378,72 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    const/4 p1, 0x0
-
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_1
 
     .line 298
     :goto_0
     :try_start_1
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
-    move-result v1
+    move-result p1
 
-    if-eqz v1, :cond_2
+    if-eqz p1, :cond_1
 
-    const-string v1, "categoryId"
+    const-string p1, "categoryId"
 
     .line 299
-    invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {p0, p1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result v1
+    move-result p1
 
-    invoke-interface {p0, v1}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {p0, p1}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v1
+    move-result p1
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
     goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
 
     :catch_0
     move-exception p1
 
+    if-eqz p0, :cond_0
+
     .line 294
     :try_start_2
-    throw p1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :goto_1
-    if-eqz p0, :cond_1
-
-    if-eqz p1, :cond_0
-
-    .line 302
-    :try_start_3
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
-    :try_end_3
-    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+    :try_end_2
+    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    goto :goto_2
+    goto :goto_1
 
     :catch_1
     move-exception p0
 
-    :try_start_4
+    :try_start_3
     invoke-virtual {p1, p0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    goto :goto_2
-
     :cond_0
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    :goto_1
+    throw p1
 
     :cond_1
-    :goto_2
-    throw v1
+    if-eqz p0, :cond_2
 
-    :cond_2
-    if-eqz p0, :cond_3
-
+    .line 302
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    goto :goto_3
+    goto :goto_2
 
     :catch_2
     move-exception p0
@@ -490,8 +451,8 @@
     .line 303
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    :cond_3
-    :goto_3
+    :cond_2
+    :goto_2
     return-object v0
 .end method
 

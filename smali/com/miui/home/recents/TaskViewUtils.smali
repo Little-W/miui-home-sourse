@@ -461,7 +461,7 @@
     move-result v10
 
     .line 167
-    new-instance v11, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$jaqUSU7wVyob53bWpK5x_04XkV4;
+    new-instance v11, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$Y6ahbWNnpwKYOM5UHZANPQlwUzw;
 
     move-object v0, v11
 
@@ -479,7 +479,7 @@
 
     move-object/from16 v7, p3
 
-    invoke-direct/range {v0 .. v8}, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$jaqUSU7wVyob53bWpK5x_04XkV4;-><init>(Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;ZLcom/miui/home/recents/views/TaskView;ZLcom/miui/home/recents/views/RecentsView;Landroid/graphics/RectF;)V
+    invoke-direct/range {v0 .. v8}, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$Y6ahbWNnpwKYOM5UHZANPQlwUzw;-><init>(Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;ZLcom/miui/home/recents/views/TaskView;ZLcom/miui/home/recents/views/RecentsView;Landroid/graphics/RectF;)V
 
     invoke-virtual {v12, v11}, Lcom/miui/home/recents/util/RectFSpringAnim;->addOnUpdateListener(Lcom/miui/home/recents/util/RectFSpringAnim$OnUpdateListener;)V
 
@@ -510,106 +510,7 @@
     return-object v10
 .end method
 
-.method static synthetic lambda$getRecentsWindowAnimatorNew$517(Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;ZLcom/miui/home/recents/views/TaskView;ZLcom/miui/home/recents/views/RecentsView;Landroid/graphics/RectF;Landroid/graphics/RectF;FFF)V
-    .locals 12
-
-    move-object v0, p0
-
-    move-object v1, p2
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    .line 168
-    invoke-virtual {p0, v2}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setTargetAlpha(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
-
-    move-result-object v3
-
-    move-object/from16 v10, p8
-
-    invoke-virtual {v3, v10}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setRect(Landroid/graphics/RectF;)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
-
-    move-result-object v3
-
-    const/4 v11, 0x0
-
-    invoke-virtual {v3, v11}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setClipProgress(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
-
-    move-result-object v3
-
-    move/from16 v4, p10
-
-    invoke-virtual {v3, v4}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setRadius(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
-
-    move-object v3, p1
-
-    .line 169
-    invoke-virtual {p1, p2, p0}, Lcom/miui/home/recents/util/ClipAnimationHelper;->applyTransformNew(Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;)Landroid/graphics/RectF;
-
-    if-nez p3, :cond_0
-
-    .line 172
-    sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
-
-    new-instance v3, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$DzPIqfIp1NyZwFjhSlWiz5iip08;
-
-    move-object v4, v3
-
-    move-object/from16 v5, p4
-
-    move/from16 v6, p9
-
-    move/from16 v7, p5
-
-    move-object/from16 v8, p6
-
-    move-object/from16 v9, p7
-
-    move-object/from16 v10, p8
-
-    invoke-direct/range {v4 .. v10}, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$DzPIqfIp1NyZwFjhSlWiz5iip08;-><init>(Lcom/miui/home/recents/views/TaskView;FZLcom/miui/home/recents/views/RecentsView;Landroid/graphics/RectF;Landroid/graphics/RectF;)V
-
-    invoke-virtual {v0, v3}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
-
-    :cond_0
-    if-eqz v1, :cond_1
-
-    .line 183
-    invoke-virtual {p2}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->isTranslucent()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 184
-    invoke-static {}, Lcom/miui/home/recents/DimLayer;->getInstance()Lcom/miui/home/recents/DimLayer;
-
-    move-result-object v0
-
-    move/from16 v3, p9
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->min(FF)F
-
-    move-result v2
-
-    invoke-static {v11, v2}, Ljava/lang/Math;->max(FF)F
-
-    move-result v2
-
-    .line 185
-    invoke-virtual {p2}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getHomeSurfaceControlCompat()Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
-
-    move-result-object v1
-
-    const/4 v3, 0x1
-
-    .line 184
-    invoke-virtual {v0, v2, v1, v3}, Lcom/miui/home/recents/DimLayer;->dim(FLcom/android/systemui/shared/recents/system/SurfaceControlCompat;Z)V
-
-    :cond_1
-    return-void
-.end method
-
-.method static synthetic lambda$null$516(Lcom/miui/home/recents/views/TaskView;FZLcom/miui/home/recents/views/RecentsView;Landroid/graphics/RectF;Landroid/graphics/RectF;)V
+.method static synthetic lambda$getRecentsWindowAnimatorNew$0(Lcom/miui/home/recents/views/TaskView;FZLcom/miui/home/recents/views/RecentsView;Landroid/graphics/RectF;Landroid/graphics/RectF;)V
     .locals 9
 
     const/4 v0, 0x0
@@ -653,5 +554,104 @@
     invoke-virtual/range {v3 .. v8}, Lcom/miui/home/recents/views/RecentsView;->alignTaskViewWhenTaskLaunch(Lcom/miui/home/recents/views/TaskView;Landroid/graphics/RectF;Landroid/graphics/RectF;FF)V
 
     :cond_0
+    return-void
+.end method
+
+.method static synthetic lambda$getRecentsWindowAnimatorNew$1(Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;ZLcom/miui/home/recents/views/TaskView;ZLcom/miui/home/recents/views/RecentsView;Landroid/graphics/RectF;Landroid/graphics/RectF;FFF)V
+    .locals 12
+
+    move-object v0, p0
+
+    move-object v1, p2
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    .line 168
+    invoke-virtual {p0, v2}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setTargetAlpha(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
+
+    move-result-object v3
+
+    move-object/from16 v10, p8
+
+    invoke-virtual {v3, v10}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setRect(Landroid/graphics/RectF;)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
+
+    move-result-object v3
+
+    const/4 v11, 0x0
+
+    invoke-virtual {v3, v11}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setClipProgress(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
+
+    move-result-object v3
+
+    move/from16 v4, p10
+
+    invoke-virtual {v3, v4}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setRadius(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
+
+    move-object v3, p1
+
+    .line 169
+    invoke-virtual {p1, p2, p0}, Lcom/miui/home/recents/util/ClipAnimationHelper;->applyTransformNew(Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;)Landroid/graphics/RectF;
+
+    if-nez p3, :cond_0
+
+    .line 172
+    sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
+
+    new-instance v3, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$-QIE15lfWEh_ZRZC2jN8wKBxkMc;
+
+    move-object v4, v3
+
+    move-object/from16 v5, p4
+
+    move/from16 v6, p9
+
+    move/from16 v7, p5
+
+    move-object/from16 v8, p6
+
+    move-object/from16 v9, p7
+
+    move-object/from16 v10, p8
+
+    invoke-direct/range {v4 .. v10}, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$-QIE15lfWEh_ZRZC2jN8wKBxkMc;-><init>(Lcom/miui/home/recents/views/TaskView;FZLcom/miui/home/recents/views/RecentsView;Landroid/graphics/RectF;Landroid/graphics/RectF;)V
+
+    invoke-virtual {v0, v3}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
+
+    :cond_0
+    if-eqz v1, :cond_1
+
+    .line 183
+    invoke-virtual {p2}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->isTranslucent()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 184
+    invoke-static {}, Lcom/miui/home/recents/DimLayer;->getInstance()Lcom/miui/home/recents/DimLayer;
+
+    move-result-object v0
+
+    move/from16 v3, p9
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->min(FF)F
+
+    move-result v2
+
+    invoke-static {v11, v2}, Ljava/lang/Math;->max(FF)F
+
+    move-result v2
+
+    .line 185
+    invoke-virtual {p2}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getHomeSurfaceControlCompat()Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
+
+    move-result-object v1
+
+    const/4 v3, 0x1
+
+    .line 184
+    invoke-virtual {v0, v2, v1, v3}, Lcom/miui/home/recents/DimLayer;->dim(FLcom/android/systemui/shared/recents/system/SurfaceControlCompat;Z)V
+
+    :cond_1
     return-void
 .end method

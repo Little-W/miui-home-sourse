@@ -63,7 +63,7 @@
 
     .line 117
     :cond_2
-    invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
     move-result v1
 

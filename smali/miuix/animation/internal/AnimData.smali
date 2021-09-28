@@ -44,6 +44,11 @@
     .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/4 v0, -0x1
+
+    .line 32
+    iput v0, p0, Lmiuix/animation/internal/AnimData;->tintMode:I
+
     const-wide v0, 0x7fefffffffffffffL    # Double.MAX_VALUE
 
     .line 36

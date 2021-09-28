@@ -93,43 +93,48 @@
 .method private trackVelocity(Landroid/view/MotionEvent;)V
     .locals 3
 
-    .line 72
+    .line 73
     iget-object v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     if-nez v0, :cond_0
 
-    .line 73
+    .line 74
     new-instance v0, Lmiuix/animation/utils/VelocityMonitor;
 
     invoke-direct {v0}, Lmiuix/animation/utils/VelocityMonitor;-><init>()V
 
     iput-object v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
-    .line 75
+    .line 76
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
-    .line 76
+    .line 77
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v1
 
+    if-eqz v0, :cond_4
+
+    const/4 v2, 0x2
+
+    if-eq v0, v2, :cond_2
+
     packed-switch v0, :pswitch_data_0
 
-    :pswitch_0
     goto :goto_1
 
     .line 95
-    :pswitch_1
+    :pswitch_0
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v0
 
     iget v2, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
 
-    if-ne v0, v2, :cond_3
+    if-ne v0, v2, :cond_5
 
     if-nez v1, :cond_1
 
@@ -154,14 +159,14 @@
     goto :goto_1
 
     .line 86
-    :pswitch_2
+    :cond_2
     iget v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
 
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
     move-result v0
 
-    if-gez v0, :cond_2
+    if-gez v0, :cond_3
 
     const-string p1, "RecyclerView"
 
@@ -191,43 +196,36 @@
     return-void
 
     .line 92
-    :cond_2
+    :cond_3
     invoke-direct {p0, p1, v0}, Landroidx/recyclerview/widget/RemixRecyclerView;->updateVelocity(Landroid/view/MotionEvent;I)V
 
     goto :goto_1
 
-    .line 79
-    :pswitch_3
+    .line 80
+    :cond_4
     iget-object v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mVelocityMonitor:Lmiuix/animation/utils/VelocityMonitor;
 
     invoke-virtual {v0}, Lmiuix/animation/utils/VelocityMonitor;->clear()V
 
-    .line 81
-    :pswitch_4
+    .line 82
+    :pswitch_1
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v0
 
     iput v0, p0, Landroidx/recyclerview/widget/RemixRecyclerView;->mScrollPointerId:I
 
-    .line 82
+    .line 83
     invoke-direct {p0, p1, v1}, Landroidx/recyclerview/widget/RemixRecyclerView;->updateVelocity(Landroid/view/MotionEvent;I)V
 
-    :cond_3
+    :cond_5
     :goto_1
     return-void
 
-    nop
-
     :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_2
-        :pswitch_0
-        :pswitch_0
-        :pswitch_4
+    .packed-switch 0x5
         :pswitch_1
+        :pswitch_0
     .end packed-switch
 .end method
 

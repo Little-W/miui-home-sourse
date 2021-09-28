@@ -337,6 +337,19 @@
     return-object p1
 .end method
 
+.method public getCurrentState()Lmiuix/animation/controller/AnimState;
+    .locals 1
+
+    .line 340
+    iget-object v0, p0, Lmiuix/animation/controller/FolmeState;->mStateMgr:Lmiuix/animation/controller/StateManager;
+
+    invoke-virtual {v0}, Lmiuix/animation/controller/StateManager;->getCurrentState()Lmiuix/animation/controller/AnimState;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public getState(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
     .locals 1
 
@@ -397,6 +410,20 @@
     return-wide v2
 .end method
 
+.method public setFlags(J)Lmiuix/animation/IStateStyle;
+    .locals 1
+
+    .line 203
+    invoke-virtual {p0}, Lmiuix/animation/controller/FolmeState;->getTarget()Lmiuix/animation/IAnimTarget;
+
+    move-result-object v0
+
+    .line 204
+    invoke-virtual {v0, p1, p2}, Lmiuix/animation/IAnimTarget;->setFlags(J)V
+
+    return-object p0
+.end method
+
 .method public setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
     .locals 1
 
@@ -448,6 +475,17 @@
 
     .line 163
     invoke-direct {p0, p1, v0}, Lmiuix/animation/controller/FolmeState;->setTo(Ljava/lang/Object;Lmiuix/animation/base/AnimConfigLink;)Lmiuix/animation/IStateStyle;
+
+    return-object p0
+.end method
+
+.method public setup(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+    .locals 1
+
+    .line 220
+    iget-object v0, p0, Lmiuix/animation/controller/FolmeState;->mStateMgr:Lmiuix/animation/controller/StateManager;
+
+    invoke-virtual {v0, p1}, Lmiuix/animation/controller/StateManager;->setup(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
 
     return-object p0
 .end method

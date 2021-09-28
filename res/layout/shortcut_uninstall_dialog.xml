@@ -10,7 +10,9 @@
         android:id="@id/uninstall_icons_container"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/workspace_cell_width"
+        android:layout_marginLeft="@dimen/shortcut_uninstall_dialog_icons_marginTop"
         android:layout_marginTop="@dimen/shortcut_uninstall_dialog_icons_marginTop"
+        android:layout_marginRight="@dimen/shortcut_uninstall_dialog_icons_marginTop"
         android:importantForAccessibility="no" />
     <TextView
         android:layout_gravity="center"

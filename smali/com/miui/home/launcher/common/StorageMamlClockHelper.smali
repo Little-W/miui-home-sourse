@@ -94,7 +94,7 @@
 .method private static getId(Ljava/lang/String;)I
     .locals 1
 
-    .line 252
+    .line 254
     sget-object v0, Lcom/miui/home/launcher/common/StorageMamlClockHelper;->sTag2Id:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -105,7 +105,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 253
+    .line 255
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
@@ -122,7 +122,7 @@
 .method public static getJsonReader(Landroid/net/Uri;)Landroid/util/JsonReader;
     .locals 3
 
-    .line 136
+    .line 138
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -131,13 +131,13 @@
 
     move-result-object v0
 
-    .line 138
+    .line 140
     :try_start_0
     new-instance v1, Landroid/util/JsonReader;
 
     new-instance v2, Ljava/io/InputStreamReader;
 
-    .line 139
+    .line 141
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
 
     move-result-object p0
@@ -153,7 +153,7 @@
     :catch_0
     move-exception p0
 
-    .line 142
+    .line 144
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -164,7 +164,7 @@
 .method public static getJsonReader(Ljava/io/File;)Landroid/util/JsonReader;
     .locals 3
 
-    .line 149
+    .line 151
     :try_start_0
     new-instance v0, Landroid/util/JsonReader;
 
@@ -185,7 +185,7 @@
     :catch_0
     move-exception p0
 
-    .line 153
+    .line 155
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -311,7 +311,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 119
+    .line 120
     array-length v2, v1
 
     const/4 v3, 0x0
@@ -325,20 +325,20 @@
 
     goto :goto_3
 
-    .line 123
+    .line 124
     :cond_3
     invoke-static {v4}, Lcom/miui/home/launcher/common/StorageMamlClockHelper;->getJsonReader(Ljava/io/File;)Landroid/util/JsonReader;
 
     move-result-object v4
 
-    .line 124
+    .line 125
     invoke-static {v4}, Lcom/miui/home/launcher/common/StorageMamlClockHelper;->readClock(Landroid/util/JsonReader;)Lcom/miui/home/launcher/common/StorageMamlClockHelper$MamlClock_2x4;
 
     move-result-object v4
 
     if-eqz v4, :cond_4
 
-    .line 126
+    .line 127
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_4
@@ -360,17 +360,17 @@
 
     return-object v0
 
-    .line 163
+    .line 165
     :cond_0
     :try_start_0
     new-instance v1, Lcom/miui/home/launcher/common/StorageMamlClockHelper$MamlClock_2x4;
 
     invoke-direct {v1}, Lcom/miui/home/launcher/common/StorageMamlClockHelper$MamlClock_2x4;-><init>()V
 
-    .line 164
+    .line 166
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
-    .line 165
+    .line 167
     :cond_1
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
@@ -379,12 +379,12 @@
 
     if-eqz v2, :cond_6
 
-    .line 166
+    .line 168
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 167
+    .line 169
     invoke-virtual {p0}, Landroid/util/JsonReader;->peek()Landroid/util/JsonToken;
 
     move-result-object v3
@@ -393,12 +393,12 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 168
+    .line 170
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
-    .line 171
+    .line 173
     :cond_2
     invoke-static {v2}, Lcom/miui/home/launcher/common/StorageMamlClockHelper;->getId(Ljava/lang/String;)I
 
@@ -408,12 +408,12 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 214
+    .line 216
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
-    .line 179
+    .line 181
     :pswitch_0
     invoke-static {p0}, Lcom/miui/home/launcher/common/StorageMamlClockHelper;->readParentResource(Landroid/util/JsonReader;)Ljava/util/List;
 
@@ -421,14 +421,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 180
+    .line 182
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 181
+    .line 183
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -437,12 +437,12 @@
 
     iget-object v2, v2, Lcom/miui/home/launcher/common/StorageMamlClockHelper$ParentResource;->localId:Ljava/lang/String;
 
-    .line 184
+    .line 186
     sget-boolean v4, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v4, :cond_3
 
-    .line 185
+    .line 187
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -465,7 +465,7 @@
 
     move-result-object v4
 
-    .line 187
+    .line 189
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -490,7 +490,7 @@
 
     goto :goto_1
 
-    .line 189
+    .line 191
     :cond_3
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -514,7 +514,7 @@
 
     move-result-object v4
 
-    .line 191
+    .line 193
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -537,7 +537,7 @@
 
     move-result-object v2
 
-    .line 194
+    .line 196
     :goto_1
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -549,7 +549,7 @@
 
     if-eqz v4, :cond_4
 
-    .line 195
+    .line 197
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v5
@@ -562,7 +562,7 @@
 
     if-eqz v5, :cond_4
 
-    .line 196
+    .line 198
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -573,19 +573,19 @@
 
     goto/16 :goto_0
 
-    .line 198
+    .line 200
     :cond_4
     iput-object v2, v1, Lcom/miui/home/launcher/common/StorageMamlClockHelper$MamlClock_2x4;->previewPath:Ljava/lang/String;
 
     goto/16 :goto_0
 
-    .line 203
+    .line 205
     :pswitch_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 204
+    .line 206
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -604,7 +604,7 @@
 
     move-result-object v4
 
-    .line 206
+    .line 208
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v5
@@ -615,7 +615,7 @@
 
     if-eqz v4, :cond_5
 
-    .line 207
+    .line 209
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v5
@@ -628,7 +628,7 @@
 
     if-eqz v5, :cond_5
 
-    .line 208
+    .line 210
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -639,7 +639,7 @@
 
     goto/16 :goto_0
 
-    .line 210
+    .line 212
     :cond_5
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -663,7 +663,7 @@
 
     goto/16 :goto_0
 
-    .line 176
+    .line 178
     :pswitch_2
     invoke-static {p0}, Lcom/miui/home/launcher/common/StorageMamlClockHelper;->readMap(Landroid/util/JsonReader;)Ljava/util/Map;
 
@@ -673,7 +673,7 @@
 
     goto/16 :goto_0
 
-    .line 173
+    .line 175
     :pswitch_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -683,11 +683,11 @@
 
     goto/16 :goto_0
 
-    .line 217
+    .line 219
     :cond_6
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
-    .line 218
+    .line 220
     iget-object v2, v1, Lcom/miui/home/launcher/common/StorageMamlClockHelper$MamlClock_2x4;->contentPath:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -710,7 +710,7 @@
 
     iget-object v2, v1, Lcom/miui/home/launcher/common/StorageMamlClockHelper$MamlClock_2x4;->previewPath:Ljava/lang/String;
 
-    .line 219
+    .line 221
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -744,7 +744,7 @@
     :cond_8
     if-eqz p0, :cond_9
 
-    .line 227
+    .line 229
     :try_start_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->close()V
     :try_end_1
@@ -755,7 +755,7 @@
     :catch_0
     move-exception p0
 
-    .line 229
+    .line 231
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_9
@@ -765,7 +765,7 @@
     :cond_a
     if-eqz p0, :cond_c
 
-    .line 227
+    .line 229
     :try_start_2
     invoke-virtual {p0}, Landroid/util/JsonReader;->close()V
     :try_end_2
@@ -788,10 +788,10 @@
     :catch_1
     move-exception p0
 
-    .line 229
+    .line 231
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 230
+    .line 234
     :cond_b
     :goto_3
     throw v0
@@ -799,7 +799,7 @@
     :catch_2
     if-eqz p0, :cond_c
 
-    .line 227
+    .line 229
     :try_start_4
     invoke-virtual {p0}, Landroid/util/JsonReader;->close()V
     :try_end_4
@@ -810,7 +810,7 @@
     :catch_3
     move-exception p0
 
-    .line 229
+    .line 231
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_c
@@ -846,15 +846,15 @@
         }
     .end annotation
 
-    .line 237
+    .line 239
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 238
+    .line 240
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
-    .line 239
+    .line 241
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -862,12 +862,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 240
+    .line 242
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 241
+    .line 243
     invoke-virtual {p0}, Landroid/util/JsonReader;->peek()Landroid/util/JsonToken;
 
     move-result-object v2
@@ -876,7 +876,7 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 242
+    .line 244
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
     move-result-object v2
@@ -885,13 +885,13 @@
 
     goto :goto_0
 
-    .line 244
+    .line 246
     :cond_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_0
 
-    .line 247
+    .line 249
     :cond_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
@@ -917,15 +917,15 @@
         }
     .end annotation
 
-    .line 261
+    .line 263
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 262
+    .line 264
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginArray()V
 
-    .line 263
+    .line 265
     :goto_0
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -933,17 +933,17 @@
 
     if-eqz v1, :cond_3
 
-    .line 264
+    .line 266
     invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
 
-    .line 265
+    .line 267
     new-instance v1, Lcom/miui/home/launcher/common/StorageMamlClockHelper$ParentResource;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, v2}, Lcom/miui/home/launcher/common/StorageMamlClockHelper$ParentResource;-><init>(Lcom/miui/home/launcher/common/StorageMamlClockHelper$1;)V
 
-    .line 266
+    .line 268
     :goto_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
 
@@ -951,12 +951,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 267
+    .line 269
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 268
+    .line 270
     invoke-virtual {p0}, Landroid/util/JsonReader;->peek()Landroid/util/JsonToken;
 
     move-result-object v3
@@ -965,12 +965,12 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 269
+    .line 271
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_1
 
-    .line 272
+    .line 274
     :cond_0
     invoke-static {v2}, Lcom/miui/home/launcher/common/StorageMamlClockHelper;->getId(Ljava/lang/String;)I
 
@@ -980,12 +980,12 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 277
+    .line 279
     invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
 
     goto :goto_1
 
-    .line 274
+    .line 276
     :cond_1
     invoke-virtual {p0}, Landroid/util/JsonReader;->nextString()Ljava/lang/String;
 
@@ -995,16 +995,16 @@
 
     goto :goto_1
 
-    .line 280
+    .line 282
     :cond_2
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 281
+    .line 283
     invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
 
     goto :goto_0
 
-    .line 283
+    .line 285
     :cond_3
     invoke-virtual {p0}, Landroid/util/JsonReader;->endArray()V
 

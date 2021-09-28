@@ -1,11 +1,11 @@
 .class public abstract Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;
-.super Lmiui/app/AlertDialog;
+.super Lmiuix/appcompat/app/AlertDialog;
 .source "BaseUninstallDialog.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nBaseUninstallDialog.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BaseUninstallDialog.kt\ncom/miui/home/launcher/uninstall/BaseUninstallDialog\n*L\n1#1,121:1\n*E\n"
+    value = "SMAP\nBaseUninstallDialog.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BaseUninstallDialog.kt\ncom/miui/home/launcher/uninstall/BaseUninstallDialog\n*L\n1#1,123:1\n*E\n"
 .end annotation
 
 
@@ -100,40 +100,40 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const/16 v0, 0x8
+    const v0, 0x7f110005
 
-    .line 21
-    invoke-direct {p0, p1, v0}, Lmiui/app/AlertDialog;-><init>(Landroid/content/Context;I)V
+    .line 23
+    invoke-direct {p0, p1, v0}, Lmiuix/appcompat/app/AlertDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 24
+    .line 26
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 30
+    .line 32
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mSecondShortcutInfos:Ljava/util/ArrayList;
 
-    .line 33
+    .line 35
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mCancelShortcutInfos:Ljava/util/ArrayList;
 
-    .line 36
+    .line 38
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mUninstallShortcutInfos:Ljava/util/ArrayList;
 
-    .line 106
+    .line 108
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->init(Landroid/content/Context;Ljava/util/List;)V
 
     return-void
@@ -142,7 +142,7 @@
 .method public static final synthetic access$getNegativeButton$p(Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;)Landroid/widget/Button;
     .locals 0
 
-    .line 21
+    .line 23
     invoke-direct {p0}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->getNegativeButton()Landroid/widget/Button;
 
     move-result-object p0
@@ -153,7 +153,7 @@
 .method public static final synthetic access$getPositiveButton$p(Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;)Landroid/widget/Button;
     .locals 0
 
-    .line 21
+    .line 23
     invoke-direct {p0}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->getPositiveButton()Landroid/widget/Button;
 
     move-result-object p0
@@ -166,7 +166,7 @@
 
     const/4 v0, -0x2
 
-    .line 81
+    .line 83
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v0
@@ -183,7 +183,7 @@
 
     const/4 v0, -0x1
 
-    .line 78
+    .line 80
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->getButton(I)Landroid/widget/Button;
 
     move-result-object v0
@@ -208,12 +208,12 @@
         }
     .end annotation
 
-    .line 44
+    .line 46
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
 
-    const v0, 0x7f0d00c5
+    const v0, 0x7f0d00ff
 
     const/4 v1, 0x0
 
@@ -227,17 +227,17 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mDialogView:Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;
 
-    .line 45
+    .line 47
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mDialogView:Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;
 
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->setView(Landroid/view/View;)V
 
-    .line 46
+    .line 48
     iput-object p2, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mAllShortcutInfos:Ljava/util/List;
 
-    .line 47
+    .line 49
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mAllShortcutInfos:Ljava/util/List;
 
     if-nez p1, :cond_0
@@ -262,7 +262,7 @@
 
     check-cast p2, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 48
+    .line 50
     move-object v0, p2
 
     check-cast v0, Lcom/miui/home/launcher/ItemInfo;
@@ -275,14 +275,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 49
+    .line 51
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mSecondShortcutInfos:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 51
+    .line 53
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mUninstallShortcutInfos:Ljava/util/ArrayList;
 
@@ -290,7 +290,7 @@
 
     goto :goto_0
 
-    .line 54
+    .line 56
     :cond_2
     new-instance p1, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog$init$1;
 
@@ -300,7 +300,7 @@
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->setOnShowListener(Landroid/content/DialogInterface$OnShowListener;)V
 
-    .line 61
+    .line 63
     new-instance p1, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog$init$2;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog$init$2;-><init>(Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;)V
@@ -309,12 +309,12 @@
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 66
+    .line 68
     invoke-virtual {p0}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->setNegativeButTitle()V
 
     return-void
 
-    .line 44
+    .line 46
     :cond_3
     new-instance p1, Lkotlin/TypeCastException;
 
@@ -338,7 +338,7 @@
         }
     .end annotation
 
-    .line 84
+    .line 86
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mCancelShortcutInfos:Ljava/util/ArrayList;
 
     return-object v0
@@ -347,7 +347,7 @@
 .method protected final getMLauncher()Lcom/miui/home/launcher/Launcher;
     .locals 1
 
-    .line 24
+    .line 26
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     return-object v0
@@ -359,24 +359,24 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 100
+    .line 102
     invoke-virtual {p0}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->isShowing()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 101
+    .line 103
     invoke-virtual {p0}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->dismiss()V
 
     :cond_0
     return-void
 .end method
 
-.method public abstract onNegativeClick(Lmiui/app/AlertDialog;)V
+.method public abstract onNegativeClick(Lmiuix/appcompat/app/AlertDialog;)V
 .end method
 
-.method public abstract onPositiveClick(Lmiui/app/AlertDialog;)V
+.method public abstract onPositiveClick(Lmiuix/appcompat/app/AlertDialog;)V
 .end method
 
 .method public final reportData(Lcom/miui/home/launcher/ShortcutInfo;Z)V
@@ -384,17 +384,17 @@
 
     if-eqz p1, :cond_7
 
-    .line 111
+    .line 113
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 112
+    .line 114
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->getClassName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 113
+    .line 115
     sget-boolean v2, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     const/4 v3, 0x0
@@ -434,7 +434,7 @@
 
     move-result p1
 
-    .line 114
+    .line 116
     move-object v2, v0
 
     check-cast v2, Ljava/lang/CharSequence;
@@ -495,7 +495,7 @@
     :goto_3
     const-string v2, "launcher"
 
-    .line 115
+    .line 117
     invoke-static {v0, p1, v1, p2, v2}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackWhenHideOrUninstallApp(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_7
@@ -514,7 +514,7 @@
         }
     .end annotation
 
-    .line 92
+    .line 94
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mCancelConsumer:Ljava/util/function/Consumer;
 
     return-void
@@ -523,7 +523,7 @@
 .method public final setNegativeButTitle()V
     .locals 3
 
-    .line 74
+    .line 76
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x0
@@ -536,7 +536,7 @@
 
     if-eqz v0, :cond_0
 
-    const v2, 0x7f1000a3
+    const v2, 0x7f1000a6
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -562,7 +562,7 @@
 .method public final setPositiveButTitle(I)V
     .locals 2
 
-    .line 70
+    .line 72
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x0
@@ -608,7 +608,7 @@
         }
     .end annotation
 
-    .line 88
+    .line 90
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->mPositiveConsumer:Ljava/util/function/Consumer;
 
     return-void

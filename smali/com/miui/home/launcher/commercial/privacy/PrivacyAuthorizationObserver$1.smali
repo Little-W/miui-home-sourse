@@ -30,11 +30,11 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onChange$452(Lcom/miui/home/launcher/commercial/privacy/PrivacyAuthorizationObserver$1;)V
+.method public static synthetic lambda$onChange$0(Lcom/miui/home/launcher/commercial/privacy/PrivacyAuthorizationObserver$1;)V
     .locals 3
 
     .line 39
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
@@ -84,9 +84,9 @@
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
     .line 37
-    new-instance p1, Lcom/miui/home/launcher/commercial/privacy/-$$Lambda$PrivacyAuthorizationObserver$1$2koGS4U9Cz-1l792407ALB3toQo;
+    new-instance p1, Lcom/miui/home/launcher/commercial/privacy/-$$Lambda$PrivacyAuthorizationObserver$1$LJzH4J5T5G58-xsNyqAqtfWVTKw;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/commercial/privacy/-$$Lambda$PrivacyAuthorizationObserver$1$2koGS4U9Cz-1l792407ALB3toQo;-><init>(Lcom/miui/home/launcher/commercial/privacy/PrivacyAuthorizationObserver$1;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/commercial/privacy/-$$Lambda$PrivacyAuthorizationObserver$1$LJzH4J5T5G58-xsNyqAqtfWVTKw;-><init>(Lcom/miui/home/launcher/commercial/privacy/PrivacyAuthorizationObserver$1;)V
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

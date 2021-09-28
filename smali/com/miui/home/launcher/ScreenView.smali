@@ -273,7 +273,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView;->TAG:Ljava/lang/String;
 
-    const p1, 0x7f0802a0
+    const p1, 0x7f080513
 
     .line 73
     iput p1, p0, Lcom/miui/home/launcher/ScreenView;->mSeekPointResId:I
@@ -535,7 +535,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView;->TAG:Ljava/lang/String;
 
-    const p1, 0x7f0802a0
+    const p1, 0x7f080513
 
     .line 73
     iput p1, p0, Lcom/miui/home/launcher/ScreenView;->mSeekPointResId:I
@@ -1304,18 +1304,18 @@
     .line 459
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView;->mScrollXAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ScreenView$JKp_0TrjZG4rbTPryU_TWyG6iVs;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ScreenView$KNeqMPLtcofq4O5LH4hXq5MF2Ak;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/-$$Lambda$ScreenView$JKp_0TrjZG4rbTPryU_TWyG6iVs;-><init>(Lcom/miui/home/launcher/ScreenView;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/-$$Lambda$ScreenView$KNeqMPLtcofq4O5LH4hXq5MF2Ak;-><init>(Lcom/miui/home/launcher/ScreenView;)V
 
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
     .line 460
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView;->mScrollXAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ScreenView$FCo5AeQYfCz_9iTeNXxHU50Vojs;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ScreenView$nJdWMXA2TtyHzoqt7eWiXp8g4q4;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/-$$Lambda$ScreenView$FCo5AeQYfCz_9iTeNXxHU50Vojs;-><init>(Lcom/miui/home/launcher/ScreenView;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/-$$Lambda$ScreenView$nJdWMXA2TtyHzoqt7eWiXp8g4q4;-><init>(Lcom/miui/home/launcher/ScreenView;)V
 
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->addUpdateListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationUpdateListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
@@ -1377,7 +1377,7 @@
     return p1
 .end method
 
-.method public static synthetic lambda$initScreenView$17(Lcom/miui/home/launcher/ScreenView;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
+.method public static synthetic lambda$initScreenView$0(Lcom/miui/home/launcher/ScreenView;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
     .locals 0
 
     .line 459
@@ -1386,7 +1386,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initScreenView$18(Lcom/miui/home/launcher/ScreenView;Landroidx/dynamicanimation/animation/DynamicAnimation;FF)V
+.method public static synthetic lambda$initScreenView$1(Lcom/miui/home/launcher/ScreenView;Landroidx/dynamicanimation/animation/DynamicAnimation;FF)V
     .locals 0
 
     .line 460
@@ -1777,9 +1777,9 @@
     invoke-virtual {v2, v0, v5, v6}, Landroid/animation/LayoutTransition;->setDuration(IJ)V
 
     .line 522
-    new-instance v2, Lmiui/view/animation/CubicEaseOutInterpolator;
+    new-instance v2, Lmiuix/view/animation/CubicEaseOutInterpolator;
 
-    invoke-direct {v2}, Lmiui/view/animation/CubicEaseOutInterpolator;-><init>()V
+    invoke-direct {v2}, Lmiuix/view/animation/CubicEaseOutInterpolator;-><init>()V
 
     .line 523
     iget-object v3, p0, Lcom/miui/home/launcher/ScreenView;->mLayoutTransition:Landroid/animation/LayoutTransition;
@@ -3584,6 +3584,7 @@
     :goto_0
     sub-int/2addr v6, v7
 
+    .line 1214
     iget-object v7, p0, Lcom/miui/home/launcher/ScreenView;->mPreviewModeFooter:Landroid/view/View;
 
     if-nez v7, :cond_6
@@ -3705,6 +3706,7 @@
 
     add-int/2addr v8, v9
 
+    .line 1222
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView;->mPreviewModeHeader:Landroid/view/View;
 
     if-nez p1, :cond_a
@@ -3999,6 +4001,7 @@
 
     goto :goto_0
 
+    .line 973
     :cond_0
     iget v0, p0, Lcom/miui/home/launcher/ScreenView;->mChildScreenMeasureWidth:I
 
@@ -6356,7 +6359,7 @@
     .line 1020
     iget-object v9, p0, Lcom/miui/home/launcher/ScreenView;->mContext:Landroid/content/Context;
 
-    const v10, 0x7f10022c
+    const v10, 0x7f10030d
 
     new-array v11, v7, [Ljava/lang/Object;
 
@@ -7780,9 +7783,9 @@
 .method public setSlideBarPosition(Landroid/widget/FrameLayout$LayoutParams;)V
     .locals 3
 
-    const v0, 0x7f080251
+    const v0, 0x7f0804c4
 
-    const v1, 0x7f080252
+    const v1, 0x7f0804c5
 
     const/4 v2, 0x0
 

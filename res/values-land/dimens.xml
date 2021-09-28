@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abc_action_bar_default_height_material">48.0dip</dimen>
+    <dimen name="abc_text_size_subtitle_material_toolbar">12.0dip</dimen>
+    <dimen name="abc_text_size_title_material_toolbar">14.0dip</dimen>
+    <dimen name="clean_toast_bottom_margin">34.0dip</dimen>
+    <dimen name="clear_container_padding_bottom">8.0dip</dimen>
+    <dimen name="miuix_appcompat_action_bar_default_height">48.669983dip</dimen>
+    <dimen name="miuix_appcompat_action_bar_horizontal_padding_end">43.399994dip</dimen>
+    <dimen name="miuix_appcompat_action_bar_horizontal_padding_start">43.399994dip</dimen>
+    <dimen name="miuix_appcompat_action_bar_title_horizontal_padding">43.399994dip</dimen>
+    <dimen name="miuix_appcompat_action_button_bg_bottom_padding">9.599976dip</dimen>
+    <dimen name="miuix_appcompat_action_button_bg_top_padding">9.599976dip</dimen>
+    <dimen name="smallwindow_crop_content_margin_top">30.0dip</dimen>
+    <dimen name="smallwindow_crop_content_trans_x">50.19998dip</dimen>
+    <dimen name="smallwindow_crop_content_trans_y">0.0dip</dimen>
+    <dimen name="smallwindow_crop_height">143.63dip</dimen>
+    <dimen name="smallwindow_crop_height_padding_horizontal">17.449982dip</dimen>
+    <dimen name="smallwindow_crop_height_padding_vertical">18.199982dip</dimen>
+    <dimen name="smallwindow_crop_width">230.94998dip</dimen>
+</resources>

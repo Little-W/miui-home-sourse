@@ -37,7 +37,7 @@
 .method public final onShow(Landroid/content/DialogInterface;)V
     .locals 1
 
-    .line 55
+    .line 57
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -50,7 +50,7 @@
 
     if-nez p1, :cond_0
 
-    .line 56
+    .line 58
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -59,7 +59,7 @@
 
     invoke-virtual {p1, v0}, Lorg/greenrobot/eventbus/EventBus;->register(Ljava/lang/Object;)V
 
-    .line 58
+    .line 60
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog$init$1;->this$0:Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;
 
@@ -75,7 +75,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 59
+    .line 61
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog$init$1;->this$0:Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;
 
     invoke-static {p1}, Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;->access$getNegativeButton$p(Lcom/miui/home/launcher/uninstall/BaseUninstallDialog;)Landroid/widget/Button;

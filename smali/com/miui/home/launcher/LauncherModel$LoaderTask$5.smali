@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)V
     .locals 0
 
-    .line 1436
+    .line 1439
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$5;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 1439
+    .line 1442
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$5;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     const/4 v1, 0x0

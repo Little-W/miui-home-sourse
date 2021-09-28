@@ -1,11 +1,14 @@
 .class Lcom/miui/home/launcher/Launcher$49;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "Launcher.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->showSceneScreenLoading()V
+    value = Lcom/miui/home/launcher/Launcher;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,32 +20,73 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
+.field final synthetic val$ev:Landroid/view/MotionEvent;
+
+.field final synthetic val$isDispatchTouchEventSuccess:Z
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/view/MotionEvent;Z)V
     .locals 0
 
-    .line 4946
+    .line 4271
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$49;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$49;->val$ev:Landroid/view/MotionEvent;
+
+    iput-boolean p3, p0, Lcom/miui/home/launcher/Launcher$49;->val$isDispatchTouchEventSuccess:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
+.method public run()V
+    .locals 2
 
-    .line 4948
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$49;->this$0:Lcom/miui/home/launcher/Launcher;
+    .line 4274
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$49;->val$ev:Landroid/view/MotionEvent;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherModel;
+    invoke-virtual {v0}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result-object p1
+    move-result v0
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherModel;->loadFreeStyle()V
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/miui/home/launcher/Launcher$49;->val$isDispatchTouchEventSuccess:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "Launcher_dispatchTouchEvent_View"
+
+    const-string v1, "[motionEvent view:]   \n"
+
+    .line 4275
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->setHead(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 4276
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$49;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getRootView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/miui/home/launcher/util/TouchEventUtil;->printTouchEventCallChain(Landroid/view/View;)V
+
+    const-string v0, "Launcher_dispatchTouchEvent_View"
+
+    .line 4277
+    invoke-static {v0}, Lcom/miui/home/launcher/MiuiHomeLog;->printAndClearMessage(Ljava/lang/String;)V
+
+    .line 4279
+    :cond_0
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$49;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$49;->val$ev:Landroid/view/MotionEvent;
+
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$6800(Lcom/miui/home/launcher/Launcher;Landroid/view/MotionEvent;)V
 
     return-void
 .end method

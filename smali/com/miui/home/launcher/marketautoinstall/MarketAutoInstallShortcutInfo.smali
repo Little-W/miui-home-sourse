@@ -19,6 +19,17 @@
     .locals 3
 
     .line 62
+    invoke-virtual {p0}, Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallShortcutInfo;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
     new-instance v0, Landroid/content/ComponentName;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallShortcutInfo;->getPackageName()Ljava/lang/String;
@@ -29,6 +40,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
+    :goto_0
     return-object v0
 .end method
 
@@ -97,7 +109,7 @@
 
     move-result-object p2
 
-    const v1, 0x7f1001ba
+    const v1, 0x7f100293
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

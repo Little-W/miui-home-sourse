@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/recents/NavStubView;->lambda$resetTaskView$234()V
+    value = Lcom/miui/home/recents/NavStubView;->lambda$resetTaskView$6()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,7 +33,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;FLcom/miui/home/recents/views/TaskView;FF)V
     .locals 0
 
-    .line 625
+    .line 631
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$3;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iput p2, p0, Lcom/miui/home/recents/NavStubView$3;->val$startFullscreenProgress:F
@@ -54,12 +54,12 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 3
 
-    .line 628
+    .line 634
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result p1
 
-    .line 629
+    .line 635
     iget v0, p0, Lcom/miui/home/recents/NavStubView$3;->val$startFullscreenProgress:F
 
     const/4 v1, 0x0
@@ -70,12 +70,12 @@
 
     add-float/2addr v0, v1
 
-    .line 630
+    .line 636
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$3;->val$tv:Lcom/miui/home/recents/views/TaskView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/recents/views/TaskView;->setFullscreenProgress(F)V
 
-    .line 631
+    .line 637
     iget v0, p0, Lcom/miui/home/recents/NavStubView$3;->val$startRadius:F
 
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$3;->this$0:Lcom/miui/home/recents/NavStubView;
@@ -92,7 +92,7 @@
 
     add-float/2addr v0, v1
 
-    .line 632
+    .line 638
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$3;->val$tv:Lcom/miui/home/recents/views/TaskView;
 
     invoke-virtual {v1}, Lcom/miui/home/recents/views/TaskView;->getThumbnailView()Lcom/miui/home/recents/views/TaskViewThumbnail;
@@ -103,7 +103,7 @@
 
     invoke-virtual {v1, v0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->setCornerRadius(I)V
 
-    .line 633
+    .line 639
     iget v0, p0, Lcom/miui/home/recents/NavStubView$3;->val$startRatio:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -114,7 +114,7 @@
 
     add-float/2addr v0, v1
 
-    .line 634
+    .line 640
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$3;->val$tv:Lcom/miui/home/recents/views/TaskView;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getThumbnailView()Lcom/miui/home/recents/views/TaskViewThumbnail;

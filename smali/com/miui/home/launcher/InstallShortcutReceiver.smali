@@ -54,15 +54,51 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/miui/home/launcher/Launcher;Landroid/content/Intent;)Z
+.method private static acceptRequestIfXspace(Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;)V
+    .locals 3
+
+    const-string v0, "InstallShortcutReceiver-PinShortcutRequestUtils"
+
+    .line 267
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "acceptRequestIfXspace: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string v0, "com.miui.securitycore"
+
+    .line 268
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 269
+    invoke-virtual {p0}, Lcom/miui/launcher/common/PinItemRequestCompat;->accept()Z
+
+    :cond_0
+    return-void
+.end method
+
+.method static synthetic access$000(Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;)V
     .locals 0
 
     .line 42
-    invoke-static {p0, p1}, Lcom/miui/home/launcher/InstallShortcutReceiver;->isAddGadgetToLauncher(Lcom/miui/home/launcher/Launcher;Landroid/content/Intent;)Z
+    invoke-static {p0, p1}, Lcom/miui/home/launcher/InstallShortcutReceiver;->acceptRequestIfXspace(Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;)V
 
-    move-result p0
-
-    return p0
+    return-void
 .end method
 
 .method static synthetic access$001(Lcom/miui/home/launcher/InstallShortcutReceiver;Landroid/content/Context;Landroid/content/Intent;)V
@@ -73,7 +109,18 @@
     return-void
 .end method
 
-.method static synthetic access$100(Landroid/content/Intent;Ljava/lang/String;)Lcom/miui/home/launcher/InstallShortcutReceiver$Position;
+.method static synthetic access$100(Lcom/miui/home/launcher/Launcher;Landroid/content/Intent;)Z
+    .locals 0
+
+    .line 42
+    invoke-static {p0, p1}, Lcom/miui/home/launcher/InstallShortcutReceiver;->isAddGadgetToLauncher(Lcom/miui/home/launcher/Launcher;Landroid/content/Intent;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic access$200(Landroid/content/Intent;Ljava/lang/String;)Lcom/miui/home/launcher/InstallShortcutReceiver$Position;
     .locals 0
 
     .line 42
@@ -84,7 +131,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/InstallShortcutReceiver$Position;Lcom/miui/home/launcher/Launcher;)V
+.method static synthetic access$300(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/InstallShortcutReceiver$Position;Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
     .line 42
@@ -130,7 +177,7 @@
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 76
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$InstallShortcutReceiver$dBjPHmjPMfzY4nk2zpRVT9wtYzU;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$InstallShortcutReceiver$llOv7Mlfm4orwFA-RNrT2xZSNco;
 
     move-object v2, v0
 
@@ -144,7 +191,7 @@
 
     move v7, p4
 
-    invoke-direct/range {v2 .. v7}, Lcom/miui/home/launcher/-$$Lambda$InstallShortcutReceiver$dBjPHmjPMfzY4nk2zpRVT9wtYzU;-><init>(Ljava/lang/String;Landroid/content/Context;Landroid/content/Intent;Lcom/miui/launcher/common/PinItemRequestCompat;I)V
+    invoke-direct/range {v2 .. v7}, Lcom/miui/home/launcher/-$$Lambda$InstallShortcutReceiver$llOv7Mlfm4orwFA-RNrT2xZSNco;-><init>(Ljava/lang/String;Landroid/content/Context;Landroid/content/Intent;Lcom/miui/launcher/common/PinItemRequestCompat;I)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->postAtFrontOfQueue(Ljava/lang/Runnable;)V
 
@@ -160,7 +207,7 @@
 
     return v0
 
-    .line 276
+    .line 291
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
@@ -372,12 +419,12 @@
     .locals 10
 
     .line 160
-    invoke-static {p0}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {p0}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/Application;
 
     move-result-object v1
 
     .line 161
-    invoke-virtual {v1}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher()Lcom/miui/home/launcher/Launcher;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v8
 
@@ -385,17 +432,20 @@
 
     const-string p1, "InstallShortcutReceiver-PinShortcutRequestUtils"
 
-    const-string p2, "Launcher is not ready,process later"
+    const-string p4, "Launcher is not ready,process later"
 
     .line 163
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, p4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 164
+    invoke-static {p2, p3}, Lcom/miui/home/launcher/InstallShortcutReceiver;->acceptRequestIfXspace(Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;)V
+
+    .line 165
     invoke-static {p0, p3}, Lcom/miui/home/launcher/InstallShortcutBroadcastUtils;->sendFailedBroadcast(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 
-    .line 168
+    .line 169
     :cond_0
     new-instance v9, Lcom/miui/home/launcher/InstallShortcutReceiver$1;
 
@@ -403,17 +453,17 @@
 
     move-object v2, v8
 
-    move-object v3, p0
+    move-object v3, p2
 
     move-object v4, p3
 
-    move-object v5, p1
+    move-object v5, p0
 
-    move v6, p4
+    move-object v6, p1
 
-    move-object v7, p2
+    move v7, p4
 
-    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/InstallShortcutReceiver$1;-><init>(Lcom/miui/home/launcher/LauncherApplication;Lcom/miui/home/launcher/Launcher;Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;ILcom/miui/launcher/common/PinItemRequestCompat;)V
+    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/InstallShortcutReceiver$1;-><init>(Lcom/miui/home/launcher/Application;Lcom/miui/home/launcher/Launcher;Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;Landroid/content/Context;Landroid/content/Intent;I)V
 
     invoke-virtual {v8, v9}, Lcom/miui/home/launcher/Launcher;->runOnUiThread(Ljava/lang/Runnable;)V
 
@@ -425,14 +475,14 @@
 
     const-string v0, "android.intent.extra.shortcut.INTENT"
 
-    .line 259
+    .line 274
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
 
     check-cast p1, Landroid/content/Intent;
 
-    .line 260
+    .line 275
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -445,14 +495,14 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 262
+    .line 277
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher;->alreadyHasGadget(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 263
+    .line 278
     invoke-static {p1}, Lcom/miui/home/launcher/gadget/GadgetFactory;->getNoMtzInfo(I)Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     move-result-object v2
@@ -469,7 +519,7 @@
 
     move-object v1, p0
 
-    .line 264
+    .line 279
     invoke-virtual/range {v1 .. v9}, Lcom/miui/home/launcher/Launcher;->addItemToWorkspace(Lcom/miui/home/launcher/ItemInfo;JJIILjava/lang/Runnable;)V
 
     :cond_0
@@ -518,7 +568,7 @@
     return v1
 .end method
 
-.method static synthetic lambda$checkToAddShortcut$374(Ljava/lang/String;Landroid/content/Context;Landroid/content/Intent;Lcom/miui/launcher/common/PinItemRequestCompat;I)V
+.method static synthetic lambda$checkToAddShortcut$0(Ljava/lang/String;Landroid/content/Context;Landroid/content/Intent;Lcom/miui/launcher/common/PinItemRequestCompat;I)V
     .locals 1
 
     .line 77

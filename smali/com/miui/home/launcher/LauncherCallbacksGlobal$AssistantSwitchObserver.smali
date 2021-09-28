@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V
     .locals 1
 
-    .line 218
+    .line 222
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;->this$0:Lcom/miui/home/launcher/LauncherCallbacksGlobal;
 
-    .line 219
+    .line 223
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -44,14 +44,14 @@
 .method public onChange(Z)V
     .locals 1
 
-    .line 224
+    .line 228
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isUseGoogleMinusScreen()Z
 
     move-result p1
 
     sput-boolean p1, Lcom/miui/home/launcher/DeviceConfig;->IS_USE_GOOGLE_MINUS_SCREEN:Z
 
-    .line 225
+    .line 229
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;->this$0:Lcom/miui/home/launcher/LauncherCallbacksGlobal;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->access$000(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
@@ -60,7 +60,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 226
+    .line 230
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;->this$0:Lcom/miui/home/launcher/LauncherCallbacksGlobal;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->access$000(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
@@ -69,7 +69,7 @@
 
     invoke-virtual {p1}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->disconnect()V
 
-    .line 228
+    .line 232
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;->this$0:Lcom/miui/home/launcher/LauncherCallbacksGlobal;
 
@@ -83,7 +83,7 @@
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->access$002(Lcom/miui/home/launcher/LauncherCallbacksGlobal;Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;)Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
-    .line 229
+    .line 233
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantSwitchObserver;->this$0:Lcom/miui/home/launcher/LauncherCallbacksGlobal;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->access$300(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V

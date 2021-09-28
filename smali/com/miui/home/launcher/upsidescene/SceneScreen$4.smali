@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
     .locals 0
 
-    .line 580
+    .line 582
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$4;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 582
+    .line 584
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$4;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-static {v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$000(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
@@ -57,7 +57,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->setCurrentScreen(I)V
 
-    .line 583
+    .line 585
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$4;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->requestLayout()V

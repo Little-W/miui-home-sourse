@@ -180,7 +180,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$getAutoInstallDeepLink$412(Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository;Ljava/lang/String;Lio/reactivex2/ObservableEmitter;)V
+.method public static synthetic lambda$getAutoInstallDeepLink$0(Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository;Ljava/lang/String;Lio/reactivex2/ObservableEmitter;)V
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -366,7 +366,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$getAutoInstallDeepLink$413(Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository$CallBack;Ljava/lang/String;Ljava/lang/String;)V
+.method static synthetic lambda$getAutoInstallDeepLink$1(Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository$CallBack;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -401,7 +401,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$getAutoInstallDeepLink$414(Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository$CallBack;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method static synthetic lambda$getAutoInstallDeepLink$2(Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository$CallBack;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -425,9 +425,9 @@
     .locals 3
 
     .line 54
-    new-instance v0, Lcom/miui/home/launcher/marketautoinstall/-$$Lambda$MarketAutoInstallRepository$ydimkbFlCi9YrIOg38RJUNviNbE;
+    new-instance v0, Lcom/miui/home/launcher/marketautoinstall/-$$Lambda$MarketAutoInstallRepository$XpLz3XdnueyxukzqrC1w73AZg_o;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/marketautoinstall/-$$Lambda$MarketAutoInstallRepository$ydimkbFlCi9YrIOg38RJUNviNbE;-><init>(Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/marketautoinstall/-$$Lambda$MarketAutoInstallRepository$XpLz3XdnueyxukzqrC1w73AZg_o;-><init>(Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository;Ljava/lang/String;)V
 
     invoke-static {v0}, Lio/reactivex2/Observable;->create(Lio/reactivex2/ObservableOnSubscribe;)Lio/reactivex2/Observable;
 
@@ -451,13 +451,13 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/home/launcher/marketautoinstall/-$$Lambda$MarketAutoInstallRepository$NOETk-XVj2x1y_nHOXRXFKwfClk;
+    new-instance v1, Lcom/miui/home/launcher/marketautoinstall/-$$Lambda$MarketAutoInstallRepository$iCbsitAT0c57_CLeWN6-XVoXDAk;
 
-    invoke-direct {v1, p2, p1}, Lcom/miui/home/launcher/marketautoinstall/-$$Lambda$MarketAutoInstallRepository$NOETk-XVj2x1y_nHOXRXFKwfClk;-><init>(Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository$CallBack;Ljava/lang/String;)V
+    invoke-direct {v1, p2, p1}, Lcom/miui/home/launcher/marketautoinstall/-$$Lambda$MarketAutoInstallRepository$iCbsitAT0c57_CLeWN6-XVoXDAk;-><init>(Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository$CallBack;Ljava/lang/String;)V
 
-    new-instance v2, Lcom/miui/home/launcher/marketautoinstall/-$$Lambda$MarketAutoInstallRepository$X82-kjNeUC7yXishuTFJyO3g6TI;
+    new-instance v2, Lcom/miui/home/launcher/marketautoinstall/-$$Lambda$MarketAutoInstallRepository$76JuMs2ZlIuZj0i6fySfNfyRusQ;
 
-    invoke-direct {v2, p2, p1}, Lcom/miui/home/launcher/marketautoinstall/-$$Lambda$MarketAutoInstallRepository$X82-kjNeUC7yXishuTFJyO3g6TI;-><init>(Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository$CallBack;Ljava/lang/String;)V
+    invoke-direct {v2, p2, p1}, Lcom/miui/home/launcher/marketautoinstall/-$$Lambda$MarketAutoInstallRepository$76JuMs2ZlIuZj0i6fySfNfyRusQ;-><init>(Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository$CallBack;Ljava/lang/String;)V
 
     .line 84
     invoke-virtual {v0, v1, v2}, Lio/reactivex2/Observable;->subscribe(Lio/reactivex2/functions/Consumer;Lio/reactivex2/functions/Consumer;)Lio/reactivex2/disposables/Disposable;

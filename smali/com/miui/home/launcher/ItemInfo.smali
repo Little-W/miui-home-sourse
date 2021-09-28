@@ -20,8 +20,6 @@
 
 .field public id:J
 
-.field public isLandscapePos:Z
-
 .field public itemFlags:I
 
 .field public itemType:I
@@ -37,6 +35,10 @@
 .field private mPendingSource:Lcom/miui/home/launcher/PendingSource;
 
 .field protected mTitle:Ljava/lang/CharSequence;
+
+.field public minSpanX:I
+
+.field public minSpanY:I
 
 .field public screenId:J
 
@@ -57,7 +59,7 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 142
+    .line 150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, -0x1
@@ -87,22 +89,25 @@
     .line 93
     iput v0, p0, Lcom/miui/home/launcher/ItemInfo;->spanY:I
 
+    .line 98
+    iput v0, p0, Lcom/miui/home/launcher/ItemInfo;->minSpanX:I
+
+    .line 103
+    iput v0, p0, Lcom/miui/home/launcher/ItemInfo;->minSpanY:I
+
     const/16 v0, 0x18
 
-    .line 98
+    .line 108
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->mLaunchCounts:[I
 
     const/4 v0, 0x0
 
-    .line 127
+    .line 137
     iput-boolean v0, p0, Lcom/miui/home/launcher/ItemInfo;->mIsRetained:Z
 
-    .line 134
-    iput-boolean v0, p0, Lcom/miui/home/launcher/ItemInfo;->isLandscapePos:Z
-
-    .line 143
+    .line 151
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -115,7 +120,7 @@
 .method public constructor <init>(IIII)V
     .locals 2
 
-    .line 149
+    .line 157
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, -0x1
@@ -145,41 +150,37 @@
     .line 93
     iput v0, p0, Lcom/miui/home/launcher/ItemInfo;->spanY:I
 
+    .line 98
+    iput v0, p0, Lcom/miui/home/launcher/ItemInfo;->minSpanX:I
+
+    .line 103
+    iput v0, p0, Lcom/miui/home/launcher/ItemInfo;->minSpanY:I
+
     const/16 v0, 0x18
 
-    .line 98
+    .line 108
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->mLaunchCounts:[I
 
     const/4 v0, 0x0
 
-    .line 127
+    .line 137
     iput-boolean v0, p0, Lcom/miui/home/launcher/ItemInfo;->mIsRetained:Z
 
-    .line 134
-    iput-boolean v0, p0, Lcom/miui/home/launcher/ItemInfo;->isLandscapePos:Z
-
-    .line 150
+    .line 158
     iput p1, p0, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 151
+    .line 159
     iput p2, p0, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
-    .line 152
+    .line 160
     iput p3, p0, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
-    .line 153
+    .line 161
     iput p4, p0, Lcom/miui/home/launcher/ItemInfo;->spanY:I
 
-    .line 154
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenOrientationLandscape()Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lcom/miui/home/launcher/ItemInfo;->isLandscapePos:Z
-
-    .line 155
+    .line 162
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object p1
@@ -192,12 +193,12 @@
 .method public static getColumnsWithScreenType()[Ljava/lang/String;
     .locals 4
 
-    .line 333
+    .line 330
     sget-object v0, Lcom/miui/home/launcher/ItemInfo;->sColumnsWithScreenType:[Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 334
+    .line 331
     sget-object v0, Lcom/miui/home/launcher/ItemQuery;->COLUMNS:[Ljava/lang/String;
 
     array-length v0, v0
@@ -208,7 +209,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/ItemInfo;->sColumnsWithScreenType:[Ljava/lang/String;
 
-    .line 335
+    .line 332
     sget-object v0, Lcom/miui/home/launcher/ItemQuery;->COLUMNS:[Ljava/lang/String;
 
     sget-object v1, Lcom/miui/home/launcher/ItemInfo;->sColumnsWithScreenType:[Ljava/lang/String;
@@ -221,7 +222,7 @@
 
     invoke-static {v0, v3, v1, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 336
+    .line 333
     sget-object v0, Lcom/miui/home/launcher/ItemInfo;->sColumnsWithScreenType:[Ljava/lang/String;
 
     sget-object v1, Lcom/miui/home/launcher/ItemQuery;->COLUMNS:[Ljava/lang/String;
@@ -232,7 +233,7 @@
 
     aput-object v2, v0, v1
 
-    .line 338
+    .line 335
     :cond_0
     sget-object v0, Lcom/miui/home/launcher/ItemInfo;->sColumnsWithScreenType:[Ljava/lang/String;
 
@@ -244,14 +245,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 251
+    .line 249
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->flattenBitmap(Landroid/graphics/Bitmap;)[B
 
     move-result-object p1
 
     const-string v0, "icon"
 
-    .line 252
+    .line 250
     invoke-virtual {p0, v0, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
     :cond_0
@@ -271,7 +272,7 @@
 .method public canBeDeleted(Landroid/content/Context;)Z
     .locals 0
 
-    .line 419
+    .line 416
     iget-boolean p1, p0, Lcom/miui/home/launcher/ItemInfo;->mIsRetained:Z
 
     xor-int/lit8 p1, p1, 0x1
@@ -298,7 +299,7 @@
 .method public clone()Lcom/miui/home/launcher/ItemInfo;
     .locals 1
 
-    .line 311
+    .line 308
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -310,7 +311,7 @@
 
     return-object v0
 
-    .line 313
+    .line 310
     :catch_0
     new-instance v0, Ljava/lang/AssertionError;
 
@@ -338,22 +339,22 @@
 .method public copyPosition(Lcom/miui/home/launcher/ItemInfo;)V
     .locals 2
 
-    .line 318
+    .line 315
     iget-wide v0, p1, Lcom/miui/home/launcher/ItemInfo;->container:J
 
     iput-wide v0, p0, Lcom/miui/home/launcher/ItemInfo;->container:J
 
-    .line 319
+    .line 316
     iget-wide v0, p1, Lcom/miui/home/launcher/ItemInfo;->screenId:J
 
     iput-wide v0, p0, Lcom/miui/home/launcher/ItemInfo;->screenId:J
 
-    .line 320
+    .line 317
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
     iput v0, p0, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 321
+    .line 318
     iget p1, p1, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     iput p1, p0, Lcom/miui/home/launcher/ItemInfo;->cellY:I
@@ -364,7 +365,7 @@
 .method public findMyPendingSource()Lcom/miui/home/launcher/PendingSource;
     .locals 6
 
-    .line 371
+    .line 368
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -375,7 +376,7 @@
 
     return-object v1
 
-    .line 373
+    .line 370
     :cond_0
     iget-wide v2, p0, Lcom/miui/home/launcher/ItemInfo;->container:J
 
@@ -385,7 +386,7 @@
 
     if-nez v4, :cond_1
 
-    .line 374
+    .line 371
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object v0
@@ -405,7 +406,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 377
+    .line 374
     invoke-virtual {v0, v2, v3}, Lcom/miui/home/launcher/Launcher;->getFolderInfoById(J)Lcom/miui/home/launcher/FolderInfo;
 
     move-result-object v1
@@ -423,17 +424,17 @@
 .method public finishPending()V
     .locals 1
 
-    .line 355
+    .line 352
     iget-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->mPendingSource:Lcom/miui/home/launcher/PendingSource;
 
     if-eqz v0, :cond_0
 
-    .line 356
+    .line 353
     invoke-interface {v0, p0}, Lcom/miui/home/launcher/PendingSource;->removePendingItem(Lcom/miui/home/launcher/PendingItem;)V
 
     const/4 v0, 0x0
 
-    .line 357
+    .line 354
     iput-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->mPendingSource:Lcom/miui/home/launcher/PendingSource;
 
     :cond_0
@@ -459,7 +460,7 @@
 .method public getLable()Ljava/lang/CharSequence;
     .locals 1
 
-    .line 124
+    .line 134
     iget-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->mLabel:Ljava/lang/CharSequence;
 
     return-object v0
@@ -468,7 +469,7 @@
 .method public getLastLaunchTime()J
     .locals 2
 
-    .line 427
+    .line 424
     iget-wide v0, p0, Lcom/miui/home/launcher/ItemInfo;->mLastLaunchTime:J
 
     return-wide v0
@@ -477,7 +478,7 @@
 .method public getLaunchCounts()[I
     .locals 1
 
-    .line 389
+    .line 386
     iget-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->mLaunchCounts:[I
 
     return-object v0
@@ -486,14 +487,14 @@
 .method public getTargetComponent()Landroid/content/ComponentName;
     .locals 1
 
-    .line 446
+    .line 443
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemInfo;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 448
+    .line 445
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
@@ -509,7 +510,7 @@
 .method public getUser()Landroid/os/UserHandle;
     .locals 1
 
-    .line 191
+    .line 193
     iget-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->user:Landroid/os/UserHandle;
 
     return-object v0
@@ -518,7 +519,7 @@
 .method public getUserId()I
     .locals 1
 
-    .line 205
+    .line 207
     iget-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->user:Landroid/os/UserHandle;
 
     if-eqz v0, :cond_0
@@ -529,7 +530,7 @@
 
     return v0
 
-    .line 206
+    .line 208
     :cond_0
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
@@ -545,7 +546,7 @@
 .method public hasSamePosition(Lcom/miui/home/launcher/ItemInfo;)Z
     .locals 4
 
-    .line 405
+    .line 402
     iget-wide v0, p0, Lcom/miui/home/launcher/ItemInfo;->container:J
 
     iget-wide v2, p1, Lcom/miui/home/launcher/ItemInfo;->container:J
@@ -588,7 +589,7 @@
 .method public isApplicatoin()Z
     .locals 1
 
-    .line 423
+    .line 420
     iget v0, p0, Lcom/miui/home/launcher/ItemInfo;->itemType:I
 
     if-nez v0, :cond_0
@@ -615,7 +616,7 @@
 .method public isInFolder()Z
     .locals 4
 
-    .line 346
+    .line 343
     iget-wide v0, p0, Lcom/miui/home/launcher/ItemInfo;->container:J
 
     const-wide/16 v2, 0x0
@@ -638,7 +639,7 @@
 .method public isInHotseat()Z
     .locals 4
 
-    .line 350
+    .line 347
     iget-wide v0, p0, Lcom/miui/home/launcher/ItemInfo;->container:J
 
     const-wide/16 v2, -0x65
@@ -661,7 +662,7 @@
 .method public isInWorkspace()Z
     .locals 4
 
-    .line 342
+    .line 339
     iget-wide v0, p0, Lcom/miui/home/launcher/ItemInfo;->container:J
 
     const-wide/16 v2, -0x64
@@ -684,7 +685,7 @@
 .method public isOccupiedCell1x1()Z
     .locals 2
 
-    .line 265
+    .line 263
     iget v0, p0, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
     const/4 v1, 0x1
@@ -707,7 +708,7 @@
 .method public isOccupiedCellMoreThan1x1()Z
     .locals 2
 
-    .line 261
+    .line 259
     iget v0, p0, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
     const/4 v1, 0x1
@@ -731,7 +732,7 @@
 .method public isPending()Z
     .locals 1
 
-    .line 385
+    .line 382
     iget-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->mPendingSource:Lcom/miui/home/launcher/PendingSource;
 
     if-eqz v0, :cond_0
@@ -748,22 +749,11 @@
 .end method
 
 .method public load(Landroid/content/Context;Landroid/database/Cursor;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 159
-    invoke-virtual {p0, p1, p2, v0}, Lcom/miui/home/launcher/ItemInfo;->load(Landroid/content/Context;Landroid/database/Cursor;Z)V
-
-    return-void
-.end method
-
-.method public load(Landroid/content/Context;Landroid/database/Cursor;Z)V
     .locals 3
 
     const/4 v0, 0x0
 
-    .line 163
+    .line 166
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v1
@@ -772,7 +762,7 @@
 
     const/16 v1, 0xb
 
-    .line 164
+    .line 167
     invoke-interface {p2, v1}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v2
@@ -793,7 +783,7 @@
 
     const/16 v1, 0xc
 
-    .line 165
+    .line 168
     invoke-interface {p2, v1}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v2
@@ -810,12 +800,12 @@
     :goto_1
     iput v0, p0, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
-    .line 166
+    .line 169
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/ItemInfo;->loadSpan(Landroid/database/Cursor;)V
 
     const/16 v0, 0xa
 
-    .line 167
+    .line 170
     invoke-interface {p2, v0}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v1
@@ -836,7 +826,7 @@
 
     const/16 v0, 0x8
 
-    .line 168
+    .line 171
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
@@ -845,7 +835,7 @@
 
     const/4 v0, 0x7
 
-    .line 169
+    .line 172
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v0
@@ -854,26 +844,26 @@
 
     const/16 v0, 0x11
 
-    .line 170
+    .line 173
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 171
+    .line 174
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 172
+    .line 175
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->covertStringToIntArray(Ljava/lang/String;)[I
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    .line 173
+    .line 176
     array-length v1, v0
 
     iget-object v2, p0, Lcom/miui/home/launcher/ItemInfo;->mLaunchCounts:[I
@@ -882,31 +872,28 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 174
+    .line 177
     iput-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->mLaunchCounts:[I
 
     :cond_3
     const/16 v0, 0x13
 
-    .line 177
+    .line 180
     invoke-interface {p2, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/ItemInfo;->itemFlags:I
 
-    .line 178
-    iput-boolean p3, p0, Lcom/miui/home/launcher/ItemInfo;->isLandscapePos:Z
+    .line 182
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->user:Landroid/os/UserHandle;
 
-    .line 180
-    iget-object p3, p0, Lcom/miui/home/launcher/ItemInfo;->user:Landroid/os/UserHandle;
+    if-nez v0, :cond_4
 
-    if-nez p3, :cond_4
+    const/16 v0, 0x14
 
-    const/16 p3, 0x14
-
-    .line 181
-    invoke-interface {p2, p3}, Landroid/database/Cursor;->getInt(I)I
+    .line 183
+    invoke-interface {p2, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p2
 
@@ -925,7 +912,7 @@
 
     const/16 v0, 0xd
 
-    .line 186
+    .line 188
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
@@ -934,7 +921,7 @@
 
     const/16 v0, 0xe
 
-    .line 187
+    .line 189
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p1
@@ -949,7 +936,7 @@
 
     const-string v0, "itemType"
 
-    .line 224
+    .line 222
     iget v1, p0, Lcom/miui/home/launcher/ItemInfo;->itemType:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -960,7 +947,7 @@
 
     const-string v0, "container"
 
-    .line 225
+    .line 223
     iget-wide v1, p0, Lcom/miui/home/launcher/ItemInfo;->container:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -971,7 +958,7 @@
 
     const-string v0, "screen"
 
-    .line 226
+    .line 224
     iget-wide v1, p0, Lcom/miui/home/launcher/ItemInfo;->screenId:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -982,7 +969,7 @@
 
     const-string v0, "cellX"
 
-    .line 227
+    .line 225
     iget v1, p0, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -993,7 +980,7 @@
 
     const-string v0, "cellY"
 
-    .line 228
+    .line 226
     iget v1, p0, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1004,7 +991,7 @@
 
     const-string v0, "spanX"
 
-    .line 229
+    .line 227
     iget v1, p0, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1015,7 +1002,7 @@
 
     const-string v0, "spanY"
 
-    .line 230
+    .line 228
     iget v1, p0, Lcom/miui/home/launcher/ItemInfo;->spanY:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1026,7 +1013,7 @@
 
     const-string v0, "launchCount"
 
-    .line 231
+    .line 229
     iget-object v1, p0, Lcom/miui/home/launcher/ItemInfo;->mLaunchCounts:[I
 
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->convertIntArrayToString([I)Ljava/lang/String;
@@ -1037,7 +1024,7 @@
 
     const-string v0, "itemFlags"
 
-    .line 232
+    .line 230
     iget v1, p0, Lcom/miui/home/launcher/ItemInfo;->itemFlags:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1046,7 +1033,7 @@
 
     invoke-virtual {p2, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 233
+    .line 231
     iget-boolean v0, p0, Lcom/miui/home/launcher/ItemInfo;->mIsRetained:Z
 
     if-eqz v0, :cond_0
@@ -1055,27 +1042,27 @@
 
     const/4 v1, 0x1
 
-    .line 235
+    .line 233
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 234
+    .line 232
     invoke-virtual {p2, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 238
+    .line 236
     :cond_0
     invoke-static {p1}, Lcom/miui/home/library/compat/UserManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/UserManagerCompat;
 
     move-result-object p1
 
+    .line 237
     iget-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->user:Landroid/os/UserHandle;
 
     if-eqz v0, :cond_1
 
     goto :goto_0
 
-    .line 239
     :cond_1
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
@@ -1088,7 +1075,7 @@
 
     const-string p1, "profileId"
 
-    .line 240
+    .line 238
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -1101,19 +1088,19 @@
 .method public onLaunch()V
     .locals 3
 
-    .line 303
+    .line 300
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
     const/16 v1, 0xb
 
-    .line 304
+    .line 301
     invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
 
-    .line 305
+    .line 302
     iget-object v1, p0, Lcom/miui/home/launcher/ItemInfo;->mLaunchCounts:[I
 
     aget v2, v1, v0
@@ -1122,7 +1109,7 @@
 
     aput v2, v1, v0
 
-    .line 306
+    .line 303
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -1135,7 +1122,7 @@
 .method public printDetail()Ljava/lang/String;
     .locals 2
 
-    .line 280
+    .line 278
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1150,7 +1137,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 282
+    .line 280
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemInfo;->printPosition()Ljava/lang/String;
 
     move-result-object v1
@@ -1167,7 +1154,7 @@
 .method public printIdentity()Ljava/lang/String;
     .locals 3
 
-    .line 286
+    .line 284
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1202,7 +1189,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 289
+    .line 287
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemInfo;->getUser()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -1219,7 +1206,7 @@
 .method public printPosition()Ljava/lang/String;
     .locals 3
 
-    .line 293
+    .line 291
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1272,14 +1259,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", isLandscapePos="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lcom/miui/home/launcher/ItemInfo;->isLandscapePos:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1290,17 +1269,8 @@
 .method public setLabel(Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 116
+    .line 126
     iput-object p1, p0, Lcom/miui/home/launcher/ItemInfo;->mLabel:Ljava/lang/CharSequence;
-
-    return-void
-.end method
-
-.method public setLandscapePos(Z)V
-    .locals 0
-
-    .line 210
-    iput-boolean p1, p0, Lcom/miui/home/launcher/ItemInfo;->isLandscapePos:Z
 
     return-void
 .end method
@@ -1308,7 +1278,7 @@
 .method protected setTitle(Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 112
+    .line 122
     iput-object p1, p0, Lcom/miui/home/launcher/ItemInfo;->mTitle:Ljava/lang/CharSequence;
 
     return-void
@@ -1317,7 +1287,7 @@
 .method public setUser(Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 195
+    .line 197
     iput-object p1, p0, Lcom/miui/home/launcher/ItemInfo;->user:Landroid/os/UserHandle;
 
     return-void
@@ -1326,15 +1296,15 @@
 .method public startPending(Lcom/miui/home/launcher/PendingSource;)V
     .locals 0
 
-    .line 363
+    .line 360
     iput-object p1, p0, Lcom/miui/home/launcher/ItemInfo;->mPendingSource:Lcom/miui/home/launcher/PendingSource;
 
-    .line 364
+    .line 361
     iget-object p1, p0, Lcom/miui/home/launcher/ItemInfo;->mPendingSource:Lcom/miui/home/launcher/PendingSource;
 
     if-eqz p1, :cond_0
 
-    .line 365
+    .line 362
     invoke-interface {p1, p0}, Lcom/miui/home/launcher/PendingSource;->addPendingItem(Lcom/miui/home/launcher/PendingItem;)V
 
     :cond_0
@@ -1344,7 +1314,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 276
+    .line 274
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1385,16 +1355,16 @@
 .method public upateUserToDatabase(Landroid/content/Context;Landroid/content/ContentValues;)V
     .locals 2
 
-    .line 244
+    .line 242
     invoke-static {p1}, Lcom/miui/home/library/compat/UserManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/UserManagerCompat;
 
     move-result-object p1
 
+    .line 243
     iget-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->user:Landroid/os/UserHandle;
 
     if-nez v0, :cond_0
 
-    .line 245
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -1406,7 +1376,7 @@
 
     const-string p1, "profileId"
 
-    .line 246
+    .line 244
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -1423,7 +1393,7 @@
 
     const-string v0, "profile"
 
-    .line 199
+    .line 201
     invoke-virtual {p1, v0}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v0
@@ -1432,7 +1402,7 @@
 
     const-string v0, "profile"
 
-    .line 200
+    .line 202
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1

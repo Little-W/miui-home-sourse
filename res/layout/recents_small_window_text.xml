@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:textSize="15.0sp"
+    android:textColor="@color/smallwindow_text_color"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5.0999756dip"
+    android:singleLine="true"
+    android:alpha="0.0"
+    android:fontFamily="mipro-medium"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

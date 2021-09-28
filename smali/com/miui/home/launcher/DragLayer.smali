@@ -309,9 +309,7 @@
     if-eqz v0, :cond_5
 
     .line 279
-    iget-object v0, p0, Lcom/miui/home/launcher/DragLayer;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
     move-result v0
 
@@ -644,7 +642,7 @@
     return p1
 .end method
 
-.method public static synthetic lambda$updateWallpaperOffset$19(Lcom/miui/home/launcher/DragLayer;Ljava/lang/ref/WeakReference;)V
+.method public static synthetic lambda$updateWallpaperOffset$0(Lcom/miui/home/launcher/DragLayer;Ljava/lang/ref/WeakReference;)V
     .locals 3
 
     .line 492
@@ -1361,7 +1359,7 @@
 
     move-result-object v0
 
-    const/high16 v1, 0x7f030000
+    const v1, 0x7f030003
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
@@ -1436,7 +1434,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0b000b
+    const v5, 0x7f0b0018
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1523,7 +1521,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0b0009
+    const v3, 0x7f0b0016
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -2304,9 +2302,9 @@
     if-eqz v1, :cond_0
 
     .line 490
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$DragLayer$fWvXlGSh_R9fRdIkpq-IbgOXkSs;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$DragLayer$1yBlwsk2n8dHt2O2xi4z90DLhLY;
 
-    invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/-$$Lambda$DragLayer$fWvXlGSh_R9fRdIkpq-IbgOXkSs;-><init>(Lcom/miui/home/launcher/DragLayer;Ljava/lang/ref/WeakReference;)V
+    invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/-$$Lambda$DragLayer$1yBlwsk2n8dHt2O2xi4z90DLhLY;-><init>(Lcom/miui/home/launcher/DragLayer;Ljava/lang/ref/WeakReference;)V
 
     invoke-static {v1}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

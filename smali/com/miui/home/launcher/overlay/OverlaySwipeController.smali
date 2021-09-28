@@ -352,7 +352,7 @@
 
     iget-object p2, p0, Lcom/miui/home/launcher/overlay/OverlaySwipeController;->mDetector:Lcom/miui/home/launcher/touch/SwipeDetector;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v0, Lcom/miui/home/launcher/overlay/-$$Lambda$PGE3Drd_Yd5ake-zK4oapYtQq-w;
 

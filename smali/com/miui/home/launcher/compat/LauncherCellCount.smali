@@ -32,7 +32,7 @@
 
     const-string v1, "XMin"
 
-    const v2, 0x7f0b000f
+    const v2, 0x7f0b001c
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -45,7 +45,7 @@
 
     const-string v1, "YMin"
 
-    const v2, 0x7f0b0012
+    const v2, 0x7f0b001f
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -58,7 +58,7 @@
 
     const-string v1, "XMax"
 
-    const v2, 0x7f0b000e
+    const v2, 0x7f0b001b
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -71,7 +71,7 @@
 
     const-string v1, "YMax"
 
-    const v2, 0x7f0b0011
+    const v2, 0x7f0b001e
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -84,7 +84,7 @@
 
     const-string v1, "XDef"
 
-    const v2, 0x7f0b000d
+    const v2, 0x7f0b001a
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -97,7 +97,7 @@
 
     const-string v1, "YDef"
 
-    const v2, 0x7f0b0010
+    const v2, 0x7f0b001d
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -257,7 +257,7 @@
     move-result-object v0
 
     .line 46
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
 

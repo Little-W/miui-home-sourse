@@ -246,7 +246,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f110210
+    const v1, 0x7f1102f7
 
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/ErrorBar;->setTextAppearance(Landroid/content/Context;I)V
 
@@ -258,7 +258,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f11020f
+    const v1, 0x7f1102f6
 
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/ErrorBar;->setTextAppearance(Landroid/content/Context;I)V
 

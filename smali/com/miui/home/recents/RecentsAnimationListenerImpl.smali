@@ -166,7 +166,7 @@
     return v0
 .end method
 
-.method public static synthetic lambda$enableInputConsumer$289(Lcom/miui/home/recents/RecentsAnimationListenerImpl;)V
+.method public static synthetic lambda$enableInputConsumer$4(Lcom/miui/home/recents/RecentsAnimationListenerImpl;)V
     .locals 2
 
     .line 195
@@ -183,34 +183,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$finishController$286(Lcom/miui/home/recents/RecentsAnimationListenerImpl;ZZ)V
-    .locals 0
-
-    .line 127
-    invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/RecentsAnimationListenerImpl;->finishController(ZZ)V
-
-    .line 128
-    sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
-
-    new-instance p2, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$i61VPXSA-jpAaOEpA0yBfa_EcNA;
-
-    invoke-direct {p2, p0}, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$i61VPXSA-jpAaOEpA0yBfa_EcNA;-><init>(Lcom/miui/home/recents/RecentsAnimationListenerImpl;)V
-
-    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public static synthetic lambda$finishControllerAsync$287(Lcom/miui/home/recents/RecentsAnimationListenerImpl;ZZ)V
-    .locals 0
-
-    .line 140
-    invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/RecentsAnimationListenerImpl;->finishController(ZZ)V
-
-    return-void
-.end method
-
-.method public static synthetic lambda$null$285(Lcom/miui/home/recents/RecentsAnimationListenerImpl;)V
+.method public static synthetic lambda$finishController$0(Lcom/miui/home/recents/RecentsAnimationListenerImpl;)V
     .locals 2
 
     .line 129
@@ -251,7 +224,34 @@
     return-void
 .end method
 
-.method public static synthetic lambda$setWindowThresholdCrossed$288(Lcom/miui/home/recents/RecentsAnimationListenerImpl;Z)V
+.method public static synthetic lambda$finishController$1(Lcom/miui/home/recents/RecentsAnimationListenerImpl;ZZ)V
+    .locals 0
+
+    .line 127
+    invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/RecentsAnimationListenerImpl;->finishController(ZZ)V
+
+    .line 128
+    sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
+
+    new-instance p2, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$td0seiMGmc-W4NrKY2DuEwPEWwI;
+
+    invoke-direct {p2, p0}, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$td0seiMGmc-W4NrKY2DuEwPEWwI;-><init>(Lcom/miui/home/recents/RecentsAnimationListenerImpl;)V
+
+    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$finishControllerAsync$2(Lcom/miui/home/recents/RecentsAnimationListenerImpl;ZZ)V
+    .locals 0
+
+    .line 140
+    invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/RecentsAnimationListenerImpl;->finishController(ZZ)V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$setWindowThresholdCrossed$3(Lcom/miui/home/recents/RecentsAnimationListenerImpl;Z)V
     .locals 1
 
     .line 164
@@ -327,9 +327,9 @@
     .line 194
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->BACKGROUND_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$GJGTUlkUczYwpHIMYG_tDnibeYg;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$sTZwn6ul5Yg-tf905qc2Kosksbg;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$GJGTUlkUczYwpHIMYG_tDnibeYg;-><init>(Lcom/miui/home/recents/RecentsAnimationListenerImpl;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$sTZwn6ul5Yg-tf905qc2Kosksbg;-><init>(Lcom/miui/home/recents/RecentsAnimationListenerImpl;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 
@@ -380,9 +380,9 @@
 
     .line 126
     :cond_1
-    new-instance p2, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$bP_qsA8BAfQ1YKrA0p5Z0TPZnlM;
+    new-instance p2, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$5tFF9vF1pk3Lr5zQLuSTlaOzEi0;
 
-    invoke-direct {p2, p0, p1, p3}, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$bP_qsA8BAfQ1YKrA0p5Z0TPZnlM;-><init>(Lcom/miui/home/recents/RecentsAnimationListenerImpl;ZZ)V
+    invoke-direct {p2, p0, p1, p3}, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$5tFF9vF1pk3Lr5zQLuSTlaOzEi0;-><init>(Lcom/miui/home/recents/RecentsAnimationListenerImpl;ZZ)V
 
     iput-object p2, p0, Lcom/miui/home/recents/RecentsAnimationListenerImpl;->mFinishControllerRunnable:Ljava/lang/Runnable;
 
@@ -402,9 +402,9 @@
     .line 140
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->BACKGROUND_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$l_Pqgp_rMHiiU8gNzbffXtRGYNo;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$eQQ-AYMw-7keDOoUtT6lhyK4yE8;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$l_Pqgp_rMHiiU8gNzbffXtRGYNo;-><init>(Lcom/miui/home/recents/RecentsAnimationListenerImpl;ZZ)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$eQQ-AYMw-7keDOoUtT6lhyK4yE8;-><init>(Lcom/miui/home/recents/RecentsAnimationListenerImpl;ZZ)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 
@@ -668,9 +668,9 @@
     .line 163
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->BACKGROUND_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$ejdDg2_eoz9CJaqvTSdZZcim-jY;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$7VpIcQMzZv8U8Mp-_wQP4IY7PuU;
 
-    invoke-direct {v1, p0, p1}, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$ejdDg2_eoz9CJaqvTSdZZcim-jY;-><init>(Lcom/miui/home/recents/RecentsAnimationListenerImpl;Z)V
+    invoke-direct {v1, p0, p1}, Lcom/miui/home/recents/-$$Lambda$RecentsAnimationListenerImpl$7VpIcQMzZv8U8Mp-_wQP4IY7PuU;-><init>(Lcom/miui/home/recents/RecentsAnimationListenerImpl;Z)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 

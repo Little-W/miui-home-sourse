@@ -15,7 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 31
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,10 +24,10 @@
 .method public constructor <init>(Landroid/view/IRecentsAnimationController;)V
     .locals 0
 
-    .line 33
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
+    .line 36
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;->mAnimationController:Landroid/view/IRecentsAnimationController;
 
     return-void
@@ -117,37 +117,64 @@
 .end method
 
 .method public screenshotTask(I)Lcom/android/systemui/shared/recents/model/ThumbnailData;
-    .locals 2
+    .locals 8
 
-    .line 39
-    :try_start_0
-    new-instance v0, Lcom/android/systemui/shared/recents/model/ThumbnailData;
+    .line 40
+    const-class v0, Landroid/view/IRecentsAnimationController;
 
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;->mAnimationController:Landroid/view/IRecentsAnimationController;
 
-    invoke-interface {v1, p1}, Landroid/view/IRecentsAnimationController;->screenshotTask(I)Landroid/app/ActivityManager$TaskSnapshot;
+    const-string v2, "screenshotTask"
+
+    const-class v3, Ljava/lang/Object;
+
+    const/4 v4, 0x1
+
+    new-array v5, v4, [Ljava/lang/Class;
+
+    sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    const/4 v7, 0x0
+
+    aput-object v6, v5, v7
+
+    new-array v6, v4, [Ljava/lang/Object;
+
+    .line 42
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lcom/android/systemui/shared/recents/model/ThumbnailData;-><init>(Landroid/app/ActivityManager$TaskSnapshot;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    aput-object p1, v6, v7
 
-    return-object v0
+    move-object v4, v5
 
-    :catch_0
-    move-exception p1
-
-    const-string v0, "RecentsAnimationControllerCompat"
-
-    const-string v1, "Failed to screenshot task"
+    move-object v5, v6
 
     .line 41
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static/range {v0 .. v5}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    move-result-object p1
 
-    return-object p1
+    .line 40
+    invoke-static {p1}, Lcom/android/systemui/shared/recents/utilities/Utilities;->createTaskSnapshotCompat(Ljava/lang/Object;)Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
+
+    move-result-object p1
+
+    .line 43
+    new-instance v0, Lcom/android/systemui/shared/recents/model/ThumbnailData;
+
+    invoke-interface {p1}, Lcom/android/systemui/shared/recents/system/ITaskSnapshot;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v1
+
+    invoke-interface {p1}, Lcom/android/systemui/shared/recents/system/ITaskSnapshot;->getTaskThumbnailInfo()Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, p1}, Lcom/android/systemui/shared/recents/model/ThumbnailData;-><init>(Landroid/graphics/Bitmap;Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;)V
+
+    return-object v0
 .end method
 
 .method public setAnimationTargetsBehindSystemBars(Z)V

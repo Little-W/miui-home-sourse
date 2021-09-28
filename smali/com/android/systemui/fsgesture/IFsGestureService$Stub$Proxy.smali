@@ -113,6 +113,7 @@
     .line 149
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 150
     throw p1
 .end method
 
@@ -189,6 +190,7 @@
     .line 116
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 117
     throw p1
 .end method
 
@@ -265,5 +267,6 @@
     .line 134
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
+    .line 135
     throw p1
 .end method

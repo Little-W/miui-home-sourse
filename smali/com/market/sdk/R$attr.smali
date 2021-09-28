@@ -15,23 +15,23 @@
 
 
 # static fields
-.field public static final font:I = 0x7f0400cb
+.field public static final font:I = 0x7f04015c
 
-.field public static final fontProviderAuthority:I = 0x7f0400cd
+.field public static final fontProviderAuthority:I = 0x7f04015e
 
-.field public static final fontProviderCerts:I = 0x7f0400ce
+.field public static final fontProviderCerts:I = 0x7f04015f
 
-.field public static final fontProviderFetchStrategy:I = 0x7f0400cf
+.field public static final fontProviderFetchStrategy:I = 0x7f040160
 
-.field public static final fontProviderFetchTimeout:I = 0x7f0400d0
+.field public static final fontProviderFetchTimeout:I = 0x7f040161
 
-.field public static final fontProviderPackage:I = 0x7f0400d1
+.field public static final fontProviderPackage:I = 0x7f040162
 
-.field public static final fontProviderQuery:I = 0x7f0400d2
+.field public static final fontProviderQuery:I = 0x7f040163
 
-.field public static final fontStyle:I = 0x7f0400d3
+.field public static final fontStyle:I = 0x7f040164
 
-.field public static final fontWeight:I = 0x7f0400d5
+.field public static final fontWeight:I = 0x7f040166
 
 
 # direct methods

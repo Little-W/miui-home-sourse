@@ -333,6 +333,7 @@
     .line 202
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
+    .line 203
     throw p2
 .end method
 
@@ -349,7 +350,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lmiui/os/FileUtils;->getFileName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lmiuix/core/util/FileUtils;->getFileName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

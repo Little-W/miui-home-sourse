@@ -27,10 +27,10 @@
 
     return-void
 
-    .line 55
     :cond_0
-    sget v0, Lmiui/R$id;->customPanel:I
+    const v0, 0x7f0a00a2
 
+    .line 55
     invoke-virtual {p0, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
 
     move-result-object v0

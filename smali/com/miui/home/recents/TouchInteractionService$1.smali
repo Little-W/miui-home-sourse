@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$onSystemUiStateChanged$109(Lcom/miui/home/recents/TouchInteractionService;)V
+.method static synthetic lambda$onSystemUiStateChanged$0(Lcom/miui/home/recents/TouchInteractionService;)V
     .locals 0
 
     .line 126
@@ -145,9 +145,9 @@
 
     iget-object v0, p0, Lcom/miui/home/recents/TouchInteractionService$1;->this$0:Lcom/miui/home/recents/TouchInteractionService;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$TouchInteractionService$1$j1rdluZ7wYiwuZRcSIruqAuZS6c;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$TouchInteractionService$1$RnsV0MNPQQfDr1rqInEsOECgp4w;
 
-    invoke-direct {v1, v0}, Lcom/miui/home/recents/-$$Lambda$TouchInteractionService$1$j1rdluZ7wYiwuZRcSIruqAuZS6c;-><init>(Lcom/miui/home/recents/TouchInteractionService;)V
+    invoke-direct {v1, v0}, Lcom/miui/home/recents/-$$Lambda$TouchInteractionService$1$RnsV0MNPQQfDr1rqInEsOECgp4w;-><init>(Lcom/miui/home/recents/TouchInteractionService;)V
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 

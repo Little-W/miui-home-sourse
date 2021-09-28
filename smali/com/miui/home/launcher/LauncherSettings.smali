@@ -33,8 +33,8 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 48
-    invoke-static {}, Lmiui/os/Environment;->getMiuiPresetAppDirectory()Ljava/io/File;
+    .line 49
+    invoke-static {}, Lcom/miui/home/library/utils/Environment;->getMiuiPresetAppDirectory()Ljava/io/File;
 
     move-result-object v0
 
@@ -44,13 +44,13 @@
 
     sput-object v0, Lcom/miui/home/launcher/LauncherSettings;->PRESET_APPS_PATH:Ljava/lang/String;
 
-    .line 49
+    .line 50
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 50
-    invoke-static {}, Lmiui/os/Environment;->getMiuiCustomizedDirectory()Ljava/io/File;
+    .line 51
+    invoke-static {}, Lcom/miui/home/library/utils/Environment;->getMiuiCustomizedDirectory()Ljava/io/File;
 
     move-result-object v1
 
@@ -72,12 +72,12 @@
 
     const-string v0, "removed_component_info.txt"
 
-    .line 51
+    .line 52
     sput-object v0, Lcom/miui/home/launcher/LauncherSettings;->mRemovedComponentFileName:Ljava/lang/String;
 
     const-string v0, "download_install_info.txt"
 
-    .line 52
+    .line 53
     sput-object v0, Lcom/miui/home/launcher/LauncherSettings;->mDownloadInstallInfoFileName:Ljava/lang/String;
 
     return-void
@@ -86,33 +86,33 @@
 .method public static deletePackage(Landroid/content/Context;Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 3
 
-    .line 496
+    .line 497
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 497
+    .line 498
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
     const-string v2, "name"
 
-    .line 498
+    .line 499
     invoke-virtual {v1, v2, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "delete"
 
     const/4 v2, 0x1
 
-    .line 499
+    .line 500
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
     invoke-virtual {v1, p1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 500
+    .line 501
     invoke-static {p0}, Lcom/miui/home/library/compat/UserManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/UserManagerCompat;
 
     move-result-object p0
@@ -121,7 +121,7 @@
 
     goto :goto_0
 
-    .line 501
+    .line 502
     :cond_0
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
@@ -134,14 +134,14 @@
 
     const-string p2, "profileId"
 
-    .line 502
+    .line 503
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
 
     invoke-virtual {v1, p2, p0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 503
+    .line 504
     sget-object p0, Lcom/miui/home/launcher/LauncherSettings$Packages;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 p1, 0x0
@@ -154,7 +154,7 @@
 .method public static getDownloadInstallInfoPath(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 62
+    .line 63
     sget-object v0, Lcom/miui/home/launcher/LauncherSettings;->mDownloadInstallInfoFileName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
@@ -167,7 +167,7 @@
 
     sput-object p0, Lcom/miui/home/launcher/LauncherSettings;->mDownloadInstallInfoPath:Ljava/lang/String;
 
-    .line 63
+    .line 64
     sget-object p0, Lcom/miui/home/launcher/LauncherSettings;->mDownloadInstallInfoPath:Ljava/lang/String;
 
     return-object p0
@@ -176,7 +176,7 @@
 .method public static getRemovedComponentInfoPath(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 57
+    .line 58
     sget-object v0, Lcom/miui/home/launcher/LauncherSettings;->mRemovedComponentFileName:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
@@ -189,7 +189,7 @@
 
     sput-object p0, Lcom/miui/home/launcher/LauncherSettings;->mRemovedComponentPath:Ljava/lang/String;
 
-    .line 58
+    .line 59
     sget-object p0, Lcom/miui/home/launcher/LauncherSettings;->mRemovedComponentPath:Ljava/lang/String;
 
     return-object p0
@@ -204,7 +204,7 @@
 
     return p0
 
-    .line 516
+    .line 517
     :cond_0
     invoke-virtual {p0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
@@ -224,7 +224,7 @@
 
     const-string v0, "com.android.stk"
 
-    .line 507
+    .line 508
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->getAllLoadedShortcut()Ljava/util/ArrayList;
+    value = Lcom/miui/home/launcher/Launcher;->getFirstAppInfo(Ljava/lang/String;Z)Lcom/miui/home/launcher/ShortcutInfo;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,9 +16,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/miui/home/launcher/common/ResultRunnable<",
-        "Ljava/util/ArrayList<",
         "Lcom/miui/home/launcher/ShortcutInfo;",
-        ">;>;"
+        ">;"
     }
 .end annotation
 
@@ -26,13 +25,21 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
+.field final synthetic val$matchAny:Z
+
+.field final synthetic val$packageName:Ljava/lang/String;
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 7305
+    .line 7324
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$72;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$72;->val$packageName:Ljava/lang/String;
+
+    iput-boolean p3, p0, Lcom/miui/home/launcher/Launcher$72;->val$matchAny:Z
 
     invoke-direct {p0}, Lcom/miui/home/launcher/common/ResultRunnable;-><init>()V
 
@@ -42,20 +49,81 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 4
 
-    .line 7308
-    new-instance v0, Ljava/util/ArrayList;
+    .line 7327
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$72;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$72;->this$0:Lcom/miui/home/launcher/Launcher;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3900(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$3900(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    .line 7328
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher$72;->setResult(Ljava/lang/Object;)V
+
+    return-void
+
+    .line 7331
+    :cond_0
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$72;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3900(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher$72;->setResult(Ljava/lang/Object;)V
+    .line 7332
+    invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
+    move-result-object v2
+
+    .line 7333
+    iget-object v3, p0, Lcom/miui/home/launcher/Launcher$72;->val$packageName:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    iget-boolean v2, p0, Lcom/miui/home/launcher/Launcher$72;->val$matchAny:Z
+
+    if-nez v2, :cond_2
+
+    iget v2, v1, Lcom/miui/home/launcher/ShortcutInfo;->itemType:I
+
+    if-nez v2, :cond_1
+
+    .line 7335
+    :cond_2
+    invoke-virtual {p0, v1}, Lcom/miui/home/launcher/Launcher$72;->setResult(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_3
     return-void
 .end method

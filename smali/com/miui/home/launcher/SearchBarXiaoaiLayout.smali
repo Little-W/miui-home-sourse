@@ -65,16 +65,7 @@
     return p1
 .end method
 
-.method static synthetic access$100(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)Lcom/miui/home/launcher/Launcher;
-    .locals 0
-
-    .line 38
-    iget-object p0, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    return-object p0
-.end method
-
-.method static synthetic access$200(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)Landroid/widget/ImageView;
+.method static synthetic access$100(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)Landroid/widget/ImageView;
     .locals 0
 
     .line 38
@@ -83,7 +74,7 @@
     return-object p0
 .end method
 
-.method static synthetic access$400(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)V
+.method static synthetic access$300(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)V
     .locals 0
 
     .line 38
@@ -434,7 +425,7 @@
     .line 54
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a020d
+    const v0, 0x7f0a0263
 
     .line 55
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->findViewById(I)Landroid/view/View;
@@ -519,12 +510,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080090
+    const v0, 0x7f0800b8
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f08008f
+    const v0, 0x7f0800b7
 
     :goto_0
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->setBackgroundResource(I)V

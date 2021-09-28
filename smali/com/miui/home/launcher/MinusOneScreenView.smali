@@ -115,11 +115,15 @@
     iput-object p2, p0, Lcom/miui/home/launcher/MinusOneScreenView;->mLoadingFinishMessageHandler:Lcom/miui/home/launcher/MinusOneScreenView$LoadingFinishMessageHandler;
 
     .line 63
-    invoke-virtual {p0}, Lcom/miui/home/launcher/MinusOneScreenView;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher(Landroid/content/Context;)Lcom/miui/home/launcher/Launcher;
+    invoke-virtual {p0}, Lcom/miui/home/launcher/MinusOneScreenView;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/Application;->getLauncher(Landroid/content/Context;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
 
@@ -246,7 +250,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f050012
+    const v1, 0x7f050019
 
     .line 147
     invoke-virtual {v0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -1216,7 +1220,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f050014
+    const v1, 0x7f05001b
 
     .line 137
     invoke-virtual {v0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -1445,7 +1449,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f050013
+    const v1, 0x7f05001a
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 

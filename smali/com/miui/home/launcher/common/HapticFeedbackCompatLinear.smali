@@ -62,7 +62,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$performBoom$477(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
+.method public static synthetic lambda$performBoom$11(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
     .locals 2
 
     .line 115
@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$performClearAllRecentTasks$476(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
+.method public static synthetic lambda$performClearAllRecentTasks$10(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
     .locals 2
 
     .line 105
@@ -88,7 +88,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$performEnough$479(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
+.method public static synthetic lambda$performEnough$13(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
     .locals 2
 
     .line 126
@@ -101,7 +101,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$performEnterEditMode$468(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;Lcom/miui/home/launcher/EditStateChangeReason;Landroid/view/View;)V
+.method public static synthetic lambda$performEnterEditMode$2(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;Lcom/miui/home/launcher/EditStateChangeReason;Landroid/view/View;)V
     .locals 1
 
     if-eqz p1, :cond_0
@@ -138,7 +138,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$performEnterOrCreateFolder$471(Landroid/view/View;)V
+.method static synthetic lambda$performEnterOrCreateFolder$5(Landroid/view/View;)V
     .locals 1
 
     .line 71
@@ -149,7 +149,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$performEnterRecent$474(Landroid/view/View;)V
+.method static synthetic lambda$performEnterRecent$8(Landroid/view/View;)V
     .locals 1
 
     .line 89
@@ -160,7 +160,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$performGestureBackHandUp$481(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
+.method public static synthetic lambda$performGestureBackHandUp$15(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
     .locals 2
 
     .line 136
@@ -173,7 +173,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$performGestureReadyBack$480(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
+.method public static synthetic lambda$performGestureReadyBack$14(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
     .locals 2
 
     .line 131
@@ -186,7 +186,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$performHold$478(Landroid/view/View;)V
+.method static synthetic lambda$performHold$12(Landroid/view/View;)V
     .locals 1
 
     .line 120
@@ -197,7 +197,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$performHomeGestureAccessibilitySwitch$475(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;Landroid/view/View;)V
+.method public static synthetic lambda$performHomeGestureAccessibilitySwitch$9(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;Landroid/view/View;)V
     .locals 1
 
     .line 96
@@ -233,7 +233,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$performMeshHeavy$467(Landroid/view/View;)V
+.method static synthetic lambda$performMeshHeavy$1(Landroid/view/View;)V
     .locals 1
 
     .line 43
@@ -244,7 +244,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$performMeshNormal$466(Landroid/view/View;)V
+.method static synthetic lambda$performMeshNormal$0(Landroid/view/View;)V
     .locals 1
 
     .line 37
@@ -255,7 +255,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$performPickUp$469(Landroid/view/View;)V
+.method static synthetic lambda$performPickUp$3(Landroid/view/View;)V
     .locals 1
 
     .line 60
@@ -266,7 +266,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$performRecentViewLockChanged$472(Landroid/view/View;)V
+.method static synthetic lambda$performRecentViewLockChanged$6(Landroid/view/View;)V
     .locals 1
 
     .line 78
@@ -277,7 +277,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$performRecentViewLockChanged$473(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
+.method public static synthetic lambda$performRecentViewLockChanged$7(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
     .locals 3
 
     .line 81
@@ -292,7 +292,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$performUninstall$470(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
+.method public static synthetic lambda$performUninstall$4(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
     .locals 2
 
     .line 66
@@ -320,9 +320,9 @@
     .locals 0
 
     .line 115
-    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$ZeNs0PVnxLiF-ToAYpFGm--ndKg;
+    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$h1jMAJh_gb22_2tLHztsT0hiCFQ;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$ZeNs0PVnxLiF-ToAYpFGm--ndKg;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$h1jMAJh_gb22_2tLHztsT0hiCFQ;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -333,9 +333,9 @@
     .locals 0
 
     .line 105
-    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$upMg-C8MI-PPLa7Qh_EkkUHouhA;
+    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$J3Q3sYy2Xd1rDQZ5HjdxlJdwEBY;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$upMg-C8MI-PPLa7Qh_EkkUHouhA;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$J3Q3sYy2Xd1rDQZ5HjdxlJdwEBY;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -346,9 +346,9 @@
     .locals 0
 
     .line 126
-    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$8i1KbJ_iwP3gVFFtuSlnJ-aWxsI;
+    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$IVTsGIZvR8MJMxJnCaz5x5AMDrQ;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$8i1KbJ_iwP3gVFFtuSlnJ-aWxsI;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$IVTsGIZvR8MJMxJnCaz5x5AMDrQ;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -359,9 +359,9 @@
     .locals 1
 
     .line 49
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$hf6eFbnWzpBMjPB1DG2ehZC5z_s;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$xpBa_JRv-YyE0kzlMztaKMn6sTo;
 
-    invoke-direct {v0, p0, p2, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$hf6eFbnWzpBMjPB1DG2ehZC5z_s;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;Lcom/miui/home/launcher/EditStateChangeReason;Landroid/view/View;)V
+    invoke-direct {v0, p0, p2, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$xpBa_JRv-YyE0kzlMztaKMn6sTo;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;Lcom/miui/home/launcher/EditStateChangeReason;Landroid/view/View;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -372,9 +372,9 @@
     .locals 1
 
     .line 71
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$jDzYvrr2kNTL1cpcV79OsT57WZ8;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$PmPbAoVl_d3ZAd5yatzK0duAVu8;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$jDzYvrr2kNTL1cpcV79OsT57WZ8;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$PmPbAoVl_d3ZAd5yatzK0duAVu8;-><init>(Landroid/view/View;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -385,9 +385,9 @@
     .locals 1
 
     .line 89
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$qQref_c9o_X2ui000w9ivHHj9OE;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$s5mbVjDM8eqInSZdXvVjwW75MDw;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$qQref_c9o_X2ui000w9ivHHj9OE;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$s5mbVjDM8eqInSZdXvVjwW75MDw;-><init>(Landroid/view/View;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -398,9 +398,9 @@
     .locals 0
 
     .line 136
-    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$Pw_trqRSulw39Y7Qhndjy0zs824;
+    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$nv8a1i-QSqLfxqqOFXSXF8F6GfQ;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$Pw_trqRSulw39Y7Qhndjy0zs824;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$nv8a1i-QSqLfxqqOFXSXF8F6GfQ;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -411,9 +411,9 @@
     .locals 0
 
     .line 131
-    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$CtWxETSpX2H4r-1dj3PllKCHbXc;
+    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$48ZCs-cEM1wg3jzbtOOK169Zfdo;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$CtWxETSpX2H4r-1dj3PllKCHbXc;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$48ZCs-cEM1wg3jzbtOOK169Zfdo;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -424,9 +424,9 @@
     .locals 1
 
     .line 120
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$fwmB-w-St3lhQHVKEhbualmn2yM;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$F6QMo4IsCau11Y2WcqbDlaaWJ40;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$fwmB-w-St3lhQHVKEhbualmn2yM;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$F6QMo4IsCau11Y2WcqbDlaaWJ40;-><init>(Landroid/view/View;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -437,9 +437,9 @@
     .locals 1
 
     .line 95
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$wmSjJXtVON7kf-RQUGaFLUskD8M;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$_VLi8SsDiDc18iSJOr87qEh3QLY;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$wmSjJXtVON7kf-RQUGaFLUskD8M;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;Landroid/view/View;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$_VLi8SsDiDc18iSJOr87qEh3QLY;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;Landroid/view/View;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -450,9 +450,9 @@
     .locals 1
 
     .line 43
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$bGoOmtpRuqWdPXI30bA6u35evvo;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$MXn-2c45BLxoNe-cj1c2NQYLLi0;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$bGoOmtpRuqWdPXI30bA6u35evvo;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$MXn-2c45BLxoNe-cj1c2NQYLLi0;-><init>(Landroid/view/View;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -463,9 +463,9 @@
     .locals 1
 
     .line 37
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$vxxM-MrlJiKO5wUv2vfnF6wJAgo;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$u5jokxzKLu49dy8orPXeI_k4O4U;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$vxxM-MrlJiKO5wUv2vfnF6wJAgo;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$u5jokxzKLu49dy8orPXeI_k4O4U;-><init>(Landroid/view/View;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -476,9 +476,9 @@
     .locals 1
 
     .line 60
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$eiIUwoTDhXmkjk963X4bZmbgDek;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$QnDQPk9U0Y8aCwKJ7k4EqP5wrQE;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$eiIUwoTDhXmkjk963X4bZmbgDek;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$QnDQPk9U0Y8aCwKJ7k4EqP5wrQE;-><init>(Landroid/view/View;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -491,9 +491,9 @@
     if-eqz p2, :cond_0
 
     .line 78
-    new-instance p2, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$WRxPONCwSumfhIoPYlCZPaJ4alQ;
+    new-instance p2, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$XcdH0m_EqH8yV4sov6GcY_bLAE8;
 
-    invoke-direct {p2, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$WRxPONCwSumfhIoPYlCZPaJ4alQ;-><init>(Landroid/view/View;)V
+    invoke-direct {p2, p1}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$XcdH0m_EqH8yV4sov6GcY_bLAE8;-><init>(Landroid/view/View;)V
 
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -501,9 +501,9 @@
 
     .line 81
     :cond_0
-    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$DMjXVFV-nNoORQEiRqVzNKE7dxM;
+    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$RSrT4r6Kll6niFpOhVx7B61Mob8;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$DMjXVFV-nNoORQEiRqVzNKE7dxM;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$RSrT4r6Kll6niFpOhVx7B61Mob8;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
 
@@ -515,22 +515,11 @@
     .locals 0
 
     .line 66
-    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$6M_6BbVFm8j4tjn0rd7W603_xDg;
+    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$ZjsxdF8xtBt8N58r9eFWzkuazT4;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$6M_6BbVFm8j4tjn0rd7W603_xDg;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$HapticFeedbackCompatLinear$ZjsxdF8xtBt8N58r9eFWzkuazT4;-><init>(Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;)V
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->performBackground(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public release()V
-    .locals 1
-
-    .line 110
-    iget-object v0, p0, Lcom/miui/home/launcher/common/HapticFeedbackCompatLinear;->mHapticHelper:Lmiuix/util/HapticFeedbackCompat;
-
-    invoke-virtual {v0}, Lmiuix/util/HapticFeedbackCompat;->release()V
 
     return-void
 .end method

@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private mAlertDialog:Lmiui/app/AlertDialog;
+.field private mAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
 .field private mClickOnDialog:Z
 
@@ -44,11 +44,11 @@
     iput-object p1, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mContext:Landroid/content/Context;
 
     .line 26
-    new-instance p1, Lmiui/app/AlertDialog$Builder;
+    new-instance p1, Lmiuix/appcompat/app/AlertDialog$Builder;
 
     iget-object v0, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mContext:Landroid/content/Context;
 
-    invoke-direct {p1, v0}, Lmiui/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     iget-object v0, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mContext:Landroid/content/Context;
 
@@ -57,7 +57,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1001a5
+    const v1, 0x7f10027d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -65,59 +65,59 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v1, v0}, Lmiui/app/AlertDialog$Builder;->setCheckBox(ZLjava/lang/CharSequence;)Lmiui/app/AlertDialog$Builder;
+    invoke-virtual {p1, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCheckBox(ZLjava/lang/CharSequence;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$GestureLearnAlertDialog$nqBHs60avjs7Sub0z27KiJXCzNU;
+    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$GestureLearnAlertDialog$2bA7-KrLqmIIcoiOA4-uoGyvGcw;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/recents/settings/-$$Lambda$GestureLearnAlertDialog$nqBHs60avjs7Sub0z27KiJXCzNU;-><init>(Lcom/miui/home/recents/settings/GestureLearnAlertDialog;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/settings/-$$Lambda$GestureLearnAlertDialog$2bA7-KrLqmIIcoiOA4-uoGyvGcw;-><init>(Lcom/miui/home/recents/settings/GestureLearnAlertDialog;)V
 
-    const v1, 0x7f1001a6
+    const v1, 0x7f10027e
 
     .line 28
-    invoke-virtual {p1, v1, v0}, Lmiui/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;
+    invoke-virtual {p1, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$GestureLearnAlertDialog$gzbuGFSf8e95Qw2YxMoIRLoBzDQ;
+    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$GestureLearnAlertDialog$7dgelwRCkU7PA4vFbm0S2PIM-gk;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/recents/settings/-$$Lambda$GestureLearnAlertDialog$gzbuGFSf8e95Qw2YxMoIRLoBzDQ;-><init>(Lcom/miui/home/recents/settings/GestureLearnAlertDialog;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/settings/-$$Lambda$GestureLearnAlertDialog$7dgelwRCkU7PA4vFbm0S2PIM-gk;-><init>(Lcom/miui/home/recents/settings/GestureLearnAlertDialog;)V
 
-    const v1, 0x7f1001a7
+    const v1, 0x7f10027f
 
     .line 43
-    invoke-virtual {p1, v1, v0}, Lmiui/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;
+    invoke-virtual {p1, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNeutralButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
     .line 45
-    invoke-virtual {p1, v0}, Lmiui/app/AlertDialog$Builder;->setCancelable(Z)Lmiui/app/AlertDialog$Builder;
+    invoke-virtual {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$GestureLearnAlertDialog$t6qGWiDmTiAUeiTfKgMs3GSpzvo;
+    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$GestureLearnAlertDialog$dF4cX6ZekK391-CrDr_z7FiKYoY;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/recents/settings/-$$Lambda$GestureLearnAlertDialog$t6qGWiDmTiAUeiTfKgMs3GSpzvo;-><init>(Lcom/miui/home/recents/settings/GestureLearnAlertDialog;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/settings/-$$Lambda$GestureLearnAlertDialog$dF4cX6ZekK391-CrDr_z7FiKYoY;-><init>(Lcom/miui/home/recents/settings/GestureLearnAlertDialog;)V
 
     .line 46
-    invoke-virtual {p1, v0}, Lmiui/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Lmiui/app/AlertDialog$Builder;
+    invoke-virtual {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
     .line 51
-    invoke-virtual {p1}, Lmiui/app/AlertDialog$Builder;->create()Lmiui/app/AlertDialog;
+    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mAlertDialog:Lmiui/app/AlertDialog;
+    iput-object p1, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
     return-void
 .end method
 
-.method public static synthetic lambda$new$572(Lcom/miui/home/recents/settings/GestureLearnAlertDialog;Landroid/content/DialogInterface;I)V
+.method public static synthetic lambda$new$0(Lcom/miui/home/recents/settings/GestureLearnAlertDialog;Landroid/content/DialogInterface;I)V
     .locals 1
 
     const/4 p1, 0x1
@@ -171,7 +171,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$new$573(Lcom/miui/home/recents/settings/GestureLearnAlertDialog;Landroid/content/DialogInterface;I)V
+.method public static synthetic lambda$new$1(Lcom/miui/home/recents/settings/GestureLearnAlertDialog;Landroid/content/DialogInterface;I)V
     .locals 0
 
     const/4 p1, 0x1
@@ -182,7 +182,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$new$574(Lcom/miui/home/recents/settings/GestureLearnAlertDialog;Landroid/content/DialogInterface;)V
+.method public static synthetic lambda$new$2(Lcom/miui/home/recents/settings/GestureLearnAlertDialog;Landroid/content/DialogInterface;)V
     .locals 3
 
     .line 47
@@ -195,9 +195,9 @@
 
     iget-boolean v1, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mClickOnDialog:Z
 
-    iget-object v2, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mAlertDialog:Lmiui/app/AlertDialog;
+    iget-object v2, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    invoke-virtual {v2}, Lmiui/app/AlertDialog;->isChecked()Z
+    invoke-virtual {v2}, Lmiuix/appcompat/app/AlertDialog;->isChecked()Z
 
     move-result v2
 
@@ -241,7 +241,7 @@
     .locals 2
 
     .line 59
-    iget-object v0, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mAlertDialog:Lmiui/app/AlertDialog;
+    iget-object v0, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
     iget-object v1, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mContext:Landroid/content/Context;
 
@@ -249,7 +249,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lmiui/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -267,9 +267,9 @@
     .locals 1
 
     .line 55
-    iget-object v0, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mAlertDialog:Lmiui/app/AlertDialog;
+    iget-object v0, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    invoke-virtual {v0, p1}, Lmiui/app/AlertDialog;->setTitle(I)V
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/app/AlertDialog;->setTitle(I)V
 
     return-void
 .end method
@@ -278,9 +278,9 @@
     .locals 1
 
     .line 63
-    iget-object v0, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mAlertDialog:Lmiui/app/AlertDialog;
+    iget-object v0, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mAlertDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    invoke-virtual {v0}, Lmiui/app/AlertDialog;->show()V
+    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->show()V
 
     return-void
 .end method

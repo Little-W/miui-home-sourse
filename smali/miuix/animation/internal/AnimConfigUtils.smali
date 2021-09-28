@@ -138,7 +138,7 @@
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 p1, -0x1
 
     :goto_0
     invoke-static {p0, p1}, Ljava/lang/Math;->max(II)I

@@ -102,7 +102,7 @@
     .line 169
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout$2;->this$0:Lcom/miui/home/launcher/SearchBarXiaoaiLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->access$200(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->access$100(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)Landroid/widget/ImageView;
 
     move-result-object v0
 

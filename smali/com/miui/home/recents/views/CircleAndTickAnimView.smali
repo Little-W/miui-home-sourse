@@ -115,9 +115,9 @@
     .line 59
     invoke-virtual {p0}, Lcom/miui/home/recents/views/CircleAndTickAnimView;->stopAnimator()V
 
-    const p1, 0x7f08022c
+    const p1, 0x7f08049a
 
-    const p2, 0x7f08009e
+    const p2, 0x7f0800c5
 
     .line 60
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/views/CircleAndTickAnimView;->setDrawables(II)V
@@ -319,9 +319,9 @@
     .line 80
     iget-object v1, p0, Lcom/miui/home/recents/views/CircleAndTickAnimView;->mTickStartPointAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v2, Lmiui/view/animation/CubicEaseOutInterpolator;
+    new-instance v2, Lmiuix/view/animation/CubicEaseOutInterpolator;
 
-    invoke-direct {v2}, Lmiui/view/animation/CubicEaseOutInterpolator;-><init>()V
+    invoke-direct {v2}, Lmiuix/view/animation/CubicEaseOutInterpolator;-><init>()V
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -362,9 +362,9 @@
     .line 93
     iget-object v0, p0, Lcom/miui/home/recents/views/CircleAndTickAnimView;->mTickEndPointAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v1, Lmiui/view/animation/CubicEaseOutInterpolator;
+    new-instance v1, Lmiuix/view/animation/CubicEaseOutInterpolator;
 
-    invoke-direct {v1}, Lmiui/view/animation/CubicEaseOutInterpolator;-><init>()V
+    invoke-direct {v1}, Lmiuix/view/animation/CubicEaseOutInterpolator;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -543,7 +543,7 @@
     .line 115
     iget-object v0, p0, Lcom/miui/home/recents/views/CircleAndTickAnimView;->mTickPaint:Landroid/graphics/Paint;
 
-    const v1, 0x7f0601e5
+    const v1, 0x7f060327
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getColor(I)I
 

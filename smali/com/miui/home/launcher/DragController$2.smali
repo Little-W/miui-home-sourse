@@ -3,12 +3,12 @@
 .source "DragController.java"
 
 # interfaces
-.implements Ljava/util/function/Supplier;
+.implements Ljava/util/function/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/DragController;->drop(FFLcom/miui/home/launcher/DropTarget;)V
+    value = Lcom/miui/home/launcher/DragController;->createOutlineAsync(Landroid/view/View;FLcom/miui/home/launcher/DragView;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,23 +19,28 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Ljava/util/function/Supplier<",
-        "Ljava/lang/String;",
+        "Ljava/util/function/Function<",
+        "Ljava/lang/Void;",
+        "Landroid/graphics/Bitmap;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/miui/home/launcher/DragController;
+.field final synthetic val$scale:F
+
+.field final synthetic val$v:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/DragController;)V
+.method constructor <init>(Landroid/view/View;F)V
     .locals 0
 
-    .line 966
-    iput-object p1, p0, Lcom/miui/home/launcher/DragController$2;->this$0:Lcom/miui/home/launcher/DragController;
+    .line 541
+    iput-object p1, p0, Lcom/miui/home/launcher/DragController$2;->val$v:Landroid/view/View;
+
+    iput p2, p0, Lcom/miui/home/launcher/DragController$2;->val$scale:F
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,54 +49,41 @@
 
 
 # virtual methods
-.method public bridge synthetic get()Ljava/lang/Object;
+.method public apply(Ljava/lang/Void;)Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 966
-    invoke-virtual {p0}, Lcom/miui/home/launcher/DragController$2;->get()Ljava/lang/String;
+    .line 544
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    move-result-object v0
+    move-result-object p1
 
-    return-object v0
+    if-nez p1, :cond_0
+
+    .line 545
+    invoke-static {}, Landroid/os/Looper;->prepare()V
+
+    .line 547
+    :cond_0
+    iget-object p1, p0, Lcom/miui/home/launcher/DragController$2;->val$v:Landroid/view/View;
+
+    iget v0, p0, Lcom/miui/home/launcher/DragController$2;->val$scale:F
+
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/DragController;->createOutline(Landroid/view/View;F)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public get()Ljava/lang/String;
-    .locals 4
+.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    .line 969
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+    .line 541
+    check-cast p1, Ljava/lang/Void;
 
-    move-result-object v0
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/DragController$2;->apply(Ljava/lang/Void;)Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getResources()Landroid/content/res/Resources;
+    move-result-object p1
 
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    iget-object v2, p0, Lcom/miui/home/launcher/DragController$2;->this$0:Lcom/miui/home/launcher/DragController;
-
-    .line 970
-    invoke-static {v2}, Lcom/miui/home/launcher/DragController;->access$000(Lcom/miui/home/launcher/DragController;)Lcom/miui/home/launcher/DragObject;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/miui/home/launcher/DragObject;->getDropAnnounce()Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    aput-object v2, v1, v3
-
-    const v2, 0x7f100063
-
-    .line 969
-    invoke-virtual {v0, v2, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

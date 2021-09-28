@@ -418,6 +418,34 @@
 
 
 # virtual methods
+.method public addEndListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationEndListener;)Lmiuix/animation/physics/DynamicAnimation;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lmiuix/animation/physics/DynamicAnimation$OnAnimationEndListener;",
+            ")TT;"
+        }
+    .end annotation
+
+    .line 243
+    iget-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 244
+    iget-object v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mEndListeners:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-object p0
+.end method
+
 .method public addUpdateListener(Lmiuix/animation/physics/DynamicAnimation$OnAnimationUpdateListener;)Lmiuix/animation/physics/DynamicAnimation;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -461,6 +489,44 @@
     invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw p1
+.end method
+
+.method public cancel()V
+    .locals 2
+
+    .line 389
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_1
+
+    .line 392
+    iget-boolean v0, p0, Lmiuix/animation/physics/DynamicAnimation;->mRunning:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 393
+    invoke-direct {p0, v0}, Lmiuix/animation/physics/DynamicAnimation;->endAnimationInternal(Z)V
+
+    :cond_0
+    return-void
+
+    .line 390
+    :cond_1
+    new-instance v0, Landroid/util/AndroidRuntimeException;
+
+    const-string v1, "Animations may only be canceled on the main thread"
+
+    invoke-direct {v0, v1}, Landroid/util/AndroidRuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 .method public doAnimationFrame(J)Z
@@ -654,6 +720,43 @@
     invoke-static {p1}, Lmiuix/animation/physics/DynamicAnimation;->removeNullEntries(Ljava/util/ArrayList;)V
 
     return-void
+.end method
+
+.method public setStartDelay(J)V
+    .locals 3
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v2, p1, v0
+
+    if-gez v2, :cond_0
+
+    move-wide p1, v0
+
+    .line 232
+    :cond_0
+    iput-wide p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mStartDelay:J
+
+    return-void
+.end method
+
+.method public setStartValue(F)Lmiuix/animation/physics/DynamicAnimation;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(F)TT;"
+        }
+    .end annotation
+
+    .line 162
+    iput p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mValue:F
+
+    const/4 p1, 0x1
+
+    .line 163
+    iput-boolean p1, p0, Lmiuix/animation/physics/DynamicAnimation;->mStartValueIsSet:Z
+
+    return-object p0
 .end method
 
 .method public setStartVelocity(F)Lmiuix/animation/physics/DynamicAnimation;

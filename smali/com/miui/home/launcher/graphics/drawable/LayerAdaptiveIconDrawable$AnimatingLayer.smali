@@ -68,7 +68,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$resetBackAnim$194(Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$AnimatingLayer;)V
+.method public static synthetic lambda$resetBackAnim$0(Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$AnimatingLayer;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -255,9 +255,9 @@
     .line 599
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
-    new-instance v1, Lcom/miui/home/launcher/graphics/drawable/-$$Lambda$LayerAdaptiveIconDrawable$AnimatingLayer$Enj7ZWa3mbPLR_J1WyIz17MPrms;
+    new-instance v1, Lcom/miui/home/launcher/graphics/drawable/-$$Lambda$LayerAdaptiveIconDrawable$AnimatingLayer$O6nDXo-PA8CuviST1k8LPh2j5-E;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/graphics/drawable/-$$Lambda$LayerAdaptiveIconDrawable$AnimatingLayer$Enj7ZWa3mbPLR_J1WyIz17MPrms;-><init>(Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$AnimatingLayer;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/graphics/drawable/-$$Lambda$LayerAdaptiveIconDrawable$AnimatingLayer$O6nDXo-PA8CuviST1k8LPh2j5-E;-><init>(Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$AnimatingLayer;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 

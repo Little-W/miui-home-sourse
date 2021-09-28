@@ -8,9 +8,9 @@
     .locals 1
 
     .line 13
-    new-instance v0, Lcom/miui/home/recents/util/-$$Lambda$TraceUtils$PGgbxWNpm1dE5n-DB3mvxZkgVao;
+    new-instance v0, Lcom/miui/home/recents/util/-$$Lambda$TraceUtils$UQ_Ts7sUR428mfc8COaYRGjL_1g;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/recents/util/-$$Lambda$TraceUtils$PGgbxWNpm1dE5n-DB3mvxZkgVao;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/util/-$$Lambda$TraceUtils$UQ_Ts7sUR428mfc8COaYRGjL_1g;-><init>(Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -21,14 +21,14 @@
     .locals 1
 
     .line 19
-    sget-object v0, Lcom/miui/home/recents/util/-$$Lambda$TraceUtils$SQFBvGS1YXUWffS8Tv6KCiICkSM;->INSTANCE:Lcom/miui/home/recents/util/-$$Lambda$TraceUtils$SQFBvGS1YXUWffS8Tv6KCiICkSM;
+    sget-object v0, Lcom/miui/home/recents/util/-$$Lambda$TraceUtils$dWas3sN2o9uMvX5QOXlq_HRgiik;->INSTANCE:Lcom/miui/home/recents/util/-$$Lambda$TraceUtils$dWas3sN2o9uMvX5QOXlq_HRgiik;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method static synthetic lambda$beginSection$543(Ljava/lang/String;)V
+.method static synthetic lambda$beginSection$0(Ljava/lang/String;)V
     .locals 0
 
     .line 13
@@ -37,7 +37,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$endSection$544()V
+.method static synthetic lambda$endSection$1()V
     .locals 0
 
     .line 19

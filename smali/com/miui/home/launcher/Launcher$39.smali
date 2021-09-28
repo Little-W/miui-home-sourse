@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3563
+    .line 3607
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$39;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -33,26 +33,16 @@
 
 # virtual methods
 .method public onChange(Z)V
-    .locals 2
+    .locals 0
 
-    .line 3566
-    invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
+    .line 3610
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$39;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3600(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/search/SearchEdgeLayout;
 
     move-result-object p1
 
-    new-instance v0, Lcom/miui/home/launcher/common/messages/SoundEffectEnableMessage;
-
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$39;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    .line 3567
-    invoke-static {v1}, Lcom/miui/home/launcher/DeviceConfig;->isDeleteSoundEffectEnable(Landroid/content/Context;)Z
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Lcom/miui/home/launcher/common/messages/SoundEffectEnableMessage;-><init>(Z)V
-
-    .line 3566
-    invoke-virtual {p1, v0}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Lcom/miui/home/launcher/search/SearchEdgeLayout;->refreshSettings()V
 
     return-void
 .end method

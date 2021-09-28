@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/recents/util/Utilities$2;
+.class Lcom/miui/home/recents/util/Utilities$2;
 .super Landroid/util/Property;
 .source "Utilities.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

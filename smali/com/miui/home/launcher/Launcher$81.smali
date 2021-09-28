@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->notifyFsGestureHomeStatus(ZLjava/lang/String;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/launcher/Launcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,21 +20,13 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$enableBackGesture:Z
-
-.field final synthetic val$type:Ljava/lang/String;
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;ZLjava/lang/String;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 8193
+    .line 8017
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$81;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    iput-boolean p2, p0, Lcom/miui/home/launcher/Launcher$81;->val$enableBackGesture:Z
-
-    iput-object p3, p0, Lcom/miui/home/launcher/Launcher$81;->val$type:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,24 +36,16 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 1
 
-    .line 8196
+    .line 8020
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$81;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3300(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherApplication;->getRecentsImpl()Lcom/miui/home/recents/BaseRecentsImpl;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lcom/miui/home/launcher/Launcher$81;->val$enableBackGesture:Z
-
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$81;->val$type:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/miui/home/recents/BaseRecentsImpl;->updateFsgWindowVisibilityState(ZLjava/lang/String;)V
+    invoke-virtual {v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->invalidateThumbnails()V
 
     return-void
 .end method

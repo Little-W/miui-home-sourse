@@ -480,7 +480,7 @@
     return p0
 .end method
 
-.method public static synthetic lambda$uninstallApps$158(Lcom/miui/home/launcher/uninstall/UninstallController;Lcom/miui/home/launcher/ShortcutInfo;Ljava/lang/Void;)Ljava/lang/Void;
+.method public static synthetic lambda$uninstallApps$0(Lcom/miui/home/launcher/uninstall/UninstallController;Lcom/miui/home/launcher/ShortcutInfo;Ljava/lang/Void;)Ljava/lang/Void;
     .locals 0
 
     .line 60
@@ -515,7 +515,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/uninstall/DeleteDialog;->setPositiveConsumer(Ljava/util/function/Consumer;)V
 
-    const p0, 0x7f100274
+    const p0, 0x7f1003a4
 
     .line 245
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/uninstall/DeleteDialog;->setPositiveButTitle(I)V
@@ -857,7 +857,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/uninstall/RemoveDialog;->setPositiveConsumer(Ljava/util/function/Consumer;)V
 
-    const p1, 0x7f100263
+    const p1, 0x7f100360
 
     .line 142
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/uninstall/RemoveDialog;->setPositiveButTitle(I)V
@@ -1134,9 +1134,9 @@
     if-eqz v1, :cond_0
 
     .line 59
-    new-instance v1, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$-Dn9abc35zsxZQNPlbWrR5jRxxc;
+    new-instance v1, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$ZWqkH8kI1mOj7u7EgUxJn-XBNrY;
 
-    invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$-Dn9abc35zsxZQNPlbWrR5jRxxc;-><init>(Lcom/miui/home/launcher/uninstall/UninstallController;Lcom/miui/home/launcher/ShortcutInfo;)V
+    invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$ZWqkH8kI1mOj7u7EgUxJn-XBNrY;-><init>(Lcom/miui/home/launcher/uninstall/UninstallController;Lcom/miui/home/launcher/ShortcutInfo;)V
 
     const/4 v0, 0x0
 

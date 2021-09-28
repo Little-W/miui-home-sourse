@@ -295,10 +295,12 @@
     .line 310
     iget-object v4, v0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v4}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {v4}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/Application;
+
+    move-result-object v4
 
     .line 311
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getModel()Lcom/miui/home/launcher/LauncherModel;
+    invoke-virtual {v4}, Lcom/miui/home/launcher/Application;->getModel()Lcom/miui/home/launcher/LauncherModel;
 
     move-result-object v4
 
@@ -810,7 +812,7 @@
     return p1
 .end method
 
-.method public static synthetic lambda$handleProgressUpdate$399(Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;[Ljava/lang/String;[Ljava/lang/String;[I[Ljava/lang/String;Ljava/lang/String;)V
+.method public static synthetic lambda$handleProgressUpdate$0(Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;[Ljava/lang/String;[Ljava/lang/String;[I[Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
     .line 118
@@ -825,7 +827,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$handleProgressUpdate$400(Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
+.method public static synthetic lambda$handleProgressUpdate$1(Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
     .locals 7
 
     .line 140
@@ -1809,7 +1811,7 @@
     if-eqz v3, :cond_8
 
     .line 506
-    invoke-static {p1}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {p1}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/Application;
 
     move-result-object v3
 
@@ -1846,7 +1848,7 @@
     if-le v4, v5, :cond_9
 
     .line 511
-    invoke-virtual {v3}, Lcom/miui/home/launcher/LauncherApplication;->hasBroughtToForeground()Z
+    invoke-virtual {v3}, Lcom/miui/home/launcher/Application;->hasBroughtToForeground()Z
 
     move-result v3
 
@@ -2136,7 +2138,7 @@
     if-eqz p1, :cond_5
 
     .line 117
-    new-instance p1, Lcom/miui/home/launcher/progress/-$$Lambda$ApplicationProgressProcessor$3ewFTYvRebonWI9I9HRQ5i8A_k4;
+    new-instance p1, Lcom/miui/home/launcher/progress/-$$Lambda$ApplicationProgressProcessor$8Qr7043fQRFWGyaL_IJD5zaDDdE;
 
     move-object v2, p1
 
@@ -2144,7 +2146,7 @@
 
     move-object v8, v1
 
-    invoke-direct/range {v2 .. v8}, Lcom/miui/home/launcher/progress/-$$Lambda$ApplicationProgressProcessor$3ewFTYvRebonWI9I9HRQ5i8A_k4;-><init>(Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;[Ljava/lang/String;[Ljava/lang/String;[I[Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v2 .. v8}, Lcom/miui/home/launcher/progress/-$$Lambda$ApplicationProgressProcessor$8Qr7043fQRFWGyaL_IJD5zaDDdE;-><init>(Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;[Ljava/lang/String;[Ljava/lang/String;[I[Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->useLauncherToRunOnUiThread(Ljava/lang/Runnable;)Z
 
@@ -2241,7 +2243,7 @@
     if-eqz p1, :cond_5
 
     .line 139
-    new-instance p1, Lcom/miui/home/launcher/progress/-$$Lambda$ApplicationProgressProcessor$-4GKHlSiHke7LnVqGUQ3dfo9nGA;
+    new-instance p1, Lcom/miui/home/launcher/progress/-$$Lambda$ApplicationProgressProcessor$a5Oh-9csfLRxV9hdY2zB78OxTxw;
 
     move-object v2, p1
 
@@ -2249,7 +2251,7 @@
 
     move-object v4, v1
 
-    invoke-direct/range {v2 .. v7}, Lcom/miui/home/launcher/progress/-$$Lambda$ApplicationProgressProcessor$-4GKHlSiHke7LnVqGUQ3dfo9nGA;-><init>(Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
+    invoke-direct/range {v2 .. v7}, Lcom/miui/home/launcher/progress/-$$Lambda$ApplicationProgressProcessor$a5Oh-9csfLRxV9hdY2zB78OxTxw;-><init>(Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->useLauncherToRunOnUiThread(Ljava/lang/Runnable;)Z
     :try_end_0
@@ -2612,6 +2614,7 @@
     .line 620
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
+    .line 622
     :cond_7
     throw p1
 .end method

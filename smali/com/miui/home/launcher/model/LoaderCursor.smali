@@ -179,7 +179,11 @@
     .locals 6
 
     .line 127
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
 
     move-result-object v0
 
@@ -187,7 +191,7 @@
 
     move-result-wide v0
 
-    .line 129
+    .line 128
     new-instance v2, Lcom/miui/home/launcher/AppInfo;
 
     iget-object v3, p0, Lcom/miui/home/launcher/model/LoaderCursor;->mContext:Landroid/content/Context;
@@ -198,10 +202,10 @@
 
     invoke-direct {v2, v3, p1, v4}, Lcom/miui/home/launcher/AppInfo;-><init>(Landroid/content/Context;Landroid/content/pm/LauncherActivityInfo;Landroid/os/UserHandle;)V
 
-    .line 130
+    .line 129
     iput-wide v0, v2, Lcom/miui/home/launcher/AppInfo;->id:J
 
-    .line 131
+    .line 130
     iget v3, p0, Lcom/miui/home/launcher/model/LoaderCursor;->containerIndex:I
 
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/model/LoaderCursor;->getInt(I)I
@@ -212,7 +216,7 @@
 
     iput-wide v3, v2, Lcom/miui/home/launcher/AppInfo;->container:J
 
-    .line 132
+    .line 131
     iget v3, p0, Lcom/miui/home/launcher/model/LoaderCursor;->screenIndex:I
 
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/model/LoaderCursor;->getInt(I)I
@@ -223,7 +227,7 @@
 
     iput-wide v3, v2, Lcom/miui/home/launcher/AppInfo;->screenId:J
 
-    .line 133
+    .line 132
     iget v3, p0, Lcom/miui/home/launcher/model/LoaderCursor;->cellXIndex:I
 
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/model/LoaderCursor;->getInt(I)I
@@ -232,7 +236,7 @@
 
     iput v3, v2, Lcom/miui/home/launcher/AppInfo;->cellX:I
 
-    .line 134
+    .line 133
     iget v3, p0, Lcom/miui/home/launcher/model/LoaderCursor;->cellYIndex:I
 
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/model/LoaderCursor;->getInt(I)I
@@ -241,26 +245,26 @@
 
     iput v3, v2, Lcom/miui/home/launcher/AppInfo;->cellY:I
 
-    .line 136
+    .line 135
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
     const-string v4, "_id"
 
-    .line 137
+    .line 136
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
     invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 138
+    .line 137
     iget-object v4, p0, Lcom/miui/home/launcher/model/LoaderCursor;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v4, v3}, Lcom/miui/home/launcher/AppInfo;->onAddToDatabase(Landroid/content/Context;Landroid/content/ContentValues;)V
 
-    .line 140
+    .line 139
     iget-object v2, p0, Lcom/miui/home/launcher/model/LoaderCursor;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -271,7 +275,7 @@
 
     invoke-virtual {v2, v4, v3}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 141
+    .line 140
     iget-object v2, p0, Lcom/miui/home/launcher/model/LoaderCursor;->itemToChange:Ljava/util/ArrayList;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -282,7 +286,7 @@
 
     const-string v0, "LoaderCursor"
 
-    .line 142
+    .line 141
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -498,7 +502,7 @@
         }
     .end annotation
 
-    .line 146
+    .line 145
     iget-object v0, p0, Lcom/miui/home/launcher/model/LoaderCursor;->itemToChange:Ljava/util/ArrayList;
 
     return-object v0
@@ -561,14 +565,14 @@
 .method public onRemoveProgressShortcutInfo(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;)V
     .locals 2
 
-    .line 150
+    .line 149
     iget-object v0, p0, Lcom/miui/home/launcher/model/LoaderCursor;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/miui/home/library/compat/LauncherAppsCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/LauncherAppsCompat;
 
     move-result-object v0
 
-    .line 151
+    .line 150
     invoke-virtual {p1}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -581,7 +585,7 @@
 
     move-result-object p1
 
-    .line 152
+    .line 151
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -599,7 +603,7 @@
 
     check-cast v0, Landroid/content/pm/LauncherActivityInfo;
 
-    .line 153
+    .line 152
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/model/LoaderCursor;->insertApp(Landroid/content/pm/LauncherActivityInfo;)V
 
     goto :goto_0

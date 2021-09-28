@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/LauncherModel;)V
     .locals 0
 
-    .line 212
+    .line 215
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,16 +33,16 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/LauncherModel;Lcom/miui/home/launcher/LauncherModel$1;)V
     .locals 0
 
-    .line 212
+    .line 215
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;-><init>(Lcom/miui/home/launcher/LauncherModel;)V
 
     return-void
 .end method
 
-.method static synthetic lambda$null$87(Lcom/miui/home/launcher/Launcher;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+.method static synthetic lambda$onMessageEvent$0(Lcom/miui/home/launcher/Launcher;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 1
 
-    .line 239
+    .line 242
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -52,10 +52,10 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onMessageEvent$88(Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;Lcom/miui/home/launcher/Launcher;)V
+.method public static synthetic lambda$onMessageEvent$1(Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;Lcom/miui/home/launcher/Launcher;)V
     .locals 9
 
-    .line 220
+    .line 223
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -64,7 +64,7 @@
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/AllAppsList;->clearAllExceptData()V
 
-    .line 221
+    .line 224
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    .line 222
+    .line 225
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -94,14 +94,14 @@
 
     check-cast v1, Lcom/miui/launcher/utils/PortableUtils$ComponentAndUser;
 
-    .line 223
+    .line 226
     iget-object v2, v1, Lcom/miui/launcher/utils/PortableUtils$ComponentAndUser;->componentName:Landroid/content/ComponentName;
 
     if-eqz v2, :cond_0
 
     iget-object v2, v1, Lcom/miui/launcher/utils/PortableUtils$ComponentAndUser;->componentName:Landroid/content/ComponentName;
 
-    .line 224
+    .line 227
     invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -118,7 +118,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    .line 226
+    .line 229
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
 
     move-result-object v2
@@ -135,7 +135,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 227
+    .line 230
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -160,18 +160,18 @@
 
     goto :goto_0
 
-    .line 230
+    .line 233
     :cond_1
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 231
+    .line 234
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 232
+    .line 235
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -186,7 +186,7 @@
 
     if-lez v2, :cond_2
 
-    .line 233
+    .line 236
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -197,7 +197,7 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 235
+    .line 238
     :cond_2
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -213,7 +213,7 @@
 
     if-lez v2, :cond_3
 
-    .line 236
+    .line 239
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -224,7 +224,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 238
+    .line 241
     :cond_3
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -234,16 +234,16 @@
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/AllAppsList;->clearAllExceptData()V
 
-    .line 239
+    .line 242
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$200(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/library/utils/DeferredHandler;
 
     move-result-object v2
 
-    new-instance v3, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$SecurityHideMessageHandler$Vf1_6lSHG4JlpYwsYWxKFyk6z5s;
+    new-instance v3, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$SecurityHideMessageHandler$0No8zF4kNsScTUaLfwtZQmxTsE0;
 
-    invoke-direct {v3, p1, v0, v1}, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$SecurityHideMessageHandler$Vf1_6lSHG4JlpYwsYWxKFyk6z5s;-><init>(Lcom/miui/home/launcher/Launcher;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    invoke-direct {v3, p1, v0, v1}, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$SecurityHideMessageHandler$0No8zF4kNsScTUaLfwtZQmxTsE0;-><init>(Lcom/miui/home/launcher/Launcher;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
     invoke-virtual {v2, v3}, Lcom/miui/home/library/utils/DeferredHandler;->post(Ljava/lang/Runnable;)V
 
@@ -258,7 +258,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 215
+    .line 218
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
@@ -267,13 +267,13 @@
 
     return-void
 
-    .line 219
+    .line 222
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$SecurityHideMessageHandler$XNeOTCtBfEXPIV3aTkIsB1-PKiQ;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$SecurityHideMessageHandler$Bb4G-6nCyVx_bxPO6-UZOgOzm0g;
 
-    invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$SecurityHideMessageHandler$XNeOTCtBfEXPIV3aTkIsB1-PKiQ;-><init>(Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$SecurityHideMessageHandler$Bb4G-6nCyVx_bxPO6-UZOgOzm0g;-><init>(Lcom/miui/home/launcher/LauncherModel$SecurityHideMessageHandler;Lcom/miui/home/launcher/Launcher;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/LauncherModel;->runOnWorkerThreadAndCheckForReady(Ljava/lang/Runnable;)V
 

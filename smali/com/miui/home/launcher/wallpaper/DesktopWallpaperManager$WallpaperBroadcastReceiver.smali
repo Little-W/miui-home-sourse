@@ -28,7 +28,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;)V
     .locals 0
 
-    .line 113
+    .line 112
     iput-object p1, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$WallpaperBroadcastReceiver;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +39,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;)V
     .locals 0
 
-    .line 113
+    .line 112
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$WallpaperBroadcastReceiver;-><init>(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;)V
 
     return-void
@@ -56,14 +56,14 @@
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    .line 116
+    .line 115
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "Launcher_DesktopWallpaperManager"
 
-    .line 117
+    .line 116
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,7 +82,7 @@
 
     const-string p2, "android.intent.action.WALLPAPER_CHANGED"
 
-    .line 118
+    .line 117
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -91,7 +91,7 @@
 
     const-string p2, "miui.gallery.action.WALLPAPER_CHANGED"
 
-    .line 119
+    .line 118
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p2
@@ -100,14 +100,14 @@
 
     const-string p2, "android.intent.action.UPDATE_DESKTOP_VIDEO_WALLPAPER"
 
-    .line 120
+    .line 119
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 121
+    .line 120
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$WallpaperBroadcastReceiver;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 

@@ -25,7 +25,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f070087
+    const p2, 0x7f07008d
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -38,80 +38,13 @@
 
 
 # virtual methods
-.method protected dispatchDraw(Landroid/graphics/Canvas;)V
-    .locals 8
-
-    .line 54
-    invoke-super {p0, p1}, Lcom/miui/home/launcher/ThumbnailContainerBorder;->dispatchDraw(Landroid/graphics/Canvas;)V
-
-    .line 55
-    invoke-virtual {p0}, Lcom/miui/home/launcher/DefaultScreenPreviewBorder;->getBorderLinePaint()Landroid/graphics/Paint;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getStrokeWidth()F
-
-    move-result v0
-
-    .line 56
-    iget-object v1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewBorder;->mRect:Landroid/graphics/Rect;
-
-    iget v1, v1, Landroid/graphics/Rect;->left:I
-
-    int-to-float v1, v1
-
-    add-float v3, v1, v0
-
-    iget-object v1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewBorder;->mRect:Landroid/graphics/Rect;
-
-    iget v1, v1, Landroid/graphics/Rect;->top:I
-
-    iget v2, p0, Lcom/miui/home/launcher/DefaultScreenPreviewBorder;->mThumbnailHeight:I
-
-    add-int/2addr v1, v2
-
-    add-int/lit8 v1, v1, 0x1
-
-    int-to-float v4, v1
-
-    iget-object v1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewBorder;->mRect:Landroid/graphics/Rect;
-
-    iget v1, v1, Landroid/graphics/Rect;->right:I
-
-    int-to-float v1, v1
-
-    sub-float v5, v1, v0
-
-    iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewBorder;->mRect:Landroid/graphics/Rect;
-
-    iget v0, v0, Landroid/graphics/Rect;->top:I
-
-    iget v1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewBorder;->mThumbnailHeight:I
-
-    add-int/2addr v0, v1
-
-    add-int/lit8 v0, v0, 0x1
-
-    int-to-float v6, v0
-
-    invoke-virtual {p0}, Lcom/miui/home/launcher/DefaultScreenPreviewBorder;->getBorderLinePaint()Landroid/graphics/Paint;
-
-    move-result-object v7
-
-    move-object v2, p1
-
-    invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
-
-    return-void
-.end method
-
 .method protected onFinishInflate()V
     .locals 2
 
     .line 29
     invoke-super {p0}, Lcom/miui/home/launcher/ThumbnailContainerBorder;->onFinishInflate()V
 
-    const v0, 0x7f0a00e2
+    const v0, 0x7f0a0109
 
     .line 30
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewBorder;->findViewById(I)Landroid/view/View;
@@ -164,10 +97,10 @@
 .method protected updateBorderLineColor(F)V
     .locals 4
 
-    .line 61
+    .line 54
     invoke-super {p0, p1}, Lcom/miui/home/launcher/ThumbnailContainerBorder;->updateBorderLineColor(F)V
 
-    .line 62
+    .line 55
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewBorder;->mHomeIconLayoutBackgroundDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     iget-object v1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewBorder;->argbEvaluator:Landroid/animation/ArgbEvaluator;

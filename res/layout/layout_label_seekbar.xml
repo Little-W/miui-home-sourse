@@ -5,7 +5,7 @@
         android:id="@id/seek_bar_indicator"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
-    <SeekBar
+    <miuix.androidbasewidget.widget.SeekBar
         android:id="@id/seek_bar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

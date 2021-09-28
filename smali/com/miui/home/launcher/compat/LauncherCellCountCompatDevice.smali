@@ -66,7 +66,7 @@
 .method public final getCellCountXDef(Landroid/content/Context;)I
     .locals 1
 
-    const v0, 0x7f0b000d
+    const v0, 0x7f0b001a
 
     .line 51
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatDevice;->shouldUseDeviceValue(Landroid/content/Context;I)Z
@@ -97,7 +97,7 @@
 .method public final getCellCountXMax(Landroid/content/Context;)I
     .locals 1
 
-    const v0, 0x7f0b000e
+    const v0, 0x7f0b001b
 
     .line 33
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatDevice;->shouldUseDeviceValue(Landroid/content/Context;I)Z
@@ -128,7 +128,7 @@
 .method public final getCellCountXMin(Landroid/content/Context;)I
     .locals 1
 
-    const v0, 0x7f0b000f
+    const v0, 0x7f0b001c
 
     .line 15
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatDevice;->shouldUseDeviceValue(Landroid/content/Context;I)Z
@@ -159,7 +159,7 @@
 .method public final getCellCountYDef(Landroid/content/Context;)I
     .locals 1
 
-    const v0, 0x7f0b0010
+    const v0, 0x7f0b001d
 
     .line 60
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatDevice;->shouldUseDeviceValue(Landroid/content/Context;I)Z
@@ -190,7 +190,7 @@
 .method public final getCellCountYMax(Landroid/content/Context;)I
     .locals 1
 
-    const v0, 0x7f0b0011
+    const v0, 0x7f0b001e
 
     .line 42
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatDevice;->shouldUseDeviceValue(Landroid/content/Context;I)Z
@@ -221,7 +221,7 @@
 .method public final getCellCountYMin(Landroid/content/Context;)I
     .locals 1
 
-    const v0, 0x7f0b0012
+    const v0, 0x7f0b001f
 
     .line 24
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/LauncherCellCountCompatDevice;->shouldUseDeviceValue(Landroid/content/Context;I)Z

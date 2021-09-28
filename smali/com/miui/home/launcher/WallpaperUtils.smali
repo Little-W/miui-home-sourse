@@ -63,6 +63,7 @@
     :cond_0
     const-string v0, "com.xiaomi.tv.gallerylockscreen.lockscreen_magazine_provider"
 
+    .line 73
     :goto_0
     sput-object v0, Lcom/miui/home/launcher/WallpaperUtils;->DEFAULT_LOCKWALLPAPER_PROVIDER:Ljava/lang/String;
 
@@ -285,9 +286,9 @@
     float-to-int p2, v3
 
     .line 840
-    new-instance v0, Lmiui/graphics/BitmapFactory$CropOption;
+    new-instance v0, Lcom/miui/home/library/utils/Graphics$CropOption;
 
-    invoke-direct {v0}, Lmiui/graphics/BitmapFactory$CropOption;-><init>()V
+    invoke-direct {v0}, Lcom/miui/home/library/utils/Graphics$CropOption;-><init>()V
 
     .line 841
     new-instance v2, Landroid/graphics/Rect;
@@ -307,16 +308,16 @@
 
     invoke-direct {v2, v1, p2, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    iput-object v2, v0, Lmiui/graphics/BitmapFactory$CropOption;->srcBmpDrawingArea:Landroid/graphics/Rect;
+    iput-object v2, v0, Lcom/miui/home/library/utils/Graphics$CropOption;->srcBmpDrawingArea:Landroid/graphics/Rect;
 
     .line 843
-    iget-object p2, v0, Lmiui/graphics/BitmapFactory$CropOption;->srcBmpDrawingArea:Landroid/graphics/Rect;
+    iget-object p2, v0, Lcom/miui/home/library/utils/Graphics$CropOption;->srcBmpDrawingArea:Landroid/graphics/Rect;
 
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result p2
 
-    iget-object v1, v0, Lmiui/graphics/BitmapFactory$CropOption;->srcBmpDrawingArea:Landroid/graphics/Rect;
+    iget-object v1, v0, Lcom/miui/home/library/utils/Graphics$CropOption;->srcBmpDrawingArea:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
@@ -333,7 +334,7 @@
     move-result-object p0
 
     .line 845
-    invoke-static {p1, p0, v0}, Lmiui/graphics/BitmapFactory;->cropBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Lmiui/graphics/BitmapFactory$CropOption;)Landroid/graphics/Bitmap;
+    invoke-static {p1, p0, v0}, Lcom/miui/home/library/utils/Graphics;->cropBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Lcom/miui/home/library/utils/Graphics$CropOption;)Landroid/graphics/Bitmap;
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -374,6 +375,7 @@
     .line 850
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
+    .line 852
     :cond_2
     throw p0
 .end method
@@ -432,7 +434,7 @@
     invoke-static {v2, v1}, Lcom/miui/home/launcher/WallpaperUtils;->setWallpaperSourceUri(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 778
-    invoke-static {v0, p0}, Lmiui/os/FileUtils;->copyFile(Ljava/io/File;Ljava/io/File;)Z
+    invoke-static {v0, p0}, Lmiuix/core/util/FileUtils;->copyFile(Ljava/io/File;Ljava/io/File;)Z
 
     :cond_2
     return-void
@@ -643,6 +645,7 @@
 
     goto :goto_0
 
+    .line 433
     :cond_1
     div-int/2addr p0, v0
 
@@ -797,9 +800,9 @@
     .locals 10
 
     .line 399
-    new-instance v0, Lmiui/util/InputStreamLoader;
+    new-instance v0, Lcom/miui/home/library/utils/InputStreamLoader;
 
-    invoke-direct {v0, p0, p1}, Lmiui/util/InputStreamLoader;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/library/utils/InputStreamLoader;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
 
     .line 400
     new-instance p0, Landroid/graphics/BitmapFactory$Options;
@@ -888,7 +891,7 @@
 
     .line 408
     :try_start_0
-    invoke-virtual {v0}, Lmiui/util/InputStreamLoader;->get()Ljava/io/InputStream;
+    invoke-virtual {v0}, Lcom/miui/home/library/utils/InputStreamLoader;->get()Ljava/io/InputStream;
 
     move-result-object v1
     :try_end_0
@@ -898,14 +901,14 @@
     if-nez v1, :cond_2
 
     .line 417
-    invoke-virtual {v0}, Lmiui/util/InputStreamLoader;->close()V
+    invoke-virtual {v0}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
     return-object p1
 
     .line 411
     :cond_2
     :try_start_1
-    invoke-virtual {v0}, Lmiui/util/InputStreamLoader;->get()Ljava/io/InputStream;
+    invoke-virtual {v0}, Lcom/miui/home/library/utils/InputStreamLoader;->get()Ljava/io/InputStream;
 
     move-result-object v1
 
@@ -919,7 +922,7 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 417
-    invoke-virtual {v0}, Lmiui/util/InputStreamLoader;->close()V
+    invoke-virtual {v0}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
     .line 419
     sget-object p1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
@@ -966,13 +969,14 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 417
-    invoke-virtual {v0}, Lmiui/util/InputStreamLoader;->close()V
+    invoke-virtual {v0}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
     return-object p1
 
     :goto_2
-    invoke-virtual {v0}, Lmiui/util/InputStreamLoader;->close()V
+    invoke-virtual {v0}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
+    .line 418
     throw p0
 .end method
 
@@ -1471,7 +1475,7 @@
 
     if-eqz v2, :cond_2
 
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
     move-result v2
 
@@ -1655,7 +1659,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f070219
+    const p3, 0x7f070323
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1669,7 +1673,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f070218
+    const p3, 0x7f070322
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1899,7 +1903,7 @@
     .line 871
     :cond_1
     :try_start_0
-    invoke-static {v0, p0}, Lmiui/graphics/BitmapFactory;->getBitmapSize(Landroid/content/Context;Landroid/net/Uri;)Landroid/graphics/BitmapFactory$Options;
+    invoke-static {v0, p0}, Lcom/miui/home/library/utils/Graphics;->getBitmapSize(Landroid/content/Context;Landroid/net/Uri;)Landroid/graphics/BitmapFactory$Options;
 
     move-result-object v1
     :try_end_0
@@ -1917,12 +1921,12 @@
     invoke-direct {v2, v5, v5, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 879
-    new-instance v3, Lmiui/util/InputStreamLoader;
+    new-instance v3, Lcom/miui/home/library/utils/InputStreamLoader;
 
-    invoke-direct {v3, v0, p0}, Lmiui/util/InputStreamLoader;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
+    invoke-direct {v3, v0, p0}, Lcom/miui/home/library/utils/InputStreamLoader;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
 
     .line 880
-    invoke-virtual {v3}, Lmiui/util/InputStreamLoader;->get()Ljava/io/InputStream;
+    invoke-virtual {v3}, Lcom/miui/home/library/utils/InputStreamLoader;->get()Ljava/io/InputStream;
 
     move-result-object v4
 
@@ -1931,7 +1935,7 @@
     move-result v5
 
     .line 881
-    invoke-virtual {v3}, Lmiui/util/InputStreamLoader;->close()V
+    invoke-virtual {v3}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
     const/16 v3, 0x10e
 
@@ -2193,7 +2197,7 @@
 
     move-result p1
 
-    invoke-static {p0, p1}, Lmiui/graphics/BitmapFactory;->getBitmapColorMode(Landroid/graphics/Bitmap;I)I
+    invoke-static {p0, p1}, Lcom/miui/home/library/utils/Graphics;->getBitmapColorMode(Landroid/graphics/Bitmap;I)I
 
     move-result p0
 
@@ -3084,7 +3088,7 @@
     invoke-virtual {v9, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
     .line 599
-    invoke-static {p0}, Lmiui/graphics/BitmapUtil;->getBuffer(Landroid/graphics/Bitmap;)[B
+    invoke-static {p0}, Lcom/miui/home/library/utils/BitmapUtil;->getBuffer(Landroid/graphics/Bitmap;)[B
 
     move-result-object p0
 
@@ -3306,7 +3310,7 @@
     .line 673
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 674
+    .line 675
     :cond_2
     :goto_5
     throw p0
@@ -3900,7 +3904,7 @@
     check-cast v0, Landroid/app/WallpaperManager;
 
     .line 379
-    new-instance v1, Lmiui/util/InputStreamLoader;
+    new-instance v1, Lcom/miui/home/library/utils/InputStreamLoader;
 
     new-instance v2, Ljava/io/File;
 
@@ -3911,10 +3915,10 @@
 
     move-result-object p1
 
-    invoke-direct {v1, p0, p1}, Lmiui/util/InputStreamLoader;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
+    invoke-direct {v1, p0, p1}, Lcom/miui/home/library/utils/InputStreamLoader;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
 
     .line 381
-    invoke-virtual {v1}, Lmiui/util/InputStreamLoader;->get()Ljava/io/InputStream;
+    invoke-virtual {v1}, Lcom/miui/home/library/utils/InputStreamLoader;->get()Ljava/io/InputStream;
 
     move-result-object p1
 
@@ -3927,7 +3931,7 @@
     .line 386
     :cond_0
     :try_start_0
-    invoke-virtual {v1}, Lmiui/util/InputStreamLoader;->get()Ljava/io/InputStream;
+    invoke-virtual {v1}, Lcom/miui/home/library/utils/InputStreamLoader;->get()Ljava/io/InputStream;
 
     move-result-object p1
 
@@ -3936,7 +3940,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 391
-    invoke-virtual {v1}, Lmiui/util/InputStreamLoader;->close()V
+    invoke-virtual {v1}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
     .line 392
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;

@@ -187,7 +187,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$onReceive$454(Lcom/miui/home/launcher/install/InstallApkReceiver;Landroid/content/Context;Landroid/content/Intent;)V
+.method public static synthetic lambda$onReceive$0(Lcom/miui/home/launcher/install/InstallApkReceiver;Landroid/content/Context;Landroid/content/Intent;)V
     .locals 3
 
     const-string v0, "notification"
@@ -423,9 +423,9 @@
     .locals 1
 
     .line 53
-    new-instance v0, Lcom/miui/home/launcher/install/-$$Lambda$InstallApkReceiver$d7rHgYgzyAfHMiengRxGxdM8vAg;
+    new-instance v0, Lcom/miui/home/launcher/install/-$$Lambda$InstallApkReceiver$_fY0XISzmFZyW8cj-VMa0KU8nTY;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/install/-$$Lambda$InstallApkReceiver$d7rHgYgzyAfHMiengRxGxdM8vAg;-><init>(Lcom/miui/home/launcher/install/InstallApkReceiver;Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/install/-$$Lambda$InstallApkReceiver$_fY0XISzmFZyW8cj-VMa0KU8nTY;-><init>(Lcom/miui/home/launcher/install/InstallApkReceiver;Landroid/content/Context;Landroid/content/Intent;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -502,7 +502,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f100034
+    const v2, 0x7f100036
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -560,7 +560,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f100033
+    const v7, 0x7f100035
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -577,7 +577,7 @@
 
     move-result-object v6
 
-    const v8, 0x7f100032
+    const v8, 0x7f100034
 
     invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -619,7 +619,7 @@
 
     move-result-object p1
 
-    const v2, 0x7f080157
+    const v2, 0x7f08017e
 
     .line 103
     invoke-virtual {p1, v2}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
@@ -717,6 +717,7 @@
 
     goto :goto_0
 
+    .line 191
     :cond_0
     sget-object v2, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 

@@ -3,7 +3,35 @@
 .source "AppWidgetResizeFrame.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+    }
+.end annotation
+
+
 # static fields
+.field public static final BORDER_SPACING_SIZE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/miui/home/launcher/util/MainThreadInitializedObject<",
+            "[I>;"
+        }
+    .end annotation
+.end field
+
+.field public static final CELL_SIZE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/miui/home/launcher/util/MainThreadInitializedObject<",
+            "[",
+            "Landroid/graphics/Point;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private static mTmpRect:Landroid/graphics/Rect;
 
 
@@ -54,6 +82,10 @@
 
 .field private mLeftHandle:Landroid/widget/ImageView;
 
+.field private mMaxHSpan:I
+
+.field private mMaxVSpan:I
+
 .field private mMinHSpan:I
 
 .field private mMinVSpan:I
@@ -67,6 +99,10 @@
 .field private mRunningHInc:I
 
 .field private mRunningVInc:I
+
+.field private final mTempRange1:Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
+.field private final mTempRange2:Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
 
 .field mTmpPt:[F
 
@@ -91,9 +127,27 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    .line 68
+    .line 29
+    new-instance v0, Lcom/miui/home/launcher/util/MainThreadInitializedObject;
+
+    sget-object v1, Lcom/miui/home/launcher/-$$Lambda$AppWidgetResizeFrame$pngf6Eho4alnPD5gpM0msQK2VKY;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$AppWidgetResizeFrame$pngf6Eho4alnPD5gpM0msQK2VKY;
+
+    invoke-direct {v0, v1}, Lcom/miui/home/launcher/util/MainThreadInitializedObject;-><init>(Lcom/miui/home/launcher/util/MainThreadInitializedObject$ObjectProvider;)V
+
+    sput-object v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->CELL_SIZE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
+
+    .line 37
+    new-instance v0, Lcom/miui/home/launcher/util/MainThreadInitializedObject;
+
+    sget-object v1, Lcom/miui/home/launcher/-$$Lambda$AppWidgetResizeFrame$VfLo2rk__Rp8ccAEMspwrwpvMTs;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$AppWidgetResizeFrame$VfLo2rk__Rp8ccAEMspwrwpvMTs;
+
+    invoke-direct {v0, v1}, Lcom/miui/home/launcher/util/MainThreadInitializedObject;-><init>(Lcom/miui/home/launcher/util/MainThreadInitializedObject$ObjectProvider;)V
+
+    sput-object v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->BORDER_SPACING_SIZE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
+
+    .line 100
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -104,70 +158,86 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lcom/miui/home/launcher/LauncherAppWidgetHostView;Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/DragLayer;)V
-    .locals 3
+    .locals 4
 
-    .line 80
+    .line 112
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
-    .line 56
+    .line 85
     iput v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopTouchRegionAdjustment:I
 
-    .line 57
+    .line 86
     iput v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomTouchRegionAdjustment:I
 
     const/4 v1, 0x2
 
-    .line 59
+    .line 88
     new-array v2, v1, [I
 
     iput-object v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDirectionVector:[I
 
-    .line 60
+    .line 89
     new-array v2, v1, [I
 
     iput-object v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLastDirectionVector:[I
 
-    .line 61
+    .line 90
     new-array v2, v1, [F
 
     iput-object v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTmpPt:[F
 
+    .line 92
+    new-instance v2, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3}, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;-><init>(Lcom/miui/home/launcher/AppWidgetResizeFrame$1;)V
+
+    iput-object v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTempRange1:Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
+    .line 93
+    new-instance v2, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
+    invoke-direct {v2, v3}, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;-><init>(Lcom/miui/home/launcher/AppWidgetResizeFrame$1;)V
+
+    iput-object v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTempRange2:Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
     const/16 v2, 0x96
 
-    .line 63
+    .line 95
     iput v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->SNAP_DURATION:I
 
     const/16 v2, 0x18
 
-    .line 64
+    .line 96
     iput v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->BACKGROUND_PADDING:I
 
     const/4 v2, 0x0
 
-    .line 65
+    .line 97
     iput v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->DIMMED_HANDLE_ALPHA:F
 
     const v2, 0x3f28f5c3    # 0.66f
 
-    .line 66
+    .line 98
     iput v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->RESIZE_THRESHOLD:F
 
-    .line 81
+    .line 113
     move-object v2, p1
 
     check-cast v2, Lcom/miui/home/launcher/Launcher;
 
     iput-object v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 82
+    .line 114
     iput-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
 
-    .line 83
+    .line 115
     iput-object p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetView:Lcom/miui/home/launcher/LauncherAppWidgetHostView;
 
-    .line 84
+    .line 116
     invoke-virtual {p2}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getAppWidgetInfo()Landroid/appwidget/AppWidgetProviderInfo;
 
     move-result-object p3
@@ -176,55 +246,61 @@
 
     iput p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mResizeMode:I
 
-    .line 85
+    .line 117
     iput-object p4, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDragLayer:Lcom/miui/home/launcher/DragLayer;
 
-    .line 87
+    .line 120
     invoke-virtual {p2}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getAppWidgetInfo()Landroid/appwidget/AppWidgetProviderInfo;
 
     move-result-object p3
 
-    .line 88
-    iget p4, p3, Landroid/appwidget/AppWidgetProviderInfo;->minResizeWidth:I
+    invoke-static {p1, p3}, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->fromProviderInfo(Landroid/content/Context;Landroid/appwidget/AppWidgetProviderInfo;)Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
-    invoke-static {p4}, Lcom/miui/home/launcher/DeviceConfig;->getWidgetSpanX(I)I
+    move-result-object p3
 
-    move-result p4
+    .line 121
+    iget p4, p3, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->minSpanX:I
 
     iput p4, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMinHSpan:I
 
-    .line 89
-    iget p3, p3, Landroid/appwidget/AppWidgetProviderInfo;->minResizeHeight:I
+    .line 122
+    iget p4, p3, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->minSpanY:I
 
-    invoke-static {p3}, Lcom/miui/home/launcher/DeviceConfig;->getWidgetSpanY(I)I
+    iput p4, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMinVSpan:I
 
-    move-result p3
+    .line 123
+    iget p4, p3, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->maxSpanX:I
 
-    iput p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMinVSpan:I
+    iput p4, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMaxHSpan:I
 
-    const p3, 0x7f080298
+    .line 124
+    iget p3, p3, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->maxSpanY:I
 
-    .line 91
+    iput p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMaxVSpan:I
+
+    const p3, 0x7f08050b
+
+    .line 126
     invoke-virtual {p0, p3}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->setBackgroundResource(I)V
 
-    .line 92
+    .line 127
     invoke-virtual {p0, v0, v0, v0, v0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->setPadding(IIII)V
 
-    .line 95
+    .line 130
     new-instance p3, Landroid/widget/ImageView;
 
     invoke-direct {p3, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftHandle:Landroid/widget/ImageView;
 
-    .line 96
+    .line 131
     iget-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftHandle:Landroid/widget/ImageView;
 
-    const p4, 0x7f08029a
+    const p4, 0x7f08050d
 
     invoke-virtual {p3, p4}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 97
+    .line 132
     new-instance p3, Landroid/widget/FrameLayout$LayoutParams;
 
     const/4 p4, -0x2
@@ -233,124 +309,122 @@
 
     invoke-direct {p3, p4, p4, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    .line 99
+    .line 134
     iget-object v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftHandle:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v0, p3}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 101
+    .line 136
     new-instance p3, Landroid/widget/ImageView;
 
     invoke-direct {p3, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightHandle:Landroid/widget/ImageView;
 
-    .line 102
+    .line 137
     iget-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightHandle:Landroid/widget/ImageView;
 
-    const v0, 0x7f08029b
+    const v0, 0x7f08050e
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 103
+    .line 138
     new-instance p3, Landroid/widget/FrameLayout$LayoutParams;
 
     const/16 v0, 0x15
 
     invoke-direct {p3, p4, p4, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    .line 105
+    .line 140
     iget-object v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightHandle:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v0, p3}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 107
+    .line 142
     new-instance p3, Landroid/widget/ImageView;
 
     invoke-direct {p3, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopHandle:Landroid/widget/ImageView;
 
-    .line 108
+    .line 143
     iget-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopHandle:Landroid/widget/ImageView;
 
-    const v0, 0x7f08029c
+    const v0, 0x7f08050f
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 109
+    .line 144
     new-instance p3, Landroid/widget/FrameLayout$LayoutParams;
 
     const/16 v0, 0x31
 
     invoke-direct {p3, p4, p4, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    .line 111
+    .line 146
     iget-object v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopHandle:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v0, p3}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 113
+    .line 148
     new-instance p3, Landroid/widget/ImageView;
 
     invoke-direct {p3, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomHandle:Landroid/widget/ImageView;
 
-    .line 114
+    .line 149
     iget-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomHandle:Landroid/widget/ImageView;
 
-    const v0, 0x7f080299
+    const v0, 0x7f08050c
 
     invoke-virtual {p3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 115
+    .line 150
     new-instance p3, Landroid/widget/FrameLayout$LayoutParams;
 
     const/16 v0, 0x51
 
     invoke-direct {p3, p4, p4, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    .line 117
+    .line 152
     iget-object p4, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomHandle:Landroid/widget/ImageView;
 
     invoke-virtual {p0, p4, p3}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 120
+    .line 155
     invoke-virtual {p2}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getAppWidgetInfo()Landroid/appwidget/AppWidgetProviderInfo;
 
     move-result-object p2
 
     iget-object p2, p2, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
-    const/4 p3, 0x0
-
-    .line 119
-    invoke-static {p1, p2, p3}, Landroid/appwidget/AppWidgetHostView;->getDefaultPaddingForWidget(Landroid/content/Context;Landroid/content/ComponentName;Landroid/graphics/Rect;)Landroid/graphics/Rect;
+    .line 154
+    invoke-static {p1, p2, v3}, Landroid/appwidget/AppWidgetHostView;->getDefaultPaddingForWidget(Landroid/content/Context;Landroid/content/ComponentName;Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object p1
 
-    .line 121
+    .line 156
     iget p2, p1, Landroid/graphics/Rect;->left:I
 
     iput p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetPaddingLeft:I
 
-    .line 122
+    .line 157
     iget p2, p1, Landroid/graphics/Rect;->top:I
 
     iput p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetPaddingTop:I
 
-    .line 123
+    .line 158
     iget p2, p1, Landroid/graphics/Rect;->right:I
 
     iput p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetPaddingRight:I
 
-    .line 124
+    .line 159
     iget p1, p1, Landroid/graphics/Rect;->bottom:I
 
     iput p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetPaddingBottom:I
 
-    .line 126
+    .line 161
     iget p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mResizeMode:I
 
     const/4 p2, 0x1
@@ -359,12 +433,12 @@
 
     if-ne p1, p2, :cond_0
 
-    .line 127
+    .line 162
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopHandle:Landroid/widget/ImageView;
 
     invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 128
+    .line 163
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomHandle:Landroid/widget/ImageView;
 
     invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setVisibility(I)V
@@ -374,17 +448,17 @@
     :cond_0
     if-ne p1, v1, :cond_1
 
-    .line 130
+    .line 165
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftHandle:Landroid/widget/ImageView;
 
     invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 131
+    .line 166
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightHandle:Landroid/widget/ImageView;
 
     invoke-virtual {p1, p3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 134
+    .line 169
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -405,7 +479,7 @@
 
     float-to-double p3, p1
 
-    .line 135
+    .line 170
     invoke-static {p3, p4}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide p3
@@ -414,14 +488,14 @@
 
     iput p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBackgroundPadding:I
 
-    .line 136
+    .line 171
     iget p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBackgroundPadding:I
 
     mul-int/2addr p1, v1
 
     iput p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTouchTargetWidth:I
 
-    .line 141
+    .line 176
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
 
     iget-object p3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetView:Lcom/miui/home/launcher/LauncherAppWidgetHostView;
@@ -431,12 +505,320 @@
     return-void
 .end method
 
+.method public static getMinMaxSizes(Ljava/util/List;Landroid/graphics/Rect;)Landroid/graphics/Rect;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Landroid/util/SizeF;",
+            ">;",
+            "Landroid/graphics/Rect;",
+            ")",
+            "Landroid/graphics/Rect;"
+        }
+    .end annotation
+
+    if-nez p1, :cond_0
+
+    .line 379
+    new-instance p1, Landroid/graphics/Rect;
+
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
+
+    .line 381
+    :cond_0
+    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    .line 382
+    invoke-virtual {p1, v1, v1, v1, v1}, Landroid/graphics/Rect;->set(IIII)V
+
+    goto :goto_1
+
+    .line 384
+    :cond_1
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/SizeF;
+
+    .line 385
+    invoke-virtual {v0}, Landroid/util/SizeF;->getWidth()F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getHeight()F
+
+    move-result v2
+
+    float-to-int v2, v2
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getWidth()F
+
+    move-result v3
+
+    float-to-int v3, v3
+
+    .line 386
+    invoke-virtual {v0}, Landroid/util/SizeF;->getHeight()F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    .line 385
+    invoke-virtual {p1, v1, v2, v3, v0}, Landroid/graphics/Rect;->set(IIII)V
+
+    const/4 v0, 0x1
+
+    .line 387
+    :goto_0
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_2
+
+    .line 388
+    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/util/SizeF;
+
+    invoke-virtual {v1}, Landroid/util/SizeF;->getWidth()F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/util/SizeF;
+
+    invoke-virtual {v2}, Landroid/util/SizeF;->getHeight()F
+
+    move-result v2
+
+    float-to-int v2, v2
+
+    invoke-virtual {p1, v1, v2}, Landroid/graphics/Rect;->union(II)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    :goto_1
+    return-object p1
+.end method
+
+.method private static getWidgetSize(Landroid/content/Context;Landroid/graphics/Point;III)Landroid/util/SizeF;
+    .locals 3
+
+    .line 345
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
+
+    add-int/lit8 v0, p2, -0x1
+
+    mul-int/2addr v0, p4
+
+    int-to-float v0, v0
+
+    add-int/lit8 v1, p3, -0x1
+
+    mul-int/2addr v1, p4
+
+    int-to-float p4, v1
+
+    .line 349
+    new-instance v1, Landroid/util/SizeF;
+
+    iget v2, p1, Landroid/graphics/Point;->x:I
+
+    mul-int/2addr p2, v2
+
+    int-to-float p2, p2
+
+    add-float/2addr p2, v0
+
+    div-float/2addr p2, p0
+
+    iget p1, p1, Landroid/graphics/Point;->y:I
+
+    mul-int/2addr p3, p1
+
+    int-to-float p1, p3
+
+    add-float/2addr p1, p4
+
+    div-float/2addr p1, p0
+
+    invoke-direct {v1, p2, p1}, Landroid/util/SizeF;-><init>(FF)V
+
+    return-object v1
+.end method
+
+.method public static getWidgetSizes(Landroid/content/Context;II)Ljava/util/ArrayList;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "II)",
+            "Ljava/util/ArrayList<",
+            "Landroid/util/SizeF;",
+            ">;"
+        }
+    .end annotation
+
+    .line 355
+    sget-object v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->CELL_SIZE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
+
+    invoke-virtual {v0, p0}, Lcom/miui/home/launcher/util/MainThreadInitializedObject;->get(Landroid/content/Context;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Landroid/graphics/Point;
+
+    .line 356
+    sget-object v1, Lcom/miui/home/launcher/AppWidgetResizeFrame;->BORDER_SPACING_SIZE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
+
+    invoke-virtual {v1, p0}, Lcom/miui/home/launcher/util/MainThreadInitializedObject;->get(Landroid/content/Context;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [I
+
+    const/4 v2, 0x0
+
+    .line 358
+    aget-object v3, v0, v2
+
+    aget v2, v1, v2
+
+    invoke-static {p0, v3, p1, p2, v2}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->getWidgetSize(Landroid/content/Context;Landroid/graphics/Point;III)Landroid/util/SizeF;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    .line 359
+    aget-object v0, v0, v3
+
+    aget v1, v1, v3
+
+    invoke-static {p0, v0, p1, p2, v1}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->getWidgetSize(Landroid/content/Context;Landroid/graphics/Point;III)Landroid/util/SizeF;
+
+    move-result-object p0
+
+    .line 361
+    new-instance p1, Ljava/util/ArrayList;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p1, p2}, Ljava/util/ArrayList;-><init>(I)V
+
+    .line 362
+    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 363
+    invoke-virtual {p1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-object p1
+.end method
+
+.method static synthetic lambda$static$0(Landroid/content/Context;)[Landroid/graphics/Point;
+    .locals 3
+
+    .line 31
+    sget-object p0, Lcom/miui/home/launcher/DeviceConfig;->INSTANCE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
+
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/util/MainThreadInitializedObject;->get(Landroid/content/Context;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/miui/home/launcher/DeviceConfig;
+
+    const/4 v0, 0x2
+
+    .line 32
+    new-array v0, v0, [Landroid/graphics/Point;
+
+    iget-object v1, p0, Lcom/miui/home/launcher/DeviceConfig;->landscapeProfile:Lcom/miui/home/launcher/DeviceProfile;
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/DeviceProfile;->getWidgetCellSize()Landroid/graphics/Point;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    aput-object v1, v0, v2
+
+    iget-object p0, p0, Lcom/miui/home/launcher/DeviceConfig;->portraitProfile:Lcom/miui/home/launcher/DeviceProfile;
+
+    .line 33
+    invoke-virtual {p0}, Lcom/miui/home/launcher/DeviceProfile;->getWidgetCellSize()Landroid/graphics/Point;
+
+    move-result-object p0
+
+    const/4 v1, 0x1
+
+    aput-object p0, v0, v1
+
+    return-object v0
+.end method
+
+.method static synthetic lambda$static$1(Landroid/content/Context;)[I
+    .locals 0
+
+    const/4 p0, 0x2
+
+    .line 43
+    new-array p0, p0, [I
+
+    fill-array-data p0, :array_0
+
+    return-object p0
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x0
+    .end array-data
+.end method
+
 .method private resizeWidgetIfNeeded(Z)V
-    .locals 17
+    .locals 21
 
     move-object/from16 v0, p0
 
-    .line 226
+    .line 261
     iget-object v1, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/CellLayout;->getCellWidth()I
@@ -451,7 +833,7 @@
 
     add-int/2addr v1, v2
 
-    .line 227
+    .line 262
     iget-object v2, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/CellLayout;->getCellHeight()I
@@ -466,14 +848,14 @@
 
     add-int/2addr v2, v3
 
-    .line 229
+    .line 264
     iget v3, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaX:I
 
     iget v4, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaXAddOn:I
 
     add-int/2addr v3, v4
 
-    .line 230
+    .line 265
     iget v4, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaY:I
 
     iget v5, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaYAddOn:I
@@ -490,7 +872,7 @@
 
     div-float/2addr v3, v1
 
-    .line 232
+    .line 267
     iget v1, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRunningHInc:I
 
     int-to-float v1, v1
@@ -505,453 +887,317 @@
 
     div-float/2addr v1, v2
 
-    .line 233
+    .line 268
     iget v2, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRunningVInc:I
 
     int-to-float v2, v2
 
     sub-float/2addr v1, v2
 
-    .line 240
+    .line 273
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
+
+    move-result v10
+
+    .line 274
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
+
+    move-result v17
+
+    .line 276
+    invoke-static {v3}, Ljava/lang/Math;->abs(F)F
 
     move-result v2
 
-    .line 241
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
+    const v4, 0x3f28f5c3    # 0.66f
 
-    move-result v4
+    cmpl-float v2, v2, v4
 
-    .line 243
-    invoke-static {v3}, Ljava/lang/Math;->abs(F)F
+    const/16 v19, 0x0
 
-    move-result v5
+    if-lez v2, :cond_0
 
-    const v6, 0x3f28f5c3    # 0.66f
-
-    cmpl-float v5, v5, v6
-
-    const/4 v7, 0x0
-
-    if-lez v5, :cond_0
-
-    .line 244
+    .line 277
     invoke-static {v3}, Ljava/lang/Math;->round(F)I
 
-    move-result v3
+    move-result v2
+
+    move v7, v2
 
     goto :goto_0
 
     :cond_0
-    move v3, v7
+    move/from16 v7, v19
 
-    .line 246
+    .line 279
     :goto_0
     invoke-static {v1}, Ljava/lang/Math;->abs(F)F
 
-    move-result v5
+    move-result v2
 
-    cmpl-float v5, v5, v6
+    cmpl-float v2, v2, v4
 
-    if-lez v5, :cond_1
+    if-lez v2, :cond_1
 
-    .line 247
+    .line 280
     invoke-static {v1}, Ljava/lang/Math;->round(F)I
 
     move-result v1
 
+    move v14, v1
+
     goto :goto_1
 
     :cond_1
-    move v1, v7
+    move/from16 v14, v19
 
     :goto_1
     if-nez p1, :cond_2
 
-    if-nez v3, :cond_2
+    if-nez v7, :cond_2
 
-    if-nez v1, :cond_2
+    if-nez v14, :cond_2
 
     return-void
 
-    .line 253
-    :cond_2
-    iget-object v5, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetView:Lcom/miui/home/launcher/LauncherAppWidgetHostView;
-
-    invoke-virtual {v5}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getTag()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lcom/miui/home/launcher/ItemInfo;
-
-    .line 255
-    iget v6, v5, Lcom/miui/home/launcher/ItemInfo;->spanX:I
-
-    .line 256
-    iget v8, v5, Lcom/miui/home/launcher/ItemInfo;->spanY:I
-
-    .line 257
-    iget v9, v5, Lcom/miui/home/launcher/ItemInfo;->cellX:I
-
-    .line 258
-    iget v10, v5, Lcom/miui/home/launcher/ItemInfo;->cellY:I
-
-    .line 265
-    iget-boolean v11, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftBorderActive:Z
-
-    if-eqz v11, :cond_3
-
-    neg-int v2, v9
-
-    .line 266
-    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result v2
-
-    .line 267
-    iget v11, v5, Lcom/miui/home/launcher/ItemInfo;->spanX:I
-
-    iget v12, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMinHSpan:I
-
-    sub-int/2addr v11, v12
-
-    invoke-static {v11, v2}, Ljava/lang/Math;->min(II)I
-
-    move-result v2
-
-    mul-int/lit8 v3, v3, -0x1
-
-    .line 269
-    invoke-static {v9, v3}, Ljava/lang/Math;->min(II)I
-
-    move-result v3
-
-    .line 270
-    iget v11, v5, Lcom/miui/home/launcher/ItemInfo;->spanX:I
-
-    iget v12, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMinHSpan:I
-
-    sub-int/2addr v11, v12
-
-    neg-int v11, v11
-
-    invoke-static {v11, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result v3
-
-    neg-int v11, v3
-
-    move/from16 v16, v11
-
-    move v11, v2
-
-    move/from16 v2, v16
-
-    goto :goto_2
-
-    .line 273
-    :cond_3
-    iget-boolean v11, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightBorderActive:Z
-
-    if-eqz v11, :cond_4
-
-    add-int v11, v9, v6
-
-    sub-int/2addr v2, v11
-
-    .line 274
-    invoke-static {v2, v3}, Ljava/lang/Math;->min(II)I
-
-    move-result v2
-
-    .line 275
-    iget v3, v5, Lcom/miui/home/launcher/ItemInfo;->spanX:I
-
-    iget v11, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMinHSpan:I
-
-    sub-int/2addr v3, v11
-
-    neg-int v3, v3
-
-    invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
-
-    move-result v2
-
-    move v3, v2
-
-    move v11, v7
-
-    goto :goto_2
-
-    :cond_4
-    move v2, v7
-
-    move v11, v2
-
-    .line 279
-    :goto_2
-    iget-boolean v12, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopBorderActive:Z
-
-    if-eqz v12, :cond_5
-
-    neg-int v4, v10
-
-    .line 280
-    invoke-static {v4, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v4
-
-    .line 281
-    iget v12, v5, Lcom/miui/home/launcher/ItemInfo;->spanY:I
-
-    iget v13, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMinVSpan:I
-
-    sub-int/2addr v12, v13
-
-    invoke-static {v12, v4}, Ljava/lang/Math;->min(II)I
-
-    move-result v4
-
-    mul-int/lit8 v1, v1, -0x1
-
-    .line 283
-    invoke-static {v10, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    .line 284
-    iget v12, v5, Lcom/miui/home/launcher/ItemInfo;->spanY:I
-
-    iget v13, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMinVSpan:I
-
-    sub-int/2addr v12, v13
-
-    neg-int v12, v12
-
-    invoke-static {v12, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v1
-
-    neg-int v12, v1
-
-    move/from16 v16, v12
-
-    move v12, v1
-
-    move/from16 v1, v16
-
-    goto :goto_3
-
     .line 286
-    :cond_5
-    iget-boolean v12, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomBorderActive:Z
+    :cond_2
+    iget-object v1, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetView:Lcom/miui/home/launcher/LauncherAppWidgetHostView;
 
-    if-eqz v12, :cond_6
+    invoke-virtual {v1}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getTag()Ljava/lang/Object;
 
-    add-int v12, v10, v8
+    move-result-object v1
 
-    sub-int/2addr v4, v12
-
-    .line 287
-    invoke-static {v4, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
+    check-cast v1, Lcom/miui/home/launcher/ItemInfo;
 
     .line 288
-    iget v4, v5, Lcom/miui/home/launcher/ItemInfo;->spanY:I
+    iget v2, v1, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
-    iget v12, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMinVSpan:I
+    .line 289
+    iget v3, v1, Lcom/miui/home/launcher/ItemInfo;->spanY:I
 
-    sub-int/2addr v4, v12
+    .line 290
+    iget v4, v1, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    neg-int v4, v4
+    .line 291
+    iget v12, v1, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
-    invoke-static {v4, v1}, Ljava/lang/Math;->max(II)I
+    .line 293
+    iget-object v5, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDirectionVector:[I
 
-    move-result v1
+    aput v19, v5, v19
 
-    move v12, v1
+    const/16 v20, 0x1
 
-    move v4, v7
+    .line 294
+    aput v19, v5, v20
+
+    .line 298
+    iget-object v5, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTempRange1:Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
+    add-int/2addr v2, v4
+
+    invoke-virtual {v5, v4, v2}, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->set(II)V
+
+    .line 299
+    iget-object v4, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTempRange1:Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
+    iget-boolean v5, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftBorderActive:Z
+
+    iget-boolean v6, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightBorderActive:Z
+
+    iget v8, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMinHSpan:I
+
+    iget v9, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMaxHSpan:I
+
+    iget-object v11, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTempRange2:Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
+    invoke-virtual/range {v4 .. v11}, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->applyDeltaAndBound(ZZIIIILcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;)I
+
+    move-result v2
+
+    .line 301
+    iget-object v4, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTempRange2:Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
+    iget v4, v4, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->start:I
+
+    .line 302
+    iget-object v5, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTempRange2:Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
+    invoke-virtual {v5}, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->size()I
+
+    move-result v5
+
+    const/4 v6, -0x1
+
+    if-eqz v2, :cond_4
+
+    .line 304
+    iget-object v7, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDirectionVector:[I
+
+    iget-boolean v8, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftBorderActive:Z
+
+    if-eqz v8, :cond_3
+
+    move v8, v6
+
+    goto :goto_2
+
+    :cond_3
+    move/from16 v8, v20
+
+    :goto_2
+    aput v8, v7, v19
+
+    .line 307
+    :cond_4
+    iget-object v7, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTempRange1:Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
+    add-int/2addr v3, v12
+
+    invoke-virtual {v7, v12, v3}, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->set(II)V
+
+    .line 308
+    iget-object v11, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTempRange1:Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
+    iget-boolean v12, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopBorderActive:Z
+
+    iget-boolean v13, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomBorderActive:Z
+
+    iget v15, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMinVSpan:I
+
+    iget v3, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mMaxVSpan:I
+
+    iget-object v7, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTempRange2:Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
+    move/from16 v16, v3
+
+    move-object/from16 v18, v7
+
+    invoke-virtual/range {v11 .. v18}, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->applyDeltaAndBound(ZZIIIILcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;)I
+
+    move-result v3
+
+    .line 310
+    iget-object v7, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTempRange2:Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
+    iget v7, v7, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->start:I
+
+    .line 311
+    iget-object v8, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTempRange2:Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;
+
+    invoke-virtual {v8}, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->size()I
+
+    move-result v8
+
+    if-eqz v3, :cond_6
+
+    .line 313
+    iget-object v9, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDirectionVector:[I
+
+    iget-boolean v10, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopBorderActive:Z
+
+    if-eqz v10, :cond_5
 
     goto :goto_3
 
-    :cond_6
-    move v12, v1
+    :cond_5
+    move/from16 v6, v20
 
-    move v1, v7
-
-    move v4, v1
-
-    .line 292
     :goto_3
-    iget-object v13, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDirectionVector:[I
+    aput v6, v9, v20
 
-    aput v7, v13, v7
+    :cond_6
+    if-nez p1, :cond_7
 
-    const/4 v14, 0x1
+    if-nez v3, :cond_7
 
-    .line 293
-    aput v7, v13, v14
+    if-nez v2, :cond_7
 
-    .line 295
-    iget-boolean v13, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftBorderActive:Z
-
-    const/4 v15, -0x1
-
-    if-nez v13, :cond_7
-
-    iget-boolean v13, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightBorderActive:Z
-
-    if-eqz v13, :cond_9
+    return-void
 
     :cond_7
-    add-int/2addr v6, v3
+    if-eqz p1, :cond_8
 
-    add-int/2addr v9, v11
+    .line 321
+    iget-object v6, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDirectionVector:[I
 
-    if-eqz v2, :cond_9
+    iget-object v9, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLastDirectionVector:[I
 
-    .line 299
-    iget-object v3, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDirectionVector:[I
+    aget v10, v9, v19
 
-    iget-boolean v11, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftBorderActive:Z
+    aput v10, v6, v19
 
-    if-eqz v11, :cond_8
+    .line 322
+    aget v9, v9, v20
 
-    move v11, v15
+    aput v9, v6, v20
 
     goto :goto_4
 
-    :cond_8
-    move v11, v14
-
-    :goto_4
-    aput v11, v3, v7
-
-    .line 303
-    :cond_9
-    iget-boolean v3, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopBorderActive:Z
-
-    if-nez v3, :cond_a
-
-    iget-boolean v3, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomBorderActive:Z
-
-    if-eqz v3, :cond_c
-
-    :cond_a
-    add-int/2addr v8, v12
-
-    add-int/2addr v10, v4
-
-    if-eqz v1, :cond_c
-
-    .line 307
-    iget-object v3, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDirectionVector:[I
-
-    iget-boolean v4, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopBorderActive:Z
-
-    if-eqz v4, :cond_b
-
-    goto :goto_5
-
-    :cond_b
-    move v15, v14
-
-    :goto_5
-    aput v15, v3, v14
-
-    :cond_c
-    if-nez p1, :cond_d
-
-    if-nez v1, :cond_d
-
-    if-nez v2, :cond_d
-
-    return-void
-
-    :cond_d
-    if-eqz p1, :cond_e
-
-    .line 316
-    iget-object v3, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDirectionVector:[I
-
-    iget-object v4, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLastDirectionVector:[I
-
-    aget v11, v4, v7
-
-    aput v11, v3, v7
-
-    .line 317
-    aget v4, v4, v14
-
-    aput v4, v3, v14
-
-    goto :goto_6
-
-    .line 319
-    :cond_e
-    iget-object v3, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLastDirectionVector:[I
-
-    iget-object v4, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDirectionVector:[I
-
-    aget v11, v4, v7
-
-    aput v11, v3, v7
-
-    .line 320
-    aget v4, v4, v14
-
-    aput v4, v3, v14
-
-    :goto_6
-    if-ltz v9, :cond_f
-
-    if-ltz v10, :cond_f
-
-    .line 323
-    iget-object v3, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
-
     .line 324
-    invoke-virtual {v3, v9, v10, v6, v8}, Lcom/miui/home/launcher/CellLayout;->isCellOccupied(IIII)Z
+    :cond_8
+    iget-object v6, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLastDirectionVector:[I
 
-    move-result v3
+    iget-object v9, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDirectionVector:[I
 
-    if-nez v3, :cond_f
+    aget v10, v9, v19
+
+    aput v10, v6, v19
 
     .line 325
-    iput v9, v5, Lcom/miui/home/launcher/ItemInfo;->cellX:I
+    aget v9, v9, v20
 
-    .line 326
-    iput v10, v5, Lcom/miui/home/launcher/ItemInfo;->cellY:I
+    aput v9, v6, v20
 
-    .line 327
-    iput v6, v5, Lcom/miui/home/launcher/ItemInfo;->spanX:I
+    :goto_4
+    if-ltz v4, :cond_9
+
+    if-ltz v7, :cond_9
 
     .line 328
-    iput v8, v5, Lcom/miui/home/launcher/ItemInfo;->spanY:I
+    iget-object v6, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
 
     .line 329
-    iget v3, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRunningVInc:I
+    invoke-virtual {v6, v4, v7, v5, v8}, Lcom/miui/home/launcher/CellLayout;->isCellOccupied(IIII)Z
 
-    add-int/2addr v3, v1
+    move-result v6
 
-    iput v3, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRunningVInc:I
+    if-nez v6, :cond_9
 
     .line 330
+    iput v4, v1, Lcom/miui/home/launcher/ItemInfo;->cellX:I
+
+    .line 331
+    iput v7, v1, Lcom/miui/home/launcher/ItemInfo;->cellY:I
+
+    .line 332
+    iput v5, v1, Lcom/miui/home/launcher/ItemInfo;->spanX:I
+
+    .line 333
+    iput v8, v1, Lcom/miui/home/launcher/ItemInfo;->spanY:I
+
+    .line 334
+    iget v1, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRunningVInc:I
+
+    add-int/2addr v1, v3
+
+    iput v1, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRunningVInc:I
+
+    .line 335
     iget v1, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRunningHInc:I
 
     add-int/2addr v1, v2
 
     iput v1, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRunningHInc:I
 
-    if-nez p1, :cond_f
+    if-nez p1, :cond_9
 
-    .line 332
-    invoke-virtual {v0, v6, v8}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->updateWidgetSizeRanges(II)V
+    .line 337
+    invoke-virtual {v0, v5, v8}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->updateWidgetSizeRanges(II)V
 
-    .line 335
-    :cond_f
+    .line 340
+    :cond_9
     iget-object v1, v0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetView:Lcom/miui/home/launcher/LauncherAppWidgetHostView;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->requestLayout()V
@@ -962,22 +1208,22 @@
 .method private visualizeResizeForDelta(IIZ)V
     .locals 1
 
-    .line 201
+    .line 236
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->updateDeltas(II)V
 
-    .line 202
+    .line 237
     invoke-virtual {p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Lcom/miui/home/launcher/DragLayer$LayoutParams;
 
-    .line 204
+    .line 239
     iget-boolean p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftBorderActive:Z
 
     if-eqz p2, :cond_0
 
-    .line 205
+    .line 240
     iget p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineX:I
 
     iget v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaX:I
@@ -986,7 +1232,7 @@
 
     iput p2, p1, Lcom/miui/home/launcher/DragLayer$LayoutParams;->x:I
 
-    .line 206
+    .line 241
     iget p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineWidth:I
 
     sub-int/2addr p2, v0
@@ -995,13 +1241,13 @@
 
     goto :goto_0
 
-    .line 207
+    .line 242
     :cond_0
     iget-boolean p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightBorderActive:Z
 
     if-eqz p2, :cond_1
 
-    .line 208
+    .line 243
     iget p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineWidth:I
 
     iget v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaX:I
@@ -1010,14 +1256,14 @@
 
     iput p2, p1, Lcom/miui/home/launcher/DragLayer$LayoutParams;->width:I
 
-    .line 211
+    .line 246
     :cond_1
     :goto_0
     iget-boolean p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopBorderActive:Z
 
     if-eqz p2, :cond_2
 
-    .line 212
+    .line 247
     iget p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineY:I
 
     iget v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaY:I
@@ -1026,7 +1272,7 @@
 
     iput p2, p1, Lcom/miui/home/launcher/DragLayer$LayoutParams;->y:I
 
-    .line 213
+    .line 248
     iget p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineHeight:I
 
     sub-int/2addr p2, v0
@@ -1035,13 +1281,13 @@
 
     goto :goto_1
 
-    .line 214
+    .line 249
     :cond_2
     iget-boolean p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomBorderActive:Z
 
     if-eqz p2, :cond_3
 
-    .line 215
+    .line 250
     iget p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineHeight:I
 
     iget v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaY:I
@@ -1050,12 +1296,12 @@
 
     iput p2, p1, Lcom/miui/home/launcher/DragLayer$LayoutParams;->height:I
 
-    .line 218
+    .line 253
     :cond_3
     :goto_1
     invoke-direct {p0, p3}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->resizeWidgetIfNeeded(Z)V
 
-    .line 219
+    .line 254
     invoke-virtual {p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->requestLayout()V
 
     return-void
@@ -1066,7 +1312,7 @@
 .method public beginResizeIfPointInRegion(II)Z
     .locals 6
 
-    .line 145
+    .line 180
     iget v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mResizeMode:I
 
     const/4 v1, 0x1
@@ -1084,7 +1330,7 @@
     :cond_0
     move v0, v2
 
-    .line 146
+    .line 181
     :goto_0
     iget v3, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mResizeMode:I
 
@@ -1099,7 +1345,7 @@
     :cond_1
     move v3, v2
 
-    .line 148
+    .line 183
     :goto_1
     iget v4, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTouchTargetWidth:I
 
@@ -1117,7 +1363,7 @@
     :goto_2
     iput-boolean v4, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftBorderActive:Z
 
-    .line 149
+    .line 184
     invoke-virtual {p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->getWidth()I
 
     move-result v4
@@ -1140,7 +1386,7 @@
     :goto_3
     iput-boolean p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightBorderActive:Z
 
-    .line 150
+    .line 185
     iget p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTouchTargetWidth:I
 
     iget v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopTouchRegionAdjustment:I
@@ -1161,7 +1407,7 @@
     :goto_4
     iput-boolean p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopBorderActive:Z
 
-    .line 151
+    .line 186
     invoke-virtual {p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->getHeight()I
 
     move-result p1
@@ -1188,7 +1434,7 @@
     :goto_5
     iput-boolean p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomBorderActive:Z
 
-    .line 154
+    .line 189
     iget-boolean p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftBorderActive:Z
 
     if-nez p1, :cond_7
@@ -1210,7 +1456,7 @@
     :cond_6
     move v1, v2
 
-    .line 157
+    .line 192
     :cond_7
     :goto_6
     invoke-virtual {p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->getMeasuredWidth()I
@@ -1219,21 +1465,21 @@
 
     iput p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineWidth:I
 
-    .line 158
+    .line 193
     invoke-virtual {p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->getMeasuredHeight()I
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineHeight:I
 
-    .line 159
+    .line 194
     invoke-virtual {p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->getLeft()I
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineX:I
 
-    .line 160
+    .line 195
     invoke-virtual {p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->getTop()I
 
     move-result p1
@@ -1242,7 +1488,7 @@
 
     if-eqz v1, :cond_c
 
-    .line 163
+    .line 198
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftHandle:Landroid/widget/ImageView;
 
     iget-boolean p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftBorderActive:Z
@@ -1263,7 +1509,7 @@
     :goto_7
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 164
+    .line 199
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightHandle:Landroid/widget/ImageView;
 
     iget-boolean p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightBorderActive:Z
@@ -1280,7 +1526,7 @@
     :goto_8
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 165
+    .line 200
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopHandle:Landroid/widget/ImageView;
 
     iget-boolean p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopBorderActive:Z
@@ -1297,7 +1543,7 @@
     :goto_9
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 166
+    .line 201
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomHandle:Landroid/widget/ImageView;
 
     iget-boolean p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomBorderActive:Z
@@ -1321,10 +1567,10 @@
 
     const/4 v0, 0x1
 
-    .line 349
+    .line 405
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->resizeWidgetIfNeeded(Z)V
 
-    .line 350
+    .line 406
     iget-object v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
 
     iget-object v1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetView:Lcom/miui/home/launcher/LauncherAppWidgetHostView;
@@ -1333,7 +1579,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/CellLayout;->updateCellOccupiedMarks(Landroid/view/View;Z)V
 
-    .line 351
+    .line 407
     iget-object v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetView:Lcom/miui/home/launcher/LauncherAppWidgetHostView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getTag()Ljava/lang/Object;
@@ -1342,7 +1588,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 352
+    .line 408
     invoke-virtual {p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -1365,7 +1611,7 @@
 
     invoke-static/range {v1 .. v6}, Lcom/miui/home/launcher/LauncherModel;->resizeItemInDatabase(Landroid/content/Context;Lcom/miui/home/launcher/ItemInfo;IIII)V
 
-    .line 355
+    .line 411
     invoke-virtual {p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->requestLayout()V
 
     return-void
@@ -1374,7 +1620,7 @@
 .method public onTouchUp()V
     .locals 3
 
-    .line 359
+    .line 415
     iget-object v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->getCellWidth()I
@@ -1389,7 +1635,7 @@
 
     add-int/2addr v0, v1
 
-    .line 360
+    .line 416
     iget-object v1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/CellLayout;->getCellHeight()I
@@ -1404,14 +1650,14 @@
 
     add-int/2addr v1, v2
 
-    .line 362
+    .line 418
     iget v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRunningHInc:I
 
     mul-int/2addr v2, v0
 
     iput v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaXAddOn:I
 
-    .line 363
+    .line 419
     iget v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRunningVInc:I
 
     mul-int/2addr v0, v1
@@ -1420,13 +1666,13 @@
 
     const/4 v0, 0x0
 
-    .line 364
+    .line 420
     iput v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaX:I
 
-    .line 365
+    .line 421
     iput v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaY:I
 
-    .line 367
+    .line 423
     new-instance v0, Lcom/miui/home/launcher/AppWidgetResizeFrame$1;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame$1;-><init>(Lcom/miui/home/launcher/AppWidgetResizeFrame;)V
@@ -1439,14 +1685,14 @@
 .method public snapToWidget(Z)V
     .locals 12
 
-    .line 376
+    .line 432
     invoke-virtual {p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/DragLayer$LayoutParams;
 
-    .line 377
+    .line 433
     iget-object v1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetView:Lcom/miui/home/launcher/LauncherAppWidgetHostView;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getWidth()I
@@ -1469,7 +1715,7 @@
 
     sub-int/2addr v1, v2
 
-    .line 379
+    .line 435
     iget-object v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetView:Lcom/miui/home/launcher/LauncherAppWidgetHostView;
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/LauncherAppWidgetHostView;->getHeight()I
@@ -1490,7 +1736,7 @@
 
     sub-int/2addr v2, v4
 
-    .line 382
+    .line 438
     iget-object v4, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTmpPt:[F
 
     iget-object v5, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetView:Lcom/miui/home/launcher/LauncherAppWidgetHostView;
@@ -1505,7 +1751,7 @@
 
     aput v5, v4, v6
 
-    .line 383
+    .line 439
     iget-object v4, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTmpPt:[F
 
     iget-object v5, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetView:Lcom/miui/home/launcher/LauncherAppWidgetHostView;
@@ -1520,7 +1766,7 @@
 
     aput v5, v4, v7
 
-    .line 384
+    .line 440
     iget-object v4, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetView:Lcom/miui/home/launcher/LauncherAppWidgetHostView;
 
     iget-object v5, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDragLayer:Lcom/miui/home/launcher/DragLayer;
@@ -1529,7 +1775,7 @@
 
     invoke-static {v4, v5, v8, v7, v6}, Lcom/miui/home/launcher/common/Utilities;->getDescendantCoordRelativeToAncestor(Landroid/view/View;Landroid/view/View;[FZZ)F
 
-    .line 386
+    .line 442
     iget-object v4, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTmpPt:[F
 
     aget v5, v4, v6
@@ -1548,7 +1794,7 @@
 
     float-to-int v5, v5
 
-    .line 387
+    .line 443
     aget v4, v4, v7
 
     int-to-float v8, v8
@@ -1567,19 +1813,19 @@
 
     neg-int v8, v4
 
-    .line 394
+    .line 450
     iput v8, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopTouchRegionAdjustment:I
 
     goto :goto_0
 
-    .line 396
+    .line 452
     :cond_0
     iput v6, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopTouchRegionAdjustment:I
 
     :goto_0
     add-int v8, v4, v2
 
-    .line 398
+    .line 454
     iget-object v9, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDragLayer:Lcom/miui/home/launcher/DragLayer;
 
     invoke-virtual {v9}, Lcom/miui/home/launcher/DragLayer;->getHeight()I
@@ -1588,7 +1834,7 @@
 
     if-le v8, v9, :cond_1
 
-    .line 400
+    .line 456
     iget-object v9, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDragLayer:Lcom/miui/home/launcher/DragLayer;
 
     invoke-virtual {v9}, Lcom/miui/home/launcher/DragLayer;->getHeight()I
@@ -1603,7 +1849,7 @@
 
     goto :goto_1
 
-    .line 402
+    .line 458
     :cond_1
     iput v6, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomTouchRegionAdjustment:I
 
@@ -1612,39 +1858,39 @@
 
     if-nez p1, :cond_2
 
-    .line 406
+    .line 462
     iput v1, v0, Lcom/miui/home/launcher/DragLayer$LayoutParams;->width:I
 
-    .line 407
+    .line 463
     iput v2, v0, Lcom/miui/home/launcher/DragLayer$LayoutParams;->height:I
 
-    .line 408
+    .line 464
     iput v5, v0, Lcom/miui/home/launcher/DragLayer$LayoutParams;->x:I
 
-    .line 409
+    .line 465
     iput v4, v0, Lcom/miui/home/launcher/DragLayer$LayoutParams;->y:I
 
-    .line 410
+    .line 466
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftHandle:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v8}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 411
+    .line 467
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightHandle:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v8}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 412
+    .line 468
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopHandle:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v8}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 413
+    .line 469
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomHandle:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v8}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 414
+    .line 470
     invoke-virtual {p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->requestLayout()V
 
     goto/16 :goto_3
@@ -1652,7 +1898,7 @@
     :cond_2
     const-string p1, "width"
 
-    .line 416
+    .line 472
     new-array v9, v3, [I
 
     iget v10, v0, Lcom/miui/home/launcher/DragLayer$LayoutParams;->width:I
@@ -1667,7 +1913,7 @@
 
     const-string v1, "height"
 
-    .line 417
+    .line 473
     new-array v9, v3, [I
 
     iget v10, v0, Lcom/miui/home/launcher/DragLayer$LayoutParams;->height:I
@@ -1682,7 +1928,7 @@
 
     const-string v2, "x"
 
-    .line 419
+    .line 475
     new-array v9, v3, [I
 
     iget v10, v0, Lcom/miui/home/launcher/DragLayer$LayoutParams;->x:I
@@ -1697,7 +1943,7 @@
 
     const-string v5, "y"
 
-    .line 420
+    .line 476
     new-array v9, v3, [I
 
     iget v10, v0, Lcom/miui/home/launcher/DragLayer$LayoutParams;->y:I
@@ -1712,7 +1958,7 @@
 
     const/4 v5, 0x4
 
-    .line 421
+    .line 477
     new-array v9, v5, [Landroid/animation/PropertyValuesHolder;
 
     aput-object p1, v9, v6
@@ -1725,12 +1971,12 @@
 
     aput-object v4, v9, p1
 
-    .line 422
+    .line 478
     invoke-static {v0, p0, v9}, Lcom/miui/home/launcher/LauncherAnimUtils;->ofPropertyValuesHolder(Ljava/lang/Object;Landroid/view/View;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
-    .line 423
+    .line 479
     iget-object v1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftHandle:Landroid/widget/ImageView;
 
     const-string v2, "alpha"
@@ -1743,7 +1989,7 @@
 
     move-result-object v1
 
-    .line 424
+    .line 480
     iget-object v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightHandle:Landroid/widget/ImageView;
 
     const-string v4, "alpha"
@@ -1756,7 +2002,7 @@
 
     move-result-object v2
 
-    .line 425
+    .line 481
     iget-object v4, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopHandle:Landroid/widget/ImageView;
 
     const-string v9, "alpha"
@@ -1769,7 +2015,7 @@
 
     move-result-object v4
 
-    .line 426
+    .line 482
     iget-object v9, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomHandle:Landroid/widget/ImageView;
 
     const-string v10, "alpha"
@@ -1782,24 +2028,24 @@
 
     move-result-object v8
 
-    .line 427
+    .line 483
     new-instance v9, Lcom/miui/home/launcher/AppWidgetResizeFrame$2;
 
     invoke-direct {v9, p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame$2;-><init>(Lcom/miui/home/launcher/AppWidgetResizeFrame;)V
 
     invoke-virtual {v0, v9}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 432
+    .line 488
     invoke-static {}, Lcom/miui/home/launcher/LauncherAnimUtils;->createAnimatorSet()Landroid/animation/AnimatorSet;
 
     move-result-object v9
 
-    .line 433
+    .line 489
     iget v10, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mResizeMode:I
 
     if-ne v10, v3, :cond_3
 
-    .line 434
+    .line 490
     new-array p1, p1, [Landroid/animation/Animator;
 
     aput-object v0, p1, v6
@@ -1815,7 +2061,7 @@
     :cond_3
     if-ne v10, v7, :cond_4
 
-    .line 436
+    .line 492
     new-array p1, p1, [Landroid/animation/Animator;
 
     aput-object v0, p1, v6
@@ -1831,7 +2077,7 @@
     :cond_4
     const/4 v10, 0x5
 
-    .line 438
+    .line 494
     new-array v10, v10, [Landroid/animation/Animator;
 
     aput-object v0, v10, v6
@@ -1849,10 +2095,10 @@
     :goto_2
     const-wide/16 v0, 0x96
 
-    .line 441
+    .line 497
     invoke-virtual {v9, v0, v1}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 442
+    .line 498
     invoke-virtual {v9}, Landroid/animation/AnimatorSet;->start()V
 
     :goto_3
@@ -1862,12 +2108,12 @@
 .method public updateDeltas(II)V
     .locals 3
 
-    .line 176
+    .line 211
     iget-boolean v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mLeftBorderActive:Z
 
     if-eqz v0, :cond_0
 
-    .line 177
+    .line 212
     iget v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineX:I
 
     neg-int v0, v0
@@ -1878,7 +2124,7 @@
 
     iput p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaX:I
 
-    .line 178
+    .line 213
     iget p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineWidth:I
 
     iget v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTouchTargetWidth:I
@@ -1897,13 +2143,13 @@
 
     goto :goto_0
 
-    .line 179
+    .line 214
     :cond_0
     iget-boolean v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mRightBorderActive:Z
 
     if-eqz v0, :cond_1
 
-    .line 180
+    .line 215
     iget-object v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDragLayer:Lcom/miui/home/launcher/DragLayer;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DragLayer;->getWidth()I
@@ -1924,7 +2170,7 @@
 
     iput p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaX:I
 
-    .line 181
+    .line 216
     iget p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineWidth:I
 
     neg-int p1, p1
@@ -1943,14 +2189,14 @@
 
     iput p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaX:I
 
-    .line 184
+    .line 219
     :cond_1
     :goto_0
     iget-boolean p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTopBorderActive:Z
 
     if-eqz p1, :cond_2
 
-    .line 185
+    .line 220
     iget p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineY:I
 
     neg-int p1, p1
@@ -1961,7 +2207,7 @@
 
     iput p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaY:I
 
-    .line 186
+    .line 221
     iget p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineHeight:I
 
     iget p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTouchTargetWidth:I
@@ -1980,13 +2226,13 @@
 
     goto :goto_1
 
-    .line 187
+    .line 222
     :cond_2
     iget-boolean p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBottomBorderActive:Z
 
     if-eqz p1, :cond_3
 
-    .line 188
+    .line 223
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDragLayer:Lcom/miui/home/launcher/DragLayer;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragLayer;->getHeight()I
@@ -2007,7 +2253,7 @@
 
     iput p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mDeltaY:I
 
-    .line 189
+    .line 224
     iget p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mBaselineHeight:I
 
     neg-int p1, p1
@@ -2034,14 +2280,14 @@
 .method updateWidgetSizeRanges(II)V
     .locals 8
 
-    .line 339
+    .line 395
     iget-object v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mCellLayout:Lcom/miui/home/launcher/CellLayout;
 
     sget-object v1, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTmpRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1, p2, v1}, Lcom/miui/home/launcher/CellLayout;->getWidgetMeasureSpec(IILandroid/graphics/Rect;)Landroid/graphics/Rect;
 
-    .line 340
+    .line 396
     iget-object v2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mWidgetView:Lcom/miui/home/launcher/LauncherAppWidgetHostView;
 
     sget-object p1, Lcom/miui/home/launcher/AppWidgetResizeFrame;->mTmpRect:Landroid/graphics/Rect;
@@ -2072,7 +2318,7 @@
 
     const/4 v0, 0x0
 
-    .line 194
+    .line 229
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->visualizeResizeForDelta(IIZ)V
 
     return-void

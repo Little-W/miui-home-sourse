@@ -26,7 +26,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100262
+    const v1, 0x7f10035f
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -39,7 +39,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f08025f
+    const v1, 0x7f0804d2
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -50,7 +50,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$getOnClickListener$401(Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$AppDetailsShortcutMenuItem;Landroid/view/View;)V
+.method public static synthetic lambda$getOnClickListener$0(Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$AppDetailsShortcutMenuItem;Landroid/view/View;)V
     .locals 3
 
     const-string v0, "ShortcutMenu"
@@ -101,9 +101,9 @@
     .locals 1
 
     .line 83
-    new-instance v0, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$AppDetailsShortcutMenuItem$3TNfNPvtddg8Nj7ZL-4Th7KJYkY;
+    new-instance v0, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$AppDetailsShortcutMenuItem$vXNHGAKx6fIqu-bO5QUoHo7FXaw;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$AppDetailsShortcutMenuItem$3TNfNPvtddg8Nj7ZL-4Th7KJYkY;-><init>(Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$AppDetailsShortcutMenuItem;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$AppDetailsShortcutMenuItem$vXNHGAKx6fIqu-bO5QUoHo7FXaw;-><init>(Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$AppDetailsShortcutMenuItem;)V
 
     return-object v0
 .end method

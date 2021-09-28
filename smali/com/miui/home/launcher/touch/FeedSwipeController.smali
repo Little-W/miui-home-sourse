@@ -335,15 +335,17 @@
 
     move-result-wide v0
 
+    move-wide v7, v0
+
     goto :goto_0
 
     :cond_0
     const-wide/16 v0, 0x0
 
-    :goto_0
     move-wide v7, v0
 
     .line 572
+    :goto_0
     iget-object v4, p0, Lcom/miui/home/launcher/touch/FeedSwipeController;->mToState:Lcom/miui/home/launcher/LauncherState;
 
     const/high16 v6, 0x3f800000    # 1.0f
@@ -404,7 +406,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$startAnim$173(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;)V
+.method public static synthetic lambda$startAnim$0(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;)V
     .locals 0
 
     .line 343
@@ -413,7 +415,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$startAnim$174(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;Ljava/lang/Runnable;)V
+.method public static synthetic lambda$startAnim$1(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;Ljava/lang/Runnable;)V
     .locals 0
 
     .line 346
@@ -499,6 +501,7 @@
 
     if-nez p2, :cond_3
 
+    .line 269
     iget-object p2, p0, Lcom/miui/home/launcher/touch/FeedSwipeController;->mToState:Lcom/miui/home/launcher/LauncherState;
 
     goto :goto_1
@@ -796,15 +799,17 @@
 
     move-result-wide v0
 
+    move-wide v7, v0
+
     goto :goto_0
 
     :cond_0
     const-wide/16 v0, 0x0
 
-    :goto_0
     move-wide v7, v0
 
     .line 582
+    :goto_0
     iget-object v4, p0, Lcom/miui/home/launcher/touch/FeedSwipeController;->mToState:Lcom/miui/home/launcher/LauncherState;
 
     const/high16 v6, 0x3f800000    # 1.0f
@@ -833,9 +838,9 @@
     .line 343
     iget-object p7, p0, Lcom/miui/home/launcher/touch/FeedSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
-    new-instance v0, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$IAW8hJclobrn_-YJt14L5DB2My4;
+    new-instance v0, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$vvfnAOToMbaWQXwg3iNZzbFPyNc;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$IAW8hJclobrn_-YJt14L5DB2My4;-><init>(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$vvfnAOToMbaWQXwg3iNZzbFPyNc;-><init>(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;)V
 
     invoke-virtual {p7, v0}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->setEndAction(Ljava/lang/Runnable;)V
 
@@ -845,9 +850,9 @@
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/touch/FeedSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
-    new-instance v1, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$jp4pV93JkJpxp2HpW9FG3XcCHpg;
+    new-instance v1, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$3AsGgls2fwRP_uSmSIKhkCm0kFs;
 
-    invoke-direct {v1, p0, p1, p7}, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$jp4pV93JkJpxp2HpW9FG3XcCHpg;-><init>(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;Ljava/lang/Runnable;)V
+    invoke-direct {v1, p0, p1, p7}, Lcom/miui/home/launcher/touch/-$$Lambda$FeedSwipeController$3AsGgls2fwRP_uSmSIKhkCm0kFs;-><init>(Lcom/miui/home/launcher/touch/FeedSwipeController;Lcom/miui/home/launcher/LauncherState;Ljava/lang/Runnable;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->setEndAction(Ljava/lang/Runnable;)V
 

@@ -1,4 +1,4 @@
-.class final Landroidx/fragment/app/FragmentTransition$1;
+.class Landroidx/fragment/app/FragmentTransition$1;
 .super Ljava/lang/Object;
 .source "FragmentTransition.java"
 
@@ -8,25 +8,33 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/fragment/app/FragmentTransition;->replaceHide(Landroidx/fragment/app/FragmentTransitionImpl;Ljava/lang/Object;Landroidx/fragment/app/Fragment;Ljava/util/ArrayList;)V
+    value = Landroidx/fragment/app/FragmentTransition;->configureTransitionsReordered(Landroid/view/ViewGroup;Landroidx/fragment/app/FragmentTransition$FragmentContainerTransition;Landroid/view/View;Landroidx/collection/ArrayMap;Landroidx/fragment/app/FragmentTransition$Callback;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$exitingViews:Ljava/util/ArrayList;
+.field final synthetic val$callback:Landroidx/fragment/app/FragmentTransition$Callback;
+
+.field final synthetic val$outFragment:Landroidx/fragment/app/Fragment;
+
+.field final synthetic val$signal:Landroidx/core/os/CancellationSignal;
 
 
 # direct methods
-.method constructor <init>(Ljava/util/ArrayList;)V
+.method constructor <init>(Landroidx/fragment/app/FragmentTransition$Callback;Landroidx/fragment/app/Fragment;Landroidx/core/os/CancellationSignal;)V
     .locals 0
 
-    .line 285
-    iput-object p1, p0, Landroidx/fragment/app/FragmentTransition$1;->val$exitingViews:Ljava/util/ArrayList;
+    .line 275
+    iput-object p1, p0, Landroidx/fragment/app/FragmentTransition$1;->val$callback:Landroidx/fragment/app/FragmentTransition$Callback;
+
+    iput-object p2, p0, Landroidx/fragment/app/FragmentTransition$1;->val$outFragment:Landroidx/fragment/app/Fragment;
+
+    iput-object p3, p0, Landroidx/fragment/app/FragmentTransition$1;->val$signal:Landroidx/core/os/CancellationSignal;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,14 +44,16 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
-    .line 288
-    iget-object v0, p0, Landroidx/fragment/app/FragmentTransition$1;->val$exitingViews:Ljava/util/ArrayList;
+    .line 278
+    iget-object v0, p0, Landroidx/fragment/app/FragmentTransition$1;->val$callback:Landroidx/fragment/app/FragmentTransition$Callback;
 
-    const/4 v1, 0x4
+    iget-object v1, p0, Landroidx/fragment/app/FragmentTransition$1;->val$outFragment:Landroidx/fragment/app/Fragment;
 
-    invoke-static {v0, v1}, Landroidx/fragment/app/FragmentTransition;->setViewVisibility(Ljava/util/ArrayList;I)V
+    iget-object v2, p0, Landroidx/fragment/app/FragmentTransition$1;->val$signal:Landroidx/core/os/CancellationSignal;
+
+    invoke-interface {v0, v1, v2}, Landroidx/fragment/app/FragmentTransition$Callback;->onComplete(Landroidx/fragment/app/Fragment;Landroidx/core/os/CancellationSignal;)V
 
     return-void
 .end method

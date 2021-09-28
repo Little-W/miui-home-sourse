@@ -7,7 +7,7 @@
 .method public static isInLinkList(Ljava/lang/String;)Z
     .locals 4
 
-    .line 156
+    .line 155
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->getInstance()Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     move-result-object v0
@@ -22,7 +22,7 @@
 
     return v1
 
-    .line 161
+    .line 160
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -41,7 +41,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;
 
-    .line 162
+    .line 161
     invoke-virtual {v2}, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;->isApp()Z
 
     move-result v3
@@ -67,7 +67,7 @@
 .method public static isInstalled(Ljava/lang/String;)Z
     .locals 4
 
-    .line 143
+    .line 142
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->getInstance()Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     move-result-object v0
@@ -82,7 +82,7 @@
 
     return v1
 
-    .line 147
+    .line 146
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -101,7 +101,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;
 
-    .line 148
+    .line 147
     invoke-virtual {v2}, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;->isApp()Z
 
     move-result v3
@@ -127,7 +127,7 @@
 .method public static isInstalledAndInRussiaFolder(Ljava/lang/String;)Z
     .locals 4
 
-    .line 117
+    .line 116
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->getInstance()Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     move-result-object v0
@@ -142,7 +142,7 @@
 
     return v1
 
-    .line 121
+    .line 120
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -161,7 +161,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;
 
-    .line 122
+    .line 121
     invoke-virtual {v2}, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;->isApp()Z
 
     move-result v3
@@ -193,7 +193,7 @@
 .method private static isInstalledAndNotInRussiaFolder(Ljava/lang/String;)Z
     .locals 4
 
-    .line 130
+    .line 129
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->getInstance()Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     move-result-object v0
@@ -208,7 +208,7 @@
 
     return v1
 
-    .line 134
+    .line 133
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -227,7 +227,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;
 
-    .line 135
+    .line 134
     invoke-virtual {v2}, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;->isApp()Z
 
     move-result v3
@@ -259,7 +259,7 @@
 .method private static isLinkClickTimeInCurrentDay(Ljava/lang/String;)Z
     .locals 4
 
-    .line 170
+    .line 169
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->getInstance()Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     move-result-object v0
@@ -274,7 +274,7 @@
 
     return v1
 
-    .line 174
+    .line 173
     :cond_0
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -293,7 +293,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;
 
-    .line 175
+    .line 174
     invoke-virtual {v2}, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;->isApp()Z
 
     move-result v3
@@ -308,7 +308,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 176
+    .line 175
     iget-wide v0, v2, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;->clickTime:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -386,7 +386,7 @@
 .method public static notifyRemoveFromLauncher(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 88
+    .line 87
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallUtils;->isRussiaRom()Z
 
     move-result v0
@@ -395,7 +395,7 @@
 
     return-void
 
-    .line 93
+    .line 92
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->isDrawerMode()Z
 
@@ -403,14 +403,14 @@
 
     if-eqz p0, :cond_1
 
-    .line 94
+    .line 93
     invoke-static {p1}, Lcom/miui/home/launcher/russia/RussiaPreInstallUtils;->isInstalledAndInRussiaFolder(Ljava/lang/String;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 95
+    .line 94
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->getInstance()Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     move-result-object p0
@@ -424,7 +424,7 @@
 .method public static onAppInfoRemoved(Ljava/lang/String;)V
     .locals 1
 
-    .line 106
+    .line 105
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallUtils;->isRussiaRom()Z
 
     move-result v0
@@ -433,7 +433,7 @@
 
     return-void
 
-    .line 110
+    .line 109
     :cond_0
     invoke-static {p0}, Lcom/miui/home/launcher/russia/RussiaPreInstallUtils;->isInstalled(Ljava/lang/String;)Z
 
@@ -441,7 +441,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 111
+    .line 110
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->getInstance()Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     move-result-object v0
@@ -464,16 +464,20 @@
 
     return-void
 
-    .line 49
+    .line 48
     :cond_0
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
 
     move-result-object v0
 
     const-string v1, "com.miui.home:string/russia_preinstall_folder_name"
 
-    .line 50
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/LauncherProvider;->queryIdByLabel(Ljava/lang/String;)J
+    .line 49
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/LauncherProvider;->queryIdByTitle(Ljava/lang/String;)J
 
     move-result-wide v0
 
@@ -483,14 +487,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 51
+    .line 50
     iget-wide v2, p0, Lcom/miui/home/launcher/ShortcutInfo;->container:J
 
     cmp-long v0, v2, v0
 
     if-nez v0, :cond_1
 
-    .line 52
+    .line 51
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->getInstance()Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     move-result-object v0
@@ -512,7 +516,7 @@
 .method public static sync(Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 4
 
-    .line 63
+    .line 62
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallUtils;->isRussiaRom()Z
 
     move-result v0
@@ -521,7 +525,7 @@
 
     return-void
 
-    .line 67
+    .line 66
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
@@ -533,14 +537,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 69
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
+    .line 68
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
 
     move-result-object v0
 
     const-string v1, "com.miui.home:string/russia_preinstall_folder_name"
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/LauncherProvider;->queryIdByLabel(Ljava/lang/String;)J
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/LauncherProvider;->queryIdByTitle(Ljava/lang/String;)J
 
     move-result-wide v0
 
@@ -548,7 +556,7 @@
 
     goto :goto_0
 
-    .line 70
+    .line 69
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
@@ -560,8 +568,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 72
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
+    .line 71
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
 
     move-result-object v0
 
@@ -571,7 +583,7 @@
 
     move-result-wide v0
 
-    .line 73
+    .line 72
     iget-wide v2, p0, Lcom/miui/home/launcher/ShortcutInfo;->container:J
 
     cmp-long v0, v2, v0
@@ -580,7 +592,7 @@
 
     const-wide/16 v0, -0x64
 
-    .line 74
+    .line 73
     iput-wide v0, p0, Lcom/miui/home/launcher/ShortcutInfo;->container:J
 
     :cond_2

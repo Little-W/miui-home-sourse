@@ -3,12 +3,12 @@
 .source "Launcher.java"
 
 # interfaces
-.implements Landroid/widget/PopupWindow$OnDismissListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->showUpsideEnterOrExitTipIfNeed(Z)Z
+    value = Lcom/miui/home/launcher/Launcher;->refreshFolderIcons()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,17 +20,17 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$group:Landroid/widget/FrameLayout;
+.field final synthetic val$info:Lcom/miui/home/launcher/FolderInfo;
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/widget/FrameLayout;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/FolderInfo;)V
     .locals 0
 
-    .line 6362
+    .line 6073
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$60;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$60;->val$group:Landroid/widget/FrameLayout;
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$60;->val$info:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,19 +39,13 @@
 
 
 # virtual methods
-.method public onDismiss()V
-    .locals 2
+.method public run()V
+    .locals 1
 
-    .line 6364
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$60;->this$0:Lcom/miui/home/launcher/Launcher;
+    .line 6076
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$60;->val$info:Lcom/miui/home/launcher/FolderInfo;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DragLayer;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$60;->val$group:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DragLayer;->removeView(Landroid/view/View;)V
+    invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->notifyDataSetChanged()V
 
     return-void
 .end method

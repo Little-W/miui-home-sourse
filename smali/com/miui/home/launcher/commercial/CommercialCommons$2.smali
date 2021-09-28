@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/commercial/CommercialCommons$2;
+.class Lcom/miui/home/launcher/commercial/CommercialCommons$2;
 .super Ljava/lang/Object;
 .source "CommercialCommons.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -76,7 +76,11 @@
     move-result-object v1
 
     .line 170
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getIconCache()Lcom/miui/home/launcher/IconCache;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/miui/home/launcher/Application;->getIconCache()Lcom/miui/home/launcher/IconCache;
 
     move-result-object v2
 

@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/uninstall/UninstallController$4;
+.class Lcom/miui/home/launcher/uninstall/UninstallController$4;
 .super Ljava/lang/Object;
 .source "UninstallController.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -78,7 +78,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f10005f
+    const v2, 0x7f100062
 
     .line 229
     invoke-virtual {v0, v2, v1}, Lcom/miui/home/launcher/Application;->getString(I[Ljava/lang/Object;)Ljava/lang/String;

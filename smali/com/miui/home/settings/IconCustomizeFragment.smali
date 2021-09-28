@@ -21,22 +21,21 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 28
+    .line 30
     invoke-direct {p0}, Lmiuix/preference/PreferenceFragment;-><init>()V
 
     return-void
 .end method
 
 .method private getCurIconStyle()Ljava/lang/String;
-    .locals 4
-
-    .line 106
-    sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
-
-    if-nez v0, :cond_0
+    .locals 5
 
     .line 108
-    :try_start_0
+    sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+
+    if-nez v0, :cond_1
+
+    .line 109
     invoke-virtual {p0}, Lcom/miui/home/settings/IconCustomizeFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -51,56 +50,98 @@
 
     move-result-object v1
 
-    const-string v2, "getUsingIconInfo"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v2, v3, v3}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->acquireUnstableContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
 
     move-result-object v0
 
-    const-string v1, "iconTitle"
+    if-eqz v0, :cond_1
 
-    .line 109
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    :try_start_0
+    const-string v1, "getUsingIconInfo"
 
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "IconCustomizeFragment"
+    const/4 v2, 0x0
 
     .line 112
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2, v2}, Landroid/content/ContentProviderClient;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v1
 
-    const-string v3, "exception="
+    if-nez v1, :cond_0
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, ""
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    .line 120
+    invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
 
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string v0, ""
-
-    return-object v0
+    return-object v1
 
     :cond_0
+    :try_start_1
+    const-string v2, "iconTitle"
+
+    .line 116
+    invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 120
+    invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
+
+    return-object v1
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    :try_start_2
+    const-string v2, "IconCustomizeFragment"
+
+    .line 118
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "exception="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Landroid/os/RemoteException;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 120
+    invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
+
+    goto :goto_1
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
+
+    .line 121
+    throw v1
+
+    :cond_1
+    :goto_1
     const-string v0, ""
 
     return-object v0
@@ -116,7 +157,7 @@
     return-object p0
 .end method
 
-.method public static synthetic lambda$onCreatePreferences$501(Lcom/miui/home/settings/IconCustomizeFragment;Ljava/lang/String;)V
+.method public static synthetic lambda$onCreatePreferences$0(Lcom/miui/home/settings/IconCustomizeFragment;Ljava/lang/String;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -126,14 +167,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 60
+    .line 62
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 61
+    .line 63
     invoke-virtual {p0}, Lcom/miui/home/settings/IconCustomizeFragment;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object v0
@@ -142,7 +183,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceScreen;->addPreference(Landroidx/preference/Preference;)Z
 
-    .line 62
+    .line 64
     iget-object v0, p0, Lcom/miui/home/settings/IconCustomizeFragment;->mIconStylePreference:Lcom/miui/home/settings/preference/ValuePreference;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/settings/preference/ValuePreference;->setValue(Ljava/lang/String;)V
@@ -158,12 +199,12 @@
 
     const p1, 0x7f130011
 
-    .line 45
+    .line 47
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/settings/IconCustomizeFragment;->setPreferencesFromResource(ILjava/lang/String;)V
 
     const-string p1, "key_icon_customize_preview"
 
-    .line 46
+    .line 48
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/IconCustomizeFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p1
@@ -174,7 +215,7 @@
 
     const-string p1, "key_icon_style"
 
-    .line 47
+    .line 49
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/IconCustomizeFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p1
@@ -185,7 +226,7 @@
 
     const-string p1, "key_icon_scale"
 
-    .line 48
+    .line 50
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/IconCustomizeFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object p1
@@ -194,7 +235,7 @@
 
     iput-object p1, p0, Lcom/miui/home/settings/IconCustomizeFragment;->mIconSaclePrefernce:Lcom/miui/home/settings/preference/IconCustomizeSaclePreference;
 
-    .line 49
+    .line 51
     iget-object p1, p0, Lcom/miui/home/settings/IconCustomizeFragment;->mIconSaclePrefernce:Lcom/miui/home/settings/preference/IconCustomizeSaclePreference;
 
     new-instance p2, Lcom/miui/home/settings/-$$Lambda$0RY90J4tgUH2Q2rK8wyie9DVNII;
@@ -205,12 +246,12 @@
 
     const-string p1, "theme://zhuti.xiaomi.com/transfer?path=componentLocal&category=Icon&custom=true&showButton=true&miref=home&miback=true"
 
-    .line 50
+    .line 52
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
 
-    .line 51
+    .line 53
     iget-object p2, p0, Lcom/miui/home/settings/IconCustomizeFragment;->mIconStylePreference:Lcom/miui/home/settings/preference/ValuePreference;
 
     new-instance v0, Landroid/content/Intent;
@@ -221,22 +262,22 @@
 
     invoke-virtual {p2, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setIntent(Landroid/content/Intent;)V
 
-    .line 52
+    .line 54
     iget-object p1, p0, Lcom/miui/home/settings/IconCustomizeFragment;->mIconStylePreference:Lcom/miui/home/settings/preference/ValuePreference;
 
     invoke-virtual {p1, p0}, Lcom/miui/home/settings/preference/ValuePreference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
 
-    .line 53
+    .line 55
     iget-object p1, p0, Lcom/miui/home/settings/IconCustomizeFragment;->mPreviewPreference:Lcom/miui/home/settings/preference/IconCustomizePreviewPreference;
 
     invoke-virtual {p1}, Lcom/miui/home/settings/preference/IconCustomizePreviewPreference;->initPreviewApp()V
 
-    .line 54
+    .line 56
     iget-object p1, p0, Lcom/miui/home/settings/IconCustomizeFragment;->mPreviewPreference:Lcom/miui/home/settings/preference/IconCustomizePreviewPreference;
 
     invoke-virtual {p1}, Lcom/miui/home/settings/preference/IconCustomizePreviewPreference;->initPreviewBackground()V
 
-    .line 55
+    .line 57
     invoke-virtual {p0}, Lcom/miui/home/settings/IconCustomizeFragment;->getPreferenceScreen()Landroidx/preference/PreferenceScreen;
 
     move-result-object p1
@@ -245,7 +286,7 @@
 
     invoke-virtual {p1, p2}, Landroidx/preference/PreferenceScreen;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 56
+    .line 58
     new-instance p1, Lcom/miui/home/settings/-$$Lambda$IconCustomizeFragment$-xbwrg28drD_9t9CWFuCXK8ye9A;
 
     invoke-direct {p1, p0}, Lcom/miui/home/settings/-$$Lambda$IconCustomizeFragment$-xbwrg28drD_9t9CWFuCXK8ye9A;-><init>(Lcom/miui/home/settings/IconCustomizeFragment;)V
@@ -254,7 +295,7 @@
 
     move-result-object p1
 
-    .line 57
+    .line 59
     invoke-static {}, Lio/reactivex2/schedulers/Schedulers;->computation()Lio/reactivex2/Scheduler;
 
     move-result-object p2
@@ -263,7 +304,7 @@
 
     move-result-object p1
 
-    .line 58
+    .line 60
     invoke-static {}, Lio/reactivex2/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex2/Scheduler;
 
     move-result-object p2
@@ -272,11 +313,11 @@
 
     move-result-object p1
 
-    new-instance p2, Lcom/miui/home/settings/-$$Lambda$IconCustomizeFragment$Ob3R1sHYmcTYmLm0nNEcdC8e2xE;
+    new-instance p2, Lcom/miui/home/settings/-$$Lambda$IconCustomizeFragment$EQTL3L5WgSW7NeJFp30nlUKYN_o;
 
-    invoke-direct {p2, p0}, Lcom/miui/home/settings/-$$Lambda$IconCustomizeFragment$Ob3R1sHYmcTYmLm0nNEcdC8e2xE;-><init>(Lcom/miui/home/settings/IconCustomizeFragment;)V
+    invoke-direct {p2, p0}, Lcom/miui/home/settings/-$$Lambda$IconCustomizeFragment$EQTL3L5WgSW7NeJFp30nlUKYN_o;-><init>(Lcom/miui/home/settings/IconCustomizeFragment;)V
 
-    .line 59
+    .line 61
     invoke-virtual {p1, p2}, Lio/reactivex2/Observable;->subscribe(Lio/reactivex2/functions/Consumer;)Lio/reactivex2/disposables/Disposable;
 
     move-result-object p1
@@ -289,10 +330,10 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 82
+    .line 84
     invoke-super {p0}, Lmiuix/preference/PreferenceFragment;->onDestroy()V
 
-    .line 83
+    .line 85
     iget-object v0, p0, Lcom/miui/home/settings/IconCustomizeFragment;->mIconStyleDisposable:Lio/reactivex2/disposables/Disposable;
 
     if-eqz v0, :cond_0
@@ -303,12 +344,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 84
+    .line 86
     iget-object v0, p0, Lcom/miui/home/settings/IconCustomizeFragment;->mIconStyleDisposable:Lio/reactivex2/disposables/Disposable;
 
     invoke-interface {v0}, Lio/reactivex2/disposables/Disposable;->dispose()V
 
-    .line 86
+    .line 88
     :cond_0
     iget-object v0, p0, Lcom/miui/home/settings/IconCustomizeFragment;->mPreviewPreference:Lcom/miui/home/settings/preference/IconCustomizePreviewPreference;
 
@@ -320,7 +361,7 @@
 .method public onIconSizeChange(Ljava/lang/Float;)V
     .locals 1
 
-    .line 102
+    .line 104
     iget-object v0, p0, Lcom/miui/home/settings/IconCustomizeFragment;->mPreviewPreference:Lcom/miui/home/settings/preference/IconCustomizePreviewPreference;
 
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
@@ -335,7 +376,7 @@
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
     .locals 2
 
-    .line 91
+    .line 93
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
@@ -344,26 +385,26 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 92
-    invoke-virtual {p0}, Lcom/miui/home/settings/IconCustomizeFragment;->getActivity()Landroid/app/Activity;
+    .line 94
+    invoke-virtual {p0}, Lcom/miui/home/settings/IconCustomizeFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 93
-    invoke-virtual {p0}, Lcom/miui/home/settings/IconCustomizeFragment;->getActivity()Landroid/app/Activity;
+    .line 95
+    invoke-virtual {p0}, Lcom/miui/home/settings/IconCustomizeFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/app/Activity;->onBackPressed()V
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->onBackPressed()V
 
     :cond_0
     const/4 p1, 0x1
 
     return p1
 
-    .line 97
+    .line 99
     :cond_1
     invoke-super {p0, p1}, Lmiuix/preference/PreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
@@ -375,7 +416,7 @@
 .method public onPreferenceClick(Landroidx/preference/Preference;)Z
     .locals 0
 
-    .line 121
+    .line 129
     invoke-static {}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackClickIconStyleItem()V
 
     const/4 p1, 0x0
@@ -386,10 +427,10 @@
 .method public onStop()V
     .locals 3
 
-    .line 69
+    .line 71
     invoke-super {p0}, Lmiuix/preference/PreferenceFragment;->onStop()V
 
-    .line 70
+    .line 72
     iget-object v0, p0, Lcom/miui/home/settings/IconCustomizeFragment;->mIconSaclePrefernce:Lcom/miui/home/settings/preference/IconCustomizeSaclePreference;
 
     invoke-virtual {v0}, Lcom/miui/home/settings/preference/IconCustomizeSaclePreference;->getCurrentSetIconSizeValue()Ljava/lang/Float;
@@ -402,12 +443,12 @@
 
     const-string v1, "getCurrentSetIconSizeValue null"
 
-    .line 71
+    .line 73
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 74
+    .line 76
     :cond_0
     iget-object v0, p0, Lcom/miui/home/settings/IconCustomizeFragment;->mIconSaclePrefernce:Lcom/miui/home/settings/preference/IconCustomizeSaclePreference;
 
@@ -419,21 +460,21 @@
 
     move-result v0
 
-    .line 75
+    .line 77
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/common/PreferenceUtils;->setIconSizeScale(F)V
 
-    .line 76
+    .line 78
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->enableAndResetCache()V
 
-    .line 77
+    .line 79
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v1

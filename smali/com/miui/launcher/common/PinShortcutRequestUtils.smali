@@ -115,17 +115,17 @@
 .method public static getShortcutBitmap(Landroid/content/Context;Ljava/lang/Object;I)Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 141
+    .line 142
     invoke-static {p0, p1}, Lcom/miui/launcher/common/PinShortcutRequestUtils;->getFullResIcon(Landroid/content/Context;Ljava/lang/Object;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    .line 142
+    .line 143
     instance-of v0, p1, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 143
+    .line 144
     check-cast p1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -139,34 +139,34 @@
 
     if-eqz p1, :cond_1
 
-    .line 145
+    .line 146
     invoke-static {p0, p1, p2}, Lcom/miui/launcher/common/PinShortcutRequestUtils;->setUpDrawable(Landroid/content/Context;Landroid/graphics/drawable/Drawable;I)V
 
-    .line 146
+    .line 147
     sget-object p0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {p2, p2, p0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
-    .line 147
+    .line 148
     sget-object p2, Lcom/miui/launcher/common/PinShortcutRequestUtils;->sCanvas:Landroid/graphics/Canvas;
 
-    .line 148
+    .line 149
     invoke-virtual {p2, p0}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
     const/4 v1, 0x1
 
-    .line 149
+    .line 150
     invoke-virtual {p2, v1}, Landroid/graphics/Canvas;->save(I)I
 
-    .line 150
+    .line 151
     invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 151
+    .line 152
     invoke-virtual {p2}, Landroid/graphics/Canvas;->restore()V
 
-    .line 152
+    .line 153
     invoke-virtual {p2, v0}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
     return-object p0
@@ -311,13 +311,25 @@
 
     invoke-virtual {p4, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    const-string p5, ",activity="
+
+    invoke-virtual {p4, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 135
+    invoke-virtual {p2}, Landroid/content/pm/ShortcutInfo;->getActivity()Landroid/content/ComponentName;
+
+    move-result-object p5
+
+    invoke-virtual {p4, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
     invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p4
 
+    .line 134
     invoke-static {p3, p4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
+    .line 136
     new-instance p3, Lcom/miui/launcher/common/ShortcutInfoCompat;
 
     invoke-direct {p3, p2}, Lcom/miui/launcher/common/ShortcutInfoCompat;-><init>(Ljava/lang/Object;)V

@@ -1,6 +1,9 @@
 .class Lcom/miui/home/launcher/DragView$3;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "DragView.java"
+
+# interfaces
+.implements Lcom/miui/home/launcher/graphics/drawable/SpringLayerAnimator$AnimatorUpdateListener;
 
 
 # annotations
@@ -17,185 +20,85 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/DragView;
 
-.field final synthetic val$fromX:F
-
-.field final synthetic val$fromY:F
-
-.field final synthetic val$owner:Landroid/view/ViewGroup;
-
 .field final synthetic val$toX:F
 
 .field final synthetic val$toY:F
 
-.field final synthetic val$velocityX:F
-
-.field final synthetic val$velocityY:F
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/DragView;FFFFFFLandroid/view/ViewGroup;)V
+.method constructor <init>(Lcom/miui/home/launcher/DragView;FF)V
     .locals 0
 
-    .line 709
+    .line 750
     iput-object p1, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
 
-    iput p2, p0, Lcom/miui/home/launcher/DragView$3;->val$fromX:F
+    iput p2, p0, Lcom/miui/home/launcher/DragView$3;->val$toX:F
 
-    iput p3, p0, Lcom/miui/home/launcher/DragView$3;->val$fromY:F
+    iput p3, p0, Lcom/miui/home/launcher/DragView$3;->val$toY:F
 
-    iput p4, p0, Lcom/miui/home/launcher/DragView$3;->val$toX:F
-
-    iput p5, p0, Lcom/miui/home/launcher/DragView$3;->val$toY:F
-
-    iput p6, p0, Lcom/miui/home/launcher/DragView$3;->val$velocityX:F
-
-    iput p7, p0, Lcom/miui/home/launcher/DragView$3;->val$velocityY:F
-
-    iput-object p8, p0, Lcom/miui/home/launcher/DragView$3;->val$owner:Landroid/view/ViewGroup;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+.method public onAnimationUpdate(Lcom/miui/home/launcher/graphics/drawable/SpringLayerAnimator;)V
+    .locals 3
 
-    .line 724
+    .line 752
     iget-object v0, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/DragView;->access$300(Lcom/miui/home/launcher/DragView;)Lcom/miui/home/launcher/graphics/drawable/SpringLayerAnimator;
-
-    move-result-object v0
-
-    if-ne v0, p1, :cond_0
-
-    .line 725
-    iget-object p1, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/DragView;->access$400(Lcom/miui/home/launcher/DragView;)V
-
-    .line 727
-    :cond_0
-    iget-object p1, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/DragView;->access$100(Lcom/miui/home/launcher/DragView;)Lcom/miui/home/launcher/graphics/drawable/SpringLayerDragController;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    sget-boolean p1, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_OREO:Z
-
-    if-eqz p1, :cond_1
-
-    .line 728
-    iget-object p1, p0, Lcom/miui/home/launcher/DragView$3;->val$owner:Landroid/view/ViewGroup;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setClipChildren(Z)V
-
-    .line 729
-    iget-object p1, p0, Lcom/miui/home/launcher/DragView$3;->val$owner:Landroid/view/ViewGroup;
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 8
-
-    .line 712
-    iget v0, p0, Lcom/miui/home/launcher/DragView$3;->val$fromX:F
-
-    iget-object v1, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/DragView;->getTranslationX()F
+    invoke-virtual {p1}, Lcom/miui/home/launcher/graphics/drawable/SpringLayerAnimator;->getValueX()F
 
     move-result v1
 
-    cmpl-float v0, v0, v1
+    iget v2, p0, Lcom/miui/home/launcher/DragView$3;->val$toX:F
 
-    const/4 v1, 0x0
+    add-float/2addr v1, v2
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DragView;->setTranslationX(F)V
 
-    iget v0, p0, Lcom/miui/home/launcher/DragView$3;->val$fromY:F
+    .line 753
+    iget-object v0, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
 
-    iget-object v2, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
+    invoke-virtual {p1}, Lcom/miui/home/launcher/graphics/drawable/SpringLayerAnimator;->getValueY()F
 
-    invoke-virtual {v2}, Lcom/miui/home/launcher/DragView;->getTranslationY()F
+    move-result p1
 
-    move-result v2
+    iget v1, p0, Lcom/miui/home/launcher/DragView$3;->val$toY:F
 
-    cmpl-float v0, v0, v2
+    add-float/2addr p1, v1
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/DragView;->setTranslationY(F)V
 
-    .line 713
+    .line 754
+    iget-object p1, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/DragView;->access$300(Lcom/miui/home/launcher/DragView;)Lcom/miui/home/launcher/graphics/drawable/SpringLayerDragController;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    sget-boolean p1, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_OREO:Z
+
+    if-eqz p1, :cond_0
+
+    .line 755
+    iget-object p1, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/DragView;->access$300(Lcom/miui/home/launcher/DragView;)Lcom/miui/home/launcher/graphics/drawable/SpringLayerDragController;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/graphics/drawable/SpringLayerDragController;->onUpdate()V
+
+    .line 756
+    iget-object p1, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/DragView;->invalidate()V
+
     :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
-
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/DragView;->access$200(Lcom/miui/home/launcher/DragView;Z)V
-
-    .line 715
-    :cond_1
-    iget-object v0, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/DragView;->access$100(Lcom/miui/home/launcher/DragView;)Lcom/miui/home/launcher/graphics/drawable/SpringLayerDragController;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_OREO:Z
-
-    if-eqz v0, :cond_2
-
-    .line 716
-    iget-object v0, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/DragView;->access$100(Lcom/miui/home/launcher/DragView;)Lcom/miui/home/launcher/graphics/drawable/SpringLayerDragController;
-
-    move-result-object v2
-
-    iget v0, p0, Lcom/miui/home/launcher/DragView$3;->val$fromX:F
-
-    iget v3, p0, Lcom/miui/home/launcher/DragView$3;->val$toX:F
-
-    sub-float v3, v0, v3
-
-    iget v0, p0, Lcom/miui/home/launcher/DragView$3;->val$fromY:F
-
-    iget v4, p0, Lcom/miui/home/launcher/DragView$3;->val$toY:F
-
-    sub-float v4, v0, v4
-
-    iget v5, p0, Lcom/miui/home/launcher/DragView$3;->val$velocityX:F
-
-    iget v6, p0, Lcom/miui/home/launcher/DragView$3;->val$velocityY:F
-
-    move-object v7, p1
-
-    check-cast v7, Lcom/miui/home/launcher/graphics/drawable/SpringLayerAnimator;
-
-    invoke-virtual/range {v2 .. v7}, Lcom/miui/home/launcher/graphics/drawable/SpringLayerDragController;->onStart(FFFFLcom/miui/home/launcher/graphics/drawable/SpringLayerAnimator;)V
-
-    .line 718
-    iget-object p1, p0, Lcom/miui/home/launcher/DragView$3;->val$owner:Landroid/view/ViewGroup;
-
-    invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
-
-    .line 719
-    iget-object p1, p0, Lcom/miui/home/launcher/DragView$3;->val$owner:Landroid/view/ViewGroup;
-
-    invoke-virtual {p1, v1}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
-
-    :cond_2
     return-void
 .end method

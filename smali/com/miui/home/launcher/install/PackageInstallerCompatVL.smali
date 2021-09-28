@@ -282,19 +282,6 @@
     return-object v0
 .end method
 
-.method public onStop()V
-    .locals 2
-
-    .line 77
-    iget-object v0, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL;->mInstaller:Landroid/content/pm/PackageInstaller;
-
-    iget-object v1, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL;->mCallback:Landroid/content/pm/PackageInstaller$SessionCallback;
-
-    invoke-virtual {v0, v1}, Landroid/content/pm/PackageInstaller;->unregisterSessionCallback(Landroid/content/pm/PackageInstaller$SessionCallback;)V
-
-    return-void
-.end method
-
 .method public removeActiveSession(Ljava/lang/String;)V
     .locals 1
 

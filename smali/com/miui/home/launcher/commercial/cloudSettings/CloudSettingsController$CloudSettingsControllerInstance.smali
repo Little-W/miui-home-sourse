@@ -22,12 +22,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 36
+    .line 37
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
 
-    .line 37
     invoke-static {}, Lcom/miui/home/launcher/commercial/cloudSettings/global/GlobalCloudSettingsController;->getInstance()Lcom/miui/home/launcher/commercial/cloudSettings/global/GlobalCloudSettingsController;
 
     move-result-object v0

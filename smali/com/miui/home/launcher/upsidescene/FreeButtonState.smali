@@ -196,7 +196,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f100110
+    const v2, 0x7f1001a2
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -293,7 +293,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f10010d
+    const v3, 0x7f10019f
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -485,11 +485,15 @@
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setSourceBounds(Landroid/graphics/Rect;)V
 
     .line 145
-    iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/FreeButtonState;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
-    iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/FreeButtonState;->mOwnerView:Landroid/view/View;
+    move-result-object v0
 
-    invoke-static {v0, v2, v1}, Lcom/miui/home/launcher/LauncherApplication;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/view/View;)V
+    iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/FreeButtonState;->mContext:Landroid/content/Context;
+
+    iget-object v3, p0, Lcom/miui/home/launcher/upsidescene/FreeButtonState;->mOwnerView:Landroid/view/View;
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/miui/home/launcher/Application;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/view/View;)V
 
     .line 147
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/FreeButtonState;->mOwnerView:Landroid/view/View;

@@ -97,6 +97,8 @@
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->setTranslationY(F)V
 
     .line 184
+    invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->setTranslationZ(F)V
+
     const/high16 v0, 0x3f800000    # 1.0f
 
     .line 185

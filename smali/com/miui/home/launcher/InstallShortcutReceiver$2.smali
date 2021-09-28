@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 223
+    .line 225
     invoke-static {}, Lcom/miui/home/launcher/InstallShortcutReceiver$Position;->values()[Lcom/miui/home/launcher/InstallShortcutReceiver$Position;
 
     move-result-object v0

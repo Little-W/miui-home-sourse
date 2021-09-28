@@ -202,11 +202,11 @@
 
     if-eqz v5, :cond_4
 
+    .line 50
     move-object v5, p1
 
     check-cast v5, Lcom/miui/home/launcher/interfaces/PresentAnimationResettable;
 
-    .line 50
     invoke-interface {v5}, Lcom/miui/home/launcher/interfaces/PresentAnimationResettable;->needReset()Z
 
     move-result v5

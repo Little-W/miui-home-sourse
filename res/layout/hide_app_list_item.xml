@@ -27,7 +27,7 @@
         android:layout_weight="1.0"
         android:fontFamily="sans-serif-medium"
         android:textDirection="locale" />
-    <miui.widget.SlidingButton
+    <miuix.slidingwidget.widget.SlidingButton
         android:layout_gravity="end|center"
         android:id="@id/hide_switch"
         android:focusableInTouchMode="true"

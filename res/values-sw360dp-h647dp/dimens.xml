@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="quick_call_icon_bg_margin_horizontal">5.0dip</dimen>
+    <dimen name="quick_call_icon_bg_margin_vertical">5.0dip</dimen>
+    <dimen name="quick_call_icon_icon_padding_top">15.0dip</dimen>
+</resources>

@@ -28,20 +28,20 @@
 
     const/4 v0, 0x2
 
-    .line 43
+    .line 40
     new-array v0, v0, [I
 
-    .line 44
+    .line 41
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
 
     move-result-object v7
 
-    .line 45
+    .line 42
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/Launcher;->getSpringLayerWaveController()Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;
 
     move-result-object v8
 
-    .line 47
+    .line 44
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
@@ -52,7 +52,7 @@
 
     const/4 v11, 0x0
 
-    .line 48
+    .line 45
     :goto_0
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
 
@@ -62,7 +62,7 @@
 
     move-object/from16 v14, p1
 
-    .line 49
+    .line 46
     invoke-interface {v14, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -81,7 +81,7 @@
 
     goto :goto_2
 
-    .line 53
+    .line 50
     :cond_0
     invoke-virtual {v6}, Lcom/miui/home/launcher/ShortcutIcon;->isShown()Z
 
@@ -89,22 +89,22 @@
 
     if-eqz v1, :cond_2
 
-    .line 54
+    .line 51
     invoke-virtual {v6, v0}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageViewCenterPoint([I)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 55
+    .line 52
     new-instance v5, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
-    .line 56
+    .line 53
     invoke-virtual {v6}, Lcom/miui/home/launcher/ShortcutIcon;->getBoomAnimBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v3
 
-    .line 57
+    .line 54
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
 
     move-result v16
@@ -127,26 +127,26 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;-><init>(Lcom/miui/home/launcher/DragLayer;Landroid/graphics/Bitmap;[III)V
 
-    .line 58
+    .line 55
     new-instance v1, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$1;
 
     invoke-direct {v1, v8, v0}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$1;-><init>(Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;Lcom/miui/home/launcher/ShortcutIcon;)V
 
     invoke-virtual {v10, v1}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;->addListener(Lmiuix/animation/listener/TransitionListener;)V
 
-    .line 69
+    .line 66
     new-instance v1, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$ShortcutIconDisappearValueAnim;
 
     invoke-direct {v1, v0, v10}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$ShortcutIconDisappearValueAnim;-><init>(Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;)V
 
-    .line 70
+    .line 67
     invoke-virtual {v1, v12, v13}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$ShortcutIconDisappearValueAnim;->setStartDelay(J)V
 
     const-wide/16 v2, 0x3c
 
     add-long/2addr v12, v2
 
-    .line 72
+    .line 69
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
@@ -166,7 +166,7 @@
     :goto_1
     const/4 v1, 0x0
 
-    .line 74
+    .line 71
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/ShortcutIcon;->setAlpha(F)V
 
     :goto_2
@@ -179,19 +179,19 @@
     :cond_3
     move-object/from16 v15, p0
 
-    .line 78
+    .line 75
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/Launcher;->getSoundPoolHelper()Lcom/miui/home/launcher/sound/SoundPoolHelper;
 
     move-result-object v0
 
-    .line 79
+    .line 76
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
     if-nez v1, :cond_4
 
-    .line 81
+    .line 78
     invoke-interface/range {p2 .. p2}, Ljava/lang/Runnable;->run()V
 
     goto :goto_6
@@ -202,7 +202,7 @@
     :goto_3
     if-ge v2, v1, :cond_7
 
-    .line 84
+    .line 81
     invoke-virtual {v9, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -213,7 +213,7 @@
 
     if-ne v2, v4, :cond_5
 
-    .line 86
+    .line 83
     invoke-virtual {v3}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$ShortcutIconDisappearValueAnim;->getBoomValueAnimator()Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
     move-result-object v4
@@ -231,7 +231,7 @@
     :cond_5
     move-object/from16 v6, p2
 
-    .line 98
+    .line 95
     :goto_4
     rem-int/lit8 v4, v2, 0x2
 
@@ -244,7 +244,7 @@
     :cond_6
     const/high16 v4, 0x3f000000    # 0.5f
 
-    .line 99
+    .line 96
     :goto_5
     invoke-virtual {v3}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$ShortcutIconDisappearValueAnim;->getBoomValueAnimator()Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
@@ -256,7 +256,7 @@
 
     invoke-virtual {v5, v7}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;->addListener(Lmiuix/animation/listener/TransitionListener;)V
 
-    .line 105
+    .line 104
     invoke-virtual {v3}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$ShortcutIconDisappearValueAnim;->start()V
 
     add-int/lit8 v2, v2, 0x1
@@ -271,7 +271,7 @@
 .method private static getShortcutIcon(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)Lcom/miui/home/launcher/ShortcutIcon;
     .locals 1
 
-    .line 34
+    .line 31
     sget-object v0, Lcom/miui/home/launcher/LauncherState;->ALL_APPS:Lcom/miui/home/launcher/LauncherState;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
@@ -280,7 +280,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 35
+    .line 32
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getAppsView()Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
     move-result-object p0
@@ -299,7 +299,7 @@
 
     return-object p0
 
-    .line 37
+    .line 34
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->getBuddyIconView()Lcom/miui/home/launcher/ShortcutIcon;
 

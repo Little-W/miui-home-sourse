@@ -94,7 +94,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f070283
+    const v0, 0x7f070393
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -422,7 +422,7 @@
 
     move-result-object p0
 
-    const v2, 0x7f10010d
+    const v2, 0x7f10019f
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -496,7 +496,7 @@
     goto :goto_0
 
     :cond_2
-    const p0, 0x7f0d0042
+    const p0, 0x7f0d0044
 
     .line 302
     invoke-virtual {p2}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getLauncher()Lcom/miui/home/launcher/Launcher;
@@ -574,11 +574,11 @@
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;->getFile()Lmiui/util/FileAccessable;
+    invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;->getFile()Lcom/miui/home/library/utils/FileAccessable;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lmiui/util/FileAccessable;->exists()Z
+    invoke-interface {p0}, Lcom/miui/home/library/utils/FileAccessable;->exists()Z
 
     move-result p0
 
@@ -620,12 +620,12 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lmiui/util/FileAccessable$Factory;->create(Ljava/lang/String;Ljava/lang/String;)Lmiui/util/FileAccessable;
+    invoke-static {v1, v2}, Lcom/miui/home/library/utils/FileAccessable$Factory;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/miui/home/library/utils/FileAccessable;
 
     move-result-object v1
 
     .line 354
-    invoke-interface {v1}, Lmiui/util/FileAccessable;->exists()Z
+    invoke-interface {v1}, Lcom/miui/home/library/utils/FileAccessable;->exists()Z
 
     move-result v1
     :try_end_0

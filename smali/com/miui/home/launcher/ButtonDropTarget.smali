@@ -38,9 +38,9 @@
     .line 30
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f060236
+    const v1, 0x7f060378
 
-    const v2, 0x7f060235
+    const v2, 0x7f060377
 
     invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(II)V
 
@@ -67,7 +67,7 @@
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 22
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowNotch()Z
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->doLauncherHavePaddingTopForStatusBarAndNotch()Z
 
     move-result p1
 

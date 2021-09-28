@@ -1,4 +1,4 @@
-.class Landroidx/lifecycle/ClassesInfoCache;
+.class final Landroidx/lifecycle/ClassesInfoCache;
 .super Ljava/lang/Object;
 .source "ClassesInfoCache.java"
 
@@ -21,7 +21,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Ljava/lang/Class;",
+            "Ljava/lang/Class<",
+            "*>;",
             "Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;",
             ">;"
         }
@@ -32,7 +33,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Ljava/lang/Class;",
+            "Ljava/lang/Class<",
+            "*>;",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -79,6 +81,16 @@
 
 .method private createInfo(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;
     .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;[",
+            "Ljava/lang/reflect/Method;",
+            ")",
+            "Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;"
+        }
+    .end annotation
 
     .line 105
     invoke-virtual {p1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
@@ -362,6 +374,14 @@
 
 .method private getDeclaredMethods(Ljava/lang/Class;)[Ljava/lang/reflect/Method;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)[",
+            "Ljava/lang/reflect/Method;"
+        }
+    .end annotation
 
     .line 70
     :try_start_0
@@ -397,8 +417,8 @@
             ">;",
             "Landroidx/lifecycle/ClassesInfoCache$MethodReference;",
             "Landroidx/lifecycle/Lifecycle$Event;",
-            "Ljava/lang/Class;",
-            ")V"
+            "Ljava/lang/Class<",
+            "*>;)V"
         }
     .end annotation
 
@@ -482,6 +502,14 @@
 # virtual methods
 .method getInfo(Ljava/lang/Class;)Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Landroidx/lifecycle/ClassesInfoCache$CallbackInfo;"
+        }
+    .end annotation
 
     .line 81
     iget-object v0, p0, Landroidx/lifecycle/ClassesInfoCache;->mCallbackMap:Ljava/util/Map;
@@ -509,6 +537,13 @@
 
 .method hasLifecycleMethods(Ljava/lang/Class;)Z
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)Z"
+        }
+    .end annotation
 
     .line 45
     iget-object v0, p0, Landroidx/lifecycle/ClassesInfoCache;->mHasLifecycleMethods:Ljava/util/Map;

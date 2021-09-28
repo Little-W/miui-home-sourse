@@ -21,6 +21,107 @@
     return-object p0
 .end method
 
+.method public static final contains(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    .locals 11
+
+    const-string v0, "$this$contains"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "other"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1049
+    instance-of v0, p1, Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_1
+
+    .line 1050
+    move-object v4, p1
+
+    check-cast v4, Ljava/lang/String;
+
+    const/4 v5, 0x0
+
+    const/4 v7, 0x2
+
+    const/4 v8, 0x0
+
+    move-object v3, p0
+
+    move v6, p2
+
+    invoke-static/range {v3 .. v8}, Lkotlin/text/StringsKt;->indexOf$default(Ljava/lang/CharSequence;Ljava/lang/String;IZILjava/lang/Object;)I
+
+    move-result p0
+
+    if-ltz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v5, 0x0
+
+    .line 1052
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v6
+
+    const/4 v8, 0x0
+
+    const/16 v9, 0x10
+
+    const/4 v10, 0x0
+
+    move-object v3, p0
+
+    move-object v4, p1
+
+    move v7, p2
+
+    invoke-static/range {v3 .. v10}, Lkotlin/text/StringsKt__StringsKt;->indexOf$StringsKt__StringsKt$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;IIZZILjava/lang/Object;)I
+
+    move-result p0
+
+    if-ltz p0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move v1, v2
+
+    :goto_0
+    return v1
+.end method
+
+.method public static synthetic contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
+    .locals 0
+
+    and-int/lit8 p3, p3, 0x2
+
+    if-eqz p3, :cond_0
+
+    const/4 p2, 0x0
+
+    .line 1048
+    :cond_0
+    invoke-static {p0, p1, p2}, Lkotlin/text/StringsKt;->contains(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method private static final findAnyOf$StringsKt__StringsKt(Ljava/lang/CharSequence;Ljava/util/Collection;IZZ)Lkotlin/Pair;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;

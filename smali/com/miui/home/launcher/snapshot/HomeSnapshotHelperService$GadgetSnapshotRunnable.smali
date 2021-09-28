@@ -65,7 +65,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 6
+    .locals 7
 
     const-string v0, "snapshot"
 
@@ -174,9 +174,13 @@
     iput v5, v3, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     .line 134
-    iget-object v5, p0, Lcom/miui/home/launcher/snapshot/HomeSnapshotHelperService$GadgetSnapshotRunnable;->mContext:Landroid/content/Context;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
-    invoke-static {v5}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher(Landroid/content/Context;)Lcom/miui/home/launcher/Launcher;
+    move-result-object v5
+
+    iget-object v6, p0, Lcom/miui/home/launcher/snapshot/HomeSnapshotHelperService$GadgetSnapshotRunnable;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v5, v6}, Lcom/miui/home/launcher/Application;->getLauncher(Landroid/content/Context;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object v5
 

@@ -19,6 +19,19 @@
 
 
 # direct methods
+.method public constructor <init>(I)V
+    .locals 2
+
+    const/4 v0, -0x2
+
+    const/4 v1, -0x1
+
+    .line 1395
+    invoke-direct {p0, v0, v1, p1}, Landroidx/appcompat/app/ActionBar$LayoutParams;-><init>(III)V
+
+    return-void
+.end method
+
 .method public constructor <init>(II)V
     .locals 0
 
@@ -34,6 +47,23 @@
 
     .line 1386
     iput p1, p0, Landroidx/appcompat/app/ActionBar$LayoutParams;->gravity:I
+
+    return-void
+.end method
+
+.method public constructor <init>(III)V
+    .locals 0
+
+    .line 1390
+    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+
+    const/4 p1, 0x0
+
+    .line 1374
+    iput p1, p0, Landroidx/appcompat/app/ActionBar$LayoutParams;->gravity:I
+
+    .line 1391
+    iput p3, p0, Landroidx/appcompat/app/ActionBar$LayoutParams;->gravity:I
 
     return-void
 .end method

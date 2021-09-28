@@ -51,7 +51,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 28
+    .line 30
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllDeleteAppActivity$initData$2;->accept(Ljava/util/List;)V
@@ -75,7 +75,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 69
+    .line 71
     iget-object v0, p0, Lcom/miui/home/settings/AllDeleteAppActivity$initData$2;->this$0:Lcom/miui/home/settings/AllDeleteAppActivity;
 
     invoke-static {v0, p1}, Lcom/miui/home/settings/AllDeleteAppActivity;->access$updateUninstallAppList(Lcom/miui/home/settings/AllDeleteAppActivity;Ljava/util/List;)V

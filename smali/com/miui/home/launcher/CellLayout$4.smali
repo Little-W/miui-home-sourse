@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/CellLayout;->doEditModeAnimation(Z)V
+    value = Lcom/miui/home/launcher/CellLayout;->setAndDoEditModeAnimation(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 426
+    .line 433
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$4;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 429
+    .line 436
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$4;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-static {p1}, Lcom/miui/home/launcher/CellLayout;->access$300(Lcom/miui/home/launcher/CellLayout;)V

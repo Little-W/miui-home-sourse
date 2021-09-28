@@ -8,7 +8,7 @@
         <shape
             android:shape="rectangle">
             <solid
-                android:color="@color/miuix_preference_white" />
+                android:color="@color/miuix_appcompat_white" />
             <size
                 android:height="@dimen/miuix_preference_category_height" />
         </shape>

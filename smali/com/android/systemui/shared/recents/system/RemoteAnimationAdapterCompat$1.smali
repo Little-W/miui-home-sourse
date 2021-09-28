@@ -1,4 +1,4 @@
-.class final Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1;
+.class Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1;
 .super Landroid/view/IRemoteAnimationRunner$Stub;
 .source "RemoteAnimationAdapterCompat.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -35,10 +35,19 @@
 .method public onAnimationCancelled()V
     .locals 1
 
-    .line 73
+    .line 82
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1;->val$remoteAnimationAdapter:Lcom/android/systemui/shared/recents/system/RemoteAnimationRunnerCompat;
 
     invoke-interface {v0}, Lcom/android/systemui/shared/recents/system/RemoteAnimationRunnerCompat;->onAnimationCancelled()V
+
+    return-void
+.end method
+
+.method public onAnimationStart(I[Landroid/view/RemoteAnimationTarget;[Landroid/view/RemoteAnimationTarget;[Landroid/view/RemoteAnimationTarget;Landroid/view/IRemoteAnimationFinishedCallback;)V
+    .locals 0
+
+    .line 77
+    invoke-virtual {p0, p2, p5}, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat$1;->onAnimationStart([Landroid/view/RemoteAnimationTarget;Landroid/view/IRemoteAnimationFinishedCallback;)V
 
     return-void
 .end method

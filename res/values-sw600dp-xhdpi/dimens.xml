@@ -13,6 +13,7 @@
     <dimen name="hotseats_height_land_navigation">70.0dip</dimen>
     <dimen name="hotseats_height_navigation">70.0dip</dimen>
     <dimen name="hotseats_padding_side">0.0dip</dimen>
+    <dimen name="miuix_appcompat_date_picker_dialog_margin_bottom">26.0dip</dimen>
     <dimen name="search_bar_margin_bottom">34.0dip</dimen>
     <dimen name="search_bar_margin_top">28.0dip</dimen>
     <dimen name="status_bar_height">18.199982dip</dimen>

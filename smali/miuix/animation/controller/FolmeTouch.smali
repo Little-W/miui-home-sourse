@@ -1697,6 +1697,113 @@
     return-void
 .end method
 
+.method public varargs setAlpha(F[Lmiuix/animation/ITouchStyle$TouchType;)Lmiuix/animation/ITouchStyle;
+    .locals 3
+
+    .line 586
+    iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
+
+    invoke-direct {p0, p2}, Lmiuix/animation/controller/FolmeTouch;->getType([Lmiuix/animation/ITouchStyle$TouchType;)Lmiuix/animation/ITouchStyle$TouchType;
+
+    move-result-object p2
+
+    invoke-interface {v0, p2}, Lmiuix/animation/controller/IFolmeStateStyle;->getState(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
+
+    move-result-object p2
+
+    sget-object v0, Lmiuix/animation/property/ViewProperty;->ALPHA:Lmiuix/animation/property/ViewProperty;
+
+    float-to-double v1, p1
+
+    invoke-virtual {p2, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    return-object p0
+.end method
+
+.method public setBackgroundColor(FFFF)Lmiuix/animation/ITouchStyle;
+    .locals 1
+
+    const/high16 v0, 0x437f0000    # 255.0f
+
+    mul-float/2addr p1, v0
+
+    float-to-int p1, p1
+
+    mul-float/2addr p2, v0
+
+    float-to-int p2, p2
+
+    mul-float/2addr p3, v0
+
+    float-to-int p3, p3
+
+    mul-float/2addr p4, v0
+
+    float-to-int p4, p4
+
+    .line 642
+    invoke-static {p1, p2, p3, p4}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lmiuix/animation/controller/FolmeTouch;->setBackgroundColor(I)Lmiuix/animation/ITouchStyle;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public setBackgroundColor(I)Lmiuix/animation/ITouchStyle;
+    .locals 4
+
+    .line 633
+    sget-object v0, Lmiuix/animation/property/ViewPropertyExt;->BACKGROUND:Lmiuix/animation/property/ViewPropertyExt$BackgroundProperty;
+
+    .line 634
+    iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
+
+    sget-object v2, Lmiuix/animation/ITouchStyle$TouchType;->DOWN:Lmiuix/animation/ITouchStyle$TouchType;
+
+    invoke-interface {v1, v2}, Lmiuix/animation/controller/IFolmeStateStyle;->getState(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
+
+    move-result-object v1
+
+    int-to-double v2, p1
+
+    invoke-virtual {v1, v0, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    .line 635
+    iget-object p1, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
+
+    sget-object v1, Lmiuix/animation/ITouchStyle$TouchType;->UP:Lmiuix/animation/ITouchStyle$TouchType;
+
+    invoke-interface {p1, v1}, Lmiuix/animation/controller/IFolmeStateStyle;->getState(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
+
+    .line 636
+    invoke-interface {v1}, Lmiuix/animation/controller/IFolmeStateStyle;->getTarget()Lmiuix/animation/IAnimTarget;
+
+    move-result-object v1
+
+    const-wide/16 v2, 0x0
+
+    invoke-static {v1, v0, v2, v3}, Lmiuix/animation/internal/AnimValueUtils;->getValueOfTarget(Lmiuix/animation/IAnimTarget;Lmiuix/animation/property/FloatProperty;D)D
+
+    move-result-wide v1
+
+    double-to-int v1, v1
+
+    int-to-double v1, v1
+
+    .line 635
+    invoke-virtual {p1, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    return-object p0
+.end method
+
 .method public setFontStyle(Lmiuix/animation/controller/FolmeFont;)V
     .locals 0
 
@@ -1745,6 +1852,76 @@
 
     .line 596
     invoke-virtual {p1, p2, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    return-object p0
+.end method
+
+.method public setTint(FFFF)Lmiuix/animation/ITouchStyle;
+    .locals 1
+
+    const/high16 v0, 0x437f0000    # 255.0f
+
+    mul-float/2addr p1, v0
+
+    float-to-int p1, p1
+
+    mul-float/2addr p2, v0
+
+    float-to-int p2, p2
+
+    mul-float/2addr p3, v0
+
+    float-to-int p3, p3
+
+    mul-float/2addr p4, v0
+
+    float-to-int p4, p4
+
+    .line 627
+    invoke-static {p1, p2, p3, p4}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lmiuix/animation/controller/FolmeTouch;->setTint(I)Lmiuix/animation/ITouchStyle;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public setTint(I)Lmiuix/animation/ITouchStyle;
+    .locals 4
+
+    const/4 v0, 0x1
+
+    .line 619
+    iput-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch;->mSetTint:Z
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 620
+    :goto_0
+    iput-boolean v0, p0, Lmiuix/animation/controller/FolmeTouch;->mClearTint:Z
+
+    .line 621
+    iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
+
+    sget-object v1, Lmiuix/animation/ITouchStyle$TouchType;->DOWN:Lmiuix/animation/ITouchStyle$TouchType;
+
+    invoke-interface {v0, v1}, Lmiuix/animation/controller/IFolmeStateStyle;->getState(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;
+
+    move-result-object v0
+
+    sget-object v1, Lmiuix/animation/property/ViewPropertyExt;->FOREGROUND:Lmiuix/animation/property/ViewPropertyExt$ForegroundProperty;
+
+    int-to-double v2, p1
+
+    invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     return-object p0
 .end method

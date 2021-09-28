@@ -32,33 +32,30 @@
     .locals 2
 
     .line 22
-    invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->setDayNightThemeIfNeed(Landroid/app/Activity;)V
-
-    .line 23
     invoke-super {p0, p1}, Lcom/miui/home/launcher/PreferenceContainerActivity;->onCreate(Landroid/os/Bundle;)V
 
+    .line 23
+    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
+
+    move-result-object p1
+
     .line 24
-    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
     .line 25
-    invoke-virtual {p1}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
-
-    move-result-object p1
-
-    .line 26
     new-instance v0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;-><init>()V
 
     const v1, 0x1020002
 
-    .line 27
-    invoke-virtual {p1, v1, v0}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    .line 26
+    invoke-virtual {p1, v1, v0}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
-    .line 28
-    invoke-virtual {p1}, Landroid/app/FragmentTransaction;->commitAllowingStateLoss()I
+    .line 27
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
     return-void
 .end method

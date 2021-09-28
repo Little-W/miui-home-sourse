@@ -156,91 +156,19 @@
 .end method
 
 .method static draw(Landroid/graphics/drawable/Drawable;Landroid/graphics/Canvas;Landroid/graphics/Rect;Landroid/graphics/Path;)V
-    .locals 7
+    .locals 0
 
     .line 65
-    iget v0, p2, Landroid/graphics/Rect;->left:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    int-to-float v2, v0
-
-    iget v0, p2, Landroid/graphics/Rect;->top:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    int-to-float v3, v0
-
-    iget v0, p2, Landroid/graphics/Rect;->right:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    int-to-float v4, v0
-
-    iget p2, p2, Landroid/graphics/Rect;->bottom:I
-
-    add-int/lit8 p2, p2, -0x1
-
-    int-to-float v5, p2
-
-    sget-object v6, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->sPaint:Landroid/graphics/Paint;
-
-    move-object v1, p1
-
-    invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->saveLayer(FFFFLandroid/graphics/Paint;)I
-
-    move-result p2
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     .line 66
-    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {p1, p3}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
 
     .line 67
-    sget-object p0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->sInversePath:Landroid/graphics/Path;
-
-    invoke-virtual {p0, p3}, Landroid/graphics/Path;->set(Landroid/graphics/Path;)V
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     .line 68
-    sget-object p0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->sInversePath:Landroid/graphics/Path;
-
-    sget-object v0, Landroid/graphics/Path$FillType;->INVERSE_EVEN_ODD:Landroid/graphics/Path$FillType;
-
-    invoke-virtual {p0, v0}, Landroid/graphics/Path;->setFillType(Landroid/graphics/Path$FillType;)V
-
-    .line 69
-    sget-object p0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->sPaint:Landroid/graphics/Paint;
-
-    sget-object v0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->CLEAR:Landroid/graphics/PorterDuffXfermode;
-
-    invoke-virtual {p0, v0}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
-
-    .line 70
-    sget-object p0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->sInversePath:Landroid/graphics/Path;
-
-    sget-object v0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->sPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, p0, v0}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    .line 71
-    sget-object p0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->sPaint:Landroid/graphics/Paint;
-
-    sget-object v0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->DST_IN:Landroid/graphics/PorterDuffXfermode;
-
-    invoke-virtual {p0, v0}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
-
-    .line 72
-    sget-object p0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->sPaint:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, p3, p0}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    .line 73
-    sget-object p0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->sPaint:Landroid/graphics/Paint;
-
-    const/4 p3, 0x0
-
-    invoke-virtual {p0, p3}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
-
-    .line 74
-    invoke-virtual {p1, p2}, Landroid/graphics/Canvas;->restoreToCount(I)V
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
 .end method

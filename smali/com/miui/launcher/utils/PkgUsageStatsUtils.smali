@@ -80,7 +80,7 @@
 .end method
 
 .method private static loadAllPackageUsageStatsGte_21(Landroid/content/Context;JLjava/util/ArrayList;)Ljava/util/Map;
-    .locals 10
+    .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -118,60 +118,55 @@
     .line 41
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v4
 
     .line 42
-    const-class v2, Ljava/util/List;
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v3, 0x3
-
-    new-array v4, v3, [Ljava/lang/Class;
-
-    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const/4 v6, 0x0
-
-    aput-object v5, v4, v6
-
-    sget-object v5, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    const/4 v7, 0x1
-
-    aput-object v5, v4, v7
-
-    sget-object v5, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    const/4 v8, 0x2
-
-    aput-object v5, v4, v8
-
-    invoke-static {v2, v4}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 44
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v4
+    move-result-object v3
 
     const-string v5, "queryUsageStats"
 
-    new-array v3, v3, [Ljava/lang/Object;
+    const-class v6, Ljava/util/List;
 
-    .line 45
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 p0, 0x3
 
-    move-result-object v9
+    new-array v7, p0, [Ljava/lang/Class;
 
-    aput-object v9, v3, v6
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    const/4 v9, 0x0
+
+    aput-object v2, v7, v9
+
+    sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    const/4 v8, 0x1
+
+    aput-object v2, v7, v8
+
+    sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    const/4 v10, 0x2
+
+    aput-object v2, v7, v10
+
+    new-array p0, p0, [Ljava/lang/Object;
+
+    .line 44
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    aput-object v2, p0, v9
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    aput-object p1, v3, v7
+    aput-object p1, p0, v8
 
-    .line 46
+    .line 45
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
@@ -180,16 +175,18 @@
 
     move-result-object p1
 
-    aput-object p1, v3, v8
+    aput-object p1, p0, v10
 
-    .line 44
-    invoke-static {v4, p0, v5, v2, v3}, Lcom/miui/launcher/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+    move-object v8, p0
+
+    .line 42
+    invoke-static/range {v3 .. v8}, Lcom/miui/launcher/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Ljava/util/List;
 
-    .line 48
+    .line 47
     invoke-static {p0}, Lcom/miui/launcher/utils/CollectionUtils;->isEmpty(Ljava/util/Collection;)Z
 
     move-result p1
@@ -198,7 +195,7 @@
 
     return-object v0
 
-    .line 51
+    .line 50
     :cond_1
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -215,26 +212,26 @@
 
     move-result-object p1
 
-    const-string p2, "getPackageName"
+    const-string v4, "getPackageName"
 
-    .line 52
-    const-class v2, Ljava/lang/String;
+    .line 51
+    const-class v5, Ljava/lang/String;
 
-    new-array v3, v6, [Ljava/lang/Class;
+    const/4 v6, 0x0
 
-    invoke-static {v2, v3}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
+    new-array v7, v9, [Ljava/lang/Object;
 
-    move-result-object v2
+    move-object v2, v1
 
-    new-array v3, v6, [Ljava/lang/Object;
+    move-object v3, p1
 
-    invoke-static {v1, p1, p2, v2, v3}, Lcom/miui/launcher/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static/range {v2 .. v7}, Lcom/miui/launcher/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Ljava/lang/String;
 
-    .line 53
+    .line 52
     invoke-virtual {p3, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v2
@@ -244,26 +241,26 @@
     goto :goto_0
 
     :cond_2
-    const-string v2, "getLastTimeUsed"
+    const-string v4, "getLastTimeUsed"
 
-    .line 56
-    sget-object v3, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+    .line 55
+    sget-object v5, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
-    new-array v4, v6, [Ljava/lang/Class;
+    const/4 v6, 0x0
 
-    invoke-static {v3, v4}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
+    new-array v7, v9, [Ljava/lang/Object;
 
-    move-result-object v3
+    move-object v2, v1
 
-    new-array v4, v6, [Ljava/lang/Object;
+    move-object v3, p1
 
-    invoke-static {v1, p1, v2, v3, v4}, Lcom/miui/launcher/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static/range {v2 .. v7}, Lcom/miui/launcher/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/lang/Long;
 
-    .line 57
+    .line 56
     new-instance v2, Lcom/miui/launcher/common/AppUsageStat;
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
@@ -296,14 +293,14 @@
         }
     .end annotation
 
-    .line 63
+    .line 62
     invoke-static {}, Lcom/miui/launcher/utils/CollectionUtils;->newHashMap()Ljava/util/HashMap;
 
     move-result-object v0
 
     const-string v1, "com.android.internal.os.PkgUsageStats"
 
-    .line 64
+    .line 63
     invoke-static {v1}, Lcom/miui/launcher/utils/ReflectUtils;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -315,14 +312,14 @@
     :cond_0
     const-string v1, "activity"
 
-    .line 68
+    .line 67
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/app/ActivityManager;
 
-    .line 69
+    .line 68
     const-class v1, [Ljava/lang/Object;
 
     const-string v2, "getAllPackageUsageStats"
@@ -341,14 +338,14 @@
 
     if-eqz p0, :cond_6
 
-    .line 70
+    .line 69
     array-length v1, p0
 
     if-nez v1, :cond_1
 
     goto :goto_3
 
-    .line 73
+    .line 72
     :cond_1
     array-length v1, p0
 
@@ -359,14 +356,14 @@
 
     const-string v3, "packageName"
 
-    .line 74
+    .line 73
     invoke-static {v2, v3}, Lcom/miui/launcher/utils/ReflectUtils;->getObjectField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/lang/String;
 
-    .line 75
+    .line 74
     invoke-virtual {p1, v3}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v5
@@ -378,7 +375,7 @@
     :cond_2
     const-string v5, "componentResumeTimes"
 
-    .line 78
+    .line 77
     invoke-static {v2, v5}, Lcom/miui/launcher/utils/ReflectUtils;->getObjectField(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
@@ -387,14 +384,14 @@
 
     const-wide/16 v5, 0x0
 
-    .line 80
+    .line 79
     invoke-static {v2}, Lcom/miui/launcher/utils/CollectionUtils;->isEmpty(Ljava/util/Map;)Z
 
     move-result v7
 
     if-nez v7, :cond_4
 
-    .line 81
+    .line 80
     invoke-interface {v2}, Ljava/util/Map;->values()Ljava/util/Collection;
 
     move-result-object v2
@@ -429,7 +426,7 @@
 
     goto :goto_1
 
-    .line 85
+    .line 84
     :cond_4
     new-instance v2, Lcom/miui/launcher/common/AppUsageStat;
 

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/AppWidgetResizeFrame;)V
     .locals 0
 
-    .line 427
+    .line 483
     iput-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame$2;->this$0:Lcom/miui/home/launcher/AppWidgetResizeFrame;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 0
 
-    .line 429
+    .line 485
     iget-object p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame$2;->this$0:Lcom/miui/home/launcher/AppWidgetResizeFrame;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/AppWidgetResizeFrame;->requestLayout()V

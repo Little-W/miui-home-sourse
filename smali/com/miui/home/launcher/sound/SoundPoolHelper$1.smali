@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/sound/SoundPoolHelper;)V
     .locals 0
 
-    .line 58
+    .line 61
     iput-object p1, p0, Lcom/miui/home/launcher/sound/SoundPoolHelper$1;->this$0:Lcom/miui/home/launcher/sound/SoundPoolHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 61
+    .line 64
     iget-object v0, p0, Lcom/miui/home/launcher/sound/SoundPoolHelper$1;->this$0:Lcom/miui/home/launcher/sound/SoundPoolHelper;
 
     invoke-static {v0}, Lcom/miui/home/launcher/sound/SoundPoolHelper;->access$000(Lcom/miui/home/launcher/sound/SoundPoolHelper;)V

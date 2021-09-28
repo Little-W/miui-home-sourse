@@ -11,15 +11,15 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 18
+    .line 20
     invoke-direct {p0, p1}, Landroid/widget/CheckBox;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
-    .line 15
+    .line 17
     iput-boolean v0, p0, Lcom/miui/home/launcher/view/EditCheckBox;->mIsDarkMode:Z
 
-    .line 19
+    .line 21
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/view/EditCheckBox;->init(Landroid/content/Context;)V
 
     return-void
@@ -28,15 +28,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 23
+    .line 25
     invoke-direct {p0, p1, p2}, Landroid/widget/CheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p2, 0x0
 
-    .line 15
+    .line 17
     iput-boolean p2, p0, Lcom/miui/home/launcher/view/EditCheckBox;->mIsDarkMode:Z
 
-    .line 24
+    .line 26
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/view/EditCheckBox;->init(Landroid/content/Context;)V
 
     return-void
@@ -45,15 +45,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 28
+    .line 30
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/CheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p2, 0x0
 
-    .line 15
+    .line 17
     iput-boolean p2, p0, Lcom/miui/home/launcher/view/EditCheckBox;->mIsDarkMode:Z
 
-    .line 29
+    .line 31
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/view/EditCheckBox;->init(Landroid/content/Context;)V
 
     return-void
@@ -62,7 +62,7 @@
 .method private init(Landroid/content/Context;)V
     .locals 1
 
-    .line 33
+    .line 35
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -77,7 +77,7 @@
 
     iput-boolean v0, p0, Lcom/miui/home/launcher/view/EditCheckBox;->mIsDarkMode:Z
 
-    .line 34
+    .line 36
     iget-boolean v0, p0, Lcom/miui/home/launcher/view/EditCheckBox;->mIsDarkMode:Z
 
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/view/EditCheckBox;->loadButtonDrawable(Landroid/content/Context;Z)V
@@ -88,7 +88,7 @@
 .method private static isDarkMode(Landroid/content/res/Configuration;)Z
     .locals 1
 
-    .line 78
+    .line 80
     iget p0, p0, Landroid/content/res/Configuration;->uiMode:I
 
     const/16 v0, 0x20
@@ -111,46 +111,46 @@
 .method private loadButtonDrawable(Landroid/content/Context;Z)V
     .locals 2
 
-    .line 52
+    .line 54
     sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->IS_MIUI_10:Z
 
     if-eqz v0, :cond_0
 
-    .line 53
+    .line 55
     new-instance p2, Lcom/miui/home/launcher/view/EditCheckBoxDrawable;
 
     invoke-direct {p2, p1}, Lcom/miui/home/launcher/view/EditCheckBoxDrawable;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 55
+    .line 57
     :cond_0
     new-instance v0, Landroid/view/ContextThemeWrapper;
 
-    const v1, 0x7f1100af
+    const v1, 0x7f1100b5
 
     invoke-direct {v0, p1, v1}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
     if-eqz p2, :cond_1
 
-    const-string p1, "btn_checkbox_dark"
+    const p1, 0x7f0802e4
 
-    .line 57
-    invoke-static {v0, p1}, Lcom/miui/home/launcher/common/Utilities;->getMiuiDrawable(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    .line 59
+    invoke-static {v0, p1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
     goto :goto_0
 
     :cond_1
-    const-string p1, "btn_checkbox_light"
+    const p1, 0x7f0802f1
 
-    .line 59
-    invoke-static {v0, p1}, Lcom/miui/home/launcher/common/Utilities;->getMiuiDrawable(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    .line 61
+    invoke-static {v0, p1}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
-    .line 62
+    .line 64
     :goto_0
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/view/EditCheckBox;->setButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -162,10 +162,10 @@
 .method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 39
+    .line 41
     invoke-super {p0, p1}, Landroid/widget/CheckBox;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 40
+    .line 42
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->supportDarkMode()Z
 
     move-result v0
@@ -178,21 +178,21 @@
 
     goto :goto_0
 
-    .line 43
+    .line 45
     :cond_0
     invoke-static {p1}, Lcom/miui/home/launcher/view/EditCheckBox;->isDarkMode(Landroid/content/res/Configuration;)Z
 
     move-result p1
 
-    .line 44
+    .line 46
     iget-boolean v0, p0, Lcom/miui/home/launcher/view/EditCheckBox;->mIsDarkMode:Z
 
     if-eq v0, p1, :cond_1
 
-    .line 45
+    .line 47
     iput-boolean p1, p0, Lcom/miui/home/launcher/view/EditCheckBox;->mIsDarkMode:Z
 
-    .line 46
+    .line 48
     invoke-virtual {p0}, Lcom/miui/home/launcher/view/EditCheckBox;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -212,7 +212,7 @@
 
     const/4 v0, 0x1
 
-    .line 74
+    .line 76
     invoke-virtual {p0, p1, v0}, Lcom/miui/home/launcher/view/EditCheckBox;->setChecked(ZZ)V
 
     return-void
@@ -221,10 +221,10 @@
 .method public setChecked(ZZ)V
     .locals 1
 
-    .line 66
+    .line 68
     invoke-super {p0, p1}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 67
+    .line 69
     invoke-virtual {p0}, Lcom/miui/home/launcher/view/EditCheckBox;->getButtonDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -233,7 +233,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 68
+    .line 70
     invoke-virtual {p0}, Lcom/miui/home/launcher/view/EditCheckBox;->getButtonDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0

@@ -68,7 +68,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0700e3
+    const p2, 0x7f0700ec
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -432,7 +432,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f05000f
+    const v1, 0x7f050016
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1040,7 +1040,7 @@
 
     if-nez v0, :cond_0
 
-    .line 86
+    .line 87
     sget-object v1, Lcom/miui/home/launcher/search/SearchEdgeEffect$Type;->SEARCH:Lcom/miui/home/launcher/search/SearchEdgeEffect$Type;
 
     goto :goto_0
@@ -1051,6 +1051,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
+    .line 88
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_1
@@ -1062,6 +1063,7 @@
     :cond_1
     sget-object v0, Lcom/miui/home/launcher/search/SearchEdgeEffect$Type;->NULL:Lcom/miui/home/launcher/search/SearchEdgeEffect$Type;
 
+    .line 86
     :goto_1
     invoke-direct {p0, v1, v0}, Lcom/miui/home/launcher/search/SearchEdgeLayout;->setEdgeEffect(Lcom/miui/home/launcher/search/SearchEdgeEffect$Type;Lcom/miui/home/launcher/search/SearchEdgeEffect$Type;)V
 

@@ -97,7 +97,7 @@
 .end method
 
 .method private updateDefaultAppCategory()V
-    .locals 12
+    .locals 11
 
     .line 133
     invoke-static {}, Lcom/miui/home/launcher/CategorySettingHelper;->getInstance()Lcom/miui/home/launcher/CategorySettingHelper;
@@ -120,7 +120,7 @@
     return-void
 
     :cond_0
-    const v0, 0x192741b2
+    const v0, 0x1936848d
 
     .line 137
     invoke-static {}, Lcom/miui/home/launcher/CategorySettingHelper;->getInstance()Lcom/miui/home/launcher/CategorySettingHelper;
@@ -160,7 +160,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_3
 
     .line 145
     array-length v2, v1
@@ -168,7 +168,7 @@
     const/4 v3, 0x0
 
     :goto_0
-    if-ge v3, v2, :cond_4
+    if-ge v3, v2, :cond_3
 
     aget-object v4, v1, v3
 
@@ -197,134 +197,132 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    const/4 v4, 0x0
-
     .line 147
     :try_start_1
-    new-instance v6, Lcom/mi/google/gson/Gson;
+    new-instance v4, Lcom/mi/google/gson/Gson;
 
-    invoke-direct {v6}, Lcom/mi/google/gson/Gson;-><init>()V
+    invoke-direct {v4}, Lcom/mi/google/gson/Gson;-><init>()V
 
-    const-class v7, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;
+    const-class v6, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;
 
-    invoke-virtual {v6, v5, v7}, Lcom/mi/google/gson/Gson;->fromJson(Ljava/io/Reader;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v4, v5, v6}, Lcom/mi/google/gson/Gson;->fromJson(Ljava/io/Reader;Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object v4
 
-    check-cast v6, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;
+    check-cast v4, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;
 
     .line 148
     invoke-static {}, Lcom/miui/home/launcher/CategorySettingHelper;->getInstance()Lcom/miui/home/launcher/CategorySettingHelper;
 
-    move-result-object v7
+    move-result-object v6
 
-    iget v8, v6, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->category:I
+    iget v7, v4, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->category:I
 
-    invoke-virtual {v7, v8}, Lcom/miui/home/launcher/CategorySettingHelper;->getAppCategoryVersion(I)I
+    invoke-virtual {v6, v7}, Lcom/miui/home/launcher/CategorySettingHelper;->getAppCategoryVersion(I)I
 
-    move-result v7
+    move-result v6
 
     .line 149
-    iget v8, v6, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->version:I
+    iget v7, v4, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->version:I
 
-    if-le v8, v7, :cond_2
+    if-le v7, v6, :cond_2
 
     .line 150
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
-    move-result-object v8
+    move-result-object v7
 
-    invoke-virtual {v8}, Lcom/miui/home/launcher/Application;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v7}, Lcom/miui/home/launcher/Application;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v8
+    move-result-object v7
 
     .line 151
-    iget-object v9, v6, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->packageNames:Ljava/util/List;
+    iget-object v8, v4, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->packageNames:Ljava/util/List;
 
-    iget v10, v6, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->category:I
+    iget v9, v4, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->category:I
 
-    invoke-static {v8, v9, v10}, Lcom/miui/home/launcher/LauncherCategory$Repository;->updateRepository(Landroid/content/ContentResolver;Ljava/util/List;I)Z
+    invoke-static {v7, v8, v9}, Lcom/miui/home/launcher/LauncherCategory$Repository;->updateRepository(Landroid/content/ContentResolver;Ljava/util/List;I)Z
 
-    move-result v8
+    move-result v7
 
     .line 152
     invoke-static {}, Lcom/miui/home/launcher/CategorySettingHelper;->getInstance()Lcom/miui/home/launcher/CategorySettingHelper;
 
-    move-result-object v9
+    move-result-object v8
 
-    iget v10, v6, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->category:I
+    iget v9, v4, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->category:I
 
-    iget v11, v6, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->version:I
+    iget v10, v4, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->version:I
 
-    invoke-virtual {v9, v10, v11}, Lcom/miui/home/launcher/CategorySettingHelper;->setAppCategoryVersion(II)V
+    invoke-virtual {v8, v9, v10}, Lcom/miui/home/launcher/CategorySettingHelper;->setAppCategoryVersion(II)V
 
-    const-string v9, "Launcher.Category"
+    const-string v8, "Launcher.Category"
 
     .line 153
-    new-instance v10, Ljava/lang/StringBuilder;
+    new-instance v9, Ljava/lang/StringBuilder;
 
-    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v11, "update default app category:"
+    const-string v10, "update default app category:"
 
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v7, " to "
+    const-string v6, " to "
 
-    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v7, v6, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->version:I
+    iget v6, v4, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->version:I
 
-    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v7, " for "
+    const-string v6, " for "
 
-    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v6, v6, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->category:I
+    iget v4, v4, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->category:I
 
-    invoke-virtual {v10, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v6, " result "
+    const-string v4, " result "
 
-    invoke-virtual {v10, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v4
 
-    invoke-static {v9, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v8, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
     :cond_2
-    const-string v7, "Launcher.Category"
+    const-string v6, "Launcher.Category"
 
     .line 156
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "app category already new version for "
+    const-string v8, "app category already new version for "
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v6, v6, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->category:I
+    iget v4, v4, Lcom/miui/home/launcher/allapps/category/AppCategoryJson;->category:I
 
-    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v4
 
-    invoke-static {v7, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
     .line 158
     :goto_1
@@ -337,59 +335,38 @@
 
     goto/16 :goto_0
 
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
     :catch_0
     move-exception v0
 
-    move-object v4, v0
-
     .line 146
     :try_start_3
-    throw v4
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_2
-    if-eqz v4, :cond_3
-
-    .line 158
-    :try_start_4
     invoke-virtual {v5}, Ljava/io/Reader;->close()V
-    :try_end_4
-    .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
+    :try_end_3
+    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    goto :goto_3
+    goto :goto_2
 
     :catch_1
     move-exception v1
 
-    :try_start_5
-    invoke-virtual {v4, v1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    :try_start_4
+    invoke-virtual {v0, v1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    goto :goto_3
-
-    :cond_3
-    invoke-virtual {v5}, Ljava/io/Reader;->close()V
-
-    :goto_3
+    :goto_2
     throw v0
 
     .line 161
-    :cond_4
+    :cond_3
     invoke-static {}, Lcom/miui/home/launcher/CategorySettingHelper;->getInstance()Lcom/miui/home/launcher/CategorySettingHelper;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/CategorySettingHelper;->setAppCategoryUpdateVersionCode()V
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
-    goto :goto_4
+    goto :goto_3
 
     :catch_2
     move-exception v0
@@ -397,14 +374,14 @@
     .line 163
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    :goto_4
+    :goto_3
     return-void
 .end method
 
 
 # virtual methods
 .method public bulkInsert(Landroid/net/Uri;[Landroid/content/ContentValues;)I
-    .locals 10
+    .locals 9
 
     .line 88
     new-instance v0, Lcom/miui/home/launcher/CategoryProvider$SqlArguments;
@@ -423,44 +400,41 @@
 
     invoke-direct {v1, p1}, Lcom/miui/home/launcher/common/SQLiteTransaction;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    const/4 v2, 0x0
-
     .line 91
     :try_start_0
-    array-length v3, p2
+    array-length v2, p2
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    move v5, v4
+    move v4, v3
 
     :goto_0
-    if-ge v5, v3, :cond_1
+    if-ge v4, v2, :cond_1
 
-    aget-object v6, p2, v5
+    aget-object v5, p2, v4
 
     .line 92
-    iget-object v7, v0, Lcom/miui/home/launcher/CategoryProvider$SqlArguments;->table:Ljava/lang/String;
+    iget-object v6, v0, Lcom/miui/home/launcher/CategoryProvider$SqlArguments;->table:Ljava/lang/String;
 
-    invoke-static {p1, v7, v6}, Lcom/miui/home/launcher/CategoryProvider;->dbInsertAndCheck(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Landroid/content/ContentValues;)J
+    invoke-static {p1, v6, v5}, Lcom/miui/home/launcher/CategoryProvider;->dbInsertAndCheck(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    move-result-wide v6
+    move-result-wide v5
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const-wide/16 v8, 0x0
+    const-wide/16 v7, 0x0
 
-    cmp-long v6, v6, v8
+    cmp-long v5, v5, v7
 
-    if-gez v6, :cond_0
+    if-gez v5, :cond_0
 
     .line 97
     invoke-virtual {v1}, Lcom/miui/home/launcher/common/SQLiteTransaction;->close()V
 
-    return v4
+    return v3
 
     :cond_0
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
@@ -470,7 +444,6 @@
     invoke-virtual {v1}, Lcom/miui/home/launcher/common/SQLiteTransaction;->commit()V
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 97
     invoke-virtual {v1}, Lcom/miui/home/launcher/common/SQLiteTransaction;->close()V
@@ -480,44 +453,23 @@
 
     return p1
 
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
     :catch_0
     move-exception p1
 
-    move-object v2, p1
-
     .line 90
     :try_start_2
-    throw v2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :goto_1
-    if-eqz v2, :cond_2
-
-    .line 97
-    :try_start_3
     invoke-virtual {v1}, Lcom/miui/home/launcher/common/SQLiteTransaction;->close()V
-    :try_end_3
-    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
+    :try_end_2
+    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
 
-    goto :goto_2
+    goto :goto_1
 
     :catch_1
     move-exception p2
 
-    invoke-virtual {v2, p2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    invoke-virtual {p1, p2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v1}, Lcom/miui/home/launcher/common/SQLiteTransaction;->close()V
-
-    :goto_2
+    :goto_1
     throw p1
 .end method
 

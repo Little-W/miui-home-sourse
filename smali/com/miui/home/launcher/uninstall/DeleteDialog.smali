@@ -65,11 +65,11 @@
     return-void
 .end method
 
-.method private final getMultiplePositiveClick(Lmiui/app/AlertDialog;)V
+.method private final getMultiplePositiveClick(Lmiuix/appcompat/app/AlertDialog;)V
     .locals 2
 
     .line 39
-    invoke-virtual {p1}, Lmiui/app/AlertDialog;->dismiss()V
+    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     .line 40
     new-instance p1, Lcom/miui/home/launcher/uninstall/SecondConfirmDialog;
@@ -85,7 +85,7 @@
     :cond_0
     invoke-direct {p1, v0, v1}, Lcom/miui/home/launcher/uninstall/SecondConfirmDialog;-><init>(Landroid/content/Context;Ljava/util/List;)V
 
-    const v0, 0x7f1000bd
+    const v0, 0x7f100105
 
     .line 41
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/uninstall/SecondConfirmDialog;->setPositiveButTitle(I)V
@@ -104,11 +104,11 @@
     return-void
 .end method
 
-.method private final getSinglePositiveClick(Lmiui/app/AlertDialog;)V
+.method private final getSinglePositiveClick(Lmiuix/appcompat/app/AlertDialog;)V
     .locals 2
 
     .line 30
-    invoke-virtual {p1}, Lmiui/app/AlertDialog;->dismiss()V
+    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     .line 31
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/DeleteDialog;->mSecondShortcutInfos:Ljava/util/ArrayList;
@@ -175,7 +175,7 @@
 
 
 # virtual methods
-.method public onNegativeClick(Lmiui/app/AlertDialog;)V
+.method public onNegativeClick(Lmiuix/appcompat/app/AlertDialog;)V
     .locals 3
 
     const-string v0, "dialog"
@@ -208,12 +208,12 @@
 
     .line 26
     :cond_0
-    invoke-virtual {p1}, Lmiui/app/AlertDialog;->dismiss()V
+    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     return-void
 .end method
 
-.method public onPositiveClick(Lmiui/app/AlertDialog;)V
+.method public onPositiveClick(Lmiuix/appcompat/app/AlertDialog;)V
     .locals 2
 
     const-string v0, "dialog"
@@ -257,13 +257,13 @@
 
     .line 16
     :cond_3
-    invoke-direct {p0, p1}, Lcom/miui/home/launcher/uninstall/DeleteDialog;->getSinglePositiveClick(Lmiui/app/AlertDialog;)V
+    invoke-direct {p0, p1}, Lcom/miui/home/launcher/uninstall/DeleteDialog;->getSinglePositiveClick(Lmiuix/appcompat/app/AlertDialog;)V
 
     goto :goto_1
 
     .line 18
     :cond_4
-    invoke-direct {p0, p1}, Lcom/miui/home/launcher/uninstall/DeleteDialog;->getMultiplePositiveClick(Lmiui/app/AlertDialog;)V
+    invoke-direct {p0, p1}, Lcom/miui/home/launcher/uninstall/DeleteDialog;->getMultiplePositiveClick(Lmiuix/appcompat/app/AlertDialog;)V
 
     :goto_1
     return-void

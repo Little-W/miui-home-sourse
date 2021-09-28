@@ -75,8 +75,6 @@
     move-result-object p0
 
     check-cast p0, [Ljava/lang/Object;
-
-    check-cast p0, [Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

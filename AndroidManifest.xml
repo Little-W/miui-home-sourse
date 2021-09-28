@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     android:sharedUserId="@string/sharedUserId"
-    android:versionCode="422003122"
-    android:versionName="ALPHA-4.22.0.3122-04262046"
     android:compileSdkVersion="30"
-    android:compileSdkVersionCodename="11"
+    android:compileSdkVersionCodename="S"
     package="com.miui.home"
-    platformBuildVersionCode="422003122"
-    platformBuildVersionName="ALPHA-4.22.0.3122-04262046"
+    platformBuildVersionCode="423003277"
+    platformBuildVersionName="ALPHA-4.23.0.3277-07092031"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <permission
         android:label="@string/permlab_install_shortcut"
@@ -113,8 +111,6 @@
     <uses-permission
         android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission
-        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
-    <uses-permission
         android:name="android.permission.UPDATE_APP_OPS_STATS" />
     <uses-permission
         android:name="android.permission.MEDIA_CONTENT_CONTROL" />
@@ -138,6 +134,8 @@
         android:name="miui.permission.EXTRA_NETWORK" />
     <uses-permission
         android:name="android.permission.MANAGE_ACTIVITY_STACKS" />
+    <uses-permission
+        android:name="android.permission.MANAGE_ACTIVITY_TASKS" />
     <uses-permission
         android:name="miui.permission.USE_INTERNAL_GENERAL_API" />
     <uses-permission
@@ -269,6 +267,9 @@
         android:directBootAware="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:requestLegacyExternalStorage="true">
+        <uses-library
+            android:name="com.miui.system"
+            android:required="false" />
         <meta-data
             android:name="miui.xiaoai.disable_swipe_up_gesture"
             android:value="true" />
@@ -397,6 +398,12 @@
             android:exported="true"
             android:authorities="com.miui.home.launcher.settings" />
         <provider
+            android:name="com.miui.home.launcher.SearchBarStyleDataProvider"
+            android:readPermission="com.android.launcher.permission.READ_SETTINGS"
+            android:writePermission="com.android.launcher.permission.WRITE_SETTINGS"
+            android:exported="true"
+            android:authorities="com.miui.home.search.styleData" />
+        <provider
             android:name="com.miui.home.launcher.AppStatusProvider"
             android:exported="false"
             android:authorities="com.miui.home.launcher.status" />
@@ -406,12 +413,6 @@
             android:writePermission="com.android.launcher.permission.WRITE_SETTINGS"
             android:exported="true"
             android:authorities="com.miui.home.app.hide" />
-        <provider
-            android:name="com.miui.home.launcher.SearchBarStyleProvider"
-            android:readPermission="com.android.launcher.permission.READ_SETTINGS"
-            android:writePermission="com.android.launcher.permission.WRITE_SETTINGS"
-            android:exported="true"
-            android:authorities="com.miui.home.search.style" />
         <provider
             android:name="androidx.core.content.FileProvider"
             android:exported="false"
@@ -433,13 +434,13 @@
             </intent-filter>
         </service>
         <activity
-            android:theme="@269287447"
+            android:theme="@style/Theme.Light"
             android:name="miui.maml.MamlConfigSettings"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation"
             android:uiOptions="splitActionBarWhenNarrow" />
         <activity
-            android:theme="@269287447"
+            android:theme="@style/Theme.Light"
             android:name="miui.maml.ThirdAppPicker"
             android:screenOrientation="portrait"
             android:configChanges="keyboardHidden|orientation"
@@ -823,23 +824,41 @@
             </intent-filter>
         </receiver>
         <meta-data
-            android:name="preference"
+            android:name="visualcheck"
             android:value="1.0" />
         <meta-data
-            android:name="recyclerview"
+            android:name="miuixpreference"
+            android:value="1.0" />
+        <meta-data
+            android:name="appcompat"
+            android:value="1.0" />
+        <meta-data
+            android:name="popupwidget"
+            android:value="1.0" />
+        <meta-data
+            android:name="androidbasewidget"
             android:value="1.0" />
         <meta-data
             android:name="springback"
+            android:value="2.0" />
+        <meta-data
+            android:name="slidingwidget"
             android:value="1.0" />
+        <meta-data
+            android:name="miuixbasewidget"
+            android:value="1.0" />
+        <meta-data
+            android:name="recyclerview"
+            android:value="2.0" />
         <meta-data
             android:name="nest"
-            android:value="1.0" />
+            android:value="2.0" />
         <meta-data
             android:name="dynamicoverscroller"
-            android:value="1.0" />
+            android:value="2.0" />
         <meta-data
             android:name="recyclerview_animator"
-            android:value="1.0" />
+            android:value="2.0" />
         <meta-data
             android:name="folme"
             android:value="2.0" />
@@ -850,19 +869,31 @@
             android:name="androidx.room.MultiInstanceInvalidationService"
             android:exported="false" />
         <meta-data
-            android:name="animation"
+            android:name="pickerwidget"
             android:value="1.0" />
         <meta-data
-            android:name="compat"
+            android:name="haptic"
             android:value="1.0" />
+        <meta-data
+            android:name="core"
+            android:value="2.0" />
+        <meta-data
+            android:name="smooth"
+            android:value="1.0" />
+        <meta-data
+            android:name="viewpager"
+            android:value="2.0" />
         <meta-data
             android:name="spring"
             android:value="1.0" />
         <meta-data
-            android:name="core"
+            android:name="animation"
             android:value="1.0" />
         <meta-data
             android:name="com.miui.maml.sdk"
             android:value="true" />
+        <meta-data
+            android:name="blurdrawable"
+            android:value="1.0" />
     </application>
 </manifest>

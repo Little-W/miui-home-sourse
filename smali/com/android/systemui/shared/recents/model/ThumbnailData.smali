@@ -14,45 +14,26 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/ActivityManager$TaskSnapshot;)V
-    .locals 1
-
-    .line 35
-    invoke-static {p1}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->wrapHardwareBuffer(Landroid/app/ActivityManager$TaskSnapshot;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    .line 36
-    invoke-static {p1}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getTaskThumbnailInfo(Landroid/app/ActivityManager$TaskSnapshot;)Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
-
-    move-result-object p1
-
-    .line 35
-    invoke-direct {p0, v0, p1}, Lcom/android/systemui/shared/recents/model/ThumbnailData;-><init>(Landroid/graphics/Bitmap;Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;)V
-
-    return-void
-.end method
-
 .method public constructor <init>(Landroid/graphics/Bitmap;Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;)V
     .locals 1
 
-    .line 39
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
+    .line 35
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnail:Landroid/graphics/Bitmap;
 
-    .line 41
+    .line 36
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnail:Landroid/graphics/Bitmap;
 
     if-eqz p1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 42
+    .line 37
     invoke-virtual {p1, v0}, Landroid/graphics/Bitmap;->setHasAlpha(Z)V
 
-    .line 44
+    .line 39
     :cond_0
     iput-object p2, p0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
 
@@ -64,7 +45,7 @@
 .method public isValidate()Z
     .locals 1
 
-    .line 48
+    .line 43
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnail:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0

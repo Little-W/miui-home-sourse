@@ -1,9 +1,6 @@
-.class final Lcom/miui/home/launcher/CellLayout$10;
-.super Ljava/lang/Object;
+.class Lcom/miui/home/launcher/CellLayout$10;
+.super Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;
 .source "CellLayout.java"
-
-# interfaces
-.implements Lcom/miui/home/launcher/CellLayout$DrawableWorker;
 
 
 # annotations
@@ -12,49 +9,57 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
+# instance fields
+.field final synthetic this$0:Lcom/miui/home/launcher/CellLayout;
+
+
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 3095
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2291
+    iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$10;->this$0:Lcom/miui/home/launcher/CellLayout;
+
+    invoke-direct {p0}, Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public process(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+.method public onMessageEvent(Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;)V
+    .locals 2
+    .annotation runtime Lorg/greenrobot/eventbus/Subscribe;
+        threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
+    .end annotation
 
-    .line 3098
-    invoke-static {p1}, Lcom/miui/home/launcher/graphics/drawable/MamlCompat;->onResume(Landroid/graphics/drawable/Drawable;)V
+    .line 2294
+    invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getCurrentEditState()I
 
-    return-void
-.end method
+    move-result v0
 
-.method public process(Lcom/miui/home/launcher/ShortcutIcon;)V
-    .locals 1
+    const/4 v1, 0x7
 
-    .line 3102
-    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
+    if-ne v0, v1, :cond_0
 
-    move-result-object v0
+    .line 2295
+    invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getLastEditState()I
 
-    check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
+    move-result p1
 
-    .line 3103
-    instance-of v0, v0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
+    const/16 v0, 0x11
 
-    if-eqz v0, :cond_0
+    if-ne p1, v0, :cond_0
 
-    .line 3104
-    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->onProgressStatusChanged()V
+    .line 2296
+    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$10;->this$0:Lcom/miui/home/launcher/CellLayout;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->clearCellBackground()V
 
     :cond_0
     return-void

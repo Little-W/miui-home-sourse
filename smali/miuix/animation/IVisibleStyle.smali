@@ -24,6 +24,9 @@
 .method public abstract setBound(IIII)Lmiuix/animation/IVisibleStyle;
 .end method
 
+.method public abstract setFlags(J)Lmiuix/animation/IVisibleStyle;
+.end method
+
 .method public abstract setHide()Lmiuix/animation/IVisibleStyle;
 .end method
 

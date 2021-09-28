@@ -231,6 +231,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 67
     iget v0, p0, Lcom/miui/home/recents/views/FourMenuViewPositionCalculator;->mMenuSize:I
 
     goto :goto_0

@@ -143,7 +143,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f07009e
+    const p2, 0x7f0700a4
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -156,7 +156,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0700a3
+    const p2, 0x7f0700aa
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -252,7 +252,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700aa
+    const v1, 0x7f0700b1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -318,7 +318,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700a9
+    const v1, 0x7f0700b0
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -555,7 +555,7 @@
     .line 84
     invoke-super {p0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->onFinishInflate()V
 
-    const v0, 0x7f0a01d2
+    const v0, 0x7f0a021d
 
     .line 85
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ThumbnailContainerBorder;->findViewById(I)Landroid/view/View;
@@ -608,7 +608,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700a8
+    const v1, 0x7f0700af
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -622,7 +622,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700aa
+    const v1, 0x7f0700b1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 

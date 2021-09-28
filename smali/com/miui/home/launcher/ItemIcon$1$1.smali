@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ItemIcon$1;)V
     .locals 0
 
-    .line 196
+    .line 197
     iput-object p1, p0, Lcom/miui/home/launcher/ItemIcon$1$1;->this$1:Lcom/miui/home/launcher/ItemIcon$1;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 199
+    .line 200
     iget-object p1, p0, Lcom/miui/home/launcher/ItemIcon$1$1;->this$1:Lcom/miui/home/launcher/ItemIcon$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
@@ -46,18 +46,18 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 200
+    .line 201
     iget-object p1, p0, Lcom/miui/home/launcher/ItemIcon$1$1;->this$1:Lcom/miui/home/launcher/ItemIcon$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
 
     iget-object p1, p1, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
 
-    const/4 v1, 0x4
+    const/16 v1, 0x8
 
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 201
+    .line 202
     iget-object p1, p0, Lcom/miui/home/launcher/ItemIcon$1$1;->this$1:Lcom/miui/home/launcher/ItemIcon$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;

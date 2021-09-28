@@ -477,6 +477,7 @@
 
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
+    .line 81
     :cond_c
     throw p0
 .end method

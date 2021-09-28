@@ -737,7 +737,7 @@
     return p1
 .end method
 
-.method public static synthetic lambda$drawIcon$313(Lcom/miui/home/recents/FloatingIconLayer;I)V
+.method public static synthetic lambda$drawIcon$2(Lcom/miui/home/recents/FloatingIconLayer;I)V
     .locals 2
 
     const-string v0, "FloatingIconLayer"
@@ -758,7 +758,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$release$311(Lcom/miui/home/recents/FloatingIconLayer;)V
+.method public static synthetic lambda$release$0(Lcom/miui/home/recents/FloatingIconLayer;)V
     .locals 5
 
     .line 151
@@ -829,7 +829,7 @@
     throw v1
 .end method
 
-.method public static synthetic lambda$releaseSync$312(Lcom/miui/home/recents/FloatingIconLayer;Landroid/view/View;)V
+.method public static synthetic lambda$releaseSync$1(Lcom/miui/home/recents/FloatingIconLayer;Landroid/view/View;)V
     .locals 5
 
     .line 180
@@ -1338,9 +1338,9 @@
     .line 211
     sget-object v0, Lcom/miui/home/recents/FloatingIconLayer;->FLOATING_ICON_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$ZhRymNOq2RLQ75Oafhv4pPWG0N8;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$9kRGCcPPgIqzX3cs6s-WLK-n0VQ;
 
-    invoke-direct {v1, p0, p1}, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$ZhRymNOq2RLQ75Oafhv4pPWG0N8;-><init>(Lcom/miui/home/recents/FloatingIconLayer;I)V
+    invoke-direct {v1, p0, p1}, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$9kRGCcPPgIqzX3cs6s-WLK-n0VQ;-><init>(Lcom/miui/home/recents/FloatingIconLayer;I)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 
@@ -1353,9 +1353,9 @@
     .line 150
     sget-object v0, Lcom/miui/home/recents/FloatingIconLayer;->FLOATING_ICON_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$fkRYruDhdgK_hrOeqRDsH5chnac;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$5u8LAS4MlvSn3aaeGgSK0v7wWjs;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$fkRYruDhdgK_hrOeqRDsH5chnac;-><init>(Lcom/miui/home/recents/FloatingIconLayer;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$5u8LAS4MlvSn3aaeGgSK0v7wWjs;-><init>(Lcom/miui/home/recents/FloatingIconLayer;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 
@@ -1368,9 +1368,9 @@
     .line 179
     sget-object v0, Lcom/miui/home/recents/FloatingIconLayer;->FLOATING_ICON_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$EgCS1Td00MWYQWwbDMdwxlN3z0Q;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$21FlMXAC1lfKuRhN-cOHC6ogAJA;
 
-    invoke-direct {v1, p0, p1}, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$EgCS1Td00MWYQWwbDMdwxlN3z0Q;-><init>(Lcom/miui/home/recents/FloatingIconLayer;Landroid/view/View;)V
+    invoke-direct {v1, p0, p1}, Lcom/miui/home/recents/-$$Lambda$FloatingIconLayer$21FlMXAC1lfKuRhN-cOHC6ogAJA;-><init>(Lcom/miui/home/recents/FloatingIconLayer;Landroid/view/View;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 

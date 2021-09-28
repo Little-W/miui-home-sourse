@@ -12,16 +12,24 @@
 
 .field public static final DEFAULT_SCREEN_BLUR_RADIUS:I
 
+.field public static final MIUI_HOME_ENABLE_AUTO_FILL_EMPTY_CELLS:Ljava/lang/String; = "miui_home_enable_auto_fill_empty_cells"
+
+.field public static final MIUI_HOME_LOCK_SCREEN_CELLS:Ljava/lang/String; = "miui_home_lock_screen_cells"
+
 .field public static final PACKAGE_DELETE_SUCCESS:I = 0x1
 
 .field private static final TAG:Ljava/lang/String; = "Launcher.LauncherUtils"
+
+.field private static sIsAutoFillEmpty:Z = true
+
+.field private static sIsScreenCellsLocked:Z = false
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 322
+    .line 339
     sget v0, Lmiui/util/ScreenshotUtils;->DEFAULT_SCREEN_BLUR_RADIUS:I
 
     sput v0, Lcom/miui/launcher/utils/LauncherUtils;->DEFAULT_SCREEN_BLUR_RADIUS:I
@@ -41,7 +49,7 @@
 .method private static clearLockedSetting(Landroid/content/Context;)V
     .locals 2
 
-    .line 134
+    .line 137
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -58,7 +66,7 @@
 .method public static deletePackage(Landroid/content/Context;Ljava/lang/String;Lcom/miui/launcher/common/PackageDeleteObserverDelegate;)V
     .locals 1
 
-    .line 195
+    .line 198
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -85,7 +93,7 @@
 .method public static deletePackageAsCurrentUser(Landroid/content/Context;Ljava/lang/String;Lcom/miui/launcher/common/PackageDeleteObserverDelegate;)V
     .locals 2
 
-    .line 220
+    .line 223
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -106,14 +114,14 @@
 
     goto :goto_0
 
-    .line 205
+    .line 208
     :cond_0
     :try_start_0
     invoke-virtual {p2}, Lcom/miui/launcher/common/PackageDeleteObserverDelegate;->getDeleteObserver()Landroid/content/pm/IPackageDeleteObserver;
 
     move-result-object p2
 
-    .line 206
+    .line 209
     :goto_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -123,27 +131,27 @@
 
     const-string p0, "package"
 
-    .line 207
+    .line 210
     invoke-static {p0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p0
 
     invoke-static {p0}, Landroid/content/pm/IPackageManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/pm/IPackageManager;
 
-    move-result-object p0
+    move-result-object v1
 
-    .line 208
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 211
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    const-string v1, "deletePackageAsUser"
+    const-string v2, "deletePackageAsUser"
 
-    sget-object v2, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
+    sget-object v3, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
-    const/4 v3, 0x4
+    const/4 p0, 0x4
 
-    new-array v4, v3, [Ljava/lang/Class;
+    new-array v4, p0, [Ljava/lang/Class;
 
     const-class v5, Ljava/lang/String;
 
@@ -169,36 +177,31 @@
 
     aput-object v5, v4, v9
 
-    .line 209
-    invoke-static {v2, v4}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
+    new-array v5, p0, [Ljava/lang/Object;
 
-    move-result-object v2
+    aput-object p1, v5, v6
 
-    new-array v3, v3, [Ljava/lang/Object;
+    aput-object p2, v5, v7
 
-    aput-object p1, v3, v6
-
-    aput-object p2, v3, v7
-
-    .line 210
+    .line 213
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p1
+    move-result-object p0
 
-    aput-object p1, v3, v8
+    aput-object p0, v5, v8
 
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p1
+    move-result-object p0
 
-    aput-object p1, v3, v9
+    aput-object p0, v5, v9
 
-    .line 208
-    invoke-static {v0, p0, v1, v2, v3}, Lcom/miui/launcher/utils/ReflectUtils;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 211
+    invoke-static/range {v0 .. v5}, Lcom/miui/launcher/utils/ReflectUtils;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 212
+    .line 215
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -213,7 +216,7 @@
     :catch_0
     move-exception p0
 
-    .line 215
+    .line 218
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_1
@@ -227,7 +230,7 @@
 
     const/4 v1, 0x4
 
-    .line 199
+    .line 202
     invoke-static {p0, p1, p2, v0, v1}, Lcom/miui/launcher/utils/LauncherUtils;->deletePackageAsUser(Landroid/content/Context;Ljava/lang/String;Lcom/miui/launcher/common/PackageDeleteObserverDelegate;II)V
 
     return-void
@@ -240,11 +243,11 @@
 
     const-wide/16 v0, 0x0
 
-    .line 95
+    .line 100
     :try_start_0
     invoke-virtual {p0, v0, v1}, Ljava/io/RandomAccessFile;->seek(J)V
 
-    .line 96
+    .line 101
     invoke-static {p1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object p1
@@ -255,10 +258,10 @@
 
     invoke-interface {p1, v2, p2}, Landroid/os/IBinder;->dump(Ljava/io/FileDescriptor;[Ljava/lang/String;)V
 
-    .line 97
+    .line 102
     invoke-virtual {p0, v0, v1}, Ljava/io/RandomAccessFile;->seek(J)V
 
-    .line 98
+    .line 103
     invoke-virtual {p0}, Ljava/io/RandomAccessFile;->length()J
 
     move-result-wide p1
@@ -267,12 +270,12 @@
 
     new-array p1, p1, [B
 
-    .line 99
+    .line 104
     invoke-virtual {p0, p1}, Ljava/io/RandomAccessFile;->read([B)I
 
     move-result p0
 
-    .line 100
+    .line 105
     new-instance p2, Ljava/lang/String;
 
     const/4 v0, 0x0
@@ -288,7 +291,7 @@
     :catch_0
     move-exception p0
 
-    .line 107
+    .line 112
     invoke-virtual {p0}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
     goto :goto_0
@@ -296,7 +299,7 @@
     :catch_1
     move-exception p0
 
-    .line 105
+    .line 110
     invoke-virtual {p0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -304,7 +307,7 @@
     :catch_2
     move-exception p0
 
-    .line 103
+    .line 108
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_0
@@ -314,23 +317,13 @@
     return-object p0
 .end method
 
-.method public static enableAutoFillEmpty(Landroid/content/Context;)Z
-    .locals 2
+.method public static enableAutoFillEmpty()Z
+    .locals 1
 
-    .line 118
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    .line 122
+    sget-boolean v0, Lcom/miui/launcher/utils/LauncherUtils;->sIsAutoFillEmpty:Z
 
-    move-result-object p0
-
-    const-string v0, "miui_home_enable_auto_fill_empty_cells"
-
-    const/4 v1, 0x1
-
-    invoke-static {p0, v0, v1}, Landroid/provider/MiuiSettings$System;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
-
-    move-result p0
-
-    return p0
+    return v0
 .end method
 
 .method public static expandStatusBar(Landroid/content/Context;)V
@@ -338,7 +331,7 @@
 
     const-string v0, "statusbar"
 
-    .line 269
+    .line 272
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -347,7 +340,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 273
+    .line 276
     :try_start_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -357,7 +350,7 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 274
+    .line 277
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -372,7 +365,7 @@
 
     goto :goto_0
 
-    .line 276
+    .line 279
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -389,7 +382,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 279
+    .line 282
     new-array v1, v2, [Ljava/lang/Object;
 
     invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -404,7 +397,7 @@
     :catch_0
     move-exception p0
 
-    .line 292
+    .line 295
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
 
     goto :goto_1
@@ -412,7 +405,7 @@
     :catch_1
     move-exception p0
 
-    .line 289
+    .line 292
     invoke-virtual {p0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     goto :goto_1
@@ -420,7 +413,7 @@
     :catch_2
     move-exception p0
 
-    .line 286
+    .line 289
     invoke-virtual {p0}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     goto :goto_1
@@ -428,7 +421,7 @@
     :catch_3
     move-exception p0
 
-    .line 283
+    .line 286
     invoke-virtual {p0}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
 
     :cond_1
@@ -439,7 +432,7 @@
 .method public static getAllUserHandle()Landroid/os/UserHandle;
     .locals 2
 
-    .line 160
+    .line 163
     new-instance v0, Landroid/os/UserHandle;
 
     const/4 v1, -0x1
@@ -454,7 +447,7 @@
 
     const-string v0, "miui.security.appcompatibility.AppCompatibilityManager"
 
-    .line 146
+    .line 149
     const-class v1, Landroid/content/Intent;
 
     const-string v2, "getAppErrorTipsDialogIntentForLauncher"
@@ -485,16 +478,17 @@
 .method public static getAppLaunchCount(Landroid/app/usage/UsageStats;)I
     .locals 0
 
-    .line 358
+    .line 375
     iget p0, p0, Landroid/app/usage/UsageStats;->mLaunchCount:I
 
     return p0
 .end method
 
 .method public static getBackupProcessingItem(Landroid/content/Context;)Ljava/lang/String;
-    .locals 0
+    .locals 2
 
-    .line 306
+    .line 315
+    :try_start_0
     invoke-static {p0}, Lmiui/app/backup/BackupManager;->getBackupManager(Landroid/content/Context;)Lmiui/app/backup/BackupManager;
 
     move-result-object p0
@@ -502,14 +496,31 @@
     invoke-virtual {p0}, Lmiui/app/backup/BackupManager;->getCurrentRunningPackage()Ljava/lang/String;
 
     move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    const-string v0, "Launcher.LauncherUtils"
+
+    const-string v1, "getBackupProcessingItem"
+
+    .line 317
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    const-string p0, ""
 
     return-object p0
 .end method
 
 .method public static getBackupState(Landroid/content/Context;)I
-    .locals 0
+    .locals 2
 
-    .line 302
+    .line 306
+    :try_start_0
     invoke-static {p0}, Lmiui/app/backup/BackupManager;->getBackupManager(Landroid/content/Context;)Lmiui/app/backup/BackupManager;
 
     move-result-object p0
@@ -517,6 +528,22 @@
     invoke-virtual {p0}, Lmiui/app/backup/BackupManager;->getState()I
 
     move-result p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    move-exception p0
+
+    const-string v0, "Launcher.LauncherUtils"
+
+    const-string v1, "getBackupState"
+
+    .line 308
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    const/4 p0, 0x0
 
     return p0
 .end method
@@ -524,7 +551,7 @@
 .method public static getBooleanValueFromMiuiSettings(Landroid/content/Context;Ljava/lang/String;Z)Z
     .locals 0
 
-    .line 123
+    .line 126
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -547,7 +574,7 @@
 .method public static getCurrentUserHandle()Landroid/os/UserHandle;
     .locals 2
 
-    .line 164
+    .line 167
     new-instance v0, Landroid/os/UserHandle;
 
     const/4 v1, -0x2
@@ -560,7 +587,7 @@
 .method public static getCurrentUserId()I
     .locals 1
 
-    .line 156
+    .line 159
     invoke-static {}, Lmiui/securityspace/CrossUserUtils;->getCurrentUserId()I
 
     move-result v0
@@ -583,7 +610,7 @@
 
     const-string v0, "miui.security.appcompatibility.AppCompatibilityManager"
 
-    .line 139
+    .line 142
     const-class v1, Ljava/util/List;
 
     const-string v2, "getIncompatibleAppList"
@@ -624,26 +651,26 @@
 
     const-string v0, "window"
 
-    .line 176
+    .line 179
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/view/WindowManager;
 
-    .line 177
+    .line 180
     new-instance v0, Landroid/view/DisplayInfo;
 
     invoke-direct {v0}, Landroid/view/DisplayInfo;-><init>()V
 
-    .line 178
+    .line 181
     invoke-interface {p0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object p0
 
     invoke-virtual {p0, v0}, Landroid/view/Display;->getDisplayInfo(Landroid/view/DisplayInfo;)Z
 
-    .line 179
+    .line 182
     invoke-virtual {v0}, Landroid/view/DisplayInfo;->getNaturalWidth()I
 
     move-result p0
@@ -654,7 +681,7 @@
 .method public static getRealSize(Landroid/view/Display;Landroid/graphics/Point;)V
     .locals 0
 
-    .line 187
+    .line 190
     invoke-static {p0, p1}, Lmiui/util/CustomizeUtil;->getRealSize(Landroid/view/Display;Landroid/graphics/Point;)V
 
     return-void
@@ -663,7 +690,7 @@
 .method public static getScreenshot(Landroid/content/Context;FIIZ)Landroid/graphics/Bitmap;
     .locals 0
 
-    .line 324
+    .line 341
     invoke-static {p0, p1, p2, p3, p4}, Lmiui/util/ScreenshotUtils;->getScreenshot(Landroid/content/Context;FIIZ)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -674,7 +701,7 @@
 .method public static getSecondSpaceId()I
     .locals 1
 
-    .line 354
+    .line 371
     invoke-static {}, Lmiui/securityspace/CrossUserUtils;->getSecondSpaceId()I
 
     move-result v0
@@ -691,7 +718,7 @@
 
     return-object p0
 
-    .line 67
+    .line 72
     :cond_0
     invoke-virtual {p0}, Landroid/content/Intent;->getSender()Ljava/lang/String;
 
@@ -703,7 +730,7 @@
 .method public static getSharedPrefsFile(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
     .locals 0
 
-    .line 332
+    .line 349
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSharedPrefsFile(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p0
@@ -716,7 +743,7 @@
 
     const-string v0, "activity"
 
-    .line 368
+    .line 385
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -725,21 +752,21 @@
 
     const/4 v0, 0x1
 
-    .line 370
+    .line 387
     invoke-virtual {p0, v0}, Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;
 
     move-result-object p0
 
     const/4 v1, 0x0
 
-    .line 371
+    .line 388
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 374
+    .line 391
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -751,15 +778,15 @@
 
     const-string v2, "userId"
 
-    .line 375
+    .line 392
     invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
 
-    .line 376
+    .line 393
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 377
+    .line 394
     invoke-virtual {v1, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -781,7 +808,7 @@
 
     const-string v1, "getTopActivityUserId exception: "
 
-    .line 379
+    .line 396
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/16 p0, -0x2710
@@ -799,7 +826,7 @@
 
     return p0
 
-    .line 81
+    .line 86
     :cond_0
     invoke-virtual {p0}, Landroid/os/UserHandle;->getIdentifier()I
 
@@ -823,7 +850,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 362
+    .line 379
     invoke-virtual {p0, p1}, Landroid/os/Handler;->hasCallbacks(Ljava/lang/Runnable;)Z
 
     move-result p0
@@ -844,7 +871,7 @@
 .method public static hasRelativeXSpaceApp(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
 
-    .line 225
+    .line 228
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -855,7 +882,7 @@
 
     return v1
 
-    .line 230
+    .line 233
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -880,7 +907,7 @@
     :catch_0
     move-exception p0
 
-    .line 233
+    .line 236
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return v1
@@ -889,7 +916,7 @@
 .method public static hasSecondSpace(Landroid/content/Context;)Z
     .locals 0
 
-    .line 328
+    .line 345
     invoke-static {p0}, Lmiui/securityspace/CrossUserUtils;->hasSecondSpace(Landroid/content/Context;)Z
 
     move-result p0
@@ -900,7 +927,7 @@
 .method public static isAirSpace(Landroid/content/Context;I)Z
     .locals 0
 
-    .line 152
+    .line 155
     invoke-static {p0, p1}, Lmiui/securityspace/CrossUserUtils;->isAirSpace(Landroid/content/Context;I)Z
 
     move-result p0
@@ -911,7 +938,7 @@
 .method public static isAppBackupRunning(Landroid/content/Context;Ljava/lang/String;Landroid/os/UserHandle;)Z
     .locals 5
 
-    .line 310
+    .line 323
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -922,13 +949,13 @@
 
     return v1
 
-    .line 311
+    .line 324
     :cond_0
     invoke-static {p0}, Lcom/miui/launcher/utils/LauncherUtils;->getBackupProcessingItem(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 312
+    .line 325
     invoke-static {p2}, Lcom/miui/launcher/utils/LauncherUtils;->getUserId(Landroid/os/UserHandle;)I
 
     move-result v2
@@ -939,7 +966,7 @@
 
     const-string v2, "Launcher.LauncherUtils"
 
-    .line 313
+    .line 326
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -972,9 +999,9 @@
 
     move-result-object p2
 
-    invoke-static {v2, p2}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 314
+    .line 327
     invoke-static {v0, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -992,7 +1019,7 @@
 .method public static isAppCornerAllowed(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
-    .line 350
+    .line 367
     invoke-static {p0, p1}, Lmiui/provider/AppCornerProviderHelper;->isAllowed(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -1009,7 +1036,7 @@
 
     return p0
 
-    .line 74
+    .line 79
     :cond_0
     invoke-virtual {p0}, Landroid/content/Intent;->isExcludingStopped()Z
 
@@ -1023,7 +1050,7 @@
 
     const/4 v0, 0x0
 
-    .line 240
+    .line 243
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -1039,12 +1066,12 @@
 
     const-string p1, "isPackageDisableAsUser, pkgInfo is null"
 
-    .line 242
-    invoke-static {p0, p1}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 245
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
 
-    .line 245
+    .line 248
     :cond_0
     iget-object p0, p0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1063,8 +1090,8 @@
 
     const-string p2, "isPackageDisableAsUser"
 
-    .line 247
-    invoke-static {p1, p2, p0}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .line 250
+    invoke-static {p1, p2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
 .end method
@@ -1072,7 +1099,7 @@
 .method public static isProtectedDataApp(Landroid/content/Context;Ljava/lang/String;I)Z
     .locals 0
 
-    .line 336
+    .line 353
     invoke-static {p0, p1, p2}, Lmiui/content/pm/PreloadedAppPolicy;->isProtectedDataApp(Landroid/content/Context;Ljava/lang/String;I)Z
 
     move-result p0
@@ -1089,7 +1116,7 @@
 
     goto :goto_0
 
-    .line 253
+    .line 256
     :cond_0
     invoke-virtual {p0}, Landroid/app/Activity;->isResumed()Z
 
@@ -1099,29 +1126,19 @@
     return p0
 .end method
 
-.method public static isScreenCellsLocked(Landroid/content/Context;)Z
-    .locals 2
+.method public static isScreenCellsLocked()Z
+    .locals 1
 
-    .line 113
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    .line 118
+    sget-boolean v0, Lcom/miui/launcher/utils/LauncherUtils;->sIsScreenCellsLocked:Z
 
-    move-result-object p0
-
-    const-string v0, "miui_home_lock_screen_cells"
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Landroid/provider/MiuiSettings$System;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
-
-    move-result p0
-
-    return p0
+    return v0
 .end method
 
 .method public static isUnLockedByFingerPrint(Landroid/content/Context;)Z
     .locals 3
 
-    .line 127
+    .line 130
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -1134,7 +1151,7 @@
 
     move-result v0
 
-    .line 129
+    .line 132
     invoke-static {p0}, Lcom/miui/launcher/utils/LauncherUtils;->clearLockedSetting(Landroid/content/Context;)V
 
     return v0
@@ -1143,7 +1160,7 @@
 .method public static isXSpaceUser(Landroid/os/UserHandle;)Z
     .locals 0
 
-    .line 168
+    .line 171
     invoke-static {p0}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUser(Landroid/os/UserHandle;)Z
 
     move-result p0
@@ -1154,7 +1171,7 @@
 .method public static isXSpaceUserId(I)Z
     .locals 0
 
-    .line 172
+    .line 175
     invoke-static {p0}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserId(I)Z
 
     move-result p0
@@ -1162,10 +1179,52 @@
     return p0
 .end method
 
+.method public static refreshAutoFillEmpty(Landroid/content/Context;)V
+    .locals 2
+
+    .line 408
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "miui_home_enable_auto_fill_empty_cells"
+
+    const/4 v1, 0x1
+
+    invoke-static {p0, v0, v1}, Landroid/provider/MiuiSettings$System;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
+
+    move-result p0
+
+    sput-boolean p0, Lcom/miui/launcher/utils/LauncherUtils;->sIsAutoFillEmpty:Z
+
+    return-void
+.end method
+
+.method public static refreshScreenCellsLocked(Landroid/content/Context;)V
+    .locals 2
+
+    .line 403
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    const-string v0, "miui_home_lock_screen_cells"
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Landroid/provider/MiuiSettings$System;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
+
+    move-result p0
+
+    sput-boolean p0, Lcom/miui/launcher/utils/LauncherUtils;->sIsScreenCellsLocked:Z
+
+    return-void
+.end method
+
 .method public static registerReceiverAsUser(Landroid/content/Context;Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)V
     .locals 0
 
-    .line 346
+    .line 363
     invoke-virtual/range {p0 .. p5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     return-void
@@ -1174,27 +1233,27 @@
 .method public static setAsyncTaskDefaultExecutor(Ljava/util/concurrent/Executor;)V
     .locals 0
 
-    .line 191
+    .line 194
     invoke-static {p0}, Landroid/os/AsyncTask;->setDefaultExecutor(Ljava/util/concurrent/Executor;)V
 
     return-void
 .end method
 
 .method public static setProcessForeground(Landroid/os/IBinder;)V
-    .locals 10
+    .locals 11
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
         }
     .end annotation
 
-    .line 257
+    .line 260
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
-    move-result-object v0
+    move-result-object v1
 
-    .line 258
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 261
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v2, 0x3
 
@@ -1206,36 +1265,36 @@
 
     const/16 v6, 0x19
 
-    if-gt v1, v6, :cond_0
+    if-gt v0, v6, :cond_0
 
-    .line 259
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 262
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object v0
 
     const-string v6, "setProcessForeground"
 
-    const-class v7, Landroid/os/IBinder;
+    sget-object v7, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
-    new-array v8, v3, [Ljava/lang/Class;
+    new-array v8, v2, [Ljava/lang/Class;
 
-    sget-object v9, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    const-class v9, Landroid/os/IBinder;
 
     aput-object v9, v8, v4
 
-    sget-object v9, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+    sget-object v9, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     aput-object v9, v8, v5
 
-    .line 260
-    invoke-static {v7, v8}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
+    sget-object v9, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    move-result-object v7
+    aput-object v9, v8, v3
 
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v9, v2, [Ljava/lang/Object;
 
-    aput-object p0, v2, v4
+    aput-object p0, v9, v4
 
+    .line 263
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result p0
@@ -1244,54 +1303,62 @@
 
     move-result-object p0
 
-    aput-object p0, v2, v5
+    aput-object p0, v9, v5
 
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
 
-    aput-object p0, v2, v3
+    aput-object p0, v9, v3
 
-    .line 259
-    invoke-static {v1, v0, v6, v7, v2}, Lcom/miui/launcher/utils/ReflectUtils;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-object v2, v6
+
+    move-object v3, v7
+
+    move-object v4, v8
+
+    move-object v5, v9
+
+    .line 262
+    invoke-static/range {v0 .. v5}, Lcom/miui/launcher/utils/ReflectUtils;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 262
+    .line 265
     :cond_0
-    const-class v1, Landroid/os/IBinder;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-array v6, v2, [Ljava/lang/Class;
+    move-result-object v0
 
-    sget-object v7, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    const-string v6, "setProcessImportant"
 
-    aput-object v7, v6, v4
-
-    sget-object v7, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    aput-object v7, v6, v5
-
-    const-class v7, Ljava/lang/String;
-
-    aput-object v7, v6, v3
-
-    invoke-static {v1, v6}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 264
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v6
-
-    const-string v7, "setProcessImportant"
+    sget-object v7, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
     const/4 v8, 0x4
+
+    new-array v9, v8, [Ljava/lang/Class;
+
+    const-class v10, Landroid/os/IBinder;
+
+    aput-object v10, v9, v4
+
+    sget-object v10, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v10, v9, v5
+
+    sget-object v10, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    aput-object v10, v9, v3
+
+    const-class v10, Ljava/lang/String;
+
+    aput-object v10, v9, v2
 
     new-array v8, v8, [Ljava/lang/Object;
 
     aput-object p0, v8, v4
 
+    .line 267
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result p0
@@ -1312,7 +1379,16 @@
 
     aput-object p0, v8, v2
 
-    invoke-static {v6, v0, v7, v1, v8}, Lcom/miui/launcher/utils/ReflectUtils;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-object v2, v6
+
+    move-object v3, v7
+
+    move-object v4, v9
+
+    move-object v5, v8
+
+    .line 265
+    invoke-static/range {v0 .. v5}, Lcom/miui/launcher/utils/ReflectUtils;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)V
 
     :goto_0
     return-void
@@ -1321,16 +1397,17 @@
 .method public static startActivityAsUser(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 340
+    .line 357
     invoke-virtual {p0, p1, p2, p3}, Landroid/content/Context;->startActivityAsUser(Landroid/content/Intent;Landroid/os/Bundle;Landroid/os/UserHandle;)V
 
     return-void
 .end method
 
 .method public static tellBackupManagerNeedBeKilled(Landroid/content/Context;)V
-    .locals 1
+    .locals 2
 
-    .line 319
+    .line 333
+    :try_start_0
     invoke-static {p0}, Lmiui/app/backup/BackupManager;->getBackupManager(Landroid/content/Context;)Lmiui/app/backup/BackupManager;
 
     move-result-object p0
@@ -1338,6 +1415,21 @@
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lmiui/app/backup/BackupManager;->setIsNeedBeKilled(Z)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    const-string v0, "Launcher.LauncherUtils"
+
+    const-string v1, "tellBackupManagerNeedBeKilled"
+
+    .line 335
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_0
     return-void
 .end method

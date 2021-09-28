@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)V
     .locals 0
 
-    .line 1234
+    .line 1237
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$1;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 10
 
-    .line 1236
+    .line 1239
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$1;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->access$1100(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)Landroid/content/Context;
@@ -53,7 +53,7 @@
 
     move-result-object v0
 
-    .line 1237
+    .line 1240
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -72,7 +72,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1238
+    .line 1241
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$1;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iget-object v2, v2, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
@@ -85,7 +85,7 @@
 
     if-nez v2, :cond_0
 
-    .line 1239
+    .line 1242
     new-instance v9, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$1;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
@@ -106,7 +106,7 @@
 
     invoke-direct/range {v2 .. v8}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;J)V
 
-    .line 1240
+    .line 1243
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v2
@@ -117,7 +117,7 @@
 
     invoke-virtual {v2, v1, v9}, Lcom/miui/home/launcher/progress/ProgressManager;->getInfo(Ljava/lang/String;Lcom/miui/home/launcher/progress/ProgressShortcutInfo;)V
 
-    .line 1241
+    .line 1244
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$1;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->access$1100(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)Landroid/content/Context;
@@ -136,7 +136,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 1242
+    .line 1245
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$1;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iget-object v2, v2, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;

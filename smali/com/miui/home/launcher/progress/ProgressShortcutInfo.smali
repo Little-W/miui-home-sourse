@@ -93,7 +93,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f10025b
+    const v0, 0x7f100355
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -204,7 +204,7 @@
     return p1
 .end method
 
-.method public static synthetic lambda$getFillShortcutIconConsumer$167(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/Launcher;Landroid/graphics/drawable/Drawable;)V
+.method public static synthetic lambda$getFillShortcutIconConsumer$0(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/Launcher;Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
     if-eqz p1, :cond_1
@@ -432,9 +432,9 @@
     .end annotation
 
     .line 180
-    new-instance v0, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressShortcutInfo$zG1Fs_8h_XibUB2Y11BonbNSXyg;
+    new-instance v0, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressShortcutInfo$jqrYRMk4Qu8wTBCN0fSpmql_bYk;
 
-    invoke-direct {v0, p0, p2, p1}, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressShortcutInfo$zG1Fs_8h_XibUB2Y11BonbNSXyg;-><init>(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {v0, p0, p2, p1}, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressShortcutInfo$jqrYRMk4Qu8wTBCN0fSpmql_bYk;-><init>(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/Launcher;)V
 
     return-object v0
 .end method
@@ -537,13 +537,17 @@
     invoke-direct {p2, v0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 231
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
 
-    const/4 v0, 0x0
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
-    invoke-static {p1, p2, v0}, Lcom/miui/home/launcher/LauncherApplication;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/view/View;)V
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, p2, v1}, Lcom/miui/home/launcher/Application;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/view/View;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 

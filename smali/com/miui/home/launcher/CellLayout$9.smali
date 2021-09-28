@@ -1,11 +1,14 @@
 .class Lcom/miui/home/launcher/CellLayout$9;
-.super Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;
+.super Ljava/lang/Object;
 .source "CellLayout.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/miui/home/launcher/CellLayout;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/miui/home/launcher/CellLayout;->fillEmptyCellAuto(II)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,45 +25,37 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 2258
+    .line 2109
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$9;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-direct {p0}, Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onMessageEvent(Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;)V
+.method public run()V
     .locals 2
-    .annotation runtime Lorg/greenrobot/eventbus/Subscribe;
-        threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
-    .end annotation
 
-    .line 2261
-    invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getCurrentEditState()I
+    .line 2111
+    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$9;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    move-result v0
+    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
 
-    const/4 v1, 0x7
+    const-string v0, "Launcher.CellLayout"
 
-    if-ne v0, v1, :cond_0
+    const-string v1, "requestLayout after has recalculated item position"
 
-    .line 2262
-    invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getLastEditState()I
+    .line 2112
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result p1
+    .line 2113
+    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$9;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    const/16 v0, 0x11
+    iget-object v0, v0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    if-ne p1, v0, :cond_0
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->invalidateWorkspacePreview()V
 
-    .line 2263
-    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$9;->this$0:Lcom/miui/home/launcher/CellLayout;
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->clearCellBackground()V
-
-    :cond_0
     return-void
 .end method

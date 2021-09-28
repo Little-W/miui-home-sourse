@@ -92,6 +92,7 @@
 
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->release()Z
 
+    .line 53
     :cond_2
     throw p1
 .end method
@@ -210,6 +211,7 @@
 
     invoke-virtual {p0, v0}, Landroid/content/ContentResolver;->releaseUnstableProvider(Landroid/content/IContentProvider;)Z
 
+    .line 28
     :cond_1
     throw p1
 .end method

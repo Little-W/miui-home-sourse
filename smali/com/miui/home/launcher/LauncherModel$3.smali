@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/LauncherModel$3;
+.class Lcom/miui/home/launcher/LauncherModel$3;
 .super Ljava/lang/Object;
 .source "LauncherModel.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -29,7 +29,7 @@
 .method constructor <init>(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 528
+    .line 531
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$3;->val$cr:Landroid/content/ContentResolver;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$3;->val$authority:Ljava/lang/String;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 3
 
-    .line 531
+    .line 534
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$3;->val$cr:Landroid/content/ContentResolver;
 
@@ -61,7 +61,7 @@
 
     return-void
 
-    .line 535
+    .line 538
     :catch_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -71,7 +71,7 @@
 
     throw v0
 
-    .line 533
+    .line 536
     :catch_1
     new-instance v0, Ljava/lang/RuntimeException;
 

@@ -27,7 +27,7 @@
 
 # direct methods
 .method private constructor <init>()V
-    .locals 2
+    .locals 3
 
     .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,7 +39,8 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/module/ModuleManagerCompat;->mModuleStatusMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 35
+    .line 36
+    :try_start_0
     invoke-static {}, Lmiui/module/ModuleManager;->getInstance()Lmiui/module/ModuleManager;
 
     move-result-object v0
@@ -49,7 +50,22 @@
     invoke-direct {v1, p0}, Lcom/miui/home/launcher/module/ModuleManagerCompat$1;-><init>(Lcom/miui/home/launcher/module/ModuleManagerCompat;)V
 
     invoke-virtual {v0, v1}, Lmiui/module/ModuleManager;->setModuleLoadListener(Lmiui/module/ModuleManager$ModuleLoadListener;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Launcher.ModuleManager"
+
+    const-string v2, "ModuleManagerCompat"
+
+    .line 59
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_0
     return-void
 .end method
 
@@ -91,10 +107,10 @@
     return-object v0
 .end method
 
-.method static synthetic lambda$makeMiuiHomeLoadClassFirst$387(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)I
+.method static synthetic lambda$makeMiuiHomeLoadClassFirst$0(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 78
+    .line 86
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -109,7 +125,7 @@
 
     return p0
 
-    .line 80
+    .line 88
     :cond_0
     invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -134,14 +150,14 @@
 .method private makeMiuiHomeLoadClassFirst(Landroid/app/Application;)V
     .locals 4
 
-    .line 70
+    .line 78
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1c
 
     if-ge v0, v1, :cond_2
 
-    .line 71
+    .line 79
     invoke-virtual {p1}, Landroid/app/Application;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
@@ -152,7 +168,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 73
+    .line 81
     invoke-static {v0}, Lcom/miui/home/launcher/module/DexPathListCompat;->getDexElements(Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
@@ -161,7 +177,7 @@
 
     const-string v1, "Launcher.ModuleManager"
 
-    .line 75
+    .line 83
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -182,23 +198,23 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
+    .line 84
     invoke-virtual {p1}, Landroid/app/Application;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
 
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
 
-    .line 77
-    new-instance v2, Lcom/miui/home/launcher/module/-$$Lambda$ModuleManagerCompat$-VPM6GtPeUyMjvqXHQN6sI_fk8g;
+    .line 85
+    new-instance v2, Lcom/miui/home/launcher/module/-$$Lambda$ModuleManagerCompat$DozrQDm9H3sFXlkasD4ywJPyCzQ;
 
-    invoke-direct {v2, v1}, Lcom/miui/home/launcher/module/-$$Lambda$ModuleManagerCompat$-VPM6GtPeUyMjvqXHQN6sI_fk8g;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v1}, Lcom/miui/home/launcher/module/-$$Lambda$ModuleManagerCompat$DozrQDm9H3sFXlkasD4ywJPyCzQ;-><init>(Ljava/lang/String;)V
 
     invoke-static {v0, v2}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
     const-string v1, "Launcher.ModuleManager"
 
-    .line 85
+    .line 93
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -226,7 +242,7 @@
 
     const-string v1, "element is null"
 
-    .line 87
+    .line 95
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -236,14 +252,14 @@
 
     const-string v1, "dexPathList is null"
 
-    .line 90
+    .line 98
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     :goto_0
     const-string v0, "Launcher.ModuleManager"
 
-    .line 93
+    .line 101
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -272,7 +288,7 @@
 .method public isModuleLoadSuccess(Ljava/lang/String;)Z
     .locals 1
 
-    .line 97
+    .line 105
     iget-object v0, p0, Lcom/miui/home/launcher/module/ModuleManagerCompat;->mModuleStatusMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -299,16 +315,16 @@
 
     if-eqz p1, :cond_2
 
-    .line 60
+    .line 64
     array-length v0, p1
 
     const/4 v1, 0x1
 
     if-ge v0, v1, :cond_0
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 63
+    .line 67
     :cond_0
     array-length v0, p1
 
@@ -319,7 +335,7 @@
 
     aget-object v2, p1, v1
 
-    .line 64
+    .line 68
     iget-object v3, p0, Lcom/miui/home/launcher/module/ModuleManagerCompat;->mModuleStatusMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     sget-object v4, Lcom/miui/home/launcher/module/ModuleManagerCompat$Status;->LOAD_PROCESSING:Lcom/miui/home/launcher/module/ModuleManagerCompat$Status;
@@ -330,17 +346,33 @@
 
     goto :goto_0
 
-    .line 66
+    .line 71
     :cond_1
+    :try_start_0
     invoke-static {}, Lmiui/module/ModuleManager;->getInstance()Lmiui/module/ModuleManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lmiui/module/ModuleManager;->loadModules([Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_1
+
+    :catch_0
+    move-exception p1
+
+    const-string v0, "Launcher.ModuleManager"
+
+    const-string v1, "loadModules"
+
+    .line 73
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_1
     return-void
 
     :cond_2
-    :goto_1
+    :goto_2
     return-void
 .end method

@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onChange$184(Lcom/miui/home/recents/BaseRecentsImpl$4;)V
+.method public static synthetic lambda$onChange$0(Lcom/miui/home/recents/BaseRecentsImpl$4;)V
     .locals 2
 
     .line 370
@@ -86,9 +86,9 @@
     .line 369
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->GESTURE_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance v0, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$4$2rK0U494626-4ucB1Cnj05TqCug;
+    new-instance v0, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$4$utJSBwCwHixisX_WrVIoosmONL8;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$4$2rK0U494626-4ucB1Cnj05TqCug;-><init>(Lcom/miui/home/recents/BaseRecentsImpl$4;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$4$utJSBwCwHixisX_WrVIoosmONL8;-><init>(Lcom/miui/home/recents/BaseRecentsImpl$4;)V
 
     invoke-virtual {p1, v0}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 

@@ -1,4 +1,4 @@
-.class final Landroidx/fragment/app/FragmentManagerState$1;
+.class Landroidx/fragment/app/FragmentManagerState$1;
 .super Ljava/lang/Object;
 .source "FragmentManagerState.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 59
+    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Landroidx/fragment/app/FragmentManagerState;
     .locals 1
 
-    .line 62
+    .line 72
     new-instance v0, Landroidx/fragment/app/FragmentManagerState;
 
     invoke-direct {v0, p1}, Landroidx/fragment/app/FragmentManagerState;-><init>(Landroid/os/Parcel;)V
@@ -52,7 +52,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 59
+    .line 69
     invoke-virtual {p0, p1}, Landroidx/fragment/app/FragmentManagerState$1;->createFromParcel(Landroid/os/Parcel;)Landroidx/fragment/app/FragmentManagerState;
 
     move-result-object p1
@@ -63,7 +63,7 @@
 .method public newArray(I)[Landroidx/fragment/app/FragmentManagerState;
     .locals 0
 
-    .line 67
+    .line 77
     new-array p1, p1, [Landroidx/fragment/app/FragmentManagerState;
 
     return-object p1
@@ -72,7 +72,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 59
+    .line 69
     invoke-virtual {p0, p1}, Landroidx/fragment/app/FragmentManagerState$1;->newArray(I)[Landroidx/fragment/app/FragmentManagerState;
 
     move-result-object p1

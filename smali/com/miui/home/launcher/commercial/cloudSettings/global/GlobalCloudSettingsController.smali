@@ -43,12 +43,12 @@
     invoke-direct {p0}, Lcom/miui/home/launcher/commercial/cloudSettings/CloudSettingsController;-><init>()V
 
     .line 106
-    sget-object v0, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$KnrNn50II41zIJ697NIPN0gZBrI;->INSTANCE:Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$KnrNn50II41zIJ697NIPN0gZBrI;
+    sget-object v0, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$8ws8T7aJ5n9Ry5I2QL0UboSMeVc;->INSTANCE:Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$8ws8T7aJ5n9Ry5I2QL0UboSMeVc;
 
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/cloudSettings/global/GlobalCloudSettingsController;->mIsUserFolder:Ljava/util/function/Predicate;
 
     .line 109
-    sget-object v0, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$tNsDFdR-NEYdXW18WnWmNMcWi6U;->INSTANCE:Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$tNsDFdR-NEYdXW18WnWmNMcWi6U;
+    sget-object v0, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$VFlL5yj-CXlWKf9PVO5gw_2xNdg;->INSTANCE:Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$VFlL5yj-CXlWKf9PVO5gw_2xNdg;
 
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/cloudSettings/global/GlobalCloudSettingsController;->mFolderIdAscending:Ljava/util/Comparator;
 
@@ -138,9 +138,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$dXPO-0zSuAptGGPCGOvuXqWAoH4;
+    new-instance v1, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$dQcWBQb17UOhRrff0oUmsjva-Ns;
 
-    invoke-direct {v1, p1}, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$dXPO-0zSuAptGGPCGOvuXqWAoH4;-><init>(Lcom/miui/home/launcher/FolderInfo;)V
+    invoke-direct {v1, p1}, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$dQcWBQb17UOhRrff0oUmsjva-Ns;-><init>(Lcom/miui/home/launcher/FolderInfo;)V
 
     .line 100
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
@@ -155,7 +155,7 @@
     return p1
 .end method
 
-.method static synthetic lambda$isUserFolderSwitchOnAsDefault$418(Lcom/miui/home/launcher/FolderInfo;Lcom/miui/home/launcher/FolderInfo;)Z
+.method static synthetic lambda$isUserFolderSwitchOnAsDefault$2(Lcom/miui/home/launcher/FolderInfo;Lcom/miui/home/launcher/FolderInfo;)Z
     .locals 2
 
     .line 100
@@ -178,7 +178,7 @@
     return p0
 .end method
 
-.method static synthetic lambda$new$419(Lcom/miui/home/launcher/FolderInfo;)Z
+.method static synthetic lambda$new$3(Lcom/miui/home/launcher/FolderInfo;)Z
     .locals 0
 
     if-eqz p0, :cond_0
@@ -205,7 +205,7 @@
     return p0
 .end method
 
-.method static synthetic lambda$new$420(Lcom/miui/home/launcher/FolderInfo;Lcom/miui/home/launcher/FolderInfo;)I
+.method static synthetic lambda$new$4(Lcom/miui/home/launcher/FolderInfo;Lcom/miui/home/launcher/FolderInfo;)I
     .locals 2
 
     .line 110
@@ -220,7 +220,7 @@
     return p0
 .end method
 
-.method static synthetic lambda$requestCloudSettingsInfo$416(Ljava/lang/Void;)Lcom/miui/msa/global/guessyoulike/v1/GlobalColudControlInfo;
+.method static synthetic lambda$requestCloudSettingsInfo$0(Ljava/lang/Void;)Lcom/miui/msa/global/guessyoulike/v1/GlobalColudControlInfo;
     .locals 0
 
     .line 43
@@ -239,7 +239,7 @@
     return-object p0
 .end method
 
-.method public static synthetic lambda$requestCloudSettingsInfo$417(Lcom/miui/home/launcher/commercial/cloudSettings/global/GlobalCloudSettingsController;Lcom/miui/msa/global/guessyoulike/v1/GlobalColudControlInfo;)V
+.method public static synthetic lambda$requestCloudSettingsInfo$1(Lcom/miui/home/launcher/commercial/cloudSettings/global/GlobalCloudSettingsController;Lcom/miui/msa/global/guessyoulike/v1/GlobalColudControlInfo;)V
     .locals 1
 
     if-eqz p1, :cond_0
@@ -424,11 +424,11 @@
     .locals 3
 
     .line 41
-    sget-object v0, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$u42SKUVIS8Bwm19v2XEdpQEq_jM;->INSTANCE:Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$u42SKUVIS8Bwm19v2XEdpQEq_jM;
+    sget-object v0, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$O83NxfOZAK7jZI9Sia3I26By7-U;->INSTANCE:Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$O83NxfOZAK7jZI9Sia3I26By7-U;
 
-    new-instance v1, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$yF1JBfz6yd6xt56kOp1YdZcMVIo;
+    new-instance v1, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$5uuGR0DZefu1gWZGxHw9PVEs0no;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$yF1JBfz6yd6xt56kOp1YdZcMVIo;-><init>(Lcom/miui/home/launcher/commercial/cloudSettings/global/GlobalCloudSettingsController;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/commercial/cloudSettings/global/-$$Lambda$GlobalCloudSettingsController$5uuGR0DZefu1gWZGxHw9PVEs0no;-><init>(Lcom/miui/home/launcher/commercial/cloudSettings/global/GlobalCloudSettingsController;)V
 
     const/4 v2, 0x0
 

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
     .locals 0
 
-    .line 505
+    .line 507
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$2;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 507
+    .line 509
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$2;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-static {v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$500(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V

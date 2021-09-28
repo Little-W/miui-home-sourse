@@ -287,6 +287,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mFastScrollToTargetSectionRunnable:Ljava/lang/Runnable;
 
+    .line 134
     iget-boolean v3, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mHasFastScrollTouchSettledAtLeastOnce:Z
 
     if-eqz v3, :cond_1
@@ -298,6 +299,7 @@
     :cond_1
     const-wide/16 v3, 0x64
 
+    .line 133
     :goto_0
     invoke-virtual {v0, v1, v3, v4}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->postDelayed(Ljava/lang/Runnable;J)Z
 
@@ -332,10 +334,10 @@
 
     goto :goto_2
 
+    .line 147
     :cond_2
     iget-object p3, p0, Lcom/miui/home/launcher/allapps/AllAppsFastScrollHelper;->mRv:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
-    .line 147
     invoke-virtual {p3}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->getVerticalFadingEdgeLength()I
 
     move-result v0

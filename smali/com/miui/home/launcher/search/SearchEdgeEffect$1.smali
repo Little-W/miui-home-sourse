@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/search/SearchEdgeEffect$1;
+.class Lcom/miui/home/launcher/search/SearchEdgeEffect$1;
 .super Lcom/miui/home/launcher/search/SearchEdgeEffect$Position;
 .source "SearchEdgeEffect.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -50,7 +50,7 @@
     int-to-float p2, p2
 
     .line 78
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowNotch()Z
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->doLauncherHavePaddingTopForStatusBarAndNotch()Z
 
     move-result v0
 

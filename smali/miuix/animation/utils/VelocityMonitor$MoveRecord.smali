@@ -24,7 +24,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 15
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lmiuix/animation/utils/VelocityMonitor$1;)V
     .locals 0
 
-    .line 15
+    .line 18
     invoke-direct {p0}, Lmiuix/animation/utils/VelocityMonitor$MoveRecord;-><init>()V
 
     return-void

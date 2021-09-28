@@ -4,17 +4,17 @@
 
 
 # static fields
-.field public static DBG:Z
+.field public static DBG:Z = false
 
-.field private static depthPastMaxDepth:I
+.field private static depthPastMaxDepth:I = 0x0
 
-.field private static sections:[Ljava/lang/String;
+.field private static sections:[Ljava/lang/String; = null
 
-.field private static startTimeNs:[J
+.field private static startTimeNs:[J = null
 
-.field private static traceDepth:I
+.field private static traceDepth:I = 0x0
 
-.field private static traceEnabled:Z
+.field private static traceEnabled:Z = false
 
 
 # direct methods

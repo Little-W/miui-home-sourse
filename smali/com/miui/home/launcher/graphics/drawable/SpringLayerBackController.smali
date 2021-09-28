@@ -13,7 +13,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$updateBackAnim$154(Ljava/lang/String;FLcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;)V
+.method static synthetic lambda$updateBackAnim$0(Ljava/lang/String;FLcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;)V
     .locals 0
 
     .line 17
@@ -105,9 +105,9 @@
     .locals 1
 
     .line 17
-    new-instance v0, Lcom/miui/home/launcher/graphics/drawable/-$$Lambda$SpringLayerBackController$T3eL6CUmW6Q42qGrHWBCd3jwapE;
+    new-instance v0, Lcom/miui/home/launcher/graphics/drawable/-$$Lambda$SpringLayerBackController$i0UZAgJfsPU4fd_VWWgxKj6yU_4;
 
-    invoke-direct {v0, p2, p3}, Lcom/miui/home/launcher/graphics/drawable/-$$Lambda$SpringLayerBackController$T3eL6CUmW6Q42qGrHWBCd3jwapE;-><init>(Ljava/lang/String;F)V
+    invoke-direct {v0, p2, p3}, Lcom/miui/home/launcher/graphics/drawable/-$$Lambda$SpringLayerBackController$i0UZAgJfsPU4fd_VWWgxKj6yU_4;-><init>(Ljava/lang/String;F)V
 
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/graphics/drawable/SpringLayerBackController;->processBackAnim(Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;Ljava/util/function/Consumer;)V
 

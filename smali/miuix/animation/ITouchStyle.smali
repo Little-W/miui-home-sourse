@@ -21,7 +21,16 @@
 .method public abstract onMotionEvent(Landroid/view/MotionEvent;)V
 .end method
 
+.method public varargs abstract setAlpha(F[Lmiuix/animation/ITouchStyle$TouchType;)Lmiuix/animation/ITouchStyle;
+.end method
+
+.method public abstract setBackgroundColor(FFFF)Lmiuix/animation/ITouchStyle;
+.end method
+
 .method public varargs abstract setScale(F[Lmiuix/animation/ITouchStyle$TouchType;)Lmiuix/animation/ITouchStyle;
+.end method
+
+.method public abstract setTint(FFFF)Lmiuix/animation/ITouchStyle;
 .end method
 
 .method public varargs abstract touchDown([Lmiuix/animation/base/AnimConfig;)V

@@ -51,7 +51,7 @@
 
     invoke-virtual {p0}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
-    .line 45
+    .line 47
     :cond_1
     throw p1
 .end method
@@ -479,7 +479,7 @@
 
     move-result-object p0
 
-    const v1, 0x7f100244
+    const v1, 0x7f100326
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

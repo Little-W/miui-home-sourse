@@ -14,17 +14,17 @@
     .end annotation
 .end field
 
-.field private final mFragmentManager:Landroid/app/FragmentManager;
+.field private final mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
 .field private final mViewPagerId:I
 
 
 # direct methods
-.method constructor <init>(Landroid/app/FragmentManager;I)V
+.method constructor <init>(Landroidx/fragment/app/FragmentManager;I)V
     .locals 1
 
     .line 20
-    invoke-direct {p0, p1}, Lcom/miui/home/library/view/viewpager/FragmentPagerAdapter;-><init>(Landroid/app/FragmentManager;)V
+    invoke-direct {p0, p1}, Lcom/miui/home/library/view/viewpager/FragmentPagerAdapter;-><init>(Landroidx/fragment/app/FragmentManager;)V
 
     .line 17
     new-instance v0, Ljava/util/ArrayList;
@@ -34,7 +34,7 @@
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mCategoryList:Ljava/util/ArrayList;
 
     .line 21
-    iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mFragmentManager:Landroid/app/FragmentManager;
+    iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     .line 22
     iput p2, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mViewPagerId:I
@@ -92,7 +92,7 @@
     .locals 2
 
     .line 45
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mFragmentManager:Landroid/app/FragmentManager;
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     iget v1, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mViewPagerId:I
 
@@ -100,7 +100,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object p1
 
@@ -113,7 +113,7 @@
     .locals 4
 
     .line 41
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mFragmentManager:Landroid/app/FragmentManager;
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     iget v1, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mViewPagerId:I
 
@@ -123,7 +123,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
+    invoke-virtual {v0, p1}, Landroidx/fragment/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object p1
 
@@ -145,7 +145,7 @@
     return v0
 .end method
 
-.method public getItem(I)Landroid/app/Fragment;
+.method public getItem(I)Landroidx/fragment/app/Fragment;
     .locals 1
 
     .line 37

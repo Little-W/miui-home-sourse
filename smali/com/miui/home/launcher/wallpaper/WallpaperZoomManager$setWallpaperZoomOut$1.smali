@@ -35,53 +35,51 @@
 
 # virtual methods
 .method public final run()V
-    .locals 6
+    .locals 5
 
-    .line 82
+    .line 81
     :try_start_0
-    invoke-static {}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->access$getUPDATE_ZOOM_METHOD$p()Lmiui/reflect/Method;
+    invoke-static {}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->access$getUPDATE_ZOOM_METHOD$p()Ljava/lang/reflect/Method;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    const-class v1, Landroid/app/WallpaperManager;
+    iget-object v1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$setWallpaperZoomOut$1;->this$0:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;
 
-    iget-object v2, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$setWallpaperZoomOut$1;->this$0:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;
+    invoke-static {v1}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->access$getMWallpaperManager$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)Landroid/app/WallpaperManager;
 
-    invoke-static {v2}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->access$getMWallpaperManager$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)Landroid/app/WallpaperManager;
+    move-result-object v1
 
-    move-result-object v2
+    const/4 v2, 0x2
 
-    const/4 v3, 0x2
+    new-array v2, v2, [Ljava/lang/Object;
 
-    new-array v3, v3, [Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    iget-object v4, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$setWallpaperZoomOut$1;->this$0:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;
 
-    iget-object v5, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$setWallpaperZoomOut$1;->this$0:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;
+    invoke-static {v4}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->access$getMWindowToken$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)Landroid/os/IBinder;
 
-    invoke-static {v5}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->access$getMWindowToken$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)Landroid/os/IBinder;
+    move-result-object v4
 
-    move-result-object v5
+    aput-object v4, v2, v3
 
-    aput-object v5, v3, v4
+    const/4 v3, 0x1
 
-    const/4 v4, 0x1
+    iget-object v4, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$setWallpaperZoomOut$1;->this$0:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;
 
-    iget-object v5, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$setWallpaperZoomOut$1;->this$0:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;
+    invoke-static {v4}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->access$getMZoomOut$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)F
 
-    invoke-static {v5}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->access$getMZoomOut$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)F
+    move-result v4
 
-    move-result v5
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    move-result-object v4
 
-    move-result-object v5
+    aput-object v4, v2, v3
 
-    aput-object v5, v3, v4
-
-    invoke-virtual {v0, v1, v2, v3}, Lmiui/reflect/Method;->invoke(Ljava/lang/Class;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -90,7 +88,7 @@
     :catch_0
     move-exception v0
 
-    .line 84
+    .line 83
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0

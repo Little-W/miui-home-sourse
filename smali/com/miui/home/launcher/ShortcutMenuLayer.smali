@@ -140,7 +140,7 @@
     return v0
 .end method
 
-.method static synthetic lambda$showShortcutMenu$137(Lcom/miui/home/launcher/ItemInfo;Ljava/lang/Void;)Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;
+.method static synthetic lambda$showShortcutMenu$0(Lcom/miui/home/launcher/ItemInfo;Ljava/lang/Void;)Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;
     .locals 0
 
     .line 82
@@ -155,7 +155,7 @@
     return-object p0
 .end method
 
-.method public static synthetic lambda$showShortcutMenu$138(Lcom/miui/home/launcher/ShortcutMenuLayer;Lcom/miui/home/launcher/ItemInfo;[FZ[ILcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;)V
+.method public static synthetic lambda$showShortcutMenu$1(Lcom/miui/home/launcher/ShortcutMenuLayer;Lcom/miui/home/launcher/ItemInfo;[FZ[ILcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;)V
     .locals 6
 
     move-object v0, p0
@@ -176,7 +176,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$showShortcutMenu$139(Lcom/miui/home/launcher/ShortcutMenuLayer;Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;)V
+.method public static synthetic lambda$showShortcutMenu$2(Lcom/miui/home/launcher/ShortcutMenuLayer;Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;)V
     .locals 0
 
     .line 84
@@ -424,7 +424,7 @@
     .line 55
     invoke-super {p0}, Lcom/miui/launcher/views/LauncherFrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0193
+    const v0, 0x7f0a01d6
 
     .line 56
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutMenuLayer;->findViewById(I)Landroid/view/View;
@@ -627,11 +627,11 @@
     aput v0, v6, v2
 
     .line 81
-    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$ShortcutMenuLayer$plfdqUCwUJgV-fJwxVHOwAoRrh8;
+    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$ShortcutMenuLayer$8OxjhgR8XQX7uIkDGDjMweuAwrc;
 
-    invoke-direct {p1, v7}, Lcom/miui/home/launcher/-$$Lambda$ShortcutMenuLayer$plfdqUCwUJgV-fJwxVHOwAoRrh8;-><init>(Lcom/miui/home/launcher/ItemInfo;)V
+    invoke-direct {p1, v7}, Lcom/miui/home/launcher/-$$Lambda$ShortcutMenuLayer$8OxjhgR8XQX7uIkDGDjMweuAwrc;-><init>(Lcom/miui/home/launcher/ItemInfo;)V
 
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ShortcutMenuLayer$XkZVDxMUkZJXwOT03VEM5MGItw8;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ShortcutMenuLayer$v1bp5lgDD7dgXvPsMO7V77E6qDQ;
 
     move-object v1, v0
 
@@ -639,11 +639,11 @@
 
     move-object v3, v7
 
-    invoke-direct/range {v1 .. v6}, Lcom/miui/home/launcher/-$$Lambda$ShortcutMenuLayer$XkZVDxMUkZJXwOT03VEM5MGItw8;-><init>(Lcom/miui/home/launcher/ShortcutMenuLayer;Lcom/miui/home/launcher/ItemInfo;[FZ[I)V
+    invoke-direct/range {v1 .. v6}, Lcom/miui/home/launcher/-$$Lambda$ShortcutMenuLayer$v1bp5lgDD7dgXvPsMO7V77E6qDQ;-><init>(Lcom/miui/home/launcher/ShortcutMenuLayer;Lcom/miui/home/launcher/ItemInfo;[FZ[I)V
 
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ShortcutMenuLayer$zYwuFPCoZa_kORoqGzD3KLAkDs4;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ShortcutMenuLayer$l_NL_emm96ZYhDWvGSC9nTKru0I;
 
-    invoke-direct {v1, p0, v7}, Lcom/miui/home/launcher/-$$Lambda$ShortcutMenuLayer$zYwuFPCoZa_kORoqGzD3KLAkDs4;-><init>(Lcom/miui/home/launcher/ShortcutMenuLayer;Lcom/miui/home/launcher/ItemInfo;)V
+    invoke-direct {v1, p0, v7}, Lcom/miui/home/launcher/-$$Lambda$ShortcutMenuLayer$l_NL_emm96ZYhDWvGSC9nTKru0I;-><init>(Lcom/miui/home/launcher/ShortcutMenuLayer;Lcom/miui/home/launcher/ItemInfo;)V
 
     const/4 v2, 0x0
 

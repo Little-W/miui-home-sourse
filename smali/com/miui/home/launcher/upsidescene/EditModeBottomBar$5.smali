@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;)V
     .locals 0
 
-    .line 164
+    .line 163
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$5;->this$0:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 166
+    .line 165
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$5;->this$0:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
     invoke-static {p1}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->access$000(Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;)Lcom/miui/home/launcher/upsidescene/SceneScreen;

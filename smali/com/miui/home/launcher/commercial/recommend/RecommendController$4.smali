@@ -30,7 +30,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/commercial/recommend/RecommendController;)V
     .locals 0
 
-    .line 509
+    .line 508
     iput-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController$4;->this$0:Lcom/miui/home/launcher/commercial/recommend/RecommendController;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/commercial/CommercialCommons$Extractor;-><init>()V
@@ -43,7 +43,7 @@
 .method public getPackageName(Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)Ljava/lang/String;
     .locals 0
 
-    .line 512
+    .line 511
     invoke-virtual {p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -54,7 +54,7 @@
 .method public bridge synthetic getPackageName(Ljava/lang/Object;)Ljava/lang/String;
     .locals 0
 
-    .line 509
+    .line 508
     check-cast p1, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendController$4;->getPackageName(Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)Ljava/lang/String;

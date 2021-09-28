@@ -8,8 +8,8 @@
     <solid
         android:color="@color/smallwindow_crop_color" />
     <corners
-        android:topLeftRadius="0.0dip"
-        android:topRightRadius="0.0dip"
-        android:bottomLeftRadius="178.9dip"
-        android:bottomRightRadius="0.0dip" />
+        android:topLeftRadius="17.449982dip"
+        android:topRightRadius="17.449982dip"
+        android:bottomLeftRadius="17.449982dip"
+        android:bottomRightRadius="17.449982dip" />
 </shape>

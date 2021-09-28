@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel;Landroid/content/Intent;Landroid/content/Context;)V
     .locals 0
 
-    .line 849
+    .line 852
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$7;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$7;->val$intent:Landroid/content/Intent;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 4
 
-    .line 851
+    .line 854
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$7;->val$intent:Landroid/content/Intent;
 
     const-string v1, "android.intent.extra.USER"
@@ -59,12 +59,12 @@
 
     if-nez v0, :cond_0
 
-    .line 853
+    .line 856
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
 
-    .line 855
+    .line 858
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$7;->this$0:Lcom/miui/home/launcher/LauncherModel;
 

@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    const v0, 0x7f100073
+    const v0, 0x7f100076
 
     .line 207
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->announceForAccessibility(I)V

@@ -390,7 +390,7 @@
     return p1
 .end method
 
-.method static synthetic lambda$registerEventBusHandler$491(Ljava/lang/Object;)V
+.method static synthetic lambda$registerEventBusHandler$0(Ljava/lang/Object;)V
     .locals 1
 
     .line 247
@@ -415,7 +415,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$unregisterEventBusHandler$492(Ljava/lang/Object;)V
+.method static synthetic lambda$unregisterEventBusHandler$1(Ljava/lang/Object;)V
     .locals 1
 
     .line 255
@@ -565,7 +565,7 @@
     .locals 1
 
     .line 246
-    sget-object v0, Lcom/miui/home/launcher/multiselect/-$$Lambda$MultiSelectMonitor$l6P44yviMcytuHWE4S9oXFWsTZc;->INSTANCE:Lcom/miui/home/launcher/multiselect/-$$Lambda$MultiSelectMonitor$l6P44yviMcytuHWE4S9oXFWsTZc;
+    sget-object v0, Lcom/miui/home/launcher/multiselect/-$$Lambda$MultiSelectMonitor$vFm-_CZKpKAk_QP7z0L2OmiJVgY;->INSTANCE:Lcom/miui/home/launcher/multiselect/-$$Lambda$MultiSelectMonitor$vFm-_CZKpKAk_QP7z0L2OmiJVgY;
 
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->forEachHandler(Ljava/util/function/Consumer;)V
 
@@ -576,7 +576,7 @@
     .locals 1
 
     .line 254
-    sget-object v0, Lcom/miui/home/launcher/multiselect/-$$Lambda$MultiSelectMonitor$hBX80e0LCsIvOykhPrnhAd704eQ;->INSTANCE:Lcom/miui/home/launcher/multiselect/-$$Lambda$MultiSelectMonitor$hBX80e0LCsIvOykhPrnhAd704eQ;
+    sget-object v0, Lcom/miui/home/launcher/multiselect/-$$Lambda$MultiSelectMonitor$wo3rq_nd5TUC_ctVmR71ziveJ6U;->INSTANCE:Lcom/miui/home/launcher/multiselect/-$$Lambda$MultiSelectMonitor$wo3rq_nd5TUC_ctVmR71ziveJ6U;
 
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->forEachHandler(Ljava/util/function/Consumer;)V
 
@@ -1005,9 +1005,13 @@
 
     move-result-object v2
 
+    check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
+
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Lcom/miui/home/launcher/DragSource;
 
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

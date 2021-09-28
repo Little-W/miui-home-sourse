@@ -20,12 +20,6 @@
         launcher:x="4"
         launcher:y="0" />
     <favorite
-        launcher:className="com.dianping.main.permission.PermissionActivity"
-        launcher:container="2"
-        launcher:packageName="com.dianping.v1"
-        launcher:x="5"
-        launcher:y="0" />
-    <favorite
         launcher:className="com.sankuai.meituan.activity.PreloadedWelcome"
         launcher:container="2"
         launcher:packageName="com.sankuai.meituan"
@@ -330,14 +324,4 @@
         launcher:packageName="com.mediatek.backuprestore"
         launcher:x="65"
         launcher:y="0" />
-    <command
-        launcher:methodName="isXiaomiOrRedmiKSeries"
-        launcher:methodResult="false">
-        <favorite
-            launcher:className="com.mqunar.splash.SplashActivity"
-            launcher:container="2"
-            launcher:packageName="com.Qunar"
-            launcher:x="66"
-            launcher:y="0" />
-    </command>
 </favorites>

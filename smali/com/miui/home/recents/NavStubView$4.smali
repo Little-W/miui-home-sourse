@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 783
+    .line 795
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Lcom/android/systemui/shared/recents/touchableRegion/OnComputeInternalInsetsListenerCompat;-><init>()V
@@ -37,10 +37,10 @@
 
     const/4 v0, 0x3
 
-    .line 786
+    .line 798
     invoke-virtual {p1, v0}, Lcom/android/systemui/shared/recents/touchableRegion/InternalInsetsInfoCompat;->setTouchableInsets(I)V
 
-    .line 787
+    .line 799
     new-instance v0, Landroid/graphics/Region;
 
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
@@ -57,7 +57,7 @@
 
     iget-object v3, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 788
+    .line 800
     invoke-virtual {v3}, Lcom/miui/home/recents/NavStubView;->getLeft()I
 
     move-result v3
@@ -86,7 +86,7 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/graphics/Region;-><init>(IIII)V
 
-    .line 789
+    .line 801
     sget-object v1, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -109,7 +109,7 @@
 
     iget-object v3, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 790
+    .line 802
     invoke-static {v3}, Lcom/miui/home/recents/NavStubView;->access$1100(Lcom/miui/home/recents/NavStubView;)Z
 
     move-result v3
@@ -122,7 +122,7 @@
 
     iget-object v3, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 791
+    .line 803
     invoke-static {v3}, Lcom/miui/home/recents/NavStubView;->access$1200(Lcom/miui/home/recents/NavStubView;)Z
 
     move-result v3
@@ -133,10 +133,10 @@
 
     move-result-object v2
 
-    .line 789
+    .line 801
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 793
+    .line 805
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$1100(Lcom/miui/home/recents/NavStubView;)Z
@@ -155,7 +155,7 @@
 
     if-nez v1, :cond_0
 
-    .line 794
+    .line 806
     new-instance v0, Landroid/graphics/Region;
 
     invoke-direct {v0, v2, v2, v2, v2}, Landroid/graphics/Region;-><init>(IIII)V
@@ -164,7 +164,7 @@
 
     goto/16 :goto_0
 
-    .line 795
+    .line 807
     :cond_0
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -190,12 +190,12 @@
 
     if-nez v1, :cond_2
 
-    .line 796
+    .line 808
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 797
+    .line 809
     new-instance v3, Landroid/graphics/RectF;
 
     iget-object v4, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
@@ -234,12 +234,12 @@
 
     invoke-direct {v3, v2, v4, v5, v6}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 798
+    .line 810
     sget-object v2, Landroid/graphics/Path$Direction;->CCW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {v1, v3, v2}, Landroid/graphics/Path;->addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
 
-    .line 799
+    .line 811
     sget-object v2, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -258,7 +258,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 800
+    .line 812
     iget-object v2, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iget-object v2, v2, Lcom/miui/home/recents/NavStubView;->mFsGestureAssistHelper:Lcom/miui/home/recents/FsGestureAssistHelper;
@@ -269,7 +269,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 801
+    .line 813
     iget-object v2, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iget-object v2, v2, Lcom/miui/home/recents/NavStubView;->mFsGestureAssistHelper:Lcom/miui/home/recents/FsGestureAssistHelper;
@@ -278,7 +278,7 @@
 
     move-result v2
 
-    .line 802
+    .line 814
     new-instance v3, Landroid/graphics/RectF;
 
     iget-object v4, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
@@ -309,7 +309,7 @@
 
     invoke-direct {v3, v4, v5, v6, v7}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 803
+    .line 815
     new-instance v4, Landroid/graphics/RectF;
 
     iget-object v5, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
@@ -348,17 +348,17 @@
 
     invoke-direct {v4, v2, v5, v6, v7}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 804
+    .line 816
     sget-object v2, Landroid/graphics/Path$Direction;->CCW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {v1, v3, v2}, Landroid/graphics/Path;->addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
 
-    .line 805
+    .line 817
     sget-object v2, Landroid/graphics/Path$Direction;->CCW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {v1, v4, v2}, Landroid/graphics/Path;->addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
 
-    .line 806
+    .line 818
     sget-object v2, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -383,13 +383,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 809
+    .line 821
     :cond_1
     invoke-virtual {p1, v1, v0}, Lcom/android/systemui/shared/recents/touchableRegion/InternalInsetsInfoCompat;->setTouchableRegionPath(Landroid/graphics/Path;Landroid/graphics/Region;)V
 
     goto :goto_0
 
-    .line 811
+    .line 823
     :cond_2
     invoke-virtual {p1, v0}, Lcom/android/systemui/shared/recents/touchableRegion/InternalInsetsInfoCompat;->setTouchableRegion(Landroid/graphics/Region;)V
 

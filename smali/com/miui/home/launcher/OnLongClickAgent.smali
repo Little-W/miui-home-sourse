@@ -52,25 +52,25 @@
 .method public constructor <init>(Landroid/view/ViewGroup;Lcom/miui/home/launcher/OnLongClickAgent$VersionTagGenerator;)V
     .locals 2
 
-    .line 52
+    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x0
 
-    .line 32
+    .line 34
     iput-wide v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mTimeOut:J
 
-    .line 53
+    .line 55
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->getLauncher(Landroid/view/View;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 54
+    .line 56
     iput-object p1, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mClientView:Landroid/view/ViewGroup;
 
-    .line 55
+    .line 57
     iput-object p2, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mVersionTagGenerator:Lcom/miui/home/launcher/OnLongClickAgent$VersionTagGenerator;
 
     return-void
@@ -79,7 +79,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/OnLongClickAgent;)Z
     .locals 0
 
-    .line 26
+    .line 28
     iget-boolean p0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mIsLongPressCheckPending:Z
 
     return p0
@@ -88,7 +88,7 @@
 .method static synthetic access$002(Lcom/miui/home/launcher/OnLongClickAgent;Z)Z
     .locals 0
 
-    .line 26
+    .line 28
     iput-boolean p1, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mIsLongPressCheckPending:Z
 
     return p1
@@ -97,7 +97,7 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/OnLongClickAgent;)Landroid/view/ViewGroup;
     .locals 0
 
-    .line 26
+    .line 28
     iget-object p0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mClientView:Landroid/view/ViewGroup;
 
     return-object p0
@@ -106,7 +106,7 @@
 .method static synthetic access$200(Lcom/miui/home/launcher/OnLongClickAgent;)Lcom/miui/home/launcher/OnLongClickAgent$VersionTagGenerator;
     .locals 0
 
-    .line 26
+    .line 28
     iget-object p0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mVersionTagGenerator:Lcom/miui/home/launcher/OnLongClickAgent$VersionTagGenerator;
 
     return-object p0
@@ -115,7 +115,7 @@
 .method static synthetic access$300(Lcom/miui/home/launcher/OnLongClickAgent;)Landroid/view/View$OnLongClickListener;
     .locals 0
 
-    .line 26
+    .line 28
     iget-object p0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mOnLongClickListener:Landroid/view/View$OnLongClickListener;
 
     return-object p0
@@ -124,7 +124,7 @@
 .method static synthetic access$400(Lcom/miui/home/launcher/OnLongClickAgent;)F
     .locals 0
 
-    .line 26
+    .line 28
     iget p0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mRawX:F
 
     return p0
@@ -133,7 +133,7 @@
 .method static synthetic access$500(Lcom/miui/home/launcher/OnLongClickAgent;)F
     .locals 0
 
-    .line 26
+    .line 28
     iget p0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mRawY:F
 
     return p0
@@ -142,7 +142,7 @@
 .method static synthetic access$602(Lcom/miui/home/launcher/OnLongClickAgent;Z)Z
     .locals 0
 
-    .line 26
+    .line 28
     iput-boolean p1, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mHasPerformedLongPress:Z
 
     return p1
@@ -151,28 +151,28 @@
 .method private postCheckForLongClick()V
     .locals 4
 
-    .line 125
+    .line 133
     invoke-direct {p0}, Lcom/miui/home/launcher/OnLongClickAgent;->reset()V
 
-    .line 127
+    .line 135
     iget-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mPendingCheckForLongPress:Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;
 
     if-nez v0, :cond_0
 
-    .line 128
+    .line 136
     new-instance v0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;-><init>(Lcom/miui/home/launcher/OnLongClickAgent;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mPendingCheckForLongPress:Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;
 
-    .line 131
+    .line 139
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mPendingCheckForLongPress:Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->rememberVersionTag()V
 
-    .line 132
+    .line 140
     iget-wide v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mTimeOut:J
 
     const-wide/16 v2, 0x0
@@ -181,7 +181,7 @@
 
     if-nez v0, :cond_2
 
-    .line 133
+    .line 141
     iget-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isInEditing()Z
@@ -197,10 +197,11 @@
     :cond_1
     const-wide/16 v0, 0x12c
 
+    .line 142
     :goto_0
     iput-wide v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mTimeOut:J
 
-    .line 136
+    .line 144
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mClientView:Landroid/view/ViewGroup;
 
@@ -212,7 +213,7 @@
 
     const/4 v0, 0x1
 
-    .line 137
+    .line 145
     iput-boolean v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mIsLongPressCheckPending:Z
 
     return-void
@@ -223,18 +224,18 @@
 
     const/4 v0, 0x0
 
-    .line 145
+    .line 153
     iput-boolean v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mHasPerformedLongPress:Z
 
-    .line 146
+    .line 154
     iput-boolean v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mIsLongPressCheckPending:Z
 
-    .line 147
+    .line 155
     iget-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mPendingCheckForLongPress:Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;
 
     if-eqz v0, :cond_0
 
-    .line 148
+    .line 156
     iget-object v1, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mClientView:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->removeCallbacks(Ljava/lang/Runnable;)Z
@@ -248,7 +249,7 @@
 .method public cancelCustomziedLongPress()V
     .locals 0
 
-    .line 141
+    .line 149
     invoke-direct {p0}, Lcom/miui/home/launcher/OnLongClickAgent;->reset()V
 
     return-void
@@ -257,7 +258,7 @@
 .method public isClickable()Z
     .locals 1
 
-    .line 93
+    .line 95
     iget-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     if-eqz v0, :cond_1
@@ -286,21 +287,21 @@
 .method public onDispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 3
 
-    .line 59
+    .line 61
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     and-int/lit16 v0, v0, 0xff
 
-    .line 61
+    .line 63
     iget-boolean v1, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mHasPerformedLongPress:Z
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    .line 62
+    .line 64
     iput-boolean v2, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mHasPerformedLongPress:Z
 
     if-eqz v0, :cond_0
@@ -318,7 +319,7 @@
 
     goto :goto_0
 
-    .line 77
+    .line 79
     :pswitch_0
     iget v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mDonwX:F
 
@@ -342,7 +343,7 @@
 
     iget v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mDonwY:F
 
-    .line 78
+    .line 80
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result p1
@@ -363,7 +364,7 @@
 
     goto :goto_0
 
-    .line 70
+    .line 72
     :pswitch_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -371,33 +372,33 @@
 
     iput v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mDonwX:F
 
-    .line 71
+    .line 73
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mDonwY:F
 
-    .line 72
+    .line 74
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mRawX:F
 
-    .line 73
+    .line 75
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mRawY:F
 
-    .line 74
+    .line 76
     invoke-direct {p0}, Lcom/miui/home/launcher/OnLongClickAgent;->postCheckForLongClick()V
 
     goto :goto_0
 
-    .line 84
+    .line 86
     :cond_1
     :pswitch_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/OnLongClickAgent;->cancelCustomziedLongPress()V
@@ -419,7 +420,7 @@
 .method public setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
     .locals 0
 
-    .line 153
+    .line 161
     iput-object p1, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mOnLongClickListener:Landroid/view/View$OnLongClickListener;
 
     return-void
@@ -436,7 +437,7 @@
 
     move-wide p1, v0
 
-    .line 121
+    .line 129
     :cond_0
     iput-wide p1, p0, Lcom/miui/home/launcher/OnLongClickAgent;->mTimeOut:J
 

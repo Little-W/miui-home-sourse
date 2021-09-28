@@ -31,7 +31,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$prepareBackup$383(Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;Landroid/content/Context;JLcom/miui/home/launcher/gadget/GadgetInfo;Ljava/lang/Void;)Ljava/lang/Boolean;
+.method public static synthetic lambda$prepareBackup$0(Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;Landroid/content/Context;JLcom/miui/home/launcher/gadget/GadgetInfo;Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 9
 
     .line 226
@@ -437,7 +437,7 @@
     return-object p1
 .end method
 
-.method static synthetic lambda$prepareBackup$384(Ljava/lang/Runnable;Ljava/lang/Boolean;)V
+.method static synthetic lambda$prepareBackup$1(Ljava/lang/Runnable;Ljava/lang/Boolean;)V
     .locals 1
 
     .line 299
@@ -895,7 +895,7 @@
     .locals 7
 
     .line 225
-    new-instance v6, Lcom/miui/home/launcher/gadget/-$$Lambda$ConfigableGadget$BackupManager$4vajwUFlmeoCO47UEiw-_A_k4PY;
+    new-instance v6, Lcom/miui/home/launcher/gadget/-$$Lambda$ConfigableGadget$BackupManager$w2ElHeBenY-AAJnM2IShes6GoZ0;
 
     move-object v0, v6
 
@@ -907,11 +907,11 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/gadget/-$$Lambda$ConfigableGadget$BackupManager$4vajwUFlmeoCO47UEiw-_A_k4PY;-><init>(Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;Landroid/content/Context;JLcom/miui/home/launcher/gadget/GadgetInfo;)V
+    invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/gadget/-$$Lambda$ConfigableGadget$BackupManager$w2ElHeBenY-AAJnM2IShes6GoZ0;-><init>(Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;Landroid/content/Context;JLcom/miui/home/launcher/gadget/GadgetInfo;)V
 
-    new-instance p1, Lcom/miui/home/launcher/gadget/-$$Lambda$ConfigableGadget$BackupManager$Esz65undmUK414FJ2uk40PsI7fM;
+    new-instance p1, Lcom/miui/home/launcher/gadget/-$$Lambda$ConfigableGadget$BackupManager$emRuKbxPlhtA5cwCJz1GS5hDgLM;
 
-    invoke-direct {p1, p5}, Lcom/miui/home/launcher/gadget/-$$Lambda$ConfigableGadget$BackupManager$Esz65undmUK414FJ2uk40PsI7fM;-><init>(Ljava/lang/Runnable;)V
+    invoke-direct {p1, p5}, Lcom/miui/home/launcher/gadget/-$$Lambda$ConfigableGadget$BackupManager$emRuKbxPlhtA5cwCJz1GS5hDgLM;-><init>(Ljava/lang/Runnable;)V
 
     const/4 p2, 0x0
 

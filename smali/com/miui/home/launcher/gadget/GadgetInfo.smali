@@ -622,7 +622,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f10005e
+    const v1, 0x7f100061
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -929,7 +929,7 @@
     :goto_8
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 294
+    .line 295
     :cond_7
     :goto_9
     throw p1
@@ -1268,7 +1268,7 @@
     :goto_8
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 339
+    .line 340
     :cond_7
     :goto_9
     throw p1
@@ -1357,7 +1357,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070281
+    const v3, 0x7f070391
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2114,6 +2114,7 @@
     .line 404
     invoke-virtual {v4}, Ljava/util/zip/ZipFile;->close()V
 
+    .line 406
     :cond_f
     throw v0
 

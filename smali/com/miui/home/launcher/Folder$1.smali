@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Folder;)V
     .locals 0
 
-    .line 202
+    .line 203
     iput-object p1, p0, Lcom/miui/home/launcher/Folder$1;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 3
 
-    .line 205
+    .line 206
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -49,7 +49,7 @@
 
     move-result p1
 
-    .line 206
+    .line 207
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$1;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Folder;->access$000(Lcom/miui/home/launcher/Folder;)Z
@@ -62,7 +62,7 @@
 
     sub-float p1, v1, p1
 
-    .line 209
+    .line 210
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$1;->this$0:Lcom/miui/home/launcher/Folder;
 
@@ -72,7 +72,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 210
+    .line 211
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$1;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Folder;->access$100(Lcom/miui/home/launcher/Folder;)Landroid/widget/EditText;
@@ -81,7 +81,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setAlpha(F)V
 
-    .line 211
+    .line 212
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$1;->this$0:Lcom/miui/home/launcher/Folder;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -92,7 +92,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 212
+    .line 213
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$1;->this$0:Lcom/miui/home/launcher/Folder;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;

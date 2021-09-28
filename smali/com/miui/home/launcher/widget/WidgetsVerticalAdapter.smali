@@ -6,7 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;
+        Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;,
+        Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;
     }
 .end annotation
 
@@ -91,14 +92,14 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 73
+    .line 76
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sToggles:Ljava/util/ArrayList;
 
-    .line 75
+    .line 78
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "com.android.contacts"
@@ -109,14 +110,14 @@
 
     sput-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->ADD_CONTACTS_COMPONENT:Landroid/content/ComponentName;
 
-    .line 79
+    .line 82
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sShortcutProviders:Ljava/util/ArrayList;
 
-    .line 80
+    .line 83
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sShortcutProviders:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/miui/home/launcher/ShortcutProviderInfo;
@@ -127,28 +128,28 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 82
+    .line 85
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sDisabledComponents:Ljava/util/Collection;
 
-    .line 83
+    .line 86
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sDisabledComponents:Ljava/util/Collection;
 
     const-string v1, "com.android.alarmclock.AnalogAppWidgetProvider"
 
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 86
+    .line 89
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sCategoryMaps:Ljava/util/HashMap;
 
-    .line 89
+    .line 92
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sCategoryMaps:Ljava/util/HashMap;
 
     const-string v1, "com.android.calendar"
@@ -161,7 +162,7 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 90
+    .line 93
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sCategoryMaps:Ljava/util/HashMap;
 
     const-string v1, "com.xiaomi.calendar"
@@ -172,7 +173,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 91
+    .line 94
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sCategoryMaps:Ljava/util/HashMap;
 
     const-string v1, "com.miui.notes"
@@ -185,7 +186,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 92
+    .line 95
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sCategoryMaps:Ljava/util/HashMap;
 
     const-string v1, "com.miui.player"
@@ -198,7 +199,7 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 93
+    .line 96
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sCategoryMaps:Ljava/util/HashMap;
 
     const-string v1, "com.android.calculator2"
@@ -211,7 +212,7 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 94
+    .line 97
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sCategoryMaps:Ljava/util/HashMap;
 
     const-string v1, "com.miui.weather2"
@@ -224,7 +225,7 @@
 
     invoke-virtual {v0, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 98
+    .line 101
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sToggles:Ljava/util/ArrayList;
 
     const/16 v1, 0xa
@@ -235,7 +236,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 99
+    .line 102
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sToggles:Ljava/util/ArrayList;
 
     const/16 v1, 0xf
@@ -246,7 +247,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 100
+    .line 103
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sToggles:Ljava/util/ArrayList;
 
     const/16 v1, 0xb
@@ -257,7 +258,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 101
+    .line 104
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sToggles:Ljava/util/ArrayList;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -266,7 +267,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 102
+    .line 105
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sToggles:Ljava/util/ArrayList;
 
     const/16 v1, 0x9
@@ -277,7 +278,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 103
+    .line 106
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sToggles:Ljava/util/ArrayList;
 
     const/4 v1, 0x2
@@ -288,14 +289,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 104
+    .line 107
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isTetheringSupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 105
+    .line 108
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sToggles:Ljava/util/ArrayList;
 
     const/16 v1, 0x18
@@ -313,17 +314,17 @@
 .method public constructor <init>(Lcom/miui/home/launcher/widget/WidgetThumbnailView;)V
     .locals 1
 
-    .line 109
+    .line 112
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 64
+    .line 67
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
 
-    .line 65
+    .line 68
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -334,7 +335,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    .line 66
+    .line 69
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -345,14 +346,14 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mAppWidgetManager:Landroid/appwidget/AppWidgetManager;
 
-    .line 67
+    .line 70
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mAllItems:Ljava/util/ArrayList;
 
-    .line 110
+    .line 113
     iput-object p1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mWidgetThumbnailView:Lcom/miui/home/launcher/widget/WidgetThumbnailView;
 
     return-void
@@ -361,7 +362,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)Lcom/miui/home/launcher/widget/WidgetThumbnailView;
     .locals 0
 
-    .line 60
+    .line 63
     iget-object p0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mWidgetThumbnailView:Lcom/miui/home/launcher/widget/WidgetThumbnailView;
 
     return-object p0
@@ -384,7 +385,7 @@
 
     const/4 v0, 0x0
 
-    .line 222
+    .line 224
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -392,29 +393,31 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 223
+    .line 225
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/appwidget/AppWidgetProviderInfo;
 
-    .line 224
-    new-instance v2, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
+    .line 226
+    iget-object v2, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
 
-    invoke-direct {v2, v1}, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;-><init>(Landroid/appwidget/AppWidgetProviderInfo;)V
-
-    .line 225
-    iget-object v1, v2, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->providerInfo:Landroid/appwidget/AppWidgetProviderInfo;
-
-    iget-object v1, v1, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
-
-    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    invoke-static {v2, v1}, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->fromProviderInfo(Landroid/content/Context;Landroid/appwidget/AppWidgetProviderInfo;)Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
     move-result-object v1
 
-    .line 226
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    .line 227
+    iget-object v2, v1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->providerInfo:Landroid/appwidget/AppWidgetProviderInfo;
+
+    iget-object v2, v2, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
+
+    invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 228
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
@@ -422,37 +425,34 @@
 
     return-void
 
-    .line 227
+    .line 229
     :cond_0
     sget-object v3, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sCategoryMaps:Ljava/util/HashMap;
 
-    invoke-virtual {v3, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 228
+    .line 230
     sget-object v3, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sCategoryMaps:Ljava/util/HashMap;
 
-    invoke-virtual {v3, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Ljava/lang/Integer;
+    check-cast v2, Ljava/lang/Integer;
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    move-result v1
+    move-result v2
 
-    iput v1, v2, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->mWidgetCategory:I
+    iput v2, v1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->mWidgetCategory:I
 
-    .line 230
+    .line 232
     :cond_1
-    invoke-static {v2}, Lcom/miui/home/launcher/DeviceConfig;->calcWidgetSpans(Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;)V
-
-    .line 231
-    invoke-direct {p0, v2, p2}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->insertItemToAllItems(Lcom/miui/home/launcher/ItemInfo;Ljava/util/ArrayList;)V
+    invoke-direct {p0, v1, p2}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->insertItemToAllItems(Lcom/miui/home/launcher/ItemInfo;Ljava/util/ArrayList;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -474,7 +474,7 @@
         }
     .end annotation
 
-    .line 147
+    .line 149
     invoke-static {}, Lcom/miui/home/launcher/gadget/DualClockUtils;->shouldUseDualClock()Z
 
     move-result v0
@@ -483,7 +483,7 @@
 
     const/4 v0, 0x6
 
-    .line 148
+    .line 150
     invoke-static {v0}, Lcom/miui/home/launcher/gadget/GadgetFactory;->getDualClockInfo(I)Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     move-result-object v0
@@ -492,7 +492,7 @@
 
     const/16 v0, 0x8
 
-    .line 149
+    .line 151
     invoke-static {v0}, Lcom/miui/home/launcher/gadget/GadgetFactory;->getDualClockInfo(I)Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     move-result-object v0
@@ -518,22 +518,22 @@
         }
     .end annotation
 
-    .line 154
+    .line 156
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/16 v1, 0xc
 
-    .line 155
+    .line 157
     invoke-static {v1}, Lcom/miui/home/launcher/gadget/GadgetFactory;->getNoMtzInfo(I)Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     move-result-object v1
 
-    .line 156
+    .line 158
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 157
+    .line 159
     iget-object v1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/miui/launcher/utils/ToggleManagerUtils;->getAllToggles(Landroid/content/Context;)Ljava/util/ArrayList;
@@ -542,7 +542,7 @@
 
     const/4 v2, 0x0
 
-    .line 158
+    .line 160
     :goto_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -550,7 +550,7 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 159
+    .line 161
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -561,7 +561,7 @@
 
     move-result v3
 
-    .line 160
+    .line 162
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -574,7 +574,7 @@
 
     goto :goto_1
 
-    .line 163
+    .line 165
     :cond_0
     new-instance v4, Lcom/miui/home/launcher/ShortcutPlaceholderProviderInfo;
 
@@ -582,7 +582,7 @@
 
     invoke-direct {v4, v5}, Lcom/miui/home/launcher/ShortcutPlaceholderProviderInfo;-><init>(I)V
 
-    .line 165
+    .line 167
     new-instance v5, Landroid/content/Intent;
 
     const-string v6, "com.miui.action.TOGGLE_SHURTCUT"
@@ -591,23 +591,23 @@
 
     const-string v6, "ToggleId"
 
-    .line 166
+    .line 168
     invoke-virtual {v5, v6, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 167
+    .line 169
     iput-object v5, v4, Lcom/miui/home/launcher/ShortcutPlaceholderProviderInfo;->mIntent:Landroid/content/Intent;
 
-    .line 168
+    .line 170
     iget-object v3, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4, v3}, Lcom/miui/home/launcher/ShortcutPlaceholderProviderInfo;->loadToggleInfo(Landroid/content/Context;)V
 
     const/4 v3, 0x3
 
-    .line 169
+    .line 171
     iput v3, v4, Lcom/miui/home/launcher/ShortcutPlaceholderProviderInfo;->mIconType:I
 
-    .line 170
+    .line 172
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :goto_1
@@ -615,7 +615,7 @@
 
     goto :goto_0
 
-    .line 172
+    .line 174
     :cond_1
     invoke-direct {p0}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->getValidShortcutProviderInfos()Ljava/util/List;
 
@@ -638,12 +638,12 @@
 
     check-cast v1, Lcom/miui/home/launcher/ShortcutProviderInfo;
 
-    .line 173
+    .line 175
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 175
+    .line 177
     :cond_2
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -651,7 +651,7 @@
 
     if-nez p1, :cond_3
 
-    .line 176
+    .line 178
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_3
@@ -670,7 +670,7 @@
         }
     .end annotation
 
-    .line 181
+    .line 183
     invoke-static {}, Lcom/miui/home/launcher/gadget/GadgetFactory;->getAllGadgetNum()I
 
     move-result v0
@@ -680,12 +680,12 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 183
+    .line 185
     invoke-static {v1}, Lcom/miui/home/launcher/gadget/GadgetFactory;->getGadgetInfoByIndex(I)Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     move-result-object v2
 
-    .line 184
+    .line 186
     invoke-virtual {v2}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getGadgetId()I
 
     move-result v3
@@ -694,7 +694,7 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 185
+    .line 187
     invoke-direct {p0, v2, p1}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->insertItemToAllItems(Lcom/miui/home/launcher/ItemInfo;Ljava/util/ArrayList;)V
 
     :cond_0
@@ -718,12 +718,12 @@
         }
     .end annotation
 
-    .line 191
+    .line 193
     invoke-static {}, Lcom/miui/home/launcher/common/StorageMamlClockHelper;->getStorageClocks()Ljava/util/List;
 
     move-result-object v0
 
-    .line 192
+    .line 194
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -741,7 +741,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/common/StorageMamlClockHelper$MamlClock_2x4;
 
-    .line 193
+    .line 195
     invoke-static {v1}, Lcom/miui/home/launcher/gadget/GadgetFactory;->getThemeClockGadgetInfo(Lcom/miui/home/launcher/common/StorageMamlClockHelper$MamlClock_2x4;)Lcom/miui/home/launcher/gadget/ThemeClockGadgetInfo;
 
     move-result-object v1
@@ -765,23 +765,23 @@
         }
     .end annotation
 
-    .line 114
+    .line 117
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sShortcutProviders:Ljava/util/ArrayList;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->stream(Ljava/util/Collection;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$USZFSjPFbwGEHQluL_8gkgA75PY;
+    new-instance v1, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$yYh6Q-IkEUHAwr4XusJqpm7djfU;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$USZFSjPFbwGEHQluL_8gkgA75PY;-><init>(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$yYh6Q-IkEUHAwr4XusJqpm7djfU;-><init>(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)V
 
-    .line 115
+    .line 118
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    .line 116
+    .line 119
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v1
@@ -812,7 +812,7 @@
 
     move v1, v0
 
-    .line 201
+    .line 203
     :goto_0
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
 
@@ -822,35 +822,35 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 202
+    .line 204
     invoke-virtual {p2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/ArrayList;
 
-    .line 203
+    .line 205
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 204
+    .line 206
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 205
+    .line 207
     invoke-direct {p0, p1, v3}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->isSameWidgetCategory(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 206
+    .line 208
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
@@ -866,15 +866,15 @@
     :goto_1
     if-nez v0, :cond_2
 
-    .line 214
+    .line 216
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 215
+    .line 217
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 216
+    .line 218
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_2
@@ -884,7 +884,7 @@
 .method private isSameWidgetCategory(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 3
 
-    .line 236
+    .line 237
     instance-of v0, p1, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     const/4 v1, 0x1
@@ -893,12 +893,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 237
+    .line 238
     instance-of v0, p2, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     if-eqz v0, :cond_1
 
-    .line 238
+    .line 239
     check-cast p1, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getCategoryId()I
@@ -907,7 +907,7 @@
 
     check-cast p2, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
-    .line 239
+    .line 240
     invoke-virtual {p2}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getCategoryId()I
 
     move-result p2
@@ -922,13 +922,13 @@
     :goto_0
     return v1
 
-    .line 240
+    .line 241
     :cond_1
     instance-of v0, p2, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
     if-eqz v0, :cond_6
 
-    .line 241
+    .line 242
     check-cast p1, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getCategoryId()I
@@ -949,25 +949,25 @@
     :goto_1
     return v1
 
-    .line 244
+    .line 245
     :cond_3
     instance-of v0, p1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
     if-eqz v0, :cond_6
 
-    .line 245
+    .line 246
     instance-of v0, p2, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     if-eqz v0, :cond_5
 
-    .line 246
+    .line 247
     check-cast p1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
     iget p1, p1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->mWidgetCategory:I
 
     check-cast p2, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
-    .line 247
+    .line 248
     invoke-virtual {p2}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getCategoryId()I
 
     move-result p2
@@ -982,30 +982,30 @@
     :goto_2
     return v1
 
-    .line 248
+    .line 249
     :cond_5
     instance-of v0, p2, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
     if-eqz v0, :cond_6
 
-    .line 249
+    .line 250
     check-cast p1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
     iget-object p1, p1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->providerInfo:Landroid/appwidget/AppWidgetProviderInfo;
 
-    .line 250
+    .line 251
     iget-object p1, p1, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 251
+    .line 252
     check-cast p2, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
     iget-object p2, p2, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->providerInfo:Landroid/appwidget/AppWidgetProviderInfo;
 
-    .line 252
+    .line 253
     iget-object p2, p2, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
     invoke-virtual {p2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -1022,10 +1022,10 @@
     return v2
 .end method
 
-.method public static synthetic lambda$getValidShortcutProviderInfos$363(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;Lcom/miui/home/launcher/ShortcutProviderInfo;)Z
+.method public static synthetic lambda$getValidShortcutProviderInfos$0(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;Lcom/miui/home/launcher/ShortcutProviderInfo;)Z
     .locals 1
 
-    .line 115
+    .line 118
     iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutProviderInfo;->getComponentName()Landroid/content/ComponentName;
@@ -1039,11 +1039,258 @@
     return p1
 .end method
 
-.method public static synthetic lambda$initAllItems$364(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)V
+.method public static synthetic lambda$onBindViewHolder$1(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;Lcom/miui/home/launcher/ItemInfo;)Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .line 280
+    new-instance v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;
+
+    invoke-direct {v0}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;-><init>()V
+
+    .line 281
+    check-cast p1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
+
+    .line 282
+    iget-object v1, p1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->providerInfo:Landroid/appwidget/AppWidgetProviderInfo;
+
+    .line 283
+    iget-object v2, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
+
+    iget-object v3, v1, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
+
+    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1}, Landroid/appwidget/AppWidgetProviderInfo;->getProfile()Landroid/os/UserHandle;
+
+    move-result-object v1
+
+    invoke-static {v2, v3, v1}, Lcom/miui/home/launcher/ScreenUtils;->getProviderName(Landroid/content/Context;Ljava/lang/String;Landroid/os/UserHandle;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;->mTitle:Ljava/lang/String;
+
+    .line 284
+    iget-object p1, p1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->providerInfo:Landroid/appwidget/AppWidgetProviderInfo;
+
+    iget-object v1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p1, v1, v2}, Landroid/appwidget/AppWidgetProviderInfo;->loadIcon(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;->mIcon:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
+.method public static synthetic lambda$onBindViewHolder$2(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;Lcom/miui/home/launcher/ItemInfo;)Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .line 289
+    new-instance v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;
+
+    invoke-direct {v0}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;-><init>()V
+
+    .line 290
+    check-cast p1, Lcom/miui/home/launcher/ShortcutPlaceholderProviderInfo;
+
+    .line 291
+    iget v1, p1, Lcom/miui/home/launcher/ShortcutPlaceholderProviderInfo;->addType:I
+
+    const/4 v2, 0x4
+
+    if-ne v1, v2, :cond_0
+
+    .line 292
+    iget-object p1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const v1, 0x7f100397
+
+    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;->mTitle:Ljava/lang/String;
+
+    goto :goto_0
+
+    .line 293
+    :cond_0
+    iget p1, p1, Lcom/miui/home/launcher/ShortcutPlaceholderProviderInfo;->addType:I
+
+    const/4 v1, 0x5
+
+    if-ne p1, v1, :cond_1
+
+    .line 294
+    iget-object p1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const v1, 0x7f100319
+
+    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;->mTitle:Ljava/lang/String;
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    .line 296
+    iput-object p1, v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;->mIcon:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
+.method public static synthetic lambda$onBindViewHolder$3(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;Lcom/miui/home/launcher/ItemInfo;)Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .line 301
+    new-instance v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;
+
+    invoke-direct {v0}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;-><init>()V
+
+    .line 302
+    check-cast p1, Lcom/miui/home/launcher/gadget/GadgetInfo;
+
+    .line 303
+    iget-object v1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1, v1}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getTitle(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;->mTitle:Ljava/lang/String;
+
+    .line 304
+    iget-object v1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1, v1}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getIcon(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    iput-object p1, v0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;->mIcon:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
+.method static synthetic lambda$setViewHolderAsync$4(Ljava/util/concurrent/Callable;Ljava/lang/Void;)Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;
     .locals 0
 
-    .line 143
-    invoke-virtual {p0}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->notifyDataSetChanged()V
+    .line 317
+    :try_start_0
+    invoke-interface {p0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    .line 319
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method static synthetic lambda$setViewHolderAsync$5(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;)V
+    .locals 2
+
+    if-eqz p1, :cond_1
+
+    .line 324
+    iget-object v0, p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;->mTitle:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    .line 325
+    iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mTitle:Landroid/widget/TextView;
+
+    iget-object v1, p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;->mTitle:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 327
+    :cond_0
+    iget-object v0, p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;->mIcon:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_1
+
+    .line 328
+    iget-object p0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mSmallIcon:Landroid/widget/ImageView;
+
+    iget-object p1, p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;->mIcon:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method private setViewHolderAsync(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;Ljava/util/concurrent/Callable;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;",
+            "Ljava/util/concurrent/Callable<",
+            "Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$QueryResult;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 315
+    new-instance v0, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$-z-ZT4oS4BZn_FzAYgg3EzK86Ag;
+
+    invoke-direct {v0, p2}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$-z-ZT4oS4BZn_FzAYgg3EzK86Ag;-><init>(Ljava/util/concurrent/Callable;)V
+
+    new-instance p2, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$8IG_aCiz5bI9K2xggqkGlrjL6SY;
+
+    invoke-direct {p2, p1}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$8IG_aCiz5bI9K2xggqkGlrjL6SY;-><init>(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;)V
+
+    const/4 p1, 0x0
+
+    invoke-static {v0, p2, p1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->execParallel(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1053,7 +1300,7 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 305
+    .line 341
     iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mAllItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1066,12 +1313,12 @@
 .method public initAllItems()V
     .locals 5
 
-    .line 120
+    .line 123
     iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mAllItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 122
+    .line 125
     iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mAppWidgetManager:Landroid/appwidget/AppWidgetManager;
@@ -1080,10 +1327,10 @@
 
     move-result-object v0
 
-    .line 123
+    .line 126
     invoke-static {}, Lcom/miui/home/launcher/gadget/GadgetFactory;->loadMtzGadgetList()V
 
-    .line 125
+    .line 128
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
@@ -1093,7 +1340,7 @@
     :goto_0
     if-lez v1, :cond_3
 
-    .line 126
+    .line 129
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -1102,7 +1349,7 @@
 
     const-string v3, "com.miui.player"
 
-    .line 127
+    .line 130
     iget-object v4, v2, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
     invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -1115,17 +1362,17 @@
 
     if-eqz v3, :cond_0
 
-    .line 128
+    .line 131
     invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     const/4 v3, 0x0
 
-    .line 129
+    .line 132
     invoke-interface {v0, v3, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     goto :goto_1
 
-    .line 130
+    .line 133
     :cond_0
     iget v3, v2, Landroid/appwidget/AppWidgetProviderInfo;->minWidth:I
 
@@ -1135,14 +1382,14 @@
 
     if-gtz v3, :cond_1
 
-    .line 131
+    .line 134
     invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_1
 
-    .line 133
+    .line 136
     :cond_1
     sget-object v3, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sDisabledComponents:Ljava/util/Collection;
 
@@ -1158,7 +1405,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 134
+    .line 137
     invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
     add-int/lit8 v1, v1, -0x1
@@ -1169,7 +1416,7 @@
 
     goto :goto_0
 
-    .line 138
+    .line 141
     :cond_3
     sget-object v1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->sToggles:Ljava/util/ArrayList;
 
@@ -1177,32 +1424,25 @@
 
     invoke-direct {p0, v1, v2}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->buildFirstLineItems(Ljava/util/List;Ljava/util/ArrayList;)V
 
-    .line 139
+    .line 142
     iget-object v1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mAllItems:Ljava/util/ArrayList;
 
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->buildGadgetItems(Ljava/util/ArrayList;)V
 
-    .line 140
+    .line 143
     iget-object v1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mAllItems:Ljava/util/ArrayList;
 
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->buildDualClockItems(Ljava/util/ArrayList;)V
 
-    .line 141
+    .line 144
     iget-object v1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mAllItems:Ljava/util/ArrayList;
 
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->buildThemeClockItems(Ljava/util/ArrayList;)V
 
-    .line 142
+    .line 145
     iget-object v1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mAllItems:Ljava/util/ArrayList;
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->buildAppWidgetsItems(Ljava/util/List;Ljava/util/ArrayList;)V
-
-    .line 143
-    new-instance v0, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$C768pusGums9E74agRaETOZG4s8;
-
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$C768pusGums9E74agRaETOZG4s8;-><init>(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)V
-
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->useLauncherToRunOnUiThread(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
@@ -1210,7 +1450,7 @@
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
 
-    .line 60
+    .line 63
     check-cast p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;
 
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->onBindViewHolder(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;I)V
@@ -1223,14 +1463,14 @@
 
     if-nez p2, :cond_0
 
-    .line 266
+    .line 267
     iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0701e0
+    const v1, 0x7f0702e9
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1238,25 +1478,25 @@
 
     goto :goto_0
 
+    .line 268
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
 
-    .line 267
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f07027f
+    const v1, 0x7f07038f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    .line 268
+    .line 269
     :goto_0
     iget-object v1, p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 269
+    .line 270
     invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v2
@@ -1273,23 +1513,23 @@
 
     if-nez p2, :cond_1
 
-    .line 271
+    .line 272
     iget-object v0, p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mTitle:Landroid/widget/TextView;
 
-    const v1, 0x7f10028c
+    const v1, 0x7f1003bf
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 272
+    .line 273
     iget-object v0, p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mSmallIcon:Landroid/widget/ImageView;
 
-    const v1, 0x7f08029d
+    const v1, 0x7f080510
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    goto/16 :goto_2
+    goto :goto_1
 
-    .line 274
+    .line 275
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mAllItems:Ljava/util/ArrayList;
 
@@ -1299,163 +1539,67 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 275
+    .line 276
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v1
 
-    if-nez v1, :cond_6
+    if-nez v1, :cond_4
 
     const/4 v1, 0x0
 
-    .line 276
+    .line 277
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/ItemInfo;
 
-    const-string v2, ""
-
     .line 278
-    instance-of v3, v0, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
+    instance-of v1, v0, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
-    if-eqz v3, :cond_2
+    if-eqz v1, :cond_2
 
     .line 279
-    check-cast v0, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
+    new-instance v1, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$tDX3jOepTBpSMS7HFXMOkuJuZ64;
 
-    .line 280
-    iget-object v2, v0, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->providerInfo:Landroid/appwidget/AppWidgetProviderInfo;
+    invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$tDX3jOepTBpSMS7HFXMOkuJuZ64;-><init>(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 281
-    iget-object v3, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
-
-    iget-object v4, v2, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
-
-    invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v2}, Landroid/appwidget/AppWidgetProviderInfo;->getProfile()Landroid/os/UserHandle;
-
-    move-result-object v2
-
-    invoke-static {v3, v4, v2}, Lcom/miui/home/launcher/ScreenUtils;->getProviderName(Landroid/content/Context;Ljava/lang/String;Landroid/os/UserHandle;)Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    .line 282
-    iget-object v0, v0, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->providerInfo:Landroid/appwidget/AppWidgetProviderInfo;
-
-    iget-object v3, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0, v3, v1}, Landroid/appwidget/AppWidgetProviderInfo;->loadIcon(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    .line 283
-    iget-object v1, p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mSmallIcon:Landroid/widget/ImageView;
-
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0, p1, v1}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->setViewHolderAsync(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;Ljava/util/concurrent/Callable;)V
 
     goto :goto_1
 
-    .line 284
+    .line 287
     :cond_2
     instance-of v1, v0, Lcom/miui/home/launcher/ShortcutPlaceholderProviderInfo;
 
-    if-eqz v1, :cond_4
-
-    .line 285
-    check-cast v0, Lcom/miui/home/launcher/ShortcutPlaceholderProviderInfo;
-
-    .line 286
-    iget v1, v0, Lcom/miui/home/launcher/ShortcutPlaceholderProviderInfo;->addType:I
-
-    const/4 v3, 0x4
-
-    if-ne v1, v3, :cond_3
-
-    .line 287
-    iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f10026b
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    move-object v2, v0
-
-    goto :goto_1
+    if-eqz v1, :cond_3
 
     .line 288
-    :cond_3
-    iget v0, v0, Lcom/miui/home/launcher/ShortcutPlaceholderProviderInfo;->addType:I
+    new-instance v1, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$f2cjSMlJ8YZ5_5tAzD3fHMJnIcE;
 
-    const/4 v1, 0x5
+    invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$f2cjSMlJ8YZ5_5tAzD3fHMJnIcE;-><init>(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;Lcom/miui/home/launcher/ItemInfo;)V
 
-    if-ne v0, v1, :cond_5
-
-    .line 289
-    iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f100237
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    move-object v2, v0
+    invoke-direct {p0, p1, v1}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->setViewHolderAsync(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;Ljava/util/concurrent/Callable;)V
 
     goto :goto_1
 
-    .line 291
-    :cond_4
+    .line 299
+    :cond_3
     instance-of v1, v0, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_4
 
-    .line 292
-    check-cast v0, Lcom/miui/home/launcher/gadget/GadgetInfo;
+    .line 300
+    new-instance v1, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$1ONjZj28OsyHMIdpHZtExWRV3x8;
 
-    .line 293
-    iget-object v1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
+    invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetsVerticalAdapter$1ONjZj28OsyHMIdpHZtExWRV3x8;-><init>(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;Lcom/miui/home/launcher/ItemInfo;)V
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getTitle(Landroid/content/Context;)Ljava/lang/String;
+    invoke-direct {p0, p1, v1}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->setViewHolderAsync(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;Ljava/util/concurrent/Callable;)V
 
-    move-result-object v2
-
-    .line 294
-    iget-object v1, p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mSmallIcon:Landroid/widget/ImageView;
-
-    iget-object v3, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0, v3}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getIcon(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 296
-    :cond_5
+    .line 310
+    :cond_4
     :goto_1
-    iget-object v0, p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mTitle:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 299
-    :cond_6
-    :goto_2
     iget-object v0, p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mWidgetsHorizontalAdapter:Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;
 
     iget-object v1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mAllItems:Ljava/util/ArrayList;
@@ -1468,7 +1612,7 @@
 
     invoke-virtual {v0, p2}, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->setItemInfos(Ljava/util/ArrayList;)V
 
-    .line 300
+    .line 311
     iget-object p1, p1, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mWidgetsHorizontalAdapter:Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->notifyDataSetChanged()V
@@ -1479,7 +1623,7 @@
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
 
-    .line 60
+    .line 63
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;
 
     move-result-object p1
@@ -1490,10 +1634,10 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;
     .locals 2
 
-    .line 260
+    .line 261
     iget-object p2, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v0, 0x7f0d00d8
+    const v0, 0x7f0d0112
 
     const/4 v1, 0x0
 
@@ -1501,7 +1645,7 @@
 
     move-result-object p1
 
-    .line 261
+    .line 262
     new-instance p2, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;
 
     invoke-direct {p2, p0, p1}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;-><init>(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;Landroid/view/View;)V
@@ -1512,7 +1656,7 @@
 .method public setScreenType(I)V
     .locals 0
 
-    .line 309
+    .line 345
     iput p1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mScreenType:I
 
     return-void

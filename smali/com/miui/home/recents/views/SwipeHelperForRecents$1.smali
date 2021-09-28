@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$onOutRange$305(Lcom/miui/home/recents/views/TaskView;ZLcom/android/systemui/shared/recents/model/Task;)V
+.method static synthetic lambda$onOutRange$0(Lcom/miui/home/recents/views/TaskView;ZLcom/android/systemui/shared/recents/model/Task;)V
     .locals 1
 
     .line 275
@@ -99,9 +99,9 @@
     xor-int/lit8 v2, v2, 0x1
 
     .line 273
-    new-instance v3, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$1$hsxaMnry4hCAg-Y5xvLWeRBJ6CM;
+    new-instance v3, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$1$qZoKuSvYnTaSnbF8uv_BurOdSAA;
 
-    invoke-direct {v3, v0, v2, v1}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$1$hsxaMnry4hCAg-Y5xvLWeRBJ6CM;-><init>(Lcom/miui/home/recents/views/TaskView;ZLcom/android/systemui/shared/recents/model/Task;)V
+    invoke-direct {v3, v0, v2, v1}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$1$qZoKuSvYnTaSnbF8uv_BurOdSAA;-><init>(Lcom/miui/home/recents/views/TaskView;ZLcom/android/systemui/shared/recents/model/Task;)V
 
     invoke-static {v1, v2, v3}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->lockOrUnlockApp(Lcom/android/systemui/shared/recents/model/Task;ZLjava/lang/Runnable;)V
 

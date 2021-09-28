@@ -86,17 +86,17 @@
 .method private constructor <init>()V
     .locals 2
 
-    .line 117
+    .line 122
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, 0x10
 
-    .line 109
+    .line 114
     iput-wide v0, p0, Lmiuix/animation/internal/AnimRunner;->mAverageDelta:J
 
     const/4 v0, 0x5
 
-    .line 111
+    .line 116
     new-array v0, v0, [J
 
     fill-array-data v0, :array_0
@@ -105,7 +105,7 @@
 
     const/4 v0, 0x0
 
-    .line 112
+    .line 117
     iput v0, p0, Lmiuix/animation/internal/AnimRunner;->mRecordCount:I
 
     return-void
@@ -152,7 +152,7 @@
 .method private average([J)J
     .locals 9
 
-    .line 234
+    .line 239
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -186,7 +186,7 @@
 
     int-to-long v0, v4
 
-    .line 238
+    .line 243
     div-long v2, v5, v0
 
     :cond_2
@@ -196,7 +196,7 @@
 .method private calculateAverageDelta(J)J
     .locals 5
 
-    .line 208
+    .line 213
     iget-object v0, p0, Lmiuix/animation/internal/AnimRunner;->mDeltaRecord:[J
 
     invoke-direct {p0, v0}, Lmiuix/animation/internal/AnimRunner;->average([J)J
@@ -228,7 +228,7 @@
     :cond_2
     long-to-float p1, p1
 
-    .line 213
+    .line 218
     iget p2, p0, Lmiuix/animation/internal/AnimRunner;->mRatio:F
 
     div-float/2addr p1, p2
@@ -247,19 +247,19 @@
 .method private static endAnimation()V
     .locals 4
 
-    .line 98
+    .line 103
     invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
     move-result-object v0
 
-    .line 99
+    .line 104
     iget-boolean v1, v0, Lmiuix/animation/internal/AnimRunner;->mIsRunning:Z
 
     if-nez v1, :cond_0
 
     return-void
 
-    .line 102
+    .line 107
     :cond_0
     invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogEnabled()Z
 
@@ -271,16 +271,16 @@
 
     const-string v1, "AnimRunner.endAnimation"
 
-    .line 103
+    .line 108
     new-array v3, v2, [Ljava/lang/Object;
 
     invoke-static {v1, v3}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 105
+    .line 110
     :cond_1
     iput-boolean v2, v0, Lmiuix/animation/internal/AnimRunner;->mIsRunning:Z
 
-    .line 106
+    .line 111
     invoke-static {}, Lmiuix/animation/physics/AnimationHandler;->getInstance()Lmiuix/animation/physics/AnimationHandler;
 
     move-result-object v1
@@ -302,19 +302,19 @@
 .method private static startAnimRunner()V
     .locals 4
 
-    .line 85
+    .line 90
     invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
     move-result-object v0
 
-    .line 86
+    .line 91
     iget-boolean v1, v0, Lmiuix/animation/internal/AnimRunner;->mIsRunning:Z
 
     if-eqz v1, :cond_0
 
     return-void
 
-    .line 89
+    .line 94
     :cond_0
     invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogEnabled()Z
 
@@ -326,12 +326,12 @@
 
     const/4 v2, 0x0
 
-    .line 90
+    .line 95
     new-array v2, v2, [Ljava/lang/Object;
 
     invoke-static {v1, v2}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 92
+    .line 97
     :cond_1
     invoke-static {}, Lmiuix/animation/Folme;->getTimeRatio()F
 
@@ -341,10 +341,10 @@
 
     const/4 v1, 0x1
 
-    .line 93
+    .line 98
     iput-boolean v1, v0, Lmiuix/animation/internal/AnimRunner;->mIsRunning:Z
 
-    .line 94
+    .line 99
     invoke-static {}, Lmiuix/animation/physics/AnimationHandler;->getInstance()Lmiuix/animation/physics/AnimationHandler;
 
     move-result-object v1
@@ -357,7 +357,7 @@
 .end method
 
 .method private static updateAnimRunner(Ljava/util/Collection;Z)V
-    .locals 5
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -368,17 +368,32 @@
     .end annotation
 
     .line 70
+    invoke-interface {p0}, Ljava/util/Collection;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 71
+    sget-object v0, Lmiuix/animation/internal/AnimRunner;->sRunnerHandler:Lmiuix/animation/internal/RunnerHandler;
+
+    const/4 v1, 0x5
+
+    invoke-virtual {v0, v1}, Lmiuix/animation/internal/RunnerHandler;->sendEmptyMessage(I)Z
+
+    .line 73
+    :cond_0
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
-    :cond_0
+    :cond_1
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -386,7 +401,7 @@
 
     check-cast v0, Lmiuix/animation/IAnimTarget;
 
-    .line 71
+    .line 74
     iget-object v1, v0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
     const/4 v2, 0x0
@@ -397,40 +412,56 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    .line 75
+    iget-object v3, v0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
-    if-eqz p1, :cond_1
+    invoke-virtual {v3}, Lmiuix/animation/internal/AnimManager;->isAnimSetup()Z
 
-    .line 74
+    move-result v3
+
+    .line 76
+    invoke-virtual {v0}, Lmiuix/animation/IAnimTarget;->isValidFlag()Z
+
+    move-result v4
+
+    if-eqz v1, :cond_3
+
+    if-eqz p1, :cond_2
+
+    .line 79
     iget-object v0, v0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
     invoke-virtual {v0}, Lmiuix/animation/internal/AnimManager;->runUpdate()V
 
     goto :goto_0
 
-    .line 76
-    :cond_1
+    .line 81
+    :cond_2
     iget-object v0, v0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
     invoke-virtual {v0, v2}, Lmiuix/animation/internal/AnimManager;->update(Z)V
 
     goto :goto_0
 
-    :cond_2
-    if-nez v1, :cond_0
+    :cond_3
+    if-nez v3, :cond_1
 
-    const-wide/16 v3, 0x1
+    if-nez v1, :cond_1
 
-    .line 78
-    invoke-virtual {v0, v3, v4}, Lmiuix/animation/IAnimTarget;->hasFlags(J)Z
+    const-wide/16 v5, 0x1
+
+    .line 83
+    invoke-virtual {v0, v5, v6}, Lmiuix/animation/IAnimTarget;->hasFlags(J)Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
+
+    if-eqz v4, :cond_1
 
     const/4 v1, 0x1
 
-    .line 79
+    .line 84
     new-array v1, v1, [Lmiuix/animation/IAnimTarget;
 
     aput-object v0, v1, v2
@@ -439,14 +470,14 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     return-void
 .end method
 
 .method private updateRunningTime(J)V
     .locals 5
 
-    .line 218
+    .line 223
     iget-wide v0, p0, Lmiuix/animation/internal/AnimRunner;->mLastFrameTime:J
 
     const-wide/16 v2, 0x0
@@ -455,7 +486,7 @@
 
     if-nez v4, :cond_0
 
-    .line 219
+    .line 224
     iput-wide p1, p0, Lmiuix/animation/internal/AnimRunner;->mLastFrameTime:J
 
     goto :goto_0
@@ -463,26 +494,26 @@
     :cond_0
     sub-long v2, p1, v0
 
-    .line 223
+    .line 228
     iput-wide p1, p0, Lmiuix/animation/internal/AnimRunner;->mLastFrameTime:J
 
-    .line 225
+    .line 230
     :goto_0
     iget p1, p0, Lmiuix/animation/internal/AnimRunner;->mRecordCount:I
 
     rem-int/lit8 p2, p1, 0x5
 
-    .line 226
+    .line 231
     iget-object v0, p0, Lmiuix/animation/internal/AnimRunner;->mDeltaRecord:[J
 
     aput-wide v2, v0, p2
 
     add-int/lit8 p1, p1, 0x1
 
-    .line 227
+    .line 232
     iput p1, p0, Lmiuix/animation/internal/AnimRunner;->mRecordCount:I
 
-    .line 228
+    .line 233
     invoke-direct {p0, v2, v3}, Lmiuix/animation/internal/AnimRunner;->calculateAverageDelta(J)J
 
     move-result-wide p1
@@ -497,7 +528,7 @@
 .method public varargs cancel(Lmiuix/animation/IAnimTarget;[Lmiuix/animation/property/FloatProperty;)V
     .locals 4
 
-    .line 155
+    .line 160
     sget-object v0, Lmiuix/animation/internal/AnimRunner;->sRunnerHandler:Lmiuix/animation/internal/RunnerHandler;
 
     new-instance v1, Lmiuix/animation/internal/AnimOperationInfo;
@@ -516,20 +547,20 @@
 .method public doAnimationFrame(J)Z
     .locals 5
 
-    .line 122
+    .line 127
     invoke-direct {p0, p1, p2}, Lmiuix/animation/internal/AnimRunner;->updateRunningTime(J)V
 
-    .line 123
+    .line 128
     iget-boolean p1, p0, Lmiuix/animation/internal/AnimRunner;->mIsRunning:Z
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_6
 
-    .line 124
+    .line 129
     invoke-static {}, Lmiuix/animation/Folme;->getTargets()Ljava/util/Collection;
 
     move-result-object p1
 
-    .line 126
+    .line 131
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -552,7 +583,7 @@
 
     check-cast v2, Lmiuix/animation/IAnimTarget;
 
-    .line 127
+    .line 132
     iget-object v3, v2, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
     new-array v4, v0, [Lmiuix/animation/property/FloatProperty;
@@ -563,7 +594,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 129
+    .line 134
     iget-object v2, v2, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
     invoke-virtual {v2}, Lmiuix/animation/internal/AnimManager;->getTotalAnimCount()I
@@ -584,18 +615,26 @@
     :cond_2
     if-nez v0, :cond_3
 
-    .line 134
+    .line 139
     invoke-interface {p1}, Ljava/util/Collection;->size()I
 
     move-result p2
 
-    if-lez p2, :cond_3
+    if-gtz p2, :cond_4
 
-    .line 135
+    :cond_3
+    invoke-interface {p1}, Ljava/util/Collection;->size()I
+
+    move-result p2
+
+    if-nez p2, :cond_5
+
+    .line 140
+    :cond_4
     invoke-static {p1, v0}, Lmiuix/animation/internal/AnimRunner;->updateAnimRunner(Ljava/util/Collection;Z)V
 
-    .line 138
-    :cond_3
+    .line 143
+    :cond_5
     sget-object p2, Lmiuix/animation/internal/AnimRunner;->sRunnerHandler:Lmiuix/animation/internal/RunnerHandler;
 
     invoke-virtual {p2}, Lmiuix/animation/internal/RunnerHandler;->obtainMessage()Landroid/os/Message;
@@ -604,28 +643,35 @@
 
     const/4 v1, 0x3
 
-    .line 139
+    .line 144
     iput v1, p2, Landroid/os/Message;->what:I
 
-    .line 140
+    .line 145
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
     iput-object v1, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 141
+    .line 146
     sget-object v1, Lmiuix/animation/internal/AnimRunner;->sRunnerHandler:Lmiuix/animation/internal/RunnerHandler;
 
     invoke-virtual {v1, p2}, Lmiuix/animation/internal/RunnerHandler;->sendMessage(Landroid/os/Message;)Z
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
-    .line 144
+    .line 148
+    invoke-interface {p1}, Ljava/util/Collection;->size()I
+
+    move-result p2
+
+    if-lez p2, :cond_6
+
+    .line 149
     invoke-static {p1, v0}, Lmiuix/animation/internal/AnimRunner;->updateAnimRunner(Ljava/util/Collection;Z)V
 
-    .line 147
-    :cond_4
+    .line 152
+    :cond_6
     iget-boolean p1, p0, Lmiuix/animation/internal/AnimRunner;->mIsRunning:Z
 
     return p1
@@ -634,7 +680,7 @@
 .method end()V
     .locals 2
 
-    .line 196
+    .line 201
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -645,12 +691,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 197
+    .line 202
     invoke-static {}, Lmiuix/animation/internal/AnimRunner;->endAnimation()V
 
     goto :goto_0
 
-    .line 199
+    .line 204
     :cond_0
     sget-object v0, Lmiuix/animation/internal/AnimRunner;->sMainHandler:Landroid/os/Handler;
 
@@ -665,7 +711,7 @@
 .method public varargs end(Lmiuix/animation/IAnimTarget;[Ljava/lang/String;)V
     .locals 4
 
-    .line 159
+    .line 164
     invoke-static {p2}, Lmiuix/animation/utils/CommonUtils;->isArrayEmpty([Ljava/lang/Object;)Z
 
     move-result v0
@@ -674,12 +720,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 160
+    .line 165
     iget-object v0, p1, Lmiuix/animation/IAnimTarget;->handler:Lmiuix/animation/internal/TargetHandler;
 
     invoke-virtual {v0, v1}, Lmiuix/animation/internal/TargetHandler;->sendEmptyMessage(I)Z
 
-    .line 162
+    .line 167
     :cond_0
     sget-object v0, Lmiuix/animation/internal/AnimRunner;->sRunnerHandler:Lmiuix/animation/internal/RunnerHandler;
 
@@ -697,7 +743,7 @@
 .method public varargs end(Lmiuix/animation/IAnimTarget;[Lmiuix/animation/property/FloatProperty;)V
     .locals 4
 
-    .line 166
+    .line 171
     invoke-static {p2}, Lmiuix/animation/utils/CommonUtils;->isArrayEmpty([Ljava/lang/Object;)Z
 
     move-result v0
@@ -706,12 +752,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 167
+    .line 172
     iget-object v0, p1, Lmiuix/animation/IAnimTarget;->handler:Lmiuix/animation/internal/TargetHandler;
 
     invoke-virtual {v0, v1}, Lmiuix/animation/internal/TargetHandler;->sendEmptyMessage(I)Z
 
-    .line 169
+    .line 174
     :cond_0
     sget-object v0, Lmiuix/animation/internal/AnimRunner;->sRunnerHandler:Lmiuix/animation/internal/RunnerHandler;
 
@@ -729,7 +775,7 @@
 .method public getAverageDelta()J
     .locals 2
 
-    .line 204
+    .line 209
     iget-wide v0, p0, Lmiuix/animation/internal/AnimRunner;->mAverageDelta:J
 
     return-wide v0
@@ -738,12 +784,12 @@
 .method public run(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)V
     .locals 1
 
-    .line 174
+    .line 179
     new-instance v0, Lmiuix/animation/internal/TransitionInfo;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lmiuix/animation/internal/TransitionInfo;-><init>(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)V
 
-    .line 175
+    .line 180
     invoke-virtual {p0, v0}, Lmiuix/animation/internal/AnimRunner;->run(Lmiuix/animation/internal/TransitionInfo;)V
 
     return-void
@@ -752,7 +798,7 @@
 .method public run(Lmiuix/animation/internal/TransitionInfo;)V
     .locals 2
 
-    .line 179
+    .line 184
     iget-object v0, p1, Lmiuix/animation/internal/TransitionInfo;->target:Lmiuix/animation/IAnimTarget;
 
     new-instance v1, Lmiuix/animation/internal/AnimRunner$2;
@@ -767,7 +813,7 @@
 .method start()V
     .locals 2
 
-    .line 188
+    .line 193
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -778,12 +824,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 189
+    .line 194
     invoke-static {}, Lmiuix/animation/internal/AnimRunner;->startAnimRunner()V
 
     goto :goto_0
 
-    .line 191
+    .line 196
     :cond_0
     sget-object v0, Lmiuix/animation/internal/AnimRunner;->sMainHandler:Landroid/os/Handler;
 

@@ -22,7 +22,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 256
+    .line 258
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/common/StorageMamlClockHelper$1;)V
     .locals 0
 
-    .line 256
+    .line 258
     invoke-direct {p0}, Lcom/miui/home/launcher/common/StorageMamlClockHelper$ParentResource;-><init>()V
 
     return-void

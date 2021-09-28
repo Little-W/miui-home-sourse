@@ -73,7 +73,7 @@
     return-object p0
 .end method
 
-.method static synthetic lambda$moveDrawerDatabaseFile$408(Ljava/io/File;Ljava/lang/String;)Z
+.method static synthetic lambda$moveDrawerDatabaseFile$0(Ljava/io/File;Ljava/lang/String;)Z
     .locals 0
 
     const-string p0, ".db"
@@ -123,7 +123,7 @@
     move-result-object v0
 
     .line 35
-    sget-object v1, Lcom/miui/home/launcher/-$$Lambda$LauncherVersionUtils$Tl7iO8ynMlbQZjnnWOsY9_KU7HI;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$LauncherVersionUtils$Tl7iO8ynMlbQZjnnWOsY9_KU7HI;
+    sget-object v1, Lcom/miui/home/launcher/-$$Lambda$LauncherVersionUtils$x4dTXKV7L09JXkAflamwJ7AldDg;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$LauncherVersionUtils$x4dTXKV7L09JXkAflamwJ7AldDg;
 
     invoke-virtual {v0, v1}, Ljava/io/File;->list(Ljava/io/FilenameFilter;)[Ljava/lang/String;
 
@@ -283,7 +283,7 @@
 
     .line 72
     :goto_0
-    invoke-static {p0, p1}, Lmiui/os/FileUtils;->copyFile(Ljava/io/File;Ljava/io/File;)Z
+    invoke-static {p0, p1}, Lmiuix/core/util/FileUtils;->copyFile(Ljava/io/File;Ljava/io/File;)Z
 
     move-result p1
 

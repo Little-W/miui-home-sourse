@@ -52,7 +52,7 @@
     return-object v0
 .end method
 
-.method static synthetic lambda$requestCloudSettingsInfo$421(Ljava/lang/Void;)Lcom/miui/msa/internal/preinstall/v2/CNColudControlInfo;
+.method static synthetic lambda$requestCloudSettingsInfo$0(Ljava/lang/Void;)Lcom/miui/msa/internal/preinstall/v2/CNColudControlInfo;
     .locals 0
 
     .line 37
@@ -71,7 +71,7 @@
     return-object p0
 .end method
 
-.method public static synthetic lambda$requestCloudSettingsInfo$422(Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsController;Lcom/miui/msa/internal/preinstall/v2/CNColudControlInfo;)V
+.method public static synthetic lambda$requestCloudSettingsInfo$1(Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsController;Lcom/miui/msa/internal/preinstall/v2/CNColudControlInfo;)V
     .locals 1
 
     if-eqz p1, :cond_0
@@ -157,11 +157,11 @@
     .locals 3
 
     .line 35
-    sget-object v0, Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$Mvm2PZ1CsibtAxBXbfOHtotusyU;->INSTANCE:Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$Mvm2PZ1CsibtAxBXbfOHtotusyU;
+    sget-object v0, Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$3Jz2FEwx_kNtizwLwrPZrQo11V4;->INSTANCE:Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$3Jz2FEwx_kNtizwLwrPZrQo11V4;
 
-    new-instance v1, Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$xNsYqypijLhRPBB0byp22FhnxYY;
+    new-instance v1, Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$Uh0DeR3NlrzpyPOOKIidoX9ZeGU;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$xNsYqypijLhRPBB0byp22FhnxYY;-><init>(Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsController;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/commercial/cloudSettings/cn/-$$Lambda$CNCloudSettingsController$Uh0DeR3NlrzpyPOOKIidoX9ZeGU;-><init>(Lcom/miui/home/launcher/commercial/cloudSettings/cn/CNCloudSettingsController;)V
 
     const/4 v2, 0x0
 

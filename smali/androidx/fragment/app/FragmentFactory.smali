@@ -4,13 +4,15 @@
 
 
 # static fields
-.field private static final sClassMap:Landroidx/collection/SimpleArrayMap;
+.field private static final sClassCacheMap:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/SimpleArrayMap<",
+            "Ljava/lang/ClassLoader;",
+            "Landroidx/collection/SimpleArrayMap<",
             "Ljava/lang/String;",
             "Ljava/lang/Class<",
-            "*>;>;"
+            "*>;>;>;"
         }
     .end annotation
 .end field
@@ -20,12 +22,12 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 32
+    .line 33
     new-instance v0, Landroidx/collection/SimpleArrayMap;
 
     invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    sput-object v0, Landroidx/fragment/app/FragmentFactory;->sClassMap:Landroidx/collection/SimpleArrayMap;
+    sput-object v0, Landroidx/fragment/app/FragmentFactory;->sClassCacheMap:Landroidx/collection/SimpleArrayMap;
 
     return-void
 .end method
@@ -42,13 +44,13 @@
 .method static isFragmentClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Z
     .locals 0
 
-    .line 64
+    .line 70
     :try_start_0
     invoke-static {p0, p1}, Landroidx/fragment/app/FragmentFactory;->loadClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object p0
 
-    .line 65
+    .line 71
     const-class p1, Landroidx/fragment/app/Fragment;
 
     invoke-virtual {p1, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -66,7 +68,7 @@
 .end method
 
 .method private static loadClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -84,31 +86,49 @@
         }
     .end annotation
 
-    .line 44
-    sget-object v0, Landroidx/fragment/app/FragmentFactory;->sClassMap:Landroidx/collection/SimpleArrayMap;
+    .line 45
+    sget-object v0, Landroidx/fragment/app/FragmentFactory;->sClassCacheMap:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Class;
+    check-cast v0, Landroidx/collection/SimpleArrayMap;
 
     if-nez v0, :cond_0
 
-    const/4 v0, 0x0
-
     .line 47
-    invoke-static {p1, v0, p0}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+    new-instance v0, Landroidx/collection/SimpleArrayMap;
 
-    move-result-object v0
+    invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
     .line 48
-    sget-object p0, Landroidx/fragment/app/FragmentFactory;->sClassMap:Landroidx/collection/SimpleArrayMap;
+    sget-object v1, Landroidx/fragment/app/FragmentFactory;->sClassCacheMap:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {p0, p1, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p0, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    .line 50
     :cond_0
-    return-object v0
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Class;
+
+    if-nez v1, :cond_1
+
+    const/4 v1, 0x0
+
+    .line 53
+    invoke-static {p1, v1, p0}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+
+    move-result-object v1
+
+    .line 54
+    invoke-virtual {v0, p1, v1}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    return-object v1
 .end method
 
 .method public static loadFragmentClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
@@ -126,7 +146,7 @@
         }
     .end annotation
 
-    .line 88
+    .line 94
     :try_start_0
     invoke-static {p0, p1}, Landroidx/fragment/app/FragmentFactory;->loadClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
 
@@ -140,7 +160,7 @@
     :catch_0
     move-exception p0
 
-    .line 94
+    .line 100
     new-instance v0, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -168,7 +188,7 @@
     :catch_1
     move-exception p0
 
-    .line 91
+    .line 97
     new-instance v0, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -199,7 +219,7 @@
 .method public instantiate(Ljava/lang/ClassLoader;Ljava/lang/String;)Landroidx/fragment/app/Fragment;
     .locals 3
 
-    .line 114
+    .line 120
     :try_start_0
     invoke-static {p1, p2}, Landroidx/fragment/app/FragmentFactory;->loadFragmentClass(Ljava/lang/ClassLoader;Ljava/lang/String;)Ljava/lang/Class;
 
@@ -207,7 +227,7 @@
 
     const/4 v0, 0x0
 
-    .line 115
+    .line 121
     new-array v1, v0, [Ljava/lang/Class;
 
     invoke-virtual {p1, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
@@ -232,7 +252,7 @@
     :catch_0
     move-exception p1
 
-    .line 128
+    .line 134
     new-instance v0, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -260,7 +280,7 @@
     :catch_1
     move-exception p1
 
-    .line 125
+    .line 131
     new-instance v0, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -288,7 +308,7 @@
     :catch_2
     move-exception p1
 
-    .line 121
+    .line 127
     new-instance v0, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -316,7 +336,7 @@
     :catch_3
     move-exception p1
 
-    .line 117
+    .line 123
     new-instance v0, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v1, Ljava/lang/StringBuilder;

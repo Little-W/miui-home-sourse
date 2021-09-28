@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$get$341(Lcom/miui/home/launcher/util/MainThreadInitializedObject;Landroid/content/Context;)Ljava/lang/Object;
+.method public static synthetic lambda$get$0(Lcom/miui/home/launcher/util/MainThreadInitializedObject;Landroid/content/Context;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -123,9 +123,9 @@
     :try_start_0
     sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->MAIN_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    new-instance v1, Lcom/miui/home/launcher/util/-$$Lambda$MainThreadInitializedObject$ZSFjzYjdQ1Gfdlr8DnpNTA2crpQ;
+    new-instance v1, Lcom/miui/home/launcher/util/-$$Lambda$MainThreadInitializedObject$7LU4kkMfBebbhQokLX-Fgi7GaPo;
 
-    invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/util/-$$Lambda$MainThreadInitializedObject$ZSFjzYjdQ1Gfdlr8DnpNTA2crpQ;-><init>(Lcom/miui/home/launcher/util/MainThreadInitializedObject;Landroid/content/Context;)V
+    invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/util/-$$Lambda$MainThreadInitializedObject$7LU4kkMfBebbhQokLX-Fgi7GaPo;-><init>(Lcom/miui/home/launcher/util/MainThreadInitializedObject;Landroid/content/Context;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/utils/LooperExecutor;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 

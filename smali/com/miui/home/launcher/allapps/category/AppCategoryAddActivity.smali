@@ -1,5 +1,5 @@
 .class public Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;
-.super Lmiui/app/Activity;
+.super Lmiuix/appcompat/app/AppCompatActivity;
 .source "AppCategoryAddActivity.java"
 
 # interfaces
@@ -14,29 +14,29 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 21
-    invoke-direct {p0}, Lmiui/app/Activity;-><init>()V
+    .line 22
+    invoke-direct {p0}, Lmiuix/appcompat/app/AppCompatActivity;-><init>()V
 
     return-void
 .end method
 
-.method public static startActivityForResult(Landroid/app/Fragment;I)V
+.method public static startActivityForResult(Landroidx/fragment/app/Fragment;I)V
     .locals 3
 
-    .line 25
-    invoke-virtual {p0}, Landroid/app/Fragment;->getContext()Landroid/content/Context;
+    .line 26
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 26
+    .line 27
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;
 
     invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 27
-    invoke-virtual {p0, v1, p1}, Landroid/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
+    .line 28
+    invoke-virtual {p0, v1, p1}, Landroidx/fragment/app/Fragment;->startActivityForResult(Landroid/content/Intent;I)V
 
     return-void
 .end method
@@ -70,7 +70,7 @@
 
     .line 56
     :cond_0
-    invoke-super {p0}, Lmiui/app/Activity;->onBackPressed()V
+    invoke-super {p0}, Lmiuix/appcompat/app/AppCompatActivity;->onBackPressed()V
 
     return-void
 .end method
@@ -78,22 +78,19 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 3
 
-    .line 32
-    invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->setDayNightThemeIfNeed(Landroid/app/Activity;)V
-
     .line 33
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v0
 
-    const v1, 0x7f11000c
+    const v1, 0x7f1101cf
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
 
     .line 34
-    invoke-super {p0, p1}, Lmiui/app/Activity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
     const p1, 0x7f0d001c
 
@@ -101,27 +98,27 @@
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;->setContentView(I)V
 
     .line 36
-    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;->getActionBar()Lmiui/app/ActionBar;
+    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 37
-    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;->getActionBar()Lmiui/app/ActionBar;
+    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lmiui/app/ActionBar;->hide()V
+    invoke-virtual {p1}, Landroid/app/ActionBar;->hide()V
 
     .line 40
     :cond_0
-    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
 
     .line 41
-    invoke-virtual {p1}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
@@ -133,13 +130,13 @@
     .line 43
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->setAppCategorySelectListener(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment$AppCategorySelectListener;)V
 
-    const v1, 0x7f0a003e
+    const v1, 0x7f0a0048
 
     .line 44
-    invoke-virtual {p1, v1, v0}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    invoke-virtual {p1, v1, v0}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     .line 45
-    invoke-virtual {p1}, Landroid/app/FragmentTransaction;->commitAllowingStateLoss()I
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
     .line 46
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;->mFragment:Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;
@@ -168,7 +165,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f1000ab
+    const p2, 0x7f1000ae
 
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;->getString(I)Ljava/lang/String;
 
@@ -202,7 +199,11 @@
     .end annotation
 
     .line 71
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getModel()Lcom/miui/home/launcher/LauncherModel;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Application;->getModel()Lcom/miui/home/launcher/LauncherModel;
 
     move-result-object p1
 

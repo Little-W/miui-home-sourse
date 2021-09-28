@@ -92,7 +92,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f070280
+    const p2, 0x7f070390
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -105,7 +105,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0701e0
+    const p2, 0x7f0702e9
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -178,11 +178,27 @@
     return v3
 .end method
 
-.method static synthetic lambda$resetAdapter$209(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)V
+.method public static synthetic lambda$resetAdapter$0(Lcom/miui/home/launcher/widget/WidgetThumbnailView;Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)V
     .locals 0
 
+    .line 186
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/widget/WidgetThumbnailView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$resetAdapter$1(Lcom/miui/home/launcher/widget/WidgetThumbnailView;Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)V
+    .locals 1
+
     .line 184
-    invoke-virtual {p0}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->initAllItems()V
+    invoke-virtual {p1}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->initAllItems()V
+
+    .line 185
+    new-instance v0, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetThumbnailView$NMb1XEKFK-ONgxPj0FGAi-gj450;
+
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetThumbnailView$NMb1XEKFK-ONgxPj0FGAi-gj450;-><init>(Lcom/miui/home/launcher/widget/WidgetThumbnailView;Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)V
+
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetThumbnailView;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
@@ -209,11 +225,7 @@
 
     .line 140
     :cond_0
-    invoke-virtual {p0}, Lcom/miui/home/launcher/widget/WidgetThumbnailView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
     move-result v0
 
@@ -338,11 +350,7 @@
 
     .line 83
     :cond_0
-    invoke-virtual {p0}, Lcom/miui/home/launcher/widget/WidgetThumbnailView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
     move-result v0
 
@@ -522,10 +530,10 @@
 
     const/4 v0, 0x0
 
-    .line 188
+    .line 192
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetThumbnailView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 189
+    .line 193
     invoke-virtual {p0}, Lcom/miui/home/launcher/widget/WidgetThumbnailView;->getRecycledViewPool()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
 
     move-result-object v0
@@ -544,12 +552,9 @@
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;-><init>(Lcom/miui/home/launcher/widget/WidgetThumbnailView;)V
 
     .line 183
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetThumbnailView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    new-instance v1, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetThumbnailView$kjrAwtTaYaZFEFP17pPBjDb4ekw;
 
-    .line 184
-    new-instance v1, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetThumbnailView$zpnvrYNmmLZpGTlampV1bna1DFY;
-
-    invoke-direct {v1, v0}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetThumbnailView$zpnvrYNmmLZpGTlampV1bna1DFY;-><init>(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)V
+    invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/widget/-$$Lambda$WidgetThumbnailView$kjrAwtTaYaZFEFP17pPBjDb4ekw;-><init>(Lcom/miui/home/launcher/widget/WidgetThumbnailView;Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)V
 
     invoke-static {v1}, Lcom/miui/home/launcher/common/BackgroundThread;->postAtFrontOfQueue(Ljava/lang/Runnable;)V
 
@@ -590,14 +595,14 @@
 .method public setScreenType(I)V
     .locals 1
 
-    .line 193
+    .line 197
     invoke-virtual {p0}, Lcom/miui/home/launcher/widget/WidgetThumbnailView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 194
+    .line 198
     invoke-virtual {p0}, Lcom/miui/home/launcher/widget/WidgetThumbnailView;->getAdapter()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v0

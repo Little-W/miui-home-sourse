@@ -20,7 +20,7 @@
         value = {
             "Ljava/util/ArrayList<",
             "Landroid/util/Pair<",
-            "Lmiui/util/FileAccessable;",
+            "Lcom/miui/home/library/utils/FileAccessable;",
             "Ljava/lang/Integer;",
             ">;>;"
         }

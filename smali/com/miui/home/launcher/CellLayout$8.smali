@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/CellLayout;->fillEmptyCellAuto(II)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/launcher/CellLayout;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 2084
+    .line 1340
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$8;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,26 +36,22 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    .line 2086
+    .line 1343
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$8;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
+    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->canBeDeleted()Z
 
-    const-string v0, "Launcher.CellLayout"
+    move-result v0
 
-    const-string v1, "requestLayout after has recalculated item position"
+    if-eqz v0, :cond_0
 
-    .line 2087
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2088
+    .line 1344
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$8;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    iget-object v0, v0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->deleteSelf()V
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->invalidateWorkspacePreview()V
-
+    :cond_0
     return-void
 .end method

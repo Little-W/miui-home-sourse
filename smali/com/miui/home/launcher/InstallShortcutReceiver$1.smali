@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/InstallShortcutReceiver$1;
+.class Lcom/miui/home/launcher/InstallShortcutReceiver$1;
 .super Ljava/lang/Object;
 .source "InstallShortcutReceiver.java"
 
@@ -12,13 +12,13 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$app:Lcom/miui/home/launcher/LauncherApplication;
+.field final synthetic val$app:Lcom/miui/home/launcher/Application;
 
 .field final synthetic val$context:Landroid/content/Context;
 
@@ -34,23 +34,23 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/LauncherApplication;Lcom/miui/home/launcher/Launcher;Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;ILcom/miui/launcher/common/PinItemRequestCompat;)V
+.method constructor <init>(Lcom/miui/home/launcher/Application;Lcom/miui/home/launcher/Launcher;Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;Landroid/content/Context;Landroid/content/Intent;I)V
     .locals 0
 
-    .line 168
-    iput-object p1, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$app:Lcom/miui/home/launcher/LauncherApplication;
+    .line 169
+    iput-object p1, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$app:Lcom/miui/home/launcher/Application;
 
     iput-object p2, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
-    iput-object p3, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$context:Landroid/content/Context;
+    iput-object p3, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$request:Lcom/miui/launcher/common/PinItemRequestCompat;
 
     iput-object p4, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$senderPackageName:Ljava/lang/String;
 
-    iput-object p5, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$installShortcutIntent:Landroid/content/Intent;
+    iput-object p5, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$context:Landroid/content/Context;
 
-    iput p6, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$itemType:I
+    iput-object p6, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$installShortcutIntent:Landroid/content/Intent;
 
-    iput-object p7, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$request:Lcom/miui/launcher/common/PinItemRequestCompat;
+    iput p7, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$itemType:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,16 +64,16 @@
 
     move-object/from16 v0, p0
 
-    .line 171
-    iget-object v1, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$app:Lcom/miui/home/launcher/LauncherApplication;
+    .line 172
+    iget-object v1, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$app:Lcom/miui/home/launcher/Application;
 
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getModel()Lcom/miui/home/launcher/LauncherModel;
+    invoke-virtual {v1}, Lcom/miui/home/launcher/Application;->getModel()Lcom/miui/home/launcher/LauncherModel;
 
     move-result-object v1
 
     if-eqz v1, :cond_a
 
-    .line 172
+    .line 173
     iget-object v2, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/Launcher;->isDestroyed()Z
@@ -84,7 +84,7 @@
 
     goto/16 :goto_5
 
-    .line 177
+    .line 179
     :cond_0
     iget-object v2, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
@@ -94,7 +94,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 178
+    .line 180
     iget-object v1, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -107,7 +107,7 @@
 
     return-void
 
-    .line 185
+    .line 187
     :cond_1
     iget-object v2, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$installShortcutIntent:Landroid/content/Intent;
 
@@ -117,42 +117,42 @@
 
     move-result-object v2
 
-    .line 186
+    .line 188
     instance-of v3, v2, Landroid/os/PersistableBundle;
 
     const/4 v4, 0x0
 
     if-eqz v3, :cond_2
 
-    .line 188
+    .line 190
     move-object v5, v2
 
     check-cast v5, Landroid/os/PersistableBundle;
 
     const-string v6, "save_intent"
 
-    .line 189
+    .line 191
     invoke-virtual {v5, v6, v4}, Landroid/os/PersistableBundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v6
 
     const-string v7, "shortcut_intent_string"
 
-    .line 190
+    .line 192
     invoke-virtual {v5, v7}, Landroid/os/PersistableBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
     const-string v8, "IS_QUICK_APP"
 
-    .line 191
+    .line 193
     invoke-virtual {v5, v8}, Landroid/os/PersistableBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     goto :goto_0
 
-    .line 193
+    .line 195
     :cond_2
     iget-object v5, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$installShortcutIntent:Landroid/content/Intent;
 
@@ -162,7 +162,7 @@
 
     move-result v6
 
-    .line 194
+    .line 196
     iget-object v5, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$installShortcutIntent:Landroid/content/Intent;
 
     const-string v7, "shortcut_intent_string"
@@ -171,7 +171,7 @@
 
     move-result-object v7
 
-    .line 195
+    .line 197
     iget-object v5, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$installShortcutIntent:Landroid/content/Intent;
 
     const-string v8, "IS_QUICK_APP"
@@ -180,13 +180,13 @@
 
     move-result-object v5
 
-    .line 198
+    .line 200
     :goto_0
     iget-object v8, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     iget-object v9, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$installShortcutIntent:Landroid/content/Intent;
 
-    invoke-static {v8, v9}, Lcom/miui/home/launcher/InstallShortcutReceiver;->access$000(Lcom/miui/home/launcher/Launcher;Landroid/content/Intent;)Z
+    invoke-static {v8, v9}, Lcom/miui/home/launcher/InstallShortcutReceiver;->access$100(Lcom/miui/home/launcher/Launcher;Landroid/content/Intent;)Z
 
     move-result v8
 
@@ -194,11 +194,11 @@
 
     return-void
 
-    .line 202
+    .line 204
     :cond_3
     sget-object v8, Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;->SUCCEED:Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;
 
-    .line 203
+    .line 205
     iget-object v9, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$installShortcutIntent:Landroid/content/Intent;
 
     iget v10, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$itemType:I
@@ -209,12 +209,12 @@
 
     if-nez v12, :cond_4
 
-    .line 206
+    .line 208
     sget-object v1, Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;->FAILED:Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;
 
     goto/16 :goto_4
 
-    .line 207
+    .line 209
     :cond_4
     invoke-virtual {v1, v12}, Lcom/miui/home/launcher/LauncherModel;->isDupShortcut(Lcom/miui/home/launcher/ShortcutInfo;)Z
 
@@ -222,12 +222,12 @@
 
     if-eqz v1, :cond_5
 
-    .line 208
+    .line 210
     sget-object v1, Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;->DUPLICATE:Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;
 
     goto/16 :goto_4
 
-    .line 210
+    .line 212
     :cond_5
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -235,7 +235,7 @@
 
     if-nez v1, :cond_6
 
-    .line 211
+    .line 213
     iget-object v1, v12, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
 
     const-string v9, "IS_QUICK_APP"
@@ -246,13 +246,13 @@
 
     invoke-virtual {v1, v9, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/io/Serializable;)Landroid/content/Intent;
 
-    .line 213
+    .line 215
     :cond_6
     iget-object v1, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$senderPackageName:Ljava/lang/String;
 
     invoke-virtual {v12, v1}, Lcom/miui/home/launcher/ShortcutInfo;->setIconPackage(Ljava/lang/String;)V
 
-    .line 214
+    .line 216
     iget-object v1, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$context:Landroid/content/Context;
 
     iget-object v5, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$senderPackageName:Ljava/lang/String;
@@ -265,7 +265,7 @@
 
     if-eqz v3, :cond_7
 
-    .line 216
+    .line 218
     check-cast v2, Landroid/os/PersistableBundle;
 
     const-string v1, "retained"
@@ -278,7 +278,7 @@
 
     goto :goto_1
 
-    .line 218
+    .line 220
     :cond_7
     iget-object v1, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$installShortcutIntent:Landroid/content/Intent;
 
@@ -290,18 +290,18 @@
 
     iput-boolean v1, v12, Lcom/miui/home/launcher/ShortcutInfo;->mIsRetained:Z
 
-    .line 222
+    .line 224
     :cond_8
     :goto_1
     iget-object v1, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$installShortcutIntent:Landroid/content/Intent;
 
     iget-object v2, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$senderPackageName:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lcom/miui/home/launcher/InstallShortcutReceiver;->access$100(Landroid/content/Intent;Ljava/lang/String;)Lcom/miui/home/launcher/InstallShortcutReceiver$Position;
+    invoke-static {v1, v2}, Lcom/miui/home/launcher/InstallShortcutReceiver;->access$200(Landroid/content/Intent;Ljava/lang/String;)Lcom/miui/home/launcher/InstallShortcutReceiver$Position;
 
     move-result-object v1
 
-    .line 223
+    .line 225
     sget-object v2, Lcom/miui/home/launcher/InstallShortcutReceiver$2;->$SwitchMap$com$miui$home$launcher$InstallShortcutReceiver$Position:[I
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/InstallShortcutReceiver$Position;->ordinal()I
@@ -314,13 +314,13 @@
 
     goto :goto_2
 
-    .line 233
+    .line 235
     :pswitch_0
     iget-object v2, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v12, v1, v2}, Lcom/miui/home/launcher/InstallShortcutReceiver;->access$200(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/InstallShortcutReceiver$Position;Lcom/miui/home/launcher/Launcher;)V
+    invoke-static {v12, v1, v2}, Lcom/miui/home/launcher/InstallShortcutReceiver;->access$300(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/InstallShortcutReceiver$Position;Lcom/miui/home/launcher/Launcher;)V
 
-    .line 234
+    .line 236
     iget-object v11, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     const-wide/16 v13, -0x1
@@ -345,7 +345,7 @@
 
     goto :goto_2
 
-    .line 228
+    .line 230
     :pswitch_1
     iget-object v11, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
@@ -363,7 +363,7 @@
 
     goto :goto_2
 
-    .line 225
+    .line 227
     :pswitch_2
     iget-object v1, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
@@ -378,7 +378,7 @@
     :goto_2
     move-object v1, v8
 
-    .line 246
+    .line 248
     :goto_3
     iget-object v2, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$request:Lcom/miui/launcher/common/PinItemRequestCompat;
 
@@ -388,12 +388,12 @@
 
     if-ne v1, v2, :cond_9
 
-    .line 247
+    .line 249
     iget-object v2, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$request:Lcom/miui/launcher/common/PinItemRequestCompat;
 
     invoke-virtual {v2}, Lcom/miui/launcher/common/PinItemRequestCompat;->accept()Z
 
-    .line 251
+    .line 253
     :cond_9
     :goto_4
     iget-object v2, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$context:Landroid/content/Context;
@@ -404,21 +404,28 @@
 
     const-string v5, "android.intent.extra.shortcut.INTENT"
 
-    .line 253
+    .line 255
     invoke-virtual {v4, v5}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v4
 
     check-cast v4, Landroid/content/Intent;
 
-    .line 252
+    .line 254
     invoke-static {v2, v3, v4, v1}, Lcom/miui/home/launcher/InstallShortcutBroadcastUtils;->sendBroadcastToSenderAppAsync(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Lcom/miui/home/launcher/InstallShortcutBroadcastUtils$Result;)V
 
     return-void
 
-    .line 173
+    .line 174
     :cond_a
     :goto_5
+    iget-object v1, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$request:Lcom/miui/launcher/common/PinItemRequestCompat;
+
+    iget-object v2, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$senderPackageName:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lcom/miui/home/launcher/InstallShortcutReceiver;->access$000(Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;)V
+
+    .line 175
     iget-object v1, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$context:Landroid/content/Context;
 
     iget-object v2, v0, Lcom/miui/home/launcher/InstallShortcutReceiver$1;->val$senderPackageName:Ljava/lang/String;
@@ -426,6 +433,8 @@
     invoke-static {v1, v2}, Lcom/miui/home/launcher/InstallShortcutBroadcastUtils;->sendFailedBroadcast(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

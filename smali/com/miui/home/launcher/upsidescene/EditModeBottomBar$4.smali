@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;)V
     .locals 0
 
-    .line 157
+    .line 156
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$4;->this$0:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 159
+    .line 158
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$4;->this$0:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
     invoke-static {p1}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->access$000(Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;)Lcom/miui/home/launcher/upsidescene/SceneScreen;
@@ -61,7 +61,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->setFunction(Lcom/miui/home/launcher/upsidescene/data/Function;)V
 
-    .line 160
+    .line 159
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$4;->this$0:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->refreshFreeButtonCheckbox()V

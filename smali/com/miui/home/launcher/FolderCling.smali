@@ -73,7 +73,7 @@
 
 .field private mRecommendButtonDescription:Ljava/lang/CharSequence;
 
-.field private mRecommendSlidingButton:Lmiui/widget/SlidingButton;
+.field private mRecommendSlidingButton:Lmiuix/slidingwidget/widget/SlidingButton;
 
 .field private mRect:Landroid/graphics/Rect;
 
@@ -190,7 +190,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0700ca
+    const v0, 0x7f0700d3
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -203,7 +203,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0700db
+    const v0, 0x7f0700e4
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -216,7 +216,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0700c3
+    const v0, 0x7f0700cc
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -306,11 +306,11 @@
     return-object p1
 .end method
 
-.method static synthetic access$300(Lcom/miui/home/launcher/FolderCling;)Lmiui/widget/SlidingButton;
+.method static synthetic access$300(Lcom/miui/home/launcher/FolderCling;)Lmiuix/slidingwidget/widget/SlidingButton;
     .locals 0
 
     .line 49
-    iget-object p0, p0, Lcom/miui/home/launcher/FolderCling;->mRecommendSlidingButton:Lmiui/widget/SlidingButton;
+    iget-object p0, p0, Lcom/miui/home/launcher/FolderCling;->mRecommendSlidingButton:Lmiuix/slidingwidget/widget/SlidingButton;
 
     return-object p0
 .end method
@@ -396,7 +396,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0700c2
+    const v0, 0x7f0700cb
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -462,7 +462,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0700d3
+    const v0, 0x7f0700dc
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -538,12 +538,12 @@
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f100058
+    const p1, 0x7f10005b
 
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f100074
+    const p1, 0x7f100077
 
     :goto_0
     const/4 v1, 0x1
@@ -563,7 +563,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$onFinishInflate$114(Lcom/miui/home/launcher/FolderCling;Landroid/widget/CompoundButton;Z)V
+.method public static synthetic lambda$onFinishInflate$0(Lcom/miui/home/launcher/FolderCling;Landroid/widget/CompoundButton;Z)V
     .locals 0
 
     .line 101
@@ -576,18 +576,18 @@
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/FolderInfo;->setRecommendAppsSwitchOn(Z)V
 
     .line 102
-    iget-object p1, p0, Lcom/miui/home/launcher/FolderCling;->mRecommendSlidingButton:Lmiui/widget/SlidingButton;
+    iget-object p1, p0, Lcom/miui/home/launcher/FolderCling;->mRecommendSlidingButton:Lmiuix/slidingwidget/widget/SlidingButton;
 
     invoke-direct {p0, p2}, Lcom/miui/home/launcher/FolderCling;->getRecommendDescription(Z)Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lmiui/widget/SlidingButton;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, p2}, Lmiuix/slidingwidget/widget/SlidingButton;->setContentDescription(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
-.method public static synthetic lambda$startFolderEnterExitEditModeAnimator$115(Lcom/miui/home/launcher/FolderCling;Landroid/animation/ValueAnimator;)V
+.method public static synthetic lambda$startFolderEnterExitEditModeAnimator$1(Lcom/miui/home/launcher/FolderCling;Landroid/animation/ValueAnimator;)V
     .locals 1
 
     .line 517
@@ -690,9 +690,9 @@
     invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     .line 516
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$FolderCling$FvY5ygNXrIHsVJeBYcMK7fW0XEc;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$FolderCling$OomvJ5cuH9lk8XJZko8ac-dVnNE;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$FolderCling$FvY5ygNXrIHsVJeBYcMK7fW0XEc;-><init>(Lcom/miui/home/launcher/FolderCling;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$FolderCling$OomvJ5cuH9lk8XJZko8ac-dVnNE;-><init>(Lcom/miui/home/launcher/FolderCling;)V
 
     invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -1644,7 +1644,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0700ca
+    const v0, 0x7f0700d3
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1657,7 +1657,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0700db
+    const v0, 0x7f0700e4
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1670,7 +1670,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0700c3
+    const v0, 0x7f0700cc
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1826,7 +1826,7 @@
     .line 96
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderCling;->setChildrenDrawingOrderEnabled(Z)V
 
-    const v0, 0x7f0a00c9
+    const v0, 0x7f0a00ed
 
     .line 97
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderCling;->findViewById(I)Landroid/view/View;
@@ -1837,7 +1837,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mFolder:Lcom/miui/home/launcher/Folder;
 
-    const v0, 0x7f0a0158
+    const v0, 0x7f0a0191
 
     .line 98
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderCling;->findViewById(I)Landroid/view/View;
@@ -1848,25 +1848,25 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mSmallIconsRecommendScreen:Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;
 
-    const v0, 0x7f0a01b1
+    const v0, 0x7f0a01fb
 
     .line 99
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderCling;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lmiui/widget/SlidingButton;
+    check-cast v0, Lmiuix/slidingwidget/widget/SlidingButton;
 
-    iput-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mRecommendSlidingButton:Lmiui/widget/SlidingButton;
+    iput-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mRecommendSlidingButton:Lmiuix/slidingwidget/widget/SlidingButton;
 
     .line 100
-    iget-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mRecommendSlidingButton:Lmiui/widget/SlidingButton;
+    iget-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mRecommendSlidingButton:Lmiuix/slidingwidget/widget/SlidingButton;
 
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$FolderCling$5_j32AcV4iuw3AeeBRYe6JoNB8U;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$FolderCling$JwRMpGcH2TPcR51-IdlBRYJEfR0;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/-$$Lambda$FolderCling$5_j32AcV4iuw3AeeBRYe6JoNB8U;-><init>(Lcom/miui/home/launcher/FolderCling;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/-$$Lambda$FolderCling$JwRMpGcH2TPcR51-IdlBRYJEfR0;-><init>(Lcom/miui/home/launcher/FolderCling;)V
 
-    invoke-virtual {v0, v1}, Lmiui/widget/SlidingButton;->setOnPerformCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual {v0, v1}, Lmiuix/slidingwidget/widget/SlidingButton;->setOnPerformCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 104
     new-instance v0, Landroid/graphics/Paint;
@@ -1950,9 +1950,11 @@
     :cond_0
     const/4 v2, 0x2
 
+    .line 490
     :goto_0
     invoke-direct {v1, v2}, Lcom/miui/home/launcher/common/messages/FolderStateChangedMessage;-><init>(I)V
 
+    .line 488
     invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
     .line 492
@@ -2295,9 +2297,9 @@
     .locals 1
 
     .line 204
-    iget-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mRecommendSlidingButton:Lmiui/widget/SlidingButton;
+    iget-object v0, p0, Lcom/miui/home/launcher/FolderCling;->mRecommendSlidingButton:Lmiuix/slidingwidget/widget/SlidingButton;
 
-    invoke-virtual {v0, p1}, Lmiui/widget/SlidingButton;->setChecked(Z)V
+    invoke-virtual {v0, p1}, Lmiuix/slidingwidget/widget/SlidingButton;->setChecked(Z)V
 
     return-void
 .end method

@@ -62,9 +62,9 @@
     iput-object v0, p0, Lcom/miui/home/launcher/animate/SpringAnimator;->mProperty:Landroidx/dynamicanimation/animation/FloatPropertyCompat;
 
     .line 88
-    new-instance v0, Lcom/miui/home/launcher/animate/-$$Lambda$SpringAnimator$8Wjt6c-mkLJ7Up9D8NoTTPKguGs;
+    new-instance v0, Lcom/miui/home/launcher/animate/-$$Lambda$SpringAnimator$cphN4RydtnCI9_dhO5ReT-en0Vg;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/animate/-$$Lambda$SpringAnimator$8Wjt6c-mkLJ7Up9D8NoTTPKguGs;-><init>(Lcom/miui/home/launcher/animate/SpringAnimator;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/animate/-$$Lambda$SpringAnimator$cphN4RydtnCI9_dhO5ReT-en0Vg;-><init>(Lcom/miui/home/launcher/animate/SpringAnimator;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/animate/SpringAnimator;->mStartDelayRunnable:Ljava/lang/Runnable;
 
@@ -94,9 +94,9 @@
     .line 50
     iget-object v0, p0, Lcom/miui/home/launcher/animate/SpringAnimator;->mSpringAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
 
-    new-instance v1, Lcom/miui/home/launcher/animate/-$$Lambda$SpringAnimator$0jcAkNd0rwIk6b568LbUw6uqGh4;
+    new-instance v1, Lcom/miui/home/launcher/animate/-$$Lambda$SpringAnimator$Me0QrGfWSbyZbzT2imUtG-yPMLo;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/animate/-$$Lambda$SpringAnimator$0jcAkNd0rwIk6b568LbUw6uqGh4;-><init>(Lcom/miui/home/launcher/animate/SpringAnimator;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/animate/-$$Lambda$SpringAnimator$Me0QrGfWSbyZbzT2imUtG-yPMLo;-><init>(Lcom/miui/home/launcher/animate/SpringAnimator;)V
 
     invoke-virtual {v0, v1}, Landroidx/dynamicanimation/animation/SpringAnimation;->addEndListener(Landroidx/dynamicanimation/animation/DynamicAnimation$OnAnimationEndListener;)Landroidx/dynamicanimation/animation/DynamicAnimation;
 
@@ -162,7 +162,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$new$98(Lcom/miui/home/launcher/animate/SpringAnimator;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
+.method public static synthetic lambda$new$0(Lcom/miui/home/launcher/animate/SpringAnimator;Landroidx/dynamicanimation/animation/DynamicAnimation;ZFF)V
     .locals 0
 
     .line 51
@@ -202,7 +202,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$new$99(Lcom/miui/home/launcher/animate/SpringAnimator;)V
+.method public static synthetic lambda$new$1(Lcom/miui/home/launcher/animate/SpringAnimator;)V
     .locals 0
 
     .line 88

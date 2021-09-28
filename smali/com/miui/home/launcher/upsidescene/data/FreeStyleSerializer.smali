@@ -30,7 +30,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 326
+    .line 327
     new-instance v0, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer$1;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer$1;-><init>()V
@@ -43,10 +43,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 91
+    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 92
+    .line 93
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -72,16 +72,16 @@
     return p0
 .end method
 
-.method public static decodeBitmapFromFile(Ljava/util/HashMap;FLmiui/util/FileAccessable;)Landroid/graphics/Bitmap;
+.method public static decodeBitmapFromFile(Ljava/util/HashMap;FLcom/miui/home/library/utils/FileAccessable;)Landroid/graphics/Bitmap;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/HashMap<",
-            "Lmiui/util/FileAccessable;",
+            "Lcom/miui/home/library/utils/FileAccessable;",
             "Landroid/graphics/Bitmap;",
             ">;F",
-            "Lmiui/util/FileAccessable;",
+            "Lcom/miui/home/library/utils/FileAccessable;",
             ")",
             "Landroid/graphics/Bitmap;"
         }
@@ -95,14 +95,14 @@
 
     if-eqz p0, :cond_0
 
-    .line 541
+    .line 542
     invoke-virtual {p0, p2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 542
+    .line 543
     invoke-virtual {p0, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -111,43 +111,43 @@
 
     return-object p0
 
-    .line 544
-    :cond_0
-    new-instance v0, Lmiui/util/InputStreamLoader;
-
-    invoke-direct {v0, p2}, Lmiui/util/InputStreamLoader;-><init>(Lmiui/util/FileAccessable;)V
-
     .line 545
+    :cond_0
+    new-instance v0, Lcom/miui/home/library/utils/InputStreamLoader;
+
+    invoke-direct {v0, p2}, Lcom/miui/home/library/utils/InputStreamLoader;-><init>(Lcom/miui/home/library/utils/FileAccessable;)V
+
+    .line 546
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
     const/4 v2, 0x1
 
-    .line 546
+    .line 547
     iput-boolean v2, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 547
-    invoke-interface {p2}, Lmiui/util/FileAccessable;->getInputStream()Ljava/io/InputStream;
+    .line 548
+    invoke-interface {p2}, Lcom/miui/home/library/utils/FileAccessable;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v3
 
     const/4 v4, 0x0
 
-    .line 548
-    invoke-static {v3, v4, v1}, Lmiui/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
     .line 549
-    invoke-static {v3}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
+    invoke-static {v3, v4, v1}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     .line 550
+    invoke-static {v3}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
+
+    .line 551
     iget v3, v1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     invoke-static {v3, p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->calcSize(IF)I
 
     move-result v3
 
-    .line 551
+    .line 552
     iget v1, v1, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
     invoke-static {v1, p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->calcSize(IF)I
@@ -156,7 +156,7 @@
 
     const/4 v1, 0x0
 
-    .line 553
+    .line 554
     invoke-static {}, Lcom/miui/home/launcher/SpecificDeviceConfig;->isBigScreenLowMemory()Z
 
     move-result v4
@@ -167,7 +167,7 @@
 
     mul-int v4, v3, p1
 
-    .line 554
+    .line 555
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
 
     move-result v6
@@ -196,15 +196,15 @@
 
     move v1, v2
 
-    .line 559
+    .line 560
     :cond_1
-    invoke-static {v0, v3, p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->getBitmap(Lmiui/util/InputStreamLoader;II)Landroid/graphics/Bitmap;
+    invoke-static {v0, v3, p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->getBitmap(Lcom/miui/home/library/utils/InputStreamLoader;II)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     if-eqz v1, :cond_2
 
-    .line 561
+    .line 562
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getDensity()I
 
     move-result v0
@@ -220,14 +220,14 @@
     :cond_2
     if-eqz p0, :cond_3
 
-    .line 563
+    .line 564
     invoke-virtual {p0, p2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_3
     return-object p1
 .end method
 
-.method private static getBitmap(Lmiui/util/InputStreamLoader;II)Landroid/graphics/Bitmap;
+.method private static getBitmap(Lcom/miui/home/library/utils/InputStreamLoader;II)Landroid/graphics/Bitmap;
     .locals 9
 
     mul-int v0, p1, p2
@@ -239,7 +239,7 @@
     :cond_0
     const/4 v0, -0x1
 
-    .line 572
+    .line 573
     :cond_1
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
@@ -247,40 +247,40 @@
 
     const/4 v2, 0x1
 
-    .line 573
+    .line 574
     iput v2, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
     const/4 v3, 0x0
 
-    .line 574
+    .line 575
     iput-boolean v3, v1, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
     const/4 v3, 0x0
 
     if-lez v0, :cond_2
 
-    .line 576
+    .line 577
     new-instance v4, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v4}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 577
+    .line 578
     iput-boolean v2, v4, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 579
+    .line 580
     :try_start_0
-    invoke-virtual {p0}, Lmiui/util/InputStreamLoader;->get()Ljava/io/InputStream;
+    invoke-virtual {p0}, Lcom/miui/home/library/utils/InputStreamLoader;->get()Ljava/io/InputStream;
 
     move-result-object v2
 
-    invoke-static {v2, v3, v4}, Lmiui/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-static {v2, v3, v4}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 581
-    invoke-virtual {p0}, Lmiui/util/InputStreamLoader;->close()V
+    .line 582
+    invoke-virtual {p0}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
-    .line 583
+    .line 584
     iget v2, v4, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     int-to-double v5, v2
@@ -308,31 +308,32 @@
     :catchall_0
     move-exception p1
 
-    .line 581
-    invoke-virtual {p0}, Lmiui/util/InputStreamLoader;->close()V
+    .line 582
+    invoke-virtual {p0}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
+    .line 583
     throw p1
 
-    .line 587
+    .line 588
     :cond_2
     :goto_0
     :try_start_1
-    invoke-virtual {p0}, Lmiui/util/InputStreamLoader;->get()Ljava/io/InputStream;
+    invoke-virtual {p0}, Lcom/miui/home/library/utils/InputStreamLoader;->get()Ljava/io/InputStream;
 
     move-result-object v2
 
-    invoke-static {v2, v3, v1}, Lmiui/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-static {v2, v3, v1}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 589
-    invoke-virtual {p0}, Lmiui/util/InputStreamLoader;->close()V
+    .line 590
+    invoke-virtual {p0}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
     if-lez v0, :cond_5
 
-    .line 592
+    .line 593
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result p0
@@ -345,7 +346,7 @@
 
     if-eq p0, p2, :cond_5
 
-    .line 593
+    .line 594
     :cond_3
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -353,7 +354,7 @@
 
     if-ge p0, p2, :cond_4
 
-    .line 594
+    .line 595
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result p0
@@ -364,7 +365,7 @@
 
     div-float/2addr p0, p1
 
-    .line 595
+    .line 596
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getDensity()I
 
     move-result p1
@@ -379,13 +380,13 @@
 
     goto :goto_1
 
-    .line 598
+    .line 599
     :cond_4
-    invoke-static {v1, p1, p2}, Lmiui/graphics/BitmapFactory;->scaleBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
+    invoke-static {v1, p1, p2}, Lcom/miui/home/library/utils/Graphics;->scaleBitmap(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
-    .line 599
+    .line 600
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
     goto :goto_2
@@ -400,23 +401,24 @@
     :catchall_1
     move-exception p1
 
-    .line 589
-    invoke-virtual {p0}, Lmiui/util/InputStreamLoader;->close()V
+    .line 590
+    invoke-virtual {p0}, Lcom/miui/home/library/utils/InputStreamLoader;->close()V
 
+    .line 591
     throw p1
 .end method
 
 .method private getEditPersistSettingsPath(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
-    .line 497
+    .line 498
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->getPersistDirectory(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 499
+    .line 500
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->getPersistDirectory(Landroid/content/Context;)Ljava/lang/String;
@@ -425,17 +427,17 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 500
+    .line 501
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 501
+    .line 502
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 503
+    .line 504
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -467,14 +469,14 @@
     return-object p1
 .end method
 
-.method private static getFile(Ljava/lang/String;)Lmiui/util/FileAccessable;
+.method private static getFile(Ljava/lang/String;)Lcom/miui/home/library/utils/FileAccessable;
     .locals 1
 
-    .line 151
+    .line 152
     :try_start_0
     sget-object v0, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->DATA_PATH:Ljava/lang/String;
 
-    invoke-static {v0, p0}, Lmiui/util/FileAccessable$Factory;->create(Ljava/lang/String;Ljava/lang/String;)Lmiui/util/FileAccessable;
+    invoke-static {v0, p0}, Lcom/miui/home/library/utils/FileAccessable$Factory;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/miui/home/library/utils/FileAccessable;
 
     move-result-object p0
     :try_end_0
@@ -485,7 +487,7 @@
     :catch_0
     move-exception p0
 
-    .line 153
+    .line 154
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -496,14 +498,14 @@
 .method private getNewPersistSettingsPath(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
-    .line 509
+    .line 510
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->getPersistDirectory(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 511
+    .line 512
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->getPersistDirectory(Landroid/content/Context;)Ljava/lang/String;
@@ -512,17 +514,17 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 512
+    .line 513
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 513
+    .line 514
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 515
+    .line 516
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -565,21 +567,21 @@
         }
     .end annotation
 
-    .line 244
+    .line 245
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const-string v1, "skins/"
 
-    .line 245
-    invoke-static {v1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->getFile(Ljava/lang/String;)Lmiui/util/FileAccessable;
+    .line 246
+    invoke-static {v1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->getFile(Ljava/lang/String;)Lcom/miui/home/library/utils/FileAccessable;
 
     move-result-object v1
 
-    .line 248
+    .line 249
     :try_start_0
-    invoke-interface {v1}, Lmiui/util/FileAccessable;->list()Ljava/util/List;
+    invoke-interface {v1}, Lcom/miui/home/library/utils/FileAccessable;->list()Ljava/util/List;
 
     move-result-object v1
     :try_end_0
@@ -590,7 +592,7 @@
     :catch_0
     move-exception v1
 
-    .line 250
+    .line 251
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 v1, 0x0
@@ -598,7 +600,7 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 254
+    .line 255
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -614,9 +616,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lmiui/util/FileAccessable;
+    check-cast v2, Lcom/miui/home/library/utils/FileAccessable;
 
-    .line 255
+    .line 256
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -625,7 +627,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v2}, Lmiui/util/FileAccessable;->getName()Ljava/lang/String;
+    invoke-interface {v2}, Lcom/miui/home/library/utils/FileAccessable;->getName()Ljava/lang/String;
 
     move-result-object v4
 
@@ -635,10 +637,10 @@
 
     move-result-object v8
 
-    .line 256
+    .line 257
     new-instance v9, Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;
 
-    invoke-interface {v2}, Lmiui/util/FileAccessable;->getName()Ljava/lang/String;
+    invoke-interface {v2}, Lcom/miui/home/library/utils/FileAccessable;->getName()Ljava/lang/String;
 
     move-result-object v5
 
@@ -650,24 +652,24 @@
 
     move v6, p1
 
-    invoke-direct/range {v3 .. v8}, Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;-><init>(Lmiui/util/FileAccessable;Ljava/lang/String;FLandroid/content/Context;Ljava/lang/String;)V
+    invoke-direct/range {v3 .. v8}, Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;-><init>(Lcom/miui/home/library/utils/FileAccessable;Ljava/lang/String;FLandroid/content/Context;Ljava/lang/String;)V
 
-    .line 257
+    .line 258
     invoke-virtual {v9}, Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;->isMamlGadget()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 258
-    invoke-direct {p0, v2}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->loadMtzGadgetInfo(Lmiui/util/FileAccessable;)Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;
+    .line 259
+    invoke-direct {p0, v2}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->loadMtzGadgetInfo(Lcom/miui/home/library/utils/FileAccessable;)Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;
 
     move-result-object v2
 
-    .line 259
+    .line 260
     invoke-virtual {v9, v2}, Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;->setMtzGadgetInfo(Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;)V
 
-    .line 261
+    .line 262
     :cond_0
     invoke-interface {v0, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -688,26 +690,26 @@
         }
     .end annotation
 
-    .line 268
+    .line 269
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const-string v1, "tools/"
 
-    .line 269
-    invoke-static {v1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->getFile(Ljava/lang/String;)Lmiui/util/FileAccessable;
+    .line 270
+    invoke-static {v1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->getFile(Ljava/lang/String;)Lcom/miui/home/library/utils/FileAccessable;
 
     move-result-object v1
 
-    .line 270
-    invoke-interface {v1}, Lmiui/util/FileAccessable;->list()Ljava/util/List;
+    .line 271
+    invoke-interface {v1}, Lcom/miui/home/library/utils/FileAccessable;->list()Ljava/util/List;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 272
+    .line 273
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -724,16 +726,16 @@
 
     move-result-object v2
 
-    check-cast v2, Lmiui/util/FileAccessable;
+    check-cast v2, Lcom/miui/home/library/utils/FileAccessable;
 
-    .line 273
-    invoke-direct {p0, v2}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->loadMtzGadgetInfo(Lmiui/util/FileAccessable;)Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;
+    .line 274
+    invoke-direct {p0, v2}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->loadMtzGadgetInfo(Lcom/miui/home/library/utils/FileAccessable;)Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 274
+    .line 275
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -753,7 +755,7 @@
 
     const-string v0, "scene"
 
-    .line 462
+    .line 463
     invoke-static {p2}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->moveToNextStartTag(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
@@ -764,7 +766,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 465
+    .line 466
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -775,12 +777,12 @@
 
     move-result-object v0
 
-    .line 466
+    .line 467
     iget v1, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
     iput v1, p1, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->mHeight:I
 
-    .line 467
+    .line 468
     iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iput v0, p1, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->mWidth:I
@@ -789,7 +791,7 @@
 
     const-string v1, "width"
 
-    .line 468
+    .line 469
     invoke-interface {p2, v0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -800,7 +802,7 @@
 
     iput p2, p1, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->mRawWidth:I
 
-    .line 469
+    .line 470
     iget p2, p1, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->mWidth:I
 
     int-to-float p2, p2
@@ -815,7 +817,7 @@
 
     return-void
 
-    .line 463
+    .line 464
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -841,7 +843,7 @@
 
     return-object v0
 
-    .line 377
+    .line 378
     :cond_0
     :try_start_0
     invoke-static {}, Lorg/xmlpull/v1/XmlPullParserFactory;->newInstance()Lorg/xmlpull/v1/XmlPullParserFactory;
@@ -852,17 +854,17 @@
 
     move-result-object v1
 
-    .line 378
+    .line 379
     invoke-interface {v1, p1, v0}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 379
+    .line 380
     invoke-direct {p0, v1, p2}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->loadFreeStyle(Lorg/xmlpull/v1/XmlPullParser;Z)Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
 
     move-result-object p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 381
+    .line 382
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
     return-object p2
@@ -872,6 +874,7 @@
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
+    .line 383
     throw p2
 .end method
 
@@ -884,19 +887,19 @@
         }
     .end annotation
 
-    .line 387
+    .line 388
     new-instance v0, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;-><init>()V
 
-    .line 389
+    .line 390
     invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->loadCurrentSceneDescription(Lcom/miui/home/launcher/upsidescene/data/FreeStyle;Lorg/xmlpull/v1/XmlPullParser;)V
 
     :cond_0
     :goto_0
     const-string v1, "scene"
 
-    .line 392
+    .line 393
     invoke-static {p1, v1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->moveToNextStartTagOrEnd(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -905,21 +908,21 @@
 
     const-string v2, "screen"
 
-    .line 393
+    .line 394
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 394
+    .line 395
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->loadScreen(Lorg/xmlpull/v1/XmlPullParser;ZLcom/miui/home/launcher/upsidescene/data/FreeStyle;)Lcom/miui/home/launcher/upsidescene/data/Screen;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 395
+    .line 396
     iget-object v2, v0, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->mScreens:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -929,7 +932,7 @@
     :cond_1
     const-string v2, "FreeStyleSerializer"
 
-    .line 397
+    .line 398
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -957,13 +960,13 @@
 
     const-string v0, "description.xml"
 
-    .line 158
-    invoke-static {v0}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->getFile(Ljava/lang/String;)Lmiui/util/FileAccessable;
+    .line 159
+    invoke-static {v0}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->getFile(Ljava/lang/String;)Lcom/miui/home/library/utils/FileAccessable;
 
     move-result-object v0
 
-    .line 159
-    invoke-interface {v0}, Lmiui/util/FileAccessable;->exists()Z
+    .line 160
+    invoke-interface {v0}, Lcom/miui/home/library/utils/FileAccessable;->exists()Z
 
     move-result v1
 
@@ -973,7 +976,7 @@
 
     return-object v2
 
-    .line 165
+    .line 166
     :cond_0
     :try_start_0
     invoke-static {}, Lorg/xmlpull/v1/XmlPullParserFactory;->newInstance()Lorg/xmlpull/v1/XmlPullParserFactory;
@@ -984,21 +987,21 @@
 
     move-result-object v1
 
-    .line 166
-    invoke-interface {v0}, Lmiui/util/FileAccessable;->getInputStream()Ljava/io/InputStream;
+    .line 167
+    invoke-interface {v0}, Lcom/miui/home/library/utils/FileAccessable;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 167
+    .line 168
     :try_start_1
     invoke-interface {v1, v0, v2}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
     const-string v3, "scene"
 
-    .line 168
+    .line 169
     invoke-static {v1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->moveToNextStartTag(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v4
@@ -1011,7 +1014,7 @@
 
     const-string v3, "name"
 
-    .line 171
+    .line 172
     invoke-interface {v1, v2, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -1019,12 +1022,12 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 175
+    .line 176
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
     return-object v1
 
-    .line 169
+    .line 170
     :cond_1
     :try_start_2
     new-instance v1, Ljava/lang/RuntimeException;
@@ -1055,14 +1058,14 @@
 
     move-object v0, v2
 
-    .line 173
+    .line 174
     :goto_0
     :try_start_3
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 175
+    .line 176
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
     return-object v2
@@ -1073,10 +1076,11 @@
     :goto_1
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
+    .line 177
     throw v1
 .end method
 
-.method private loadMtzGadgetInfo(Lmiui/util/FileAccessable;)Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;
+.method private loadMtzGadgetInfo(Lcom/miui/home/library/utils/FileAccessable;)Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;
     .locals 7
 
     const/4 v0, 0x0
@@ -1084,39 +1088,39 @@
     :try_start_0
     const-string v1, ""
 
-    .line 283
-    invoke-interface {p1}, Lmiui/util/FileAccessable;->isFile()Z
+    .line 284
+    invoke-interface {p1}, Lcom/miui/home/library/utils/FileAccessable;->isFile()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 284
-    instance-of v2, p1, Lmiui/util/FileAccessable$DeskFile;
+    .line 285
+    instance-of v2, p1, Lcom/miui/home/library/utils/FileAccessable$DeskFile;
 
     if-eqz v2, :cond_0
 
-    .line 288
+    .line 289
     new-instance v2, Ljava/util/zip/ZipFile;
 
-    check-cast p1, Lmiui/util/FileAccessable$DeskFile;
+    check-cast p1, Lcom/miui/home/library/utils/FileAccessable$DeskFile;
 
-    invoke-virtual {p1}, Lmiui/util/FileAccessable$DeskFile;->getFile()Ljava/io/File;
+    invoke-virtual {p1}, Lcom/miui/home/library/utils/FileAccessable$DeskFile;->getFile()Ljava/io/File;
 
     move-result-object p1
 
     invoke-direct {v2, p1}, Ljava/util/zip/ZipFile;-><init>(Ljava/io/File;)V
 
-    .line 289
-    new-instance p1, Lmiui/util/FileAccessable$ZipInnerFile;
+    .line 290
+    new-instance p1, Lcom/miui/home/library/utils/FileAccessable$ZipInnerFile;
 
     const-string v3, "/"
 
-    invoke-direct {p1, v2, v3}, Lmiui/util/FileAccessable$ZipInnerFile;-><init>(Ljava/util/zip/ZipFile;Ljava/lang/String;)V
+    invoke-direct {p1, v2, v3}, Lcom/miui/home/library/utils/FileAccessable$ZipInnerFile;-><init>(Ljava/util/zip/ZipFile;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 285
+    .line 286
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -1130,13 +1134,13 @@
     :goto_0
     const-string v2, "preview/preview_cover_0.png"
 
-    .line 292
-    invoke-interface {p1, v2}, Lmiui/util/FileAccessable;->createBySubpath(Ljava/lang/String;)Lmiui/util/FileAccessable;
+    .line 293
+    invoke-interface {p1, v2}, Lcom/miui/home/library/utils/FileAccessable;->createBySubpath(Ljava/lang/String;)Lcom/miui/home/library/utils/FileAccessable;
 
     move-result-object v2
 
-    .line 293
-    invoke-interface {v2}, Lmiui/util/FileAccessable;->exists()Z
+    .line 294
+    invoke-interface {v2}, Lcom/miui/home/library/utils/FileAccessable;->exists()Z
 
     move-result v3
 
@@ -1144,13 +1148,13 @@
 
     const-string v2, "preview/preview_cover_0.jpg"
 
-    .line 294
-    invoke-interface {p1, v2}, Lmiui/util/FileAccessable;->createBySubpath(Ljava/lang/String;)Lmiui/util/FileAccessable;
+    .line 295
+    invoke-interface {p1, v2}, Lcom/miui/home/library/utils/FileAccessable;->createBySubpath(Ljava/lang/String;)Lcom/miui/home/library/utils/FileAccessable;
 
     move-result-object v2
 
-    .line 295
-    invoke-interface {v2}, Lmiui/util/FileAccessable;->exists()Z
+    .line 296
+    invoke-interface {v2}, Lcom/miui/home/library/utils/FileAccessable;->exists()Z
 
     move-result v3
 
@@ -1158,20 +1162,20 @@
 
     const-string v2, "preview/0.png"
 
-    .line 296
-    invoke-interface {p1, v2}, Lmiui/util/FileAccessable;->createBySubpath(Ljava/lang/String;)Lmiui/util/FileAccessable;
+    .line 297
+    invoke-interface {p1, v2}, Lcom/miui/home/library/utils/FileAccessable;->createBySubpath(Ljava/lang/String;)Lcom/miui/home/library/utils/FileAccessable;
 
     move-result-object v2
 
     :cond_2
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 299
-    invoke-static {v0, v3, v2}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->decodeBitmapFromFile(Ljava/util/HashMap;FLmiui/util/FileAccessable;)Landroid/graphics/Bitmap;
+    .line 300
+    invoke-static {v0, v3, v2}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->decodeBitmapFromFile(Ljava/util/HashMap;FLcom/miui/home/library/utils/FileAccessable;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 300
+    .line 301
     invoke-static {}, Lorg/xmlpull/v1/XmlPullParserFactory;->newInstance()Lorg/xmlpull/v1/XmlPullParserFactory;
 
     move-result-object v3
@@ -1182,22 +1186,22 @@
 
     const-string v4, "description.xml"
 
-    .line 301
-    invoke-interface {p1, v4}, Lmiui/util/FileAccessable;->createBySubpath(Ljava/lang/String;)Lmiui/util/FileAccessable;
+    .line 302
+    invoke-interface {p1, v4}, Lcom/miui/home/library/utils/FileAccessable;->createBySubpath(Ljava/lang/String;)Lcom/miui/home/library/utils/FileAccessable;
 
     move-result-object v4
 
-    invoke-interface {v4}, Lmiui/util/FileAccessable;->getInputStream()Ljava/io/InputStream;
+    invoke-interface {v4}, Lcom/miui/home/library/utils/FileAccessable;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v4
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 303
+    .line 304
     :try_start_1
     invoke-interface {v3, v4, v0}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 305
+    .line 306
     :cond_3
     invoke-static {v3}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->moveToNextStartTag(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
@@ -1207,14 +1211,14 @@
 
     const-string v6, "title"
 
-    .line 306
+    .line 307
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-eqz v5, :cond_3
 
-    .line 307
+    .line 308
     invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v1
@@ -1225,17 +1229,17 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 312
+    .line 313
     :cond_4
     :try_start_2
     invoke-static {v4}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
-    .line 315
+    .line 316
     new-instance v3, Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;
 
     invoke-direct {v3}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;-><init>()V
 
-    .line 316
+    .line 317
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1244,7 +1248,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1}, Lmiui/util/FileAccessable;->getName()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/miui/home/library/utils/FileAccessable;->getName()Ljava/lang/String;
 
     move-result-object p1
 
@@ -1256,10 +1260,10 @@
 
     iput-object p1, v3, Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;->path:Ljava/lang/String;
 
-    .line 317
+    .line 318
     iput-object v1, v3, Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;->title:Ljava/lang/String;
 
-    .line 318
+    .line 319
     iput-object v2, v3, Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;->preview:Landroid/graphics/Bitmap;
 
     return-object v3
@@ -1267,9 +1271,10 @@
     :catchall_0
     move-exception p1
 
-    .line 312
+    .line 313
     invoke-static {v4}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
+    .line 314
     throw p1
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -1277,7 +1282,7 @@
     :catch_0
     move-exception p1
 
-    .line 321
+    .line 322
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     return-object v0
@@ -1292,7 +1297,7 @@
         }
     .end annotation
 
-    .line 369
+    .line 370
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->mContext:Landroid/content/Context;
@@ -1303,7 +1308,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 370
+    .line 371
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -1314,7 +1319,7 @@
 
     return-object v0
 
-    .line 371
+    .line 372
     :cond_0
     new-instance v1, Ljava/io/FileInputStream;
 
@@ -1338,7 +1343,7 @@
         }
     .end annotation
 
-    .line 355
+    .line 356
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->mContext:Landroid/content/Context;
@@ -1349,7 +1354,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 356
+    .line 357
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -1358,17 +1363,17 @@
 
     if-nez v1, :cond_1
 
-    .line 357
+    .line 358
     sget-object v1, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->DATA_PATH:Ljava/lang/String;
 
     const-string v3, "description.xml"
 
-    invoke-static {v1, v3}, Lmiui/util/FileAccessable$Factory;->create(Ljava/lang/String;Ljava/lang/String;)Lmiui/util/FileAccessable;
+    invoke-static {v1, v3}, Lcom/miui/home/library/utils/FileAccessable$Factory;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/miui/home/library/utils/FileAccessable;
 
     move-result-object v1
 
-    .line 358
-    invoke-interface {v1}, Lmiui/util/FileAccessable;->exists()Z
+    .line 359
+    invoke-interface {v1}, Lcom/miui/home/library/utils/FileAccessable;->exists()Z
 
     move-result v3
 
@@ -1376,7 +1381,7 @@
 
     const-string v1, "FreeStyleSerializer"
 
-    .line 359
+    .line 360
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1401,9 +1406,9 @@
 
     return-object v0
 
-    .line 362
+    .line 363
     :cond_0
-    invoke-interface {v1}, Lmiui/util/FileAccessable;->getInputStream()Ljava/io/InputStream;
+    invoke-interface {v1}, Lcom/miui/home/library/utils/FileAccessable;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v0
 
@@ -1413,7 +1418,7 @@
 
     return-object v0
 
-    .line 364
+    .line 365
     :cond_1
     new-instance v1, Ljava/io/FileInputStream;
 
@@ -1435,7 +1440,7 @@
         }
     .end annotation
 
-    .line 405
+    .line 406
     new-instance v0, Lcom/miui/home/launcher/upsidescene/data/Screen;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/upsidescene/data/Screen;-><init>()V
@@ -1444,14 +1449,14 @@
 
     const/4 v2, 0x0
 
-    .line 406
+    .line 407
     invoke-interface {p1, v2, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v3, "drift"
 
-    .line 407
+    .line 408
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -1460,7 +1465,7 @@
 
     const/4 v1, 0x2
 
-    .line 408
+    .line 409
     iput v1, v0, Lcom/miui/home/launcher/upsidescene/data/Screen;->mType:I
 
     goto :goto_0
@@ -1468,7 +1473,7 @@
     :cond_0
     const-string v3, "background"
 
-    .line 409
+    .line 410
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -1477,7 +1482,7 @@
 
     const/4 v1, 0x1
 
-    .line 410
+    .line 411
     iput v1, v0, Lcom/miui/home/launcher/upsidescene/data/Screen;->mType:I
 
     goto :goto_0
@@ -1485,7 +1490,7 @@
     :cond_1
     const-string v3, "foreground"
 
-    .line 411
+    .line 412
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -1494,7 +1499,7 @@
 
     const/4 v1, 0x3
 
-    .line 412
+    .line 413
     iput v1, v0, Lcom/miui/home/launcher/upsidescene/data/Screen;->mType:I
 
     goto :goto_0
@@ -1502,7 +1507,7 @@
     :cond_2
     const-string v3, "dock"
 
-    .line 413
+    .line 414
     invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -1511,13 +1516,13 @@
 
     const/4 v1, 0x4
 
-    .line 414
+    .line 415
     iput v1, v0, Lcom/miui/home/launcher/upsidescene/data/Screen;->mType:I
 
     :goto_0
     const-string v1, "width"
 
-    .line 420
+    .line 421
     invoke-interface {p1, v2, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -1528,7 +1533,7 @@
 
     iput v1, v0, Lcom/miui/home/launcher/upsidescene/data/Screen;->mRawWidth:I
 
-    .line 421
+    .line 422
     iget v1, v0, Lcom/miui/home/launcher/upsidescene/data/Screen;->mRawWidth:I
 
     invoke-virtual {p3}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->getSceneScale()F
@@ -1543,7 +1548,7 @@
 
     const-string v1, "home"
 
-    .line 422
+    .line 423
     invoke-interface {p1, v2, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -1558,7 +1563,7 @@
     :goto_1
     const-string v1, "screen"
 
-    .line 425
+    .line 426
     invoke-static {p1, v1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->moveToNextStartTagOrEnd(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -1567,21 +1572,21 @@
 
     const-string v2, "sprite"
 
-    .line 426
+    .line 427
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    .line 427
+    .line 428
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->loadSprite(Lorg/xmlpull/v1/XmlPullParser;ZLcom/miui/home/launcher/upsidescene/data/FreeStyle;)Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     move-result-object v1
 
     if-eqz v1, :cond_3
 
-    .line 428
+    .line 429
     iget-object v2, v0, Lcom/miui/home/launcher/upsidescene/data/Screen;->mSprites:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -1591,7 +1596,7 @@
     :cond_4
     const-string v2, "FreeStyleSerializer"
 
-    .line 430
+    .line 431
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1616,7 +1621,7 @@
     :cond_6
     const-string p1, "FreeStyleSerializer"
 
-    .line 416
+    .line 417
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1644,19 +1649,19 @@
         }
     .end annotation
 
-    .line 439
+    .line 440
     new-instance v0, Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     invoke-direct {v0, p3}, Lcom/miui/home/launcher/upsidescene/data/Sprite;-><init>(Lcom/miui/home/launcher/upsidescene/data/FreeStyle;)V
 
-    .line 440
+    .line 441
     iput-boolean p2, v0, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mIsUserCreated:Z
 
     const-string p2, "left"
 
     const/4 v1, 0x0
 
-    .line 441
+    .line 442
     invoke-interface {p1, v1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -1667,7 +1672,7 @@
 
     iput p2, v0, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mRawLeft:I
 
-    .line 442
+    .line 443
     iget p2, v0, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mRawLeft:I
 
     invoke-virtual {p3}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->getSceneScale()F
@@ -1682,7 +1687,7 @@
 
     const-string p2, "top"
 
-    .line 443
+    .line 444
     invoke-interface {p1, v1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -1693,7 +1698,7 @@
 
     iput p2, v0, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mRawTop:I
 
-    .line 444
+    .line 445
     iget p2, v0, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mRawTop:I
 
     invoke-virtual {p3}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->getSceneScale()F
@@ -1708,7 +1713,7 @@
 
     const-string p2, "rotation"
 
-    .line 445
+    .line 446
     invoke-interface {p1, v1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -1723,7 +1728,7 @@
 
     const-string p2, "scale_x"
 
-    .line 446
+    .line 447
     invoke-interface {p1, v1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -1736,7 +1741,7 @@
 
     const-string p2, "scale_y"
 
-    .line 447
+    .line 448
     invoke-interface {p1, v1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -1749,7 +1754,7 @@
 
     const-string p2, "width"
 
-    .line 448
+    .line 449
     invoke-interface {p1, v1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -1762,7 +1767,7 @@
 
     const-string p2, "height"
 
-    .line 449
+    .line 450
     invoke-interface {p1, v1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -1773,7 +1778,7 @@
 
     iput p2, v0, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mRawHeight:I
 
-    .line 450
+    .line 451
     iget p2, v0, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mRawWidth:I
 
     if-lez p2, :cond_0
@@ -1782,7 +1787,7 @@
 
     if-lez p2, :cond_0
 
-    .line 451
+    .line 452
     iget p2, v0, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mRawWidth:I
 
     invoke-virtual {p3}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->getSceneScale()F
@@ -1795,7 +1800,7 @@
 
     iput p2, v0, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mWidth:I
 
-    .line 452
+    .line 453
     iget p2, v0, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mRawHeight:I
 
     invoke-virtual {p3}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->getSceneScale()F
@@ -1811,7 +1816,7 @@
     :cond_0
     const-string p2, "appearance"
 
-    .line 454
+    .line 455
     invoke-interface {p1, v1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -1824,7 +1829,7 @@
 
     const-string p2, "function"
 
-    .line 455
+    .line 456
     invoke-interface {p1, v1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -1837,7 +1842,7 @@
 
     const-string p2, "index"
 
-    .line 456
+    .line 457
     invoke-interface {p1, v1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -1858,7 +1863,7 @@
 
     return-void
 
-    .line 336
+    .line 337
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->getDriftScreen()Lcom/miui/home/launcher/upsidescene/data/Screen;
 
@@ -1870,7 +1875,7 @@
 
     invoke-direct {p0, v0, v1, p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->mergeAdditionSpritesInScreen(Lcom/miui/home/launcher/upsidescene/data/Screen;Lcom/miui/home/launcher/upsidescene/data/Screen;Lcom/miui/home/launcher/upsidescene/data/FreeStyle;)V
 
-    .line 337
+    .line 338
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->getDockScreen()Lcom/miui/home/launcher/upsidescene/data/Screen;
 
     move-result-object v0
@@ -1893,7 +1898,7 @@
 
     goto :goto_2
 
-    .line 344
+    .line 345
     :cond_0
     iget-object p2, p2, Lcom/miui/home/launcher/upsidescene/data/Screen;->mSprites:Ljava/util/List;
 
@@ -1914,7 +1919,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
-    .line 345
+    .line 346
     iget-object v1, p1, Lcom/miui/home/launcher/upsidescene/data/Screen;->mSprites:Ljava/util/List;
 
     sget-object v2, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->sSpriteIndexComparator:Ljava/util/Comparator;
@@ -1932,7 +1937,7 @@
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
-    .line 348
+    .line 349
     :goto_1
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getAppearance()Lcom/miui/home/launcher/upsidescene/data/Appearance;
 
@@ -1940,10 +1945,10 @@
 
     invoke-virtual {v2, p3}, Lcom/miui/home/launcher/upsidescene/data/Appearance;->setFreeStyle(Lcom/miui/home/launcher/upsidescene/data/FreeStyle;)V
 
-    .line 349
+    .line 350
     iput-object p3, v0, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mFreeStyle:Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
 
-    .line 350
+    .line 351
     iget-object v2, p1, Lcom/miui/home/launcher/upsidescene/data/Screen;->mSprites:Ljava/util/List;
 
     invoke-interface {v2, v1, v0}, Ljava/util/List;->add(ILjava/lang/Object;)V
@@ -1969,7 +1974,7 @@
 
     const/4 v0, 0x0
 
-    .line 522
+    .line 523
     invoke-static {p0, v0}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->moveToNextStartTagOrEnd(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -1986,7 +1991,7 @@
         }
     .end annotation
 
-    .line 528
+    .line 529
     :cond_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -2008,7 +2013,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 531
+    .line 532
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -2026,7 +2031,7 @@
 
     goto :goto_0
 
-    .line 535
+    .line 536
     :cond_2
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -2043,7 +2048,7 @@
 .method private parseFloatValue(Ljava/lang/String;F)F
     .locals 1
 
-    .line 473
+    .line 474
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -2052,7 +2057,7 @@
 
     return p2
 
-    .line 474
+    .line 475
     :cond_0
     invoke-static {p1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
@@ -2064,7 +2069,7 @@
 .method private parseIntValue(Ljava/lang/String;)I
     .locals 1
 
-    .line 478
+    .line 479
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -2078,7 +2083,7 @@
     :cond_0
     const-string v0, "match_parent"
 
-    .line 480
+    .line 481
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -2089,7 +2094,7 @@
 
     return p1
 
-    .line 483
+    .line 484
     :cond_1
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -2103,7 +2108,7 @@
 
     const/4 v0, 0x0
 
-    .line 183
+    .line 184
     :try_start_0
     new-instance v1, Ljava/io/FileOutputStream;
 
@@ -2112,7 +2117,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 184
+    .line 185
     :try_start_1
     new-instance p2, Lcom/miui/launcher/utils/LauncherFastXmlSerializer;
 
@@ -2120,12 +2125,12 @@
 
     const-string v2, "utf-8"
 
-    .line 185
+    .line 186
     invoke-virtual {p2, v1, v2}, Lcom/miui/launcher/utils/LauncherFastXmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
     const/4 v2, 0x1
 
-    .line 186
+    .line 187
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
@@ -2134,12 +2139,12 @@
 
     const-string v2, "scene"
 
-    .line 187
+    .line 188
     invoke-virtual {p2, v0, v2}, Lcom/miui/launcher/utils/LauncherFastXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v2, "width"
 
-    .line 188
+    .line 189
     iget v3, p1, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->mRawWidth:I
 
     invoke-static {v3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -2148,7 +2153,7 @@
 
     invoke-virtual {p2, v0, v2, v3}, Lcom/miui/launcher/utils/LauncherFastXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 189
+    .line 190
     iget-object p1, p1, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->mScreens:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2170,17 +2175,17 @@
 
     const-string v3, "screen"
 
-    .line 190
+    .line 191
     invoke-virtual {p2, v0, v3}, Lcom/miui/launcher/utils/LauncherFastXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 193
+    .line 194
     invoke-virtual {v2}, Lcom/miui/home/launcher/upsidescene/data/Screen;->getType()I
 
     move-result v3
 
     packed-switch v3, :pswitch_data_0
 
-    .line 207
+    .line 208
     new-instance p1, Ljava/lang/RuntimeException;
 
     goto/16 :goto_4
@@ -2206,12 +2211,12 @@
     :goto_1
     const-string v4, "type"
 
-    .line 209
+    .line 210
     invoke-virtual {p2, v0, v4, v3}, Lcom/miui/launcher/utils/LauncherFastXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v3, "width"
 
-    .line 210
+    .line 211
     iget v4, v2, Lcom/miui/home/launcher/upsidescene/data/Screen;->mRawWidth:I
 
     invoke-static {v4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -2222,7 +2227,7 @@
 
     const-string v3, "home"
 
-    .line 211
+    .line 212
     invoke-virtual {v2}, Lcom/miui/home/launcher/upsidescene/data/Screen;->getHome()I
 
     move-result v4
@@ -2233,7 +2238,7 @@
 
     invoke-virtual {p2, v0, v3, v4}, Lcom/miui/launcher/utils/LauncherFastXmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 213
+    .line 214
     invoke-virtual {v2}, Lcom/miui/home/launcher/upsidescene/data/Screen;->getSprites()Ljava/util/List;
 
     move-result-object v3
@@ -2247,7 +2252,7 @@
     :goto_2
     if-ge v4, v3, :cond_1
 
-    .line 215
+    .line 216
     invoke-virtual {v2}, Lcom/miui/home/launcher/upsidescene/data/Screen;->getSprites()Ljava/util/List;
 
     move-result-object v5
@@ -2258,7 +2263,7 @@
 
     check-cast v5, Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
-    .line 216
+    .line 217
     iget-boolean v6, v5, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mIsUserCreated:Z
 
     if-eq p3, v6, :cond_0
@@ -2268,12 +2273,12 @@
     :cond_0
     const-string v6, "sprite"
 
-    .line 218
+    .line 219
     invoke-virtual {p2, v0, v6}, Lcom/miui/launcher/utils/LauncherFastXmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     const-string v6, "index"
 
-    .line 219
+    .line 220
     invoke-static {v4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v7
@@ -2282,7 +2287,7 @@
 
     const-string v6, "left"
 
-    .line 220
+    .line 221
     iget v7, v5, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mRawLeft:I
 
     invoke-static {v7}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -2293,7 +2298,7 @@
 
     const-string v6, "top"
 
-    .line 221
+    .line 222
     iget v7, v5, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mRawTop:I
 
     invoke-static {v7}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -2304,7 +2309,7 @@
 
     const-string v6, "rotation"
 
-    .line 222
+    .line 223
     invoke-virtual {v5}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getRotation()F
 
     move-result v7
@@ -2317,7 +2322,7 @@
 
     const-string v6, "scale_x"
 
-    .line 223
+    .line 224
     invoke-virtual {v5}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getScaleX()F
 
     move-result v7
@@ -2330,7 +2335,7 @@
 
     const-string v6, "scale_y"
 
-    .line 224
+    .line 225
     invoke-virtual {v5}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getScaleY()F
 
     move-result v7
@@ -2343,7 +2348,7 @@
 
     const-string v6, "width"
 
-    .line 225
+    .line 226
     iget v7, v5, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mRawWidth:I
 
     invoke-static {v7}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -2354,7 +2359,7 @@
 
     const-string v6, "height"
 
-    .line 226
+    .line 227
     iget v7, v5, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mRawHeight:I
 
     invoke-static {v7}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -2365,7 +2370,7 @@
 
     const-string v6, "appearance"
 
-    .line 227
+    .line 228
     invoke-virtual {v5}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getAppearance()Lcom/miui/home/launcher/upsidescene/data/Appearance;
 
     move-result-object v7
@@ -2378,7 +2383,7 @@
 
     const-string v6, "function"
 
-    .line 228
+    .line 229
     invoke-virtual {v5}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getFunction()Lcom/miui/home/launcher/upsidescene/data/Function;
 
     move-result-object v5
@@ -2391,7 +2396,7 @@
 
     const-string v5, "sprite"
 
-    .line 229
+    .line 230
     invoke-virtual {p2, v0, v5}, Lcom/miui/launcher/utils/LauncherFastXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     :goto_3
@@ -2402,12 +2407,12 @@
     :cond_1
     const-string v2, "screen"
 
-    .line 232
+    .line 233
     invoke-virtual {p2, v0, v2}, Lcom/miui/launcher/utils/LauncherFastXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto/16 :goto_0
 
-    .line 207
+    .line 208
     :goto_4
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -2434,16 +2439,16 @@
     :cond_2
     const-string p1, "scene"
 
-    .line 234
+    .line 235
     invoke-virtual {p2, v0, p1}, Lcom/miui/launcher/utils/LauncherFastXmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 235
+    .line 236
     invoke-virtual {p2}, Lcom/miui/launcher/utils/LauncherFastXmlSerializer;->flush()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 239
+    .line 240
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
     return-void
@@ -2470,7 +2475,7 @@
     :catch_1
     move-exception p1
 
-    .line 237
+    .line 238
     :goto_5
     :try_start_2
     new-instance p2, Ljava/lang/RuntimeException;
@@ -2483,10 +2488,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 239
+    .line 240
     :goto_6
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
+    .line 241
     throw p1
 
     :pswitch_data_0
@@ -2503,7 +2509,7 @@
 .method public clear(Z)V
     .locals 2
 
-    .line 141
+    .line 142
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->mContext:Landroid/content/Context;
@@ -2514,7 +2520,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 142
+    .line 143
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -2526,7 +2532,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 144
+    .line 145
     new-instance p1, Ljava/io/File;
 
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->mContext:Landroid/content/Context;
@@ -2537,7 +2543,7 @@
 
     invoke-direct {p1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 145
+    .line 146
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -2553,7 +2559,7 @@
 .method public exists()Z
     .locals 2
 
-    .line 97
+    .line 98
     new-instance v0, Ljava/io/File;
 
     sget-object v1, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->DATA_PATH:Ljava/lang/String;
@@ -2570,7 +2576,7 @@
 .method public getPersistDirectory(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
-    .line 492
+    .line 493
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2583,7 +2589,7 @@
 
     move-result-object p1
 
-    .line 493
+    .line 494
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p1
@@ -2610,7 +2616,7 @@
 
     const/4 v0, 0x0
 
-    .line 103
+    .line 104
     :try_start_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->exists()Z
 
@@ -2620,7 +2626,7 @@
 
     return-object v0
 
-    .line 106
+    .line 107
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->loadFreeStyleName()Ljava/lang/String;
 
@@ -2628,7 +2634,7 @@
 
     iput-object v1, p0, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->mFreeStyleName:Ljava/lang/String;
 
-    .line 107
+    .line 108
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->mFreeStyleName:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -2641,31 +2647,31 @@
 
     const-string v2, "not found \'name\' in scene."
 
-    .line 108
+    .line 109
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
 
-    .line 111
+    .line 112
     :cond_1
     invoke-direct {p0}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->loadOriginalOrEdit()Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
 
     move-result-object v1
 
-    .line 112
+    .line 113
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->mFreeStyleName:Ljava/lang/String;
 
     iput-object v2, v1, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->mName:Ljava/lang/String;
 
-    .line 113
+    .line 114
     invoke-direct {p0}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->loadNew()Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
 
     move-result-object v2
 
-    .line 114
+    .line 115
     invoke-direct {p0, v1, v2}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->mergeAdditionSprites(Lcom/miui/home/launcher/upsidescene/data/FreeStyle;Lcom/miui/home/launcher/upsidescene/data/FreeStyle;)V
 
-    .line 116
+    .line 117
     invoke-virtual {v1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->getSceneScale()F
 
     move-result v2
@@ -2674,17 +2680,17 @@
 
     move-result-object v2
 
-    .line 117
+    .line 118
     invoke-direct {p0}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->loadAllMtzGadgets()Ljava/util/List;
 
     move-result-object v3
 
-    .line 118
+    .line 119
     iget-object v4, v1, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->mFreeButtonInfos:Ljava/util/List;
 
     invoke-interface {v4, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 119
+    .line 120
     iget-object v2, v1, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->mMtzGadgets:Ljava/util/List;
 
     invoke-interface {v2, v3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
@@ -2697,7 +2703,7 @@
     :catch_0
     move-exception v0
 
-    .line 126
+    .line 127
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -2707,7 +2713,7 @@
     :catch_1
     move-exception v1
 
-    .line 123
+    .line 124
     invoke-virtual {v1}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
     return-object v0
@@ -2716,17 +2722,17 @@
 .method public save(Lcom/miui/home/launcher/upsidescene/data/FreeStyle;)V
     .locals 2
 
-    .line 132
+    .line 133
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->mFreeStyleName:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 133
+    .line 134
     iget-object v0, p1, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->mName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->mFreeStyleName:Ljava/lang/String;
 
-    .line 135
+    .line 136
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->mContext:Landroid/content/Context;
 
@@ -2738,7 +2744,7 @@
 
     invoke-direct {p0, p1, v0, v1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->saveFreeStyle(Lcom/miui/home/launcher/upsidescene/data/FreeStyle;Ljava/lang/String;Z)V
 
-    .line 136
+    .line 137
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->mContext:Landroid/content/Context;
 
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->getNewPersistSettingsPath(Landroid/content/Context;)Ljava/lang/String;

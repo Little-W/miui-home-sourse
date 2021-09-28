@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$loadDrawable$451(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;Landroid/graphics/drawable/Drawable;)V
+.method static synthetic lambda$loadDrawable$0(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
     .line 39
@@ -115,9 +115,9 @@
 
     check-cast v1, Lcom/miui/home/launcher/RemoteShortcutInfo;
 
-    new-instance v2, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNPreinstallableFolderShortcutsAdapter$mBP0f8x8hyPSlpVxZeW840XV25o;
+    new-instance v2, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNPreinstallableFolderShortcutsAdapter$QzUHYunDsRc8T2hfqPV5xdN0oFI;
 
-    invoke-direct {v2, p1, p2}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNPreinstallableFolderShortcutsAdapter$mBP0f8x8hyPSlpVxZeW840XV25o;-><init>(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;)V
+    invoke-direct {v2, p1, p2}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNPreinstallableFolderShortcutsAdapter$QzUHYunDsRc8T2hfqPV5xdN0oFI;-><init>(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutIcon;)V
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->loadIcon(Lcom/miui/home/launcher/RemoteShortcutInfo;Ljava/util/function/Consumer;)V
 

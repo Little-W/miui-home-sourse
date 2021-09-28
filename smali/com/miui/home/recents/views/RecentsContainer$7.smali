@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;Landroid/os/Handler;)V
     .locals 0
 
-    .line 522
+    .line 536
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$7;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -30,10 +30,10 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onChange$168(Lcom/miui/home/recents/views/RecentsContainer$7;Ljava/lang/Void;)Ljava/lang/Void;
+.method public static synthetic lambda$onChange$0(Lcom/miui/home/recents/views/RecentsContainer$7;Ljava/lang/Void;)Ljava/lang/Void;
     .locals 3
 
-    .line 526
+    .line 540
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$7;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/RecentsContainer;->getContext()Landroid/content/Context;
@@ -54,7 +54,7 @@
 
     move-result p1
 
-    .line 528
+    .line 542
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$7;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/RecentsContainer;->getContext()Landroid/content/Context;
@@ -78,10 +78,10 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$onChange$169(Lcom/miui/home/recents/views/RecentsContainer$7;Ljava/lang/Void;)V
+.method public static synthetic lambda$onChange$1(Lcom/miui/home/recents/views/RecentsContainer$7;Ljava/lang/Void;)V
     .locals 0
 
-    .line 531
+    .line 545
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$7;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/RecentsContainer;->access$400(Lcom/miui/home/recents/views/RecentsContainer;)V
@@ -94,14 +94,14 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 525
-    new-instance p1, Lcom/miui/home/recents/views/-$$Lambda$RecentsContainer$7$XeLIcoy5zRMbp8g0SqMToXzJnT0;
+    .line 539
+    new-instance p1, Lcom/miui/home/recents/views/-$$Lambda$RecentsContainer$7$mFqrg41N2GVQG7hRMCdmrH_OG8k;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/recents/views/-$$Lambda$RecentsContainer$7$XeLIcoy5zRMbp8g0SqMToXzJnT0;-><init>(Lcom/miui/home/recents/views/RecentsContainer$7;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/recents/views/-$$Lambda$RecentsContainer$7$mFqrg41N2GVQG7hRMCdmrH_OG8k;-><init>(Lcom/miui/home/recents/views/RecentsContainer$7;)V
 
-    new-instance v0, Lcom/miui/home/recents/views/-$$Lambda$RecentsContainer$7$x1Qav_muSbim-AERRXlSqBqeK8c;
+    new-instance v0, Lcom/miui/home/recents/views/-$$Lambda$RecentsContainer$7$A7ExEV-4QSiey_NQBfTPHOBoc00;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/recents/views/-$$Lambda$RecentsContainer$7$x1Qav_muSbim-AERRXlSqBqeK8c;-><init>(Lcom/miui/home/recents/views/RecentsContainer$7;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/views/-$$Lambda$RecentsContainer$7$A7ExEV-4QSiey_NQBfTPHOBoc00;-><init>(Lcom/miui/home/recents/views/RecentsContainer$7;)V
 
     const/4 v1, 0x0
 

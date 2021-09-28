@@ -44,7 +44,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070051
+    const v1, 0x7f070054
 
     .line 43
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -101,7 +101,7 @@
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    const p1, 0x7f070050
+    const p1, 0x7f070053
 
     .line 51
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

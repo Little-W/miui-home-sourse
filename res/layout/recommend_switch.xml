@@ -26,12 +26,12 @@
         android:singleLine="true"
         android:layout_weight="1.0"
         android:importantForAccessibility="no" />
-    <miui.widget.SlidingButton
+    <miuix.slidingwidget.widget.SlidingButton
         android:layout_gravity="center|right"
         android:id="@id/switch_button"
         android:focusable="true"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:contentDescription="@string/recommend_apps_switch_title"
-        style="@269287560" />
+        style="@style/Widget.SlidingButton.Dark" />
 </com.miui.home.launcher.NonOverlapLinearLayout>

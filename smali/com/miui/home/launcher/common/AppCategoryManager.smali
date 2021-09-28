@@ -55,7 +55,7 @@
 
     const/4 v1, 0x1
 
-    const v2, 0x7f10007d
+    const v2, 0x7f100080
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -64,7 +64,7 @@
 
     const/4 v1, 0x2
 
-    const v2, 0x7f100086
+    const v2, 0x7f100089
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -73,7 +73,7 @@
 
     const/4 v1, 0x3
 
-    const v2, 0x7f100089
+    const v2, 0x7f10008c
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -82,7 +82,7 @@
 
     const/4 v1, 0x4
 
-    const v2, 0x7f100080
+    const v2, 0x7f100083
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -91,7 +91,7 @@
 
     const/4 v1, 0x5
 
-    const v2, 0x7f100088
+    const v2, 0x7f10008b
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -100,7 +100,7 @@
 
     const/4 v1, 0x6
 
-    const v2, 0x7f100083
+    const v2, 0x7f100086
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -109,7 +109,7 @@
 
     const/4 v1, 0x7
 
-    const v2, 0x7f10007a
+    const v2, 0x7f10007d
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -118,7 +118,7 @@
 
     const/16 v1, 0x8
 
-    const v2, 0x7f100087
+    const v2, 0x7f10008a
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -127,7 +127,7 @@
 
     const/16 v1, 0x9
 
-    const v2, 0x7f100085
+    const v2, 0x7f100088
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -136,7 +136,7 @@
 
     const/16 v1, 0xa
 
-    const v2, 0x7f100084
+    const v2, 0x7f100087
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -145,7 +145,7 @@
 
     const/16 v1, 0xb
 
-    const v2, 0x7f100082
+    const v2, 0x7f100085
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -154,7 +154,7 @@
 
     const/16 v1, 0xc
 
-    const v2, 0x7f10007b
+    const v2, 0x7f10007e
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -163,7 +163,7 @@
 
     const/16 v1, 0xd
 
-    const v2, 0x7f10007c
+    const v2, 0x7f10007f
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -172,7 +172,7 @@
 
     const/16 v1, 0xe
 
-    const v2, 0x7f10007f
+    const v2, 0x7f100082
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -181,7 +181,7 @@
 
     const/16 v1, 0xf
 
-    const v2, 0x7f10007e
+    const v2, 0x7f100081
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -190,7 +190,7 @@
 
     const/16 v1, 0x1b
 
-    const v2, 0x7f100081
+    const v2, 0x7f100084
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -199,7 +199,7 @@
 
     const/16 v1, 0xd1
 
-    const v2, 0x7f10008a
+    const v2, 0x7f10008d
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -579,7 +579,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$initAppCategoryListAsync$362(Lcom/miui/home/launcher/common/AppCategoryManager;Landroid/content/Context;Ljava/util/HashSet;)V
+.method public static synthetic lambda$initAppCategoryListAsync$0(Lcom/miui/home/launcher/common/AppCategoryManager;Landroid/content/Context;Ljava/util/HashSet;)V
     .locals 0
 
     .line 122
@@ -649,7 +649,7 @@
 
     move-result v1
 
-    const v2, 0x7f10010d
+    const v2, 0x7f10019f
 
     if-eqz v1, :cond_6
 
@@ -846,9 +846,9 @@
     .end annotation
 
     .line 121
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$AppCategoryManager$HrqxAnkFmRpBbJGrRauHInw1UsY;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$AppCategoryManager$Qcqhb57aAiubzj3bMQeiLqNhu48;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/common/-$$Lambda$AppCategoryManager$HrqxAnkFmRpBbJGrRauHInw1UsY;-><init>(Lcom/miui/home/launcher/common/AppCategoryManager;Landroid/content/Context;Ljava/util/HashSet;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/common/-$$Lambda$AppCategoryManager$Qcqhb57aAiubzj3bMQeiLqNhu48;-><init>(Lcom/miui/home/launcher/common/AppCategoryManager;Landroid/content/Context;Ljava/util/HashSet;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

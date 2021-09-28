@@ -43,7 +43,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->mCallbacks:Ljava/util/List;
 
-    .line 59
+    .line 63
     new-instance v0, Lcom/miui/home/recents/ActivityObserverLauncherImpl$1;
 
     invoke-direct {v0, p0}, Lcom/miui/home/recents/ActivityObserverLauncherImpl$1;-><init>(Lcom/miui/home/recents/ActivityObserverLauncherImpl;)V
@@ -164,83 +164,125 @@
     return-object v0
 .end method
 
+.method private registerActivityObserverInAMS(Landroid/content/Context;Landroid/app/IMiuiActivityObserver;)Z
+    .locals 7
 
-# virtual methods
-.method public addCallback(Lcom/miui/home/recents/ActivityObserverLauncher$ActivityObserverCallback;)V
-    .locals 2
+    const/4 v0, 0x0
 
-    .line 143
-    iget-object v0, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->mCallbacks:Ljava/util/List;
-
-    monitor-enter v0
-
-    .line 144
     :try_start_0
-    iget-object v1, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->mCallbacks:Ljava/util/List;
+    const-string v1, "activity"
 
-    invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 145
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public getTopActivity()Landroid/content/ComponentName;
-    .locals 1
-
-    .line 56
-    iget-object v0, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->mTopActivity:Landroid/content/ComponentName;
-
-    return-object v0
-.end method
-
-.method public registerMiuiActivityObserver(Landroid/content/Context;Landroid/app/IMiuiActivityObserver;)V
-    .locals 8
-
-    .line 162
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1d
-
-    if-ge v0, v1, :cond_0
-
-    return-void
-
-    :cond_0
-    :try_start_0
-    const-string v0, "activity"
-
-    .line 166
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    .line 167
+    invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Landroid/app/ActivityManager;
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_0
 
     const-string p1, "ActivityObserverLauncherImpl"
 
     const-string p2, "registerMiuiActivityObserver am = null"
 
-    .line 168
+    .line 169
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    return-void
+    return v0
 
-    .line 171
-    :cond_1
+    .line 172
+    :cond_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    const-string v2, "getService"
+
+    .line 173
+    new-array v3, v0, [Ljava/lang/Class;
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v1
+
+    .line 174
+    new-array v2, v0, [Ljava/lang/Object;
+
+    invoke-virtual {v1, p1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 175
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    const-string v2, "registerActivityObserver"
+
+    const/4 v3, 0x2
+
+    new-array v4, v3, [Ljava/lang/Class;
+
+    const-class v5, Landroid/app/IMiuiActivityObserver;
+
+    aput-object v5, v4, v0
+
+    const-class v5, Landroid/content/Intent;
+
+    const/4 v6, 0x1
+
+    aput-object v5, v4, v6
+
+    .line 176
+    invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v1
+
+    .line 178
+    new-array v2, v3, [Ljava/lang/Object;
+
+    aput-object p2, v2, v0
+
+    new-instance p2, Landroid/content/Intent;
+
+    invoke-direct {p2}, Landroid/content/Intent;-><init>()V
+
+    aput-object p2, v2, v6
+
+    invoke-virtual {v1, p1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string p1, "ActivityObserverLauncherImpl"
+
+    const-string p2, "registerMiuiActivityObserver success"
+
+    .line 179
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v6
+
+    :catch_0
+    move-exception p1
+
+    const-string p2, "ActivityObserverLauncherImpl"
+
+    const-string v1, "registerMiuiActivityObserver error"
+
+    .line 182
+    invoke-static {p2, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return v0
+.end method
+
+.method private registerActivityObserverInATMS(Landroid/app/IMiuiActivityObserver;)V
+    .locals 8
+
+    :try_start_0
+    const-string v0, "android.app.ActivityTaskManager"
+
+    .line 189
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
@@ -248,21 +290,24 @@
 
     const/4 v2, 0x0
 
-    .line 172
+    .line 190
     new-array v3, v2, [Ljava/lang/Class;
 
     invoke-virtual {v0, v1, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .line 173
-    new-array v1, v2, [Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    .line 192
+    new-array v3, v2, [Ljava/lang/Object;
 
-    move-result-object v1
+    invoke-virtual {v0, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
+
+    .line 193
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
@@ -282,59 +327,124 @@
 
     aput-object v6, v5, v7
 
-    .line 174
+    .line 194
     invoke-virtual {v1, v3, v5}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
-    .line 176
-    new-array v3, v2, [Ljava/lang/Object;
+    .line 196
+    new-array v3, v4, [Ljava/lang/Object;
 
-    invoke-virtual {v0, p1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    aput-object p1, v3, v2
 
-    move-result-object p1
+    new-instance p1, Landroid/content/Intent;
 
-    new-array v0, v4, [Ljava/lang/Object;
+    invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
-    aput-object p2, v0, v2
+    aput-object p1, v3, v7
 
-    new-instance p2, Landroid/content/Intent;
-
-    invoke-direct {p2}, Landroid/content/Intent;-><init>()V
-
-    aput-object p2, v0, v7
-
-    invoke-virtual {v1, p1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string p1, "ActivityObserverLauncherImpl"
 
-    const-string p2, "registerMiuiActivityObserver success"
+    const-string v0, "registerForAtLeastAndroidS success"
 
-    .line 177
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 198
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
     move-exception p1
 
-    const-string p2, "ActivityObserverLauncherImpl"
+    const-string v0, "ActivityObserverLauncherImpl"
 
-    const-string v0, "registerMiuiActivityObserver error"
+    const-string v1, "registerForAtLeastAndroidS error"
 
-    .line 179
-    invoke-static {p2, v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    .line 200
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public addCallback(Lcom/miui/home/recents/ActivityObserverLauncher$ActivityObserverCallback;)V
+    .locals 2
+
+    .line 147
+    iget-object v0, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->mCallbacks:Ljava/util/List;
+
+    monitor-enter v0
+
+    .line 148
+    :try_start_0
+    iget-object v1, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->mCallbacks:Ljava/util/List;
+
+    invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 149
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public clearTopActivity()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 60
+    iput-object v0, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->mTopActivity:Landroid/content/ComponentName;
+
+    return-void
+.end method
+
+.method public getTopActivity()Landroid/content/ComponentName;
+    .locals 1
+
+    .line 56
+    iget-object v0, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->mTopActivity:Landroid/content/ComponentName;
+
+    return-object v0
+.end method
+
+.method public registerMiuiActivityObserver(Landroid/content/Context;Landroid/app/IMiuiActivityObserver;)V
+    .locals 0
+
+    .line 205
+    invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->registerActivityObserverInAMS(Landroid/content/Context;Landroid/app/IMiuiActivityObserver;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 206
+    invoke-direct {p0, p2}, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->registerActivityObserverInATMS(Landroid/app/IMiuiActivityObserver;)V
+
+    :cond_0
     return-void
 .end method
 
 .method public run()V
     .locals 2
 
-    .line 158
+    .line 162
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0

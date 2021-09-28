@@ -60,12 +60,12 @@
     iget-object v3, p0, Lcom/miui/home/launcher/upsidescene/data/Appearance$StageImageAppearance;->mPath:Ljava/lang/String;
 
     .line 89
-    invoke-static {v2, v3}, Lmiui/util/FileAccessable$Factory;->create(Ljava/lang/String;Ljava/lang/String;)Lmiui/util/FileAccessable;
+    invoke-static {v2, v3}, Lcom/miui/home/library/utils/FileAccessable$Factory;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/miui/home/library/utils/FileAccessable;
 
     move-result-object v2
 
     .line 88
-    invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->decodeBitmapFromFile(Ljava/util/HashMap;FLmiui/util/FileAccessable;)Landroid/graphics/Bitmap;
+    invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;->decodeBitmapFromFile(Ljava/util/HashMap;FLcom/miui/home/library/utils/FileAccessable;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 

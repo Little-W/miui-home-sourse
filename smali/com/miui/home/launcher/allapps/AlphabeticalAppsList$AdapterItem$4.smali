@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/allapps/AlphabeticalAppsList$AdapterItem$4;
+.class Lcom/miui/home/launcher/allapps/AlphabeticalAppsList$AdapterItem$4;
 .super Lcom/miui/home/launcher/allapps/AlphabeticalAppsList$AdapterItem;
 .source "AlphabeticalAppsList.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

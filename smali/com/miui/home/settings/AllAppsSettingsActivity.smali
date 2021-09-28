@@ -48,31 +48,31 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f1000ee
+    const v1, 0x7f10013b
 
     goto :goto_0
 
     :cond_0
     if-eqz p1, :cond_1
 
-    const v1, 0x7f10014e
+    const v1, 0x7f1001ed
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f100054
+    const v1, 0x7f100056
 
     .line 32
     :goto_0
     invoke-virtual {p0, v1}, Lcom/miui/home/settings/AllAppsSettingsActivity;->setTitle(I)V
 
     .line 33
-    invoke-virtual {p0}, Lcom/miui/home/settings/AllAppsSettingsActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/miui/home/settings/AllAppsSettingsActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v1
 
     .line 34
-    invoke-virtual {v1}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+    invoke-virtual {v1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object v1
 
@@ -102,15 +102,15 @@
     const p1, 0x1020002
 
     .line 40
-    invoke-virtual {v1, p1, v2}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    invoke-virtual {v1, p1, v2}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     const/4 p1, 0x0
 
     .line 41
-    invoke-virtual {v1, p1}, Landroid/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroid/app/FragmentTransaction;
+    invoke-virtual {v1, p1}, Landroidx/fragment/app/FragmentTransaction;->addToBackStack(Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
 
     .line 42
-    invoke-virtual {v1}, Landroid/app/FragmentTransaction;->commit()I
+    invoke-virtual {v1}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     return-void
 .end method

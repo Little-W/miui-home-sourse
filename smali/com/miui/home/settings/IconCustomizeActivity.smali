@@ -39,7 +39,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f100153
+    const v0, 0x7f1001f2
 
     if-eqz p1, :cond_1
 
@@ -54,7 +54,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f100151
+    const v0, 0x7f1001f0
 
     .line 31
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/IconCustomizeActivity;->setTitle(I)V
@@ -88,12 +88,12 @@
 
     .line 40
     :goto_1
-    invoke-virtual {p0}, Lcom/miui/home/settings/IconCustomizeActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p0}, Lcom/miui/home/settings/IconCustomizeActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
 
     .line 41
-    invoke-virtual {p1}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object p1
 
@@ -105,10 +105,10 @@
     const v1, 0x1020002
 
     .line 43
-    invoke-virtual {p1, v1, v0}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    invoke-virtual {p1, v1, v0}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
     .line 44
-    invoke-virtual {p1}, Landroid/app/FragmentTransaction;->commitAllowingStateLoss()I
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
     return-void
 .end method

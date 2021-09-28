@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/recents/ActivityObserverLauncherImpl$1;Landroid/content/Intent;)V
     .locals 0
 
-    .line 108
+    .line 112
     iput-object p1, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl$1$4;->this$1:Lcom/miui/home/recents/ActivityObserverLauncherImpl$1;
 
     iput-object p2, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl$1$4;->val$intent:Landroid/content/Intent;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 4
 
-    .line 111
+    .line 115
     iget-object v0, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl$1$4;->this$1:Lcom/miui/home/recents/ActivityObserverLauncherImpl$1;
 
     iget-object v0, v0, Lcom/miui/home/recents/ActivityObserverLauncherImpl$1;->this$0:Lcom/miui/home/recents/ActivityObserverLauncherImpl;
@@ -53,7 +53,7 @@
 
     monitor-enter v0
 
-    .line 112
+    .line 116
     :try_start_0
     iget-object v1, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl$1$4;->this$1:Lcom/miui/home/recents/ActivityObserverLauncherImpl$1;
 
@@ -80,14 +80,14 @@
 
     check-cast v2, Lcom/miui/home/recents/ActivityObserverLauncher$ActivityObserverCallback;
 
-    .line 113
+    .line 117
     iget-object v3, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl$1$4;->val$intent:Landroid/content/Intent;
 
     invoke-interface {v2, v3}, Lcom/miui/home/recents/ActivityObserverLauncher$ActivityObserverCallback;->activityStopped(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 115
+    .line 119
     :cond_0
     monitor-exit v0
 

@@ -38,16 +38,16 @@
     iput-object v0, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mState:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
 
     .line 73
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$UnlockAnimationStateMachine$WhM0xuUY2EkxkykeKOI-JLt_-1Y;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$UnlockAnimationStateMachine$l5JOGPfxcnz5WMlYqcjw5Ywh5Zc;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/common/-$$Lambda$UnlockAnimationStateMachine$WhM0xuUY2EkxkykeKOI-JLt_-1Y;-><init>(Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/common/-$$Lambda$UnlockAnimationStateMachine$l5JOGPfxcnz5WMlYqcjw5Ywh5Zc;-><init>(Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mResetIdleStateRunnable:Ljava/lang/Runnable;
 
     .line 154
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$UnlockAnimationStateMachine$lHRj_L0JzX9E23ZA4hqvsG2Ufwo;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$UnlockAnimationStateMachine$c0dkhWINrtpry7Nnf8ErKRFD9fY;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/common/-$$Lambda$UnlockAnimationStateMachine$lHRj_L0JzX9E23ZA4hqvsG2Ufwo;-><init>(Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/common/-$$Lambda$UnlockAnimationStateMachine$c0dkhWINrtpry7Nnf8ErKRFD9fY;-><init>(Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mResumeShowAnimationRunnable:Ljava/lang/Runnable;
 
@@ -85,9 +85,9 @@
     .line 61
     new-instance v0, Ljava/util/concurrent/FutureTask;
 
-    new-instance v1, Lcom/miui/home/launcher/common/-$$Lambda$UnlockAnimationStateMachine$2ozVJfoYBNHSYe4icZHjEOMK0hI;
+    new-instance v1, Lcom/miui/home/launcher/common/-$$Lambda$UnlockAnimationStateMachine$lBLsEHEj-tslGSWNA2TOnwaSw08;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$UnlockAnimationStateMachine$2ozVJfoYBNHSYe4icZHjEOMK0hI;-><init>(Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$UnlockAnimationStateMachine$lBLsEHEj-tslGSWNA2TOnwaSw08;-><init>(Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;)V
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
@@ -131,7 +131,7 @@
     return v0
 .end method
 
-.method public static synthetic lambda$checkLockScreenOrScreenOff$155(Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;)Ljava/lang/Boolean;
+.method public static synthetic lambda$checkLockScreenOrScreenOff$0(Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;)Ljava/lang/Boolean;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -183,7 +183,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$new$156(Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;)V
+.method public static synthetic lambda$new$1(Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;)V
     .locals 2
 
     const-string v0, "Launcher_UnlockAnimationStateMachine"
@@ -201,7 +201,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$new$157(Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;)V
+.method public static synthetic lambda$new$2(Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;)V
     .locals 1
 
     const-string v0, "onResume"

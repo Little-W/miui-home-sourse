@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/recents/views/TaskViewTransform$1;
+.class Lcom/miui/home/recents/views/TaskViewTransform$1;
 .super Landroid/util/Property;
 .source "TaskViewTransform.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

@@ -1,5 +1,5 @@
 .class public Lcom/miui/home/settings/DefaultHomeSettings;
-.super Lmiui/app/ListActivity;
+.super Landroid/app/ListActivity;
 .source "DefaultHomeSettings.java"
 
 
@@ -16,7 +16,7 @@
     .locals 0
 
     .line 37
-    invoke-direct {p0}, Lmiui/app/ListActivity;-><init>()V
+    invoke-direct {p0}, Landroid/app/ListActivity;-><init>()V
 
     return-void
 .end method
@@ -220,7 +220,7 @@
     const-string v2, "get third desktop provider exception!"
 
     .line 116
-    invoke-static {v1, v2, p1}, Lmiui/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
 .end method
@@ -235,7 +235,7 @@
 
     move-result-object p1
 
-    invoke-super {p0, p1}, Lmiui/app/ListActivity;->attachBaseContext(Landroid/content/Context;)V
+    invoke-super {p0, p1}, Landroid/app/ListActivity;->attachBaseContext(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -244,7 +244,7 @@
     .locals 9
 
     .line 48
-    invoke-super {p0, p1}, Lmiui/app/ListActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/app/ListActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 49
     invoke-virtual {p0}, Lcom/miui/home/settings/DefaultHomeSettings;->getListView()Landroid/widget/ListView;
@@ -285,7 +285,7 @@
 
     move-result-object v2
 
-    sget v3, Lmiui/R$dimen;->preference_screen_padding_bottom:I
+    const v3, 0x7f070283
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -297,7 +297,7 @@
     invoke-virtual {p1, v0}, Landroid/widget/ListView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 61
-    invoke-virtual {p0}, Lcom/miui/home/settings/DefaultHomeSettings;->getActionBar()Lmiui/app/ActionBar;
+    invoke-virtual {p0}, Lcom/miui/home/settings/DefaultHomeSettings;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object p1
 
@@ -327,13 +327,13 @@
     invoke-virtual {v2, v3}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 69
-    invoke-virtual {p0}, Lcom/miui/home/settings/DefaultHomeSettings;->getActionBar()Lmiui/app/ActionBar;
+    invoke-virtual {p0}, Lcom/miui/home/settings/DefaultHomeSettings;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v3
 
-    const v4, 0x7f1000cb
+    const v4, 0x7f100118
 
-    invoke-virtual {v3, v4}, Lmiui/app/ActionBar;->setTitle(I)V
+    invoke-virtual {v3, v4}, Landroid/app/ActionBar;->setTitle(I)V
 
     const/high16 v3, 0x20000
 
@@ -417,7 +417,7 @@
     .locals 0
 
     .line 95
-    invoke-super/range {p0 .. p5}, Lmiui/app/ListActivity;->onListItemClick(Landroid/widget/ListView;Landroid/view/View;IJ)V
+    invoke-super/range {p0 .. p5}, Landroid/app/ListActivity;->onListItemClick(Landroid/widget/ListView;Landroid/view/View;IJ)V
 
     .line 97
     invoke-virtual {p0}, Lcom/miui/home/settings/DefaultHomeSettings;->getListAdapter()Landroid/widget/ListAdapter;

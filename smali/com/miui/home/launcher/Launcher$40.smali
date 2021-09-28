@@ -1,22 +1,16 @@
 .class Lcom/miui/home/launcher/Launcher$40;
-.super Landroid/content/BroadcastReceiver;
+.super Landroid/database/ContentObserver;
 .source "Launcher.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->registerBroadcastReceivers()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/launcher/Launcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
-.end annotation
-
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/miui/home/launcher/Launcher$40$_lancet;
-    }
 .end annotation
 
 
@@ -25,46 +19,53 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3636
+    .line 3625
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
-
-    return-void
-.end method
-
-.method static synthetic access$000(Lcom/miui/home/launcher/Launcher$40;Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/Launcher$40;->onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
-
-    return-void
-.end method
-
-.method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 2
-
-    .line 3640
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    new-instance v1, Lcom/miui/home/launcher/Launcher$40$1;
-
-    invoke-direct {v1, p0, p2, p1}, Lcom/miui/home/launcher/Launcher$40$1;-><init>(Lcom/miui/home/launcher/Launcher$40;Landroid/content/Intent;Landroid/content/Context;)V
-
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 0
+.method public onChange(Z)V
+    .locals 2
 
-    invoke-static {p0, p1, p2}, Lcom/miui/home/launcher/Launcher$40$_lancet;->com_miui_home_launcher_aop_BroadcastReceiverHooker_onReceive(Lcom/miui/home/launcher/Launcher$40;Landroid/content/Context;Landroid/content/Intent;)V
+    .line 3628
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$4500(Lcom/miui/home/launcher/Launcher;)V
+
+    .line 3629
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$40;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$4600(Lcom/miui/home/launcher/Launcher;)I
+
+    move-result v0
+
+    const/16 v1, 0x8
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Workspace;->updateAssistantPoints(Z)V
 
     return-void
 .end method

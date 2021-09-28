@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
     .locals 0
 
-    .line 585
+    .line 594
     iput-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$14;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 589
+    .line 598
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$14;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-static {p1}, Lcom/miui/home/settings/MiuiHomeSettings;->access$500(Lcom/miui/home/settings/MiuiHomeSettings;)Lcom/miui/home/settings/preference/CheckBoxPreference;
@@ -49,14 +49,14 @@
 
     invoke-virtual {p1, p2}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setChecked(Z)V
 
-    .line 590
+    .line 599
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$14;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
-    invoke-static {p1}, Lcom/miui/home/settings/MiuiHomeSettings;->access$700(Lcom/miui/home/settings/MiuiHomeSettings;)Lmiui/app/AlertDialog;
+    invoke-static {p1}, Lcom/miui/home/settings/MiuiHomeSettings;->access$700(Lcom/miui/home/settings/MiuiHomeSettings;)Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lmiui/app/AlertDialog;->dismiss()V
+    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     return-void
 .end method

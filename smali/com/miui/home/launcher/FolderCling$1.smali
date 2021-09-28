@@ -95,7 +95,7 @@
     .line 213
     iget-object v0, p0, Lcom/miui/home/launcher/FolderCling$1;->this$0:Lcom/miui/home/launcher/FolderCling;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/FolderCling;->access$300(Lcom/miui/home/launcher/FolderCling;)Lmiui/widget/SlidingButton;
+    invoke-static {v0}, Lcom/miui/home/launcher/FolderCling;->access$300(Lcom/miui/home/launcher/FolderCling;)Lmiuix/slidingwidget/widget/SlidingButton;
 
     move-result-object v0
 
@@ -105,7 +105,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lmiui/widget/SlidingButton;->setContentDescription(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lmiuix/slidingwidget/widget/SlidingButton;->setContentDescription(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

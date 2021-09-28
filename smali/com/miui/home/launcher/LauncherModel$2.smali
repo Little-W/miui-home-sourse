@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/LauncherModel$2;
+.class Lcom/miui/home/launcher/LauncherModel$2;
 .super Ljava/lang/Object;
 .source "LauncherModel.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -27,7 +27,7 @@
 .method constructor <init>(Ljava/lang/String;Landroid/content/ContentResolver;)V
     .locals 0
 
-    .line 509
+    .line 512
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$2;->val$orderedValue:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$2;->val$cr:Landroid/content/ContentResolver;
@@ -42,19 +42,19 @@
 .method public run()V
     .locals 4
 
-    .line 512
+    .line 515
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string v1, "screenOrder"
 
-    .line 515
+    .line 518
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$2;->val$orderedValue:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 516
+    .line 519
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$2;->val$cr:Landroid/content/ContentResolver;
 
     sget-object v2, Lcom/miui/home/launcher/LauncherSettings$Screens;->CONTENT_URI:Landroid/net/Uri;
@@ -71,7 +71,7 @@
 
     const-string v1, "Failed to update screens table for reorder, aborting"
 
-    .line 517
+    .line 520
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void

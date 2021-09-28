@@ -74,7 +74,11 @@
     move-result-object p1
 
     .line 32
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getCategoryProvider()Lcom/miui/home/launcher/CategoryProvider;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Lcom/miui/home/launcher/Application;->getCategoryProvider()Lcom/miui/home/launcher/CategoryProvider;
 
     move-result-object p2
 

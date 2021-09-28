@@ -159,12 +159,14 @@
     .locals 1
 
     .line 67
-    iget-object v0, p0, Lcom/miui/home/library/mirror/MirrorManagerCompat;->mMirrorManager:Lcom/xiaomi/mirror/MirrorManagerImpl;
+    iget-object p2, p0, Lcom/miui/home/library/mirror/MirrorManagerCompat;->mMirrorManager:Lcom/xiaomi/mirror/MirrorManagerImpl;
 
-    if-eqz v0, :cond_0
+    if-eqz p2, :cond_0
+
+    const/4 v0, 0x0
 
     .line 68
-    invoke-virtual {v0, p1, p2}, Lcom/xiaomi/mirror/MirrorManagerImpl;->notifyStartActivityFromRecents(ILandroid/os/Bundle;)V
+    invoke-virtual {p2, p1, v0}, Lcom/xiaomi/mirror/MirrorManagerImpl;->notifyStartActivityFromRecents(ILandroid/os/Bundle;)V
 
     :cond_0
     return-void

@@ -37,7 +37,7 @@
 .method public final run()V
     .locals 1
 
-    .line 173
+    .line 199
     iget-object v0, p0, Lcom/miui/home/settings/AllDeleteAppActivity$DeleteAppContentObserver$onChange$1;->this$0:Lcom/miui/home/settings/AllDeleteAppActivity$DeleteAppContentObserver;
 
     iget-object v0, v0, Lcom/miui/home/settings/AllDeleteAppActivity$DeleteAppContentObserver;->this$0:Lcom/miui/home/settings/AllDeleteAppActivity;

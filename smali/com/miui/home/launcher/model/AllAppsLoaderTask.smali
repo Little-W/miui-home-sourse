@@ -101,7 +101,7 @@
     throw v0
 .end method
 
-.method public static synthetic lambda$run$302(Lcom/miui/home/launcher/model/AllAppsLoaderTask;)V
+.method public static synthetic lambda$run$0(Lcom/miui/home/launcher/model/AllAppsLoaderTask;)V
     .locals 2
 
     .line 96
@@ -487,9 +487,9 @@
     .line 95
     iget-object v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mUiExecutor:Ljava/util/concurrent/Executor;
 
-    new-instance v1, Lcom/miui/home/launcher/model/-$$Lambda$AllAppsLoaderTask$L2lPK88zGtc_iiKoprkCcwEJz-c;
+    new-instance v1, Lcom/miui/home/launcher/model/-$$Lambda$AllAppsLoaderTask$btPf75HhhHEF3PFJf2cXyQO8WPc;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/model/-$$Lambda$AllAppsLoaderTask$L2lPK88zGtc_iiKoprkCcwEJz-c;-><init>(Lcom/miui/home/launcher/model/AllAppsLoaderTask;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/model/-$$Lambda$AllAppsLoaderTask$btPf75HhhHEF3PFJf2cXyQO8WPc;-><init>(Lcom/miui/home/launcher/model/AllAppsLoaderTask;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

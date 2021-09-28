@@ -146,6 +146,7 @@
 
     invoke-virtual {v1}, Ljava/util/Scanner;->close()V
 
+    .line 41
     :cond_3
     throw v0
 .end method

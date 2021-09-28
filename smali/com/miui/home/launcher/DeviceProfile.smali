@@ -33,6 +33,10 @@
 
 .field private mScreenWidth:I
 
+.field private mWidgetCellHeight:I
+
+.field private mWidgetCellWidth:I
+
 
 # direct methods
 .method public constructor <init>(IILcom/miui/home/launcher/DeviceConfig;)V
@@ -74,10 +78,10 @@
     .line 23
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenShortSize:I
 
-    .line 26
+    .line 29
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/DeviceProfile;->initScreenSize(II)V
 
-    .line 27
+    .line 30
     iput-object p3, p0, Lcom/miui/home/launcher/DeviceProfile;->mDPC:Lcom/miui/home/launcher/DeviceConfig;
 
     return-void
@@ -88,7 +92,7 @@
 .method public final calculateCellSize()V
     .locals 4
 
-    .line 75
+    .line 78
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingWidth:I
 
     int-to-float v0, v0
@@ -127,7 +131,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWidth:I
 
-    .line 76
+    .line 79
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingHeight:I
 
     int-to-float v0, v0
@@ -164,13 +168,63 @@
 
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellHeight:I
 
+    .line 80
+    iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
+
+    move-result v1
+
+    div-int/2addr v0, v1
+
+    sget v1, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMinWidth:I
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mWidgetCellWidth:I
+
+    .line 81
+    iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenHeight:I
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getStatusBarHeight()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    sget v1, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellPaddingTop:I
+
+    sub-int/2addr v0, v1
+
+    .line 82
+    sget v1, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellPaddingBottom:I
+
+    sub-int/2addr v0, v1
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
+
+    move-result v1
+
+    div-int/2addr v0, v1
+
+    sget v1, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMinHeight:I
+
+    .line 81
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mWidgetCellHeight:I
+
     return-void
 .end method
 
 .method public final getCellHeight()I
     .locals 1
 
-    .line 130
+    .line 136
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellHeight:I
 
     return v0
@@ -179,7 +233,7 @@
 .method public final getCellWidth()I
     .locals 1
 
-    .line 134
+    .line 140
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWidth:I
 
     return v0
@@ -188,7 +242,7 @@
 .method public final getCellWorkingHeight()I
     .locals 1
 
-    .line 108
+    .line 114
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingHeight:I
 
     return v0
@@ -197,7 +251,7 @@
 .method public final getCellWorkingWidth()I
     .locals 1
 
-    .line 116
+    .line 122
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingWidth:I
 
     return v0
@@ -206,7 +260,7 @@
 .method public final getDeviceHeight()I
     .locals 2
 
-    .line 84
+    .line 90
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
 
     iget v1, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenHeight:I
@@ -221,7 +275,7 @@
 .method public final getDeviceWidth()I
     .locals 2
 
-    .line 80
+    .line 86
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
 
     iget v1, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenHeight:I
@@ -236,7 +290,7 @@
 .method public final getRealScreenHeight()I
     .locals 1
 
-    .line 96
+    .line 102
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mRealScreenHeight:I
 
     return v0
@@ -245,7 +299,7 @@
 .method public final getScreenHeight()I
     .locals 1
 
-    .line 92
+    .line 98
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenHeight:I
 
     return v0
@@ -254,7 +308,7 @@
 .method public final getScreenLongSize()I
     .locals 1
 
-    .line 100
+    .line 106
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenLongSize:I
 
     return v0
@@ -263,8 +317,51 @@
 .method public final getScreenWidth()I
     .locals 1
 
-    .line 88
+    .line 94
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
+
+    return v0
+.end method
+
+.method public final getWidgetCellHeight()I
+    .locals 1
+
+    .line 144
+    iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mWidgetCellHeight:I
+
+    return v0
+.end method
+
+.method public final getWidgetCellSize()Landroid/graphics/Point;
+    .locals 2
+
+    .line 152
+    new-instance v0, Landroid/graphics/Point;
+
+    invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
+
+    .line 153
+    invoke-virtual {p0}, Lcom/miui/home/launcher/DeviceProfile;->getWidgetCellWidth()I
+
+    move-result v1
+
+    iput v1, v0, Landroid/graphics/Point;->x:I
+
+    .line 154
+    invoke-virtual {p0}, Lcom/miui/home/launcher/DeviceProfile;->getWidgetCellHeight()I
+
+    move-result v1
+
+    iput v1, v0, Landroid/graphics/Point;->y:I
+
+    return-object v0
+.end method
+
+.method public final getWidgetCellWidth()I
+    .locals 1
+
+    .line 148
+    iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mWidgetCellWidth:I
 
     return v0
 .end method
@@ -272,10 +369,10 @@
 .method public final initScreenSize(II)V
     .locals 2
 
-    .line 66
+    .line 69
     iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
 
-    .line 67
+    .line 70
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceCellPaddingSide()I
@@ -288,22 +385,22 @@
 
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingWidth:I
 
-    .line 68
+    .line 71
     iput p2, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenHeight:I
 
-    .line 69
+    .line 72
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenHeight:I
 
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mRealScreenHeight:I
 
-    .line 70
+    .line 73
     invoke-static {p1, p2}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenLongSize:I
 
-    .line 71
+    .line 74
     invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
 
     move-result p1
@@ -316,7 +413,7 @@
 .method public final setCellWorkingHeight(I)V
     .locals 0
 
-    .line 112
+    .line 118
     iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingHeight:I
 
     return-void
@@ -325,14 +422,14 @@
 .method public final subNavigationBarHeight(Landroid/content/Context;)V
     .locals 1
 
-    .line 124
+    .line 130
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowNavigationBar()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 125
+    .line 131
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mRealScreenHeight:I
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->getNavigationBarHeight(Landroid/content/Context;)I
@@ -350,7 +447,7 @@
 .method public final updateDeviceSize(II)Z
     .locals 3
 
-    .line 51
+    .line 54
     iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mRealScreenHeight:I
 
     iget v1, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
@@ -363,7 +460,7 @@
 
     if-eq v1, p2, :cond_2
 
-    .line 53
+    .line 56
     :cond_0
     invoke-virtual {p0, p2, p1}, Lcom/miui/home/launcher/DeviceProfile;->initScreenSize(II)V
 
@@ -381,7 +478,7 @@
 
     return p1
 
-    .line 58
+    .line 61
     :cond_3
     :goto_0
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/DeviceProfile;->initScreenSize(II)V

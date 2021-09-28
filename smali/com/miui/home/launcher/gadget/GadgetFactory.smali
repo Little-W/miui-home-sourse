@@ -114,7 +114,7 @@
     const/4 v2, 0x1
 
     .line 198
-    invoke-static {p0, v1, v2}, Lmiui/util/MiuiFeatureUtils;->isLocalFeatureSupported(Landroid/content/Context;Ljava/lang/String;Z)Z
+    invoke-static {p0, v1, v2}, Lcom/miui/home/library/utils/MiuiFeatureUtils;->isLocalFeatureSupported(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result v1
 
@@ -310,11 +310,11 @@
 
     const/4 v3, 0x3
 
-    const v4, 0x7f100127
+    const v4, 0x7f1001bc
 
-    const v5, 0x7f080118
+    const v5, 0x7f08013f
 
-    const v6, 0x7f080117
+    const v6, 0x7f08013e
 
     const/4 v7, 0x2
 
@@ -337,11 +337,11 @@
 
     const/4 v3, 0x2
 
-    const v4, 0x7f100127
+    const v4, 0x7f1001bc
 
-    const v5, 0x7f080118
+    const v5, 0x7f08013f
 
-    const v6, 0x7f080117
+    const v6, 0x7f08013e
 
     const/4 v7, 0x2
 
@@ -591,9 +591,9 @@
 
     const/4 v3, 0x1
 
-    const v4, 0x7f100131
+    const v4, 0x7f1001c6
 
-    const v5, 0x7f080126
+    const v5, 0x7f08014d
 
     const/4 v6, -0x1
 
@@ -615,11 +615,11 @@
 
     const/4 v3, 0x1
 
-    const v4, 0x7f100129
+    const v4, 0x7f1001be
 
-    const v5, 0x7f080121
+    const v5, 0x7f080148
 
-    const v6, 0x7f080122
+    const v6, 0x7f080149
 
     const/4 v7, 0x5
 
@@ -639,9 +639,9 @@
 
     const/4 v3, 0x1
 
-    const v4, 0x7f100121
+    const v4, 0x7f1001b6
 
-    const v5, 0x7f080113
+    const v5, 0x7f08013a
 
     const/4 v6, -0x1
 
@@ -663,11 +663,11 @@
 
     const/4 v3, 0x3
 
-    const v4, 0x7f100126
+    const v4, 0x7f1001bb
 
-    const v5, 0x7f080118
+    const v5, 0x7f08013f
 
-    const v6, 0x7f08011a
+    const v6, 0x7f080141
 
     const/4 v7, 0x2
 
@@ -687,11 +687,11 @@
 
     const/4 v3, 0x1
 
-    const v4, 0x7f100126
+    const v4, 0x7f1001bb
 
-    const v5, 0x7f080118
+    const v5, 0x7f08013f
 
-    const v6, 0x7f080119
+    const v6, 0x7f080140
 
     const/4 v7, 0x2
 
@@ -711,11 +711,11 @@
 
     const/4 v3, 0x2
 
-    const v4, 0x7f100126
+    const v4, 0x7f1001bb
 
-    const v5, 0x7f080118
+    const v5, 0x7f08013f
 
-    const v6, 0x7f080119
+    const v6, 0x7f080140
 
     const/4 v7, 0x2
 
@@ -735,9 +735,9 @@
 
     const/4 v3, 0x1
 
-    const v4, 0x7f100126
+    const v4, 0x7f1001bb
 
-    const v5, 0x7f080116
+    const v5, 0x7f08013d
 
     const/4 v6, -0x1
 
@@ -782,11 +782,11 @@
 
     const/4 v3, 0x2
 
-    const v4, 0x7f100124
+    const v4, 0x7f1001b9
 
-    const v5, 0x7f080118
+    const v5, 0x7f08013f
 
-    const v6, 0x7f080119
+    const v6, 0x7f080140
 
     const/4 v7, 0x2
 

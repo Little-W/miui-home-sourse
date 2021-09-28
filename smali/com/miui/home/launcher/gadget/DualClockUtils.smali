@@ -226,7 +226,7 @@
     .locals 0
 
     .line 123
-    invoke-static {p1, p0}, Lmiui/os/FileUtils;->copyFile(Ljava/io/File;Ljava/io/File;)Z
+    invoke-static {p1, p0}, Lmiuix/core/util/FileUtils;->copyFile(Ljava/io/File;Ljava/io/File;)Z
 
     move-result p0
 

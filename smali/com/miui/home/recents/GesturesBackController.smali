@@ -213,6 +213,7 @@
 
     if-ne v2, v5, :cond_1
 
+    .line 165
     iget v2, p0, Lcom/miui/home/recents/GesturesBackController;->mDownX:F
 
     sub-float/2addr v0, v2
@@ -336,6 +337,7 @@
 
     if-ne v2, v5, :cond_3
 
+    .line 193
     iget v2, p0, Lcom/miui/home/recents/GesturesBackController;->mDownX:F
 
     sub-float/2addr v0, v2
@@ -612,7 +614,7 @@
     :cond_2
     if-ne v1, v3, :cond_3
 
-    .line 117
+    .line 118
     iget v1, p0, Lcom/miui/home/recents/GesturesBackController;->mWithoutAnimatingDownX:F
 
     sub-float/2addr v0, v1

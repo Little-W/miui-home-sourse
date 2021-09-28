@@ -71,9 +71,9 @@
     iput-boolean p1, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mIsCloudRequest:Z
 
     .line 131
-    new-instance p1, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$n46OjT9oh4t72qDYqNT9KHxb9Ow;
+    new-instance p1, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$jZ5G57aEByXXdukjKZbjzuBHAoE;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$n46OjT9oh4t72qDYqNT9KHxb9Ow;-><init>(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$jZ5G57aEByXXdukjKZbjzuBHAoE;-><init>(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;)V
 
     iput-object p1, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mCloudCallback:Ljava/util/function/Consumer;
 
@@ -210,7 +210,20 @@
     return v0
 .end method
 
-.method public static synthetic lambda$handleClick$431(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Ljava/util/List;IJ)V
+.method static synthetic lambda$handleClick$2(Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;
+    .locals 0
+
+    .line 91
+    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->getData()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;
+
+    return-object p0
+.end method
+
+.method public static synthetic lambda$handleClick$3(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Ljava/util/List;IJ)V
     .locals 2
 
     .line 88
@@ -220,7 +233,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$bfM_2RblsaXGG9N4SDJwC_e2rzI;->INSTANCE:Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$bfM_2RblsaXGG9N4SDJwC_e2rzI;
+    sget-object v1, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$LclmSWm2sJRKmuXRMTMZWiA2hC4;->INSTANCE:Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$LclmSWm2sJRKmuXRMTMZWiA2hC4;
 
     .line 89
     invoke-static {p1, v1}, Lcom/miui/home/launcher/commercial/CommercialCommons;->getFromRecommendInfoList(Ljava/util/List;Ljava/util/function/Function;)Ljava/util/List;
@@ -232,7 +245,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$new$434(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Ljava/util/List;)V
+.method public static synthetic lambda$new$6(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Ljava/util/List;)V
     .locals 5
 
     const/4 v0, 0x0
@@ -309,38 +322,16 @@
     return-void
 .end method
 
-.method static synthetic lambda$null$430(Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;
+.method public static synthetic lambda$requestCloudRecommend$7(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/FolderInfo;Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 91
-    invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;->getData()Ljava/lang/Object;
+    .line 154
+    invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->requestCloudRecommend(Lcom/miui/home/launcher/FolderInfo;Ljava/util/function/Consumer;)V
 
-    move-result-object p0
-
-    check-cast p0, Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;
-
-    return-object p0
+    return-void
 .end method
 
-.method static synthetic lambda$null$432(Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;)Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;
-    .locals 1
-
-    if-eqz p0, :cond_0
-
-    .line 111
-    new-instance v0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;
-
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;-><init>(Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;)V
-
-    return-object v0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method static synthetic lambda$null$436(Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;)Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;
+.method static synthetic lambda$requestCloudRecommend$8(Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;)Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;
     .locals 1
 
     .line 170
@@ -351,16 +342,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$requestCloudRecommend$435(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/FolderInfo;Ljava/util/function/Consumer;)V
-    .locals 0
-
-    .line 154
-    invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->requestCloudRecommend(Lcom/miui/home/launcher/FolderInfo;Ljava/util/function/Consumer;)V
-
-    return-void
-.end method
-
-.method public static synthetic lambda$requestCloudRecommend$437(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/FolderInfo;Ljava/lang/Void;)Ljava/util/List;
+.method public static synthetic lambda$requestCloudRecommend$9(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/FolderInfo;Ljava/lang/Void;)Ljava/util/List;
     .locals 3
 
     const/4 p2, 0x2
@@ -418,7 +400,7 @@
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 169
-    sget-object v0, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$2cXW5Q84PptTjyMJvc-PeqWgiM8;->INSTANCE:Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$2cXW5Q84PptTjyMJvc-PeqWgiM8;
+    sget-object v0, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$WJknJEczkuZcjZxKAWBWg0SpPJY;->INSTANCE:Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$WJknJEczkuZcjZxKAWBWg0SpPJY;
 
     invoke-static {p2, v0}, Lcom/miui/home/launcher/commercial/CommercialCommons;->buildRecommendInfoList(Ljava/util/List;Ljava/util/function/Function;)Ljava/util/List;
 
@@ -470,7 +452,25 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$requestGuessRecommend$433(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/FolderInfo;Ljava/lang/Void;)Ljava/util/List;
+.method static synthetic lambda$requestGuessRecommend$4(Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;)Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    .line 111
+    new-instance v0, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;
+
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;-><init>(Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;)V
+
+    return-object v0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static synthetic lambda$requestGuessRecommend$5(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/FolderInfo;Ljava/lang/Void;)Ljava/util/List;
     .locals 2
 
     const/4 p2, 0x1
@@ -528,7 +528,7 @@
     invoke-static {p2, v0}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 108
-    sget-object p2, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$5A9-7wmPzfv19E_4qt2qKknOW9I;->INSTANCE:Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$5A9-7wmPzfv19E_4qt2qKknOW9I;
+    sget-object p2, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$5eMV88no75o4ILpxDW5N20EJTN8;->INSTANCE:Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$5eMV88no75o4ILpxDW5N20EJTN8;
 
     invoke-static {p1, p2}, Lcom/miui/home/launcher/commercial/CommercialCommons;->buildRecommendInfoList(Ljava/util/List;Ljava/util/function/Function;)Ljava/util/List;
 
@@ -563,7 +563,7 @@
     return-object p1
 .end method
 
-.method static synthetic lambda$setPreinstallAdList$438(Lcom/miui/home/launcher/FolderInfo;)V
+.method static synthetic lambda$setPreinstallAdList$10(Lcom/miui/home/launcher/FolderInfo;)V
     .locals 0
 
     .line 318
@@ -578,7 +578,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$trackViewEvent$429(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;I)V
+.method public static synthetic lambda$trackViewEvent$1(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;I)V
     .locals 1
 
     .line 80
@@ -601,7 +601,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$uploadFirstFolderRecommendAdInfo$428(Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;)V
+.method static synthetic lambda$uploadFirstFolderRecommendAdInfo$0(Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;)V
     .locals 2
 
     .line 70
@@ -719,9 +719,9 @@
     invoke-static {p1, v0}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 317
-    new-instance p1, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$xphzMYC4HItQXj9sYG1n5CsNGuQ;
+    new-instance p1, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$M0aYj_dRZDP0tFEC2TbcxyDmHJM;
 
-    invoke-direct {p1, p2}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$xphzMYC4HItQXj9sYG1n5CsNGuQ;-><init>(Lcom/miui/home/launcher/FolderInfo;)V
+    invoke-direct {p1, p2}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$M0aYj_dRZDP0tFEC2TbcxyDmHJM;-><init>(Lcom/miui/home/launcher/FolderInfo;)V
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->useLauncherToRunOnUiThread(Ljava/lang/Runnable;)Z
 
@@ -741,9 +741,9 @@
     if-eqz v0, :cond_0
 
     .line 69
-    new-instance v1, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$QTOmov7Aj7wg468ElI9wZxvekVI;
+    new-instance v1, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$PhzXWDOekiZsD4JXMUEeJrqCrmM;
 
-    invoke-direct {v1, v0}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$QTOmov7Aj7wg468ElI9wZxvekVI;-><init>(Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;)V
+    invoke-direct {v1, v0}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$PhzXWDOekiZsD4JXMUEeJrqCrmM;-><init>(Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;)V
 
     invoke-static {v1}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -1025,7 +1025,7 @@
     .end annotation
 
     .line 87
-    new-instance v6, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$35eqLhdkPn5Bxr6AlvgKlgtO_Ko;
+    new-instance v6, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$F8yIgY3pu4bh0MSLZc-dIc2_ix4;
 
     move-object v0, v6
 
@@ -1037,7 +1037,7 @@
 
     move-wide v4, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$35eqLhdkPn5Bxr6AlvgKlgtO_Ko;-><init>(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Ljava/util/List;IJ)V
+    invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$F8yIgY3pu4bh0MSLZc-dIc2_ix4;-><init>(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Ljava/util/List;IJ)V
 
     invoke-static {v6}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -1467,12 +1467,10 @@
     .line 54
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/LauncherApplication;
-
-    move-result-object v0
+    invoke-static {v0}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/Application;
 
     .line 55
-    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher()Lcom/miui/home/launcher/Launcher;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
@@ -1564,9 +1562,9 @@
     if-gez v1, :cond_2
 
     .line 154
-    new-instance v0, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$Gf7E1Pz_onKQbl08TE5s7iGW2G4;
+    new-instance v0, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$7J4E0SsIxCiybK8Dad4Cc8Xtu8U;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$Gf7E1Pz_onKQbl08TE5s7iGW2G4;-><init>(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/FolderInfo;Ljava/util/function/Consumer;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$7J4E0SsIxCiybK8Dad4Cc8Xtu8U;-><init>(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/FolderInfo;Ljava/util/function/Consumer;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mDelayCloudRequest:Ljava/lang/Runnable;
 
@@ -1602,9 +1600,9 @@
     iput-boolean v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mIsCloudRequest:Z
 
     .line 161
-    new-instance v0, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$2yJ6jp5UC-KtptNMT0V2StlL6Mo;
+    new-instance v0, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$EiRK-Xs5oWwG6DcThIQijlsx3Hc;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$2yJ6jp5UC-KtptNMT0V2StlL6Mo;-><init>(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/FolderInfo;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$EiRK-Xs5oWwG6DcThIQijlsx3Hc;-><init>(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/FolderInfo;)V
 
     const/4 p1, 0x0
 
@@ -1651,9 +1649,9 @@
     iput-boolean v0, p0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;->mIsGuessRequest:Z
 
     .line 100
-    new-instance v0, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$5w3jfzdUYfBfJodH9VhrhO6HDDI;
+    new-instance v0, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$r5NbYjLiPiTKlSdz5iUlPNyDxRg;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$5w3jfzdUYfBfJodH9VhrhO6HDDI;-><init>(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/FolderInfo;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$r5NbYjLiPiTKlSdz5iUlPNyDxRg;-><init>(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/FolderInfo;)V
 
     const/4 p1, 0x0
 
@@ -1795,9 +1793,9 @@
     .locals 1
 
     .line 79
-    new-instance v0, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$aXi73aLCPZ13DBH9A2dpC82U_l4;
+    new-instance v0, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$9KyJFW3fNg71_XT9HKB0bqRwG-Q;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$aXi73aLCPZ13DBH9A2dpC82U_l4;-><init>(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;I)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/commercial/recommend/cn/-$$Lambda$CNRecommendController$9KyJFW3fNg71_XT9HKB0bqRwG-Q;-><init>(Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;I)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

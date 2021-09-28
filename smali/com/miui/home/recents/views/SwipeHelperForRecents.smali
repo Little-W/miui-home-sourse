@@ -142,7 +142,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f070252
+    const p2, 0x7f070362
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -462,9 +462,9 @@
 
     .line 419
     :cond_a
-    new-instance p4, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$qd6eR75usAn7vSEkmqLsCpYALJY;
+    new-instance p4, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$aN-HSdeeBCwJ7i0nJy1Hh-2FTJU;
 
-    invoke-direct {p4, p0, p1}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$qd6eR75usAn7vSEkmqLsCpYALJY;-><init>(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;)V
+    invoke-direct {p4, p0, p1}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$aN-HSdeeBCwJ7i0nJy1Hh-2FTJU;-><init>(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;)V
 
     invoke-virtual {p2, p4}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -1044,7 +1044,7 @@
     return v0
 .end method
 
-.method public static synthetic lambda$dismissChild$306(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;Landroid/animation/ValueAnimator;)V
+.method public static synthetic lambda$dismissChild$0(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;Landroid/animation/ValueAnimator;)V
     .locals 0
 
     .line 420
@@ -1065,7 +1065,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$onTouchEvent$308(FLcom/miui/home/recents/util/InOutRangeDetector;)V
+.method static synthetic lambda$onTouchEvent$2(FLcom/miui/home/recents/util/InOutRangeDetector;)V
     .locals 0
 
     if-eqz p1, :cond_0
@@ -1077,7 +1077,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$snapChild$307(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;F)V
+.method public static synthetic lambda$snapChild$1(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;F)V
     .locals 1
 
     const/4 v0, 0x0
@@ -1202,9 +1202,9 @@
     const/4 v2, 0x0
 
     :goto_0
-    new-instance v4, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$qQGHBDl-qMWwSf6_roIk9rwOgaE;
+    new-instance v4, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$hijYoRScuED9YDP7G4o-MNAzUyI;
 
-    invoke-direct {v4, p0, p1, p2}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$qQGHBDl-qMWwSf6_roIk9rwOgaE;-><init>(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;F)V
+    invoke-direct {v4, p0, p1, p2}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$hijYoRScuED9YDP7G4o-MNAzUyI;-><init>(Lcom/miui/home/recents/views/SwipeHelperForRecents;Landroid/view/View;F)V
 
     invoke-virtual {v0, v1, v2, v4}, Lcom/miui/home/recents/util/SpringAnimationUtils;->startTaskViewSnapAnim(Lcom/miui/home/recents/views/TaskView;ZLjava/lang/Runnable;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
@@ -1277,7 +1277,7 @@
 .method protected createTranslationAnimation(Landroid/view/View;F)Landroid/animation/ObjectAnimator;
     .locals 3
 
-    .line 137
+    .line 138
     iget v0, p0, Lcom/miui/home/recents/views/SwipeHelperForRecents;->mSwipeDirection:I
 
     if-nez v0, :cond_0
@@ -1298,6 +1298,7 @@
 
     aput p2, v1, v2
 
+    .line 137
     invoke-static {p1, v0, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object p1
@@ -1947,9 +1948,9 @@
     move-result p1
 
     .line 557
-    new-instance v0, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$YkEEEPWxLuSpLh973nh10OLv3HU;
+    new-instance v0, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$Ozj3kGFpdvcXcVMpxeTqb44_weg;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$YkEEEPWxLuSpLh973nh10OLv3HU;-><init>(F)V
+    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/-$$Lambda$SwipeHelperForRecents$Ozj3kGFpdvcXcVMpxeTqb44_weg;-><init>(F)V
 
     invoke-direct {p0, v0}, Lcom/miui/home/recents/views/SwipeHelperForRecents;->forAllDetectors(Ljava/util/function/Consumer;)V
 

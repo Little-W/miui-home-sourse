@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/ActivityObserverLauncherImpl;)V
     .locals 0
 
-    .line 59
+    .line 63
     iput-object p1, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl$1;->this$0:Lcom/miui/home/recents/ActivityObserverLauncherImpl;
 
     invoke-direct {p0}, Landroid/app/IMiuiActivityObserver$Stub;-><init>()V
@@ -40,7 +40,7 @@
         }
     .end annotation
 
-    .line 122
+    .line 126
     iget-object v0, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl$1;->this$0:Lcom/miui/home/recents/ActivityObserverLauncherImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->access$100(Lcom/miui/home/recents/ActivityObserverLauncherImpl;)Landroid/os/Handler;
@@ -64,7 +64,7 @@
         }
     .end annotation
 
-    .line 63
+    .line 67
     iget-object v0, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl$1;->this$0:Lcom/miui/home/recents/ActivityObserverLauncherImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->access$100(Lcom/miui/home/recents/ActivityObserverLauncherImpl;)Landroid/os/Handler;
@@ -88,7 +88,7 @@
         }
     .end annotation
 
-    .line 94
+    .line 98
     iget-object v0, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl$1;->this$0:Lcom/miui/home/recents/ActivityObserverLauncherImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->access$100(Lcom/miui/home/recents/ActivityObserverLauncherImpl;)Landroid/os/Handler;
@@ -112,7 +112,7 @@
         }
     .end annotation
 
-    .line 77
+    .line 81
     iget-object v0, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl$1;->this$0:Lcom/miui/home/recents/ActivityObserverLauncherImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->access$100(Lcom/miui/home/recents/ActivityObserverLauncherImpl;)Landroid/os/Handler;
@@ -136,7 +136,7 @@
         }
     .end annotation
 
-    .line 108
+    .line 112
     iget-object v0, p0, Lcom/miui/home/recents/ActivityObserverLauncherImpl$1;->this$0:Lcom/miui/home/recents/ActivityObserverLauncherImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/ActivityObserverLauncherImpl;->access$100(Lcom/miui/home/recents/ActivityObserverLauncherImpl;)Landroid/os/Handler;

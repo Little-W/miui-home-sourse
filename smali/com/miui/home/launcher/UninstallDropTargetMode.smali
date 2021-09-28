@@ -24,7 +24,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 22
-    sget-object v0, Lcom/miui/home/launcher/-$$Lambda$UninstallDropTargetMode$_IL09Vil2enSS0uRfLBT2OORr2A;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$UninstallDropTargetMode$_IL09Vil2enSS0uRfLBT2OORr2A;
+    sget-object v0, Lcom/miui/home/launcher/-$$Lambda$UninstallDropTargetMode$nEd7yPggf5VPzuDIu2tSA0fbL08;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$UninstallDropTargetMode$nEd7yPggf5VPzuDIu2tSA0fbL08;
 
     iput-object v0, p0, Lcom/miui/home/launcher/UninstallDropTargetMode;->mStartUninstallDialogRunnable:Ljava/lang/Runnable;
 
@@ -72,7 +72,7 @@
     return-object p0
 .end method
 
-.method static synthetic lambda$new$210()V
+.method static synthetic lambda$new$0()V
     .locals 1
 
     .line 23

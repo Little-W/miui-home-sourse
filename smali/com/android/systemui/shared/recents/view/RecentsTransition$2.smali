@@ -1,4 +1,4 @@
-.class final Lcom/android/systemui/shared/recents/view/RecentsTransition$2;
+.class Lcom/android/systemui/shared/recents/view/RecentsTransition$2;
 .super Landroid/os/IRemoteCallback$Stub;
 .source "RecentsTransition.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

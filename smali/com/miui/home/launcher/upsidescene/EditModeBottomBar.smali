@@ -26,7 +26,7 @@
 
 .field private mEditModeDraggingTip:Landroid/widget/TextView;
 
-.field private mEditModeFreeButton:Lmiui/widget/ScreenView;
+.field private mEditModeFreeButton:Lcom/miui/home/launcher/ScreenView;
 
 .field private mEditModeMoveTip:Landroid/widget/TextView;
 
@@ -47,7 +47,7 @@
 
     const/4 v0, 0x0
 
-    .line 58
+    .line 57
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -58,7 +58,7 @@
 
     const/4 v0, 0x0
 
-    .line 62
+    .line 61
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -67,10 +67,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 66
+    .line 65
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 67
+    .line 66
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
 
     return-void
@@ -79,7 +79,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;)Lcom/miui/home/launcher/upsidescene/SceneScreen;
     .locals 0
 
-    .line 34
+    .line 33
     iget-object p0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     return-object p0
@@ -88,7 +88,7 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;Landroid/view/View;)V
     .locals 0
 
-    .line 34
+    .line 33
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->selectTab(Landroid/view/View;)V
 
     return-void
@@ -97,31 +97,31 @@
 .method private buildBottomWidgetDragSources()V
     .locals 12
 
-    const v0, 0x7f0a009c
+    const v0, 0x7f0a00be
 
-    .line 288
+    .line 287
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 289
+    .line 288
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->removeAllViews()V
 
-    .line 292
+    .line 291
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 293
+    .line 292
     new-instance v2, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0800f1
+    const v4, 0x7f080118
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -129,9 +129,9 @@
 
     iget-object v4, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f100111
+    const v5, 0x7f1001a3
 
-    .line 294
+    .line 293
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -144,17 +144,17 @@
 
     invoke-direct {v2, v3, v4, v5}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;-><init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 293
+    .line 292
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 296
+    .line 295
     new-instance v2, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0800f3
+    const v4, 0x7f08011a
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -162,9 +162,9 @@
 
     iget-object v4, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f10010d
+    const v5, 0x7f10019f
 
-    .line 297
+    .line 296
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -177,17 +177,17 @@
 
     invoke-direct {v2, v3, v4, v5}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;-><init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 296
+    .line 295
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 299
+    .line 298
     new-instance v2, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f0800f2
+    const v4, 0x7f080119
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -195,9 +195,9 @@
 
     iget-object v4, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f100115
+    const v5, 0x7f1001a7
 
-    .line 300
+    .line 299
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -210,17 +210,17 @@
 
     invoke-direct {v2, v3, v4, v5}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;-><init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 299
+    .line 298
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 302
+    .line 301
     new-instance v2, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    const v4, 0x7f080128
+    const v4, 0x7f08014f
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -228,9 +228,9 @@
 
     iget-object v4, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f10026b
+    const v5, 0x7f100397
 
-    .line 303
+    .line 302
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v4
@@ -243,10 +243,10 @@
 
     invoke-direct {v2, v3, v4, v5}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;-><init>(Landroid/graphics/drawable/Drawable;Ljava/lang/String;Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 302
+    .line 301
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 306
+    .line 305
     new-instance v2, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     iget-object v3, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
@@ -257,12 +257,12 @@
 
     iput-object v2, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceShortcut:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
-    .line 307
+    .line 306
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceShortcut:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {v2, v1}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setItemDatas(Ljava/util/List;)V
 
-    .line 308
+    .line 307
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceShortcut:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
@@ -277,19 +277,19 @@
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setDragController(Lcom/miui/home/launcher/DragController;)V
 
-    .line 309
+    .line 308
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceShortcut:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     const/4 v2, -0x1
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;II)V
 
-    .line 312
+    .line 311
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 313
+    .line 312
     iget-object v3, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getFreeStyle()Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
@@ -318,14 +318,14 @@
 
     check-cast v4, Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;
 
-    .line 314
+    .line 313
     invoke-virtual {v4}, Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;->getPreviewImage()Landroid/graphics/Bitmap;
 
     move-result-object v5
 
     if-eqz v5, :cond_0
 
-    .line 315
+    .line 314
     new-instance v5, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;
 
     new-instance v8, Landroid/graphics/drawable/BitmapDrawable;
@@ -348,7 +348,7 @@
 
     goto :goto_0
 
-    .line 319
+    .line 318
     :cond_1
     new-instance v3, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
@@ -362,17 +362,17 @@
 
     iput-object v3, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceFreeButton:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
-    .line 320
+    .line 319
     iget-object v3, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceFreeButton:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {v3, v1}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setItemDatas(Ljava/util/List;)V
 
-    .line 321
+    .line 320
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceFreeButton:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {v1, v7}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setVisibility(I)V
 
-    .line 322
+    .line 321
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceFreeButton:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     iget-object v3, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
@@ -387,17 +387,17 @@
 
     invoke-virtual {v1, v3}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setDragController(Lcom/miui/home/launcher/DragController;)V
 
-    .line 323
+    .line 322
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceFreeButton:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;II)V
 
-    .line 326
+    .line 325
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 329
+    .line 328
     iget-object v3, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getFreeStyle()Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
@@ -426,12 +426,12 @@
 
     check-cast v4, Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;
 
-    .line 330
+    .line 329
     iget-object v5, v4, Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;->preview:Landroid/graphics/Bitmap;
 
     if-eqz v5, :cond_2
 
-    .line 331
+    .line 330
     new-instance v5, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;
 
     new-instance v9, Landroid/graphics/drawable/BitmapDrawable;
@@ -452,13 +452,13 @@
 
     goto :goto_1
 
-    .line 336
+    .line 335
     :cond_3
     invoke-static {}, Lcom/miui/home/launcher/gadget/GadgetFactory;->getNoMtzGadgetInfos()[Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     move-result-object v3
 
-    .line 337
+    .line 336
     array-length v4, v3
 
     :goto_2
@@ -468,7 +468,7 @@
 
     if-eqz v5, :cond_4
 
-    .line 339
+    .line 338
     new-instance v9, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->getContext()Landroid/content/Context;
@@ -496,7 +496,7 @@
 
     goto :goto_2
 
-    .line 344
+    .line 343
     :cond_5
     iget-object v3, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
 
@@ -504,19 +504,19 @@
 
     move-result-object v3
 
-    .line 345
+    .line 344
     iget-object v4, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
 
     invoke-static {v4}, Landroid/appwidget/AppWidgetManager;->getInstance(Landroid/content/Context;)Landroid/appwidget/AppWidgetManager;
 
     move-result-object v4
 
-    .line 346
+    .line 345
     invoke-virtual {v4}, Landroid/appwidget/AppWidgetManager;->getInstalledProviders()Ljava/util/List;
 
     move-result-object v4
 
-    .line 347
+    .line 346
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -534,7 +534,7 @@
 
     check-cast v5, Landroid/appwidget/AppWidgetProviderInfo;
 
-    .line 348
+    .line 347
     iget-object v8, v5, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
     invoke-virtual {v8}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -549,30 +549,14 @@
 
     move-result-object v8
 
+    .line 348
+    iget-object v9, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
+
+    invoke-static {v9, v5}, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->fromProviderInfo(Landroid/content/Context;Landroid/appwidget/AppWidgetProviderInfo;)Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
+
+    move-result-object v9
+
     .line 349
-    new-instance v9, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
-
-    invoke-direct {v9, v5}, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;-><init>(Landroid/appwidget/AppWidgetProviderInfo;)V
-
-    .line 350
-    iget v10, v5, Landroid/appwidget/AppWidgetProviderInfo;->minWidth:I
-
-    invoke-static {v10}, Lcom/miui/home/launcher/DeviceConfig;->getWidgetSpanX(I)I
-
-    move-result v10
-
-    iput v10, v9, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->spanX:I
-
-    .line 351
-    iget v10, v5, Landroid/appwidget/AppWidgetProviderInfo;->minHeight:I
-
-    invoke-static {v10}, Lcom/miui/home/launcher/DeviceConfig;->getWidgetSpanY(I)I
-
-    move-result v10
-
-    iput v10, v9, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->spanY:I
-
-    .line 352
     new-instance v10, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;
 
     iget-object v5, v5, Landroid/appwidget/AppWidgetProviderInfo;->label:Ljava/lang/String;
@@ -583,7 +567,7 @@
 
     goto :goto_3
 
-    .line 355
+    .line 352
     :cond_6
     new-instance v3, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
@@ -595,17 +579,17 @@
 
     iput-object v3, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceTool:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
-    .line 356
+    .line 353
     iget-object v3, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceTool:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {v3, v1}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setItemDatas(Ljava/util/List;)V
 
-    .line 357
+    .line 354
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceTool:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {v1, v7}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setVisibility(I)V
 
-    .line 358
+    .line 355
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceTool:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     iget-object v3, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
@@ -620,7 +604,7 @@
 
     invoke-virtual {v1, v3}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setDragController(Lcom/miui/home/launcher/DragController;)V
 
-    .line 359
+    .line 356
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceTool:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;II)V
@@ -631,7 +615,7 @@
 .method private selectTab(Landroid/view/View;)V
     .locals 5
 
-    .line 181
+    .line 180
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelShortcut:Landroid/view/View;
 
     const/4 v1, 0x1
@@ -642,102 +626,102 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 182
+    .line 181
     invoke-virtual {v0, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 183
+    .line 182
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelFreeButton:Landroid/view/View;
 
     invoke-virtual {p1, v3}, Landroid/view/View;->setSelected(Z)V
 
-    .line 184
+    .line 183
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelWidget:Landroid/view/View;
 
     invoke-virtual {p1, v3}, Landroid/view/View;->setSelected(Z)V
 
-    .line 185
+    .line 184
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceShortcut:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {p1, v3}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setVisibility(I)V
 
-    .line 186
+    .line 185
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceFreeButton:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {p1, v2}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setVisibility(I)V
 
-    .line 187
+    .line 186
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceTool:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {p1, v2}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 188
+    .line 187
     :cond_0
     iget-object v4, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelFreeButton:Landroid/view/View;
 
     if-ne p1, v4, :cond_1
 
-    .line 189
+    .line 188
     invoke-virtual {v0, v3}, Landroid/view/View;->setSelected(Z)V
 
-    .line 190
+    .line 189
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelFreeButton:Landroid/view/View;
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 191
+    .line 190
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelWidget:Landroid/view/View;
 
     invoke-virtual {p1, v3}, Landroid/view/View;->setSelected(Z)V
 
-    .line 192
+    .line 191
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceShortcut:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {p1, v2}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setVisibility(I)V
 
-    .line 193
+    .line 192
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceFreeButton:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {p1, v3}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setVisibility(I)V
 
-    .line 194
+    .line 193
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceTool:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {p1, v2}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 195
+    .line 194
     :cond_1
     iget-object v4, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelWidget:Landroid/view/View;
 
     if-ne p1, v4, :cond_2
 
-    .line 196
+    .line 195
     invoke-virtual {v0, v3}, Landroid/view/View;->setSelected(Z)V
 
-    .line 197
+    .line 196
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelFreeButton:Landroid/view/View;
 
     invoke-virtual {p1, v3}, Landroid/view/View;->setSelected(Z)V
 
-    .line 198
+    .line 197
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelWidget:Landroid/view/View;
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 199
+    .line 198
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceShortcut:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {p1, v2}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setVisibility(I)V
 
-    .line 200
+    .line 199
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceFreeButton:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {p1, v2}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setVisibility(I)V
 
-    .line 201
+    .line 200
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mBottomItemsDragSourceTool:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-virtual {p1, v3}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setVisibility(I)V
@@ -752,7 +736,7 @@
 .method public calcHeight()I
     .locals 1
 
-    .line 210
+    .line 209
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -767,12 +751,12 @@
 .method protected onAttachedToWindow()V
     .locals 11
 
-    .line 83
+    .line 82
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
-    const v0, 0x7f0a00ae
+    const v0, 0x7f0a00d1
 
-    .line 85
+    .line 84
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -781,9 +765,9 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeMoveTip:Landroid/widget/TextView;
 
-    const v0, 0x7f0a00a7
+    const v0, 0x7f0a00ca
 
-    .line 86
+    .line 85
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -792,20 +776,20 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeDraggingTip:Landroid/widget/TextView;
 
-    const v0, 0x7f0a00a8
+    const v0, 0x7f0a00cb
 
-    .line 87
+    .line 86
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lmiui/widget/ScreenView;
+    check-cast v0, Lcom/miui/home/launcher/ScreenView;
 
-    iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lmiui/widget/ScreenView;
+    iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lcom/miui/home/launcher/ScreenView;
 
-    const v0, 0x7f0a00a5
+    const v0, 0x7f0a00c8
 
-    .line 89
+    .line 88
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -814,238 +798,238 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditDragSource:Landroid/view/ViewGroup;
 
-    const v0, 0x7f0a01b5
+    const v0, 0x7f0a01ff
 
-    .line 90
+    .line 89
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelShortcut:Landroid/view/View;
 
-    const v0, 0x7f0a01b4
+    const v0, 0x7f0a01fe
 
-    .line 91
+    .line 90
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelFreeButton:Landroid/view/View;
 
-    const v0, 0x7f0a01b6
+    const v0, 0x7f0a0200
 
-    .line 92
+    .line 91
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelWidget:Landroid/view/View;
 
-    const v0, 0x7f0a00ab
+    const v0, 0x7f0a00ce
 
-    .line 94
+    .line 93
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const v1, 0x7f0a00a9
+    const v1, 0x7f0a00cc
 
-    .line 95
+    .line 94
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    const v2, 0x7f0a00ac
+    const v2, 0x7f0a00cf
 
-    .line 96
+    .line 95
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    const v3, 0x7f0a00aa
+    const v3, 0x7f0a00cd
 
-    .line 97
+    .line 96
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    const v4, 0x7f0a00ad
+    const v4, 0x7f0a00d0
 
-    .line 98
+    .line 97
     invoke-virtual {p0, v4}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
-    const v5, 0x7f0a0107
+    const v5, 0x7f0a0134
 
-    .line 100
+    .line 99
     invoke-virtual {v0, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
     check-cast v6, Landroid/widget/TextView;
 
-    .line 101
+    .line 100
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v7
 
     check-cast v7, Landroid/widget/TextView;
 
-    .line 102
+    .line 101
     invoke-virtual {v2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v8
 
     check-cast v8, Landroid/widget/TextView;
 
-    .line 103
+    .line 102
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v9
 
     check-cast v9, Landroid/widget/TextView;
 
-    .line 104
+    .line 103
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
     check-cast v5, Landroid/widget/TextView;
 
-    const v10, 0x7f100112
+    const v10, 0x7f1001a4
 
-    .line 105
+    .line 104
     invoke-virtual {v6, v10}, Landroid/widget/TextView;->setText(I)V
 
-    const v6, 0x7f100111
+    const v6, 0x7f1001a3
 
-    .line 106
+    .line 105
     invoke-virtual {v7, v6}, Landroid/widget/TextView;->setText(I)V
 
-    const v6, 0x7f10010d
+    const v6, 0x7f10019f
 
-    .line 107
+    .line 106
     invoke-virtual {v8, v6}, Landroid/widget/TextView;->setText(I)V
 
-    const v6, 0x7f100115
+    const v6, 0x7f1001a7
 
-    .line 108
+    .line 107
     invoke-virtual {v9, v6}, Landroid/widget/TextView;->setText(I)V
 
-    const v6, 0x7f10026b
+    const v6, 0x7f100397
 
-    .line 109
+    .line 108
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
 
-    const v5, 0x7f0a00f2
+    const v5, 0x7f0a011a
 
-    .line 111
+    .line 110
     invoke-virtual {v0, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
     check-cast v6, Landroid/widget/ImageView;
 
-    .line 112
+    .line 111
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v7
 
     check-cast v7, Landroid/widget/ImageView;
 
-    .line 113
+    .line 112
     invoke-virtual {v2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v8
 
     check-cast v8, Landroid/widget/ImageView;
 
-    .line 114
+    .line 113
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v9
 
     check-cast v9, Landroid/widget/ImageView;
 
-    .line 115
+    .line 114
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
     check-cast v5, Landroid/widget/ImageView;
 
-    const v10, 0x7f0800ee
+    const v10, 0x7f080115
 
-    .line 116
+    .line 115
     invoke-virtual {v6, v10}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v6, 0x7f0800f1
+    const v6, 0x7f080118
 
-    .line 117
+    .line 116
     invoke-virtual {v7, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v6, 0x7f0800f3
+    const v6, 0x7f08011a
 
-    .line 118
+    .line 117
     invoke-virtual {v8, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v6, 0x7f0800f2
+    const v6, 0x7f080119
 
-    .line 119
+    .line 118
     invoke-virtual {v9, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v6, 0x7f080128
+    const v6, 0x7f08014f
 
-    .line 120
+    .line 119
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v5, 0x7f0a0079
+    const v5, 0x7f0a0089
 
-    .line 122
+    .line 121
     invoke-virtual {v0, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
     iput-object v6, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonEmpty:Landroid/view/View;
 
-    .line 123
+    .line 122
     invoke-virtual {v1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
     iput-object v6, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonApp:Landroid/view/View;
 
-    .line 124
+    .line 123
     invoke-virtual {v2, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
     iput-object v6, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonFolder:Landroid/view/View;
 
-    .line 125
+    .line 124
     invoke-virtual {v3, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v6
 
     iput-object v6, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonDrawer:Landroid/view/View;
 
-    .line 126
+    .line 125
     invoke-virtual {v4, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v5
 
     iput-object v5, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonToggle:Landroid/view/View;
 
-    .line 128
-    iget-object v5, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lmiui/widget/ScreenView;
+    .line 127
+    iget-object v5, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lcom/miui/home/launcher/ScreenView;
 
     const/4 v6, 0x1
 
-    invoke-virtual {v5, v6}, Lmiui/widget/ScreenView;->setScrollWholeScreen(Z)V
+    invoke-virtual {v5, v6}, Lcom/miui/home/launcher/ScreenView;->setScrollWholeScreen(Z)V
 
-    .line 129
-    iget-object v5, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lmiui/widget/ScreenView;
+    .line 128
+    iget-object v5, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lcom/miui/home/launcher/ScreenView;
 
     new-instance v7, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -1057,16 +1041,16 @@
 
     invoke-direct {v7, v8, v9, v10}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    const v8, 0x7f0800e3
+    const v8, 0x7f08010a
 
-    const v9, 0x7f0800e4
+    const v9, 0x7f08010b
 
-    invoke-virtual {v5, v7, v8, v9, v6}, Lmiui/widget/ScreenView;->setSlideBarPosition(Landroid/widget/FrameLayout$LayoutParams;IIZ)V
+    invoke-virtual {v5, v7, v8, v9, v6}, Lcom/miui/home/launcher/ScreenView;->setSlideBarPosition(Landroid/widget/FrameLayout$LayoutParams;IIZ)V
 
-    .line 133
-    iget-object v5, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lmiui/widget/ScreenView;
+    .line 132
+    iget-object v5, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lcom/miui/home/launcher/ScreenView;
 
-    invoke-virtual {v5}, Lmiui/widget/ScreenView;->getScreenCount()I
+    invoke-virtual {v5}, Lcom/miui/home/launcher/ScreenView;->getScreenCount()I
 
     move-result v5
 
@@ -1075,14 +1059,14 @@
     :goto_0
     if-ltz v5, :cond_0
 
-    .line 134
-    iget-object v6, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lmiui/widget/ScreenView;
+    .line 133
+    iget-object v6, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lcom/miui/home/launcher/ScreenView;
 
-    invoke-virtual {v6, v5}, Lmiui/widget/ScreenView;->getScreen(I)Landroid/view/View;
+    invoke-virtual {v6, v5}, Lcom/miui/home/launcher/ScreenView;->getScreen(I)Landroid/view/View;
 
     move-result-object v6
 
-    .line 135
+    .line 134
     invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v6
@@ -1105,7 +1089,7 @@
 
     goto :goto_0
 
-    .line 138
+    .line 137
     :cond_0
     new-instance v5, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$1;
 
@@ -1113,50 +1097,50 @@
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 144
+    .line 143
     new-instance v1, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$2;
 
     invoke-direct {v1, p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$2;-><init>(Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;)V
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 150
+    .line 149
     new-instance v1, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$3;
 
     invoke-direct {v1, p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$3;-><init>(Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 157
+    .line 156
     new-instance v0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$4;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$4;-><init>(Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;)V
 
     invoke-virtual {v3, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 164
+    .line 163
     new-instance v0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$5;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$5;-><init>(Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;)V
 
     invoke-virtual {v4, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 170
+    .line 169
     new-instance v0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$6;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar$6;-><init>(Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;)V
 
-    .line 175
+    .line 174
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelShortcut:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 176
+    .line 175
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelFreeButton:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 177
+    .line 176
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelWidget:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -1167,7 +1151,7 @@
 .method protected onFinishInflate()V
     .locals 0
 
-    .line 78
+    .line 77
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
     return-void
@@ -1176,7 +1160,7 @@
 .method protected onMeasure(II)V
     .locals 2
 
-    .line 72
+    .line 71
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -1187,7 +1171,7 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 73
+    .line 72
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
     return-void
@@ -1196,7 +1180,7 @@
 .method public refreshFreeButtonCheckbox()V
     .locals 4
 
-    .line 249
+    .line 248
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getEditFocusedSprite()Lcom/miui/home/launcher/upsidescene/SpriteView;
@@ -1207,7 +1191,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
-    .line 250
+    .line 249
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getEditFocusedSprite()Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     move-result-object v0
@@ -1230,7 +1214,7 @@
 
     goto :goto_1
 
-    .line 254
+    .line 253
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonEmpty:Landroid/view/View;
 
@@ -1238,27 +1222,27 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 255
+    .line 254
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonApp:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 256
+    .line 255
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonToggle:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 257
+    .line 256
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonFolder:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 258
+    .line 257
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonDrawer:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 260
+    .line 259
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getEditFocusedSprite()Lcom/miui/home/launcher/upsidescene/SpriteView;
@@ -1269,7 +1253,7 @@
 
     move-result-object v0
 
-    .line 261
+    .line 260
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getFunction()Lcom/miui/home/launcher/upsidescene/data/Function;
 
     move-result-object v1
@@ -1286,7 +1270,7 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 283
+    .line 282
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1315,7 +1299,7 @@
 
     throw v1
 
-    .line 275
+    .line 274
     :pswitch_0
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonDrawer:Landroid/view/View;
 
@@ -1323,7 +1307,7 @@
 
     goto :goto_0
 
-    .line 271
+    .line 270
     :pswitch_1
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonFolder:Landroid/view/View;
 
@@ -1331,7 +1315,7 @@
 
     goto :goto_0
 
-    .line 267
+    .line 266
     :pswitch_2
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonApp:Landroid/view/View;
 
@@ -1339,7 +1323,7 @@
 
     goto :goto_0
 
-    .line 263
+    .line 262
     :pswitch_3
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonEmpty:Landroid/view/View;
 
@@ -1347,7 +1331,7 @@
 
     goto :goto_0
 
-    .line 279
+    .line 278
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mCkbFreeButtonToggle:Landroid/view/View;
 
@@ -1374,7 +1358,7 @@
 .method public setSceneScreen(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
     .locals 0
 
-    .line 206
+    .line 205
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     return-void
@@ -1383,25 +1367,25 @@
 .method public switchEditWidgetBar()V
     .locals 5
 
-    .line 214
+    .line 213
     iget-boolean v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mIsBuilded:Z
 
     const/4 v1, 0x1
 
     if-nez v0, :cond_0
 
-    .line 215
+    .line 214
     invoke-direct {p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->buildBottomWidgetDragSources()V
 
-    .line 216
+    .line 215
     iput-boolean v1, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mIsBuilded:Z
 
-    .line 217
+    .line 216
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelShortcut:Landroid/view/View;
 
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->selectTab(Landroid/view/View;)V
 
-    .line 219
+    .line 218
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
@@ -1415,35 +1399,35 @@
 
     if-eqz v0, :cond_1
 
-    .line 220
+    .line 219
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeDraggingTip:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 221
+    .line 220
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeMoveTip:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 221
+    iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lcom/miui/home/launcher/ScreenView;
+
+    invoke-virtual {v0, v3}, Lcom/miui/home/launcher/ScreenView;->setVisibility(I)V
+
     .line 222
-    iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lmiui/widget/ScreenView;
-
-    invoke-virtual {v0, v3}, Lmiui/widget/ScreenView;->setVisibility(I)V
-
-    .line 223
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditDragSource:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     goto :goto_1
 
-    .line 225
+    .line 224
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeDraggingTip:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 226
+    .line 225
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getEditFocusedSprite()Lcom/miui/home/launcher/upsidescene/SpriteView;
@@ -1452,30 +1436,30 @@
 
     if-nez v0, :cond_2
 
-    .line 227
+    .line 226
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeMoveTip:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
+    .line 227
+    iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lcom/miui/home/launcher/ScreenView;
+
+    invoke-virtual {v0, v3}, Lcom/miui/home/launcher/ScreenView;->setVisibility(I)V
+
     .line 228
-    iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lmiui/widget/ScreenView;
-
-    invoke-virtual {v0, v3}, Lmiui/widget/ScreenView;->setVisibility(I)V
-
-    .line 229
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditDragSource:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     goto :goto_1
 
-    .line 231
+    .line 230
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditDragSource:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 232
+    .line 231
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getEditFocusedSprite()Lcom/miui/home/launcher/upsidescene/SpriteView;
@@ -1486,7 +1470,7 @@
 
     move-result-object v0
 
-    .line 233
+    .line 232
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getAppearance()Lcom/miui/home/launcher/upsidescene/data/Appearance;
 
     move-result-object v0
@@ -1507,31 +1491,31 @@
     :goto_0
     if-eqz v1, :cond_4
 
-    .line 236
+    .line 235
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeMoveTip:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 237
-    iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lmiui/widget/ScreenView;
+    .line 236
+    iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lcom/miui/home/launcher/ScreenView;
 
-    invoke-virtual {v0, v2}, Lmiui/widget/ScreenView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Lcom/miui/home/launcher/ScreenView;->setVisibility(I)V
 
-    .line 239
+    .line 238
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->refreshFreeButtonCheckbox()V
 
     goto :goto_1
 
-    .line 241
+    .line 240
     :cond_4
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeMoveTip:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 242
-    iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lmiui/widget/ScreenView;
+    .line 241
+    iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lcom/miui/home/launcher/ScreenView;
 
-    invoke-virtual {v0, v3}, Lmiui/widget/ScreenView;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Lcom/miui/home/launcher/ScreenView;->setVisibility(I)V
 
     :goto_1
     return-void

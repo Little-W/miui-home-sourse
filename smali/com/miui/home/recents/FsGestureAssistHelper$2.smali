@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onChange$309(Lcom/miui/home/recents/FsGestureAssistHelper$2;)V
+.method public static synthetic lambda$onChange$0(Lcom/miui/home/recents/FsGestureAssistHelper$2;)V
     .locals 3
 
     .line 81
@@ -65,9 +65,9 @@
     .locals 0
 
     .line 80
-    new-instance p1, Lcom/miui/home/recents/-$$Lambda$FsGestureAssistHelper$2$JWbayaacM-fgWVgMHYeHkY8Jq1I;
+    new-instance p1, Lcom/miui/home/recents/-$$Lambda$FsGestureAssistHelper$2$ygTHn7T3gnN2g1Wd4BDz6ngo9o8;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/recents/-$$Lambda$FsGestureAssistHelper$2$JWbayaacM-fgWVgMHYeHkY8Jq1I;-><init>(Lcom/miui/home/recents/FsGestureAssistHelper$2;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/recents/-$$Lambda$FsGestureAssistHelper$2$ygTHn7T3gnN2g1Wd4BDz6ngo9o8;-><init>(Lcom/miui/home/recents/FsGestureAssistHelper$2;)V
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

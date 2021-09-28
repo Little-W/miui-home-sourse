@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/uninstall/UninstallController$5;
+.class Lcom/miui/home/launcher/uninstall/UninstallController$5;
 .super Ljava/lang/Object;
 .source "UninstallController.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -43,7 +43,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$accept$160(Lcom/miui/home/launcher/Launcher;Ljava/util/List;)V
+.method static synthetic lambda$accept$0(Lcom/miui/home/launcher/Launcher;Ljava/util/List;)V
     .locals 0
 
     .line 242
@@ -83,9 +83,9 @@
     .line 241
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController$5;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
-    new-instance v1, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$5$1IP6C1ei756qhJByGxe4GaK9BAQ;
+    new-instance v1, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$5$qvJfATj3GipxYehUbebnkYb77IM;
 
-    invoke-direct {v1, v0, p1}, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$5$1IP6C1ei756qhJByGxe4GaK9BAQ;-><init>(Lcom/miui/home/launcher/Launcher;Ljava/util/List;)V
+    invoke-direct {v1, v0, p1}, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$5$qvJfATj3GipxYehUbebnkYb77IM;-><init>(Lcom/miui/home/launcher/Launcher;Ljava/util/List;)V
 
     invoke-static {v0, p1, v1}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper;->doBoomAnim(Lcom/miui/home/launcher/Launcher;Ljava/util/List;Ljava/lang/Runnable;)V
 

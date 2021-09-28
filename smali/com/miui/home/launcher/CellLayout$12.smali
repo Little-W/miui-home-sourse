@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/CellLayout$12;
+.class Lcom/miui/home/launcher/CellLayout$12;
 .super Ljava/lang/Object;
 .source "CellLayout.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -32,14 +32,14 @@
 .method public process(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 3145
-    invoke-static {p1}, Lcom/miui/home/launcher/graphics/drawable/MamlCompat;->onPause(Landroid/graphics/drawable/Drawable;)V
-
     return-void
 .end method
 
 .method public process(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 0
+
+    .line 3148
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->updateMamlDownloadVisible()V
 
     return-void
 .end method

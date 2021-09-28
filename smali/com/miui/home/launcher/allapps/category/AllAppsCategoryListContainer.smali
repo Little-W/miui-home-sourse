@@ -84,7 +84,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f100035
+    const v0, 0x7f100037
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -110,7 +110,7 @@
 
     move-result-object p2
 
-    const v1, 0x7f10003e
+    const v1, 0x7f100040
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -134,7 +134,7 @@
 
     move-result-object p2
 
-    const v1, 0x7f100043
+    const v1, 0x7f100045
 
     invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -299,7 +299,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$onFinishInflate$294(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;Landroid/view/View;Z)V
+.method public static synthetic lambda$onFinishInflate$0(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;Landroid/view/View;Z)V
     .locals 0
 
     if-eqz p2, :cond_0
@@ -733,7 +733,11 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 241
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getModel()Lcom/miui/home/launcher/LauncherModel;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/Application;->getModel()Lcom/miui/home/launcher/LauncherModel;
 
     move-result-object v1
 
@@ -838,13 +842,13 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 89
-    new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryListContainer$H29RTpZ8_8ysGBXzplwtDXsT-C4;
+    new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryListContainer$DutaGjhjLIKiEGRvtRlUVfA3R50;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryListContainer$H29RTpZ8_8ysGBXzplwtDXsT-C4;-><init>(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AllAppsCategoryListContainer$DutaGjhjLIKiEGRvtRlUVfA3R50;-><init>(Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    const v0, 0x7f0a0048
+    const v0, 0x7f0a0052
 
     .line 95
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;->findViewById(I)Landroid/view/View;
@@ -864,7 +868,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/util/typeface/TypefaceIconView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a004a
+    const v0, 0x7f0a0054
 
     .line 105
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;->findViewById(I)Landroid/view/View;
@@ -887,7 +891,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v1
 
@@ -897,7 +901,7 @@
 
     move-result v2
 
-    invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;-><init>(Landroid/app/FragmentManager;I)V
+    invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;-><init>(Landroidx/fragment/app/FragmentManager;I)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;->mPagerAdapter:Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;
 
@@ -908,7 +912,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/view/viewpager/ViewPager;->setAdapter(Lcom/miui/home/library/view/viewpager/PagerAdapter;)V
 
-    const v0, 0x7f0a0114
+    const v0, 0x7f0a0142
 
     .line 110
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;->findViewById(I)Landroid/view/View;

@@ -7,6 +7,8 @@
 
 
 # instance fields
+.field private mContext:Landroid/content/Context;
+
 .field private mScale:F
 
 .field private mThemeCompat:Lcom/miui/home/launcher/compat/LauncherThemeCompat;
@@ -14,17 +16,20 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
-
-    .line 11
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .locals 1
 
     .line 12
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 13
     invoke-static {p1}, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/launcher/compat/LauncherThemeCompat;
 
-    move-result-object p1
+    move-result-object v0
 
-    iput-object p1, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mThemeCompat:Lcom/miui/home/launcher/compat/LauncherThemeCompat;
+    iput-object v0, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mThemeCompat:Lcom/miui/home/launcher/compat/LauncherThemeCompat;
+
+    .line 14
+    iput-object p1, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mContext:Landroid/content/Context;
 
     return-void
 .end method
@@ -34,7 +39,7 @@
 .method public getFolderPreviewHeight()I
     .locals 2
 
-    .line 30
+    .line 33
     iget-object v0, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mThemeCompat:Lcom/miui/home/launcher/compat/LauncherThemeCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->getFolderPreviewHeight()I
@@ -55,7 +60,7 @@
 .method public getFolderPreviewItemPadding()I
     .locals 2
 
-    .line 35
+    .line 38
     iget-object v0, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mThemeCompat:Lcom/miui/home/launcher/compat/LauncherThemeCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->getFolderPreviewItemPadding()I
@@ -76,7 +81,7 @@
 .method public getFolderPreviewWidth()I
     .locals 2
 
-    .line 25
+    .line 28
     iget-object v0, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mThemeCompat:Lcom/miui/home/launcher/compat/LauncherThemeCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->getFolderPreviewWidth()I
@@ -97,7 +102,7 @@
 .method public getLauncherIconHeight()I
     .locals 2
 
-    .line 45
+    .line 48
     iget-object v0, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mThemeCompat:Lcom/miui/home/launcher/compat/LauncherThemeCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->getLauncherIconHeight()I
@@ -118,7 +123,7 @@
 .method public getLauncherIconWidth()I
     .locals 2
 
-    .line 40
+    .line 43
     iget-object v0, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mThemeCompat:Lcom/miui/home/launcher/compat/LauncherThemeCompat;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->getLauncherIconWidth()I
@@ -139,7 +144,7 @@
 .method public getScale()F
     .locals 1
 
-    .line 16
+    .line 18
     iget v0, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mScale:F
 
     return v0
@@ -148,8 +153,17 @@
 .method public setScale(F)V
     .locals 0
 
-    .line 20
+    .line 22
     iput p1, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mScale:F
+
+    .line 23
+    iget-object p1, p0, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->calcIconSize(Landroid/content/res/Resources;)V
 
     return-void
 .end method

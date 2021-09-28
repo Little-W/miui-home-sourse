@@ -46,7 +46,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f010024
+    const v1, 0x7f01002c
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -57,9 +57,9 @@
     .line 49
     iget-object v0, p0, Lcom/miui/home/launcher/EditModeThumbnailView;->mEnterAnimation:Landroid/view/animation/Animation;
 
-    new-instance v1, Lmiui/view/animation/CubicEaseInOutInterpolator;
+    new-instance v1, Lmiuix/view/animation/CubicEaseInOutInterpolator;
 
-    invoke-direct {v1}, Lmiui/view/animation/CubicEaseInOutInterpolator;-><init>()V
+    invoke-direct {v1}, Lmiuix/view/animation/CubicEaseInOutInterpolator;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
@@ -83,7 +83,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f010025
+    const v1, 0x7f01002d
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 

@@ -225,7 +225,7 @@
     return-object v0
 .end method
 
-.method public getFreeButton(Lmiui/util/FileAccessable;)Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;
+.method public getFreeButton(Lcom/miui/home/library/utils/FileAccessable;)Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;
     .locals 3
 
     .line 77
@@ -249,7 +249,7 @@
     check-cast v1, Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;
 
     .line 78
-    invoke-virtual {v1}, Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;->getFile()Lmiui/util/FileAccessable;
+    invoke-virtual {v1}, Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;->getFile()Lcom/miui/home/library/utils/FileAccessable;
 
     move-result-object v2
 

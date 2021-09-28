@@ -202,6 +202,7 @@
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
+    .line 188
     :cond_4
     throw p1
 
@@ -211,6 +212,7 @@
     :catch_1
     if-eqz p0, :cond_5
 
+    .line 186
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
 
     :cond_5

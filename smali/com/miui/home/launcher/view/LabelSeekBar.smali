@@ -30,22 +30,22 @@
 
 .field private mLabels:[Ljava/lang/CharSequence;
 
-.field private mSeekBar:Landroid/widget/SeekBar;
+.field private mSeekBar:Lmiuix/androidbasewidget/widget/SeekBar;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
-    .line 26
+    .line 27
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 v0, 0x1
 
-    .line 27
+    .line 28
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/view/LabelSeekBar;->setOrientation(I)V
 
-    .line 29
+    .line 30
     sget-object v0, Lcom/miui/home/R$styleable;->LabelSeekBar:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
@@ -54,44 +54,44 @@
 
     const/4 v0, 0x0
 
-    .line 30
+    .line 31
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mLabels:[Ljava/lang/CharSequence;
 
-    .line 31
+    .line 32
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    const p2, 0x7f0d0068
+    const p2, 0x7f0d006a
 
-    .line 33
+    .line 34
     invoke-static {p1, p2, p0}, Lcom/miui/home/launcher/view/LabelSeekBar;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
-    const v0, 0x7f0a0189
+    const v0, 0x7f0a01c8
 
-    .line 34
+    .line 35
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/SeekBar;
+    check-cast v0, Lmiuix/androidbasewidget/widget/SeekBar;
 
-    iput-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Landroid/widget/SeekBar;
+    iput-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Lmiuix/androidbasewidget/widget/SeekBar;
 
-    const v0, 0x7f0a018a
+    const v0, 0x7f0a01c9
 
-    .line 35
+    .line 36
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
     check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
 
-    .line 36
+    .line 37
     new-instance v0, Landroidx/recyclerview/widget/GridLayoutManager;
 
     iget-object v1, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mLabels:[Ljava/lang/CharSequence;
@@ -104,10 +104,10 @@
 
     const/4 v0, 0x0
 
-    .line 37
+    .line 38
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
 
-    .line 38
+    .line 39
     new-instance v1, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;
 
     iget-object v2, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mLabels:[Ljava/lang/CharSequence;
@@ -116,15 +116,15 @@
 
     iput-object v1, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mLabelAdapter:Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;
 
-    .line 39
+    .line 40
     iget-object p1, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mLabelAdapter:Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;
 
     invoke-virtual {p2, p1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 40
-    iget-object p1, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Landroid/widget/SeekBar;
+    .line 41
+    iget-object p1, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Lmiuix/androidbasewidget/widget/SeekBar;
 
-    invoke-virtual {p1, p0}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
+    invoke-virtual {p1, p0}, Lmiuix/androidbasewidget/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
     return-void
 .end method
@@ -132,7 +132,7 @@
 .method private getLabelIndex(I)I
     .locals 5
 
-    .line 91
+    .line 92
     invoke-virtual {p0}, Lcom/miui/home/launcher/view/LabelSeekBar;->getMax()I
 
     move-result v0
@@ -149,7 +149,7 @@
 
     move v2, v1
 
-    .line 92
+    .line 93
     :goto_0
     iget-object v3, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mLabels:[Ljava/lang/CharSequence;
 
@@ -159,7 +159,7 @@
 
     mul-int v3, v0, v2
 
-    .line 93
+    .line 94
     div-int/lit8 v4, v0, 0x2
 
     add-int/2addr v3, v4
@@ -180,7 +180,7 @@
 .method private getLabelProgress(I)I
     .locals 1
 
-    .line 101
+    .line 102
     invoke-direct {p0}, Lcom/miui/home/launcher/view/LabelSeekBar;->getSectionValue()I
 
     move-result v0
@@ -193,7 +193,7 @@
 .method private getSectionValue()I
     .locals 2
 
-    .line 87
+    .line 88
     invoke-virtual {p0}, Lcom/miui/home/launcher/view/LabelSeekBar;->getMax()I
 
     move-result v0
@@ -214,10 +214,10 @@
 .method public getMax()I
     .locals 1
 
-    .line 70
-    iget-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Landroid/widget/SeekBar;
+    .line 71
+    iget-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Lmiuix/androidbasewidget/widget/SeekBar;
 
-    invoke-virtual {v0}, Landroid/widget/SeekBar;->getMax()I
+    invoke-virtual {v0}, Lmiuix/androidbasewidget/widget/SeekBar;->getMax()I
 
     move-result v0
 
@@ -227,10 +227,10 @@
 .method public getProgress()I
     .locals 1
 
-    .line 78
-    iget-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Landroid/widget/SeekBar;
+    .line 79
+    iget-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Lmiuix/androidbasewidget/widget/SeekBar;
 
-    invoke-virtual {v0}, Landroid/widget/SeekBar;->getProgress()I
+    invoke-virtual {v0}, Lmiuix/androidbasewidget/widget/SeekBar;->getProgress()I
 
     move-result v0
 
@@ -240,14 +240,14 @@
 .method public onItemClick(Landroid/view/View;Ljava/lang/CharSequence;I)V
     .locals 0
 
-    .line 83
-    iget-object p1, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Landroid/widget/SeekBar;
+    .line 84
+    iget-object p1, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Lmiuix/androidbasewidget/widget/SeekBar;
 
     invoke-direct {p0, p3}, Lcom/miui/home/launcher/view/LabelSeekBar;->getLabelProgress(I)I
 
     move-result p2
 
-    invoke-virtual {p1, p2}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {p1, p2}, Lmiuix/androidbasewidget/widget/SeekBar;->setProgress(I)V
 
     return-void
 .end method
@@ -255,7 +255,7 @@
 .method public bridge synthetic onItemClick(Landroid/view/View;Ljava/lang/Object;I)V
     .locals 0
 
-    .line 20
+    .line 21
     check-cast p2, Ljava/lang/CharSequence;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/miui/home/launcher/view/LabelSeekBar;->onItemClick(Landroid/view/View;Ljava/lang/CharSequence;I)V
@@ -266,10 +266,10 @@
 .method protected onMeasure(II)V
     .locals 2
 
-    .line 45
+    .line 46
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
-    .line 46
+    .line 47
     invoke-virtual {p0}, Lcom/miui/home/launcher/view/LabelSeekBar;->getMeasuredWidth()I
 
     move-result p1
@@ -282,20 +282,20 @@
 
     div-int/lit8 p1, p1, 0x4
 
-    .line 47
-    iget-object p2, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Landroid/widget/SeekBar;
+    .line 48
+    iget-object p2, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Lmiuix/androidbasewidget/widget/SeekBar;
 
-    invoke-virtual {p2}, Landroid/widget/SeekBar;->getPaddingTop()I
+    invoke-virtual {p2}, Lmiuix/androidbasewidget/widget/SeekBar;->getPaddingTop()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Landroid/widget/SeekBar;
+    iget-object v1, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Lmiuix/androidbasewidget/widget/SeekBar;
 
-    invoke-virtual {v1}, Landroid/widget/SeekBar;->getPaddingBottom()I
+    invoke-virtual {v1}, Lmiuix/androidbasewidget/widget/SeekBar;->getPaddingBottom()I
 
     move-result v1
 
-    invoke-virtual {p2, p1, v0, p1, v1}, Landroid/widget/SeekBar;->setPadding(IIII)V
+    invoke-virtual {p2, p1, v0, p1, v1}, Lmiuix/androidbasewidget/widget/SeekBar;->setPadding(IIII)V
 
     return-void
 .end method
@@ -303,7 +303,7 @@
 .method public onProgressChanged(Landroid/widget/SeekBar;IZ)V
     .locals 0
 
-    .line 52
+    .line 53
     iget-object p1, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mLabelAdapter:Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;
 
     invoke-direct {p0, p2}, Lcom/miui/home/launcher/view/LabelSeekBar;->getLabelIndex(I)I
@@ -330,10 +330,10 @@
 .method public setMax(I)V
     .locals 1
 
-    .line 66
-    iget-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Landroid/widget/SeekBar;
+    .line 67
+    iget-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Lmiuix/androidbasewidget/widget/SeekBar;
 
-    invoke-virtual {v0, p1}, Landroid/widget/SeekBar;->setMax(I)V
+    invoke-virtual {v0, p1}, Lmiuix/androidbasewidget/widget/SeekBar;->setMax(I)V
 
     return-void
 .end method
@@ -341,10 +341,10 @@
 .method public setProgress(I)V
     .locals 1
 
-    .line 74
-    iget-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Landroid/widget/SeekBar;
+    .line 75
+    iget-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Lmiuix/androidbasewidget/widget/SeekBar;
 
-    invoke-virtual {v0, p1}, Landroid/widget/SeekBar;->setProgress(I)V
+    invoke-virtual {v0, p1}, Lmiuix/androidbasewidget/widget/SeekBar;->setProgress(I)V
 
     return-void
 .end method

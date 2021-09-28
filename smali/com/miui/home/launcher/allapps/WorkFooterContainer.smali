@@ -21,7 +21,7 @@
 
 .field private mLabel:Landroid/widget/TextView;
 
-.field private mSwitch:Lmiui/widget/SlidingButton;
+.field private mSwitch:Lmiuix/slidingwidget/widget/SlidingButton;
 
 .field private mTitle:Landroid/widget/TextView;
 
@@ -54,11 +54,11 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/miui/home/launcher/allapps/WorkFooterContainer;)Lmiui/widget/SlidingButton;
+.method static synthetic access$000(Lcom/miui/home/launcher/allapps/WorkFooterContainer;)Lmiuix/slidingwidget/widget/SlidingButton;
     .locals 0
 
     .line 31
-    iget-object p0, p0, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->mSwitch:Lmiui/widget/SlidingButton;
+    iget-object p0, p0, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->mSwitch:Lmiuix/slidingwidget/widget/SlidingButton;
 
     return-object p0
 .end method
@@ -124,12 +124,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f08014d
+    const v0, 0x7f080174
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f08014c
+    const v0, 0x7f080173
 
     :goto_0
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -154,14 +154,14 @@
     move-result v0
 
     .line 65
-    iget-object v1, p0, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->mSwitch:Lmiui/widget/SlidingButton;
+    iget-object v1, p0, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->mSwitch:Lmiuix/slidingwidget/widget/SlidingButton;
 
     if-eqz v1, :cond_0
 
     xor-int/lit8 v2, v0, 0x1
 
     .line 66
-    invoke-virtual {v1, v2}, Lmiui/widget/SlidingButton;->setChecked(Z)V
+    invoke-virtual {v1, v2}, Lmiuix/slidingwidget/widget/SlidingButton;->setChecked(Z)V
 
     .line 68
     :cond_0
@@ -171,12 +171,12 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f10028e
+    const v0, 0x7f1003c1
 
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f10028f
+    const v0, 0x7f1003c2
 
     .line 69
     :goto_0
@@ -273,7 +273,7 @@
     .line 52
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0206
+    const v0, 0x7f0a025b
 
     .line 53
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->findViewById(I)Landroid/view/View;
@@ -282,18 +282,18 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->mDivider:Landroid/view/View;
 
-    const v0, 0x7f0a0207
+    const v0, 0x7f0a025c
 
     .line 54
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lmiui/widget/SlidingButton;
+    check-cast v0, Lmiuix/slidingwidget/widget/SlidingButton;
 
-    iput-object v0, p0, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->mSwitch:Lmiui/widget/SlidingButton;
+    iput-object v0, p0, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->mSwitch:Lmiuix/slidingwidget/widget/SlidingButton;
 
-    const v0, 0x7f0a0117
+    const v0, 0x7f0a0145
 
     .line 55
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->findViewById(I)Landroid/view/View;
@@ -333,9 +333,9 @@
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->refreshViewColor()V
 
     .line 60
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->mSwitch:Lmiui/widget/SlidingButton;
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->mSwitch:Lmiuix/slidingwidget/widget/SlidingButton;
 
-    invoke-virtual {v0, p0}, Lmiui/widget/SlidingButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual {v0, p0}, Lmiuix/slidingwidget/widget/SlidingButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     return-void
 .end method

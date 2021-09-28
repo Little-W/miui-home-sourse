@@ -11,12 +11,12 @@
         android:layout_height="fill_parent">
         <com.miui.home.recents.views.FixedSizeImageView
             android:id="@id/icon"
-            android:paddingTop="6.0dip"
+            android:paddingTop="0.0dip"
             android:paddingBottom="@dimen/recents_task_view_header_button_padding"
             android:layout_width="@dimen/recents_task_view_header_height"
             android:layout_height="fill_parent"
             android:contentDescription="@string/recents_app_info_button_label"
-            android:paddingStart="-5.0dip"
+            android:paddingStart="0.0dip"
             android:paddingEnd="@dimen/recents_task_view_header_app_info_spacing" />
         <com.miui.home.recents.views.AlphaOptimizedTextView
             android:textSize="@dimen/recents_task_view_header_title_text_size"

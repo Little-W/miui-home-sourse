@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    android:height="@dimen/miuix_appcompat_action_mode_title_button_height"
+    android:width="@dimen/miuix_appcompat_action_mode_title_button_width"
+    android:viewportWidth="100.0"
+    android:viewportHeight="100.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <path
+        android:fillColor="@color/miuix_appcompat_svg_icon_color_disable_light"
+        android:pathData="M49.999,44.743C54.702,44.743 58.49,40.945 58.49,36.292C58.49,31.638 54.702,27.841 49.999,27.841C45.295,27.841 41.508,31.638 41.508,36.292C41.508,40.945 45.295,44.743 49.999,44.743ZM64.423,59.905H35.577C32.666,59.905 30,62.404 30,65.873C30,69.341 32.666,71.84 35.577,71.84H64.423C67.334,71.84 70,69.341 70,65.873C70,62.404 67.334,59.905 64.423,59.905ZM49.999,49.743C57.45,49.743 63.49,43.721 63.49,36.292C63.49,28.863 57.45,22.841 49.999,22.841C42.548,22.841 36.508,28.863 36.508,36.292C36.508,43.721 42.548,49.743 49.999,49.743ZM64.423,54.905H35.577C29.735,54.905 25,59.816 25,65.873C25,71.93 29.735,76.84 35.577,76.84H64.423C70.265,76.84 75,71.93 75,65.873C75,59.816 70.265,54.905 64.423,54.905Z"
+        android:fillType="evenOdd" />
+</vector>

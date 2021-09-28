@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 3357
+    .line 3366
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$19;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/common/messages/LoadingFinishMessageHandler;-><init>()V
@@ -35,7 +35,7 @@
 .method protected onLoadingFinished()V
     .locals 5
 
-    .line 3360
+    .line 3369
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$19;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getContext()Landroid/content/Context;
@@ -54,7 +54,7 @@
 
     move-result v0
 
-    .line 3361
+    .line 3370
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$19;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {v1}, Lcom/miui/home/launcher/Workspace;->access$1500(Lcom/miui/home/launcher/Workspace;)Z
@@ -63,20 +63,20 @@
 
     if-eqz v1, :cond_0
 
-    .line 3362
+    .line 3371
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$19;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {v1, v0}, Lcom/miui/home/launcher/Workspace;->access$1802(Lcom/miui/home/launcher/Workspace;I)I
 
     goto :goto_0
 
-    .line 3364
+    .line 3373
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$19;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Workspace;->setScreenTransitionType(I)I
 
-    .line 3366
+    .line 3375
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$19;->this$0:Lcom/miui/home/launcher/Workspace;
 
@@ -90,7 +90,7 @@
 
     move v1, v0
 
-    .line 3367
+    .line 3376
     :goto_1
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace$19;->this$0:Lcom/miui/home/launcher/Workspace;
 
@@ -100,14 +100,14 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 3368
+    .line 3377
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace$19;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v2, v1}, Lcom/miui/home/launcher/Workspace;->getScreenIdByIndex(I)J
 
     move-result-wide v2
 
-    .line 3369
+    .line 3378
     iget-object v4, p0, Lcom/miui/home/launcher/Workspace$19;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v4, v2, v3}, Lcom/miui/home/launcher/Workspace;->isDefaultScreen(J)Z
@@ -116,7 +116,7 @@
 
     if-nez v2, :cond_1
 
-    .line 3370
+    .line 3379
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace$19;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v2, v1}, Lcom/miui/home/launcher/Workspace;->getScreen(I)Landroid/view/View;
@@ -130,7 +130,7 @@
 
     goto :goto_1
 
-    .line 3373
+    .line 3382
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$19;->this$0:Lcom/miui/home/launcher/Workspace;
 

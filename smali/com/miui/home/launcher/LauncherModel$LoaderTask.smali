@@ -64,24 +64,24 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel;Landroid/content/Context;ZLcom/miui/home/launcher/allapps/LauncherMode;)V
     .locals 0
 
-    .line 1140
+    .line 1143
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 1131
+    .line 1134
     iput-boolean p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mWaitingForCloudAppRestore:Z
 
-    .line 1134
+    .line 1137
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mInstallingApps:Ljava/util/HashMap;
 
-    .line 1135
+    .line 1138
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
@@ -90,37 +90,37 @@
 
     const/4 p1, 0x1
 
-    .line 1138
+    .line 1141
     iput-boolean p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->isUserUnLocked:Z
 
-    .line 1141
+    .line 1144
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
-    .line 1142
+    .line 1145
     iput-boolean p3, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mIsLaunching:Z
 
-    .line 1143
+    .line 1146
     invoke-virtual {p2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 1144
+    .line 1147
     invoke-virtual {p2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mManager:Landroid/content/pm/PackageManager;
 
-    .line 1145
+    .line 1148
     new-instance p1, Lcom/miui/home/launcher/model/DefaultLauncherAppsProvider;
 
     invoke-direct {p1}, Lcom/miui/home/launcher/model/DefaultLauncherAppsProvider;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mAllAppsProvider:Lcom/miui/home/launcher/model/LauncherAppsProvider;
 
-    .line 1146
+    .line 1149
     iput-object p4, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mMode:Lcom/miui/home/launcher/allapps/LauncherMode;
 
     return-void
@@ -129,7 +129,7 @@
 .method static synthetic access$1100(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)Landroid/content/Context;
     .locals 0
 
-    .line 1127
+    .line 1130
     iget-object p0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -138,7 +138,7 @@
 .method static synthetic access$1700(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)Z
     .locals 0
 
-    .line 1127
+    .line 1130
     iget-boolean p0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     return p0
@@ -147,7 +147,7 @@
 .method static synthetic access$1802(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Z)Z
     .locals 0
 
-    .line 1127
+    .line 1130
     iput-boolean p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mWaitingForCloudAppRestore:Z
 
     return p1
@@ -156,7 +156,7 @@
 .method static synthetic access$1900(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)Z
     .locals 0
 
-    .line 1127
+    .line 1130
     iget-boolean p0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->isUserUnLocked:Z
 
     return p0
@@ -165,12 +165,12 @@
 .method private bindItem(Lcom/miui/home/launcher/LauncherModel$Callbacks;Lcom/miui/home/launcher/ItemInfo;)V
     .locals 2
 
-    .line 2145
+    .line 2154
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->tryGetCallbacks(Lcom/miui/home/launcher/LauncherModel$Callbacks;)Lcom/miui/home/launcher/LauncherModel$Callbacks;
 
     move-result-object p1
 
-    .line 2146
+    .line 2155
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$200(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/library/utils/DeferredHandler;
@@ -198,12 +198,12 @@
         }
     .end annotation
 
-    .line 1711
+    .line 1721
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mInstallingApps:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 1712
+    .line 1722
     :try_start_0
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mInstallingApps:Ljava/util/HashMap;
 
@@ -213,7 +213,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1713
+    .line 1723
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mInstallingApps:Ljava/util/HashMap;
 
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
@@ -228,7 +228,7 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
 
-    .line 1715
+    .line 1725
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mInstallingApps:Ljava/util/HashMap;
 
@@ -239,7 +239,7 @@
     :catchall_0
     move-exception v1
 
-    .line 1716
+    .line 1726
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -250,28 +250,28 @@
 .method private isAppWidgetAvailable(I)Z
     .locals 1
 
-    .line 1602
+    .line 1605
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/appwidget/AppWidgetManager;->getInstance(Landroid/content/Context;)Landroid/appwidget/AppWidgetManager;
 
     move-result-object v0
 
-    .line 1603
+    .line 1606
     invoke-virtual {v0, p1}, Landroid/appwidget/AppWidgetManager;->getAppWidgetInfo(I)Landroid/appwidget/AppWidgetProviderInfo;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 1604
+    .line 1607
     iget-object v0, p1, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
     if-eqz v0, :cond_0
 
     iget-object p1, p1, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
-    .line 1605
+    .line 1608
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -299,14 +299,14 @@
     :try_start_0
     const-string v2, "miui.os.MiuiInit"
 
-    .line 1262
+    .line 1265
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
 
     const-string v3, "isPreinstalledPackage"
 
-    .line 1263
+    .line 1266
     new-array v4, v0, [Ljava/lang/Class;
 
     const-class v5, Ljava/lang/String;
@@ -319,7 +319,7 @@
 
     const-string v4, "isPreinstalledPAIPackage"
 
-    .line 1264
+    .line 1267
     new-array v5, v0, [Ljava/lang/Class;
 
     const-class v6, Ljava/lang/String;
@@ -330,7 +330,7 @@
 
     move-result-object v2
 
-    .line 1265
+    .line 1268
     new-array v4, v0, [Ljava/lang/Object;
 
     aput-object p1, v4, v1
@@ -385,7 +385,7 @@
 
     const-string v3, "Launcher.Model"
 
-    .line 1268
+    .line 1271
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -415,7 +415,7 @@
 
     const/4 v5, 0x2
 
-    .line 1270
+    .line 1273
     new-array v5, v5, [Ljava/lang/Object;
 
     aput-object p1, v5, v1
@@ -435,10 +435,10 @@
     return v2
 .end method
 
-.method public static synthetic lambda$loadAndBindMissingIcons$90(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+.method public static synthetic lambda$loadAndBindMissingIcons$0(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 2
 
-    .line 1226
+    .line 1229
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->isCallbacksValidate(Lcom/miui/home/launcher/LauncherModel$Callbacks;)Z
 
     move-result v0
@@ -449,20 +449,20 @@
 
     const-string v1, "Finally updating for missing icons"
 
-    .line 1227
+    .line 1230
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1228
+    .line 1231
     invoke-interface {p1, p2, p3, p4}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->bindAppsChanged(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
 
     :cond_0
     return-void
 .end method
 
-.method static synthetic lambda$loadAppWidget$91(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
+.method static synthetic lambda$loadAppWidget$1(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
     .locals 1
 
-    .line 1587
+    .line 1590
     invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->findMyPendingSource()Lcom/miui/home/launcher/PendingSource;
 
     move-result-object v0
@@ -472,10 +472,10 @@
     return-void
 .end method
 
-.method public static synthetic lambda$loadAppWidget$92(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherAppWidgetInfo;J)Ljava/lang/Void;
+.method public static synthetic lambda$loadAppWidget$2(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherAppWidgetInfo;J)Ljava/lang/Void;
     .locals 0
 
-    .line 1593
+    .line 1596
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadAppWidget(Lcom/miui/home/launcher/LauncherAppWidgetInfo;J)V
 
     const/4 p1, 0x0
@@ -483,17 +483,17 @@
     return-object p1
 .end method
 
-.method static synthetic lambda$loadAppWidget$93(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
+.method static synthetic lambda$loadAppWidget$3(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
     .locals 1
 
-    .line 1636
+    .line 1645
     invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->isPending()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1637
+    .line 1646
     invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->finishPending()V
 
     :cond_0
@@ -503,14 +503,14 @@
 .method private loadAllApps()V
     .locals 9
 
-    .line 1275
+    .line 1278
     iget-boolean v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 1279
+    .line 1282
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -544,7 +544,7 @@
 
     return-void
 
-    .line 1284
+    .line 1287
     :cond_2
     new-instance v2, Lcom/miui/home/launcher/model/AllAppsLoaderTask;
 
@@ -556,7 +556,7 @@
 
     invoke-direct {v2, v3, v4, v1, v5}, Lcom/miui/home/launcher/model/AllAppsLoaderTask;-><init>(Landroid/content/Context;Lcom/miui/home/launcher/model/LauncherAppsProvider;Lcom/miui/home/launcher/model/AllAppsLoaderTask$LoaderCallback;Lcom/miui/home/launcher/allapps/LauncherMode;)V
 
-    .line 1285
+    .line 1288
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -577,10 +577,10 @@
 
     invoke-virtual {v2, v1, v3, v4, v5}, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->init(Lcom/miui/home/launcher/LauncherModel;Lcom/miui/home/launcher/AllAppsList;Lcom/miui/home/launcher/AllCategoryList;Ljava/util/concurrent/Executor;)V
 
-    .line 1286
+    .line 1289
     invoke-virtual {v2}, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->run()V
 
-    .line 1288
+    .line 1291
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -591,7 +591,7 @@
 
     move-result-object v1
 
-    .line 1290
+    .line 1293
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     const-string v3, "usagestats"
@@ -608,7 +608,7 @@
 
     const-wide/16 v5, 0x0
 
-    .line 1291
+    .line 1294
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v7
@@ -617,12 +617,12 @@
 
     move-result-object v2
 
-    .line 1292
+    .line 1295
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 1293
+    .line 1296
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -640,7 +640,7 @@
 
     check-cast v4, Landroid/app/usage/UsageStats;
 
-    .line 1294
+    .line 1297
     invoke-virtual {v4}, Landroid/app/usage/UsageStats;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
@@ -649,7 +649,7 @@
 
     goto :goto_1
 
-    .line 1296
+    .line 1299
     :cond_3
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -669,7 +669,7 @@
 
     check-cast v4, Lcom/miui/home/launcher/AppInfo;
 
-    .line 1297
+    .line 1300
     iget-object v5, v4, Lcom/miui/home/launcher/AppInfo;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v5}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -684,14 +684,14 @@
 
     if-eqz v5, :cond_4
 
-    .line 1299
+    .line 1302
     invoke-static {v5}, Lcom/miui/launcher/utils/LauncherUtils;->getAppLaunchCount(Landroid/app/usage/UsageStats;)I
 
     move-result v6
 
     invoke-virtual {v4, v6}, Lcom/miui/home/launcher/AppInfo;->setAppLaunchCount(I)V
 
-    .line 1300
+    .line 1303
     invoke-virtual {v5}, Landroid/app/usage/UsageStats;->getLastTimeStamp()J
 
     move-result-wide v5
@@ -700,7 +700,7 @@
 
     goto :goto_2
 
-    .line 1304
+    .line 1307
     :cond_5
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -720,14 +720,14 @@
 .method private loadAndBindMissingIcons(Z)V
     .locals 10
 
-    .line 1154
+    .line 1157
     iget-boolean v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 1158
+    .line 1161
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -761,12 +761,12 @@
 
     const-string v0, "No callback to call back"
 
-    .line 1160
+    .line 1163
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 1165
+    .line 1168
     :cond_2
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mAllAppsProvider:Lcom/miui/home/launcher/model/LauncherAppsProvider;
 
@@ -784,18 +784,18 @@
 
     const-string v0, "No main activity found, the system is so clean"
 
-    .line 1166
+    .line 1169
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 1170
+    .line 1173
     :cond_3
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 1171
+    .line 1174
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mAllAppsProvider:Lcom/miui/home/launcher/model/LauncherAppsProvider;
 
     invoke-interface {v2}, Lcom/miui/home/launcher/model/LauncherAppsProvider;->getAllComponentKey()Ljava/util/Collection;
@@ -819,14 +819,14 @@
 
     check-cast v3, Lcom/miui/home/launcher/util/ComponentKey;
 
-    .line 1172
+    .line 1175
     iget-boolean v4, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     if-eqz v4, :cond_4
 
     return-void
 
-    .line 1176
+    .line 1179
     :cond_4
     new-instance v4, Lcom/miui/home/launcher/LauncherModel$PackageAndUser;
 
@@ -840,7 +840,7 @@
 
     invoke-direct {v4, v5, v6}, Lcom/miui/home/launcher/LauncherModel$PackageAndUser;-><init>(Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 1177
+    .line 1180
     invoke-virtual {v1, v4}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v5
@@ -849,7 +849,7 @@
 
     goto :goto_1
 
-    .line 1181
+    .line 1184
     :cond_5
     iget-object v5, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -863,7 +863,7 @@
 
     goto :goto_1
 
-    .line 1184
+    .line 1187
     :cond_6
     iget-object v5, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mMode:Lcom/miui/home/launcher/allapps/LauncherMode;
 
@@ -887,7 +887,7 @@
 
     iget-object v5, v3, Lcom/miui/home/launcher/util/ComponentKey;->componentName:Landroid/content/ComponentName;
 
-    .line 1185
+    .line 1188
     invoke-virtual {v5}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
@@ -900,7 +900,7 @@
 
     goto :goto_1
 
-    .line 1190
+    .line 1193
     :cond_7
     iget-object v5, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mMode:Lcom/miui/home/launcher/allapps/LauncherMode;
 
@@ -914,7 +914,7 @@
 
     iget-object v3, v3, Lcom/miui/home/launcher/util/ComponentKey;->componentName:Landroid/content/ComponentName;
 
-    .line 1191
+    .line 1194
     invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -927,13 +927,13 @@
 
     goto :goto_1
 
-    .line 1195
+    .line 1198
     :cond_8
     invoke-virtual {v1, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 1198
+    .line 1201
     :cond_9
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -943,7 +943,7 @@
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/AllAppsList;->clearAll()V
 
-    .line 1200
+    .line 1203
     invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -961,7 +961,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/LauncherModel$PackageAndUser;
 
-    .line 1201
+    .line 1204
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$800(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
@@ -970,7 +970,7 @@
 
     monitor-enter v2
 
-    .line 1202
+    .line 1205
     :try_start_0
     iget-object v3, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -988,7 +988,7 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Lcom/miui/home/launcher/AllAppsList;->updatePackage(Landroid/content/Context;Ljava/lang/String;ZLandroid/os/UserHandle;)V
 
-    .line 1203
+    .line 1206
     iget-object v3, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/miui/home/launcher/progress/ProgressManager;->getManager(Landroid/content/Context;)Lcom/miui/home/launcher/progress/ProgressManager;
@@ -999,7 +999,7 @@
 
     invoke-virtual {v3, v1}, Lcom/miui/home/launcher/progress/ProgressManager;->onAppInProgressInstalled(Ljava/lang/String;)V
 
-    .line 1204
+    .line 1207
     monitor-exit v2
 
     goto :goto_2
@@ -1013,28 +1013,28 @@
 
     throw p1
 
-    .line 1207
+    .line 1210
     :cond_a
     iget-boolean p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     if-nez p1, :cond_e
 
-    .line 1208
+    .line 1211
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1209
+    .line 1212
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1210
+    .line 1213
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1211
+    .line 1214
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -1049,7 +1049,7 @@
 
     if-lez v1, :cond_b
 
-    .line 1212
+    .line 1215
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -1060,7 +1060,7 @@
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1213
+    .line 1216
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -1071,7 +1071,7 @@
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 1215
+    .line 1218
     :cond_b
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -1087,7 +1087,7 @@
 
     if-lez v1, :cond_c
 
-    .line 1216
+    .line 1219
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -1098,7 +1098,7 @@
 
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1217
+    .line 1220
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -1109,7 +1109,7 @@
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 1219
+    .line 1222
     :cond_c
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -1125,7 +1125,7 @@
 
     if-lez v1, :cond_d
 
-    .line 1220
+    .line 1223
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -1136,7 +1136,7 @@
 
     invoke-virtual {v6, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1221
+    .line 1224
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -1147,20 +1147,20 @@
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 1224
+    .line 1227
     :cond_d
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->tryGetCallbacks(Lcom/miui/home/launcher/LauncherModel$Callbacks;)Lcom/miui/home/launcher/LauncherModel$Callbacks;
 
     move-result-object v3
 
-    .line 1225
+    .line 1228
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$200(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/library/utils/DeferredHandler;
 
     move-result-object v8
 
-    new-instance v9, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$GYuV5mNQaWgXqf4OCCfDSFpr8W8;
+    new-instance v9, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$dxdvRu-RjWd9T9chcgRPQu7NeMs;
 
     move-object v1, v9
 
@@ -1170,21 +1170,21 @@
 
     move-object v5, v7
 
-    invoke-direct/range {v1 .. v6}, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$GYuV5mNQaWgXqf4OCCfDSFpr8W8;-><init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+    invoke-direct/range {v1 .. v6}, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$dxdvRu-RjWd9T9chcgRPQu7NeMs;-><init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
     invoke-virtual {v8, v9}, Lcom/miui/home/library/utils/DeferredHandler;->post(Ljava/lang/Runnable;)V
 
-    .line 1231
+    .line 1234
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1, p1}, Lcom/miui/home/launcher/LauncherModel;->access$900(Lcom/miui/home/launcher/LauncherModel;Ljava/util/ArrayList;)V
 
-    .line 1232
+    .line 1235
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {p1, v7}, Lcom/miui/home/launcher/LauncherModel;->access$1000(Lcom/miui/home/launcher/LauncherModel;Ljava/util/ArrayList;)V
 
-    .line 1234
+    .line 1237
     :cond_e
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -1198,7 +1198,7 @@
 
     invoke-virtual {p1, v1}, Lcom/miui/home/library/utils/DeferredHandler;->post(Ljava/lang/Runnable;)V
 
-    .line 1249
+    .line 1252
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherModel;->access$200(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/library/utils/DeferredHandler;
@@ -1217,14 +1217,14 @@
 .method private loadAndBindScreens()V
     .locals 4
 
-    .line 1962
+    .line 1971
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContentResolver:Landroid/content/ContentResolver;
 
     invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->getAllScreens(Landroid/content/ContentResolver;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 1963
+    .line 1972
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/ref/WeakReference;
@@ -1243,12 +1243,12 @@
 
     const-string v1, "load screens running with no launcher"
 
-    .line 1966
+    .line 1975
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 1969
+    .line 1978
     :cond_0
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -1272,10 +1272,10 @@
 
     move/from16 v0, p1
 
-    .line 1986
+    .line 1995
     monitor-enter p0
 
-    .line 1987
+    .line 1996
     :try_start_0
     iget-object v2, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -1283,21 +1283,21 @@
 
     move-result v2
 
-    .line 1988
+    .line 1997
     iget-object v3, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     const/4 v4, 0x1
 
     invoke-static {v3, v4}, Lcom/miui/home/launcher/LauncherModel;->access$2102(Lcom/miui/home/launcher/LauncherModel;Z)Z
 
-    .line 1989
+    .line 1998
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     const-string v3, "Launcher.Model"
 
-    .line 1994
+    .line 2003
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1314,52 +1314,52 @@
 
     invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1996
+    .line 2005
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 1997
+    .line 2006
     iget-object v5, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     invoke-static {v5}, Lcom/miui/home/launcher/RemovedComponentInfoList;->getInstance(Landroid/content/Context;)Lcom/miui/home/launcher/RemovedComponentInfoList;
 
     move-result-object v5
 
-    .line 1999
+    .line 2008
     iget-object v6, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     iget-object v6, v6, Lcom/miui/home/launcher/LauncherModel;->mFolders:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->clear()V
 
-    .line 2000
+    .line 2009
     iget-object v6, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     iget-object v6, v6, Lcom/miui/home/launcher/LauncherModel;->mLoadedApps:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->clear()V
 
-    .line 2001
+    .line 2010
     iget-object v6, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     iget-object v6, v6, Lcom/miui/home/launcher/LauncherModel;->mLoadedUris:Ljava/util/Set;
 
     invoke-interface {v6}, Ljava/util/Set;->clear()V
 
-    .line 2002
+    .line 2011
     iget-object v6, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     iget-object v6, v6, Lcom/miui/home/launcher/LauncherModel;->mProgressingPackages:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->clear()V
 
-    .line 2003
+    .line 2012
     iget-object v6, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mInstallingApps:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->clear()V
 
-    .line 2005
+    .line 2014
     iget-object v6, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v6}, Lcom/miui/home/launcher/LauncherModel;->access$500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/ref/WeakReference;
@@ -1378,26 +1378,26 @@
 
     const-string v2, "LoaderThread running with no launcher"
 
-    .line 2008
+    .line 2017
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 2011
+    .line 2020
     :cond_0
     invoke-interface {v6}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->prepareBeforeBindItems()V
 
-    .line 2012
+    .line 2021
     invoke-direct {v1, v6}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->startBinding(Lcom/miui/home/launcher/LauncherModel$Callbacks;)V
 
-    .line 2014
+    .line 2023
     iget-boolean v7, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     if-eqz v7, :cond_1
 
     return-void
 
-    .line 2015
+    .line 2024
     :cond_1
     new-instance v7, Lcom/miui/home/launcher/model/LoaderCursor;
 
@@ -1413,7 +1413,7 @@
 
     const/4 v14, 0x2
 
-    .line 2018
+    .line 2027
     invoke-static {v14}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v13
@@ -1424,7 +1424,7 @@
 
     const-string v13, "cellY ASC, cellX ASC, itemType ASC"
 
-    .line 2015
+    .line 2024
     invoke-virtual/range {v8 .. v13}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v8
@@ -1433,32 +1433,32 @@
 
     iget-object v10, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mAllAppsProvider:Lcom/miui/home/launcher/model/LauncherAppsProvider;
 
-    .line 2020
+    .line 2029
     invoke-interface {v10}, Lcom/miui/home/launcher/model/LauncherAppsProvider;->getAllAppsMap()Ljava/util/Map;
 
     move-result-object v10
 
     invoke-direct {v7, v8, v9, v10}, Lcom/miui/home/launcher/model/LoaderCursor;-><init>(Landroid/database/Cursor;Landroid/content/Context;Ljava/util/Map;)V
 
-    .line 2022
+    .line 2031
     iget-boolean v8, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     if-eqz v8, :cond_2
 
     return-void
 
-    .line 2023
+    .line 2032
     :cond_2
     invoke-direct {v1, v7, v5, v0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadItems(Lcom/miui/home/launcher/model/LoaderCursor;Lcom/miui/home/launcher/RemovedComponentInfoList;Z)V
 
-    .line 2025
+    .line 2034
     iget-boolean v8, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     if-eqz v8, :cond_3
 
     return-void
 
-    .line 2026
+    .line 2035
     :cond_3
     new-instance v8, Lcom/miui/home/launcher/model/LoaderCursor;
 
@@ -1470,7 +1470,7 @@
 
     move-result-object v17
 
-    .line 2029
+    .line 2038
     invoke-static {}, Lcom/miui/home/launcher/ItemInfo;->getColumnsWithScreenType()[Ljava/lang/String;
 
     move-result-object v18
@@ -1481,7 +1481,7 @@
 
     const/16 v11, -0x64
 
-    .line 2031
+    .line 2040
     invoke-static {v11}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v12
@@ -1500,7 +1500,7 @@
 
     move-object/from16 v20, v10
 
-    .line 2026
+    .line 2035
     invoke-virtual/range {v16 .. v21}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v9
@@ -1509,32 +1509,32 @@
 
     iget-object v12, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mAllAppsProvider:Lcom/miui/home/launcher/model/LauncherAppsProvider;
 
-    .line 2034
+    .line 2043
     invoke-interface {v12}, Lcom/miui/home/launcher/model/LauncherAppsProvider;->getAllAppsMap()Ljava/util/Map;
 
     move-result-object v12
 
     invoke-direct {v8, v9, v10, v12}, Lcom/miui/home/launcher/model/LoaderCursor;-><init>(Landroid/database/Cursor;Landroid/content/Context;Ljava/util/Map;)V
 
-    .line 2036
+    .line 2045
     iget-boolean v9, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     if-eqz v9, :cond_4
 
     return-void
 
-    .line 2037
+    .line 2046
     :cond_4
     invoke-direct {v1, v8, v5, v0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadItems(Lcom/miui/home/launcher/model/LoaderCursor;Lcom/miui/home/launcher/RemovedComponentInfoList;Z)V
 
-    .line 2039
+    .line 2048
     iget-boolean v9, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     if-eqz v9, :cond_5
 
     return-void
 
-    .line 2040
+    .line 2049
     :cond_5
     new-instance v9, Lcom/miui/home/launcher/model/LoaderCursor;
 
@@ -1548,7 +1548,7 @@
 
     new-array v12, v14, [Ljava/lang/String;
 
-    .line 2042
+    .line 2051
     invoke-static {v11}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v11
@@ -1567,7 +1567,7 @@
 
     move-object/from16 v20, v12
 
-    .line 2040
+    .line 2049
     invoke-virtual/range {v16 .. v21}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v4
@@ -1576,28 +1576,28 @@
 
     iget-object v11, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mAllAppsProvider:Lcom/miui/home/launcher/model/LauncherAppsProvider;
 
-    .line 2044
+    .line 2053
     invoke-interface {v11}, Lcom/miui/home/launcher/model/LauncherAppsProvider;->getAllAppsMap()Ljava/util/Map;
 
     move-result-object v11
 
     invoke-direct {v9, v4, v10, v11}, Lcom/miui/home/launcher/model/LoaderCursor;-><init>(Landroid/database/Cursor;Landroid/content/Context;Ljava/util/Map;)V
 
-    .line 2046
+    .line 2055
     iget-boolean v4, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     if-eqz v4, :cond_6
 
     return-void
 
-    .line 2047
+    .line 2056
     :cond_6
     invoke-direct {v1, v9, v5, v0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadItems(Lcom/miui/home/launcher/model/LoaderCursor;Lcom/miui/home/launcher/RemovedComponentInfoList;Z)V
 
-    .line 2049
+    .line 2058
     invoke-static {}, Lcom/miui/home/launcher/RemovedComponentInfoList;->waitingForReady()V
 
-    .line 2050
+    .line 2059
     iget-object v4, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v4}, Lcom/miui/home/launcher/LauncherModel;->access$100(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/AllAppsList;
@@ -1606,53 +1606,53 @@
 
     invoke-virtual {v4, v5}, Lcom/miui/home/launcher/AllAppsList;->setRemovedInfoList(Lcom/miui/home/launcher/RemovedComponentInfoList;)V
 
-    .line 2051
+    .line 2060
     invoke-virtual {v5}, Lcom/miui/home/launcher/RemovedComponentInfoList;->isEmpty()Z
 
     move-result v4
 
     if-nez v4, :cond_7
 
-    .line 2052
+    .line 2061
     invoke-virtual {v5}, Lcom/miui/home/launcher/RemovedComponentInfoList;->writeBackToFile()V
 
-    .line 2055
+    .line 2064
     :cond_7
     invoke-virtual {v7}, Lcom/miui/home/launcher/model/LoaderCursor;->commitDeleted()Z
 
-    .line 2056
+    .line 2065
     invoke-virtual {v8}, Lcom/miui/home/launcher/model/LoaderCursor;->commitDeleted()Z
 
-    .line 2057
+    .line 2066
     invoke-virtual {v9}, Lcom/miui/home/launcher/model/LoaderCursor;->commitDeleted()Z
 
-    .line 2059
+    .line 2068
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2060
+    .line 2069
     invoke-virtual {v8}, Lcom/miui/home/launcher/model/LoaderCursor;->getItemToChange()Ljava/util/List;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 2061
+    .line 2070
     invoke-virtual {v9}, Lcom/miui/home/launcher/model/LoaderCursor;->getItemToChange()Ljava/util/List;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 2062
+    .line 2071
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
     move-result v5
 
     if-lez v5, :cond_8
 
-    .line 2063
+    .line 2072
     new-instance v5, Lcom/miui/home/launcher/model/LoaderCursor;
 
     iget-object v7, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
@@ -1667,7 +1667,7 @@
 
     const-string v7, "_id"
 
-    .line 2065
+    .line 2074
     invoke-static {v7, v4}, Lcom/miui/home/launcher/common/Utilities;->createDbSelectionQuery(Ljava/lang/String;Ljava/lang/Iterable;)Ljava/lang/String;
 
     move-result-object v11
@@ -1678,7 +1678,7 @@
 
     const/4 v14, 0x0
 
-    .line 2063
+    .line 2072
     invoke-virtual/range {v8 .. v14}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 
     move-result-object v4
@@ -1689,16 +1689,16 @@
 
     invoke-direct {v5, v4, v7, v8}, Lcom/miui/home/launcher/model/LoaderCursor;-><init>(Landroid/database/Cursor;Landroid/content/Context;Ljava/util/Map;)V
 
-    .line 2068
+    .line 2077
     invoke-direct {v1, v5, v8, v0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadItems(Lcom/miui/home/launcher/model/LoaderCursor;Lcom/miui/home/launcher/RemovedComponentInfoList;Z)V
 
-    .line 2071
+    .line 2080
     :cond_8
     invoke-virtual {v1, v6}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->tryGetCallbacks(Lcom/miui/home/launcher/LauncherModel$Callbacks;)Lcom/miui/home/launcher/LauncherModel$Callbacks;
 
     move-result-object v0
 
-    .line 2072
+    .line 2081
     iget-object v4, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v4}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
@@ -1707,7 +1707,7 @@
 
     monitor-enter v4
 
-    .line 2074
+    .line 2083
     :try_start_1
     iget-object v5, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -1721,12 +1721,12 @@
 
     invoke-virtual {v5, v6}, Lcom/miui/home/library/utils/DeferredHandler;->post(Ljava/lang/Runnable;)V
 
-    .line 2085
+    .line 2094
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2086
+    .line 2095
     iget-object v0, v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mInstallingApps:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
@@ -1736,7 +1736,7 @@
     :catchall_0
     move-exception v0
 
-    .line 2085
+    .line 2094
     :try_start_2
     monitor-exit v4
     :try_end_2
@@ -1747,7 +1747,7 @@
     :catchall_1
     move-exception v0
 
-    .line 1989
+    .line 1998
     :try_start_3
     monitor-exit p0
     :try_end_3
@@ -1763,7 +1763,7 @@
 
     return-void
 
-    .line 1614
+    .line 1617
     :cond_0
     iget v0, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->appWidgetId:I
 
@@ -1773,26 +1773,26 @@
 
     if-nez v0, :cond_2
 
-    .line 1615
+    .line 1618
     invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->getProvider()Landroid/content/ComponentName;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 1616
+    .line 1619
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 1617
+    .line 1620
     invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->getProvider()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 1618
+    .line 1621
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v1
@@ -1805,39 +1805,51 @@
 
     move-result v1
 
-    .line 1619
-    iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
+    .line 1623
+    invoke-static {p1}, Lcom/miui/home/launcher/widget/PendingAddWidgetInfo;->newInstance(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)Lcom/miui/home/launcher/widget/PendingAddWidgetInfo;
 
+    move-result-object v2
+
+    .line 1624
+    iget-object v3, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
+
+    invoke-static {v3, v2}, Lcom/miui/home/launcher/widget/WidgetHostViewLoader;->getDefaultOptionsForWidget(Landroid/content/Context;Lcom/miui/home/launcher/widget/PendingAddWidgetInfo;)Landroid/os/Bundle;
+
+    move-result-object v2
+
+    .line 1627
+    iget-object v3, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
+
+    .line 1628
     invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->getUser()Landroid/os/UserHandle;
 
-    move-result-object v3
+    move-result-object v4
 
-    const/4 v4, 0x0
-
-    invoke-static {v2, v1, v3, v0, v4}, Lcom/miui/home/launcher/common/WidgetManagerUtils;->bindAppWidgetIdIfAllowed(Landroid/content/Context;ILandroid/os/UserHandle;Landroid/content/ComponentName;Landroid/os/Bundle;)Z
+    .line 1627
+    invoke-static {v3, v1, v4, v0, v2}, Lcom/miui/home/launcher/common/WidgetManagerUtils;->bindAppWidgetIdIfAllowed(Landroid/content/Context;ILandroid/os/UserHandle;Landroid/content/ComponentName;Landroid/os/Bundle;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 1620
+    .line 1629
     iput v1, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->appWidgetId:I
 
-    .line 1621
+    .line 1630
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string v2, "appWidgetId"
 
-    .line 1622
+    .line 1631
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1623
+    .line 1632
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     iget-wide v2, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->id:J
@@ -1848,7 +1860,7 @@
 
     const-string v1, "rebind app widget success"
 
-    .line 1624
+    .line 1633
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -1858,10 +1870,10 @@
 
     const-string v1, "rebind app widget failed"
 
-    .line 1626
+    .line 1635
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1629
+    .line 1638
     :cond_2
     :goto_0
     iget v0, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->appWidgetId:I
@@ -1874,7 +1886,7 @@
 
     const-string v0, "Launcher.Model"
 
-    .line 1630
+    .line 1639
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1899,7 +1911,7 @@
 
     invoke-static {v0, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1632
+    .line 1641
     iget-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mManager:Landroid/content/pm/PackageManager;
 
     invoke-virtual {p2}, Landroid/content/pm/PackageManager;->isSafeMode()Z
@@ -1908,12 +1920,12 @@
 
     if-nez p2, :cond_3
 
-    .line 1633
+    .line 1642
     iget-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     invoke-static {p2, p1}, Lcom/miui/home/launcher/LauncherModel;->deleteItemFromDatabase(Landroid/content/Context;Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 1635
+    .line 1644
     :cond_3
     iget-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -1921,15 +1933,15 @@
 
     move-result-object p2
 
-    new-instance p3, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$U3ZXAF8z2UAZnRxAVonT_8y_szs;
+    new-instance p3, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$ou0eRNFXm_glgCzii4Tv_ToyEFE;
 
-    invoke-direct {p3, p1}, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$U3ZXAF8z2UAZnRxAVonT_8y_szs;-><init>(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
+    invoke-direct {p3, p1}, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$ou0eRNFXm_glgCzii4Tv_ToyEFE;-><init>(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
 
     invoke-virtual {p2, p3}, Lcom/miui/home/library/utils/DeferredHandler;->post(Ljava/lang/Runnable;)V
 
     goto :goto_1
 
-    .line 1641
+    .line 1650
     :cond_4
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
@@ -1939,12 +1951,12 @@
 
     iget v1, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->appWidgetId:I
 
-    .line 1642
+    .line 1651
     invoke-virtual {v0, v1}, Landroid/appwidget/AppWidgetManager;->getAppWidgetInfo(I)Landroid/appwidget/AppWidgetProviderInfo;
 
     move-result-object v0
 
-    .line 1643
+    .line 1652
     iget-object v1, v0, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
     invoke-virtual {v1}, Landroid/content/ComponentName;->toShortString()Ljava/lang/String;
@@ -1953,10 +1965,10 @@
 
     iput-object v1, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->packageName:Ljava/lang/String;
 
-    .line 1644
+    .line 1653
     iput-wide p2, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->id:J
 
-    .line 1645
+    .line 1654
     iget-wide p2, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->container:J
 
     const-wide/16 v1, -0x64
@@ -1969,12 +1981,12 @@
 
     const-string p2, "Widget found where container != CONTAINER_DESKTOP -- ignoring!"
 
-    .line 1646
+    .line 1655
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 1650
+    .line 1659
     :cond_5
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->needRecalculateWidgetSpan()Z
 
@@ -1982,23 +1994,18 @@
 
     if-eqz p2, :cond_6
 
-    .line 1651
-    new-instance p2, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
+    .line 1660
+    iget-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
-    invoke-direct {p2, v0}, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;-><init>(Landroid/appwidget/AppWidgetProviderInfo;)V
+    .line 1661
+    invoke-static {p2, v0}, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->fromProviderInfo(Landroid/content/Context;Landroid/appwidget/AppWidgetProviderInfo;)Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
-    .line 1652
-    iget-object p3, p2, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->providerInfo:Landroid/appwidget/AppWidgetProviderInfo;
+    move-result-object p2
 
-    iget p3, p3, Landroid/appwidget/AppWidgetProviderInfo;->minWidth:I
+    .line 1662
+    invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->reCalculateSpan(Lcom/miui/home/launcher/LauncherAppWidgetInfo;Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;)V
 
-    iget-object p2, p2, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->providerInfo:Landroid/appwidget/AppWidgetProviderInfo;
-
-    iget p2, p2, Landroid/appwidget/AppWidgetProviderInfo;->minHeight:I
-
-    invoke-direct {p0, p1, p3, p2}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->reCalculateSpan(Lcom/miui/home/launcher/ItemInfo;II)V
-
-    .line 1654
+    .line 1664
     :cond_6
     iget-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -2023,31 +2030,31 @@
 
     const/16 v0, 0x9
 
-    .line 1572
+    .line 1575
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/model/LoaderCursor;->getInt(I)I
 
     move-result v0
 
-    .line 1573
+    .line 1576
     new-instance v1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
     invoke-direct {v1, v0}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;-><init>(I)V
 
-    .line 1574
+    .line 1577
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v2, p1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->load(Landroid/content/Context;Landroid/database/Cursor;)V
 
     const/4 v2, 0x0
 
-    .line 1575
+    .line 1578
     invoke-virtual {p1, v2}, Lcom/miui/home/launcher/model/LoaderCursor;->getLong(I)J
 
     move-result-wide v3
 
     const/16 v5, 0x13
 
-    .line 1576
+    .line 1579
     invoke-virtual {p1, v5}, Lcom/miui/home/launcher/model/LoaderCursor;->getInt(I)I
 
     move-result v5
@@ -2063,7 +2070,7 @@
     :cond_0
     if-eqz v2, :cond_2
 
-    .line 1578
+    .line 1581
     invoke-direct {p0, v3, v4, v0, p1}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadRestoreAppWidget(JILandroid/database/Cursor;)Z
 
     move-result v0
@@ -2072,13 +2079,13 @@
 
     const-string v0, "load restore app widget failed"
 
-    .line 1579
+    .line 1582
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/model/LoaderCursor;->markDeleted(Ljava/lang/String;)V
 
     :cond_1
     return-void
 
-    .line 1584
+    .line 1587
     :cond_2
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isDeviceUnlocked()Z
 
@@ -2086,12 +2093,12 @@
 
     if-eqz p1, :cond_3
 
-    .line 1585
+    .line 1588
     invoke-direct {p0, v1, v3, v4}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadAppWidget(Lcom/miui/home/launcher/LauncherAppWidgetInfo;J)V
 
     goto :goto_0
 
-    .line 1587
+    .line 1590
     :cond_3
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -2099,36 +2106,34 @@
 
     move-result-object p1
 
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$zhBmkbk8nN7y6IRAIEj7leLBZP0;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$vH_weXJIp-jtDoFz6ViSCAKpJq0;
 
-    invoke-direct {v0, v1}, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$zhBmkbk8nN7y6IRAIEj7leLBZP0;-><init>(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
+    invoke-direct {v0, v1}, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$vH_weXJIp-jtDoFz6ViSCAKpJq0;-><init>(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
 
     invoke-virtual {p1, v0}, Lcom/miui/home/library/utils/DeferredHandler;->post(Ljava/lang/Runnable;)V
 
-    .line 1588
+    .line 1591
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {p1}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/Application;
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher()Lcom/miui/home/launcher/Launcher;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    .line 1590
+    .line 1593
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getUserUnlockController()Lcom/miui/home/launcher/common/userUnlock/UserUnlockController;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    .line 1592
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$NDvtk1qURSGcYCf-UTDtFzKe2Ac;
+    .line 1595
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$I7JAvztTd_qAndGdfO9e4yhXXr8;
 
-    invoke-direct {v0, p0, v1, v3, v4}, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$NDvtk1qURSGcYCf-UTDtFzKe2Ac;-><init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherAppWidgetInfo;J)V
+    invoke-direct {v0, p0, v1, v3, v4}, Lcom/miui/home/launcher/-$$Lambda$LauncherModel$LoaderTask$I7JAvztTd_qAndGdfO9e4yhXXr8;-><init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherAppWidgetInfo;J)V
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/common/userUnlock/UserUnlockController;->waitForUserUnlockAndRunOnNonUiThread(Ljava/util/function/Supplier;)V
 
@@ -2140,7 +2145,7 @@
 .method private loadDBComplete()Z
     .locals 3
 
-    .line 1315
+    .line 1318
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     const-string v1, "database_ready_pref_key"
@@ -2159,12 +2164,12 @@
 
     const/4 v0, 0x0
 
-    .line 1559
+    .line 1562
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v0
 
-    .line 1560
+    .line 1563
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     iget-object v2, v2, Lcom/miui/home/launcher/LauncherModel;->mFolders:Ljava/util/HashMap;
@@ -2181,7 +2186,7 @@
 
     const-string p1, "Launcher.Model"
 
-    .line 1561
+    .line 1564
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2204,18 +2209,18 @@
 
     return-void
 
-    .line 1564
+    .line 1567
     :cond_0
     new-instance v0, Lcom/miui/home/launcher/FolderInfo;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/FolderInfo;-><init>()V
 
-    .line 1565
+    .line 1568
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1, p1}, Lcom/miui/home/launcher/FolderInfo;->load(Landroid/content/Context;Landroid/database/Cursor;)V
 
-    .line 1566
+    .line 1569
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     iget-object p1, p1, Lcom/miui/home/launcher/LauncherModel;->mFolders:Ljava/util/HashMap;
@@ -2228,7 +2233,7 @@
 
     invoke-virtual {p1, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1568
+    .line 1571
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherModel;->access$500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/ref/WeakReference;
@@ -2251,36 +2256,36 @@
 
     const/16 v0, 0x9
 
-    .line 1721
+    .line 1731
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/model/LoaderCursor;->getInt(I)I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 1722
+    .line 1732
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/model/LoaderCursor;->getLong(I)J
 
     const/16 v2, 0xf
 
-    .line 1724
+    .line 1734
     invoke-virtual {p1, v2}, Lcom/miui/home/launcher/model/LoaderCursor;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1725
+    .line 1735
     invoke-static {v0, v2}, Lcom/miui/home/launcher/gadget/GadgetFactory;->getGadgeInfo(ILjava/lang/String;)Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 1727
+    .line 1737
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v2, p1}, Lcom/miui/home/launcher/gadget/GadgetInfo;->load(Landroid/content/Context;Landroid/database/Cursor;)V
 
-    .line 1728
+    .line 1738
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/GadgetInfo;->isValid()Z
 
     move-result v2
@@ -2304,7 +2309,7 @@
     :goto_0
     if-nez v0, :cond_2
 
-    .line 1735
+    .line 1745
     iget-object v3, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mManager:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v3}, Landroid/content/pm/PackageManager;->isSafeMode()Z
@@ -2315,12 +2320,12 @@
 
     const-string v2, "remove gadget"
 
-    .line 1737
+    .line 1747
     invoke-virtual {p1, v2}, Lcom/miui/home/launcher/model/LoaderCursor;->markDeleted(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 1740
+    .line 1750
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
@@ -2332,7 +2337,7 @@
     :goto_1
     if-eqz v1, :cond_4
 
-    .line 1743
+    .line 1753
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherModel;->access$500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/ref/WeakReference;
@@ -2358,7 +2363,7 @@
 
     return-void
 
-    .line 2094
+    .line 2103
     :cond_0
     :goto_0
     :try_start_0
@@ -2376,7 +2381,7 @@
 
     const/16 v0, 0x8
 
-    .line 2096
+    .line 2105
     :try_start_1
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/model/LoaderCursor;->getInt(I)I
 
@@ -2400,25 +2405,25 @@
 
     goto :goto_0
 
-    .line 2116
+    .line 2125
     :pswitch_0
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadGadget(Lcom/miui/home/launcher/model/LoaderCursor;)V
 
     goto :goto_0
 
-    .line 2112
+    .line 2121
     :pswitch_1
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadAppWidget(Lcom/miui/home/launcher/model/LoaderCursor;)V
 
     goto :goto_0
 
-    .line 2108
+    .line 2117
     :pswitch_2
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadFolder(Landroid/database/Cursor;)V
 
     goto :goto_0
 
-    .line 2104
+    .line 2113
     :cond_1
     :pswitch_3
     invoke-direct {p0, p1, v0, p2, p3}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadShortcut(Lcom/miui/home/launcher/model/LoaderCursor;ILcom/miui/home/launcher/RemovedComponentInfoList;Z)V
@@ -2436,14 +2441,14 @@
 
     const-string v2, "Desktop items loading interrupted:"
 
-    .line 2120
+    .line 2129
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_0
 
-    .line 2124
+    .line 2133
     :cond_2
     invoke-virtual {p1}, Lcom/miui/home/launcher/model/LoaderCursor;->close()V
 
@@ -2454,6 +2459,7 @@
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/model/LoaderCursor;->close()V
 
+    .line 2134
     throw p2
 
     :pswitch_data_0
@@ -2475,19 +2481,19 @@
 
     const/16 v0, 0x17
 
-    .line 1672
+    .line 1682
     invoke-interface {p4, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1674
+    .line 1684
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1675
+    .line 1685
     invoke-static {v0}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
@@ -2502,7 +2508,7 @@
 
     if-nez v0, :cond_1
 
-    .line 1678
+    .line 1688
     invoke-interface {p4, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -2516,7 +2522,7 @@
 
     if-eqz v0, :cond_7
 
-    .line 1680
+    .line 1690
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -2531,7 +2537,7 @@
 
     goto :goto_1
 
-    .line 1683
+    .line 1693
     :cond_2
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -2547,13 +2553,13 @@
 
     return v2
 
-    .line 1686
+    .line 1696
     :cond_3
     invoke-direct {p0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->getInstallingApps()Ljava/util/HashMap;
 
     move-result-object v3
 
-    .line 1687
+    .line 1697
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -2564,30 +2570,30 @@
 
     if-eqz v4, :cond_6
 
-    .line 1688
+    .line 1698
     new-instance v4, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
     invoke-direct {v4, p3}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;-><init>(I)V
 
-    .line 1689
+    .line 1699
     iput-wide p1, v4, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->id:J
 
-    .line 1690
+    .line 1700
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4, p1, p4}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->load(Landroid/content/Context;Landroid/database/Cursor;)V
 
-    .line 1691
+    .line 1701
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, v4, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->packageName:Ljava/lang/String;
 
-    .line 1692
+    .line 1702
     invoke-virtual {v4, v0}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->setProvider(Landroid/content/ComponentName;)V
 
-    .line 1693
+    .line 1703
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -2600,17 +2606,17 @@
 
     if-eqz p1, :cond_4
 
-    .line 1695
+    .line 1705
     iget-object p2, p1, Lcom/miui/home/launcher/install/PackageInstallerCompat$Info;->icon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, p2}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->setDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1696
+    .line 1706
     iget p1, p1, Lcom/miui/home/launcher/install/PackageInstallerCompat$Info;->progress:I
 
     invoke-virtual {v4, p1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->setProgress(I)V
 
-    .line 1698
+    .line 1708
     :cond_4
     iget-wide p1, v4, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->container:J
 
@@ -2624,12 +2630,12 @@
 
     const-string p2, "Widget found where container != CONTAINER_DESKTOP -- ignoring!"
 
-    .line 1699
+    .line 1709
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v2
 
-    .line 1702
+    .line 1712
     :cond_5
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -2668,14 +2674,14 @@
 
     const/4 v3, 0x1
 
-    .line 1760
+    .line 1769
     invoke-virtual {v2, v3}, Lcom/miui/home/launcher/model/LoaderCursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     const/4 v6, 0x0
 
-    .line 1763
+    .line 1772
     :try_start_0
     invoke-static {v0, v6}, Landroid/content/Intent;->parseUri(Ljava/lang/String;I)Landroid/content/Intent;
 
@@ -2683,15 +2689,15 @@
     :try_end_0
     .catch Ljava/net/URISyntaxException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1769
+    .line 1778
     invoke-virtual {v2, v6}, Lcom/miui/home/launcher/model/LoaderCursor;->getLong(I)J
 
     move-result-wide v14
 
-    .line 1770
+    .line 1779
     iget-object v8, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {v8}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {v8}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/Application;
 
     move-result-object v8
 
@@ -2707,7 +2713,7 @@
 
     const-string v8, "Launcher.Model"
 
-    .line 1772
+    .line 1781
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -2744,23 +2750,23 @@
 
     if-nez v1, :cond_9
 
-    .line 1778
+    .line 1787
     invoke-virtual {v5}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v8
 
     if-nez v8, :cond_0
 
-    .line 1780
+    .line 1789
     invoke-static {v0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackInvalidateApplication(Ljava/lang/String;)V
 
-    .line 1782
+    .line 1791
     :cond_0
     new-instance v0, Lcom/miui/home/launcher/util/ComponentKey;
 
     invoke-direct {v0, v8, v13}, Lcom/miui/home/launcher/util/ComponentKey;-><init>(Landroid/content/ComponentName;Landroid/os/UserHandle;)V
 
-    .line 1783
+    .line 1792
     iget-object v9, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mAllAppsProvider:Lcom/miui/home/launcher/model/LauncherAppsProvider;
 
     invoke-interface {v9}, Lcom/miui/home/launcher/model/LauncherAppsProvider;->getAllComponentKey()Ljava/util/Collection;
@@ -2777,7 +2783,7 @@
 
     goto :goto_0
 
-    .line 1812
+    .line 1821
     :cond_1
     iget-object v0, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -2797,13 +2803,13 @@
 
     if-eqz v4, :cond_2
 
-    .line 1814
+    .line 1823
     invoke-virtual {v4, v2, v8}, Lcom/miui/home/launcher/RemovedComponentInfoList;->recordRemovedInfo(Landroid/database/Cursor;Landroid/content/ComponentName;)Z
 
     :cond_2
     const-string v0, "Remove: TwelveKeyDialer"
 
-    .line 1816
+    .line 1825
     invoke-virtual {v2, v0}, Lcom/miui/home/launcher/model/LoaderCursor;->markDeleted(Ljava/lang/String;)V
 
     return-void
@@ -2816,7 +2822,7 @@
 
     goto :goto_1
 
-    .line 1789
+    .line 1798
     :cond_4
     invoke-virtual {v8}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -2832,7 +2838,7 @@
 
     goto :goto_1
 
-    .line 1796
+    .line 1805
     :cond_5
     iget-object v10, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
@@ -2840,7 +2846,7 @@
 
     move-result-object v10
 
-    .line 1797
+    .line 1806
     invoke-virtual {v8}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v11
@@ -2863,10 +2869,10 @@
 
     if-eqz v4, :cond_7
 
-    .line 1801
+    .line 1810
     invoke-virtual {v4, v2, v8}, Lcom/miui/home/launcher/RemovedComponentInfoList;->recordRemovedInfo(Landroid/database/Cursor;Landroid/content/ComponentName;)Z
 
-    .line 1803
+    .line 1812
     :cond_7
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -2896,10 +2902,10 @@
 
     invoke-virtual {v2, v10}, Lcom/miui/home/launcher/model/LoaderCursor;->markDeleted(Ljava/lang/String;)V
 
-    .line 1804
+    .line 1813
     invoke-virtual {v2, v0}, Lcom/miui/home/launcher/model/LoaderCursor;->checkPackageNameChange(Lcom/miui/home/launcher/util/ComponentKey;)V
 
-    .line 1806
+    .line 1815
     :cond_8
     invoke-virtual {v8}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -2911,7 +2917,7 @@
 
     if-nez v0, :cond_a
 
-    .line 1807
+    .line 1816
     invoke-virtual {v8}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -2930,7 +2936,7 @@
 
     const-string v0, "Launcher.Model"
 
-    .line 1808
+    .line 1817
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2966,25 +2972,25 @@
 
     if-ne v1, v0, :cond_a
 
-    .line 1822
+    .line 1831
     :try_start_1
     invoke-virtual {v2, v3}, Lcom/miui/home/launcher/model/LoaderCursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1823
+    .line 1832
     invoke-static {v0, v6}, Landroid/content/Intent;->parseUri(Ljava/lang/String;I)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 1824
+    .line 1833
     invoke-virtual {v0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v8
 
     if-eqz v8, :cond_a
 
-    .line 1825
+    .line 1834
     invoke-virtual {v0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
@@ -2995,14 +3001,14 @@
 
     move-result-object v0
 
-    .line 1826
+    .line 1835
     invoke-static {v0}, Lcom/miui/home/launcher/russia/RussiaPreInstallUtils;->isInLinkList(Ljava/lang/String;)Z
 
     move-result v8
 
     if-nez v8, :cond_a
 
-    .line 1827
+    .line 1836
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -3026,13 +3032,13 @@
     :catch_0
     move-exception v0
 
-    .line 1832
+    .line 1841
     invoke-virtual {v0}, Ljava/net/URISyntaxException;->printStackTrace()V
 
     :cond_a
     if-nez v1, :cond_d
 
-    .line 1838
+    .line 1847
     iget-object v8, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     iget-object v10, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
@@ -3065,7 +3071,7 @@
 
     const-string v1, "Launcher.Model"
 
-    .line 1841
+    .line 1850
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -3096,7 +3102,7 @@
 
     if-eqz v0, :cond_c
 
-    .line 1843
+    .line 1852
     iget-object v1, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mMode:Lcom/miui/home/launcher/allapps/LauncherMode;
 
     iget-object v8, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
@@ -3113,7 +3119,7 @@
 
     const-string v1, "Launcher.Model"
 
-    .line 1844
+    .line 1853
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -3140,12 +3146,12 @@
 
     const-string v6, "loadShortcut, after getShortcutInfoFromApplication, mLoadedApps contains info, set null"
 
-    .line 1846
+    .line 1855
     invoke-static {v1, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_4
 
-    .line 1848
+    .line 1857
     :cond_c
     iget-object v1, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -3169,7 +3175,7 @@
 
     const-string v6, "loadShortcut, after getShortcutInfoFromApplication, put into mLoadedApps"
 
-    .line 1849
+    .line 1858
     invoke-static {v1, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto/16 :goto_4
@@ -3177,7 +3183,7 @@
     :cond_d
     move-wide/from16 v20, v14
 
-    .line 1852
+    .line 1861
     invoke-virtual {v5}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
@@ -3186,7 +3192,7 @@
 
     const-string v0, "com.miui.securitycore"
 
-    .line 1853
+    .line 1862
     invoke-virtual {v5}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v6
@@ -3203,7 +3209,7 @@
 
     const-string v0, "com.miui.securityspace.ui.activity.SwitchUserActivity"
 
-    .line 1854
+    .line 1863
     invoke-virtual {v5}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v6
@@ -3218,7 +3224,7 @@
 
     if-eqz v0, :cond_e
 
-    .line 1855
+    .line 1864
     invoke-static {}, Lmiui/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -3231,8 +3237,8 @@
 
     iget-object v0, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    .line 1856
-    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/LauncherApplication;
+    .line 1865
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
@@ -3244,12 +3250,12 @@
 
     const-string v0, "reomve second space icon"
 
-    .line 1857
+    .line 1866
     invoke-virtual {v2, v0}, Lcom/miui/home/launcher/model/LoaderCursor;->markDeleted(Ljava/lang/String;)V
 
     return-void
 
-    .line 1860
+    .line 1869
     :cond_e
     iget-object v8, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -3279,12 +3285,12 @@
 
     move-result-object v0
 
-    .line 1863
+    .line 1872
     instance-of v1, v0, Lcom/miui/home/launcher/DeepShortcutInfo;
 
     if-eqz v1, :cond_10
 
-    .line 1864
+    .line 1873
     move-object v1, v0
 
     check-cast v1, Lcom/miui/home/launcher/DeepShortcutInfo;
@@ -3293,7 +3299,7 @@
 
     move-result-object v1
 
-    .line 1865
+    .line 1874
     iget-object v6, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mDeepShortcutKeys:Ljava/util/HashSet;
 
     invoke-virtual {v6, v1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -3302,7 +3308,7 @@
 
     if-eqz v6, :cond_f
 
-    .line 1866
+    .line 1875
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3325,7 +3331,7 @@
 
     return-void
 
-    .line 1869
+    .line 1878
     :cond_f
     iget-object v6, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mDeepShortcutKeys:Ljava/util/HashSet;
 
@@ -3334,7 +3340,7 @@
     :cond_10
     const-string v1, "Launcher.Model"
 
-    .line 1872
+    .line 1881
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -3366,10 +3372,10 @@
     :goto_4
     if-eqz v0, :cond_12
 
-    .line 1876
+    .line 1885
     iput-object v5, v0, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
 
-    .line 1877
+    .line 1886
     iget-object v1, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/ShortcutInfo;->load(Landroid/content/Context;Landroid/database/Cursor;)V
@@ -3377,12 +3383,12 @@
     :cond_12
     if-eqz v0, :cond_14
 
-    .line 1882
+    .line 1891
     iget-object v1, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1, v0}, Lcom/miui/home/launcher/LauncherModel;->access$2000(Lcom/miui/home/launcher/LauncherModel;Lcom/miui/home/launcher/ShortcutInfo;)V
 
-    .line 1884
+    .line 1893
     iget-object v1, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mAllAppsProvider:Lcom/miui/home/launcher/model/LauncherAppsProvider;
 
     iget-object v6, v0, Lcom/miui/home/launcher/ShortcutInfo;->user:Landroid/os/UserHandle;
@@ -3400,7 +3406,7 @@
     :cond_13
     const/4 v6, 0x0
 
-    .line 1885
+    .line 1894
     :goto_5
     iget v1, v0, Lcom/miui/home/launcher/ShortcutInfo;->runtimeStatusFlags:I
 
@@ -3418,7 +3424,7 @@
     :goto_6
     if-nez v0, :cond_15
 
-    .line 1896
+    .line 1905
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3453,18 +3459,18 @@
 
     goto/16 :goto_8
 
-    .line 1897
+    .line 1906
     :cond_15
     instance-of v1, v0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
     if-eqz v1, :cond_1d
 
-    .line 1898
+    .line 1907
     invoke-static {}, Lcom/miui/home/launcher/progress/ProgressInfoList;->waitingForReady()V
 
     const-string v1, "Launcher.Model"
 
-    .line 1899
+    .line 1908
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -3485,7 +3491,7 @@
 
     invoke-static {v1, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1900
+    .line 1909
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -3498,10 +3504,10 @@
 
     if-nez v5, :cond_1c
 
-    .line 1901
+    .line 1910
     iget-object v1, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
-    .line 1902
+    .line 1911
     invoke-static {v1}, Lcom/miui/home/launcher/progress/ProgressManager;->getManager(Landroid/content/Context;)Lcom/miui/home/launcher/progress/ProgressManager;
 
     move-result-object v1
@@ -3518,7 +3524,7 @@
 
     iget-object v1, v0, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
 
-    .line 1903
+    .line 1912
     invoke-virtual {v1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v1
@@ -3537,7 +3543,7 @@
 
     const-string v1, "com.android.vending"
 
-    .line 1905
+    .line 1914
     iget-object v3, v8, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mAppProgressServer:Ljava/lang/String;
 
     invoke-static {v1, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -3546,12 +3552,12 @@
 
     if-eqz v1, :cond_19
 
-    .line 1906
+    .line 1915
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->getInstallingApps()Ljava/util/HashMap;
 
     move-result-object v1
 
-    .line 1907
+    .line 1916
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -3562,7 +3568,7 @@
 
     if-eqz v3, :cond_18
 
-    .line 1908
+    .line 1917
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -3575,7 +3581,7 @@
 
     if-eqz v1, :cond_17
 
-    .line 1910
+    .line 1919
     iget-object v2, v1, Lcom/miui/home/launcher/install/PackageInstallerCompat$Info;->label:Ljava/lang/CharSequence;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -3584,7 +3590,7 @@
 
     if-nez v2, :cond_16
 
-    .line 1911
+    .line 1920
     iget-object v2, v1, Lcom/miui/home/launcher/install/PackageInstallerCompat$Info;->label:Ljava/lang/CharSequence;
 
     invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -3593,23 +3599,23 @@
 
     iput-object v2, v8, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressTitle:Ljava/lang/String;
 
-    .line 1913
+    .line 1922
     :cond_16
     iget v2, v1, Lcom/miui/home/launcher/install/PackageInstallerCompat$Info;->progress:I
 
     iput v2, v8, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressPercent:I
 
-    .line 1914
+    .line 1923
     iget-object v2, v1, Lcom/miui/home/launcher/install/PackageInstallerCompat$Info;->icon:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_17
 
-    .line 1915
+    .line 1924
     iget-object v1, v1, Lcom/miui/home/launcher/install/PackageInstallerCompat$Info;->icon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/ShortcutInfo;->setIconDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1918
+    .line 1927
     :cond_17
     iget-object v1, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -3619,7 +3625,7 @@
 
     invoke-virtual {v1, v2, v8}, Lcom/miui/home/launcher/LauncherModel;->addProgressInfo(Ljava/lang/String;Lcom/miui/home/launcher/progress/ProgressShortcutInfo;)V
 
-    .line 1919
+    .line 1928
     iget-object v1, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/miui/home/launcher/install/PackageInstallerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/launcher/install/PackageInstallerCompat;
@@ -3647,14 +3653,14 @@
 
     const/4 v8, 0x0
 
-    .line 1921
+    .line 1930
     invoke-direct/range {v1 .. v6}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->removeProgressingPackages(Lcom/miui/home/launcher/model/LoaderCursor;Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Lcom/miui/home/launcher/RemovedComponentInfoList;ZZ)V
 
     move v6, v8
 
     goto :goto_8
 
-    .line 1925
+    .line 1934
     :cond_19
     iget-object v1, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -3679,7 +3685,7 @@
     :cond_1c
     const/4 v8, 0x0
 
-    .line 1928
+    .line 1937
     :goto_7
     move-object v3, v0
 
@@ -3701,7 +3707,7 @@
     :goto_8
     if-eqz v0, :cond_1e
 
-    .line 1933
+    .line 1942
     invoke-static {v0}, Lcom/miui/home/launcher/russia/RussiaPreInstallUtils;->sync(Lcom/miui/home/launcher/ShortcutInfo;)V
 
     :cond_1e
@@ -3709,7 +3715,7 @@
 
     const-string v1, "Launcher.Model"
 
-    .line 1936
+    .line 1945
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3730,7 +3736,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1937
+    .line 1946
     iget-object v1, v7, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/ref/WeakReference;
@@ -3757,7 +3763,7 @@
 
     const-string v2, "loadShortcut, parseUri error"
 
-    .line 1765
+    .line 1774
     invoke-static {v0, v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-void
@@ -3770,7 +3776,7 @@
 
     const/4 v1, 0x0
 
-    .line 1661
+    .line 1671
     :try_start_0
     invoke-static {p1, v0}, Landroid/content/Intent;->parseUri(Ljava/lang/String;I)Landroid/content/Intent;
 
@@ -3780,7 +3786,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 1665
+    .line 1675
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
@@ -3789,7 +3795,7 @@
 
     goto :goto_0
 
-    .line 1668
+    .line 1678
     :cond_0
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
@@ -3805,36 +3811,34 @@
     return-object v1
 .end method
 
-.method private reCalculateSpan(Lcom/miui/home/launcher/ItemInfo;II)V
-    .locals 1
+.method private reCalculateSpan(Lcom/miui/home/launcher/LauncherAppWidgetInfo;Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;)V
+    .locals 2
 
-    .line 1748
-    invoke-static {p2}, Lcom/miui/home/launcher/DeviceConfig;->getWidgetSpanX(I)I
+    .line 1759
+    iget v0, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->spanX:I
 
-    move-result p2
+    iget v1, p2, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->spanX:I
 
-    .line 1749
-    invoke-static {p3}, Lcom/miui/home/launcher/DeviceConfig;->getWidgetSpanY(I)I
+    if-ne v0, v1, :cond_0
 
-    move-result p3
+    iget v0, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->spanY:I
 
-    .line 1750
-    iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->spanX:I
+    iget v1, p2, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->spanY:I
 
-    if-ne v0, p2, :cond_0
+    if-eq v0, v1, :cond_1
 
-    iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->spanY:I
-
-    if-eq v0, p3, :cond_1
-
-    .line 1751
+    .line 1760
     :cond_0
-    iput p2, p1, Lcom/miui/home/launcher/ItemInfo;->spanX:I
+    iget v0, p2, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->spanX:I
 
-    .line 1752
-    iput p3, p1, Lcom/miui/home/launcher/ItemInfo;->spanY:I
+    iput v0, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->spanX:I
 
-    .line 1753
+    .line 1761
+    iget p2, p2, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->spanY:I
+
+    iput p2, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->spanY:I
+
+    .line 1762
     iget-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     invoke-static {p2, p1}, Lcom/miui/home/launcher/LauncherModel;->updateItemInDatabase(Landroid/content/Context;Lcom/miui/home/launcher/ItemInfo;)V
@@ -3853,10 +3857,10 @@
     :cond_0
     if-eqz p4, :cond_1
 
-    .line 1946
+    .line 1955
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/model/LoaderCursor;->onRemoveProgressShortcutInfo(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;)V
 
-    .line 1948
+    .line 1957
     :cond_1
     iget-object p4, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
@@ -3870,7 +3874,7 @@
 
     invoke-virtual {p4, p5}, Lcom/miui/home/launcher/progress/ProgressManager;->removeProgressingInfo(Ljava/lang/String;)V
 
-    .line 1949
+    .line 1958
     iget-object p4, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     iget-object p4, p4, Lcom/miui/home/launcher/LauncherModel;->mProgressingPackages:Ljava/util/HashMap;
@@ -3883,14 +3887,14 @@
 
     if-eqz p3, :cond_2
 
-    .line 1951
+    .line 1960
     invoke-virtual {p2}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object p4
 
     invoke-virtual {p3, p1, p4}, Lcom/miui/home/launcher/RemovedComponentInfoList;->recordRemovedInfo(Landroid/database/Cursor;Landroid/content/ComponentName;)Z
 
-    .line 1954
+    .line 1963
     :cond_2
     new-instance p3, Ljava/lang/StringBuilder;
 
@@ -3912,7 +3916,7 @@
 
     invoke-virtual {p1, p3}, Lcom/miui/home/launcher/model/LoaderCursor;->markDeleted(Ljava/lang/String;)V
 
-    .line 1955
+    .line 1964
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     iget-object p1, p1, Lcom/miui/home/launcher/LauncherModel;->mFolders:Ljava/util/HashMap;
@@ -3931,7 +3935,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 1957
+    .line 1966
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/FolderInfo;->remove(Lcom/miui/home/launcher/ShortcutInfo;)V
 
     :cond_3
@@ -3941,19 +3945,19 @@
 .method private startBinding(Lcom/miui/home/launcher/LauncherModel$Callbacks;)V
     .locals 3
 
-    .line 2129
+    .line 2138
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->tryGetCallbacks(Lcom/miui/home/launcher/LauncherModel$Callbacks;)Lcom/miui/home/launcher/LauncherModel$Callbacks;
 
     move-result-object p1
 
-    .line 2130
+    .line 2139
     iget-boolean v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 2132
+    .line 2141
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -3963,7 +3967,7 @@
 
     monitor-enter v0
 
-    .line 2134
+    .line 2143
     :try_start_0
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -3977,7 +3981,7 @@
 
     invoke-virtual {v1, v2}, Lcom/miui/home/library/utils/DeferredHandler;->post(Ljava/lang/Runnable;)V
 
-    .line 2141
+    .line 2150
     monitor-exit v0
 
     return-void
@@ -3999,7 +4003,7 @@
 
     const-string v0, "Launcher.Model"
 
-    .line 2156
+    .line 2165
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4020,7 +4024,7 @@
 
     const-string v0, "Launcher.Model"
 
-    .line 2157
+    .line 2166
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4041,7 +4045,7 @@
 
     const-string v0, "Launcher.Model"
 
-    .line 2158
+    .line 2167
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4066,7 +4070,7 @@
 .method isCallbacksValidate(Lcom/miui/home/launcher/LauncherModel$Callbacks;)Z
     .locals 2
 
-    .line 1553
+    .line 1556
     iget-boolean v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     const/4 v1, 0x0
@@ -4080,15 +4084,13 @@
 
     return v1
 
-    .line 1555
+    .line 1558
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/Application;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher()Lcom/miui/home/launcher/Launcher;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
@@ -4103,191 +4105,175 @@
 .method isLaunching()Z
     .locals 1
 
-    .line 1150
+    .line 1153
     iget-boolean v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mIsLaunching:Z
 
     return v0
 .end method
 
 .method public run()V
-    .locals 21
+    .locals 19
 
     move-object/from16 v9, p0
 
-    .line 1319
+    .line 1322
     :try_start_0
-    iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
+    iget-object v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-virtual {v1, v9}, Lcom/miui/home/launcher/LauncherModel;->beginLoader(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)Lcom/miui/home/launcher/LauncherModel$LoaderTransaction;
+    invoke-virtual {v0, v9}, Lcom/miui/home/launcher/LauncherModel;->beginLoader(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)Lcom/miui/home/launcher/LauncherModel$LoaderTransaction;
 
     move-result-object v10
     :try_end_0
     .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_2
 
-    const/4 v11, 0x0
-
-    .line 1327
-    :try_start_1
-    iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
-
-    invoke-static {v1}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/LauncherApplication;
-
-    move-result-object v1
-
-    const-wide/16 v2, 0x0
-
-    .line 1329
-    :goto_0
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
-
-    move-result-object v4
-
-    const-wide/16 v12, 0x32
-
-    if-eqz v4, :cond_18
-
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lcom/miui/home/launcher/LauncherProvider;->isReady()Z
-
-    move-result v4
-    :try_end_1
-    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_a
-
-    if-nez v4, :cond_0
-
     .line 1330
-    :try_start_2
-    invoke-virtual {v1}, Lcom/miui/home/launcher/LauncherApplication;->hasBroughtToForeground()Z
+    :try_start_1
+    iget-object v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
-    move-result v4
+    invoke-static {v0}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/Application;
 
-    if-nez v4, :cond_0
+    move-result-object v0
 
-    iget-boolean v4, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
-    :try_end_2
-    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_b
+    const-wide/16 v1, 0x0
 
-    if-nez v4, :cond_0
+    .line 1332
+    :goto_0
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
+
+    move-result-object v3
+
+    const-wide/16 v11, 0x32
+
+    if-eqz v3, :cond_18
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/miui/home/launcher/LauncherProvider;->isReady()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    .line 1333
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->hasBroughtToForeground()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    iget-boolean v3, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
+
+    if-nez v3, :cond_0
 
     goto/16 :goto_b
 
-    .line 1339
+    .line 1342
     :cond_0
-    :try_start_3
-    iget-boolean v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
-    :try_end_3
-    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
-    .catchall {:try_start_3 .. :try_end_3} :catchall_a
+    iget-boolean v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_2
 
-    if-eqz v2, :cond_2
+    if-eqz v1, :cond_2
 
     if-eqz v10, :cond_1
 
-    .line 1512
-    :try_start_4
+    .line 1515
+    :try_start_2
     invoke-virtual {v10}, Lcom/miui/home/launcher/LauncherModel$LoaderTransaction;->close()V
-    :try_end_4
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_4 .. :try_end_4} :catch_2
+    :try_end_2
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_2} :catch_2
 
     :cond_1
     return-void
 
-    .line 1341
+    .line 1344
     :cond_2
-    :try_start_5
-    iget-object v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
+    :try_start_3
+    iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/miui/home/library/compat/UserManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/UserManagerCompat;
+    invoke-static {v1}, Lcom/miui/home/library/compat/UserManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/UserManagerCompat;
 
-    move-result-object v2
+    move-result-object v1
 
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lcom/miui/home/library/compat/UserManagerCompat;->isUserUnlocked(Landroid/os/UserHandle;)Z
-
-    move-result v2
-
-    iput-boolean v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->isUserUnLocked:Z
-
-    .line 1343
-    invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
-
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/miui/home/launcher/common/PreferenceUtils;->hasSetDrawerModeEnable()Z
+    invoke-virtual {v1, v2}, Lcom/miui/home/library/compat/UserManagerCompat;->isUserUnlocked(Landroid/os/UserHandle;)Z
 
-    move-result v2
-    :try_end_5
-    .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_0
-    .catchall {:try_start_5 .. :try_end_5} :catchall_a
+    move-result v1
 
-    if-nez v2, :cond_3
+    iput-boolean v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->isUserUnLocked:Z
 
-    .line 1344
-    :try_start_6
+    .line 1346
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
-    move-result-object v2
+    move-result-object v1
 
-    iget-object v3, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mMode:Lcom/miui/home/launcher/allapps/LauncherMode;
+    invoke-virtual {v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->hasSetDrawerModeEnable()Z
 
-    invoke-static {v3}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isDrawerMode(Lcom/miui/home/launcher/allapps/LauncherMode;)Z
+    move-result v1
 
-    move-result v3
-
-    invoke-virtual {v2, v3}, Lcom/miui/home/launcher/common/PreferenceUtils;->setDrawerModeEnable(Z)V
-    :try_end_6
-    .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_0
-    .catchall {:try_start_6 .. :try_end_6} :catchall_b
+    if-nez v1, :cond_3
 
     .line 1347
+    invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
+
+    move-result-object v1
+
+    iget-object v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mMode:Lcom/miui/home/launcher/allapps/LauncherMode;
+
+    invoke-static {v2}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isDrawerMode(Lcom/miui/home/launcher/allapps/LauncherMode;)Z
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/common/PreferenceUtils;->setDrawerModeEnable(Z)V
+
+    .line 1350
     :cond_3
-    :try_start_7
-    iget-object v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
+    iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
-    const-string v3, "pref_key_last_label_locale"
+    const-string v2, "pref_key_last_label_locale"
 
-    invoke-static {v2, v3, v11}, Lcom/miui/home/launcher/common/PreferenceUtils;->getString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const/4 v13, 0x0
+
+    invoke-static {v1, v2, v13}, Lcom/miui/home/launcher/common/PreferenceUtils;->getString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 1351
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v2
 
-    .line 1348
-    invoke-virtual {v1}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher()Lcom/miui/home/launcher/Launcher;
+    invoke-static {v2}, Lcom/miui/home/launcher/common/Utilities;->getCurrentLanguage(Landroid/content/Context;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->getCurrentLanguage(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 1349
+    .line 1352
     iget-object v3, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     invoke-static {v3, v1}, Lcom/miui/home/launcher/LauncherModel;->access$1402(Lcom/miui/home/launcher/LauncherModel;Z)Z
 
-    .line 1351
+    .line 1354
     iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mAllAppsProvider:Lcom/miui/home/launcher/model/LauncherAppsProvider;
 
     invoke-interface {v1}, Lcom/miui/home/launcher/model/LauncherAppsProvider;->loadApps()V
 
-    .line 1353
+    .line 1356
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadDBComplete()Z
 
     move-result v1
 
-    .line 1355
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
+    .line 1358
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
 
     move-result-object v2
 
@@ -4314,22 +4300,18 @@
     :goto_1
     move v2, v3
 
-    .line 1356
+    .line 1359
     :goto_2
     invoke-static {}, Lcom/miui/home/launcher/newInstallIndicator/NewInstallIndicatorController;->getController()Lcom/miui/home/launcher/newInstallIndicator/NewInstallIndicatorController;
 
     move-result-object v4
 
     invoke-virtual {v4, v2}, Lcom/miui/home/launcher/newInstallIndicator/NewInstallIndicatorController;->init(Z)V
-    :try_end_7
-    .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_0
-    .catchall {:try_start_7 .. :try_end_7} :catchall_a
 
     if-eqz v2, :cond_6
 
-    .line 1358
-    :try_start_8
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
+    .line 1361
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
 
     move-result-object v4
 
@@ -4339,24 +4321,21 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/miui/home/launcher/LauncherProvider;->loadDefaultWorkspace(Lcom/miui/home/launcher/allapps/LauncherMode;Lcom/miui/home/launcher/model/LauncherAppsProvider;)V
 
-    .line 1360
+    .line 1363
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object v4
 
     invoke-virtual {v4, v3}, Lcom/miui/home/launcher/common/PreferenceUtils;->setShouldAlignScreen(Z)V
 
-    .line 1361
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/LauncherApplication;
+    .line 1364
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v4
 
     const-string v5, "app_state_db_need_init"
 
     invoke-static {v4, v5, v14}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
-    :try_end_8
-    .catch Ljava/lang/Throwable; {:try_start_8 .. :try_end_8} :catch_0
-    .catchall {:try_start_8 .. :try_end_8} :catchall_b
 
     move v15, v3
 
@@ -4366,10 +4345,9 @@
     move v15, v14
 
     :goto_3
-    :try_start_9
     const-string v4, "Launcher.Model"
 
-    .line 1363
+    .line 1366
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -4392,32 +4370,32 @@
 
     invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1365
+    .line 1368
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->getInstance()Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->initDataSource()V
 
-    .line 1366
+    .line 1369
     iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mMode:Lcom/miui/home/launcher/allapps/LauncherMode;
 
     invoke-static {v1}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isDesktopMode(Lcom/miui/home/launcher/allapps/LauncherMode;)Z
 
     move-result v1
-    :try_end_9
-    .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_0
-    .catchall {:try_start_9 .. :try_end_9} :catchall_a
 
     if-eqz v1, :cond_9
 
-    .line 1367
-    :try_start_a
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
+    .line 1370
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
 
-    .line 1368
+    invoke-virtual {v1}, Lcom/miui/home/launcher/Application;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
+
+    move-result-object v1
+
+    .line 1371
     iget-object v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/miui/home/library/compat/UserManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/UserManagerCompat;
@@ -4432,7 +4410,7 @@
 
     const-string v2, "com.miui.home:string/all_app_category_work"
 
-    .line 1369
+    .line 1372
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/LauncherProvider;->queryIdByTitle(Ljava/lang/String;)J
 
     move-result-wide v4
@@ -4445,14 +4423,14 @@
 
     const-string v2, "com.miui.home:string/all_app_category_work"
 
-    .line 1370
+    .line 1373
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/LauncherProvider;->addFolder(Ljava/lang/String;)Z
 
     move-result v1
 
     const-string v2, "Launcher.Model"
 
-    .line 1371
+    .line 1374
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -4476,7 +4454,7 @@
 
     const-string v2, "work folder already exist"
 
-    .line 1373
+    .line 1376
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_4
@@ -4486,21 +4464,17 @@
 
     const-string v2, "not have work user"
 
-    .line 1376
+    .line 1379
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_a
-    .catch Ljava/lang/Throwable; {:try_start_a .. :try_end_a} :catch_0
-    .catchall {:try_start_a .. :try_end_a} :catchall_b
 
-    .line 1380
+    .line 1383
     :cond_9
     :goto_4
-    :try_start_b
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v16
 
-    .line 1381
+    .line 1384
     iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
@@ -4508,12 +4482,12 @@
     move-result-object v1
 
     monitor-enter v1
-    :try_end_b
-    .catch Ljava/lang/Throwable; {:try_start_b .. :try_end_b} :catch_0
-    .catchall {:try_start_b .. :try_end_b} :catchall_a
+    :try_end_3
+    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 1382
-    :try_start_c
+    .line 1385
+    :try_start_4
     iget-boolean v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mIsLaunching:Z
 
     const/16 v4, 0xa
@@ -4530,13 +4504,13 @@
     :goto_5
     invoke-static {v2}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 1384
+    .line 1387
     monitor-exit v1
-    :try_end_c
-    .catchall {:try_start_c .. :try_end_c} :catchall_9
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_9
 
-    .line 1386
-    :try_start_d
+    .line 1389
+    :try_start_5
     iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
@@ -4544,12 +4518,12 @@
     move-result-object v1
 
     monitor-enter v1
-    :try_end_d
-    .catch Ljava/lang/Throwable; {:try_start_d .. :try_end_d} :catch_0
-    .catchall {:try_start_d .. :try_end_d} :catchall_a
+    :try_end_5
+    .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_5 .. :try_end_5} :catch_2
 
-    .line 1387
-    :try_start_e
+    .line 1390
+    :try_start_6
     iget-object v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/ref/WeakReference;
@@ -4573,30 +4547,30 @@
     goto :goto_6
 
     :cond_b
-    move-object v2, v11
+    move-object v2, v13
 
     :goto_6
     if-nez v2, :cond_d
 
-    .line 1389
+    .line 1392
     monitor-exit v1
-    :try_end_e
-    .catchall {:try_start_e .. :try_end_e} :catchall_8
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_8
 
     if-eqz v10, :cond_c
 
-    .line 1512
-    :try_start_f
+    .line 1515
+    :try_start_7
     invoke-virtual {v10}, Lcom/miui/home/launcher/LauncherModel$LoaderTransaction;->close()V
-    :try_end_f
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_f .. :try_end_f} :catch_2
+    :try_end_7
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_7 .. :try_end_7} :catch_2
 
     :cond_c
     return-void
 
-    .line 1392
+    .line 1395
     :cond_d
-    :try_start_10
+    :try_start_8
     iget-object v5, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v5}, Lcom/miui/home/launcher/LauncherModel;->access$200(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/library/utils/DeferredHandler;
@@ -4605,7 +4579,7 @@
 
     invoke-virtual {v5}, Lcom/miui/home/library/utils/DeferredHandler;->cancel()V
 
-    .line 1394
+    .line 1397
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v5
@@ -4616,7 +4590,7 @@
 
     invoke-virtual {v5}, Lcom/miui/home/launcher/progress/ProgressManager;->clear()V
 
-    .line 1395
+    .line 1398
     iget-object v5, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v5}, Lcom/miui/home/launcher/LauncherModel;->access$1600(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/IconCache;
@@ -4625,7 +4599,7 @@
 
     invoke-virtual {v5}, Lcom/miui/home/launcher/IconCache;->clear()V
 
-    .line 1396
+    .line 1399
     iget-object v5, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v5}, Lcom/miui/home/launcher/LauncherModel;->access$200(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/library/utils/DeferredHandler;
@@ -4638,34 +4612,30 @@
 
     invoke-virtual {v5, v6}, Lcom/miui/home/library/utils/DeferredHandler;->post(Ljava/lang/Runnable;)V
 
-    .line 1403
+    .line 1406
     monitor-exit v1
-    :try_end_10
-    .catchall {:try_start_10 .. :try_end_10} :catchall_8
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_8
 
-    .line 1405
-    :try_start_11
+    .line 1408
+    :try_start_9
     invoke-static {}, Lcom/miui/home/launcher/common/SecurityHide;->getSecurityHideItems()V
 
-    .line 1406
+    .line 1409
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->updateIconPositionForMiui11Upgrade()Z
 
     move-result v1
-    :try_end_11
-    .catch Ljava/lang/Throwable; {:try_start_11 .. :try_end_11} :catch_0
-    .catchall {:try_start_11 .. :try_end_11} :catchall_a
 
     if-eqz v1, :cond_e
 
-    :try_start_12
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isElderlyManMode()Z
 
     move-result v1
 
     if-nez v1, :cond_e
 
-    .line 1407
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
+    .line 1410
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
 
     move-result-object v1
 
@@ -4673,81 +4643,26 @@
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/LauncherProvider;->deleteItemIfInSysToolFolder(Ljava/lang/String;)V
 
-    .line 1408
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
+    .line 1411
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
 
-    move-result-object v1
+    move-result-object v0
 
-    const-string v2, "com.xiaomi.vipaccount"
+    const-string v1, "com.xiaomi.vipaccount"
 
-    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/LauncherProvider;->deleteItemIfInSysToolFolder(Ljava/lang/String;)V
-    :try_end_12
-    .catch Ljava/lang/Throwable; {:try_start_12 .. :try_end_12} :catch_0
-    .catchall {:try_start_12 .. :try_end_12} :catchall_b
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/LauncherProvider;->deleteItemIfInSysToolFolder(Ljava/lang/String;)V
 
     :cond_e
-    :try_start_13
-    const-string v1, "Launcher.Model"
-
-    .line 1410
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "step 0: loading screens:"
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v5
-
-    sub-long v5, v5, v16
-
-    invoke-virtual {v2, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v5, " ms"
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1411
-    iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
-
-    invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    monitor-enter v1
-    :try_end_13
-    .catch Ljava/lang/Throwable; {:try_start_13 .. :try_end_13} :catch_0
-    .catchall {:try_start_13 .. :try_end_13} :catchall_a
-
-    .line 1412
-    :try_start_14
-    invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadAndBindScreens()V
+    const-string v0, "Launcher.Model"
 
     .line 1413
-    monitor-exit v1
-    :try_end_14
-    .catchall {:try_start_14 .. :try_end_14} :catchall_7
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    :try_start_15
-    const-string v1, "Launcher.Model"
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1414
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, "step 0: loading screens:"
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "step 1: loading workspace:"
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -4755,140 +4670,191 @@
 
     sub-long v5, v5, v16
 
-    invoke-virtual {v2, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v5, " ms"
+    const-string v2, " ms"
 
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1415
-    iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
+    .line 1414
+    iget-object v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
-    :try_end_15
-    .catch Ljava/lang/Throwable; {:try_start_15 .. :try_end_15} :catch_0
-    .catchall {:try_start_15 .. :try_end_15} :catchall_a
+    :try_end_9
+    .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_9 .. :try_end_9} :catch_2
+
+    .line 1415
+    :try_start_a
+    invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadAndBindScreens()V
 
     .line 1416
-    :try_start_16
-    invoke-direct {v9, v15}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadAndBindWorkspace(Z)V
+    monitor-exit v1
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_7
+
+    :try_start_b
+    const-string v0, "Launcher.Model"
 
     .line 1417
-    monitor-exit v1
-    :try_end_16
-    .catchall {:try_start_16 .. :try_end_16} :catchall_6
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "step 1: loading workspace:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v5
+
+    sub-long v5, v5, v16
+
+    invoke-virtual {v1, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, " ms"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1418
+    iget-object v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    monitor-enter v1
+    :try_end_b
+    .catch Ljava/lang/Throwable; {:try_start_b .. :try_end_b} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_b .. :try_end_b} :catch_2
 
     .line 1419
-    :try_start_17
-    iget-boolean v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
+    :try_start_c
+    invoke-direct {v9, v15}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadAndBindWorkspace(Z)V
 
-    if-eqz v1, :cond_f
+    .line 1420
+    monitor-exit v1
+    :try_end_c
+    .catchall {:try_start_c .. :try_end_c} :catchall_6
+
+    .line 1422
+    :try_start_d
+    iget-boolean v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
+
+    if-eqz v0, :cond_f
 
     goto/16 :goto_a
 
-    .line 1425
+    .line 1428
     :cond_f
-    iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
+    iget-object v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
-    :try_end_17
-    .catch Ljava/lang/Throwable; {:try_start_17 .. :try_end_17} :catch_0
-    .catchall {:try_start_17 .. :try_end_17} :catchall_a
+    :try_end_d
+    .catch Ljava/lang/Throwable; {:try_start_d .. :try_end_d} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_d .. :try_end_d} :catch_2
 
-    .line 1426
-    :try_start_18
-    iget-boolean v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mIsLaunching:Z
+    .line 1429
+    :try_start_e
+    iget-boolean v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mIsLaunching:Z
 
-    if-eqz v2, :cond_10
+    if-eqz v0, :cond_10
 
-    const-string v2, "Launcher.Model"
-
-    .line 1427
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "Setting thread priority to BACKGROUND:"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v6
-
-    sub-long v6, v6, v16
-
-    invoke-virtual {v5, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v6, " ms"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v2, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1428
-    invoke-static {v4}, Landroid/os/Process;->setThreadPriority(I)V
+    const-string v0, "Launcher.Model"
 
     .line 1430
-    :cond_10
-    monitor-exit v1
-    :try_end_18
-    .catchall {:try_start_18 .. :try_end_18} :catchall_5
-
-    .line 1432
-    :try_start_19
-    invoke-static {v14}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
-
-    .line 1433
-    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v2
-
-    const-string v4, "extra_micloudapp_provisioned"
-
-    invoke-static {v2, v4}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 1432
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_12
-
-    const-string v1, "Launcher.Model"
-
-    .line 1435
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "step 2: loading restoring items from cloudAppBackup:"
+    const-string v5, "Setting thread priority to BACKGROUND:"
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v5
+
+    sub-long v5, v5, v16
+
+    invoke-virtual {v2, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v5, " ms"
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1431
+    invoke-static {v4}, Landroid/os/Process;->setThreadPriority(I)V
+
+    .line 1433
+    :cond_10
+    monitor-exit v1
+    :try_end_e
+    .catchall {:try_start_e .. :try_end_e} :catchall_5
+
+    .line 1435
+    :try_start_f
+    invoke-static {v14}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
+
+    .line 1436
+    invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v1
+
+    const-string v2, "extra_micloudapp_provisioned"
+
+    invoke-static {v1, v2}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 1435
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    const-string v0, "Launcher.Model"
+
+    .line 1438
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "step 2: loading restoring items from cloudAppBackup:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -4896,27 +4862,27 @@
 
     sub-long v4, v4, v16
 
-    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v4, " ms"
+    const-string v2, " ms"
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1436
-    new-instance v4, Lcom/miui/home/launcher/LauncherModel$LoaderTask$5;
+    .line 1439
+    new-instance v0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$5;
 
-    invoke-direct {v4, v9}, Lcom/miui/home/launcher/LauncherModel$LoaderTask$5;-><init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)V
+    invoke-direct {v0, v9}, Lcom/miui/home/launcher/LauncherModel$LoaderTask$5;-><init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)V
 
-    .line 1442
+    .line 1445
     iput-boolean v3, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mWaitingForCloudAppRestore:Z
 
-    .line 1443
+    .line 1446
     iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
@@ -4924,27 +4890,27 @@
     move-result-object v18
 
     monitor-enter v18
-    :try_end_19
-    .catch Ljava/lang/Throwable; {:try_start_19 .. :try_end_19} :catch_0
-    .catchall {:try_start_19 .. :try_end_19} :catchall_a
+    :try_end_f
+    .catch Ljava/lang/Throwable; {:try_start_f .. :try_end_f} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_f .. :try_end_f} :catch_2
 
-    .line 1444
-    :try_start_1a
+    .line 1447
+    :try_start_10
     iget-boolean v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     if-nez v1, :cond_11
 
-    .line 1445
+    .line 1448
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1446
+    .line 1449
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1447
+    .line 1450
     iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/miui/home/launcher/progress/ProgressManager;->getManager(Landroid/content/Context;)Lcom/miui/home/launcher/progress/ProgressManager;
@@ -4953,77 +4919,69 @@
 
     iget-object v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
-    .line 1448
-    invoke-virtual {v1, v2, v4, v5, v8}, Lcom/miui/home/launcher/progress/ProgressManager;->loadingProgressFromCloudAppBackup(Landroid/content/Context;Ljava/lang/Runnable;Ljava/util/List;Ljava/util/List;)Ljava/lang/String;
+    .line 1451
+    invoke-virtual {v1, v2, v0, v5, v8}, Lcom/miui/home/launcher/progress/ProgressManager;->loadingProgressFromCloudAppBackup(Landroid/content/Context;Ljava/lang/Runnable;Ljava/util/List;Ljava/util/List;)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v4
 
-    .line 1450
+    .line 1453
     invoke-interface {v5}, Ljava/util/List;->size()I
 
     move-result v1
 
-    new-array v7, v1, [Ljava/lang/String;
+    new-array v6, v1, [Ljava/lang/String;
 
-    .line 1451
+    .line 1454
     iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f1000b7
+    const v2, 0x7f1000ff
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v7, v1}, Ljava/util/Arrays;->fill([Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v6, v1}, Ljava/util/Arrays;->fill([Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 1452
+    .line 1455
     invoke-interface {v5}, Ljava/util/List;->size()I
 
     move-result v1
 
-    new-array v3, v1, [I
+    new-array v7, v1, [I
 
     const/4 v1, -0x1
 
-    .line 1453
-    invoke-static {v3, v1}, Ljava/util/Arrays;->fill([II)V
+    .line 1456
+    invoke-static {v7, v1}, Ljava/util/Arrays;->fill([II)V
 
-    .line 1455
+    .line 1458
     iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$200(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/library/utils/DeferredHandler;
 
-    move-result-object v2
+    move-result-object v3
 
-    new-instance v1, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;
+    new-instance v2, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;
 
-    move-object/from16 v19, v1
+    move-object v1, v2
 
-    move-object/from16 v1, v19
-
-    move-object v11, v2
+    move-object v13, v2
 
     move-object/from16 v2, p0
 
-    move-object/from16 v20, v3
+    move-object v14, v3
 
-    move-object v3, v4
-
-    move-object v4, v6
-
-    move-object v6, v7
-
-    move-object/from16 v7, v20
+    move-object v3, v0
 
     invoke-direct/range {v1 .. v8}, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;-><init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Ljava/lang/Runnable;Ljava/lang/String;Ljava/util/List;[Ljava/lang/String;[ILjava/util/List;)V
 
-    invoke-virtual {v11, v1}, Lcom/miui/home/library/utils/DeferredHandler;->post(Ljava/lang/Runnable;)V
+    invoke-virtual {v14, v13}, Lcom/miui/home/library/utils/DeferredHandler;->post(Ljava/lang/Runnable;)V
 
-    .line 1468
+    .line 1471
     :cond_11
     monitor-exit v18
 
@@ -5032,560 +4990,512 @@
     :catchall_0
     move-exception v0
 
-    move-object v1, v0
-
     monitor-exit v18
-    :try_end_1a
-    .catchall {:try_start_1a .. :try_end_1a} :catchall_0
+    :try_end_10
+    .catchall {:try_start_10 .. :try_end_10} :catchall_0
 
-    :try_start_1b
-    throw v1
+    :try_start_11
+    throw v0
 
     :cond_12
     :goto_7
-    move v1, v14
+    const/4 v0, 0x0
 
-    .line 1471
+    .line 1474
     :goto_8
-    iget-boolean v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mWaitingForCloudAppRestore:Z
+    iget-boolean v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mWaitingForCloudAppRestore:Z
 
-    if-eqz v2, :cond_13
+    if-eqz v1, :cond_13
 
-    const/16 v2, 0x2710
+    const/16 v1, 0x2710
 
-    if-ge v1, v2, :cond_13
+    if-ge v0, v1, :cond_13
 
-    iget-boolean v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
+    iget-boolean v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
-    if-nez v2, :cond_13
+    if-nez v1, :cond_13
 
-    .line 1472
-    invoke-static {v12, v13}, Landroid/os/SystemClock;->sleep(J)V
+    .line 1475
+    invoke-static {v11, v12}, Landroid/os/SystemClock;->sleep(J)V
 
-    add-int/lit8 v1, v1, 0x32
+    add-int/lit8 v0, v0, 0x32
 
     goto :goto_8
 
     :cond_13
-    const-string v1, "Launcher.Model"
-
-    .line 1476
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "step 3: loading missing icons:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v3
-
-    sub-long v3, v3, v16
-
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v3, " ms"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1477
-    iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
-
-    invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    monitor-enter v1
-    :try_end_1b
-    .catch Ljava/lang/Throwable; {:try_start_1b .. :try_end_1b} :catch_0
-    .catchall {:try_start_1b .. :try_end_1b} :catchall_a
-
-    .line 1478
-    :try_start_1c
-    invoke-direct {v9, v15}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadAndBindMissingIcons(Z)V
+    const-string v0, "Launcher.Model"
 
     .line 1479
-    monitor-exit v1
-    :try_end_1c
-    .catchall {:try_start_1c .. :try_end_1c} :catchall_4
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    :try_start_1d
-    const-string v1, "Launcher.Model"
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1481
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, "step 3: loading missing icons:"
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "step 4: loading all apps:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v2
 
-    sub-long v3, v3, v16
+    sub-long v2, v2, v16
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v3, " ms"
+    const-string v2, " ms"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1482
-    iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
+    .line 1480
+    iget-object v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
-    :try_end_1d
-    .catch Ljava/lang/Throwable; {:try_start_1d .. :try_end_1d} :catch_0
-    .catchall {:try_start_1d .. :try_end_1d} :catchall_a
+    :try_end_11
+    .catch Ljava/lang/Throwable; {:try_start_11 .. :try_end_11} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_11 .. :try_end_11} :catch_2
 
-    .line 1483
-    :try_start_1e
-    invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadAllApps()V
+    .line 1481
+    :try_start_12
+    invoke-direct {v9, v15}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadAndBindMissingIcons(Z)V
+
+    .line 1482
+    monitor-exit v1
+    :try_end_12
+    .catchall {:try_start_12 .. :try_end_12} :catchall_4
+
+    :try_start_13
+    const-string v0, "Launcher.Model"
 
     .line 1484
-    monitor-exit v1
-    :try_end_1e
-    .catchall {:try_start_1e .. :try_end_1e} :catchall_3
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "step 4: loading all apps:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v2
+
+    sub-long v2, v2, v16
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, " ms"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1485
-    :try_start_1f
-    iget-boolean v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
+    iget-object v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    if-eqz v1, :cond_14
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    monitor-enter v1
+    :try_end_13
+    .catch Ljava/lang/Throwable; {:try_start_13 .. :try_end_13} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_13 .. :try_end_13} :catch_2
+
+    .line 1486
+    :try_start_14
+    invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->loadAllApps()V
+
+    .line 1487
+    monitor-exit v1
+    :try_end_14
+    .catchall {:try_start_14 .. :try_end_14} :catchall_3
+
+    .line 1488
+    :try_start_15
+    iget-boolean v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
+
+    if-eqz v0, :cond_14
 
     goto :goto_a
 
     :cond_14
-    const-string v1, "Launcher.Model"
+    const-string v0, "Launcher.Model"
 
-    .line 1489
-    new-instance v2, Ljava/lang/StringBuilder;
+    .line 1492
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "finish loading using "
+    const-string v2, "finish loading using "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v2
 
-    sub-long v3, v3, v16
+    sub-long v2, v2, v16
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v3, " ms , isUserUnLocked:"
+    const-string v2, " ms , isUserUnLocked:"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v3, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->isUserUnLocked:Z
+    iget-boolean v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->isUserUnLocked:Z
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1490
-    iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
+    .line 1493
+    iget-object v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
-    :try_end_1f
-    .catch Ljava/lang/Throwable; {:try_start_1f .. :try_end_1f} :catch_0
-    .catchall {:try_start_1f .. :try_end_1f} :catchall_a
+    :try_end_15
+    .catch Ljava/lang/Throwable; {:try_start_15 .. :try_end_15} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_15 .. :try_end_15} :catch_2
 
-    .line 1491
-    :try_start_20
-    iget-object v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
+    .line 1494
+    :try_start_16
+    iget-object v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/ref/WeakReference;
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/ref/WeakReference;
 
-    move-result-object v2
+    move-result-object v0
 
-    if-eqz v2, :cond_15
+    if-eqz v0, :cond_15
 
-    iget-object v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
+    iget-object v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/ref/WeakReference;
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/ref/WeakReference;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    move-object v11, v2
+    move-object v13, v0
 
-    check-cast v11, Lcom/miui/home/launcher/LauncherModel$Callbacks;
+    check-cast v13, Lcom/miui/home/launcher/LauncherModel$Callbacks;
 
     goto :goto_9
 
     :cond_15
-    const/4 v11, 0x0
+    const/4 v13, 0x0
 
     :goto_9
-    if-nez v11, :cond_17
+    if-nez v13, :cond_17
 
-    .line 1493
+    .line 1496
     monitor-exit v1
-    :try_end_20
-    .catchall {:try_start_20 .. :try_end_20} :catchall_2
+    :try_end_16
+    .catchall {:try_start_16 .. :try_end_16} :catchall_2
 
     if-eqz v10, :cond_16
 
-    .line 1512
-    :try_start_21
+    .line 1515
+    :try_start_17
     invoke-virtual {v10}, Lcom/miui/home/launcher/LauncherModel$LoaderTransaction;->close()V
-    :try_end_21
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_21 .. :try_end_21} :catch_2
+    :try_end_17
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_17 .. :try_end_17} :catch_2
 
     :cond_16
     return-void
 
-    .line 1496
+    .line 1499
     :cond_17
-    :try_start_22
-    iget-object v2, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
+    :try_start_18
+    iget-object v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$200(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/library/utils/DeferredHandler;
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$200(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/library/utils/DeferredHandler;
 
-    move-result-object v2
+    move-result-object v0
 
-    new-instance v3, Lcom/miui/home/launcher/LauncherModel$LoaderTask$7;
+    new-instance v2, Lcom/miui/home/launcher/LauncherModel$LoaderTask$7;
 
-    invoke-direct {v3, v9, v11, v15}, Lcom/miui/home/launcher/LauncherModel$LoaderTask$7;-><init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Z)V
+    invoke-direct {v2, v9, v13, v15}, Lcom/miui/home/launcher/LauncherModel$LoaderTask$7;-><init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Z)V
 
-    invoke-virtual {v2, v3}, Lcom/miui/home/library/utils/DeferredHandler;->post(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v2}, Lcom/miui/home/library/utils/DeferredHandler;->post(Ljava/lang/Runnable;)V
 
-    .line 1503
+    .line 1506
     monitor-exit v1
-    :try_end_22
-    .catchall {:try_start_22 .. :try_end_22} :catchall_2
+    :try_end_18
+    .catchall {:try_start_18 .. :try_end_18} :catchall_2
 
-    .line 1507
+    .line 1510
     :goto_a
-    :try_start_23
-    iget-object v1, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
+    :try_start_19
+    iget-object v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
-    :try_end_23
-    .catch Ljava/lang/Throwable; {:try_start_23 .. :try_end_23} :catch_0
-    .catchall {:try_start_23 .. :try_end_23} :catchall_a
+    :try_end_19
+    .catch Ljava/lang/Throwable; {:try_start_19 .. :try_end_19} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_19 .. :try_end_19} :catch_2
 
-    .line 1508
-    :try_start_24
-    invoke-static {v14}, Landroid/os/Process;->setThreadPriority(I)V
-
-    .line 1509
-    monitor-exit v1
-    :try_end_24
-    .catchall {:try_start_24 .. :try_end_24} :catchall_1
-
-    .line 1510
-    :try_start_25
-    iput-boolean v14, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
+    const/4 v0, 0x0
 
     .line 1511
-    invoke-virtual {v10}, Lcom/miui/home/launcher/LauncherModel$LoaderTransaction;->commit()V
-    :try_end_25
-    .catch Ljava/lang/Throwable; {:try_start_25 .. :try_end_25} :catch_0
-    .catchall {:try_start_25 .. :try_end_25} :catchall_a
-
-    if-eqz v10, :cond_1c
+    :try_start_1a
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
     .line 1512
-    :try_start_26
-    invoke-virtual {v10}, Lcom/miui/home/launcher/LauncherModel$LoaderTransaction;->close()V
-    :try_end_26
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_26 .. :try_end_26} :catch_2
+    monitor-exit v1
+    :try_end_1a
+    .catchall {:try_start_1a .. :try_end_1a} :catchall_1
 
-    goto/16 :goto_e
+    .line 1513
+    :try_start_1b
+    iput-boolean v0, v9, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
+
+    .line 1514
+    invoke-virtual {v10}, Lcom/miui/home/launcher/LauncherModel$LoaderTransaction;->commit()V
+    :try_end_1b
+    .catch Ljava/lang/Throwable; {:try_start_1b .. :try_end_1b} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1b .. :try_end_1b} :catch_2
+
+    if-eqz v10, :cond_1b
+
+    .line 1515
+    :try_start_1c
+    invoke-virtual {v10}, Lcom/miui/home/launcher/LauncherModel$LoaderTransaction;->close()V
+    :try_end_1c
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1c .. :try_end_1c} :catch_2
+
+    goto :goto_d
 
     :catchall_1
     move-exception v0
 
-    move-object v2, v0
-
-    .line 1509
-    :try_start_27
+    .line 1512
+    :try_start_1d
     monitor-exit v1
-    :try_end_27
-    .catchall {:try_start_27 .. :try_end_27} :catchall_1
+    :try_end_1d
+    .catchall {:try_start_1d .. :try_end_1d} :catchall_1
 
-    :try_start_28
-    throw v2
-    :try_end_28
-    .catch Ljava/lang/Throwable; {:try_start_28 .. :try_end_28} :catch_0
-    .catchall {:try_start_28 .. :try_end_28} :catchall_a
+    :try_start_1e
+    throw v0
+    :try_end_1e
+    .catch Ljava/lang/Throwable; {:try_start_1e .. :try_end_1e} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1e .. :try_end_1e} :catch_2
 
     :catchall_2
     move-exception v0
 
-    move-object v2, v0
-
-    .line 1503
-    :try_start_29
+    .line 1506
+    :try_start_1f
     monitor-exit v1
-    :try_end_29
-    .catchall {:try_start_29 .. :try_end_29} :catchall_2
+    :try_end_1f
+    .catchall {:try_start_1f .. :try_end_1f} :catchall_2
 
-    :try_start_2a
-    throw v2
-    :try_end_2a
-    .catch Ljava/lang/Throwable; {:try_start_2a .. :try_end_2a} :catch_0
-    .catchall {:try_start_2a .. :try_end_2a} :catchall_a
+    :try_start_20
+    throw v0
+    :try_end_20
+    .catch Ljava/lang/Throwable; {:try_start_20 .. :try_end_20} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_20 .. :try_end_20} :catch_2
 
     :catchall_3
     move-exception v0
 
-    move-object v2, v0
-
-    .line 1484
-    :try_start_2b
+    .line 1487
+    :try_start_21
     monitor-exit v1
-    :try_end_2b
-    .catchall {:try_start_2b .. :try_end_2b} :catchall_3
+    :try_end_21
+    .catchall {:try_start_21 .. :try_end_21} :catchall_3
 
-    :try_start_2c
-    throw v2
-    :try_end_2c
-    .catch Ljava/lang/Throwable; {:try_start_2c .. :try_end_2c} :catch_0
-    .catchall {:try_start_2c .. :try_end_2c} :catchall_a
+    :try_start_22
+    throw v0
+    :try_end_22
+    .catch Ljava/lang/Throwable; {:try_start_22 .. :try_end_22} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_22 .. :try_end_22} :catch_2
 
     :catchall_4
     move-exception v0
 
-    move-object v2, v0
-
-    .line 1479
-    :try_start_2d
+    .line 1482
+    :try_start_23
     monitor-exit v1
-    :try_end_2d
-    .catchall {:try_start_2d .. :try_end_2d} :catchall_4
+    :try_end_23
+    .catchall {:try_start_23 .. :try_end_23} :catchall_4
 
-    :try_start_2e
-    throw v2
-    :try_end_2e
-    .catch Ljava/lang/Throwable; {:try_start_2e .. :try_end_2e} :catch_0
-    .catchall {:try_start_2e .. :try_end_2e} :catchall_a
+    :try_start_24
+    throw v0
+    :try_end_24
+    .catch Ljava/lang/Throwable; {:try_start_24 .. :try_end_24} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_24 .. :try_end_24} :catch_2
 
     :catchall_5
     move-exception v0
 
-    move-object v2, v0
-
-    .line 1430
-    :try_start_2f
+    .line 1433
+    :try_start_25
     monitor-exit v1
-    :try_end_2f
-    .catchall {:try_start_2f .. :try_end_2f} :catchall_5
+    :try_end_25
+    .catchall {:try_start_25 .. :try_end_25} :catchall_5
 
-    :try_start_30
-    throw v2
-    :try_end_30
-    .catch Ljava/lang/Throwable; {:try_start_30 .. :try_end_30} :catch_0
-    .catchall {:try_start_30 .. :try_end_30} :catchall_a
+    :try_start_26
+    throw v0
+    :try_end_26
+    .catch Ljava/lang/Throwable; {:try_start_26 .. :try_end_26} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_26 .. :try_end_26} :catch_2
 
     :catchall_6
     move-exception v0
 
-    move-object v2, v0
-
-    .line 1417
-    :try_start_31
+    .line 1420
+    :try_start_27
     monitor-exit v1
-    :try_end_31
-    .catchall {:try_start_31 .. :try_end_31} :catchall_6
+    :try_end_27
+    .catchall {:try_start_27 .. :try_end_27} :catchall_6
 
-    :try_start_32
-    throw v2
-    :try_end_32
-    .catch Ljava/lang/Throwable; {:try_start_32 .. :try_end_32} :catch_0
-    .catchall {:try_start_32 .. :try_end_32} :catchall_a
+    :try_start_28
+    throw v0
+    :try_end_28
+    .catch Ljava/lang/Throwable; {:try_start_28 .. :try_end_28} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_28 .. :try_end_28} :catch_2
 
     :catchall_7
     move-exception v0
 
-    move-object v2, v0
-
-    .line 1413
-    :try_start_33
+    .line 1416
+    :try_start_29
     monitor-exit v1
-    :try_end_33
-    .catchall {:try_start_33 .. :try_end_33} :catchall_7
+    :try_end_29
+    .catchall {:try_start_29 .. :try_end_29} :catchall_7
 
-    :try_start_34
-    throw v2
-    :try_end_34
-    .catch Ljava/lang/Throwable; {:try_start_34 .. :try_end_34} :catch_0
-    .catchall {:try_start_34 .. :try_end_34} :catchall_a
+    :try_start_2a
+    throw v0
+    :try_end_2a
+    .catch Ljava/lang/Throwable; {:try_start_2a .. :try_end_2a} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_2a .. :try_end_2a} :catch_2
 
     :catchall_8
     move-exception v0
 
-    move-object v2, v0
-
-    .line 1403
-    :try_start_35
+    .line 1406
+    :try_start_2b
     monitor-exit v1
-    :try_end_35
-    .catchall {:try_start_35 .. :try_end_35} :catchall_8
+    :try_end_2b
+    .catchall {:try_start_2b .. :try_end_2b} :catchall_8
 
-    :try_start_36
-    throw v2
-    :try_end_36
-    .catch Ljava/lang/Throwable; {:try_start_36 .. :try_end_36} :catch_0
-    .catchall {:try_start_36 .. :try_end_36} :catchall_a
+    :try_start_2c
+    throw v0
+    :try_end_2c
+    .catch Ljava/lang/Throwable; {:try_start_2c .. :try_end_2c} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_2c .. :try_end_2c} :catch_2
 
     :catchall_9
     move-exception v0
 
-    move-object v2, v0
-
-    .line 1384
-    :try_start_37
+    .line 1387
+    :try_start_2d
     monitor-exit v1
-    :try_end_37
-    .catchall {:try_start_37 .. :try_end_37} :catchall_9
+    :try_end_2d
+    .catchall {:try_start_2d .. :try_end_2d} :catchall_9
 
-    :try_start_38
-    throw v2
+    :try_start_2e
+    throw v0
 
     :cond_18
     :goto_b
-    const-wide/16 v4, 0x3e8
+    const-wide/16 v3, 0x3e8
 
-    cmp-long v4, v2, v4
+    cmp-long v3, v1, v3
 
-    if-ltz v4, :cond_19
+    if-ltz v3, :cond_19
 
-    .line 1333
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
+    .line 1336
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
 
-    move-result-object v4
+    move-result-object v3
 
-    if-nez v4, :cond_19
-
-    .line 1334
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v4
-
-    invoke-static {v4}, Landroid/os/Process;->killProcess(I)V
-
-    :cond_19
-    add-long/2addr v2, v12
+    if-nez v3, :cond_19
 
     .line 1337
-    invoke-static {v12, v13}, Landroid/os/SystemClock;->sleep(J)V
-    :try_end_38
-    .catch Ljava/lang/Throwable; {:try_start_38 .. :try_end_38} :catch_0
-    .catchall {:try_start_38 .. :try_end_38} :catchall_a
+    invoke-static {}, Landroid/os/Process;->myPid()I
 
-    const/4 v11, 0x0
+    move-result v3
+
+    invoke-static {v3}, Landroid/os/Process;->killProcess(I)V
+
+    :cond_19
+    add-long/2addr v1, v11
+
+    .line 1340
+    invoke-static {v11, v12}, Landroid/os/SystemClock;->sleep(J)V
+    :try_end_2e
+    .catch Ljava/lang/Throwable; {:try_start_2e .. :try_end_2e} :catch_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_2e .. :try_end_2e} :catch_2
 
     goto/16 :goto_0
-
-    :catchall_a
-    move-exception v0
-
-    move-object v1, v0
-
-    const/4 v11, 0x0
-
-    goto :goto_c
 
     :catch_0
     move-exception v0
 
-    move-object v11, v0
-
-    .line 1319
-    :try_start_39
-    throw v11
-    :try_end_39
-    .catchall {:try_start_39 .. :try_end_39} :catchall_b
-
-    :catchall_b
-    move-exception v0
-
     move-object v1, v0
 
-    :goto_c
-    if-eqz v10, :cond_1b
+    if-eqz v10, :cond_1a
 
-    if-eqz v11, :cond_1a
-
-    .line 1512
-    :try_start_3a
+    .line 1322
+    :try_start_2f
     invoke-virtual {v10}, Lcom/miui/home/launcher/LauncherModel$LoaderTransaction;->close()V
-    :try_end_3a
-    .catch Ljava/lang/Throwable; {:try_start_3a .. :try_end_3a} :catch_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_3a .. :try_end_3a} :catch_2
+    :try_end_2f
+    .catch Ljava/lang/Throwable; {:try_start_2f .. :try_end_2f} :catch_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_2f .. :try_end_2f} :catch_2
 
-    goto :goto_d
+    goto :goto_c
 
     :catch_1
     move-exception v0
 
     move-object v2, v0
 
-    :try_start_3b
-    invoke-virtual {v11, v2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    goto :goto_d
+    :try_start_30
+    invoke-virtual {v1, v2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     :cond_1a
-    invoke-virtual {v10}, Lcom/miui/home/launcher/LauncherModel$LoaderTransaction;->close()V
+    :goto_c
+    throw v1
+    :try_end_30
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_30 .. :try_end_30} :catch_2
+
+    :catch_2
+    const-string v0, "Launcher.Model"
+
+    const-string v1, "Loader stopped, ignore"
+
+    .line 1516
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1b
     :goto_d
-    throw v1
-    :try_end_3b
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_3b .. :try_end_3b} :catch_2
-
-    :catch_2
-    const-string v1, "Launcher.Model"
-
-    const-string v2, "Loader stopped, ignore"
-
-    .line 1513
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1c
-    :goto_e
     return-void
 .end method
 
@@ -5596,12 +5506,12 @@
 
     const-string v1, "stop LoaderTask"
 
-    .line 1518
+    .line 1521
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 1519
+    .line 1522
     iput-boolean v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
     return-void
@@ -5610,7 +5520,7 @@
 .method tryGetCallbacks(Lcom/miui/home/launcher/LauncherModel$Callbacks;)Lcom/miui/home/launcher/LauncherModel$Callbacks;
     .locals 3
 
-    .line 1530
+    .line 1533
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$1500(Lcom/miui/home/launcher/LauncherModel;)Ljava/lang/Object;
@@ -5619,7 +5529,7 @@
 
     monitor-enter v0
 
-    .line 1531
+    .line 1534
     :try_start_0
     iget-boolean v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->mStopped:Z
 
@@ -5627,12 +5537,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 1532
+    .line 1535
     monitor-exit v0
 
     return-object v2
 
-    .line 1535
+    .line 1538
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -5642,12 +5552,12 @@
 
     if-nez v1, :cond_1
 
-    .line 1536
+    .line 1539
     monitor-exit v0
 
     return-object v2
 
-    .line 1539
+    .line 1542
     :cond_1
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -5663,7 +5573,7 @@
 
     if-eq v1, p1, :cond_2
 
-    .line 1541
+    .line 1544
     monitor-exit v0
 
     return-object v2
@@ -5675,15 +5585,15 @@
 
     const-string v1, "no mCallbacks"
 
-    .line 1544
+    .line 1547
     invoke-static {p1, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1545
+    .line 1548
     monitor-exit v0
 
     return-object v2
 
-    .line 1548
+    .line 1551
     :cond_3
     monitor-exit v0
 
@@ -5692,7 +5602,7 @@
     :catchall_0
     move-exception p1
 
-    .line 1549
+    .line 1552
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

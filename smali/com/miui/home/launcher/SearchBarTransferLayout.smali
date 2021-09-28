@@ -70,9 +70,9 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 149
-    new-instance p2, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$LxEnL5QXzAyBHQf6TCWgoSnR1pc;
+    new-instance p2, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$DdJ8xQ3I4lAT3iMj7foaSdjr4tY;
 
-    invoke-direct {p2, p0}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$LxEnL5QXzAyBHQf6TCWgoSnR1pc;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout;)V
+    invoke-direct {p2, p0}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$DdJ8xQ3I4lAT3iMj7foaSdjr4tY;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout;)V
 
     iput-object p2, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mResumeRunnable:Ljava/lang/Runnable;
 
@@ -395,7 +395,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$new$315(Lcom/miui/home/launcher/SearchBarTransferLayout;)V
+.method public static synthetic lambda$new$1(Lcom/miui/home/launcher/SearchBarTransferLayout;)V
     .locals 2
 
     const-string v0, "onResume"
@@ -408,7 +408,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onAttachedToWindow$314(Lcom/miui/home/launcher/SearchBarTransferLayout;)V
+.method public static synthetic lambda$onAttachedToWindow$0(Lcom/miui/home/launcher/SearchBarTransferLayout;)V
     .locals 2
 
     .line 91
@@ -423,7 +423,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$showTransferIfNeed$319(Lcom/miui/home/launcher/SearchBarTransferLayout;Lcom/miui/home/launcher/SearchBarTransferLayout$Data;)V
+.method public static synthetic lambda$showTransferIfNeed$2(Lcom/miui/home/launcher/SearchBarTransferLayout;Lcom/miui/home/launcher/SearchBarTransferLayout$Data;)V
     .locals 1
 
     const-string v0, "onShow"
@@ -639,9 +639,9 @@
     if-eqz v0, :cond_0
 
     .line 90
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$LU6HQv1hOiK3zJRXpEvn6gumawo;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$BLd748MU-oCaMEHig0iwNaSLea4;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$LU6HQv1hOiK3zJRXpEvn6gumawo;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$BLd748MU-oCaMEHig0iwNaSLea4;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout;)V
 
     const/4 v1, 0x0
 
@@ -713,7 +713,7 @@
     .line 71
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a01d4
+    const v0, 0x7f0a0221
 
     .line 72
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->findViewById(I)Landroid/view/View;
@@ -724,7 +724,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0a00e6
+    const v0, 0x7f0a010e
 
     .line 73
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->findViewById(I)Landroid/view/View;
@@ -884,12 +884,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080090
+    const v0, 0x7f0800b8
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f08008f
+    const v0, 0x7f0800b7
 
     .line 373
     :goto_0
@@ -907,7 +907,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060207
+    const v1, 0x7f060349
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -921,7 +921,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060206
+    const v1, 0x7f060348
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -1036,9 +1036,9 @@
     :cond_3
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mWorkHandler:Landroid/os/Handler;
 
-    new-instance v2, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$CyyMTTJgIo-IrMyFeOZws-ZV3qc;
+    new-instance v2, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$jco-j2tLij83w6VQFnP68tu52kU;
 
-    invoke-direct {v2, p0, v0}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$CyyMTTJgIo-IrMyFeOZws-ZV3qc;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout;Lcom/miui/home/launcher/SearchBarTransferLayout$Data;)V
+    invoke-direct {v2, p0, v0}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$jco-j2tLij83w6VQFnP68tu52kU;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout;Lcom/miui/home/launcher/SearchBarTransferLayout$Data;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

@@ -208,7 +208,7 @@
     const-string v4, "ProgressInfoList init"
 
     .line 72
-    invoke-static {v3, v4, v2}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
@@ -246,6 +246,7 @@
     :goto_2
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
+    .line 83
     throw v0
 
     :catch_3

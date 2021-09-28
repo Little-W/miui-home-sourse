@@ -109,6 +109,7 @@
 
     goto :goto_0
 
+    .line 440
     :cond_0
     new-instance v2, Lcom/miui/home/launcher/anim/PropertySetter$AnimatedPropertySetter;
 

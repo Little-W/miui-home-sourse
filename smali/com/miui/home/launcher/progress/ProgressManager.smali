@@ -22,7 +22,7 @@
     .end annotation
 .end field
 
-.field private static mObservingUri:Z
+.field private static mObservingUri:Z = false
 
 .field private static sProgressManager:Lcom/miui/home/launcher/progress/ProgressManager;
 
@@ -378,16 +378,7 @@
     return p0
 .end method
 
-.method public static synthetic lambda$null$393(Lcom/miui/home/launcher/progress/ProgressManager;)V
-    .locals 0
-
-    .line 121
-    invoke-direct {p0}, Lcom/miui/home/launcher/progress/ProgressManager;->startObservingChecked()V
-
-    return-void
-.end method
-
-.method public static synthetic lambda$onAppInProgressInstalled$395(Lcom/miui/home/launcher/progress/ProgressManager;Ljava/lang/String;)V
+.method public static synthetic lambda$onAppInProgressInstalled$2(Lcom/miui/home/launcher/progress/ProgressManager;Ljava/lang/String;)V
     .locals 0
 
     .line 215
@@ -396,7 +387,16 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onReceive$394(Lcom/miui/home/launcher/progress/ProgressManager;Landroid/content/Context;Landroid/content/Intent;)V
+.method public static synthetic lambda$onReceive$0(Lcom/miui/home/launcher/progress/ProgressManager;)V
+    .locals 0
+
+    .line 121
+    invoke-direct {p0}, Lcom/miui/home/launcher/progress/ProgressManager;->startObservingChecked()V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$onReceive$1(Lcom/miui/home/launcher/progress/ProgressManager;Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
     .line 120
@@ -405,9 +405,9 @@
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->handleProgressUpdate(Landroid/content/Context;Landroid/content/Intent;)V
 
     .line 121
-    new-instance p1, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$Pjx-KLR_0yHXLdYDYzG0Gr44lrk;
+    new-instance p1, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$0q8qppBQFP8wOT1YJPGg7onFlak;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$Pjx-KLR_0yHXLdYDYzG0Gr44lrk;-><init>(Lcom/miui/home/launcher/progress/ProgressManager;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$0q8qppBQFP8wOT1YJPGg7onFlak;-><init>(Lcom/miui/home/launcher/progress/ProgressManager;)V
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->useLauncherToRunOnUiThread(Ljava/lang/Runnable;)Z
 
@@ -493,9 +493,9 @@
     if-eqz v0, :cond_2
 
     .line 119
-    new-instance v0, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$l3zmoNaJxUerD5zqu5ymHYeuns8;
+    new-instance v0, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$cavB2cUrT07f26VEF76DFJ2lnAo;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$l3zmoNaJxUerD5zqu5ymHYeuns8;-><init>(Lcom/miui/home/launcher/progress/ProgressManager;Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$cavB2cUrT07f26VEF76DFJ2lnAo;-><init>(Lcom/miui/home/launcher/progress/ProgressManager;Landroid/content/Context;Landroid/content/Intent;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -757,9 +757,9 @@
     .locals 1
 
     .line 215
-    new-instance v0, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$KhoM-QGhkuh2Aon3XAuSKp3f5lY;
+    new-instance v0, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$Ra5SQOXNFBuurxkOHpZJwwFcro0;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$KhoM-QGhkuh2Aon3XAuSKp3f5lY;-><init>(Lcom/miui/home/launcher/progress/ProgressManager;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/progress/-$$Lambda$ProgressManager$Ra5SQOXNFBuurxkOHpZJwwFcro0;-><init>(Lcom/miui/home/launcher/progress/ProgressManager;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

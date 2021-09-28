@@ -37,7 +37,7 @@
 .method public final onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
-    .line 62
+    .line 64
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -50,7 +50,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 63
+    .line 65
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1

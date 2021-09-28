@@ -49,21 +49,21 @@
     .line 18
     iput-wide v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mPreparedScreenId:J
 
-    .line 95
+    .line 96
     new-instance p1, Lcom/miui/home/launcher/compat/-$$Lambda$1IjkbeWbkR66ZFEqTyymtiDZ9FA;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/compat/-$$Lambda$1IjkbeWbkR66ZFEqTyymtiDZ9FA;-><init>(Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;)V
 
     iput-object p1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mPrepareConsumer:Ljava/util/function/Consumer;
 
-    .line 97
+    .line 98
     new-instance p1, Lcom/miui/home/launcher/compat/-$$Lambda$JulaMBTdELcgm--ivXAD0lzKrn4;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/compat/-$$Lambda$JulaMBTdELcgm--ivXAD0lzKrn4;-><init>(Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;)V
 
     iput-object p1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mShowConsumer:Ljava/util/function/Consumer;
 
-    .line 99
+    .line 100
     new-instance p1, Lcom/miui/home/launcher/compat/-$$Lambda$LHLCr5798S0ioKJC76RTu4nsKt8;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/compat/-$$Lambda$LHLCr5798S0ioKJC76RTu4nsKt8;-><init>(Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;)V
@@ -97,7 +97,7 @@
 
     move v1, v0
 
-    .line 82
+    .line 83
     :goto_0
     invoke-virtual {p2}, Lcom/miui/home/launcher/CellLayout;->getChildCount()I
 
@@ -105,19 +105,19 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 83
+    .line 84
     invoke-virtual {p2, v1}, Lcom/miui/home/launcher/CellLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 84
+    .line 85
     invoke-interface {p1, v2}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 86
+    .line 87
     :cond_1
     :goto_1
     iget-object p2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -132,7 +132,7 @@
 
     if-ge v0, p2, :cond_2
 
-    .line 87
+    .line 88
     iget-object p2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/HotSeats;
@@ -149,7 +149,7 @@
 
     goto :goto_1
 
-    .line 89
+    .line 90
     :cond_2
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowSearchBar()Z
 
@@ -157,7 +157,7 @@
 
     if-eqz p2, :cond_3
 
-    .line 90
+    .line 91
     iget-object p2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getSearchBar()Lcom/miui/home/launcher/SearchBar;
@@ -166,7 +166,7 @@
 
     invoke-interface {p1, p2}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    .line 92
+    .line 93
     :cond_3
     iget-object p2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -196,12 +196,12 @@
 
     const-string v1, "checkMissingIcon"
 
-    .line 68
+    .line 69
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
-    .line 69
+    .line 70
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -215,7 +215,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 70
+    .line 71
     iget-object v1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -228,19 +228,19 @@
 
     if-eqz v1, :cond_0
 
-    .line 71
+    .line 72
     invoke-virtual {v1}, Lcom/miui/home/launcher/CellScreen;->getCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 72
+    .line 73
     invoke-virtual {v1}, Lcom/miui/home/launcher/CellScreen;->getCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v1
 
-    .line 73
+    .line 74
     iget-object v2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mResetConsumer:Ljava/util/function/Consumer;
 
     invoke-direct {p0, v2, v1}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->operateAllPresentAnimationRelatedViews(Ljava/util/function/Consumer;Lcom/miui/home/launcher/CellLayout;)V
@@ -255,36 +255,18 @@
 .end method
 
 .method protected ignoreTranslation(Landroid/view/View;)Z
-    .locals 1
+    .locals 0
 
-    .line 106
-    instance-of v0, p1, Lcom/miui/home/launcher/ScreenView$Indicator;
+    .line 107
+    instance-of p1, p1, Lcom/miui/home/launcher/ScreenView$Indicator;
 
-    if-nez v0, :cond_1
-
-    instance-of p1, p1, Lcom/miui/home/launcher/SearchBar;
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    :goto_1
     return p1
 .end method
 
 .method public isPreparedAnimation()Z
     .locals 4
 
-    .line 39
+    .line 40
     iget-wide v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mPreparedScreenId:J
 
     const-wide/16 v2, -0x1
@@ -355,17 +337,30 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_1
+
+    .line 30
+    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->getMeasuredWidth()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->getMeasuredHeight()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
 
     goto :goto_0
 
-    .line 32
+    .line 33
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mPrepareConsumer:Ljava/util/function/Consumer;
 
     invoke-direct {p0, v1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->operateAllPresentAnimationRelatedViews(Ljava/util/function/Consumer;Lcom/miui/home/launcher/CellLayout;)V
 
-    .line 33
+    .line 34
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->getScreenId()J
 
     move-result-wide v0
@@ -391,7 +386,7 @@
 
     const-string v0, "Launcher.UserPresentAnimation"
 
-    .line 58
+    .line 59
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -410,7 +405,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
+    .line 60
     iget-wide v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mPreparedScreenId:J
 
     const-wide/16 v2, -0x1
@@ -419,7 +414,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 60
+    .line 61
     iget-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -432,12 +427,12 @@
 
     move-result-object v0
 
-    .line 61
+    .line 62
     iget-object v1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mResetConsumer:Ljava/util/function/Consumer;
 
     invoke-direct {p0, v1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->operateAllPresentAnimationRelatedViews(Ljava/util/function/Consumer;Lcom/miui/home/launcher/CellLayout;)V
 
-    .line 62
+    .line 63
     iput-wide v2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mPreparedScreenId:J
 
     :cond_0
@@ -449,7 +444,7 @@
 
     if-eqz p1, :cond_4
 
-    .line 111
+    .line 112
     invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
 
     move-result v0
@@ -460,10 +455,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 112
+    .line 113
     invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 114
+    .line 115
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getTranslationX()F
 
@@ -481,10 +476,10 @@
 
     if-nez v0, :cond_1
 
-    .line 115
+    .line 116
     invoke-virtual {p1, v2}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 117
+    .line 118
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
@@ -500,10 +495,10 @@
 
     if-nez v0, :cond_2
 
-    .line 118
+    .line 119
     invoke-virtual {p1, v2}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 120
+    .line 121
     :cond_2
     invoke-virtual {p1}, Landroid/view/View;->getScaleX()F
 
@@ -513,10 +508,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 121
+    .line 122
     invoke-virtual {p1, v1}, Landroid/view/View;->setScaleX(F)V
 
-    .line 123
+    .line 124
     :cond_3
     invoke-virtual {p1}, Landroid/view/View;->getScaleY()F
 
@@ -526,7 +521,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 124
+    .line 125
     invoke-virtual {p1, v1}, Landroid/view/View;->setScaleY(F)V
 
     :cond_4
@@ -538,7 +533,7 @@
 
     const-string v0, "Launcher.UserPresentAnimation"
 
-    .line 44
+    .line 45
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -557,7 +552,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
+    .line 46
     iget-wide v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mPreparedScreenId:J
 
     const-wide/16 v2, -0x1
@@ -566,7 +561,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 46
+    .line 47
     iget-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -579,7 +574,7 @@
 
     move-result-object v0
 
-    .line 47
+    .line 48
     iget-object v1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -596,20 +591,20 @@
 
     if-nez v1, :cond_0
 
-    .line 48
+    .line 49
     iget-object v1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mShowConsumer:Ljava/util/function/Consumer;
 
     invoke-direct {p0, v1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->operateAllPresentAnimationRelatedViews(Ljava/util/function/Consumer;Lcom/miui/home/launcher/CellLayout;)V
 
     goto :goto_0
 
-    .line 50
+    .line 51
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mResetConsumer:Ljava/util/function/Consumer;
 
     invoke-direct {p0, v1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->operateAllPresentAnimationRelatedViews(Ljava/util/function/Consumer;Lcom/miui/home/launcher/CellLayout;)V
 
-    .line 52
+    .line 53
     :goto_0
     iput-wide v2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->mPreparedScreenId:J
 

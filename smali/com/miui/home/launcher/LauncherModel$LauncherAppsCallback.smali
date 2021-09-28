@@ -25,7 +25,7 @@
 .method public constructor <init>(Lcom/miui/home/launcher/LauncherModel;)V
     .locals 0
 
-    .line 311
+    .line 314
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public onPackageAdded(Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 2
 
-    .line 338
+    .line 341
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     const-string v1, "onPackageAdded"
 
     invoke-static {v0, v1, p1, p2}, Lcom/miui/home/launcher/LauncherModel;->access$300(Lcom/miui/home/launcher/LauncherModel;Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 339
+    .line 342
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     new-instance v1, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$3;
@@ -60,14 +60,14 @@
 .method public onPackageChanged(Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 2
 
-    .line 313
+    .line 316
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     const-string v1, "onPackageChanged"
 
     invoke-static {v0, v1, p1, p2}, Lcom/miui/home/launcher/LauncherModel;->access$300(Lcom/miui/home/launcher/LauncherModel;Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 314
+    .line 317
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     new-instance v1, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$1;
@@ -76,7 +76,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/LauncherModel;->runOnWorkerThreadAndCheckForReady(Ljava/lang/Runnable;)V
 
-    .line 322
+    .line 325
     iget-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     new-instance v0, Lcom/miui/home/launcher/model/WidgetUpdateTask;
@@ -91,14 +91,14 @@
 .method public onPackageRemoved(Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 2
 
-    .line 326
+    .line 329
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     const-string v1, "onPackageRemoved"
 
     invoke-static {v0, v1, p1, p2}, Lcom/miui/home/launcher/LauncherModel;->access$300(Lcom/miui/home/launcher/LauncherModel;Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 327
+    .line 330
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     new-instance v1, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback$2;
@@ -113,7 +113,7 @@
 .method public onPackagesAvailable([Ljava/lang/String;Landroid/os/UserHandle;Z)V
     .locals 4
 
-    .line 350
+    .line 353
     array-length p3, p1
 
     const/4 v0, 0x0
@@ -123,7 +123,7 @@
 
     aget-object v1, p1, v0
 
-    .line 351
+    .line 354
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     const-string v3, "onPackagesAvailable"
@@ -134,7 +134,7 @@
 
     goto :goto_0
 
-    .line 353
+    .line 356
     :cond_0
     iget-object p3, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -150,7 +150,7 @@
 .method public onPackagesSuspended([Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 5
 
-    .line 379
+    .line 382
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
@@ -159,7 +159,7 @@
 
     return-void
 
-    .line 382
+    .line 385
     :cond_0
     array-length v0, p1
 
@@ -170,7 +170,7 @@
 
     aget-object v2, p1, v1
 
-    .line 383
+    .line 386
     iget-object v3, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     const-string v4, "onPackagesSuspended"
@@ -181,7 +181,7 @@
 
     goto :goto_0
 
-    .line 385
+    .line 388
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -197,7 +197,7 @@
 .method public onPackagesUnavailable([Ljava/lang/String;Landroid/os/UserHandle;Z)V
     .locals 4
 
-    .line 364
+    .line 367
     array-length p3, p1
 
     const/4 v0, 0x0
@@ -207,7 +207,7 @@
 
     aget-object v1, p1, v0
 
-    .line 365
+    .line 368
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     const-string v3, "onPackagesUnavailable"
@@ -218,7 +218,7 @@
 
     goto :goto_0
 
-    .line 367
+    .line 370
     :cond_0
     iget-object p3, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -234,7 +234,7 @@
 .method public onPackagesUnsuspended([Ljava/lang/String;Landroid/os/UserHandle;)V
     .locals 5
 
-    .line 397
+    .line 400
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
@@ -243,7 +243,7 @@
 
     return-void
 
-    .line 400
+    .line 403
     :cond_0
     array-length v0, p1
 
@@ -254,7 +254,7 @@
 
     aget-object v2, p1, v1
 
-    .line 401
+    .line 404
     iget-object v3, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     const-string v4, "onPackagesUnsuspended"
@@ -265,7 +265,7 @@
 
     goto :goto_0
 
-    .line 403
+    .line 406
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -292,23 +292,21 @@
         }
     .end annotation
 
-    .line 415
+    .line 418
     iget-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {p2}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {p2}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/Application;
 
-    .line 416
+    .line 419
     iget-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {p2}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {p2}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/Application;
+
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher()Lcom/miui/home/launcher/Launcher;
-
-    move-result-object p2
-
-    .line 417
+    .line 420
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
@@ -319,7 +317,7 @@
 
     goto/16 :goto_2
 
-    .line 419
+    .line 422
     :cond_0
     iget-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -327,15 +325,13 @@
 
     invoke-static {p2, v0, p1, p3}, Lcom/miui/home/launcher/LauncherModel;->access$300(Lcom/miui/home/launcher/LauncherModel;Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 421
+    .line 424
     iget-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    .line 422
-    invoke-static {p2}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/LauncherApplication;
+    .line 425
+    invoke-static {p2}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/Application;
 
-    move-result-object p2
-
-    invoke-virtual {p2}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher()Lcom/miui/home/launcher/Launcher;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p2
 
@@ -347,7 +343,7 @@
 
     move-result-object p2
 
-    .line 424
+    .line 427
     invoke-virtual {p2}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result v0
@@ -356,28 +352,28 @@
 
     if-nez v0, :cond_2
 
-    .line 426
+    .line 429
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherModel;->access$400(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
     new-instance v2, Ljava/util/ArrayList;
 
-    .line 427
+    .line 430
     invoke-virtual {p2}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 426
+    .line 429
     invoke-static {v0, p1, v2, p3}, Lcom/miui/launcher/common/PinShortcutRequestUtils;->queryForFullDetails(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Landroid/os/UserHandle;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 428
+    .line 431
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -395,7 +391,7 @@
 
     check-cast p3, Lcom/miui/launcher/common/ShortcutInfoCompat;
 
-    .line 429
+    .line 432
     invoke-virtual {p3}, Lcom/miui/launcher/common/ShortcutInfoCompat;->getId()Ljava/lang/String;
 
     move-result-object v0
@@ -406,14 +402,14 @@
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 430
+    .line 433
     invoke-virtual {p3}, Lcom/miui/launcher/common/ShortcutInfoCompat;->isPinned()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 431
+    .line 434
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {v2}, Lcom/miui/home/launcher/LauncherModel;->access$200(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/library/utils/DeferredHandler;
@@ -440,7 +436,7 @@
 
     goto :goto_0
 
-    .line 433
+    .line 436
     :cond_1
     iget-object p3, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
@@ -468,7 +464,7 @@
 
     goto :goto_0
 
-    .line 441
+    .line 444
     :cond_2
     invoke-virtual {p2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
@@ -491,7 +487,7 @@
 
     check-cast p2, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 442
+    .line 445
     iget-object p3, p0, Lcom/miui/home/launcher/LauncherModel$LauncherAppsCallback;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-static {p3}, Lcom/miui/home/launcher/LauncherModel;->access$200(Lcom/miui/home/launcher/LauncherModel;)Lcom/miui/home/library/utils/DeferredHandler;

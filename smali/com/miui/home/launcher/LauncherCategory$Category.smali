@@ -45,7 +45,7 @@
 
     const/4 v1, -0x2
 
-    const v2, 0x7f100043
+    const v2, 0x7f100045
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -54,7 +54,7 @@
 
     const/4 v1, -0x1
 
-    const v2, 0x7f10003e
+    const v2, 0x7f100040
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -63,7 +63,7 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f100035
+    const v2, 0x7f100037
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -72,7 +72,7 @@
 
     const/4 v1, 0x1
 
-    const v2, 0x7f100036
+    const v2, 0x7f100038
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -81,7 +81,7 @@
 
     const/4 v1, 0x2
 
-    const v2, 0x7f100038
+    const v2, 0x7f10003a
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -90,7 +90,7 @@
 
     const/4 v1, 0x3
 
-    const v2, 0x7f100040
+    const v2, 0x7f100042
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -99,7 +99,7 @@
 
     const/4 v1, 0x4
 
-    const v2, 0x7f100042
+    const v2, 0x7f100044
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -108,7 +108,7 @@
 
     const/4 v1, 0x5
 
-    const v2, 0x7f10003d
+    const v2, 0x7f10003f
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -117,7 +117,7 @@
 
     const/4 v1, 0x6
 
-    const v2, 0x7f100041
+    const v2, 0x7f100043
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -126,7 +126,7 @@
 
     const/4 v1, 0x7
 
-    const v2, 0x7f10003a
+    const v2, 0x7f10003c
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -135,7 +135,7 @@
 
     const/16 v1, 0x8
 
-    const v2, 0x7f10003c
+    const v2, 0x7f10003e
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -144,7 +144,7 @@
 
     const/16 v1, 0x9
 
-    const v2, 0x7f100039
+    const v2, 0x7f10003b
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -153,7 +153,7 @@
 
     const/16 v1, 0xa
 
-    const v2, 0x7f10003f
+    const v2, 0x7f100041
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -162,7 +162,7 @@
 
     const/16 v1, 0xb
 
-    const v2, 0x7f10003b
+    const v2, 0x7f10003d
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
@@ -428,128 +428,108 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    const/4 v1, 0x0
-
-    if-eqz p0, :cond_3
+    if-eqz p0, :cond_2
 
     .line 92
     :goto_0
     :try_start_1
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_3
+    if-eqz v1, :cond_2
 
-    const-string v2, "categoryId"
+    const-string v1, "categoryId"
 
     .line 93
+    invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-interface {p0, v1}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v1
+
+    const-string v2, "categoryName"
+
+    .line 94
     invoke-interface {p0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    invoke-interface {p0, v2}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {p0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result v2
+    move-result-object v2
 
-    const-string v3, "categoryName"
+    .line 95
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    .line 94
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 96
+    invoke-static {v1}, Lcom/miui/home/launcher/LauncherCategory$Category;->getDefaultCategoryName(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_0
+    const-string v3, "categoryOrder"
+
+    .line 98
     invoke-interface {p0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v3
 
-    invoke-interface {p0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {p0, v3}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result-object v3
-
-    .line 95
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    .line 96
-    invoke-static {v2}, Lcom/miui/home/launcher/LauncherCategory$Category;->getDefaultCategoryName(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    :cond_0
-    const-string v4, "categoryOrder"
-
-    .line 98
-    invoke-interface {p0, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v4
-
-    invoke-interface {p0, v4}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v4
+    move-result v3
 
     .line 99
-    new-instance v5, Lcom/miui/home/launcher/allapps/category/CategoryInfo;
+    new-instance v4, Lcom/miui/home/launcher/allapps/category/CategoryInfo;
 
-    invoke-direct {v5, v2, v3, v4}, Lcom/miui/home/launcher/allapps/category/CategoryInfo;-><init>(ILjava/lang/String;I)V
+    invoke-direct {v4, v1, v2, v3}, Lcom/miui/home/launcher/allapps/category/CategoryInfo;-><init>(ILjava/lang/String;I)V
 
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
     goto :goto_0
-
-    :catchall_0
-    move-exception v2
-
-    goto :goto_1
 
     :catch_0
     move-exception v1
 
+    if-eqz p0, :cond_1
+
     .line 90
     :try_start_2
-    throw v1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :goto_1
-    if-eqz p0, :cond_2
-
-    if-eqz v1, :cond_1
-
-    .line 102
-    :try_start_3
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
-    :try_end_3
-    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+    :try_end_2
+    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    goto :goto_2
+    goto :goto_1
 
     :catch_1
     move-exception p0
 
-    :try_start_4
+    :try_start_3
     invoke-virtual {v1, p0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    goto :goto_2
-
     :cond_1
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+    :goto_1
+    throw v1
 
     :cond_2
-    :goto_2
-    throw v2
+    if-eqz p0, :cond_3
 
-    :cond_3
-    if-eqz p0, :cond_4
-
+    .line 102
     invoke-interface {p0}, Landroid/database/Cursor;->close()V
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    goto :goto_3
+    goto :goto_2
 
     :catch_2
     move-exception p0
@@ -557,8 +537,8 @@
     .line 103
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
-    :cond_4
-    :goto_3
+    :cond_3
+    :goto_2
     return-object v0
 .end method
 
@@ -574,7 +554,7 @@
 
     if-gtz p0, :cond_0
 
-    const p0, 0x7f100037
+    const p0, 0x7f100039
 
     .line 85
     :cond_0

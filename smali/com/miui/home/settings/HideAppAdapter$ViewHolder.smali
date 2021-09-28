@@ -19,7 +19,7 @@
 
 .field private name:Landroid/widget/TextView;
 
-.field private switchBut:Lmiui/widget/SlidingButton;
+.field private switchBut:Lmiuix/slidingwidget/widget/SlidingButton;
 
 .field final synthetic this$0:Lcom/miui/home/settings/HideAppAdapter;
 
@@ -47,7 +47,7 @@
     .line 96
     iget-object p1, p0, Lcom/miui/home/settings/HideAppAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    const p2, 0x7f0a0051
+    const p2, 0x7f0a005c
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -64,7 +64,7 @@
     .line 97
     iget-object p1, p0, Lcom/miui/home/settings/HideAppAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    const p2, 0x7f0a0052
+    const p2, 0x7f0a005d
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -81,7 +81,7 @@
     .line 98
     iget-object p1, p0, Lcom/miui/home/settings/HideAppAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    const p2, 0x7f0a00df
+    const p2, 0x7f0a0106
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -91,9 +91,9 @@
 
     invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lmiui/widget/SlidingButton;
+    check-cast p1, Lmiuix/slidingwidget/widget/SlidingButton;
 
-    iput-object p1, p0, Lcom/miui/home/settings/HideAppAdapter$ViewHolder;->switchBut:Lmiui/widget/SlidingButton;
+    iput-object p1, p0, Lcom/miui/home/settings/HideAppAdapter$ViewHolder;->switchBut:Lmiuix/slidingwidget/widget/SlidingButton;
 
     return-void
 .end method
@@ -118,11 +118,11 @@
     return-object v0
 .end method
 
-.method public final getSwitchBut()Lmiui/widget/SlidingButton;
+.method public final getSwitchBut()Lmiuix/slidingwidget/widget/SlidingButton;
     .locals 1
 
     .line 98
-    iget-object v0, p0, Lcom/miui/home/settings/HideAppAdapter$ViewHolder;->switchBut:Lmiui/widget/SlidingButton;
+    iget-object v0, p0, Lcom/miui/home/settings/HideAppAdapter$ViewHolder;->switchBut:Lmiuix/slidingwidget/widget/SlidingButton;
 
     return-object v0
 .end method

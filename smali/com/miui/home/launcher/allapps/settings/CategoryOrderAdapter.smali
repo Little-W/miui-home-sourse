@@ -117,7 +117,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$onBindViewHolder$358(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Lcom/miui/home/launcher/allapps/category/CategoryInfo;Landroid/view/View;)V
+.method public static synthetic lambda$onBindViewHolder$0(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Lcom/miui/home/launcher/allapps/category/CategoryInfo;Landroid/view/View;)V
     .locals 0
 
     .line 80
@@ -132,7 +132,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onBindViewHolder$359(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Lcom/miui/home/launcher/allapps/category/CategoryInfo;Landroid/view/View;)V
+.method public static synthetic lambda$onBindViewHolder$1(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Lcom/miui/home/launcher/allapps/category/CategoryInfo;Landroid/view/View;)V
     .locals 0
 
     .line 81
@@ -147,7 +147,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onBindViewHolder$360(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;Landroid/view/View;Landroid/view/MotionEvent;)Z
+.method public static synthetic lambda$onBindViewHolder$2(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 0
 
     .line 83
@@ -175,7 +175,7 @@
     return p1
 .end method
 
-.method public static synthetic lambda$onBindViewHolder$361(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Landroid/view/View;)V
+.method public static synthetic lambda$onBindViewHolder$3(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Landroid/view/View;)V
     .locals 0
 
     .line 93
@@ -299,23 +299,23 @@
     :pswitch_0
     iget-object p2, p1, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;->icon:Landroid/widget/ImageView;
 
-    const v0, 0x7f080150
+    const v0, 0x7f080177
 
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 92
     iget-object p2, p1, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;->title:Landroid/widget/TextView;
 
-    const v0, 0x7f10002f
+    const v0, 0x7f100030
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setText(I)V
 
     .line 93
     iget-object p2, p1, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    new-instance v0, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$g1oVm0V_LnkDdz-cu1gkH4SnaLc;
+    new-instance v0, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$b3bIZ8D5l6LVISs_tI63U5GY-Tw;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$g1oVm0V_LnkDdz-cu1gkH4SnaLc;-><init>(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$b3bIZ8D5l6LVISs_tI63U5GY-Tw;-><init>(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;)V
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -348,7 +348,7 @@
     .line 77
     iget-object v0, p1, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;->icon:Landroid/widget/ImageView;
 
-    const v1, 0x7f080151
+    const v1, 0x7f080178
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -384,27 +384,27 @@
     .line 80
     iget-object v0, p1, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;->icon:Landroid/widget/ImageView;
 
-    new-instance v1, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$ebiEV_CqQEC7hWWS2c725Etgf2E;
+    new-instance v1, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$L_iY4y-qEfZZR9BUy8wQudRuRsA;
 
-    invoke-direct {v1, p0, p2}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$ebiEV_CqQEC7hWWS2c725Etgf2E;-><init>(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Lcom/miui/home/launcher/allapps/category/CategoryInfo;)V
+    invoke-direct {v1, p0, p2}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$L_iY4y-qEfZZR9BUy8wQudRuRsA;-><init>(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Lcom/miui/home/launcher/allapps/category/CategoryInfo;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 81
     iget-object v0, p1, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    new-instance v1, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$mQ4uja2e30v-gVQ1-BXtWpzC9YQ;
+    new-instance v1, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$EEZmqph_qkX_Pt7mXGsvyZ4SfSE;
 
-    invoke-direct {v1, p0, p2}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$mQ4uja2e30v-gVQ1-BXtWpzC9YQ;-><init>(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Lcom/miui/home/launcher/allapps/category/CategoryInfo;)V
+    invoke-direct {v1, p0, p2}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$EEZmqph_qkX_Pt7mXGsvyZ4SfSE;-><init>(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Lcom/miui/home/launcher/allapps/category/CategoryInfo;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 82
     iget-object p2, p1, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;->drag:Landroid/view/View;
 
-    new-instance v0, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$J0MAfbEc09LkWgEKdmLauPMIgJY;
+    new-instance v0, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$4a7DG-GtIVzcvAvmel-X13jhSJc;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$J0MAfbEc09LkWgEKdmLauPMIgJY;-><init>(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategoryOrderAdapter$4a7DG-GtIVzcvAvmel-X13jhSJc;-><init>(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;)V
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -461,7 +461,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0060
+    const v1, 0x7f0d0061
 
     const/4 v2, 0x0
 

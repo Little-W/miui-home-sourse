@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private mLauncherApplication:Lcom/miui/home/launcher/LauncherApplication;
+.field private mLauncherApplication:Lcom/miui/home/launcher/Application;
 
 .field private mLoadPreinstallAds:Ljava/lang/Runnable;
 
@@ -38,11 +38,11 @@
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLoadPreinstallAds:Ljava/lang/Runnable;
 
     .line 31
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLauncherApplication:Lcom/miui/home/launcher/LauncherApplication;
+    iput-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLauncherApplication:Lcom/miui/home/launcher/Application;
 
     return-void
 .end method
@@ -214,7 +214,7 @@
     .end annotation
 
     .line 109
-    iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLauncherApplication:Lcom/miui/home/launcher/LauncherApplication;
+    iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLauncherApplication:Lcom/miui/home/launcher/Application;
 
     const/4 v1, 0x0
 
@@ -251,7 +251,7 @@
     if-eqz v1, :cond_2
 
     .line 119
-    iget-object v1, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLauncherApplication:Lcom/miui/home/launcher/LauncherApplication;
+    iget-object v1, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLauncherApplication:Lcom/miui/home/launcher/Application;
 
     invoke-static {v1}, Lcom/miui/msa/preinstall/v1/PreinstallAdHelper;->getInstance(Landroid/content/Context;)Lcom/miui/msa/preinstall/v1/PreinstallAdHelper;
 
@@ -276,7 +276,7 @@
 
     .line 123
     :cond_2
-    iget-object v1, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLauncherApplication:Lcom/miui/home/launcher/LauncherApplication;
+    iget-object v1, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLauncherApplication:Lcom/miui/home/launcher/Application;
 
     invoke-static {v1}, Lcom/miui/msa/preinstall/v1/PreinstallAdHelper;->getInstance(Landroid/content/Context;)Lcom/miui/msa/preinstall/v1/PreinstallAdHelper;
 
@@ -482,12 +482,12 @@
     return-void
 .end method
 
-.method public static synthetic lambda$handleClick$443(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;Lcom/miui/home/launcher/commercial/preinstall/global/FolderPreinstallAdInfoWrapper;Lcom/miui/home/launcher/RemoteShortcutInfo;)V
+.method public static synthetic lambda$handleClick$2(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;Lcom/miui/home/launcher/commercial/preinstall/global/FolderPreinstallAdInfoWrapper;Lcom/miui/home/launcher/RemoteShortcutInfo;)V
     .locals 1
 
     .line 157
     :try_start_0
-    iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLauncherApplication:Lcom/miui/home/launcher/LauncherApplication;
+    iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLauncherApplication:Lcom/miui/home/launcher/Application;
 
     invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->handleClick(Landroid/content/Context;Lcom/miui/home/launcher/commercial/preinstall/global/FolderPreinstallAdInfoWrapper;)Z
 
@@ -528,12 +528,12 @@
     return-void
 .end method
 
-.method public static synthetic lambda$handleView$442(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;Ljava/util/List;)V
+.method public static synthetic lambda$handleView$1(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;Ljava/util/List;)V
     .locals 2
 
     .line 140
     :try_start_0
-    iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLauncherApplication:Lcom/miui/home/launcher/LauncherApplication;
+    iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLauncherApplication:Lcom/miui/home/launcher/Application;
 
     invoke-static {v0}, Lcom/miui/msa/preinstall/v1/PreinstallAdHelper;->getInstance(Landroid/content/Context;)Lcom/miui/msa/preinstall/v1/PreinstallAdHelper;
 
@@ -563,11 +563,11 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onPreinstallItemDeleted$441(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;Lcom/miui/home/launcher/commercial/preinstall/global/FolderPreinstallAdInfoWrapper;)V
+.method public static synthetic lambda$onPreinstallItemDeleted$0(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;Lcom/miui/home/launcher/commercial/preinstall/global/FolderPreinstallAdInfoWrapper;)V
     .locals 1
 
     .line 97
-    iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLauncherApplication:Lcom/miui/home/launcher/LauncherApplication;
+    iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->mLauncherApplication:Lcom/miui/home/launcher/Application;
 
     invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->handleDislike(Landroid/content/Context;Lcom/miui/home/launcher/commercial/preinstall/global/FolderPreinstallAdInfoWrapper;)V
 
@@ -740,9 +740,9 @@
     if-eqz v0, :cond_1
 
     .line 155
-    new-instance v1, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalFolderPreinstallManager$EuRQJ4MJKY1xrl03OGYHqEMyAxA;
+    new-instance v1, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalFolderPreinstallManager$RizkvoouIy7ZcfyJwHQOSR2fN4w;
 
-    invoke-direct {v1, p0, v0, p1}, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalFolderPreinstallManager$EuRQJ4MJKY1xrl03OGYHqEMyAxA;-><init>(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;Lcom/miui/home/launcher/commercial/preinstall/global/FolderPreinstallAdInfoWrapper;Lcom/miui/home/launcher/RemoteShortcutInfo;)V
+    invoke-direct {v1, p0, v0, p1}, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalFolderPreinstallManager$RizkvoouIy7ZcfyJwHQOSR2fN4w;-><init>(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;Lcom/miui/home/launcher/commercial/preinstall/global/FolderPreinstallAdInfoWrapper;Lcom/miui/home/launcher/RemoteShortcutInfo;)V
 
     invoke-static {v1}, Lcom/miui/home/launcher/common/BackgroundThread;->postAtFrontOfQueue(Ljava/lang/Runnable;)V
 
@@ -774,9 +774,9 @@
 
     .line 138
     :cond_0
-    new-instance v0, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalFolderPreinstallManager$kmNwWRzzZUQbRL8QXRfXp_VHMY0;
+    new-instance v0, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalFolderPreinstallManager$Cy5ORpdUw3Xny6pRafNkJA85j1I;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalFolderPreinstallManager$kmNwWRzzZUQbRL8QXRfXp_VHMY0;-><init>(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;Ljava/util/List;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalFolderPreinstallManager$Cy5ORpdUw3Xny6pRafNkJA85j1I;-><init>(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;Ljava/util/List;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -847,9 +847,9 @@
     move-result-object p1
 
     .line 97
-    new-instance v0, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalFolderPreinstallManager$kplCCPoh5PoGFGtEVv-nSIzuQkQ;
+    new-instance v0, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalFolderPreinstallManager$UoD_OOfF6K79Gaxe-01wve1nRy4;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalFolderPreinstallManager$kplCCPoh5PoGFGtEVv-nSIzuQkQ;-><init>(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;Lcom/miui/home/launcher/commercial/preinstall/global/FolderPreinstallAdInfoWrapper;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/commercial/preinstall/global/-$$Lambda$GlobalFolderPreinstallManager$UoD_OOfF6K79Gaxe-01wve1nRy4;-><init>(Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;Lcom/miui/home/launcher/commercial/preinstall/global/FolderPreinstallAdInfoWrapper;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->postAtFrontOfQueue(Ljava/lang/Runnable;)V
 

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/module/ModuleManagerCompat;)V
     .locals 0
 
-    .line 35
+    .line 36
     iput-object p1, p0, Lcom/miui/home/launcher/module/ModuleManagerCompat$1;->this$0:Lcom/miui/home/launcher/module/ModuleManagerCompat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
 
     const-string v0, "Launcher.ModuleManager"
 
-    .line 51
+    .line 52
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -63,7 +63,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
+    .line 53
     iget-object v0, p0, Lcom/miui/home/launcher/module/ModuleManagerCompat$1;->this$0:Lcom/miui/home/launcher/module/ModuleManagerCompat;
 
     invoke-static {v0}, Lcom/miui/home/launcher/module/ModuleManagerCompat;->access$200(Lcom/miui/home/launcher/module/ModuleManagerCompat;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -76,10 +76,10 @@
 
     const/4 v0, 0x0
 
-    .line 53
+    .line 54
     invoke-static {p1, v0, p2}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackModuleLoad(Ljava/lang/String;ZI)V
 
-    .line 54
+    .line 55
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p2
@@ -96,7 +96,7 @@
 .method public onLoadFinish()V
     .locals 2
 
-    .line 46
+    .line 47
     iget-object v0, p0, Lcom/miui/home/launcher/module/ModuleManagerCompat$1;->this$0:Lcom/miui/home/launcher/module/ModuleManagerCompat;
 
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
@@ -113,7 +113,7 @@
 
     const-string p2, "Launcher.ModuleManager"
 
-    .line 38
+    .line 39
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,7 +130,7 @@
 
     invoke-static {p2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
+    .line 40
     iget-object p2, p0, Lcom/miui/home/launcher/module/ModuleManagerCompat$1;->this$0:Lcom/miui/home/launcher/module/ModuleManagerCompat;
 
     invoke-static {p2}, Lcom/miui/home/launcher/module/ModuleManagerCompat;->access$200(Lcom/miui/home/launcher/module/ModuleManagerCompat;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -145,10 +145,10 @@
 
     const/4 v0, -0x1
 
-    .line 40
+    .line 41
     invoke-static {p1, p2, v0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackModuleLoad(Ljava/lang/String;ZI)V
 
-    .line 41
+    .line 42
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0

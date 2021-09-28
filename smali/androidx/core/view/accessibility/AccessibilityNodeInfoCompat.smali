@@ -1724,6 +1724,17 @@
     return-void
 .end method
 
+.method public setClickable(Z)V
+    .locals 1
+
+    .line 2428
+    iget-object v0, p0, Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;->mInfo:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {v0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClickable(Z)V
+
+    return-void
+.end method
+
 .method public setCollectionInfo(Ljava/lang/Object;)V
     .locals 2
 

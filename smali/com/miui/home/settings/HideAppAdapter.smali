@@ -148,7 +148,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 45
-    invoke-virtual {p1}, Lcom/miui/home/settings/HideAppAdapter$ViewHolder;->getSwitchBut()Lmiui/widget/SlidingButton;
+    invoke-virtual {p1}, Lcom/miui/home/settings/HideAppAdapter$ViewHolder;->getSwitchBut()Lmiuix/slidingwidget/widget/SlidingButton;
 
     move-result-object v0
 
@@ -166,10 +166,10 @@
 
     xor-int/lit8 v1, v1, 0x1
 
-    invoke-virtual {v0, v1}, Lmiui/widget/SlidingButton;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lmiuix/slidingwidget/widget/SlidingButton;->setChecked(Z)V
 
     .line 46
-    invoke-virtual {p1}, Lcom/miui/home/settings/HideAppAdapter$ViewHolder;->getSwitchBut()Lmiui/widget/SlidingButton;
+    invoke-virtual {p1}, Lcom/miui/home/settings/HideAppAdapter$ViewHolder;->getSwitchBut()Lmiuix/slidingwidget/widget/SlidingButton;
 
     move-result-object p1
 
@@ -179,7 +179,7 @@
 
     check-cast v0, Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
-    invoke-virtual {p1, v0}, Lmiui/widget/SlidingButton;->setOnPerformCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual {p1, v0}, Lmiuix/slidingwidget/widget/SlidingButton;->setOnPerformCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     return-void
 .end method
@@ -209,7 +209,7 @@
 
     iget-object v0, p0, Lcom/miui/home/settings/HideAppAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0057
+    const v1, 0x7f0d0058
 
     const/4 v2, 0x0
 

@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
     .locals 0
 
-    .line 274
+    .line 276
     iput-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$6;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 274
+    .line 276
     check-cast p1, [Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/MiuiHomeSettings$6;->accept([Ljava/lang/Boolean;)V
@@ -61,7 +61,7 @@
 
     const/4 v0, 0x0
 
-    .line 277
+    .line 279
     aget-object v0, p1, v0
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -70,7 +70,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 278
+    .line 280
     iget-object v0, p0, Lcom/miui/home/settings/MiuiHomeSettings$6;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-static {v0}, Lcom/miui/home/settings/MiuiHomeSettings;->access$200(Lcom/miui/home/settings/MiuiHomeSettings;)Lcom/miui/home/settings/preference/CheckBoxPreference;
@@ -87,7 +87,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setChecked(Z)V
 
-    .line 279
+    .line 281
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$6;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-static {p1}, Lcom/miui/home/settings/MiuiHomeSettings;->access$200(Lcom/miui/home/settings/MiuiHomeSettings;)Lcom/miui/home/settings/preference/CheckBoxPreference;
@@ -100,7 +100,7 @@
 
     goto :goto_0
 
-    .line 281
+    .line 283
     :cond_0
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$6;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 

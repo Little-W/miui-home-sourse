@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:text="@string/free_style_edit_move_tip"
         style="@android:style/TextAppearance.Large.Inverse" />
-    <miui.widget.ScreenView
+    <com.miui.home.launcher.ScreenView
         android:layout_gravity="center"
         android:id="@id/editModeFreeButton"
         android:visibility="invisible"
@@ -47,7 +47,7 @@
         <include
             android:id="@id/editModeFreeButtonEmpty"
             layout="@layout/free_style_edit_bar_free_button_item" />
-    </miui.widget.ScreenView>
+    </com.miui.home.launcher.ScreenView>
     <LinearLayout
         android:orientation="vertical"
         android:id="@id/editDragSource"

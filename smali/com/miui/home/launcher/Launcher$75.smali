@@ -1,14 +1,11 @@
 .class Lcom/miui/home/launcher/Launcher$75;
-.super Ljava/lang/Object;
+.super Lcom/miui/home/launcher/common/ResultRunnable;
 .source "Launcher.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->addPreinstallAppToWorkspace(Lcom/miui/home/launcher/RemoteShortcutInfo;)V
+    value = Lcom/miui/home/launcher/Launcher;->getShortcutInfo(Landroid/content/ComponentName;I[Ljava/lang/Integer;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,23 +13,40 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/miui/home/launcher/common/ResultRunnable<",
+        "Ljava/util/ArrayList<",
+        "Lcom/miui/home/launcher/ShortcutInfo;",
+        ">;>;"
+    }
+.end annotation
+
 
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$info:Lcom/miui/home/launcher/RemoteShortcutInfo;
+.field final synthetic val$cn:Landroid/content/ComponentName;
+
+.field final synthetic val$itemTypeList:Ljava/util/ArrayList;
+
+.field final synthetic val$userId:I
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/RemoteShortcutInfo;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;ILjava/util/ArrayList;Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 7690
+    .line 7398
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$75;->val$info:Lcom/miui/home/launcher/RemoteShortcutInfo;
+    iput p2, p0, Lcom/miui/home/launcher/Launcher$75;->val$userId:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lcom/miui/home/launcher/Launcher$75;->val$itemTypeList:Ljava/util/ArrayList;
+
+    iput-object p4, p0, Lcom/miui/home/launcher/Launcher$75;->val$cn:Landroid/content/ComponentName;
+
+    invoke-direct {p0}, Lcom/miui/home/launcher/common/ResultRunnable;-><init>()V
 
     return-void
 .end method
@@ -40,54 +54,138 @@
 
 # virtual methods
 .method public run()V
-    .locals 11
+    .locals 5
 
-    .line 7693
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->val$info:Lcom/miui/home/launcher/RemoteShortcutInfo;
+    .line 7401
+    new-instance v0, Ljava/util/ArrayList;
 
-    const-wide/16 v1, -0x64
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-wide v1, v0, Lcom/miui/home/launcher/RemoteShortcutInfo;->container:J
-
-    .line 7694
+    .line 7402
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v1, v0}, Lcom/miui/home/launcher/Launcher;->access$9700(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/RemoteShortcutInfo;)Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
+    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$3900(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
+
+    .line 7403
+    invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->getUserId()I
+
+    move-result v3
+
+    .line 7404
+    iget-object v4, v2, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
+
+    if-eqz v4, :cond_0
+
+    iget-object v4, v2, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
+
+    invoke-virtual {v4}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_0
+
+    iget v4, p0, Lcom/miui/home/launcher/Launcher$75;->val$userId:I
+
+    if-ne v3, v4, :cond_0
+
+    iget-object v3, p0, Lcom/miui/home/launcher/Launcher$75;->val$itemTypeList:Ljava/util/ArrayList;
+
+    iget v4, v2, Lcom/miui/home/launcher/ShortcutInfo;->itemType:I
+
+    .line 7405
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    goto :goto_0
+
+    .line 7408
+    :cond_1
+    iget-object v3, p0, Lcom/miui/home/launcher/Launcher$75;->val$cn:Landroid/content/ComponentName;
+
+    iget-object v4, v2, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
+
+    invoke-virtual {v4}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    iget-object v3, p0, Lcom/miui/home/launcher/Launcher$75;->val$cn:Landroid/content/ComponentName;
+
+    .line 7409
+    invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
+    iget-object v4, v2, Lcom/miui/home/launcher/ShortcutInfo;->mIntent:Landroid/content/Intent;
+
+    invoke-virtual {v4}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
     if-eqz v3, :cond_0
 
-    .line 7696
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
+    iget-object v3, p0, Lcom/miui/home/launcher/Launcher$75;->val$cn:Landroid/content/ComponentName;
 
-    iget-wide v4, v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->screenId:J
+    .line 7410
+    invoke-virtual {v3}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
-    iget-wide v6, v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->container:J
+    move-result-object v3
 
-    iget v8, v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->cellX:I
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    iget v9, v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->cellY:I
+    move-result v3
 
-    const/4 v10, 0x0
+    if-eqz v3, :cond_0
 
-    invoke-virtual/range {v2 .. v10}, Lcom/miui/home/launcher/Launcher;->addItemToWorkspace(Lcom/miui/home/launcher/ItemInfo;JJIILjava/lang/Runnable;)V
+    .line 7411
+    :cond_2
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 7698
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
+    goto :goto_0
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$500(Lcom/miui/home/launcher/Launcher;)Landroid/os/Handler;
+    .line 7414
+    :cond_3
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher$75;->setResult(Ljava/lang/Object;)V
 
-    move-result-object v0
-
-    new-instance v1, Lcom/miui/home/launcher/Launcher$75$1;
-
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/Launcher$75$1;-><init>(Lcom/miui/home/launcher/Launcher$75;)V
-
-    const-wide/16 v2, 0x64
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    :cond_0
     return-void
 .end method

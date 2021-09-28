@@ -63,7 +63,7 @@
 
 .field private static final TAG:Ljava/lang/String; = "ViewPager"
 
-.field private static final USE_CACHE:Z
+.field private static final USE_CACHE:Z = false
 
 .field private static final sInterpolator:Landroid/view/animation/Interpolator;
 
@@ -704,6 +704,7 @@
 
     if-ne v5, v0, :cond_8
 
+    .line 1352
     iget v5, p1, Lcom/miui/home/library/view/viewpager/ViewPager$ItemInfo;->offset:F
 
     iget v7, p1, Lcom/miui/home/library/view/viewpager/ViewPager$ItemInfo;->widthFactor:F
@@ -1314,7 +1315,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 2016
+    .line 2017
     iget v3, p0, Lcom/miui/home/library/view/viewpager/ViewPager;->mPageTransformerLayerType:I
 
     goto :goto_1
@@ -5521,7 +5522,7 @@
 
     if-lez v14, :cond_7
 
-    .line 2091
+    .line 2092
     iget v0, v6, Lcom/miui/home/library/view/viewpager/ViewPager;->mInitialMotionX:F
 
     iget v1, v6, Lcom/miui/home/library/view/viewpager/ViewPager;->mTouchSlop:I
@@ -7136,6 +7137,7 @@
 
     goto :goto_0
 
+    .line 2224
     :cond_5
     iget v3, p0, Lcom/miui/home/library/view/viewpager/ViewPager;->mTouchSlop:I
 
@@ -7626,13 +7628,12 @@
 
     goto :goto_4
 
-    .line 1167
+    .line 1168
     :cond_8
     iget v14, v8, Lcom/miui/home/library/view/viewpager/ViewPager$ItemInfo;->widthFactor:F
 
     sub-float v14, v13, v14
 
-    .line 1168
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/library/view/viewpager/ViewPager;->getPaddingLeft()I
 
     move-result v15

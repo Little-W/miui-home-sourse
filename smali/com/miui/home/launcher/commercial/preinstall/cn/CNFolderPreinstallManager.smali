@@ -103,13 +103,6 @@
     .line 117
     iput-wide p2, v0, Lcom/miui/home/launcher/RemoteShortcutInfo;->container:J
 
-    .line 118
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenOrientationLandscape()Z
-
-    move-result p0
-
-    iput-boolean p0, v0, Lcom/miui/home/launcher/RemoteShortcutInfo;->isLandscapePos:Z
-
     return-object v0
 .end method
 
@@ -126,8 +119,8 @@
         }
     .end annotation
 
-    .line 197
-    new-instance v6, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$EsCFAiMXN4RNP6GgMJnaWNTvdI8;
+    .line 196
+    new-instance v6, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$oQw2HGkt16ZJbl3iBMTs_i1dRA0;
 
     move-object v0, v6
 
@@ -139,40 +132,31 @@
 
     move-wide v4, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$EsCFAiMXN4RNP6GgMJnaWNTvdI8;-><init>(Landroid/content/Context;Ljava/util/List;IJ)V
+    invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$oQw2HGkt16ZJbl3iBMTs_i1dRA0;-><init>(Landroid/content/Context;Ljava/util/List;IJ)V
 
     invoke-static {v6}, Lcom/miui/home/launcher/common/BackgroundThread;->postAtFrontOfQueue(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method static synthetic lambda$handleClick$449(Landroid/content/Context;Ljava/util/List;IJ)V
+.method static synthetic lambda$handleClick$5(Landroid/content/Context;Ljava/util/List;IJ)V
     .locals 0
 
-    .line 197
+    .line 196
     invoke-static {p0}, Lcom/miui/msa/internal/preinstall/v2/InternalPreInstallAdHelper;->getInstance(Landroid/content/Context;)Lcom/miui/msa/internal/preinstall/v2/InternalPreInstallAdHelper;
 
     move-result-object p0
 
-    .line 198
+    .line 197
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/msa/internal/preinstall/v2/InternalPreInstallAdHelper;->handleClick(Ljava/util/List;IJ)V
 
     return-void
 .end method
 
-.method static synthetic lambda$null$445(Lcom/miui/home/launcher/RemoteShortcutInfo;Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    .line 96
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/RemoteShortcutInfo;->setIconDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-.end method
-
-.method public static synthetic lambda$onAppStartDownload$450(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;)V
+.method public static synthetic lambda$onAppStartDownload$6(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;)V
     .locals 1
 
-    .line 213
+    .line 212
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mRecommendFolderAdapter:Lcom/miui/home/launcher/commercial/preinstall/cn/CNPreinstallableFolderShortcutsAdapter;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/preinstall/cn/CNPreinstallableFolderShortcutsAdapter;->getFolderInfo()Lcom/miui/home/launcher/FolderInfo;
@@ -192,17 +176,17 @@
     :cond_0
     const-string v0, "1.32.5.1"
 
-    .line 218
+    .line 217
     :goto_0
     invoke-static {v0}, Lcom/miui/msa/internal/preinstall/v2/utils/FolderUtils;->addInstallCount(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static synthetic lambda$onPreinstallItemDeleted$447(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;Ljava/lang/String;)V
+.method public static synthetic lambda$onPreinstallItemDeleted$3(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;Ljava/lang/String;)V
     .locals 1
 
-    .line 143
+    .line 142
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mRecommendFolderAdapter:Lcom/miui/home/launcher/commercial/preinstall/cn/CNPreinstallableFolderShortcutsAdapter;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/preinstall/cn/CNPreinstallableFolderShortcutsAdapter;->getFolderInfo()Lcom/miui/home/launcher/FolderInfo;
@@ -222,17 +206,17 @@
     :cond_0
     const-string v0, "1.32.5.1"
 
-    .line 148
+    .line 147
     :goto_0
     invoke-static {v0}, Lcom/miui/msa/internal/preinstall/v2/utils/FolderUtils;->addDeleteCount(Ljava/lang/String;)V
 
-    .line 149
+    .line 148
     invoke-static {v0, p1}, Lcom/miui/msa/internal/preinstall/v2/utils/FolderUtils;->addDeletePackage(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public static synthetic lambda$setPreinstallData$444(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;)V
+.method public static synthetic lambda$setPreinstallData$0(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -243,10 +227,10 @@
     return-void
 .end method
 
-.method static synthetic lambda$trackViewEvent$448(Landroid/content/Context;Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;I)V
+.method static synthetic lambda$trackViewEvent$4(Landroid/content/Context;Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;I)V
     .locals 0
 
-    .line 170
+    .line 169
     invoke-static {p0}, Lcom/miui/msa/internal/preinstall/v2/InternalPreInstallAdHelper;->getInstance(Landroid/content/Context;)Lcom/miui/msa/internal/preinstall/v2/InternalPreInstallAdHelper;
 
     move-result-object p0
@@ -256,7 +240,16 @@
     return-void
 .end method
 
-.method public static synthetic lambda$updateAdapter$446(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;Ljava/util/ArrayList;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)V
+.method static synthetic lambda$updateAdapter$1(Lcom/miui/home/launcher/RemoteShortcutInfo;Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+
+    .line 96
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/RemoteShortcutInfo;->setIconDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$updateAdapter$2(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;Ljava/util/ArrayList;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)V
     .locals 3
 
     .line 92
@@ -282,9 +275,9 @@
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 95
-    new-instance p1, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$pHTW-dd86b1LGI7LmJnzwC_CHRo;
+    new-instance p1, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$VJi3DgTJfMB9DmEdHjCfRkCTIaA;
 
-    invoke-direct {p1, p2}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$pHTW-dd86b1LGI7LmJnzwC_CHRo;-><init>(Lcom/miui/home/launcher/RemoteShortcutInfo;)V
+    invoke-direct {p1, p2}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$VJi3DgTJfMB9DmEdHjCfRkCTIaA;-><init>(Lcom/miui/home/launcher/RemoteShortcutInfo;)V
 
     invoke-virtual {p0, p2, p1}, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->loadIcon(Lcom/miui/home/launcher/RemoteShortcutInfo;Ljava/util/function/Consumer;)V
 
@@ -340,7 +333,7 @@
         }
     .end annotation
 
-    .line 123
+    .line 122
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mFolderPreinstallAdInfoList:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -354,7 +347,7 @@
 
     move v2, v0
 
-    .line 128
+    .line 127
     :goto_0
     iget-object v3, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mFolderPreinstallAdInfoList:Ljava/util/List;
 
@@ -364,7 +357,7 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 129
+    .line 128
     iget-object v3, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mFolderPreinstallAdInfoList:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -383,7 +376,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 130
+    .line 129
     iget-object p1, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mFolderPreinstallAdInfoList:Ljava/util/List;
 
     invoke-interface {p1, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -413,10 +406,10 @@
     :goto_1
     const/4 p1, 0x1
 
-    .line 135
+    .line 134
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->updateAdapter(Z)V
 
-    .line 136
+    .line 135
     new-instance p1, Landroid/util/Pair;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -431,10 +424,10 @@
 .method public static trackViewEvent(Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;Landroid/content/Context;I)V
     .locals 1
 
-    .line 170
-    new-instance v0, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$6I_bWpIfjy2IXJwRC489yhW2FtQ;
+    .line 169
+    new-instance v0, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$d6BirA6mOciMOiEWyrEt1VFW1w0;
 
-    invoke-direct {v0, p1, p0, p2}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$6I_bWpIfjy2IXJwRC489yhW2FtQ;-><init>(Landroid/content/Context;Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;I)V
+    invoke-direct {v0, p1, p0, p2}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$d6BirA6mOciMOiEWyrEt1VFW1w0;-><init>(Landroid/content/Context;Lcom/miui/msa/internal/preinstall/v2/FolderRecommendAdInfo;I)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -475,7 +468,7 @@
 .method public handleClick(Lcom/miui/home/launcher/RemoteShortcutInfo;)V
     .locals 4
 
-    .line 178
+    .line 177
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mRecommendFolderAdapter:Lcom/miui/home/launcher/commercial/preinstall/cn/CNPreinstallableFolderShortcutsAdapter;
 
     if-eqz v0, :cond_3
@@ -486,7 +479,7 @@
 
     goto :goto_2
 
-    .line 181
+    .line 180
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -496,7 +489,7 @@
 
     move v2, v1
 
-    .line 182
+    .line 181
     :goto_0
     iget-object v3, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mFolderPreinstallAdInfoList:Ljava/util/List;
 
@@ -506,7 +499,7 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 183
+    .line 182
     iget-object v3, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mFolderPreinstallAdInfoList:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -521,7 +514,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 184
+    .line 183
     iget-object p1, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mFolderPreinstallAdInfoList:Ljava/util/List;
 
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -545,7 +538,7 @@
 
     goto :goto_0
 
-    .line 191
+    .line 190
     :cond_2
     :goto_1
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
@@ -554,14 +547,14 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mRecommendFolderAdapter:Lcom/miui/home/launcher/commercial/preinstall/cn/CNPreinstallableFolderShortcutsAdapter;
 
-    .line 192
+    .line 191
     invoke-virtual {v2}, Lcom/miui/home/launcher/commercial/preinstall/cn/CNPreinstallableFolderShortcutsAdapter;->getFolderInfo()Lcom/miui/home/launcher/FolderInfo;
 
     move-result-object v2
 
     iget-wide v2, v2, Lcom/miui/home/launcher/FolderInfo;->id:J
 
-    .line 189
+    .line 188
     invoke-static {v0, p1, v1, v2, v3}, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->handleClick(Ljava/util/List;Landroid/content/Context;IJ)V
 
     return-void
@@ -574,7 +567,7 @@
 .method public handleView()V
     .locals 6
 
-    .line 154
+    .line 153
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mRecommendFolderAdapter:Lcom/miui/home/launcher/commercial/preinstall/cn/CNPreinstallableFolderShortcutsAdapter;
 
     if-eqz v0, :cond_4
@@ -585,7 +578,7 @@
 
     goto :goto_3
 
-    .line 157
+    .line 156
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/preinstall/cn/CNPreinstallableFolderShortcutsAdapter;->getShowingPreinstallList()Ljava/util/List;
 
@@ -595,7 +588,7 @@
 
     move v2, v1
 
-    .line 158
+    .line 157
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -603,7 +596,7 @@
 
     if-ge v2, v3, :cond_3
 
-    .line 159
+    .line 158
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -612,7 +605,7 @@
 
     move v4, v1
 
-    .line 160
+    .line 159
     :goto_1
     iget-object v5, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mFolderPreinstallAdInfoList:Ljava/util/List;
 
@@ -622,7 +615,7 @@
 
     if-ge v4, v5, :cond_2
 
-    .line 161
+    .line 160
     iget-object v5, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mFolderPreinstallAdInfoList:Ljava/util/List;
 
     invoke-interface {v5, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -637,7 +630,7 @@
 
     if-eqz v5, :cond_1
 
-    .line 162
+    .line 161
     iget-object v3, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mFolderPreinstallAdInfoList:Ljava/util/List;
 
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -691,7 +684,7 @@
         }
     .end annotation
 
-    .line 229
+    .line 228
     invoke-static {p1, p2}, Lcom/miui/home/launcher/commercial/CommercialCommons;->loadIconFromCN(Lcom/miui/home/launcher/RemoteShortcutInfo;Ljava/util/function/Consumer;)V
 
     return-void
@@ -700,7 +693,7 @@
 .method public onAppAdded(Ljava/lang/String;)V
     .locals 0
 
-    .line 174
+    .line 173
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->removeItem(Ljava/lang/String;)Landroid/util/Pair;
 
     return-void
@@ -709,19 +702,19 @@
 .method public onAppStartDownload(Ljava/lang/String;)V
     .locals 4
 
-    .line 203
+    .line 202
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mRecommendFolderAdapter:Lcom/miui/home/launcher/commercial/preinstall/cn/CNPreinstallableFolderShortcutsAdapter;
 
     if-eqz v0, :cond_1
 
-    .line 204
+    .line 203
     invoke-virtual {v0}, Lcom/miui/home/launcher/commercial/preinstall/cn/CNPreinstallableFolderShortcutsAdapter;->getShowingPreinstallList()Ljava/util/List;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 205
+    .line 204
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -729,14 +722,14 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 206
+    .line 205
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/miui/home/launcher/RemoteShortcutInfo;
 
-    .line 207
+    .line 206
     invoke-virtual {v2}, Lcom/miui/home/launcher/RemoteShortcutInfo;->getAppId()Ljava/lang/String;
 
     move-result-object v3
@@ -747,24 +740,24 @@
 
     if-eqz v3, :cond_0
 
-    .line 208
+    .line 207
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    .line 210
+    .line 209
     invoke-virtual {v3, v2}, Lcom/miui/home/launcher/Launcher;->addRecommendAppToFolderWithoutDragAnimation(Lcom/miui/home/launcher/RemoteShortcutInfo;)Z
 
-    .line 211
-    new-instance p1, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$ibQ2vA65EI1HtD51h84OERyzYl0;
+    .line 210
+    new-instance p1, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$cs7j4jsI6mO4VoiaNQ7qiBUk-iQ;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$ibQ2vA65EI1HtD51h84OERyzYl0;-><init>(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$cs7j4jsI6mO4VoiaNQ7qiBUk-iQ;-><init>(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;)V
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/BackgroundThread;->postAtFrontOfQueue(Ljava/lang/Runnable;)V
 
-    .line 220
+    .line 219
     invoke-virtual {v2}, Lcom/miui/home/launcher/RemoteShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -813,13 +806,13 @@
 .method public onPreinstallItemDeleted(Ljava/lang/String;)V
     .locals 1
 
-    .line 140
+    .line 139
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->removeItem(Ljava/lang/String;)Landroid/util/Pair;
 
-    .line 141
-    new-instance v0, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$6FXWWTsiL7CxxpInJErRWKvdFlE;
+    .line 140
+    new-instance v0, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$T1GBaA8ePaNSauYvM-whM4sFKgI;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$6FXWWTsiL7CxxpInJErRWKvdFlE;-><init>(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$T1GBaA8ePaNSauYvM-whM4sFKgI;-><init>(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->postAtFrontOfQueue(Ljava/lang/Runnable;)V
 
@@ -846,9 +839,9 @@
     iput-object p1, p0, Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;->mFolderPreinstallAdInfoList:Ljava/util/List;
 
     .line 68
-    new-instance p1, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$HXykMJxrViHD_nN7_IVoh5IudX8;
+    new-instance p1, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$cZAQ4GbF3fzndxKBXO93E0H6JkU;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$HXykMJxrViHD_nN7_IVoh5IudX8;-><init>(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$cZAQ4GbF3fzndxKBXO93E0H6JkU;-><init>(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;)V
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->useLauncherToRunOnUiThread(Ljava/lang/Runnable;)Z
 
@@ -903,9 +896,9 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$L5GsGvW9T9K4c9UFIaV08vfwAOM;
+    new-instance v2, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$zu4k4lGlk4HAiHbYyLofN_CPZDM;
 
-    invoke-direct {v2, p0, v0}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$L5GsGvW9T9K4c9UFIaV08vfwAOM;-><init>(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;Ljava/util/ArrayList;)V
+    invoke-direct {v2, p0, v0}, Lcom/miui/home/launcher/commercial/preinstall/cn/-$$Lambda$CNFolderPreinstallManager$zu4k4lGlk4HAiHbYyLofN_CPZDM;-><init>(Lcom/miui/home/launcher/commercial/preinstall/cn/CNFolderPreinstallManager;Ljava/util/ArrayList;)V
 
     invoke-interface {v1, v2}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 

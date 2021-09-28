@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/DeviceConfig$4;
+.class Lcom/miui/home/launcher/DeviceConfig$4;
 .super Ljava/lang/Object;
 .source "DeviceConfig.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 1497
+    .line 1468
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
 
     const-string p1, ".db"
 
-    .line 1501
+    .line 1472
     invoke-virtual {p2, p1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result p1

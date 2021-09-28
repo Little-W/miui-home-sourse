@@ -31,7 +31,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/recents/views/FloatingIconView;)V
     .locals 0
 
-    .line 2684
+    .line 2705
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$12;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iput-object p2, p0, Lcom/miui/home/recents/NavStubView$12;->val$icon:Lcom/miui/home/launcher/ShortcutIcon;
@@ -43,12 +43,12 @@
     return-void
 .end method
 
-.method static synthetic lambda$onAnimationCancel$258(Lcom/miui/home/recents/views/FloatingIconView;)V
+.method static synthetic lambda$onAnimationCancel$0(Lcom/miui/home/recents/views/FloatingIconView;)V
     .locals 0
 
     if-eqz p0, :cond_0
 
-    .line 2705
+    .line 2726
     invoke-virtual {p0}, Lcom/miui/home/recents/views/FloatingIconView;->forceToEnd()V
 
     :cond_0
@@ -60,30 +60,30 @@
 .method public onAnimationCancel(Lcom/miui/home/recents/util/RectFSpringAnim;)V
     .locals 3
 
-    .line 2703
+    .line 2724
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$12;->val$floatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
 
-    new-instance v2, Lcom/miui/home/recents/-$$Lambda$NavStubView$12$g3te-4YRvf34yDoAsbTPtG2zZQw;
+    new-instance v2, Lcom/miui/home/recents/-$$Lambda$NavStubView$12$LtjhFeCwPKG7POhd2yS87QPrLk4;
 
-    invoke-direct {v2, v1}, Lcom/miui/home/recents/-$$Lambda$NavStubView$12$g3te-4YRvf34yDoAsbTPtG2zZQw;-><init>(Lcom/miui/home/recents/views/FloatingIconView;)V
+    invoke-direct {v2, v1}, Lcom/miui/home/recents/-$$Lambda$NavStubView$12$LtjhFeCwPKG7POhd2yS87QPrLk4;-><init>(Lcom/miui/home/recents/views/FloatingIconView;)V
 
     invoke-virtual {v0, v2}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 2708
+    .line 2729
     sget-object v0, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
     const-string v1, "startAppToHomeInMainThread mAppToHomeAnim2 cancel"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2709
+    .line 2730
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/NavStubView$12;->onAnimationEnd(Lcom/miui/home/recents/util/RectFSpringAnim;)V
 
     const/4 p1, 0x1
 
-    .line 2710
+    .line 2731
     iput-boolean p1, p0, Lcom/miui/home/recents/NavStubView$12;->isCancel:Z
 
     return-void
@@ -92,14 +92,14 @@
 .method public onAnimationEnd(Lcom/miui/home/recents/util/RectFSpringAnim;)V
     .locals 1
 
-    .line 2715
+    .line 2736
     iget-boolean p1, p0, Lcom/miui/home/recents/NavStubView$12;->isCancel:Z
 
     if-eqz p1, :cond_0
 
     return-void
 
-    .line 2719
+    .line 2740
     :cond_0
     sget-object p1, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
@@ -107,29 +107,29 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2720
+    .line 2741
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$12;->this$0:Lcom/miui/home/recents/NavStubView;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$4700(Lcom/miui/home/recents/NavStubView;Z)V
 
-    .line 2721
+    .line 2742
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$12;->this$0:Lcom/miui/home/recents/NavStubView;
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/NavStubView;->finishAppToHome(Z)V
 
-    .line 2722
+    .line 2743
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$12;->val$icon:Lcom/miui/home/launcher/ShortcutIcon;
 
     if-eqz p1, :cond_1
 
-    .line 2723
+    .line 2744
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->onEnterHomeAnimFinish()V
 
-    .line 2728
+    .line 2749
     :cond_1
     invoke-static {}, Lcom/miui/home/recents/util/TraceUtils;->endSection()V
 
@@ -141,17 +141,17 @@
 
     const-string p1, "appToHomeAnimFromGesture"
 
-    .line 2689
+    .line 2710
     invoke-static {p1}, Lcom/miui/home/recents/util/TraceUtils;->beginSection(Ljava/lang/String;)V
 
-    .line 2690
+    .line 2711
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$12;->this$0:Lcom/miui/home/recents/NavStubView;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$4700(Lcom/miui/home/recents/NavStubView;Z)V
 
-    .line 2691
+    .line 2712
     sget-object p1, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -172,12 +172,12 @@
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2692
+    .line 2713
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$12;->val$icon:Lcom/miui/home/launcher/ShortcutIcon;
 
     if-eqz p1, :cond_1
 
-    .line 2693
+    .line 2714
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$12;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$5000(Lcom/miui/home/recents/NavStubView;)Z
@@ -186,7 +186,7 @@
 
     if-nez p1, :cond_0
 
-    .line 2694
+    .line 2715
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$12;->val$icon:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
@@ -197,7 +197,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/LauncherIconImageView;->setVisibility(I)V
 
-    .line 2696
+    .line 2717
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$12;->val$icon:Lcom/miui/home/launcher/ShortcutIcon;
 
@@ -209,7 +209,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/LauncherIconImageView;->setAlpha(F)V
 
-    .line 2697
+    .line 2718
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$12;->val$icon:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->onEnterHomeAnimStart()V

@@ -6,9 +6,9 @@
 # static fields
 .field private static final sPrepareLock:Ljava/lang/Object;
 
-.field private static sRemovedInfoList:Lcom/miui/home/launcher/RemovedComponentInfoList;
+.field private static sRemovedInfoList:Lcom/miui/home/launcher/RemovedComponentInfoList; = null
 
-.field private static sRemovedInfoReady:Z
+.field private static sRemovedInfoReady:Z = false
 
 
 # instance fields

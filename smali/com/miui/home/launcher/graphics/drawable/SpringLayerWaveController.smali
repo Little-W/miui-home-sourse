@@ -73,7 +73,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$startWaveAnimation$153(Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;FF)V
+.method static synthetic lambda$startWaveAnimation$0(Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;FF)V
     .locals 5
 
     .line 89
@@ -297,9 +297,9 @@
     move-result p1
 
     .line 88
-    new-instance v1, Lcom/miui/home/launcher/graphics/drawable/-$$Lambda$SpringLayerWaveController$6-hCIafv7ur8adgJqCGdXe_YzoI;
+    new-instance v1, Lcom/miui/home/launcher/graphics/drawable/-$$Lambda$SpringLayerWaveController$eyiFwlTAH6V5Supd83Px28a_QQA;
 
-    invoke-direct {v1, v0, p2, p1}, Lcom/miui/home/launcher/graphics/drawable/-$$Lambda$SpringLayerWaveController$6-hCIafv7ur8adgJqCGdXe_YzoI;-><init>(Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;FF)V
+    invoke-direct {v1, v0, p2, p1}, Lcom/miui/home/launcher/graphics/drawable/-$$Lambda$SpringLayerWaveController$eyiFwlTAH6V5Supd83Px28a_QQA;-><init>(Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;FF)V
 
     float-to-int p1, p4
 

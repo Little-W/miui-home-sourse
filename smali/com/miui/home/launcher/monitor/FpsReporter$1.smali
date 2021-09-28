@@ -105,13 +105,7 @@
     .line 109
     iget-object p1, p0, Lcom/miui/home/launcher/monitor/FpsReporter$1;->this$0:Lcom/miui/home/launcher/monitor/FpsReporter;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/monitor/FpsReporter;->access$200(Lcom/miui/home/launcher/monitor/FpsReporter;)J
-
-    move-result-wide p6
-
-    add-long/2addr p6, p4
-
-    invoke-static {p1, p6, p7}, Lcom/miui/home/launcher/monitor/FpsReporter;->access$202(Lcom/miui/home/launcher/monitor/FpsReporter;J)J
+    invoke-static {p1, p4, p5}, Lcom/miui/home/launcher/monitor/FpsReporter;->access$214(Lcom/miui/home/launcher/monitor/FpsReporter;J)J
 
     .line 110
     iget-object p1, p0, Lcom/miui/home/launcher/monitor/FpsReporter$1;->this$0:Lcom/miui/home/launcher/monitor/FpsReporter;
@@ -128,13 +122,7 @@
     .line 113
     iget-object p1, p0, Lcom/miui/home/launcher/monitor/FpsReporter$1;->this$0:Lcom/miui/home/launcher/monitor/FpsReporter;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/monitor/FpsReporter;->access$400(Lcom/miui/home/launcher/monitor/FpsReporter;)J
-
-    move-result-wide p6
-
-    add-long/2addr p6, p4
-
-    invoke-static {p1, p6, p7}, Lcom/miui/home/launcher/monitor/FpsReporter;->access$402(Lcom/miui/home/launcher/monitor/FpsReporter;J)J
+    invoke-static {p1, p4, p5}, Lcom/miui/home/launcher/monitor/FpsReporter;->access$414(Lcom/miui/home/launcher/monitor/FpsReporter;J)J
 
     .line 114
     iget-object p1, p0, Lcom/miui/home/launcher/monitor/FpsReporter$1;->this$0:Lcom/miui/home/launcher/monitor/FpsReporter;
@@ -178,17 +166,7 @@
     :cond_4
     iget-object p1, p0, Lcom/miui/home/launcher/monitor/FpsReporter$1;->this$0:Lcom/miui/home/launcher/monitor/FpsReporter;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/monitor/FpsReporter;->access$900(Lcom/miui/home/launcher/monitor/FpsReporter;)I
-
-    move-result p2
-
-    int-to-long p2, p2
-
-    add-long/2addr p2, p4
-
-    long-to-int p2, p2
-
-    invoke-static {p1, p2}, Lcom/miui/home/launcher/monitor/FpsReporter;->access$902(Lcom/miui/home/launcher/monitor/FpsReporter;I)I
+    invoke-static {p1, p4, p5}, Lcom/miui/home/launcher/monitor/FpsReporter;->access$914(Lcom/miui/home/launcher/monitor/FpsReporter;J)I
 
     :cond_5
     return-void

@@ -9,13 +9,13 @@
 # static fields
 .field private static final ACTION_REMOVE_NEWHOME:Ljava/lang/String; = "miui.newhome.action.REMOVE_NEWHOME"
 
-.field public static final ANIM_ACTIVITY_OPEN_ENTER:I = 0x7f01000d
+.field public static final ANIM_ACTIVITY_OPEN_ENTER:I = 0x7f010012
 
-.field public static final ANIM_ACTIVITY_OPEN_EXIT:I = 0x7f01000e
+.field public static final ANIM_ACTIVITY_OPEN_EXIT:I = 0x7f010013
 
-.field public static final ANIM_VIDEO_ACTIVITY_ENTER:I = 0x7f01000f
+.field public static final ANIM_VIDEO_ACTIVITY_ENTER:I = 0x7f010014
 
-.field public static final ANIM_VIDEO_ACTIVITY_EXIT:I = 0x7f010010
+.field public static final ANIM_VIDEO_ACTIVITY_EXIT:I = 0x7f010015
 
 .field private static final CLASS_NEWHOME_PATH:Ljava/lang/String; = "com.miui.newhome.view.gestureview.NewHomeView"
 
@@ -45,7 +45,7 @@
 
 .field private static final PREF_FORMAT:Ljava/lang/String; = "com.miui.newhome.preferences.%s"
 
-.field public static final STYLES_THEME_PHOTOS:I = 0x7f11018f
+.field public static final STYLES_THEME_PHOTOS:I = 0x7f1101e0
 
 .field private static final TAG:Ljava/lang/String; = "HomeFeedContainer"
 
@@ -407,7 +407,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07023d
+    const v1, 0x7f070347
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -859,7 +859,7 @@
     return v0
 .end method
 
-.method static synthetic lambda$createNewHomeView$20(Landroid/os/Bundle;)V
+.method static synthetic lambda$createNewHomeView$0(Landroid/os/Bundle;)V
     .locals 0
 
     return-void
@@ -1070,7 +1070,7 @@
     .line 396
     iget-object p1, p0, Lcom/miui/home/launcher/view/HomeFeedContainer;->mNewHomeView:Lcom/miui/newhome/view/gestureview/NewHomeView;
 
-    sget-object p2, Lcom/miui/home/launcher/view/-$$Lambda$HomeFeedContainer$Nc9s2F6Way1XMI7Iiry74INR2VA;->INSTANCE:Lcom/miui/home/launcher/view/-$$Lambda$HomeFeedContainer$Nc9s2F6Way1XMI7Iiry74INR2VA;
+    sget-object p2, Lcom/miui/home/launcher/view/-$$Lambda$HomeFeedContainer$TD_pcK57XHBBuhuSPYh1Uz4pG6s;->INSTANCE:Lcom/miui/home/launcher/view/-$$Lambda$HomeFeedContainer$TD_pcK57XHBBuhuSPYh1Uz4pG6s;
 
     invoke-virtual {p1, p2}, Lcom/miui/newhome/view/gestureview/NewHomeView;->setFeedActionListener(Lcom/miui/newhome/view/gestureview/FeedActionListener;)V
 

@@ -97,8 +97,5 @@
     .end annotation
 .end method
 
-.method public abstract onStop()V
-.end method
-
 .method public abstract removeActiveSession(Ljava/lang/String;)V
 .end method

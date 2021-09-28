@@ -45,9 +45,9 @@
     .line 28
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f060232
+    const v1, 0x7f060374
 
-    const v2, 0x7f060231
+    const v2, 0x7f060373
 
     invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(II)V
 
@@ -56,9 +56,9 @@
     .line 29
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f060230
+    const v1, 0x7f060372
 
-    const v2, 0x7f06022f
+    const v2, 0x7f060371
 
     invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(II)V
 
@@ -67,9 +67,9 @@
     .line 30
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f060234
+    const v1, 0x7f060376
 
-    const v2, 0x7f060233
+    const v2, 0x7f060375
 
     invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(II)V
 
@@ -78,9 +78,9 @@
     .line 31
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f060236
+    const v1, 0x7f060378
 
-    const v2, 0x7f060235
+    const v2, 0x7f060377
 
     invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(II)V
 
@@ -183,6 +183,7 @@
 
     if-eqz p1, :cond_0
 
+    .line 49
     new-instance p1, Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim;-><init>(Lcom/miui/home/launcher/multiselect/TopMenuContainer;)V
@@ -258,7 +259,7 @@
     return-object v0
 .end method
 
-.method static synthetic lambda$onWallpaperColorChanged$127(Lcom/miui/home/launcher/multiselect/TopMenuState;)V
+.method static synthetic lambda$onWallpaperColorChanged$0(Lcom/miui/home/launcher/multiselect/TopMenuState;)V
     .locals 0
 
     .line 196
@@ -563,7 +564,7 @@
     .line 68
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a01db
+    const v0, 0x7f0a0228
 
     .line 69
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->findViewById(I)Landroid/view/View;
@@ -574,7 +575,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mImageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a01dc
+    const v0, 0x7f0a0229
 
     .line 70
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->findViewById(I)Landroid/view/View;
@@ -614,7 +615,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/miui/home/launcher/multiselect/-$$Lambda$TopMenuContainer$80_3JEjdSro8584q93Nv5PSxl5g;->INSTANCE:Lcom/miui/home/launcher/multiselect/-$$Lambda$TopMenuContainer$80_3JEjdSro8584q93Nv5PSxl5g;
+    sget-object v1, Lcom/miui/home/launcher/multiselect/-$$Lambda$TopMenuContainer$T1wO_RwXNWMwEmFwUWU5aY58Ewo;->INSTANCE:Lcom/miui/home/launcher/multiselect/-$$Lambda$TopMenuContainer$T1wO_RwXNWMwEmFwUWU5aY58Ewo;
 
     .line 195
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V

@@ -77,7 +77,7 @@
             android:importantForAccessibility="no" />
         <include
             android:id="@id/apps_view"
-            android:visibility="invisible"
+            android:visibility="gone"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             layout="@layout/all_apps" />
@@ -122,4 +122,8 @@
     </FrameLayout>
     <include
         layout="@layout/widgets_preview_layout" />
+    <FrameLayout
+        android:id="@id/drag_view_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
 </com.miui.home.launcher.DragLayer>

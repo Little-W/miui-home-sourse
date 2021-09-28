@@ -65,7 +65,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0701bf
+    const p2, 0x7f0702c8
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -78,7 +78,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0701c0
+    const p2, 0x7f0702c9
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -98,7 +98,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0701be
+    const p2, 0x7f0702c7
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -111,7 +111,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0601c3
+    const p2, 0x7f060305
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -138,7 +138,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f07024d
+    const p2, 0x7f07035d
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -304,9 +304,15 @@
     move-result v6
 
     .line 65
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
 
-    move-result v7
+    move-result v0
+
+    int-to-float v0, v0
+
+    const/high16 v7, 0x40000000    # 2.0f
+
+    div-float v7, v0, v7
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getMetaState()I
 
@@ -318,11 +324,11 @@
     move-result-object p1
 
     .line 66
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherApplication;->getRecentsImpl()Lcom/miui/home/recents/BaseRecentsImpl;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getRecentsImpl()Lcom/miui/home/recents/BaseRecentsImpl;
 
     move-result-object v0
 

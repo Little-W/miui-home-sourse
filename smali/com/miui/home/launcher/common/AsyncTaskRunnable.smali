@@ -49,7 +49,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$run$21(Lcom/miui/home/launcher/common/AsyncTaskRunnable;Ljava/lang/Object;)V
+.method public static synthetic lambda$run$0(Lcom/miui/home/launcher/common/AsyncTaskRunnable;Ljava/lang/Object;)V
     .locals 0
 
     .line 16
@@ -87,9 +87,9 @@
     .line 16
     sget-object v1, Lcom/miui/home/launcher/common/AsyncTaskRunnable;->sUIHandler:Landroid/os/Handler;
 
-    new-instance v2, Lcom/miui/home/launcher/common/-$$Lambda$AsyncTaskRunnable$qlkwVxaJYWtJKc6XZf_8m_v3kIE;
+    new-instance v2, Lcom/miui/home/launcher/common/-$$Lambda$AsyncTaskRunnable$mdM-BtTKtxGqNbBE00SCkXwSMuc;
 
-    invoke-direct {v2, p0, v0}, Lcom/miui/home/launcher/common/-$$Lambda$AsyncTaskRunnable$qlkwVxaJYWtJKc6XZf_8m_v3kIE;-><init>(Lcom/miui/home/launcher/common/AsyncTaskRunnable;Ljava/lang/Object;)V
+    invoke-direct {v2, p0, v0}, Lcom/miui/home/launcher/common/-$$Lambda$AsyncTaskRunnable$mdM-BtTKtxGqNbBE00SCkXwSMuc;-><init>(Lcom/miui/home/launcher/common/AsyncTaskRunnable;Ljava/lang/Object;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

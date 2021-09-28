@@ -16,23 +16,24 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
         <LinearLayout
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             android:clipChildren="false"
             android:clipToPadding="false"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@android:id/icon"
                 android:layout_width="@dimen/miuix_preference_item_seekbar_icon_width"
                 android:layout_height="@dimen/miuix_preference_item_seekbar_icon_height"
                 android:layout_marginEnd="@dimen/miuix_preference_item_seekbar_icon_margin_end" />
             <TextView
-                android:textAppearance="?android:textAppearanceListItem"
+                android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
                 android:id="@android:id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-        <miuix.preference.UnPressableLinearLayout
+        <androidx.preference.UnPressableLinearLayout
             android:gravity="center_vertical"
             android:paddingTop="@dimen/miuix_preference_item_seekbar_padding_top"
             android:paddingBottom="@dimen/miuix_preference_item_seekbar_padding_bottom"
@@ -40,14 +41,14 @@
             android:clipToPadding="false"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
-            <miui.widget.SeekBar
+            <miuix.androidbasewidget.widget.SeekBar
                 android:id="@id/seekbar"
                 android:background="@null"
                 android:layout_width="0.0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
-                android:paddingStart="@dimen/miuix_preference_seekbar_padding_horizontal"
-                android:paddingEnd="@dimen/miuix_preference_seekbar_padding_horizontal" />
+                android:paddingStart="@dimen/preference_seekbar_padding_horizontal"
+                android:paddingEnd="@dimen/preference_seekbar_padding_horizontal" />
             <TextView
                 android:textAppearance="?android:textAppearanceListItem"
                 android:ellipsize="marquee"
@@ -58,6 +59,6 @@
                 android:layout_width="0.0dip"
                 android:layout_height="wrap_content"
                 android:singleLine="true" />
-        </miuix.preference.UnPressableLinearLayout>
+        </androidx.preference.UnPressableLinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -96,13 +96,17 @@
     invoke-virtual/range {v1 .. v6}, Lcom/miui/home/launcher/progress/ProgressManager;->updateProgress([Ljava/lang/String;[Ljava/lang/String;[I[Ljava/lang/String;Ljava/lang/String;)V
 
     .line 87
-    iget-object v0, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->this$0:Lcom/miui/home/launcher/install/PackageInstallerCompatVL;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/install/PackageInstallerCompatVL;->access$000(Lcom/miui/home/launcher/install/PackageInstallerCompatVL;)Landroid/content/Context;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher(Landroid/content/Context;)Lcom/miui/home/launcher/Launcher;
+    iget-object v1, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->this$0:Lcom/miui/home/launcher/install/PackageInstallerCompatVL;
+
+    invoke-static {v1}, Lcom/miui/home/launcher/install/PackageInstallerCompatVL;->access$000(Lcom/miui/home/launcher/install/PackageInstallerCompatVL;)Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getLauncher(Landroid/content/Context;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 

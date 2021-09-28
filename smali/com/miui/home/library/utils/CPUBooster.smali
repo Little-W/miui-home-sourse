@@ -146,7 +146,7 @@
     return-object v0
 .end method
 
-.method static synthetic lambda$boostCpuToMax$2(I)V
+.method static synthetic lambda$boostCpuToMax$0(I)V
     .locals 3
 
     .line 56
@@ -211,9 +211,9 @@
     .line 54
     sget-object v0, Lcom/miui/home/library/utils/CPUBooster;->BOOST_CPU_EXECUTOR:Ljava/util/concurrent/Executor;
 
-    new-instance v1, Lcom/miui/home/library/utils/-$$Lambda$CPUBooster$HmNTcwwQztGcO-hzzghMDQAMczo;
+    new-instance v1, Lcom/miui/home/library/utils/-$$Lambda$CPUBooster$-lXfRn5-fPwyJqhpFeve0bDUSBE;
 
-    invoke-direct {v1, p1}, Lcom/miui/home/library/utils/-$$Lambda$CPUBooster$HmNTcwwQztGcO-hzzghMDQAMczo;-><init>(I)V
+    invoke-direct {v1, p1}, Lcom/miui/home/library/utils/-$$Lambda$CPUBooster$-lXfRn5-fPwyJqhpFeve0bDUSBE;-><init>(I)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

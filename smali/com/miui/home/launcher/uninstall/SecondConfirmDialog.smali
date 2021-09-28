@@ -132,7 +132,7 @@
 
 
 # virtual methods
-.method public onNegativeClick(Lmiui/app/AlertDialog;)V
+.method public onNegativeClick(Lmiuix/appcompat/app/AlertDialog;)V
     .locals 3
 
     const-string v0, "dialog"
@@ -168,7 +168,7 @@
     if-ne v0, v2, :cond_2
 
     .line 32
-    invoke-virtual {p1}, Lmiui/app/AlertDialog;->dismiss()V
+    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     .line 33
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/SecondConfirmDialog;->mCancelShortcutInfos:Ljava/util/ArrayList;
@@ -250,7 +250,7 @@
     return-void
 .end method
 
-.method public onPositiveClick(Lmiui/app/AlertDialog;)V
+.method public onPositiveClick(Lmiuix/appcompat/app/AlertDialog;)V
     .locals 3
 
     const-string v0, "dialog"
@@ -284,7 +284,7 @@
     if-ne v0, v1, :cond_1
 
     .line 13
-    invoke-virtual {p1}, Lmiui/app/AlertDialog;->dismiss()V
+    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     .line 14
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/SecondConfirmDialog;->mUninstallShortcutInfos:Ljava/util/ArrayList;
@@ -324,7 +324,7 @@
     if-lt v0, v2, :cond_3
 
     .line 18
-    invoke-virtual {p1}, Lmiui/app/AlertDialog;->dismiss()V
+    invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     .line 19
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/SecondConfirmDialog;->mUninstallShortcutInfos:Ljava/util/ArrayList;

@@ -546,16 +546,22 @@
 
     const/4 v0, 0x0
 
-    if-nez p1, :cond_0
+    if-eqz p1, :cond_5
 
-    .line 31
-    monitor-exit p0
+    if-eqz p2, :cond_5
 
-    return-object v0
+    .line 30
+    :try_start_0
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
 
     .line 33
     :cond_0
-    :try_start_0
     iget-object v1, p0, Lmiuix/animation/utils/FieldManager;->mMethodMap:Ljava/util/Map;
 
     invoke-interface {v1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -660,6 +666,13 @@
     monitor-exit p0
 
     throw p1
+
+    .line 31
+    :cond_5
+    :goto_0
+    monitor-exit p0
+
+    return-object v0
 .end method
 
 .method public declared-synchronized setField(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)Z
@@ -680,16 +693,22 @@
 
     const/4 v0, 0x0
 
-    if-nez p1, :cond_0
+    if-eqz p1, :cond_5
 
-    .line 53
-    monitor-exit p0
+    if-eqz p2, :cond_5
 
-    return v0
+    .line 52
+    :try_start_0
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
 
     .line 55
     :cond_0
-    :try_start_0
     iget-object v1, p0, Lmiuix/animation/utils/FieldManager;->mMethodMap:Ljava/util/Map;
 
     invoke-interface {v1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -791,4 +810,11 @@
     monitor-exit p0
 
     throw p1
+
+    .line 53
+    :cond_5
+    :goto_0
+    monitor-exit p0
+
+    return v0
 .end method

@@ -61,20 +61,20 @@
         }
     .end annotation
 
-    .line 110
+    .line 111
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 111
+    .line 112
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 112
+    .line 113
     iput-object p2, p0, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->mLabels:[Ljava/lang/CharSequence;
 
-    .line 113
+    .line 114
     iput-object p3, p0, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->mListener:Lcom/miui/home/launcher/common/OnItemClickListener;
 
     return-void
@@ -83,16 +83,16 @@
 .method synthetic constructor <init>(Landroid/content/Context;[Ljava/lang/CharSequence;Lcom/miui/home/launcher/common/OnItemClickListener;Lcom/miui/home/launcher/view/LabelSeekBar$1;)V
     .locals 0
 
-    .line 104
+    .line 105
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;-><init>(Landroid/content/Context;[Ljava/lang/CharSequence;Lcom/miui/home/launcher/common/OnItemClickListener;)V
 
     return-void
 .end method
 
-.method public static synthetic lambda$onBindViewHolder$353(Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;ILandroid/view/View;)V
+.method public static synthetic lambda$onBindViewHolder$0(Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;ILandroid/view/View;)V
     .locals 2
 
-    .line 130
+    .line 131
     iget-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->mListener:Lcom/miui/home/launcher/common/OnItemClickListener;
 
     iget-object v1, p0, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->mLabels:[Ljava/lang/CharSequence;
@@ -109,7 +109,7 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 140
+    .line 141
     iget-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->mLabels:[Ljava/lang/CharSequence;
 
     array-length v0, v0
@@ -120,7 +120,7 @@
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
 
-    .line 104
+    .line 105
     check-cast p1, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter$ViewHolder;
 
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->onBindViewHolder(Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter$ViewHolder;I)V
@@ -131,7 +131,7 @@
 .method public onBindViewHolder(Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter$ViewHolder;I)V
     .locals 2
 
-    .line 129
+    .line 130
     iget-object v0, p1, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter$ViewHolder;->textView:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->mLabels:[Ljava/lang/CharSequence;
@@ -140,21 +140,21 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 130
+    .line 131
     iget-object v0, p1, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter$ViewHolder;->textView:Landroid/widget/TextView;
 
-    new-instance v1, Lcom/miui/home/launcher/view/-$$Lambda$LabelSeekBar$LabelAdapter$v6J0qL3VpK4p7HFPvqz1dcOKuRE;
+    new-instance v1, Lcom/miui/home/launcher/view/-$$Lambda$LabelSeekBar$LabelAdapter$VyIkax_oXR-uP-huCVR7bsgj6qE;
 
-    invoke-direct {v1, p0, p2}, Lcom/miui/home/launcher/view/-$$Lambda$LabelSeekBar$LabelAdapter$v6J0qL3VpK4p7HFPvqz1dcOKuRE;-><init>(Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;I)V
+    invoke-direct {v1, p0, p2}, Lcom/miui/home/launcher/view/-$$Lambda$LabelSeekBar$LabelAdapter$VyIkax_oXR-uP-huCVR7bsgj6qE;-><init>(Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;I)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 131
+    .line 132
     iget v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->mSelectedIndex:I
 
     if-ne p2, v0, :cond_0
 
-    .line 132
+    .line 133
     iget-object p1, p1, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter$ViewHolder;->textView:Landroid/widget/TextView;
 
     const/4 p2, 0x1
@@ -163,7 +163,7 @@
 
     goto :goto_0
 
-    .line 134
+    .line 135
     :cond_0
     iget-object p1, p1, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter$ViewHolder;->textView:Landroid/widget/TextView;
 
@@ -178,7 +178,7 @@
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
 
-    .line 104
+    .line 105
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter$ViewHolder;
 
     move-result-object p1
@@ -189,12 +189,12 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter$ViewHolder;
     .locals 3
 
-    .line 119
+    .line 120
     new-instance p2, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter$ViewHolder;
 
     iget-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0067
+    const v1, 0x7f0d0069
 
     const/4 v2, 0x0
 
@@ -210,10 +210,10 @@
 .method setSelectedIndex(I)V
     .locals 1
 
-    .line 123
+    .line 124
     iput p1, p0, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->mSelectedIndex:I
 
-    .line 124
+    .line 125
     invoke-virtual {p0}, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->getItemCount()I
 
     move-result p1

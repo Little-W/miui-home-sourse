@@ -224,7 +224,7 @@
     return p1
 .end method
 
-.method public static synthetic lambda$cancel$192(Lcom/miui/home/recents/util/MultiAnimationEndDetector;)V
+.method public static synthetic lambda$cancel$0(Lcom/miui/home/recents/util/MultiAnimationEndDetector;)V
     .locals 3
 
     .line 137
@@ -455,9 +455,9 @@
     :cond_1
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
-    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$MultiAnimationEndDetector$PQacNjX_S_fkW7zxusSwST_LhrQ;
+    new-instance v1, Lcom/miui/home/recents/util/-$$Lambda$MultiAnimationEndDetector$zjwm2qOrIfZTrOeiyjm-exvVUrI;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/util/-$$Lambda$MultiAnimationEndDetector$PQacNjX_S_fkW7zxusSwST_LhrQ;-><init>(Lcom/miui/home/recents/util/MultiAnimationEndDetector;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/util/-$$Lambda$MultiAnimationEndDetector$zjwm2qOrIfZTrOeiyjm-exvVUrI;-><init>(Lcom/miui/home/recents/util/MultiAnimationEndDetector;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 

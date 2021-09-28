@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V
     .locals 1
 
-    .line 234
+    .line 238
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantOpenObserver;->this$0:Lcom/miui/home/launcher/LauncherCallbacksGlobal;
 
-    .line 235
+    .line 239
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -44,7 +44,7 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 240
+    .line 244
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantOpenObserver;->this$0:Lcom/miui/home/launcher/LauncherCallbacksGlobal;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->access$000(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
@@ -53,7 +53,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 241
+    .line 245
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantOpenObserver;->this$0:Lcom/miui/home/launcher/LauncherCallbacksGlobal;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->access$000(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
@@ -62,7 +62,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantOpenObserver;->this$0:Lcom/miui/home/launcher/LauncherCallbacksGlobal;
 
-    .line 242
+    .line 246
     invoke-static {v0}, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->access$100(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -73,10 +73,10 @@
 
     move-result-object v0
 
-    .line 241
+    .line 245
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->setClientOptions(Lcom/google/android/libraries/gsa/launcherclient/LauncherClient$ClientOptions;)V
 
-    .line 243
+    .line 247
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherCallbacksGlobal$AssistantOpenObserver;->this$0:Lcom/miui/home/launcher/LauncherCallbacksGlobal;
 
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherCallbacksGlobal;->access$300(Lcom/miui/home/launcher/LauncherCallbacksGlobal;)V

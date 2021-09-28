@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ShortcutIcon;Landroid/graphics/drawable/BitmapDrawable;)V
     .locals 0
 
-    .line 308
+    .line 310
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$5;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     iput-object p2, p0, Lcom/miui/home/launcher/ShortcutIcon$5;->val$bgDrawable:Landroid/graphics/drawable/BitmapDrawable;
@@ -51,7 +51,7 @@
 .method public accept(Landroid/graphics/drawable/Drawable;)V
     .locals 2
 
-    .line 311
+    .line 313
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon$5;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     iget-object v1, p0, Lcom/miui/home/launcher/ShortcutIcon$5;->val$bgDrawable:Landroid/graphics/drawable/BitmapDrawable;
@@ -68,7 +68,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 308
+    .line 310
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon$5;->accept(Landroid/graphics/drawable/Drawable;)V

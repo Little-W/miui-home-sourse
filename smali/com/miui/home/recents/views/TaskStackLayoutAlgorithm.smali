@@ -274,7 +274,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070201
+    const v1, 0x7f07030b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -441,6 +441,7 @@
 
     if-ne v0, v1, :cond_0
 
+    .line 186
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mVisualRotationSystemInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->right:I

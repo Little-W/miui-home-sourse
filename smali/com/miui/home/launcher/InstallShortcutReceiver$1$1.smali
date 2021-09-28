@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/InstallShortcutReceiver$1;ZLjava/lang/String;)V
     .locals 0
 
-    .line 235
+    .line 237
     iput-object p1, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1$1;->this$0:Lcom/miui/home/launcher/InstallShortcutReceiver$1;
 
     iput-boolean p2, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1$1;->val$needSaveHybridTrackStr:Z
@@ -51,7 +51,7 @@
 .method public run()V
     .locals 2
 
-    .line 238
+    .line 240
     invoke-virtual {p0}, Lcom/miui/home/launcher/InstallShortcutReceiver$1$1;->getResult()Ljava/lang/Object;
 
     move-result-object v0
@@ -60,12 +60,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 239
+    .line 241
     iget-boolean v1, p0, Lcom/miui/home/launcher/InstallShortcutReceiver$1$1;->val$needSaveHybridTrackStr:Z
 
     if-eqz v1, :cond_0
 
-    .line 240
+    .line 242
     iget-wide v0, v0, Lcom/miui/home/launcher/ItemInfo;->id:J
 
     invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;

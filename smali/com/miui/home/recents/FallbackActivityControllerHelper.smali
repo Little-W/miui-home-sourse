@@ -27,7 +27,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$prepareRecentsUI$521(J)V
+.method static synthetic lambda$prepareRecentsUI$0(J)V
     .locals 0
 
     return-void
@@ -158,7 +158,7 @@
     if-eqz p2, :cond_0
 
     .line 68
-    sget-object p1, Lcom/miui/home/recents/-$$Lambda$FallbackActivityControllerHelper$OXNCrnY11fvp5E5HXVvYejLobfY;->INSTANCE:Lcom/miui/home/recents/-$$Lambda$FallbackActivityControllerHelper$OXNCrnY11fvp5E5HXVvYejLobfY;
+    sget-object p1, Lcom/miui/home/recents/-$$Lambda$FallbackActivityControllerHelper$iMkKskMXqOyorFBNs8dKGEkl1Dw;->INSTANCE:Lcom/miui/home/recents/-$$Lambda$FallbackActivityControllerHelper$iMkKskMXqOyorFBNs8dKGEkl1Dw;
 
     return-object p1
 

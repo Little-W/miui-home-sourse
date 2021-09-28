@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Miuix.AppCompat.TextAppearance.WindowTitle.Subtitle" parent="@style/Miuix.AppCompat.TextAppearance.WindowTitle">
+        <item name="android:textSize">@dimen/miuix_appcompat_title_text_size</item>
+        <item name="android:textColor">?actionBarTitleColor</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+</resources>

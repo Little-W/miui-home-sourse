@@ -1,4 +1,4 @@
-.class final Lcom/miui/launcher/utils/PortableUtils$1;
+.class Lcom/miui/launcher/utils/PortableUtils$1;
 .super Ljava/lang/Object;
 .source "PortableUtils.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

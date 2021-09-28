@@ -640,7 +640,7 @@
     .line 190
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    const v0, 0x7f0a0168
+    const v0, 0x7f0a01a2
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->findViewById(I)Landroid/view/View;
 

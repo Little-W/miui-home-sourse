@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/DeviceConfig$2;
+.class Lcom/miui/home/launcher/DeviceConfig$2;
 .super Ljava/util/HashSet;
 .source "DeviceConfig.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -26,12 +26,12 @@
 .method constructor <init>()V
     .locals 1
 
-    .line 222
+    .line 213
     invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
 
     const-string v0, "tier1"
 
-    .line 223
+    .line 214
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DeviceConfig$2;->add(Ljava/lang/Object;)Z
 
     return-void

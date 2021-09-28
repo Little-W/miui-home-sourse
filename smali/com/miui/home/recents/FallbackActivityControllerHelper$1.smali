@@ -45,7 +45,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$createActivityController$522(Lcom/miui/home/recents/views/RecentsView;Lcom/miui/home/launcher/anim/AnimatorPlaybackController;Z)V
+.method static synthetic lambda$createActivityController$0(Lcom/miui/home/recents/views/RecentsView;Lcom/miui/home/launcher/anim/AnimatorPlaybackController;Z)V
     .locals 4
 
     .line 101
@@ -147,9 +147,9 @@
 
     iget-boolean p2, p0, Lcom/miui/home/recents/FallbackActivityControllerHelper$1;->val$fromState:Z
 
-    new-instance v0, Lcom/miui/home/recents/-$$Lambda$FallbackActivityControllerHelper$1$qzACjdt2rwlHEwItaQJcyr1Q4ww;
+    new-instance v0, Lcom/miui/home/recents/-$$Lambda$FallbackActivityControllerHelper$1$-9wyPFXA8LIffweXGNV5b9cLtO4;
 
-    invoke-direct {v0, p1, v1, p2}, Lcom/miui/home/recents/-$$Lambda$FallbackActivityControllerHelper$1$qzACjdt2rwlHEwItaQJcyr1Q4ww;-><init>(Lcom/miui/home/recents/views/RecentsView;Lcom/miui/home/launcher/anim/AnimatorPlaybackController;Z)V
+    invoke-direct {v0, p1, v1, p2}, Lcom/miui/home/recents/-$$Lambda$FallbackActivityControllerHelper$1$-9wyPFXA8LIffweXGNV5b9cLtO4;-><init>(Lcom/miui/home/recents/views/RecentsView;Lcom/miui/home/launcher/anim/AnimatorPlaybackController;Z)V
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->setEndAction(Ljava/lang/Runnable;)V
 

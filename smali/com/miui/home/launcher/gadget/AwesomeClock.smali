@@ -27,12 +27,12 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 44
+    .line 43
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/gadget/AdvancedGadget;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
-    .line 45
+    .line 44
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/gadget/AwesomeClock;->setWillNotDraw(Z)V
 
     return-void
@@ -41,7 +41,7 @@
 .method private updateCellInfo()V
     .locals 4
 
-    .line 233
+    .line 232
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -54,8 +54,19 @@
 
     if-eqz v0, :cond_0
 
+    .line 233
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
     .line 234
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object v0
 
@@ -70,32 +81,21 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
     .line 236
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
-
-    move-result-object v0
-
-    .line 237
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
-    .line 238
+    .line 237
     iget-wide v2, v1, Lcom/miui/home/launcher/gadget/GadgetInfo;->screenId:J
 
     invoke-virtual {v0, v2, v3}, Lcom/miui/home/launcher/Workspace;->getScreenIndexById(J)I
 
     move-result v0
 
-    .line 239
+    .line 238
     iget-object v2, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     const-string v3, "screenIndex"
@@ -106,7 +106,7 @@
 
     invoke-static {v2, v3, v0}, Lcom/miui/launcher/utils/MamlUtils;->putVariableString(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 240
+    .line 239
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     const-string v2, "cellX"
@@ -119,7 +119,7 @@
 
     invoke-static {v0, v2, v3}, Lcom/miui/launcher/utils/MamlUtils;->putVariableString(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 241
+    .line 240
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     const-string v2, "cellY"
@@ -141,7 +141,7 @@
 .method public cleanUp()V
     .locals 2
 
-    .line 247
+    .line 246
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mAwesomeView:Landroid/view/View;
@@ -150,7 +150,7 @@
 
     const/4 v0, 0x0
 
-    .line 248
+    .line 247
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->setClockButtonListener(Lcom/miui/launcher/views/MamlButtonActionListener;)Z
 
     return-void
@@ -159,12 +159,12 @@
 .method public getUpdateInterval()I
     .locals 1
 
-    .line 121
+    .line 120
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mAwesomeView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 122
+    .line 121
     iget v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mUpdateInterval:I
 
     goto :goto_0
@@ -187,7 +187,7 @@
 .method public initConfig(Ljava/lang/String;)V
     .locals 1
 
-    .line 80
+    .line 79
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1}, Lcom/miui/launcher/utils/MamlUtils;->createScreenContext(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;
@@ -208,14 +208,14 @@
 .method public onCreate()V
     .locals 3
 
-    .line 144
+    .line 143
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mElementContext:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 148
+    .line 147
     :cond_0
     invoke-static {v0}, Lcom/miui/launcher/utils/MamlUtils;->getManifestRoot(Ljava/lang/Object;)Lorg/w3c/dom/Element;
 
@@ -225,7 +225,7 @@
 
     const-string v1, "clock"
 
-    .line 149
+    .line 148
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getNodeName()Ljava/lang/String;
 
     move-result-object v2
@@ -242,7 +242,7 @@
     :try_start_0
     const-string v1, "update_interval"
 
-    .line 154
+    .line 153
     invoke-interface {v0, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -260,10 +260,10 @@
     :catch_0
     const v1, 0xea60
 
-    .line 156
+    .line 155
     iput v1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mUpdateInterval:I
 
-    .line 159
+    .line 158
     :goto_0
     :try_start_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -282,7 +282,7 @@
 
     iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 160
+    .line 159
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
@@ -301,7 +301,7 @@
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 163
+    .line 162
     :catch_1
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mElementContext:Ljava/lang/Object;
 
@@ -311,7 +311,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
-    .line 164
+    .line 163
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     const/high16 v1, 0x447a0000    # 1000.0f
@@ -324,21 +324,21 @@
 
     invoke-static {v0, v1}, Lcom/miui/launcher/utils/MamlUtils;->setDefaultFramerate(Ljava/lang/Object;F)V
 
-    .line 165
+    .line 164
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mMamlConfig:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/miui/launcher/utils/MamlUtils;->setConfig(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 166
+    .line 165
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/miui/launcher/utils/MamlUtils;->setScaleByDensity(Ljava/lang/Object;Z)V
 
-    .line 167
+    .line 166
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     invoke-static {v0}, Lcom/miui/launcher/utils/MamlUtils;->load(Ljava/lang/Object;)Z
@@ -349,7 +349,7 @@
 
     return-void
 
-    .line 171
+    .line 170
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mContext:Landroid/content/Context;
 
@@ -361,26 +361,26 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mAwesomeView:Landroid/view/View;
 
-    .line 172
+    .line 171
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mAwesomeView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/miui/launcher/utils/MamlUtils;->setFocusable(Landroid/view/View;Z)V
 
-    .line 173
+    .line 172
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     const/4 v1, -0x1
 
     invoke-direct {v0, v1, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 176
+    .line 175
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mAwesomeView:Landroid/view/View;
 
     invoke-virtual {p0, v1, v0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 179
+    .line 178
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mComponentCode:Ljava/lang/String;
 
     if-eqz v0, :cond_3
@@ -389,14 +389,14 @@
 
     if-eqz v1, :cond_3
 
-    .line 180
+    .line 179
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     const-string v2, "__config_code"
 
     invoke-static {v1, v2, v0}, Lcom/miui/launcher/utils/MamlUtils;->putVariableString(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 181
+    .line 180
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     const-string v1, "__config_path"
@@ -405,7 +405,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/miui/launcher/utils/MamlUtils;->putVariableString(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 183
+    .line 182
     :cond_3
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
@@ -413,13 +413,13 @@
 
     const-string v2, "ro.miui.region"
 
-    invoke-static {v2}, Lmiui/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/miui/launcher/utils/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-static {v0, v1, v2}, Lcom/miui/launcher/utils/MamlUtils;->putVariableString(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 184
+    .line 183
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->updateColor()V
 
     return-void
@@ -432,7 +432,7 @@
 .method public onEditDisable()V
     .locals 5
 
-    .line 214
+    .line 213
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mElementContext:Ljava/lang/Object;
@@ -449,7 +449,7 @@
 .method public onEditNormal()V
     .locals 5
 
-    .line 219
+    .line 218
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mElementContext:Ljava/lang/Object;
@@ -466,15 +466,15 @@
 .method public onPause()V
     .locals 3
 
-    .line 50
+    .line 49
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 51
+    .line 50
     monitor-enter v0
 
-    .line 52
+    .line 51
     :try_start_0
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
@@ -482,7 +482,7 @@
 
     invoke-static {v1, v2}, Lcom/miui/launcher/utils/MamlUtils;->onCommand(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 53
+    .line 52
     monitor-exit v0
 
     goto :goto_0
@@ -496,7 +496,7 @@
 
     throw v1
 
-    .line 55
+    .line 54
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mAwesomeView:Landroid/view/View;
@@ -509,15 +509,15 @@
 .method public onResume()V
     .locals 3
 
-    .line 60
+    .line 59
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 61
+    .line 60
     monitor-enter v0
 
-    .line 62
+    .line 61
     :try_start_0
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
@@ -525,12 +525,12 @@
 
     invoke-static {v1, v2}, Lcom/miui/launcher/utils/MamlUtils;->onCommand(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 63
+    .line 62
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 64
+    .line 63
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     invoke-static {v0}, Lcom/miui/launcher/utils/MamlUtils;->loadConfig(Ljava/lang/Object;)V
@@ -540,7 +540,7 @@
     :catchall_0
     move-exception v1
 
-    .line 63
+    .line 62
     :try_start_1
     monitor-exit v0
     :try_end_1
@@ -548,7 +548,7 @@
 
     throw v1
 
-    .line 66
+    .line 65
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mAwesomeView:Landroid/view/View;
@@ -561,10 +561,10 @@
 .method protected onSizeChanged(IIII)V
     .locals 4
 
-    .line 85
+    .line 84
     invoke-super {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/gadget/AdvancedGadget;->onSizeChanged(IIII)V
 
-    .line 87
+    .line 86
     iget-object p3, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     const-string p4, "pivotX"
@@ -573,7 +573,7 @@
 
     move-result-object p3
 
-    .line 88
+    .line 87
     iget-object p4, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     const-string v0, "pivotY"
@@ -584,7 +584,7 @@
 
     const/4 v0, 0x0
 
-    .line 92
+    .line 91
     :try_start_0
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -603,7 +603,7 @@
     :cond_0
     move p3, v0
 
-    .line 93
+    .line 92
     :goto_0
     :try_start_1
     invoke-static {p4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -641,7 +641,7 @@
 
     move p4, v0
 
-    .line 95
+    .line 94
     :goto_1
     invoke-virtual {p3}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
@@ -649,7 +649,7 @@
 
     move p4, v0
 
-    .line 97
+    .line 96
     :goto_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->getParent()Landroid/view/ViewParent;
 
@@ -665,10 +665,10 @@
 
     mul-float/2addr p1, p3
 
-    .line 99
+    .line 98
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/gadget/AwesomeClock;->setPivotX(F)V
 
-    .line 100
+    .line 99
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result p1
@@ -688,10 +688,10 @@
 
     mul-float/2addr p1, p4
 
-    .line 103
+    .line 102
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/gadget/AwesomeClock;->setPivotY(F)V
 
-    .line 104
+    .line 103
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result p1
@@ -711,7 +711,7 @@
 
     const/4 v0, 0x0
 
-    .line 204
+    .line 203
     invoke-static {v0}, Lcom/miui/launcher/utils/MamlUtils;->setRenderThreadPause(Z)V
 
     return-void
@@ -722,7 +722,7 @@
 
     const/4 v0, 0x1
 
-    .line 209
+    .line 208
     invoke-static {v0}, Lcom/miui/launcher/utils/MamlUtils;->setRenderThreadPause(Z)V
 
     return-void
@@ -731,7 +731,7 @@
 .method public onWallpaperColorChanged()V
     .locals 0
 
-    .line 71
+    .line 70
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->updateColor()V
 
     return-void
@@ -740,7 +740,7 @@
 .method public setClockButtonListener(Lcom/miui/launcher/views/MamlButtonActionListener;)Z
     .locals 2
 
-    .line 188
+    .line 187
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     if-nez v0, :cond_0
@@ -752,7 +752,7 @@
     :cond_0
     const-string v1, "clock_button"
 
-    .line 191
+    .line 190
     invoke-static {v0, v1, p1}, Lcom/miui/launcher/utils/MamlUtils;->addListenerOnElement(Ljava/lang/Object;Ljava/lang/String;Lcom/miui/launcher/views/MamlButtonActionListener;)Z
 
     move-result p1
@@ -763,10 +763,10 @@
 .method public setConfigParas(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 114
+    .line 113
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mComponentCode:Ljava/lang/String;
 
-    .line 115
+    .line 114
     iput-object p2, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mMamlPath:Ljava/lang/String;
 
     return-void
@@ -775,7 +775,7 @@
 .method public setMamlConfigPath(Ljava/lang/String;)V
     .locals 0
 
-    .line 110
+    .line 109
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mMamlConfig:Ljava/lang/String;
 
     return-void
@@ -784,7 +784,7 @@
 .method public setOnExternCommandListener(Lcom/miui/launcher/views/MamlOnExternCommandListener;)Z
     .locals 1
 
-    .line 195
+    .line 194
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     if-nez v0, :cond_0
@@ -793,7 +793,7 @@
 
     return p1
 
-    .line 198
+    .line 197
     :cond_0
     invoke-static {v0, p1}, Lcom/miui/launcher/utils/MamlUtils;->setOnExternCommandListener(Ljava/lang/Object;Lcom/miui/launcher/views/MamlOnExternCommandListener;)V
 
@@ -805,7 +805,7 @@
 .method public updateAppearance(Ljava/util/Calendar;)V
     .locals 0
 
-    .line 135
+    .line 134
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mElementContext:Ljava/lang/Object;
 
     if-eqz p1, :cond_1
@@ -820,7 +820,7 @@
 
     goto :goto_0
 
-    .line 139
+    .line 138
     :cond_0
     invoke-static {p1}, Lcom/miui/launcher/utils/MamlUtils;->requestUpdate(Ljava/lang/Object;)V
 
@@ -834,14 +834,14 @@
 .method public updateColor()V
     .locals 2
 
-    .line 228
+    .line 227
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mElementContext:Ljava/lang/Object;
 
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/WallpaperUtils;->updateGadgetColorByWallpaper(Lcom/miui/home/launcher/gadget/Gadget;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 229
+    .line 228
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->updateCellInfo()V
 
     return-void

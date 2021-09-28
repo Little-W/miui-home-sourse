@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onFinishInflate$195(Lcom/miui/home/launcher/view/LauncherActionBar;Landroid/view/View;)V
+.method public static synthetic lambda$onFinishInflate$0(Lcom/miui/home/launcher/view/LauncherActionBar;Landroid/view/View;)V
     .locals 0
 
     .line 30
@@ -62,13 +62,13 @@
     .line 29
     iget-object v0, p0, Lcom/miui/home/launcher/view/LauncherActionBar;->mBackImageView:Landroid/widget/ImageView;
 
-    new-instance v1, Lcom/miui/home/launcher/view/-$$Lambda$LauncherActionBar$PLVPSLmcVubGCdO3SDpJ7rh62hg;
+    new-instance v1, Lcom/miui/home/launcher/view/-$$Lambda$LauncherActionBar$dLO8kcmgJ5lOkBQeD39OGf0zfs0;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/view/-$$Lambda$LauncherActionBar$PLVPSLmcVubGCdO3SDpJ7rh62hg;-><init>(Lcom/miui/home/launcher/view/LauncherActionBar;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/view/-$$Lambda$LauncherActionBar$dLO8kcmgJ5lOkBQeD39OGf0zfs0;-><init>(Lcom/miui/home/launcher/view/LauncherActionBar;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0030
+    const v0, 0x7f0a0036
 
     .line 32
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/view/LauncherActionBar;->findViewById(I)Landroid/view/View;
@@ -113,7 +113,7 @@
     .line 44
     iget-object v0, p0, Lcom/miui/home/launcher/view/LauncherActionBar;->mBackImageView:Landroid/widget/ImageView;
 
-    const v1, 0x7f080081
+    const v1, 0x7f0800aa
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -138,7 +138,7 @@
     .line 47
     iget-object v0, p0, Lcom/miui/home/launcher/view/LauncherActionBar;->mBackImageView:Landroid/widget/ImageView;
 
-    const v1, 0x7f080080
+    const v1, 0x7f0800a9
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

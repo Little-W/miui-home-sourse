@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/recents/TaskViewUtils$1;
+.class Lcom/miui/home/recents/TaskViewUtils$1;
 .super Landroid/animation/AnimatorListenerAdapter;
 .source "TaskViewUtils.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -38,7 +38,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$onAnimationEnd$518(Lcom/miui/home/recents/views/TaskView;)V
+.method static synthetic lambda$onAnimationEnd$0(Lcom/miui/home/recents/views/TaskView;)V
     .locals 1
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -69,9 +69,9 @@
 
     iget-object v0, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$taskView:Lcom/miui/home/recents/views/TaskView;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$1$iRBdgPYqcW1r8bXk8rc9E3FIHjY;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$1$nRsKTMBDeLDFN1AMfmALFf31QPw;
 
-    invoke-direct {v1, v0}, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$1$iRBdgPYqcW1r8bXk8rc9E3FIHjY;-><init>(Lcom/miui/home/recents/views/TaskView;)V
+    invoke-direct {v1, v0}, Lcom/miui/home/recents/-$$Lambda$TaskViewUtils$1$nRsKTMBDeLDFN1AMfmALFf31QPw;-><init>(Lcom/miui/home/recents/views/TaskView;)V
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 

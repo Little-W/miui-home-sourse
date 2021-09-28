@@ -161,7 +161,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060247
+    const v1, 0x7f060389
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -283,6 +283,7 @@
 
     if-eqz p2, :cond_0
 
+    .line 90
     iget p2, p0, Lcom/miui/home/launcher/Background;->mSpreadCircleBlackColor:I
 
     goto :goto_0

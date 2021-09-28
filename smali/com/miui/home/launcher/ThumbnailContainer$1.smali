@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ThumbnailContainer;Lcom/miui/home/launcher/ItemInfo;)V
     .locals 0
 
-    .line 208
+    .line 207
     iput-object p1, p0, Lcom/miui/home/launcher/ThumbnailContainer$1;->this$0:Lcom/miui/home/launcher/ThumbnailContainer;
 
     iput-object p2, p0, Lcom/miui/home/launcher/ThumbnailContainer$1;->val$itemInfo:Lcom/miui/home/launcher/ItemInfo;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 1
 
-    .line 210
+    .line 209
     iget-object v0, p0, Lcom/miui/home/launcher/ThumbnailContainer$1;->val$itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ItemInfo;->finishPending()V

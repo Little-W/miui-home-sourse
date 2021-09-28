@@ -147,12 +147,12 @@
     return-object p1
 .end method
 
-.method public isAutoFillEmptyEnable(Landroid/content/Context;)Z
-    .locals 0
+.method public isAutoFillEmptyEnable()Z
+    .locals 1
 
-    const/4 p1, 0x1
+    const/4 v0, 0x1
 
-    return p1
+    return v0
 .end method
 
 .method public isHomeSupportSearchBar(Landroid/content/Context;)Z
@@ -216,12 +216,12 @@
     return p1
 .end method
 
-.method public isScreenCellsLocked(Landroid/content/Context;)Z
-    .locals 0
+.method public isScreenCellsLocked()Z
+    .locals 1
 
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    return p1
+    return v0
 .end method
 
 .method public supportAssistant()Z

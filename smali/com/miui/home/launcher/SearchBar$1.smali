@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/SearchBar$1;
+.class Lcom/miui/home/launcher/SearchBar$1;
 .super Landroid/util/Property;
 .source "SearchBar.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -27,7 +27,7 @@
 .method constructor <init>(Ljava/lang/Class;Ljava/lang/String;)V
     .locals 0
 
-    .line 68
+    .line 82
     invoke-direct {p0, p1, p2}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     return-void
@@ -38,7 +38,7 @@
 .method public get(Lcom/miui/home/launcher/SearchBar;)Ljava/lang/Integer;
     .locals 0
 
-    .line 77
+    .line 91
     invoke-virtual {p1}, Lcom/miui/home/launcher/SearchBar;->getSearchBarWidth()I
 
     move-result p1
@@ -53,7 +53,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 68
+    .line 82
     check-cast p1, Lcom/miui/home/launcher/SearchBar;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/SearchBar$1;->get(Lcom/miui/home/launcher/SearchBar;)Ljava/lang/Integer;
@@ -66,14 +66,14 @@
 .method public set(Lcom/miui/home/launcher/SearchBar;Ljava/lang/Integer;)V
     .locals 0
 
-    .line 71
+    .line 85
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result p2
 
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/SearchBar;->setSearchBarWidth(I)V
 
-    .line 72
+    .line 86
     invoke-virtual {p1}, Lcom/miui/home/launcher/SearchBar;->requestLayout()V
 
     return-void
@@ -82,7 +82,7 @@
 .method public bridge synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 68
+    .line 82
     check-cast p1, Lcom/miui/home/launcher/SearchBar;
 
     check-cast p2, Ljava/lang/Integer;

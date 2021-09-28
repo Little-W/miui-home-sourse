@@ -27,7 +27,7 @@
 
     const-string v0, "content://com.miui.home.launcher.settings/favorites"
 
-    .line 161
+    .line 162
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -40,7 +40,7 @@
 .method public static getContentUri(J)Landroid/net/Uri;
     .locals 2
 
-    .line 172
+    .line 173
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -65,7 +65,7 @@
 .method public static getJoinContentUri(Ljava/lang/String;)Landroid/net/Uri;
     .locals 2
 
-    .line 176
+    .line 177
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

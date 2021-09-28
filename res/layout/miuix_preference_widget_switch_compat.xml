@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<miui.widget.SlidingButton
+<miuix.slidingwidget.widget.SlidingSwitchCompat
     android:layout_gravity="center"
     android:id="@id/switchWidget"
     android:focusable="false"

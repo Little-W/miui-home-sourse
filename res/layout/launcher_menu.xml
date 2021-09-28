@@ -50,7 +50,7 @@
         <com.miui.home.launcher.LauncherMenuItemTitle
             android:text="@string/menu_auto_fill_of_uninstall"
             style="@style/menu_item_title" />
-        <miui.widget.SlidingButton
+        <miuix.slidingwidget.widget.SlidingButton
             android:layout_gravity="center_vertical"
             android:id="@id/auto_fill_sliding_button"
             android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
         <com.miui.home.launcher.LauncherMenuItemTitle
             android:text="@string/menu_lock"
             style="@style/menu_item_title" />
-        <miui.widget.SlidingButton
+        <miuix.slidingwidget.widget.SlidingButton
             android:layout_gravity="center_vertical"
             android:id="@id/lock_sliding_button"
             android:layout_width="wrap_content"

@@ -26,7 +26,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$scheduleCallbackTask$327(Lcom/miui/home/launcher/model/BaseModelUpdateTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Lcom/miui/home/launcher/LauncherModel$CallbackTask;)V
+.method public static synthetic lambda$scheduleCallbackTask$0(Lcom/miui/home/launcher/model/BaseModelUpdateTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Lcom/miui/home/launcher/LauncherModel$CallbackTask;)V
     .locals 1
 
     .line 77
@@ -307,9 +307,9 @@
     .line 76
     iget-object v1, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask;->mUiExecutor:Ljava/util/concurrent/Executor;
 
-    new-instance v2, Lcom/miui/home/launcher/model/-$$Lambda$BaseModelUpdateTask$d8Q2JZ-laGAtayKdPqpXesff8-Q;
+    new-instance v2, Lcom/miui/home/launcher/model/-$$Lambda$BaseModelUpdateTask$oMhNt2u8rUe2Am9wiFk92E4FOzc;
 
-    invoke-direct {v2, p0, v0, p1}, Lcom/miui/home/launcher/model/-$$Lambda$BaseModelUpdateTask$d8Q2JZ-laGAtayKdPqpXesff8-Q;-><init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Lcom/miui/home/launcher/LauncherModel$CallbackTask;)V
+    invoke-direct {v2, p0, v0, p1}, Lcom/miui/home/launcher/model/-$$Lambda$BaseModelUpdateTask$oMhNt2u8rUe2Am9wiFk92E4FOzc;-><init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Lcom/miui/home/launcher/LauncherModel$CallbackTask;)V
 
     invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

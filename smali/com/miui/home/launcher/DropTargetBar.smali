@@ -148,7 +148,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f07008a
+    const p2, 0x7f070090
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -396,7 +396,7 @@
 .method private searchDropTarget()V
     .locals 1
 
-    const v0, 0x7f0a01ef
+    const v0, 0x7f0a023e
 
     .line 89
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DropTargetBar;->findViewById(I)Landroid/view/View;
@@ -467,9 +467,9 @@
 
     if-eqz v0, :cond_0
 
+    .line 220
     iget-object v0, p0, Lcom/miui/home/launcher/DropTargetBar;->mUninstallDropTarget:Lcom/miui/home/launcher/UninstallDropTarget;
 
-    .line 220
     invoke-virtual {v0}, Lcom/miui/home/launcher/UninstallDropTarget;->isContainUninstallOrDeleteItem()Z
 
     move-result v0
@@ -502,9 +502,9 @@
 
     if-eqz v0, :cond_0
 
+    .line 190
     iget-object v0, p0, Lcom/miui/home/launcher/DropTargetBar;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 190
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDragController()Lcom/miui/home/launcher/DragController;
 
     move-result-object v0
@@ -715,48 +715,38 @@
         }
     .end annotation
 
-    const/4 v0, 0x6
+    const/4 v0, 0x5
 
     .line 273
     new-array v0, v0, [Ljava/lang/Object;
 
-    iget-object v1, p0, Lcom/miui/home/launcher/DropTargetBar;->mUninstallDialogWrapper:Lcom/miui/home/launcher/UninstallDialogWrapper;
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/UninstallDialogWrapper;->getUninstallDialog()Lcom/miui/home/launcher/UninstallDialog;
-
-    move-result-object v1
+    iget-object v1, p0, Lcom/miui/home/launcher/DropTargetBar;->mShortcutIconCheckChangedHandler:Lcom/miui/home/launcher/DropTargetBar$ShortcutIconCheckChangedHandler;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/miui/home/launcher/DropTargetBar;->mShortcutIconCheckChangedHandler:Lcom/miui/home/launcher/DropTargetBar$ShortcutIconCheckChangedHandler;
+    iget-object v1, p0, Lcom/miui/home/launcher/DropTargetBar;->mEditStateChangedMessageHandler:Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;
 
     const/4 v2, 0x1
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/miui/home/launcher/DropTargetBar;->mEditStateChangedMessageHandler:Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;
+    iget-object v1, p0, Lcom/miui/home/launcher/DropTargetBar;->mWidgetsPreviewHandler:Lcom/miui/home/launcher/DropTargetBar$WidgetsPreviewHandler;
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/miui/home/launcher/DropTargetBar;->mWidgetsPreviewHandler:Lcom/miui/home/launcher/DropTargetBar$WidgetsPreviewHandler;
+    iget-object v1, p0, Lcom/miui/home/launcher/DropTargetBar;->mDefaultScreenPreviewVisibilityHandler:Lcom/miui/home/launcher/DropTargetBar$DefaultScreenPreviewVisibilityHandler;
 
     const/4 v2, 0x3
 
     aput-object v1, v0, v2
 
-    iget-object v1, p0, Lcom/miui/home/launcher/DropTargetBar;->mDefaultScreenPreviewVisibilityHandler:Lcom/miui/home/launcher/DropTargetBar$DefaultScreenPreviewVisibilityHandler;
-
-    const/4 v2, 0x4
-
-    aput-object v1, v0, v2
-
     iget-object v1, p0, Lcom/miui/home/launcher/DropTargetBar;->mLauncherBottomMenuHandler:Lcom/miui/home/launcher/DropTargetBar$LauncherBottomMenuHandler;
 
-    const/4 v2, 0x5
+    const/4 v2, 0x4
 
     aput-object v1, v0, v2
 
@@ -967,7 +957,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    const v0, 0x7f0a01c4
+    const v0, 0x7f0a020f
 
     .line 77
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DropTargetBar;->findViewById(I)Landroid/view/View;

@@ -120,9 +120,9 @@
     iput-boolean v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mNeedHideBecauseReturnEmptyData:Z
 
     .line 258
-    new-instance v0, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$2DCJvvBPiVaLfslE-vA7gmucqNY;
+    new-instance v0, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$vuWNS_nQP5-sCgVLKYFV12ab2tQ;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$2DCJvvBPiVaLfslE-vA7gmucqNY;-><init>(Lcom/miui/home/launcher/commercial/recommend/RecommendController;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$vuWNS_nQP5-sCgVLKYFV12ab2tQ;-><init>(Lcom/miui/home/launcher/commercial/recommend/RecommendController;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mRequestCallback:Ljava/util/function/Consumer;
 
@@ -223,20 +223,13 @@
     .line 464
     iput-wide p1, v0, Lcom/miui/home/launcher/CommercialRemoteShortcutInfo;->container:J
 
-    .line 465
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenOrientationLandscape()Z
-
-    move-result p0
-
-    iput-boolean p0, v0, Lcom/miui/home/launcher/CommercialRemoteShortcutInfo;->isLandscapePos:Z
-
     return-object v0
 .end method
 
 .method public static clearLoadingContents()V
     .locals 1
 
-    .line 481
+    .line 480
     sget-object v0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->sLoadingContents:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
@@ -267,6 +260,7 @@
 
     goto :goto_0
 
+    .line 76
     :cond_0
     new-instance v0, Lcom/miui/home/launcher/commercial/recommend/cn/CNRecommendController;
 
@@ -287,7 +281,7 @@
         }
     .end annotation
 
-    .line 485
+    .line 484
     sget-object v0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->sLoadingContents:Ljava/util/ArrayList;
 
     return-object v0
@@ -296,7 +290,7 @@
 .method private getRecommendSwitchSharedPreferencsKey()Ljava/lang/String;
     .locals 3
 
-    .line 550
+    .line 549
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -351,10 +345,10 @@
 .method public static initLoadingAnimationContents()V
     .locals 3
 
-    .line 470
+    .line 469
     invoke-static {}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->clearLoadingContents()V
 
-    .line 471
+    .line 470
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -368,14 +362,14 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 474
+    .line 473
     new-instance v1, Lcom/miui/home/launcher/CommercialRemoteShortcutInfo;
 
     const/16 v2, 0xd
 
     invoke-direct {v1, v2}, Lcom/miui/home/launcher/CommercialRemoteShortcutInfo;-><init>(I)V
 
-    .line 475
+    .line 474
     sget-object v2, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->sLoadingContents:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -391,7 +385,7 @@
 .method private isAfterRecommendDisableInterval()Z
     .locals 6
 
-    .line 558
+    .line 557
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -402,7 +396,7 @@
 
     return v1
 
-    .line 562
+    .line 561
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -435,7 +429,7 @@
     return v0
 .end method
 
-.method public static synthetic lambda$new$203(Lcom/miui/home/launcher/commercial/recommend/RecommendController;Ljava/util/List;)V
+.method public static synthetic lambda$new$1(Lcom/miui/home/launcher/commercial/recommend/RecommendController;Ljava/util/List;)V
     .locals 5
 
     .line 259
@@ -509,7 +503,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onRequestedDataEmpty$204(Lcom/miui/home/launcher/commercial/recommend/RecommendController;)V
+.method public static synthetic lambda$onRequestedDataEmpty$2(Lcom/miui/home/launcher/commercial/recommend/RecommendController;)V
     .locals 0
 
     .line 275
@@ -518,7 +512,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$preloadRecommendAppsIcon$202(Lcom/miui/home/launcher/CommercialRemoteShortcutInfo;Landroid/graphics/drawable/Drawable;)V
+.method static synthetic lambda$preloadRecommendAppsIcon$0(Lcom/miui/home/launcher/CommercialRemoteShortcutInfo;Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
     .line 242
@@ -562,9 +556,9 @@
     .line 275
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mFolderRecommendAnimStateMessageHandler:Lcom/miui/home/launcher/commercial/recommend/RecommendController$FolderRecommendAnimStateMessageHandler;
 
-    new-instance v1, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$_gsW1GfWAW9kWa5Zeldu0pggp0M;
+    new-instance v1, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$5812qUQ23-Cmx195-GaO_L9Fc3U;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$_gsW1GfWAW9kWa5Zeldu0pggp0M;-><init>(Lcom/miui/home/launcher/commercial/recommend/RecommendController;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$5812qUQ23-Cmx195-GaO_L9Fc3U;-><init>(Lcom/miui/home/launcher/commercial/recommend/RecommendController;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/commercial/recommend/RecommendController$FolderRecommendAnimStateMessageHandler;->runAfterRecommendScreenShowAnim(Ljava/lang/Runnable;)V
 
@@ -823,7 +817,7 @@
         }
     .end annotation
 
-    .line 499
+    .line 498
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mCommercialRecommendAppsContents:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/miui/home/launcher/commercial/recommend/RecommendController$3;
@@ -832,7 +826,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/commercial/CommercialCommons;->filterByLauncherApps(Ljava/util/List;Lcom/miui/home/launcher/commercial/CommercialCommons$Extractor;)V
 
-    .line 505
+    .line 504
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mCommercialRecommendAppsContents:Ljava/util/ArrayList;
 
     return-object v0
@@ -849,7 +843,7 @@
         }
     .end annotation
 
-    .line 509
+    .line 508
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mRecommendInfoList:Ljava/util/List;
 
     new-instance v1, Lcom/miui/home/launcher/commercial/recommend/RecommendController$4;
@@ -858,7 +852,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/commercial/CommercialCommons;->filterByLauncherApps(Ljava/util/List;Lcom/miui/home/launcher/commercial/CommercialCommons$Extractor;)V
 
-    .line 515
+    .line 514
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mRecommendInfoList:Ljava/util/List;
 
     return-object v0
@@ -867,7 +861,7 @@
 .method protected getFirstRecommendInfo()Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;
     .locals 2
 
-    .line 519
+    .line 518
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mRecommendInfoList:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -998,7 +992,7 @@
 .method public hasUserChangedRecommendSwitchState()Z
     .locals 2
 
-    .line 554
+    .line 553
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mContext:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->getRecommendSwitchSharedPreferencsKey()Ljava/lang/String;
@@ -1057,7 +1051,7 @@
 .method public isGuessYouLikeAdsOn()Z
     .locals 3
 
-    .line 536
+    .line 535
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->hasUserChangedRecommendSwitchState()Z
 
     move-result v0
@@ -1066,7 +1060,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 537
+    .line 536
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mContext:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->getRecommendSwitchSharedPreferencsKey()Ljava/lang/String;
@@ -1079,7 +1073,7 @@
 
     return v0
 
-    .line 539
+    .line 538
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/commercial/cloudSettings/CloudSettingsController;->getInstance()Lcom/miui/home/launcher/commercial/cloudSettings/CloudSettingsController;
 
@@ -1152,14 +1146,14 @@
 .method public isRecommendSwitchOn()Z
     .locals 3
 
-    .line 523
+    .line 522
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->hasUserChangedRecommendSwitchState()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 524
+    .line 523
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mContext:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->getRecommendSwitchSharedPreferencsKey()Ljava/lang/String;
@@ -1174,7 +1168,7 @@
 
     return v0
 
-    .line 526
+    .line 525
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->isRecommendSwitchOnAsDefault()Z
 
@@ -1186,7 +1180,7 @@
 .method public isRecommendSwitchOnAsDefault()Z
     .locals 2
 
-    .line 531
+    .line 530
     invoke-static {}, Lcom/miui/home/launcher/commercial/cloudSettings/CloudSettingsController;->getInstance()Lcom/miui/home/launcher/commercial/cloudSettings/CloudSettingsController;
 
     move-result-object v0
@@ -1199,7 +1193,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 532
+    .line 531
     invoke-direct {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->isAfterRecommendDisableInterval()Z
 
     move-result v0
@@ -1440,7 +1434,7 @@
 
     const/4 p1, 0x3
 
-    .line 545
+    .line 544
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->requestRecommendImmediately(I)V
 
     :cond_0
@@ -1513,9 +1507,9 @@
     check-cast v1, Lcom/miui/home/launcher/CommercialRemoteShortcutInfo;
 
     .line 241
-    new-instance v2, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$Y2sPMyWPFb2QRrIpOc4MMYOTEn4;
+    new-instance v2, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$_029LyF0OPndow8OnQbvVeZ42OY;
 
-    invoke-direct {v2, v1}, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$Y2sPMyWPFb2QRrIpOc4MMYOTEn4;-><init>(Lcom/miui/home/launcher/CommercialRemoteShortcutInfo;)V
+    invoke-direct {v2, v1}, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$_029LyF0OPndow8OnQbvVeZ42OY;-><init>(Lcom/miui/home/launcher/CommercialRemoteShortcutInfo;)V
 
     invoke-virtual {p0, v1, v2}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->loadIcon(Lcom/miui/home/launcher/RemoteShortcutInfo;Ljava/util/function/Consumer;)V
 
@@ -1577,7 +1571,7 @@
 .method public removeRecommendSwitchSharedPreference()V
     .locals 2
 
-    .line 574
+    .line 573
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mContext:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->getRecommendSwitchSharedPreferencsKey()Ljava/lang/String;
@@ -1769,12 +1763,10 @@
     .line 372
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/LauncherApplication;
-
-    move-result-object v0
+    invoke-static {v0}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/Application;
 
     .line 373
-    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher()Lcom/miui/home/launcher/Launcher;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
@@ -1817,22 +1809,22 @@
 .method public setRecommendSwitchOn(Z)V
     .locals 2
 
-    .line 566
+    .line 565
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->isRecommendSwitchOn()Z
 
     move-result v0
 
     if-eq p1, v0, :cond_0
 
-    .line 567
+    .line 566
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->onSwitchChangedByUser(Z)V
 
-    .line 568
+    .line 567
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mFolderInfo:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderInfo;->onRecommendAppsSwitchStateChanged(Z)V
 
-    .line 570
+    .line 569
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mContext:Landroid/content/Context;
 
@@ -1848,15 +1840,13 @@
 .method public showLoadingView()V
     .locals 2
 
-    .line 489
+    .line 488
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {v0}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/Application;
 
-    move-result-object v0
-
-    .line 490
-    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher()Lcom/miui/home/launcher/Launcher;
+    .line 489
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
@@ -1864,7 +1854,7 @@
 
     return-void
 
-    .line 494
+    .line 493
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;
 
@@ -1880,11 +1870,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f100213
+    const v1, 0x7f1002f1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 495
+    .line 494
     invoke-virtual {p0}, Lcom/miui/home/launcher/commercial/recommend/RecommendController;->getAdapter()Lcom/miui/home/launcher/commercial/recommend/RecommendShortcutsAdapter;
 
     move-result-object v0

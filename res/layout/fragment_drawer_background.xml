@@ -39,5 +39,5 @@
         android:layout_height="wrap_content"
         android:layout_margin="28.0dip"
         android:text="@string/apply_text"
-        style="@269287479" />
+        style="@style/Widget.Button.Warning" />
 </LinearLayout>

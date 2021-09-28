@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/recents/views/TaskStackViewScroller$1;
+.class Lcom/miui/home/recents/views/TaskStackViewScroller$1;
 .super Landroid/util/FloatProperty;
 .source "TaskStackViewScroller.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

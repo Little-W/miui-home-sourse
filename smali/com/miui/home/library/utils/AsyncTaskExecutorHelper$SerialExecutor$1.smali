@@ -64,5 +64,6 @@
 
     invoke-virtual {v1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->scheduleNext()V
 
+    .line 198
     throw v0
 .end method

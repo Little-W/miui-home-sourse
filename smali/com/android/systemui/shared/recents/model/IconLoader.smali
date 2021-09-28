@@ -8,7 +8,7 @@
 
 .field private static final TAG:Ljava/lang/String; = "IconLoader"
 
-.field private static sGetIconMethod:Lmiui/reflect/Method;
+.field private static sGetIconMethod:Ljava/lang/reflect/Method;
 
 
 # instance fields
@@ -44,7 +44,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 54
+    .line 55
     invoke-static {}, Lcom/android/systemui/shared/recents/model/IconLoader;->isMiuiLiteVersion()Z
 
     move-result v0
@@ -70,26 +70,26 @@
         }
     .end annotation
 
-    .line 42
+    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
+    .line 44
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mContext:Landroid/content/Context;
 
-    .line 44
+    .line 45
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 45
+    .line 46
     iput-object p2, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mIconCache:Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;
 
-    .line 46
+    .line 47
     iput-object p3, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mActivityInfoCache:Landroid/util/LruCache;
 
-    .line 49
+    .line 50
     sget-object p2, Landroid/graphics/Bitmap$Config;->ALPHA_8:Landroid/graphics/Bitmap$Config;
 
     const/4 p3, 0x1
@@ -100,10 +100,10 @@
 
     const/4 p3, 0x0
 
-    .line 50
+    .line 51
     invoke-virtual {p2, p3}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
-    .line 51
+    .line 52
     new-instance p3, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -135,7 +135,7 @@
 .end method
 
 .method private getCustomizedIcon(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ILandroid/content/pm/ApplicationInfo;Z)Landroid/graphics/drawable/Drawable;
-    .locals 14
+    .locals 15
 
     move-object/from16 v0, p2
 
@@ -143,9 +143,9 @@
 
     const/4 v2, 0x0
 
-    .line 71
+    .line 72
     :try_start_0
-    sget-object v3, Lcom/android/systemui/shared/recents/model/IconLoader;->sGetIconMethod:Lmiui/reflect/Method;
+    sget-object v3, Lcom/android/systemui/shared/recents/model/IconLoader;->sGetIconMethod:Ljava/lang/reflect/Method;
 
     const/4 v4, 0x5
 
@@ -163,67 +163,91 @@
 
     if-nez v3, :cond_0
 
-    .line 72
+    .line 73
     const-class v3, Lmiui/content/res/IconCustomizer;
 
     const-string v11, "getIcon"
 
-    new-array v12, v10, [Ljava/lang/Class;
+    const-class v12, Landroid/graphics/drawable/Drawable;
 
-    const-class v13, Landroid/content/Context;
+    new-array v13, v10, [Ljava/lang/Class;
 
-    aput-object v13, v12, v9
+    const-class v14, Landroid/content/Context;
 
-    const-class v13, Ljava/lang/String;
+    aput-object v14, v13, v9
 
-    aput-object v13, v12, v8
+    const-class v14, Ljava/lang/String;
 
-    const-class v13, Ljava/lang/String;
+    aput-object v14, v13, v8
 
-    aput-object v13, v12, v7
+    const-class v14, Ljava/lang/String;
 
-    sget-object v13, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    aput-object v14, v13, v7
 
-    aput-object v13, v12, v6
+    sget-object v14, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    const-class v13, Landroid/content/pm/ApplicationInfo;
+    aput-object v14, v13, v6
 
-    aput-object v13, v12, v5
+    const-class v14, Landroid/content/pm/ApplicationInfo;
 
-    sget-object v13, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+    aput-object v14, v13, v5
 
-    aput-object v13, v12, v4
+    sget-object v14, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    const-class v13, Landroid/graphics/drawable/Drawable;
+    aput-object v14, v13, v4
 
-    .line 73
-    invoke-static {v12, v13}, Lmiui/reflect/ReflectUtils;->getSignature([Ljava/lang/Class;Ljava/lang/Class;)Ljava/lang/String;
+    .line 74
+    invoke-static {v12, v13}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 72
-    invoke-static {v3, v11, v12}, Lmiui/reflect/Method;->of(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmiui/reflect/Method;
+    new-array v13, v10, [Ljava/lang/Class;
+
+    const-class v14, Landroid/content/Context;
+
+    aput-object v14, v13, v9
+
+    const-class v14, Ljava/lang/String;
+
+    aput-object v14, v13, v8
+
+    const-class v14, Ljava/lang/String;
+
+    aput-object v14, v13, v7
+
+    sget-object v14, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v14, v13, v6
+
+    const-class v14, Landroid/content/pm/ApplicationInfo;
+
+    aput-object v14, v13, v5
+
+    sget-object v14, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    aput-object v14, v13, v4
+
+    .line 73
+    invoke-static {v3, v11, v12, v13}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v3
 
-    sput-object v3, Lcom/android/systemui/shared/recents/model/IconLoader;->sGetIconMethod:Lmiui/reflect/Method;
+    sput-object v3, Lcom/android/systemui/shared/recents/model/IconLoader;->sGetIconMethod:Ljava/lang/reflect/Method;
 
     .line 77
     :cond_0
-    sget-object v3, Lcom/android/systemui/shared/recents/model/IconLoader;->sGetIconMethod:Lmiui/reflect/Method;
-
-    const-class v11, Lmiui/content/res/IconCustomizer;
+    sget-object v3, Lcom/android/systemui/shared/recents/model/IconLoader;->sGetIconMethod:Ljava/lang/reflect/Method;
 
     new-array v10, v10, [Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    move-object v12, p0
+    move-object v11, p0
 
     :try_start_1
-    iget-object v13, v12, Lcom/android/systemui/shared/recents/model/IconLoader;->mContext:Landroid/content/Context;
+    iget-object v12, v11, Lcom/android/systemui/shared/recents/model/IconLoader;->mContext:Landroid/content/Context;
 
-    aput-object v13, v10, v9
+    aput-object v12, v10, v9
 
     aput-object v0, v10, v8
 
@@ -243,7 +267,7 @@
 
     aput-object v5, v10, v4
 
-    invoke-virtual {v3, v11, v2, v10}, Lmiui/reflect/Method;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v2, v10}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -253,11 +277,11 @@
 
     if-nez v3, :cond_1
 
-    move-object v4, p1
+    move-object/from16 v4, p1
 
     .line 79
     :try_start_2
-    invoke-static {p1, v0, v1, v2}, Lmiui/content/res/IconCustomizer;->getCustomizedIcon(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/BitmapDrawable;
+    invoke-static {v4, v0, v1, v2}, Lmiui/content/res/IconCustomizer;->getCustomizedIcon(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object v3
     :try_end_2
@@ -278,7 +302,7 @@
     :catch_2
     move-exception v0
 
-    move-object v12, p0
+    move-object v11, p0
 
     :goto_0
     move-object v3, v2
@@ -370,7 +394,7 @@
 .method public static isMiuiLiteVersion()Z
     .locals 3
 
-    .line 59
+    .line 60
     :try_start_0
     const-class v0, Lmiui/os/Build;
 
@@ -378,14 +402,14 @@
 
     sget-object v2, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    invoke-static {v0, v1, v2}, Lmiui/reflect/Field;->of(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Lmiui/reflect/Field;
+    invoke-static {v0, v1, v2}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 60
-    invoke-virtual {v0, v1}, Lmiui/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 61
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -406,7 +430,7 @@
 
     const-string v2, "reflect failed when get is miui lite device"
 
-    .line 62
+    .line 63
     invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v0, 0x0

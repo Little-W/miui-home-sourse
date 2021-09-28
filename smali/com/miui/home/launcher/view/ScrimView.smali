@@ -269,6 +269,25 @@
     return-void
 .end method
 
+.method private setAndUpdateColors()V
+    .locals 1
+
+    .line 184
+    invoke-virtual {p0}, Lcom/miui/home/launcher/view/ScrimView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/view/ScrimView;->setColorValue(Landroid/content/Context;)V
+
+    .line 185
+    invoke-virtual {p0}, Lcom/miui/home/launcher/view/ScrimView;->updateColors()V
+
+    .line 186
+    invoke-virtual {p0}, Lcom/miui/home/launcher/view/ScrimView;->invalidate()V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public hasOverlappingRendering()Z
@@ -303,6 +322,9 @@
 
     invoke-virtual {v0, p0}, Lorg/greenrobot/eventbus/EventBus;->register(Ljava/lang/Object;)V
 
+    .line 163
+    invoke-direct {p0}, Lcom/miui/home/launcher/view/ScrimView;->setAndUpdateColors()V
+
     :cond_0
     return-void
 .end method
@@ -310,10 +332,10 @@
 .method protected onDetachedFromWindow()V
     .locals 1
 
-    .line 168
+    .line 169
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    .line 169
+    .line 170
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -324,7 +346,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 170
+    .line 171
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -404,7 +426,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 176
+    .line 177
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -417,7 +439,7 @@
 
     if-nez v0, :cond_0
 
-    .line 177
+    .line 178
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -430,19 +452,9 @@
 
     if-eqz p1, :cond_1
 
-    .line 178
-    :cond_0
-    invoke-virtual {p0}, Lcom/miui/home/launcher/view/ScrimView;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/view/ScrimView;->setColorValue(Landroid/content/Context;)V
-
     .line 179
-    invoke-virtual {p0}, Lcom/miui/home/launcher/view/ScrimView;->updateColors()V
-
-    .line 180
-    invoke-virtual {p0}, Lcom/miui/home/launcher/view/ScrimView;->invalidate()V
+    :cond_0
+    invoke-direct {p0}, Lcom/miui/home/launcher/view/ScrimView;->setAndUpdateColors()V
 
     :cond_1
     return-void

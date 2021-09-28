@@ -34,7 +34,7 @@
     .line 379
     invoke-direct {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const p1, 0x7f0a0118
+    const p1, 0x7f0a0146
 
     .line 380
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -45,7 +45,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->icon:Landroid/widget/ImageView;
 
-    const p1, 0x7f0a0186
+    const p1, 0x7f0a01c4
 
     .line 381
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -56,7 +56,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->text:Landroid/widget/TextView;
 
-    const p1, 0x7f0a0058
+    const p1, 0x7f0a0063
 
     .line 382
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

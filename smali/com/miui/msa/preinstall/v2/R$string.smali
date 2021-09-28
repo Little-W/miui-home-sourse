@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final app_name:I = 0x7f10008b
+.field public static final app_name:I = 0x7f10008e
 
 
 # direct methods

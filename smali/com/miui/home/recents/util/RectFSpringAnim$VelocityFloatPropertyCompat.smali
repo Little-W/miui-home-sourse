@@ -38,23 +38,23 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
-    .line 169
+    .line 174
     invoke-direct {p0, p1}, Landroidx/dynamicanimation/animation/FloatPropertyCompat;-><init>(Ljava/lang/String;)V
 
     const-wide/16 v0, -0x1
 
-    .line 163
+    .line 168
     iput-wide v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mLastTime:J
 
-    .line 164
+    .line 169
     iput-wide v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mCurrentTime:J
 
     const/high16 p1, -0x40800000    # -1.0f
 
-    .line 165
+    .line 170
     iput p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mLastValue:F
 
-    .line 166
+    .line 171
     iput p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mCurrentValue:F
 
     return-void
@@ -70,7 +70,7 @@
         }
     .end annotation
 
-    .line 181
+    .line 186
     iget p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mCurrentValue:F
 
     return p1
@@ -79,7 +79,7 @@
 .method public getVelocity()F
     .locals 6
 
-    .line 198
+    .line 203
     iget-wide v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mLastTime:J
 
     const-wide/16 v2, -0x1
@@ -94,7 +94,7 @@
 
     if-lez v4, :cond_0
 
-    .line 199
+    .line 204
     iget v4, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mCurrentValue:F
 
     iget v5, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mLastValue:F
@@ -124,18 +124,18 @@
 
     const-wide/16 v0, -0x1
 
-    .line 173
+    .line 178
     iput-wide v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mLastTime:J
 
-    .line 174
+    .line 179
     iput-wide v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mCurrentTime:J
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 175
+    .line 180
     iput v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mLastValue:F
 
-    .line 176
+    .line 181
     iput v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mCurrentValue:F
 
     return-void
@@ -149,7 +149,7 @@
         }
     .end annotation
 
-    .line 186
+    .line 191
     iget-wide v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mCurrentTime:J
 
     const-wide/16 v2, -0x1
@@ -158,10 +158,10 @@
 
     if-nez p1, :cond_0
 
-    .line 187
+    .line 192
     iput p2, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mCurrentValue:F
 
-    .line 188
+    .line 193
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1
@@ -170,19 +170,19 @@
 
     goto :goto_0
 
-    .line 190
+    .line 195
     :cond_0
     iget p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mCurrentValue:F
 
     iput p1, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mLastValue:F
 
-    .line 191
+    .line 196
     iput-wide v0, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mLastTime:J
 
-    .line 192
+    .line 197
     iput p2, p0, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->mCurrentValue:F
 
-    .line 193
+    .line 198
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide p1

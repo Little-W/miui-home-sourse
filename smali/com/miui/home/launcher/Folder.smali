@@ -35,6 +35,8 @@
 
 .field protected mBackgroundView:Landroid/view/ViewGroup;
 
+.field private mBorderLineShow:Z
+
 .field private mClosing:Z
 
 .field protected mContent:Lcom/miui/home/launcher/FolderGridView;
@@ -112,44 +114,44 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 161
+    .line 162
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p2, 0x0
 
-    .line 78
+    .line 77
     iput-object p2, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
-    .line 81
+    .line 80
     iput-object p2, p0, Lcom/miui/home/launcher/Folder;->mOnFinishClose:Ljava/lang/Runnable;
 
     const/4 p2, 0x0
 
-    .line 83
+    .line 82
     iput-boolean p2, p0, Lcom/miui/home/launcher/Folder;->mEditAnimatorShowing:Z
 
-    .line 84
+    .line 83
     new-instance v0, Landroid/animation/ValueAnimator;
 
     invoke-direct {v0}, Landroid/animation/ValueAnimator;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mEditAnimator:Landroid/animation/ValueAnimator;
 
-    .line 85
+    .line 84
     new-instance v0, Landroid/animation/ValueAnimator;
 
     invoke-direct {v0}, Landroid/animation/ValueAnimator;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mEditBackgroundAnimator:Landroid/animation/ValueAnimator;
 
-    .line 118
+    .line 117
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mPreviewPosRect:Landroid/graphics/Rect;
 
-    .line 119
+    .line 118
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -158,47 +160,50 @@
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 126
+    .line 125
     iput v0, p0, Lcom/miui/home/launcher/Folder;->mItemIconToPreviewIconScale:F
 
     const/4 v0, 0x2
 
-    .line 127
+    .line 126
     new-array v0, v0, [F
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mTmpPos:[F
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 128
+    .line 127
     iput v0, p0, Lcom/miui/home/launcher/Folder;->mOpenedScale:F
 
-    .line 129
+    .line 128
     iput v0, p0, Lcom/miui/home/launcher/Folder;->mLastOpenedScale:F
 
-    .line 130
+    .line 129
     iput-boolean p2, p0, Lcom/miui/home/launcher/Folder;->mEnableShowFolderContentBg:Z
 
-    const/4 p2, 0x1
+    const/4 v0, 0x1
 
-    .line 133
-    iput-boolean p2, p0, Lcom/miui/home/launcher/Folder;->mEnableChildViewChangeInFolderAnimation:Z
+    .line 132
+    iput-boolean v0, p0, Lcom/miui/home/launcher/Folder;->mEnableChildViewChangeInFolderAnimation:Z
 
-    .line 250
+    .line 134
+    iput-boolean p2, p0, Lcom/miui/home/launcher/Folder;->mBorderLineShow:Z
+
+    .line 251
     new-instance p2, Lcom/miui/home/launcher/Folder$4;
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/Folder$4;-><init>(Lcom/miui/home/launcher/Folder;)V
 
     iput-object p2, p0, Lcom/miui/home/launcher/Folder;->mOpenCloseAnimatorListenerAdapter:Landroid/animation/AnimatorListenerAdapter;
 
-    .line 278
+    .line 279
     new-instance p2, Lcom/miui/home/launcher/Folder$5;
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/Folder$5;-><init>(Lcom/miui/home/launcher/Folder;)V
 
     iput-object p2, p0, Lcom/miui/home/launcher/Folder;->mUpdateListener:Lcom/miui/home/launcher/animate/SpringAnimator$UpdateListener;
 
-    .line 162
+    .line 163
     iput-object p1, p0, Lcom/miui/home/launcher/Folder;->mContext:Landroid/content/Context;
 
     return-void
@@ -207,7 +212,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/Folder;)Z
     .locals 0
 
-    .line 68
+    .line 67
     iget-boolean p0, p0, Lcom/miui/home/launcher/Folder;->mIsEditing:Z
 
     return p0
@@ -216,7 +221,7 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/Folder;)Landroid/widget/EditText;
     .locals 0
 
-    .line 68
+    .line 67
     iget-object p0, p0, Lcom/miui/home/launcher/Folder;->mRenameEdit:Landroid/widget/EditText;
 
     return-object p0
@@ -225,7 +230,7 @@
 .method static synthetic access$1000(Lcom/miui/home/launcher/Folder;)Z
     .locals 0
 
-    .line 68
+    .line 67
     iget-boolean p0, p0, Lcom/miui/home/launcher/Folder;->mEnableChildViewChangeInFolderAnimation:Z
 
     return p0
@@ -234,7 +239,7 @@
 .method static synthetic access$1100(Lcom/miui/home/launcher/Folder;F)V
     .locals 0
 
-    .line 68
+    .line 67
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Folder;->changeItemsInFolderDuringOpenAndCloseAnimation(F)V
 
     return-void
@@ -243,7 +248,7 @@
 .method static synthetic access$1200(Lcom/miui/home/launcher/Folder;)V
     .locals 0
 
-    .line 68
+    .line 67
     invoke-direct {p0}, Lcom/miui/home/launcher/Folder;->onCloseAnimationFinished()V
 
     return-void
@@ -252,7 +257,7 @@
 .method static synthetic access$1300(Lcom/miui/home/launcher/Folder;)V
     .locals 0
 
-    .line 68
+    .line 67
     invoke-direct {p0}, Lcom/miui/home/launcher/Folder;->onOpenAnimationFinished()V
 
     return-void
@@ -261,7 +266,7 @@
 .method static synthetic access$1400(Lcom/miui/home/launcher/Folder;)Lcom/miui/home/launcher/FolderInfo;
     .locals 0
 
-    .line 68
+    .line 67
     iget-object p0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     return-object p0
@@ -270,7 +275,7 @@
 .method static synthetic access$1500(Lcom/miui/home/launcher/Folder;)Landroid/graphics/Rect;
     .locals 0
 
-    .line 68
+    .line 67
     iget-object p0, p0, Lcom/miui/home/launcher/Folder;->mPreviewPosRect:Landroid/graphics/Rect;
 
     return-object p0
@@ -279,7 +284,7 @@
 .method static synthetic access$1600(Lcom/miui/home/launcher/Folder;)F
     .locals 0
 
-    .line 68
+    .line 67
     iget p0, p0, Lcom/miui/home/launcher/Folder;->mOpenCloseScale:F
 
     return p0
@@ -288,7 +293,7 @@
 .method static synthetic access$1700(Lcom/miui/home/launcher/Folder;)F
     .locals 0
 
-    .line 68
+    .line 67
     iget p0, p0, Lcom/miui/home/launcher/Folder;->mVisionCenterX:F
 
     return p0
@@ -297,7 +302,7 @@
 .method static synthetic access$1800(Lcom/miui/home/launcher/Folder;)F
     .locals 0
 
-    .line 68
+    .line 67
     iget p0, p0, Lcom/miui/home/launcher/Folder;->mVisionCenterY:F
 
     return p0
@@ -306,34 +311,43 @@
 .method static synthetic access$1900(Lcom/miui/home/launcher/Folder;)Landroid/view/View;
     .locals 0
 
-    .line 68
+    .line 67
     iget-object p0, p0, Lcom/miui/home/launcher/Folder;->mHeader:Landroid/view/View;
 
     return-object p0
 .end method
 
-.method static synthetic access$2000(Lcom/miui/home/launcher/Folder;)Lcom/miui/home/launcher/NonOverlapLinearLayout;
+.method static synthetic access$2000(Lcom/miui/home/launcher/Folder;)Z
     .locals 0
 
-    .line 68
-    iget-object p0, p0, Lcom/miui/home/launcher/Folder;->mRecommendAppsSwitch:Lcom/miui/home/launcher/NonOverlapLinearLayout;
+    .line 67
+    iget-boolean p0, p0, Lcom/miui/home/launcher/Folder;->mBorderLineShow:Z
 
-    return-object p0
+    return p0
 .end method
 
 .method static synthetic access$202(Lcom/miui/home/launcher/Folder;Z)Z
     .locals 0
 
-    .line 68
+    .line 67
     iput-boolean p1, p0, Lcom/miui/home/launcher/Folder;->mEditAnimatorShowing:Z
 
     return p1
 .end method
 
+.method static synthetic access$2100(Lcom/miui/home/launcher/Folder;)Lcom/miui/home/launcher/NonOverlapLinearLayout;
+    .locals 0
+
+    .line 67
+    iget-object p0, p0, Lcom/miui/home/launcher/Folder;->mRecommendAppsSwitch:Lcom/miui/home/launcher/NonOverlapLinearLayout;
+
+    return-object p0
+.end method
+
 .method static synthetic access$300(Lcom/miui/home/launcher/Folder;Z)V
     .locals 0
 
-    .line 68
+    .line 67
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Folder;->showOrHideSoftInput(Z)V
 
     return-void
@@ -342,7 +356,7 @@
 .method static synthetic access$400(Lcom/miui/home/launcher/Folder;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
-    .line 68
+    .line 67
     iget-object p0, p0, Lcom/miui/home/launcher/Folder;->mContentBackground:Landroid/graphics/drawable/Drawable;
 
     return-object p0
@@ -351,7 +365,7 @@
 .method static synthetic access$500(Lcom/miui/home/launcher/Folder;)F
     .locals 0
 
-    .line 68
+    .line 67
     iget p0, p0, Lcom/miui/home/launcher/Folder;->mLastOpenedScale:F
 
     return p0
@@ -360,7 +374,7 @@
 .method static synthetic access$502(Lcom/miui/home/launcher/Folder;F)F
     .locals 0
 
-    .line 68
+    .line 67
     iput p1, p0, Lcom/miui/home/launcher/Folder;->mLastOpenedScale:F
 
     return p1
@@ -369,7 +383,7 @@
 .method static synthetic access$600(Lcom/miui/home/launcher/Folder;)F
     .locals 0
 
-    .line 68
+    .line 67
     iget p0, p0, Lcom/miui/home/launcher/Folder;->mOpenedScale:F
 
     return p0
@@ -378,7 +392,7 @@
 .method static synthetic access$700(Lcom/miui/home/launcher/Folder;)Landroid/widget/ImageView;
     .locals 0
 
-    .line 68
+    .line 67
     iget-object p0, p0, Lcom/miui/home/launcher/Folder;->mFakeIcon:Landroid/widget/ImageView;
 
     return-object p0
@@ -387,7 +401,7 @@
 .method static synthetic access$800(Lcom/miui/home/launcher/Folder;Z)V
     .locals 0
 
-    .line 68
+    .line 67
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Folder;->tellItemIconIsOnAnimation(Z)V
 
     return-void
@@ -396,7 +410,7 @@
 .method static synthetic access$900(Lcom/miui/home/launcher/Folder;)Z
     .locals 0
 
-    .line 68
+    .line 67
     iget-boolean p0, p0, Lcom/miui/home/launcher/Folder;->mClosing:Z
 
     return p0
@@ -407,7 +421,7 @@
 
     const/4 v0, 0x0
 
-    .line 807
+    .line 818
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
@@ -417,7 +431,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 808
+    .line 819
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
@@ -428,7 +442,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 809
+    .line 820
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
@@ -437,26 +451,26 @@
 
     check-cast v1, Lcom/miui/home/launcher/ItemIcon;
 
-    .line 810
+    .line 821
     invoke-virtual {v1}, Lcom/miui/home/launcher/ItemIcon;->getTitleContainer()Landroid/view/View;
 
     move-result-object v2
 
-    .line 811
+    .line 822
     invoke-virtual {v1}, Lcom/miui/home/launcher/ItemIcon;->getIconContainer()Landroid/view/View;
 
     move-result-object v1
 
-    .line 812
+    .line 823
     invoke-virtual {v2, p1}, Landroid/view/View;->setScaleX(F)V
 
-    .line 813
+    .line 824
     invoke-virtual {v2, p1}, Landroid/view/View;->setScaleY(F)V
 
-    .line 814
+    .line 825
     invoke-virtual {v2, p1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 815
+    .line 826
     iget v2, p0, Lcom/miui/home/launcher/Folder;->mItemIconToPreviewIconScale:F
 
     const/high16 v3, -0x40800000    # -1.0f
@@ -475,10 +489,10 @@
 
     add-float/2addr v2, v3
 
-    .line 817
+    .line 828
     invoke-virtual {v1, v2}, Landroid/view/View;->setScaleX(F)V
 
-    .line 818
+    .line 829
     invoke-virtual {v1, v2}, Landroid/view/View;->setScaleY(F)V
 
     :cond_0
@@ -493,19 +507,19 @@
 .method private checkChildAnimEnable()Z
     .locals 2
 
-    .line 873
+    .line 885
     sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_NOUGAT_MR1:Z
 
     if-nez v0, :cond_1
 
-    .line 874
+    .line 886
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
     const-string v1, "accessibility"
 
-    .line 875
+    .line 887
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -536,7 +550,7 @@
 .method private getEditText()Ljava/lang/CharSequence;
     .locals 3
 
-    .line 526
+    .line 537
     sget-object v0, Lcom/miui/home/launcher/Folder;->DEFAULT_FOLDER_NAME:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
@@ -567,7 +581,7 @@
 
     goto :goto_0
 
-    .line 530
+    .line 541
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
@@ -579,7 +593,7 @@
 
     return-object v0
 
-    .line 528
+    .line 539
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mDefaultUnnamedFolderName:Ljava/lang/String;
@@ -590,17 +604,17 @@
 .method private onCloseAnimationFinished()V
     .locals 3
 
-    .line 503
+    .line 514
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 504
+    .line 515
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/FolderInfo;->onBinded(Z)V
 
-    .line 505
+    .line 516
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object v0, v0, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
@@ -609,21 +623,21 @@
 
     invoke-interface {v0, v2}, Lcom/miui/home/launcher/Folder$FolderCallback;->showPreview(Z)V
 
-    .line 507
+    .line 518
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mOnFinishClose:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_1
 
-    .line 508
+    .line 519
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     const/4 v0, 0x0
 
-    .line 509
+    .line 520
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mOnFinishClose:Ljava/lang/Runnable;
 
-    .line 511
+    .line 522
     :cond_1
     iput-boolean v1, p0, Lcom/miui/home/launcher/Folder;->mClosing:Z
 
@@ -633,25 +647,25 @@
 .method private onOpenAnimationFinished()V
     .locals 2
 
-    .line 515
+    .line 526
     iget v0, p0, Lcom/miui/home/launcher/Folder;->mOpenedScale:F
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->setScaleX(F)V
 
-    .line 516
+    .line 527
     iget v0, p0, Lcom/miui/home/launcher/Folder;->mOpenedScale:F
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->setScaleY(F)V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 517
+    .line 528
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->setBackgroundAlpha(F)V
 
-    .line 518
+    .line 529
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->setupOutOfPreviewContent(F)V
 
-    .line 519
+    .line 530
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;
@@ -660,7 +674,7 @@
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderCling;->onFolderOpenAnimationFinish()V
 
-    .line 520
+    .line 531
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDragController()Lcom/miui/home/launcher/DragController;
@@ -673,7 +687,7 @@
 
     if-nez v0, :cond_0
 
-    .line 521
+    .line 532
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     const/4 v1, 0x0
@@ -691,17 +705,17 @@
 .method private setEnableContent(Z)V
     .locals 1
 
-    .line 695
+    .line 706
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderGridView;->setEnabled(Z)V
 
-    .line 696
+    .line 707
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderGridView;->setClickable(Z)V
 
-    .line 697
+    .line 708
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderGridView;->setLongClickable(Z)V
@@ -712,7 +726,7 @@
 .method private setFakeIcon()V
     .locals 2
 
-    .line 465
+    .line 476
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object v0, v0, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
@@ -723,7 +737,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 467
+    .line 478
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mFakeIcon:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
@@ -737,12 +751,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 243
+    .line 244
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mRenameEdit:Landroid/widget/EditText;
 
     invoke-virtual {p1}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 244
+    .line 245
     invoke-virtual {p0}, Lcom/miui/home/launcher/Folder;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -753,7 +767,7 @@
 
     goto :goto_0
 
-    .line 246
+    .line 247
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Folder;->getContext()Landroid/content/Context;
 
@@ -774,7 +788,7 @@
 
     const/4 v0, 0x0
 
-    .line 825
+    .line 836
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
@@ -784,7 +798,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 826
+    .line 837
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
@@ -795,7 +809,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 827
+    .line 838
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
@@ -820,7 +834,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 621
+    .line 632
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getFolderCellHeight()I
 
     move-result p1
@@ -841,7 +855,7 @@
     :goto_0
     if-eqz p2, :cond_1
 
-    .line 623
+    .line 634
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/FolderGridView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -860,7 +874,7 @@
 
     invoke-direct {p2, v0}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
 
-    .line 624
+    .line 635
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -869,17 +883,17 @@
 
     int-to-long v0, p2
 
-    .line 625
+    .line 636
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 626
+    .line 637
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     goto :goto_1
 
-    .line 628
+    .line 639
     :cond_1
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
@@ -896,7 +910,7 @@
 .method public afterDragStart()V
     .locals 1
 
-    .line 837
+    .line 848
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderGridView;->afterDragStart()V
@@ -907,7 +921,7 @@
 .method public beforeDragStart(I)V
     .locals 1
 
-    .line 833
+    .line 844
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderGridView;->beforeDragStart(I)V
@@ -918,24 +932,24 @@
 .method bind(Lcom/miui/home/launcher/FolderInfo;)V
     .locals 4
 
-    .line 552
+    .line 563
     iput-object p1, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
-    .line 553
+    .line 564
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/FolderInfo;->onBinded(Z)V
 
-    .line 554
+    .line 565
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 555
+    .line 566
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mRenameEdit:Landroid/widget/EditText;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -954,7 +968,7 @@
 
     goto :goto_0
 
-    .line 557
+    .line 568
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mRenameEdit:Landroid/widget/EditText;
 
@@ -972,31 +986,31 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setTextColor(I)V
 
-    .line 559
+    .line 570
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
 
-    const v2, 0x7f1100ba
+    const v2, 0x7f1100bc
 
-    const v3, 0x7f1100bb
+    const v3, 0x7f1100bd
 
     invoke-static {v0, v1, v2, v3}, Lcom/miui/home/launcher/common/Utilities;->adaptTitleStyleToWallpaper(Landroid/content/Context;Landroid/widget/TextView;II)V
 
-    .line 560
+    .line 571
     invoke-virtual {p0}, Lcom/miui/home/launcher/Folder;->updateAppearance()V
 
     if-nez p1, :cond_1
 
     const/4 p1, 0x0
 
-    .line 562
+    .line 573
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Folder;->setContentAdapter(Landroid/widget/BaseAdapter;)V
 
     goto :goto_1
 
-    .line 564
+    .line 575
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContext:Landroid/content/Context;
 
@@ -1013,15 +1027,15 @@
 .method public enableInteractive(Z)V
     .locals 1
 
-    .line 768
+    .line 779
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Folder;->setEnableContent(Z)V
 
-    .line 769
+    .line 780
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    .line 770
+    .line 781
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Folder;->setEnabled(Z)V
 
     return-void
@@ -1030,7 +1044,7 @@
 .method public getContainerId()J
     .locals 2
 
-    .line 367
+    .line 378
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-wide v0, v0, Lcom/miui/home/launcher/FolderInfo;->id:J
@@ -1041,7 +1055,7 @@
 .method public getContent()Lcom/miui/home/launcher/FolderGridView;
     .locals 1
 
-    .line 334
+    .line 345
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     return-object v0
@@ -1050,7 +1064,7 @@
 .method public getDragedItem()Lcom/miui/home/launcher/ShortcutInfo;
     .locals 1
 
-    .line 748
+    .line 759
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mDragItem:Lcom/miui/home/launcher/ShortcutInfo;
 
     return-object v0
@@ -1059,7 +1073,7 @@
 .method public getFolderSize()I
     .locals 1
 
-    .line 779
+    .line 790
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     if-nez v0, :cond_0
@@ -1068,7 +1082,7 @@
 
     return v0
 
-    .line 782
+    .line 793
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->count()I
 
@@ -1080,7 +1094,7 @@
 .method public getInfo()Lcom/miui/home/launcher/FolderInfo;
     .locals 1
 
-    .line 395
+    .line 406
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     return-object v0
@@ -1089,7 +1103,7 @@
 .method public getOpenCloseAnimatorListenerAdapter()Landroid/animation/AnimatorListenerAdapter;
     .locals 1
 
-    .line 307
+    .line 318
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mOpenCloseAnimatorListenerAdapter:Landroid/animation/AnimatorListenerAdapter;
 
     return-object v0
@@ -1098,7 +1112,7 @@
 .method public getRecommendAppsSwitch()Lcom/miui/home/launcher/NonOverlapLinearLayout;
     .locals 1
 
-    .line 338
+    .line 349
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mRecommendAppsSwitch:Lcom/miui/home/launcher/NonOverlapLinearLayout;
 
     return-object v0
@@ -1107,7 +1121,7 @@
 .method public getTitle()Landroid/view/View;
     .locals 1
 
-    .line 849
+    .line 860
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
 
     return-object v0
@@ -1116,7 +1130,7 @@
 .method public getUpdateListener()Lcom/miui/home/launcher/animate/SpringAnimator$UpdateListener;
     .locals 1
 
-    .line 311
+    .line 322
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mUpdateListener:Lcom/miui/home/launcher/animate/SpringAnimator$UpdateListener;
 
     return-object v0
@@ -1133,7 +1147,7 @@
 .method public invalidateChildInParent([ILandroid/graphics/Rect;)Landroid/view/ViewParent;
     .locals 1
 
-    .line 684
+    .line 695
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mRecommendAppsSwitch:Lcom/miui/home/launcher/NonOverlapLinearLayout;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/NonOverlapLinearLayout;->getVisibility()I
@@ -1142,10 +1156,10 @@
 
     if-nez v0, :cond_0
 
-    .line 685
+    .line 696
     invoke-virtual {p0}, Lcom/miui/home/launcher/Folder;->invalidate()V
 
-    .line 687
+    .line 698
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->invalidateChildInParent([ILandroid/graphics/Rect;)Landroid/view/ViewParent;
 
@@ -1157,7 +1171,7 @@
 .method public isEditAnimatorShowing()Z
     .locals 1
 
-    .line 799
+    .line 810
     iget-boolean v0, p0, Lcom/miui/home/launcher/Folder;->mEditAnimatorShowing:Z
 
     return v0
@@ -1166,7 +1180,7 @@
 .method public isEditing()Z
     .locals 1
 
-    .line 691
+    .line 702
     iget-boolean v0, p0, Lcom/miui/home/launcher/Folder;->mIsEditing:Z
 
     return v0
@@ -1175,12 +1189,12 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 570
+    .line 581
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result p1
 
-    const v0, 0x7f0a01d4
+    const v0, 0x7f0a0221
 
     if-eq p1, v0, :cond_0
 
@@ -1189,7 +1203,7 @@
     :cond_0
     const/4 p1, 0x1
 
-    .line 572
+    .line 583
     invoke-virtual {p0, p1, p1}, Lcom/miui/home/launcher/Folder;->showEditPanel(ZZ)V
 
     :goto_0
@@ -1199,7 +1213,7 @@
 .method onClose(ZLjava/lang/Runnable;)V
     .locals 3
 
-    .line 472
+    .line 483
     iget-boolean v0, p0, Lcom/miui/home/launcher/Folder;->mClosing:Z
 
     if-eqz v0, :cond_0
@@ -1209,17 +1223,17 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 475
+    .line 486
     iput-boolean v0, p0, Lcom/miui/home/launcher/Folder;->mClosing:Z
 
-    .line 476
+    .line 487
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/miui/home/launcher/FolderInfo;->opened:Z
 
-    .line 477
+    .line 488
     iget-object v2, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0, v2}, Lcom/miui/home/launcher/FolderInfo;->getAdapter(Landroid/content/Context;)Lcom/miui/home/launcher/ShortcutsAdapter;
@@ -1228,37 +1242,37 @@
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutsAdapter;->notifyDataSetChanged()V
 
-    .line 478
+    .line 489
     invoke-virtual {p0}, Lcom/miui/home/launcher/Folder;->clearAnimation()V
 
-    .line 479
+    .line 490
     invoke-direct {p0}, Lcom/miui/home/launcher/Folder;->checkChildAnimEnable()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/miui/home/launcher/Folder;->mEnableChildViewChangeInFolderAnimation:Z
 
-    .line 480
+    .line 491
     invoke-virtual {p0, v1, v1}, Lcom/miui/home/launcher/Folder;->showEditPanel(ZZ)V
 
-    .line 481
+    .line 492
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mDragController:Lcom/miui/home/launcher/DragController;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DragController;->removeDropTarget(Lcom/miui/home/launcher/DropTarget;)V
 
-    .line 483
+    .line 494
     iput-object p2, p0, Lcom/miui/home/launcher/Folder;->mOnFinishClose:Ljava/lang/Runnable;
 
-    .line 485
+    .line 496
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object p2, p2, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
 
     if-eqz p2, :cond_3
 
-    .line 486
+    .line 497
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object p2, p2, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
@@ -1267,16 +1281,16 @@
 
     if-nez p1, :cond_1
 
-    .line 492
+    .line 503
     invoke-direct {p0}, Lcom/miui/home/launcher/Folder;->onCloseAnimationFinished()V
 
     goto :goto_0
 
-    .line 494
+    .line 505
     :cond_1
     invoke-direct {p0}, Lcom/miui/home/launcher/Folder;->setFakeIcon()V
 
-    .line 495
+    .line 506
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object p1, p1, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
@@ -1285,7 +1299,7 @@
 
     invoke-interface {p1, p2}, Lcom/miui/home/launcher/Folder$FolderCallback;->getPreviewPosition(Landroid/graphics/Rect;)F
 
-    .line 497
+    .line 508
     :goto_0
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
@@ -1297,7 +1311,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 498
+    .line 509
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -1307,7 +1321,7 @@
     :cond_2
     return-void
 
-    .line 488
+    .line 499
     :cond_3
     invoke-direct {p0}, Lcom/miui/home/launcher/Folder;->onCloseAnimationFinished()V
 
@@ -1319,7 +1333,7 @@
 
     const/4 p1, 0x0
 
-    .line 362
+    .line 373
     iput-object p1, p0, Lcom/miui/home/launcher/Folder;->mDragItem:Lcom/miui/home/launcher/ShortcutInfo;
 
     return-void
@@ -1328,7 +1342,7 @@
 .method public onDropBack(Lcom/miui/home/launcher/DragObject;)V
     .locals 4
 
-    .line 343
+    .line 354
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
@@ -1343,12 +1357,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 344
+    .line 355
     iget-object v1, v0, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
 
     check-cast v1, Lcom/miui/home/launcher/FolderIcon;
 
-    .line 345
+    .line 356
     invoke-virtual {v1}, Lcom/miui/home/launcher/FolderIcon;->isPreRemoved()Z
 
     move-result v1
@@ -1357,7 +1371,7 @@
 
     goto :goto_0
 
-    .line 352
+    .line 363
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -1381,7 +1395,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 353
+    .line 364
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v1
@@ -1396,7 +1410,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/FolderInfo;->add(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/allapps/LauncherMode;)V
 
-    .line 354
+    .line 365
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v1
@@ -1405,12 +1419,12 @@
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->restoreCheckedStatus()V
 
-    .line 355
+    .line 366
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->notifyDataSetChanged()V
 
     goto :goto_1
 
-    .line 346
+    .line 357
     :cond_1
     :goto_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
@@ -1423,7 +1437,7 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 347
+    .line 358
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragView()Lcom/miui/home/launcher/DragView;
 
     move-result-object v0
@@ -1438,7 +1452,7 @@
 
     goto :goto_1
 
-    .line 349
+    .line 360
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -1450,7 +1464,7 @@
 
     invoke-virtual {v0, v1, v2, v2}, Lcom/miui/home/launcher/Launcher;->addItem(Lcom/miui/home/launcher/ItemInfo;ZZ)Landroid/view/View;
 
-    .line 358
+    .line 369
     :cond_3
     :goto_1
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
@@ -1465,17 +1479,17 @@
 .method protected onFinishInflate()V
     .locals 3
 
-    .line 178
+    .line 179
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     const/4 v0, 0x1
 
-    .line 179
+    .line 180
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->setChildrenDrawingOrderEnabled(Z)V
 
-    const v0, 0x7f0a00cc
+    const v0, 0x7f0a00f0
 
-    .line 180
+    .line 181
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -1484,9 +1498,9 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
-    const v0, 0x7f0a00ca
+    const v0, 0x7f0a00ee
 
-    .line 181
+    .line 182
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -1495,9 +1509,9 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mFakeIcon:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a005e
+    const v0, 0x7f0a0069
 
-    .line 182
+    .line 183
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -1506,17 +1520,17 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mBackgroundView:Landroid/view/ViewGroup;
 
-    .line 183
+    .line 184
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/FolderGridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 184
+    .line 185
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/FolderGridView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
 
-    .line 185
+    .line 186
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mBackgroundView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -1525,9 +1539,9 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mContentBackground:Landroid/graphics/drawable/Drawable;
 
-    const v0, 0x7f0a01d4
+    const v0, 0x7f0a0221
 
-    .line 186
+    .line 187
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -1536,23 +1550,23 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
 
-    .line 187
+    .line 188
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a00cd
+    const v0, 0x7f0a00f1
 
-    .line 188
+    .line 189
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mHeader:Landroid/view/View;
 
-    const v0, 0x7f0a015c
+    const v0, 0x7f0a0196
 
-    .line 189
+    .line 190
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -1561,7 +1575,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mRenameEdit:Landroid/widget/EditText;
 
-    .line 190
+    .line 191
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContext:Landroid/content/Context;
 
     const-string v1, "input_method"
@@ -1574,9 +1588,9 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mImm:Landroid/view/inputmethod/InputMethodManager;
 
-    const v0, 0x7f0a0156
+    const v0, 0x7f0a018f
 
-    .line 191
+    .line 192
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -1587,13 +1601,13 @@
 
     const/4 v0, 0x0
 
-    .line 192
+    .line 193
     iput-boolean v0, p0, Lcom/miui/home/launcher/Folder;->mIsEditing:Z
 
-    .line 194
+    .line 195
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0800cc
+    const v1, 0x7f0800f3
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/common/Utilities;->loadThemeCompatibleDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
@@ -1601,28 +1615,28 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mBackground:Landroid/graphics/drawable/Drawable;
 
-    .line 195
+    .line 196
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mBackground:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 197
+    .line 198
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f10027d
+    const v1, 0x7f1003ad
 
-    .line 198
+    .line 199
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mDefaultUnnamedFolderName:Ljava/lang/String;
 
-    .line 200
+    .line 201
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mEditAnimator:Landroid/animation/ValueAnimator;
 
     sget v1, Lcom/miui/home/launcher/Folder;->DEFAULT_FOLDER_EDITING_DURATION:I
@@ -1631,7 +1645,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 201
+    .line 202
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mEditAnimator:Landroid/animation/ValueAnimator;
 
     const/4 v1, 0x2
@@ -1642,7 +1656,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    .line 202
+    .line 203
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mEditAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/miui/home/launcher/Folder$1;
@@ -1651,7 +1665,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 216
+    .line 217
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mEditAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/miui/home/launcher/Folder$2;
@@ -1660,7 +1674,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 232
+    .line 233
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mEditBackgroundAnimator:Landroid/animation/ValueAnimator;
 
     sget v1, Lcom/miui/home/launcher/Folder;->DEFAULT_FOLDER_EDITING_DURATION:I
@@ -1669,7 +1683,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 233
+    .line 234
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mEditBackgroundAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/miui/home/launcher/Folder$3;
@@ -1701,7 +1715,7 @@
         }
     .end annotation
 
-    .line 702
+    .line 713
     iget-boolean p1, p0, Lcom/miui/home/launcher/Folder;->mClosing:Z
 
     if-nez p1, :cond_2
@@ -1714,7 +1728,7 @@
 
     goto :goto_0
 
-    .line 706
+    .line 717
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -1730,7 +1744,7 @@
 
     return-void
 
-    .line 710
+    .line 721
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -1755,7 +1769,7 @@
         }
     .end annotation
 
-    .line 719
+    .line 730
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getDragController()Lcom/miui/home/launcher/DragController;
@@ -1772,7 +1786,7 @@
 
     return p3
 
-    .line 723
+    .line 734
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -1784,7 +1798,7 @@
 
     return p3
 
-    .line 727
+    .line 738
     :cond_1
     iget-boolean p1, p0, Lcom/miui/home/launcher/Folder;->mClosing:Z
 
@@ -1798,11 +1812,9 @@
 
     goto :goto_0
 
-    .line 731
+    .line 742
     :cond_2
-    iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
     move-result p1
 
@@ -1816,14 +1828,14 @@
 
     if-nez p1, :cond_3
 
-    .line 732
+    .line 743
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->showScreenLockedToast(Landroid/content/Context;)V
 
     return p3
 
-    .line 736
+    .line 747
     :cond_3
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -1839,10 +1851,10 @@
 .method protected onLayout(ZIIII)V
     .locals 0
 
-    .line 316
+    .line 327
     invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
 
-    .line 317
+    .line 328
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mFakeIcon:Landroid/widget/ImageView;
 
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
@@ -1883,7 +1895,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 855
+    .line 866
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/DragMessage;->isDragging()Z
 
     move-result p1
@@ -1901,12 +1913,12 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 861
+    .line 872
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mRenameEdit:Landroid/widget/EditText;
 
     if-eqz p1, :cond_0
 
-    .line 862
+    .line 873
     invoke-virtual {p1}, Landroid/widget/EditText;->clearFocus()V
 
     :cond_0
@@ -1916,12 +1928,12 @@
 .method onOpen()V
     .locals 6
 
-    .line 404
+    .line 415
     invoke-virtual {p0}, Lcom/miui/home/launcher/Folder;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f050004
+    const v1, 0x7f05000a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1931,17 +1943,17 @@
 
     const/4 v0, 0x0
 
-    .line 405
+    .line 416
     iput-boolean v0, p0, Lcom/miui/home/launcher/Folder;->mClosing:Z
 
-    .line 406
+    .line 417
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     const/4 v2, 0x1
 
     iput-boolean v2, v1, Lcom/miui/home/launcher/FolderInfo;->opened:Z
 
-    .line 407
+    .line 418
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mContentBackground:Landroid/graphics/drawable/Drawable;
 
     iget-boolean v3, p0, Lcom/miui/home/launcher/Folder;->mEnableShowFolderContentBg:Z
@@ -1958,51 +1970,51 @@
     :goto_0
     invoke-virtual {v1, v3}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 408
+    .line 419
     invoke-direct {p0}, Lcom/miui/home/launcher/Folder;->checkChildAnimEnable()Z
 
     move-result v1
 
     iput-boolean v1, p0, Lcom/miui/home/launcher/Folder;->mEnableChildViewChangeInFolderAnimation:Z
 
-    .line 410
+    .line 421
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->setVisibility(I)V
 
-    .line 412
+    .line 423
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mDragController:Lcom/miui/home/launcher/DragController;
 
     iget-object v3, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v1, v3}, Lcom/miui/home/launcher/DragController;->addDropTarget(Lcom/miui/home/launcher/DropTarget;)V
 
-    .line 413
+    .line 424
     invoke-virtual {p0}, Lcom/miui/home/launcher/Folder;->requestFocus()Z
 
-    .line 415
+    .line 426
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     if-eqz v1, :cond_3
 
-    .line 416
+    .line 427
     iget-object v1, v1, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
 
     invoke-interface {v1}, Lcom/miui/home/launcher/Folder$FolderCallback;->onOpen()V
 
-    .line 417
+    .line 428
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object v1, v1, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
 
     invoke-interface {v1, v0}, Lcom/miui/home/launcher/Folder$FolderCallback;->showPreview(Z)V
 
-    .line 421
+    .line 432
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     const/high16 v3, 0x3f800000    # 1.0f
 
     invoke-virtual {v1, v3}, Lcom/miui/home/launcher/FolderGridView;->setAlpha(F)V
 
-    .line 422
+    .line 433
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
@@ -2013,10 +2025,10 @@
 
     const/4 v1, 0x0
 
-    .line 423
+    .line 434
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/Folder;->setBackgroundAlpha(F)V
 
-    .line 424
+    .line 435
     iget-object v3, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object v3, v3, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
@@ -2025,19 +2037,19 @@
 
     invoke-interface {v3, v4}, Lcom/miui/home/launcher/Folder$FolderCallback;->getPreviewPosition(Landroid/graphics/Rect;)F
 
-    .line 425
+    .line 436
     iget-object v3, p0, Lcom/miui/home/launcher/Folder;->mTmpPos:[F
 
     aput v1, v3, v2
 
     aput v1, v3, v0
 
-    .line 426
+    .line 437
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-static {v1, p0, v3, v0, v0}, Lcom/miui/home/launcher/common/Utilities;->getDescendantCoordRelativeToAncestor(Landroid/view/View;Landroid/view/View;[FZZ)F
 
-    .line 427
+    .line 438
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mContentRect:Landroid/graphics/Rect;
 
     iget-object v3, p0, Lcom/miui/home/launcher/Folder;->mTmpPos:[F
@@ -2070,17 +2082,17 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
-    .line 428
+    .line 439
     invoke-virtual {v3}, Lcom/miui/home/launcher/FolderGridView;->getMeasuredHeight()I
 
     move-result v3
 
     add-int/2addr v2, v3
 
-    .line 427
+    .line 438
     invoke-virtual {v1, v4, v5, v0, v2}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 429
+    .line 440
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mPreviewPosRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
@@ -2105,7 +2117,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/Folder;->mOpenCloseScale:F
 
-    .line 431
+    .line 442
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object v0, v0, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
@@ -2120,7 +2132,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 432
+    .line 443
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object v0, v0, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
@@ -2129,12 +2141,12 @@
 
     move-result v0
 
-    .line 433
+    .line 444
     invoke-virtual {p0}, Lcom/miui/home/launcher/Folder;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f07007f
+    const v2, 0x7f070082
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -2152,11 +2164,11 @@
 
     iput v0, p0, Lcom/miui/home/launcher/Folder;->mItemIconToPreviewIconScale:F
 
-    .line 436
+    .line 447
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/Folder;->updateFolderClingPaddingTop()V
 
-    .line 438
+    .line 449
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContentRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
@@ -2167,7 +2179,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/Folder;->mVisionCenterX:F
 
-    .line 439
+    .line 450
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContentRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
@@ -2186,20 +2198,20 @@
 
     iput v0, p0, Lcom/miui/home/launcher/Folder;->mVisionCenterY:F
 
-    .line 440
+    .line 451
     iget v0, p0, Lcom/miui/home/launcher/Folder;->mVisionCenterX:F
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->setPivotX(F)V
 
-    .line 441
+    .line 452
     iget v0, p0, Lcom/miui/home/launcher/Folder;->mVisionCenterY:F
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->setPivotY(F)V
 
-    .line 442
+    .line 453
     invoke-direct {p0}, Lcom/miui/home/launcher/Folder;->setFakeIcon()V
 
-    .line 443
+    .line 454
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -2210,7 +2222,7 @@
 
     if-nez v0, :cond_2
 
-    .line 444
+    .line 455
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -2227,7 +2239,7 @@
 .method public onWallpaperColorChanged()V
     .locals 3
 
-    .line 788
+    .line 799
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->getCurrentWallpaperColorMode()I
 
     move-result v0
@@ -2236,7 +2248,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 789
+    .line 800
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContentBackground:Landroid/graphics/drawable/Drawable;
 
     const/high16 v1, -0x1000000
@@ -2247,7 +2259,7 @@
 
     goto :goto_0
 
-    .line 791
+    .line 802
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContentBackground:Landroid/graphics/drawable/Drawable;
 
@@ -2257,7 +2269,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 793
+    .line 804
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -2271,7 +2283,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 794
+    .line 805
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContentBackground:Landroid/graphics/drawable/Drawable;
 
     iget-boolean v1, p0, Lcom/miui/home/launcher/Folder;->mEnableShowFolderContentBg:Z
@@ -2295,12 +2307,12 @@
 .method public removeItem(Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 1
 
-    .line 371
+    .line 382
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderInfo;->remove(Lcom/miui/home/launcher/ShortcutInfo;)V
 
-    .line 372
+    .line 383
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->notifyDataSetChanged()V
@@ -2311,7 +2323,7 @@
 .method public setBackgroundAlpha(F)V
     .locals 2
 
-    .line 752
+    .line 763
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mBackground:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
@@ -2322,7 +2334,7 @@
 
     float-to-int p1, p1
 
-    .line 753
+    .line 764
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     :cond_0
@@ -2332,7 +2344,7 @@
 .method setContentAdapter(Landroid/widget/BaseAdapter;)V
     .locals 1
 
-    .line 382
+    .line 393
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderGridView;->setAdapter(Landroid/widget/ListAdapter;)V
@@ -2343,12 +2355,12 @@
 .method public setContentAlpha(F)V
     .locals 1
 
-    .line 774
+    .line 785
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 775
+    .line 786
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderGridView;->setAlpha(F)V
@@ -2359,7 +2371,7 @@
 .method public setDragController(Lcom/miui/home/launcher/DragController;)V
     .locals 0
 
-    .line 326
+    .line 337
     iput-object p1, p0, Lcom/miui/home/launcher/Folder;->mDragController:Lcom/miui/home/launcher/DragController;
 
     return-void
@@ -2368,7 +2380,7 @@
 .method public setFolderBackgroundViewPaddingTop(I)V
     .locals 1
 
-    .line 841
+    .line 852
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mBackgroundView:Landroid/view/ViewGroup;
 
     invoke-static {v0, p1}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingTop(Landroid/view/View;I)V
@@ -2379,7 +2391,7 @@
 .method public setFolderHeaderPaddingBottom(I)V
     .locals 1
 
-    .line 845
+    .line 856
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mHeader:Landroid/view/View;
 
     invoke-static {v0, p1}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingBottom(Landroid/view/View;I)V
@@ -2390,10 +2402,10 @@
 .method setLauncher(Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 386
+    .line 397
     iput-object p1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 387
+    .line 398
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -2406,7 +2418,7 @@
 .method public setOpenedScale(F)V
     .locals 0
 
-    .line 330
+    .line 341
     iput p1, p0, Lcom/miui/home/launcher/Folder;->mOpenedScale:F
 
     return-void
@@ -2415,7 +2427,7 @@
 .method public setupOutOfPreviewContent(F)V
     .locals 3
 
-    .line 758
+    .line 769
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object v0, v0, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
@@ -2424,7 +2436,7 @@
 
     move-result v0
 
-    .line 759
+    .line 770
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/FolderGridView;->getChildCount()I
@@ -2433,7 +2445,7 @@
 
     if-le v1, v0, :cond_0
 
-    .line 760
+    .line 771
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/FolderGridView;->getChildCount()I
@@ -2445,14 +2457,14 @@
     :goto_0
     if-lt v1, v0, :cond_0
 
-    .line 761
+    .line 772
     iget-object v2, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v2, v1}, Lcom/miui/home/launcher/FolderGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 762
+    .line 773
     invoke-virtual {v2, p1}, Landroid/view/View;->setAlpha(F)V
 
     add-int/lit8 v1, v1, -0x1
@@ -2468,17 +2480,17 @@
 
     if-nez p1, :cond_0
 
-    .line 578
+    .line 589
     iget-boolean v0, p0, Lcom/miui/home/launcher/Folder;->mEditAnimatorShowing:Z
 
     if-eqz v0, :cond_0
 
-    .line 579
+    .line 590
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mEditAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 580
+    .line 591
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderGridView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2487,7 +2499,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 583
+    .line 594
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -2503,7 +2515,7 @@
 
     goto/16 :goto_3
 
-    .line 587
+    .line 598
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mRenameEdit:Landroid/widget/EditText;
 
@@ -2515,7 +2527,7 @@
 
     move-result-object v0
 
-    .line 588
+    .line 599
     invoke-direct {p0}, Lcom/miui/home/launcher/Folder;->getEditText()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -2526,23 +2538,23 @@
 
     if-nez v1, :cond_2
 
-    .line 589
+    .line 600
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-static {v1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackFolderRename(Lcom/miui/home/launcher/FolderInfo;)V
 
-    .line 590
+    .line 601
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object v2, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1, v0, v2}, Lcom/miui/home/launcher/FolderInfo;->setTitle(Ljava/lang/CharSequence;Landroid/content/Context;)V
 
-    .line 592
+    .line 603
     :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/Folder;->updateAppearance()V
 
-    .line 593
+    .line 604
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isSceneShowing()Z
@@ -2551,7 +2563,7 @@
 
     if-nez v0, :cond_3
 
-    .line 594
+    .line 605
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/Folder;->showRecommendAppsSwitch(ZZ)V
 
     :cond_3
@@ -2559,35 +2571,35 @@
 
     if-eqz p2, :cond_5
 
-    .line 598
+    .line 609
     iget-boolean p2, p0, Lcom/miui/home/launcher/Folder;->mEditAnimatorShowing:Z
 
     if-eqz p2, :cond_4
 
-    .line 599
+    .line 610
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mEditAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
 
     return-void
 
-    .line 602
+    .line 613
     :cond_4
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mEditAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 603
+    .line 614
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 604
+    .line 615
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mRenameEdit:Landroid/widget/EditText;
 
     invoke-virtual {p2, v0}, Landroid/widget/EditText;->setVisibility(I)V
 
-    .line 605
+    .line 616
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     xor-int/lit8 p1, p1, 0x1
@@ -2596,36 +2608,36 @@
 
     return-void
 
-    .line 608
+    .line 619
     :cond_5
     iput-boolean p1, p0, Lcom/miui/home/launcher/Folder;->mIsEditing:Z
 
     xor-int/lit8 p2, p1, 0x1
 
-    .line 609
+    .line 620
     invoke-direct {p0, p2}, Lcom/miui/home/launcher/Folder;->setEnableContent(Z)V
 
     if-eqz p1, :cond_6
 
-    .line 611
+    .line 622
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mRenameEdit:Landroid/widget/EditText;
 
     invoke-virtual {p2}, Landroid/widget/EditText;->selectAll()V
 
     goto :goto_0
 
-    .line 613
+    .line 624
     :cond_6
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/Folder;->showOrHideSoftInput(Z)V
 
-    .line 614
+    .line 625
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {p2, v1}, Lcom/miui/home/launcher/FolderGridView;->setAlpha(F)V
 
-    .line 616
+    .line 627
     :goto_0
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
 
@@ -2643,7 +2655,7 @@
     :goto_1
     invoke-virtual {p2, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 617
+    .line 628
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mRenameEdit:Landroid/widget/EditText;
 
     if-eqz p1, :cond_8
@@ -2666,12 +2678,15 @@
 .method showOrHideFolderBorderLine(Z)V
     .locals 4
 
-    .line 867
+    .line 878
+    iput-boolean p1, p0, Lcom/miui/home/launcher/Folder;->mBorderLineShow:Z
+
+    .line 879
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mEditBackgroundAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 868
+    .line 880
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mEditBackgroundAnimator:Landroid/animation/ValueAnimator;
 
     const/4 v1, 0x2
@@ -2699,7 +2714,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setIntValues([I)V
 
-    .line 869
+    .line 881
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mEditBackgroundAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
@@ -2714,7 +2729,7 @@
 
     if-nez p1, :cond_0
 
-    .line 633
+    .line 644
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mRecommendAppsSwitch:Lcom/miui/home/launcher/NonOverlapLinearLayout;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/NonOverlapLinearLayout;->getVisibility()I
@@ -2730,7 +2745,7 @@
     :cond_0
     move v1, v0
 
-    .line 634
+    .line 645
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Folder;->getInfo()Lcom/miui/home/launcher/FolderInfo;
 
@@ -2750,7 +2765,7 @@
 
     return-void
 
-    .line 636
+    .line 647
     :cond_1
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -2760,10 +2775,10 @@
 
     if-nez v1, :cond_2
 
-    .line 637
+    .line 648
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/Folder;->transFolderGrid(ZZ)V
 
-    .line 639
+    .line 650
     :cond_2
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mRecommendAppsSwitch:Lcom/miui/home/launcher/NonOverlapLinearLayout;
 
@@ -2779,7 +2794,7 @@
 
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 640
+    .line 651
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;
@@ -2792,7 +2807,7 @@
 
     if-eqz p1, :cond_5
 
-    .line 641
+    .line 652
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
@@ -2808,17 +2823,17 @@
 
     if-eqz p2, :cond_4
 
-    .line 663
+    .line 674
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mRecommendAppsSwitch:Lcom/miui/home/launcher/NonOverlapLinearLayout;
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/NonOverlapLinearLayout;->setVisibility(I)V
 
-    .line 664
+    .line 675
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mRecommendAppsSwitch:Lcom/miui/home/launcher/NonOverlapLinearLayout;
 
     invoke-virtual {p2, v1}, Lcom/miui/home/launcher/NonOverlapLinearLayout;->setAlpha(F)V
 
-    .line 665
+    .line 676
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mRecommendAppsSwitch:Lcom/miui/home/launcher/NonOverlapLinearLayout;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/NonOverlapLinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2833,7 +2848,7 @@
 
     int-to-long v0, p2
 
-    .line 666
+    .line 677
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -2842,7 +2857,7 @@
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/Folder$8;-><init>(Lcom/miui/home/launcher/Folder;)V
 
-    .line 667
+    .line 678
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->setUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -2851,7 +2866,7 @@
 
     invoke-direct {p2}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    .line 674
+    .line 685
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -2860,13 +2875,13 @@
 
     goto :goto_2
 
-    .line 676
+    .line 687
     :cond_4
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mRecommendAppsSwitch:Lcom/miui/home/launcher/NonOverlapLinearLayout;
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/NonOverlapLinearLayout;->setVisibility(I)V
 
-    .line 677
+    .line 688
     iget-object p2, p0, Lcom/miui/home/launcher/Folder;->mRecommendAppsSwitch:Lcom/miui/home/launcher/NonOverlapLinearLayout;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/NonOverlapLinearLayout;->setAlpha(F)V
@@ -2877,7 +2892,7 @@
     :goto_1
     if-eqz p2, :cond_6
 
-    .line 643
+    .line 654
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mRecommendAppsSwitch:Lcom/miui/home/launcher/NonOverlapLinearLayout;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/NonOverlapLinearLayout;->animate()Landroid/view/ViewPropertyAnimator;
@@ -2892,7 +2907,7 @@
 
     int-to-long v0, p2
 
-    .line 644
+    .line 655
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -2901,7 +2916,7 @@
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/Folder$7;-><init>(Lcom/miui/home/launcher/Folder;)V
 
-    .line 645
+    .line 656
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -2910,7 +2925,7 @@
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/Folder$6;-><init>(Lcom/miui/home/launcher/Folder;)V
 
-    .line 650
+    .line 661
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->setUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -2919,7 +2934,7 @@
 
     invoke-direct {p2}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    .line 657
+    .line 668
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -2928,7 +2943,7 @@
 
     goto :goto_2
 
-    .line 659
+    .line 670
     :cond_6
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mRecommendAppsSwitch:Lcom/miui/home/launcher/NonOverlapLinearLayout;
 
@@ -2943,14 +2958,14 @@
 .method public startDrag(Landroid/view/View;)V
     .locals 4
 
-    .line 741
+    .line 752
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 742
+    .line 753
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mDragController:Lcom/miui/home/launcher/DragController;
 
     const/4 v2, 0x1
@@ -2959,10 +2974,10 @@
 
     invoke-virtual {v1, p1, v2, p0, v3}, Lcom/miui/home/launcher/DragController;->startDrag(Landroid/view/View;ZLcom/miui/home/launcher/DragSource;I)Z
 
-    .line 743
+    .line 754
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mDragItem:Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 744
+    .line 755
     iget-object p1, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/FolderGridView;->addDragOverItem(Lcom/miui/home/launcher/ShortcutInfo;)V
@@ -2973,40 +2988,40 @@
 .method protected updateAppearance()V
     .locals 4
 
-    .line 534
+    .line 545
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 535
+    .line 546
     invoke-direct {p0}, Lcom/miui/home/launcher/Folder;->getEditText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 536
+    .line 547
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 537
+    .line 548
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mDefaultUnnamedFolderName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 538
+    .line 549
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mRenameEdit:Landroid/widget/EditText;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mDefaultUnnamedFolderName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 539
+    .line 550
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object v0, v0, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
@@ -3023,7 +3038,7 @@
 
     goto :goto_0
 
-    .line 541
+    .line 552
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
 
@@ -3037,12 +3052,12 @@
 
     if-nez v1, :cond_1
 
-    .line 542
+    .line 553
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 543
+    .line 554
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object v1, v1, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
@@ -3057,7 +3072,7 @@
 
     invoke-interface {v1, v2}, Lcom/miui/home/launcher/Folder$FolderCallback;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 545
+    .line 556
     :cond_1
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mRenameEdit:Landroid/widget/EditText;
 
@@ -3075,7 +3090,7 @@
 
     if-nez v1, :cond_2
 
-    .line 546
+    .line 557
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mRenameEdit:Landroid/widget/EditText;
 
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
@@ -3088,7 +3103,7 @@
 .method public updateFolderClingPaddingTop()V
     .locals 4
 
-    .line 452
+    .line 463
     iget-object v0, p0, Lcom/miui/home/launcher/Folder;->mPreviewPosRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->centerY()I
@@ -3109,21 +3124,21 @@
 
     div-float/2addr v0, v1
 
-    .line 453
+    .line 464
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getStatusBarHeight()I
 
     move-result v1
 
     mul-int/lit8 v1, v1, 0x2
 
-    .line 454
+    .line 465
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceHeight()I
 
     move-result v2
 
     iget-object v3, p0, Lcom/miui/home/launcher/Folder;->mContent:Lcom/miui/home/launcher/FolderGridView;
 
-    .line 455
+    .line 466
     invoke-virtual {v3}, Lcom/miui/home/launcher/FolderGridView;->calculateHeight()I
 
     move-result v3
@@ -3140,7 +3155,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 456
+    .line 467
     invoke-virtual {v3}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;
 
     move-result-object v3
@@ -3155,7 +3170,7 @@
 
     sub-int/2addr v2, v3
 
-    .line 457
+    .line 468
     invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v2
@@ -3172,7 +3187,7 @@
 
     float-to-int v0, v3
 
-    .line 460
+    .line 471
     iget-object v1, p0, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;

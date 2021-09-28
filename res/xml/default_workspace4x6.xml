@@ -256,22 +256,6 @@
         launcher:screen="1"
         launcher:x="1"
         launcher:y="2" />
-    <favorite
-        launcher:className="com.baidu.baidumaps.WelcomeScreen"
-        launcher:packageName="com.baidu.BaiduMap"
-        launcher:screen="1"
-        launcher:x="2"
-        launcher:y="2" />
-    <command
-        launcher:methodName="isXiaomiOrRedmiKSeries"
-        launcher:methodResult="true">
-        <favorite
-            launcher:className="com.mqunar.splash.SplashActivity"
-            launcher:packageName="com.Qunar"
-            launcher:screen="1"
-            launcher:x="3"
-            launcher:y="2" />
-    </command>
     <include
         layout="@xml/layout_folder_recommend" />
     <include

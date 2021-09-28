@@ -17,7 +17,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onCreate$495(Lcom/miui/home/launcher/AddItemActivity;)V
+.method public static synthetic lambda$onCreate$0(Lcom/miui/home/launcher/AddItemActivity;)V
     .locals 4
 
     .line 40
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$setupWidget$496(Lcom/miui/home/launcher/AddItemActivity;Landroid/appwidget/AppWidgetProviderInfo;Lcom/miui/home/launcher/Launcher;)V
+.method public static synthetic lambda$setupWidget$1(Lcom/miui/home/launcher/AddItemActivity;Landroid/appwidget/AppWidgetProviderInfo;Lcom/miui/home/launcher/Launcher;)V
     .locals 7
 
     .line 57
@@ -127,9 +127,9 @@
     move-result-object v0
 
     .line 56
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$AddItemActivity$H5zNOCtmitR999v50TPkDWY9fK8;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$AddItemActivity$RFCEqIK8NDL_kJOys1FAxDQFq4s;
 
-    invoke-direct {v1, p0, p1, v0}, Lcom/miui/home/launcher/-$$Lambda$AddItemActivity$H5zNOCtmitR999v50TPkDWY9fK8;-><init>(Lcom/miui/home/launcher/AddItemActivity;Landroid/appwidget/AppWidgetProviderInfo;Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {v1, p0, p1, v0}, Lcom/miui/home/launcher/-$$Lambda$AddItemActivity$RFCEqIK8NDL_kJOys1FAxDQFq4s;-><init>(Lcom/miui/home/launcher/AddItemActivity;Landroid/appwidget/AppWidgetProviderInfo;Lcom/miui/home/launcher/Launcher;)V
 
     invoke-static {v1}, Lcom/miui/home/launcher/common/BackgroundThread;->postAtFrontOfQueue(Ljava/lang/Runnable;)V
 
@@ -219,9 +219,9 @@
     if-ne p1, v0, :cond_1
 
     .line 39
-    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$AddItemActivity$d6XkubgEhIgJnJulIb0Vsrk-gkQ;
+    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$AddItemActivity$abtTin6RH7oxBHHOjZ6jRWUFbtA;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/-$$Lambda$AddItemActivity$d6XkubgEhIgJnJulIb0Vsrk-gkQ;-><init>(Lcom/miui/home/launcher/AddItemActivity;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/-$$Lambda$AddItemActivity$abtTin6RH7oxBHHOjZ6jRWUFbtA;-><init>(Lcom/miui/home/launcher/AddItemActivity;)V
 
     .line 46
     invoke-static {p1}, Lcom/miui/home/launcher/common/BackgroundThread;->postAtFrontOfQueue(Ljava/lang/Runnable;)V

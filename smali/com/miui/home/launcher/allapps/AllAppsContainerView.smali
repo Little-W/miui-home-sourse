@@ -124,7 +124,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$onDropBack$120(Lcom/miui/home/launcher/DragObject;)V
+.method static synthetic lambda$onDropBack$1(Lcom/miui/home/launcher/DragObject;)V
     .locals 0
 
     .line 134
@@ -137,7 +137,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onFinishInflate$119(Lcom/miui/home/launcher/allapps/AllAppsContainerView;Landroid/view/View;Z)V
+.method public static synthetic lambda$onFinishInflate$0(Lcom/miui/home/launcher/allapps/AllAppsContainerView;Landroid/view/View;Z)V
     .locals 0
 
     if-eqz p2, :cond_1
@@ -593,9 +593,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsContainerView$QOKz_DbyFOLOVnwLuL_nAQACsdg;
+    new-instance v1, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsContainerView$GFHWt8fYRSXa0QT0Uzc3D1MP-V8;
 
-    invoke-direct {v1, p1}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsContainerView$QOKz_DbyFOLOVnwLuL_nAQACsdg;-><init>(Lcom/miui/home/launcher/DragObject;)V
+    invoke-direct {v1, p1}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsContainerView$GFHWt8fYRSXa0QT0Uzc3D1MP-V8;-><init>(Lcom/miui/home/launcher/DragObject;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DragView;->setOnRemoveCallback(Ljava/lang/Runnable;)V
 
@@ -639,9 +639,9 @@
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
     .line 77
-    new-instance v0, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsContainerView$xdqDaZ86b4Pqrt-0JlUqobmQChA;
+    new-instance v0, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsContainerView$s-ip90mgQ5V6SHkW51e_qUAoeVk;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsContainerView$xdqDaZ86b4Pqrt-0JlUqobmQChA;-><init>(Lcom/miui/home/launcher/allapps/AllAppsContainerView;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsContainerView$s-ip90mgQ5V6SHkW51e_qUAoeVk;-><init>(Lcom/miui/home/launcher/allapps/AllAppsContainerView;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
@@ -661,7 +661,7 @@
 
     iput-boolean v1, p0, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->mIsLightMode:Z
 
-    const v1, 0x7f0a0041
+    const v1, 0x7f0a004b
 
     .line 88
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->findViewById(I)Landroid/view/View;
@@ -672,7 +672,7 @@
 
     iput-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->mCategoryContainer:Lcom/miui/home/launcher/allapps/AllAppsCategoryContainer;
 
-    const v1, 0x7f0a0045
+    const v1, 0x7f0a004f
 
     .line 89
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->findViewById(I)Landroid/view/View;
@@ -683,7 +683,7 @@
 
     iput-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->mSearchContainer:Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;
 
-    const v1, 0x7f0a0044
+    const v1, 0x7f0a004e
 
     .line 90
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->findViewById(I)Landroid/view/View;
@@ -694,7 +694,7 @@
 
     iput-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->mSearchBarHolder:Lcom/miui/home/launcher/allapps/AllAppsSearchBarHolderView;
 
-    const v1, 0x7f0a0043
+    const v1, 0x7f0a004d
 
     .line 91
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->findViewById(I)Landroid/view/View;

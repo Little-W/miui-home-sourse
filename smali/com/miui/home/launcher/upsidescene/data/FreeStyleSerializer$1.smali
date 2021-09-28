@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer$1;
+.class Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer$1;
 .super Ljava/lang/Object;
 .source "FreeStyleSerializer.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 326
+    .line 327
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public compare(Lcom/miui/home/launcher/upsidescene/data/Sprite;Lcom/miui/home/launcher/upsidescene/data/Sprite;)I
     .locals 0
 
-    .line 328
+    .line 329
     iget p1, p1, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mIndex:I
 
     iget p2, p2, Lcom/miui/home/launcher/upsidescene/data/Sprite;->mIndex:I
@@ -54,7 +54,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 326
+    .line 327
     check-cast p1, Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     check-cast p2, Lcom/miui/home/launcher/upsidescene/data/Sprite;

@@ -137,7 +137,7 @@
     .line 122
     invoke-virtual {p1, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    const v1, 0x7f0a00e6
+    const v1, 0x7f0a010e
 
     .line 123
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -149,7 +149,7 @@
     .line 124
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v1, 0x7f0a01d4
+    const v1, 0x7f0a0221
 
     .line 125
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -173,7 +173,7 @@
     .line 128
     invoke-virtual {v1, v4, v4, v4, v4}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
-    const v1, 0x7f0a0085
+    const v1, 0x7f0a009e
 
     .line 129
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -188,7 +188,7 @@
     .line 131
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setAlpha(F)V
 
-    const v1, 0x7f0a005e
+    const v1, 0x7f0a0069
 
     .line 132
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -199,7 +199,7 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const v1, 0x7f0a00d0
+    const v1, 0x7f0a00f3
 
     .line 133
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

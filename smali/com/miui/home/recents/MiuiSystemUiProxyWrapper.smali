@@ -17,37 +17,37 @@
     invoke-direct {p0}, Lcom/miui/home/recents/SystemUiProxyWrapper;-><init>()V
 
     .line 19
-    new-instance v0, Lcom/miui/home/recents/-$$Lambda$MiuiSystemUiProxyWrapper$xYRcaL79ur9YW8UCJUT2GADVb4M;
+    new-instance v0, Lcom/miui/home/recents/-$$Lambda$MiuiSystemUiProxyWrapper$5bzGHuESjEhwlDt0k0wbBOztTCo;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/recents/-$$Lambda$MiuiSystemUiProxyWrapper$xYRcaL79ur9YW8UCJUT2GADVb4M;-><init>(Lcom/miui/home/recents/MiuiSystemUiProxyWrapper;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/-$$Lambda$MiuiSystemUiProxyWrapper$5bzGHuESjEhwlDt0k0wbBOztTCo;-><init>(Lcom/miui/home/recents/MiuiSystemUiProxyWrapper;)V
 
     iput-object v0, p0, Lcom/miui/home/recents/MiuiSystemUiProxyWrapper;->mSystemUiProxyDeathRecipient:Landroid/os/IBinder$DeathRecipient;
 
     return-void
 .end method
 
-.method public static synthetic lambda$new$520(Lcom/miui/home/recents/MiuiSystemUiProxyWrapper;)V
-    .locals 2
-
-    .line 20
-    sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->MAIN_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
-
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$MiuiSystemUiProxyWrapper$Xv6cWKM4iVPocqPlN-ER9LeUwlk;
-
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/-$$Lambda$MiuiSystemUiProxyWrapper$Xv6cWKM4iVPocqPlN-ER9LeUwlk;-><init>(Lcom/miui/home/recents/MiuiSystemUiProxyWrapper;)V
-
-    invoke-virtual {v0, v1}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public static synthetic lambda$null$519(Lcom/miui/home/recents/MiuiSystemUiProxyWrapper;)V
+.method public static synthetic lambda$new$0(Lcom/miui/home/recents/MiuiSystemUiProxyWrapper;)V
     .locals 1
 
     const/4 v0, 0x0
 
     .line 20
     invoke-direct {p0, v0}, Lcom/miui/home/recents/MiuiSystemUiProxyWrapper;->setProxy(Lcom/android/systemui/shared/recents/IMiuiSystemUiProxy;)V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$new$1(Lcom/miui/home/recents/MiuiSystemUiProxyWrapper;)V
+    .locals 2
+
+    .line 20
+    sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->MAIN_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
+
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$MiuiSystemUiProxyWrapper$C_irXsuhlHrZIIzWqw2gKuN8Zzo;
+
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/-$$Lambda$MiuiSystemUiProxyWrapper$C_irXsuhlHrZIIzWqw2gKuN8Zzo;-><init>(Lcom/miui/home/recents/MiuiSystemUiProxyWrapper;)V
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method

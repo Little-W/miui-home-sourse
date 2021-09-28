@@ -231,6 +231,28 @@
     return-void
 .end method
 
+.method public static doUIConsumerSerialized(Ljava/util/function/Consumer;Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/util/function/Consumer<",
+            "TR;>;",
+            "Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;",
+            ")V"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    .line 169
+    invoke-static {v0, p0, v0, p1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->execSerial(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;Ljava/util/concurrent/Executor;)V
+
+    return-void
+.end method
+
 .method private static exec(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)Landroid/os/AsyncTask;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -385,6 +407,15 @@
 
     .line 165
     sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->LAUNCHER_THREAD_POOL_EXECUTOR:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    return-object v0
+.end method
+
+.method public static getScreenSerialExecutor()Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
+    .locals 1
+
+    .line 178
+    sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sScreenSerialExecutor:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
 
     return-object v0
 .end method

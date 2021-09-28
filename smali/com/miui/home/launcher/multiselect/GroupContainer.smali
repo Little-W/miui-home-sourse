@@ -46,7 +46,7 @@
 
     if-eqz v1, :cond_1
 
-    const v0, 0x7f1000f9
+    const v0, 0x7f100153
 
     return v0
 
@@ -62,7 +62,7 @@
 
     if-eqz v1, :cond_2
 
-    const v0, 0x7f1000fa
+    const v0, 0x7f100154
 
     return v0
 
@@ -74,12 +74,12 @@
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f1000fb
+    const v0, 0x7f100155
 
     return v0
 
     :cond_3
-    const v0, 0x7f1000f8
+    const v0, 0x7f100152
 
     return v0
 .end method
@@ -92,12 +92,12 @@
     .line 23
     invoke-super {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->onFinishInflate()V
 
-    const v0, 0x7f0800c5
+    const v0, 0x7f0800ec
 
     .line 25
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/GroupContainer;->setImageResource(I)V
 
-    const v0, 0x7f1000f6
+    const v0, 0x7f100150
 
     .line 26
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/GroupContainer;->setTextId(I)V

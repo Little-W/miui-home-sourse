@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/LauncherModel$6;
+.class Lcom/miui/home/launcher/LauncherModel$6;
 .super Ljava/lang/Object;
 .source "LauncherModel.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -27,7 +27,7 @@
 .method constructor <init>(Landroid/content/ContentResolver;Lcom/miui/home/launcher/FolderInfo;)V
     .locals 0
 
-    .line 804
+    .line 807
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$6;->val$cr:Landroid/content/ContentResolver;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$6;->val$info:Lcom/miui/home/launcher/FolderInfo;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 806
+    .line 809
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$6;->val$cr:Landroid/content/ContentResolver;
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$6;->val$info:Lcom/miui/home/launcher/FolderInfo;

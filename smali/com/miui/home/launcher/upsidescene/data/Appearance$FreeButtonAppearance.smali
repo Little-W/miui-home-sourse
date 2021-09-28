@@ -65,11 +65,11 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/data/Appearance$FreeButtonAppearance;->mPath:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lmiui/util/FileAccessable$Factory;->create(Ljava/lang/String;Ljava/lang/String;)Lmiui/util/FileAccessable;
+    invoke-static {v1, v2}, Lcom/miui/home/library/utils/FileAccessable$Factory;->create(Ljava/lang/String;Ljava/lang/String;)Lcom/miui/home/library/utils/FileAccessable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->getFreeButton(Lmiui/util/FileAccessable;)Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->getFreeButton(Lcom/miui/home/library/utils/FileAccessable;)Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;
 
     move-result-object v0
 

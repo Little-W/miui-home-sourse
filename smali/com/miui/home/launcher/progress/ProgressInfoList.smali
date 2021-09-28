@@ -6,7 +6,7 @@
 # static fields
 .field private static final sPrepareLock:Ljava/lang/Object;
 
-.field private static sProgressInfoReady:Z
+.field private static sProgressInfoReady:Z = false
 
 
 # instance fields
@@ -181,7 +181,7 @@
     const-string v3, "waitingForReady"
 
     .line 110
-    invoke-static {v2, v3, v1}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 112
     :goto_0
@@ -338,7 +338,7 @@
     const-string v2, "writeBackToFile success"
 
     .line 246
-    invoke-static {v1, v2}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -354,7 +354,7 @@
     const-string v3, "writeBackToFile"
 
     .line 248
-    invoke-static {v2, v3, v1}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 250
     :goto_1
@@ -634,7 +634,7 @@
 
     move-result-object v1
 
-    invoke-static {p1, v1}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -650,7 +650,7 @@
     const-string v1, "getProgressInfo"
 
     .line 199
-    invoke-static {p2, v1, p1}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p2, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 200
     monitor-exit v0
@@ -785,7 +785,7 @@
 
     move-result-object v5
 
-    invoke-static {v3, v5}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -813,7 +813,7 @@
     const-string v6, "getStatusTitleMap"
 
     .line 218
-    invoke-static {v5, v6, v3}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v5, v6, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_2
     if-eqz v4, :cond_1
@@ -933,7 +933,7 @@
 
     move-result-object p2
 
-    invoke-static {v1, p2}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -975,7 +975,7 @@
     const-string p3, "recordProgressInfo"
 
     .line 144
-    invoke-static {p2, p3, p1}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p2, p3, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p1, 0x0
 
@@ -1024,7 +1024,7 @@
 
     move-result-object p2
 
-    invoke-static {v1, p2}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1067,7 +1067,7 @@
     const-string v0, "recordStatusTitleMap"
 
     .line 161
-    invoke-static {p2, v0, p1}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p2, v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p1, 0x0
 
@@ -1100,7 +1100,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lmiui/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 173
     iget-object v1, p0, Lcom/miui/home/launcher/progress/ProgressInfoList;->mProgressList:Ljava/util/Map;

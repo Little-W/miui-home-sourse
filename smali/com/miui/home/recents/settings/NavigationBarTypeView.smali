@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private mFolme:Lmiui/animation/IFolme;
+.field private mFolme:Lmiuix/animation/IFolme;
 
 
 # direct methods
@@ -57,11 +57,11 @@
 
     aput-object v3, v2, v0
 
-    invoke-static {v2}, Lmiui/animation/Folme;->useAt([Landroid/view/View;)Lmiui/animation/IFolme;
+    invoke-static {v2}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/miui/home/recents/settings/NavigationBarTypeView;->mFolme:Lmiui/animation/IFolme;
+    iput-object v2, p0, Lcom/miui/home/recents/settings/NavigationBarTypeView;->mFolme:Lmiuix/animation/IFolme;
 
     :cond_0
     add-int/lit8 v1, v1, 0x1
@@ -76,13 +76,13 @@
     .locals 1
 
     .line 39
-    iget-object v0, p0, Lcom/miui/home/recents/settings/NavigationBarTypeView;->mFolme:Lmiui/animation/IFolme;
+    iget-object v0, p0, Lcom/miui/home/recents/settings/NavigationBarTypeView;->mFolme:Lmiuix/animation/IFolme;
 
-    invoke-interface {v0}, Lmiui/animation/IFolme;->touch()Lmiui/animation/ITouchStyle;
+    invoke-interface {v0}, Lmiuix/animation/IFolme;->touch()Lmiuix/animation/ITouchStyle;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lmiui/animation/ITouchStyle;->onMotionEvent(Landroid/view/MotionEvent;)V
+    invoke-interface {v0, p1}, Lmiuix/animation/ITouchStyle;->onMotionEvent(Landroid/view/MotionEvent;)V
 
     .line 40
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z

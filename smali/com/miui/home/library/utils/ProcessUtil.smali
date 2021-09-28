@@ -243,8 +243,6 @@
 
     new-array v4, v3, [Ljava/lang/Class;
 
-    check-cast v4, [Ljava/lang/Class;
-
     .line 84
     invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 

@@ -7,7 +7,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15.0dip"
@@ -16,13 +16,15 @@
         <TextView
             android:textSize="@dimen/small_window_title_text_size"
             android:textColor="@color/small_window_title_text_color"
+            android:layout_gravity="center_vertical"
             android:id="@id/text"
-            android:layout_width="wrap_content"
+            android:layout_width="0.0dip"
             android:layout_height="wrap_content"
             android:text="@string/small_window_title_text"
-            android:layout_centerVertical="true"
+            android:layout_weight="1.0"
             android:fontFamily="mipro-medium" />
         <ImageButton
+            android:layout_gravity="center_vertical"
             android:id="@id/btnEdit"
             android:background="@android:color/transparent"
             android:padding="10.549988dip"
@@ -30,10 +32,8 @@
             android:layout_height="36.359985dip"
             android:src="@drawable/edit"
             android:scaleType="fitXY"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/small_window_edit_title"
-            android:layout_alignParentEnd="true" />
-    </RelativeLayout>
+            android:contentDescription="@string/small_window_edit_title" />
+    </LinearLayout>
     <com.miui.home.smallwindow.SmallWindowListRecyclerView
         android:id="@id/small_window_list"
         android:clipToPadding="true"

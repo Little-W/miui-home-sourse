@@ -153,7 +153,7 @@
 .method public static getMiddleRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Landroid/graphics/RectF;
     .locals 5
 
-    .line 361
+    .line 360
     iget v0, p0, Landroid/graphics/RectF;->left:F
 
     iget v1, p1, Landroid/graphics/RectF;->left:F
@@ -164,7 +164,7 @@
 
     div-float/2addr v0, v1
 
-    .line 362
+    .line 361
     iget v2, p0, Landroid/graphics/RectF;->top:F
 
     iget v3, p1, Landroid/graphics/RectF;->top:F
@@ -173,7 +173,7 @@
 
     div-float/2addr v2, v1
 
-    .line 363
+    .line 362
     invoke-virtual {p0}, Landroid/graphics/RectF;->width()F
 
     move-result v3
@@ -186,7 +186,7 @@
 
     div-float/2addr v3, v1
 
-    .line 364
+    .line 363
     invoke-virtual {p0}, Landroid/graphics/RectF;->height()F
 
     move-result p0
@@ -199,7 +199,7 @@
 
     div-float/2addr p0, v1
 
-    .line 365
+    .line 364
     new-instance p1, Landroid/graphics/RectF;
 
     add-float/2addr v3, v0
@@ -243,7 +243,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070208
+    const v1, 0x7f070312
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -256,7 +256,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070207
+    const v2, 0x7f070311
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -330,7 +330,7 @@
 
     move-result-object p0
 
-    const v1, 0x7f0701fc
+    const v1, 0x7f070306
 
     const/4 v2, 0x1
 
@@ -466,7 +466,7 @@
 
     if-eqz p0, :cond_3
 
-    .line 369
+    .line 368
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -475,13 +475,13 @@
 
     goto :goto_0
 
-    .line 372
+    .line 371
     :cond_0
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
-    .line 373
+    .line 372
     instance-of v1, p0, Lcom/miui/home/launcher/Launcher;
 
     if-nez v1, :cond_1
@@ -492,7 +492,7 @@
 
     check-cast p0, Landroid/content/ContextWrapper;
 
-    .line 374
+    .line 373
     invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
     move-result-object p0
@@ -572,7 +572,7 @@
 .method public static isForceFSGNavBar(Landroid/content/Context;)Z
     .locals 1
 
-    .line 357
+    .line 356
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -589,7 +589,7 @@
 .method public static isHideGestureLine(Landroid/content/Context;)Z
     .locals 2
 
-    .line 352
+    .line 351
     invoke-static {p0}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->isUseGestureVersion3(Landroid/content/Context;)Z
 
     move-result v0
@@ -598,7 +598,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 353
+    .line 352
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -895,7 +895,7 @@
 .end method
 
 .method public static setFitInsetsTypes(Landroid/view/WindowManager$LayoutParams;I)V
-    .locals 7
+    .locals 8
 
     .line 344
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -910,37 +910,33 @@
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
-
-    const-string v1, "setFitInsetsTypes"
-
-    sget-object v2, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
-
-    const/4 v3, 0x1
-
-    new-array v4, v3, [Ljava/lang/Class;
-
-    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const/4 v6, 0x0
-
-    aput-object v5, v4, v6
-
-    .line 348
-    invoke-static {v2, v4}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
-
     move-result-object v2
 
-    new-array v3, v3, [Ljava/lang/Object;
+    const-string v4, "setFitInsetsTypes"
+
+    sget-object v5, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
+
+    const/4 v0, 0x1
+
+    new-array v6, v0, [Ljava/lang/Class;
+
+    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    const/4 v3, 0x0
+
+    aput-object v1, v6, v3
+
+    new-array v7, v0, [Ljava/lang/Object;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    aput-object p1, v3, v6
+    aput-object p1, v7, v3
 
-    .line 347
-    invoke-static {v0, p0, v1, v2, v3}, Lcom/miui/launcher/utils/ReflectUtils;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-object v3, p0
+
+    invoke-static/range {v2 .. v7}, Lcom/miui/launcher/utils/ReflectUtils;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)V
 
     return-void
 .end method

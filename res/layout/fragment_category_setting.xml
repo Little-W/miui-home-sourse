@@ -32,7 +32,7 @@
                 android:text="@string/category_group_summary"
                 android:maxLines="2" />
         </LinearLayout>
-        <miui.widget.SlidingButton
+        <miuix.slidingwidget.widget.SlidingButton
             android:layout_gravity="end|center"
             android:id="@id/app_category_enable_sliding_button"
             android:focusable="false"

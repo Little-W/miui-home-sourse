@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;->getBitmapDrawable(Lmiui/util/FileAccessable;Landroid/content/Context;)Landroid/graphics/drawable/BitmapDrawable;
+    value = Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;->getBitmapDrawable(Lcom/miui/home/library/utils/FileAccessable;Landroid/content/Context;)Landroid/graphics/drawable/BitmapDrawable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

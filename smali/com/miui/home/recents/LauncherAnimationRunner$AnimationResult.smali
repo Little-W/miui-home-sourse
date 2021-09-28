@@ -17,7 +17,7 @@
 # instance fields
 .field private mAnimator:Landroid/animation/AnimatorSet;
 
-.field private final mFinishRunnable:Ljava/lang/Runnable;
+.field private mFinishRunnable:Ljava/lang/Runnable;
 
 .field private mFinished:Z
 
@@ -64,9 +64,11 @@
 
     if-nez v0, :cond_0
 
-    .line 128
     iget-object v0, p0, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->mFinishRunnable:Ljava/lang/Runnable;
 
+    if-eqz v0, :cond_0
+
+    .line 128
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     const-string v0, "LauncherAnimationRunner"
@@ -81,6 +83,11 @@
     .line 130
     iput-boolean v0, p0, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->mFinished:Z
 
+    const/4 v0, 0x0
+
+    .line 131
+    iput-object v0, p0, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->mFinishRunnable:Ljava/lang/Runnable;
+
     :cond_0
     return-void
 .end method
@@ -88,46 +95,46 @@
 .method public setAnimation(Landroid/animation/AnimatorSet;)V
     .locals 2
 
-    .line 135
+    .line 136
     iget-boolean v0, p0, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->mInitialized:Z
 
     if-nez v0, :cond_2
 
     const/4 v0, 0x1
 
-    .line 138
+    .line 139
     iput-boolean v0, p0, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->mInitialized:Z
 
-    .line 139
+    .line 140
     iput-object p1, p0, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->mAnimator:Landroid/animation/AnimatorSet;
 
-    .line 140
+    .line 141
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->mAnimator:Landroid/animation/AnimatorSet;
 
     if-nez p1, :cond_0
 
-    .line 141
+    .line 142
     invoke-virtual {p0}, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->finish()V
 
     goto :goto_0
 
-    .line 142
+    .line 143
     :cond_0
     iget-boolean v0, p0, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->mFinished:Z
 
     if-eqz v0, :cond_1
 
-    .line 144
+    .line 145
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 145
+    .line 146
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->mAnimator:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->end()V
 
     goto :goto_0
 
-    .line 148
+    .line 149
     :cond_1
     new-instance v0, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult$1;
 
@@ -135,12 +142,12 @@
 
     invoke-virtual {p1, v0}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 154
+    .line 155
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->mAnimator:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 158
+    .line 159
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->mAnimator:Landroid/animation/AnimatorSet;
 
     const-wide/16 v0, 0x10
@@ -150,7 +157,7 @@
     :goto_0
     return-void
 
-    .line 136
+    .line 137
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 

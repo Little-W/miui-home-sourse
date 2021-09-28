@@ -1,11 +1,11 @@
 .class Lcom/miui/home/recents/NavStubView$18;
-.super Landroid/content/BroadcastReceiver;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "NavStubView.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/miui/home/recents/NavStubView;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/miui/home/recents/NavStubView;->startFirstTask()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -13,14 +13,10 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/miui/home/recents/NavStubView$18$_lancet;
-    }
-.end annotation
-
 
 # instance fields
+.field private cancelStartFirstTaskAnim:Z
+
 .field final synthetic this$0:Lcom/miui/home/recents/NavStubView;
 
 
@@ -28,113 +24,123 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 3363
+    .line 3292
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    return-void
-.end method
-
-.method static synthetic access$000(Lcom/miui/home/recents/NavStubView$18;Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/NavStubView$18;->onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
-
-    return-void
-.end method
-
-.method public static synthetic lambda$onReceive$273(Lcom/miui/home/recents/NavStubView$18;)V
-    .locals 2
-
-    .line 3369
-    iget-object v0, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
-
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$6900(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/AntiMistakeTouchView;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 3370
-    iget-object v0, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
-
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$6900(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/AntiMistakeTouchView;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
-
-    .line 3371
-    invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$7000(Lcom/miui/home/recents/NavStubView;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v1, 0x8
-
-    .line 3370
-    :goto_0
-    invoke-virtual {v0, v1}, Lcom/miui/home/recents/AntiMistakeTouchView;->updateVisibilityState(I)V
-
-    :cond_1
-    return-void
-.end method
-
-.method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 2
-
-    const-string p1, "com.android.systemui.fullscreen.statechange"
-
-    .line 3366
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 3367
-    iget-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
-
-    const-string v0, "isEnter"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result p2
-
-    invoke-static {p1, p2}, Lcom/miui/home/recents/NavStubView;->access$6802(Lcom/miui/home/recents/NavStubView;Z)Z
-
-    .line 3368
-    sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->GESTURE_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
-
-    new-instance p2, Lcom/miui/home/recents/-$$Lambda$NavStubView$18$HVWX0tZHUtZK5VHUNz6Fn1g6vvc;
-
-    invoke-direct {p2, p0}, Lcom/miui/home/recents/-$$Lambda$NavStubView$18$HVWX0tZHUtZK5VHUNz6Fn1g6vvc;-><init>(Lcom/miui/home/recents/NavStubView$18;)V
-
-    invoke-virtual {p1, p2}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+.method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Lcom/miui/home/recents/NavStubView$18$_lancet;->com_miui_home_launcher_aop_BroadcastReceiverHooker_onReceive(Lcom/miui/home/recents/NavStubView$18;Landroid/content/Context;Landroid/content/Intent;)V
+    const/4 p1, 0x1
+
+    .line 3302
+    iput-boolean p1, p0, Lcom/miui/home/recents/NavStubView$18;->cancelStartFirstTaskAnim:Z
+
+    return-void
+.end method
+
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
+
+    .line 3307
+    iget-boolean p1, p0, Lcom/miui/home/recents/NavStubView$18;->cancelStartFirstTaskAnim:Z
+
+    if-eqz p1, :cond_0
+
+    return-void
+
+    .line 3311
+    :cond_0
+    iget-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$6000(Lcom/miui/home/recents/NavStubView;Z)V
+
+    .line 3312
+    iget-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
+
+    sget-object v1, Lcom/miui/home/recents/NavStubView$ModeGesture;->IDLE:Lcom/miui/home/recents/NavStubView$ModeGesture;
+
+    invoke-static {p1, v1}, Lcom/miui/home/recents/NavStubView;->access$6700(Lcom/miui/home/recents/NavStubView;Lcom/miui/home/recents/NavStubView$ModeGesture;)V
+
+    .line 3314
+    :try_start_0
+    iget-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
+
+    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3100(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRecentsView()Lcom/miui/home/recents/views/RecentsView;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/recents/views/RecentsView;->getTaskStackView()Lcom/miui/home/recents/views/TaskStackView;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViews()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/miui/home/recents/views/TaskView;
+
+    if-eqz p1, :cond_1
+
+    const/4 v1, 0x1
+
+    .line 3316
+    invoke-virtual {p1, v0, v1, v0}, Lcom/miui/home/recents/views/TaskView;->launchTask(ZZZ)V
+    :try_end_0
+    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    .line 3319
+    sget-object v0, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
+
+    const-string v1, "start first task failed"
+
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 3320
+    iget-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
+
+    invoke-virtual {p1}, Lcom/miui/home/recents/NavStubView;->performHomeToHome()V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
+
+    .line 3296
+    iget-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$6000(Lcom/miui/home/recents/NavStubView;Z)V
+
+    const/4 p1, 0x0
+
+    .line 3297
+    iput-boolean p1, p0, Lcom/miui/home/recents/NavStubView$18;->cancelStartFirstTaskAnim:Z
 
     return-void
 .end method

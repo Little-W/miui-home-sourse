@@ -99,7 +99,7 @@
     .line 69
     iget-object v0, p0, Lcom/miui/home/recents/RecentsModel;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0601eb
+    const v1, 0x7f06032d
 
     .line 70
     invoke-virtual {v0, v1}, Landroid/content/Context;->getColor(I)I
@@ -109,7 +109,7 @@
     .line 71
     iget-object v1, p0, Lcom/miui/home/recents/RecentsModel;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f0601ec
+    const v2, 0x7f06032e
 
     .line 72
     invoke-virtual {v1, v2}, Landroid/content/Context;->getColor(I)I
@@ -119,7 +119,7 @@
     .line 73
     sget-boolean v2, Lcom/miui/home/launcher/DeviceConfig;->IS_MIUI_LITE_DEVICE:Z
 
-    const v3, 0x7f0b002e
+    const v3, 0x7f0b003d
 
     if-eqz v2, :cond_0
 
@@ -128,14 +128,14 @@
 
     iget-object v4, p0, Lcom/miui/home/recents/RecentsModel;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f0b001c
+    const v5, 0x7f0b0029
 
     .line 75
     invoke-virtual {p1, v5}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v5
 
-    const v6, 0x7f0b001b
+    const v6, 0x7f0b0028
 
     .line 76
     invoke-virtual {p1, v6}, Landroid/content/res/Resources;->getInteger(I)I
@@ -159,14 +159,14 @@
 
     iget-object v4, p0, Lcom/miui/home/recents/RecentsModel;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f0b001e
+    const v5, 0x7f0b002b
 
     .line 80
     invoke-virtual {p1, v5}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v5
 
-    const v6, 0x7f0b001d
+    const v6, 0x7f0b002a
 
     .line 81
     invoke-virtual {p1, v6}, Landroid/content/res/Resources;->getInteger(I)I

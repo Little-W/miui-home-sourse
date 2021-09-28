@@ -88,7 +88,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onChange$316(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;II)V
+.method public static synthetic lambda$onChange$0(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;II)V
     .locals 10
 
     .line 224
@@ -173,7 +173,7 @@
 
 # virtual methods
 .method public onChange(Z)V
-    .locals 14
+    .locals 13
 
     const/4 p1, 0x0
 
@@ -509,13 +509,13 @@
 
     move-result-object v1
 
-    new-instance v12, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$TLJRglRoeqe0ZV2zVE345QC3ZBs;
+    new-instance v12, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$O0oJNP8-UJawB7BHQePMWLeLHl8;
 
     move-object v2, v12
 
     move-object v3, p0
 
-    invoke-direct/range {v2 .. v11}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$TLJRglRoeqe0ZV2zVE345QC3ZBs;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;II)V
+    invoke-direct/range {v2 .. v11}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$O0oJNP8-UJawB7BHQePMWLeLHl8;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;Landroid/graphics/drawable/Drawable;Ljava/lang/String;II)V
 
     invoke-virtual {v1, v12}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -591,10 +591,10 @@
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
     :goto_0
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
     .line 236
     :try_start_2
@@ -602,63 +602,33 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    goto :goto_3
-
-    :catchall_0
-    move-exception v1
-
-    move-object v2, p1
-
-    goto :goto_1
+    goto :goto_2
 
     :catch_0
     move-exception v1
 
+    if-eqz v0, :cond_3
+
     .line 199
     :try_start_3
-    throw v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :catchall_1
-    move-exception v2
-
-    move-object v13, v2
-
-    move-object v2, v1
-
-    move-object v1, v13
-
-    :goto_1
-    if-eqz v0, :cond_4
-
-    if-eqz v2, :cond_3
-
-    .line 236
-    :try_start_4
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
-    :try_end_4
-    .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
+    :try_end_3
+    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    goto :goto_2
+    goto :goto_1
 
     :catch_1
     move-exception v0
 
-    :try_start_5
-    invoke-virtual {v2, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    goto :goto_2
+    :try_start_4
+    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     :cond_3
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    :cond_4
-    :goto_2
+    :goto_1
     throw v1
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
     :catch_2
     move-exception v0
@@ -692,7 +662,7 @@
     .line 239
     invoke-static {p1, v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_5
-    :goto_3
+    :cond_4
+    :goto_2
     return-void
 .end method

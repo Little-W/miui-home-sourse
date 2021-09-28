@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<miui.external.widget.Spinner
+<miuix.appcompat.widget.Spinner
     android:layout_gravity="center"
     android:id="@id/spinner"
     android:layout_width="fill_parent"

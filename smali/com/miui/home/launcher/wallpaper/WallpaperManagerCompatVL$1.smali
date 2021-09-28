@@ -33,7 +33,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL;Ljava/lang/ref/WeakReference;Ljava/lang/String;II)V
     .locals 0
 
-    .line 161
+    .line 160
     iput-object p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL$1;->this$0:Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL;
 
     iput-object p2, p0, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL$1;->val$weakWindowToken:Ljava/lang/ref/WeakReference;
@@ -54,7 +54,7 @@
 .method public run()V
     .locals 8
 
-    .line 164
+    .line 163
     iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL$1;->val$weakWindowToken:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -67,7 +67,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 166
+    .line 165
     iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL$1;->this$0:Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL;
 
     iget-object v1, v0, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL;->mWm:Landroid/app/WallpaperManager;

@@ -31,11 +31,11 @@
 
 .field private static final TAG:Ljava/lang/String; = "Matrix.AppMethodBeat"
 
-.field private static assertIn:Z
+.field private static assertIn:Z = false
 
-.field private static checkStartExpiredRunnable:Ljava/lang/Runnable;
+.field private static checkStartExpiredRunnable:Ljava/lang/Runnable; = null
 
-.field public static isDev:Z
+.field public static isDev:Z = false
 
 .field private static isPauseUpdateTime:Z
 

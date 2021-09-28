@@ -182,7 +182,7 @@
 .end method
 
 .method public static get(Landroid/content/Context;)Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;
-    .locals 10
+    .locals 9
 
     .line 30
     invoke-static {}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->supportAutoInstall()Z
@@ -369,7 +369,7 @@
     invoke-direct {v2, p0, v5, v4}, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;-><init>(Landroid/content/res/Resources;ILjava/util/List;)V
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
     if-eqz v0, :cond_2
 
@@ -410,7 +410,7 @@
     invoke-static {p0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
     if-eqz v0, :cond_4
 
@@ -458,7 +458,7 @@
     invoke-static {p0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_5
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_0
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
 
     if-eqz v0, :cond_6
 
@@ -481,9 +481,9 @@
     invoke-static {p0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_7
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_0
-    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_2
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_9
 
     .line 57
     :try_start_8
@@ -491,63 +491,33 @@
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_2
 
-    goto :goto_3
-
-    :catchall_0
-    move-exception p0
-
-    move-object v2, v1
-
-    goto :goto_1
+    goto :goto_2
 
     :catch_0
     move-exception p0
 
+    if-eqz v0, :cond_8
+
     .line 35
     :try_start_9
-    throw p0
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_1
-
-    :catchall_1
-    move-exception v2
-
-    move-object v9, v2
-
-    move-object v2, p0
-
-    move-object p0, v9
-
-    :goto_1
-    if-eqz v0, :cond_9
-
-    if-eqz v2, :cond_8
-
-    .line 57
-    :try_start_a
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
-    :try_end_a
-    .catch Ljava/lang/Throwable; {:try_start_a .. :try_end_a} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_2
+    :try_end_9
+    .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_2
 
-    goto :goto_2
+    goto :goto_1
 
     :catch_1
     move-exception v0
 
-    :try_start_b
-    invoke-virtual {v2, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    goto :goto_2
+    :try_start_a
+    invoke-virtual {p0, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
     :cond_8
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    :cond_9
-    :goto_2
+    :goto_1
     throw p0
-    :try_end_b
-    .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_2
+    :try_end_a
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_2
 
     :catch_2
     move-exception p0
@@ -559,8 +529,8 @@
     .line 58
     invoke-static {v0, v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    :cond_a
-    :goto_3
+    :cond_9
+    :goto_2
     return-object v1
 .end method
 

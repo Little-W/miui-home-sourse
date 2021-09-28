@@ -15,7 +15,7 @@
 
 .field private mFragmentContainer:Landroid/widget/ViewAnimator;
 
-.field private mFragmentManager:Landroid/app/FragmentManager;
+.field private mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
 .field private final mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -46,11 +46,11 @@
     .line 49
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mFragmentManager:Landroid/app/FragmentManager;
+    iput-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     return-void
 .end method
@@ -120,7 +120,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$onFinishInflate$208(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;Landroid/view/View;Z)V
+.method public static synthetic lambda$onFinishInflate$0(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;Landroid/view/View;Z)V
     .locals 0
 
     if-eqz p2, :cond_0
@@ -342,13 +342,13 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
     .line 55
-    new-instance v0, Lcom/miui/home/launcher/allapps/search/-$$Lambda$AllAppsSearchContainer$6tZqU7P7trDb5ZjMLapiPF6WIiU;
+    new-instance v0, Lcom/miui/home/launcher/allapps/search/-$$Lambda$AllAppsSearchContainer$JSf-ND5xTpwY09mnY9cmzkqCs2U;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/search/-$$Lambda$AllAppsSearchContainer$6tZqU7P7trDb5ZjMLapiPF6WIiU;-><init>(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/search/-$$Lambda$AllAppsSearchContainer$JSf-ND5xTpwY09mnY9cmzkqCs2U;-><init>(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    const v0, 0x7f0a0046
+    const v0, 0x7f0a0050
 
     .line 60
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->findViewById(I)Landroid/view/View;
@@ -360,11 +360,11 @@
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mFragmentContainer:Landroid/widget/ViewAnimator;
 
     .line 61
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mFragmentManager:Landroid/app/FragmentManager;
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
-    const v1, 0x7f0a016e
+    const v1, 0x7f0a01a8
 
-    invoke-virtual {v0, v1}, Landroid/app/FragmentManager;->findFragmentById(I)Landroid/app/Fragment;
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentManager;->findFragmentById(I)Landroidx/fragment/app/Fragment;
 
     move-result-object v0
 
@@ -373,11 +373,11 @@
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mAppFragment:Lcom/miui/home/launcher/allapps/search/AppListSearchFragment;
 
     .line 62
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mFragmentManager:Landroid/app/FragmentManager;
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
-    const v1, 0x7f0a017e
+    const v1, 0x7f0a01b8
 
-    invoke-virtual {v0, v1}, Landroid/app/FragmentManager;->findFragmentById(I)Landroid/app/Fragment;
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentManager;->findFragmentById(I)Landroidx/fragment/app/Fragment;
 
     move-result-object v0
 
@@ -385,7 +385,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mCategoryFragment:Lcom/miui/home/launcher/allapps/search/AppCategorySelectSearchFragment;
 
-    const v0, 0x7f0a0047
+    const v0, 0x7f0a0051
 
     .line 63
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->findViewById(I)Landroid/view/View;

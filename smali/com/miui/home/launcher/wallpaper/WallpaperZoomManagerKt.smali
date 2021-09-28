@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final UPDATE_ZOOM_METHOD:Lmiui/reflect/Method;
+.field private static final UPDATE_ZOOM_METHOD:Ljava/lang/reflect/Method;
 
 .field private static final ZOOM_ENABLED:Z
 
@@ -13,7 +13,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 21
+    .line 20
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
@@ -36,12 +36,12 @@
     :goto_0
     sput-boolean v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->ZOOM_ENABLED:Z
 
-    .line 22
+    .line 21
     sget-boolean v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->ZOOM_ENABLED:Z
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->findUpdateZoomMethod()Lmiui/reflect/Method;
+    invoke-static {}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->findUpdateZoomMethod()Ljava/lang/reflect/Method;
 
     move-result-object v0
 
@@ -51,16 +51,16 @@
     const/4 v0, 0x0
 
     :goto_1
-    sput-object v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->UPDATE_ZOOM_METHOD:Lmiui/reflect/Method;
+    sput-object v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->UPDATE_ZOOM_METHOD:Ljava/lang/reflect/Method;
 
     return-void
 .end method
 
-.method public static final synthetic access$getUPDATE_ZOOM_METHOD$p()Lmiui/reflect/Method;
+.method public static final synthetic access$getUPDATE_ZOOM_METHOD$p()Ljava/lang/reflect/Method;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->UPDATE_ZOOM_METHOD:Lmiui/reflect/Method;
+    sget-object v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->UPDATE_ZOOM_METHOD:Ljava/lang/reflect/Method;
 
     return-object v0
 .end method
@@ -74,39 +74,49 @@
     return v0
 .end method
 
-.method private static final findUpdateZoomMethod()Lmiui/reflect/Method;
-    .locals 6
+.method private static final findUpdateZoomMethod()Ljava/lang/reflect/Method;
+    .locals 8
 
-    .line 25
+    .line 24
     const-class v0, Landroid/app/WallpaperManager;
 
     const-string v1, "setWallpaperZoomOut"
 
-    .line 26
+    .line 25
     sget-object v2, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
     const/4 v3, 0x2
+
+    new-array v4, v3, [Ljava/lang/Class;
+
+    const-class v5, Landroid/os/IBinder;
+
+    const/4 v6, 0x0
+
+    aput-object v5, v4, v6
+
+    sget-object v5, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
+
+    const/4 v7, 0x1
+
+    aput-object v5, v4, v7
+
+    invoke-static {v2, v4}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
+
+    move-result-object v2
 
     new-array v3, v3, [Ljava/lang/Class;
 
     const-class v4, Landroid/os/IBinder;
 
-    const/4 v5, 0x0
-
-    aput-object v4, v3, v5
+    aput-object v4, v3, v6
 
     sget-object v4, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    const/4 v5, 0x1
+    aput-object v4, v3, v7
 
-    aput-object v4, v3, v5
-
-    invoke-static {v2, v3}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 25
-    invoke-static {v0, v1, v2}, Lcom/miui/launcher/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmiui/reflect/Method;
+    .line 24
+    invoke-static {v0, v1, v2, v3}, Lcom/miui/launcher/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 

@@ -49,8 +49,21 @@
 .method public getShortcutMenuLayerScale()F
     .locals 1
 
+    .line 87
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const v0, 0x3f6e147b    # 0.93f
+
+    goto :goto_0
+
+    :cond_0
     const/high16 v0, 0x3f400000    # 0.75f
 
+    :goto_0
     return v0
 .end method
 
@@ -164,7 +177,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0601da
+    const v4, 0x7f06031c
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 

@@ -532,7 +532,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f08012a
+    const v1, 0x7f080151
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -708,7 +708,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080142
+    const v1, 0x7f080169
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -743,7 +743,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080129
+    const v1, 0x7f080150
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -1231,6 +1231,10 @@
 
     if-gez v11, :cond_0
 
+    add-float/2addr v2, v1
+
+    float-to-int v1, v2
+
     goto :goto_0
 
     :cond_0
@@ -1242,11 +1246,11 @@
 
     div-float/2addr v1, v5
 
-    :goto_0
     add-float/2addr v2, v1
 
     float-to-int v1, v2
 
+    :goto_0
     sub-int v1, v3, v1
 
     int-to-float v2, v1
@@ -1322,6 +1326,10 @@
 
     if-gez v10, :cond_1
 
+    add-float/2addr v0, v1
+
+    float-to-int v0, v0
+
     goto :goto_1
 
     :cond_1
@@ -1333,11 +1341,11 @@
 
     div-float/2addr v1, v5
 
-    :goto_1
     add-float/2addr v0, v1
 
     float-to-int v0, v0
 
+    :goto_1
     int-to-float v1, v0
 
     .line 175

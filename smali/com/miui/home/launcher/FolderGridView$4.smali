@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderGridView;)V
     .locals 0
 
-    .line 416
+    .line 415
     iput-object p1, p0, Lcom/miui/home/launcher/FolderGridView$4;->this$0:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 419
+    .line 418
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView$4;->this$0:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderGridView;->access$200(Lcom/miui/home/launcher/FolderGridView;)V

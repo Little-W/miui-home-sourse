@@ -79,14 +79,12 @@
 
 .field final mTransition:I
 
-.field final mTransitionStyle:I
-
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 170
+    .line 169
     new-instance v0, Landroidx/fragment/app/BackStackState$1;
 
     invoke-direct {v0}, Landroidx/fragment/app/BackStackState$1;-><init>()V
@@ -138,34 +136,27 @@
     iput v0, p0, Landroidx/fragment/app/BackStackState;->mTransition:I
 
     .line 89
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Landroidx/fragment/app/BackStackState;->mTransitionStyle:I
-
-    .line 90
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/fragment/app/BackStackState;->mName:Ljava/lang/String;
 
-    .line 91
+    .line 90
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroidx/fragment/app/BackStackState;->mIndex:I
 
-    .line 92
+    .line 91
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbTitleRes:I
 
-    .line 93
+    .line 92
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -176,14 +167,14 @@
 
     iput-object v0, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbTitleText:Ljava/lang/CharSequence;
 
-    .line 94
+    .line 93
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbShortTitleRes:I
 
-    .line 95
+    .line 94
     sget-object v0, Landroid/text/TextUtils;->CHAR_SEQUENCE_CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -194,21 +185,21 @@
 
     iput-object v0, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbShortTitleText:Ljava/lang/CharSequence;
 
-    .line 96
+    .line 95
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/fragment/app/BackStackState;->mSharedElementSourceNames:Ljava/util/ArrayList;
 
-    .line 97
+    .line 96
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
 
     move-result-object v0
 
     iput-object v0, p0, Landroidx/fragment/app/BackStackState;->mSharedElementTargetNames:Ljava/util/ArrayList;
 
-    .line 98
+    .line 97
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -231,10 +222,10 @@
 .method public constructor <init>(Landroidx/fragment/app/BackStackRecord;)V
     .locals 7
 
-    .line 47
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
+    .line 49
     iget-object v0, p1, Landroidx/fragment/app/BackStackRecord;->mOps:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -243,29 +234,29 @@
 
     mul-int/lit8 v1, v0, 0x5
 
-    .line 49
+    .line 50
     new-array v1, v1, [I
 
     iput-object v1, p0, Landroidx/fragment/app/BackStackState;->mOps:[I
 
-    .line 51
+    .line 52
     iget-boolean v1, p1, Landroidx/fragment/app/BackStackRecord;->mAddToBackStack:Z
 
     if-eqz v1, :cond_2
 
-    .line 55
+    .line 56
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
 
     iput-object v1, p0, Landroidx/fragment/app/BackStackState;->mFragmentWhos:Ljava/util/ArrayList;
 
-    .line 56
+    .line 57
     new-array v1, v0, [I
 
     iput-object v1, p0, Landroidx/fragment/app/BackStackState;->mOldMaxLifecycleStates:[I
 
-    .line 57
+    .line 58
     new-array v1, v0, [I
 
     iput-object v1, p0, Landroidx/fragment/app/BackStackState;->mCurrentMaxLifecycleStates:[I
@@ -277,7 +268,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 60
+    .line 61
     iget-object v3, p1, Landroidx/fragment/app/BackStackRecord;->mOps:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -286,7 +277,7 @@
 
     check-cast v3, Landroidx/fragment/app/FragmentTransaction$Op;
 
-    .line 61
+    .line 62
     iget-object v4, p0, Landroidx/fragment/app/BackStackState;->mOps:[I
 
     add-int/lit8 v5, v2, 0x1
@@ -295,7 +286,7 @@
 
     aput v6, v4, v2
 
-    .line 62
+    .line 63
     iget-object v2, p0, Landroidx/fragment/app/BackStackState;->mFragmentWhos:Ljava/util/ArrayList;
 
     iget-object v4, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mFragment:Landroidx/fragment/app/Fragment;
@@ -314,7 +305,7 @@
     :goto_1
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 63
+    .line 64
     iget-object v2, p0, Landroidx/fragment/app/BackStackState;->mOps:[I
 
     add-int/lit8 v4, v5, 0x1
@@ -323,7 +314,7 @@
 
     aput v6, v2, v5
 
-    .line 64
+    .line 65
     iget-object v2, p0, Landroidx/fragment/app/BackStackState;->mOps:[I
 
     add-int/lit8 v5, v4, 0x1
@@ -332,7 +323,7 @@
 
     aput v6, v2, v4
 
-    .line 65
+    .line 66
     iget-object v2, p0, Landroidx/fragment/app/BackStackState;->mOps:[I
 
     add-int/lit8 v4, v5, 0x1
@@ -341,7 +332,7 @@
 
     aput v6, v2, v5
 
-    .line 66
+    .line 67
     iget-object v2, p0, Landroidx/fragment/app/BackStackState;->mOps:[I
 
     add-int/lit8 v5, v4, 0x1
@@ -350,7 +341,7 @@
 
     aput v6, v2, v4
 
-    .line 67
+    .line 68
     iget-object v2, p0, Landroidx/fragment/app/BackStackState;->mOldMaxLifecycleStates:[I
 
     iget-object v4, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mOldMaxState:Landroidx/lifecycle/Lifecycle$State;
@@ -361,7 +352,7 @@
 
     aput v4, v2, v1
 
-    .line 68
+    .line 69
     iget-object v2, p0, Landroidx/fragment/app/BackStackState;->mCurrentMaxLifecycleStates:[I
 
     iget-object v3, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mCurrentMaxState:Landroidx/lifecycle/Lifecycle$State;
@@ -378,16 +369,11 @@
 
     goto :goto_0
 
-    .line 70
+    .line 71
     :cond_1
     iget v0, p1, Landroidx/fragment/app/BackStackRecord;->mTransition:I
 
     iput v0, p0, Landroidx/fragment/app/BackStackState;->mTransition:I
-
-    .line 71
-    iget v0, p1, Landroidx/fragment/app/BackStackRecord;->mTransitionStyle:I
-
-    iput v0, p0, Landroidx/fragment/app/BackStackState;->mTransitionStyle:I
 
     .line 72
     iget-object v0, p1, Landroidx/fragment/app/BackStackRecord;->mName:Ljava/lang/String;
@@ -436,7 +422,7 @@
 
     return-void
 
-    .line 52
+    .line 53
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -457,19 +443,19 @@
     return v0
 .end method
 
-.method public instantiate(Landroidx/fragment/app/FragmentManagerImpl;)Landroidx/fragment/app/BackStackRecord;
+.method public instantiate(Landroidx/fragment/app/FragmentManager;)Landroidx/fragment/app/BackStackRecord;
     .locals 7
 
-    .line 102
+    .line 101
     new-instance v0, Landroidx/fragment/app/BackStackRecord;
 
-    invoke-direct {v0, p1}, Landroidx/fragment/app/BackStackRecord;-><init>(Landroidx/fragment/app/FragmentManagerImpl;)V
+    invoke-direct {v0, p1}, Landroidx/fragment/app/BackStackRecord;-><init>(Landroidx/fragment/app/FragmentManager;)V
 
     const/4 v1, 0x0
 
     move v2, v1
 
-    .line 105
+    .line 104
     :goto_0
     iget-object v3, p0, Landroidx/fragment/app/BackStackState;->mOps:[I
 
@@ -477,12 +463,12 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 106
+    .line 105
     new-instance v3, Landroidx/fragment/app/FragmentTransaction$Op;
 
     invoke-direct {v3}, Landroidx/fragment/app/FragmentTransaction$Op;-><init>()V
 
-    .line 107
+    .line 106
     iget-object v4, p0, Landroidx/fragment/app/BackStackState;->mOps:[I
 
     add-int/lit8 v5, v1, 0x1
@@ -491,13 +477,18 @@
 
     iput v1, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mCmd:I
 
-    .line 108
-    sget-boolean v1, Landroidx/fragment/app/FragmentManagerImpl;->DEBUG:Z
+    const/4 v1, 0x2
+
+    .line 107
+    invoke-static {v1}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
+
+    move-result v1
 
     if-eqz v1, :cond_0
 
     const-string v1, "FragmentManager"
 
+    .line 108
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -530,7 +521,7 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 110
+    .line 111
     :cond_0
     iget-object v1, p0, Landroidx/fragment/app/BackStackState;->mFragmentWhos:Ljava/util/ArrayList;
 
@@ -542,16 +533,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 112
-    iget-object v4, p1, Landroidx/fragment/app/FragmentManagerImpl;->mActive:Ljava/util/HashMap;
-
-    invoke-virtual {v4, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 113
+    invoke-virtual {p1, v1}, Landroidx/fragment/app/FragmentManager;->findActiveFragment(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object v1
 
-    check-cast v1, Landroidx/fragment/app/Fragment;
-
-    .line 113
+    .line 114
     iput-object v1, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mFragment:Landroidx/fragment/app/Fragment;
 
     goto :goto_1
@@ -559,10 +546,10 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 115
+    .line 116
     iput-object v1, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mFragment:Landroidx/fragment/app/Fragment;
 
-    .line 117
+    .line 118
     :goto_1
     invoke-static {}, Landroidx/lifecycle/Lifecycle$State;->values()[Landroidx/lifecycle/Lifecycle$State;
 
@@ -576,7 +563,7 @@
 
     iput-object v1, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mOldMaxState:Landroidx/lifecycle/Lifecycle$State;
 
-    .line 118
+    .line 119
     invoke-static {}, Landroidx/lifecycle/Lifecycle$State;->values()[Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v1
@@ -589,7 +576,7 @@
 
     iput-object v1, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mCurrentMaxState:Landroidx/lifecycle/Lifecycle$State;
 
-    .line 119
+    .line 120
     iget-object v1, p0, Landroidx/fragment/app/BackStackState;->mOps:[I
 
     add-int/lit8 v4, v5, 0x1
@@ -600,46 +587,46 @@
 
     add-int/lit8 v5, v4, 0x1
 
-    .line 120
+    .line 121
     aget v4, v1, v4
 
     iput v4, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mExitAnim:I
 
     add-int/lit8 v4, v5, 0x1
 
-    .line 121
+    .line 122
     aget v5, v1, v5
 
     iput v5, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mPopEnterAnim:I
 
     add-int/lit8 v5, v4, 0x1
 
-    .line 122
+    .line 123
     aget v1, v1, v4
 
     iput v1, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mPopExitAnim:I
 
-    .line 123
+    .line 124
     iget v1, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mEnterAnim:I
 
     iput v1, v0, Landroidx/fragment/app/BackStackRecord;->mEnterAnim:I
 
-    .line 124
+    .line 125
     iget v1, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mExitAnim:I
 
     iput v1, v0, Landroidx/fragment/app/BackStackRecord;->mExitAnim:I
 
-    .line 125
+    .line 126
     iget v1, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mPopEnterAnim:I
 
     iput v1, v0, Landroidx/fragment/app/BackStackRecord;->mPopEnterAnim:I
 
-    .line 126
+    .line 127
     iget v1, v3, Landroidx/fragment/app/FragmentTransaction$Op;->mPopExitAnim:I
 
     iput v1, v0, Landroidx/fragment/app/BackStackRecord;->mPopExitAnim:I
 
-    .line 127
+    .line 128
     invoke-virtual {v0, v3}, Landroidx/fragment/app/BackStackRecord;->addOp(Landroidx/fragment/app/FragmentTransaction$Op;)V
 
     add-int/lit8 v2, v2, 0x1
@@ -648,16 +635,11 @@
 
     goto/16 :goto_0
 
-    .line 130
+    .line 131
     :cond_2
     iget p1, p0, Landroidx/fragment/app/BackStackState;->mTransition:I
 
     iput p1, v0, Landroidx/fragment/app/BackStackRecord;->mTransition:I
-
-    .line 131
-    iget p1, p0, Landroidx/fragment/app/BackStackState;->mTransitionStyle:I
-
-    iput p1, v0, Landroidx/fragment/app/BackStackRecord;->mTransitionStyle:I
 
     .line 132
     iget-object p1, p0, Landroidx/fragment/app/BackStackState;->mName:Ljava/lang/String;
@@ -744,53 +726,48 @@
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 158
-    iget p2, p0, Landroidx/fragment/app/BackStackState;->mTransitionStyle:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    .line 159
     iget-object p2, p0, Landroidx/fragment/app/BackStackState;->mName:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 160
+    .line 159
     iget p2, p0, Landroidx/fragment/app/BackStackState;->mIndex:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 161
+    .line 160
     iget p2, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbTitleRes:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 162
+    .line 161
     iget-object p2, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbTitleText:Ljava/lang/CharSequence;
 
     const/4 v0, 0x0
 
     invoke-static {p2, p1, v0}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 163
+    .line 162
     iget p2, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbShortTitleRes:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 164
+    .line 163
     iget-object p2, p0, Landroidx/fragment/app/BackStackState;->mBreadCrumbShortTitleText:Ljava/lang/CharSequence;
 
     invoke-static {p2, p1, v0}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
 
-    .line 165
+    .line 164
     iget-object p2, p0, Landroidx/fragment/app/BackStackState;->mSharedElementSourceNames:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    .line 166
+    .line 165
     iget-object p2, p0, Landroidx/fragment/app/BackStackState;->mSharedElementTargetNames:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    .line 167
+    .line 166
     iget-boolean p2, p0, Landroidx/fragment/app/BackStackState;->mReorderingAllowed:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V

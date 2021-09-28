@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Folder;)V
     .locals 0
 
-    .line 216
+    .line 217
     iput-object p1, p0, Lcom/miui/home/launcher/Folder$2;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -30,10 +30,10 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onAnimationStart$134(Lcom/miui/home/launcher/Folder$2;)V
+.method public static synthetic lambda$onAnimationStart$0(Lcom/miui/home/launcher/Folder$2;)V
     .locals 2
 
-    .line 221
+    .line 222
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$2;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Folder;->access$000(Lcom/miui/home/launcher/Folder;)Z
@@ -52,7 +52,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 225
+    .line 226
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$2;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Folder;->access$000(Lcom/miui/home/launcher/Folder;)Z
@@ -65,7 +65,7 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/miui/home/launcher/Folder;->showEditPanel(ZZ)V
 
-    .line 226
+    .line 227
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$2;->this$0:Lcom/miui/home/launcher/Folder;
 
     iget-object p1, p1, Lcom/miui/home/launcher/Folder;->mTitleText:Landroid/widget/TextView;
@@ -74,7 +74,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 227
+    .line 228
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$2;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Folder;->access$100(Lcom/miui/home/launcher/Folder;)Landroid/widget/EditText;
@@ -83,7 +83,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/EditText;->setAlpha(F)V
 
-    .line 228
+    .line 229
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$2;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1, v1}, Lcom/miui/home/launcher/Folder;->access$202(Lcom/miui/home/launcher/Folder;Z)Z
@@ -94,23 +94,23 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 219
+    .line 220
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$2;->this$0:Lcom/miui/home/launcher/Folder;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/Folder;->access$202(Lcom/miui/home/launcher/Folder;Z)Z
 
-    .line 221
+    .line 222
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$2;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Folder;->access$100(Lcom/miui/home/launcher/Folder;)Landroid/widget/EditText;
 
     move-result-object p1
 
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$Folder$2$mFhEADSAFU_b4lWsGT24rIciDDs;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$Folder$2$0qZf_aj_SKCjur8stmvTN4gY7x4;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$Folder$2$mFhEADSAFU_b4lWsGT24rIciDDs;-><init>(Lcom/miui/home/launcher/Folder$2;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$Folder$2$0qZf_aj_SKCjur8stmvTN4gY7x4;-><init>(Lcom/miui/home/launcher/Folder$2;)V
 
     invoke-virtual {p1, v0}, Landroid/widget/EditText;->post(Ljava/lang/Runnable;)Z
 

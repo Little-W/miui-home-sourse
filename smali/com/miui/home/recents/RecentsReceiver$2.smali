@@ -20,7 +20,7 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/recents/RecentsReceiver;
 
-.field final synthetic val$clearButton:Lmiui/widget/CircleProgressBar;
+.field final synthetic val$clearButton:Lmiuix/androidbasewidget/widget/CircleProgressBar;
 
 .field final synthetic val$freeAtFirst:J
 
@@ -28,13 +28,13 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/recents/RecentsReceiver;Lmiui/widget/CircleProgressBar;Landroid/view/WindowManager;J)V
+.method constructor <init>(Lcom/miui/home/recents/RecentsReceiver;Lmiuix/androidbasewidget/widget/CircleProgressBar;Landroid/view/WindowManager;J)V
     .locals 0
 
-    .line 187
+    .line 188
     iput-object p1, p0, Lcom/miui/home/recents/RecentsReceiver$2;->this$0:Lcom/miui/home/recents/RecentsReceiver;
 
-    iput-object p2, p0, Lcom/miui/home/recents/RecentsReceiver$2;->val$clearButton:Lmiui/widget/CircleProgressBar;
+    iput-object p2, p0, Lcom/miui/home/recents/RecentsReceiver$2;->val$clearButton:Lmiuix/androidbasewidget/widget/CircleProgressBar;
 
     iput-object p3, p0, Lcom/miui/home/recents/RecentsReceiver$2;->val$wm:Landroid/view/WindowManager;
 
@@ -50,8 +50,8 @@
 .method public run()V
     .locals 3
 
-    .line 189
-    iget-object v0, p0, Lcom/miui/home/recents/RecentsReceiver$2;->val$clearButton:Lmiui/widget/CircleProgressBar;
+    .line 190
+    iget-object v0, p0, Lcom/miui/home/recents/RecentsReceiver$2;->val$clearButton:Lmiuix/androidbasewidget/widget/CircleProgressBar;
 
     new-instance v1, Lcom/miui/home/recents/RecentsReceiver$2$1;
 
@@ -59,7 +59,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v2, v1}, Lmiui/widget/CircleProgressBar;->setProgressByAnimator(ILandroid/animation/Animator$AnimatorListener;)V
+    invoke-virtual {v0, v2, v1}, Lmiuix/androidbasewidget/widget/CircleProgressBar;->setProgressByAnimator(ILandroid/animation/Animator$AnimatorListener;)V
 
     return-void
 .end method

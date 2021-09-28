@@ -173,7 +173,7 @@
     return p1
 .end method
 
-.method static synthetic lambda$preLoadContentView$135(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)Landroid/view/View;
+.method static synthetic lambda$preLoadContentView$0(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)Landroid/view/View;
     .locals 1
 
     .line 154
@@ -196,7 +196,7 @@
     return-object p0
 .end method
 
-.method public static synthetic lambda$preLoadContentView$136(Lcom/miui/home/launcher/FolderInfo;Lcom/miui/home/launcher/Launcher;)V
+.method public static synthetic lambda$preLoadContentView$1(Lcom/miui/home/launcher/FolderInfo;Lcom/miui/home/launcher/Launcher;)V
     .locals 4
 
     .line 159
@@ -875,7 +875,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f10027d
+    const v0, 0x7f1003ad
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1364,9 +1364,9 @@
 
     move-result-object v2
 
-    new-instance v3, Lcom/miui/home/launcher/-$$Lambda$FolderInfo$uZbqKdSYif5qRh4JYJLKp3VQ1mQ;
+    new-instance v3, Lcom/miui/home/launcher/-$$Lambda$FolderInfo$EHWwbi1P0WxtGbloHnLs0P_cpMk;
 
-    invoke-direct {v3, p1, v1}, Lcom/miui/home/launcher/-$$Lambda$FolderInfo$uZbqKdSYif5qRh4JYJLKp3VQ1mQ;-><init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)V
+    invoke-direct {v3, p1, v1}, Lcom/miui/home/launcher/-$$Lambda$FolderInfo$EHWwbi1P0WxtGbloHnLs0P_cpMk;-><init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)V
 
     const/4 v1, 0x0
 
@@ -1381,9 +1381,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 158
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$FolderInfo$dUl-Ui5U_2-4jVnP7vCABPl5cV4;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$FolderInfo$OOfIaZsMad2fcchaT_DdDJaBdUA;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$FolderInfo$dUl-Ui5U_2-4jVnP7vCABPl5cV4;-><init>(Lcom/miui/home/launcher/FolderInfo;Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$FolderInfo$OOfIaZsMad2fcchaT_DdDJaBdUA;-><init>(Lcom/miui/home/launcher/FolderInfo;Lcom/miui/home/launcher/Launcher;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->useViewToPost(Ljava/lang/Runnable;)V
 

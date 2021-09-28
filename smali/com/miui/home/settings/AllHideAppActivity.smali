@@ -1,5 +1,5 @@
 .class public final Lcom/miui/home/settings/AllHideAppActivity;
-.super Lmiui/app/Activity;
+.super Lmiuix/appcompat/app/AppCompatActivity;
 .source "AllHideAppActivity.kt"
 
 
@@ -26,7 +26,7 @@
     .locals 0
 
     .line 23
-    invoke-direct {p0}, Lmiui/app/Activity;-><init>()V
+    invoke-direct {p0}, Lmiuix/appcompat/app/AppCompatActivity;-><init>()V
 
     return-void
 .end method
@@ -205,7 +205,7 @@
 .method private final initView()V
     .locals 3
 
-    const v0, 0x7f0a00de
+    const v0, 0x7f0a0104
 
     .line 70
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/AllHideAppActivity;->findViewById(I)Landroid/view/View;
@@ -272,7 +272,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    const v0, 0x7f0a010f
+    const v0, 0x7f0a013c
 
     .line 74
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/AllHideAppActivity;->findViewById(I)Landroid/view/View;
@@ -479,14 +479,14 @@
     .locals 0
 
     .line 31
-    invoke-super {p0, p1}, Lmiui/app/Activity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lmiuix/appcompat/app/AppCompatActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const p1, 0x7f0d0056
+    const p1, 0x7f0d0057
 
     .line 32
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllHideAppActivity;->setContentView(I)V
 
-    const p1, 0x7f10015b
+    const p1, 0x7f1001fa
 
     .line 33
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllHideAppActivity;->setTitle(I)V
@@ -512,7 +512,7 @@
     .locals 0
 
     .line 39
-    invoke-super {p0}, Lmiui/app/Activity;->onStart()V
+    invoke-super {p0}, Lmiuix/appcompat/app/AppCompatActivity;->onStart()V
 
     .line 40
     invoke-direct {p0}, Lcom/miui/home/settings/AllHideAppActivity;->initData()V
@@ -524,7 +524,7 @@
     .locals 2
 
     .line 78
-    invoke-super {p0}, Lmiui/app/Activity;->onStop()V
+    invoke-super {p0}, Lmiuix/appcompat/app/AppCompatActivity;->onStop()V
 
     .line 79
     iget-object v0, p0, Lcom/miui/home/settings/AllHideAppActivity;->mAppsDisposable:Lio/reactivex2/disposables/Disposable;

@@ -107,7 +107,11 @@
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsStore;->mIconContainers:Ljava/util/ArrayList;
 
     .line 58
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getModel()Lcom/miui/home/launcher/LauncherModel;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getModel()Lcom/miui/home/launcher/LauncherModel;
 
     move-result-object v0
 
@@ -220,7 +224,7 @@
     return-object p1
 .end method
 
-.method static synthetic lambda$updateMessage$123(Lcom/miui/home/launcher/AppInfo;Ljava/lang/String;Lcom/miui/home/launcher/ShortcutIcon;)V
+.method static synthetic lambda$updateMessage$1(Lcom/miui/home/launcher/AppInfo;Ljava/lang/String;Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 1
 
     .line 226
@@ -237,7 +241,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$updateTitleTip$122(Lcom/miui/home/launcher/AppInfo;Lcom/miui/home/launcher/ShortcutIcon;)V
+.method static synthetic lambda$updateTitleTip$0(Lcom/miui/home/launcher/AppInfo;Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 1
 
     .line 208
@@ -1032,9 +1036,9 @@
     invoke-virtual {p1, p2, p3, p4}, Lcom/miui/home/launcher/AppInfo;->setMessage(Ljava/lang/String;Ljava/lang/String;[B)V
 
     .line 225
-    new-instance p3, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsStore$MMetn42iLYKJYU-9SKkab7ljLDo;
+    new-instance p3, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsStore$Ps023ecWHe_tji3oSA4yNO-iSfM;
 
-    invoke-direct {p3, p1, p2}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsStore$MMetn42iLYKJYU-9SKkab7ljLDo;-><init>(Lcom/miui/home/launcher/AppInfo;Ljava/lang/String;)V
+    invoke-direct {p3, p1, p2}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsStore$Ps023ecWHe_tji3oSA4yNO-iSfM;-><init>(Lcom/miui/home/launcher/AppInfo;Ljava/lang/String;)V
 
     invoke-direct {p0, p3}, Lcom/miui/home/launcher/allapps/AllAppsStore;->updateAllIcons(Lcom/miui/home/launcher/allapps/AllAppsStore$IconAction;)V
 
@@ -1074,9 +1078,9 @@
     iput p1, v0, Lcom/miui/home/launcher/AppInfo;->itemFlags:I
 
     .line 207
-    new-instance p1, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsStore$ErG8G1JqjJ5CK2VmCoWMi5dZJTE;
+    new-instance p1, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsStore$8k3XA1NleuanxbFgETMFngar2d4;
 
-    invoke-direct {p1, v0}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsStore$ErG8G1JqjJ5CK2VmCoWMi5dZJTE;-><init>(Lcom/miui/home/launcher/AppInfo;)V
+    invoke-direct {p1, v0}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsStore$8k3XA1NleuanxbFgETMFngar2d4;-><init>(Lcom/miui/home/launcher/AppInfo;)V
 
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsStore;->updateAllIcons(Lcom/miui/home/launcher/allapps/AllAppsStore$IconAction;)V
 

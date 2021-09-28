@@ -75,7 +75,7 @@
     .line 97
     iget-object v1, p0, Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;->mFolderInfo:Lcom/miui/home/launcher/FolderInfo;
 
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v2
 
@@ -103,30 +103,7 @@
     return v0
 .end method
 
-.method public static synthetic lambda$handleClick$425(Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;Ljava/util/List;IJ)V
-    .locals 2
-
-    .line 50
-    iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;->mContext:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/miui/msa/preinstall/v1/GlobalGuessYouLikeAdHelper;->getInstance(Landroid/content/Context;)Lcom/miui/msa/preinstall/v1/GlobalGuessYouLikeAdHelper;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$oTUoDhEK6BAfQdQAOWAy8Ls5hBE;->INSTANCE:Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$oTUoDhEK6BAfQdQAOWAy8Ls5hBE;
-
-    .line 51
-    invoke-static {p1, v1}, Lcom/miui/home/launcher/commercial/CommercialCommons;->getFromRecommendInfoList(Ljava/util/List;Ljava/util/function/Function;)Ljava/util/List;
-
-    move-result-object p1
-
-    .line 50
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/miui/msa/preinstall/v1/GlobalGuessYouLikeAdHelper;->handleClick(Ljava/util/List;IJ)V
-
-    return-void
-.end method
-
-.method static synthetic lambda$null$424(Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)Lcom/miui/msa/global/guessyoulike/v1/GlobalFolderRecommendAdInfo;
+.method static synthetic lambda$handleClick$1(Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)Lcom/miui/msa/global/guessyoulike/v1/GlobalFolderRecommendAdInfo;
     .locals 0
 
     .line 54
@@ -139,7 +116,30 @@
     return-object p0
 .end method
 
-.method static synthetic lambda$null$426(Lcom/miui/msa/global/guessyoulike/v1/GlobalFolderRecommendAdInfo;)Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;
+.method public static synthetic lambda$handleClick$2(Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;Ljava/util/List;IJ)V
+    .locals 2
+
+    .line 50
+    iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/miui/msa/preinstall/v1/GlobalGuessYouLikeAdHelper;->getInstance(Landroid/content/Context;)Lcom/miui/msa/preinstall/v1/GlobalGuessYouLikeAdHelper;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$vVwReFyW2rSDQuFryh1hbPWzo2A;->INSTANCE:Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$vVwReFyW2rSDQuFryh1hbPWzo2A;
+
+    .line 51
+    invoke-static {p1, v1}, Lcom/miui/home/launcher/commercial/CommercialCommons;->getFromRecommendInfoList(Ljava/util/List;Ljava/util/function/Function;)Ljava/util/List;
+
+    move-result-object p1
+
+    .line 50
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/miui/msa/preinstall/v1/GlobalGuessYouLikeAdHelper;->handleClick(Ljava/util/List;IJ)V
+
+    return-void
+.end method
+
+.method static synthetic lambda$requestRecommend$3(Lcom/miui/msa/global/guessyoulike/v1/GlobalFolderRecommendAdInfo;)Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;
     .locals 1
 
     .line 67
@@ -150,7 +150,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$requestRecommend$427(Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;Lcom/miui/home/launcher/FolderInfo;Ljava/lang/Void;)Ljava/util/List;
+.method public static synthetic lambda$requestRecommend$4(Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;Lcom/miui/home/launcher/FolderInfo;Ljava/lang/Void;)Ljava/util/List;
     .locals 0
 
     .line 62
@@ -171,7 +171,7 @@
     move-result-object p1
 
     .line 66
-    sget-object p2, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$5W7NvBtdCFJff3zl9SFTHOpmkqE;->INSTANCE:Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$5W7NvBtdCFJff3zl9SFTHOpmkqE;
+    sget-object p2, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$YzsZBqpN1v5Rre6h4txrfRaW4KE;->INSTANCE:Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$YzsZBqpN1v5Rre6h4txrfRaW4KE;
 
     invoke-static {p1, p2}, Lcom/miui/home/launcher/commercial/CommercialCommons;->buildRecommendInfoList(Ljava/util/List;Ljava/util/function/Function;)Ljava/util/List;
 
@@ -183,7 +183,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$trackViewEvent$423(Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;I)V
+.method public static synthetic lambda$trackViewEvent$0(Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;I)V
     .locals 1
 
     .line 42
@@ -307,7 +307,7 @@
     .end annotation
 
     .line 49
-    new-instance v6, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$NvRD-KRd5_AsZcUowe9i8qdrg1U;
+    new-instance v6, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$qU-8GXEkSuApIiOcQyOnNFWjLyE;
 
     move-object v0, v6
 
@@ -319,7 +319,7 @@
 
     move-wide v4, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$NvRD-KRd5_AsZcUowe9i8qdrg1U;-><init>(Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;Ljava/util/List;IJ)V
+    invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$qU-8GXEkSuApIiOcQyOnNFWjLyE;-><init>(Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;Ljava/util/List;IJ)V
 
     invoke-static {v6}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
@@ -420,9 +420,9 @@
     .end annotation
 
     .line 60
-    new-instance p3, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$Xs9h2plkWarwCmRfpyiWzLQLSyI;
+    new-instance p3, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$jOUa66JBZQlilj4tpwSwmHqqwPk;
 
-    invoke-direct {p3, p0, p1}, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$Xs9h2plkWarwCmRfpyiWzLQLSyI;-><init>(Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;Lcom/miui/home/launcher/FolderInfo;)V
+    invoke-direct {p3, p0, p1}, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$jOUa66JBZQlilj4tpwSwmHqqwPk;-><init>(Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;Lcom/miui/home/launcher/FolderInfo;)V
 
     const/4 p1, 0x0
 
@@ -442,9 +442,9 @@
     .locals 1
 
     .line 41
-    new-instance v0, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$1uhL9VTc7b_IUOppXI3tbpvcnYE;
+    new-instance v0, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$6WDgRIh3HbheI1lnr8uRSOgrX8Y;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$1uhL9VTc7b_IUOppXI3tbpvcnYE;-><init>(Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;I)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/commercial/recommend/global/-$$Lambda$GlobalRecommendController$6WDgRIh3HbheI1lnr8uRSOgrX8Y;-><init>(Lcom/miui/home/launcher/commercial/recommend/global/GlobalRecommendController;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;I)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ShortcutInfo;Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 358
+    .line 366
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutInfo$2;->this$0:Lcom/miui/home/launcher/ShortcutInfo;
 
     iput-object p2, p0, Lcom/miui/home/launcher/ShortcutInfo$2;->val$callback:Ljava/util/function/Consumer;
@@ -51,19 +51,7 @@
 .method public accept(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    if-eqz p1, :cond_0
-
-    .line 362
-    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutInfo$2;->this$0:Lcom/miui/home/launcher/ShortcutInfo;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getColorFilter()Landroid/graphics/ColorFilter;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    .line 364
-    :cond_0
+    .line 369
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutInfo$2;->val$callback:Ljava/util/function/Consumer;
 
     invoke-interface {v0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
@@ -74,7 +62,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 358
+    .line 366
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutInfo$2;->accept(Landroid/graphics/drawable/Drawable;)V

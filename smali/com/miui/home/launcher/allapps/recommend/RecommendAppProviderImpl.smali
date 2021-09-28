@@ -146,6 +146,8 @@
 
     move-result-object v4
 
+    check-cast v4, Lcom/miui/home/launcher/AppInfo;
+
     invoke-virtual {v1, v3, v4}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     add-int/lit8 v3, v3, 0x1

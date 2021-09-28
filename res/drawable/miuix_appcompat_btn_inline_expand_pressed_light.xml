@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    android:height="@dimen/miuix_appcompat_btn_inline_size"
+    android:width="@dimen/miuix_appcompat_btn_inline_size"
+    android:autoMirrored="true"
+    android:viewportWidth="64.0"
+    android:viewportHeight="64.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M32,0C14.327,0 0,14.327 0,32C0,49.674 14.327,64 32,64C49.673,64 64,49.674 64,32C64,14.327 49.673,0 32,0"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1.0"
+        android:fillAlpha="0.1"
+        android:fillType="evenOdd" />
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M32.1673,41.6661C31.4521,41.6926 30.7283,41.4329 30.1823,40.8869L18.1144,28.819C17.073,27.7776 17.073,26.0891 18.1144,25.0477C19.1558,24.0063 20.8442,24.0063 21.8856,25.0477L32.1673,35.3294L42.449,25.0477C43.4904,24.0063 45.1788,24.0063 46.2202,25.0477C47.2616,26.0891 47.2616,27.7776 46.2202,28.819L34.1523,40.8869C33.6063,41.4329 32.8825,41.6926 32.1673,41.6661Z"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1.0"
+        android:strokeAlpha="0.4"
+        android:fillAlpha="0.4"
+        android:fillType="evenOdd" />
+</vector>

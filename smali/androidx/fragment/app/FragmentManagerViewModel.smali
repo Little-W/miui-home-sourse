@@ -1,4 +1,4 @@
-.class Landroidx/fragment/app/FragmentManagerViewModel;
+.class final Landroidx/fragment/app/FragmentManagerViewModel;
 .super Landroidx/lifecycle/ViewModel;
 .source "FragmentManagerViewModel.java"
 
@@ -23,10 +23,13 @@
 
 .field private mHasSavedSnapshot:Z
 
-.field private final mRetainedFragments:Ljava/util/HashSet;
+.field private mIsStateSaved:Z
+
+.field private final mRetainedFragments:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/HashSet<",
+            "Ljava/util/HashMap<",
+            "Ljava/lang/String;",
             "Landroidx/fragment/app/Fragment;",
             ">;"
         }
@@ -64,15 +67,15 @@
 .method constructor <init>(Z)V
     .locals 1
 
-    .line 82
+    .line 86
     invoke-direct {p0}, Landroidx/lifecycle/ViewModel;-><init>()V
 
     .line 57
-    new-instance v0, Ljava/util/HashSet;
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashSet;
+    iput-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashMap;
 
     .line 58
     new-instance v0, Ljava/util/HashMap;
@@ -96,7 +99,10 @@
     .line 65
     iput-boolean v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mHasSavedSnapshot:Z
 
-    .line 83
+    .line 69
+    iput-boolean v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mIsStateSaved:Z
+
+    .line 87
     iput-boolean p1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mStateAutomaticallySaved:Z
 
     return-void
@@ -126,30 +132,100 @@
 
 
 # virtual methods
-.method addRetainedFragment(Landroidx/fragment/app/Fragment;)Z
-    .locals 1
+.method addRetainedFragment(Landroidx/fragment/app/Fragment;)V
+    .locals 3
 
-    .line 99
-    iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashSet;
+    .line 112
+    iget-boolean v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mIsStateSaved:Z
 
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    const/4 v1, 0x2
+
+    if-eqz v0, :cond_1
+
+    .line 113
+    invoke-static {v1}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result p1
 
-    return p1
+    if-eqz p1, :cond_0
+
+    const-string p1, "FragmentManager"
+
+    const-string v0, "Ignoring addRetainedFragment as the state is already saved"
+
+    .line 114
+    invoke-static {p1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+
+    .line 118
+    :cond_1
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashMap;
+
+    iget-object v2, p1, Landroidx/fragment/app/Fragment;->mWho:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    return-void
+
+    .line 121
+    :cond_2
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashMap;
+
+    iget-object v2, p1, Landroidx/fragment/app/Fragment;->mWho:Ljava/lang/String;
+
+    invoke-virtual {v0, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 122
+    invoke-static {v1}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const-string v0, "FragmentManager"
+
+    .line 123
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Updating retained Fragments: Added "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
+    return-void
 .end method
 
 .method clearNonConfigState(Landroidx/fragment/app/Fragment;)V
     .locals 3
 
-    .line 148
-    sget-boolean v0, Landroidx/fragment/app/FragmentManagerImpl;->DEBUG:Z
+    const/4 v0, 0x3
+
+    .line 187
+    invoke-static {v0}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
     const-string v0, "FragmentManager"
 
-    .line 149
+    .line 188
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -166,7 +242,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
+    .line 191
     :cond_0
     iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mChildNonConfigs:Ljava/util/HashMap;
 
@@ -180,17 +256,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 154
+    .line 193
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManagerViewModel;->onCleared()V
 
-    .line 155
+    .line 194
     iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mChildNonConfigs:Ljava/util/HashMap;
 
     iget-object v1, p1, Landroidx/fragment/app/Fragment;->mWho:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 158
+    .line 197
     :cond_1
     iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mViewModelStores:Ljava/util/HashMap;
 
@@ -204,10 +280,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 160
+    .line 199
     invoke-virtual {v0}, Landroidx/lifecycle/ViewModelStore;->clear()V
 
-    .line 161
+    .line 200
     iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mViewModelStores:Ljava/util/HashMap;
 
     iget-object p1, p1, Landroidx/fragment/app/Fragment;->mWho:Ljava/lang/String;
@@ -232,7 +308,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 231
+    .line 275
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -245,16 +321,16 @@
 
     goto :goto_1
 
-    .line 233
+    .line 277
     :cond_1
     check-cast p1, Landroidx/fragment/app/FragmentManagerViewModel;
 
-    .line 235
-    iget-object v2, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashSet;
+    .line 279
+    iget-object v2, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashMap;
 
-    iget-object v3, p1, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashSet;
+    iget-object v3, p1, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashMap;
 
-    invoke-virtual {v2, v3}, Ljava/util/HashSet;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Ljava/util/HashMap;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -264,7 +340,7 @@
 
     iget-object v3, p1, Landroidx/fragment/app/FragmentManagerViewModel;->mChildNonConfigs:Ljava/util/HashMap;
 
-    .line 236
+    .line 280
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -275,7 +351,7 @@
 
     iget-object p1, p1, Landroidx/fragment/app/FragmentManagerViewModel;->mViewModelStores:Ljava/util/HashMap;
 
-    .line 237
+    .line 281
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -295,10 +371,25 @@
     return v1
 .end method
 
+.method findRetainedFragmentByWho(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
+    .locals 1
+
+    .line 129
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/fragment/app/Fragment;
+
+    return-object p1
+.end method
+
 .method getChildNonConfig(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentManagerViewModel;
     .locals 2
 
-    .line 129
+    .line 168
     iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mChildNonConfigs:Ljava/util/HashMap;
 
     iget-object v1, p1, Landroidx/fragment/app/Fragment;->mWho:Ljava/lang/String;
@@ -311,14 +402,14 @@
 
     if-nez v0, :cond_0
 
-    .line 131
+    .line 170
     new-instance v0, Landroidx/fragment/app/FragmentManagerViewModel;
 
     iget-boolean v1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mStateAutomaticallySaved:Z
 
     invoke-direct {v0, v1}, Landroidx/fragment/app/FragmentManagerViewModel;-><init>(Z)V
 
-    .line 132
+    .line 171
     iget-object v1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mChildNonConfigs:Ljava/util/HashMap;
 
     iget-object p1, p1, Landroidx/fragment/app/Fragment;->mWho:Ljava/lang/String;
@@ -330,7 +421,7 @@
 .end method
 
 .method getRetainedFragments()Ljava/util/Collection;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -340,8 +431,16 @@
         }
     .end annotation
 
-    .line 104
-    iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashSet;
+    .line 134
+    new-instance v0, Ljava/util/ArrayList;
+
+    iget-object v1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashMap;
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     return-object v0
 .end method
@@ -349,7 +448,7 @@
 .method getViewModelStore(Landroidx/fragment/app/Fragment;)Landroidx/lifecycle/ViewModelStore;
     .locals 2
 
-    .line 139
+    .line 178
     iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mViewModelStores:Ljava/util/HashMap;
 
     iget-object v1, p1, Landroidx/fragment/app/Fragment;->mWho:Ljava/lang/String;
@@ -362,12 +461,12 @@
 
     if-nez v0, :cond_0
 
-    .line 141
+    .line 180
     new-instance v0, Landroidx/lifecycle/ViewModelStore;
 
     invoke-direct {v0}, Landroidx/lifecycle/ViewModelStore;-><init>()V
 
-    .line 142
+    .line 181
     iget-object v1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mViewModelStores:Ljava/util/HashMap;
 
     iget-object p1, p1, Landroidx/fragment/app/Fragment;->mWho:Ljava/lang/String;
@@ -381,16 +480,16 @@
 .method public hashCode()I
     .locals 2
 
-    .line 242
-    iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashSet;
+    .line 286
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Ljava/util/HashSet;->hashCode()I
+    invoke-virtual {v0}, Ljava/util/HashMap;->hashCode()I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 243
+    .line 287
     iget-object v1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mChildNonConfigs:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->hashCode()I
@@ -401,7 +500,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 244
+    .line 288
     iget-object v1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mViewModelStores:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->hashCode()I
@@ -416,7 +515,7 @@
 .method isCleared()Z
     .locals 1
 
-    .line 95
+    .line 108
     iget-boolean v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mHasBeenCleared:Z
 
     return v0
@@ -425,14 +524,18 @@
 .method protected onCleared()V
     .locals 3
 
-    .line 88
-    sget-boolean v0, Landroidx/fragment/app/FragmentManagerImpl;->DEBUG:Z
+    const/4 v0, 0x3
+
+    .line 101
+    invoke-static {v0}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
     const-string v0, "FragmentManager"
 
-    .line 89
+    .line 102
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -452,32 +555,109 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 91
+    .line 104
     iput-boolean v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mHasBeenCleared:Z
 
     return-void
 .end method
 
-.method removeRetainedFragment(Landroidx/fragment/app/Fragment;)Z
-    .locals 1
+.method removeRetainedFragment(Landroidx/fragment/app/Fragment;)V
+    .locals 3
 
-    .line 124
-    iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashSet;
+    .line 154
+    iget-boolean v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mIsStateSaved:Z
 
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
+    const/4 v1, 0x2
+
+    if-eqz v0, :cond_1
+
+    .line 155
+    invoke-static {v1}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
 
     move-result p1
 
-    return p1
+    if-eqz p1, :cond_0
+
+    const-string p1, "FragmentManager"
+
+    const-string v0, "Ignoring removeRetainedFragment as the state is already saved"
+
+    .line 156
+    invoke-static {p1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    return-void
+
+    .line 160
+    :cond_1
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashMap;
+
+    iget-object v2, p1, Landroidx/fragment/app/Fragment;->mWho:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_3
+
+    .line 161
+    invoke-static {v1}, Landroidx/fragment/app/FragmentManager;->isLoggingEnabled(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const-string v0, "FragmentManager"
+
+    .line 162
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Updating retained Fragments: Removed "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_3
+    return-void
+.end method
+
+.method setIsStateSaved(Z)V
+    .locals 0
+
+    .line 96
+    iput-boolean p1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mIsStateSaved:Z
+
+    return-void
 .end method
 
 .method shouldDestroy(Landroidx/fragment/app/Fragment;)Z
     .locals 1
 
-    .line 108
-    iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashSet;
+    .line 138
+    iget-object v0, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashMap;
 
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+    iget-object p1, p1, Landroidx/fragment/app/Fragment;->mWho:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -487,18 +667,18 @@
 
     return v0
 
-    .line 112
+    .line 142
     :cond_0
     iget-boolean p1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mStateAutomaticallySaved:Z
 
     if-eqz p1, :cond_1
 
-    .line 115
+    .line 145
     iget-boolean p1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mHasBeenCleared:Z
 
     return p1
 
-    .line 119
+    .line 149
     :cond_1
     iget-boolean p1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mHasSavedSnapshot:Z
 
@@ -510,14 +690,14 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 251
+    .line 295
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "FragmentManagerViewModel{"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 252
+    .line 296
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -530,17 +710,21 @@
 
     const-string v1, "} Fragments ("
 
-    .line 253
+    .line 297
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 254
-    iget-object v1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashSet;
+    .line 298
+    iget-object v1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mRetainedFragments:Ljava/util/HashMap;
 
-    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object v1
 
-    .line 255
+    invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    .line 299
     :cond_0
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -549,14 +733,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 256
+    .line 300
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 257
+    .line 301
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
@@ -565,7 +749,7 @@
 
     const-string v2, ", "
 
-    .line 258
+    .line 302
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -573,10 +757,10 @@
     :cond_1
     const-string v1, ") Child Non Config ("
 
-    .line 261
+    .line 305
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 262
+    .line 306
     iget-object v1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mChildNonConfigs:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -587,7 +771,7 @@
 
     move-result-object v1
 
-    .line 263
+    .line 307
     :cond_2
     :goto_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -596,7 +780,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 264
+    .line 308
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -605,7 +789,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 265
+    .line 309
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
@@ -614,7 +798,7 @@
 
     const-string v2, ", "
 
-    .line 266
+    .line 310
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
@@ -622,10 +806,10 @@
     :cond_3
     const-string v1, ") ViewModelStores ("
 
-    .line 269
+    .line 313
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 270
+    .line 314
     iget-object v1, p0, Landroidx/fragment/app/FragmentManagerViewModel;->mViewModelStores:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -636,7 +820,7 @@
 
     move-result-object v1
 
-    .line 271
+    .line 315
     :cond_4
     :goto_2
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -645,7 +829,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 272
+    .line 316
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -654,7 +838,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 273
+    .line 317
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
@@ -663,7 +847,7 @@
 
     const-string v2, ", "
 
-    .line 274
+    .line 318
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
@@ -671,10 +855,10 @@
     :cond_5
     const/16 v1, 0x29
 
-    .line 277
+    .line 321
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 278
+    .line 322
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

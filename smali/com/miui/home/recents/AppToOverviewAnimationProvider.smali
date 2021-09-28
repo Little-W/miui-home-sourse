@@ -88,7 +88,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$onActivityReady$515(Lcom/miui/home/launcher/anim/AnimatorPlaybackController;)V
+.method static synthetic lambda$onActivityReady$0(Lcom/miui/home/launcher/anim/AnimatorPlaybackController;)V
     .locals 2
 
     .line 73
@@ -398,7 +398,7 @@
 
     move-result p2
 
-    sget-object v1, Lcom/miui/home/recents/-$$Lambda$AppToOverviewAnimationProvider$L-6l4sm1jYMxY8_5D28BVnDMWwE;->INSTANCE:Lcom/miui/home/recents/-$$Lambda$AppToOverviewAnimationProvider$L-6l4sm1jYMxY8_5D28BVnDMWwE;
+    sget-object v1, Lcom/miui/home/recents/-$$Lambda$AppToOverviewAnimationProvider$IbXHvUFhsgr77DJpx1pG8xmyPWE;->INSTANCE:Lcom/miui/home/recents/-$$Lambda$AppToOverviewAnimationProvider$IbXHvUFhsgr77DJpx1pG8xmyPWE;
 
     const/4 v2, 0x0
 

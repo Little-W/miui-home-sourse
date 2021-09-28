@@ -185,6 +185,20 @@
     return v0
 .end method
 
+.method public varargs setFactors([F)V
+    .locals 0
+
+    .line 163
+    iput-object p1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->factors:[F
+
+    .line 164
+    iget-object p1, p0, Lmiuix/animation/utils/EaseManager$EaseStyle;->parameters:[D
+
+    invoke-static {p0, p1}, Lmiuix/animation/utils/EaseManager$EaseStyle;->setParameters(Lmiuix/animation/utils/EaseManager$EaseStyle;[D)V
+
+    return-void
+.end method
+
 .method public toString()Ljava/lang/String;
     .locals 2
 

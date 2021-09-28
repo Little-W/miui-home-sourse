@@ -290,10 +290,16 @@
 
     move-result-wide v2
 
-    .line 107
-    iget-wide v4, v7, Lcom/miui/home/recents/util/PhysicalScroller;->mLastTime:J
+    const-wide/16 v4, 0x1
 
-    sub-long v4, v2, v4
+    .line 107
+    iget-wide v8, v7, Lcom/miui/home/recents/util/PhysicalScroller;->mLastTime:J
+
+    sub-long v8, v2, v8
+
+    invoke-static {v4, v5, v8, v9}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v4
 
     .line 108
     iput-wide v2, v7, Lcom/miui/home/recents/util/PhysicalScroller;->mLastTime:J

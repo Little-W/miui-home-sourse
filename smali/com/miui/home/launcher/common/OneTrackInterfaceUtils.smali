@@ -110,7 +110,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$trackEvent$482(Ljava/lang/String;Ljava/util/Map;)V
+.method static synthetic lambda$trackEvent$0(Ljava/lang/String;Ljava/util/Map;)V
     .locals 3
 
     .line 53
@@ -138,6 +138,7 @@
 
     goto :goto_0
 
+    .line 55
     :cond_0
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -147,7 +148,6 @@
 
     invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 55
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -229,9 +229,9 @@
 
     .line 51
     :cond_0
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$OneTrackInterfaceUtils$VaMfblA1-qSZdBnnbMvYtG1iBrA;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$OneTrackInterfaceUtils$BMOtGt6Rgxf5yD-Wei6IGpoNSno;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$OneTrackInterfaceUtils$VaMfblA1-qSZdBnnbMvYtG1iBrA;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$OneTrackInterfaceUtils$BMOtGt6Rgxf5yD-Wei6IGpoNSno;-><init>(Ljava/lang/String;Ljava/util/Map;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

@@ -1200,6 +1200,15 @@
     return v0
 .end method
 
+.method public getOnPreferenceChangeListener()Landroidx/preference/Preference$OnPreferenceChangeListener;
+    .locals 1
+
+    .line 1139
+    iget-object v0, p0, Landroidx/preference/Preference;->mOnChangeListener:Landroidx/preference/Preference$OnPreferenceChangeListener;
+
+    return-object v0
+.end method
+
 .method public getOnPreferenceClickListener()Landroidx/preference/Preference$OnPreferenceClickListener;
     .locals 1
 

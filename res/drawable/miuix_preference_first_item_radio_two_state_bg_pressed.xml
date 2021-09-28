@@ -14,7 +14,9 @@
                 android:height="@dimen/miuix_preference_item_min_height" />
             <padding
                 android:left="@dimen/miuix_preference_item_radio_two_state_bg_padding_start"
-                android:right="@dimen/miuix_preference_item_radio_two_state_bg_padding_end" />
+                android:top="@dimen/miuix_preference_checkable_item_mask_padding_top"
+                android:right="@dimen/miuix_preference_item_radio_two_state_bg_padding_end"
+                android:bottom="@dimen/miuix_preference_checkable_item_mask_padding_bottom" />
             <corners
                 android:radius="@dimen/miuix_preference_checkable_item_mask_radius" />
         </shape>

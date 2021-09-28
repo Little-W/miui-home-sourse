@@ -47,7 +47,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$showUserPresentAnimation$372(Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;)V
+.method static synthetic lambda$showUserPresentAnimation$0(Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;)V
     .locals 0
 
     .line 55
@@ -65,7 +65,7 @@
     return-void
 .end method
 
-.method static synthetic lambda$showUserPresentAnimation$373(Landroidx/dynamicanimation/animation/SpringAnimation;)V
+.method static synthetic lambda$showUserPresentAnimation$1(Landroidx/dynamicanimation/animation/SpringAnimation;)V
     .locals 0
 
     .line 64
@@ -321,9 +321,9 @@
     int-to-long v0, v0
 
     .line 54
-    new-instance v5, Lcom/miui/home/launcher/compat/-$$Lambda$UserPresentAnimationCompatV11$_ORzMy2r8tdsPcxaUHMKteKkyXg;
+    new-instance v5, Lcom/miui/home/launcher/compat/-$$Lambda$UserPresentAnimationCompatV11$nUrXB9ilpTMYTW2uGhqn7F0GcAU;
 
-    invoke-direct {v5, v2, v6, v7, v4}, Lcom/miui/home/launcher/compat/-$$Lambda$UserPresentAnimationCompatV11$_ORzMy2r8tdsPcxaUHMKteKkyXg;-><init>(Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;)V
+    invoke-direct {v5, v2, v6, v7, v4}, Lcom/miui/home/launcher/compat/-$$Lambda$UserPresentAnimationCompatV11$nUrXB9ilpTMYTW2uGhqn7F0GcAU;-><init>(Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;Landroidx/dynamicanimation/animation/SpringAnimation;)V
 
     invoke-static {v5, v0, v1}, Lcom/miui/home/launcher/common/Utilities;->useViewToPostDelay(Ljava/lang/Runnable;J)V
 
@@ -367,9 +367,9 @@
     check-cast p1, Landroidx/dynamicanimation/animation/SpringAnimation;
 
     .line 64
-    new-instance v2, Lcom/miui/home/launcher/compat/-$$Lambda$UserPresentAnimationCompatV11$3vd0Vv4gTr9pbzXV7ws-_Oojexg;
+    new-instance v2, Lcom/miui/home/launcher/compat/-$$Lambda$UserPresentAnimationCompatV11$L8HysBjpritXs5Z-_RiQzoKalAo;
 
-    invoke-direct {v2, p1}, Lcom/miui/home/launcher/compat/-$$Lambda$UserPresentAnimationCompatV11$3vd0Vv4gTr9pbzXV7ws-_Oojexg;-><init>(Landroidx/dynamicanimation/animation/SpringAnimation;)V
+    invoke-direct {v2, p1}, Lcom/miui/home/launcher/compat/-$$Lambda$UserPresentAnimationCompatV11$L8HysBjpritXs5Z-_RiQzoKalAo;-><init>(Landroidx/dynamicanimation/animation/SpringAnimation;)V
 
     const-wide/16 v3, 0x2
 

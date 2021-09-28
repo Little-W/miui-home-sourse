@@ -91,6 +91,31 @@
     return-object p1
 .end method
 
+.method keys()Ljava/util/Set;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .line 54
+    new-instance v0, Ljava/util/HashSet;
+
+    iget-object v1, p0, Landroidx/lifecycle/ViewModelStore;->mMap:Ljava/util/HashMap;
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    return-object v0
+.end method
+
 .method final put(Ljava/lang/String;Landroidx/lifecycle/ViewModel;)V
     .locals 1
 

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 206
+    .line 210
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$1;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 6
 
-    .line 209
+    .line 213
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -51,7 +51,7 @@
 
     const/4 v0, 0x0
 
-    .line 210
+    .line 214
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout$1;->this$0:Lcom/miui/home/launcher/CellLayout;
 
@@ -65,7 +65,7 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 211
+    .line 215
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout$1;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-static {v1}, Lcom/miui/home/launcher/CellLayout;->access$000(Lcom/miui/home/launcher/CellLayout;)Ljava/util/ArrayList;
@@ -78,7 +78,7 @@
 
     check-cast v1, Landroid/view/View;
 
-    .line 212
+    .line 216
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout$1;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-static {v2}, Lcom/miui/home/launcher/CellLayout;->access$100(Lcom/miui/home/launcher/CellLayout;)[F
@@ -130,7 +130,7 @@
 
     sub-float/2addr v2, v3
 
-    .line 222
+    .line 226
     :cond_3
     :goto_1
     invoke-static {}, Lcom/miui/home/launcher/CellLayout;->access$200()I
@@ -143,7 +143,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 224
+    .line 228
     invoke-virtual {v1}, Landroid/view/View;->getWidth()I
 
     move-result v2
@@ -162,7 +162,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setScaleX(F)V
 
-    .line 225
+    .line 229
     invoke-virtual {v1}, Landroid/view/View;->getHeight()I
 
     move-result v2
@@ -185,7 +185,7 @@
 
     div-float/2addr v2, v5
 
-    .line 226
+    .line 230
     invoke-virtual {v1, v2}, Landroid/view/View;->setTranslationY(F)V
 
     :cond_4

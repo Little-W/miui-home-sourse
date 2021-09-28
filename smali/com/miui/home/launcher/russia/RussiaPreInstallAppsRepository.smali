@@ -25,26 +25,26 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 45
+    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 43
+    .line 42
+    iput-object v0, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
+
+    .line 45
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
     iput-object v0, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
 
     .line 46
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/LauncherApplication;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherApplication;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
-
-    .line 47
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -55,7 +55,7 @@
 
     if-nez v0, :cond_0
 
-    .line 48
+    .line 47
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -69,30 +69,30 @@
 .method public static getInstance()Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
     .locals 2
 
-    .line 55
+    .line 54
     sget-object v0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->instance:Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     if-nez v0, :cond_1
 
-    .line 56
+    .line 55
     const-class v0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     monitor-enter v0
 
-    .line 57
+    .line 56
     :try_start_0
     sget-object v1, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->instance:Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     if-nez v1, :cond_0
 
-    .line 58
+    .line 57
     new-instance v1, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     invoke-direct {v1}, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;-><init>()V
 
     sput-object v1, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->instance:Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
-    .line 60
+    .line 59
     :cond_0
     monitor-exit v0
 
@@ -107,7 +107,7 @@
 
     throw v1
 
-    .line 62
+    .line 61
     :cond_1
     :goto_0
     sget-object v0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->instance:Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
@@ -122,7 +122,7 @@
 
     const-string v0, "kbjay_russia_repository"
 
-    .line 69
+    .line 68
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -145,7 +145,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
+    .line 69
     iget-object v0, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object v1, Lcom/miui/home/launcher/AppStatusProvider;->TABLE_APP_STATE_URI:Landroid/net/Uri;
@@ -170,7 +170,7 @@
         }
     .end annotation
 
-    .line 317
+    .line 316
     iget-object v0, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
     return-object v0
@@ -182,7 +182,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->BACKGROUND:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 286
+    .line 285
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallUtils;->isRussiaRom()Z
 
     move-result v0
@@ -191,7 +191,7 @@
 
     return-void
 
-    .line 291
+    .line 290
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
@@ -201,30 +201,30 @@
 
     return-void
 
-    .line 296
+    .line 295
     :cond_1
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/ChangeContainerOnDropMessage;->getStartContainer()J
 
     move-result-wide v1
 
-    .line 297
+    .line 296
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/ChangeContainerOnDropMessage;->getEndContainer()J
 
     move-result-wide v3
 
-    .line 298
+    .line 297
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/ChangeContainerOnDropMessage;->getShortCutInfo()Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object p1
 
-    .line 300
+    .line 299
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/Launcher;->getFolderInfoById(J)Lcom/miui/home/launcher/FolderInfo;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 302
+    .line 301
     invoke-virtual {v1}, Lcom/miui/home/launcher/FolderInfo;->isRussiaFolder()Z
 
     move-result v1
@@ -241,7 +241,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 304
+    .line 303
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->getInstance()Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     move-result-object v0
@@ -258,7 +258,7 @@
 
     return-void
 
-    .line 309
+    .line 308
     :cond_2
     invoke-virtual {v0, v3, v4}, Lcom/miui/home/launcher/Launcher;->getFolderInfoById(J)Lcom/miui/home/launcher/FolderInfo;
 
@@ -266,7 +266,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 310
+    .line 309
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->isRussiaFolder()Z
 
     move-result v0
@@ -283,7 +283,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 312
+    .line 311
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->getInstance()Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;
 
     move-result-object v0
@@ -305,7 +305,7 @@
 .method public initDataSource()V
     .locals 9
 
-    .line 75
+    .line 74
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallUtils;->isRussiaRom()Z
 
     move-result v0
@@ -314,13 +314,13 @@
 
     return-void
 
-    .line 79
+    .line 78
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
     if-nez v0, :cond_3
 
-    .line 80
+    .line 79
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -334,10 +334,10 @@
 
     const-string v2, "查找数据库\uff0c获取所有数据"
 
-    .line 83
+    .line 82
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
+    .line 83
     iget-object v3, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object v4, Lcom/miui/home/launcher/AppStatusProvider;->TABLE_APP_STATE_URI:Landroid/net/Uri;
@@ -356,7 +356,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 86
+    .line 85
     :goto_0
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -364,12 +364,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 87
+    .line 86
     new-instance v1, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;
 
     const-string v2, "package_name"
 
-    .line 88
+    .line 87
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
@@ -380,7 +380,7 @@
 
     const-string v2, "class_name"
 
-    .line 89
+    .line 88
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
@@ -391,7 +391,7 @@
 
     const-string v2, "flag"
 
-    .line 90
+    .line 89
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
@@ -402,7 +402,7 @@
 
     const-string v2, "click_time"
 
-    .line 91
+    .line 90
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
@@ -415,7 +415,7 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;-><init>(Ljava/lang/String;Ljava/lang/String;IJ)V
 
-    .line 93
+    .line 92
     iget-object v2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -443,14 +443,14 @@
 
     const-string v3, "initDataSource failed"
 
-    .line 97
+    .line 96
     invoke-static {v2, v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-eqz v0, :cond_4
 
-    .line 100
+    .line 99
     :goto_1
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
@@ -461,6 +461,7 @@
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
+    .line 101
     :cond_2
     throw v1
 
@@ -469,14 +470,14 @@
 
     const-string v1, "Datasource不为空\uff0c不用从数据库获取"
 
-    .line 104
+    .line 103
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
     :goto_3
     const/4 v0, 0x0
 
-    .line 106
+    .line 105
     :goto_4
     iget-object v1, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
@@ -488,7 +489,7 @@
 
     const-string v1, "kbjay_russia_repository"
 
-    .line 107
+    .line 106
     iget-object v2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -516,7 +517,7 @@
 
     const-string v0, "kbjay_russia_repository"
 
-    .line 228
+    .line 227
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -533,7 +534,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
+    .line 229
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -551,14 +552,14 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 234
+    .line 233
     iget-object v0, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 235
+    .line 234
     :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -567,14 +568,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 236
+    .line 235
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;
 
-    .line 237
+    .line 236
     iget-object v1, v1, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;->packageName:Ljava/lang/String;
 
     invoke-static {p1, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -583,7 +584,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 238
+    .line 237
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
     :try_end_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -597,7 +598,7 @@
 
     const-string v1, "onAppInfoRemoved failed"
 
-    .line 242
+    .line 241
     invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1
@@ -609,7 +610,7 @@
 
     const-string v0, "kbjay_russia_repository"
 
-    .line 195
+    .line 194
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -626,7 +627,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
+    .line 197
     :try_start_0
     iget-object v2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -662,24 +663,24 @@
 
     if-eqz v2, :cond_1
 
-    .line 204
+    .line 203
     invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 205
+    .line 204
     invoke-interface {v2, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v3
 
-    .line 206
+    .line 205
     invoke-interface {v2, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
-    .line 207
+    .line 206
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
@@ -688,7 +689,7 @@
 
     and-int/lit8 v2, v2, -0x41
 
-    .line 208
+    .line 207
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -697,7 +698,7 @@
 
     const-string v2, "kbjay_russia_repository"
 
-    .line 209
+    .line 208
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -714,7 +715,7 @@
 
     invoke-static {v2, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
+    .line 209
     iget-object v2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object v5, Lcom/miui/home/launcher/AppStatusProvider;->TABLE_APP_STATE_URI:Landroid/net/Uri;
@@ -723,17 +724,17 @@
 
     new-array v1, v1, [Ljava/lang/String;
 
-    .line 212
+    .line 211
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v1, v0
 
-    .line 210
+    .line 209
     invoke-virtual {v2, v5, v4, v6, v1}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 214
+    .line 213
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
@@ -743,7 +744,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 215
+    .line 214
     iget-object v1, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -762,7 +763,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
-    .line 216
+    .line 215
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -777,7 +778,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
-    .line 217
+    .line 216
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -792,7 +793,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 218
+    .line 217
     iget-object v1, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -819,7 +820,7 @@
 
     const-string v0, "onAppLeaveRussiaFolder failed"
 
-    .line 223
+    .line 222
     invoke-static {p2, v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1
@@ -831,7 +832,7 @@
 
     const-string v0, "kbjay_russia_repository"
 
-    .line 149
+    .line 148
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -850,7 +851,7 @@
 
     const/4 v0, 0x0
 
-    .line 152
+    .line 151
     :try_start_0
     iget-object v1, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -888,19 +889,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 160
+    .line 159
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 161
+    .line 160
     invoke-interface {v0, v7}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
-    .line 164
+    .line 163
     invoke-interface {v0, v8}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v3
@@ -915,7 +916,7 @@
     :goto_0
     if-eq v2, v1, :cond_2
 
-    .line 169
+    .line 168
     new-instance p2, Landroid/content/ContentValues;
 
     invoke-direct {p2}, Landroid/content/ContentValues;-><init>()V
@@ -926,14 +927,14 @@
 
     or-int/2addr v3, v4
 
-    .line 170
+    .line 169
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-virtual {p2, v1, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 171
+    .line 170
     iget-object v1, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object v3, Lcom/miui/home/launcher/AppStatusProvider;->TABLE_APP_STATE_URI:Landroid/net/Uri;
@@ -942,17 +943,17 @@
 
     new-array v6, v8, [Ljava/lang/String;
 
-    .line 173
+    .line 172
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v6, v7
 
-    .line 171
+    .line 170
     invoke-virtual {v1, v3, p2, v5, v6}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 174
+    .line 173
     :goto_1
     iget-object p2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
@@ -962,7 +963,7 @@
 
     if-ge v7, p2, :cond_3
 
-    .line 175
+    .line 174
     iget-object p2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
     invoke-interface {p2, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -979,7 +980,7 @@
 
     if-eqz p2, :cond_1
 
-    .line 176
+    .line 175
     iget-object p2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
     invoke-interface {p2, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -995,7 +996,7 @@
 
     goto :goto_1
 
-    .line 180
+    .line 179
     :cond_2
     new-instance v7, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;
 
@@ -1011,7 +1012,7 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;-><init>(Ljava/lang/String;Ljava/lang/String;IJ)V
 
-    .line 182
+    .line 181
     iget-object p1, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object p2, Lcom/miui/home/launcher/AppStatusProvider;->TABLE_APP_STATE_URI:Landroid/net/Uri;
@@ -1022,7 +1023,7 @@
 
     invoke-virtual {p1, p2, v1}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 183
+    .line 182
     iget-object p1, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
     invoke-interface {p1, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -1048,14 +1049,14 @@
 
     const-string v1, "onAppMoveToRussiaFolder failed"
 
-    .line 186
+    .line 185
     invoke-static {p2, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     if-eqz v0, :cond_4
 
-    .line 189
+    .line 188
     :goto_2
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
@@ -1067,6 +1068,7 @@
 
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
+    .line 190
     :cond_5
     throw p1
 .end method
@@ -1076,7 +1078,7 @@
 
     const-string v0, "kbjay_russia_repository"
 
-    .line 112
+    .line 111
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1093,7 +1095,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
+    .line 114
     :try_start_0
     iget-object v2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -1128,19 +1130,19 @@
 
     if-eqz v2, :cond_1
 
-    .line 120
+    .line 119
     invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 121
+    .line 120
     invoke-interface {v2, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v4
 
-    .line 122
+    .line 121
     invoke-interface {v2, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v5
@@ -1161,7 +1163,7 @@
 
     const-string v2, "kbjay_russia_repository"
 
-    .line 129
+    .line 128
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1178,7 +1180,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
+    .line 129
     iget-object v2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object v3, Lcom/miui/home/launcher/AppStatusProvider;->TABLE_APP_STATE_URI:Landroid/net/Uri;
@@ -1187,24 +1189,24 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 132
+    .line 131
     invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v0, v1
 
-    .line 130
+    .line 129
     invoke-virtual {v2, v3, v5, v0}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 134
+    .line 133
     iget-object v0, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 135
+    .line 134
     :cond_2
     :goto_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -1213,14 +1215,14 @@
 
     if-eqz v1, :cond_3
 
-    .line 136
+    .line 135
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;
 
-    .line 137
+    .line 136
     iget-object v2, v1, Lcom/miui/home/launcher/russia/RussiaPreInstallApp;->packageName:Ljava/lang/String;
 
     invoke-static {v2, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -1235,7 +1237,7 @@
 
     if-nez v1, :cond_2
 
-    .line 138
+    .line 137
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
     :try_end_0
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
@@ -1249,7 +1251,7 @@
 
     const-string v1, "onGPLinkRemoved failed"
 
-    .line 144
+    .line 143
     invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_3
@@ -1261,7 +1263,7 @@
 
     const-string v0, "kbjay_russia_repository"
 
-    .line 247
+    .line 246
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1278,14 +1280,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 248
+    .line 247
     invoke-static {}, Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository;->getInstance()Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository;
 
     move-result-object v0
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository;->getAutoInstallDeepLink(Ljava/lang/String;Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository$CallBack;)V
 
-    .line 251
+    .line 250
     :try_start_0
     iget-object v1, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -1320,19 +1322,19 @@
 
     if-eqz v1, :cond_1
 
-    .line 256
+    .line 255
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 257
+    .line 256
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v3
 
-    .line 258
+    .line 257
     invoke-interface {v1, p2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v4
@@ -1351,26 +1353,26 @@
     :goto_0
     if-eq v3, v2, :cond_3
 
-    .line 265
+    .line 264
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 266
+    .line 265
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
     const-string v2, "click_time"
 
-    .line 267
+    .line 266
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
 
     invoke-virtual {v1, v2, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 268
+    .line 267
     iget-object v2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
 
     sget-object v6, Lcom/miui/home/launcher/AppStatusProvider;->TABLE_APP_STATE_URI:Landroid/net/Uri;
@@ -1379,17 +1381,17 @@
 
     new-array p2, p2, [Ljava/lang/String;
 
-    .line 270
+    .line 269
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, p2, v0
 
-    .line 268
+    .line 267
     invoke-virtual {v2, v6, v1, v7, p2}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 272
+    .line 271
     :goto_1
     iget-object p2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
@@ -1399,7 +1401,7 @@
 
     if-ge v0, p2, :cond_3
 
-    .line 273
+    .line 272
     iget-object p2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
     invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1430,7 +1432,7 @@
 
     if-nez p2, :cond_2
 
-    .line 274
+    .line 273
     iget-object p2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->dataSource:Ljava/util/List;
 
     invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1455,7 +1457,7 @@
 
     const-string v0, "onGpLinkClick failed"
 
-    .line 279
+    .line 278
     invoke-static {p2, v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_3

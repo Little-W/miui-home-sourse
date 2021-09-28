@@ -25,6 +25,8 @@
 
 .field static final SM_PATTERN:Ljava/util/regex/Pattern;
 
+.field private static final STOCK_DEVICE:[Ljava/lang/String;
+
 .field public static TYPE_CPU:I
 
 .field public static TYPE_GPU:I
@@ -74,7 +76,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 42
 
     const-string v0, "Inc ([A-Z]+)([\\d]+)"
 
@@ -113,40 +115,40 @@
     .line 104
     sput v0, Lmiuix/animation/utils/DeviceUtils;->mTotalRam:I
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     .line 500
-    sput-object v0, Lmiuix/animation/utils/DeviceUtils;->mConstructor:Ljava/lang/reflect/Constructor;
+    sput-object v1, Lmiuix/animation/utils/DeviceUtils;->mConstructor:Ljava/lang/reflect/Constructor;
 
     .line 501
-    sput-object v0, Lmiuix/animation/utils/DeviceUtils;->mPerf:Ljava/lang/Object;
+    sput-object v1, Lmiuix/animation/utils/DeviceUtils;->mPerf:Ljava/lang/Object;
 
     .line 503
-    sput-object v0, Lmiuix/animation/utils/DeviceUtils;->mGetDeviceLevel:Ljava/lang/reflect/Method;
+    sput-object v1, Lmiuix/animation/utils/DeviceUtils;->mGetDeviceLevel:Ljava/lang/reflect/Method;
 
     .line 504
-    sput-object v0, Lmiuix/animation/utils/DeviceUtils;->mGetDeviceLevelForWhole:Ljava/lang/reflect/Method;
+    sput-object v1, Lmiuix/animation/utils/DeviceUtils;->mGetDeviceLevelForWhole:Ljava/lang/reflect/Method;
 
     .line 505
-    sput-object v0, Lmiuix/animation/utils/DeviceUtils;->mIsSupportPrune:Ljava/lang/reflect/Method;
+    sput-object v1, Lmiuix/animation/utils/DeviceUtils;->mIsSupportPrune:Ljava/lang/reflect/Method;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     .line 510
-    sput v1, Lmiuix/animation/utils/DeviceUtils;->DEV_STANDARD_VERSION:I
+    sput v2, Lmiuix/animation/utils/DeviceUtils;->DEV_STANDARD_VERSION:I
 
     .line 511
-    sget v2, Lmiuix/animation/utils/DeviceUtils;->DEV_STANDARD_VERSION:I
+    sget v0, Lmiuix/animation/utils/DeviceUtils;->DEV_STANDARD_VERSION:I
 
-    sput v2, Lmiuix/animation/utils/DeviceUtils;->mLastVersion:I
+    sput v0, Lmiuix/animation/utils/DeviceUtils;->mLastVersion:I
 
     .line 513
-    sput v1, Lmiuix/animation/utils/DeviceUtils;->TYPE_RAM:I
+    sput v2, Lmiuix/animation/utils/DeviceUtils;->TYPE_RAM:I
 
-    const/4 v2, 0x2
+    const/4 v0, 0x2
 
     .line 514
-    sput v2, Lmiuix/animation/utils/DeviceUtils;->TYPE_CPU:I
+    sput v0, Lmiuix/animation/utils/DeviceUtils;->TYPE_CPU:I
 
     const/4 v3, 0x3
 
@@ -183,7 +185,7 @@
     .line 526
     sget-object v4, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
-    new-array v5, v1, [Ljava/lang/Class;
+    new-array v5, v2, [Ljava/lang/Class;
 
     const-class v6, Landroid/content/Context;
 
@@ -196,197 +198,197 @@
     sput-object v4, Lmiuix/animation/utils/DeviceUtils;->mConstructor:Ljava/lang/reflect/Constructor;
 
     .line 529
-    new-array v2, v2, [Ljava/lang/Class;
+    new-array v0, v0, [Ljava/lang/Class;
 
     sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    aput-object v4, v2, v3
+    aput-object v4, v0, v3
 
     sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    aput-object v4, v2, v1
+    aput-object v4, v0, v2
 
     .line 530
     sget-object v4, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v5, "getDeviceLevel"
 
-    invoke-virtual {v4, v5, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {v4, v5, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    move-result-object v2
+    move-result-object v0
 
-    sput-object v2, Lmiuix/animation/utils/DeviceUtils;->mGetDeviceLevel:Ljava/lang/reflect/Method;
+    sput-object v0, Lmiuix/animation/utils/DeviceUtils;->mGetDeviceLevel:Ljava/lang/reflect/Method;
 
     .line 532
-    new-array v2, v1, [Ljava/lang/Class;
+    new-array v0, v2, [Ljava/lang/Class;
 
     sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    aput-object v4, v2, v3
+    aput-object v4, v0, v3
 
     .line 533
     sget-object v4, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v5, "getDeviceLevel"
 
-    invoke-virtual {v4, v5, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {v4, v5, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    move-result-object v2
+    move-result-object v0
 
-    sput-object v2, Lmiuix/animation/utils/DeviceUtils;->mGetDeviceLevelForWhole:Ljava/lang/reflect/Method;
+    sput-object v0, Lmiuix/animation/utils/DeviceUtils;->mGetDeviceLevelForWhole:Ljava/lang/reflect/Method;
 
     .line 536
-    sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
+    sget-object v0, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "isSupportPrune"
 
     new-array v5, v3, [Ljava/lang/Class;
 
-    invoke-virtual {v2, v4, v5}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {v0, v4, v5}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    move-result-object v2
+    move-result-object v0
 
-    sput-object v2, Lmiuix/animation/utils/DeviceUtils;->mIsSupportPrune:Ljava/lang/reflect/Method;
+    sput-object v0, Lmiuix/animation/utils/DeviceUtils;->mIsSupportPrune:Ljava/lang/reflect/Method;
 
     .line 539
-    sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
+    sget-object v0, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "DEVICE_LEVEL_FOR_RAM"
 
     sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    invoke-static {v2, v4, v5}, Lmiuix/animation/utils/DeviceUtils;->getStaticObjectField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0, v4, v5}, Lmiuix/animation/utils/DeviceUtils;->getStaticObjectField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Ljava/lang/Integer;
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v2
+    move-result v0
 
-    sput v2, Lmiuix/animation/utils/DeviceUtils;->TYPE_RAM:I
+    sput v0, Lmiuix/animation/utils/DeviceUtils;->TYPE_RAM:I
 
     .line 540
-    sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
+    sget-object v0, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "DEVICE_LEVEL_FOR_CPU"
 
     sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    invoke-static {v2, v4, v5}, Lmiuix/animation/utils/DeviceUtils;->getStaticObjectField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0, v4, v5}, Lmiuix/animation/utils/DeviceUtils;->getStaticObjectField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Ljava/lang/Integer;
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v2
+    move-result v0
 
-    sput v2, Lmiuix/animation/utils/DeviceUtils;->TYPE_CPU:I
+    sput v0, Lmiuix/animation/utils/DeviceUtils;->TYPE_CPU:I
 
     .line 541
-    sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
+    sget-object v0, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "DEVICE_LEVEL_FOR_GPU"
 
     sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    invoke-static {v2, v4, v5}, Lmiuix/animation/utils/DeviceUtils;->getStaticObjectField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0, v4, v5}, Lmiuix/animation/utils/DeviceUtils;->getStaticObjectField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Ljava/lang/Integer;
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v2
+    move-result v0
 
-    sput v2, Lmiuix/animation/utils/DeviceUtils;->TYPE_GPU:I
+    sput v0, Lmiuix/animation/utils/DeviceUtils;->TYPE_GPU:I
 
     .line 544
-    sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
+    sget-object v0, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "LOW_DEVICE"
 
     sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    invoke-static {v2, v4, v5}, Lmiuix/animation/utils/DeviceUtils;->getStaticObjectField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0, v4, v5}, Lmiuix/animation/utils/DeviceUtils;->getStaticObjectField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Ljava/lang/Integer;
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v2
+    move-result v0
 
-    sput v2, Lmiuix/animation/utils/DeviceUtils;->LOW:I
+    sput v0, Lmiuix/animation/utils/DeviceUtils;->LOW:I
 
     .line 545
-    sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
+    sget-object v0, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "MIDDLE_DEVICE"
 
     sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    invoke-static {v2, v4, v5}, Lmiuix/animation/utils/DeviceUtils;->getStaticObjectField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0, v4, v5}, Lmiuix/animation/utils/DeviceUtils;->getStaticObjectField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Ljava/lang/Integer;
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v2
+    move-result v0
 
-    sput v2, Lmiuix/animation/utils/DeviceUtils;->MIDDLE:I
+    sput v0, Lmiuix/animation/utils/DeviceUtils;->MIDDLE:I
 
     .line 546
-    sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
+    sget-object v0, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "HIGH_DEVICE"
 
     sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    invoke-static {v2, v4, v5}, Lmiuix/animation/utils/DeviceUtils;->getStaticObjectField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0, v4, v5}, Lmiuix/animation/utils/DeviceUtils;->getStaticObjectField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Ljava/lang/Integer;
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v2
+    move-result v0
 
-    sput v2, Lmiuix/animation/utils/DeviceUtils;->HIGH:I
+    sput v0, Lmiuix/animation/utils/DeviceUtils;->HIGH:I
 
     .line 547
-    sget-object v2, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
+    sget-object v0, Lmiuix/animation/utils/DeviceUtils;->perfClass:Ljava/lang/Class;
 
     const-string v4, "DEVICE_LEVEL_UNKNOWN"
 
     sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    invoke-static {v2, v4, v5}, Lmiuix/animation/utils/DeviceUtils;->getStaticObjectField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {v0, v4, v5}, Lmiuix/animation/utils/DeviceUtils;->getStaticObjectField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Ljava/lang/Integer;
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    move-result v2
+    move-result v0
 
-    sput v2, Lmiuix/animation/utils/DeviceUtils;->UNKNOWN:I
+    sput v0, Lmiuix/animation/utils/DeviceUtils;->UNKNOWN:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
-    move-exception v2
+    move-exception v0
 
     const-string v4, "DeviceUtils"
 
@@ -399,68 +401,68 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-static {v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 553
     :goto_0
-    sget-object v2, Lmiuix/animation/utils/DeviceUtils;->applicationContext:Landroid/content/Context;
+    sget-object v0, Lmiuix/animation/utils/DeviceUtils;->applicationContext:Landroid/content/Context;
 
-    if-nez v2, :cond_0
+    if-nez v0, :cond_0
 
     :try_start_1
-    const-string v2, "android.app.ActivityThread"
+    const-string v0, "android.app.ActivityThread"
 
     .line 555
-    invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    move-result-object v2
+    move-result-object v0
 
     const-string v4, "currentApplication"
 
     new-array v5, v3, [Ljava/lang/Class;
 
-    invoke-virtual {v2, v4, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {v0, v4, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    move-result-object v2
+    move-result-object v0
 
-    move-object v4, v0
+    move-object v4, v1
 
     check-cast v4, [Ljava/lang/Object;
 
-    invoke-virtual {v2, v0, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    check-cast v2, Landroid/app/Application;
+    check-cast v0, Landroid/app/Application;
 
-    sput-object v2, Lmiuix/animation/utils/DeviceUtils;->application:Landroid/app/Application;
+    sput-object v0, Lmiuix/animation/utils/DeviceUtils;->application:Landroid/app/Application;
 
     .line 556
-    sget-object v2, Lmiuix/animation/utils/DeviceUtils;->application:Landroid/app/Application;
+    sget-object v0, Lmiuix/animation/utils/DeviceUtils;->application:Landroid/app/Application;
 
-    if-eqz v2, :cond_0
+    if-eqz v0, :cond_0
 
     .line 557
-    sget-object v2, Lmiuix/animation/utils/DeviceUtils;->application:Landroid/app/Application;
+    sget-object v0, Lmiuix/animation/utils/DeviceUtils;->application:Landroid/app/Application;
 
-    invoke-virtual {v2}, Landroid/app/Application;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v0}, Landroid/app/Application;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v0
 
-    sput-object v2, Lmiuix/animation/utils/DeviceUtils;->applicationContext:Landroid/content/Context;
+    sput-object v0, Lmiuix/animation/utils/DeviceUtils;->applicationContext:Landroid/content/Context;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     goto :goto_1
 
     :catch_1
-    move-exception v2
+    move-exception v0
 
     const-string v4, "DeviceUtils"
 
@@ -473,42 +475,42 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-static {v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 564
     :cond_0
     :goto_1
-    sget-object v2, Lmiuix/animation/utils/DeviceUtils;->applicationContext:Landroid/content/Context;
+    sget-object v0, Lmiuix/animation/utils/DeviceUtils;->applicationContext:Landroid/content/Context;
 
-    if-nez v2, :cond_1
+    if-nez v0, :cond_1
 
     :try_start_2
-    const-string v2, "android.app.AppGlobals"
+    const-string v0, "android.app.AppGlobals"
 
     .line 566
-    invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    move-result-object v2
+    move-result-object v0
 
     const-string v4, "getInitialApplication"
 
     new-array v5, v3, [Ljava/lang/Class;
 
-    invoke-virtual {v2, v4, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {v0, v4, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    move-result-object v2
+    move-result-object v0
 
-    move-object v4, v0
+    move-object v4, v1
 
     check-cast v4, [Ljava/lang/Object;
 
-    invoke-virtual {v2, v0, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -537,7 +539,7 @@
     :catch_2
     move-exception v0
 
-    const-string v2, "DeviceUtils"
+    const-string v1, "DeviceUtils"
 
     .line 571
     new-instance v4, Ljava/lang/StringBuilder;
@@ -554,7 +556,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 576
     :cond_1
@@ -567,7 +569,7 @@
     .line 577
     sget-object v0, Lmiuix/animation/utils/DeviceUtils;->mConstructor:Ljava/lang/reflect/Constructor;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    new-array v1, v2, [Ljava/lang/Object;
 
     sget-object v2, Lmiuix/animation/utils/DeviceUtils;->applicationContext:Landroid/content/Context;
 
@@ -610,6 +612,91 @@
 
     :cond_2
     :goto_3
+    const-string v3, "cactus"
+
+    const-string v4, "cereus"
+
+    const-string v5, "pine"
+
+    const-string v6, "olive"
+
+    const-string v7, "ginkgo"
+
+    const-string v8, "olivelite"
+
+    const-string v9, "olivewood"
+
+    const-string v10, "willow"
+
+    const-string v11, "wayne"
+
+    const-string v12, "dandelion"
+
+    const-string v13, "angelica"
+
+    const-string v14, "angelicain"
+
+    const-string v15, "whyred"
+
+    const-string v16, "tulip"
+
+    const-string v17, "onc"
+
+    const-string v18, "onclite"
+
+    const-string v19, "lavender"
+
+    const-string v20, "lotus"
+
+    const-string v21, "laurus"
+
+    const-string v22, "merlinnfc"
+
+    const-string v23, "merlin"
+
+    const-string v24, "lancelot"
+
+    const-string v25, "citrus"
+
+    const-string v26, "pomelo"
+
+    const-string v27, "lemon"
+
+    const-string v28, "shiva"
+
+    const-string v29, "lime"
+
+    const-string v30, "cannon"
+
+    const-string v31, "curtana"
+
+    const-string v32, "durandal"
+
+    const-string v33, "excalibur"
+
+    const-string v34, "joyeuse"
+
+    const-string v35, "gram"
+
+    const-string v36, "sunny"
+
+    const-string v37, "mojito"
+
+    const-string v38, "rainbow"
+
+    const-string v39, "cattail"
+
+    const-string v40, "angelican"
+
+    const-string v41, "camellia"
+
+    .line 607
+    filled-new-array/range {v3 .. v41}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lmiuix/animation/utils/DeviceUtils;->STOCK_DEVICE:[Ljava/lang/String;
+
     return-void
 .end method
 

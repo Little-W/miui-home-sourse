@@ -47,7 +47,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onClick$317(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver$TransferClickListener;)V
+.method public static synthetic lambda$onClick$0(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver$TransferClickListener;)V
     .locals 2
 
     .line 275
@@ -68,7 +68,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onClick$318(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver$TransferClickListener;)V
+.method public static synthetic lambda$onClick$1(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver$TransferClickListener;)V
     .locals 3
 
     .line 278
@@ -147,9 +147,9 @@
 
     move-result-object p1
 
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$TransferClickListener$euVxxa7va8OgO9_kHdqRrgCsOAs;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$TransferClickListener$4mnJGpBADTJdJJ1dno4gyuvGnsA;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$TransferClickListener$euVxxa7va8OgO9_kHdqRrgCsOAs;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver$TransferClickListener;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$TransferClickListener$4mnJGpBADTJdJJ1dno4gyuvGnsA;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver$TransferClickListener;)V
 
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver$TransferClickListener;->data:Lcom/miui/home/launcher/SearchBarTransferLayout$Data;
 
@@ -231,9 +231,9 @@
 
     move-result-object p1
 
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$TransferClickListener$5XC447vbCu57OaCwa5_lBK-LKVE;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$TransferClickListener$3khXmwyG8V0g4ouyVs39AwFBxRc;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$TransferClickListener$5XC447vbCu57OaCwa5_lBK-LKVE;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver$TransferClickListener;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$SearchBarTransferLayout$TransferObserver$TransferClickListener$3khXmwyG8V0g4ouyVs39AwFBxRc;-><init>(Lcom/miui/home/launcher/SearchBarTransferLayout$TransferObserver$TransferClickListener;)V
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

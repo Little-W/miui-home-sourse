@@ -48,7 +48,7 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 1
 
-    .line 28
+    .line 30
     invoke-virtual {p0}, Lcom/miui/home/settings/AllDeleteAppActivity$initData$1;->call()Ljava/util/List;
 
     move-result-object v0
@@ -67,7 +67,7 @@
         }
     .end annotation
 
-    .line 66
+    .line 68
     iget-object v0, p0, Lcom/miui/home/settings/AllDeleteAppActivity$initData$1;->this$0:Lcom/miui/home/settings/AllDeleteAppActivity;
 
     invoke-static {v0}, Lcom/miui/home/settings/AllDeleteAppActivity;->access$getDeleteAppInfo(Lcom/miui/home/settings/AllDeleteAppActivity;)Ljava/util/List;

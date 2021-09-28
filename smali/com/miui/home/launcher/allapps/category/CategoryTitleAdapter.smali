@@ -56,7 +56,7 @@
     throw p1
 .end method
 
-.method public static synthetic lambda$getTitleView$320(Lcom/miui/home/launcher/allapps/category/CategoryTitleAdapter;ILandroid/view/View;)V
+.method public static synthetic lambda$getTitleView$0(Lcom/miui/home/launcher/allapps/category/CategoryTitleAdapter;ILandroid/view/View;)V
     .locals 0
 
     .line 54
@@ -256,9 +256,9 @@
     invoke-virtual {v0, p1}, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/titles/SimplePagerTitleView;->setText(Ljava/lang/CharSequence;)V
 
     .line 54
-    new-instance p1, Lcom/miui/home/launcher/allapps/category/-$$Lambda$CategoryTitleAdapter$4pf1_et6mHkq0syf1aX-qJOppXA;
+    new-instance p1, Lcom/miui/home/launcher/allapps/category/-$$Lambda$CategoryTitleAdapter$yUeR2-7NTLAW9Zu9wki_VBj5z4s;
 
-    invoke-direct {p1, p0, p2}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$CategoryTitleAdapter$4pf1_et6mHkq0syf1aX-qJOppXA;-><init>(Lcom/miui/home/launcher/allapps/category/CategoryTitleAdapter;I)V
+    invoke-direct {p1, p0, p2}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$CategoryTitleAdapter$yUeR2-7NTLAW9Zu9wki_VBj5z4s;-><init>(Lcom/miui/home/launcher/allapps/category/CategoryTitleAdapter;I)V
 
     invoke-virtual {v0, p1}, Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/titles/SimplePagerTitleView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

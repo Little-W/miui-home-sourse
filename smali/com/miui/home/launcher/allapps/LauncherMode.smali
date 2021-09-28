@@ -25,14 +25,14 @@
     .end annotation
 
     .line 91
-    new-instance v0, Lcom/miui/home/launcher/allapps/-$$Lambda$LauncherMode$3gMteirfgAebaALtSLMquqgDAgY;
+    new-instance v0, Lcom/miui/home/launcher/allapps/-$$Lambda$LauncherMode$vpKTABrWCmfWhut2HUAVuuatli8;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/-$$Lambda$LauncherMode$3gMteirfgAebaALtSLMquqgDAgY;-><init>(Lcom/miui/home/launcher/allapps/LauncherMode;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/-$$Lambda$LauncherMode$vpKTABrWCmfWhut2HUAVuuatli8;-><init>(Lcom/miui/home/launcher/allapps/LauncherMode;)V
 
     return-object v0
 .end method
 
-.method public static synthetic lambda$getRestoreFileFilter$124(Lcom/miui/home/launcher/allapps/LauncherMode;Landroid/net/Uri;)Z
+.method public static synthetic lambda$getRestoreFileFilter$0(Lcom/miui/home/launcher/allapps/LauncherMode;Landroid/net/Uri;)Z
     .locals 1
 
     .line 91
@@ -44,7 +44,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lmiui/os/FileUtils;->getExtension(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lmiuix/core/util/FileUtils;->getExtension(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -96,7 +96,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lmiui/os/FileUtils;->getFileName(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lmiuix/core/util/FileUtils;->getFileName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -354,14 +354,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 171
+    .line 179
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->canShowShortcutMenu()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 172
+    .line 180
     invoke-static {}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuManager;->isAndroidVersionSupportShortcutMenu()Z
 
     move-result p1
@@ -407,7 +407,7 @@
 .method public getCurrentDefaultScreenId()J
     .locals 2
 
-    .line 198
+    .line 206
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCurrentDefaultScreenIdFromPreference()J
 
     move-result-wide v0
@@ -443,7 +443,7 @@
 .method public getIconSizeScale()F
     .locals 1
 
-    .line 194
+    .line 202
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object v0
@@ -568,12 +568,12 @@
 
     const/4 v1, 0x1
 
-    .line 186
+    .line 194
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 185
+    .line 193
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -581,21 +581,21 @@
     return-object p1
 .end method
 
-.method public isAutoFillEmptyEnable(Landroid/content/Context;)Z
-    .locals 0
+.method public isAutoFillEmptyEnable()Z
+    .locals 1
 
     .line 162
-    invoke-static {p1}, Lcom/miui/launcher/utils/LauncherUtils;->enableAutoFillEmpty(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/launcher/utils/LauncherUtils;->enableAutoFillEmpty()Z
 
-    move-result p1
+    move-result v0
 
-    return p1
+    return v0
 .end method
 
 .method public isHomeSupportSearchBar(Landroid/content/Context;)Z
     .locals 1
 
-    .line 190
+    .line 198
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-nez v0, :cond_0
@@ -604,7 +604,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f05000f
+    const v0, 0x7f050016
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -634,14 +634,14 @@
 .method public isPersonalAssistantOn(Landroid/content/Context;)Z
     .locals 2
 
-    .line 176
+    .line 184
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 177
+    .line 185
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
@@ -657,7 +657,7 @@
 
     const/4 v1, 0x1
 
-    .line 179
+    .line 187
     invoke-static {p1, v0, v1}, Lcom/miui/launcher/utils/LauncherUtils;->getBooleanValueFromMiuiSettings(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result p1
@@ -665,15 +665,33 @@
     return p1
 .end method
 
-.method public isScreenCellsLocked(Landroid/content/Context;)Z
-    .locals 0
+.method public isScreenCellsLocked()Z
+    .locals 1
 
     .line 166
-    invoke-static {p1}, Lcom/miui/launcher/utils/LauncherUtils;->isScreenCellsLocked(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/launcher/utils/LauncherUtils;->isScreenCellsLocked()Z
 
-    move-result p1
+    move-result v0
 
-    return p1
+    return v0
+.end method
+
+.method public refreshAutoFillEmpty(Landroid/content/Context;)V
+    .locals 0
+
+    .line 174
+    invoke-static {p1}, Lcom/miui/launcher/utils/LauncherUtils;->refreshAutoFillEmpty(Landroid/content/Context;)V
+
+    return-void
+.end method
+
+.method public refreshScreenCellsLocked(Landroid/content/Context;)V
+    .locals 0
+
+    .line 170
+    invoke-static {p1}, Lcom/miui/launcher/utils/LauncherUtils;->refreshScreenCellsLocked(Landroid/content/Context;)V
+
+    return-void
 .end method
 
 .method public restoreDatabaseFile(Landroid/content/Context;Ljava/util/List;)V

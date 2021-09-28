@@ -1,4 +1,4 @@
-.class final Lcom/miui/launcher/utils/MamlUtils$1;
+.class Lcom/miui/launcher/utils/MamlUtils$1;
 .super Ljava/lang/Object;
 .source "MamlUtils.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -27,7 +27,7 @@
 .method constructor <init>(Landroid/graphics/drawable/Drawable;Landroid/widget/ImageView;)V
     .locals 0
 
-    .line 188
+    .line 189
     iput-object p1, p0, Lcom/miui/launcher/utils/MamlUtils$1;->val$fancyDrawable:Landroid/graphics/drawable/Drawable;
 
     iput-object p2, p0, Lcom/miui/launcher/utils/MamlUtils$1;->val$icon:Landroid/widget/ImageView;
@@ -42,12 +42,12 @@
 .method public run()V
     .locals 2
 
-    .line 191
+    .line 192
     iget-object v0, p0, Lcom/miui/launcher/utils/MamlUtils$1;->val$fancyDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 192
+    .line 193
     iget-object v1, p0, Lcom/miui/launcher/utils/MamlUtils$1;->val$icon:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V

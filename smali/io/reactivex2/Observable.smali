@@ -102,68 +102,8 @@
     return-object p0
 .end method
 
-.method public static just(Ljava/lang/Object;)Lio/reactivex2/Observable;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(TT;)",
-            "Lio/reactivex2/Observable<",
-            "TT;>;"
-        }
-    .end annotation
-
-    const-string v0, "item is null"
-
-    .line 2389
-    invoke-static {p0, v0}, Lio/reactivex2/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 2390
-    new-instance v0, Lio/reactivex2/internal/operators/observable/ObservableJust;
-
-    invoke-direct {v0, p0}, Lio/reactivex2/internal/operators/observable/ObservableJust;-><init>(Ljava/lang/Object;)V
-
-    invoke-static {v0}, Lio/reactivex2/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex2/Observable;)Lio/reactivex2/Observable;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
 
 # virtual methods
-.method public final map(Lio/reactivex2/functions/Function;)Lio/reactivex2/Observable;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<R:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lio/reactivex2/functions/Function<",
-            "-TT;+TR;>;)",
-            "Lio/reactivex2/Observable<",
-            "TR;>;"
-        }
-    .end annotation
-
-    const-string v0, "mapper is null"
-
-    .line 9780
-    invoke-static {p1, v0}, Lio/reactivex2/internal/functions/ObjectHelper;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-
-    .line 9781
-    new-instance v0, Lio/reactivex2/internal/operators/observable/ObservableMap;
-
-    invoke-direct {v0, p0, p1}, Lio/reactivex2/internal/operators/observable/ObservableMap;-><init>(Lio/reactivex2/ObservableSource;Lio/reactivex2/functions/Function;)V
-
-    invoke-static {v0}, Lio/reactivex2/plugins/RxJavaPlugins;->onAssembly(Lio/reactivex2/Observable;)Lio/reactivex2/Observable;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
 .method public final observeOn(Lio/reactivex2/Scheduler;)Lio/reactivex2/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;

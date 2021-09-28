@@ -130,7 +130,7 @@
     return v1
 .end method
 
-.method public static synthetic lambda$onDragEnd$346(Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;Lcom/miui/home/launcher/LauncherState;)V
+.method public static synthetic lambda$onDragEnd$0(Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;Lcom/miui/home/launcher/LauncherState;)V
     .locals 0
 
     .line 268
@@ -781,6 +781,7 @@
 
     if-nez p2, :cond_2
 
+    .line 224
     iget-object p2, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mToState:Lcom/miui/home/launcher/LauncherState;
 
     goto :goto_1
@@ -934,9 +935,9 @@
     :goto_3
     iget-object v2, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
-    new-instance v3, Lcom/miui/home/launcher/uioverrides/-$$Lambda$AllAppsSwipeController$lICsQLNGL70fWjt5SqVYRmUB7Kg;
+    new-instance v3, Lcom/miui/home/launcher/uioverrides/-$$Lambda$AllAppsSwipeController$Q1m7xa_9G5QqCAKM-QaPtcSAIwY;
 
-    invoke-direct {v3, p0, p2}, Lcom/miui/home/launcher/uioverrides/-$$Lambda$AllAppsSwipeController$lICsQLNGL70fWjt5SqVYRmUB7Kg;-><init>(Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;Lcom/miui/home/launcher/LauncherState;)V
+    invoke-direct {v3, p0, p2}, Lcom/miui/home/launcher/uioverrides/-$$Lambda$AllAppsSwipeController$Q1m7xa_9G5QqCAKM-QaPtcSAIwY;-><init>(Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;Lcom/miui/home/launcher/LauncherState;)V
 
     invoke-virtual {v2, v3}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->setEndAction(Ljava/lang/Runnable;)V
 

@@ -15,16 +15,16 @@
 
 
 # static fields
-.field public static final icon_item:I = 0x7f0d005b
+.field public static final icon_item:I = 0x7f0d005c
 
-.field public static final small_window_container:I = 0x7f0d00c7
+.field public static final small_window_container:I = 0x7f0d0101
 
-.field public static final small_window_edit:I = 0x7f0d00c8
+.field public static final small_window_edit:I = 0x7f0d0102
 
-.field public static final small_window_edit_icon:I = 0x7f0d00c9
+.field public static final small_window_edit_icon:I = 0x7f0d0103
 
-.field public static final small_window_header:I = 0x7f0d00ca
+.field public static final small_window_header:I = 0x7f0d0104
 
-.field public static final small_window_seclected_icon:I = 0x7f0d00cb
+.field public static final small_window_seclected_icon:I = 0x7f0d0105
 
-.field public static final small_window_split:I = 0x7f0d00cc
+.field public static final small_window_split:I = 0x7f0d0106

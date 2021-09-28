@@ -4,30 +4,7 @@
 
 
 # direct methods
-.method static synthetic lambda$null$458()Z
-    .locals 1
-
-    .line 95
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 97
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->hasMoved()Z
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method static synthetic lambda$startUserGuide$457(Landroid/content/Context;Ljava/util/HashSet;Ljava/lang/Void;)Lcom/miui/home/launcher/ShortcutIcon;
+.method static synthetic lambda$startUserGuide$0(Landroid/content/Context;Ljava/util/HashSet;Ljava/lang/Void;)Lcom/miui/home/launcher/ShortcutIcon;
     .locals 4
 
     .line 33
@@ -158,7 +135,30 @@
     return-object v0
 .end method
 
-.method static synthetic lambda$startUserGuide$459(Landroid/content/Context;Lcom/miui/home/launcher/ShortcutIcon;)V
+.method static synthetic lambda$startUserGuide$1()Z
+    .locals 1
+
+    .line 95
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 97
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->hasMoved()Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method static synthetic lambda$startUserGuide$2(Landroid/content/Context;Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 5
 
     if-eqz p1, :cond_1
@@ -299,7 +299,7 @@
     move-result-object p1
 
     .line 84
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
 
@@ -308,11 +308,11 @@
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 85
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/miui/home/launcher/LauncherApplication;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/miui/home/launcher/Application;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
@@ -379,7 +379,7 @@
 
     move-result-object p0
 
-    sget-object p1, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$6YFe5hs5GrvAcSD2ARmUoJHLNKk;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$6YFe5hs5GrvAcSD2ARmUoJHLNKk;
+    sget-object p1, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$RekHUrodpu9Q64kgbjpYvlGDrq4;->INSTANCE:Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$RekHUrodpu9Q64kgbjpYvlGDrq4;
 
     invoke-virtual {p0, v0, v3, p1}, Lcom/market/sdk/homeguide/AppstoreUserGuide;->tryShowUserGuide(Landroid/graphics/Bitmap;Lcom/market/sdk/homeguide/HomeUserGuideData;Lcom/market/sdk/homeguide/Interceptor;)V
 
@@ -407,13 +407,13 @@
     .end annotation
 
     .line 32
-    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$c0QVlBTcd0T-VjqJ46WX3eZKo2s;
+    new-instance v0, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$t7BlaIGKgmkt9kUWL6MRc3mAIFo;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$c0QVlBTcd0T-VjqJ46WX3eZKo2s;-><init>(Landroid/content/Context;Ljava/util/HashSet;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$t7BlaIGKgmkt9kUWL6MRc3mAIFo;-><init>(Landroid/content/Context;Ljava/util/HashSet;)V
 
-    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$MMUTIg6zJRNOTUpuJO4V-jpG0Ec;
+    new-instance p1, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$zCup2OULrhcJJao3PwWnOq-cLLI;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$MMUTIg6zJRNOTUpuJO4V-jpG0Ec;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/common/-$$Lambda$MarketUtils$zCup2OULrhcJJao3PwWnOq-cLLI;-><init>(Landroid/content/Context;)V
 
     const/4 p0, 0x0
 

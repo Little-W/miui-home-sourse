@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
     .locals 0
 
-    .line 775
+    .line 789
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$12;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 .method public apply(Ljava/lang/Void;)Ljava/lang/Long;
     .locals 2
 
-    .line 778
+    .line 792
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$12;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/RecentsContainer;->getFreeMemory()J
@@ -65,7 +65,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 775
+    .line 789
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/RecentsContainer$12;->apply(Ljava/lang/Void;)Ljava/lang/Long;

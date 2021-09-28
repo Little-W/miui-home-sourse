@@ -33,7 +33,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$run$205(Lcom/miui/home/launcher/commercial/recommend/RecommendController$2;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)V
+.method public static synthetic lambda$run$0(Lcom/miui/home/launcher/commercial/recommend/RecommendController$2;Lcom/miui/home/launcher/commercial/recommend/RecommendInfo;)V
     .locals 3
 
     .line 448
@@ -71,9 +71,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$2$BmXV71nZYWkGOTA5ryIYozlcBmI;
+    new-instance v1, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$2$XInUQDI2uqDO0JTg-4Icyhn-2Uk;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$2$BmXV71nZYWkGOTA5ryIYozlcBmI;-><init>(Lcom/miui/home/launcher/commercial/recommend/RecommendController$2;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/commercial/recommend/-$$Lambda$RecommendController$2$XInUQDI2uqDO0JTg-4Icyhn-2Uk;-><init>(Lcom/miui/home/launcher/commercial/recommend/RecommendController$2;)V
 
     .line 447
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V

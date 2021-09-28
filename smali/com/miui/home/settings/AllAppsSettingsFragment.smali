@@ -78,7 +78,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100148
+    const v1, 0x7f1001e7
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -91,7 +91,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100147
+    const v1, 0x7f1001e6
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -104,7 +104,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100149
+    const v1, 0x7f1001e8
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -117,7 +117,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100052
+    const v1, 0x7f100054
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -130,7 +130,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100051
+    const v1, 0x7f100053
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -315,7 +315,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$onCreatePreferences$499(Lcom/miui/home/settings/AllAppsSettingsFragment;Ljava/lang/Void;)Ljava/lang/Void;
+.method public static synthetic lambda$onCreatePreferences$0(Lcom/miui/home/settings/AllAppsSettingsFragment;Ljava/lang/Void;)Ljava/lang/Void;
     .locals 0
 
     .line 117
@@ -330,7 +330,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$onCreatePreferences$500(Lcom/miui/home/settings/AllAppsSettingsFragment;Ljava/lang/Void;)V
+.method public static synthetic lambda$onCreatePreferences$1(Lcom/miui/home/settings/AllAppsSettingsFragment;Ljava/lang/Void;)V
     .locals 1
 
     .line 120
@@ -338,7 +338,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/miui/home/settings/AllAppsSettingsFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/miui/home/settings/AllAppsSettingsFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
@@ -366,27 +366,25 @@
     .locals 3
 
     .line 228
-    new-instance v0, Lmiui/app/AlertDialog$Builder;
+    new-instance v0, Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Lcom/miui/home/settings/AllAppsSettingsFragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const/16 v2, 0x8
+    invoke-direct {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v0, v1, v2}, Lmiui/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
-
-    const v1, 0x7f100046
+    const v1, 0x7f100048
 
     .line 229
-    invoke-virtual {v0, v1}, Lmiui/app/AlertDialog$Builder;->setTitle(I)Lmiui/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f100045
+    const v1, 0x7f100047
 
     .line 230
-    invoke-virtual {v0, v1}, Lmiui/app/AlertDialog$Builder;->setMessage(I)Lmiui/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
@@ -394,10 +392,10 @@
 
     invoke-direct {v1, p0}, Lcom/miui/home/settings/AllAppsSettingsFragment$3;-><init>(Lcom/miui/home/settings/AllAppsSettingsFragment;)V
 
-    const v2, 0x7f1000a3
+    const v2, 0x7f1000a6
 
     .line 231
-    invoke-virtual {v0, v2, v1}, Lmiui/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;
+    invoke-virtual {v0, v2, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
@@ -405,10 +403,10 @@
 
     invoke-direct {v1, p0}, Lcom/miui/home/settings/AllAppsSettingsFragment$2;-><init>(Lcom/miui/home/settings/AllAppsSettingsFragment;)V
 
-    const v2, 0x7f100156
+    const v2, 0x7f1001f5
 
     .line 237
-    invoke-virtual {v0, v2, v1}, Lmiui/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiui/app/AlertDialog$Builder;
+    invoke-virtual {v0, v2, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
@@ -417,17 +415,17 @@
     invoke-direct {v1, p0}, Lcom/miui/home/settings/AllAppsSettingsFragment$1;-><init>(Lcom/miui/home/settings/AllAppsSettingsFragment;)V
 
     .line 249
-    invoke-virtual {v0, v1}, Lmiui/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Lmiui/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
     .line 255
-    invoke-virtual {v0}, Lmiui/app/AlertDialog$Builder;->create()Lmiui/app/AlertDialog;
+    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object v0
 
     .line 256
-    invoke-virtual {v0}, Lmiui/app/AlertDialog;->show()V
+    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->show()V
 
     return-void
 .end method
@@ -662,13 +660,13 @@
     invoke-virtual {p1, v2}, Landroidx/preference/PreferenceCategory;->removePreference(Landroidx/preference/Preference;)Z
 
     .line 116
-    new-instance p1, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$mddXq_PL-kfvp4aryEHXfiiPWN8;
+    new-instance p1, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$SG5FSG_DFTev2p_bqPDdoaakadE;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$mddXq_PL-kfvp4aryEHXfiiPWN8;-><init>(Lcom/miui/home/settings/AllAppsSettingsFragment;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$SG5FSG_DFTev2p_bqPDdoaakadE;-><init>(Lcom/miui/home/settings/AllAppsSettingsFragment;)V
 
-    new-instance v2, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$CNqxbt7RyJI3EDhl7g-RJnnePxs;
+    new-instance v2, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$fsZqevwVoVrq6EG1aSdtNO7AsZU;
 
-    invoke-direct {v2, p0}, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$CNqxbt7RyJI3EDhl7g-RJnnePxs;-><init>(Lcom/miui/home/settings/AllAppsSettingsFragment;)V
+    invoke-direct {v2, p0}, Lcom/miui/home/settings/-$$Lambda$AllAppsSettingsFragment$fsZqevwVoVrq6EG1aSdtNO7AsZU;-><init>(Lcom/miui/home/settings/AllAppsSettingsFragment;)V
 
     const/4 v3, 0x0
 
@@ -692,7 +690,7 @@
     .line 126
     iget-object p1, p0, Lcom/miui/home/settings/AllAppsSettingsFragment;->mSwipeUpHomeSettingGlobal:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
-    invoke-virtual {p0}, Lcom/miui/home/settings/AllAppsSettingsFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/miui/home/settings/AllAppsSettingsFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v2
 
@@ -931,18 +929,18 @@
     if-ne v0, v1, :cond_1
 
     .line 194
-    invoke-virtual {p0}, Lcom/miui/home/settings/AllAppsSettingsFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/miui/home/settings/AllAppsSettingsFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
     .line 195
-    invoke-virtual {p0}, Lcom/miui/home/settings/AllAppsSettingsFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/miui/home/settings/AllAppsSettingsFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/app/Activity;->onBackPressed()V
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->onBackPressed()V
 
     :cond_0
     const/4 p1, 0x1
@@ -1098,7 +1096,7 @@
     if-ne p1, v0, :cond_6
 
     .line 222
-    invoke-virtual {p0}, Lcom/miui/home/settings/AllAppsSettingsFragment;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcom/miui/home/settings/AllAppsSettingsFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 

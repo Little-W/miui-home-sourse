@@ -140,13 +140,13 @@
     if-eqz p1, :cond_0
 
     .line 147
-    invoke-static {p1}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->access$000(Lcom/miui/home/launcher/allapps/WorkFooterContainer;)Lmiui/widget/SlidingButton;
+    invoke-static {p1}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->access$000(Lcom/miui/home/launcher/allapps/WorkFooterContainer;)Lmiuix/slidingwidget/widget/SlidingButton;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lmiui/widget/SlidingButton;->setEnabled(Z)V
+    invoke-virtual {p1, v0}, Lmiuix/slidingwidget/widget/SlidingButton;->setEnabled(Z)V
 
     :cond_0
     return-void
@@ -167,13 +167,13 @@
     if-eqz v0, :cond_0
 
     .line 130
-    invoke-static {v0}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->access$000(Lcom/miui/home/launcher/allapps/WorkFooterContainer;)Lmiui/widget/SlidingButton;
+    invoke-static {v0}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->access$000(Lcom/miui/home/launcher/allapps/WorkFooterContainer;)Lmiuix/slidingwidget/widget/SlidingButton;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lmiui/widget/SlidingButton;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Lmiuix/slidingwidget/widget/SlidingButton;->setEnabled(Z)V
 
     :cond_0
     return-void

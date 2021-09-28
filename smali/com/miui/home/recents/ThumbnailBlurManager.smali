@@ -51,13 +51,13 @@
     iput-object p2, p0, Lcom/miui/home/recents/ThumbnailBlurManager;->mHandler:Landroid/os/Handler;
 
     .line 34
-    new-instance p1, Lcom/miui/home/recents/-$$Lambda$ThumbnailBlurManager$LBWE6jgYQn6Eerrg-jJjG3r9B6k;
+    new-instance p1, Lcom/miui/home/recents/-$$Lambda$ThumbnailBlurManager$C7S54kgPUlHoYcwMxHYypmAdtig;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/recents/-$$Lambda$ThumbnailBlurManager$LBWE6jgYQn6Eerrg-jJjG3r9B6k;-><init>(Lcom/miui/home/recents/ThumbnailBlurManager;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/recents/-$$Lambda$ThumbnailBlurManager$C7S54kgPUlHoYcwMxHYypmAdtig;-><init>(Lcom/miui/home/recents/ThumbnailBlurManager;)V
 
-    new-instance p2, Lcom/miui/home/recents/-$$Lambda$ThumbnailBlurManager$cdd8R04QH-ZVBkyFVyN30nQCjt0;
+    new-instance p2, Lcom/miui/home/recents/-$$Lambda$ThumbnailBlurManager$Qrs-FXNCLxdxph81t04-d1sTblM;
 
-    invoke-direct {p2, p0}, Lcom/miui/home/recents/-$$Lambda$ThumbnailBlurManager$cdd8R04QH-ZVBkyFVyN30nQCjt0;-><init>(Lcom/miui/home/recents/ThumbnailBlurManager;)V
+    invoke-direct {p2, p0}, Lcom/miui/home/recents/-$$Lambda$ThumbnailBlurManager$Qrs-FXNCLxdxph81t04-d1sTblM;-><init>(Lcom/miui/home/recents/ThumbnailBlurManager;)V
 
     const/4 v0, 0x0
 
@@ -97,7 +97,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f03000d
+    const v1, 0x7f03001d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -366,7 +366,7 @@
     return-object v0
 .end method
 
-.method public static synthetic lambda$new$290(Lcom/miui/home/recents/ThumbnailBlurManager;Ljava/lang/Void;)Ljava/lang/String;
+.method public static synthetic lambda$new$0(Lcom/miui/home/recents/ThumbnailBlurManager;Ljava/lang/Void;)Ljava/lang/String;
     .locals 0
 
     .line 34
@@ -377,7 +377,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$new$291(Lcom/miui/home/recents/ThumbnailBlurManager;Ljava/lang/String;)V
+.method public static synthetic lambda$new$1(Lcom/miui/home/recents/ThumbnailBlurManager;Ljava/lang/String;)V
     .locals 1
 
     .line 35

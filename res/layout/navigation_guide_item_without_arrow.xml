@@ -2,7 +2,7 @@
 <LinearLayout
     android:gravity="center_vertical"
     android:id="@id/item"
-    android:background="@268566567"
+    android:background="@drawable/home_preference_item_bg"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -14,15 +14,15 @@
         android:layout_width="@dimen/navigation_guide_item_icon_width"
         android:layout_height="@dimen/navigation_guide_item_icon_height"
         android:scaleType="fitCenter"
-        android:layout_marginEnd="@269090828" />
+        android:layout_marginEnd="@dimen/miuix_preference_item_padding_inner" />
     <RelativeLayout
         android:gravity="center_vertical"
         android:layout_gravity="center_vertical"
         android:layout_width="wrap_content"
-        android:layout_height="@269090826"
+        android:layout_height="@dimen/miuix_appcompat_list_preferred_item_height"
         android:layout_weight="1.0">
         <TextView
-            android:textAppearance="@269287511"
+            android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
             android:ellipsize="marquee"
             android:id="@android:id/title"
             android:fadingEdge="horizontal"
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:singleLine="true" />
         <TextView
-            android:textAppearance="@269287538"
+            android:textAppearance="@style/Miuix.AppCompat.TextAppearance.List.Secondary.Preference"
             android:id="@android:id/summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

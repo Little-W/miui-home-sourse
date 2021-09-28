@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/DeviceConfig$1;
+.class Lcom/miui/home/launcher/DeviceConfig$1;
 .super Ljava/util/HashSet;
 .source "DeviceConfig.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -26,17 +26,17 @@
 .method constructor <init>()V
     .locals 1
 
-    .line 217
+    .line 208
     invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
 
     const-string v0, "mx_telcel"
 
-    .line 218
+    .line 209
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DeviceConfig$1;->add(Ljava/lang/Object;)Z
 
     const-string v0, "lm_cr"
 
-    .line 219
+    .line 210
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DeviceConfig$1;->add(Ljava/lang/Object;)Z
 
     return-void

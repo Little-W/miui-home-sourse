@@ -72,7 +72,7 @@
     .line 21
     iput-boolean p2, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mIsShowing:Z
 
-    .line 118
+    .line 117
     new-instance p3, Lcom/miui/home/launcher/DefaultScreenPreviewView$2;
 
     invoke-direct {p3, p0}, Lcom/miui/home/launcher/DefaultScreenPreviewView$2;-><init>(Lcom/miui/home/launcher/DefaultScreenPreviewView;)V
@@ -95,7 +95,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f070088
+    const p3, 0x7f07008e
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -108,7 +108,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f070087
+    const p3, 0x7f07008d
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -121,7 +121,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f070085
+    const p3, 0x7f07008b
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -134,8 +134,7 @@
 
     move-result p1
 
-    .line 45
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowNotch()Z
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->doLauncherHavePaddingTopForStatusBarAndNotch()Z
 
     move-result p3
 
@@ -149,7 +148,7 @@
 
     move-result p2
 
-    .line 46
+    .line 45
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->getPaddingEnd()I
 
@@ -192,18 +191,18 @@
 
     return-object v0
 
-    .line 80
+    .line 79
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/CellScreen;->getCellLayout()Lcom/miui/home/launcher/CellLayout;
 
     move-result-object v1
 
-    .line 81
+    .line 80
     invoke-virtual {v1}, Lcom/miui/home/launcher/CellLayout;->getScreenId()J
 
     move-result-wide v1
 
-    .line 82
+    .line 81
     iget-object v3, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mInflater:Landroid/view/LayoutInflater;
 
     const v4, 0x7f0d0032
@@ -212,35 +211,35 @@
 
     move-result-object v0
 
-    .line 83
+    .line 82
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 84
+    .line 83
     iget-object v1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->THUMBNAIL_CLICK_HANDLER:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a01d2
+    const v1, 0x7f0a021d
 
-    .line 85
+    .line 84
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Lcom/miui/home/launcher/ThumbnailContainer;
 
-    .line 86
+    .line 85
     sget v2, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mThumbnailWidth:I
 
     sget v3, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mThumbnailHeight:I
 
     invoke-virtual {v1, p1, v2, v3, v0}, Lcom/miui/home/launcher/ThumbnailContainer;->setCellLayoutThumbnail(Lcom/miui/home/launcher/CellScreen;IILandroid/view/View;)V
 
-    .line 87
+    .line 86
     invoke-virtual {p0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -259,7 +258,7 @@
 
     aput-object v5, v3, v6
 
-    const v5, 0x7f1000c6
+    const v5, 0x7f10010e
 
     invoke-virtual {p1, v5, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -267,7 +266,7 @@
 
     invoke-virtual {v1, p1}, Lcom/miui/home/launcher/ThumbnailContainer;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 88
+    .line 87
     invoke-virtual {p0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -286,14 +285,14 @@
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 89
+    .line 88
     iget-object p1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mPreviewContainer:Lcom/miui/home/launcher/view/FixedChildSizeGridView;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/view/FixedChildSizeGridView;->addView(Landroid/view/View;)V
 
     if-nez p2, :cond_1
 
-    .line 91
+    .line 90
     new-instance p1, Lcom/miui/home/launcher/DefaultScreenPreviewView$1;
 
     invoke-direct {p1, p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView$1;-><init>(Lcom/miui/home/launcher/DefaultScreenPreviewView;Landroid/view/View;)V
@@ -311,7 +310,7 @@
 
     move v1, v0
 
-    .line 102
+    .line 101
     :goto_0
     iget-object v2, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mPreviewContainer:Lcom/miui/home/launcher/view/FixedChildSizeGridView;
 
@@ -321,7 +320,7 @@
 
     if-ge v1, v2, :cond_2
 
-    .line 103
+    .line 102
     iget-object v2, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mPreviewContainer:Lcom/miui/home/launcher/view/FixedChildSizeGridView;
 
     invoke-virtual {v2, v1}, Lcom/miui/home/launcher/view/FixedChildSizeGridView;->getChildAt(I)Landroid/view/View;
@@ -332,7 +331,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 104
+    .line 103
     iget-object v2, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mPreviewContainer:Lcom/miui/home/launcher/view/FixedChildSizeGridView;
 
     invoke-virtual {v2, v1}, Lcom/miui/home/launcher/view/FixedChildSizeGridView;->getChildAt(I)Landroid/view/View;
@@ -341,14 +340,14 @@
 
     check-cast v2, Lcom/miui/home/launcher/ThumbnailContainerBorder;
 
-    .line 105
+    .line 104
     invoke-virtual {v2}, Lcom/miui/home/launcher/ThumbnailContainerBorder;->getThumbnailContainer()Lcom/miui/home/launcher/ThumbnailContainer;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 107
+    .line 106
     iget-object v3, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/Workspace;->getDefaultScreenIndex()I
@@ -359,12 +358,12 @@
 
     const/4 v3, 0x1
 
-    .line 108
+    .line 107
     invoke-virtual {v2, v3}, Lcom/miui/home/launcher/ThumbnailContainer;->setIsCurrentScreen(Z)V
 
     goto :goto_1
 
-    .line 110
+    .line 109
     :cond_0
     invoke-virtual {v2, v0}, Lcom/miui/home/launcher/ThumbnailContainer;->setIsCurrentScreen(Z)V
 
@@ -374,7 +373,7 @@
 
     goto :goto_0
 
-    .line 115
+    .line 114
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mPreviewContainer:Lcom/miui/home/launcher/view/FixedChildSizeGridView;
 
@@ -388,7 +387,7 @@
 .method public isShowing()Z
     .locals 1
 
-    .line 138
+    .line 137
     iget-boolean v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mIsShowing:Z
 
     return v0
@@ -399,7 +398,7 @@
 
     const/4 v0, 0x0
 
-    .line 70
+    .line 69
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
@@ -409,7 +408,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 71
+    .line 70
     iget-object v1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
@@ -422,7 +421,7 @@
 
     goto :goto_0
 
-    .line 73
+    .line 72
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->updateBorderLine()V
 
@@ -432,12 +431,12 @@
 .method protected onFinishInflate()V
     .locals 4
 
-    .line 51
+    .line 50
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0147
+    const v0, 0x7f0a017f
 
-    .line 52
+    .line 51
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -446,14 +445,14 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mPreviewContainer:Lcom/miui/home/launcher/view/FixedChildSizeGridView;
 
-    .line 53
+    .line 52
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mPreviewContainer:Lcom/miui/home/launcher/view/FixedChildSizeGridView;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/view/FixedChildSizeGridView;->setColumnNum(I)V
 
-    .line 54
+    .line 53
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mPreviewContainer:Lcom/miui/home/launcher/view/FixedChildSizeGridView;
 
     sget v1, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mThumbnailWidth:I
@@ -466,9 +465,9 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/view/FixedChildSizeGridView;->setChildSize(II)V
 
-    const v0, 0x7f0a008f
+    const v0, 0x7f0a00ac
 
-    .line 55
+    .line 54
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -477,16 +476,16 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mDefaultScreenPreviewActionBar:Lcom/miui/home/launcher/view/LauncherActionBar;
 
-    .line 56
+    .line 55
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mDefaultScreenPreviewActionBar:Lcom/miui/home/launcher/view/LauncherActionBar;
 
-    const v1, 0x7f1000d8
+    const v1, 0x7f100125
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/view/LauncherActionBar;->setTitle(I)V
 
-    const v0, 0x7f0a0090
+    const v0, 0x7f0a00ad
 
-    .line 57
+    .line 56
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -503,19 +502,19 @@
 
     if-eqz p1, :cond_0
 
-    .line 62
+    .line 61
     iget-object p1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mScrollView:Landroid/widget/ScrollView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/widget/ScrollView;->setScrollY(I)V
 
-    .line 63
+    .line 62
     invoke-virtual {p0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->loadPreviewContainer()V
 
     goto :goto_0
 
-    .line 65
+    .line 64
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mPreviewContainer:Lcom/miui/home/launcher/view/FixedChildSizeGridView;
 
@@ -528,12 +527,12 @@
 .method public onWallpaperColorChanged()V
     .locals 1
 
-    .line 151
+    .line 150
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mDefaultScreenPreviewActionBar:Lcom/miui/home/launcher/view/LauncherActionBar;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/view/LauncherActionBar;->onWallpaperColorChanged()V
 
-    .line 152
+    .line 151
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mPreviewContainer:Lcom/miui/home/launcher/view/FixedChildSizeGridView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/WallpaperUtils;->varyViewGroupByWallpaper(Landroid/view/ViewGroup;)V
@@ -544,7 +543,7 @@
 .method public setIsShowing(Z)V
     .locals 0
 
-    .line 142
+    .line 141
     iput-boolean p1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mIsShowing:Z
 
     return-void
@@ -553,7 +552,7 @@
 .method public setResource(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 146
+    .line 145
     iput-object p1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     return-void

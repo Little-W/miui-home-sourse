@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->onDestroy()V
+    value = Lcom/miui/home/launcher/Launcher;->locateAppInner(Lcom/miui/home/launcher/ShortcutInfo;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,17 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
+.field final synthetic val$snapToScreenIndex:I
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;I)V
     .locals 0
 
-    .line 2703
+    .line 2684
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$18;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iput p2, p0, Lcom/miui/home/launcher/Launcher$18;->val$snapToScreenIndex:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,12 +40,18 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
-    .line 2706
+    .line 2686
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$18;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2900(Lcom/miui/home/launcher/Launcher;)V
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/miui/home/launcher/Launcher$18;->val$snapToScreenIndex:I
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Workspace;->snapToScreen(I)I
 
     return-void
 .end method

@@ -62,8 +62,6 @@
 
 .field private mHandler:Landroid/os/Handler;
 
-.field private mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
-
 .field private mIsScreenOrientationChanged:Z
 
 .field private mLastDropTarget:Lcom/miui/home/launcher/DropTarget;
@@ -117,7 +115,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 455
+    .line 444
     new-instance v0, Landroid/graphics/Canvas;
 
     invoke-direct {v0}, Landroid/graphics/Canvas;-><init>()V
@@ -130,10 +128,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    .line 180
+    .line 187
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 94
+    .line 101
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -142,33 +140,33 @@
 
     const/4 v0, 0x2
 
-    .line 95
+    .line 102
     new-array v1, v0, [I
 
     iput-object v1, p0, Lcom/miui/home/launcher/DragController;->mCoordinatesTemp:[I
 
-    .line 109
+    .line 116
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/miui/home/launcher/DragController;->mDropTargets:Ljava/util/ArrayList;
 
-    .line 111
+    .line 118
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/miui/home/launcher/DragController;->mListeners:Ljava/util/ArrayList;
 
-    .line 113
+    .line 120
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcom/miui/home/launcher/DragController;->mDropAnimationListeners:Ljava/util/ArrayList;
 
-    .line 115
+    .line 122
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
@@ -177,48 +175,48 @@
 
     const/4 v1, 0x0
 
-    .line 124
+    .line 131
     iput v1, p0, Lcom/miui/home/launcher/DragController;->mScrollState:I
 
     const/4 v2, -0x1
 
-    .line 125
+    .line 132
     iput v2, p0, Lcom/miui/home/launcher/DragController;->mSecondaryPointerId:I
 
-    .line 126
+    .line 133
     new-instance v2, Lcom/miui/home/launcher/DragController$ScrollRunnable;
 
     invoke-direct {v2, p0}, Lcom/miui/home/launcher/DragController$ScrollRunnable;-><init>(Lcom/miui/home/launcher/DragController;)V
 
     iput-object v2, p0, Lcom/miui/home/launcher/DragController;->mScrollRunnable:Lcom/miui/home/launcher/DragController$ScrollRunnable;
 
-    .line 134
+    .line 141
     iput v1, p0, Lcom/miui/home/launcher/DragController;->mDistanceSinceScroll:I
 
-    .line 135
+    .line 142
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/miui/home/launcher/DragController;->mLastTouch:[I
 
-    .line 137
+    .line 144
     iput-boolean v1, p0, Lcom/miui/home/launcher/DragController;->mIsScreenOrientationChanged:Z
 
-    .line 212
+    .line 219
     iput-boolean v1, p0, Lcom/miui/home/launcher/DragController;->mAutoDraged:Z
 
-    .line 181
+    .line 188
     check-cast p1, Lcom/miui/home/launcher/Launcher;
 
     iput-object p1, p0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 182
+    .line 189
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/DragController;->mHandler:Landroid/os/Handler;
 
-    .line 183
+    .line 190
     iget-object p1, p0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$cdfyBHNF9vS5aeSXCPQJiP0yrGY;
@@ -233,17 +231,26 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/DragController;)Lcom/miui/home/launcher/DragObject;
     .locals 0
 
-    .line 66
+    .line 73
     iget-object p0, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     return-object p0
 .end method
 
-.method static synthetic access$100(Lcom/miui/home/launcher/DragController;)Lcom/miui/home/launcher/DragScroller;
+.method static synthetic access$100(Lcom/miui/home/launcher/DragController;IILandroid/view/MotionEvent;)V
     .locals 0
 
-    .line 66
-    iget-object p0, p0, Lcom/miui/home/launcher/DragController;->mDragScroller:Lcom/miui/home/launcher/DragScroller;
+    .line 73
+    invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/launcher/DragController;->handleMoveEvent(IILandroid/view/MotionEvent;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1000(Lcom/miui/home/launcher/DragController;)Landroid/os/Handler;
+    .locals 0
+
+    .line 73
+    iget-object p0, p0, Lcom/miui/home/launcher/DragController;->mHandler:Landroid/os/Handler;
 
     return-object p0
 .end method
@@ -251,44 +258,71 @@
 .method static synthetic access$200(Lcom/miui/home/launcher/DragController;)Z
     .locals 0
 
-    .line 66
+    .line 73
     iget-boolean p0, p0, Lcom/miui/home/launcher/DragController;->mDragging:Z
 
     return p0
 .end method
 
-.method static synthetic access$300(Lcom/miui/home/launcher/DragController;)Lcom/miui/home/launcher/Launcher;
+.method static synthetic access$300(Lcom/miui/home/launcher/DragController;FF)V
     .locals 0
 
-    .line 66
+    .line 73
+    invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/DragController;->drop(FF)V
+
+    return-void
+.end method
+
+.method static synthetic access$400(Lcom/miui/home/launcher/DragController;)V
+    .locals 0
+
+    .line 73
+    invoke-direct {p0}, Lcom/miui/home/launcher/DragController;->endDrag()V
+
+    return-void
+.end method
+
+.method static synthetic access$500(Lcom/miui/home/launcher/DragController;)V
+    .locals 0
+
+    .line 73
+    invoke-direct {p0}, Lcom/miui/home/launcher/DragController;->recycleVelocityTracker()V
+
+    return-void
+.end method
+
+.method static synthetic access$600(Lcom/miui/home/launcher/DragController;)Lcom/miui/home/launcher/DragScroller;
+    .locals 0
+
+    .line 73
+    iget-object p0, p0, Lcom/miui/home/launcher/DragController;->mDragScroller:Lcom/miui/home/launcher/DragScroller;
+
+    return-object p0
+.end method
+
+.method static synthetic access$700(Lcom/miui/home/launcher/DragController;)Lcom/miui/home/launcher/Launcher;
+    .locals 0
+
+    .line 73
     iget-object p0, p0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     return-object p0
 .end method
 
-.method static synthetic access$402(Lcom/miui/home/launcher/DragController;I)I
+.method static synthetic access$802(Lcom/miui/home/launcher/DragController;I)I
     .locals 0
 
-    .line 66
+    .line 73
     iput p1, p0, Lcom/miui/home/launcher/DragController;->mDistanceSinceScroll:I
 
     return p1
 .end method
 
-.method static synthetic access$500(Lcom/miui/home/launcher/DragController;)Lcom/miui/home/launcher/DragController$ScrollRunnable;
+.method static synthetic access$900(Lcom/miui/home/launcher/DragController;)Lcom/miui/home/launcher/DragController$ScrollRunnable;
     .locals 0
 
-    .line 66
+    .line 73
     iget-object p0, p0, Lcom/miui/home/launcher/DragController;->mScrollRunnable:Lcom/miui/home/launcher/DragController$ScrollRunnable;
-
-    return-object p0
-.end method
-
-.method static synthetic access$600(Lcom/miui/home/launcher/DragController;)Landroid/os/Handler;
-    .locals 0
-
-    .line 66
-    iget-object p0, p0, Lcom/miui/home/launcher/DragController;->mHandler:Landroid/os/Handler;
 
     return-object p0
 .end method
@@ -298,18 +332,18 @@
 
     const/4 v0, 0x0
 
-    .line 1050
+    .line 1087
     iput v0, p0, Lcom/miui/home/launcher/DragController;->mScrollState:I
 
-    .line 1051
+    .line 1088
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragController;->cancelScroll()V
 
-    .line 1052
+    .line 1089
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mDragScroller:Lcom/miui/home/launcher/DragScroller;
 
     if-eqz v0, :cond_0
 
-    .line 1053
+    .line 1090
     invoke-interface {v0}, Lcom/miui/home/launcher/DragScroller;->onExitScrollArea()Z
 
     :cond_0
@@ -337,19 +371,19 @@
 .method private cleanLastDropTarget()V
     .locals 2
 
-    .line 649
+    .line 681
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mLastDropTarget:Lcom/miui/home/launcher/DropTarget;
 
     if-eqz v0, :cond_0
 
-    .line 650
+    .line 682
     iget-object v1, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {v0, v1}, Lcom/miui/home/launcher/DropTarget;->onDragExit(Lcom/miui/home/launcher/DragObject;)V
 
     const/4 v0, 0x0
 
-    .line 651
+    .line 683
     iput-object v0, p0, Lcom/miui/home/launcher/DragController;->mLastDropTarget:Lcom/miui/home/launcher/DropTarget;
 
     :cond_0
@@ -359,10 +393,10 @@
 .method private static createBitmap(Landroid/view/View;Landroid/graphics/drawable/Drawable;F)Landroid/graphics/Bitmap;
     .locals 5
 
-    .line 472
+    .line 461
     invoke-virtual {p0}, Landroid/view/View;->clearFocus()V
 
-    .line 473
+    .line 462
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -375,7 +409,7 @@
 
     move-result v0
 
-    .line 474
+    .line 463
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v1
@@ -388,7 +422,7 @@
 
     move-result v1
 
-    .line 475
+    .line 464
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/common/Utilities;->createBitmapSafely(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
@@ -397,47 +431,138 @@
 
     if-eqz v2, :cond_1
 
-    .line 477
+    .line 466
     sget-object v3, Lcom/miui/home/launcher/DragController;->sTmpCanvas:Landroid/graphics/Canvas;
 
-    .line 478
+    .line 467
     invoke-virtual {v3}, Landroid/graphics/Canvas;->save()I
 
     move-result v4
 
-    .line 479
+    .line 468
     invoke-virtual {v3, v2}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 480
+    .line 469
     invoke-virtual {v3, p2, p2}, Landroid/graphics/Canvas;->scale(FF)V
 
     if-eqz p1, :cond_0
 
     const/4 p2, 0x0
 
-    .line 482
+    .line 471
     invoke-virtual {p1, p2, p2, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 483
+    .line 472
     invoke-virtual {p1, v3}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 485
+    .line 474
     :cond_0
     invoke-virtual {p0, v3}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
     const/4 p0, 0x0
 
-    .line 486
+    .line 475
     invoke-virtual {v3, p0}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 487
+    .line 476
     invoke-virtual {v3, v4}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     :cond_1
     return-object v2
 .end method
 
-.method private createDragView(Landroid/view/View;ZIIZILcom/miui/home/launcher/DragSource;)Lcom/miui/home/launcher/DragView;
+.method private static createBitmapWithOutline(Landroid/view/View;Landroid/graphics/drawable/Drawable;F)Landroid/graphics/Bitmap;
+    .locals 10
+
+    .line 482
+    invoke-virtual {p0}, Landroid/view/View;->clearFocus()V
+
+    .line 483
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    mul-float/2addr v0, p2
+
+    invoke-static {v0}, Ljava/lang/Math;->round(F)I
+
+    move-result v0
+
+    .line 484
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    mul-float/2addr v1, p2
+
+    invoke-static {v1}, Ljava/lang/Math;->round(F)I
+
+    move-result v7
+
+    .line 486
+    invoke-virtual {p0}, Landroid/view/View;->getClipToOutline()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0}, Landroid/view/View;->getOutlineProvider()Landroid/view/ViewOutlineProvider;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 487
+    new-instance v1, Landroid/graphics/Outline;
+
+    invoke-direct {v1}, Landroid/graphics/Outline;-><init>()V
+
+    .line 488
+    invoke-virtual {p0}, Landroid/view/View;->getOutlineProvider()Landroid/view/ViewOutlineProvider;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p0, v1}, Landroid/view/ViewOutlineProvider;->getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
+
+    move-object v8, v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    move-object v8, v1
+
+    .line 490
+    :goto_0
+    new-instance v9, Lcom/miui/home/launcher/-$$Lambda$DragController$oF9vMcUkbZ21TPqQNsaHDxW_2js;
+
+    move-object v1, v9
+
+    move v2, p2
+
+    move-object v3, p1
+
+    move v4, v0
+
+    move v5, v7
+
+    move-object v6, p0
+
+    invoke-direct/range {v1 .. v6}, Lcom/miui/home/launcher/-$$Lambda$DragController$oF9vMcUkbZ21TPqQNsaHDxW_2js;-><init>(FLandroid/graphics/drawable/Drawable;IILandroid/view/View;)V
+
+    invoke-static {v0, v7, v8, v9}, Lcom/miui/launcher/utils/BitmapRenderer;->createHardwareBitmapWithAcceleratedCanvas(IILandroid/graphics/Outline;Lcom/miui/launcher/utils/BitmapRenderer$Renderer;)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private createDragView(Landroid/view/View;IIZILcom/miui/home/launcher/DragSource;)Lcom/miui/home/launcher/DragView;
     .locals 14
 
     move-object v0, p0
@@ -446,10 +571,10 @@
 
     const/4 v2, 0x0
 
-    .line 396
+    .line 392
     invoke-virtual {p1, v2}, Landroid/view/View;->setPressed(Z)V
 
-    .line 397
+    .line 393
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v3
@@ -472,9 +597,9 @@
     :goto_0
     check-cast v3, Lcom/miui/home/launcher/ItemInfo;
 
-    move-object/from16 v13, p7
+    move-object/from16 v13, p6
 
-    .line 398
+    .line 394
     instance-of v5, v13, Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
     if-eqz v5, :cond_1
@@ -483,7 +608,7 @@
 
     if-eqz v5, :cond_1
 
-    .line 399
+    .line 395
     check-cast v3, Lcom/miui/home/launcher/AppInfo;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/AppInfo;->makeShortcut()Lcom/miui/home/launcher/ShortcutInfo;
@@ -500,7 +625,7 @@
     :goto_1
     if-eqz v9, :cond_2
 
-    .line 402
+    .line 398
     invoke-virtual {v9}, Lcom/miui/home/launcher/ItemInfo;->findMyPendingSource()Lcom/miui/home/launcher/PendingSource;
 
     move-result-object v3
@@ -508,47 +633,25 @@
     invoke-virtual {v9, v3}, Lcom/miui/home/launcher/ItemInfo;->startPending(Lcom/miui/home/launcher/PendingSource;)V
 
     :cond_2
-    if-eqz p2, :cond_4
-
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    .line 406
-    invoke-static {p1, v3}, Lcom/miui/home/launcher/DragController;->createOutline(Landroid/view/View;F)Landroid/graphics/Bitmap;
-
-    move-result-object v3
-
-    if-nez v3, :cond_3
-
-    return-object v4
-
-    :cond_3
-    move-object v8, v3
-
-    goto :goto_2
-
-    :cond_4
-    move-object v8, v4
-
-    :goto_2
-    packed-switch p3, :pswitch_data_0
+    packed-switch p2, :pswitch_data_0
 
     :pswitch_0
-    goto/16 :goto_3
+    goto/16 :goto_2
 
-    .line 427
+    .line 416
     :pswitch_1
     check-cast v1, Lcom/miui/home/launcher/ShortcutIcon;
 
     const v3, 0x7f0d0027
 
-    .line 428
+    .line 417
     iget-object v5, v0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v3, v5, v4}, Lcom/miui/home/launcher/ShortcutIcon;->createShortcutIcon(ILcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;)Lcom/miui/home/launcher/ShortcutIcon;
 
     move-result-object v3
 
-    .line 430
+    .line 419
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutIcon;->getWidth()I
 
     move-result v5
@@ -559,7 +662,7 @@
 
     move-result v5
 
-    .line 431
+    .line 420
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutIcon;->getHeight()I
 
     move-result v7
@@ -568,10 +671,10 @@
 
     move-result v6
 
-    .line 429
+    .line 418
     invoke-virtual {v3, v5, v6}, Lcom/miui/home/launcher/ShortcutIcon;->measure(II)V
 
-    .line 432
+    .line 421
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutIcon;->getWidth()I
 
     move-result v5
@@ -582,7 +685,7 @@
 
     invoke-virtual {v3, v2, v2, v5, v6}, Lcom/miui/home/launcher/ShortcutIcon;->layout(IIII)V
 
-    .line 433
+    .line 422
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
 
     move-result-object v2
@@ -593,7 +696,7 @@
 
     invoke-virtual {v3, v2, v4}, Lcom/miui/home/launcher/ShortcutIcon;->setIconImageView(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;)V
 
-    .line 434
+    .line 423
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutIcon;->getTitle()Landroid/widget/TextView;
 
     move-result-object v1
@@ -604,19 +707,19 @@
 
     invoke-virtual {v3, v1}, Lcom/miui/home/launcher/ShortcutIcon;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 435
+    .line 424
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsColorMode()Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     move-result-object v1
 
     iget-object v2, v0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 436
+    .line 425
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsBackgroundAlpha()I
 
     move-result v4
 
-    .line 435
+    .line 424
     invoke-virtual {v1, v2, v4}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getAppTextColor(Landroid/content/Context;I)I
 
     move-result v1
@@ -625,42 +728,42 @@
 
     move-object v7, v3
 
-    goto :goto_4
+    goto :goto_3
 
-    .line 423
+    .line 412
     :pswitch_2
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/DragController;->setDownloadViewTag(Landroid/view/View;)V
 
     const v2, 0x3e19999a    # 0.15f
 
-    .line 424
+    .line 413
     invoke-virtual {p1, v2}, Landroid/view/View;->setAlpha(F)V
 
-    goto :goto_3
+    goto :goto_2
 
     :pswitch_3
     const/4 v2, 0x4
 
-    .line 420
+    .line 409
     invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    goto :goto_3
+    goto :goto_2
 
-    .line 413
+    .line 402
     :pswitch_4
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/DragController;->setDownloadViewTag(Landroid/view/View;)V
 
-    .line 414
+    .line 403
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v2
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_3
 
-    .line 415
+    .line 404
     invoke-virtual {p1}, Landroid/view/View;->clearAnimation()V
 
-    .line 416
+    .line 405
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v2
@@ -669,33 +772,37 @@
 
     invoke-virtual {v2, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    :cond_5
-    :goto_3
+    :cond_3
+    :goto_2
     move-object v7, v1
 
-    .line 440
-    :goto_4
+    .line 429
+    :goto_3
     new-instance v1, Lcom/miui/home/launcher/DragView;
 
     iget-object v2, v0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v2}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
+    invoke-virtual {v2}, Lcom/miui/home/launcher/Launcher;->getDragViewContainer()Landroid/widget/FrameLayout;
 
     move-result-object v6
 
+    const/4 v8, 0x0
+
     move-object v5, v1
 
-    move/from16 v10, p4
+    move/from16 v10, p3
 
-    move/from16 v11, p6
+    move/from16 v11, p5
 
-    move/from16 v12, p5
+    move/from16 v12, p4
 
-    move-object/from16 v13, p7
+    move-object/from16 v13, p6
 
     invoke-direct/range {v5 .. v13}, Lcom/miui/home/launcher/DragView;-><init>(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Bitmap;Lcom/miui/home/launcher/ItemInfo;IIZLcom/miui/home/launcher/DragSource;)V
 
     return-object v1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -710,22 +817,22 @@
 .method private createDrawableHolder(Landroid/graphics/drawable/Drawable;II)Landroid/view/View;
     .locals 4
 
-    .line 262
+    .line 269
     new-instance v0, Lcom/miui/home/launcher/DragController$ViewHolder;
 
     iget-object v1, p0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {v0, p0, v1}, Lcom/miui/home/launcher/DragController$ViewHolder;-><init>(Lcom/miui/home/launcher/DragController;Landroid/content/Context;)V
 
-    .line 263
+    .line 270
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/DragController$ViewHolder;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 264
+    .line 271
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->copyBounds()Landroid/graphics/Rect;
 
     move-result-object p1
 
-    .line 265
+    .line 272
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v1
@@ -736,7 +843,7 @@
 
     move-result v1
 
-    .line 266
+    .line 273
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
     move-result v3
@@ -745,10 +852,10 @@
 
     move-result v2
 
-    .line 265
+    .line 272
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/DragController$ViewHolder;->setMeasuredDimensionPub(II)V
 
-    .line 267
+    .line 274
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v1
@@ -769,7 +876,7 @@
 .method private static createElderlyManShortcutBg(Lcom/miui/home/launcher/oldman/ElderlyManShortcutIcon;F)Landroid/graphics/Bitmap;
     .locals 4
 
-    .line 493
+    .line 503
     invoke-virtual {p0}, Lcom/miui/home/launcher/oldman/ElderlyManShortcutIcon;->getWidth()I
 
     move-result v0
@@ -782,7 +889,7 @@
 
     move-result v0
 
-    .line 494
+    .line 504
     invoke-virtual {p0}, Lcom/miui/home/launcher/oldman/ElderlyManShortcutIcon;->getHeight()I
 
     move-result v1
@@ -795,7 +902,7 @@
 
     move-result v1
 
-    .line 495
+    .line 505
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/common/Utilities;->createBitmapSafely(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
@@ -804,43 +911,43 @@
 
     if-eqz v0, :cond_0
 
-    .line 497
+    .line 507
     sget-object v1, Lcom/miui/home/launcher/DragController;->sTmpCanvas:Landroid/graphics/Canvas;
 
-    .line 498
+    .line 508
     invoke-virtual {v1}, Landroid/graphics/Canvas;->save()I
 
     move-result v2
 
-    .line 499
+    .line 509
     invoke-virtual {v1, v0}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 500
+    .line 510
     invoke-virtual {v1, p1, p1}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 501
+    .line 511
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
 
-    const v3, 0x7f080232
+    const v3, 0x7f0804a0
 
-    .line 502
+    .line 512
     invoke-virtual {p1, v3}, Lcom/miui/home/launcher/Application;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    .line 503
+    .line 513
     invoke-virtual {p0, p0}, Lcom/miui/home/launcher/oldman/ElderlyManShortcutIcon;->getBlackBgRect(Landroid/view/ViewGroup;)Landroid/graphics/Rect;
 
     move-result-object p0
 
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 504
+    .line 514
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 505
+    .line 515
     invoke-virtual {v1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     :cond_0
@@ -850,7 +957,7 @@
 .method public static createHolographicOutline(Lcom/miui/home/launcher/ShortcutIcon;F)Landroid/graphics/Bitmap;
     .locals 4
 
-    .line 526
+    .line 558
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getWidth()I
 
     move-result v0
@@ -863,7 +970,7 @@
 
     move-result v0
 
-    .line 527
+    .line 559
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getHeight()I
 
     move-result v1
@@ -878,12 +985,12 @@
 
     sget-object v2, Landroid/graphics/Bitmap$Config;->ALPHA_8:Landroid/graphics/Bitmap$Config;
 
-    .line 526
+    .line 558
     invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/common/Utilities;->createBitmapSafely(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 528
+    .line 560
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getWidth()I
 
     move-result v1
@@ -896,7 +1003,7 @@
 
     move-result v1
 
-    .line 529
+    .line 561
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getHeight()I
 
     move-result v2
@@ -911,7 +1018,7 @@
 
     sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    .line 528
+    .line 560
     invoke-static {v1, v2, v3}, Lcom/miui/home/launcher/common/Utilities;->createBitmapSafely(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v1
@@ -920,27 +1027,27 @@
 
     if-eqz v1, :cond_0
 
-    .line 531
+    .line 563
     sget-object v2, Lcom/miui/home/launcher/DragController;->sTmpCanvas:Landroid/graphics/Canvas;
 
-    .line 532
+    .line 564
     invoke-virtual {v2}, Landroid/graphics/Canvas;->save()I
 
     move-result v3
 
-    .line 533
+    .line 565
     invoke-virtual {v2, v0}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 534
+    .line 566
     invoke-virtual {v2, p1, p1}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 535
+    .line 567
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/ShortcutIcon;->drawOutLine(Landroid/graphics/Canvas;)V
 
-    .line 536
+    .line 568
     invoke-virtual {v2, v3}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 537
+    .line 569
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getContext()Landroid/content/Context;
 
     move-result-object p0
@@ -949,37 +1056,37 @@
 
     move-result-object p0
 
-    .line 538
+    .line 570
     invoke-virtual {p0, v0, v2}, Lcom/miui/home/launcher/common/HolographicOutlineHelper;->applyExpensiveOutlineWithBlur(Landroid/graphics/Bitmap;Landroid/graphics/Canvas;)V
 
-    .line 539
+    .line 571
     new-instance p0, Landroid/graphics/Paint;
 
     const/4 p1, 0x3
 
     invoke-direct {p0, p1}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 540
+    .line 572
     invoke-virtual {v2, v1}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
     const/4 p1, 0x0
 
-    .line 541
+    .line 573
     invoke-virtual {v2, v0, p1, p1, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
     const/4 p0, -0x1
 
-    .line 542
+    .line 574
     sget-object p1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v2, p0, p1}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
 
     const/4 p0, 0x0
 
-    .line 543
+    .line 575
     invoke-virtual {v2, p0}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 544
+    .line 576
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     :cond_0
@@ -989,12 +1096,12 @@
 .method public static createOutline(Landroid/view/View;F)Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 511
+    .line 521
     instance-of v0, p0, Lcom/miui/home/launcher/oldman/ElderlyManShortcutIcon;
 
     if-eqz v0, :cond_0
 
-    .line 512
+    .line 522
     check-cast p0, Lcom/miui/home/launcher/oldman/ElderlyManShortcutIcon;
 
     invoke-static {p0, p1}, Lcom/miui/home/launcher/DragController;->createElderlyManShortcutBg(Lcom/miui/home/launcher/oldman/ElderlyManShortcutIcon;F)Landroid/graphics/Bitmap;
@@ -1003,13 +1110,13 @@
 
     return-object p0
 
-    .line 513
+    .line 523
     :cond_0
     instance-of v0, p0, Lcom/miui/home/launcher/ShortcutIcon;
 
     if-eqz v0, :cond_1
 
-    .line 514
+    .line 524
     check-cast p0, Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-static {p0, p1}, Lcom/miui/home/launcher/DragController;->createHolographicOutline(Lcom/miui/home/launcher/ShortcutIcon;F)Landroid/graphics/Bitmap;
@@ -1018,34 +1125,52 @@
 
     return-object p0
 
-    .line 516
+    .line 526
     :cond_1
     invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 517
+    .line 527
     instance-of v1, v0, Lcom/miui/home/launcher/ItemInfo;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     check-cast v0, Lcom/miui/home/launcher/ItemInfo;
 
+    .line 528
     invoke-virtual {v0}, Lcom/miui/home/launcher/ItemInfo;->isOccupiedCellMoreThan1x1()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 529
+    invoke-static {v0}, Lcom/miui/home/launcher/DragView;->shouldDrawOutline(Lcom/miui/home/launcher/ItemInfo;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 518
+    const/4 v0, 0x0
+
+    .line 530
+    invoke-static {p0, v0, p1}, Lcom/miui/home/launcher/DragController;->createBitmapWithOutline(Landroid/view/View;Landroid/graphics/drawable/Drawable;F)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 532
+    :cond_2
     invoke-static {p0, p1}, Lcom/miui/home/launcher/DragController;->createViewBitmapWithBackground(Landroid/view/View;F)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
     return-object p0
 
-    .line 520
-    :cond_2
+    .line 535
+    :cond_3
     invoke-static {p0, p1}, Lcom/miui/home/launcher/DragController;->createViewBitmap(Landroid/view/View;F)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -1053,12 +1178,37 @@
     return-object p0
 .end method
 
+.method public static createOutlineAsync(Landroid/view/View;FLcom/miui/home/launcher/DragView;)V
+    .locals 1
+
+    .line 541
+    new-instance v0, Lcom/miui/home/launcher/DragController$2;
+
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/DragController$2;-><init>(Landroid/view/View;F)V
+
+    new-instance p0, Lcom/miui/home/launcher/DragController$3;
+
+    invoke-direct {p0, p2}, Lcom/miui/home/launcher/DragController$3;-><init>(Lcom/miui/home/launcher/DragView;)V
+
+    .line 554
+    invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getScreenSerialExecutor()Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    .line 541
+    invoke-static {v0, p0, p2, p1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->execSerial(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;Ljava/util/concurrent/Executor;)V
+
+    return-void
+.end method
+
 .method public static createViewBitmap(Landroid/view/View;F)Landroid/graphics/Bitmap;
     .locals 1
 
     const/4 v0, 0x0
 
-    .line 461
+    .line 450
     invoke-static {p0, v0, p1}, Lcom/miui/home/launcher/DragController;->createBitmap(Landroid/view/View;Landroid/graphics/drawable/Drawable;F)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -1069,7 +1219,7 @@
 .method private static createViewBitmapWithBackground(Landroid/view/View;F)Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 466
+    .line 455
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -1084,19 +1234,19 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f0800a6
+    const v1, 0x7f0800cd
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f0800a5
+    const v1, 0x7f0800cc
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 465
+    .line 454
     invoke-static {p0, v0, p1}, Lcom/miui/home/launcher/DragController;->createBitmap(Landroid/view/View;Landroid/graphics/drawable/Drawable;F)Landroid/graphics/Bitmap;
 
     move-result-object p0
@@ -1107,7 +1257,7 @@
 .method private drop(FF)V
     .locals 2
 
-    .line 902
+    .line 939
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isFolderAnimating()Z
@@ -1116,10 +1266,8 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    .line 903
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked(Landroid/content/Context;)Z
+    .line 940
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
     move-result v0
 
@@ -1134,16 +1282,14 @@
 
     if-nez v0, :cond_1
 
-    .line 904
+    .line 941
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragController;->cancelDrag()V
 
     goto :goto_0
 
-    .line 905
+    .line 942
     :cond_1
-    iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
     move-result v0
 
@@ -1159,22 +1305,22 @@
 
     if-eqz v0, :cond_2
 
-    .line 906
+    .line 943
     iget p1, p0, Lcom/miui/home/launcher/DragController;->mMotionDownX:I
 
     int-to-float p1, p1
 
-    .line 907
+    .line 944
     iget p2, p0, Lcom/miui/home/launcher/DragController;->mMotionDownY:I
 
     int-to-float p2, p2
 
-    .line 908
+    .line 945
     invoke-direct {p0, p1, p2, v1}, Lcom/miui/home/launcher/DragController;->drop(FFLcom/miui/home/launcher/DropTarget;)V
 
     goto :goto_0
 
-    .line 910
+    .line 947
     :cond_2
     invoke-direct {p0, p1, p2, v1}, Lcom/miui/home/launcher/DragController;->drop(FFLcom/miui/home/launcher/DropTarget;)V
 
@@ -1191,33 +1337,33 @@
 
     if-nez p3, :cond_0
 
-    .line 916
+    .line 953
     iget-object p3, p0, Lcom/miui/home/launcher/DragController;->mCoordinatesTemp:[I
 
     float-to-int p1, p1
 
     float-to-int p2, p2
 
-    .line 917
+    .line 954
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/launcher/DragController;->findDropTarget(II[I)Lcom/miui/home/launcher/DropTarget;
 
     move-result-object p1
 
-    .line 918
+    .line 955
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     aget v2, p3, v1
 
     iput v2, p2, Lcom/miui/home/launcher/DragObject;->x:I
 
-    .line 919
+    .line 956
     aget p3, p3, v0
 
     iput p3, p2, Lcom/miui/home/launcher/DragObject;->y:I
 
     goto :goto_0
 
-    .line 921
+    .line 958
     :cond_0
     iget-object v2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
@@ -1227,7 +1373,7 @@
 
     float-to-int p1, p2
 
-    .line 922
+    .line 959
     iput p1, v2, Lcom/miui/home/launcher/DragObject;->y:I
 
     move-object p1, p3
@@ -1235,7 +1381,7 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 924
+    .line 961
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {p1, p2}, Lcom/miui/home/launcher/DropTarget;->getDropTargetDelegate(Lcom/miui/home/launcher/DragObject;)Lcom/miui/home/launcher/DropTarget;
@@ -1244,36 +1390,36 @@
 
     if-eqz p2, :cond_1
 
-    .line 925
+    .line 962
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {p1, p2}, Lcom/miui/home/launcher/DropTarget;->getDropTargetDelegate(Lcom/miui/home/launcher/DragObject;)Lcom/miui/home/launcher/DropTarget;
 
     move-result-object p1
 
-    .line 927
+    .line 964
     :cond_1
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mLastDropTarget:Lcom/miui/home/launcher/DropTarget;
 
     if-eq p1, p2, :cond_2
 
-    .line 928
+    .line 965
     invoke-direct {p0}, Lcom/miui/home/launcher/DragController;->cleanLastDropTarget()V
 
     :cond_2
     if-eqz p1, :cond_12
 
-    .line 931
+    .line 968
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {p1, p2}, Lcom/miui/home/launcher/DropTarget;->onDropStart(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 934
+    .line 971
     new-instance p2, Ljava/util/HashMap;
 
     invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
 
-    .line 937
+    .line 974
     :cond_3
     iget-object p3, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
@@ -1285,7 +1431,7 @@
 
     const/4 p3, 0x0
 
-    .line 939
+    .line 976
     iget-object v2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
@@ -1294,7 +1440,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 940
+    .line 977
     iget-object p3, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {p3}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
@@ -1308,7 +1454,7 @@
     :cond_4
     const-string v2, "Launcher.DragController"
 
-    .line 942
+    .line 979
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1349,7 +1495,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 943
+    .line 980
     iget-object v2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {p1, v2}, Lcom/miui/home/launcher/DropTarget;->onDrop(Lcom/miui/home/launcher/DragObject;)Z
@@ -1362,7 +1508,7 @@
 
     const/4 v5, 0x2
 
-    .line 944
+    .line 981
     new-array v5, v5, [Ljava/lang/Object;
 
     if-eqz v2, :cond_6
@@ -1377,9 +1523,9 @@
     :goto_2
     aput-object v6, v5, v1
 
+    .line 983
     iget-object v6, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    .line 946
     invoke-virtual {v6}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v6
@@ -1404,14 +1550,14 @@
     :goto_3
     aput-object v6, v5, v0
 
-    .line 944
+    .line 981
     invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 948
+    .line 985
     iget-object v3, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
@@ -1424,7 +1570,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    .line 949
+    .line 986
     invoke-virtual {v3}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v3
@@ -1451,10 +1597,10 @@
 
     if-eqz p3, :cond_b
 
-    .line 950
+    .line 987
     iget-object v3, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    .line 951
+    .line 988
     invoke-virtual {v3}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v3
@@ -1465,19 +1611,19 @@
 
     if-nez v3, :cond_b
 
-    .line 952
+    .line 989
     instance-of v3, p1, Lcom/miui/home/launcher/Workspace;
 
     if-eqz v3, :cond_a
 
     const-string v3, "item_be_moved_to_workspace"
 
-    .line 953
+    .line 990
     invoke-static {v3}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackItemMoved(Ljava/lang/String;)V
 
     goto :goto_6
 
-    .line 954
+    .line 991
     :cond_a
     instance-of v3, p1, Lcom/miui/home/launcher/HotSeats;
 
@@ -1485,10 +1631,10 @@
 
     const-string v3, "item_be_moved_to_hotseats"
 
-    .line 955
+    .line 992
     invoke-static {v3}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackItemMoved(Ljava/lang/String;)V
 
-    .line 958
+    .line 995
     :cond_b
     :goto_6
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallUtils;->isRussiaRom()Z
@@ -1499,7 +1645,7 @@
 
     if-eqz v2, :cond_c
 
-    .line 959
+    .line 996
     iget-object v3, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
@@ -1512,7 +1658,7 @@
 
     if-eqz p3, :cond_c
 
-    .line 960
+    .line 997
     iget-object v3, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
@@ -1532,7 +1678,7 @@
     :cond_c
     if-eqz v2, :cond_f
 
-    .line 964
+    .line 1001
     iget-object p3, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {p3}, Lcom/miui/home/launcher/DragObject;->isFirstObject()Z
@@ -1541,7 +1687,7 @@
 
     if-eqz p3, :cond_f
 
-    .line 965
+    .line 1002
     iget-object p3, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {p3}, Lcom/miui/home/launcher/DragObject;->getDropAnnounce()Ljava/lang/String;
@@ -1554,16 +1700,16 @@
 
     if-nez p3, :cond_d
 
-    .line 966
-    new-instance p3, Lcom/miui/home/launcher/DragController$2;
+    .line 1003
+    new-instance p3, Lcom/miui/home/launcher/DragController$5;
 
-    invoke-direct {p3, p0}, Lcom/miui/home/launcher/DragController$2;-><init>(Lcom/miui/home/launcher/DragController;)V
+    invoke-direct {p3, p0}, Lcom/miui/home/launcher/DragController$5;-><init>(Lcom/miui/home/launcher/DragController;)V
 
     invoke-static {p3}, Lcom/miui/home/launcher/common/Utilities;->announceForAccessibility(Ljava/util/function/Supplier;)V
 
     goto :goto_7
 
-    .line 973
+    .line 1010
     :cond_d
     invoke-interface {p1}, Lcom/miui/home/launcher/DropTarget;->getOnDropAnnounce()Lcom/miui/home/launcher/DropTarget$OnDropAnnounce;
 
@@ -1571,10 +1717,10 @@
 
     if-eqz p3, :cond_f
 
-    .line 974
-    new-instance p3, Lcom/miui/home/launcher/DragController$3;
+    .line 1011
+    new-instance p3, Lcom/miui/home/launcher/DragController$6;
 
-    invoke-direct {p3, p0, p1}, Lcom/miui/home/launcher/DragController$3;-><init>(Lcom/miui/home/launcher/DragController;Lcom/miui/home/launcher/DropTarget;)V
+    invoke-direct {p3, p0, p1}, Lcom/miui/home/launcher/DragController$6;-><init>(Lcom/miui/home/launcher/DragController;Lcom/miui/home/launcher/DropTarget;)V
 
     invoke-static {p3}, Lcom/miui/home/launcher/common/Utilities;->announceForAccessibility(Ljava/util/function/Supplier;)V
 
@@ -1583,7 +1729,7 @@
     :cond_e
     move v2, v1
 
-    .line 984
+    .line 1021
     :cond_f
     :goto_7
     iget-object p3, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
@@ -1594,14 +1740,14 @@
 
     if-nez p3, :cond_3
 
-    .line 986
+    .line 1023
     invoke-static {}, Lcom/miui/home/launcher/russia/RussiaPreInstallUtils;->isRussiaRom()Z
 
     move-result p3
 
     if-eqz p3, :cond_11
 
-    .line 987
+    .line 1024
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p2
@@ -1624,7 +1770,7 @@
 
     check-cast p3, Ljava/util/Map$Entry;
 
-    .line 988
+    .line 1025
     invoke-interface {p3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -1647,7 +1793,7 @@
 
     if-eqz v0, :cond_10
 
-    .line 989
+    .line 1026
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -1688,34 +1834,34 @@
 
     goto :goto_8
 
-    .line 994
+    .line 1031
     :cond_11
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    invoke-virtual {p2}, Lcom/miui/home/launcher/DragObject;->onDragCompleted()V
+    invoke-virtual {p2, p1}, Lcom/miui/home/launcher/DragObject;->onDragCompleted(Lcom/miui/home/launcher/DropTarget;)V
 
-    .line 995
+    .line 1032
     invoke-interface {p1}, Lcom/miui/home/launcher/DropTarget;->onDropCompleted()V
 
-    .line 996
+    .line 1033
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {p1, p2}, Lcom/miui/home/launcher/DropTarget;->onDragExit(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 997
+    .line 1034
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/DragObject;->cancelAnnounce()V
 
     goto :goto_9
 
-    .line 999
+    .line 1036
     :cond_12
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    invoke-virtual {p2}, Lcom/miui/home/launcher/DragObject;->onDragCompleted()V
+    invoke-virtual {p2, p1}, Lcom/miui/home/launcher/DragObject;->onDragCompleted(Lcom/miui/home/launcher/DropTarget;)V
 
-    .line 1001
+    .line 1038
     :goto_9
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
@@ -1725,7 +1871,7 @@
 
     if-eqz p2, :cond_13
 
-    .line 1002
+    .line 1039
     iget-object p2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/DragObject;->getDragSource()Lcom/miui/home/launcher/DragSource;
@@ -1743,17 +1889,17 @@
 .method private endDrag()V
     .locals 3
 
-    .line 586
+    .line 618
     iget-boolean v0, p0, Lcom/miui/home/launcher/DragController;->mDragging:Z
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 587
+    .line 619
     iput-boolean v0, p0, Lcom/miui/home/launcher/DragController;->mDragging:Z
 
-    .line 588
+    .line 620
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v1
@@ -1764,7 +1910,7 @@
 
     invoke-virtual {v1, v2}, Lorg/greenrobot/eventbus/EventBus;->postSticky(Ljava/lang/Object;)V
 
-    .line 589
+    .line 621
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -1777,7 +1923,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    .line 590
+    .line 622
     invoke-virtual {v2}, Lcom/miui/home/launcher/DragObject;->getDragView()Lcom/miui/home/launcher/DragView;
 
     move-result-object v2
@@ -1792,10 +1938,10 @@
 
     const-string v1, "action_drag_off"
 
-    .line 591
+    .line 623
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 592
+    .line 624
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DragObject;->isAutoDraged()Z
@@ -1804,7 +1950,7 @@
 
     if-nez v0, :cond_1
 
-    .line 593
+    .line 625
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/miui/home/launcher/DragController;->mListeners:Ljava/util/ArrayList;
@@ -1828,7 +1974,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/DragController$DragListener;
 
-    .line 594
+    .line 626
     iget-object v2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {v1, v2}, Lcom/miui/home/launcher/DragController$DragListener;->onDragEnd(Lcom/miui/home/launcher/DragObject;)V
@@ -1838,7 +1984,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 596
+    .line 628
     iput-object v0, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     :cond_1
@@ -1856,13 +2002,13 @@
 
     move-object/from16 v3, p3
 
-    .line 1007
+    .line 1044
     iget-object v4, v0, Lcom/miui/home/launcher/DragController;->mRectTemp:Landroid/graphics/Rect;
 
-    .line 1008
+    .line 1045
     iget-object v5, v0, Lcom/miui/home/launcher/DragController;->mDropTargets:Ljava/util/ArrayList;
 
-    .line 1009
+    .line 1046
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
     move-result v6
@@ -1874,14 +2020,14 @@
     :goto_0
     if-ltz v6, :cond_3
 
-    .line 1011
+    .line 1048
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Lcom/miui/home/launcher/DropTarget;
 
-    .line 1012
+    .line 1049
     invoke-interface {v8}, Lcom/miui/home/launcher/DropTarget;->isDropEnabled()Z
 
     move-result v9
@@ -1892,13 +2038,13 @@
 
     goto :goto_1
 
-    .line 1015
+    .line 1052
     :cond_0
     move-object v9, v8
 
     check-cast v9, Landroid/view/View;
 
-    .line 1016
+    .line 1053
     invoke-virtual {v9}, Landroid/view/View;->isShown()Z
 
     move-result v10
@@ -1909,7 +2055,7 @@
 
     goto :goto_1
 
-    .line 1019
+    .line 1056
     :cond_1
     invoke-interface {v8}, Lcom/miui/home/launcher/DropTarget;->getHitView()Landroid/view/View;
 
@@ -1917,7 +2063,7 @@
 
     invoke-virtual {v10, v4}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    .line 1020
+    .line 1057
     iget-object v10, v0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v10}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
@@ -1934,7 +2080,7 @@
 
     move-result v10
 
-    .line 1021
+    .line 1058
     aget v11, v3, v12
 
     aget v13, v3, v7
@@ -1943,7 +2089,7 @@
 
     int-to-float v14, v14
 
-    .line 1022
+    .line 1059
     invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
 
     move-result v15
@@ -1960,7 +2106,7 @@
 
     int-to-float v15, v15
 
-    .line 1023
+    .line 1060
     invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
 
     move-result v7
@@ -1973,17 +2119,17 @@
 
     float-to-int v7, v15
 
-    .line 1021
+    .line 1058
     invoke-virtual {v4, v11, v13, v14, v7}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 1025
+    .line 1062
     invoke-virtual {v4, v1, v2}, Landroid/graphics/Rect;->contains(II)Z
 
     move-result v7
 
     if-eqz v7, :cond_2
 
-    .line 1026
+    .line 1063
     aget v4, v3, v12
 
     int-to-float v4, v4
@@ -2012,7 +2158,7 @@
 
     const/4 v10, 0x1
 
-    .line 1027
+    .line 1064
     aget v4, v3, v10
 
     int-to-float v4, v4
@@ -2033,14 +2179,14 @@
 
     aput v4, v3, v10
 
-    .line 1028
+    .line 1065
     aget v4, v3, v12
 
     sub-int/2addr v1, v4
 
     aput v1, v3, v12
 
-    .line 1029
+    .line 1066
     aget v1, v3, v10
 
     sub-int v1, v2, v1
@@ -2068,20 +2214,20 @@
 .method private getViewsFromInfos([Lcom/miui/home/launcher/ShortcutInfo;)[Lcom/miui/home/launcher/ShortcutIcon;
     .locals 3
 
-    .line 192
+    .line 199
     array-length v0, p1
 
     new-array v0, v0, [Lcom/miui/home/launcher/ShortcutIcon;
 
     const/4 v1, 0x0
 
-    .line 193
+    .line 200
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_0
 
-    .line 194
+    .line 201
     aget-object v2, p1, v1
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->getBuddyIconView()Lcom/miui/home/launcher/ShortcutIcon;
@@ -2090,7 +2236,7 @@
 
     aput-object v2, v0, v1
 
-    .line 195
+    .line 202
     aget-object v2, v0, v1
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutIcon;->restoreToInitState()V
@@ -2114,7 +2260,7 @@
 
     move-object/from16 v3, p3
 
-    .line 657
+    .line 689
     iget-object v4, v0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v4}, Lcom/miui/home/launcher/Launcher;->isInShortcutMenuState()Z
@@ -2140,26 +2286,22 @@
     :cond_0
     move v4, v5
 
-    .line 659
+    .line 691
     :goto_0
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object v7
-
-    invoke-static {v7}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
     move-result v7
 
     if-nez v7, :cond_1
 
-    .line 660
+    .line 692
     iget-object v7, v0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {v7, v1, v2}, Lcom/miui/home/launcher/DragObject;->move(II)V
 
     if-eqz v4, :cond_2
 
-    .line 662
+    .line 694
     iget-object v4, v0, Lcom/miui/home/launcher/DragController;->mShortcutMenuDragListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -2179,7 +2321,7 @@
 
     check-cast v7, Lcom/miui/home/launcher/shortcuts/ShortcutMenuDragListener;
 
-    .line 663
+    .line 695
     iget-object v8, v0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {v7, v8}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuDragListener;->onDragOverThresholdWhenShortcutMenuShowing(Lcom/miui/home/launcher/DragObject;)V
@@ -2189,23 +2331,23 @@
     :cond_1
     if-eqz v4, :cond_2
 
-    .line 668
+    .line 700
     iget-object v1, v0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->showScreenLockedToast(Landroid/content/Context;)V
 
     return-void
 
-    .line 674
+    .line 706
     :cond_2
     iget-object v4, v0, Lcom/miui/home/launcher/DragController;->mCoordinatesTemp:[I
 
-    .line 675
+    .line 707
     invoke-direct {v0, v1, v2, v4}, Lcom/miui/home/launcher/DragController;->findDropTarget(II[I)Lcom/miui/home/launcher/DropTarget;
 
     move-result-object v7
 
-    .line 676
+    .line 708
     iget-object v8, v0, Lcom/miui/home/launcher/DragController;->mDropTargetWhenDragStarted:Lcom/miui/home/launcher/DropTarget;
 
     if-eqz v8, :cond_3
@@ -2214,21 +2356,21 @@
 
     iget-object v9, v0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    .line 678
+    .line 710
     invoke-interface {v8, v9}, Lcom/miui/home/launcher/DropTarget;->acceptDrop(Lcom/miui/home/launcher/DragObject;)Z
 
     move-result v8
 
     if-eqz v8, :cond_3
 
-    .line 679
+    .line 711
     iget-object v8, v0, Lcom/miui/home/launcher/DragController;->mDropTargetWhenDragStarted:Lcom/miui/home/launcher/DropTarget;
 
     iget-object v9, v0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {v8, v9}, Lcom/miui/home/launcher/DropTarget;->onDragEnter(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 680
+    .line 712
     iget-object v8, v0, Lcom/miui/home/launcher/DragController;->mDropTargetWhenDragStarted:Lcom/miui/home/launcher/DropTarget;
 
     iget-object v9, v0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
@@ -2238,24 +2380,24 @@
     :cond_3
     const/4 v8, 0x0
 
-    .line 682
+    .line 714
     iput-object v8, v0, Lcom/miui/home/launcher/DragController;->mDropTargetWhenDragStarted:Lcom/miui/home/launcher/DropTarget;
 
-    .line 684
+    .line 716
     iget-object v9, v0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     aget v10, v4, v5
 
     iput v10, v9, Lcom/miui/home/launcher/DragObject;->x:I
 
-    .line 685
+    .line 717
     aget v4, v4, v6
 
     iput v4, v9, Lcom/miui/home/launcher/DragObject;->y:I
 
     if-eqz v7, :cond_7
 
-    .line 687
+    .line 719
     invoke-interface {v7, v9}, Lcom/miui/home/launcher/DropTarget;->getDropTargetDelegate(Lcom/miui/home/launcher/DragObject;)Lcom/miui/home/launcher/DropTarget;
 
     move-result-object v4
@@ -2273,7 +2415,7 @@
     :cond_4
     move-object v4, v8
 
-    .line 694
+    .line 726
     :goto_2
     iget-object v9, v0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
@@ -2283,23 +2425,23 @@
 
     if-eqz v9, :cond_6
 
-    .line 695
+    .line 727
     iget-object v9, v0, Lcom/miui/home/launcher/DragController;->mLastDropTarget:Lcom/miui/home/launcher/DropTarget;
 
     if-eq v9, v7, :cond_5
 
-    .line 696
+    .line 728
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/DragController;->cleanLastDropTarget()V
 
-    .line 697
+    .line 729
     iget-object v9, v0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {v7, v9}, Lcom/miui/home/launcher/DropTarget;->onDragEnter(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 698
+    .line 730
     iput-object v7, v0, Lcom/miui/home/launcher/DragController;->mLastDropTarget:Lcom/miui/home/launcher/DropTarget;
 
-    .line 700
+    .line 732
     :cond_5
     iget-object v9, v0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
@@ -2307,19 +2449,19 @@
 
     goto :goto_3
 
-    .line 702
+    .line 734
     :cond_6
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/DragController;->cleanLastDropTarget()V
 
     goto :goto_3
 
-    .line 705
+    .line 737
     :cond_7
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/DragController;->cleanLastDropTarget()V
 
     move-object v4, v8
 
-    .line 710
+    .line 742
     :goto_3
     iget-object v9, v0, Lcom/miui/home/launcher/DragController;->mDeleteRegion:Landroid/graphics/RectF;
 
@@ -2329,7 +2471,7 @@
 
     int-to-float v11, v2
 
-    .line 711
+    .line 743
     invoke-virtual {v9, v10, v11}, Landroid/graphics/RectF;->contains(FF)Z
 
     move-result v9
@@ -2339,7 +2481,7 @@
     :cond_8
     move v9, v5
 
-    .line 716
+    .line 748
     :goto_4
     iget-object v10, v0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -2351,7 +2493,7 @@
 
     move-result v10
 
-    .line 717
+    .line 749
     iget v11, v0, Lcom/miui/home/launcher/DragController;->mDistanceSinceScroll:I
 
     int-to-double v11, v11
@@ -2368,7 +2510,7 @@
 
     const-wide/high16 v8, 0x4000000000000000L    # 2.0
 
-    .line 718
+    .line 750
     invoke-static {v13, v14, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v13
@@ -2399,17 +2541,17 @@
 
     iput v6, v0, Lcom/miui/home/launcher/DragController;->mDistanceSinceScroll:I
 
-    .line 719
+    .line 751
     iget-object v6, v0, Lcom/miui/home/launcher/DragController;->mLastTouch:[I
 
     aput v1, v6, v5
 
     const/4 v7, 0x1
 
-    .line 720
+    .line 752
     aput v2, v6, v7
 
-    .line 722
+    .line 754
     instance-of v6, v4, Lcom/miui/home/launcher/DragScroller;
 
     if-eqz v6, :cond_9
@@ -2427,7 +2569,7 @@
 
     const/4 v8, 0x0
 
-    .line 723
+    .line 755
     :goto_5
     instance-of v6, v7, Lcom/miui/home/launcher/DragScroller;
 
@@ -2440,7 +2582,7 @@
     :cond_a
     if-eqz v7, :cond_b
 
-    .line 725
+    .line 757
     iget-object v6, v0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {v7, v6}, Lcom/miui/home/launcher/DropTarget;->acceptDrop(Lcom/miui/home/launcher/DragObject;)Z
@@ -2459,7 +2601,7 @@
     :goto_6
     if-eqz v4, :cond_d
 
-    .line 726
+    .line 758
     iget-object v7, v0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {v4, v7}, Lcom/miui/home/launcher/DropTarget;->acceptDrop(Lcom/miui/home/launcher/DragObject;)Z
@@ -2479,7 +2621,7 @@
     :goto_7
     const/4 v4, 0x1
 
-    .line 728
+    .line 760
     :goto_8
     iget-object v7, v0, Lcom/miui/home/launcher/DragController;->mDragScroller:Lcom/miui/home/launcher/DragScroller;
 
@@ -2494,12 +2636,12 @@
     :cond_e
     if-eqz v8, :cond_10
 
-    .line 732
+    .line 764
     iget-object v4, v0, Lcom/miui/home/launcher/DragController;->mDragScroller:Lcom/miui/home/launcher/DragScroller;
 
     if-nez v4, :cond_f
 
-    .line 733
+    .line 765
     iput-object v8, v0, Lcom/miui/home/launcher/DragController;->mDragScroller:Lcom/miui/home/launcher/DragScroller;
 
     goto :goto_9
@@ -2507,24 +2649,24 @@
     :cond_f
     if-eq v4, v8, :cond_11
 
-    .line 735
+    .line 767
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/DragController;->cancelDragScroll()V
 
-    .line 736
+    .line 768
     iput-object v8, v0, Lcom/miui/home/launcher/DragController;->mDragScroller:Lcom/miui/home/launcher/DragScroller;
 
     goto :goto_9
 
-    .line 739
+    .line 771
     :cond_10
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/DragController;->cancelDragScroll()V
 
     const/4 v4, 0x0
 
-    .line 740
+    .line 772
     iput-object v4, v0, Lcom/miui/home/launcher/DragController;->mDragScroller:Lcom/miui/home/launcher/DragScroller;
 
-    .line 742
+    .line 774
     :cond_11
     :goto_9
     iget-object v4, v0, Lcom/miui/home/launcher/DragController;->mDragScroller:Lcom/miui/home/launcher/DragScroller;
@@ -2533,7 +2675,7 @@
 
     return-void
 
-    .line 745
+    .line 777
     :cond_12
     invoke-interface {v4}, Lcom/miui/home/launcher/DragScroller;->getScrollZone()I
 
@@ -2545,7 +2687,7 @@
 
     if-ge v1, v4, :cond_13
 
-    .line 747
+    .line 779
     iget v3, v0, Lcom/miui/home/launcher/DragController;->mScrollState:I
 
     if-nez v3, :cond_17
@@ -2556,10 +2698,10 @@
 
     const/4 v3, 0x1
 
-    .line 748
+    .line 780
     iput v3, v0, Lcom/miui/home/launcher/DragController;->mScrollState:I
 
-    .line 749
+    .line 781
     iget-object v3, v0, Lcom/miui/home/launcher/DragController;->mDragScroller:Lcom/miui/home/launcher/DragScroller;
 
     invoke-interface {v3, v1, v2, v5}, Lcom/miui/home/launcher/DragScroller;->onEnterScrollArea(III)Z
@@ -2568,15 +2710,15 @@
 
     if-eqz v1, :cond_17
 
-    .line 750
+    .line 782
     iget-object v1, v0, Lcom/miui/home/launcher/DragController;->mScrollRunnable:Lcom/miui/home/launcher/DragController$ScrollRunnable;
 
     invoke-virtual {v1, v5}, Lcom/miui/home/launcher/DragController$ScrollRunnable;->setDirection(I)V
 
-    .line 751
+    .line 783
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/DragController;->cancelScroll()V
 
-    .line 752
+    .line 784
     iget-object v1, v0, Lcom/miui/home/launcher/DragController;->mHandler:Landroid/os/Handler;
 
     iget-object v2, v0, Lcom/miui/home/launcher/DragController;->mScrollRunnable:Lcom/miui/home/launcher/DragController$ScrollRunnable;
@@ -2588,7 +2730,7 @@
     :cond_13
     if-nez v16, :cond_14
 
-    .line 755
+    .line 787
     iget-object v5, v0, Lcom/miui/home/launcher/DragController;->mScrollView:Landroid/view/View;
 
     invoke-virtual {v5}, Landroid/view/View;->getWidth()I
@@ -2599,7 +2741,7 @@
 
     if-le v1, v5, :cond_14
 
-    .line 756
+    .line 788
     iget v3, v0, Lcom/miui/home/launcher/DragController;->mScrollState:I
 
     if-nez v3, :cond_17
@@ -2610,10 +2752,10 @@
 
     const/4 v3, 0x1
 
-    .line 757
+    .line 789
     iput v3, v0, Lcom/miui/home/launcher/DragController;->mScrollState:I
 
-    .line 758
+    .line 790
     iget-object v4, v0, Lcom/miui/home/launcher/DragController;->mDragScroller:Lcom/miui/home/launcher/DragScroller;
 
     invoke-interface {v4, v1, v2, v3}, Lcom/miui/home/launcher/DragScroller;->onEnterScrollArea(III)Z
@@ -2622,15 +2764,15 @@
 
     if-eqz v1, :cond_17
 
-    .line 759
+    .line 791
     iget-object v1, v0, Lcom/miui/home/launcher/DragController;->mScrollRunnable:Lcom/miui/home/launcher/DragController$ScrollRunnable;
 
     invoke-virtual {v1, v3}, Lcom/miui/home/launcher/DragController$ScrollRunnable;->setDirection(I)V
 
-    .line 760
+    .line 792
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/DragController;->cancelScroll()V
 
-    .line 761
+    .line 793
     iget-object v1, v0, Lcom/miui/home/launcher/DragController;->mHandler:Landroid/os/Handler;
 
     iget-object v2, v0, Lcom/miui/home/launcher/DragController;->mScrollRunnable:Lcom/miui/home/launcher/DragController$ScrollRunnable;
@@ -2639,7 +2781,7 @@
 
     goto :goto_a
 
-    .line 764
+    .line 796
     :cond_14
     iget v2, v0, Lcom/miui/home/launcher/DragController;->mScrollState:I
 
@@ -2647,7 +2789,7 @@
 
     if-ne v2, v4, :cond_15
 
-    .line 765
+    .line 797
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/launcher/DragController;->cancelDragScroll()V
 
     goto :goto_a
@@ -2655,12 +2797,12 @@
     :cond_15
     if-eqz v3, :cond_17
 
-    .line 766
+    .line 798
     iget v2, v0, Lcom/miui/home/launcher/DragController;->mSecondaryPointerId:I
 
     if-lez v2, :cond_17
 
-    .line 767
+    .line 799
     invoke-virtual {v3, v2}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
     move-result v2
@@ -2669,7 +2811,7 @@
 
     int-to-float v1, v1
 
-    .line 768
+    .line 800
     iget v2, v0, Lcom/miui/home/launcher/DragController;->mSecondaryPointerId:I
 
     invoke-virtual {v3, v2}, Landroid/view/MotionEvent;->findPointerIndex(I)I
@@ -2692,15 +2834,15 @@
 
     if-lez v1, :cond_17
 
-    .line 769
+    .line 801
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/DragController;->cancelScroll()V
 
-    .line 770
+    .line 802
     iget-object v1, v0, Lcom/miui/home/launcher/DragController;->mSecondPointerScroller:Lcom/miui/home/launcher/DragScroller;
 
     if-eqz v1, :cond_17
 
-    .line 771
+    .line 803
     iget v2, v0, Lcom/miui/home/launcher/DragController;->mSecondaryPointerId:I
 
     invoke-interface {v1, v3, v2}, Lcom/miui/home/launcher/DragScroller;->onSecondaryPointerMove(Landroid/view/MotionEvent;I)V
@@ -2710,7 +2852,7 @@
     :cond_16
     const/4 v1, -0x1
 
-    .line 775
+    .line 807
     iput v1, v0, Lcom/miui/home/launcher/DragController;->mSecondaryPointerId:I
 
     :cond_17
@@ -2721,7 +2863,7 @@
 .method private isMoveOverShortcutMenuMoveThreshold(II)Z
     .locals 2
 
-    .line 781
+    .line 813
     iget v0, p0, Lcom/miui/home/launcher/DragController;->mMotionDownX:I
 
     sub-int/2addr p1, v0
@@ -2738,7 +2880,7 @@
 
     move-result-wide p1
 
-    .line 782
+    .line 814
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getShortcutMenuDisappearThreshold()I
 
     move-result v0
@@ -2760,10 +2902,41 @@
     return p1
 .end method
 
-.method static synthetic lambda$setEachDragViewMinDropAnimationDuration$1(ILcom/miui/home/launcher/DragView;)V
+.method static synthetic lambda$createBitmapWithOutline$1(FLandroid/graphics/drawable/Drawable;IILandroid/view/View;Landroid/graphics/Canvas;)V
+    .locals 1
+
+    .line 491
+    invoke-virtual {p5}, Landroid/graphics/Canvas;->save()I
+
+    move-result v0
+
+    .line 492
+    invoke-virtual {p5, p0, p0}, Landroid/graphics/Canvas;->scale(FF)V
+
+    if-eqz p1, :cond_0
+
+    const/4 p0, 0x0
+
+    .line 494
+    invoke-virtual {p1, p0, p0, p2, p3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    .line 495
+    invoke-virtual {p1, p5}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    .line 497
+    :cond_0
+    invoke-virtual {p4, p5}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
+
+    .line 498
+    invoke-virtual {p5, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    return-void
+.end method
+
+.method static synthetic lambda$setEachDragViewMinDropAnimationDuration$0(ILcom/miui/home/launcher/DragView;)V
     .locals 0
 
-    .line 231
+    .line 238
     invoke-virtual {p1, p0}, Lcom/miui/home/launcher/DragView;->setMinDropAnimationDuration(I)V
 
     return-void
@@ -2772,10 +2945,10 @@
 .method private obtainVelocityTracker()Landroid/view/VelocityTracker;
     .locals 1
 
-    .line 873
+    .line 910
     invoke-direct {p0}, Lcom/miui/home/launcher/DragController;->recycleVelocityTracker()V
 
-    .line 874
+    .line 911
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v0
@@ -2786,22 +2959,22 @@
 .method private recycleVelocityTracker()V
     .locals 1
 
-    .line 878
+    .line 915
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_0
 
-    .line 879
+    .line 916
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
 
-    .line 880
+    .line 917
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
     const/4 v0, 0x0
 
-    .line 881
+    .line 918
     iput-object v0, p0, Lcom/miui/home/launcher/DragController;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     :cond_0
@@ -2811,12 +2984,12 @@
 .method private setDownloadViewTag(Landroid/view/View;)V
     .locals 1
 
-    .line 446
+    .line 435
     instance-of v0, p1, Lcom/miui/home/launcher/ShortcutIcon;
 
     if-eqz v0, :cond_0
 
-    .line 447
+    .line 436
     check-cast p1, Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->setDownloadTag()V
@@ -2830,7 +3003,7 @@
 .method public addDragAnimationListener(Lcom/miui/home/launcher/DragController$DropAnimationListener;)V
     .locals 1
 
-    .line 1065
+    .line 1102
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mDropAnimationListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -2841,7 +3014,7 @@
 .method public addDragListener(Lcom/miui/home/launcher/DragController$DragListener;)V
     .locals 1
 
-    .line 1061
+    .line 1098
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -2852,7 +3025,7 @@
 .method public addDropTarget(ILcom/miui/home/launcher/DropTarget;)V
     .locals 1
 
-    .line 1090
+    .line 1127
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mDropTargets:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
@@ -2863,7 +3036,7 @@
 .method public addDropTarget(Lcom/miui/home/launcher/DropTarget;)V
     .locals 1
 
-    .line 1083
+    .line 1120
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mDropTargets:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -2874,7 +3047,7 @@
 .method public addShortcutMenuDragListener(Lcom/miui/home/launcher/shortcuts/ShortcutMenuDragListener;)V
     .locals 1
 
-    .line 1069
+    .line 1106
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mShortcutMenuDragListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -2891,7 +3064,7 @@
 
     move-object v4, p2
 
-    .line 215
+    .line 222
     iget-boolean v0, v10, Lcom/miui/home/launcher/DragController;->mAutoDraged:Z
 
     if-nez v0, :cond_1
@@ -2900,7 +3073,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 218
+    .line 225
     array-length v0, v1
 
     if-lez v0, :cond_0
@@ -2929,18 +3102,18 @@
 
     move/from16 v8, p5
 
-    .line 219
+    .line 226
     invoke-virtual/range {v0 .. v9}, Lcom/miui/home/launcher/DragController;->startDrag([Landroid/view/View;ZF[Lcom/miui/home/launcher/DragSource;IIZIF)Z
 
     const/4 v0, 0x1
 
-    .line 220
+    .line 227
     iput-boolean v0, v10, Lcom/miui/home/launcher/DragController;->mAutoDraged:Z
 
     :cond_0
     return-void
 
-    .line 216
+    .line 223
     :cond_1
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -2954,7 +3127,7 @@
 .method public autoDrag([Lcom/miui/home/launcher/ShortcutInfo;[Lcom/miui/home/launcher/DragSource;II)V
     .locals 6
 
-    .line 225
+    .line 232
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/DragController;->getViewsFromInfos([Lcom/miui/home/launcher/ShortcutInfo;)[Lcom/miui/home/launcher/ShortcutIcon;
 
     move-result-object v1
@@ -2977,27 +3150,27 @@
 .method public autoDrop(Lcom/miui/home/launcher/DropTarget;)V
     .locals 1
 
-    .line 244
+    .line 251
     iget-boolean v0, p0, Lcom/miui/home/launcher/DragController;->mAutoDraged:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 247
+    .line 254
     iput-boolean v0, p0, Lcom/miui/home/launcher/DragController;->mAutoDraged:Z
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 248
+    .line 255
     invoke-direct {p0, v0, v0, p1}, Lcom/miui/home/launcher/DragController;->drop(FFLcom/miui/home/launcher/DropTarget;)V
 
-    .line 249
+    .line 256
     invoke-direct {p0}, Lcom/miui/home/launcher/DragController;->endDrag()V
 
     return-void
 
-    .line 245
+    .line 252
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -3011,27 +3184,27 @@
 .method public autoDropBack()V
     .locals 2
 
-    .line 235
+    .line 242
     iget-boolean v0, p0, Lcom/miui/home/launcher/DragController;->mAutoDraged:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 238
+    .line 245
     iput-boolean v0, p0, Lcom/miui/home/launcher/DragController;->mAutoDraged:Z
 
-    .line 239
+    .line 246
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DragObject;->autoDropBack()V
 
-    .line 240
+    .line 247
     invoke-direct {p0}, Lcom/miui/home/launcher/DragController;->endDrag()V
 
     return-void
 
-    .line 236
+    .line 243
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -3045,57 +3218,57 @@
 .method public cancelDrag()V
     .locals 3
 
-    .line 567
+    .line 599
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragController;->cancelScroll()V
 
-    .line 568
+    .line 600
     iget-boolean v0, p0, Lcom/miui/home/launcher/DragController;->mDragging:Z
 
     if-eqz v0, :cond_2
 
-    .line 569
+    .line 601
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mLastDropTarget:Lcom/miui/home/launcher/DropTarget;
 
     if-eqz v0, :cond_0
 
-    .line 570
+    .line 602
     iget-object v1, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {v0, v1}, Lcom/miui/home/launcher/DropTarget;->onDragExit(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 572
+    .line 604
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mDropTargetWhenDragStarted:Lcom/miui/home/launcher/DropTarget;
 
     if-eqz v0, :cond_1
 
-    .line 573
+    .line 605
     iget-object v1, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {v0, v1}, Lcom/miui/home/launcher/DropTarget;->onDragExit(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 575
+    .line 607
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DragObject;->onDragCompleted(Z)V
+    const/4 v2, 0x0
 
-    .line 576
+    invoke-virtual {v0, v2, v1}, Lcom/miui/home/launcher/DragObject;->onDragCompleted(Lcom/miui/home/launcher/DropTarget;Z)V
+
+    .line 608
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DragObject;->getDragSource()Lcom/miui/home/launcher/DragSource;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    iget-object v2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
+    invoke-interface {v0, v2, v1}, Lcom/miui/home/launcher/DragSource;->onDragCompleted(Lcom/miui/home/launcher/DropTarget;Lcom/miui/home/launcher/DragObject;)V
 
-    invoke-interface {v0, v1, v2}, Lcom/miui/home/launcher/DragSource;->onDragCompleted(Lcom/miui/home/launcher/DropTarget;Lcom/miui/home/launcher/DragObject;)V
-
-    .line 578
+    .line 610
     :cond_2
     invoke-direct {p0}, Lcom/miui/home/launcher/DragController;->endDrag()V
 
@@ -3105,7 +3278,7 @@
 .method public cancelScroll()V
     .locals 2
 
-    .line 582
+    .line 614
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/miui/home/launcher/DragController;->mScrollRunnable:Lcom/miui/home/launcher/DragController$ScrollRunnable;
@@ -3118,7 +3291,7 @@
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
     .locals 0
 
-    .line 560
+    .line 592
     iget-boolean p1, p0, Lcom/miui/home/launcher/DragController;->mDragging:Z
 
     return p1
@@ -3127,7 +3300,7 @@
 .method public dispatchUnhandledMove(Landroid/view/View;I)Z
     .locals 1
 
-    .line 645
+    .line 677
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mMoveTarget:Landroid/view/View;
 
     if-eqz v0, :cond_0
@@ -3152,7 +3325,7 @@
 .method public getCurrentDragObject()Lcom/miui/home/launcher/DragObject;
     .locals 1
 
-    .line 391
+    .line 387
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     return-object v0
@@ -3161,17 +3334,17 @@
 .method getVelocityX()F
     .locals 2
 
-    .line 886
+    .line 923
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_0
 
     const/16 v1, 0x3e8
 
-    .line 887
+    .line 924
     invoke-virtual {v0, v1}, Landroid/view/VelocityTracker;->computeCurrentVelocity(I)V
 
-    .line 888
+    .line 925
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->getXVelocity()F
@@ -3189,17 +3362,17 @@
 .method getVelocityY()F
     .locals 2
 
-    .line 894
+    .line 931
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_0
 
     const/16 v1, 0x3e8
 
-    .line 895
+    .line 932
     invoke-virtual {v0, v1}, Landroid/view/VelocityTracker;->computeCurrentVelocity(I)V
 
-    .line 896
+    .line 933
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->getYVelocity()F
@@ -3217,7 +3390,7 @@
 .method public isAppDragging(Ljava/lang/String;Landroid/os/UserHandle;)Z
     .locals 4
 
-    .line 1152
+    .line 1189
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragController;->isDragging()Z
 
     move-result v0
@@ -3232,7 +3405,7 @@
 
     move v0, v1
 
-    .line 1153
+    .line 1190
     :goto_0
     iget-object v2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
@@ -3242,22 +3415,22 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1154
+    .line 1191
     iget-object v2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {v2, v0}, Lcom/miui/home/launcher/DragObject;->getDragInfo(I)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v2
 
-    .line 1155
+    .line 1192
     instance-of v3, v2, Lcom/miui/home/launcher/ShortcutInfo;
 
     if-eqz v3, :cond_0
 
-    .line 1156
+    .line 1193
     check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 1157
+    .line 1194
     invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -3268,7 +3441,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 1158
+    .line 1195
     invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->getUser()Landroid/os/UserHandle;
 
     move-result-object v2
@@ -3295,7 +3468,7 @@
 .method public isDragging()Z
     .locals 1
 
-    .line 452
+    .line 441
     iget-boolean v0, p0, Lcom/miui/home/launcher/DragController;->mDragging:Z
 
     return v0
@@ -3304,7 +3477,7 @@
 .method public isFolderDragging(Lcom/miui/home/launcher/FolderInfo;)Z
     .locals 3
 
-    .line 1168
+    .line 1205
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragController;->isDragging()Z
 
     move-result v0
@@ -3319,7 +3492,7 @@
 
     move v0, v1
 
-    .line 1169
+    .line 1206
     :goto_0
     iget-object v2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
@@ -3329,7 +3502,7 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1170
+    .line 1207
     iget-object v2, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {v2, v0}, Lcom/miui/home/launcher/DragObject;->getDragInfo(I)Lcom/miui/home/launcher/ItemInfo;
@@ -3354,7 +3527,7 @@
 .method public onDeviceProfileChanged(Lcom/miui/home/launcher/DeviceProfile;)V
     .locals 0
 
-    .line 1181
+    .line 1218
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragController;->cancelDrag()V
 
     return-void
@@ -3363,12 +3536,12 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 5
 
-    .line 605
+    .line 637
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 606
+    .line 638
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v1
@@ -3385,7 +3558,7 @@
 
     move-result v1
 
-    .line 607
+    .line 639
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v2
@@ -3400,14 +3573,14 @@
 
     move-result v2
 
-    .line 609
+    .line 641
     iget-boolean v3, p0, Lcom/miui/home/launcher/DragController;->mDragging:Z
 
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 622
+    .line 654
     :pswitch_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragController;->cancelDrag()V
 
@@ -3416,32 +3589,32 @@
     :pswitch_1
     if-eqz v3, :cond_0
 
-    .line 627
+    .line 659
     invoke-direct {p0, v1, v2, p1}, Lcom/miui/home/launcher/DragController;->handleMoveEvent(IILandroid/view/MotionEvent;)V
 
     int-to-float p1, v1
 
     int-to-float v0, v2
 
-    .line 628
+    .line 660
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/DragController;->drop(FF)V
 
-    .line 630
+    .line 662
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/launcher/DragController;->endDrag()V
 
     goto :goto_0
 
-    .line 616
+    .line 648
     :pswitch_2
     iput v1, p0, Lcom/miui/home/launcher/DragController;->mMotionDownX:I
 
-    .line 617
+    .line 649
     iput v2, p0, Lcom/miui/home/launcher/DragController;->mMotionDownY:I
 
     const/4 p1, 0x0
 
-    .line 618
+    .line 650
     iput-object p1, p0, Lcom/miui/home/launcher/DragController;->mLastDropTarget:Lcom/miui/home/launcher/DropTarget;
 
     :goto_0
@@ -3462,10 +3635,10 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 7
 
-    .line 789
+    .line 821
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mScrollView:Landroid/view/View;
 
-    .line 791
+    .line 823
     iget-boolean v1, p0, Lcom/miui/home/launcher/DragController;->mDragging:Z
 
     const/4 v2, 0x0
@@ -3474,13 +3647,13 @@
 
     return v2
 
-    .line 795
+    .line 827
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
-    .line 797
+    .line 829
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v3
@@ -3495,7 +3668,7 @@
 
     move-result v3
 
-    .line 798
+    .line 830
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v4
@@ -3519,39 +3692,37 @@
     :pswitch_0
     goto/16 :goto_3
 
-    .line 823
+    .line 855
     :pswitch_1
     iget v0, p0, Lcom/miui/home/launcher/DragController;->mSecondaryPointerId:I
 
-    if-ltz v0, :cond_a
+    if-ltz v0, :cond_9
 
-    .line 824
+    .line 856
     iget-object v1, p0, Lcom/miui/home/launcher/DragController;->mSecondPointerScroller:Lcom/miui/home/launcher/DragScroller;
 
     if-eqz v1, :cond_1
 
-    .line 825
+    .line 857
     invoke-interface {v1, p1, v0}, Lcom/miui/home/launcher/DragScroller;->onSecondaryPointerUp(Landroid/view/MotionEvent;I)V
 
     :cond_1
     const/4 p1, -0x1
 
-    .line 827
+    .line 859
     iput p1, p0, Lcom/miui/home/launcher/DragController;->mSecondaryPointerId:I
 
     goto/16 :goto_3
 
-    .line 802
+    .line 834
     :pswitch_2
-    iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 803
+    .line 835
     iget-object p1, p0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->showScreenLockedToast(Landroid/content/Context;)V
@@ -3565,14 +3736,14 @@
 
     shr-int/lit8 v0, v0, 0x8
 
-    .line 808
+    .line 840
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v1
 
     iput v1, p0, Lcom/miui/home/launcher/DragController;->mSecondaryPointerId:I
 
-    .line 809
+    .line 841
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v1
@@ -3587,7 +3758,7 @@
 
     move-result v1
 
-    .line 810
+    .line 842
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v0
@@ -3602,7 +3773,7 @@
 
     move-result v0
 
-    .line 811
+    .line 843
     iget-object v2, p0, Lcom/miui/home/launcher/DragController;->mCoordinatesTemp:[I
 
     invoke-direct {p0, v1, v0, v2}, Lcom/miui/home/launcher/DragController;->findDropTarget(II[I)Lcom/miui/home/launcher/DropTarget;
@@ -3611,24 +3782,24 @@
 
     if-eqz v0, :cond_3
 
-    .line 812
+    .line 844
     instance-of v1, v0, Lcom/miui/home/launcher/DragScroller;
 
     if-eqz v1, :cond_3
 
-    .line 813
+    .line 845
     check-cast v0, Lcom/miui/home/launcher/DragScroller;
 
     iput-object v0, p0, Lcom/miui/home/launcher/DragController;->mSecondPointerScroller:Lcom/miui/home/launcher/DragScroller;
 
-    .line 814
+    .line 846
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mSecondPointerScroller:Lcom/miui/home/launcher/DragScroller;
 
     iget v1, p0, Lcom/miui/home/launcher/DragController;->mSecondaryPointerId:I
 
     invoke-interface {v0, p1, v1}, Lcom/miui/home/launcher/DragScroller;->onSecondaryPointerDown(Landroid/view/MotionEvent;I)V
 
-    .line 816
+    .line 848
     :cond_3
     iget-object p1, p0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -3636,9 +3807,9 @@
 
     move-result p1
 
-    if-eqz p1, :cond_a
+    if-eqz p1, :cond_9
 
-    .line 817
+    .line 849
     iget-object p1, p0, Lcom/miui/home/launcher/DragController;->mShortcutMenuDragListeners:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -3650,7 +3821,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_9
 
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -3658,123 +3829,111 @@
 
     check-cast v0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuDragListener;
 
-    .line 818
+    .line 850
     iget-object v1, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {v0, v1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuDragListener;->onSecondaryPointerDownWhenShortcutMenuShowing(Lcom/miui/home/launcher/DragObject;)V
 
     goto :goto_0
 
-    .line 865
+    .line 902
     :pswitch_3
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragController;->cancelDrag()V
 
-    .line 866
+    .line 903
     invoke-direct {p0}, Lcom/miui/home/launcher/DragController;->recycleVelocityTracker()V
 
     goto :goto_3
 
-    .line 847
+    .line 879
     :pswitch_4
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_4
 
-    .line 848
+    .line 880
     invoke-direct {p0}, Lcom/miui/home/launcher/DragController;->obtainVelocityTracker()Landroid/view/VelocityTracker;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/DragController;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 850
+    .line 882
     :cond_4
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_5
 
-    .line 851
+    .line 883
     invoke-virtual {v0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 853
+    .line 885
     :cond_5
     invoke-direct {p0, v3, v4, p1}, Lcom/miui/home/launcher/DragController;->handleMoveEvent(IILandroid/view/MotionEvent;)V
 
     goto :goto_3
 
-    .line 856
+    .line 888
     :pswitch_5
-    invoke-direct {p0, v3, v4, p1}, Lcom/miui/home/launcher/DragController;->handleMoveEvent(IILandroid/view/MotionEvent;)V
+    iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 857
-    invoke-virtual {p0}, Lcom/miui/home/launcher/DragController;->cancelScroll()V
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getHandler()Landroid/os/Handler;
 
-    .line 858
-    iget-boolean p1, p0, Lcom/miui/home/launcher/DragController;->mDragging:Z
+    move-result-object v0
 
-    if-eqz p1, :cond_6
+    new-instance v1, Lcom/miui/home/launcher/DragController$4;
 
-    int-to-float p1, v3
+    invoke-direct {v1, p0, v3, v4, p1}, Lcom/miui/home/launcher/DragController$4;-><init>(Lcom/miui/home/launcher/DragController;IILandroid/view/MotionEvent;)V
 
-    int-to-float v0, v4
-
-    .line 859
-    invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/DragController;->drop(FF)V
-
-    .line 861
-    :cond_6
-    invoke-direct {p0}, Lcom/miui/home/launcher/DragController;->endDrag()V
-
-    .line 862
-    invoke-direct {p0}, Lcom/miui/home/launcher/DragController;->recycleVelocityTracker()V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_3
 
-    .line 832
+    .line 864
     :pswitch_6
     iput v3, p0, Lcom/miui/home/launcher/DragController;->mMotionDownX:I
 
-    .line 833
+    .line 865
     iput v4, p0, Lcom/miui/home/launcher/DragController;->mMotionDownY:I
 
-    .line 834
+    .line 866
     iget-object p1, p0, Lcom/miui/home/launcher/DragController;->mDragScroller:Lcom/miui/home/launcher/DragScroller;
 
-    if-eqz p1, :cond_9
+    if-eqz p1, :cond_8
 
-    .line 835
+    .line 867
     invoke-interface {p1}, Lcom/miui/home/launcher/DragScroller;->getScrollZone()I
 
     move-result p1
 
-    if-lt v3, p1, :cond_8
+    if-lt v3, p1, :cond_7
 
-    .line 836
+    .line 868
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     move-result v0
 
     sub-int/2addr v0, p1
 
-    if-le v3, v0, :cond_7
+    if-le v3, v0, :cond_6
 
     goto :goto_1
 
-    .line 841
-    :cond_7
+    .line 873
+    :cond_6
     iput v2, p0, Lcom/miui/home/launcher/DragController;->mScrollState:I
 
     goto :goto_2
 
-    .line 837
-    :cond_8
+    .line 869
+    :cond_7
     :goto_1
     iput v6, p0, Lcom/miui/home/launcher/DragController;->mScrollState:I
 
-    .line 838
+    .line 870
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragController;->cancelScroll()V
 
-    .line 839
+    .line 871
     iget-object p1, p0, Lcom/miui/home/launcher/DragController;->mHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mScrollRunnable:Lcom/miui/home/launcher/DragController$ScrollRunnable;
@@ -3783,8 +3942,8 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 844
-    :cond_9
+    .line 876
+    :cond_8
     :goto_2
     invoke-direct {p0}, Lcom/miui/home/launcher/DragController;->obtainVelocityTracker()Landroid/view/VelocityTracker;
 
@@ -3792,9 +3951,11 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/DragController;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    :cond_a
+    :cond_9
     :goto_3
     return v6
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -3811,7 +3972,7 @@
 .method public removeDragListener(Lcom/miui/home/launcher/DragController$DragListener;)V
     .locals 1
 
-    .line 1076
+    .line 1113
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -3822,29 +3983,29 @@
 .method public removeDropTarget(Lcom/miui/home/launcher/DropTarget;)V
     .locals 1
 
-    .line 1097
+    .line 1134
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mDropTargets:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1098
+    .line 1135
     iget-boolean v0, p0, Lcom/miui/home/launcher/DragController;->mDragging:Z
 
     if-eqz v0, :cond_0
 
-    .line 1099
+    .line 1136
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mLastDropTarget:Lcom/miui/home/launcher/DropTarget;
 
     if-ne v0, p1, :cond_0
 
-    .line 1100
+    .line 1137
     iget-object p1, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {v0, p1}, Lcom/miui/home/launcher/DropTarget;->onDragExit(Lcom/miui/home/launcher/DragObject;)V
 
     const/4 p1, 0x0
 
-    .line 1101
+    .line 1138
     iput-object p1, p0, Lcom/miui/home/launcher/DragController;->mLastDropTarget:Lcom/miui/home/launcher/DropTarget;
 
     :cond_0
@@ -3854,18 +4015,18 @@
 .method public setEachDragViewMinDropAnimationDuration(I)V
     .locals 2
 
-    .line 229
+    .line 236
     iget-object v0, p0, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 230
+    .line 237
     :cond_0
-    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$DragController$aSWDqZizYihJI5Tw0vncFPSXOdo;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$DragController$k7jD1BPyoO3aB6AAzrwq7pcnKKk;
 
-    invoke-direct {v1, p1}, Lcom/miui/home/launcher/-$$Lambda$DragController$aSWDqZizYihJI5Tw0vncFPSXOdo;-><init>(I)V
+    invoke-direct {v1, p1}, Lcom/miui/home/launcher/-$$Lambda$DragController$k7jD1BPyoO3aB6AAzrwq7pcnKKk;-><init>(I)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DragObject;->forEachDragView(Ljava/util/function/Consumer;)V
 
@@ -3875,7 +4036,7 @@
 .method setMoveTarget(Landroid/view/View;)V
     .locals 0
 
-    .line 641
+    .line 673
     iput-object p1, p0, Lcom/miui/home/launcher/DragController;->mMoveTarget:Landroid/view/View;
 
     return-void
@@ -3884,7 +4045,7 @@
 .method public setScrollView(Landroid/view/View;)V
     .locals 0
 
-    .line 1110
+    .line 1147
     iput-object p1, p0, Lcom/miui/home/launcher/DragController;->mScrollView:Landroid/view/View;
 
     return-void
@@ -3895,7 +4056,7 @@
 
     const/4 v0, 0x1
 
-    .line 187
+    .line 194
     new-array v3, v0, [Lcom/miui/home/launcher/DragSource;
 
     const/4 v0, 0x0
@@ -3934,10 +4095,10 @@
 
     move v5, p6
 
-    .line 208
+    .line 215
     invoke-virtual/range {v0 .. v5}, Lcom/miui/home/launcher/DragController;->autoDrag([Landroid/view/View;[Lcom/miui/home/launcher/DragSource;III)V
 
-    .line 209
+    .line 216
     invoke-virtual {p0, p3}, Lcom/miui/home/launcher/DragController;->autoDrop(Lcom/miui/home/launcher/DropTarget;)V
 
     return-void
@@ -3950,7 +4111,7 @@
 
     return-void
 
-    .line 204
+    .line 211
     :cond_0
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/DragController;->getViewsFromInfos([Lcom/miui/home/launcher/ShortcutInfo;)[Lcom/miui/home/launcher/ShortcutIcon;
 
@@ -3984,40 +4145,28 @@
 
     move/from16 v2, p5
 
-    .line 272
+    .line 279
     invoke-direct {p0, p1, p4, v2}, Lcom/miui/home/launcher/DragController;->createDrawableHolder(Landroid/graphics/drawable/Drawable;II)Landroid/view/View;
 
     move-result-object v0
 
     move-object v1, p3
 
-    .line 273
+    .line 280
     invoke-virtual {v0, p3}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    .line 274
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/DragController;->createOutline(Landroid/view/View;F)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_0
-
-    return v2
-
-    :cond_0
     const/4 v1, 0x1
 
-    .line 278
-    new-array v3, v1, [Landroid/view/View;
+    .line 281
+    new-array v2, v1, [Landroid/view/View;
 
-    aput-object v0, v3, v2
+    const/4 v3, 0x0
+
+    aput-object v0, v2, v3
 
     new-array v4, v1, [Lcom/miui/home/launcher/DragSource;
 
-    aput-object p7, v4, v2
+    aput-object p7, v4, v3
 
     const/4 v6, 0x1
 
@@ -4029,7 +4178,7 @@
 
     move-object v0, p0
 
-    move-object v1, v3
+    move-object v1, v2
 
     move v2, p2
 
@@ -4049,7 +4198,7 @@
 
     const/4 v0, 0x1
 
-    .line 282
+    .line 285
     new-array v2, v0, [Landroid/view/View;
 
     const/4 v1, 0x0
@@ -4088,7 +4237,7 @@
 
     const/4 v0, 0x1
 
-    .line 287
+    .line 290
     new-array v5, v0, [Lcom/miui/home/launcher/DragSource;
 
     const/4 v0, 0x0
@@ -4123,143 +4272,125 @@
 .method public startDrag([Landroid/view/View;ZF[Lcom/miui/home/launcher/DragSource;IIZIF)Z
     .locals 24
 
-    move-object/from16 v8, p0
+    move-object/from16 v7, p0
 
-    move-object/from16 v9, p1
+    move-object/from16 v8, p1
 
-    move-object/from16 v10, p4
+    move-object/from16 v9, p4
 
-    move/from16 v11, p5
+    move/from16 v10, p5
 
-    move/from16 v12, p7
+    move/from16 v11, p7
 
-    .line 300
-    iget-boolean v0, v8, Lcom/miui/home/launcher/DragController;->mDragging:Z
+    .line 303
+    iget-boolean v0, v7, Lcom/miui/home/launcher/DragController;->mDragging:Z
 
-    const/4 v13, 0x0
+    const/4 v12, 0x0
 
-    if-nez v0, :cond_e
+    if-nez v0, :cond_d
 
-    array-length v0, v9
+    array-length v0, v8
 
     if-gtz v0, :cond_0
 
     goto/16 :goto_6
 
     :cond_0
-    const/4 v14, 0x1
+    const/4 v13, 0x1
 
-    if-eqz v10, :cond_1
+    if-eqz v9, :cond_1
 
-    .line 302
-    array-length v0, v10
+    .line 305
+    array-length v0, v9
 
-    if-le v0, v14, :cond_1
+    if-le v0, v13, :cond_1
 
-    array-length v0, v10
+    array-length v0, v9
 
-    array-length v1, v9
+    array-length v1, v8
 
     if-eq v0, v1, :cond_1
 
-    return v13
+    return v12
 
-    .line 306
+    .line 309
     :cond_1
-    iget-object v0, v8, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    iget-object v0, v7, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
 
     move-result-object v0
 
-    const/4 v15, 0x0
+    const/4 v14, 0x0
 
-    invoke-virtual {v0, v15}, Lcom/miui/home/launcher/DragLayer;->setClipForDragging(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, v14}, Lcom/miui/home/launcher/DragLayer;->setClipForDragging(Landroid/graphics/Rect;)V
 
     const/4 v0, 0x4
 
-    if-eq v11, v0, :cond_3
-
-    .line 314
-    iget-object v0, v8, Lcom/miui/home/launcher/DragController;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
-
-    if-nez v0, :cond_2
+    if-eq v10, v0, :cond_2
 
     .line 315
-    iget-object v0, v8, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    const-string v1, "input_method"
-
-    .line 316
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
-
-    iput-object v0, v8, Lcom/miui/home/launcher/DragController;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
-
-    .line 318
-    :cond_2
-    iget-object v0, v8, Lcom/miui/home/launcher/DragController;->mInputMethodManager:Landroid/view/inputmethod/InputMethodManager;
-
-    aget-object v1, v9, v13
+    aget-object v1, v8, v12
 
     invoke-virtual {v1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, v13}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/util/UiThreadHelper;->hideKeyboardAsync(Landroid/content/Context;Landroid/os/IBinder;)V
 
-    .line 323
-    :cond_3
-    array-length v0, v9
+    .line 320
+    :cond_2
+    array-length v0, v8
 
-    new-array v7, v0, [Lcom/miui/home/launcher/DragView;
+    new-array v15, v0, [Lcom/miui/home/launcher/DragView;
 
-    .line 324
-    array-length v0, v9
+    .line 321
+    array-length v0, v8
 
-    sub-int/2addr v0, v14
+    sub-int/2addr v0, v13
 
     move/from16 v16, v0
 
     :goto_0
-    if-ltz v16, :cond_9
+    if-ltz v16, :cond_8
 
-    .line 325
-    iget-object v0, v8, Lcom/miui/home/launcher/DragController;->mCoordinatesTemp:[I
+    .line 322
+    iget-object v0, v7, Lcom/miui/home/launcher/DragController;->mCoordinatesTemp:[I
 
-    .line 326
-    iget-object v1, v8, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    .line 323
+    iget-object v1, v7, Lcom/miui/home/launcher/DragController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
 
     move-result-object v1
 
-    aget-object v2, v9, v16
+    aget-object v2, v8, v16
 
-    invoke-virtual {v1, v2, v0, v14}, Lcom/miui/home/launcher/DragLayer;->getLocationInDragLayer(Landroid/view/View;[IZ)F
+    invoke-virtual {v1, v2, v0, v13}, Lcom/miui/home/launcher/DragLayer;->getLocationInDragLayer(Landroid/view/View;[IZ)F
 
     move-result v1
 
-    .line 327
-    aget v6, v0, v13
+    .line 324
+    aget v6, v0, v12
 
-    .line 328
-    aget v5, v0, v14
+    .line 325
+    aget v5, v0, v13
 
     const/high16 v0, -0x40800000    # -1.0f
 
     cmpl-float v0, p9, v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_3
 
     move/from16 v18, v1
 
     goto :goto_1
 
-    :cond_4
+    :cond_3
     move/from16 v18, p9
 
     :goto_1
@@ -4267,16 +4398,16 @@
 
     cmpl-float v0, p3, v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_4
 
-    .line 333
+    .line 330
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDragIconScaleRatio()F
 
     move-result v0
 
     mul-float v0, v0, v18
 
-    aget-object v1, v9, v16
+    aget-object v1, v8, v16
 
     invoke-virtual {v1}, Landroid/view/View;->getScaleX()F
 
@@ -4288,77 +4419,75 @@
 
     goto :goto_2
 
-    :cond_5
+    :cond_4
     move/from16 v19, p3
 
     :goto_2
-    if-eqz v12, :cond_6
+    if-eqz v11, :cond_5
+
+    .line 333
+    iput v6, v7, Lcom/miui/home/launcher/DragController;->mMotionDownX:I
+
+    .line 334
+    iput v5, v7, Lcom/miui/home/launcher/DragController;->mMotionDownY:I
 
     .line 336
-    iput v6, v8, Lcom/miui/home/launcher/DragController;->mMotionDownX:I
+    :cond_5
+    aget-object v1, v8, v16
 
-    .line 337
-    iput v5, v8, Lcom/miui/home/launcher/DragController;->mMotionDownY:I
+    add-int v3, v16, p8
 
-    .line 340
-    :cond_6
-    aget-object v1, v9, v16
+    array-length v4, v8
 
-    add-int v4, v16, p8
+    .line 338
+    array-length v0, v9
 
-    array-length v3, v9
+    if-ne v0, v13, :cond_6
 
-    array-length v0, v10
-
-    if-ne v0, v14, :cond_7
-
-    aget-object v0, v10, v13
+    aget-object v0, v9, v12
 
     goto :goto_3
 
-    :cond_7
-    aget-object v0, v10, v16
+    :cond_6
+    aget-object v0, v9, v16
 
     :goto_3
     move-object/from16 v17, v0
 
     move-object/from16 v0, p0
 
-    move/from16 v2, p2
+    move/from16 v2, p5
 
-    move/from16 v20, v3
+    move/from16 v20, v4
 
-    move/from16 v3, p5
+    move/from16 v4, p7
 
-    move v14, v5
+    move v13, v5
 
-    move/from16 v5, p7
+    move/from16 v5, v20
 
-    move v15, v6
+    move v14, v6
 
-    move/from16 v6, v20
+    move-object/from16 v6, v17
 
-    move-object v13, v7
-
-    move-object/from16 v7, v17
-
-    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/DragController;->createDragView(Landroid/view/View;ZIIZILcom/miui/home/launcher/DragSource;)Lcom/miui/home/launcher/DragView;
+    .line 336
+    invoke-direct/range {v0 .. v6}, Lcom/miui/home/launcher/DragController;->createDragView(Landroid/view/View;IIZILcom/miui/home/launcher/DragSource;)Lcom/miui/home/launcher/DragView;
 
     move-result-object v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_7
 
-    .line 344
-    iget v1, v8, Lcom/miui/home/launcher/DragController;->mMotionDownX:I
+    .line 340
+    iget v1, v7, Lcom/miui/home/launcher/DragController;->mMotionDownX:I
 
-    iget v2, v8, Lcom/miui/home/launcher/DragController;->mMotionDownY:I
+    iget v2, v7, Lcom/miui/home/launcher/DragController;->mMotionDownY:I
 
-    invoke-virtual {v0, v1, v2, v15, v14}, Lcom/miui/home/launcher/DragView;->initRegistrationOffset(IIII)V
+    invoke-virtual {v0, v1, v2, v14, v13}, Lcom/miui/home/launcher/DragView;->initRegistrationOffset(IIII)V
 
-    .line 345
-    iget v1, v8, Lcom/miui/home/launcher/DragController;->mMotionDownX:I
+    .line 341
+    iget v1, v7, Lcom/miui/home/launcher/DragController;->mMotionDownX:I
 
-    iget v2, v8, Lcom/miui/home/launcher/DragController;->mMotionDownY:I
+    iget v2, v7, Lcom/miui/home/launcher/DragController;->mMotionDownY:I
 
     move-object/from16 v17, v0
 
@@ -4366,83 +4495,82 @@
 
     move/from16 v21, v2
 
-    move/from16 v22, v15
+    move/from16 v22, v14
 
-    move/from16 v23, v14
+    move/from16 v23, v13
 
     invoke-virtual/range {v17 .. v23}, Lcom/miui/home/launcher/DragView;->showWithAnim(FFIIII)V
 
-    .line 347
-    :cond_8
-    aput-object v0, v13, v16
+    .line 343
+    :cond_7
+    aput-object v0, v15, v16
+
+    .line 344
+    aget-object v1, v8, v16
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    invoke-static {v1, v2, v0}, Lcom/miui/home/launcher/DragController;->createOutlineAsync(Landroid/view/View;FLcom/miui/home/launcher/DragView;)V
 
     add-int/lit8 v16, v16, -0x1
 
-    move-object v7, v13
+    const/4 v13, 0x1
 
-    const/4 v13, 0x0
-
-    const/4 v14, 0x1
-
-    const/4 v15, 0x0
+    const/4 v14, 0x0
 
     goto/16 :goto_0
 
-    :cond_9
-    move-object v13, v7
-
-    .line 350
+    .line 347
+    :cond_8
     new-instance v0, Lcom/miui/home/launcher/DragObject;
 
-    invoke-direct {v0, v13}, Lcom/miui/home/launcher/DragObject;-><init>([Lcom/miui/home/launcher/DragView;)V
+    invoke-direct {v0, v15}, Lcom/miui/home/launcher/DragObject;-><init>([Lcom/miui/home/launcher/DragView;)V
 
-    iput-object v0, v8, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
+    iput-object v0, v7, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    .line 351
-    iget-object v0, v8, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
+    .line 348
+    iget-object v0, v7, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    iget-object v1, v8, Lcom/miui/home/launcher/DragController;->mDropAnimationListeners:Ljava/util/ArrayList;
+    iget-object v1, v7, Lcom/miui/home/launcher/DragController;->mDropAnimationListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DragObject;->setDragAnimationListener(Ljava/util/ArrayList;)V
 
-    .line 352
-    iget-object v0, v8, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
+    .line 349
+    iget-object v0, v7, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    const/4 v1, 0x0
+    aget-object v1, v15, v12
 
-    aget-object v2, v13, v1
+    invoke-virtual {v1}, Lcom/miui/home/launcher/DragView;->getRegistrationX()I
 
-    invoke-virtual {v2}, Lcom/miui/home/launcher/DragView;->getRegistrationX()I
+    move-result v1
 
-    move-result v2
+    iput v1, v0, Lcom/miui/home/launcher/DragObject;->xOffset:I
 
-    iput v2, v0, Lcom/miui/home/launcher/DragObject;->xOffset:I
+    .line 350
+    iget-object v0, v7, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    .line 353
-    iget-object v0, v8, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
+    aget-object v1, v15, v12
 
-    aget-object v2, v13, v1
-
-    invoke-virtual {v2}, Lcom/miui/home/launcher/DragView;->getRegistrationY()I
+    invoke-virtual {v1}, Lcom/miui/home/launcher/DragView;->getRegistrationY()I
 
     move-result v1
 
     iput v1, v0, Lcom/miui/home/launcher/DragObject;->yOffset:I
 
-    .line 354
-    iget-object v0, v8, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
+    .line 351
+    iget-object v0, v7, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    iput v11, v0, Lcom/miui/home/launcher/DragObject;->dragAction:I
+    iput v10, v0, Lcom/miui/home/launcher/DragObject;->dragAction:I
 
     move/from16 v1, p6
 
-    .line 355
+    .line 352
     iput v1, v0, Lcom/miui/home/launcher/DragObject;->dropAction:I
 
-    .line 356
-    invoke-virtual {v0, v12}, Lcom/miui/home/launcher/DragObject;->setIsAutoDraged(Z)V
+    .line 353
+    invoke-virtual {v0, v11}, Lcom/miui/home/launcher/DragObject;->setIsAutoDraged(Z)V
 
-    .line 357
+    .line 354
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -4453,9 +4581,9 @@
 
     const-string v1, "action_drag_on"
 
-    iget-object v2, v8, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
+    iget-object v2, v7, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    .line 358
+    .line 355
     invoke-virtual {v2}, Lcom/miui/home/launcher/DragObject;->getDragView()Lcom/miui/home/launcher/DragView;
 
     move-result-object v2
@@ -4470,13 +4598,13 @@
 
     const-string v1, "action_drag_on"
 
-    .line 359
+    .line 356
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-nez v12, :cond_b
+    if-nez v11, :cond_a
 
-    .line 361
-    iget-object v0, v8, Lcom/miui/home/launcher/DragController;->mListeners:Ljava/util/ArrayList;
+    .line 358
+    iget-object v0, v7, Lcom/miui/home/launcher/DragController;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -4487,7 +4615,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_9
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -4495,86 +4623,82 @@
 
     check-cast v1, Lcom/miui/home/launcher/DragController$DragListener;
 
-    .line 362
-    iget-object v2, v8, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
+    .line 359
+    iget-object v2, v7, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    invoke-interface {v1, v10, v2}, Lcom/miui/home/launcher/DragController$DragListener;->onDragStart([Lcom/miui/home/launcher/DragSource;Lcom/miui/home/launcher/DragObject;)V
+    invoke-interface {v1, v9, v2}, Lcom/miui/home/launcher/DragController$DragListener;->onDragStart([Lcom/miui/home/launcher/DragSource;Lcom/miui/home/launcher/DragObject;)V
 
     goto :goto_4
 
-    .line 364
-    :cond_a
+    .line 361
+    :cond_9
     invoke-static {}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->getInstance()Lcom/miui/home/launcher/common/HapticFeedbackCompat;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    aget-object v1, v15, v12
 
-    aget-object v2, v13, v1
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->performPickUp(Landroid/view/View;)V
 
-    invoke-virtual {v0, v2}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->performPickUp(Landroid/view/View;)V
-
-    .line 366
-    :cond_b
+    .line 363
+    :cond_a
     new-instance v0, Lcom/miui/home/launcher/DragController$1;
 
-    invoke-direct {v0, v8}, Lcom/miui/home/launcher/DragController$1;-><init>(Lcom/miui/home/launcher/DragController;)V
+    invoke-direct {v0, v7}, Lcom/miui/home/launcher/DragController$1;-><init>(Lcom/miui/home/launcher/DragController;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->announceForAccessibility(Ljava/util/function/Supplier;)V
 
-    .line 377
-    iget v0, v8, Lcom/miui/home/launcher/DragController;->mMotionDownX:I
+    .line 374
+    iget v0, v7, Lcom/miui/home/launcher/DragController;->mMotionDownX:I
 
-    iget v1, v8, Lcom/miui/home/launcher/DragController;->mMotionDownY:I
+    iget v1, v7, Lcom/miui/home/launcher/DragController;->mMotionDownY:I
 
-    iget-object v2, v8, Lcom/miui/home/launcher/DragController;->mCoordinatesTemp:[I
+    iget-object v2, v7, Lcom/miui/home/launcher/DragController;->mCoordinatesTemp:[I
 
-    invoke-direct {v8, v0, v1, v2}, Lcom/miui/home/launcher/DragController;->findDropTarget(II[I)Lcom/miui/home/launcher/DropTarget;
+    invoke-direct {v7, v0, v1, v2}, Lcom/miui/home/launcher/DragController;->findDropTarget(II[I)Lcom/miui/home/launcher/DropTarget;
 
     move-result-object v0
 
-    iput-object v0, v8, Lcom/miui/home/launcher/DragController;->mDropTargetWhenDragStarted:Lcom/miui/home/launcher/DropTarget;
+    iput-object v0, v7, Lcom/miui/home/launcher/DragController;->mDropTargetWhenDragStarted:Lcom/miui/home/launcher/DropTarget;
 
-    if-nez v12, :cond_d
+    if-nez v11, :cond_c
 
-    .line 379
-    iget-object v0, v8, Lcom/miui/home/launcher/DragController;->mDropTargetWhenDragStarted:Lcom/miui/home/launcher/DropTarget;
+    .line 376
+    iget-object v0, v7, Lcom/miui/home/launcher/DragController;->mDropTargetWhenDragStarted:Lcom/miui/home/launcher/DropTarget;
 
     instance-of v1, v0, Lcom/miui/home/launcher/HotSeats;
 
-    if-nez v1, :cond_c
+    if-nez v1, :cond_b
 
     instance-of v0, v0, Lcom/miui/home/launcher/Workspace;
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_c
 
-    .line 381
-    :cond_c
-    iget v0, v8, Lcom/miui/home/launcher/DragController;->mMotionDownX:I
+    .line 378
+    :cond_b
+    iget v0, v7, Lcom/miui/home/launcher/DragController;->mMotionDownX:I
 
-    iget v1, v8, Lcom/miui/home/launcher/DragController;->mMotionDownY:I
+    iget v1, v7, Lcom/miui/home/launcher/DragController;->mMotionDownY:I
 
     const/4 v2, 0x0
 
-    invoke-direct {v8, v0, v1, v2}, Lcom/miui/home/launcher/DragController;->handleMoveEvent(IILandroid/view/MotionEvent;)V
+    invoke-direct {v7, v0, v1, v2}, Lcom/miui/home/launcher/DragController;->handleMoveEvent(IILandroid/view/MotionEvent;)V
 
     const/4 v0, 0x1
 
     goto :goto_5
 
-    :cond_d
+    :cond_c
     const/4 v0, 0x1
 
-    .line 384
+    .line 380
     :goto_5
-    iput-boolean v0, v8, Lcom/miui/home/launcher/DragController;->mDragging:Z
+    iput-boolean v0, v7, Lcom/miui/home/launcher/DragController;->mDragging:Z
 
-    .line 385
-    iget-object v1, v8, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
+    .line 381
+    iget-object v1, v7, Lcom/miui/home/launcher/DragController;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    const/4 v2, 0x0
-
-    aget-object v2, v13, v2
+    aget-object v2, v15, v12
 
     invoke-static {v2}, Lcom/miui/home/launcher/DragViewStateAnnouncer;->createFor(Landroid/view/View;)Lcom/miui/home/launcher/DragViewStateAnnouncer;
 
@@ -4582,7 +4706,7 @@
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/DragObject;->setStateAnnouncer(Lcom/miui/home/launcher/DragViewStateAnnouncer;)V
 
-    .line 386
+    .line 382
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v1
@@ -4595,11 +4719,9 @@
 
     return v0
 
-    :cond_e
+    :cond_d
     :goto_6
-    move v2, v13
-
-    return v2
+    return v12
 .end method
 
 .method public startDrag([Lcom/miui/home/launcher/ShortcutInfo;ZF[Lcom/miui/home/launcher/DragSource;IIZ)Z
@@ -4611,7 +4733,7 @@
 
     return v0
 
-    .line 295
+    .line 298
     :cond_0
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/DragController;->getViewsFromInfos([Lcom/miui/home/launcher/ShortcutInfo;)[Lcom/miui/home/launcher/ShortcutIcon;
 

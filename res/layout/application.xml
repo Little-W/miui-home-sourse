@@ -26,6 +26,7 @@
             <com.miui.home.launcher.LauncherIconImageView
                 android:layout_gravity="center|top"
                 android:id="@id/icon_folder_creation_bg"
+                android:visibility="invisible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_folder"
@@ -39,7 +40,7 @@
                 android:scaleType="fitCenter" />
             <ImageView
                 android:id="@id/icon_tile"
-                android:visibility="invisible"
+                android:visibility="gone"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:scaleType="fitCenter" />

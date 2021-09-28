@@ -4,7 +4,7 @@
     android:gravity="center"
     android:layout_gravity="center|right|top"
     android:id="@id/icon_msg"
-    android:visibility="invisible"
+    android:visibility="gone"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:maxWidth="@dimen/icon_message_max_width"

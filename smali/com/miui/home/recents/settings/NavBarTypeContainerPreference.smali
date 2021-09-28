@@ -56,7 +56,7 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    const p1, 0x7f0d008d
+    const p1, 0x7f0d00c6
 
     .line 33
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->setLayoutResource(I)V
@@ -118,7 +118,7 @@
     return-object p0
 .end method
 
-.method static synthetic lambda$showDialog$570()V
+.method static synthetic lambda$showDialog$2()V
     .locals 0
 
     .line 89
@@ -127,7 +127,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$showDialog$571(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;Lcom/miui/home/recents/settings/GestureLearnAlertDialog$DismissStatus;)V
+.method public static synthetic lambda$showDialog$3(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;Lcom/miui/home/recents/settings/GestureLearnAlertDialog$DismissStatus;)V
     .locals 2
 
     const/4 v0, 0x1
@@ -154,7 +154,7 @@
     return-void
 .end method
 
-.method public static synthetic lambda$updateFullScreenViewAnim$568(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;Ljava/lang/Void;)Ljava/lang/Boolean;
+.method public static synthetic lambda$updateFullScreenViewAnim$0(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 0
 
     .line 76
@@ -173,7 +173,7 @@
     return-object p1
 .end method
 
-.method public static synthetic lambda$updateFullScreenViewAnim$569(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;Ljava/lang/Boolean;)V
+.method public static synthetic lambda$updateFullScreenViewAnim$1(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;Ljava/lang/Boolean;)V
     .locals 1
 
     .line 78
@@ -317,18 +317,18 @@
 
     invoke-direct {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f1001a9
+    const v1, 0x7f100281
 
     .line 87
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setTitle(I)V
 
-    const v1, 0x7f1001a8
+    const v1, 0x7f100280
 
     .line 88
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setMessage(I)V
 
     .line 89
-    sget-object v1, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$cWxx-5Xb_GfM3sRaaORVE6Fe2cw;->INSTANCE:Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$cWxx-5Xb_GfM3sRaaORVE6Fe2cw;
+    sget-object v1, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$5n5xfecdzM7CK4Ytf2DSycQJqrY;->INSTANCE:Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$5n5xfecdzM7CK4Ytf2DSycQJqrY;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setClickPosButtonRunnable(Ljava/lang/Runnable;)V
 
@@ -338,9 +338,9 @@
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setPositiveButtonIntentAction(Ljava/lang/String;)V
 
     .line 91
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$5oZ_YBph92gQl5TsZEqg0Lgv5iU;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$oxDWgWVRYBlf-6BoRUQev88bAFY;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$5oZ_YBph92gQl5TsZEqg0Lgv5iU;-><init>(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$oxDWgWVRYBlf-6BoRUQev88bAFY;-><init>(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setClickDialogButtonConsume(Ljava/util/function/Consumer;)V
 
@@ -354,13 +354,13 @@
     .locals 3
 
     .line 76
-    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$kNmDXES9AtIVWkpQyHl-dz6P-HQ;
+    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$6bJyeLXyWQesLQ1Bjq0wsSlpftc;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$kNmDXES9AtIVWkpQyHl-dz6P-HQ;-><init>(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$6bJyeLXyWQesLQ1Bjq0wsSlpftc;-><init>(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
 
-    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$bqVCy8nwyxJ90PmOi90Ly28gclc;
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$GH2dJW4oJTROsOX5X27N72tGpso;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$bqVCy8nwyxJ90PmOi90Ly28gclc;-><init>(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$GH2dJW4oJTROsOX5X27N72tGpso;-><init>(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
 
     const/4 v2, 0x0
 
@@ -407,7 +407,7 @@
     .line 40
     iget-object p1, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
-    const v0, 0x7f0a01fd
+    const v0, 0x7f0a0250
 
     .line 41
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -432,7 +432,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v0, 0x7f0a00d7
+    const v0, 0x7f0a00fb
 
     .line 45
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -443,7 +443,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mFullScreenGestureView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
-    const v0, 0x7f0a00d8
+    const v0, 0x7f0a00fc
 
     .line 46
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

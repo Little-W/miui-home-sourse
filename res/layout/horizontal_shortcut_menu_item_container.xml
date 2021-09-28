@@ -23,6 +23,7 @@
         android:maxLines="2"
         android:layout_weight="1.0"
         android:fontFamily="miui-bold"
+        android:textDirection="locale"
         android:textAlignment="viewStart"
         android:layout_marginEnd="@dimen/horizontal_shortcut_menu_item_text_marginEnd" />
 </com.miui.home.launcher.shortcuts.IconAndTitleShortcutMenuItemContainer>

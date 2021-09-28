@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AlertDialog.Theme.DayNight" parent="@style/AlertDialog.Theme.Dark" />
+    <style name="BaseTheme" parent="@style/Theme.Dark" />
+    <style name="Miuix.DropDownPopupList.DayNight" parent="@style/Miuix.DropDownPopupList.Dark" />
+    <style name="Miuix.DropdownItem.DayNight" parent="@style/Miuix.DropdownItem.Dark" />
+    <style name="Miuix.GuidePopupText.DayNight" parent="@style/Miuix.GuidePopupText.Dark" />
+    <style name="PopupMenu.Style.DayNight" parent="@style/PopupMenu.Style.Dark" />
+    <style name="Theme.AppCompat.DayNight" parent="@style/Theme.AppCompat" />
+    <style name="Theme.AppCompat.DayNight.DarkActionBar" parent="@style/Theme.AppCompat" />
+    <style name="Theme.AppCompat.DayNight.Dialog" parent="@style/Theme.AppCompat.Dialog" />
+    <style name="Theme.AppCompat.DayNight.Dialog.Alert" parent="@style/Theme.AppCompat.Dialog.Alert" />
+    <style name="Theme.AppCompat.DayNight.Dialog.MinWidth" parent="@style/Theme.AppCompat.Dialog.MinWidth" />
+    <style name="Theme.AppCompat.DayNight.DialogWhenLarge" parent="@style/Theme.AppCompat.DialogWhenLarge" />
+    <style name="Theme.AppCompat.DayNight.NoActionBar" parent="@style/Theme.AppCompat.NoActionBar" />
+    <style name="Theme.DayNight" parent="@style/Theme.Dark" />
+    <style name="Theme.DayNight.Dialog" parent="@style/Theme.Dark.Dialog" />
+    <style name="Theme.DayNight.Dialog.Alert" parent="@style/Theme.Dark.Dialog.Alert" />
+    <style name="Theme.DayNight.Dialog.Edit" parent="@style/Theme.Dark.Dialog.Edit" />
+    <style name="Theme.DayNight.Dialog.Edit.Default" parent="@style/Theme.Dark.Dialog.Edit.Default" />
+    <style name="Theme.DayNight.Dialog.FixedSize" parent="@style/Theme.Dark.Dialog.FixedSize" />
+    <style name="Theme.DayNight.Dialog.FixedSize.Small" parent="@style/Theme.Dark.Dialog.FixedSize.Small" />
+    <style name="Theme.DayNight.Dialog.NoTitle" parent="@style/Theme.Dark.Dialog.NoTitle" />
+    <style name="Theme.DayNight.Navigation" parent="@style/Theme.Dark.Navigation" />
+    <style name="Theme.DayNight.NoTitle" parent="@style/Theme.Dark.NoTitle" />
+    <style name="Theme.DayNight.Settings" parent="@style/Theme.Dark.Settings" />
+    <style name="Theme.DayNight.Settings.NoTitle" parent="@style/Theme.Dark.Settings.NoTitle" />
+    <style name="Theme.PreferenceOverlay.DayNight" parent="@style/Theme.PreferenceOverlay.Dark" />
+    <style name="ThemeOverlay.AppCompat.DayNight" parent="@style/ThemeOverlay.AppCompat.Dark" />
+    <style name="Widget.AlphabetIndexer.DayNight" parent="@style/Widget.AlphabetIndexer.Dark" />
+    <style name="Widget.AlphabetIndexer.Starred.DayNight" parent="@style/Widget.AlphabetIndexer.Dark.Starred" />
+    <style name="Widget.ArrowPopupView.DayNight" parent="@style/Widget.ArrowPopupView.Dark" />
+    <style name="Widget.EditText.DayNight" parent="@style/Widget.EditText.Dark" />
+    <style name="Widget.FilterSortTabView.DayNight" parent="@style/Widget.FilterSortTabView.Dark" />
+    <style name="Widget.FilterSortView.DayNight" parent="@style/Widget.FilterSortView.Dark" />
+    <style name="Widget.GuidePopupView.DayNight" parent="@style/Widget.GuidePopupView.Dark" />
+    <style name="Widget.MessageView.Error.DayNight" parent="@style/Widget.MessageView.Error.Dark" />
+    <style name="Widget.MessageView.Guide.DayNight" parent="@style/Widget.MessageView.Guide.Dark" />
+    <style name="Widget.MessageView.Warning.DayNight" parent="@style/Widget.MessageView.Warning.Dark" />
+    <style name="Widget.NumberPicker.DayNight" parent="@style/Widget.NumberPicker.Dark" />
+    <style name="Widget.ProgressBar.Horizontal.DayNight" parent="@style/Widget.ProgressBar.Horizontal.Dark" />
+    <style name="Widget.SeekBar.DayNight" parent="@style/Widget.SeekBar.Dark" />
+    <style name="Widget.SlidingButton.DayNight" parent="@style/Widget.SlidingButton.Dark" />
+    <style name="Widget.StateEditText.DayNight" parent="@style/Widget.StateEditText.Dark" />
+</resources>

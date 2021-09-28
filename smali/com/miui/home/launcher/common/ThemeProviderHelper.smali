@@ -254,6 +254,7 @@
     .line 64
     invoke-virtual {p0}, Landroid/content/ContentProviderClient;->close()V
 
+    .line 67
     :cond_9
     throw p1
 

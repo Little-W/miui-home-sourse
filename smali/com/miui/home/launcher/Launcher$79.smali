@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->changeAlphaScale(FFIIIIZ)V
+    value = Lcom/miui/home/launcher/Launcher;->addPreinstallAppToWorkspace(Lcom/miui/home/launcher/RemoteShortcutInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,33 +20,17 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$alpha:F
-
-.field final synthetic val$iconPivotX:I
-
-.field final synthetic val$iconPivotY:I
-
-.field final synthetic val$scale:F
-
-.field final synthetic val$visible:Z
+.field final synthetic val$info:Lcom/miui/home/launcher/RemoteShortcutInfo;
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;FFIIZ)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/RemoteShortcutInfo;)V
     .locals 0
 
-    .line 8107
+    .line 7807
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$79;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput p2, p0, Lcom/miui/home/launcher/Launcher$79;->val$alpha:F
-
-    iput p3, p0, Lcom/miui/home/launcher/Launcher$79;->val$scale:F
-
-    iput p4, p0, Lcom/miui/home/launcher/Launcher$79;->val$iconPivotX:I
-
-    iput p5, p0, Lcom/miui/home/launcher/Launcher$79;->val$iconPivotY:I
-
-    iput-boolean p6, p0, Lcom/miui/home/launcher/Launcher$79;->val$visible:Z
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$79;->val$info:Lcom/miui/home/launcher/RemoteShortcutInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,29 +40,54 @@
 
 # virtual methods
 .method public run()V
-    .locals 8
+    .locals 11
 
-    const-string v0, "Launcher"
+    .line 7810
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$79;->val$info:Lcom/miui/home/launcher/RemoteShortcutInfo;
 
-    const-string v1, "change shortcutMenuLayer alpha and scale by FsCallback"
+    const-wide/16 v1, -0x64
 
-    .line 8109
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    iput-wide v1, v0, Lcom/miui/home/launcher/RemoteShortcutInfo;->container:J
 
-    .line 8110
+    .line 7811
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$79;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v1, v0}, Lcom/miui/home/launcher/Launcher;->access$9800(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/RemoteShortcutInfo;)Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 7813
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$79;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iget v3, p0, Lcom/miui/home/launcher/Launcher$79;->val$alpha:F
+    iget-wide v4, v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->screenId:J
 
-    iget v4, p0, Lcom/miui/home/launcher/Launcher$79;->val$scale:F
+    iget-wide v6, v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->container:J
 
-    iget v5, p0, Lcom/miui/home/launcher/Launcher$79;->val$iconPivotX:I
+    iget v8, v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->cellX:I
 
-    iget v6, p0, Lcom/miui/home/launcher/Launcher$79;->val$iconPivotY:I
+    iget v9, v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->cellY:I
 
-    iget-boolean v7, p0, Lcom/miui/home/launcher/Launcher$79;->val$visible:Z
+    const/4 v10, 0x0
 
-    invoke-virtual/range {v2 .. v7}, Lcom/miui/home/launcher/Launcher;->changeShortcutMenuLayerAlphaScale(FFIIZ)V
+    invoke-virtual/range {v2 .. v10}, Lcom/miui/home/launcher/Launcher;->addItemToWorkspace(Lcom/miui/home/launcher/ItemInfo;JJIILjava/lang/Runnable;)V
 
+    .line 7815
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$79;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$500(Lcom/miui/home/launcher/Launcher;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/miui/home/launcher/Launcher$79$1;
+
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/Launcher$79$1;-><init>(Lcom/miui/home/launcher/Launcher$79;)V
+
+    const-wide/16 v2, 0x64
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_0
     return-void
 .end method

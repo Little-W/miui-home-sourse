@@ -157,13 +157,7 @@
     move-result v0
 
     .line 616
-    iget-object v2, p0, Lcom/miui/home/launcher/FolderCling$3;->this$0:Lcom/miui/home/launcher/FolderCling;
-
-    invoke-static {v2}, Lcom/miui/home/launcher/FolderCling;->access$400(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Launcher;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
     move-result v2
 
@@ -209,9 +203,11 @@
     :cond_5
     const/4 v1, 0x5
 
+    .line 625
     :goto_3
     invoke-direct {v0, v1}, Lcom/miui/home/launcher/common/messages/FolderStateChangedMessage;-><init>(I)V
 
+    .line 624
     invoke-virtual {p1, v0}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
     :cond_6

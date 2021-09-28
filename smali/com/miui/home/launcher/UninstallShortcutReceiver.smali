@@ -68,12 +68,12 @@
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 40
-    invoke-static {p1}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {p1}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/Application;
 
     move-result-object v4
 
     .line 41
-    invoke-virtual {v4}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher()Lcom/miui/home/launcher/Launcher;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
@@ -102,7 +102,7 @@
 
     move-object v7, p1
 
-    invoke-direct/range {v2 .. v7}, Lcom/miui/home/launcher/UninstallShortcutReceiver$1;-><init>(Lcom/miui/home/launcher/UninstallShortcutReceiver;Lcom/miui/home/launcher/LauncherApplication;Lcom/miui/home/launcher/Launcher;Landroid/content/Intent;Landroid/content/Context;)V
+    invoke-direct/range {v2 .. v7}, Lcom/miui/home/launcher/UninstallShortcutReceiver$1;-><init>(Lcom/miui/home/launcher/UninstallShortcutReceiver;Lcom/miui/home/launcher/Application;Lcom/miui/home/launcher/Launcher;Landroid/content/Intent;Landroid/content/Context;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->runOnUiThread(Ljava/lang/Runnable;)V
 

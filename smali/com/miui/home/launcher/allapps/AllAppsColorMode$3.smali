@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x4008
+    accessFlags = 0x4010
     name = null
 .end annotation
 
@@ -31,7 +31,7 @@
 .method public getPreviewBackground(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    const v0, 0x7f0800c1
+    const v0, 0x7f0800e8
 
     .line 68
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -49,7 +49,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f100264
+    const v0, 0x7f100361
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -86,12 +86,10 @@
 
     goto :goto_1
 
-    .line 57
     :cond_1
     :goto_0
     sget-object v0, Lcom/miui/home/launcher/allapps/AllAppsColorMode$3;->DARK:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
-    .line 58
     :goto_1
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 

@@ -20,7 +20,7 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/UninstallShortcutReceiver;
 
-.field final synthetic val$app:Lcom/miui/home/launcher/LauncherApplication;
+.field final synthetic val$app:Lcom/miui/home/launcher/Application;
 
 .field final synthetic val$context:Landroid/content/Context;
 
@@ -30,13 +30,13 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/UninstallShortcutReceiver;Lcom/miui/home/launcher/LauncherApplication;Lcom/miui/home/launcher/Launcher;Landroid/content/Intent;Landroid/content/Context;)V
+.method constructor <init>(Lcom/miui/home/launcher/UninstallShortcutReceiver;Lcom/miui/home/launcher/Application;Lcom/miui/home/launcher/Launcher;Landroid/content/Intent;Landroid/content/Context;)V
     .locals 0
 
     .line 46
     iput-object p1, p0, Lcom/miui/home/launcher/UninstallShortcutReceiver$1;->this$0:Lcom/miui/home/launcher/UninstallShortcutReceiver;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/UninstallShortcutReceiver$1;->val$app:Lcom/miui/home/launcher/LauncherApplication;
+    iput-object p2, p0, Lcom/miui/home/launcher/UninstallShortcutReceiver$1;->val$app:Lcom/miui/home/launcher/Application;
 
     iput-object p3, p0, Lcom/miui/home/launcher/UninstallShortcutReceiver$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
@@ -55,9 +55,9 @@
     .locals 4
 
     .line 49
-    iget-object v0, p0, Lcom/miui/home/launcher/UninstallShortcutReceiver$1;->val$app:Lcom/miui/home/launcher/LauncherApplication;
+    iget-object v0, p0, Lcom/miui/home/launcher/UninstallShortcutReceiver$1;->val$app:Lcom/miui/home/launcher/Application;
 
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getModel()Lcom/miui/home/launcher/LauncherModel;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getModel()Lcom/miui/home/launcher/LauncherModel;
 
     move-result-object v0
 

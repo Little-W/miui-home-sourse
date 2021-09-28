@@ -29,25 +29,25 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;)V
     .locals 0
 
-    .line 206
+    .line 207
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;->this$0:Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 219
-    new-instance p1, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$UpdateCategoryTask$iB8RFLBElCxAAuxTdNl9i5X71pE;
+    .line 220
+    new-instance p1, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$UpdateCategoryTask$DblXTpmj-lYSIEhVLj49bqP0-UM;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$UpdateCategoryTask$iB8RFLBElCxAAuxTdNl9i5X71pE;-><init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$UpdateCategoryTask$DblXTpmj-lYSIEhVLj49bqP0-UM;-><init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;)V
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;->mUpdateCategoryRunnable:Ljava/lang/Runnable;
 
     return-void
 .end method
 
-.method public static synthetic lambda$new$357(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;)V
+.method public static synthetic lambda$new$0(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;)V
     .locals 1
 
-    .line 219
+    .line 220
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;->this$0:Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;
 
     invoke-static {v0}, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->access$000(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;)Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList;
@@ -64,7 +64,7 @@
 .method public init(Lcom/miui/home/launcher/LauncherModel;Lcom/miui/home/launcher/AllAppsList;Lcom/miui/home/launcher/AllCategoryList;Ljava/util/concurrent/Executor;)V
     .locals 0
 
-    .line 211
+    .line 212
     iput-object p4, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;->mUiExecutor:Ljava/util/concurrent/Executor;
 
     return-void
@@ -73,7 +73,7 @@
 .method public run()V
     .locals 2
 
-    .line 216
+    .line 217
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;->mUiExecutor:Ljava/util/concurrent/Executor;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment$UpdateCategoryTask;->mUpdateCategoryRunnable:Ljava/lang/Runnable;

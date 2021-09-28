@@ -11,5 +11,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAllCaps="true"
-        style="@style/TextAppearance.PreferenceCategory" />
+        style="@style/Miuix.AppCompat.TextAppearance.PreferenceCategory" />
 </FrameLayout>

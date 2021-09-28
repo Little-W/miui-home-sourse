@@ -56,12 +56,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f080163
+    const v1, 0x7f08018a
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f080161
+    const v1, 0x7f080188
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -121,18 +121,18 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v1, "getSearchBarRightIcon"
-
-    const-string v2, "rightIcon"
-
     .line 98
-    iget-object v3, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarXiaoaiLayout;
+    invoke-static {}, Lcom/miui/home/launcher/SearchBarStyleData;->getInstance()Lcom/miui/home/launcher/SearchBarStyleData;
 
-    invoke-static {v3}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->access$100(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)Lcom/miui/home/launcher/Launcher;
+    move-result-object v1
 
-    move-result-object v3
+    iget-object v2, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarXiaoaiLayout;
 
-    invoke-static {v1, v2, v3}, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->getDrawableFormProvider(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/SearchBarStyleData;->getRightIconDrawable(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -165,7 +165,7 @@
     .line 106
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarXiaoaiLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->access$200(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->access$100(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)Landroid/widget/ImageView;
 
     move-result-object v0
 

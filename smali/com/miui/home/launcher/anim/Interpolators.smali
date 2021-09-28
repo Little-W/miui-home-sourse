@@ -8,7 +8,7 @@
 
 .field public static final ALPHA_OUT:Landroid/view/animation/Interpolator;
 
-.field public static final BACK_EASE_OUT:Lmiui/view/animation/BackEaseOutInterpolator;
+.field public static final BACK_EASE_OUT:Lmiuix/view/animation/BackEaseOutInterpolator;
 
 .field public static final CUBIC_EASE_OUT:Landroid/view/animation/Interpolator;
 
@@ -71,16 +71,16 @@
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->LINEAR_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
 
     .line 36
-    new-instance v0, Lmiui/view/animation/SineEaseInOutInterpolator;
+    new-instance v0, Lmiuix/view/animation/SineEaseInOutInterpolator;
 
-    invoke-direct {v0}, Lmiui/view/animation/SineEaseInOutInterpolator;-><init>()V
+    invoke-direct {v0}, Lmiuix/view/animation/SineEaseInOutInterpolator;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->EASE_IN_OUT:Landroid/view/animation/Interpolator;
 
     .line 37
-    new-instance v0, Lmiui/view/animation/CubicEaseOutInterpolator;
+    new-instance v0, Lmiuix/view/animation/CubicEaseOutInterpolator;
 
-    invoke-direct {v0}, Lmiui/view/animation/CubicEaseOutInterpolator;-><init>()V
+    invoke-direct {v0}, Lmiuix/view/animation/CubicEaseOutInterpolator;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->CUBIC_EASE_OUT:Landroid/view/animation/Interpolator;
 
@@ -113,11 +113,11 @@
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->SCROLL_CUBIC:Landroid/view/animation/Interpolator;
 
     .line 74
-    new-instance v0, Lmiui/view/animation/BackEaseOutInterpolator;
+    new-instance v0, Lmiuix/view/animation/BackEaseOutInterpolator;
 
-    invoke-direct {v0}, Lmiui/view/animation/BackEaseOutInterpolator;-><init>()V
+    invoke-direct {v0}, Lmiuix/view/animation/BackEaseOutInterpolator;-><init>()V
 
-    sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->BACK_EASE_OUT:Lmiui/view/animation/BackEaseOutInterpolator;
+    sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->BACK_EASE_OUT:Lmiuix/view/animation/BackEaseOutInterpolator;
 
     .line 76
     new-instance v0, Lcom/miui/home/launcher/anim/Interpolators$5;

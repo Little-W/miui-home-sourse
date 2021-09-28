@@ -179,84 +179,84 @@
 
     sput-boolean v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sChangeTaskViewLayerType:Z
 
-    .line 98
+    .line 102
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
-    .line 100
+    .line 104
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "polaris"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 101
+    .line 105
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "dipper"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 102
+    .line 106
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "equuleus"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 103
+    .line 107
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "perseus"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 104
+    .line 108
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "ursa"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 105
+    .line 109
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "monet"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 106
+    .line 110
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "monetin"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 107
+    .line 111
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "vangogh"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 109
+    .line 113
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "cezanne"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 110
+    .line 114
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "atom"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 111
+    .line 115
     sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
 
     const-string v1, "bomb"
@@ -269,17 +269,17 @@
 .method public static dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 0
 
-    .line 162
+    .line 166
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 163
+    .line 167
     sget-object p0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->TAG:Ljava/lang/String;
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string p0, " sDeviceLevel:"
 
-    .line 164
+    .line 168
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     sget p0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevel:I
@@ -288,7 +288,7 @@
 
     const-string p0, " sDeviceLevelTransitionAnimRatio:"
 
-    .line 165
+    .line 169
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     sget p0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevelTransitionAnimRatio:F
@@ -297,14 +297,14 @@
 
     const-string p0, " sChangeTaskViewLayerType:"
 
-    .line 166
+    .line 170
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     sget-boolean p0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sChangeTaskViewLayerType:Z
 
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 167
+    .line 171
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
     return-void
@@ -501,19 +501,19 @@
 .method public static getDeviceLevelTransitionAnimRatio()F
     .locals 1
 
-    .line 128
+    .line 132
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const v0, 0x3f900000    # 1.125f
+    const v0, 0x3f4ccccd    # 0.8f
 
     return v0
 
     :cond_0
-    const/high16 v0, 0x3f900000    # 1.125f
+    const/high16 v0, 0x3f800000    # 1.0f
 
     return v0
 .end method
@@ -521,7 +521,7 @@
 .method public static isHideStatusBarWhenEnterRecents()Z
     .locals 1
 
-    .line 146
+    .line 150
     sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevelFromFolme:I
 
     if-eqz v0, :cond_0
@@ -537,10 +537,31 @@
     return v0
 .end method
 
+.method public static isHighLevelDeviceFromFolme()Z
+    .locals 2
+
+    .line 99
+    sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevelFromFolme:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 .method public static isLowLevelDevice()Z
     .locals 2
 
-    .line 120
+    .line 124
     sget v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sDeviceLevel:I
 
     sget v1, Lcom/miui/home/launcher/common/DeviceLevelUtils;->BUILD_DEVICE_LOW_END:I
@@ -580,7 +601,7 @@
 .method public static isLowLevelOrLiteDevice()Z
     .locals 1
 
-    .line 124
+    .line 128
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelDevice()Z
 
     move-result v0
@@ -628,18 +649,48 @@
 .method public static isUseSimpleAnim()Z
     .locals 2
 
-    .line 115
+    .line 119
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelDeviceFromFolme()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isMiddleLevelDeviceFromFolme()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    sget-object v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->FORCE_USE_COMPLETE_ANIM_DEVICES:Ljava/util/Set;
+
+    sget-object v1, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
+
+    .line 120
+    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
     const/4 v0, 0x0
 
+    :goto_0
     return v0
 .end method
 
-.method static synthetic lambda$showStatusBar$460(Lcom/miui/home/launcher/Launcher;JZ)V
+.method static synthetic lambda$showStatusBar$0(Lcom/miui/home/launcher/Launcher;JZ)V
     .locals 2
 
     if-eqz p0, :cond_1
 
-    .line 151
+    .line 155
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isHideStatusBarWhenEnterRecents()Z
 
     move-result v0
@@ -652,12 +703,12 @@
 
     if-gtz v0, :cond_0
 
-    .line 153
+    .line 157
     invoke-virtual {p0, p3}, Lcom/miui/home/launcher/Launcher;->showStatusBar(Z)V
 
     goto :goto_0
 
-    .line 155
+    .line 159
     :cond_0
     invoke-virtual {p0, p3, p1, p2}, Lcom/miui/home/launcher/Launcher;->showStatusBarDelay(ZJ)V
 
@@ -669,7 +720,7 @@
 .method public static setTaskViewLayerType(Lcom/miui/home/recents/views/TaskView;I)V
     .locals 1
 
-    .line 136
+    .line 140
     sget-boolean v0, Lcom/miui/home/launcher/common/DeviceLevelUtils;->sChangeTaskViewLayerType:Z
 
     if-eqz v0, :cond_0
@@ -678,7 +729,7 @@
 
     const/4 v0, 0x0
 
-    .line 137
+    .line 141
     invoke-virtual {p0, p1, v0}, Lcom/miui/home/recents/views/TaskView;->setLayerType(ILandroid/graphics/Paint;)V
 
     :cond_0
@@ -690,7 +741,7 @@
 
     const-wide/16 v0, 0x0
 
-    .line 142
+    .line 146
     invoke-static {p0, p1, v0, v1}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->showStatusBar(Lcom/miui/home/launcher/Launcher;ZJ)V
 
     return-void
@@ -699,12 +750,12 @@
 .method public static showStatusBar(Lcom/miui/home/launcher/Launcher;ZJ)V
     .locals 2
 
-    .line 150
+    .line 154
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
-    new-instance v1, Lcom/miui/home/launcher/common/-$$Lambda$DeviceLevelUtils$k-mR0JroOFAb0SM5EtoZSWlDmns;
+    new-instance v1, Lcom/miui/home/launcher/common/-$$Lambda$DeviceLevelUtils$PdIV6JUGx1L_P39as5j40-CGgsQ;
 
-    invoke-direct {v1, p0, p2, p3, p1}, Lcom/miui/home/launcher/common/-$$Lambda$DeviceLevelUtils$k-mR0JroOFAb0SM5EtoZSWlDmns;-><init>(Lcom/miui/home/launcher/Launcher;JZ)V
+    invoke-direct {v1, p0, p2, p3, p1}, Lcom/miui/home/launcher/common/-$$Lambda$DeviceLevelUtils$PdIV6JUGx1L_P39as5j40-CGgsQ;-><init>(Lcom/miui/home/launcher/Launcher;JZ)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 

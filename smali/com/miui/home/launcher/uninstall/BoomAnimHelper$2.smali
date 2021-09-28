@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/uninstall/BoomAnimHelper$2;
+.class Lcom/miui/home/launcher/uninstall/BoomAnimHelper$2;
 .super Lmiuix/animation/listener/TransitionListener;
 .source "BoomAnimHelper.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -22,7 +22,7 @@
 .method constructor <init>(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 86
+    .line 83
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$2;->val$animEndRunnable:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -35,7 +35,7 @@
 .method public onCancel(Ljava/lang/Object;)V
     .locals 0
 
-    .line 94
+    .line 91
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$2;->val$animEndRunnable:Ljava/lang/Runnable;
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
@@ -46,7 +46,7 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 0
 
-    .line 89
+    .line 86
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$2;->val$animEndRunnable:Ljava/lang/Runnable;
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V

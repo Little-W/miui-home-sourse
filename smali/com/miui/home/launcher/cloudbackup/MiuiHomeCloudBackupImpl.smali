@@ -193,7 +193,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     .line 104
-    invoke-static {v1}, Lmiui/util/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
+    invoke-static {v1}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
     goto :goto_7
 
@@ -305,11 +305,11 @@
 
     .line 104
     :goto_6
-    invoke-static {v0}, Lmiui/util/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
+    invoke-static {v0}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
     .line 105
     :goto_7
-    invoke-static {v3}, Lmiui/util/IOUtils;->closeQuietly(Ljava/io/OutputStream;)V
+    invoke-static {v3}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/OutputStream;)V
 
     return-void
 
@@ -320,11 +320,12 @@
 
     .line 104
     :goto_8
-    invoke-static {v1}, Lmiui/util/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
+    invoke-static {v1}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/InputStream;)V
 
     .line 105
-    invoke-static {v3}, Lmiui/util/IOUtils;->closeQuietly(Ljava/io/OutputStream;)V
+    invoke-static {v3}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/OutputStream;)V
 
+    .line 106
     throw p0
 .end method
 

@@ -22,12 +22,21 @@
 
 .field public static final ATLEAST_R:Z
 
+.field public static final ATLEAST_S:Z
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 5
+    .line 9
+    invoke-static {}, Lcom/miui/home/library/utils/SdkVersion;->isAtLeastS()Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/miui/home/library/utils/SdkVersion;->ATLEAST_S:Z
+
+    .line 11
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x1
@@ -48,7 +57,7 @@
     :goto_0
     sput-boolean v0, Lcom/miui/home/library/utils/SdkVersion;->ATLEAST_R:Z
 
-    .line 7
+    .line 13
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x1d
@@ -65,7 +74,7 @@
     :goto_1
     sput-boolean v0, Lcom/miui/home/library/utils/SdkVersion;->ATLEAST_Q:Z
 
-    .line 9
+    .line 15
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x1c
@@ -82,7 +91,7 @@
     :goto_2
     sput-boolean v0, Lcom/miui/home/library/utils/SdkVersion;->ATLEAST_P:Z
 
-    .line 11
+    .line 17
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x1b
@@ -99,7 +108,7 @@
     :goto_3
     sput-boolean v0, Lcom/miui/home/library/utils/SdkVersion;->ATLEAST_OREO_MR1:Z
 
-    .line 14
+    .line 20
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x1a
@@ -116,7 +125,7 @@
     :goto_4
     sput-boolean v0, Lcom/miui/home/library/utils/SdkVersion;->ATLEAST_OREO:Z
 
-    .line 17
+    .line 23
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x19
@@ -133,7 +142,7 @@
     :goto_5
     sput-boolean v0, Lcom/miui/home/library/utils/SdkVersion;->ATLEAST_NOUGAT_MR1:Z
 
-    .line 20
+    .line 26
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x18
@@ -150,7 +159,7 @@
     :goto_6
     sput-boolean v0, Lcom/miui/home/library/utils/SdkVersion;->ATLEAST_NOUGAT:Z
 
-    .line 23
+    .line 29
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x17
@@ -167,7 +176,7 @@
     :goto_7
     sput-boolean v0, Lcom/miui/home/library/utils/SdkVersion;->ATLEAST_MARSHMALLOW:Z
 
-    .line 26
+    .line 32
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x16
@@ -183,4 +192,51 @@
     sput-boolean v1, Lcom/miui/home/library/utils/SdkVersion;->ATLEAST_LOLLIPOP_MR1:Z
 
     return-void
+.end method
+
+.method public static isAtLeastS()Z
+    .locals 4
+
+    .line 39
+    sget-object v0, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    if-ne v0, v1, :cond_0
+
+    sget-object v0, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
+
+    .line 40
+    invoke-virtual {v0, v2}, Ljava/lang/String;->charAt(I)C
+
+    move-result v0
+
+    const/16 v3, 0x53
+
+    if-lt v0, v3, :cond_0
+
+    sget-object v0, Landroid/os/Build$VERSION;->CODENAME:Ljava/lang/String;
+
+    .line 41
+    invoke-virtual {v0, v2}, Ljava/lang/String;->charAt(I)C
+
+    move-result v0
+
+    const/16 v3, 0x5a
+
+    if-gt v0, v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v2
+
+    :goto_0
+    return v1
 .end method

@@ -20,7 +20,7 @@
 # static fields
 .field private static hasPrint:I = 0xa
 
-.field private static isCreated:Z
+.field private static isCreated:Z = false
 
 
 # instance fields

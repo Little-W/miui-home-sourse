@@ -99,6 +99,7 @@
     :cond_1
     const-string p1, "_off"
 
+    .line 216
     :goto_1
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -379,6 +380,7 @@
 
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
+    .line 394
     :cond_6
     throw p0
 
@@ -388,6 +390,7 @@
     :catch_1
     if-eqz v1, :cond_7
 
+    .line 392
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     :cond_7
@@ -506,7 +509,7 @@
     return p1
 .end method
 
-.method public static synthetic lambda$onStartJob$347(Lcom/miui/home/launcher/AnalyticalDataCollectorJobService;Landroid/app/job/JobParameters;)V
+.method public static synthetic lambda$onStartJob$0(Lcom/miui/home/launcher/AnalyticalDataCollectorJobService;Landroid/app/job/JobParameters;)V
     .locals 3
 
     .line 76
@@ -515,11 +518,9 @@
     move-result-object v0
 
     .line 77
-    invoke-static {v0}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {v0}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/Application;
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/LauncherApplication;->getLauncher()Lcom/miui/home/launcher/Launcher;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v1
 
@@ -559,10 +560,10 @@
     invoke-direct {p0}, Lcom/miui/home/launcher/AnalyticalDataCollectorJobService;->trackScreenCellsSizeEvent()V
 
     .line 96
-    invoke-direct {p0, v0}, Lcom/miui/home/launcher/AnalyticalDataCollectorJobService;->trackScreenCellsLockedEvent(Landroid/content/Context;)V
+    invoke-direct {p0}, Lcom/miui/home/launcher/AnalyticalDataCollectorJobService;->trackScreenCellsLockedEvent()V
 
     .line 97
-    invoke-direct {p0, v0}, Lcom/miui/home/launcher/AnalyticalDataCollectorJobService;->trackScreenAutoFillEmptyEvent(Landroid/content/Context;)V
+    invoke-direct {p0}, Lcom/miui/home/launcher/AnalyticalDataCollectorJobService;->trackScreenAutoFillEmptyEvent()V
 
     .line 98
     sget-boolean v1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
@@ -1239,8 +1240,8 @@
     return-void
 .end method
 
-.method private trackScreenAutoFillEmptyEvent(Landroid/content/Context;)V
-    .locals 2
+.method private trackScreenAutoFillEmptyEvent()V
+    .locals 3
 
     .line 171
     new-instance v0, Ljava/util/HashMap;
@@ -1250,26 +1251,26 @@
     const-string v1, "is_enable"
 
     .line 172
-    invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->enableAutoFillEmpty(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->enableAutoFillEmpty()Z
 
-    move-result p1
+    move-result v2
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object p1
+    move-result-object v2
 
-    invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p1, "home_screen_auto_fill_empty_state"
+    const-string v1, "home_screen_auto_fill_empty_state"
 
     .line 173
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-static {v1, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method
 
-.method private trackScreenCellsLockedEvent(Landroid/content/Context;)V
-    .locals 2
+.method private trackScreenCellsLockedEvent()V
+    .locals 3
 
     .line 165
     new-instance v0, Ljava/util/HashMap;
@@ -1279,20 +1280,20 @@
     const-string v1, "is_enable"
 
     .line 166
-    invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
-    move-result p1
+    move-result v2
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object p1
+    move-result-object v2
 
-    invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p1, "home_screen_cells_locked"
+    const-string v1, "home_screen_cells_locked"
 
     .line 167
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-static {v1, v0}, Lcom/miui/home/launcher/common/OneTrackInterfaceUtils;->trackEvent(Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method
@@ -1607,9 +1608,9 @@
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 75
-    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$AnalyticalDataCollectorJobService$bw47BRMCgsRLyR5kUSdxcKHSmek;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$AnalyticalDataCollectorJobService$PVsqg1Y7Rft7Vk_jyGcwcJs53r0;
 
-    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$AnalyticalDataCollectorJobService$bw47BRMCgsRLyR5kUSdxcKHSmek;-><init>(Lcom/miui/home/launcher/AnalyticalDataCollectorJobService;Landroid/app/job/JobParameters;)V
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$AnalyticalDataCollectorJobService$PVsqg1Y7Rft7Vk_jyGcwcJs53r0;-><init>(Lcom/miui/home/launcher/AnalyticalDataCollectorJobService;Landroid/app/job/JobParameters;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

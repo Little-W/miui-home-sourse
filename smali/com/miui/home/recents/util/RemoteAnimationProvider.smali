@@ -19,12 +19,14 @@
 
     const p1, 0x2fb7ba90
 
+    .line 79
     iget p0, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->prefixOrderIndex:I
 
     add-int/2addr p0, p1
 
     goto :goto_0
 
+    .line 80
     :cond_0
     iget p0, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->prefixOrderIndex:I
 

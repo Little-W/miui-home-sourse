@@ -51,7 +51,7 @@
     .line 155
     iget-object p1, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout$XiaoaiObserver;->this$0:Lcom/miui/home/launcher/SearchBarXiaoaiLayout;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->access$400(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)V
+    invoke-static {p1}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->access$300(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)V
 
     return-void
 .end method

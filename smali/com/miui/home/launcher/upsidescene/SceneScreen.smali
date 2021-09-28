@@ -89,7 +89,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 154
+    .line 156
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
@@ -104,7 +104,7 @@
 
     const/4 v0, 0x0
 
-    .line 164
+    .line 166
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -115,7 +115,7 @@
 
     const/4 v0, 0x0
 
-    .line 168
+    .line 170
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -124,36 +124,36 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 172
+    .line 174
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p2, 0x1
 
-    .line 132
+    .line 134
     iput p2, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditingState:I
 
     const/4 p2, 0x2
 
-    .line 146
+    .line 148
     new-array p2, p2, [I
 
     iput-object p2, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDropLocation:[I
 
-    .line 156
+    .line 158
     new-instance p2, Lcom/miui/home/launcher/upsidescene/SceneScreen$1;
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen$1;-><init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
 
     iput-object p2, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mExitSceneReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 173
+    .line 175
     new-instance p2, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;
 
     invoke-direct {p2, p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializer;-><init>(Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSerializer:Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializable;
 
-    .line 174
+    .line 176
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
     return-void
@@ -162,7 +162,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
     .locals 0
 
-    .line 65
+    .line 67
     iget-object p0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     return-object p0
@@ -171,7 +171,7 @@
 .method static synthetic access$1000(Lcom/miui/home/launcher/upsidescene/SceneScreen;Z)V
     .locals 0
 
-    .line 65
+    .line 67
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->removeAllSprites(Z)V
 
     return-void
@@ -180,7 +180,7 @@
 .method static synthetic access$102(Lcom/miui/home/launcher/upsidescene/SceneScreen;Z)Z
     .locals 0
 
-    .line 65
+    .line 67
     iput-boolean p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mCurrentGestureFinished:Z
 
     return p1
@@ -189,7 +189,7 @@
 .method static synthetic access$1100(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializable;
     .locals 0
 
-    .line 65
+    .line 67
     iget-object p0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSerializer:Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializable;
 
     return-object p0
@@ -198,7 +198,7 @@
 .method static synthetic access$1200(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
     .locals 0
 
-    .line 65
+    .line 67
     invoke-direct {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->reload()V
 
     return-void
@@ -207,7 +207,7 @@
 .method static synthetic access$200(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/upsidescene/AppsSelectView;
     .locals 0
 
-    .line 65
+    .line 67
     iget-object p0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mAppsSelectView:Lcom/miui/home/launcher/upsidescene/AppsSelectView;
 
     return-object p0
@@ -216,7 +216,7 @@
 .method static synthetic access$300(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/Launcher;
     .locals 0
 
-    .line 65
+    .line 67
     iget-object p0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     return-object p0
@@ -225,7 +225,7 @@
 .method static synthetic access$500(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
     .locals 0
 
-    .line 65
+    .line 67
     invoke-direct {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->gotoEditModeAnimation()V
 
     return-void
@@ -234,7 +234,7 @@
 .method static synthetic access$600(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
     .locals 0
 
-    .line 65
+    .line 67
     invoke-direct {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->animatedRefresh()V
 
     return-void
@@ -243,7 +243,7 @@
 .method static synthetic access$700(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
     .locals 0
 
-    .line 65
+    .line 67
     iget-object p0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditModeBottomBar:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
     return-object p0
@@ -252,7 +252,7 @@
 .method static synthetic access$800(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
     .locals 0
 
-    .line 65
+    .line 67
     iget-object p0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mFreeStyle:Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
 
     return-object p0
@@ -261,7 +261,7 @@
 .method static synthetic access$802(Lcom/miui/home/launcher/upsidescene/SceneScreen;Lcom/miui/home/launcher/upsidescene/data/FreeStyle;)Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
     .locals 0
 
-    .line 65
+    .line 67
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mFreeStyle:Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
 
     return-object p1
@@ -270,7 +270,7 @@
 .method static synthetic access$900(Lcom/miui/home/launcher/upsidescene/SceneScreen;Z)V
     .locals 0
 
-    .line 65
+    .line 67
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->exitEditModeInner(Z)V
 
     return-void
@@ -279,7 +279,7 @@
 .method private animatedRefresh()V
     .locals 1
 
-    .line 580
+    .line 582
     new-instance v0, Lcom/miui/home/launcher/upsidescene/SceneScreen$4;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen$4;-><init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
@@ -294,7 +294,7 @@
 
     const/4 v0, 0x0
 
-    .line 375
+    .line 377
     aget v1, p3, v0
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getScrollX()I
@@ -315,7 +315,7 @@
 
     const/4 v1, 0x1
 
-    .line 376
+    .line 378
     aget v2, p3, v1
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getScrollY()I
@@ -334,29 +334,29 @@
 
     aput v2, p3, v1
 
-    .line 377
+    .line 379
     invoke-virtual {p2}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
 
     move-result-object p1
 
-    .line 378
+    .line 380
     invoke-virtual {p1}, Landroid/graphics/Matrix;->isIdentity()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 379
+    .line 381
     sget-object v2, Lcom/miui/home/launcher/upsidescene/SceneScreen;->sTmpReverseMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p1, v2}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
 
-    .line 380
+    .line 382
     sget-object p1, Lcom/miui/home/launcher/upsidescene/SceneScreen;->sTmpReverseMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p1, p3}, Landroid/graphics/Matrix;->mapPoints([F)V
 
-    .line 382
+    .line 384
     :cond_0
     aget p1, p3, v0
 
@@ -392,7 +392,7 @@
 
     aget p1, p3, v1
 
-    .line 383
+    .line 385
     invoke-virtual {p2}, Landroid/view/View;->getBottom()I
 
     move-result p3
@@ -418,24 +418,24 @@
 .method private dragSpriteView(Lcom/miui/home/launcher/upsidescene/SpriteView;)V
     .locals 8
 
-    .line 449
+    .line 451
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDraggedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
-    .line 450
+    .line 452
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDraggedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     const/4 v0, 0x6
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/upsidescene/SpriteView;->setState(I)V
 
-    .line 451
+    .line 453
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDraggedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     const/4 v0, 0x7
 
     invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setAllSpriteState(ILcom/miui/home/launcher/upsidescene/SpriteView;)V
 
-    .line 452
+    .line 454
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
@@ -464,10 +464,10 @@
 
     move-object v4, p0
 
-    .line 453
+    .line 455
     invoke-virtual/range {v0 .. v7}, Lcom/miui/home/launcher/DragController;->startDrag([Landroid/view/View;ZFLcom/miui/home/launcher/DragSource;IIZ)Z
 
-    .line 456
+    .line 458
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInEditMode()Z
 
     move-result p1
@@ -476,7 +476,7 @@
 
     const/4 p1, 0x0
 
-    .line 457
+    .line 459
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setEditFocusedSprite(Lcom/miui/home/launcher/upsidescene/SpriteView;)V
 
     :cond_0
@@ -488,10 +488,10 @@
 
     const/4 v0, 0x1
 
-    .line 593
+    .line 595
     iput v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditingState:I
 
-    .line 595
+    .line 597
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->save()V
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -500,7 +500,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 598
+    .line 600
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     const-string v3, "scaleX"
@@ -513,17 +513,17 @@
 
     move-result-object p1
 
-    .line 599
+    .line 601
     new-instance v3, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v3}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {p1, v3}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 600
+    .line 602
     invoke-virtual {p1}, Landroid/animation/Animator;->start()V
 
-    .line 602
+    .line 604
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     const-string v3, "scaleY"
@@ -536,24 +536,24 @@
 
     move-result-object p1
 
-    .line 603
+    .line 605
     new-instance v1, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v1}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {p1, v1}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 604
+    .line 606
     new-instance v1, Lcom/miui/home/launcher/upsidescene/SceneScreen$5;
 
     invoke-direct {v1, p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen$5;-><init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
 
     invoke-virtual {p1, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 610
+    .line 612
     invoke-virtual {p1}, Landroid/animation/Animator;->start()V
 
-    .line 612
+    .line 614
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getWidth()I
@@ -562,14 +562,14 @@
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/upsidescene/SceneContentView;->widthTo(I)V
 
-    .line 614
+    .line 616
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getWidth()I
 
     move-result p1
 
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->startScrollAnimation(I)V
 
-    .line 616
+    .line 618
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     const-string v1, "scrollX"
@@ -582,40 +582,40 @@
 
     move-result-object p1
 
-    .line 617
+    .line 619
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {p1, v0}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 618
+    .line 620
     invoke-virtual {p1}, Landroid/animation/Animator;->start()V
 
     goto :goto_0
 
-    .line 620
+    .line 622
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/upsidescene/SceneContentView;->setScaleX(F)V
 
-    .line 621
+    .line 623
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/upsidescene/SceneContentView;->setScaleY(F)V
 
-    .line 622
+    .line 624
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditModeBottomBar:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
     const/16 v0, 0x8
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->setVisibility(I)V
 
-    .line 623
+    .line 625
     invoke-direct {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->animatedRefresh()V
 
-    .line 624
+    .line 626
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getWidth()I
@@ -624,12 +624,12 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/upsidescene/SceneContentView;->setOverWidth(I)V
 
-    .line 625
+    .line 627
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {p1, v2}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->setScrollX(I)V
 
-    .line 628
+    .line 630
     :goto_0
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
@@ -639,7 +639,7 @@
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/FreeLayout;->exitEditMode()V
 
-    .line 629
+    .line 631
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->getFreeLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -658,10 +658,10 @@
 
     const/4 p2, 0x2
 
-    .line 1130
+    .line 1139
     new-array p2, p2, [I
 
-    .line 1131
+    .line 1140
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInEditMode()Z
 
@@ -676,13 +676,13 @@
     :cond_1
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 1133
+    .line 1142
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDraggedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     if-eqz v1, :cond_2
 
-    .line 1134
+    .line 1143
     invoke-virtual {v1}, Lcom/miui/home/launcher/upsidescene/SpriteView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
@@ -699,7 +699,7 @@
 
     goto :goto_1
 
-    .line 1136
+    .line 1145
     :cond_2
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
@@ -707,7 +707,7 @@
 
     move-result v1
 
-    .line 1138
+    .line 1147
     :goto_1
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -723,7 +723,7 @@
 
     invoke-virtual {v2, p1, p2, v3}, Lcom/miui/home/launcher/DragLayer;->getLocationInDragLayer(Landroid/view/View;[IZ)F
 
-    .line 1139
+    .line 1148
     aget p1, p2, v3
 
     int-to-float p1, p1
@@ -738,7 +738,7 @@
 
     const/4 p1, 0x1
 
-    .line 1140
+    .line 1149
     aget v1, p2, p1
 
     int-to-float v1, v1
@@ -755,7 +755,7 @@
 .method private getTouchedSpriteView(FFZ)Lcom/miui/home/launcher/upsidescene/SpriteView;
     .locals 1
 
-    .line 327
+    .line 329
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->getFreeLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -768,7 +768,7 @@
 
     if-nez v0, :cond_0
 
-    .line 329
+    .line 331
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->getFreeLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -786,7 +786,7 @@
 .method private getTouchedSpriteViewCore(Lcom/miui/home/launcher/upsidescene/FreeLayout;FFZ)Lcom/miui/home/launcher/upsidescene/SpriteView;
     .locals 8
 
-    .line 336
+    .line 338
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -796,10 +796,10 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 339
+    .line 341
     invoke-interface {v0, v2, v1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 340
+    .line 342
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
@@ -810,7 +810,7 @@
 
     const/4 v1, 0x2
 
-    .line 343
+    .line 345
     new-array v3, v1, [F
 
     aput p2, v3, v2
@@ -819,7 +819,7 @@
 
     aput p3, v3, p2
 
-    .line 344
+    .line 346
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p3
@@ -839,14 +839,14 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 345
+    .line 347
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
 
     move-result-object v5
 
     check-cast v5, Landroid/view/ViewGroup;
 
-    .line 346
+    .line 348
     invoke-direct {p0, v5, v0, v3}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->checkIsTransformedTouchPointInView(Landroid/view/ViewGroup;Landroid/view/View;[F)Z
 
     move-result v0
@@ -855,11 +855,11 @@
 
     return-object v4
 
-    .line 350
+    .line 352
     :cond_2
     new-array p3, v1, [F
 
-    .line 351
+    .line 353
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/FreeLayout;->getChildCount()I
 
     move-result v0
@@ -869,12 +869,12 @@
     :goto_0
     if-ltz v0, :cond_9
 
-    .line 352
+    .line 354
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/upsidescene/FreeLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 354
+    .line 356
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
     move-result v5
@@ -883,7 +883,7 @@
 
     goto :goto_1
 
-    .line 355
+    .line 357
     :cond_3
     instance-of v5, v1, Lcom/miui/home/launcher/upsidescene/SpriteView;
 
@@ -891,7 +891,7 @@
 
     goto :goto_1
 
-    .line 357
+    .line 359
     :cond_4
     move-object v5, v1
 
@@ -899,7 +899,7 @@
 
     if-eqz p4, :cond_5
 
-    .line 359
+    .line 361
     invoke-virtual {v5}, Lcom/miui/home/launcher/upsidescene/SpriteView;->isMovable()Z
 
     move-result v6
@@ -908,7 +908,7 @@
 
     goto :goto_1
 
-    .line 361
+    .line 363
     :cond_5
     invoke-virtual {v5}, Lcom/miui/home/launcher/upsidescene/SpriteView;->isEditable()Z
 
@@ -918,18 +918,18 @@
 
     goto :goto_1
 
-    .line 364
+    .line 366
     :cond_6
     aget v6, v3, v2
 
     aput v6, p3, v2
 
-    .line 365
+    .line 367
     aget v6, v3, p2
 
     aput v6, p3, p2
 
-    .line 366
+    .line 368
     invoke-direct {p0, p1, v1, p3}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->checkIsTransformedTouchPointInView(Landroid/view/ViewGroup;Landroid/view/View;[F)Z
 
     move-result v6
@@ -938,7 +938,7 @@
 
     goto :goto_1
 
-    .line 367
+    .line 369
     :cond_7
     aget v6, p3, v2
 
@@ -969,7 +969,7 @@
 .method private gotoEditModeAnimation()V
     .locals 6
 
-    .line 513
+    .line 515
     iget v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditModeScaleFactor:F
 
     const/4 v1, 0x0
@@ -978,7 +978,7 @@
 
     if-nez v0, :cond_0
 
-    .line 514
+    .line 516
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getHeight()I
 
     move-result v0
@@ -997,7 +997,7 @@
 
     add-float/2addr v0, v2
 
-    .line 515
+    .line 517
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getHeight()I
 
     move-result v2
@@ -1008,18 +1008,18 @@
 
     iput v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditModeScaleFactor:F
 
-    .line 518
+    .line 520
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/SceneContentView;->setPivotX(F)V
 
-    .line 519
+    .line 521
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/SceneContentView;->setPivotY(F)V
 
-    .line 521
+    .line 523
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     const-string v1, "scaleX"
@@ -1038,17 +1038,17 @@
 
     move-result-object v0
 
-    .line 522
+    .line 524
     new-instance v1, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v1}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 523
+    .line 525
     invoke-virtual {v0}, Landroid/animation/Animator;->start()V
 
-    .line 525
+    .line 527
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     const-string v1, "scaleY"
@@ -1063,24 +1063,24 @@
 
     move-result-object v0
 
-    .line 526
+    .line 528
     new-instance v1, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v1}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 527
+    .line 529
     new-instance v1, Lcom/miui/home/launcher/upsidescene/SceneScreen$3;
 
     invoke-direct {v1, p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen$3;-><init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 532
+    .line 534
     invoke-virtual {v0}, Landroid/animation/Animator;->start()V
 
-    .line 534
+    .line 536
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/SceneContentView;->getWidth()I
@@ -1095,15 +1095,15 @@
 
     float-to-int v0, v0
 
-    .line 535
+    .line 537
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/upsidescene/SceneContentView;->widthTo(I)V
 
-    .line 537
+    .line 539
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->startScrollAnimation(I)V
 
-    .line 539
+    .line 541
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/upsidescene/SceneContentView;->getWidth()I
@@ -1116,7 +1116,7 @@
 
     div-int/lit8 v0, v0, 0x2
 
-    .line 540
+    .line 542
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     const-string v3, "scrollX"
@@ -1129,14 +1129,14 @@
 
     move-result-object v0
 
-    .line 541
+    .line 543
     new-instance v1, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v1}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 542
+    .line 544
     invoke-virtual {v0}, Landroid/animation/Animator;->start()V
 
     return-void
@@ -1149,7 +1149,7 @@
 
     const/4 v1, 0x0
 
-    .line 394
+    .line 396
     :try_start_0
     invoke-static {p1, v0}, Lcom/miui/home/launcher/DragController;->createViewBitmap(Landroid/view/View;F)Landroid/graphics/Bitmap;
 
@@ -1159,7 +1159,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 399
+    .line 401
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v2
@@ -1170,7 +1170,7 @@
 
     goto :goto_2
 
-    .line 403
+    .line 405
     :cond_0
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -1180,19 +1180,19 @@
 
     add-int/lit8 v3, p2, -0xa
 
-    .line 405
+    .line 407
     invoke-static {v1, v3}, Ljava/lang/Math;->max(II)I
 
     move-result v3
 
     add-int/lit8 v4, p3, -0xa
 
-    .line 406
+    .line 408
     invoke-static {v1, v4}, Ljava/lang/Math;->max(II)I
 
     move-result v4
 
-    .line 407
+    .line 409
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
@@ -1207,7 +1207,7 @@
 
     move-result p2
 
-    .line 408
+    .line 410
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v5
@@ -1240,8 +1240,8 @@
 
     add-int/2addr p3, v4
 
-    .line 414
-    invoke-static {v0}, Lmiui/graphics/BitmapUtil;->getBuffer(Landroid/graphics/Bitmap;)[B
+    .line 416
+    invoke-static {v0}, Lcom/miui/home/library/utils/BitmapUtil;->getBuffer(Landroid/graphics/Bitmap;)[B
 
     move-result-object v0
 
@@ -1259,7 +1259,7 @@
     :goto_1
     if-gt v3, v5, :cond_2
 
-    .line 419
+    .line 421
     aget-byte v7, v0, v3
 
     and-int/lit16 v7, v7, 0xff
@@ -1280,7 +1280,7 @@
 
     goto :goto_0
 
-    .line 426
+    .line 428
     :cond_3
     invoke-virtual {p1}, Landroid/view/View;->destroyDrawingCache()V
 
@@ -1297,7 +1297,7 @@
 .method private onDropExternal(Lcom/miui/home/launcher/DragObject;)Z
     .locals 5
 
-    .line 1057
+    .line 1066
     iget v0, p1, Lcom/miui/home/launcher/DragObject;->y:I
 
     int-to-float v0, v0
@@ -1320,13 +1320,13 @@
 
     return v1
 
-    .line 1061
+    .line 1070
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDropLocation:[I
 
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getLocation(Lcom/miui/home/launcher/DragObject;[I)[I
 
-    .line 1062
+    .line 1071
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mFreeStyle:Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->createSpriteByUser()Lcom/miui/home/launcher/upsidescene/data/Sprite;
@@ -1335,7 +1335,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
-    .line 1064
+    .line 1073
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
@@ -1349,7 +1349,7 @@
     :pswitch_0
     goto/16 :goto_0
 
-    .line 1111
+    .line 1120
     :pswitch_1
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
@@ -1357,7 +1357,7 @@
 
     check-cast p1, Lcom/miui/home/launcher/upsidescene/data/FreeButtonInfo;
 
-    .line 1112
+    .line 1121
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     new-instance v3, Lcom/miui/home/launcher/upsidescene/data/Appearance$FreeButtonAppearance;
@@ -1372,7 +1372,7 @@
 
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->setAppearance(Lcom/miui/home/launcher/upsidescene/data/Appearance;)V
 
-    .line 1113
+    .line 1122
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->finishDropAddSpriteView(Z)V
 
     goto/16 :goto_0
@@ -1380,36 +1380,36 @@
     :pswitch_2
     const/4 v0, 0x6
 
-    .line 1103
+    .line 1112
     invoke-static {v0}, Lcom/miui/home/launcher/upsidescene/data/Function;->createFunction(I)Lcom/miui/home/launcher/upsidescene/data/Function;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/upsidescene/data/Function$MtzGadgetFunction;
 
-    .line 1104
+    .line 1113
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p1
 
     check-cast p1, Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;
 
-    .line 1105
+    .line 1114
     iget-object p1, p1, Lcom/miui/home/launcher/upsidescene/data/FreeStyle$MtzGadgetInfo;->path:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/upsidescene/data/Function$MtzGadgetFunction;->setMtzRelativePath(Ljava/lang/String;)V
 
-    .line 1106
+    .line 1115
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->setFunction(Lcom/miui/home/launcher/upsidescene/data/Function;)V
 
-    .line 1107
+    .line 1116
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->finishDropAddSpriteView(Z)V
 
     goto :goto_0
 
-    .line 1066
+    .line 1075
     :pswitch_3
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
@@ -1417,14 +1417,14 @@
 
     check-cast p1, Lcom/miui/home/launcher/ShortcutPlaceholderProviderInfo;
 
-    .line 1067
+    .line 1076
     iget p1, p1, Lcom/miui/home/launcher/ShortcutPlaceholderProviderInfo;->addType:I
 
     packed-switch p1, :pswitch_data_1
 
     goto :goto_0
 
-    .line 1074
+    .line 1083
     :pswitch_4
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
@@ -1436,14 +1436,14 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->setFunction(Lcom/miui/home/launcher/upsidescene/data/Function;)V
 
-    .line 1075
+    .line 1084
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->showTogglesSelectView()V
 
     goto :goto_0
 
-    .line 1084
+    .line 1093
     :pswitch_5
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
@@ -1455,12 +1455,12 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->setFunction(Lcom/miui/home/launcher/upsidescene/data/Function;)V
 
-    .line 1085
+    .line 1094
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->finishDropAddSpriteView(Z)V
 
     goto :goto_0
 
-    .line 1079
+    .line 1088
     :pswitch_6
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
@@ -1472,12 +1472,12 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->setFunction(Lcom/miui/home/launcher/upsidescene/data/Function;)V
 
-    .line 1080
+    .line 1089
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->showSelectApps(Z)V
 
     goto :goto_0
 
-    .line 1069
+    .line 1078
     :pswitch_7
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
@@ -1487,12 +1487,12 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->setFunction(Lcom/miui/home/launcher/upsidescene/data/Function;)V
 
-    .line 1070
+    .line 1079
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->showSelectApps(Z)V
 
     goto :goto_0
 
-    .line 1091
+    .line 1100
     :pswitch_8
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
@@ -1504,21 +1504,21 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->setFunction(Lcom/miui/home/launcher/upsidescene/data/Function;)V
 
-    .line 1092
+    .line 1101
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p1
 
     check-cast p1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
-    .line 1093
+    .line 1102
     iget-object p1, p1, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->providerInfo:Landroid/appwidget/AppWidgetProviderInfo;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->addAppWidget(Landroid/appwidget/AppWidgetProviderInfo;)V
 
     goto :goto_0
 
-    .line 1097
+    .line 1106
     :pswitch_9
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
@@ -1530,14 +1530,14 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->setFunction(Lcom/miui/home/launcher/upsidescene/data/Function;)V
 
-    .line 1098
+    .line 1107
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p1
 
     check-cast p1, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
-    .line 1099
+    .line 1108
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->addGadget(Lcom/miui/home/launcher/gadget/GadgetInfo;)V
 
     :goto_0
@@ -1567,12 +1567,12 @@
 .method private onDropInternal(Lcom/miui/home/launcher/DragObject;)Z
     .locals 3
 
-    .line 1050
+    .line 1059
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDropLocation:[I
 
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getLocation(Lcom/miui/home/launcher/DragObject;[I)[I
 
-    .line 1051
+    .line 1060
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDraggedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDropLocation:[I
@@ -1587,7 +1587,7 @@
 
     invoke-virtual {p1, v1, v0}, Lcom/miui/home/launcher/upsidescene/SpriteView;->moveTo(II)V
 
-    .line 1052
+    .line 1061
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDraggedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/SpriteView;->getParentLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -1604,7 +1604,7 @@
 .method private reload()V
     .locals 1
 
-    .line 954
+    .line 963
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mFreeStyle:Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setFreeStyle(Lcom/miui/home/launcher/upsidescene/data/FreeStyle;)V
@@ -1615,7 +1615,7 @@
 .method private removeAllSprites(Lcom/miui/home/launcher/upsidescene/FreeLayout;Z)V
     .locals 3
 
-    .line 990
+    .line 999
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/FreeLayout;->getChildCount()I
 
     move-result v0
@@ -1625,14 +1625,14 @@
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 991
+    .line 1000
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/upsidescene/FreeLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Lcom/miui/home/launcher/upsidescene/SpriteView;
 
-    .line 992
+    .line 1001
     invoke-virtual {v1}, Lcom/miui/home/launcher/upsidescene/SpriteView;->getSpriteData()Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     move-result-object v2
@@ -1645,7 +1645,7 @@
 
     if-eqz p2, :cond_1
 
-    .line 993
+    .line 1002
     :cond_0
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/upsidescene/FreeLayout;->removeSprite(Lcom/miui/home/launcher/upsidescene/SpriteView;)V
 
@@ -1661,7 +1661,7 @@
 .method private removeAllSprites(Z)V
     .locals 1
 
-    .line 985
+    .line 994
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->getFreeLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -1670,7 +1670,7 @@
 
     invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->removeAllSprites(Lcom/miui/home/launcher/upsidescene/FreeLayout;Z)V
 
-    .line 986
+    .line 995
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->getFreeLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -1685,7 +1685,7 @@
 .method private setAllSpriteState(ILcom/miui/home/launcher/upsidescene/SpriteView;)V
     .locals 1
 
-    .line 470
+    .line 472
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->getFreeLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -1694,7 +1694,7 @@
 
     invoke-direct {p0, v0, p1, p2}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setAllSpriteState(Lcom/miui/home/launcher/upsidescene/FreeLayout;ILcom/miui/home/launcher/upsidescene/SpriteView;)V
 
-    .line 471
+    .line 473
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->getFreeLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -1709,7 +1709,7 @@
 .method private setAllSpriteState(Lcom/miui/home/launcher/upsidescene/FreeLayout;ILcom/miui/home/launcher/upsidescene/SpriteView;)V
     .locals 3
 
-    .line 475
+    .line 477
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/FreeLayout;->getChildCount()I
 
     move-result v0
@@ -1719,7 +1719,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 477
+    .line 479
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/upsidescene/FreeLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
@@ -1728,7 +1728,7 @@
 
     if-eq v2, p3, :cond_0
 
-    .line 479
+    .line 481
     invoke-virtual {v2, p2}, Lcom/miui/home/launcher/upsidescene/SpriteView;->setState(I)V
 
     :cond_0
@@ -1743,7 +1743,7 @@
 .method private startScrollAnimation(I)V
     .locals 5
 
-    .line 567
+    .line 569
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->getCurrentScreen()I
@@ -1752,7 +1752,7 @@
 
     if-lez v0, :cond_1
 
-    .line 568
+    .line 570
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/SceneContentView;->getWidth()I
@@ -1761,7 +1761,7 @@
 
     sub-int/2addr p1, v0
 
-    .line 569
+    .line 571
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->getCurrentScreen()I
@@ -1780,10 +1780,10 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 570
+    .line 572
     div-int/lit8 p1, p1, 0x2
 
-    .line 572
+    .line 574
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
@@ -1793,7 +1793,7 @@
 
     const/4 v3, 0x0
 
-    .line 573
+    .line 575
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->getScrollX()I
 
     move-result v4
@@ -1802,19 +1802,19 @@
 
     aput v4, v2, v3
 
-    .line 572
+    .line 574
     invoke-static {v0, v1, v2}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
 
     move-result-object p1
 
-    .line 574
+    .line 576
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     invoke-virtual {p1, v0}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 575
+    .line 577
     invoke-virtual {p1}, Landroid/animation/Animator;->start()V
 
     :cond_1
@@ -1826,14 +1826,14 @@
 .method public acceptDrop(Lcom/miui/home/launcher/DragObject;)Z
     .locals 1
 
-    .line 1163
+    .line 1172
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1164
+    .line 1173
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p1
@@ -1857,127 +1857,153 @@
 .method addAppWidget(Landroid/appwidget/AppWidgetProviderInfo;)V
     .locals 6
 
-    .line 722
-    iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mAppWidgetHost:Lcom/miui/home/launcher/LauncherAppWidgetHost;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherAppWidgetHost;->allocateAppWidgetId()I
-
-    move-result v0
-
     .line 723
+    iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    .line 724
+    invoke-static {v0, p1}, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->fromProviderInfo(Landroid/content/Context;Landroid/appwidget/AppWidgetProviderInfo;)Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
+
+    move-result-object v0
+
+    .line 725
+    invoke-static {v0}, Lcom/miui/home/launcher/widget/PendingAddWidgetInfo;->newInstance(Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;)Lcom/miui/home/launcher/widget/PendingAddWidgetInfo;
+
+    move-result-object v0
+
+    .line 726
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p1}, Landroid/appwidget/AppWidgetProviderInfo;->getProfile()Landroid/os/UserHandle;
+    invoke-static {v1, v0}, Lcom/miui/home/launcher/widget/WidgetHostViewLoader;->getDefaultOptionsForWidget(Landroid/content/Context;Lcom/miui/home/launcher/widget/PendingAddWidgetInfo;)Landroid/os/Bundle;
 
-    move-result-object v2
+    move-result-object v0
 
-    iget-object v3, p1, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
+    .line 730
+    iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mAppWidgetHost:Lcom/miui/home/launcher/LauncherAppWidgetHost;
 
-    const/4 v4, 0x0
-
-    invoke-static {v1, v0, v2, v3, v4}, Lcom/miui/home/launcher/common/WidgetManagerUtils;->bindAppWidgetIdIfAllowed(Landroid/content/Context;ILandroid/os/UserHandle;Landroid/content/ComponentName;Landroid/os/Bundle;)Z
+    invoke-virtual {v1}, Lcom/miui/home/launcher/LauncherAppWidgetHost;->allocateAppWidgetId()I
 
     move-result v1
 
-    if-nez v1, :cond_0
+    .line 731
+    iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
+
+    .line 732
+    invoke-virtual {p1}, Landroid/appwidget/AppWidgetProviderInfo;->getProfile()Landroid/os/UserHandle;
+
+    move-result-object v3
+
+    iget-object v4, p1, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
+
+    .line 731
+    invoke-static {v2, v1, v3, v4, v0}, Lcom/miui/home/launcher/common/WidgetManagerUtils;->bindAppWidgetIdIfAllowed(Landroid/content/Context;ILandroid/os/UserHandle;Landroid/content/ComponentName;Landroid/os/Bundle;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     return-void
 
-    .line 727
+    .line 736
     :cond_0
-    iget-object v1, p1, Landroid/appwidget/AppWidgetProviderInfo;->configure:Landroid/content/ComponentName;
+    iget-object v0, p1, Landroid/appwidget/AppWidgetProviderInfo;->configure:Landroid/content/ComponentName;
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
-    .line 729
-    new-instance v1, Landroid/content/Intent;
+    .line 738
+    new-instance v0, Landroid/content/Intent;
 
     const-string v2, "android.appwidget.action.APPWIDGET_CONFIGURE"
 
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 730
+    .line 739
     iget-object p1, p1, Landroid/appwidget/AppWidgetProviderInfo;->configure:Landroid/content/ComponentName;
 
-    invoke-virtual {v1, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+    invoke-virtual {v0, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     const-string p1, "appWidgetId"
 
-    .line 731
-    invoke-virtual {v1, p1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    .line 740
+    invoke-virtual {v0, p1, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 732
-    invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getContext()Landroid/content/Context;
+    .line 741
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
 
-    const/16 v0, 0xb
-
-    invoke-static {p1, v1, v0}, Lcom/miui/home/launcher/LauncherApplication;->startActivityForResult(Landroid/content/Context;Landroid/content/Intent;I)V
-
-    goto :goto_1
-
-    .line 736
-    :cond_1
-    iget-object v1, p1, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
-
-    invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 737
+    const/16 v2, 0xb
+
+    invoke-virtual {p1, v1, v0, v2}, Lcom/miui/home/launcher/Application;->startActivityForResult(Landroid/content/Context;Landroid/content/Intent;I)V
+
+    goto :goto_1
+
+    .line 745
+    :cond_1
+    iget-object v0, p1, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
+
+    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 746
     iget-object v2, p1, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
     invoke-virtual {v2}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 739
+    .line 748
     new-instance v3, Landroid/content/Intent;
 
-    const-string v5, "android.intent.action.MAIN"
+    const-string v4, "android.intent.action.MAIN"
 
-    invoke-direct {v3, v5, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+    const/4 v5, 0x0
+
+    invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     const-string v4, "android.intent.category.DEFAULT"
 
-    .line 740
+    .line 749
     invoke-virtual {v3, v4}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v4, "appWidgetId"
 
-    .line 741
-    invoke-virtual {v3, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    .line 750
+    invoke-virtual {v3, v4, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    if-eqz v1, :cond_2
+    if-eqz v0, :cond_2
 
     if-eqz v2, :cond_2
 
-    .line 745
-    invoke-virtual {v3, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    .line 754
+    invoke-virtual {v3, v0, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     goto :goto_0
 
     :cond_2
     const-string v0, "android.intent.action.CREATE_SHORTCUT"
 
-    .line 749
+    .line 758
     invoke-virtual {v3, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "android.intent.extra.shortcut.NAME"
 
-    .line 750
+    .line 759
     iget-object p1, p1, Landroid/appwidget/AppWidgetProviderInfo;->label:Ljava/lang/String;
 
     invoke-virtual {v3, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 753
+    .line 762
     :goto_0
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->completeAddAppWidget(Landroid/content/Intent;)V
 
     const/4 p1, 0x0
 
-    .line 755
+    .line 764
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->finishDropAddSpriteView(Z)V
 
     :goto_1
@@ -1987,7 +2013,7 @@
 .method addGadget(Lcom/miui/home/launcher/gadget/GadgetInfo;)V
     .locals 4
 
-    .line 714
+    .line 716
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->generateSystemGadgetId()I
 
     move-result v0
@@ -1996,7 +2022,7 @@
 
     iput-wide v0, p1, Lcom/miui/home/launcher/gadget/GadgetInfo;->id:J
 
-    .line 715
+    .line 717
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getFunction()Lcom/miui/home/launcher/upsidescene/data/Function;
@@ -2017,7 +2043,7 @@
 
     const/4 p1, 0x0
 
-    .line 717
+    .line 719
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->finishDropAddSpriteView(Z)V
 
     return-void
@@ -2026,10 +2052,10 @@
 .method public cancelLongPress()V
     .locals 1
 
-    .line 289
+    .line 291
     invoke-super {p0}, Landroid/widget/FrameLayout;->cancelLongPress()V
 
-    .line 290
+    .line 292
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isPressed()Z
 
     move-result v0
@@ -2038,7 +2064,7 @@
 
     const/4 v0, 0x0
 
-    .line 291
+    .line 293
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setPressed(Z)V
 
     :cond_0
@@ -2050,7 +2076,7 @@
 
     const/16 v0, 0x10
 
-    .line 1179
+    .line 1188
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->notifyGadgets(I)V
 
     return-void
@@ -2059,20 +2085,20 @@
 .method public closeSelectApps(Z)V
     .locals 1
 
-    .line 696
+    .line 698
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mAppsSelectView:Lcom/miui/home/launcher/upsidescene/AppsSelectView;
 
     if-eqz v0, :cond_0
 
-    .line 697
+    .line 699
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->removeView(Landroid/view/View;)V
 
     const/4 v0, 0x0
 
-    .line 698
+    .line 700
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mAppsSelectView:Lcom/miui/home/launcher/upsidescene/AppsSelectView;
 
-    .line 701
+    .line 703
     :cond_0
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->finishDropAddSpriteView(Z)V
 
@@ -2082,7 +2108,7 @@
 .method public completeAddAppWidget(Landroid/content/Intent;)V
     .locals 2
 
-    .line 760
+    .line 769
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
@@ -2091,12 +2117,12 @@
 
     const/4 v1, -0x1
 
-    .line 761
+    .line 770
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 763
+    .line 772
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getFunction()Lcom/miui/home/launcher/upsidescene/data/Function;
@@ -2109,7 +2135,7 @@
 
     const/4 p1, 0x0
 
-    .line 765
+    .line 774
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->finishDropAddSpriteView(Z)V
 
     return-void
@@ -2118,25 +2144,25 @@
 .method public completeSelectToggle(I)V
     .locals 3
 
-    .line 809
+    .line 818
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
-    .line 811
+    .line 820
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditFocusedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     if-eqz v0, :cond_4
 
-    .line 812
+    .line 821
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/SpriteView;->getSpriteData()Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     move-result-object v0
 
-    .line 818
+    .line 827
     :goto_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getFunction()Lcom/miui/home/launcher/upsidescene/data/Function;
 
@@ -2150,7 +2176,7 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 819
+    .line 828
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getFunction()Lcom/miui/home/launcher/upsidescene/data/Function;
 
     move-result-object v1
@@ -2159,7 +2185,7 @@
 
     goto :goto_1
 
-    .line 821
+    .line 830
     :cond_1
     invoke-static {v2}, Lcom/miui/home/launcher/upsidescene/data/Function;->createFunction(I)Lcom/miui/home/launcher/upsidescene/data/Function;
 
@@ -2167,24 +2193,24 @@
 
     check-cast v1, Lcom/miui/home/launcher/upsidescene/data/Function$ToggleFunction;
 
-    .line 822
+    .line 831
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->setFunction(Lcom/miui/home/launcher/upsidescene/data/Function;)V
 
-    .line 824
+    .line 833
     :goto_1
     invoke-virtual {v1, p1}, Lcom/miui/home/launcher/upsidescene/data/Function$ToggleFunction;->setToggleId(I)V
 
-    .line 826
+    .line 835
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     if-eq v0, p1, :cond_2
 
-    .line 827
+    .line 836
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditFocusedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/SpriteView;->rebuildContentView()V
 
-    .line 830
+    .line 839
     :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInEditMode()Z
 
@@ -2192,7 +2218,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 831
+    .line 840
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditModeBottomBar:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->refreshFreeButtonCheckbox()V
@@ -2207,7 +2233,7 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 5
 
-    .line 258
+    .line 260
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -2216,24 +2242,24 @@
 
     if-nez v0, :cond_0
 
-    .line 259
+    .line 261
     iput-boolean v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mCurrentGestureFinished:Z
 
-    .line 260
+    .line 262
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLastMotionX:F
 
-    .line 261
+    .line 263
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLastMotionY:F
 
-    .line 263
+    .line 265
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
@@ -2243,12 +2269,12 @@
 
     if-nez v0, :cond_1
 
-    .line 264
+    .line 266
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScaleDetector:Landroid/view/ScaleGestureDetector;
 
     invoke-virtual {v0, p1}, Landroid/view/ScaleGestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 268
+    .line 270
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
@@ -2258,12 +2284,12 @@
 
     if-le v0, v2, :cond_2
 
-    .line 269
+    .line 271
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->cancelLongPress()V
 
     goto :goto_0
 
-    .line 271
+    .line 273
     :cond_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -2279,7 +2305,7 @@
 
     float-to-int v0, v0
 
-    .line 272
+    .line 274
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v3
@@ -2294,26 +2320,26 @@
 
     float-to-int v3, v3
 
-    .line 273
+    .line 275
     iget v4, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mTouchSlop:I
 
     if-gt v0, v4, :cond_3
 
     if-le v3, v4, :cond_4
 
-    .line 274
+    .line 276
     :cond_3
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->cancelLongPress()V
 
-    .line 278
+    .line 280
     :cond_4
     :goto_0
     iput-boolean v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mIsTouchExecutedThisTime:Z
 
-    .line 279
+    .line 281
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 280
+    .line 282
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -2326,7 +2352,7 @@
 
     if-ne v0, v2, :cond_6
 
-    .line 281
+    .line 283
     :cond_5
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -2339,7 +2365,7 @@
 
     const/4 v0, 0x1
 
-    .line 589
+    .line 591
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->exitEditModeInner(Z)V
 
     return-void
@@ -2348,7 +2374,7 @@
 .method public exitEditableMode(ZZ)Z
     .locals 2
 
-    .line 902
+    .line 911
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isSelectViewShowing()Z
 
     move-result v0
@@ -2357,14 +2383,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 903
+    .line 912
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->closeSelectApps(Z)V
 
     if-nez p2, :cond_0
 
     return v1
 
-    .line 906
+    .line 915
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditFocusedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
@@ -2372,7 +2398,7 @@
 
     const/4 v0, 0x0
 
-    .line 907
+    .line 916
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setEditFocusedSprite(Lcom/miui/home/launcher/upsidescene/SpriteView;)V
 
     if-nez p1, :cond_1
@@ -2381,7 +2407,7 @@
 
     return v1
 
-    .line 912
+    .line 921
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInEditMode()Z
 
@@ -2389,14 +2415,14 @@
 
     if-eqz p1, :cond_2
 
-    .line 913
+    .line 922
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->exitEditMode()V
 
     if-nez p2, :cond_2
 
     return v1
 
-    .line 916
+    .line 925
     :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInMoveMode()Z
 
@@ -2404,7 +2430,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 917
+    .line 926
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->exitMoveMode()V
 
     if-nez p2, :cond_3
@@ -2422,13 +2448,13 @@
 
     const/4 v0, 0x1
 
-    .line 554
+    .line 556
     iput v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditingState:I
 
-    .line 555
+    .line 557
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->save()V
 
-    .line 557
+    .line 559
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->getFreeLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -2437,7 +2463,7 @@
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/upsidescene/FreeLayout;->exitMoveMode()V
 
-    .line 558
+    .line 560
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->getFreeLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -2448,7 +2474,7 @@
 
     const/4 v1, 0x0
 
-    .line 559
+    .line 561
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setAllSpriteState(ILcom/miui/home/launcher/upsidescene/SpriteView;)V
 
     return-void
@@ -2459,12 +2485,12 @@
 
     if-nez p1, :cond_0
 
-    .line 1121
+    .line 1130
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     if-eqz p1, :cond_0
 
-    .line 1122
+    .line 1131
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->getFreeLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -2477,7 +2503,7 @@
 
     move-result-object p1
 
-    .line 1123
+    .line 1132
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDropLocation:[I
 
     const/4 v1, 0x0
@@ -2490,13 +2516,13 @@
 
     invoke-virtual {p1, v1, v0}, Lcom/miui/home/launcher/upsidescene/SpriteView;->moveTo(II)V
 
-    .line 1124
+    .line 1133
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/SpriteView;->gotoEditMode()V
 
     :cond_0
     const/4 p1, 0x0
 
-    .line 1126
+    .line 1135
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     return-void
@@ -2505,12 +2531,12 @@
 .method public generateSystemGadgetId()I
     .locals 3
 
-    .line 705
+    .line 707
     iget v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLastGadgetId:I
 
     if-nez v0, :cond_0
 
-    .line 706
+    .line 708
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
     const-string v1, "pref_free_style_last_gadget_id"
@@ -2523,7 +2549,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLastGadgetId:I
 
-    .line 708
+    .line 710
     :cond_0
     iget v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLastGadgetId:I
 
@@ -2531,7 +2557,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLastGadgetId:I
 
-    .line 709
+    .line 711
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
     const-string v1, "pref_free_style_last_gadget_id"
@@ -2540,7 +2566,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/common/PreferenceUtils;->putInt(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 710
+    .line 712
     iget v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLastGadgetId:I
 
     return v0
@@ -2549,7 +2575,7 @@
 .method public getAppWidgetHost()Landroid/appwidget/AppWidgetHost;
     .locals 1
 
-    .line 207
+    .line 209
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mAppWidgetHost:Lcom/miui/home/launcher/LauncherAppWidgetHost;
 
     return-object v0
@@ -2566,7 +2592,7 @@
 .method public getDragScroller()Lcom/miui/home/launcher/DragScroller;
     .locals 1
 
-    .line 235
+    .line 237
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     return-object v0
@@ -2583,7 +2609,7 @@
 .method public getEditFocusedSprite()Lcom/miui/home/launcher/upsidescene/SpriteView;
     .locals 1
 
-    .line 845
+    .line 854
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditFocusedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     return-object v0
@@ -2592,7 +2618,7 @@
 .method public getEditModeScaleFactor()F
     .locals 1
 
-    .line 485
+    .line 487
     iget v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditModeScaleFactor:F
 
     return v0
@@ -2601,7 +2627,7 @@
 .method public getEditingState()I
     .locals 1
 
-    .line 637
+    .line 639
     iget v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditingState:I
 
     return v0
@@ -2610,7 +2636,7 @@
 .method public getFreeStyle()Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
     .locals 1
 
-    .line 231
+    .line 233
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mFreeStyle:Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
 
     return-object v0
@@ -2625,7 +2651,7 @@
 .method public getLauncher()Lcom/miui/home/launcher/Launcher;
     .locals 1
 
-    .line 203
+    .line 205
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     return-object v0
@@ -2642,7 +2668,7 @@
 .method public gotoEditMode()V
     .locals 2
 
-    .line 489
+    .line 491
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInEditMode()Z
 
     move-result v0
@@ -2651,7 +2677,7 @@
 
     return-void
 
-    .line 493
+    .line 495
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInMoveMode()Z
 
@@ -2659,23 +2685,23 @@
 
     if-eqz v0, :cond_1
 
-    .line 494
+    .line 496
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->exitMoveMode()V
 
     :cond_1
     const/4 v0, 0x2
 
-    .line 497
+    .line 499
     iput v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditingState:I
 
-    .line 499
+    .line 501
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditModeBottomBar:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->setVisibility(I)V
 
-    .line 501
+    .line 503
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->getFreeLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -2684,7 +2710,7 @@
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/FreeLayout;->gotoEditMode()V
 
-    .line 502
+    .line 504
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->getFreeLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -2695,10 +2721,10 @@
 
     const/4 v0, 0x0
 
-    .line 503
+    .line 505
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setEditFocusedSprite(Lcom/miui/home/launcher/upsidescene/SpriteView;)V
 
-    .line 505
+    .line 507
     new-instance v0, Lcom/miui/home/launcher/upsidescene/SceneScreen$2;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen$2;-><init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
@@ -2713,10 +2739,10 @@
 
     const/4 v0, 0x3
 
-    .line 546
+    .line 548
     iput v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditingState:I
 
-    .line 548
+    .line 550
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->getFreeLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -2725,7 +2751,7 @@
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/FreeLayout;->gotoMoveMode()V
 
-    .line 549
+    .line 551
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->getFreeLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
@@ -2738,7 +2764,7 @@
 
     const/4 v1, 0x0
 
-    .line 550
+    .line 552
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setAllSpriteState(ILcom/miui/home/launcher/upsidescene/SpriteView;)V
 
     return-void
@@ -2747,7 +2773,7 @@
 .method public isCurrentGestureFinished()Z
     .locals 1
 
-    .line 849
+    .line 858
     iget-boolean v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mCurrentGestureFinished:Z
 
     return v0
@@ -2756,7 +2782,7 @@
 .method public isDragging()Z
     .locals 1
 
-    .line 999
+    .line 1008
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDraggedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     if-eqz v0, :cond_0
@@ -2783,7 +2809,7 @@
 .method public isInEditMode()Z
     .locals 2
 
-    .line 633
+    .line 635
     iget v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditingState:I
 
     const/4 v1, 0x2
@@ -2804,7 +2830,7 @@
 .method public isInMoveMode()Z
     .locals 2
 
-    .line 563
+    .line 565
     iget v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditingState:I
 
     const/4 v1, 0x3
@@ -2825,7 +2851,7 @@
 .method public isSelectViewShowing()Z
     .locals 1
 
-    .line 890
+    .line 899
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mAppsSelectView:Lcom/miui/home/launcher/upsidescene/AppsSelectView;
 
     if-eqz v0, :cond_0
@@ -2838,7 +2864,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mAppsSelectView:Lcom/miui/home/launcher/upsidescene/AppsSelectView;
 
-    .line 891
+    .line 900
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/AppsSelectView;->getVisibility()I
 
     move-result v0
@@ -2858,7 +2884,7 @@
 .method public isShowing()Z
     .locals 1
 
-    .line 853
+    .line 862
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getVisibility()I
 
     move-result v0
@@ -2885,12 +2911,12 @@
 .method public notifyGadgets(I)V
     .locals 1
 
-    .line 946
+    .line 955
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->notifyGadgets(I)V
 
-    .line 947
+    .line 956
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->notifyGadgets(I)V
@@ -2901,7 +2927,7 @@
 
     const/4 p1, 0x1
 
-    .line 949
+    .line 958
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->finishDropAddSpriteView(Z)V
 
     :cond_0
@@ -2911,7 +2937,7 @@
 .method public notifyScrollableScreenScrolling()V
     .locals 4
 
-    .line 239
+    .line 241
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->getChildWidth()I
@@ -2926,7 +2952,7 @@
 
     sub-int/2addr v0, v1
 
-    .line 240
+    .line 242
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->getScrollX()I
@@ -2939,7 +2965,7 @@
 
     div-float/2addr v1, v0
 
-    .line 242
+    .line 244
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mBackgroundScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->getChildWidth()I
@@ -2960,12 +2986,12 @@
 
     float-to-int v0, v0
 
-    .line 244
+    .line 246
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mBackgroundScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {v2, v0}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->setScrollX(I)V
 
-    .line 246
+    .line 248
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mForegroundScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->getChildWidth()I
@@ -2986,12 +3012,12 @@
 
     float-to-int v0, v0
 
-    .line 248
+    .line 250
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mForegroundScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {v2, v0}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->setScrollX(I)V
 
-    .line 250
+    .line 252
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->getCurrentScreen()I
@@ -3010,12 +3036,12 @@
 
     div-float/2addr v0, v2
 
-    .line 251
+    .line 253
     iget-boolean v2, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mShowHideAnimating:Z
 
     if-nez v2, :cond_0
 
-    .line 252
+    .line 254
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     const/4 v3, 0x0
@@ -3031,7 +3057,7 @@
 
     const/4 v0, 0x0
 
-    .line 898
+    .line 907
     invoke-virtual {p0, v0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->exitEditableMode(ZZ)Z
 
     move-result v0
@@ -3042,17 +3068,17 @@
 .method public onDragCompleted(Lcom/miui/home/launcher/DropTarget;Lcom/miui/home/launcher/DragObject;)V
     .locals 0
 
-    .line 1019
+    .line 1028
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDraggedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     if-eqz p1, :cond_0
 
     const/4 p2, 0x0
 
-    .line 1020
+    .line 1029
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/upsidescene/SpriteView;->setVisibility(I)V
 
-    .line 1022
+    .line 1031
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInMoveMode()Z
 
@@ -3064,7 +3090,7 @@
 
     const/4 p1, 0x5
 
-    .line 1023
+    .line 1032
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setAllSpriteState(ILcom/miui/home/launcher/upsidescene/SpriteView;)V
 
     goto :goto_0
@@ -3072,14 +3098,14 @@
     :cond_1
     const/4 p1, 0x2
 
-    .line 1025
+    .line 1034
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setAllSpriteState(ILcom/miui/home/launcher/upsidescene/SpriteView;)V
 
-    .line 1027
+    .line 1036
     :goto_0
     iput-object p2, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDraggedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
-    .line 1028
+    .line 1037
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditModeBottomBar:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->switchEditWidgetBar()V
@@ -3108,21 +3134,21 @@
 .method public onDrop(Lcom/miui/home/launcher/DragObject;)Z
     .locals 1
 
-    .line 1042
+    .line 1051
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragSource()Lcom/miui/home/launcher/DragSource;
 
     move-result-object v0
 
     if-ne v0, p0, :cond_0
 
-    .line 1043
+    .line 1052
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->onDropInternal(Lcom/miui/home/launcher/DragObject;)Z
 
     move-result p1
 
     return p1
 
-    .line 1045
+    .line 1054
     :cond_0
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->onDropExternal(Lcom/miui/home/launcher/DragObject;)Z
 
@@ -3156,7 +3182,7 @@
 
     const/4 v1, 0x0
 
-    .line 466
+    .line 468
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setAllSpriteState(ILcom/miui/home/launcher/upsidescene/SpriteView;)V
 
     return-void
@@ -3169,7 +3195,7 @@
 
     const/4 v1, 0x0
 
-    .line 462
+    .line 464
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setAllSpriteState(ILcom/miui/home/launcher/upsidescene/SpriteView;)V
 
     return-void
@@ -3178,12 +3204,12 @@
 .method protected onFinishInflate()V
     .locals 4
 
-    .line 179
+    .line 181
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0165
+    const v0, 0x7f0a019f
 
-    .line 181
+    .line 183
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -3192,9 +3218,9 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
-    const v0, 0x7f0a00a6
+    const v0, 0x7f0a00c9
 
-    .line 182
+    .line 184
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -3203,9 +3229,9 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditModeBottomBar:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
-    const v0, 0x7f0a00d1
+    const v0, 0x7f0a00f4
 
-    .line 183
+    .line 185
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -3214,29 +3240,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mForegroundScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
-    const v0, 0x7f0a005f
-
-    .line 184
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/miui/home/launcher/upsidescene/FixedScreen;
-
-    iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mBackgroundScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
-
-    const v0, 0x7f0a016d
-
-    .line 185
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
-
-    iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
-
-    const v0, 0x7f0a009a
+    const v0, 0x7f0a006a
 
     .line 186
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
@@ -3245,9 +3249,31 @@
 
     check-cast v0, Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
-    iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
+    iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mBackgroundScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
+
+    const v0, 0x7f0a01a7
+
+    .line 187
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
+
+    iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
+
+    const v0, 0x7f0a00bc
 
     .line 188
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/miui/home/launcher/upsidescene/FixedScreen;
+
+    iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
+
+    .line 190
     new-instance v0, Landroid/view/ScaleGestureDetector;
 
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
@@ -3262,14 +3288,14 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScaleDetector:Landroid/view/ScaleGestureDetector;
 
-    .line 189
+    .line 191
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v0
 
-    .line 190
+    .line 192
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
     move-result v0
@@ -3278,10 +3304,10 @@
 
     const/4 v0, 0x1
 
-    .line 192
+    .line 194
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setClickable(Z)V
 
-    .line 193
+    .line 195
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setLongClickable(Z)V
 
     return-void
@@ -3290,12 +3316,12 @@
 .method public onHideAnimationEnd()V
     .locals 1
 
-    .line 885
+    .line 894
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->onStop()V
 
     const/4 v0, 0x0
 
-    .line 886
+    .line 895
     iput-boolean v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mShowHideAnimating:Z
 
     return-void
@@ -3306,10 +3332,10 @@
 
     const/4 v0, 0x1
 
-    .line 880
+    .line 889
     iput-boolean v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mShowHideAnimating:Z
 
-    .line 881
+    .line 890
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     iget v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mOldWpStepX:F
@@ -3330,7 +3356,7 @@
 
     const/4 v0, 0x1
 
-    .line 924
+    .line 933
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->exitEditableMode(ZZ)Z
 
     move-result v0
@@ -3339,7 +3365,7 @@
 
     return-void
 
-    .line 927
+    .line 936
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
@@ -3361,14 +3387,14 @@
 .method onPinchIn(Landroid/view/ScaleGestureDetector;)Z
     .locals 0
 
-    .line 649
+    .line 651
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInEditMode()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 650
+    .line 652
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->gotoEditMode()V
 
     const/4 p1, 0x1
@@ -3384,14 +3410,14 @@
 .method onPinchOut(Landroid/view/ScaleGestureDetector;)Z
     .locals 0
 
-    .line 641
+    .line 643
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInEditMode()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 642
+    .line 644
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->exitEditMode()V
 
     const/4 p1, 0x1
@@ -3415,20 +3441,20 @@
         }
     .end annotation
 
-    .line 770
+    .line 779
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
-    .line 772
+    .line 781
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditFocusedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     if-eqz v0, :cond_6
 
-    .line 773
+    .line 782
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/SpriteView;->getSpriteData()Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     move-result-object v0
@@ -3436,7 +3462,7 @@
     :goto_0
     if-eqz p2, :cond_2
 
-    .line 780
+    .line 789
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getFunction()Lcom/miui/home/launcher/upsidescene/data/Function;
 
     move-result-object p2
@@ -3449,7 +3475,7 @@
 
     if-ne p2, v1, :cond_1
 
-    .line 781
+    .line 790
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getFunction()Lcom/miui/home/launcher/upsidescene/data/Function;
 
     move-result-object p2
@@ -3458,7 +3484,7 @@
 
     goto :goto_1
 
-    .line 783
+    .line 792
     :cond_1
     invoke-static {v1}, Lcom/miui/home/launcher/upsidescene/data/Function;->createFunction(I)Lcom/miui/home/launcher/upsidescene/data/Function;
 
@@ -3466,16 +3492,16 @@
 
     check-cast p2, Lcom/miui/home/launcher/upsidescene/data/Function$FolderFunction;
 
-    .line 784
+    .line 793
     invoke-virtual {v0, p2}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->setFunction(Lcom/miui/home/launcher/upsidescene/data/Function;)V
 
-    .line 786
+    .line 795
     :goto_1
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/upsidescene/data/Function$FolderFunction;->setComponentNames(Ljava/util/List;)V
 
     goto :goto_3
 
-    .line 789
+    .line 798
     :cond_2
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getFunction()Lcom/miui/home/launcher/upsidescene/data/Function;
 
@@ -3489,7 +3515,7 @@
 
     if-ne p2, v1, :cond_3
 
-    .line 790
+    .line 799
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getFunction()Lcom/miui/home/launcher/upsidescene/data/Function;
 
     move-result-object p2
@@ -3498,7 +3524,7 @@
 
     goto :goto_2
 
-    .line 792
+    .line 801
     :cond_3
     invoke-static {v1}, Lcom/miui/home/launcher/upsidescene/data/Function;->createFunction(I)Lcom/miui/home/launcher/upsidescene/data/Function;
 
@@ -3506,13 +3532,13 @@
 
     check-cast p2, Lcom/miui/home/launcher/upsidescene/data/Function$AppFunction;
 
-    .line 793
+    .line 802
     invoke-virtual {v0, p2}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->setFunction(Lcom/miui/home/launcher/upsidescene/data/Function;)V
 
     :goto_2
     const/4 v1, 0x0
 
-    .line 795
+    .line 804
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -3521,18 +3547,18 @@
 
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/upsidescene/data/Function$AppFunction;->setComponentName(Landroid/content/ComponentName;)V
 
-    .line 798
+    .line 807
     :goto_3
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     if-eq v0, p1, :cond_4
 
-    .line 799
+    .line 808
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditFocusedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/SpriteView;->rebuildContentView()V
 
-    .line 802
+    .line 811
     :cond_4
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInEditMode()Z
 
@@ -3540,7 +3566,7 @@
 
     if-eqz p1, :cond_5
 
-    .line 803
+    .line 812
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditModeBottomBar:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->refreshFreeButtonCheckbox()V
@@ -3557,7 +3583,7 @@
 
     const/4 v0, 0x0
 
-    .line 876
+    .line 885
     iput-boolean v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mShowHideAnimating:Z
 
     return-void
@@ -3568,18 +3594,18 @@
 
     const/4 v0, 0x1
 
-    .line 857
+    .line 866
     iput-boolean v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mShowHideAnimating:Z
 
     const/4 v0, 0x0
 
-    .line 858
+    .line 867
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setVisibility(I)V
 
-    .line 859
+    .line 868
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->onStart()V
 
-    .line 861
+    .line 870
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
@@ -3592,7 +3618,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mOldWpStepX:F
 
-    .line 862
+    .line 871
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
@@ -3605,7 +3631,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mOldWpOffsetX:F
 
-    .line 864
+    .line 873
     new-instance v0, Lcom/miui/home/launcher/upsidescene/SceneScreen$6;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen$6;-><init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
@@ -3618,12 +3644,12 @@
 .method public onStart()V
     .locals 4
 
-    .line 939
+    .line 948
     iget-boolean v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mIsStarted:Z
 
     if-nez v0, :cond_0
 
-    .line 940
+    .line 949
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mExitSceneReceiver:Landroid/content/BroadcastReceiver;
@@ -3638,7 +3664,7 @@
 
     const/4 v0, 0x1
 
-    .line 941
+    .line 950
     iput-boolean v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mIsStarted:Z
 
     :cond_0
@@ -3648,12 +3674,12 @@
 .method public onStop()V
     .locals 2
 
-    .line 932
+    .line 941
     iget-boolean v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mIsStarted:Z
 
     if-eqz v0, :cond_0
 
-    .line 933
+    .line 942
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mExitSceneReceiver:Landroid/content/BroadcastReceiver;
@@ -3662,7 +3688,7 @@
 
     const/4 v0, 0x0
 
-    .line 934
+    .line 943
     iput-boolean v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mIsStarted:Z
 
     :cond_0
@@ -3672,7 +3698,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 3
 
-    .line 297
+    .line 299
     iget-boolean v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mIsTouchExecutedThisTime:Z
 
     if-eqz v0, :cond_0
@@ -3681,7 +3707,7 @@
 
     return p1
 
-    .line 300
+    .line 302
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInEditMode()Z
 
@@ -3695,7 +3721,7 @@
 
     if-nez v0, :cond_1
 
-    .line 301
+    .line 303
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
@@ -3714,7 +3740,7 @@
 
     if-gtz v0, :cond_2
 
-    .line 302
+    .line 304
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isSelectViewShowing()Z
 
@@ -3727,7 +3753,7 @@
 
     return p1
 
-    .line 305
+    .line 307
     :cond_3
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -3739,7 +3765,7 @@
 .method public performClick()Z
     .locals 3
 
-    .line 318
+    .line 320
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInEditMode()Z
 
     move-result v0
@@ -3752,7 +3778,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 319
+    .line 321
     iget v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLastMotionX:F
 
     iget v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLastMotionY:F
@@ -3763,14 +3789,14 @@
 
     move-result-object v0
 
-    .line 320
+    .line 322
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setEditFocusedSprite(Lcom/miui/home/launcher/upsidescene/SpriteView;)V
 
     const/4 v0, 0x1
 
     return v0
 
-    .line 323
+    .line 325
     :cond_0
     invoke-super {p0}, Landroid/widget/FrameLayout;->performClick()Z
 
@@ -3782,7 +3808,7 @@
 .method public performLongClick()Z
     .locals 3
 
-    .line 432
+    .line 434
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isSelectViewShowing()Z
 
     move-result v0
@@ -3793,7 +3819,7 @@
 
     return v1
 
-    .line 436
+    .line 438
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInMoveMode()Z
 
@@ -3807,10 +3833,10 @@
 
     if-nez v0, :cond_1
 
-    .line 437
+    .line 439
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->gotoMoveMode()V
 
-    .line 440
+    .line 442
     :cond_1
     iget v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLastMotionX:F
 
@@ -3822,7 +3848,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 442
+    .line 444
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->dragSpriteView(Lcom/miui/home/launcher/upsidescene/SpriteView;)V
 
     :cond_2
@@ -3834,7 +3860,7 @@
 
     const/16 v0, 0xf
 
-    .line 1175
+    .line 1184
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->notifyGadgets(I)V
 
     return-void
@@ -3843,12 +3869,12 @@
 .method public removeDraggedSprite()V
     .locals 2
 
-    .line 836
+    .line 845
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDraggedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     if-eqz v0, :cond_0
 
-    .line 837
+    .line 846
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/SpriteView;->getParentLayout()Lcom/miui/home/launcher/upsidescene/FreeLayout;
 
     move-result-object v0
@@ -3857,7 +3883,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/FreeLayout;->removeSprite(Lcom/miui/home/launcher/upsidescene/SpriteView;)V
 
-    .line 838
+    .line 847
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isInEditMode()Z
 
     move-result v0
@@ -3866,7 +3892,7 @@
 
     const/4 v0, 0x0
 
-    .line 839
+    .line 848
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setEditFocusedSprite(Lcom/miui/home/launcher/upsidescene/SpriteView;)V
 
     :cond_0
@@ -3878,10 +3904,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 311
+    .line 313
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->cancelLongPress()V
 
-    .line 313
+    .line 315
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->requestDisallowInterceptTouchEvent(Z)V
 
@@ -3891,48 +3917,48 @@
 .method public reset()V
     .locals 3
 
-    .line 958
+    .line 967
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mFreeStyle:Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
 
     if-eqz v0, :cond_0
 
-    .line 959
-    new-instance v0, Landroid/app/AlertDialog$Builder;
+    .line 968
+    new-instance v0, Lmiuix/appcompat/app/AlertDialog$Builder;
 
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     const v1, 0x1010355
 
-    .line 960
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setIconAttribute(I)Landroid/app/AlertDialog$Builder;
+    .line 969
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setIconAttribute(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     const v1, 0x1040014
 
-    .line 961
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+    .line 970
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
-    .line 962
+    .line 971
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f100224
+    const v2, 0x7f100302
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     const/4 v1, 0x1
 
-    .line 963
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
+    .line 972
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Lmiuix/appcompat/app/AlertDialog$Builder;
 
-    .line 964
+    .line 973
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f1000a2
+    const v2, 0x7f1000a5
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3940,12 +3966,12 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
-    .line 965
+    .line 974
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f1000bd
+    const v2, 0x7f100105
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3955,14 +3981,14 @@
 
     invoke-direct {v2, p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen$7;-><init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
 
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
-    .line 980
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+    .line 989
+    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
+    invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->show()V
 
     :cond_0
     return-void
@@ -3971,7 +3997,7 @@
 .method public save()V
     .locals 2
 
-    .line 1171
+    .line 1180
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSerializer:Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializable;
 
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mFreeStyle:Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
@@ -3984,7 +4010,7 @@
 .method public setDragController(Lcom/miui/home/launcher/DragController;)V
     .locals 0
 
-    .line 1004
+    .line 1013
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDragController:Lcom/miui/home/launcher/DragController;
 
     return-void
@@ -3993,10 +4019,10 @@
 .method public setEditFocusedSprite(Lcom/miui/home/launcher/upsidescene/SpriteView;)V
     .locals 2
 
-    .line 657
+    .line 659
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditFocusedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
-    .line 658
+    .line 660
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditFocusedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     const/4 v0, 0x2
@@ -4005,17 +4031,17 @@
 
     const/4 v1, 0x3
 
-    .line 659
+    .line 661
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/upsidescene/SpriteView;->setState(I)V
 
     const/4 p1, 0x4
 
-    .line 660
+    .line 662
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditFocusedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     invoke-direct {p0, p1, v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setAllSpriteState(ILcom/miui/home/launcher/upsidescene/SpriteView;)V
 
-    .line 662
+    .line 664
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditFocusedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/SpriteView;->getSpriteData()Lcom/miui/home/launcher/upsidescene/data/Sprite;
@@ -4034,7 +4060,7 @@
 
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditFocusedSprite:Lcom/miui/home/launcher/upsidescene/SpriteView;
 
-    .line 663
+    .line 665
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/SpriteView;->getSpriteData()Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     move-result-object p1
@@ -4051,12 +4077,12 @@
 
     const/4 p1, 0x1
 
-    .line 664
+    .line 666
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->showSelectApps(Z)V
 
     goto :goto_0
 
-    .line 667
+    .line 669
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isDragging()Z
 
@@ -4066,10 +4092,10 @@
 
     const/4 p1, 0x0
 
-    .line 668
+    .line 670
     invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->setAllSpriteState(ILcom/miui/home/launcher/upsidescene/SpriteView;)V
 
-    .line 672
+    .line 674
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditModeBottomBar:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
@@ -4082,7 +4108,7 @@
 .method public setFreeStyle(Lcom/miui/home/launcher/upsidescene/data/FreeStyle;)V
     .locals 2
 
-    .line 211
+    .line 213
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mFreeStyle:Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
 
     if-nez v0, :cond_0
@@ -4094,44 +4120,44 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 212
+    .line 214
     :goto_0
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mFreeStyle:Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
 
     if-eqz v0, :cond_1
 
-    .line 215
+    .line 217
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/upsidescene/SceneContentView;->setSceneScreen(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
 
-    .line 216
+    .line 218
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->setSceneScreen(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
 
-    .line 217
+    .line 219
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mBackgroundScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->setSceneScreen(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
 
-    .line 218
+    .line 220
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mForegroundScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->setSceneScreen(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
 
-    .line 219
+    .line 221
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->setSceneScreen(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
 
-    .line 222
+    .line 224
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditModeBottomBar:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->setSceneScreen(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
 
-    .line 224
+    .line 226
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mForegroundScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->getForegroundScreen()Lcom/miui/home/launcher/upsidescene/data/Screen;
@@ -4140,7 +4166,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->setScreenData(Lcom/miui/home/launcher/upsidescene/data/Screen;)V
 
-    .line 225
+    .line 227
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mBackgroundScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->getBackgroundScreen()Lcom/miui/home/launcher/upsidescene/data/Screen;
@@ -4149,7 +4175,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/FixedScreen;->setScreenData(Lcom/miui/home/launcher/upsidescene/data/Screen;)V
 
-    .line 226
+    .line 228
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mScrollableScreen:Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->getDriftScreen()Lcom/miui/home/launcher/upsidescene/data/Screen;
@@ -4158,7 +4184,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->setScreenData(Lcom/miui/home/launcher/upsidescene/data/Screen;)V
 
-    .line 227
+    .line 229
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mDockScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyle;->getDockScreen()Lcom/miui/home/launcher/upsidescene/data/Screen;
@@ -4173,17 +4199,17 @@
 .method public setLauncher(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 197
+    .line 199
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 198
+    .line 200
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAppWidgetHost()Lcom/miui/home/launcher/LauncherAppWidgetHost;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mAppWidgetHost:Lcom/miui/home/launcher/LauncherAppWidgetHost;
 
-    .line 199
+    .line 201
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Landroid/appwidget/AppWidgetManager;->getInstance(Landroid/content/Context;)Landroid/appwidget/AppWidgetManager;
@@ -4198,7 +4224,7 @@
 .method public showSelectApps(Z)V
     .locals 4
 
-    .line 676
+    .line 678
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSpriteForDrop:Lcom/miui/home/launcher/upsidescene/data/Sprite;
 
     if-eqz v0, :cond_0
@@ -4212,20 +4238,20 @@
 
     move-result-object v0
 
-    .line 677
+    .line 679
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mAppsSelectView:Lcom/miui/home/launcher/upsidescene/AppsSelectView;
 
     if-nez v1, :cond_3
 
-    .line 678
+    .line 680
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     if-eqz p1, :cond_1
 
-    .line 680
+    .line 682
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getFunction()Lcom/miui/home/launcher/upsidescene/data/Function;
 
     move-result-object v2
@@ -4238,14 +4264,14 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 681
+    .line 683
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getFunction()Lcom/miui/home/launcher/upsidescene/data/Function;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/upsidescene/data/Function$FolderFunction;
 
-    .line 682
+    .line 684
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/data/Function$FolderFunction;->getComponentNames(Landroid/content/Context;)Ljava/util/List;
@@ -4254,7 +4280,7 @@
 
     goto :goto_1
 
-    .line 685
+    .line 687
     :cond_1
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getFunction()Lcom/miui/home/launcher/upsidescene/data/Function;
 
@@ -4268,7 +4294,7 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 686
+    .line 688
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Sprite;->getFunction()Lcom/miui/home/launcher/upsidescene/data/Function;
 
     move-result-object v0
@@ -4277,14 +4303,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 687
+    .line 689
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/data/Function$AppFunction;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v0
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 690
+    .line 692
     :cond_2
     :goto_1
     new-instance v0, Lcom/miui/home/launcher/upsidescene/AppsSelectView;
@@ -4307,7 +4333,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mAppsSelectView:Lcom/miui/home/launcher/upsidescene/AppsSelectView;
 
-    .line 691
+    .line 693
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mAppsSelectView:Lcom/miui/home/launcher/upsidescene/AppsSelectView;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->addView(Landroid/view/View;)V

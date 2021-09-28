@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/LauncherModel$5;
+.class Lcom/miui/home/launcher/LauncherModel$5;
 .super Ljava/lang/Object;
 .source "LauncherModel.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -29,7 +29,7 @@
 .method constructor <init>(Landroid/content/ContentResolver;Lcom/miui/home/launcher/ItemInfo;Landroid/content/Context;)V
     .locals 0
 
-    .line 784
+    .line 787
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$5;->val$cr:Landroid/content/ContentResolver;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$5;->val$item:Lcom/miui/home/launcher/ItemInfo;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 4
 
-    .line 786
+    .line 789
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$5;->val$cr:Landroid/content/ContentResolver;
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$5;->val$item:Lcom/miui/home/launcher/ItemInfo;
@@ -61,35 +61,37 @@
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 787
+    .line 790
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$5;->val$item:Lcom/miui/home/launcher/ItemInfo;
 
     instance-of v1, v0, Lcom/miui/home/launcher/ShortcutInfo;
 
     if-eqz v1, :cond_0
 
-    .line 788
+    .line 791
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 789
+    .line 792
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$5;->val$context:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/LauncherApplication;
+    invoke-static {v1}, Lcom/miui/home/launcher/Application;->getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/Application;
 
-    invoke-static {}, Lcom/miui/home/launcher/LauncherApplication;->getModel()Lcom/miui/home/launcher/LauncherModel;
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/Application;->getModel()Lcom/miui/home/launcher/LauncherModel;
 
     move-result-object v1
 
     invoke-static {v1, v0}, Lcom/miui/home/launcher/LauncherModel;->access$600(Lcom/miui/home/launcher/LauncherModel;Lcom/miui/home/launcher/ShortcutInfo;)V
 
-    .line 790
+    .line 793
     iget v1, v0, Lcom/miui/home/launcher/ShortcutInfo;->itemType:I
 
     const/16 v2, 0xe
 
     if-ne v1, v2, :cond_0
 
-    .line 791
+    .line 794
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$5;->val$context:Landroid/content/Context;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;

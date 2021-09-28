@@ -17,7 +17,7 @@
         android:layout_height="0.39999998dip"
         android:layout_marginBottom="@dimen/all_apps_work_profile_tab_footer_top_padding"
         android:importantForAccessibility="no" />
-    <miui.widget.SlidingButton
+    <miuix.slidingwidget.widget.SlidingButton
         android:id="@id/work_mode_toggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

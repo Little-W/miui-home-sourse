@@ -1,4 +1,4 @@
-.class final Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer$1;
+.class Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer$1;
 .super Landroidx/dynamicanimation/animation/FloatPropertyCompat;
 .source "LayerAdaptiveIconDrawable.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

@@ -118,6 +118,7 @@
     :goto_1
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
+    .line 49
     throw p1
 .end method
 

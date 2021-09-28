@@ -701,41 +701,6 @@
     return-void
 .end method
 
-.method public remove(I)V
-    .locals 3
-
-    .line 139
-    iget-object v0, p0, Landroidx/collection/SparseArrayCompat;->mKeys:[I
-
-    iget v1, p0, Landroidx/collection/SparseArrayCompat;->mSize:I
-
-    invoke-static {v0, v1, p1}, Landroidx/collection/ContainerHelpers;->binarySearch([III)I
-
-    move-result p1
-
-    if-ltz p1, :cond_0
-
-    .line 142
-    iget-object v0, p0, Landroidx/collection/SparseArrayCompat;->mValues:[Ljava/lang/Object;
-
-    aget-object v1, v0, p1
-
-    sget-object v2, Landroidx/collection/SparseArrayCompat;->DELETED:Ljava/lang/Object;
-
-    if-eq v1, v2, :cond_0
-
-    .line 143
-    aput-object v2, v0, p1
-
-    const/4 p1, 0x1
-
-    .line 144
-    iput-boolean p1, p0, Landroidx/collection/SparseArrayCompat;->mGarbage:Z
-
-    :cond_0
-    return-void
-.end method
-
 .method public size()I
     .locals 1
 

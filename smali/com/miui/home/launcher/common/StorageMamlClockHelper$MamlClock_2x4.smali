@@ -142,11 +142,11 @@
 
     if-eqz v0, :cond_0
 
+    .line 89
     iget-object v0, p0, Lcom/miui/home/launcher/common/StorageMamlClockHelper$MamlClock_2x4;->localeTitlesMap:Ljava/util/Map;
 
     const-string v2, "fallback"
 
-    .line 89
     invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -169,12 +169,12 @@
 
     goto :goto_0
 
+    .line 90
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/common/StorageMamlClockHelper$MamlClock_2x4;->localeTitlesMap:Ljava/util/Map;
 
     const-string v2, "en_US"
 
-    .line 90
     invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
