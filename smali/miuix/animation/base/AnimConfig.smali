@@ -506,6 +506,15 @@
     return-void
 .end method
 
+.method public setTintMode(I)Lmiuix/animation/base/AnimConfig;
+    .locals 0
+
+    .line 136
+    iput p1, p0, Lmiuix/animation/base/AnimConfig;->tintMode:I
+
+    return-object p0
+.end method
+
 .method public toString()Ljava/lang/String;
     .locals 3
 

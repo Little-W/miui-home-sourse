@@ -97,8 +97,6 @@
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 45
     new-instance p0, Lcom/miui/home/launcher/upsidescene/data/Appearance$NoneAppearance;
 
@@ -171,8 +169,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 55
     new-instance p0, Lcom/miui/home/launcher/upsidescene/data/Appearance$NoneAppearance;

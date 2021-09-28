@@ -72,6 +72,23 @@
 
     invoke-virtual {v1, v0, v2, v3, v4}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->updateStatus(Lcom/miui/home/launcher/Launcher;ILjava/lang/String;Landroid/net/Uri;)V
 
+    .line 378
+    iget-object v1, p0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor$4;->val$info:Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor$4;->val$info:Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
+
+    iget v2, v2, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressStatus:I
+
+    iget-object v3, p0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor$4;->val$info:Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
+
+    iget v3, v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressPercent:I
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/miui/home/launcher/Launcher;->updateWidgetProgress(Ljava/lang/String;II)V
+
     :cond_0
     return-void
 .end method

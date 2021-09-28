@@ -209,8 +209,6 @@
     const-string v1, "createDimLayer"
 
     .line 59
-    invoke-static {p1, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
     :cond_2
     const/4 p1, 0x1
 
@@ -483,18 +481,6 @@
     return v0
 .end method
 
-.method public getDimAlphaByRectProgress(FFF)F
-    .locals 0
-
-    sub-float/2addr p1, p3
-
-    sub-float/2addr p2, p3
-
-    div-float/2addr p1, p2
-
-    return p1
-.end method
-
 .method public removeDimLayer()V
     .locals 4
 
@@ -529,13 +515,11 @@
     const-string v1, "DimLayer"
 
     const-string v2, "removeDimLayer"
-
-    .line 73
-    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 73
     goto :goto_0
 
     :catchall_0

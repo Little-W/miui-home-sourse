@@ -1,4 +1,4 @@
-.class final Lcom/miui/maml/folme/AnimatedProperty$12;
+.class Lcom/miui/maml/folme/AnimatedProperty$12;
 .super Lcom/miui/maml/folme/AnimatedProperty$AnimatedColorProperty;
 .source "AnimatedProperty.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

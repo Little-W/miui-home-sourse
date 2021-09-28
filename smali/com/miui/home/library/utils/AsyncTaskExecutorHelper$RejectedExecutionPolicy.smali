@@ -21,7 +21,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 90
+    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,14 +30,14 @@
 .method public static executeRejectedTaskIfNeeded()V
     .locals 3
 
-    .line 107
+    .line 105
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->access$000()Ljava/util/ArrayList;
 
     move-result-object v0
 
     monitor-enter v0
 
-    .line 108
+    .line 106
     :try_start_0
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->access$000()Ljava/util/ArrayList;
 
@@ -49,7 +49,7 @@
 
     if-lez v1, :cond_0
 
-    .line 109
+    .line 107
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->access$000()Ljava/util/ArrayList;
 
     move-result-object v1
@@ -64,12 +64,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 111
+    .line 109
     sget-object v2, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->LAUNCHER_THREAD_POOL_EXECUTOR:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-virtual {v2, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 114
+    .line 112
     :cond_0
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->access$000()Ljava/util/ArrayList;
 
@@ -81,10 +81,10 @@
 
     if-nez v1, :cond_1
 
-    .line 115
+    .line 113
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->access$100()V
 
-    .line 117
+    .line 115
     :cond_1
     monitor-exit v0
 
@@ -105,14 +105,14 @@
 .method public rejectedExecution(Ljava/lang/Runnable;Ljava/util/concurrent/ThreadPoolExecutor;)V
     .locals 1
 
-    .line 100
+    .line 98
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->access$000()Ljava/util/ArrayList;
 
     move-result-object p2
 
     monitor-enter p2
 
-    .line 101
+    .line 99
     :try_start_0
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->access$000()Ljava/util/ArrayList;
 
@@ -120,10 +120,10 @@
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 102
+    .line 100
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->access$100()V
 
-    .line 103
+    .line 101
     monitor-exit p2
 
     return-void

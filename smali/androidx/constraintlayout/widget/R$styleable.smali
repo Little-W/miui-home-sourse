@@ -363,13 +363,11 @@
         0x1010120
         0x101013f
         0x1010140
-        0x7f040084
         0x7f040085
-        0x7f0400aa
-        0x7f0400ec
-        0x7f0400ed
-        0x7f040198
-        0x7f040199
+        0x7f040086
+        0x7f0400ac
+        0x7f0400ee
+        0x7f0400ef
         0x7f04019a
         0x7f04019b
         0x7f04019c
@@ -409,21 +407,23 @@
         0x7f0401be
         0x7f0401bf
         0x7f0401c0
+        0x7f0401c1
         0x7f0401c2
-        0x7f0401c3
         0x7f0401c4
         0x7f0401c5
         0x7f0401c6
         0x7f0401c7
         0x7f0401c8
         0x7f0401c9
-        0x7f0401cc
+        0x7f0401ca
+        0x7f0401cb
+        0x7f0401ce
     .end array-data
 
     :array_1
     .array-data 4
-        0x7f0400ef
-        0x7f040141
+        0x7f0400f1
+        0x7f040143
     .end array-data
 
     :array_2
@@ -455,12 +455,10 @@
         0x10103b6
         0x10103fa
         0x1010440
-        0x7f040084
         0x7f040085
-        0x7f0400aa
-        0x7f0400ed
-        0x7f040198
-        0x7f040199
+        0x7f040086
+        0x7f0400ac
+        0x7f0400ef
         0x7f04019a
         0x7f04019b
         0x7f04019c
@@ -500,13 +498,15 @@
         0x7f0401be
         0x7f0401bf
         0x7f0401c0
+        0x7f0401c1
         0x7f0401c2
-        0x7f0401c3
         0x7f0401c4
         0x7f0401c5
         0x7f0401c6
         0x7f0401c7
         0x7f0401c8
         0x7f0401c9
+        0x7f0401ca
+        0x7f0401cb
     .end array-data
 .end method

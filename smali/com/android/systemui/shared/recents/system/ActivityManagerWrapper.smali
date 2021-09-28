@@ -73,35 +73,35 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 62
+    .line 61
     new-instance v0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     invoke-direct {v0}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;-><init>()V
 
     sput-object v0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->sInstance:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
-    .line 69
+    .line 68
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->sRecentsBlacklist:Ljava/util/List;
 
-    .line 70
+    .line 69
     sget-object v0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->sRecentsBlacklist:Ljava/util/List;
 
     const-string v1, "com.android.systemui.tv.pip.PipOnboardingActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 71
+    .line 70
     sget-object v0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->sRecentsBlacklist:Ljava/util/List;
 
     const-string v1, "com.android.systemui.tv.pip.PipMenuActivity"
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 72
+    .line 71
     sget-object v0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->sRecentsBlacklist:Ljava/util/List;
 
     const-string v1, "com.android.systemui.recents.RecentsActivity"
@@ -114,20 +114,20 @@
 .method private constructor <init>()V
     .locals 2
 
-    .line 87
+    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
+    .line 87
     invoke-static {}, Landroid/app/AppGlobals;->getInitialApplication()Landroid/app/Application;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mContext:Landroid/content/Context;
 
-    .line 89
+    .line 88
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mContext:Landroid/content/Context;
 
-    const-string v1, "window"
+    const-string/jumbo v1, "window"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -137,7 +137,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mWm:Landroid/view/WindowManager;
 
-    .line 90
+    .line 89
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -146,14 +146,14 @@
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 91
+    .line 90
     invoke-static {}, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->get()Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mBackgroundExecutor:Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
 
-    .line 92
+    .line 91
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mWm:Landroid/view/WindowManager;
 
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -162,7 +162,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mDisplay:Landroid/view/Display;
 
-    .line 93
+    .line 92
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/systemui/shared/recents/webapps/WebAppDAO;->getInstance(Landroid/content/Context;)Lcom/android/systemui/shared/recents/webapps/WebAppDAO;
@@ -171,7 +171,7 @@
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mWebAppDAO:Lcom/android/systemui/shared/recents/webapps/WebAppDAO;
 
-    .line 94
+    .line 93
     new-instance v0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -188,14 +188,14 @@
 .method private createTaskSnapshot(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
     .locals 1
 
-    .line 248
+    .line 247
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidS()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 249
+    .line 248
     iget p1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
 
     invoke-static {p1}, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVS;->create(I)Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
@@ -204,7 +204,7 @@
 
     return-object p1
 
-    .line 250
+    .line 249
     :cond_0
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidR()Z
 
@@ -212,7 +212,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 251
+    .line 250
     iget p1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
 
     invoke-static {p1}, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVR;->create(I)Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
@@ -221,7 +221,7 @@
 
     return-object p1
 
-    .line 253
+    .line 252
     :cond_1
     iget p1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
 
@@ -235,7 +235,7 @@
 .method private getBadgedLabel(Ljava/lang/String;I)Ljava/lang/String;
     .locals 2
 
-    .line 305
+    .line 304
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -246,7 +246,7 @@
 
     if-eq p2, v0, :cond_0
 
-    .line 306
+    .line 305
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mPackageManager:Landroid/content/pm/PackageManager;
 
     new-instance v1, Landroid/os/UserHandle;
@@ -268,7 +268,7 @@
 .method public static getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
     .locals 1
 
-    .line 98
+    .line 97
     sget-object v0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->sInstance:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     return-object v0
@@ -277,7 +277,7 @@
 .method private static getTaskSnapshotScaleAtLeastAndroidR(Landroid/app/ActivityManager$TaskSnapshot;)Landroid/graphics/Point;
     .locals 4
 
-    .line 260
+    .line 259
     :try_start_0
     sget-object v0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->sGetTaskSnapshotSizeMethod:Ljava/lang/reflect/Method;
 
@@ -285,12 +285,12 @@
 
     if-nez v0, :cond_0
 
-    .line 261
+    .line 260
     const-class v0, Landroid/app/ActivityManager$TaskSnapshot;
 
     const-string v2, "getTaskSize"
 
-    .line 262
+    .line 261
     new-array v3, v1, [Ljava/lang/Class;
 
     invoke-virtual {v0, v2, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
@@ -299,7 +299,7 @@
 
     sput-object v0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->sGetTaskSnapshotSizeMethod:Ljava/lang/reflect/Method;
 
-    .line 264
+    .line 263
     :cond_0
     sget-object v0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->sGetTaskSnapshotSizeMethod:Ljava/lang/reflect/Method;
 
@@ -318,7 +318,7 @@
     :catch_0
     move-exception p0
 
-    .line 266
+    .line 265
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 p0, 0x0
@@ -329,7 +329,7 @@
 .method private modifyActivityOptions(Lcom/android/systemui/shared/recents/model/Task$TaskKey;Landroid/app/ActivityOptions;II)V
     .locals 1
 
-    .line 538
+    .line 524
     iget p1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->windowingMode:I
 
     const/4 v0, 0x3
@@ -338,7 +338,7 @@
 
     if-nez p2, :cond_0
 
-    .line 542
+    .line 528
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
     move-result-object p2
@@ -346,7 +346,7 @@
     :cond_0
     const/4 p1, 0x4
 
-    .line 544
+    .line 530
     invoke-virtual {p2, p1}, Landroid/app/ActivityOptions;->setLaunchWindowingMode(I)V
 
     goto :goto_0
@@ -359,16 +359,16 @@
     :cond_2
     if-nez p2, :cond_3
 
-    .line 548
+    .line 534
     invoke-static {}, Landroid/app/ActivityOptions;->makeBasic()Landroid/app/ActivityOptions;
 
     move-result-object p2
 
-    .line 550
+    .line 536
     :cond_3
     invoke-virtual {p2, p3}, Landroid/app/ActivityOptions;->setLaunchWindowingMode(I)V
 
-    .line 551
+    .line 537
     invoke-virtual {p2, p4}, Landroid/app/ActivityOptions;->setLaunchActivityType(I)V
 
     :cond_4
@@ -383,7 +383,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 429
+    .line 415
     new-instance v1, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$4;
 
     invoke-direct {v1, p0, p2}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$4;-><init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;)V
@@ -397,7 +397,7 @@
     :try_start_0
     const-string p2, "android.app.IActivityTaskManager"
 
-    .line 456
+    .line 442
     invoke-static {p2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -411,7 +411,7 @@
     :catch_0
     move-exception p2
 
-    .line 458
+    .line 444
     invoke-virtual {p2}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
 
     move-object v2, v0
@@ -426,10 +426,10 @@
 
     const-string v0, "startRecentsActivityAtLeastS"
 
-    .line 463
+    .line 449
     invoke-static {p2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 464
+    .line 450
     invoke-static {}, Landroid/app/ActivityTaskManager;->getService()Landroid/app/IActivityTaskManager;
 
     move-result-object v3
@@ -464,7 +464,7 @@
 
     aput-object p1, p2, v7
 
-    .line 466
+    .line 452
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v10
@@ -479,7 +479,7 @@
 
     move-object v7, p2
 
-    .line 464
+    .line 450
     invoke-static/range {v2 .. v7}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
@@ -492,7 +492,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 372
+    .line 358
     :try_start_0
     new-instance v1, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$2;
 
@@ -506,12 +506,12 @@
     :goto_0
     if-eqz p3, :cond_1
 
-    .line 383
+    .line 369
     new-instance v0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$3;
 
     invoke-direct {v0, p0, p3}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$3;-><init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;)V
 
-    .line 420
+    .line 406
     :cond_1
     invoke-static {}, Landroid/app/ActivityTaskManager;->getService()Landroid/app/IActivityTaskManager;
 
@@ -530,7 +530,7 @@
 .method public cancelRecentsAnimation(Z)V
     .locals 2
 
-    .line 486
+    .line 472
     :try_start_0
     invoke-static {}, Landroid/app/ActivityTaskManager;->getService()Landroid/app/IActivityTaskManager;
 
@@ -549,7 +549,7 @@
 
     const-string v1, "Failed to cancel recents animation"
 
-    .line 488
+    .line 474
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -559,7 +559,7 @@
 .method public closeSystemWindows(Ljava/lang/String;)V
     .locals 2
 
-    .line 122
+    .line 121
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mBackgroundExecutor:Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
 
     new-instance v1, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$1;
@@ -571,10 +571,81 @@
     return-void
 .end method
 
+.method public filterTasks(Ljava/util/List;II)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Landroid/app/ActivityManager$RunningTaskInfo;",
+            ">;II)V"
+        }
+    .end annotation
+
+    .line 324
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    .line 325
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 326
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/ActivityManager$RunningTaskInfo;
+
+    const/4 v1, -0x1
+
+    if-eq p2, v1, :cond_1
+
+    .line 327
+    iget-object v2, v0, Landroid/app/ActivityManager$RunningTaskInfo;->configuration:Landroid/content/res/Configuration;
+
+    iget-object v2, v2, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+
+    invoke-virtual {v2}, Landroid/app/WindowConfiguration;->getActivityType()I
+
+    move-result v2
+
+    if-eq v2, p2, :cond_2
+
+    :cond_1
+    if-eq p3, v1, :cond_0
+
+    iget-object v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->configuration:Landroid/content/res/Configuration;
+
+    iget-object v0, v0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
+
+    .line 328
+    invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getWindowingMode()I
+
+    move-result v0
+
+    if-ne v0, p3, :cond_0
+
+    .line 329
+    :cond_2
+    invoke-interface {p1}, Ljava/util/Iterator;->remove()V
+
+    goto :goto_0
+
+    :cond_3
+    return-void
+.end method
+
 .method public getBadgedActivityLabel(Landroid/content/pm/ActivityInfo;I)Ljava/lang/String;
     .locals 2
 
-    .line 288
+    .line 287
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mPackageManager:Landroid/content/pm/PackageManager;
 
     const/4 v1, 0x0
@@ -583,7 +654,7 @@
 
     return-object v1
 
-    .line 291
+    .line 290
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mWebAppDAO:Lcom/android/systemui/shared/recents/webapps/WebAppDAO;
 
@@ -593,13 +664,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 293
+    .line 292
     iget-object v1, v0, Lcom/android/systemui/shared/recents/webapps/WebAppInfo;->mLabel:Ljava/lang/String;
 
     :cond_1
     if-nez v1, :cond_2
 
-    .line 296
+    .line 295
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mPackageManager:Landroid/content/pm/PackageManager;
 
     invoke-virtual {p1, v0}, Landroid/content/pm/ActivityInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
@@ -610,7 +681,7 @@
 
     move-result-object v1
 
-    .line 298
+    .line 297
     :cond_2
     invoke-direct {p0, v1, p2}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getBadgedLabel(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -622,7 +693,7 @@
 .method public getBadgedContentDescription(Landroid/content/pm/ActivityInfo;I)Ljava/lang/String;
     .locals 2
 
-    .line 316
+    .line 315
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mPackageManager:Landroid/content/pm/PackageManager;
 
     invoke-virtual {p1, v0}, Landroid/content/pm/ActivityInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
@@ -633,7 +704,7 @@
 
     move-result-object v0
 
-    .line 317
+    .line 316
     iget-object p1, p1, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mPackageManager:Landroid/content/pm/PackageManager;
@@ -646,12 +717,12 @@
 
     move-result-object p1
 
-    .line 318
+    .line 317
     invoke-direct {p0, p1, p2}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getBadgedLabel(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 319
+    .line 318
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -660,7 +731,7 @@
 
     goto :goto_0
 
-    .line 321
+    .line 320
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -687,12 +758,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 223
+    .line 222
     iget-object v0, p1, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
 
     if-eqz v0, :cond_0
 
-    .line 224
+    .line 223
     iget-object p1, p1, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
@@ -714,7 +785,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 593
+    .line 579
     :try_start_0
     iget p1, p1, Landroid/app/TaskInfo;->displayId:I
     :try_end_0
@@ -732,30 +803,30 @@
 .method public getDisplayRect()Landroid/graphics/Rect;
     .locals 4
 
-    .line 275
+    .line 274
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 276
+    .line 275
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mDisplay:Landroid/view/Display;
 
     if-nez v1, :cond_0
 
     return-object v0
 
-    .line 278
+    .line 277
     :cond_0
     new-instance v1, Landroid/graphics/Point;
 
     invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
 
-    .line 279
+    .line 278
     iget-object v2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mDisplay:Landroid/view/Display;
 
     invoke-virtual {v2, v1}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
-    .line 280
+    .line 279
     iget v2, v1, Landroid/graphics/Point;->x:I
 
     iget v1, v1, Landroid/graphics/Point;->y:I
@@ -770,7 +841,7 @@
 .method public getLastActiveTime(Landroid/app/ActivityManager$RecentTaskInfo;)J
     .locals 2
 
-    .line 234
+    .line 233
     iget-wide v0, p1, Landroid/app/ActivityManager$RecentTaskInfo;->lastActiveTime:J
 
     return-wide v0
@@ -787,12 +858,12 @@
         }
     .end annotation
 
-    .line 135
+    .line 134
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 137
+    .line 136
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -823,7 +894,7 @@
 
     const-string v3, "Failed to get recent tasks"
 
-    .line 139
+    .line 138
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -846,7 +917,7 @@
 
     const/16 v0, 0xa
 
-    .line 157
+    .line 156
     invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
@@ -863,7 +934,7 @@
     :goto_0
     const/4 v2, 0x0
 
-    .line 168
+    .line 167
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -888,20 +959,20 @@
 
     const-string v1, "Failed to get recent tasks"
 
-    .line 170
+    .line 169
     invoke-static {v0, v1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
     if-nez v2, :cond_1
 
-    .line 175
+    .line 174
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     return-object p1
 
-    .line 179
+    .line 178
     :cond_1
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -911,7 +982,7 @@
 
     const-string v0, "ActivityManagerWrapper"
 
-    .line 181
+    .line 180
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -939,7 +1010,7 @@
 
     move v3, v0
 
-    .line 183
+    .line 182
     :goto_2
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -947,7 +1018,7 @@
 
     if-eqz v4, :cond_9
 
-    .line 184
+    .line 183
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
@@ -958,7 +1029,7 @@
 
     const-string v5, "ActivityManagerWrapper"
 
-    .line 186
+    .line 185
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -996,7 +1067,7 @@
     :cond_3
     if-eqz v4, :cond_5
 
-    .line 195
+    .line 194
     iget-object v5, v4, Landroid/app/ActivityManager$RecentTaskInfo;->topActivity:Landroid/content/ComponentName;
 
     if-eqz v5, :cond_5
@@ -1005,7 +1076,7 @@
 
     iget-object v6, v4, Landroid/app/ActivityManager$RecentTaskInfo;->topActivity:Landroid/content/ComponentName;
 
-    .line 196
+    .line 195
     invoke-virtual {v6}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v6
@@ -1020,7 +1091,7 @@
 
     iget-object v6, v4, Landroid/app/ActivityManager$RecentTaskInfo;->topActivity:Landroid/content/ComponentName;
 
-    .line 197
+    .line 196
     invoke-virtual {v6}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v6
@@ -1031,13 +1102,13 @@
 
     if-eqz v5, :cond_5
 
-    .line 198
+    .line 197
     :cond_4
     invoke-interface {p2}, Ljava/util/Iterator;->remove()V
 
     goto :goto_2
 
-    .line 204
+    .line 203
     :cond_5
     iget-object v5, v4, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
 
@@ -1058,7 +1129,7 @@
     :cond_6
     move v5, v1
 
-    .line 206
+    .line 205
     :goto_3
     iget v4, v4, Landroid/app/ActivityManager$RecentTaskInfo;->userId:I
 
@@ -1078,7 +1149,7 @@
 
     if-nez p3, :cond_8
 
-    .line 208
+    .line 207
     :cond_7
     invoke-interface {p2}, Ljava/util/Iterator;->remove()V
 
@@ -1087,7 +1158,7 @@
 
     goto/16 :goto_2
 
-    .line 214
+    .line 213
     :cond_9
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -1115,7 +1186,7 @@
         }
     .end annotation
 
-    .line 361
+    .line 347
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -1140,7 +1211,7 @@
 .method public getRunningTaskInfoUserId(Landroid/app/ActivityManager$RunningTaskInfo;)I
     .locals 0
 
-    .line 569
+    .line 555
     iget p1, p1, Landroid/app/ActivityManager$RunningTaskInfo;->userId:I
 
     return p1
@@ -1157,7 +1228,7 @@
         }
     .end annotation
 
-    .line 350
+    .line 336
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -1180,7 +1251,7 @@
 .method public getStackId(Landroid/app/ActivityManager$RecentTaskInfo;)I
     .locals 0
 
-    .line 238
+    .line 237
     iget p1, p1, Landroid/app/ActivityManager$RecentTaskInfo;->stackId:I
 
     return p1
@@ -1189,12 +1260,12 @@
 .method public getTaskThumbnail(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Lcom/android/systemui/shared/recents/model/ThumbnailData;
     .locals 2
 
-    .line 243
+    .line 242
     invoke-direct {p0, p1}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->createTaskSnapshot(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
 
     move-result-object p1
 
-    .line 244
+    .line 243
     new-instance v0, Lcom/android/systemui/shared/recents/model/ThumbnailData;
 
     invoke-interface {p1}, Lcom/android/systemui/shared/recents/system/ITaskSnapshot;->getBitmap()Landroid/graphics/Bitmap;
@@ -1213,7 +1284,7 @@
 .method public getUserId(Landroid/app/ActivityManager$RecentTaskInfo;)I
     .locals 0
 
-    .line 230
+    .line 229
     iget p1, p1, Landroid/app/ActivityManager$RecentTaskInfo;->userId:I
 
     return p1
@@ -1222,7 +1293,7 @@
 .method public getWindowModeFromRecentTaskInfo(Landroid/app/ActivityManager$RecentTaskInfo;)I
     .locals 0
 
-    .line 219
+    .line 218
     iget-object p1, p1, Landroid/app/ActivityManager$RecentTaskInfo;->configuration:Landroid/content/res/Configuration;
 
     iget-object p1, p1, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
@@ -1239,7 +1310,7 @@
 
     const/4 v0, 0x0
 
-    .line 574
+    .line 560
     :try_start_0
     iget-object p1, p1, Landroid/app/TaskInfo;->configuration:Landroid/content/res/Configuration;
 
@@ -1269,7 +1340,7 @@
 
     const/4 v0, 0x0
 
-    .line 583
+    .line 569
     :try_start_0
     iget-object p1, p1, Landroid/app/TaskInfo;->configuration:Landroid/content/res/Configuration;
 
@@ -1297,18 +1368,18 @@
 .method public registerTaskStackListener(Lcom/android/systemui/shared/recents/system/TaskStackChangeListener;)V
     .locals 2
 
-    .line 106
+    .line 105
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mTaskStackChangeListeners:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     monitor-enter v0
 
-    .line 107
+    .line 106
     :try_start_0
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mTaskStackChangeListeners:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-virtual {v1, p1}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->registerTaskStackListener(Lcom/android/systemui/shared/recents/system/TaskStackChangeListener;)V
 
-    .line 108
+    .line 107
     monitor-exit v0
 
     return-void
@@ -1323,122 +1394,15 @@
     throw p1
 .end method
 
-.method public removeSplitScreenPrimaryTask(Ljava/util/List;)V
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Landroid/app/ActivityManager$RunningTaskInfo;",
-            ">;)V"
-        }
-    .end annotation
-
-    .line 326
-    :try_start_0
-    invoke-static {}, Landroid/app/ActivityTaskManager;->getService()Landroid/app/IActivityTaskManager;
-
-    move-result-object v0
-
-    const/4 v1, 0x3
-
-    const/4 v2, -0x1
-
-    invoke-interface {v0, v1, v2}, Landroid/app/IActivityTaskManager;->getStackInfo(II)Landroid/app/ActivityManager$StackInfo;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    if-eqz p1, :cond_3
-
-    .line 328
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_1
-
-    .line 331
-    :cond_0
-    iget-object v0, v0, Landroid/app/ActivityManager$StackInfo;->taskIds:[I
-
-    .line 332
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    .line 333
-    :cond_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    .line 334
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/app/ActivityManager$RunningTaskInfo;
-
-    if-eqz v1, :cond_1
-
-    .line 336
-    array-length v2, v0
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_1
-
-    aget v4, v0, v3
-
-    .line 337
-    iget v5, v1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    if-ne v4, v5, :cond_2
-
-    .line 338
-    invoke-interface {p1}, Ljava/util/Iterator;->remove()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_2
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    :goto_1
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    const-string v0, "ActivityManagerWrapper"
-
-    const-string v1, "Failed to removeSplitScreenPrimaryTask"
-
-    .line 344
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_4
-    return-void
-.end method
-
 .method public startActivityFromRecents(Lcom/android/systemui/shared/recents/model/Task$TaskKey;Landroid/app/ActivityOptions;)V
     .locals 1
 
     const/4 v0, 0x0
 
-    .line 493
+    .line 479
     invoke-direct {p0, p1, p2, v0, v0}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->modifyActivityOptions(Lcom/android/systemui/shared/recents/model/Task$TaskKey;Landroid/app/ActivityOptions;II)V
 
-    .line 494
+    .line 480
     iget p1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
 
     invoke-virtual {p0, p1, p2}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->startActivityFromRecents(ILandroid/app/ActivityOptions;)Z
@@ -1455,14 +1419,14 @@
 
     goto :goto_0
 
-    .line 560
+    .line 546
     :cond_0
     :try_start_0
     invoke-virtual {p2}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object p2
 
-    .line 561
+    .line 547
     :goto_0
     invoke-static {}, Landroid/app/ActivityTaskManager;->getService()Landroid/app/IActivityTaskManager;
 
@@ -1498,10 +1462,10 @@
         }
     .end annotation
 
-    .line 516
+    .line 502
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->modifyActivityOptions(Lcom/android/systemui/shared/recents/model/Task$TaskKey;Landroid/app/ActivityOptions;II)V
 
-    .line 520
+    .line 506
     iget-object p3, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mBackgroundExecutor:Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
 
     new-instance p4, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;
@@ -1554,7 +1518,7 @@
 
     move-object v6, p4
 
-    .line 503
+    .line 489
     invoke-virtual/range {v0 .. v6}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->startActivityFromRecentsAsync(Lcom/android/systemui/shared/recents/model/Task$TaskKey;Landroid/app/ActivityOptions;IILjava/util/function/Consumer;Landroid/os/Handler;)V
 
     return-void
@@ -1563,19 +1527,19 @@
 .method public startRecentsActivity(Landroid/content/Intent;Lcom/android/systemui/shared/recents/system/AssistDataReceiver;Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;)V
     .locals 1
 
-    .line 474
+    .line 460
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidS()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 475
+    .line 461
     invoke-direct {p0, p1, p3}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->startRecentsActivityAtLeastS(Landroid/content/Intent;Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;)V
 
     goto :goto_0
 
-    .line 477
+    .line 463
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->startRecentsActivityBelowAndroidS(Landroid/content/Intent;Lcom/android/systemui/shared/recents/system/AssistDataReceiver;Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;)V
 
@@ -1586,7 +1550,7 @@
 .method public trimMemory(I)V
     .locals 1
 
-    .line 602
+    .line 588
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getInstance()Landroid/view/WindowManagerGlobal;
 
     move-result-object v0
@@ -1599,18 +1563,18 @@
 .method public unregisterTaskStackListener(Lcom/android/systemui/shared/recents/system/TaskStackChangeListener;)V
     .locals 2
 
-    .line 116
+    .line 115
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mTaskStackChangeListeners:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     monitor-enter v0
 
-    .line 117
+    .line 116
     :try_start_0
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->mTaskStackChangeListeners:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-virtual {v1, p1}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->unregisterTaskStackListener(Lcom/android/systemui/shared/recents/system/TaskStackChangeListener;)V
 
-    .line 118
+    .line 117
     monitor-exit v0
 
     return-void

@@ -33,7 +33,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherProvider;ILandroid/graphics/Bitmap;ZZ)V
     .locals 0
 
-    .line 582
+    .line 586
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherProvider$1;->this$0:Lcom/miui/home/launcher/LauncherProvider;
 
     iput p2, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$wallpaperColorMode:I
@@ -54,7 +54,7 @@
 .method public run()V
     .locals 4
 
-    .line 585
+    .line 589
     iget v0, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$wallpaperColorMode:I
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$homePreview:Landroid/graphics/Bitmap;

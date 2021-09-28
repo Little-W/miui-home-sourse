@@ -62,12 +62,12 @@
 .method protected initViews()V
     .locals 2
 
-    const v0, 0x7f0d00ed
+    const v0, 0x7f0d00ee
 
     .line 46
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/RecentsActivity;->setContentView(I)V
 
-    const v0, 0x7f0a0187
+    const v0, 0x7f0a018b
 
     .line 47
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/RecentsActivity;->findViewById(I)Landroid/view/View;
@@ -85,7 +85,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/RecentsContainer;->setVisibility(I)V
 
-    const v0, 0x7f0a018d
+    const v0, 0x7f0a0191
 
     .line 49
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/RecentsActivity;->findViewById(I)Landroid/view/View;

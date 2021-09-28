@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;)V
     .locals 0
 
-    .line 143
+    .line 150
     iput-object p1, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$7;->this$0:Lcom/miui/home/launcher/model/BaseModelUpdateTask;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public execute(Lcom/miui/home/launcher/LauncherModel$Callbacks;)V
     .locals 0
 
-    .line 146
+    .line 153
     invoke-interface {p1}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->bindCategoryNameUpdate()V
 
     return-void

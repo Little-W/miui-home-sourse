@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;)V
     .locals 0
 
-    .line 742
+    .line 761
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$13;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 10
 
-    .line 745
+    .line 764
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$13;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -49,7 +49,7 @@
 
     move-result-object v0
 
-    const-string v1, "ykrq"
+    const-string/jumbo v1, "ykrq"
 
     const-string v2, "no_back_gesture_only"
 
@@ -59,7 +59,7 @@
 
     move-result-object v6
 
-    .line 747
+    .line 766
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$13;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -70,7 +70,7 @@
 
     move-result-object v0
 
-    const-string v1, "ykrq"
+    const-string/jumbo v1, "ykrq"
 
     const-string v2, "no_home_gesture_only"
 
@@ -80,7 +80,7 @@
 
     move-result-object v7
 
-    .line 749
+    .line 768
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$13;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -91,7 +91,7 @@
 
     move-result-object v0
 
-    const-string v1, "ykrq"
+    const-string/jumbo v1, "ykrq"
 
     const-string v2, "no_back_and_home"
 
@@ -101,7 +101,7 @@
 
     move-result-object v8
 
-    .line 751
+    .line 770
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$13;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
@@ -112,7 +112,7 @@
 
     move-result-object v0
 
-    const-string v1, "ykrq"
+    const-string/jumbo v1, "ykrq"
 
     const-string v2, "hot_zone_change"
 
@@ -122,7 +122,7 @@
 
     move-result-object v9
 
-    .line 754
+    .line 773
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$13;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     iget-object v0, v0, Lcom/miui/home/recents/BaseRecentsImpl;->mHandler:Landroid/os/Handler;

@@ -40,12 +40,12 @@
 .method constructor <init>(Landroidx/recyclerview/widget/StaggeredGridLayoutManager;I)V
     .locals 0
 
-    .line 2515
+    .line 2489
     iput-object p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2509
+    .line 2483
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -54,18 +54,18 @@
 
     const/high16 p1, -0x80000000
 
-    .line 2510
+    .line 2484
     iput p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
-    .line 2511
+    .line 2485
     iput p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
     const/4 p1, 0x0
 
-    .line 2512
+    .line 2486
     iput p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mDeletedSize:I
 
-    .line 2516
+    .line 2490
     iput p2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mIndex:I
 
     return-void
@@ -76,25 +76,25 @@
 .method appendToSpan(Landroid/view/View;)V
     .locals 4
 
-    .line 2600
+    .line 2574
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->getLayoutParams(Landroid/view/View;)Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;
 
     move-result-object v0
 
-    .line 2601
+    .line 2575
     iput-object p0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->mSpan:Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;
 
-    .line 2602
+    .line 2576
     iget-object v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const/high16 v1, -0x80000000
 
-    .line 2603
+    .line 2577
     iput v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
-    .line 2604
+    .line 2578
     iget-object v2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -105,10 +105,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 2605
+    .line 2579
     iput v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
-    .line 2607
+    .line 2581
     :cond_0
     invoke-virtual {v0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->isItemRemoved()Z
 
@@ -122,7 +122,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 2608
+    .line 2582
     :cond_1
     iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mDeletedSize:I
 
@@ -149,20 +149,20 @@
 
     if-eqz p1, :cond_0
 
-    .line 2616
+    .line 2590
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->getEndLine(I)I
 
     move-result v1
 
     goto :goto_0
 
-    .line 2618
+    .line 2592
     :cond_0
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->getStartLine(I)I
 
     move-result v1
 
-    .line 2620
+    .line 2594
     :goto_0
     invoke-virtual {p0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->clear()V
 
@@ -173,7 +173,7 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 2624
+    .line 2598
     iget-object v2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     iget-object v2, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->mPrimaryOrientation:Landroidx/recyclerview/widget/OrientationHelper;
@@ -191,7 +191,7 @@
 
     iget-object p1, p1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->mPrimaryOrientation:Landroidx/recyclerview/widget/OrientationHelper;
 
-    .line 2625
+    .line 2599
     invoke-virtual {p1}, Landroidx/recyclerview/widget/OrientationHelper;->getStartAfterPadding()I
 
     move-result p1
@@ -206,7 +206,7 @@
 
     add-int/2addr v1, p2
 
-    .line 2631
+    .line 2605
     :cond_5
     iput v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
@@ -218,7 +218,7 @@
 .method calculateCachedEnd()V
     .locals 4
 
-    .line 2565
+    .line 2539
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -235,12 +235,12 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 2566
+    .line 2540
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->getLayoutParams(Landroid/view/View;)Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;
 
     move-result-object v1
 
-    .line 2567
+    .line 2541
     iget-object v3, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     iget-object v3, v3, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->mPrimaryOrientation:Landroidx/recyclerview/widget/OrientationHelper;
@@ -251,17 +251,17 @@
 
     iput v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
-    .line 2568
+    .line 2542
     iget-boolean v0, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->mFullSpan:Z
 
     if-eqz v0, :cond_0
 
-    .line 2569
+    .line 2543
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->mLazySpanLookup:Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup;
 
-    .line 2570
+    .line 2544
     invoke-virtual {v1}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->getViewLayoutPosition()I
 
     move-result v1
@@ -272,12 +272,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2571
+    .line 2545
     iget v1, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mGapDir:I
 
     if-ne v1, v2, :cond_0
 
-    .line 2572
+    .line 2546
     iget v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
     iget v2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mIndex:I
@@ -297,7 +297,7 @@
 .method calculateCachedStart()V
     .locals 3
 
-    .line 2531
+    .line 2505
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -308,12 +308,12 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 2532
+    .line 2506
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->getLayoutParams(Landroid/view/View;)Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;
 
     move-result-object v1
 
-    .line 2533
+    .line 2507
     iget-object v2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     iget-object v2, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->mPrimaryOrientation:Landroidx/recyclerview/widget/OrientationHelper;
@@ -324,17 +324,17 @@
 
     iput v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
-    .line 2534
+    .line 2508
     iget-boolean v0, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->mFullSpan:Z
 
     if-eqz v0, :cond_0
 
-    .line 2535
+    .line 2509
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->mLazySpanLookup:Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup;
 
-    .line 2536
+    .line 2510
     invoke-virtual {v1}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->getViewLayoutPosition()I
 
     move-result v1
@@ -345,14 +345,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 2537
+    .line 2511
     iget v1, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mGapDir:I
 
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_0
 
-    .line 2538
+    .line 2512
     iget v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
     iget v2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mIndex:I
@@ -372,17 +372,17 @@
 .method clear()V
     .locals 1
 
-    .line 2635
+    .line 2609
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 2636
+    .line 2610
     invoke-virtual {p0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->invalidateCache()V
 
     const/4 v0, 0x0
 
-    .line 2637
+    .line 2611
     iput v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mDeletedSize:I
 
     return-void
@@ -391,7 +391,7 @@
 .method public findFirstPartiallyVisibleItemPosition()I
     .locals 3
 
-    .line 2700
+    .line 2674
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     iget-boolean v0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->mReverseLayout:Z
@@ -400,9 +400,9 @@
 
     if-eqz v0, :cond_0
 
+    .line 2675
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
-    .line 2701
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -420,9 +420,9 @@
     :cond_0
     const/4 v0, 0x0
 
+    .line 2676
     iget-object v2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
-    .line 2702
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -438,7 +438,7 @@
 .method public findLastPartiallyVisibleItemPosition()I
     .locals 3
 
-    .line 2718
+    .line 2692
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     iget-boolean v0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->mReverseLayout:Z
@@ -449,9 +449,9 @@
 
     const/4 v0, 0x0
 
+    .line 2693
     iget-object v2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
-    .line 2719
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -462,10 +462,10 @@
 
     goto :goto_0
 
+    .line 2694
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
-    .line 2720
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -485,7 +485,7 @@
 .method findOnePartiallyOrCompletelyVisibleChild(IIZZZ)I
     .locals 10
 
-    .line 2756
+    .line 2730
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->mPrimaryOrientation:Landroidx/recyclerview/widget/OrientationHelper;
@@ -494,7 +494,7 @@
 
     move-result v0
 
-    .line 2757
+    .line 2731
     iget-object v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     iget-object v1, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->mPrimaryOrientation:Landroidx/recyclerview/widget/OrientationHelper;
@@ -517,9 +517,9 @@
     move v4, v2
 
     :goto_0
-    if-eq p1, p2, :cond_9
+    if-eq p1, p2, :cond_a
 
-    .line 2760
+    .line 2734
     iget-object v5, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     invoke-virtual {v5, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -528,7 +528,7 @@
 
     check-cast v5, Landroid/view/View;
 
-    .line 2761
+    .line 2735
     iget-object v6, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     iget-object v6, v6, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->mPrimaryOrientation:Landroidx/recyclerview/widget/OrientationHelper;
@@ -537,7 +537,7 @@
 
     move-result v6
 
-    .line 2762
+    .line 2736
     iget-object v7, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     iget-object v7, v7, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->mPrimaryOrientation:Landroidx/recyclerview/widget/OrientationHelper;
@@ -548,62 +548,58 @@
 
     const/4 v8, 0x0
 
-    if-eqz p5, :cond_1
+    if-eqz p5, :cond_2
 
-    if-gt v6, v1, :cond_2
+    if-gt v6, v1, :cond_1
+
+    move v9, v3
 
     goto :goto_1
 
     :cond_1
-    if-ge v6, v1, :cond_2
+    move v9, v8
+
+    goto :goto_1
+
+    :cond_2
+    if-ge v6, v1, :cond_3
+
+    move v9, v3
+
+    goto :goto_1
+
+    :cond_3
+    move v9, v8
 
     :goto_1
-    move v9, v3
+    if-eqz p5, :cond_4
+
+    if-lt v7, v0, :cond_5
+
+    move v8, v3
 
     goto :goto_2
 
-    :cond_2
-    move v9, v8
+    :cond_4
+    if-le v7, v0, :cond_5
 
-    :goto_2
-    if-eqz p5, :cond_3
-
-    if-lt v7, v0, :cond_4
-
-    goto :goto_3
-
-    :cond_3
-    if-le v7, v0, :cond_4
-
-    :goto_3
     move v8, v3
 
-    :cond_4
-    if-eqz v9, :cond_8
-
-    if-eqz v8, :cond_8
-
-    if-eqz p3, :cond_5
-
-    if-eqz p4, :cond_5
-
-    if-lt v6, v0, :cond_8
-
-    if-gt v7, v1, :cond_8
-
-    .line 2771
-    iget-object p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
-
-    invoke-virtual {p1, v5}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->getPosition(Landroid/view/View;)I
-
-    move-result p1
-
-    return p1
-
     :cond_5
+    :goto_2
+    if-eqz v9, :cond_9
+
+    if-eqz v8, :cond_9
+
+    if-eqz p3, :cond_6
+
     if-eqz p4, :cond_6
 
-    .line 2775
+    if-lt v6, v0, :cond_9
+
+    if-gt v7, v1, :cond_9
+
+    .line 2745
     iget-object p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     invoke-virtual {p1, v5}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->getPosition(Landroid/view/View;)I
@@ -613,12 +609,9 @@
     return p1
 
     :cond_6
-    if-lt v6, v0, :cond_7
+    if-eqz p4, :cond_7
 
-    if-le v7, v1, :cond_8
-
-    .line 2779
-    :cond_7
+    .line 2749
     iget-object p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     invoke-virtual {p1, v5}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->getPosition(Landroid/view/View;)I
@@ -627,12 +620,27 @@
 
     return p1
 
+    :cond_7
+    if-lt v6, v0, :cond_8
+
+    if-le v7, v1, :cond_9
+
+    .line 2753
     :cond_8
+    iget-object p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
+
+    invoke-virtual {p1, v5}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->getPosition(Landroid/view/View;)I
+
+    move-result p1
+
+    return p1
+
+    :cond_9
     add-int/2addr p1, v4
 
     goto :goto_0
 
-    :cond_9
+    :cond_a
     return v2
 .end method
 
@@ -651,7 +659,7 @@
 
     move v5, p3
 
-    .line 2793
+    .line 2767
     invoke-virtual/range {v0 .. v5}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->findOnePartiallyOrCompletelyVisibleChild(IIZZZ)I
 
     move-result p1
@@ -662,35 +670,13 @@
 .method public getDeletedSize()I
     .locals 1
 
-    .line 2677
+    .line 2651
     iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mDeletedSize:I
 
     return v0
 .end method
 
 .method getEndLine()I
-    .locals 2
-
-    .line 2579
-    iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
-
-    const/high16 v1, -0x80000000
-
-    if-eq v0, v1, :cond_0
-
-    return v0
-
-    .line 2582
-    :cond_0
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->calculateCachedEnd()V
-
-    .line 2583
-    iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
-
-    return v0
-.end method
-
-.method getEndLine(I)I
     .locals 2
 
     .line 2553
@@ -704,6 +690,28 @@
 
     .line 2556
     :cond_0
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->calculateCachedEnd()V
+
+    .line 2557
+    iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
+
+    return v0
+.end method
+
+.method getEndLine(I)I
+    .locals 2
+
+    .line 2527
+    iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
+
+    const/high16 v1, -0x80000000
+
+    if-eq v0, v1, :cond_0
+
+    return v0
+
+    .line 2530
+    :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -714,11 +722,11 @@
 
     return p1
 
-    .line 2560
+    .line 2534
     :cond_1
     invoke-virtual {p0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->calculateCachedEnd()V
 
-    .line 2561
+    .line 2535
     iget p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
     return p1
@@ -733,7 +741,7 @@
 
     if-ne p2, v0, :cond_2
 
-    .line 2803
+    .line 2777
     iget-object p2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
@@ -745,7 +753,7 @@
     :goto_0
     if-ge v0, p2, :cond_5
 
-    .line 2805
+    .line 2779
     iget-object v2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -754,7 +762,7 @@
 
     check-cast v2, Landroid/view/View;
 
-    .line 2806
+    .line 2780
     iget-object v3, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     iget-boolean v3, v3, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->mReverseLayout:Z
@@ -778,7 +786,7 @@
 
     iget-object v3, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
-    .line 2807
+    .line 2781
     invoke-virtual {v3, v2}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v3
@@ -787,7 +795,7 @@
 
     goto :goto_2
 
-    .line 2810
+    .line 2784
     :cond_1
     invoke-virtual {v2}, Landroid/view/View;->hasFocusable()Z
 
@@ -801,7 +809,7 @@
 
     goto :goto_0
 
-    .line 2817
+    .line 2791
     :cond_2
     iget-object p2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
@@ -814,7 +822,7 @@
     :goto_1
     if-ltz p2, :cond_5
 
-    .line 2818
+    .line 2792
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -823,7 +831,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 2819
+    .line 2793
     iget-object v2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
     iget-boolean v2, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->mReverseLayout:Z
@@ -847,7 +855,7 @@
 
     iget-object v2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->this$0:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
-    .line 2820
+    .line 2794
     invoke-virtual {v2, v0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v2
@@ -856,7 +864,7 @@
 
     goto :goto_2
 
-    .line 2823
+    .line 2797
     :cond_4
     invoke-virtual {v0}, Landroid/view/View;->hasFocusable()Z
 
@@ -878,7 +886,7 @@
 .method getLayoutParams(Landroid/view/View;)Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;
     .locals 0
 
-    .line 2681
+    .line 2655
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
@@ -891,7 +899,7 @@
 .method getStartLine()I
     .locals 2
 
-    .line 2545
+    .line 2519
     iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
     const/high16 v1, -0x80000000
@@ -900,11 +908,11 @@
 
     return v0
 
-    .line 2548
+    .line 2522
     :cond_0
     invoke-virtual {p0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->calculateCachedStart()V
 
-    .line 2549
+    .line 2523
     iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
     return v0
@@ -913,7 +921,7 @@
 .method getStartLine(I)I
     .locals 2
 
-    .line 2520
+    .line 2494
     iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
     const/high16 v1, -0x80000000
@@ -922,7 +930,7 @@
 
     return v0
 
-    .line 2523
+    .line 2497
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
@@ -934,11 +942,11 @@
 
     return p1
 
-    .line 2526
+    .line 2500
     :cond_1
     invoke-virtual {p0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->calculateCachedStart()V
 
-    .line 2527
+    .line 2501
     iget p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
     return p1
@@ -949,10 +957,10 @@
 
     const/high16 v0, -0x80000000
 
-    .line 2641
+    .line 2615
     iput v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
-    .line 2642
+    .line 2616
     iput v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
     return-void
@@ -961,7 +969,7 @@
 .method onOffset(I)V
     .locals 2
 
-    .line 2685
+    .line 2659
     iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
     const/high16 v1, -0x80000000
@@ -970,10 +978,10 @@
 
     add-int/2addr v0, p1
 
-    .line 2686
+    .line 2660
     iput v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
-    .line 2688
+    .line 2662
     :cond_0
     iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
@@ -981,7 +989,7 @@
 
     add-int/2addr v0, p1
 
-    .line 2689
+    .line 2663
     iput v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
     :cond_1
@@ -991,14 +999,14 @@
 .method popEnd()V
     .locals 4
 
-    .line 2650
+    .line 2624
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 2651
+    .line 2625
     iget-object v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     add-int/lit8 v2, v0, -0x1
@@ -1009,17 +1017,17 @@
 
     check-cast v1, Landroid/view/View;
 
-    .line 2652
+    .line 2626
     invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->getLayoutParams(Landroid/view/View;)Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    .line 2653
+    .line 2627
     iput-object v3, v2, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->mSpan:Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;
 
-    .line 2654
+    .line 2628
     invoke-virtual {v2}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->isItemRemoved()Z
 
     move-result v3
@@ -1032,7 +1040,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 2655
+    .line 2629
     :cond_0
     iget v2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mDeletedSize:I
 
@@ -1055,10 +1063,10 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 2658
+    .line 2632
     iput v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
-    .line 2660
+    .line 2634
     :cond_2
     iput v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
@@ -1068,7 +1076,7 @@
 .method popStart()V
     .locals 4
 
-    .line 2664
+    .line 2638
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -1079,17 +1087,17 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 2665
+    .line 2639
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->getLayoutParams(Landroid/view/View;)Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    .line 2666
+    .line 2640
     iput-object v2, v1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->mSpan:Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;
 
-    .line 2667
+    .line 2641
     iget-object v2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -1100,10 +1108,10 @@
 
     if-nez v2, :cond_0
 
-    .line 2668
+    .line 2642
     iput v3, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
-    .line 2670
+    .line 2644
     :cond_0
     invoke-virtual {v1}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->isItemRemoved()Z
 
@@ -1117,7 +1125,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 2671
+    .line 2645
     :cond_1
     iget v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mDeletedSize:I
 
@@ -1133,7 +1141,7 @@
 
     iput v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mDeletedSize:I
 
-    .line 2673
+    .line 2647
     :cond_2
     iput v3, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
@@ -1143,15 +1151,15 @@
 .method prependToSpan(Landroid/view/View;)V
     .locals 4
 
-    .line 2587
+    .line 2561
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->getLayoutParams(Landroid/view/View;)Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;
 
     move-result-object v0
 
-    .line 2588
+    .line 2562
     iput-object p0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->mSpan:Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;
 
-    .line 2589
+    .line 2563
     iget-object v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     const/4 v2, 0x0
@@ -1160,10 +1168,10 @@
 
     const/high16 v1, -0x80000000
 
-    .line 2590
+    .line 2564
     iput v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
-    .line 2591
+    .line 2565
     iget-object v2, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mViews:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -1174,10 +1182,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 2592
+    .line 2566
     iput v1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I
 
-    .line 2594
+    .line 2568
     :cond_0
     invoke-virtual {v0}, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$LayoutParams;->isItemRemoved()Z
 
@@ -1191,7 +1199,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 2595
+    .line 2569
     :cond_1
     iget v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mDeletedSize:I
 
@@ -1214,7 +1222,7 @@
 .method setLine(I)V
     .locals 0
 
-    .line 2646
+    .line 2620
     iput p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedStart:I
 
     iput p1, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$Span;->mCachedEnd:I

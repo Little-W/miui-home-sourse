@@ -247,8 +247,6 @@
 
     move-result-object p1
 
-    invoke-static {p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return-wide v7
 
     :cond_2

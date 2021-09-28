@@ -764,7 +764,7 @@
 
     invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v6, "x"
+    const-string/jumbo v6, "x"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -936,7 +936,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    const-string v1, "x"
+    const-string/jumbo v1, "x"
 
     .line 268
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;

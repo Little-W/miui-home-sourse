@@ -58,8 +58,6 @@
     const-string v2, "TouchEventUtil"
 
     .line 21
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 .end method

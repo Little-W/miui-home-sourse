@@ -25,7 +25,7 @@
     .line 19
     invoke-static {p1, v0, p0}, Lcom/miui/home/launcher/gadget/GoogleSearch;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const p1, 0x7f0a00ff
+    const p1, 0x7f0a0100
 
     .line 20
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/gadget/GoogleSearch;->findViewById(I)Landroid/view/View;
@@ -34,7 +34,7 @@
 
     invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p1, 0x7f0a0253
+    const p1, 0x7f0a0257
 
     .line 21
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/gadget/GoogleSearch;->findViewById(I)Landroid/view/View;
@@ -111,11 +111,11 @@
 
     move-result p1
 
-    const v2, 0x7f0a00ff
+    const v2, 0x7f0a0100
 
     if-eq p1, v2, :cond_2
 
-    const v2, 0x7f0a0253
+    const v2, 0x7f0a0257
 
     if-eq p1, v2, :cond_1
 

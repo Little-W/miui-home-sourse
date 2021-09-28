@@ -18,7 +18,7 @@
 .method public constructor <init>(Lcom/miui/maml/data/Variables;Ljava/lang/String;Lcom/miui/maml/data/Expression;)V
     .locals 0
 
-    .line 400
+    .line 478
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/maml/data/Expression$ArrayVariableExpression;-><init>(Lcom/miui/maml/data/Variables;Ljava/lang/String;Lcom/miui/maml/data/Expression;)V
 
     return-void
@@ -29,7 +29,7 @@
 .method public evaluate()D
     .locals 3
 
-    .line 405
+    .line 483
     iget-object v0, p0, Lcom/miui/maml/data/Expression$NumberArrayVariableExpression;->mIndexedVar:Lcom/miui/maml/data/IndexedVariable;
 
     iget-object v1, p0, Lcom/miui/maml/data/Expression$NumberArrayVariableExpression;->mIndexExp:Lcom/miui/maml/data/Expression;
@@ -50,7 +50,7 @@
 .method public evaluateStr()Ljava/lang/String;
     .locals 2
 
-    .line 410
+    .line 488
     invoke-virtual {p0}, Lcom/miui/maml/data/Expression$NumberArrayVariableExpression;->evaluate()D
 
     move-result-wide v0
@@ -65,7 +65,7 @@
 .method public isNull()Z
     .locals 3
 
-    .line 415
+    .line 493
     iget-object v0, p0, Lcom/miui/maml/data/Expression$NumberArrayVariableExpression;->mIndexedVar:Lcom/miui/maml/data/IndexedVariable;
 
     iget-object v1, p0, Lcom/miui/maml/data/Expression$NumberArrayVariableExpression;->mIndexExp:Lcom/miui/maml/data/Expression;

@@ -148,9 +148,9 @@
 
     move-result-object p1
 
-    const v0, 0x7f1102f2
+    const v0, 0x7f1102eb
 
-    const v1, 0x7f1102f5
+    const v1, 0x7f1102ee
 
     invoke-static {p2, p1, v0, v1}, Lcom/miui/home/launcher/common/Utilities;->adaptTitleStyleToWallpaper(Landroid/content/Context;Landroid/widget/TextView;II)V
 

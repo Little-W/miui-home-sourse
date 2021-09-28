@@ -73,6 +73,7 @@
 
     if-ltz v2, :cond_1
 
+    .line 310
     array-length v2, v1
 
     add-int/lit8 v2, v2, -0x1

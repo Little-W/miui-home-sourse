@@ -41,14 +41,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 728
+    .line 814
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/miui/maml/data/Expression$FunctionExpression;->sFunMap:Ljava/util/HashMap;
 
-    .line 730
+    .line 816
     invoke-static {}, Lcom/miui/maml/data/FunctionsLoader;->load()V
 
     return-void
@@ -62,19 +62,19 @@
         }
     .end annotation
 
-    .line 733
+    .line 819
     invoke-direct {p0}, Lcom/miui/maml/data/Expression;-><init>()V
 
-    .line 734
+    .line 820
     iput-object p1, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mVariables:Lcom/miui/maml/data/Variables;
 
-    .line 735
+    .line 821
     iput-object p2, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mParaExps:[Lcom/miui/maml/data/Expression;
 
-    .line 736
+    .line 822
     iput-object p3, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mFunName:Ljava/lang/String;
 
-    .line 737
+    .line 823
     invoke-direct {p0, p3}, Lcom/miui/maml/data/Expression$FunctionExpression;->parseFunction(Ljava/lang/String;)V
 
     return-void
@@ -88,7 +88,7 @@
         }
     .end annotation
 
-    .line 758
+    .line 844
     sget-object v0, Lcom/miui/maml/data/Expression$FunctionExpression;->sFunMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -110,7 +110,7 @@
     :cond_0
     move v3, v2
 
-    .line 759
+    .line 845
     :goto_0
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -128,10 +128,10 @@
 
     invoke-static {v3, v4}, Lcom/miui/maml/util/Utils;->asserts(ZLjava/lang/String;)V
 
-    .line 761
+    .line 847
     iput-object v0, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mFun:Lcom/miui/maml/data/Expression$FunctionImpl;
 
-    .line 762
+    .line 848
     iget-object v3, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mParaExps:[Lcom/miui/maml/data/Expression;
 
     array-length v3, v3
@@ -168,7 +168,7 @@
 .method public static registerFunction(Ljava/lang/String;Lcom/miui/maml/data/Expression$FunctionImpl;)V
     .locals 2
 
-    .line 741
+    .line 827
     sget-object v0, Lcom/miui/maml/data/Expression$FunctionExpression;->sFunMap:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -181,7 +181,7 @@
 
     const-string p1, "Expression"
 
-    .line 743
+    .line 829
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -205,7 +205,7 @@
 .method public static removeFunction(Ljava/lang/String;Lcom/miui/maml/data/Expression$FunctionImpl;)V
     .locals 0
 
-    .line 748
+    .line 834
     sget-object p1, Lcom/miui/maml/data/Expression$FunctionExpression;->sFunMap:Ljava/util/HashMap;
 
     invoke-virtual {p1, p0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -216,7 +216,7 @@
 .method public static resetFunctions()V
     .locals 2
 
-    .line 752
+    .line 838
     sget-object v0, Lcom/miui/maml/data/Expression$FunctionExpression;->sFunMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -240,7 +240,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 753
+    .line 839
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -260,12 +260,12 @@
 .method public accept(Lcom/miui/maml/data/ExpressionVisitor;)V
     .locals 3
 
-    .line 777
+    .line 873
     invoke-virtual {p1, p0}, Lcom/miui/maml/data/ExpressionVisitor;->visit(Lcom/miui/maml/data/Expression;)V
 
     const/4 v0, 0x0
 
-    .line 778
+    .line 874
     :goto_0
     iget-object v1, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mParaExps:[Lcom/miui/maml/data/Expression;
 
@@ -273,7 +273,7 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 779
+    .line 875
     aget-object v1, v1, v0
 
     invoke-virtual {v1, p1}, Lcom/miui/maml/data/Expression;->accept(Lcom/miui/maml/data/ExpressionVisitor;)V
@@ -289,7 +289,7 @@
 .method public evaluate()D
     .locals 3
 
-    .line 767
+    .line 853
     iget-object v0, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mFun:Lcom/miui/maml/data/Expression$FunctionImpl;
 
     iget-object v1, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mParaExps:[Lcom/miui/maml/data/Expression;
@@ -303,10 +303,44 @@
     return-wide v0
 .end method
 
+.method public evaluateJsonArray()Lorg/json/JSONArray;
+    .locals 3
+
+    .line 868
+    iget-object v0, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mFun:Lcom/miui/maml/data/Expression$FunctionImpl;
+
+    iget-object v1, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mParaExps:[Lcom/miui/maml/data/Expression;
+
+    iget-object v2, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mVariables:Lcom/miui/maml/data/Variables;
+
+    invoke-virtual {v0, v1, v2}, Lcom/miui/maml/data/Expression$FunctionImpl;->evaluateJsonArray([Lcom/miui/maml/data/Expression;Lcom/miui/maml/data/Variables;)Lorg/json/JSONArray;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public evaluateJsonObject()Lorg/json/JSONObject;
+    .locals 3
+
+    .line 863
+    iget-object v0, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mFun:Lcom/miui/maml/data/Expression$FunctionImpl;
+
+    iget-object v1, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mParaExps:[Lcom/miui/maml/data/Expression;
+
+    iget-object v2, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mVariables:Lcom/miui/maml/data/Variables;
+
+    invoke-virtual {v0, v1, v2}, Lcom/miui/maml/data/Expression$FunctionImpl;->evaluateJsonObject([Lcom/miui/maml/data/Expression;Lcom/miui/maml/data/Variables;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public evaluateStr()Ljava/lang/String;
     .locals 3
 
-    .line 772
+    .line 858
     iget-object v0, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mFun:Lcom/miui/maml/data/Expression$FunctionImpl;
 
     iget-object v1, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mParaExps:[Lcom/miui/maml/data/Expression;
@@ -323,7 +357,7 @@
 .method public getFunName()Ljava/lang/String;
     .locals 1
 
-    .line 784
+    .line 880
     iget-object v0, p0, Lcom/miui/maml/data/Expression$FunctionExpression;->mFunName:Ljava/lang/String;
 
     return-object v0

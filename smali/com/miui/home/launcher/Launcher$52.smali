@@ -1,14 +1,11 @@
 .class Lcom/miui/home/launcher/Launcher$52;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "Launcher.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->showSceneScreenCore(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
+    value = Lcom/miui/home/launcher/Launcher;->goOutOldLayer()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,62 +17,61 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
+.field final synthetic val$isLoadingViewGoOut:Z
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Z)V
     .locals 0
 
-    .line 5019
+    .line 5287
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$52;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean p2, p0, Lcom/miui/home/launcher/Launcher$52;->val$isLoadingViewGoOut:Z
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 5
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
 
-    .line 5021
+    .line 5289
+    iget-boolean p1, p0, Lcom/miui/home/launcher/Launcher$52;->val$isLoadingViewGoOut:Z
+
+    if-eqz p1, :cond_0
+
+    .line 5290
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$52;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$7400(Lcom/miui/home/launcher/Launcher;)Landroid/view/ViewGroup;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/ViewGroup;
+
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$52;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getSceneScreen()Lcom/miui/home/launcher/upsidescene/SceneScreen;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$7400(Lcom/miui/home/launcher/Launcher;)Landroid/view/ViewGroup;
 
     move-result-object v0
 
-    const-string v1, "translationY"
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    const/4 v2, 0x1
+    .line 5291
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$52;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 5022
-    new-array v2, v2, [F
+    const/4 v0, 0x0
 
-    const/4 v3, 0x0
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$7402(Lcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;)Landroid/view/ViewGroup;
 
-    const/4 v4, 0x0
-
-    aput v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    .line 5023
-    new-instance v1, Lcom/miui/home/launcher/Launcher$52$1;
-
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/Launcher$52$1;-><init>(Lcom/miui/home/launcher/Launcher$52;)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    .line 5033
-    invoke-virtual {v0}, Landroid/animation/Animator;->start()V
-
-    .line 5035
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$52;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$7500(Lcom/miui/home/launcher/Launcher;)V
-
+    :cond_0
     return-void
 .end method

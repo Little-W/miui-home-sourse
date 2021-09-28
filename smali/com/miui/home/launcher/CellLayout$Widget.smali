@@ -30,22 +30,22 @@
 .method public constructor <init>(Lcom/miui/home/launcher/CellLayout;II)V
     .locals 0
 
-    .line 3019
+    .line 2938
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$Widget;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3027
+    .line 2946
     new-instance p1, Landroid/graphics/Region;
 
     invoke-direct {p1}, Landroid/graphics/Region;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$Widget;->mRegion:Landroid/graphics/Region;
 
-    .line 3020
+    .line 2939
     iput p2, p0, Lcom/miui/home/launcher/CellLayout$Widget;->mSpanX:I
 
-    .line 3021
+    .line 2940
     iput p3, p0, Lcom/miui/home/launcher/CellLayout$Widget;->mSpanY:I
 
     return-void

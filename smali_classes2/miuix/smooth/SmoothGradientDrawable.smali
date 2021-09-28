@@ -247,7 +247,7 @@
 
     if-nez p2, :cond_0
 
-    .line 207
+    .line 226
     invoke-virtual {p1, p3, p4}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
@@ -257,7 +257,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 209
+    .line 228
     invoke-virtual {p2, p3, p4, p1, p1}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
@@ -270,10 +270,10 @@
 .method public applyTheme(Landroid/content/res/Resources$Theme;)V
     .locals 1
 
-    .line 183
+    .line 202
     invoke-super {p0, p1}, Landroid/graphics/drawable/GradientDrawable;->applyTheme(Landroid/content/res/Resources$Theme;)V
 
-    .line 184
+    .line 203
     iget-object p1, p0, Lmiuix/smooth/SmoothGradientDrawable;->mSmoothConstantState:Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;
 
     invoke-super {p0}, Landroid/graphics/drawable/GradientDrawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
@@ -288,7 +288,7 @@
 .method public canApplyTheme()Z
     .locals 1
 
-    .line 189
+    .line 208
     iget-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable;->mSmoothConstantState:Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;
 
     if-eqz v0, :cond_0
@@ -321,7 +321,7 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 3
 
-    .line 225
+    .line 244
     iget-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable;->mSavedLayer:Landroid/graphics/RectF;
 
     const/4 v1, 0x0
@@ -332,21 +332,21 @@
 
     move-result v0
 
-    .line 226
+    .line 245
     iget-object v1, p0, Lmiuix/smooth/SmoothGradientDrawable;->mParentDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     if-eqz v1, :cond_0
 
-    .line 227
+    .line 246
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/GradientDrawable;->draw(Landroid/graphics/Canvas;)V
 
     goto :goto_0
 
-    .line 229
+    .line 248
     :cond_0
     invoke-super {p0, p1}, Landroid/graphics/drawable/GradientDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 231
+    .line 250
     :goto_0
     iget-object v1, p0, Lmiuix/smooth/SmoothGradientDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
@@ -354,15 +354,39 @@
 
     invoke-virtual {v1, p1, v2}, Lmiuix/smooth/internal/SmoothDrawHelper;->drawMask(Landroid/graphics/Canvas;Landroid/graphics/Xfermode;)V
 
-    .line 232
+    .line 251
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 233
+    .line 252
     iget-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/internal/SmoothDrawHelper;->drawStroke(Landroid/graphics/Canvas;)V
 
     return-void
+.end method
+
+.method public getAlpha()I
+    .locals 1
+
+    .line 193
+    iget-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable;->mParentDrawable:Landroid/graphics/drawable/GradientDrawable;
+
+    if-eqz v0, :cond_0
+
+    .line 194
+    invoke-virtual {v0}, Landroid/graphics/drawable/GradientDrawable;->getAlpha()I
+
+    move-result v0
+
+    return v0
+
+    .line 196
+    :cond_0
+    invoke-super {p0}, Landroid/graphics/drawable/GradientDrawable;->getAlpha()I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public getColor()Landroid/content/res/ColorStateList;
@@ -432,7 +456,7 @@
 .method public getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
     .locals 1
 
-    .line 238
+    .line 257
     iget-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable;->mSmoothConstantState:Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;
 
     return-object v0
@@ -441,14 +465,14 @@
 .method public getOutline(Landroid/graphics/Outline;)V
     .locals 2
 
-    .line 194
+    .line 213
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1e
 
     if-lt v0, v1, :cond_0
 
-    .line 195
+    .line 214
     iget-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     iget-object v1, p0, Lmiuix/smooth/SmoothGradientDrawable;->mLayer:Landroid/graphics/Rect;
@@ -461,7 +485,7 @@
 
     goto :goto_0
 
-    .line 196
+    .line 215
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -469,7 +493,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 197
+    .line 216
     iget-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable;->mLayer:Landroid/graphics/Rect;
 
     iget-object v1, p0, Lmiuix/smooth/SmoothGradientDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
@@ -535,27 +559,27 @@
 .method protected onBoundsChange(Landroid/graphics/Rect;)V
     .locals 3
 
-    .line 214
+    .line 233
     invoke-super {p0, p1}, Landroid/graphics/drawable/GradientDrawable;->onBoundsChange(Landroid/graphics/Rect;)V
 
-    .line 215
+    .line 234
     iget-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable;->mParentDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 216
+    .line 235
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 218
+    .line 237
     :cond_0
     iget-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable;->mHelper:Lmiuix/smooth/internal/SmoothDrawHelper;
 
     invoke-virtual {v0, p1}, Lmiuix/smooth/internal/SmoothDrawHelper;->onBoundsChange(Landroid/graphics/Rect;)V
 
-    .line 219
+    .line 238
     iput-object p1, p0, Lmiuix/smooth/SmoothGradientDrawable;->mLayer:Landroid/graphics/Rect;
 
-    .line 220
+    .line 239
     iget-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable;->mSavedLayer:Landroid/graphics/RectF;
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
@@ -573,6 +597,30 @@
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2, v2, v1, p1}, Landroid/graphics/RectF;->set(FFFF)V
+
+    return-void
+.end method
+
+.method public setAlpha(I)V
+    .locals 1
+
+    .line 183
+    iget-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable;->mParentDrawable:Landroid/graphics/drawable/GradientDrawable;
+
+    if-eqz v0, :cond_0
+
+    .line 184
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
+
+    goto :goto_0
+
+    .line 186
+    :cond_0
+    invoke-super {p0, p1}, Landroid/graphics/drawable/GradientDrawable;->setAlpha(I)V
+
+    .line 188
+    :goto_0
+    invoke-virtual {p0}, Lmiuix/smooth/SmoothGradientDrawable;->invalidateSelf()V
 
     return-void
 .end method

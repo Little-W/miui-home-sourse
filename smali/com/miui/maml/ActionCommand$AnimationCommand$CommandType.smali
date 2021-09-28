@@ -40,7 +40,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .line 1878
+    .line 1898
     new-instance v0, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
     const-string v1, "INVALID"
@@ -51,7 +51,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;->INVALID:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
-    .line 1879
+    .line 1899
     new-instance v0, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
     const-string v1, "PLAY"
@@ -62,7 +62,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;->PLAY:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
-    .line 1880
+    .line 1900
     new-instance v0, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
     const-string v1, "PAUSE"
@@ -73,7 +73,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;->PAUSE:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
-    .line 1881
+    .line 1901
     new-instance v0, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
     const-string v1, "RESUME"
@@ -84,7 +84,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;->RESUME:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
-    .line 1882
+    .line 1902
     new-instance v0, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
     const-string v1, "PLAY_WITH_PARAMS"
@@ -97,7 +97,7 @@
 
     const/4 v0, 0x5
 
-    .line 1877
+    .line 1897
     new-array v0, v0, [Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
     sget-object v1, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;->INVALID:Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
@@ -133,7 +133,7 @@
         }
     .end annotation
 
-    .line 1877
+    .line 1897
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -142,7 +142,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
     .locals 1
 
-    .line 1877
+    .line 1897
     const-class v0, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -157,7 +157,7 @@
 .method public static values()[Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
     .locals 1
 
-    .line 1877
+    .line 1897
     sget-object v0, Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;->$VALUES:[Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;
 
     invoke-virtual {v0}, [Lcom/miui/maml/ActionCommand$AnimationCommand$CommandType;->clone()Ljava/lang/Object;

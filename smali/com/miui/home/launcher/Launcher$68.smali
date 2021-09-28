@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->uninstallPowerCleanButton()V
+    value = Lcom/miui/home/launcher/Launcher;->uninstallCleanButton()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 7001
+    .line 7411
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$68;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,16 +38,16 @@
 .method public run()V
     .locals 2
 
-    .line 7004
+    .line 7414
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$68;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    const/16 v1, 0xe
+    const/16 v1, 0xc
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$8700(Lcom/miui/home/launcher/Launcher;I)Ljava/util/ArrayList;
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$8500(Lcom/miui/home/launcher/Launcher;I)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 7005
+    .line 7415
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$68;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Launcher;->bindGadgetsRemoved(Ljava/util/ArrayList;)V

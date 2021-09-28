@@ -3,7 +3,7 @@
 .source "MamlOnExternCommandListener.java"
 
 # interfaces
-.implements Lmiui/maml/ScreenElementRoot$OnExternCommandListener;
+.implements Lcom/miui/maml/ScreenElementRoot$OnExternCommandListener;
 
 
 # annotations

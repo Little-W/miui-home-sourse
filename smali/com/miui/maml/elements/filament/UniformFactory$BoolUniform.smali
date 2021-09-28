@@ -57,11 +57,11 @@
 
     iget-object v7, p0, Lcom/miui/maml/elements/filament/UniformFactory$BoolUniform;->mName:Ljava/lang/String;
 
+    .line 267
     iget-object v0, p0, Lcom/miui/maml/elements/filament/UniformFactory$BoolUniform;->mParams:[Lcom/miui/maml/data/Expression;
 
     aget-object v0, v0, v5
 
-    .line 267
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v8
@@ -77,12 +77,12 @@
     :cond_0
     move v8, v5
 
+    .line 268
     :goto_0
     iget-object v0, p0, Lcom/miui/maml/elements/filament/UniformFactory$BoolUniform;->mParams:[Lcom/miui/maml/data/Expression;
 
     aget-object v0, v0, v4
 
-    .line 268
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v9
@@ -98,12 +98,12 @@
     :cond_1
     move v9, v5
 
+    .line 269
     :goto_1
     iget-object v0, p0, Lcom/miui/maml/elements/filament/UniformFactory$BoolUniform;->mParams:[Lcom/miui/maml/data/Expression;
 
     aget-object v0, v0, v1
 
-    .line 269
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v0
@@ -119,6 +119,7 @@
     :cond_2
     move v10, v5
 
+    .line 270
     :goto_2
     iget-object v0, p0, Lcom/miui/maml/elements/filament/UniformFactory$BoolUniform;->mParams:[Lcom/miui/maml/data/Expression;
 
@@ -126,7 +127,6 @@
 
     aget-object v0, v0, v1
 
-    .line 270
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v0
@@ -154,11 +154,11 @@
 
     iget-object v6, p0, Lcom/miui/maml/elements/filament/UniformFactory$BoolUniform;->mName:Ljava/lang/String;
 
+    .line 261
     iget-object v7, p0, Lcom/miui/maml/elements/filament/UniformFactory$BoolUniform;->mParams:[Lcom/miui/maml/data/Expression;
 
     aget-object v7, v7, v5
 
-    .line 261
     invoke-virtual {v7}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v7
@@ -174,12 +174,12 @@
     :cond_4
     move v7, v5
 
+    .line 262
     :goto_4
     iget-object v8, p0, Lcom/miui/maml/elements/filament/UniformFactory$BoolUniform;->mParams:[Lcom/miui/maml/data/Expression;
 
     aget-object v8, v8, v4
 
-    .line 262
     invoke-virtual {v8}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v8
@@ -195,12 +195,12 @@
     :cond_5
     move v8, v5
 
+    .line 263
     :goto_5
     iget-object v9, p0, Lcom/miui/maml/elements/filament/UniformFactory$BoolUniform;->mParams:[Lcom/miui/maml/data/Expression;
 
     aget-object v1, v9, v1
 
-    .line 263
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v9
@@ -226,11 +226,11 @@
 
     iget-object v1, p0, Lcom/miui/maml/elements/filament/UniformFactory$BoolUniform;->mName:Ljava/lang/String;
 
+    .line 256
     iget-object v6, p0, Lcom/miui/maml/elements/filament/UniformFactory$BoolUniform;->mParams:[Lcom/miui/maml/data/Expression;
 
     aget-object v6, v6, v5
 
-    .line 256
     invoke-virtual {v6}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v6
@@ -246,12 +246,12 @@
     :cond_7
     move v6, v5
 
+    .line 257
     :goto_7
     iget-object v7, p0, Lcom/miui/maml/elements/filament/UniformFactory$BoolUniform;->mParams:[Lcom/miui/maml/data/Expression;
 
     aget-object v7, v7, v4
 
-    .line 257
     invoke-virtual {v7}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v7
@@ -277,11 +277,11 @@
 
     iget-object v1, p0, Lcom/miui/maml/elements/filament/UniformFactory$BoolUniform;->mName:Ljava/lang/String;
 
+    .line 252
     iget-object v6, p0, Lcom/miui/maml/elements/filament/UniformFactory$BoolUniform;->mParams:[Lcom/miui/maml/data/Expression;
 
     aget-object v6, v6, v5
 
-    .line 252
     invoke-virtual {v6}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v6

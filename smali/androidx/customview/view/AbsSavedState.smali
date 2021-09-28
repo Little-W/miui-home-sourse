@@ -6,6 +6,14 @@
 .implements Landroid/os/Parcelable;
 
 
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "BanParcelableUsage"
+    }
+.end annotation
+
+
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
@@ -28,14 +36,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 30
+    .line 32
     new-instance v0, Landroidx/customview/view/AbsSavedState$1;
 
     invoke-direct {v0}, Landroidx/customview/view/AbsSavedState$1;-><init>()V
 
     sput-object v0, Landroidx/customview/view/AbsSavedState;->EMPTY_STATE:Landroidx/customview/view/AbsSavedState;
 
-    .line 88
+    .line 90
     new-instance v0, Landroidx/customview/view/AbsSavedState$2;
 
     invoke-direct {v0}, Landroidx/customview/view/AbsSavedState$2;-><init>()V
@@ -48,12 +56,12 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 37
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 38
+    .line 40
     iput-object v0, p0, Landroidx/customview/view/AbsSavedState;->mSuperState:Landroid/os/Parcelable;
 
     return-void
@@ -62,10 +70,10 @@
 .method protected constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
 
-    .line 68
+    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
+    .line 71
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object p1
@@ -74,7 +82,7 @@
 
     goto :goto_0
 
-    .line 70
+    .line 72
     :cond_0
     sget-object p1, Landroidx/customview/view/AbsSavedState;->EMPTY_STATE:Landroidx/customview/view/AbsSavedState;
 
@@ -87,12 +95,12 @@
 .method protected constructor <init>(Landroid/os/Parcelable;)V
     .locals 1
 
-    .line 46
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_1
 
-    .line 50
+    .line 52
     sget-object v0, Landroidx/customview/view/AbsSavedState;->EMPTY_STATE:Landroidx/customview/view/AbsSavedState;
 
     if-eq p1, v0, :cond_0
@@ -107,7 +115,7 @@
 
     return-void
 
-    .line 48
+    .line 50
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -121,7 +129,7 @@
 .method synthetic constructor <init>(Landroidx/customview/view/AbsSavedState$1;)V
     .locals 0
 
-    .line 29
+    .line 31
     invoke-direct {p0}, Landroidx/customview/view/AbsSavedState;-><init>()V
 
     return-void
@@ -140,7 +148,7 @@
 .method public final getSuperState()Landroid/os/Parcelable;
     .locals 1
 
-    .line 75
+    .line 77
     iget-object v0, p0, Landroidx/customview/view/AbsSavedState;->mSuperState:Landroid/os/Parcelable;
 
     return-object v0
@@ -149,7 +157,7 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    .line 85
+    .line 87
     iget-object v0, p0, Landroidx/customview/view/AbsSavedState;->mSuperState:Landroid/os/Parcelable;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V

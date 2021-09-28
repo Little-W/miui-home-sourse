@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;Landroid/view/View;)V
     .locals 0
 
-    .line 1573
+    .line 1725
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$7;->this$0:Lcom/miui/home/launcher/Workspace;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Workspace$7;->val$child:Landroid/view/View;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 1
 
-    .line 1576
+    .line 1728
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$7;->val$child:Landroid/view/View;
 
     check-cast v0, Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;

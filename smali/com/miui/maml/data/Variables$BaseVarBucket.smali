@@ -33,10 +33,10 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 34
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
+    .line 50
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -45,7 +45,7 @@
 
     const/4 v0, 0x0
 
-    .line 36
+    .line 51
     iput v0, p0, Lcom/miui/maml/data/Variables$BaseVarBucket;->mNextIndex:I
 
     return-void
@@ -54,7 +54,7 @@
 .method synthetic constructor <init>(Lcom/miui/maml/data/Variables$1;)V
     .locals 0
 
-    .line 34
+    .line 49
     invoke-direct {p0}, Lcom/miui/maml/data/Variables$BaseVarBucket;-><init>()V
 
     return-void
@@ -65,7 +65,7 @@
 .method public exists(Ljava/lang/String;)Z
     .locals 1
 
-    .line 54
+    .line 69
     iget-object v0, p0, Lcom/miui/maml/data/Variables$BaseVarBucket;->mIndices:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -83,7 +83,7 @@
 
     monitor-enter p0
 
-    .line 39
+    .line 54
     :try_start_0
     iget-object v0, p0, Lcom/miui/maml/data/Variables$BaseVarBucket;->mIndices:Ljava/util/HashMap;
 
@@ -95,24 +95,24 @@
 
     if-nez v0, :cond_0
 
-    .line 41
+    .line 56
     iget v0, p0, Lcom/miui/maml/data/Variables$BaseVarBucket;->mNextIndex:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 42
+    .line 57
     iget-object v1, p0, Lcom/miui/maml/data/Variables$BaseVarBucket;->mIndices:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
+    .line 58
     iget v1, p0, Lcom/miui/maml/data/Variables$BaseVarBucket;->mNextIndex:I
 
     invoke-virtual {p0, v1}, Lcom/miui/maml/data/Variables$BaseVarBucket;->onAddItem(I)V
 
-    .line 45
+    .line 60
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -122,14 +122,14 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 46
+    .line 61
     iget v1, p0, Lcom/miui/maml/data/Variables$BaseVarBucket;->mNextIndex:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/miui/maml/data/Variables$BaseVarBucket;->mNextIndex:I
 
-    .line 47
+    .line 62
     :cond_1
     invoke-static {}, Lcom/miui/maml/data/Variables;->access$000()Z
 
@@ -139,7 +139,7 @@
 
     const-string v1, "Variables"
 
-    .line 48
+    .line 63
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,7 +162,7 @@
 
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
+    .line 65
     :cond_2
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 

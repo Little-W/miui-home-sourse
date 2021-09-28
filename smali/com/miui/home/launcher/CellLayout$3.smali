@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 421
+    .line 409
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$3;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,10 +35,16 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 429
+    .line 412
     iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$3;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/CellLayout;->access$300(Lcom/miui/home/launcher/CellLayout;)V
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/miui/home/launcher/CellScreen;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellScreen;->onNormalEditAnimationExitEnd()V
 
     return-void
 .end method
@@ -46,10 +52,16 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
 
-    const/4 p1, 0x0
+    .line 417
+    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$3;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    .line 424
-    invoke-static {p1}, Lcom/miui/home/launcher/AutoLayoutAnimation;->setDisableAutoLayoutAnimation(Z)V
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/miui/home/launcher/CellScreen;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellScreen;->onNormalEditAnimationStart()V
 
     return-void
 .end method

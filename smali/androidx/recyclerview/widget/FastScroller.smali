@@ -447,20 +447,20 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    const/high16 v0, -0x40800000    # -1.0f
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/high16 v1, -0x40800000    # -1.0f
 
     .line 302
-    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->scale(FF)V
+    invoke-virtual {p1, v1, v0}, Landroid/graphics/Canvas;->scale(FF)V
 
     .line 303
-    iget-object v0, p0, Landroidx/recyclerview/widget/FastScroller;->mVerticalThumbDrawable:Landroid/graphics/drawable/StateListDrawable;
+    iget-object v3, p0, Landroidx/recyclerview/widget/FastScroller;->mVerticalThumbDrawable:Landroid/graphics/drawable/StateListDrawable;
 
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/StateListDrawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v3, p1}, Landroid/graphics/drawable/StateListDrawable;->draw(Landroid/graphics/Canvas;)V
 
     .line 304
-    invoke-virtual {p1, v1, v1}, Landroid/graphics/Canvas;->scale(FF)V
+    invoke-virtual {p1, v1, v0}, Landroid/graphics/Canvas;->scale(FF)V
 
     .line 305
     iget v0, p0, Landroidx/recyclerview/widget/FastScroller;->mVerticalThumbWidth:I
@@ -1025,8 +1025,6 @@
     if-eqz v0, :cond_0
 
     iget v0, p0, Landroidx/recyclerview/widget/FastScroller;->mVerticalThumbWidth:I
-
-    div-int/lit8 v0, v0, 0x2
 
     int-to-float v0, v0
 

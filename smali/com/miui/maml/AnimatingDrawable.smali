@@ -20,63 +20,178 @@
 
 
 # instance fields
-.field private mClassName:Ljava/lang/String;
+.field private final mAnimIndex:I
 
-.field private mContext:Landroid/content/Context;
+.field private final mClassName:Ljava/lang/String;
+
+.field private final mContext:Landroid/content/Context;
 
 .field private mFancyDrawable:Lcom/miui/maml/FancyDrawable;
 
+.field private final mLayerIndex:I
+
 .field private final mLock:Ljava/lang/Object;
 
-.field private mPackageName:Ljava/lang/String;
+.field private final mPackageName:Ljava/lang/String;
 
 .field private mQuietDrawable:Landroid/graphics/drawable/Drawable;
 
-.field private mResourceManager:Lcom/miui/maml/ResourceManager;
+.field private final mResourceManager:Lcom/miui/maml/ResourceManager;
 
-.field private mUser:Landroid/os/UserHandle;
+.field private mUseFancyWhenStatic:Z
+
+.field private mUseQuietWhenAnim:Z
+
+.field private final mUser:Landroid/os/UserHandle;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/miui/maml/ResourceManager;Landroid/os/UserHandle;)V
-    .locals 1
+    .locals 10
 
-    .line 40
-    invoke-direct {p0}, Lcom/miui/maml/MamlDrawable;-><init>()V
+    const/4 v6, -0x1
 
-    .line 37
-    new-instance v0, Ljava/lang/Object;
+    const/4 v7, -0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v8, 0x0
 
-    iput-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mLock:Ljava/lang/Object;
+    const/4 v9, 0x0
 
-    .line 41
-    iput-object p1, p0, Lcom/miui/maml/AnimatingDrawable;->mContext:Landroid/content/Context;
+    move-object v0, p0
 
-    .line 42
-    iput-object p4, p0, Lcom/miui/maml/AnimatingDrawable;->mResourceManager:Lcom/miui/maml/ResourceManager;
+    move-object v1, p1
 
-    .line 43
-    iput-object p2, p0, Lcom/miui/maml/AnimatingDrawable;->mPackageName:Ljava/lang/String;
+    move-object v2, p2
 
-    .line 44
-    iput-object p3, p0, Lcom/miui/maml/AnimatingDrawable;->mClassName:Ljava/lang/String;
+    move-object v3, p3
 
-    .line 45
-    iput-object p5, p0, Lcom/miui/maml/AnimatingDrawable;->mUser:Landroid/os/UserHandle;
+    move-object v4, p4
+
+    move-object v5, p5
 
     .line 46
+    invoke-direct/range {v0 .. v9}, Lcom/miui/maml/AnimatingDrawable;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/miui/maml/ResourceManager;Landroid/os/UserHandle;IIZZ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/miui/maml/ResourceManager;Landroid/os/UserHandle;I)V
+    .locals 10
+
+    const/4 v7, -0x1
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    move/from16 v6, p6
+
+    .line 52
+    invoke-direct/range {v0 .. v9}, Lcom/miui/maml/AnimatingDrawable;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/miui/maml/ResourceManager;Landroid/os/UserHandle;IIZZ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/miui/maml/ResourceManager;Landroid/os/UserHandle;II)V
+    .locals 10
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    move/from16 v6, p6
+
+    move/from16 v7, p7
+
+    .line 57
+    invoke-direct/range {v0 .. v9}, Lcom/miui/maml/AnimatingDrawable;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/miui/maml/ResourceManager;Landroid/os/UserHandle;IIZZ)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/miui/maml/ResourceManager;Landroid/os/UserHandle;IIZZ)V
+    .locals 2
+
+    .line 61
+    invoke-direct {p0}, Lcom/miui/maml/MamlDrawable;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 40
+    iput-boolean v0, p0, Lcom/miui/maml/AnimatingDrawable;->mUseFancyWhenStatic:Z
+
+    .line 41
+    new-instance v1, Ljava/lang/Object;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v1, p0, Lcom/miui/maml/AnimatingDrawable;->mLock:Ljava/lang/Object;
+
+    .line 42
+    iput-boolean v0, p0, Lcom/miui/maml/AnimatingDrawable;->mUseQuietWhenAnim:Z
+
+    .line 62
+    iput-object p1, p0, Lcom/miui/maml/AnimatingDrawable;->mContext:Landroid/content/Context;
+
+    .line 63
+    iput-object p4, p0, Lcom/miui/maml/AnimatingDrawable;->mResourceManager:Lcom/miui/maml/ResourceManager;
+
+    .line 64
+    iput-object p2, p0, Lcom/miui/maml/AnimatingDrawable;->mPackageName:Ljava/lang/String;
+
+    .line 65
+    iput-object p3, p0, Lcom/miui/maml/AnimatingDrawable;->mClassName:Ljava/lang/String;
+
+    .line 66
+    iput-object p5, p0, Lcom/miui/maml/AnimatingDrawable;->mUser:Landroid/os/UserHandle;
+
+    .line 67
+    iput p6, p0, Lcom/miui/maml/AnimatingDrawable;->mLayerIndex:I
+
+    .line 68
+    iput p7, p0, Lcom/miui/maml/AnimatingDrawable;->mAnimIndex:I
+
+    .line 69
+    iput-boolean p8, p0, Lcom/miui/maml/AnimatingDrawable;->mUseQuietWhenAnim:Z
+
+    .line 70
+    iput-boolean p9, p0, Lcom/miui/maml/AnimatingDrawable;->mUseFancyWhenStatic:Z
+
+    .line 72
     invoke-direct {p0}, Lcom/miui/maml/AnimatingDrawable;->init()V
 
     return-void
 .end method
 
 .method private init()V
-    .locals 7
+    .locals 11
 
-    .line 50
-    new-instance v6, Lcom/miui/maml/AnimatingDrawable$AnimatingDrawableState;
+    .line 76
+    new-instance v10, Lcom/miui/maml/AnimatingDrawable$AnimatingDrawableState;
 
     iget-object v1, p0, Lcom/miui/maml/AnimatingDrawable;->mContext:Landroid/content/Context;
 
@@ -88,16 +203,24 @@
 
     iget-object v5, p0, Lcom/miui/maml/AnimatingDrawable;->mUser:Landroid/os/UserHandle;
 
-    move-object v0, v6
+    iget v6, p0, Lcom/miui/maml/AnimatingDrawable;->mLayerIndex:I
 
-    invoke-direct/range {v0 .. v5}, Lcom/miui/maml/AnimatingDrawable$AnimatingDrawableState;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/miui/maml/ResourceManager;Landroid/os/UserHandle;)V
+    iget v7, p0, Lcom/miui/maml/AnimatingDrawable;->mAnimIndex:I
 
-    iput-object v6, p0, Lcom/miui/maml/AnimatingDrawable;->mState:Lcom/miui/maml/MamlDrawable$MamlDrawableState;
+    iget-boolean v8, p0, Lcom/miui/maml/AnimatingDrawable;->mUseQuietWhenAnim:Z
 
-    .line 51
+    iget-boolean v9, p0, Lcom/miui/maml/AnimatingDrawable;->mUseFancyWhenStatic:Z
+
+    move-object v0, v10
+
+    invoke-direct/range {v0 .. v9}, Lcom/miui/maml/AnimatingDrawable$AnimatingDrawableState;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/miui/maml/ResourceManager;Landroid/os/UserHandle;IIZZ)V
+
+    iput-object v10, p0, Lcom/miui/maml/AnimatingDrawable;->mState:Lcom/miui/maml/MamlDrawable$MamlDrawableState;
+
+    .line 78
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mContext:Landroid/content/Context;
 
-    const-string v1, "window"
+    const-string/jumbo v1, "window"
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -105,20 +228,20 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    .line 52
+    .line 79
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
 
-    .line 53
+    .line 80
     new-instance v1, Landroid/util/DisplayMetrics;
 
     invoke-direct {v1}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 54
+    .line 81
     invoke-virtual {v0, v1}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 55
+    .line 82
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mResourceManager:Lcom/miui/maml/ResourceManager;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -141,7 +264,7 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/miui/maml/ResourceManager;->setExtraResource(Ljava/lang/String;I)V
 
-    .line 56
+    .line 83
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mResourceManager:Lcom/miui/maml/ResourceManager;
 
     iget-object v1, p0, Lcom/miui/maml/AnimatingDrawable;->mContext:Landroid/content/Context;
@@ -158,12 +281,12 @@
 
     iput-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mQuietDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 57
+    .line 84
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mQuietDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 58
+    .line 85
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
@@ -176,7 +299,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/miui/maml/AnimatingDrawable;->setIntrinsicSize(II)V
 
-    .line 59
+    .line 86
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mQuietDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
@@ -185,7 +308,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mQuietDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 60
+    .line 87
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mQuietDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -194,22 +317,22 @@
 
     iget-object v2, p0, Lcom/miui/maml/AnimatingDrawable;->mQuietDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 61
+    .line 88
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v2
 
     const/4 v3, 0x0
 
-    .line 60
+    .line 87
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 62
+    .line 89
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mColorFilter:Landroid/graphics/ColorFilter;
 
     if-eqz v0, :cond_1
 
-    .line 63
+    .line 90
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mQuietDrawable:Landroid/graphics/drawable/Drawable;
 
     iget-object v1, p0, Lcom/miui/maml/AnimatingDrawable;->mColorFilter:Landroid/graphics/ColorFilter;
@@ -221,7 +344,7 @@
     :cond_0
     const-string v0, "Maml.AnimatingDrawable"
 
-    .line 66
+    .line 93
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -258,18 +381,18 @@
 .method public clear()V
     .locals 2
 
-    .line 96
+    .line 170
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 97
+    .line 171
     :try_start_0
     iget-object v1, p0, Lcom/miui/maml/AnimatingDrawable;->mFancyDrawable:Lcom/miui/maml/FancyDrawable;
 
     if-eqz v1, :cond_0
 
-    .line 98
+    .line 172
     iget-object v1, p0, Lcom/miui/maml/AnimatingDrawable;->mFancyDrawable:Lcom/miui/maml/FancyDrawable;
 
     invoke-virtual {v1}, Lcom/miui/maml/FancyDrawable;->cleanUp()V
@@ -277,10 +400,10 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 100
+    .line 174
     iput-object v1, p0, Lcom/miui/maml/AnimatingDrawable;->mFancyDrawable:Lcom/miui/maml/FancyDrawable;
 
-    .line 101
+    .line 175
     monitor-exit v0
 
     return-void
@@ -298,13 +421,21 @@
 .method protected drawIcon(Landroid/graphics/Canvas;)V
     .locals 4
 
-    .line 116
+    .line 189
+    iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mQuietDrawable:Landroid/graphics/drawable/Drawable;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 194
+    :cond_0
     :try_start_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
-    .line 117
+    .line 195
     invoke-virtual {p0}, Lcom/miui/maml/AnimatingDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v1
@@ -323,7 +454,7 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 118
+    .line 196
     iget v1, p0, Lcom/miui/maml/AnimatingDrawable;->mWidth:I
 
     int-to-float v1, v1
@@ -348,12 +479,12 @@
 
     invoke-virtual {p1, v1, v2, v3, v3}, Landroid/graphics/Canvas;->scale(FFFF)V
 
-    .line 119
+    .line 197
     iget-object v1, p0, Lcom/miui/maml/AnimatingDrawable;->mQuietDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 120
+    .line 198
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
@@ -364,12 +495,12 @@
     :catch_0
     move-exception p1
 
-    .line 125
+    .line 203
     invoke-virtual {p1}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
 
     const-string v0, "Maml.AnimatingDrawable"
 
-    .line 126
+    .line 204
     invoke-virtual {p1}, Ljava/lang/OutOfMemoryError;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -381,12 +512,12 @@
     :catch_1
     move-exception p1
 
-    .line 122
+    .line 200
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     const-string v0, "Maml.AnimatingDrawable"
 
-    .line 123
+    .line 201
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -397,10 +528,32 @@
     return-void
 .end method
 
+.method public getAnimIndex()I
+    .locals 2
+
+    .line 112
+    iget v0, p0, Lcom/miui/maml/AnimatingDrawable;->mAnimIndex:I
+
+    const/4 v1, -0x1
+
+    if-le v0, v1, :cond_0
+
+    return v0
+
+    .line 115
+    :cond_0
+    iget v0, p0, Lcom/miui/maml/AnimatingDrawable;->mLayerIndex:I
+
+    return v0
+.end method
+
 .method public getFancyDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 92
+    .line 165
+    invoke-virtual {p0}, Lcom/miui/maml/AnimatingDrawable;->prepareFancyDrawable()V
+
+    .line 166
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mFancyDrawable:Lcom/miui/maml/FancyDrawable;
 
     return-object v0
@@ -414,24 +567,33 @@
     return v0
 .end method
 
+.method public getQuietDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .line 98
+    iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mQuietDrawable:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
 .method public getStartDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 71
+    .line 102
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 72
+    .line 103
     :try_start_0
     invoke-virtual {p0}, Lcom/miui/maml/AnimatingDrawable;->prepareFancyDrawable()V
 
-    .line 73
+    .line 104
     iget-object v1, p0, Lcom/miui/maml/AnimatingDrawable;->mFancyDrawable:Lcom/miui/maml/FancyDrawable;
 
     if-eqz v1, :cond_0
 
-    .line 74
+    .line 105
     iget-object v1, p0, Lcom/miui/maml/AnimatingDrawable;->mFancyDrawable:Lcom/miui/maml/FancyDrawable;
 
     invoke-virtual {v1}, Lcom/miui/maml/FancyDrawable;->getStartDrawable()Landroid/graphics/drawable/Drawable;
@@ -445,7 +607,7 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 76
+    .line 107
     monitor-exit v0
 
     return-object v1
@@ -453,7 +615,7 @@
     :catchall_0
     move-exception v1
 
-    .line 77
+    .line 108
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -461,26 +623,56 @@
     throw v1
 .end method
 
-.method public prepareFancyDrawable()V
-    .locals 8
+.method public isOnlyFancyWork()Z
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
-    .line 81
+    .line 123
+    iget-boolean v0, p0, Lcom/miui/maml/AnimatingDrawable;->mUseFancyWhenStatic:Z
+
+    return v0
+.end method
+
+.method public isOnlyQuietWork()Z
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 131
+    iget-boolean v0, p0, Lcom/miui/maml/AnimatingDrawable;->mUseQuietWhenAnim:Z
+
+    return v0
+.end method
+
+.method public prepareFancyDrawable()V
+    .locals 9
+
+    .line 144
+    iget-boolean v0, p0, Lcom/miui/maml/AnimatingDrawable;->mUseQuietWhenAnim:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 148
+    :cond_0
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 82
+    .line 149
     :try_start_0
     iget-object v1, p0, Lcom/miui/maml/AnimatingDrawable;->mFancyDrawable:Lcom/miui/maml/FancyDrawable;
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     monitor-exit v0
 
     return-void
 
-    .line 83
-    :cond_0
+    .line 150
+    :cond_1
     iget-object v2, p0, Lcom/miui/maml/AnimatingDrawable;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/miui/maml/AnimatingDrawable;->mPackageName:Ljava/lang/String;
@@ -491,29 +683,57 @@
 
     iget-object v7, p0, Lcom/miui/maml/AnimatingDrawable;->mUser:Landroid/os/UserHandle;
 
-    invoke-static/range {v2 .. v7}, Lcom/miui/maml/util/AppIconsHelper;->getFancyIconDrawable(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;JLandroid/os/UserHandle;)Landroid/graphics/drawable/Drawable;
+    iget v8, p0, Lcom/miui/maml/AnimatingDrawable;->mLayerIndex:I
+
+    invoke-static/range {v2 .. v8}, Lcom/miui/maml/util/AppIconsHelper;->getFancyIconDrawable(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;JLandroid/os/UserHandle;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 84
+    .line 153
     instance-of v2, v1, Lcom/miui/maml/FancyDrawable;
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_4
 
-    .line 85
+    .line 155
+    iget-object v2, p0, Lcom/miui/maml/AnimatingDrawable;->mQuietDrawable:Landroid/graphics/drawable/Drawable;
+
+    if-nez v2, :cond_3
+
+    iget v2, p0, Lcom/miui/maml/AnimatingDrawable;->mIntrinsicHeight:I
+
+    if-lez v2, :cond_2
+
+    iget v2, p0, Lcom/miui/maml/AnimatingDrawable;->mIntrinsicWidth:I
+
+    if-gtz v2, :cond_3
+
+    .line 156
+    :cond_2
+    iget-object v2, p0, Lcom/miui/maml/AnimatingDrawable;->mFancyDrawable:Lcom/miui/maml/FancyDrawable;
+
+    iget v2, v2, Lcom/miui/maml/FancyDrawable;->mIntrinsicWidth:I
+
+    iget-object v3, p0, Lcom/miui/maml/AnimatingDrawable;->mFancyDrawable:Lcom/miui/maml/FancyDrawable;
+
+    iget v3, v3, Lcom/miui/maml/FancyDrawable;->mIntrinsicHeight:I
+
+    invoke-virtual {p0, v2, v3}, Lcom/miui/maml/AnimatingDrawable;->setIntrinsicSize(II)V
+
+    .line 158
+    :cond_3
     check-cast v1, Lcom/miui/maml/FancyDrawable;
 
     iput-object v1, p0, Lcom/miui/maml/AnimatingDrawable;->mFancyDrawable:Lcom/miui/maml/FancyDrawable;
 
-    .line 86
+    .line 159
     iget-object v1, p0, Lcom/miui/maml/AnimatingDrawable;->mFancyDrawable:Lcom/miui/maml/FancyDrawable;
 
     iget-object v2, p0, Lcom/miui/maml/AnimatingDrawable;->mColorFilter:Landroid/graphics/ColorFilter;
 
     invoke-virtual {v1, v2}, Lcom/miui/maml/FancyDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 88
-    :cond_1
+    .line 161
+    :cond_4
     monitor-exit v0
 
     return-void
@@ -531,12 +751,12 @@
 .method public sendCommand(Ljava/lang/String;)V
     .locals 1
 
-    .line 105
+    .line 179
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mFancyDrawable:Lcom/miui/maml/FancyDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 106
+    .line 180
     invoke-virtual {v0}, Lcom/miui/maml/FancyDrawable;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v0
@@ -550,12 +770,12 @@
 .method public setAlpha(I)V
     .locals 1
 
-    .line 137
+    .line 215
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mQuietDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 138
+    .line 216
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     :cond_0
@@ -565,7 +785,7 @@
 .method public setBounds(IIII)V
     .locals 0
 
-    .line 111
+    .line 185
     invoke-super {p0, p1, p2, p3, p4}, Lcom/miui/maml/MamlDrawable;->setBounds(IIII)V
 
     return-void
@@ -574,44 +794,62 @@
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 2
 
-    .line 144
+    .line 222
     invoke-super {p0, p1}, Lcom/miui/maml/MamlDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     const-string v0, "Maml.AnimatingDrawable"
 
     const-string v1, "setColorFilter"
 
-    .line 145
+    .line 223
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
+    .line 224
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mQuietDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 147
+    .line 225
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 149
+    .line 227
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mBadgeDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
 
-    .line 150
+    .line 228
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mBadgeDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 152
+    .line 230
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/AnimatingDrawable;->mFancyDrawable:Lcom/miui/maml/FancyDrawable;
 
     if-eqz v0, :cond_2
 
-    .line 153
+    .line 231
     invoke-virtual {v0, p1}, Lcom/miui/maml/FancyDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     :cond_2
     return-void
+.end method
+
+.method public useFancyWhenStatic()Z
+    .locals 1
+
+    .line 135
+    iget-boolean v0, p0, Lcom/miui/maml/AnimatingDrawable;->mUseFancyWhenStatic:Z
+
+    return v0
+.end method
+
+.method public useQuietWhenAnim()Z
+    .locals 1
+
+    .line 139
+    iget-boolean v0, p0, Lcom/miui/maml/AnimatingDrawable;->mUseQuietWhenAnim:Z
+
+    return v0
 .end method

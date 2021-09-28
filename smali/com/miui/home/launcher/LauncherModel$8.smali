@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel;Lcom/miui/home/launcher/Launcher;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 871
+    .line 875
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$8;->this$0:Lcom/miui/home/launcher/LauncherModel;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$8;->val$launcher:Lcom/miui/home/launcher/Launcher;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 2
 
-    .line 873
+    .line 877
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$8;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isDestroyed()Z
@@ -57,7 +57,7 @@
 
     return-void
 
-    .line 876
+    .line 880
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$8;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
@@ -69,12 +69,12 @@
 
     const-wide/16 v0, 0x64
 
-    .line 877
+    .line 881
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/LauncherModel;->access$700(Ljava/lang/Runnable;J)V
 
     return-void
 
-    .line 880
+    .line 884
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$8;->val$runnable:Ljava/lang/Runnable;
 

@@ -31,17 +31,17 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 26
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "manifest.xml"
 
-    .line 32
+    .line 35
     iput-object v0, p0, Lcom/miui/maml/ResourceLoader;->mManifestName:Ljava/lang/String;
 
     const-string v0, "config.xml"
 
-    .line 33
+    .line 36
     iput-object v0, p0, Lcom/miui/maml/ResourceLoader;->mConfigName:Ljava/lang/String;
 
     return-void
@@ -50,7 +50,7 @@
 .method private getPathForLanguage(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .line 206
+    .line 213
     iget-object v0, p0, Lcom/miui/maml/ResourceLoader;->mLanguageCountrySuffix:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -59,7 +59,7 @@
 
     if-nez v0, :cond_0
 
-    .line 208
+    .line 215
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,7 +84,7 @@
 
     move-result-object v0
 
-    .line 209
+    .line 216
     invoke-virtual {p0, v0}, Lcom/miui/maml/ResourceLoader;->resourceExists(Ljava/lang/String;)Z
 
     move-result v1
@@ -93,7 +93,7 @@
 
     return-object v0
 
-    .line 212
+    .line 219
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ResourceLoader;->mLanguageSuffix:Ljava/lang/String;
 
@@ -103,7 +103,7 @@
 
     if-nez v0, :cond_1
 
-    .line 214
+    .line 221
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -128,7 +128,7 @@
 
     move-result-object v0
 
-    .line 215
+    .line 222
     invoke-virtual {p0, v0}, Lcom/miui/maml/ResourceLoader;->resourceExists(Ljava/lang/String;)Z
 
     move-result v1
@@ -137,7 +137,7 @@
 
     return-object v0
 
-    .line 219
+    .line 226
     :cond_1
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -145,7 +145,7 @@
 
     if-nez v0, :cond_2
 
-    .line 220
+    .line 227
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -162,7 +162,7 @@
 
     move-result-object p2
 
-    .line 221
+    .line 228
     invoke-virtual {p0, p2}, Lcom/miui/maml/ResourceLoader;->resourceExists(Ljava/lang/String;)Z
 
     move-result v0
@@ -171,7 +171,7 @@
 
     return-object p2
 
-    .line 225
+    .line 232
     :cond_2
     invoke-virtual {p0, p1}, Lcom/miui/maml/ResourceLoader;->resourceExists(Ljava/lang/String;)Z
 
@@ -191,12 +191,12 @@
 .method private getXmlRoot(Ljava/lang/String;)Lorg/w3c/dom/Element;
     .locals 3
 
-    .line 146
+    .line 153
     invoke-virtual {p0, p1}, Lcom/miui/maml/ResourceLoader;->getPathForLanguage(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 147
+    .line 154
     invoke-virtual {p0, p1}, Lcom/miui/maml/ResourceLoader;->getInputStream(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object p1
@@ -209,29 +209,29 @@
 
     const-string v1, "getXmlRoot local inputStream is null"
 
-    .line 149
+    .line 156
     invoke-static {p1, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
 
-    .line 154
+    .line 161
     :cond_0
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v1
 
-    .line 155
+    .line 162
     invoke-virtual {v1}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v1
 
-    .line 156
+    .line 163
     invoke-virtual {v1, p1}, Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/InputStream;)Lorg/w3c/dom/Document;
 
     move-result-object v1
 
-    .line 157
+    .line 164
     invoke-interface {v1}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
     move-result-object v0
@@ -245,7 +245,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 171
+    .line 178
     :try_start_1
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_1
@@ -266,7 +266,7 @@
     :try_start_2
     const-string v2, "ResourceLoader"
 
-    .line 167
+    .line 174
     invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -277,7 +277,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 171
+    .line 178
     :goto_0
     :try_start_3
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
@@ -292,7 +292,7 @@
     :try_start_4
     const-string v2, "ResourceLoader"
 
-    .line 165
+    .line 172
     invoke-virtual {v1}, Lorg/xml/sax/SAXException;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -308,7 +308,7 @@
 
     const-string v2, "ResourceLoader"
 
-    .line 163
+    .line 170
     invoke-virtual {v1}, Ljavax/xml/parsers/ParserConfigurationException;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -324,7 +324,7 @@
 
     const-string v2, "ResourceLoader"
 
-    .line 161
+    .line 168
     invoke-virtual {v1}, Ljava/lang/OutOfMemoryError;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -340,7 +340,7 @@
 
     const-string v2, "ResourceLoader"
 
-    .line 159
+    .line 166
     invoke-virtual {v1}, Ljava/io/IOException;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -361,13 +361,13 @@
     :goto_2
     if-eqz p1, :cond_3
 
-    .line 171
+    .line 178
     :try_start_5
     invoke-virtual {p1}, Ljava/io/InputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_7
 
-    .line 175
+    .line 182
     :catch_7
     :cond_3
     throw v0
@@ -386,7 +386,7 @@
 
     const-string v0, "images"
 
-    .line 92
+    .line 99
     invoke-direct {p0, p1, v0}, Lcom/miui/maml/ResourceLoader;->getPathForLanguage(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -397,7 +397,7 @@
 
     const-string v0, "ResourceLoader"
 
-    .line 94
+    .line 101
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -416,7 +416,7 @@
 
     const-string v0, "images"
 
-    .line 95
+    .line 102
     invoke-direct {p0, p1, v0}, Lcom/miui/maml/ResourceLoader;->getPathForLanguage(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -425,7 +425,7 @@
 
     const-string p2, "ResourceLoader"
 
-    .line 97
+    .line 104
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -444,7 +444,7 @@
 
     return-object v1
 
-    .line 101
+    .line 108
     :cond_0
     invoke-virtual {p0, v0}, Lcom/miui/maml/ResourceLoader;->getInputStream(Ljava/lang/String;)Ljava/io/InputStream;
 
@@ -454,7 +454,7 @@
 
     const-string v2, "ResourceLoader"
 
-    .line 103
+    .line 110
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -471,7 +471,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
+    .line 111
     invoke-virtual {p0, v0}, Lcom/miui/maml/ResourceLoader;->getInputStream(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v2
@@ -480,7 +480,7 @@
 
     const-string p2, "ResourceLoader"
 
-    .line 106
+    .line 113
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -499,14 +499,14 @@
 
     return-object v1
 
-    .line 112
+    .line 119
     :cond_1
     :try_start_0
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 113
+    .line 120
     invoke-static {v2, v0, p2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v3
@@ -515,7 +515,7 @@
 
     const-string v3, "ResourceLoader"
 
-    .line 115
+    .line 122
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -532,7 +532,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
+    .line 123
     invoke-static {v2, v0, p2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object p2
@@ -541,7 +541,7 @@
 
     const-string p2, "ResourceLoader"
 
-    .line 118
+    .line 125
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -563,7 +563,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 128
+    .line 135
     :try_start_1
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_1
@@ -584,7 +584,7 @@
 
     goto :goto_1
 
-    .line 122
+    .line 129
     :cond_4
     :try_start_3
     new-instance p1, Lcom/miui/maml/ResourceManager$BitmapInfo;
@@ -596,7 +596,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 128
+    .line 135
     :try_start_4
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_4
@@ -617,7 +617,7 @@
     :try_start_5
     const-string p2, "ResourceLoader"
 
-    .line 124
+    .line 131
     invoke-virtual {p1}, Ljava/lang/OutOfMemoryError;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -638,13 +638,13 @@
     :goto_2
     if-eqz v2, :cond_7
 
-    .line 128
+    .line 135
     :try_start_6
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_4
 
-    .line 132
+    .line 139
     :catch_4
     :cond_7
     throw p1
@@ -653,7 +653,7 @@
 .method public getConfigRoot()Lorg/w3c/dom/Element;
     .locals 1
 
-    .line 142
+    .line 149
     iget-object v0, p0, Lcom/miui/maml/ResourceLoader;->mConfigName:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/miui/maml/ResourceLoader;->getXmlRoot(Ljava/lang/String;)Lorg/w3c/dom/Element;
@@ -668,10 +668,10 @@
 
     const/4 v0, 0x1
 
-    .line 58
+    .line 61
     new-array v0, v0, [J
 
-    .line 59
+    .line 62
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/ResourceLoader;->getInputStream(Ljava/lang/String;[J)Ljava/io/InputStream;
 
     move-result-object v1
@@ -685,11 +685,11 @@
     :cond_0
     const/high16 v3, 0x10000
 
-    .line 64
+    .line 67
     :try_start_0
     new-array v4, v3, [B
 
-    .line 65
+    .line 68
     new-instance v5, Landroid/os/MemoryFile;
 
     const/4 v6, 0x0
@@ -702,7 +702,7 @@
 
     move p1, v6
 
-    .line 68
+    .line 71
     :goto_0
     invoke-virtual {v1, v4, v6, v3}, Ljava/io/InputStream;->read([BII)I
 
@@ -710,14 +710,14 @@
 
     if-lez v0, :cond_1
 
-    .line 69
+    .line 72
     invoke-virtual {v5, v4, v6, p1, v0}, Landroid/os/MemoryFile;->writeBytes([BIII)V
 
     add-int/2addr p1, v0
 
     goto :goto_0
 
-    .line 72
+    .line 75
     :cond_1
     invoke-virtual {v5}, Landroid/os/MemoryFile;->length()I
 
@@ -731,7 +731,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 82
+    .line 85
     :try_start_1
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_1
@@ -763,7 +763,7 @@
     :try_start_3
     const-string v0, "ResourceLoader"
 
-    .line 78
+    .line 81
     invoke-virtual {p1}, Ljava/lang/OutOfMemoryError;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -779,7 +779,7 @@
 
     const-string v0, "ResourceLoader"
 
-    .line 76
+    .line 79
     invoke-virtual {p1}, Ljava/io/IOException;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -800,16 +800,24 @@
     :goto_3
     if-eqz v1, :cond_5
 
-    .line 82
+    .line 85
     :try_start_4
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 86
+    .line 89
     :catch_4
     :cond_5
     throw p1
+.end method
+
+.method public getFontFile(Ljava/lang/String;)Ljava/io/File;
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return-object p1
 .end method
 
 .method public getID()Ljava/lang/String;
@@ -825,7 +833,7 @@
 
     const/4 v0, 0x0
 
-    .line 231
+    .line 238
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/ResourceLoader;->getInputStream(Ljava/lang/String;[J)Ljava/io/InputStream;
 
     move-result-object p1
@@ -839,7 +847,7 @@
 .method public getLocale()Ljava/util/Locale;
     .locals 1
 
-    .line 54
+    .line 57
     iget-object v0, p0, Lcom/miui/maml/ResourceLoader;->mLocale:Ljava/util/Locale;
 
     return-object v0
@@ -848,7 +856,7 @@
 .method public getManifestRoot()Lorg/w3c/dom/Element;
     .locals 1
 
-    .line 138
+    .line 145
     iget-object v0, p0, Lcom/miui/maml/ResourceLoader;->mManifestName:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/miui/maml/ResourceLoader;->getXmlRoot(Ljava/lang/String;)Lorg/w3c/dom/Element;
@@ -861,7 +869,7 @@
 .method public getPathForLanguage(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .line 185
+    .line 192
     iget-object v0, p0, Lcom/miui/maml/ResourceLoader;->mLanguageCountrySuffix:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -872,14 +880,14 @@
 
     if-nez v0, :cond_0
 
-    .line 186
+    .line 193
     iget-object v0, p0, Lcom/miui/maml/ResourceLoader;->mLanguageCountrySuffix:Ljava/lang/String;
 
     invoke-static {p1, v0}, Lcom/miui/maml/util/Utils;->addFileNameSuffix(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 187
+    .line 194
     invoke-virtual {p0, v0}, Lcom/miui/maml/ResourceLoader;->resourceExists(Ljava/lang/String;)Z
 
     move-result v2
@@ -897,7 +905,7 @@
     :goto_0
     if-nez v0, :cond_2
 
-    .line 190
+    .line 197
     iget-object v2, p0, Lcom/miui/maml/ResourceLoader;->mLanguageSuffix:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -906,14 +914,14 @@
 
     if-nez v2, :cond_2
 
-    .line 191
+    .line 198
     iget-object v0, p0, Lcom/miui/maml/ResourceLoader;->mLanguageSuffix:Ljava/lang/String;
 
     invoke-static {p1, v0}, Lcom/miui/maml/util/Utils;->addFileNameSuffix(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 192
+    .line 199
     invoke-virtual {p0, v0}, Lcom/miui/maml/ResourceLoader;->resourceExists(Ljava/lang/String;)Z
 
     move-result v2
@@ -945,21 +953,21 @@
 
     if-eqz p1, :cond_0
 
-    .line 42
+    .line 45
     invoke-virtual {p1}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/maml/ResourceLoader;->mLanguageSuffix:Ljava/lang/String;
 
-    .line 43
+    .line 46
     invoke-virtual {p1}, Ljava/util/Locale;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/maml/ResourceLoader;->mLanguageCountrySuffix:Ljava/lang/String;
 
-    .line 45
+    .line 48
     iget-object v0, p0, Lcom/miui/maml/ResourceLoader;->mLanguageSuffix:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/miui/maml/ResourceLoader;->mLanguageCountrySuffix:Ljava/lang/String;
@@ -972,10 +980,10 @@
 
     const/4 v0, 0x0
 
-    .line 46
+    .line 49
     iput-object v0, p0, Lcom/miui/maml/ResourceLoader;->mLanguageSuffix:Ljava/lang/String;
 
-    .line 49
+    .line 52
     :cond_0
     iput-object p1, p0, Lcom/miui/maml/ResourceLoader;->mLocale:Ljava/util/Locale;
 

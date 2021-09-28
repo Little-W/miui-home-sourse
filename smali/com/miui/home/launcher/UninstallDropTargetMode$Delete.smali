@@ -40,7 +40,7 @@
 .method public getIconResId()I
     .locals 1
 
-    const v0, 0x7f080175
+    const v0, 0x7f0801c2
 
     return v0
 .end method
@@ -48,7 +48,7 @@
 .method public getLabelResId()I
     .locals 1
 
-    const v0, 0x7f100360
+    const v0, 0x7f100378
 
     return v0
 .end method
@@ -82,7 +82,7 @@
 .end method
 
 .method public onDrop(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/UninstallDropTarget;Lcom/miui/home/launcher/DragObject;)Z
-    .locals 5
+    .locals 8
 
     .line 128
     invoke-virtual {p3}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
@@ -171,17 +171,32 @@
 
     .line 146
     :goto_1
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isDrawerMode()Z
+    invoke-virtual {p3}, Lcom/miui/home/launcher/DragObject;->getDragSource()Lcom/miui/home/launcher/DragSource;
 
-    move-result v3
+    move-result-object v3
 
+    instance-of v3, v3, Lcom/miui/home/launcher/allapps/AllAppsContainerView;
+
+    const/4 v4, 0x1
+
+    if-eqz v3, :cond_3
+
+    move v3, v2
+
+    goto :goto_2
+
+    :cond_3
+    move v3, v4
+
+    .line 147
+    :goto_2
     invoke-static {v0, p1, v3}, Lcom/miui/home/launcher/uninstall/UninstallController;->isHideAppValid(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Launcher;Z)Z
 
     move-result v3
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
-    .line 147
+    .line 148
     move-object v1, v0
 
     check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
@@ -190,30 +205,89 @@
 
     move-result v2
 
-    goto :goto_2
+    goto :goto_3
 
     .line 149
-    :cond_3
-    invoke-virtual {v1, v0}, Lcom/miui/home/launcher/uninstall/UninstallController;->deleteItem(Lcom/miui/home/launcher/ItemInfo;)V
+    :cond_4
+    instance-of v3, v0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;
 
-    :goto_2
-    if-nez v2, :cond_4
+    if-eqz v3, :cond_5
+
+    move-object v3, v0
+
+    check-cast v3, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;
+
+    iget-boolean v5, v3, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->isMIUIWidget:Z
+
+    if-eqz v5, :cond_5
+
+    const/4 v1, 0x2
+
+    .line 150
+    new-array v5, v1, [I
+
+    .line 151
+    invoke-virtual {p3}, Lcom/miui/home/launcher/DragObject;->getDragView()Lcom/miui/home/launcher/DragView;
+
+    move-result-object p3
 
     .line 152
-    invoke-virtual {v0}, Lcom/miui/home/launcher/ItemInfo;->finishPending()V
+    invoke-virtual {p3, v5}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    .line 153
+    aget v6, v5, v2
+
+    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
+
+    move-result v7
+
+    div-int/2addr v7, v1
+
+    add-int/2addr v6, v7
+
+    aput v6, v5, v2
+
+    .line 154
+    aget v6, v5, v4
+
+    invoke-virtual {p3}, Landroid/view/View;->getHeight()I
+
+    move-result p3
+
+    div-int/2addr p3, v1
+
+    add-int/2addr v6, p3
+
+    aput v6, v5, v4
 
     .line 155
-    :cond_4
+    invoke-static {p1, v3, v4}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackDeleteMiuiWidget(Landroid/content/Context;Lcom/miui/home/launcher/MIUIWidgetBasicInfo;I)V
+
+    .line 156
+    invoke-static {p1, v3, v5}, Lcom/miui/home/launcher/uninstall/UninstallController;->deleteMiuiWidgetWidthBoomAnim(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/MIUIWidgetBasicInfo;[I)V
+
+    goto :goto_3
+
+    .line 158
+    :cond_5
+    invoke-virtual {v1, v0}, Lcom/miui/home/launcher/uninstall/UninstallController;->deleteItem(Lcom/miui/home/launcher/ItemInfo;)V
+
+    :goto_3
+    if-nez v2, :cond_6
+
+    .line 161
+    invoke-virtual {v0}, Lcom/miui/home/launcher/ItemInfo;->finishPending()V
+
+    .line 164
+    :cond_6
     iget-object p1, p0, Lcom/miui/home/launcher/UninstallDropTargetMode$Delete;->mStartUninstallDialogRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/UninstallDropTarget;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 156
+    .line 165
     iget-object p1, p0, Lcom/miui/home/launcher/UninstallDropTargetMode$Delete;->mStartUninstallDialogRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/UninstallDropTarget;->post(Ljava/lang/Runnable;)Z
 
-    const/4 p1, 0x1
-
-    return p1
+    return v4
 .end method

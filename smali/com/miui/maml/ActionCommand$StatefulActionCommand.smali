@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Ljava/lang/String;)V
     .locals 2
 
-    .line 83
+    .line 88
     invoke-direct {p0, p1}, Lcom/miui/maml/ActionCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;)V
 
-    .line 84
+    .line 89
     new-instance p1, Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$StatefulActionCommand;->getVariables()Lcom/miui/maml/data/Variables;
@@ -46,7 +46,7 @@
 .method protected final updateState(I)V
     .locals 3
 
-    .line 88
+    .line 93
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$StatefulActionCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
 
     if-nez v0, :cond_0
@@ -56,10 +56,10 @@
     :cond_0
     int-to-double v1, p1
 
-    .line 90
+    .line 95
     invoke-virtual {v0, v1, v2}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 91
+    .line 96
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$StatefulActionCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object p1

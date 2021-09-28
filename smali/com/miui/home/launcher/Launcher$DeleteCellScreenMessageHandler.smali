@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 6545
+    .line 6964
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$DeleteCellScreenMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/Launcher$1;)V
     .locals 0
 
-    .line 6545
+    .line 6964
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Launcher$DeleteCellScreenMessageHandler;-><init>(Lcom/miui/home/launcher/Launcher;)V
 
     return-void
@@ -47,7 +47,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 6548
+    .line 6967
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/DeleteCellScreenMessage;->getDeleteTime()I
 
     move-result p1
@@ -56,10 +56,10 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 6549
+    .line 6968
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$DeleteCellScreenMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$8300(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/compat/UserPresentAnimationCompat;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$8100(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/compat/UserPresentAnimationCompat;
 
     move-result-object p1
 

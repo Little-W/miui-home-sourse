@@ -271,8 +271,6 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0

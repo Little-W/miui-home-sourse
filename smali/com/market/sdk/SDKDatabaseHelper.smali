@@ -17,7 +17,7 @@
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 3
 
-    const-string v0, "xiaomi_market_sdk_update.db"
+    const-string/jumbo v0, "xiaomi_market_sdk_update.db"
 
     const/4 v1, 0x0
 

@@ -35,3 +35,12 @@
 
     return-void
 .end method
+
+.method public onVsync(JJILandroid/view/DisplayEventReceiver$VsyncEventData;)V
+    .locals 0
+
+    .line 23
+    invoke-virtual {p0, p1, p2}, Lcom/miui/maml/MamlDisplayEventReceiver;->onVsync(J)V
+
+    return-void
+.end method

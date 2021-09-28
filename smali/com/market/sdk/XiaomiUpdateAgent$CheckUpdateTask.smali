@@ -499,7 +499,7 @@
 
     if-eqz v2, :cond_2
 
-    const-string v2, "推荐您立即升级到最新的%1$s版\\n大小: %2$s"
+    const-string/jumbo v2, "推荐您立即升级到最新的%1$s版\\n大小: %2$s"
 
     new-array v4, v4, [Ljava/lang/Object;
 
@@ -533,7 +533,7 @@
     goto :goto_0
 
     :cond_2
-    const-string v2, "推荐您立即升级到最新的%1$s版\\n增量更新只需下载: %2$s"
+    const-string/jumbo v2, "推荐您立即升级到最新的%1$s版\\n增量更新只需下载: %2$s"
 
     new-array v4, v4, [Ljava/lang/Object;
 
@@ -861,7 +861,7 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/market/sdk/utils/Connection$Parameter;->add(Ljava/lang/String;Ljava/lang/String;)Lcom/market/sdk/utils/Connection$Parameter;
 
-    const-string v2, "xiaomiSDKVersion"
+    const-string/jumbo v2, "xiaomiSDKVersion"
 
     const-string v3, "11"
 

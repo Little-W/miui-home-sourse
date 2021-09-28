@@ -2,7 +2,7 @@
 <resources>
     <string-array name="editing_mode_entries">
         <item>تەگلىكلەر</item>
-        <item>كىچىك قورال</item>
+        <item>كىچىك دىتال قوشۇش</item>
         <item>ئېكران تەڭشىكى</item>
     </string-array>
     <string-array name="gadget_weather_image">

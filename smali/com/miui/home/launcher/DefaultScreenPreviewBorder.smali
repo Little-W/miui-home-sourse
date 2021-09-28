@@ -25,7 +25,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f07008d
+    const p2, 0x7f07008f
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -44,7 +44,7 @@
     .line 29
     invoke-super {p0}, Lcom/miui/home/launcher/ThumbnailContainerBorder;->onFinishInflate()V
 
-    const v0, 0x7f0a0109
+    const v0, 0x7f0a010a
 
     .line 30
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewBorder;->findViewById(I)Landroid/view/View;
@@ -152,7 +152,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060090
+    const v1, 0x7f060092
 
     goto :goto_0
 
@@ -161,7 +161,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060091
+    const v1, 0x7f060093
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
@@ -186,7 +186,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060094
+    const v1, 0x7f060096
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 

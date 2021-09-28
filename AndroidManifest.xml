@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     android:sharedUserId="@string/sharedUserId"
-    android:compileSdkVersion="30"
-    android:compileSdkVersionCodename="S"
+    android:compileSdkVersion="31"
+    android:compileSdkVersionCodename="12"
     package="com.miui.home"
-    platformBuildVersionCode="423003277"
-    platformBuildVersionName="ALPHA-4.23.0.3277-07092031"
+    platformBuildVersionCode="425023588"
+    platformBuildVersionName="ALPHA-4.25.2.3588-09241409"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <permission
         android:label="@string/permlab_install_shortcut"
@@ -46,6 +46,10 @@
     <permission
         android:name="com.miui.home.launcher.permission.LOADING_STATUS"
         android:protectionLevel="normal" />
+    <permission
+        android:name="com.miui.home.launcher.permission.REMOVE_WIDGET"
+        android:protectionLevel="signature" /> // The MaMl widget runs in home need it to access data in powerkeeper. <uses-permission
+        android:name="miui.permission.powerkeeper.POWER_DATA" />
     <uses-permission
         android:name="miui.permission.powerkeeper.HIDDEN_MODE_PROVIDER" />
     <uses-permission
@@ -241,6 +245,14 @@
     <uses-permission
         android:name="com.mi.health.permission.DEFAULT_WRITE_DATA" />
     <uses-permission
+        android:name="com.miui.securitycenter.permission.WIDGET_PROVIDER" />
+    <uses-permission
+        android:name="com.miui.personalassistant.permission.ACCESS_ACTIVITY" />
+    <uses-permission
+        android:name="miui.permission.ACCESS_ALARM_PROVIDER" />
+    <uses-permission
+        android:name="android.permission.START_ANY_ACTIVITY" />
+    <uses-permission
         android:name="com.xiaomi.market.sdk.UPDATE" />
     <uses-permission
         android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
@@ -269,6 +281,9 @@
         android:requestLegacyExternalStorage="true">
         <uses-library
             android:name="com.miui.system"
+            android:required="false" />
+        <uses-library
+            android:name="com.miui.core"
             android:required="false" />
         <meta-data
             android:name="miui.xiaoai.disable_swipe_up_gesture"
@@ -368,6 +383,22 @@
             </intent-filter>
         </receiver>
         <receiver
+            android:name="com.miui.home.launcher.offlinewidget.OfflineWidgetReceiver"
+            android:permission="com.miui.home.launcher.permission.REMOVE_WIDGET">
+            <intent-filter>
+                <action
+                    android:name="com.miui.personalassistant.ACTION_OFFLINE_WIDGET" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.miui.home.launcher.offlinewidget.OfflineMamlReceiver"
+            android:permission="com.miui.home.launcher.permission.REMOVE_WIDGET">
+            <intent-filter>
+                <action
+                    android:name="com.miui.personalassistant.ACTION_OFFLINE_MAML" />
+            </intent-filter>
+        </receiver>
+        <receiver
             android:name="com.miui.home.launcher.InstallWidgetReceiver"
             android:permission="com.miui.home.launcher.permission.INSTALL_WIDGET">
             <intent-filter>
@@ -433,18 +464,6 @@
                     android:name="com.miui.home.snapshot_helper_intent" />
             </intent-filter>
         </service>
-        <activity
-            android:theme="@style/Theme.Light"
-            android:name="miui.maml.MamlConfigSettings"
-            android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"
-            android:uiOptions="splitActionBarWhenNarrow" />
-        <activity
-            android:theme="@style/Theme.Light"
-            android:name="miui.maml.ThirdAppPicker"
-            android:screenOrientation="portrait"
-            android:configChanges="keyboardHidden|orientation"
-            android:uiOptions="splitActionBarWhenNarrow" />
         <activity
             android:theme="@style/MIUIXPreference"
             android:name="com.miui.home.settings.MiuiHomeSettingActivity"
@@ -513,7 +532,7 @@
             </intent-filter>
         </service>
         <service
-            android:name="miui.maml.elements.MusicListenerService"
+            android:name="com.miui.maml.elements.MusicListenerService"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
                 <action
@@ -726,6 +745,15 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/xiaomi_update_sdk_file_paths" />
         </provider>
+        <meta-data
+            android:name="miuixpreference"
+            android:value="1.0" />
+        <meta-data
+            android:name="recyclerview"
+            android:value="2.0" />
+        <meta-data
+            android:name="recyclerview_animator"
+            android:value="2.0" />
         <provider
             android:name="androidx.work.impl.WorkManagerInitializer"
             android:exported="false"
@@ -827,14 +855,14 @@
             android:name="visualcheck"
             android:value="1.0" />
         <meta-data
-            android:name="miuixpreference"
-            android:value="1.0" />
-        <meta-data
             android:name="appcompat"
             android:value="1.0" />
         <meta-data
             android:name="popupwidget"
             android:value="1.0" />
+        <meta-data
+            android:name="com.miui.maml.sdk"
+            android:value="true" />
         <meta-data
             android:name="androidbasewidget"
             android:value="1.0" />
@@ -848,16 +876,10 @@
             android:name="miuixbasewidget"
             android:value="1.0" />
         <meta-data
-            android:name="recyclerview"
-            android:value="2.0" />
-        <meta-data
             android:name="nest"
             android:value="2.0" />
         <meta-data
             android:name="dynamicoverscroller"
-            android:value="2.0" />
-        <meta-data
-            android:name="recyclerview_animator"
             android:value="2.0" />
         <meta-data
             android:name="folme"
@@ -865,20 +887,8 @@
         <meta-data
             android:name="devicebaseinfo"
             android:value="1.0" />
-        <service
-            android:name="androidx.room.MultiInstanceInvalidationService"
-            android:exported="false" />
         <meta-data
             android:name="pickerwidget"
-            android:value="1.0" />
-        <meta-data
-            android:name="haptic"
-            android:value="1.0" />
-        <meta-data
-            android:name="core"
-            android:value="2.0" />
-        <meta-data
-            android:name="smooth"
             android:value="1.0" />
         <meta-data
             android:name="viewpager"
@@ -886,12 +896,24 @@
         <meta-data
             android:name="spring"
             android:value="1.0" />
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false" />
+        <meta-data
+            android:name="haptic"
+            android:value="1.0" />
+        <meta-data
+            android:name="smooth"
+            android:value="1.0" />
+        <meta-data
+            android:name="graphics"
+            android:value="1.0" />
+        <meta-data
+            android:name="core"
+            android:value="2.0" />
         <meta-data
             android:name="animation"
             android:value="1.0" />
-        <meta-data
-            android:name="com.miui.maml.sdk"
-            android:value="true" />
         <meta-data
             android:name="blurdrawable"
             android:value="1.0" />

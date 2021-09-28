@@ -3,6 +3,7 @@
     <dimen name="action_button_drawable_padding">0.0dip</dimen>
     <dimen name="borderlayout_bg_corner_radius">16.0dip</dimen>
     <dimen name="borderlayout_bg_stroke_width">2.899994dip</dimen>
+    <dimen name="contact_photo_width">73.09dip</dimen>
     <dimen name="date_picker_checkbox_padding_horizontal">16.359985dip</dimen>
     <dimen name="date_picker_layout_padding">29.099976dip</dimen>
     <dimen name="date_picker_lunar_text_size">17.449982sp</dimen>
@@ -82,7 +83,7 @@
     <dimen name="miuix_appcompat_arrow_popup_view_paddingStart">15.629974dip</dimen>
     <dimen name="miuix_appcompat_arrow_popup_view_paddingTop">14.539978dip</dimen>
     <dimen name="miuix_appcompat_arrow_popup_view_round_corners">13.089996dip</dimen>
-    <dimen name="miuix_appcompat_arrow_popup_window_elevation">10.909973dip</dimen>
+    <dimen name="miuix_appcompat_arrow_popup_window_elevation">21.819977dip</dimen>
     <dimen name="miuix_appcompat_arrow_popup_window_list_max_height">436.35938dip</dimen>
     <dimen name="miuix_appcompat_arrow_popup_window_min_border">16.359985dip</dimen>
     <dimen name="miuix_appcompat_btn_inline_size">23.269989dip</dimen>
@@ -405,4 +406,6 @@
     <dimen name="miuix_sbl_tracking_up_progress_bg_marginbottom">14.549988dip</dimen>
     <dimen name="miuix_sbl_tracking_up_progress_bg_margintop">14.549988dip</dimen>
     <dimen name="sliding_button_border">0.33000004dip</dimen>
+    <dimen name="word_photo_border_size">0.36dip</dimen>
+    <dimen name="word_photo_size">39.299988dip</dimen>
 </resources>

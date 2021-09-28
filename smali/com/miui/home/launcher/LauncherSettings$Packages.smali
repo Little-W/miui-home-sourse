@@ -27,7 +27,7 @@
 
     const-string v0, "content://com.miui.home.launcher.settings/packages"
 
-    .line 449
+    .line 483
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0

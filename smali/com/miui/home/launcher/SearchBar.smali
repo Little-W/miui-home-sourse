@@ -297,7 +297,7 @@
     .line 58
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a01ae
+    const v0, 0x7f0a01b2
 
     .line 59
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBar;->findViewById(I)Landroid/view/View;
@@ -308,7 +308,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBar;->mDesktopLayout:Lcom/miui/home/launcher/SearchBarDesktopLayout;
 
-    const v0, 0x7f0a01af
+    const v0, 0x7f0a01b3
 
     .line 60
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBar;->findViewById(I)Landroid/view/View;

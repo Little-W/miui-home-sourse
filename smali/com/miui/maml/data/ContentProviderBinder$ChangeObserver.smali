@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/maml/data/ContentProviderBinder;)V
     .locals 0
 
-    .line 628
+    .line 632
     iput-object p1, p0, Lcom/miui/maml/data/ContentProviderBinder$ChangeObserver;->this$0:Lcom/miui/maml/data/ContentProviderBinder;
 
-    .line 629
+    .line 633
     invoke-static {p1}, Lcom/miui/maml/data/ContentProviderBinder;->access$200(Lcom/miui/maml/data/ContentProviderBinder;)Landroid/os/Handler;
 
     move-result-object p1
@@ -48,7 +48,7 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 639
+    .line 643
     iget-object p1, p0, Lcom/miui/maml/data/ContentProviderBinder$ChangeObserver;->this$0:Lcom/miui/maml/data/ContentProviderBinder;
 
     invoke-virtual {p1}, Lcom/miui/maml/data/ContentProviderBinder;->onContentChanged()V

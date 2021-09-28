@@ -61,8 +61,6 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 51
     sget-object p0, Lcom/miui/home/library/utils/ProcessUtil;->currentProcessName:Ljava/lang/String;
 
@@ -104,8 +102,6 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 58
     sget-object p0, Lcom/miui/home/library/utils/ProcessUtil;->currentProcessName:Ljava/lang/String;
 
@@ -138,8 +134,6 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 64
     sget-object p0, Lcom/miui/home/library/utils/ProcessUtil;->currentProcessName:Ljava/lang/String;
 
@@ -158,8 +152,6 @@
     const-string v1, "getCurrentProcessNameByActivityManager: context null !"
 
     .line 102
-    invoke-static {p0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return-object v0
 
     .line 105
@@ -294,8 +286,6 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 92
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -337,8 +327,6 @@
     const-string v0, "isMainProcess: context null !"
 
     .line 28
-    invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     const/4 p0, 0x1
 
     return p0
@@ -380,8 +368,6 @@
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return p0
 .end method

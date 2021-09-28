@@ -6,7 +6,7 @@
 # instance fields
 .field protected mContext:Landroid/content/Context;
 
-.field protected mFirstTaskRect:Landroid/graphics/Rect;
+.field protected mFirstTaskRectF:Landroid/graphics/RectF;
     .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
         category = "recents"
     .end annotation
@@ -58,7 +58,7 @@
     .end annotation
 .end field
 
-.field public mTaskViewRect:Landroid/graphics/Rect;
+.field public mTaskViewRectF:Landroid/graphics/RectF;
     .annotation runtime Landroid/view/ViewDebug$ExportedProperty;
         category = "recents"
     .end annotation
@@ -83,76 +83,76 @@
 .method protected constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 100
+    .line 99
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
-    new-instance v0, Landroid/graphics/Rect;
+    .line 57
+    new-instance v0, Landroid/graphics/RectF;
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRect:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRectF:Landroid/graphics/RectF;
 
-    .line 61
+    .line 60
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mFreeformRect:Landroid/graphics/Rect;
 
-    .line 64
+    .line 63
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskStackViewRect:Landroid/graphics/Rect;
 
-    .line 67
+    .line 66
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mVisualRotationSystemInsets:Landroid/graphics/Rect;
 
-    .line 70
+    .line 69
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mWindowRect:Landroid/graphics/Rect;
 
-    .line 73
+    .line 72
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mWindowRectIgnoreMultiWindowMode:Landroid/graphics/Rect;
 
-    .line 91
+    .line 90
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskIndexMap:Landroid/util/SparseIntArray;
 
-    .line 93
-    new-instance v0, Landroid/graphics/Rect;
+    .line 92
+    new-instance v0, Landroid/graphics/RectF;
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mFirstTaskRect:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mFirstTaskRectF:Landroid/graphics/RectF;
 
-    .line 98
+    .line 97
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskStackViewPaddingRect:Landroid/graphics/Rect;
 
-    .line 101
+    .line 100
     iput-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mContext:Landroid/content/Context;
 
-    .line 102
+    .line 101
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -185,7 +185,7 @@
 .method private getRecentsContainerRotation()I
     .locals 1
 
-    .line 226
+    .line 225
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -218,14 +218,14 @@
         }
     .end annotation
 
-    .line 239
+    .line 238
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 240
+    .line 239
     :goto_0
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -233,14 +233,14 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 241
+    .line 240
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/systemui/shared/recents/model/Task;
 
-    .line 242
+    .line 241
     iget-object v3, v2, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     invoke-virtual {p2, v3}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
@@ -251,7 +251,7 @@
 
     goto :goto_1
 
-    .line 245
+    .line 244
     :cond_0
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -267,14 +267,14 @@
 .method private reloadRecentsTaskViewHeaderHeight()V
     .locals 2
 
-    .line 106
+    .line 105
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f07030b
+    const v1, 0x7f070311
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -329,7 +329,7 @@
 .method public getBoundedScroll(F)F
     .locals 2
 
-    .line 396
+    .line 397
     iget v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mMinScrollP:F
 
     iget v1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mMaxScrollP:F
@@ -349,14 +349,12 @@
 
     sub-float/2addr p2, p1
 
-    .line 345
-    iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRect:Landroid/graphics/Rect;
+    .line 346
+    iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRectF:Landroid/graphics/RectF;
 
-    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
 
     move-result p1
-
-    int-to-float p1, p1
 
     div-float/2addr p2, p1
 
@@ -370,14 +368,12 @@
 
     sub-float/2addr p2, p1
 
-    .line 340
-    iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRect:Landroid/graphics/Rect;
+    .line 341
+    iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRectF:Landroid/graphics/RectF;
 
-    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
 
     move-result p1
-
-    int-to-float p1, p1
 
     div-float/2addr p2, p1
 
@@ -391,19 +387,21 @@
 
     const/4 v0, 0x0
 
-    .line 110
+    .line 109
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->calculateTaskViewOffsetXAndY(I)[I
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 111
+    .line 110
     aget v0, v0, v1
 
-    iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRect:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRectF:Landroid/graphics/RectF;
 
-    iget v1, v1, Landroid/graphics/Rect;->top:I
+    iget v1, v1, Landroid/graphics/RectF;->top:F
+
+    float-to-int v1, v1
 
     add-int/2addr v0, v1
 
@@ -413,7 +411,7 @@
 .method public getInsetBottom()I
     .locals 2
 
-    .line 184
+    .line 183
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isKeepRecentsViewPortrait()Z
 
     move-result v0
@@ -432,7 +430,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 185
+    .line 184
     invoke-direct {p0}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->getRecentsContainerRotation()I
 
     move-result v0
@@ -441,7 +439,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 186
+    .line 185
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mVisualRotationSystemInsets:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
@@ -456,7 +454,7 @@
     :goto_0
     return v0
 
-    .line 188
+    .line 187
     :cond_1
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mVisualRotationSystemInsets:Landroid/graphics/Rect;
 
@@ -470,7 +468,7 @@
 
     const/4 v0, 0x0
 
-    .line 220
+    .line 219
     invoke-static {v0, p1}, Ljava/lang/Math;->max(FF)F
 
     move-result p1
@@ -493,7 +491,7 @@
 .method public getRecentsTaskViewHeaderHeight()I
     .locals 1
 
-    .line 388
+    .line 389
     iget v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mRecentsTaskViewHeaderHeight:I
 
     return v0
@@ -502,18 +500,16 @@
 .method public getScrollPGap()F
     .locals 2
 
-    .line 208
+    .line 207
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->getScrollPixGap()F
 
     move-result v0
 
-    iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRect:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRectF:Landroid/graphics/RectF;
 
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
 
     move-result v1
-
-    int-to-float v1, v1
 
     div-float/2addr v0, v1
 
@@ -523,18 +519,18 @@
 .method public getScrollPixGap()F
     .locals 2
 
-    .line 204
-    iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRect:Landroid/graphics/Rect;
+    .line 203
+    iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRectF:Landroid/graphics/RectF;
 
-    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
 
     move-result v0
 
     iget v1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mHorizontalGap:I
 
-    add-int/2addr v0, v1
+    int-to-float v1, v1
 
-    int-to-float v0, v0
+    add-float/2addr v0, v1
 
     return v0
 .end method
@@ -544,17 +540,17 @@
 
     const/4 v0, 0x0
 
-    .line 278
+    .line 277
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->calculateTaskViewOffsetXAndY(I)[I
 
     move-result-object v0
 
-    .line 279
+    .line 278
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->calculateTaskViewOffsetXAndY(I)[I
 
     move-result-object p1
 
-    .line 280
+    .line 279
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->calculateStackScroll([I[I)F
 
     move-result p1
@@ -576,12 +572,15 @@
 .method public getTaskViewBounds()Landroid/graphics/Rect;
     .locals 2
 
-    .line 331
+    .line 330
     new-instance v0, Landroid/graphics/Rect;
 
-    iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRect:Landroid/graphics/Rect;
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    invoke-direct {v0, v1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
+    .line 331
+    iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRectF:Landroid/graphics/RectF;
+
+    invoke-virtual {v1, v0}, Landroid/graphics/RectF;->roundOut(Landroid/graphics/Rect;)V
 
     return-object v0
 .end method
@@ -589,7 +588,7 @@
 .method public getTaskViewTransform(Lcom/android/systemui/shared/recents/model/Task;FLcom/miui/home/recents/views/TaskViewTransform;)Lcom/miui/home/recents/views/TaskViewTransform;
     .locals 2
 
-    .line 297
+    .line 296
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskIndexMap:Landroid/util/SparseIntArray;
 
     iget-object p1, p1, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
@@ -604,12 +603,12 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 299
+    .line 298
     invoke-virtual {p3}, Lcom/miui/home/recents/views/TaskViewTransform;->reset()V
 
     return-object p3
 
-    .line 302
+    .line 301
     :cond_0
     invoke-virtual {p0, p1, p2, p3}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->getTaskViewTransform(IFLcom/miui/home/recents/views/TaskViewTransform;)V
 
@@ -630,16 +629,16 @@
 
     return-object p1
 
-    .line 321
+    .line 320
     :cond_0
     new-instance v0, Lcom/miui/home/recents/views/TaskViewTransform;
 
     invoke-direct {v0}, Lcom/miui/home/recents/views/TaskViewTransform;-><init>()V
 
-    .line 322
+    .line 321
     invoke-virtual {p0, p1, p2, v0}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->getTaskViewTransform(IFLcom/miui/home/recents/views/TaskViewTransform;)V
 
-    .line 323
+    .line 322
     iget-object p1, v0, Lcom/miui/home/recents/views/TaskViewTransform;->rect:Landroid/graphics/RectF;
 
     iget p2, p1, Landroid/graphics/RectF;->top:F
@@ -652,7 +651,7 @@
 
     iput p2, p1, Landroid/graphics/RectF;->top:F
 
-    .line 324
+    .line 323
     iget-object p1, v0, Lcom/miui/home/recents/views/TaskViewTransform;->rect:Landroid/graphics/RectF;
 
     return-object p1
@@ -667,7 +666,7 @@
 
     return-object v0
 
-    .line 310
+    .line 309
     :cond_0
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskIndexMap:Landroid/util/SparseIntArray;
 
@@ -685,7 +684,7 @@
 
     return-object v0
 
-    .line 314
+    .line 313
     :cond_1
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->getTaskViewWithoutHeaderRectF(IF)Landroid/graphics/RectF;
 
@@ -699,14 +698,12 @@
 
     sub-float/2addr p2, p1
 
-    .line 350
-    iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRect:Landroid/graphics/Rect;
+    .line 351
+    iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRectF:Landroid/graphics/RectF;
 
-    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
 
     move-result p1
-
-    int-to-float p1, p1
 
     mul-float/2addr p2, p1
 
@@ -722,14 +719,12 @@
 
     sub-float/2addr p2, p1
 
-    .line 355
-    iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRect:Landroid/graphics/Rect;
+    .line 356
+    iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRectF:Landroid/graphics/RectF;
 
-    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
 
     move-result p1
-
-    int-to-float p1, p1
 
     mul-float/2addr p2, p1
 
@@ -743,15 +738,15 @@
 .method public initTaskViewRect(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
     .locals 2
 
-    .line 164
+    .line 163
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    .line 167
+    .line 166
     invoke-virtual {v0, p1}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 171
+    .line 170
     iget p1, v0, Landroid/graphics/RectF;->bottom:F
 
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->getInsetBottom()I
@@ -764,10 +759,10 @@
 
     iput p1, v0, Landroid/graphics/RectF;->bottom:F
 
-    .line 173
+    .line 172
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->scaleTaskView(Landroid/graphics/RectF;)V
 
-    .line 174
+    .line 173
     iget p1, v0, Landroid/graphics/RectF;->top:F
 
     iget v1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mRecentsTaskViewHeaderHeight:I
@@ -778,7 +773,7 @@
 
     iput p1, v0, Landroid/graphics/RectF;->top:F
 
-    .line 175
+    .line 174
     iget p1, v0, Landroid/graphics/RectF;->left:F
 
     iget p2, p2, Landroid/graphics/Rect;->top:I
@@ -787,32 +782,34 @@
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/RectF;->offsetTo(FF)V
 
+    .line 176
+    iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRectF:Landroid/graphics/RectF;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
+
     .line 177
-    iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRect:Landroid/graphics/Rect;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/RectF;->round(Landroid/graphics/Rect;)V
-
-    .line 178
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskStackViewRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result p1
 
-    iget-object p2, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRect:Landroid/graphics/Rect;
+    iget-object p2, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRectF:Landroid/graphics/RectF;
 
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {p2}, Landroid/graphics/RectF;->width()F
 
     move-result p2
 
+    float-to-int p2, p2
+
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->calculateGap(II)V
 
-    .line 180
-    iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mFirstTaskRect:Landroid/graphics/Rect;
+    .line 179
+    iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mFirstTaskRectF:Landroid/graphics/RectF;
 
-    iget-object p2, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRect:Landroid/graphics/Rect;
+    iget-object p2, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRectF:Landroid/graphics/RectF;
 
-    invoke-virtual {p1, p2}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {p1, p2}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
     return-void
 .end method
@@ -820,10 +817,10 @@
 .method public initialize(Landroid/graphics/Rect;)V
     .locals 4
 
-    .line 135
+    .line 134
     iput-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mWindowRectIgnoreMultiWindowMode:Landroid/graphics/Rect;
 
-    .line 139
+    .line 138
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
     move-result v0
@@ -838,7 +835,7 @@
 
     const/4 v0, 0x0
 
-    .line 141
+    .line 140
     sget-object v1, Lcom/miui/home/recents/SystemUiProxyWrapper;->INSTANCE:Lcom/miui/home/recents/util/MainThreadInitializedObject;
 
     invoke-virtual {v1}, Lcom/miui/home/recents/util/MainThreadInitializedObject;->getNoCreate()Ljava/lang/Object;
@@ -849,7 +846,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 143
+    .line 142
     invoke-virtual {v1}, Lcom/miui/home/recents/SystemUiProxyWrapper;->getMiddleSplitScreenSecondaryBounds()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -857,12 +854,12 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 146
+    .line 145
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 147
+    .line 146
     iget p1, v1, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
@@ -891,11 +888,11 @@
 
     move-object p1, v1
 
-    .line 150
+    .line 149
     :cond_1
     iput-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mWindowRect:Landroid/graphics/Rect;
 
-    .line 152
+    .line 151
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskStackViewRect:Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mWindowRect:Landroid/graphics/Rect;
@@ -932,10 +929,10 @@
 
     invoke-virtual {v0, v1, p1, v2, v3}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 155
+    .line 154
     invoke-direct {p0}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->reloadRecentsTaskViewHeaderHeight()V
 
-    .line 156
+    .line 155
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mWindowRect:Landroid/graphics/Rect;
 
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskStackViewRect:Landroid/graphics/Rect;
@@ -944,7 +941,7 @@
 
     const-string p1, "TaskStackLayoutAlgorithm"
 
-    .line 157
+    .line 156
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -977,7 +974,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRect:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskViewRectF:Landroid/graphics/RectF;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -985,15 +982,13 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 .end method
 
 .method public isConfigurationPortrait()Z
     .locals 2
 
-    .line 123
+    .line 122
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/miui/home/recents/util/Utilities;->getAppConfiguration(Landroid/content/Context;)Landroid/content/res/Configuration;
@@ -1004,7 +999,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 124
+    .line 123
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/miui/home/recents/util/Utilities;->getAppConfiguration(Landroid/content/Context;)Landroid/content/res/Configuration;
@@ -1030,7 +1025,7 @@
 .method public isInitialized()Z
     .locals 1
 
-    .line 287
+    .line 286
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskStackViewRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
@@ -1045,7 +1040,7 @@
 .method protected isLandscapeVisually()Z
     .locals 2
 
-    .line 230
+    .line 229
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/miui/home/recents/OverviewComponentObserver;->getInstance(Landroid/content/Context;)Lcom/miui/home/recents/OverviewComponentObserver;
@@ -1058,7 +1053,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 231
+    .line 230
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isKeepRecentsViewPortrait()Z
 
     move-result v0
@@ -1071,7 +1066,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 232
+    .line 231
     invoke-direct {p0}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->getRecentsContainerRotation()I
 
     move-result v0
@@ -1082,7 +1077,7 @@
 
     return v0
 
-    .line 234
+    .line 233
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mContext:Landroid/content/Context;
 
@@ -1110,7 +1105,7 @@
 .method protected isMultiWindowMode()Z
     .locals 1
 
-    .line 384
+    .line 385
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
     move-result v0
@@ -1121,7 +1116,7 @@
 .method public isScrollOutOfBounds(F)Z
     .locals 1
 
-    .line 392
+    .line 393
     iget v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mMaxScrollP:F
 
     cmpl-float v0, p1, v0
@@ -1155,14 +1150,14 @@
 .method public setVisualRotationSystemInsets(Landroid/graphics/Rect;)V
     .locals 3
 
-    .line 118
+    .line 117
     iget-object v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mVisualRotationSystemInsets:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
     const-string v0, "TaskStackLayoutAlgorithm"
 
-    .line 119
+    .line 118
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1176,8 +1171,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -1194,7 +1187,7 @@
         }
     .end annotation
 
-    .line 256
+    .line 255
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/TaskStack;->getStackTasks()Ljava/util/ArrayList;
 
     move-result-object p1
@@ -1203,28 +1196,28 @@
 
     move-result-object p1
 
-    .line 257
+    .line 256
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result p2
 
     iput p2, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mNumStackTasks:I
 
-    .line 259
+    .line 258
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskIndexMap:Landroid/util/SparseIntArray;
 
     invoke-virtual {p2}, Landroid/util/SparseIntArray;->clear()V
 
     const/4 p2, 0x0
 
-    .line 260
+    .line 259
     iput p2, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mInitialScrollP:F
 
     iput p2, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mMaxScrollP:F
 
     iput p2, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mMinScrollP:F
 
-    .line 262
+    .line 261
     iget p2, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mNumStackTasks:I
 
     if-gtz p2, :cond_0
@@ -1234,20 +1227,20 @@
     :cond_0
     const/4 p2, 0x0
 
-    .line 266
+    .line 265
     :goto_0
     iget v0, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mNumStackTasks:I
 
     if-ge p2, v0, :cond_1
 
-    .line 267
+    .line 266
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/systemui/shared/recents/model/Task;
 
-    .line 268
+    .line 267
     iget-object v1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mTaskIndexMap:Landroid/util/SparseIntArray;
 
     iget-object v0, v0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
@@ -1260,18 +1253,18 @@
 
     goto :goto_0
 
-    .line 271
+    .line 270
     :cond_1
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->computeTaskStackViewPadding(I)V
 
-    .line 273
+    .line 272
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->calculateMinScrollP()F
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->mMinScrollP:F
 
-    .line 274
+    .line 273
     invoke-virtual {p0}, Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;->calculateMaxScrollP()F
 
     move-result p1

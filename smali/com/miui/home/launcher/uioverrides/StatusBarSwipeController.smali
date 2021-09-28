@@ -312,7 +312,7 @@
 
 
 # virtual methods
-.method public disableBackStubWindow(Z)V
+.method public disableTouchBySwipeStatusBar(Z)V
     .locals 1
 
     .line 161
@@ -327,7 +327,7 @@
     if-eqz v0, :cond_0
 
     .line 163
-    invoke-virtual {v0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->disableBackStubWindow(Z)V
+    invoke-virtual {v0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->disableTouchBySwipeStatusBar(Z)V
 
     :cond_0
     return-void
@@ -463,8 +463,6 @@
     const-string v0, "pull status bar error"
 
     .line 124
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return v1
 
     .line 127
@@ -519,7 +517,7 @@
     iput-boolean v3, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mIsDispatchingToStatusBar:Z
 
     .line 136
-    invoke-virtual {p0, v3}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->disableBackStubWindow(Z)V
+    invoke-virtual {p0, v3}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->disableTouchBySwipeStatusBar(Z)V
 
     .line 137
     invoke-direct {p0, v3}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->setWindowSlippery(Z)V
@@ -602,7 +600,7 @@
     iput-boolean p1, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mIsDispatchingToStatusBar:Z
 
     .line 154
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->disableBackStubWindow(Z)V
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->disableTouchBySwipeStatusBar(Z)V
 
     .line 155
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->setWindowSlippery(Z)V

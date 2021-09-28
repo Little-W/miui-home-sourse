@@ -506,8 +506,6 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 73
     new-instance v1, Lcom/miui/home/launcher/upsidescene/data/Function;
 

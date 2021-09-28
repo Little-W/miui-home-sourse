@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static sIsDebugLogEnable:Z = false
+.field private static sIsDebugLogEnable:Z
 
 .field private static sRecordedLogHashMap:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -153,8 +153,6 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method

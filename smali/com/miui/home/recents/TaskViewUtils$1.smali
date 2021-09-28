@@ -26,7 +26,7 @@
 .method constructor <init>(Lcom/miui/home/recents/util/RemoteAnimationTargetSet;ZLcom/miui/home/recents/views/TaskView;)V
     .locals 0
 
-    .line 189
+    .line 190
     iput-object p1, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$openingTargets:Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
 
     iput-boolean p2, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$skipViewChanges:Z
@@ -43,7 +43,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 202
+    .line 203
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->setChildrenViewAlpha(F)V
 
     return-void
@@ -54,17 +54,17 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 200
+    .line 201
     iget-object p1, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$openingTargets:Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->release()V
 
-    .line 201
+    .line 202
     iget-boolean p1, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$skipViewChanges:Z
 
     if-nez p1, :cond_0
 
-    .line 202
+    .line 203
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     iget-object v0, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$taskView:Lcom/miui/home/recents/views/TaskView;
@@ -75,7 +75,7 @@
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 204
+    .line 205
     :cond_0
     invoke-static {}, Lcom/miui/home/recents/util/TraceUtils;->endSection()V
 
@@ -87,10 +87,10 @@
 
     const-string p1, "openAppAnimFromRecents"
 
-    .line 192
+    .line 193
     invoke-static {p1}, Lcom/miui/home/recents/util/TraceUtils;->beginSection(Ljava/lang/String;)V
 
-    .line 193
+    .line 194
     iget-object p1, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$openingTargets:Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
 
     if-eqz p1, :cond_0
@@ -101,7 +101,7 @@
 
     if-nez p1, :cond_0
 
-    .line 194
+    .line 195
     invoke-static {}, Lcom/miui/home/recents/DimLayer;->getInstance()Lcom/miui/home/recents/DimLayer;
 
     move-result-object p1

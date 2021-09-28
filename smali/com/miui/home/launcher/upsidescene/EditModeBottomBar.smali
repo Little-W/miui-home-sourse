@@ -97,7 +97,7 @@
 .method private buildBottomWidgetDragSources()V
     .locals 12
 
-    const v0, 0x7f0a00be
+    const v0, 0x7f0a00bf
 
     .line 287
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
@@ -121,7 +121,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f080118
+    const v4, 0x7f08013c
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -154,7 +154,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f08011a
+    const v4, 0x7f08013e
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -187,7 +187,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f080119
+    const v4, 0x7f08013d
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -220,7 +220,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f08014f
+    const v4, 0x7f080173
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -228,7 +228,7 @@
 
     iget-object v4, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f100397
+    const v5, 0x7f1003b0
 
     .line 302
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -754,7 +754,7 @@
     .line 82
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
-    const v0, 0x7f0a00d1
+    const v0, 0x7f0a00d2
 
     .line 84
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
@@ -765,7 +765,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeMoveTip:Landroid/widget/TextView;
 
-    const v0, 0x7f0a00ca
+    const v0, 0x7f0a00cb
 
     .line 85
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
@@ -776,7 +776,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeDraggingTip:Landroid/widget/TextView;
 
-    const v0, 0x7f0a00cb
+    const v0, 0x7f0a00cc
 
     .line 86
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
@@ -787,7 +787,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditModeFreeButton:Lcom/miui/home/launcher/ScreenView;
 
-    const v0, 0x7f0a00c8
+    const v0, 0x7f0a00c9
 
     .line 88
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
@@ -798,7 +798,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditDragSource:Landroid/view/ViewGroup;
 
-    const v0, 0x7f0a01ff
+    const v0, 0x7f0a0203
 
     .line 89
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
@@ -807,7 +807,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelShortcut:Landroid/view/View;
 
-    const v0, 0x7f0a01fe
+    const v0, 0x7f0a0202
 
     .line 90
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
@@ -816,7 +816,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelFreeButton:Landroid/view/View;
 
-    const v0, 0x7f0a0200
+    const v0, 0x7f0a0204
 
     .line 91
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
@@ -825,42 +825,42 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelWidget:Landroid/view/View;
 
-    const v0, 0x7f0a00ce
+    const v0, 0x7f0a00cf
 
     .line 93
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const v1, 0x7f0a00cc
+    const v1, 0x7f0a00cd
 
     .line 94
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    const v2, 0x7f0a00cf
+    const v2, 0x7f0a00d0
 
     .line 95
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    const v3, 0x7f0a00cd
+    const v3, 0x7f0a00ce
 
     .line 96
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    const v4, 0x7f0a00d0
+    const v4, 0x7f0a00d1
 
     .line 97
     invoke-virtual {p0, v4}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v4
 
-    const v5, 0x7f0a0134
+    const v5, 0x7f0a0135
 
     .line 99
     invoke-virtual {v0, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -917,12 +917,12 @@
     .line 107
     invoke-virtual {v9, v6}, Landroid/widget/TextView;->setText(I)V
 
-    const v6, 0x7f100397
+    const v6, 0x7f1003b0
 
     .line 108
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
 
-    const v5, 0x7f0a011a
+    const v5, 0x7f0a011b
 
     .line 110
     invoke-virtual {v0, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -959,27 +959,27 @@
 
     check-cast v5, Landroid/widget/ImageView;
 
-    const v10, 0x7f080115
+    const v10, 0x7f080139
 
     .line 115
     invoke-virtual {v6, v10}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v6, 0x7f080118
+    const v6, 0x7f08013c
 
     .line 116
     invoke-virtual {v7, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v6, 0x7f08011a
+    const v6, 0x7f08013e
 
     .line 117
     invoke-virtual {v8, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v6, 0x7f080119
+    const v6, 0x7f08013d
 
     .line 118
     invoke-virtual {v9, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v6, 0x7f08014f
+    const v6, 0x7f080173
 
     .line 119
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -1041,9 +1041,9 @@
 
     invoke-direct {v7, v8, v9, v10}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    const v8, 0x7f08010a
+    const v8, 0x7f08012e
 
-    const v9, 0x7f08010b
+    const v9, 0x7f08012f
 
     invoke-virtual {v5, v7, v8, v9, v6}, Lcom/miui/home/launcher/ScreenView;->setSlideBarPosition(Landroid/widget/FrameLayout$LayoutParams;IIZ)V
 

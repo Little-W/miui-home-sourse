@@ -177,8 +177,6 @@
     const-string v2, "initSuperscriptCountObserver"
 
     .line 98
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     return-object p1
 .end method
 
@@ -284,8 +282,6 @@
     const-string v1, "ScriptCountObserver"
 
     .line 109
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_3
     return-void
 .end method

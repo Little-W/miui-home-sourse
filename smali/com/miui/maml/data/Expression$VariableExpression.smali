@@ -24,13 +24,13 @@
 .method public constructor <init>(Lcom/miui/maml/data/Variables;Ljava/lang/String;Z)V
     .locals 1
 
-    .line 308
+    .line 325
     invoke-direct {p0}, Lcom/miui/maml/data/Expression;-><init>()V
 
-    .line 309
+    .line 326
     iput-object p2, p0, Lcom/miui/maml/data/Expression$VariableExpression;->mName:Ljava/lang/String;
 
-    .line 310
+    .line 327
     new-instance p2, Lcom/miui/maml/data/IndexedVariable;
 
     iget-object v0, p0, Lcom/miui/maml/data/Expression$VariableExpression;->mName:Ljava/lang/String;
@@ -47,7 +47,7 @@
 .method public getIndex()I
     .locals 1
 
-    .line 317
+    .line 334
     iget-object v0, p0, Lcom/miui/maml/data/Expression$VariableExpression;->mIndexedVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/IndexedVariable;->getIndex()I
@@ -60,7 +60,7 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .line 325
+    .line 342
     iget-object v0, p0, Lcom/miui/maml/data/Expression$VariableExpression;->mName:Ljava/lang/String;
 
     return-object v0
@@ -69,7 +69,7 @@
 .method public getVersion()I
     .locals 1
 
-    .line 321
+    .line 338
     iget-object v0, p0, Lcom/miui/maml/data/Expression$VariableExpression;->mIndexedVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/IndexedVariable;->getVersion()I

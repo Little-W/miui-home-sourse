@@ -3,7 +3,7 @@
 .source "CellLayout.java"
 
 # interfaces
-.implements Lcom/miui/home/launcher/CellLayout$DrawableWorker;
+.implements Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
 
 
 # annotations
@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 3128
+    .line 3118
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,30 +32,32 @@
 .method public process(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 3131
-    invoke-static {p1}, Lcom/miui/home/launcher/graphics/drawable/MamlCompat;->onResume(Landroid/graphics/drawable/Drawable;)V
+    .line 3121
+    invoke-static {p1}, Lcom/miui/home/launcher/graphics/drawable/MamlCompat;->onPause(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public process(Lcom/miui/home/launcher/LauncherWidgetView;)V
+    .locals 0
+
+    .line 3129
+    invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherWidgetView;->onInvisible()V
 
     return-void
 .end method
 
 .method public process(Lcom/miui/home/launcher/ShortcutIcon;)V
-    .locals 1
+    .locals 0
 
-    .line 3135
-    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v0
+.method public process(Lcom/miui/home/launcher/maml/MaMlWidgetView;)V
+    .locals 0
 
-    check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
+    .line 3134
+    invoke-virtual {p1}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->onInvisible()V
 
-    .line 3136
-    instance-of v0, v0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
-
-    if-eqz v0, :cond_0
-
-    .line 3137
-    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->onProgressStatusChanged()V
-
-    :cond_0
     return-void
 .end method

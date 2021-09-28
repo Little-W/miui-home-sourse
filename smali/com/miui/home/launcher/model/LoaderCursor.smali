@@ -305,8 +305,6 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 .end method
 
@@ -434,8 +432,6 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     :cond_3
@@ -514,8 +510,6 @@
     const-string v0, "LoaderCursor"
 
     .line 84
-    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 85
     iget-object p1, p0, Lcom/miui/home/launcher/model/LoaderCursor;->itemsToRemove:Ljava/util/ArrayList;
 

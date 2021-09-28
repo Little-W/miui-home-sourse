@@ -263,7 +263,7 @@
 
     const-string v1, "com.android.settings.KeyShortcutSettingsFragment"
 
-    const v2, 0x7f1001f9
+    const v2, 0x7f1001fa
 
     .line 106
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->getContext()Landroid/content/Context;
@@ -581,7 +581,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f100278
+    const v2, 0x7f100282
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -897,12 +897,12 @@
 
     invoke-direct {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f100283
+    const v1, 0x7f10028e
 
     .line 257
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setTitle(I)V
 
-    const v1, 0x7f100282
+    const v1, 0x7f10028d
 
     .line 258
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setMessage(I)V
@@ -933,12 +933,12 @@
 
     if-eqz p1, :cond_0
 
-    const v1, 0x7f100271
+    const v1, 0x7f10027b
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f100272
+    const v1, 0x7f10027c
 
     :goto_0
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setSummary(I)V
@@ -948,12 +948,12 @@
 
     if-eqz p1, :cond_1
 
-    const v1, 0x7f080482
+    const v1, 0x7f0804ac
 
     goto :goto_1
 
     :cond_1
-    const v1, 0x7f080481
+    const v1, 0x7f0804ab
 
     :goto_1
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -963,12 +963,12 @@
 
     if-eqz p1, :cond_2
 
-    const v1, 0x7f080487
+    const v1, 0x7f0804b1
 
     goto :goto_2
 
     :cond_2
-    const v1, 0x7f080486
+    const v1, 0x7f0804b0
 
     :goto_2
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -978,12 +978,12 @@
 
     if-eqz p1, :cond_3
 
-    const v1, 0x7f080485
+    const v1, 0x7f0804af
 
     goto :goto_3
 
     :cond_3
-    const v1, 0x7f080484
+    const v1, 0x7f0804ae
 
     :goto_3
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -993,12 +993,12 @@
 
     if-eqz p1, :cond_4
 
-    const v1, 0x7f080489
+    const v1, 0x7f0804b3
 
     goto :goto_4
 
     :cond_4
-    const v1, 0x7f080488
+    const v1, 0x7f0804b2
 
     :goto_4
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setIcon(I)V
@@ -1008,12 +1008,12 @@
 
     if-eqz p1, :cond_5
 
-    const p1, 0x7f080480
+    const p1, 0x7f0804aa
 
     goto :goto_5
 
     :cond_5
-    const p1, 0x7f08047f
+    const p1, 0x7f0804a9
 
     :goto_5
     invoke-virtual {v0, p1}, Landroidx/preference/Preference;->setIcon(I)V

@@ -67,7 +67,7 @@
 .method public changeFinishContainerToGoneState(Z)V
     .locals 1
 
-    .line 69
+    .line 65
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;->mFinishContainer:Lcom/miui/home/launcher/multiselect/FinishContainer;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/multiselect/FinishContainer;->changeToGoneState(Z)V
@@ -78,7 +78,7 @@
 .method public changeFinishContainerToNormalState(Z)V
     .locals 1
 
-    .line 65
+    .line 61
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;->mFinishContainer:Lcom/miui/home/launcher/multiselect/FinishContainer;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/multiselect/FinishContainer;->changeToNormalState(Z)V
@@ -86,21 +86,10 @@
     return-void
 .end method
 
-.method public changeGroupContainerToDisableState(Z)V
-    .locals 1
-
-    .line 57
-    iget-object v0, p0, Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;->mGroupContainer:Lcom/miui/home/launcher/multiselect/GroupContainer;
-
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/multiselect/GroupContainer;->changeToDisableState(Z)V
-
-    return-void
-.end method
-
 .method public changeGroupContainerToGoneState(Z)V
     .locals 1
 
-    .line 61
+    .line 57
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;->mGroupContainer:Lcom/miui/home/launcher/multiselect/GroupContainer;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/multiselect/GroupContainer;->changeToGoneState(Z)V
@@ -125,7 +114,7 @@
     .line 27
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a00eb
+    const v0, 0x7f0a00ec
 
     .line 28
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;->findViewById(I)Landroid/view/View;
@@ -136,7 +125,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;->mFinishContainer:Lcom/miui/home/launcher/multiselect/FinishContainer;
 
-    const v0, 0x7f0a00d5
+    const v0, 0x7f0a00d6
 
     .line 29
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;->findViewById(I)Landroid/view/View;

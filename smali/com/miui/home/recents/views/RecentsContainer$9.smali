@@ -20,13 +20,17 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
+.field final synthetic val$tasks:Ljava/util/ArrayList;
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
+.method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 687
+    .line 699
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$9;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
+
+    iput-object p2, p0, Lcom/miui/home/recents/views/RecentsContainer$9;->val$tasks:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,41 +42,21 @@
 .method public run()V
     .locals 5
 
-    .line 690
-    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$9;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
-
-    invoke-static {v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$700(Lcom/miui/home/recents/views/RecentsContainer;)Lcom/miui/home/recents/views/RecentsView;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/recents/views/RecentsView;->getStack()Lcom/android/systemui/shared/recents/model/TaskStack;
-
-    move-result-object v0
+    .line 702
+    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$9;->val$tasks:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 693
+    .line 705
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 695
-    iget-object v1, p0, Lcom/miui/home/recents/views/RecentsContainer$9;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
-
-    invoke-static {v1}, Lcom/miui/home/recents/views/RecentsContainer;->access$700(Lcom/miui/home/recents/views/RecentsContainer;)Lcom/miui/home/recents/views/RecentsView;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/miui/home/recents/views/RecentsView;->getStack()Lcom/android/systemui/shared/recents/model/TaskStack;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/android/systemui/shared/recents/model/TaskStack;->getStackTasks()Ljava/util/ArrayList;
-
-    move-result-object v1
+    .line 707
+    iget-object v1, p0, Lcom/miui/home/recents/views/RecentsContainer$9;->val$tasks:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -92,7 +76,7 @@
 
     check-cast v2, Lcom/android/systemui/shared/recents/model/Task;
 
-    .line 696
+    .line 708
     iget-object v3, v2, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     iget v3, v3, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->id:I
@@ -109,7 +93,7 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 697
+    .line 709
     iget-object v3, v2, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     invoke-virtual {v3}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
@@ -120,10 +104,10 @@
 
     move-result-object v3
 
-    .line 698
+    .line 710
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 699
+    .line 711
     iget-object v4, v2, Lcom/android/systemui/shared/recents/model/Task;->topActivity:Landroid/content/ComponentName;
 
     if-eqz v4, :cond_2
@@ -139,7 +123,7 @@
     :cond_2
     const/4 v2, 0x0
 
-    .line 700
+    .line 712
     :goto_1
     invoke-static {v3, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -147,12 +131,12 @@
 
     if-nez v3, :cond_1
 
-    .line 701
+    .line 713
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 706
+    .line 718
     :cond_3
     iget-object v1, p0, Lcom/miui/home/recents/views/RecentsContainer$9;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
@@ -170,7 +154,7 @@
 
     invoke-static {v1, v0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->doOneKeyClean(Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 708
+    .line 720
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$9;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$800(Lcom/miui/home/recents/views/RecentsContainer;)Landroid/os/Handler;
@@ -185,7 +169,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 709
+    .line 721
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$9;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$800(Lcom/miui/home/recents/views/RecentsContainer;)Landroid/os/Handler;
@@ -194,7 +178,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 710
+    .line 722
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$9;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$800(Lcom/miui/home/recents/views/RecentsContainer;)Landroid/os/Handler;

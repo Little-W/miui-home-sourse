@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/uninstall/BoomAnimHelper;->doBoomAnim(Lcom/miui/home/launcher/Launcher;Ljava/util/List;Ljava/lang/Runnable;)V
+    value = Lcom/miui/home/launcher/uninstall/BoomAnimHelper;->widgetDoBoomAnim(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ItemInfo;Ljava/lang/Runnable;[I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,17 +17,13 @@
 # instance fields
 .field final synthetic val$soundPoolHelper:Lcom/miui/home/launcher/sound/SoundPoolHelper;
 
-.field final synthetic val$volume:F
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/sound/SoundPoolHelper;F)V
+.method constructor <init>(Lcom/miui/home/launcher/sound/SoundPoolHelper;)V
     .locals 0
 
-    .line 96
+    .line 102
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$3;->val$soundPoolHelper:Lcom/miui/home/launcher/sound/SoundPoolHelper;
-
-    iput p2, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$3;->val$volume:F
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
 
@@ -39,22 +35,14 @@
 .method public onBegin(Ljava/lang/Object;)V
     .locals 2
 
-    .line 99
-    invoke-static {}, Lcom/miui/home/launcher/sound/SoundPoolHelper;->getEnableDeleteSound()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 100
+    .line 105
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$3;->val$soundPoolHelper:Lcom/miui/home/launcher/sound/SoundPoolHelper;
 
     const/4 v0, 0x0
 
-    iget v1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$3;->val$volume:F
+    const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {p1, v0, v1}, Lcom/miui/home/launcher/sound/SoundPoolHelper;->playAsync(IF)V
 
-    :cond_0
     return-void
 .end method

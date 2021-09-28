@@ -3,37 +3,18 @@
 .source "GrowingArrayUtils.java"
 
 
-# static fields
-.field static final synthetic $assertionsDisabled:Z
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
-.method private constructor <init>()V
-    .locals 0
-
-    .line 195
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 .method public static append([III)[I
     .locals 2
 
     add-int/lit8 v0, p1, 0x1
 
-    .line 60
+    .line 56
     array-length v1, p0
 
     if-le v0, v1, :cond_0
 
-    .line 61
+    .line 57
     invoke-static {p1}, Landroidx/core/content/res/GrowingArrayUtils;->growSize(I)I
 
     move-result v0
@@ -42,12 +23,12 @@
 
     const/4 v1, 0x0
 
-    .line 62
+    .line 58
     invoke-static {p0, v1, v0, v1, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     move-object p0, v0
 
-    .line 65
+    .line 61
     :cond_0
     aput p2, p0, p1
 
@@ -66,12 +47,12 @@
 
     add-int/lit8 v0, p1, 0x1
 
-    .line 44
+    .line 42
     array-length v1, p0
 
     if-le v0, v1, :cond_0
 
-    .line 45
+    .line 43
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -80,12 +61,12 @@
 
     move-result-object v0
 
-    .line 46
+    .line 44
     invoke-static {p1}, Landroidx/core/content/res/GrowingArrayUtils;->growSize(I)I
 
     move-result v1
 
-    .line 45
+    .line 43
     invoke-static {v0, v1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -94,12 +75,12 @@
 
     const/4 v1, 0x0
 
-    .line 47
+    .line 45
     invoke-static {p0, v1, v0, v1, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     move-object p0, v0
 
-    .line 50
+    .line 48
     :cond_0
     aput-object p2, p0, p1
 

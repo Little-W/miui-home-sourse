@@ -6,17 +6,7 @@
 # static fields
 .field private static final CLEAR:Landroid/graphics/PorterDuffXfermode;
 
-.field private static final CLS:Ljava/lang/Class;
-
-.field private static final CLS_CONTEXT:Ljava/lang/Class;
-
-.field private static final CLS_ELEMENT:Ljava/lang/Class;
-
 .field private static final DST_IN:Landroid/graphics/PorterDuffXfermode;
-
-.field private static final SIGNATURE_GET_CONTEXT:Ljava/lang/String;
-
-.field private static final SIGNATURE_GET_ROOT:Ljava/lang/String;
 
 .field private static final sInversePath:Landroid/graphics/Path;
 
@@ -25,100 +15,9 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    const-string v1, "miui.maml.FancyDrawable"
-
-    .line 29
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v1
-    :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
-
-    :try_start_1
-    const-string v2, "miui.maml.ScreenElementRoot"
-
-    .line 30
-    invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v2
-    :try_end_1
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
-
-    :try_start_2
-    const-string v3, "miui.maml.ScreenContext"
-
-    .line 31
-    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v0
-    :try_end_2
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v3
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v3
-
-    move-object v2, v0
-
-    goto :goto_0
-
-    :catch_2
-    move-exception v3
-
-    move-object v1, v0
-
-    move-object v2, v1
-
-    .line 33
-    :goto_0
-    invoke-virtual {v3}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
+    .locals 2
 
     .line 35
-    :goto_1
-    sput-object v1, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->CLS:Ljava/lang/Class;
-
-    .line 36
-    sput-object v2, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->CLS_ELEMENT:Ljava/lang/Class;
-
-    .line 37
-    sput-object v0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->CLS_CONTEXT:Ljava/lang/Class;
-
-    .line 38
-    sget-object v0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->CLS_ELEMENT:Ljava/lang/Class;
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/Class;
-
-    invoke-static {v0, v2}, Lcom/market/sdk/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->SIGNATURE_GET_ROOT:Ljava/lang/String;
-
-    .line 39
-    sget-object v0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->CLS_CONTEXT:Ljava/lang/Class;
-
-    new-array v1, v1, [Ljava/lang/Class;
-
-    invoke-static {v0, v1}, Lcom/market/sdk/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->SIGNATURE_GET_CONTEXT:Ljava/lang/String;
-
-    .line 58
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x7
@@ -127,7 +26,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->sPaint:Landroid/graphics/Paint;
 
-    .line 59
+    .line 36
     new-instance v0, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
@@ -136,7 +35,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->CLEAR:Landroid/graphics/PorterDuffXfermode;
 
-    .line 60
+    .line 37
     new-instance v0, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->DST_IN:Landroid/graphics/PorterDuff$Mode;
@@ -145,7 +44,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->DST_IN:Landroid/graphics/PorterDuffXfermode;
 
-    .line 61
+    .line 38
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
@@ -158,80 +57,52 @@
 .method static draw(Landroid/graphics/drawable/Drawable;Landroid/graphics/Canvas;Landroid/graphics/Rect;Landroid/graphics/Path;)V
     .locals 0
 
-    .line 65
+    .line 42
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 66
+    .line 43
     invoke-virtual {p1, p3}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
 
-    .line 67
+    .line 44
     invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 68
+    .line 45
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
 .end method
 
 .method public static isInstance(Landroid/graphics/drawable/Drawable;)Z
-    .locals 1
+    .locals 0
 
-    .line 43
-    sget-object v0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->CLS:Ljava/lang/Class;
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    .line 46
-    :cond_0
-    invoke-virtual {v0, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
-
-    move-result p0
+    .line 21
+    instance-of p0, p0, Lcom/miui/maml/FancyDrawable;
 
     return p0
 .end method
 
 .method public static updateRatio(Ljava/lang/Object;F)V
-    .locals 5
+    .locals 4
 
-    .line 50
-    sget-object v0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->CLS:Ljava/lang/Class;
+    .line 25
+    instance-of v0, p0, Lcom/miui/maml/FancyDrawable;
 
     if-eqz v0, :cond_1
 
-    sget-object v1, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->CLS_ELEMENT:Ljava/lang/Class;
+    .line 26
+    check-cast p0, Lcom/miui/maml/FancyDrawable;
 
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "getRoot"
-
-    .line 53
-    sget-object v2, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->SIGNATURE_GET_ROOT:Ljava/lang/String;
-
-    const/4 v3, 0x0
-
-    new-array v4, v3, [Ljava/lang/Object;
-
-    invoke-static {v0, p0, v1, v2, v4}, Lcom/market/sdk/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/miui/maml/FancyDrawable;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object p0
 
-    .line 54
-    sget-object v0, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->CLS_ELEMENT:Ljava/lang/Class;
+    if-nez p0, :cond_0
 
-    const-string v1, "getContext"
+    return-void
 
-    sget-object v2, Lcom/miui/home/launcher/graphics/drawable/FancyDrawableCompat;->SIGNATURE_GET_CONTEXT:Ljava/lang/String;
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-static {v0, p0, v1, v2, v3}, Lcom/market/sdk/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
+    .line 30
+    :cond_0
+    invoke-virtual {p0}, Lcom/miui/maml/ScreenElementRoot;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v0
 
@@ -239,12 +110,9 @@
 
     float-to-double v2, p1
 
-    .line 55
+    .line 31
     invoke-static {p0, v0, v1, v2, v3}, Lcom/miui/launcher/utils/MamlUtils;->updateVariable(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;D)V
 
-    return-void
-
     :cond_1
-    :goto_0
     return-void
 .end method

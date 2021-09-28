@@ -495,7 +495,7 @@
 
     const/4 v0, 0x1
 
-    .line 694
+    .line 695
     new-array v0, v0, [Lmiuix/animation/base/AnimConfig;
 
     iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mDownConfig:Lmiuix/animation/base/AnimConfig;
@@ -626,7 +626,7 @@
 
     const/4 v0, 0x1
 
-    .line 698
+    .line 699
     new-array v0, v0, [Lmiuix/animation/base/AnimConfig;
 
     iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mUpConfig:Lmiuix/animation/base/AnimConfig;
@@ -1375,6 +1375,40 @@
     return-void
 .end method
 
+.method private setCorner(F)V
+    .locals 2
+
+    .line 703
+    iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
+
+    invoke-interface {v0}, Lmiuix/animation/controller/IFolmeStateStyle;->getTarget()Lmiuix/animation/IAnimTarget;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lmiuix/animation/IAnimTarget;->getTargetObject()Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 704
+    instance-of v1, v0, Landroid/view/View;
+
+    if-eqz v1, :cond_0
+
+    .line 705
+    check-cast v0, Landroid/view/View;
+
+    sget v1, Lmiuix/animation/R$id;->miuix_animation_tag_view_corner:I
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    invoke-virtual {v0, v1, p1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method private setTintColor()V
     .locals 5
 
@@ -1573,15 +1607,15 @@
 .method public cancel()V
     .locals 1
 
-    .line 676
+    .line 677
     invoke-super {p0}, Lmiuix/animation/controller/FolmeBase;->cancel()V
 
-    .line 677
+    .line 678
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mFontStyle:Lmiuix/animation/controller/FolmeFont;
 
     if-eqz v0, :cond_0
 
-    .line 678
+    .line 679
     invoke-virtual {v0}, Lmiuix/animation/controller/FolmeFont;->cancel()V
 
     :cond_0
@@ -1926,28 +1960,49 @@
     return-object p0
 .end method
 
+.method public setTintMode(I)Lmiuix/animation/ITouchStyle;
+    .locals 1
+
+    .line 168
+    iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mDownConfig:Lmiuix/animation/base/AnimConfig;
+
+    invoke-virtual {v0, p1}, Lmiuix/animation/base/AnimConfig;->setTintMode(I)Lmiuix/animation/base/AnimConfig;
+
+    .line 169
+    iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mUpConfig:Lmiuix/animation/base/AnimConfig;
+
+    invoke-virtual {v0, p1}, Lmiuix/animation/base/AnimConfig;->setTintMode(I)Lmiuix/animation/base/AnimConfig;
+
+    return-object p0
+.end method
+
 .method public varargs touchDown([Lmiuix/animation/base/AnimConfig;)V
     .locals 5
 
+    const/4 v0, 0x0
+
     .line 648
-    invoke-direct {p0}, Lmiuix/animation/controller/FolmeTouch;->setTintColor()V
+    invoke-direct {p0, v0}, Lmiuix/animation/controller/FolmeTouch;->setCorner(F)V
 
     .line 649
+    invoke-direct {p0}, Lmiuix/animation/controller/FolmeTouch;->setTintColor()V
+
+    .line 650
     invoke-direct {p0, p1}, Lmiuix/animation/controller/FolmeTouch;->getDownConfig([Lmiuix/animation/base/AnimConfig;)[Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
 
-    .line 650
+    .line 651
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mFontStyle:Lmiuix/animation/controller/FolmeFont;
 
     if-eqz v0, :cond_0
 
-    .line 651
+    .line 652
     iget v1, p0, Lmiuix/animation/controller/FolmeTouch;->mDownWeight:I
 
     invoke-virtual {v0, v1, p1}, Lmiuix/animation/controller/FolmeFont;->to(I[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IVarFontStyle;
 
-    .line 653
+    .line 654
     :cond_0
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
@@ -1957,7 +2012,7 @@
 
     move-result-object v0
 
-    .line 654
+    .line 655
     sget-object v1, Lmiuix/animation/ITouchStyle$TouchType;->DOWN:Lmiuix/animation/ITouchStyle$TouchType;
 
     invoke-direct {p0, v1}, Lmiuix/animation/controller/FolmeTouch;->isScaleSet(Lmiuix/animation/ITouchStyle$TouchType;)Z
@@ -1966,14 +2021,14 @@
 
     if-nez v1, :cond_1
 
-    .line 655
+    .line 656
     iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
     invoke-interface {v1}, Lmiuix/animation/controller/IFolmeStateStyle;->getTarget()Lmiuix/animation/IAnimTarget;
 
     move-result-object v1
 
-    .line 656
+    .line 657
     sget-object v2, Lmiuix/animation/property/ViewProperty;->WIDTH:Lmiuix/animation/property/ViewProperty;
 
     invoke-virtual {v1, v2}, Lmiuix/animation/IAnimTarget;->getValue(Lmiuix/animation/property/FloatProperty;)F
@@ -1982,17 +2037,17 @@
 
     sget-object v3, Lmiuix/animation/property/ViewProperty;->HEIGHT:Lmiuix/animation/property/ViewProperty;
 
-    .line 657
+    .line 658
     invoke-virtual {v1, v3}, Lmiuix/animation/IAnimTarget;->getValue(Lmiuix/animation/property/FloatProperty;)F
 
     move-result v1
 
-    .line 656
+    .line 657
     invoke-static {v2, v1}, Ljava/lang/Math;->max(FF)F
 
     move-result v1
 
-    .line 658
+    .line 659
     iget v2, p0, Lmiuix/animation/controller/FolmeTouch;->mScaleDist:F
 
     sub-float v2, v1, v2
@@ -2005,7 +2060,7 @@
 
     move-result v1
 
-    .line 659
+    .line 660
     sget-object v2, Lmiuix/animation/property/ViewProperty;->SCALE_X:Lmiuix/animation/property/ViewProperty;
 
     float-to-double v3, v1
@@ -2016,10 +2071,10 @@
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 660
+    .line 661
     invoke-virtual {v1, v2, v3, v4}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
-    .line 662
+    .line 663
     :cond_1
     iget-object v1, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 
@@ -2031,22 +2086,22 @@
 .method public varargs touchUp([Lmiuix/animation/base/AnimConfig;)V
     .locals 3
 
-    .line 667
+    .line 668
     invoke-direct {p0, p1}, Lmiuix/animation/controller/FolmeTouch;->getUpConfig([Lmiuix/animation/base/AnimConfig;)[Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
 
-    .line 668
+    .line 669
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mFontStyle:Lmiuix/animation/controller/FolmeFont;
 
     if-eqz v0, :cond_0
 
-    .line 669
+    .line 670
     iget v1, p0, Lmiuix/animation/controller/FolmeTouch;->mUpWeight:I
 
     invoke-virtual {v0, v1, p1}, Lmiuix/animation/controller/FolmeFont;->to(I[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IVarFontStyle;
 
-    .line 671
+    .line 672
     :cond_0
     iget-object v0, p0, Lmiuix/animation/controller/FolmeTouch;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
 

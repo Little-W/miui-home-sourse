@@ -48,7 +48,7 @@
 .method public bridge synthetic call()Ljava/lang/Object;
     .locals 1
 
-    .line 30
+    .line 31
     invoke-virtual {p0}, Lcom/miui/home/settings/AllDeleteAppActivity$initData$1;->call()Ljava/util/List;
 
     move-result-object v0

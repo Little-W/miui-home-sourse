@@ -25,7 +25,7 @@
 
     move-result-object v0
 
-    const-string v1, "x1"
+    const-string/jumbo v1, "x1"
 
     invoke-interface {p1, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -42,7 +42,7 @@
 
     move-result-object p2
 
-    const-string v0, "y1"
+    const-string/jumbo v0, "y1"
 
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 

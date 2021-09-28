@@ -30,7 +30,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 2543
+    .line 2558
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,7 +39,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/LauncherProvider$1;)V
     .locals 0
 
-    .line 2543
+    .line 2558
     invoke-direct {p0}, Lcom/miui/home/launcher/LauncherProvider$DatabaseHelper$InstallCache;-><init>()V
 
     return-void
@@ -56,12 +56,12 @@
         }
     .end annotation
 
-    .line 2554
+    .line 2569
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 2556
+    .line 2571
     :try_start_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -79,7 +79,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 2558
+    .line 2573
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -97,7 +97,7 @@
 
     check-cast v2, Landroid/content/pm/PackageInfo;
 
-    .line 2559
+    .line 2574
     iget-object v2, v2, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
@@ -111,7 +111,7 @@
 
     const-string v2, "Launcher.LauncherProvider"
 
-    .line 2563
+    .line 2578
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -130,8 +130,6 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     :cond_0
     return-object v0
 .end method
@@ -141,19 +139,19 @@
 .method isInstalled(Ljava/lang/String;)Z
     .locals 1
 
-    .line 2547
+    .line 2562
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherProvider$DatabaseHelper$InstallCache;->mSet:Ljava/util/HashSet;
 
     if-nez v0, :cond_0
 
-    .line 2548
+    .line 2563
     invoke-direct {p0}, Lcom/miui/home/launcher/LauncherProvider$DatabaseHelper$InstallCache;->getInstalledPackages()Ljava/util/HashSet;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherProvider$DatabaseHelper$InstallCache;->mSet:Ljava/util/HashSet;
 
-    .line 2550
+    .line 2565
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherProvider$DatabaseHelper$InstallCache;->mSet:Ljava/util/HashSet;
 

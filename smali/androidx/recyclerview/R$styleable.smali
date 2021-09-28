@@ -124,7 +124,7 @@
 
     const/4 v0, 0x3
 
-    .line 201
+    .line 203
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
@@ -133,7 +133,7 @@
 
     const/4 v0, 0x6
 
-    .line 205
+    .line 207
     new-array v0, v0, [I
 
     fill-array-data v0, :array_1
@@ -142,7 +142,7 @@
 
     const/16 v0, 0xa
 
-    .line 212
+    .line 214
     new-array v0, v0, [I
 
     fill-array-data v0, :array_2
@@ -151,7 +151,7 @@
 
     const/16 v0, 0xc
 
-    .line 223
+    .line 225
     new-array v1, v0, [I
 
     fill-array-data v1, :array_3
@@ -160,14 +160,14 @@
 
     const/4 v1, 0x2
 
-    .line 236
+    .line 238
     new-array v1, v1, [I
 
     fill-array-data v1, :array_4
 
     sput-object v1, Landroidx/recyclerview/R$styleable;->GradientColorItem:[I
 
-    .line 239
+    .line 241
     new-array v0, v0, [I
 
     fill-array-data v0, :array_5
@@ -185,12 +185,12 @@
 
     :array_1
     .array-data 4
-        0x7f04015e
-        0x7f04015f
         0x7f040160
         0x7f040161
         0x7f040162
         0x7f040163
+        0x7f040164
+        0x7f040165
     .end array-data
 
     :array_2
@@ -200,11 +200,11 @@
         0x101053f
         0x101056f
         0x1010570
-        0x7f04015c
-        0x7f040164
-        0x7f040165
+        0x7f04015e
         0x7f040166
-        0x7f04032d
+        0x7f040167
+        0x7f040168
+        0x7f040333
     .end array-data
 
     :array_3
@@ -234,14 +234,14 @@
         0x10100c4
         0x10100eb
         0x10100f1
-        0x7f040150
-        0x7f040151
         0x7f040152
         0x7f040153
         0x7f040154
-        0x7f040194
-        0x7f040283
-        0x7f0402ac
-        0x7f0402bb
+        0x7f040155
+        0x7f040156
+        0x7f040196
+        0x7f040285
+        0x7f0402b1
+        0x7f0402c0
     .end array-data
 .end method

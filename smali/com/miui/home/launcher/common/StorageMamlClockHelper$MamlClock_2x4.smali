@@ -133,7 +133,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    const-string v2, "zh_CN"
+    const-string/jumbo v2, "zh_CN"
 
     .line 88
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

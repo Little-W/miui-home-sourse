@@ -81,7 +81,7 @@
     .line 427
     new-instance v0, Ljava/text/SimpleDateFormat;
 
-    const-string v1, "yyyy-MM-dd\'T\'HH:mm:ss.SSSZ"
+    const-string/jumbo v1, "yyyy-MM-dd\'T\'HH:mm:ss.SSSZ"
 
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -582,7 +582,7 @@
     .line 245
     new-instance v0, Ljava/text/SimpleDateFormat;
 
-    const-string v1, "yyyy-MM-dd\'T\'HH:mm:ss.SSSZ"
+    const-string/jumbo v1, "yyyy-MM-dd\'T\'HH:mm:ss.SSSZ"
 
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -1451,7 +1451,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "~ "
+    const-string/jumbo v9, "~ "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1511,7 +1511,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "~ "
+    const-string/jumbo v9, "~ "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1595,7 +1595,7 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "~ "
+    const-string/jumbo v9, "~ "
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

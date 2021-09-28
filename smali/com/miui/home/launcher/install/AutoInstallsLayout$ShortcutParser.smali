@@ -79,8 +79,6 @@
     const-string v2, "Ignoring shortcut, can\'t get title"
 
     .line 389
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-wide v4
 
     :cond_0
@@ -131,8 +129,6 @@
     const-string v2, "Ignoring shortcut, can\'t get icon from name"
 
     .line 402
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-wide v4
 
     :cond_2
@@ -168,8 +164,6 @@
     const-string v2, "Ignoring shortcut, can\'t load icon from resource"
 
     .line 409
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-wide v4
 
     .line 412

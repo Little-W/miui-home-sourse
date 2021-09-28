@@ -2,7 +2,7 @@
 <resources>
     <string-array name="editing_mode_entries">
         <item>རྩིག་ཤོག་བཟོ་བཅོས།</item>
-        <item>ལག་ཆ་ཁ་སྣོན།</item>
+        <item>ལྷུ་ཆས་ཆུང་ངུ་སྣོན།</item>
         <item>ཅོག་ངོས་སྒྲིག་འགོད།</item>
     </string-array>
     <string-array name="gadget_weather_image">

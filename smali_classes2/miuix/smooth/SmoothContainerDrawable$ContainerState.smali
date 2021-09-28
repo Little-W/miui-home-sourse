@@ -30,10 +30,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 377
+    .line 379
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 378
+    .line 380
     new-instance v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     invoke-direct {v0}, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;-><init>()V
@@ -46,10 +46,10 @@
 .method public constructor <init>(Lmiuix/smooth/SmoothContainerDrawable$ContainerState;Lmiuix/smooth/SmoothContainerDrawable;Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)V
     .locals 2
 
-    .line 382
+    .line 384
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 383
+    .line 385
     new-instance v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v1, p1, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
@@ -58,22 +58,22 @@
 
     iput-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
-    .line 384
+    .line 386
     iget p2, p1, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mRadius:F
 
     iput p2, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mRadius:F
 
-    .line 385
+    .line 387
     iget-object p2, p1, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mRadii:[F
 
     iput-object p2, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mRadii:[F
 
-    .line 386
+    .line 388
     iget p2, p1, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mStrokeWidth:I
 
     iput p2, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mStrokeWidth:I
 
-    .line 387
+    .line 389
     iget p1, p1, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mStrokeColor:I
 
     iput p1, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mStrokeColor:I
@@ -94,7 +94,7 @@
 .method public getAlpha()I
     .locals 1
 
-    .line 483
+    .line 486
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -109,7 +109,7 @@
 .method public getBounds()Landroid/graphics/Rect;
     .locals 1
 
-    .line 455
+    .line 458
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -124,7 +124,7 @@
 .method public getChangingConfigurations()I
     .locals 1
 
-    .line 415
+    .line 417
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -139,7 +139,7 @@
 .method public getDirtyBounds()Landroid/graphics/Rect;
     .locals 1
 
-    .line 467
+    .line 470
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -154,7 +154,7 @@
 .method public getIntrinsicHeight()I
     .locals 1
 
-    .line 431
+    .line 433
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -169,7 +169,7 @@
 .method public getIntrinsicWidth()I
     .locals 1
 
-    .line 427
+    .line 429
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -184,7 +184,7 @@
 .method public getOpacity()I
     .locals 1
 
-    .line 443
+    .line 445
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -199,7 +199,7 @@
 .method public getPadding(Landroid/graphics/Rect;)Z
     .locals 1
 
-    .line 487
+    .line 490
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -214,7 +214,7 @@
 .method public final isStateful()Z
     .locals 1
 
-    .line 419
+    .line 421
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -229,7 +229,7 @@
 .method public jumpToCurrentState()V
     .locals 1
 
-    .line 439
+    .line 441
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -242,7 +242,7 @@
 .method public newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 393
+    .line 395
     new-instance v0, Lmiuix/smooth/SmoothContainerDrawable;
 
     const/4 v1, 0x0
@@ -255,7 +255,7 @@
 .method public newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 399
+    .line 401
     new-instance v0, Lmiuix/smooth/SmoothContainerDrawable;
 
     const/4 v1, 0x0
@@ -268,7 +268,7 @@
 .method public newDrawable(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 405
+    .line 407
     new-instance v0, Lmiuix/smooth/SmoothContainerDrawable;
 
     const/4 v1, 0x0
@@ -281,7 +281,7 @@
 .method public onBoundsChange(Landroid/graphics/Rect;)V
     .locals 1
 
-    .line 435
+    .line 437
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -294,7 +294,7 @@
 .method public onStateChange([I)Z
     .locals 1
 
-    .line 423
+    .line 425
     invoke-virtual {p0}, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->isStateful()Z
 
     move-result v0
@@ -325,12 +325,19 @@
 .method public setAlpha(I)V
     .locals 1
 
-    .line 447
+    .line 449
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+
+    .line 450
+    iget-object p1, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
+
+    iget-object p1, p1, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 .end method
@@ -338,7 +345,7 @@
 .method public setChangingConfigurations(I)V
     .locals 1
 
-    .line 471
+    .line 474
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -351,7 +358,7 @@
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 1
 
-    .line 451
+    .line 454
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -364,7 +371,7 @@
 .method public setDither(Z)V
     .locals 1
 
-    .line 475
+    .line 478
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;
@@ -377,7 +384,7 @@
 .method public setFilterBitmap(Z)V
     .locals 1
 
-    .line 479
+    .line 482
     iget-object v0, p0, Lmiuix/smooth/SmoothContainerDrawable$ContainerState;->mChildDrawable:Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;
 
     iget-object v0, v0, Lmiuix/smooth/SmoothContainerDrawable$ChildDrawable;->mDrawable:Landroid/graphics/drawable/Drawable;

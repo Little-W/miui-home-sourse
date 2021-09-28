@@ -235,7 +235,7 @@
 .method static getServiceIntent(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
     .locals 3
 
-    .line 370
+    .line 384
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
@@ -250,7 +250,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 371
+    .line 385
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object p0
@@ -279,7 +279,7 @@
 
     const/4 v1, 0x3
 
-    .line 372
+    .line 386
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -290,7 +290,7 @@
 
     const-string v0, "cv"
 
-    .line 373
+    .line 387
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -299,36 +299,36 @@
 
     move-result-object p0
 
-    .line 374
+    .line 388
     invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object p0
 
-    .line 375
+    .line 389
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.miui.launcher.WINDOW_OVERLAY"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 376
+    .line 390
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 377
+    .line 391
     invoke-virtual {v0, p0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     return-object v0
 .end method
 
-.method private static loadServerVersion(Landroid/content/Context;Ljava/lang/String;)I
+.method public static loadServerVersion(Landroid/content/Context;Ljava/lang/String;)I
     .locals 1
 
-    .line 382
+    .line 396
     invoke-static {p0, p1}, Lcom/miui/launcher/overlay/client/LauncherClient;->getServiceIntent(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object p1
 
-    .line 383
+    .line 397
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -343,7 +343,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 385
+    .line 399
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     if-eqz v0, :cond_0
@@ -354,7 +354,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 388
+    .line 402
     iget-object p0, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     iget-object p0, p0, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
@@ -547,12 +547,12 @@
 .method public callOverlay(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 1
 
-    .line 317
+    .line 321
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mLauncherOverlay:Lcom/miui/launcher/overlay/ILauncherOverlay;
 
     if-eqz v0, :cond_0
 
-    .line 319
+    .line 323
     :try_start_0
     invoke-interface {v0, p1, p2, p3}, Lcom/miui/launcher/overlay/ILauncherOverlay;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
@@ -565,7 +565,7 @@
     :catch_0
     move-exception p1
 
-    .line 321
+    .line 325
     invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_0
@@ -759,7 +759,7 @@
 .method public final getOptions()I
     .locals 1
 
-    .line 416
+    .line 430
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mOptions:Lcom/miui/launcher/overlay/client/LauncherClient$ClientOptions;
 
     invoke-static {v0}, Lcom/miui/launcher/overlay/client/LauncherClient$ClientOptions;->access$100(Lcom/miui/launcher/overlay/client/LauncherClient$ClientOptions;)I
@@ -772,7 +772,7 @@
 .method public final getPackageName()Ljava/lang/String;
     .locals 1
 
-    .line 412
+    .line 426
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mOptions:Lcom/miui/launcher/overlay/client/LauncherClient$ClientOptions;
 
     invoke-static {v0}, Lcom/miui/launcher/overlay/client/LauncherClient$ClientOptions;->access$000(Lcom/miui/launcher/overlay/client/LauncherClient$ClientOptions;)Ljava/lang/String;
@@ -785,7 +785,7 @@
 .method public getServerVersion()I
     .locals 1
 
-    .line 430
+    .line 444
     iget v0, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mServerVersion:I
 
     return v0
@@ -818,10 +818,37 @@
     return-void
 .end method
 
+.method public invokeOverlay(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 1
+
+    .line 332
+    iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mLauncherOverlay:Lcom/miui/launcher/overlay/ILauncherOverlay;
+
+    if-eqz v0, :cond_0
+
+    .line 334
+    :try_start_0
+    invoke-interface {v0, p1, p2, p3}, Lcom/miui/launcher/overlay/ILauncherOverlay;->invoke(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    .line 336
+    invoke-virtual {p1}, Landroid/os/RemoteException;->printStackTrace()V
+
+    :cond_0
+    :goto_0
+    return-void
+.end method
+
 .method public isDestroyed()Z
     .locals 1
 
-    .line 434
+    .line 448
     iget-boolean v0, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->isDestroyed:Z
 
     return v0
@@ -987,10 +1014,21 @@
     return-object p1
 .end method
 
+.method onOverlayInvoke(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 1
+
+    .line 317
+    iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mClientCallbacks:Lcom/miui/launcher/overlay/client/LauncherClientCallback;
+
+    invoke-interface {v0, p1, p2, p3}, Lcom/miui/launcher/overlay/client/LauncherClientCallback;->onOverlayInvoke(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
 .method onOverlayScrollChanged(F)V
     .locals 1
 
-    .line 350
+    .line 364
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mClientCallbacks:Lcom/miui/launcher/overlay/client/LauncherClientCallback;
 
     invoke-interface {v0, p1}, Lcom/miui/launcher/overlay/client/LauncherClientCallback;->onOverlayScrollChanged(F)V
@@ -1001,7 +1039,7 @@
 .method onOverlayScrollEnd(F)V
     .locals 1
 
-    .line 357
+    .line 371
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mClientCallbacks:Lcom/miui/launcher/overlay/client/LauncherClientCallback;
 
     invoke-interface {v0, p1}, Lcom/miui/launcher/overlay/client/LauncherClientCallback;->onOverlayScrollEnd(F)V
@@ -1012,7 +1050,7 @@
 .method onOverlayScrollStart(F)V
     .locals 1
 
-    .line 343
+    .line 357
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mClientCallbacks:Lcom/miui/launcher/overlay/client/LauncherClientCallback;
 
     invoke-interface {v0, p1}, Lcom/miui/launcher/overlay/client/LauncherClientCallback;->onOverlayScrollStart(F)V
@@ -1023,10 +1061,10 @@
 .method onOverlayUpdate(Landroid/content/Context;)V
     .locals 3
 
-    .line 395
+    .line 409
     iget v0, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mServerVersion:I
 
-    .line 396
+    .line 410
     iget-object v1, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mOptions:Lcom/miui/launcher/overlay/client/LauncherClient$ClientOptions;
 
     invoke-static {v1}, Lcom/miui/launcher/overlay/client/LauncherClient$ClientOptions;->access$000(Lcom/miui/launcher/overlay/client/LauncherClient$ClientOptions;)Ljava/lang/String;
@@ -1041,7 +1079,7 @@
 
     const-string p1, "LauncherClient"
 
-    .line 397
+    .line 411
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1072,10 +1110,10 @@
 
     invoke-static {p1, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 398
+    .line 412
     invoke-virtual {p0}, Lcom/miui/launcher/overlay/client/LauncherClient;->reconnect()V
 
-    .line 399
+    .line 413
     iget-object p1, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mClientCallbacks:Lcom/miui/launcher/overlay/client/LauncherClientCallback;
 
     iget v1, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mServerVersion:I
@@ -1208,17 +1246,17 @@
 .method public final reconnect()V
     .locals 2
 
-    .line 403
+    .line 417
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mLauncherOverlay:Lcom/miui/launcher/overlay/ILauncherOverlay;
 
     if-nez v0, :cond_0
 
-    .line 404
+    .line 418
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mClientService:Lcom/miui/launcher/overlay/client/LauncherClientService;
 
     invoke-virtual {v0}, Lcom/miui/launcher/overlay/client/LauncherClientService;->disconnect()V
 
-    .line 405
+    .line 419
     invoke-virtual {p0}, Lcom/miui/launcher/overlay/client/LauncherClient;->connect()V
 
     goto :goto_0
@@ -1228,7 +1266,7 @@
 
     const-string v1, "already connected"
 
-    .line 407
+    .line 421
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -1323,28 +1361,28 @@
 .method public setOverlay(Lcom/miui/launcher/overlay/ILauncherOverlay;)V
     .locals 0
 
-    .line 361
+    .line 375
     iput-object p1, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mLauncherOverlay:Lcom/miui/launcher/overlay/ILauncherOverlay;
 
-    .line 362
+    .line 376
     iget-object p1, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mLauncherOverlay:Lcom/miui/launcher/overlay/ILauncherOverlay;
 
     if-nez p1, :cond_0
 
     const/4 p1, 0x0
 
-    .line 363
+    .line 377
     invoke-virtual {p0, p1}, Lcom/miui/launcher/overlay/client/LauncherClient;->setServiceState(I)V
 
     goto :goto_0
 
-    .line 364
+    .line 378
     :cond_0
     iget-object p1, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     if-eqz p1, :cond_1
 
-    .line 365
+    .line 379
     invoke-direct {p0}, Lcom/miui/launcher/overlay/client/LauncherClient;->updateOverlay()V
 
     :cond_1
@@ -1384,7 +1422,7 @@
 
     const-string v0, "LauncherClient"
 
-    .line 328
+    .line 342
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1401,12 +1439,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
+    .line 343
     iget v0, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mServiceState:I
 
     if-eq v0, p1, :cond_1
 
-    .line 330
+    .line 344
     iput p1, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mServiceState:I
 
     const/4 v0, 0x1
@@ -1420,13 +1458,13 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 332
+    .line 346
     :goto_0
     iget-object p1, p0, Lcom/miui/launcher/overlay/client/LauncherClient;->mClientCallbacks:Lcom/miui/launcher/overlay/client/LauncherClientCallback;
 
     invoke-interface {p1, v0}, Lcom/miui/launcher/overlay/client/LauncherClientCallback;->onServiceStateChanged(Z)V
 
-    .line 333
+    .line 347
     invoke-virtual {p0, v0}, Lcom/miui/launcher/overlay/client/LauncherClient;->onServiceStateChanged(Z)V
 
     :cond_1

@@ -273,8 +273,6 @@
     const-string p2, "step1: found the same shortcut, not add again"
 
     .line 53
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return v2
 
     .line 56
@@ -303,8 +301,6 @@
     const-string p2, "step2: found the same shortcut, not add again"
 
     .line 58
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return v2
 
     :cond_4
@@ -729,8 +725,6 @@
     const-string p2, "failed to create database folder"
 
     .line 115
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 118
@@ -820,8 +814,6 @@
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
-
-    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

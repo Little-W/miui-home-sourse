@@ -93,8 +93,6 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     const/4 v0, 0x1
 
     .line 27
@@ -120,7 +118,7 @@
 
     if-eqz p1, :cond_1
 
-    const v0, 0x7f0a01c8
+    const v0, 0x7f0a01cc
 
     .line 28
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

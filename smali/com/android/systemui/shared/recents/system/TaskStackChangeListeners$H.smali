@@ -46,10 +46,10 @@
 .method public constructor <init>(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;Landroid/os/Looper;)V
     .locals 0
 
-    .line 187
+    .line 191
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
-    .line 188
+    .line 192
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -60,7 +60,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 6
 
-    .line 193
+    .line 197
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {v0}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -69,7 +69,7 @@
 
     monitor-enter v0
 
-    .line 194
+    .line 198
     :try_start_0
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -79,7 +79,7 @@
 
     goto/16 :goto_c
 
-    .line 263
+    .line 267
     :pswitch_0
     iget-object p1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
@@ -96,7 +96,7 @@
     :goto_0
     if-ltz p1, :cond_4
 
-    .line 264
+    .line 268
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {v1}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -115,7 +115,7 @@
 
     goto :goto_0
 
-    .line 225
+    .line 229
     :pswitch_1
     iget-object p1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
@@ -132,7 +132,7 @@
     :goto_1
     if-ltz p1, :cond_4
 
-    .line 226
+    .line 230
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {v1}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -151,7 +151,7 @@
 
     goto :goto_1
 
-    .line 238
+    .line 242
     :pswitch_2
     iget-object p1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
@@ -168,7 +168,7 @@
     :goto_2
     if-ltz p1, :cond_4
 
-    .line 239
+    .line 243
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {v1}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -187,7 +187,7 @@
 
     goto :goto_2
 
-    .line 269
+    .line 273
     :pswitch_3
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
@@ -204,7 +204,7 @@
     :goto_3
     if-ltz v1, :cond_4
 
-    .line 270
+    .line 274
     iget-object v2, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {v2}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -227,7 +227,7 @@
 
     goto :goto_3
 
-    .line 257
+    .line 261
     :pswitch_4
     iget-object p1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
@@ -244,7 +244,7 @@
     :goto_4
     if-ltz p1, :cond_4
 
-    .line 258
+    .line 262
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {v1}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -263,7 +263,7 @@
 
     goto :goto_4
 
-    .line 250
+    .line 254
     :pswitch_5
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
@@ -280,7 +280,7 @@
     :goto_5
     if-ltz v1, :cond_4
 
-    .line 251
+    .line 255
     iget-object v2, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {v2}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -307,7 +307,7 @@
 
     goto :goto_5
 
-    .line 244
+    .line 248
     :pswitch_6
     iget-object p1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
@@ -324,7 +324,7 @@
     :goto_6
     if-ltz p1, :cond_4
 
-    .line 245
+    .line 249
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {v1}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -343,7 +343,7 @@
 
     goto :goto_6
 
-    .line 231
+    .line 235
     :pswitch_7
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
@@ -360,7 +360,7 @@
     :goto_7
     if-ltz v1, :cond_4
 
-    .line 232
+    .line 236
     iget-object v3, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {v3}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -391,7 +391,7 @@
 
     goto :goto_7
 
-    .line 218
+    .line 222
     :pswitch_8
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
@@ -408,7 +408,7 @@
     :goto_9
     if-ltz v1, :cond_4
 
-    .line 219
+    .line 223
     iget-object v2, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {v2}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -438,10 +438,10 @@
     :pswitch_9
     const-string v1, "onTaskSnapshotChanged"
 
-    .line 204
+    .line 208
     invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 205
+    .line 209
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {v1}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -457,35 +457,35 @@
     :goto_a
     if-ltz v1, :cond_2
 
-    .line 206
+    .line 210
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     invoke-static {v2}, Lcom/android/systemui/shared/recents/utilities/Utilities;->createTaskSnapshotCompat(Ljava/lang/Object;)Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
 
     move-result-object v2
 
-    .line 207
+    .line 211
     new-instance v3, Lcom/android/systemui/shared/recents/model/ThumbnailData;
 
     invoke-interface {v2}, Lcom/android/systemui/shared/recents/system/ITaskSnapshot;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v4
 
-    .line 208
+    .line 212
     invoke-interface {v2}, Lcom/android/systemui/shared/recents/system/ITaskSnapshot;->getTaskThumbnailInfo()Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
 
     move-result-object v2
 
     invoke-direct {v3, v4, v2}, Lcom/android/systemui/shared/recents/model/ThumbnailData;-><init>(Landroid/graphics/Bitmap;Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;)V
 
-    .line 209
+    .line 213
     invoke-virtual {v3}, Lcom/android/systemui/shared/recents/model/ThumbnailData;->isValidate()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 210
+    .line 214
     iget-object v2, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {v2}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -507,7 +507,7 @@
 
     goto :goto_a
 
-    .line 214
+    .line 218
     :cond_2
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
@@ -516,10 +516,10 @@
     :pswitch_a
     const-string p1, "onTaskStackChanged"
 
-    .line 196
+    .line 200
     invoke-static {p1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    .line 197
+    .line 201
     iget-object p1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {p1}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -535,7 +535,7 @@
     :goto_b
     if-ltz p1, :cond_3
 
-    .line 198
+    .line 202
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {v1}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -554,11 +554,11 @@
 
     goto :goto_b
 
-    .line 200
+    .line 204
     :cond_3
     invoke-static {}, Landroid/os/Trace;->endSection()V
 
-    .line 275
+    .line 279
     :cond_4
     :goto_c
     monitor-exit v0

@@ -52,17 +52,17 @@
 .method public constructor <init>(I)V
     .locals 3
 
-    .line 259
+    .line 260
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 260
+    .line 261
     new-instance v0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark$1;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "x"
+    const-string/jumbo v2, "x"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -76,14 +76,14 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->propertyX:Lmiuix/animation/property/FloatProperty;
 
-    .line 271
+    .line 272
     new-instance v0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark$2;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "y"
+    const-string/jumbo v2, "y"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -97,7 +97,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->propertyY:Lmiuix/animation/property/FloatProperty;
 
-    .line 282
+    .line 283
     new-instance v0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark$3;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -124,7 +124,7 @@
 .method static synthetic access$400(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;)F
     .locals 0
 
-    .line 239
+    .line 240
     iget p0, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->mY:F
 
     return p0
@@ -133,7 +133,7 @@
 .method static synthetic access$402(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;F)F
     .locals 0
 
-    .line 239
+    .line 240
     iput p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->mY:F
 
     return p1
@@ -142,7 +142,7 @@
 .method static synthetic access$500(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;)F
     .locals 0
 
-    .line 239
+    .line 240
     iget p0, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->mX:F
 
     return p0
@@ -151,7 +151,7 @@
 .method static synthetic access$502(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;F)F
     .locals 0
 
-    .line 239
+    .line 240
     iput p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->mX:F
 
     return p1
@@ -160,62 +160,10 @@
 .method static synthetic access$600(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;)F
     .locals 0
 
-    .line 239
+    .line 240
     iget p0, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->mDecelerateRatio:F
 
     return p0
-.end method
-
-.method private calLocation([IF)V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    .line 310
-    aget v0, p1, v0
-
-    int-to-float v0, v0
-
-    iget-wide v1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->cos:D
-
-    double-to-float v1, v1
-
-    mul-float/2addr v1, p2
-
-    add-float/2addr v0, v1
-
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->px2dp(F)I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    iput v0, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->mX:F
-
-    const/4 v0, 0x1
-
-    .line 311
-    aget p1, p1, v0
-
-    int-to-float p1, p1
-
-    iget-wide v0, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->sin:D
-
-    double-to-float v0, v0
-
-    mul-float/2addr p2, v0
-
-    add-float/2addr p1, p2
-
-    invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->px2dp(F)I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    iput p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->mY:F
-
-    return-void
 .end method
 
 .method private perlin(F)F
@@ -482,19 +430,19 @@
     return-void
 .end method
 
-.method public initSpark(II[ILjava/util/Random;)V
+.method public initSpark(III[ILjava/util/Random;)V
     .locals 4
 
-    .line 298
+    .line 299
     iput p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->mColor:I
 
     const/4 p1, 0x0
 
-    .line 299
+    .line 300
     iput p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->mVisPer:F
 
-    .line 300
-    invoke-virtual {p4}, Ljava/util/Random;->nextFloat()F
+    .line 301
+    invoke-virtual {p5}, Ljava/util/Random;->nextFloat()F
 
     move-result p1
 
@@ -508,22 +456,22 @@
 
     float-to-double v0, p1
 
-    .line 301
+    .line 302
     invoke-static {v0, v1}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->cos:D
 
-    .line 302
+    .line 303
     invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->sin:D
 
-    .line 303
-    invoke-virtual {p4}, Ljava/util/Random;->nextFloat()F
+    .line 304
+    invoke-virtual {p5}, Ljava/util/Random;->nextFloat()F
 
     move-result p1
 
@@ -535,28 +483,73 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 304
+    .line 305
     iput p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->mDecelerateRatio:F
 
-    int-to-float p1, p2
+    .line 307
+    invoke-virtual {p5}, Ljava/util/Random;->nextFloat()F
 
-    .line 306
-    invoke-virtual {p4}, Ljava/util/Random;->nextFloat()F
+    move-result p5
 
-    move-result p2
+    const/high16 v0, 0x41300000    # 11.0f
 
-    const/high16 p4, 0x41a00000    # 20.0f
+    invoke-static {p1, v0, p5}, Lcom/miui/home/launcher/common/Utilities;->calcProgress(FFF)F
 
-    const/high16 v0, 0x41b00000    # 22.0f
+    move-result p1
 
-    invoke-static {p4, v0, p2}, Lcom/miui/home/launcher/common/Utilities;->calcProgress(FFF)F
+    int-to-float p2, p2
 
-    move-result p2
+    div-float/2addr p2, p1
 
-    div-float/2addr p1, p2
+    int-to-float p3, p3
 
-    .line 305
-    invoke-direct {p0, p3, p1}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->calLocation([IF)V
+    div-float/2addr p3, p1
+
+    const/4 p1, 0x0
+
+    .line 310
+    aget p1, p4, p1
+
+    int-to-float p1, p1
+
+    iget-wide v0, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->cos:D
+
+    double-to-float p5, v0
+
+    mul-float/2addr p2, p5
+
+    add-float/2addr p1, p2
+
+    invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->px2dp(F)I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    iput p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->mX:F
+
+    const/4 p1, 0x1
+
+    .line 311
+    aget p1, p4, p1
+
+    int-to-float p1, p1
+
+    iget-wide p4, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->sin:D
+
+    double-to-float p2, p4
+
+    mul-float/2addr p3, p2
+
+    add-float/2addr p1, p3
+
+    invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->px2dp(F)I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    iput p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->mY:F
 
     return-void
 .end method

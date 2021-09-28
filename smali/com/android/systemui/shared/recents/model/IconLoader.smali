@@ -655,7 +655,7 @@
 
     const-wide/32 v2, 0x2932e00
 
-    invoke-static {v0, p1, v1, v2, v3}, Lmiui/maml/util/AppIconsHelper;->getIconDrawable(Landroid/content/Context;Landroid/content/pm/PackageItemInfo;Landroid/content/pm/PackageManager;J)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1, v1, v2, v3}, Lcom/miui/maml/util/AppIconsHelper;->getIconDrawable(Landroid/content/Context;Landroid/content/pm/PackageItemInfo;Landroid/content/pm/PackageManager;J)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 

@@ -7,21 +7,21 @@
 .method public static isActiveNetworkMetered(Landroid/net/ConnectivityManager;)Z
     .locals 2
 
-    .line 99
+    .line 100
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_0
 
-    .line 100
+    .line 101
     invoke-virtual {p0}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
 
     move-result p0
 
     return p0
 
-    .line 102
+    .line 103
     :cond_0
     invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
@@ -33,7 +33,7 @@
 
     return v0
 
-    .line 108
+    .line 109
     :cond_1
     invoke-virtual {p0}, Landroid/net/NetworkInfo;->getType()I
 

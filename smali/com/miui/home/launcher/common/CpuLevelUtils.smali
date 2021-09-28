@@ -121,12 +121,10 @@
     const-string v2, "DeviceUtils"
 
     const-string v3, "getChipSetFromCpuInfo failed"
-
-    .line 36
-    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 36
     if-eqz v1, :cond_2
 
     .line 39

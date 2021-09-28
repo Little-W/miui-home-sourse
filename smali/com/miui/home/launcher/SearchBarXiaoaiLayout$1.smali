@@ -56,12 +56,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f08018a
+    const v1, 0x7f0801b1
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f080188
+    const v1, 0x7f0801af
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -118,8 +118,6 @@
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 98
     invoke-static {}, Lcom/miui/home/launcher/SearchBarStyleData;->getInstance()Lcom/miui/home/launcher/SearchBarStyleData;

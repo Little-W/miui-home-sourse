@@ -288,7 +288,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070086
+    const v2, 0x7f070088
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -338,7 +338,7 @@
     :cond_0
     new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
-    const v2, 0x7f0600d2
+    const v2, 0x7f0600d4
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getColor(I)I
 
@@ -533,7 +533,7 @@
     :cond_1
     if-eqz p1, :cond_2
 
-    const v1, 0x7f0a0181
+    const v1, 0x7f0a0183
 
     .line 52
     invoke-virtual {p1, v1}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

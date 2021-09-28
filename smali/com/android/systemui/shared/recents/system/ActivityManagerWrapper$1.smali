@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;Ljava/lang/String;)V
     .locals 0
 
-    .line 122
+    .line 121
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$1;->this$0:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     iput-object p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$1;->val$reason:Ljava/lang/String;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 126
+    .line 125
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getService()Landroid/app/IActivityManager;
 
@@ -63,7 +63,7 @@
 
     const-string v2, "Failed to close system windows"
 
-    .line 128
+    .line 127
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

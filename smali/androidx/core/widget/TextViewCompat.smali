@@ -290,7 +290,7 @@
 
     return-object p0
 
-    .line 941
+    .line 942
     :cond_5
     sget-object p0, Landroid/text/TextDirectionHeuristics;->FIRSTSTRONG_LTR:Landroid/text/TextDirectionHeuristic;
 
@@ -398,7 +398,7 @@
     .line 994
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v1, 0x17
+    const/16 v1, 0x18
 
     if-lt v0, v1, :cond_0
 
@@ -432,7 +432,7 @@
     .line 1028
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v1, 0x17
+    const/16 v1, 0x18
 
     if-lt v0, v1, :cond_0
 

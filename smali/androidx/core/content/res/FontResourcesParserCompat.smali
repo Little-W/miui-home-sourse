@@ -497,10 +497,12 @@
 
     if-eqz v0, :cond_0
 
+    .line 288
     sget v0, Landroidx/core/R$styleable;->FontFamilyFont_fontWeight:I
 
     goto :goto_0
 
+    .line 289
     :cond_0
     sget v0, Landroidx/core/R$styleable;->FontFamilyFont_android_fontWeight:I
 
@@ -521,10 +523,12 @@
 
     if-eqz v0, :cond_1
 
+    .line 292
     sget v0, Landroidx/core/R$styleable;->FontFamilyFont_fontStyle:I
 
     goto :goto_1
 
+    .line 293
     :cond_1
     sget v0, Landroidx/core/R$styleable;->FontFamilyFont_android_fontStyle:I
 
@@ -557,28 +561,31 @@
 
     if-eqz v0, :cond_3
 
+    .line 296
     sget v0, Landroidx/core/R$styleable;->FontFamilyFont_ttcIndex:I
 
     goto :goto_3
 
+    .line 297
     :cond_3
     sget v0, Landroidx/core/R$styleable;->FontFamilyFont_android_ttcIndex:I
 
-    .line 298
+    .line 299
     :goto_3
     sget v2, Landroidx/core/R$styleable;->FontFamilyFont_fontVariationSettings:I
 
-    .line 299
     invoke-virtual {p1, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
+    .line 300
     sget v2, Landroidx/core/R$styleable;->FontFamilyFont_fontVariationSettings:I
 
     goto :goto_4
 
+    .line 301
     :cond_4
     sget v2, Landroidx/core/R$styleable;->FontFamilyFont_android_fontVariationSettings:I
 
@@ -602,10 +609,12 @@
 
     if-eqz v0, :cond_5
 
+    .line 305
     sget v0, Landroidx/core/R$styleable;->FontFamilyFont_font:I
 
     goto :goto_5
 
+    .line 306
     :cond_5
     sget v0, Landroidx/core/R$styleable;->FontFamilyFont_android_font:I
 

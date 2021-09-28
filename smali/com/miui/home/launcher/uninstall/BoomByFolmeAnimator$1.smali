@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;)V
     .locals 0
 
-    .line 137
+    .line 138
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$1;->this$0:Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -35,7 +35,7 @@
 
     const/4 v0, 0x1
 
-    .line 147
+    .line 148
     new-array v0, v0, [Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$1;->this$0:Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
@@ -58,7 +58,7 @@
 
     const-string v1, " cancel it"
 
-    .line 148
+    .line 149
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -73,10 +73,10 @@
 
     const-string v0, " onBegin"
 
-    .line 145
+    .line 146
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
+    .line 147
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$1;->this$0:Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
     invoke-static {p1}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;->access$100(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;)Lcom/miui/home/launcher/DragLayer;
@@ -91,14 +91,14 @@
 
     invoke-virtual {p1, v0, v1, v2}, Lcom/miui/home/launcher/DragLayer;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 150
+    .line 151
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$1;->this$0:Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
     iget-object p1, p1, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;->mDecelerateAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 151
+    .line 152
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$1;->this$0:Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
     invoke-static {p1}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;->access$100(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;)Lcom/miui/home/launcher/DragLayer;
@@ -117,10 +117,10 @@
 
     const-string v0, " onCancel"
 
-    .line 163
+    .line 164
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
+    .line 165
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$1;->this$0:Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
     const/4 v0, 0x0
@@ -129,7 +129,7 @@
 
     const/4 p1, 0x1
 
-    .line 165
+    .line 166
     new-array p1, p1, [Ljava/lang/String;
 
     iget-object v1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$1;->this$0:Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
@@ -152,10 +152,10 @@
 
     const-string v0, " onComplete"
 
-    .line 156
+    .line 157
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
+    .line 158
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$1;->this$0:Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
     const/4 v0, 0x0
@@ -164,7 +164,7 @@
 
     const/4 p1, 0x1
 
-    .line 158
+    .line 159
     new-array p1, p1, [Ljava/lang/String;
 
     iget-object v1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$1;->this$0:Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
@@ -192,7 +192,7 @@
         }
     .end annotation
 
-    .line 140
+    .line 141
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$1;->this$0:Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
     iget-object p2, p1, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;->mDecelerateAnimator:Landroid/animation/ValueAnimator;

@@ -65,7 +65,7 @@
 
     move-result-object v0
 
-    const-string v1, "x"
+    const-string/jumbo v1, "x"
 
     .line 119
     invoke-interface {p1, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -78,7 +78,7 @@
 
     iput-object v1, p0, Lcom/miui/maml/shader/ShaderElement;->mXExp:Lcom/miui/maml/data/Expression;
 
-    const-string v1, "y"
+    const-string/jumbo v1, "y"
 
     .line 120
     invoke-interface {p1, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;

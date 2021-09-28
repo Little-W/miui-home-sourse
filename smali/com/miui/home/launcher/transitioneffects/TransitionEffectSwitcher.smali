@@ -96,41 +96,41 @@
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0804fa
+    const v2, 0x7f080527
 
     aput v2, v0, v1
 
     const/4 v1, 0x1
 
-    const v2, 0x7f0804fb
+    const v2, 0x7f080528
 
     .line 45
     aput v2, v0, v1
 
     const/4 v1, 0x2
 
-    const v2, 0x7f0804fd
+    const v2, 0x7f08052a
 
     .line 47
     aput v2, v0, v1
 
     const/4 v1, 0x3
 
-    const v2, 0x7f0804fe
+    const v2, 0x7f08052b
 
     .line 49
     aput v2, v0, v1
 
     const/4 v1, 0x4
 
-    const v2, 0x7f0804fc
+    const v2, 0x7f080529
 
     .line 51
     aput v2, v0, v1
 
     const/4 v1, 0x5
 
-    const v2, 0x7f0804ff
+    const v2, 0x7f08052c
 
     .line 53
     aput v2, v0, v1
@@ -144,14 +144,14 @@
 
     const/4 v1, 0x7
 
-    const v2, 0x7f080501
+    const v2, 0x7f08052e
 
     .line 56
     aput v2, v0, v1
 
     const/16 v1, 0x8
 
-    const v2, 0x7f080500
+    const v2, 0x7f08052d
 
     .line 58
     aput v2, v0, v1

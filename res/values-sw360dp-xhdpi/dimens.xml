@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="config_icon_height">61.0dip</dimen>
+    <dimen name="config_icon_height">58.0dip</dimen>
     <item type="dimen" name="config_icon_height_theme_version_0">@dimen/config_icon_height</item>
-    <dimen name="config_icon_width">61.0dip</dimen>
+    <dimen name="config_icon_width">58.0dip</dimen>
     <item type="dimen" name="config_icon_width_theme_version_0">@dimen/config_icon_width</item>
     <dimen name="editing_panel_height">122.0dip</dimen>
     <dimen name="folder_bottom_padding">128.0dip</dimen>

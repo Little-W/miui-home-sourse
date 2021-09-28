@@ -256,7 +256,7 @@
     .line 1619
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    const-string v1, "write"
+    const-string/jumbo v1, "write"
 
     const/4 v2, 0x2
 

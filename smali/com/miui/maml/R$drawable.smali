@@ -203,40 +203,132 @@
 
 .field public static final btn_radio_on_to_off_mtrl_animation:I = 0x7f0800c9
 
-.field public static final notification_action_background:I = 0x7f08048f
+.field public static final file_icon_3gpp:I = 0x7f0800f5
 
-.field public static final notification_bg:I = 0x7f080490
+.field public static final file_icon_aac:I = 0x7f0800f6
 
-.field public static final notification_bg_low:I = 0x7f080491
+.field public static final file_icon_amr:I = 0x7f0800f7
 
-.field public static final notification_bg_low_normal:I = 0x7f080492
+.field public static final file_icon_ape:I = 0x7f0800f8
 
-.field public static final notification_bg_low_pressed:I = 0x7f080493
+.field public static final file_icon_apk:I = 0x7f0800f9
 
-.field public static final notification_bg_normal:I = 0x7f080494
+.field public static final file_icon_audio:I = 0x7f0800fa
 
-.field public static final notification_bg_normal_pressed:I = 0x7f080495
+.field public static final file_icon_default:I = 0x7f0800fb
 
-.field public static final notification_icon_background:I = 0x7f080496
+.field public static final file_icon_doc:I = 0x7f0800fc
 
-.field public static final notification_template_icon_bg:I = 0x7f080497
+.field public static final file_icon_dps:I = 0x7f0800fd
 
-.field public static final notification_template_icon_low_bg:I = 0x7f080498
+.field public static final file_icon_dpt:I = 0x7f0800fe
 
-.field public static final notification_tile_bg:I = 0x7f080499
+.field public static final file_icon_et:I = 0x7f0800ff
 
-.field public static final notify_panel_notification_icon_bg:I = 0x7f08049b
+.field public static final file_icon_ett:I = 0x7f080100
 
-.field public static final tooltip_frame_dark:I = 0x7f0804f8
+.field public static final file_icon_flac:I = 0x7f080101
 
-.field public static final tooltip_frame_light:I = 0x7f0804f9
+.field public static final file_icon_html:I = 0x7f080102
+
+.field public static final file_icon_m4a:I = 0x7f080103
+
+.field public static final file_icon_mid:I = 0x7f080104
+
+.field public static final file_icon_mp3:I = 0x7f080105
+
+.field public static final file_icon_ogg:I = 0x7f080106
+
+.field public static final file_icon_pdf:I = 0x7f080107
+
+.field public static final file_icon_picture:I = 0x7f080108
+
+.field public static final file_icon_pps:I = 0x7f080109
+
+.field public static final file_icon_ppt:I = 0x7f08010a
+
+.field public static final file_icon_rar:I = 0x7f08010b
+
+.field public static final file_icon_theme:I = 0x7f08010c
+
+.field public static final file_icon_txt:I = 0x7f08010d
+
+.field public static final file_icon_vcf:I = 0x7f08010e
+
+.field public static final file_icon_video:I = 0x7f08010f
+
+.field public static final file_icon_wav:I = 0x7f080110
+
+.field public static final file_icon_wma:I = 0x7f080111
+
+.field public static final file_icon_wps:I = 0x7f080112
+
+.field public static final file_icon_wpt:I = 0x7f080113
+
+.field public static final file_icon_xls:I = 0x7f080114
+
+.field public static final file_icon_xml:I = 0x7f080115
+
+.field public static final file_icon_zip:I = 0x7f080116
+
+.field public static final ic_contact_photo_bg:I = 0x7f080187
+
+.field public static final ic_contact_photo_fg:I = 0x7f080188
+
+.field public static final ic_contact_photo_mask:I = 0x7f080189
+
+.field public static final miuix_appcompat_number_picker_bg:I = 0x7f0803fb
+
+.field public static final miuix_appcompat_number_picker_bg_dark:I = 0x7f0803fc
+
+.field public static final miuix_appcompat_number_picker_bg_normal:I = 0x7f0803fd
+
+.field public static final miuix_appcompat_number_picker_bg_normal_dark:I = 0x7f0803fe
+
+.field public static final notification_action_background:I = 0x7f0804bd
+
+.field public static final notification_bg:I = 0x7f0804be
+
+.field public static final notification_bg_low:I = 0x7f0804bf
+
+.field public static final notification_bg_low_normal:I = 0x7f0804c0
+
+.field public static final notification_bg_low_pressed:I = 0x7f0804c1
+
+.field public static final notification_bg_normal:I = 0x7f0804c2
+
+.field public static final notification_bg_normal_pressed:I = 0x7f0804c3
+
+.field public static final notification_icon_background:I = 0x7f0804c4
+
+.field public static final notification_template_icon_bg:I = 0x7f0804c5
+
+.field public static final notification_template_icon_low_bg:I = 0x7f0804c6
+
+.field public static final notification_tile_bg:I = 0x7f0804c7
+
+.field public static final notify_panel_notification_icon_bg:I = 0x7f0804c9
+
+.field public static final sliding_panel_visualization_bg:I = 0x7f08050d
+
+.field public static final sliding_panel_visualization_dot_bar:I = 0x7f08050e
+
+.field public static final sliding_panel_visualization_shadow_dot_bar:I = 0x7f08050f
+
+.field public static final tooltip_frame_dark:I = 0x7f080525
+
+.field public static final tooltip_frame_light:I = 0x7f080526
+
+.field public static final word_photo_bg_dark:I = 0x7f08053e
+
+.field public static final word_photo_bg_light:I = 0x7f08053f
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
-    .line 546
+    .line 631
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

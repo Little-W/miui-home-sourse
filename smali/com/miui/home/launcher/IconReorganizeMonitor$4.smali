@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/IconReorganizeMonitor;Landroid/content/Context;)V
     .locals 0
 
-    .line 214
+    .line 216
     iput-object p1, p0, Lcom/miui/home/launcher/IconReorganizeMonitor$4;->this$0:Lcom/miui/home/launcher/IconReorganizeMonitor;
 
     iput-object p2, p0, Lcom/miui/home/launcher/IconReorganizeMonitor$4;->val$context:Landroid/content/Context;
@@ -42,10 +42,10 @@
 .method public run()V
     .locals 3
 
-    .line 217
+    .line 219
     iget-object v0, p0, Lcom/miui/home/launcher/IconReorganizeMonitor$4;->val$context:Landroid/content/Context;
 
-    const v1, 0x7f100301
+    const v1, 0x7f100316
 
     const/4 v2, 0x0
 

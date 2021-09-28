@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ItemIcon;)V
     .locals 0
 
-    .line 185
+    .line 183
     iput-object p1, p0, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,19 +38,19 @@
 .method public run()V
     .locals 4
 
-    .line 188
+    .line 186
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
 
-    iget-object v0, v0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    iget-object v0, v0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
     if-eqz v0, :cond_1
 
-    .line 189
+    .line 187
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
 
-    iget-object v0, v0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    iget-object v0, v0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/IconMessage;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 190
+    .line 188
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
 
     invoke-static {v0}, Lcom/miui/home/launcher/ItemIcon;->access$000(Lcom/miui/home/launcher/ItemIcon;)Z
@@ -75,26 +75,26 @@
 
     if-eqz v0, :cond_0
 
+    .line 189
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
+
+    iget-object v0, v0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
+
+    invoke-virtual {v0, v3}, Lcom/miui/home/launcher/IconMessage;->setScaleX(F)V
+
+    .line 190
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
+
+    iget-object v0, v0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
+
+    invoke-virtual {v0, v3}, Lcom/miui/home/launcher/IconMessage;->setScaleY(F)V
+
     .line 191
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
 
-    iget-object v0, v0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    iget-object v0, v0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setScaleX(F)V
-
-    .line 192
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
-
-    iget-object v0, v0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setScaleY(F)V
-
-    .line 193
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
-
-    iget-object v0, v0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/IconMessage;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
@@ -114,24 +114,24 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 194
+    .line 192
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
 
-    iget-object v0, v0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    iget-object v0, v0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/IconMessage;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 196
+    .line 194
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon$1;->this$0:Lcom/miui/home/launcher/ItemIcon;
 
-    iget-object v0, v0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    iget-object v0, v0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/IconMessage;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
@@ -151,12 +151,12 @@
 
     invoke-direct {v1, p0}, Lcom/miui/home/launcher/ItemIcon$1$1;-><init>(Lcom/miui/home/launcher/ItemIcon$1;)V
 
-    .line 197
+    .line 195
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    .line 204
+    .line 202
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
     :cond_1

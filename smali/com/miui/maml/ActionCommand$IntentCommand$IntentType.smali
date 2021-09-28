@@ -38,7 +38,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .line 761
+    .line 775
     new-instance v0, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
     const-string v1, "Activity"
@@ -49,7 +49,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;->Activity:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
-    .line 762
+    .line 776
     new-instance v0, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
     const-string v1, "Broadcast"
@@ -60,7 +60,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;->Broadcast:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
-    .line 763
+    .line 777
     new-instance v0, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
     const-string v1, "Service"
@@ -71,7 +71,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;->Service:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
-    .line 764
+    .line 778
     new-instance v0, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
     const-string v1, "Var"
@@ -84,7 +84,7 @@
 
     const/4 v0, 0x4
 
-    .line 760
+    .line 774
     new-array v0, v0, [Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
     sget-object v1, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;->Activity:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
@@ -116,7 +116,7 @@
         }
     .end annotation
 
-    .line 760
+    .line 774
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -125,7 +125,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
     .locals 1
 
-    .line 760
+    .line 774
     const-class v0, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -140,7 +140,7 @@
 .method public static values()[Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
     .locals 1
 
-    .line 760
+    .line 774
     sget-object v0, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;->$VALUES:[Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
     invoke-virtual {v0}, [Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;->clone()Ljava/lang/Object;

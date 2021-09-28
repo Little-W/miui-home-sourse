@@ -424,7 +424,7 @@
 
     const-string p1, "UploaderEngine"
 
-    const-string v1, "成功发送数据到服务端"
+    const-string/jumbo v1, "成功发送数据到服务端"
 
     .line 163
     invoke-static {p1, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
@@ -543,7 +543,7 @@
 
     const-string v0, "UploaderEngine"
 
-    const-string v1, "即将读取数据库并上传数据"
+    const-string/jumbo v1, "即将读取数据库并上传数据"
 
     .line 54
     invoke-static {v0, v1}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V
@@ -569,7 +569,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "满足条件的记录为空\uff0c即将返回, priority="
+    const-string/jumbo v3, "满足条件的记录为空\uff0c即将返回, priority="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

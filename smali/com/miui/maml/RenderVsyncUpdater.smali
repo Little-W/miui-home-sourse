@@ -144,13 +144,17 @@
     return-wide v0
 .end method
 
-.method static synthetic access$202(Lcom/miui/maml/RenderVsyncUpdater;J)J
-    .locals 0
+.method static synthetic access$222(Lcom/miui/maml/RenderVsyncUpdater;J)J
+    .locals 2
 
     .line 17
-    iput-wide p1, p0, Lcom/miui/maml/RenderVsyncUpdater;->mVsyncLeft:J
+    iget-wide v0, p0, Lcom/miui/maml/RenderVsyncUpdater;->mVsyncLeft:J
 
-    return-wide p1
+    sub-long/2addr v0, p1
+
+    iput-wide v0, p0, Lcom/miui/maml/RenderVsyncUpdater;->mVsyncLeft:J
+
+    return-wide v0
 .end method
 
 .method static synthetic access$300(Lcom/miui/maml/RenderVsyncUpdater;)Landroid/os/Handler;

@@ -432,17 +432,6 @@
     return-object p0
 .end method
 
-.method public setFlags(J)Lmiuix/animation/IVisibleStyle;
-    .locals 1
-
-    .line 75
-    iget-object v0, p0, Lmiuix/animation/controller/FolmeVisible;->mState:Lmiuix/animation/controller/IFolmeStateStyle;
-
-    invoke-interface {v0, p1, p2}, Lmiuix/animation/controller/IFolmeStateStyle;->setFlags(J)Lmiuix/animation/IStateStyle;
-
-    return-object p0
-.end method
-
 .method public setHide()Lmiuix/animation/IVisibleStyle;
     .locals 2
 

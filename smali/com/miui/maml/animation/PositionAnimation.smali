@@ -24,9 +24,9 @@
 .method public constructor <init>(Lorg/w3c/dom/Element;Ljava/lang/String;Lcom/miui/maml/elements/ScreenElement;)V
     .locals 2
 
-    const-string v0, "x"
+    const-string/jumbo v0, "x"
 
-    const-string v1, "y"
+    const-string/jumbo v1, "y"
 
     .line 17
     filled-new-array {v0, v1}, [Ljava/lang/String;

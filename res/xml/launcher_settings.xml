@@ -17,6 +17,12 @@
         android:key="open_personal_assistant_pref"
         android:defaultValue="true" />
     <com.miui.home.settings.preference.ValuePreference
+        android:persistent="false"
+        android:title="@string/open_personal_assistant_settings"
+        android:key="open_personal_assistant_settings_pref"
+        android:defaultValue="true"
+        app:isPreferenceVisible="false" />
+    <com.miui.home.settings.preference.ValuePreference
         android:title="@string/home_switch_personal_assistant"
         android:key="switch_personal_assistant_pref" />
     <com.miui.home.settings.preference.CheckBoxPreference

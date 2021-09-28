@@ -37,20 +37,14 @@
 
 # virtual methods
 .method public onVsync(J)V
-    .locals 5
+    .locals 4
 
     .line 175
     iget-object v0, p0, Lcom/miui/maml/RenderVsyncUpdater$FrameDisplayEventReceiver;->this$0:Lcom/miui/maml/RenderVsyncUpdater;
 
-    invoke-static {v0}, Lcom/miui/maml/RenderVsyncUpdater;->access$200(Lcom/miui/maml/RenderVsyncUpdater;)J
+    const-wide/16 v1, 0x1
 
-    move-result-wide v1
-
-    const-wide/16 v3, 0x1
-
-    sub-long/2addr v1, v3
-
-    invoke-static {v0, v1, v2}, Lcom/miui/maml/RenderVsyncUpdater;->access$202(Lcom/miui/maml/RenderVsyncUpdater;J)J
+    invoke-static {v0, v1, v2}, Lcom/miui/maml/RenderVsyncUpdater;->access$222(Lcom/miui/maml/RenderVsyncUpdater;J)J
 
     .line 176
     iget-object v0, p0, Lcom/miui/maml/RenderVsyncUpdater$FrameDisplayEventReceiver;->this$0:Lcom/miui/maml/RenderVsyncUpdater;

@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static sAddFontWeightStyle:Ljava/lang/reflect/Method; = null
+.field private static sAddFontWeightStyle:Ljava/lang/reflect/Method;
 
-.field private static sCreateFromFamiliesWithDefault:Ljava/lang/reflect/Method; = null
+.field private static sCreateFromFamiliesWithDefault:Ljava/lang/reflect/Method;
 
-.field private static sFontFamily:Ljava/lang/Class; = null
+.field private static sFontFamily:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class<",
@@ -17,7 +17,7 @@
     .end annotation
 .end field
 
-.field private static sFontFamilyCtor:Ljava/lang/reflect/Constructor; = null
+.field private static sFontFamilyCtor:Ljava/lang/reflect/Constructor;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor<",
@@ -26,7 +26,7 @@
     .end annotation
 .end field
 
-.field private static sHasInitBeenCalled:Z = false
+.field private static sHasInitBeenCalled:Z
 
 
 # direct methods
@@ -500,7 +500,7 @@
 .end method
 
 .method public createFromFontInfo(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/provider/FontsContractCompat$FontInfo;I)Landroid/graphics/Typeface;
-    .locals 4
+    .locals 3
 
     .line 149
     array-length v0, p3
@@ -573,7 +573,7 @@
     move-result-object p1
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
-    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
 
     if-eqz p2, :cond_4
 
@@ -599,7 +599,7 @@
     invoke-direct {p3, p4}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_2
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_4
 
     .line 164
     :try_start_4
@@ -608,14 +608,14 @@
     move-result-object p1
     :try_end_4
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_0
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_4
 
     .line 165
     :try_start_5
     invoke-virtual {p3}, Ljava/io/FileInputStream;->close()V
     :try_end_5
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_2
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_4
 
     if-eqz p2, :cond_6
 
@@ -628,115 +628,55 @@
     :cond_6
     return-object p1
 
-    :catchall_0
-    move-exception p1
-
-    move-object p4, v1
-
-    goto :goto_1
-
     :catch_0
     move-exception p1
 
     .line 163
     :try_start_7
-    throw p1
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_1
-
-    :catchall_1
-    move-exception p4
-
-    move-object v3, p4
-
-    move-object p4, p1
-
-    move-object p1, v3
-
-    :goto_1
-    if-eqz p4, :cond_7
-
-    .line 165
-    :try_start_8
     invoke-virtual {p3}, Ljava/io/FileInputStream;->close()V
-    :try_end_8
-    .catch Ljava/lang/Throwable; {:try_start_8 .. :try_end_8} :catch_1
-    .catchall {:try_start_8 .. :try_end_8} :catchall_2
+    :try_end_7
+    .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_1
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_4
 
-    goto :goto_2
+    goto :goto_1
 
     :catch_1
     move-exception p3
 
-    :try_start_9
-    invoke-virtual {p4, p3}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    :try_start_8
+    invoke-virtual {p1, p3}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    goto :goto_2
-
-    :cond_7
-    invoke-virtual {p3}, Ljava/io/FileInputStream;->close()V
-
-    :goto_2
+    :goto_1
     throw p1
-    :try_end_9
-    .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_2
-    .catchall {:try_start_9 .. :try_end_9} :catchall_2
-
-    :catchall_2
-    move-exception p1
-
-    move-object p3, v1
-
-    goto :goto_3
+    :try_end_8
+    .catch Ljava/lang/Throwable; {:try_start_8 .. :try_end_8} :catch_2
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_4
 
     :catch_2
     move-exception p1
 
+    if-eqz p2, :cond_7
+
     .line 154
-    :try_start_a
-    throw p1
-    :try_end_a
-    .catchall {:try_start_a .. :try_end_a} :catchall_3
-
-    :catchall_3
-    move-exception p3
-
-    move-object v3, p3
-
-    move-object p3, p1
-
-    move-object p1, v3
-
-    :goto_3
-    if-eqz p2, :cond_9
-
-    if-eqz p3, :cond_8
-
-    .line 168
-    :try_start_b
+    :try_start_9
     invoke-virtual {p2}, Landroid/os/ParcelFileDescriptor;->close()V
-    :try_end_b
-    .catch Ljava/lang/Throwable; {:try_start_b .. :try_end_b} :catch_3
-    .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_4
+    :try_end_9
+    .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_3
+    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_4
 
-    goto :goto_4
+    goto :goto_2
 
     :catch_3
     move-exception p2
 
-    :try_start_c
-    invoke-virtual {p3, p2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    :try_start_a
+    invoke-virtual {p1, p2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
 
-    goto :goto_4
-
-    :cond_8
-    invoke-virtual {p2}, Landroid/os/ParcelFileDescriptor;->close()V
-
-    :cond_9
-    :goto_4
+    :cond_7
+    :goto_2
     throw p1
-    :try_end_c
-    .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_4
+    :try_end_a
+    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_4
 
     :catch_4
     return-object v1

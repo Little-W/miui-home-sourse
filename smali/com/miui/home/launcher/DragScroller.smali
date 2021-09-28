@@ -7,7 +7,7 @@
 .method public abstract getScrollZone()I
 .end method
 
-.method public abstract onEnterScrollArea(III)Z
+.method public abstract onEnterScrollArea(IIILandroid/view/MotionEvent;)Z
 .end method
 
 .method public abstract onExitScrollArea()Z

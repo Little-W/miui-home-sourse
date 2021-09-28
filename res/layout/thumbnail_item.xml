@@ -16,19 +16,23 @@
                 android:id="@id/background"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <com.miui.home.launcher.ThumbnailIcon
+            <LinearLayout
                 android:layout_gravity="center"
-                android:id="@id/icon"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="centerInside" />
-            <TextView
-                android:textColor="@color/thumbnail_item_content_text"
-                android:layout_gravity="center"
-                android:id="@id/content_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/WorkspaceIconTitle.Thumbnail" />
+                android:layout_height="wrap_content">
+                <com.miui.home.launcher.ThumbnailIcon
+                    android:layout_gravity="center"
+                    android:id="@id/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside" />
+                <TextView
+                    android:textColor="@color/thumbnail_item_content_text"
+                    android:id="@id/content_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/WorkspaceIconTitle.Thumbnail" />
+            </LinearLayout>
             <ImageView
                 android:layout_gravity="center"
                 android:id="@id/foreground"
@@ -37,6 +41,7 @@
         </FrameLayout>
         <TextView
             android:id="@id/title"
+            android:visibility="gone"
             android:layout_marginBottom="5.0dip"
             style="@style/WorkspaceIconTitle.Thumbnail" />
     </LinearLayout>

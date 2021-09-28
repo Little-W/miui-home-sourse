@@ -3,7 +3,7 @@
 .source "MamlUtils.java"
 
 # interfaces
-.implements Lmiui/maml/elements/ButtonScreenElement$ButtonActionListener;
+.implements Lcom/miui/maml/elements/ButtonScreenElement$ButtonActionListener;
 
 
 # annotations
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/launcher/views/MamlButtonActionListener;)V
     .locals 0
 
-    .line 346
+    .line 345
     iput-object p1, p0, Lcom/miui/launcher/utils/MamlUtils$2;->val$listener:Lcom/miui/launcher/views/MamlButtonActionListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onButtonDoubleClick(Ljava/lang/String;)Z
     .locals 1
 
-    .line 359
+    .line 358
     iget-object v0, p0, Lcom/miui/launcher/utils/MamlUtils$2;->val$listener:Lcom/miui/launcher/views/MamlButtonActionListener;
 
     invoke-interface {v0, p1}, Lcom/miui/launcher/views/MamlButtonActionListener;->onButtonDoubleClick(Ljava/lang/String;)Z
@@ -51,7 +51,7 @@
 .method public onButtonDown(Ljava/lang/String;)Z
     .locals 1
 
-    .line 354
+    .line 353
     iget-object v0, p0, Lcom/miui/launcher/utils/MamlUtils$2;->val$listener:Lcom/miui/launcher/views/MamlButtonActionListener;
 
     invoke-interface {v0, p1}, Lcom/miui/launcher/views/MamlButtonActionListener;->onButtonDown(Ljava/lang/String;)Z
@@ -64,7 +64,7 @@
 .method public onButtonLongClick(Ljava/lang/String;)Z
     .locals 1
 
-    .line 364
+    .line 363
     iget-object v0, p0, Lcom/miui/launcher/utils/MamlUtils$2;->val$listener:Lcom/miui/launcher/views/MamlButtonActionListener;
 
     invoke-interface {v0, p1}, Lcom/miui/launcher/views/MamlButtonActionListener;->onButtonLongClick(Ljava/lang/String;)Z
@@ -77,7 +77,7 @@
 .method public onButtonUp(Ljava/lang/String;)Z
     .locals 1
 
-    .line 349
+    .line 348
     iget-object v0, p0, Lcom/miui/launcher/utils/MamlUtils$2;->val$listener:Lcom/miui/launcher/views/MamlButtonActionListener;
 
     invoke-interface {v0, p1}, Lcom/miui/launcher/views/MamlButtonActionListener;->onButtonUp(Ljava/lang/String;)Z

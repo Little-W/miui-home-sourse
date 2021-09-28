@@ -25,7 +25,7 @@
 .method protected constructor <init>(Lmiuix/animation/ViewTarget;)V
     .locals 0
 
-    .line 220
+    .line 221
     iput-object p1, p0, Lmiuix/animation/ViewTarget$LifecycleCallbacks;->this$0:Lmiuix/animation/ViewTarget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
 .method public onActivityDestroyed(Landroid/app/Activity;)V
     .locals 0
 
-    .line 254
+    .line 255
     iget-object p1, p0, Lmiuix/animation/ViewTarget$LifecycleCallbacks;->this$0:Lmiuix/animation/ViewTarget;
 
     invoke-static {p1}, Lmiuix/animation/ViewTarget;->access$200(Lmiuix/animation/ViewTarget;)V

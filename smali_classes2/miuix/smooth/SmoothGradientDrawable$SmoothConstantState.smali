@@ -30,15 +30,15 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 249
+    .line 268
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 246
+    .line 265
     iput v0, p0, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mStrokeWidth:I
 
-    .line 247
+    .line 266
     iput v0, p0, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mStrokeColor:I
 
     return-void
@@ -47,38 +47,38 @@
 .method public constructor <init>(Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;)V
     .locals 1
 
-    .line 253
+    .line 272
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 246
+    .line 265
     iput v0, p0, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mStrokeWidth:I
 
-    .line 247
+    .line 266
     iput v0, p0, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mStrokeColor:I
 
-    .line 254
+    .line 273
     iget v0, p1, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mRadius:F
 
     iput v0, p0, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mRadius:F
 
-    .line 255
+    .line 274
     iget-object v0, p1, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mRadii:[F
 
     iput-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mRadii:[F
 
-    .line 256
+    .line 275
     iget v0, p1, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mStrokeWidth:I
 
     iput v0, p0, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mStrokeWidth:I
 
-    .line 257
+    .line 276
     iget v0, p1, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mStrokeColor:I
 
     iput v0, p0, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mStrokeColor:I
 
-    .line 258
+    .line 277
     iget-object p1, p1, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     iput-object p1, p0, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
@@ -99,7 +99,7 @@
 .method public getChangingConfigurations()I
     .locals 1
 
-    .line 286
+    .line 305
     iget-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->getChangingConfigurations()I
@@ -112,7 +112,7 @@
 .method public newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 268
+    .line 287
     iget-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     const/4 v1, 0x0
@@ -121,7 +121,7 @@
 
     return-object v1
 
-    .line 271
+    .line 290
     :cond_0
     new-instance v0, Lmiuix/smooth/SmoothGradientDrawable;
 
@@ -133,7 +133,7 @@
 .method public newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
     .locals 3
 
-    .line 276
+    .line 295
     iget-object v0, p0, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     const/4 v1, 0x0
@@ -142,13 +142,13 @@
 
     return-object v1
 
-    .line 279
+    .line 298
     :cond_0
     new-instance v0, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;
 
     invoke-direct {v0, p0}, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;-><init>(Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;)V
 
-    .line 281
+    .line 300
     new-instance v2, Lmiuix/smooth/SmoothGradientDrawable;
 
     invoke-direct {v2, v0, p1, v1}, Lmiuix/smooth/SmoothGradientDrawable;-><init>(Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;Landroid/content/res/Resources;Lmiuix/smooth/SmoothGradientDrawable$1;)V
@@ -159,7 +159,7 @@
 .method public setConstantState(Landroid/graphics/drawable/Drawable$ConstantState;)V
     .locals 0
 
-    .line 262
+    .line 281
     iput-object p1, p0, Lmiuix/smooth/SmoothGradientDrawable$SmoothConstantState;->mParent:Landroid/graphics/drawable/Drawable$ConstantState;
 
     return-void

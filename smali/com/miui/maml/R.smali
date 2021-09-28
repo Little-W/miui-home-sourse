@@ -9,6 +9,8 @@
         Lcom/miui/maml/R$styleable;,
         Lcom/miui/maml/R$style;,
         Lcom/miui/maml/R$string;,
+        Lcom/miui/maml/R$raw;,
+        Lcom/miui/maml/R$plurals;,
         Lcom/miui/maml/R$layout;,
         Lcom/miui/maml/R$interpolator;,
         Lcom/miui/maml/R$integer;,
@@ -18,6 +20,7 @@
         Lcom/miui/maml/R$color;,
         Lcom/miui/maml/R$bool;,
         Lcom/miui/maml/R$attr;,
+        Lcom/miui/maml/R$array;,
         Lcom/miui/maml/R$anim;
     }
 .end annotation

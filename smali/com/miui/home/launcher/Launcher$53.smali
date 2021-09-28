@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->showSceneScreenLoading()V
+    value = Lcom/miui/home/launcher/Launcher;->hideSceneScreen(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,13 +17,17 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
+.field final synthetic val$sceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
     .locals 0
 
-    .line 5048
+    .line 5311
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$53;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$53;->val$sceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -33,16 +37,26 @@
 
 # virtual methods
 .method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
+    .locals 1
 
-    .line 5050
+    .line 5313
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$53;->val$sceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->onHideAnimationEnd()V
+
+    .line 5314
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$53;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherModel;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$7102(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherModel;->loadFreeStyle()V
+    .line 5315
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$53;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$53;->val$sceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
+
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$7500(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
 
     return-void
 .end method

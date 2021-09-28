@@ -33,7 +33,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;Lcom/android/systemui/shared/recents/model/Task$TaskKey;Landroid/app/ActivityOptions;Ljava/util/function/Consumer;Landroid/os/Handler;)V
     .locals 0
 
-    .line 520
+    .line 506
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;->this$0:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     iput-object p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;->val$taskKey:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
@@ -54,7 +54,7 @@
 .method public run()V
     .locals 3
 
-    .line 523
+    .line 509
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;->this$0:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;->val$taskKey:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
@@ -67,12 +67,12 @@
 
     move-result v0
 
-    .line 524
+    .line 510
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;->val$resultCallback:Ljava/util/function/Consumer;
 
     if-eqz v1, :cond_0
 
-    .line 525
+    .line 511
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5;->val$resultCallbackHandler:Landroid/os/Handler;
 
     new-instance v2, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$5$1;

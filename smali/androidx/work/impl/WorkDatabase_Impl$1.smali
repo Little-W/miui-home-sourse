@@ -343,12 +343,12 @@
 
     invoke-direct {v1, v2}, Ljava/util/HashMap;-><init>(I)V
 
-    const-string v3, "work_spec_id"
+    const-string/jumbo v3, "work_spec_id"
 
     .line 126
     new-instance v11, Landroidx/room/util/TableInfo$Column;
 
-    const-string v5, "work_spec_id"
+    const-string/jumbo v5, "work_spec_id"
 
     const-string v6, "TEXT"
 
@@ -397,7 +397,7 @@
 
     const-string v7, "CASCADE"
 
-    const-string v4, "work_spec_id"
+    const-string/jumbo v4, "work_spec_id"
 
     filled-new-array {v4}, [Ljava/lang/String;
 
@@ -468,7 +468,7 @@
 
     const-string v6, "index_Dependency_work_spec_id"
 
-    const-string v7, "work_spec_id"
+    const-string/jumbo v7, "work_spec_id"
 
     filled-new-array {v7}, [Ljava/lang/String;
 
@@ -599,12 +599,12 @@
 
     invoke-virtual {v1, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v3, "worker_class_name"
+    const-string/jumbo v3, "worker_class_name"
 
     .line 144
     new-instance v4, Landroidx/room/util/TableInfo$Column;
 
-    const-string v10, "worker_class_name"
+    const-string/jumbo v10, "worker_class_name"
 
     const-string v11, "TEXT"
 
@@ -1064,12 +1064,12 @@
 
     invoke-virtual {v1, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v3, "work_spec_id"
+    const-string/jumbo v3, "work_spec_id"
 
     .line 179
     new-instance v4, Landroidx/room/util/TableInfo$Column;
 
-    const-string v10, "work_spec_id"
+    const-string/jumbo v10, "work_spec_id"
 
     const-string v11, "TEXT"
 
@@ -1097,7 +1097,7 @@
 
     const-string v12, "CASCADE"
 
-    const-string v6, "work_spec_id"
+    const-string/jumbo v6, "work_spec_id"
 
     filled-new-array {v6}, [Ljava/lang/String;
 
@@ -1133,7 +1133,7 @@
 
     const-string v7, "index_WorkTag_work_spec_id"
 
-    const-string v9, "work_spec_id"
+    const-string/jumbo v9, "work_spec_id"
 
     filled-new-array {v9}, [Ljava/lang/String;
 
@@ -1201,12 +1201,12 @@
 
     invoke-direct {v1, v2}, Ljava/util/HashMap;-><init>(I)V
 
-    const-string v3, "work_spec_id"
+    const-string/jumbo v3, "work_spec_id"
 
     .line 192
     new-instance v5, Landroidx/room/util/TableInfo$Column;
 
-    const-string v10, "work_spec_id"
+    const-string/jumbo v10, "work_spec_id"
 
     const-string v11, "TEXT"
 
@@ -1255,7 +1255,7 @@
 
     const-string v12, "CASCADE"
 
-    const-string v6, "work_spec_id"
+    const-string/jumbo v6, "work_spec_id"
 
     filled-new-array {v6}, [Ljava/lang/String;
 
@@ -1363,12 +1363,12 @@
 
     invoke-virtual {v1, v3, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v3, "work_spec_id"
+    const-string/jumbo v3, "work_spec_id"
 
     .line 206
     new-instance v5, Landroidx/room/util/TableInfo$Column;
 
-    const-string v10, "work_spec_id"
+    const-string/jumbo v10, "work_spec_id"
 
     const-string v11, "TEXT"
 
@@ -1394,7 +1394,7 @@
 
     const-string v12, "CASCADE"
 
-    const-string v6, "work_spec_id"
+    const-string/jumbo v6, "work_spec_id"
 
     filled-new-array {v6}, [Ljava/lang/String;
 
@@ -1430,7 +1430,7 @@
 
     const-string v7, "index_WorkName_work_spec_id"
 
-    const-string v9, "work_spec_id"
+    const-string/jumbo v9, "work_spec_id"
 
     filled-new-array {v9}, [Ljava/lang/String;
 
@@ -1498,12 +1498,12 @@
 
     invoke-direct {v1, v2}, Ljava/util/HashMap;-><init>(I)V
 
-    const-string v3, "work_spec_id"
+    const-string/jumbo v3, "work_spec_id"
 
     .line 219
     new-instance v5, Landroidx/room/util/TableInfo$Column;
 
-    const-string v10, "work_spec_id"
+    const-string/jumbo v10, "work_spec_id"
 
     const-string v11, "TEXT"
 
@@ -1552,7 +1552,7 @@
 
     const-string v12, "CASCADE"
 
-    const-string v6, "work_spec_id"
+    const-string/jumbo v6, "work_spec_id"
 
     filled-new-array {v6}, [Ljava/lang/String;
 

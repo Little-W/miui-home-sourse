@@ -3,6 +3,7 @@
     <dimen name="all_apps_list_padding_top">10.0dip</dimen>
     <dimen name="all_apps_tab_padding_top">10.0dip</dimen>
     <dimen name="drawer_color_item_height">56.0dip</dimen>
+    <dimen name="drawer_color_title_margin_top">8.0dip</dimen>
     <dimen name="edit_mode_workspace_thumbnail_view_height">116.0dip</dimen>
     <dimen name="edit_mode_workspace_thumbnail_view_width">78.0dip</dimen>
     <dimen name="folder_bottom_padding">102.0dip</dimen>

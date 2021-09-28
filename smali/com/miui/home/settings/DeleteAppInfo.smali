@@ -3,7 +3,17 @@
 .source "DeleteAppInfo.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/miui/home/settings/DeleteAppInfo$FromType;
+    }
+.end annotation
+
+
 # instance fields
+.field private fromType:Lcom/miui/home/settings/DeleteAppInfo$FromType;
+
 .field private iconResource:Ljava/lang/String;
 
 .field private packageName:Ljava/lang/String;
@@ -14,33 +24,45 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Lcom/miui/home/settings/DeleteAppInfo$FromType;)V
     .locals 0
 
-    .line 16
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
+    .line 18
     iput-object p1, p0, Lcom/miui/home/settings/DeleteAppInfo;->packageName:Ljava/lang/String;
 
-    .line 18
+    .line 19
     iput p2, p0, Lcom/miui/home/settings/DeleteAppInfo;->status:I
 
-    .line 19
+    .line 20
     iput-object p3, p0, Lcom/miui/home/settings/DeleteAppInfo;->title:Ljava/lang/String;
 
-    .line 20
+    .line 21
     iput-object p4, p0, Lcom/miui/home/settings/DeleteAppInfo;->iconResource:Ljava/lang/String;
+
+    .line 22
+    iput-object p5, p0, Lcom/miui/home/settings/DeleteAppInfo;->fromType:Lcom/miui/home/settings/DeleteAppInfo$FromType;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public getFromType()Lcom/miui/home/settings/DeleteAppInfo$FromType;
+    .locals 1
+
+    .line 58
+    iget-object v0, p0, Lcom/miui/home/settings/DeleteAppInfo;->fromType:Lcom/miui/home/settings/DeleteAppInfo$FromType;
+
+    return-object v0
+.end method
+
 .method public getIconResource()Ljava/lang/String;
     .locals 1
 
-    .line 48
+    .line 50
     iget-object v0, p0, Lcom/miui/home/settings/DeleteAppInfo;->iconResource:Ljava/lang/String;
 
     return-object v0
@@ -49,7 +71,7 @@
 .method public getPackageName()Ljava/lang/String;
     .locals 1
 
-    .line 24
+    .line 26
     iget-object v0, p0, Lcom/miui/home/settings/DeleteAppInfo;->packageName:Ljava/lang/String;
 
     return-object v0
@@ -58,7 +80,7 @@
 .method public getStatus()I
     .locals 1
 
-    .line 32
+    .line 34
     iget v0, p0, Lcom/miui/home/settings/DeleteAppInfo;->status:I
 
     return v0
@@ -67,7 +89,7 @@
 .method public getTitle()Ljava/lang/String;
     .locals 1
 
-    .line 40
+    .line 42
     iget-object v0, p0, Lcom/miui/home/settings/DeleteAppInfo;->title:Ljava/lang/String;
 
     return-object v0
@@ -76,7 +98,7 @@
 .method public setStatus(I)V
     .locals 0
 
-    .line 36
+    .line 38
     iput p1, p0, Lcom/miui/home/settings/DeleteAppInfo;->status:I
 
     return-void
@@ -85,7 +107,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 57
+    .line 67
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -458,20 +458,16 @@
     const-string p2, "startFreeformActivity success"
 
     .line 159
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     goto :goto_0
 
     :cond_1
     const-string p1, "Launcher_BaseDelegateAdapter"
 
     const-string p2, "startFreeformActivity fail : option==null"
-
-    .line 161
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 161
     goto :goto_0
 
     :catch_0
@@ -482,8 +478,6 @@
     const-string p3, "startFreeformActivity error"
 
     .line 164
-    invoke-static {p2, p3, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 .end method

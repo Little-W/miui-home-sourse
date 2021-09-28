@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsSmallWindowCrop;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 242
+    .line 244
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsSmallWindowCrop$1;->this$0:Lcom/miui/home/recents/views/RecentsSmallWindowCrop;
 
     iput-object p2, p0, Lcom/miui/home/recents/views/RecentsSmallWindowCrop$1;->val$completeRunnable:Ljava/lang/Runnable;
@@ -39,15 +39,15 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 245
+    .line 247
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsSmallWindowCrop$1;->val$completeRunnable:Ljava/lang/Runnable;
 
     if-eqz p1, :cond_0
 
-    .line 246
+    .line 248
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 248
+    .line 250
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsSmallWindowCrop$1;->this$0:Lcom/miui/home/recents/views/RecentsSmallWindowCrop;
 

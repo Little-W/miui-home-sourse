@@ -362,7 +362,7 @@
     .line 61
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
-    const v1, 0x7f0a01a8
+    const v1, 0x7f0a01ac
 
     invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentManager;->findFragmentById(I)Landroidx/fragment/app/Fragment;
 
@@ -375,7 +375,7 @@
     .line 62
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
-    const v1, 0x7f0a01b8
+    const v1, 0x7f0a01bc
 
     invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentManager;->findFragmentById(I)Landroidx/fragment/app/Fragment;
 

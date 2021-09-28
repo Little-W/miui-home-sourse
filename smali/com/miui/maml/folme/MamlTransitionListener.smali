@@ -145,7 +145,7 @@
 .end method
 
 .method public onUpdate(Ljava/lang/Object;Ljava/util/Collection;)V
-    .locals 4
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -190,7 +190,9 @@
 
     iget-object v2, p0, Lcom/miui/maml/folme/MamlTransitionListener;->mTarget:Lcom/miui/maml/elements/AnimatedScreenElement;
 
-    iget v3, p2, Lmiuix/animation/listener/UpdateInfo;->velocity:F
+    iget-wide v3, p2, Lmiuix/animation/listener/UpdateInfo;->velocity:D
+
+    double-to-float v3, v3
 
     invoke-interface {v1, v2, v3}, Lcom/miui/maml/folme/IAnimatedProperty;->setVelocityValue(Ljava/lang/Object;F)V
 

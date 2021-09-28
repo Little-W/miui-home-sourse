@@ -22,10 +22,10 @@
 .method protected constructor <init>(Lcom/miui/maml/data/ContentProviderBinder;)V
     .locals 0
 
-    .line 104
+    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
+    .line 106
     iput-object p1, p0, Lcom/miui/maml/data/ContentProviderBinder$Builder;->mBinder:Lcom/miui/maml/data/ContentProviderBinder;
 
     return-void
@@ -36,18 +36,18 @@
 .method public addVariable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILcom/miui/maml/data/Variables;)V
     .locals 1
 
-    .line 146
+    .line 147
     new-instance v0, Lcom/miui/maml/data/ContentProviderBinder$Variable;
 
     invoke-direct {v0, p1, p2, p5}, Lcom/miui/maml/data/ContentProviderBinder$Variable;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/miui/maml/data/Variables;)V
 
-    .line 147
+    .line 148
     iput-object p3, v0, Lcom/miui/maml/data/ContentProviderBinder$Variable;->mColumn:Ljava/lang/String;
 
-    .line 148
+    .line 149
     iput p4, v0, Lcom/miui/maml/data/ContentProviderBinder$Variable;->mRow:I
 
-    .line 149
+    .line 150
     iget-object p1, p0, Lcom/miui/maml/data/ContentProviderBinder$Builder;->mBinder:Lcom/miui/maml/data/ContentProviderBinder;
 
     invoke-virtual {p1, v0}, Lcom/miui/maml/data/ContentProviderBinder;->addVariable(Lcom/miui/maml/data/VariableBinder$Variable;)V
@@ -58,7 +58,7 @@
 .method public setArgs([Ljava/lang/String;)Lcom/miui/maml/data/ContentProviderBinder$Builder;
     .locals 1
 
-    .line 129
+    .line 130
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder$Builder;->mBinder:Lcom/miui/maml/data/ContentProviderBinder;
 
     iput-object p1, v0, Lcom/miui/maml/data/ContentProviderBinder;->mArgs:[Ljava/lang/String;
@@ -69,7 +69,7 @@
 .method public setColumns([Ljava/lang/String;)Lcom/miui/maml/data/ContentProviderBinder$Builder;
     .locals 1
 
-    .line 124
+    .line 125
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder$Builder;->mBinder:Lcom/miui/maml/data/ContentProviderBinder;
 
     iput-object p1, v0, Lcom/miui/maml/data/ContentProviderBinder;->mColumns:[Ljava/lang/String;
@@ -80,12 +80,12 @@
 .method public setCountName(Ljava/lang/String;)Lcom/miui/maml/data/ContentProviderBinder$Builder;
     .locals 1
 
-    .line 139
+    .line 140
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder$Builder;->mBinder:Lcom/miui/maml/data/ContentProviderBinder;
 
     iput-object p1, v0, Lcom/miui/maml/data/ContentProviderBinder;->mCountName:Ljava/lang/String;
 
-    .line 140
+    .line 141
     invoke-virtual {v0}, Lcom/miui/maml/data/ContentProviderBinder;->createCountVar()V
 
     return-object p0
@@ -94,7 +94,7 @@
 .method public setName(Ljava/lang/String;)Lcom/miui/maml/data/ContentProviderBinder$Builder;
     .locals 1
 
-    .line 109
+    .line 110
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder$Builder;->mBinder:Lcom/miui/maml/data/ContentProviderBinder;
 
     iput-object p1, v0, Lcom/miui/maml/data/ContentProviderBinder;->mName:Ljava/lang/String;
@@ -105,7 +105,7 @@
 .method public setOrder(Ljava/lang/String;)Lcom/miui/maml/data/ContentProviderBinder$Builder;
     .locals 1
 
-    .line 134
+    .line 135
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder$Builder;->mBinder:Lcom/miui/maml/data/ContentProviderBinder;
 
     iput-object p1, v0, Lcom/miui/maml/data/ContentProviderBinder;->mOrder:Ljava/lang/String;
@@ -116,7 +116,7 @@
 .method public setWhere(Ljava/lang/String;)Lcom/miui/maml/data/ContentProviderBinder$Builder;
     .locals 3
 
-    .line 114
+    .line 115
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder$Builder;->mBinder:Lcom/miui/maml/data/ContentProviderBinder;
 
     new-instance v1, Lcom/miui/maml/util/TextFormatter;
@@ -135,7 +135,7 @@
 .method public setWhere(Ljava/lang/String;Ljava/lang/String;)Lcom/miui/maml/data/ContentProviderBinder$Builder;
     .locals 3
 
-    .line 119
+    .line 120
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder$Builder;->mBinder:Lcom/miui/maml/data/ContentProviderBinder;
 
     new-instance v1, Lcom/miui/maml/util/TextFormatter;

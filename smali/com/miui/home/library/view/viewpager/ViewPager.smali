@@ -63,7 +63,7 @@
 
 .field private static final TAG:Ljava/lang/String; = "ViewPager"
 
-.field private static final USE_CACHE:Z = false
+.field private static final USE_CACHE:Z
 
 .field private static final sInterpolator:Landroid/view/animation/Interpolator;
 
@@ -3060,8 +3060,6 @@
     move-result-object v4
 
     .line 2810
-    invoke-static {v0, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     goto :goto_3
 
     :cond_4
@@ -8759,8 +8757,6 @@
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    invoke-static {v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     move p1, v0
 

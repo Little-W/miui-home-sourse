@@ -46,69 +46,10 @@
     return-void
 .end method
 
-.method public deferTransactionUntil(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Landroid/view/SurfaceControl;J)Lcom/android/systemui/shared/recents/system/TransactionCompat;
-    .locals 10
-
-    .line 99
-    const-class v0, Landroid/view/SurfaceControl$Transaction;
-
-    iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TransactionCompat;->mTransaction:Landroid/view/SurfaceControl$Transaction;
-
-    const-string v2, "deferTransactionUntil"
-
-    const-class v3, Landroid/view/SurfaceControl$Transaction;
-
-    const/4 v4, 0x3
-
-    new-array v5, v4, [Ljava/lang/Class;
-
-    const-class v6, Landroid/view/SurfaceControl;
-
-    const/4 v7, 0x0
-
-    aput-object v6, v5, v7
-
-    const-class v6, Landroid/view/SurfaceControl;
-
-    const/4 v8, 0x1
-
-    aput-object v6, v5, v8
-
-    sget-object v6, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    const/4 v9, 0x2
-
-    aput-object v6, v5, v9
-
-    new-array v6, v4, [Ljava/lang/Object;
-
-    iget-object p1, p1, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->mSurfaceControl:Landroid/view/SurfaceControl;
-
-    aput-object p1, v6, v7
-
-    aput-object p2, v6, v8
-
-    .line 101
-    invoke-static {p3, p4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    aput-object p1, v6, v9
-
-    move-object v4, v5
-
-    move-object v5, v6
-
-    .line 99
-    invoke-static/range {v0 .. v5}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p0
-.end method
-
 .method public deferTransactionUntilSurface(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Landroid/view/Surface;J)Lcom/android/systemui/shared/recents/system/TransactionCompat;
     .locals 1
 
-    .line 107
+    .line 99
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TransactionCompat;->mTransaction:Landroid/view/SurfaceControl$Transaction;
 
     iget-object p1, p1, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->mSurfaceControl:Landroid/view/SurfaceControl;
@@ -136,14 +77,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 132
+    .line 124
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->isValid()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 133
+    .line 125
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TransactionCompat;->mTransaction:Landroid/view/SurfaceControl$Transaction;
 
     iget-object p1, p1, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->mSurfaceControl:Landroid/view/SurfaceControl;
@@ -159,7 +100,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 139
+    .line 131
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->isValid()Z
 
     move-result v0
@@ -174,7 +115,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 140
+    .line 132
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TransactionCompat;->mTransaction:Landroid/view/SurfaceControl$Transaction;
 
     iget-object p1, p1, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->mSurfaceControl:Landroid/view/SurfaceControl;
@@ -203,7 +144,7 @@
 .method public setColor(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;[F)Lcom/android/systemui/shared/recents/system/TransactionCompat;
     .locals 1
 
-    .line 120
+    .line 112
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TransactionCompat;->mTransaction:Landroid/view/SurfaceControl$Transaction;
 
     iget-object p1, p1, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->mSurfaceControl:Landroid/view/SurfaceControl;
@@ -229,14 +170,14 @@
 .method public setEarlyWakeup()Lcom/android/systemui/shared/recents/system/TransactionCompat;
     .locals 1
 
-    .line 113
+    .line 105
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidS()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 114
+    .line 106
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TransactionCompat;->mTransaction:Landroid/view/SurfaceControl$Transaction;
 
     invoke-virtual {v0}, Landroid/view/SurfaceControl$Transaction;->setEarlyWakeup()Landroid/view/SurfaceControl$Transaction;
@@ -312,14 +253,14 @@
 
     if-eqz p2, :cond_0
 
-    .line 125
+    .line 117
     invoke-virtual {p2}, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->isValid()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 126
+    .line 118
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TransactionCompat;->mTransaction:Landroid/view/SurfaceControl$Transaction;
 
     iget-object p1, p1, Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;->mSurfaceControl:Landroid/view/SurfaceControl;

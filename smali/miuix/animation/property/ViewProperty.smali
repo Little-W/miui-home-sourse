@@ -132,7 +132,7 @@
     .line 159
     new-instance v0, Lmiuix/animation/property/ViewProperty$9;
 
-    const-string v1, "x"
+    const-string/jumbo v1, "x"
 
     invoke-direct {v0, v1}, Lmiuix/animation/property/ViewProperty$9;-><init>(Ljava/lang/String;)V
 
@@ -141,7 +141,7 @@
     .line 174
     new-instance v0, Lmiuix/animation/property/ViewProperty$10;
 
-    const-string v1, "y"
+    const-string/jumbo v1, "y"
 
     invoke-direct {v0, v1}, Lmiuix/animation/property/ViewProperty$10;-><init>(Ljava/lang/String;)V
 
@@ -150,7 +150,7 @@
     .line 189
     new-instance v0, Lmiuix/animation/property/ViewProperty$11;
 
-    const-string v1, "z"
+    const-string/jumbo v1, "z"
 
     invoke-direct {v0, v1}, Lmiuix/animation/property/ViewProperty$11;-><init>(Ljava/lang/String;)V
 

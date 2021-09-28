@@ -209,7 +209,7 @@
 
     if-ne v0, v1, :cond_4
 
-    const-string v0, "} "
+    const-string/jumbo v0, "} "
 
     .line 109
     invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I

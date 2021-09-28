@@ -26,13 +26,13 @@
 
 .field private static final fields:[I
 
-.field private static sCalendar:Lmiui/date/Calendar;
+.field private static sCalendar:Lmiuix/pickerwidget/date/Calendar;
 
 
 # instance fields
 .field private mAmPm:Lcom/miui/maml/data/IndexedVariable;
 
-.field protected mCalendar:Lmiui/date/Calendar;
+.field protected mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
 .field private mCurrentTime:J
 
@@ -95,7 +95,7 @@
 
     const/4 v0, 0x5
 
-    .line 22
+    .line 24
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
@@ -119,7 +119,7 @@
 .method public constructor <init>(Lcom/miui/maml/data/VariableUpdaterManager;)V
     .locals 1
 
-    .line 82
+    .line 84
     sget-object v0, Lcom/miui/maml/data/DateTimeVariableUpdater$Accuracy;->Minute:Lcom/miui/maml/data/DateTimeVariableUpdater$Accuracy;
 
     invoke-direct {p0, p1, v0}, Lcom/miui/maml/data/DateTimeVariableUpdater;-><init>(Lcom/miui/maml/data/VariableUpdaterManager;Lcom/miui/maml/data/DateTimeVariableUpdater$Accuracy;)V
@@ -130,31 +130,31 @@
 .method public constructor <init>(Lcom/miui/maml/data/VariableUpdaterManager;Lcom/miui/maml/data/DateTimeVariableUpdater$Accuracy;)V
     .locals 1
 
-    .line 103
+    .line 105
     sget-object v0, Lcom/miui/maml/NotifierManager;->TYPE_TIME_CHANGED:Ljava/lang/String;
 
     invoke-direct {p0, p1, v0}, Lcom/miui/maml/data/NotifierVariableUpdater;-><init>(Lcom/miui/maml/data/VariableUpdaterManager;Ljava/lang/String;)V
 
-    .line 53
-    new-instance p1, Lmiui/date/Calendar;
+    .line 55
+    new-instance p1, Lmiuix/pickerwidget/date/Calendar;
 
-    invoke-direct {p1}, Lmiui/date/Calendar;-><init>()V
+    invoke-direct {p1}, Lmiuix/pickerwidget/date/Calendar;-><init>()V
 
-    iput-object p1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    iput-object p1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
     const/4 p1, -0x1
 
-    .line 59
+    .line 61
     iput p1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeFormat:I
 
-    .line 69
+    .line 71
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mLock:Ljava/lang/Object;
 
-    .line 104
+    .line 106
     invoke-direct {p0, p2}, Lcom/miui/maml/data/DateTimeVariableUpdater;->initInner(Lcom/miui/maml/data/DateTimeVariableUpdater$Accuracy;)V
 
     return-void
@@ -163,38 +163,38 @@
 .method public constructor <init>(Lcom/miui/maml/data/VariableUpdaterManager;Ljava/lang/String;)V
     .locals 5
 
-    .line 86
+    .line 88
     sget-object v0, Lcom/miui/maml/NotifierManager;->TYPE_TIME_CHANGED:Ljava/lang/String;
 
     invoke-direct {p0, p1, v0}, Lcom/miui/maml/data/NotifierVariableUpdater;-><init>(Lcom/miui/maml/data/VariableUpdaterManager;Ljava/lang/String;)V
 
-    .line 53
-    new-instance p1, Lmiui/date/Calendar;
+    .line 55
+    new-instance p1, Lmiuix/pickerwidget/date/Calendar;
 
-    invoke-direct {p1}, Lmiui/date/Calendar;-><init>()V
+    invoke-direct {p1}, Lmiuix/pickerwidget/date/Calendar;-><init>()V
 
-    iput-object p1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    iput-object p1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
     const/4 p1, -0x1
 
-    .line 59
+    .line 61
     iput p1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeFormat:I
 
-    .line 69
+    .line 71
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mLock:Ljava/lang/Object;
 
-    .line 87
+    .line 89
     new-instance p1, Lcom/miui/maml/data/TimeUpdater;
 
     invoke-direct {p1, p0}, Lcom/miui/maml/data/TimeUpdater;-><init>(Lcom/miui/maml/data/DateTimeVariableUpdater;)V
 
     iput-object p1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeUpdater:Ljava/lang/Runnable;
 
-    .line 89
+    .line 91
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p1
@@ -203,7 +203,7 @@
 
     if-nez p1, :cond_1
 
-    .line 90
+    .line 92
     invoke-static {}, Lcom/miui/maml/data/DateTimeVariableUpdater$Accuracy;->values()[Lcom/miui/maml/data/DateTimeVariableUpdater$Accuracy;
 
     move-result-object p1
@@ -217,7 +217,7 @@
 
     aget-object v3, p1, v2
 
-    .line 91
+    .line 93
     invoke-virtual {v3}, Lcom/miui/maml/data/DateTimeVariableUpdater$Accuracy;->name()Ljava/lang/String;
 
     move-result-object v4
@@ -238,12 +238,12 @@
     :cond_1
     if-nez v0, :cond_2
 
-    .line 96
+    .line 98
     sget-object v0, Lcom/miui/maml/data/DateTimeVariableUpdater$Accuracy;->Minute:Lcom/miui/maml/data/DateTimeVariableUpdater$Accuracy;
 
     const-string p1, "DateTimeVariableUpdater"
 
-    .line 97
+    .line 99
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -260,7 +260,7 @@
 
     invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
+    .line 101
     :cond_2
     invoke-direct {p0, v0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->initInner(Lcom/miui/maml/data/DateTimeVariableUpdater$Accuracy;)V
 
@@ -270,28 +270,32 @@
 .method public static formatDate(Ljava/lang/CharSequence;J)Ljava/lang/String;
     .locals 1
 
-    .line 205
-    sget-object v0, Lcom/miui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiui/date/Calendar;
+    .line 207
+    sget-object v0, Lcom/miui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiuix/pickerwidget/date/Calendar;
 
     if-nez v0, :cond_0
 
-    .line 206
-    new-instance v0, Lmiui/date/Calendar;
-
-    invoke-direct {v0}, Lmiui/date/Calendar;-><init>()V
-
-    sput-object v0, Lcom/miui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiui/date/Calendar;
-
     .line 208
+    new-instance v0, Lmiuix/pickerwidget/date/Calendar;
+
+    invoke-direct {v0}, Lmiuix/pickerwidget/date/Calendar;-><init>()V
+
+    sput-object v0, Lcom/miui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiuix/pickerwidget/date/Calendar;
+
+    .line 210
     :cond_0
-    sget-object v0, Lcom/miui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiui/date/Calendar;
+    sget-object v0, Lcom/miui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiuix/pickerwidget/date/Calendar;
 
-    invoke-virtual {v0, p1, p2}, Lmiui/date/Calendar;->setTimeInMillis(J)Lmiui/date/Calendar;
+    invoke-virtual {v0, p1, p2}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
 
-    .line 209
-    sget-object p1, Lcom/miui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiui/date/Calendar;
+    .line 211
+    sget-object p1, Lcom/miui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiuix/pickerwidget/date/Calendar;
 
-    invoke-virtual {p1, p0}, Lmiui/date/Calendar;->format(Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-static {}, Lcom/miui/maml/util/Utils;->getAppContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2, p0}, Lmiuix/pickerwidget/date/Calendar;->format(Landroid/content/Context;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -303,7 +307,7 @@
 
     const-string v0, "DateTimeVariableUpdater"
 
-    .line 108
+    .line 110
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -324,7 +328,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
+    .line 111
     sget-object v0, Lcom/miui/maml/data/DateTimeVariableUpdater$1;->$SwitchMap$com$miui$maml$data$DateTimeVariableUpdater$Accuracy:[I
 
     invoke-virtual {p1}, Lcom/miui/maml/data/DateTimeVariableUpdater$Accuracy;->ordinal()I
@@ -339,10 +343,10 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 127
+    .line 129
     iput-wide v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeAccuracy:J
 
-    .line 128
+    .line 130
     iput v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeAccuracyField:I
 
     goto :goto_0
@@ -350,21 +354,21 @@
     :pswitch_0
     const-wide/16 v0, 0x3e8
 
-    .line 123
+    .line 125
     iput-wide v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeAccuracy:J
 
     const/16 p1, 0x15
 
-    .line 124
+    .line 126
     iput p1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeAccuracyField:I
 
     goto :goto_0
 
-    .line 119
+    .line 121
     :pswitch_1
     iput-wide v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeAccuracy:J
 
-    .line 120
+    .line 122
     iput v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeAccuracyField:I
 
     goto :goto_0
@@ -372,12 +376,12 @@
     :pswitch_2
     const-wide/32 v0, 0x36ee80
 
-    .line 115
+    .line 117
     iput-wide v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeAccuracy:J
 
     const/16 p1, 0x12
 
-    .line 116
+    .line 118
     iput p1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeAccuracyField:I
 
     goto :goto_0
@@ -385,15 +389,15 @@
     :pswitch_3
     const-wide/32 v0, 0x5265c00
 
-    .line 111
+    .line 113
     iput-wide v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeAccuracy:J
 
     const/16 p1, 0x9
 
-    .line 112
+    .line 114
     iput p1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeAccuracyField:I
 
-    .line 132
+    .line 134
     :goto_0
     invoke-virtual {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->getContext()Lcom/miui/maml/ScreenContext;
 
@@ -401,10 +405,10 @@
 
     iget-object p1, p1, Lcom/miui/maml/ScreenContext;->mVariables:Lcom/miui/maml/data/Variables;
 
-    .line 133
+    .line 135
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
-    const-string v1, "year"
+    const-string/jumbo v1, "year"
 
     const/4 v2, 0x1
 
@@ -412,7 +416,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mYear:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 134
+    .line 136
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "month"
@@ -421,7 +425,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mMonth:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 135
+    .line 137
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "month1"
@@ -430,7 +434,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mMonth1:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 136
+    .line 138
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "date"
@@ -439,25 +443,25 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mDate:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 138
+    .line 140
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
-    const-string v1, "year_lunar"
+    const-string/jumbo v1, "year_lunar"
 
     invoke-direct {v0, v1, p1, v2}, Lcom/miui/maml/data/IndexedVariable;-><init>(Ljava/lang/String;Lcom/miui/maml/data/Variables;Z)V
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mYearLunar:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 139
+    .line 141
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
-    const-string v1, "year_lunar1864"
+    const-string/jumbo v1, "year_lunar1864"
 
     invoke-direct {v0, v1, p1, v2}, Lcom/miui/maml/data/IndexedVariable;-><init>(Ljava/lang/String;Lcom/miui/maml/data/Variables;Z)V
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mYearLunar1864:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 140
+    .line 142
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "month_lunar"
@@ -466,7 +470,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mMonthLunar:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 141
+    .line 143
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "month_lunar_leap"
@@ -475,7 +479,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mMonthLunarLeap:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 142
+    .line 144
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "date_lunar"
@@ -484,7 +488,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mDateLunar:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 144
+    .line 146
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "day_of_week"
@@ -493,7 +497,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mDayOfWeek:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 145
+    .line 147
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "ampm"
@@ -502,7 +506,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mAmPm:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 146
+    .line 148
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "hour12"
@@ -511,7 +515,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mHour12:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 147
+    .line 149
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "hour24"
@@ -520,7 +524,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mHour24:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 148
+    .line 150
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "minute"
@@ -529,7 +533,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mMinute:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 149
+    .line 151
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "second"
@@ -538,7 +542,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mSecond:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 150
+    .line 152
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "time"
@@ -547,7 +551,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTime:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 151
+    .line 153
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "time_sys"
@@ -556,7 +560,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeSys:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 152
+    .line 154
     iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeSys:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -567,7 +571,7 @@
 
     invoke-virtual {v0, v3, v4}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 153
+    .line 155
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "next_alarm_time"
@@ -578,7 +582,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mNextAlarm:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 155
+    .line 157
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v1, "time_format"
@@ -588,6 +592,8 @@
     iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeFormatVar:Lcom/miui/maml/data/IndexedVariable;
 
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1
@@ -601,7 +607,7 @@
 .method private refreshAlarm()V
     .locals 2
 
-    .line 213
+    .line 215
     invoke-virtual {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v0
@@ -618,7 +624,7 @@
 
     move-result-object v0
 
-    .line 215
+    .line 217
     iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mNextAlarm:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v1, v0}, Lcom/miui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
@@ -629,12 +635,12 @@
 .method private updateTime()V
     .locals 11
 
-    .line 252
+    .line 254
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 253
+    .line 255
     iget-object v2, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeSys:Lcom/miui/maml/data/IndexedVariable;
 
     long-to-double v3, v0
@@ -643,56 +649,56 @@
 
     const-wide/16 v2, 0x3e8
 
-    .line 255
+    .line 257
     div-long v2, v0, v2
 
-    .line 256
+    .line 258
     iget-wide v4, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mLastUpdatedTime:J
 
     cmp-long v4, v2, v4
 
     if-eqz v4, :cond_1
 
-    .line 257
-    iget-object v4, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
-
-    invoke-virtual {v4, v0, v1}, Lmiui/date/Calendar;->setTimeInMillis(J)Lmiui/date/Calendar;
-
     .line 259
-    iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    iget-object v4, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
+
+    invoke-virtual {v4, v0, v1}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
+
+    .line 261
+    iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lmiui/date/Calendar;->get(I)I
+    invoke-virtual {v0, v1}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v0
 
-    .line 260
-    iget-object v4, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    .line 262
+    iget-object v4, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
     const/4 v5, 0x5
 
-    invoke-virtual {v4, v5}, Lmiui/date/Calendar;->get(I)I
+    invoke-virtual {v4, v5}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v4
 
-    .line 261
-    iget-object v5, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    .line 263
+    iget-object v5, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
     const/16 v6, 0x9
 
-    invoke-virtual {v5, v6}, Lmiui/date/Calendar;->get(I)I
+    invoke-virtual {v5, v6}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v5
 
-    .line 262
+    .line 264
     iget-object v6, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mAmPm:Lcom/miui/maml/data/IndexedVariable;
 
-    iget-object v7, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    iget-object v7, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
     const/16 v8, 0x11
 
-    invoke-virtual {v7, v8}, Lmiui/date/Calendar;->get(I)I
+    invoke-virtual {v7, v8}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v7
 
@@ -700,14 +706,14 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 263
+    .line 265
     iget-object v6, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mHour24:Lcom/miui/maml/data/IndexedVariable;
 
-    iget-object v7, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    iget-object v7, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
     const/16 v8, 0x12
 
-    invoke-virtual {v7, v8}, Lmiui/date/Calendar;->get(I)I
+    invoke-virtual {v7, v8}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v7
 
@@ -715,16 +721,16 @@
 
     invoke-virtual {v6, v9, v10}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 264
-    iget-object v6, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    .line 266
+    iget-object v6, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
-    invoke-virtual {v6, v8}, Lmiui/date/Calendar;->get(I)I
+    invoke-virtual {v6, v8}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v6
 
     rem-int/lit8 v6, v6, 0xc
 
-    .line 265
+    .line 267
     iget-object v7, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mHour12:Lcom/miui/maml/data/IndexedVariable;
 
     if-nez v6, :cond_0
@@ -739,14 +745,14 @@
     :goto_0
     invoke-virtual {v7, v8, v9}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 266
+    .line 268
     iget-object v6, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mMinute:Lcom/miui/maml/data/IndexedVariable;
 
-    iget-object v7, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    iget-object v7, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
     const/16 v8, 0x14
 
-    invoke-virtual {v7, v8}, Lmiui/date/Calendar;->get(I)I
+    invoke-virtual {v7, v8}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v7
 
@@ -754,21 +760,21 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 267
+    .line 269
     iget-object v6, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mYear:Lcom/miui/maml/data/IndexedVariable;
 
     int-to-double v7, v0
 
     invoke-virtual {v6, v7, v8}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 268
+    .line 270
     iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mMonth:Lcom/miui/maml/data/IndexedVariable;
 
     int-to-double v6, v4
 
     invoke-virtual {v0, v6, v7}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 269
+    .line 271
     iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mMonth1:Lcom/miui/maml/data/IndexedVariable;
 
     add-int/2addr v4, v1
@@ -777,36 +783,21 @@
 
     invoke-virtual {v0, v6, v7}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 270
+    .line 272
     iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mDate:Lcom/miui/maml/data/IndexedVariable;
 
     int-to-double v4, v5
 
     invoke-virtual {v0, v4, v5}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 272
+    .line 274
     iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mDayOfWeek:Lcom/miui/maml/data/IndexedVariable;
 
-    iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
     const/16 v4, 0xe
 
-    invoke-virtual {v1, v4}, Lmiui/date/Calendar;->get(I)I
-
-    move-result v1
-
-    int-to-double v4, v1
-
-    invoke-virtual {v0, v4, v5}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
-
-    .line 273
-    iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mSecond:Lcom/miui/maml/data/IndexedVariable;
-
-    iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
-
-    const/16 v4, 0x15
-
-    invoke-virtual {v1, v4}, Lmiui/date/Calendar;->get(I)I
+    invoke-virtual {v1, v4}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v1
 
@@ -815,28 +806,13 @@
     invoke-virtual {v0, v4, v5}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
     .line 275
-    iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mYearLunar:Lcom/miui/maml/data/IndexedVariable;
+    iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mSecond:Lcom/miui/maml/data/IndexedVariable;
 
-    iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
-    const/4 v4, 0x2
+    const/16 v4, 0x15
 
-    invoke-virtual {v1, v4}, Lmiui/date/Calendar;->get(I)I
-
-    move-result v1
-
-    int-to-double v4, v1
-
-    invoke-virtual {v0, v4, v5}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
-
-    .line 276
-    iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mMonthLunar:Lcom/miui/maml/data/IndexedVariable;
-
-    iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
-
-    const/4 v4, 0x6
-
-    invoke-virtual {v1, v4}, Lmiui/date/Calendar;->get(I)I
+    invoke-virtual {v1, v4}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v1
 
@@ -845,13 +821,13 @@
     invoke-virtual {v0, v4, v5}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
     .line 277
-    iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mDateLunar:Lcom/miui/maml/data/IndexedVariable;
+    iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mYearLunar:Lcom/miui/maml/data/IndexedVariable;
 
-    iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
-    const/16 v4, 0xa
+    const/4 v4, 0x2
 
-    invoke-virtual {v1, v4}, Lmiui/date/Calendar;->get(I)I
+    invoke-virtual {v1, v4}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v1
 
@@ -860,13 +836,13 @@
     invoke-virtual {v0, v4, v5}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
     .line 278
-    iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mYearLunar1864:Lcom/miui/maml/data/IndexedVariable;
+    iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mMonthLunar:Lcom/miui/maml/data/IndexedVariable;
 
-    iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
-    const/4 v4, 0x4
+    const/4 v4, 0x6
 
-    invoke-virtual {v1, v4}, Lmiui/date/Calendar;->get(I)I
+    invoke-virtual {v1, v4}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v1
 
@@ -875,13 +851,28 @@
     invoke-virtual {v0, v4, v5}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
     .line 279
-    iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mMonthLunarLeap:Lcom/miui/maml/data/IndexedVariable;
+    iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mDateLunar:Lcom/miui/maml/data/IndexedVariable;
 
-    iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
-    const/16 v4, 0x8
+    const/16 v4, 0xa
 
-    invoke-virtual {v1, v4}, Lmiui/date/Calendar;->get(I)I
+    invoke-virtual {v1, v4}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
+
+    move-result v1
+
+    int-to-double v4, v1
+
+    invoke-virtual {v0, v4, v5}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
+
+    .line 280
+    iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mYearLunar1864:Lcom/miui/maml/data/IndexedVariable;
+
+    iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
+
+    const/4 v4, 0x4
+
+    invoke-virtual {v1, v4}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
 
     move-result v1
 
@@ -890,6 +881,21 @@
     invoke-virtual {v0, v4, v5}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
     .line 281
+    iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mMonthLunarLeap:Lcom/miui/maml/data/IndexedVariable;
+
+    iget-object v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
+
+    const/16 v4, 0x8
+
+    invoke-virtual {v1, v4}, Lmiuix/pickerwidget/date/Calendar;->get(I)I
+
+    move-result v1
+
+    int-to-double v4, v1
+
+    invoke-virtual {v0, v4, v5}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
+
+    .line 283
     iput-wide v2, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mLastUpdatedTime:J
 
     :cond_1
@@ -901,28 +907,28 @@
 .method public checkUpdateTime()V
     .locals 9
 
-    .line 219
+    .line 221
     iget-boolean v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mFinished:Z
 
     if-nez v0, :cond_6
 
-    .line 220
+    .line 222
     iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 221
+    .line 223
     :try_start_0
     iget-boolean v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mFinished:Z
 
     if-eqz v1, :cond_0
 
-    .line 222
+    .line 224
     monitor-exit v0
 
     return-void
 
-    .line 224
+    .line 226
     :cond_0
     invoke-virtual {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->getContext()Lcom/miui/maml/ScreenContext;
 
@@ -936,17 +942,17 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 226
+    .line 228
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v1
 
-    .line 227
-    iget-object v3, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
-
-    invoke-virtual {v3, v1, v2}, Lmiui/date/Calendar;->setTimeInMillis(J)Lmiui/date/Calendar;
-
     .line 229
+    iget-object v3, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
+
+    invoke-virtual {v3, v1, v2}, Lmiuix/pickerwidget/date/Calendar;->setTimeInMillis(J)Lmiuix/pickerwidget/date/Calendar;
+
+    .line 231
     sget-object v3, Lcom/miui/maml/data/DateTimeVariableUpdater;->fields:[I
 
     array-length v4, v3
@@ -960,24 +966,24 @@
 
     aget v7, v3, v6
 
-    .line 230
+    .line 232
     iget v8, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeAccuracyField:I
 
     if-ne v7, v8, :cond_1
 
     goto :goto_1
 
-    .line 232
+    .line 234
     :cond_1
-    iget-object v8, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    iget-object v8, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
-    invoke-virtual {v8, v7, v5}, Lmiui/date/Calendar;->set(II)Lmiui/date/Calendar;
+    invoke-virtual {v8, v7, v5}, Lmiuix/pickerwidget/date/Calendar;->set(II)Lmiuix/pickerwidget/date/Calendar;
 
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 235
+    .line 237
     :cond_2
     :goto_1
     invoke-virtual {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->getContext()Lcom/miui/maml/ScreenContext;
@@ -994,15 +1000,15 @@
 
     const/4 v5, 0x1
 
-    .line 238
+    .line 240
     :cond_3
-    iget-object v3, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    iget-object v3, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
-    invoke-virtual {v3}, Lmiui/date/Calendar;->getTimeInMillis()J
+    invoke-virtual {v3}, Lmiuix/pickerwidget/date/Calendar;->getTimeInMillis()J
 
     move-result-wide v3
 
-    .line 239
+    .line 241
     iget-wide v6, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCurrentTime:J
 
     cmp-long v6, v6, v3
@@ -1013,11 +1019,11 @@
 
     if-eq v6, v5, :cond_5
 
-    .line 240
+    .line 242
     :cond_4
     iput-wide v3, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCurrentTime:J
 
-    .line 241
+    .line 243
     iget-wide v3, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCurrentTime:J
 
     iget-wide v6, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeAccuracy:J
@@ -1026,10 +1032,10 @@
 
     iput-wide v3, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mNextUpdateTime:J
 
-    .line 242
+    .line 244
     iput v5, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeFormat:I
 
-    .line 243
+    .line 245
     iget-object v3, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeFormatVar:Lcom/miui/maml/data/IndexedVariable;
 
     iget v4, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTimeFormat:I
@@ -1038,14 +1044,14 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 244
+    .line 246
     invoke-virtual {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v3
 
     invoke-virtual {v3}, Lcom/miui/maml/ScreenElementRoot;->requestUpdate()V
 
-    .line 246
+    .line 248
     :cond_5
     invoke-virtual {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->getContext()Lcom/miui/maml/ScreenContext;
 
@@ -1063,7 +1069,7 @@
 
     invoke-virtual {v3, v4, v5, v6}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 247
+    .line 249
     monitor-exit v0
 
     goto :goto_2
@@ -1085,31 +1091,31 @@
 .method public finish()V
     .locals 3
 
-    .line 194
+    .line 196
     iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 195
+    .line 197
     :try_start_0
     invoke-super {p0}, Lcom/miui/maml/data/NotifierVariableUpdater;->finish()V
 
     const/4 v1, 0x1
 
-    .line 196
+    .line 198
     iput-boolean v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mFinished:Z
 
     const-wide/16 v1, 0x0
 
-    .line 197
+    .line 199
     iput-wide v1, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mLastUpdatedTime:J
 
     const/4 v1, 0x0
 
-    .line 198
-    sput-object v1, Lcom/miui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiui/date/Calendar;
+    .line 200
+    sput-object v1, Lcom/miui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiuix/pickerwidget/date/Calendar;
 
-    .line 199
+    .line 201
     invoke-virtual {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v1
@@ -1122,7 +1128,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 200
+    .line 202
     monitor-exit v0
 
     return-void
@@ -1140,16 +1146,16 @@
 .method public init()V
     .locals 0
 
-    .line 159
+    .line 161
     invoke-super {p0}, Lcom/miui/maml/data/NotifierVariableUpdater;->init()V
 
-    .line 161
+    .line 163
     invoke-direct {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->refreshAlarm()V
 
-    .line 162
+    .line 164
     invoke-direct {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->updateTime()V
 
-    .line 163
+    .line 165
     invoke-virtual {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->checkUpdateTime()V
 
     return-void
@@ -1158,10 +1164,10 @@
 .method public onNotify(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/Object;)V
     .locals 0
 
-    .line 287
+    .line 289
     invoke-virtual {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->resetCalendar()V
 
-    .line 288
+    .line 290
     invoke-virtual {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->checkUpdateTime()V
 
     return-void
@@ -1170,10 +1176,10 @@
 .method public pause()V
     .locals 2
 
-    .line 189
+    .line 191
     invoke-super {p0}, Lcom/miui/maml/data/NotifierVariableUpdater;->pause()V
 
-    .line 190
+    .line 192
     invoke-virtual {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v0
@@ -1192,24 +1198,24 @@
 .method protected resetCalendar()V
     .locals 1
 
-    .line 182
-    new-instance v0, Lmiui/date/Calendar;
+    .line 184
+    new-instance v0, Lmiuix/pickerwidget/date/Calendar;
 
-    invoke-direct {v0}, Lmiui/date/Calendar;-><init>()V
+    invoke-direct {v0}, Lmiuix/pickerwidget/date/Calendar;-><init>()V
 
-    iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiui/date/Calendar;
+    iput-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mCalendar:Lmiuix/pickerwidget/date/Calendar;
 
-    .line 183
-    sget-object v0, Lcom/miui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiui/date/Calendar;
+    .line 185
+    sget-object v0, Lcom/miui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiuix/pickerwidget/date/Calendar;
 
     if-eqz v0, :cond_0
 
-    .line 184
-    new-instance v0, Lmiui/date/Calendar;
+    .line 186
+    new-instance v0, Lmiuix/pickerwidget/date/Calendar;
 
-    invoke-direct {v0}, Lmiui/date/Calendar;-><init>()V
+    invoke-direct {v0}, Lmiuix/pickerwidget/date/Calendar;-><init>()V
 
-    sput-object v0, Lcom/miui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiui/date/Calendar;
+    sput-object v0, Lcom/miui/maml/data/DateTimeVariableUpdater;->sCalendar:Lmiuix/pickerwidget/date/Calendar;
 
     :cond_0
     return-void
@@ -1218,16 +1224,16 @@
 .method public resume()V
     .locals 0
 
-    .line 173
+    .line 175
     invoke-super {p0}, Lcom/miui/maml/data/NotifierVariableUpdater;->resume()V
 
-    .line 174
+    .line 176
     invoke-direct {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->refreshAlarm()V
 
-    .line 177
+    .line 179
     invoke-virtual {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->resetCalendar()V
 
-    .line 178
+    .line 180
     invoke-virtual {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->checkUpdateTime()V
 
     return-void
@@ -1236,17 +1242,17 @@
 .method public tick(J)V
     .locals 1
 
-    .line 167
+    .line 169
     invoke-super {p0, p1, p2}, Lcom/miui/maml/data/NotifierVariableUpdater;->tick(J)V
 
-    .line 168
+    .line 170
     iget-object v0, p0, Lcom/miui/maml/data/DateTimeVariableUpdater;->mTime:Lcom/miui/maml/data/IndexedVariable;
 
     long-to-double p1, p1
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 169
+    .line 171
     invoke-direct {p0}, Lcom/miui/maml/data/DateTimeVariableUpdater;->updateTime()V
 
     return-void

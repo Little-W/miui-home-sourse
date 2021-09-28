@@ -142,14 +142,14 @@
     const/4 p0, -0x1
 
     :goto_1
-    const v0, 0x7f1001e6
+    const v0, 0x7f1001e7
 
     packed-switch p0, :pswitch_data_0
 
     return v0
 
     :pswitch_0
-    const p0, 0x7f1001e8
+    const p0, 0x7f1001e9
 
     return p0
 
@@ -157,7 +157,7 @@
     return v0
 
     :pswitch_2
-    const p0, 0x7f1001e7
+    const p0, 0x7f1001e8
 
     return p0
 
@@ -484,8 +484,6 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 99
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
@@ -597,6 +595,8 @@
 
     :goto_2
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

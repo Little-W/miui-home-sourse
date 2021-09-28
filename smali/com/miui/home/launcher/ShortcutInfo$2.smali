@@ -51,7 +51,19 @@
 .method public accept(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 369
+    if-eqz p1, :cond_0
+
+    .line 370
+    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutInfo$2;->this$0:Lcom/miui/home/launcher/ShortcutInfo;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getColorFilter()Landroid/graphics/ColorFilter;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    .line 372
+    :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutInfo$2;->val$callback:Ljava/util/function/Consumer;
 
     invoke-interface {v0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V

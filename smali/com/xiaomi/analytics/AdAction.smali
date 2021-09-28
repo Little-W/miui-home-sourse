@@ -96,7 +96,7 @@
 
     if-lez v2, :cond_1
 
-    const-string v2, "|"
+    const-string/jumbo v2, "|"
 
     .line 32
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

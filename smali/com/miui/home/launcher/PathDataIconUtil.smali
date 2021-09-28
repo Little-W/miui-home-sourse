@@ -34,30 +34,28 @@
     return-void
 .end method
 
-.method public static getCornerRadiusEstimate(Lcom/miui/home/launcher/ShortcutIcon;)F
+.method public static getCornerRadiusEstimate(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)F
     .locals 1
 
-    .line 104
-    invoke-static {p0}, Lcom/miui/home/launcher/PathDataIconUtil;->useCornerRadiusEstimate(Lcom/miui/home/launcher/ShortcutIcon;)Z
+    .line 106
+    invoke-static {p0}, Lcom/miui/home/launcher/PathDataIconUtil;->useCornerRadiusEstimate(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 105
+    .line 107
     invoke-static {}, Lcom/miui/home/launcher/PathDataIconUtil;->getIconCornerRadiusEstimate()F
 
     move-result p0
 
     return p0
 
-    .line 107
+    .line 109
     :cond_0
-    invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getIconRadius()I
+    invoke-interface {p0}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->getIconRadius()F
 
     move-result p0
-
-    int-to-float p0, p0
 
     return p0
 .end method
@@ -65,7 +63,7 @@
 .method public static getIconCornerRadiusEstimate()F
     .locals 1
 
-    .line 41
+    .line 43
     sget v0, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipCornerRadius:F
 
     return v0
@@ -74,7 +72,7 @@
 .method public static getPathDataForClipIcon()Ljava/lang/String;
     .locals 1
 
-    .line 29
+    .line 31
     sget-object v0, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataForClipIcon:Ljava/lang/String;
 
     return-object v0
@@ -83,7 +81,7 @@
 .method public static getPathDataHeightPercent()F
     .locals 1
 
-    .line 89
+    .line 91
     sget v0, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataHeightPercent:F
 
     return v0
@@ -92,7 +90,7 @@
 .method public static getPathDataWidthPercent()F
     .locals 1
 
-    .line 85
+    .line 87
     sget v0, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataWidthPercent:F
 
     return v0
@@ -101,7 +99,7 @@
 .method public static getPathFromPathDataForClipIcon()Landroid/graphics/Path;
     .locals 1
 
-    .line 37
+    .line 39
     sget-object v0, Lcom/miui/home/launcher/PathDataIconUtil;->sPathFromPathDataForClipIcon:Landroid/graphics/Path;
 
     return-object v0
@@ -114,13 +112,13 @@
 
     const/4 v1, 0x0
 
-    .line 46
+    .line 48
     :try_start_0
     sget-object v2, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataForClipIconMethod:Ljava/lang/reflect/Method;
 
     if-nez v2, :cond_0
 
-    .line 47
+    .line 49
     const-class v2, Lmiui/content/res/IconCustomizer;
 
     const-string v3, "getConfigIconMaskValue"
@@ -129,21 +127,21 @@
 
     new-array v5, v1, [Ljava/lang/Class;
 
-    .line 48
+    .line 50
     invoke-static {v4, v5}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v4
 
     new-array v5, v1, [Ljava/lang/Class;
 
-    .line 47
+    .line 49
     invoke-static {v2, v3, v4, v5}, Lcom/miui/launcher/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
     sput-object v2, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataForClipIconMethod:Ljava/lang/reflect/Method;
 
-    .line 50
+    .line 52
     :cond_0
     const-class v2, Lmiui/content/res/IconCustomizer;
 
@@ -151,7 +149,7 @@
 
     move-result-object v2
 
-    .line 51
+    .line 53
     sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataForClipIconMethod:Ljava/lang/reflect/Method;
 
     new-array v4, v1, [Ljava/lang/Object;
@@ -164,7 +162,7 @@
 
     sput-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataForClipIcon:Ljava/lang/String;
 
-    .line 52
+    .line 54
     sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataForClipIcon:Ljava/lang/String;
 
     if-eqz v3, :cond_5
@@ -177,7 +175,7 @@
 
     if-nez v3, :cond_5
 
-    .line 53
+    .line 55
     invoke-static {}, Lcom/miui/home/launcher/PathDataIconUtil;->getPathDataForClipIcon()Ljava/lang/String;
 
     move-result-object v3
@@ -188,12 +186,12 @@
 
     sput-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sPathFromPathDataForClipIcon:Landroid/graphics/Path;
 
-    .line 54
+    .line 56
     sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipCornerRadiusMethod:Ljava/lang/reflect/Method;
 
     if-nez v3, :cond_1
 
-    .line 55
+    .line 57
     const-class v3, Lmiui/content/res/IconCustomizer;
 
     const-string v4, "getIconClipCornerRadius"
@@ -202,27 +200,27 @@
 
     new-array v6, v1, [Ljava/lang/Class;
 
-    .line 56
+    .line 58
     invoke-static {v5, v6}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v5
 
     new-array v6, v1, [Ljava/lang/Class;
 
-    .line 55
+    .line 57
     invoke-static {v3, v4, v5, v6}, Lcom/miui/launcher/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v3
 
     sput-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipCornerRadiusMethod:Ljava/lang/reflect/Method;
 
-    .line 58
+    .line 60
     :cond_1
     sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipWidthMethod:Ljava/lang/reflect/Method;
 
     if-nez v3, :cond_2
 
-    .line 59
+    .line 61
     const-class v3, Lmiui/content/res/IconCustomizer;
 
     const-string v4, "getIconClipWidth"
@@ -231,27 +229,27 @@
 
     new-array v6, v1, [Ljava/lang/Class;
 
-    .line 60
+    .line 62
     invoke-static {v5, v6}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v5
 
     new-array v6, v1, [Ljava/lang/Class;
 
-    .line 59
+    .line 61
     invoke-static {v3, v4, v5, v6}, Lcom/miui/launcher/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v3
 
     sput-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipWidthMethod:Ljava/lang/reflect/Method;
 
-    .line 62
+    .line 64
     :cond_2
     sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipHeightMethod:Ljava/lang/reflect/Method;
 
     if-nez v3, :cond_3
 
-    .line 63
+    .line 65
     const-class v3, Lmiui/content/res/IconCustomizer;
 
     const-string v4, "getIconClipHeight"
@@ -260,21 +258,21 @@
 
     new-array v6, v1, [Ljava/lang/Class;
 
-    .line 64
+    .line 66
     invoke-static {v5, v6}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v5
 
     new-array v6, v1, [Ljava/lang/Class;
 
-    .line 63
+    .line 65
     invoke-static {v3, v4, v5, v6}, Lcom/miui/launcher/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v3
 
     sput-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipHeightMethod:Ljava/lang/reflect/Method;
 
-    .line 66
+    .line 68
     :cond_3
     sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataForClipIconMethod:Ljava/lang/reflect/Method;
 
@@ -288,7 +286,7 @@
 
     sput-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataForClipIcon:Ljava/lang/String;
 
-    .line 67
+    .line 69
     sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipCornerRadiusMethod:Ljava/lang/reflect/Method;
 
     new-array v4, v1, [Ljava/lang/Object;
@@ -305,7 +303,7 @@
 
     sput v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipCornerRadius:F
 
-    .line 68
+    .line 70
     sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipWidthMethod:Ljava/lang/reflect/Method;
 
     new-array v4, v1, [Ljava/lang/Object;
@@ -326,7 +324,7 @@
 
     sput v3, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataWidthPercent:F
 
-    .line 69
+    .line 71
     sget-object v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipHeightMethod:Ljava/lang/reflect/Method;
 
     new-array v5, v1, [Ljava/lang/Object;
@@ -345,7 +343,7 @@
 
     sput v2, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataHeightPercent:F
 
-    .line 70
+    .line 72
     sget v2, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipCornerRadius:F
 
     cmpl-float v2, v2, v0
@@ -390,32 +388,32 @@
     :goto_0
     sput-boolean v2, Lcom/miui/home/launcher/PathDataIconUtil;->sIsIconClipPathDataARect:Z
 
-    .line 72
+    .line 74
     sput-boolean v3, Lcom/miui/home/launcher/PathDataIconUtil;->sIsSupportThemeAdaptiveIcon:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_1
 
-    .line 75
+    .line 77
     :catch_0
     sput-boolean v1, Lcom/miui/home/launcher/PathDataIconUtil;->sIsSupportThemeAdaptiveIcon:Z
 
     const/4 v2, 0x0
 
-    .line 76
+    .line 78
     sput-object v2, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataForClipIcon:Ljava/lang/String;
 
-    .line 77
+    .line 79
     sput v0, Lcom/miui/home/launcher/PathDataIconUtil;->sIconClipCornerRadius:F
 
-    .line 78
+    .line 80
     sput v0, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataWidthPercent:F
 
-    .line 79
+    .line 81
     sput v0, Lcom/miui/home/launcher/PathDataIconUtil;->sPathDataHeightPercent:F
 
-    .line 80
+    .line 82
     sput-boolean v1, Lcom/miui/home/launcher/PathDataIconUtil;->sIsIconClipPathDataARect:Z
 
     :cond_5
@@ -426,7 +424,7 @@
 .method public static isIconClipPathDataARect()Z
     .locals 1
 
-    .line 33
+    .line 35
     sget-boolean v0, Lcom/miui/home/launcher/PathDataIconUtil;->sIsIconClipPathDataARect:Z
 
     return v0
@@ -435,28 +433,24 @@
 .method public static isSupportThemeAdaptiveIcon()Z
     .locals 1
 
-    .line 93
+    .line 95
     sget-boolean v0, Lcom/miui/home/launcher/PathDataIconUtil;->sIsSupportThemeAdaptiveIcon:Z
 
     return v0
 .end method
 
-.method public static useCornerRadiusEstimate(Lcom/miui/home/launcher/ShortcutIcon;)Z
+.method public static useCornerRadiusEstimate(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)Z
     .locals 1
 
-    .line 97
+    .line 99
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isDefaultIcon()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 98
-    invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lcom/miui/home/launcher/LauncherIconImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+    .line 100
+    invoke-interface {p0}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->getContentDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
@@ -466,14 +460,14 @@
 
     if-eqz p0, :cond_0
 
-    .line 99
+    .line 101
     invoke-static {}, Lcom/miui/home/launcher/PathDataIconUtil;->isIconClipPathDataARect()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 100
+    .line 102
     invoke-static {}, Lcom/miui/home/launcher/PathDataIconUtil;->isSupportThemeAdaptiveIcon()Z
 
     move-result p0

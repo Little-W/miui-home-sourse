@@ -7,6 +7,9 @@
 .method public abstract onOverlayCall(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 .end method
 
+.method public abstract onOverlayInvoke(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+.end method
+
 .method public abstract onOverlayScrollChanged(F)V
 .end method
 

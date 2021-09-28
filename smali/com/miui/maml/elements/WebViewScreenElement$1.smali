@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/maml/elements/WebViewScreenElement;)V
     .locals 0
 
-    .line 117
+    .line 119
     iput-object p1, p0, Lcom/miui/maml/elements/WebViewScreenElement$1;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
@@ -35,7 +35,7 @@
 .method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
     .locals 0
 
-    .line 119
+    .line 121
     invoke-virtual {p1, p2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
     const/4 p1, 0x1

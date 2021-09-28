@@ -21,16 +21,16 @@
 .method public constructor <init>(FFZ)V
     .locals 0
 
-    .line 17
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
+    .line 22
     iput p2, p0, Lcom/miui/home/recents/views/VerticalSwipe;->mTaskViewHeight:F
 
-    .line 19
+    .line 23
     iput p1, p0, Lcom/miui/home/recents/views/VerticalSwipe;->mTaskViewWidth:F
 
-    .line 20
+    .line 24
     iput-boolean p3, p0, Lcom/miui/home/recents/views/VerticalSwipe;->mCanLockTaskView:Z
 
     return-void
@@ -54,7 +54,7 @@
     :cond_0
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 49
+    .line 58
     :goto_0
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
@@ -62,7 +62,7 @@
 
     div-float/2addr p1, p2
 
-    .line 50
+    .line 59
     invoke-static {p1, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result p1
@@ -87,13 +87,29 @@
 .end method
 
 .method public static getAsScreenHeightWhenDismiss()I
-    .locals 1
+    .locals 2
 
-    .line 43
+    .line 47
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
+    if-nez v0, :cond_0
+
+    const-string v0, "Miuihome:VerticalSwipe"
+
+    const-string v1, "launcher is null, return vertical screen height"
+
+    .line 49
+    .line 50
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
+
+    move-result v0
+
+    return v0
+
+    .line 52
+    :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getRecentsContainer()Lcom/miui/home/recents/views/RecentsContainer;
 
     move-result-object v0
@@ -102,9 +118,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 44
+    .line 53
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
 
     move-result v0
@@ -115,7 +131,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
 
     move-result v0
@@ -129,7 +145,7 @@
 .method public calculate(F)V
     .locals 6
 
-    .line 24
+    .line 28
     invoke-static {}, Lcom/miui/home/recents/views/VerticalSwipe;->getAsScreenHeightWhenDismiss()I
 
     move-result v0
@@ -148,7 +164,7 @@
 
     neg-float v4, v1
 
-    .line 26
+    .line 30
     invoke-direct {p0, v4, v3}, Lcom/miui/home/recents/views/VerticalSwipe;->afterFrictionValue(FF)F
 
     move-result v4
@@ -161,7 +177,7 @@
     :goto_0
     if-gez v2, :cond_1
 
-    .line 28
+    .line 32
     invoke-static {v4}, Ljava/lang/Math;->abs(F)F
 
     move-result v4
@@ -184,21 +200,21 @@
     :goto_1
     iput v4, p0, Lcom/miui/home/recents/views/VerticalSwipe;->mCurScale:F
 
-    .line 29
+    .line 33
     iget v4, p0, Lcom/miui/home/recents/views/VerticalSwipe;->mTaskViewHeight:F
 
     iget v5, p0, Lcom/miui/home/recents/views/VerticalSwipe;->mCurScale:F
 
     mul-float/2addr v4, v5
 
-    .line 31
+    .line 35
     invoke-direct {p0, p1, v0}, Lcom/miui/home/recents/views/VerticalSwipe;->afterFrictionValue(FF)F
 
     move-result v0
 
     if-gez v2, :cond_2
 
-    .line 34
+    .line 38
     iget p1, p0, Lcom/miui/home/recents/views/VerticalSwipe;->mTaskViewHeight:F
 
     const/high16 v2, 0x40000000    # 2.0f
@@ -215,7 +231,7 @@
 
     goto :goto_3
 
-    .line 36
+    .line 40
     :cond_2
     iget-boolean v0, p0, Lcom/miui/home/recents/views/VerticalSwipe;->mCanLockTaskView:Z
 
@@ -236,7 +252,7 @@
     :goto_3
     add-float/2addr v1, v3
 
-    .line 39
+    .line 43
     invoke-static {v3, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result p1
@@ -249,7 +265,7 @@
 .method public getCurAlpha()F
     .locals 1
 
-    .line 63
+    .line 72
     iget v0, p0, Lcom/miui/home/recents/views/VerticalSwipe;->mCurAlpha:F
 
     return v0
@@ -258,7 +274,7 @@
 .method public getCurScale()F
     .locals 1
 
-    .line 55
+    .line 64
     iget v0, p0, Lcom/miui/home/recents/views/VerticalSwipe;->mCurScale:F
 
     return v0
@@ -267,7 +283,7 @@
 .method public getCurTransY()F
     .locals 1
 
-    .line 59
+    .line 68
     iget v0, p0, Lcom/miui/home/recents/views/VerticalSwipe;->mCurTransY:F
 
     return v0

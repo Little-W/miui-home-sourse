@@ -1,11 +1,14 @@
 .class Lcom/miui/home/recents/NavStubView$18;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "NavStubView.java"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/recents/NavStubView;->startFirstTask()V
+    value = Lcom/miui/home/recents/NavStubView;->performHomeToHome()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,132 +18,63 @@
 
 
 # instance fields
-.field private cancelStartFirstTaskAnim:Z
-
 .field final synthetic this$0:Lcom/miui/home/recents/NavStubView;
+
+.field final synthetic val$startAlpha:F
+
+.field final synthetic val$startScale:F
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
+.method constructor <init>(Lcom/miui/home/recents/NavStubView;FF)V
     .locals 0
 
-    .line 3292
+    .line 3798
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput p2, p0, Lcom/miui/home/recents/NavStubView$18;->val$startAlpha:F
+
+    iput p3, p0, Lcom/miui/home/recents/NavStubView$18;->val$startScale:F
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 3
 
-    const/4 p1, 0x1
+    .line 3801
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    .line 3302
-    iput-boolean p1, p0, Lcom/miui/home/recents/NavStubView$18;->cancelStartFirstTaskAnim:Z
+    move-result p1
 
-    return-void
-.end method
+    .line 3802
+    iget v0, p0, Lcom/miui/home/recents/NavStubView$18;->val$startAlpha:F
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 3307
-    iget-boolean p1, p0, Lcom/miui/home/recents/NavStubView$18;->cancelStartFirstTaskAnim:Z
+    sub-float v2, v1, v0
 
-    if-eqz p1, :cond_0
+    mul-float/2addr v2, p1
 
-    return-void
+    add-float/2addr v0, v2
 
-    .line 3311
-    :cond_0
+    .line 3803
+    iget v2, p0, Lcom/miui/home/recents/NavStubView$18;->val$startScale:F
+
+    sub-float/2addr v1, v2
+
+    mul-float/2addr v1, p1
+
+    add-float/2addr v2, v1
+
+    .line 3804
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$6000(Lcom/miui/home/recents/NavStubView;Z)V
-
-    .line 3312
-    iget-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
-
-    sget-object v1, Lcom/miui/home/recents/NavStubView$ModeGesture;->IDLE:Lcom/miui/home/recents/NavStubView$ModeGesture;
-
-    invoke-static {p1, v1}, Lcom/miui/home/recents/NavStubView;->access$6700(Lcom/miui/home/recents/NavStubView;Lcom/miui/home/recents/NavStubView$ModeGesture;)V
-
-    .line 3314
-    :try_start_0
-    iget-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
-
-    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3100(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRecentsView()Lcom/miui/home/recents/views/RecentsView;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/miui/home/recents/views/RecentsView;->getTaskStackView()Lcom/miui/home/recents/views/TaskStackView;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViews()Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/miui/home/recents/views/TaskView;
-
-    if-eqz p1, :cond_1
-
-    const/4 v1, 0x1
-
-    .line 3316
-    invoke-virtual {p1, v0, v1, v0}, Lcom/miui/home/recents/views/TaskView;->launchTask(ZZZ)V
-    :try_end_0
-    .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    .line 3319
-    sget-object v0, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
-
-    const-string v1, "start first task failed"
-
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 3320
-    iget-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
-
-    invoke-virtual {p1}, Lcom/miui/home/recents/NavStubView;->performHomeToHome()V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
-
-    .line 3296
-    iget-object p1, p0, Lcom/miui/home/recents/NavStubView$18;->this$0:Lcom/miui/home/recents/NavStubView;
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$6000(Lcom/miui/home/recents/NavStubView;Z)V
-
-    const/4 p1, 0x0
-
-    .line 3297
-    iput-boolean p1, p0, Lcom/miui/home/recents/NavStubView$18;->cancelStartFirstTaskAnim:Z
+    invoke-static {p1, v0, v2}, Lcom/miui/home/recents/NavStubView;->access$6900(Lcom/miui/home/recents/NavStubView;FF)V
 
     return-void
 .end method

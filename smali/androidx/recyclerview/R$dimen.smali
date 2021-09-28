@@ -29,44 +29,44 @@
 
 .field public static final compat_notification_large_icon_max_width:I = 0x7f070081
 
-.field public static final fastscroll_default_thickness:I = 0x7f0700c0
+.field public static final fastscroll_default_thickness:I = 0x7f0700c2
 
-.field public static final fastscroll_margin:I = 0x7f0700c3
+.field public static final fastscroll_margin:I = 0x7f0700c5
 
-.field public static final fastscroll_minimum_range:I = 0x7f0700c4
+.field public static final fastscroll_minimum_range:I = 0x7f0700c6
 
-.field public static final item_touch_helper_max_drag_scroll_per_frame:I = 0x7f070110
+.field public static final item_touch_helper_max_drag_scroll_per_frame:I = 0x7f070112
 
-.field public static final item_touch_helper_swipe_escape_max_velocity:I = 0x7f070111
+.field public static final item_touch_helper_swipe_escape_max_velocity:I = 0x7f070113
 
-.field public static final item_touch_helper_swipe_escape_velocity:I = 0x7f070112
+.field public static final item_touch_helper_swipe_escape_velocity:I = 0x7f070114
 
-.field public static final notification_action_icon_size:I = 0x7f0702cd
+.field public static final notification_action_icon_size:I = 0x7f0702d2
 
-.field public static final notification_action_text_size:I = 0x7f0702ce
+.field public static final notification_action_text_size:I = 0x7f0702d3
 
-.field public static final notification_big_circle_margin:I = 0x7f0702cf
+.field public static final notification_big_circle_margin:I = 0x7f0702d4
 
-.field public static final notification_content_margin_start:I = 0x7f0702d0
+.field public static final notification_content_margin_start:I = 0x7f0702d5
 
-.field public static final notification_large_icon_height:I = 0x7f0702d1
+.field public static final notification_large_icon_height:I = 0x7f0702d6
 
-.field public static final notification_large_icon_width:I = 0x7f0702d2
+.field public static final notification_large_icon_width:I = 0x7f0702d7
 
-.field public static final notification_main_column_padding_top:I = 0x7f0702d3
+.field public static final notification_main_column_padding_top:I = 0x7f0702d8
 
-.field public static final notification_media_narrow_margin:I = 0x7f0702d4
+.field public static final notification_media_narrow_margin:I = 0x7f0702d9
 
-.field public static final notification_right_icon_size:I = 0x7f0702d5
+.field public static final notification_right_icon_size:I = 0x7f0702da
 
-.field public static final notification_right_side_padding_top:I = 0x7f0702d6
+.field public static final notification_right_side_padding_top:I = 0x7f0702db
 
-.field public static final notification_small_icon_background_padding:I = 0x7f0702d7
+.field public static final notification_small_icon_background_padding:I = 0x7f0702dc
 
-.field public static final notification_small_icon_size_as_large:I = 0x7f0702d8
+.field public static final notification_small_icon_size_as_large:I = 0x7f0702dd
 
-.field public static final notification_subtext_size:I = 0x7f0702d9
+.field public static final notification_subtext_size:I = 0x7f0702de
 
-.field public static final notification_top_pad:I = 0x7f0702da
+.field public static final notification_top_pad:I = 0x7f0702df
 
-.field public static final notification_top_pad_large_text:I = 0x7f0702db
+.field public static final notification_top_pad_large_text:I = 0x7f0702e0

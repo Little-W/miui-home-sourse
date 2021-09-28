@@ -275,8 +275,6 @@
     const-string v2, "onPointerEvent MotionEvent.ACTION_MOVE processMiuiGestures"
 
     .line 177
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 180
     iget-boolean v1, p0, Lcom/miui/home/recents/GesturesBackController;->mIsGestureAnimationEnabled:Z
 
@@ -426,8 +424,6 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     :cond_7
     const/4 p1, -0x1
 
@@ -547,8 +543,6 @@
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
-
-    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 100
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
@@ -687,8 +681,6 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 131
     iput v2, p0, Lcom/miui/home/recents/GesturesBackController;->mWithoutAnimatingDragDirection:I
 
@@ -738,8 +730,6 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 61
     iget v0, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
 
@@ -782,8 +772,6 @@
     const-string v0, "mSwipeStatus == SWIPE_STATUS_ANIMATING, processPointerEvent"
 
     .line 69
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     goto :goto_0
 
     .line 75
@@ -795,8 +783,6 @@
     const-string v0, "mSwipeStatus == SWIPE_STATUS_ANIMATING, processPointerEventWithoutAnimating"
 
     .line 77
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     goto :goto_0
 
     .line 82
@@ -808,8 +794,6 @@
     const-string v0, "mSwipeStatus != SWIPE_STATUS_ANIMATING, processPointerEvent"
 
     .line 84
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     :cond_2
     :goto_0
     return-void

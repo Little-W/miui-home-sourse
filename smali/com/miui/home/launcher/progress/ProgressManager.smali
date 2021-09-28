@@ -22,7 +22,7 @@
     .end annotation
 .end field
 
-.field private static mObservingUri:Z = false
+.field private static mObservingUri:Z
 
 .field private static sProgressManager:Lcom/miui/home/launcher/progress/ProgressManager;
 
@@ -192,21 +192,10 @@
 
     move-result p0
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_0
 
     .line 302
     :try_start_0
-    sget-boolean p0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_OREO:Z
-
-    if-eqz p0, :cond_0
-
-    .line 303
-    invoke-virtual {p2, p1}, Landroid/content/Context;->startForegroundService(Landroid/content/Intent;)Landroid/content/ComponentName;
-
-    goto :goto_0
-
-    .line 305
-    :cond_0
     invoke-virtual {p2, p1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -220,16 +209,14 @@
 
     const-string v1, "communicateToServer error"
 
-    .line 308
-    invoke-static {v0, v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 309
+    .line 304
+    .line 305
     invoke-virtual {p2, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 312
-    :cond_1
+    .line 308
+    :cond_0
     invoke-virtual {p2, p1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     :goto_0
@@ -477,8 +464,6 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     const-string v1, "miui.intent.action.APPLICATION_PROGRESS_UPDATE"
 
     .line 117
@@ -518,8 +503,6 @@
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    invoke-static {p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
     return-void
@@ -905,7 +888,7 @@
 
     invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, "|"
+    const-string/jumbo v2, "|"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -916,8 +899,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 248
     new-instance v0, Landroid/content/Intent;

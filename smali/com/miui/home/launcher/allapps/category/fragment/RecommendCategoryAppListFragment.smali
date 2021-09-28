@@ -54,51 +54,58 @@
 
     :cond_1
     :goto_1
+    const/4 v2, 0x0
+
     if-eqz p2, :cond_2
 
-    if-gt v1, v0, :cond_6
+    if-gt v1, v0, :cond_7
 
     goto :goto_2
 
     :cond_2
-    if-lt v1, v0, :cond_6
+    if-lt v1, v0, :cond_7
 
     .line 72
     :goto_2
-    iget-object v2, p0, Lcom/miui/home/launcher/allapps/category/fragment/RecommendCategoryAppListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
+    iget-object v3, p0, Lcom/miui/home/launcher/allapps/category/fragment/RecommendCategoryAppListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
-    invoke-virtual {v2, v1}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v2
-
-    .line 73
-    invoke-virtual {v2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-virtual {v3, v1}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    if-ne v3, p1, :cond_3
+    if-nez v3, :cond_3
 
     return-object v2
 
-    .line 76
+    .line 75
     :cond_3
-    invoke-virtual {v2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-virtual {v3}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v2
 
-    instance-of v3, v3, Lcom/miui/home/launcher/AppInfo;
+    if-ne v2, p1, :cond_4
 
-    if-eqz v3, :cond_4
-
-    .line 77
-    invoke-virtual {v2}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/miui/home/launcher/AppInfo;
+    return-object v3
 
     .line 78
-    iget-object v4, v3, Lcom/miui/home/launcher/AppInfo;->componentName:Landroid/content/ComponentName;
+    :cond_4
+    invoke-virtual {v3}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v2
+
+    instance-of v2, v2, Lcom/miui/home/launcher/AppInfo;
+
+    if-eqz v2, :cond_5
+
+    .line 79
+    invoke-virtual {v3}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/miui/home/launcher/AppInfo;
+
+    .line 80
+    iget-object v4, v2, Lcom/miui/home/launcher/AppInfo;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/ItemInfo;->getTargetComponent()Landroid/content/ComponentName;
 
@@ -108,41 +115,39 @@
 
     move-result v4
 
-    if-eqz v4, :cond_4
+    if-eqz v4, :cond_5
 
-    .line 79
-    invoke-virtual {v3}, Lcom/miui/home/launcher/AppInfo;->getUser()Landroid/os/UserHandle;
+    .line 81
+    invoke-virtual {v2}, Lcom/miui/home/launcher/AppInfo;->getUser()Landroid/os/UserHandle;
 
-    move-result-object v3
+    move-result-object v2
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/ItemInfo;->getUser()Landroid/os/UserHandle;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Landroid/os/UserHandle;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v4}, Landroid/os/UserHandle;->equals(Ljava/lang/Object;)Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_4
+    if-eqz v2, :cond_5
 
-    return-object v2
+    return-object v3
 
-    :cond_4
-    if-eqz p2, :cond_5
+    :cond_5
+    if-eqz p2, :cond_6
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_1
 
-    :cond_6
-    const/4 p1, 0x0
-
-    return-object p1
+    :cond_7
+    return-object v2
 .end method
 
 
@@ -346,10 +351,10 @@
 .method public onMessageEvent(Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;)V
     .locals 1
 
-    .line 94
+    .line 96
     invoke-super {p0, p1}, Lcom/miui/home/launcher/allapps/category/fragment/CategoryAppListFragment;->onMessageEvent(Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;)V
 
-    .line 95
+    .line 97
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -362,7 +367,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 96
+    .line 98
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/RecommendCategoryAppListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
@@ -382,12 +387,12 @@
 .method public onScrollUpEnd()V
     .locals 1
 
-    .line 104
+    .line 106
     invoke-super {p0}, Lcom/miui/home/launcher/allapps/category/fragment/CategoryAppListFragment;->onScrollUpEnd()V
 
     const/4 v0, 0x1
 
-    .line 105
+    .line 107
     iput-boolean v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/RecommendCategoryAppListFragment;->isShow:Z
 
     return-void
@@ -396,15 +401,15 @@
 .method public resetView()V
     .locals 3
 
-    .line 110
+    .line 112
     invoke-super {p0}, Lcom/miui/home/launcher/allapps/category/fragment/CategoryAppListFragment;->resetView()V
 
-    .line 111
+    .line 113
     iget-boolean v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/RecommendCategoryAppListFragment;->isShow:Z
 
     if-eqz v0, :cond_0
 
-    .line 112
+    .line 114
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
 
     move-result-object v0
@@ -415,7 +420,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 113
+    .line 115
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/RecommendCategoryAppListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
     const/4 v1, 0x1
@@ -429,7 +434,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 116
+    .line 118
     iput-boolean v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/RecommendCategoryAppListFragment;->isShow:Z
 
     return-void

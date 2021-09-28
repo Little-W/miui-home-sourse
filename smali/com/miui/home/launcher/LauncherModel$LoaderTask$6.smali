@@ -37,7 +37,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Ljava/lang/Runnable;Ljava/lang/String;Ljava/util/List;[Ljava/lang/String;[ILjava/util/List;)V
     .locals 0
 
-    .line 1458
+    .line 1461
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;->val$endWaiting:Ljava/lang/Runnable;
@@ -62,12 +62,12 @@
 .method public run()V
     .locals 7
 
-    .line 1461
+    .line 1464
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;->val$endWaiting:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 1462
+    .line 1465
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$6;->val$cloudBackupPackageName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -78,7 +78,7 @@
 
     return-void
 
-    .line 1465
+    .line 1468
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
@@ -98,7 +98,7 @@
 
     new-array v3, v2, [Ljava/lang/String;
 
-    .line 1466
+    .line 1469
     invoke-interface {v0, v3}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v0
@@ -113,7 +113,7 @@
 
     new-array v2, v2, [Ljava/lang/String;
 
-    .line 1467
+    .line 1470
     invoke-interface {v5, v2}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v2
@@ -126,7 +126,7 @@
 
     move-object v2, v0
 
-    .line 1466
+    .line 1469
     invoke-virtual/range {v1 .. v6}, Lcom/miui/home/launcher/progress/ProgressManager;->updateProgress([Ljava/lang/String;[Ljava/lang/String;[I[Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 5592
+    .line 5771
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,7 +29,7 @@
 .method protected createEdgeEffect(Landroidx/recyclerview/widget/RecyclerView;I)Landroid/widget/EdgeEffect;
     .locals 0
 
-    .line 5623
+    .line 5804
     new-instance p2, Landroid/widget/EdgeEffect;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getContext()Landroid/content/Context;

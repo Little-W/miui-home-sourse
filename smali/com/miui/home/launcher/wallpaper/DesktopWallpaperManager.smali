@@ -329,8 +329,6 @@
     move-result-object p1
 
     .line 159
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 .end method
 
@@ -379,8 +377,6 @@
     move-result-object p1
 
     .line 166
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 .end method
 

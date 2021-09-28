@@ -254,6 +254,7 @@
 
     goto :goto_1
 
+    .line 202
     :cond_2
     sget-object v3, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 

@@ -95,7 +95,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f07008e
+    const p3, 0x7f070090
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -108,7 +108,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f07008d
+    const p3, 0x7f07008f
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -121,7 +121,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f07008b
+    const p3, 0x7f07008d
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -223,7 +223,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a021d
+    const v1, 0x7f0a0221
 
     .line 84
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -434,7 +434,7 @@
     .line 50
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a017f
+    const v0, 0x7f0a0181
 
     .line 51
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->findViewById(I)Landroid/view/View;

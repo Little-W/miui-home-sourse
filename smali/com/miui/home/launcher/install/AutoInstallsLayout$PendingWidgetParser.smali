@@ -330,8 +330,6 @@
     const-string p3, "Problem allocating appWidgetId"
 
     .line 493
-    invoke-static {p2, p3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     return-wide v1
 
     :cond_4
@@ -406,7 +404,5 @@
     const-string p2, "Skipping invalid <appwidget> with no component"
 
     .line 441
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-wide v1
 .end method

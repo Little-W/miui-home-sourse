@@ -812,7 +812,7 @@
     return-void
 .end method
 
-.method public onEnterScrollArea(III)Z
+.method public onEnterScrollArea(IIILandroid/view/MotionEvent;)Z
     .locals 0
 
     const/4 p1, 0x1
@@ -834,7 +834,7 @@
     .line 199
     invoke-super {p0}, Lcom/miui/launcher/views/LauncherFrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a00fa
+    const v0, 0x7f0a00fb
 
     .line 200
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->findViewById(I)Landroid/view/View;
@@ -884,7 +884,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07031f
+    const v1, 0x7f070325
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

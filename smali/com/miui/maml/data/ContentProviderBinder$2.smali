@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 265
+    .line 269
     invoke-static {}, Lcom/miui/maml/elements/ListScreenElement$ColumnInfo$Type;->values()[Lcom/miui/maml/elements/ListScreenElement$ColumnInfo$Type;
 
     move-result-object v0

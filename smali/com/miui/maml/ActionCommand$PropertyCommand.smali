@@ -27,10 +27,10 @@
 .method protected constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lcom/miui/maml/util/Variable;Ljava/lang/String;)V
     .locals 0
 
-    .line 1033
+    .line 1053
     invoke-direct {p0, p1}, Lcom/miui/maml/ActionCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;)V
 
-    .line 1034
+    .line 1054
     iput-object p2, p0, Lcom/miui/maml/ActionCommand$PropertyCommand;->mTargetObj:Lcom/miui/maml/util/Variable;
 
     return-void
@@ -39,14 +39,14 @@
 .method public static create(Lcom/miui/maml/elements/ScreenElement;Ljava/lang/String;Ljava/lang/String;)Lcom/miui/maml/ActionCommand$PropertyCommand;
     .locals 2
 
-    .line 1038
+    .line 1058
     new-instance v0, Lcom/miui/maml/util/Variable;
 
     invoke-direct {v0, p1}, Lcom/miui/maml/util/Variable;-><init>(Ljava/lang/String;)V
 
     const-string p1, "visibility"
 
-    .line 1039
+    .line 1059
     invoke-virtual {v0}, Lcom/miui/maml/util/Variable;->getPropertyName()Ljava/lang/String;
 
     move-result-object v1
@@ -57,7 +57,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 1040
+    .line 1060
     new-instance p1, Lcom/miui/maml/ActionCommand$VisibilityProperty;
 
     invoke-direct {p1, p0, v0, p2}, Lcom/miui/maml/ActionCommand$VisibilityProperty;-><init>(Lcom/miui/maml/elements/ScreenElement;Lcom/miui/maml/util/Variable;Ljava/lang/String;)V
@@ -67,7 +67,7 @@
     :cond_0
     const-string p1, "animation"
 
-    .line 1041
+    .line 1061
     invoke-virtual {v0}, Lcom/miui/maml/util/Variable;->getPropertyName()Ljava/lang/String;
 
     move-result-object v1
@@ -78,7 +78,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 1042
+    .line 1062
     new-instance p1, Lcom/miui/maml/ActionCommand$AnimationProperty;
 
     invoke-direct {p1, p0, v0, p2}, Lcom/miui/maml/ActionCommand$AnimationProperty;-><init>(Lcom/miui/maml/elements/ScreenElement;Lcom/miui/maml/util/Variable;Ljava/lang/String;)V
@@ -96,23 +96,23 @@
 .method public init()V
     .locals 3
 
-    .line 1049
+    .line 1069
     invoke-super {p0}, Lcom/miui/maml/ActionCommand;->init()V
 
-    .line 1050
+    .line 1070
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$PropertyCommand;->mTargetObj:Lcom/miui/maml/util/Variable;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 1052
+    .line 1072
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$PropertyCommand;->mTargetElement:Lcom/miui/maml/elements/ScreenElement;
 
     if-nez v0, :cond_1
 
-    .line 1053
+    .line 1073
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$PropertyCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v0
@@ -129,14 +129,14 @@
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$PropertyCommand;->mTargetElement:Lcom/miui/maml/elements/ScreenElement;
 
-    .line 1054
+    .line 1074
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$PropertyCommand;->mTargetElement:Lcom/miui/maml/elements/ScreenElement;
 
     if-nez v0, :cond_1
 
     const-string v0, "ActionCommand"
 
-    .line 1055
+    .line 1075
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -161,7 +161,7 @@
 
     const/4 v0, 0x0
 
-    .line 1056
+    .line 1076
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$PropertyCommand;->mTargetObj:Lcom/miui/maml/util/Variable;
 
     return-void
@@ -173,14 +173,14 @@
 .method public perform()V
     .locals 1
 
-    .line 1064
+    .line 1084
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$PropertyCommand;->mTargetElement:Lcom/miui/maml/elements/ScreenElement;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 1066
+    .line 1086
     :cond_0
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$PropertyCommand;->doPerform()V
 

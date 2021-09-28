@@ -64,12 +64,12 @@
 
     if-eqz p1, :cond_1
 
-    const-string p1, "屏幕亮"
+    const-string/jumbo p1, "屏幕亮"
 
     goto :goto_0
 
     :cond_1
-    const-string p1, "屏幕灭"
+    const-string/jumbo p1, "屏幕灭"
 
     :goto_0
     const-string p2, "OneTrackApp"

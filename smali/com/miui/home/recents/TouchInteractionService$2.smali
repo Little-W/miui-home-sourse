@@ -28,7 +28,7 @@
 .method constructor <init>(Lcom/miui/home/recents/TouchInteractionService;)V
     .locals 0
 
-    .line 141
+    .line 147
     iput-object p1, p0, Lcom/miui/home/recents/TouchInteractionService$2;->this$0:Lcom/miui/home/recents/TouchInteractionService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -49,7 +49,7 @@
 
     const-string p1, "android.intent.action.USER_UNLOCKED"
 
-    .line 144
+    .line 150
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -60,7 +60,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 145
+    .line 151
     iget-object p1, p0, Lcom/miui/home/recents/TouchInteractionService$2;->this$0:Lcom/miui/home/recents/TouchInteractionService;
 
     invoke-static {p1}, Lcom/miui/home/recents/TouchInteractionService;->access$300(Lcom/miui/home/recents/TouchInteractionService;)V

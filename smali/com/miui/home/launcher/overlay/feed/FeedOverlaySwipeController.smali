@@ -105,8 +105,6 @@
 
     move-result-object v8
 
-    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     if-nez v1, :cond_1
 
     if-nez v3, :cond_1
@@ -168,8 +166,6 @@
     const-string v0, "can not use"
 
     .line 61
-    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     const/4 p0, 0x0
 
     return p0

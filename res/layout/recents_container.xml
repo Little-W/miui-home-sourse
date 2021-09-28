@@ -86,6 +86,9 @@
         </FrameLayout>
     </FrameLayout>
     <include
+        android:id="@id/recent_menu_view"
+        layout="@layout/recent_menu_view" />
+    <include
         layout="@layout/small_window_edit" />
     <com.miui.home.recents.views.FakeNavigationBarView
         android:layout_gravity="bottom|center"

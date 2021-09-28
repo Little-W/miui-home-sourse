@@ -48,8 +48,6 @@
 
     const-string v1, "getColorHints not available"
 
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 .end method
@@ -154,8 +152,6 @@
     sget-object v4, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVOMR1;->TAG:Ljava/lang/String;
 
     const-string v5, "error calling color hints"
-
-    invoke-static {v4, v5, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 69
     :cond_4

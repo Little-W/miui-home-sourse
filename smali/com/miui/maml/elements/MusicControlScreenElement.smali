@@ -29,7 +29,7 @@
 
 .field private static final FRAMERATE_PLAYING:I = 0x1e
 
-.field private static final LOG_TAG:Ljava/lang/String; = "MusicControlScreenElement"
+.field private static final LOG_TAG:Ljava/lang/String; = "MusicControlScreenE"
 
 .field public static final METADATA_KEY_LYRIC:Ljava/lang/String; = "android.media.metadata.LYRIC"
 
@@ -977,7 +977,7 @@
     :catch_0
     move-exception p1
 
-    const-string p2, "MusicControlScreenElement"
+    const-string p2, "MusicControlScreenE"
 
     const-string v0, "fail to get MiuiMusic preference"
 
@@ -1603,7 +1603,7 @@
     .line 410
     invoke-virtual {p0}, Lcom/miui/maml/elements/MusicControlScreenElement;->requestUpdate()V
 
-    const-string v0, "MusicControlScreenElement"
+    const-string v0, "MusicControlScreenE"
 
     .line 411
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1918,7 +1918,7 @@
     return v1
 
     :cond_7
-    const-string v0, "MusicControlScreenElement"
+    const-string v0, "MusicControlScreenE"
 
     const-string v2, "fail to dispatch by media controller, send to MiuiMusic."
 
@@ -2963,7 +2963,7 @@
 
     move-result-object v0
 
-    const-string v1, "MusicControlScreenElement"
+    const-string v1, "MusicControlScreenE"
 
     .line 833
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3042,7 +3042,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
-    const-string v0, "MusicControlScreenElement"
+    const-string v0, "MusicControlScreenE"
 
     const-string v1, "set player info fail."
 

@@ -16,11 +16,17 @@
 
 .field public static f:Ljava/lang/reflect/Method;
 
-.field public static g:Ljava/lang/Class;
+.field public static g:Ljava/lang/reflect/Method;
 
-.field public static h:Ldalvik/system/PathClassLoader;
+.field public static h:Ljava/lang/reflect/Method;
 
-.field public static i:Ljava/lang/reflect/Constructor;
+.field public static i:Ljava/lang/reflect/Method;
+
+.field public static j:Ljava/lang/Class;
+
+.field public static k:Ldalvik/system/PathClassLoader;
+
+.field public static l:Ljava/lang/reflect/Constructor;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor<",
@@ -30,7 +36,7 @@
     .end annotation
 .end field
 
-.field public static j:Ljava/lang/Object;
+.field public static m:Ljava/lang/Object;
 
 
 # direct methods
@@ -42,7 +48,7 @@
     :try_start_0
     new-instance v1, Ldalvik/system/PathClassLoader;
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_9
 
     const-string v2, "/system/framework/MiuiBooster.jar"
 
@@ -53,11 +59,11 @@
 
     invoke-direct {v1, v2, v3}, Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
-    sput-object v1, Lcom/mi/mibridge/MiBridge;->h:Ldalvik/system/PathClassLoader;
+    sput-object v1, Lcom/mi/mibridge/MiBridge;->k:Ldalvik/system/PathClassLoader;
 
-    sget-object v1, Lcom/mi/mibridge/MiBridge;->h:Ldalvik/system/PathClassLoader;
+    sget-object v1, Lcom/mi/mibridge/MiBridge;->k:Ldalvik/system/PathClassLoader;
     :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_9
 
     const-string v2, "com.miui.performance.MiuiBooster"
 
@@ -66,9 +72,9 @@
 
     move-result-object v1
 
-    sput-object v1, Lcom/mi/mibridge/MiBridge;->g:Ljava/lang/Class;
+    sput-object v1, Lcom/mi/mibridge/MiBridge;->j:Ljava/lang/Class;
 
-    sget-object v1, Lcom/mi/mibridge/MiBridge;->g:Ljava/lang/Class;
+    sget-object v1, Lcom/mi/mibridge/MiBridge;->j:Ljava/lang/Class;
 
     new-array v2, v0, [Ljava/lang/Class;
 
@@ -76,7 +82,7 @@
 
     move-result-object v1
 
-    sput-object v1, Lcom/mi/mibridge/MiBridge;->i:Ljava/lang/reflect/Constructor;
+    sput-object v1, Lcom/mi/mibridge/MiBridge;->l:Ljava/lang/reflect/Constructor;
 
     const/4 v1, 0x2
 
@@ -91,56 +97,251 @@
     const/4 v4, 0x1
 
     aput-object v3, v2, v4
-
-    sget-object v3, Lcom/mi/mibridge/MiBridge;->g:Ljava/lang/Class;
     :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_9
+
+    :try_start_3
+    sget-object v3, Lcom/mi/mibridge/MiBridge;->j:Ljava/lang/Class;
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
     const-string v5, "checkPermission"
 
-    :try_start_3
+    :try_start_4
     invoke-virtual {v3, v5, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
     sput-object v2, Lcom/mi/mibridge/MiBridge;->a:Ljava/lang/reflect/Method;
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
+    goto :goto_0
+
+    :catch_0
+    const-string v2, "MiBridge"
+
+    const-string v3, "checkPermission no exit"
+
+    :try_start_5
+    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_9
+
+    :goto_0
     const/4 v2, 0x4
 
+    const/4 v3, 0x3
+
+    :try_start_6
     new-array v2, v2, [Ljava/lang/Class;
 
-    const-class v3, Landroid/content/Context;
+    const-class v5, Landroid/content/Context;
 
-    aput-object v3, v2, v0
+    aput-object v5, v2, v0
 
-    const-class v3, Ljava/lang/String;
+    const-class v5, Ljava/lang/String;
 
-    aput-object v3, v2, v4
+    aput-object v5, v2, v4
 
-    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    aput-object v3, v2, v1
+    aput-object v5, v2, v1
 
-    const-class v3, Ljava/lang/String;
+    const-class v5, Ljava/lang/String;
 
-    const/4 v5, 0x3
+    aput-object v5, v2, v3
 
-    aput-object v3, v2, v5
-
-    sget-object v3, Lcom/mi/mibridge/MiBridge;->g:Ljava/lang/Class;
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    sget-object v5, Lcom/mi/mibridge/MiBridge;->j:Ljava/lang/Class;
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
 
     const-string v6, "checkPermission"
 
-    :try_start_4
-    invoke-virtual {v3, v6, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_start_7
+    invoke-virtual {v5, v6, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
     sput-object v2, Lcom/mi/mibridge/MiBridge;->b:Ljava/lang/reflect/Method;
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
 
-    new-array v2, v5, [Ljava/lang/Class;
+    goto :goto_1
+
+    :catch_1
+    const-string v2, "MiBridge"
+
+    const-string v5, "checkPermission_debug no exit"
+
+    :try_start_8
+    invoke-static {v2, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_8
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_9
+
+    :goto_1
+    :try_start_9
+    new-array v2, v3, [Ljava/lang/Class;
+
+    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v5, v2, v0
+
+    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v5, v2, v4
+
+    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v5, v2, v1
+
+    sget-object v5, Lcom/mi/mibridge/MiBridge;->j:Ljava/lang/Class;
+    :try_end_9
+    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_2
+
+    const-string v6, "requestCpuHighFreq"
+
+    :try_start_a
+    invoke-virtual {v5, v6, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/mi/mibridge/MiBridge;->c:Ljava/lang/reflect/Method;
+    :try_end_a
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_2
+
+    goto :goto_2
+
+    :catch_2
+    const-string v2, "MiBridge"
+
+    const-string v5, "requestCpuHighFreq no exit"
+
+    :try_start_b
+    invoke-static {v2, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_b
+    .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_9
+
+    :goto_2
+    :try_start_c
+    new-array v2, v4, [Ljava/lang/Class;
+
+    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v5, v2, v0
+
+    sget-object v5, Lcom/mi/mibridge/MiBridge;->j:Ljava/lang/Class;
+    :try_end_c
+    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_3
+
+    const-string v6, "cancelCpuHighFreq"
+
+    :try_start_d
+    invoke-virtual {v5, v6, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/mi/mibridge/MiBridge;->d:Ljava/lang/reflect/Method;
+    :try_end_d
+    .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_3
+
+    goto :goto_3
+
+    :catch_3
+    const-string v2, "MiBridge"
+
+    const-string v5, "cancelCpuHighFreq no exit"
+
+    :try_start_e
+    invoke-static {v2, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_e
+    .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_9
+
+    :goto_3
+    :try_start_f
+    new-array v2, v3, [Ljava/lang/Class;
+
+    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v5, v2, v0
+
+    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v5, v2, v4
+
+    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v5, v2, v1
+
+    sget-object v5, Lcom/mi/mibridge/MiBridge;->j:Ljava/lang/Class;
+    :try_end_f
+    .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_4
+
+    const-string v6, "requestThreadPriority"
+
+    :try_start_10
+    invoke-virtual {v5, v6, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/mi/mibridge/MiBridge;->e:Ljava/lang/reflect/Method;
+    :try_end_10
+    .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_4
+
+    goto :goto_4
+
+    :catch_4
+    const-string v2, "MiBridge"
+
+    const-string v5, "requestThreadPriority no exit"
+
+    :try_start_11
+    invoke-static {v2, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_11
+    .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_9
+
+    :goto_4
+    :try_start_12
+    new-array v2, v1, [Ljava/lang/Class;
+
+    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v5, v2, v0
+
+    sget-object v5, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v5, v2, v4
+
+    sget-object v5, Lcom/mi/mibridge/MiBridge;->j:Ljava/lang/Class;
+    :try_end_12
+    .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_5
+
+    const-string v6, "cancelThreadPriority"
+
+    :try_start_13
+    invoke-virtual {v5, v6, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v2
+
+    sput-object v2, Lcom/mi/mibridge/MiBridge;->f:Ljava/lang/reflect/Method;
+    :try_end_13
+    .catch Ljava/lang/Exception; {:try_start_13 .. :try_end_13} :catch_5
+
+    goto :goto_5
+
+    :catch_5
+    const-string v2, "MiBridge"
+
+    const-string v5, "cancelThreadPriority no exit"
+
+    :try_start_14
+    invoke-static {v2, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_14
+    .catch Ljava/lang/Exception; {:try_start_14 .. :try_end_14} :catch_9
+
+    :goto_5
+    :try_start_15
+    new-array v2, v3, [Ljava/lang/Class;
 
     sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
@@ -154,93 +355,110 @@
 
     aput-object v3, v2, v1
 
-    sget-object v3, Lcom/mi/mibridge/MiBridge;->g:Ljava/lang/Class;
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+    sget-object v3, Lcom/mi/mibridge/MiBridge;->j:Ljava/lang/Class;
+    :try_end_15
+    .catch Ljava/lang/Exception; {:try_start_15 .. :try_end_15} :catch_6
 
-    const-string v6, "requestCpuHighFreq"
+    const-string v5, "requestGpuHighFreq"
 
-    :try_start_5
-    invoke-virtual {v3, v6, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_start_16
+    invoke-virtual {v3, v5, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
-    sput-object v2, Lcom/mi/mibridge/MiBridge;->c:Ljava/lang/reflect/Method;
+    sput-object v2, Lcom/mi/mibridge/MiBridge;->g:Ljava/lang/reflect/Method;
+    :try_end_16
+    .catch Ljava/lang/Exception; {:try_start_16 .. :try_end_16} :catch_6
 
+    goto :goto_6
+
+    :catch_6
+    const-string v2, "MiBridge"
+
+    const-string v3, "requestGpuHighFreq no exit"
+
+    :try_start_17
+    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_17
+    .catch Ljava/lang/Exception; {:try_start_17 .. :try_end_17} :catch_9
+
+    :goto_6
+    :try_start_18
     new-array v2, v4, [Ljava/lang/Class;
 
     sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     aput-object v3, v2, v0
 
-    sget-object v3, Lcom/mi/mibridge/MiBridge;->g:Ljava/lang/Class;
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
+    sget-object v3, Lcom/mi/mibridge/MiBridge;->j:Ljava/lang/Class;
+    :try_end_18
+    .catch Ljava/lang/Exception; {:try_start_18 .. :try_end_18} :catch_7
 
-    const-string v6, "cancelCpuHighFreq"
+    const-string v5, "cancelGpuHighFreq"
 
-    :try_start_6
-    invoke-virtual {v3, v6, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v2
-
-    sput-object v2, Lcom/mi/mibridge/MiBridge;->d:Ljava/lang/reflect/Method;
-
-    new-array v2, v5, [Ljava/lang/Class;
-
-    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    aput-object v3, v2, v0
-
-    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    aput-object v3, v2, v4
-
-    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    aput-object v3, v2, v1
-
-    sget-object v3, Lcom/mi/mibridge/MiBridge;->g:Ljava/lang/Class;
-    :try_end_6
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
-
-    const-string v5, "requestThreadPriority"
-
-    :try_start_7
+    :try_start_19
     invoke-virtual {v3, v5, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
-    sput-object v2, Lcom/mi/mibridge/MiBridge;->e:Ljava/lang/reflect/Method;
+    sput-object v2, Lcom/mi/mibridge/MiBridge;->h:Ljava/lang/reflect/Method;
+    :try_end_19
+    .catch Ljava/lang/Exception; {:try_start_19 .. :try_end_19} :catch_7
 
+    goto :goto_7
+
+    :catch_7
+    const-string v2, "MiBridge"
+
+    const-string v3, "cancelGpuHighFreq no exit"
+
+    :try_start_1a
+    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1a
+    .catch Ljava/lang/Exception; {:try_start_1a .. :try_end_1a} :catch_9
+
+    :goto_7
+    :try_start_1b
     new-array v1, v1, [Ljava/lang/Class;
 
     sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     aput-object v2, v1, v0
 
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    const-class v2, Ljava/lang/String;
 
     aput-object v2, v1, v4
 
-    sget-object v2, Lcom/mi/mibridge/MiBridge;->g:Ljava/lang/Class;
-    :try_end_7
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
+    sget-object v2, Lcom/mi/mibridge/MiBridge;->j:Ljava/lang/Class;
+    :try_end_1b
+    .catch Ljava/lang/Exception; {:try_start_1b .. :try_end_1b} :catch_8
 
-    const-string v3, "cancelThreadPriority"
+    const-string v3, "requestIOPrefetch"
 
-    :try_start_8
+    :try_start_1c
     invoke-virtual {v2, v3, v1}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
-    sput-object v1, Lcom/mi/mibridge/MiBridge;->f:Ljava/lang/reflect/Method;
-    :try_end_8
-    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
+    sput-object v1, Lcom/mi/mibridge/MiBridge;->i:Ljava/lang/reflect/Method;
+    :try_end_1c
+    .catch Ljava/lang/Exception; {:try_start_1c .. :try_end_1c} :catch_8
 
-    goto :goto_0
+    goto :goto_8
 
-    :catch_0
+    :catch_8
+    const-string v1, "MiBridge"
+
+    const-string v2, "requestIOPrefetch no exit"
+
+    :try_start_1d
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1d
+    .catch Ljava/lang/Exception; {:try_start_1d .. :try_end_1d} :catch_9
+
+    goto :goto_8
+
+    :catch_9
     move-exception v1
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -261,13 +479,13 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :goto_0
-    :try_start_9
-    sget-object v1, Lcom/mi/mibridge/MiBridge;->i:Ljava/lang/reflect/Constructor;
+    :goto_8
+    :try_start_1e
+    sget-object v1, Lcom/mi/mibridge/MiBridge;->l:Ljava/lang/reflect/Constructor;
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcom/mi/mibridge/MiBridge;->i:Ljava/lang/reflect/Constructor;
+    sget-object v1, Lcom/mi/mibridge/MiBridge;->l:Ljava/lang/reflect/Constructor;
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -275,13 +493,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/mi/mibridge/MiBridge;->j:Ljava/lang/Object;
-    :try_end_9
-    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
+    sput-object v0, Lcom/mi/mibridge/MiBridge;->m:Ljava/lang/Object;
+    :try_end_1e
+    .catch Ljava/lang/Exception; {:try_start_1e .. :try_end_1e} :catch_a
 
-    goto :goto_1
+    goto :goto_9
 
-    :catch_1
+    :catch_a
     move-exception v0
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -303,7 +521,7 @@
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    :goto_1
+    :goto_9
     return-void
 .end method
 
@@ -315,7 +533,7 @@
     :try_start_0
     sget-object v1, Lcom/mi/mibridge/MiBridge;->a:Ljava/lang/reflect/Method;
 
-    sget-object v2, Lcom/mi/mibridge/MiBridge;->j:Ljava/lang/Object;
+    sget-object v2, Lcom/mi/mibridge/MiBridge;->m:Ljava/lang/Object;
 
     const/4 v3, 0x2
 
@@ -380,7 +598,7 @@
     :try_start_0
     sget-object v0, Lcom/mi/mibridge/MiBridge;->c:Ljava/lang/reflect/Method;
 
-    sget-object v1, Lcom/mi/mibridge/MiBridge;->j:Ljava/lang/Object;
+    sget-object v1, Lcom/mi/mibridge/MiBridge;->m:Ljava/lang/Object;
 
     const/4 v2, 0x3
 

@@ -27,7 +27,7 @@
 .method constructor <init>(Lmiuix/slidingwidget/widget/SlidingButtonHelper;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 736
+    .line 741
     iput-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper$7;->this$0:Lmiuix/slidingwidget/widget/SlidingButtonHelper;
 
     iput-object p2, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper$7;->val$callBack:Ljava/lang/Runnable;
@@ -42,7 +42,7 @@
 .method public onAnimationEnd(Lmiuix/animation/physics/DynamicAnimation;ZFF)V
     .locals 0
 
-    .line 739
+    .line 744
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper$7;->val$callBack:Ljava/lang/Runnable;
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V

@@ -408,6 +408,7 @@
 
     goto :goto_0
 
+    .line 219
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/LinearSmoothScroller;->mTargetVector:Landroid/graphics/PointF;
 
@@ -452,6 +453,7 @@
 
     goto :goto_0
 
+    .line 233
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/LinearSmoothScroller;->mTargetVector:Landroid/graphics/PointF;
 

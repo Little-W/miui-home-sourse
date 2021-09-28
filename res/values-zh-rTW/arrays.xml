@@ -2,7 +2,7 @@
 <resources>
     <string-array name="editing_mode_entries">
         <item>修改桌布</item>
-        <item>增加工具</item>
+        <item>增加小工具</item>
         <item>桌面設定</item>
     </string-array>
     <string-array name="gadget_weather_image">

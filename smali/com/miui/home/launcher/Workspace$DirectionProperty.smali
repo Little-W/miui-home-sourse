@@ -47,7 +47,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 3335
+    .line 3529
     new-instance v0, Lcom/miui/home/launcher/Workspace$DirectionProperty;
 
     const-string v1, "X"
@@ -60,7 +60,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/Workspace$DirectionProperty;->X:Lcom/miui/home/launcher/Workspace$DirectionProperty;
 
-    .line 3336
+    .line 3530
     new-instance v0, Lcom/miui/home/launcher/Workspace$DirectionProperty;
 
     const-string v1, "ALPHA"
@@ -75,7 +75,7 @@
 
     const/4 v0, 0x2
 
-    .line 3334
+    .line 3528
     new-array v0, v0, [Lcom/miui/home/launcher/Workspace$DirectionProperty;
 
     sget-object v1, Lcom/miui/home/launcher/Workspace$DirectionProperty;->X:Lcom/miui/home/launcher/Workspace$DirectionProperty;
@@ -103,10 +103,10 @@
         }
     .end annotation
 
-    .line 3340
+    .line 3534
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3341
+    .line 3535
     iput-object p3, p0, Lcom/miui/home/launcher/Workspace$DirectionProperty;->viewProperty:Landroid/util/Property;
 
     return-void
@@ -115,7 +115,7 @@
 .method static synthetic access$1700(Lcom/miui/home/launcher/Workspace$DirectionProperty;)Landroid/util/Property;
     .locals 0
 
-    .line 3334
+    .line 3528
     iget-object p0, p0, Lcom/miui/home/launcher/Workspace$DirectionProperty;->viewProperty:Landroid/util/Property;
 
     return-object p0
@@ -124,7 +124,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/home/launcher/Workspace$DirectionProperty;
     .locals 1
 
-    .line 3334
+    .line 3528
     const-class v0, Lcom/miui/home/launcher/Workspace$DirectionProperty;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -139,7 +139,7 @@
 .method public static values()[Lcom/miui/home/launcher/Workspace$DirectionProperty;
     .locals 1
 
-    .line 3334
+    .line 3528
     sget-object v0, Lcom/miui/home/launcher/Workspace$DirectionProperty;->$VALUES:[Lcom/miui/home/launcher/Workspace$DirectionProperty;
 
     invoke-virtual {v0}, [Lcom/miui/home/launcher/Workspace$DirectionProperty;->clone()Ljava/lang/Object;

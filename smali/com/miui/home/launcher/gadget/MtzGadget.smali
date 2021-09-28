@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Lcom/miui/home/launcher/gadget/ColorUpdatable;
+.implements Lcom/miui/home/launcher/interfaces/AutoAlignable;
 
 
 # static fields
@@ -34,10 +35,10 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/miui/home/launcher/gadget/GadgetInfo;)V
     .locals 3
 
-    .line 36
+    .line 37
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/gadget/AdvancedGadget;-><init>(Landroid/content/Context;)V
 
-    .line 37
+    .line 38
     invoke-virtual {p2}, Lcom/miui/home/launcher/gadget/GadgetInfo;->isMtzGadget()Z
 
     move-result v0
@@ -46,7 +47,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 38
+    .line 39
     new-instance v0, Ljava/io/File;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getMtzUri()Landroid/net/Uri;
@@ -65,7 +66,7 @@
 
     if-nez v0, :cond_0
 
-    .line 39
+    .line 40
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/MtzGadget;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -74,7 +75,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0a00de
+    const v0, 0x7f0a00df
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -82,14 +83,14 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    const v0, 0x7f10026f
+    const v0, 0x7f100279
 
-    .line 40
+    .line 41
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
 
     const-string p1, "MtzGadget"
 
-    .line 41
+    .line 42
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,11 +105,9 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     goto :goto_1
 
-    .line 43
+    .line 44
     :cond_0
     invoke-virtual {p2}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getCategoryId()I
 
@@ -128,7 +127,7 @@
     :goto_0
     iput-boolean v2, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mIsPlayer:Z
 
-    .line 44
+    .line 45
     invoke-virtual {p2}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getMtzUri()Landroid/net/Uri;
 
     move-result-object p2
@@ -145,18 +144,18 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mElementContext:Ljava/lang/Object;
 
-    .line 45
+    .line 46
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/gadget/MtzGadget;->setWillNotDraw(Z)V
 
     goto :goto_1
 
-    .line 48
+    .line 49
     :cond_2
     invoke-static {p1, v1, p0}, Lcom/miui/home/launcher/gadget/MtzGadget;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     const-string p1, "MtzGadget"
 
-    .line 49
+    .line 50
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -171,9 +170,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 51
+    .line 52
     :goto_1
     new-instance p1, Landroid/view/GestureDetector;
 
@@ -191,7 +188,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/gadget/MtzGadget;)Z
     .locals 0
 
-    .line 22
+    .line 23
     iget-boolean p0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mIsPlayer:Z
 
     return p0
@@ -202,7 +199,7 @@
 .method public cleanUp()V
     .locals 2
 
-    .line 190
+    .line 191
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mRoot:Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mAwesomeView:Landroid/view/View;
@@ -215,12 +212,12 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 175
+    .line 176
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mGestureDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 176
+    .line 177
     invoke-super {p0, p1}, Lcom/miui/home/launcher/gadget/AdvancedGadget;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -231,7 +228,7 @@
 .method public isInvalidateGadget()Z
     .locals 1
 
-    .line 61
+    .line 62
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mElementContext:Ljava/lang/Object;
 
     if-nez v0, :cond_0
@@ -256,14 +253,14 @@
 .method public onCreate()V
     .locals 4
 
-    .line 100
+    .line 101
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mElementContext:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 105
+    .line 106
     :cond_0
     :try_start_0
     invoke-static {v0}, Lcom/miui/launcher/utils/MamlUtils;->getManifestRoot(Ljava/lang/Object;)Lorg/w3c/dom/Element;
@@ -274,7 +271,7 @@
 
     return-void
 
-    .line 109
+    .line 110
     :cond_1
     sget-object v1, Lcom/miui/home/launcher/gadget/MtzGadget;->ROOT_TAG:Ljava/lang/String;
 
@@ -288,7 +285,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 112
+    .line 113
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mElementContext:Ljava/lang/Object;
 
     invoke-static {v0}, Lcom/miui/launcher/utils/MamlUtils;->createScreenElementRoot(Ljava/lang/Object;)Ljava/lang/Object;
@@ -297,21 +294,21 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mRoot:Ljava/lang/Object;
 
-    .line 113
+    .line 114
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mRoot:Ljava/lang/Object;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/miui/launcher/utils/MamlUtils;->setScaleByDensity(Ljava/lang/Object;Z)V
 
-    .line 114
+    .line 115
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mRoot:Ljava/lang/Object;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/miui/launcher/utils/MamlUtils;->setDefaultFramerate(Ljava/lang/Object;F)V
 
-    .line 115
+    .line 116
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mRoot:Ljava/lang/Object;
 
     invoke-static {v0}, Lcom/miui/launcher/utils/MamlUtils;->load(Ljava/lang/Object;)Z
@@ -322,7 +319,7 @@
 
     return-void
 
-    .line 110
+    .line 111
     :cond_2
     new-instance v1, Ljava/lang/Exception;
 
@@ -353,10 +350,10 @@
     :catch_0
     move-exception v0
 
-    .line 119
+    .line 120
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 120
+    .line 121
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/MtzGadget;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -365,7 +362,7 @@
 
     invoke-static {v0, v1, p0}, Lcom/miui/home/launcher/gadget/MtzGadget;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 123
+    .line 124
     :cond_3
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mRoot:Ljava/lang/Object;
 
@@ -373,7 +370,7 @@
 
     return-void
 
-    .line 126
+    .line 127
     :cond_4
     new-instance v0, Lcom/miui/home/launcher/gadget/MtzGadget$2;
 
@@ -381,14 +378,14 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mCommandListener:Lcom/miui/launcher/views/MamlOnExternCommandListener;
 
-    .line 140
+    .line 141
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mRoot:Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mCommandListener:Lcom/miui/launcher/views/MamlOnExternCommandListener;
 
     invoke-static {v0, v1}, Lcom/miui/launcher/utils/MamlUtils;->setOnExternCommandListener(Ljava/lang/Object;Lcom/miui/launcher/views/MamlOnExternCommandListener;)V
 
-    .line 141
+    .line 142
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mRoot:Ljava/lang/Object;
@@ -399,26 +396,26 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mAwesomeView:Landroid/view/View;
 
-    .line 142
+    .line 143
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mAwesomeView:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setFocusable(Z)V
 
-    .line 143
+    .line 144
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     const/4 v1, -0x1
 
     invoke-direct {v0, v1, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    .line 146
+    .line 147
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mAwesomeView:Landroid/view/View;
 
     invoke-virtual {p0, v1, v0}, Lcom/miui/home/launcher/gadget/MtzGadget;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 147
+    .line 148
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/MtzGadget;->updateColor()V
 
     return-void
@@ -439,18 +436,18 @@
 .method public onPause()V
     .locals 3
 
-    .line 66
+    .line 67
     invoke-super {p0}, Lcom/miui/home/launcher/gadget/AdvancedGadget;->onPause()V
 
-    .line 67
+    .line 68
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mRoot:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 68
+    .line 69
     monitor-enter v0
 
-    .line 69
+    .line 70
     :try_start_0
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mRoot:Ljava/lang/Object;
 
@@ -458,7 +455,7 @@
 
     invoke-static {v1, v2}, Lcom/miui/launcher/utils/MamlUtils;->onCommand(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 70
+    .line 71
     monitor-exit v0
 
     goto :goto_0
@@ -472,7 +469,7 @@
 
     throw v1
 
-    .line 72
+    .line 73
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mAwesomeView:Landroid/view/View;
@@ -485,18 +482,18 @@
 .method public onResume()V
     .locals 3
 
-    .line 77
+    .line 78
     invoke-super {p0}, Lcom/miui/home/launcher/gadget/AdvancedGadget;->onResume()V
 
-    .line 78
+    .line 79
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mRoot:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 79
+    .line 80
     monitor-enter v0
 
-    .line 80
+    .line 81
     :try_start_0
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mRoot:Ljava/lang/Object;
 
@@ -504,7 +501,7 @@
 
     invoke-static {v1, v2}, Lcom/miui/launcher/utils/MamlUtils;->onCommand(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 81
+    .line 82
     monitor-exit v0
 
     goto :goto_0
@@ -518,7 +515,7 @@
 
     throw v1
 
-    .line 83
+    .line 84
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mAwesomeView:Landroid/view/View;
@@ -531,7 +528,7 @@
 .method public onStart()V
     .locals 1
 
-    .line 152
+    .line 153
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mAwesomeView:Landroid/view/View;
 
     invoke-static {v0}, Lcom/miui/launcher/utils/MamlUtils;->onResume(Ljava/lang/Object;)V
@@ -542,7 +539,7 @@
 .method public onStop()V
     .locals 1
 
-    .line 162
+    .line 163
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mAwesomeView:Landroid/view/View;
 
     invoke-static {v0}, Lcom/miui/launcher/utils/MamlUtils;->onPause(Ljava/lang/Object;)V
@@ -553,7 +550,7 @@
 .method public onWallpaperColorChanged()V
     .locals 0
 
-    .line 157
+    .line 158
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/MtzGadget;->updateColor()V
 
     return-void
@@ -562,7 +559,7 @@
 .method public updateColor()V
     .locals 2
 
-    .line 185
+    .line 186
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mRoot:Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/MtzGadget;->mElementContext:Ljava/lang/Object;

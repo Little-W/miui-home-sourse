@@ -54,8 +54,14 @@
 
     div-double/2addr v1, v4
 
-    .line 32
-    aput-wide v1, p2, v3
+    const-wide/high16 v4, 0x404e000000000000L    # 60.0
+
+    .line 33
+    invoke-static {v1, v2, v4, v5}, Ljava/lang/Math;->min(DD)D
+
+    move-result-wide v0
+
+    aput-wide v0, p2, v3
 
     return-void
 .end method
@@ -65,12 +71,12 @@
 
     const/4 v0, 0x0
 
-    .line 38
+    .line 39
     aget-wide v0, p9, v0
 
     const/4 v2, 0x1
 
-    .line 39
+    .line 40
     aget-wide v2, p9, v2
 
     mul-double/2addr p5, p7

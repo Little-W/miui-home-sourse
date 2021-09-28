@@ -78,7 +78,7 @@
 
     sput-object v0, Lcom/android/thememanager/receiver/WallpaperChangedReceiver;->sScreen:Landroid/graphics/Point;
 
-    const-string v0, "window"
+    const-string/jumbo v0, "window"
 
     .line 95
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;

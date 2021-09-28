@@ -22,7 +22,7 @@
 
 .field private mShadow:Ljava/lang/String;
 
-.field private mSpectrumVisualizer:Lmiui/widget/SpectrumVisualizer;
+.field private mSpectrumVisualizer:Lcom/miui/maml/widget/SpectrumVisualizer;
 
 
 # direct methods
@@ -74,7 +74,7 @@
     iput-object v0, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mShadow:Ljava/lang/String;
 
     .line 50
-    new-instance v0, Lmiui/widget/SpectrumVisualizer;
+    new-instance v0, Lcom/miui/maml/widget/SpectrumVisualizer;
 
     invoke-virtual {p0}, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
 
@@ -82,21 +82,21 @@
 
     iget-object v1, v1, Lcom/miui/maml/ScreenContext;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lmiui/widget/SpectrumVisualizer;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/miui/maml/widget/SpectrumVisualizer;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lmiui/widget/SpectrumVisualizer;
+    iput-object v0, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lcom/miui/maml/widget/SpectrumVisualizer;
 
     .line 51
-    iget-object v0, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lmiui/widget/SpectrumVisualizer;
+    iget-object v0, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lcom/miui/maml/widget/SpectrumVisualizer;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lmiui/widget/SpectrumVisualizer;->setSoftDrawEnabled(Z)V
+    invoke-virtual {v0, v1}, Lcom/miui/maml/widget/SpectrumVisualizer;->setSoftDrawEnabled(Z)V
 
     .line 52
-    iget-object v0, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lmiui/widget/SpectrumVisualizer;
+    iget-object v0, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lcom/miui/maml/widget/SpectrumVisualizer;
 
-    invoke-virtual {v0, v1}, Lmiui/widget/SpectrumVisualizer;->enableUpdate(Z)V
+    invoke-virtual {v0, v1}, Lcom/miui/maml/widget/SpectrumVisualizer;->enableUpdate(Z)V
 
     const-string v0, "alphaWidthNum"
 
@@ -157,9 +157,9 @@
     .locals 1
 
     .line 116
-    iget-object v0, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lmiui/widget/SpectrumVisualizer;
+    iget-object v0, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lcom/miui/maml/widget/SpectrumVisualizer;
 
-    invoke-virtual {v0, p1}, Lmiui/widget/SpectrumVisualizer;->enableUpdate(Z)V
+    invoke-virtual {v0, p1}, Lcom/miui/maml/widget/SpectrumVisualizer;->enableUpdate(Z)V
 
     return-void
 .end method
@@ -190,11 +190,11 @@
     invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->setDensity(I)V
 
     .line 109
-    iget-object p1, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lmiui/widget/SpectrumVisualizer;
+    iget-object p1, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lcom/miui/maml/widget/SpectrumVisualizer;
 
     iget-object v0, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mCanvas:Landroid/graphics/Canvas;
 
-    invoke-virtual {p1, v0}, Lmiui/widget/SpectrumVisualizer;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {p1, v0}, Lcom/miui/maml/widget/SpectrumVisualizer;->draw(Landroid/graphics/Canvas;)V
 
     .line 110
     iget-object p1, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mCanvas:Landroid/graphics/Canvas;
@@ -353,9 +353,9 @@
 
     .line 80
     :cond_5
-    iget-object v4, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lmiui/widget/SpectrumVisualizer;
+    iget-object v4, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lcom/miui/maml/widget/SpectrumVisualizer;
 
-    invoke-virtual {v4, v2, v3, v0, v1}, Lmiui/widget/SpectrumVisualizer;->setBitmaps(IILandroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
+    invoke-virtual {v4, v2, v3, v0, v1}, Lcom/miui/maml/widget/SpectrumVisualizer;->setBitmaps(IILandroid/graphics/Bitmap;Landroid/graphics/Bitmap;)V
 
     .line 81
     iget v1, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mAlphaWidthNum:I
@@ -363,9 +363,9 @@
     if-ltz v1, :cond_6
 
     .line 82
-    iget-object v4, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lmiui/widget/SpectrumVisualizer;
+    iget-object v4, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lcom/miui/maml/widget/SpectrumVisualizer;
 
-    invoke-virtual {v4, v1}, Lmiui/widget/SpectrumVisualizer;->setAlphaNum(I)V
+    invoke-virtual {v4, v1}, Lcom/miui/maml/widget/SpectrumVisualizer;->setAlphaNum(I)V
 
     .line 84
     :cond_6
@@ -376,11 +376,11 @@
     iput v0, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mResDensity:I
 
     .line 87
-    iget-object v0, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lmiui/widget/SpectrumVisualizer;
+    iget-object v0, p0, Lcom/miui/maml/elements/SpectrumVisualizerScreenElement;->mSpectrumVisualizer:Lcom/miui/maml/widget/SpectrumVisualizer;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, v1, v2, v3}, Lmiui/widget/SpectrumVisualizer;->layout(IIII)V
+    invoke-virtual {v0, v1, v1, v2, v3}, Lcom/miui/maml/widget/SpectrumVisualizer;->layout(IIII)V
 
     .line 88
     sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;

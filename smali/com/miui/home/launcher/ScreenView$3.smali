@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ScreenView;)V
     .locals 0
 
-    .line 2110
+    .line 2133
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView$3;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 2113
+    .line 2136
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$3;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     iget-object v1, v0, Lcom/miui/home/launcher/ScreenView;->mScreenSeekBar:Lcom/miui/home/launcher/ScreenView$IndicatorView;

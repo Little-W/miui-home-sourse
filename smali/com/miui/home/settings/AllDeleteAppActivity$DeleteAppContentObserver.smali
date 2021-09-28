@@ -35,7 +35,7 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 196
+    .line 218
     iput-object p1, p0, Lcom/miui/home/settings/AllDeleteAppActivity$DeleteAppContentObserver;->this$0:Lcom/miui/home/settings/AllDeleteAppActivity;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -50,7 +50,7 @@
 .method public onChange(Z)V
     .locals 1
 
-    .line 198
+    .line 220
     iget-object p1, p0, Lcom/miui/home/settings/AllDeleteAppActivity$DeleteAppContentObserver;->handler:Landroid/os/Handler;
 
     new-instance v0, Lcom/miui/home/settings/AllDeleteAppActivity$DeleteAppContentObserver$onChange$1;

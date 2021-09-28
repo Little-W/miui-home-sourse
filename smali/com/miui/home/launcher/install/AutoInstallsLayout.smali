@@ -336,8 +336,6 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     :cond_1
     const-string p1, "ignoreAlign"
 
@@ -376,8 +374,6 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    invoke-static {p1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     return-void
@@ -472,8 +468,6 @@
     const-string p1, "not support elderly mode layout"
 
     .line 56
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-object v0
 
     .line 59
@@ -493,8 +487,6 @@
     const-string p1, "not support other userId"
 
     .line 60
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-object v0
 
     :cond_1
@@ -516,8 +508,6 @@
     const-string p1, "not found pai config apk"
 
     .line 66
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-object v0
 
     .line 69
@@ -591,7 +581,7 @@
 
     move-result-object v0
 
-    const-string v1, "xml"
+    const-string/jumbo v1, "xml"
 
     .line 75
     invoke-virtual {p2, v0, v1, p1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
@@ -620,8 +610,6 @@
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 79
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
@@ -656,7 +644,7 @@
 
     move-result-object v0
 
-    const-string v1, "xml"
+    const-string/jumbo v1, "xml"
 
     .line 81
     invoke-virtual {p2, v0, v1, p1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
@@ -687,11 +675,9 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     const-string v0, "default_layout"
 
-    const-string v1, "xml"
+    const-string/jumbo v1, "xml"
 
     .line 86
     invoke-virtual {p2, v0, v1, p1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
@@ -718,8 +704,6 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     const/4 p0, 0x0
 
     return-object p0
@@ -736,7 +720,7 @@
 
     move-result-object v4
 
-    const-string v5, "workspace"
+    const-string/jumbo v5, "workspace"
 
     move-object v0, p1
 
@@ -965,7 +949,7 @@
 
     if-eqz v0, :cond_1
 
-    const-string p2, "workspace"
+    const-string/jumbo p2, "workspace"
 
     .line 218
     invoke-static {p1, p2, v1}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->getAttributeResourceValue(Landroid/content/res/XmlResourceParser;Ljava/lang/String;I)I
@@ -1061,7 +1045,7 @@
 
     const-string v4, "cellX"
 
-    const-string v5, "x"
+    const-string/jumbo v5, "x"
 
     .line 238
     invoke-static {p1, v5}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->getAttributeValue(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
@@ -1082,7 +1066,7 @@
 
     const-string v4, "cellY"
 
-    const-string v5, "y"
+    const-string/jumbo v5, "y"
 
     .line 240
     invoke-static {p1, v5}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->getAttributeValue(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
@@ -1154,8 +1138,6 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return v1
 
     .line 251
@@ -1199,8 +1181,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 510
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1384,6 +1364,8 @@
     const-wide/16 p0, -0x1
 
     return-wide p0
+
+    nop
 
     :sswitch_data_0
     .sparse-switch
@@ -1617,8 +1599,6 @@
     const-string v2, "getRemoteLayoutSystemCreatedFolderTitles"
 
     .line 277
-    invoke-static {v1, v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :cond_1
     return-object v0
 .end method
@@ -1675,8 +1655,6 @@
     const-string v1, "Error parsing layout"
 
     .line 186
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     const/4 p1, -0x1
 
     return p1

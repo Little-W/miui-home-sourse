@@ -17,7 +17,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 40
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +28,7 @@
 
     const/4 v0, 0x0
 
-    .line 48
+    .line 46
     :try_start_0
     const-class v1, Landroid/content/res/Configuration;
 
@@ -44,7 +44,7 @@
 
     goto :goto_0
 
-    .line 49
+    .line 47
     :cond_0
     iget v0, p0, Landroid/content/res/MiuiConfiguration;->themeChanged:I
     :try_end_0
@@ -60,7 +60,7 @@
 
     const-string v2, "Invoke | Configuration_getThemeChanged() occur EXCEPTION: "
 
-    .line 51
+    .line 49
     invoke-static {v1, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -71,7 +71,7 @@
 
     const/4 v0, 0x0
 
-    .line 104
+    .line 102
     :try_start_0
     const-class v1, Landroid/content/Context;
 
@@ -102,7 +102,7 @@
 
     const-string v2, "Invoke | Context_getUserId() occur EXCEPTION: "
 
-    .line 106
+    .line 104
     invoke-static {v1, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -111,7 +111,7 @@
 .method public static Context_startActivityAsUser(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;Landroid/os/UserHandle;)V
     .locals 8
 
-    .line 58
+    .line 56
     :try_start_0
     const-class v0, Landroid/content/Context;
 
@@ -160,7 +160,7 @@
 
     const-string p2, "Invoke | Context_startActivityAsUser() occur EXCEPTION: "
 
-    .line 61
+    .line 59
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -170,7 +170,7 @@
 .method public static Context_startServiceAsUser(Landroid/content/Context;Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
     .locals 7
 
-    .line 67
+    .line 65
     :try_start_0
     const-class v0, Landroid/content/Context;
 
@@ -215,7 +215,7 @@
 
     const-string p2, "Invoke | Context_startServiceAsUser() occur EXCEPTION: "
 
-    .line 70
+    .line 68
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -226,7 +226,7 @@
 .method public static MemoryFile_getFileDescriptor(Landroid/os/MemoryFile;)Ljava/io/FileDescriptor;
     .locals 4
 
-    .line 113
+    .line 111
     :try_start_0
     const-class v0, Ljava/io/FileDescriptor;
 
@@ -255,7 +255,7 @@
 
     const-string v1, "Invoke | MemoryFile_getFileDescriptor() occur EXCEPTION: "
 
-    .line 115
+    .line 113
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -268,7 +268,7 @@
 
     const/4 v0, 0x0
 
-    .line 228
+    .line 222
     :try_start_0
     const-class v1, Landroid/view/MotionEvent;
 
@@ -299,7 +299,7 @@
 
     const-string v2, "Invoke | MotionEvent_isTouchEvent() occur EXCEPTION: "
 
-    .line 230
+    .line 224
     invoke-static {v1, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -313,124 +313,70 @@
     :try_start_0
     const-string v1, "miui.content.pm.PreloadedAppPolicy"
 
-    .line 175
+    .line 173
     invoke-static {v1}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 176
+    .line 174
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x1c
 
-    const/4 v4, 0x0
-
-    const/4 v5, 0x3
-
-    const/4 v6, 0x2
-
-    const/4 v7, 0x4
-
-    const/4 v8, 0x1
-
     if-lt v2, v3, :cond_0
 
-    const-string v2, "installPreloadedDataApp"
+    const/4 v2, 0x0
 
-    .line 177
-    new-array v3, v7, [Ljava/lang/Class;
+    const-string v3, "installPreloadedDataApp"
 
-    const-class v9, Landroid/content/Context;
+    const/4 v4, 0x4
 
-    aput-object v9, v3, v0
+    .line 175
+    new-array v5, v4, [Ljava/lang/Class;
 
-    const-class v9, Ljava/lang/String;
+    const-class v6, Landroid/content/Context;
 
-    aput-object v9, v3, v8
+    aput-object v6, v5, v0
 
-    const-class v9, Landroid/content/pm/IPackageInstallObserver2;
+    const-class v6, Ljava/lang/String;
 
-    aput-object v9, v3, v6
+    const/4 v7, 0x1
 
-    sget-object v9, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    aput-object v6, v5, v7
 
-    aput-object v9, v3, v5
+    const-class v6, Landroid/content/pm/IPackageInstallObserver2;
 
-    new-array v7, v7, [Ljava/lang/Object;
+    const/4 v8, 0x2
 
-    aput-object p0, v7, v0
+    aput-object v6, v5, v8
 
-    aput-object p1, v7, v8
+    sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    const/4 v9, 0x3
+
+    aput-object v6, v5, v9
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    aput-object p0, v4, v0
+
+    aput-object p1, v4, v7
 
     new-instance p1, Lcom/miui/maml/util/HideSdkDependencyUtils$1;
 
     invoke-direct {p1, p0, p2, p3}, Lcom/miui/maml/util/HideSdkDependencyUtils$1;-><init>(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    aput-object p1, v7, v6
+    aput-object p1, v4, v8
 
-    .line 187
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    aput-object p0, v7, v5
-
-    .line 177
-    invoke-static {v1, v4, v2, v3, v7}, Lcom/miui/maml/util/ReflectionHelper;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    .line 185
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
-    check-cast p0, Ljava/lang/Boolean;
+    aput-object p0, v4, v9
 
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const-string v2, "installPreloadedDataApp"
-
-    .line 189
-    new-array v3, v7, [Ljava/lang/Class;
-
-    const-class v9, Landroid/content/Context;
-
-    aput-object v9, v3, v0
-
-    const-class v9, Ljava/lang/String;
-
-    aput-object v9, v3, v8
-
-    const-class v9, Landroid/content/pm/IPackageInstallObserver;
-
-    aput-object v9, v3, v6
-
-    sget-object v9, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    aput-object v9, v3, v5
-
-    new-array v7, v7, [Ljava/lang/Object;
-
-    aput-object p0, v7, v0
-
-    aput-object p1, v7, v8
-
-    new-instance p1, Lcom/miui/maml/util/HideSdkDependencyUtils$2;
-
-    invoke-direct {p1, p0, p2, p3}, Lcom/miui/maml/util/HideSdkDependencyUtils$2;-><init>(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
-
-    aput-object p1, v7, v6
-
-    .line 195
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    aput-object p0, v7, v5
-
-    .line 189
-    invoke-static {v1, v4, v2, v3, v7}, Lcom/miui/maml/util/ReflectionHelper;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    .line 175
+    invoke-static {v1, v2, v3, v5, v4}, Lcom/miui/maml/util/ReflectionHelper;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -444,6 +390,9 @@
 
     return p0
 
+    :cond_0
+    return v0
+
     :catch_0
     move-exception p0
 
@@ -451,7 +400,7 @@
 
     const-string p2, "Invoke | PreloadedAppPolicy_installPreloadedDataApp() occur EXCEPTION: "
 
-    .line 198
+    .line 192
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -462,7 +411,7 @@
 
     const/4 v0, 0x0
 
-    .line 253
+    .line 247
     :try_start_0
     const-class v1, Landroid/provider/Settings$Secure;
 
@@ -485,7 +434,7 @@
 
     const-string v3, "Invoke | SettingsSecure_UI_NIGHT_MODE() occur EXCEPTION: "
 
-    .line 255
+    .line 249
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v0
@@ -494,7 +443,7 @@
 .method public static StorageManager_disableUsbMassStorage(Landroid/os/storage/StorageManager;)V
     .locals 4
 
-    .line 140
+    .line 138
     :try_start_0
     const-class v0, Landroid/os/storage/StorageManager;
 
@@ -519,7 +468,7 @@
 
     const-string v1, "Invoke | StorageManager_disableUsbMassStorage() occur EXCEPTION: "
 
-    .line 142
+    .line 140
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -529,7 +478,7 @@
 .method public static StorageManager_enableUsbMassStorage(Landroid/os/storage/StorageManager;)V
     .locals 4
 
-    .line 132
+    .line 130
     :try_start_0
     const-class v0, Landroid/os/storage/StorageManager;
 
@@ -554,7 +503,7 @@
 
     const-string v1, "Invoke | StorageManager_enableUsbMassStorage() occur EXCEPTION: "
 
-    .line 134
+    .line 132
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -566,7 +515,7 @@
 
     const/4 v0, 0x0
 
-    .line 122
+    .line 120
     :try_start_0
     const-class v1, Landroid/os/storage/StorageManager;
 
@@ -597,7 +546,7 @@
 
     const-string v2, "Invoke | StorageManager_isUsbMassStorageEnabled() occur EXCEPTION: "
 
-    .line 124
+    .line 122
     invoke-static {v1, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -609,7 +558,7 @@
     :try_start_0
     const-string v0, "android.view.SurfaceControl"
 
-    .line 319
+    .line 313
     invoke-static {v0}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -620,7 +569,7 @@
 
     const/4 v3, 0x0
 
-    .line 320
+    .line 314
     new-array v4, v3, [Ljava/lang/Class;
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -638,7 +587,7 @@
 
     const-string v2, "Invoke | SurfaceControl_closeTransaction() occur EXCEPTION: "
 
-    .line 322
+    .line 316
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -648,14 +597,14 @@
 .method public static SurfaceControl_getInstance()Landroid/view/SurfaceControl;
     .locals 3
 
-    .line 270
+    .line 264
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
 
     if-ne v0, v1, :cond_0
 
-    .line 272
+    .line 266
     :try_start_0
     const-class v0, Landroid/view/SurfaceControl;
 
@@ -682,7 +631,7 @@
 
     const-string v2, "Invoke | SurfaceControl_getInstance() occur EXCEPTION: "
 
-    .line 274
+    .line 268
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -694,14 +643,14 @@
 .method public static SurfaceControl_getInstance_with_engine(Landroid/service/wallpaper/WallpaperService$Engine;)Landroid/view/SurfaceControl;
     .locals 3
 
-    .line 396
+    .line 390
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1d
 
     if-ne v0, v1, :cond_0
 
-    .line 398
+    .line 392
     :try_start_0
     const-class v0, Landroid/view/SurfaceControl;
 
@@ -717,7 +666,7 @@
 
     check-cast v0, Landroid/view/SurfaceControl;
 
-    .line 399
+    .line 393
     invoke-static {p0, v0}, Lcom/miui/maml/util/HideSdkDependencyUtils;->initSurfaceControl(Landroid/service/wallpaper/WallpaperService$Engine;Landroid/view/SurfaceControl;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -731,7 +680,7 @@
 
     const-string v1, "Invoke | SurfaceControl_getInstance() occur EXCEPTION: "
 
-    .line 402
+    .line 396
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -748,21 +697,21 @@
     :try_start_0
     const-string v0, "android.view.SurfaceSession"
 
-    .line 283
+    .line 277
     invoke-static {v0}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v2, "android.view.SurfaceControl"
 
-    .line 284
+    .line 278
     invoke-static {v2}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
 
     const-string v3, "HIDDEN"
 
-    .line 285
+    .line 279
     invoke-static {v2, v1, v3}, Lcom/miui/maml/util/ReflectionHelper;->getFieldValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -773,7 +722,7 @@
 
     move-result v3
 
-    .line 286
+    .line 280
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0x1d
@@ -798,7 +747,7 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 287
+    .line 281
     new-array v4, v14, [Ljava/lang/Class;
 
     new-array v5, v14, [Ljava/lang/Object;
@@ -807,7 +756,7 @@
 
     move-result-object v4
 
-    .line 288
+    .line 282
     new-array v5, v7, [Ljava/lang/Class;
 
     aput-object v0, v5, v14
@@ -844,7 +793,7 @@
 
     aput-object p2, v0, v13
 
-    .line 290
+    .line 284
     invoke-static/range {p3 .. p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -873,7 +822,7 @@
 
     aput-object v1, v0, v6
 
-    .line 288
+    .line 282
     invoke-static {v2, v5, v0}, Lcom/miui/maml/util/ReflectionHelper;->getConstructorInstance(Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -882,7 +831,7 @@
 
     return-object v0
 
-    .line 291
+    .line 285
     :cond_0
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -890,7 +839,7 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 292
+    .line 286
     new-array v4, v13, [Ljava/lang/Class;
 
     const-class v5, Landroid/view/Surface;
@@ -907,7 +856,7 @@
 
     const/16 v5, 0x9
 
-    .line 293
+    .line 287
     new-array v15, v5, [Ljava/lang/Class;
 
     aput-object v0, v15, v14
@@ -948,7 +897,7 @@
 
     aput-object p2, v0, v13
 
-    .line 295
+    .line 289
     invoke-static/range {p3 .. p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -989,7 +938,7 @@
 
     aput-object v3, v0, v7
 
-    .line 293
+    .line 287
     invoke-static {v2, v15, v0}, Lcom/miui/maml/util/ReflectionHelper;->getConstructorInstance(Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -998,7 +947,7 @@
 
     return-object v0
 
-    .line 296
+    .line 290
     :cond_1
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1012,7 +961,7 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 297
+    .line 291
     :cond_2
     new-array v4, v13, [Ljava/lang/Class;
 
@@ -1028,7 +977,7 @@
 
     move-result-object v4
 
-    .line 298
+    .line 292
     new-array v5, v10, [Ljava/lang/Class;
 
     aput-object v0, v5, v14
@@ -1059,7 +1008,7 @@
 
     aput-object p2, v0, v13
 
-    .line 300
+    .line 294
     invoke-static/range {p3 .. p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -1084,7 +1033,7 @@
 
     aput-object v3, v0, v8
 
-    .line 298
+    .line 292
     invoke-static {v2, v5, v0}, Lcom/miui/maml/util/ReflectionHelper;->getConstructorInstance(Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1102,7 +1051,7 @@
 
     const-string v3, "Invoke | SurfaceControl_getInstance_with_params() occur EXCEPTION: "
 
-    .line 303
+    .line 297
     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_3
@@ -1115,7 +1064,7 @@
     :try_start_0
     const-string v0, "android.view.SurfaceControl"
 
-    .line 359
+    .line 353
     invoke-static {v0}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -1124,7 +1073,7 @@
 
     const/4 v2, 0x0
 
-    .line 360
+    .line 354
     new-array v3, v2, [Ljava/lang/Class;
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -1142,7 +1091,7 @@
 
     const-string v1, "Invoke | SurfaceControl_hide() occur EXCEPTION: "
 
-    .line 362
+    .line 356
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1155,7 +1104,7 @@
     :try_start_0
     const-string v0, "android.view.SurfaceControl"
 
-    .line 310
+    .line 304
     invoke-static {v0}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -1166,7 +1115,7 @@
 
     const/4 v3, 0x0
 
-    .line 311
+    .line 305
     new-array v4, v3, [Ljava/lang/Class;
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -1184,7 +1133,7 @@
 
     const-string v2, "Invoke | SurfaceControl_openTransaction() occur EXCEPTION: "
 
-    .line 313
+    .line 307
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1194,7 +1143,7 @@
 .method public static SurfaceControl_setBufferSize(Landroid/view/SurfaceControl;II)V
     .locals 7
 
-    .line 346
+    .line 340
     :try_start_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1208,7 +1157,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 347
+    .line 341
     const-class v0, Landroid/view/SurfaceControl;
 
     const-string v1, "setBufferSize"
@@ -1241,7 +1190,7 @@
 
     goto :goto_0
 
-    .line 348
+    .line 342
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1257,14 +1206,14 @@
 
     const-string v0, "android.view.SurfaceControl"
 
-    .line 349
+    .line 343
     invoke-static {v0}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v1, "setSize"
 
-    .line 350
+    .line 344
     new-array v5, v4, [Ljava/lang/Class;
 
     sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -1302,7 +1251,7 @@
 
     const-string p2, "Invoke | SurfaceControl_setBufferSize() occur EXCEPTION: "
 
-    .line 353
+    .line 347
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1
@@ -1316,7 +1265,7 @@
     :try_start_0
     const-string v0, "android.view.SurfaceControl"
 
-    .line 328
+    .line 322
     invoke-static {v0}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -1325,7 +1274,7 @@
 
     const/4 v2, 0x1
 
-    .line 329
+    .line 323
     new-array v3, v2, [Ljava/lang/Class;
 
     sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -1355,7 +1304,7 @@
 
     const-string v0, "Invoke | SurfaceControl_setLayer() occur EXCEPTION: "
 
-    .line 331
+    .line 325
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1368,7 +1317,7 @@
     :try_start_0
     const-string v0, "android.view.SurfaceControl"
 
-    .line 337
+    .line 331
     invoke-static {v0}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -1377,7 +1326,7 @@
 
     const/4 v2, 0x2
 
-    .line 338
+    .line 332
     new-array v3, v2, [Ljava/lang/Class;
 
     sget-object v4, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
@@ -1419,7 +1368,7 @@
 
     const-string p2, "Invoke | SurfaceControl_setPosition() occur EXCEPTION: "
 
-    .line 340
+    .line 334
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1432,7 +1381,7 @@
     :try_start_0
     const-string v0, "android.view.SurfaceControl"
 
-    .line 368
+    .line 362
     invoke-static {v0}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -1441,7 +1390,7 @@
 
     const/4 v2, 0x0
 
-    .line 369
+    .line 363
     new-array v3, v2, [Ljava/lang/Class;
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -1459,7 +1408,7 @@
 
     const-string v1, "Invoke | SurfaceControl_show() occur EXCEPTION: "
 
-    .line 371
+    .line 365
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1469,7 +1418,7 @@
 .method public static Surface_copyFrom(Landroid/view/Surface;Landroid/view/SurfaceControl;)V
     .locals 6
 
-    .line 385
+    .line 379
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
@@ -1485,12 +1434,12 @@
     :try_start_0
     const-string v0, "android.view.SurfaceControl"
 
-    .line 387
+    .line 381
     invoke-static {v0}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 388
+    .line 382
     const-class v1, Landroid/view/Surface;
 
     const-string v2, "copyFrom"
@@ -1520,7 +1469,7 @@
 
     const-string v0, "Invoke | Surface_copyFrom() occur EXCEPTION: "
 
-    .line 390
+    .line 384
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -1531,7 +1480,7 @@
 .method public static Surface_getInstance()Landroid/view/Surface;
     .locals 3
 
-    .line 377
+    .line 371
     :try_start_0
     const-class v0, Landroid/view/Surface;
 
@@ -1558,7 +1507,7 @@
 
     const-string v2, "Invoke | Surface_getInstance() occur EXCEPTION: "
 
-    .line 379
+    .line 373
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v0, 0x0
@@ -1571,7 +1520,7 @@
 
     const/4 v0, 0x0
 
-    .line 262
+    .line 256
     :try_start_0
     const-class v1, Landroid/provider/SystemSettings$System;
 
@@ -1594,7 +1543,7 @@
 
     const-string v3, "Invoke | SystemSettingsSystem_DARKEN_WALLPAPER_UNDER_DARK_MODE() occur EXCEPTION: "
 
-    .line 264
+    .line 258
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v0
@@ -1608,7 +1557,7 @@
     :try_start_0
     const-string v1, "miui.util.TypefaceUtils"
 
-    .line 165
+    .line 163
     invoke-static {v1}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -1617,7 +1566,7 @@
 
     const/4 v3, 0x2
 
-    .line 166
+    .line 164
     new-array v4, v3, [Ljava/lang/Class;
 
     const-class v5, Landroid/content/Context;
@@ -1655,7 +1604,7 @@
 
     const-string v1, "Invoke | TypefaceUtils_replaceTypeface() occur EXCEPTION: "
 
-    .line 168
+    .line 166
     invoke-static {p1, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v0
@@ -1666,7 +1615,7 @@
 
     const/4 v0, 0x0
 
-    .line 86
+    .line 84
     :try_start_0
     const-class v1, Landroid/os/UserHandle;
 
@@ -1689,7 +1638,7 @@
 
     const-string v3, "Invoke | UserHandle_CURRENT() occur EXCEPTION: "
 
-    .line 88
+    .line 86
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v0
@@ -1700,7 +1649,7 @@
 
     const/4 v0, 0x0
 
-    .line 77
+    .line 75
     :try_start_0
     const-class v1, Landroid/os/UserHandle;
 
@@ -1731,7 +1680,7 @@
 
     const-string v2, "Invoke | UserHandle_getIdentifier() occur EXCEPTION: "
 
-    .line 79
+    .line 77
     invoke-static {v1, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -1740,7 +1689,7 @@
 .method public static UserHandle_getInstance_with_int(I)Landroid/os/UserHandle;
     .locals 5
 
-    .line 95
+    .line 93
     :try_start_0
     const-class v0, Landroid/os/UserHandle;
 
@@ -1779,7 +1728,7 @@
 
     const-string v1, "Invoke | UserHandle_getInstance_with_int() occur EXCEPTION: "
 
-    .line 97
+    .line 95
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -1792,7 +1741,7 @@
 
     const/4 v0, 0x0
 
-    .line 148
+    .line 146
     :try_start_0
     const-class v1, Landroid/net/wifi/WifiManager;
 
@@ -1823,7 +1772,7 @@
 
     const-string v2, "Invoke | WifiManager_isWifiApEnabled() occur EXCEPTION: "
 
-    .line 150
+    .line 148
     invoke-static {v1, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -1832,7 +1781,7 @@
 .method public static WindowManager_LayoutParams_setLayoutParamsBlurRatio(Landroid/view/WindowManager$LayoutParams;F)V
     .locals 2
 
-    .line 157
+    .line 155
     :try_start_0
     const-class v0, Landroid/view/WindowManager$LayoutParams;
 
@@ -1855,7 +1804,7 @@
 
     const-string v0, "Invoke | WindowManager_LayoutParams_setLayoutParamsBlurRatio() occur EXCEPTION: "
 
-    .line 159
+    .line 157
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -1870,47 +1819,47 @@
     :try_start_0
     const-string v1, "android.view.IWindowSession"
 
-    .line 411
+    .line 405
     invoke-static {v1}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
     const-string v2, "android.view.IWindow"
 
-    .line 412
+    .line 406
     invoke-static {v2}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
 
     const-string v3, "com.android.internal.view.BaseIWindow"
 
-    .line 413
+    .line 407
     invoke-static {v3}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v3
 
     const-string v4, "android.view.DisplayCutout$ParcelableWrapper"
 
-    .line 414
+    .line 408
     invoke-static {v4}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v4
 
     const-string v5, "android.view.InsetsState"
 
-    .line 415
+    .line 409
     invoke-static {v5}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v5
 
     const-string v6, "android.util.MergedConfiguration"
 
-    .line 416
+    .line 410
     invoke-static {v6}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v6
 
-    .line 418
+    .line 412
     const-class v7, Landroid/service/wallpaper/WallpaperService$Engine;
 
     const-string v8, "mSession"
@@ -1919,7 +1868,7 @@
 
     move-result-object v7
 
-    .line 419
+    .line 413
     const-class v8, Landroid/service/wallpaper/WallpaperService$Engine;
 
     const-string v9, "mWindow"
@@ -1928,7 +1877,7 @@
 
     move-result-object v8
 
-    .line 420
+    .line 414
     const-class v9, Landroid/service/wallpaper/WallpaperService$Engine;
 
     const-string v10, "mDisplayCutout"
@@ -1937,7 +1886,7 @@
 
     move-result-object v9
 
-    .line 421
+    .line 415
     const-class v10, Landroid/service/wallpaper/WallpaperService$Engine;
 
     const-string v11, "mInsetsState"
@@ -1946,7 +1895,7 @@
 
     move-result-object v10
 
-    .line 422
+    .line 416
     const-class v11, Landroid/service/wallpaper/WallpaperService$Engine;
 
     const-string v12, "mMergedConfiguration"
@@ -1955,7 +1904,7 @@
 
     move-result-object v11
 
-    .line 424
+    .line 418
     const-class v12, Landroid/service/wallpaper/WallpaperService$Engine;
 
     const-string v13, "mLayout"
@@ -1968,7 +1917,7 @@
 
     const-string v13, "mSeq"
 
-    .line 426
+    .line 420
     invoke-static {v3, v8, v13}, Lcom/miui/maml/util/ReflectionHelper;->getFieldValue(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -1979,7 +1928,7 @@
 
     move-result v3
 
-    .line 427
+    .line 421
     const-class v13, Landroid/service/wallpaper/WallpaperService$Engine;
 
     const-string v14, "mWidth"
@@ -1994,7 +1943,7 @@
 
     move-result v13
 
-    .line 428
+    .line 422
     const-class v14, Landroid/service/wallpaper/WallpaperService$Engine;
 
     const-string v15, "mHeight"
@@ -2009,7 +1958,7 @@
 
     move-result v14
 
-    .line 430
+    .line 424
     const-class v15, Landroid/service/wallpaper/WallpaperService$Engine;
 
     move-object/from16 v16, v1
@@ -2022,7 +1971,7 @@
 
     check-cast v1, Landroid/graphics/Rect;
 
-    .line 431
+    .line 425
     const-class v15, Landroid/service/wallpaper/WallpaperService$Engine;
 
     move-object/from16 v17, v10
@@ -2035,7 +1984,7 @@
 
     check-cast v10, Landroid/graphics/Rect;
 
-    .line 432
+    .line 426
     const-class v15, Landroid/service/wallpaper/WallpaperService$Engine;
 
     move-object/from16 v18, v11
@@ -2048,7 +1997,7 @@
 
     check-cast v11, Landroid/graphics/Rect;
 
-    .line 433
+    .line 427
     const-class v15, Landroid/service/wallpaper/WallpaperService$Engine;
 
     move-object/from16 v19, v9
@@ -2061,7 +2010,7 @@
 
     check-cast v9, Landroid/graphics/Rect;
 
-    .line 434
+    .line 428
     const-class v15, Landroid/service/wallpaper/WallpaperService$Engine;
 
     move-object/from16 v20, v1
@@ -2074,7 +2023,7 @@
 
     check-cast v1, Landroid/graphics/Rect;
 
-    .line 435
+    .line 429
     const-class v15, Landroid/service/wallpaper/WallpaperService$Engine;
 
     move-object/from16 v21, v1
@@ -2087,7 +2036,7 @@
 
     check-cast v1, Landroid/graphics/Rect;
 
-    .line 436
+    .line 430
     const-class v15, Landroid/service/wallpaper/WallpaperService$Engine;
 
     move-object/from16 v22, v1
@@ -2104,7 +2053,7 @@
 
     const/16 v1, 0x13
 
-    .line 439
+    .line 433
     new-array v15, v1, [Ljava/lang/Class;
 
     const/16 v23, 0x0
@@ -2213,12 +2162,12 @@
 
     aput-object v5, v15, v2
 
-    .line 446
+    .line 440
     new-array v1, v1, [Ljava/lang/Object;
 
     aput-object v8, v1, v23
 
-    .line 447
+    .line 441
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -2227,7 +2176,7 @@
 
     aput-object v12, v1, v25
 
-    .line 448
+    .line 442
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -2296,7 +2245,7 @@
 
     move-object/from16 v2, v16
 
-    .line 453
+    .line 447
     invoke-static {v2, v7, v0, v15, v1}, Lcom/miui/maml/util/ReflectionHelper;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -2310,7 +2259,7 @@
 
     const-string v2, "Invoke | initSurfaceControl() occur EXCEPTION: "
 
-    .line 456
+    .line 450
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -2323,7 +2272,7 @@
 
     const/4 v0, 0x0
 
-    .line 238
+    .line 232
     :try_start_0
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -2333,7 +2282,7 @@
 
     const-string v1, "android.sysprop.DisplayProperties"
 
-    .line 239
+    .line 233
     invoke-static {v1}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -2342,7 +2291,7 @@
 
     const-string v3, "debug_layout"
 
-    .line 240
+    .line 234
     new-array v4, v0, [Ljava/lang/Class;
 
     new-array v5, v0, [Ljava/lang/Object;
@@ -2353,7 +2302,7 @@
 
     check-cast v1, Ljava/util/Optional;
 
-    .line 241
+    .line 235
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
@@ -2373,8 +2322,8 @@
     :cond_0
     const-string v1, "debug.layout"
 
-    .line 243
-    invoke-static {v1, v0}, Lmiui/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    .line 237
+    invoke-static {v1, v0}, Lcom/miui/maml/util/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
     :try_end_0
@@ -2389,7 +2338,7 @@
 
     const-string v3, "Invoke | isShowDebugLayout() occur EXCEPTION: "
 
-    .line 246
+    .line 240
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -2398,7 +2347,7 @@
 .method public static setWifiApEnabled(Landroid/content/Context;Z)V
     .locals 9
 
-    .line 206
+    .line 200
     :try_start_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -2416,7 +2365,7 @@
 
     const-string v0, "connectivity"
 
-    .line 207
+    .line 201
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -2425,14 +2374,14 @@
 
     const-string v0, "android.net.ConnectivityManager$OnStartTetheringCallback"
 
-    .line 208
+    .line 202
     invoke-static {v0}, Lcom/miui/maml/util/ReflectionHelper;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     if-eqz p1, :cond_0
 
-    .line 210
+    .line 204
     const-class p1, Landroid/net/ConnectivityManager;
 
     const-string v1, "startTethering"
@@ -2453,7 +2402,7 @@
 
     new-array v0, v6, [Ljava/lang/Object;
 
-    .line 211
+    .line 205
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -2468,12 +2417,12 @@
 
     aput-object v2, v0, v3
 
-    .line 210
+    .line 204
     invoke-static {p1, p0, v1, v7, v0}, Lcom/miui/maml/util/ReflectionHelper;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 213
+    .line 207
     :cond_0
     const-class p1, Landroid/net/ConnectivityManager;
 
@@ -2487,14 +2436,14 @@
 
     new-array v2, v4, [Ljava/lang/Object;
 
-    .line 214
+    .line 208
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     aput-object v3, v2, v5
 
-    .line 213
+    .line 207
     invoke-static {p1, p0, v0, v1, v2}, Lcom/miui/maml/util/ReflectionHelper;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)V
 
     goto :goto_0
@@ -2502,14 +2451,14 @@
     :cond_1
     const-string v0, "wifi"
 
-    .line 217
+    .line 211
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/net/wifi/WifiManager;
 
-    .line 218
+    .line 212
     const-class v0, Landroid/net/wifi/WifiManager;
 
     const-string v1, "setWifiApEnabled"
@@ -2528,14 +2477,14 @@
 
     aput-object v2, v3, v5
 
-    .line 219
+    .line 213
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     aput-object p1, v3, v4
 
-    .line 218
+    .line 212
     invoke-static {v0, p0, v1, v6, v3}, Lcom/miui/maml/util/ReflectionHelper;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -2549,7 +2498,7 @@
 
     const-string v0, "Invoke | setWifiApEnabled() occur EXCEPTION: "
 
-    .line 222
+    .line 216
     invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

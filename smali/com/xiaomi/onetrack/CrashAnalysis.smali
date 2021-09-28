@@ -53,7 +53,7 @@
 
 .field private static final r:I = 0x14
 
-.field private static final s:Z = false
+.field private static final s:Z
 
 .field private static final t:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -93,7 +93,7 @@
     const/4 v2, 0x0
 
     :try_start_0
-    const-string v3, "xcrash.XCrash$InitParameters"
+    const-string/jumbo v3, "xcrash.XCrash$InitParameters"
 
     .line 64
     invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -167,7 +167,7 @@
 
     invoke-direct {p0, v3, v4, v5}, Lcom/xiaomi/onetrack/CrashAnalysis;->a(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V
 
-    const-string v4, "xcrash.XCrash"
+    const-string/jumbo v4, "xcrash.XCrash"
 
     .line 74
     invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -325,7 +325,7 @@
     :try_start_0
     invoke-static {p0}, Lcom/xiaomi/onetrack/e/a;->a(Landroid/content/Context;)V
 
-    const-string v0, "xcrash.XCrash"
+    const-string/jumbo v0, "xcrash.XCrash"
 
     .line 104
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
@@ -1418,7 +1418,7 @@
     .locals 1
 
     :try_start_0
-    const-string v0, "xcrash.XCrash"
+    const-string/jumbo v0, "xcrash.XCrash"
 
     .line 91
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;

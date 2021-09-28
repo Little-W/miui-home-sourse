@@ -36,12 +36,12 @@
 .method public constructor <init>(Lcom/miui/maml/ResourceManager;Lcom/miui/maml/ResourceManager$AsyncLoadListener;)V
     .locals 0
 
-    .line 237
+    .line 244
     iput-object p1, p0, Lcom/miui/maml/ResourceManager$LoadBitmapAsyncTask;->this$0:Lcom/miui/maml/ResourceManager;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 238
+    .line 245
     iput-object p2, p0, Lcom/miui/maml/ResourceManager$LoadBitmapAsyncTask;->mLoadListener:Lcom/miui/maml/ResourceManager$AsyncLoadListener;
 
     return-void
@@ -54,17 +54,17 @@
 
     const/4 v0, 0x0
 
-    .line 243
+    .line 250
     aget-object p1, p1, v0
 
     iput-object p1, p0, Lcom/miui/maml/ResourceManager$LoadBitmapAsyncTask;->mSrc:Ljava/lang/String;
 
-    .line 244
+    .line 251
     iget-object p1, p0, Lcom/miui/maml/ResourceManager$LoadBitmapAsyncTask;->mSrc:Ljava/lang/String;
 
     if-eqz p1, :cond_0
 
-    .line 245
+    .line 252
     iget-object v0, p0, Lcom/miui/maml/ResourceManager$LoadBitmapAsyncTask;->this$0:Lcom/miui/maml/ResourceManager;
 
     invoke-static {v0, p1}, Lcom/miui/maml/ResourceManager;->access$000(Lcom/miui/maml/ResourceManager;Ljava/lang/String;)Lcom/miui/maml/ResourceManager$BitmapInfo;
@@ -82,7 +82,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 232
+    .line 239
     check-cast p1, [Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/miui/maml/ResourceManager$LoadBitmapAsyncTask;->doInBackground([Ljava/lang/String;)Lcom/miui/maml/ResourceManager$BitmapInfo;
@@ -95,7 +95,7 @@
 .method protected onPostExecute(Lcom/miui/maml/ResourceManager$BitmapInfo;)V
     .locals 3
 
-    .line 252
+    .line 259
     iget-object v0, p0, Lcom/miui/maml/ResourceManager$LoadBitmapAsyncTask;->this$0:Lcom/miui/maml/ResourceManager;
 
     invoke-static {v0}, Lcom/miui/maml/ResourceManager;->access$100(Lcom/miui/maml/ResourceManager;)Landroidx/collection/ArraySet;
@@ -104,7 +104,7 @@
 
     monitor-enter v0
 
-    .line 253
+    .line 260
     :try_start_0
     iget-object v1, p0, Lcom/miui/maml/ResourceManager$LoadBitmapAsyncTask;->mLoadListener:Lcom/miui/maml/ResourceManager$AsyncLoadListener;
 
@@ -112,7 +112,7 @@
 
     invoke-interface {v1, v2, p1}, Lcom/miui/maml/ResourceManager$AsyncLoadListener;->onLoadComplete(Ljava/lang/String;Lcom/miui/maml/ResourceManager$BitmapInfo;)V
 
-    .line 254
+    .line 261
     iget-object p1, p0, Lcom/miui/maml/ResourceManager$LoadBitmapAsyncTask;->this$0:Lcom/miui/maml/ResourceManager;
 
     invoke-static {p1}, Lcom/miui/maml/ResourceManager;->access$100(Lcom/miui/maml/ResourceManager;)Landroidx/collection/ArraySet;
@@ -123,7 +123,7 @@
 
     invoke-virtual {p1, v1}, Landroidx/collection/ArraySet;->remove(Ljava/lang/Object;)Z
 
-    .line 255
+    .line 262
     monitor-exit v0
 
     return-void
@@ -141,7 +141,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 232
+    .line 239
     check-cast p1, Lcom/miui/maml/ResourceManager$BitmapInfo;
 
     invoke-virtual {p0, p1}, Lcom/miui/maml/ResourceManager$LoadBitmapAsyncTask;->onPostExecute(Lcom/miui/maml/ResourceManager$BitmapInfo;)V

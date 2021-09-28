@@ -127,7 +127,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "插入数据库"
+    const-string/jumbo v2, "插入数据库"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -142,8 +142,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 69
     iget-object v0, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
@@ -332,11 +330,9 @@
     :try_start_0
     const-string v1, "kbjay_russia_repository"
 
-    const-string v2, "查找数据库\uff0c获取所有数据"
+    const-string/jumbo v2, "查找数据库\uff0c获取所有数据"
 
     .line 82
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 83
     iget-object v3, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
 
@@ -442,12 +438,10 @@
     const-string v2, "kbjay_russia_repository"
 
     const-string v3, "initDataSource failed"
-
-    .line 96
-    invoke-static {v2, v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 96
     if-eqz v0, :cond_4
 
     .line 99
@@ -471,8 +465,6 @@
     const-string v1, "Datasource不为空\uff0c不用从数据库获取"
 
     .line 103
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     :cond_4
     :goto_3
     const/4 v0, 0x0
@@ -502,8 +494,6 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_4
@@ -531,8 +521,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 229
     :try_start_0
@@ -599,8 +587,6 @@
     const-string v1, "onAppInfoRemoved failed"
 
     .line 241
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :cond_1
     return-void
 .end method
@@ -624,8 +610,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 197
     :try_start_0
@@ -703,7 +687,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "更新APP为不在folder中"
+    const-string/jumbo v6, "更新APP为不在folder中"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -712,8 +696,6 @@
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
-
-    invoke-static {v2, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 209
     iget-object v2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
@@ -821,8 +803,6 @@
     const-string v0, "onAppLeaveRussiaFolder failed"
 
     .line 222
-    invoke-static {p2, v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :cond_1
     return-void
 .end method
@@ -846,8 +826,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x0
 
@@ -1048,12 +1026,10 @@
     const-string p2, "kbjay_russia_repository"
 
     const-string v1, "onAppMoveToRussiaFolder failed"
-
-    .line 185
-    invoke-static {p2, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 185
     if-eqz v0, :cond_4
 
     .line 188
@@ -1092,8 +1068,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 114
     :try_start_0
@@ -1168,7 +1142,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "删 gplink "
+    const-string/jumbo v5, "删 gplink "
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1177,8 +1151,6 @@
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 129
     iget-object v2, p0, Lcom/miui/home/launcher/russia/RussiaPreInstallAppsRepository;->mContentResolver:Landroid/content/ContentResolver;
@@ -1252,8 +1224,6 @@
     const-string v1, "onGPLinkRemoved failed"
 
     .line 143
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :cond_3
     return-void
 .end method
@@ -1277,8 +1247,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 247
     invoke-static {}, Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository;->getInstance()Lcom/miui/home/launcher/marketautoinstall/MarketAutoInstallRepository;
@@ -1458,8 +1426,6 @@
     const-string v0, "onGpLinkClick failed"
 
     .line 278
-    invoke-static {p2, v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :cond_3
     return-void
 .end method

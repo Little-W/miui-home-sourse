@@ -21,9 +21,9 @@
 
     const-string v1, "value"
 
-    const-string v2, "x"
+    const-string/jumbo v2, "x"
 
-    const-string v3, "y"
+    const-string/jumbo v3, "y"
 
     .line 14
     filled-new-array {v1, v2, v3}, [Ljava/lang/String;

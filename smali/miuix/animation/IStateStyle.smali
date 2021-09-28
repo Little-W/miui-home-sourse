@@ -7,6 +7,12 @@
 
 
 # virtual methods
+.method public abstract add(Lmiuix/animation/property/FloatProperty;F)Lmiuix/animation/IStateStyle;
+.end method
+
+.method public abstract add(Lmiuix/animation/property/FloatProperty;I)Lmiuix/animation/IStateStyle;
+.end method
+
 .method public abstract addListener(Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/IStateStyle;
 .end method
 
@@ -17,6 +23,9 @@
 .end method
 
 .method public varargs abstract predictDuration([Ljava/lang/Object;)J
+.end method
+
+.method public varargs abstract setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;[Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/IStateStyle;
 .end method
 
 .method public abstract setFlags(J)Lmiuix/animation/IStateStyle;

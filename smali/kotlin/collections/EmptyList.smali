@@ -6,6 +6,7 @@
 .implements Ljava/io/Serializable;
 .implements Ljava/util/List;
 .implements Ljava/util/RandomAccess;
+.implements Lkotlin/jvm/internal/markers/KMappedMarker;
 
 
 # static fields

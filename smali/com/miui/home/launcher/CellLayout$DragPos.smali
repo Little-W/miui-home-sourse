@@ -26,24 +26,24 @@
 .method public constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 1381
+    .line 1315
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$DragPos;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x2
 
-    .line 1378
+    .line 1312
     new-array p1, p1, [I
 
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$DragPos;->cellXY:[I
 
     const/16 p1, 0x8
 
-    .line 1379
+    .line 1313
     iput p1, p0, Lcom/miui/home/launcher/CellLayout$DragPos;->stayType:I
 
-    .line 1382
+    .line 1316
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout$DragPos;->reset()V
 
     return-void
@@ -54,7 +54,7 @@
 .method equal(Lcom/miui/home/launcher/CellLayout$DragPos;)Z
     .locals 6
 
-    .line 1401
+    .line 1335
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$DragPos;->cellXY:[I
 
     const/4 v1, 0x0
@@ -90,7 +90,7 @@
 .method public isInvalid()Z
     .locals 2
 
-    .line 1391
+    .line 1325
     iget v0, p0, Lcom/miui/home/launcher/CellLayout$DragPos;->stayType:I
 
     const/16 v1, 0x8
@@ -111,7 +111,7 @@
 .method reset()V
     .locals 3
 
-    .line 1386
+    .line 1320
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$DragPos;->cellXY:[I
 
     const/4 v1, 0x1
@@ -126,7 +126,7 @@
 
     const/16 v0, 0x8
 
-    .line 1387
+    .line 1321
     iput v0, p0, Lcom/miui/home/launcher/CellLayout$DragPos;->stayType:I
 
     return-void
@@ -135,7 +135,7 @@
 .method set(Lcom/miui/home/launcher/CellLayout$DragPos;)V
     .locals 4
 
-    .line 1395
+    .line 1329
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$DragPos;->cellXY:[I
 
     iget-object v1, p1, Lcom/miui/home/launcher/CellLayout$DragPos;->cellXY:[I
@@ -148,12 +148,12 @@
 
     const/4 v2, 0x1
 
-    .line 1396
+    .line 1330
     aget v1, v1, v2
 
     aput v1, v0, v2
 
-    .line 1397
+    .line 1331
     iget p1, p1, Lcom/miui/home/launcher/CellLayout$DragPos;->stayType:I
 
     iput p1, p0, Lcom/miui/home/launcher/CellLayout$DragPos;->stayType:I

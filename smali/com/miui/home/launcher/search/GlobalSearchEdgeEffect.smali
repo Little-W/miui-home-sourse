@@ -11,7 +11,7 @@
 .method constructor <init>(Landroid/content/Context;Lcom/miui/home/launcher/search/SearchEdgeEffect$Position;II)V
     .locals 0
 
-    .line 32
+    .line 33
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/search/SearchEdgeEffect;-><init>(Landroid/content/Context;Lcom/miui/home/launcher/search/SearchEdgeEffect$Position;II)V
 
     return-void
@@ -20,7 +20,7 @@
 .method private findGlobalBrowser()Ljava/lang/String;
     .locals 4
 
-    .line 115
+    .line 116
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     const/4 v1, 0x0
@@ -29,7 +29,7 @@
 
     return-object v1
 
-    .line 118
+    .line 119
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
@@ -45,7 +45,7 @@
 
     const-string v2, "com.mi.globalbrowser"
 
-    .line 119
+    .line 120
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v3
@@ -63,7 +63,7 @@
     :cond_1
     const-string v2, "com.android.browser"
 
-    .line 122
+    .line 123
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v3
@@ -85,7 +85,7 @@
 .method private launchGlobalBrowser()Z
     .locals 3
 
-    .line 78
+    .line 79
     iget-object v0, p0, Lcom/miui/home/launcher/search/GlobalSearchEdgeEffect;->mGlobalBrowser:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -94,14 +94,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 79
+    .line 80
     invoke-direct {p0}, Lcom/miui/home/launcher/search/GlobalSearchEdgeEffect;->findGlobalBrowser()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/search/GlobalSearchEdgeEffect;->mGlobalBrowser:Ljava/lang/String;
 
-    .line 81
+    .line 82
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/search/GlobalSearchEdgeEffect;->mGlobalBrowser:Ljava/lang/String;
 
@@ -111,14 +111,14 @@
 
     if-nez v0, :cond_1
 
-    .line 82
+    .line 83
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.browser.browser_search"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 83
+    .line 84
     iget-object v1, p0, Lcom/miui/home/launcher/search/GlobalSearchEdgeEffect;->mGlobalBrowser:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
@@ -127,15 +127,15 @@
 
     const-string v2, "launcher"
 
-    .line 84
+    .line 85
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 v1, 0x10200000
 
-    .line 85
+    .line 86
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 87
+    .line 88
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v1
@@ -144,7 +144,7 @@
 
     const/4 v0, 0x1
 
-    .line 88
+    .line 89
     invoke-static {v0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackVerticalGesture(Z)V
 
     return v0
@@ -158,7 +158,7 @@
 .method private launchMinusScreen()Z
     .locals 4
 
-    .line 95
+    .line 96
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -169,7 +169,7 @@
 
     return v1
 
-    .line 99
+    .line 100
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -179,22 +179,22 @@
 
     const-string v2, "com.mi.android.globalminusscreen"
 
-    .line 100
+    .line 101
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v2, "from"
 
     const-string v3, "launcher"
 
-    .line 101
+    .line 102
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 v2, 0x10200000
 
-    .line 102
+    .line 103
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 105
+    .line 106
     :try_start_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -204,7 +204,7 @@
 
     const/4 v0, 0x1
 
-    .line 106
+    .line 107
     invoke-static {v0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackVerticalGesture(Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -220,7 +220,7 @@
 .method canShowEffect()Z
     .locals 2
 
-    .line 42
+    .line 43
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -229,7 +229,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 44
+    .line 45
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getSearchBar()Lcom/miui/home/launcher/SearchBar;
 
     move-result-object v0
@@ -249,7 +249,7 @@
 .method public bridge synthetic draw(Landroid/graphics/Canvas;)Z
     .locals 0
 
-    .line 19
+    .line 20
     invoke-super {p0, p1}, Lcom/miui/home/launcher/search/SearchEdgeEffect;->draw(Landroid/graphics/Canvas;)Z
 
     move-result p1
@@ -260,7 +260,7 @@
 .method getDrawableResource()I
     .locals 1
 
-    const v0, 0x7f08016b
+    const v0, 0x7f080193
 
     return v0
 .end method
@@ -268,7 +268,7 @@
 .method public bridge synthetic getPosition()Lcom/miui/home/launcher/search/SearchEdgeEffect$Position;
     .locals 1
 
-    .line 19
+    .line 20
     invoke-super {p0}, Lcom/miui/home/launcher/search/SearchEdgeEffect;->getPosition()Lcom/miui/home/launcher/search/SearchEdgeEffect$Position;
 
     move-result-object v0
@@ -279,7 +279,7 @@
 .method public bridge synthetic onDarkModeChanged(Z)V
     .locals 0
 
-    .line 19
+    .line 20
     invoke-super {p0, p1}, Lcom/miui/home/launcher/search/SearchEdgeEffect;->onDarkModeChanged(Z)V
 
     return-void
@@ -288,7 +288,7 @@
 .method public bridge synthetic onPull(FI)V
     .locals 0
 
-    .line 19
+    .line 20
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/search/SearchEdgeEffect;->onPull(FI)V
 
     return-void
@@ -297,7 +297,7 @@
 .method public bridge synthetic onRelease(I)V
     .locals 0
 
-    .line 19
+    .line 20
     invoke-super {p0, p1}, Lcom/miui/home/launcher/search/SearchEdgeEffect;->onRelease(I)V
 
     return-void
@@ -306,14 +306,14 @@
 .method open()V
     .locals 5
 
-    .line 51
+    .line 52
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    .line 53
+    .line 54
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
@@ -326,7 +326,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 54
+    .line 55
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
@@ -337,7 +337,7 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 56
+    .line 57
     invoke-direct {p0}, Lcom/miui/home/launcher/search/GlobalSearchEdgeEffect;->launchGlobalBrowser()Z
 
     move-result v1
@@ -351,7 +351,13 @@
 
     if-ne v1, v3, :cond_2
 
-    .line 60
+    .line 61
+    invoke-static {}, Lcom/miui/home/launcher/ApplicationConfig;->isNewGlobalAssistantInstalled()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
     invoke-direct {p0}, Lcom/miui/home/launcher/search/GlobalSearchEdgeEffect;->launchMinusScreen()Z
 
     move-result v1
@@ -360,7 +366,7 @@
 
     return-void
 
-    .line 63
+    .line 64
     :cond_1
     invoke-direct {p0}, Lcom/miui/home/launcher/search/GlobalSearchEdgeEffect;->launchGlobalBrowser()Z
 
@@ -370,7 +376,7 @@
 
     return-void
 
-    .line 68
+    .line 69
     :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/search/GlobalSearchEdgeEffect;->getPosition()Lcom/miui/home/launcher/search/SearchEdgeEffect$Position;
 
@@ -387,7 +393,7 @@
     :cond_3
     const-string v1, "home_swipe_up"
 
-    .line 69
+    .line 70
     :goto_0
     new-instance v3, Landroid/os/Bundle;
 
@@ -395,24 +401,24 @@
 
     const-string v4, "swipe_mode"
 
-    .line 70
+    .line 71
     invoke-virtual {v3, v4, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
     const/4 v4, 0x0
 
-    .line 71
+    .line 72
     invoke-virtual {v0, v1, v4, v3, v2}, Lcom/miui/home/launcher/Launcher;->startSearch(Ljava/lang/String;ZLandroid/os/Bundle;Z)V
 
     const v1, 0x7f01002f
 
     const v3, 0x7f010030
 
-    .line 72
+    .line 73
     invoke-virtual {v0, v1, v3}, Lcom/miui/home/launcher/Launcher;->overridePendingTransition(II)V
 
-    .line 73
+    .line 74
     invoke-static {v2}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackVerticalGesture(Z)V
 
     :cond_4
@@ -424,7 +430,7 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 19
+    .line 20
     invoke-super {p0, p1}, Lcom/miui/home/launcher/search/SearchEdgeEffect;->setCurveBottom(F)V
 
     return-void
@@ -435,7 +441,7 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 19
+    .line 20
     invoke-super {p0, p1}, Lcom/miui/home/launcher/search/SearchEdgeEffect;->setCurveTop(F)V
 
     return-void

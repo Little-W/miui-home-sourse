@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
     .locals 0
 
-    .line 1366
+    .line 1370
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$16;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 1369
+    .line 1373
     sget-object p1, Lcom/miui/home/recents/SystemUiProxyWrapper;->INSTANCE:Lcom/miui/home/recents/util/MainThreadInitializedObject;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/util/MainThreadInitializedObject;->getNoCreate()Ljava/lang/Object;
@@ -49,14 +49,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 1371
+    .line 1375
     invoke-virtual {p1}, Lcom/miui/home/recents/SystemUiProxyWrapper;->exitSplitScreen()V
 
     const-string p1, "RecentsContainer"
 
     const-string v0, "exit splitScreen mode ---- click exit button."
 
-    .line 1372
+    .line 1376
     invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0

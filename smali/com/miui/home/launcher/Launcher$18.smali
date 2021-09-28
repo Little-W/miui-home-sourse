@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;I)V
     .locals 0
 
-    .line 2684
+    .line 2811
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$18;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput p2, p0, Lcom/miui/home/launcher/Launcher$18;->val$snapToScreenIndex:I
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 2686
+    .line 2813
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$18;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;

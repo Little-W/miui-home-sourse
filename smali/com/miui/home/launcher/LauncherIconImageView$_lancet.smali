@@ -19,7 +19,7 @@
 
     invoke-static {v0}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
-    invoke-static {p0, p1}, Lcom/miui/home/launcher/LauncherIconImageView;->access$000(Lcom/miui/home/launcher/LauncherIconImageView;Landroid/graphics/Canvas;)V
+    invoke-static {p0, p1}, Lcom/miui/home/launcher/LauncherIconImageView;->access$001(Lcom/miui/home/launcher/LauncherIconImageView;Landroid/graphics/Canvas;)V
 
     invoke-static {}, Landroid/os/Trace;->endSection()V
 

@@ -43,12 +43,12 @@
         }
     .end annotation
 
-    .line 64
+    .line 65
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 65
+    .line 66
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWidgetItems()Ljava/util/Set;
@@ -57,7 +57,7 @@
 
     invoke-direct {v1, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 66
+    .line 67
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -76,7 +76,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
-    .line 67
+    .line 68
     invoke-virtual {v1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->getProvider()Landroid/content/ComponentName;
 
     move-result-object v2
@@ -87,7 +87,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 68
+    .line 69
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -97,7 +97,7 @@
 .end method
 
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 4
+    .locals 5
 
     const-string v0, "com.miui.home.launcher.action.UNINSTALL_WIDGET"
 
@@ -139,8 +139,6 @@
     const-string p2, "provider name is null"
 
     .line 29
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 32
@@ -164,8 +162,6 @@
     const-string p2, "forbid remove other package widget"
 
     .line 33
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 36
@@ -175,123 +171,120 @@
     .line 37
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
-    move-result-object p1
+    move-result-object p2
 
-    if-nez p1, :cond_4
+    if-nez p2, :cond_4
 
     const-string p1, "Launcher.UninstallWidgetReceiver"
 
     const-string p2, "launcher is not ready,process later"
 
     .line 39
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 42
     :cond_4
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/InstallWidgetReceiver;->isWidgetAdded(Lcom/miui/home/launcher/Launcher;Landroid/content/ComponentName;)Z
+    invoke-static {p2, v0}, Lcom/miui/home/launcher/InstallWidgetReceiver;->isWidgetAdded(Lcom/miui/home/launcher/Launcher;Landroid/content/ComponentName;)Z
 
-    move-result p2
+    move-result v1
 
-    if-nez p2, :cond_5
+    if-nez v1, :cond_5
 
     const-string p1, "Launcher.UninstallWidgetReceiver"
 
     const-string p2, "widget not added"
 
     .line 43
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 46
     :cond_5
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
+    invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
-    move-result-object p2
+    move-result-object v1
 
-    if-nez p2, :cond_6
+    if-nez v1, :cond_6
 
     const-string p1, "Launcher.UninstallWidgetReceiver"
 
     const-string p2, "widget remove failed: workspace is null"
 
     .line 47
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 50
     :cond_6
-    invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/UninstallWidgetReceiver;->getAddedWidgetList(Lcom/miui/home/launcher/Launcher;Landroid/content/ComponentName;)Ljava/util/List;
+    invoke-direct {p0, p2, v0}, Lcom/miui/home/launcher/UninstallWidgetReceiver;->getAddedWidgetList(Lcom/miui/home/launcher/Launcher;Landroid/content/ComponentName;)Ljava/util/List;
 
-    move-result-object p2
+    move-result-object v0
 
     .line 51
-    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object p2
+    move-result-object v0
 
     :goto_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_8
+    if-eqz v1, :cond_8
 
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
+    check-cast v1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
     .line 52
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
+    invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Workspace;->removeWidget(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
+    invoke-virtual {v2, v1}, Lcom/miui/home/launcher/Workspace;->removeWidget(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
 
     .line 53
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->removeAppWidget(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
+    invoke-virtual {p2, v1}, Lcom/miui/home/launcher/Launcher;->removeAppWidget(Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
+
+    const/4 v2, 0x2
 
     .line 54
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAppWidgetHost()Lcom/miui/home/launcher/LauncherAppWidgetHost;
+    invoke-static {p1, v1, v2}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackDeleteMiuiWidget(Landroid/content/Context;Lcom/miui/home/launcher/MIUIWidgetBasicInfo;I)V
 
-    move-result-object v1
+    .line 55
+    invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getAppWidgetHost()Lcom/miui/home/launcher/LauncherAppWidgetHost;
 
-    if-eqz v1, :cond_7
+    move-result-object v2
 
-    .line 56
-    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->getAppWidgetId()I
+    if-eqz v2, :cond_7
 
-    move-result v2
+    .line 57
+    invoke-virtual {v1}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->getAppWidgetId()I
 
-    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/LauncherAppWidgetHost;->deleteAppWidgetId(I)V
+    move-result v3
 
-    .line 58
-    :cond_7
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/LauncherModel;->deleteItemFromDatabase(Landroid/content/Context;Lcom/miui/home/launcher/ItemInfo;)V
-
-    const-string v1, "Launcher.UninstallWidgetReceiver"
+    invoke-virtual {v2, v3}, Lcom/miui/home/launcher/LauncherAppWidgetHost;->deleteAppWidgetId(I)V
 
     .line 59
-    new-instance v2, Ljava/lang/StringBuilder;
+    :cond_7
+    invoke-static {p2, v1}, Lcom/miui/home/launcher/LauncherModel;->deleteItemFromDatabase(Landroid/content/Context;Lcom/miui/home/launcher/ItemInfo;)V
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v2, "Launcher.UninstallWidgetReceiver"
 
-    const-string v3, "widget remove success:"
+    .line 60
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v4, "widget remove success:"
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     goto :goto_0
 

@@ -4,8 +4,10 @@
     android:textColor="@color/smallwindow_text_color"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="5.0999756dip"
+    android:layout_marginTop="@dimen/recents_small_window_text_margin_top"
     android:singleLine="true"
+    android:layout_below="@id/smallwindow_icon"
+    android:layout_centerHorizontal="true"
     android:alpha="0.0"
     android:fontFamily="mipro-medium"
     xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -253,15 +253,15 @@
         launcher:x="0"
         launcher:y="0" />
     <favorite
-        launcher:className="com.android.browser.BrowserActivity"
-        launcher:container="-101"
-        launcher:packageName="com.android.browser"
-        launcher:x="1"
-        launcher:y="0" />
-    <favorite
         launcher:className="com.android.mms.ui.MmsTabActivity"
         launcher:container="-101"
         launcher:packageName="com.android.mms"
+        launcher:x="1"
+        launcher:y="0" />
+    <favorite
+        launcher:className="com.android.browser.BrowserActivity"
+        launcher:container="-101"
+        launcher:packageName="com.android.browser"
         launcher:x="2"
         launcher:y="0" />
     <favorite

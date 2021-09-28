@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="config_icon_height">60.0dip</dimen>
+    <dimen name="config_icon_inner_padding">3.3299866dip</dimen>
     <dimen name="config_icon_width">60.0dip</dimen>
     <dimen name="folder_content_margin_bottom">13.0dip</dimen>
     <dimen name="folder_content_margin_top">13.0dip</dimen>

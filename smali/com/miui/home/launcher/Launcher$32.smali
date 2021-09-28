@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3510
+    .line 3749
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$32;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -30,82 +30,27 @@
     return-void
 .end method
 
-.method static synthetic lambda$onChange$0(Lcom/miui/home/launcher/ShortcutInfo;)V
-    .locals 0
-
-    .line 3515
-    iget-object p0, p0, Lcom/miui/home/launcher/ShortcutInfo;->mBuddyIconView:Lcom/miui/home/launcher/ShortcutIcon;
-
-    invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->updateTitleTip()V
-
-    return-void
-.end method
-
-.method public static synthetic lambda$onChange$1(Lcom/miui/home/launcher/Launcher$32;Lcom/miui/home/launcher/ShortcutInfo;)V
-    .locals 1
-
-    .line 3516
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$32;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getAllAppsStore()Lcom/miui/home/launcher/allapps/AllAppsStore;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/AllAppsStore;->updateTitleTip(Lcom/miui/home/launcher/ShortcutInfo;)V
-
-    return-void
-.end method
-
 
 # virtual methods
 .method public onChange(Z)V
-    .locals 3
+    .locals 2
 
-    .line 3513
+    .line 3752
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$32;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3800(Lcom/miui/home/launcher/Launcher;)Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object p1
+    move-result-object v0
 
-    .line 3514
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$32;->this$0:Lcom/miui/home/launcher/Launcher;
+    sget-boolean v1, Lcom/miui/home/launcher/DeviceConfig;->IS_MIUI_LITE_DEVICE:Z
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getContentResolver()Landroid/content/ContentResolver;
+    xor-int/lit8 v1, v1, 0x1
 
-    move-result-object v1
+    invoke-static {v0, v1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->isSystemAnimationOpen(Landroid/content/Context;Z)Z
 
-    const-string v2, "light_speed_app"
+    move-result v0
 
-    invoke-static {v1, v2}, Landroid/provider/MiuiSettings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$3802(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 3515
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$32;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3900(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/miui/home/launcher/-$$Lambda$Launcher$32$Z8yC2AEQjiFWsBmh8MdIOnuRR2Y;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$Launcher$32$Z8yC2AEQjiFWsBmh8MdIOnuRR2Y;
-
-    invoke-static {v0, v1, v2, p1}, Lcom/miui/home/launcher/Launcher;->access$4000(Lcom/miui/home/launcher/Launcher;Ljava/util/Collection;Ljava/util/function/Consumer;Ljava/lang/String;)V
-
-    .line 3516
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$32;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getApps()Ljava/util/Collection;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/miui/home/launcher/-$$Lambda$Launcher$32$Zt-KqVnbbT817ndXithMYaaC1Z0;
-
-    invoke-direct {v2, p0}, Lcom/miui/home/launcher/-$$Lambda$Launcher$32$Zt-KqVnbbT817ndXithMYaaC1Z0;-><init>(Lcom/miui/home/launcher/Launcher$32;)V
-
-    invoke-static {v0, v1, v2, p1}, Lcom/miui/home/launcher/Launcher;->access$4000(Lcom/miui/home/launcher/Launcher;Ljava/util/Collection;Ljava/util/function/Consumer;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$3902(Lcom/miui/home/launcher/Launcher;Z)Z
 
     return-void
 .end method

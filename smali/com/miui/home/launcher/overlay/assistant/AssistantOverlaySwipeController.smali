@@ -203,6 +203,13 @@
 
     if-eqz p1, :cond_0
 
+    .line 43
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->supportAssistant()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
     const/4 p1, 0x1
 
     goto :goto_0
@@ -217,7 +224,7 @@
 .method public getReconnectSlop()I
     .locals 1
 
-    .line 47
+    .line 48
     sget v0, Lcom/miui/home/launcher/ScreenView;->VIEW_CONFIGURATION_TOUCH_SLOP:I
 
     mul-int/lit8 v0, v0, 0xa

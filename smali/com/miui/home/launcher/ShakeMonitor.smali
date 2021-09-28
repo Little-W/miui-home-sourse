@@ -130,9 +130,7 @@
     const-string v2, "show Shake Toast"
 
     .line 49
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const v1, 0x7f10031a
+    const v1, 0x7f10032f
 
     const/4 v2, 0x0
 
@@ -164,8 +162,6 @@
     const-string v1, "shake to align icons"
 
     .line 144
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 145
     iget-object v0, p0, Lcom/miui/home/launcher/ShakeMonitor;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -177,15 +173,18 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_0
+
     const/4 v1, 0x0
 
+    .line 146
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/CellLayout;->alignIconsToTopWithSaveDb(Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 146
+    .line 147
     iget-object v0, p0, Lcom/miui/home/launcher/ShakeMonitor;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -345,40 +344,40 @@
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 12
 
-    .line 153
+    .line 154
     iget-object p1, p1, Landroid/hardware/SensorEvent;->values:[F
 
     const/4 v0, 0x0
 
     aget p1, p1, v0
 
-    .line 154
+    .line 155
     iget v1, p0, Lcom/miui/home/launcher/ShakeMonitor;->mShakeCounter:I
 
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_0
 
-    .line 155
+    .line 156
     iput p1, p0, Lcom/miui/home/launcher/ShakeMonitor;->mLastShakeX:F
 
-    .line 156
+    .line 157
     iput v0, p0, Lcom/miui/home/launcher/ShakeMonitor;->mShakeCounter:I
 
     return-void
 
-    .line 159
+    .line 160
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 160
+    .line 161
     iget-wide v3, p0, Lcom/miui/home/launcher/ShakeMonitor;->mLastShakeTime:J
 
     sub-long v3, v0, v3
 
-    .line 161
+    .line 162
     iget v5, p0, Lcom/miui/home/launcher/ShakeMonitor;->mLastShakeX:F
 
     sub-float v5, p1, v5
@@ -397,14 +396,14 @@
 
     if-lez v5, :cond_3
 
-    .line 162
+    .line 163
     iget-wide v10, p0, Lcom/miui/home/launcher/ShakeMonitor;->mLastShakeTime:J
 
     cmp-long v5, v10, v8
 
     if-nez v5, :cond_1
 
-    .line 163
+    .line 164
     iget v2, p0, Lcom/miui/home/launcher/ShakeMonitor;->mShakeCounter:I
 
     add-int/lit8 v2, v2, 0x1
@@ -415,10 +414,8 @@
 
     const-string v3, "first shake"
 
-    .line 164
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 165
+    .line 166
     iput-wide v0, p0, Lcom/miui/home/launcher/ShakeMonitor;->mLastShakeTime:J
 
     goto/16 :goto_0
@@ -434,7 +431,7 @@
 
     if-gez v5, :cond_2
 
-    .line 168
+    .line 169
     iget v3, p0, Lcom/miui/home/launcher/ShakeMonitor;->mShakeCounter:I
 
     add-int/lit8 v3, v3, 0x1
@@ -443,7 +440,7 @@
 
     const-string v3, "Launcher.ShakeMonitor"
 
-    .line 169
+    .line 170
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -460,12 +457,10 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 170
+    .line 171
     iput-wide v0, p0, Lcom/miui/home/launcher/ShakeMonitor;->mLastShakeTime:J
 
-    .line 171
+    .line 172
     iget v0, p0, Lcom/miui/home/launcher/ShakeMonitor;->mShakeCounter:I
 
     const/4 v1, 0x3
@@ -476,16 +471,14 @@
 
     const-string v1, "shake end, reset"
 
-    .line 172
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 173
+    .line 174
     invoke-direct {p0}, Lcom/miui/home/launcher/ShakeMonitor;->onShake()V
 
-    .line 174
+    .line 175
     iput v2, p0, Lcom/miui/home/launcher/ShakeMonitor;->mShakeCounter:I
 
-    .line 175
+    .line 176
     iput-wide v8, p0, Lcom/miui/home/launcher/ShakeMonitor;->mLastShakeTime:J
 
     goto :goto_0
@@ -499,7 +492,7 @@
 
     const-string v0, "Launcher.ShakeMonitor"
 
-    .line 178
+    .line 179
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -520,12 +513,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 179
+    .line 180
     iput v2, p0, Lcom/miui/home/launcher/ShakeMonitor;->mShakeCounter:I
 
-    .line 180
+    .line 181
     iput-wide v8, p0, Lcom/miui/home/launcher/ShakeMonitor;->mLastShakeTime:J
 
     goto :goto_0
@@ -535,14 +526,14 @@
 
     if-lez v0, :cond_5
 
-    .line 183
+    .line 184
     iget v0, p0, Lcom/miui/home/launcher/ShakeMonitor;->mShakeCounter:I
 
     if-lez v0, :cond_4
 
     const-string v0, "Launcher.ShakeMonitor"
 
-    .line 184
+    .line 185
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -563,16 +554,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 186
+    .line 187
     :cond_4
     iput v2, p0, Lcom/miui/home/launcher/ShakeMonitor;->mShakeCounter:I
 
-    .line 187
+    .line 188
     iput-wide v8, p0, Lcom/miui/home/launcher/ShakeMonitor;->mLastShakeTime:J
 
-    .line 189
+    .line 190
     :cond_5
     :goto_0
     iput p1, p0, Lcom/miui/home/launcher/ShakeMonitor;->mLastShakeX:F

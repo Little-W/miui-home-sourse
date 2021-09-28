@@ -24,6 +24,14 @@
     .end annotation
 .end method
 
+.method public abstract invoke(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
 .method public abstract overlayScrollChanged(F)V
     .annotation system Ldalvik/annotation/Throws;
         value = {

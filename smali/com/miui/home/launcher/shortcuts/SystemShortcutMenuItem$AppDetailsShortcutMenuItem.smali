@@ -18,15 +18,15 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 70
+    .line 80
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;-><init>()V
 
-    .line 71
+    .line 81
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    const v1, 0x7f10035f
+    const v1, 0x7f100377
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -34,12 +34,12 @@
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$AppDetailsShortcutMenuItem;->setShortTitle(Ljava/lang/CharSequence;)V
 
-    .line 72
+    .line 82
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    const v1, 0x7f0804d2
+    const v1, 0x7f080501
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -55,7 +55,7 @@
 
     const-string v0, "ShortcutMenu"
 
-    .line 84
+    .line 94
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -76,7 +76,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 85
+    .line 95
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$AppDetailsShortcutMenuItem;->getPackage()Ljava/lang/String;
 
     move-result-object v0
@@ -85,7 +85,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackClickShortcutMenuItem(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 86
+    .line 96
     invoke-static {}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuManager;->getInstance()Lcom/miui/home/launcher/shortcuts/ShortcutMenuManager;
 
     move-result-object v0
@@ -100,7 +100,7 @@
 .method public getOnClickListener()Landroid/view/View$OnClickListener;
     .locals 1
 
-    .line 83
+    .line 93
     new-instance v0, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$AppDetailsShortcutMenuItem$vXNHGAKx6fIqu-bO5QUoHo7FXaw;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$AppDetailsShortcutMenuItem$vXNHGAKx6fIqu-bO5QUoHo7FXaw;-><init>(Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$AppDetailsShortcutMenuItem;)V
@@ -111,14 +111,14 @@
 .method public isValid(Lcom/miui/home/launcher/ItemInfo;)Z
     .locals 1
 
-    .line 77
+    .line 87
     invoke-virtual {p1}, Lcom/miui/home/launcher/ItemInfo;->isApplicatoin()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 78
+    .line 88
     invoke-super {p0, p1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->isValid(Lcom/miui/home/launcher/ItemInfo;)Z
 
     move-result p1

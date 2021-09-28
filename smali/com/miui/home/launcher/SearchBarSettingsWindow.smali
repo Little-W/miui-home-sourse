@@ -39,7 +39,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d00f9
+    const v2, 0x7f0d00fa
 
     const/4 v3, 0x0
 
@@ -47,7 +47,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a01b4
+    const v2, 0x7f0a01b8
 
     .line 30
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -86,7 +86,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const p1, 0x7f11015a
+    const p1, 0x7f110156
 
     .line 37
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->setAnimationStyle(I)V
@@ -133,7 +133,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f070327
+    const v2, 0x7f07032d
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -188,8 +188,6 @@
     const-string v1, "Global search activity not found"
 
     .line 96
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     :goto_0
     return-void
 .end method
@@ -238,8 +236,6 @@
     const-string v1, "Global search activity not found"
 
     .line 85
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     :goto_0
     return-void
 .end method

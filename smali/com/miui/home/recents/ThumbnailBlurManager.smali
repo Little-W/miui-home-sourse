@@ -340,8 +340,6 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     if-nez v0, :cond_1
 
     if-eqz v1, :cond_0

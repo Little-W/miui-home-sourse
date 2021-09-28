@@ -15,6 +15,8 @@
         Lcom/miui/maml/data/Expression$StringArrayVariableExpression;,
         Lcom/miui/maml/data/Expression$NumberArrayVariableExpression;,
         Lcom/miui/maml/data/Expression$ArrayVariableExpression;,
+        Lcom/miui/maml/data/Expression$JsonArrayVariableExpression;,
+        Lcom/miui/maml/data/Expression$JsonObjectVariableExpression;,
         Lcom/miui/maml/data/Expression$StringVariableExpression;,
         Lcom/miui/maml/data/Expression$NumberVariableExpression;,
         Lcom/miui/maml/data/Expression$VariableExpression;,
@@ -35,7 +37,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 21
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +46,7 @@
 .method static synthetic access$200(C)Z
     .locals 0
 
-    .line 21
+    .line 24
     invoke-static {p0}, Lcom/miui/maml/data/Expression;->isVariableChar(C)Z
 
     move-result p0
@@ -55,7 +57,7 @@
 .method static synthetic access$300(C)Z
     .locals 0
 
-    .line 21
+    .line 24
     invoke-static {p0}, Lcom/miui/maml/data/Expression;->isDigitCharStart(C)Z
 
     move-result p0
@@ -66,7 +68,7 @@
 .method static synthetic access$400(C)Z
     .locals 0
 
-    .line 21
+    .line 24
     invoke-static {p0}, Lcom/miui/maml/data/Expression;->isDigitCharRest(C)Z
 
     move-result p0
@@ -77,7 +79,7 @@
 .method static synthetic access$500(C)Z
     .locals 0
 
-    .line 21
+    .line 24
     invoke-static {p0}, Lcom/miui/maml/data/Expression;->isFunctionCharStart(C)Z
 
     move-result p0
@@ -88,7 +90,7 @@
 .method static synthetic access$600(C)Z
     .locals 0
 
-    .line 21
+    .line 24
     invoke-static {p0}, Lcom/miui/maml/data/Expression;->isFunctionCharRest(C)Z
 
     move-result p0
@@ -99,7 +101,7 @@
 .method public static build(Lcom/miui/maml/data/Variables;Ljava/lang/String;)Lcom/miui/maml/data/Expression;
     .locals 1
 
-    .line 855
+    .line 951
     invoke-static {p0, p1}, Lcom/miui/maml/data/Expression;->buildInner(Lcom/miui/maml/data/Variables;Ljava/lang/String;)Lcom/miui/maml/data/Expression;
 
     move-result-object p1
@@ -110,7 +112,7 @@
 
     goto :goto_0
 
-    .line 856
+    .line 952
     :cond_0
     new-instance v0, Lcom/miui/maml/data/RootExpression;
 
@@ -136,14 +138,14 @@
         }
     .end annotation
 
-    .line 981
+    .line 1085
     iget-object v0, p1, Lcom/miui/maml/data/Expression$Tokenizer$Token;->token:Ljava/lang/String;
 
     invoke-static {p0, v0}, Lcom/miui/maml/data/Expression;->buildMultipleInner(Lcom/miui/maml/data/Variables;Ljava/lang/String;)[Lcom/miui/maml/data/Expression;
 
     move-result-object v0
 
-    .line 982
+    .line 1086
     invoke-static {v0}, Lcom/miui/maml/data/Expression;->checkParams([Lcom/miui/maml/data/Expression;)Z
 
     move-result v1
@@ -154,7 +156,7 @@
 
     const-string p0, "Expression"
 
-    .line 983
+    .line 1087
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -175,7 +177,7 @@
 
     return-object v2
 
-    .line 988
+    .line 1092
     :cond_0
     :try_start_0
     invoke-virtual {p2}, Ljava/util/Stack;->isEmpty()Z
@@ -196,7 +198,7 @@
 
     if-ne v1, v3, :cond_1
 
-    .line 989
+    .line 1093
     new-instance v1, Lcom/miui/maml/data/Expression$FunctionExpression;
 
     invoke-virtual {p2}, Ljava/util/Stack;->pop()Ljava/lang/Object;
@@ -211,7 +213,7 @@
 
     return-object v1
 
-    .line 990
+    .line 1094
     :cond_1
     array-length p0, v0
 
@@ -221,7 +223,7 @@
 
     const/4 p0, 0x0
 
-    .line 991
+    .line 1095
     aget-object p0, v0, p0
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -231,12 +233,12 @@
     :catch_0
     move-exception p0
 
-    .line 994
+    .line 1098
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     const-string p2, "Expression"
 
-    .line 995
+    .line 1099
     invoke-virtual {p0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -246,7 +248,7 @@
     :cond_2
     const-string p0, "Expression"
 
-    .line 998
+    .line 1102
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -271,7 +273,7 @@
 .method private static buildInner(Lcom/miui/maml/data/Variables;Ljava/lang/String;)Lcom/miui/maml/data/Expression;
     .locals 9
 
-    .line 860
+    .line 956
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -286,25 +288,25 @@
 
     return-object v1
 
-    .line 867
+    .line 963
     :cond_0
     new-instance v0, Lcom/miui/maml/data/Expression$Tokenizer;
 
     invoke-direct {v0, p1}, Lcom/miui/maml/data/Expression$Tokenizer;-><init>(Ljava/lang/String;)V
 
-    .line 870
+    .line 966
     new-instance v2, Ljava/util/Stack;
 
     invoke-direct {v2}, Ljava/util/Stack;-><init>()V
 
-    .line 871
+    .line 967
     new-instance v3, Ljava/util/Stack;
 
     invoke-direct {v3}, Ljava/util/Stack;-><init>()V
 
     move-object v4, v1
 
-    .line 872
+    .line 968
     :goto_0
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression$Tokenizer;->getToken()Lcom/miui/maml/data/Expression$Tokenizer$Token;
 
@@ -314,7 +316,7 @@
 
     if-eqz v5, :cond_e
 
-    .line 876
+    .line 972
     sget-object v7, Lcom/miui/maml/data/Expression$1;->$SwitchMap$com$miui$maml$data$Expression$Tokenizer$TokenType:[I
 
     iget-object v8, v5, Lcom/miui/maml/data/Expression$Tokenizer$Token;->type:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
@@ -329,13 +331,13 @@
 
     goto/16 :goto_6
 
-    .line 961
+    .line 1065
     :pswitch_0
     invoke-virtual {v2, v5}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_6
 
-    .line 941
+    .line 1045
     :pswitch_1
     iget-object v7, v5, Lcom/miui/maml/data/Expression$Tokenizer$Token;->info:Lcom/miui/maml/data/Expression$OpeInfo;
 
@@ -351,18 +353,18 @@
 
     if-ne v4, v7, :cond_2
 
-    .line 943
+    .line 1047
     :cond_1
     iget-object v4, v5, Lcom/miui/maml/data/Expression$Tokenizer$Token;->info:Lcom/miui/maml/data/Expression$OpeInfo;
 
     iput-boolean v6, v4, Lcom/miui/maml/data/Expression$OpeInfo;->unary:Z
 
-    .line 944
+    .line 1048
     invoke-virtual {v2, v5}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_6
 
-    .line 946
+    .line 1050
     :cond_2
     :goto_1
     invoke-virtual {v2}, Ljava/util/Stack;->size()I
@@ -371,7 +373,7 @@
 
     if-lez v4, :cond_4
 
-    .line 947
+    .line 1051
     invoke-virtual {v2}, Ljava/util/Stack;->peek()Ljava/lang/Object;
 
     move-result-object v4
@@ -384,7 +386,7 @@
 
     if-ne v4, v6, :cond_4
 
-    .line 948
+    .line 1052
     invoke-virtual {v2}, Ljava/util/Stack;->peek()Ljava/lang/Object;
 
     move-result-object v4
@@ -403,7 +405,7 @@
 
     if-gtz v4, :cond_4
 
-    .line 949
+    .line 1053
     invoke-virtual {v3}, Ljava/util/Stack;->size()I
 
     move-result v4
@@ -414,7 +416,7 @@
 
     const-string p0, "Expression"
 
-    .line 950
+    .line 1054
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -433,7 +435,7 @@
 
     return-object v1
 
-    .line 953
+    .line 1057
     :cond_3
     invoke-virtual {v3}, Ljava/util/Stack;->pop()Ljava/lang/Object;
 
@@ -441,14 +443,14 @@
 
     check-cast v4, Lcom/miui/maml/data/Expression;
 
-    .line 954
+    .line 1058
     invoke-virtual {v3}, Ljava/util/Stack;->pop()Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Lcom/miui/maml/data/Expression;
 
-    .line 955
+    .line 1059
     new-instance v7, Lcom/miui/maml/data/Expression$BinaryExpression;
 
     invoke-virtual {v2}, Ljava/util/Stack;->pop()Ljava/lang/Object;
@@ -465,13 +467,13 @@
 
     goto :goto_1
 
-    .line 957
+    .line 1061
     :cond_4
     invoke-virtual {v2, v5}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_6
 
-    .line 884
+    .line 982
     :pswitch_2
     sget-object v4, Lcom/miui/maml/data/Expression$1;->$SwitchMap$com$miui$maml$data$Expression$Tokenizer$TokenType:[I
 
@@ -489,7 +491,7 @@
 
     goto/16 :goto_5
 
-    .line 909
+    .line 1013
     :pswitch_3
     invoke-virtual {v3}, Ljava/util/Stack;->size()I
 
@@ -499,7 +501,7 @@
 
     const-string p0, "Expression"
 
-    .line 910
+    .line 1014
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -518,7 +520,7 @@
 
     return-object v1
 
-    .line 913
+    .line 1017
     :cond_5
     invoke-virtual {v3}, Ljava/util/Stack;->pop()Ljava/lang/Object;
 
@@ -526,12 +528,12 @@
 
     check-cast v4, Lcom/miui/maml/data/Expression;
 
-    .line 914
+    .line 1018
     instance-of v6, v4, Lcom/miui/maml/data/Expression$VariableExpression;
 
     if-eqz v6, :cond_9
 
-    .line 915
+    .line 1019
     iget-object v6, v5, Lcom/miui/maml/data/Expression$Tokenizer$Token;->token:Ljava/lang/String;
 
     invoke-static {p0, v6}, Lcom/miui/maml/data/Expression;->buildInner(Lcom/miui/maml/data/Variables;Ljava/lang/String;)Lcom/miui/maml/data/Expression;
@@ -542,7 +544,7 @@
 
     const-string p0, "Expression"
 
-    .line 917
+    .line 1021
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -561,7 +563,7 @@
 
     return-object v1
 
-    .line 920
+    .line 1024
     :cond_6
     move-object v7, v4
 
@@ -571,25 +573,25 @@
 
     move-result-object v7
 
-    .line 921
+    .line 1025
     instance-of v8, v4, Lcom/miui/maml/data/Expression$NumberVariableExpression;
 
     if-eqz v8, :cond_7
 
-    .line 922
+    .line 1026
     new-instance v4, Lcom/miui/maml/data/Expression$NumberArrayVariableExpression;
 
     invoke-direct {v4, p0, v7, v6}, Lcom/miui/maml/data/Expression$NumberArrayVariableExpression;-><init>(Lcom/miui/maml/data/Variables;Ljava/lang/String;Lcom/miui/maml/data/Expression;)V
 
     goto :goto_2
 
-    .line 923
+    .line 1027
     :cond_7
     instance-of v4, v4, Lcom/miui/maml/data/Expression$StringVariableExpression;
 
     if-eqz v4, :cond_8
 
-    .line 924
+    .line 1028
     new-instance v4, Lcom/miui/maml/data/Expression$StringArrayVariableExpression;
 
     invoke-direct {v4, p0, v7, v6}, Lcom/miui/maml/data/Expression$StringArrayVariableExpression;-><init>(Lcom/miui/maml/data/Variables;Ljava/lang/String;Lcom/miui/maml/data/Expression;)V
@@ -604,7 +606,7 @@
     :cond_9
     const-string v4, "Expression"
 
-    .line 927
+    .line 1031
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -628,7 +630,7 @@
 
     return-object v1
 
-    .line 904
+    .line 1008
     :pswitch_4
     invoke-static {p0, v5, v2}, Lcom/miui/maml/data/Expression;->buildBracket(Lcom/miui/maml/data/Variables;Lcom/miui/maml/data/Expression$Tokenizer$Token;Ljava/util/Stack;)Lcom/miui/maml/data/Expression;
 
@@ -638,7 +640,7 @@
 
     return-object v1
 
-    .line 901
+    .line 1005
     :pswitch_5
     new-instance v4, Lcom/miui/maml/data/Expression$StringExpression;
 
@@ -648,7 +650,7 @@
 
     goto :goto_5
 
-    .line 892
+    .line 996
     :pswitch_6
     invoke-virtual {v2}, Ljava/util/Stack;->empty()Z
 
@@ -668,7 +670,7 @@
 
     if-ne v4, v7, :cond_a
 
-    .line 893
+    .line 997
     invoke-virtual {v2}, Ljava/util/Stack;->peek()Ljava/lang/Object;
 
     move-result-object v4
@@ -686,7 +688,7 @@
     :cond_a
     const/4 v6, 0x0
 
-    .line 894
+    .line 998
     :goto_3
     new-instance v4, Lcom/miui/maml/data/Expression$NumberExpression;
 
@@ -718,13 +720,33 @@
 
     if-eqz v6, :cond_c
 
-    .line 896
+    .line 1000
     invoke-virtual {v2}, Ljava/util/Stack;->pop()Ljava/lang/Object;
 
     goto :goto_5
 
-    .line 889
+    .line 993
     :pswitch_7
+    new-instance v4, Lcom/miui/maml/data/Expression$JsonArrayVariableExpression;
+
+    iget-object v6, v5, Lcom/miui/maml/data/Expression$Tokenizer$Token;->token:Ljava/lang/String;
+
+    invoke-direct {v4, p0, v6}, Lcom/miui/maml/data/Expression$JsonArrayVariableExpression;-><init>(Lcom/miui/maml/data/Variables;Ljava/lang/String;)V
+
+    goto :goto_5
+
+    .line 990
+    :pswitch_8
+    new-instance v4, Lcom/miui/maml/data/Expression$JsonObjectVariableExpression;
+
+    iget-object v6, v5, Lcom/miui/maml/data/Expression$Tokenizer$Token;->token:Ljava/lang/String;
+
+    invoke-direct {v4, p0, v6}, Lcom/miui/maml/data/Expression$JsonObjectVariableExpression;-><init>(Lcom/miui/maml/data/Variables;Ljava/lang/String;)V
+
+    goto :goto_5
+
+    .line 987
+    :pswitch_9
     new-instance v4, Lcom/miui/maml/data/Expression$StringVariableExpression;
 
     iget-object v6, v5, Lcom/miui/maml/data/Expression$Tokenizer$Token;->token:Ljava/lang/String;
@@ -733,15 +755,15 @@
 
     goto :goto_5
 
-    .line 886
-    :pswitch_8
+    .line 984
+    :pswitch_a
     new-instance v4, Lcom/miui/maml/data/Expression$NumberVariableExpression;
 
     iget-object v6, v5, Lcom/miui/maml/data/Expression$Tokenizer$Token;->token:Ljava/lang/String;
 
     invoke-direct {v4, p0, v6}, Lcom/miui/maml/data/Expression$NumberVariableExpression;-><init>(Lcom/miui/maml/data/Variables;Ljava/lang/String;)V
 
-    .line 935
+    .line 1039
     :cond_c
     :goto_5
     invoke-virtual {v2}, Ljava/util/Stack;->empty()Z
@@ -772,7 +794,7 @@
 
     if-eqz v6, :cond_d
 
-    .line 936
+    .line 1040
     new-instance v6, Lcom/miui/maml/data/Expression$UnaryExpression;
 
     invoke-virtual {v2}, Ljava/util/Stack;->pop()Ljava/lang/Object;
@@ -789,7 +811,7 @@
 
     goto :goto_5
 
-    .line 938
+    .line 1042
     :cond_d
     invoke-virtual {v3, v4}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -798,7 +820,7 @@
 
     goto/16 :goto_0
 
-    .line 967
+    .line 1071
     :cond_e
     invoke-virtual {v3}, Ljava/util/Stack;->size()I
 
@@ -814,7 +836,7 @@
 
     const-string p0, "Expression"
 
-    .line 968
+    .line 1072
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -833,7 +855,7 @@
 
     return-object v1
 
-    .line 972
+    .line 1076
     :cond_f
     invoke-virtual {v3}, Ljava/util/Stack;->pop()Ljava/lang/Object;
 
@@ -841,7 +863,7 @@
 
     check-cast p0, Lcom/miui/maml/data/Expression;
 
-    .line 973
+    .line 1077
     :goto_7
     invoke-virtual {v2}, Ljava/util/Stack;->size()I
 
@@ -849,14 +871,14 @@
 
     if-lez p1, :cond_10
 
-    .line 974
+    .line 1078
     invoke-virtual {v3}, Ljava/util/Stack;->pop()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/miui/maml/data/Expression;
 
-    .line 975
+    .line 1079
     new-instance v0, Lcom/miui/maml/data/Expression$BinaryExpression;
 
     invoke-virtual {v2}, Ljava/util/Stack;->pop()Ljava/lang/Object;
@@ -884,12 +906,16 @@
         :pswitch_2
         :pswitch_2
         :pswitch_2
+        :pswitch_2
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
 
     :pswitch_data_1
     .packed-switch 0x1
+        :pswitch_a
+        :pswitch_9
         :pswitch_8
         :pswitch_7
         :pswitch_6
@@ -902,7 +928,7 @@
 .method public static buildMultiple(Lcom/miui/maml/data/Variables;Ljava/lang/String;)[Lcom/miui/maml/data/Expression;
     .locals 4
 
-    .line 810
+    .line 906
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -913,31 +939,31 @@
 
     return-object p0
 
-    .line 813
+    .line 909
     :cond_0
     invoke-static {p0, p1}, Lcom/miui/maml/data/Expression;->buildMultipleInner(Lcom/miui/maml/data/Variables;Ljava/lang/String;)[Lcom/miui/maml/data/Expression;
 
     move-result-object p1
 
-    .line 814
+    .line 910
     array-length v0, p1
 
     new-array v0, v0, [Lcom/miui/maml/data/Expression;
 
     const/4 v1, 0x0
 
-    .line 815
+    .line 911
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_3
 
-    .line 816
+    .line 912
     aget-object v2, p1, v1
 
     if-eqz v2, :cond_2
 
-    .line 817
+    .line 913
     instance-of v3, v2, Lcom/miui/maml/data/Expression$NumberExpression;
 
     if-nez v3, :cond_2
@@ -948,7 +974,7 @@
 
     goto :goto_1
 
-    .line 820
+    .line 916
     :cond_1
     new-instance v3, Lcom/miui/maml/data/RootExpression;
 
@@ -958,7 +984,7 @@
 
     goto :goto_2
 
-    .line 818
+    .line 914
     :cond_2
     :goto_1
     aput-object v2, v0, v1
@@ -975,7 +1001,7 @@
 .method private static buildMultipleInner(Lcom/miui/maml/data/Variables;Ljava/lang/String;)[Lcom/miui/maml/data/Expression;
     .locals 7
 
-    .line 830
+    .line 926
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -988,7 +1014,7 @@
 
     move v4, v3
 
-    .line 831
+    .line 927
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -996,7 +1022,7 @@
 
     if-ge v1, v5, :cond_4
 
-    .line 832
+    .line 928
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -1009,7 +1035,7 @@
 
     if-nez v4, :cond_0
 
-    .line 835
+    .line 931
     invoke-virtual {p1, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
@@ -1053,7 +1079,7 @@
 
     goto :goto_0
 
-    .line 847
+    .line 943
     :cond_4
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -1061,7 +1087,7 @@
 
     if-ge v2, v1, :cond_5
 
-    .line 848
+    .line 944
     invoke-virtual {p1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p1
@@ -1072,7 +1098,7 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 850
+    .line 946
     :cond_5
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -1080,7 +1106,7 @@
 
     new-array p0, p0, [Lcom/miui/maml/data/Expression;
 
-    .line 851
+    .line 947
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object p0
@@ -1097,13 +1123,13 @@
 
     move v1, v0
 
-    .line 1003
+    .line 1107
     :goto_0
     array-length v2, p0
 
     if-ge v1, v2, :cond_1
 
-    .line 1004
+    .line 1108
     aget-object v2, p0, v1
 
     if-nez v2, :cond_0
@@ -1198,7 +1224,7 @@
 .method private static isFunctionCharRest(C)Z
     .locals 1
 
-    .line 805
+    .line 901
     invoke-static {p0}, Lcom/miui/maml/data/Expression;->isFunctionCharStart(C)Z
 
     move-result v0
@@ -1321,13 +1347,29 @@
 .method public accept(Lcom/miui/maml/data/ExpressionVisitor;)V
     .locals 0
 
-    .line 1030
+    .line 1142
     invoke-virtual {p1, p0}, Lcom/miui/maml/data/ExpressionVisitor;->visit(Lcom/miui/maml/data/Expression;)V
 
     return-void
 .end method
 
 .method public abstract evaluate()D
+.end method
+
+.method public evaluateJsonArray()Lorg/json/JSONArray;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public evaluateJsonObject()Lorg/json/JSONObject;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
 .method public evaluateStr()Ljava/lang/String;
@@ -1349,12 +1391,12 @@
 .method public preciseEvaluate()Ljava/math/BigDecimal;
     .locals 2
 
-    .line 1013
+    .line 1117
     invoke-virtual {p0}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v0
 
-    .line 1015
+    .line 1119
     :try_start_0
     invoke-static {v0, v1}, Ljava/math/BigDecimal;->valueOf(D)Ljava/math/BigDecimal;
 

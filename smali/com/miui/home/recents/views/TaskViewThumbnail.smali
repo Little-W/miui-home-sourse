@@ -229,7 +229,7 @@
 
     move-result-object p3
 
-    const p4, 0x7f060322
+    const p4, 0x7f060324
 
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -249,7 +249,7 @@
 
     move-result-object p3
 
-    const p4, 0x7f060326
+    const p4, 0x7f060328
 
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -272,7 +272,7 @@
 
     move-result-object p1
 
-    const-string p2, "window"
+    const-string/jumbo p2, "window"
 
     invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -869,8 +869,6 @@
     const-string v2, "updateThumbnailScale mBitmapShader.setLocalMatrix error"
 
     .line 375
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     .line 378
     :cond_11
     :goto_b
@@ -1050,7 +1048,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07030b
+    const v1, 0x7f070311
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1320,8 +1318,6 @@
     const-string v4, "ondraw"
 
     .line 213
-    invoke-static {v3, v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     goto :goto_3
 
     :cond_5

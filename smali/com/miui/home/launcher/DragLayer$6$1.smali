@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DragLayer$6;)V
     .locals 0
 
-    .line 639
+    .line 644
     iput-object p1, p0, Lcom/miui/home/launcher/DragLayer$6$1;->this$1:Lcom/miui/home/launcher/DragLayer$6;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 641
+    .line 646
     iget-object p1, p0, Lcom/miui/home/launcher/DragLayer$6$1;->this$1:Lcom/miui/home/launcher/DragLayer$6;
 
     iget-object p1, p1, Lcom/miui/home/launcher/DragLayer$6;->this$0:Lcom/miui/home/launcher/DragLayer;

@@ -19,7 +19,7 @@
 
 
 # static fields
-.field private static sUIHandler:Landroid/os/Handler;
+.field private static final sUIHandler:Landroid/os/Handler;
 
 
 # direct methods
@@ -52,7 +52,7 @@
 .method public static synthetic lambda$run$0(Lcom/miui/home/launcher/common/AsyncTaskRunnable;Ljava/lang/Object;)V
     .locals 0
 
-    .line 16
+    .line 19
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/common/AsyncTaskRunnable;->onPostExecute(Ljava/lang/Object;)V
 
     return-void
@@ -87,11 +87,31 @@
     .line 16
     sget-object v1, Lcom/miui/home/launcher/common/AsyncTaskRunnable;->sUIHandler:Landroid/os/Handler;
 
+    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_0
+
+    .line 17
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/AsyncTaskRunnable;->onPostExecute(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 19
+    :cond_0
+    sget-object v1, Lcom/miui/home/launcher/common/AsyncTaskRunnable;->sUIHandler:Landroid/os/Handler;
+
     new-instance v2, Lcom/miui/home/launcher/common/-$$Lambda$AsyncTaskRunnable$mdM-BtTKtxGqNbBE00SCkXwSMuc;
 
     invoke-direct {v2, p0, v0}, Lcom/miui/home/launcher/common/-$$Lambda$AsyncTaskRunnable$mdM-BtTKtxGqNbBE00SCkXwSMuc;-><init>(Lcom/miui/home/launcher/common/AsyncTaskRunnable;Ljava/lang/Object;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
+    :goto_0
     return-void
 .end method

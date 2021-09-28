@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/maml/elements/ViewHolderScreenElement;)V
     .locals 0
 
-    .line 225
+    .line 228
     iput-object p1, p0, Lcom/miui/maml/elements/ViewHolderScreenElement$ProxyListener;->this$0:Lcom/miui/maml/elements/ViewHolderScreenElement;
 
     invoke-direct {p0}, Lcom/miui/maml/RendererController$EmptyListener;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/maml/elements/ViewHolderScreenElement;Lcom/miui/maml/elements/ViewHolderScreenElement$1;)V
     .locals 0
 
-    .line 225
+    .line 228
     invoke-direct {p0, p1}, Lcom/miui/maml/elements/ViewHolderScreenElement$ProxyListener;-><init>(Lcom/miui/maml/elements/ViewHolderScreenElement;)V
 
     return-void
@@ -44,7 +44,7 @@
 .method public doRender()V
     .locals 1
 
-    .line 234
+    .line 237
     iget-object v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement$ProxyListener;->this$0:Lcom/miui/maml/elements/ViewHolderScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getView()Landroid/view/View;
@@ -59,7 +59,7 @@
 .method public forceUpdate()V
     .locals 1
 
-    .line 244
+    .line 247
     iget-object v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement$ProxyListener;->this$0:Lcom/miui/maml/elements/ViewHolderScreenElement;
 
     iget-object v0, v0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mRoot:Lcom/miui/maml/ScreenElementRoot;
@@ -76,7 +76,7 @@
 .method public tick(J)V
     .locals 1
 
-    .line 229
+    .line 232
     iget-object v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement$ProxyListener;->this$0:Lcom/miui/maml/elements/ViewHolderScreenElement;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/maml/elements/ViewHolderScreenElement;->doTickChildren(J)V
@@ -87,7 +87,7 @@
 .method public triggerUpdate()V
     .locals 1
 
-    .line 239
+    .line 242
     iget-object v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement$ProxyListener;->this$0:Lcom/miui/maml/elements/ViewHolderScreenElement;
 
     iget-object v0, v0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mRoot:Lcom/miui/maml/ScreenElementRoot;

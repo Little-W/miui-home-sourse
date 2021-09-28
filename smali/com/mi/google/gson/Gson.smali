@@ -1696,7 +1696,7 @@
     .line 982
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "{serializeNulls:"
+    const-string/jumbo v1, "{serializeNulls:"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -1723,7 +1723,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, "}"
+    const-string/jumbo v1, "}"
 
     .line 986
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

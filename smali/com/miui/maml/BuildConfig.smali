@@ -4,35 +4,14 @@
 
 
 # static fields
-.field public static final APPLICATION_ID:Ljava/lang/String; = "com.miui.maml"
+.field public static final BUILD_TYPE:Ljava/lang/String; = "release"
 
-.field public static final BUILD_TYPE:Ljava/lang/String; = "debug"
+.field public static final DEBUG:Z = false
 
-.field public static final DEBUG:Z
-
-.field public static final FLAVOR:Ljava/lang/String; = ""
-
-.field public static final VERSION_CODE:I = 0x1
-
-.field public static final VERSION_NAME:Ljava/lang/String; = "1.0"
+.field public static final LIBRARY_PACKAGE_NAME:Ljava/lang/String; = "com.miui.maml"
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "true"
-
-    .line 7
-    invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
-
-    move-result v0
-
-    sput-boolean v0, Lcom/miui/maml/BuildConfig;->DEBUG:Z
-
-    return-void
-.end method
-
 .method public constructor <init>()V
     .locals 0
 

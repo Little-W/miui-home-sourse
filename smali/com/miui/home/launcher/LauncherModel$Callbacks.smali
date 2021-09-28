@@ -86,6 +86,17 @@
 .method public abstract bindItem(Lcom/miui/home/launcher/ItemInfo;)V
 .end method
 
+.method public abstract bindMamlWidgetRemoved(Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/maml/MaMlWidgetInfo;",
+            ">;)V"
+        }
+    .end annotation
+.end method
+
 .method public abstract bindScreenAdded(JII)V
 .end method
 

@@ -172,7 +172,7 @@
         }
     .end annotation
 
-    .line 355
+    .line 358
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -190,7 +190,7 @@
 
     check-cast v0, Lmiuix/animation/internal/TransitionInfo;
 
-    .line 356
+    .line 359
     iget-object v0, v0, Lmiuix/animation/internal/TransitionInfo;->animTasks:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -210,14 +210,14 @@
 
     check-cast v1, Lmiuix/animation/internal/AnimTask;
 
-    .line 357
+    .line 360
     invoke-direct {p0}, Lmiuix/animation/internal/RunnerHandler;->getTaskOfMinCount()Lmiuix/animation/internal/AnimTask;
 
     move-result-object v2
 
     if-eqz v2, :cond_2
 
-    .line 358
+    .line 361
     iget-object v3, p0, Lmiuix/animation/internal/RunnerHandler;->mTaskList:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
@@ -226,7 +226,7 @@
 
     if-ge v3, p3, :cond_1
 
-    .line 359
+    .line 362
     invoke-virtual {v2}, Lmiuix/animation/internal/AnimTask;->getTotalAnimCount()I
 
     move-result v3
@@ -241,13 +241,13 @@
 
     goto :goto_1
 
-    .line 362
+    .line 365
     :cond_1
     invoke-virtual {v2, v1}, Lmiuix/animation/internal/AnimTask;->addToTail(Lmiuix/animation/utils/LinkNode;)V
 
     goto :goto_0
 
-    .line 360
+    .line 363
     :cond_2
     :goto_1
     iget-object v2, p0, Lmiuix/animation/internal/RunnerHandler;->mTaskList:Ljava/util/List;
@@ -275,7 +275,7 @@
         }
     .end annotation
 
-    .line 156
+    .line 159
     invoke-interface {p3, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -284,12 +284,12 @@
 
     if-nez v0, :cond_0
 
-    .line 158
+    .line 161
     invoke-interface {p3, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 160
+    .line 163
     :cond_0
     invoke-virtual {v0, p2}, Lmiuix/animation/utils/LinkNode;->addToTail(Lmiuix/animation/utils/LinkNode;)V
 
@@ -300,12 +300,12 @@
 .method private static doSetOperation(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimStats;Lmiuix/animation/listener/UpdateInfo;Lmiuix/animation/internal/AnimOperationInfo;)V
     .locals 5
 
-    .line 304
+    .line 307
     iget-object v0, p2, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iget-byte v0, v0, Lmiuix/animation/internal/AnimInfo;->op:B
 
-    .line 305
+    .line 308
     invoke-static {v0}, Lmiuix/animation/internal/AnimTask;->isRunning(B)Z
 
     move-result v1
@@ -324,7 +324,7 @@
 
     iget-object v2, p2, Lmiuix/animation/listener/UpdateInfo;->property:Lmiuix/animation/property/FloatProperty;
 
-    .line 307
+    .line 310
     invoke-interface {v1, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v1
@@ -336,28 +336,28 @@
 
     iget-byte v1, v1, Lmiuix/animation/internal/AnimInfo;->op:B
 
-    .line 308
+    .line 311
     invoke-static {v1}, Lmiuix/animation/internal/AnimTask;->isRunning(B)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 309
+    .line 312
     iget v1, p3, Lmiuix/animation/internal/AnimOperationInfo;->usedCount:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p3, Lmiuix/animation/internal/AnimOperationInfo;->usedCount:I
 
-    .line 310
+    .line 313
     iget-byte v1, p3, Lmiuix/animation/internal/AnimOperationInfo;->op:B
 
     const/4 v2, 0x3
 
     if-ne v1, v2, :cond_2
 
-    .line 311
+    .line 314
     iget-object v1, p2, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iget-wide v1, v1, Lmiuix/animation/internal/AnimInfo;->targetValue:D
@@ -368,7 +368,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 312
+    .line 315
     iget-object v1, p2, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iget-object v2, p2, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
@@ -377,7 +377,7 @@
 
     iput-wide v2, v1, Lmiuix/animation/internal/AnimInfo;->value:D
 
-    .line 314
+    .line 317
     :cond_1
     iget-object v1, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
@@ -387,7 +387,7 @@
 
     iput v2, v1, Lmiuix/animation/internal/AnimStats;->endCount:I
 
-    .line 315
+    .line 318
     iget v1, p1, Lmiuix/animation/internal/AnimStats;->endCount:I
 
     add-int/lit8 v1, v1, 0x1
@@ -396,7 +396,7 @@
 
     goto :goto_0
 
-    .line 316
+    .line 319
     :cond_2
     iget-byte v1, p3, Lmiuix/animation/internal/AnimOperationInfo;->op:B
 
@@ -404,7 +404,7 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 317
+    .line 320
     iget-object v1, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     iget v2, v1, Lmiuix/animation/internal/AnimStats;->cancelCount:I
@@ -413,21 +413,21 @@
 
     iput v2, v1, Lmiuix/animation/internal/AnimStats;->cancelCount:I
 
-    .line 318
+    .line 321
     iget v1, p1, Lmiuix/animation/internal/AnimStats;->cancelCount:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p1, Lmiuix/animation/internal/AnimStats;->cancelCount:I
 
-    .line 320
+    .line 323
     :cond_3
     :goto_0
     iget-byte p3, p3, Lmiuix/animation/internal/AnimOperationInfo;->op:B
 
     invoke-virtual {p2, p3}, Lmiuix/animation/listener/UpdateInfo;->setOp(B)V
 
-    .line 321
+    .line 324
     invoke-static {p0, p1, p2, v0}, Lmiuix/animation/internal/TransitionInfo;->decreaseStartCountForDelayAnim(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimStats;Lmiuix/animation/listener/UpdateInfo;B)V
 
     :cond_4
@@ -437,7 +437,7 @@
 .method private doSetup()V
     .locals 4
 
-    .line 390
+    .line 393
     iget-object v0, p0, Lmiuix/animation/internal/RunnerHandler;->mTransMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -461,14 +461,14 @@
 
     check-cast v1, Lmiuix/animation/internal/TransitionInfo;
 
-    .line 391
+    .line 394
     iget-object v2, p0, Lmiuix/animation/internal/RunnerHandler;->runningTarget:Ljava/util/Set;
 
     iget-object v3, v1, Lmiuix/animation/internal/TransitionInfo;->target:Lmiuix/animation/IAnimTarget;
 
     invoke-interface {v2, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 394
+    .line 397
     :cond_0
     iget-object v2, v1, Lmiuix/animation/internal/TransitionInfo;->target:Lmiuix/animation/IAnimTarget;
 
@@ -476,7 +476,7 @@
 
     invoke-virtual {v2, v1}, Lmiuix/animation/internal/AnimManager;->setupTransition(Lmiuix/animation/internal/TransitionInfo;)V
 
-    .line 395
+    .line 398
     invoke-virtual {v1}, Lmiuix/animation/internal/TransitionInfo;->remove()Lmiuix/animation/utils/LinkNode;
 
     move-result-object v1
@@ -487,23 +487,23 @@
 
     goto :goto_0
 
-    .line 398
+    .line 401
     :cond_1
     iget-object v0, p0, Lmiuix/animation/internal/RunnerHandler;->mTransMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 399
+    .line 402
     iget-boolean v0, p0, Lmiuix/animation/internal/RunnerHandler;->mRunnerStart:Z
 
     if-nez v0, :cond_2
 
     const/4 v0, 0x1
 
-    .line 400
+    .line 403
     iput-boolean v0, p0, Lmiuix/animation/internal/RunnerHandler;->mRunnerStart:Z
 
-    .line 401
+    .line 404
     invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
     move-result-object v0
@@ -517,7 +517,7 @@
 .method private getTaskOfMinCount()Lmiuix/animation/internal/AnimTask;
     .locals 5
 
-    .line 371
+    .line 374
     iget-object v0, p0, Lmiuix/animation/internal/RunnerHandler;->mTaskList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -542,7 +542,7 @@
 
     check-cast v3, Lmiuix/animation/internal/AnimTask;
 
-    .line 372
+    .line 375
     invoke-virtual {v3}, Lmiuix/animation/internal/AnimTask;->getTotalAnimCount()I
 
     move-result v4
@@ -562,7 +562,7 @@
 .method private getTotalAnimCount()I
     .locals 3
 
-    .line 383
+    .line 386
     iget-object v0, p0, Lmiuix/animation/internal/RunnerHandler;->runningTarget:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -584,7 +584,7 @@
 
     check-cast v2, Lmiuix/animation/IAnimTarget;
 
-    .line 384
+    .line 387
     iget-object v2, v2, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
     invoke-virtual {v2}, Lmiuix/animation/internal/AnimManager;->getTotalAnimCount()I
@@ -602,7 +602,7 @@
 .method private static handleSetTo(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimStats;Lmiuix/animation/listener/UpdateInfo;)Z
     .locals 3
 
-    .line 290
+    .line 293
     invoke-static {p2}, Lmiuix/animation/internal/AnimValueUtils;->handleSetToValue(Lmiuix/animation/listener/UpdateInfo;)Z
 
     move-result v0
@@ -613,7 +613,7 @@
 
     return p0
 
-    .line 293
+    .line 296
     :cond_0
     iget-object v0, p2, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
@@ -627,7 +627,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 294
+    .line 297
     iget-object v0, p0, Lmiuix/animation/internal/AnimTask;->animStats:Lmiuix/animation/internal/AnimStats;
 
     iget v2, v0, Lmiuix/animation/internal/AnimStats;->cancelCount:I
@@ -636,7 +636,7 @@
 
     iput v2, v0, Lmiuix/animation/internal/AnimStats;->cancelCount:I
 
-    .line 295
+    .line 298
     iget v0, p1, Lmiuix/animation/internal/AnimStats;->cancelCount:I
 
     add-int/2addr v0, v1
@@ -645,10 +645,10 @@
 
     const/4 v0, 0x4
 
-    .line 296
+    .line 299
     invoke-virtual {p2, v0}, Lmiuix/animation/listener/UpdateInfo;->setOp(B)V
 
-    .line 297
+    .line 300
     iget-object v0, p2, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iget-byte v0, v0, Lmiuix/animation/internal/AnimInfo;->op:B
@@ -662,7 +662,7 @@
 .method private static handleUpdate(Lmiuix/animation/internal/TransitionInfo;Lmiuix/animation/internal/AnimOperationInfo;Lmiuix/animation/internal/AnimStats;)V
     .locals 8
 
-    .line 266
+    .line 269
     iget-object v0, p0, Lmiuix/animation/internal/TransitionInfo;->target:Lmiuix/animation/IAnimTarget;
 
     iget-object v0, v0, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
@@ -675,7 +675,7 @@
 
     move-result v0
 
-    .line 267
+    .line 270
     iget-object v1, p0, Lmiuix/animation/internal/TransitionInfo;->animTasks:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -695,10 +695,10 @@
 
     check-cast v2, Lmiuix/animation/internal/AnimTask;
 
-    .line 268
+    .line 271
     iget-object v3, p0, Lmiuix/animation/internal/TransitionInfo;->updateList:Ljava/util/List;
 
-    .line 269
+    .line 272
     iget v4, v2, Lmiuix/animation/internal/AnimTask;->startPos:I
 
     invoke-virtual {v2}, Lmiuix/animation/internal/AnimTask;->getAnimCount()I
@@ -710,14 +710,16 @@
     :goto_0
     if-ge v4, v5, :cond_0
 
-    .line 270
+    .line 273
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Lmiuix/animation/listener/UpdateInfo;
 
-    .line 271
+    if-eqz v6, :cond_1
+
+    .line 274
     invoke-static {v2, p2, v6}, Lmiuix/animation/internal/RunnerHandler;->handleSetTo(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimStats;Lmiuix/animation/listener/UpdateInfo;)Z
 
     move-result v7
@@ -728,7 +730,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 272
+    .line 275
     invoke-static {v2, p2, v6, p1}, Lmiuix/animation/internal/RunnerHandler;->doSetOperation(Lmiuix/animation/internal/AnimTask;Lmiuix/animation/internal/AnimStats;Lmiuix/animation/listener/UpdateInfo;Lmiuix/animation/internal/AnimOperationInfo;)V
 
     :cond_1
@@ -739,7 +741,7 @@
     :cond_2
     if-nez v0, :cond_3
 
-    .line 278
+    .line 281
     iget-object p1, p0, Lmiuix/animation/internal/TransitionInfo;->target:Lmiuix/animation/IAnimTarget;
 
     iget-object p1, p1, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
@@ -750,7 +752,7 @@
 
     invoke-interface {p1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 280
+    .line 283
     :cond_3
     invoke-virtual {p2}, Lmiuix/animation/internal/AnimStats;->isRunning()Z
 
@@ -770,14 +772,14 @@
 
     iget-object p2, p0, Lmiuix/animation/internal/TransitionInfo;->key:Ljava/lang/Object;
 
-    .line 281
+    .line 284
     invoke-interface {p1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 282
+    .line 285
     sget-object p1, Lmiuix/animation/internal/TransitionInfo;->sMap:Ljava/util/Map;
 
     iget p2, p0, Lmiuix/animation/internal/TransitionInfo;->id:I
@@ -788,7 +790,7 @@
 
     invoke-interface {p1, p2, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 283
+    .line 286
     iget-object p1, p0, Lmiuix/animation/internal/TransitionInfo;->target:Lmiuix/animation/IAnimTarget;
 
     iget-object p1, p1, Lmiuix/animation/IAnimTarget;->handler:Lmiuix/animation/internal/TargetHandler;
@@ -797,12 +799,12 @@
 
     const/4 p2, 0x0
 
-    .line 284
+    .line 287
     invoke-virtual {p1, p2, p0, p2}, Lmiuix/animation/internal/TargetHandler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object p0
 
-    .line 285
+    .line 288
     invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
 
     :cond_4
@@ -812,7 +814,7 @@
 .method private isInfoInTransMap(Lmiuix/animation/internal/TransitionInfo;)Z
     .locals 2
 
-    .line 212
+    .line 215
     iget-object v0, p0, Lmiuix/animation/internal/RunnerHandler;->mTransMap:Ljava/util/Map;
 
     iget-object v1, p1, Lmiuix/animation/internal/TransitionInfo;->target:Lmiuix/animation/IAnimTarget;
@@ -832,7 +834,7 @@
 
     return p1
 
-    .line 217
+    .line 220
     :cond_0
     iget-object v0, v0, Lmiuix/animation/internal/TransitionInfo;->next:Lmiuix/animation/utils/LinkNode;
 
@@ -871,7 +873,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -897,7 +899,12 @@
 
     check-cast v3, Lmiuix/animation/listener/UpdateInfo;
 
-    .line 135
+    if-nez v3, :cond_1
+
+    goto :goto_0
+
+    .line 138
+    :cond_1
     iget-object v4, p1, Lmiuix/animation/internal/RunnerHandler$SetToInfo;->state:Lmiuix/animation/controller/AnimState;
 
     iget-object v5, p1, Lmiuix/animation/internal/RunnerHandler$SetToInfo;->target:Lmiuix/animation/IAnimTarget;
@@ -906,29 +913,29 @@
 
     move-result-wide v4
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_2
 
-    .line 137
+    .line 140
     iget-object v2, v3, Lmiuix/animation/listener/UpdateInfo;->animInfo:Lmiuix/animation/internal/AnimInfo;
 
     iput-wide v4, v2, Lmiuix/animation/internal/AnimInfo;->setToValue:D
 
     if-nez v0, :cond_0
 
-    .line 139
+    .line 142
     iget-object v2, p1, Lmiuix/animation/internal/RunnerHandler$SetToInfo;->target:Lmiuix/animation/IAnimTarget;
 
     invoke-virtual {v3, v2}, Lmiuix/animation/listener/UpdateInfo;->setTargetValue(Lmiuix/animation/IAnimTarget;)V
 
     goto :goto_0
 
-    .line 142
-    :cond_1
+    .line 145
+    :cond_2
     instance-of v3, v2, Lmiuix/animation/property/IIntValueProperty;
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_3
 
-    .line 143
+    .line 146
     iget-object v3, p1, Lmiuix/animation/internal/RunnerHandler$SetToInfo;->target:Lmiuix/animation/IAnimTarget;
 
     check-cast v2, Lmiuix/animation/property/IIntValueProperty;
@@ -939,8 +946,8 @@
 
     goto :goto_0
 
-    .line 145
-    :cond_2
+    .line 148
+    :cond_3
     iget-object v3, p1, Lmiuix/animation/internal/RunnerHandler$SetToInfo;->target:Lmiuix/animation/IAnimTarget;
 
     double-to-float v4, v4
@@ -949,8 +956,8 @@
 
     goto :goto_0
 
-    .line 149
-    :cond_3
+    .line 152
+    :cond_4
     iget-object v0, p1, Lmiuix/animation/internal/RunnerHandler$SetToInfo;->target:Lmiuix/animation/IAnimTarget;
 
     const/4 v1, 0x0
@@ -961,9 +968,9 @@
 
     move-result v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
-    .line 150
+    .line 153
     iget-object p1, p1, Lmiuix/animation/internal/RunnerHandler$SetToInfo;->target:Lmiuix/animation/IAnimTarget;
 
     iget-object p1, p1, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
@@ -972,14 +979,14 @@
 
     invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    :cond_4
+    :cond_5
     return-void
 .end method
 
 .method private runAnim(JJZ)V
     .locals 8
 
-    .line 326
+    .line 329
     iget-object v0, p0, Lmiuix/animation/internal/RunnerHandler;->runningTarget:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
@@ -988,16 +995,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 327
+    .line 330
     invoke-direct {p0}, Lmiuix/animation/internal/RunnerHandler;->stopAnimRunner()V
 
     return-void
 
-    .line 330
+    .line 333
     :cond_0
     iput-wide p1, p0, Lmiuix/animation/internal/RunnerHandler;->mLastRun:J
 
-    .line 331
+    .line 334
     invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
     move-result-object p1
@@ -1006,7 +1013,7 @@
 
     move-result-wide p1
 
-    .line 332
+    .line 335
     iget v0, p0, Lmiuix/animation/internal/RunnerHandler;->mFrameCount:I
 
     const/4 v1, 0x1
@@ -1026,7 +1033,7 @@
     :cond_1
     move-wide p1, p3
 
-    .line 335
+    .line 338
     :goto_0
     iget-wide p3, p0, Lmiuix/animation/internal/RunnerHandler;->mTotalT:J
 
@@ -1034,34 +1041,34 @@
 
     iput-wide p3, p0, Lmiuix/animation/internal/RunnerHandler;->mTotalT:J
 
-    .line 336
+    .line 339
     iget p3, p0, Lmiuix/animation/internal/RunnerHandler;->mFrameCount:I
 
     add-int/2addr p3, v1
 
     iput p3, p0, Lmiuix/animation/internal/RunnerHandler;->mFrameCount:I
 
-    .line 337
+    .line 340
     invoke-direct {p0}, Lmiuix/animation/internal/RunnerHandler;->getTotalAnimCount()I
 
     move-result p3
 
-    .line 338
+    .line 341
     iget-object p4, p0, Lmiuix/animation/internal/RunnerHandler;->mSplitInfo:[I
 
     invoke-static {p3, p4}, Lmiuix/animation/internal/ThreadPoolUtil;->getSplitCount(I[I)V
 
-    .line 339
+    .line 342
     iget-object p3, p0, Lmiuix/animation/internal/RunnerHandler;->mSplitInfo:[I
 
     const/4 p4, 0x0
 
     aget p4, p3, p4
 
-    .line 340
+    .line 343
     aget p3, p3, v1
 
-    .line 341
+    .line 344
     iget-object v0, p0, Lmiuix/animation/internal/RunnerHandler;->runningTarget:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1081,7 +1088,7 @@
 
     check-cast v2, Lmiuix/animation/IAnimTarget;
 
-    .line 342
+    .line 345
     iget-object v2, v2, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
     iget-object v3, p0, Lmiuix/animation/internal/RunnerHandler;->mTransList:Ljava/util/List;
@@ -1090,13 +1097,13 @@
 
     goto :goto_1
 
-    .line 344
+    .line 347
     :cond_2
     iget-object v0, p0, Lmiuix/animation/internal/RunnerHandler;->mTransList:Ljava/util/List;
 
     invoke-direct {p0, v0, p3, p4}, Lmiuix/animation/internal/RunnerHandler;->addAnimTask(Ljava/util/List;II)V
 
-    .line 345
+    .line 348
     iget-object p3, p0, Lmiuix/animation/internal/RunnerHandler;->mTaskList:Ljava/util/List;
 
     invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
@@ -1107,7 +1114,7 @@
 
     iput-boolean p3, p0, Lmiuix/animation/internal/RunnerHandler;->mIsTaskRunning:Z
 
-    .line 346
+    .line 349
     sget-object p3, Lmiuix/animation/internal/AnimTask;->sTaskCount:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object p4, p0, Lmiuix/animation/internal/RunnerHandler;->mTaskList:Ljava/util/List;
@@ -1118,7 +1125,7 @@
 
     invoke-virtual {p3, p4}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 347
+    .line 350
     iget-object p3, p0, Lmiuix/animation/internal/RunnerHandler;->mTaskList:Ljava/util/List;
 
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1140,7 +1147,7 @@
 
     check-cast v2, Lmiuix/animation/internal/AnimTask;
 
-    .line 348
+    .line 351
     iget-wide v3, p0, Lmiuix/animation/internal/RunnerHandler;->mTotalT:J
 
     move-wide v5, p1
@@ -1151,13 +1158,13 @@
 
     goto :goto_2
 
-    .line 350
+    .line 353
     :cond_3
     iget-object p1, p0, Lmiuix/animation/internal/RunnerHandler;->mTransList:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
-    .line 351
+    .line 354
     iget-object p1, p0, Lmiuix/animation/internal/RunnerHandler;->mTaskList:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->clear()V
@@ -1168,7 +1175,7 @@
 .method private setupWaitTrans(Lmiuix/animation/IAnimTarget;)Z
     .locals 2
 
-    .line 203
+    .line 206
     iget-object p1, p1, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
     iget-object p1, p1, Lmiuix/animation/internal/AnimManager;->mWaitState:Ljava/util/concurrent/ConcurrentLinkedQueue;
@@ -1181,7 +1188,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 205
+    .line 208
     iget-object v0, p1, Lmiuix/animation/internal/TransitionInfo;->target:Lmiuix/animation/IAnimTarget;
 
     iget-object v1, p0, Lmiuix/animation/internal/RunnerHandler;->mTransMap:Ljava/util/Map;
@@ -1201,12 +1208,12 @@
 .method private stopAnimRunner()V
     .locals 6
 
-    .line 165
+    .line 168
     iget-boolean v0, p0, Lmiuix/animation/internal/RunnerHandler;->mStart:Z
 
     if-eqz v0, :cond_1
 
-    .line 166
+    .line 169
     invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogEnabled()Z
 
     move-result v0
@@ -1219,7 +1226,7 @@
 
     const/4 v2, 0x2
 
-    .line 167
+    .line 170
     new-array v2, v2, [Ljava/lang/Object;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1262,22 +1269,22 @@
 
     invoke-static {v0, v2}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 172
+    .line 175
     :cond_0
     iput-boolean v1, p0, Lmiuix/animation/internal/RunnerHandler;->mStart:Z
 
-    .line 173
+    .line 176
     iput-boolean v1, p0, Lmiuix/animation/internal/RunnerHandler;->mRunnerStart:Z
 
     const-wide/16 v2, 0x0
 
-    .line 174
+    .line 177
     iput-wide v2, p0, Lmiuix/animation/internal/RunnerHandler;->mTotalT:J
 
-    .line 175
+    .line 178
     iput v1, p0, Lmiuix/animation/internal/RunnerHandler;->mFrameCount:I
 
-    .line 176
+    .line 179
     invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
     move-result-object v0
@@ -1293,10 +1300,10 @@
 
     const/4 v0, 0x0
 
-    .line 181
+    .line 184
     iput-boolean v0, p0, Lmiuix/animation/internal/RunnerHandler;->mIsTaskRunning:Z
 
-    .line 183
+    .line 186
     iget-object v1, p0, Lmiuix/animation/internal/RunnerHandler;->runningTarget:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1318,7 +1325,7 @@
 
     check-cast v2, Lmiuix/animation/IAnimTarget;
 
-    .line 184
+    .line 187
     iget-object v4, p0, Lmiuix/animation/internal/RunnerHandler;->mTransList:Ljava/util/List;
 
     invoke-direct {p0, v2, v4}, Lmiuix/animation/internal/RunnerHandler;->updateTarget(Lmiuix/animation/IAnimTarget;Ljava/util/List;)Z
@@ -1335,7 +1342,7 @@
 
     goto :goto_1
 
-    .line 187
+    .line 190
     :cond_0
     iget-object v3, p0, Lmiuix/animation/internal/RunnerHandler;->mDelList:Ljava/util/List;
 
@@ -1347,7 +1354,7 @@
     :goto_1
     move v0, v3
 
-    .line 189
+    .line 192
     :goto_2
     iget-object v2, p0, Lmiuix/animation/internal/RunnerHandler;->mTransList:Ljava/util/List;
 
@@ -1355,7 +1362,7 @@
 
     goto :goto_0
 
-    .line 191
+    .line 194
     :cond_2
     iget-object v1, p0, Lmiuix/animation/internal/RunnerHandler;->runningTarget:Ljava/util/Set;
 
@@ -1363,12 +1370,12 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
 
-    .line 192
+    .line 195
     iget-object v1, p0, Lmiuix/animation/internal/RunnerHandler;->mDelList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 193
+    .line 196
     iget-object v1, p0, Lmiuix/animation/internal/RunnerHandler;->mTransMap:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
@@ -1377,7 +1384,7 @@
 
     if-nez v1, :cond_3
 
-    .line 194
+    .line 197
     invoke-direct {p0}, Lmiuix/animation/internal/RunnerHandler;->doSetup()V
 
     move v0, v3
@@ -1385,7 +1392,7 @@
     :cond_3
     if-nez v0, :cond_4
 
-    .line 198
+    .line 201
     invoke-direct {p0}, Lmiuix/animation/internal/RunnerHandler;->stopAnimRunner()V
 
     :cond_4
@@ -1408,14 +1415,14 @@
 
     move-object/from16 v1, p1
 
-    .line 223
+    .line 226
     iget-object v2, v1, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
     move-object/from16 v3, p2
 
     invoke-virtual {v2, v3}, Lmiuix/animation/internal/AnimManager;->getTransitionInfos(Ljava/util/List;)V
 
-    .line 226
+    .line 229
     iget-object v2, v0, Lmiuix/animation/internal/RunnerHandler;->mOpMap:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1424,7 +1431,7 @@
 
     check-cast v2, Lmiuix/animation/internal/AnimOperationInfo;
 
-    .line 227
+    .line 230
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -1450,7 +1457,7 @@
 
     check-cast v8, Lmiuix/animation/internal/TransitionInfo;
 
-    .line 228
+    .line 231
     invoke-direct {v0, v8}, Lmiuix/animation/internal/RunnerHandler;->isInfoInTransMap(Lmiuix/animation/internal/TransitionInfo;)Z
 
     move-result v10
@@ -1464,7 +1471,7 @@
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 233
+    .line 236
     iget-wide v11, v8, Lmiuix/animation/internal/TransitionInfo;->startTime:J
 
     iget-wide v13, v2, Lmiuix/animation/internal/AnimOperationInfo;->sendTime:J
@@ -1486,23 +1493,23 @@
 
     move-object v6, v2
 
-    .line 237
+    .line 240
     :goto_1
     invoke-virtual {v8}, Lmiuix/animation/internal/TransitionInfo;->getAnimStats()Lmiuix/animation/internal/AnimStats;
 
     move-result-object v12
 
-    .line 238
+    .line 241
     invoke-virtual {v12}, Lmiuix/animation/internal/AnimStats;->isStarted()Z
 
     move-result v13
 
     if-eqz v13, :cond_2
 
-    .line 239
+    .line 242
     invoke-static {v8, v6, v12}, Lmiuix/animation/internal/RunnerHandler;->handleUpdate(Lmiuix/animation/internal/TransitionInfo;Lmiuix/animation/internal/AnimOperationInfo;Lmiuix/animation/internal/AnimStats;)V
 
-    .line 241
+    .line 244
     :cond_2
     invoke-static {}, Lmiuix/animation/utils/LogUtils;->isLogEnabled()Z
 
@@ -1510,7 +1517,7 @@
 
     if-eqz v13, :cond_4
 
-    .line 242
+    .line 245
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -1595,7 +1602,7 @@
 
     iget-wide v9, v2, Lmiuix/animation/internal/AnimOperationInfo;->sendTime:J
 
-    .line 246
+    .line 249
     invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v10
@@ -1624,7 +1631,7 @@
 
     invoke-virtual {v6, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 247
+    .line 250
     invoke-virtual {v12}, Lmiuix/animation/internal/AnimStats;->isRunning()Z
 
     move-result v10
@@ -1657,7 +1664,7 @@
 
     aput-object v10, v14, v6
 
-    .line 242
+    .line 245
     invoke-static {v13, v14}, Lmiuix/animation/utils/LogUtils;->debug(Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_3
@@ -1667,7 +1674,7 @@
 
     const/16 v16, 0x4
 
-    .line 251
+    .line 254
     :goto_3
     invoke-virtual {v12}, Lmiuix/animation/internal/AnimStats;->isRunning()Z
 
@@ -1675,7 +1682,7 @@
 
     if-nez v6, :cond_6
 
-    .line 252
+    .line 255
     iget-object v6, v1, Lmiuix/animation/IAnimTarget;->animManager:Lmiuix/animation/internal/AnimManager;
 
     iget v10, v12, Lmiuix/animation/internal/AnimStats;->cancelCount:I
@@ -1704,7 +1711,7 @@
     :cond_7
     if-eqz v2, :cond_9
 
-    .line 258
+    .line 261
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->size()I
 
     move-result v4
@@ -1717,13 +1724,13 @@
 
     if-eqz v2, :cond_9
 
-    .line 259
+    .line 262
     :cond_8
     iget-object v2, v0, Lmiuix/animation/internal/RunnerHandler;->mOpMap:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 261
+    .line 264
     :cond_9
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->clear()V
 

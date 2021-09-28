@@ -39,6 +39,10 @@
 
 .field public static final enum STR:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
+.field public static final enum VAR_JSON_ARR:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+
+.field public static final enum VAR_JSON_OBJ:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+
 .field public static final enum VAR_NUM:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
 .field public static final enum VAR_STR:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
@@ -46,9 +50,9 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 11
+    .locals 13
 
-    .line 140
+    .line 143
     new-instance v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
     const-string v1, "INVALID"
@@ -59,7 +63,7 @@
 
     sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->INVALID:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 141
+    .line 144
     new-instance v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
     const-string v1, "VAR_NUM"
@@ -70,7 +74,7 @@
 
     sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->VAR_NUM:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 142
+    .line 145
     new-instance v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
     const-string v1, "VAR_STR"
@@ -81,75 +85,97 @@
 
     sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->VAR_STR:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 143
+    .line 146
     new-instance v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    const-string v1, "NUM"
+    const-string v1, "VAR_JSON_OBJ"
 
     const/4 v5, 0x3
 
     invoke-direct {v0, v1, v5}, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->NUM:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+    sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->VAR_JSON_OBJ:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 144
+    .line 147
     new-instance v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    const-string v1, "STR"
+    const-string v1, "VAR_JSON_ARR"
 
     const/4 v6, 0x4
 
     invoke-direct {v0, v1, v6}, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->STR:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+    sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->VAR_JSON_ARR:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 145
+    .line 148
     new-instance v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    const-string v1, "OPE"
+    const-string v1, "NUM"
 
     const/4 v7, 0x5
 
     invoke-direct {v0, v1, v7}, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->OPE:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+    sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->NUM:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 146
+    .line 149
     new-instance v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    const-string v1, "FUN"
+    const-string v1, "STR"
 
     const/4 v8, 0x6
 
     invoke-direct {v0, v1, v8}, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->FUN:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+    sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->STR:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 147
+    .line 150
     new-instance v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    const-string v1, "BRACKET_ROUND"
+    const-string v1, "OPE"
 
     const/4 v9, 0x7
 
     invoke-direct {v0, v1, v9}, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->BRACKET_ROUND:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+    sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->OPE:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 148
+    .line 151
     new-instance v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    const-string v1, "BRACKET_SQUARE"
+    const-string v1, "FUN"
 
     const/16 v10, 0x8
 
     invoke-direct {v0, v1, v10}, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;-><init>(Ljava/lang/String;I)V
 
+    sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->FUN:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+
+    .line 152
+    new-instance v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+
+    const-string v1, "BRACKET_ROUND"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v0, v1, v11}, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->BRACKET_ROUND:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+
+    .line 153
+    new-instance v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+
+    const-string v1, "BRACKET_SQUARE"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v0, v1, v12}, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;-><init>(Ljava/lang/String;I)V
+
     sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->BRACKET_SQUARE:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    const/16 v0, 0x9
+    const/16 v0, 0xb
 
-    .line 139
+    .line 142
     new-array v0, v0, [Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
     sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->INVALID:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
@@ -164,29 +190,37 @@
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->NUM:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+    sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->VAR_JSON_OBJ:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
     aput-object v1, v0, v5
 
-    sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->STR:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+    sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->VAR_JSON_ARR:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
     aput-object v1, v0, v6
 
-    sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->OPE:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+    sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->NUM:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
     aput-object v1, v0, v7
 
-    sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->FUN:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+    sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->STR:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
     aput-object v1, v0, v8
 
-    sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->BRACKET_ROUND:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+    sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->OPE:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
     aput-object v1, v0, v9
 
-    sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->BRACKET_SQUARE:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+    sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->FUN:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
     aput-object v1, v0, v10
+
+    sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->BRACKET_ROUND:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+
+    aput-object v1, v0, v11
+
+    sget-object v1, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->BRACKET_SQUARE:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+
+    aput-object v1, v0, v12
 
     sput-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->$VALUES:[Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
@@ -201,7 +235,7 @@
         }
     .end annotation
 
-    .line 139
+    .line 142
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -210,7 +244,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
     .locals 1
 
-    .line 139
+    .line 142
     const-class v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -225,7 +259,7 @@
 .method public static values()[Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
     .locals 1
 
-    .line 139
+    .line 142
     sget-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->$VALUES:[Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
     invoke-virtual {v0}, [Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->clone()Ljava/lang/Object;

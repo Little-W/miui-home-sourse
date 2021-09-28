@@ -37,7 +37,7 @@
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
-    const-string v1, "you must init Matrix sdk first"
+    const-string/jumbo v1, "you must init Matrix sdk first"
 
     invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 

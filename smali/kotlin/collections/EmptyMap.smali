@@ -5,6 +5,7 @@
 # interfaces
 .implements Ljava/io/Serializable;
 .implements Ljava/util/Map;
+.implements Lkotlin/jvm/internal/markers/KMappedMarker;
 
 
 # static fields
@@ -320,7 +321,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "{}"
+    const-string/jumbo v0, "{}"
 
     return-object v0
 .end method

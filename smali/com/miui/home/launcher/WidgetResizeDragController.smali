@@ -177,7 +177,7 @@
 
 
 # virtual methods
-.method public addResizeFrame(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/LauncherAppWidgetHostView;Lcom/miui/home/launcher/CellLayout;)V
+.method public addResizeFrame(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/LauncherWidgetView;Lcom/miui/home/launcher/CellLayout;)V
     .locals 2
 
     .line 124
@@ -191,7 +191,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/WidgetResizeDragController;->mDragLayer:Lcom/miui/home/launcher/DragLayer;
 
-    invoke-direct {p1, v0, p2, p3, v1}, Lcom/miui/home/launcher/AppWidgetResizeFrame;-><init>(Landroid/content/Context;Lcom/miui/home/launcher/LauncherAppWidgetHostView;Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/DragLayer;)V
+    invoke-direct {p1, v0, p2, p3, v1}, Lcom/miui/home/launcher/AppWidgetResizeFrame;-><init>(Landroid/content/Context;Lcom/miui/home/launcher/LauncherWidgetView;Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/DragLayer;)V
 
     .line 126
     new-instance p2, Lcom/miui/home/launcher/DragLayer$LayoutParams;

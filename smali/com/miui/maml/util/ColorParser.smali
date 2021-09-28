@@ -364,9 +364,13 @@
 
     if-nez v2, :cond_1
 
-    if-eqz v0, :cond_0
-
     .line 69
+    invoke-static {v0}, Lcom/miui/maml/util/Utils;->isEmpty(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
     invoke-static {v0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result v1

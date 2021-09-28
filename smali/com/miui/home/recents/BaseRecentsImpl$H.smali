@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;)V
     .locals 0
 
-    .line 865
+    .line 885
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$H;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;Lcom/miui/home/recents/BaseRecentsImpl$1;)V
     .locals 0
 
-    .line 865
+    .line 885
     invoke-direct {p0, p1}, Lcom/miui/home/recents/BaseRecentsImpl$H;-><init>(Lcom/miui/home/recents/BaseRecentsImpl;)V
 
     return-void
@@ -44,7 +44,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 868
+    .line 888
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/16 v0, 0xa11
@@ -57,7 +57,7 @@
 
     goto :goto_0
 
-    .line 874
+    .line 894
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$H;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
@@ -65,7 +65,7 @@
 
     goto :goto_0
 
-    .line 870
+    .line 890
     :cond_1
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$H;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 

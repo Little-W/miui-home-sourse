@@ -117,7 +117,7 @@
 
     iget v2, p0, Lcom/miui/home/launcher/install/PackageInstallerCompatVL$1;->val$status:I
 
-    invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/Launcher;->updateWidgetProgress(Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2, v2}, Lcom/miui/home/launcher/Launcher;->updateWidgetProgress(Ljava/lang/String;II)V
 
     :cond_0
     return-void

@@ -34,7 +34,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 719
+    .line 733
     new-instance v0, Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;
 
     const-string v1, "Refresh"
@@ -57,7 +57,7 @@
 
     const/4 v0, 0x2
 
-    .line 718
+    .line 732
     new-array v0, v0, [Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;
 
     sget-object v1, Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;->Refresh:Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;
@@ -81,7 +81,7 @@
         }
     .end annotation
 
-    .line 718
+    .line 732
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -90,7 +90,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;
     .locals 1
 
-    .line 718
+    .line 732
     const-class v0, Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -105,7 +105,7 @@
 .method public static values()[Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;
     .locals 1
 
-    .line 718
+    .line 732
     sget-object v0, Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;->$VALUES:[Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;
 
     invoke-virtual {v0}, [Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;->clone()Ljava/lang/Object;

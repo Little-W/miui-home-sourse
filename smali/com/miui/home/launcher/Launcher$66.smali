@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->fillEmpty(Lcom/miui/home/launcher/ItemInfo;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/launcher/Launcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,17 +20,13 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$deletedInfo:Lcom/miui/home/launcher/ItemInfo;
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ItemInfo;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 6594
+    .line 6975
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$66;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$66;->val$deletedInfo:Lcom/miui/home/launcher/ItemInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,75 +38,20 @@
 .method public run()V
     .locals 3
 
-    .line 6597
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$66;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$8500(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DragController;
+    .line 6978
+    invoke-static {}, Lcom/miui/launcher/utils/BoostHelper;->getInstance()Lcom/miui/launcher/utils/BoostHelper;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/DragController;->isDragging()Z
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$66;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "Launcher"
-
-    .line 6598
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Fail to fill empty cell, because it is dragging :"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$66;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v2}, Lcom/miui/home/launcher/Launcher;->access$8500(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DragController;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/miui/home/launcher/DragController;->isDragging()Z
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$2700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DragLayer;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const/4 v2, 0x0
 
-    return-void
-
-    .line 6601
-    :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$66;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$8602(Lcom/miui/home/launcher/Launcher;Z)Z
-
-    .line 6602
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$66;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$66;->val$deletedInfo:Lcom/miui/home/launcher/ItemInfo;
-
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Workspace;->fillEmptyCellAuto(Lcom/miui/home/launcher/ItemInfo;)V
-
-    .line 6603
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$66;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$8602(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-virtual {v0, v1, v2}, Lcom/miui/launcher/utils/BoostHelper;->boost(Landroid/view/View;Z)V
 
     return-void
 .end method

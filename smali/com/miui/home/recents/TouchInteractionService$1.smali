@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/TouchInteractionService;)V
     .locals 0
 
-    .line 73
+    .line 76
     iput-object p1, p0, Lcom/miui/home/recents/TouchInteractionService$1;->this$0:Lcom/miui/home/recents/TouchInteractionService;
 
     invoke-direct {p0}, Lcom/android/systemui/shared/recents/IOverviewProxy$Stub;-><init>()V
@@ -30,10 +30,27 @@
     return-void
 .end method
 
-.method static synthetic lambda$onSystemUiStateChanged$0(Lcom/miui/home/recents/TouchInteractionService;)V
+.method static synthetic lambda$onInitialize$0(Landroid/os/Bundle;Lcom/android/wm/shell/onehanded/IOneHanded;)V
+    .locals 1
+
+    .line 86
+    sget-object v0, Lcom/miui/home/recents/SystemUiProxyWrapper;->INSTANCE:Lcom/miui/home/recents/util/MainThreadInitializedObject;
+
+    invoke-virtual {v0, p0}, Lcom/miui/home/recents/util/MainThreadInitializedObject;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/miui/home/recents/SystemUiProxyWrapper;
+
+    invoke-virtual {v0, p0, p1}, Lcom/miui/home/recents/SystemUiProxyWrapper;->setProxyByBundle(Landroid/os/Bundle;Lcom/android/wm/shell/onehanded/IOneHanded;)V
+
+    return-void
+.end method
+
+.method static synthetic lambda$onSystemUiStateChanged$1(Lcom/miui/home/recents/TouchInteractionService;)V
     .locals 0
 
-    .line 126
+    .line 132
     invoke-static {p0}, Lcom/miui/home/recents/TouchInteractionService;->access$200(Lcom/miui/home/recents/TouchInteractionService;)V
 
     return-void
@@ -66,18 +83,27 @@
 .end method
 
 .method public onInitialize(Landroid/os/Bundle;)V
-    .locals 1
+    .locals 3
 
-    .line 81
-    sget-object v0, Lcom/miui/home/recents/SystemUiProxyWrapper;->INSTANCE:Lcom/miui/home/recents/util/MainThreadInitializedObject;
+    const-string v0, "extra_shell_one_handed"
 
-    invoke-virtual {v0, p1}, Lcom/miui/home/recents/util/MainThreadInitializedObject;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 84
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBinder(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    check-cast v0, Lcom/miui/home/recents/SystemUiProxyWrapper;
+    invoke-static {v0}, Lcom/android/wm/shell/onehanded/IOneHanded$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/wm/shell/onehanded/IOneHanded;
 
-    invoke-virtual {v0, p1}, Lcom/miui/home/recents/SystemUiProxyWrapper;->setProxyByBundle(Landroid/os/Bundle;)V
+    move-result-object v0
+
+    .line 85
+    sget-object v1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
+
+    new-instance v2, Lcom/miui/home/recents/-$$Lambda$TouchInteractionService$1$eGDv_p_kaHNg1SwGvjkTtv73l28;
+
+    invoke-direct {v2, p1, v0}, Lcom/miui/home/recents/-$$Lambda$TouchInteractionService$1$eGDv_p_kaHNg1SwGvjkTtv73l28;-><init>(Landroid/os/Bundle;Lcom/android/wm/shell/onehanded/IOneHanded;)V
+
+    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -89,7 +115,7 @@
 
     if-nez p2, :cond_0
 
-    .line 98
+    .line 104
     iget-object p1, p0, Lcom/miui/home/recents/TouchInteractionService$1;->this$0:Lcom/miui/home/recents/TouchInteractionService;
 
     invoke-static {p1}, Lcom/miui/home/recents/TouchInteractionService;->access$000(Lcom/miui/home/recents/TouchInteractionService;)Lcom/miui/home/recents/OverviewCommandHelper;
@@ -105,7 +131,7 @@
 .method public onOverviewShown(Z)V
     .locals 1
 
-    .line 91
+    .line 97
     iget-object v0, p0, Lcom/miui/home/recents/TouchInteractionService$1;->this$0:Lcom/miui/home/recents/TouchInteractionService;
 
     invoke-static {v0}, Lcom/miui/home/recents/TouchInteractionService;->access$000(Lcom/miui/home/recents/TouchInteractionService;)Lcom/miui/home/recents/OverviewCommandHelper;
@@ -120,7 +146,7 @@
 .method public onOverviewToggle()V
     .locals 1
 
-    .line 86
+    .line 92
     iget-object v0, p0, Lcom/miui/home/recents/TouchInteractionService$1;->this$0:Lcom/miui/home/recents/TouchInteractionService;
 
     invoke-static {v0}, Lcom/miui/home/recents/TouchInteractionService;->access$000(Lcom/miui/home/recents/TouchInteractionService;)Lcom/miui/home/recents/OverviewCommandHelper;
@@ -135,19 +161,19 @@
 .method public onSystemUiStateChanged(I)V
     .locals 2
 
-    .line 125
+    .line 131
     iget-object v0, p0, Lcom/miui/home/recents/TouchInteractionService$1;->this$0:Lcom/miui/home/recents/TouchInteractionService;
 
     invoke-static {v0, p1}, Lcom/miui/home/recents/TouchInteractionService;->access$102(Lcom/miui/home/recents/TouchInteractionService;I)I
 
-    .line 126
+    .line 132
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     iget-object v0, p0, Lcom/miui/home/recents/TouchInteractionService$1;->this$0:Lcom/miui/home/recents/TouchInteractionService;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$TouchInteractionService$1$RnsV0MNPQQfDr1rqInEsOECgp4w;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$TouchInteractionService$1$aNphzIKK3SmC9yX8HJkWq7lmVFg;
 
-    invoke-direct {v1, v0}, Lcom/miui/home/recents/-$$Lambda$TouchInteractionService$1$RnsV0MNPQQfDr1rqInEsOECgp4w;-><init>(Lcom/miui/home/recents/TouchInteractionService;)V
+    invoke-direct {v1, v0}, Lcom/miui/home/recents/-$$Lambda$TouchInteractionService$1$aNphzIKK3SmC9yX8HJkWq7lmVFg;-><init>(Lcom/miui/home/recents/TouchInteractionService;)V
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 
@@ -157,7 +183,7 @@
 .method public onTip(II)V
     .locals 1
 
-    .line 104
+    .line 110
     iget-object v0, p0, Lcom/miui/home/recents/TouchInteractionService$1;->this$0:Lcom/miui/home/recents/TouchInteractionService;
 
     invoke-static {v0}, Lcom/miui/home/recents/TouchInteractionService;->access$000(Lcom/miui/home/recents/TouchInteractionService;)Lcom/miui/home/recents/OverviewCommandHelper;

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/smallwindow/SmallWindowListRecyclerView;)V
     .locals 0
 
-    .line 158
+    .line 155
     iput-object p1, p0, Lcom/miui/home/smallwindow/SmallWindowListRecyclerView$3;->this$0:Lcom/miui/home/smallwindow/SmallWindowListRecyclerView;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -35,14 +35,14 @@
 .method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
     .locals 3
 
-    .line 162
+    .line 159
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     move-result-object p2
 
     check-cast p2, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    .line 163
+    .line 160
     invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->getChildCount()I
 
     move-result p3
@@ -52,21 +52,21 @@
     :goto_0
     if-ge v0, p3, :cond_1
 
-    .line 166
+    .line 163
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Lcom/miui/home/smallwindow/ItemView;
 
-    .line 167
+    .line 164
     invoke-virtual {v1}, Lcom/miui/home/smallwindow/ItemView;->getTextView()Landroid/widget/TextView;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 168
+    .line 165
     invoke-virtual {v1}, Lcom/miui/home/smallwindow/ItemView;->getTextView()Landroid/widget/TextView;
 
     move-result-object v1
@@ -80,7 +80,7 @@
 
     goto :goto_0
 
-    .line 171
+    .line 168
     :cond_1
     iget-object p3, p0, Lcom/miui/home/smallwindow/SmallWindowListRecyclerView$3;->this$0:Lcom/miui/home/smallwindow/SmallWindowListRecyclerView;
 

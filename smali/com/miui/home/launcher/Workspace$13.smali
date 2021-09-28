@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/FolderInfo;Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 0
 
-    .line 2330
+    .line 2494
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$13;->this$0:Lcom/miui/home/launcher/Workspace;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Workspace$13;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 4
 
-    .line 2333
+    .line 2497
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$13;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$13;->val$shortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
@@ -65,14 +65,14 @@
 
     invoke-virtual {v0, v1, v3, v2}, Lcom/miui/home/launcher/FolderInfo;->add(Lcom/miui/home/launcher/ShortcutInfo;ZLcom/miui/home/launcher/allapps/LauncherMode;)V
 
-    .line 2334
+    .line 2498
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$13;->val$shortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
 
     const-wide/16 v1, -0x1
 
     iput-wide v1, v0, Lcom/miui/home/launcher/ShortcutInfo;->screenId:J
 
-    .line 2335
+    .line 2499
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$13;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$200(Lcom/miui/home/launcher/Workspace;)Lcom/miui/home/launcher/Launcher;
@@ -83,7 +83,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/LauncherModel;->updateItemInDatabase(Landroid/content/Context;Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 2336
+    .line 2500
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$13;->val$folderInfo:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->notifyDataSetChanged()V

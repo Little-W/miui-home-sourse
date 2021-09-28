@@ -38,10 +38,10 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 1
 
-    .line 2100
+    .line 2120
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$TargetCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
-    .line 2101
+    .line 2121
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$AnimConfigCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -58,7 +58,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$AnimConfigCommand;->mSubName:Lcom/miui/maml/data/Expression;
 
-    .line 2102
+    .line 2122
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$AnimConfigCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -75,7 +75,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$AnimConfigCommand;->mAttr:Lcom/miui/maml/data/Expression;
 
-    .line 2103
+    .line 2123
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$AnimConfigCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -94,12 +94,12 @@
 
     const-string p1, "command"
 
-    .line 2105
+    .line 2125
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2106
+    .line 2126
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result p2
@@ -164,14 +164,14 @@
     :goto_1
     packed-switch p1, :pswitch_data_0
 
-    .line 2117
+    .line 2137
     sget-object p1, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;->INVALID:Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$AnimConfigCommand;->mCommand:Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
     goto :goto_2
 
-    .line 2114
+    .line 2134
     :pswitch_0
     sget-object p1, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;->CLEAR:Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
@@ -179,7 +179,7 @@
 
     goto :goto_2
 
-    .line 2111
+    .line 2131
     :pswitch_1
     sget-object p1, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;->REMOVE:Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
@@ -187,7 +187,7 @@
 
     goto :goto_2
 
-    .line 2108
+    .line 2128
     :pswitch_2
     sget-object p1, Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;->UPDATE:Lcom/miui/maml/ActionCommand$AnimConfigCommand$Type;
 
@@ -211,25 +211,25 @@
 .method protected doPerform()V
     .locals 5
 
-    .line 2124
+    .line 2144
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$AnimConfigCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    .line 2125
+    .line 2145
     instance-of v1, v0, Lcom/miui/maml/elements/AnimConfigElement;
 
     if-nez v1, :cond_0
 
     goto :goto_3
 
-    .line 2128
+    .line 2148
     :cond_0
     check-cast v0, Lcom/miui/maml/elements/AnimConfigElement;
 
-    .line 2129
+    .line 2149
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -274,7 +274,7 @@
 
     move-result-object v1
 
-    .line 2130
+    .line 2150
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$AnimConfigCommand;->mAttr:Lcom/miui/maml/data/Expression;
 
     if-eqz v2, :cond_2
@@ -288,7 +288,7 @@
     :cond_2
     const-string v2, ""
 
-    .line 2131
+    .line 2151
     :goto_1
     sget-object v3, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$AnimConfigCommand$Type:[I
 
@@ -304,25 +304,25 @@
 
     goto :goto_2
 
-    .line 2141
+    .line 2161
     :pswitch_0
     invoke-virtual {v0}, Lcom/miui/maml/elements/AnimConfigElement;->clearConfigData()V
 
     goto :goto_2
 
-    .line 2138
+    .line 2158
     :pswitch_1
     invoke-virtual {v0, v1, v2}, Lcom/miui/maml/elements/AnimConfigElement;->removeConfigData(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 2133
+    .line 2153
     :pswitch_2
     iget-object v3, p0, Lcom/miui/maml/ActionCommand$AnimConfigCommand;->mValuesExp:[Lcom/miui/maml/data/Expression;
 
     if-eqz v3, :cond_3
 
-    .line 2134
+    .line 2154
     invoke-virtual {v0, v1, v2, v3}, Lcom/miui/maml/elements/AnimConfigElement;->updateConfigData(Ljava/lang/String;Ljava/lang/String;[Lcom/miui/maml/data/Expression;)V
 
     :cond_3

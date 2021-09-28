@@ -1935,7 +1935,7 @@
 
     move-result-object v1
 
-    const/16 v2, 0xb
+    const/16 v2, 0xe
 
     invoke-virtual {p1, v1, v0, v2}, Lcom/miui/home/launcher/Application;->startActivityForResult(Landroid/content/Context;Landroid/content/Intent;I)V
 
@@ -3207,7 +3207,7 @@
     .line 181
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a019f
+    const v0, 0x7f0a01a3
 
     .line 183
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
@@ -3218,7 +3218,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mSceneContent:Lcom/miui/home/launcher/upsidescene/SceneContentView;
 
-    const v0, 0x7f0a00c9
+    const v0, 0x7f0a00ca
 
     .line 184
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
@@ -3229,7 +3229,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mEditModeBottomBar:Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;
 
-    const v0, 0x7f0a00f4
+    const v0, 0x7f0a00f5
 
     .line 185
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
@@ -3251,7 +3251,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mBackgroundScreen:Lcom/miui/home/launcher/upsidescene/FixedScreen;
 
-    const v0, 0x7f0a01a7
+    const v0, 0x7f0a01ab
 
     .line 187
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->findViewById(I)Landroid/view/View;
@@ -3942,7 +3942,7 @@
     .line 971
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f100302
+    const v2, 0x7f100317
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

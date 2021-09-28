@@ -10,6 +10,34 @@
 
 
 # direct methods
+.method public static final asIterable(Lkotlin/sequences/Sequence;)Ljava/lang/Iterable;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lkotlin/sequences/Sequence<",
+            "+TT;>;)",
+            "Ljava/lang/Iterable<",
+            "TT;>;"
+        }
+    .end annotation
+
+    const-string v0, "$this$asIterable"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 1919
+    new-instance v0, Lkotlin/sequences/SequencesKt___SequencesKt$asIterable$$inlined$Iterable$1;
+
+    invoke-direct {v0, p0}, Lkotlin/sequences/SequencesKt___SequencesKt$asIterable$$inlined$Iterable$1;-><init>(Lkotlin/sequences/Sequence;)V
+
+    check-cast v0, Ljava/lang/Iterable;
+
+    return-object v0
+.end method
+
 .method public static final map(Lkotlin/sequences/Sequence;Lkotlin/jvm/functions/Function1;)Lkotlin/sequences/Sequence;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;

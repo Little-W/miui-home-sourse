@@ -182,8 +182,6 @@
     const-string v1, "bind widget failed"
 
     .line 143
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 146
@@ -215,8 +213,6 @@
     const-string v1, "provider not installed"
 
     .line 151
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     :goto_0
     return-void
 .end method

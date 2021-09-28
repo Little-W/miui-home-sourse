@@ -20,7 +20,7 @@
 
     const/4 v0, 0x1
 
-    .line 332
+    .line 349
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/maml/data/Expression$VariableExpression;-><init>(Lcom/miui/maml/data/Variables;Ljava/lang/String;Z)V
 
     return-void
@@ -31,7 +31,7 @@
 .method public evaluate()D
     .locals 2
 
-    .line 337
+    .line 354
     iget-object v0, p0, Lcom/miui/maml/data/Expression$NumberVariableExpression;->mIndexedVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/IndexedVariable;->getDouble()D
@@ -44,7 +44,7 @@
 .method public evaluateStr()Ljava/lang/String;
     .locals 2
 
-    .line 342
+    .line 359
     invoke-virtual {p0}, Lcom/miui/maml/data/Expression$NumberVariableExpression;->evaluate()D
 
     move-result-wide v0
@@ -59,7 +59,7 @@
 .method public isNull()Z
     .locals 1
 
-    .line 347
+    .line 364
     iget-object v0, p0, Lcom/miui/maml/data/Expression$NumberVariableExpression;->mIndexedVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/IndexedVariable;->isNull()Z

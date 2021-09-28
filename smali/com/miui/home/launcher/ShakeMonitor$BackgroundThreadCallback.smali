@@ -117,8 +117,6 @@
     const-string v0, "start monitor"
 
     .line 126
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     goto :goto_0
 
     .line 132
@@ -144,8 +142,6 @@
     const-string v0, "stop monitor"
 
     .line 135
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     :cond_3
     :goto_0
     return v1

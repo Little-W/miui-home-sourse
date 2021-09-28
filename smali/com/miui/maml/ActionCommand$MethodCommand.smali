@@ -37,19 +37,19 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 0
 
-    .line 2607
+    .line 2728
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$BaseMethodCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     const-string p1, "method"
 
-    .line 2608
+    .line 2729
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mMethodName:Ljava/lang/String;
 
-    .line 2609
+    .line 2730
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -88,14 +88,14 @@
 .method protected doPerform()V
     .locals 6
 
-    .line 2662
+    .line 2783
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$MethodCommand;->prepareParams()V
 
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    .line 2666
+    .line 2787
     :try_start_0
     sget-object v2, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$TargetCommand$TargetType:[I
 
@@ -119,27 +119,27 @@
 
     goto :goto_0
 
-    .line 2669
+    .line 2790
     :pswitch_0
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mMethod:Ljava/lang/reflect/Method;
 
     if-nez v2, :cond_0
 
-    .line 2670
+    .line 2791
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$MethodCommand;->loadMethod()V
 
-    .line 2672
+    .line 2793
     :cond_0
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mMethod:Ljava/lang/reflect/Method;
 
     if-eqz v2, :cond_1
 
-    .line 2673
+    .line 2794
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$MethodCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 2674
+    .line 2795
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mMethod:Ljava/lang/reflect/Method;
 
     iget-object v3, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mParamValues:[Ljava/lang/Object;
@@ -157,13 +157,13 @@
 
     goto :goto_0
 
-    .line 2681
+    .line 2802
     :cond_2
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mCtor:Ljava/lang/reflect/Constructor;
 
     if-eqz v2, :cond_3
 
-    .line 2682
+    .line 2803
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mCtor:Ljava/lang/reflect/Constructor;
 
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mParamValues:[Ljava/lang/Object;
@@ -179,13 +179,13 @@
     :cond_3
     move v1, v5
 
-    .line 2691
+    .line 2812
     :goto_0
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mReturnVar:Lcom/miui/maml/data/IndexedVariable;
 
     if-eqz v2, :cond_4
 
-    .line 2692
+    .line 2813
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mReturnVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v2, v0}, Lcom/miui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
@@ -193,13 +193,13 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2701
+    .line 2822
     :cond_4
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mErrorCodeVar:Lcom/miui/maml/data/IndexedVariable;
 
     if-eqz v0, :cond_6
 
-    .line 2702
+    .line 2823
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mErrorCodeVar:Lcom/miui/maml/data/IndexedVariable;
 
     int-to-double v1, v1
@@ -216,7 +216,7 @@
     :catch_0
     move-exception v0
 
-    .line 2696
+    .line 2817
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Exception;->getCause()Ljava/lang/Throwable;
 
@@ -224,7 +224,7 @@
 
     const-string v3, "ActionCommand"
 
-    .line 2697
+    .line 2818
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -241,6 +241,7 @@
 
     if-eqz v2, :cond_5
 
+    .line 2819
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -249,7 +250,6 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2698
     invoke-virtual {v2}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -272,19 +272,19 @@
 
     move-result-object v0
 
-    .line 2697
+    .line 2818
     invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     const/4 v0, -0x2
 
-    .line 2701
+    .line 2822
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mErrorCodeVar:Lcom/miui/maml/data/IndexedVariable;
 
     if-eqz v1, :cond_6
 
-    .line 2702
+    .line 2823
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mErrorCodeVar:Lcom/miui/maml/data/IndexedVariable;
 
     int-to-double v2, v0
@@ -295,20 +295,20 @@
     :goto_2
     return-void
 
-    .line 2701
+    .line 2822
     :goto_3
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mErrorCodeVar:Lcom/miui/maml/data/IndexedVariable;
 
     if-eqz v2, :cond_7
 
-    .line 2702
+    .line 2823
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mErrorCodeVar:Lcom/miui/maml/data/IndexedVariable;
 
     int-to-double v3, v1
 
     invoke-virtual {v2, v3, v4}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 2704
+    .line 2825
     :cond_7
     throw v0
 
@@ -324,10 +324,10 @@
 .method public init()V
     .locals 4
 
-    .line 2614
+    .line 2735
     invoke-super {p0}, Lcom/miui/maml/ActionCommand$BaseMethodCommand;->init()V
 
-    .line 2616
+    .line 2737
     sget-object v0, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$TargetCommand$TargetType:[I
 
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mTargetType:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
@@ -346,18 +346,18 @@
 
     goto :goto_0
 
-    .line 2619
+    .line 2740
     :pswitch_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mMethod:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_3
 
-    .line 2620
+    .line 2741
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$MethodCommand;->loadMethod()V
 
     goto :goto_0
 
-    .line 2624
+    .line 2745
     :cond_0
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$MethodCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
@@ -373,23 +373,23 @@
 
     const/4 v0, 0x0
 
-    .line 2625
+    .line 2746
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mCtor:Ljava/lang/reflect/Constructor;
 
     goto :goto_0
 
-    .line 2626
+    .line 2747
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mCtor:Ljava/lang/reflect/Constructor;
 
     if-nez v0, :cond_3
 
-    .line 2627
+    .line 2748
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mTargetClass:Ljava/lang/Class;
 
     if-eqz v0, :cond_2
 
-    .line 2629
+    .line 2750
     :try_start_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mTargetClass:Ljava/lang/Class;
 
@@ -410,7 +410,7 @@
 
     const-string v1, "ActionCommand"
 
-    .line 2631
+    .line 2752
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -440,7 +440,7 @@
     :cond_2
     const-string v0, "ActionCommand"
 
-    .line 2634
+    .line 2755
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -473,32 +473,32 @@
 .method protected loadMethod()V
     .locals 4
 
-    .line 2642
+    .line 2763
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mTargetClass:Ljava/lang/Class;
 
     if-nez v0, :cond_0
 
-    .line 2643
+    .line 2764
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$MethodCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2645
+    .line 2766
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mTargetClass:Ljava/lang/Class;
 
-    .line 2648
+    .line 2769
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mTargetClass:Ljava/lang/Class;
 
     if-eqz v0, :cond_1
 
-    .line 2650
+    .line 2771
     :try_start_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MethodCommand;->mTargetClass:Ljava/lang/Class;
 
@@ -521,7 +521,7 @@
 
     const-string v1, "ActionCommand"
 
-    .line 2652
+    .line 2773
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -549,7 +549,7 @@
     :goto_0
     const-string v0, "ActionCommand"
 
-    .line 2654
+    .line 2775
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -581,7 +581,7 @@
     :cond_1
     const-string v0, "ActionCommand"
 
-    .line 2656
+    .line 2777
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

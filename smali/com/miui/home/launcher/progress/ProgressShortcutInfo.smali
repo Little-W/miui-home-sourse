@@ -93,7 +93,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f100355
+    const v0, 0x7f10036a
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -695,8 +695,6 @@
     const-string p2, "progress shortcut\'s intent or component is null"
 
     .line 166
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     :goto_0
     return-void
 .end method

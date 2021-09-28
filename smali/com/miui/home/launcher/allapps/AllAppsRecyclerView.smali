@@ -78,7 +78,7 @@
 
     iget-object p2, p2, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList$FastScrollSectionInfo;->sectionName:Ljava/lang/String;
 
-    const-string v0, "…"
+    const-string/jumbo v0, "…"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

@@ -51,7 +51,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 30
+    .line 31
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllDeleteAppActivity$initData$2;->accept(Ljava/util/List;)V

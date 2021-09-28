@@ -42,24 +42,24 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 2
 
-    .line 2351
+    .line 2472
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$TargetCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
-    .line 2352
+    .line 2473
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$VideoCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
 
     const-string v0, "command"
 
-    .line 2353
+    .line 2474
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "path"
 
-    .line 2354
+    .line 2475
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -72,7 +72,7 @@
 
     const-string v1, "volume"
 
-    .line 2355
+    .line 2476
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -85,7 +85,7 @@
 
     const-string v1, "scaleMode"
 
-    .line 2356
+    .line 2477
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -98,7 +98,7 @@
 
     const-string v1, "loop"
 
-    .line 2357
+    .line 2478
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -111,7 +111,7 @@
 
     const-string v1, "time"
 
-    .line 2358
+    .line 2479
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -122,7 +122,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$VideoCommand;->mTime:Lcom/miui/maml/data/Expression;
 
-    .line 2360
+    .line 2481
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result p1
@@ -203,14 +203,14 @@
     :goto_1
     packed-switch p1, :pswitch_data_0
 
-    .line 2377
+    .line 2498
     sget-object p1, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->INVALID:Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$VideoCommand;->mCommand:Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
     goto :goto_2
 
-    .line 2374
+    .line 2495
     :pswitch_0
     sget-object p1, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->SET_VOLUME:Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
@@ -218,7 +218,7 @@
 
     goto :goto_2
 
-    .line 2371
+    .line 2492
     :pswitch_1
     sget-object p1, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->CONFIG:Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
@@ -226,7 +226,7 @@
 
     goto :goto_2
 
-    .line 2368
+    .line 2489
     :pswitch_2
     sget-object p1, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->SEEK_TO:Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
@@ -234,7 +234,7 @@
 
     goto :goto_2
 
-    .line 2365
+    .line 2486
     :pswitch_3
     sget-object p1, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->PLAY:Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
@@ -242,7 +242,7 @@
 
     goto :goto_2
 
-    .line 2362
+    .line 2483
     :pswitch_4
     sget-object p1, Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;->PAUSE:Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
 
@@ -277,25 +277,25 @@
 .method public doPerform()V
     .locals 9
 
-    .line 2384
+    .line 2505
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$VideoCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_5
 
-    .line 2385
+    .line 2506
     instance-of v1, v0, Lcom/miui/maml/elements/video/VideoElement;
 
     if-nez v1, :cond_0
 
     goto :goto_1
 
-    .line 2388
+    .line 2509
     :cond_0
     check-cast v0, Lcom/miui/maml/elements/video/VideoElement;
 
-    .line 2390
+    .line 2511
     sget-object v1, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$VideoCommand$CommandType:[I
 
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VideoCommand;->mCommand:Lcom/miui/maml/ActionCommand$VideoCommand$CommandType;
@@ -313,7 +313,7 @@
     :pswitch_0
     const-string v1, ""
 
-    .line 2412
+    .line 2533
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VideoCommand;->mLooping:Lcom/miui/maml/data/Expression;
 
     const/4 v3, 0x1
@@ -322,7 +322,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 2413
+    .line 2534
     invoke-virtual {v2}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v5
@@ -335,43 +335,43 @@
 
     move v4, v3
 
-    .line 2415
+    .line 2536
     :cond_1
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VideoCommand;->mScaleMode:Lcom/miui/maml/data/Expression;
 
     if-eqz v2, :cond_2
 
-    .line 2416
+    .line 2537
     invoke-virtual {v2}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v2
 
     double-to-int v3, v2
 
-    .line 2418
+    .line 2539
     :cond_2
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VideoCommand;->mPath:Lcom/miui/maml/data/Expression;
 
     if-eqz v2, :cond_3
 
-    .line 2419
+    .line 2540
     invoke-virtual {v2}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2421
+    .line 2542
     :cond_3
     invoke-virtual {v0, v4, v3, v1}, Lcom/miui/maml/elements/video/VideoElement;->config(ZILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 2403
+    .line 2524
     :pswitch_1
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VideoCommand;->mVolume:Lcom/miui/maml/data/Expression;
 
     if-eqz v1, :cond_4
 
-    .line 2404
+    .line 2525
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v1
@@ -382,13 +382,13 @@
 
     goto :goto_0
 
-    .line 2398
+    .line 2519
     :pswitch_2
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VideoCommand;->mTime:Lcom/miui/maml/data/Expression;
 
     if-eqz v1, :cond_4
 
-    .line 2399
+    .line 2520
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v1
@@ -399,13 +399,13 @@
 
     goto :goto_0
 
-    .line 2395
+    .line 2516
     :pswitch_3
     invoke-virtual {v0}, Lcom/miui/maml/elements/video/VideoElement;->pause()V
 
     goto :goto_0
 
-    .line 2392
+    .line 2513
     :pswitch_4
     invoke-virtual {v0}, Lcom/miui/maml/elements/video/VideoElement;->play()V
 

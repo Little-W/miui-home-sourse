@@ -43,7 +43,7 @@
 
     const/4 v0, 0x0
 
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_3
 
     if-nez p2, :cond_0
 
@@ -51,47 +51,57 @@
 
     .line 41
     :cond_0
+    invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->isMultiWindowStateNotTheSameBetweenSysAndLauncherLayout()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    return-object v0
+
+    .line 44
+    :cond_1
     invoke-static {p0}, Lcom/miui/home/recents/CloseShortcutIconUtils;->modifyContactComponentIfNeeded(Landroid/content/ComponentName;)Landroid/content/ComponentName;
 
     move-result-object p0
 
-    .line 42
+    .line 45
     invoke-virtual {p0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p2, v1, p1, v0}, Lcom/miui/home/launcher/Launcher;->getShowingItem(Ljava/lang/String;ILandroid/graphics/Rect;)Landroid/graphics/Bitmap;
 
-    .line 43
+    .line 46
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getClosingShortcutIcon()Lcom/miui/home/launcher/ShortcutIcon;
 
     move-result-object v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
-    .line 45
+    .line 48
     invoke-static {p0}, Lcom/miui/home/recents/CloseShortcutIconUtils;->getRelativeContactComponent(Landroid/content/ComponentName;)Landroid/content/ComponentName;
 
     move-result-object p0
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_2
 
-    .line 47
+    .line 50
     invoke-virtual {p0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {p2, p0, p1, v0}, Lcom/miui/home/launcher/Launcher;->getShowingItem(Ljava/lang/String;ILandroid/graphics/Rect;)Landroid/graphics/Bitmap;
 
-    .line 48
+    .line 51
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getClosingShortcutIcon()Lcom/miui/home/launcher/ShortcutIcon;
 
     move-result-object v1
 
-    :cond_1
+    :cond_2
     return-object v1
 
-    :cond_2
+    :cond_3
     :goto_0
     return-object v0
 .end method

@@ -69,8 +69,6 @@
     const-string v0, "setNavigationTrans: addFlags"
 
     .line 39
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     goto :goto_0
 
     .line 41
@@ -86,8 +84,6 @@
     const-string v0, "setNavigationTrans: clearFlags"
 
     .line 42
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     :goto_0
     return-void
 .end method

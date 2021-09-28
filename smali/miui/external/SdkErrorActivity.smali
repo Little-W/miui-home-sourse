@@ -164,7 +164,7 @@
 
     const-string v0, "MIUI SDK发生错误"
 
-    const-string v1, "请重新安装MIUI SDK再运行本程序\u3002"
+    const-string/jumbo v1, "请重新安装MIUI SDK再运行本程序\u3002"
 
     goto :goto_0
 
@@ -211,7 +211,7 @@
 
     const-string v0, "MIUI SDK版本过低"
 
-    const-string v1, "请先升级MIUI SDK再运行本程序\u3002"
+    const-string/jumbo v1, "请先升级MIUI SDK再运行本程序\u3002"
 
     goto :goto_0
 
@@ -248,7 +248,7 @@
 
     const-string v0, "MIUI SDK版本过低"
 
-    const-string v1, "请先升级MIUI SDK再运行本程序\u3002是否现在升级\uff1f"
+    const-string/jumbo v1, "请先升级MIUI SDK再运行本程序\u3002是否现在升级\uff1f"
 
     goto :goto_1
 
@@ -288,9 +288,9 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "没有找到MIUI SDK"
+    const-string/jumbo v0, "没有找到MIUI SDK"
 
-    const-string v1, "请先安装MIUI SDK再运行本程序\u3002"
+    const-string/jumbo v1, "请先安装MIUI SDK再运行本程序\u3002"
 
     goto :goto_0
 
@@ -377,7 +377,7 @@
 
     const-string v0, "MIUI SDK正在更新"
 
-    const-string v1, "请稍候..."
+    const-string/jumbo v1, "请稍候..."
 
     goto :goto_0
 
@@ -419,7 +419,7 @@
 
     const-string v0, "MIUI SDK更新失败"
 
-    const-string v1, "请稍后重试\u3002"
+    const-string/jumbo v1, "请稍后重试\u3002"
 
     goto :goto_0
 
@@ -459,7 +459,7 @@
 
     const-string v0, "MIUI SDK更新完成"
 
-    const-string v1, "请重新运行本程序\u3002"
+    const-string/jumbo v1, "请重新运行本程序\u3002"
 
     goto :goto_0
 

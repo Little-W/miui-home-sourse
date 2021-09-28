@@ -218,33 +218,6 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/miui/maml/elements/AnimatedScreenElement;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 50
-    invoke-direct {p0, p1, p2}, Lcom/miui/maml/elements/AnimatedScreenElement;->folmeToImpl(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method static synthetic access$100(Lcom/miui/maml/elements/AnimatedScreenElement;Ljava/lang/String;)V
-    .locals 0
-
-    .line 50
-    invoke-direct {p0, p1}, Lcom/miui/maml/elements/AnimatedScreenElement;->folmeSetToImpl(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method static synthetic access$200(Lcom/miui/maml/elements/AnimatedScreenElement;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 50
-    invoke-direct {p0, p1, p2, p3}, Lcom/miui/maml/elements/AnimatedScreenElement;->folmeFromToImpl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
 .method private createExp(Lcom/miui/maml/data/Variables;Lorg/w3c/dom/Element;Ljava/lang/String;Ljava/lang/String;)Lcom/miui/maml/data/Expression;
     .locals 1
 
@@ -279,358 +252,66 @@
     return-object p3
 .end method
 
-.method private folmeFromToImpl(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
-
-    .line 898
-    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/miui/maml/ScreenElementRoot;->findElement(Ljava/lang/String;)Lcom/miui/maml/elements/ScreenElement;
-
-    move-result-object v0
-
-    .line 899
-    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Lcom/miui/maml/ScreenElementRoot;->findElement(Ljava/lang/String;)Lcom/miui/maml/elements/ScreenElement;
-
-    move-result-object v1
-
-    .line 900
-    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p3}, Lcom/miui/maml/ScreenElementRoot;->findElement(Ljava/lang/String;)Lcom/miui/maml/elements/ScreenElement;
-
-    move-result-object p3
-
-    .line 901
-    instance-of v2, v0, Lcom/miui/maml/elements/StateElement;
-
-    if-eqz v2, :cond_3
-
-    instance-of v2, v1, Lcom/miui/maml/elements/StateElement;
-
-    if-nez v2, :cond_0
-
-    goto :goto_3
-
-    .line 906
-    :cond_0
-    check-cast v0, Lcom/miui/maml/elements/StateElement;
-
-    .line 907
-    check-cast v1, Lcom/miui/maml/elements/StateElement;
-
-    .line 908
-    instance-of p1, p3, Lcom/miui/maml/elements/ConfigElement;
-
-    if-eqz p1, :cond_1
-
-    check-cast p3, Lcom/miui/maml/elements/ConfigElement;
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p3, 0x0
-
-    :goto_0
-    if-eqz p3, :cond_2
-
-    .line 911
-    :try_start_0
-    iget-object p1, p0, Lcom/miui/maml/elements/AnimatedScreenElement;->mListenerWrapper:Lcom/miui/maml/folme/TransitionListenerWrapper;
-
-    invoke-virtual {p3, p1}, Lcom/miui/maml/elements/ConfigElement;->getAnimConfig(Lcom/miui/maml/folme/TransitionListenerWrapper;)[Lmiuix/animation/base/AnimConfig;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    new-array p1, p1, [Lmiuix/animation/base/AnimConfig;
-
-    :goto_1
-    const-string p2, "from"
-
-    .line 912
-    invoke-virtual {v0, p2}, Lcom/miui/maml/elements/StateElement;->getAnimState(Ljava/lang/String;)Lmiuix/animation/controller/AnimState;
-
-    move-result-object p2
-
-    const-string p3, "to"
-
-    .line 913
-    invoke-virtual {v1, p3}, Lcom/miui/maml/elements/StateElement;->getAnimState(Ljava/lang/String;)Lmiuix/animation/controller/AnimState;
-
-    move-result-object p3
-
-    .line 914
-    invoke-direct {p0, v1}, Lcom/miui/maml/elements/AnimatedScreenElement;->setupToProperties(Lcom/miui/maml/elements/StateElement;)V
-
-    .line 915
-    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getAnimTarget()Lcom/miui/maml/folme/AnimatedTarget;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lmiuix/animation/Folme;->useAt(Lmiuix/animation/IAnimTarget;)Lmiuix/animation/IFolme;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
-
-    move-result-object v0
-
-    invoke-interface {v0, p2, p3, p1}, Lmiuix/animation/IStateStyle;->fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_2
-
-    :catch_0
-    move-exception p1
-
-    .line 917
-    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
-
-    :goto_2
-    return-void
-
-    :cond_3
-    :goto_3
-    const-string p3, "AnimatedScreenElement"
-
-    .line 903
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "folmeFromTo: wrong state name "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, " "
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p3, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method private folmeSetToImpl(Ljava/lang/String;)V
-    .locals 3
-
-    .line 883
-    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/miui/maml/ScreenElementRoot;->findElement(Ljava/lang/String;)Lcom/miui/maml/elements/ScreenElement;
-
-    move-result-object v0
-
-    .line 884
-    instance-of v1, v0, Lcom/miui/maml/elements/StateElement;
-
-    if-nez v1, :cond_0
-
-    const-string v0, "AnimatedScreenElement"
-
-    .line 885
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "folmeSetTo: wrong state name "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    .line 888
-    :cond_0
-    check-cast v0, Lcom/miui/maml/elements/StateElement;
-
-    :try_start_0
-    const-string p1, "setTo"
-
-    .line 890
-    invoke-virtual {v0, p1}, Lcom/miui/maml/elements/StateElement;->getAnimState(Ljava/lang/String;)Lmiuix/animation/controller/AnimState;
-
-    move-result-object p1
-
-    .line 891
-    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getAnimTarget()Lcom/miui/maml/folme/AnimatedTarget;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lmiuix/animation/Folme;->useAt(Lmiuix/animation/IAnimTarget;)Lmiuix/animation/IFolme;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lmiuix/animation/IStateStyle;->setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    .line 893
-    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
-
-    :goto_0
-    return-void
-.end method
-
-.method private folmeToImpl(Ljava/lang/String;Ljava/lang/String;)V
+.method private folmeFromToImpl(Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfig;)V
     .locals 2
 
-    .line 862
-    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
+    .line 911
+    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/miui/maml/ScreenElementRoot;->findElement(Ljava/lang/String;)Lcom/miui/maml/elements/ScreenElement;
+    invoke-virtual {v0}, Lcom/miui/maml/ScreenContext;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    .line 863
-    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
+    new-instance v1, Lcom/miui/maml/elements/AnimatedScreenElement$3;
 
-    move-result-object v1
+    invoke-direct {v1, p0, p1, p2, p3}, Lcom/miui/maml/elements/AnimatedScreenElement$3;-><init>(Lcom/miui/maml/elements/AnimatedScreenElement;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfig;)V
 
-    invoke-virtual {v1, p2}, Lcom/miui/maml/ScreenElementRoot;->findElement(Ljava/lang/String;)Lcom/miui/maml/elements/ScreenElement;
-
-    move-result-object p2
-
-    .line 864
-    instance-of v1, v0, Lcom/miui/maml/elements/StateElement;
-
-    if-nez v1, :cond_0
-
-    const-string p2, "AnimatedScreenElement"
-
-    .line 865
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "folmeTo: wrong state name "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
+.end method
 
-    .line 868
-    :cond_0
-    check-cast v0, Lcom/miui/maml/elements/StateElement;
+.method private folmeSetToImpl(Lmiuix/animation/controller/AnimState;)V
+    .locals 2
 
-    .line 869
-    instance-of p1, p2, Lcom/miui/maml/elements/ConfigElement;
-
-    if-eqz p1, :cond_1
-
-    check-cast p2, Lcom/miui/maml/elements/ConfigElement;
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p2, 0x0
-
-    :goto_0
-    if-eqz p2, :cond_2
-
-    .line 872
-    :try_start_0
-    iget-object p1, p0, Lcom/miui/maml/elements/AnimatedScreenElement;->mListenerWrapper:Lcom/miui/maml/folme/TransitionListenerWrapper;
-
-    .line 873
-    invoke-virtual {p2, p1}, Lcom/miui/maml/elements/ConfigElement;->getAnimConfig(Lcom/miui/maml/folme/TransitionListenerWrapper;)[Lmiuix/animation/base/AnimConfig;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    new-array p1, p1, [Lmiuix/animation/base/AnimConfig;
-
-    :goto_1
-    const-string p2, "to"
-
-    .line 874
-    invoke-virtual {v0, p2}, Lcom/miui/maml/elements/StateElement;->getAnimState(Ljava/lang/String;)Lmiuix/animation/controller/AnimState;
-
-    move-result-object p2
-
-    .line 875
-    invoke-direct {p0, v0}, Lcom/miui/maml/elements/AnimatedScreenElement;->setupToProperties(Lcom/miui/maml/elements/StateElement;)V
-
-    .line 876
-    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getAnimTarget()Lcom/miui/maml/folme/AnimatedTarget;
+    .line 898
+    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v0
 
-    invoke-static {v0}, Lmiuix/animation/Folme;->useAt(Lmiuix/animation/IAnimTarget;)Lmiuix/animation/IFolme;
+    invoke-virtual {v0}, Lcom/miui/maml/ScreenContext;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
+    new-instance v1, Lcom/miui/maml/elements/AnimatedScreenElement$2;
+
+    invoke-direct {v1, p0, p1}, Lcom/miui/maml/elements/AnimatedScreenElement$2;-><init>(Lcom/miui/maml/elements/AnimatedScreenElement;Lmiuix/animation/controller/AnimState;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method private folmeToImpl(Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfig;)V
+    .locals 2
+
+    .line 885
+    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v0
 
-    invoke-interface {v0, p2, p1}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0}, Lcom/miui/maml/ScreenContext;->getHandler()Landroid/os/Handler;
 
-    goto :goto_2
+    move-result-object v0
 
-    :catch_0
-    move-exception p1
+    new-instance v1, Lcom/miui/maml/elements/AnimatedScreenElement$1;
 
-    .line 878
-    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-direct {v1, p0, p1, p2}, Lcom/miui/maml/elements/AnimatedScreenElement$1;-><init>(Lcom/miui/maml/elements/AnimatedScreenElement;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfig;)V
 
-    :goto_2
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
     return-void
 .end method
 
@@ -670,7 +351,7 @@
 .method private isInMainThread()Z
     .locals 2
 
-    .line 855
+    .line 878
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -716,7 +397,7 @@
 
     iput-object v3, v0, Lcom/miui/maml/elements/AnimatedScreenElement;->mScaleExpression:Lcom/miui/maml/data/Expression;
 
-    const-string v3, "x"
+    const-string/jumbo v3, "x"
 
     const-string v4, "left"
 
@@ -725,7 +406,7 @@
 
     move-result-object v3
 
-    const-string v4, "y"
+    const-string/jumbo v4, "y"
 
     const-string v5, "top"
 
@@ -2156,7 +1837,7 @@
 
     move-result v0
 
-    .line 724
+    .line 725
     :cond_1
     iget-object v1, p0, Lcom/miui/maml/elements/AnimatedScreenElement;->mParent:Lcom/miui/maml/elements/ElementGroup;
 
@@ -2185,10 +1866,10 @@
 
     goto :goto_1
 
+    .line 727
     :cond_2
     iget-object v1, p0, Lcom/miui/maml/elements/AnimatedScreenElement;->mParent:Lcom/miui/maml/elements/ElementGroup;
 
-    .line 727
     invoke-virtual {v1}, Lcom/miui/maml/elements/ElementGroup;->getAlpha()I
 
     move-result v1
@@ -2256,13 +1937,13 @@
 
     if-eqz p1, :cond_2
 
-    .line 836
+    .line 859
     :try_start_0
     new-instance v0, Landroidx/collection/ArraySet;
 
     invoke-direct {v0}, Landroidx/collection/ArraySet;-><init>()V
 
-    .line 837
+    .line 860
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -2272,7 +1953,7 @@
 
     aget-object v3, p1, v2
 
-    .line 838
+    .line 861
     invoke-virtual {v3}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v3
@@ -2283,10 +1964,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 840
+    .line 863
     invoke-virtual {v0, v3}, Landroidx/collection/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 841
+    .line 864
     iget-object v4, p0, Lcom/miui/maml/elements/AnimatedScreenElement;->mToProperties:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {v4, v3}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
@@ -2296,7 +1977,7 @@
 
     goto :goto_0
 
-    .line 844
+    .line 867
     :cond_1
     invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getAnimTarget()Lcom/miui/maml/folme/AnimatedTarget;
 
@@ -2326,7 +2007,7 @@
 
     goto :goto_1
 
-    .line 846
+    .line 869
     :cond_2
     invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getAnimTarget()Lcom/miui/maml/folme/AnimatedTarget;
 
@@ -2342,7 +2023,7 @@
 
     invoke-interface {p1}, Lmiuix/animation/IStateStyle;->cancel()V
 
-    .line 847
+    .line 870
     iget-object p1, p0, Lcom/miui/maml/elements/AnimatedScreenElement;->mToProperties:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->clear()V
@@ -2354,7 +2035,7 @@
     :catch_0
     move-exception p1
 
-    .line 850
+    .line 873
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_1
@@ -2362,47 +2043,187 @@
 .end method
 
 .method public folmeFromTo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
+    .locals 3
 
-    .line 824
-    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/maml/ScreenContext;->getHandler()Landroid/os/Handler;
+    .line 835
+    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/maml/elements/AnimatedScreenElement$3;
+    invoke-virtual {v0, p1}, Lcom/miui/maml/ScreenElementRoot;->findElement(Ljava/lang/String;)Lcom/miui/maml/elements/ScreenElement;
 
-    invoke-direct {v1, p0, p1, p2, p3}, Lcom/miui/maml/elements/AnimatedScreenElement$3;-><init>(Lcom/miui/maml/elements/AnimatedScreenElement;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    const-wide/16 p1, 0x0
+    .line 836
+    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
-    invoke-virtual {v0, v1, p0, p1, p2}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Lcom/miui/maml/ScreenElementRoot;->findElement(Ljava/lang/String;)Lcom/miui/maml/elements/ScreenElement;
+
+    move-result-object v1
+
+    .line 837
+    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p3}, Lcom/miui/maml/ScreenElementRoot;->findElement(Ljava/lang/String;)Lcom/miui/maml/elements/ScreenElement;
+
+    move-result-object p3
+
+    .line 838
+    instance-of v2, v0, Lcom/miui/maml/elements/StateElement;
+
+    if-eqz v2, :cond_3
+
+    instance-of v2, v1, Lcom/miui/maml/elements/StateElement;
+
+    if-nez v2, :cond_0
+
+    goto :goto_2
+
+    .line 843
+    :cond_0
+    check-cast v0, Lcom/miui/maml/elements/StateElement;
+
+    .line 844
+    check-cast v1, Lcom/miui/maml/elements/StateElement;
+
+    .line 845
+    instance-of p1, p3, Lcom/miui/maml/elements/ConfigElement;
+
+    if-eqz p1, :cond_1
+
+    .line 846
+    check-cast p3, Lcom/miui/maml/elements/ConfigElement;
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p3, 0x0
+
+    :goto_0
+    if-eqz p3, :cond_2
+
+    .line 848
+    iget-object p1, p0, Lcom/miui/maml/elements/AnimatedScreenElement;->mListenerWrapper:Lcom/miui/maml/folme/TransitionListenerWrapper;
+
+    invoke-virtual {p3, p1}, Lcom/miui/maml/elements/ConfigElement;->getAnimConfig(Lcom/miui/maml/folme/TransitionListenerWrapper;)Lmiuix/animation/base/AnimConfig;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_2
+    new-instance p1, Lmiuix/animation/base/AnimConfig;
+
+    invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
+
+    :goto_1
+    const-string p2, "from"
+
+    .line 849
+    invoke-virtual {v0, p2}, Lcom/miui/maml/elements/StateElement;->getAnimState(Ljava/lang/String;)Lmiuix/animation/controller/AnimState;
+
+    move-result-object p2
+
+    const-string p3, "to"
+
+    .line 850
+    invoke-virtual {v1, p3}, Lcom/miui/maml/elements/StateElement;->getAnimState(Ljava/lang/String;)Lmiuix/animation/controller/AnimState;
+
+    move-result-object p3
+
+    .line 851
+    invoke-direct {p0, v1}, Lcom/miui/maml/elements/AnimatedScreenElement;->setupToProperties(Lcom/miui/maml/elements/StateElement;)V
+
+    .line 852
+    invoke-direct {p0, p2, p3, p1}, Lcom/miui/maml/elements/AnimatedScreenElement;->folmeFromToImpl(Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfig;)V
+
+    return-void
+
+    :cond_3
+    :goto_2
+    const-string p3, "AnimatedScreenElement"
+
+    .line 840
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "folmeFromTo: wrong state name "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " "
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p3, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
 
 .method public folmeSetTo(Ljava/lang/String;)V
-    .locals 4
+    .locals 3
 
-    .line 815
-    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/maml/ScreenContext;->getHandler()Landroid/os/Handler;
+    .line 824
+    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/maml/elements/AnimatedScreenElement$2;
+    invoke-virtual {v0, p1}, Lcom/miui/maml/ScreenElementRoot;->findElement(Ljava/lang/String;)Lcom/miui/maml/elements/ScreenElement;
 
-    invoke-direct {v1, p0, p1}, Lcom/miui/maml/elements/AnimatedScreenElement$2;-><init>(Lcom/miui/maml/elements/AnimatedScreenElement;Ljava/lang/String;)V
+    move-result-object v0
 
-    const-wide/16 v2, 0x0
+    .line 825
+    instance-of v1, v0, Lcom/miui/maml/elements/StateElement;
 
-    invoke-virtual {v0, v1, p0, v2, v3}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
+    if-nez v1, :cond_0
+
+    const-string v0, "AnimatedScreenElement"
+
+    .line 826
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "folmeSetTo: wrong state name "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    .line 829
+    :cond_0
+    check-cast v0, Lcom/miui/maml/elements/StateElement;
+
+    const-string p1, "setTo"
+
+    .line 830
+    invoke-virtual {v0, p1}, Lcom/miui/maml/elements/StateElement;->getAnimState(Ljava/lang/String;)Lmiuix/animation/controller/AnimState;
+
+    move-result-object p1
+
+    .line 831
+    invoke-direct {p0, p1}, Lcom/miui/maml/elements/AnimatedScreenElement;->folmeSetToImpl(Lmiuix/animation/controller/AnimState;)V
 
     return-void
 .end method
@@ -2410,22 +2231,97 @@
 .method public folmeTo(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    .line 805
+    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/miui/maml/ScreenElementRoot;->findElement(Ljava/lang/String;)Lcom/miui/maml/elements/ScreenElement;
+
+    move-result-object v0
+
     .line 806
-    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
+    invoke-virtual {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/miui/maml/ScreenContext;->getHandler()Landroid/os/Handler;
+    invoke-virtual {v1, p2}, Lcom/miui/maml/ScreenElementRoot;->findElement(Ljava/lang/String;)Lcom/miui/maml/elements/ScreenElement;
 
-    move-result-object v0
+    move-result-object p2
 
-    new-instance v1, Lcom/miui/maml/elements/AnimatedScreenElement$1;
+    .line 807
+    instance-of v1, v0, Lcom/miui/maml/elements/StateElement;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/miui/maml/elements/AnimatedScreenElement$1;-><init>(Lcom/miui/maml/elements/AnimatedScreenElement;Ljava/lang/String;Ljava/lang/String;)V
+    if-nez v1, :cond_0
 
-    const-wide/16 p1, 0x0
+    const-string p2, "AnimatedScreenElement"
 
-    invoke-virtual {v0, v1, p0, p1, p2}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
+    .line 808
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "folmeTo: wrong state name "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    .line 811
+    :cond_0
+    check-cast v0, Lcom/miui/maml/elements/StateElement;
+
+    .line 812
+    instance-of p1, p2, Lcom/miui/maml/elements/ConfigElement;
+
+    if-eqz p1, :cond_1
+
+    .line 813
+    check-cast p2, Lcom/miui/maml/elements/ConfigElement;
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p2, 0x0
+
+    :goto_0
+    if-eqz p2, :cond_2
+
+    .line 816
+    iget-object p1, p0, Lcom/miui/maml/elements/AnimatedScreenElement;->mListenerWrapper:Lcom/miui/maml/folme/TransitionListenerWrapper;
+
+    invoke-virtual {p2, p1}, Lcom/miui/maml/elements/ConfigElement;->getAnimConfig(Lcom/miui/maml/folme/TransitionListenerWrapper;)Lmiuix/animation/base/AnimConfig;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_2
+    new-instance p1, Lmiuix/animation/base/AnimConfig;
+
+    invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
+
+    :goto_1
+    const-string p2, "to"
+
+    .line 817
+    invoke-virtual {v0, p2}, Lcom/miui/maml/elements/StateElement;->getAnimState(Ljava/lang/String;)Lmiuix/animation/controller/AnimState;
+
+    move-result-object p2
+
+    .line 818
+    invoke-direct {p0, v0}, Lcom/miui/maml/elements/AnimatedScreenElement;->setupToProperties(Lcom/miui/maml/elements/StateElement;)V
+
+    .line 820
+    invoke-direct {p0, p2, p1}, Lcom/miui/maml/elements/AnimatedScreenElement;->folmeToImpl(Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfig;)V
 
     return-void
 .end method

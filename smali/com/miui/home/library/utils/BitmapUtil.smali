@@ -158,8 +158,6 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     goto :goto_1
 
     .line 40
@@ -200,8 +198,6 @@
     const-string v2, "failed to get Bitmap.mBuffer"
 
     .line 46
-    invoke-static {v0, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     goto :goto_1
 
     :catch_2
@@ -212,8 +208,6 @@
     const-string v2, "get Bitmap.mBuffer failed!"
 
     .line 44
-    invoke-static {v0, v2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :cond_1
     :goto_1
     return-object v1

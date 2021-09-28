@@ -276,15 +276,13 @@
     const-string v2, "Exception "
 
     .line 210
-    invoke-static {v1, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     return v0
 .end method
 
 .method public getDeviceHeight(Landroid/content/Context;)I
     .locals 2
 
-    const-string v0, "window"
+    const-string/jumbo v0, "window"
 
     .line 216
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;

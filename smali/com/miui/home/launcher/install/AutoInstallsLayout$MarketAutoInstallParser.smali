@@ -154,8 +154,6 @@
     const-string p2, "Ignoring shortcut, can\'t get icon from name"
 
     .line 695
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-wide v7
 
     :cond_3
@@ -187,8 +185,6 @@
     const-string p2, "Ignoring shortcut, can\'t load icon from resource"
 
     .line 702
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-wide v7
 
     .line 705
@@ -363,8 +359,6 @@
     invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    invoke-static {p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-wide v7
 

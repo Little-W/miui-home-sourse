@@ -75,43 +75,43 @@
 .method public constructor <init>(Lcom/miui/maml/ScreenContext;)V
     .locals 1
 
-    .line 88
+    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
+    .line 30
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/SoundManager;->mSoundPoolMap:Ljava/util/HashMap;
 
-    .line 33
+    .line 32
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/SoundManager;->mPendingSoundMap:Ljava/util/HashMap;
 
-    .line 35
+    .line 34
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/SoundManager;->mPlayingSoundMap:Ljava/util/ArrayList;
 
-    .line 43
+    .line 42
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/SoundManager;->mInitSignal:Ljava/lang/Object;
 
-    .line 89
+    .line 88
     iget-object v0, p1, Lcom/miui/maml/ScreenContext;->mResourceManager:Lcom/miui/maml/ResourceManager;
 
     iput-object v0, p0, Lcom/miui/maml/SoundManager;->mResourceManager:Lcom/miui/maml/ResourceManager;
 
-    .line 91
+    .line 90
     invoke-virtual {p1}, Lcom/miui/maml/ScreenContext;->getHandler()Landroid/os/Handler;
 
     move-result-object p1
@@ -124,7 +124,7 @@
 .method static synthetic access$000(Lcom/miui/maml/SoundManager;)Landroid/media/SoundPool;
     .locals 0
 
-    .line 22
+    .line 21
     iget-object p0, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
     return-object p0
@@ -133,7 +133,7 @@
 .method static synthetic access$002(Lcom/miui/maml/SoundManager;Landroid/media/SoundPool;)Landroid/media/SoundPool;
     .locals 0
 
-    .line 22
+    .line 21
     iput-object p1, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
     return-object p1
@@ -142,7 +142,7 @@
 .method static synthetic access$100(Lcom/miui/maml/SoundManager;)Ljava/lang/Object;
     .locals 0
 
-    .line 22
+    .line 21
     iget-object p0, p0, Lcom/miui/maml/SoundManager;->mInitSignal:Ljava/lang/Object;
 
     return-object p0
@@ -151,7 +151,7 @@
 .method static synthetic access$202(Lcom/miui/maml/SoundManager;Z)Z
     .locals 0
 
-    .line 22
+    .line 21
     iput-boolean p1, p0, Lcom/miui/maml/SoundManager;->mInitialized:Z
 
     return p1
@@ -160,14 +160,14 @@
 .method private init()V
     .locals 4
 
-    .line 95
+    .line 94
     iget-boolean v0, p0, Lcom/miui/maml/SoundManager;->mInitialized:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 99
+    .line 98
     :cond_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -195,7 +195,7 @@
 
     if-nez v0, :cond_1
 
-    .line 100
+    .line 99
     new-instance v0, Landroid/media/SoundPool;
 
     const/16 v1, 0x8
@@ -208,19 +208,19 @@
 
     iput-object v0, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
-    .line 101
+    .line 100
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
     invoke-virtual {v0, p0}, Landroid/media/SoundPool;->setOnLoadCompleteListener(Landroid/media/SoundPool$OnLoadCompleteListener;)V
 
     const/4 v0, 0x1
 
-    .line 102
+    .line 101
     iput-boolean v0, p0, Lcom/miui/maml/SoundManager;->mInitialized:Z
 
     goto :goto_1
 
-    .line 104
+    .line 103
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mHandler:Landroid/os/Handler;
 
@@ -230,12 +230,12 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 116
+    .line 115
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mInitSignal:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 118
+    .line 117
     :catch_0
     :goto_0
     :try_start_0
@@ -243,7 +243,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 125
+    .line 124
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -251,7 +251,7 @@
     :goto_1
     return-void
 
-    .line 121
+    .line 120
     :cond_2
     :try_start_1
     iget-object v1, p0, Lcom/miui/maml/SoundManager;->mInitSignal:Ljava/lang/Object;
@@ -266,7 +266,7 @@
     :catchall_0
     move-exception v1
 
-    .line 125
+    .line 124
     :try_start_2
     monitor-exit v0
     :try_end_2
@@ -280,7 +280,7 @@
 
     monitor-enter p0
 
-    .line 223
+    .line 218
     :try_start_0
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
     :try_end_0
@@ -290,24 +290,24 @@
 
     if-nez v0, :cond_0
 
-    .line 224
+    .line 219
     monitor-exit p0
 
     return v1
 
-    .line 226
+    .line 221
     :cond_0
     :try_start_1
     iget-boolean v0, p2, Lcom/miui/maml/SoundManager$SoundOptions;->mKeepCur:Z
 
     if-nez v0, :cond_1
 
-    .line 227
+    .line 222
     invoke-virtual {p0}, Lcom/miui/maml/SoundManager;->stopAllPlaying()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 231
+    .line 226
     :cond_1
     :try_start_2
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mPlayingSoundMap:Ljava/util/ArrayList;
@@ -317,7 +317,7 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 232
+    .line 227
     :try_start_3
     iget-object v2, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
@@ -349,7 +349,7 @@
 
     move-result p1
 
-    .line 233
+    .line 228
     iget-object p2, p0, Lcom/miui/maml/SoundManager;->mPlayingSoundMap:Ljava/util/ArrayList;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -358,7 +358,7 @@
 
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 234
+    .line 229
     monitor-exit v0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -370,7 +370,7 @@
     :catchall_0
     move-exception p1
 
-    .line 235
+    .line 230
     :try_start_4
     monitor-exit v0
     :try_end_4
@@ -388,7 +388,7 @@
     :try_start_6
     const-string p2, "MamlSoundManager"
 
-    .line 237
+    .line 232
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -397,7 +397,7 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 239
+    .line 234
     monitor-exit p0
 
     return v1
@@ -417,7 +417,7 @@
 
     if-nez p3, :cond_0
 
-    .line 259
+    .line 254
     iget-object p1, p0, Lcom/miui/maml/SoundManager;->mPendingSoundMap:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -432,7 +432,7 @@
 
     invoke-direct {p0, p2, p1}, Lcom/miui/maml/SoundManager;->playSoundImp(ILcom/miui/maml/SoundManager$SoundOptions;)I
 
-    .line 261
+    .line 256
     :cond_0
     iget-object p1, p0, Lcom/miui/maml/SoundManager;->mPendingSoundMap:Ljava/util/HashMap;
 
@@ -448,7 +448,7 @@
 .method public pause()V
     .locals 0
 
-    .line 265
+    .line 260
     invoke-virtual {p0}, Lcom/miui/maml/SoundManager;->stopAllPlaying()V
 
     return-void
@@ -459,31 +459,31 @@
 
     monitor-enter p0
 
-    .line 155
+    .line 154
     :try_start_0
     iget-boolean v0, p0, Lcom/miui/maml/SoundManager;->mInitialized:Z
 
     if-nez v0, :cond_0
 
-    .line 156
+    .line 155
     invoke-direct {p0}, Lcom/miui/maml/SoundManager;->init()V
 
-    .line 159
+    .line 158
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_1
 
-    .line 160
+    .line 159
     monitor-exit p0
 
     return v1
 
-    .line 162
+    .line 161
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mSoundPoolMap:Ljava/util/HashMap;
@@ -494,9 +494,9 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_a
 
-    .line 164
+    .line 163
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x1a
@@ -509,7 +509,7 @@
 
     if-ge v2, v3, :cond_4
 
-    .line 165
+    .line 164
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mResourceManager:Lcom/miui/maml/ResourceManager;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/ResourceManager;->getFile(Ljava/lang/String;)Landroid/os/MemoryFile;
@@ -520,7 +520,7 @@
 
     const-string p2, "MamlSoundManager"
 
-    .line 167
+    .line 166
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -537,14 +537,14 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 168
+    .line 167
     monitor-exit p0
 
     return v1
 
-    .line 169
+    .line 168
     :cond_2
     :try_start_2
     invoke-virtual {v0}, Landroid/os/MemoryFile;->length()I
@@ -559,7 +559,7 @@
 
     const-string v0, "the sound file is larger than %d KB: %s"
 
-    .line 171
+    .line 170
     new-array v2, v6, [Ljava/lang/Object;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -576,14 +576,14 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 172
+    .line 171
     monitor-exit p0
 
     return v1
 
-    .line 174
+    .line 173
     :cond_3
     :try_start_3
     iget-object v2, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
@@ -610,17 +610,17 @@
 
     move-result-object v2
 
-    .line 175
+    .line 174
     iget-object v3, p0, Lcom/miui/maml/SoundManager;->mSoundPoolMap:Ljava/util/HashMap;
 
     invoke-virtual {v3, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 176
+    .line 175
     invoke-virtual {v0}, Landroid/os/MemoryFile;->close()V
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
-    .line 178
+    .line 177
     :cond_4
     new-instance v2, Ljava/io/File;
 
@@ -648,7 +648,7 @@
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 179
+    .line 178
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
     move-result v3
@@ -657,7 +657,7 @@
 
     const-string p2, "MamlSoundManager"
 
-    .line 180
+    .line 179
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -674,14 +674,14 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 181
+    .line 180
     monitor-exit p0
 
     return v1
 
-    .line 182
+    .line 181
     :cond_5
     :try_start_4
     invoke-virtual {v2}, Ljava/io/File;->length()J
@@ -698,7 +698,7 @@
 
     const-string v0, "the sound file is larger than %d KB: %s"
 
-    .line 184
+    .line 183
     new-array v2, v6, [Ljava/lang/Object;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -715,27 +715,29 @@
 
     invoke-static {p2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 185
+    .line 184
     monitor-exit p0
 
     return v1
 
     :cond_6
-    const/4 v3, 0x0
+    const/high16 v3, 0x10000000
 
-    const/high16 v4, 0x10000000
-
-    .line 189
+    .line 186
     :try_start_5
-    invoke-static {v2, v4}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
+    invoke-static {v2, v3}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v3
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_8
 
-    .line 192
+    .line 189
+    :try_start_6
     iget-object v4, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
     invoke-virtual {v3}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
@@ -758,76 +760,86 @@
 
     move-result-object v0
 
-    .line 193
+    .line 190
     iget-object v2, p0, Lcom/miui/maml/SoundManager;->mSoundPoolMap:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_0
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
-
-    move-object v2, v0
-
-    goto :goto_0
-
-    :cond_7
-    move-object v2, v0
-
-    .line 198
-    :goto_0
-    :try_start_6
-    invoke-static {v3}, Lmiui/util/IOUtils;->closeQuietly(Ljava/io/Closeable;)V
     :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_1
+    .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_0
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
     goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
 
     :catch_0
     move-exception p1
 
-    move-object v2, v0
+    if-eqz v3, :cond_7
 
+    .line 186
     :try_start_7
-    const-string v0, "MamlSoundManager"
-
-    const-string v4, "fail to load sound. "
-
-    .line 196
-    invoke-static {v0, v4, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-virtual {v3}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_7
+    .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_1
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_2
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
     goto :goto_0
 
-    .line 201
-    :goto_1
+    :catch_1
+    move-exception v2
+
     :try_start_8
+    invoke-virtual {p1, v2}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :cond_7
+    :goto_0
+    throw p1
+
+    :cond_8
+    :goto_1
+    if-eqz v3, :cond_9
+
+    .line 192
+    invoke-virtual {v3}, Landroid/os/ParcelFileDescriptor;->close()V
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_2
+    .catchall {:try_start_8 .. :try_end_8} :catchall_0
+
+    :cond_9
+    move-object v2, v0
+
+    goto :goto_2
+
+    :catch_2
+    move-exception p1
+
+    move-object v2, v0
+
+    :try_start_9
+    const-string v0, "MamlSoundManager"
+
+    const-string v3, "fail to load sound. "
+
+    .line 193
+    invoke-static {v0, v3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 196
+    :goto_2
     iget-object p1, p0, Lcom/miui/maml/SoundManager;->mPendingSoundMap:Ljava/util/HashMap;
 
     invoke-virtual {p1, v2, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_8
-    .catchall {:try_start_8 .. :try_end_8} :catchall_1
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 202
+    .line 197
     monitor-exit p0
 
     return v1
 
-    .line 198
-    :goto_2
-    :try_start_9
-    invoke-static {v3}, Lmiui/util/IOUtils;->closeQuietly(Ljava/io/Closeable;)V
-
-    .line 199
-    throw p1
-
-    .line 205
-    :cond_8
+    .line 200
+    :cond_a
+    :try_start_a
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -835,14 +847,14 @@
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/SoundManager;->playSoundImp(ILcom/miui/maml/SoundManager$SoundOptions;)I
 
     move-result p1
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_1
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_0
 
     monitor-exit p0
 
     return p1
 
-    :catchall_1
+    :catchall_0
     move-exception p1
 
     monitor-exit p0
@@ -855,16 +867,16 @@
 
     monitor-enter p0
 
-    .line 130
+    .line 129
     :try_start_0
     iget-boolean v0, p0, Lcom/miui/maml/SoundManager;->mInitialized:Z
 
     if-nez v0, :cond_0
 
-    .line 131
+    .line 130
     invoke-direct {p0}, Lcom/miui/maml/SoundManager;->init()V
 
-    .line 133
+    .line 132
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
@@ -874,7 +886,7 @@
 
     goto :goto_1
 
-    .line 136
+    .line 135
     :cond_1
     sget-object v0, Lcom/miui/maml/SoundManager$2;->$SwitchMap$com$miui$maml$SoundManager$Command:[I
 
@@ -888,20 +900,20 @@
 
     goto :goto_0
 
-    .line 146
+    .line 145
     :pswitch_0
     iget-object p2, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
     invoke-virtual {p2, p1}, Landroid/media/SoundPool;->stop(I)V
 
-    .line 147
+    .line 146
     iget-object p2, p0, Lcom/miui/maml/SoundManager;->mPlayingSoundMap:Ljava/util/ArrayList;
 
     monitor-enter p2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 148
+    .line 147
     :try_start_1
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mPlayingSoundMap:Ljava/util/ArrayList;
 
@@ -911,7 +923,7 @@
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 149
+    .line 148
     monitor-exit p2
 
     goto :goto_0
@@ -926,7 +938,7 @@
     :try_start_2
     throw p1
 
-    .line 143
+    .line 142
     :pswitch_1
     iget-object p2, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
@@ -934,7 +946,7 @@
 
     goto :goto_0
 
-    .line 140
+    .line 139
     :pswitch_2
     iget-object p2, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
@@ -942,14 +954,14 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 152
+    .line 151
     :goto_0
     :pswitch_3
     monitor-exit p0
 
     return-void
 
-    .line 134
+    .line 133
     :cond_2
     :goto_1
     monitor-exit p0
@@ -979,7 +991,7 @@
 
     monitor-enter p0
 
-    .line 209
+    .line 204
     :try_start_0
     iget-boolean v0, p0, Lcom/miui/maml/SoundManager;->mInitialized:Z
     :try_end_0
@@ -987,50 +999,50 @@
 
     if-nez v0, :cond_0
 
-    .line 210
+    .line 205
     monitor-exit p0
 
     return-void
 
-    .line 212
+    .line 207
     :cond_0
     :try_start_1
     invoke-virtual {p0}, Lcom/miui/maml/SoundManager;->stopAllPlaying()V
 
-    .line 213
+    .line 208
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
     if-eqz v0, :cond_1
 
-    .line 214
+    .line 209
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mSoundPoolMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 215
+    .line 210
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/media/SoundPool;->setOnLoadCompleteListener(Landroid/media/SoundPool$OnLoadCompleteListener;)V
 
-    .line 216
+    .line 211
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
     invoke-virtual {v0}, Landroid/media/SoundPool;->release()V
 
-    .line 217
+    .line 212
     iput-object v1, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
     :cond_1
     const/4 v0, 0x0
 
-    .line 219
+    .line 214
     iput-boolean v0, p0, Lcom/miui/maml/SoundManager;->mInitialized:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 220
+    .line 215
     monitor-exit p0
 
     return-void
@@ -1046,7 +1058,7 @@
 .method protected stopAllPlaying()V
     .locals 4
 
-    .line 243
+    .line 238
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mPlayingSoundMap:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -1057,19 +1069,19 @@
 
     return-void
 
-    .line 246
+    .line 241
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/SoundManager;->mPlayingSoundMap:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 247
+    .line 242
     :try_start_0
     iget-object v1, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
     if-eqz v1, :cond_1
 
-    .line 248
+    .line 243
     iget-object v1, p0, Lcom/miui/maml/SoundManager;->mPlayingSoundMap:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1089,7 +1101,7 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 249
+    .line 244
     iget-object v3, p0, Lcom/miui/maml/SoundManager;->mSoundPool:Landroid/media/SoundPool;
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
@@ -1100,13 +1112,13 @@
 
     goto :goto_0
 
-    .line 252
+    .line 247
     :cond_1
     iget-object v1, p0, Lcom/miui/maml/SoundManager;->mPlayingSoundMap:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 253
+    .line 248
     monitor-exit v0
 
     return-void

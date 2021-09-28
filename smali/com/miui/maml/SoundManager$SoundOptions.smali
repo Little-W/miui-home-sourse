@@ -26,13 +26,13 @@
 .method public constructor <init>(ZZF)V
     .locals 0
 
-    .line 75
+    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
+    .line 75
     iput-boolean p1, p0, Lcom/miui/maml/SoundManager$SoundOptions;->mKeepCur:Z
 
-    .line 77
+    .line 76
     iput-boolean p2, p0, Lcom/miui/maml/SoundManager$SoundOptions;->mLoop:Z
 
     const/4 p1, 0x0
@@ -41,7 +41,7 @@
 
     if-gez p2, :cond_0
 
-    .line 79
+    .line 78
     iput p1, p0, Lcom/miui/maml/SoundManager$SoundOptions;->mVolume:F
 
     goto :goto_0
@@ -53,12 +53,12 @@
 
     if-lez p2, :cond_1
 
-    .line 81
+    .line 80
     iput p1, p0, Lcom/miui/maml/SoundManager$SoundOptions;->mVolume:F
 
     goto :goto_0
 
-    .line 83
+    .line 82
     :cond_1
     iput p3, p0, Lcom/miui/maml/SoundManager$SoundOptions;->mVolume:F
 

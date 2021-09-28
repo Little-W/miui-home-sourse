@@ -50,6 +50,17 @@
     return-object p1
 .end method
 
+.method public invoke(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    return-void
+.end method
+
 .method public overlayScrollChanged(F)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;

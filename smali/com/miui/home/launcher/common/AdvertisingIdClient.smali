@@ -111,8 +111,6 @@
     const-string v4, "bindService: "
 
     .line 59
-    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     .line 62
     :cond_0
     :try_start_1
@@ -130,8 +128,6 @@
     const-string v2, "unbindService: "
 
     .line 64
-    invoke-static {v0, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-object v1
 

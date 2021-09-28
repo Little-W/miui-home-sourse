@@ -50,7 +50,7 @@
     .line 39
     invoke-direct {p0, p1, p2, p3}, Lmiuix/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 158
+    .line 155
     new-instance p2, Lcom/miui/home/smallwindow/SmallWindowListRecyclerView$3;
 
     invoke-direct {p2, p0}, Lcom/miui/home/smallwindow/SmallWindowListRecyclerView$3;-><init>(Lcom/miui/home/smallwindow/SmallWindowListRecyclerView;)V
@@ -98,19 +98,19 @@
 .method private calculateAlphaAndScale(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/LinearLayoutManager;)V
     .locals 4
 
-    .line 136
+    .line 133
     invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->findFirstVisibleItemPosition()I
 
     move-result v0
 
-    .line 137
+    .line 134
     invoke-virtual {p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->findLastVisibleItemPosition()I
 
     move-result v1
 
     sub-int/2addr v1, v0
 
-    .line 139
+    .line 136
     invoke-virtual {p2, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->getChildAt(I)Landroid/view/View;
 
     move-result-object p2
@@ -119,12 +119,12 @@
 
     if-eqz p2, :cond_2
 
-    .line 142
+    .line 139
     invoke-virtual {p2}, Lcom/miui/home/smallwindow/ItemView;->getWidth()I
 
     move-result v0
 
-    .line 143
+    .line 140
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getWidth()I
 
     move-result p1
@@ -160,7 +160,7 @@
 
     return-void
 
-    .line 151
+    .line 148
     :cond_1
     invoke-virtual {p2}, Lcom/miui/home/smallwindow/ItemView;->getTextView()Landroid/widget/TextView;
 
@@ -168,7 +168,7 @@
 
     if-eqz p2, :cond_2
 
-    .line 153
+    .line 150
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setAlpha(F)V
 
     :cond_2
@@ -299,7 +299,7 @@
 .method public getItemInfo(Ljava/lang/String;Landroid/os/UserHandle;)Lcom/miui/home/smallwindow/BaseDelegateAdapter$ItemInfo;
     .locals 3
 
-    .line 125
+    .line 122
     iget-object v0, p0, Lcom/miui/home/smallwindow/SmallWindowListRecyclerView;->mLauncherApps:Lcom/miui/home/library/compat/LauncherAppsCompat;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/library/compat/LauncherAppsCompat;->getActivityList(Ljava/lang/String;Landroid/os/UserHandle;)Ljava/util/List;
@@ -322,10 +322,10 @@
 
     check-cast p2, Landroid/content/pm/LauncherActivityInfo;
 
-    .line 126
+    .line 123
     new-instance v0, Lcom/miui/home/smallwindow/BaseDelegateAdapter$ItemInfo;
 
-    .line 127
+    .line 124
     invoke-virtual {p2}, Landroid/content/pm/LauncherActivityInfo;->getLabel()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -336,12 +336,12 @@
 
     iget-object v2, p0, Lcom/miui/home/smallwindow/SmallWindowListRecyclerView;->mIconProvider:Lcom/miui/home/library/IconProviderHelper;
 
-    .line 128
+    .line 125
     invoke-virtual {v2, p2}, Lcom/miui/home/library/IconProviderHelper;->getActivityIcon(Landroid/content/pm/LauncherActivityInfo;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 129
+    .line 126
     invoke-virtual {p2}, Landroid/content/pm/LauncherActivityInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object p2

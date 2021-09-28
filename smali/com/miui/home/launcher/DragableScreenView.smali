@@ -66,7 +66,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f07031f
+    const p2, 0x7f070325
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -88,7 +88,7 @@
     return v0
 .end method
 
-.method public onEnterScrollArea(III)Z
+.method public onEnterScrollArea(IIILandroid/view/MotionEvent;)Z
     .locals 0
 
     const/4 p1, 0x1

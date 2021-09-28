@@ -760,10 +760,10 @@
 
     iget-object v0, v0, Lmiuix/animation/IAnimTarget;->handler:Lmiuix/animation/internal/TargetHandler;
 
-    iget p1, p1, Lmiuix/animation/internal/TransitionInfo;->id:I
+    iget v1, p1, Lmiuix/animation/internal/TransitionInfo;->id:I
 
     .line 164
-    invoke-virtual {v0, p2, p1, p3}, Lmiuix/animation/internal/TargetHandler;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {v0, p2, v1, p3, p1}, Lmiuix/animation/internal/TargetHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object p1
 

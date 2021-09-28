@@ -44,17 +44,17 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 3
 
-    .line 575
+    .line 580
     invoke-direct {p0, p1}, Lcom/miui/maml/ActionCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;)V
 
-    .line 576
+    .line 581
     invoke-virtual {p1}, Lcom/miui/maml/elements/ScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
 
     const-string v0, "nameExp"
 
-    .line 577
+    .line 582
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -65,12 +65,12 @@
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mNameExp:Lcom/miui/maml/data/Expression;
 
-    .line 578
+    .line 583
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mNameExp:Lcom/miui/maml/data/Expression;
 
     if-eqz v0, :cond_0
 
-    .line 579
+    .line 584
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v0
@@ -82,7 +82,7 @@
     :cond_0
     const-string v0, "name"
 
-    .line 581
+    .line 586
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -92,7 +92,7 @@
     :goto_0
     const-string v0, "persist"
 
-    .line 584
+    .line 589
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -105,7 +105,7 @@
 
     const-string v0, "requestUpdate"
 
-    .line 585
+    .line 590
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -118,7 +118,7 @@
 
     const-string v0, "type"
 
-    .line 587
+    .line 592
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -129,7 +129,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mType:Lcom/miui/maml/data/VariableType;
 
-    .line 588
+    .line 593
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -138,7 +138,7 @@
 
     if-nez v0, :cond_1
 
-    .line 589
+    .line 594
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mName:Ljava/lang/String;
@@ -153,7 +153,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 590
+    .line 595
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mType:Lcom/miui/maml/data/VariableType;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/VariableType;->isArray()Z
@@ -162,7 +162,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 591
+    .line 596
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -194,14 +194,14 @@
 
     const-string v1, "empty name in VariableAssignmentCommand"
 
-    .line 594
+    .line 599
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_2
     :goto_1
     const-string v0, "expression"
 
-    .line 597
+    .line 602
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -212,7 +212,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mExpression:Lcom/miui/maml/data/Expression;
 
-    .line 599
+    .line 604
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mType:Lcom/miui/maml/data/VariableType;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/VariableType;->isArray()Z
@@ -223,7 +223,7 @@
 
     const-string v0, "index"
 
-    .line 600
+    .line 605
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -236,7 +236,7 @@
 
     const-string v0, "values"
 
-    .line 601
+    .line 606
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
@@ -256,17 +256,17 @@
 .method protected doPerform()V
     .locals 10
 
-    .line 607
+    .line 612
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v0
 
-    .line 608
+    .line 613
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v1
 
-    .line 609
+    .line 614
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mNameExp:Lcom/miui/maml/data/Expression;
 
     const/4 v3, 0x0
@@ -275,24 +275,24 @@
 
     if-eqz v2, :cond_1
 
-    .line 610
+    .line 615
     invoke-virtual {v2}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 611
+    .line 616
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 612
+    .line 617
     iput-object v3, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mName:Ljava/lang/String;
 
     return-void
 
-    .line 614
+    .line 619
     :cond_0
     iget-object v5, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mName:Ljava/lang/String;
 
@@ -302,10 +302,10 @@
 
     if-nez v5, :cond_1
 
-    .line 615
+    .line 620
     iput-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mName:Ljava/lang/String;
 
-    .line 616
+    .line 621
     new-instance v2, Lcom/miui/maml/data/IndexedVariable;
 
     iget-object v5, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mName:Ljava/lang/String;
@@ -320,7 +320,7 @@
 
     iput-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 617
+    .line 622
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mType:Lcom/miui/maml/data/VariableType;
 
     invoke-virtual {v2}, Lcom/miui/maml/data/VariableType;->isArray()Z
@@ -329,7 +329,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 618
+    .line 623
     new-instance v2, Lcom/miui/maml/data/IndexedVariable;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -352,7 +352,7 @@
 
     iput-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mLengthVar:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 623
+    .line 628
     :cond_1
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
 
@@ -360,7 +360,7 @@
 
     return-void
 
-    .line 627
+    .line 632
     :cond_2
     sget-object v2, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$data$VariableType:[I
 
@@ -376,7 +376,7 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 646
+    .line 660
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mType:Lcom/miui/maml/data/VariableType;
 
     invoke-virtual {v2}, Lcom/miui/maml/data/VariableType;->isNumberOrStringArray()Z
@@ -389,7 +389,7 @@
 
     if-eqz v2, :cond_b
 
-    .line 647
+    .line 661
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mIndexExpression:Lcom/miui/maml/data/Expression;
 
     if-eqz v2, :cond_4
@@ -398,7 +398,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 648
+    .line 662
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mType:Lcom/miui/maml/data/VariableType;
 
     invoke-virtual {v1}, Lcom/miui/maml/data/VariableType;->isNumberArray()Z
@@ -407,7 +407,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 649
+    .line 663
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
 
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mIndexExpression:Lcom/miui/maml/data/Expression;
@@ -428,20 +428,50 @@
 
     goto/16 :goto_5
 
-    .line 638
+    .line 655
     :pswitch_0
+    iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mExpression:Lcom/miui/maml/data/Expression;
+
+    invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluateJsonArray()Lorg/json/JSONArray;
+
+    move-result-object v1
+
+    .line 656
+    iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
+
+    invoke-virtual {v2, v1}, Lcom/miui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
+
+    goto/16 :goto_5
+
+    .line 650
+    :pswitch_1
+    iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mExpression:Lcom/miui/maml/data/Expression;
+
+    invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluateJsonObject()Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    .line 651
+    iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
+
+    invoke-virtual {v2, v1}, Lcom/miui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
+
+    goto/16 :goto_5
+
+    .line 643
+    :pswitch_2
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mExpression:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 639
+    .line 644
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v2, v1}, Lcom/miui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
-    .line 640
+    .line 645
     iget-boolean v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mPersist:Z
 
     if-eqz v2, :cond_14
@@ -452,30 +482,30 @@
 
     if-eqz v2, :cond_14
 
-    .line 641
+    .line 646
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mName:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v1}, Lcom/miui/maml/ScreenElementRoot;->saveVar(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_5
 
-    .line 629
-    :pswitch_1
+    .line 634
+    :pswitch_3
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mExpression:Lcom/miui/maml/data/Expression;
 
     if-eqz v1, :cond_14
 
-    .line 630
+    .line 635
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v1
 
-    .line 631
+    .line 636
     iget-object v3, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v3, v1, v2}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 632
+    .line 637
     iget-boolean v3, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mPersist:Z
 
     if-eqz v3, :cond_14
@@ -486,7 +516,7 @@
 
     if-eqz v3, :cond_14
 
-    .line 633
+    .line 638
     iget-object v3, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mName:Ljava/lang/String;
 
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
@@ -497,7 +527,7 @@
 
     goto/16 :goto_5
 
-    .line 651
+    .line 665
     :cond_3
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
 
@@ -519,34 +549,34 @@
 
     goto/16 :goto_5
 
-    .line 654
+    .line 668
     :cond_4
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mArrayValues:[Lcom/miui/maml/data/Expression;
 
     if-eqz v2, :cond_b
 
-    .line 655
+    .line 669
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v2}, Lcom/miui/maml/data/IndexedVariable;->get()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 656
+    .line 670
     iget-object v4, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mArrayValues:[Lcom/miui/maml/data/Expression;
 
     array-length v4, v4
 
     if-eqz v2, :cond_5
 
-    .line 658
+    .line 672
     invoke-static {v2}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
     move-result v8
 
     if-ne v8, v4, :cond_5
 
-    .line 659
+    .line 673
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v8
@@ -561,7 +591,7 @@
 
     if-eq v8, v9, :cond_6
 
-    .line 660
+    .line 674
     :cond_5
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mName:Ljava/lang/String;
 
@@ -571,21 +601,21 @@
 
     invoke-virtual {v1, v2, v4, v8}, Lcom/miui/maml/data/Variables;->createArray(Ljava/lang/String;ILjava/lang/Class;)Z
 
-    .line 661
+    .line 675
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mLengthVar:Lcom/miui/maml/data/IndexedVariable;
 
     int-to-double v8, v4
 
     invoke-virtual {v1, v8, v9}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 662
+    .line 676
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v1}, Lcom/miui/maml/data/IndexedVariable;->get()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 664
+    .line 678
     :cond_6
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mType:Lcom/miui/maml/data/VariableType;
 
@@ -598,7 +628,7 @@
     :goto_0
     if-ge v7, v4, :cond_a
 
-    .line 666
+    .line 680
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mArrayValues:[Lcom/miui/maml/data/Expression;
 
     aget-object v1, v1, v7
@@ -609,7 +639,7 @@
 
     goto :goto_1
 
-    .line 667
+    .line 681
     :cond_7
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
 
@@ -626,12 +656,12 @@
     :goto_2
     if-ge v7, v4, :cond_a
 
-    .line 671
+    .line 685
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mArrayValues:[Lcom/miui/maml/data/Expression;
 
     aget-object v1, v1, v7
 
-    .line 672
+    .line 686
     move-object v5, v2
 
     check-cast v5, [Ljava/lang/String;
@@ -654,7 +684,7 @@
 
     goto :goto_2
 
-    .line 675
+    .line 689
     :cond_a
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
 
@@ -662,7 +692,7 @@
 
     goto/16 :goto_5
 
-    .line 681
+    .line 695
     :cond_b
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mExpression:Lcom/miui/maml/data/Expression;
 
@@ -677,13 +707,13 @@
     :cond_c
     move-object v2, v3
 
-    .line 682
+    .line 696
     :goto_4
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v8
 
-    .line 683
+    .line 697
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v9
@@ -696,32 +726,32 @@
 
     if-eqz v9, :cond_d
 
-    .line 684
+    .line 698
     invoke-virtual {v8, v2}, Lcom/miui/maml/data/Variables;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 686
+    .line 700
     :cond_d
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mIndexExpression:Lcom/miui/maml/data/Expression;
 
     if-nez v2, :cond_13
 
-    .line 687
+    .line 701
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v2}, Lcom/miui/maml/data/IndexedVariable;->get()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 688
+    .line 702
     iget-object v8, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v8, v3}, Lcom/miui/maml/data/IndexedVariable;->set(Ljava/lang/Object;)Z
 
     if-eqz v2, :cond_e
 
-    .line 690
+    .line 704
     instance-of v2, v2, Ljava/lang/reflect/Array;
 
     if-nez v2, :cond_f
@@ -736,7 +766,7 @@
     :cond_f
     move v7, v4
 
-    .line 692
+    .line 706
     :cond_10
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mLengthVar:Lcom/miui/maml/data/IndexedVariable;
 
@@ -744,7 +774,7 @@
 
     if-eqz v7, :cond_11
 
-    .line 693
+    .line 707
     new-instance v2, Lcom/miui/maml/data/IndexedVariable;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -770,12 +800,12 @@
     :cond_11
     if-eqz v3, :cond_12
 
-    .line 695
+    .line 709
     instance-of v1, v3, Ljava/lang/reflect/Array;
 
     if-eqz v1, :cond_12
 
-    .line 696
+    .line 710
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mLengthVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-static {v3}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
@@ -788,18 +818,18 @@
 
     goto :goto_5
 
-    .line 697
+    .line 711
     :cond_12
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mLengthVar:Lcom/miui/maml/data/IndexedVariable;
 
     if-eqz v1, :cond_14
 
-    .line 698
+    .line 712
     invoke-virtual {v1, v5, v6}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
     goto :goto_5
 
-    .line 701
+    .line 715
     :cond_13
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mVar:Lcom/miui/maml/data/IndexedVariable;
 
@@ -811,14 +841,14 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/miui/maml/data/IndexedVariable;->setArr(ILjava/lang/Object;)Z
 
-    .line 706
+    .line 720
     :cond_14
     :goto_5
     iget-boolean v1, p0, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;->mRequestUpdate:Z
 
     if-eqz v1, :cond_15
 
-    .line 707
+    .line 721
     invoke-virtual {v0}, Lcom/miui/maml/ScreenElementRoot;->requestUpdate()V
 
     :cond_15
@@ -826,6 +856,8 @@
 
     :pswitch_data_0
     .packed-switch 0x1
+        :pswitch_3
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

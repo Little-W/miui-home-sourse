@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private mListenerDelegate:Lmiui/maml/ScreenElementRoot$OnExternCommandListener;
+.field private mListenerDelegate:Lcom/miui/maml/ScreenElementRoot$OnExternCommandListener;
 
 
 # direct methods
@@ -19,18 +19,18 @@
 
     invoke-direct {v0, p0}, Lcom/miui/launcher/views/MamlOnExternCommandListener$1;-><init>(Lcom/miui/launcher/views/MamlOnExternCommandListener;)V
 
-    iput-object v0, p0, Lcom/miui/launcher/views/MamlOnExternCommandListener;->mListenerDelegate:Lmiui/maml/ScreenElementRoot$OnExternCommandListener;
+    iput-object v0, p0, Lcom/miui/launcher/views/MamlOnExternCommandListener;->mListenerDelegate:Lcom/miui/maml/ScreenElementRoot$OnExternCommandListener;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getListenerDelegate()Lmiui/maml/ScreenElementRoot$OnExternCommandListener;
+.method public getListenerDelegate()Lcom/miui/maml/ScreenElementRoot$OnExternCommandListener;
     .locals 1
 
     .line 21
-    iget-object v0, p0, Lcom/miui/launcher/views/MamlOnExternCommandListener;->mListenerDelegate:Lmiui/maml/ScreenElementRoot$OnExternCommandListener;
+    iget-object v0, p0, Lcom/miui/launcher/views/MamlOnExternCommandListener;->mListenerDelegate:Lcom/miui/maml/ScreenElementRoot$OnExternCommandListener;
 
     return-object v0
 .end method

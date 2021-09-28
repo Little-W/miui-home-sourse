@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="config_icon_height">61.099976dip</dimen>
+    <dimen name="config_icon_inner_padding">1.8199768dip</dimen>
     <dimen name="config_icon_width">61.099976dip</dimen>
     <dimen name="default_screen_preview_thumbnail_view_height">169.5dip</dimen>
     <dimen name="default_screen_preview_thumbnail_view_width">113.0dip</dimen>
@@ -11,10 +12,12 @@
     <dimen name="folder_bottom_padding">90.54999dip</dimen>
     <dimen name="folder_content_padding_left">5.0dip</dimen>
     <dimen name="folder_content_width">292.0dip</dimen>
+    <dimen name="folder_preview_item_padding">0.30000007dip</dimen>
     <dimen name="folder_top_padding">76.369995dip</dimen>
     <dimen name="hotseats_height">82.91dip</dimen>
     <dimen name="hotseats_padding_bottom">0.0dip</dimen>
     <dimen name="hotseats_padding_side">4.0dip</dimen>
+    <dimen name="miui_widget_background_radius">16.72998dip</dimen>
     <dimen name="recommend_loading_item_padding">22.0dip</dimen>
     <dimen name="status_bar_height">18.199982dip</dimen>
     <dimen name="workspace_cell_height">88.72998dip</dimen>

@@ -6,7 +6,7 @@
 # static fields
 .field public static final CLIENT_VERSION_CODE:I = 0x3
 
-.field public static final SERVER_VERSION_CODE:I = 0x3
+.field public static final SERVER_VERSION_CODE:I = 0x5
 
 
 # direct methods
@@ -24,12 +24,12 @@
 
     const-string p0, "    BuildInfo.CLIENT_VERSION_CODE : 3"
 
-    .line 37
+    .line 39
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    const-string p0, "    BuildInfo.SERVER_VERSION_CODE : 3"
+    const-string p0, "    BuildInfo.SERVER_VERSION_CODE : 5"
 
-    .line 38
+    .line 40
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
     return-void

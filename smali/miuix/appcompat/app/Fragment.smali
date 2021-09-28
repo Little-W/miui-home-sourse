@@ -37,7 +37,7 @@
 .method public getThemedContext()Landroid/content/Context;
     .locals 1
 
-    .line 108
+    .line 114
     iget-object v0, p0, Lmiuix/appcompat/app/Fragment;->mDelegate:Lmiuix/appcompat/app/FragmentDelegate;
 
     invoke-virtual {v0}, Lmiuix/appcompat/app/FragmentDelegate;->getThemedContext()Landroid/content/Context;
@@ -130,7 +130,7 @@
 
     if-nez p1, :cond_1
 
-    .line 201
+    .line 207
     iget-boolean p1, p0, Lmiuix/appcompat/app/Fragment;->mHasMenu:Z
 
     if-eqz p1, :cond_0
@@ -147,7 +147,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 202
+    .line 208
     invoke-virtual {p0}, Lmiuix/appcompat/app/Fragment;->isHidden()Z
 
     move-result p1
@@ -160,7 +160,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 203
+    .line 209
     invoke-virtual {p0, p2}, Lmiuix/appcompat/app/Fragment;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     move-result v0
@@ -188,10 +188,10 @@
 .method public onDestroy()V
     .locals 2
 
-    .line 346
+    .line 352
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
-    .line 348
+    .line 354
     iget-object v0, p0, Lmiuix/appcompat/app/Fragment;->mDelegate:Lmiuix/appcompat/app/FragmentDelegate;
 
     const/4 v1, 0x0
@@ -201,26 +201,40 @@
     return-void
 .end method
 
+.method public onDestroyView()V
+    .locals 1
+
+    .line 76
+    invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroyView()V
+
+    .line 77
+    iget-object v0, p0, Lmiuix/appcompat/app/Fragment;->mDelegate:Lmiuix/appcompat/app/FragmentDelegate;
+
+    invoke-virtual {v0}, Lmiuix/appcompat/app/FragmentDelegate;->onDestroyView()V
+
+    return-void
+.end method
+
 .method public final onHiddenChanged(Z)V
     .locals 1
 
-    .line 292
+    .line 298
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onHiddenChanged(Z)V
 
     if-nez p1, :cond_0
 
-    .line 293
+    .line 299
     iget-object v0, p0, Lmiuix/appcompat/app/Fragment;->mDelegate:Lmiuix/appcompat/app/FragmentDelegate;
 
     if-eqz v0, :cond_0
 
-    .line 294
+    .line 300
     invoke-virtual {v0}, Lmiuix/appcompat/app/FragmentDelegate;->invalidateOptionsMenu()V
 
     :cond_0
     xor-int/lit8 p1, p1, 0x1
 
-    .line 296
+    .line 302
     invoke-virtual {p0, p1}, Lmiuix/appcompat/app/Fragment;->onVisibilityChanged(Z)V
 
     return-void
@@ -239,7 +253,7 @@
 
     if-nez p1, :cond_0
 
-    .line 223
+    .line 229
     iget-boolean p1, p0, Lmiuix/appcompat/app/Fragment;->mHasMenu:Z
 
     if-eqz p1, :cond_0
@@ -256,7 +270,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 224
+    .line 230
     invoke-virtual {p0}, Lmiuix/appcompat/app/Fragment;->isHidden()Z
 
     move-result p1
@@ -269,7 +283,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 225
+    .line 231
     invoke-virtual {p0, p3}, Lmiuix/appcompat/app/Fragment;->onPrepareOptionsMenu(Landroid/view/Menu;)V
 
     :cond_0
@@ -313,18 +327,18 @@
 .method public setMenuVisibility(Z)V
     .locals 1
 
-    .line 124
+    .line 130
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->setMenuVisibility(Z)V
 
-    .line 125
+    .line 131
     iget-boolean v0, p0, Lmiuix/appcompat/app/Fragment;->mMenuVisible:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 126
+    .line 132
     iput-boolean p1, p0, Lmiuix/appcompat/app/Fragment;->mMenuVisible:Z
 
-    .line 127
+    .line 133
     invoke-virtual {p0}, Lmiuix/appcompat/app/Fragment;->isHidden()Z
 
     move-result p1
@@ -341,7 +355,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 128
+    .line 134
     invoke-virtual {p1}, Lmiuix/appcompat/app/FragmentDelegate;->invalidateOptionsMenu()V
 
     :cond_0

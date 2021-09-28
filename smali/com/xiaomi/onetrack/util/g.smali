@@ -221,7 +221,7 @@
 
     const-string v2, "hint"
 
-    const-string v3, "注册信息失败\uff0c请检查是网络环境是否在内网"
+    const-string/jumbo v3, "注册信息失败\uff0c请检查是网络环境是否在内网"
 
     .line 134
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static sHadShowTip:Ljava/util/Map; = null
+.field private static sHadShowTip:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -15,7 +15,7 @@
     .end annotation
 .end field
 
-.field private static sIsHaveWorkUser:Z = false
+.field private static sIsHaveWorkUser:Z
 
 
 # direct methods
@@ -193,14 +193,14 @@
 
     invoke-direct {v0, p0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const p0, 0x7f1003c7
+    const p0, 0x7f1003e2
 
     .line 52
     invoke-virtual {v0, p0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p0
 
-    const v0, 0x7f1003c6
+    const v0, 0x7f1003e1
 
     .line 53
     invoke-virtual {p0, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -209,7 +209,7 @@
 
     sget-object v0, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$Yx0QgB3cFnQPbiBvVb_a-TtQvbw;->INSTANCE:Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$Yx0QgB3cFnQPbiBvVb_a-TtQvbw;
 
-    const v1, 0x7f1003c4
+    const v1, 0x7f1003df
 
     .line 54
     invoke-virtual {p0, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -261,12 +261,12 @@
 
     if-eqz p2, :cond_2
 
-    const p2, 0x7f1003c6
+    const p2, 0x7f1003e1
 
     goto :goto_0
 
     :cond_2
-    const p2, 0x7f1003c3
+    const p2, 0x7f1003de
 
     .line 70
     :goto_0
@@ -321,21 +321,21 @@
 
     invoke-direct {v0, p0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v1, 0x7f1003c7
+    const v1, 0x7f1003e2
 
     .line 35
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f1003c3
+    const v1, 0x7f1003de
 
     .line 36
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f1003c5
+    const v1, 0x7f1003e0
 
     new-instance v2, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$0G66q0Cnr7qJdQWnTXtdJKIiaVI;
 

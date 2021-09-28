@@ -31,11 +31,11 @@
     .line 35
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f060379
+    const v1, 0x7f06037b
 
-    const v2, 0x7f060378
+    const v2, 0x7f06037a
 
-    const v3, 0x7f060377
+    const v3, 0x7f060379
 
     invoke-direct {v0, v1, v1, v2, v3}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(IIII)V
 
@@ -95,9 +95,9 @@
 .end method
 
 .method private changeIconAndLabel()V
-    .locals 1
+    .locals 2
 
-    .line 84
+    .line 74
     iget-object v0, p0, Lcom/miui/home/launcher/UninstallDropTarget;->mUninstallDropTargetMode:Lcom/miui/home/launcher/UninstallDropTargetMode;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/UninstallDropTargetMode;->getIconResId()I
@@ -106,40 +106,28 @@
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/UninstallDropTarget;->setImageResource(I)V
 
-    .line 85
-    iget-object v0, p0, Lcom/miui/home/launcher/UninstallDropTarget;->mUninstallDropTargetMode:Lcom/miui/home/launcher/UninstallDropTargetMode;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/UninstallDropTargetMode;->getLabelResId()I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/UninstallDropTarget;->setTextId(I)V
-
-    return-void
-.end method
-
-.method private getDisableReason()I
-    .locals 1
-
-    .line 65
-    invoke-static {}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->getMonitor()Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
+    .line 75
+    invoke-virtual {p0}, Lcom/miui/home/launcher/UninstallDropTarget;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->isEmpty()Z
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lcom/miui/home/launcher/UninstallDropTarget;->mUninstallDropTargetMode:Lcom/miui/home/launcher/UninstallDropTargetMode;
 
-    const v0, 0x7f100154
+    invoke-virtual {v1}, Lcom/miui/home/launcher/UninstallDropTargetMode;->getLabelResId()I
 
-    return v0
+    move-result v1
 
-    :cond_0
-    const v0, 0x7f100151
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    return v0
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/UninstallDropTarget;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    return-void
 .end method
 
 .method public static synthetic lambda$onFinishInflate$0(Lcom/miui/home/launcher/UninstallDropTarget;Landroid/view/View;)V
@@ -176,31 +164,7 @@
     .line 57
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackEditModeTopMenuClickEvent(Ljava/lang/String;)V
 
-    goto :goto_0
-
-    .line 58
     :cond_0
-    invoke-virtual {p0}, Lcom/miui/home/launcher/UninstallDropTarget;->isDisableState()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    .line 59
-    invoke-virtual {p0}, Lcom/miui/home/launcher/UninstallDropTarget;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-direct {p0}, Lcom/miui/home/launcher/UninstallDropTarget;->getDisableReason()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/common/Utilities;->showImprovedToast(Landroid/content/Context;II)V
-
-    :cond_1
-    :goto_0
     return-void
 .end method
 
@@ -209,7 +173,7 @@
 .method protected getDragOverState()Lcom/miui/home/launcher/multiselect/TopMenuState;
     .locals 1
 
-    .line 95
+    .line 85
     sget-object v0, Lcom/miui/home/launcher/UninstallDropTarget;->DRAG_OVER_STATE:Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     return-object v0
@@ -218,7 +182,7 @@
 .method public getDropAnnounceForAccessibility(Lcom/miui/home/launcher/DragObject;)Ljava/lang/String;
     .locals 1
 
-    .line 126
+    .line 123
     invoke-virtual {p0}, Lcom/miui/home/launcher/UninstallDropTarget;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -235,7 +199,7 @@
 .method protected getPressedState()Lcom/miui/home/launcher/multiselect/TopMenuState;
     .locals 1
 
-    .line 90
+    .line 80
     sget-object v0, Lcom/miui/home/launcher/UninstallDropTarget;->PRESSED_STATE:Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     return-object v0
@@ -244,7 +208,7 @@
 .method public isContainUninstallOrDeleteItem()Z
     .locals 1
 
-    .line 134
+    .line 131
     iget-boolean v0, p0, Lcom/miui/home/launcher/UninstallDropTarget;->mIsContainUninstallOrDeleteItem:Z
 
     return v0
@@ -253,7 +217,7 @@
 .method public isUninstallMode()Z
     .locals 2
 
-    .line 80
+    .line 70
     iget-object v0, p0, Lcom/miui/home/launcher/UninstallDropTarget;->mUninstallDropTargetMode:Lcom/miui/home/launcher/UninstallDropTargetMode;
 
     sget-object v1, Lcom/miui/home/launcher/UninstallDropTarget;->UNINSTALL:Lcom/miui/home/launcher/UninstallDropTargetMode;
@@ -272,22 +236,49 @@
 .end method
 
 .method public onDragEnter(Lcom/miui/home/launcher/DragObject;)V
-    .locals 0
+    .locals 1
 
-    .line 119
+    .line 109
     invoke-super {p0, p1}, Lcom/miui/home/launcher/ButtonDropTarget;->onDragEnter(Lcom/miui/home/launcher/DragObject;)V
 
-    const p1, 0x7f100063
+    const v0, 0x7f100063
 
-    .line 120
-    invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->announceForAccessibility(I)V
+    .line 110
+    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->announceForAccessibility(I)V
 
-    .line 121
+    .line 111
     invoke-static {}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->getInstance()Lcom/miui/home/launcher/common/HapticFeedbackCompat;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->performMeshNormal(Landroid/view/View;)V
+
+    .line 112
+    invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragView()Lcom/miui/home/launcher/DragView;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->performMeshNormal(Landroid/view/View;)V
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DragView;->setSelected(Z)V
+
+    return-void
+.end method
+
+.method public onDragExit(Lcom/miui/home/launcher/DragObject;)V
+    .locals 1
+
+    .line 117
+    invoke-super {p0, p1}, Lcom/miui/home/launcher/ButtonDropTarget;->onDragExit(Lcom/miui/home/launcher/DragObject;)V
+
+    .line 118
+    invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragView()Lcom/miui/home/launcher/DragView;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DragView;->setSelected(Z)V
 
     return-void
 .end method
@@ -295,17 +286,17 @@
 .method public onDrop(Lcom/miui/home/launcher/DragObject;)Z
     .locals 2
 
-    .line 107
+    .line 97
     invoke-super {p0, p1}, Lcom/miui/home/launcher/ButtonDropTarget;->onDrop(Lcom/miui/home/launcher/DragObject;)Z
 
-    .line 108
+    .line 98
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDraggingSize()I
 
     move-result v0
 
     invoke-static {v0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackDragApkToCenterDeleteDropTargetEvent(I)V
 
-    .line 109
+    .line 99
     invoke-virtual {p0}, Lcom/miui/home/launcher/UninstallDropTarget;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -316,7 +307,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 110
+    .line 100
     invoke-virtual {p0}, Lcom/miui/home/launcher/UninstallDropTarget;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
@@ -331,7 +322,7 @@
 
     return p1
 
-    .line 114
+    .line 104
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/UninstallDropTarget;->mUninstallDropTargetMode:Lcom/miui/home/launcher/UninstallDropTargetMode;
 
@@ -347,12 +338,12 @@
 .method public onDropStart(Lcom/miui/home/launcher/DragObject;)V
     .locals 1
 
-    .line 101
+    .line 91
     invoke-super {p0, p1}, Lcom/miui/home/launcher/ButtonDropTarget;->onDropStart(Lcom/miui/home/launcher/DragObject;)V
 
     const/4 v0, 0x1
 
-    .line 102
+    .line 92
     iput-boolean v0, p1, Lcom/miui/home/launcher/DragObject;->removeDragViewsAtLast:Z
 
     return-void
@@ -377,7 +368,7 @@
 .method public setIsContainUninstallOrDeleteItem(Z)V
     .locals 0
 
-    .line 130
+    .line 127
     iput-boolean p1, p0, Lcom/miui/home/launcher/UninstallDropTarget;->mIsContainUninstallOrDeleteItem:Z
 
     return-void
@@ -386,15 +377,15 @@
 .method public setMode(Lcom/miui/home/launcher/UninstallDropTargetMode;)V
     .locals 1
 
-    .line 73
+    .line 63
     iget-object v0, p0, Lcom/miui/home/launcher/UninstallDropTarget;->mUninstallDropTargetMode:Lcom/miui/home/launcher/UninstallDropTargetMode;
 
     if-eq v0, p1, :cond_0
 
-    .line 74
+    .line 64
     iput-object p1, p0, Lcom/miui/home/launcher/UninstallDropTarget;->mUninstallDropTargetMode:Lcom/miui/home/launcher/UninstallDropTargetMode;
 
-    .line 75
+    .line 65
     invoke-direct {p0}, Lcom/miui/home/launcher/UninstallDropTarget;->changeIconAndLabel()V
 
     :cond_0
@@ -404,28 +395,28 @@
 .method public showIfNeed()V
     .locals 2
 
-    .line 139
+    .line 136
     invoke-virtual {p0}, Lcom/miui/home/launcher/UninstallDropTarget;->isActive()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 140
+    .line 137
     iget-boolean v0, p0, Lcom/miui/home/launcher/UninstallDropTarget;->mIsContainUninstallOrDeleteItem:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 141
+    .line 138
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/UninstallDropTarget;->changeToNormalState(Z)V
 
     goto :goto_0
 
-    .line 143
+    .line 140
     :cond_0
-    invoke-virtual {p0, v1}, Lcom/miui/home/launcher/UninstallDropTarget;->changeToDisableState(Z)V
+    invoke-virtual {p0, v1}, Lcom/miui/home/launcher/UninstallDropTarget;->changeToGoneState(Z)V
 
     :cond_1
     :goto_0

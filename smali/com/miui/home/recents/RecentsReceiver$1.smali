@@ -31,7 +31,7 @@
 .method constructor <init>(Lcom/miui/home/recents/RecentsReceiver;ILjava/util/List;Ljava/util/List;)V
     .locals 0
 
-    .line 126
+    .line 127
     iput-object p1, p0, Lcom/miui/home/recents/RecentsReceiver$1;->this$0:Lcom/miui/home/recents/RecentsReceiver;
 
     iput p2, p0, Lcom/miui/home/recents/RecentsReceiver$1;->val$cleanType:I
@@ -53,14 +53,14 @@
     :try_start_0
     const-string v0, "miui.process.ProcessConfig"
 
-    .line 132
+    .line 133
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 137
+    .line 138
     iget v1, p0, Lcom/miui/home/recents/RecentsReceiver$1;->val$cleanType:I
 
     const/4 v7, 0x0
@@ -69,7 +69,7 @@
 
     if-nez v1, :cond_0
 
-    .line 138
+    .line 139
     new-array v1, v8, [Ljava/lang/Class;
 
     sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
@@ -82,7 +82,7 @@
 
     sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 139
+    .line 140
     invoke-static {v0, v3, v4}, Lcom/miui/launcher/utils/ReflectUtils;->getStaticFieldValue(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v3
@@ -99,7 +99,7 @@
 
     aput-object v3, v2, v7
 
-    .line 138
+    .line 139
     invoke-static {v0, v1, v2}, Lcom/miui/launcher/utils/ReflectUtils;->createNewInstance(Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -108,7 +108,7 @@
 
     goto :goto_0
 
-    .line 141
+    .line 142
     :cond_0
     new-array v1, v8, [Ljava/lang/Class;
 
@@ -122,7 +122,7 @@
 
     sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 142
+    .line 143
     invoke-static {v0, v3, v4}, Lcom/miui/launcher/utils/ReflectUtils;->getStaticFieldValue(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v3
@@ -139,7 +139,7 @@
 
     aput-object v3, v2, v7
 
-    .line 141
+    .line 142
     invoke-static {v0, v1, v2}, Lcom/miui/launcher/utils/ReflectUtils;->createNewInstance(Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -151,7 +151,7 @@
 
     return-void
 
-    .line 147
+    .line 148
     :cond_1
     iget-object v1, p0, Lcom/miui/home/recents/RecentsReceiver$1;->val$packages:Ljava/util/List;
 
@@ -165,7 +165,7 @@
 
     const-string v3, "setWhiteList"
 
-    .line 148
+    .line 149
     sget-object v4, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
     new-array v5, v8, [Ljava/lang/Class;
@@ -186,13 +186,13 @@
 
     invoke-static/range {v1 .. v6}, Lcom/miui/launcher/utils/ReflectUtils;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    .line 150
+    .line 151
     :cond_2
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 151
+    .line 152
     iget-object v1, p0, Lcom/miui/home/recents/RecentsReceiver$1;->val$taskinfos:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -212,7 +212,7 @@
 
     check-cast v2, Landroid/app/ActivityManager$RecentTaskInfo;
 
-    .line 152
+    .line 153
     iget v2, v2, Landroid/app/ActivityManager$RecentTaskInfo;->persistentId:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -226,7 +226,7 @@
     :cond_3
     const-string v3, "setRemoveTaskNeeded"
 
-    .line 154
+    .line 155
     sget-object v4, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
     new-array v5, v8, [Ljava/lang/Class;
@@ -251,7 +251,7 @@
 
     const-string v3, "setRemovingTaskIdList"
 
-    .line 155
+    .line 156
     sget-object v4, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
     new-array v5, v8, [Ljava/lang/Class;
@@ -270,7 +270,7 @@
 
     const-string v1, "miui.process.ProcessManager"
 
-    .line 156
+    .line 157
     sget-object v2, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
     const-string v3, "kill"
@@ -289,9 +289,7 @@
 
     const-string v1, "clear success"
 
-    .line 159
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
+    .line 160
     return-void
 
     :catch_0
@@ -301,8 +299,6 @@
 
     const-string v2, "doClear"
 
-    .line 134
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
+    .line 135
     return-void
 .end method

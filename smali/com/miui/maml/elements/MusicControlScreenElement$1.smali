@@ -55,7 +55,7 @@
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/MusicControlScreenElement;->readPackageName()V
 
-    const-string v0, "MusicControlScreenElement"
+    const-string v0, "MusicControlScreenE"
 
     .line 346
     new-instance v1, Ljava/lang/StringBuilder;
@@ -96,9 +96,9 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 347
     iget-object v2, p0, Lcom/miui/maml/elements/MusicControlScreenElement$1;->this$0:Lcom/miui/maml/elements/MusicControlScreenElement;
 
-    .line 347
     invoke-static {v2}, Lcom/miui/maml/elements/MusicControlScreenElement;->access$2100(Lcom/miui/maml/elements/MusicControlScreenElement;)Lcom/miui/maml/data/IndexedVariable;
 
     move-result-object v2
@@ -192,7 +192,7 @@
 
     move-result-object v1
 
-    const-string v2, "MusicControlScreenElement"
+    const-string v2, "MusicControlScreenE"
 
     .line 288
     new-instance v3, Ljava/lang/StringBuilder;
@@ -270,7 +270,7 @@
 
     move-result-object p1
 
-    const-string v0, "MusicControlScreenElement"
+    const-string v0, "MusicControlScreenE"
 
     .line 295
     new-instance v1, Ljava/lang/StringBuilder;
@@ -353,7 +353,7 @@
 
     move-result-object p1
 
-    const-string v1, "MusicControlScreenElement"
+    const-string v1, "MusicControlScreenE"
 
     .line 308
     new-instance v4, Ljava/lang/StringBuilder;
@@ -455,7 +455,7 @@
 
     move-result-wide v6
 
-    const-string p1, "MusicControlScreenElement"
+    const-string p1, "MusicControlScreenE"
 
     .line 322
     new-instance v1, Ljava/lang/StringBuilder;
@@ -521,7 +521,7 @@
 
     move-result-object p1
 
-    const-string v0, "MusicControlScreenElement"
+    const-string v0, "MusicControlScreenE"
 
     .line 329
     new-instance v1, Ljava/lang/StringBuilder;
@@ -560,7 +560,7 @@
 .method public onClientPlaybackActionUpdate(J)V
     .locals 8
 
-    const-string v0, "MusicControlScreenElement"
+    const-string v0, "MusicControlScreenE"
 
     .line 222
     new-instance v1, Ljava/lang/StringBuilder;
@@ -772,7 +772,7 @@
     .line 245
     invoke-virtual {p0, p1}, Lcom/miui/maml/elements/MusicControlScreenElement$1;->onStateUpdate(I)V
 
-    const-string v0, "MusicControlScreenElement"
+    const-string v0, "MusicControlScreenE"
 
     .line 246
     new-instance v1, Ljava/lang/StringBuilder;

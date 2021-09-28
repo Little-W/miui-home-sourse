@@ -87,7 +87,7 @@
 
     iput-object v0, p0, Lcom/miui/home/settings/preference/DesktopModePreference;->mDesktop:Lmiuix/visual/check/VisualCheckBox;
 
-    const v0, 0x7f0a00c2
+    const v0, 0x7f0a00c3
 
     .line 34
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

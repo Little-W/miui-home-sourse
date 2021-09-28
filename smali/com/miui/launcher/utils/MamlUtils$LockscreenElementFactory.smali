@@ -1,5 +1,5 @@
 .class Lcom/miui/launcher/utils/MamlUtils$LockscreenElementFactory;
-.super Lmiui/maml/elements/ScreenElementFactory;
+.super Lcom/miui/maml/elements/ScreenElementFactory;
 .source "MamlUtils.java"
 
 
@@ -18,41 +18,41 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 88
-    invoke-direct {p0}, Lmiui/maml/elements/ScreenElementFactory;-><init>()V
+    .line 87
+    invoke-direct {p0}, Lcom/miui/maml/elements/ScreenElementFactory;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public createInstance(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)Lmiui/maml/elements/ScreenElement;
+.method public createInstance(Lorg/w3c/dom/Element;Lcom/miui/maml/ScreenElementRoot;)Lcom/miui/maml/elements/ScreenElement;
     .locals 2
 
-    .line 90
+    .line 89
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getTagName()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "Unlocker"
 
-    .line 91
+    .line 90
     invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 92
-    new-instance v0, Lmiui/maml/elements/AdvancedSlider;
+    .line 91
+    new-instance v0, Lcom/miui/maml/elements/AdvancedSlider;
 
-    invoke-direct {v0, p1, p2}, Lmiui/maml/elements/AdvancedSlider;-><init>(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)V
+    invoke-direct {v0, p1, p2}, Lcom/miui/maml/elements/AdvancedSlider;-><init>(Lorg/w3c/dom/Element;Lcom/miui/maml/ScreenElementRoot;)V
 
     return-object v0
 
-    .line 94
+    .line 93
     :cond_0
-    invoke-super {p0, p1, p2}, Lmiui/maml/elements/ScreenElementFactory;->createInstance(Lorg/w3c/dom/Element;Lmiui/maml/ScreenElementRoot;)Lmiui/maml/elements/ScreenElement;
+    invoke-super {p0, p1, p2}, Lcom/miui/maml/elements/ScreenElementFactory;->createInstance(Lorg/w3c/dom/Element;Lcom/miui/maml/ScreenElementRoot;)Lcom/miui/maml/elements/ScreenElement;
 
     move-result-object p1
 

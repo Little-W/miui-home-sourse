@@ -24,6 +24,16 @@
     .end annotation
 .end field
 
+.field private mWidgetShortcutMenuItems:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # direct methods
 .method public constructor <init>()V
@@ -48,7 +58,7 @@
         }
     .end annotation
 
-    .line 11
+    .line 12
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;->mAppShortcutMenuItems:Ljava/util/List;
 
     return-object v0
@@ -65,8 +75,25 @@
         }
     .end annotation
 
-    .line 19
+    .line 20
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;->mSystemShortcutMenuItems:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public getWidgetShortcutMenuItems()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;",
+            ">;"
+        }
+    .end annotation
+
+    .line 32
+    iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;->mWidgetShortcutMenuItems:Ljava/util/List;
 
     return-object v0
 .end method
@@ -82,7 +109,7 @@
         }
     .end annotation
 
-    .line 15
+    .line 16
     iput-object p1, p0, Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;->mAppShortcutMenuItems:Ljava/util/List;
 
     return-void
@@ -99,8 +126,25 @@
         }
     .end annotation
 
-    .line 23
+    .line 24
     iput-object p1, p0, Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;->mSystemShortcutMenuItems:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public setWidgetShortcutMenuItems(Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 28
+    iput-object p1, p0, Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;->mWidgetShortcutMenuItems:Ljava/util/List;
 
     return-void
 .end method

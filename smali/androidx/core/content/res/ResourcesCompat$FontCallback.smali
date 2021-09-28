@@ -18,7 +18,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 237
+    .line 248
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +31,7 @@
 
     if-nez p2, :cond_0
 
-    .line 287
+    .line 298
     new-instance p2, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -40,7 +40,7 @@
 
     invoke-direct {p2, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 289
+    .line 300
     :cond_0
     new-instance v0, Landroidx/core/content/res/ResourcesCompat$FontCallback$2;
 
@@ -56,7 +56,7 @@
 
     if-nez p2, :cond_0
 
-    .line 268
+    .line 279
     new-instance p2, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -65,7 +65,7 @@
 
     invoke-direct {p2, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 270
+    .line 281
     :cond_0
     new-instance v0, Landroidx/core/content/res/ResourcesCompat$FontCallback$1;
 

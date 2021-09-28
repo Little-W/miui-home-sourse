@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 29
+    .line 30
     new-instance v0, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;
 
     const/4 v1, 0x0
@@ -37,7 +37,7 @@
 .method static synthetic access$100()Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;
     .locals 1
 
-    .line 28
+    .line 29
     sget-object v0, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper$Holder;->sInstance:Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;
 
     return-object v0

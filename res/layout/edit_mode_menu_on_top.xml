@@ -12,6 +12,7 @@
         android:visibility="gone"
         android:layout_width="@dimen/edit_mode_top_menu_container_width"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/edit_mode_group"
         android:layout_marginStart="@dimen/edit_mode_top_menu_side_button_margin_screen_edge">
         <include
             layout="@layout/top_menu_container" />
@@ -23,6 +24,7 @@
         android:visibility="gone"
         android:layout_width="@dimen/edit_mode_top_menu_container_width"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/edit_mode_top_menu_finish"
         android:layout_marginEnd="@dimen/edit_mode_top_menu_side_button_margin_screen_edge">
         <include
             layout="@layout/top_menu_container" />

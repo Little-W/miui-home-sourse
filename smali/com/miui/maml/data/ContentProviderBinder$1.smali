@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/maml/data/ContentProviderBinder;)V
     .locals 0
 
-    .line 368
+    .line 372
     iput-object p1, p0, Lcom/miui/maml/data/ContentProviderBinder$1;->this$0:Lcom/miui/maml/data/ContentProviderBinder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 371
+    .line 375
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder$1;->this$0:Lcom/miui/maml/data/ContentProviderBinder;
 
     invoke-static {v0}, Lcom/miui/maml/data/ContentProviderBinder;->access$000(Lcom/miui/maml/data/ContentProviderBinder;)V

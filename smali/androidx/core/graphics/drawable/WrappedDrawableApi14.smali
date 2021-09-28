@@ -212,11 +212,11 @@
 
     move-result v0
 
+    .line 104
     iget-object v1, p0, Landroidx/core/graphics/drawable/WrappedDrawableApi14;->mState:Landroidx/core/graphics/drawable/WrappedDrawableState;
 
     if-eqz v1, :cond_0
 
-    .line 104
     invoke-virtual {v1}, Landroidx/core/graphics/drawable/WrappedDrawableState;->getChangingConfigurations()I
 
     move-result v1
@@ -445,6 +445,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 131
     iget-object v0, v0, Landroidx/core/graphics/drawable/WrappedDrawableState;->mTint:Landroid/content/res/ColorStateList;
 
     goto :goto_0

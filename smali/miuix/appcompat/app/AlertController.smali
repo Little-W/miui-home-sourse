@@ -591,7 +591,7 @@
 .method private centerIfSingleLine(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 1110
+    .line 1109
     iget-object p2, p0, Lmiuix/appcompat/app/AlertController;->mView:Landroid/view/View;
 
     if-nez p2, :cond_2
@@ -602,13 +602,13 @@
 
     goto :goto_0
 
-    .line 1113
+    .line 1112
     :cond_0
     instance-of p2, p1, Lmiuix/androidbasewidget/widget/SingleCenterTextView;
 
     if-eqz p2, :cond_1
 
-    .line 1114
+    .line 1113
     check-cast p1, Lmiuix/androidbasewidget/widget/SingleCenterTextView;
 
     const/4 p2, 0x1
@@ -626,7 +626,7 @@
 .method private changeTitlePadding(Landroid/widget/TextView;)V
     .locals 4
 
-    .line 1119
+    .line 1118
     invoke-virtual {p1}, Landroid/widget/TextView;->getPaddingLeft()I
 
     move-result v0
@@ -635,14 +635,14 @@
 
     move-result v1
 
-    .line 1120
+    .line 1119
     invoke-virtual {p1}, Landroid/widget/TextView;->getPaddingRight()I
 
     move-result v2
 
     const/4 v3, 0x0
 
-    .line 1119
+    .line 1118
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/widget/TextView;->setPadding(IIII)V
 
     return-void
@@ -651,7 +651,7 @@
 .method private clearFitSystemWindow(Landroid/view/View;)V
     .locals 3
 
-    .line 1021
+    .line 1020
     instance-of v0, p1, Lmiuix/internal/widget/DialogParentPanel;
 
     if-nez v0, :cond_0
@@ -660,15 +660,15 @@
 
     const/4 v0, 0x0
 
-    .line 1022
+    .line 1021
     invoke-virtual {p1, v0}, Landroid/view/View;->setFitsSystemWindows(Z)V
 
-    .line 1023
+    .line 1022
     instance-of v1, p1, Landroid/view/ViewGroup;
 
     if-eqz v1, :cond_0
 
-    .line 1024
+    .line 1023
     :goto_0
     move-object v1, p1
 
@@ -680,7 +680,7 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1025
+    .line 1024
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -903,7 +903,7 @@
 
     iput-object v0, p0, Lmiuix/appcompat/app/AlertController;->mScreenRealSize:Landroid/graphics/Point;
 
-    const-string v0, "window"
+    const-string/jumbo v0, "window"
 
     .line 884
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1068,7 +1068,7 @@
 .method private isFreeFormMode(Landroid/graphics/Rect;)Z
     .locals 3
 
-    .line 1423
+    .line 1422
     invoke-direct {p0}, Lmiuix/appcompat/app/AlertController;->isLandscape()Z
 
     move-result v0
@@ -1085,7 +1085,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1424
+    .line 1423
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -1096,7 +1096,7 @@
 
     invoke-virtual {v0, v2}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
-    .line 1425
+    .line 1424
     iget v0, p1, Landroid/graphics/Rect;->top:I
 
     if-nez v0, :cond_0
@@ -1357,7 +1357,7 @@
 .method private reInitLandConfig()V
     .locals 2
 
-    .line 1032
+    .line 1031
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -1376,7 +1376,7 @@
 
     iput-boolean v0, p0, Lmiuix/appcompat/app/AlertController;->mTreatAsLandConfig:Z
 
-    .line 1033
+    .line 1032
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -2144,7 +2144,7 @@
 .end method
 
 .method private setupImmersiveWindow()V
-    .locals 3
+    .locals 2
 
     .line 987
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
@@ -2165,41 +2165,34 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/Window;->setWindowAnimations(I)V
+    invoke-virtual {v0, v1}, Landroid/view/Window;->setDimAmount(F)V
 
     .line 990
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
 
-    const/4 v2, 0x0
+    const v1, -0x7ffff700
 
-    invoke-virtual {v0, v2}, Landroid/view/Window;->setDimAmount(F)V
+    invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
 
-    .line 991
-    iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
-
-    const v2, -0x7ffff700
-
-    invoke-virtual {v0, v2}, Landroid/view/Window;->addFlags(I)V
-
-    .line 995
+    .line 994
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v2, 0x1c
+    const/16 v1, 0x1c
 
-    if-lt v0, v2, :cond_0
+    if-lt v0, v1, :cond_0
 
-    .line 996
+    .line 995
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    iput v2, v0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
 
-    .line 998
+    .line 997
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
 
@@ -2209,23 +2202,25 @@
 
     invoke-direct {p0, v0}, Lmiuix/appcompat/app/AlertController;->clearFitSystemWindow(Landroid/view/View;)V
 
-    .line 999
+    .line 998
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v2, 0x1e
+    const/16 v1, 0x1e
 
-    if-lt v0, v2, :cond_1
+    if-lt v0, v1, :cond_1
 
-    .line 1000
+    .line 999
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
+    const/4 v1, 0x0
+
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setFitInsetsSides(I)V
 
-    .line 1001
+    .line 1000
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mDialog:Landroidx/appcompat/app/AppCompatDialog;
 
     check-cast v0, Lmiuix/appcompat/app/AlertDialog;
@@ -2236,7 +2231,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1002
+    .line 1001
     invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -2253,7 +2248,7 @@
 
     if-nez v0, :cond_1
 
-    .line 1003
+    .line 1002
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->clearFlags(I)V
@@ -2400,10 +2395,10 @@
 .method private setupUnImmersiveWindow(I)V
     .locals 2
 
-    .line 1009
+    .line 1008
     iput p1, p0, Lmiuix/appcompat/app/AlertController;->mScreenOrientation:I
 
-    .line 1010
+    .line 1009
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -2422,12 +2417,12 @@
 
     iput v0, p0, Lmiuix/appcompat/app/AlertController;->mScreenLayout:I
 
-    .line 1011
+    .line 1010
     invoke-direct {p0, p1}, Lmiuix/appcompat/app/AlertController;->isLandscape(I)Z
 
     move-result p1
 
-    .line 1012
+    .line 1011
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
 
     if-eqz p1, :cond_0
@@ -2442,21 +2437,21 @@
     :goto_0
     invoke-virtual {v0, v1}, Landroid/view/Window;->setGravity(I)V
 
-    .line 1013
+    .line 1012
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
 
-    .line 1014
+    .line 1013
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
 
     const/high16 v1, 0x3f000000    # 0.5f
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setDimAmount(F)V
 
-    .line 1015
+    .line 1014
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
 
     invoke-direct {p0, p1}, Lmiuix/appcompat/app/AlertController;->getPanelWidth(Z)I
@@ -2467,7 +2462,7 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/view/Window;->setLayout(II)V
 
-    .line 1017
+    .line 1016
     iget-object p1, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
 
     sget v0, Lmiuix/appcompat/R$color;->miuix_appcompat_transparent:I
@@ -2885,7 +2880,7 @@
 .method private translateDialogPanel(I)V
     .locals 1
 
-    .line 1125
+    .line 1124
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mParentPanel:Landroid/view/View;
 
     int-to-float p1, p1
@@ -2900,20 +2895,20 @@
 .method public dismiss(Lmiuix/appcompat/widget/DialogAnimHelper$OnDismiss;)V
     .locals 2
 
-    .line 1098
+    .line 1097
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mParentPanel:Landroid/view/View;
 
     if-nez v0, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 1101
+    .line 1100
     invoke-interface {p1}, Lmiuix/appcompat/widget/DialogAnimHelper$OnDismiss;->end()V
 
     :cond_0
     return-void
 
-    .line 1105
+    .line 1104
     :cond_1
     iget-object v1, p0, Lmiuix/appcompat/app/AlertController;->mDimBg:Landroid/view/View;
 
@@ -3084,7 +3079,7 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 5
 
-    .line 1041
+    .line 1040
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -3097,7 +3092,7 @@
 
     if-eqz v0, :cond_b
 
-    .line 1042
+    .line 1041
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mDialog:Landroidx/appcompat/app/AppCompatDialog;
 
     invoke-virtual {v0}, Landroidx/appcompat/app/AppCompatDialog;->getOwnerActivity()Landroid/app/Activity;
@@ -3110,7 +3105,7 @@
 
     if-nez v0, :cond_4
 
-    .line 1044
+    .line 1043
     iget v0, p0, Lmiuix/appcompat/app/AlertController;->mScreenLayout:I
 
     iget v3, p1, Landroid/content/res/Configuration;->screenLayout:I
@@ -3129,10 +3124,10 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 1046
+    .line 1045
     invoke-direct {p0}, Lmiuix/appcompat/app/AlertController;->reInitLandConfig()V
 
-    .line 1048
+    .line 1047
     :cond_1
     iget v0, p0, Lmiuix/appcompat/app/AlertController;->mScreenOrientation:I
 
@@ -3142,7 +3137,7 @@
 
     if-eqz v1, :cond_b
 
-    .line 1049
+    .line 1048
     :cond_2
     invoke-virtual {p0}, Lmiuix/appcompat/app/AlertController;->isDialogImmersive()Z
 
@@ -3150,14 +3145,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 1050
+    .line 1049
     iget p1, p1, Landroid/content/res/Configuration;->orientation:I
 
     invoke-direct {p0, p1}, Lmiuix/appcompat/app/AlertController;->setupDialogPanel(I)V
 
     goto :goto_3
 
-    .line 1052
+    .line 1051
     :cond_3
     iget p1, p1, Landroid/content/res/Configuration;->orientation:I
 
@@ -3165,7 +3160,7 @@
 
     goto :goto_3
 
-    .line 1056
+    .line 1055
     :cond_4
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mContext:Landroid/content/Context;
 
@@ -3195,7 +3190,7 @@
     :goto_1
     if-eqz v3, :cond_6
 
-    .line 1059
+    .line 1058
     invoke-direct {p0}, Lmiuix/appcompat/app/AlertController;->reInitLandConfig()V
 
     :cond_6
@@ -3203,7 +3198,7 @@
 
     if-nez v0, :cond_8
 
-    .line 1061
+    .line 1060
     iget v0, p0, Lmiuix/appcompat/app/AlertController;->mScreenOrientation:I
 
     iget v4, p1, Landroid/content/res/Configuration;->orientation:I
@@ -3221,7 +3216,7 @@
 
     if-eqz v3, :cond_b
 
-    .line 1064
+    .line 1063
     :cond_9
     invoke-virtual {p0}, Lmiuix/appcompat/app/AlertController;->isDialogImmersive()Z
 
@@ -3229,14 +3224,14 @@
 
     if-eqz v0, :cond_a
 
-    .line 1065
+    .line 1064
     iget p1, p1, Landroid/content/res/Configuration;->orientation:I
 
     invoke-direct {p0, p1}, Lmiuix/appcompat/app/AlertController;->setupDialogPanel(I)V
 
     goto :goto_3
 
-    .line 1067
+    .line 1066
     :cond_a
     iget p1, p1, Landroid/content/res/Configuration;->orientation:I
 
@@ -3252,7 +3247,7 @@
 
     const/4 v0, 0x2
 
-    .line 1094
+    .line 1093
     new-array v0, v0, [Landroid/view/View;
 
     iget-object v1, p0, Lmiuix/appcompat/app/AlertController;->mParentPanel:Landroid/view/View;
@@ -3325,21 +3320,21 @@
 .method public onStart()V
     .locals 4
 
-    .line 1079
+    .line 1078
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lmiuix/appcompat/app/AlertController;->mComponentCallback:Lmiuix/appcompat/app/AlertController$CustomComponentCallbacks;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 
-    .line 1080
+    .line 1079
     invoke-virtual {p0}, Lmiuix/appcompat/app/AlertController;->isDialogImmersive()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1081
+    .line 1080
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mParentPanel:Landroid/view/View;
 
     iget-object v1, p0, Lmiuix/appcompat/app/AlertController;->mDimBg:Landroid/view/View;
@@ -3352,7 +3347,7 @@
 
     invoke-static {v0, v1, v2, v3}, Lmiuix/appcompat/widget/DialogAnimHelper;->executeShowAnim(Landroid/view/View;Landroid/view/View;ZLmiuix/appcompat/app/AlertDialog$OnDialogShowAnimListener;)V
 
-    .line 1082
+    .line 1081
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -3370,21 +3365,21 @@
 .method public onStop()V
     .locals 2
 
-    .line 1087
+    .line 1086
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lmiuix/appcompat/app/AlertController;->mComponentCallback:Lmiuix/appcompat/app/AlertController$CustomComponentCallbacks;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 
-    .line 1088
+    .line 1087
     invoke-virtual {p0}, Lmiuix/appcompat/app/AlertController;->isDialogImmersive()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1089
+    .line 1088
     iget-object v0, p0, Lmiuix/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -3563,7 +3558,7 @@
 .method public setShowAnimListener(Lmiuix/appcompat/app/AlertDialog$OnDialogShowAnimListener;)V
     .locals 0
 
-    .line 1075
+    .line 1074
     iput-object p1, p0, Lmiuix/appcompat/app/AlertController;->mShowAnimListener:Lmiuix/appcompat/app/AlertDialog$OnDialogShowAnimListener;
 
     return-void

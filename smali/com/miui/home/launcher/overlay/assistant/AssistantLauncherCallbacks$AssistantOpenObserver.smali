@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;)V
     .locals 1
 
-    .line 101
+    .line 182
     iput-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks$AssistantOpenObserver;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;
 
-    .line 102
+    .line 183
     new-instance p1, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -42,39 +42,29 @@
 
 # virtual methods
 .method public onChange(Z)V
-    .locals 2
+    .locals 1
 
-    .line 107
+    .line 188
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks$AssistantOpenObserver;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;->access$000(Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;)Lcom/miui/launcher/overlay/client/LauncherClient;
-
-    move-result-object p1
+    iget-object p1, p1, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;->mLauncherAssistant:Lcom/miui/home/launcher/LauncherAssistantCompat;
 
     if-eqz p1, :cond_0
 
-    .line 108
+    .line 189
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks$AssistantOpenObserver;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;->access$300(Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;)Lcom/miui/launcher/overlay/client/LauncherClient;
-
-    move-result-object p1
+    iget-object p1, p1, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;->mLauncherAssistant:Lcom/miui/home/launcher/LauncherAssistantCompat;
 
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks$AssistantOpenObserver;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;->access$100(Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;)Lcom/miui/home/launcher/Launcher;
+    iget-object v0, v0, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getLauncherMode()Lcom/miui/home/launcher/allapps/LauncherMode;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;->access$200(Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherCallbacks;Lcom/miui/home/launcher/allapps/LauncherMode;)Lcom/miui/launcher/overlay/client/LauncherClient$ClientOptions;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getLauncherMode()Lcom/miui/home/launcher/allapps/LauncherMode;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/miui/launcher/overlay/client/LauncherClient;->setClientOptions(Lcom/miui/launcher/overlay/client/LauncherClient$ClientOptions;)V
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/LauncherAssistantCompat;->updateLauncherClient(Lcom/miui/home/launcher/allapps/LauncherMode;)V
 
     :cond_0
     return-void

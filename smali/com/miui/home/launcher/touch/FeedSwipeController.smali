@@ -1046,12 +1046,10 @@
     const-string p1, "FeedSwipeController"
 
     const-string v0, "shouldContainerScroll false"
-
-    .line 492
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 492
     return v2
 
     :catch_0
@@ -1062,8 +1060,6 @@
     const-string v2, "ClassNotFoundException"
 
     .line 496
-    invoke-static {v0, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :cond_2
     return v1
 .end method
@@ -1314,8 +1310,6 @@
 
     move-result-object v8
 
-    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     if-nez v3, :cond_2
 
     if-nez v0, :cond_2
@@ -1369,8 +1363,6 @@
     const-string v2, "can not use"
 
     .line 559
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return v1
 .end method
 
@@ -1498,8 +1490,6 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 120
     iget-object v4, p0, Lcom/miui/home/launcher/touch/FeedSwipeController;->mDetector:Lcom/miui/home/launcher/touch/SwipeDetector;
 
@@ -1611,8 +1601,6 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 146
     iput-boolean v1, p0, Lcom/miui/home/launcher/touch/FeedSwipeController;->mNoIntercept:Z
     :try_end_0
@@ -1660,8 +1648,6 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 157
     iget-object p1, p0, Lcom/miui/home/launcher/touch/FeedSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -1699,8 +1685,6 @@
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_c
     if-eqz v0, :cond_d

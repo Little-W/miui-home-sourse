@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/gadget/MtzGadget$2;Ljava/lang/String;)V
     .locals 0
 
-    .line 131
+    .line 132
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/MtzGadget$2$1;->this$1:Lcom/miui/home/launcher/gadget/MtzGadget$2;
 
     iput-object p2, p0, Lcom/miui/home/launcher/gadget/MtzGadget$2$1;->val$strPara:Ljava/lang/String;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 133
+    .line 134
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget$2$1;->this$1:Lcom/miui/home/launcher/gadget/MtzGadget$2;
 
     iget-object v0, v0, Lcom/miui/home/launcher/gadget/MtzGadget$2;->this$0:Lcom/miui/home/launcher/gadget/MtzGadget;

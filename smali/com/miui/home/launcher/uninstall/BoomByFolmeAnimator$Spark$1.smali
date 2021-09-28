@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;Ljava/lang/String;)V
     .locals 0
 
-    .line 260
+    .line 261
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark$1;->this$0:Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;
 
     invoke-direct {p0, p2}, Lmiuix/animation/property/FloatProperty;-><init>(Ljava/lang/String;)V
@@ -35,7 +35,7 @@
 .method public getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 263
+    .line 264
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark$1;->this$0:Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;
 
     invoke-static {p1}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->access$500(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;)F
@@ -48,7 +48,7 @@
 .method public setValue(Ljava/lang/Object;F)V
     .locals 1
 
-    .line 268
+    .line 269
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark$1;->this$0:Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;
 
     invoke-static {p1}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;->access$500(Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator$Spark;)F

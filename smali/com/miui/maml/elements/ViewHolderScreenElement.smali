@@ -160,41 +160,41 @@
 .method private final finishView()V
     .locals 3
 
-    .line 187
+    .line 190
     iget-boolean v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mViewAdded:Z
 
     if-eqz v0, :cond_0
 
-    .line 188
+    .line 191
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 190
+    .line 193
     invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 191
+    .line 194
     instance-of v2, v1, Landroid/view/ViewGroup;
 
     if-eqz v2, :cond_0
 
-    .line 192
+    .line 195
     check-cast v1, Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     const/4 v1, 0x0
 
-    .line 193
+    .line 196
     iput-boolean v1, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mViewAdded:Z
 
-    .line 194
+    .line 197
     invoke-virtual {p0, v0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->onViewRemoved(Landroid/view/View;)V
 
     :cond_0
@@ -204,7 +204,7 @@
 .method private static getAttrAsBoolean(Ljava/lang/String;Z)Z
     .locals 1
 
-    .line 63
+    .line 66
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -213,7 +213,7 @@
 
     return p1
 
-    .line 66
+    .line 69
     :cond_0
     invoke-static {p0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
@@ -225,12 +225,12 @@
 .method private final initView()V
     .locals 5
 
-    .line 159
+    .line 162
     iget-boolean v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mViewAdded:Z
 
     if-nez v0, :cond_2
 
-    .line 160
+    .line 163
     iget-object v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mRoot:Lcom/miui/maml/ScreenElementRoot;
 
     invoke-virtual {v0}, Lcom/miui/maml/ScreenElementRoot;->getViewManager()Lcom/miui/maml/util/MamlViewManager;
@@ -239,15 +239,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 162
+    .line 165
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getView()Landroid/view/View;
 
     move-result-object v1
 
-    .line 163
+    .line 166
     invoke-virtual {p0, v1}, Lcom/miui/maml/elements/ViewHolderScreenElement;->onUpdateView(Landroid/view/View;)V
 
-    .line 164
+    .line 167
     iget v2, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mLayer:I
 
     const/4 v3, 0x2
@@ -256,20 +256,20 @@
 
     const/4 v2, 0x0
 
-    .line 165
+    .line 168
     iget-object v4, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mLayoutParams:Landroid/view/ViewGroup$LayoutParams;
 
     invoke-interface {v0, v1, v2, v4}, Lcom/miui/maml/util/MamlViewManager;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 
-    .line 167
+    .line 170
     :cond_0
     iget-object v2, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mLayoutParams:Landroid/view/ViewGroup$LayoutParams;
 
     invoke-interface {v0, v1, v2}, Lcom/miui/maml/util/MamlViewManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 169
+    .line 172
     :goto_0
     iget-boolean v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mHardware:Z
 
@@ -277,16 +277,16 @@
 
     const/4 v0, 0x0
 
-    .line 170
+    .line 173
     invoke-virtual {v1, v3, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
     :cond_1
     const/4 v0, 0x1
 
-    .line 172
+    .line 175
     iput-boolean v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mViewAdded:Z
 
-    .line 173
+    .line 176
     invoke-virtual {p0, v1}, Lcom/miui/maml/elements/ViewHolderScreenElement;->onViewAdded(Landroid/view/View;)V
 
     :cond_2
@@ -296,21 +296,21 @@
 .method private updateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
     .locals 4
 
-    .line 202
+    .line 205
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getWidth()F
 
     move-result v0
 
     float-to-int v0, v0
 
-    .line 203
+    .line 206
     iget v1, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     const/4 v2, 0x1
 
     if-eq v1, v0, :cond_0
 
-    .line 204
+    .line 207
     iput v0, p1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     move v0, v2
@@ -320,7 +320,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 207
+    .line 210
     :goto_0
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getHeight()F
 
@@ -328,12 +328,12 @@
 
     float-to-int v1, v1
 
-    .line 208
+    .line 211
     iget v3, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     if-eq v3, v1, :cond_1
 
-    .line 209
+    .line 212
     iput v1, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     move v0, v2
@@ -347,15 +347,15 @@
 .method protected doTick(J)V
     .locals 1
 
-    .line 102
+    .line 105
     iget-object v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mController:Lcom/miui/maml/RendererController;
 
     if-nez v0, :cond_0
 
-    .line 103
+    .line 106
     invoke-super {p0, p1, p2}, Lcom/miui/maml/elements/ElementGroupRC;->doTick(J)V
 
-    .line 104
+    .line 107
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getView()Landroid/view/View;
 
     move-result-object p1
@@ -364,11 +364,11 @@
 
     goto :goto_0
 
-    .line 108
+    .line 111
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/miui/maml/elements/ViewHolderScreenElement;->doTickSelf(J)V
 
-    .line 110
+    .line 113
     :goto_0
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->updateView()V
 
@@ -378,14 +378,14 @@
 .method protected doTickSelf(J)V
     .locals 4
 
-    .line 114
+    .line 117
     iget-object v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mAnimations:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 115
+    .line 118
     iget-object v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -397,7 +397,7 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 117
+    .line 120
     iget-object v3, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mAnimations:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -412,7 +412,7 @@
 
     goto :goto_0
 
-    .line 120
+    .line 123
     :cond_0
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->evaluateAlpha()I
 
@@ -420,7 +420,7 @@
 
     iput p1, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mAlpha:I
 
-    .line 121
+    .line 124
     iget p1, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mAlpha:I
 
     if-gez p1, :cond_1
@@ -433,12 +433,12 @@
     :goto_1
     iput v1, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mAlpha:I
 
-    .line 122
+    .line 125
     iget-object p1, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mTickListener:Lcom/miui/maml/elements/FunctionElement;
 
     if-eqz p1, :cond_2
 
-    .line 123
+    .line 126
     iget-object p1, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mTickListener:Lcom/miui/maml/elements/FunctionElement;
 
     invoke-virtual {p1}, Lcom/miui/maml/elements/FunctionElement;->perform()V
@@ -450,10 +450,10 @@
 .method public finish()V
     .locals 0
 
-    .line 84
+    .line 87
     invoke-super {p0}, Lcom/miui/maml/elements/ElementGroupRC;->finish()V
 
-    .line 85
+    .line 88
     invoke-direct {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->finishView()V
 
     return-void
@@ -478,10 +478,10 @@
 .method public init()V
     .locals 2
 
-    .line 73
+    .line 76
     invoke-super {p0}, Lcom/miui/maml/elements/ElementGroupRC;->init()V
 
-    .line 75
+    .line 78
     iget-object v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mRoot:Lcom/miui/maml/ScreenElementRoot;
 
     invoke-virtual {v0}, Lcom/miui/maml/ScreenElementRoot;->getViewManager()Lcom/miui/maml/util/MamlViewManager;
@@ -490,7 +490,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 76
+    .line 79
     invoke-direct {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->initView()V
 
     goto :goto_0
@@ -500,7 +500,7 @@
 
     const-string v1, "ViewManager must be set before init"
 
-    .line 78
+    .line 81
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
@@ -510,7 +510,7 @@
 .method protected isViewAdded()Z
     .locals 1
 
-    .line 254
+    .line 257
     iget-boolean v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mViewAdded:Z
 
     return v0
@@ -519,7 +519,7 @@
 .method protected onControllerCreated(Lcom/miui/maml/RendererController;)V
     .locals 2
 
-    .line 250
+    .line 253
     new-instance v0, Lcom/miui/maml/elements/ViewHolderScreenElement$ProxyListener;
 
     const/4 v1, 0x0
@@ -534,67 +534,67 @@
 .method protected onUpdateView(Landroid/view/View;)V
     .locals 2
 
-    .line 137
+    .line 140
     iget-boolean v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mUpdatePosition:Z
 
     if-eqz v0, :cond_0
 
-    .line 138
+    .line 141
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getAbsoluteLeft()F
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setX(F)V
 
-    .line 139
+    .line 142
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getAbsoluteTop()F
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setY(F)V
 
-    .line 142
+    .line 145
     :cond_0
     iget-boolean v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mUpdateTranslation:Z
 
     if-eqz v0, :cond_1
 
-    .line 143
+    .line 146
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getPivotX()F
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setPivotX(F)V
 
-    .line 144
+    .line 147
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getPivotY()F
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setPivotY(F)V
 
-    .line 145
+    .line 148
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getRotation()F
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setRotation(F)V
 
-    .line 146
+    .line 149
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getRotationX()F
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setRotationX(F)V
 
-    .line 147
+    .line 150
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getRotationY()F
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setRotationY(F)V
 
-    .line 148
+    .line 151
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getAlpha()I
 
     move-result v0
@@ -607,21 +607,21 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 149
+    .line 152
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getScaleX()F
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    .line 150
+    .line 153
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getScaleY()F
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setScaleY(F)V
 
-    .line 153
+    .line 156
     :cond_1
     iget-boolean v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mUpdateSize:Z
 
@@ -635,7 +635,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 154
+    .line 157
     iget-object v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mLayoutParams:Landroid/view/ViewGroup$LayoutParams;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -659,7 +659,7 @@
 .method protected onVisibilityChange(Z)V
     .locals 1
 
-    .line 218
+    .line 221
     new-instance v0, Lcom/miui/maml/elements/ViewHolderScreenElement$2;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/maml/elements/ViewHolderScreenElement$2;-><init>(Lcom/miui/maml/elements/ViewHolderScreenElement;Z)V
@@ -678,7 +678,7 @@
 .method public setHardwareLayer(Z)V
     .locals 1
 
-    .line 93
+    .line 96
     new-instance v0, Lcom/miui/maml/elements/ViewHolderScreenElement$1;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/maml/elements/ViewHolderScreenElement$1;-><init>(Lcom/miui/maml/elements/ViewHolderScreenElement;Z)V
@@ -691,7 +691,7 @@
 .method protected updateView()V
     .locals 1
 
-    .line 128
+    .line 131
     iget-boolean v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mUpdatePosition:Z
 
     if-nez v0, :cond_0
@@ -704,18 +704,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 129
+    .line 132
     :cond_0
     iget-boolean v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement;->mViewAdded:Z
 
     if-eqz v0, :cond_1
 
-    .line 130
+    .line 133
     invoke-virtual {p0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 131
+    .line 134
     invoke-virtual {p0, v0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->onUpdateView(Landroid/view/View;)V
 
     :cond_1

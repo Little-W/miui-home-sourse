@@ -322,7 +322,7 @@
 
     iput-object v2, v0, Lcom/miui/maml/elements/GeometryScreenElement;->mStrokeAlign:Lcom/miui/maml/elements/GeometryScreenElement$DrawMode;
 
-    const-string v2, "xfermodeNum"
+    const-string/jumbo v2, "xfermodeNum"
 
     .line 165
     invoke-virtual {v0, v1, v2}, Lcom/miui/maml/elements/GeometryScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
@@ -340,7 +340,7 @@
 
     if-nez v2, :cond_3
 
-    const-string v2, "xfermode"
+    const-string/jumbo v2, "xfermode"
 
     .line 167
     invoke-virtual {v0, v1, v2}, Lcom/miui/maml/elements/GeometryScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;

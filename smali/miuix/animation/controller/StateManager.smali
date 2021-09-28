@@ -232,6 +232,36 @@
 
 
 # virtual methods
+.method public add(Lmiuix/animation/property/FloatProperty;F)V
+    .locals 3
+
+    .line 180
+    invoke-virtual {p0}, Lmiuix/animation/controller/StateManager;->getCurrentState()Lmiuix/animation/controller/AnimState;
+
+    move-result-object v0
+
+    float-to-double v1, p2
+
+    invoke-virtual {v0, p1, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    return-void
+.end method
+
+.method public add(Lmiuix/animation/property/FloatProperty;I)V
+    .locals 3
+
+    .line 176
+    invoke-virtual {p0}, Lmiuix/animation/controller/StateManager;->getCurrentState()Lmiuix/animation/controller/AnimState;
+
+    move-result-object v0
+
+    int-to-double v1, p2
+
+    invoke-virtual {v0, p1, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
+
+    return-void
+.end method
+
 .method public addListener(Lmiuix/animation/listener/TransitionListener;)V
     .locals 3
 
@@ -397,6 +427,55 @@
     move-result p1
 
     return p1
+.end method
+
+.method public varargs setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;[Lmiuix/animation/property/FloatProperty;)V
+    .locals 6
+
+    .line 99
+    invoke-virtual {p0}, Lmiuix/animation/controller/StateManager;->getCurrentState()Lmiuix/animation/controller/AnimState;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lmiuix/animation/controller/AnimState;->getConfig()Lmiuix/animation/base/AnimConfig;
+
+    move-result-object v0
+
+    .line 100
+    array-length v1, p2
+
+    if-nez v1, :cond_0
+
+    .line 101
+    invoke-virtual {v0, p1}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
+
+    goto :goto_1
+
+    .line 103
+    :cond_0
+    array-length v1, p2
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-ge v3, v1, :cond_1
+
+    aget-object v4, p2, v3
+
+    .line 104
+    new-array v5, v2, [F
+
+    invoke-virtual {v0, v4, p1, v5}, Lmiuix/animation/base/AnimConfig;->setSpecial(Lmiuix/animation/property/FloatProperty;Lmiuix/animation/utils/EaseManager$EaseStyle;[F)Lmiuix/animation/base/AnimConfig;
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
 .end method
 
 .method public setup(Ljava/lang/Object;)Lmiuix/animation/controller/AnimState;

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/maml/elements/WebViewScreenElement;->onVisibilityChange(Z)V
+    value = Lcom/miui/maml/elements/WebViewScreenElement;->pauseWebView(Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,17 +20,17 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
-.field final synthetic val$_v:Z
+.field final synthetic val$pause:Z
 
 
 # direct methods
 .method constructor <init>(Lcom/miui/maml/elements/WebViewScreenElement;Z)V
     .locals 0
 
-    .line 248
+    .line 272
     iput-object p1, p0, Lcom/miui/maml/elements/WebViewScreenElement$7;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
-    iput-boolean p2, p0, Lcom/miui/maml/elements/WebViewScreenElement$7;->val$_v:Z
+    iput-boolean p2, p0, Lcom/miui/maml/elements/WebViewScreenElement$7;->val$pause:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,28 +40,34 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    .line 250
+    .line 274
+    iget-boolean v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$7;->val$pause:Z
+
+    if-eqz v0, :cond_0
+
+    .line 275
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$7;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-static {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->access$100(Lcom/miui/maml/elements/WebViewScreenElement;)Landroid/webkit/WebView;
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lcom/miui/maml/elements/WebViewScreenElement$7;->val$_v:Z
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Landroid/webkit/WebView;->onPause()V
 
     goto :goto_0
 
+    .line 277
     :cond_0
-    const/4 v1, 0x4
+    iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$7;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
+
+    invoke-static {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->access$100(Lcom/miui/maml/elements/WebViewScreenElement;)Landroid/webkit/WebView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/webkit/WebView;->onResume()V
 
     :goto_0
-    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setVisibility(I)V
-
     return-void
 .end method

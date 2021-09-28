@@ -1,11 +1,14 @@
 .class Lcom/miui/home/launcher/Launcher$47;
-.super Landroid/os/AsyncTask;
+.super Ljava/lang/Object;
 .source "Launcher.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->getLockWallpaperListFromProvider(Ljava/lang/String;Ljava/lang/String;J)Ljava/lang/String;
+    value = Lcom/miui/home/launcher/Launcher;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -13,69 +16,77 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/os/AsyncTask<",
-        "Ljava/lang/Void;",
-        "Ljava/lang/Void;",
-        "Ljava/lang/String;",
-        ">;"
-    }
-.end annotation
-
 
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$providerUri:Ljava/lang/String;
+.field final synthetic val$ev:Landroid/view/MotionEvent;
 
-.field final synthetic val$requestJson:Ljava/lang/String;
+.field final synthetic val$isDispatchTouchEventSuccess:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;Ljava/lang/String;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/view/MotionEvent;Z)V
     .locals 0
 
-    .line 4033
+    .line 4491
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$47;->val$providerUri:Ljava/lang/String;
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$47;->val$ev:Landroid/view/MotionEvent;
 
-    iput-object p3, p0, Lcom/miui/home/launcher/Launcher$47;->val$requestJson:Ljava/lang/String;
+    iput-boolean p3, p0, Lcom/miui/home/launcher/Launcher$47;->val$isDispatchTouchEventSuccess:Z
 
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    .line 4033
-    check-cast p1, [Ljava/lang/Void;
-
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$47;->doInBackground([Ljava/lang/Void;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/String;
+.method public run()V
     .locals 2
 
-    .line 4036
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+    .line 4494
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->val$ev:Landroid/view/MotionEvent;
 
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->val$providerUri:Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/view/MotionEvent;->getAction()I
 
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->val$requestJson:Ljava/lang/String;
+    move-result v0
 
-    invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/Launcher;->access$6100(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    move-result-object p1
+    iget-boolean v0, p0, Lcom/miui/home/launcher/Launcher$47;->val$isDispatchTouchEventSuccess:Z
 
-    return-object p1
+    if-eqz v0, :cond_0
+
+    const-string v0, "Launcher_dispatchTouchEvent_View"
+
+    const-string v1, "[motionEvent view:]   \n"
+
+    .line 4495
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->setHead(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 4496
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getRootView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/miui/home/launcher/util/TouchEventUtil;->printTouchEventCallChain(Landroid/view/View;)V
+
+    const-string v0, "Launcher_dispatchTouchEvent_View"
+
+    .line 4497
+    invoke-static {v0}, Lcom/miui/home/launcher/MiuiHomeLog;->printAndClearMessage(Ljava/lang/String;)V
+
+    .line 4499
+    :cond_0
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$47;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$47;->val$ev:Landroid/view/MotionEvent;
+
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$6600(Lcom/miui/home/launcher/Launcher;Landroid/view/MotionEvent;)V
+
+    return-void
 .end method

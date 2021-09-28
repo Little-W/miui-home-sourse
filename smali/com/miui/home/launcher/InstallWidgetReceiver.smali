@@ -208,8 +208,6 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 40
@@ -228,8 +226,6 @@
     const-string p2, "Launcher is not running,process later"
 
     .line 45
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     :cond_1
@@ -249,8 +245,6 @@
     const-string p2, "provider name is null"
 
     .line 51
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     :cond_2
@@ -296,8 +290,6 @@
     const-string p2, "orange widget already added"
 
     .line 61
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 64
@@ -325,8 +317,6 @@
     const-string p2, "orange widget add failed: cellLayout is null"
 
     .line 66
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 69
@@ -346,8 +336,6 @@
     const-string p2, "orange widget add failed: widget not installed"
 
     .line 71
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 75

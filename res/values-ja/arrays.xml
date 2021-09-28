@@ -38,7 +38,7 @@
         <item>砂嵐</item>
         <item>雹</item>
         <item>浮遊粉じん</item>
-        <item>スモッグ</item>
+        <item>煙霧</item>
     </string-array>
     <string-array name="gadget_weather_theme_type_entries">
         <item>デフォルト</item>

@@ -109,8 +109,6 @@
     const-string v1, "performHapticFeedback error"
 
     .line 58
-    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 .end method

@@ -24,12 +24,12 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 647
+    .line 662
     invoke-direct {p0}, Landroid/graphics/Matrix;-><init>()V
 
     const/4 v0, 0x4
 
-    .line 648
+    .line 663
     new-array v0, v0, [F
 
     iput-object v0, p0, Lcom/miui/maml/elements/GraphicsElement$GraphicsMatrix;->mParm:[F
@@ -40,7 +40,7 @@
 .method synthetic constructor <init>(Lcom/miui/maml/elements/GraphicsElement$1;)V
     .locals 0
 
-    .line 647
+    .line 662
     invoke-direct {p0}, Lcom/miui/maml/elements/GraphicsElement$GraphicsMatrix;-><init>()V
 
     return-void

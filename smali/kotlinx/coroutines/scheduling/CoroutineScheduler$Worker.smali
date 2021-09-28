@@ -50,7 +50,7 @@
 
     const-class v0, Lkotlinx/coroutines/scheduling/CoroutineScheduler$Worker;
 
-    const-string v1, "workerCtl"
+    const-string/jumbo v1, "workerCtl"
 
     invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 

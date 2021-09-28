@@ -31,7 +31,7 @@
                 android:src="@drawable/icon_folder"
                 android:scaleType="fitCenter"
                 android:alpha="0.0" />
-            <com.miui.home.launcher.LauncherIconImageView
+            <com.miui.home.launcher.ProgressIconImageView
                 android:layout_gravity="center"
                 android:id="@id/icon_icon"
                 android:layout_width="wrap_content"

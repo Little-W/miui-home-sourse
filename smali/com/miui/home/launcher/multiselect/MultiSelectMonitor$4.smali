@@ -70,8 +70,6 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 274
     iget-object p1, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$4;->this$0:Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
 

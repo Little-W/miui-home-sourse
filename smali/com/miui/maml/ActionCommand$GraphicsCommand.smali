@@ -56,13 +56,13 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 1
 
-    .line 1467
+    .line 1487
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$TargetCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
-    .line 1468
+    .line 1488
     invoke-direct {p0, p2}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->checkExps(Lorg/w3c/dom/Element;)V
 
-    .line 1469
+    .line 1489
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -79,7 +79,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColorArrayNameExp:Lcom/miui/maml/data/Expression;
 
-    .line 1470
+    .line 1490
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -96,7 +96,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStopArrayNameExp:Lcom/miui/maml/data/Expression;
 
-    .line 1471
+    .line 1491
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -113,7 +113,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColorExp:Lcom/miui/maml/data/Expression;
 
-    .line 1472
+    .line 1492
     invoke-direct {p0, p2}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->parseCommand(Lorg/w3c/dom/Element;)V
 
     return-void
@@ -122,7 +122,7 @@
 .method private beginFill(Lcom/miui/maml/elements/GraphicsElement;)V
     .locals 2
 
-    .line 1549
+    .line 1569
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColorParsers:[Lcom/miui/maml/util/ColorParser;
 
     if-eqz v0, :cond_0
@@ -144,7 +144,7 @@
     :cond_0
     const/high16 v0, -0x1000000
 
-    .line 1550
+    .line 1570
     :goto_0
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColorExp:Lcom/miui/maml/data/Expression;
 
@@ -158,7 +158,7 @@
 
     long-to-int v0, v0
 
-    .line 1551
+    .line 1571
     :cond_1
     invoke-virtual {p1, v0}, Lcom/miui/maml/elements/GraphicsElement;->beginFill(I)V
 
@@ -168,7 +168,7 @@
 .method private checkExps(Lorg/w3c/dom/Element;)V
     .locals 5
 
-    .line 1527
+    .line 1547
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v0
@@ -185,7 +185,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
-    .line 1528
+    .line 1548
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     invoke-virtual {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->isExpressionsValid([Lcom/miui/maml/data/Expression;)Z
@@ -194,7 +194,7 @@
 
     iput-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
 
-    .line 1529
+    .line 1549
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v0
@@ -211,7 +211,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStopExps:[Lcom/miui/maml/data/Expression;
 
-    .line 1530
+    .line 1550
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStopExps:[Lcom/miui/maml/data/Expression;
 
     invoke-virtual {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->isExpressionsValid([Lcom/miui/maml/data/Expression;)Z
@@ -222,12 +222,12 @@
 
     const-string v0, "colors"
 
-    .line 1532
+    .line 1552
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1533
+    .line 1553
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -236,19 +236,19 @@
 
     const-string v0, ","
 
-    .line 1534
+    .line 1554
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 1535
+    .line 1555
     array-length v0, p1
 
     if-lez v0, :cond_0
 
-    .line 1536
+    .line 1556
     array-length v0, p1
 
     new-array v0, v0, [Lcom/miui/maml/util/ColorParser;
@@ -257,13 +257,13 @@
 
     const/4 v0, 0x0
 
-    .line 1537
+    .line 1557
     :goto_0
     array-length v1, p1
 
     if-ge v0, v1, :cond_0
 
-    .line 1538
+    .line 1558
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColorParsers:[Lcom/miui/maml/util/ColorParser;
 
     new-instance v2, Lcom/miui/maml/util/ColorParser;
@@ -289,7 +289,7 @@
 .method private createGradientBox(Lcom/miui/maml/elements/GraphicsElement;)V
     .locals 9
 
-    .line 1555
+    .line 1575
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
 
     if-eqz v0, :cond_0
@@ -304,7 +304,7 @@
 
     const/4 v1, 0x0
 
-    .line 1556
+    .line 1576
     aget-object v0, v0, v1
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
@@ -317,7 +317,7 @@
 
     move-result v4
 
-    .line 1557
+    .line 1577
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     const/4 v1, 0x1
@@ -334,7 +334,7 @@
 
     move-result v5
 
-    .line 1558
+    .line 1578
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     const/4 v1, 0x2
@@ -351,7 +351,7 @@
 
     move-result v6
 
-    .line 1559
+    .line 1579
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     const/4 v1, 0x3
@@ -368,7 +368,7 @@
 
     move-result v7
 
-    .line 1560
+    .line 1580
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     aget-object v0, v0, v2
@@ -379,7 +379,7 @@
 
     move-object v3, p1
 
-    .line 1561
+    .line 1581
     invoke-virtual/range {v3 .. v8}, Lcom/miui/maml/elements/GraphicsElement;->createOrUpdateGradientBox(FFFFLjava/lang/String;)V
 
     :cond_0
@@ -389,7 +389,7 @@
 .method private cubicCurveTo(Lcom/miui/maml/elements/GraphicsElement;)V
     .locals 10
 
-    .line 1576
+    .line 1596
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
 
     if-eqz v0, :cond_0
@@ -404,7 +404,7 @@
 
     const/4 v1, 0x0
 
-    .line 1577
+    .line 1597
     aget-object v0, v0, v1
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
@@ -417,7 +417,7 @@
 
     move-result v4
 
-    .line 1578
+    .line 1598
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     const/4 v1, 0x1
@@ -434,7 +434,7 @@
 
     move-result v5
 
-    .line 1579
+    .line 1599
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     const/4 v1, 0x2
@@ -451,7 +451,7 @@
 
     move-result v6
 
-    .line 1580
+    .line 1600
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     const/4 v1, 0x3
@@ -468,7 +468,7 @@
 
     move-result v7
 
-    .line 1581
+    .line 1601
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     const/4 v1, 0x4
@@ -485,7 +485,7 @@
 
     move-result v8
 
-    .line 1582
+    .line 1602
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     aget-object v0, v0, v2
@@ -502,7 +502,7 @@
 
     move-object v3, p1
 
-    .line 1583
+    .line 1603
     invoke-virtual/range {v3 .. v9}, Lcom/miui/maml/elements/GraphicsElement;->cubicCurveTo(FFFFFF)V
 
     :cond_0
@@ -512,7 +512,7 @@
 .method private curveTo(Lcom/miui/maml/elements/GraphicsElement;)V
     .locals 6
 
-    .line 1566
+    .line 1586
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
 
     if-eqz v0, :cond_0
@@ -527,7 +527,7 @@
 
     const/4 v1, 0x0
 
-    .line 1567
+    .line 1587
     aget-object v0, v0, v1
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
@@ -540,7 +540,7 @@
 
     move-result v0
 
-    .line 1568
+    .line 1588
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     const/4 v3, 0x1
@@ -557,7 +557,7 @@
 
     move-result v1
 
-    .line 1569
+    .line 1589
     iget-object v3, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     const/4 v4, 0x2
@@ -574,7 +574,7 @@
 
     move-result v3
 
-    .line 1570
+    .line 1590
     iget-object v4, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     aget-object v2, v4, v2
@@ -589,7 +589,7 @@
 
     move-result v2
 
-    .line 1571
+    .line 1591
     invoke-virtual {p1, v0, v1, v3, v2}, Lcom/miui/maml/elements/GraphicsElement;->curveTo(FFFF)V
 
     :cond_0
@@ -599,7 +599,7 @@
 .method private drawCircle(Lcom/miui/maml/elements/GraphicsElement;)V
     .locals 5
 
-    .line 1588
+    .line 1608
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
 
     if-eqz v0, :cond_0
@@ -614,7 +614,7 @@
 
     const/4 v1, 0x0
 
-    .line 1589
+    .line 1609
     aget-object v0, v0, v1
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
@@ -627,7 +627,7 @@
 
     move-result v0
 
-    .line 1590
+    .line 1610
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     const/4 v3, 0x1
@@ -644,7 +644,7 @@
 
     move-result v1
 
-    .line 1591
+    .line 1611
     iget-object v3, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     aget-object v2, v3, v2
@@ -659,7 +659,7 @@
 
     move-result v2
 
-    .line 1592
+    .line 1612
     invoke-virtual {p1, v0, v1, v2}, Lcom/miui/maml/elements/GraphicsElement;->drawCircle(FFF)V
 
     :cond_0
@@ -669,192 +669,18 @@
 .method private drawEllipse(Lcom/miui/maml/elements/GraphicsElement;)V
     .locals 6
 
-    .line 1597
-    iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
-
-    array-length v1, v0
-
-    const/4 v2, 0x3
-
-    if-le v1, v2, :cond_0
-
-    const/4 v1, 0x0
-
-    .line 1598
-    aget-object v0, v0, v1
-
-    invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
-
-    move-result-wide v0
-
-    double-to-float v0, v0
-
-    invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
-
-    move-result v0
-
-    .line 1599
-    iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
-
-    const/4 v3, 0x1
-
-    aget-object v1, v1, v3
-
-    invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
-
-    move-result-wide v3
-
-    double-to-float v1, v3
-
-    invoke-direct {p0, v1}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
-
-    move-result v1
-
-    .line 1600
-    iget-object v3, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
-
-    const/4 v4, 0x2
-
-    aget-object v3, v3, v4
-
-    invoke-virtual {v3}, Lcom/miui/maml/data/Expression;->evaluate()D
-
-    move-result-wide v3
-
-    double-to-float v3, v3
-
-    invoke-direct {p0, v3}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
-
-    move-result v3
-
-    .line 1601
-    iget-object v4, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
-
-    aget-object v2, v4, v2
-
-    invoke-virtual {v2}, Lcom/miui/maml/data/Expression;->evaluate()D
-
-    move-result-wide v4
-
-    double-to-float v2, v4
-
-    invoke-direct {p0, v2}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
-
-    move-result v2
-
-    .line 1602
-    invoke-virtual {p1, v0, v1, v3, v2}, Lcom/miui/maml/elements/GraphicsElement;->drawEllipse(FFFF)V
-
-    :cond_0
-    return-void
-.end method
-
-.method private drawRect(Lcom/miui/maml/elements/GraphicsElement;)V
-    .locals 6
-
-    .line 1607
-    iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
-
-    array-length v1, v0
-
-    const/4 v2, 0x3
-
-    if-le v1, v2, :cond_0
-
-    const/4 v1, 0x0
-
-    .line 1608
-    aget-object v0, v0, v1
-
-    invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
-
-    move-result-wide v0
-
-    double-to-float v0, v0
-
-    invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
-
-    move-result v0
-
-    .line 1609
-    iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
-
-    const/4 v3, 0x1
-
-    aget-object v1, v1, v3
-
-    invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
-
-    move-result-wide v3
-
-    double-to-float v1, v3
-
-    invoke-direct {p0, v1}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
-
-    move-result v1
-
-    .line 1610
-    iget-object v3, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
-
-    const/4 v4, 0x2
-
-    aget-object v3, v3, v4
-
-    invoke-virtual {v3}, Lcom/miui/maml/data/Expression;->evaluate()D
-
-    move-result-wide v3
-
-    double-to-float v3, v3
-
-    invoke-direct {p0, v3}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
-
-    move-result v3
-
-    .line 1611
-    iget-object v4, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
-
-    aget-object v2, v4, v2
-
-    invoke-virtual {v2}, Lcom/miui/maml/data/Expression;->evaluate()D
-
-    move-result-wide v4
-
-    double-to-float v2, v4
-
-    invoke-direct {p0, v2}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
-
-    move-result v2
-
-    .line 1612
-    invoke-virtual {p1, v0, v1, v3, v2}, Lcom/miui/maml/elements/GraphicsElement;->drawRect(FFFF)V
-
-    :cond_0
-    return-void
-.end method
-
-.method private drawRoundRect(Lcom/miui/maml/elements/GraphicsElement;)V
-    .locals 10
-
     .line 1617
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     array-length v1, v0
 
-    const/4 v2, 0x4
+    const/4 v2, 0x3
 
-    if-le v1, v2, :cond_1
+    if-le v1, v2, :cond_0
 
     const/4 v1, 0x0
 
@@ -869,9 +695,183 @@
 
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
 
-    move-result v4
+    move-result v0
 
     .line 1619
+    iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
+
+    const/4 v3, 0x1
+
+    aget-object v1, v1, v3
+
+    invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
+
+    move-result-wide v3
+
+    double-to-float v1, v3
+
+    invoke-direct {p0, v1}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
+
+    move-result v1
+
+    .line 1620
+    iget-object v3, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
+
+    const/4 v4, 0x2
+
+    aget-object v3, v3, v4
+
+    invoke-virtual {v3}, Lcom/miui/maml/data/Expression;->evaluate()D
+
+    move-result-wide v3
+
+    double-to-float v3, v3
+
+    invoke-direct {p0, v3}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
+
+    move-result v3
+
+    .line 1621
+    iget-object v4, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
+
+    aget-object v2, v4, v2
+
+    invoke-virtual {v2}, Lcom/miui/maml/data/Expression;->evaluate()D
+
+    move-result-wide v4
+
+    double-to-float v2, v4
+
+    invoke-direct {p0, v2}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
+
+    move-result v2
+
+    .line 1622
+    invoke-virtual {p1, v0, v1, v3, v2}, Lcom/miui/maml/elements/GraphicsElement;->drawEllipse(FFFF)V
+
+    :cond_0
+    return-void
+.end method
+
+.method private drawRect(Lcom/miui/maml/elements/GraphicsElement;)V
+    .locals 6
+
+    .line 1627
+    iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
+
+    array-length v1, v0
+
+    const/4 v2, 0x3
+
+    if-le v1, v2, :cond_0
+
+    const/4 v1, 0x0
+
+    .line 1628
+    aget-object v0, v0, v1
+
+    invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
+
+    move-result-wide v0
+
+    double-to-float v0, v0
+
+    invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
+
+    move-result v0
+
+    .line 1629
+    iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
+
+    const/4 v3, 0x1
+
+    aget-object v1, v1, v3
+
+    invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
+
+    move-result-wide v3
+
+    double-to-float v1, v3
+
+    invoke-direct {p0, v1}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
+
+    move-result v1
+
+    .line 1630
+    iget-object v3, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
+
+    const/4 v4, 0x2
+
+    aget-object v3, v3, v4
+
+    invoke-virtual {v3}, Lcom/miui/maml/data/Expression;->evaluate()D
+
+    move-result-wide v3
+
+    double-to-float v3, v3
+
+    invoke-direct {p0, v3}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
+
+    move-result v3
+
+    .line 1631
+    iget-object v4, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
+
+    aget-object v2, v4, v2
+
+    invoke-virtual {v2}, Lcom/miui/maml/data/Expression;->evaluate()D
+
+    move-result-wide v4
+
+    double-to-float v2, v4
+
+    invoke-direct {p0, v2}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
+
+    move-result v2
+
+    .line 1632
+    invoke-virtual {p1, v0, v1, v3, v2}, Lcom/miui/maml/elements/GraphicsElement;->drawRect(FFFF)V
+
+    :cond_0
+    return-void
+.end method
+
+.method private drawRoundRect(Lcom/miui/maml/elements/GraphicsElement;)V
+    .locals 10
+
+    .line 1637
+    iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
+
+    array-length v1, v0
+
+    const/4 v2, 0x4
+
+    if-le v1, v2, :cond_1
+
+    const/4 v1, 0x0
+
+    .line 1638
+    aget-object v0, v0, v1
+
+    invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
+
+    move-result-wide v0
+
+    double-to-float v0, v0
+
+    invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->scale(F)F
+
+    move-result v4
+
+    .line 1639
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     const/4 v1, 0x1
@@ -888,7 +888,7 @@
 
     move-result v5
 
-    .line 1620
+    .line 1640
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     const/4 v1, 0x2
@@ -905,7 +905,7 @@
 
     move-result v6
 
-    .line 1621
+    .line 1641
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     const/4 v1, 0x3
@@ -922,7 +922,7 @@
 
     move-result v7
 
-    .line 1622
+    .line 1642
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     aget-object v0, v0, v2
@@ -937,7 +937,7 @@
 
     move-result v8
 
-    .line 1623
+    .line 1643
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     array-length v1, v0
@@ -968,7 +968,7 @@
     :goto_0
     move-object v3, p1
 
-    .line 1624
+    .line 1644
     invoke-virtual/range {v3 .. v9}, Lcom/miui/maml/elements/GraphicsElement;->drawRoundRect(FFFFFF)V
 
     :cond_1
@@ -978,7 +978,7 @@
 .method private lineStyle(Lcom/miui/maml/elements/GraphicsElement;)V
     .locals 9
 
-    .line 1629
+    .line 1649
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
 
     if-eqz v0, :cond_5
@@ -991,14 +991,14 @@
 
     const/high16 v0, -0x1000000
 
-    .line 1631
+    .line 1651
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColorExp:Lcom/miui/maml/data/Expression;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_0
 
-    .line 1633
+    .line 1653
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v0
@@ -1011,7 +1011,7 @@
 
     goto :goto_0
 
-    .line 1634
+    .line 1654
     :cond_0
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColorParsers:[Lcom/miui/maml/util/ColorParser;
 
@@ -1021,7 +1021,7 @@
 
     if-lez v3, :cond_1
 
-    .line 1635
+    .line 1655
     aget-object v0, v1, v2
 
     invoke-virtual {v0}, Lcom/miui/maml/util/ColorParser;->getColor()I
@@ -1035,7 +1035,7 @@
     :cond_1
     move v5, v0
 
-    .line 1637
+    .line 1657
     :goto_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
@@ -1051,7 +1051,7 @@
 
     move-result v4
 
-    .line 1638
+    .line 1658
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     array-length v1, v0
@@ -1075,7 +1075,7 @@
     :cond_2
     move v6, v2
 
-    .line 1639
+    .line 1659
     :goto_1
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
@@ -1100,7 +1100,7 @@
     :cond_3
     move v7, v2
 
-    .line 1640
+    .line 1660
     :goto_2
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
@@ -1123,7 +1123,7 @@
 
     move-object v3, p1
 
-    .line 1641
+    .line 1661
     invoke-virtual/range {v3 .. v8}, Lcom/miui/maml/elements/GraphicsElement;->lineStyle(FIIIF)V
 
     :cond_5
@@ -1133,7 +1133,7 @@
 .method private lineTo(Lcom/miui/maml/elements/GraphicsElement;)V
     .locals 3
 
-    .line 1646
+    .line 1666
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
 
     if-eqz v0, :cond_0
@@ -1148,7 +1148,7 @@
 
     const/4 v1, 0x0
 
-    .line 1647
+    .line 1667
     aget-object v0, v0, v1
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
@@ -1161,7 +1161,7 @@
 
     move-result v0
 
-    .line 1648
+    .line 1668
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     aget-object v1, v1, v2
@@ -1176,7 +1176,7 @@
 
     move-result v1
 
-    .line 1649
+    .line 1669
     invoke-virtual {p1, v0, v1}, Lcom/miui/maml/elements/GraphicsElement;->lineTo(FF)V
 
     :cond_0
@@ -1186,7 +1186,7 @@
 .method private moveTo(Lcom/miui/maml/elements/GraphicsElement;)V
     .locals 3
 
-    .line 1654
+    .line 1674
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
 
     if-eqz v0, :cond_0
@@ -1201,7 +1201,7 @@
 
     const/4 v1, 0x0
 
-    .line 1655
+    .line 1675
     aget-object v0, v0, v1
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
@@ -1214,7 +1214,7 @@
 
     move-result v0
 
-    .line 1656
+    .line 1676
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     aget-object v1, v1, v2
@@ -1229,7 +1229,7 @@
 
     move-result v1
 
-    .line 1657
+    .line 1677
     invoke-virtual {p1, v0, v1}, Lcom/miui/maml/elements/GraphicsElement;->moveTo(FF)V
 
     :cond_0
@@ -1239,17 +1239,17 @@
 .method private parseColor()V
     .locals 2
 
-    .line 1672
+    .line 1692
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColorArrayNameExp:Lcom/miui/maml/data/Expression;
 
     if-eqz v0, :cond_0
 
-    .line 1673
+    .line 1693
     invoke-direct {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->parseColorByArrayName()V
 
     goto :goto_0
 
-    .line 1674
+    .line 1694
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColorParsers:[Lcom/miui/maml/util/ColorParser;
 
@@ -1261,7 +1261,7 @@
 
     if-le v0, v1, :cond_1
 
-    .line 1675
+    .line 1695
     invoke-direct {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->parseColorByParsers()V
 
     :cond_1
@@ -1272,14 +1272,14 @@
 .method private parseColorByArrayName()V
     .locals 5
 
-    .line 1680
+    .line 1700
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColorArrayNameExp:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1681
+    .line 1701
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -1288,7 +1288,7 @@
 
     if-nez v1, :cond_1
 
-    .line 1682
+    .line 1702
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mCurrentColorArrayName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1297,10 +1297,10 @@
 
     if-nez v1, :cond_2
 
-    .line 1683
+    .line 1703
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mCurrentColorArrayName:Ljava/lang/String;
 
-    .line 1684
+    .line 1704
     new-instance v1, Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->getVariables()Lcom/miui/maml/data/Variables;
@@ -1311,14 +1311,14 @@
 
     invoke-direct {v1, v0, v3, v4}, Lcom/miui/maml/data/IndexedVariable;-><init>(Ljava/lang/String;Lcom/miui/maml/data/Variables;Z)V
 
-    .line 1685
+    .line 1705
     invoke-virtual {v1}, Lcom/miui/maml/data/IndexedVariable;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1686
+    .line 1706
     instance-of v1, v0, [I
 
     if-eqz v1, :cond_0
@@ -1331,18 +1331,18 @@
 
     if-le v1, v3, :cond_0
 
-    .line 1687
+    .line 1707
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColors:[I
 
     goto :goto_0
 
-    .line 1689
+    .line 1709
     :cond_0
     iput-object v2, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColors:[I
 
     goto :goto_0
 
-    .line 1693
+    .line 1713
     :cond_1
     iput-object v2, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColors:[I
 
@@ -1354,12 +1354,12 @@
 .method private parseColorByParsers()V
     .locals 3
 
-    .line 1698
+    .line 1718
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColors:[I
 
     if-nez v0, :cond_0
 
-    .line 1699
+    .line 1719
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColorParsers:[Lcom/miui/maml/util/ColorParser;
 
     array-length v0, v0
@@ -1371,7 +1371,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1701
+    .line 1721
     :goto_0
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColorParsers:[Lcom/miui/maml/util/ColorParser;
 
@@ -1379,7 +1379,7 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1702
+    .line 1722
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColors:[I
 
     aget-object v1, v1, v0
@@ -1403,12 +1403,12 @@
 
     const-string v0, "command"
 
-    .line 1476
+    .line 1496
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1477
+    .line 1497
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -1606,14 +1606,14 @@
     :goto_1
     packed-switch p1, :pswitch_data_0
 
-    .line 1521
+    .line 1541
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->INVALID:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mCommand:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     goto :goto_2
 
-    .line 1518
+    .line 1538
     :pswitch_0
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->SET_RENDER_LISTENER:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -1621,7 +1621,7 @@
 
     goto :goto_2
 
-    .line 1515
+    .line 1535
     :pswitch_1
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->MOVE_TO:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -1629,7 +1629,7 @@
 
     goto :goto_2
 
-    .line 1512
+    .line 1532
     :pswitch_2
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->LINE_TO:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -1637,7 +1637,7 @@
 
     goto :goto_2
 
-    .line 1509
+    .line 1529
     :pswitch_3
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->LINE_STYLE:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -1645,7 +1645,7 @@
 
     goto :goto_2
 
-    .line 1506
+    .line 1526
     :pswitch_4
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->LINE_GRADIENT_STYLE:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -1653,7 +1653,7 @@
 
     goto :goto_2
 
-    .line 1503
+    .line 1523
     :pswitch_5
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->DRAW_ROUND_RECT:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -1661,7 +1661,7 @@
 
     goto :goto_2
 
-    .line 1500
+    .line 1520
     :pswitch_6
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->DRAW_RECT:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -1669,7 +1669,7 @@
 
     goto :goto_2
 
-    .line 1497
+    .line 1517
     :pswitch_7
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->DRAW_ELLIPSE:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -1677,7 +1677,7 @@
 
     goto :goto_2
 
-    .line 1494
+    .line 1514
     :pswitch_8
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->DRAW_CIRCLE:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -1685,7 +1685,7 @@
 
     goto :goto_2
 
-    .line 1491
+    .line 1511
     :pswitch_9
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->CUBIC_CURVE_TO:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -1693,7 +1693,7 @@
 
     goto :goto_2
 
-    .line 1488
+    .line 1508
     :pswitch_a
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->CURVE_TO:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -1701,7 +1701,7 @@
 
     goto :goto_2
 
-    .line 1485
+    .line 1505
     :pswitch_b
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->CREATE_GRADIENT_BOX:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -1709,7 +1709,7 @@
 
     goto :goto_2
 
-    .line 1482
+    .line 1502
     :pswitch_c
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->BEGIN_GRADIENT_FILL:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -1717,7 +1717,7 @@
 
     goto :goto_2
 
-    .line 1479
+    .line 1499
     :pswitch_d
     sget-object p1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->BEGIN_FILL:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -1766,23 +1766,23 @@
 .method private parseStop()V
     .locals 1
 
-    .line 1707
+    .line 1727
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStopArrayNameExp:Lcom/miui/maml/data/Expression;
 
     if-eqz v0, :cond_0
 
-    .line 1708
+    .line 1728
     invoke-direct {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->parseStopByArrayName()V
 
     goto :goto_0
 
-    .line 1709
+    .line 1729
     :cond_0
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsStopsValid:Z
 
     if-eqz v0, :cond_1
 
-    .line 1710
+    .line 1730
     invoke-direct {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->parseStopByExp()V
 
     :cond_1
@@ -1793,14 +1793,14 @@
 .method private parseStopByArrayName()V
     .locals 5
 
-    .line 1715
+    .line 1735
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStopArrayNameExp:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1716
+    .line 1736
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -1809,7 +1809,7 @@
 
     if-nez v1, :cond_1
 
-    .line 1717
+    .line 1737
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mCurrentStopArrayName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1818,10 +1818,10 @@
 
     if-nez v1, :cond_2
 
-    .line 1718
+    .line 1738
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mCurrentStopArrayName:Ljava/lang/String;
 
-    .line 1719
+    .line 1739
     new-instance v1, Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->getVariables()Lcom/miui/maml/data/Variables;
@@ -1832,14 +1832,14 @@
 
     invoke-direct {v1, v0, v3, v4}, Lcom/miui/maml/data/IndexedVariable;-><init>(Ljava/lang/String;Lcom/miui/maml/data/Variables;Z)V
 
-    .line 1720
+    .line 1740
     invoke-virtual {v1}, Lcom/miui/maml/data/IndexedVariable;->get()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1721
+    .line 1741
     instance-of v1, v0, [F
 
     if-eqz v1, :cond_0
@@ -1852,18 +1852,18 @@
 
     if-le v1, v3, :cond_0
 
-    .line 1722
+    .line 1742
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStops:[F
 
     goto :goto_0
 
-    .line 1724
+    .line 1744
     :cond_0
     iput-object v2, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStops:[F
 
     goto :goto_0
 
-    .line 1728
+    .line 1748
     :cond_1
     iput-object v2, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStops:[F
 
@@ -1875,12 +1875,12 @@
 .method private parseStopByExp()V
     .locals 5
 
-    .line 1733
+    .line 1753
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStops:[F
 
     if-nez v0, :cond_0
 
-    .line 1734
+    .line 1754
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStopExps:[Lcom/miui/maml/data/Expression;
 
     array-length v0, v0
@@ -1892,7 +1892,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1736
+    .line 1756
     :goto_0
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStopExps:[Lcom/miui/maml/data/Expression;
 
@@ -1900,7 +1900,7 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1737
+    .line 1757
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStops:[F
 
     aget-object v1, v1, v0
@@ -1924,7 +1924,7 @@
 .method private scale(F)F
     .locals 1
 
-    .line 1545
+    .line 1565
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v0
@@ -1941,7 +1941,7 @@
 .method private setRenderListener(Lcom/miui/maml/elements/GraphicsElement;)V
     .locals 2
 
-    .line 1662
+    .line 1682
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
 
     if-eqz v0, :cond_0
@@ -1954,14 +1954,14 @@
 
     const/4 v1, 0x0
 
-    .line 1663
+    .line 1683
     aget-object v0, v0, v1
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1664
+    .line 1684
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v1
@@ -1972,12 +1972,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1665
+    .line 1685
     instance-of v1, v0, Lcom/miui/maml/elements/FunctionElement;
 
     if-eqz v1, :cond_0
 
-    .line 1666
+    .line 1686
     check-cast v0, Lcom/miui/maml/elements/FunctionElement;
 
     invoke-virtual {p1, v0}, Lcom/miui/maml/elements/GraphicsElement;->setRenderListener(Lcom/miui/maml/elements/FunctionElement;)V
@@ -1989,7 +1989,7 @@
 .method private setShader(Lcom/miui/maml/elements/GraphicsElement;)V
     .locals 12
 
-    .line 1742
+    .line 1762
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mIsParamsValid:Z
 
     if-eqz v0, :cond_5
@@ -2002,13 +2002,13 @@
 
     if-le v0, v1, :cond_5
 
-    .line 1743
+    .line 1763
     invoke-direct {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->parseColor()V
 
-    .line 1744
+    .line 1764
     invoke-direct {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->parseStop()V
 
-    .line 1745
+    .line 1765
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColors:[I
 
     if-eqz v0, :cond_4
@@ -2019,7 +2019,7 @@
 
     goto :goto_0
 
-    .line 1749
+    .line 1769
     :cond_0
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStops:[F
 
@@ -2035,12 +2035,12 @@
 
     const-string v0, "color and position arrays must be of equal length"
 
-    .line 1750
+    .line 1770
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 1753
+    .line 1773
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
@@ -2054,7 +2054,7 @@
 
     double-to-int v6, v3
 
-    .line 1754
+    .line 1774
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     const/4 v3, 0x1
@@ -2065,7 +2065,7 @@
 
     move-result-object v9
 
-    .line 1755
+    .line 1775
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     aget-object v0, v0, v1
@@ -2074,7 +2074,7 @@
 
     move-result-object v10
 
-    .line 1756
+    .line 1776
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mParamExps:[Lcom/miui/maml/data/Expression;
 
     array-length v1, v0
@@ -2094,14 +2094,14 @@
     :cond_2
     move v11, v2
 
-    .line 1757
+    .line 1777
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mCommand:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     sget-object v1, Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;->LINE_GRADIENT_STYLE:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
     if-ne v0, v1, :cond_3
 
-    .line 1758
+    .line 1778
     iget-object v7, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColors:[I
 
     iget-object v8, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStops:[F
@@ -2112,7 +2112,7 @@
 
     goto :goto_1
 
-    .line 1759
+    .line 1779
     :cond_3
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mCommand:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
 
@@ -2120,7 +2120,7 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 1760
+    .line 1780
     iget-object v7, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mColors:[I
 
     iget-object v8, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mStops:[F
@@ -2137,7 +2137,7 @@
 
     const-string v0, "needs >= 2 number of colors"
 
-    .line 1746
+    .line 1766
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -2152,25 +2152,25 @@
 .method protected doPerform()V
     .locals 3
 
-    .line 1767
+    .line 1787
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 1768
+    .line 1788
     instance-of v1, v0, Lcom/miui/maml/elements/GraphicsElement;
 
     if-nez v1, :cond_0
 
     goto :goto_1
 
-    .line 1772
+    .line 1792
     :cond_0
     check-cast v0, Lcom/miui/maml/elements/GraphicsElement;
 
-    .line 1773
+    .line 1793
     sget-object v1, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$GraphicsCommand$CommandType:[I
 
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$GraphicsCommand;->mCommand:Lcom/miui/maml/ActionCommand$GraphicsCommand$CommandType;
@@ -2185,79 +2185,79 @@
 
     goto :goto_0
 
-    .line 1812
+    .line 1832
     :pswitch_0
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->setRenderListener(Lcom/miui/maml/elements/GraphicsElement;)V
 
     goto :goto_0
 
-    .line 1809
+    .line 1829
     :pswitch_1
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->createGradientBox(Lcom/miui/maml/elements/GraphicsElement;)V
 
     goto :goto_0
 
-    .line 1806
+    .line 1826
     :pswitch_2
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->setShader(Lcom/miui/maml/elements/GraphicsElement;)V
 
     goto :goto_0
 
-    .line 1802
+    .line 1822
     :pswitch_3
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->drawRoundRect(Lcom/miui/maml/elements/GraphicsElement;)V
 
     goto :goto_0
 
-    .line 1799
+    .line 1819
     :pswitch_4
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->cubicCurveTo(Lcom/miui/maml/elements/GraphicsElement;)V
 
     goto :goto_0
 
-    .line 1796
+    .line 1816
     :pswitch_5
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->drawEllipse(Lcom/miui/maml/elements/GraphicsElement;)V
 
     goto :goto_0
 
-    .line 1793
+    .line 1813
     :pswitch_6
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->drawCircle(Lcom/miui/maml/elements/GraphicsElement;)V
 
     goto :goto_0
 
-    .line 1790
+    .line 1810
     :pswitch_7
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->lineStyle(Lcom/miui/maml/elements/GraphicsElement;)V
 
     goto :goto_0
 
-    .line 1787
+    .line 1807
     :pswitch_8
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->beginFill(Lcom/miui/maml/elements/GraphicsElement;)V
 
     goto :goto_0
 
-    .line 1784
+    .line 1804
     :pswitch_9
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->drawRect(Lcom/miui/maml/elements/GraphicsElement;)V
 
     goto :goto_0
 
-    .line 1781
+    .line 1801
     :pswitch_a
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->curveTo(Lcom/miui/maml/elements/GraphicsElement;)V
 
     goto :goto_0
 
-    .line 1778
+    .line 1798
     :pswitch_b
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->moveTo(Lcom/miui/maml/elements/GraphicsElement;)V
 
     goto :goto_0
 
-    .line 1775
+    .line 1795
     :pswitch_c
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;->lineTo(Lcom/miui/maml/elements/GraphicsElement;)V
 

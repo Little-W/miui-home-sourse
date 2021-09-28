@@ -77,13 +77,12 @@
 
     move-result-object v0
 
-    :cond_0
     :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_0
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -102,13 +101,10 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_0
-
-    .line 110
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
     return-object p1
 .end method

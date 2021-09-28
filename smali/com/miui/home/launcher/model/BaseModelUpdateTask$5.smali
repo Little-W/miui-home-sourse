@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;I)V
     .locals 0
 
-    .line 125
+    .line 132
     iput-object p1, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$5;->this$0:Lcom/miui/home/launcher/model/BaseModelUpdateTask;
 
     iput p2, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$5;->val$categoryId:I
@@ -42,7 +42,7 @@
 .method public execute(Lcom/miui/home/launcher/LauncherModel$Callbacks;)V
     .locals 1
 
-    .line 128
+    .line 135
     iget v0, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$5;->val$categoryId:I
 
     invoke-interface {p1, v0}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->bindCategoryUpdate(I)V

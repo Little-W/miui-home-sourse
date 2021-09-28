@@ -159,6 +159,7 @@
     <item type="id" name="dialog_root_view">false</item>
     <item type="id" name="dismiss_task">false</item>
     <item type="id" name="dockScreen">false</item>
+    <item type="id" name="download_mark">false</item>
     <item type="id" name="drag">false</item>
     <item type="id" name="dragSourceTabHost">false</item>
     <item type="id" name="drag_layer">false</item>
@@ -308,6 +309,7 @@
     <item type="id" name="miuix_animation_tag_set_height">false</item>
     <item type="id" name="miuix_animation_tag_set_width">false</item>
     <item type="id" name="miuix_animation_tag_touch_listener">false</item>
+    <item type="id" name="miuix_animation_tag_view_corner">false</item>
     <item type="id" name="month">false</item>
     <item type="id" name="more">false</item>
     <item type="id" name="name">false</item>
@@ -329,8 +331,10 @@
     <item type="id" name="progress_circular">false</item>
     <item type="id" name="progress_horizontal">false</item>
     <item type="id" name="progress_percent">false</item>
+    <item type="id" name="progressbar">false</item>
     <item type="id" name="radio">false</item>
     <item type="id" name="radioButton">false</item>
+    <item type="id" name="recent_menu_view">false</item>
     <item type="id" name="recents_container">false</item>
     <item type="id" name="recents_decorations">false</item>
     <item type="id" name="recents_smallwindow_background">false</item>
@@ -475,14 +479,14 @@
     <item type="id" name="title_template">false</item>
     <item type="id" name="topPanel">false</item>
     <item type="id" name="top_menu_container_imageView">false</item>
-    <item type="id" name="top_menu_container_textView">false</item>
     <item type="id" name="tracking_progress">false</item>
     <item type="id" name="tracking_progress_label">false</item>
     <item type="id" name="tracking_progress_up">false</item>
     <item type="id" name="tracking_progress_up_container">false</item>
     <item type="id" name="tracking_progress_up_label">false</item>
     <item type="id" name="transition_thumbnail_view">false</item>
-    <item type="id" name="transparent_space">false</item>
+    <item type="id" name="transparent_space_app_system">false</item>
+    <item type="id" name="transparent_space_widget_system">false</item>
     <item type="id" name="tv_install">false</item>
     <item type="id" name="tv_message">false</item>
     <item type="id" name="txtMemoryContainer">false</item>
@@ -512,8 +516,10 @@
     <item type="id" name="virtual_key">false</item>
     <item type="id" name="visible_removing_fragment_view_tag">false</item>
     <item type="id" name="voice">false</item>
+    <item type="id" name="widget_container">false</item>
     <item type="id" name="widget_line_title">false</item>
     <item type="id" name="widget_line_title_small_icon">false</item>
+    <item type="id" name="widget_shortcut_menu">false</item>
     <item type="id" name="widgets_cell_list">false</item>
     <item type="id" name="widgets_layout">false</item>
     <item type="id" name="widgets_layout_actionBar">false</item>

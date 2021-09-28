@@ -27,13 +27,13 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 102
+    .line 107
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$StatefulActionCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Ljava/lang/String;)V
 
-    .line 103
+    .line 108
     iput-object p3, p0, Lcom/miui/maml/ActionCommand$NotificationReceiver;->mType:Ljava/lang/String;
 
-    .line 104
+    .line 109
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$NotificationReceiver;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -52,7 +52,7 @@
 .method protected asyncUpdate()V
     .locals 2
 
-    .line 113
+    .line 118
     invoke-static {}, Lcom/miui/maml/ActionCommand;->access$000()Landroid/os/Handler;
 
     move-result-object v0
@@ -69,7 +69,7 @@
 .method public finish()V
     .locals 2
 
-    .line 140
+    .line 145
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$NotificationReceiver;->mNotifierManager:Lcom/miui/maml/NotifierManager;
 
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$NotificationReceiver;->mType:Ljava/lang/String;
@@ -82,10 +82,10 @@
 .method public init()V
     .locals 2
 
-    .line 123
+    .line 128
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$NotificationReceiver;->update()V
 
-    .line 124
+    .line 129
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$NotificationReceiver;->mNotifierManager:Lcom/miui/maml/NotifierManager;
 
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$NotificationReceiver;->mType:Ljava/lang/String;
@@ -98,7 +98,7 @@
 .method public onNotify(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/Object;)V
     .locals 0
 
-    .line 109
+    .line 114
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$NotificationReceiver;->asyncUpdate()V
 
     return-void
@@ -107,7 +107,7 @@
 .method public pause()V
     .locals 2
 
-    .line 129
+    .line 134
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$NotificationReceiver;->mNotifierManager:Lcom/miui/maml/NotifierManager;
 
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$NotificationReceiver;->mType:Ljava/lang/String;
@@ -120,10 +120,10 @@
 .method public resume()V
     .locals 2
 
-    .line 134
+    .line 139
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$NotificationReceiver;->update()V
 
-    .line 135
+    .line 140
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$NotificationReceiver;->mNotifierManager:Lcom/miui/maml/NotifierManager;
 
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$NotificationReceiver;->mType:Ljava/lang/String;

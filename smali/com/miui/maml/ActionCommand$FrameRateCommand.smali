@@ -26,10 +26,10 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 1
 
-    .line 548
+    .line 553
     invoke-direct {p0, p1}, Lcom/miui/maml/ActionCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;)V
 
-    .line 549
+    .line 554
     invoke-virtual {p1}, Lcom/miui/maml/elements/ScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -54,12 +54,12 @@
 .method protected doPerform()V
     .locals 3
 
-    .line 554
+    .line 559
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$FrameRateCommand;->mRate:Lcom/miui/maml/data/Expression;
 
     if-eqz v0, :cond_0
 
-    .line 555
+    .line 560
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$FrameRateCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v0

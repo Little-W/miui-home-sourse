@@ -20,7 +20,7 @@
 
     const/4 v0, 0x0
 
-    .line 354
+    .line 371
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/maml/data/Expression$VariableExpression;-><init>(Lcom/miui/maml/data/Variables;Ljava/lang/String;Z)V
 
     return-void
@@ -31,19 +31,19 @@
 .method public evaluate()D
     .locals 2
 
-    .line 359
+    .line 376
     invoke-virtual {p0}, Lcom/miui/maml/data/Expression$StringVariableExpression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 360
+    .line 377
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 362
+    .line 379
     :try_start_0
     invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
@@ -63,7 +63,7 @@
 .method public evaluateStr()Ljava/lang/String;
     .locals 1
 
-    .line 371
+    .line 388
     iget-object v0, p0, Lcom/miui/maml/data/Expression$StringVariableExpression;->mIndexedVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/IndexedVariable;->getString()Ljava/lang/String;
@@ -76,7 +76,7 @@
 .method public isNull()Z
     .locals 1
 
-    .line 376
+    .line 393
     iget-object v0, p0, Lcom/miui/maml/data/Expression$StringVariableExpression;->mIndexedVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/IndexedVariable;->isNull()Z

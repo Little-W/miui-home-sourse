@@ -28,40 +28,15 @@
 .method public constructor <init>(Lcom/miui/maml/data/Expression$Tokenizer$TokenType;Ljava/lang/String;)V
     .locals 1
 
-    .line 164
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 158
-    sget-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->INVALID:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
-
-    iput-object v0, p0, Lcom/miui/maml/data/Expression$Tokenizer$Token;->type:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
-
-    .line 161
-    sget-object v0, Lcom/miui/maml/data/Expression$Ope;->INVALID:Lcom/miui/maml/data/Expression$Ope;
-
-    iput-object v0, p0, Lcom/miui/maml/data/Expression$Tokenizer$Token;->op:Lcom/miui/maml/data/Expression$Ope;
-
-    .line 165
-    iput-object p1, p0, Lcom/miui/maml/data/Expression$Tokenizer$Token;->type:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
-
-    .line 166
-    iput-object p2, p0, Lcom/miui/maml/data/Expression$Tokenizer$Token;->token:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/miui/maml/data/Expression$Tokenizer$TokenType;Ljava/lang/String;Lcom/miui/maml/data/Expression$Ope;)V
-    .locals 1
-
     .line 169
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 158
+    .line 163
     sget-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->INVALID:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
     iput-object v0, p0, Lcom/miui/maml/data/Expression$Tokenizer$Token;->type:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
 
-    .line 161
+    .line 166
     sget-object v0, Lcom/miui/maml/data/Expression$Ope;->INVALID:Lcom/miui/maml/data/Expression$Ope;
 
     iput-object v0, p0, Lcom/miui/maml/data/Expression$Tokenizer$Token;->op:Lcom/miui/maml/data/Expression$Ope;
@@ -72,10 +47,35 @@
     .line 171
     iput-object p2, p0, Lcom/miui/maml/data/Expression$Tokenizer$Token;->token:Ljava/lang/String;
 
-    .line 172
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/miui/maml/data/Expression$Tokenizer$TokenType;Ljava/lang/String;Lcom/miui/maml/data/Expression$Ope;)V
+    .locals 1
+
+    .line 174
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 163
+    sget-object v0, Lcom/miui/maml/data/Expression$Tokenizer$TokenType;->INVALID:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+
+    iput-object v0, p0, Lcom/miui/maml/data/Expression$Tokenizer$Token;->type:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+
+    .line 166
+    sget-object v0, Lcom/miui/maml/data/Expression$Ope;->INVALID:Lcom/miui/maml/data/Expression$Ope;
+
+    iput-object v0, p0, Lcom/miui/maml/data/Expression$Tokenizer$Token;->op:Lcom/miui/maml/data/Expression$Ope;
+
+    .line 175
+    iput-object p1, p0, Lcom/miui/maml/data/Expression$Tokenizer$Token;->type:Lcom/miui/maml/data/Expression$Tokenizer$TokenType;
+
+    .line 176
+    iput-object p2, p0, Lcom/miui/maml/data/Expression$Tokenizer$Token;->token:Ljava/lang/String;
+
+    .line 177
     iput-object p3, p0, Lcom/miui/maml/data/Expression$Tokenizer$Token;->op:Lcom/miui/maml/data/Expression$Ope;
 
-    .line 173
+    .line 178
     iget-object p1, p0, Lcom/miui/maml/data/Expression$Tokenizer$Token;->op:Lcom/miui/maml/data/Expression$Ope;
 
     invoke-virtual {p1}, Lcom/miui/maml/data/Expression$Ope;->ordinal()I

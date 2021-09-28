@@ -144,27 +144,27 @@
 .method public endAnimation(Landroid/view/View;)V
     .locals 1
 
-    const v0, 0x7f0a0246
+    const v0, 0x7f0a024a
 
     .line 35
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Spring;->endAnimation(Landroid/view/View;I)V
 
-    const v0, 0x7f0a0247
+    const v0, 0x7f0a024b
 
     .line 36
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Spring;->endAnimation(Landroid/view/View;I)V
 
-    const v0, 0x7f0a0248
+    const v0, 0x7f0a024c
 
     .line 37
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Spring;->endAnimation(Landroid/view/View;I)V
 
-    const v0, 0x7f0a0249
+    const v0, 0x7f0a024d
 
     .line 38
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Spring;->endAnimation(Landroid/view/View;I)V
 
-    const v0, 0x7f0a024a
+    const v0, 0x7f0a024e
 
     .line 39
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Spring;->endAnimation(Landroid/view/View;I)V
@@ -178,7 +178,7 @@
     .line 51
     sget-object v2, Landroidx/dynamicanimation/animation/DynamicAnimation;->ALPHA:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    const v3, 0x7f0a0246
+    const v3, 0x7f0a024a
 
     const/high16 v4, 0x3f800000    # 1.0f
 
@@ -197,7 +197,7 @@
     .line 53
     sget-object v2, Landroidx/dynamicanimation/animation/DynamicAnimation;->SCALE_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    const v3, 0x7f0a0247
+    const v3, 0x7f0a024b
 
     const v5, 0x3f547ae1    # 0.83f
 
@@ -210,7 +210,7 @@
     .line 55
     sget-object v2, Landroidx/dynamicanimation/animation/DynamicAnimation;->SCALE_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    const v3, 0x7f0a0248
+    const v3, 0x7f0a024c
 
     invoke-direct/range {v0 .. v6}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Spring;->getSpringAnimation(Landroid/view/View;Landroidx/dynamicanimation/animation/FloatPropertyCompat;IFFF)Landroidx/dynamicanimation/animation/SpringAnimation;
 
@@ -219,7 +219,7 @@
     .line 57
     sget-object v2, Landroidx/dynamicanimation/animation/DynamicAnimation;->TRANSLATION_X:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    const v3, 0x7f0a0249
+    const v3, 0x7f0a024d
 
     const/4 v4, 0x0
 
@@ -230,7 +230,7 @@
     .line 59
     sget-object v2, Landroidx/dynamicanimation/animation/DynamicAnimation;->TRANSLATION_Y:Landroidx/dynamicanimation/animation/DynamicAnimation$ViewProperty;
 
-    const v3, 0x7f0a024a
+    const v3, 0x7f0a024e
 
     invoke-direct/range {v0 .. v6}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Spring;->getSpringAnimation(Landroid/view/View;Landroidx/dynamicanimation/animation/FloatPropertyCompat;IFFF)Landroidx/dynamicanimation/animation/SpringAnimation;
 

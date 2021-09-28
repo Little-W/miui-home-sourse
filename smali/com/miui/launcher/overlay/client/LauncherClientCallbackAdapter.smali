@@ -26,6 +26,12 @@
     return-object p1
 .end method
 
+.method public onOverlayInvoke(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public onOverlayScrollChanged(F)V
     .locals 0
 

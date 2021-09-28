@@ -11,9 +11,9 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    const-string v0, "x"
+    const-string/jumbo v0, "x"
 
-    const-string v1, "y"
+    const-string/jumbo v1, "y"
 
     .line 77
     filled-new-array {v0, v1}, [Ljava/lang/String;

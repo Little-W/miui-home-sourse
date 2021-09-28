@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/maml/elements/WebViewScreenElement;)V
     .locals 0
 
-    .line 46
+    .line 48
     iput-object p1, p0, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/maml/elements/WebViewScreenElement;Lcom/miui/maml/elements/WebViewScreenElement$1;)V
     .locals 0
 
-    .line 46
+    .line 48
     invoke-direct {p0, p1}, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;-><init>(Lcom/miui/maml/elements/WebViewScreenElement;)V
 
     return-void
@@ -46,7 +46,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .line 109
+    .line 111
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/elements/WebViewScreenElement;->performAction(Ljava/lang/String;)V
@@ -59,7 +59,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .line 79
+    .line 81
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
@@ -78,7 +78,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .line 84
+    .line 86
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
@@ -97,7 +97,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .line 104
+    .line 106
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
@@ -116,7 +116,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .line 99
+    .line 101
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
@@ -135,7 +135,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .line 89
+    .line 91
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
@@ -154,7 +154,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .line 94
+    .line 96
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
@@ -173,7 +173,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .line 59
+    .line 61
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
@@ -190,7 +190,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .line 64
+    .line 66
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
@@ -209,7 +209,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .line 49
+    .line 51
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
@@ -226,7 +226,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .line 54
+    .line 56
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
@@ -243,7 +243,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .line 69
+    .line 71
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
@@ -262,7 +262,7 @@
     .annotation runtime Landroid/webkit/JavascriptInterface;
     .end annotation
 
-    .line 74
+    .line 76
     iget-object v0, p0, Lcom/miui/maml/elements/WebViewScreenElement$MamlInterface;->this$0:Lcom/miui/maml/elements/WebViewScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/WebViewScreenElement;->getVariables()Lcom/miui/maml/data/Variables;

@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 14
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public getUpdateInfo(Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/listener/UpdateInfo;
     .locals 1
 
-    .line 17
+    .line 31
     new-instance v0, Lmiuix/animation/listener/UpdateInfo;
 
     invoke-direct {v0, p1}, Lmiuix/animation/listener/UpdateInfo;-><init>(Lmiuix/animation/property/FloatProperty;)V

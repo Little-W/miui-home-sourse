@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;Lcom/android/systemui/shared/recents/model/Task;)V
     .locals 0
 
-    .line 1325
+    .line 1329
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$15;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     iput-object p2, p0, Lcom/miui/home/recents/views/RecentsContainer$15;->val$task:Lcom/android/systemui/shared/recents/model/Task;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 1
 
-    .line 1328
+    .line 1332
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$15;->val$task:Lcom/android/systemui/shared/recents/model/Task;
 
     invoke-static {v0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->doSwapUPClean(Lcom/android/systemui/shared/recents/model/Task;)V

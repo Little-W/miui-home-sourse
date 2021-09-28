@@ -1,4 +1,4 @@
-.class final Landroidx/core/app/ActivityRecreator$2;
+.class Landroidx/core/app/ActivityRecreator$2;
 .super Ljava/lang/Object;
 .source "ActivityRecreator.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -27,7 +27,7 @@
 .method constructor <init>(Landroid/app/Application;Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;)V
     .locals 0
 
-    .line 158
+    .line 159
     iput-object p1, p0, Landroidx/core/app/ActivityRecreator$2;->val$application:Landroid/app/Application;
 
     iput-object p2, p0, Landroidx/core/app/ActivityRecreator$2;->val$callbacks:Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 165
+    .line 166
     iget-object v0, p0, Landroidx/core/app/ActivityRecreator$2;->val$application:Landroid/app/Application;
 
     iget-object v1, p0, Landroidx/core/app/ActivityRecreator$2;->val$callbacks:Landroidx/core/app/ActivityRecreator$LifecycleCheckCallbacks;

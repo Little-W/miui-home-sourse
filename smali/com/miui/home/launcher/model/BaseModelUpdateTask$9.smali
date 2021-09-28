@@ -31,7 +31,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;JII)V
     .locals 0
 
-    .line 161
+    .line 168
     iput-object p1, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$9;->this$0:Lcom/miui/home/launcher/model/BaseModelUpdateTask;
 
     iput-wide p2, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$9;->val$screenId:J
@@ -50,7 +50,7 @@
 .method public execute(Lcom/miui/home/launcher/LauncherModel$Callbacks;)V
     .locals 4
 
-    .line 164
+    .line 171
     iget-wide v0, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$9;->val$screenId:J
 
     iget v2, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$9;->val$screenType:I

@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 0
 
-    .line 2318
+    .line 2338
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$TargetCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
-    .line 2319
+    .line 2339
     sget-object p1, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->SCREEN_ELEMENT:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$FunctionPerformCommand;->mTargetType:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
@@ -38,19 +38,19 @@
 .method public doPerform()V
     .locals 2
 
-    .line 2324
+    .line 2344
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$FunctionPerformCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 2325
+    .line 2345
     instance-of v1, v0, Lcom/miui/maml/elements/FunctionElement;
 
     if-eqz v1, :cond_0
 
-    .line 2326
+    .line 2346
     check-cast v0, Lcom/miui/maml/elements/FunctionElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/FunctionElement;->perform()V

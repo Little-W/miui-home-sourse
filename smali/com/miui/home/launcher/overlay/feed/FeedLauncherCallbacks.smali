@@ -203,7 +203,7 @@
     invoke-direct {v0, v1, p2, p1}, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;-><init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/launcher/overlay/client/LauncherClient$ClientOptions;Lcom/miui/launcher/overlay/client/LauncherClientCallback;)V
 
     .line 35
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/overlay/LauncherOverlayChinese;->setClient(Lcom/miui/launcher/overlay/client/LauncherClient;)V
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/overlay/LauncherOverlayMIUI;->setClient(Lcom/miui/launcher/overlay/client/LauncherClient;)V
 
     return-object v0
 .end method

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/maml/util/ConfigFile$1;)V
     .locals 0
 
-    .line 267
+    .line 265
     iput-object p1, p0, Lcom/miui/maml/util/ConfigFile$1$1;->this$1:Lcom/miui/maml/util/ConfigFile$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,28 +38,28 @@
 .method public onChild(Lorg/w3c/dom/Element;)V
     .locals 4
 
-    .line 270
+    .line 268
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getNodeName()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "id"
 
-    .line 271
+    .line 269
     invoke-interface {p1, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "StringInput"
 
-    .line 272
+    .line 270
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 273
+    .line 271
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile$1$1;->this$1:Lcom/miui/maml/util/ConfigFile$1;
 
     iget-object v0, v0, Lcom/miui/maml/util/ConfigFile$1;->this$0:Lcom/miui/maml/util/ConfigFile;
@@ -77,14 +77,14 @@
     :cond_0
     const-string v2, "CheckBox"
 
-    .line 274
+    .line 272
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 275
+    .line 273
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile$1$1;->this$1:Lcom/miui/maml/util/ConfigFile$1;
 
     iget-object v0, v0, Lcom/miui/maml/util/ConfigFile$1;->this$0:Lcom/miui/maml/util/ConfigFile;
@@ -118,7 +118,7 @@
     :cond_2
     const-string v2, "NumberInput"
 
-    .line 276
+    .line 274
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -129,14 +129,14 @@
 
     const-string v0, "default"
 
-    .line 277
+    .line 275
     invoke-static {p1, v0, v3}, Lcom/miui/maml/util/Utils;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
 
     move-result p1
 
     float-to-double v2, p1
 
-    .line 278
+    .line 276
     iget-object p1, p0, Lcom/miui/maml/util/ConfigFile$1$1;->this$1:Lcom/miui/maml/util/ConfigFile$1;
 
     iget-object p1, p1, Lcom/miui/maml/util/ConfigFile$1;->this$0:Lcom/miui/maml/util/ConfigFile;
@@ -152,14 +152,14 @@
     :cond_3
     const-string v2, "StringChoice"
 
-    .line 279
+    .line 277
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    .line 280
+    .line 278
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile$1$1;->this$1:Lcom/miui/maml/util/ConfigFile$1;
 
     iget-object v0, v0, Lcom/miui/maml/util/ConfigFile$1;->this$0:Lcom/miui/maml/util/ConfigFile;
@@ -177,7 +177,7 @@
     :cond_4
     const-string v2, "NumberChoice"
 
-    .line 281
+    .line 279
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -186,14 +186,14 @@
 
     const-string v0, "default"
 
-    .line 282
+    .line 280
     invoke-static {p1, v0, v3}, Lcom/miui/maml/util/Utils;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
 
     move-result p1
 
     float-to-double v2, p1
 
-    .line 283
+    .line 281
     iget-object p1, p0, Lcom/miui/maml/util/ConfigFile$1$1;->this$1:Lcom/miui/maml/util/ConfigFile$1;
 
     iget-object p1, p1, Lcom/miui/maml/util/ConfigFile$1;->this$0:Lcom/miui/maml/util/ConfigFile;
@@ -209,14 +209,14 @@
     :cond_5
     const-string v1, "AppPicker"
 
-    .line 284
+    .line 282
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 285
+    .line 283
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile$1$1;->this$1:Lcom/miui/maml/util/ConfigFile$1;
 
     iget-object v0, v0, Lcom/miui/maml/util/ConfigFile$1;->this$0:Lcom/miui/maml/util/ConfigFile;

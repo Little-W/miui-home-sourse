@@ -1161,8 +1161,6 @@
     const-string v0, "updateSourceStack, target=null"
 
     .line 80
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 83

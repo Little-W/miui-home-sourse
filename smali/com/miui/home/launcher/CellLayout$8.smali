@@ -1,9 +1,6 @@
 .class Lcom/miui/home/launcher/CellLayout$8;
-.super Ljava/lang/Object;
+.super Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;
 .source "CellLayout.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -25,32 +22,44 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 1340
+    .line 2212
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$8;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public onMessageEvent(Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;)V
+    .locals 2
+    .annotation runtime Lorg/greenrobot/eventbus/Subscribe;
+        threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
+    .end annotation
 
-    .line 1343
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$8;->this$0:Lcom/miui/home/launcher/CellLayout;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->canBeDeleted()Z
+    .line 2215
+    invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getCurrentEditState()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x7
 
-    .line 1344
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$8;->this$0:Lcom/miui/home/launcher/CellLayout;
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->deleteSelf()V
+    .line 2216
+    invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getLastEditState()I
+
+    move-result p1
+
+    const/16 v0, 0x11
+
+    if-ne p1, v0, :cond_0
+
+    .line 2217
+    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$8;->this$0:Lcom/miui/home/launcher/CellLayout;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->clearCellBackground()V
 
     :cond_0
     return-void

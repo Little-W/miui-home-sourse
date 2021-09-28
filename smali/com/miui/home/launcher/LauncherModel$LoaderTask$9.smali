@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;J)V
     .locals 0
 
-    .line 2083
+    .line 2093
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$9;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$9;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 6
 
-    .line 2085
+    .line 2095
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$9;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$9;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
@@ -57,14 +57,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 2086
+    .line 2096
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$9;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
 
     invoke-interface {v0}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->finishBindingSavedItems()V
 
     const-string v0, "Launcher.Model"
 
-    .line 2088
+    .line 2098
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,7 +73,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2089
+    .line 2099
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
@@ -92,9 +92,7 @@
 
     move-result-object v1
 
-    .line 2088
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
+    .line 2098
     :cond_0
     return-void
 .end method

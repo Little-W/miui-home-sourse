@@ -16,7 +16,7 @@
 .method static synthetic lambda$onFinishInflate$0(Landroid/view/View;)V
     .locals 4
 
-    .line 31
+    .line 30
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p0
@@ -30,7 +30,7 @@
 
     const/4 v1, 0x0
 
-    .line 33
+    .line 32
     new-instance v2, Lcom/miui/home/launcher/EditStateChangeReason;
 
     const-string v3, "event_finish_button"
@@ -41,7 +41,7 @@
 
     const-string p0, "finish"
 
-    .line 35
+    .line 34
     invoke-static {p0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackEditModeTopMenuClickEvent(Ljava/lang/String;)V
 
     return-void
@@ -55,17 +55,12 @@
     .line 25
     invoke-super {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->onFinishInflate()V
 
-    const v0, 0x7f08019b
+    const v0, 0x7f0801c3
 
     .line 27
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/FinishContainer;->setImageResource(I)V
 
-    const v0, 0x7f100156
-
-    .line 28
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/FinishContainer;->setTextId(I)V
-
-    .line 30
+    .line 29
     sget-object v0, Lcom/miui/home/launcher/multiselect/-$$Lambda$FinishContainer$7PmvLkz5MzKPmnHhL0anywnPhjM;->INSTANCE:Lcom/miui/home/launcher/multiselect/-$$Lambda$FinishContainer$7PmvLkz5MzKPmnHhL0anywnPhjM;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/FinishContainer;->setOnClickListener(Landroid/view/View$OnClickListener;)V

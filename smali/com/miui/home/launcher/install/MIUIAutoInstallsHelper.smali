@@ -17,7 +17,7 @@
 
     const-string v0, "miui_auto_install"
 
-    .line 25
+    .line 26
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/common/BaseSharePreference;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -35,7 +35,7 @@
 .method public static getInstance()Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;
     .locals 1
 
-    .line 33
+    .line 34
     invoke-static {}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper$Holder;->access$100()Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;
 
     move-result-object v0
@@ -46,7 +46,7 @@
 .method private static isRecommendAppExist()Z
     .locals 2
 
-    .line 54
+    .line 55
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -54,7 +54,7 @@
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 55
+    .line 56
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -72,7 +72,7 @@
 .method public static supportAutoInstall()Z
     .locals 3
 
-    .line 37
+    .line 38
     invoke-static {}, Lmiui/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -89,12 +89,10 @@
 
     const-string v1, "only support main space"
 
-    .line 38
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
+    .line 39
     return v2
 
-    .line 41
+    .line 42
     :cond_0
     sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->IS_MIUI_10:Z
 
@@ -106,7 +104,7 @@
 
     goto :goto_0
 
-    .line 45
+    .line 46
     :cond_1
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
@@ -122,9 +120,7 @@
 
     const-string v1, "recommend app exist"
 
-    .line 46
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
+    .line 47
     return v2
 
     :cond_2
@@ -138,9 +134,7 @@
 
     const-string v1, "only support miui12"
 
-    .line 42
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
+    .line 43
     return v2
 .end method
 
@@ -153,28 +147,28 @@
 
     const/4 v1, 0x0
 
-    .line 70
+    .line 71
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 72
+    .line 73
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 74
+    .line 75
     :cond_0
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     const-string v1, "packageSet/"
 
-    .line 75
+    .line 76
     invoke-virtual {p0, v1, v0}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->putStringSet(Ljava/lang/String;Ljava/util/Set;)V
 
-    .line 76
+    .line 77
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -191,7 +185,72 @@
 
     invoke-virtual {p0, v0, p2}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 77
+    .line 78
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "/title"
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1, p3}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method addPreinstallPackage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    const-string v0, "preInstallPackageSet/"
+
+    const/4 v1, 0x0
+
+    .line 98
+    invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 100
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    .line 102
+    :cond_0
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    const-string v1, "preInstallPackageSet/"
+
+    .line 103
+    invoke-virtual {p0, v1, v0}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->putStringSet(Ljava/lang/String;Ljava/util/Set;)V
+
+    .line 104
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "/icon"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0, p2}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 105
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -218,14 +277,14 @@
 
     const/4 v1, 0x0
 
-    .line 62
+    .line 63
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 64
+    .line 65
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p1
@@ -241,7 +300,7 @@
 .method public getPackageIcon(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 81
+    .line 82
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -266,7 +325,7 @@
 .method public getPackageTitle(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 85
+    .line 86
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -303,21 +362,21 @@
 
     const/4 v1, 0x0
 
-    .line 89
+    .line 90
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 91
+    .line 92
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     return-object v0
 
-    .line 93
+    .line 94
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 

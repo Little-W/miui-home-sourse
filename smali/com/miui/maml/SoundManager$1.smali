@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/maml/SoundManager;)V
     .locals 0
 
-    .line 104
+    .line 103
     iput-object p1, p0, Lcom/miui/maml/SoundManager$1;->this$0:Lcom/miui/maml/SoundManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 5
 
-    .line 107
+    .line 106
     iget-object v0, p0, Lcom/miui/maml/SoundManager$1;->this$0:Lcom/miui/maml/SoundManager;
 
     new-instance v1, Landroid/media/SoundPool;
@@ -53,7 +53,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/maml/SoundManager;->access$002(Lcom/miui/maml/SoundManager;Landroid/media/SoundPool;)Landroid/media/SoundPool;
 
-    .line 108
+    .line 107
     iget-object v0, p0, Lcom/miui/maml/SoundManager$1;->this$0:Lcom/miui/maml/SoundManager;
 
     invoke-static {v0}, Lcom/miui/maml/SoundManager;->access$000(Lcom/miui/maml/SoundManager;)Landroid/media/SoundPool;
@@ -64,7 +64,7 @@
 
     invoke-virtual {v0, v1}, Landroid/media/SoundPool;->setOnLoadCompleteListener(Landroid/media/SoundPool$OnLoadCompleteListener;)V
 
-    .line 109
+    .line 108
     iget-object v0, p0, Lcom/miui/maml/SoundManager$1;->this$0:Lcom/miui/maml/SoundManager;
 
     invoke-static {v0}, Lcom/miui/maml/SoundManager;->access$100(Lcom/miui/maml/SoundManager;)Ljava/lang/Object;
@@ -73,7 +73,7 @@
 
     monitor-enter v0
 
-    .line 110
+    .line 109
     :try_start_0
     iget-object v1, p0, Lcom/miui/maml/SoundManager$1;->this$0:Lcom/miui/maml/SoundManager;
 
@@ -81,7 +81,7 @@
 
     invoke-static {v1, v2}, Lcom/miui/maml/SoundManager;->access$202(Lcom/miui/maml/SoundManager;Z)Z
 
-    .line 111
+    .line 110
     iget-object v1, p0, Lcom/miui/maml/SoundManager$1;->this$0:Lcom/miui/maml/SoundManager;
 
     invoke-static {v1}, Lcom/miui/maml/SoundManager;->access$100(Lcom/miui/maml/SoundManager;)Ljava/lang/Object;
@@ -90,7 +90,7 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->notify()V
 
-    .line 112
+    .line 111
     monitor-exit v0
 
     return-void

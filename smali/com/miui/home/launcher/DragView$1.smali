@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DragView;FFFFF)V
     .locals 0
 
-    .line 720
+    .line 761
     iput-object p1, p0, Lcom/miui/home/launcher/DragView$1;->this$0:Lcom/miui/home/launcher/DragView;
 
     iput p2, p0, Lcom/miui/home/launcher/DragView$1;->val$initialScale:F
@@ -58,7 +58,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 4
 
-    .line 723
+    .line 764
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -73,7 +73,7 @@
 
     sub-float/2addr v0, p1
 
-    .line 724
+    .line 765
     iget v1, p0, Lcom/miui/home/launcher/DragView$1;->val$initialScale:F
 
     iget v2, p0, Lcom/miui/home/launcher/DragView$1;->val$finalScale:F
@@ -84,17 +84,17 @@
 
     add-float/2addr v1, v2
 
-    .line 725
+    .line 766
     iget-object v2, p0, Lcom/miui/home/launcher/DragView$1;->this$0:Lcom/miui/home/launcher/DragView;
 
     invoke-virtual {v2, v1}, Lcom/miui/home/launcher/DragView;->setScaleX(F)V
 
-    .line 726
+    .line 767
     iget-object v2, p0, Lcom/miui/home/launcher/DragView$1;->this$0:Lcom/miui/home/launcher/DragView;
 
     invoke-virtual {v2, v1}, Lcom/miui/home/launcher/DragView;->setScaleY(F)V
 
-    .line 727
+    .line 768
     iget-object v1, p0, Lcom/miui/home/launcher/DragView$1;->this$0:Lcom/miui/home/launcher/DragView;
 
     iget v2, p0, Lcom/miui/home/launcher/DragView$1;->val$finalAlpha:F
@@ -109,7 +109,7 @@
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/DragView;->setAlpha(F)V
 
-    .line 728
+    .line 769
     iget-object v1, p0, Lcom/miui/home/launcher/DragView$1;->this$0:Lcom/miui/home/launcher/DragView;
 
     iget v2, p0, Lcom/miui/home/launcher/DragView$1;->val$fromRotation:F
@@ -124,7 +124,7 @@
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/DragView;->setRotation(F)V
 
-    .line 729
+    .line 770
     iget-object p1, p0, Lcom/miui/home/launcher/DragView$1;->this$0:Lcom/miui/home/launcher/DragView;
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/DragView;->access$000(Lcom/miui/home/launcher/DragView;F)V

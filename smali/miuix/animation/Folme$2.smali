@@ -18,7 +18,7 @@
 .method constructor <init>(Landroid/os/Looper;)V
     .locals 0
 
-    .line 352
+    .line 376
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -29,22 +29,22 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 355
+    .line 379
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 356
+    .line 380
     invoke-static {}, Lmiuix/animation/Folme;->access$200()V
 
-    .line 357
+    .line 381
     invoke-static {v1}, Lmiuix/animation/Folme;->access$000(Z)V
 
     return-void
 
-    .line 360
+    .line 384
     :cond_0
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 

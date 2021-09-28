@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/smallwindow/SmallWindowListRecyclerView;)V
     .locals 0
 
-    .line 115
+    .line 112
     iput-object p1, p0, Lcom/miui/home/smallwindow/SmallWindowListRecyclerView$2;->this$0:Lcom/miui/home/smallwindow/SmallWindowListRecyclerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 115
+    .line 112
     check-cast p1, Ljava/util/ArrayList;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/smallwindow/SmallWindowListRecyclerView$2;->accept(Ljava/util/ArrayList;)V
@@ -58,7 +58,7 @@
 .method public accept(Ljava/util/ArrayList;)V
     .locals 1
 
-    .line 118
+    .line 115
     iget-object v0, p0, Lcom/miui/home/smallwindow/SmallWindowListRecyclerView$2;->this$0:Lcom/miui/home/smallwindow/SmallWindowListRecyclerView;
 
     invoke-static {v0}, Lcom/miui/home/smallwindow/SmallWindowListRecyclerView;->access$000(Lcom/miui/home/smallwindow/SmallWindowListRecyclerView;)Lcom/miui/home/smallwindow/BaseDelegateAdapter;
@@ -67,7 +67,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/smallwindow/BaseDelegateAdapter;->setItemInfoList(Ljava/util/ArrayList;)V
 
-    .line 119
+    .line 116
     iget-object p1, p0, Lcom/miui/home/smallwindow/SmallWindowListRecyclerView$2;->this$0:Lcom/miui/home/smallwindow/SmallWindowListRecyclerView;
 
     invoke-static {p1}, Lcom/miui/home/smallwindow/SmallWindowListRecyclerView;->access$000(Lcom/miui/home/smallwindow/SmallWindowListRecyclerView;)Lcom/miui/home/smallwindow/BaseDelegateAdapter;

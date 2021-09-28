@@ -230,7 +230,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "{"
+    const-string/jumbo v1, "{"
 
     .line 130
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -287,7 +287,7 @@
     goto :goto_0
 
     :cond_1
-    const-string p0, "}"
+    const-string/jumbo p0, "}"
 
     .line 141
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -443,6 +443,8 @@
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
 
     invoke-interface {v0, v2, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

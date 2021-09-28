@@ -4,6 +4,9 @@
 
 
 # virtual methods
+.method public abstract getContainerId()J
+.end method
+
 .method public abstract onDragCompleted(Lcom/miui/home/launcher/DropTarget;Lcom/miui/home/launcher/DragObject;)V
 .end method
 

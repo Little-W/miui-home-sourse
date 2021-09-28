@@ -26,24 +26,24 @@
 .method public constructor <init>(Lcom/miui/maml/data/Expression;Lcom/miui/maml/data/Expression;Lcom/miui/maml/data/Expression$Ope;)V
     .locals 1
 
-    .line 569
+    .line 647
     invoke-direct {p0}, Lcom/miui/maml/data/Expression;-><init>()V
 
-    .line 567
+    .line 645
     sget-object v0, Lcom/miui/maml/data/Expression$Ope;->INVALID:Lcom/miui/maml/data/Expression$Ope;
 
     iput-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mOpe:Lcom/miui/maml/data/Expression$Ope;
 
-    .line 570
+    .line 648
     iput-object p1, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
-    .line 571
+    .line 649
     iput-object p2, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp2:Lcom/miui/maml/data/Expression;
 
-    .line 572
+    .line 650
     iput-object p3, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mOpe:Lcom/miui/maml/data/Expression$Ope;
 
-    .line 573
+    .line 651
     iget-object p1, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mOpe:Lcom/miui/maml/data/Expression$Ope;
 
     sget-object p2, Lcom/miui/maml/data/Expression$Ope;->INVALID:Lcom/miui/maml/data/Expression$Ope;
@@ -52,7 +52,7 @@
 
     const-string p1, "Expression"
 
-    .line 574
+    .line 652
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,15 +78,15 @@
 .method public accept(Lcom/miui/maml/data/ExpressionVisitor;)V
     .locals 1
 
-    .line 699
+    .line 777
     invoke-virtual {p1, p0}, Lcom/miui/maml/data/ExpressionVisitor;->visit(Lcom/miui/maml/data/Expression;)V
 
-    .line 700
+    .line 778
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/data/Expression;->accept(Lcom/miui/maml/data/ExpressionVisitor;)V
 
-    .line 701
+    .line 779
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp2:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/data/Expression;->accept(Lcom/miui/maml/data/ExpressionVisitor;)V
@@ -97,7 +97,7 @@
 .method public evaluate()D
     .locals 9
 
-    .line 580
+    .line 658
     sget-object v0, Lcom/miui/maml/data/Expression$1;->$SwitchMap$com$miui$maml$data$Expression$Ope:[I
 
     iget-object v1, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mOpe:Lcom/miui/maml/data/Expression$Ope;
@@ -122,12 +122,12 @@
 
     const-string v1, "fail to evalute BinaryExpression, invalid operator"
 
-    .line 621
+    .line 699
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-wide v3
 
-    .line 618
+    .line 696
     :pswitch_0
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -153,7 +153,7 @@
     :goto_0
     return-wide v1
 
-    .line 616
+    .line 694
     :pswitch_1
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -179,7 +179,7 @@
     :goto_1
     return-wide v1
 
-    .line 614
+    .line 692
     :pswitch_2
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -205,7 +205,7 @@
     :goto_2
     return-wide v1
 
-    .line 612
+    .line 690
     :pswitch_3
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -231,7 +231,7 @@
     :goto_3
     return-wide v1
 
-    .line 610
+    .line 688
     :pswitch_4
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -262,7 +262,7 @@
     :goto_4
     return-wide v1
 
-    .line 608
+    .line 686
     :pswitch_5
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -292,7 +292,7 @@
     :goto_5
     return-wide v1
 
-    .line 606
+    .line 684
     :pswitch_6
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -318,7 +318,7 @@
     :goto_6
     return-wide v1
 
-    .line 604
+    .line 682
     :pswitch_7
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -344,7 +344,7 @@
     :goto_7
     return-wide v1
 
-    .line 601
+    .line 679
     :pswitch_8
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -370,7 +370,7 @@
 
     return-wide v0
 
-    .line 599
+    .line 677
     :pswitch_9
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -396,7 +396,7 @@
 
     return-wide v0
 
-    .line 597
+    .line 675
     :pswitch_a
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -420,7 +420,7 @@
 
     return-wide v0
 
-    .line 595
+    .line 673
     :pswitch_b
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -444,7 +444,7 @@
 
     return-wide v0
 
-    .line 593
+    .line 671
     :pswitch_c
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -468,7 +468,7 @@
 
     return-wide v0
 
-    .line 590
+    .line 668
     :pswitch_d
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -486,7 +486,7 @@
 
     return-wide v0
 
-    .line 588
+    .line 666
     :pswitch_e
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -504,7 +504,7 @@
 
     return-wide v0
 
-    .line 586
+    .line 664
     :pswitch_f
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -522,7 +522,7 @@
 
     return-wide v0
 
-    .line 582
+    .line 660
     :pswitch_10
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -540,7 +540,7 @@
 
     return-wide v0
 
-    .line 584
+    .line 662
     :cond_9
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -585,21 +585,21 @@
 .method public evaluateStr()Ljava/lang/String;
     .locals 5
 
-    .line 679
+    .line 757
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 680
+    .line 758
     iget-object v1, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp2:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 681
+    .line 759
     sget-object v2, Lcom/miui/maml/data/Expression$1;->$SwitchMap$com$miui$maml$data$Expression$Ope:[I
 
     iget-object v3, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mOpe:Lcom/miui/maml/data/Expression$Ope;
@@ -620,7 +620,7 @@
 
     const-string v1, "fail to evalute string BinaryExpression, invalid operator"
 
-    .line 693
+    .line 771
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v3
@@ -642,7 +642,7 @@
 
     return-object v0
 
-    .line 690
+    .line 768
     :cond_3
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -662,7 +662,7 @@
 .method public isNull()Z
     .locals 3
 
-    .line 660
+    .line 738
     sget-object v0, Lcom/miui/maml/data/Expression$1;->$SwitchMap$com$miui$maml$data$Expression$Ope:[I
 
     iget-object v1, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mOpe:Lcom/miui/maml/data/Expression$Ope;
@@ -685,7 +685,7 @@
 
     return v2
 
-    .line 671
+    .line 749
     :pswitch_0
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
@@ -709,7 +709,7 @@
     :cond_1
     return v1
 
-    .line 663
+    .line 741
     :cond_2
     :pswitch_1
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
@@ -755,7 +755,7 @@
 .method public preciseEvaluate()Ljava/math/BigDecimal;
     .locals 5
 
-    .line 627
+    .line 705
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mOpe:Lcom/miui/maml/data/Expression$Ope;
 
     sget-object v1, Lcom/miui/maml/data/Expression$Ope;->INVALID:Lcom/miui/maml/data/Expression$Ope;
@@ -764,14 +764,14 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 628
+    .line 706
     iget-object v0, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp1:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->preciseEvaluate()Ljava/math/BigDecimal;
 
     move-result-object v0
 
-    .line 629
+    .line 707
     iget-object v1, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mExp2:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->preciseEvaluate()Ljava/math/BigDecimal;
@@ -782,7 +782,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 631
+    .line 709
     sget-object v3, Lcom/miui/maml/data/Expression$1;->$SwitchMap$com$miui$maml$data$Expression$Ope:[I
 
     iget-object v4, p0, Lcom/miui/maml/data/Expression$BinaryExpression;->mOpe:Lcom/miui/maml/data/Expression$Ope;
@@ -801,7 +801,7 @@
 
     goto :goto_0
 
-    .line 646
+    .line 724
     :pswitch_0
     :try_start_0
     invoke-virtual {v0, v1}, Ljava/math/BigDecimal;->remainder(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
@@ -815,7 +815,7 @@
     :catch_0
     return-object v2
 
-    .line 640
+    .line 718
     :pswitch_1
     :try_start_1
     sget-object v3, Ljava/math/MathContext;->DECIMAL128:Ljava/math/MathContext;
@@ -831,7 +831,7 @@
     :catch_1
     return-object v2
 
-    .line 637
+    .line 715
     :pswitch_2
     invoke-virtual {v0, v1}, Ljava/math/BigDecimal;->multiply(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
 
@@ -839,7 +839,7 @@
 
     return-object v0
 
-    .line 633
+    .line 711
     :pswitch_3
     invoke-virtual {v0, v1}, Ljava/math/BigDecimal;->add(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
 
@@ -847,7 +847,7 @@
 
     return-object v0
 
-    .line 635
+    .line 713
     :cond_0
     invoke-virtual {v0, v1}, Ljava/math/BigDecimal;->subtract(Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
 
@@ -861,7 +861,7 @@
 
     const-string v1, "fail to PRECISE evalute BinaryExpression, invalid operator"
 
-    .line 654
+    .line 732
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v2

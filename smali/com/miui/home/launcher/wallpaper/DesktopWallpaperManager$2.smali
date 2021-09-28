@@ -56,8 +56,6 @@
     const-string v1, "adaptHomeToWallpaper, launcher is destroy"
 
     .line 73
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 77
@@ -79,8 +77,6 @@
     const-string v1, "adaptHomeToWallpaper, launcher is loading"
 
     .line 78
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 79
     iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$2;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 
@@ -104,8 +100,6 @@
     const-string v1, "adaptHomeToWallpaper, notify everyone"
 
     .line 82
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 83
     iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$2;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 

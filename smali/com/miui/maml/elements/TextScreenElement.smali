@@ -54,7 +54,7 @@
 
 .field private mMultiLine:Z
 
-.field private mPaint:Landroid/text/TextPaint;
+.field private final mPaint:Landroid/text/TextPaint;
 
 .field private mPreviousTime:J
 
@@ -72,11 +72,19 @@
 
 .field private mSpacingAdd:F
 
+.field private mSpacingAddExp:Lcom/miui/maml/data/Expression;
+
 .field private mSpacingMult:F
+
+.field private mSpacingMultExp:Lcom/miui/maml/data/Expression;
 
 .field private mText:Ljava/lang/String;
 
 .field private mTextColorProperty:Lcom/miui/maml/folme/PropertyWrapper;
+
+.field private mTextFontName:Ljava/lang/String;
+
+.field private mTextFontVar:Lcom/miui/maml/data/IndexedVariable;
 
 .field private mTextHeight:F
 
@@ -99,14 +107,14 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 56
+    .line 58
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/miui/maml/elements/TextScreenElement;->mLock:Ljava/lang/Object;
 
-    .line 58
+    .line 60
     new-instance v0, Lcom/miui/maml/elements/TextScreenElement$1;
 
     const-string v1, "textColor"
@@ -115,7 +123,7 @@
 
     sput-object v0, Lcom/miui/maml/elements/TextScreenElement;->TEXT_COLOR:Lcom/miui/maml/folme/AnimatedProperty$AnimatedColorProperty;
 
-    .line 82
+    .line 84
     new-instance v0, Lcom/miui/maml/elements/TextScreenElement$2;
 
     const-string v1, "textSize"
@@ -124,7 +132,7 @@
 
     sput-object v0, Lcom/miui/maml/elements/TextScreenElement;->TEXT_SIZE:Lcom/miui/maml/folme/AnimatedProperty;
 
-    .line 106
+    .line 108
     new-instance v0, Lcom/miui/maml/elements/TextScreenElement$3;
 
     const-string v1, "textShadowColor"
@@ -133,7 +141,7 @@
 
     sput-object v0, Lcom/miui/maml/elements/TextScreenElement;->TEXT_SHADOW_COLOR:Lcom/miui/maml/folme/AnimatedProperty$AnimatedColorProperty;
 
-    .line 131
+    .line 133
     sget-object v0, Lcom/miui/maml/folme/AnimatedProperty;->sPropertyNameMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     const-string v1, "textColor"
@@ -142,7 +150,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 132
+    .line 134
     sget-object v0, Lcom/miui/maml/folme/AnimatedTarget;->sPropertyMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     const/16 v1, 0x3eb
@@ -155,7 +163,7 @@
 
     invoke-virtual {v0, v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 133
+    .line 135
     sget-object v0, Lcom/miui/maml/folme/AnimatedTarget;->sPropertyTypeMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     sget-object v2, Lcom/miui/maml/elements/TextScreenElement;->TEXT_COLOR:Lcom/miui/maml/folme/AnimatedProperty$AnimatedColorProperty;
@@ -166,7 +174,7 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 135
+    .line 137
     sget-object v0, Lcom/miui/maml/folme/AnimatedProperty;->sPropertyNameMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     const-string v1, "textSize"
@@ -175,7 +183,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 136
+    .line 138
     sget-object v0, Lcom/miui/maml/folme/AnimatedTarget;->sPropertyMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     const/16 v1, 0x3ea
@@ -188,7 +196,7 @@
 
     invoke-virtual {v0, v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 137
+    .line 139
     sget-object v0, Lcom/miui/maml/folme/AnimatedTarget;->sPropertyTypeMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     sget-object v2, Lcom/miui/maml/elements/TextScreenElement;->TEXT_SIZE:Lcom/miui/maml/folme/AnimatedProperty;
@@ -199,7 +207,7 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 139
+    .line 141
     sget-object v0, Lcom/miui/maml/folme/AnimatedProperty;->sPropertyNameMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     const-string v1, "textShadowColor"
@@ -208,7 +216,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 140
+    .line 142
     sget-object v0, Lcom/miui/maml/folme/AnimatedTarget;->sPropertyMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     const/16 v1, 0x3f5
@@ -221,7 +229,7 @@
 
     invoke-virtual {v0, v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 141
+    .line 143
     sget-object v0, Lcom/miui/maml/folme/AnimatedTarget;->sPropertyTypeMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     sget-object v2, Lcom/miui/maml/elements/TextScreenElement;->TEXT_SHADOW_COLOR:Lcom/miui/maml/folme/AnimatedProperty$AnimatedColorProperty;
@@ -238,10 +246,10 @@
 .method public constructor <init>(Lorg/w3c/dom/Element;Lcom/miui/maml/ScreenElementRoot;)V
     .locals 2
 
-    .line 200
+    .line 207
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/elements/AnimatedScreenElement;-><init>(Lorg/w3c/dom/Element;Lcom/miui/maml/ScreenElementRoot;)V
 
-    .line 148
+    .line 150
     new-instance p2, Landroid/text/TextPaint;
 
     invoke-direct {p2}, Landroid/text/TextPaint;-><init>()V
@@ -250,19 +258,24 @@
 
     const p2, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 153
+    .line 155
     iput p2, p0, Lcom/miui/maml/elements/TextScreenElement;->mMarqueePos:F
 
     const-wide/high16 v0, 0x4032000000000000L    # 18.0
 
-    .line 181
+    .line 184
     invoke-virtual {p0, v0, v1}, Lcom/miui/maml/elements/TextScreenElement;->scale(D)F
 
     move-result p2
 
     iput p2, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextSize:F
 
-    .line 201
+    const/4 p2, 0x0
+
+    .line 203
+    iput-object p2, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextFontName:Ljava/lang/String;
+
+    .line 208
     invoke-direct {p0, p1}, Lcom/miui/maml/elements/TextScreenElement;->load(Lorg/w3c/dom/Element;)V
 
     return-void
@@ -271,7 +284,7 @@
 .method static synthetic access$000(Lcom/miui/maml/elements/TextScreenElement;)Lcom/miui/maml/folme/PropertyWrapper;
     .locals 0
 
-    .line 33
+    .line 35
     iget-object p0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextColorProperty:Lcom/miui/maml/folme/PropertyWrapper;
 
     return-object p0
@@ -280,7 +293,7 @@
 .method static synthetic access$100(Lcom/miui/maml/elements/TextScreenElement;)Lcom/miui/maml/folme/PropertyWrapper;
     .locals 0
 
-    .line 33
+    .line 35
     iget-object p0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextSizeProperty:Lcom/miui/maml/folme/PropertyWrapper;
 
     return-object p0
@@ -289,7 +302,7 @@
 .method static synthetic access$200(Lcom/miui/maml/elements/TextScreenElement;)Lcom/miui/maml/folme/PropertyWrapper;
     .locals 0
 
-    .line 33
+    .line 35
     iget-object p0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextShadowColorProperty:Lcom/miui/maml/folme/PropertyWrapper;
 
     return-object p0
@@ -298,10 +311,10 @@
 .method private getAlignment()Landroid/text/Layout$Alignment;
     .locals 5
 
-    .line 446
+    .line 493
     sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
 
-    .line 447
+    .line 494
     sget-object v1, Lcom/miui/maml/elements/TextScreenElement$4;->$SwitchMap$com$miui$maml$elements$ScreenElement$Align:[I
 
     iget-object v2, p0, Lcom/miui/maml/elements/TextScreenElement;->mAlign:Lcom/miui/maml/elements/ScreenElement$Align;
@@ -316,7 +329,7 @@
 
     goto :goto_0
 
-    .line 460
+    .line 507
     :pswitch_0
     :try_start_0
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -342,7 +355,7 @@
 
     const-string v2, "TextScreenElement"
 
-    .line 462
+    .line 509
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -365,13 +378,13 @@
 
     goto :goto_0
 
-    .line 456
+    .line 503
     :pswitch_1
     sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
 
     goto :goto_0
 
-    .line 450
+    .line 497
     :pswitch_2
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -397,7 +410,7 @@
 
     const-string v2, "TextScreenElement"
 
-    .line 452
+    .line 499
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -431,8 +444,56 @@
     .end packed-switch
 .end method
 
+.method private getSpacingAdd()F
+    .locals 2
+
+    .line 595
+    iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mSpacingAddExp:Lcom/miui/maml/data/Expression;
+
+    if-eqz v0, :cond_0
+
+    .line 596
+    invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
+
+    move-result-wide v0
+
+    double-to-float v0, v0
+
+    return v0
+
+    .line 598
+    :cond_0
+    iget v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mSpacingAdd:F
+
+    return v0
+.end method
+
+.method private getSpacingMult()F
+    .locals 2
+
+    .line 588
+    iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mSpacingMultExp:Lcom/miui/maml/data/Expression;
+
+    if-eqz v0, :cond_0
+
+    .line 589
+    invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
+
+    move-result-wide v0
+
+    double-to-float v0, v0
+
+    return v0
+
+    .line 591
+    :cond_0
+    iget v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mSpacingMult:F
+
+    return v0
+.end method
+
 .method private load(Lorg/w3c/dom/Element;)V
-    .locals 20
+    .locals 21
 
     move-object/from16 v1, p0
 
@@ -442,20 +503,20 @@
 
     return-void
 
-    .line 208
+    .line 215
     :cond_0
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v3
 
-    .line 209
+    .line 216
     iget-boolean v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mHasName:Z
 
     const/4 v4, 0x1
 
     if-eqz v0, :cond_1
 
-    .line 210
+    .line 217
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -482,7 +543,7 @@
 
     iput-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextWidthVar:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 211
+    .line 218
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -509,7 +570,7 @@
 
     iput-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextHeightVar:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 213
+    .line 220
     :cond_1
     iget-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mStyle:Lcom/miui/maml/StylesManager$Style;
 
@@ -519,7 +580,7 @@
 
     iput-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mFormatter:Lcom/miui/maml/util/TextFormatter;
 
-    .line 214
+    .line 221
     iget-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mStyle:Lcom/miui/maml/StylesManager$Style;
 
     invoke-static {v3, v2, v0}, Lcom/miui/maml/util/ColorParser;->fromElement(Lcom/miui/maml/data/Variables;Lorg/w3c/dom/Element;Lcom/miui/maml/StylesManager$Style;)Lcom/miui/maml/util/ColorParser;
@@ -532,7 +593,7 @@
 
     const/4 v5, 0x0
 
-    .line 215
+    .line 222
     invoke-virtual {v1, v2, v0, v5}, Lcom/miui/maml/elements/TextScreenElement;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result v0
@@ -541,10 +602,10 @@
 
     const-string v0, "spacingMult"
 
-    const/high16 v5, 0x3f800000    # 1.0f
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    .line 216
-    invoke-virtual {v1, v2, v0, v5}, Lcom/miui/maml/elements/TextScreenElement;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
+    .line 223
+    invoke-virtual {v1, v2, v0, v6}, Lcom/miui/maml/elements/TextScreenElement;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
 
     move-result v0
 
@@ -552,21 +613,47 @@
 
     const-string v0, "spacingAdd"
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    .line 217
-    invoke-virtual {v1, v2, v0, v5}, Lcom/miui/maml/elements/TextScreenElement;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
+    .line 224
+    invoke-virtual {v1, v2, v0, v6}, Lcom/miui/maml/elements/TextScreenElement;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
 
     move-result v0
 
     iput v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mSpacingAdd:F
 
+    const-string v0, "spacingMultExp"
+
+    .line 225
+    invoke-virtual {v1, v2, v0}, Lcom/miui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Lcom/miui/maml/data/Expression;->build(Lcom/miui/maml/data/Variables;Ljava/lang/String;)Lcom/miui/maml/data/Expression;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mSpacingMultExp:Lcom/miui/maml/data/Expression;
+
+    const-string v0, "spacingAddExp"
+
+    .line 226
+    invoke-virtual {v1, v2, v0}, Lcom/miui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Lcom/miui/maml/data/Expression;->build(Lcom/miui/maml/data/Variables;Ljava/lang/String;)Lcom/miui/maml/data/Expression;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mSpacingAddExp:Lcom/miui/maml/data/Expression;
+
     const-string v0, "marqueeGap"
 
-    const/4 v6, 0x2
+    const/4 v7, 0x2
 
-    .line 218
-    invoke-virtual {v1, v2, v0, v6}, Lcom/miui/maml/elements/TextScreenElement;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
+    .line 227
+    invoke-virtual {v1, v2, v0, v7}, Lcom/miui/maml/elements/TextScreenElement;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result v0
 
@@ -574,7 +661,7 @@
 
     const-string v0, "multiLine"
 
-    .line 219
+    .line 228
     invoke-virtual {v1, v2, v0}, Lcom/miui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -587,7 +674,7 @@
 
     const-string v0, "enableFontScale"
 
-    .line 220
+    .line 229
     invoke-virtual {v1, v2, v0}, Lcom/miui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -600,69 +687,69 @@
 
     const-string v0, "size"
 
-    .line 221
+    .line 230
     invoke-virtual {v1, v2, v0}, Lcom/miui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v3, v0}, Lcom/miui/maml/data/Expression;->build(Lcom/miui/maml/data/Variables;Ljava/lang/String;)Lcom/miui/maml/data/Expression;
 
-    move-result-object v9
+    move-result-object v10
 
     const-string v0, "fontFamily"
 
-    .line 222
+    .line 231
     invoke-virtual {v1, v2, v0}, Lcom/miui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v6, "fontPath"
+    const-string v7, "fontPath"
 
-    .line 223
-    invoke-virtual {v1, v2, v6}, Lcom/miui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
+    .line 232
+    invoke-virtual {v1, v2, v7}, Lcom/miui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    .line 224
+    .line 233
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v7
+    move-result v8
 
-    if-nez v7, :cond_2
+    if-nez v8, :cond_2
 
-    const-string v6, "fontStyle"
+    const-string v5, "fontStyle"
 
-    .line 225
-    invoke-virtual {v1, v2, v6}, Lcom/miui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
+    .line 234
+    invoke-virtual {v1, v2, v5}, Lcom/miui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v5
 
-    invoke-static {v6}, Lcom/miui/maml/elements/TextScreenElement;->parseFontStyle(Ljava/lang/String;)I
+    invoke-static {v5}, Lcom/miui/maml/elements/TextScreenElement;->parseFontStyle(Ljava/lang/String;)I
 
-    move-result v6
+    move-result v5
 
-    .line 226
+    .line 235
     iget-object v7, v1, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
-    invoke-static {v0, v6}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
+    invoke-static {v0, v5}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
 
     move-result-object v0
 
     invoke-virtual {v7, v0}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 227
+    .line 236
     :cond_2
-    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_5
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    .line 230
+    .line 239
     :try_start_0
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
 
@@ -674,9 +761,9 @@
 
     move-result-object v0
 
-    invoke-static {v0, v6}, Landroid/graphics/Typeface;->createFromAsset(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/graphics/Typeface;
+    invoke-static {v0, v7}, Landroid/graphics/Typeface;->createFromAsset(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/graphics/Typeface;
 
-    move-result-object v7
+    move-result-object v8
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -685,39 +772,69 @@
     :catch_0
     move-exception v0
 
-    const-string v6, "TextScreenElement"
+    const-string v9, "TextScreenElement"
 
-    .line 232
-    new-instance v8, Ljava/lang/StringBuilder;
+    .line 241
+    new-instance v11, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v10, "create typeface from asset fail :"
+    const-string v12, "create typeface from asset fail :"
 
-    invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v6, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v9, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
-    if-eqz v7, :cond_4
+    if-nez v8, :cond_4
 
-    .line 235
-    iget-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
+    const-string v0, "@"
 
-    invoke-virtual {v0, v7}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+    .line 244
+    invoke-virtual {v7, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 245
+    new-instance v0, Lcom/miui/maml/data/IndexedVariable;
+
+    invoke-virtual {v7, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-direct {v0, v7, v3, v5}, Lcom/miui/maml/data/IndexedVariable;-><init>(Ljava/lang/String;Lcom/miui/maml/data/Variables;Z)V
+
+    iput-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextFontVar:Lcom/miui/maml/data/IndexedVariable;
 
     goto :goto_1
 
+    .line 248
     :cond_3
+    invoke-direct {v1, v7}, Lcom/miui/maml/elements/TextScreenElement;->updateTypeface(Ljava/lang/String;)V
+
+    :cond_4
+    :goto_1
+    if-eqz v8, :cond_6
+
+    .line 252
+    iget-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
+
+    invoke-virtual {v0, v8}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+
+    goto :goto_2
+
+    :cond_5
     const-string v0, "bold"
 
-    .line 238
+    .line 255
     invoke-virtual {v1, v2, v0}, Lcom/miui/maml/elements/TextScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -726,68 +843,63 @@
 
     move-result v0
 
-    .line 239
-    iget-object v6, v1, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
+    .line 256
+    iget-object v5, v1, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
-    invoke-virtual {v6, v0}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
+    invoke-virtual {v5, v0}, Landroid/text/TextPaint;->setFakeBoldText(Z)V
 
-    .line 244
-    new-instance v0, Landroid/view/ContextThemeWrapper;
+    .line 262
+    iget-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
 
-    move-result-object v6
+    move-result-object v5
 
-    iget-object v6, v6, Lcom/miui/maml/ScreenContext;->mContext:Landroid/content/Context;
+    iget-object v5, v5, Lcom/miui/maml/ScreenContext;->mContext:Landroid/content/Context;
 
-    sget v7, Lmiui/R$style;->Theme_Light:I
+    iget-object v7, v1, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
-    invoke-direct {v0, v6, v7}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
-
-    .line 245
-    iget-object v6, v1, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
-
-    invoke-virtual {v6}, Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
+    invoke-virtual {v7}, Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
 
     move-result-object v7
 
-    invoke-static {v0, v7}, Lcom/miui/maml/util/HideSdkDependencyUtils;->TypefaceUtils_replaceTypeface(Landroid/content/Context;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+    invoke-static {v5, v7}, Lcom/miui/maml/util/HideSdkDependencyUtils;->TypefaceUtils_replaceTypeface(Landroid/content/Context;Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    move-result-object v0
+    move-result-object v5
 
-    invoke-virtual {v6, v0}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+    invoke-virtual {v0, v5}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 247
-    :cond_4
-    :goto_1
+    .line 264
+    :cond_6
+    :goto_2
     iget-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->getColor()I
 
-    move-result v6
+    move-result v5
 
-    invoke-virtual {v0, v6}, Landroid/text/TextPaint;->setColor(I)V
+    invoke-virtual {v0, v5}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 248
+    .line 265
     iget-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
-    const-wide/high16 v6, 0x4032000000000000L    # 18.0
+    const-wide/high16 v7, 0x4032000000000000L    # 18.0
 
-    invoke-virtual {v1, v6, v7}, Lcom/miui/maml/elements/TextScreenElement;->scale(D)F
+    invoke-virtual {v1, v7, v8}, Lcom/miui/maml/elements/TextScreenElement;->scale(D)F
 
-    move-result v6
+    move-result v5
 
-    invoke-virtual {v0, v6}, Landroid/text/TextPaint;->setTextSize(F)V
+    invoke-virtual {v0, v5}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 249
+    .line 266
     iget-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0, v4}, Landroid/text/TextPaint;->setAntiAlias(Z)V
 
     const-string v0, "shadowRadius"
 
-    .line 251
-    invoke-virtual {v1, v2, v0, v5}, Lcom/miui/maml/elements/TextScreenElement;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
+    .line 268
+    invoke-virtual {v1, v2, v0, v6}, Lcom/miui/maml/elements/TextScreenElement;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
 
     move-result v0
 
@@ -795,8 +907,8 @@
 
     const-string v0, "shadowDx"
 
-    .line 252
-    invoke-virtual {v1, v2, v0, v5}, Lcom/miui/maml/elements/TextScreenElement;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
+    .line 269
+    invoke-virtual {v1, v2, v0, v6}, Lcom/miui/maml/elements/TextScreenElement;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
 
     move-result v0
 
@@ -804,8 +916,8 @@
 
     const-string v0, "shadowDy"
 
-    .line 253
-    invoke-virtual {v1, v2, v0, v5}, Lcom/miui/maml/elements/TextScreenElement;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
+    .line 270
+    invoke-virtual {v1, v2, v0, v6}, Lcom/miui/maml/elements/TextScreenElement;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
 
     move-result v0
 
@@ -813,7 +925,7 @@
 
     const-string v0, "shadowColor"
 
-    .line 254
+    .line 271
     iget-object v4, v1, Lcom/miui/maml/elements/TextScreenElement;->mStyle:Lcom/miui/maml/StylesManager$Style;
 
     invoke-static {v3, v2, v0, v4}, Lcom/miui/maml/util/ColorParser;->fromElement(Lcom/miui/maml/data/Variables;Lorg/w3c/dom/Element;Ljava/lang/String;Lcom/miui/maml/StylesManager$Style;)Lcom/miui/maml/util/ColorParser;
@@ -822,7 +934,7 @@
 
     iput-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mShadowColorParser:Lcom/miui/maml/util/ColorParser;
 
-    .line 255
+    .line 272
     iget-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     iget v2, v1, Lcom/miui/maml/elements/TextScreenElement;->mShadowRadius:F
@@ -837,7 +949,7 @@
 
     invoke-virtual {v0, v2, v3, v4, v5}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
-    .line 257
+    .line 274
     new-instance v0, Lcom/miui/maml/folme/PropertyWrapper;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -854,25 +966,25 @@
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object v8
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
 
-    move-result-object v8
+    move-result-object v9
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->isInFolmeMode()Z
 
-    move-result v10
+    move-result v11
 
-    const-wide/high16 v11, 0x4032000000000000L    # 18.0
+    const-wide/high16 v12, 0x4032000000000000L    # 18.0
 
-    move-object v6, v0
+    move-object v7, v0
 
-    invoke-direct/range {v6 .. v12}, Lcom/miui/maml/folme/PropertyWrapper;-><init>(Ljava/lang/String;Lcom/miui/maml/data/Variables;Lcom/miui/maml/data/Expression;ZD)V
+    invoke-direct/range {v7 .. v13}, Lcom/miui/maml/folme/PropertyWrapper;-><init>(Ljava/lang/String;Lcom/miui/maml/data/Variables;Lcom/miui/maml/data/Expression;ZD)V
 
     iput-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextSizeProperty:Lcom/miui/maml/folme/PropertyWrapper;
 
-    .line 258
+    .line 275
     new-instance v0, Lcom/miui/maml/folme/PropertyWrapper;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -889,17 +1001,17 @@
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v15
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
 
-    move-result-object v15
+    move-result-object v16
 
-    const/16 v16, 0x0
+    const/16 v17, 0x0
 
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->isInFolmeMode()Z
 
-    move-result v17
+    move-result v18
 
     iget-object v2, v1, Lcom/miui/maml/elements/TextScreenElement;->mColorParser:Lcom/miui/maml/util/ColorParser;
 
@@ -909,15 +1021,15 @@
 
     int-to-double v2, v2
 
-    move-object v13, v0
+    move-object v14, v0
 
-    move-wide/from16 v18, v2
+    move-wide/from16 v19, v2
 
-    invoke-direct/range {v13 .. v19}, Lcom/miui/maml/folme/PropertyWrapper;-><init>(Ljava/lang/String;Lcom/miui/maml/data/Variables;Lcom/miui/maml/data/Expression;ZD)V
+    invoke-direct/range {v14 .. v20}, Lcom/miui/maml/folme/PropertyWrapper;-><init>(Ljava/lang/String;Lcom/miui/maml/data/Variables;Lcom/miui/maml/data/Expression;ZD)V
 
     iput-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextColorProperty:Lcom/miui/maml/folme/PropertyWrapper;
 
-    .line 259
+    .line 276
     new-instance v0, Lcom/miui/maml/folme/PropertyWrapper;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -966,7 +1078,7 @@
 .method private static parseFontStyle(Ljava/lang/String;)I
     .locals 2
 
-    .line 263
+    .line 280
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -988,7 +1100,7 @@
     :cond_0
     const-string v0, "bold"
 
-    .line 265
+    .line 282
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1002,7 +1114,7 @@
     :cond_1
     const-string v0, "italic"
 
-    .line 267
+    .line 284
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1016,7 +1128,7 @@
     :cond_2
     const-string v0, "bold_italic"
 
-    .line 269
+    .line 286
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1035,10 +1147,47 @@
     return v1
 .end method
 
+.method private updateTextFontIfNeed()V
+    .locals 2
+
+    .line 369
+    iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextFontVar:Lcom/miui/maml/data/IndexedVariable;
+
+    if-eqz v0, :cond_0
+
+    .line 370
+    invoke-virtual {v0}, Lcom/miui/maml/data/IndexedVariable;->getString()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 371
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    iget-object v1, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextFontName:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 372
+    invoke-direct {p0, v0}, Lcom/miui/maml/elements/TextScreenElement;->updateTypeface(Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method private updateTextSize()V
     .locals 2
 
-    .line 438
+    .line 485
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextSizeProperty:Lcom/miui/maml/folme/PropertyWrapper;
 
     invoke-virtual {v0}, Lcom/miui/maml/folme/PropertyWrapper;->getValue()D
@@ -1051,12 +1200,12 @@
 
     iput v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextSize:F
 
-    .line 439
+    .line 486
     iget-boolean v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mFontScaleEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 440
+    .line 487
     iget v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextSize:F
 
     iget-object v1, p0, Lcom/miui/maml/elements/TextScreenElement;->mRoot:Lcom/miui/maml/ScreenElementRoot;
@@ -1069,7 +1218,7 @@
 
     iput v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextSize:F
 
-    .line 442
+    .line 489
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
@@ -1085,10 +1234,10 @@
 
     const/4 v0, 0x0
 
-    .line 418
+    .line 465
     iput v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextWidth:F
 
-    .line 419
+    .line 466
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1097,12 +1246,12 @@
 
     if-nez v0, :cond_2
 
-    .line 420
+    .line 467
     iget-boolean v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mMultiLine:Z
 
     if-eqz v0, :cond_1
 
-    .line 421
+    .line 468
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
     const-string v1, "\n"
@@ -1113,13 +1262,13 @@
 
     const/4 v1, 0x0
 
-    .line 422
+    .line 469
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_2
 
-    .line 423
+    .line 470
     iget-object v2, p0, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     aget-object v3, v0, v1
@@ -1128,14 +1277,14 @@
 
     move-result v2
 
-    .line 424
+    .line 471
     iget v3, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextWidth:F
 
     cmpl-float v3, v2, v3
 
     if-lez v3, :cond_0
 
-    .line 425
+    .line 472
     iput v2, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextWidth:F
 
     :cond_0
@@ -1143,7 +1292,7 @@
 
     goto :goto_0
 
-    .line 429
+    .line 476
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
@@ -1155,13 +1304,13 @@
 
     iput v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextWidth:F
 
-    .line 432
+    .line 479
     :cond_2
     iget-boolean v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mHasName:Z
 
     if-eqz v0, :cond_3
 
-    .line 433
+    .line 480
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextWidthVar:Lcom/miui/maml/data/IndexedVariable;
 
     iget v1, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextWidth:F
@@ -1178,12 +1327,80 @@
     return-void
 .end method
 
+.method private updateTypeface(Ljava/lang/String;)V
+    .locals 3
+
+    .line 378
+    iput-object p1, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextFontName:Ljava/lang/String;
+
+    .line 379
+    invoke-virtual {p0}, Lcom/miui/maml/elements/TextScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/miui/maml/ScreenContext;->mResourceManager:Lcom/miui/maml/ResourceManager;
+
+    invoke-virtual {v0, p1}, Lcom/miui/maml/ResourceManager;->getFontFile(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 380
+    invoke-virtual {p1}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 382
+    :try_start_0
+    invoke-static {p1}, Landroid/graphics/Typeface;->createFromFile(Ljava/io/File;)Landroid/graphics/Typeface;
+
+    move-result-object p1
+
+    .line 383
+    iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
+
+    invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    const-string v0, "TextScreenElement"
+
+    .line 385
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "int. create typeface from PATH failed. "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    :goto_0
+    return-void
+.end method
+
 
 # virtual methods
 .method protected doRender(Landroid/graphics/Canvas;)V
     .locals 14
 
-    .line 285
+    .line 302
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1194,7 +1411,7 @@
 
     return-void
 
-    .line 288
+    .line 305
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
@@ -1204,7 +1421,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 289
+    .line 306
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getAlpha()I
@@ -1221,7 +1438,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setAlpha(I)V
 
-    .line 290
+    .line 307
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     iget v1, p0, Lcom/miui/maml/elements/TextScreenElement;->mShadowRadius:F
@@ -1236,7 +1453,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/text/TextPaint;->setShadowLayer(FFFI)V
 
-    .line 292
+    .line 309
     invoke-virtual {p0}, Lcom/miui/maml/elements/TextScreenElement;->getWidth()F
 
     move-result v0
@@ -1263,24 +1480,24 @@
 
     if-ltz v5, :cond_2
 
-    .line 294
+    .line 311
     iget v5, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextWidth:F
 
     cmpl-float v5, v0, v5
 
     if-lez v5, :cond_3
 
-    .line 295
+    .line 312
     :cond_2
     iget v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextWidth:F
 
-    .line 298
+    .line 315
     :cond_3
     invoke-virtual {p0}, Lcom/miui/maml/elements/TextScreenElement;->getHeight()F
 
     move-result v5
 
-    .line 299
+    .line 316
     iget-object v6, p0, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v6}, Landroid/text/TextPaint;->getTextSize()F
@@ -1291,31 +1508,31 @@
 
     if-gez v7, :cond_4
 
-    .line 301
+    .line 318
     iget v5, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextHeight:F
 
-    .line 303
+    .line 320
     :cond_4
     invoke-virtual {p0, v1, v0}, Lcom/miui/maml/elements/TextScreenElement;->getLeft(FF)F
 
     move-result v7
 
-    .line 304
+    .line 321
     invoke-virtual {p0, v1, v5}, Lcom/miui/maml/elements/TextScreenElement;->getTop(FF)F
 
     move-result v8
 
-    .line 306
+    .line 323
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 312
+    .line 329
     iget v9, p0, Lcom/miui/maml/elements/TextScreenElement;->mShadowRadius:F
 
     cmpl-float v10, v9, v1
 
     if-eqz v10, :cond_5
 
-    .line 313
+    .line 330
     iget v10, p0, Lcom/miui/maml/elements/TextScreenElement;->mShadowDx:F
 
     sub-float/2addr v10, v9
@@ -1324,7 +1541,7 @@
 
     move-result v9
 
-    .line 314
+    .line 331
     iget v10, p0, Lcom/miui/maml/elements/TextScreenElement;->mShadowDx:F
 
     iget v11, p0, Lcom/miui/maml/elements/TextScreenElement;->mShadowRadius:F
@@ -1335,7 +1552,7 @@
 
     move-result v10
 
-    .line 315
+    .line 332
     iget v11, p0, Lcom/miui/maml/elements/TextScreenElement;->mShadowDy:F
 
     iget v12, p0, Lcom/miui/maml/elements/TextScreenElement;->mShadowRadius:F
@@ -1346,7 +1563,7 @@
 
     move-result v11
 
-    .line 316
+    .line 333
     iget v12, p0, Lcom/miui/maml/elements/TextScreenElement;->mShadowDy:F
 
     iget v13, p0, Lcom/miui/maml/elements/TextScreenElement;->mShadowRadius:F
@@ -1368,7 +1585,7 @@
 
     move v12, v11
 
-    .line 319
+    .line 336
     :goto_1
     invoke-virtual {p1, v7, v8}, Landroid/graphics/Canvas;->translate(FF)V
 
@@ -1386,55 +1603,55 @@
 
     add-float/2addr v5, v12
 
-    .line 320
+    .line 337
     invoke-virtual {p1, v9, v11, v10, v5}, Landroid/graphics/Canvas;->clipRect(FFFF)Z
 
-    .line 323
+    .line 340
     iget-object v2, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
 
     if-eqz v2, :cond_9
 
-    .line 324
+    .line 341
     invoke-virtual {v2}, Landroid/text/StaticLayout;->getLineCount()I
 
     move-result v2
 
     if-ne v2, v3, :cond_8
 
-    .line 325
+    .line 342
     iget-boolean v2, p0, Lcom/miui/maml/elements/TextScreenElement;->mShouldMarquee:Z
 
     if-eqz v2, :cond_8
 
-    .line 326
+    .line 343
     iget-object v2, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v2, v4}, Landroid/text/StaticLayout;->getLineStart(I)I
 
     move-result v9
 
-    .line 327
+    .line 344
     iget-object v2, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v2, v4}, Landroid/text/StaticLayout;->getLineEnd(I)I
 
     move-result v10
 
-    .line 328
+    .line 345
     iget-object v2, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v2, v4}, Landroid/text/StaticLayout;->getLineTop(I)I
 
     move-result v2
 
-    .line 329
+    .line 346
     iget-object v3, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v3, v4}, Landroid/text/StaticLayout;->getLineLeft(I)F
 
     move-result v3
 
-    .line 330
+    .line 347
     iget-object v8, p0, Lcom/miui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
     iget v4, p0, Lcom/miui/maml/elements/TextScreenElement;->mMarqueePos:F
@@ -1453,14 +1670,14 @@
 
     invoke-virtual/range {v7 .. v13}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;IIFFLandroid/graphics/Paint;)V
 
-    .line 331
+    .line 348
     iget v4, p0, Lcom/miui/maml/elements/TextScreenElement;->mMarqueePos:F
 
     cmpl-float v1, v4, v1
 
     if-eqz v1, :cond_9
 
-    .line 332
+    .line 349
     iget v1, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextWidth:F
 
     add-float/2addr v4, v1
@@ -1479,7 +1696,7 @@
 
     if-gez v0, :cond_9
 
-    .line 334
+    .line 351
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
     add-float/2addr v3, v4
@@ -1490,13 +1707,13 @@
 
     goto :goto_2
 
-    .line 338
+    .line 355
     :cond_8
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 342
+    .line 359
     :cond_9
     :goto_2
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
@@ -1505,29 +1722,29 @@
 .end method
 
 .method protected doTick(J)V
-    .locals 18
+    .locals 20
 
     move-object/from16 v1, p0
 
     move-wide/from16 v2, p1
 
-    .line 361
+    .line 401
     sget-object v4, Lcom/miui/maml/elements/TextScreenElement;->mLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 362
+    .line 402
     :try_start_0
     invoke-super/range {p0 .. p2}, Lcom/miui/maml/elements/AnimatedScreenElement;->doTick(J)V
 
-    .line 363
+    .line 403
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->isVisible()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 364
+    .line 404
     monitor-exit v4
 
     return-void
@@ -1535,20 +1752,20 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 366
+    .line 406
     iput-boolean v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mShouldMarquee:Z
 
-    .line 367
+    .line 407
     iget-object v5, v1, Lcom/miui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
-    .line 368
+    .line 408
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->getText()Ljava/lang/String;
 
     move-result-object v6
 
     iput-object v6, v1, Lcom/miui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
-    .line 369
+    .line 409
     iget-object v6, v1, Lcom/miui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1559,25 +1776,28 @@
 
     const/4 v0, 0x0
 
-    .line 370
+    .line 410
     iput-object v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
 
-    .line 371
+    .line 411
     invoke-direct/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->updateTextWidth()V
 
-    .line 372
+    .line 412
     monitor-exit v4
 
     return-void
 
-    .line 375
+    .line 415
     :cond_1
     iget v6, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextSize:F
 
-    .line 376
+    .line 416
     invoke-direct/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->updateTextSize()V
 
-    .line 378
+    .line 417
+    invoke-direct/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->updateTextFontIfNeed()V
+
+    .line 419
     iget-object v7, v1, Lcom/miui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
     invoke-static {v5, v7}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -1608,16 +1828,16 @@
     :goto_1
     if-eqz v5, :cond_4
 
-    .line 380
+    .line 421
     invoke-direct/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->updateTextWidth()V
 
-    .line 383
+    .line 424
     :cond_4
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->getWidth()F
 
     move-result v6
 
-    .line 384
+    .line 425
     iget-boolean v8, v1, Lcom/miui/maml/elements/TextScreenElement;->mMultiLine:Z
 
     if-nez v8, :cond_5
@@ -1634,7 +1854,7 @@
 
     move v0, v7
 
-    .line 385
+    .line 426
     :cond_5
     iget-boolean v8, v1, Lcom/miui/maml/elements/TextScreenElement;->mMultiLine:Z
 
@@ -1649,13 +1869,23 @@
     :cond_6
     iget v6, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextWidth:F
 
-    .line 387
+    .line 428
     :cond_7
-    iget-object v8, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
+    invoke-direct/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->getSpacingMult()F
 
-    const v9, 0x7f7fffff    # Float.MAX_VALUE
+    move-result v8
 
-    if-eqz v8, :cond_8
+    .line 429
+    invoke-direct/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->getSpacingAdd()F
+
+    move-result v9
+
+    .line 431
+    iget-object v10, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
+
+    const v11, 0x7f7fffff    # Float.MAX_VALUE
+
+    if-eqz v10, :cond_8
 
     if-nez v5, :cond_8
 
@@ -1663,48 +1893,68 @@
 
     cmpl-float v5, v5, v6
 
+    if-nez v5, :cond_8
+
+    iget v5, v1, Lcom/miui/maml/elements/TextScreenElement;->mSpacingMult:F
+
+    cmpl-float v5, v5, v8
+
+    if-nez v5, :cond_8
+
+    iget v5, v1, Lcom/miui/maml/elements/TextScreenElement;->mSpacingAdd:F
+
+    cmpl-float v5, v5, v9
+
     if-eqz v5, :cond_a
 
-    .line 388
+    .line 433
     :cond_8
     iput v6, v1, Lcom/miui/maml/elements/TextScreenElement;->mLayoutWidth:F
 
-    .line 389
+    .line 434
+    iput v8, v1, Lcom/miui/maml/elements/TextScreenElement;->mSpacingMult:F
+
+    .line 435
+    iput v9, v1, Lcom/miui/maml/elements/TextScreenElement;->mSpacingAdd:F
+
+    .line 436
     new-instance v5, Landroid/text/StaticLayout;
 
-    iget-object v11, v1, Lcom/miui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
+    iget-object v13, v1, Lcom/miui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
-    iget-object v12, v1, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
+    iget-object v14, v1, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     iget v6, v1, Lcom/miui/maml/elements/TextScreenElement;->mLayoutWidth:F
 
-    float-to-double v13, v6
+    float-to-double v8, v6
 
-    invoke-static {v13, v14}, Ljava/lang/Math;->ceil(D)D
+    invoke-static {v8, v9}, Ljava/lang/Math;->ceil(D)D
 
-    move-result-wide v13
+    move-result-wide v8
 
-    double-to-int v13, v13
+    double-to-int v15, v8
 
     invoke-direct/range {p0 .. p0}, Lcom/miui/maml/elements/TextScreenElement;->getAlignment()Landroid/text/Layout$Alignment;
 
-    move-result-object v14
+    move-result-object v16
 
-    iget v15, v1, Lcom/miui/maml/elements/TextScreenElement;->mSpacingMult:F
+    iget v6, v1, Lcom/miui/maml/elements/TextScreenElement;->mSpacingMult:F
 
-    iget v6, v1, Lcom/miui/maml/elements/TextScreenElement;->mSpacingAdd:F
+    iget v8, v1, Lcom/miui/maml/elements/TextScreenElement;->mSpacingAdd:F
 
-    const/16 v17, 0x0
+    const/16 v19, 0x0
 
-    move-object v10, v5
+    move-object v12, v5
 
-    move/from16 v16, v6
+    move/from16 v17, v6
 
-    invoke-direct/range {v10 .. v17}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZ)V
+    move/from16 v18, v8
+
+    invoke-direct/range {v12 .. v19}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZ)V
 
     iput-object v5, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
 
-    .line 391
+    .line 438
     iget-object v5, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
 
     iget-object v6, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextLayout:Landroid/text/StaticLayout;
@@ -1721,46 +1971,46 @@
 
     iput v5, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextHeight:F
 
-    .line 392
+    .line 439
     iget-boolean v5, v1, Lcom/miui/maml/elements/TextScreenElement;->mHasName:Z
 
     if-eqz v5, :cond_9
 
-    .line 393
+    .line 440
     iget-object v5, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextHeightVar:Lcom/miui/maml/data/IndexedVariable;
 
     iget v6, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextHeight:F
 
-    float-to-double v10, v6
+    float-to-double v8, v6
 
-    invoke-virtual {v1, v10, v11}, Lcom/miui/maml/elements/TextScreenElement;->descale(D)D
+    invoke-virtual {v1, v8, v9}, Lcom/miui/maml/elements/TextScreenElement;->descale(D)D
 
-    move-result-wide v10
+    move-result-wide v8
 
-    invoke-virtual {v5, v10, v11}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
+    invoke-virtual {v5, v8, v9}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 395
+    .line 442
     :cond_9
-    iput v9, v1, Lcom/miui/maml/elements/TextScreenElement;->mMarqueePos:F
+    iput v11, v1, Lcom/miui/maml/elements/TextScreenElement;->mMarqueePos:F
 
     :cond_a
     if-eqz v0, :cond_d
 
-    .line 400
+    .line 447
     iget v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mMarqueePos:F
 
-    cmpl-float v0, v0, v9
+    cmpl-float v0, v0, v11
 
     if-nez v0, :cond_b
 
     const/high16 v0, 0x42480000    # 50.0f
 
-    .line 402
+    .line 449
     iput v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mMarqueePos:F
 
     goto :goto_2
 
-    .line 404
+    .line 451
     :cond_b
     iget v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mMarqueePos:F
 
@@ -1784,7 +2034,7 @@
 
     iput v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mMarqueePos:F
 
-    .line 405
+    .line 452
     iget v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mMarqueePos:F
 
     iget v5, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextWidth:F
@@ -1795,7 +2045,7 @@
 
     if-gez v0, :cond_c
 
-    .line 406
+    .line 453
     iget v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mMarqueePos:F
 
     iget v5, v1, Lcom/miui/maml/elements/TextScreenElement;->mTextWidth:F
@@ -1814,21 +2064,21 @@
 
     iput v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mMarqueePos:F
 
-    .line 409
+    .line 456
     :cond_c
     :goto_2
     iput-wide v2, v1, Lcom/miui/maml/elements/TextScreenElement;->mPreviousTime:J
 
-    .line 410
+    .line 457
     iput-boolean v7, v1, Lcom/miui/maml/elements/TextScreenElement;->mShouldMarquee:Z
 
-    .line 413
+    .line 460
     :cond_d
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 414
+    .line 461
     iget-boolean v0, v1, Lcom/miui/maml/elements/TextScreenElement;->mShouldMarquee:Z
 
     if-eqz v0, :cond_e
@@ -1848,7 +2098,7 @@
     :catchall_0
     move-exception v0
 
-    .line 413
+    .line 460
     :try_start_1
     monitor-exit v4
     :try_end_1
@@ -1860,20 +2110,20 @@
 .method public finish()V
     .locals 1
 
-    .line 352
+    .line 392
     invoke-super {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->finish()V
 
     const/4 v0, 0x0
 
-    .line 353
+    .line 393
     iput-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mText:Ljava/lang/String;
 
-    .line 354
+    .line 394
     iput-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mSetText:Ljava/lang/String;
 
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 355
+    .line 395
     iput v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mMarqueePos:F
 
     return-void
@@ -1882,14 +2132,14 @@
 .method protected getColor()I
     .locals 2
 
-    .line 504
+    .line 551
     invoke-virtual {p0}, Lcom/miui/maml/elements/TextScreenElement;->isInFolmeMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 505
+    .line 552
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextColorProperty:Lcom/miui/maml/folme/PropertyWrapper;
 
     invoke-virtual {v0}, Lcom/miui/maml/folme/PropertyWrapper;->getValue()D
@@ -1902,7 +2152,7 @@
 
     return v0
 
-    .line 507
+    .line 554
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mColorParser:Lcom/miui/maml/util/ColorParser;
 
@@ -1916,7 +2166,7 @@
 .method protected getFormat()Ljava/lang/String;
     .locals 1
 
-    .line 476
+    .line 523
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mFormatter:Lcom/miui/maml/util/TextFormatter;
 
     invoke-virtual {v0}, Lcom/miui/maml/util/TextFormatter;->getFormat()Ljava/lang/String;
@@ -1929,7 +2179,7 @@
 .method public getHeight()F
     .locals 2
 
-    .line 525
+    .line 572
     invoke-super {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getHeight()F
 
     move-result v0
@@ -1940,7 +2190,7 @@
 
     if-gtz v1, :cond_0
 
-    .line 527
+    .line 574
     iget v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextHeight:F
 
     :cond_0
@@ -1950,14 +2200,14 @@
 .method protected getShadowColor()I
     .locals 2
 
-    .line 511
+    .line 558
     invoke-virtual {p0}, Lcom/miui/maml/elements/TextScreenElement;->isInFolmeMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 512
+    .line 559
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextShadowColorProperty:Lcom/miui/maml/folme/PropertyWrapper;
 
     invoke-virtual {v0}, Lcom/miui/maml/folme/PropertyWrapper;->getValue()D
@@ -1970,7 +2220,7 @@
 
     return v0
 
-    .line 514
+    .line 561
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mShadowColorParser:Lcom/miui/maml/util/ColorParser;
 
@@ -1984,14 +2234,14 @@
 .method protected getText()Ljava/lang/String;
     .locals 3
 
-    .line 488
+    .line 535
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mSetText:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
-    .line 493
+    .line 540
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mFormatter:Lcom/miui/maml/util/TextFormatter;
 
@@ -2005,12 +2255,12 @@
 
     const-string v2, "\n"
 
-    .line 495
+    .line 542
     invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 496
+    .line 543
     iget-boolean v1, p0, Lcom/miui/maml/elements/TextScreenElement;->mMultiLine:Z
 
     if-nez v1, :cond_1
@@ -2019,7 +2269,7 @@
 
     const-string v2, " "
 
-    .line 497
+    .line 544
     invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v0
@@ -2031,7 +2281,7 @@
 .method public getWidth()F
     .locals 2
 
-    .line 519
+    .line 566
     invoke-super {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getWidth()F
 
     move-result v0
@@ -2042,7 +2292,7 @@
 
     if-gtz v1, :cond_0
 
-    .line 520
+    .line 567
     iget v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextWidth:F
 
     :cond_0
@@ -2052,8 +2302,11 @@
 .method public init()V
     .locals 0
 
-    .line 347
+    .line 364
     invoke-super {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->init()V
+
+    .line 365
+    invoke-direct {p0}, Lcom/miui/maml/elements/TextScreenElement;->updateTextFontIfNeed()V
 
     return-void
 .end method
@@ -2061,20 +2314,20 @@
 .method protected initProperties()V
     .locals 1
 
-    .line 277
+    .line 294
     invoke-super {p0}, Lcom/miui/maml/elements/AnimatedScreenElement;->initProperties()V
 
-    .line 278
+    .line 295
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextSizeProperty:Lcom/miui/maml/folme/PropertyWrapper;
 
     invoke-virtual {v0}, Lcom/miui/maml/folme/PropertyWrapper;->init()V
 
-    .line 279
+    .line 296
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextColorProperty:Lcom/miui/maml/folme/PropertyWrapper;
 
     invoke-virtual {v0}, Lcom/miui/maml/folme/PropertyWrapper;->init()V
 
-    .line 280
+    .line 297
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mTextShadowColorProperty:Lcom/miui/maml/folme/PropertyWrapper;
 
     invoke-virtual {v0}, Lcom/miui/maml/folme/PropertyWrapper;->init()V
@@ -2085,10 +2338,10 @@
 .method protected onVisibilityChange(Z)V
     .locals 1
 
-    .line 471
+    .line 518
     invoke-super {p0, p1}, Lcom/miui/maml/elements/AnimatedScreenElement;->onVisibilityChange(Z)V
 
-    .line 472
+    .line 519
     iget-boolean v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mShouldMarquee:Z
 
     if-eqz v0, :cond_0
@@ -2111,15 +2364,15 @@
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 1
 
-    .line 534
+    .line 581
     invoke-super {p0, p1}, Lcom/miui/maml/elements/AnimatedScreenElement;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 535
+    .line 582
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mPaint:Landroid/text/TextPaint;
 
     if-eqz v0, :cond_0
 
-    .line 536
+    .line 583
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
     :cond_0
@@ -2129,7 +2382,7 @@
 .method public varargs setParams([Ljava/lang/Object;)V
     .locals 1
 
-    .line 480
+    .line 527
     iget-object v0, p0, Lcom/miui/maml/elements/TextScreenElement;->mFormatter:Lcom/miui/maml/util/TextFormatter;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/util/TextFormatter;->setParams([Ljava/lang/Object;)V
@@ -2140,7 +2393,7 @@
 .method public setText(Ljava/lang/String;)V
     .locals 0
 
-    .line 484
+    .line 531
     iput-object p1, p0, Lcom/miui/maml/elements/TextScreenElement;->mSetText:Ljava/lang/String;
 
     return-void

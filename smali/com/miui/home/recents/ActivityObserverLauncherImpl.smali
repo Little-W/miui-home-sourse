@@ -186,8 +186,6 @@
     const-string p2, "registerMiuiActivityObserver am = null"
 
     .line 169
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return v0
 
     .line 172
@@ -254,12 +252,10 @@
     const-string p1, "ActivityObserverLauncherImpl"
 
     const-string p2, "registerMiuiActivityObserver success"
-
-    .line 179
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 179
     return v6
 
     :catch_0
@@ -270,8 +266,6 @@
     const-string v1, "registerMiuiActivityObserver error"
 
     .line 182
-    invoke-static {p2, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     return v0
 .end method
 
@@ -348,15 +342,13 @@
     const-string p1, "ActivityObserverLauncherImpl"
 
     const-string v0, "registerForAtLeastAndroidS success"
-
-    .line 198
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 198
     goto :goto_0
 
     :catch_0
@@ -367,8 +359,6 @@
     const-string v1, "registerForAtLeastAndroidS error"
 
     .line 200
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 .end method

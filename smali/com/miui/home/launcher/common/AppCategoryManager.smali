@@ -286,8 +286,6 @@
     const-string v2, "checkCategoryNameSupport error"
 
     .line 142
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     goto :goto_1
 
     .line 145
@@ -503,8 +501,6 @@
 
     move-result-object p1
 
-    invoke-static {v5, p1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     .line 182
     :cond_5
     invoke-virtual {v2}, Ljava/util/Scanner;->close()V
@@ -565,8 +561,6 @@
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
-
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -827,8 +821,6 @@
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
-
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
 .end method

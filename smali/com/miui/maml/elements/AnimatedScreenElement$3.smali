@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/maml/elements/AnimatedScreenElement;->folmeFromTo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    value = Lcom/miui/maml/elements/AnimatedScreenElement;->folmeFromToImpl(Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfig;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,25 +20,25 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/maml/elements/AnimatedScreenElement;
 
-.field final synthetic val$configName:Ljava/lang/String;
+.field final synthetic val$config:Lmiuix/animation/base/AnimConfig;
 
-.field final synthetic val$fromStateName:Ljava/lang/String;
+.field final synthetic val$fromState:Lmiuix/animation/controller/AnimState;
 
-.field final synthetic val$toStateName:Ljava/lang/String;
+.field final synthetic val$toState:Lmiuix/animation/controller/AnimState;
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/maml/elements/AnimatedScreenElement;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method constructor <init>(Lcom/miui/maml/elements/AnimatedScreenElement;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfig;)V
     .locals 0
 
-    .line 824
+    .line 911
     iput-object p1, p0, Lcom/miui/maml/elements/AnimatedScreenElement$3;->this$0:Lcom/miui/maml/elements/AnimatedScreenElement;
 
-    iput-object p2, p0, Lcom/miui/maml/elements/AnimatedScreenElement$3;->val$fromStateName:Ljava/lang/String;
+    iput-object p2, p0, Lcom/miui/maml/elements/AnimatedScreenElement$3;->val$fromState:Lmiuix/animation/controller/AnimState;
 
-    iput-object p3, p0, Lcom/miui/maml/elements/AnimatedScreenElement$3;->val$toStateName:Ljava/lang/String;
+    iput-object p3, p0, Lcom/miui/maml/elements/AnimatedScreenElement$3;->val$toState:Lmiuix/animation/controller/AnimState;
 
-    iput-object p4, p0, Lcom/miui/maml/elements/AnimatedScreenElement$3;->val$configName:Ljava/lang/String;
+    iput-object p4, p0, Lcom/miui/maml/elements/AnimatedScreenElement$3;->val$config:Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,18 +48,50 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 6
 
-    .line 827
+    .line 915
+    :try_start_0
     iget-object v0, p0, Lcom/miui/maml/elements/AnimatedScreenElement$3;->this$0:Lcom/miui/maml/elements/AnimatedScreenElement;
 
-    iget-object v1, p0, Lcom/miui/maml/elements/AnimatedScreenElement$3;->val$fromStateName:Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/miui/maml/elements/AnimatedScreenElement;->getAnimTarget()Lcom/miui/maml/folme/AnimatedTarget;
 
-    iget-object v2, p0, Lcom/miui/maml/elements/AnimatedScreenElement$3;->val$toStateName:Ljava/lang/String;
+    move-result-object v0
 
-    iget-object v3, p0, Lcom/miui/maml/elements/AnimatedScreenElement$3;->val$configName:Ljava/lang/String;
+    invoke-static {v0}, Lmiuix/animation/Folme;->useAt(Lmiuix/animation/IAnimTarget;)Lmiuix/animation/IFolme;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/miui/maml/elements/AnimatedScreenElement;->access$200(Lcom/miui/maml/elements/AnimatedScreenElement;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
+    invoke-interface {v0}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/maml/elements/AnimatedScreenElement$3;->val$fromState:Lmiuix/animation/controller/AnimState;
+
+    iget-object v2, p0, Lcom/miui/maml/elements/AnimatedScreenElement$3;->val$toState:Lmiuix/animation/controller/AnimState;
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Lmiuix/animation/base/AnimConfig;
+
+    const/4 v4, 0x0
+
+    iget-object v5, p0, Lcom/miui/maml/elements/AnimatedScreenElement$3;->val$config:Lmiuix/animation/base/AnimConfig;
+
+    aput-object v5, v3, v4
+
+    invoke-interface {v0, v1, v2, v3}, Lmiuix/animation/IStateStyle;->fromTo(Ljava/lang/Object;Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    .line 917
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_0
     return-void
 .end method

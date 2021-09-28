@@ -7,6 +7,7 @@
 .implements Lcom/miui/home/launcher/DragController$VisualizeCalibration;
 .implements Lcom/miui/home/launcher/IBackAnimView;
 .implements Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;
+.implements Lcom/miui/home/launcher/anim/IconTypeAnimTarget;
 .implements Lcom/miui/home/launcher/common/ViewPropertyBackuper;
 .implements Lcom/miui/home/launcher/interfaces/PresentAnimationResettable;
 .implements Lcom/miui/home/library/mirror/MirrorContextView;
@@ -77,7 +78,7 @@
 
 .field protected mMaskColor:I
 
-.field protected mMessage:Landroid/widget/TextView;
+.field protected mMessage:Lcom/miui/home/launcher/IconMessage;
 
 .field private mMessageAnimation:Ljava/lang/Runnable;
 
@@ -112,7 +113,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 65
+    .line 62
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x2
@@ -123,10 +124,10 @@
 
     const/4 v0, 0x0
 
-    .line 123
+    .line 120
     sput-object v0, Lcom/miui/home/launcher/ItemIcon;->sCanvas:Landroid/graphics/Canvas;
 
-    .line 124
+    .line 121
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -139,91 +140,91 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 97
+    .line 94
     invoke-direct {p0, p1, p2}, Lcom/miui/launcher/views/LauncherRelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
-    .line 74
+    .line 71
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mDrawOutline:Z
 
     const/4 p2, 0x0
 
-    .line 76
+    .line 73
     iput-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mIconBitmap:Landroid/graphics/Bitmap;
 
-    .line 77
+    .line 74
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mIsDockMode:Z
 
-    .line 84
+    .line 81
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mSkipNextAutoLayoutAnimation:Z
 
-    .line 92
+    .line 89
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mIsEnableAutoLayoutAnimation:Z
 
-    .line 93
+    .line 90
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mIsShowMessageAnimation:Z
 
-    .line 122
+    .line 119
     iput-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mIconDarkShadow:Landroid/graphics/Bitmap;
 
     const-string v0, ""
 
-    .line 184
+    .line 182
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessageOldText:Ljava/lang/CharSequence;
 
-    .line 185
+    .line 183
     new-instance v0, Lcom/miui/home/launcher/ItemIcon$1;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/ItemIcon$1;-><init>(Lcom/miui/home/launcher/ItemIcon;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessageAnimation:Ljava/lang/Runnable;
 
-    .line 318
+    .line 316
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mTouchDown:Z
 
-    .line 325
+    .line 323
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mIsFolmeDown:Z
 
-    .line 326
+    .line 324
     iput-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mDownState:Lmiuix/animation/controller/AnimState;
 
-    .line 327
+    .line 325
     iput-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mUpState:Lmiuix/animation/controller/AnimState;
 
-    .line 449
+    .line 448
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mDrawTouchMask:Z
 
     const/4 v0, 0x1
 
-    .line 450
+    .line 449
     iput-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mEnableTouchMask:Z
 
     .line 463
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mFirstDrawMark:Z
 
-    .line 821
+    .line 803
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mTempRect:Landroid/graphics/Rect;
 
-    .line 98
+    .line 95
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    .line 99
+    .line 96
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getDefaultLayerType()I
 
     move-result v0
 
     invoke-virtual {p0, v0, p2}, Lcom/miui/home/launcher/ItemIcon;->setLayerType(ILandroid/graphics/Paint;)V
 
-    const p2, 0x7f0600af
+    const p2, 0x7f0600b1
 
-    .line 100
+    .line 97
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p1
@@ -236,7 +237,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/ItemIcon;)Z
     .locals 0
 
-    .line 57
+    .line 54
     iget-boolean p0, p0, Lcom/miui/home/launcher/ItemIcon;->mIsShowMessageAnimation:Z
 
     return p0
@@ -245,7 +246,7 @@
 .method static synthetic access$102(Lcom/miui/home/launcher/ItemIcon;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 57
+    .line 54
     iput-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessageBackground:Ljava/lang/String;
 
     return-object p1
@@ -258,7 +259,7 @@
 
     if-nez p0, :cond_0
 
-    .line 810
+    .line 792
     new-instance p0, Landroid/view/ViewGroup$LayoutParams;
 
     invoke-direct {p0, v0, v0}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
@@ -267,7 +268,7 @@
 
     goto :goto_1
 
-    .line 811
+    .line 793
     :cond_0
     iget v1, p0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
@@ -284,7 +285,7 @@
 
     goto :goto_1
 
-    .line 812
+    .line 794
     :cond_2
     :goto_0
     iput v0, p0, Landroid/view/ViewGroup$LayoutParams;->height:I
@@ -293,7 +294,7 @@
 
     move-object v0, p0
 
-    .line 815
+    .line 797
     :goto_1
     instance-of p1, p1, Lcom/miui/home/launcher/CellLayout;
 
@@ -303,7 +304,7 @@
 
     if-nez p1, :cond_3
 
-    .line 816
+    .line 798
     new-instance v0, Lcom/miui/home/launcher/CellLayout$LayoutParams;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/CellLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
@@ -315,7 +316,7 @@
 .method protected static createItemIcon(ILcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 2
 
-    .line 840
+    .line 822
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -326,12 +327,12 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 841
+    .line 823
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    .line 842
+    .line 824
     :cond_0
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
@@ -349,7 +350,7 @@
 .method private drawDarkShadow(Landroid/graphics/Canvas;II)V
     .locals 5
 
-    .line 126
+    .line 124
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
 
     move-result v0
@@ -358,7 +359,7 @@
 
     return-void
 
-    .line 127
+    .line 125
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconBitmap:Landroid/graphics/Bitmap;
 
@@ -374,7 +375,7 @@
 
     if-lez p3, :cond_3
 
-    .line 128
+    .line 126
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -383,14 +384,14 @@
 
     move-result-object v0
 
-    const v2, 0x7f07010c
+    const v2, 0x7f07010e
 
-    .line 129
+    .line 127
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v2
 
-    .line 130
+    .line 128
     iget-object v3, p0, Lcom/miui/home/launcher/ItemIcon;->mIconBitmap:Landroid/graphics/Bitmap;
 
     invoke-static {v2}, Lcom/miui/home/launcher/common/Utilities;->getIconShadowBlurPaint(F)Landroid/graphics/Paint;
@@ -401,19 +402,19 @@
 
     move-result-object v3
 
-    .line 131
+    .line 129
     sget-object v4, Lcom/miui/home/launcher/ItemIcon;->sCanvas:Landroid/graphics/Canvas;
 
     if-nez v4, :cond_1
 
-    .line 132
+    .line 130
     new-instance v4, Landroid/graphics/Canvas;
 
     invoke-direct {v4}, Landroid/graphics/Canvas;-><init>()V
 
     sput-object v4, Lcom/miui/home/launcher/ItemIcon;->sCanvas:Landroid/graphics/Canvas;
 
-    .line 134
+    .line 132
     :cond_1
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
@@ -425,20 +426,20 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mIconDarkShadow:Landroid/graphics/Bitmap;
 
-    .line 135
+    .line 133
     iget-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mIconDarkShadow:Landroid/graphics/Bitmap;
 
     if-nez p2, :cond_2
 
     return-void
 
-    .line 137
+    .line 135
     :cond_2
     sget-object p3, Lcom/miui/home/launcher/ItemIcon;->sCanvas:Landroid/graphics/Canvas;
 
     invoke-virtual {p3, p2}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 138
+    .line 136
     sget-object p2, Lcom/miui/home/launcher/ItemIcon;->sTmpRect:Landroid/graphics/Rect;
 
     iget-object p3, p0, Lcom/miui/home/launcher/ItemIcon;->mIconContainer:Landroid/widget/FrameLayout;
@@ -457,7 +458,7 @@
 
     iput p3, p2, Landroid/graphics/Rect;->left:I
 
-    .line 139
+    .line 137
     sget-object p2, Lcom/miui/home/launcher/ItemIcon;->sTmpRect:Landroid/graphics/Rect;
 
     iget-object p3, p0, Lcom/miui/home/launcher/ItemIcon;->mIconContainer:Landroid/widget/FrameLayout;
@@ -476,7 +477,7 @@
 
     iput p3, p2, Landroid/graphics/Rect;->top:I
 
-    .line 140
+    .line 138
     sget-object p2, Lcom/miui/home/launcher/ItemIcon;->sTmpRect:Landroid/graphics/Rect;
 
     iget p3, p2, Landroid/graphics/Rect;->left:I
@@ -491,7 +492,7 @@
 
     iput p3, p2, Landroid/graphics/Rect;->right:I
 
-    .line 141
+    .line 139
     sget-object p2, Lcom/miui/home/launcher/ItemIcon;->sTmpRect:Landroid/graphics/Rect;
 
     iget p3, p2, Landroid/graphics/Rect;->top:I
@@ -506,14 +507,14 @@
 
     iput p3, p2, Landroid/graphics/Rect;->bottom:I
 
-    .line 142
+    .line 140
     sget-object p2, Lcom/miui/home/launcher/ItemIcon;->sCanvas:Landroid/graphics/Canvas;
 
     sget-object p3, Lcom/miui/home/launcher/ItemIcon;->sTmpRect:Landroid/graphics/Rect;
 
-    const v4, 0x7f0600d4
+    const v4, 0x7f0600d6
 
-    .line 143
+    .line 141
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v0
@@ -522,10 +523,10 @@
 
     move-result-object v0
 
-    .line 142
+    .line 140
     invoke-virtual {p2, v3, v1, p3, v0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 145
+    .line 143
     :cond_3
     iget-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mIconDarkShadow:Landroid/graphics/Bitmap;
 
@@ -533,7 +534,7 @@
 
     const/4 p3, 0x0
 
-    .line 146
+    .line 144
     invoke-virtual {p1, p2, p3, p3, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
     :cond_4
@@ -543,7 +544,7 @@
 .method private drawReflectionShadow(Landroid/graphics/Canvas;)V
     .locals 10
 
-    .line 150
+    .line 148
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->isDockViewMode()Z
 
     move-result v0
@@ -554,7 +555,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 151
+    .line 149
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getWidth()I
 
     move-result v0
@@ -567,12 +568,12 @@
 
     invoke-virtual {p1, v2, v2, v0, v1}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 152
+    .line 150
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 153
+    .line 151
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/LauncherIconImageView;->getWidth()I
@@ -593,7 +594,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
-    .line 154
+    .line 152
     invoke-virtual {v2}, Lcom/miui/home/launcher/LauncherIconImageView;->getHeight()I
 
     move-result v2
@@ -614,7 +615,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
-    .line 155
+    .line 153
     invoke-virtual {v3}, Lcom/miui/home/launcher/LauncherIconImageView;->getWidth()I
 
     move-result v3
@@ -635,10 +636,10 @@
 
     div-float/2addr v5, v4
 
-    .line 153
+    .line 151
     invoke-virtual {v0, v1, v2, v3, v5}, Landroid/graphics/Matrix;->setScale(FFFF)V
 
-    .line 156
+    .line 154
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getWidth()I
 
     move-result v1
@@ -663,7 +664,7 @@
 
     int-to-float v2, v2
 
-    .line 157
+    .line 155
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -672,7 +673,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f070109
+    const v4, 0x7f07010b
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -680,22 +681,22 @@
 
     add-float/2addr v2, v3
 
-    .line 156
+    .line 154
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 158
+    .line 156
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mIconBitmap:Landroid/graphics/Bitmap;
 
     const/4 v2, 0x0
 
     invoke-virtual {p1, v1, v0, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
 
-    .line 159
+    .line 157
     new-instance v8, Landroid/graphics/Paint;
 
     invoke-direct {v8}, Landroid/graphics/Paint;-><init>()V
 
-    .line 160
+    .line 158
     new-instance v9, Landroid/graphics/LinearGradient;
 
     const/4 v1, 0x0
@@ -716,14 +717,14 @@
 
     int-to-float v4, v0
 
-    .line 161
+    .line 159
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 162
+    .line 160
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -732,7 +733,7 @@
 
     move-result-object v0
 
-    const v5, 0x7f0600df
+    const v5, 0x7f0600e1
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -742,7 +743,7 @@
 
     goto :goto_0
 
-    .line 163
+    .line 161
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getContext()Landroid/content/Context;
 
@@ -752,7 +753,7 @@
 
     move-result-object v0
 
-    const v5, 0x7f06008f
+    const v5, 0x7f060091
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -769,10 +770,10 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/graphics/LinearGradient;-><init>(FFFFIILandroid/graphics/Shader$TileMode;)V
 
-    .line 165
+    .line 163
     invoke-virtual {v8, v9}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 166
+    .line 164
     new-instance v0, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->DST_IN:Landroid/graphics/PorterDuff$Mode;
@@ -783,7 +784,7 @@
 
     const/4 v4, 0x0
 
-    .line 167
+    .line 165
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getHeight()I
@@ -812,136 +813,6 @@
     return-void
 .end method
 
-.method public static getClosingAppDefaultDisappearRect()Landroid/graphics/Rect;
-    .locals 6
-
-    const-string v0, "ItemIcon"
-
-    .line 568
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "getClosingAppDefaultDisappearRect, Rotation="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRotation()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 569
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRotation()I
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/miui/home/recents/util/RotationHelper;->isLandscapeRotation(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 570
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
-
-    move-result v1
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    .line 571
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
-
-    move-result v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
-
-    move-result v0
-
-    .line 572
-    :goto_1
-    new-instance v2, Landroid/graphics/Rect;
-
-    invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
-
-    int-to-float v1, v1
-
-    const/high16 v3, 0x41700000    # 15.0f
-
-    div-float v3, v1, v3
-
-    const/high16 v4, 0x40000000    # 2.0f
-
-    div-float/2addr v1, v4
-
-    int-to-float v0, v0
-
-    const/high16 v5, 0x40400000    # 3.0f
-
-    div-float/2addr v0, v5
-
-    div-float/2addr v3, v4
-
-    sub-float v4, v1, v3
-
-    float-to-int v4, v4
-
-    .line 576
-    iput v4, v2, Landroid/graphics/Rect;->left:I
-
-    sub-float v4, v0, v3
-
-    float-to-int v4, v4
-
-    .line 577
-    iput v4, v2, Landroid/graphics/Rect;->top:I
-
-    add-float/2addr v1, v3
-
-    float-to-int v1, v1
-
-    .line 578
-    iput v1, v2, Landroid/graphics/Rect;->right:I
-
-    add-float/2addr v0, v3
-
-    float-to-int v0, v0
-
-    .line 579
-    iput v0, v2, Landroid/graphics/Rect;->bottom:I
-
-    .line 580
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRotation()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/util/CoordinateTransforms;->transformCoordinate(IILandroid/graphics/Rect;)Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method private getRemoteResourceDrawable(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
     .locals 3
 
@@ -949,7 +820,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 259
+    .line 257
     :try_start_0
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mContext:Landroid/content/Context;
 
@@ -965,12 +836,12 @@
 
     move-result-object v1
 
-    .line 260
+    .line 258
     invoke-virtual {v1, p1, v0, v0}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p1
 
-    .line 261
+    .line 259
     invoke-virtual {v1, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -982,7 +853,7 @@
     :catch_0
     move-exception p1
 
-    .line 263
+    .line 261
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -995,7 +866,7 @@
 
     const/16 v0, 0x3a
 
-    .line 293
+    .line 291
     invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
@@ -1012,7 +883,7 @@
 .method private initFolMe()V
     .locals 1
 
-    .line 348
+    .line 347
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ItemIcon$fBfTq352ard3SaQbwgWWjIxyQMo;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$ItemIcon$fBfTq352ard3SaQbwgWWjIxyQMo;-><init>(Lcom/miui/home/launcher/ItemIcon;)V
@@ -1025,7 +896,7 @@
 .method private initPerformClickRunnable()V
     .locals 2
 
-    .line 426
+    .line 425
     :try_start_0
     const-class v0, Landroid/view/View;
 
@@ -1039,10 +910,10 @@
 
     const/4 v1, 0x1
 
-    .line 428
+    .line 427
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 429
+    .line 428
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1058,7 +929,7 @@
     :catch_0
     move-exception v0
 
-    .line 432
+    .line 431
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -1069,7 +940,7 @@
 .method public static synthetic lambda$initFolMe$0(Lcom/miui/home/launcher/ItemIcon;)V
     .locals 4
 
-    .line 349
+    .line 348
     invoke-static {}, Lcom/miui/home/launcher/folme/FolmeUtils;->isEnable()Z
 
     move-result v0
@@ -1078,7 +949,7 @@
 
     const/4 v0, 0x1
 
-    .line 350
+    .line 349
     new-array v0, v0, [Landroid/view/View;
 
     const/4 v1, 0x0
@@ -1095,7 +966,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mStateStyle:Lmiuix/animation/IStateStyle;
 
-    .line 351
+    .line 350
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     const-string v1, "myDown"
@@ -1106,21 +977,21 @@
 
     const-wide v2, 0x3fecccccc0000000L    # 0.8999999761581421
 
-    .line 352
+    .line 351
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
     sget-object v1, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 353
+    .line 352
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mDownState:Lmiuix/animation/controller/AnimState;
 
-    .line 354
+    .line 353
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     const-string v1, "myUp"
@@ -1131,14 +1002,14 @@
 
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
-    .line 355
+    .line 354
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
 
     sget-object v1, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 356
+    .line 355
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object v0
@@ -1152,7 +1023,7 @@
 .method private setMessageIconTile([B)V
     .locals 2
 
-    .line 280
+    .line 278
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -1175,7 +1046,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 282
+    .line 280
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1184,12 +1055,12 @@
 
     move-result-object p1
 
-    .line 283
+    .line 281
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconTile:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 284
+    .line 282
     iget-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mIconTile:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setVisibility(I)V
@@ -1199,10 +1070,10 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 286
+    .line 284
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 287
+    .line 285
     iget-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mIconTile:Landroid/widget/ImageView;
 
     const/16 v0, 0x8
@@ -1217,29 +1088,29 @@
 .method private setMessageTextBackground(Ljava/lang/String;)V
     .locals 2
 
-    .line 270
+    .line 268
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/ItemIcon;->getRemoteResourceDrawable(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 272
-    iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    .line 270
+    iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v1, v0}, Lcom/miui/home/launcher/IconMessage;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
-    .line 274
+    .line 272
     :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    const v1, 0x7f080181
+    const v1, 0x7f0801a8
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/IconMessage;->setBackgroundResource(I)V
 
-    .line 276
+    .line 274
     :goto_0
     iput-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessageBackground:Ljava/lang/String;
 
@@ -1251,7 +1122,7 @@
 .method public backupProperty()V
     .locals 1
 
-    .line 779
+    .line 761
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mViewPropertyBackuperDelegate:Lcom/miui/home/launcher/common/ViewPropertyBackuperDelegate;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/ViewPropertyBackuperDelegate;->backupProperty()V
@@ -1262,7 +1133,7 @@
 .method public buildDrawingCache(Z)V
     .locals 2
 
-    .line 711
+    .line 693
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getLayerType()I
 
     move-result v0
@@ -1271,7 +1142,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 712
+    .line 694
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherRelativeLayout;->buildDrawingCache(Z)V
 
     :cond_0
@@ -1283,10 +1154,10 @@
 
     const/4 v0, 0x1
 
-    .line 466
+    .line 467
     iput-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mFirstDrawMark:Z
 
-    .line 467
+    .line 468
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherRelativeLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
     return-void
@@ -1295,29 +1166,29 @@
 .method protected drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .locals 8
 
-    .line 472
+    .line 473
     iget-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mFirstDrawMark:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
-    .line 473
+    .line 474
     invoke-static {}, Lcom/miui/home/launcher/Launcher;->isEnableIconShadow()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 474
+    .line 475
     iget-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIsHideShadow:Z
 
     if-nez v0, :cond_1
 
-    .line 475
+    .line 476
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/ItemIcon;->drawReflectionShadow(Landroid/graphics/Canvas;)V
 
-    .line 476
+    .line 477
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getMeasuredWidth()I
 
     move-result v0
@@ -1330,7 +1201,7 @@
 
     goto :goto_0
 
-    .line 478
+    .line 479
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconDarkShadow:Landroid/graphics/Bitmap;
 
@@ -1342,22 +1213,22 @@
 
     if-nez v0, :cond_1
 
-    .line 479
+    .line 480
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconDarkShadow:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     const/4 v0, 0x0
 
-    .line 480
+    .line 481
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconDarkShadow:Landroid/graphics/Bitmap;
 
-    .line 482
+    .line 483
     :cond_1
     :goto_0
     iput-boolean v1, p0, Lcom/miui/home/launcher/ItemIcon;->mFirstDrawMark:Z
 
-    .line 486
+    .line 487
     :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->isDrawingInThumbnailView()Z
 
@@ -1377,7 +1248,7 @@
 
     if-nez v2, :cond_3
 
-    .line 487
+    .line 488
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getLeft()I
 
     move-result v0
@@ -1394,7 +1265,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconContainer:Landroid/widget/FrameLayout;
 
-    .line 488
+    .line 489
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getRight()I
 
     move-result v0
@@ -1415,61 +1286,49 @@
 
     move-object v1, p1
 
-    .line 487
+    .line 488
     invoke-virtual/range {v1 .. v7}, Landroid/graphics/Canvas;->saveLayer(FFFFLandroid/graphics/Paint;I)I
 
-    .line 489
+    .line 490
     invoke-super {p0, p1, p2, p3, p4}, Lcom/miui/launcher/views/LauncherRelativeLayout;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result v1
 
-    .line 490
+    .line 491
     iget p2, p0, Lcom/miui/home/launcher/ItemIcon;->mMaskColor:I
 
     sget-object p3, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {p1, p2, p3}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 491
+    .line 492
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     goto :goto_1
 
-    .line 492
+    .line 493
     :cond_3
     iget-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIsHideTitle:Z
 
-    if-eqz v0, :cond_4
+    if-nez v0, :cond_4
 
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitleContainer:Lcom/miui/home/launcher/ItemIconTitleContainer;
-
-    if-ne p2, v0, :cond_4
-
-    goto :goto_1
-
-    .line 494
-    :cond_4
     iget-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mDrawOutline:Z
 
     if-eqz v0, :cond_5
 
+    :cond_4
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitleContainer:Lcom/miui/home/launcher/ItemIconTitleContainer;
-
-    if-eq p2, v0, :cond_6
-
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
 
     if-ne p2, v0, :cond_5
 
     goto :goto_1
 
-    .line 498
+    .line 496
     :cond_5
     invoke-super {p0, p1, p2, p3, p4}, Lcom/miui/launcher/views/LauncherRelativeLayout;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result v1
 
-    :cond_6
     :goto_1
     return v1
 .end method
@@ -1537,7 +1396,7 @@
 .method public enableDrawTouchMask(Z)V
     .locals 0
 
-    .line 706
+    .line 688
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mEnableTouchMask:Z
 
     return-void
@@ -1546,7 +1405,7 @@
 .method public endFolmeAnim()V
     .locals 2
 
-    .line 371
+    .line 370
     invoke-static {}, Lcom/miui/home/launcher/folme/FolmeUtils;->isEnable()Z
 
     move-result v0
@@ -1559,7 +1418,7 @@
 
     const/4 v1, 0x0
 
-    .line 372
+    .line 371
     new-array v1, v1, [Ljava/lang/Object;
 
     invoke-interface {v0, v1}, Lmiuix/animation/IStateStyle;->end([Ljava/lang/Object;)V
@@ -1571,10 +1430,14 @@
 .method public folmeDown()V
     .locals 3
 
-    .line 340
+    .line 339
     invoke-static {}, Lcom/miui/home/launcher/folme/FolmeUtils;->isEnable()Z
 
     move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mStateStyle:Lmiuix/animation/IStateStyle;
 
     if-eqz v0, :cond_0
 
@@ -1582,10 +1445,10 @@
 
     const-string v1, "folmeDown"
 
-    .line 341
+    .line 340
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 342
+    .line 341
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mStateStyle:Lmiuix/animation/IStateStyle;
 
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mDownState:Lmiuix/animation/controller/AnimState;
@@ -1598,7 +1461,7 @@
 
     const/4 v0, 0x1
 
-    .line 343
+    .line 342
     iput-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIsFolmeDown:Z
 
     :cond_0
@@ -1608,7 +1471,7 @@
 .method public folmeUp()V
     .locals 4
 
-    .line 331
+    .line 329
     invoke-static {}, Lcom/miui/home/launcher/folme/FolmeUtils;->isEnable()Z
 
     move-result v0
@@ -1619,19 +1482,23 @@
 
     if-eqz v0, :cond_0
 
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mStateStyle:Lmiuix/animation/IStateStyle;
+
+    if-eqz v0, :cond_0
+
     const-string v0, "itemIcon"
 
     const-string v1, "folmeUp"
 
-    .line 332
+    .line 331
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 333
+    .line 332
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mStateStyle:Lmiuix/animation/IStateStyle;
 
     invoke-interface {v0}, Lmiuix/animation/IStateStyle;->cancel()V
 
-    .line 334
+    .line 333
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mStateStyle:Lmiuix/animation/IStateStyle;
 
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mUpState:Lmiuix/animation/controller/AnimState;
@@ -1642,7 +1509,7 @@
 
     invoke-interface {v0, v1, v3}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
-    .line 335
+    .line 334
     iput-boolean v2, p0, Lcom/miui/home/launcher/ItemIcon;->mIsFolmeDown:Z
 
     :cond_0
@@ -1652,19 +1519,19 @@
 .method public getBoomAnimBitmap()Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 513
+    .line 511
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 514
+    .line 512
     instance-of v1, v0, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v1, :cond_0
 
-    .line 515
+    .line 513
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -1673,7 +1540,7 @@
 
     return-object v0
 
-    .line 517
+    .line 515
     :cond_0
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->drawable2Bitmap(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
 
@@ -1685,25 +1552,25 @@
 .method public getContentDescription()Ljava/lang/CharSequence;
     .locals 7
 
-    .line 789
+    .line 771
     invoke-super {p0}, Lcom/miui/launcher/views/LauncherRelativeLayout;->getContentDescription()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 790
-    iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    .line 772
+    iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Landroid/widget/TextView;->isShown()Z
+    invoke-virtual {v1}, Lcom/miui/home/launcher/IconMessage;->isShown()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {v1}, Lcom/miui/home/launcher/IconMessage;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -1713,10 +1580,10 @@
 
     if-nez v1, :cond_0
 
-    .line 791
-    iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    .line 773
+    iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    invoke-virtual {v1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {v1}, Lcom/miui/home/launcher/IconMessage;->getText()Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -1724,7 +1591,7 @@
 
     move-result-object v1
 
-    .line 793
+    .line 775
     :try_start_0
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -1734,7 +1601,7 @@
 
     move-result v1
 
-    .line 794
+    .line 776
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -1751,9 +1618,9 @@
 
     const/4 v5, 0x1
 
-    iget-object v6, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    invoke-virtual {v6}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {v6}, Lcom/miui/home/launcher/IconMessage;->getText()Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -1770,7 +1637,7 @@
     :catch_0
     move-exception v1
 
-    .line 796
+    .line 778
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -1789,7 +1656,7 @@
 .method public getGhostView()Lcom/miui/home/launcher/AutoLayoutAnimation$GhostView;
     .locals 1
 
-    .line 664
+    .line 646
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mGhostView:Lcom/miui/home/launcher/AutoLayoutAnimation$GhostView;
 
     return-object v0
@@ -1798,8 +1665,19 @@
 .method public getIconContainer()Landroid/view/View;
     .locals 1
 
-    .line 746
+    .line 728
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconContainer:Landroid/widget/FrameLayout;
+
+    return-object v0
+.end method
+
+.method public bridge synthetic getIconImageView()Landroid/view/View;
+    .locals 1
+
+    .line 54
+    invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
+
+    move-result-object v0
 
     return-object v0
 .end method
@@ -1807,7 +1685,7 @@
 .method public getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
     .locals 1
 
-    .line 522
+    .line 520
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     return-object v0
@@ -1816,7 +1694,7 @@
 .method public getIconImageViewCenterPoint([I)Z
     .locals 3
 
-    .line 531
+    .line 529
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getIconLocation()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -1827,7 +1705,7 @@
 
     return v1
 
-    .line 535
+    .line 533
     :cond_0
     invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
 
@@ -1835,7 +1713,7 @@
 
     aput v2, p1, v1
 
-    .line 536
+    .line 534
     invoke-virtual {v0}, Landroid/graphics/Rect;->centerY()I
 
     move-result v0
@@ -1850,7 +1728,7 @@
 .method public getIconImageViewOriginalLocation()Landroid/graphics/Rect;
     .locals 7
 
-    .line 551
+    .line 549
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getWidth()I
@@ -1869,10 +1747,10 @@
 
     const/4 v0, 0x2
 
-    .line 554
+    .line 552
     new-array v0, v0, [F
 
-    .line 555
+    .line 553
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getRootView()Landroid/view/View;
@@ -1883,7 +1761,7 @@
 
     invoke-static {v1, v2, v0, v3, v3}, Lcom/miui/home/launcher/common/Utilities;->getDescendantCoordRelativeToAncestor(Landroid/view/View;Landroid/view/View;[FZZ)F
 
-    .line 556
+    .line 554
     new-instance v1, Landroid/graphics/Rect;
 
     aget v2, v0, v3
@@ -1900,7 +1778,7 @@
 
     iget-object v6, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
-    .line 557
+    .line 555
     invoke-virtual {v6}, Lcom/miui/home/launcher/LauncherIconImageView;->getWidth()I
 
     move-result v6
@@ -1915,7 +1793,7 @@
 
     iget-object v4, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
-    .line 558
+    .line 556
     invoke-virtual {v4}, Lcom/miui/home/launcher/LauncherIconImageView;->getHeight()I
 
     move-result v4
@@ -1930,7 +1808,7 @@
 
     return-object v1
 
-    .line 552
+    .line 550
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -1946,17 +1824,17 @@
 
     const/4 v0, 0x2
 
-    .line 542
+    .line 540
     new-array v0, v0, [I
 
-    .line 543
+    .line 541
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getLocationOnScreen([I)V
 
     const/4 v1, 0x0
 
-    .line 544
+    .line 542
     aget v2, v0, v1
 
     const/4 v3, 0x1
@@ -1971,7 +1849,7 @@
 
     return-object v0
 
-    .line 547
+    .line 545
     :cond_0
     new-instance v2, Landroid/graphics/Rect;
 
@@ -2007,7 +1885,7 @@
 .method public getIsHideShadow()Z
     .locals 1
 
-    .line 702
+    .line 684
     iget-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIsHideShadow:Z
 
     return v0
@@ -2016,7 +1894,7 @@
 .method public getIsHideTitle()Z
     .locals 1
 
-    .line 680
+    .line 662
     iget-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIsHideTitle:Z
 
     return v0
@@ -2025,7 +1903,7 @@
 .method public getIsHideTouchMask()Z
     .locals 1
 
-    .line 734
+    .line 716
     iget-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIsHideTouchMask:Z
 
     return v0
@@ -2034,17 +1912,17 @@
 .method public getMessageText()Ljava/lang/String;
     .locals 1
 
-    .line 298
+    .line 296
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->isEmptyMessage()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 299
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    .line 297
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/IconMessage;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -2063,7 +1941,7 @@
 .method public getSkipNextAutoLayoutAnimation()Z
     .locals 1
 
-    .line 613
+    .line 595
     iget-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mSkipNextAutoLayoutAnimation:Z
 
     return v0
@@ -2072,7 +1950,7 @@
 .method public getTitle()Landroid/widget/TextView;
     .locals 1
 
-    .line 738
+    .line 720
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     return-object v0
@@ -2081,7 +1959,7 @@
 .method public getTitleContainer()Landroid/view/View;
     .locals 1
 
-    .line 742
+    .line 724
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitleContainer:Lcom/miui/home/launcher/ItemIconTitleContainer;
 
     return-object v0
@@ -2090,7 +1968,7 @@
 .method public getVisionOffset([I)V
     .locals 2
 
-    .line 526
+    .line 524
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getLeft()I
@@ -2101,7 +1979,7 @@
 
     aput v0, p1, v1
 
-    .line 527
+    .line 525
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getTop()I
@@ -2130,7 +2008,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 724
+    .line 706
     sget-object v1, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
@@ -2167,7 +2045,7 @@
 .method public isDockViewMode()Z
     .locals 1
 
-    .line 592
+    .line 574
     iget-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIsDockMode:Z
 
     return v0
@@ -2176,7 +2054,7 @@
 .method public isDrawingInThumbnailView()Z
     .locals 1
 
-    .line 770
+    .line 752
     iget-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIsDrawingInThumbnailView:Z
 
     return v0
@@ -2198,10 +2076,10 @@
 .method public isEmptyMessage()Z
     .locals 1
 
-    .line 306
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    .line 304
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/IconMessage;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -2229,7 +2107,7 @@
 .method public isEnableAutoLayoutAnimation()Z
     .locals 1
 
-    .line 617
+    .line 599
     iget-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIsEnableAutoLayoutAnimation:Z
 
     return v0
@@ -2238,19 +2116,19 @@
 .method public isHintClick(Landroid/view/ViewGroup;II)Z
     .locals 3
 
-    .line 824
+    .line 806
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 825
+    .line 807
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconContainer:Landroid/widget/FrameLayout;
 
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewGroup;->offsetDescendantRectToMyCoords(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 826
+    .line 808
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTempRect:Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mIconContainer:Landroid/widget/FrameLayout;
@@ -2267,7 +2145,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/common/Utilities;->setRectSize(Landroid/graphics/Rect;II)V
 
-    .line 827
+    .line 809
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p2, p3}, Landroid/graphics/Rect;->contains(II)Z
@@ -2280,39 +2158,39 @@
 
     return p1
 
-    .line 830
+    .line 812
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 831
+    .line 813
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewGroup;->offsetDescendantRectToMyCoords(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 832
+    .line 814
     iget-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->getTextContentWidth(Landroid/widget/TextView;)I
 
     move-result p1
 
-    .line 833
+    .line 815
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->getTextContentHeight(Landroid/widget/TextView;)I
 
     move-result v0
 
-    .line 834
+    .line 816
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mTempRect:Landroid/graphics/Rect;
 
     invoke-static {v1, p1, v0}, Lcom/miui/home/launcher/common/Utilities;->setRectSize(Landroid/graphics/Rect;II)V
 
-    .line 835
+    .line 817
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTempRect:Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
@@ -2329,7 +2207,7 @@
 
     invoke-virtual {v0, v1, p1}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 836
+    .line 818
     iget-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, p2, p3}, Landroid/graphics/Rect;->contains(II)Z
@@ -2342,10 +2220,10 @@
 .method public isMessageVisible()Z
     .locals 1
 
-    .line 310
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    .line 308
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getVisibility()I
+    invoke-virtual {v0}, Lcom/miui/home/launcher/IconMessage;->getVisibility()I
 
     move-result v0
 
@@ -2381,7 +2259,7 @@
 .method public onAnimation(Z)V
     .locals 1
 
-    .line 756
+    .line 738
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitleContainer:Lcom/miui/home/launcher/ItemIconTitleContainer;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/ItemIconTitleContainer;->setIsOnAnimation(Z)V
@@ -2392,10 +2270,10 @@
 .method protected onDetachedFromWindow()V
     .locals 0
 
-    .line 378
+    .line 377
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->endFolmeAnim()V
 
-    .line 379
+    .line 378
     invoke-super {p0}, Lcom/miui/launcher/views/LauncherRelativeLayout;->onDetachedFromWindow()V
 
     return-void
@@ -2404,9 +2282,9 @@
 .method protected onFinishInflate()V
     .locals 3
 
-    const v0, 0x7f0a010f
+    const v0, 0x7f0a0110
 
-    .line 105
+    .line 102
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -2415,9 +2293,9 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconContainer:Landroid/widget/FrameLayout;
 
-    const v0, 0x7f0a0116
+    const v0, 0x7f0a0117
 
-    .line 106
+    .line 103
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -2426,9 +2304,9 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconTile:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0113
+    const v0, 0x7f0a0114
 
-    .line 107
+    .line 104
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -2437,24 +2315,24 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
-    const v0, 0x7f0a0114
+    const v0, 0x7f0a0115
 
-    .line 108
+    .line 105
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    check-cast v0, Lcom/miui/home/launcher/IconMessage;
 
-    iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    .line 109
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    .line 106
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
     if-eqz v0, :cond_0
 
-    .line 110
-    invoke-virtual {v0}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
+    .line 107
+    invoke-virtual {v0}, Lcom/miui/home/launcher/IconMessage;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
@@ -2463,9 +2341,9 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     :cond_0
-    const v0, 0x7f0a0117
+    const v0, 0x7f0a0118
 
-    .line 111
+    .line 108
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -2474,9 +2352,9 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
-    const v0, 0x7f0a0118
+    const v0, 0x7f0a0119
 
-    .line 112
+    .line 109
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -2485,21 +2363,21 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitleContainer:Lcom/miui/home/launcher/ItemIconTitleContainer;
 
-    .line 113
+    .line 110
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     sget-object v1, Lcom/miui/home/launcher/ItemIcon;->sLayerPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/TitleTextView;->setLayerPaint(Landroid/graphics/Paint;)V
 
-    .line 114
+    .line 111
     new-instance v0, Lcom/miui/home/launcher/common/ViewPropertyBackuperDelegate;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/common/ViewPropertyBackuperDelegate;-><init>(Landroid/view/View;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mViewPropertyBackuperDelegate:Lcom/miui/home/launcher/common/ViewPropertyBackuperDelegate;
 
-    .line 115
+    .line 112
     invoke-direct {p0}, Lcom/miui/home/launcher/ItemIcon;->initFolMe()V
 
     return-void
@@ -2520,7 +2398,7 @@
 .method protected onMeasure(II)V
     .locals 2
 
-    .line 622
+    .line 604
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -2531,7 +2409,7 @@
 
     if-le v0, v1, :cond_0
 
-    .line 623
+    .line 605
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWidth()I
 
     move-result p1
@@ -2542,7 +2420,7 @@
 
     move-result p1
 
-    .line 625
+    .line 607
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->useOldVersionIcons()Z
 
@@ -2550,28 +2428,28 @@
 
     if-eqz v0, :cond_1
 
-    .line 626
+    .line 608
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 627
+    .line 609
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getIconWidth()I
 
     move-result v1
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 628
+    .line 610
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getIconHeight()I
 
     move-result v1
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 630
+    .line 612
     :cond_1
     invoke-super {p0, p1, p2}, Lcom/miui/launcher/views/LauncherRelativeLayout;->onMeasure(II)V
 
@@ -2581,7 +2459,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 4
 
-    .line 384
+    .line 383
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -2590,21 +2468,21 @@
 
     if-nez v0, :cond_0
 
-    .line 385
+    .line 384
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
     float-to-int v0, v0
 
-    .line 386
+    .line 385
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v2
 
     float-to-int v2, v2
 
-    .line 387
+    .line 386
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getParent()Landroid/view/ViewParent;
 
     move-result-object v3
@@ -2613,7 +2491,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 388
+    .line 387
     invoke-virtual {p0, p0, v0, v2}, Lcom/miui/home/launcher/ItemIcon;->isHintClick(Landroid/view/ViewGroup;II)Z
 
     move-result v0
@@ -2622,7 +2500,7 @@
 
     return v1
 
-    .line 392
+    .line 391
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/folme/FolmeUtils;->isEnable()Z
 
@@ -2632,14 +2510,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 393
+    .line 392
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 395
+    .line 394
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->folmeDown()V
 
     :cond_1
@@ -2649,17 +2527,17 @@
 
     if-ne v0, v2, :cond_3
 
-    .line 399
+    .line 398
     :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->folmeUp()V
 
-    .line 402
+    .line 401
     :cond_3
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mOnSlideVerticallyListener:Lcom/miui/home/launcher/ItemIcon$OnSlideVerticallyListener;
 
     if-eqz v0, :cond_5
 
-    .line 403
+    .line 402
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -2668,13 +2546,13 @@
 
     goto :goto_0
 
-    .line 405
+    .line 404
     :pswitch_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
-    .line 406
+    .line 405
     iget-boolean v3, p0, Lcom/miui/home/launcher/ItemIcon;->mTouchDown:Z
 
     if-eqz v3, :cond_5
@@ -2695,31 +2573,31 @@
 
     if-lez v0, :cond_5
 
-    .line 407
+    .line 406
     :cond_4
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mOnSlideVerticallyListener:Lcom/miui/home/launcher/ItemIcon$OnSlideVerticallyListener;
 
     invoke-interface {v0, p0}, Lcom/miui/home/launcher/ItemIcon$OnSlideVerticallyListener;->onSlideVertically(Lcom/miui/home/launcher/ItemIcon;)V
 
-    .line 408
+    .line 407
     iput-boolean v1, p0, Lcom/miui/home/launcher/ItemIcon;->mTouchDown:Z
 
-    .line 409
+    .line 408
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/ItemIcon;->requestDisallowInterceptTouchEvent(Z)V
 
     goto :goto_0
 
-    .line 417
+    .line 416
     :pswitch_1
     iput-boolean v1, p0, Lcom/miui/home/launcher/ItemIcon;->mTouchDown:Z
 
     goto :goto_0
 
-    .line 413
+    .line 412
     :pswitch_2
     iput-boolean v2, p0, Lcom/miui/home/launcher/ItemIcon;->mTouchDown:Z
 
-    .line 421
+    .line 420
     :cond_5
     :goto_0
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherRelativeLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -2742,23 +2620,23 @@
 .method public onWallpaperColorChanged()V
     .locals 4
 
-    .line 173
+    .line 171
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     if-eqz v0, :cond_0
 
-    .line 174
+    .line 172
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
-    const v2, 0x7f1102f2
+    const v2, 0x7f1102eb
 
-    const v3, 0x7f1102f5
+    const v3, 0x7f1102ee
 
     invoke-static {v0, v1, v2, v3}, Lcom/miui/home/launcher/common/Utilities;->adaptTitleStyleToWallpaper(Landroid/content/Context;Landroid/widget/TextView;II)V
 
-    .line 175
+    .line 173
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->invalidate()V
 
     :cond_0
@@ -2770,10 +2648,10 @@
 
     const/4 v0, 0x1
 
-    .line 688
+    .line 670
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->setIsHideShadow(Z)V
 
-    .line 689
+    .line 671
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->setIsHideTitle(Z)V
 
     return-void
@@ -2790,30 +2668,30 @@
 .method public post(Ljava/lang/Runnable;)Z
     .locals 1
 
-    .line 439
+    .line 438
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mPerformClickRunnable:Ljava/lang/Runnable;
 
     if-nez v0, :cond_0
 
-    .line 440
+    .line 439
     invoke-direct {p0}, Lcom/miui/home/launcher/ItemIcon;->initPerformClickRunnable()V
 
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 442
+    .line 441
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mPerformClickRunnable:Ljava/lang/Runnable;
 
     if-ne p1, v0, :cond_1
 
-    .line 443
+    .line 442
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     const/4 p1, 0x1
 
     return p1
 
-    .line 446
+    .line 445
     :cond_1
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherRelativeLayout;->post(Ljava/lang/Runnable;)Z
 
@@ -2825,7 +2703,7 @@
 .method public restoreProperty()V
     .locals 1
 
-    .line 784
+    .line 766
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mViewPropertyBackuperDelegate:Lcom/miui/home/launcher/common/ViewPropertyBackuperDelegate;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/ViewPropertyBackuperDelegate;->restoreProperty()V
@@ -2836,15 +2714,15 @@
 .method public setDockViewMode(Z)V
     .locals 1
 
-    .line 596
+    .line 578
     iget-boolean v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIsDockMode:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 597
+    .line 579
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mIsDockMode:Z
 
-    .line 598
+    .line 580
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->invalidate()V
 
     :cond_0
@@ -2854,7 +2732,7 @@
 .method public setDrawOutline(Z)V
     .locals 0
 
-    .line 684
+    .line 666
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mDrawOutline:Z
 
     return-void
@@ -2863,8 +2741,8 @@
 .method public setEditMode(Z)V
     .locals 2
 
-    .line 760
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    .line 742
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
     if-eqz v0, :cond_2
 
@@ -2872,12 +2750,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 762
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    .line 744
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/IconMessage;->setVisibility(I)V
 
     goto :goto_1
 
-    .line 764
+    .line 746
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessageOldText:Ljava/lang/CharSequence;
 
@@ -2893,7 +2771,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/IconMessage;->setVisibility(I)V
 
     :cond_2
     :goto_1
@@ -2903,7 +2781,7 @@
 .method public setEnableAutoLayoutAnimation(Z)V
     .locals 0
 
-    .line 603
+    .line 585
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mIsEnableAutoLayoutAnimation:Z
 
     return-void
@@ -2912,24 +2790,24 @@
 .method public setFrame(IIII)Z
     .locals 2
 
-    .line 640
+    .line 622
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getWidth()I
 
     move-result v0
 
-    .line 641
+    .line 623
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemIcon;->getHeight()I
 
     move-result v1
 
-    .line 642
+    .line 624
     invoke-static {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/AutoLayoutAnimation;->setFrame(Lcom/miui/home/launcher/AutoLayoutAnimation$HostView;IIII)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 643
+    .line 625
     iget-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mIconDarkShadow:Landroid/graphics/Bitmap;
 
     if-eqz p1, :cond_1
@@ -2949,7 +2827,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 644
+    .line 626
     iput-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mIconDarkShadow:Landroid/graphics/Bitmap;
 
     :cond_1
@@ -2966,7 +2844,7 @@
 .method public setGhostView(Lcom/miui/home/launcher/AutoLayoutAnimation$GhostView;)V
     .locals 0
 
-    .line 659
+    .line 641
     iput-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mGhostView:Lcom/miui/home/launcher/AutoLayoutAnimation$GhostView;
 
     return-void
@@ -2975,25 +2853,25 @@
 .method public setIconImageView(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;)V
     .locals 1
 
-    .line 504
+    .line 502
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/LauncherIconImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     if-eqz p2, :cond_0
 
-    .line 506
+    .line 504
     iput-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mIconBitmap:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
-    .line 507
+    .line 505
     :cond_0
     instance-of p2, p1, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz p2, :cond_1
 
-    .line 508
+    .line 506
     check-cast p1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -3010,12 +2888,12 @@
 .method public setIconVisibility(I)V
     .locals 1
 
-    .line 562
+    .line 560
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     if-eqz v0, :cond_0
 
-    .line 563
+    .line 561
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/LauncherIconImageView;->setVisibility(I)V
 
     :cond_0
@@ -3025,7 +2903,7 @@
 .method public setIsDrawingInThumbnailView(Z)V
     .locals 0
 
-    .line 774
+    .line 756
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mIsDrawingInThumbnailView:Z
 
     return-void
@@ -3034,7 +2912,7 @@
 .method public setIsHideShadow(Z)V
     .locals 0
 
-    .line 698
+    .line 680
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mIsHideShadow:Z
 
     return-void
@@ -3043,7 +2921,7 @@
 .method public setIsHideTitle(Z)V
     .locals 0
 
-    .line 676
+    .line 658
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mIsHideTitle:Z
 
     return-void
@@ -3052,7 +2930,7 @@
 .method public setIsHideTouchMask(Z)V
     .locals 0
 
-    .line 730
+    .line 712
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mIsHideTouchMask:Z
 
     return-void
@@ -3063,7 +2941,7 @@
 
     const/4 v0, 0x0
 
-    .line 181
+    .line 179
     invoke-virtual {p0, p1, v0, v0}, Lcom/miui/home/launcher/ItemIcon;->setMessage(Ljava/lang/String;Ljava/lang/String;[B)V
 
     return-void
@@ -3076,7 +2954,7 @@
 
     const-string p1, ""
 
-    .line 213
+    .line 211
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
@@ -3092,7 +2970,7 @@
 
     return-void
 
-    .line 215
+    .line 213
     :cond_1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -3114,18 +2992,18 @@
 
     const-string p1, ""
 
-    .line 216
+    .line 214
     iput-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessageOldText:Ljava/lang/CharSequence;
 
-    .line 217
+    .line 215
     iput-boolean v2, p0, Lcom/miui/home/launcher/ItemIcon;->mIsShowMessageAnimation:Z
 
-    .line 219
+    .line 217
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->showMessageAnimation(Lcom/miui/home/launcher/Launcher;)V
 
     goto :goto_1
 
-    .line 220
+    .line 218
     :cond_2
     iget-object v1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessageOldText:Ljava/lang/CharSequence;
 
@@ -3140,13 +3018,13 @@
     :cond_3
     const/4 v1, 0x1
 
-    .line 221
+    .line 219
     iput-boolean v1, p0, Lcom/miui/home/launcher/ItemIcon;->mIsShowMessageAnimation:Z
 
-    .line 222
+    .line 220
     invoke-direct {p0, p2}, Lcom/miui/home/launcher/ItemIcon;->setMessageTextBackground(Ljava/lang/String;)V
 
-    .line 223
+    .line 221
     iget-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mMessageOldText:Ljava/lang/CharSequence;
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -3155,10 +3033,10 @@
 
     if-eqz p2, :cond_4
 
-    .line 224
-    iget-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    .line 222
+    iget-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    invoke-virtual {p2}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {p2}, Lcom/miui/home/launcher/IconMessage;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p2
 
@@ -3170,10 +3048,10 @@
 
     invoke-virtual {p2}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 225
+    .line 223
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->showMessageAnimation(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 227
+    .line 225
     :cond_4
     invoke-static {p1}, Landroid/text/TextUtils;->isDigitsOnly(Ljava/lang/CharSequence;)Z
 
@@ -3181,8 +3059,8 @@
 
     if-eqz p2, :cond_5
 
-    .line 228
-    iget-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    .line 226
+    iget-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
@@ -3202,26 +3080,26 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v0}, Lcom/miui/home/launcher/IconMessage;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    .line 230
+    .line 228
     :cond_5
-    iget-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    iget-object p2, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    invoke-virtual {p2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, p1}, Lcom/miui/home/launcher/IconMessage;->setText(Ljava/lang/CharSequence;)V
 
-    .line 232
+    .line 230
     :goto_0
     iput-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessageOldText:Ljava/lang/CharSequence;
 
-    .line 234
+    .line 232
     :cond_6
     :goto_1
     invoke-direct {p0, p3}, Lcom/miui/home/launcher/ItemIcon;->setMessageIconTile([B)V
 
-    .line 235
+    .line 233
     iput-object p3, p0, Lcom/miui/home/launcher/ItemIcon;->mMessageIconTile:[B
 
     return-void
@@ -3234,7 +3112,7 @@
 
     const-string p1, ""
 
-    .line 240
+    .line 238
     :cond_0
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -3242,43 +3120,43 @@
 
     if-eqz v0, :cond_1
 
-    .line 241
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    .line 239
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    const/16 v1, 0x8
+    const/4 v1, 0x4
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/IconMessage;->setVisibility(I)V
 
-    .line 242
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    .line 240
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/IconMessage;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    .line 244
+    .line 242
     :cond_1
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    const v1, 0x7f080181
+    const v1, 0x7f0801a8
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/IconMessage;->setBackgroundResource(I)V
 
-    .line 245
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
+    .line 243
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/IconMessage;->setVisibility(I)V
+
+    .line 244
+    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
+
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/IconMessage;->setText(Ljava/lang/CharSequence;)V
 
     .line 246
-    iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mMessage:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 248
     :goto_0
     iput-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mMessageOldText:Ljava/lang/CharSequence;
 
@@ -3288,7 +3166,7 @@
 .method public setOnSlideVerticallyListener(Lcom/miui/home/launcher/ItemIcon$OnSlideVerticallyListener;)V
     .locals 0
 
-    .line 321
+    .line 319
     iput-object p1, p0, Lcom/miui/home/launcher/ItemIcon;->mOnSlideVerticallyListener:Lcom/miui/home/launcher/ItemIcon$OnSlideVerticallyListener;
 
     return-void
@@ -3297,7 +3175,7 @@
 .method public setSkipNextAutoLayoutAnimation(Z)V
     .locals 0
 
-    .line 608
+    .line 590
     iput-boolean p1, p0, Lcom/miui/home/launcher/ItemIcon;->mSkipNextAutoLayoutAnimation:Z
 
     return-void
@@ -3306,7 +3184,7 @@
 .method public setTextAlpha(F)V
     .locals 1
 
-    .line 668
+    .line 650
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/TitleTextView;->setAlpha(F)V
@@ -3317,7 +3195,7 @@
 .method public setTextColor(I)V
     .locals 1
 
-    .line 672
+    .line 654
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/TitleTextView;->setTextColor(I)V
@@ -3328,7 +3206,7 @@
 .method public setTitle(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .line 584
+    .line 566
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/TitleTextView;->getText()Ljava/lang/CharSequence;
@@ -3341,15 +3219,15 @@
 
     if-nez v0, :cond_0
 
-    .line 585
+    .line 567
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/TitleTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 586
+    .line 568
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ItemIcon;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 587
+    .line 569
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/LauncherIconImageView;->setContentDescription(Ljava/lang/CharSequence;)V
@@ -3361,14 +3239,14 @@
 .method public setTouchScaleFactor(F)V
     .locals 4
 
-    .line 362
+    .line 361
     invoke-static {}, Lcom/miui/home/launcher/folme/FolmeUtils;->isEnable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 363
+    .line 362
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mDownState:Lmiuix/animation/controller/AnimState;
 
     sget-object v1, Lmiuix/animation/property/ViewProperty;->SCALE_X:Lmiuix/animation/property/ViewProperty;
@@ -3385,10 +3263,10 @@
 
     sget-object v1, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 364
+    .line 363
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
-    .line 365
+    .line 364
     iget-object v0, p0, Lcom/miui/home/launcher/ItemIcon;->mUpState:Lmiuix/animation/controller/AnimState;
 
     sget-object v1, Lmiuix/animation/property/ViewProperty;->SCALE_X:Lmiuix/animation/property/ViewProperty;
@@ -3401,7 +3279,7 @@
 
     sget-object v0, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 366
+    .line 365
     invoke-virtual {p1, v0, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     :cond_0
@@ -3413,10 +3291,10 @@
 
     const/4 v0, 0x0
 
-    .line 693
+    .line 675
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->setIsHideShadow(Z)V
 
-    .line 694
+    .line 676
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->setIsHideTitle(Z)V
 
     return-void
@@ -3425,7 +3303,7 @@
 .method protected showMessageAnimation(Lcom/miui/home/launcher/Launcher;)V
     .locals 2
 
-    .line 252
+    .line 250
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getForegroundTaskQueue()Lcom/miui/home/launcher/common/ForegroundTaskQueue;
 
     move-result-object v0

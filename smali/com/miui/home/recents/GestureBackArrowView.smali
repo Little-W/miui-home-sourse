@@ -532,7 +532,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080151
+    const v1, 0x7f080175
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -660,8 +660,6 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 128
     iget v0, p0, Lcom/miui/home/recents/GestureBackArrowView;->mPosition:I
 
@@ -708,7 +706,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080169
+    const v1, 0x7f080191
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -743,7 +741,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080150
+    const v1, 0x7f080174
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 

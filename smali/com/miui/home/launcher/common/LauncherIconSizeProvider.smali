@@ -51,6 +51,9 @@
     .locals 1
 
     .line 31
+    invoke-super {p0}, Lcom/miui/home/launcher/common/ScaleIconSizeProvider;->enableAndResetCache()V
+
+    .line 32
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object v0

@@ -42,10 +42,10 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 1
 
-    .line 2169
+    .line 2189
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$TargetCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
-    .line 2171
+    .line 2191
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$FolmeCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -62,7 +62,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mParams:[Lcom/miui/maml/data/Expression;
 
-    .line 2172
+    .line 2192
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$FolmeCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -79,7 +79,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mStates:[Lcom/miui/maml/data/Expression;
 
-    .line 2173
+    .line 2193
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$FolmeCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -96,7 +96,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mConfig:Lcom/miui/maml/data/Expression;
 
-    .line 2174
+    .line 2194
     iget-object p1, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mParams:[Lcom/miui/maml/data/Expression;
 
     invoke-virtual {p0, p1}, Lcom/miui/maml/ActionCommand$FolmeCommand;->isExpressionsValid([Lcom/miui/maml/data/Expression;)Z
@@ -105,7 +105,7 @@
 
     iput-boolean p1, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mIsParamsValid:Z
 
-    .line 2175
+    .line 2195
     iget-object p1, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mStates:[Lcom/miui/maml/data/Expression;
 
     invoke-virtual {p0, p1}, Lcom/miui/maml/ActionCommand$FolmeCommand;->isExpressionsValid([Lcom/miui/maml/data/Expression;)Z
@@ -116,12 +116,12 @@
 
     const-string p1, "command"
 
-    .line 2177
+    .line 2197
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 2178
+    .line 2198
     invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
     move-result p2
@@ -203,14 +203,14 @@
     :goto_1
     packed-switch p1, :pswitch_data_0
 
-    .line 2192
+    .line 2212
     sget-object p1, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;->INVALID:Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mCommand:Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
     goto :goto_2
 
-    .line 2189
+    .line 2209
     :pswitch_0
     sget-object p1, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;->CANCEL:Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
@@ -218,7 +218,7 @@
 
     goto :goto_2
 
-    .line 2186
+    .line 2206
     :pswitch_1
     sget-object p1, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;->FROM_TO:Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
@@ -226,7 +226,7 @@
 
     goto :goto_2
 
-    .line 2183
+    .line 2203
     :pswitch_2
     sget-object p1, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;->SET_TO:Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
@@ -234,7 +234,7 @@
 
     goto :goto_2
 
-    .line 2180
+    .line 2200
     :pswitch_3
     sget-object p1, Lcom/miui/maml/ActionCommand$FolmeCommand$Type;->TO:Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
 
@@ -255,12 +255,12 @@
 .method private folmeCancel(Lcom/miui/maml/elements/AnimatedScreenElement;)V
     .locals 1
 
-    .line 2222
+    .line 2242
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mIsParamsValid:Z
 
     if-eqz v0, :cond_0
 
-    .line 2223
+    .line 2243
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mParams:[Lcom/miui/maml/data/Expression;
 
     invoke-virtual {p1, v0}, Lcom/miui/maml/elements/AnimatedScreenElement;->folmeCancel([Lcom/miui/maml/data/Expression;)V
@@ -270,7 +270,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2225
+    .line 2245
     invoke-virtual {p1, v0}, Lcom/miui/maml/elements/AnimatedScreenElement;->folmeCancel([Lcom/miui/maml/data/Expression;)V
 
     :goto_0
@@ -280,7 +280,7 @@
 .method private folmeFromTo(Lcom/miui/maml/elements/AnimatedScreenElement;)V
     .locals 3
 
-    .line 2213
+    .line 2233
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mIsStatesValid:Z
 
     if-eqz v0, :cond_1
@@ -295,14 +295,14 @@
 
     const/4 v1, 0x0
 
-    .line 2214
+    .line 2234
     aget-object v0, v0, v1
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2215
+    .line 2235
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mStates:[Lcom/miui/maml/data/Expression;
 
     aget-object v1, v1, v2
@@ -311,7 +311,7 @@
 
     move-result-object v1
 
-    .line 2216
+    .line 2236
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mConfig:Lcom/miui/maml/data/Expression;
 
     if-eqz v2, :cond_0
@@ -325,7 +325,7 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 2217
+    .line 2237
     :goto_0
     invoke-virtual {p1, v0, v1, v2}, Lcom/miui/maml/elements/AnimatedScreenElement;->folmeFromTo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -336,7 +336,7 @@
 .method private folmeSetTo(Lcom/miui/maml/elements/AnimatedScreenElement;)V
     .locals 2
 
-    .line 2206
+    .line 2226
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mIsStatesValid:Z
 
     if-eqz v0, :cond_0
@@ -349,14 +349,14 @@
 
     const/4 v1, 0x0
 
-    .line 2207
+    .line 2227
     aget-object v0, v0, v1
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2208
+    .line 2228
     invoke-virtual {p1, v0}, Lcom/miui/maml/elements/AnimatedScreenElement;->folmeSetTo(Ljava/lang/String;)V
 
     :cond_0
@@ -366,7 +366,7 @@
 .method private folmeTo(Lcom/miui/maml/elements/AnimatedScreenElement;)V
     .locals 2
 
-    .line 2198
+    .line 2218
     iget-boolean v0, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mIsStatesValid:Z
 
     if-eqz v0, :cond_1
@@ -379,14 +379,14 @@
 
     const/4 v1, 0x0
 
-    .line 2199
+    .line 2219
     aget-object v0, v0, v1
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2200
+    .line 2220
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mConfig:Lcom/miui/maml/data/Expression;
 
     if-eqz v1, :cond_0
@@ -400,7 +400,7 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 2201
+    .line 2221
     :goto_0
     invoke-virtual {p1, v0, v1}, Lcom/miui/maml/elements/AnimatedScreenElement;->folmeTo(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -413,25 +413,25 @@
 .method protected doPerform()V
     .locals 3
 
-    .line 2231
+    .line 2251
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$FolmeCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 2232
+    .line 2252
     instance-of v1, v0, Lcom/miui/maml/elements/AnimatedScreenElement;
 
     if-nez v1, :cond_0
 
     goto :goto_1
 
-    .line 2235
+    .line 2255
     :cond_0
     check-cast v0, Lcom/miui/maml/elements/AnimatedScreenElement;
 
-    .line 2236
+    .line 2256
     sget-object v1, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$FolmeCommand$Type:[I
 
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$FolmeCommand;->mCommand:Lcom/miui/maml/ActionCommand$FolmeCommand$Type;
@@ -446,25 +446,25 @@
 
     goto :goto_0
 
-    .line 2247
+    .line 2267
     :pswitch_0
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$FolmeCommand;->folmeCancel(Lcom/miui/maml/elements/AnimatedScreenElement;)V
 
     goto :goto_0
 
-    .line 2244
+    .line 2264
     :pswitch_1
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$FolmeCommand;->folmeFromTo(Lcom/miui/maml/elements/AnimatedScreenElement;)V
 
     goto :goto_0
 
-    .line 2241
+    .line 2261
     :pswitch_2
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$FolmeCommand;->folmeSetTo(Lcom/miui/maml/elements/AnimatedScreenElement;)V
 
     goto :goto_0
 
-    .line 2238
+    .line 2258
     :pswitch_3
     invoke-direct {p0, v0}, Lcom/miui/maml/ActionCommand$FolmeCommand;->folmeTo(Lcom/miui/maml/elements/AnimatedScreenElement;)V
 

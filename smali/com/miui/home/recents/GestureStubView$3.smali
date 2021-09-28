@@ -24,7 +24,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 374
+    .line 376
     invoke-static {}, Lcom/miui/home/recents/GestureStubView$EventPosition;->values()[Lcom/miui/home/recents/GestureStubView$EventPosition;
 
     move-result-object v0

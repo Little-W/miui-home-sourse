@@ -363,7 +363,7 @@
     .line 591
     iput-boolean v3, p0, Landroidx/core/widget/TextViewCompat$OreoCallback;->mCanUseMenuBuilderReferences:Z
 
-    .line 596
+    .line 597
     :cond_0
     :goto_0
     :try_start_1
@@ -373,13 +373,13 @@
 
     iget-object v2, p0, Landroidx/core/widget/TextViewCompat$OreoCallback;->mMenuBuilderClass:Ljava/lang/Class;
 
-    .line 597
     invoke-virtual {v2, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
+    .line 598
     iget-object v2, p0, Landroidx/core/widget/TextViewCompat$OreoCallback;->mMenuBuilderRemoveItemAtMethod:Ljava/lang/reflect/Method;
 
     goto :goto_1

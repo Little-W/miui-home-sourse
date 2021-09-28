@@ -100,24 +100,24 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 32
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 79
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mVariables:Ljava/util/HashMap;
 
     .line 80
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
+    iput-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mVariables:Ljava/util/HashMap;
+
+    .line 81
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
     iput-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mTasks:Ljava/util/HashMap;
 
-    .line 82
+    .line 83
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -130,7 +130,7 @@
 .method static synthetic access$000(Lcom/miui/maml/util/ConfigFile;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 32
+    .line 33
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/maml/util/ConfigFile;->put(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -144,33 +144,217 @@
         }
     .end annotation
 
-    .line 294
+    .line 292
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 295
+    .line 293
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 296
+    .line 294
     invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/io/File;->mkdirs()Z
 
-    .line 297
+    .line 295
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 298
+    .line 296
     invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
 
     :cond_0
     return-void
+.end method
+
+.method private load(Ljava/lang/String;Z)Z
+    .locals 3
+
+    .line 180
+    iput-object p1, p0, Lcom/miui/maml/util/ConfigFile;->mFilePath:Ljava/lang/String;
+
+    .line 181
+    iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mVariables:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
+
+    .line 182
+    iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mTasks:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
+
+    .line 183
+    invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz p2, :cond_0
+
+    .line 185
+    :try_start_0
+    invoke-static {}, Lmiui/content/res/ThemeResources;->getSystem()Lmiui/content/res/ThemeResourcesSystem;
+
+    move-result-object p2
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p2, p1, v2}, Lmiui/content/res/ThemeResourcesSystem;->getIconStream(Ljava/lang/String;[J)Ljava/io/InputStream;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    .line 186
+    :cond_0
+    new-instance p2, Ljava/io/FileInputStream;
+
+    invoke-direct {p2, p1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+
+    move-object p1, p2
+
+    :goto_0
+    if-nez p1, :cond_2
+
+    if-eqz p1, :cond_1
+
+    .line 203
+    invoke-virtual {p1}, Ljava/io/InputStream;->close()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
+
+    :cond_1
+    return v1
+
+    .line 190
+    :cond_2
+    :try_start_1
+    invoke-virtual {v0}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
+
+    move-result-object p2
+
+    .line 191
+    invoke-virtual {p2, p1}, Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/InputStream;)Lorg/w3c/dom/Document;
+
+    move-result-object p2
+
+    .line 192
+    invoke-interface {p2}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
+
+    move-result-object p2
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
+
+    if-nez p2, :cond_4
+
+    if-eqz p1, :cond_3
+
+    .line 203
+    :try_start_2
+    invoke-virtual {p1}, Ljava/io/InputStream;->close()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+
+    :cond_3
+    return v1
+
+    .line 196
+    :cond_4
+    :try_start_3
+    invoke-interface {p2}, Lorg/w3c/dom/Element;->getNodeName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "Config"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+    :try_end_3
+    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+
+    if-nez v0, :cond_6
+
+    if-eqz p1, :cond_5
+
+    .line 203
+    :try_start_4
+    invoke-virtual {p1}, Ljava/io/InputStream;->close()V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
+
+    :cond_5
+    return v1
+
+    .line 199
+    :cond_6
+    :try_start_5
+    invoke-direct {p0, p2}, Lcom/miui/maml/util/ConfigFile;->loadVariables(Lorg/w3c/dom/Element;)V
+
+    .line 200
+    invoke-direct {p0, p2}, Lcom/miui/maml/util/ConfigFile;->loadTasks(Lorg/w3c/dom/Element;)V
+
+    .line 201
+    invoke-direct {p0, p2}, Lcom/miui/maml/util/ConfigFile;->loadGadgets(Lorg/w3c/dom/Element;)V
+    :try_end_5
+    .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
+
+    const/4 p2, 0x1
+
+    if-eqz p1, :cond_7
+
+    .line 203
+    :try_start_6
+    invoke-virtual {p1}, Ljava/io/InputStream;->close()V
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_2
+
+    :cond_7
+    return p2
+
+    :catch_0
+    move-exception p2
+
+    if-eqz p1, :cond_8
+
+    .line 185
+    :try_start_7
+    invoke-virtual {p1}, Ljava/io/InputStream;->close()V
+    :try_end_7
+    .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_2
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    :try_start_8
+    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :cond_8
+    :goto_1
+    throw p2
+    :try_end_8
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_2
+
+    :catch_2
+    move-exception p1
+
+    .line 204
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+
+    return v1
 .end method
 
 .method private loadGadgets(Lorg/w3c/dom/Element;)V
@@ -180,7 +364,7 @@
 
     const-string v1, "Gadget"
 
-    .line 403
+    .line 401
     new-instance v2, Lcom/miui/maml/util/ConfigFile$4;
 
     invoke-direct {v2, p0}, Lcom/miui/maml/util/ConfigFile$4;-><init>(Lcom/miui/maml/util/ConfigFile;)V
@@ -193,7 +377,7 @@
 .method private loadList(Lorg/w3c/dom/Element;Ljava/lang/String;Ljava/lang/String;Lcom/miui/maml/util/ConfigFile$OnLoadElementListener;)V
     .locals 3
 
-    .line 420
+    .line 418
     invoke-static {p1, p2}, Lcom/miui/maml/util/Utils;->getChild(Lorg/w3c/dom/Element;Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object p1
@@ -202,7 +386,7 @@
 
     return-void
 
-    .line 423
+    .line 421
     :cond_0
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getChildNodes()Lorg/w3c/dom/NodeList;
 
@@ -210,7 +394,7 @@
 
     const/4 p2, 0x0
 
-    .line 424
+    .line 422
     :goto_0
     invoke-interface {p1}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -218,12 +402,12 @@
 
     if-ge p2, v0, :cond_2
 
-    .line 425
+    .line 423
     invoke-interface {p1, p2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v0
 
-    .line 426
+    .line 424
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNodeType()S
 
     move-result v1
@@ -242,10 +426,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 427
+    .line 425
     check-cast v0, Lorg/w3c/dom/Element;
 
-    .line 428
+    .line 426
     invoke-interface {p4, v0}, Lcom/miui/maml/util/ConfigFile$OnLoadElementListener;->OnLoadElement(Lorg/w3c/dom/Element;)V
 
     :cond_1
@@ -264,7 +448,7 @@
 
     const-string v1, "Intent"
 
-    .line 394
+    .line 392
     new-instance v2, Lcom/miui/maml/util/ConfigFile$3;
 
     invoke-direct {v2, p0}, Lcom/miui/maml/util/ConfigFile$3;-><init>(Lcom/miui/maml/util/ConfigFile;)V
@@ -281,7 +465,7 @@
 
     const-string v1, "Variable"
 
-    .line 385
+    .line 383
     new-instance v2, Lcom/miui/maml/util/ConfigFile$2;
 
     invoke-direct {v2, p0}, Lcom/miui/maml/util/ConfigFile$2;-><init>(Lcom/miui/maml/util/ConfigFile;)V
@@ -294,7 +478,7 @@
 .method private put(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 434
+    .line 432
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -312,7 +496,7 @@
     :cond_0
     const-string v0, "string"
 
-    .line 436
+    .line 434
     invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -329,7 +513,7 @@
 
     return-void
 
-    .line 438
+    .line 436
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mVariables:Ljava/util/HashMap;
 
@@ -341,24 +525,24 @@
 
     if-nez v0, :cond_2
 
-    .line 440
+    .line 438
     new-instance v0, Lcom/miui/maml/util/ConfigFile$Variable;
 
     invoke-direct {v0}, Lcom/miui/maml/util/ConfigFile$Variable;-><init>()V
 
-    .line 441
+    .line 439
     iput-object p1, v0, Lcom/miui/maml/util/ConfigFile$Variable;->name:Ljava/lang/String;
 
-    .line 442
+    .line 440
     iget-object v1, p0, Lcom/miui/maml/util/ConfigFile;->mVariables:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 444
+    .line 442
     :cond_2
     iput-object p3, v0, Lcom/miui/maml/util/ConfigFile$Variable;->type:Ljava/lang/String;
 
-    .line 445
+    .line 443
     iput-object p2, v0, Lcom/miui/maml/util/ConfigFile$Variable;->value:Ljava/lang/String;
 
     return-void
@@ -371,7 +555,7 @@
 .method private writeGadgets(Ljava/lang/StringBuilder;)V
     .locals 7
 
-    .line 340
+    .line 338
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mGadgets:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -387,21 +571,21 @@
 
     const/4 v1, 0x0
 
-    .line 343
+    .line 341
     invoke-static {p1, v0, v1}, Lcom/miui/maml/util/ConfigFile;->writeTag(Ljava/lang/StringBuilder;Ljava/lang/String;Z)V
 
     const-string v0, "path"
 
-    const-string v2, "x"
+    const-string/jumbo v2, "x"
 
-    const-string v3, "y"
+    const-string/jumbo v3, "y"
 
-    .line 345
+    .line 343
     filled-new-array {v0, v2, v3}, [Ljava/lang/String;
 
     move-result-object v0
 
-    .line 348
+    .line 346
     iget-object v2, p0, Lcom/miui/maml/util/ConfigFile;->mGadgets:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -425,7 +609,7 @@
 
     const/4 v5, 0x3
 
-    .line 349
+    .line 347
     new-array v5, v5, [Ljava/lang/String;
 
     iget-object v6, v3, Lcom/miui/maml/util/ConfigFile$Gadget;->path:Ljava/lang/String;
@@ -434,7 +618,7 @@
 
     iget v6, v3, Lcom/miui/maml/util/ConfigFile$Gadget;->x:I
 
-    .line 350
+    .line 348
     invoke-static {v6}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v6
@@ -453,7 +637,7 @@
 
     const-string v3, "Gadget"
 
-    .line 352
+    .line 350
     invoke-static {p1, v3, v0, v5, v4}, Lcom/miui/maml/util/ConfigFile;->writeTag(Ljava/lang/StringBuilder;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Z)V
 
     goto :goto_0
@@ -461,7 +645,7 @@
     :cond_1
     const-string v0, "Gadgets"
 
-    .line 354
+    .line 352
     invoke-static {p1, v0, v4}, Lcom/miui/maml/util/ConfigFile;->writeTag(Ljava/lang/StringBuilder;Ljava/lang/String;Z)V
 
     return-void
@@ -472,23 +656,23 @@
 
     const-string v0, "<"
 
-    .line 358
+    .line 356
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     if-eqz p2, :cond_0
 
     const-string p2, "/"
 
-    .line 360
+    .line 358
     invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 361
+    .line 359
     :cond_0
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p1, ">\n"
 
-    .line 362
+    .line 360
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     return-void
@@ -499,7 +683,7 @@
 
     const/4 v0, 0x1
 
-    .line 366
+    .line 364
     invoke-static {p0, p1, p2, p3, v0}, Lcom/miui/maml/util/ConfigFile;->writeTag(Ljava/lang/StringBuilder;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Z)V
 
     return-void
@@ -510,15 +694,15 @@
 
     const-string v0, "<"
 
-    .line 370
+    .line 368
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 371
+    .line 369
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/4 p1, 0x0
 
-    .line 372
+    .line 370
     :goto_0
     array-length v0, p2
 
@@ -526,7 +710,7 @@
 
     if-eqz p4, :cond_0
 
-    .line 373
+    .line 371
     aget-object v0, p3, p1
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -540,27 +724,27 @@
     :cond_0
     const-string v0, " "
 
-    .line 375
+    .line 373
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 376
+    .line 374
     aget-object v0, p2, p1
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, "=\""
 
-    .line 377
+    .line 375
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 378
+    .line 376
     aget-object v0, p3, p1
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, "\""
 
-    .line 379
+    .line 377
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :goto_1
@@ -571,7 +755,7 @@
     :cond_1
     const-string p1, "/>\n"
 
-    .line 381
+    .line 379
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     return-void
@@ -580,7 +764,7 @@
 .method private writeTasks(Ljava/lang/StringBuilder;)V
     .locals 13
 
-    .line 321
+    .line 319
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mTasks:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
@@ -596,12 +780,12 @@
 
     const/4 v1, 0x0
 
-    .line 324
+    .line 322
     invoke-static {p1, v0, v1}, Lcom/miui/maml/util/ConfigFile;->writeTag(Ljava/lang/StringBuilder;Ljava/lang/String;Z)V
 
     const/4 v0, 0x7
 
-    .line 326
+    .line 324
     new-array v2, v0, [Ljava/lang/String;
 
     sget-object v3, Lcom/miui/maml/util/Task;->TAG_ID:Ljava/lang/String;
@@ -644,7 +828,7 @@
 
     aput-object v3, v2, v9
 
-    .line 330
+    .line 328
     iget-object v3, p0, Lcom/miui/maml/util/ConfigFile;->mTasks:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -668,7 +852,7 @@
 
     check-cast v10, Lcom/miui/maml/util/Task;
 
-    .line 331
+    .line 329
     new-array v11, v0, [Ljava/lang/String;
 
     iget-object v12, v10, Lcom/miui/maml/util/Task;->id:Ljava/lang/String;
@@ -701,7 +885,7 @@
 
     const-string v10, "Intent"
 
-    .line 334
+    .line 332
     invoke-static {p1, v10, v2, v11, v4}, Lcom/miui/maml/util/ConfigFile;->writeTag(Ljava/lang/StringBuilder;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Z)V
 
     goto :goto_0
@@ -709,7 +893,7 @@
     :cond_1
     const-string v0, "Tasks"
 
-    .line 336
+    .line 334
     invoke-static {p1, v0, v4}, Lcom/miui/maml/util/ConfigFile;->writeTag(Ljava/lang/StringBuilder;Ljava/lang/String;Z)V
 
     return-void
@@ -718,7 +902,7 @@
 .method private writeVariables(Ljava/lang/StringBuilder;)V
     .locals 7
 
-    .line 303
+    .line 301
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mVariables:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
@@ -734,7 +918,7 @@
 
     const/4 v1, 0x0
 
-    .line 306
+    .line 304
     invoke-static {p1, v0, v1}, Lcom/miui/maml/util/ConfigFile;->writeTag(Ljava/lang/StringBuilder;Ljava/lang/String;Z)V
 
     const-string v0, "name"
@@ -743,12 +927,12 @@
 
     const-string v3, "value"
 
-    .line 308
+    .line 306
     filled-new-array {v0, v2, v3}, [Ljava/lang/String;
 
     move-result-object v0
 
-    .line 311
+    .line 309
     iget-object v2, p0, Lcom/miui/maml/util/ConfigFile;->mVariables:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -776,7 +960,7 @@
 
     const/4 v5, 0x3
 
-    .line 312
+    .line 310
     new-array v5, v5, [Ljava/lang/String;
 
     iget-object v6, v3, Lcom/miui/maml/util/ConfigFile$Variable;->name:Ljava/lang/String;
@@ -795,7 +979,7 @@
 
     const-string v3, "Variable"
 
-    .line 315
+    .line 313
     invoke-static {p1, v3, v0, v5}, Lcom/miui/maml/util/ConfigFile;->writeTag(Ljava/lang/StringBuilder;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
     goto :goto_0
@@ -803,7 +987,7 @@
     :cond_1
     const-string v0, "Variables"
 
-    .line 317
+    .line 315
     invoke-static {p1, v0, v4}, Lcom/miui/maml/util/ConfigFile;->writeTag(Ljava/lang/StringBuilder;Ljava/lang/String;Z)V
 
     return-void
@@ -822,7 +1006,7 @@
         }
     .end annotation
 
-    .line 95
+    .line 96
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mGadgets:Ljava/util/ArrayList;
 
     return-object v0
@@ -831,7 +1015,7 @@
 .method public getTask(Ljava/lang/String;)Lcom/miui/maml/util/Task;
     .locals 1
 
-    .line 257
+    .line 255
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mTasks:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -854,7 +1038,7 @@
         }
     .end annotation
 
-    .line 92
+    .line 93
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mTasks:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -867,7 +1051,7 @@
 .method public getVariable(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 212
+    .line 210
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mVariables:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -882,7 +1066,7 @@
 
     goto :goto_0
 
-    .line 213
+    .line 211
     :cond_0
     iget-object p1, p1, Lcom/miui/maml/util/ConfigFile$Variable;->value:Ljava/lang/String;
 
@@ -901,7 +1085,7 @@
         }
     .end annotation
 
-    .line 89
+    .line 90
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mVariables:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -912,264 +1096,29 @@
 .end method
 
 .method public load(Ljava/lang/String;)Z
-    .locals 4
+    .locals 1
 
-    .line 171
-    iput-object p1, p0, Lcom/miui/maml/util/ConfigFile;->mFilePath:Ljava/lang/String;
+    const/4 v0, 0x0
 
     .line 172
-    iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mVariables:Ljava/util/HashMap;
+    invoke-direct {p0, p1, v0}, Lcom/miui/maml/util/ConfigFile;->load(Ljava/lang/String;Z)Z
 
-    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
+    move-result p1
 
-    .line 173
-    iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mTasks:Ljava/util/HashMap;
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
-
-    .line 174
-    invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    .line 178
-    :try_start_0
-    new-instance v3, Ljava/io/FileInputStream;
-
-    invoke-direct {v3, p1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_c
-    .catch Ljavax/xml/parsers/ParserConfigurationException; {:try_start_0 .. :try_end_0} :catch_a
-    .catch Lorg/xml/sax/SAXException; {:try_start_0 .. :try_end_0} :catch_9
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_8
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_7
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    .line 179
-    :try_start_1
-    invoke-virtual {v0}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
-
-    move-result-object p1
-
-    .line 180
-    invoke-virtual {p1, v3}, Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/InputStream;)Lorg/w3c/dom/Document;
-
-    move-result-object p1
-
-    .line 181
-    invoke-interface {p1}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
-
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_d
-    .catch Ljavax/xml/parsers/ParserConfigurationException; {:try_start_1 .. :try_end_1} :catch_6
-    .catch Lorg/xml/sax/SAXException; {:try_start_1 .. :try_end_1} :catch_5
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_3
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-nez p1, :cond_0
-
-    .line 204
-    :try_start_2
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-
-    :catch_0
-    return v1
-
-    .line 185
-    :cond_0
-    :try_start_3
-    invoke-interface {p1}, Lorg/w3c/dom/Element;->getNodeName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "Config"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-    :try_end_3
-    .catch Ljava/io/FileNotFoundException; {:try_start_3 .. :try_end_3} :catch_d
-    .catch Ljavax/xml/parsers/ParserConfigurationException; {:try_start_3 .. :try_end_3} :catch_6
-    .catch Lorg/xml/sax/SAXException; {:try_start_3 .. :try_end_3} :catch_5
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_4
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    if-nez v0, :cond_1
-
-    .line 204
-    :try_start_4
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
-
-    :catch_1
-    return v1
-
-    .line 188
-    :cond_1
-    :try_start_5
-    invoke-direct {p0, p1}, Lcom/miui/maml/util/ConfigFile;->loadVariables(Lorg/w3c/dom/Element;)V
-
-    .line 189
-    invoke-direct {p0, p1}, Lcom/miui/maml/util/ConfigFile;->loadTasks(Lorg/w3c/dom/Element;)V
-
-    .line 190
-    invoke-direct {p0, p1}, Lcom/miui/maml/util/ConfigFile;->loadGadgets(Lorg/w3c/dom/Element;)V
-    :try_end_5
-    .catch Ljava/io/FileNotFoundException; {:try_start_5 .. :try_end_5} :catch_d
-    .catch Ljavax/xml/parsers/ParserConfigurationException; {:try_start_5 .. :try_end_5} :catch_6
-    .catch Lorg/xml/sax/SAXException; {:try_start_5 .. :try_end_5} :catch_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_4
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
-
-    const/4 p1, 0x1
-
-    .line 204
-    :try_start_6
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
-
-    :catch_2
     return p1
+.end method
 
-    :catchall_0
-    move-exception p1
+.method public loadByIconStream(Ljava/lang/String;)Z
+    .locals 1
 
-    goto :goto_5
+    const/4 v0, 0x1
 
-    :catch_3
-    move-exception p1
+    .line 176
+    invoke-direct {p0, p1, v0}, Lcom/miui/maml/util/ConfigFile;->load(Ljava/lang/String;Z)Z
 
-    move-object v2, v3
+    move-result p1
 
-    goto :goto_0
-
-    :catch_4
-    move-exception p1
-
-    move-object v2, v3
-
-    goto :goto_2
-
-    :catch_5
-    move-exception p1
-
-    move-object v2, v3
-
-    goto :goto_3
-
-    :catch_6
-    move-exception p1
-
-    move-object v2, v3
-
-    goto :goto_4
-
-    :catchall_1
-    move-exception p1
-
-    move-object v3, v2
-
-    goto :goto_5
-
-    :catch_7
-    move-exception p1
-
-    .line 200
-    :goto_0
-    :try_start_7
-    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_1
-
-    if-eqz v2, :cond_3
-
-    .line 204
-    :goto_1
-    :try_start_8
-    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
-    :try_end_8
-    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_e
-
-    goto :goto_6
-
-    :catch_8
-    move-exception p1
-
-    .line 198
-    :goto_2
-    :try_start_9
-    invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
-
-    if-eqz v2, :cond_3
-
-    goto :goto_1
-
-    :catch_9
-    move-exception p1
-
-    .line 196
-    :goto_3
-    invoke-virtual {p1}, Lorg/xml/sax/SAXException;->printStackTrace()V
-
-    if-eqz v2, :cond_3
-
-    goto :goto_1
-
-    :catch_a
-    move-exception p1
-
-    .line 194
-    :goto_4
-    invoke-virtual {p1}, Ljavax/xml/parsers/ParserConfigurationException;->printStackTrace()V
-    :try_end_9
-    .catchall {:try_start_9 .. :try_end_9} :catchall_1
-
-    if-eqz v2, :cond_3
-
-    goto :goto_1
-
-    :goto_5
-    if-eqz v3, :cond_2
-
-    .line 204
-    :try_start_a
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-    :try_end_a
-    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_b
-
-    .line 207
-    :catch_b
-    :cond_2
-    throw p1
-
-    :catch_c
-    move-object v3, v2
-
-    :catch_d
-    if-eqz v3, :cond_3
-
-    .line 204
-    :try_start_b
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-    :try_end_b
-    .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_e
-
-    :catch_e
-    :cond_3
-    :goto_6
-    return v1
+    return p1
 .end method
 
 .method public loadDefaultSettings(Lorg/w3c/dom/Element;)V
@@ -1177,7 +1126,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 261
+    .line 259
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getNodeName()Ljava/lang/String;
 
     move-result-object v0
@@ -1195,7 +1144,7 @@
     :cond_0
     const-string v0, "Group"
 
-    .line 264
+    .line 262
     new-instance v1, Lcom/miui/maml/util/ConfigFile$1;
 
     invoke-direct {v1, p0}, Lcom/miui/maml/util/ConfigFile$1;-><init>(Lcom/miui/maml/util/ConfigFile;)V
@@ -1212,7 +1161,7 @@
 .method public moveGadget(Lcom/miui/maml/util/ConfigFile$Gadget;I)V
     .locals 1
 
-    .line 251
+    .line 249
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mGadgets:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -1221,7 +1170,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 252
+    .line 250
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mGadgets:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
@@ -1237,7 +1186,7 @@
 
     return-void
 
-    .line 240
+    .line 238
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mGadgets:Ljava/util/ArrayList;
 
@@ -1245,7 +1194,7 @@
 
     const/4 p1, 0x1
 
-    .line 241
+    .line 239
     iput-boolean p1, p0, Lcom/miui/maml/util/ConfigFile;->mDirty:Z
 
     return-void
@@ -1254,7 +1203,7 @@
 .method public putNumber(Ljava/lang/String;D)V
     .locals 0
 
-    .line 227
+    .line 225
     invoke-static {p2, p3}, Lcom/miui/maml/util/Utils;->doubleToString(D)Ljava/lang/String;
 
     move-result-object p2
@@ -1269,12 +1218,12 @@
 
     const-string v0, "number"
 
-    .line 222
+    .line 220
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/maml/util/ConfigFile;->put(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
-    .line 223
+    .line 221
     iput-boolean p1, p0, Lcom/miui/maml/util/ConfigFile;->mDirty:Z
 
     return-void
@@ -1285,12 +1234,12 @@
 
     const-string v0, "string"
 
-    .line 217
+    .line 215
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/maml/util/ConfigFile;->put(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
-    .line 218
+    .line 216
     iput-boolean p1, p0, Lcom/miui/maml/util/ConfigFile;->mDirty:Z
 
     return-void
@@ -1301,7 +1250,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 231
+    .line 229
     iget-object v0, p1, Lcom/miui/maml/util/Task;->id:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1312,7 +1261,7 @@
 
     goto :goto_0
 
-    .line 233
+    .line 231
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mTasks:Ljava/util/HashMap;
 
@@ -1322,7 +1271,7 @@
 
     const/4 p1, 0x1
 
-    .line 234
+    .line 232
     iput-boolean p1, p0, Lcom/miui/maml/util/ConfigFile;->mDirty:Z
 
     return-void
@@ -1335,14 +1284,14 @@
 .method public removeGadget(Lcom/miui/maml/util/ConfigFile$Gadget;)V
     .locals 1
 
-    .line 245
+    .line 243
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mGadgets:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     const/4 p1, 0x1
 
-    .line 246
+    .line 244
     iput-boolean p1, p0, Lcom/miui/maml/util/ConfigFile;->mDirty:Z
 
     return-void
@@ -1351,17 +1300,17 @@
 .method public save(Landroid/content/Context;)Z
     .locals 2
 
-    .line 99
+    .line 100
     iget-boolean v0, p0, Lcom/miui/maml/util/ConfigFile;->mDirty:Z
 
     const/4 v1, 0x0
 
-    .line 100
+    .line 101
     iput-boolean v1, p0, Lcom/miui/maml/util/ConfigFile;->mDirty:Z
 
     if-eqz v0, :cond_0
 
-    .line 101
+    .line 102
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile;->mFilePath:Ljava/lang/String;
 
     invoke-virtual {p0, v0, p1}, Lcom/miui/maml/util/ConfigFile;->save(Ljava/lang/String;Landroid/content/Context;)Z
@@ -1380,7 +1329,7 @@
 .method public save(Ljava/lang/String;Landroid/content/Context;)Z
     .locals 8
 
-    .line 109
+    .line 110
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1389,31 +1338,31 @@
 
     const/4 v2, 0x0
 
-    .line 110
+    .line 111
     invoke-static {v0, v1, v2}, Lcom/miui/maml/util/ConfigFile;->writeTag(Ljava/lang/StringBuilder;Ljava/lang/String;Z)V
 
-    .line 111
+    .line 112
     invoke-direct {p0, v0}, Lcom/miui/maml/util/ConfigFile;->writeVariables(Ljava/lang/StringBuilder;)V
 
-    .line 112
+    .line 113
     invoke-direct {p0, v0}, Lcom/miui/maml/util/ConfigFile;->writeTasks(Ljava/lang/StringBuilder;)V
 
-    .line 113
+    .line 114
     invoke-direct {p0, v0}, Lcom/miui/maml/util/ConfigFile;->writeGadgets(Ljava/lang/StringBuilder;)V
 
     const-string v1, "Config"
 
     const/4 v3, 0x1
 
-    .line 114
+    .line 115
     invoke-static {v0, v1, v3}, Lcom/miui/maml/util/ConfigFile;->writeTag(Ljava/lang/StringBuilder;Ljava/lang/String;Z)V
 
-    .line 116
+    .line 117
     iget-boolean v1, p0, Lcom/miui/maml/util/ConfigFile;->mSaveViaProvider:Z
 
     if-eqz v1, :cond_0
 
-    .line 117
+    .line 118
     new-instance v1, Lcom/miui/maml/util/ConfigFile$SaveAsyncTask;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -1430,13 +1379,13 @@
 
     return v3
 
-    .line 120
+    .line 121
     :cond_0
     invoke-static {p1}, Lmiui/content/res/ThemeNativeUtils;->remove(Ljava/lang/String;)Z
 
     const/4 v1, 0x0
 
-    .line 123
+    .line 124
     :try_start_0
     invoke-direct {p0, p1}, Lcom/miui/maml/util/ConfigFile;->createNewFile(Ljava/lang/String;)V
     :try_end_0
@@ -1450,7 +1399,7 @@
 
     const-string p2, "ConfigFile"
 
-    .line 142
+    .line 143
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1472,13 +1421,13 @@
     :catch_1
     move-exception v4
 
-    .line 126
+    .line 127
     :try_start_1
     invoke-virtual {p2, v1}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v5
 
-    .line 127
+    .line 128
     sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v7, 0x17
@@ -1487,7 +1436,7 @@
 
     if-eqz v5, :cond_2
 
-    .line 129
+    .line 130
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1514,7 +1463,7 @@
 
     goto :goto_0
 
-    .line 133
+    .line 134
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1546,14 +1495,14 @@
 
     move-object v1, p2
 
-    .line 136
+    .line 137
     :cond_2
     :goto_0
     invoke-direct {p0, v1}, Lcom/miui/maml/util/ConfigFile;->createNewFile(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 147
+    .line 148
     :goto_1
     :try_start_2
     new-instance p2, Ljava/io/File;
@@ -1566,7 +1515,7 @@
 
     if-eqz p2, :cond_3
 
-    .line 148
+    .line 149
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
@@ -1575,7 +1524,7 @@
 
     goto :goto_2
 
-    .line 149
+    .line 150
     :cond_3
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1593,22 +1542,22 @@
 
     if-eqz p2, :cond_4
 
-    .line 150
+    .line 151
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
 
     invoke-static {v1, p2}, Lmiui/content/res/ThemeNativeUtils;->write(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 151
+    .line 152
     invoke-static {v1, p1}, Lmiui/content/res/ThemeNativeUtils;->copy(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 152
+    .line 153
     invoke-static {v1}, Lmiui/content/res/ThemeNativeUtils;->remove(Ljava/lang/String;)Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 161
+    .line 162
     :goto_2
     invoke-static {p1}, Lmiui/content/res/ThemeNativeUtils;->updateFilePermissionWithThemeContext(Ljava/lang/String;)Z
 
@@ -1620,7 +1569,7 @@
 
     const-string p2, "target file and temp file are not exists"
 
-    .line 154
+    .line 155
     invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
@@ -1632,12 +1581,12 @@
 
     const-string p2, "ConfigFile"
 
-    .line 158
+    .line 159
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "write file error"
+    const-string/jumbo v1, "write file error"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1654,7 +1603,7 @@
     :catch_3
     const-string p1, "ConfigFile"
 
-    .line 138
+    .line 139
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1677,7 +1626,7 @@
 .method public setSaveViaProvider(Z)V
     .locals 0
 
-    .line 167
+    .line 168
     iput-boolean p1, p0, Lcom/miui/maml/util/ConfigFile;->mSaveViaProvider:Z
 
     return-void

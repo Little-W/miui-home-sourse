@@ -112,7 +112,7 @@
     .line 31
     new-instance v0, Lcom/miui/maml/folme/AnimatedProperty$1;
 
-    const-string v1, "x"
+    const-string/jumbo v1, "x"
 
     invoke-direct {v0, v1}, Lcom/miui/maml/folme/AnimatedProperty$1;-><init>(Ljava/lang/String;)V
 
@@ -121,7 +121,7 @@
     .line 48
     new-instance v0, Lcom/miui/maml/folme/AnimatedProperty$2;
 
-    const-string v1, "y"
+    const-string/jumbo v1, "y"
 
     invoke-direct {v0, v1}, Lcom/miui/maml/folme/AnimatedProperty$2;-><init>(Ljava/lang/String;)V
 
@@ -247,7 +247,7 @@
     .line 287
     sget-object v0, Lcom/miui/maml/folme/AnimatedProperty;->sPropertyNameMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    const-string v1, "x"
+    const-string/jumbo v1, "x"
 
     sget-object v2, Lcom/miui/maml/folme/AnimatedProperty;->X:Lcom/miui/maml/folme/AnimatedProperty;
 
@@ -256,7 +256,7 @@
     .line 288
     sget-object v0, Lcom/miui/maml/folme/AnimatedProperty;->sPropertyNameMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    const-string v1, "y"
+    const-string/jumbo v1, "y"
 
     sget-object v2, Lcom/miui/maml/folme/AnimatedProperty;->Y:Lcom/miui/maml/folme/AnimatedProperty;
 

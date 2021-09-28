@@ -33,6 +33,9 @@
 .method public abstract setTint(FFFF)Lmiuix/animation/ITouchStyle;
 .end method
 
+.method public abstract setTintMode(I)Lmiuix/animation/ITouchStyle;
+.end method
+
 .method public varargs abstract touchDown([Lmiuix/animation/base/AnimConfig;)V
 .end method
 

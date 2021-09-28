@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 238
+    .line 242
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/UninstallController$5;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
 .method static synthetic lambda$accept$0(Lcom/miui/home/launcher/Launcher;Ljava/util/List;)V
     .locals 0
 
-    .line 242
+    .line 246
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getUninstallController()Lcom/miui/home/launcher/uninstall/UninstallController;
 
     move-result-object p0
@@ -61,7 +61,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 238
+    .line 242
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/uninstall/UninstallController$5;->accept(Ljava/util/List;)V
@@ -80,7 +80,7 @@
         }
     .end annotation
 
-    .line 241
+    .line 245
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController$5;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     new-instance v1, Lcom/miui/home/launcher/uninstall/-$$Lambda$UninstallController$5$qvJfATj3GipxYehUbebnkYb77IM;

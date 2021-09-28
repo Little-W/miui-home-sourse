@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 22
+    .line 21
     new-instance v0, Lcom/miui/maml/elements/filament/FilamentManager;
 
     const/4 v1, 0x0
@@ -37,7 +37,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 21
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

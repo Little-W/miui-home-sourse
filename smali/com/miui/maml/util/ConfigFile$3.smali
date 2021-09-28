@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/maml/util/ConfigFile;)V
     .locals 0
 
-    .line 394
+    .line 392
     iput-object p1, p0, Lcom/miui/maml/util/ConfigFile$3;->this$0:Lcom/miui/maml/util/ConfigFile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public OnLoadElement(Lorg/w3c/dom/Element;)V
     .locals 1
 
-    .line 397
+    .line 395
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile$3;->this$0:Lcom/miui/maml/util/ConfigFile;
 
     invoke-static {p1}, Lcom/miui/maml/util/Task;->load(Lorg/w3c/dom/Element;)Lcom/miui/maml/util/Task;

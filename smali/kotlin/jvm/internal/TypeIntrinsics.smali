@@ -13,6 +13,32 @@
     return-void
 .end method
 
+.method public static asMutableCollection(Ljava/lang/Object;)Ljava/util/Collection;
+    .locals 1
+
+    .line 123
+    instance-of v0, p0, Lkotlin/jvm/internal/markers/KMappedMarker;
+
+    if-eqz v0, :cond_0
+
+    instance-of v0, p0, Lkotlin/jvm/internal/markers/KMutableCollection;
+
+    if-nez v0, :cond_0
+
+    const-string v0, "kotlin.collections.MutableCollection"
+
+    .line 124
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/TypeIntrinsics;->throwCce(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 126
+    :cond_0
+    invoke-static {p0}, Lkotlin/jvm/internal/TypeIntrinsics;->castToCollection(Ljava/lang/Object;)Ljava/util/Collection;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method public static beforeCheckcastToFunctionOfArity(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 2
 
@@ -44,6 +70,28 @@
 
     :cond_0
     return-object p0
+.end method
+
+.method public static castToCollection(Ljava/lang/Object;)Ljava/util/Collection;
+    .locals 0
+
+    .line 138
+    :try_start_0
+    check-cast p0, Ljava/util/Collection;
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    .line 141
+    invoke-static {p0}, Lkotlin/jvm/internal/TypeIntrinsics;->throwCce(Ljava/lang/ClassCastException;)Ljava/lang/ClassCastException;
+
+    move-result-object p0
+
+    throw p0
 .end method
 
 .method public static getFunctionArity(Ljava/lang/Object;)I

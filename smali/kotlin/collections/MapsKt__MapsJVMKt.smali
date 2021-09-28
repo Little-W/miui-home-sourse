@@ -143,7 +143,7 @@
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v0, "with(entries.iterator().…ingletonMap(key, value) }"
+    const-string/jumbo v0, "with(entries.iterator().…ingletonMap(key, value) }"
 
     invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

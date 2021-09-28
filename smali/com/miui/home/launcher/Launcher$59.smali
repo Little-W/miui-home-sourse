@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->waitForAllIconsFinishLoading()V
+    value = Lcom/miui/home/launcher/Launcher;->preloadFolderContent()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,17 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
+.field final synthetic val$info:Lcom/miui/home/launcher/FolderInfo;
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/FolderInfo;)V
     .locals 0
 
-    .line 5863
+    .line 6279
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$59;->val$info:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,78 +40,14 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 2
 
-    .line 5866
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$8100(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;->isWorking()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 5867
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$500(Lcom/miui/home/launcher/Launcher;)Landroid/os/Handler;
-
-    move-result-object v0
+    .line 6282
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->val$info:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$8100(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/FolderInfo;->preLoadContentView(Lcom/miui/home/launcher/Launcher;)V
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/common/LoadingAsyncInflateManager;->getWaitTime()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    goto :goto_0
-
-    .line 5869
-    :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->fillEmptyCellsAfterMigrateDB()V
-
-    .line 5870
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->finishMigratingDB()V
-
-    .line 5871
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2500(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/HotSeats;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/HotSeats;->finishLoading()V
-
-    .line 5872
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$8200(Lcom/miui/home/launcher/Launcher;)V
-
-    .line 5873
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->checkAllScreensToSelfDelete()V
-
-    :goto_0
     return-void
 .end method

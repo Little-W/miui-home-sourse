@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
     .locals 0
 
-    .line 393
+    .line 401
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$6;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public onItemClicked(Ljava/lang/String;)V
     .locals 1
 
-    .line 396
+    .line 404
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$6;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/views/RecentsContainer;->dismissRecentsToLaunchTargetTaskOrHome(Ljava/lang/String;)V
 
     const-string v0, "click_in_container"
 
-    .line 397
+    .line 405
     invoke-static {v0, p1}, Lcom/miui/home/launcher/AnalyticalDataCollectorForRecents;->sendEnterSmallWindowEvent(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void

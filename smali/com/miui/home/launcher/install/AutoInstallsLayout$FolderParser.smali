@@ -205,8 +205,6 @@
     const-string p2, "Unable to add folder"
 
     .line 562
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     const-wide/16 p1, -0x1
 
     return-wide p1

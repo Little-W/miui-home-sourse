@@ -36,17 +36,17 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 1
 
-    .line 2887
+    .line 3008
     invoke-direct {p0, p1}, Lcom/miui/maml/ActionCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;)V
 
-    .line 2884
+    .line 3005
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$MultiCommand;->mCommands:Ljava/util/ArrayList;
 
-    .line 2889
+    .line 3010
     new-instance v0, Lcom/miui/maml/ActionCommand$MultiCommand$1;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/maml/ActionCommand$MultiCommand$1;-><init>(Lcom/miui/maml/ActionCommand$MultiCommand;Lcom/miui/maml/elements/ScreenElement;)V
@@ -63,7 +63,7 @@
 .method protected doPerform()V
     .locals 2
 
-    .line 2928
+    .line 3049
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MultiCommand;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -83,7 +83,7 @@
 
     check-cast v1, Lcom/miui/maml/ActionCommand;
 
-    .line 2929
+    .line 3050
     invoke-virtual {v1}, Lcom/miui/maml/ActionCommand;->perform()V
 
     goto :goto_0
@@ -95,7 +95,7 @@
 .method public finish()V
     .locals 2
 
-    .line 2907
+    .line 3028
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MultiCommand;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -115,7 +115,7 @@
 
     check-cast v1, Lcom/miui/maml/ActionCommand;
 
-    .line 2908
+    .line 3029
     invoke-virtual {v1}, Lcom/miui/maml/ActionCommand;->finish()V
 
     goto :goto_0
@@ -127,7 +127,7 @@
 .method public init()V
     .locals 2
 
-    .line 2900
+    .line 3021
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MultiCommand;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -147,7 +147,7 @@
 
     check-cast v1, Lcom/miui/maml/ActionCommand;
 
-    .line 2901
+    .line 3022
     invoke-virtual {v1}, Lcom/miui/maml/ActionCommand;->init()V
 
     goto :goto_0
@@ -159,7 +159,7 @@
 .method public pause()V
     .locals 2
 
-    .line 2914
+    .line 3035
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MultiCommand;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -179,7 +179,7 @@
 
     check-cast v1, Lcom/miui/maml/ActionCommand;
 
-    .line 2915
+    .line 3036
     invoke-virtual {v1}, Lcom/miui/maml/ActionCommand;->pause()V
 
     goto :goto_0
@@ -191,7 +191,7 @@
 .method public resume()V
     .locals 2
 
-    .line 2921
+    .line 3042
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$MultiCommand;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -211,7 +211,7 @@
 
     check-cast v1, Lcom/miui/maml/ActionCommand;
 
-    .line 2922
+    .line 3043
     invoke-virtual {v1}, Lcom/miui/maml/ActionCommand;->resume()V
 
     goto :goto_0

@@ -61,7 +61,7 @@
 
     const/16 v0, 0x9
 
-    .line 240
+    .line 251
     new-array v0, v0, [Ljava/lang/Class;
 
     sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
@@ -138,7 +138,7 @@
 
     const-string v11, "V"
 
-    .line 241
+    .line 252
     filled-new-array/range {v3 .. v11}, [Ljava/lang/String;
 
     move-result-object v0
@@ -363,7 +363,7 @@
         }
     .end annotation
 
-    .line 188
+    .line 199
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -407,7 +407,7 @@
         }
     .end annotation
 
-    .line 184
+    .line 195
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -449,7 +449,7 @@
         }
     .end annotation
 
-    .line 232
+    .line 243
     :try_start_0
     invoke-static {p0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -466,7 +466,7 @@
 
     const-string v1, "getClass"
 
-    .line 234
+    .line 245
     invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -488,7 +488,7 @@
         }
     .end annotation
 
-    .line 114
+    .line 125
     invoke-static {p2}, Lcom/miui/launcher/utils/ReflectUtils;->getSignature(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object p2
@@ -528,32 +528,62 @@
     move-result-object v0
 
     check-cast v0, Ljava/lang/reflect/Field;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_2
 
-    .line 103
+    :goto_0
+    if-eqz p0, :cond_1
+
+    .line 105
+    :try_start_1
     invoke-virtual {p0, p1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 104
+    :catch_0
+    if-eqz v0, :cond_0
+
+    const/4 p0, 0x1
+
+    .line 110
+    :try_start_2
+    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+
+    goto :goto_1
+
+    .line 113
+    :cond_0
+    invoke-virtual {p0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    .line 115
+    :cond_1
+    :goto_1
     sget-object p0, Lcom/miui/launcher/utils/ReflectUtils;->sFieldCache:Ljava/util/Map;
 
     invoke-interface {p0, p2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    :cond_0
+    :cond_2
     return-object v0
 
-    :catch_0
+    :catch_1
     move-exception p0
 
     const-string p1, "ReflectUtils"
 
     const-string p2, "getField"
 
-    .line 108
+    .line 119
     invoke-static {p1, p2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -577,7 +607,7 @@
         }
     .end annotation
 
-    .line 129
+    .line 140
     invoke-static {p0, p2, p3}, Lcom/miui/launcher/utils/ReflectUtils;->getField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object p0
@@ -588,7 +618,7 @@
 
     return-object p2
 
-    .line 134
+    .line 145
     :cond_0
     :try_start_0
     invoke-virtual {p0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -606,7 +636,7 @@
 
     const-string p3, "getFieldValue"
 
-    .line 136
+    .line 147
     invoke-static {p1, p3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object p2
@@ -628,13 +658,13 @@
         }
     .end annotation
 
-    .line 170
+    .line 181
     :try_start_0
     invoke-static {p0, p1, p2}, Lcom/miui/launcher/utils/ReflectUtils;->generateMethodCacheKey(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 171
+    .line 182
     sget-object v0, Lcom/miui/launcher/utils/ReflectUtils;->sMethodCache:Ljava/util/Map;
 
     invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -645,12 +675,12 @@
 
     if-nez v0, :cond_0
 
-    .line 173
+    .line 184
     invoke-virtual {p0, p1, p3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .line 174
+    .line 185
     sget-object p0, Lcom/miui/launcher/utils/ReflectUtils;->sMethodCache:Ljava/util/Map;
 
     invoke-interface {p0, p2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -667,7 +697,7 @@
 
     const-string p2, "getMethod"
 
-    .line 178
+    .line 189
     invoke-static {p1, p2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 p0, 0x0
@@ -688,19 +718,19 @@
         }
     .end annotation
 
-    .line 192
+    .line 203
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const/16 v1, 0x28
 
-    .line 193
+    .line 204
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     if-eqz p1, :cond_0
 
-    .line 196
+    .line 207
     array-length v1, p1
 
     const/4 v2, 0x0
@@ -708,10 +738,10 @@
     :goto_0
     if-ge v2, v1, :cond_0
 
-    .line 199
+    .line 210
     aget-object v3, p1, v2
 
-    .line 200
+    .line 211
     invoke-static {v3}, Lcom/miui/launcher/utils/ReflectUtils;->getSignature(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v3
@@ -725,17 +755,17 @@
     :cond_0
     const/16 p1, 0x29
 
-    .line 204
+    .line 215
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 205
+    .line 216
     invoke-static {p0}, Lcom/miui/launcher/utils/ReflectUtils;->getSignature(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 206
+    .line 217
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
@@ -799,7 +829,7 @@
 
     const/4 v0, 0x0
 
-    .line 210
+    .line 221
     :goto_0
     sget-object v1, Lcom/miui/launcher/utils/ReflectUtils;->PRIMITIVE_CLASSES:[Ljava/lang/Class;
 
@@ -807,12 +837,12 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 211
+    .line 222
     aget-object v1, v1, v0
 
     if-ne p0, v1, :cond_0
 
-    .line 212
+    .line 223
     sget-object p0, Lcom/miui/launcher/utils/ReflectUtils;->SIGNATURE_OF_PRIMTIVE_CLASSES:[Ljava/lang/String;
 
     aget-object p0, p0, v0
@@ -824,7 +854,7 @@
 
     goto :goto_0
 
-    .line 216
+    .line 227
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -842,7 +872,7 @@
 
     const/4 v0, 0x0
 
-    .line 220
+    .line 231
     :goto_0
     sget-object v1, Lcom/miui/launcher/utils/ReflectUtils;->PRIMITIVE_CLASSES:[Ljava/lang/Class;
 
@@ -850,7 +880,7 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 221
+    .line 232
     aget-object v1, v1, v0
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -863,7 +893,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 222
+    .line 233
     sget-object p0, Lcom/miui/launcher/utils/ReflectUtils;->SIGNATURE_OF_PRIMTIVE_CLASSES:[Ljava/lang/String;
 
     aget-object p0, p0, v0
@@ -878,14 +908,14 @@
 
     const-string v1, "/"
 
-    .line 226
+    .line 237
     invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "["
 
-    .line 227
+    .line 238
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
@@ -934,13 +964,13 @@
 
     const/4 v0, 0x0
 
-    .line 119
+    .line 130
     :try_start_0
     invoke-static {p0, p1, p2}, Lcom/miui/launcher/utils/ReflectUtils;->getField(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/reflect/Field;
 
     move-result-object p0
 
-    .line 120
+    .line 131
     invoke-virtual {p0, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -956,7 +986,7 @@
 
     const-string p2, "getStaticFieldValue"
 
-    .line 122
+    .line 133
     invoke-static {p1, p2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return-object v0
@@ -1074,7 +1104,7 @@
 .method public static setValue(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)V
     .locals 1
 
-    .line 143
+    .line 154
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1084,12 +1114,12 @@
 
     move-result-object p1
 
-    .line 144
+    .line 155
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_0
 
-    .line 145
+    .line 156
     check-cast p3, Ljava/lang/Integer;
 
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
@@ -1104,13 +1134,13 @@
 
     goto/16 :goto_0
 
-    .line 146
+    .line 157
     :cond_0
     sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_1
 
-    .line 147
+    .line 158
     check-cast p3, Ljava/lang/Float;
 
     invoke-virtual {p3}, Ljava/lang/Float;->floatValue()F
@@ -1125,13 +1155,13 @@
 
     goto/16 :goto_0
 
-    .line 148
+    .line 159
     :cond_1
     sget-object v0, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_2
 
-    .line 149
+    .line 160
     check-cast p3, Ljava/lang/Long;
 
     invoke-virtual {p3}, Ljava/lang/Long;->longValue()J
@@ -1146,13 +1176,13 @@
 
     goto :goto_0
 
-    .line 150
+    .line 161
     :cond_2
     sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_3
 
-    .line 151
+    .line 162
     check-cast p3, Ljava/lang/Boolean;
 
     invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
@@ -1167,13 +1197,13 @@
 
     goto :goto_0
 
-    .line 152
+    .line 163
     :cond_3
     sget-object v0, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_4
 
-    .line 153
+    .line 164
     check-cast p3, Ljava/lang/Double;
 
     invoke-virtual {p3}, Ljava/lang/Double;->doubleValue()D
@@ -1188,13 +1218,13 @@
 
     goto :goto_0
 
-    .line 154
+    .line 165
     :cond_4
     sget-object v0, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_5
 
-    .line 155
+    .line 166
     check-cast p3, Ljava/lang/Character;
 
     invoke-virtual {p3}, Ljava/lang/Character;->charValue()C
@@ -1209,13 +1239,13 @@
 
     goto :goto_0
 
-    .line 156
+    .line 167
     :cond_5
     sget-object v0, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_6
 
-    .line 157
+    .line 168
     check-cast p3, Ljava/lang/Byte;
 
     invoke-virtual {p3}, Ljava/lang/Byte;->byteValue()B
@@ -1230,13 +1260,13 @@
 
     goto :goto_0
 
-    .line 158
+    .line 169
     :cond_6
     sget-object v0, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
     if-ne p2, v0, :cond_7
 
-    .line 159
+    .line 170
     check-cast p3, Ljava/lang/Short;
 
     invoke-virtual {p3}, Ljava/lang/Short;->shortValue()S
@@ -1251,7 +1281,7 @@
 
     goto :goto_0
 
-    .line 161
+    .line 172
     :cond_7
     invoke-virtual {p2, p3}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1270,7 +1300,7 @@
 
     const-string p2, "setValue"
 
-    .line 164
+    .line 175
     invoke-static {p1, p2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

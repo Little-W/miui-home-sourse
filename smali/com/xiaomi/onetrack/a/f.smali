@@ -1128,7 +1128,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "will return common sample "
+    const-string/jumbo v3, "will return common sample "
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1155,7 +1155,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "will return event sample "
+    const-string/jumbo v3, "will return event sample "
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1202,7 +1202,7 @@
     :cond_3
     const-string p1, "ConfigDbManager"
 
-    const-string p2, "will return def sample"
+    const-string/jumbo p2, "will return def sample"
 
     .line 348
     invoke-static {p1, p2}, Lcom/xiaomi/onetrack/util/p;->a(Ljava/lang/String;Ljava/lang/String;)V

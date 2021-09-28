@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 1682
+    .line 1767
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$6;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$6;->val$packages:Ljava/util/ArrayList;
@@ -49,7 +49,7 @@
 .method protected bridge synthetic doInBackground()Ljava/lang/Object;
     .locals 1
 
-    .line 1682
+    .line 1767
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher$6;->doInBackground()Ljava/util/Map;
 
     move-result-object v0
@@ -69,7 +69,7 @@
         }
     .end annotation
 
-    .line 1685
+    .line 1770
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$6;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1100(Lcom/miui/home/launcher/Launcher;)J
@@ -88,7 +88,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1682
+    .line 1767
     check-cast p1, Ljava/util/Map;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$6;->onPostExecute(Ljava/util/Map;)V
@@ -108,19 +108,19 @@
         }
     .end annotation
 
-    .line 1690
+    .line 1775
     invoke-static {p1}, Lcom/miui/launcher/utils/CollectionUtils;->isEmpty(Ljava/util/Map;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 1691
+    .line 1776
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 1692
+    .line 1777
     new-instance v1, Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$6;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -149,26 +149,26 @@
 
     check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 1693
+    .line 1778
     invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1694
+    .line 1779
     invoke-interface {v0, v3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 1695
+    .line 1780
     invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/miui/launcher/common/AppUsageStat;
 
-    .line 1696
+    .line 1781
     invoke-virtual {v4}, Lcom/miui/launcher/common/AppUsageStat;->getLastUsedTime()J
 
     move-result-wide v4
@@ -183,14 +183,14 @@
 
     if-lez v4, :cond_0
 
-    .line 1697
+    .line 1782
     iget-object v4, p0, Lcom/miui/home/launcher/Launcher$6;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v2, v4}, Lcom/miui/home/launcher/ShortcutInfo;->onLaunch(Lcom/miui/home/launcher/Launcher;)V
 
     const-string v2, "Launcher"
 
-    .line 1698
+    .line 1783
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -204,8 +204,6 @@
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 

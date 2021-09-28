@@ -26,10 +26,10 @@
 .method public constructor <init>(Lcom/miui/launcher/overlay/client/LauncherClient;)V
     .locals 2
 
-    .line 21
+    .line 22
     invoke-direct {p0}, Lcom/miui/launcher/overlay/ILauncherOverlayCallback$Stub;-><init>()V
 
-    .line 22
+    .line 23
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -40,7 +40,7 @@
 
     iput-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherOverlayCallback;->mUIHandler:Landroid/os/Handler;
 
-    .line 23
+    .line 24
     iput-object p1, p0, Lcom/miui/launcher/overlay/client/LauncherOverlayCallback;->mClient:Lcom/miui/launcher/overlay/client/LauncherClient;
 
     return-void
@@ -51,12 +51,12 @@
 .method public call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 1
 
-    .line 28
+    .line 29
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherOverlayCallback;->mClient:Lcom/miui/launcher/overlay/client/LauncherClient;
 
     if-eqz v0, :cond_0
 
-    .line 29
+    .line 30
     invoke-virtual {v0, p1, p2, p3}, Lcom/miui/launcher/overlay/client/LauncherClient;->onOverlayCall(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object p1
@@ -72,7 +72,7 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 2
 
-    .line 60
+    .line 68
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherOverlayCallback;->mClient:Lcom/miui/launcher/overlay/client/LauncherClient;
 
     const/4 v1, 0x1
@@ -81,7 +81,7 @@
 
     return v1
 
-    .line 63
+    .line 71
     :cond_0
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -91,7 +91,7 @@
 
     return p1
 
-    .line 74
+    .line 82
     :pswitch_0
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherOverlayCallback;->mClient:Lcom/miui/launcher/overlay/client/LauncherClient;
 
@@ -107,7 +107,7 @@
 
     return v1
 
-    .line 71
+    .line 79
     :pswitch_1
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherOverlayCallback;->mClient:Lcom/miui/launcher/overlay/client/LauncherClient;
 
@@ -123,7 +123,7 @@
 
     return v1
 
-    .line 68
+    .line 76
     :pswitch_2
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherOverlayCallback;->mClient:Lcom/miui/launcher/overlay/client/LauncherClient;
 
@@ -139,7 +139,7 @@
 
     return v1
 
-    .line 65
+    .line 73
     :pswitch_3
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherOverlayCallback;->mClient:Lcom/miui/launcher/overlay/client/LauncherClient;
 
@@ -166,10 +166,25 @@
     .end packed-switch
 .end method
 
+.method public invoke(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 1
+
+    .line 57
+    iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherOverlayCallback;->mClient:Lcom/miui/launcher/overlay/client/LauncherClient;
+
+    if-eqz v0, :cond_0
+
+    .line 58
+    invoke-virtual {v0, p1, p2, p3}, Lcom/miui/launcher/overlay/client/LauncherClient;->onOverlayInvoke(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public overlayScrollChanged(F)V
     .locals 2
 
-    .line 41
+    .line 42
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherOverlayCallback;->mUIHandler:Landroid/os/Handler;
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -190,7 +205,7 @@
 .method public overlayScrollEnd(F)V
     .locals 2
 
-    .line 46
+    .line 47
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherOverlayCallback;->mUIHandler:Landroid/os/Handler;
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -211,7 +226,7 @@
 .method public overlayScrollStart(F)V
     .locals 2
 
-    .line 36
+    .line 37
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherOverlayCallback;->mUIHandler:Landroid/os/Handler;
 
     invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -232,7 +247,7 @@
 .method public overlayStatusChanged(I)V
     .locals 2
 
-    .line 51
+    .line 52
     iget-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherOverlayCallback;->mUIHandler:Landroid/os/Handler;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -255,7 +270,7 @@
 
     const/4 v0, 0x0
 
-    .line 55
+    .line 63
     iput-object v0, p0, Lcom/miui/launcher/overlay/client/LauncherOverlayCallback;->mClient:Lcom/miui/launcher/overlay/client/LauncherClient;
 
     return-void

@@ -35,19 +35,11 @@
             android:layout_centerHorizontal="true" />
         <include
             android:id="@id/recents_smallwindow_drag_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/recents_smallwindow_drag_text"
-            android:layout_below="@id/smallwindow_icon"
-            android:layout_centerHorizontal="true"
             layout="@layout/recents_small_window_text" />
         <include
             android:id="@id/recents_smallwindow_hold_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/recents_smallwindow_text"
-            android:layout_below="@id/smallwindow_icon"
-            android:layout_centerHorizontal="true"
             layout="@layout/recents_small_window_text" />
     </RelativeLayout>
 </com.miui.home.recents.views.RecentsSmallWindowCrop>

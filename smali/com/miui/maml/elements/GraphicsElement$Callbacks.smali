@@ -34,24 +34,24 @@
 .method public constructor <init>(Lorg/w3c/dom/Element;Lcom/miui/maml/elements/ScreenElement;)V
     .locals 3
 
-    .line 603
+    .line 618
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 601
+    .line 616
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/elements/GraphicsElement$Callbacks;->mCommands:Ljava/util/ArrayList;
 
-    .line 605
+    .line 620
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 606
+    .line 621
     :goto_0
     invoke-interface {p1}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -59,7 +59,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 607
+    .line 622
     invoke-interface {p1, v0}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v1
@@ -72,21 +72,21 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 608
+    .line 623
     invoke-interface {p1, v0}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v1
 
     check-cast v1, Lorg/w3c/dom/Element;
 
-    .line 609
+    .line 624
     invoke-static {v1, p2}, Lcom/miui/maml/ActionCommand;->create(Lorg/w3c/dom/Element;Lcom/miui/maml/elements/ScreenElement;)Lcom/miui/maml/ActionCommand;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 611
+    .line 626
     iget-object v2, p0, Lcom/miui/maml/elements/GraphicsElement$Callbacks;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -105,7 +105,7 @@
 .method public finish()V
     .locals 2
 
-    .line 641
+    .line 656
     iget-object v0, p0, Lcom/miui/maml/elements/GraphicsElement$Callbacks;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -125,7 +125,7 @@
 
     check-cast v1, Lcom/miui/maml/ActionCommand;
 
-    .line 642
+    .line 657
     invoke-virtual {v1}, Lcom/miui/maml/ActionCommand;->finish()V
 
     goto :goto_0
@@ -137,7 +137,7 @@
 .method public init()V
     .locals 2
 
-    .line 623
+    .line 638
     iget-object v0, p0, Lcom/miui/maml/elements/GraphicsElement$Callbacks;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -157,7 +157,7 @@
 
     check-cast v1, Lcom/miui/maml/ActionCommand;
 
-    .line 624
+    .line 639
     invoke-virtual {v1}, Lcom/miui/maml/ActionCommand;->init()V
 
     goto :goto_0
@@ -169,7 +169,7 @@
 .method public pause()V
     .locals 2
 
-    .line 629
+    .line 644
     iget-object v0, p0, Lcom/miui/maml/elements/GraphicsElement$Callbacks;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -189,7 +189,7 @@
 
     check-cast v1, Lcom/miui/maml/ActionCommand;
 
-    .line 630
+    .line 645
     invoke-virtual {v1}, Lcom/miui/maml/ActionCommand;->pause()V
 
     goto :goto_0
@@ -201,7 +201,7 @@
 .method public perform()V
     .locals 2
 
-    .line 617
+    .line 632
     iget-object v0, p0, Lcom/miui/maml/elements/GraphicsElement$Callbacks;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -221,7 +221,7 @@
 
     check-cast v1, Lcom/miui/maml/ActionCommand;
 
-    .line 618
+    .line 633
     invoke-virtual {v1}, Lcom/miui/maml/ActionCommand;->perform()V
 
     goto :goto_0
@@ -233,7 +233,7 @@
 .method public resume()V
     .locals 2
 
-    .line 635
+    .line 650
     iget-object v0, p0, Lcom/miui/maml/elements/GraphicsElement$Callbacks;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -253,7 +253,7 @@
 
     check-cast v1, Lcom/miui/maml/ActionCommand;
 
-    .line 636
+    .line 651
     invoke-virtual {v1}, Lcom/miui/maml/ActionCommand;->resume()V
 
     goto :goto_0

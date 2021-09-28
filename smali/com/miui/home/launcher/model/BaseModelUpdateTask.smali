@@ -20,8 +20,17 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 36
+    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method static synthetic lambda$bindMamlWidgetRemoved$1(Ljava/util/List;Lcom/miui/home/launcher/LauncherModel$Callbacks;)V
+    .locals 0
+
+    .line 109
+    invoke-interface {p1, p0}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->bindMamlWidgetRemoved(Ljava/util/List;)V
 
     return-void
 .end method
@@ -29,7 +38,7 @@
 .method public static synthetic lambda$scheduleCallbackTask$0(Lcom/miui/home/launcher/model/BaseModelUpdateTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Lcom/miui/home/launcher/LauncherModel$CallbackTask;)V
     .locals 1
 
-    .line 77
+    .line 78
     iget-object v0, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask;->mModel:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherModel;->getCallback()Lcom/miui/home/launcher/LauncherModel$Callbacks;
@@ -40,7 +49,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 79
+    .line 80
     invoke-interface {p2, p1}, Lcom/miui/home/launcher/LauncherModel$CallbackTask;->execute(Lcom/miui/home/launcher/LauncherModel$Callbacks;)V
 
     :cond_0
@@ -60,14 +69,14 @@
         }
     .end annotation
 
-    .line 96
+    .line 97
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 97
+    .line 98
     new-instance v0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$2;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/model/BaseModelUpdateTask$2;-><init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;Ljava/util/ArrayList;)V
@@ -95,7 +104,7 @@
         }
     .end annotation
 
-    .line 152
+    .line 159
     new-instance v0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$8;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/miui/home/launcher/model/BaseModelUpdateTask$8;-><init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
@@ -108,7 +117,7 @@
 .method public bindCategoryAdded()V
     .locals 1
 
-    .line 107
+    .line 114
     new-instance v0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$3;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/model/BaseModelUpdateTask$3;-><init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;)V
@@ -121,7 +130,7 @@
 .method public bindCategoryNameUpdate()V
     .locals 1
 
-    .line 143
+    .line 150
     new-instance v0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$7;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/model/BaseModelUpdateTask$7;-><init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;)V
@@ -134,7 +143,7 @@
 .method public bindCategoryOrderUpdate()V
     .locals 1
 
-    .line 134
+    .line 141
     new-instance v0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$6;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/model/BaseModelUpdateTask$6;-><init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;)V
@@ -147,7 +156,7 @@
 .method public bindCategoryRemoved()V
     .locals 1
 
-    .line 116
+    .line 123
     new-instance v0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$4;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/model/BaseModelUpdateTask$4;-><init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;)V
@@ -160,7 +169,7 @@
 .method public bindCategoryUpdate(I)V
     .locals 1
 
-    .line 125
+    .line 132
     new-instance v0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$5;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/model/BaseModelUpdateTask$5;-><init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;I)V
@@ -170,10 +179,39 @@
     return-void
 .end method
 
+.method public bindMamlWidgetRemoved(Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/maml/MaMlWidgetInfo;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 108
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 109
+    new-instance v0, Lcom/miui/home/launcher/model/-$$Lambda$BaseModelUpdateTask$M6psCNdzV22x0zSj5eNlsqs0cpY;
+
+    invoke-direct {v0, p1}, Lcom/miui/home/launcher/model/-$$Lambda$BaseModelUpdateTask$M6psCNdzV22x0zSj5eNlsqs0cpY;-><init>(Ljava/util/List;)V
+
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/model/BaseModelUpdateTask;->scheduleCallbackTask(Lcom/miui/home/launcher/LauncherModel$CallbackTask;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public bindScreenAdded(JII)V
     .locals 7
 
-    .line 161
+    .line 168
     new-instance v6, Lcom/miui/home/launcher/model/BaseModelUpdateTask$9;
 
     move-object v0, v6
@@ -196,7 +234,7 @@
 .method public bindScreenRemoved(J)V
     .locals 1
 
-    .line 170
+    .line 177
     new-instance v0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$10;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/model/BaseModelUpdateTask$10;-><init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;J)V
@@ -209,7 +247,7 @@
 .method public bindScreenTrim()V
     .locals 1
 
-    .line 179
+    .line 186
     new-instance v0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$11;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/model/BaseModelUpdateTask$11;-><init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;)V
@@ -230,14 +268,14 @@
         }
     .end annotation
 
-    .line 85
+    .line 86
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 86
+    .line 87
     new-instance v0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$1;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/model/BaseModelUpdateTask$1;-><init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;Ljava/util/ArrayList;)V
@@ -254,16 +292,16 @@
 .method public init(Lcom/miui/home/launcher/LauncherModel;Lcom/miui/home/launcher/AllAppsList;Lcom/miui/home/launcher/AllCategoryList;Ljava/util/concurrent/Executor;)V
     .locals 0
 
-    .line 48
+    .line 49
     iput-object p1, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask;->mModel:Lcom/miui/home/launcher/LauncherModel;
 
-    .line 49
+    .line 50
     iput-object p2, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask;->mAllAppsList:Lcom/miui/home/launcher/AllAppsList;
 
-    .line 50
+    .line 51
     iput-object p3, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask;->mAllCategoryList:Lcom/miui/home/launcher/AllCategoryList;
 
-    .line 51
+    .line 52
     iput-object p4, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask;->mUiExecutor:Ljava/util/concurrent/Executor;
 
     return-void
@@ -272,7 +310,7 @@
 .method public run()V
     .locals 2
 
-    .line 56
+    .line 57
     iget-object v0, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask;->mModel:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherModel;->isModelLoaded()Z
@@ -283,7 +321,7 @@
 
     return-void
 
-    .line 63
+    .line 64
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask;->mModel:Lcom/miui/home/launcher/LauncherModel;
 
@@ -297,14 +335,14 @@
 .method public final scheduleCallbackTask(Lcom/miui/home/launcher/LauncherModel$CallbackTask;)V
     .locals 3
 
-    .line 75
+    .line 76
     iget-object v0, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask;->mModel:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherModel;->getCallback()Lcom/miui/home/launcher/LauncherModel$Callbacks;
 
     move-result-object v0
 
-    .line 76
+    .line 77
     iget-object v1, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask;->mUiExecutor:Ljava/util/concurrent/Executor;
 
     new-instance v2, Lcom/miui/home/launcher/model/-$$Lambda$BaseModelUpdateTask$oMhNt2u8rUe2Am9wiFk92E4FOzc;

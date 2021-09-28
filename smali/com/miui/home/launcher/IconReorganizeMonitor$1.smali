@@ -37,7 +37,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/IconReorganizeMonitor;Landroid/content/Context;)V
     .locals 0
 
-    .line 65
+    .line 67
     iput-object p1, p0, Lcom/miui/home/launcher/IconReorganizeMonitor$1;->this$0:Lcom/miui/home/launcher/IconReorganizeMonitor;
 
     iput-object p2, p0, Lcom/miui/home/launcher/IconReorganizeMonitor$1;->val$context:Landroid/content/Context;
@@ -52,7 +52,7 @@
 .method public apply(Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 1
 
-    .line 68
+    .line 70
     iget-object p1, p0, Lcom/miui/home/launcher/IconReorganizeMonitor$1;->this$0:Lcom/miui/home/launcher/IconReorganizeMonitor;
 
     iget-object v0, p0, Lcom/miui/home/launcher/IconReorganizeMonitor$1;->val$context:Landroid/content/Context;
@@ -71,7 +71,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 65
+    .line 67
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/IconReorganizeMonitor$1;->apply(Ljava/lang/Void;)Ljava/lang/Boolean;

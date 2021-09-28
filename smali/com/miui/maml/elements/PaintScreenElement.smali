@@ -175,7 +175,7 @@
     .line 78
     new-instance p2, Landroid/graphics/PorterDuffXfermode;
 
-    const-string v0, "xfermode"
+    const-string/jumbo v0, "xfermode"
 
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 

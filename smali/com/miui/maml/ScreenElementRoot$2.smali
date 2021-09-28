@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/maml/ScreenElementRoot;)V
     .locals 0
 
-    .line 823
+    .line 844
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot$2;->this$0:Lcom/miui/maml/ScreenElementRoot;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,26 +38,26 @@
 .method public visit(Lcom/miui/maml/elements/ScreenElement;)V
     .locals 2
 
-    .line 828
+    .line 849
     instance-of v0, p1, Lcom/miui/maml/elements/FramerateController;
 
     if-eqz v0, :cond_0
 
-    .line 830
+    .line 851
     invoke-virtual {p1}, Lcom/miui/maml/elements/ScreenElement;->getRendererController()Lcom/miui/maml/RendererController;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 832
+    .line 853
     move-object v1, p1
 
     check-cast v1, Lcom/miui/maml/elements/FramerateController;
 
     invoke-virtual {v0, v1}, Lcom/miui/maml/RendererController;->addFramerateController(Lcom/miui/maml/elements/FramerateController;)V
 
-    .line 837
+    .line 858
     :cond_0
     instance-of v0, p1, Lcom/miui/maml/elements/ElementGroupRC;
 
@@ -67,11 +67,11 @@
 
     if-eqz v0, :cond_2
 
-    .line 838
+    .line 859
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot$2;->this$0:Lcom/miui/maml/ScreenElementRoot;
 
-    invoke-static {v0}, Lcom/miui/maml/ScreenElementRoot;->access$000(Lcom/miui/maml/ScreenElementRoot;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/miui/maml/ScreenElementRoot;->access$100(Lcom/miui/maml/ScreenElementRoot;)Ljava/util/ArrayList;
 
     move-result-object v0
 

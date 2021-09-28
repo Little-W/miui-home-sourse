@@ -30,10 +30,10 @@
 
     const-string v1, "android.hardware.usb.action.USB_STATE"
 
-    .line 484
+    .line 489
     invoke-direct {p0, p1, v0, v1}, Lcom/miui/maml/ActionCommand$NotificationReceiver;-><init>(Lcom/miui/maml/elements/ScreenElement;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 485
+    .line 490
     new-instance p1, Lcom/miui/maml/ActionCommand$OnOffCommandHelper;
 
     invoke-direct {p1, p2}, Lcom/miui/maml/ActionCommand$OnOffCommandHelper;-><init>(Ljava/lang/String;)V
@@ -46,7 +46,7 @@
 .method static synthetic access$200(Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;)Landroid/os/storage/StorageManager;
     .locals 0
 
-    .line 478
+    .line 483
     iget-object p0, p0, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;->mStorageManager:Landroid/os/storage/StorageManager;
 
     return-object p0
@@ -57,20 +57,20 @@
 .method protected doPerform()V
     .locals 3
 
-    .line 498
+    .line 503
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;->mStorageManager:Landroid/os/storage/StorageManager;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 501
+    .line 506
     :cond_0
     invoke-static {v0}, Lcom/miui/maml/util/HideSdkDependencyUtils;->StorageManager_isUsbMassStorageEnabled(Landroid/os/storage/StorageManager;)Z
 
     move-result v0
 
-    .line 503
+    .line 508
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;->mOnOffHelper:Lcom/miui/maml/ActionCommand$OnOffCommandHelper;
 
     iget-boolean v1, v1, Lcom/miui/maml/ActionCommand$OnOffCommandHelper;->mIsToggle:Z
@@ -81,7 +81,7 @@
 
     goto :goto_0
 
-    .line 506
+    .line 511
     :cond_1
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;->mOnOffHelper:Lcom/miui/maml/ActionCommand$OnOffCommandHelper;
 
@@ -91,7 +91,7 @@
 
     return-void
 
-    .line 508
+    .line 513
     :cond_2
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;->mOnOffHelper:Lcom/miui/maml/ActionCommand$OnOffCommandHelper;
 
@@ -100,17 +100,17 @@
     :goto_0
     const/4 v1, 0x3
 
-    .line 512
+    .line 517
     invoke-virtual {p0, v1}, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;->updateState(I)V
 
-    .line 514
+    .line 519
     new-instance v1, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand$1;
 
     const-string v2, "StorageSwitchThread"
 
     invoke-direct {v1, p0, v2, v0}, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand$1;-><init>(Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;Ljava/lang/String;Z)V
 
-    .line 524
+    .line 529
     invoke-virtual {v1}, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand$1;->start()V
 
     return-void
@@ -121,7 +121,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 491
+    .line 496
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
@@ -134,7 +134,7 @@
 
     iput-boolean v0, p0, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;->mConnected:Z
 
-    .line 493
+    .line 498
     :cond_0
     invoke-super {p0, p1, p2, p3}, Lcom/miui/maml/ActionCommand$NotificationReceiver;->onNotify(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/Object;)V
 
@@ -144,19 +144,19 @@
 .method protected update()V
     .locals 2
 
-    .line 529
+    .line 534
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;->mStorageManager:Landroid/os/storage/StorageManager;
 
     if-nez v0, :cond_0
 
-    .line 530
+    .line 535
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const-string v1, "storage"
 
-    .line 531
+    .line 536
     invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -165,7 +165,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;->mStorageManager:Landroid/os/storage/StorageManager;
 
-    .line 532
+    .line 537
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;->mStorageManager:Landroid/os/storage/StorageManager;
 
     if-nez v0, :cond_0
@@ -174,12 +174,12 @@
 
     const-string v1, "Failed to get StorageManager"
 
-    .line 533
+    .line 538
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 538
+    .line 543
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;->mStorageManager:Landroid/os/storage/StorageManager;
 
@@ -187,7 +187,7 @@
 
     move-result v0
 
-    .line 539
+    .line 544
     iget-boolean v1, p0, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;->mConnected:Z
 
     if-eqz v1, :cond_2

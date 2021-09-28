@@ -54,28 +54,28 @@
 .method constructor <init>()V
     .locals 1
 
-    .line 2193
+    .line 2220
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 2212
+    .line 2239
     iput-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mRecycle:Z
 
     const/4 v0, 0x0
 
-    .line 2253
+    .line 2280
     iput v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mExtraFillSpace:I
 
-    .line 2260
+    .line 2287
     iput v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mNoRecycleSpace:I
 
-    .line 2267
+    .line 2294
     iput-boolean v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mIsPreLayout:Z
 
     const/4 v0, 0x0
 
-    .line 2279
+    .line 2306
     iput-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mScrapList:Ljava/util/List;
 
     return-void
@@ -84,7 +84,7 @@
 .method private nextViewFromScrapList()Landroid/view/View;
     .locals 5
 
-    .line 2316
+    .line 2343
     iget-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mScrapList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -96,7 +96,7 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
-    .line 2318
+    .line 2345
     iget-object v2, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mScrapList:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -107,14 +107,14 @@
 
     iget-object v2, v2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 2319
+    .line 2347
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v3
 
     check-cast v3, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
-    .line 2320
+    .line 2348
     invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->isItemRemoved()Z
 
     move-result v4
@@ -123,7 +123,7 @@
 
     goto :goto_1
 
-    .line 2323
+    .line 2351
     :cond_0
     iget v4, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
@@ -133,7 +133,7 @@
 
     if-ne v4, v3, :cond_1
 
-    .line 2324
+    .line 2352
     invoke-virtual {p0, v2}, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->assignPositionFromScrapList(Landroid/view/View;)V
 
     return-object v2
@@ -157,7 +157,7 @@
 
     const/4 v0, 0x0
 
-    .line 2332
+    .line 2360
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->assignPositionFromScrapList(Landroid/view/View;)V
 
     return-void
@@ -166,7 +166,7 @@
 .method public assignPositionFromScrapList(Landroid/view/View;)V
     .locals 0
 
-    .line 2336
+    .line 2364
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->nextViewInLimitedList(Landroid/view/View;)Landroid/view/View;
 
     move-result-object p1
@@ -175,12 +175,12 @@
 
     const/4 p1, -0x1
 
-    .line 2338
+    .line 2366
     iput p1, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
     goto :goto_0
 
-    .line 2340
+    .line 2368
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -188,7 +188,7 @@
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
-    .line 2341
+    .line 2369
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->getViewLayoutPosition()I
 
     move-result p1
@@ -202,7 +202,7 @@
 .method hasMore(Landroidx/recyclerview/widget/RecyclerView$State;)Z
     .locals 1
 
-    .line 2290
+    .line 2317
     iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
     if-ltz v0, :cond_0
@@ -227,19 +227,19 @@
 .method next(Landroidx/recyclerview/widget/RecyclerView$Recycler;)Landroid/view/View;
     .locals 2
 
-    .line 2300
+    .line 2327
     iget-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mScrapList:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 2301
+    .line 2328
     invoke-direct {p0}, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->nextViewFromScrapList()Landroid/view/View;
 
     move-result-object p1
 
     return-object p1
 
-    .line 2303
+    .line 2330
     :cond_0
     iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
@@ -247,7 +247,7 @@
 
     move-result-object p1
 
-    .line 2304
+    .line 2331
     iget v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
     iget v1, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mItemDirection:I
@@ -262,7 +262,7 @@
 .method public nextViewInLimitedList(Landroid/view/View;)Landroid/view/View;
     .locals 7
 
-    .line 2346
+    .line 2374
     iget-object v0, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mScrapList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -278,7 +278,7 @@
     :goto_0
     if-ge v3, v0, :cond_4
 
-    .line 2353
+    .line 2381
     iget-object v4, p0, Landroidx/recyclerview/widget/LinearLayoutManager$LayoutState;->mScrapList:Ljava/util/List;
 
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -289,7 +289,7 @@
 
     iget-object v4, v4, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 2354
+    .line 2383
     invoke-virtual {v4}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v5
@@ -298,7 +298,7 @@
 
     if-eq v4, p1, :cond_3
 
-    .line 2355
+    .line 2384
     invoke-virtual {v5}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->isItemRemoved()Z
 
     move-result v6
@@ -307,7 +307,7 @@
 
     goto :goto_1
 
-    .line 2358
+    .line 2387
     :cond_0
     invoke-virtual {v5}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->getViewLayoutPosition()I
 

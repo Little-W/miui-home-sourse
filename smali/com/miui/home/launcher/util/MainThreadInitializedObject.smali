@@ -121,7 +121,7 @@
     .line 26
     :cond_0
     :try_start_0
-    sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->MAIN_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
+    sget-object v0, Lcom/miui/home/recents/util/Executors;->MAIN_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v1, Lcom/miui/home/launcher/util/-$$Lambda$MainThreadInitializedObject$7LU4kkMfBebbhQokLX-Fgi7GaPo;
 

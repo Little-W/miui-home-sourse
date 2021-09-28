@@ -222,8 +222,6 @@
 
     const-string p2, "startTime == null || endTime == null"
 
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 256
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -265,8 +263,6 @@
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p5, :cond_7
 
@@ -415,8 +411,6 @@
 
     const-string p3, " ErrnoException when prepareBackup home files"
 
-    invoke-static {p2, p3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 292
     invoke-virtual {p1}, Landroid/system/ErrnoException;->printStackTrace()V
 
@@ -453,8 +447,6 @@
     move-result-object p1
 
     const-string v0, "prepare back up failed"
-
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     if-eqz p0, :cond_1

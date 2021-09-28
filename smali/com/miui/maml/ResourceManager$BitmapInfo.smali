@@ -32,18 +32,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 56
+    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 57
+    .line 59
     iput-object v0, p0, Lcom/miui/maml/ResourceManager$BitmapInfo;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 58
+    .line 60
     iput-object v0, p0, Lcom/miui/maml/ResourceManager$BitmapInfo;->mPadding:Landroid/graphics/Rect;
 
-    .line 59
+    .line 61
     iput-object v0, p0, Lcom/miui/maml/ResourceManager$BitmapInfo;->mNinePatch:Landroid/graphics/NinePatch;
 
     return-void
@@ -52,27 +52,27 @@
 .method public constructor <init>(Landroid/graphics/Bitmap;Landroid/graphics/Rect;)V
     .locals 2
 
-    .line 62
+    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
+    .line 65
     iput-object p1, p0, Lcom/miui/maml/ResourceManager$BitmapInfo;->mBitmap:Landroid/graphics/Bitmap;
 
-    .line 64
+    .line 66
     iput-object p2, p0, Lcom/miui/maml/ResourceManager$BitmapInfo;->mPadding:Landroid/graphics/Rect;
 
     const/4 p2, 0x0
 
     if-eqz p1, :cond_0
 
-    .line 65
+    .line 67
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getNinePatchChunk()[B
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 66
+    .line 68
     new-instance v0, Landroid/graphics/NinePatch;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getNinePatchChunk()[B
@@ -85,11 +85,11 @@
 
     goto :goto_0
 
-    .line 68
+    .line 70
     :cond_0
     iput-object p2, p0, Lcom/miui/maml/ResourceManager$BitmapInfo;->mNinePatch:Landroid/graphics/NinePatch;
 
-    .line 70
+    .line 72
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 

@@ -1,4 +1,4 @@
-.class final Lcom/miui/maml/util/HideSdkDependencyUtils$1;
+.class Lcom/miui/maml/util/HideSdkDependencyUtils$1;
 .super Landroid/content/pm/IPackageInstallObserver2$Stub;
 .source "HideSdkDependencyUtils.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -26,7 +26,7 @@
 .method constructor <init>(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 178
+    .line 176
     iput-object p1, p0, Lcom/miui/maml/util/HideSdkDependencyUtils$1;->val$context:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/miui/maml/util/HideSdkDependencyUtils$1;->val$intent:Landroid/content/Intent;
@@ -48,7 +48,7 @@
         }
     .end annotation
 
-    .line 181
+    .line 179
     iget-object p1, p0, Lcom/miui/maml/util/HideSdkDependencyUtils$1;->val$context:Landroid/content/Context;
 
     iget-object p2, p0, Lcom/miui/maml/util/HideSdkDependencyUtils$1;->val$intent:Landroid/content/Intent;

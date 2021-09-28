@@ -184,8 +184,6 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 55
     new-instance v0, Ljava/io/File;
 

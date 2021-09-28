@@ -26,7 +26,7 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 57
+    .line 60
     invoke-direct {p0, p1}, Landroid/util/IntProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -37,7 +37,7 @@
 .method public get(Landroid/graphics/drawable/Drawable;)Ljava/lang/Integer;
     .locals 0
 
-    .line 65
+    .line 68
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getAlpha()I
 
     move-result p1
@@ -52,7 +52,7 @@
 .method public bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 57
+    .line 60
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/util/Utilities$1;->get(Landroid/graphics/drawable/Drawable;)Ljava/lang/Integer;
@@ -65,7 +65,7 @@
 .method public setValue(Landroid/graphics/drawable/Drawable;I)V
     .locals 0
 
-    .line 60
+    .line 63
     invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
     return-void
@@ -74,7 +74,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;I)V
     .locals 0
 
-    .line 57
+    .line 60
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/util/Utilities$1;->setValue(Landroid/graphics/drawable/Drawable;I)V

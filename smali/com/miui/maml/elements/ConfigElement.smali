@@ -79,10 +79,10 @@
         }
     .end annotation
 
-    .line 93
+    .line 92
     invoke-interface {p1}, Ljava/util/Collection;->clear()V
 
-    .line 94
+    .line 93
     invoke-virtual {p2}, Landroidx/collection/ArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -101,7 +101,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 95
+    .line 94
     invoke-virtual {p0}, Lcom/miui/maml/elements/ConfigElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v1
@@ -110,12 +110,12 @@
 
     move-result-object v0
 
-    .line 96
+    .line 95
     instance-of v1, v0, Lcom/miui/maml/elements/FunctionElement;
 
     if-eqz v1, :cond_0
 
-    .line 97
+    .line 96
     check-cast v0, Lcom/miui/maml/elements/FunctionElement;
 
     invoke-interface {p1, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
@@ -137,201 +137,198 @@
 .method protected abstract evaluateConfigValue()V
 .end method
 
-.method public getAnimConfig(Lcom/miui/maml/folme/TransitionListenerWrapper;)[Lmiuix/animation/base/AnimConfig;
-    .locals 7
+.method public getAnimConfig(Lcom/miui/maml/folme/TransitionListenerWrapper;)Lmiuix/animation/base/AnimConfig;
+    .locals 14
 
     .line 48
     invoke-virtual {p1}, Lcom/miui/maml/folme/TransitionListenerWrapper;->getListener()Lcom/miui/maml/folme/MamlTransitionListener;
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
     if-nez v0, :cond_0
 
     .line 50
-    new-array p1, v1, [Lmiuix/animation/base/AnimConfig;
+    new-instance p1, Lmiuix/animation/base/AnimConfig;
+
+    invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
 
     return-object p1
 
     .line 52
     :cond_0
-    iget-object v2, p0, Lcom/miui/maml/elements/ConfigElement;->mTempAnimConfigs:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
-
-    .line 53
     invoke-virtual {p0}, Lcom/miui/maml/elements/ConfigElement;->evaluateConfigValue()V
 
-    .line 54
-    iget-object v2, p0, Lcom/miui/maml/elements/ConfigElement;->mTempValueList:Ljava/util/ArrayList;
+    .line 53
+    new-instance v7, Lmiuix/animation/base/AnimConfig;
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-direct {v7}, Lmiuix/animation/base/AnimConfig;-><init>()V
+
+    .line 54
+    iget-object v1, p0, Lcom/miui/maml/elements/ConfigElement;->mTempValueList:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v8
+
+    :goto_0
+    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    const/4 v9, 0x1
+
+    const/4 v10, 0x0
+
+    if-eqz v1, :cond_6
+
+    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v11, v1
+
+    check-cast v11, Lcom/miui/maml/folme/ConfigValue;
+
+    .line 55
+    iget-object v1, v11, Lcom/miui/maml/folme/ConfigValue;->mRelatedProperty:Landroidx/collection/ArraySet;
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, v11, Lcom/miui/maml/folme/ConfigValue;->mRelatedProperty:Landroidx/collection/ArraySet;
+
+    invoke-virtual {v1}, Landroidx/collection/ArraySet;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    .line 56
+    new-instance v12, Ljava/util/ArrayList;
+
+    invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
+
+    .line 57
+    iget-object v1, v11, Lcom/miui/maml/folme/ConfigValue;->mRelatedProperty:Landroidx/collection/ArraySet;
+
+    invoke-virtual {v1}, Landroidx/collection/ArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v13
+
+    :goto_1
+    invoke-interface {v13}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    invoke-interface {v13}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    .line 58
+    invoke-static {v1}, Lcom/miui/maml/folme/AnimatedProperty;->getPropertyByName(Ljava/lang/String;)Lmiuix/animation/property/FloatProperty;
 
     move-result-object v2
 
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v2, :cond_1
 
-    move-result v3
+    .line 60
+    invoke-virtual {v12, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    if-eqz v3, :cond_6
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/miui/maml/folme/ConfigValue;
-
-    const/4 v4, 0x0
-
-    .line 56
-    iget-object v5, v3, Lcom/miui/maml/folme/ConfigValue;->mRelatedProperty:Landroidx/collection/ArraySet;
-
-    if-eqz v5, :cond_3
-
-    .line 57
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
-
-    .line 58
-    iget-object v5, v3, Lcom/miui/maml/folme/ConfigValue;->mRelatedProperty:Landroidx/collection/ArraySet;
-
-    invoke-virtual {v5}, Landroidx/collection/ArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v5
-
+    .line 62
     :cond_1
-    :goto_1
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+    iget-boolean v1, v11, Lcom/miui/maml/folme/ConfigValue;->mHasFromSpeed:Z
 
-    move-result v6
+    if-eqz v1, :cond_2
 
-    if-eqz v6, :cond_2
+    .line 63
+    iget-object v3, v11, Lcom/miui/maml/folme/ConfigValue;->mEase:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-wide v4, v11, Lcom/miui/maml/folme/ConfigValue;->mDelay:J
 
-    move-result-object v6
+    new-array v6, v9, [F
 
-    check-cast v6, Ljava/lang/String;
+    iget v1, v11, Lcom/miui/maml/folme/ConfigValue;->mFromSpeed:F
 
-    .line 59
-    invoke-static {v6}, Lcom/miui/maml/folme/AnimatedProperty;->getPropertyByName(Ljava/lang/String;)Lmiuix/animation/property/FloatProperty;
+    aput v1, v6, v10
 
-    move-result-object v6
+    move-object v1, v7
 
-    if-eqz v6, :cond_1
-
-    .line 61
-    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual/range {v1 .. v6}, Lmiuix/animation/base/AnimConfig;->setSpecial(Lmiuix/animation/property/FloatProperty;Lmiuix/animation/utils/EaseManager$EaseStyle;J[F)Lmiuix/animation/base/AnimConfig;
 
     goto :goto_1
 
-    .line 64
+    .line 65
     :cond_2
-    new-instance v5, Lmiuix/animation/base/AnimConfig;
+    iget-object v3, v11, Lcom/miui/maml/folme/ConfigValue;->mEase:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+    iget-wide v4, v11, Lcom/miui/maml/folme/ConfigValue;->mDelay:J
 
-    move-result v6
+    new-array v6, v10, [F
 
-    new-array v6, v6, [Lmiuix/animation/property/FloatProperty;
+    move-object v1, v7
 
-    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    invoke-virtual/range {v1 .. v6}, Lmiuix/animation/base/AnimConfig;->setSpecial(Lmiuix/animation/property/FloatProperty;Lmiuix/animation/utils/EaseManager$EaseStyle;J[F)Lmiuix/animation/base/AnimConfig;
 
-    move-result-object v4
-
-    check-cast v4, [Lmiuix/animation/property/FloatProperty;
-
-    invoke-direct {v5, v4}, Lmiuix/animation/base/AnimConfig;-><init>([Lmiuix/animation/property/FloatProperty;)V
-
-    move-object v4, v5
-
-    :cond_3
-    if-nez v4, :cond_4
-
-    .line 67
-    new-instance v4, Lmiuix/animation/base/AnimConfig;
-
-    invoke-direct {v4}, Lmiuix/animation/base/AnimConfig;-><init>()V
+    goto :goto_1
 
     .line 69
-    :cond_4
-    iget-object v5, v0, Lcom/miui/maml/folme/MamlTransitionListener;->mBeginCallback:Ljava/util/concurrent/CopyOnWriteArraySet;
+    :cond_3
+    iget-boolean v1, v11, Lcom/miui/maml/folme/ConfigValue;->mHasFromSpeed:Z
 
-    iget-object v6, v3, Lcom/miui/maml/folme/ConfigValue;->mOnBeginCallback:Landroidx/collection/ArraySet;
-
-    invoke-direct {p0, v5, v6}, Lcom/miui/maml/elements/ConfigElement;->setupCallbacks(Ljava/util/Collection;Landroidx/collection/ArraySet;)V
+    if-eqz v1, :cond_4
 
     .line 70
-    iget-object v5, v0, Lcom/miui/maml/folme/MamlTransitionListener;->mUpdateCallback:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget v1, v11, Lcom/miui/maml/folme/ConfigValue;->mFromSpeed:F
 
-    iget-object v6, v3, Lcom/miui/maml/folme/ConfigValue;->mOnUpdateCallback:Landroidx/collection/ArraySet;
+    invoke-virtual {v7, v1}, Lmiuix/animation/base/AnimConfig;->setFromSpeed(F)Lmiuix/animation/base/AnimConfig;
 
-    invoke-direct {p0, v5, v6}, Lcom/miui/maml/elements/ConfigElement;->setupCallbacks(Ljava/util/Collection;Landroidx/collection/ArraySet;)V
+    .line 72
+    :cond_4
+    iget-object v1, v11, Lcom/miui/maml/folme/ConfigValue;->mEase:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    .line 71
-    iget-object v5, v0, Lcom/miui/maml/folme/MamlTransitionListener;->mCompleteCallback:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    iget-object v6, v3, Lcom/miui/maml/folme/ConfigValue;->mOnCompleteCallback:Landroidx/collection/ArraySet;
-
-    invoke-direct {p0, v5, v6}, Lcom/miui/maml/elements/ConfigElement;->setupCallbacks(Ljava/util/Collection;Landroidx/collection/ArraySet;)V
+    invoke-virtual {v7, v1}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
 
     .line 73
-    iget-boolean v5, v3, Lcom/miui/maml/folme/ConfigValue;->mHasFromSpeed:Z
+    iget-wide v1, v11, Lcom/miui/maml/folme/ConfigValue;->mDelay:J
 
-    if-eqz v5, :cond_5
+    invoke-virtual {v7, v1, v2}, Lmiuix/animation/base/AnimConfig;->setDelay(J)Lmiuix/animation/base/AnimConfig;
 
-    .line 74
-    iget v5, v3, Lcom/miui/maml/folme/ConfigValue;->mFromSpeed:F
+    .line 75
+    :cond_5
+    iget-object v1, v0, Lcom/miui/maml/folme/MamlTransitionListener;->mBeginCallback:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-virtual {v4, v5}, Lmiuix/animation/base/AnimConfig;->setFromSpeed(F)Lmiuix/animation/base/AnimConfig;
+    iget-object v2, v11, Lcom/miui/maml/folme/ConfigValue;->mOnBeginCallback:Landroidx/collection/ArraySet;
+
+    invoke-direct {p0, v1, v2}, Lcom/miui/maml/elements/ConfigElement;->setupCallbacks(Ljava/util/Collection;Landroidx/collection/ArraySet;)V
 
     .line 76
-    :cond_5
-    iget-object v5, v3, Lcom/miui/maml/folme/ConfigValue;->mEase:Lmiuix/animation/utils/EaseManager$EaseStyle;
+    iget-object v1, v0, Lcom/miui/maml/folme/MamlTransitionListener;->mUpdateCallback:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-virtual {v4, v5}, Lmiuix/animation/base/AnimConfig;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;)Lmiuix/animation/base/AnimConfig;
+    iget-object v2, v11, Lcom/miui/maml/folme/ConfigValue;->mOnUpdateCallback:Landroidx/collection/ArraySet;
+
+    invoke-direct {p0, v1, v2}, Lcom/miui/maml/elements/ConfigElement;->setupCallbacks(Ljava/util/Collection;Landroidx/collection/ArraySet;)V
 
     .line 77
-    iget-wide v5, v3, Lcom/miui/maml/folme/ConfigValue;->mDelay:J
+    iget-object v1, v0, Lcom/miui/maml/folme/MamlTransitionListener;->mCompleteCallback:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-virtual {v4, v5, v6}, Lmiuix/animation/base/AnimConfig;->setDelay(J)Lmiuix/animation/base/AnimConfig;
+    iget-object v2, v11, Lcom/miui/maml/folme/ConfigValue;->mOnCompleteCallback:Landroidx/collection/ArraySet;
 
-    const/4 v3, 0x1
-
-    .line 79
-    new-array v3, v3, [Lmiuix/animation/listener/TransitionListener;
-
-    aput-object p1, v3, v1
-
-    invoke-virtual {v4, v3}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
-
-    .line 80
-    iget-object v3, p0, Lcom/miui/maml/elements/ConfigElement;->mTempAnimConfigs:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-direct {p0, v1, v2}, Lcom/miui/maml/elements/ConfigElement;->setupCallbacks(Ljava/util/Collection;Landroidx/collection/ArraySet;)V
 
     goto/16 :goto_0
 
-    .line 82
+    .line 80
     :cond_6
-    iget-object p1, p0, Lcom/miui/maml/elements/ConfigElement;->mTempAnimConfigs:Ljava/util/ArrayList;
+    new-array v0, v9, [Lmiuix/animation/listener/TransitionListener;
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    aput-object p1, v0, v10
 
-    move-result v0
+    invoke-virtual {v7, v0}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
-    new-array v0, v0, [Lmiuix/animation/base/AnimConfig;
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Lmiuix/animation/base/AnimConfig;
-
-    return-object p1
+    return-object v7
 .end method
 
 .method public isVisible()Z

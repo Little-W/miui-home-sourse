@@ -24,12 +24,12 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
-    .line 270
+    .line 275
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "toggle"
 
-    .line 272
+    .line 277
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -38,7 +38,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 273
+    .line 278
     iput-boolean v1, p0, Lcom/miui/maml/ActionCommand$OnOffCommandHelper;->mIsToggle:Z
 
     goto :goto_0
@@ -46,14 +46,14 @@
     :cond_0
     const-string v0, "on"
 
-    .line 274
+    .line 279
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 275
+    .line 280
     iput-boolean v1, p0, Lcom/miui/maml/ActionCommand$OnOffCommandHelper;->mIsOn:Z
 
     goto :goto_0
@@ -61,7 +61,7 @@
     :cond_1
     const-string v0, "off"
 
-    .line 276
+    .line 281
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p1
@@ -70,7 +70,7 @@
 
     const/4 p1, 0x0
 
-    .line 277
+    .line 282
     iput-boolean p1, p0, Lcom/miui/maml/ActionCommand$OnOffCommandHelper;->mIsOn:Z
 
     :cond_2

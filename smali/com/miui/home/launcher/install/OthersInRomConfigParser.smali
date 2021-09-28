@@ -43,8 +43,6 @@
     const-string p1, "not support elderly mode layout"
 
     .line 32
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-object v0
 
     .line 37
@@ -249,7 +247,7 @@
 
     aget-object v5, v2, v3
 
-    const-string v6, "xml"
+    const-string/jumbo v6, "xml"
 
     .line 58
     invoke-virtual {v8, v5, v6, v1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
@@ -288,8 +286,6 @@
 
     move-result-object v5
 
-    invoke-static {v6, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
@@ -317,8 +313,6 @@
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -343,13 +337,11 @@
     const-string p0, "OthersInRomConfigParser"
 
     const-string p1, "get xml error: layoutIds is empty"
-
-    .line 68
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
+    .line 68
     if-eqz p2, :cond_5
 
     .line 79
@@ -363,7 +355,7 @@
     :try_start_3
     new-instance v1, Lcom/miui/home/launcher/install/OthersInRomConfigParser;
 
-    const-string v10, "workspace"
+    const-string/jumbo v10, "workspace"
 
     move-object v5, v1
 
@@ -409,8 +401,6 @@
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -428,13 +418,11 @@
     const-string p0, "OthersInRomConfigParser"
 
     const-string p1, "get error cursor"
-
-    .line 73
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
+    .line 73
     if-eqz p2, :cond_b
 
     goto :goto_2
@@ -454,12 +442,10 @@
     const-string p0, "OthersInRomConfigParser"
 
     const-string p1, "get remote config error"
-
-    .line 76
-    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
+    .line 76
     if-eqz p2, :cond_b
 
     .line 79

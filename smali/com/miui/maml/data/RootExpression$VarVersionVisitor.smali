@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/maml/data/RootExpression;)V
     .locals 0
 
-    .line 41
+    .line 44
     invoke-direct {p0}, Lcom/miui/maml/data/ExpressionVisitor;-><init>()V
 
-    .line 42
+    .line 45
     iput-object p1, p0, Lcom/miui/maml/data/RootExpression$VarVersionVisitor;->mRoot:Lcom/miui/maml/data/RootExpression;
 
     return-void
@@ -36,20 +36,20 @@
 .method public visit(Lcom/miui/maml/data/Expression;)V
     .locals 4
 
-    .line 47
+    .line 50
     instance-of v0, p1, Lcom/miui/maml/data/Expression$VariableExpression;
 
     if-eqz v0, :cond_0
 
-    .line 48
+    .line 51
     move-object v0, p1
 
     check-cast v0, Lcom/miui/maml/data/Expression$VariableExpression;
 
-    .line 50
+    .line 53
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression$VariableExpression;->evaluate()D
 
-    .line 51
+    .line 54
     iget-object v1, p0, Lcom/miui/maml/data/RootExpression$VarVersionVisitor;->mRoot:Lcom/miui/maml/data/RootExpression;
 
     new-instance v2, Lcom/miui/maml/data/RootExpression$VarVersion;
@@ -70,23 +70,23 @@
 
     goto :goto_0
 
-    .line 53
+    .line 56
     :cond_0
     instance-of v0, p1, Lcom/miui/maml/data/Expression$FunctionExpression;
 
     if-eqz v0, :cond_2
 
-    .line 54
+    .line 57
     check-cast p1, Lcom/miui/maml/data/Expression$FunctionExpression;
 
-    .line 55
+    .line 58
     invoke-virtual {p1}, Lcom/miui/maml/data/Expression$FunctionExpression;->getFunName()Ljava/lang/String;
 
     move-result-object p1
 
     const-string v0, "rand"
 
-    .line 56
+    .line 59
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -105,11 +105,28 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "newJsonObject"
+
+    .line 60
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "newJsonArray"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 57
+    .line 61
     :cond_1
     iget-object p1, p0, Lcom/miui/maml/data/RootExpression$VarVersionVisitor;->mRoot:Lcom/miui/maml/data/RootExpression;
 

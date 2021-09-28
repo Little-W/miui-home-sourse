@@ -36,17 +36,17 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 0
 
-    .line 723
+    .line 737
     invoke-direct {p0, p1}, Lcom/miui/maml/ActionCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;)V
 
-    .line 716
+    .line 730
     sget-object p1, Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;->Invalid:Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$VariableBinderCommand;->mCommand:Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;
 
     const-string p1, "name"
 
-    .line 724
+    .line 738
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -55,21 +55,21 @@
 
     const-string p1, "command"
 
-    .line 725
+    .line 739
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "refresh"
 
-    .line 726
+    .line 740
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 727
+    .line 741
     sget-object p1, Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;->Refresh:Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$VariableBinderCommand;->mCommand:Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;
@@ -83,12 +83,12 @@
 .method protected doPerform()V
     .locals 2
 
-    .line 738
+    .line 752
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$VariableBinderCommand;->mBinder:Lcom/miui/maml/data/VariableBinder;
 
     if-eqz v0, :cond_1
 
-    .line 739
+    .line 753
     sget-object v0, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$VariableBinderCommand$Command:[I
 
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$VariableBinderCommand;->mCommand:Lcom/miui/maml/ActionCommand$VariableBinderCommand$Command;
@@ -105,7 +105,7 @@
 
     goto :goto_0
 
-    .line 741
+    .line 755
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$VariableBinderCommand;->mBinder:Lcom/miui/maml/data/VariableBinder;
 
@@ -119,7 +119,7 @@
 .method public init()V
     .locals 2
 
-    .line 733
+    .line 747
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$VariableBinderCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v0

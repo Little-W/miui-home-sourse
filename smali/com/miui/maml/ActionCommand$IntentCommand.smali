@@ -46,15 +46,15 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 4
 
-    .line 768
+    .line 782
     invoke-direct {p0, p1}, Lcom/miui/maml/ActionCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;)V
 
-    .line 755
+    .line 769
     sget-object v0, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;->Activity:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentType:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
-    .line 769
+    .line 783
     new-instance v0, Lcom/miui/maml/util/IntentInfo;
 
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getVariables()Lcom/miui/maml/data/Variables;
@@ -67,7 +67,7 @@
 
     const-string v0, "broadcast"
 
-    .line 770
+    .line 784
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -78,7 +78,7 @@
 
     const-string v1, "type"
 
-    .line 771
+    .line 785
     invoke-interface {p2, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -87,7 +87,7 @@
 
     const-string v0, "broadcast"
 
-    .line 772
+    .line 786
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -99,14 +99,14 @@
     :cond_0
     const-string v0, "service"
 
-    .line 774
+    .line 788
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 775
+    .line 789
     sget-object v0, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;->Service:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentType:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
@@ -116,14 +116,14 @@
     :cond_1
     const-string v0, "activity"
 
-    .line 776
+    .line 790
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 777
+    .line 791
     sget-object v0, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;->Activity:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentType:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
@@ -133,33 +133,33 @@
     :cond_2
     const-string v0, "var"
 
-    .line 778
+    .line 792
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 779
+    .line 793
     sget-object v0, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;->Var:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentType:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
     const-string v0, "intentVar"
 
-    .line 780
+    .line 794
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 781
+    .line 795
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_4
 
-    .line 782
+    .line 796
     new-instance v1, Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getVariables()Lcom/miui/maml/data/Variables;
@@ -174,7 +174,7 @@
 
     goto :goto_1
 
-    .line 773
+    .line 787
     :cond_3
     :goto_0
     sget-object v0, Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;->Broadcast:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
@@ -187,7 +187,7 @@
 
     const/4 v1, -0x1
 
-    .line 785
+    .line 799
     invoke-static {p2, v0, v1}, Lcom/miui/maml/util/Utils;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result v0
@@ -196,12 +196,12 @@
 
     const-string v0, "activityOption"
 
-    .line 787
+    .line 801
     invoke-interface {p2, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 788
+    .line 802
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -228,14 +228,14 @@
 
     const-string v0, "Fallback"
 
-    .line 791
+    .line 805
     invoke-static {p2, v0}, Lcom/miui/maml/util/Utils;->getChild(Lorg/w3c/dom/Element;Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object p2
 
     if-eqz p2, :cond_6
 
-    .line 793
+    .line 807
     new-instance v0, Lcom/miui/maml/CommandTrigger;
 
     invoke-direct {v0, p2, p1}, Lcom/miui/maml/CommandTrigger;-><init>(Lorg/w3c/dom/Element;Lcom/miui/maml/elements/ScreenElement;)V
@@ -249,19 +249,19 @@
 
 # virtual methods
 .method protected doPerform()V
-    .locals 4
+    .locals 5
 
-    .line 846
+    .line 860
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
-    .line 847
+    .line 861
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentInfo:Lcom/miui/maml/util/IntentInfo;
 
     invoke-virtual {v1, v0}, Lcom/miui/maml/util/IntentInfo;->update(Landroid/content/Intent;)V
 
-    .line 849
+    .line 863
     :try_start_0
     sget-object v0, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$IntentCommand$IntentType:[I
 
@@ -277,13 +277,13 @@
 
     goto/16 :goto_2
 
-    .line 878
+    .line 898
     :pswitch_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentVar:Lcom/miui/maml/data/IndexedVariable;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
-    .line 879
+    .line 899
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentVar:Lcom/miui/maml/data/IndexedVariable;
 
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
@@ -292,7 +292,7 @@
 
     goto/16 :goto_2
 
-    .line 875
+    .line 895
     :pswitch_1
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getContext()Landroid/content/Context;
 
@@ -304,7 +304,7 @@
 
     goto/16 :goto_2
 
-    .line 872
+    .line 892
     :pswitch_2
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getContext()Landroid/content/Context;
 
@@ -316,7 +316,7 @@
 
     goto/16 :goto_2
 
-    .line 851
+    .line 865
     :pswitch_3
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mActivityOptionsBundle:Lcom/miui/maml/ActionCommand$ObjVar;
 
@@ -335,7 +335,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 852
+    .line 866
     :goto_0
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getContext()Landroid/content/Context;
 
@@ -353,16 +353,54 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    .line 853
+    .line 867
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
 
-    if-lez v1, :cond_1
+    if-lez v1, :cond_2
 
-    .line 854
+    .line 868
+    invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getScreenElement()Lcom/miui/maml/elements/ScreenElement;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/miui/maml/elements/ScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/miui/maml/ScreenElementRoot;->getContextAndRect()Landroid/util/Pair;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    .line 870
+    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
+
+    const-string v3, "maml_view_location_on_screen"
+
+    iget-object v4, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v4, Landroid/os/Parcelable;
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    .line 871
+    iget-object v1, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v1, Landroid/content/Context;
+
+    iget-object v2, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
+
+    invoke-static {v1, v2, v0}, Lcom/miui/maml/util/Utils;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
+
+    goto :goto_2
+
+    .line 873
+    :cond_1
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -373,8 +411,8 @@
 
     goto :goto_2
 
-    .line 857
-    :cond_1
+    .line 877
+    :cond_2
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v1}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
@@ -385,9 +423,9 @@
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
-    .line 858
+    .line 878
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v1}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
@@ -396,11 +434,11 @@
 
     goto :goto_1
 
-    .line 859
-    :cond_2
+    .line 879
+    :cond_3
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
-    .line 860
+    .line 880
     invoke-virtual {v1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v1
@@ -409,26 +447,26 @@
 
     move-result-object v1
 
-    .line 859
+    .line 879
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_4
 
-    .line 861
+    .line 881
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 862
+    .line 882
     invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 867
+    .line 887
     :goto_1
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getContext()Landroid/content/Context;
 
@@ -442,46 +480,44 @@
 
     goto :goto_2
 
-    :cond_3
+    :cond_4
     return-void
 
     :catch_0
     move-exception v0
 
-    .line 884
+    .line 904
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lcom/miui/maml/CommandTrigger;
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     const-string v0, "ActionCommand"
 
     const-string v1, "fail to send Intent, fallback..."
 
-    .line 885
+    .line 905
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 886
+    .line 906
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lcom/miui/maml/CommandTrigger;
 
     invoke-virtual {v0}, Lcom/miui/maml/CommandTrigger;->perform()V
 
     goto :goto_2
 
-    :cond_4
+    :cond_5
     const-string v1, "ActionCommand"
 
-    .line 888
+    .line 908
     invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_5
+    :cond_6
     :goto_2
     return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1
@@ -495,12 +531,12 @@
 .method public finish()V
     .locals 1
 
-    .line 825
+    .line 839
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lcom/miui/maml/CommandTrigger;
 
     if-eqz v0, :cond_0
 
-    .line 826
+    .line 840
     invoke-virtual {v0}, Lcom/miui/maml/CommandTrigger;->finish()V
 
     :cond_0
@@ -510,7 +546,7 @@
 .method public init()V
     .locals 2
 
-    .line 799
+    .line 813
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$IntentCommand;->getRoot()Lcom/miui/maml/ScreenElementRoot;
 
     move-result-object v0
@@ -527,7 +563,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 801
+    .line 815
     iget-object v1, v0, Lcom/miui/maml/util/Task;->action:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -536,12 +572,12 @@
 
     if-nez v1, :cond_0
 
-    .line 802
+    .line 816
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentInfo:Lcom/miui/maml/util/IntentInfo;
 
     invoke-virtual {v1, v0}, Lcom/miui/maml/util/IntentInfo;->set(Lcom/miui/maml/util/Task;)V
 
-    .line 805
+    .line 819
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentInfo:Lcom/miui/maml/util/IntentInfo;
 
@@ -557,7 +593,7 @@
 
     return-void
 
-    .line 809
+    .line 823
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
@@ -565,28 +601,28 @@
 
     iput-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
-    .line 810
+    .line 824
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentInfo:Lcom/miui/maml/util/IntentInfo;
 
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Lcom/miui/maml/util/IntentInfo;->update(Landroid/content/Intent;)V
 
-    .line 812
+    .line 826
     iget v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mFlags:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_2
 
-    .line 813
+    .line 827
     iget-object v1, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     goto :goto_0
 
-    .line 814
+    .line 828
     :cond_2
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntentType:Lcom/miui/maml/ActionCommand$IntentCommand$IntentType;
 
@@ -594,21 +630,21 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 815
+    .line 829
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mIntent:Landroid/content/Intent;
 
     const/high16 v1, 0x34000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 818
+    .line 832
     :cond_3
     :goto_0
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lcom/miui/maml/CommandTrigger;
 
     if-eqz v0, :cond_4
 
-    .line 819
+    .line 833
     invoke-virtual {v0}, Lcom/miui/maml/CommandTrigger;->init()V
 
     :cond_4
@@ -618,12 +654,12 @@
 .method public pause()V
     .locals 1
 
-    .line 832
+    .line 846
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lcom/miui/maml/CommandTrigger;
 
     if-eqz v0, :cond_0
 
-    .line 833
+    .line 847
     invoke-virtual {v0}, Lcom/miui/maml/CommandTrigger;->pause()V
 
     :cond_0
@@ -633,12 +669,12 @@
 .method public resume()V
     .locals 1
 
-    .line 839
+    .line 853
     iget-object v0, p0, Lcom/miui/maml/ActionCommand$IntentCommand;->mFallbackTrigger:Lcom/miui/maml/CommandTrigger;
 
     if-eqz v0, :cond_0
 
-    .line 840
+    .line 854
     invoke-virtual {v0}, Lcom/miui/maml/CommandTrigger;->resume()V
 
     :cond_0

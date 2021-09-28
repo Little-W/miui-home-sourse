@@ -203,74 +203,74 @@
 
 .field public static final btn_radio_on_to_off_mtrl_animation:I = 0x7f0800c9
 
-.field public static final miuix_appcompat_sliding_btn_bar_off_dark:I = 0x7f0803fe
+.field public static final miuix_appcompat_sliding_btn_bar_off_dark:I = 0x7f080428
 
-.field public static final miuix_appcompat_sliding_btn_bar_off_light:I = 0x7f0803ff
+.field public static final miuix_appcompat_sliding_btn_bar_off_light:I = 0x7f080429
 
-.field public static final miuix_appcompat_sliding_btn_bar_on_dark:I = 0x7f080400
+.field public static final miuix_appcompat_sliding_btn_bar_on_dark:I = 0x7f08042a
 
-.field public static final miuix_appcompat_sliding_btn_bar_on_light:I = 0x7f080401
+.field public static final miuix_appcompat_sliding_btn_bar_on_light:I = 0x7f08042b
 
-.field public static final miuix_appcompat_sliding_btn_bg_dark:I = 0x7f080402
+.field public static final miuix_appcompat_sliding_btn_bg_dark:I = 0x7f08042c
 
-.field public static final miuix_appcompat_sliding_btn_bg_light:I = 0x7f080403
+.field public static final miuix_appcompat_sliding_btn_bg_light:I = 0x7f08042d
 
-.field public static final miuix_appcompat_sliding_btn_frame_dark:I = 0x7f080404
+.field public static final miuix_appcompat_sliding_btn_frame_dark:I = 0x7f08042e
 
-.field public static final miuix_appcompat_sliding_btn_frame_light:I = 0x7f080405
+.field public static final miuix_appcompat_sliding_btn_frame_light:I = 0x7f08042f
 
-.field public static final miuix_appcompat_sliding_btn_slider_off_dark:I = 0x7f080406
+.field public static final miuix_appcompat_sliding_btn_slider_off_dark:I = 0x7f080430
 
-.field public static final miuix_appcompat_sliding_btn_slider_off_light:I = 0x7f080407
+.field public static final miuix_appcompat_sliding_btn_slider_off_light:I = 0x7f080431
 
-.field public static final miuix_appcompat_sliding_btn_slider_off_normal_dark:I = 0x7f080408
+.field public static final miuix_appcompat_sliding_btn_slider_off_normal_dark:I = 0x7f080432
 
-.field public static final miuix_appcompat_sliding_btn_slider_off_normal_light:I = 0x7f080409
+.field public static final miuix_appcompat_sliding_btn_slider_off_normal_light:I = 0x7f080433
 
-.field public static final miuix_appcompat_sliding_btn_slider_off_pressed_dark:I = 0x7f08040a
+.field public static final miuix_appcompat_sliding_btn_slider_off_pressed_dark:I = 0x7f080434
 
-.field public static final miuix_appcompat_sliding_btn_slider_off_pressed_light:I = 0x7f08040b
+.field public static final miuix_appcompat_sliding_btn_slider_off_pressed_light:I = 0x7f080435
 
-.field public static final miuix_appcompat_sliding_btn_slider_on_dark:I = 0x7f08040c
+.field public static final miuix_appcompat_sliding_btn_slider_on_dark:I = 0x7f080436
 
-.field public static final miuix_appcompat_sliding_btn_slider_on_light:I = 0x7f08040d
+.field public static final miuix_appcompat_sliding_btn_slider_on_light:I = 0x7f080437
 
-.field public static final miuix_appcompat_sliding_btn_slider_on_normal_dark:I = 0x7f08040e
+.field public static final miuix_appcompat_sliding_btn_slider_on_normal_dark:I = 0x7f080438
 
-.field public static final miuix_appcompat_sliding_btn_slider_on_normal_light:I = 0x7f08040f
+.field public static final miuix_appcompat_sliding_btn_slider_on_normal_light:I = 0x7f080439
 
-.field public static final miuix_appcompat_sliding_btn_slider_on_pressed_dark:I = 0x7f080410
+.field public static final miuix_appcompat_sliding_btn_slider_on_pressed_dark:I = 0x7f08043a
 
-.field public static final miuix_appcompat_sliding_btn_slider_on_pressed_light:I = 0x7f080411
+.field public static final miuix_appcompat_sliding_btn_slider_on_pressed_light:I = 0x7f08043b
 
-.field public static final miuix_appcompat_sliding_btn_slider_shadow:I = 0x7f080412
+.field public static final miuix_appcompat_sliding_btn_slider_shadow:I = 0x7f08043c
 
-.field public static final miuix_appcompat_sliding_btn_slider_stroke_light:I = 0x7f080413
+.field public static final miuix_appcompat_sliding_btn_slider_stroke_light:I = 0x7f08043d
 
-.field public static final notification_action_background:I = 0x7f08048f
+.field public static final notification_action_background:I = 0x7f0804bd
 
-.field public static final notification_bg:I = 0x7f080490
+.field public static final notification_bg:I = 0x7f0804be
 
-.field public static final notification_bg_low:I = 0x7f080491
+.field public static final notification_bg_low:I = 0x7f0804bf
 
-.field public static final notification_bg_low_normal:I = 0x7f080492
+.field public static final notification_bg_low_normal:I = 0x7f0804c0
 
-.field public static final notification_bg_low_pressed:I = 0x7f080493
+.field public static final notification_bg_low_pressed:I = 0x7f0804c1
 
-.field public static final notification_bg_normal:I = 0x7f080494
+.field public static final notification_bg_normal:I = 0x7f0804c2
 
-.field public static final notification_bg_normal_pressed:I = 0x7f080495
+.field public static final notification_bg_normal_pressed:I = 0x7f0804c3
 
-.field public static final notification_icon_background:I = 0x7f080496
+.field public static final notification_icon_background:I = 0x7f0804c4
 
-.field public static final notification_template_icon_bg:I = 0x7f080497
+.field public static final notification_template_icon_bg:I = 0x7f0804c5
 
-.field public static final notification_template_icon_low_bg:I = 0x7f080498
+.field public static final notification_template_icon_low_bg:I = 0x7f0804c6
 
-.field public static final notification_tile_bg:I = 0x7f080499
+.field public static final notification_tile_bg:I = 0x7f0804c7
 
-.field public static final notify_panel_notification_icon_bg:I = 0x7f08049b
+.field public static final notify_panel_notification_icon_bg:I = 0x7f0804c9
 
-.field public static final tooltip_frame_dark:I = 0x7f0804f8
+.field public static final tooltip_frame_dark:I = 0x7f080525
 
-.field public static final tooltip_frame_light:I = 0x7f0804f9
+.field public static final tooltip_frame_light:I = 0x7f080526

@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;J)V
     .locals 0
 
-    .line 170
+    .line 177
     iput-object p1, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$10;->this$0:Lcom/miui/home/launcher/model/BaseModelUpdateTask;
 
     iput-wide p2, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$10;->val$screenId:J
@@ -42,7 +42,7 @@
 .method public execute(Lcom/miui/home/launcher/LauncherModel$Callbacks;)V
     .locals 2
 
-    .line 173
+    .line 180
     iget-wide v0, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$10;->val$screenId:J
 
     invoke-interface {p1, v0, v1}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->bindScreenRemoved(J)V

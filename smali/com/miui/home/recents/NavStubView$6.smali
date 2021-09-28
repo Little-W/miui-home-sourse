@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 1907
+    .line 2059
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$6;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onGlobalLayout()V
     .locals 5
 
-    .line 1910
+    .line 2062
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$6;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3100(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
@@ -63,7 +63,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 1912
+    .line 2064
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$6;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3100(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
@@ -76,7 +76,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1913
+    .line 2065
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$6;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3100(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
@@ -91,7 +91,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/RecentsContainer;->setAlpha(F)V
 
-    .line 1916
+    .line 2068
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$6;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -113,7 +113,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/recents/views/RecentsView;->setRunningTaskHidden(IZ)V
 
-    .line 1917
+    .line 2069
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$6;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3100(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
@@ -140,15 +140,15 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/recents/NavStubView;->access$2402(Lcom/miui/home/recents/NavStubView;I)I
 
-    .line 1918
+    .line 2070
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$6;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iput-boolean v2, v0, Lcom/miui/home/recents/NavStubView;->mReLoadTaskFinished:Z
 
-    .line 1919
+    .line 2071
     invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3300(Lcom/miui/home/recents/NavStubView;)V
 
-    .line 1920
+    .line 2072
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$6;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$000(Lcom/miui/home/recents/NavStubView;)Z
@@ -157,12 +157,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1921
+    .line 2073
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$6;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/NavStubView;->actionMoveAppTaskHold()V
 
-    .line 1924
+    .line 2076
     :cond_1
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$6;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -172,7 +172,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1925
+    .line 2077
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$6;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3100(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
@@ -187,14 +187,14 @@
 
     move-result-object v0
 
-    .line 1926
+    .line 2078
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->getStackAlgorithm()Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/miui/home/recents/NavStubView$6;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 1927
+    .line 2079
     invoke-static {v2}, Lcom/miui/home/recents/NavStubView;->access$3500(Lcom/miui/home/recents/NavStubView;)Z
 
     move-result v2
@@ -215,17 +215,17 @@
 
     move-result v1
 
-    .line 1928
+    .line 2080
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/TaskStackView;->getScrollForTaskView(I)F
 
     move-result v0
 
-    .line 1929
+    .line 2081
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$6;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v1, v0}, Lcom/miui/home/recents/NavStubView;->access$3700(Lcom/miui/home/recents/NavStubView;F)V
 
-    .line 1930
+    .line 2082
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$6;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3800(Lcom/miui/home/recents/NavStubView;)V

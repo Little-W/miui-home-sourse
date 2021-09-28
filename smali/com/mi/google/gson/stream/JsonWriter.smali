@@ -803,7 +803,7 @@
     .line 307
     invoke-direct {p0}, Lcom/mi/google/gson/stream/JsonWriter;->writeDeferredName()V
 
-    const-string v0, "{"
+    const-string/jumbo v0, "{"
 
     const/4 v1, 0x3
 
@@ -897,7 +897,7 @@
         }
     .end annotation
 
-    const-string v0, "}"
+    const-string/jumbo v0, "}"
 
     const/4 v1, 0x3
 

@@ -142,7 +142,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f100360
+    const p2, 0x7f100378
 
     .line 72
     new-instance v0, Lcom/miui/home/settings/HideAppAdapter$onBindViewHolder$1$builder$2;

@@ -24,22 +24,22 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ImageScreenElement;Lorg/w3c/dom/Element;Lcom/miui/maml/ScreenElementRoot;)V
     .locals 0
 
-    .line 115
+    .line 114
     iput-object p1, p0, Lcom/miui/maml/elements/ImageScreenElement$Mask;->this$0:Lcom/miui/maml/elements/ImageScreenElement;
 
-    .line 116
+    .line 115
     invoke-direct {p0, p2, p3}, Lcom/miui/maml/elements/ImageScreenElement;-><init>(Lorg/w3c/dom/Element;Lcom/miui/maml/ScreenElementRoot;)V
 
     const-string p1, "align"
 
-    .line 117
+    .line 116
     invoke-virtual {p0, p2, p1}, Lcom/miui/maml/elements/ImageScreenElement$Mask;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "absolute"
 
-    .line 118
+    .line 117
     invoke-virtual {p1, p2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p1
@@ -48,7 +48,7 @@
 
     const/4 p1, 0x1
 
-    .line 119
+    .line 118
     iput-boolean p1, p0, Lcom/miui/maml/elements/ImageScreenElement$Mask;->mAlignAbsolute:Z
 
     :cond_0
@@ -66,7 +66,7 @@
 .method public final isAlignAbsolute()Z
     .locals 1
 
-    .line 125
+    .line 124
     iget-boolean v0, p0, Lcom/miui/maml/elements/ImageScreenElement$Mask;->mAlignAbsolute:Z
 
     return v0

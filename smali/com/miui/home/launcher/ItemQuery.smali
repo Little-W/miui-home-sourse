@@ -9,7 +9,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 24
+    .locals 26
 
     const-string v0, "favorites._id"
 
@@ -59,8 +59,12 @@
 
     const-string v23, "appWidgetProvider"
 
+    const-string v24, "originWidgetId"
+
+    const-string v25, "product_id"
+
     .line 6
-    filled-new-array/range {v0 .. v23}, [Ljava/lang/String;
+    filled-new-array/range {v0 .. v25}, [Ljava/lang/String;
 
     move-result-object v0
 

@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/maml/elements/ViewHolderScreenElement;Z)V
     .locals 0
 
-    .line 93
+    .line 96
     iput-object p1, p0, Lcom/miui/maml/elements/ViewHolderScreenElement$1;->this$0:Lcom/miui/maml/elements/ViewHolderScreenElement;
 
     iput-boolean p2, p0, Lcom/miui/maml/elements/ViewHolderScreenElement$1;->val$b:Z
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 95
+    .line 98
     iget-object v0, p0, Lcom/miui/maml/elements/ViewHolderScreenElement$1;->this$0:Lcom/miui/maml/elements/ViewHolderScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/ViewHolderScreenElement;->getView()Landroid/view/View;

@@ -25,7 +25,7 @@
 .method public constructor <init>(Lcom/miui/home/launcher/ScreenView;)V
     .locals 0
 
-    .line 2246
+    .line 2269
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onScale(Landroid/view/ScaleGestureDetector;)Z
     .locals 4
 
-    .line 2266
+    .line 2289
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/ScreenView;->access$800(Lcom/miui/home/launcher/ScreenView;)I
@@ -53,13 +53,13 @@
 
     return v1
 
-    .line 2267
+    .line 2290
     :cond_0
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
 
     move-result p1
 
-    .line 2268
+    .line 2291
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/ScreenView;->access$700(Lcom/miui/home/launcher/ScreenView;)I
@@ -70,21 +70,21 @@
 
     if-nez v0, :cond_1
 
-    .line 2269
+    .line 2292
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3, v2}, Lcom/miui/home/launcher/ScreenView;->setTouchState(Landroid/view/MotionEvent;I)V
 
-    .line 2270
+    .line 2293
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     const/4 v3, 0x1
 
     invoke-static {v0, v3}, Lcom/miui/home/launcher/ScreenView;->access$902(Lcom/miui/home/launcher/ScreenView;Z)Z
 
-    .line 2272
+    .line 2295
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
@@ -94,7 +94,7 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 2273
+    .line 2296
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/ScreenView;->onPinching(F)Z
@@ -110,7 +110,7 @@
 .method public onScaleBegin(Landroid/view/ScaleGestureDetector;)Z
     .locals 1
 
-    .line 2253
+    .line 2276
     iget-object p1, p0, Lcom/miui/home/launcher/ScreenView$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-static {p1}, Lcom/miui/home/launcher/ScreenView;->access$700(Lcom/miui/home/launcher/ScreenView;)I
@@ -142,7 +142,7 @@
 .method public onScaleEnd(Landroid/view/ScaleGestureDetector;)V
     .locals 2
 
-    .line 2258
+    .line 2281
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/ScreenView;->access$700(Lcom/miui/home/launcher/ScreenView;)I
@@ -153,12 +153,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2259
+    .line 2282
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ScreenView;->finishCurrentGesture()V
 
-    .line 2260
+    .line 2283
     iget-object v0, p0, Lcom/miui/home/launcher/ScreenView$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/ScreenView;
 
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F

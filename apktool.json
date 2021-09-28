@@ -1,8 +1,8 @@
 {
-  "apkFileName": "系统桌面_(内测更新）ALPHA.4.23.0.3277-07092031-1.apk",
+  "apkFileName": "MiuiHome_blurtest-4.25.2.3588-09241.apk",
   "VersionInfo": {
-    "versionName": "ALPHA-4.23.0.3277-07092031",
-    "versionCode": "423003277"
+    "versionName": "ALPHA-4.25.2.3588-09241409",
+    "versionCode": "425023588"
   },
   "UsesFramework": {
     "ids": [1],
@@ -205,7 +205,6 @@
     "res/drawable-xhdpi-v4/thumbnail_entry_setting_n_dark.webp",
     "res/drawable-xhdpi-v4/thumbnail_entry_setting_p.webp",
     "res/drawable-xhdpi-v4/thumbnail_entry_setting_p_dark.webp",
-    "res/drawable-xhdpi-v4/thumbnail_entry_tools_n.webp",
     "res/drawable-xhdpi-v4/thumbnail_entry_tools_n_dark.webp",
     "res/drawable-xhdpi-v4/thumbnail_entry_tools_p.webp",
     "res/drawable-xhdpi-v4/thumbnail_entry_tools_p_dark.webp",
@@ -293,7 +292,6 @@
     "res/drawable-xxhdpi-v4/thumbnail_entry_setting_n_dark.webp",
     "res/drawable-xxhdpi-v4/thumbnail_entry_setting_p.webp",
     "res/drawable-xxhdpi-v4/thumbnail_entry_setting_p_dark.webp",
-    "res/drawable-xxhdpi-v4/thumbnail_entry_tools_n.webp",
     "res/drawable-xxhdpi-v4/thumbnail_entry_tools_n_dark.webp",
     "res/drawable-xxhdpi-v4/thumbnail_entry_tools_p.webp",
     "res/drawable-xxhdpi-v4/thumbnail_entry_tools_p_dark.webp",
@@ -365,7 +363,6 @@
     "res/drawable-xxxhdpi-v4/thumbnail_entry_setting_n_dark.webp",
     "res/drawable-xxxhdpi-v4/thumbnail_entry_setting_p.webp",
     "res/drawable-xxxhdpi-v4/thumbnail_entry_setting_p_dark.webp",
-    "res/drawable-xxxhdpi-v4/thumbnail_entry_tools_n.webp",
     "res/drawable-xxxhdpi-v4/thumbnail_entry_tools_n_dark.webp",
     "res/drawable-xxxhdpi-v4/thumbnail_entry_tools_p.webp",
     "res/drawable-xxxhdpi-v4/thumbnail_entry_tools_p_dark.webp",

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/maml/util/ConfigFile;)V
     .locals 0
 
-    .line 264
+    .line 262
     iput-object p1, p0, Lcom/miui/maml/util/ConfigFile$1;->this$0:Lcom/miui/maml/util/ConfigFile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onChild(Lorg/w3c/dom/Element;)V
     .locals 2
 
-    .line 267
+    .line 265
     new-instance v0, Lcom/miui/maml/util/ConfigFile$1$1;
 
     invoke-direct {v0, p0}, Lcom/miui/maml/util/ConfigFile$1$1;-><init>(Lcom/miui/maml/util/ConfigFile$1;)V

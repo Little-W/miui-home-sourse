@@ -6,6 +6,8 @@
 # static fields
 .field public static final ANIM:I = 0x1
 
+.field public static final DRAG:I = 0x2
+
 .field public static final NULL:I
 
 

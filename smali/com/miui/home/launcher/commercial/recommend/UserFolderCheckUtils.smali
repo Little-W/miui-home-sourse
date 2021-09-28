@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static isChecking:Z = false
+.field private static isChecking:Z
 
 
 # direct methods

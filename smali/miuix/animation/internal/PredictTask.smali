@@ -11,7 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 14
+    .line 28
     new-instance v0, Lmiuix/animation/internal/PredictTask$1;
 
     invoke-direct {v0}, Lmiuix/animation/internal/PredictTask$1;-><init>()V
@@ -24,22 +24,22 @@
 .method public static predictDuration(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)J
     .locals 9
 
-    .line 23
+    .line 37
     new-instance v0, Lmiuix/animation/internal/TransitionInfo;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lmiuix/animation/internal/TransitionInfo;-><init>(Lmiuix/animation/IAnimTarget;Lmiuix/animation/controller/AnimState;Lmiuix/animation/controller/AnimState;Lmiuix/animation/base/AnimConfigLink;)V
 
-    .line 24
+    .line 38
     sget-object p0, Lmiuix/animation/internal/PredictTask;->sCreator:Lmiuix/animation/internal/TransitionInfo$IUpdateInfoCreator;
 
     invoke-virtual {v0, p0}, Lmiuix/animation/internal/TransitionInfo;->initUpdateList(Lmiuix/animation/internal/TransitionInfo$IUpdateInfoCreator;)V
 
     const/4 p0, 0x1
 
-    .line 25
+    .line 39
     invoke-virtual {v0, p0}, Lmiuix/animation/internal/TransitionInfo;->setupTasks(Z)V
 
-    .line 26
+    .line 40
     invoke-static {}, Lmiuix/animation/internal/AnimRunner;->getInst()Lmiuix/animation/internal/AnimRunner;
 
     move-result-object p0
@@ -50,7 +50,7 @@
 
     move-wide p2, p0
 
-    .line 29
+    .line 43
     :goto_0
     iget-object v1, v0, Lmiuix/animation/internal/TransitionInfo;->animTasks:Ljava/util/List;
 
@@ -79,18 +79,18 @@
 
     move-wide v4, p0
 
-    .line 30
+    .line 44
     invoke-static/range {v1 .. v7}, Lmiuix/animation/internal/AnimRunnerTask;->doAnimationFrame(Lmiuix/animation/internal/AnimTask;JJZZ)V
 
     goto :goto_1
 
-    .line 32
+    .line 46
     :cond_0
     invoke-virtual {v0}, Lmiuix/animation/internal/TransitionInfo;->getAnimStats()Lmiuix/animation/internal/AnimStats;
 
     move-result-object v1
 
-    .line 33
+    .line 47
     invoke-virtual {v1}, Lmiuix/animation/internal/AnimStats;->isRunning()Z
 
     move-result v1

@@ -3,12 +3,12 @@
 .source "CellLayout.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/CellLayout;->fillEmptyCellAuto(II)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/launcher/CellLayout;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,17 +17,11 @@
 .end annotation
 
 
-# instance fields
-.field final synthetic this$0:Lcom/miui/home/launcher/CellLayout;
-
-
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
+.method constructor <init>()V
     .locals 0
 
-    .line 2109
-    iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$9;->this$0:Lcom/miui/home/launcher/CellLayout;
-
+    .line 3057
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,27 +29,51 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public process(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
 
-    .line 2111
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$9;->this$0:Lcom/miui/home/launcher/CellLayout;
+    .line 3060
+    invoke-static {p1}, Lcom/miui/home/launcher/graphics/drawable/MamlCompat;->onResume(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
+    return-void
+.end method
 
-    const-string v0, "Launcher.CellLayout"
+.method public process(Lcom/miui/home/launcher/LauncherWidgetView;)V
+    .locals 0
 
-    const-string v1, "requestLayout after has recalculated item position"
+    .line 3072
+    invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherWidgetView;->onVisible()V
 
-    .line 2112
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    return-void
+.end method
 
-    .line 2113
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$9;->this$0:Lcom/miui/home/launcher/CellLayout;
+.method public process(Lcom/miui/home/launcher/ShortcutIcon;)V
+    .locals 1
 
-    iget-object v0, v0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    .line 3064
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->invalidateWorkspacePreview()V
+    move-result-object v0
+
+    check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
+
+    .line 3065
+    instance-of v0, v0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
+
+    if-eqz v0, :cond_0
+
+    .line 3066
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->onProgressStatusChanged()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public process(Lcom/miui/home/launcher/maml/MaMlWidgetView;)V
+    .locals 0
+
+    .line 3077
+    invoke-virtual {p1}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->onVisible()V
 
     return-void
 .end method

@@ -1046,7 +1046,7 @@
 
     move-result-object p1
 
-    const-string v3, "yyyy-MM-dd HH:mm:ss"
+    const-string/jumbo v3, "yyyy-MM-dd HH:mm:ss"
 
     .line 316
     invoke-direct {p0, p1, v3}, Lcom/miui/home/launcher/gadget/GadgetInfo;->stringToDate(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Date;
@@ -1357,7 +1357,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070391
+    const v3, 0x7f070397
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

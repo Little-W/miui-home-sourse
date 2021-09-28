@@ -30,21 +30,21 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;IIII)V
     .locals 0
 
-    .line 1646
+    .line 1580
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1647
+    .line 1581
     iput p2, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellX:I
 
-    .line 1648
+    .line 1582
     iput p3, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellY:I
 
-    .line 1649
+    .line 1583
     iput p4, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mSpanX:I
 
-    .line 1650
+    .line 1584
     iput p5, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mSpanY:I
 
     return-void
@@ -55,7 +55,7 @@
 .method public getCoveringRect()Landroid/graphics/Rect;
     .locals 5
 
-    .line 1654
+    .line 1588
     new-instance v0, Landroid/graphics/Rect;
 
     iget v1, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellX:I
@@ -86,7 +86,7 @@
         }
     .end annotation
 
-    .line 1658
+    .line 1592
     iget v0, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellY:I
 
     :goto_0
@@ -98,7 +98,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1659
+    .line 1593
     iget v1, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellX:I
 
     :goto_1
@@ -110,10 +110,10 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 1660
+    .line 1594
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v2}, Lcom/miui/home/launcher/CellLayout;->access$500(Lcom/miui/home/launcher/CellLayout;)[[Landroid/view/View;
+    invoke-static {v2}, Lcom/miui/home/launcher/CellLayout;->access$200(Lcom/miui/home/launcher/CellLayout;)[[Landroid/view/View;
 
     move-result-object v2
 
@@ -147,7 +147,7 @@
         }
     .end annotation
 
-    .line 1666
+    .line 1600
     iget v0, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellY:I
 
     :goto_0
@@ -159,7 +159,7 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 1667
+    .line 1601
     iget v1, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->mCellX:I
 
     :goto_1
@@ -171,10 +171,10 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 1668
+    .line 1602
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout$ItemArea;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v2}, Lcom/miui/home/launcher/CellLayout;->access$500(Lcom/miui/home/launcher/CellLayout;)[[Landroid/view/View;
+    invoke-static {v2}, Lcom/miui/home/launcher/CellLayout;->access$200(Lcom/miui/home/launcher/CellLayout;)[[Landroid/view/View;
 
     move-result-object v2
 

@@ -1137,7 +1137,6 @@
     <style name="LauncherTheme" parent="@style/HomeTheme">
         <item name="android:windowDisablePreview">true</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:enforceNavigationBarContrast">false</item>
     </style>
     <style name="MIUIXPreference" parent="@style/BaseTheme">
         <item name="preferenceTheme">@style/Theme.PreferenceOverlay.DayNight</item>
@@ -1515,15 +1514,12 @@
         <item name="miuiPopupTheme">@style/Internal.MenuWindow.Theme.Light</item>
     </style>
     <style name="Preference">
-        <item name="android:layout">@layout/miuix_preference_layout</item>
+        <item name="android:layout">@layout/preference</item>
     </style>
     <style name="Preference.Category" parent="@style/Preference">
-        <item name="android:layout">@layout/miuix_preference_category_layout</item>
+        <item name="android:layout">@layout/preference_category</item>
         <item name="android:selectable">false</item>
         <item name="android:shouldDisableView">false</item>
-    </style>
-    <style name="Preference.Category.Checkable" parent="@style/Preference.Category">
-        <item name="android:layout">@layout/miuix_preference_category_layout_empty</item>
     </style>
     <style name="Preference.Category.Material" parent="@style/Preference.Category">
         <item name="android:layout">@layout/preference_category_material</item>
@@ -1531,11 +1527,8 @@
         <item name="allowDividerBelow">true</item>
         <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
-    <style name="Preference.Category.Radio" parent="@style/Preference.Category">
-        <item name="android:layout">@layout/miuix_preference_category_layout_empty</item>
-    </style>
     <style name="Preference.CheckBoxPreference" parent="@style/Preference">
-        <item name="android:widgetLayout">@layout/miuix_preference_widget_checkbox</item>
+        <item name="android:widgetLayout">@layout/preference_widget_checkbox</item>
     </style>
     <style name="Preference.CheckBoxPreference.Material" parent="@style/Preference.CheckBoxPreference">
         <item name="android:layout">@layout/preference_material</item>
@@ -1548,7 +1541,7 @@
         <item name="android:negativeButtonText">@android:string/cancel</item>
     </style>
     <style name="Preference.DialogPreference.EditTextPreference" parent="@style/Preference.DialogPreference">
-        <item name="android:dialogLayout">@layout/miuix_preference_dialog_edittext</item>
+        <item name="android:dialogLayout">@layout/preference_dialog_edittext</item>
     </style>
     <style name="Preference.DialogPreference.EditTextPreference.Material" parent="@style/Preference.DialogPreference.EditTextPreference">
         <item name="android:layout">@layout/preference_material</item>
@@ -1564,7 +1557,7 @@
         <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
     <style name="Preference.DropDown" parent="@style/Preference">
-        <item name="android:widgetLayout">@layout/miuix_preference_widget_spinner</item>
+        <item name="android:layout">@layout/preference_dropdown</item>
     </style>
     <style name="Preference.DropDown.Material" parent="@style/Preference.DropDown">
         <item name="android:layout">@layout/preference_dropdown_material</item>
@@ -1596,15 +1589,11 @@
         <item name="allowDividerBelow">true</item>
         <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
     </style>
-    <style name="Preference.RadioButtonPreference" parent="@style/Preference">
-        <item name="android:layout">@layout/miuix_preference_radiobutton</item>
-    </style>
     <style name="Preference.SeekBarPreference" parent="@style/Preference">
-        <item name="android:layout">@layout/miuix_preference_widget_seekbar</item>
+        <item name="android:layout">@layout/preference_widget_seekbar</item>
         <item name="adjustable">true</item>
-        <item name="allowDividerAbove">false</item>
-        <item name="allowDividerBelow">true</item>
-        <item name="iconSpaceReserved">false</item>
+        <item name="showSeekBarValue">true</item>
+        <item name="updatesContinuously">false</item>
     </style>
     <style name="Preference.SeekBarPreference.Material" parent="@style/Preference.SeekBarPreference">
         <item name="android:layout">@layout/preference_widget_seekbar_material</item>
@@ -1615,11 +1604,9 @@
         <item name="showSeekBarValue">false</item>
     </style>
     <style name="Preference.SwitchPreference" parent="@style/Preference">
-        <item name="android:widgetLayout">@layout/miuix_preference_widget_switch</item>
-        <item name="allowDividerAbove">false</item>
-        <item name="allowDividerBelow">false</item>
-        <item name="iconSpaceReserved">false</item>
-        <item name="singleLineTitle">true</item>
+        <item name="android:widgetLayout">@layout/preference_widget_switch</item>
+        <item name="android:switchTextOn">@string/v7_preference_on</item>
+        <item name="android:switchTextOff">@string/v7_preference_off</item>
     </style>
     <style name="Preference.SwitchPreference.Material" parent="@style/Preference.SwitchPreference">
         <item name="android:layout">@layout/preference_material</item>
@@ -1629,20 +1616,15 @@
         <item name="singleLineTitle">false</item>
     </style>
     <style name="Preference.SwitchPreferenceCompat" parent="@style/Preference">
-        <item name="android:widgetLayout">@layout/miuix_preference_widget_switch_compat</item>
-        <item name="allowDividerAbove">false</item>
-        <item name="allowDividerBelow">false</item>
-        <item name="iconSpaceReserved">false</item>
+        <item name="android:widgetLayout">@layout/preference_widget_switch_compat</item>
+        <item name="android:switchTextOn">@string/v7_preference_on</item>
+        <item name="android:switchTextOff">@string/v7_preference_off</item>
     </style>
     <style name="Preference.SwitchPreferenceCompat.Material" parent="@style/Preference.SwitchPreferenceCompat">
         <item name="android:layout">@layout/preference_material</item>
         <item name="allowDividerAbove">false</item>
         <item name="allowDividerBelow">true</item>
         <item name="iconSpaceReserved">@bool/config_materialPreferenceIconSpaceReserved</item>
-    </style>
-    <style name="Preference.TextPreference" parent="@style/Preference">
-        <item name="android:layout">@layout/miuix_preference_text</item>
-        <item name="android:widgetLayout">@layout/miuix_preference_widget_text</item>
     </style>
     <style name="PreferenceCategoryTitleTextStyle">
         <item name="android:textAppearance">?preferenceCategoryTitleTextAppearance</item>
@@ -1651,10 +1633,9 @@
     <style name="PreferenceFragment">
         <item name="android:paddingLeft">0.0dip</item>
         <item name="android:paddingRight">0.0dip</item>
-        <item name="android:layout">@layout/miuix_preference_list_fragment</item>
+        <item name="android:divider">?android:listDivider</item>
         <item name="android:paddingStart">0.0dip</item>
         <item name="android:paddingEnd">0.0dip</item>
-        <item name="allowDividerAfterLastItem">false</item>
     </style>
     <style name="PreferenceFragment.Material" parent="@style/PreferenceFragment">
         <item name="android:divider">@drawable/preference_list_divider_material</item>
@@ -1798,8 +1779,8 @@
     <style name="ShortcutUninstallDialogMessage">
         <item name="android:textSize">16.71997sp</item>
         <item name="android:textColor">@color/shortcut_uninstall_dialog_message_color</item>
-        <item name="android:layout_marginLeft">10.0dip</item>
-        <item name="android:layout_marginRight">10.0dip</item>
+        <item name="android:layout_marginStart">@dimen/miuix_appcompat_dialog_pannel_horizontal_margin</item>
+        <item name="android:layout_marginEnd">@dimen/miuix_appcompat_dialog_pannel_horizontal_margin</item>
     </style>
     <style name="ShortcutUninstallDialogTitle">
         <item name="android:textSize">18.179993sp</item>
@@ -2566,72 +2547,6 @@
         <item name="android:ellipsize">marquee</item>
         <item name="android:singleLine">true</item>
     </style>
-    <style name="V11.PreferenceThemeOverlay" parent="@style/PreferenceThemeOverlay">
-        <item name="android:scrollbars">vertical</item>
-        <item name="android:divider">@null</item>
-        <item name="android:dividerHeight">0.0dip</item>
-        <item name="checkBoxPreferenceStyle">@style/Preference.CheckBoxPreference</item>
-        <item name="dialogPreferenceStyle">@style/Preference.DialogPreference</item>
-        <item name="dropdownPreferenceStyle">@style/Preference.DropDown</item>
-        <item name="editTextPreferenceStyle">@style/Preference.DialogPreference.EditTextPreference</item>
-        <item name="preferenceCategoryCheckableStyle">@style/Preference.Category.Checkable</item>
-        <item name="preferenceCategoryRadioStyle">@style/Preference.Category.Radio</item>
-        <item name="preferenceCategoryStyle">@style/Preference.Category</item>
-        <item name="preferenceChoiceIndicatorSingle">@drawable/miuix_preference_btn_radio_arrow</item>
-        <item name="preferenceFragmentCompatStyle">@style/PreferenceFragment</item>
-        <item name="preferenceScreenStyle">@style/Preference.PreferenceScreen</item>
-        <item name="preferenceStyle">@style/Preference</item>
-        <item name="radioButtonPreferenceStyle">@style/Preference.RadioButtonPreference</item>
-        <item name="radioPreferenceItemTwoStateBackground">@drawable/miuix_preference_item_radio_two_state_background</item>
-        <item name="seekBarPreferenceStyle">@style/Preference.SeekBarPreference</item>
-        <item name="switchPreferenceCompatStyle">@style/Preference.SwitchPreferenceCompat</item>
-        <item name="switchPreferenceStyle">@style/Preference.SwitchPreference</item>
-        <item name="textPreferenceStyle">@style/Preference.TextPreference</item>
-    </style>
-    <style name="V11.PreferenceThemeOverlay.Dark" parent="@style/V11.PreferenceThemeOverlay">
-        <item name="arrowRightFillColor">@color/miuix_appcompat_arrow_right_fill_color_dark</item>
-        <item name="arrowRightStrokeColor">@color/miuix_preference_arrow_right_stroke_color</item>
-        <item name="checkablePreferenceItemColorFilterChecked">@color/miuix_preference_checkable_item_fill_color_checked_dark</item>
-        <item name="checkablePreferenceItemColorFilterNormal">@color/miuix_preference_checkable_item_fill_color_normal_dark</item>
-        <item name="checkablePreferenceItemColorPressed">@color/miuix_preference_checkable_item_two_state_color_pressed_dark</item>
-        <item name="checkablePreferenceItemColorPressedChecked">@color/miuix_preference_checkable_item_two_state_color_pressed_checked_dark</item>
-        <item name="connectDetailDisconnectedDrawable">@drawable/miuix_preference_ic_detail_disconnected_dark</item>
-        <item name="connectPreferenceBgConnectedColor">@color/miuix_preference_connect_bg_connected_color_dark</item>
-        <item name="connectPreferenceBgDisconnectedColor">@color/miuix_preference_connect_bg_disconnected_color_dark</item>
-        <item name="connectPreferenceIconDisconnectedColor">@color/miuix_preference_connect_icon_disconnected_color_dark</item>
-        <item name="connectPreferenceSummaryDisconnectedColor">@color/miuix_preference_connect_summary_disconnected_color_dark</item>
-        <item name="connectPreferenceTitleDisconnectedColor">@color/miuix_preference_connect_title_disconnected_color_dark</item>
-        <item name="preferenceCategoryBackground">@drawable/miuix_preference_category_background_dark</item>
-        <item name="preferenceCategoryTextColor">@color/miuix_preference_category_text_color_dark</item>
-        <item name="preferenceCheckableMaskColor">@color/miuix_preference_list_item_bg_color_dark</item>
-        <item name="preferenceItemBackground">@drawable/miuix_preference_item_background_dark</item>
-        <item name="preferencePrimaryTextColor">@color/miuix_preference_primary_text_dark</item>
-        <item name="preferenceRightTextColor">@color/miuix_preference_right_text_color_dark</item>
-        <item name="preferenceSecondaryTextColor">@color/miuix_preference_secondary_text_dark</item>
-        <item name="radioPreferenceItemBackground">@drawable/miuix_preference_item_radio_background_dark</item>
-    </style>
-    <style name="V11.PreferenceThemeOverlay.Light" parent="@style/V11.PreferenceThemeOverlay">
-        <item name="arrowRightFillColor">@color/miuix_appcompat_arrow_right_fill_color_light</item>
-        <item name="arrowRightStrokeColor">@color/miuix_preference_arrow_right_stroke_color</item>
-        <item name="checkablePreferenceItemColorFilterChecked">@color/miuix_preference_checkable_item_fill_color_checked_light</item>
-        <item name="checkablePreferenceItemColorFilterNormal">@color/miuix_preference_checkable_item_fill_color_normal_light</item>
-        <item name="checkablePreferenceItemColorPressed">@color/miuix_preference_checkable_item_two_state_color_pressed_light</item>
-        <item name="checkablePreferenceItemColorPressedChecked">@color/miuix_preference_checkable_item_two_state_color_pressed_checked_light</item>
-        <item name="connectDetailDisconnectedDrawable">@drawable/miuix_preference_ic_detail_disconnected_light</item>
-        <item name="connectPreferenceBgConnectedColor">@color/miuix_preference_connect_bg_connected_color_light</item>
-        <item name="connectPreferenceBgDisconnectedColor">@color/miuix_preference_connect_bg_disconnected_color_light</item>
-        <item name="connectPreferenceIconDisconnectedColor">@color/miuix_preference_connect_icon_disconnected_color_light</item>
-        <item name="connectPreferenceSummaryDisconnectedColor">@color/miuix_preference_connect_summary_disconnected_color_light</item>
-        <item name="connectPreferenceTitleDisconnectedColor">@color/miuix_preference_connect_title_disconnected_color_light</item>
-        <item name="preferenceCategoryBackground">@drawable/miuix_preference_category_background_light</item>
-        <item name="preferenceCategoryTextColor">@color/miuix_preference_category_text_color_light</item>
-        <item name="preferenceCheckableMaskColor">@color/miuix_preference_list_item_bg_color_light</item>
-        <item name="preferenceItemBackground">@drawable/miuix_preference_item_background_light</item>
-        <item name="preferencePrimaryTextColor">@color/miuix_preference_primary_text_light</item>
-        <item name="preferenceRightTextColor">@color/miuix_preference_right_text_color_light</item>
-        <item name="preferenceSecondaryTextColor">@color/miuix_preference_secondary_text_light</item>
-        <item name="radioPreferenceItemBackground">@drawable/miuix_preference_item_radio_background_light</item>
-    </style>
     <style name="V12.PreferenceThemeOverlay" parent="@style/PreferenceThemeOverlay">
         <item name="android:scrollbars">vertical</item>
         <item name="android:divider">@null</item>
@@ -3148,7 +3063,7 @@
     <style name="Widget.Compat.NotificationActionText" parent="">
         <item name="android:textAppearance">?android:textAppearanceButton</item>
         <item name="android:textSize">@dimen/notification_action_text_size</item>
-        <item name="android:textColor">@color/secondary_text_default_material_light</item>
+        <item name="android:textColor">@color/androidx_core_secondary_text_default_material_light</item>
     </style>
     <style name="Widget.CompoundButton" parent="@android:style/Widget.CompoundButton" />
     <style name="Widget.CompoundButton.CheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">

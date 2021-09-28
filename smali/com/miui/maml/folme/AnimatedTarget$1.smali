@@ -1,4 +1,4 @@
-.class final Lcom/miui/maml/folme/AnimatedTarget$1;
+.class Lcom/miui/maml/folme/AnimatedTarget$1;
 .super Ljava/lang/Object;
 .source "AnimatedTarget.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 56
+    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public createTarget(Lcom/miui/maml/elements/AnimatedScreenElement;)Lmiuix/animation/IAnimTarget;
     .locals 1
 
-    .line 59
+    .line 62
     new-instance v0, Lcom/miui/maml/folme/AnimatedTarget;
 
     invoke-direct {v0, p1}, Lcom/miui/maml/folme/AnimatedTarget;-><init>(Lcom/miui/maml/elements/AnimatedScreenElement;)V
@@ -52,7 +52,7 @@
 .method public bridge synthetic createTarget(Ljava/lang/Object;)Lmiuix/animation/IAnimTarget;
     .locals 0
 
-    .line 56
+    .line 59
     check-cast p1, Lcom/miui/maml/elements/AnimatedScreenElement;
 
     invoke-virtual {p0, p1}, Lcom/miui/maml/folme/AnimatedTarget$1;->createTarget(Lcom/miui/maml/elements/AnimatedScreenElement;)Lmiuix/animation/IAnimTarget;

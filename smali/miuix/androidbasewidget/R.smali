@@ -9,6 +9,7 @@
         Lmiuix/androidbasewidget/R$styleable;,
         Lmiuix/androidbasewidget/R$style;,
         Lmiuix/androidbasewidget/R$string;,
+        Lmiuix/androidbasewidget/R$drawable;,
         Lmiuix/androidbasewidget/R$color;,
         Lmiuix/androidbasewidget/R$attr;
     }

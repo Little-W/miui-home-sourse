@@ -205,7 +205,7 @@
 .method private final initView()V
     .locals 3
 
-    const v0, 0x7f0a0104
+    const v0, 0x7f0a0105
 
     .line 70
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/AllHideAppActivity;->findViewById(I)Landroid/view/View;
@@ -272,7 +272,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    const v0, 0x7f0a013c
+    const v0, 0x7f0a013d
 
     .line 74
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/AllHideAppActivity;->findViewById(I)Landroid/view/View;
@@ -486,7 +486,7 @@
     .line 32
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllHideAppActivity;->setContentView(I)V
 
-    const p1, 0x7f1001fa
+    const p1, 0x7f1001fb
 
     .line 33
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllHideAppActivity;->setTitle(I)V

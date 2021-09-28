@@ -220,8 +220,6 @@
     const-string v2, "get third desktop provider exception!"
 
     .line 116
-    invoke-static {v1, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     return v0
 .end method
 
@@ -285,7 +283,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070283
+    const v3, 0x7f070288
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

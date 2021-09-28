@@ -23,7 +23,7 @@
 
     const/4 v0, 0x0
 
-    .line 28
+    .line 31
     invoke-direct {p0, p1, v0, v0}, Lcom/miui/maml/util/ZipResourceLoader;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -34,7 +34,7 @@
 
     const/4 v0, 0x0
 
-    .line 33
+    .line 36
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/maml/util/ZipResourceLoader;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -43,46 +43,46 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 42
+    .line 45
     invoke-direct {p0}, Lcom/miui/maml/ResourceLoader;-><init>()V
 
-    .line 25
+    .line 28
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/util/ZipResourceLoader;->mLock:Ljava/lang/Object;
 
-    .line 43
+    .line 46
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 45
+    .line 48
     iput-object p1, p0, Lcom/miui/maml/util/ZipResourceLoader;->mResourcePath:Ljava/lang/String;
 
     if-nez p2, :cond_0
 
     const-string p2, ""
 
-    .line 46
+    .line 49
     :cond_0
     iput-object p2, p0, Lcom/miui/maml/util/ZipResourceLoader;->mInnerPath:Ljava/lang/String;
 
     if-eqz p3, :cond_1
 
-    .line 48
+    .line 51
     iput-object p3, p0, Lcom/miui/maml/util/ZipResourceLoader;->mManifestName:Ljava/lang/String;
 
-    .line 49
+    .line 52
     :cond_1
     invoke-virtual {p0}, Lcom/miui/maml/util/ZipResourceLoader;->init()V
 
     return-void
 
-    .line 44
+    .line 47
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -96,12 +96,12 @@
 .method private close()V
     .locals 2
 
-    .line 91
+    .line 105
     iget-object v0, p0, Lcom/miui/maml/util/ZipResourceLoader;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 92
+    .line 106
     :try_start_0
     iget-object v1, p0, Lcom/miui/maml/util/ZipResourceLoader;->mZipFile:Ljava/util/zip/ZipFile;
     :try_end_0
@@ -109,7 +109,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 94
+    .line 108
     :try_start_1
     iget-object v1, p0, Lcom/miui/maml/util/ZipResourceLoader;->mZipFile:Ljava/util/zip/ZipFile;
 
@@ -121,11 +121,11 @@
     :catch_0
     const/4 v1, 0x0
 
-    .line 97
+    .line 111
     :try_start_2
     iput-object v1, p0, Lcom/miui/maml/util/ZipResourceLoader;->mZipFile:Ljava/util/zip/ZipFile;
 
-    .line 99
+    .line 113
     :cond_0
     monitor-exit v0
 
@@ -151,10 +151,10 @@
         }
     .end annotation
 
-    .line 86
+    .line 100
     invoke-direct {p0}, Lcom/miui/maml/util/ZipResourceLoader;->close()V
 
-    .line 87
+    .line 101
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
     return-void
@@ -163,19 +163,76 @@
 .method public finish()V
     .locals 0
 
-    .line 119
+    .line 133
     invoke-direct {p0}, Lcom/miui/maml/util/ZipResourceLoader;->close()V
 
-    .line 120
+    .line 134
     invoke-super {p0}, Lcom/miui/maml/ResourceLoader;->finish()V
 
     return-void
 .end method
 
+.method public getFontFile(Ljava/lang/String;)Ljava/io/File;
+    .locals 2
+
+    if-eqz p1, :cond_2
+
+    .line 68
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "/"
+
+    .line 69
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 70
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    return-object v0
+
+    .line 72
+    :cond_1
+    new-instance v0, Ljava/io/File;
+
+    iget-object v1, p0, Lcom/miui/maml/util/ZipResourceLoader;->mResourcePath:Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->getParent()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 73
+    new-instance v1, Ljava/io/File;
+
+    invoke-direct {v1, v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
 .method public getID()Ljava/lang/String;
     .locals 2
 
-    .line 125
+    .line 139
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -202,7 +259,7 @@
 .method public getInputStream(Ljava/lang/String;[J)Ljava/io/InputStream;
     .locals 5
 
-    .line 64
+    .line 78
     iget-object v0, p0, Lcom/miui/maml/util/ZipResourceLoader;->mZipFile:Ljava/util/zip/ZipFile;
 
     const/4 v1, 0x0
@@ -213,19 +270,19 @@
 
     goto :goto_0
 
-    .line 67
+    .line 81
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/util/ZipResourceLoader;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 68
+    .line 82
     :try_start_0
     iget-object v2, p0, Lcom/miui/maml/util/ZipResourceLoader;->mZipFile:Ljava/util/zip/ZipFile;
 
     if-eqz v2, :cond_3
 
-    .line 69
+    .line 83
     iget-object v2, p0, Lcom/miui/maml/util/ZipResourceLoader;->mZipFile:Ljava/util/zip/ZipFile;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -248,7 +305,7 @@
 
     if-nez p1, :cond_1
 
-    .line 71
+    .line 85
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -260,7 +317,7 @@
 
     const/4 v2, 0x0
 
-    .line 74
+    .line 88
     :try_start_1
     invoke-virtual {p1}, Ljava/util/zip/ZipEntry;->getSize()J
 
@@ -268,7 +325,7 @@
 
     aput-wide v3, p2, v2
 
-    .line 75
+    .line 89
     :cond_2
     iget-object p2, p0, Lcom/miui/maml/util/ZipResourceLoader;->mZipFile:Ljava/util/zip/ZipFile;
 
@@ -289,14 +346,14 @@
 
     const-string p2, "ZipResourceLoader"
 
-    .line 77
+    .line 91
     invoke-virtual {p1}, Ljava/io/IOException;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     invoke-static {p2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
+    .line 94
     :cond_3
     monitor-exit v0
 
@@ -319,15 +376,15 @@
 .method public init()V
     .locals 4
 
-    .line 104
+    .line 118
     invoke-super {p0}, Lcom/miui/maml/ResourceLoader;->init()V
 
-    .line 105
+    .line 119
     iget-object v0, p0, Lcom/miui/maml/util/ZipResourceLoader;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 106
+    .line 120
     :try_start_0
     iget-object v1, p0, Lcom/miui/maml/util/ZipResourceLoader;->mZipFile:Ljava/util/zip/ZipFile;
     :try_end_0
@@ -335,7 +392,7 @@
 
     if-nez v1, :cond_0
 
-    .line 108
+    .line 122
     :try_start_1
     new-instance v1, Ljava/util/zip/ZipFile;
 
@@ -353,13 +410,13 @@
     :catch_0
     move-exception v1
 
-    .line 110
+    .line 124
     :try_start_2
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     const-string v1, "ZipResourceLoader"
 
-    .line 111
+    .line 125
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -378,7 +435,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 114
+    .line 128
     :cond_0
     :goto_0
     monitor-exit v0
@@ -398,7 +455,7 @@
 .method public resourceExists(Ljava/lang/String;)Z
     .locals 5
 
-    .line 54
+    .line 57
     iget-object v0, p0, Lcom/miui/maml/util/ZipResourceLoader;->mZipFile:Ljava/util/zip/ZipFile;
 
     const/4 v1, 0x0
@@ -409,13 +466,13 @@
 
     goto :goto_1
 
-    .line 57
+    .line 60
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/util/ZipResourceLoader;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 58
+    .line 61
     :try_start_0
     iget-object v2, p0, Lcom/miui/maml/util/ZipResourceLoader;->mZipFile:Ljava/util/zip/ZipFile;
 
@@ -459,7 +516,7 @@
     :catchall_0
     move-exception p1
 
-    .line 59
+    .line 62
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

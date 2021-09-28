@@ -316,7 +316,7 @@
 
     move-result v14
 
-    const-string v15, "worker_class_name"
+    const-string/jumbo v15, "worker_class_name"
 
     .line 1462
     invoke-static {v5, v15}, Landroidx/room/util/CursorUtil;->getColumnIndexOrThrow(Landroid/database/Cursor;Ljava/lang/String;)I
@@ -1065,7 +1065,7 @@
 
     move-result v13
 
-    const-string v14, "worker_class_name"
+    const-string/jumbo v14, "worker_class_name"
 
     .line 1684
     invoke-static {v4, v14}, Landroidx/room/util/CursorUtil;->getColumnIndexOrThrow(Landroid/database/Cursor;Ljava/lang/String;)I
@@ -1709,7 +1709,7 @@
 
     move-result v13
 
-    const-string v14, "worker_class_name"
+    const-string/jumbo v14, "worker_class_name"
 
     .line 1573
     invoke-static {v4, v14}, Landroidx/room/util/CursorUtil;->getColumnIndexOrThrow(Landroid/database/Cursor;Ljava/lang/String;)I
@@ -2443,7 +2443,7 @@
 
     move-result v15
 
-    const-string v3, "worker_class_name"
+    const-string/jumbo v3, "worker_class_name"
 
     .line 402
     invoke-static {v6, v3}, Landroidx/room/util/CursorUtil;->getColumnIndexOrThrow(Landroid/database/Cursor;Ljava/lang/String;)I

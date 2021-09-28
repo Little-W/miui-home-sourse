@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->changeAlphaScale(FFIIIIZ)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/launcher/Launcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,33 +20,13 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$alpha:F
-
-.field final synthetic val$iconPivotX:I
-
-.field final synthetic val$iconPivotY:I
-
-.field final synthetic val$scale:F
-
-.field final synthetic val$visible:Z
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;FFIIZ)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 8224
+    .line 8533
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$83;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    iput p2, p0, Lcom/miui/home/launcher/Launcher$83;->val$alpha:F
-
-    iput p3, p0, Lcom/miui/home/launcher/Launcher$83;->val$scale:F
-
-    iput p4, p0, Lcom/miui/home/launcher/Launcher$83;->val$iconPivotX:I
-
-    iput p5, p0, Lcom/miui/home/launcher/Launcher$83;->val$iconPivotY:I
-
-    iput-boolean p6, p0, Lcom/miui/home/launcher/Launcher$83;->val$visible:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,29 +36,27 @@
 
 # virtual methods
 .method public run()V
-    .locals 8
+    .locals 2
+
+    .line 8536
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isSupportRecentsAndFsGesture()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     const-string v0, "Launcher"
 
-    const-string v1, "change shortcutMenuLayer alpha and scale by FsCallback"
+    const-string v1, "reset shortcutMenuLayer alpha and scale"
 
-    .line 8226
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 8537
+    .line 8538
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$83;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 8227
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$83;->this$0:Lcom/miui/home/launcher/Launcher;
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    iget v3, p0, Lcom/miui/home/launcher/Launcher$83;->val$alpha:F
+    invoke-static {v0, v1, v1}, Lcom/miui/home/launcher/Launcher;->access$9800(Lcom/miui/home/launcher/Launcher;FF)V
 
-    iget v4, p0, Lcom/miui/home/launcher/Launcher$83;->val$scale:F
-
-    iget v5, p0, Lcom/miui/home/launcher/Launcher$83;->val$iconPivotX:I
-
-    iget v6, p0, Lcom/miui/home/launcher/Launcher$83;->val$iconPivotY:I
-
-    iget-boolean v7, p0, Lcom/miui/home/launcher/Launcher$83;->val$visible:Z
-
-    invoke-virtual/range {v2 .. v7}, Lcom/miui/home/launcher/Launcher;->changeShortcutMenuLayerAlphaScale(FFIIZ)V
-
+    :cond_0
     return-void
 .end method

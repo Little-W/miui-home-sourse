@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;Ljava/util/ArrayList;)V
     .locals 0
 
-    .line 86
+    .line 87
     iput-object p1, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$1;->this$0:Lcom/miui/home/launcher/model/BaseModelUpdateTask;
 
     iput-object p2, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$1;->val$updatedApps:Ljava/util/ArrayList;
@@ -42,7 +42,7 @@
 .method public execute(Lcom/miui/home/launcher/LauncherModel$Callbacks;)V
     .locals 1
 
-    .line 89
+    .line 90
     iget-object v0, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$1;->val$updatedApps:Ljava/util/ArrayList;
 
     invoke-interface {p1, v0}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->bindAppsUpdated(Ljava/util/List;)V

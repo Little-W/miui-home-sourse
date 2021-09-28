@@ -272,8 +272,6 @@
 
     move-result-object p1
 
-    invoke-static {p2, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     goto :goto_6
 
     :catch_5
@@ -298,8 +296,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    invoke-static {p2, p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
@@ -347,8 +343,6 @@
     const-string v1, "start to backup wallpaper"
 
     .line 32
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 33
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -370,8 +364,6 @@
     const-string p2, "failed to get wallpaper bitmap"
 
     .line 36
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 39
@@ -429,8 +421,6 @@
     const-string p2, "failed to compress wallpaper bitmap"
 
     .line 50
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 53
@@ -452,8 +442,6 @@
     const-string v0, "IOException when create temp wallpaper"
 
     .line 57
-    invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     goto :goto_0
 
     :catch_1
@@ -464,8 +452,6 @@
     const-string v0, "FileNotFoundException"
 
     .line 55
-    invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 .end method
@@ -478,8 +464,6 @@
     const-string v0, "start to restore wallpaper"
 
     .line 63
-    invoke-static {p3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 64
     invoke-static {p1, p2}, Lcom/miui/home/launcher/cloudbackup/MiuiHomeCloudBackupImpl;->restoreFiles(Landroid/content/Context;Lcom/xiaomi/mysettingsdk/backup/data/DataPackage;)V
 

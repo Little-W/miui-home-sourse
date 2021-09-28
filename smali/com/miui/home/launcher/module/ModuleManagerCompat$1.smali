@@ -61,8 +61,6 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 53
     iget-object v0, p0, Lcom/miui/home/launcher/module/ModuleManagerCompat$1;->this$0:Lcom/miui/home/launcher/module/ModuleManagerCompat;
 
@@ -127,8 +125,6 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    invoke-static {p2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 40
     iget-object p2, p0, Lcom/miui/home/launcher/module/ModuleManagerCompat$1;->this$0:Lcom/miui/home/launcher/module/ModuleManagerCompat;

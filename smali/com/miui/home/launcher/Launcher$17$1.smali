@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher$17;)V
     .locals 0
 
-    .line 2639
+    .line 2766
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$17$1;->this$1:Lcom/miui/home/launcher/Launcher$17;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 4
 
-    .line 2641
+    .line 2768
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$17$1;->this$1:Lcom/miui/home/launcher/Launcher$17;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$17;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -59,7 +59,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/Launcher;->openFolder(Lcom/miui/home/launcher/FolderInfo;Landroid/view/View;)V
 
-    .line 2644
+    .line 2771
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$17$1;->this$1:Lcom/miui/home/launcher/Launcher$17;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$17;->this$0:Lcom/miui/home/launcher/Launcher;

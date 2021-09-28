@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DragLayer;Landroid/content/Context;Lcom/miui/home/launcher/ItemIcon;)V
     .locals 0
 
-    .line 604
+    .line 609
     iput-object p1, p0, Lcom/miui/home/launcher/DragLayer$3;->this$0:Lcom/miui/home/launcher/DragLayer;
 
     iput-object p3, p0, Lcom/miui/home/launcher/DragLayer$3;->val$icon:Lcom/miui/home/launcher/ItemIcon;
@@ -39,7 +39,7 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 1
 
-    .line 607
+    .line 612
     iget-object v0, p0, Lcom/miui/home/launcher/DragLayer$3;->val$icon:Lcom/miui/home/launcher/ItemIcon;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/ItemIcon;->draw(Landroid/graphics/Canvas;)V

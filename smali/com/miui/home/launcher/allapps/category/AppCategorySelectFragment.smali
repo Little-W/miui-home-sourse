@@ -986,7 +986,7 @@
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
-    const p2, 0x7f0a00d2
+    const p2, 0x7f0a00d3
 
     .line 137
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -1069,7 +1069,7 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const p2, 0x7f0a00d8
+    const p2, 0x7f0a00d9
 
     .line 147
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher$1;Lcom/miui/home/launcher/IBackAnimView;)V
     .locals 0
 
-    .line 608
+    .line 637
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$1$1;->this$1:Lcom/miui/home/launcher/Launcher$1;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$1$1;->val$lastSelectedIcon:Lcom/miui/home/launcher/IBackAnimView;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 610
+    .line 639
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$1$1;->this$1:Lcom/miui/home/launcher/Launcher$1;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$1;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -55,7 +55,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 611
+    .line 640
     invoke-interface {v1}, Lcom/miui/home/launcher/IBackAnimView;->resetBackAnim()V
 
     :cond_0

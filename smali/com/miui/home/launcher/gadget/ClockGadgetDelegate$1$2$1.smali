@@ -148,8 +148,6 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     :try_start_0
     const-string v1, "CLICK"
 

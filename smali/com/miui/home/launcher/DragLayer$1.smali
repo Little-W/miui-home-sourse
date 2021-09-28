@@ -41,7 +41,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DragLayer;FFFFFFFF)V
     .locals 0
 
-    .line 464
+    .line 469
     iput-object p1, p0, Lcom/miui/home/launcher/DragLayer$1;->this$0:Lcom/miui/home/launcher/DragLayer;
 
     iput p2, p0, Lcom/miui/home/launcher/DragLayer$1;->val$xStep:F
@@ -70,7 +70,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 6
 
-    .line 466
+    .line 471
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -81,7 +81,7 @@
 
     move-result p1
 
-    .line 467
+    .line 472
     iget-object v0, p0, Lcom/miui/home/launcher/DragLayer$1;->this$0:Lcom/miui/home/launcher/DragLayer;
 
     iget v1, p0, Lcom/miui/home/launcher/DragLayer$1;->val$xStep:F

@@ -29,17 +29,17 @@
 
     const-string v0, "backup"
 
-    .line 28
+    .line 29
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/common/BaseSharePreference;-><init>(Ljava/lang/String;)V
 
-    .line 29
+    .line 30
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/backup/BackupSettingHelper;->mSettings:Ljava/util/ArrayList;
 
-    .line 30
+    .line 31
     iget-object v0, p0, Lcom/miui/home/launcher/backup/BackupSettingHelper;->mSettings:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/miui/home/launcher/backup/settings/BackupSettingsAutoFill;
@@ -48,7 +48,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 31
+    .line 32
     iget-object v0, p0, Lcom/miui/home/launcher/backup/BackupSettingHelper;->mSettings:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/miui/home/launcher/backup/settings/BackupSettingsLockCells;
@@ -57,7 +57,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 32
+    .line 33
     iget-object v0, p0, Lcom/miui/home/launcher/backup/BackupSettingHelper;->mSettings:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/miui/home/launcher/backup/settings/BackupSettingsMemoryInfo;
@@ -66,7 +66,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 33
+    .line 35
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 36
     iget-object v0, p0, Lcom/miui/home/launcher/backup/BackupSettingHelper;->mSettings:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/miui/home/launcher/backup/settings/BackupSettingsAssistant;
@@ -75,7 +82,8 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 34
+    .line 38
+    :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/backup/BackupSettingHelper;->mSettings:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/miui/home/launcher/backup/settings/BackupSettingsPerfectIcon;
@@ -84,14 +92,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 35
+    .line 39
     invoke-static {}, Lcom/miui/home/launcher/ApplicationConfig;->isFeedSupport()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 36
+    .line 40
     iget-object v0, p0, Lcom/miui/home/launcher/backup/BackupSettingHelper;->mSettings:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/miui/home/launcher/backup/settings/BackupSettingsPullDown;
@@ -100,7 +108,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 37
+    .line 41
     iget-object v0, p0, Lcom/miui/home/launcher/backup/BackupSettingHelper;->mSettings:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/miui/home/launcher/backup/settings/BackupSettingsSlideUp;
@@ -109,14 +117,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
 .method synthetic constructor <init>(Lcom/miui/home/launcher/backup/BackupSettingHelper$1;)V
     .locals 0
 
-    .line 23
+    .line 24
     invoke-direct {p0}, Lcom/miui/home/launcher/backup/BackupSettingHelper;-><init>()V
 
     return-void
@@ -125,7 +133,7 @@
 .method public static getInstance()Lcom/miui/home/launcher/backup/BackupSettingHelper;
     .locals 1
 
-    .line 46
+    .line 50
     invoke-static {}, Lcom/miui/home/launcher/backup/BackupSettingHelper$Holder;->access$100()Lcom/miui/home/launcher/backup/BackupSettingHelper;
 
     move-result-object v0
@@ -142,10 +150,8 @@
 
     const-string v1, "backup settings"
 
-    .line 57
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 58
+    .line 61
+    .line 62
     iget-object v0, p0, Lcom/miui/home/launcher/backup/BackupSettingHelper;->mSettings:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -165,7 +171,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/backup/settings/BackupSettingsBase;
 
-    .line 59
+    .line 63
     invoke-virtual {v1}, Lcom/miui/home/launcher/backup/settings/BackupSettingsBase;->backup()V
 
     goto :goto_0
@@ -181,10 +187,8 @@
 
     const-string v1, "restore settings"
 
-    .line 50
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 51
+    .line 54
+    .line 55
     iget-object v0, p0, Lcom/miui/home/launcher/backup/BackupSettingHelper;->mSettings:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -204,7 +208,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/backup/settings/BackupSettingsBase;
 
-    .line 52
+    .line 56
     invoke-virtual {v1}, Lcom/miui/home/launcher/backup/settings/BackupSettingsBase;->restore()V
 
     goto :goto_0

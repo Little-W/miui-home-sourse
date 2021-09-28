@@ -85,7 +85,7 @@
     .line 27
     sget-object v0, Lcom/miui/home/launcher/compat/LauncherThemeCompat;->CLASSIC_DEVICE_V10:Ljava/util/HashSet;
 
-    const-string v1, "willow"
+    const-string/jumbo v1, "willow"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 

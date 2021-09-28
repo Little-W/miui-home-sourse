@@ -130,8 +130,6 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     if-eqz p1, :cond_1
 
     .line 182
@@ -216,8 +214,6 @@
     const-string v1, "onSwipeStop"
 
     .line 207
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     const/4 v0, 0x0
 
     const/4 v1, 0x1
@@ -446,8 +442,6 @@
 
     return-void
 
-    nop
-
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -463,8 +457,6 @@
     const-string v1, "onSwipeStopDirect"
 
     .line 242
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 245
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$2;->this$0:Lcom/miui/home/recents/GestureStubView;
 

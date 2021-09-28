@@ -656,11 +656,11 @@
 
     if-eqz p1, :cond_1
 
-    :goto_0
     move-object v1, p1
 
     goto :goto_1
 
+    .line 532
     :cond_1
     iget-object p1, p0, Lcom/miui/maml/elements/AdvancedSlider$SliderPoint;->mPressedStateElements:Lcom/miui/maml/elements/ElementGroup;
 
@@ -671,7 +671,8 @@
     :cond_2
     iget-object p1, p0, Lcom/miui/maml/elements/AdvancedSlider$SliderPoint;->mNormalStateElements:Lcom/miui/maml/elements/ElementGroup;
 
-    goto :goto_0
+    :goto_0
+    move-object v1, p1
 
     .line 534
     :goto_1

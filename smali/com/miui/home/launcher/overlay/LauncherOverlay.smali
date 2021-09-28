@@ -16,6 +16,14 @@
 .method public abstract onScrollInteractionEnd()V
 .end method
 
+.method public requestInstallApp(Lcom/miui/home/launcher/ItemInfo;ZLandroid/os/Bundle;)I
+    .locals 0
+
+    const/4 p1, -0x1
+
+    return p1
+.end method
+
 .method public abstract setAlphaAndScale(FF)V
 .end method
 

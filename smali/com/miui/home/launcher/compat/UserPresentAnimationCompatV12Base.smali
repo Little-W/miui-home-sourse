@@ -203,7 +203,7 @@
 
     if-eqz p1, :cond_0
 
-    const v0, 0x7f0a0242
+    const v0, 0x7f0a0246
 
     .line 50
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -444,7 +444,7 @@
 .method final showUserPresentAnimation(Landroid/view/View;)V
     .locals 4
 
-    const v0, 0x7f0a0242
+    const v0, 0x7f0a0246
 
     .line 88
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;

@@ -135,11 +135,11 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/uninstall/UninstallController;->isUninstallValid(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Launcher;)Z
+    const/4 v1, 0x0
+
+    invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/uninstall/UninstallController;->isUninstallValid(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Launcher;Z)Z
 
     move-result v0
-
-    const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
@@ -212,7 +212,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1002fc
+    const v1, 0x7f100311
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -227,7 +227,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1002fb
+    const v2, 0x7f100310
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

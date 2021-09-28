@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/maml/util/ConfigFile;)V
     .locals 0
 
-    .line 403
+    .line 401
     iput-object p1, p0, Lcom/miui/maml/util/ConfigFile$4;->this$0:Lcom/miui/maml/util/ConfigFile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 407
+    .line 405
     iget-object v0, p0, Lcom/miui/maml/util/ConfigFile$4;->this$0:Lcom/miui/maml/util/ConfigFile;
 
     new-instance v1, Lcom/miui/maml/util/ConfigFile$Gadget;
@@ -51,25 +51,25 @@
 
     move-result-object v2
 
-    const-string v3, "x"
+    const-string/jumbo v3, "x"
 
     const/4 v4, 0x0
 
-    .line 408
+    .line 406
     invoke-static {p1, v3, v4}, Lcom/miui/maml/util/Utils;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result v3
 
-    const-string v5, "y"
+    const-string/jumbo v5, "y"
 
-    .line 409
+    .line 407
     invoke-static {p1, v5, v4}, Lcom/miui/maml/util/Utils;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result p1
 
     invoke-direct {v1, v2, v3, p1}, Lcom/miui/maml/util/ConfigFile$Gadget;-><init>(Ljava/lang/String;II)V
 
-    .line 407
+    .line 405
     invoke-virtual {v0, v1}, Lcom/miui/maml/util/ConfigFile;->putGadget(Lcom/miui/maml/util/ConfigFile$Gadget;)V
 
     :cond_0

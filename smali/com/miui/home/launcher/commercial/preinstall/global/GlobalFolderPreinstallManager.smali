@@ -172,8 +172,6 @@
     const-string v2, "get original ads fail"
 
     .line 216
-    invoke-static {v1, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :cond_3
     return-object v0
 
@@ -353,8 +351,6 @@
     move-result-object v0
 
     .line 126
-    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 131
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalFolderPreinstallManager;->transferToWrapperList(Ljava/util/List;)Ljava/util/List;
 
@@ -472,8 +468,6 @@
     const-string v0, "handle dislike fail"
 
     .line 194
-    invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 
@@ -521,8 +515,6 @@
     const-string v0, "handle click fail"
 
     .line 163
-    invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :cond_0
     :goto_0
     return-void
@@ -557,8 +549,6 @@
     const-string v1, "handle view fail"
 
     .line 142
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 .end method
@@ -674,8 +664,6 @@
     const-string v2, "transfer info fail"
 
     .line 247
-    invoke-static {v1, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     return-object v0
 
     :cond_3

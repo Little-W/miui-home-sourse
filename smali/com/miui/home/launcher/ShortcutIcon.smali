@@ -18,7 +18,7 @@
 
 
 # static fields
-.field private static sEnableLoadingAnim:Z = false
+.field private static sEnableLoadingAnim:Z
 
 
 # instance fields
@@ -61,37 +61,37 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    .line 81
+    .line 80
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/ItemIcon;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p2, 0x1
 
-    .line 73
+    .line 72
     iput-boolean p2, p0, Lcom/miui/home/launcher/ShortcutIcon;->mStopLoading:Z
 
     const/4 p2, 0x0
 
-    .line 75
+    .line 74
     iput-boolean p2, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIsHideCheckBox:Z
 
-    .line 76
+    .line 75
     iput-boolean p2, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIsShowingCheckBox:Z
 
-    .line 78
+    .line 77
     new-instance p2, Ljava/lang/Object;
 
     invoke-direct {p2}, Ljava/lang/Object;-><init>()V
 
     iput-object p2, p0, Lcom/miui/home/launcher/ShortcutIcon;->mLock:Ljava/lang/Object;
 
-    .line 426
+    .line 425
     new-instance p2, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$aEVtRhkiKUiU83K81RF-iHNNXrU;
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$aEVtRhkiKUiU83K81RF-iHNNXrU;-><init>(Lcom/miui/home/launcher/ShortcutIcon;)V
 
     iput-object p2, p0, Lcom/miui/home/launcher/ShortcutIcon;->mPerformHapticRunnable:Ljava/lang/Runnable;
 
-    .line 428
+    .line 427
     new-instance p2, Lcom/miui/home/launcher/anim/PhysicBasedInterpolator;
 
     const v0, 0x3f666666    # 0.9f
@@ -102,21 +102,21 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/ShortcutIcon;->mPhysicBasedInterpolator:Lcom/miui/home/launcher/anim/PhysicBasedInterpolator;
 
-    .line 697
+    .line 702
     new-instance p2, Lcom/miui/home/launcher/-$$Lambda$KT2qkmGEdI9uwz7wbQMBOlYL1T4;
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/-$$Lambda$KT2qkmGEdI9uwz7wbQMBOlYL1T4;-><init>(Lcom/miui/home/launcher/ShortcutIcon;)V
 
     iput-object p2, p0, Lcom/miui/home/launcher/ShortcutIcon;->mResetBackAnimRunnable:Ljava/lang/Runnable;
 
-    .line 790
+    .line 795
     new-instance p2, Lcom/miui/home/launcher/-$$Lambda$IY8FHi9G3qiaQGT2E8lpz3MCfmE;
 
     invoke-direct {p2, p0}, Lcom/miui/home/launcher/-$$Lambda$IY8FHi9G3qiaQGT2E8lpz3MCfmE;-><init>(Lcom/miui/home/launcher/ShortcutIcon;)V
 
     iput-object p2, p0, Lcom/miui/home/launcher/ShortcutIcon;->mClickRunnable:Ljava/lang/Runnable;
 
-    .line 82
+    .line 81
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mContext:Landroid/content/Context;
 
     return-void
@@ -125,7 +125,7 @@
 .method static synthetic access$000()Z
     .locals 1
 
-    .line 56
+    .line 55
     sget-boolean v0, Lcom/miui/home/launcher/ShortcutIcon;->sEnableLoadingAnim:Z
 
     return v0
@@ -134,7 +134,7 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/ShortcutIcon;)Z
     .locals 0
 
-    .line 56
+    .line 55
     iget-boolean p0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mStopLoading:Z
 
     return p0
@@ -143,7 +143,7 @@
 .method static synthetic access$200(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 0
 
-    .line 56
+    .line 55
     invoke-direct {p0}, Lcom/miui/home/launcher/ShortcutIcon;->updateContentDescription()V
 
     return-void
@@ -152,7 +152,7 @@
 .method static synthetic access$300(Lcom/miui/home/launcher/ShortcutIcon;)Z
     .locals 0
 
-    .line 56
+    .line 55
     iget-boolean p0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIsShowingCheckBox:Z
 
     return p0
@@ -161,7 +161,7 @@
 .method static synthetic access$400(Lcom/miui/home/launcher/ShortcutIcon;)Ljava/lang/Runnable;
     .locals 0
 
-    .line 56
+    .line 55
     iget-object p0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mClickRunnable:Ljava/lang/Runnable;
 
     return-object p0
@@ -170,7 +170,7 @@
 .method public static createShortcutIcon(ILcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;)Lcom/miui/home/launcher/ShortcutIcon;
     .locals 2
 
-    .line 288
+    .line 287
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
@@ -183,24 +183,24 @@
 
     check-cast p0, Lcom/miui/home/launcher/ShortcutIcon;
 
-    .line 289
+    .line 288
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->setLauncher(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 290
+    .line 289
     iget-object p2, p0, Lcom/miui/home/launcher/ShortcutIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
-    const v0, 0x7f1102f2
+    const v0, 0x7f1102eb
 
     invoke-virtual {p2, p1, v0}, Lcom/miui/home/launcher/TitleTextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 291
+    .line 290
     iget-object p2, p0, Lcom/miui/home/launcher/ShortcutIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0600d7
+    const v1, 0x7f0600d9
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -214,10 +214,10 @@
 .method public static fromXml(ILcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;Lcom/miui/home/launcher/ShortcutInfo;)Lcom/miui/home/launcher/ShortcutIcon;
     .locals 6
 
-    .line 231
+    .line 230
     monitor-enter p3
 
-    .line 232
+    .line 231
     :try_start_0
     invoke-virtual {p3, p2}, Lcom/miui/home/launcher/ShortcutInfo;->getBuddyIconView(Landroid/view/ViewGroup;)Lcom/miui/home/launcher/ShortcutIcon;
 
@@ -225,7 +225,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 233
+    .line 232
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutIcon;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
@@ -238,7 +238,7 @@
 
     if-eq v1, p2, :cond_1
 
-    .line 234
+    .line 233
     :cond_0
     invoke-static {p0, p1, p2}, Lcom/miui/home/launcher/ShortcutIcon;->createItemIcon(ILcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;)Landroid/view/View;
 
@@ -248,13 +248,13 @@
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutIcon;
 
-    .line 235
+    .line 234
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->setLauncher(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 236
+    .line 235
     invoke-virtual {p3, v0, p2}, Lcom/miui/home/launcher/ShortcutInfo;->setBuddyIconView(Lcom/miui/home/launcher/ShortcutIcon;Landroid/view/ViewGroup;)V
 
-    .line 238
+    .line 237
     :cond_1
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutIcon;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -262,22 +262,22 @@
 
     const/4 v1, 0x0
 
-    .line 242
+    .line 241
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
     const/4 v3, 0x0
 
-    .line 243
+    .line 242
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/ShortcutIcon;->setVisibility(I)V
 
-    .line 244
+    .line 243
     instance-of v4, p2, Landroid/widget/AbsListView;
 
     if-eqz v4, :cond_6
 
-    .line 245
+    .line 244
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWidth()I
 
     move-result p2
@@ -290,14 +290,14 @@
 
     move-result p2
 
-    .line 246
+    .line 245
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getFolderCellHeight()I
 
     move-result v4
 
     if-nez p0, :cond_2
 
-    .line 248
+    .line 247
     new-instance p0, Landroid/widget/AbsListView$LayoutParams;
 
     invoke-direct {p0, p2, v4}, Landroid/widget/AbsListView$LayoutParams;-><init>(II)V
@@ -306,7 +306,7 @@
 
     goto :goto_0
 
-    .line 249
+    .line 248
     :cond_2
     iget v5, p0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
@@ -316,58 +316,58 @@
 
     if-eq v5, v4, :cond_4
 
-    .line 250
+    .line 249
     :cond_3
     iput p2, p0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 251
+    .line 250
     iput v4, p0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     move-object v1, p0
 
-    .line 254
+    .line 253
     :cond_4
     :goto_0
     instance-of p2, p0, Landroid/widget/AbsListView$LayoutParams;
 
     if-nez p2, :cond_5
 
-    .line 255
+    .line 254
     new-instance v1, Landroid/widget/AbsListView$LayoutParams;
 
     invoke-direct {v1, p0}, Landroid/widget/AbsListView$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 257
+    .line 256
     :cond_5
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/ShortcutIcon;->setFocusable(Z)V
 
     const/high16 p0, 0x3f800000    # 1.0f
 
-    .line 258
+    .line 257
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/ShortcutIcon;->setAlpha(F)V
 
-    .line 259
+    .line 258
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/ShortcutIcon;->setTextAlpha(F)V
 
-    .line 260
+    .line 259
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/ShortcutIcon;->setClickable(Z)V
 
-    .line 261
+    .line 260
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/ShortcutIcon;->setLongClickable(Z)V
 
-    .line 262
+    .line 261
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/ShortcutIcon;->setEnableAutoLayoutAnimation(Z)V
 
-    const p0, 0x7f0600b0
+    const p0, 0x7f0600b2
 
-    .line 264
+    .line 263
     invoke-virtual {v2, p0}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p0
 
     goto :goto_1
 
-    .line 266
+    .line 265
     :cond_6
     invoke-static {p0, p2}, Lcom/miui/home/launcher/ItemIcon;->createDefaultLayoutParams(Landroid/view/ViewGroup$LayoutParams;Landroid/view/ViewGroup;)Landroid/view/ViewGroup$LayoutParams;
 
@@ -375,49 +375,49 @@
 
     const/4 p0, 0x1
 
-    .line 267
+    .line 266
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/ShortcutIcon;->setFocusable(Z)V
 
-    .line 268
+    .line 267
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/ShortcutIcon;->setEnableAutoLayoutAnimation(Z)V
 
-    const p0, 0x7f0600d7
+    const p0, 0x7f0600d9
 
-    .line 270
+    .line 269
     invoke-virtual {v2, p0}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result p0
 
     :goto_1
-    const p2, 0x7f1102f2
+    const p2, 0x7f1102eb
 
     if-eqz v1, :cond_7
 
-    .line 273
+    .line 272
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/ShortcutIcon;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 274
+    .line 273
     iget-object v1, v0, Lcom/miui/home/launcher/ShortcutIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     invoke-virtual {v1, p1, p2}, Lcom/miui/home/launcher/TitleTextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 275
+    .line 274
     iget-object p2, v0, Lcom/miui/home/launcher/ShortcutIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     invoke-static {p1, p2, p0}, Lcom/miui/home/launcher/common/Utilities;->setTitleShadow(Landroid/content/Context;Landroid/widget/TextView;I)V
 
-    .line 278
+    .line 277
     :cond_7
     invoke-virtual {p3, p1}, Lcom/miui/home/launcher/ShortcutInfo;->updateBuddyIconView(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 280
+    .line 279
     new-instance p0, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$60RyNADELuCHdcEWv1bUbOTXk3U;
 
     invoke-direct {p0, v0, p3, p1}, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$60RyNADELuCHdcEWv1bUbOTXk3U;-><init>(Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/Launcher;)V
 
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->useLauncherToRunOnUiThread(Ljava/lang/Runnable;)Z
 
-    .line 283
+    .line 282
     monitor-exit p3
 
     return-object v0
@@ -425,7 +425,7 @@
     :catchall_0
     move-exception p0
 
-    .line 284
+    .line 283
     monitor-exit p3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -440,7 +440,7 @@
 
     const/4 v1, 0x2
 
-    .line 175
+    .line 174
     new-array v1, v1, [F
 
     fill-array-data v1, :array_0
@@ -449,7 +449,7 @@
 
     move-result-object p1
 
-    .line 176
+    .line 175
     new-instance v0, Lcom/miui/home/launcher/animate/MAMLInterpolater$CubicEaseOutInterpolater;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/animate/MAMLInterpolater$CubicEaseOutInterpolater;-><init>()V
@@ -458,7 +458,7 @@
 
     const-wide/16 v0, 0xc8
 
-    .line 177
+    .line 176
     invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     return-object p1
@@ -477,7 +477,7 @@
 
     const/4 v1, 0x2
 
-    .line 168
+    .line 167
     new-array v1, v1, [F
 
     fill-array-data v1, :array_0
@@ -486,7 +486,7 @@
 
     move-result-object p1
 
-    .line 169
+    .line 168
     new-instance v0, Lcom/miui/home/launcher/animate/MAMLInterpolater$CubicEaseInInterpolater;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/animate/MAMLInterpolater$CubicEaseInInterpolater;-><init>()V
@@ -495,7 +495,7 @@
 
     const-wide/16 v0, 0xc8
 
-    .line 170
+    .line 169
     invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     return-object p1
@@ -510,28 +510,28 @@
 .method private initShowOrHideCheckBoxAnim()V
     .locals 3
 
-    .line 345
+    .line 344
     new-instance v0, Landroid/animation/ValueAnimator;
 
     invoke-direct {v0}, Landroid/animation/ValueAnimator;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mShowOrHideCheckBoxAnim:Landroid/animation/ValueAnimator;
 
-    .line 346
+    .line 345
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mShowOrHideCheckBoxAnim:Landroid/animation/ValueAnimator;
 
     const-wide/16 v1, 0x12c
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 347
+    .line 346
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mShowOrHideCheckBoxAnim:Landroid/animation/ValueAnimator;
 
     sget-object v1, Lcom/miui/home/launcher/common/Ease$Cubic;->easeInOut:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 348
+    .line 347
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mShowOrHideCheckBoxAnim:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$cBqNGrs0AMtevPZHLn8vUjwnBGU;
@@ -540,7 +540,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 351
+    .line 350
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mShowOrHideCheckBoxAnim:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/miui/home/launcher/ShortcutIcon$7;
@@ -555,7 +555,7 @@
 .method private isDropable(Lcom/miui/home/launcher/DragObject;)Z
     .locals 3
 
-    .line 487
+    .line 486
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
@@ -566,7 +566,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 488
+    .line 487
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
@@ -575,7 +575,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 489
+    .line 488
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
@@ -586,7 +586,7 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 490
+    .line 489
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p1
@@ -610,7 +610,7 @@
 .method static synthetic lambda$fromXml$0(Lcom/miui/home/launcher/ShortcutIcon;Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/Launcher;)V
     .locals 4
 
-    .line 280
+    .line 279
     iget-wide v0, p1, Lcom/miui/home/launcher/ShortcutInfo;->container:J
 
     const-wide/16 v2, -0x65
@@ -621,7 +621,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 282
+    .line 281
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
 
     move-result p1
@@ -635,7 +635,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 280
+    .line 279
     :goto_0
     invoke-virtual {p0, p1, v0}, Lcom/miui/home/launcher/ShortcutIcon;->setEditMode(ZZ)V
 
@@ -645,7 +645,7 @@
 .method public static synthetic lambda$initShowOrHideCheckBoxAnim$1(Lcom/miui/home/launcher/ShortcutIcon;Landroid/animation/ValueAnimator;)V
     .locals 0
 
-    .line 349
+    .line 348
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -664,7 +664,7 @@
 .method public static synthetic lambda$new$2(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 1
 
-    .line 426
+    .line 425
     invoke-static {}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->getInstance()Lcom/miui/home/launcher/common/HapticFeedbackCompat;
 
     move-result-object v0
@@ -677,7 +677,7 @@
 .method public static synthetic lambda$resetBackAnim$3(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 2
 
-    .line 722
+    .line 727
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -688,10 +688,10 @@
 
     move-result-object v0
 
-    .line 723
+    .line 728
     invoke-static {v0}, Lcom/miui/launcher/utils/MamlUtils;->clearDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 724
+    .line 729
     iget-object v1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/LauncherIconImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -702,21 +702,21 @@
 .method private scaleDownToFolder(Z)V
     .locals 4
 
-    .line 469
+    .line 468
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getWidth()I
 
     move-result v0
 
-    .line 470
+    .line 469
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0700e3
+    const v2, 0x7f0700e5
 
-    .line 471
+    .line 470
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v1
@@ -735,7 +735,7 @@
 
     div-float/2addr v1, v0
 
-    .line 475
+    .line 474
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     iget-object v3, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
@@ -748,7 +748,7 @@
 
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/LauncherIconImageView;->setPivotX(F)V
 
-    .line 476
+    .line 475
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     iget-object v3, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
@@ -765,7 +765,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 478
+    .line 477
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherIconImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -778,7 +778,7 @@
 
     move-result-object p1
 
-    .line 479
+    .line 478
     invoke-virtual {p1, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -795,7 +795,7 @@
 
     goto :goto_0
 
-    .line 481
+    .line 480
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
@@ -809,7 +809,7 @@
 
     move-result-object p1
 
-    .line 482
+    .line 481
     invoke-virtual {p1, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -833,7 +833,7 @@
 .method public static setEnableLoadingAnim(Z)V
     .locals 0
 
-    .line 86
+    .line 85
     sput-boolean p0, Lcom/miui/home/launcher/ShortcutIcon;->sEnableLoadingAnim:Z
 
     return-void
@@ -842,7 +842,7 @@
 .method private showFolderCreateBackground(Z)V
     .locals 4
 
-    .line 434
+    .line 433
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mFolderCreationBg:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -857,14 +857,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 436
+    .line 435
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mFolderCreationBg:Landroid/widget/ImageView;
 
     const/4 v3, 0x0
 
     invoke-virtual {p1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 437
+    .line 436
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mFolderCreationBg:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -873,12 +873,12 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/ShortcutIcon;->mPhysicBasedInterpolator:Lcom/miui/home/launcher/anim/PhysicBasedInterpolator;
 
-    .line 438
+    .line 437
     invoke-virtual {p1, v3}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 439
+    .line 438
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -889,12 +889,12 @@
 
     const v0, 0x3fa66666    # 1.3f
 
-    .line 440
+    .line 439
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 441
+    .line 440
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -903,17 +903,17 @@
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/ShortcutIcon$8;-><init>(Lcom/miui/home/launcher/ShortcutIcon;)V
 
-    .line 442
+    .line 441
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 452
+    .line 451
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     goto :goto_0
 
-    .line 454
+    .line 453
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mFolderCreationBg:Landroid/widget/ImageView;
 
@@ -923,12 +923,12 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/ShortcutIcon;->mPhysicBasedInterpolator:Lcom/miui/home/launcher/anim/PhysicBasedInterpolator;
 
-    .line 455
+    .line 454
     invoke-virtual {p1, v3}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 456
+    .line 455
     invoke-virtual {p1, v0, v1}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -951,12 +951,12 @@
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/ShortcutIcon$9;-><init>(Lcom/miui/home/launcher/ShortcutIcon;)V
 
-    .line 457
+    .line 456
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
 
-    .line 464
+    .line 463
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     :goto_0
@@ -970,7 +970,7 @@
 
     const/4 v0, 0x0
 
-    .line 112
+    .line 111
     aget-object v1, p1, v0
 
     if-eqz v1, :cond_1
@@ -983,7 +983,7 @@
 
     goto :goto_0
 
-    .line 114
+    .line 113
     :cond_0
     aget-object v1, p1, v0
 
@@ -991,7 +991,7 @@
 
     move-result-object v1
 
-    .line 115
+    .line 114
     aget-object v0, p1, v0
 
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->getItemAnimOut(Landroid/view/View;)Landroid/animation/ObjectAnimator;
@@ -1000,14 +1000,14 @@
 
     const/4 v2, 0x1
 
-    .line 117
+    .line 116
     aget-object v3, p1, v2
 
     invoke-direct {p0, v3}, Lcom/miui/home/launcher/ShortcutIcon;->getItemAnimIn(Landroid/view/View;)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
-    .line 118
+    .line 117
     aget-object v2, p1, v2
 
     invoke-direct {p0, v2}, Lcom/miui/home/launcher/ShortcutIcon;->getItemAnimOut(Landroid/view/View;)Landroid/animation/ObjectAnimator;
@@ -1016,14 +1016,14 @@
 
     const/4 v4, 0x2
 
-    .line 120
+    .line 119
     aget-object v5, p1, v4
 
     invoke-direct {p0, v5}, Lcom/miui/home/launcher/ShortcutIcon;->getItemAnimIn(Landroid/view/View;)Landroid/animation/ObjectAnimator;
 
     move-result-object v5
 
-    .line 121
+    .line 120
     aget-object v4, p1, v4
 
     invoke-direct {p0, v4}, Lcom/miui/home/launcher/ShortcutIcon;->getItemAnimOut(Landroid/view/View;)Landroid/animation/ObjectAnimator;
@@ -1032,49 +1032,49 @@
 
     const/4 v6, 0x3
 
-    .line 123
+    .line 122
     aget-object v7, p1, v6
 
     invoke-direct {p0, v7}, Lcom/miui/home/launcher/ShortcutIcon;->getItemAnimIn(Landroid/view/View;)Landroid/animation/ObjectAnimator;
 
     move-result-object v7
 
-    .line 124
+    .line 123
     aget-object p1, p1, v6
 
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->getItemAnimOut(Landroid/view/View;)Landroid/animation/ObjectAnimator;
 
     move-result-object p1
 
-    .line 125
+    .line 124
     new-instance v6, Lcom/miui/home/launcher/ShortcutIcon$1;
 
     invoke-direct {v6, p0, v0, v3}, Lcom/miui/home/launcher/ShortcutIcon$1;-><init>(Lcom/miui/home/launcher/ShortcutIcon;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;)V
 
     invoke-virtual {v1, v6}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 135
+    .line 134
     new-instance v0, Lcom/miui/home/launcher/ShortcutIcon$2;
 
     invoke-direct {v0, p0, v2, v5}, Lcom/miui/home/launcher/ShortcutIcon$2;-><init>(Lcom/miui/home/launcher/ShortcutIcon;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;)V
 
     invoke-virtual {v3, v0}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 145
+    .line 144
     new-instance v0, Lcom/miui/home/launcher/ShortcutIcon$3;
 
     invoke-direct {v0, p0, v4, v7}, Lcom/miui/home/launcher/ShortcutIcon$3;-><init>(Lcom/miui/home/launcher/ShortcutIcon;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;)V
 
     invoke-virtual {v5, v0}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 155
+    .line 154
     new-instance v0, Lcom/miui/home/launcher/ShortcutIcon$4;
 
     invoke-direct {v0, p0, p1, v1}, Lcom/miui/home/launcher/ShortcutIcon$4;-><init>(Lcom/miui/home/launcher/ShortcutIcon;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;)V
 
     invoke-virtual {v7, v0}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 164
+    .line 163
     invoke-virtual {v1}, Landroid/animation/ObjectAnimator;->start()V
 
     return-void
@@ -1087,7 +1087,7 @@
 .method private updateContentDescription()V
     .locals 5
 
-    .line 638
+    .line 637
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getTitle()Landroid/widget/TextView;
 
     move-result-object v0
@@ -1100,7 +1100,7 @@
 
     move-result-object v0
 
-    .line 639
+    .line 638
     iget-object v1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
     if-eqz v1, :cond_2
@@ -1113,7 +1113,7 @@
 
     goto :goto_1
 
-    .line 643
+    .line 642
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getResources()Landroid/content/res/Resources;
 
@@ -1137,24 +1137,24 @@
     :goto_0
     const/4 v3, 0x1
 
-    .line 645
+    .line 644
     new-array v3, v3, [Ljava/lang/Object;
 
     const/4 v4, 0x0
 
     aput-object v0, v3, v4
 
-    .line 643
+    .line 642
     invoke-virtual {v1, v2, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 646
+    .line 645
     invoke-super {p0, v0}, Lcom/miui/home/launcher/ItemIcon;->setContentDescription(Ljava/lang/CharSequence;)V
 
     return-void
 
-    .line 640
+    .line 639
     :cond_2
     :goto_1
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
@@ -1173,7 +1173,7 @@
 .method public OnToggleChanged(I)V
     .locals 6
 
-    .line 304
+    .line 303
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -1184,7 +1184,7 @@
 
     return-void
 
-    .line 306
+    .line 305
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getToggleId()I
 
@@ -1192,19 +1192,19 @@
 
     if-ne v1, p1, :cond_1
 
-    .line 307
+    .line 306
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     if-eqz p1, :cond_1
 
-    .line 308
+    .line 307
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->loadToggleBackground(Landroid/content/Context;)Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object p1
 
-    .line 309
+    .line 308
     iget-object v2, p0, Lcom/miui/home/launcher/ShortcutIcon;->mContext:Landroid/content/Context;
 
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
@@ -1225,7 +1225,7 @@
 
     invoke-virtual {v0, v2, v3, v4, v5}, Lcom/miui/home/launcher/ShortcutInfo;->getIconAsync(Landroid/content/Context;Lcom/miui/home/launcher/IconCache;Landroid/graphics/drawable/Drawable;Ljava/util/function/Consumer;)V
 
-    .line 316
+    .line 315
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1238,7 +1238,7 @@
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 317
+    .line 316
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->getParentFolderIcon(Lcom/miui/home/launcher/ShortcutInfo;)Lcom/miui/home/launcher/FolderIcon;
@@ -1249,7 +1249,7 @@
 
     const/4 v0, 0x1
 
-    .line 319
+    .line 318
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/FolderIcon;->loadItemIcons(Z)V
 
     :cond_1
@@ -1259,7 +1259,7 @@
 .method public acceptDrop(Lcom/miui/home/launcher/DragObject;)Z
     .locals 0
 
-    .line 501
+    .line 500
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->isDropable(Lcom/miui/home/launcher/DragObject;)Z
 
     move-result p1
@@ -1270,10 +1270,10 @@
 .method public bindAppInfo(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/AppInfo;)V
     .locals 3
 
-    .line 296
+    .line 295
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/ShortcutIcon;->setTag(Ljava/lang/Object;)V
 
-    .line 297
+    .line 296
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -1286,18 +1286,18 @@
 
     move-result-object v1
 
-    .line 298
+    .line 297
     invoke-virtual {p2, p1, p0}, Lcom/miui/home/launcher/AppInfo;->getFillShortcutIconConsumer(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutIcon;)Ljava/util/function/Consumer;
 
     move-result-object v2
 
-    .line 297
+    .line 296
     invoke-virtual {p2, p1, v0, v1, v2}, Lcom/miui/home/launcher/AppInfo;->getIconAsync(Landroid/content/Context;Lcom/miui/home/launcher/IconCache;Landroid/graphics/drawable/Drawable;Ljava/util/function/Consumer;)V
 
-    .line 299
+    .line 298
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->updateTitleTip()V
 
-    .line 300
+    .line 299
     invoke-virtual {p2}, Lcom/miui/home/launcher/AppInfo;->getMessageText()Ljava/lang/String;
 
     move-result-object p1
@@ -1310,7 +1310,7 @@
 .method public changeToFancyDrawable()V
     .locals 2
 
-    .line 679
+    .line 684
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     iget-object v1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
@@ -1327,19 +1327,19 @@
 .method public checkCheckBox(Z)V
     .locals 1
 
-    .line 580
+    .line 579
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
     if-eqz v0, :cond_0
 
-    .line 581
+    .line 580
     invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
 
     move-result v0
 
     if-eq v0, p1, :cond_0
 
-    .line 582
+    .line 581
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, p1}, Landroid/widget/CheckBox;->setChecked(Z)V
@@ -1351,16 +1351,16 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 1
 
-    .line 673
+    .line 678
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 674
+    .line 679
     :try_start_0
     invoke-super {p0, p1}, Lcom/miui/home/launcher/ItemIcon;->draw(Landroid/graphics/Canvas;)V
 
-    .line 675
+    .line 680
     monitor-exit v0
 
     return-void
@@ -1378,7 +1378,7 @@
 .method protected drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .locals 2
 
-    .line 506
+    .line 505
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->isDrawingInThumbnailView()Z
 
     move-result v0
@@ -1387,7 +1387,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 507
+    .line 506
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mTitleContainer:Lcom/miui/home/launcher/ItemIconTitleContainer;
 
     if-eq p2, v0, :cond_0
@@ -1399,7 +1399,7 @@
     :cond_0
     return v1
 
-    .line 511
+    .line 510
     :cond_1
     iget-boolean v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIsHideCheckBox:Z
 
@@ -1409,7 +1409,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 512
+    .line 511
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
@@ -1417,7 +1417,7 @@
 
     return v1
 
-    .line 516
+    .line 515
     :cond_3
     invoke-super {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/ItemIcon;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
@@ -1426,29 +1426,57 @@
     return p1
 .end method
 
-.method public drawOutLine(Landroid/graphics/Canvas;)V
-    .locals 2
+.method public drawDragView(Landroid/graphics/Canvas;)V
+    .locals 0
 
-    .line 664
+    return-void
+.end method
+
+.method public drawOutLine(Landroid/graphics/Canvas;)V
+    .locals 3
+
+    .line 663
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    const/4 v1, 0x1
+    .line 664
+    :try_start_0
+    iget-object v1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_0
 
     .line 665
-    :try_start_0
-    invoke-virtual {p0, v1}, Lcom/miui/home/launcher/ShortcutIcon;->setDrawOutline(Z)V
+    iget-object v1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    .line 666
+    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/IconMessage;->setDrawOutline(Z)V
+
+    .line 667
+    :cond_0
+    invoke-virtual {p0, v2}, Lcom/miui/home/launcher/ShortcutIcon;->setDrawOutline(Z)V
+
+    .line 668
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->draw(Landroid/graphics/Canvas;)V
 
     const/4 p1, 0x0
 
-    .line 667
+    .line 669
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->setDrawOutline(Z)V
 
-    .line 668
+    .line 670
+    iget-object v1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
+
+    if-eqz v1, :cond_1
+
+    .line 671
+    iget-object v1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
+
+    invoke-virtual {v1, p1}, Lcom/miui/home/launcher/IconMessage;->setDrawOutline(Z)V
+
+    .line 673
+    :cond_1
     monitor-exit v0
 
     return-void
@@ -1466,7 +1494,7 @@
 .method public getBackAnimPreviewDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 731
+    .line 736
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
 
     move-result-object v0
@@ -1478,10 +1506,23 @@
     return-object v0
 .end method
 
+.method public getContentDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .line 845
+    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public getDropAnnounceForAccessibility(Lcom/miui/home/launcher/DragObject;)Ljava/lang/String;
     .locals 6
 
-    .line 651
+    .line 650
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDraggingSize()I
 
     move-result v0
@@ -1500,7 +1541,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 652
+    .line 651
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p1
@@ -1519,7 +1560,7 @@
 
     move-result-object p1
 
-    .line 653
+    .line 652
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1546,7 +1587,7 @@
 
     return-object p1
 
-    .line 655
+    .line 654
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getResources()Landroid/content/res/Resources;
 
@@ -1573,17 +1614,17 @@
     return-object p0
 .end method
 
-.method public getIconRadius()I
+.method public getIconRadius()F
     .locals 2
 
-    .line 777
+    .line 782
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 778
+    .line 783
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
 
     move-result-object v0
@@ -1600,10 +1641,12 @@
 
     float-to-int v0, v0
 
+    int-to-float v0, v0
+
     return v0
 
     :cond_0
-    const/16 v0, 0x24
+    const/high16 v0, 0x42100000    # 36.0f
 
     return v0
 .end method
@@ -1611,7 +1654,7 @@
 .method public getIconTransparentEdge()I
     .locals 2
 
-    .line 784
+    .line 789
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
 
     move-result-object v0
@@ -1624,7 +1667,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 785
+    .line 790
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
 
     move-result-object v0
@@ -1654,17 +1697,17 @@
 .method public getLayerAdaptiveIconDrawable()Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;
     .locals 2
 
-    .line 748
+    .line 753
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getBackAnimPreviewDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 749
+    .line 754
     instance-of v1, v0, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;
 
     if-eqz v1, :cond_0
 
-    .line 750
+    .line 755
     check-cast v0, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;
 
     return-object v0
@@ -1678,7 +1721,7 @@
 .method public getMirrorDragListener()Lcom/miui/home/library/mirror/MirrorDragListener;
     .locals 1
 
-    .line 794
+    .line 799
     new-instance v0, Lcom/miui/home/launcher/ShortcutIcon$11;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/ShortcutIcon$11;-><init>(Lcom/miui/home/launcher/ShortcutIcon;)V
@@ -1689,7 +1732,7 @@
 .method public getMirrorMenuListener()Lcom/miui/home/library/mirror/MirrorMenuListener;
     .locals 1
 
-    .line 761
+    .line 766
     new-instance v0, Lcom/miui/home/launcher/ShortcutIcon$10;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/ShortcutIcon$10;-><init>(Lcom/miui/home/launcher/ShortcutIcon;)V
@@ -1706,7 +1749,7 @@
 .method public getTitleTextView()Landroid/view/View;
     .locals 1
 
-    .line 660
+    .line 659
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     return-object v0
@@ -1715,12 +1758,12 @@
 .method public hasFocusable()Z
     .locals 1
 
-    .line 588
+    .line 587
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
     if-eqz v0, :cond_0
 
-    .line 589
+    .line 588
     invoke-virtual {v0}, Landroid/widget/CheckBox;->getVisibility()I
 
     move-result v0
@@ -1731,7 +1774,7 @@
 
     return v0
 
-    .line 592
+    .line 591
     :cond_0
     invoke-super {p0}, Lcom/miui/home/launcher/ItemIcon;->hasFocusable()Z
 
@@ -1743,7 +1786,7 @@
 .method public hasOverlappingRendering()Z
     .locals 1
 
-    .line 736
+    .line 741
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->hasOverlappingRendering(Lcom/miui/home/launcher/Launcher;)Z
@@ -1756,12 +1799,12 @@
 .method public invalidateLayerAdaptiveIconDrawable()V
     .locals 1
 
-    .line 741
+    .line 746
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     if-eqz v0, :cond_0
 
-    .line 742
+    .line 747
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->invalidate()V
@@ -1773,7 +1816,7 @@
 .method public isDropEnabled()Z
     .locals 1
 
-    .line 385
+    .line 384
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->isDockViewMode()Z
 
     move-result v0
@@ -1796,7 +1839,7 @@
 
     const/4 v0, 0x4
 
-    .line 684
+    .line 689
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->setIconVisibility(I)V
 
     return-void
@@ -1807,7 +1850,7 @@
 
     const/4 v0, 0x0
 
-    .line 713
+    .line 718
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->setIconVisibility(I)V
 
     return-void
@@ -1818,23 +1861,23 @@
 
     const/4 v0, 0x1
 
-    .line 406
+    .line 405
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->scaleDownToFolder(Z)V
 
-    .line 407
+    .line 406
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->showFolderCreateBackground(Z)V
 
-    .line 408
+    .line 407
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->invalidate()V
 
-    .line 409
+    .line 408
     iget-object v1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mPerformHapticRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x64
 
     invoke-virtual {p0, v1, v2, v3}, Lcom/miui/home/launcher/ShortcutIcon;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 410
+    .line 409
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -1867,16 +1910,16 @@
 
     const/4 p1, 0x0
 
-    .line 420
+    .line 419
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->scaleDownToFolder(Z)V
 
-    .line 421
+    .line 420
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->showFolderCreateBackground(Z)V
 
-    .line 422
+    .line 421
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->invalidate()V
 
-    .line 423
+    .line 422
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mPerformHapticRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->removeCallbacks(Ljava/lang/Runnable;)Z
@@ -1893,7 +1936,7 @@
 .method public onDrop(Lcom/miui/home/launcher/DragObject;)Z
     .locals 2
 
-    .line 394
+    .line 393
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->isDropable(Lcom/miui/home/launcher/DragObject;)Z
 
     move-result v0
@@ -1902,27 +1945,27 @@
 
     if-eqz v0, :cond_0
 
-    .line 395
+    .line 394
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/ShortcutIcon;->showFolderCreateBackground(Z)V
 
-    .line 396
+    .line 395
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object v0
 
-    .line 397
+    .line 396
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 396
+    .line 395
     invoke-virtual {v0, p1, v1}, Lcom/miui/home/launcher/Workspace;->createUserFolderWithDragOverlap(Lcom/miui/home/launcher/DragObject;Lcom/miui/home/launcher/ShortcutInfo;)Z
 
-    .line 398
+    .line 397
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->getDropAnnounceForAccessibility(Lcom/miui/home/launcher/DragObject;)Ljava/lang/String;
 
     move-result-object v0
@@ -1952,7 +1995,7 @@
 .method public onEnterHomeAnimFinish()V
     .locals 2
 
-    .line 618
+    .line 617
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -1971,17 +2014,17 @@
 .method public onEnterHomeAnimStart()V
     .locals 2
 
-    .line 612
-    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mMessage:Landroid/widget/TextView;
+    .line 611
+    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
     if-eqz v0, :cond_0
 
-    .line 613
-    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mMessage:Landroid/widget/TextView;
+    .line 612
+    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
     const/4 v1, 0x4
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/IconMessage;->setVisibility(I)V
 
     :cond_0
     return-void
@@ -1990,10 +2033,10 @@
 .method protected onFinishInflate()V
     .locals 2
 
-    .line 326
+    .line 325
     invoke-super {p0}, Lcom/miui/home/launcher/ItemIcon;->onFinishInflate()V
 
-    .line 327
+    .line 326
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getScaleType()Landroid/widget/ImageView$ScaleType;
@@ -2002,9 +2045,9 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mGeneralScaleType:Landroid/widget/ImageView$ScaleType;
 
-    const v0, 0x7f0a0110
+    const v0, 0x7f0a0111
 
-    .line 328
+    .line 327
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -2013,9 +2056,9 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mFolderCreationBg:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a00d4
+    const v0, 0x7f0a00d5
 
-    .line 329
+    .line 328
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -2024,17 +2067,17 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
-    .line 330
+    .line 329
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 331
+    .line 330
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setFocusable(Z)V
 
-    .line 332
+    .line 331
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
     new-instance v1, Lcom/miui/home/launcher/ShortcutIcon$6;
@@ -2043,7 +2086,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 341
+    .line 340
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/launcher/ShortcutIcon;->initShowOrHideCheckBoxAnim()V
 
@@ -2053,29 +2096,29 @@
 .method public onProgressStatusChanged()V
     .locals 2
 
-    .line 217
+    .line 216
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 218
+    .line 217
     check-cast v0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
     iget-object v0, v0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressTitle:Ljava/lang/String;
 
-    .line 219
+    .line 218
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 220
+    .line 219
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 222
+    .line 221
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->invalidate()V
 
@@ -2085,12 +2128,12 @@
 .method public onlyShowIconWhenDrawChild()V
     .locals 1
 
-    .line 627
+    .line 626
     invoke-super {p0}, Lcom/miui/home/launcher/ItemIcon;->onlyShowIconWhenDrawChild()V
 
     const/4 v0, 0x1
 
-    .line 628
+    .line 627
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->setIsHideCheckBox(Z)V
 
     return-void
@@ -2099,7 +2142,7 @@
 .method public postResetBackAnim()V
     .locals 4
 
-    .line 700
+    .line 705
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->BACKGROUND_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     invoke-virtual {v0}, Lcom/miui/home/library/utils/LooperExecutor;->getHandler()Landroid/os/Handler;
@@ -2110,7 +2153,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 701
+    .line 706
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->BACKGROUND_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     invoke-virtual {v0}, Lcom/miui/home/library/utils/LooperExecutor;->getHandler()Landroid/os/Handler;
@@ -2129,18 +2172,18 @@
 .method public quickHideOrShowCheckbox(Z)V
     .locals 2
 
-    .line 558
+    .line 557
     iget-boolean v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIsShowingCheckBox:Z
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 561
+    .line 560
     :cond_0
     iput-boolean p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIsShowingCheckBox:Z
 
-    .line 562
+    .line 561
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
     if-eqz p1, :cond_1
@@ -2164,11 +2207,11 @@
     :cond_2
     const/4 p1, 0x0
 
-    .line 563
+    .line 562
     :goto_1
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->updateCheckBoxAnimProgress(F)V
 
-    .line 564
+    .line 563
     invoke-direct {p0}, Lcom/miui/home/launcher/ShortcutIcon;->updateContentDescription()V
 
     return-void
@@ -2177,14 +2220,14 @@
 .method public relayoutMessageTextView()V
     .locals 1
 
-    .line 203
-    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mMessage:Landroid/widget/TextView;
+    .line 202
+    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mMessage:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/IconMessage;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -2194,10 +2237,10 @@
 
     if-nez v0, :cond_0
 
-    .line 204
-    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mMessage:Landroid/widget/TextView;
+    .line 203
+    iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mMessage:Lcom/miui/home/launcher/IconMessage;
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->requestLayout()V
+    invoke-virtual {v0}, Lcom/miui/home/launcher/IconMessage;->requestLayout()V
 
     :cond_0
     return-void
@@ -2206,7 +2249,7 @@
 .method public resetBackAnim()V
     .locals 2
 
-    .line 718
+    .line 723
     sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_OREO:Z
 
     if-eqz v0, :cond_0
@@ -2217,7 +2260,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 719
+    .line 724
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getSpringLayerBackController()Lcom/miui/home/launcher/graphics/drawable/SpringLayerBackController;
@@ -2232,7 +2275,7 @@
 
     goto :goto_0
 
-    .line 721
+    .line 726
     :cond_0
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ShortcutIcon$1Y8ONbQjuFr1qTehl-X2ZoZdkd8;
 
@@ -2249,7 +2292,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 369
+    .line 368
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->updateCheckBoxAnimProgress(F)V
 
     return-void
@@ -2258,7 +2301,7 @@
 .method public resetPendingBackAnim()V
     .locals 2
 
-    .line 705
+    .line 710
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->BACKGROUND_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     invoke-virtual {v0}, Lcom/miui/home/library/utils/LooperExecutor;->getHandler()Landroid/os/Handler;
@@ -2273,7 +2316,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 706
+    .line 711
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->BACKGROUND_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     invoke-virtual {v0}, Lcom/miui/home/library/utils/LooperExecutor;->getHandler()Landroid/os/Handler;
@@ -2284,7 +2327,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 707
+    .line 712
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mResetBackAnimRunnable:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
@@ -2296,7 +2339,7 @@
 .method public restoreToInitState()V
     .locals 2
 
-    .line 596
+    .line 595
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getIconContainer()Landroid/view/View;
 
     move-result-object v0
@@ -2305,28 +2348,28 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setScaleX(F)V
 
-    .line 597
+    .line 596
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getIconContainer()Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setScaleY(F)V
 
-    .line 598
+    .line 597
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getTitleContainer()Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setScaleX(F)V
 
-    .line 599
+    .line 598
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getTitleContainer()Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setScaleY(F)V
 
-    .line 600
+    .line 599
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getTitleContainer()Landroid/view/View;
 
     move-result-object v0
@@ -2345,7 +2388,7 @@
 .method public setEditMode(ZZ)V
     .locals 1
 
-    .line 536
+    .line 535
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
     if-nez v0, :cond_0
@@ -2355,7 +2398,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 539
+    .line 538
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
 
     move-result v0
@@ -2364,7 +2407,7 @@
 
     return-void
 
-    .line 542
+    .line 541
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
 
@@ -2372,10 +2415,10 @@
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 543
+    .line 542
     invoke-super {p0, p1}, Lcom/miui/home/launcher/ItemIcon;->setEditMode(Z)V
 
-    .line 544
+    .line 543
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->isInFolder()Z
 
     move-result v0
@@ -2390,7 +2433,7 @@
 
     if-nez v0, :cond_3
 
-    .line 545
+    .line 544
     iget-object p2, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
     if-eqz p1, :cond_2
@@ -2405,7 +2448,7 @@
     :goto_0
     invoke-virtual {p2, v0}, Landroid/widget/CheckBox;->setVisibility(I)V
 
-    .line 546
+    .line 545
     iput-boolean p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIsShowingCheckBox:Z
 
     goto :goto_1
@@ -2413,16 +2456,16 @@
     :cond_3
     if-eqz p2, :cond_4
 
-    .line 549
+    .line 548
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->showOrHideCheckBoxWithAnim(Z)V
 
     goto :goto_1
 
-    .line 551
+    .line 550
     :cond_4
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->quickHideOrShowCheckbox(Z)V
 
-    .line 554
+    .line 553
     :goto_1
     invoke-direct {p0}, Lcom/miui/home/launcher/ShortcutIcon;->updateContentDescription()V
 
@@ -2432,12 +2475,12 @@
 .method public setIconImageView(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .line 210
+    .line 209
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/ItemIcon;->setIconImageView(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;)V
 
     if-eqz p1, :cond_0
 
-    .line 211
+    .line 210
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result p1
@@ -2448,7 +2491,7 @@
 
     if-ne p1, p2, :cond_1
 
-    .line 212
+    .line 211
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
@@ -2463,7 +2506,7 @@
 .method public setIconTitleVisible(ZZ)V
     .locals 3
 
-    .line 520
+    .line 519
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     const/4 v1, 0x0
@@ -2482,7 +2525,7 @@
     :goto_0
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/LauncherIconImageView;->setVisibility(I)V
 
-    .line 521
+    .line 520
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
     if-eqz p2, :cond_1
@@ -2501,7 +2544,7 @@
 .method public setIsHideCheckBox(Z)V
     .locals 0
 
-    .line 622
+    .line 621
     iput-boolean p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIsHideCheckBox:Z
 
     return-void
@@ -2510,7 +2553,7 @@
 .method public setLauncher(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 199
+    .line 198
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     return-void
@@ -2519,12 +2562,12 @@
 .method public showAllChildViewWhenDrawChild()V
     .locals 1
 
-    .line 633
+    .line 632
     invoke-super {p0}, Lcom/miui/home/launcher/ItemIcon;->showAllChildViewWhenDrawChild()V
 
     const/4 v0, 0x0
 
-    .line 634
+    .line 633
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->setIsHideCheckBox(Z)V
 
     return-void
@@ -2535,7 +2578,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 605
+    .line 604
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
 
     move-result v0
@@ -2548,7 +2591,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 606
+    .line 605
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
 
@@ -2570,7 +2613,7 @@
 
     if-nez v0, :cond_2
 
-    .line 607
+    .line 606
     :cond_1
     invoke-super {p0, p1}, Lcom/miui/home/launcher/ItemIcon;->showMessageAnimation(Lcom/miui/home/launcher/Launcher;)V
 
@@ -2581,18 +2624,18 @@
 .method public showOrHideCheckBoxWithAnim(Z)V
     .locals 4
 
-    .line 568
+    .line 567
     iget-boolean v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIsShowingCheckBox:Z
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 571
+    .line 570
     :cond_0
     iput-boolean p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIsShowingCheckBox:Z
 
-    .line 572
+    .line 571
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
     const/4 v1, 0x0
@@ -2617,7 +2660,7 @@
 
     move v0, v2
 
-    .line 575
+    .line 574
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mShowOrHideCheckBoxAnim:Landroid/animation/ValueAnimator;
 
@@ -2633,7 +2676,7 @@
 
     invoke-virtual {p1, v2}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    .line 576
+    .line 575
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mShowOrHideCheckBoxAnim:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
@@ -2644,45 +2687,45 @@
 .method public startLoadingAnim()V
     .locals 4
 
-    const v0, 0x7f0a013b
+    const v0, 0x7f0a013c
 
-    .line 94
+    .line 93
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 95
+    .line 94
     sget-boolean v1, Lcom/miui/home/launcher/ShortcutIcon;->sEnableLoadingAnim:Z
 
     if-eqz v1, :cond_2
 
     const/4 v1, 0x0
 
-    .line 96
+    .line 95
     iput-boolean v1, p0, Lcom/miui/home/launcher/ShortcutIcon;->mStopLoading:Z
 
-    .line 97
+    .line 96
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     const/4 v0, 0x4
 
-    .line 98
+    .line 97
     new-array v0, v0, [Landroid/view/View;
 
-    const v2, 0x7f0a0125
+    const v2, 0x7f0a0126
 
-    .line 99
+    .line 98
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     aput-object v2, v0, v1
 
-    const v2, 0x7f0a0126
+    const v2, 0x7f0a0127
 
-    .line 100
+    .line 99
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
@@ -2693,9 +2736,9 @@
 
     const/4 v2, 0x2
 
-    const v3, 0x7f0a0127
+    const v3, 0x7f0a0128
 
-    .line 101
+    .line 100
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
@@ -2704,22 +2747,22 @@
 
     const/4 v2, 0x3
 
-    const v3, 0x7f0a0128
+    const v3, 0x7f0a0129
 
-    .line 102
+    .line 101
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
     aput-object v3, v0, v2
 
-    .line 103
+    .line 102
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_1
 
-    .line 104
+    .line 103
     aget-object v2, v0, v1
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isSupportCompleteAnimation()Z
@@ -2742,7 +2785,7 @@
 
     goto :goto_0
 
-    .line 107
+    .line 106
     :cond_1
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/ShortcutIcon;->startLoading([Landroid/view/View;)V
 
@@ -2755,7 +2798,7 @@
 
     const/4 v0, 0x1
 
-    .line 90
+    .line 89
     iput-boolean v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mStopLoading:Z
 
     return-void
@@ -2764,7 +2807,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 526
+    .line 525
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2779,7 +2822,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 527
+    .line 526
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object v1
@@ -2822,7 +2865,7 @@
 .method public updateBackAnim(Ljava/lang/String;)V
     .locals 3
 
-    .line 689
+    .line 694
     sget-boolean v0, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_OREO:Z
 
     if-eqz v0, :cond_0
@@ -2833,7 +2876,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 690
+    .line 695
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getSpringLayerBackController()Lcom/miui/home/launcher/graphics/drawable/SpringLayerBackController;
@@ -2850,7 +2893,7 @@
 
     goto :goto_0
 
-    .line 692
+    .line 697
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
@@ -2862,7 +2905,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/launcher/utils/MamlUtils;->changeToFancyDrawable(Landroid/widget/ImageView;Landroid/graphics/drawable/Drawable;)V
 
-    .line 693
+    .line 698
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
 
     move-result-object v0
@@ -2880,17 +2923,17 @@
 .method public updateCheckBoxAnimProgress(F)V
     .locals 1
 
-    .line 363
+    .line 362
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, p1}, Landroid/widget/CheckBox;->setAlpha(F)V
 
-    .line 364
+    .line 363
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, p1}, Landroid/widget/CheckBox;->setScaleX(F)V
 
-    .line 365
+    .line 364
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mEditModeCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0, p1}, Landroid/widget/CheckBox;->setScaleY(F)V
@@ -2907,7 +2950,7 @@
 .method public updateTitleTip()V
     .locals 5
 
-    .line 182
+    .line 181
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -2916,12 +2959,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 183
+    .line 182
     instance-of v1, v0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
     if-nez v1, :cond_3
 
-    .line 185
+    .line 184
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getUser()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -2932,12 +2975,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 186
+    .line 185
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 187
+    .line 186
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -2956,7 +2999,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 188
+    .line 187
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -2978,7 +3021,7 @@
     :cond_0
     move v1, v3
 
-    .line 189
+    .line 188
     :goto_0
     iget-object v4, p0, Lcom/miui/home/launcher/ShortcutIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 
@@ -2992,7 +3035,7 @@
     :goto_1
     if-nez v1, :cond_3
 
-    .line 192
+    .line 191
     iget v0, v0, Lcom/miui/home/launcher/ShortcutInfo;->itemFlags:I
 
     const/4 v1, 0x4
@@ -3004,7 +3047,7 @@
     :cond_2
     move v2, v3
 
-    .line 193
+    .line 192
     :goto_2
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutIcon;->mTitle:Lcom/miui/home/launcher/TitleTextView;
 

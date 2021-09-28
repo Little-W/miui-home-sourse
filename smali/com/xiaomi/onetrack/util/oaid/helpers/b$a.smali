@@ -185,7 +185,7 @@
     .line 30
     new-instance v0, Lcom/xiaomi/onetrack/util/oaid/helpers/b$a;
 
-    const-string v1, "xiaomi"
+    const-string/jumbo v1, "xiaomi"
 
     const-string v2, "XIAOMI"
 
@@ -237,7 +237,7 @@
     .line 34
     new-instance v0, Lcom/xiaomi/onetrack/util/oaid/helpers/b$a;
 
-    const-string v1, "zte"
+    const-string/jumbo v1, "zte"
 
     const-string v2, "ZTE"
 

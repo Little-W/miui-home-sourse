@@ -55,7 +55,7 @@
 
     if-eqz v0, :cond_0
 
-    const p1, 0x7f100203
+    const p1, 0x7f100204
 
     .line 26
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/MiuiHomeSettingActivity;->setTitle(I)V

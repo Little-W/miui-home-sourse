@@ -121,7 +121,7 @@
     <dimen name="cardview_default_elevation">2.0dip</dimen>
     <dimen name="cardview_default_radius">2.0dip</dimen>
     <dimen name="clean_toast_bottom_margin">47.0dip</dimen>
-    <dimen name="clear_container_padding_bottom">35.0dip</dimen>
+    <dimen name="clear_container_padding_bottom">28.0dip</dimen>
     <dimen name="common_navigator_height">39.0dip</dimen>
     <dimen name="compat_button_inset_horizontal_material">4.0dip</dimen>
     <dimen name="compat_button_inset_vertical_material">6.0dip</dimen>
@@ -132,8 +132,10 @@
     <dimen name="compat_notification_large_icon_max_width">320.0dip</dimen>
     <dimen name="config_icon_height">60.0dip</dimen>
     <item type="dimen" name="config_icon_height_theme_version_0">@dimen/config_icon_height</item>
+    <dimen name="config_icon_inner_padding">5.0dip</dimen>
     <dimen name="config_icon_width">60.0dip</dimen>
     <item type="dimen" name="config_icon_width_theme_version_0">@dimen/config_icon_width</item>
+    <dimen name="contact_photo_width">67.0dip</dimen>
     <dimen name="customize_preview_height">300.0dip</dimen>
     <dimen name="customize_preview_top">10.0dip</dimen>
     <dimen name="date_picker_checkbox_padding_horizontal">15.0dip</dimen>
@@ -172,7 +174,7 @@
     <dimen name="edit_mode_thumbnail_home_icon_radius">9.669983dip</dimen>
     <dimen name="edit_mode_thumbnail_radius">13.0dip</dimen>
     <dimen name="edit_mode_top_menu_container_width">61.44998dip</dimen>
-    <dimen name="edit_mode_top_menu_height">36.0dip</dimen>
+    <dimen name="edit_mode_top_menu_height">47.26999dip</dimen>
     <dimen name="edit_mode_top_menu_side_button_margin_screen_edge">15.0dip</dimen>
     <dimen name="edit_mode_top_menu_text_view_margin_top">2.0dip</dimen>
     <dimen name="edit_mode_workspace_thumbnail_border_current_stroke_width">3.3299866dip</dimen>
@@ -184,7 +186,7 @@
     <dimen name="edit_right_padding">14.909973dip</dimen>
     <dimen name="edit_text_clear_icon_padding">13.089996dip</dimen>
     <dimen name="edit_top_padding">23.0dip</dimen>
-    <dimen name="editing_entry_thumbnail_view_gap">17.0dip</dimen>
+    <dimen name="editing_entry_thumbnail_view_gap">11.599976dip</dimen>
     <item type="dimen" name="editing_entry_thumbnail_view_height">@dimen/editing_panel_height</item>
     <dimen name="editing_entry_thumbnail_view_margin_left_right">20.5dip</dimen>
     <dimen name="editing_panel_height">120.0dip</dimen>
@@ -290,6 +292,9 @@
     <dimen name="menu_item_padding_right">0.0dip</dimen>
     <dimen name="menu_item_width">166.5dip</dimen>
     <dimen name="menu_text_size">14.0sp</dimen>
+    <dimen name="miui_widget_background_radius">16.72998dip</dimen>
+    <item type="dimen" name="miui_widget_padding_side">@dimen/icon_padding_side</item>
+    <item type="dimen" name="miui_widget_padding_top">@dimen/icon_padding_top</item>
     <dimen name="miuix_appcompat_action_bar_default_height">53.299988dip</dimen>
     <dimen name="miuix_appcompat_action_bar_horizontal_padding_end">16.0dip</dimen>
     <dimen name="miuix_appcompat_action_bar_horizontal_padding_start">19.329987dip</dimen>
@@ -360,7 +365,7 @@
     <dimen name="miuix_appcompat_arrow_popup_view_paddingStart">14.329987dip</dimen>
     <dimen name="miuix_appcompat_arrow_popup_view_paddingTop">13.329987dip</dimen>
     <dimen name="miuix_appcompat_arrow_popup_view_round_corners">12.0dip</dimen>
-    <dimen name="miuix_appcompat_arrow_popup_window_elevation">10.0dip</dimen>
+    <dimen name="miuix_appcompat_arrow_popup_window_elevation">20.0dip</dimen>
     <dimen name="miuix_appcompat_arrow_popup_window_list_max_height">400.0dip</dimen>
     <dimen name="miuix_appcompat_arrow_popup_window_min_border">15.0dip</dimen>
     <dimen name="miuix_appcompat_btn_inline_size">21.329987dip</dimen>
@@ -765,7 +770,8 @@
     <dimen name="recents_dock_btn_text_size">12.0sp</dimen>
     <dimen name="recents_empty_text_size">14.0sp</dimen>
     <dimen name="recents_fling_overscroll_distance">24.0dip</dimen>
-    <dimen name="recents_horizontal_layout_task_view_gap">-50.179993dip</dimen>
+    <dimen name="recents_horizontal_layout_task_view_gap">10.179993dip</dimen>
+    <dimen name="recents_small_window_text_margin_top">5.4499817dip</dimen>
     <dimen name="recents_task_lock_distance">20.0dip</dimen>
     <dimen name="recents_task_menu_vertical_margin">15.0dip</dimen>
     <item type="dimen" name="recents_task_rect_scale">0.444</item>
@@ -776,11 +782,11 @@
     <dimen name="recents_task_view_header_height">40.0dip</dimen>
     <dimen name="recents_task_view_header_height_tablet_land">64.0dip</dimen>
     <dimen name="recents_task_view_header_title_margin_end">25.0dip</dimen>
-    <dimen name="recents_task_view_header_title_text_size">0.0sp</dimen>
+    <dimen name="recents_task_view_header_title_text_size">13.0sp</dimen>
     <dimen name="recents_task_view_padding">4.0dip</dimen>
     <dimen name="recents_task_view_privacy_protect_icon_marginTop">20.0dip</dimen>
     <dimen name="recents_task_view_rounded_corners_radius_max">25.0dip</dimen>
-    <dimen name="recents_task_view_rounded_corners_radius_min">24.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_min">7.0dip</dimen>
     <dimen name="recents_tip_margin_top">20.0dip</dimen>
     <dimen name="recents_tv_small_window_text_size">13.099976sp</dimen>
     <dimen name="recents_view_configuration_touch_slop">5.0dip</dimen>
@@ -873,8 +879,8 @@
     <dimen name="thumbnail_shadow_layer_radius">54.549988dip</dimen>
     <dimen name="thumbnail_shadow_layer_x">0.0dip</dimen>
     <dimen name="thumbnail_shadow_layer_y">3.6399841dip</dimen>
-    <dimen name="thumbnail_title_max_width">70.0dip</dimen>
-    <dimen name="thumbnail_title_text_size">11.299988sp</dimen>
+    <dimen name="thumbnail_title_max_width">200.4dip</dimen>
+    <dimen name="thumbnail_title_text_size">15.0sp</dimen>
     <dimen name="toggle_size">34.69998dip</dimen>
     <dimen name="tooltip_corner_radius">2.0dip</dimen>
     <dimen name="tooltip_horizontal_padding">16.0dip</dimen>
@@ -908,6 +914,8 @@
     <dimen name="widget_line_padding_top">23.329987dip</dimen>
     <dimen name="widget_preview_shadow_line_height">0.73dip</dimen>
     <dimen name="widget_title_small_icon_size">15.0dip</dimen>
+    <dimen name="word_photo_border_size">0.33000004dip</dimen>
+    <dimen name="word_photo_size">36.0dip</dimen>
     <dimen name="workspace_cell_additional_padding_top_notch">14.5dip</dimen>
     <dimen name="workspace_cell_height">90.0dip</dimen>
     <dimen name="workspace_cell_horizontal_spacing">0.0dip</dimen>

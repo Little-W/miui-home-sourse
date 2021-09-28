@@ -292,8 +292,6 @@
     const-string v2, "Load preinstall ads fail"
 
     .line 189
-    invoke-static {v0, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :cond_2
     return-object v1
 .end method
@@ -465,8 +463,6 @@
     move-result-object v0
 
     .line 156
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     goto :goto_1
 
     :cond_1
@@ -498,8 +494,6 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 161
     :goto_1
@@ -694,8 +688,6 @@
     move-result-object v4
 
     .line 86
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 88
     new-instance v3, Ljava/util/ArrayList;
 
@@ -886,8 +878,6 @@
     move-result-object v0
 
     .line 110
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 112
     iget-boolean p1, p0, Lcom/miui/home/launcher/commercial/preinstall/global/GlobalPreinstallableFolderShortcutsAdapter;->mWaitingForNewAds:Z
 
@@ -935,8 +925,6 @@
     const-string v2, "refresh fail"
 
     .line 119
-    invoke-static {v0, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     return v1
 
     :cond_7
@@ -1084,7 +1072,5 @@
     const-string v2, "remove preinstall ads fail"
 
     .line 229
-    invoke-static {v0, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     return-object v1
 .end method

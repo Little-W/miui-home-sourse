@@ -50,7 +50,7 @@
 
     const-string v1, "XIAOMI"
 
-    const-string v2, "xiaomi"
+    const-string/jumbo v2, "xiaomi"
 
     const/4 v3, 0x0
 

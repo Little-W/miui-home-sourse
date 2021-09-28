@@ -1,4 +1,4 @@
-.class final Lcom/miui/maml/elements/TextScreenElement$1;
+.class Lcom/miui/maml/elements/TextScreenElement$1;
 .super Lcom/miui/maml/folme/AnimatedProperty$AnimatedColorProperty;
 .source "TextScreenElement.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -18,7 +18,7 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 58
+    .line 60
     invoke-direct {p0, p1}, Lcom/miui/maml/folme/AnimatedProperty$AnimatedColorProperty;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -29,12 +29,12 @@
 .method public getIntValue(Lcom/miui/maml/elements/AnimatedScreenElement;)I
     .locals 2
 
-    .line 68
+    .line 70
     instance-of v0, p1, Lcom/miui/maml/elements/TextScreenElement;
 
     if-eqz v0, :cond_0
 
-    .line 69
+    .line 71
     check-cast p1, Lcom/miui/maml/elements/TextScreenElement;
 
     invoke-static {p1}, Lcom/miui/maml/elements/TextScreenElement;->access$000(Lcom/miui/maml/elements/TextScreenElement;)Lcom/miui/maml/folme/PropertyWrapper;
@@ -60,7 +60,7 @@
 .method public bridge synthetic getIntValue(Ljava/lang/Object;)I
     .locals 0
 
-    .line 58
+    .line 60
     check-cast p1, Lcom/miui/maml/elements/AnimatedScreenElement;
 
     invoke-virtual {p0, p1}, Lcom/miui/maml/elements/TextScreenElement$1;->getIntValue(Lcom/miui/maml/elements/AnimatedScreenElement;)I
@@ -73,12 +73,12 @@
 .method public setIntValue(Lcom/miui/maml/elements/AnimatedScreenElement;I)V
     .locals 2
 
-    .line 76
+    .line 78
     instance-of v0, p1, Lcom/miui/maml/elements/TextScreenElement;
 
     if-eqz v0, :cond_0
 
-    .line 77
+    .line 79
     check-cast p1, Lcom/miui/maml/elements/TextScreenElement;
 
     invoke-static {p1}, Lcom/miui/maml/elements/TextScreenElement;->access$000(Lcom/miui/maml/elements/TextScreenElement;)Lcom/miui/maml/folme/PropertyWrapper;
@@ -96,7 +96,7 @@
 .method public bridge synthetic setIntValue(Ljava/lang/Object;I)V
     .locals 0
 
-    .line 58
+    .line 60
     check-cast p1, Lcom/miui/maml/elements/AnimatedScreenElement;
 
     invoke-virtual {p0, p1, p2}, Lcom/miui/maml/elements/TextScreenElement$1;->setIntValue(Lcom/miui/maml/elements/AnimatedScreenElement;I)V
@@ -107,12 +107,12 @@
 .method public setVelocityValue(Lcom/miui/maml/elements/AnimatedScreenElement;F)V
     .locals 2
 
-    .line 61
+    .line 63
     instance-of v0, p1, Lcom/miui/maml/elements/TextScreenElement;
 
     if-eqz v0, :cond_0
 
-    .line 62
+    .line 64
     check-cast p1, Lcom/miui/maml/elements/TextScreenElement;
 
     invoke-static {p1}, Lcom/miui/maml/elements/TextScreenElement;->access$000(Lcom/miui/maml/elements/TextScreenElement;)Lcom/miui/maml/folme/PropertyWrapper;
@@ -130,7 +130,7 @@
 .method public bridge synthetic setVelocityValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 58
+    .line 60
     check-cast p1, Lcom/miui/maml/elements/AnimatedScreenElement;
 
     invoke-virtual {p0, p1, p2}, Lcom/miui/maml/elements/TextScreenElement$1;->setVelocityValue(Lcom/miui/maml/elements/AnimatedScreenElement;F)V

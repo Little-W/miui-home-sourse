@@ -76,6 +76,8 @@
     <color name="alpha90white">#e6ffffff</color>
     <color name="alpha95black">#f3000000</color>
     <color name="alpha95white">#f3ffffff</color>
+    <color name="androidx_core_ripple_material_light">#1f000000</color>
+    <color name="androidx_core_secondary_text_default_material_light">#8a000000</color>
     <color name="app_locate_mask_color">#cc000000</color>
     <color name="app_select_input_hint_color_dark">@color/alpha40white</color>
     <color name="app_select_input_hint_color_light">@color/alpha40black</color>
@@ -571,7 +573,7 @@
     <color name="miuix_appcompat_spinner_edit_item_label_pressed">#73000000</color>
     <color name="miuix_appcompat_spinner_item_checked_bg_color_dark">#331369e9</color>
     <color name="miuix_appcompat_spinner_item_checked_bg_color_light">#1a0d84ff</color>
-    <color name="miuix_appcompat_spinner_item_normal_bg_color_dark">#ff2c2c2e</color>
+    <color name="miuix_appcompat_spinner_item_normal_bg_color_dark">#ff242424</color>
     <color name="miuix_appcompat_spinner_item_normal_bg_color_light">#ffffffff</color>
     <color name="miuix_appcompat_spinner_text_color_dark">#ff8c93b0</color>
     <color name="miuix_appcompat_spinner_text_color_light">#ff8c93b0</color>
@@ -598,7 +600,7 @@
     <color name="miuix_blurdrawable_view_fg_dark">#80000000</color>
     <color name="miuix_blurdrawable_view_fg_light">#ccffffff</color>
     <color name="miuix_folme_color_touch_tint">#14000000</color>
-    <color name="miuix_folme_color_touch_tint_dark">#14888888</color>
+    <color name="miuix_folme_color_touch_tint_dark">#26ffffff</color>
     <color name="miuix_preference_arrow_right_disable_stroke_color">#26000000</color>
     <color name="miuix_preference_arrow_right_normal_stroke_color">#80000000</color>
     <color name="miuix_preference_arrow_right_pressed_stroke_color">#4d000000</color>
@@ -656,7 +658,7 @@
     <color name="navigation_bar_light_color">#ffffffff</color>
     <color name="navigation_bar_type_title_normal_color">#ff000000</color>
     <color name="navigation_bar_type_title_selected_color">#ff0d84ff</color>
-    <color name="notification_action_color_filter">@color/secondary_text_default_material_light</color>
+    <color name="notification_action_color_filter">@color/androidx_core_secondary_text_default_material_light</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="notification_material_background_media_default_color">#ff424242</color>
     <color name="preference_fallback_accent_color">#ff008577</color>
@@ -754,18 +756,18 @@
     <color name="task_manager_text">#ffffffff</color>
     <color name="thumbnail_border_color">#ffffffff</color>
     <color name="thumbnail_count_color">#ffffffff</color>
-    <color name="thumbnail_item_content_text">#a3ffffff</color>
+    <color name="thumbnail_item_content_text">#ffffffff</color>
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6ffffff</color>
     <color name="top_menu_disable_state_color_dark">#26000000</color>
     <color name="top_menu_disable_state_color_light">#26ffffff</color>
-    <color name="top_menu_gone_state_color_dark">#00000000</color>
+    <color name="top_menu_gone_state_color_dark">#00ffffff</color>
     <color name="top_menu_gone_state_color_light">#00ffffff</color>
-    <color name="top_menu_normal_state_color_dark">#99000000</color>
-    <color name="top_menu_normal_state_color_light">#99ffffff</color>
+    <color name="top_menu_normal_state_color_dark">#ffffffff</color>
+    <color name="top_menu_normal_state_color_light">#ffffffff</color>
     <color name="top_menu_pressed_state_color_dark">#ff000000</color>
     <color name="top_menu_pressed_state_color_light">#ffffffff</color>
-    <color name="top_menu_uninstall_pressed_state_color">#ffff0000</color>
+    <color name="top_menu_uninstall_pressed_state_color">#99ff0000</color>
     <color name="trans_effect_thumbnail_selected_text_color">#ff0189d9</color>
     <color name="trans_effect_thumbnail_text_color">#b3000000</color>
     <color name="transparent">#00000000</color>
@@ -790,4 +792,6 @@
     <color name="visual_check_textview_unchecked_text_color">#cc000000</color>
     <color name="white">#ffffffff</color>
     <color name="widget_thumbnail_view_bg_mask">#4c000000</color>
+    <color name="word_photo_color">#f4ffffff</color>
+    <color name="word_photo_color_dark">#66ffffff</color>
 </resources>

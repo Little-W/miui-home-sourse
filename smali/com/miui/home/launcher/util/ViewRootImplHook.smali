@@ -213,8 +213,6 @@
     const-string v0, "hook success"
 
     .line 62
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 63
     iput-boolean v3, p0, Lcom/miui/home/launcher/util/ViewRootImplHook;->mHooked:Z
     :try_end_0
@@ -230,8 +228,6 @@
     const-string v1, "hookViewRootImpl"
 
     .line 65
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 .end method
@@ -283,8 +279,6 @@
     const-string v2, "scheduleTraversal"
 
     .line 78
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :cond_0
     :goto_0
     return-void

@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;I)V
     .locals 0
 
-    .line 1504
+    .line 1589
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput p2, p0, Lcom/miui/home/launcher/Launcher$4;->val$state:I
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 6
 
-    .line 1507
+    .line 1592
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher;->mGadgets:Ljava/util/ArrayList;
@@ -56,7 +56,7 @@
     :goto_0
     if-ltz v0, :cond_1
 
-    .line 1508
+    .line 1593
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-object v1, v1, Lcom/miui/home/launcher/Launcher;->mGadgets:Ljava/util/ArrayList;
@@ -67,45 +67,45 @@
 
     check-cast v1, Lcom/miui/home/launcher/gadget/Gadget;
 
-    .line 1509
+    .line 1594
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
-    .line 1510
+    .line 1595
     iget v3, p0, Lcom/miui/home/launcher/Launcher$4;->val$state:I
 
     packed-switch v3, :pswitch_data_0
 
     goto :goto_1
 
-    .line 1535
+    .line 1620
     :pswitch_0
     invoke-virtual {v1}, Lcom/miui/home/launcher/gadget/Gadget;->onEditNormal()V
 
     goto :goto_1
 
-    .line 1532
+    .line 1617
     :pswitch_1
     invoke-virtual {v1}, Lcom/miui/home/launcher/gadget/Gadget;->onEditDisable()V
 
     goto :goto_1
 
-    .line 1529
+    .line 1614
     :pswitch_2
     invoke-virtual {v1}, Lcom/miui/home/launcher/gadget/Gadget;->onDestroy()V
 
     goto :goto_1
 
-    .line 1526
+    .line 1611
     :pswitch_3
     invoke-virtual {v1}, Lcom/miui/home/launcher/gadget/Gadget;->onCreate()V
 
     goto :goto_1
 
-    .line 1521
+    .line 1606
     :pswitch_4
     iget-wide v2, v2, Lcom/miui/home/launcher/gadget/GadgetInfo;->screenId:J
 
@@ -123,24 +123,24 @@
 
     if-nez v2, :cond_0
 
-    .line 1522
+    .line 1607
     invoke-virtual {v1}, Lcom/miui/home/launcher/gadget/Gadget;->onResume()V
 
     goto :goto_1
 
-    .line 1518
+    .line 1603
     :pswitch_5
     invoke-virtual {v1}, Lcom/miui/home/launcher/gadget/Gadget;->onPause()V
 
     goto :goto_1
 
-    .line 1515
+    .line 1600
     :pswitch_6
     invoke-virtual {v1}, Lcom/miui/home/launcher/gadget/Gadget;->onStop()V
 
     goto :goto_1
 
-    .line 1512
+    .line 1597
     :pswitch_7
     invoke-virtual {v1}, Lcom/miui/home/launcher/gadget/Gadget;->onStart()V
 
@@ -150,7 +150,7 @@
 
     goto :goto_0
 
-    .line 1540
+    .line 1625
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$4;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -160,7 +160,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 1541
+    .line 1626
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->isShowing()Z
 
     move-result v1
@@ -173,7 +173,7 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 1542
+    .line 1627
     :cond_2
     iget v1, p0, Lcom/miui/home/launcher/Launcher$4;->val$state:I
 
@@ -185,7 +185,7 @@
 
     if-eq v1, v2, :cond_3
 
-    .line 1543
+    .line 1628
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->notifyGadgets(I)V
 
     :cond_3

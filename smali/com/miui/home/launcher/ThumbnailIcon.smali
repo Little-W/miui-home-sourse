@@ -119,6 +119,10 @@
     move-result v0
 
     .line 43
+    iget-boolean v1, p0, Lcom/miui/home/launcher/ThumbnailIcon;->mEnableDrawMaskOnPressed:Z
+
+    if-eqz v1, :cond_0
+
     iget-boolean v1, p0, Lcom/miui/home/launcher/ThumbnailIcon;->mDrawTouchMask:Z
 
     if-eq v1, v0, :cond_0
@@ -153,7 +157,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600af
+    const v1, 0x7f0600b1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 

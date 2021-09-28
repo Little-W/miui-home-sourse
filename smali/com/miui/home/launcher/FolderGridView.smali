@@ -179,7 +179,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0700d2
+    const v2, 0x7f0700d4
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -194,7 +194,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0600ad
+    const p2, 0x7f0600af
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -2799,6 +2799,24 @@
 
     .line 383
     invoke-virtual {p2}, Landroid/view/View;->getVisibility()I
+
+    move-result p3
+
+    if-nez p3, :cond_3
+
+    iget-object p3, p0, Lcom/miui/home/launcher/FolderGridView;->mAdapter:Lcom/miui/home/launcher/ShortcutsAdapter;
+
+    if-eqz p3, :cond_3
+
+    iget-object p3, p3, Lcom/miui/home/launcher/ShortcutsAdapter;->mDragOverItems:Ljava/util/HashSet;
+
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object p4
+
+    check-cast p4, Lcom/miui/home/launcher/ShortcutInfo;
+
+    invoke-virtual {p3, p4}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result p3
 

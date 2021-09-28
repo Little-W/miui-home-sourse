@@ -7,10 +7,21 @@
 .method public static sendStateBroadcast(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 23
+    const-string v0, ""
+
+    .line 26
+    invoke-static {p0, p1, p2, v0}, Lcom/miui/home/recents/util/StateBroadcastUtils;->sendStateBroadcast(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static sendStateBroadcast(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .line 30
     new-instance v0, Lcom/miui/home/recents/util/StateBroadcastUtils$1;
 
-    invoke-direct {v0, p1, p2, p0}, Lcom/miui/home/recents/util/StateBroadcastUtils$1;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V
+    invoke-direct {v0, p1, p2, p3, p0}, Lcom/miui/home/recents/util/StateBroadcastUtils$1;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 

@@ -92,7 +92,7 @@
     move-result-object p1
 
     :try_start_0
-    const-string v1, "work_spec_id"
+    const-string/jumbo v1, "work_spec_id"
 
     .line 95
     invoke-static {p1, v1}, Landroidx/room/util/CursorUtil;->getColumnIndexOrThrow(Landroid/database/Cursor;Ljava/lang/String;)I

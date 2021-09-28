@@ -273,14 +273,14 @@
 .method private calculateItemIconSize(Landroid/content/res/Resources;)V
     .locals 3
 
-    const v0, 0x7f0700e3
+    const v0, 0x7f0700e5
 
     .line 329
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
-    const v1, 0x7f0700e1
+    const v1, 0x7f0700e3
 
     .line 330
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1928,7 +1928,7 @@
     .line 103
     new-array v0, v0, [Lcom/miui/home/launcher/FolderIcon$PreviewIconView;
 
-    const v1, 0x7f0a0125
+    const v1, 0x7f0a0126
 
     .line 104
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/FolderIcon;->findViewById(I)Landroid/view/View;
@@ -1941,7 +1941,7 @@
 
     aput-object v1, v0, v2
 
-    const v1, 0x7f0a0126
+    const v1, 0x7f0a0127
 
     .line 105
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/FolderIcon;->findViewById(I)Landroid/view/View;
@@ -1954,7 +1954,7 @@
 
     aput-object v1, v0, v2
 
-    const v1, 0x7f0a0127
+    const v1, 0x7f0a0128
 
     .line 106
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/FolderIcon;->findViewById(I)Landroid/view/View;
@@ -1967,7 +1967,7 @@
 
     aput-object v1, v0, v3
 
-    const v1, 0x7f0a0128
+    const v1, 0x7f0a0129
 
     .line 107
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/FolderIcon;->findViewById(I)Landroid/view/View;
@@ -1980,7 +1980,7 @@
 
     aput-object v1, v0, v3
 
-    const v1, 0x7f0a0129
+    const v1, 0x7f0a012a
 
     .line 108
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/FolderIcon;->findViewById(I)Landroid/view/View;
@@ -1993,7 +1993,7 @@
 
     aput-object v1, v0, v3
 
-    const v1, 0x7f0a012a
+    const v1, 0x7f0a012b
 
     .line 109
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/FolderIcon;->findViewById(I)Landroid/view/View;
@@ -2006,7 +2006,7 @@
 
     aput-object v1, v0, v3
 
-    const v1, 0x7f0a012b
+    const v1, 0x7f0a012c
 
     .line 110
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/FolderIcon;->findViewById(I)Landroid/view/View;
@@ -2019,7 +2019,7 @@
 
     aput-object v1, v0, v4
 
-    const v1, 0x7f0a012c
+    const v1, 0x7f0a012d
 
     .line 111
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/FolderIcon;->findViewById(I)Landroid/view/View;
@@ -2032,7 +2032,7 @@
 
     aput-object v1, v0, v4
 
-    const v1, 0x7f0a012d
+    const v1, 0x7f0a012e
 
     .line 112
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/FolderIcon;->findViewById(I)Landroid/view/View;
@@ -2047,7 +2047,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/FolderIcon;->mItemIcons:[Lcom/miui/home/launcher/FolderIcon$PreviewIconView;
 
-    const v0, 0x7f0a0180
+    const v0, 0x7f0a0182
 
     .line 115
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/FolderIcon;->findViewById(I)Landroid/view/View;
@@ -2190,7 +2190,7 @@
     :cond_1
     iget-object v1, p0, Lcom/miui/home/launcher/FolderIcon;->mFolderCover:Landroid/widget/ImageView;
 
-    const v2, 0x7f0800f6
+    const v2, 0x7f08011a
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 

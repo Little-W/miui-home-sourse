@@ -55,7 +55,7 @@
 .method public static synthetic lambda$setupWidget$1(Lcom/miui/home/launcher/AddItemActivity;Landroid/appwidget/AppWidgetProviderInfo;Lcom/miui/home/launcher/Launcher;)V
     .locals 7
 
-    .line 57
+    .line 59
     iget-object v0, p1, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -70,7 +70,7 @@
 
     const-string p2, "AddItemActivity-PinShortcutRequestUtils"
 
-    .line 58
+    .line 60
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,11 +95,9 @@
 
     move-result-object p1
 
-    invoke-static {p2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
-    .line 61
+    .line 63
     :cond_0
     iget-object v1, p1, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
@@ -121,12 +119,12 @@
 .method private setupWidget(Landroid/appwidget/AppWidgetProviderInfo;)V
     .locals 2
 
-    .line 55
+    .line 57
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
-    .line 56
+    .line 58
     new-instance v1, Lcom/miui/home/launcher/-$$Lambda$AddItemActivity$RFCEqIK8NDL_kJOys1FAxDQFq4s;
 
     invoke-direct {v1, p0, p1, v0}, Lcom/miui/home/launcher/-$$Lambda$AddItemActivity$RFCEqIK8NDL_kJOys1FAxDQFq4s;-><init>(Lcom/miui/home/launcher/AddItemActivity;Landroid/appwidget/AppWidgetProviderInfo;Lcom/miui/home/launcher/Launcher;)V
@@ -203,8 +201,6 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 38
     iget-object p1, p0, Lcom/miui/home/launcher/AddItemActivity;->mRequest:Lcom/miui/launcher/common/PinItemRequestCompat;
 
@@ -250,9 +246,22 @@
     move-result-object p1
 
     .line 49
+    iget-object v0, p0, Lcom/miui/home/launcher/AddItemActivity;->mRequest:Lcom/miui/launcher/common/PinItemRequestCompat;
+
+    invoke-virtual {v0}, Lcom/miui/launcher/common/PinItemRequestCompat;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    invoke-static {p0, p1, v0}, Lcom/miui/home/launcher/MIUIWidgetUtil;->startWidgetDetailPage(Landroid/app/Activity;Landroid/appwidget/AppWidgetProviderInfo;Landroid/os/Bundle;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 50
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/AddItemActivity;->setupWidget(Landroid/appwidget/AppWidgetProviderInfo;)V
 
-    .line 51
+    .line 53
     :cond_2
     :goto_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/AddItemActivity;->finish()V

@@ -9,7 +9,7 @@
 
 
 # instance fields
-.field private mActionBar:Lmiuix/appcompat/app/ActionBar;
+.field protected mActionBar:Lmiuix/appcompat/app/ActionBar;
 
 .field protected mActionBarView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
 

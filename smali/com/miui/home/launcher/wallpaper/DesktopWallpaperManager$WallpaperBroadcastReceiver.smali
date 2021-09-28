@@ -78,8 +78,6 @@
 
     move-result-object v0
 
-    invoke-static {p2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     const-string p2, "android.intent.action.WALLPAPER_CHANGED"
 
     .line 117

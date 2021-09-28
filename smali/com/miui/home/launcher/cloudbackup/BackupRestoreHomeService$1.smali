@@ -211,8 +211,6 @@
     const-string v4, " ErrnoException when backup home files"
 
     .line 87
-    invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 88
     invoke-virtual {v2}, Landroid/system/ErrnoException;->printStackTrace()V
 
@@ -229,8 +227,6 @@
     const-string v4, "IOException when backup home files"
 
     .line 84
-    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     .line 85
     monitor-exit v0
 
@@ -253,8 +249,6 @@
     const-string v2, "launcherProvider is unready"
 
     .line 56
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return-object v1
 .end method
 
@@ -298,8 +292,6 @@
     const-string p2, "launcherProvider is null"
 
     .line 98
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return v1
 
     .line 101
@@ -378,14 +370,12 @@
     const-string p1, "Launcher.Backup"
 
     const-string p2, "failed to create sp folder"
-
-    .line 112
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 112
     .line 113
     :try_start_1
     monitor-exit v0
@@ -420,7 +410,7 @@
 
     move-result-object v5
 
-    const-string v6, "xml"
+    const-string/jumbo v6, "xml"
 
     .line 117
     invoke-static {v5}, Lmiuix/core/util/FileUtils;->getExtension(Ljava/lang/String;)Ljava/lang/String;
@@ -456,8 +446,6 @@
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
-
-    invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
@@ -498,14 +486,12 @@
     const-string p1, "Launcher.Backup"
 
     const-string p2, "failed to create icon folder"
-
-    .line 126
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Landroid/system/ErrnoException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 126
     .line 127
     :try_start_3
     monitor-exit v0
@@ -576,8 +562,6 @@
     const-string v1, " ErrnoException when restore home files"
 
     .line 137
-    invoke-static {p2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 138
     invoke-virtual {p1}, Landroid/system/ErrnoException;->printStackTrace()V
 
@@ -591,8 +575,6 @@
     const-string v1, "IOException when restore home file"
 
     .line 135
-    invoke-static {p2, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     .line 140
     :goto_3
     monitor-exit v0

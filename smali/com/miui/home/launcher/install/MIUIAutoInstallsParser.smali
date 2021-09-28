@@ -42,16 +42,16 @@
         }
     .end annotation
 
-    .line 76
+    .line 97
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
+    .line 98
     iput-object p1, p0, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->mResource:Landroid/content/res/Resources;
 
-    .line 78
+    .line 99
     iput p2, p0, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->mResourceId:I
 
-    .line 79
+    .line 100
     iput-object p3, p0, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->mPackagePackageList:Ljava/util/List;
 
     return-void
@@ -60,7 +60,7 @@
 .method static synthetic access$100(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 22
+    .line 23
     invoke-static {p0, p1}, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->getAttributeValue(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -68,19 +68,10 @@
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;)Ljava/util/List;
+.method static synthetic access$200(Landroid/content/res/XmlResourceParser;Ljava/lang/String;I)I
     .locals 0
 
-    .line 22
-    iget-object p0, p0, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->mPackagePackageList:Ljava/util/List;
-
-    return-object p0
-.end method
-
-.method static synthetic access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;I)I
-    .locals 0
-
-    .line 22
+    .line 23
     invoke-static {p0, p1, p2}, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->getAttributeResourceValue(Landroid/content/res/XmlResourceParser;Ljava/lang/String;I)I
 
     move-result p0
@@ -88,13 +79,385 @@
     return p0
 .end method
 
-.method static synthetic access$400(Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;)Landroid/content/res/Resources;
+.method static synthetic access$300(Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;)Landroid/content/res/Resources;
     .locals 0
 
-    .line 22
+    .line 23
     iget-object p0, p0, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->mResource:Landroid/content/res/Resources;
 
     return-object p0
+.end method
+
+.method static synthetic access$400(Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;)Ljava/util/List;
+    .locals 0
+
+    .line 23
+    iget-object p0, p0, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->mPackagePackageList:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method private static baseGetMethod(Landroid/content/Context;Z)Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;
+    .locals 8
+
+    .line 39
+    invoke-static {}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->supportAutoInstall()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    const-string p0, "MIUIAutoInstalls.Parser"
+
+    const-string p1, "not support auto install"
+
+    .line 40
+    return-object v1
+
+    .line 43
+    :cond_0
+    new-instance v0, Landroid/net/Uri$Builder;
+
+    invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
+
+    const-string v2, "content"
+
+    invoke-virtual {v0, v2}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    const-string v2, "com.miui.core.autoinstall.config"
+
+    invoke-virtual {v0, v2}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    move-result-object v3
+
+    .line 44
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
+
+    if-eqz v0, :cond_a
+
+    .line 45
+    :try_start_1
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_a
+
+    const-string v2, "packageName"
+
+    .line 46
+    invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-interface {v0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "configName"
+
+    .line 47
+    invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-interface {v0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "installList"
+
+    .line 48
+    invoke-interface {v0, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v4
+
+    invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 49
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_8
+
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    goto/16 :goto_1
+
+    .line 54
+    :cond_1
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
+
+    const-string p1, ","
+
+    .line 55
+    invoke-virtual {v4, p1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
+
+    goto :goto_0
+
+    :cond_2
+    if-eqz p1, :cond_4
+
+    if-eqz v0, :cond_3
+
+    .line 76
+    :try_start_2
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+
+    :cond_3
+    return-object v1
+
+    .line 60
+    :cond_4
+    :try_start_3
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 64
+    :goto_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v2}, Landroid/content/pm/PackageManager;->getResourcesForApplication(Ljava/lang/String;)Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    const-string/jumbo v4, "xml"
+
+    .line 65
+    invoke-virtual {p0, v3, v4, v2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v4
+
+    if-lez v4, :cond_6
+
+    const-string v5, "MIUIAutoInstalls.Parser"
+
+    .line 67
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "get install config success:"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ","
+
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 68
+    new-instance v2, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;
+
+    invoke-direct {v2, p0, v4, p1}, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;-><init>(Landroid/content/res/Resources;ILjava/util/List;)V
+    :try_end_3
+    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+
+    if-eqz v0, :cond_5
+
+    .line 76
+    :try_start_4
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
+
+    :cond_5
+    return-object v2
+
+    :cond_6
+    :try_start_5
+    const-string p0, "MIUIAutoInstalls.Parser"
+
+    .line 70
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "get install config resource error:"
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ","
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+    :try_end_5
+    .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
+
+    if-eqz v0, :cond_7
+
+    .line 76
+    :try_start_6
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_2
+
+    :cond_7
+    return-object v1
+
+    :cond_8
+    :goto_1
+    :try_start_7
+    const-string p0, "MIUIAutoInstalls.Parser"
+
+    .line 50
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "get install config name error:"
+
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ","
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+    :try_end_7
+    .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_2
+
+    if-eqz v0, :cond_9
+
+    .line 76
+    :try_start_8
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+    :try_end_8
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_2
+
+    :cond_9
+    return-object v1
+
+    :cond_a
+    :try_start_9
+    const-string p0, "MIUIAutoInstalls.Parser"
+
+    const-string p1, "get install config cursor error"
+    :try_end_9
+    .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_2
+
+    .line 74
+    if-eqz v0, :cond_c
+
+    .line 76
+    :try_start_a
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+    :try_end_a
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_2
+
+    goto :goto_3
+
+    :catch_0
+    move-exception p0
+
+    if-eqz v0, :cond_b
+
+    .line 44
+    :try_start_b
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+    :try_end_b
+    .catch Ljava/lang/Throwable; {:try_start_b .. :try_end_b} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_2
+
+    goto :goto_2
+
+    :catch_1
+    move-exception p1
+
+    :try_start_c
+    invoke-virtual {p0, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :cond_b
+    :goto_2
+    throw p0
+    :try_end_c
+    .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_2
+
+    :catch_2
+    move-exception p0
+
+    const-string p1, "MIUIAutoInstalls.Parser"
+
+    const-string v0, "get install config error"
+
+    .line 77
+    :cond_c
+    :goto_3
+    return-object v1
 .end method
 
 .method private static beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
@@ -106,7 +469,7 @@
         }
     .end annotation
 
-    .line 171
+    .line 193
     :goto_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -125,7 +488,7 @@
     :cond_0
     if-ne v0, v1, :cond_2
 
-    .line 178
+    .line 200
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -138,7 +501,7 @@
 
     return-void
 
-    .line 179
+    .line 201
     :cond_1
     new-instance v0, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -170,7 +533,7 @@
 
     throw v0
 
-    .line 175
+    .line 197
     :cond_2
     new-instance p0, Lorg/xmlpull/v1/XmlPullParserException;
 
@@ -182,356 +545,16 @@
 .end method
 
 .method public static get(Landroid/content/Context;)Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;
-    .locals 9
+    .locals 1
 
-    .line 30
-    invoke-static {}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->supportAutoInstall()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    const-string p0, "MIUIAutoInstalls.Parser"
-
-    const-string v0, "not support auto install"
+    const/4 v0, 0x1
 
     .line 31
-    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-object v1
-
-    .line 34
-    :cond_0
-    new-instance v0, Landroid/net/Uri$Builder;
-
-    invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
-
-    const-string v2, "content"
-
-    invoke-virtual {v0, v2}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    move-result-object v0
-
-    const-string v2, "com.miui.core.autoinstall.config"
-
-    invoke-virtual {v0, v2}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
-
-    move-result-object v3
-
-    .line 35
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v2
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
-
-    if-eqz v0, :cond_7
-
-    .line 36
-    :try_start_1
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    const-string v2, "packageName"
-
-    .line 37
-    invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v2
-
-    invoke-interface {v0, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "configName"
-
-    .line 38
-    invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v3
-
-    invoke-interface {v0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "installList"
-
-    .line 39
-    invoke-interface {v0, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v4
-
-    invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 40
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_5
-
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_5
-
-    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const-string v5, ","
-
-    .line 44
-    invoke-virtual {v4, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v4
-
-    .line 45
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-static {p0, v0}, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->baseGetMethod(Landroid/content/Context;Z)Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;
 
     move-result-object p0
 
-    invoke-virtual {p0, v2}, Landroid/content/pm/PackageManager;->getResourcesForApplication(Ljava/lang/String;)Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    const-string v5, "xml"
-
-    .line 46
-    invoke-virtual {p0, v3, v5, v2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result v5
-
-    if-lez v5, :cond_3
-
-    const-string v6, "MIUIAutoInstalls.Parser"
-
-    .line 48
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "get install config success:"
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ","
-
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v6, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 49
-    new-instance v2, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;
-
-    invoke-direct {v2, p0, v5, v4}, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;-><init>(Landroid/content/res/Resources;ILjava/util/List;)V
-    :try_end_1
-    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
-
-    if-eqz v0, :cond_2
-
-    .line 57
-    :try_start_2
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
-
-    :cond_2
-    return-object v2
-
-    :cond_3
-    :try_start_3
-    const-string p0, "MIUIAutoInstalls.Parser"
-
-    .line 51
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "get install config resource error:"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ","
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {p0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_3
-    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
-
-    if-eqz v0, :cond_4
-
-    .line 57
-    :try_start_4
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
-
-    :cond_4
-    return-object v1
-
-    :cond_5
-    :goto_0
-    :try_start_5
-    const-string p0, "MIUIAutoInstalls.Parser"
-
-    .line 41
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "get install config name error:"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ","
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ","
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {p0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_5
-    .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
-
-    if-eqz v0, :cond_6
-
-    .line 57
-    :try_start_6
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-    :try_end_6
-    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_2
-
-    :cond_6
-    return-object v1
-
-    :cond_7
-    :try_start_7
-    const-string p0, "MIUIAutoInstalls.Parser"
-
-    const-string v2, "get install config cursor error"
-
-    .line 55
-    invoke-static {p0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_7
-    .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_0
-    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_2
-
-    if-eqz v0, :cond_9
-
-    .line 57
-    :try_start_8
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-    :try_end_8
-    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_2
-
-    goto :goto_2
-
-    :catch_0
-    move-exception p0
-
-    if-eqz v0, :cond_8
-
-    .line 35
-    :try_start_9
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-    :try_end_9
-    .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_2
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v0
-
-    :try_start_a
-    invoke-virtual {p0, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :cond_8
-    :goto_1
-    throw p0
-    :try_end_a
-    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_2
-
-    :catch_2
-    move-exception p0
-
-    const-string v0, "MIUIAutoInstalls.Parser"
-
-    const-string v2, "get install config error"
-
-    .line 58
-    invoke-static {v0, v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_9
-    :goto_2
-    return-object v1
+    return-object p0
 .end method
 
 .method private static getAttributeResourceValue(Landroid/content/res/XmlResourceParser;Ljava/lang/String;I)I
@@ -539,7 +562,7 @@
 
     const-string v0, "http://schemas.android.com/apk/res-auto/com.miui.home"
 
-    .line 201
+    .line 223
     invoke-interface {p0, v0, p1, p2}, Landroid/content/res/XmlResourceParser;->getAttributeResourceValue(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v0
@@ -548,7 +571,7 @@
 
     const/4 v0, 0x0
 
-    .line 205
+    .line 227
     invoke-interface {p0, v0, p1, p2}, Landroid/content/res/XmlResourceParser;->getAttributeResourceValue(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v0
@@ -562,7 +585,7 @@
 
     const-string v0, "http://schemas.android.com/apk/res-auto/com.miui.home"
 
-    .line 189
+    .line 211
     invoke-interface {p0, v0, p1}, Landroid/content/res/XmlResourceParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -571,7 +594,7 @@
 
     const/4 v0, 0x0
 
-    .line 191
+    .line 213
     invoke-interface {p0, v0, p1}, Landroid/content/res/XmlResourceParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -592,14 +615,14 @@
         }
     .end annotation
 
-    .line 137
+    .line 158
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     const-string v1, "autoinstall"
 
-    .line 138
+    .line 159
     new-instance v2, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser$AutoInstallParser;
 
     const/4 v3, 0x0
@@ -609,6 +632,19 @@
     invoke-virtual {v0, v1, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public static getUninstallInstallInfo(Landroid/content/Context;)Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 35
+    invoke-static {p0, v0}, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->baseGetMethod(Landroid/content/Context;Z)Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method private parseAndAddNode(Landroid/content/res/XmlResourceParser;Landroid/util/ArrayMap;)I
@@ -633,7 +669,7 @@
 
     const-string v0, "include"
 
-    .line 115
+    .line 136
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -648,14 +684,14 @@
 
     const-string p2, "install"
 
-    .line 116
+    .line 137
     invoke-static {p1, p2, v1}, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->getAttributeResourceValue(Landroid/content/res/XmlResourceParser;Ljava/lang/String;I)I
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 118
+    .line 139
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->parseConfig(I)I
 
     move-result p1
@@ -665,13 +701,13 @@
     :cond_0
     return v1
 
-    .line 123
+    .line 144
     :cond_1
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 124
+    .line 145
     invoke-virtual {p2, v0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
@@ -682,7 +718,7 @@
 
     const-string p1, "MIUIAutoInstalls.Parser"
 
-    .line 126
+    .line 147
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -697,11 +733,9 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     return v1
 
-    .line 129
+    .line 150
     :cond_2
     invoke-interface {p2, p1}, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser$TagParser;->parseAndAdd(Landroid/content/res/XmlResourceParser;)Z
 
@@ -726,7 +760,7 @@
         }
     .end annotation
 
-    .line 93
+    .line 114
     iget-object v0, p0, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->mResource:Landroid/content/res/Resources;
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
@@ -735,22 +769,22 @@
 
     const-string v0, "install"
 
-    .line 94
+    .line 115
     invoke-static {p1, v0}, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
-    .line 95
+    .line 116
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v0
 
-    .line 97
+    .line 118
     invoke-direct {p0}, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->getLayoutElementsMap()Landroid/util/ArrayMap;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    .line 100
+    .line 121
     :goto_0
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->next()I
 
@@ -760,7 +794,7 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 101
+    .line 122
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v4
@@ -778,7 +812,7 @@
 
     goto :goto_0
 
-    .line 105
+    .line 126
     :cond_1
     invoke-direct {p0, p1, v1}, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->parseAndAddNode(Landroid/content/res/XmlResourceParser;Landroid/util/ArrayMap;)I
 
@@ -797,7 +831,7 @@
 .method public loadConfig()V
     .locals 4
 
-    .line 84
+    .line 105
     :try_start_0
     invoke-static {}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->getInstance()Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;
 
@@ -805,7 +839,7 @@
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->clear()V
 
-    .line 85
+    .line 106
     iget v0, p0, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->mResourceId:I
 
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/install/MIUIAutoInstallsParser;->parseConfig(I)I
@@ -814,7 +848,7 @@
 
     const-string v1, "MIUIAutoInstalls.Parser"
 
-    .line 86
+    .line 107
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -828,8 +862,6 @@
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -842,9 +874,7 @@
 
     const-string v2, "parse auto install config error"
 
-    .line 88
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
+    .line 109
     :goto_0
     return-void
 .end method

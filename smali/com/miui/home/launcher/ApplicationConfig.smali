@@ -8,9 +8,9 @@
 
 .field private static sFeedApplicationInfo:Landroid/content/pm/ApplicationInfo; = null
 
-.field private static sGlobalAssistantApplicationInfo:Landroid/content/pm/ApplicationInfo; = null
-
 .field private static sIsProtectedDataAppAvailable:Z = true
+
+.field private static sNewGlobalAssistantApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
 
 # direct methods
@@ -47,7 +47,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "com.mi.android.globalminusscreen"
+    const-string v0, "com.mi.globalminusscreen"
 
     const/4 v1, 0x0
 
@@ -56,7 +56,7 @@
 
     move-result-object p0
 
-    sput-object p0, Lcom/miui/home/launcher/ApplicationConfig;->sGlobalAssistantApplicationInfo:Landroid/content/pm/ApplicationInfo;
+    sput-object p0, Lcom/miui/home/launcher/ApplicationConfig;->sNewGlobalAssistantApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
     goto :goto_0
 
@@ -194,7 +194,7 @@
 .method public static isFeedModuleLoaded()Z
     .locals 2
 
-    .line 83
+    .line 86
     invoke-static {}, Lcom/miui/home/launcher/module/ModuleManagerCompat;->getInstance()Lcom/miui/home/launcher/module/ModuleManagerCompat;
 
     move-result-object v0
@@ -305,11 +305,11 @@
     return v0
 .end method
 
-.method public static isGlobalAssistantInstalled()Z
+.method public static isNewGlobalAssistantInstalled()Z
     .locals 1
 
-    .line 79
-    sget-object v0, Lcom/miui/home/launcher/ApplicationConfig;->sGlobalAssistantApplicationInfo:Landroid/content/pm/ApplicationInfo;
+    .line 82
+    sget-object v0, Lcom/miui/home/launcher/ApplicationConfig;->sNewGlobalAssistantApplicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v0, :cond_0
 
@@ -327,7 +327,7 @@
 .method public static isProtectedDataAppAvailable()Z
     .locals 1
 
-    .line 87
+    .line 90
     sget-boolean v0, Lcom/miui/home/launcher/ApplicationConfig;->sIsProtectedDataAppAvailable:Z
 
     return v0

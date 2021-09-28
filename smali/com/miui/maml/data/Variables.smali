@@ -22,6 +22,10 @@
 
 .field public static final MAX_ARRAY_SIZE:I = 0x2710
 
+.field public static final VARIABLE_TYPE_HIGH_PRIORITY:I = 0x1
+
+.field public static final VARIABLE_TYPE_NORMAL:I
+
 
 # instance fields
 .field private mDoubleBucket:Lcom/miui/maml/data/Variables$DoubleBucket;
@@ -50,7 +54,7 @@
     .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 217
+    .line 244
     new-instance v0, Lcom/miui/maml/data/Variables$DoubleBucket;
 
     const/4 v1, 0x0
@@ -59,7 +63,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/data/Variables;->mDoubleBucket:Lcom/miui/maml/data/Variables$DoubleBucket;
 
-    .line 218
+    .line 245
     new-instance v0, Lcom/miui/maml/data/Variables$VarBucket;
 
     invoke-direct {v0, v1}, Lcom/miui/maml/data/Variables$VarBucket;-><init>(Lcom/miui/maml/data/Variables$1;)V
@@ -81,14 +85,14 @@
 .method private static dbglog(Ljava/lang/String;)V
     .locals 1
 
-    .line 469
+    .line 504
     sget-boolean v0, Lcom/miui/maml/data/Variables;->DBG:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "Variables"
 
-    .line 470
+    .line 505
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
@@ -105,7 +109,7 @@
         }
     .end annotation
 
-    .line 452
+    .line 487
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->get(I)Ljava/lang/Object;
 
@@ -113,11 +117,9 @@
 
     check-cast v0, [Ljava/lang/Object;
 
-    check-cast v0, [Ljava/lang/Object;
-
     if-nez v0, :cond_0
 
-    .line 454
+    .line 489
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -136,7 +138,7 @@
 
     goto :goto_0
 
-    .line 455
+    .line 490
     :cond_0
     invoke-static {v0, p2}, Lcom/miui/maml/data/Variables;->isIndexValid(Ljava/lang/Object;I)Z
 
@@ -144,7 +146,7 @@
 
     if-nez v1, :cond_1
 
-    .line 456
+    .line 491
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -169,7 +171,7 @@
 
     goto :goto_0
 
-    .line 458
+    .line 493
     :cond_1
     aget-object p1, v0, p2
     :try_end_0
@@ -178,7 +180,7 @@
 
     return-object p1
 
-    .line 463
+    .line 498
     :catch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -204,7 +206,7 @@
 
     goto :goto_0
 
-    .line 461
+    .line 496
     :catch_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -235,7 +237,7 @@
 
     if-ltz p1, :cond_1
 
-    .line 441
+    .line 476
     :try_start_0
     invoke-static {p0}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
@@ -263,7 +265,7 @@
 .method public static putValueToArr(Ljava/lang/Object;ID)Z
     .locals 5
 
-    .line 414
+    .line 449
     invoke-static {p0, p1}, Lcom/miui/maml/data/Variables;->isIndexValid(Ljava/lang/Object;I)Z
 
     move-result v0
@@ -272,7 +274,7 @@
 
     if-nez v0, :cond_0
 
-    .line 415
+    .line 450
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -291,7 +293,7 @@
 
     return v1
 
-    .line 419
+    .line 454
     :cond_0
     instance-of v0, p0, [D
 
@@ -299,20 +301,20 @@
 
     if-eqz v0, :cond_1
 
-    .line 420
+    .line 455
     check-cast p0, [D
 
     aput-wide p2, p0, p1
 
     goto :goto_0
 
-    .line 421
+    .line 456
     :cond_1
     instance-of v0, p0, [B
 
     if-eqz v0, :cond_2
 
-    .line 422
+    .line 457
     check-cast p0, [B
 
     double-to-long p2, p2
@@ -325,13 +327,13 @@
 
     goto :goto_0
 
-    .line 423
+    .line 458
     :cond_2
     instance-of v0, p0, [C
 
     if-eqz v0, :cond_3
 
-    .line 424
+    .line 459
     check-cast p0, [C
 
     double-to-long p2, p2
@@ -344,13 +346,13 @@
 
     goto :goto_0
 
-    .line 425
+    .line 460
     :cond_3
     instance-of v0, p0, [F
 
     if-eqz v0, :cond_4
 
-    .line 426
+    .line 461
     check-cast p0, [F
 
     double-to-float p2, p2
@@ -359,13 +361,13 @@
 
     goto :goto_0
 
-    .line 427
+    .line 462
     :cond_4
     instance-of v0, p0, [I
 
     if-eqz v0, :cond_5
 
-    .line 428
+    .line 463
     check-cast p0, [I
 
     double-to-long p2, p2
@@ -376,13 +378,13 @@
 
     goto :goto_0
 
-    .line 429
+    .line 464
     :cond_5
     instance-of v0, p0, [J
 
     if-eqz v0, :cond_6
 
-    .line 430
+    .line 465
     check-cast p0, [J
 
     double-to-long p2, p2
@@ -391,13 +393,13 @@
 
     goto :goto_0
 
-    .line 431
+    .line 466
     :cond_6
     instance-of v0, p0, [S
 
     if-eqz v0, :cond_7
 
-    .line 432
+    .line 467
     check-cast p0, [S
 
     double-to-long p2, p2
@@ -410,13 +412,13 @@
 
     goto :goto_0
 
-    .line 433
+    .line 468
     :cond_7
     instance-of v0, p0, [Z
 
     if-eqz v0, :cond_9
 
-    .line 434
+    .line 469
     check-cast p0, [Z
 
     const-wide/16 v3, 0x0
@@ -461,20 +463,20 @@
 
     goto :goto_0
 
-    .line 258
+    .line 285
     :cond_0
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->registerVariable(Ljava/lang/String;)I
 
     move-result p1
 
-    .line 259
+    .line 286
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     if-nez v1, :cond_1
 
-    .line 262
+    .line 289
     :try_start_0
     invoke-static {p3, p2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
@@ -482,7 +484,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 266
+    .line 293
     invoke-virtual {p0, p1, p2}, Lcom/miui/maml/data/Variables;->put(ILjava/lang/Object;)V
 
     const/4 p1, 0x1
@@ -499,7 +501,7 @@
     :goto_0
     const-string p3, "Variables"
 
-    .line 254
+    .line 281
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -528,7 +530,7 @@
 .method public existsArrItem(II)Z
     .locals 1
 
-    .line 241
+    .line 268
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -542,7 +544,7 @@
     :cond_0
     if-ltz p2, :cond_1
 
-    .line 246
+    .line 273
     :try_start_0
     invoke-static {p1}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
@@ -567,7 +569,7 @@
 .method public existsDouble(I)Z
     .locals 1
 
-    .line 233
+    .line 260
     iget-object v0, p0, Lcom/miui/maml/data/Variables;->mDoubleBucket:Lcom/miui/maml/data/Variables$DoubleBucket;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/data/Variables$DoubleBucket;->exists(I)Z
@@ -580,7 +582,7 @@
 .method public existsDouble(Ljava/lang/String;)Z
     .locals 1
 
-    .line 229
+    .line 256
     iget-object v0, p0, Lcom/miui/maml/data/Variables;->mDoubleBucket:Lcom/miui/maml/data/Variables$DoubleBucket;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/data/Variables$DoubleBucket;->exists(Ljava/lang/String;)Z
@@ -593,7 +595,7 @@
 .method public existsObj(Ljava/lang/String;)Z
     .locals 1
 
-    .line 237
+    .line 264
     iget-object v0, p0, Lcom/miui/maml/data/Variables;->mObjectBucket:Lcom/miui/maml/data/Variables$VarBucket;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/data/Variables$VarBucket;->exists(Ljava/lang/String;)Z
@@ -606,7 +608,7 @@
 .method public get(I)Ljava/lang/Object;
     .locals 1
 
-    .line 316
+    .line 351
     iget-object v0, p0, Lcom/miui/maml/data/Variables;->mObjectBucket:Lcom/miui/maml/data/Variables$VarBucket;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/data/Variables$VarBucket;->get(I)Ljava/lang/Object;
@@ -619,7 +621,7 @@
 .method public get(Ljava/lang/String;)Ljava/lang/Object;
     .locals 0
 
-    .line 312
+    .line 347
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->registerVariable(Ljava/lang/String;)I
 
     move-result p1
@@ -634,7 +636,7 @@
 .method public getArr(II)Ljava/lang/Object;
     .locals 0
 
-    .line 341
+    .line 376
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/data/Variables;->getArrInner(II)Ljava/lang/Object;
 
     move-result-object p1
@@ -647,7 +649,7 @@
 
     const-wide/16 v0, 0x0
 
-    .line 346
+    .line 381
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->get(I)Ljava/lang/Object;
 
@@ -655,7 +657,7 @@
 
     if-nez v2, :cond_0
 
-    .line 348
+    .line 383
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -674,7 +676,7 @@
 
     goto :goto_0
 
-    .line 349
+    .line 384
     :cond_0
     invoke-static {v2, p2}, Lcom/miui/maml/data/Variables;->isIndexValid(Ljava/lang/Object;I)Z
 
@@ -682,7 +684,7 @@
 
     if-nez v3, :cond_1
 
-    .line 350
+    .line 385
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -707,15 +709,13 @@
 
     goto :goto_0
 
-    .line 351
+    .line 386
     :cond_1
     instance-of v3, v2, [Z
 
     if-eqz v3, :cond_3
 
-    .line 352
-    check-cast v2, [Z
-
+    .line 387
     check-cast v2, [Z
 
     aget-boolean p1, v2, p2
@@ -727,7 +727,7 @@
     :cond_2
     return-wide v0
 
-    .line 354
+    .line 389
     :cond_3
     invoke-static {v2, p2}, Ljava/lang/reflect/Array;->getDouble(Ljava/lang/Object;I)D
 
@@ -737,7 +737,7 @@
 
     return-wide p1
 
-    .line 357
+    .line 392
     :catch_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -768,7 +768,7 @@
 .method public getArrString(II)Ljava/lang/String;
     .locals 0
 
-    .line 363
+    .line 398
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/data/Variables;->getArrInner(II)Ljava/lang/Object;
 
     move-result-object p1
@@ -781,7 +781,7 @@
 .method public getDouble(I)D
     .locals 2
 
-    .line 320
+    .line 355
     iget-object v0, p0, Lcom/miui/maml/data/Variables;->mDoubleBucket:Lcom/miui/maml/data/Variables$DoubleBucket;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/data/Variables$DoubleBucket;->get(I)D
@@ -794,7 +794,7 @@
 .method public getDouble(Ljava/lang/String;)D
     .locals 2
 
-    .line 324
+    .line 359
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->registerDoubleVariable(Ljava/lang/String;)I
 
     move-result p1
@@ -809,7 +809,7 @@
 .method public getString(I)Ljava/lang/String;
     .locals 0
 
-    .line 329
+    .line 364
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->get(I)Ljava/lang/Object;
 
@@ -830,7 +830,7 @@
 .method public getString(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 336
+    .line 371
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->registerVariable(Ljava/lang/String;)I
 
     move-result p1
@@ -847,7 +847,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 475
+    .line 510
     iget-object p2, p0, Lcom/miui/maml/data/Variables;->mDoubleBucket:Lcom/miui/maml/data/Variables$DoubleBucket;
 
     invoke-virtual {p2, p1}, Lcom/miui/maml/data/Variables$DoubleBucket;->getVer(I)I
@@ -868,23 +868,27 @@
 .end method
 
 .method public final put(ID)V
-    .locals 1
+    .locals 2
 
-    .line 283
+    .line 314
     iget-object v0, p0, Lcom/miui/maml/data/Variables;->mDoubleBucket:Lcom/miui/maml/data/Variables$DoubleBucket;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/miui/maml/data/Variables$DoubleBucket;->put(ID)V
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, p2, p3, v1}, Lcom/miui/maml/data/Variables$DoubleBucket;->put(IDI)V
 
     return-void
 .end method
 
 .method public final put(ILjava/lang/Object;)V
-    .locals 1
+    .locals 2
 
-    .line 308
+    .line 343
     iget-object v0, p0, Lcom/miui/maml/data/Variables;->mObjectBucket:Lcom/miui/maml/data/Variables$VarBucket;
 
-    invoke-virtual {v0, p1, p2}, Lcom/miui/maml/data/Variables$VarBucket;->put(ILjava/lang/Object;)V
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, p2, v1}, Lcom/miui/maml/data/Variables$VarBucket;->put(ILjava/lang/Object;I)V
 
     return-void
 .end method
@@ -892,7 +896,7 @@
 .method public final put(Ljava/lang/String;D)V
     .locals 0
 
-    .line 279
+    .line 306
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->registerDoubleVariable(Ljava/lang/String;)I
 
     move-result p1
@@ -902,10 +906,25 @@
     return-void
 .end method
 
+.method public final put(Ljava/lang/String;DI)V
+    .locals 1
+
+    .line 310
+    iget-object v0, p0, Lcom/miui/maml/data/Variables;->mDoubleBucket:Lcom/miui/maml/data/Variables$DoubleBucket;
+
+    invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->registerDoubleVariable(Ljava/lang/String;)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/miui/maml/data/Variables$DoubleBucket;->put(IDI)V
+
+    return-void
+.end method
+
 .method public put(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 0
 
-    .line 304
+    .line 335
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->registerVariable(Ljava/lang/String;)I
 
     move-result p1
@@ -915,10 +934,25 @@
     return-void
 .end method
 
+.method public final put(Ljava/lang/String;Ljava/lang/Object;I)V
+    .locals 1
+
+    .line 339
+    iget-object v0, p0, Lcom/miui/maml/data/Variables;->mObjectBucket:Lcom/miui/maml/data/Variables$VarBucket;
+
+    invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->registerVariable(Ljava/lang/String;)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/miui/maml/data/Variables$VarBucket;->put(ILjava/lang/Object;I)V
+
+    return-void
+.end method
+
 .method public putArr(IID)Z
     .locals 2
 
-    .line 400
+    .line 435
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -927,7 +961,7 @@
 
     if-nez v0, :cond_0
 
-    .line 402
+    .line 437
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -946,7 +980,7 @@
 
     return v1
 
-    .line 406
+    .line 441
     :cond_0
     invoke-static {v0, p2, p3, p4}, Lcom/miui/maml/data/Variables;->putValueToArr(Ljava/lang/Object;ID)Z
 
@@ -954,7 +988,7 @@
 
     if-eqz p2, :cond_1
 
-    .line 407
+    .line 442
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/data/Variables;->put(ILjava/lang/Object;)V
 
     const/4 p1, 0x1
@@ -968,7 +1002,7 @@
 .method public putArr(IILjava/lang/Object;)Z
     .locals 2
 
-    .line 368
+    .line 403
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/Variables;->get(I)Ljava/lang/Object;
 
@@ -976,11 +1010,9 @@
 
     check-cast v0, [Ljava/lang/Object;
 
-    check-cast v0, [Ljava/lang/Object;
-
     if-nez v0, :cond_0
 
-    .line 370
+    .line 405
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -999,7 +1031,7 @@
 
     goto :goto_0
 
-    .line 371
+    .line 406
     :cond_0
     invoke-static {v0, p2}, Lcom/miui/maml/data/Variables;->isIndexValid(Ljava/lang/Object;I)Z
 
@@ -1007,7 +1039,7 @@
 
     if-nez v1, :cond_1
 
-    .line 372
+    .line 407
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1032,11 +1064,11 @@
 
     goto :goto_0
 
-    .line 374
+    .line 409
     :cond_1
     aput-object p3, v0, p2
 
-    .line 376
+    .line 411
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/data/Variables;->put(ILjava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_1
@@ -1046,7 +1078,7 @@
 
     return p1
 
-    .line 382
+    .line 417
     :catch_0
     new-instance p3, Ljava/lang/StringBuilder;
 
@@ -1072,7 +1104,7 @@
 
     goto :goto_0
 
-    .line 380
+    .line 415
     :catch_1
     new-instance p2, Ljava/lang/StringBuilder;
 
@@ -1099,12 +1131,12 @@
 .method public putArrDouble(IILjava/lang/Object;)Z
     .locals 2
 
-    .line 388
+    .line 423
     instance-of v0, p3, Ljava/lang/Number;
 
     if-eqz v0, :cond_0
 
-    .line 389
+    .line 424
     check-cast p3, Ljava/lang/Number;
 
     invoke-virtual {p3}, Ljava/lang/Number;->doubleValue()D
@@ -1117,13 +1149,13 @@
 
     return p1
 
-    .line 390
+    .line 425
     :cond_0
     instance-of v0, p3, Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 392
+    .line 427
     :try_start_0
     check-cast p3, Ljava/lang/String;
 
@@ -1149,14 +1181,14 @@
 .method public final putDouble(ILjava/lang/Object;)Z
     .locals 4
 
-    .line 287
+    .line 318
     instance-of v0, p2, Ljava/lang/Number;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 288
+    .line 319
     check-cast p2, Ljava/lang/Number;
 
     invoke-virtual {p2}, Ljava/lang/Number;->doubleValue()D
@@ -1167,13 +1199,13 @@
 
     return v1
 
-    .line 290
+    .line 321
     :cond_0
     instance-of v0, p2, Ljava/lang/Boolean;
 
     if-eqz v0, :cond_2
 
-    .line 291
+    .line 322
     check-cast p2, Ljava/lang/Boolean;
 
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
@@ -1194,13 +1226,13 @@
 
     return v1
 
-    .line 293
+    .line 324
     :cond_2
     instance-of v0, p2, Ljava/lang/String;
 
     if-eqz v0, :cond_3
 
-    .line 295
+    .line 326
     :try_start_0
     check-cast p2, Ljava/lang/String;
 
@@ -1226,7 +1258,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 275
+    .line 302
     invoke-virtual {p0, p1, p2, p3}, Lcom/miui/maml/data/Variables;->put(Ljava/lang/String;D)V
 
     return-void
@@ -1235,7 +1267,7 @@
 .method public registerDoubleVariable(Ljava/lang/String;)I
     .locals 1
 
-    .line 221
+    .line 248
     iget-object v0, p0, Lcom/miui/maml/data/Variables;->mDoubleBucket:Lcom/miui/maml/data/Variables$DoubleBucket;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/data/Variables$DoubleBucket;->registerVariable(Ljava/lang/String;)I
@@ -1248,7 +1280,7 @@
 .method public registerVariable(Ljava/lang/String;)I
     .locals 1
 
-    .line 225
+    .line 252
     iget-object v0, p0, Lcom/miui/maml/data/Variables;->mObjectBucket:Lcom/miui/maml/data/Variables$VarBucket;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/data/Variables$VarBucket;->registerVariable(Ljava/lang/String;)I
@@ -1261,12 +1293,12 @@
 .method public reset()V
     .locals 1
 
-    .line 480
+    .line 515
     iget-object v0, p0, Lcom/miui/maml/data/Variables;->mDoubleBucket:Lcom/miui/maml/data/Variables$DoubleBucket;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Variables$DoubleBucket;->reset()V
 
-    .line 481
+    .line 516
     iget-object v0, p0, Lcom/miui/maml/data/Variables;->mObjectBucket:Lcom/miui/maml/data/Variables$VarBucket;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Variables$VarBucket;->reset()V

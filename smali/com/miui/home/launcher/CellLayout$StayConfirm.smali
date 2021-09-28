@@ -27,14 +27,14 @@
 .method private constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 1407
+    .line 1341
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 1409
+    .line 1343
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     return-void
@@ -43,16 +43,16 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/CellLayout$1;)V
     .locals 0
 
-    .line 1407
+    .line 1341
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout$StayConfirm;-><init>(Lcom/miui/home/launcher/CellLayout;)V
 
     return-void
 .end method
 
-.method static synthetic access$2002(Lcom/miui/home/launcher/CellLayout$StayConfirm;Lcom/miui/home/launcher/DragObject;)Lcom/miui/home/launcher/DragObject;
+.method static synthetic access$1702(Lcom/miui/home/launcher/CellLayout$StayConfirm;Lcom/miui/home/launcher/DragObject;)Lcom/miui/home/launcher/DragObject;
     .locals 0
 
-    .line 1407
+    .line 1341
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     return-object p1
@@ -65,7 +65,7 @@
 
     const/4 v0, 0x0
 
-    .line 1477
+    .line 1411
     iput-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     return-void
@@ -74,7 +74,7 @@
 .method public run()V
     .locals 7
 
-    .line 1413
+    .line 1347
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     iget-object v0, v0, Lcom/miui/home/launcher/CellLayout;->mLastDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
@@ -83,7 +83,7 @@
 
     return-void
 
-    .line 1416
+    .line 1350
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
@@ -107,11 +107,11 @@
 
     return-void
 
-    .line 1419
+    .line 1353
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$500(Lcom/miui/home/launcher/CellLayout;)[[Landroid/view/View;
+    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$200(Lcom/miui/home/launcher/CellLayout;)[[Landroid/view/View;
 
     move-result-object v0
 
@@ -139,7 +139,7 @@
 
     aget-object v0, v0, v2
 
-    .line 1420
+    .line 1354
     instance-of v2, v0, Lcom/miui/home/launcher/DropTarget;
 
     if-eqz v2, :cond_2
@@ -151,7 +151,7 @@
     :cond_2
     const/4 v0, 0x0
 
-    .line 1421
+    .line 1355
     :goto_0
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
@@ -175,7 +175,7 @@
 
     goto/16 :goto_2
 
-    .line 1430
+    .line 1364
     :cond_3
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
@@ -187,7 +187,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 1432
+    .line 1366
     invoke-interface {v0}, Lcom/miui/home/launcher/DropTarget;->isDropEnabled()Z
 
     move-result v1
@@ -204,24 +204,24 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    .line 1433
-    invoke-static {v1}, Lcom/miui/home/launcher/CellLayout;->access$900(Lcom/miui/home/launcher/CellLayout;)Lcom/miui/home/launcher/DropTarget;
+    .line 1367
+    invoke-static {v1}, Lcom/miui/home/launcher/CellLayout;->access$600(Lcom/miui/home/launcher/CellLayout;)Lcom/miui/home/launcher/DropTarget;
 
     move-result-object v1
 
     if-eq v0, v1, :cond_4
 
-    .line 1434
+    .line 1368
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-interface {v0, v1}, Lcom/miui/home/launcher/DropTarget;->onDragEnter(Lcom/miui/home/launcher/DragObject;)V
 
-    .line 1435
+    .line 1369
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v1, v0}, Lcom/miui/home/launcher/CellLayout;->access$902(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/DropTarget;)Lcom/miui/home/launcher/DropTarget;
+    invoke-static {v1, v0}, Lcom/miui/home/launcher/CellLayout;->access$602(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/DropTarget;)Lcom/miui/home/launcher/DropTarget;
 
-    .line 1436
+    .line 1370
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DragObject;->isMultiDrag()Z
@@ -230,19 +230,19 @@
 
     if-eqz v0, :cond_d
 
-    .line 1437
+    .line 1371
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$1000(Lcom/miui/home/launcher/CellLayout;)V
+    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$700(Lcom/miui/home/launcher/CellLayout;)V
 
-    .line 1438
+    .line 1372
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->clearCellBackground()V
 
     goto/16 :goto_3
 
-    .line 1441
+    .line 1375
     :cond_4
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
@@ -256,18 +256,18 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$1100(Lcom/miui/home/launcher/CellLayout;)Z
+    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$800(Lcom/miui/home/launcher/CellLayout;)Z
 
     move-result v0
 
     if-nez v0, :cond_d
 
-    .line 1442
+    .line 1376
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$1000(Lcom/miui/home/launcher/CellLayout;)V
+    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$700(Lcom/miui/home/launcher/CellLayout;)V
 
-    .line 1443
+    .line 1377
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     iget-object v1, v0, Lcom/miui/home/launcher/CellLayout;->mLastDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
@@ -286,7 +286,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    .line 1444
+    .line 1378
     invoke-virtual {v3}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v3
@@ -301,12 +301,12 @@
 
     iget v4, v4, Lcom/miui/home/launcher/ItemInfo;->spanY:I
 
-    .line 1443
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/miui/home/launcher/CellLayout;->access$800(Lcom/miui/home/launcher/CellLayout;IIII)V
+    .line 1377
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/miui/home/launcher/CellLayout;->access$500(Lcom/miui/home/launcher/CellLayout;IIII)V
 
     goto/16 :goto_3
 
-    .line 1447
+    .line 1381
     :cond_5
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
@@ -316,7 +316,7 @@
 
     if-nez v0, :cond_7
 
-    .line 1448
+    .line 1382
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DragObject;->isMultiDrag()Z
@@ -325,12 +325,12 @@
 
     if-eqz v0, :cond_6
 
-    .line 1449
+    .line 1383
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$1200(Lcom/miui/home/launcher/CellLayout;)V
+    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$900(Lcom/miui/home/launcher/CellLayout;)V
 
-    .line 1450
+    .line 1384
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->mDragObject:Lcom/miui/home/launcher/DragObject;
@@ -355,15 +355,15 @@
 
     aget v3, v3, v4
 
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/miui/home/launcher/CellLayout;->access$1300(Lcom/miui/home/launcher/CellLayout;IIII)V
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/miui/home/launcher/CellLayout;->access$1000(Lcom/miui/home/launcher/CellLayout;IIII)V
 
     goto/16 :goto_3
 
-    .line 1452
+    .line 1386
     :cond_6
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$1400(Lcom/miui/home/launcher/CellLayout;)[[Landroid/view/View;
+    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$1100(Lcom/miui/home/launcher/CellLayout;)[[Landroid/view/View;
 
     move-result-object v0
 
@@ -389,21 +389,21 @@
 
     if-nez v0, :cond_d
 
-    .line 1453
+    .line 1387
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$1000(Lcom/miui/home/launcher/CellLayout;)V
+    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$700(Lcom/miui/home/launcher/CellLayout;)V
 
-    .line 1454
+    .line 1388
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$1100(Lcom/miui/home/launcher/CellLayout;)Z
+    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$800(Lcom/miui/home/launcher/CellLayout;)Z
 
     move-result v0
 
     if-eqz v0, :cond_d
 
-    .line 1455
+    .line 1389
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     iget-object v1, v0, Lcom/miui/home/launcher/CellLayout;->mLastDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
@@ -420,11 +420,11 @@
 
     aget v2, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/CellLayout;->access$1500(Lcom/miui/home/launcher/CellLayout;II)I
+    invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/CellLayout;->access$1200(Lcom/miui/home/launcher/CellLayout;II)I
 
     move-result v0
 
-    .line 1456
+    .line 1390
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/CellLayout;->getLastOccupiedIndex()I
@@ -433,23 +433,23 @@
 
     if-le v0, v1, :cond_d
 
-    .line 1457
+    .line 1391
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/CellLayout;->access$1600(Lcom/miui/home/launcher/CellLayout;I)Z
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/CellLayout;->access$1300(Lcom/miui/home/launcher/CellLayout;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_d
 
-    .line 1458
+    .line 1392
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/CellLayout;->alignIconsToTop(Z)Ljava/util/ArrayList;
 
     goto/16 :goto_3
 
-    .line 1462
+    .line 1396
     :cond_7
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
@@ -461,14 +461,14 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 1463
+    .line 1397
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$1000(Lcom/miui/home/launcher/CellLayout;)V
+    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$700(Lcom/miui/home/launcher/CellLayout;)V
 
     goto/16 :goto_3
 
-    .line 1465
+    .line 1399
     :cond_8
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
@@ -478,29 +478,29 @@
 
     if-eqz v0, :cond_9
 
-    .line 1466
+    .line 1400
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$1200(Lcom/miui/home/launcher/CellLayout;)V
+    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$900(Lcom/miui/home/launcher/CellLayout;)V
 
     goto :goto_1
 
-    .line 1467
+    .line 1401
     :cond_9
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$1100(Lcom/miui/home/launcher/CellLayout;)Z
+    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$800(Lcom/miui/home/launcher/CellLayout;)Z
 
     move-result v0
 
     if-nez v0, :cond_a
 
-    .line 1468
+    .line 1402
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$1000(Lcom/miui/home/launcher/CellLayout;)V
+    invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$700(Lcom/miui/home/launcher/CellLayout;)V
 
-    .line 1470
+    .line 1404
     :cond_a
     :goto_1
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
@@ -533,11 +533,11 @@
 
     iget v4, v4, Lcom/miui/home/launcher/CellLayout$DragPos;->stayType:I
 
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/miui/home/launcher/CellLayout;->access$1300(Lcom/miui/home/launcher/CellLayout;IIII)V
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/miui/home/launcher/CellLayout;->access$1000(Lcom/miui/home/launcher/CellLayout;IIII)V
 
     goto :goto_3
 
-    .line 1422
+    .line 1356
     :cond_b
     :goto_2
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->mDragObject:Lcom/miui/home/launcher/DragObject;
@@ -546,12 +546,12 @@
 
     move-result-object v0
 
-    .line 1423
+    .line 1357
     iget-wide v0, v0, Lcom/miui/home/launcher/ItemInfo;->screenId:J
 
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    invoke-static {v2}, Lcom/miui/home/launcher/CellLayout;->access$600(Lcom/miui/home/launcher/CellLayout;)Lcom/miui/home/launcher/CellLayout$CellInfo;
+    invoke-static {v2}, Lcom/miui/home/launcher/CellLayout;->access$300(Lcom/miui/home/launcher/CellLayout;)Lcom/miui/home/launcher/CellLayout$CellInfo;
 
     move-result-object v2
 
@@ -561,7 +561,7 @@
 
     if-nez v0, :cond_c
 
-    .line 1424
+    .line 1358
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     iget-object v1, v0, Lcom/miui/home/launcher/CellLayout;->mLastDragPos:Lcom/miui/home/launcher/CellLayout$DragPos;
@@ -580,7 +580,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    .line 1425
+    .line 1359
     invoke-virtual {v3}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v3
@@ -595,12 +595,12 @@
 
     iget v4, v4, Lcom/miui/home/launcher/ItemInfo;->spanY:I
 
-    .line 1424
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/miui/home/launcher/CellLayout;->access$700(Lcom/miui/home/launcher/CellLayout;IIII)V
+    .line 1358
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/miui/home/launcher/CellLayout;->access$400(Lcom/miui/home/launcher/CellLayout;IIII)V
 
     goto :goto_3
 
-    .line 1427
+    .line 1361
     :cond_c
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->this$0:Lcom/miui/home/launcher/CellLayout;
 
@@ -620,7 +620,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout$StayConfirm;->mDragObject:Lcom/miui/home/launcher/DragObject;
 
-    .line 1428
+    .line 1362
     invoke-virtual {v3}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v3
@@ -635,10 +635,10 @@
 
     iget v4, v4, Lcom/miui/home/launcher/ItemInfo;->spanY:I
 
-    .line 1427
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/miui/home/launcher/CellLayout;->access$800(Lcom/miui/home/launcher/CellLayout;IIII)V
+    .line 1361
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/miui/home/launcher/CellLayout;->access$500(Lcom/miui/home/launcher/CellLayout;IIII)V
 
-    .line 1473
+    .line 1407
     :cond_d
     :goto_3
     invoke-virtual {p0}, Lcom/miui/home/launcher/CellLayout$StayConfirm;->clear()V

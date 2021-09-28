@@ -1,4 +1,4 @@
-.class final Landroidx/core/view/ViewCompat$5;
+.class Landroidx/core/view/ViewCompat$5;
 .super Landroidx/core/view/ViewCompat$AccessibilityViewProperty;
 .source "ViewCompat.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -26,7 +26,7 @@
 .method constructor <init>(ILjava/lang/Class;I)V
     .locals 0
 
-    .line 3988
+    .line 4057
     invoke-direct {p0, p1, p2, p3}, Landroidx/core/view/ViewCompat$AccessibilityViewProperty;-><init>(ILjava/lang/Class;I)V
 
     return-void
@@ -37,7 +37,7 @@
 .method frameworkGet(Landroid/view/View;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 3993
+    .line 4062
     invoke-virtual {p1}, Landroid/view/View;->isAccessibilityHeading()Z
 
     move-result p1
@@ -52,7 +52,7 @@
 .method bridge synthetic frameworkGet(Landroid/view/View;)Ljava/lang/Object;
     .locals 0
 
-    .line 3988
+    .line 4057
     invoke-virtual {p0, p1}, Landroidx/core/view/ViewCompat$5;->frameworkGet(Landroid/view/View;)Ljava/lang/Boolean;
 
     move-result-object p1

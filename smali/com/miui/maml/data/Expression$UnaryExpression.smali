@@ -24,21 +24,21 @@
 .method public constructor <init>(Lcom/miui/maml/data/Expression;Lcom/miui/maml/data/Expression$Ope;)V
     .locals 2
 
-    .line 521
+    .line 599
     invoke-direct {p0}, Lcom/miui/maml/data/Expression;-><init>()V
 
-    .line 519
+    .line 597
     sget-object v0, Lcom/miui/maml/data/Expression$Ope;->INVALID:Lcom/miui/maml/data/Expression$Ope;
 
     iput-object v0, p0, Lcom/miui/maml/data/Expression$UnaryExpression;->mOpe:Lcom/miui/maml/data/Expression$Ope;
 
-    .line 522
+    .line 600
     iput-object p1, p0, Lcom/miui/maml/data/Expression$UnaryExpression;->mExp:Lcom/miui/maml/data/Expression;
 
-    .line 523
+    .line 601
     iput-object p2, p0, Lcom/miui/maml/data/Expression$UnaryExpression;->mOpe:Lcom/miui/maml/data/Expression$Ope;
 
-    .line 524
+    .line 602
     iget-object p1, p0, Lcom/miui/maml/data/Expression$UnaryExpression;->mOpe:Lcom/miui/maml/data/Expression$Ope;
 
     sget-object v0, Lcom/miui/maml/data/Expression$Ope;->INVALID:Lcom/miui/maml/data/Expression$Ope;
@@ -47,7 +47,7 @@
 
     const-string p1, "Expression"
 
-    .line 525
+    .line 603
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,10 +73,10 @@
 .method public accept(Lcom/miui/maml/data/ExpressionVisitor;)V
     .locals 1
 
-    .line 556
+    .line 634
     invoke-virtual {p1, p0}, Lcom/miui/maml/data/ExpressionVisitor;->visit(Lcom/miui/maml/data/Expression;)V
 
-    .line 557
+    .line 635
     iget-object v0, p0, Lcom/miui/maml/data/Expression$UnaryExpression;->mExp:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/data/Expression;->accept(Lcom/miui/maml/data/ExpressionVisitor;)V
@@ -87,7 +87,7 @@
 .method public evaluate()D
     .locals 5
 
-    .line 531
+    .line 609
     sget-object v0, Lcom/miui/maml/data/Expression$1;->$SwitchMap$com$miui$maml$data$Expression$Ope:[I
 
     iget-object v1, p0, Lcom/miui/maml/data/Expression$UnaryExpression;->mOpe:Lcom/miui/maml/data/Expression$Ope;
@@ -106,10 +106,10 @@
 
     const-string v1, "fail to evalute UnaryExpression, invalid operator"
 
-    .line 540
+    .line 618
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 541
+    .line 619
     iget-object v0, p0, Lcom/miui/maml/data/Expression$UnaryExpression;->mExp:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->evaluate()D
@@ -118,7 +118,7 @@
 
     return-wide v0
 
-    .line 537
+    .line 615
     :pswitch_0
     iget-object v0, p0, Lcom/miui/maml/data/Expression$UnaryExpression;->mExp:Lcom/miui/maml/data/Expression;
 
@@ -134,7 +134,7 @@
 
     return-wide v0
 
-    .line 535
+    .line 613
     :pswitch_1
     iget-object v0, p0, Lcom/miui/maml/data/Expression$UnaryExpression;->mExp:Lcom/miui/maml/data/Expression;
 
@@ -151,7 +151,7 @@
     :cond_0
     return-wide v1
 
-    .line 533
+    .line 611
     :pswitch_2
     iget-object v0, p0, Lcom/miui/maml/data/Expression$UnaryExpression;->mExp:Lcom/miui/maml/data/Expression;
 
@@ -174,7 +174,7 @@
 .method public evaluateStr()Ljava/lang/String;
     .locals 2
 
-    .line 551
+    .line 629
     invoke-virtual {p0}, Lcom/miui/maml/data/Expression$UnaryExpression;->evaluate()D
 
     move-result-wide v0
@@ -189,7 +189,7 @@
 .method public isNull()Z
     .locals 1
 
-    .line 546
+    .line 624
     iget-object v0, p0, Lcom/miui/maml/data/Expression$UnaryExpression;->mExp:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/Expression;->isNull()Z

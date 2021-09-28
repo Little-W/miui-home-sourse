@@ -325,8 +325,6 @@
     const-string v1, "problem while stopping AppWidgetHost during Launcher destruction"
 
     .line 160
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :cond_2
     :goto_0
     return-void
@@ -346,7 +344,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "|"
+    const-string/jumbo v1, "|"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

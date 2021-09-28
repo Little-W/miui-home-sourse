@@ -9,7 +9,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroid/support/v4/os/IResultReceiver$Stub;
+        Landroid/support/v4/os/IResultReceiver$Stub;,
+        Landroid/support/v4/os/IResultReceiver$Default;
     }
 .end annotation
 

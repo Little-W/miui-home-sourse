@@ -14,6 +14,7 @@
         Lcom/miui/maml/ActionCommand$BaseMethodCommand;,
         Lcom/miui/maml/ActionCommand$ObjVar;,
         Lcom/miui/maml/ActionCommand$VideoCommand;,
+        Lcom/miui/maml/ActionCommand$JsonObjectCommand;,
         Lcom/miui/maml/ActionCommand$FunctionPerformCommand;,
         Lcom/miui/maml/ActionCommand$ActionPerformCommand;,
         Lcom/miui/maml/ActionCommand$EaseTypeCommand;,
@@ -87,7 +88,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 72
+    .line 77
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -104,10 +105,10 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;)V
     .locals 0
 
-    .line 3138
+    .line 3262
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3139
+    .line 3263
     iput-object p1, p0, Lcom/miui/maml/ActionCommand;->mScreenElement:Lcom/miui/maml/elements/ScreenElement;
 
     return-void
@@ -116,7 +117,7 @@
 .method static synthetic access$000()Landroid/os/Handler;
     .locals 1
 
-    .line 57
+    .line 62
     sget-object v0, Lcom/miui/maml/ActionCommand;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -125,7 +126,7 @@
 .method protected static create(Lcom/miui/maml/elements/ScreenElement;Ljava/lang/String;Ljava/lang/String;)Lcom/miui/maml/ActionCommand;
     .locals 3
 
-    .line 3100
+    .line 3224
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -142,27 +143,27 @@
 
     goto :goto_0
 
-    .line 3104
+    .line 3228
     :cond_0
     new-instance v0, Lcom/miui/maml/util/Variable;
 
     invoke-direct {v0, p1}, Lcom/miui/maml/util/Variable;-><init>(Ljava/lang/String;)V
 
-    .line 3105
+    .line 3229
     invoke-virtual {v0}, Lcom/miui/maml/util/Variable;->getObjName()Ljava/lang/String;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    .line 3106
+    .line 3230
     invoke-static {p0, p1, p2}, Lcom/miui/maml/ActionCommand$PropertyCommand;->create(Lcom/miui/maml/elements/ScreenElement;Ljava/lang/String;Ljava/lang/String;)Lcom/miui/maml/ActionCommand$PropertyCommand;
 
     move-result-object p0
 
     return-object p0
 
-    .line 3109
+    .line 3233
     :cond_1
     invoke-virtual {v0}, Lcom/miui/maml/util/Variable;->getPropertyName()Ljava/lang/String;
 
@@ -170,14 +171,14 @@
 
     const-string v0, "RingMode"
 
-    .line 3110
+    .line 3234
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 3111
+    .line 3235
     new-instance p1, Lcom/miui/maml/ActionCommand$RingModeCommand;
 
     invoke-direct {p1, p0, p2}, Lcom/miui/maml/ActionCommand$RingModeCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Ljava/lang/String;)V
@@ -187,14 +188,14 @@
     :cond_2
     const-string v0, "Data"
 
-    .line 3112
+    .line 3236
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 3113
+    .line 3237
     new-instance p1, Lcom/miui/maml/ActionCommand$DataSwitchCommand;
 
     invoke-direct {p1, p0, p2}, Lcom/miui/maml/ActionCommand$DataSwitchCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Ljava/lang/String;)V
@@ -204,14 +205,14 @@
     :cond_3
     const-string v0, "UsbStorage"
 
-    .line 3114
+    .line 3238
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 3115
+    .line 3239
     new-instance p1, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;
 
     invoke-direct {p1, p0, p2}, Lcom/miui/maml/ActionCommand$UsbStorageSwitchCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Ljava/lang/String;)V
@@ -235,7 +236,7 @@
 
     return-object v0
 
-    .line 2992
+    .line 3113
     :cond_0
     invoke-virtual {p1}, Lcom/miui/maml/elements/ScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
 
@@ -251,7 +252,7 @@
 
     move-result-object v1
 
-    .line 2993
+    .line 3114
     invoke-virtual {p1}, Lcom/miui/maml/elements/ScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v2
@@ -270,19 +271,19 @@
 
     const-wide/16 v4, 0x0
 
-    .line 2994
+    .line 3115
     invoke-static {p0, v3, v4, v5}, Lcom/miui/maml/util/Utils;->getAttrAsLong(Lorg/w3c/dom/Element;Ljava/lang/String;J)J
 
     move-result-wide v6
 
-    .line 2996
+    .line 3117
     invoke-interface {p0}, Lorg/w3c/dom/Element;->getNodeName()Ljava/lang/String;
 
     move-result-object v3
 
     const/4 v8, -0x1
 
-    .line 2997
+    .line 3118
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
     move-result v9
@@ -396,6 +397,19 @@
     goto/16 :goto_0
 
     :sswitch_8
+    const-string v9, "JsonObjectCommand"
+
+    invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const/16 v8, 0x1a
+
+    goto/16 :goto_0
+
+    :sswitch_9
     const-string v9, "SensorCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -408,7 +422,7 @@
 
     goto/16 :goto_0
 
-    :sswitch_9
+    :sswitch_a
     const-string v9, "VideoCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -421,7 +435,7 @@
 
     goto/16 :goto_0
 
-    :sswitch_a
+    :sswitch_b
     const-string v9, "VariableCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -434,7 +448,7 @@
 
     goto/16 :goto_0
 
-    :sswitch_b
+    :sswitch_c
     const-string v9, "AnimationCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -447,7 +461,7 @@
 
     goto/16 :goto_0
 
-    :sswitch_c
+    :sswitch_d
     const-string v9, "GroupCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -460,7 +474,7 @@
 
     goto/16 :goto_0
 
-    :sswitch_d
+    :sswitch_e
     const-string v9, "ExternCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -473,7 +487,7 @@
 
     goto/16 :goto_0
 
-    :sswitch_e
+    :sswitch_f
     const-string v9, "PbrCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -486,7 +500,7 @@
 
     goto/16 :goto_0
 
-    :sswitch_f
+    :sswitch_10
     const-string v9, "MethodCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -499,7 +513,7 @@
 
     goto/16 :goto_0
 
-    :sswitch_10
+    :sswitch_11
     const-string v9, "FrameRateCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -512,7 +526,7 @@
 
     goto :goto_0
 
-    :sswitch_11
+    :sswitch_12
     const-string v9, "MultiCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -525,7 +539,7 @@
 
     goto :goto_0
 
-    :sswitch_12
+    :sswitch_13
     const-string v9, "EaseTypeCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -538,7 +552,7 @@
 
     goto :goto_0
 
-    :sswitch_13
+    :sswitch_14
     const-string v9, "ActionCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -551,7 +565,7 @@
 
     goto :goto_0
 
-    :sswitch_14
+    :sswitch_15
     const-string v9, "AnimConfigCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -564,7 +578,7 @@
 
     goto :goto_0
 
-    :sswitch_15
+    :sswitch_16
     const-string v9, "Command"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -577,7 +591,7 @@
 
     goto :goto_0
 
-    :sswitch_16
+    :sswitch_17
     const-string v9, "TickListenerCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -590,7 +604,7 @@
 
     goto :goto_0
 
-    :sswitch_17
+    :sswitch_18
     const-string v9, "SoundCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -603,7 +617,7 @@
 
     goto :goto_0
 
-    :sswitch_18
+    :sswitch_19
     const-string v9, "IntentCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -616,7 +630,7 @@
 
     goto :goto_0
 
-    :sswitch_19
+    :sswitch_1a
     const-string v9, "GraphicsCommand"
 
     invoke-virtual {v3, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -631,7 +645,7 @@
     :goto_0
     packed-switch v8, :pswitch_data_0
 
-    .line 3077
+    .line 3201
     invoke-virtual {p1}, Lcom/miui/maml/elements/ScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v3
@@ -646,7 +660,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 3080
+    .line 3204
     invoke-virtual {v3, p1, p0}, Lcom/miui/maml/ObjectFactory$ActionCommandFactory;->create(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)Lcom/miui/maml/ActionCommand;
 
     move-result-object p0
@@ -655,214 +669,222 @@
 
     goto/16 :goto_1
 
-    .line 3074
+    .line 3198
     :pswitch_0
+    new-instance v3, Lcom/miui/maml/ActionCommand$JsonObjectCommand;
+
+    invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$JsonObjectCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
+
+    goto/16 :goto_1
+
+    .line 3195
+    :pswitch_1
     new-instance v3, Lcom/miui/maml/ActionCommand$PbrCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$PbrCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto/16 :goto_1
 
-    .line 3071
-    :pswitch_1
+    .line 3192
+    :pswitch_2
     new-instance v3, Lcom/miui/maml/ActionCommand$VideoCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$VideoCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto/16 :goto_1
 
-    .line 3068
-    :pswitch_2
+    .line 3189
+    :pswitch_3
     new-instance v3, Lcom/miui/maml/ActionCommand$AnimStateCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$AnimStateCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto/16 :goto_1
 
-    .line 3065
-    :pswitch_3
+    .line 3186
+    :pswitch_4
     new-instance v3, Lcom/miui/maml/ActionCommand$AnimConfigCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$AnimConfigCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto/16 :goto_1
 
-    .line 3062
-    :pswitch_4
+    .line 3183
+    :pswitch_5
     new-instance v3, Lcom/miui/maml/ActionCommand$SensorBinderCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$SensorBinderCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto/16 :goto_1
 
-    .line 3059
-    :pswitch_5
+    .line 3180
+    :pswitch_6
     new-instance v3, Lcom/miui/maml/ActionCommand$IfCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$IfCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto/16 :goto_1
 
-    .line 3056
-    :pswitch_6
+    .line 3177
+    :pswitch_7
     new-instance v3, Lcom/miui/maml/ActionCommand$FunctionPerformCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$FunctionPerformCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto/16 :goto_1
 
-    .line 3053
-    :pswitch_7
+    .line 3174
+    :pswitch_8
     new-instance v3, Lcom/miui/maml/ActionCommand$TickListenerCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$TickListenerCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto/16 :goto_1
 
-    .line 3050
-    :pswitch_8
+    .line 3171
+    :pswitch_9
     new-instance v3, Lcom/miui/maml/ActionCommand$EaseTypeCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$EaseTypeCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto/16 :goto_1
 
-    .line 3047
-    :pswitch_9
+    .line 3168
+    :pswitch_a
     new-instance v3, Lcom/miui/maml/ActionCommand$FolmeCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$FolmeCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto/16 :goto_1
 
-    .line 3044
-    :pswitch_a
+    .line 3165
+    :pswitch_b
     new-instance v3, Lcom/miui/maml/ActionCommand$ActionPerformCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$ActionPerformCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto/16 :goto_1
 
-    .line 3041
-    :pswitch_b
+    .line 3162
+    :pswitch_c
     new-instance v3, Lcom/miui/maml/ActionCommand$AnimationCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$AnimationCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto :goto_1
 
-    .line 3038
-    :pswitch_c
+    .line 3159
+    :pswitch_d
     new-instance v3, Lcom/miui/maml/ActionCommand$LoopCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$LoopCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto :goto_1
 
-    .line 3035
-    :pswitch_d
+    .line 3156
+    :pswitch_e
     new-instance v3, Lcom/miui/maml/ActionCommand$MultiCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$MultiCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto :goto_1
 
-    .line 3031
-    :pswitch_e
+    .line 3152
+    :pswitch_f
     new-instance v3, Lcom/miui/maml/ActionCommand$GraphicsCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$GraphicsCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto :goto_1
 
-    .line 3028
-    :pswitch_f
+    .line 3149
+    :pswitch_10
     new-instance v3, Lcom/miui/maml/ActionCommand$FieldCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$FieldCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto :goto_1
 
-    .line 3025
-    :pswitch_10
+    .line 3146
+    :pswitch_11
     new-instance v3, Lcom/miui/maml/ActionCommand$MethodCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$MethodCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto :goto_1
 
-    .line 3022
-    :pswitch_11
+    .line 3143
+    :pswitch_12
     new-instance v3, Lcom/miui/maml/ActionCommand$FrameRateCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$FrameRateCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto :goto_1
 
-    .line 3019
-    :pswitch_12
+    .line 3140
+    :pswitch_13
     new-instance v3, Lcom/miui/maml/VibrateCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/VibrateCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto :goto_1
 
-    .line 3016
-    :pswitch_13
+    .line 3137
+    :pswitch_14
     new-instance v3, Lcom/miui/maml/ActionCommand$ExternCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$ExternCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto :goto_1
 
-    .line 3013
-    :pswitch_14
+    .line 3134
+    :pswitch_15
     new-instance v3, Lcom/miui/maml/ActionCommand$SoundCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$SoundCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto :goto_1
 
-    .line 3010
-    :pswitch_15
+    .line 3131
+    :pswitch_16
     new-instance v3, Lcom/miui/maml/ActionCommand$IntentCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$IntentCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto :goto_1
 
-    .line 3007
-    :pswitch_16
+    .line 3128
+    :pswitch_17
     new-instance v3, Lcom/miui/maml/ActionCommand$VariableBinderCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$VariableBinderCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto :goto_1
 
-    .line 3004
-    :pswitch_17
+    .line 3125
+    :pswitch_18
     new-instance v3, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;
 
     invoke-direct {v3, p1, p0}, Lcom/miui/maml/ActionCommand$VariableAssignmentCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
     goto :goto_1
 
-    :pswitch_18
+    :pswitch_19
     const-string v3, "target"
 
-    .line 2999
+    .line 3120
     invoke-interface {p0, v3}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string v8, "value"
 
-    .line 3000
+    .line 3121
     invoke-interface {p0, v8}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 3001
+    .line 3122
     invoke-static {p1, v3, p0}, Lcom/miui/maml/ActionCommand;->create(Lcom/miui/maml/elements/ScreenElement;Ljava/lang/String;Ljava/lang/String;)Lcom/miui/maml/ActionCommand;
 
     move-result-object p0
@@ -882,7 +904,7 @@
     :cond_3
     if-eqz v2, :cond_4
 
-    .line 3088
+    .line 3212
     new-instance p0, Lcom/miui/maml/ActionCommand$ConditionCommand;
 
     invoke-direct {p0, v3, v2}, Lcom/miui/maml/ActionCommand$ConditionCommand;-><init>(Lcom/miui/maml/ActionCommand;Lcom/miui/maml/data/Expression;)V
@@ -897,7 +919,7 @@
 
     if-lez p1, :cond_5
 
-    .line 3091
+    .line 3215
     new-instance p1, Lcom/miui/maml/ActionCommand$DelayCommand;
 
     invoke-direct {p1, p0, v6, v7}, Lcom/miui/maml/ActionCommand$DelayCommand;-><init>(Lcom/miui/maml/ActionCommand;J)V
@@ -907,7 +929,7 @@
     :cond_5
     if-eqz v1, :cond_6
 
-    .line 3094
+    .line 3218
     new-instance p1, Lcom/miui/maml/ActionCommand$ConditionCommand;
 
     invoke-direct {p1, p0, v1}, Lcom/miui/maml/ActionCommand$ConditionCommand;-><init>(Lcom/miui/maml/ActionCommand;Lcom/miui/maml/data/Expression;)V
@@ -917,26 +939,29 @@
     :cond_6
     return-object p0
 
+    nop
+
     :sswitch_data_0
     .sparse-switch
-        -0x767f5de0 -> :sswitch_19
-        -0x7264f711 -> :sswitch_18
-        -0x67717ca4 -> :sswitch_17
-        -0x65361f86 -> :sswitch_16
-        -0x642188d5 -> :sswitch_15
-        -0x48618908 -> :sswitch_14
-        -0x44fc1feb -> :sswitch_13
-        -0x3d79f23d -> :sswitch_12
-        -0x2dd3ac0e -> :sswitch_11
-        -0x1ab20542 -> :sswitch_10
-        -0xa89b8f6 -> :sswitch_f
-        -0x8b5b575 -> :sswitch_e
-        0x24a136b -> :sswitch_d
-        0x2d9d57ec -> :sswitch_c
-        0x306e6347 -> :sswitch_b
-        0x364dd90f -> :sswitch_a
-        0x39abc670 -> :sswitch_9
-        0x3ca48e11 -> :sswitch_8
+        -0x767f5de0 -> :sswitch_1a
+        -0x7264f711 -> :sswitch_19
+        -0x67717ca4 -> :sswitch_18
+        -0x65361f86 -> :sswitch_17
+        -0x642188d5 -> :sswitch_16
+        -0x48618908 -> :sswitch_15
+        -0x44fc1feb -> :sswitch_14
+        -0x3d79f23d -> :sswitch_13
+        -0x2dd3ac0e -> :sswitch_12
+        -0x1ab20542 -> :sswitch_11
+        -0xa89b8f6 -> :sswitch_10
+        -0x8b5b575 -> :sswitch_f
+        0x24a136b -> :sswitch_e
+        0x2d9d57ec -> :sswitch_d
+        0x306e6347 -> :sswitch_c
+        0x364dd90f -> :sswitch_b
+        0x39abc670 -> :sswitch_a
+        0x3ca48e11 -> :sswitch_9
+        0x418a3ae4 -> :sswitch_8
         0x4719ff4e -> :sswitch_7
         0x4a0cfd11 -> :sswitch_6
         0x4aa3a2fc -> :sswitch_5
@@ -949,6 +974,7 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_19
         :pswitch_18
         :pswitch_17
         :pswitch_16
@@ -960,7 +986,7 @@
         :pswitch_10
         :pswitch_f
         :pswitch_e
-        :pswitch_d
+        :pswitch_e
         :pswitch_d
         :pswitch_c
         :pswitch_b
@@ -992,7 +1018,7 @@
 .method protected final getContext()Landroid/content/Context;
     .locals 1
 
-    .line 3163
+    .line 3287
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand;->getScreenContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v0
@@ -1005,7 +1031,7 @@
 .method protected getRoot()Lcom/miui/maml/ScreenElementRoot;
     .locals 1
 
-    .line 3155
+    .line 3279
     iget-object v0, p0, Lcom/miui/maml/ActionCommand;->mScreenElement:Lcom/miui/maml/elements/ScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/ScreenElement;->getRoot()Lcom/miui/maml/ScreenElementRoot;
@@ -1018,7 +1044,7 @@
 .method protected final getScreenContext()Lcom/miui/maml/ScreenContext;
     .locals 1
 
-    .line 3159
+    .line 3283
     iget-object v0, p0, Lcom/miui/maml/ActionCommand;->mScreenElement:Lcom/miui/maml/elements/ScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/ScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
@@ -1031,7 +1057,7 @@
 .method protected getScreenElement()Lcom/miui/maml/elements/ScreenElement;
     .locals 1
 
-    .line 3147
+    .line 3271
     iget-object v0, p0, Lcom/miui/maml/ActionCommand;->mScreenElement:Lcom/miui/maml/elements/ScreenElement;
 
     return-object v0
@@ -1040,7 +1066,7 @@
 .method protected final getVariables()Lcom/miui/maml/data/Variables;
     .locals 1
 
-    .line 3151
+    .line 3275
     iget-object v0, p0, Lcom/miui/maml/ActionCommand;->mScreenElement:Lcom/miui/maml/elements/ScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/ScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
@@ -1065,13 +1091,13 @@
 
     move v1, v0
 
-    .line 3124
+    .line 3248
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_1
 
-    .line 3125
+    .line 3249
     aget-object v2, p1, v1
 
     if-nez v2, :cond_0
@@ -1083,7 +1109,7 @@
 
     goto :goto_0
 
-    .line 3129
+    .line 3253
     :cond_1
     :goto_1
     array-length p1, p1
@@ -1107,7 +1133,7 @@
 .method public perform()V
     .locals 0
 
-    .line 3143
+    .line 3267
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand;->doPerform()V
 
     return-void

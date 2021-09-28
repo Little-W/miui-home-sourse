@@ -22,10 +22,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 495
+    .line 573
     invoke-direct {p0}, Lcom/miui/maml/data/Expression;-><init>()V
 
-    .line 496
+    .line 574
     iput-object p1, p0, Lcom/miui/maml/data/Expression$StringExpression;->mValue:Ljava/lang/String;
 
     return-void
@@ -36,7 +36,7 @@
 .method public evaluate()D
     .locals 2
 
-    .line 501
+    .line 579
     iget-object v0, p0, Lcom/miui/maml/data/Expression$StringExpression;->mValue:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -45,7 +45,7 @@
 
     if-nez v0, :cond_0
 
-    .line 503
+    .line 581
     :try_start_0
     iget-object v0, p0, Lcom/miui/maml/data/Expression$StringExpression;->mValue:Ljava/lang/String;
 
@@ -67,7 +67,7 @@
 .method public evaluateStr()Ljava/lang/String;
     .locals 1
 
-    .line 512
+    .line 590
     iget-object v0, p0, Lcom/miui/maml/data/Expression$StringExpression;->mValue:Ljava/lang/String;
 
     return-object v0

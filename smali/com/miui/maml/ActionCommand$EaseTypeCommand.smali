@@ -30,15 +30,15 @@
 .method public constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
     .locals 1
 
-    .line 2263
+    .line 2283
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/ActionCommand$TargetCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lorg/w3c/dom/Element;)V
 
-    .line 2264
+    .line 2284
     sget-object p1, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->ANIMATION_ITEM:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$EaseTypeCommand;->mTargetType:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
-    .line 2265
+    .line 2285
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$EaseTypeCommand;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -57,7 +57,7 @@
 
     const-string p1, "easeFunExp"
 
-    .line 2266
+    .line 2286
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -66,7 +66,7 @@
 
     const-string p1, "easeParamsExp"
 
-    .line 2267
+    .line 2287
     invoke-interface {p2, p1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -81,7 +81,7 @@
 .method public doPerform()V
     .locals 5
 
-    .line 2272
+    .line 2292
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$EaseTypeCommand;->getTarget()Ljava/lang/Object;
 
     move-result-object v0
@@ -92,7 +92,7 @@
 
     return-void
 
-    .line 2276
+    .line 2296
     :cond_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -111,7 +111,7 @@
 
     check-cast v1, Lcom/miui/maml/animation/BaseAnimation$AnimationItem;
 
-    .line 2277
+    .line 2297
     iget-object v2, p0, Lcom/miui/maml/ActionCommand$EaseTypeCommand;->mEaseTypeExp:Lcom/miui/maml/data/Expression;
 
     invoke-virtual {v2}, Lcom/miui/maml/data/Expression;->evaluateStr()Ljava/lang/String;

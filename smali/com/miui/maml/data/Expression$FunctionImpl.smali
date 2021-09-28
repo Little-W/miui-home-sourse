@@ -22,10 +22,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 708
+    .line 786
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 709
+    .line 787
     iput p1, p0, Lcom/miui/maml/data/Expression$FunctionImpl;->params:I
 
     return-void
@@ -36,8 +36,27 @@
 .method public abstract evaluate([Lcom/miui/maml/data/Expression;Lcom/miui/maml/data/Variables;)D
 .end method
 
+.method public evaluateJsonArray([Lcom/miui/maml/data/Expression;Lcom/miui/maml/data/Variables;)Lorg/json/JSONArray;
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public evaluateJsonObject([Lcom/miui/maml/data/Expression;Lcom/miui/maml/data/Variables;)Lorg/json/JSONObject;
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
 .method public abstract evaluateStr([Lcom/miui/maml/data/Expression;Lcom/miui/maml/data/Variables;)Ljava/lang/String;
 .end method
 
-.method public abstract reset()V
+.method public reset()V
+    .locals 0
+
+    return-void
 .end method

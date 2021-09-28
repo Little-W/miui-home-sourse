@@ -1,4 +1,4 @@
-.class final Lcom/miui/maml/elements/RectangleScreenElement$2;
+.class Lcom/miui/maml/elements/RectangleScreenElement$2;
 .super Lcom/miui/maml/folme/AnimatedProperty;
 .source "RectangleScreenElement.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 

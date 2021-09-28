@@ -339,8 +339,6 @@
     const-string p2, "reconnect on drag end"
 
     .line 133
-    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 135
     :cond_2
     :goto_1

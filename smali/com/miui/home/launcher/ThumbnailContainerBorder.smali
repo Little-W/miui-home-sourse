@@ -143,7 +143,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0700a4
+    const p2, 0x7f0700a6
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -156,7 +156,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0700aa
+    const p2, 0x7f0700ac
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -252,7 +252,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700b1
+    const v1, 0x7f0700b3
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -318,7 +318,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700b0
+    const v1, 0x7f0700b2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -555,7 +555,7 @@
     .line 84
     invoke-super {p0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->onFinishInflate()V
 
-    const v0, 0x7f0a021d
+    const v0, 0x7f0a0221
 
     .line 85
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ThumbnailContainerBorder;->findViewById(I)Landroid/view/View;
@@ -608,7 +608,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700af
+    const v1, 0x7f0700b1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -622,7 +622,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700b1
+    const v1, 0x7f0700b3
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -824,7 +824,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600a5
+    const v1, 0x7f0600a7
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -837,7 +837,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600a7
+    const v1, 0x7f0600a9
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -850,7 +850,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600a3
+    const v1, 0x7f0600a5
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -863,7 +863,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600a1
+    const v1, 0x7f0600a3
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -879,7 +879,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600a4
+    const v1, 0x7f0600a6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -892,7 +892,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600a6
+    const v1, 0x7f0600a8
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -905,7 +905,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600a2
+    const v1, 0x7f0600a4
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -918,7 +918,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0600a0
+    const v1, 0x7f0600a2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 

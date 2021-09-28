@@ -1,9 +1,6 @@
 .class Lmiuix/appcompat/app/FragmentDelegate$1;
-.super Ljava/lang/Object;
+.super Lmiuix/appcompat/internal/view/SimpleWindowCallback;
 .source "FragmentDelegate.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -25,123 +22,97 @@
 .method constructor <init>(Lmiuix/appcompat/app/FragmentDelegate;)V
     .locals 0
 
-    .line 53
+    .line 57
     iput-object p1, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lmiuix/appcompat/internal/view/SimpleWindowCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public onActionModeFinished(Landroid/view/ActionMode;)V
+    .locals 1
 
-    .line 57
+    .line 70
     iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
 
-    invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$000(Lmiuix/appcompat/app/FragmentDelegate;)B
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    and-int/2addr v0, v1
-
-    const/4 v2, 0x0
-
-    if-ne v0, v1, :cond_0
-
-    .line 58
-    iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
-
-    invoke-static {v0, v2}, Lmiuix/appcompat/app/FragmentDelegate;->access$102(Lmiuix/appcompat/app/FragmentDelegate;Lmiuix/appcompat/internal/view/menu/MenuBuilder;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
-
-    .line 61
-    :cond_0
-    iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
-
-    invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$100(Lmiuix/appcompat/app/FragmentDelegate;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
+    invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$000(Lmiuix/appcompat/app/FragmentDelegate;)Landroidx/fragment/app/Fragment;
 
     move-result-object v0
 
-    const/4 v3, 0x0
+    check-cast v0, Lmiuix/appcompat/app/IFragment;
 
-    if-nez v0, :cond_1
-
-    .line 62
-    iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
-
-    invoke-virtual {v0}, Lmiuix/appcompat/app/FragmentDelegate;->createMenu()Lmiuix/appcompat/internal/view/menu/MenuBuilder;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lmiuix/appcompat/app/FragmentDelegate;->access$102(Lmiuix/appcompat/app/FragmentDelegate;Lmiuix/appcompat/internal/view/menu/MenuBuilder;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
-
-    .line 63
-    iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
-
-    invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$100(Lmiuix/appcompat/app/FragmentDelegate;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v3, v1}, Lmiuix/appcompat/app/FragmentDelegate;->onCreatePanelMenu(ILandroid/view/Menu;)Z
-
-    move-result v1
-
-    :cond_1
-    if-eqz v1, :cond_2
-
-    .line 67
-    iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
-
-    invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$100(Lmiuix/appcompat/app/FragmentDelegate;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v3, v2, v1}, Lmiuix/appcompat/app/FragmentDelegate;->onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
-
-    move-result v1
-
-    :cond_2
-    if-eqz v1, :cond_3
-
-    .line 71
-    iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
-
-    invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$100(Lmiuix/appcompat/app/FragmentDelegate;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/FragmentDelegate;->setMenu(Lmiuix/appcompat/internal/view/menu/MenuBuilder;)V
-
-    goto :goto_0
-
-    .line 73
-    :cond_3
-    iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
-
-    invoke-virtual {v0, v2}, Lmiuix/appcompat/app/FragmentDelegate;->setMenu(Lmiuix/appcompat/internal/view/menu/MenuBuilder;)V
-
-    .line 74
-    iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
-
-    invoke-static {v0, v2}, Lmiuix/appcompat/app/FragmentDelegate;->access$102(Lmiuix/appcompat/app/FragmentDelegate;Lmiuix/appcompat/internal/view/menu/MenuBuilder;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
-
-    .line 77
-    :goto_0
-    iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
-
-    invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$000(Lmiuix/appcompat/app/FragmentDelegate;)B
-
-    move-result v1
-
-    and-int/lit8 v1, v1, -0x12
-
-    int-to-byte v1, v1
-
-    invoke-static {v0, v1}, Lmiuix/appcompat/app/FragmentDelegate;->access$002(Lmiuix/appcompat/app/FragmentDelegate;B)B
+    invoke-interface {v0, p1}, Lmiuix/appcompat/app/IFragment;->onActionModeFinished(Landroid/view/ActionMode;)V
 
     return-void
+.end method
+
+.method public onActionModeStarted(Landroid/view/ActionMode;)V
+    .locals 1
+
+    .line 65
+    iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
+
+    invoke-static {v0}, Lmiuix/appcompat/app/FragmentDelegate;->access$000(Lmiuix/appcompat/app/FragmentDelegate;)Landroidx/fragment/app/Fragment;
+
+    move-result-object v0
+
+    check-cast v0, Lmiuix/appcompat/app/IFragment;
+
+    invoke-interface {v0, p1}, Lmiuix/appcompat/app/IFragment;->onActionModeStarted(Landroid/view/ActionMode;)V
+
+    return-void
+.end method
+
+.method public onMenuItemSelected(ILandroid/view/MenuItem;)Z
+    .locals 1
+
+    .line 75
+    iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
+
+    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/app/FragmentDelegate;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public onPanelClosed(ILandroid/view/Menu;)V
+    .locals 1
+
+    .line 80
+    iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
+
+    invoke-virtual {v0}, Lmiuix/appcompat/app/FragmentDelegate;->getActivity()Lmiuix/appcompat/app/AppCompatActivity;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 81
+    iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
+
+    invoke-virtual {v0}, Lmiuix/appcompat/app/FragmentDelegate;->getActivity()Lmiuix/appcompat/app/AppCompatActivity;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Lmiuix/appcompat/app/AppCompatActivity;->onPanelClosed(ILandroid/view/Menu;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
+    .locals 1
+
+    .line 60
+    iget-object v0, p0, Lmiuix/appcompat/app/FragmentDelegate$1;->this$0:Lmiuix/appcompat/app/FragmentDelegate;
+
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/app/FragmentDelegate;->onWindowStartingActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
+
+    move-result-object p1
+
+    return-object p1
 .end method

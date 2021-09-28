@@ -94,8 +94,6 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 116
     iget-object v0, p0, Lcom/miui/home/launcher/snapshot/HomeSnapshotHelperService$GadgetSnapshotRunnable;->mContext:Landroid/content/Context;
 
@@ -139,7 +137,7 @@
     .line 123
     iget-object v2, p0, Lcom/miui/home/launcher/snapshot/HomeSnapshotHelperService$GadgetSnapshotRunnable;->this$0:Lcom/miui/home/launcher/snapshot/HomeSnapshotHelperService;
 
-    const-string v3, "window"
+    const-string/jumbo v3, "window"
 
     invoke-virtual {v2, v3}, Lcom/miui/home/launcher/snapshot/HomeSnapshotHelperService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 

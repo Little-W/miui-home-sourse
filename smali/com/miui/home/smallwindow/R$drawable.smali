@@ -25,12 +25,12 @@
 
 .field public static final edit:I = 0x7f0800eb
 
-.field public static final item_background:I = 0x7f08018e
+.field public static final item_background:I = 0x7f0801b5
 
-.field public static final recent_tv_small_window_background:I = 0x7f0804a6
+.field public static final recent_tv_small_window_background:I = 0x7f0804d4
 
-.field public static final remove:I = 0x7f0804b9
+.field public static final remove:I = 0x7f0804e7
 
-.field public static final sample_footer_loading:I = 0x7f0804ba
+.field public static final sample_footer_loading:I = 0x7f0804e8
 
-.field public static final split:I = 0x7f0804df
+.field public static final split:I = 0x7f080512

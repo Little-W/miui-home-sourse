@@ -19,19 +19,19 @@
 
 .field public static final AppTheme:I = 0x7f110013
 
-.field public static final TextAppearance_Compat_Notification:I = 0x7f110190
+.field public static final TextAppearance_Compat_Notification:I = 0x7f11018c
 
-.field public static final TextAppearance_Compat_Notification_Info:I = 0x7f110191
+.field public static final TextAppearance_Compat_Notification_Info:I = 0x7f11018d
 
-.field public static final TextAppearance_Compat_Notification_Line2:I = 0x7f110193
+.field public static final TextAppearance_Compat_Notification_Line2:I = 0x7f11018f
 
-.field public static final TextAppearance_Compat_Notification_Time:I = 0x7f110196
+.field public static final TextAppearance_Compat_Notification_Time:I = 0x7f110192
 
-.field public static final TextAppearance_Compat_Notification_Title:I = 0x7f110198
+.field public static final TextAppearance_Compat_Notification_Title:I = 0x7f110194
 
-.field public static final Widget_Compat_NotificationActionContainer:I = 0x7f11028d
+.field public static final Widget_Compat_NotificationActionContainer:I = 0x7f110286
 
-.field public static final Widget_Compat_NotificationActionText:I = 0x7f11028e
+.field public static final Widget_Compat_NotificationActionText:I = 0x7f110287
 
 
 # direct methods

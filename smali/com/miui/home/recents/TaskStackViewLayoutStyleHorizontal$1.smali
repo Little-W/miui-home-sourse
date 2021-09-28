@@ -77,15 +77,22 @@
     .line 101
     iget v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$startScale:F
 
-    sub-float p1, v0, p1
-
     iget v1, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$newScale:F
+
+    cmpl-float v2, v0, v1
+
+    if-nez v2, :cond_0
+
+    return-void
+
+    :cond_0
+    sub-float p1, v0, p1
 
     sub-float/2addr v0, v1
 
     div-float/2addr p1, v0
 
-    .line 102
+    .line 105
     iget-object v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$v:Landroid/view/View;
 
     iget v1, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$startAlpha:F
@@ -98,7 +105,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 103
+    .line 106
     iget-object v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$v:Landroid/view/View;
 
     iget v1, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$startTransY:F
@@ -111,7 +118,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 104
+    .line 107
     iget-object v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal$1;->val$v:Landroid/view/View;
 
     const/high16 v1, -0x3ee00000    # -10.0f

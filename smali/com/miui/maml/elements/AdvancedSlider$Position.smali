@@ -45,7 +45,7 @@
     .line 701
     iput-object p5, p0, Lcom/miui/maml/elements/AdvancedSlider$Position;->mBaseY:Lcom/miui/maml/data/Expression;
 
-    const-string p4, "x"
+    const-string/jumbo p4, "x"
 
     .line 702
     invoke-virtual {p1, p3, p4}, Lcom/miui/maml/elements/AdvancedSlider;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
@@ -58,7 +58,7 @@
 
     iput-object p4, p0, Lcom/miui/maml/elements/AdvancedSlider$Position;->mX:Lcom/miui/maml/data/Expression;
 
-    const-string p4, "y"
+    const-string/jumbo p4, "y"
 
     .line 703
     invoke-virtual {p1, p3, p4}, Lcom/miui/maml/elements/AdvancedSlider;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
@@ -97,6 +97,7 @@
 
     move-result-wide v4
 
+    .line 708
     :goto_0
     iget-object v1, p0, Lcom/miui/maml/elements/AdvancedSlider$Position;->mBaseX:Lcom/miui/maml/data/Expression;
 
@@ -104,7 +105,6 @@
 
     goto :goto_1
 
-    .line 708
     :cond_1
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
 
@@ -142,6 +142,7 @@
 
     move-result-wide v4
 
+    .line 713
     :goto_0
     iget-object v1, p0, Lcom/miui/maml/elements/AdvancedSlider$Position;->mBaseY:Lcom/miui/maml/data/Expression;
 
@@ -149,7 +150,6 @@
 
     goto :goto_1
 
-    .line 713
     :cond_1
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
 

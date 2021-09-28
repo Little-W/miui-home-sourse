@@ -32,7 +32,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1724
+    .line 1888
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +43,7 @@
 .method isWidgetFinding()Z
     .locals 2
 
-    .line 1732
+    .line 1896
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isRotatable()Z
 
     move-result v0
@@ -77,25 +77,25 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 1736
+    .line 1900
     iget p1, p0, Lcom/miui/home/launcher/Workspace$CellInfo;->screenOrder:I
 
     if-lez p1, :cond_0
 
     add-int/lit8 p1, p1, -0x1
 
-    .line 1737
+    .line 1901
     iput p1, p0, Lcom/miui/home/launcher/Workspace$CellInfo;->screenOrder:I
 
     goto :goto_0
 
-    .line 1739
+    .line 1903
     :cond_0
     iput v0, p0, Lcom/miui/home/launcher/Workspace$CellInfo;->screenOrder:I
 
     goto :goto_0
 
-    .line 1742
+    .line 1906
     :cond_1
     iget p1, p0, Lcom/miui/home/launcher/Workspace$CellInfo;->screenOrder:I
 
@@ -110,7 +110,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1748
+    .line 1912
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

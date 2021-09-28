@@ -32,10 +32,10 @@
 
     const/4 v0, 0x0
 
-    .line 60
+    .line 75
     invoke-direct {p0, v0}, Lcom/miui/maml/data/Variables$BaseVarBucket;-><init>(Lcom/miui/maml/data/Variables$1;)V
 
-    .line 61
+    .line 76
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -48,7 +48,7 @@
 .method synthetic constructor <init>(Lcom/miui/maml/data/Variables$1;)V
     .locals 0
 
-    .line 60
+    .line 75
     invoke-direct {p0}, Lcom/miui/maml/data/Variables$DoubleBucket;-><init>()V
 
     return-void
@@ -67,7 +67,7 @@
 
     goto :goto_0
 
-    .line 65
+    .line 80
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/miui/maml/data/Variables$DoubleBucket;->mArray:Ljava/util/ArrayList;
@@ -96,7 +96,7 @@
 
     throw p1
 
-    .line 68
+    .line 83
     :catch_0
     monitor-exit p0
 
@@ -110,7 +110,7 @@
 
     const-wide/16 v0, 0x0
 
-    .line 88
+    .line 103
     :try_start_0
     iget-object v2, p0, Lcom/miui/maml/data/Variables$DoubleBucket;->mArray:Ljava/util/ArrayList;
 
@@ -124,7 +124,7 @@
 
     goto :goto_0
 
-    .line 89
+    .line 104
     :cond_0
     iget-wide v0, p1, Lcom/miui/maml/data/Variables$DoubleInfo;->mValue:D
     :try_end_0
@@ -143,7 +143,7 @@
 
     throw p1
 
-    .line 92
+    .line 107
     :catch_0
     monitor-exit p0
 
@@ -157,7 +157,7 @@
 
     const/4 v0, -0x1
 
-    .line 97
+    .line 112
     :try_start_0
     iget-object v1, p0, Lcom/miui/maml/data/Variables$DoubleBucket;->mArray:Ljava/util/ArrayList;
 
@@ -171,7 +171,7 @@
 
     goto :goto_0
 
-    .line 98
+    .line 113
     :cond_0
     iget v0, p1, Lcom/miui/maml/data/Variables$DoubleInfo;->mVersion:I
     :try_end_0
@@ -190,7 +190,7 @@
 
     throw p1
 
-    .line 101
+    .line 116
     :catch_0
     monitor-exit p0
 
@@ -200,7 +200,7 @@
 .method protected onAddItem(I)V
     .locals 2
 
-    .line 116
+    .line 131
     :goto_0
     iget-object v0, p0, Lcom/miui/maml/data/Variables$DoubleBucket;->mArray:Ljava/util/ArrayList;
 
@@ -210,7 +210,7 @@
 
     if-gt v0, p1, :cond_0
 
-    .line 117
+    .line 132
     iget-object v0, p0, Lcom/miui/maml/data/Variables$DoubleBucket;->mArray:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -223,19 +223,19 @@
     return-void
 .end method
 
-.method public final declared-synchronized put(ID)V
+.method public final declared-synchronized put(IDI)V
     .locals 2
 
     monitor-enter p0
 
     if-gez p1, :cond_0
 
-    .line 73
+    .line 88
     monitor-exit p0
 
     return-void
 
-    .line 75
+    .line 90
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/miui/maml/data/Variables$DoubleBucket;->mArray:Ljava/util/ArrayList;
@@ -248,23 +248,23 @@
 
     if-nez v0, :cond_1
 
-    .line 77
+    .line 92
     new-instance v0, Lcom/miui/maml/data/Variables$DoubleInfo;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p2, p3, v1}, Lcom/miui/maml/data/Variables$DoubleInfo;-><init>(DI)V
+    invoke-direct {v0, p2, p3, v1, p4}, Lcom/miui/maml/data/Variables$DoubleInfo;-><init>(DII)V
 
-    .line 78
+    .line 93
     iget-object p2, p0, Lcom/miui/maml/data/Variables$DoubleBucket;->mArray:Ljava/util/ArrayList;
 
     invoke-virtual {p2, p1, v0}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 80
+    .line 95
     :cond_1
-    invoke-virtual {v0, p2, p3}, Lcom/miui/maml/data/Variables$DoubleInfo;->setValue(D)V
+    invoke-virtual {v0, p2, p3, p4}, Lcom/miui/maml/data/Variables$DoubleInfo;->setValue(DI)V
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -278,7 +278,7 @@
 
     throw p1
 
-    .line 84
+    .line 99
     :catch_0
     :goto_0
     monitor-exit p0
@@ -289,7 +289,7 @@
 .method public reset()V
     .locals 5
 
-    .line 105
+    .line 120
     iget-object v0, p0, Lcom/miui/maml/data/Variables$DoubleBucket;->mArray:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -301,7 +301,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 107
+    .line 122
     iget-object v2, p0, Lcom/miui/maml/data/Variables$DoubleBucket;->mArray:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -314,7 +314,7 @@
 
     const-wide/16 v3, 0x0
 
-    .line 109
+    .line 124
     invoke-virtual {v2, v3, v4}, Lcom/miui/maml/data/Variables$DoubleInfo;->setValue(D)V
 
     :cond_0

@@ -47,7 +47,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 45
+    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -56,7 +56,7 @@
 .method synthetic constructor <init>(Lcom/miui/maml/elements/ImageScreenElement$1;)V
     .locals 0
 
-    .line 45
+    .line 44
     invoke-direct {p0}, Lcom/miui/maml/elements/ImageScreenElement$pair;-><init>()V
 
     return-void

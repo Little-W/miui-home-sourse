@@ -23,9 +23,9 @@
 
 .field private static final j:I = 0x4
 
-.field private static k:Z = false
+.field private static k:Z
 
-.field private static l:Z = false
+.field private static l:Z
 
 
 # direct methods

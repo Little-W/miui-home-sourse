@@ -1,4 +1,4 @@
-.class final Lcom/miui/maml/util/AppIconsHelper$1;
+.class Lcom/miui/maml/util/AppIconsHelper$1;
 .super Ljava/lang/Object;
 .source "AppIconsHelper.java"
 
@@ -12,7 +12,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 44
+    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +36,7 @@
 
     const/4 v0, 0x1
 
-    .line 48
+    .line 55
     invoke-virtual {p1, v0}, Lcom/miui/maml/ScreenElementRoot;->setScaleByDensity(Z)V
 
     :cond_0

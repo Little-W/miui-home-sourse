@@ -730,8 +730,6 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 241
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
@@ -912,7 +910,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/view/viewpager/ViewPager;->setAdapter(Lcom/miui/home/library/view/viewpager/PagerAdapter;)V
 
-    const v0, 0x7f0a0142
+    const v0, 0x7f0a0143
 
     .line 110
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;->findViewById(I)Landroid/view/View;

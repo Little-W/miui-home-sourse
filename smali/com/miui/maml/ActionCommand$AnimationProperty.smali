@@ -37,19 +37,19 @@
 .method protected constructor <init>(Lcom/miui/maml/elements/ScreenElement;Lcom/miui/maml/util/Variable;Ljava/lang/String;)V
     .locals 1
 
-    .line 1116
+    .line 1136
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/maml/ActionCommand$PropertyCommand;-><init>(Lcom/miui/maml/elements/ScreenElement;Lcom/miui/maml/util/Variable;Ljava/lang/String;)V
 
     const-string p1, "play"
 
-    .line 1117
+    .line 1137
     invoke-virtual {p3, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 1118
+    .line 1138
     sget-object p1, Lcom/miui/maml/ActionCommand$AnimationProperty$Type;->PLAY:Lcom/miui/maml/ActionCommand$AnimationProperty$Type;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mType:Lcom/miui/maml/ActionCommand$AnimationProperty$Type;
@@ -59,14 +59,14 @@
     :cond_0
     const-string p1, "pause"
 
-    .line 1119
+    .line 1139
     invoke-virtual {p3, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 1120
+    .line 1140
     sget-object p1, Lcom/miui/maml/ActionCommand$AnimationProperty$Type;->PAUSE:Lcom/miui/maml/ActionCommand$AnimationProperty$Type;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mType:Lcom/miui/maml/ActionCommand$AnimationProperty$Type;
@@ -76,21 +76,21 @@
     :cond_1
     const-string p1, "resume"
 
-    .line 1121
+    .line 1141
     invoke-virtual {p3, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 1122
+    .line 1142
     sget-object p1, Lcom/miui/maml/ActionCommand$AnimationProperty$Type;->RESUME:Lcom/miui/maml/ActionCommand$AnimationProperty$Type;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mType:Lcom/miui/maml/ActionCommand$AnimationProperty$Type;
 
     goto :goto_0
 
-    .line 1123
+    .line 1143
     :cond_2
     invoke-virtual {p3}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -112,12 +112,12 @@
 
     if-eqz p1, :cond_3
 
-    .line 1124
+    .line 1144
     sget-object p1, Lcom/miui/maml/ActionCommand$AnimationProperty$Type;->PLAY_WITH_PARAMS:Lcom/miui/maml/ActionCommand$AnimationProperty$Type;
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mType:Lcom/miui/maml/ActionCommand$AnimationProperty$Type;
 
-    .line 1125
+    .line 1145
     invoke-virtual {p0}, Lcom/miui/maml/ActionCommand$AnimationProperty;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p1
@@ -140,7 +140,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lcom/miui/maml/data/Expression;
 
-    .line 1126
+    .line 1146
     iget-object p1, p0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lcom/miui/maml/data/Expression;
 
     if-eqz p1, :cond_4
@@ -161,12 +161,12 @@
 
     const-string p2, "bad expression format"
 
-    .line 1127
+    .line 1147
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 1130
+    .line 1150
     :cond_3
     sget-object p1, Lcom/miui/maml/ActionCommand$AnimationProperty$Type;->INVALID:Lcom/miui/maml/ActionCommand$AnimationProperty$Type;
 
@@ -184,7 +184,7 @@
 
     move-object/from16 v0, p0
 
-    .line 1136
+    .line 1156
     sget-object v1, Lcom/miui/maml/ActionCommand$1;->$SwitchMap$com$miui$maml$ActionCommand$AnimationProperty$Type:[I
 
     iget-object v2, v0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mType:Lcom/miui/maml/ActionCommand$AnimationProperty$Type;
@@ -204,7 +204,7 @@
 
     const-wide/16 v3, -0x1
 
-    .line 1151
+    .line 1171
     iget-object v5, v0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lcom/miui/maml/data/Expression;
 
     array-length v6, v5
@@ -215,7 +215,7 @@
 
     if-lez v6, :cond_1
 
-    .line 1152
+    .line 1172
     aget-object v1, v5, v9
 
     if-nez v1, :cond_0
@@ -241,7 +241,7 @@
     :cond_1
     move-wide v11, v1
 
-    .line 1154
+    .line 1174
     :goto_1
     iget-object v1, v0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lcom/miui/maml/data/Expression;
 
@@ -251,7 +251,7 @@
 
     if-le v2, v5, :cond_3
 
-    .line 1155
+    .line 1175
     aget-object v2, v1, v5
 
     if-nez v2, :cond_2
@@ -260,10 +260,10 @@
 
     goto :goto_2
 
+    .line 1176
     :cond_2
     aget-object v1, v1, v5
 
-    .line 1156
     invoke-virtual {v1}, Lcom/miui/maml/data/Expression;->evaluate()D
 
     move-result-wide v1
@@ -278,7 +278,7 @@
     :cond_3
     move-wide v13, v3
 
-    .line 1158
+    .line 1178
     :goto_3
     iget-object v1, v0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lcom/miui/maml/data/Expression;
 
@@ -288,7 +288,7 @@
 
     if-le v2, v3, :cond_6
 
-    .line 1159
+    .line 1179
     aget-object v2, v1, v3
 
     if-nez v2, :cond_5
@@ -319,7 +319,7 @@
     :cond_6
     move v15, v9
 
-    .line 1161
+    .line 1181
     :goto_5
     iget-object v1, v0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mPlayParams:[Lcom/miui/maml/data/Expression;
 
@@ -329,7 +329,7 @@
 
     if-le v2, v3, :cond_9
 
-    .line 1162
+    .line 1182
     aget-object v2, v1, v3
 
     if-nez v2, :cond_7
@@ -358,7 +358,7 @@
     :cond_9
     move/from16 v16, v9
 
-    .line 1164
+    .line 1184
     :goto_7
     iget-object v10, v0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mTargetElement:Lcom/miui/maml/elements/ScreenElement;
 
@@ -366,7 +366,7 @@
 
     goto :goto_8
 
-    .line 1144
+    .line 1164
     :pswitch_1
     iget-object v1, v0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mTargetElement:Lcom/miui/maml/elements/ScreenElement;
 
@@ -374,7 +374,7 @@
 
     goto :goto_8
 
-    .line 1141
+    .line 1161
     :pswitch_2
     iget-object v1, v0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mTargetElement:Lcom/miui/maml/elements/ScreenElement;
 
@@ -382,7 +382,7 @@
 
     goto :goto_8
 
-    .line 1138
+    .line 1158
     :pswitch_3
     iget-object v1, v0, Lcom/miui/maml/ActionCommand$AnimationProperty;->mTargetElement:Lcom/miui/maml/elements/ScreenElement;
 

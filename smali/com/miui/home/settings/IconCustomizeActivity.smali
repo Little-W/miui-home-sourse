@@ -39,7 +39,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f1001f2
+    const v0, 0x7f1001f3
 
     if-eqz p1, :cond_1
 
@@ -54,7 +54,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f1001f0
+    const v0, 0x7f1001f1
 
     .line 31
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/IconCustomizeActivity;->setTitle(I)V

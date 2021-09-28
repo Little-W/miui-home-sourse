@@ -1191,7 +1191,7 @@
 
     if-nez v3, :cond_1
 
-    const v2, 0x7f10030e
+    const v2, 0x7f100323
 
     const/4 v3, 0x2
 

@@ -111,6 +111,7 @@
     <attr name="allowDividerBelow" format="boolean" />
     <attr name="allowStacking" format="boolean" />
     <attr name="alpha" format="float" />
+    <attr name="alpha_width" format="integer" />
     <attr name="alphabeticModifiers">
         <flag name="ALT" value="0x00000002" />
         <flag name="CTRL" value="0x00001000" />
@@ -208,6 +209,7 @@
     <attr name="cardPreventCornerOverlap" format="boolean" />
     <attr name="cardUseCompatPadding" format="boolean" />
     <attr name="cardViewStyle" format="reference" />
+    <attr name="care_streamactive" format="boolean" />
     <attr name="cellHeight" format="dimension" />
     <attr name="cellWidth" format="dimension" />
     <attr name="chainUseRtl" format="boolean" />
@@ -903,6 +905,9 @@
     <attr name="sliderOn" format="reference" />
     <attr name="slidingBarColor" format="reference|color" />
     <attr name="slidingButtonStyle" format="reference" />
+    <attr name="sliding_dot_bar" format="reference" />
+    <attr name="sliding_panel" format="reference" />
+    <attr name="sliding_shadow_dot_bar" format="reference" />
     <attr name="spanCount" format="integer" />
     <attr name="spanX" format="string" />
     <attr name="spanY" format="string" />
@@ -958,6 +963,7 @@
     <attr name="switchTextAppearance" format="reference" />
     <attr name="switchTextOff" format="string" />
     <attr name="switchTextOn" format="string" />
+    <attr name="symmetry" format="boolean" />
     <attr name="tabIndicator" format="reference" />
     <attr name="targetLevel" format="integer" />
     <attr name="textAllCaps" format="reference|boolean" />
@@ -1067,6 +1073,7 @@
     </attr>
     <attr name="translucentTabIndicator" format="boolean" />
     <attr name="ttcIndex" format="integer" />
+    <attr name="update_enable" format="boolean" />
     <attr name="updatesContinuously" format="boolean" />
     <attr name="uri" format="string" />
     <attr name="useSimpleSummaryProvider" format="boolean" />
@@ -1101,6 +1108,8 @@
         <enum name="transparentDark" value="2" />
         <enum name="transparentLight" value="1" />
     </attr>
+    <attr name="wordPhotoBackground" format="reference" />
+    <attr name="wordPhotoTextColor" format="reference|color" />
     <attr name="x" format="string" />
     <attr name="y" format="string" />
 </resources>

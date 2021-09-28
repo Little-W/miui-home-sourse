@@ -32,16 +32,16 @@
     invoke-direct {p0}, Lcom/miui/home/recents/TaskStackViewLayoutStyle;-><init>()V
 
     .line 29
-    new-instance v0, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmStack;
+    new-instance v0, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmStack;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal;->mTaskStackLayoutAlgorithm:Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;
 
     .line 30
-    new-instance v0, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmStack;
+    new-instance v0, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;
 
-    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmStack;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/miui/home/recents/views/TaskStackViewsAlgorithmHorizontal;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal;->mStableLayoutAlgorithm:Lcom/miui/home/recents/views/TaskStackLayoutAlgorithm;
 
@@ -109,14 +109,14 @@
 
     invoke-virtual {v0, v8}, Landroid/animation/ObjectAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 107
+    .line 110
     sget-object p0, Lcom/miui/home/recents/TaskStackViewLayoutStyleHorizontal;->DISMISS_ALL_TASK_VIEWS_INTERPOLATOR:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, p0}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     const-wide/16 p0, 0x1c2
 
-    .line 108
+    .line 111
     invoke-virtual {v0, p0, p1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     return-object v0

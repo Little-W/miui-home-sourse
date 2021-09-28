@@ -51,7 +51,7 @@
 .method private changeLoadingTitleToAdTitleWithAnim(Lcom/miui/home/launcher/ShortcutIcon;Ljava/lang/CharSequence;)V
     .locals 4
 
-    const v0, 0x7f0a0117
+    const v0, 0x7f0a0118
 
     .line 132
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
@@ -183,7 +183,7 @@
 
     :cond_1
     :goto_0
-    const p1, 0x7f0d00f6
+    const p1, 0x7f0d00f7
 
     .line 153
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/RecommendShortcutsAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -242,7 +242,7 @@
 .method private hideLoadingViewWithAnim(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 3
 
-    const v0, 0x7f0a013b
+    const v0, 0x7f0a013c
 
     .line 109
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
@@ -337,7 +337,7 @@
 .method private showAdViewWithAnim(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 2
 
-    const v0, 0x7f0a0113
+    const v0, 0x7f0a0114
 
     .line 123
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
@@ -481,7 +481,7 @@
     goto :goto_0
 
     :cond_1
-    const p1, 0x7f0a0113
+    const p1, 0x7f0a0114
 
     .line 185
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
@@ -490,7 +490,7 @@
 
     check-cast p1, Landroid/widget/ImageView;
 
-    const p3, 0x7f0a013b
+    const p3, 0x7f0a013c
 
     .line 186
     invoke-virtual {p2, p3}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;
@@ -499,7 +499,7 @@
 
     check-cast p3, Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0a0117
+    const v1, 0x7f0a0118
 
     .line 187
     invoke-virtual {p2, v1}, Lcom/miui/home/launcher/ShortcutIcon;->findViewById(I)Landroid/view/View;

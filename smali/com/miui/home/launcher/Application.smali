@@ -1,5 +1,5 @@
 .class public Lcom/miui/home/launcher/Application;
-.super Lmiui/external/Application;
+.super Landroid/app/Application;
 .source "Application.java"
 
 
@@ -8,8 +8,6 @@
 
 
 # instance fields
-.field private mApplicationDelegate:Lcom/miui/home/launcher/LauncherApplicationDelegate;
-
 .field private mCEBaseContext:Landroid/content/Context;
 
 .field private mCurrentVersion:I
@@ -35,23 +33,23 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 52
-    invoke-direct {p0}, Lmiui/external/Application;-><init>()V
+    .line 53
+    invoke-direct {p0}, Landroid/app/Application;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 55
+    .line 56
     iput v0, p0, Lcom/miui/home/launcher/Application;->mCurrentVersion:I
 
-    .line 56
+    .line 57
     iput v0, p0, Lcom/miui/home/launcher/Application;->mOldVersion:I
 
     const/4 v0, 0x0
 
-    .line 58
+    .line 59
     iput-boolean v0, p0, Lcom/miui/home/launcher/Application;->mUpgradeInApplicationSuccess:Z
 
-    .line 254
+    .line 255
     new-instance v0, Lcom/miui/home/launcher/Application$1;
 
     new-instance v1, Landroid/os/Handler;
@@ -68,7 +66,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/Application;)Lcom/miui/home/launcher/LauncherModel;
     .locals 0
 
-    .line 52
+    .line 53
     iget-object p0, p0, Lcom/miui/home/launcher/Application;->mModel:Lcom/miui/home/launcher/LauncherModel;
 
     return-object p0
@@ -77,7 +75,7 @@
 .method public static getInstance()Lcom/miui/home/launcher/Application;
     .locals 1
 
-    .line 239
+    .line 240
     sget-object v0, Lcom/miui/home/launcher/Application;->sInstance:Lcom/miui/home/launcher/Application;
 
     return-object v0
@@ -86,7 +84,7 @@
 .method public static getLauncher()Lcom/miui/home/launcher/Launcher;
     .locals 1
 
-    .line 244
+    .line 245
     sget-object v0, Lcom/miui/home/launcher/Application;->sInstance:Lcom/miui/home/launcher/Application;
 
     invoke-virtual {v0, v0}, Lcom/miui/home/launcher/Application;->getLauncher(Landroid/content/Context;)Lcom/miui/home/launcher/Launcher;
@@ -99,7 +97,7 @@
 .method public static getLauncherApplication()Lcom/miui/home/launcher/Application;
     .locals 1
 
-    .line 353
+    .line 360
     sget-object v0, Lcom/miui/home/launcher/Application;->sInstance:Lcom/miui/home/launcher/Application;
 
     return-object v0
@@ -108,7 +106,7 @@
 .method public static getLauncherApplication(Landroid/content/Context;)Lcom/miui/home/launcher/Application;
     .locals 0
 
-    .line 357
+    .line 364
     sget-object p0, Lcom/miui/home/launcher/Application;->sInstance:Lcom/miui/home/launcher/Application;
 
     return-object p0
@@ -117,7 +115,7 @@
 .method private initBoomObject()V
     .locals 1
 
-    .line 156
+    .line 157
     sget-object v0, Lcom/miui/home/launcher/-$$Lambda$Application$EtwWiD4tJ2TVYNFzyJL23toZks4;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$Application$EtwWiD4tJ2TVYNFzyJL23toZks4;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
@@ -147,10 +145,10 @@
 .method static synthetic lambda$initBoomObject$1()V
     .locals 0
 
-    .line 157
+    .line 158
     invoke-static {}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;->initBoomNum()V
 
-    .line 158
+    .line 159
     invoke-static {}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;->initSparkObject()V
 
     return-void
@@ -159,7 +157,7 @@
 .method static synthetic lambda$loadFeedModules$2(Ljava/lang/Void;)Ljava/lang/Void;
     .locals 1
 
-    .line 188
+    .line 189
     invoke-static {}, Lcom/miui/home/launcher/module/ModuleManagerCompat;->getInstance()Lcom/miui/home/launcher/module/ModuleManagerCompat;
 
     move-result-object p0
@@ -180,7 +178,7 @@
 .method private loadFeedModules()V
     .locals 2
 
-    .line 178
+    .line 179
     invoke-static {}, Lcom/miui/home/launcher/ApplicationConfig;->isFeedSupport()Z
 
     move-result v0
@@ -189,7 +187,7 @@
 
     return-void
 
-    .line 181
+    .line 182
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/ApplicationConfig;->isFeedSupportOverlay()Z
 
@@ -199,7 +197,7 @@
 
     return-void
 
-    .line 184
+    .line 185
     :cond_1
     invoke-static {}, Lcom/miui/home/launcher/ApplicationConfig;->isFeedSupportDecouple()Z
 
@@ -209,7 +207,7 @@
 
     return-void
 
-    .line 187
+    .line 188
     :cond_2
     sget-object v0, Lcom/miui/home/launcher/-$$Lambda$Application$FGRy5i8nJsB2BRK5Eass1gjrk6E;->INSTANCE:Lcom/miui/home/launcher/-$$Lambda$Application$FGRy5i8nJsB2BRK5Eass1gjrk6E;
 
@@ -223,7 +221,7 @@
 .method private onUpgrade()V
     .locals 2
 
-    .line 211
+    .line 212
     iget v0, p0, Lcom/miui/home/launcher/Application;->mOldVersion:I
 
     iget v1, p0, Lcom/miui/home/launcher/Application;->mCurrentVersion:I
@@ -236,50 +234,50 @@
 .method private registerApkInstallReceiver()V
     .locals 3
 
-    .line 163
+    .line 164
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v1, "android.intent.action.PACKAGE_ADDED"
 
-    .line 164
+    .line 165
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 165
+    .line 166
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 166
+    .line 167
     new-instance v1, Lcom/miui/home/launcher/install/InstallApkReceiver;
 
     invoke-direct {v1}, Lcom/miui/home/launcher/install/InstallApkReceiver;-><init>()V
 
     const-string v2, "package"
 
-    .line 168
+    .line 169
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 169
+    .line 170
     invoke-virtual {p0, v1, v0}, Lcom/miui/home/launcher/Application;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 171
+    .line 172
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     const-string v2, "com.amazon.dee.app.addicon"
 
-    .line 172
+    .line 173
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     const-string v2, "com.amazon.dee.app.cancelicon"
 
-    .line 173
+    .line 174
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 174
+    .line 175
     invoke-virtual {p0, v1, v0}, Lcom/miui/home/launcher/Application;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     return-void
@@ -288,14 +286,14 @@
 .method private registerContentObservers()V
     .locals 4
 
-    .line 248
+    .line 249
     invoke-virtual {p0}, Lcom/miui/home/launcher/Application;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     const-string v1, "miui_home_hide_app_list"
 
-    .line 250
+    .line 251
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -304,7 +302,7 @@
 
     const/4 v3, 0x0
 
-    .line 249
+    .line 250
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
     return-void
@@ -313,23 +311,23 @@
 .method private resolveVersionAndCheckUpgrade(Landroid/content/Context;)V
     .locals 2
 
-    const v0, 0x1936848d
+    const v0, 0x19555864
 
-    .line 194
+    .line 195
     iput v0, p0, Lcom/miui/home/launcher/Application;->mCurrentVersion:I
 
     const-string v0, "app_version"
 
     const/4 v1, -0x1
 
-    .line 195
+    .line 196
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInt(Landroid/content/Context;Ljava/lang/String;I)I
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/Application;->mOldVersion:I
 
-    .line 196
+    .line 197
     invoke-virtual {p0}, Lcom/miui/home/launcher/Application;->needToMigrate()Z
 
     move-result p1
@@ -338,22 +336,22 @@
 
     if-eqz p1, :cond_0
 
-    .line 197
+    .line 198
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isDeviceUnlocked()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 198
+    .line 199
     invoke-virtual {p0}, Lcom/miui/home/launcher/Application;->migrateData()V
 
-    .line 199
+    .line 200
     iput-boolean v0, p0, Lcom/miui/home/launcher/Application;->mUpgradeInApplicationSuccess:Z
 
     goto :goto_0
 
-    .line 202
+    .line 203
     :cond_0
     iget p1, p0, Lcom/miui/home/launcher/Application;->mOldVersion:I
 
@@ -361,17 +359,61 @@
 
     if-ge p1, v1, :cond_1
 
-    .line 203
+    .line 204
     invoke-direct {p0}, Lcom/miui/home/launcher/Application;->onUpgrade()V
 
-    .line 204
+    .line 205
     invoke-virtual {p0}, Lcom/miui/home/launcher/Application;->upgradeAppVersion()V
 
-    .line 206
+    .line 207
     :cond_1
     iput-boolean v0, p0, Lcom/miui/home/launcher/Application;->mUpgradeInApplicationSuccess:Z
 
     :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method private setMiuiSdkContext()V
+    .locals 3
+
+    :try_start_0
+    const-string v0, "com.miui.internal.util.PackageConstants"
+
+    .line 369
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-string v1, "sApplication"
+
+    .line 370
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    .line 371
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+
+    const/4 v1, 0x0
+
+    .line 372
+    invoke-virtual {v0, v1, p0}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Launcher.application"
+
+    const-string v2, "setMiuiSdkContext"
+
+    .line 374
     :goto_0
     return-void
 .end method
@@ -386,41 +428,44 @@
 
     move-result-object v0
 
-    invoke-super {p0, v0}, Lmiui/external/Application;->attachBaseContext(Landroid/content/Context;)V
+    invoke-super {p0, v0}, Landroid/app/Application;->attachBaseContext(Landroid/content/Context;)V
+
+    .line 72
+    invoke-direct {p0}, Lcom/miui/home/launcher/Application;->setMiuiSdkContext()V
 
     const-string v0, "Launcher.application"
 
     const-string v1, "application attached"
 
-    .line 72
+    .line 73
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
+    .line 74
     iput-object p1, p0, Lcom/miui/home/launcher/Application;->mCEBaseContext:Landroid/content/Context;
 
-    .line 74
+    .line 75
     sput-object p0, Lcom/miui/home/launcher/Application;->sInstance:Lcom/miui/home/launcher/Application;
 
-    .line 76
+    .line 77
     invoke-static {p1}, Lcom/miui/home/library/utils/ProcessUtil;->isMainProcess(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 77
+    .line 78
     invoke-static {p1}, Lcom/miui/home/launcher/MiuiHomeLog;->init(Landroid/content/Context;)V
 
-    .line 78
+    .line 79
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Application;->resolveVersionAndCheckUpgrade(Landroid/content/Context;)V
 
-    .line 79
+    .line 80
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->resolveMiuiVersionAndCheckUpgrade(Landroid/content/Context;)V
 
-    .line 80
+    .line 81
     invoke-static {p0}, Lcom/miui/home/launcher/ApplicationConfig;->init(Landroid/content/Context;)V
 
-    .line 82
+    .line 83
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->INSTANCE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/util/MainThreadInitializedObject;->get(Landroid/content/Context;)Ljava/lang/Object;
@@ -433,41 +478,26 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/miui/home/launcher/DeviceConfig;->Init(Landroid/content/Context;Z)Z
 
-    .line 83
+    .line 84
     invoke-direct {p0}, Lcom/miui/home/launcher/Application;->loadFeedModules()V
 
-    .line 84
+    .line 85
     invoke-static {}, Lcom/miui/home/launcher/monitor/LauncherMonitor;->getInstance()Lcom/miui/home/launcher/common/ILauncherMonitor;
 
     move-result-object p1
 
     invoke-interface {p1, p0}, Lcom/miui/home/launcher/common/ILauncherMonitor;->init(Lcom/miui/home/launcher/Application;)V
 
-    .line 85
+    .line 86
     invoke-direct {p0}, Lcom/miui/home/launcher/Application;->initBoomObject()V
 
-    .line 86
+    .line 87
     sget-boolean p1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz p1, :cond_0
 
-    .line 87
+    .line 88
     invoke-direct {p0}, Lcom/miui/home/launcher/Application;->registerApkInstallReceiver()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public changeConfiguration(Landroid/content/res/Configuration;)V
-    .locals 1
-
-    .line 277
-    iget-object v0, p0, Lcom/miui/home/launcher/Application;->mRecentsImpl:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    if-eqz v0, :cond_0
-
-    .line 278
-    invoke-virtual {v0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     :cond_0
     return-void
@@ -606,8 +636,6 @@
     const-string v1, "createApplication SupportRecentsAndFsGesture"
 
     .line 136
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 137
     new-instance v0, Lcom/miui/home/recents/BaseRecentsImpl;
 
@@ -635,7 +663,12 @@
     .line 148
     invoke-static {p0}, Lcom/miui/msa/MSASdk;->init(Landroid/content/Context;)V
 
-    .line 150
+    .line 149
+    sget-object v0, Lcom/miui/performance/PerformanceTools;->INSTANCE:Lcom/miui/performance/PerformanceTools;
+
+    invoke-virtual {v0, p0}, Lcom/miui/performance/PerformanceTools;->init(Landroid/app/Application;)V
+
+    .line 151
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_1
@@ -646,7 +679,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 151
+    .line 152
     invoke-static {}, Lcom/miui/home/launcher/commercial/privacy/PrivacyAuthorizationObserver;->getInstance()Lcom/miui/home/launcher/commercial/privacy/PrivacyAuthorizationObserver;
 
     move-result-object v0
@@ -660,7 +693,7 @@
 .method public getCEBaseContex()Landroid/content/Context;
     .locals 1
 
-    .line 221
+    .line 222
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mCEBaseContext:Landroid/content/Context;
 
     return-object v0
@@ -669,19 +702,19 @@
 .method public getCategoryProvider()Lcom/miui/home/launcher/CategoryProvider;
     .locals 2
 
-    .line 336
+    .line 343
     invoke-virtual {p0}, Lcom/miui/home/launcher/Application;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     const-string v1, "com.miui.home.launcher.category"
 
-    .line 337
+    .line 344
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->acquireContentProviderClient(Ljava/lang/String;)Landroid/content/ContentProviderClient;
 
     move-result-object v0
 
-    .line 338
+    .line 345
     :try_start_0
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->getLocalContentProvider()Landroid/content/ContentProvider;
 
@@ -693,7 +726,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 339
+    .line 346
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->close()V
 
     :cond_0
@@ -704,7 +737,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 336
+    .line 343
     :try_start_1
     invoke-virtual {v0}, Landroid/content/ContentProviderClient;->close()V
     :try_end_1
@@ -725,7 +758,7 @@
 .method public getIconCache()Lcom/miui/home/launcher/IconCache;
     .locals 1
 
-    .line 332
+    .line 339
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mIconCache:Lcom/miui/home/launcher/IconCache;
 
     return-object v0
@@ -734,17 +767,17 @@
 .method public getLauncher(Landroid/content/Context;)Lcom/miui/home/launcher/Launcher;
     .locals 0
 
-    .line 306
+    .line 313
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    .line 307
+    .line 314
     instance-of p1, p1, Lcom/miui/home/launcher/Application;
 
     if-eqz p1, :cond_0
 
-    .line 308
+    .line 315
     iget-object p1, p0, Lcom/miui/home/launcher/Application;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     return-object p1
@@ -758,7 +791,7 @@
 .method public getLauncherProvider()Lcom/miui/home/launcher/LauncherProvider;
     .locals 1
 
-    .line 302
+    .line 309
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mLauncherProvider:Lcom/miui/home/launcher/LauncherProvider;
 
     return-object v0
@@ -767,7 +800,7 @@
 .method public getModel()Lcom/miui/home/launcher/LauncherModel;
     .locals 1
 
-    .line 328
+    .line 335
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mModel:Lcom/miui/home/launcher/LauncherModel;
 
     return-object v0
@@ -776,7 +809,7 @@
 .method public getRecentsImpl()Lcom/miui/home/recents/BaseRecentsImpl;
     .locals 1
 
-    .line 294
+    .line 301
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mRecentsImpl:Lcom/miui/home/recents/BaseRecentsImpl;
 
     return-object v0
@@ -785,7 +818,7 @@
 .method public hasBroughtToForeground()Z
     .locals 4
 
-    .line 262
+    .line 263
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x0
@@ -797,7 +830,7 @@
     :cond_0
     const-string v2, "activity"
 
-    .line 264
+    .line 265
     invoke-virtual {v0, v2}, Lcom/miui/home/launcher/Launcher;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -806,7 +839,7 @@
 
     const/4 v2, 0x1
 
-    .line 265
+    .line 266
     invoke-virtual {v0, v2}, Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;
 
     move-result-object v0
@@ -821,7 +854,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 266
+    .line 267
     const-class v3, Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -847,34 +880,34 @@
 .method public migrateData()V
     .locals 1
 
-    .line 225
+    .line 226
     invoke-virtual {p0}, Lcom/miui/home/launcher/Application;->needToMigrate()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 226
+    .line 227
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mCEBaseContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/PreferenceUtils;->moveSharedPreferenceForDirectBoot(Landroid/content/Context;)V
 
-    .line 227
+    .line 228
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mCEBaseContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/PreferenceUtils;->moveAllSharedPreferenceToOneFile(Landroid/content/Context;)V
 
-    .line 228
+    .line 229
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mCEBaseContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/miui/home/launcher/LauncherProvider;->moveDataBaseForDirectBoot(Landroid/content/Context;)V
 
-    .line 229
+    .line 230
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mCEBaseContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;->moveClockGadgetBackup(Landroid/content/Context;)V
 
-    .line 230
+    .line 231
     invoke-virtual {p0}, Lcom/miui/home/launcher/Application;->upgradeAppVersion()V
 
     :cond_0
@@ -884,7 +917,7 @@
 .method public needToMigrate()Z
     .locals 2
 
-    .line 215
+    .line 216
     iget v0, p0, Lcom/miui/home/launcher/Application;->mOldVersion:I
 
     const/4 v1, -0x1
@@ -912,32 +945,60 @@
     return v0
 .end method
 
-.method public onCreateApplicationDelegate()Lmiui/external/ApplicationDelegate;
+.method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 93
-    iget-object v0, p0, Lcom/miui/home/launcher/Application;->mApplicationDelegate:Lcom/miui/home/launcher/LauncherApplicationDelegate;
+    .line 279
+    invoke-super {p0, p1}, Landroid/app/Application;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    if-nez v0, :cond_0
+    .line 280
+    iget-object v0, p0, Lcom/miui/home/launcher/Application;->mRecentsImpl:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    .line 94
-    new-instance v0, Lcom/miui/home/launcher/LauncherApplicationDelegate;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0}, Lcom/miui/home/launcher/LauncherApplicationDelegate;-><init>()V
+    .line 281
+    invoke-virtual {v0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    iput-object v0, p0, Lcom/miui/home/launcher/Application;->mApplicationDelegate:Lcom/miui/home/launcher/LauncherApplicationDelegate;
+    .line 283
+    :cond_0
+    iget-object v0, p0, Lcom/miui/home/launcher/Application;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    if-eqz v0, :cond_1
+
+    .line 284
+    invoke-static {p1}, Lcom/miui/launcher/utils/LauncherUtils;->getWindowingModeFromConfiguration(Landroid/content/res/Configuration;)I
+
+    move-result p1
+
+    .line 285
+    iget-object v0, p0, Lcom/miui/home/launcher/Application;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/launcher/utils/LauncherUtils;->isInMultiWindowMode(I)Z
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Launcher;->setIsSystemInMultiWindowMode(Z)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public onCreate()V
+    .locals 0
+
+    .line 95
+    invoke-super {p0}, Landroid/app/Application;->onCreate()V
 
     .line 96
-    :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/Application;->mApplicationDelegate:Lcom/miui/home/launcher/LauncherApplicationDelegate;
+    invoke-virtual {p0}, Lcom/miui/home/launcher/Application;->createApplication()V
 
-    return-object v0
+    return-void
 .end method
 
 .method onDestroy()V
     .locals 2
 
-    .line 343
+    .line 350
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/progress/ProgressManager;->getManager(Landroid/content/Context;)Lcom/miui/home/launcher/progress/ProgressManager;
@@ -948,25 +1009,25 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/progress/ProgressManager;->setLauncher(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 344
+    .line 351
     invoke-static {}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsDownloadReceiver;->getInstanse()Lcom/miui/home/launcher/commercial/recommend/RecommendAppsDownloadReceiver;
 
     move-result-object v0
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsDownloadReceiver;->setLauncher(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 345
+    .line 352
     iput-object v1, p0, Lcom/miui/home/launcher/Application;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 346
+    .line 353
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mRecentsImpl:Lcom/miui/home/recents/BaseRecentsImpl;
 
     if-eqz v0, :cond_0
 
-    .line 347
+    .line 354
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->setLauncher(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 349
+    .line 356
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mModel:Lcom/miui/home/launcher/LauncherModel;
 
@@ -978,10 +1039,10 @@
 .method setLauncher(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherModel;
     .locals 1
 
-    .line 283
+    .line 290
     iput-object p1, p0, Lcom/miui/home/launcher/Application;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 284
+    .line 291
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/progress/ProgressManager;->getManager(Landroid/content/Context;)Lcom/miui/home/launcher/progress/ProgressManager;
@@ -990,29 +1051,29 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/progress/ProgressManager;->setLauncher(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 285
+    .line 292
     invoke-static {}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsDownloadReceiver;->getInstanse()Lcom/miui/home/launcher/commercial/recommend/RecommendAppsDownloadReceiver;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/commercial/recommend/RecommendAppsDownloadReceiver;->setLauncher(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 286
+    .line 293
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mModel:Lcom/miui/home/launcher/LauncherModel;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/LauncherModel;->initialize(Lcom/miui/home/launcher/LauncherModel$Callbacks;)V
 
-    .line 287
+    .line 294
     iget-object p1, p0, Lcom/miui/home/launcher/Application;->mRecentsImpl:Lcom/miui/home/recents/BaseRecentsImpl;
 
     if-eqz p1, :cond_0
 
-    .line 288
+    .line 295
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/BaseRecentsImpl;->setLauncher(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 290
+    .line 297
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Application;->mModel:Lcom/miui/home/launcher/LauncherModel;
 
@@ -1022,7 +1083,7 @@
 .method setLauncherProvider(Lcom/miui/home/launcher/LauncherProvider;)V
     .locals 0
 
-    .line 298
+    .line 305
     iput-object p1, p0, Lcom/miui/home/launcher/Application;->mLauncherProvider:Lcom/miui/home/launcher/LauncherProvider;
 
     return-void
@@ -1031,7 +1092,7 @@
 .method public startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/view/View;)V
     .locals 1
 
-    .line 314
+    .line 321
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Application;->getLauncher(Landroid/content/Context;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
@@ -1040,7 +1101,7 @@
 
     const/4 v0, 0x0
 
-    .line 316
+    .line 323
     invoke-virtual {p1, p2, v0, p3}, Lcom/miui/home/launcher/Launcher;->startActivity(Landroid/content/Intent;Ljava/lang/Object;Landroid/view/View;)V
 
     :cond_0
@@ -1050,14 +1111,14 @@
 .method public startActivityForResult(Landroid/content/Context;Landroid/content/Intent;I)V
     .locals 0
 
-    .line 321
+    .line 328
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Application;->getLauncher(Landroid/content/Context;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 323
+    .line 330
     invoke-virtual {p1, p2, p3}, Lcom/miui/home/launcher/Launcher;->startActivityForResult(Landroid/content/Intent;I)V
 
     :cond_0
@@ -1067,7 +1128,7 @@
 .method public upgradeAppVersion()V
     .locals 3
 
-    .line 235
+    .line 236
     iget-object v0, p0, Lcom/miui/home/launcher/Application;->mCEBaseContext:Landroid/content/Context;
 
     const-string v1, "app_version"

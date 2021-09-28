@@ -84,8 +84,6 @@
     const-string p2, "Launcher is not ready,process later"
 
     .line 43
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 
     .line 46

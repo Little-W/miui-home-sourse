@@ -221,15 +221,17 @@
 
     if-nez v5, :cond_1
 
+    move v4, v1
+
     goto :goto_0
 
     :cond_0
     if-nez p5, :cond_1
 
-    :goto_0
     move v4, v1
 
     :cond_1
+    :goto_0
     if-eqz p7, :cond_2
 
     .line 115
@@ -237,15 +239,17 @@
 
     move-result v1
 
+    move v5, v1
+
     goto :goto_1
 
     :cond_2
     const/4 v1, -0x1
 
-    :goto_1
     move v5, v1
 
     .line 117
+    :goto_1
     invoke-virtual {v0}, Landroidx/core/content/res/FontResourcesParserCompat$ProviderResourceEntry;->getRequest()Landroidx/core/provider/FontRequest;
 
     move-result-object v1

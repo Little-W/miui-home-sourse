@@ -79,8 +79,6 @@
     const-string v0, "UpdateStyleObserver"
 
     .line 244
-    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 245
     new-instance p1, Lcom/miui/home/launcher/-$$Lambda$SearchBarDesktopLayout$UpdateStyleObserver$Pqmg3e0U4iJ3Urw4BlTR7jQONxA;
 

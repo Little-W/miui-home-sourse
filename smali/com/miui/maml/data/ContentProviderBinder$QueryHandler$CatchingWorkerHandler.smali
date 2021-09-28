@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/maml/data/ContentProviderBinder$QueryHandler;Landroid/os/Looper;)V
     .locals 0
 
-    .line 456
+    .line 460
     iput-object p1, p0, Lcom/miui/maml/data/ContentProviderBinder$QueryHandler$CatchingWorkerHandler;->this$1:Lcom/miui/maml/data/ContentProviderBinder$QueryHandler;
 
-    .line 457
+    .line 461
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/data/AsyncQueryHandler$WorkerHandler;-><init>(Lcom/miui/maml/data/AsyncQueryHandler;Landroid/os/Looper;)V
 
     return-void
@@ -36,7 +36,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 464
+    .line 468
     :try_start_0
     invoke-super {p0, p1}, Lcom/miui/maml/data/AsyncQueryHandler$WorkerHandler;->handleMessage(Landroid/os/Message;)V
     :try_end_0
@@ -53,7 +53,7 @@
 
     const-string v1, "Exception on background worker thread"
 
-    .line 470
+    .line 474
     invoke-static {v0, v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
@@ -65,7 +65,7 @@
 
     const-string v1, "Exception on background worker thread"
 
-    .line 468
+    .line 472
     invoke-static {v0, v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
@@ -77,7 +77,7 @@
 
     const-string v1, "Exception on background worker thread"
 
-    .line 466
+    .line 470
     invoke-static {v0, v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

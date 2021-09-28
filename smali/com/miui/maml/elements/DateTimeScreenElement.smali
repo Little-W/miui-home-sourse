@@ -25,10 +25,10 @@
 .method public constructor <init>(Lorg/w3c/dom/Element;Lcom/miui/maml/ScreenElementRoot;)V
     .locals 10
 
-    .line 101
+    .line 113
     invoke-direct {p0, p1, p2}, Lcom/miui/maml/elements/TextScreenElement;-><init>(Lorg/w3c/dom/Element;Lcom/miui/maml/ScreenElementRoot;)V
 
-    .line 102
+    .line 114
     invoke-virtual {p0}, Lcom/miui/maml/elements/DateTimeScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object p2
@@ -43,7 +43,7 @@
 
     move-result-object p2
 
-    .line 103
+    .line 115
     invoke-virtual {p0}, Lcom/miui/maml/elements/DateTimeScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v0
@@ -58,7 +58,7 @@
 
     move-result-object v0
 
-    .line 104
+    .line 116
     new-instance v1, Lcom/miui/maml/elements/DateTimeScreenElement$DateFormatter;
 
     iget-object v2, p0, Lcom/miui/maml/elements/DateTimeScreenElement;->mFormatter:Lcom/miui/maml/util/TextFormatter;
@@ -69,7 +69,7 @@
 
     const-string v1, "contentDescriptionFormat"
 
-    .line 105
+    .line 117
     invoke-interface {p1, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -82,10 +82,10 @@
 
     if-nez v1, :cond_0
 
-    .line 106
+    .line 118
     iput-boolean v2, p0, Lcom/miui/maml/elements/DateTimeScreenElement;->mHasContentDescription:Z
 
-    .line 107
+    .line 119
     invoke-virtual {p0}, Lcom/miui/maml/elements/DateTimeScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v3
@@ -106,7 +106,7 @@
 
     move-result-object p1
 
-    .line 108
+    .line 120
     new-instance v1, Lcom/miui/maml/elements/DateTimeScreenElement$DateFormatter;
 
     invoke-direct {v1, p0, p1, p2, v0}, Lcom/miui/maml/elements/DateTimeScreenElement$DateFormatter;-><init>(Lcom/miui/maml/elements/DateTimeScreenElement;Lcom/miui/maml/util/TextFormatter;Lcom/miui/maml/data/Expression;Lcom/miui/maml/data/Expression;)V
@@ -118,7 +118,7 @@
     :cond_0
     const-string v1, "contentDescriptionFormatExp"
 
-    .line 109
+    .line 121
     invoke-interface {p1, v1}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -129,10 +129,10 @@
 
     if-nez v1, :cond_1
 
-    .line 110
+    .line 122
     iput-boolean v2, p0, Lcom/miui/maml/elements/DateTimeScreenElement;->mHasContentDescription:Z
 
-    .line 111
+    .line 123
     invoke-virtual {p0}, Lcom/miui/maml/elements/DateTimeScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
 
     move-result-object v3
@@ -153,21 +153,21 @@
 
     move-result-object p1
 
-    .line 112
+    .line 124
     new-instance v1, Lcom/miui/maml/elements/DateTimeScreenElement$DateFormatter;
 
     invoke-direct {v1, p0, p1, p2, v0}, Lcom/miui/maml/elements/DateTimeScreenElement$DateFormatter;-><init>(Lcom/miui/maml/elements/DateTimeScreenElement;Lcom/miui/maml/util/TextFormatter;Lcom/miui/maml/data/Expression;Lcom/miui/maml/data/Expression;)V
 
     iput-object v1, p0, Lcom/miui/maml/elements/DateTimeScreenElement;->mDescriptionDateFormatter:Lcom/miui/maml/elements/DateTimeScreenElement$DateFormatter;
 
-    .line 114
+    .line 126
     :cond_1
     :goto_0
     iget-boolean p1, p0, Lcom/miui/maml/elements/DateTimeScreenElement;->mHasContentDescription:Z
 
     if-eqz p1, :cond_2
 
-    .line 115
+    .line 127
     iget-object p1, p0, Lcom/miui/maml/elements/DateTimeScreenElement;->mRoot:Lcom/miui/maml/ScreenElementRoot;
 
     invoke-virtual {p1, p0}, Lcom/miui/maml/ScreenElementRoot;->addAccessibleElements(Lcom/miui/maml/elements/AnimatedScreenElement;)V
@@ -181,7 +181,7 @@
 .method public getContentDescription()Ljava/lang/String;
     .locals 1
 
-    .line 135
+    .line 147
     iget-object v0, p0, Lcom/miui/maml/elements/DateTimeScreenElement;->mDescriptionDateFormatter:Lcom/miui/maml/elements/DateTimeScreenElement$DateFormatter;
 
     if-eqz v0, :cond_0
@@ -204,7 +204,7 @@
 .method protected getText()Ljava/lang/String;
     .locals 1
 
-    .line 130
+    .line 142
     iget-object v0, p0, Lcom/miui/maml/elements/DateTimeScreenElement;->mDateFormatter:Lcom/miui/maml/elements/DateTimeScreenElement$DateFormatter;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/DateTimeScreenElement$DateFormatter;->getText()Ljava/lang/String;
@@ -217,20 +217,20 @@
 .method public resume()V
     .locals 1
 
-    .line 121
+    .line 133
     invoke-super {p0}, Lcom/miui/maml/elements/TextScreenElement;->resume()V
 
-    .line 122
+    .line 134
     iget-object v0, p0, Lcom/miui/maml/elements/DateTimeScreenElement;->mDateFormatter:Lcom/miui/maml/elements/DateTimeScreenElement$DateFormatter;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/DateTimeScreenElement$DateFormatter;->resetCalendar()V
 
-    .line 123
+    .line 135
     iget-object v0, p0, Lcom/miui/maml/elements/DateTimeScreenElement;->mDescriptionDateFormatter:Lcom/miui/maml/elements/DateTimeScreenElement$DateFormatter;
 
     if-eqz v0, :cond_0
 
-    .line 124
+    .line 136
     invoke-virtual {v0}, Lcom/miui/maml/elements/DateTimeScreenElement$DateFormatter;->resetCalendar()V
 
     :cond_0

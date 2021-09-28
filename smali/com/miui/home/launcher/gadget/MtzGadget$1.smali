@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/gadget/MtzGadget;)V
     .locals 0
 
-    .line 51
+    .line 52
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/MtzGadget$1;->this$0:Lcom/miui/home/launcher/gadget/MtzGadget;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -35,12 +35,12 @@
 .method public onSingleTapUp(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 54
+    .line 55
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MtzGadget$1;->this$0:Lcom/miui/home/launcher/gadget/MtzGadget;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/MtzGadget;->trackClick()V
 
-    .line 55
+    .line 56
     invoke-super {p0, p1}, Landroid/view/GestureDetector$SimpleOnGestureListener;->onSingleTapUp(Landroid/view/MotionEvent;)Z
 
     move-result p1

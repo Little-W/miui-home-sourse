@@ -27,9 +27,9 @@
 
     if-eqz v0, :cond_1
 
+    .line 41
     check-cast p0, Landroidx/core/widget/TintableImageSourceView;
 
-    .line 41
     invoke-interface {p0}, Landroidx/core/widget/TintableImageSourceView;->getSupportImageTintList()Landroid/content/res/ColorStateList;
 
     move-result-object p0
@@ -66,9 +66,9 @@
 
     if-eqz v0, :cond_1
 
+    .line 78
     check-cast p0, Landroidx/core/widget/TintableImageSourceView;
 
-    .line 78
     invoke-interface {p0}, Landroidx/core/widget/TintableImageSourceView;->getSupportImageTintMode()Landroid/graphics/PorterDuff$Mode;
 
     move-result-object p0

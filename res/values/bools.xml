@@ -31,5 +31,4 @@
     <bool name="treat_as_land">false</bool>
     <bool name="workmanager_test_configuration">false</bool>
     <bool name="xiaomi_market_message_decoupling">true</bool>
-    <bool name="is_miui_home_debug_log_enable">false</bool>
 </resources>

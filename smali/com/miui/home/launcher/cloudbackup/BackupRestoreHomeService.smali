@@ -289,8 +289,6 @@
     const-string v3, " ErrnoException when copyFile home files"
 
     .line 195
-    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 196
     invoke-virtual {p2}, Landroid/system/ErrnoException;->printStackTrace()V
     :try_end_6
@@ -403,8 +401,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
-
-    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
 

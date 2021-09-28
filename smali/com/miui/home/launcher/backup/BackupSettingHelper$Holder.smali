@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 42
+    .line 46
     new-instance v0, Lcom/miui/home/launcher/backup/BackupSettingHelper;
 
     const/4 v1, 0x0
@@ -37,7 +37,7 @@
 .method static synthetic access$100()Lcom/miui/home/launcher/backup/BackupSettingHelper;
     .locals 1
 
-    .line 41
+    .line 45
     sget-object v0, Lcom/miui/home/launcher/backup/BackupSettingHelper$Holder;->sInstance:Lcom/miui/home/launcher/backup/BackupSettingHelper;
 
     return-object v0

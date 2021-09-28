@@ -27,9 +27,15 @@
 
 # virtual methods
 .method public areContentsTheSame(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;)Z
-    .locals 1
+    .locals 2
 
     .line 52
+    iget-boolean v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem$1;->selected:Z
+
+    iget-boolean v1, p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;->selected:Z
+
+    if-ne v0, v1, :cond_0
+
     iget v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem$1;->iconHeight:I
 
     iget p1, p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;->iconHeight:I

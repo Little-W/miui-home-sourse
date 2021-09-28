@@ -153,7 +153,7 @@
 
     move-result-object p2
 
-    const v1, 0x7f0600d2
+    const v1, 0x7f0600d4
 
     .line 136
     invoke-virtual {p1, v1}, Landroid/content/Context;->getColor(I)I
@@ -557,7 +557,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0a017e
+    const v0, 0x7f0a0180
 
     .line 61
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -568,7 +568,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mPreview:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a00c3
+    const v0, 0x7f0a00c4
 
     .line 62
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

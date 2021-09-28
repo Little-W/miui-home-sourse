@@ -237,8 +237,6 @@
     const-string v2, "parseIntentUri error"
 
     .line 333
-    invoke-static {v1, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-object v0
 .end method
@@ -283,8 +281,6 @@
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 311
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -331,8 +327,6 @@
     const-string v2, "parseIntentUri error"
 
     .line 319
-    invoke-static {v0, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :cond_2
     :goto_0
     return-object v1
@@ -379,8 +373,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
@@ -459,8 +451,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
@@ -595,13 +585,11 @@
     const-string v0, "Launcher.SearchBar"
 
     const-string v1, "register switch icon observer"
-
-    .line 220
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    .line 220
     goto :goto_0
 
     :catch_0
@@ -611,12 +599,10 @@
     const-string v1, "Launcher.SearchBar"
 
     const-string v2, "register switch icon observer exception"
-
-    .line 222
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
+    .line 222
     .line 225
     :cond_0
     :goto_0
@@ -658,12 +644,10 @@
     const-string v0, "Launcher.SearchBar"
 
     const-string v1, "unregister switch icon observer"
-
-    .line 231
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    .line 231
     .line 233
     :cond_0
     monitor-exit p0
@@ -852,8 +836,6 @@
     const-string p2, "Global search activity not found"
 
     .line 153
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     :goto_0
     return-void
 .end method
@@ -1040,7 +1022,7 @@
     .line 71
     invoke-super {p0}, Lcom/miui/blur/sdk/backdrop/BackdropBlurRelativeLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a01ad
+    const v0, 0x7f0a01b1
 
     .line 72
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarDesktopLayout;->findViewById(I)Landroid/view/View;
@@ -1051,7 +1033,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout;->mSearchIconLayout:Lcom/miui/home/launcher/SearchBarLeftIconLayout;
 
-    const v0, 0x7f0a01b0
+    const v0, 0x7f0a01b4
 
     .line 73
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarDesktopLayout;->findViewById(I)Landroid/view/View;

@@ -56,12 +56,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f080184
+    const v1, 0x7f0801ab
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f080182
+    const v1, 0x7f0801a9
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -92,8 +92,6 @@
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 56
     instance-of v1, v0, Landroid/graphics/drawable/LayerDrawable;

@@ -259,8 +259,6 @@
     const-string v0, "GestureStateMachine"
 
     .line 65
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
     return-void
 .end method
 

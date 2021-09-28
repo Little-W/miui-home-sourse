@@ -350,7 +350,7 @@
 .method private isGroupContainerEnable(Lcom/miui/home/launcher/Launcher;)Z
     .locals 1
 
-    .line 331
+    .line 327
     invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->isEmpty()Z
 
     move-result v0
@@ -445,7 +445,7 @@
 
     const-string v0, "Launcher.MultiSelectMonitor"
 
-    .line 335
+    .line 331
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -486,7 +486,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 339
+    .line 335
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isUninstallDialogShowing()Z
 
     move-result v2
@@ -505,10 +505,8 @@
 
     move-result-object v1
 
-    .line 335
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 341
+    .line 331
+    .line 337
     iget v0, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->mEditModeState:I
 
     const/16 v1, 0xa
@@ -532,14 +530,14 @@
 
     if-nez v0, :cond_1
 
-    .line 345
+    .line 341
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isUninstallDialogShowing()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 346
+    .line 342
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isUninstallDialogAnimShowing()Z
 
     move-result p1
@@ -586,7 +584,7 @@
 .method private updateFinishContainerState()V
     .locals 2
 
-    .line 356
+    .line 352
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -595,7 +593,7 @@
 
     return-void
 
-    .line 360
+    .line 356
     :cond_0
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->needShowGroupContainerOrFinishContainer(Lcom/miui/home/launcher/Launcher;)Z
 
@@ -603,7 +601,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 361
+    .line 357
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->mMultiSelectModeMenu:Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;
 
     iget-boolean v1, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->mIsWidgetsPreviewLayoutVisible:Z
@@ -614,7 +612,7 @@
 
     goto :goto_0
 
-    .line 363
+    .line 359
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->mMultiSelectModeMenu:Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;
 
@@ -646,16 +644,16 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
-    .line 320
+    .line 319
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->isGroupContainerEnable(Lcom/miui/home/launcher/Launcher;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 321
+    .line 320
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->mMultiSelectModeMenu:Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;
 
     iget-boolean v1, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->mIsWidgetsPreviewLayoutVisible:Z
@@ -666,20 +664,8 @@
 
     goto :goto_0
 
-    .line 323
+    .line 322
     :cond_1
-    iget-object v0, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->mMultiSelectModeMenu:Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;
-
-    iget-boolean v1, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->mIsWidgetsPreviewLayoutVisible:Z
-
-    xor-int/lit8 v1, v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;->changeGroupContainerToDisableState(Z)V
-
-    goto :goto_0
-
-    .line 326
-    :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->mMultiSelectModeMenu:Lcom/miui/home/launcher/multiselect/MultiSelectModeMenu;
 
     iget-boolean v1, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->mIsWidgetsPreviewLayoutVisible:Z
@@ -695,10 +681,10 @@
 .method private updateTopMenuContainerState()V
     .locals 0
 
-    .line 351
+    .line 347
     invoke-direct {p0}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->updateFinishContainerState()V
 
-    .line 352
+    .line 348
     invoke-direct {p0}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->updateGroupContainerState()V
 
     return-void
@@ -824,7 +810,7 @@
 
     const/4 v0, 0x1
 
-    .line 369
+    .line 365
     new-array v0, v0, [Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->mEditStateChangedMessageHandler:Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;
@@ -1062,17 +1048,17 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 393
+    .line 389
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->mCheckedShortcutIcons:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 394
+    .line 390
     invoke-direct {p0}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->unregisterEventBusHandler()V
 
     const/4 v0, 0x0
 
-    .line 395
+    .line 391
     sput-object v0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->sMultiSelectMonitor:Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
 
     return-void
@@ -1292,7 +1278,7 @@
 
     const/4 v0, 0x0
 
-    .line 399
+    .line 395
     sput-object v0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->sMultiSelectMonitor:Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
 
     return-void

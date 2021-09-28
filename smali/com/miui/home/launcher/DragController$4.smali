@@ -3,12 +3,12 @@
 .source "DragController.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/function/Supplier;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/DragController;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    value = Lcom/miui/home/launcher/DragController;->drop(FFLcom/miui/home/launcher/DropTarget;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -16,29 +16,30 @@
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/function/Supplier<",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
+
 
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/DragController;
 
-.field final synthetic val$ev:Landroid/view/MotionEvent;
-
-.field final synthetic val$screenX:I
-
-.field final synthetic val$screenY:I
+.field final synthetic val$currentTarget:Lcom/miui/home/launcher/DropTarget;
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/DragController;IILandroid/view/MotionEvent;)V
+.method constructor <init>(Lcom/miui/home/launcher/DragController;Lcom/miui/home/launcher/DropTarget;)V
     .locals 0
 
-    .line 888
+    .line 1124
     iput-object p1, p0, Lcom/miui/home/launcher/DragController$4;->this$0:Lcom/miui/home/launcher/DragController;
 
-    iput p2, p0, Lcom/miui/home/launcher/DragController$4;->val$screenX:I
-
-    iput p3, p0, Lcom/miui/home/launcher/DragController$4;->val$screenY:I
-
-    iput-object p4, p0, Lcom/miui/home/launcher/DragController$4;->val$ev:Landroid/view/MotionEvent;
+    iput-object p2, p0, Lcom/miui/home/launcher/DragController$4;->val$currentTarget:Lcom/miui/home/launcher/DropTarget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,57 +48,60 @@
 
 
 # virtual methods
-.method public run()V
+.method public bridge synthetic get()Ljava/lang/Object;
+    .locals 1
+
+    .line 1124
+    invoke-virtual {p0}, Lcom/miui/home/launcher/DragController$4;->get()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public get()Ljava/lang/String;
     .locals 4
 
-    .line 891
-    iget-object v0, p0, Lcom/miui/home/launcher/DragController$4;->this$0:Lcom/miui/home/launcher/DragController;
+    .line 1127
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
-    iget v1, p0, Lcom/miui/home/launcher/DragController$4;->val$screenX:I
+    move-result-object v0
 
-    iget v2, p0, Lcom/miui/home/launcher/DragController$4;->val$screenY:I
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getResources()Landroid/content/res/Resources;
 
-    iget-object v3, p0, Lcom/miui/home/launcher/DragController$4;->val$ev:Landroid/view/MotionEvent;
+    move-result-object v0
 
-    invoke-static {v0, v1, v2, v3}, Lcom/miui/home/launcher/DragController;->access$100(Lcom/miui/home/launcher/DragController;IILandroid/view/MotionEvent;)V
+    const/4 v1, 0x1
 
-    .line 892
-    iget-object v0, p0, Lcom/miui/home/launcher/DragController$4;->this$0:Lcom/miui/home/launcher/DragController;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/DragController;->cancelScroll()V
+    iget-object v2, p0, Lcom/miui/home/launcher/DragController$4;->val$currentTarget:Lcom/miui/home/launcher/DropTarget;
 
-    .line 893
-    iget-object v0, p0, Lcom/miui/home/launcher/DragController$4;->this$0:Lcom/miui/home/launcher/DragController;
+    .line 1128
+    invoke-interface {v2}, Lcom/miui/home/launcher/DropTarget;->getOnDropAnnounce()Lcom/miui/home/launcher/DropTarget$OnDropAnnounce;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/DragController;->access$200(Lcom/miui/home/launcher/DragController;)Z
+    move-result-object v2
 
-    move-result v0
+    iget-object v3, p0, Lcom/miui/home/launcher/DragController$4;->this$0:Lcom/miui/home/launcher/DragController;
 
-    if-eqz v0, :cond_0
+    invoke-static {v3}, Lcom/miui/home/launcher/DragController;->access$000(Lcom/miui/home/launcher/DragController;)Lcom/miui/home/launcher/DragObject;
 
-    .line 894
-    iget-object v0, p0, Lcom/miui/home/launcher/DragController$4;->this$0:Lcom/miui/home/launcher/DragController;
+    move-result-object v3
 
-    iget v1, p0, Lcom/miui/home/launcher/DragController$4;->val$screenX:I
+    invoke-interface {v2, v3}, Lcom/miui/home/launcher/DropTarget$OnDropAnnounce;->getDropAnnounceForAccessibility(Lcom/miui/home/launcher/DragObject;)Ljava/lang/String;
 
-    int-to-float v1, v1
+    move-result-object v2
 
-    iget v2, p0, Lcom/miui/home/launcher/DragController$4;->val$screenY:I
+    const/4 v3, 0x0
 
-    int-to-float v2, v2
+    aput-object v2, v1, v3
 
-    invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/DragController;->access$300(Lcom/miui/home/launcher/DragController;FF)V
+    const v2, 0x7f100066
 
-    .line 896
-    :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/DragController$4;->this$0:Lcom/miui/home/launcher/DragController;
+    .line 1127
+    invoke-virtual {v0, v2, v1}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/DragController;->access$400(Lcom/miui/home/launcher/DragController;)V
+    move-result-object v0
 
-    .line 897
-    iget-object v0, p0, Lcom/miui/home/launcher/DragController$4;->this$0:Lcom/miui/home/launcher/DragController;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/DragController;->access$500(Lcom/miui/home/launcher/DragController;)V
-
-    return-void
+    return-object v0
 .end method

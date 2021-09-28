@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 34
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +32,7 @@
 .method public run()V
     .locals 0
 
-    .line 37
+    .line 38
     invoke-static {}, Lmiuix/animation/utils/LogUtils;->getLogEnableInfo()V
 
     return-void

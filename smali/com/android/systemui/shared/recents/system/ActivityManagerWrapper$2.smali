@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;Lcom/android/systemui/shared/recents/system/AssistDataReceiver;)V
     .locals 0
 
-    .line 372
+    .line 358
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$2;->this$0:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     iput-object p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$2;->val$assistDataReceiver:Lcom/android/systemui/shared/recents/system/AssistDataReceiver;
@@ -39,7 +39,7 @@
 .method public onHandleAssistData(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 374
+    .line 360
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$2;->val$assistDataReceiver:Lcom/android/systemui/shared/recents/system/AssistDataReceiver;
 
     invoke-virtual {v0, p1}, Lcom/android/systemui/shared/recents/system/AssistDataReceiver;->onHandleAssistData(Landroid/os/Bundle;)V
@@ -50,7 +50,7 @@
 .method public onHandleAssistScreenshot(Landroid/graphics/Bitmap;)V
     .locals 1
 
-    .line 377
+    .line 363
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$2;->val$assistDataReceiver:Lcom/android/systemui/shared/recents/system/AssistDataReceiver;
 
     invoke-virtual {v0, p1}, Lcom/android/systemui/shared/recents/system/AssistDataReceiver;->onHandleAssistScreenshot(Landroid/graphics/Bitmap;)V

@@ -40,7 +40,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .line 1181
+    .line 1201
     new-instance v0, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     const-string v1, "SCREEN_ELEMENT"
@@ -51,7 +51,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->SCREEN_ELEMENT:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
-    .line 1182
+    .line 1202
     new-instance v0, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     const-string v1, "VARIABLE"
@@ -62,7 +62,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->VARIABLE:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
-    .line 1183
+    .line 1203
     new-instance v0, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     const-string v1, "CONSTRUCTOR"
@@ -73,7 +73,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->CONSTRUCTOR:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
-    .line 1184
+    .line 1204
     new-instance v0, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     const-string v1, "ANIMATION_ITEM"
@@ -84,7 +84,7 @@
 
     sput-object v0, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->ANIMATION_ITEM:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
-    .line 1185
+    .line 1205
     new-instance v0, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     const-string v1, "VARIABLE_BINDER"
@@ -97,7 +97,7 @@
 
     const/4 v0, 0x5
 
-    .line 1180
+    .line 1200
     new-array v0, v0, [Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     sget-object v1, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->SCREEN_ELEMENT:Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
@@ -133,7 +133,7 @@
         }
     .end annotation
 
-    .line 1180
+    .line 1200
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -142,7 +142,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
     .locals 1
 
-    .line 1180
+    .line 1200
     const-class v0, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -157,7 +157,7 @@
 .method public static values()[Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
     .locals 1
 
-    .line 1180
+    .line 1200
     sget-object v0, Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->$VALUES:[Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;
 
     invoke-virtual {v0}, [Lcom/miui/maml/ActionCommand$TargetCommand$TargetType;->clone()Ljava/lang/Object;

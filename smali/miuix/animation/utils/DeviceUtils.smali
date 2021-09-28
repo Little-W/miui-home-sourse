@@ -626,7 +626,7 @@
 
     const-string v9, "olivewood"
 
-    const-string v10, "willow"
+    const-string/jumbo v10, "willow"
 
     const-string v11, "wayne"
 
@@ -2064,7 +2064,7 @@
 
     sput v1, Lmiuix/animation/utils/DeviceUtils;->mTotalRam:I
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
@@ -2074,7 +2074,7 @@
     const-string v2, "DeviceUtils"
 
     .line 114
-    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2122,7 +2122,7 @@
 
     move-result v0
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     return v0
 

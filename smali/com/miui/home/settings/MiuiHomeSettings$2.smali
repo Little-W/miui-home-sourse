@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
     .locals 0
 
-    .line 195
+    .line 212
     iput-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$2;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onPreferenceClick(Landroidx/preference/Preference;)Z
     .locals 0
 
-    .line 198
+    .line 215
     invoke-static {}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackHomeMoreSettingsDefaultHomeClicked()V
 
     const/4 p1, 0x0

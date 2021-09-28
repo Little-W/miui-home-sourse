@@ -27,7 +27,7 @@
     goto :goto_0
 
     :pswitch_0
-    const-string p0, "存储分区不可用\uff0c请检查SD卡"
+    const-string/jumbo p0, "存储分区不可用\uff0c请检查SD卡"
 
     .line 20
     invoke-static {p0}, Lcom/market/sdk/DownloadInstallResultNotifier;->showToast(Ljava/lang/String;)V
@@ -35,7 +35,7 @@
     goto :goto_0
 
     :pswitch_1
-    const-string p0, "连接下载管理器失败\uff0c请在应用管理中检查下载管理器的状态"
+    const-string/jumbo p0, "连接下载管理器失败\uff0c请在应用管理中检查下载管理器的状态"
 
     .line 24
     invoke-static {p0}, Lcom/market/sdk/DownloadInstallResultNotifier;->showToast(Ljava/lang/String;)V
