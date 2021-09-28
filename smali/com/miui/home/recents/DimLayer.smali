@@ -335,7 +335,7 @@
 
     :cond_2
     :goto_0
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/high16 v1, 0x0
 
     const/4 v3, 0x0
 
@@ -459,8 +459,6 @@
     const-string p3, "dim error"
 
     .line 114
-    invoke-static {p2, p3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     .line 116
     :cond_5
     :goto_3
@@ -554,8 +552,6 @@
     const-string v3, "removeDimLayer error"
 
     .line 76
-    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     .line 78
     :cond_0
     :goto_0

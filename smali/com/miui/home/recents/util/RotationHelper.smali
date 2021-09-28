@@ -234,8 +234,6 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 187
     iget v0, p0, Lcom/miui/home/recents/util/RotationHelper;->mLastActivityFlags:I
 
@@ -350,8 +348,6 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 122
     iget v0, p0, Lcom/miui/home/recents/util/RotationHelper;->mCurrentStateRequest:I
 
@@ -386,8 +382,6 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 113
     iget v0, p0, Lcom/miui/home/recents/util/RotationHelper;->mCurrentTransitionRequest:I

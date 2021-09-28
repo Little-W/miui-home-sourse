@@ -83,8 +83,6 @@
 
     const-string v1, "onExitState"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 65
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWindow()Landroid/view/Window;
 
@@ -138,8 +136,6 @@
     sget-object v0, Lcom/miui/home/recents/OverviewState;->TAG:Ljava/lang/String;
 
     const-string v1, "onStateEnabled"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 44
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRecentsContainer()Lcom/miui/home/recents/views/RecentsContainer;
@@ -255,8 +251,6 @@
     sget-object v0, Lcom/miui/home/recents/OverviewState;->TAG:Ljava/lang/String;
 
     const-string v1, "onStateTransitionEnd"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 79
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRotationHelper()Lcom/miui/home/recents/util/RotationHelper;

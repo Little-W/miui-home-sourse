@@ -1529,8 +1529,6 @@
 
     const-string v1, "recycle"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     const-wide/16 v0, -0x1
 
     .line 633

@@ -155,8 +155,6 @@
     const-string v4, "Animation created, before activity"
 
     .line 95
-    invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 96
     new-array v2, v3, [I
 
@@ -202,8 +200,6 @@
     const-string v4, "No closing app"
 
     .line 106
-    invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 107
     new-array v2, v3, [I
 

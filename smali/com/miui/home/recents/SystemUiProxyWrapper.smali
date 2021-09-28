@@ -187,8 +187,6 @@
     const-string v2, "Failed to notify SysUI of exitSplitScreen"
 
     .line 86
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 .end method
@@ -273,8 +271,6 @@
     const-string p2, "Failed to link sysui proxy death recipient"
 
     .line 51
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     :cond_0
     :goto_0
     return-void
@@ -307,8 +303,6 @@
     const-string v2, "Failed to notify SysUI of onAssistantGestureCompletion"
 
     .line 130
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 .end method
@@ -340,8 +334,6 @@
     const-string v1, "Failed to notify SysUI of onAssistantProgress"
 
     .line 119
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 .end method
@@ -373,8 +365,6 @@
     const-string v1, "Failed to notify SysUI of onGestureLineProgress"
 
     .line 97
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 .end method
@@ -438,8 +428,6 @@
     const-string v1, "Failed to notify SysUI of onStatusBarMotionEvent"
 
     .line 153
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 .end method
@@ -494,8 +482,6 @@
     const-string v1, "Failed to notify SysUI of startAssistant"
 
     .line 108
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :goto_0
     return-void
 .end method

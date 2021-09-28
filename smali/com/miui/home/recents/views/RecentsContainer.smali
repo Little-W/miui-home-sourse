@@ -4595,8 +4595,6 @@
     const-string v2, "getFreeMemory"
 
     .line 842
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     const-wide/16 v0, 0x0
 
     :goto_0
@@ -6508,8 +6506,6 @@
     const-string v1, "ShowApplicationInfo"
 
     .line 1188
-    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     :cond_0
     :goto_0
     return-void

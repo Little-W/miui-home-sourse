@@ -981,6 +981,7 @@
     <public type="bool" name="treat_as_land" id="0x7f05001c" />
     <public type="bool" name="workmanager_test_configuration" id="0x7f05001d" />
     <public type="bool" name="xiaomi_market_message_decoupling" id="0x7f05001e" />
+    <public type="bool" name="is_miui_home_debug_log_enable" id="0x7f05001f" />
     <public type="color" name="abc_background_cache_hint_selector_material_dark" id="0x7f060000" />
     <public type="color" name="abc_background_cache_hint_selector_material_light" id="0x7f060001" />
     <public type="color" name="abc_btn_colored_borderless_text_material" id="0x7f060002" />
@@ -2831,12 +2832,12 @@
     <public type="dimen" name="workspace_widget_cell_padding_bottom_rotatable" id="0x7f0703aa" />
     <public type="dimen" name="workspace_widget_cell_padding_top" id="0x7f0703ab" />
     <public type="dimen" name="wrap_content" id="0x7f0703ac" />
-    <public type="dimen" name="recent_background_scrim_alpha" id="0x7f0702f2" />
     <public type="dimen" name="folder_header_padding_bottom" id="0x7f0700dc" />
     <public type="dimen" name="folder_header_padding_left" id="0x7f0700dd" />
     <public type="dimen" name="folder_header_padding_right" id="0x7f0700de" />
     <public type="dimen" name="folder_preview_height" id="0x7f0700e1" />
     <public type="dimen" name="folder_preview_width" id="0x7f0700e3" />
+    <public type="dimen" name="recent_background_scrim_alpha" id="0x7f0702f2" />
     <public type="drawable" name="$contacts_default_portrait0__0" id="0x7f080000" />
     <public type="drawable" name="$contacts_default_portrait1__0" id="0x7f080001" />
     <public type="drawable" name="$contacts_default_portrait2__0" id="0x7f080002" />
@@ -3828,8 +3829,98 @@
     <public type="drawable" name="uninstall_dialog_confirm_btn" id="0x7f080505" />
     <public type="drawable" name="workspace_seekpoint" id="0x7f080513" />
     <public type="drawable" name="workspace_seekpoint_dark" id="0x7f080514" />
-    <public type="drawable" name="miuix_appcompat_btn_radio_on_dark" id="0x7f080327" />
-    <public type="drawable" name="miuix_appcompat_btn_radio_on_light" id="0x7f08032a" />
+    <public type="drawable" name="default_downloading_icon" id="0x7f0800dc" />
+    <public type="drawable" name="default_screen_home_icon" id="0x7f0800dd" />
+    <public type="drawable" name="edit_mode_checkbox_off" id="0x7f0800ed" />
+    <public type="drawable" name="edit_mode_checkbox_on" id="0x7f0800ee" />
+    <public type="drawable" name="folder_scrollbar_v" id="0x7f0800f7" />
+    <public type="drawable" name="gadget_clear_broom_00000" id="0x7f08011d" />
+    <public type="drawable" name="gadget_clear_broom_00001" id="0x7f08011e" />
+    <public type="drawable" name="gadget_clear_broom_00002" id="0x7f08011f" />
+    <public type="drawable" name="gadget_clear_broom_00003" id="0x7f080120" />
+    <public type="drawable" name="gadget_clear_broom_00004" id="0x7f080121" />
+    <public type="drawable" name="gadget_clear_broom_00005" id="0x7f080122" />
+    <public type="drawable" name="gadget_clear_broom_00006" id="0x7f080123" />
+    <public type="drawable" name="gadget_clear_broom_00007" id="0x7f080124" />
+    <public type="drawable" name="gadget_clear_broom_00008" id="0x7f080125" />
+    <public type="drawable" name="gadget_clear_broom_00009" id="0x7f080126" />
+    <public type="drawable" name="gadget_clear_broom_00010" id="0x7f080127" />
+    <public type="drawable" name="gadget_clear_broom_00011" id="0x7f080128" />
+    <public type="drawable" name="gadget_clear_broom_00012" id="0x7f080129" />
+    <public type="drawable" name="gadget_clear_broom_00013" id="0x7f08012a" />
+    <public type="drawable" name="gadget_clear_broom_00014" id="0x7f08012b" />
+    <public type="drawable" name="gadget_clear_broom_00015" id="0x7f08012c" />
+    <public type="drawable" name="gadget_clear_broom_00016" id="0x7f08012d" />
+    <public type="drawable" name="gadget_clear_broom_00017" id="0x7f08012e" />
+    <public type="drawable" name="gadget_clear_broom_00018" id="0x7f08012f" />
+    <public type="drawable" name="gadget_clear_broom_00019" id="0x7f080130" />
+    <public type="drawable" name="gadget_clear_broom_00020" id="0x7f080131" />
+    <public type="drawable" name="gadget_clear_broom_00021" id="0x7f080132" />
+    <public type="drawable" name="gadget_clear_broom_00022" id="0x7f080133" />
+    <public type="drawable" name="gadget_clear_broom_00023" id="0x7f080134" />
+    <public type="drawable" name="gadget_clear_broom_00024" id="0x7f080135" />
+    <public type="drawable" name="gadget_clear_broom_00025" id="0x7f080136" />
+    <public type="drawable" name="gadget_clear_broom_00026" id="0x7f080137" />
+    <public type="drawable" name="gadget_clear_broom_00027" id="0x7f080138" />
+    <public type="drawable" name="gadget_clear_broom_00028" id="0x7f080139" />
+    <public type="drawable" name="gadget_clear_button" id="0x7f08013a" />
+    <public type="drawable" name="gadget_clear_button_bg" id="0x7f08013b" />
+    <public type="drawable" name="gadget_power_clear_button" id="0x7f08014d" />
+    <public type="drawable" name="gadget_power_clear_icon" id="0x7f08014e" />
+    <public type="drawable" name="home_settings_feed_n" id="0x7f08015b" />
+    <public type="drawable" name="home_settings_feed_s" id="0x7f08015c" />
+    <public type="drawable" name="ic_search" id="0x7f08016b" />
+    <public type="drawable" name="icon_folder_light" id="0x7f08017a" />
+    <public type="drawable" name="icon_maml_download_light" id="0x7f08017f" />
+    <public type="drawable" name="icon_notification_bg" id="0x7f080181" />
+    <public type="drawable" name="icon_search_dark_default" id="0x7f080183" />
+    <public type="drawable" name="icon_search_light_default" id="0x7f080185" />
+    <public type="drawable" name="icon_xiaoai_dark_default" id="0x7f080189" />
+    <public type="drawable" name="icon_xiaoai_light_default" id="0x7f08018b" />
+    <public type="drawable" name="miuix_appcompat_action_button_main_new_normal_light" id="0x7f0801ec" />
+    <public type="drawable" name="miuix_appcompat_action_button_main_new_pressed_light" id="0x7f0801ed" />
+    <public type="drawable" name="miuix_appcompat_action_mode_title_button_bg_disable_dark" id="0x7f080287" />
+    <public type="drawable" name="miuix_appcompat_action_mode_title_button_bg_disable_light" id="0x7f080288" />
+    <public type="drawable" name="miuix_appcompat_action_mode_title_button_bg_normal_dark" id="0x7f08028a" />
+    <public type="drawable" name="miuix_appcompat_action_mode_title_button_bg_normal_light" id="0x7f08028b" />
+    <public type="drawable" name="miuix_appcompat_action_mode_title_button_bg_pressed_dark" id="0x7f08028c" />
+    <public type="drawable" name="miuix_appcompat_action_mode_title_button_bg_pressed_light" id="0x7f08028d" />
+    <public type="drawable" name="miuix_appcompat_action_mode_title_default_button_bg_disable_dark" id="0x7f0802ad" />
+    <public type="drawable" name="miuix_appcompat_action_mode_title_default_button_bg_disable_light" id="0x7f0802ae" />
+    <public type="drawable" name="miuix_appcompat_action_mode_title_default_button_bg_normal_dark" id="0x7f0802b0" />
+    <public type="drawable" name="miuix_appcompat_action_mode_title_default_button_bg_normal_light" id="0x7f0802b1" />
+    <public type="drawable" name="miuix_appcompat_action_mode_title_default_button_bg_pressed_dark" id="0x7f0802b2" />
+    <public type="drawable" name="miuix_appcompat_action_mode_title_default_button_bg_pressed_light" id="0x7f0802b3" />
+    <public type="drawable" name="miuix_appcompat_progressbar_indeterminate_circle_dark" id="0x7f0803e1" />
+    <public type="drawable" name="miuix_appcompat_progressbar_indeterminate_circle_light" id="0x7f0803e2" />
+    <public type="drawable" name="miuix_appcompat_ratingbar_star_large_off" id="0x7f0803e9" />
+    <public type="drawable" name="miuix_appcompat_ratingbar_star_large_on" id="0x7f0803ea" />
+    <public type="drawable" name="miuix_appcompat_ratingbar_star_off" id="0x7f0803eb" />
+    <public type="drawable" name="miuix_appcompat_ratingbar_star_on" id="0x7f0803ec" />
+    <public type="drawable" name="miuix_appcompat_ratingbar_star_small_off" id="0x7f0803ed" />
+    <public type="drawable" name="miuix_appcompat_ratingbar_star_small_on" id="0x7f0803ee" />
+    <public type="drawable" name="miuix_appcompat_sliding_btn_slider_shadow" id="0x7f080412" />
+    <public type="drawable" name="miuix_appcompat_text_cursor_dark" id="0x7f080418" />
+    <public type="drawable" name="miuix_appcompat_text_cursor_light" id="0x7f080419" />
+    <public type="drawable" name="miuix_appcompat_text_select_handle_left_dark" id="0x7f08041b" />
+    <public type="drawable" name="miuix_appcompat_text_select_handle_left_light" id="0x7f08041c" />
+    <public type="drawable" name="miuix_appcompat_text_select_handle_middle_dark" id="0x7f08041e" />
+    <public type="drawable" name="miuix_appcompat_text_select_handle_middle_light" id="0x7f08041f" />
+    <public type="drawable" name="miuix_appcompat_text_select_handle_right_dark" id="0x7f080421" />
+    <public type="drawable" name="miuix_appcompat_text_select_handle_right_light" id="0x7f080422" />
+    <public type="drawable" name="miuix_preference_category_bg_dark" id="0x7f080436" />
+    <public type="drawable" name="miuix_preference_category_bg_light" id="0x7f08043b" />
+    <public type="drawable" name="popup" id="0x7f08049c" />
+    <public type="drawable" name="recents_screening" id="0x7f0804af" />
+    <public type="drawable" name="recommend_divider" id="0x7f0804b3" />
+    <public type="drawable" name="recommend_icon_bg" id="0x7f0804b5" />
+    <public type="drawable" name="recommend_loading_item" id="0x7f0804b6" />
+    <public type="drawable" name="recommend_refresh" id="0x7f0804b7" />
+    <public type="drawable" name="recommend_xout" id="0x7f0804b8" />
+    <public type="drawable" name="smallwindow_icon" id="0x7f0804dd" />
+    <public type="drawable" name="speed_of_light" id="0x7f0804de" />
+    <public type="drawable" name="toggle_bg" id="0x7f0804f7" />
+    <public type="drawable" name="wallpaper_mask" id="0x7f08050a" />
     <public type="drawable" name="miuix_sbl_tracking_progress_circle_bg" id="0x7f08047d" />
     <public type="drawable" name="abc_ab_share_pack_mtrl_alpha" id="0x7f080053" />
     <public type="drawable" name="abc_btn_check_to_on_mtrl_000" id="0x7f080058" />
@@ -3878,21 +3969,14 @@
     <public type="drawable" name="abc_textfield_default_mtrl_alpha" id="0x7f0800a4" />
     <public type="drawable" name="abc_textfield_search_activated_mtrl_alpha" id="0x7f0800a5" />
     <public type="drawable" name="abc_textfield_search_default_mtrl_alpha" id="0x7f0800a6" />
-    <public type="drawable" name="notification_bg_low_normal" id="0x7f080492" />
-    <public type="drawable" name="notification_bg_low_pressed" id="0x7f080493" />
-    <public type="drawable" name="notification_bg_normal" id="0x7f080494" />
-    <public type="drawable" name="notification_bg_normal_pressed" id="0x7f080495" />
-    <public type="drawable" name="notify_panel_notification_icon_bg" id="0x7f08049b" />
     <public type="drawable" name="bg_appwidget_error" id="0x7f0800b4" />
     <public type="drawable" name="cell_bg" id="0x7f0800cc" />
     <public type="drawable" name="cell_bg_dark" id="0x7f0800cd" />
     <public type="drawable" name="checkbox_normal" id="0x7f0800ce" />
     <public type="drawable" name="checkbox_selected" id="0x7f0800cf" />
-    <public type="drawable" name="default_downloading_icon" id="0x7f0800dc" />
     <public type="drawable" name="error_background" id="0x7f0800f1" />
     <public type="drawable" name="folder_background" id="0x7f0800f3" />
     <public type="drawable" name="folder_icon_cover" id="0x7f0800f6" />
-    <public type="drawable" name="folder_scrollbar_v" id="0x7f0800f7" />
     <public type="drawable" name="free_style_apps_application_bg_s" id="0x7f0800fb" />
     <public type="drawable" name="free_style_apps_button_bg" id="0x7f0800fc" />
     <public type="drawable" name="free_style_apps_cancel_n" id="0x7f0800fe" />
@@ -3934,9 +4018,12 @@
     <public type="drawable" name="hotseat_background" id="0x7f080160" />
     <public type="drawable" name="icon_assistant_none" id="0x7f080176" />
     <public type="drawable" name="icon_folder" id="0x7f080179" />
-    <public type="drawable" name="icon_notification_bg" id="0x7f080181" />
     <public type="drawable" name="icon_selection_s" id="0x7f080186" />
-    <public type="drawable" name="toggle_bg" id="0x7f0804f7" />
+    <public type="drawable" name="notification_bg_low_normal" id="0x7f080492" />
+    <public type="drawable" name="notification_bg_low_pressed" id="0x7f080493" />
+    <public type="drawable" name="notification_bg_normal" id="0x7f080494" />
+    <public type="drawable" name="notification_bg_normal_pressed" id="0x7f080495" />
+    <public type="drawable" name="notify_panel_notification_icon_bg" id="0x7f08049b" />
     <public type="drawable" name="transition_effect_classic" id="0x7f0804fa" />
     <public type="drawable" name="transition_effect_classic_no_over_shoot" id="0x7f0804fb" />
     <public type="drawable" name="transition_effect_cube" id="0x7f0804fc" />
@@ -3958,90 +4045,8 @@
     <public type="drawable" name="workspace_seekpoint_highlight_dark" id="0x7f080516" />
     <public type="drawable" name="workspace_seekpoint_normal" id="0x7f080517" />
     <public type="drawable" name="workspace_seekpoint_normal_dark" id="0x7f080518" />
-    <public type="drawable" name="clean_tip_bg" id="0x7f0800d0" />
-    <public type="drawable" name="clean_tip_fg" id="0x7f0800d1" />
-    <public type="drawable" name="default_screen_home_icon" id="0x7f0800dd" />
-    <public type="drawable" name="edit_mode_checkbox_off" id="0x7f0800ed" />
-    <public type="drawable" name="edit_mode_checkbox_on" id="0x7f0800ee" />
-    <public type="drawable" name="editing_mode_empty_cell_mark" id="0x7f0800f0" />
-    <public type="drawable" name="folder_content_bg_dark" id="0x7f0800f4" />
-    <public type="drawable" name="folder_scrollbar_v_dark" id="0x7f0800f8" />
-    <public type="drawable" name="folder_setting_rename_bg_dark" id="0x7f0800f9" />
-    <public type="drawable" name="folder_setting_rename_bg_light" id="0x7f0800fa" />
-    <public type="drawable" name="gadget_clear_broom_00000" id="0x7f08011d" />
-    <public type="drawable" name="gadget_clear_broom_00001" id="0x7f08011e" />
-    <public type="drawable" name="gadget_clear_broom_00002" id="0x7f08011f" />
-    <public type="drawable" name="gadget_clear_broom_00003" id="0x7f080120" />
-    <public type="drawable" name="gadget_clear_broom_00004" id="0x7f080121" />
-    <public type="drawable" name="gadget_clear_broom_00005" id="0x7f080122" />
-    <public type="drawable" name="gadget_clear_broom_00006" id="0x7f080123" />
-    <public type="drawable" name="gadget_clear_broom_00007" id="0x7f080124" />
-    <public type="drawable" name="gadget_clear_broom_00008" id="0x7f080125" />
-    <public type="drawable" name="gadget_clear_broom_00009" id="0x7f080126" />
-    <public type="drawable" name="gadget_clear_broom_00010" id="0x7f080127" />
-    <public type="drawable" name="gadget_clear_broom_00011" id="0x7f080128" />
-    <public type="drawable" name="gadget_clear_broom_00012" id="0x7f080129" />
-    <public type="drawable" name="gadget_clear_broom_00013" id="0x7f08012a" />
-    <public type="drawable" name="gadget_clear_broom_00014" id="0x7f08012b" />
-    <public type="drawable" name="gadget_clear_broom_00015" id="0x7f08012c" />
-    <public type="drawable" name="gadget_clear_broom_00016" id="0x7f08012d" />
-    <public type="drawable" name="gadget_clear_broom_00017" id="0x7f08012e" />
-    <public type="drawable" name="gadget_clear_broom_00018" id="0x7f08012f" />
-    <public type="drawable" name="gadget_clear_broom_00019" id="0x7f080130" />
-    <public type="drawable" name="gadget_clear_broom_00020" id="0x7f080131" />
-    <public type="drawable" name="gadget_clear_broom_00021" id="0x7f080132" />
-    <public type="drawable" name="gadget_clear_broom_00022" id="0x7f080133" />
-    <public type="drawable" name="gadget_clear_broom_00023" id="0x7f080134" />
-    <public type="drawable" name="gadget_clear_broom_00024" id="0x7f080135" />
-    <public type="drawable" name="gadget_clear_broom_00025" id="0x7f080136" />
-    <public type="drawable" name="gadget_clear_broom_00026" id="0x7f080137" />
-    <public type="drawable" name="gadget_clear_broom_00027" id="0x7f080138" />
-    <public type="drawable" name="gadget_clear_broom_00028" id="0x7f080139" />
-    <public type="drawable" name="gadget_clear_button" id="0x7f08013a" />
-    <public type="drawable" name="gadget_clear_button_bg" id="0x7f08013b" />
-    <public type="drawable" name="gadget_clock_24_dual_preview" id="0x7f08013e" />
-    <public type="drawable" name="gadget_clock_24_icon" id="0x7f08013f" />
-    <public type="drawable" name="gadget_clock_24_preview" id="0x7f080140" />
-    <public type="drawable" name="gadget_power_clear_button" id="0x7f08014d" />
-    <public type="drawable" name="gadget_power_clear_icon" id="0x7f08014e" />
-    <public type="drawable" name="home_settings_feed_n" id="0x7f08015b" />
-    <public type="drawable" name="home_settings_feed_s" id="0x7f08015c" />
-    <public type="drawable" name="ic_feed" id="0x7f080166" />
-    <public type="drawable" name="ic_search" id="0x7f08016b" />
-    <public type="drawable" name="icon_folder_light" id="0x7f08017a" />
-    <public type="drawable" name="icon_launcher_notification" id="0x7f08017e" />
-    <public type="drawable" name="icon_search_dark_default" id="0x7f080183" />
-    <public type="drawable" name="icon_search_light_default" id="0x7f080185" />
-    <public type="drawable" name="icon_xiaoai_dark_default" id="0x7f080189" />
-    <public type="drawable" name="icon_xiaoai_light_default" id="0x7f08018b" />
-    <public type="drawable" name="menu_button_n" id="0x7f080197" />
-    <public type="drawable" name="menu_button_s" id="0x7f080198" />
-    <public type="drawable" name="miuix_appcompat_action_bar_bg_navigation_light" id="0x7f0801a1" />
-    <public type="drawable" name="miuix_appcompat_action_bar_stack_bg_light" id="0x7f0801ab" />
-    <public type="drawable" name="miuix_appcompat_action_button_main_new_normal_light" id="0x7f0801ec" />
-    <public type="drawable" name="miuix_appcompat_action_button_main_new_pressed_light" id="0x7f0801ed" />
-    <public type="drawable" name="miuix_appcompat_action_mode_bg_navigation_dark" id="0x7f08025c" />
-    <public type="drawable" name="miuix_appcompat_action_mode_bg_navigation_light" id="0x7f08025d" />
-    <public type="drawable" name="miuix_appcompat_action_mode_title_button_bg_disable_dark" id="0x7f080287" />
-    <public type="drawable" name="miuix_appcompat_action_mode_title_button_bg_disable_light" id="0x7f080288" />
-    <public type="drawable" name="miuix_appcompat_action_mode_title_button_bg_normal_dark" id="0x7f08028a" />
-    <public type="drawable" name="miuix_appcompat_action_mode_title_button_bg_normal_light" id="0x7f08028b" />
-    <public type="drawable" name="miuix_appcompat_action_mode_title_button_bg_pressed_dark" id="0x7f08028c" />
-    <public type="drawable" name="miuix_appcompat_action_mode_title_button_bg_pressed_light" id="0x7f08028d" />
-    <public type="drawable" name="miuix_appcompat_action_mode_title_default_button_bg_disable_dark" id="0x7f0802ad" />
-    <public type="drawable" name="miuix_appcompat_action_mode_title_default_button_bg_disable_light" id="0x7f0802ae" />
-    <public type="drawable" name="miuix_appcompat_action_mode_title_default_button_bg_normal_dark" id="0x7f0802b0" />
-    <public type="drawable" name="miuix_appcompat_action_mode_title_default_button_bg_normal_light" id="0x7f0802b1" />
-    <public type="drawable" name="miuix_appcompat_action_mode_title_default_button_bg_pressed_dark" id="0x7f0802b2" />
-    <public type="drawable" name="miuix_appcompat_action_mode_title_default_button_bg_pressed_light" id="0x7f0802b3" />
-    <public type="drawable" name="miuix_appcompat_auto_complete_text_input_background" id="0x7f0802d0" />
-    <public type="drawable" name="miuix_appcompat_auto_complete_text_popup_background" id="0x7f0802d1" />
-    <public type="drawable" name="miuix_appcompat_btn_bg_rect_normal_dark" id="0x7f0802d8" />
-    <public type="drawable" name="miuix_appcompat_btn_bg_rect_normal_light" id="0x7f0802d9" />
-    <public type="drawable" name="miuix_appcompat_btn_bg_rect_pressed_dark" id="0x7f0802da" />
-    <public type="drawable" name="miuix_appcompat_btn_bg_rect_pressed_light" id="0x7f0802db" />
-    <public type="drawable" name="miuix_appcompat_dropdown_indicator_down_n" id="0x7f08033a" />
-    <public type="drawable" name="miuix_appcompat_dropdown_indicator_down_p" id="0x7f08033b" />
+    <public type="drawable" name="miuix_appcompat_btn_radio_on_dark" id="0x7f080327" />
+    <public type="drawable" name="miuix_appcompat_btn_radio_on_light" id="0x7f08032a" />
     <public type="drawable" name="miuix_appcompat_expander_close_normal_dark" id="0x7f080352" />
     <public type="drawable" name="miuix_appcompat_expander_close_normal_light" id="0x7f080353" />
     <public type="drawable" name="miuix_appcompat_expander_close_pressed_dark" id="0x7f080354" />
@@ -4050,6 +4055,39 @@
     <public type="drawable" name="miuix_appcompat_expander_open_normal_light" id="0x7f080359" />
     <public type="drawable" name="miuix_appcompat_expander_open_pressed_dark" id="0x7f08035a" />
     <public type="drawable" name="miuix_appcompat_expander_open_pressed_light" id="0x7f08035b" />
+    <public type="drawable" name="home_settings_no_n" id="0x7f08015d" />
+    <public type="drawable" name="home_settings_notification_n" id="0x7f08015e" />
+    <public type="drawable" name="home_settings_search_n" id="0x7f08015f" />
+    <public type="drawable" name="miuix_appcompat_dropdown_indicator_down_n" id="0x7f08033a" />
+    <public type="drawable" name="miuix_appcompat_dropdown_indicator_down_p" id="0x7f08033b" />
+    <public type="drawable" name="screen_view_seek_point_highlight_icon" id="0x7f0804c0" />
+    <public type="drawable" name="screen_view_seek_point_normal_icon" id="0x7f0804c2" />
+    <public type="drawable" name="recommend_background" id="0x7f0804b2" />
+    <public type="drawable" name="recommend_divider_landscape" id="0x7f0804b4" />
+    <public type="drawable" name="clean_tip_bg" id="0x7f0800d0" />
+    <public type="drawable" name="clean_tip_fg" id="0x7f0800d1" />
+    <public type="drawable" name="editing_mode_empty_cell_mark" id="0x7f0800f0" />
+    <public type="drawable" name="folder_content_bg_dark" id="0x7f0800f4" />
+    <public type="drawable" name="folder_scrollbar_v_dark" id="0x7f0800f8" />
+    <public type="drawable" name="folder_setting_rename_bg_dark" id="0x7f0800f9" />
+    <public type="drawable" name="folder_setting_rename_bg_light" id="0x7f0800fa" />
+    <public type="drawable" name="gadget_clock_24_dual_preview" id="0x7f08013e" />
+    <public type="drawable" name="gadget_clock_24_icon" id="0x7f08013f" />
+    <public type="drawable" name="gadget_clock_24_preview" id="0x7f080140" />
+    <public type="drawable" name="ic_feed" id="0x7f080166" />
+    <public type="drawable" name="icon_launcher_notification" id="0x7f08017e" />
+    <public type="drawable" name="menu_button_n" id="0x7f080197" />
+    <public type="drawable" name="menu_button_s" id="0x7f080198" />
+    <public type="drawable" name="miuix_appcompat_action_bar_bg_navigation_light" id="0x7f0801a1" />
+    <public type="drawable" name="miuix_appcompat_action_bar_stack_bg_light" id="0x7f0801ab" />
+    <public type="drawable" name="miuix_appcompat_action_mode_bg_navigation_dark" id="0x7f08025c" />
+    <public type="drawable" name="miuix_appcompat_action_mode_bg_navigation_light" id="0x7f08025d" />
+    <public type="drawable" name="miuix_appcompat_auto_complete_text_input_background" id="0x7f0802d0" />
+    <public type="drawable" name="miuix_appcompat_auto_complete_text_popup_background" id="0x7f0802d1" />
+    <public type="drawable" name="miuix_appcompat_btn_bg_rect_normal_dark" id="0x7f0802d8" />
+    <public type="drawable" name="miuix_appcompat_btn_bg_rect_normal_light" id="0x7f0802d9" />
+    <public type="drawable" name="miuix_appcompat_btn_bg_rect_pressed_dark" id="0x7f0802da" />
+    <public type="drawable" name="miuix_appcompat_btn_bg_rect_pressed_light" id="0x7f0802db" />
     <public type="drawable" name="miuix_appcompat_list_popup_first_item_bg_normal_dark" id="0x7f0803ae" />
     <public type="drawable" name="miuix_appcompat_list_popup_first_item_bg_normal_light" id="0x7f0803af" />
     <public type="drawable" name="miuix_appcompat_list_popup_first_item_bg_pressed_dark" id="0x7f0803b0" />
@@ -4074,48 +4112,17 @@
     <public type="drawable" name="miuix_appcompat_list_small_item_middle_bg_pressed_light" id="0x7f0803c6" />
     <public type="drawable" name="miuix_appcompat_list_small_item_single_bg_normal_light" id="0x7f0803c7" />
     <public type="drawable" name="miuix_appcompat_list_small_item_single_bg_pressed_light" id="0x7f0803c8" />
-    <public type="drawable" name="miuix_appcompat_progressbar_indeterminate_circle_dark" id="0x7f0803e1" />
-    <public type="drawable" name="miuix_appcompat_progressbar_indeterminate_circle_light" id="0x7f0803e2" />
-    <public type="drawable" name="miuix_appcompat_ratingbar_star_large_off" id="0x7f0803e9" />
-    <public type="drawable" name="miuix_appcompat_ratingbar_star_large_on" id="0x7f0803ea" />
-    <public type="drawable" name="miuix_appcompat_ratingbar_star_off" id="0x7f0803eb" />
-    <public type="drawable" name="miuix_appcompat_ratingbar_star_on" id="0x7f0803ec" />
-    <public type="drawable" name="miuix_appcompat_ratingbar_star_small_off" id="0x7f0803ed" />
-    <public type="drawable" name="miuix_appcompat_ratingbar_star_small_on" id="0x7f0803ee" />
     <public type="drawable" name="miuix_appcompat_scrollbar_thumb_vertical_dark" id="0x7f0803ef" />
     <public type="drawable" name="miuix_appcompat_scrollbar_thumb_vertical_light" id="0x7f0803f0" />
-    <public type="drawable" name="miuix_appcompat_text_cursor_dark" id="0x7f080418" />
-    <public type="drawable" name="miuix_appcompat_text_cursor_light" id="0x7f080419" />
-    <public type="drawable" name="miuix_appcompat_text_select_handle_left_dark" id="0x7f08041b" />
-    <public type="drawable" name="miuix_appcompat_text_select_handle_left_light" id="0x7f08041c" />
-    <public type="drawable" name="miuix_appcompat_text_select_handle_middle_dark" id="0x7f08041e" />
-    <public type="drawable" name="miuix_appcompat_text_select_handle_middle_light" id="0x7f08041f" />
-    <public type="drawable" name="miuix_appcompat_text_select_handle_right_dark" id="0x7f080421" />
-    <public type="drawable" name="miuix_appcompat_text_select_handle_right_light" id="0x7f080422" />
-    <public type="drawable" name="miuix_preference_category_bg_dark" id="0x7f080436" />
-    <public type="drawable" name="miuix_preference_category_bg_light" id="0x7f08043b" />
     <public type="drawable" name="new_install_notification" id="0x7f08048d" />
     <public type="drawable" name="no_space_bg" id="0x7f08048e" />
-    <public type="drawable" name="popup" id="0x7f08049c" />
     <public type="drawable" name="preset_shortcut_10086" id="0x7f08049e" />
-    <public type="drawable" name="recents_screening" id="0x7f0804af" />
-    <public type="drawable" name="recommend_background" id="0x7f0804b2" />
-    <public type="drawable" name="recommend_divider" id="0x7f0804b3" />
-    <public type="drawable" name="recommend_divider_landscape" id="0x7f0804b4" />
-    <public type="drawable" name="recommend_icon_bg" id="0x7f0804b5" />
-    <public type="drawable" name="recommend_loading_item" id="0x7f0804b6" />
-    <public type="drawable" name="recommend_refresh" id="0x7f0804b7" />
-    <public type="drawable" name="recommend_xout" id="0x7f0804b8" />
     <public type="drawable" name="screen_view_arrow_left" id="0x7f0804bb" />
     <public type="drawable" name="screen_view_arrow_left_gray" id="0x7f0804bc" />
     <public type="drawable" name="screen_view_arrow_right" id="0x7f0804bd" />
     <public type="drawable" name="screen_view_arrow_right_gray" id="0x7f0804be" />
-    <public type="drawable" name="screen_view_seek_point_highlight_icon" id="0x7f0804c0" />
-    <public type="drawable" name="screen_view_seek_point_normal_icon" id="0x7f0804c2" />
     <public type="drawable" name="screen_view_slide_bar" id="0x7f0804c4" />
     <public type="drawable" name="screen_view_slide_bar_bg" id="0x7f0804c5" />
-    <public type="drawable" name="smallwindow_icon" id="0x7f0804dd" />
-    <public type="drawable" name="speed_of_light" id="0x7f0804de" />
     <public type="drawable" name="thumbnail_entry_set_wallpaper_n" id="0x7f0804e5" />
     <public type="drawable" name="thumbnail_entry_set_wallpaper_n_dark" id="0x7f0804e6" />
     <public type="drawable" name="thumbnail_entry_set_wallpaper_p" id="0x7f0804e7" />
@@ -4133,12 +4140,6 @@
     <public type="drawable" name="widget_toggle_small_icon" id="0x7f080510" />
     <public type="drawable" name="workspace_assistantpoint" id="0x7f080511" />
     <public type="drawable" name="workspace_assistantpoint_dark" id="0x7f080512" />
-    <public type="drawable" name="home_settings_no_n" id="0x7f08015d" />
-    <public type="drawable" name="home_settings_notification_n" id="0x7f08015e" />
-    <public type="drawable" name="home_settings_search_n" id="0x7f08015f" />
-    <public type="drawable" name="icon_maml_download_light" id="0x7f08017f" />
-    <public type="drawable" name="miuix_appcompat_sliding_btn_slider_shadow" id="0x7f080412" />
-    <public type="drawable" name="wallpaper_mask" id="0x7f08050a" />
     <public type="drawable" name="list_item_overstepped_pressed_light" id="0x7f080196" />
     <public type="drawable" name="search_none_dark" id="0x7f0804cf" />
     <public type="drawable" name="search_none_light" id="0x7f0804d0" />

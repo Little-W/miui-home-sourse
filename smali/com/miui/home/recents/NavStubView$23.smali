@@ -64,8 +64,6 @@
 
     const-string v1, "exitSmallWindowCrop error"
 
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     :goto_0
     return-void
 .end method

@@ -76,8 +76,6 @@
     const-string v1, "finish: mFinishRunnable.run"
 
     .line 129
-    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     const/4 v0, 0x1
 
     .line 130

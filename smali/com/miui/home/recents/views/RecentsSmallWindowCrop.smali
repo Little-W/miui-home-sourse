@@ -309,8 +309,6 @@
     const-string v3, "isSupportStartSmallWithPosition error"
 
     .line 301
-    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     return v0
 .end method
 

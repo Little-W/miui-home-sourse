@@ -491,8 +491,6 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 298
     new-instance p1, Landroid/graphics/RectF;
 
@@ -3459,8 +3457,6 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 338
     new-instance p1, Landroid/graphics/RectF;

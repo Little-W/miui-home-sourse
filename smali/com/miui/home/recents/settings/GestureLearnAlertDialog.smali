@@ -156,8 +156,6 @@
     const-string v0, "GestureLearnAlertDialog positive button"
 
     .line 37
-    invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
     .line 39
     :goto_0
     iget-object p1, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->mClickPosButtonRunnable:Ljava/lang/Runnable;

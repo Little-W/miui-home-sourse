@@ -811,8 +811,6 @@
     const-string v2, "release error."
 
     .line 157
-    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 159
     :goto_0
     monitor-exit v0

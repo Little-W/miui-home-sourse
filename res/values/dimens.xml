@@ -765,7 +765,7 @@
     <dimen name="recents_dock_btn_text_size">12.0sp</dimen>
     <dimen name="recents_empty_text_size">14.0sp</dimen>
     <dimen name="recents_fling_overscroll_distance">24.0dip</dimen>
-    <dimen name="recents_horizontal_layout_task_view_gap">10.179993dip</dimen>
+    <dimen name="recents_horizontal_layout_task_view_gap">-50.179993dip</dimen>
     <dimen name="recents_task_lock_distance">20.0dip</dimen>
     <dimen name="recents_task_menu_vertical_margin">15.0dip</dimen>
     <item type="dimen" name="recents_task_rect_scale">0.444</item>
@@ -776,11 +776,11 @@
     <dimen name="recents_task_view_header_height">40.0dip</dimen>
     <dimen name="recents_task_view_header_height_tablet_land">64.0dip</dimen>
     <dimen name="recents_task_view_header_title_margin_end">25.0dip</dimen>
-    <dimen name="recents_task_view_header_title_text_size">13.0sp</dimen>
+    <dimen name="recents_task_view_header_title_text_size">0.0sp</dimen>
     <dimen name="recents_task_view_padding">4.0dip</dimen>
     <dimen name="recents_task_view_privacy_protect_icon_marginTop">20.0dip</dimen>
     <dimen name="recents_task_view_rounded_corners_radius_max">25.0dip</dimen>
-    <dimen name="recents_task_view_rounded_corners_radius_min">7.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_min">24.0dip</dimen>
     <dimen name="recents_tip_margin_top">20.0dip</dimen>
     <dimen name="recents_tv_small_window_text_size">13.099976sp</dimen>
     <dimen name="recents_view_configuration_touch_slop">5.0dip</dimen>
