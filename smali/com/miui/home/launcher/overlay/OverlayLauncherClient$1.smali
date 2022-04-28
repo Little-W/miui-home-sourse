@@ -30,7 +30,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/overlay/OverlayLauncherClient;)V
     .locals 0
 
-    .line 45
+    .line 46
     iput-object p1, p0, Lcom/miui/home/launcher/overlay/OverlayLauncherClient$1;->this$0:Lcom/miui/home/launcher/overlay/OverlayLauncherClient;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/common/AsyncTaskRunnable;-><init>()V
@@ -43,12 +43,12 @@
 .method protected doInBackground()Ljava/lang/Boolean;
     .locals 4
 
-    .line 48
+    .line 49
     invoke-static {}, Lmiui/util/HardwareInfo;->getTotalPhysicalMemory()J
 
     move-result-wide v0
 
-    .line 49
+    .line 50
     invoke-static {}, Lcom/miui/daemon/performance/PerfShielderManager;->getFreeMemory()Ljava/lang/Long;
 
     move-result-object v2
@@ -80,7 +80,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 50
+    .line 51
     :goto_0
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -92,7 +92,7 @@
 .method protected bridge synthetic doInBackground()Ljava/lang/Object;
     .locals 1
 
-    .line 45
+    .line 46
     invoke-virtual {p0}, Lcom/miui/home/launcher/overlay/OverlayLauncherClient$1;->doInBackground()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -103,14 +103,14 @@
 .method protected onPostExecute(Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 55
+    .line 56
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 56
+    .line 57
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/OverlayLauncherClient$1;->this$0:Lcom/miui/home/launcher/overlay/OverlayLauncherClient;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/overlay/OverlayLauncherClient;->reconnect()V
@@ -122,7 +122,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 45
+    .line 46
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/overlay/OverlayLauncherClient$1;->onPostExecute(Ljava/lang/Boolean;)V

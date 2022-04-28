@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/uninstall/UninstallController;Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 0
 
-    .line 160
+    .line 176
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/UninstallController$2;->this$0:Lcom/miui/home/launcher/uninstall/UninstallController;
 
     iput-object p2, p0, Lcom/miui/home/launcher/uninstall/UninstallController$2;->val$launcher:Lcom/miui/home/launcher/Launcher;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 5
 
-    .line 163
+    .line 179
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController$2;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getContentResolver()Landroid/content/ContentResolver;
@@ -67,7 +67,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/uninstall/UninstallController$2;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
-    .line 164
+    .line 180
     invoke-static {v3}, Lcom/miui/home/library/compat/UserManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/UserManagerCompat;
 
     move-result-object v3
@@ -86,21 +86,21 @@
 
     move-result-object v3
 
-    .line 163
+    .line 179
     invoke-static {v0, v1, v2, v3}, Lcom/miui/home/launcher/LauncherHideApp;->addHideApp(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 165
+    .line 181
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController$2;->this$0:Lcom/miui/home/launcher/uninstall/UninstallController;
 
     iget-object v1, p0, Lcom/miui/home/launcher/uninstall/UninstallController$2;->val$shortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/uninstall/UninstallController;->access$100(Lcom/miui/home/launcher/uninstall/UninstallController;Lcom/miui/home/launcher/ShortcutInfo;)Z
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/uninstall/UninstallController;->access$200(Lcom/miui/home/launcher/uninstall/UninstallController;Lcom/miui/home/launcher/ShortcutInfo;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 166
+    .line 182
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController$2;->val$shortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
 
     iget-object v1, p0, Lcom/miui/home/launcher/uninstall/UninstallController$2;->val$launcher:Lcom/miui/home/launcher/Launcher;

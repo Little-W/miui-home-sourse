@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;)V
     .locals 0
 
-    .line 302
+    .line 309
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader$1;->this$0:Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 306
+    .line 313
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader$1;->this$0:Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;
 
     invoke-static {v0}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->access$000(Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;)Landroid/util/LruCache;

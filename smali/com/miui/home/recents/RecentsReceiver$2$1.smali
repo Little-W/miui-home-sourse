@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/recents/RecentsReceiver$2;Lmiuix/androidbasewidget/widget/CircleProgressBar;Landroid/view/WindowManager;)V
     .locals 0
 
-    .line 192
+    .line 173
     iput-object p1, p0, Lcom/miui/home/recents/RecentsReceiver$2$1;->this$1:Lcom/miui/home/recents/RecentsReceiver$2;
 
     iput-object p2, p0, Lcom/miui/home/recents/RecentsReceiver$2$1;->val$clearButton:Lmiuix/androidbasewidget/widget/CircleProgressBar;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 3
 
-    .line 194
+    .line 175
     iget-object v0, p0, Lcom/miui/home/recents/RecentsReceiver$2$1;->val$clearButton:Lmiuix/androidbasewidget/widget/CircleProgressBar;
 
     new-instance v1, Lcom/miui/home/recents/RecentsReceiver$2$1$1;

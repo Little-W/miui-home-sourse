@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape
-    android:shape="rectangle"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid
-        android:color="@color/allapps_scroller_thumb_color" />
-    <size
-        android:height="@dimen/fastscroll_popup_size"
-        android:width="@dimen/fastscroll_popup_size" />
-    <corners
-        android:topLeftRadius="@dimen/fastscroll_popup_size"
-        android:topRightRadius="@dimen/fastscroll_popup_size"
-        android:bottomLeftRadius="@dimen/fastscroll_popup_size" />
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/allapps_scroller_thumb_color" />
+    <size android:height="@dimen/fastscroll_popup_size" android:width="@dimen/fastscroll_popup_size" />
+    <corners android:topLeftRadius="@dimen/fastscroll_popup_size" android:topRightRadius="@dimen/fastscroll_popup_size" android:bottomLeftRadius="@dimen/fastscroll_popup_size" />
 </shape>

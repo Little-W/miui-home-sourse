@@ -29,13 +29,14 @@
     return-void
 .end method
 
-.method public static addWidget(Lcom/miui/home/launcher/Launcher;Landroid/content/ComponentName;JIILcom/miui/home/launcher/common/ResultRunnable;)V
-    .locals 9
+.method public static addWidget(Lcom/miui/home/launcher/Launcher;Landroid/content/ComponentName;Lcom/miui/home/launcher/AddItemActivity$AddWidgetSuccessCallback;JIILcom/miui/home/launcher/common/ResultRunnable;)V
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/miui/home/launcher/Launcher;",
             "Landroid/content/ComponentName;",
+            "Lcom/miui/home/launcher/AddItemActivity$AddWidgetSuccessCallback;",
             "JII",
             "Lcom/miui/home/launcher/common/ResultRunnable<",
             "Lcom/miui/home/launcher/LauncherAppWidgetInfo;",
@@ -44,25 +45,29 @@
     .end annotation
 
     .line 115
-    new-instance v8, Lcom/miui/home/launcher/InstallWidgetReceiver$2;
+    new-instance v9, Lcom/miui/home/launcher/InstallWidgetReceiver$2;
 
-    move-object v0, v8
+    move-object v0, v9
 
     move-object v1, p0
 
     move-object v2, p1
 
-    move-wide v3, p2
+    move-wide v3, p3
 
-    move v5, p4
+    move v5, p5
 
-    move v6, p5
+    move/from16 v6, p6
 
-    move-object v7, p6
+    move-object/from16 v7, p7
 
-    invoke-direct/range {v0 .. v7}, Lcom/miui/home/launcher/InstallWidgetReceiver$2;-><init>(Lcom/miui/home/launcher/Launcher;Landroid/content/ComponentName;JIILcom/miui/home/launcher/common/ResultRunnable;)V
+    move-object v8, p2
 
-    invoke-virtual {p0, v8}, Lcom/miui/home/launcher/Launcher;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-direct/range {v0 .. v8}, Lcom/miui/home/launcher/InstallWidgetReceiver$2;-><init>(Lcom/miui/home/launcher/Launcher;Landroid/content/ComponentName;JIILcom/miui/home/launcher/common/ResultRunnable;Lcom/miui/home/launcher/AddItemActivity$AddWidgetSuccessCallback;)V
+
+    move-object v0, p0
+
+    invoke-virtual {p0, v9}, Lcom/miui/home/launcher/Launcher;->runOnUiThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -72,21 +77,21 @@
 
     if-eqz p1, :cond_1
 
-    .line 159
+    .line 162
     invoke-virtual {p1}, Landroid/appwidget/AppWidgetManager;->getInstalledProviders()Ljava/util/List;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 160
+    .line 163
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 161
+    .line 164
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -104,7 +109,7 @@
 
     check-cast v0, Landroid/appwidget/AppWidgetProviderInfo;
 
-    .line 162
+    .line 165
     iget-object v1, v0, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
 
     invoke-virtual {p2, v1}, Landroid/content/ComponentName;->equals(Ljava/lang/Object;)Z
@@ -124,7 +129,7 @@
 .method public static isWidgetAdded(Lcom/miui/home/launcher/Launcher;Landroid/content/ComponentName;)Z
     .locals 1
 
-    .line 172
+    .line 175
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getWidgetItems()Ljava/util/Set;
@@ -133,7 +138,7 @@
 
     invoke-direct {v0, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 173
+    .line 176
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -151,7 +156,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
-    .line 174
+    .line 177
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->getProvider()Landroid/content/ComponentName;
 
     move-result-object v0
@@ -208,6 +213,8 @@
 
     move-result-object p2
 
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     .line 40
@@ -226,6 +233,8 @@
     const-string p2, "Launcher is not running,process later"
 
     .line 45
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     :cond_1
@@ -245,6 +254,8 @@
     const-string p2, "provider name is null"
 
     .line 51
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     :cond_2
@@ -255,16 +266,16 @@
     .line 54
     invoke-virtual {p1, v2, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
-    move-result-wide v2
+    move-result-wide v3
 
-    const-string v4, "cellX"
+    const-string v2, "cellX"
 
     const/4 v5, 0x0
 
     .line 55
-    invoke-virtual {p1, v4, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    invoke-virtual {p1, v2, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    move-result v4
+    move-result v2
 
     const-string v6, "cellY"
 
@@ -276,24 +287,41 @@
     .line 59
     sget-boolean v7, Lcom/miui/home/launcher/DeviceConfig;->IS_ORANGE_BUILD:Z
 
-    if-eqz v7, :cond_9
+    if-nez v7, :cond_4
 
-    .line 60
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/InstallWidgetReceiver;->isWidgetAdded(Lcom/miui/home/launcher/Launcher;Landroid/content/ComponentName;)Z
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isCotaOrangeDevice()Z
 
     move-result v7
 
     if-eqz v7, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    move v5, v2
+
+    goto :goto_1
+
+    .line 60
+    :cond_4
+    :goto_0
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/InstallWidgetReceiver;->isWidgetAdded(Lcom/miui/home/launcher/Launcher;Landroid/content/ComponentName;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_5
 
     const-string p1, "Launcher.InstallWidget"
 
     const-string p2, "orange widget already added"
 
     .line 61
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     .line 64
-    :cond_3
+    :cond_5
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object v7
@@ -302,7 +330,7 @@
 
     move-result-object v8
 
-    invoke-virtual {v8, v2, v3}, Lcom/miui/home/launcher/Workspace;->getScreenIndexById(J)I
+    invoke-virtual {v8, v3, v4}, Lcom/miui/home/launcher/Workspace;->getScreenIndexById(J)I
 
     move-result v8
 
@@ -310,17 +338,19 @@
 
     move-result-object v7
 
-    if-nez v7, :cond_4
+    if-nez v7, :cond_6
 
     const-string p1, "Launcher.InstallWidget"
 
     const-string p2, "orange widget add failed: cellLayout is null"
 
     .line 66
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     .line 69
-    :cond_4
+    :cond_6
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getAppWidgetManager()Landroid/appwidget/AppWidgetManager;
 
     move-result-object v8
@@ -329,17 +359,19 @@
 
     move-result-object v8
 
-    if-nez v8, :cond_5
+    if-nez v8, :cond_7
 
     const-string p1, "Launcher.InstallWidget"
 
     const-string p2, "orange widget add failed: widget not installed"
 
     .line 71
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     .line 75
-    :cond_5
+    :cond_7
     invoke-static {p2, v8}, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->fromProviderInfo(Landroid/content/Context;Landroid/appwidget/AppWidgetProviderInfo;)Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
     move-result-object v8
@@ -352,60 +384,61 @@
 
     const/4 v10, 0x1
 
-    if-nez v4, :cond_6
+    if-nez v2, :cond_8
 
-    move v4, v10
+    move v2, v10
 
-    :cond_6
-    if-nez v6, :cond_7
+    :cond_8
+    if-nez v6, :cond_9
 
     const/4 v6, 0x4
 
     .line 81
-    :cond_7
-    invoke-virtual {v7, v4, v6, v9, v8}, Lcom/miui/home/launcher/CellLayout;->isCellOccupied(IIII)Z
+    :cond_9
+    invoke-virtual {v7, v2, v6, v9, v8}, Lcom/miui/home/launcher/CellLayout;->isCellOccupied(IIII)Z
 
     move-result v11
 
-    if-eqz v11, :cond_8
+    if-eqz v11, :cond_a
 
     .line 82
     invoke-virtual {v7, v9, v8}, Lcom/miui/home/launcher/CellLayout;->findLastVacantArea(II)[I
 
     move-result-object v7
 
-    if-eqz v7, :cond_8
+    if-eqz v7, :cond_a
 
     .line 83
     array-length v8, v7
 
     const/4 v9, 0x2
 
-    if-ne v8, v9, :cond_8
+    if-ne v8, v9, :cond_a
 
     .line 84
-    aget v4, v7, v5
+    aget v2, v7, v5
 
     .line 85
     aget v5, v7, v10
 
-    goto :goto_0
+    move v6, v5
 
-    :cond_8
-    move v5, v6
+    move v5, v2
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_9
-    move v5, v6
+    :cond_a
+    move v5, v2
+
+    :goto_1
+    const/4 v2, 0x0
 
     .line 89
-    :goto_0
-    new-instance v6, Lcom/miui/home/launcher/InstallWidgetReceiver$1;
+    new-instance v7, Lcom/miui/home/launcher/InstallWidgetReceiver$1;
 
-    invoke-direct {v6, p0, p1, p2, v0}, Lcom/miui/home/launcher/InstallWidgetReceiver$1;-><init>(Lcom/miui/home/launcher/InstallWidgetReceiver;Landroid/content/Intent;Landroid/content/Context;Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {v7, p0, p1, p2, v0}, Lcom/miui/home/launcher/InstallWidgetReceiver$1;-><init>(Lcom/miui/home/launcher/InstallWidgetReceiver;Landroid/content/Intent;Landroid/content/Context;Lcom/miui/home/launcher/Launcher;)V
 
-    invoke-static/range {v0 .. v6}, Lcom/miui/home/launcher/InstallWidgetReceiver;->addWidget(Lcom/miui/home/launcher/Launcher;Landroid/content/ComponentName;JIILcom/miui/home/launcher/common/ResultRunnable;)V
+    invoke-static/range {v0 .. v7}, Lcom/miui/home/launcher/InstallWidgetReceiver;->addWidget(Lcom/miui/home/launcher/Launcher;Landroid/content/ComponentName;Lcom/miui/home/launcher/AddItemActivity$AddWidgetSuccessCallback;JIILcom/miui/home/launcher/common/ResultRunnable;)V
 
     return-void
 .end method

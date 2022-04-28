@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/upsidescene/SceneScreen$7;)V
     .locals 0
 
-    .line 977
+    .line 979
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$7$1;->this$1:Lcom/miui/home/launcher/upsidescene/SceneScreen$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 980
+    .line 982
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$7$1;->this$1:Lcom/miui/home/launcher/upsidescene/SceneScreen$7;
 
     iget-object v0, v0, Lcom/miui/home/launcher/upsidescene/SceneScreen$7;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
@@ -47,7 +47,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$1000(Lcom/miui/home/launcher/upsidescene/SceneScreen;Z)V
 
-    .line 981
+    .line 983
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$7$1;->this$1:Lcom/miui/home/launcher/upsidescene/SceneScreen$7;
 
     iget-object v0, v0, Lcom/miui/home/launcher/upsidescene/SceneScreen$7;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
@@ -58,7 +58,7 @@
 
     invoke-interface {v0, v1}, Lcom/miui/home/launcher/upsidescene/data/FreeStyleSerializable;->clear(Z)V
 
-    .line 982
+    .line 984
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$7$1;->this$1:Lcom/miui/home/launcher/upsidescene/SceneScreen$7;
 
     iget-object v0, v0, Lcom/miui/home/launcher/upsidescene/SceneScreen$7;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
@@ -77,7 +77,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$802(Lcom/miui/home/launcher/upsidescene/SceneScreen;Lcom/miui/home/launcher/upsidescene/data/FreeStyle;)Lcom/miui/home/launcher/upsidescene/data/FreeStyle;
 
-    .line 983
+    .line 985
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$7$1;->this$1:Lcom/miui/home/launcher/upsidescene/SceneScreen$7;
 
     iget-object v0, v0, Lcom/miui/home/launcher/upsidescene/SceneScreen$7;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;

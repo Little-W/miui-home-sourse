@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->lambda$onPickerAddWidget$12(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Workspace;)V
+    value = Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->lambda$onPickerAddWidget$17(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/Workspace;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;Ljava/lang/String;Lcom/miui/home/launcher/ItemInfo;)V
     .locals 0
 
-    .line 440
+    .line 525
     iput-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$3;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     iput-object p3, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$3;->val$itemInfo:Lcom/miui/home/launcher/ItemInfo;
@@ -37,7 +37,7 @@
 .method public static synthetic lambda$onDragCompleted$0(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$3;Lcom/miui/home/launcher/DragObject;)V
     .locals 1
 
-    .line 448
+    .line 534
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$3;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     invoke-static {v0, p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->access$600(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;Lcom/miui/home/launcher/DragObject;)V
@@ -48,22 +48,45 @@
 
 # virtual methods
 .method public onDragCompleted(Lcom/miui/home/launcher/DropTarget;Lcom/miui/home/launcher/DragObject;)V
-    .locals 1
+    .locals 3
 
-    .line 443
+    .line 528
     invoke-virtual {p2}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p1
 
-    .line 444
+    .line 529
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$3;->val$itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     if-eq p1, v0, :cond_0
 
     return-void
 
-    .line 448
     :cond_0
+    const-string v0, "AssistantDragOverlay"
+
+    .line 533
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onPickerAddWidget completed:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ItemInfo;->printDetail()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 534
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay$3;->this$0:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
 
     invoke-static {p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->access$400(Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;)Lcom/miui/home/launcher/DragLayer;

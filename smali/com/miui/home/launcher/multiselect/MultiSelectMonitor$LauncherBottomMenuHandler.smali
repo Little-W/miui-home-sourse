@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;)V
     .locals 0
 
-    .line 165
+    .line 166
     iput-object p1, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$LauncherBottomMenuHandler;->this$0:Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$1;)V
     .locals 0
 
-    .line 165
+    .line 166
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$LauncherBottomMenuHandler;-><init>(Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;)V
 
     return-void
@@ -47,7 +47,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 168
+    .line 169
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$LauncherBottomMenuHandler;->this$0:Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/LauncherBottomMenuMessage;->isShow()Z
@@ -56,7 +56,7 @@
 
     invoke-static {v0, p1}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->access$602(Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;Z)Z
 
-    .line 169
+    .line 170
     iget-object p1, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$LauncherBottomMenuHandler;->this$0:Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
 
     invoke-static {p1}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->access$700(Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;)V

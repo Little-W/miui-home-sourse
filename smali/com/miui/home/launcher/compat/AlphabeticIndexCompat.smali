@@ -56,6 +56,8 @@
     const-string v3, "Unable to load the system index"
 
     .line 33
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     move-object v1, v0
 
     :goto_0
@@ -81,6 +83,8 @@
     const-string v4, "Unable to load the system index"
 
     .line 39
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_1
     :goto_1
     if-nez v1, :cond_2
@@ -121,7 +125,7 @@
 
     if-eqz p1, :cond_3
 
-    const-string/jumbo p1, "他"
+    const-string p1, "\u4ed6"
 
     .line 48
     iput-object p1, p0, Lcom/miui/home/launcher/compat/AlphabeticIndexCompat;->mDefaultMiscLabel:Ljava/lang/String;
@@ -129,7 +133,7 @@
     goto :goto_2
 
     :cond_3
-    const-string/jumbo p1, "\u2219"
+    const-string p1, "\u2219"
 
     .line 52
     iput-object p1, p0, Lcom/miui/home/launcher/compat/AlphabeticIndexCompat;->mDefaultMiscLabel:Ljava/lang/String;
@@ -243,7 +247,7 @@
 
     if-eqz v0, :cond_1
 
-    const-string/jumbo p1, "…"
+    const-string p1, "\u2026"
 
     return-object p1
 
@@ -261,7 +265,7 @@
     return-object p1
 
     :cond_2
-    const-string/jumbo p1, "\u2219"
+    const-string p1, "\u2219"
 
     return-object p1
 

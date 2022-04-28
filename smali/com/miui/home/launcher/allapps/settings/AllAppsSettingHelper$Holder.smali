@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 29
+    .line 33
     new-instance v0, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
 
     const/4 v1, 0x0
@@ -37,7 +37,7 @@
 .method static synthetic access$100()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
     .locals 1
 
-    .line 28
+    .line 32
     sget-object v0, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper$Holder;->sInstance:Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
 
     return-object v0

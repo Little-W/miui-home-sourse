@@ -28,7 +28,7 @@
 .method constructor <init>(Lcom/miui/home/recents/OverviewComponentObserver;)V
     .locals 0
 
-    .line 50
+    .line 52
     iput-object p1, p0, Lcom/miui/home/recents/OverviewComponentObserver$2;->this$0:Lcom/miui/home/recents/OverviewComponentObserver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -47,10 +47,10 @@
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 53
+    .line 55
     iget-object p1, p0, Lcom/miui/home/recents/OverviewComponentObserver$2;->this$0:Lcom/miui/home/recents/OverviewComponentObserver;
 
-    invoke-virtual {p1}, Lcom/miui/home/recents/OverviewComponentObserver;->updateOverviewTargets()V
+    invoke-virtual {p1}, Lcom/miui/home/recents/OverviewComponentObserver;->updateOverviewTargetsPost()V
 
     return-void
 .end method

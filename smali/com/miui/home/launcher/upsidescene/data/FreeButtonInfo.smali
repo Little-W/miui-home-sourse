@@ -903,9 +903,11 @@
 
     const-string v3, "FreeButtonInfo"
 
-    const-string/jumbo v4, "xml parse failed:free button animation must have \'state\'"
+    const-string v4, "xml parse failed:free button animation must have \'state\'"
 
     .line 202
+    invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_0
 
     :cond_6

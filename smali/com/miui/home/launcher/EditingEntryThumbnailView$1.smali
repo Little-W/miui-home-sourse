@@ -73,6 +73,8 @@
     const-string v0, "onHideComplete"
 
     .line 253
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 254
     iget-object p1, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView$1;->this$0:Lcom/miui/home/launcher/EditingEntryThumbnailView;
 

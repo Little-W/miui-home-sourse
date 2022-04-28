@@ -89,7 +89,16 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/miui/home/launcher/MIUIWidgetAddAnimator;F)V
+.method static synthetic access$000(Lcom/miui/home/launcher/MIUIWidgetAddAnimator;)Z
+    .locals 0
+
+    .line 29
+    iget-boolean p0, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mStarted:Z
+
+    return p0
+.end method
+
+.method static synthetic access$100(Lcom/miui/home/launcher/MIUIWidgetAddAnimator;F)V
     .locals 0
 
     .line 29
@@ -98,7 +107,7 @@
     return-void
 .end method
 
-.method static synthetic access$100(Lcom/miui/home/launcher/MIUIWidgetAddAnimator;)V
+.method static synthetic access$200(Lcom/miui/home/launcher/MIUIWidgetAddAnimator;)V
     .locals 0
 
     .line 29
@@ -112,7 +121,7 @@
 
     move-object/from16 v0, p0
 
-    .line 134
+    .line 137
     iget v1, v0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mMaxSpeed:I
 
     mul-int/lit16 v1, v1, 0x3e8
@@ -121,7 +130,7 @@
 
     div-float v1, p1, v1
 
-    .line 135
+    .line 138
     iget-object v2, v0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mPaint:Landroid/graphics/Paint;
 
     float-to-double v3, v1
@@ -140,12 +149,12 @@
 
     const/high16 v1, 0x43200000    # 160.0f
 
-    .line 137
+    .line 140
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->dp2px(F)I
 
     move-result v1
 
-    .line 138
+    .line 141
     iget-object v2, v0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mWidgets:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -165,14 +174,14 @@
 
     check-cast v5, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;
 
-    .line 139
+    .line 142
     iget-boolean v6, v5, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->hasWaved:Z
 
     if-eqz v6, :cond_0
 
     goto :goto_0
 
-    .line 143
+    .line 146
     :cond_0
     iget-wide v6, v0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mRadius:D
 
@@ -189,10 +198,10 @@
     :cond_1
     const/4 v6, 0x1
 
-    .line 147
+    .line 150
     iput-boolean v6, v5, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->hasWaved:Z
 
-    .line 148
+    .line 151
     iget v7, v5, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->mass:I
 
     int-to-double v7, v7
@@ -203,7 +212,7 @@
 
     move-result-wide v7
 
-    .line 149
+    .line 152
     iget-object v9, v0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mPivotWidget:Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;
 
     iget v9, v9, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->mass:I
@@ -220,7 +229,7 @@
 
     sub-double v9, v13, v9
 
-    .line 151
+    .line 154
     iget v15, v5, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->width:I
 
     iget v11, v5, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->height:I
@@ -229,7 +238,7 @@
 
     move-result v11
 
-    .line 152
+    .line 155
     iget-object v12, v0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mPivotWidget:Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;
 
     if-ne v12, v5, :cond_2
@@ -249,7 +258,7 @@
 
     add-double/2addr v9, v13
 
-    .line 157
+    .line 160
     new-array v11, v6, [Landroid/view/View;
 
     iget-object v12, v5, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->view:Landroid/view/View;
@@ -268,7 +277,7 @@
 
     const-string v12, "first"
 
-    .line 158
+    .line 161
     invoke-interface {v11, v12}, Lmiuix/animation/IStateStyle;->setup(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v11
@@ -277,14 +286,14 @@
 
     double-to-float v9, v9
 
-    .line 159
+    .line 162
     invoke-interface {v11, v12, v9}, Lmiuix/animation/IStateStyle;->add(Lmiuix/animation/property/FloatProperty;F)Lmiuix/animation/IStateStyle;
 
     move-result-object v10
 
     sget-object v11, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 160
+    .line 163
     invoke-interface {v10, v11, v9}, Lmiuix/animation/IStateStyle;->add(Lmiuix/animation/property/FloatProperty;F)Lmiuix/animation/IStateStyle;
 
     move-result-object v9
@@ -315,7 +324,7 @@
 
     aput v12, v11, v6
 
-    .line 161
+    .line 164
     invoke-static {v10, v11}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object v6
@@ -330,10 +339,10 @@
 
     new-array v10, v15, [Lmiuix/animation/base/AnimConfig;
 
-    .line 162
+    .line 165
     invoke-interface {v6, v9, v10}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
-    .line 164
+    .line 167
     iget-object v6, v0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mHandler:Landroid/os/Handler;
 
     new-instance v9, Lcom/miui/home/launcher/-$$Lambda$MIUIWidgetAddAnimator$xUR8RvllKvvgbM0dZg-LffiEbDo;
@@ -344,7 +353,7 @@
 
     const-wide/high16 v10, 0x3ff0000000000000L    # 1.0
 
-    .line 169
+    .line 172
     invoke-static {v10, v11, v7, v8}, Ljava/lang/Math;->min(DD)D
 
     move-result-wide v7
@@ -359,7 +368,7 @@
 
     double-to-long v7, v7
 
-    .line 164
+    .line 167
     invoke-virtual {v6, v9, v7, v8}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     goto/16 :goto_0
@@ -373,7 +382,7 @@
 
     const/4 v0, 0x1
 
-    .line 164
+    .line 167
     new-array v1, v0, [Landroid/view/View;
 
     iget-object v2, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->view:Landroid/view/View;
@@ -392,21 +401,21 @@
 
     const-string v2, "second"
 
-    .line 165
+    .line 168
     invoke-interface {v1, v2}, Lmiuix/animation/IStateStyle;->setup(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object v1
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->SCALE_X:Lmiuix/animation/property/ViewProperty;
 
-    .line 166
+    .line 169
     invoke-interface {v1, v2, v0}, Lmiuix/animation/IStateStyle;->add(Lmiuix/animation/property/FloatProperty;I)Lmiuix/animation/IStateStyle;
 
     move-result-object v1
 
     sget-object v2, Lmiuix/animation/property/ViewProperty;->SCALE_Y:Lmiuix/animation/property/ViewProperty;
 
-    .line 167
+    .line 170
     invoke-interface {v1, v2, v0}, Lmiuix/animation/IStateStyle;->add(Lmiuix/animation/property/FloatProperty;I)Lmiuix/animation/IStateStyle;
 
     move-result-object v1
@@ -437,7 +446,7 @@
 
     const/4 p0, -0x2
 
-    .line 168
+    .line 171
     invoke-static {p0, v2}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object p0
@@ -452,7 +461,7 @@
 
     new-array v1, v3, [Lmiuix/animation/base/AnimConfig;
 
-    .line 169
+    .line 172
     invoke-interface {p0, v0, v1}, Lmiuix/animation/IStateStyle;->to(Ljava/lang/Object;[Lmiuix/animation/base/AnimConfig;)Lmiuix/animation/IStateStyle;
 
     return-void
@@ -461,7 +470,7 @@
 .method public static synthetic lambda$start$0(Lcom/miui/home/launcher/MIUIWidgetAddAnimator;)V
     .locals 6
 
-    .line 127
+    .line 130
     new-instance v0, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {v0}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -478,7 +487,7 @@
 
     const/4 v4, -0x4
 
-    .line 128
+    .line 131
     invoke-static {v4, v2}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     move-result-object v2
@@ -487,7 +496,7 @@
 
     move-result-object v0
 
-    .line 129
+    .line 132
     new-array v2, v1, [Ljava/lang/Object;
 
     aput-object p0, v2, v3
@@ -532,28 +541,28 @@
 
     const/4 v0, 0x0
 
-    .line 193
+    .line 196
     iput-boolean v0, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mStarted:Z
 
     const/4 v1, 0x0
 
-    .line 194
+    .line 197
     iput-object v1, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mPivotWidget:Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;
 
-    .line 195
+    .line 198
     iput-object v1, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mWidgets:Ljava/util/List;
 
-    .line 196
+    .line 199
     iget-object v2, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mContainer:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {v2, v1}, Lcom/miui/home/launcher/CellLayout;->setOnDrawCallback(Lcom/miui/home/launcher/MIUIWidgetAddAnimator$OnDrawCallback;)V
 
-    .line 197
+    .line 200
     iput-object v1, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mContainer:Lcom/miui/home/launcher/CellLayout;
 
     const/4 v1, 0x1
 
-    .line 198
+    .line 201
     new-array v1, v1, [Lcom/miui/home/launcher/MIUIWidgetAddAnimator;
 
     aput-object p0, v1, v0
@@ -725,6 +734,8 @@
 
     move-result-object p2
 
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 .end method
 
@@ -733,7 +744,7 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 5
 
-    .line 184
+    .line 187
     iget-object v0, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mPivotWidget:Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;
 
     if-eqz v0, :cond_1
@@ -744,13 +755,13 @@
 
     goto :goto_0
 
-    .line 187
+    .line 190
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v0
 
-    .line 188
+    .line 191
     iget-object v1, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mPivotWidget:Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;
 
     iget v1, v1, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->centerX:F
@@ -767,7 +778,7 @@
 
     invoke-virtual {p1, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 189
+    .line 192
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     return-void
@@ -780,10 +791,10 @@
 .method public setRadius(D)V
     .locals 0
 
-    .line 179
+    .line 182
     iput-wide p1, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mRadius:D
 
-    .line 180
+    .line 183
     iget-object p1, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mContainer:Lcom/miui/home/launcher/CellLayout;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->invalidate()V
@@ -881,7 +892,7 @@
 
     move-result-object p2
 
-    .line 119
+    .line 122
     new-array v2, p1, [Ljava/lang/Object;
 
     aput-object p0, v2, v0
@@ -918,17 +929,17 @@
 
     const-wide/16 p1, 0x0
 
-    .line 120
+    .line 123
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->setRadius(D)V
 
-    .line 121
+    .line 124
     iget p1, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mMaxSpeed:I
 
     int-to-float p1, p1
 
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->checkWave(F)V
 
-    .line 126
+    .line 129
     iget-object p1, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->mHandler:Landroid/os/Handler;
 
     new-instance p2, Lcom/miui/home/launcher/-$$Lambda$MIUIWidgetAddAnimator$LBaSTwQYliGbDKGSQkwARtLWCeo;

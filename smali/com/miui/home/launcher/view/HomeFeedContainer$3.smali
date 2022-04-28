@@ -113,7 +113,7 @@
 
     .line 315
     :cond_0
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/HotSeats;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
 
     move-result-object p2
 
@@ -122,7 +122,7 @@
     neg-float v1, p1
 
     .line 317
-    invoke-virtual {p2, v1}, Lcom/miui/home/launcher/HotSeats;->setTranslationY(F)V
+    invoke-virtual {p2, v1}, Lcom/miui/home/launcher/hotseats/HotSeats;->setTranslationY(F)V
 
     .line 320
     :cond_1

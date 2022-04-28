@@ -196,25 +196,25 @@
 .method private clearChecked()V
     .locals 2
 
-    .line 152
+    .line 159
     iget-object v0, p0, Lmiuix/preference/RadioButtonPreferenceCategory;->mCheckedChoice:Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 153
+    .line 160
     invoke-virtual {v0, v1}, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->setChecked(Z)V
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 155
+    .line 162
     iput-object v0, p0, Lmiuix/preference/RadioButtonPreferenceCategory;->mCheckedChoice:Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;
 
     const/4 v0, -0x1
 
-    .line 156
+    .line 163
     iput v0, p0, Lmiuix/preference/RadioButtonPreferenceCategory;->mCheckedPosition:I
 
     return-void
@@ -223,12 +223,12 @@
 .method private parse(Landroidx/preference/Preference;)Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;
     .locals 1
 
-    .line 226
+    .line 233
     instance-of v0, p1, Lmiuix/preference/RadioButtonPreference;
 
     if-eqz v0, :cond_1
 
-    .line 227
+    .line 234
     invoke-virtual {p1}, Landroidx/preference/Preference;->getParent()Landroidx/preference/PreferenceGroup;
 
     move-result-object v0
@@ -237,7 +237,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 228
+    .line 235
     new-instance v0, Lmiuix/preference/RadioButtonPreferenceCategory$CategorySingleChoiceHelper;
 
     invoke-virtual {p1}, Landroidx/preference/Preference;->getParent()Landroidx/preference/PreferenceGroup;
@@ -250,7 +250,7 @@
 
     return-object v0
 
-    .line 230
+    .line 237
     :cond_0
     new-instance v0, Lmiuix/preference/RadioButtonPreferenceCategory$PreferenceSingleChoiceHelper;
 
@@ -260,13 +260,13 @@
 
     return-object v0
 
-    .line 232
+    .line 239
     :cond_1
     instance-of v0, p1, Lmiuix/preference/RadioSetPreferenceCategory;
 
     if-eqz v0, :cond_2
 
-    .line 233
+    .line 240
     new-instance v0, Lmiuix/preference/RadioButtonPreferenceCategory$CategorySingleChoiceHelper;
 
     check-cast p1, Lmiuix/preference/RadioSetPreferenceCategory;
@@ -275,7 +275,7 @@
 
     return-object v0
 
-    .line 235
+    .line 242
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -291,7 +291,7 @@
 
     const/4 v0, 0x1
 
-    .line 160
+    .line 167
     invoke-virtual {p1, v0}, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->setChecked(Z)V
 
     return-void
@@ -300,14 +300,14 @@
 .method private updateCheckedPosition(Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;)V
     .locals 4
 
-    .line 173
+    .line 180
     invoke-virtual {p1}, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->isChecked()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 174
+    .line 181
     invoke-virtual {p0}, Lmiuix/preference/RadioButtonPreferenceCategory;->getPreferenceCount()I
 
     move-result v0
@@ -317,19 +317,19 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 176
+    .line 183
     invoke-virtual {p0, v1}, Lmiuix/preference/RadioButtonPreferenceCategory;->getPreference(I)Landroidx/preference/Preference;
 
     move-result-object v2
 
-    .line 177
+    .line 184
     invoke-virtual {p1}, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->getPreference()Landroidx/preference/Preference;
 
     move-result-object v3
 
     if-ne v2, v3, :cond_0
 
-    .line 178
+    .line 185
     iput v1, p0, Lmiuix/preference/RadioButtonPreferenceCategory;->mCheckedPosition:I
 
     goto :goto_1
@@ -347,14 +347,14 @@
 .method private updateCheckedPreference(Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;)V
     .locals 2
 
-    .line 164
+    .line 171
     invoke-virtual {p1}, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->isChecked()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 165
+    .line 172
     iget-object v0, p0, Lmiuix/preference/RadioButtonPreferenceCategory;->mCheckedChoice:Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;
 
     if-eqz v0, :cond_0
@@ -369,14 +369,14 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 166
+    .line 173
     iget-object v0, p0, Lmiuix/preference/RadioButtonPreferenceCategory;->mCheckedChoice:Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->setChecked(Z)V
 
-    .line 168
+    .line 175
     :cond_0
     iput-object p1, p0, Lmiuix/preference/RadioButtonPreferenceCategory;->mCheckedChoice:Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;
 
@@ -442,12 +442,12 @@
 .method public removePreference(Landroidx/preference/Preference;)Z
     .locals 3
 
-    .line 119
+    .line 126
     invoke-direct {p0, p1}, Lmiuix/preference/RadioButtonPreferenceCategory;->parse(Landroidx/preference/Preference;)Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;
 
     move-result-object v0
 
-    .line 120
+    .line 127
     invoke-super {p0, p1}, Landroidx/preference/PreferenceCategory;->removePreference(Landroidx/preference/Preference;)Z
 
     move-result p1
@@ -456,10 +456,10 @@
 
     const/4 v1, 0x0
 
-    .line 122
+    .line 129
     invoke-virtual {v0, v1}, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->setOnPreferenceChangeInternalListener(Lmiuix/preference/OnPreferenceChangeInternalListener;)V
 
-    .line 123
+    .line 130
     invoke-virtual {v0}, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->isChecked()Z
 
     move-result v2
@@ -468,15 +468,15 @@
 
     const/4 v2, 0x0
 
-    .line 124
+    .line 131
     invoke-virtual {v0, v2}, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->setChecked(Z)V
 
     const/4 v0, -0x1
 
-    .line 125
+    .line 132
     iput v0, p0, Lmiuix/preference/RadioButtonPreferenceCategory;->mCheckedPosition:I
 
-    .line 126
+    .line 133
     iput-object v1, p0, Lmiuix/preference/RadioButtonPreferenceCategory;->mCheckedChoice:Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;
 
     :cond_0
@@ -488,18 +488,18 @@
 
     if-nez p1, :cond_0
 
-    .line 139
+    .line 146
     invoke-direct {p0}, Lmiuix/preference/RadioButtonPreferenceCategory;->clearChecked()V
 
     return-void
 
-    .line 142
+    .line 149
     :cond_0
     invoke-direct {p0, p1}, Lmiuix/preference/RadioButtonPreferenceCategory;->parse(Landroidx/preference/Preference;)Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;
 
     move-result-object p1
 
-    .line 143
+    .line 150
     invoke-virtual {p1}, Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;->isChecked()Z
 
     move-result v0
@@ -508,14 +508,14 @@
 
     return-void
 
-    .line 146
+    .line 153
     :cond_1
     invoke-direct {p0, p1}, Lmiuix/preference/RadioButtonPreferenceCategory;->setCheckedPreferenceInternal(Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;)V
 
-    .line 147
+    .line 154
     invoke-direct {p0, p1}, Lmiuix/preference/RadioButtonPreferenceCategory;->updateCheckedPreference(Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;)V
 
-    .line 148
+    .line 155
     invoke-direct {p0, p1}, Lmiuix/preference/RadioButtonPreferenceCategory;->updateCheckedPosition(Lmiuix/preference/RadioButtonPreferenceCategory$SingleChoiceHelper;)V
 
     return-void

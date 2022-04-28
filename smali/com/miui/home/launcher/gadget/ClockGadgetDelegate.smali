@@ -41,14 +41,14 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 64
+    .line 82
     invoke-static {}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->getConfigKey()Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->sConfigKey:Ljava/lang/String;
 
-    .line 343
+    .line 362
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -73,28 +73,28 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 88
+    .line 106
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/gadget/ConfigableGadget;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
-    .line 78
+    .line 96
     iput v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mStatus:I
 
-    .line 85
+    .line 103
     iput-boolean v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mSnapshot:Z
 
-    .line 387
+    .line 406
     iput-boolean v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mIsInEditingModel:Z
 
-    .line 89
+    .line 107
     invoke-static {p1}, Lcom/miui/home/launcher/common/StorageContextGetter;->getContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mContext:Landroid/content/Context;
 
-    .line 90
+    .line 108
     new-instance v0, Lcom/miui/home/launcher/gadget/Clock;
 
     invoke-direct {v0, p1}, Lcom/miui/home/launcher/gadget/Clock;-><init>(Landroid/content/Context;)V
@@ -107,35 +107,35 @@
 .method public constructor <init>(Landroid/content/Context;Z)V
     .locals 1
 
-    .line 94
+    .line 112
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/gadget/ConfigableGadget;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
-    .line 78
+    .line 96
     iput v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mStatus:I
 
-    .line 85
+    .line 103
     iput-boolean v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mSnapshot:Z
 
-    .line 387
+    .line 406
     iput-boolean v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mIsInEditingModel:Z
 
-    .line 95
+    .line 113
     invoke-static {p1}, Lcom/miui/home/launcher/common/StorageContextGetter;->getContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mContext:Landroid/content/Context;
 
-    .line 96
+    .line 114
     new-instance v0, Lcom/miui/home/launcher/gadget/Clock;
 
     invoke-direct {v0, p1}, Lcom/miui/home/launcher/gadget/Clock;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mClock:Lcom/miui/home/launcher/gadget/Clock;
 
-    .line 97
+    .line 115
     iput-boolean p2, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mSnapshot:Z
 
     return-void
@@ -144,7 +144,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;)Landroid/content/Context;
     .locals 0
 
-    .line 39
+    .line 40
     iget-object p0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -153,7 +153,7 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;)Z
     .locals 0
 
-    .line 39
+    .line 40
     iget-boolean p0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mSnapshot:Z
 
     return p0
@@ -162,7 +162,7 @@
 .method static synthetic access$1000()Ljava/lang/String;
     .locals 1
 
-    .line 39
+    .line 40
     sget-object v0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->sConfigKey:Ljava/lang/String;
 
     return-object v0
@@ -171,7 +171,7 @@
 .method static synthetic access$200(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;)Ljava/lang/String;
     .locals 0
 
-    .line 39
+    .line 40
     iget-object p0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mClockType:Ljava/lang/String;
 
     return-object p0
@@ -180,7 +180,7 @@
 .method static synthetic access$202(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 39
+    .line 40
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mClockType:Ljava/lang/String;
 
     return-object p1
@@ -189,7 +189,7 @@
 .method static synthetic access$300(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;)Landroid/view/ViewStub;
     .locals 0
 
-    .line 39
+    .line 40
     iget-object p0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mErrorDisplay:Landroid/view/ViewStub;
 
     return-object p0
@@ -198,7 +198,7 @@
 .method static synthetic access$400(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;)Z
     .locals 0
 
-    .line 39
+    .line 40
     iget-boolean p0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mRestrictClick:Z
 
     return p0
@@ -207,7 +207,7 @@
 .method static synthetic access$402(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;Z)Z
     .locals 0
 
-    .line 39
+    .line 40
     iput-boolean p1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mRestrictClick:Z
 
     return p1
@@ -216,7 +216,7 @@
 .method static synthetic access$500(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 39
+    .line 40
     invoke-static {p0}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->getMamlConfigPath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -227,7 +227,7 @@
 .method static synthetic access$600(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;)Ljava/lang/String;
     .locals 0
 
-    .line 39
+    .line 40
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->getComponentCode()Ljava/lang/String;
 
     move-result-object p0
@@ -238,7 +238,7 @@
 .method static synthetic access$700(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;Lorg/w3c/dom/Element;Landroid/view/View;)V
     .locals 0
 
-    .line 39
+    .line 40
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->adjustByAttributes(Lorg/w3c/dom/Element;Landroid/view/View;)V
 
     return-void
@@ -247,7 +247,7 @@
 .method static synthetic access$800(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;)Ljava/lang/String;
     .locals 0
 
-    .line 39
+    .line 40
     iget-object p0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mMd5:Ljava/lang/String;
 
     return-object p0
@@ -256,7 +256,7 @@
 .method static synthetic access$802(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 39
+    .line 40
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mMd5:Ljava/lang/String;
 
     return-object p1
@@ -265,7 +265,7 @@
 .method static synthetic access$900(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;)Lcom/miui/launcher/views/MamlOnExternCommandListener;
     .locals 0
 
-    .line 39
+    .line 40
     iget-object p0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mCommandListener:Lcom/miui/launcher/views/MamlOnExternCommandListener;
 
     return-object p0
@@ -274,7 +274,7 @@
 .method static synthetic access$902(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;Lcom/miui/launcher/views/MamlOnExternCommandListener;)Lcom/miui/launcher/views/MamlOnExternCommandListener;
     .locals 0
 
-    .line 39
+    .line 40
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mCommandListener:Lcom/miui/launcher/views/MamlOnExternCommandListener;
 
     return-object p1
@@ -287,26 +287,26 @@
 
     const/4 v1, 0x0
 
-    .line 346
+    .line 365
     invoke-direct {p0, p1, v0, v1}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->getIntFromElement(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result v0
 
     const-string v2, "clock_y"
 
-    .line 347
+    .line 366
     invoke-direct {p0, p1, v2, v1}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->getIntFromElement(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 348
+    .line 367
     invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 349
+    .line 368
     sget v2, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->DENSITY_SCALE:F
 
     int-to-float v0, v0
@@ -323,10 +323,10 @@
 
     float-to-int p1, v2
 
-    .line 350
+    .line 369
     iput p1, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 351
+    .line 370
     invoke-virtual {p2, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
@@ -335,7 +335,7 @@
 .method private getComponentCode()Ljava/lang/String;
     .locals 2
 
-    .line 480
+    .line 494
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -362,7 +362,7 @@
 .method private static getConfigKey()Ljava/lang/String;
     .locals 1
 
-    .line 67
+    .line 85
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isStaging()Z
 
     move-result v0
@@ -382,7 +382,7 @@
 .method private getIntFromElement(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
     .locals 0
 
-    .line 357
+    .line 376
     :try_start_0
     invoke-interface {p1, p2}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
@@ -390,7 +390,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 359
+    .line 378
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object p1
@@ -411,7 +411,7 @@
 .method private static getMamlConfigPath(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 216
+    .line 234
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -432,7 +432,7 @@
 .method private setupViews()V
     .locals 2
 
-    .line 210
+    .line 228
     new-instance v0, Landroid/view/ViewStub;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->getContext()Landroid/content/Context;
@@ -443,14 +443,14 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mErrorDisplay:Landroid/view/ViewStub;
 
-    .line 211
+    .line 229
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mErrorDisplay:Landroid/view/ViewStub;
 
-    const v1, 0x7f0d0055
+    const v1, 0x7f0d0072
 
     invoke-virtual {v0, v1}, Landroid/view/ViewStub;->setLayoutResource(I)V
 
-    .line 212
+    .line 230
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mErrorDisplay:Landroid/view/ViewStub;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->addView(Landroid/view/View;)V
@@ -463,12 +463,12 @@
 
     const/4 v0, 0x4
 
-    .line 410
+    .line 424
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
 
-    .line 417
+    .line 431
     array-length v1, v0
 
     const/4 v3, 0x0
@@ -478,12 +478,12 @@
 
     aget v4, v0, v3
 
-    .line 418
+    .line 432
     new-instance v5, Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;
 
     invoke-direct {v5, v4}, Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;-><init>(I)V
 
-    .line 419
+    .line 433
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -502,7 +502,7 @@
 
     move-result-object v4
 
-    .line 421
+    .line 435
     new-instance v6, Ljava/io/File;
 
     move-object/from16 v7, p0
@@ -513,7 +513,7 @@
 
     invoke-direct {v6, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 422
+    .line 436
     invoke-virtual {v6}, Ljava/io/File;->isDirectory()Z
 
     move-result v8
@@ -526,7 +526,7 @@
 
     goto/16 :goto_5
 
-    .line 426
+    .line 440
     :cond_0
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -538,19 +538,19 @@
 
     move-result-wide v8
 
-    .line 427
+    .line 441
     invoke-virtual {v5}, Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;->getBackupNamePrefix()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 428
+    .line 442
     invoke-virtual {v6}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v6
 
     if-eqz v6, :cond_8
 
-    .line 430
+    .line 444
     array-length v10, v6
 
     const/4 v11, 0x0
@@ -560,19 +560,19 @@
 
     aget-object v12, v6, v11
 
-    .line 431
+    .line 445
     invoke-virtual {v12}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 432
+    .line 446
     invoke-virtual {v13, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v14
 
     if-eqz v14, :cond_5
 
-    .line 433
+    .line 447
     invoke-virtual {v12}, Ljava/io/File;->lastModified()J
 
     move-result-wide v14
@@ -588,7 +588,7 @@
     :cond_1
     const/4 v14, 0x0
 
-    .line 434
+    .line 448
     :goto_2
     new-instance v2, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
@@ -600,12 +600,12 @@
 
     const-string v15, "autoChange"
 
-    .line 435
+    .line 449
     invoke-virtual {v2, v15}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getBoolean(Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 436
+    .line 450
     new-instance v15, Ljava/io/File;
 
     move-object/from16 v17, v0
@@ -616,14 +616,14 @@
 
     invoke-direct {v15, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 438
+    .line 452
     invoke-virtual {v15}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 439
+    .line 453
     new-instance v0, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     invoke-static {v15}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
@@ -634,7 +634,7 @@
 
     const-string v15, "autoChange"
 
-    .line 440
+    .line 454
     invoke-virtual {v0, v15}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getBoolean(Ljava/lang/String;)Z
 
     move-result v15
@@ -649,7 +649,7 @@
 
     move/from16 v16, v1
 
-    .line 442
+    .line 456
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -684,20 +684,22 @@
 
     move-result-object v1
 
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     if-nez v14, :cond_3
 
     if-eqz v2, :cond_4
 
     if-eqz v15, :cond_4
 
-    .line 445
+    .line 459
     :cond_3
     invoke-virtual {v12}, Ljava/io/File;->delete()Z
 
     :cond_4
     if-eqz v14, :cond_6
 
-    .line 448
+    .line 462
     invoke-virtual {v12}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
@@ -757,8 +759,6 @@
     :cond_9
     return-void
 
-    nop
-
     :array_0
     .array-data 4
         0x4
@@ -770,6 +770,25 @@
 
 
 # virtual methods
+.method public notifyColorChanged()V
+    .locals 2
+
+    .line 45
+    iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mActualGadget:Lcom/miui/home/launcher/gadget/Gadget;
+
+    instance-of v1, v0, Lcom/miui/home/launcher/gadget/ColorUpdatable;
+
+    if-eqz v1, :cond_0
+
+    .line 46
+    check-cast v0, Lcom/miui/home/launcher/gadget/ColorUpdatable;
+
+    invoke-interface {v0}, Lcom/miui/home/launcher/gadget/ColorUpdatable;->notifyColorChanged()V
+
+    :cond_0
+    return-void
+.end method
+
 .method public onAdded()V
     .locals 0
 
@@ -803,12 +822,12 @@
 .method public onButtonUp(Ljava/lang/String;)Z
     .locals 3
 
-    .line 458
+    .line 472
     iget-boolean p1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mIsInEditingModel:Z
 
     if-nez p1, :cond_0
 
-    .line 459
+    .line 473
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
@@ -823,7 +842,7 @@
 
     invoke-virtual {p1, v0, v1, p0}, Lcom/miui/home/launcher/Application;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/view/View;)V
 
-    .line 460
+    .line 474
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mMd5:Ljava/lang/String;
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -832,7 +851,7 @@
 
     if-nez p1, :cond_0
 
-    .line 461
+    .line 475
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -859,7 +878,7 @@
 
     move-result-object p1
 
-    .line 462
+    .line 476
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -868,7 +887,7 @@
 
     const-string v0, "Launcher.ClockGadgetDelegate"
 
-    .line 463
+    .line 477
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -893,34 +912,36 @@
 
     move-result-object v1
 
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     :try_start_0
     const-string v0, "CLICK"
 
-    .line 465
+    .line 479
     invoke-static {v0}, Lcom/xiaomi/analytics/Actions;->newAdAction(Ljava/lang/String;)Lcom/xiaomi/analytics/AdAction;
 
     move-result-object v0
 
     const-string v1, "ex"
 
-    .line 466
+    .line 480
     invoke-virtual {v0, v1, p1}, Lcom/xiaomi/analytics/AdAction;->addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/analytics/Action;
 
     const-string p1, "e"
 
     const-string v1, "CLICK"
 
-    .line 467
+    .line 481
     invoke-virtual {v0, p1, v1}, Lcom/xiaomi/analytics/AdAction;->addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/analytics/Action;
 
     const-string p1, "btn"
 
     const-string v1, "default"
 
-    .line 468
+    .line 482
     invoke-virtual {v0, p1, v1}, Lcom/xiaomi/analytics/AdAction;->addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/analytics/Action;
 
-    .line 469
+    .line 483
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mContext:Landroid/content/Context;
 
     sget-object v1, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->sConfigKey:Ljava/lang/String;
@@ -934,7 +955,7 @@
     :catch_0
     move-exception p1
 
-    .line 471
+    .line 485
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -947,28 +968,20 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 380
-    iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mConfigurable:Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
+    .line 399
     iget-boolean v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mIsInEditingModel:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 381
+    .line 400
     :cond_0
     invoke-super {p0, p1}, Lcom/miui/home/launcher/gadget/ConfigableGadget;->onClick(Landroid/view/View;)V
 
     const-string p1, "flip"
 
-    .line 382
+    .line 401
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mClockType:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -984,7 +997,7 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 383
+    .line 402
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->onButtonUp(Ljava/lang/String;)Z
 
     :cond_2
@@ -994,39 +1007,39 @@
 .method public onCreate()V
     .locals 2
 
-    .line 102
+    .line 120
     invoke-super {p0}, Lcom/miui/home/launcher/gadget/ConfigableGadget;->onCreate()V
 
-    .line 104
+    .line 122
     iget v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mStatus:I
 
     or-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mStatus:I
 
-    .line 105
+    .line 123
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->setupViews()V
 
-    .line 106
+    .line 124
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mClock:Lcom/miui/home/launcher/gadget/Clock;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Clock;->init()V
 
-    .line 108
+    .line 126
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mActualGadget:Lcom/miui/home/launcher/gadget/Gadget;
 
     if-nez v0, :cond_0
 
-    .line 109
+    .line 127
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->updateActualGadget()V
 
     goto :goto_0
 
-    .line 111
+    .line 129
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Gadget;->onCreate()V
 
-    .line 114
+    .line 132
     :goto_0
     new-instance v0, Landroid/content/IntentFilter;
 
@@ -1036,7 +1049,7 @@
 
     const-string v1, "file"
 
-    .line 115
+    .line 133
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
     return-void
@@ -1045,12 +1058,12 @@
 .method public onDeleted()V
     .locals 4
 
-    .line 134
+    .line 152
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mActualGadget:Lcom/miui/home/launcher/gadget/Gadget;
 
     if-eqz v0, :cond_0
 
-    .line 136
+    .line 154
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mBackupManager:Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mContext:Landroid/content/Context;
@@ -1063,7 +1076,7 @@
 
     move-result-object v0
 
-    .line 137
+    .line 155
     new-instance v1, Ljava/io/File;
 
     invoke-static {v0}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->getMamlConfigPath(Ljava/lang/String;)Ljava/lang/String;
@@ -1074,12 +1087,12 @@
 
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 139
+    .line 157
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mActualGadget:Lcom/miui/home/launcher/gadget/Gadget;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Gadget;->onDeleted()V
 
-    .line 141
+    .line 159
     :cond_0
     invoke-super {p0}, Lcom/miui/home/launcher/gadget/ConfigableGadget;->onDeleted()V
 
@@ -1089,27 +1102,27 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 120
+    .line 138
     iget v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mStatus:I
 
     and-int/lit8 v0, v0, -0x2
 
     iput v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mStatus:I
 
-    .line 121
+    .line 139
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mClock:Lcom/miui/home/launcher/gadget/Clock;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Clock;->pause()V
 
-    .line 122
+    .line 140
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mActualGadget:Lcom/miui/home/launcher/gadget/Gadget;
 
     if-eqz v0, :cond_0
 
-    .line 123
+    .line 141
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Gadget;->onDestroy()V
 
-    .line 124
+    .line 142
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mClock:Lcom/miui/home/launcher/gadget/Clock;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Clock;->onDestroy()V
@@ -1121,20 +1134,20 @@
 .method public onEditDisable()V
     .locals 1
 
-    .line 403
+    .line 417
     invoke-super {p0}, Lcom/miui/home/launcher/gadget/ConfigableGadget;->onEditDisable()V
 
     const/4 v0, 0x0
 
-    .line 404
+    .line 418
     iput-boolean v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mIsInEditingModel:Z
 
-    .line 405
+    .line 419
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mActualGadget:Lcom/miui/home/launcher/gadget/Gadget;
 
     if-eqz v0, :cond_0
 
-    .line 406
+    .line 420
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Gadget;->onEditDisable()V
 
     :cond_0
@@ -1144,45 +1157,20 @@
 .method public onEditNormal()V
     .locals 1
 
-    .line 391
-    iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mContext:Landroid/content/Context;
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->canPickTheme(Landroid/content/Context;)Z
+    .line 410
+    iput-boolean v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mIsInEditingModel:Z
 
-    move-result v0
+    .line 411
+    iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mActualGadget:Lcom/miui/home/launcher/gadget/Gadget;
 
     if-eqz v0, :cond_0
 
-    .line 392
-    invoke-super {p0}, Lcom/miui/home/launcher/gadget/ConfigableGadget;->onEditNormal()V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 394
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mConfigurable:Ljava/lang/Boolean;
-
-    :goto_0
-    const/4 v0, 0x1
-
-    .line 396
-    iput-boolean v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mIsInEditingModel:Z
-
-    .line 397
-    iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mActualGadget:Lcom/miui/home/launcher/gadget/Gadget;
-
-    if-eqz v0, :cond_1
-
-    .line 398
+    .line 412
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Gadget;->onEditNormal()V
 
-    :cond_1
+    :cond_0
     return-void
 .end method
 
@@ -1197,24 +1185,24 @@
 .method public onPause()V
     .locals 1
 
-    .line 146
+    .line 164
     iget v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mStatus:I
 
     and-int/lit8 v0, v0, -0x5
 
     iput v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mStatus:I
 
-    .line 147
+    .line 165
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mClock:Lcom/miui/home/launcher/gadget/Clock;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Clock;->pause()V
 
-    .line 148
+    .line 166
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mActualGadget:Lcom/miui/home/launcher/gadget/Gadget;
 
     if-eqz v0, :cond_0
 
-    .line 149
+    .line 167
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Gadget;->onPause()V
 
     :cond_0
@@ -1224,30 +1212,30 @@
 .method public onResume()V
     .locals 4
 
-    .line 155
+    .line 173
     invoke-super {p0}, Lcom/miui/home/launcher/gadget/ConfigableGadget;->onResume()V
 
-    .line 156
+    .line 174
     iget v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mStatus:I
 
     or-int/lit8 v0, v0, 0x4
 
     iput v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mStatus:I
 
-    .line 157
+    .line 175
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mActualGadget:Lcom/miui/home/launcher/gadget/Gadget;
 
     if-eqz v0, :cond_0
 
-    .line 158
+    .line 176
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Gadget;->onResume()V
 
-    .line 159
+    .line 177
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mClock:Lcom/miui/home/launcher/gadget/Clock;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Clock;->resume()V
 
-    .line 160
+    .line 178
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mMd5:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -1256,7 +1244,7 @@
 
     if-nez v0, :cond_0
 
-    .line 161
+    .line 179
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1283,7 +1271,7 @@
 
     move-result-object v0
 
-    .line 162
+    .line 180
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -1292,7 +1280,7 @@
 
     const-string v1, "Launcher.ClockGadgetDelegate"
 
-    .line 163
+    .line 181
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1313,27 +1301,29 @@
 
     move-result-object v2
 
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     :try_start_0
     const-string v1, "VIEW"
 
-    .line 165
+    .line 183
     invoke-static {v1}, Lcom/xiaomi/analytics/Actions;->newAdAction(Ljava/lang/String;)Lcom/xiaomi/analytics/AdAction;
 
     move-result-object v1
 
     const-string v2, "ex"
 
-    .line 166
+    .line 184
     invoke-virtual {v1, v2, v0}, Lcom/xiaomi/analytics/AdAction;->addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/analytics/Action;
 
     const-string v0, "e"
 
     const-string v2, "VIEW"
 
-    .line 167
+    .line 185
     invoke-virtual {v1, v0, v2}, Lcom/xiaomi/analytics/AdAction;->addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/analytics/Action;
 
-    .line 168
+    .line 186
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mContext:Landroid/content/Context;
 
     sget-object v2, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->sConfigKey:Ljava/lang/String;
@@ -1347,7 +1337,7 @@
     :catch_0
     move-exception v0
 
-    .line 170
+    .line 188
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -1358,22 +1348,22 @@
 .method public onStart()V
     .locals 1
 
-    .line 179
+    .line 197
     iget v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mStatus:I
 
     or-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mStatus:I
 
-    .line 180
+    .line 198
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mActualGadget:Lcom/miui/home/launcher/gadget/Gadget;
 
     if-eqz v0, :cond_0
 
-    .line 181
+    .line 199
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Gadget;->onStart()V
 
-    .line 182
+    .line 200
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mClock:Lcom/miui/home/launcher/gadget/Clock;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Clock;->onStart()V
@@ -1385,27 +1375,27 @@
 .method public onStop()V
     .locals 1
 
-    .line 188
+    .line 206
     iget v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mStatus:I
 
     and-int/lit8 v0, v0, -0x3
 
     iput v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mStatus:I
 
-    .line 189
+    .line 207
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mClock:Lcom/miui/home/launcher/gadget/Clock;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Clock;->pause()V
 
-    .line 190
+    .line 208
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mActualGadget:Lcom/miui/home/launcher/gadget/Gadget;
 
     if-eqz v0, :cond_0
 
-    .line 191
+    .line 209
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Gadget;->onStop()V
 
-    .line 192
+    .line 210
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mClock:Lcom/miui/home/launcher/gadget/Clock;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Clock;->onStop()V
@@ -1417,24 +1407,51 @@
 .method public onWallpaperColorChanged()V
     .locals 2
 
-    .line 369
+    .line 388
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mActualGadget:Lcom/miui/home/launcher/gadget/Gadget;
 
     instance-of v1, v0, Lcom/miui/home/launcher/gadget/Gadget;
 
     if-eqz v1, :cond_0
 
-    .line 370
+    .line 389
     invoke-virtual {v0}, Lcom/miui/home/launcher/gadget/Gadget;->onWallpaperColorChanged()V
 
     :cond_0
     return-void
 .end method
 
+.method public performAccessibilityAction(ILandroid/os/Bundle;)Z
+    .locals 2
+
+    .line 60
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x1f
+
+    if-lt v0, v1, :cond_0
+
+    const v0, 0x1020036
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    .line 63
+    :cond_0
+    invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/gadget/ConfigableGadget;->performAccessibilityAction(ILandroid/os/Bundle;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
 .method public saveConfig(Ljava/lang/String;)Z
     .locals 4
 
-    .line 204
+    .line 222
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mBackupManager:Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mContext:Landroid/content/Context;
@@ -1447,14 +1464,14 @@
 
     move-result-object v0
 
-    .line 205
+    .line 223
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mBackupManager:Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;->getSystemGadgetTheme()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 206
+    .line 224
     invoke-static {v0, p1, v1}, Lcom/miui/home/launcher/common/Utilities;->extract(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p1
@@ -1465,12 +1482,12 @@
 .method updateActualGadget()V
     .locals 6
 
-    .line 221
+    .line 239
     new-instance v5, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1;
 
     invoke-direct {v5, p0}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1;-><init>(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;)V
 
-    .line 336
+    .line 355
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -1479,7 +1496,7 @@
 
     check-cast v4, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
-    .line 337
+    .line 356
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mBackupManager:Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mContext:Landroid/content/Context;
@@ -1493,20 +1510,20 @@
     return-void
 .end method
 
-.method public updateColor()V
+.method public updateColor(I)V
     .locals 2
 
-    .line 44
+    .line 52
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->mActualGadget:Lcom/miui/home/launcher/gadget/Gadget;
 
     instance-of v1, v0, Lcom/miui/home/launcher/gadget/ColorUpdatable;
 
     if-eqz v1, :cond_0
 
-    .line 45
+    .line 53
     check-cast v0, Lcom/miui/home/launcher/gadget/ColorUpdatable;
 
-    invoke-interface {v0}, Lcom/miui/home/launcher/gadget/ColorUpdatable;->updateColor()V
+    invoke-interface {v0, p1}, Lcom/miui/home/launcher/gadget/ColorUpdatable;->updateColor(I)V
 
     :cond_0
     return-void
@@ -1517,15 +1534,15 @@
 
     const-string v0, "RESPONSE_PICKED_RESOURCE"
 
-    .line 198
+    .line 216
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 199
+    .line 217
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->saveConfig(Ljava/lang/String;)Z
 
-    .line 200
+    .line 218
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;->updateActualGadget()V
 
     return-void

@@ -29,7 +29,7 @@
 .end method
 
 .method private addGuideTextView(Ljava/lang/String;)V
-    .locals 6
+    .locals 7
 
     .line 162
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -59,40 +59,54 @@
 
     .line 169
     :cond_1
-    invoke-virtual {p0}, Lmiuix/popupwidget/widget/GuidePopupWindow;->getLayoutInflater()Landroid/view/LayoutInflater;
+    array-length v0, p1
 
-    move-result-object v0
-
-    .line 170
-    array-length v1, p1
-
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     :goto_0
-    if-ge v2, v1, :cond_2
+    if-ge v1, v0, :cond_2
 
-    aget-object v3, p1, v2
+    aget-object v2, p1, v1
 
-    .line 171
-    sget v4, Lmiuix/popupwidget/R$layout;->miuix_appcompat_guide_popup_text_view:I
+    .line 170
+    new-instance v3, Landroidx/appcompat/widget/AppCompatTextView;
 
-    const/4 v5, 0x0
-
-    invoke-virtual {v0, v4, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {p0}, Lmiuix/popupwidget/widget/GuidePopupWindow;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    check-cast v4, Landroidx/appcompat/widget/AppCompatTextView;
+    const/4 v5, 0x0
+
+    sget v6, Lmiuix/popupwidget/R$attr;->guidePopupTextStyle:I
+
+    invoke-direct {v3, v4, v5, v6}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    .line 171
+    invoke-virtual {p0}, Lmiuix/popupwidget/widget/GuidePopupWindow;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    sget v5, Lmiuix/popupwidget/R$dimen;->miuix_popup_guide_text_view_max_width:I
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Landroidx/appcompat/widget/AppCompatTextView;->setMaxWidth(I)V
 
     .line 172
-    invoke-virtual {v4, v3}, Landroidx/appcompat/widget/AppCompatTextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v2}, Landroidx/appcompat/widget/AppCompatTextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 173
-    iget-object v3, p0, Lmiuix/popupwidget/widget/GuidePopupWindow;->mGuideView:Landroid/widget/LinearLayout;
+    iget-object v2, p0, Lmiuix/popupwidget/widget/GuidePopupWindow;->mGuideView:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+    invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 

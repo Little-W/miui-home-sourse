@@ -29,7 +29,7 @@
 .method constructor <init>(Landroid/content/Context;II)V
     .locals 0
 
-    .line 1186
+    .line 1230
     iput-object p1, p0, Lcom/miui/home/launcher/common/Utilities$1;->val$context:Landroid/content/Context;
 
     iput p2, p0, Lcom/miui/home/launcher/common/Utilities$1;->val$textResId:I
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 3
 
-    .line 1190
+    .line 1234
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->access$000()Ljava/lang/ref/WeakReference;
 
     move-result-object v0
@@ -65,7 +65,7 @@
 
     goto :goto_0
 
-    .line 1194
+    .line 1238
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->access$000()Ljava/lang/ref/WeakReference;
 
@@ -77,7 +77,7 @@
 
     check-cast v0, Landroid/widget/Toast;
 
-    .line 1195
+    .line 1239
     iget-object v1, p0, Lcom/miui/home/launcher/common/Utilities$1;->val$context:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -94,7 +94,7 @@
 
     goto :goto_1
 
-    .line 1191
+    .line 1235
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/common/Utilities$1;->val$context:Landroid/content/Context;
@@ -111,14 +111,14 @@
 
     move-result-object v0
 
-    .line 1192
+    .line 1236
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, v0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->access$002(Ljava/lang/ref/WeakReference;)Ljava/lang/ref/WeakReference;
 
-    .line 1197
+    .line 1241
     :goto_1
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 

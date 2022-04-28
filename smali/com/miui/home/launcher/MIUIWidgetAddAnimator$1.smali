@@ -55,7 +55,7 @@
 
     goto :goto_0
 
-    .line 107
+    .line 106
     :cond_0
     invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -67,29 +67,9 @@
 
     check-cast p1, Lmiuix/animation/listener/UpdateInfo;
 
-    .line 108
-    iget-object p2, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$1;->this$0:Lcom/miui/home/launcher/MIUIWidgetAddAnimator;
-
-    invoke-virtual {p1}, Lmiuix/animation/listener/UpdateInfo;->getFloatValue()F
-
-    move-result v0
-
-    float-to-double v0, v0
-
-    invoke-virtual {p2, v0, v1}, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->setRadius(D)V
-
-    .line 109
-    iget-object p2, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$1;->this$0:Lcom/miui/home/launcher/MIUIWidgetAddAnimator;
-
-    iget-wide v0, p1, Lmiuix/animation/listener/UpdateInfo;->velocity:D
-
-    double-to-float v0, v0
-
-    invoke-static {p2, v0}, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->access$000(Lcom/miui/home/launcher/MIUIWidgetAddAnimator;F)V
-
     const-string p2, "WidgetAddAnimator"
 
-    .line 111
+    .line 110
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -108,9 +88,11 @@
 
     move-result-object v0
 
+    invoke-static {p2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     const-string p2, "WidgetAddAnimator"
 
-    .line 112
+    .line 111
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -127,15 +109,46 @@
 
     move-result-object v0
 
+    invoke-static {p2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 113
+    iget-object p2, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$1;->this$0:Lcom/miui/home/launcher/MIUIWidgetAddAnimator;
+
+    invoke-static {p2}, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->access$000(Lcom/miui/home/launcher/MIUIWidgetAddAnimator;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
     .line 114
+    iget-object p2, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$1;->this$0:Lcom/miui/home/launcher/MIUIWidgetAddAnimator;
+
+    invoke-virtual {p1}, Lmiuix/animation/listener/UpdateInfo;->getFloatValue()F
+
+    move-result v0
+
+    float-to-double v0, v0
+
+    invoke-virtual {p2, v0, v1}, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->setRadius(D)V
+
+    .line 115
+    iget-object p2, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$1;->this$0:Lcom/miui/home/launcher/MIUIWidgetAddAnimator;
+
+    iget-wide v0, p1, Lmiuix/animation/listener/UpdateInfo;->velocity:D
+
+    double-to-float v0, v0
+
+    invoke-static {p2, v0}, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->access$100(Lcom/miui/home/launcher/MIUIWidgetAddAnimator;F)V
+
+    .line 116
     iget-boolean p1, p1, Lmiuix/animation/listener/UpdateInfo;->isCompleted:Z
 
     if-eqz p1, :cond_1
 
-    .line 115
+    .line 117
     iget-object p1, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$1;->this$0:Lcom/miui/home/launcher/MIUIWidgetAddAnimator;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->access$100(Lcom/miui/home/launcher/MIUIWidgetAddAnimator;)V
+    invoke-static {p1}, Lcom/miui/home/launcher/MIUIWidgetAddAnimator;->access$200(Lcom/miui/home/launcher/MIUIWidgetAddAnimator;)V
 
     :cond_1
     return-void

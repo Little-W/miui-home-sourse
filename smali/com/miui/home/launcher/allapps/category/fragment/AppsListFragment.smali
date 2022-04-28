@@ -5,7 +5,6 @@
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 .implements Landroid/view/View$OnLongClickListener;
-.implements Lcom/miui/home/launcher/DeviceProfile$OnDeviceProfileChangeListener;
 
 
 # instance fields
@@ -30,10 +29,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 47
+    .line 49
     invoke-direct {p0}, Landroidx/fragment/app/Fragment;-><init>()V
 
-    .line 49
+    .line 51
     new-instance v0, Lcom/miui/home/launcher/allapps/AppInfoLastUseTimeComparator;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/allapps/AppInfoLastUseTimeComparator;-><init>()V
@@ -46,7 +45,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;I)V
     .locals 0
 
-    .line 47
+    .line 49
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->highLightLocatedApp(I)V
 
     return-void
@@ -55,19 +54,19 @@
 .method private highLightLocatedApp(I)V
     .locals 2
 
-    .line 230
+    .line 225
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->findViewHolderForAdapterPosition(I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
 
     move-result-object p1
 
-    .line 231
+    .line 226
     instance-of v0, p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
 
     if-eqz v0, :cond_0
 
-    .line 232
+    .line 227
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
@@ -86,95 +85,12 @@
     return-void
 .end method
 
-.method private refreshSpanCount()V
-    .locals 3
-
-    .line 160
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAdapter:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->refreshSpanCount()V
-
-    .line 161
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
-
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v2, v1}, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->onAppsUpdated(ILjava/util/List;)V
-
-    return-void
-.end method
-
-.method private updatePoolSize()V
-    .locals 4
-
-    .line 189
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    .line 192
-    :cond_0
-    invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->getRecycledViewPool()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    .line 193
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
-
-    move-result v2
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
-
-    move-result v3
-
-    mul-int/2addr v2, v3
-
-    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->setMaxRecycledViews(II)V
-
-    const/4 v1, 0x4
-
-    const/4 v2, 0x1
-
-    .line 194
-    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->setMaxRecycledViews(II)V
-
-    const/16 v1, 0x8
-
-    .line 195
-    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->setMaxRecycledViews(II)V
-
-    const/16 v1, 0x10
-
-    .line 196
-    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->setMaxRecycledViews(II)V
-
-    const/16 v1, 0x20
-
-    .line 197
-    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->setMaxRecycledViews(II)V
-
-    const/16 v1, 0x40
-
-    .line 198
-    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->setMaxRecycledViews(II)V
-
-    return-void
-.end method
-
 
 # virtual methods
 .method public getAnimateTarget(Lcom/miui/home/launcher/DragObject;)Landroid/view/View;
     .locals 7
 
-    .line 172
+    .line 167
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     const/4 v1, 0x0
@@ -186,7 +102,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 175
+    .line 170
     :goto_0
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
@@ -196,14 +112,14 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 176
+    .line 171
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     invoke-virtual {v2, v0}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 177
+    .line 172
     invoke-virtual {v2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v3
@@ -212,19 +128,19 @@
 
     if-eqz v3, :cond_1
 
-    .line 178
+    .line 173
     invoke-virtual {v2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/miui/home/launcher/AppInfo;
 
-    .line 179
+    .line 174
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v4
 
-    .line 180
+    .line 175
     iget-object v5, v3, Lcom/miui/home/launcher/AppInfo;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v4}, Lcom/miui/home/launcher/ItemInfo;->getTargetComponent()Landroid/content/ComponentName;
@@ -262,10 +178,52 @@
     return-object v1
 .end method
 
+.method public getFastScroller(Landroid/view/ViewGroup;Landroid/view/MotionEvent;Landroid/graphics/Point;)Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
+    .locals 2
+
+    .line 232
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
+
+    if-eqz v0, :cond_0
+
+    .line 233
+    invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->getScrollbar()Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
+
+    move-result-object v0
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v1
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+
+    move-result p2
+
+    invoke-virtual {v0, p1, v1, p2, p3}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->isHitInParent(Landroid/view/ViewGroup;FFLandroid/graphics/Point;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 234
+    iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->getScrollbar()Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
 .method protected getLayoutResourceId()I
     .locals 1
 
-    const v0, 0x7f0d0045
+    const v0, 0x7f0d0062
 
     return v0
 .end method
@@ -273,10 +231,10 @@
 .method public final getShowingShortcutIcon(Landroid/content/ComponentName;I)Lcom/miui/home/launcher/ShortcutIcon;
     .locals 2
 
-    .line 123
+    .line 138
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
 
-    .line 124
+    .line 139
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v1
@@ -285,26 +243,26 @@
 
     move-result-object p2
 
-    .line 123
+    .line 138
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/allapps/AllAppsStore;->getAppsCompat(Landroid/content/ComponentName;Landroid/os/UserHandle;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 125
+    .line 140
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p2
 
     if-lez p2, :cond_0
 
-    .line 126
+    .line 141
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mUsedTimeComparator:Lcom/miui/home/launcher/allapps/AppInfoLastUseTimeComparator;
 
     invoke-static {p1, p2}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
     const/4 p2, 0x0
 
-    .line 127
+    .line 142
     invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -328,7 +286,7 @@
 
     const/4 v0, 0x0
 
-    .line 133
+    .line 148
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
@@ -338,14 +296,14 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 134
+    .line 149
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 135
+    .line 150
     instance-of v2, v1, Lcom/miui/home/launcher/ShortcutIcon;
 
     if-eqz v2, :cond_0
@@ -356,7 +314,7 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 136
+    .line 151
     check-cast v1, Lcom/miui/home/launcher/ShortcutIcon;
 
     return-object v1
@@ -373,9 +331,9 @@
 .end method
 
 .method public locateApp(Lcom/miui/home/launcher/AppInfo;)Z
-    .locals 2
+    .locals 4
 
-    .line 202
+    .line 197
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->getAppPosition(Lcom/miui/home/launcher/AppInfo;)I
@@ -384,19 +342,21 @@
 
     if-ltz p1, :cond_0
 
-    .line 204
+    .line 199
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->smoothScrollToPosition(I)V
 
-    .line 205
+    .line 200
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     new-instance v1, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1;
 
     invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1;-><init>(Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;I)V
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->post(Ljava/lang/Runnable;)Z
+    const-wide/16 v2, 0x1f4
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->postDelayed(Ljava/lang/Runnable;J)Z
 
     const/4 p1, 0x1
 
@@ -411,7 +371,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 113
+    .line 123
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -422,21 +382,44 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/util/UiThreadHelper;->hideKeyboardAsync(Landroid/content/Context;Landroid/os/IBinder;)V
 
-    .line 114
+    .line 124
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Launcher;->onClick(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Launcher;->branchOrMaskLocalAppClick(Landroid/view/View;)V
 
+    .line 125
+    iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->hasFilter()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x3
+
+    .line 126
+    invoke-static {p1}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackLocalAppsClick(I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x1
+
+    .line 128
+    invoke-static {p1}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackLocalAppsClick(I)V
+
+    :goto_0
     return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 60
+    .line 62
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 61
+    .line 63
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -445,7 +428,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 62
+    .line 64
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAllAppsStore()Lcom/miui/home/launcher/allapps/AllAppsStore;
@@ -454,7 +437,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
 
-    .line 63
+    .line 65
     new-instance p1, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -465,25 +448,32 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
-    .line 64
-    new-instance p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
+    .line 66
+    iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
-    iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
+    invoke-virtual {p0, p1, v0}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->onCreateAdapter(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;)Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
 
-    invoke-direct {p1, v0, v1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;-><init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;)V
+    move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAdapter:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
 
-    .line 65
+    .line 67
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAdapter:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->setAdapter(Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;)V
 
-    .line 66
+    .line 68
+    sget-object p1, Lcom/miui/home/LauncherDecoupleHelper;->INSTANCE:Lcom/miui/home/LauncherDecoupleHelper;
+
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/LauncherDecoupleHelper;->setAppListFilter(Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;)V
+
+    .line 69
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAdapter:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->getLayoutManager()Landroidx/recyclerview/widget/GridLayoutManager;
@@ -495,10 +485,13 @@
     return-void
 .end method
 
+.method public abstract onCreateAdapter(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;)Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
+.end method
+
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    .line 76
+    .line 83
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->getLayoutResourceId()I
 
     move-result p3
@@ -509,9 +502,9 @@
 
     move-result-object p1
 
-    const p2, 0x7f0a01f5
+    const p2, 0x7f0a025f
 
-    .line 77
+    .line 84
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -520,14 +513,14 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mSpringContainer:Lcom/miui/home/launcher/view/SpringRelativeLayout;
 
-    .line 78
+    .line 85
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mSpringContainer:Lcom/miui/home/launcher/view/SpringRelativeLayout;
 
-    const p3, 0x7f0a0061
+    const p3, 0x7f0a0066
 
     invoke-virtual {p2, p3}, Lcom/miui/home/launcher/view/SpringRelativeLayout;->addSpringView(I)V
 
-    .line 79
+    .line 86
     invoke-virtual {p1, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -536,7 +529,7 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
-    .line 80
+    .line 87
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     iget-object p3, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mSpringContainer:Lcom/miui/home/launcher/view/SpringRelativeLayout;
@@ -547,35 +540,35 @@
 
     invoke-virtual {p2, p3}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->setEdgeEffectFactory(Landroidx/recyclerview/widget/RecyclerView$EdgeEffectFactory;)V
 
-    .line 81
+    .line 88
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     iget-object p3, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
     invoke-virtual {p2, p3}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->setApps(Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;)V
 
-    .line 82
+    .line 89
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     iget-object p3, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mLayoutManager:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     invoke-virtual {p2, p3}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 83
+    .line 90
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     iget-object p3, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAdapter:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
 
     invoke-virtual {p2, p3}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 84
+    .line 91
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     const/4 p3, 0x1
 
     invoke-virtual {p2, p3}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->setHasFixedSize(Z)V
 
-    .line 85
+    .line 92
     new-instance p2, Lcom/miui/home/launcher/keyboard/FocusedItemDecorator;
 
     iget-object p3, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
@@ -584,12 +577,12 @@
 
     invoke-direct {p2, p3, v0}, Lcom/miui/home/launcher/keyboard/FocusedItemDecorator;-><init>(Landroid/view/View;Lcom/miui/home/launcher/allapps/ItemPaddingSetter;)V
 
-    .line 86
+    .line 93
     iget-object p3, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     invoke-virtual {p3, p2}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
-    .line 87
+    .line 94
     iget-object p3, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAdapter:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/keyboard/FocusedItemDecorator;->getFocusListener()Landroid/view/View$OnFocusChangeListener;
@@ -598,113 +591,103 @@
 
     invoke-virtual {p3, p2}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->setIconFocusListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    .line 88
+    .line 95
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAdapter:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
 
     invoke-virtual {p2, p0}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->setIconClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 89
+    .line 96
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAdapter:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
 
     invoke-virtual {p2, p0}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->setIconLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 91
+    .line 98
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
 
     iget-object p3, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     invoke-virtual {p2, p3}, Lcom/miui/home/launcher/allapps/AllAppsStore;->registerIconContainer(Landroid/view/ViewGroup;)V
 
-    .line 92
-    invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
+    .line 100
+    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->updatePoolSize()V
+
+    const p2, 0x7f0a0106
+
+    .line 102
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
-    invoke-virtual {p2, p0}, Lorg/greenrobot/eventbus/EventBus;->isRegistered(Ljava/lang/Object;)Z
+    check-cast p2, Lcom/miui/home/launcher/view/LetterRecyclerViewFastScroller;
 
-    move-result p2
+    if-eqz p2, :cond_1
 
-    if-nez p2, :cond_0
+    .line 104
+    iget-object p3, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
-    .line 93
-    invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
+    iget-boolean p3, p3, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->mShowRecommendApps:Z
 
-    move-result-object p2
+    if-eqz p3, :cond_0
 
-    invoke-virtual {p2, p0}, Lorg/greenrobot/eventbus/EventBus;->register(Ljava/lang/Object;)V
+    .line 105
+    sget-object p3, Lcom/miui/home/launcher/view/LetterRecyclerViewFastScroller;->DEFAULT_INDEX_ITEM:[Ljava/lang/String;
 
-    .line 96
+    invoke-virtual {p2, p3}, Lcom/miui/home/launcher/view/LetterRecyclerViewFastScroller;->setLetterItems([Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 107
     :cond_0
-    invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->updatePoolSize()V
+    sget-object p3, Lcom/miui/home/launcher/view/LetterRecyclerViewFastScroller;->DEFAULT_INDEX_ITEM_WITHOUT_RECENT:[Ljava/lang/String;
 
-    .line 97
-    iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    invoke-virtual {p2, p3}, Lcom/miui/home/launcher/view/LetterRecyclerViewFastScroller;->setLetterItems([Ljava/lang/String;)V
 
-    new-instance p3, Lcom/miui/home/launcher/allapps/category/fragment/-$$Lambda$BnQ43Lfjl7Mo-FHpL12i9j8nMbI;
-
-    invoke-direct {p3, p0}, Lcom/miui/home/launcher/allapps/category/fragment/-$$Lambda$BnQ43Lfjl7Mo-FHpL12i9j8nMbI;-><init>(Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;)V
-
-    invoke-virtual {p2, p3}, Lcom/miui/home/launcher/Launcher;->addOnDeviceProfileChangeListener(Lcom/miui/home/launcher/DeviceProfile$OnDeviceProfileChangeListener;)V
-
+    :cond_1
+    :goto_0
     return-object p1
 .end method
 
 .method public onDestroy()V
     .locals 1
 
-    .line 166
+    .line 159
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
-    .line 167
+    .line 160
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->onDestroy()V
 
-    .line 168
+    .line 161
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
+    if-eqz v0, :cond_0
+
+    .line 162
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->getRecycledViewPool()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->clear()V
 
+    :cond_0
     return-void
 .end method
 
 .method public onDestroyView()V
     .locals 2
 
-    .line 103
+    .line 116
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroyView()V
 
-    .line 104
-    invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lorg/greenrobot/eventbus/EventBus;->isRegistered(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 105
-    invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lorg/greenrobot/eventbus/EventBus;->unregister(Ljava/lang/Object;)V
-
-    .line 107
-    :cond_0
+    .line 117
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/AllAppsStore;->unregisterIconContainer(Landroid/view/ViewGroup;)V
 
-    .line 108
+    .line 118
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     const/4 v1, 0x0
@@ -714,24 +697,10 @@
     return-void
 .end method
 
-.method public onDeviceProfileChanged(Lcom/miui/home/launcher/DeviceProfile;)V
-    .locals 0
-
-    .line 238
-    invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->refreshSpanCount()V
-
-    .line 239
-    iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->onScreenOrientationChanged()V
-
-    return-void
-.end method
-
 .method public onLongClick(Landroid/view/View;)Z
     .locals 1
 
-    .line 119
+    .line 134
     sget-object v0, Lcom/miui/home/launcher/touch/ItemLongClickListener;->INSTANCE_ALL_APPS:Landroid/view/View$OnLongClickListener;
 
     invoke-interface {v0, p1}, Landroid/view/View$OnLongClickListener;->onLongClick(Landroid/view/View;)Z
@@ -741,97 +710,63 @@
     return p1
 .end method
 
-.method public onMessageEvent(Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;)V
-    .locals 2
-    .annotation runtime Lorg/greenrobot/eventbus/Subscribe;
-        threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
-    .end annotation
+.method protected final updatePoolSize()V
+    .locals 4
 
-    .line 144
-    invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;->getKey()Ljava/lang/String;
+    .line 184
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
-    move-result-object v0
+    if-nez v0, :cond_0
 
-    const-string v1, "color_mode"
-
-    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 145
-    invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;->getKey()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "background_alpha"
-
-    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    .line 148
-    :cond_0
-    invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;->getKey()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "letter_fast_scroller_enable"
-
-    invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    .line 149
-    iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->bindFastScrollbar(Z)V
-
-    goto :goto_1
-
-    .line 146
-    :cond_1
-    :goto_0
-    iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mAdapter:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->getItemCount()I
-
-    move-result v1
-
-    invoke-virtual {p1, v0, v1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->notifyItemRangeChanged(II)V
-
-    .line 147
-    iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->onColorModeChange()V
-
-    :cond_2
-    :goto_1
     return-void
-.end method
 
-.method public onMessageEvent(Lcom/miui/home/launcher/common/messages/ScreenCellsChanged;)V
-    .locals 0
-    .annotation runtime Lorg/greenrobot/eventbus/Subscribe;
-        threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
-    .end annotation
+    .line 187
+    :cond_0
+    invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->getRecycledViewPool()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
 
-    .line 155
-    invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->updatePoolSize()V
+    move-result-object v0
 
-    .line 156
-    invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->refreshSpanCount()V
+    const/4 v1, 0x2
+
+    .line 188
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
+
+    move-result v2
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXDrawerMode()I
+
+    move-result v3
+
+    mul-int/2addr v2, v3
+
+    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->setMaxRecycledViews(II)V
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x1
+
+    .line 189
+    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->setMaxRecycledViews(II)V
+
+    const/16 v1, 0x8
+
+    .line 190
+    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->setMaxRecycledViews(II)V
+
+    const/16 v1, 0x10
+
+    .line 191
+    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->setMaxRecycledViews(II)V
+
+    const/16 v1, 0x20
+
+    .line 192
+    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->setMaxRecycledViews(II)V
+
+    const/16 v1, 0x40
+
+    .line 193
+    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->setMaxRecycledViews(II)V
 
     return-void
 .end method

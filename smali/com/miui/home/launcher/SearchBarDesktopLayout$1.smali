@@ -32,7 +32,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/SearchBarDesktopLayout;)V
     .locals 0
 
-    .line 264
+    .line 258
     iput-object p1, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarDesktopLayout;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/common/AsyncTaskRunnable;-><init>()V
@@ -45,34 +45,22 @@
 .method protected doInBackground()Landroid/graphics/drawable/Drawable;
     .locals 4
 
-    .line 269
+    .line 263
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarDesktopLayout;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/SearchBarDesktopLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->isSearchBarAreaLight()Z
+    const v1, 0x7f0800c9
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const v1, 0x7f0800bc
-
-    goto :goto_0
-
-    :cond_0
-    const v1, 0x7f0800b9
-
-    :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     const-string v1, "SearchBarStyleUtil"
 
-    .line 271
+    .line 264
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -95,33 +83,35 @@
 
     move-result-object v2
 
-    .line 272
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 265
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarDesktopLayout;
 
     instance-of v2, v0, Landroid/graphics/drawable/RippleDrawable;
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_0
 
     const/4 v2, 0x1
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_1
+    :cond_0
     const/4 v2, 0x0
 
-    :goto_1
+    :goto_0
     invoke-static {v1, v2}, Lcom/miui/home/launcher/SearchBarDesktopLayout;->access$002(Lcom/miui/home/launcher/SearchBarDesktopLayout;Z)Z
 
-    .line 273
+    .line 266
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarDesktopLayout;
 
     invoke-static {v1}, Lcom/miui/home/launcher/SearchBarDesktopLayout;->access$000(Lcom/miui/home/launcher/SearchBarDesktopLayout;)Z
 
     move-result v1
 
-    if-nez v1, :cond_7
+    if-nez v1, :cond_6
 
-    .line 274
+    .line 267
     invoke-static {}, Lcom/miui/home/launcher/SearchBarStyleData;->getInstance()Lcom/miui/home/launcher/SearchBarStyleData;
 
     move-result-object v1
@@ -130,7 +120,7 @@
 
     move-result-object v1
 
-    .line 275
+    .line 268
     invoke-static {}, Lcom/miui/home/launcher/SearchBarStyleData;->getInstance()Lcom/miui/home/launcher/SearchBarStyleData;
 
     move-result-object v2
@@ -141,29 +131,29 @@
 
     iput-boolean v2, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout$1;->isUserBlur:Z
 
-    .line 276
+    .line 269
     iget-boolean v2, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout$1;->isUserBlur:Z
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_4
 
-    .line 277
+    .line 270
     iget-object v2, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarDesktopLayout;
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/SearchBarDesktopLayout;->isBackdropBlurSupported()Z
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_2
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_1
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_2
+    :cond_1
     move-object v0, v1
 
-    .line 279
-    :goto_2
+    .line 272
+    :goto_1
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarDesktopLayout;
 
     invoke-static {}, Lcom/miui/home/launcher/SearchBarStyleData;->getInstance()Lcom/miui/home/launcher/SearchBarStyleData;
@@ -176,10 +166,10 @@
 
     invoke-static {v1, v2}, Lcom/miui/home/launcher/SearchBarDesktopLayout;->access$102(Lcom/miui/home/launcher/SearchBarDesktopLayout;Lcom/miui/blur/sdk/backdrop/BlurStyle;)Lcom/miui/blur/sdk/backdrop/BlurStyle;
 
-    goto :goto_3
+    goto :goto_2
 
-    .line 281
-    :cond_3
+    .line 274
+    :cond_2
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarDesktopLayout;
 
     invoke-static {v1}, Lcom/miui/home/launcher/SearchBarDesktopLayout;->access$200(Lcom/miui/home/launcher/SearchBarDesktopLayout;)Lcom/miui/home/launcher/Launcher;
@@ -196,32 +186,32 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_3
 
-    goto :goto_3
+    goto :goto_2
+
+    :cond_3
+    move-object v0, v1
+
+    goto :goto_2
 
     :cond_4
-    move-object v0, v1
+    if-nez v1, :cond_5
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_5
-    if-nez v1, :cond_6
-
-    goto :goto_3
-
-    :cond_6
     move-object v0, v1
 
-    :cond_7
-    :goto_3
+    :cond_6
+    :goto_2
     return-object v0
 .end method
 
 .method protected bridge synthetic doInBackground()Ljava/lang/Object;
     .locals 1
 
-    .line 264
+    .line 258
     invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarDesktopLayout$1;->doInBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -232,12 +222,12 @@
 .method protected onPostExecute(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 293
+    .line 286
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarDesktopLayout;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/SearchBarDesktopLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 294
+    .line 287
     iget-object p1, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarDesktopLayout;
 
     iget-boolean v0, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout$1;->isUserBlur:Z
@@ -250,7 +240,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 264
+    .line 258
     check-cast p1, Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/SearchBarDesktopLayout$1;->onPostExecute(Landroid/graphics/drawable/Drawable;)V

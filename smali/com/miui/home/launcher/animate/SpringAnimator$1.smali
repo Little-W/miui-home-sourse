@@ -30,7 +30,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/animate/SpringAnimator;Ljava/lang/String;)V
     .locals 0
 
-    .line 24
+    .line 26
     iput-object p1, p0, Lcom/miui/home/launcher/animate/SpringAnimator$1;->this$0:Lcom/miui/home/launcher/animate/SpringAnimator;
 
     invoke-direct {p0, p2}, Landroidx/dynamicanimation/animation/FloatPropertyCompat;-><init>(Ljava/lang/String;)V
@@ -51,7 +51,7 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 24
+    .line 26
     check-cast p1, Lcom/miui/home/launcher/animate/SpringAnimator;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/animate/SpringAnimator$1;->getValue(Lcom/miui/home/launcher/animate/SpringAnimator;)F
@@ -64,7 +64,7 @@
 .method public setValue(Lcom/miui/home/launcher/animate/SpringAnimator;F)V
     .locals 3
 
-    .line 32
+    .line 34
     iget-object p1, p0, Lcom/miui/home/launcher/animate/SpringAnimator$1;->this$0:Lcom/miui/home/launcher/animate/SpringAnimator;
 
     invoke-static {p1}, Lcom/miui/home/launcher/animate/SpringAnimator;->access$000(Lcom/miui/home/launcher/animate/SpringAnimator;)Lcom/miui/home/launcher/animate/SpringAnimator$UpdateListener;
@@ -73,7 +73,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 33
+    .line 35
     iget-object p1, p0, Lcom/miui/home/launcher/animate/SpringAnimator$1;->this$0:Lcom/miui/home/launcher/animate/SpringAnimator;
 
     invoke-static {p1}, Lcom/miui/home/launcher/animate/SpringAnimator;->access$000(Lcom/miui/home/launcher/animate/SpringAnimator;)Lcom/miui/home/launcher/animate/SpringAnimator$UpdateListener;
@@ -113,7 +113,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 24
+    .line 26
     check-cast p1, Lcom/miui/home/launcher/animate/SpringAnimator;
 
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/animate/SpringAnimator$1;->setValue(Lcom/miui/home/launcher/animate/SpringAnimator;F)V

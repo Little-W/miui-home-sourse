@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/widget/WidgetThumbnailView;)V
     .locals 0
 
-    .line 110
+    .line 123
     iput-object p1, p0, Lcom/miui/home/launcher/widget/WidgetThumbnailView$1;->this$0:Lcom/miui/home/launcher/widget/WidgetThumbnailView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 113
+    .line 126
     iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetThumbnailView$1;->this$0:Lcom/miui/home/launcher/widget/WidgetThumbnailView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/widget/WidgetThumbnailView;->access$000(Lcom/miui/home/launcher/widget/WidgetThumbnailView;)Lcom/miui/home/launcher/DragController;
@@ -51,7 +51,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 114
+    .line 127
     iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetThumbnailView$1;->this$0:Lcom/miui/home/launcher/widget/WidgetThumbnailView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/widget/WidgetThumbnailView;->access$100(Lcom/miui/home/launcher/widget/WidgetThumbnailView;)Lcom/miui/home/launcher/Launcher;

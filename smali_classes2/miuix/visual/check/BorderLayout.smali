@@ -29,12 +29,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    .line 32
+    .line 34
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 v0, 0x1
 
-    .line 33
+    .line 35
     new-array v0, v0, [Landroid/view/View;
 
     const/4 v1, 0x0
@@ -47,14 +47,14 @@
 
     iput-object v0, p0, Lmiuix/visual/check/BorderLayout;->iFolme:Lmiuix/animation/IFolme;
 
-    .line 34
+    .line 36
     sget-object v0, Lmiuix/visualcheck/R$styleable;->BorderLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    .line 35
+    .line 37
     sget p2, Lmiuix/visualcheck/R$styleable;->BorderLayout_checkedBackGround:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
@@ -63,15 +63,15 @@
 
     iput-object p2, p0, Lmiuix/visual/check/BorderLayout;->mBackGround:Landroid/graphics/drawable/Drawable;
 
-    .line 36
+    .line 38
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 37
+    .line 39
     iget-object p1, p0, Lmiuix/visual/check/BorderLayout;->mBackGround:Landroid/graphics/drawable/Drawable;
 
     if-nez p1, :cond_0
 
-    .line 38
+    .line 40
     invoke-virtual {p0}, Lmiuix/visual/check/BorderLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -84,7 +84,7 @@
 
     iput-object p1, p0, Lmiuix/visual/check/BorderLayout;->mBackGround:Landroid/graphics/drawable/Drawable;
 
-    .line 40
+    .line 42
     :cond_0
     new-instance p1, Lmiuix/visual/check/BorderLayout$DrawableTarget;
 
@@ -94,15 +94,32 @@
 
     iput-object p1, p0, Lmiuix/visual/check/BorderLayout;->mDrawableTarget:Lmiuix/visual/check/BorderLayout$DrawableTarget;
 
+    .line 43
+    iget-object p1, p0, Lmiuix/visual/check/BorderLayout;->iFolme:Lmiuix/animation/IFolme;
+
+    invoke-interface {p1}, Lmiuix/animation/IFolme;->hover()Lmiuix/animation/IHoverStyle;
+
+    move-result-object p1
+
+    sget-object p2, Lmiuix/animation/IHoverStyle$HoverEffect;->FLOATED:Lmiuix/animation/IHoverStyle$HoverEffect;
+
+    invoke-interface {p1, p2}, Lmiuix/animation/IHoverStyle;->setEffect(Lmiuix/animation/IHoverStyle$HoverEffect;)Lmiuix/animation/IHoverStyle;
+
+    move-result-object p1
+
+    new-array p2, v1, [Lmiuix/animation/base/AnimConfig;
+
+    invoke-interface {p1, p0, p2}, Lmiuix/animation/IHoverStyle;->handleHoverOf(Landroid/view/View;[Lmiuix/animation/base/AnimConfig;)V
+
     return-void
 .end method
 
 
 # virtual methods
 .method public onChecked(Z)V
-    .locals 5
+    .locals 8
 
-    .line 58
+    .line 62
     invoke-virtual {p0}, Lmiuix/visual/check/BorderLayout;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -111,12 +128,12 @@
 
     if-nez v0, :cond_1
 
-    .line 60
+    .line 64
     iget-object v0, p0, Lmiuix/visual/check/BorderLayout;->mBackGround:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v0}, Lmiuix/visual/check/BorderLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 61
+    .line 65
     iget-object v0, p0, Lmiuix/visual/check/BorderLayout;->mBackGround:Landroid/graphics/drawable/Drawable;
 
     if-eqz p1, :cond_0
@@ -129,30 +146,38 @@
     goto :goto_0
 
     :cond_1
-    const/4 v0, 0x2
+    const/4 v0, -0x2
 
-    const/4 v2, 0x1
+    const/4 v2, 0x3
+
+    const-wide/16 v3, 0x1
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x1
 
     if-nez p1, :cond_2
 
-    .line 63
-    new-array p1, v2, [Ljava/lang/Object;
+    .line 67
+    new-array p1, v6, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lmiuix/visual/check/BorderLayout;->mDrawableTarget:Lmiuix/visual/check/BorderLayout$DrawableTarget;
+    iget-object v7, p0, Lmiuix/visual/check/BorderLayout;->mDrawableTarget:Lmiuix/visual/check/BorderLayout$DrawableTarget;
 
-    aput-object v3, p1, v1
+    aput-object v7, p1, v1
 
     invoke-static {p1}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object p1
 
-    const/4 v3, 0x3
+    invoke-interface {p1, v3, v4}, Lmiuix/animation/IStateStyle;->setFlags(J)Lmiuix/animation/IStateStyle;
 
-    new-array v3, v3, [Ljava/lang/Object;
+    move-result-object p1
 
-    const-string v4, "alpha"
+    new-array v2, v2, [Ljava/lang/Object;
 
-    aput-object v4, v3, v1
+    const-string v3, "alpha"
+
+    aput-object v3, v2, v1
 
     const/4 v1, 0x0
 
@@ -160,43 +185,45 @@
 
     move-result-object v1
 
-    aput-object v1, v3, v2
+    aput-object v1, v2, v6
 
-    const/4 v1, -0x2
+    new-array v1, v5, [F
 
-    new-array v2, v0, [F
+    fill-array-data v1, :array_0
 
-    fill-array-data v2, :array_0
+    .line 68
+    invoke-static {v0, v1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    .line 64
-    invoke-static {v1, v2}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
+    move-result-object v0
 
-    move-result-object v1
+    aput-object v0, v2, v5
 
-    aput-object v1, v3, v0
-
-    .line 63
-    invoke-interface {p1, v3}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+    .line 67
+    invoke-interface {p1, v2}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     goto :goto_0
 
-    .line 66
+    .line 70
     :cond_2
-    new-array p1, v2, [Ljava/lang/Object;
+    new-array p1, v6, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lmiuix/visual/check/BorderLayout;->mDrawableTarget:Lmiuix/visual/check/BorderLayout$DrawableTarget;
+    iget-object v7, p0, Lmiuix/visual/check/BorderLayout;->mDrawableTarget:Lmiuix/visual/check/BorderLayout$DrawableTarget;
 
-    aput-object v3, p1, v1
+    aput-object v7, p1, v1
 
     invoke-static {p1}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     move-result-object p1
 
-    new-array v0, v0, [Ljava/lang/Object;
+    invoke-interface {p1, v3, v4}, Lmiuix/animation/IStateStyle;->setFlags(J)Lmiuix/animation/IStateStyle;
+
+    move-result-object p1
+
+    new-array v2, v2, [Ljava/lang/Object;
 
     const-string v3, "alpha"
 
-    aput-object v3, v0, v1
+    aput-object v3, v2, v1
 
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -204,36 +231,56 @@
 
     move-result-object v1
 
-    aput-object v1, v0, v2
+    aput-object v1, v2, v6
 
-    invoke-interface {p1, v0}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+    new-array v1, v5, [F
+
+    fill-array-data v1, :array_1
+
+    .line 71
+    invoke-static {v0, v1}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
+
+    move-result-object v0
+
+    aput-object v0, v2, v5
+
+    .line 70
+    invoke-interface {p1, v2}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     :goto_0
     return-void
 
+    nop
+
     :array_0
     .array-data 4
-        0x3f666666    # 0.9f
-        0x3e19999a    # 0.15f
+        0x3f800000    # 1.0f
+        0x3e800000    # 0.25f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x3e800000    # 0.25f
     .end array-data
 .end method
 
 .method public onVisualCheckBoxTouchEvent(Lmiuix/visual/check/VisualCheckBox;Landroid/view/MotionEvent;)V
-    .locals 3
+    .locals 4
 
-    .line 45
+    .line 48
     iget-object p1, p0, Lmiuix/visual/check/BorderLayout;->iFolme:Lmiuix/animation/IFolme;
 
     if-eqz p1, :cond_0
 
-    .line 46
+    .line 49
     invoke-interface {p1}, Lmiuix/animation/IFolme;->touch()Lmiuix/animation/ITouchStyle;
 
     move-result-object p1
 
     invoke-interface {p1, p2}, Lmiuix/animation/ITouchStyle;->onMotionEvent(Landroid/view/MotionEvent;)V
 
-    .line 48
+    .line 51
     :cond_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -245,7 +292,7 @@
 
     iget-object p1, p0, Lmiuix/visual/check/BorderLayout;->mBackGround:Landroid/graphics/drawable/Drawable;
 
-    .line 49
+    .line 52
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getAlpha()I
 
     move-result p1
@@ -254,12 +301,12 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 50
+    .line 53
     iget-object p1, p0, Lmiuix/visual/check/BorderLayout;->mDrawableTarget:Lmiuix/visual/check/BorderLayout$DrawableTarget;
 
     if-eqz p1, :cond_1
 
-    .line 51
+    .line 54
     new-array v0, p2, [Ljava/lang/Object;
 
     const/4 v1, 0x0
@@ -270,7 +317,13 @@
 
     move-result-object p1
 
-    const/4 v0, 0x2
+    const-wide/16 v2, 0x1
+
+    invoke-interface {p1, v2, v3}, Lmiuix/animation/IStateStyle;->setFlags(J)Lmiuix/animation/IStateStyle;
+
+    move-result-object p1
+
+    const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -286,8 +339,32 @@
 
     aput-object v1, v0, p2
 
+    const/4 p2, -0x2
+
+    const/4 v1, 0x2
+
+    new-array v2, v1, [F
+
+    fill-array-data v2, :array_0
+
+    .line 55
+    invoke-static {p2, v2}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
+
+    move-result-object p2
+
+    aput-object p2, v0, v1
+
+    .line 54
     invoke-interface {p1, v0}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     :cond_1
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x3e800000    # 0.25f
+    .end array-data
 .end method

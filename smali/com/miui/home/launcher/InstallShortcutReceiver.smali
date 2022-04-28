@@ -174,6 +174,8 @@
 
     move-result-object v1
 
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 76
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$InstallShortcutReceiver$llOv7Mlfm4orwFA-RNrT2xZSNco;
 
@@ -433,6 +435,8 @@
     const-string p4, "Launcher is not ready,process later"
 
     .line 163
+    invoke-static {p1, p4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 164
     invoke-static {p2, p3}, Lcom/miui/home/launcher/InstallShortcutReceiver;->acceptRequestIfXspace(Lcom/miui/launcher/common/PinItemRequestCompat;Ljava/lang/String;)V
 
@@ -605,6 +609,8 @@
 
     move-result-object p0
 
+    invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     :cond_1
@@ -624,6 +630,8 @@
     const-string p1, "Failed to add shortcut because the extra shortcut intent is missing"
 
     .line 88
+    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     .line 92
@@ -639,6 +647,8 @@
     const-string p1, "Current mode is not match shortcut type"
 
     .line 93
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     .line 97

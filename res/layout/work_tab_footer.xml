@@ -1,63 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.allapps.WorkFooterContainer
-    android:orientation="vertical"
-    android:id="@id/work_tab_footer"
-    android:paddingLeft="@dimen/fastscroll_width"
-    android:paddingRight="@dimen/fastscroll_width"
-    android:paddingBottom="@dimen/all_apps_work_profile_tab_footer_bottom_padding"
-    android:focusable="true"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <View
-        android:id="@id/work_footer_divider"
-        android:background="@color/allapps_divider_color_light"
-        android:focusable="false"
-        android:layout_width="fill_parent"
-        android:layout_height="0.39999998dip"
-        android:layout_marginBottom="@dimen/all_apps_work_profile_tab_footer_top_padding"
-        android:importantForAccessibility="no" />
-    <miuix.slidingwidget.widget.SlidingButton
-        android:id="@id/work_mode_toggle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/work_footer_divider"
-        android:layout_marginEnd="@dimen/all_apps_list_padding_top"
-        android:layout_alignParentEnd="true" />
-    <TextView
-        android:textSize="16.0sp"
-        android:textColor="?android:textColorTertiary"
-        android:ellipsize="end"
-        android:id="@android:id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/work_profile_toggle_label"
-        android:lines="1"
-        android:layout_below="@id/work_footer_divider"
-        android:layout_alignBaseline="@id/work_mode_toggle"
-        android:layout_alignParentStart="true" />
-    <ImageView
-        android:id="@android:id/icon"
-        android:layout_width="24.0dip"
-        android:layout_height="24.0dip"
-        android:layout_marginTop="8.0dip"
-        android:src="@drawable/ic_work_dark"
-        android:layout_below="@android:id/title" />
-    <TextView
-        android:textSize="13.0sp"
-        android:textColor="?android:textColorHint"
-        android:ellipsize="end"
-        android:gravity="start|center"
-        android:id="@id/managed_by_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8.0dip"
-        android:minHeight="24.0dip"
-        android:lines="1"
-        android:layout_below="@android:id/title"
-        android:textAlignment="viewStart"
-        android:paddingStart="12.0dip"
-        android:paddingEnd="12.0dip"
-        android:layout_toStartOf="@id/work_mode_toggle"
-        android:layout_toEndOf="@android:id/icon" />
+<com.miui.home.launcher.allapps.WorkFooterContainer android:orientation="vertical" android:id="@id/work_tab_footer" android:paddingLeft="@dimen/fastscroll_width" android:paddingRight="@dimen/fastscroll_width" android:paddingBottom="@dimen/all_apps_work_profile_tab_footer_bottom_padding" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/work_footer_divider" android:background="@color/allapps_divider_color_light" android:focusable="false" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_marginBottom="@dimen/all_apps_work_profile_tab_footer_top_padding" android:importantForAccessibility="no" />
+    <miuix.slidingwidget.widget.SlidingButton android:id="@id/work_mode_toggle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/work_footer_divider" android:layout_marginEnd="@dimen/all_apps_list_padding_top" android:layout_alignParentEnd="true" />
+    <TextView android:textSize="16.0sp" android:textColor="?android:textColorTertiary" android:ellipsize="end" android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/work_profile_toggle_label" android:lines="1" android:layout_below="@id/work_footer_divider" android:layout_alignBaseline="@id/work_mode_toggle" android:layout_alignParentStart="true" />
+    <ImageView android:id="@android:id/icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="8.0dip" android:src="@drawable/ic_work_dark" android:layout_below="@android:id/title" />
+    <TextView android:textSize="13.0sp" android:textColor="?android:textColorHint" android:ellipsize="end" android:gravity="start|center" android:id="@id/managed_by_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:minHeight="24.0dip" android:lines="1" android:layout_below="@android:id/title" android:textAlignment="viewStart" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" android:layout_toStartOf="@id/work_mode_toggle" android:layout_toEndOf="@android:id/icon" />
 </com.miui.home.launcher.allapps.WorkFooterContainer>

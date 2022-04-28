@@ -42,7 +42,7 @@
 .method constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;Ljava/lang/String;Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;FIZII)V
     .locals 0
 
-    .line 741
+    .line 745
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$2;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     iput-object p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$2;->val$menuView:Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;
@@ -67,7 +67,7 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 741
+    .line 745
     check-cast p1, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$2;->getValue(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;)F
@@ -88,7 +88,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 741
+    .line 745
     check-cast p1, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$2;->setValue(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;F)V
@@ -99,12 +99,12 @@
 .method public setValue(Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;F)V
     .locals 3
 
-    .line 750
+    .line 754
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$2;->val$menuView:Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;
 
     if-eqz v0, :cond_0
 
-    .line 751
+    .line 755
     iget v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$2;->val$translationY:F
 
     iget v2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$2;->val$primaryHeight:I
@@ -120,10 +120,10 @@
     :cond_0
     float-to-int v0, p2
 
-    .line 754
+    .line 758
     invoke-virtual {p1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarOverlayLayout;->animateContentMarginBottom(I)V
 
-    .line 756
+    .line 760
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$2;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->access$300(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)Z
@@ -132,14 +132,14 @@
 
     if-nez p1, :cond_1
 
-    .line 757
+    .line 761
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$2;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     iget-boolean p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$2;->val$animateToVisible:Z
 
     invoke-virtual {p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->notifyAnimationStart(Z)V
 
-    .line 758
+    .line 762
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$2;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     const/4 p2, 0x1
@@ -148,7 +148,7 @@
 
     return-void
 
-    .line 763
+    .line 767
     :cond_1
     iget p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$2;->val$contentAnimTransTo:I
 
@@ -171,7 +171,7 @@
 
     div-float p1, p2, p1
 
-    .line 768
+    .line 772
     :goto_0
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$2;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 

@@ -127,7 +127,7 @@
 .method protected getScale(Landroid/app/ActivityManager$TaskSnapshot;I)F
     .locals 0
 
-    .line 59
+    .line 60
     iget-object p1, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVQ;->mTaskSnapshot:Landroid/app/ActivityManager$TaskSnapshot;
 
     invoke-virtual {p1}, Landroid/app/ActivityManager$TaskSnapshot;->getScale()F
@@ -209,6 +209,15 @@
     iput v1, v0, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->systemUiVisibility:I
 
     .line 54
+    iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVQ;->mTaskSnapshot:Landroid/app/ActivityManager$TaskSnapshot;
+
+    invoke-virtual {v1}, Landroid/app/ActivityManager$TaskSnapshot;->getWindowingMode()I
+
+    move-result v1
+
+    iput v1, v0, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->mWindowMod:I
+
+    .line 55
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskSnapshotCompatVQ;->mTaskSnapshot:Landroid/app/ActivityManager$TaskSnapshot;
 
     iget v2, v0, Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;->taskHeight:I

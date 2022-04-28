@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;)V
     .locals 0
 
-    .line 94
+    .line 120
     iput-object p1, p0, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator$1;->this$0:Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 97
+    .line 123
     iget-object p1, p0, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator$1;->this$0:Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
 
     const/4 v0, 0x0

@@ -173,6 +173,8 @@
 
     move-result-object p2
 
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_1
 
     .line 57
@@ -180,6 +182,8 @@
     sget-object p1, Lcom/miui/home/launcher/common/ThemeProviderHelper;->TAG:Ljava/lang/String;
 
     const-string p2, "theme app is low version"
+
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -217,6 +221,8 @@
     sget-object p2, Lcom/miui/home/launcher/common/ThemeProviderHelper;->TAG:Ljava/lang/String;
 
     const-string v2, "Failed to grant theme files"
+
+    invoke-static {p2, v2, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 

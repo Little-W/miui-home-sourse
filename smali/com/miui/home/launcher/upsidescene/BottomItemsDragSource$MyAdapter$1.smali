@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;Landroid/widget/ImageView;Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;)V
     .locals 0
 
-    .line 81
+    .line 82
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter$1;->this$1:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;
 
     iput-object p2, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter$1;->val$imgPreview:Landroid/widget/ImageView;
@@ -46,7 +46,7 @@
 .method public onLongClick(Landroid/view/View;)Z
     .locals 3
 
-    .line 83
+    .line 84
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter$1;->this$1:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;
 
     iget-object p1, p1, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;->this$0:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;

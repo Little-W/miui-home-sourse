@@ -37,7 +37,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 469
+    .line 479
     new-instance v0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter$SavedState$1;
 
     invoke-direct {v0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter$SavedState$1;-><init>()V
@@ -50,7 +50,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 452
+    .line 462
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -59,10 +59,10 @@
 .method constructor <init>(Landroid/os/Parcel;)V
     .locals 0
 
-    .line 455
+    .line 465
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 456
+    .line 466
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result p1
@@ -85,7 +85,7 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    .line 466
+    .line 476
     iget p2, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter$SavedState;->openSubMenuId:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V

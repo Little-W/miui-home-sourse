@@ -54,7 +54,7 @@
 .method public addListener(Landroid/animation/Animator$AnimatorListener;)V
     .locals 1
 
-    .line 43
+    .line 44
     iget-object v0, p0, Lcom/airbnb/lottie/utils/BaseLottieAnimator;->listeners:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -65,7 +65,7 @@
 .method public addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
     .locals 1
 
-    .line 31
+    .line 32
     iget-object v0, p0, Lcom/airbnb/lottie/utils/BaseLottieAnimator;->updateListeners:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -89,7 +89,7 @@
 .method notifyCancel()V
     .locals 2
 
-    .line 81
+    .line 82
     iget-object v0, p0, Lcom/airbnb/lottie/utils/BaseLottieAnimator;->listeners:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -109,7 +109,7 @@
 
     check-cast v1, Landroid/animation/Animator$AnimatorListener;
 
-    .line 82
+    .line 83
     invoke-interface {v1, p0}, Landroid/animation/Animator$AnimatorListener;->onAnimationCancel(Landroid/animation/Animator;)V
 
     goto :goto_0
@@ -121,7 +121,7 @@
 .method notifyEnd(Z)V
     .locals 4
 
-    .line 71
+    .line 72
     iget-object v0, p0, Lcom/airbnb/lottie/utils/BaseLottieAnimator;->listeners:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -141,19 +141,19 @@
 
     check-cast v1, Landroid/animation/Animator$AnimatorListener;
 
-    .line 72
+    .line 73
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x1a
 
     if-lt v2, v3, :cond_0
 
-    .line 73
+    .line 74
     invoke-interface {v1, p0, p1}, Landroid/animation/Animator$AnimatorListener;->onAnimationEnd(Landroid/animation/Animator;Z)V
 
     goto :goto_0
 
-    .line 75
+    .line 76
     :cond_0
     invoke-interface {v1, p0}, Landroid/animation/Animator$AnimatorListener;->onAnimationEnd(Landroid/animation/Animator;)V
 
@@ -166,7 +166,7 @@
 .method notifyRepeat()V
     .locals 2
 
-    .line 65
+    .line 66
     iget-object v0, p0, Lcom/airbnb/lottie/utils/BaseLottieAnimator;->listeners:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -186,7 +186,7 @@
 
     check-cast v1, Landroid/animation/Animator$AnimatorListener;
 
-    .line 66
+    .line 67
     invoke-interface {v1, p0}, Landroid/animation/Animator$AnimatorListener;->onAnimationRepeat(Landroid/animation/Animator;)V
 
     goto :goto_0
@@ -198,7 +198,7 @@
 .method notifyStart(Z)V
     .locals 4
 
-    .line 55
+    .line 56
     iget-object v0, p0, Lcom/airbnb/lottie/utils/BaseLottieAnimator;->listeners:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -218,19 +218,19 @@
 
     check-cast v1, Landroid/animation/Animator$AnimatorListener;
 
-    .line 56
+    .line 57
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x1a
 
     if-lt v2, v3, :cond_0
 
-    .line 57
+    .line 58
     invoke-interface {v1, p0, p1}, Landroid/animation/Animator$AnimatorListener;->onAnimationStart(Landroid/animation/Animator;Z)V
 
     goto :goto_0
 
-    .line 59
+    .line 60
     :cond_0
     invoke-interface {v1, p0}, Landroid/animation/Animator$AnimatorListener;->onAnimationStart(Landroid/animation/Animator;)V
 
@@ -243,7 +243,7 @@
 .method notifyUpdate()V
     .locals 2
 
-    .line 87
+    .line 88
     iget-object v0, p0, Lcom/airbnb/lottie/utils/BaseLottieAnimator;->updateListeners:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -263,7 +263,7 @@
 
     check-cast v1, Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
-    .line 88
+    .line 89
     invoke-interface {v1, p0}, Landroid/animation/ValueAnimator$AnimatorUpdateListener;->onAnimationUpdate(Landroid/animation/ValueAnimator;)V
 
     goto :goto_0
@@ -275,7 +275,7 @@
 .method public removeAllListeners()V
     .locals 1
 
-    .line 51
+    .line 52
     iget-object v0, p0, Lcom/airbnb/lottie/utils/BaseLottieAnimator;->listeners:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
@@ -286,7 +286,7 @@
 .method public removeAllUpdateListeners()V
     .locals 1
 
-    .line 39
+    .line 40
     iget-object v0, p0, Lcom/airbnb/lottie/utils/BaseLottieAnimator;->updateListeners:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
@@ -297,7 +297,7 @@
 .method public removeListener(Landroid/animation/Animator$AnimatorListener;)V
     .locals 1
 
-    .line 47
+    .line 48
     iget-object v0, p0, Lcom/airbnb/lottie/utils/BaseLottieAnimator;->listeners:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
@@ -308,7 +308,7 @@
 .method public removeUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
     .locals 1
 
-    .line 35
+    .line 36
     iget-object v0, p0, Lcom/airbnb/lottie/utils/BaseLottieAnimator;->updateListeners:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
@@ -330,7 +330,7 @@
 .method public setDuration(J)Landroid/animation/ValueAnimator;
     .locals 0
 
-    .line 23
+    .line 24
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string p2, "LottieAnimator does not support setDuration."
@@ -343,7 +343,7 @@
 .method public setInterpolator(Landroid/animation/TimeInterpolator;)V
     .locals 1
 
-    .line 27
+    .line 28
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "LottieAnimator does not support setInterpolator."

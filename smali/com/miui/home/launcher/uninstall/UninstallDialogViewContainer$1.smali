@@ -68,11 +68,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d0026
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const v2, 0x7f0d0039
 
-    invoke-virtual {p1, v1, v0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p1, v2, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
 
@@ -85,11 +85,14 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {p1, v0, v1}, Lcom/miui/home/launcher/ShortcutIcon;->setIconImageView(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;)V
+    invoke-virtual {p1, v0, v2}, Lcom/miui/home/launcher/ShortcutIcon;->setIconImageView(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;)V
 
     .line 59
+    invoke-virtual {p1, v1}, Lcom/miui/home/launcher/ShortcutIcon;->enableDrawTouchMask(Z)V
+
+    .line 60
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer$1;->this$0:Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;
 
     invoke-static {v0, p1}, Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;->access$100(Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;Lcom/miui/home/launcher/ItemIcon;)V

@@ -19,7 +19,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 14
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
 .method public getComponentName()Landroid/content/ComponentName;
     .locals 1
 
-    .line 55
+    .line 56
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->mComponentName:Landroid/content/ComponentName;
 
     return-object v0
@@ -39,7 +39,7 @@
 .method public getIconDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 39
+    .line 40
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->mIconDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -48,7 +48,7 @@
 .method public getLongTitle()Ljava/lang/CharSequence;
     .locals 1
 
-    .line 23
+    .line 24
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->mLongTitle:Ljava/lang/CharSequence;
 
     return-object v0
@@ -60,7 +60,7 @@
 .method public getPackage()Ljava/lang/String;
     .locals 1
 
-    .line 63
+    .line 64
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->mComponentName:Landroid/content/ComponentName;
 
     if-nez v0, :cond_0
@@ -81,7 +81,7 @@
 .method public getShortTitle()Ljava/lang/CharSequence;
     .locals 1
 
-    .line 31
+    .line 32
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->mShortTitle:Ljava/lang/CharSequence;
 
     return-object v0
@@ -90,7 +90,7 @@
 .method public getUserHandle()Landroid/os/UserHandle;
     .locals 1
 
-    .line 51
+    .line 52
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->mUserHandle:Landroid/os/UserHandle;
 
     return-object v0
@@ -99,7 +99,7 @@
 .method public isEquals(Lcom/miui/home/launcher/ShortcutInfo;)Z
     .locals 2
 
-    .line 77
+    .line 78
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->isValid()Z
 
     move-result v0
@@ -108,7 +108,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->mComponentName:Landroid/content/ComponentName;
 
-    .line 78
+    .line 79
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v1
@@ -121,7 +121,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->mUserHandle:Landroid/os/UserHandle;
 
-    .line 79
+    .line 80
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->getUser()Landroid/os/UserHandle;
 
     move-result-object p1
@@ -146,7 +146,7 @@
 .method public isValid()Z
     .locals 1
 
-    .line 69
+    .line 70
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->mShortTitle:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
@@ -163,7 +163,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 73
+    .line 74
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->getOnClickListener()Landroid/view/View$OnClickListener;
 
     move-result-object v0
@@ -184,7 +184,7 @@
 .method public setComponentName(Landroid/content/ComponentName;)V
     .locals 0
 
-    .line 59
+    .line 60
     iput-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->mComponentName:Landroid/content/ComponentName;
 
     return-void
@@ -193,7 +193,7 @@
 .method public setIconDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 43
+    .line 44
     iput-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->mIconDrawable:Landroid/graphics/drawable/Drawable;
 
     return-void
@@ -202,7 +202,7 @@
 .method public setLongTitle(Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 27
+    .line 28
     iput-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->mLongTitle:Ljava/lang/CharSequence;
 
     return-void
@@ -211,7 +211,7 @@
 .method public setShortTitle(Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 35
+    .line 36
     iput-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->mShortTitle:Ljava/lang/CharSequence;
 
     return-void
@@ -220,7 +220,7 @@
 .method public setUserHandle(Landroid/os/UserHandle;)V
     .locals 0
 
-    .line 47
+    .line 48
     iput-object p1, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->mUserHandle:Landroid/os/UserHandle;
 
     return-void

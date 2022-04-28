@@ -3,12 +3,12 @@
 .source "CellLayout.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/miui/home/launcher/CellLayout$ItemVisibilityWorker;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/CellLayout;->fillEmptyCellAuto(II)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/launcher/CellLayout;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,17 +17,11 @@
 .end annotation
 
 
-# instance fields
-.field final synthetic this$0:Lcom/miui/home/launcher/CellLayout;
-
-
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
+.method constructor <init>()V
     .locals 0
 
-    .line 2020
-    iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$7;->this$0:Lcom/miui/home/launcher/CellLayout;
-
+    .line 2990
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,25 +29,17 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public process(Landroid/graphics/drawable/Drawable;I)V
+    .locals 0
 
-    .line 2022
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$7;->this$0:Lcom/miui/home/launcher/CellLayout;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
+.method public process(Lcom/miui/home/launcher/ShortcutIcon;I)V
+    .locals 0
 
-    const-string v0, "Launcher.CellLayout"
-
-    const-string v1, "requestLayout after has recalculated item position"
-
-    .line 2023
-    .line 2024
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$7;->this$0:Lcom/miui/home/launcher/CellLayout;
-
-    iget-object v0, v0, Lcom/miui/home/launcher/CellLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->invalidateWorkspacePreview()V
+    .line 2996
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->updateMamlDownloadVisible()V
 
     return-void
 .end method

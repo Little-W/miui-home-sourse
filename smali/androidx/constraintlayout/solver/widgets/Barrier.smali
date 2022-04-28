@@ -479,6 +479,15 @@
     return v0
 .end method
 
+.method public allowsGoneWidget()Z
+    .locals 1
+
+    .line 51
+    iget-boolean v0, p0, Landroidx/constraintlayout/solver/widgets/Barrier;->mAllowsGoneWidget:Z
+
+    return v0
+.end method
+
 .method public analyze(I)V
     .locals 4
 

@@ -58,6 +58,8 @@
     const-string v2, "Failed to get TextView#nullLayouts() method"
 
     .line 41
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :goto_0
     return-void
 .end method
@@ -77,7 +79,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f07010f
+    const v0, 0x7f07015e
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -98,7 +100,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0703a9
+    const v0, 0x7f070479
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -147,7 +149,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0804bb
+    const v1, 0x7f080523
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -188,7 +190,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080511
+    const v1, 0x7f08058a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -242,6 +244,8 @@
     const-string v2, "Failed to invoke TextView#nullLayouts() method"
 
     .line 85
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_0
     :goto_0
     return-void
@@ -513,7 +517,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0703a5
+    const v0, 0x7f070475
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -570,7 +574,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0703a5
+    const v0, 0x7f070475
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

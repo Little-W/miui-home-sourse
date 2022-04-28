@@ -1,9 +1,6 @@
 .class Lcom/miui/home/recents/GestureStubView$1;
-.super Ljava/lang/Object;
+.super Lcom/android/systemui/shared/recents/touchableRegion/OnComputeInternalInsetsListenerCompat;
 .source "GestureStubView.java"
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # annotations
@@ -25,86 +22,93 @@
 .method constructor <init>(Lcom/miui/home/recents/GestureStubView;)V
     .locals 0
 
-    .line 144
+    .line 148
     iput-object p1, p0, Lcom/miui/home/recents/GestureStubView$1;->this$0:Lcom/miui/home/recents/GestureStubView;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/android/systemui/shared/recents/touchableRegion/OnComputeInternalInsetsListenerCompat;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 1
+.method public onComputeInternalInsets(Lcom/android/systemui/shared/recents/touchableRegion/InternalInsetsInfoCompat;)V
+    .locals 6
 
-    .line 160
-    iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$1;->this$0:Lcom/miui/home/recents/GestureStubView;
+    const/4 v0, 0x3
 
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Lcom/miui/home/recents/GestureStubView;->access$002(Lcom/miui/home/recents/GestureStubView;Z)Z
-
-    return-void
-.end method
-
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+    .line 151
+    invoke-virtual {p1, v0}, Lcom/android/systemui/shared/recents/touchableRegion/InternalInsetsInfoCompat;->setTouchableInsets(I)V
 
     .line 152
-    iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$1;->this$0:Lcom/miui/home/recents/GestureStubView;
+    iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$1;->this$0:Lcom/miui/home/recents/GestureStubView;
 
-    const/4 v0, 0x0
+    invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$000(Lcom/miui/home/recents/GestureStubView;)Z
 
-    invoke-static {p1, v0}, Lcom/miui/home/recents/GestureStubView;->access$002(Lcom/miui/home/recents/GestureStubView;Z)Z
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     .line 153
-    iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$1;->this$0:Lcom/miui/home/recents/GestureStubView;
+    new-instance v0, Landroid/graphics/Region;
 
-    invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->access$100(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GestureStubView$H;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    invoke-direct {v0, v1, v1, v1, v1}, Landroid/graphics/Region;-><init>(IIII)V
 
-    const/16 v0, 0x102
+    invoke-virtual {p1, v0}, Lcom/android/systemui/shared/recents/touchableRegion/InternalInsetsInfoCompat;->setTouchableRegion(Landroid/graphics/Region;)V
 
-    invoke-virtual {p1, v0}, Lcom/miui/home/recents/GestureStubView$H;->removeMessages(I)V
-
-    .line 154
-    iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$1;->this$0:Lcom/miui/home/recents/GestureStubView;
-
-    invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->access$200(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GestureBackArrowView;
-
-    move-result-object p1
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Lcom/miui/home/recents/GestureBackArrowView;->setVisibility(I)V
+    goto :goto_0
 
     .line 155
-    iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$1;->this$0:Lcom/miui/home/recents/GestureStubView;
+    :cond_0
+    new-instance v0, Landroid/graphics/Region;
 
-    const-string v0, "onAnimationEnd"
+    iget-object v1, p0, Lcom/miui/home/recents/GestureStubView$1;->this$0:Lcom/miui/home/recents/GestureStubView;
 
-    invoke-static {p1, v0}, Lcom/miui/home/recents/GestureStubView;->access$300(Lcom/miui/home/recents/GestureStubView;Ljava/lang/String;)V
+    invoke-virtual {v1}, Lcom/miui/home/recents/GestureStubView;->getLeft()I
 
-    return-void
-.end method
+    move-result v1
 
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    iget-object v2, p0, Lcom/miui/home/recents/GestureStubView$1;->this$0:Lcom/miui/home/recents/GestureStubView;
 
-    return-void
-.end method
+    invoke-virtual {v2}, Lcom/miui/home/recents/GestureStubView;->getTop()I
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
+    move-result v2
 
-    .line 147
-    iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$1;->this$0:Lcom/miui/home/recents/GestureStubView;
+    iget-object v3, p0, Lcom/miui/home/recents/GestureStubView$1;->this$0:Lcom/miui/home/recents/GestureStubView;
 
-    const/4 v0, 0x1
+    invoke-virtual {v3}, Lcom/miui/home/recents/GestureStubView;->getLeft()I
 
-    invoke-static {p1, v0}, Lcom/miui/home/recents/GestureStubView;->access$002(Lcom/miui/home/recents/GestureStubView;Z)Z
+    move-result v3
 
+    iget-object v4, p0, Lcom/miui/home/recents/GestureStubView$1;->this$0:Lcom/miui/home/recents/GestureStubView;
+
+    invoke-virtual {v4}, Lcom/miui/home/recents/GestureStubView;->getWidth()I
+
+    move-result v4
+
+    add-int/2addr v3, v4
+
+    iget-object v4, p0, Lcom/miui/home/recents/GestureStubView$1;->this$0:Lcom/miui/home/recents/GestureStubView;
+
+    invoke-virtual {v4}, Lcom/miui/home/recents/GestureStubView;->getTop()I
+
+    move-result v4
+
+    iget-object v5, p0, Lcom/miui/home/recents/GestureStubView$1;->this$0:Lcom/miui/home/recents/GestureStubView;
+
+    invoke-virtual {v5}, Lcom/miui/home/recents/GestureStubView;->getHeight()I
+
+    move-result v5
+
+    add-int/2addr v4, v5
+
+    invoke-direct {v0, v1, v2, v3, v4}, Landroid/graphics/Region;-><init>(IIII)V
+
+    .line 156
+    invoke-virtual {p1, v0}, Lcom/android/systemui/shared/recents/touchableRegion/InternalInsetsInfoCompat;->setTouchableRegion(Landroid/graphics/Region;)V
+
+    :goto_0
     return-void
 .end method

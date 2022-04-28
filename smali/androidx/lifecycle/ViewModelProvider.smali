@@ -6,6 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroidx/lifecycle/ViewModelProvider$AndroidViewModelFactory;,
+        Landroidx/lifecycle/ViewModelProvider$NewInstanceFactory;,
         Landroidx/lifecycle/ViewModelProvider$KeyedFactory;,
         Landroidx/lifecycle/ViewModelProvider$OnRequeryFactory;,
         Landroidx/lifecycle/ViewModelProvider$Factory;

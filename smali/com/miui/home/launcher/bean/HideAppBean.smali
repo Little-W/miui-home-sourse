@@ -3,8 +3,16 @@
 .source "HideAppBean.kt"
 
 
+# annotations
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nHideAppBean.kt\nKotlin\n*S Kotlin\n*F\n+ 1 HideAppBean.kt\ncom/miui/home/launcher/bean/HideAppBean\n*L\n1#1,24:1\n*E\n"
+.end annotation
+
+
 # instance fields
 .field private activityName:Ljava/lang/String;
+
+.field private mHashCode:I
 
 .field private packageName:Ljava/lang/String;
 
@@ -36,6 +44,35 @@
 
     iput-object p3, p0, Lcom/miui/home/launcher/bean/HideAppBean;->serialNumber:Ljava/lang/String;
 
+    const/4 p1, 0x3
+
+    .line 22
+    new-array p1, p1, [Ljava/lang/String;
+
+    iget-object p2, p0, Lcom/miui/home/launcher/bean/HideAppBean;->packageName:Ljava/lang/String;
+
+    const/4 p3, 0x0
+
+    aput-object p2, p1, p3
+
+    iget-object p2, p0, Lcom/miui/home/launcher/bean/HideAppBean;->activityName:Ljava/lang/String;
+
+    const/4 p3, 0x1
+
+    aput-object p2, p1, p3
+
+    iget-object p2, p0, Lcom/miui/home/launcher/bean/HideAppBean;->serialNumber:Ljava/lang/String;
+
+    const/4 p3, 0x2
+
+    aput-object p2, p1, p3
+
+    invoke-static {p1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/miui/home/launcher/bean/HideAppBean;->mHashCode:I
+
     return-void
 .end method
 
@@ -44,14 +81,14 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 7
+    .line 13
     instance-of v0, p1, Lcom/miui/home/launcher/bean/HideAppBean;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 8
+    .line 14
     iget-object v0, p0, Lcom/miui/home/launcher/bean/HideAppBean;->packageName:Ljava/lang/String;
 
     check-cast v0, Ljava/lang/CharSequence;
@@ -68,7 +105,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 9
+    .line 15
     iget-object v0, p0, Lcom/miui/home/launcher/bean/HideAppBean;->activityName:Ljava/lang/String;
 
     check-cast v0, Ljava/lang/CharSequence;
@@ -83,7 +120,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 10
+    .line 16
     iget-object v0, p0, Lcom/miui/home/launcher/bean/HideAppBean;->serialNumber:Ljava/lang/String;
 
     check-cast v0, Ljava/lang/CharSequence;
@@ -132,6 +169,15 @@
     iget-object v0, p0, Lcom/miui/home/launcher/bean/HideAppBean;->serialNumber:Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method public hashCode()I
+    .locals 1
+
+    .line 9
+    iget v0, p0, Lcom/miui/home/launcher/bean/HideAppBean;->mHashCode:I
+
+    return v0
 .end method
 
 .method public final setActivityName(Ljava/lang/String;)V

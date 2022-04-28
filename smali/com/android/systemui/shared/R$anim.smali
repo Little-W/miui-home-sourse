@@ -39,6 +39,18 @@
 
 .field public static final abc_tooltip_exit:I = 0x7f01000b
 
+.field public static final accelerate_quart:I = 0x7f01000c
+
+.field public static final accelerate_sextic:I = 0x7f01000d
+
+.field public static final action_bar_fade_in:I = 0x7f01000e
+
+.field public static final action_bar_fade_out:I = 0x7f01000f
+
+.field public static final action_menu_in:I = 0x7f010010
+
+.field public static final action_menu_item_in:I = 0x7f010011
+
 .field public static final btn_checkbox_to_checked_box_inner_merged_animation:I = 0x7f010018
 
 .field public static final btn_checkbox_to_checked_box_outer_merged_animation:I = 0x7f010019
@@ -62,6 +74,24 @@
 .field public static final btn_radio_to_on_mtrl_ring_outer_animation:I = 0x7f010022
 
 .field public static final btn_radio_to_on_mtrl_ring_outer_path_animation:I = 0x7f010023
+
+.field public static final decelerate_quart:I = 0x7f010026
+
+.field public static final decelerate_sextic:I = 0x7f010027
+
+.field public static final dialog_enter:I = 0x7f010028
+
+.field public static final dialog_exit:I = 0x7f010029
+
+.field public static final drop_down_popup_enter:I = 0x7f01002b
+
+.field public static final drop_down_popup_exit:I = 0x7f01002c
+
+.field public static final fragment_fast_out_extra_slow_in:I = 0x7f010033
+
+.field public static final immersion_menu_enter:I = 0x7f010037
+
+.field public static final immersion_menu_exit:I = 0x7f010038
 
 
 # direct methods

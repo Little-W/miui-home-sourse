@@ -117,117 +117,117 @@
 
     move-object v0, p0
 
-    .line 65
+    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     move-object v1, p1
 
-    .line 66
+    .line 68
     iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->shapes:Ljava/util/List;
 
     move-object v1, p2
 
-    .line 67
+    .line 69
     iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->composition:Lcom/airbnb/lottie/LottieComposition;
 
     move-object v1, p3
 
-    .line 68
+    .line 70
     iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->layerName:Ljava/lang/String;
 
     move-wide v1, p4
 
-    .line 69
+    .line 71
     iput-wide v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->layerId:J
 
     move-object v1, p6
 
-    .line 70
+    .line 72
     iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->layerType:Lcom/airbnb/lottie/model/layer/Layer$LayerType;
 
     move-wide v1, p7
 
-    .line 71
+    .line 73
     iput-wide v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->parentId:J
 
     move-object v1, p9
 
-    .line 72
+    .line 74
     iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->refId:Ljava/lang/String;
 
     move-object v1, p10
 
-    .line 73
+    .line 75
     iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->masks:Ljava/util/List;
 
     move-object v1, p11
 
-    .line 74
+    .line 76
     iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->transform:Lcom/airbnb/lottie/model/animatable/AnimatableTransform;
 
     move v1, p12
 
-    .line 75
+    .line 77
     iput v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->solidWidth:I
 
     move/from16 v1, p13
 
-    .line 76
+    .line 78
     iput v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->solidHeight:I
 
     move/from16 v1, p14
 
-    .line 77
+    .line 79
     iput v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->solidColor:I
 
     move/from16 v1, p15
 
-    .line 78
+    .line 80
     iput v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->timeStretch:F
 
     move/from16 v1, p16
 
-    .line 79
+    .line 81
     iput v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->startFrame:F
 
     move/from16 v1, p17
 
-    .line 80
+    .line 82
     iput v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->preCompWidth:I
 
     move/from16 v1, p18
 
-    .line 81
+    .line 83
     iput v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->preCompHeight:I
 
     move-object/from16 v1, p19
 
-    .line 82
+    .line 84
     iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->text:Lcom/airbnb/lottie/model/animatable/AnimatableTextFrame;
 
     move-object/from16 v1, p20
 
-    .line 83
+    .line 85
     iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->textProperties:Lcom/airbnb/lottie/model/animatable/AnimatableTextProperties;
 
     move-object/from16 v1, p21
 
-    .line 84
+    .line 86
     iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->inOutKeyframes:Ljava/util/List;
 
     move-object/from16 v1, p22
 
-    .line 85
+    .line 87
     iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->matteType:Lcom/airbnb/lottie/model/layer/Layer$MatteType;
 
     move-object/from16 v1, p23
 
-    .line 86
+    .line 88
     iput-object v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->timeRemapping:Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     move/from16 v1, p24
 
-    .line 87
+    .line 89
     iput-boolean v1, v0, Lcom/airbnb/lottie/model/layer/Layer;->hidden:Z
 
     return-void
@@ -238,7 +238,7 @@
 .method getComposition()Lcom/airbnb/lottie/LottieComposition;
     .locals 1
 
-    .line 91
+    .line 93
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->composition:Lcom/airbnb/lottie/LottieComposition;
 
     return-object v0
@@ -247,7 +247,7 @@
 .method public getId()J
     .locals 2
 
-    .line 107
+    .line 109
     iget-wide v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->layerId:J
 
     return-wide v0
@@ -265,7 +265,7 @@
         }
     .end annotation
 
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->inOutKeyframes:Ljava/util/List;
 
     return-object v0
@@ -274,7 +274,7 @@
 .method public getLayerType()Lcom/airbnb/lottie/model/layer/Layer$LayerType;
     .locals 1
 
-    .line 131
+    .line 133
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->layerType:Lcom/airbnb/lottie/model/layer/Layer$LayerType;
 
     return-object v0
@@ -291,7 +291,7 @@
         }
     .end annotation
 
-    .line 127
+    .line 129
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->masks:Ljava/util/List;
 
     return-object v0
@@ -300,7 +300,7 @@
 .method getMatteType()Lcom/airbnb/lottie/model/layer/Layer$MatteType;
     .locals 1
 
-    .line 135
+    .line 137
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->matteType:Lcom/airbnb/lottie/model/layer/Layer$MatteType;
 
     return-object v0
@@ -309,7 +309,7 @@
 .method getName()Ljava/lang/String;
     .locals 1
 
-    .line 111
+    .line 113
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->layerName:Ljava/lang/String;
 
     return-object v0
@@ -318,7 +318,7 @@
 .method getParentId()J
     .locals 2
 
-    .line 139
+    .line 141
     iget-wide v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->parentId:J
 
     return-wide v0
@@ -327,7 +327,7 @@
 .method getPreCompHeight()I
     .locals 1
 
-    .line 123
+    .line 125
     iget v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->preCompHeight:I
 
     return v0
@@ -336,7 +336,7 @@
 .method getPreCompWidth()I
     .locals 1
 
-    .line 119
+    .line 121
     iget v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->preCompWidth:I
 
     return v0
@@ -345,7 +345,7 @@
 .method getRefId()Ljava/lang/String;
     .locals 1
 
-    .line 115
+    .line 117
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->refId:Ljava/lang/String;
 
     return-object v0
@@ -362,7 +362,7 @@
         }
     .end annotation
 
-    .line 143
+    .line 145
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->shapes:Ljava/util/List;
 
     return-object v0
@@ -371,7 +371,7 @@
 .method getSolidColor()I
     .locals 1
 
-    .line 151
+    .line 153
     iget v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->solidColor:I
 
     return v0
@@ -380,7 +380,7 @@
 .method getSolidHeight()I
     .locals 1
 
-    .line 155
+    .line 157
     iget v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->solidHeight:I
 
     return v0
@@ -389,7 +389,7 @@
 .method getSolidWidth()I
     .locals 1
 
-    .line 159
+    .line 161
     iget v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->solidWidth:I
 
     return v0
@@ -398,7 +398,7 @@
 .method getStartProgress()F
     .locals 2
 
-    .line 99
+    .line 101
     iget v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->startFrame:F
 
     iget-object v1, p0, Lcom/airbnb/lottie/model/layer/Layer;->composition:Lcom/airbnb/lottie/LottieComposition;
@@ -415,7 +415,7 @@
 .method getText()Lcom/airbnb/lottie/model/animatable/AnimatableTextFrame;
     .locals 1
 
-    .line 163
+    .line 165
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->text:Lcom/airbnb/lottie/model/animatable/AnimatableTextFrame;
 
     return-object v0
@@ -424,7 +424,7 @@
 .method getTextProperties()Lcom/airbnb/lottie/model/animatable/AnimatableTextProperties;
     .locals 1
 
-    .line 167
+    .line 169
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->textProperties:Lcom/airbnb/lottie/model/animatable/AnimatableTextProperties;
 
     return-object v0
@@ -433,7 +433,7 @@
 .method getTimeRemapping()Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
     .locals 1
 
-    .line 171
+    .line 173
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->timeRemapping:Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     return-object v0
@@ -442,7 +442,7 @@
 .method getTimeStretch()F
     .locals 1
 
-    .line 95
+    .line 97
     iget v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->timeStretch:F
 
     return v0
@@ -451,7 +451,7 @@
 .method getTransform()Lcom/airbnb/lottie/model/animatable/AnimatableTransform;
     .locals 1
 
-    .line 147
+    .line 149
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->transform:Lcom/airbnb/lottie/model/animatable/AnimatableTransform;
 
     return-object v0
@@ -460,7 +460,7 @@
 .method public isHidden()Z
     .locals 1
 
-    .line 179
+    .line 181
     iget-boolean v0, p0, Lcom/airbnb/lottie/model/layer/Layer;->hidden:Z
 
     return v0
@@ -471,7 +471,7 @@
 
     const-string v0, ""
 
-    .line 175
+    .line 177
     invoke-virtual {p0, v0}, Lcom/airbnb/lottie/model/layer/Layer;->toString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -482,12 +482,12 @@
 .method public toString(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
-    .line 183
+    .line 185
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 184
+    .line 186
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/model/layer/Layer;->getName()Ljava/lang/String;
@@ -500,7 +500,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 185
+    .line 187
     iget-object v1, p0, Lcom/airbnb/lottie/model/layer/Layer;->composition:Lcom/airbnb/lottie/LottieComposition;
 
     invoke-virtual {p0}, Lcom/airbnb/lottie/model/layer/Layer;->getParentId()J
@@ -515,7 +515,7 @@
 
     const-string v2, "\t\tParents: "
 
-    .line 187
+    .line 189
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/model/layer/Layer;->getName()Ljava/lang/String;
@@ -524,7 +524,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 188
+    .line 190
     iget-object v2, p0, Lcom/airbnb/lottie/model/layer/Layer;->composition:Lcom/airbnb/lottie/LottieComposition;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/model/layer/Layer;->getParentId()J
@@ -540,7 +540,7 @@
 
     const-string v2, "->"
 
-    .line 190
+    .line 192
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/model/layer/Layer;->getName()Ljava/lang/String;
@@ -549,7 +549,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 191
+    .line 193
     iget-object v2, p0, Lcom/airbnb/lottie/model/layer/Layer;->composition:Lcom/airbnb/lottie/LottieComposition;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/model/layer/Layer;->getParentId()J
@@ -562,7 +562,7 @@
 
     goto :goto_0
 
-    .line 193
+    .line 195
     :cond_0
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -570,7 +570,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 195
+    .line 197
     :cond_1
     invoke-virtual {p0}, Lcom/airbnb/lottie/model/layer/Layer;->getMasks()Ljava/util/List;
 
@@ -582,7 +582,7 @@
 
     if-nez v1, :cond_2
 
-    .line 196
+    .line 198
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, "\tMasks: "
@@ -603,7 +603,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 198
+    .line 200
     :cond_2
     invoke-virtual {p0}, Lcom/airbnb/lottie/model/layer/Layer;->getSolidWidth()I
 
@@ -617,7 +617,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 199
+    .line 201
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, "\tBackground: "
@@ -634,7 +634,7 @@
 
     const/4 v4, 0x0
 
-    .line 200
+    .line 202
     invoke-virtual {p0}, Lcom/airbnb/lottie/model/layer/Layer;->getSolidWidth()I
 
     move-result v5
@@ -673,10 +673,10 @@
 
     move-result-object v1
 
-    .line 199
+    .line 201
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 202
+    .line 204
     :cond_3
     iget-object v1, p0, Lcom/airbnb/lottie/model/layer/Layer;->shapes:Ljava/util/List;
 
@@ -686,14 +686,14 @@
 
     if-nez v1, :cond_4
 
-    .line 203
+    .line 205
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v1, "\tShapes:\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 204
+    .line 206
     iget-object v1, p0, Lcom/airbnb/lottie/model/layer/Layer;->shapes:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -711,7 +711,7 @@
 
     move-result-object v2
 
-    .line 205
+    .line 207
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v3, "\t\t"
@@ -726,7 +726,7 @@
 
     goto :goto_1
 
-    .line 208
+    .line 210
     :cond_4
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

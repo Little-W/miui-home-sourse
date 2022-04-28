@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">Deel met</string>
     <string name="abc_shareactionprovider_share_with_application">Deel met %s</string>
     <string name="abc_toolbar_collapse_description">Vou in</string>
+    <string name="common_google_play_services_unknown_issue">%1$s ondervind probleme met Google Play Dienste. Probeer asseblief weer.</string>
     <string name="copy">Kopieer</string>
     <string name="expand_button_title">Gevorderd</string>
     <string name="not_set">Nie gestel nie</string>

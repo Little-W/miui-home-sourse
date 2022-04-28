@@ -10,7 +10,7 @@
     </string-array>
     <string-array name="editing_mode_entries">
         <item>Pozadina</item>
-        <item>Vidžeti</item>
+        <item>Widgeti</item>
         <item>Postavke</item>
     </string-array>
     <string-array name="gadget_weather_image">

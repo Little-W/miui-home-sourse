@@ -854,7 +854,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v1, "x"
+    const-string v1, "x"
 
     .line 824
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -916,6 +916,8 @@
     move-result-object v0
 
     return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

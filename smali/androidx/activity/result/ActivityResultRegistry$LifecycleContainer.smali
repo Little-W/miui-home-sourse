@@ -28,7 +28,44 @@
 .end field
 
 
+# direct methods
+.method constructor <init>(Landroidx/lifecycle/Lifecycle;)V
+    .locals 0
+
+    .line 419
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 420
+    iput-object p1, p0, Landroidx/activity/result/ActivityResultRegistry$LifecycleContainer;->mLifecycle:Landroidx/lifecycle/Lifecycle;
+
+    .line 421
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Landroidx/activity/result/ActivityResultRegistry$LifecycleContainer;->mObservers:Ljava/util/ArrayList;
+
+    return-void
+.end method
+
+
 # virtual methods
+.method addObserver(Landroidx/lifecycle/LifecycleEventObserver;)V
+    .locals 1
+
+    .line 425
+    iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry$LifecycleContainer;->mLifecycle:Landroidx/lifecycle/Lifecycle;
+
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
+
+    .line 426
+    iget-object v0, p0, Landroidx/activity/result/ActivityResultRegistry$LifecycleContainer;->mObservers:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
 .method clearObservers()V
     .locals 3
 

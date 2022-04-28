@@ -6,19 +6,25 @@
 # static fields
 .field private static final UPDATE_ZOOM_METHOD:Ljava/lang/reflect/Method;
 
+.field private static final USE_PHY_ANIM:Z
+
 .field private static final ZOOM_ENABLED:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    .line 20
+    .line 21
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v1, 0x1d
+    const/4 v1, 0x1
 
-    if-le v0, v1, :cond_0
+    const/4 v2, 0x0
+
+    const/16 v3, 0x1d
+
+    if-le v0, v3, :cond_0
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isMiuiLiteVersion()Z
 
@@ -26,17 +32,17 @@
 
     if-nez v0, :cond_0
 
-    const/4 v0, 0x1
+    move v0, v1
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move v0, v2
 
     :goto_0
     sput-boolean v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->ZOOM_ENABLED:Z
 
-    .line 21
+    .line 22
     sget-boolean v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->ZOOM_ENABLED:Z
 
     if-eqz v0, :cond_1
@@ -53,6 +59,43 @@
     :goto_1
     sput-object v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->UPDATE_ZOOM_METHOD:Ljava/lang/reflect/Method;
 
+    .line 23
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    const-string v3, "rubens"
+
+    check-cast v3, Ljava/lang/CharSequence;
+
+    invoke-static {v0, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    const-string v3, "matisse"
+
+    check-cast v3, Ljava/lang/CharSequence;
+
+    invoke-static {v0, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move v1, v2
+
+    :goto_2
+    sput-boolean v1, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->USE_PHY_ANIM:Z
+
     return-void
 .end method
 
@@ -63,6 +106,15 @@
     sget-object v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->UPDATE_ZOOM_METHOD:Ljava/lang/reflect/Method;
 
     return-object v0
+.end method
+
+.method public static final synthetic access$getUSE_PHY_ANIM$p()Z
+    .locals 1
+
+    .line 1
+    sget-boolean v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->USE_PHY_ANIM:Z
+
+    return v0
 .end method
 
 .method public static final synthetic access$getZOOM_ENABLED$p()Z
@@ -77,12 +129,12 @@
 .method private static final findUpdateZoomMethod()Ljava/lang/reflect/Method;
     .locals 8
 
-    .line 24
+    .line 26
     const-class v0, Landroid/app/WallpaperManager;
 
     const-string v1, "setWallpaperZoomOut"
 
-    .line 25
+    .line 27
     sget-object v2, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
     const/4 v3, 0x2
@@ -115,7 +167,7 @@
 
     aput-object v4, v3, v7
 
-    .line 24
+    .line 26
     invoke-static {v0, v1, v2, v3}, Lcom/miui/launcher/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0

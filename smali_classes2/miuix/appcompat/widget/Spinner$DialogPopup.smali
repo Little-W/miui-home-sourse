@@ -32,7 +32,7 @@
 .method private constructor <init>(Lmiuix/appcompat/widget/Spinner;)V
     .locals 0
 
-    .line 920
+    .line 963
     iput-object p1, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->this$0:Lmiuix/appcompat/widget/Spinner;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
 .method synthetic constructor <init>(Lmiuix/appcompat/widget/Spinner;Lmiuix/appcompat/widget/Spinner$1;)V
     .locals 0
 
-    .line 920
+    .line 963
     invoke-direct {p0, p1}, Lmiuix/appcompat/widget/Spinner$DialogPopup;-><init>(Lmiuix/appcompat/widget/Spinner;)V
 
     return-void
@@ -54,17 +54,17 @@
 .method public dismiss()V
     .locals 1
 
-    .line 927
+    .line 970
     iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->mPopup:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_0
 
-    .line 928
+    .line 971
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
     const/4 v0, 0x0
 
-    .line 929
+    .line 972
     iput-object v0, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->mPopup:Lmiuix/appcompat/app/AlertDialog;
 
     :cond_0
@@ -82,7 +82,7 @@
 .method public getHintText()Ljava/lang/CharSequence;
     .locals 1
 
-    .line 950
+    .line 993
     iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->mPrompt:Ljava/lang/CharSequence;
 
     return-object v0
@@ -107,7 +107,7 @@
 .method public isShowing()Z
     .locals 1
 
-    .line 935
+    .line 978
     iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->mPopup:Lmiuix/appcompat/app/AlertDialog;
 
     if-eqz v0, :cond_0
@@ -132,19 +132,19 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
-    .line 984
+    .line 1027
     iget-object p1, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->this$0:Lmiuix/appcompat/widget/Spinner;
 
     invoke-virtual {p1, p2}, Lmiuix/appcompat/widget/Spinner;->setSelection(I)V
 
-    .line 985
+    .line 1028
     iget-object p1, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->this$0:Lmiuix/appcompat/widget/Spinner;
 
     sget v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_POPUP_LIGHT:I
 
     invoke-static {p1, v0}, Lmiuix/view/HapticCompat;->performHapticFeedback(Landroid/view/View;I)Z
 
-    .line 986
+    .line 1029
     iget-object p1, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->this$0:Lmiuix/appcompat/widget/Spinner;
 
     invoke-virtual {p1}, Lmiuix/appcompat/widget/Spinner;->getOnItemClickListener()Landroid/widget/AdapterView$OnItemClickListener;
@@ -153,7 +153,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 987
+    .line 1030
     iget-object p1, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->this$0:Lmiuix/appcompat/widget/Spinner;
 
     const/4 v0, 0x0
@@ -166,7 +166,7 @@
 
     invoke-virtual {p1, v0, p2, v1, v2}, Lmiuix/appcompat/widget/Spinner;->performItemClick(Landroid/view/View;IJ)Z
 
-    .line 989
+    .line 1032
     :cond_0
     invoke-virtual {p0}, Lmiuix/appcompat/widget/Spinner$DialogPopup;->dismiss()V
 
@@ -176,7 +176,7 @@
 .method public setAdapter(Landroid/widget/ListAdapter;)V
     .locals 0
 
-    .line 940
+    .line 983
     iput-object p1, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->mListAdapter:Landroid/widget/ListAdapter;
 
     return-void
@@ -189,7 +189,7 @@
 
     const-string v0, "Cannot set popup background for MODE_DIALOG, ignoring"
 
-    .line 994
+    .line 1037
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -202,7 +202,7 @@
 
     const-string v0, "Cannot set horizontal offset for MODE_DIALOG, ignoring"
 
-    .line 1004
+    .line 1047
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -215,7 +215,7 @@
 
     const-string v0, "Cannot set horizontal (original) offset for MODE_DIALOG, ignoring"
 
-    .line 1024
+    .line 1067
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -224,7 +224,7 @@
 .method public setPromptText(Ljava/lang/CharSequence;)V
     .locals 0
 
-    .line 945
+    .line 988
     iput-object p1, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->mPrompt:Ljava/lang/CharSequence;
 
     return-void
@@ -237,7 +237,7 @@
 
     const-string v0, "Cannot set vertical offset for MODE_DIALOG, ignoring"
 
-    .line 999
+    .line 1042
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -246,14 +246,14 @@
 .method public show(II)V
     .locals 3
 
-    .line 955
+    .line 998
     iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->mListAdapter:Landroid/widget/ListAdapter;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 958
+    .line 1001
     :cond_0
     new-instance v0, Lmiuix/appcompat/app/AlertDialog$Builder;
 
@@ -265,26 +265,26 @@
 
     invoke-direct {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 959
+    .line 1002
     iget-object v1, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->mPrompt:Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_1
 
-    .line 960
+    .line 1003
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
-    .line 962
+    .line 1005
     :cond_1
     iget-object v1, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->mListAdapter:Landroid/widget/ListAdapter;
 
     iget-object v2, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->this$0:Lmiuix/appcompat/widget/Spinner;
 
-    .line 963
+    .line 1006
     invoke-virtual {v2}, Lmiuix/appcompat/widget/Spinner;->getSelectedItemPosition()I
 
     move-result v2
 
-    .line 962
+    .line 1005
     invoke-virtual {v0, v1, v2, p0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setSingleChoiceItems(Landroid/widget/ListAdapter;ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
@@ -293,32 +293,32 @@
 
     invoke-direct {v1, p0}, Lmiuix/appcompat/widget/Spinner$DialogPopup$1;-><init>(Lmiuix/appcompat/widget/Spinner$DialogPopup;)V
 
-    .line 964
+    .line 1007
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    .line 970
+    .line 1013
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->mPopup:Lmiuix/appcompat/app/AlertDialog;
 
-    .line 971
+    .line 1014
     iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->mPopup:Lmiuix/appcompat/app/AlertDialog;
 
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->getListView()Landroid/widget/ListView;
 
     move-result-object v0
 
-    .line 972
+    .line 1015
     invoke-virtual {v0, p1}, Landroid/widget/ListView;->setTextDirection(I)V
 
-    .line 973
+    .line 1016
     invoke-virtual {v0, p2}, Landroid/widget/ListView;->setTextAlignment(I)V
 
-    .line 974
+    .line 1017
     iget-object p1, p0, Lmiuix/appcompat/widget/Spinner$DialogPopup;->mPopup:Lmiuix/appcompat/app/AlertDialog;
 
     invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->show()V
@@ -329,7 +329,7 @@
 .method public show(IIFF)V
     .locals 0
 
-    .line 979
+    .line 1022
     invoke-virtual {p0, p1, p2}, Lmiuix/appcompat/widget/Spinner$DialogPopup;->show(II)V
 
     return-void

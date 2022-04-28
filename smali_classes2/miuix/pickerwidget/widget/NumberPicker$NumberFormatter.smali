@@ -25,12 +25,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 157
+    .line 165
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 158
+    .line 166
     iput v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$NumberFormatter;->iWidth:I
 
     return-void
@@ -39,10 +39,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 161
+    .line 169
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 162
+    .line 170
     iput p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$NumberFormatter;->iWidth:I
 
     return-void
@@ -53,7 +53,7 @@
 .method public format(I)Ljava/lang/String;
     .locals 1
 
-    .line 166
+    .line 174
     iget v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$NumberFormatter;->iWidth:I
 
     invoke-static {v0, p1}, Lmiuix/pickerwidget/internal/util/SimpleNumberFormatter;->format(II)Ljava/lang/String;

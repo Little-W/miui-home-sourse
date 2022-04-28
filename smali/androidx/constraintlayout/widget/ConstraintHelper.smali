@@ -47,6 +47,60 @@
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
+
+    .line 70
+    invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    const/16 v0, 0x20
+
+    .line 40
+    new-array v0, v0, [I
+
+    iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintHelper;->mIds:[I
+
+    const/4 v0, 0x0
+
+    .line 57
+    iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintHelper;->mUseViewMeasure:Z
+
+    .line 71
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintHelper;->myContext:Landroid/content/Context;
+
+    .line 72
+    invoke-virtual {p0, p2}, Landroidx/constraintlayout/widget/ConstraintHelper;->init(Landroid/util/AttributeSet;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 0
+
+    .line 76
+    invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    const/16 p3, 0x20
+
+    .line 40
+    new-array p3, p3, [I
+
+    iput-object p3, p0, Landroidx/constraintlayout/widget/ConstraintHelper;->mIds:[I
+
+    const/4 p3, 0x0
+
+    .line 57
+    iput-boolean p3, p0, Landroidx/constraintlayout/widget/ConstraintHelper;->mUseViewMeasure:Z
+
+    .line 77
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintHelper;->myContext:Landroid/content/Context;
+
+    .line 78
+    invoke-virtual {p0, p2}, Landroidx/constraintlayout/widget/ConstraintHelper;->init(Landroid/util/AttributeSet;)V
+
+    return-void
+.end method
+
 .method private addID(Ljava/lang/String;)V
     .locals 5
 

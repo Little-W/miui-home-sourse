@@ -20,7 +20,7 @@
 # instance fields
 .field mActive:Ljava/lang/Runnable;
 
-.field private mSingleThreadExecutor:Ljava/util/concurrent/ExecutorService;
+.field private final mSingleThreadExecutor:Ljava/util/concurrent/ExecutorService;
 
 .field final mTasks:Ljava/util/ArrayDeque;
     .annotation system Ldalvik/annotation/Signature;
@@ -34,27 +34,42 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 183
+    .line 193
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 184
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->mSingleThreadExecutor:Ljava/util/concurrent/ExecutorService;
-
-    .line 186
+    .line 190
     new-instance v0, Ljava/util/ArrayDeque;
 
     invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->mTasks:Ljava/util/ArrayDeque;
 
+    .line 194
+    new-instance v0, Lcom/miui/home/library/utils/-$$Lambda$AsyncTaskExecutorHelper$SerialExecutor$s1YDuNxeylT249JniXws4_7Zquo;
+
+    invoke-direct {v0, p1}, Lcom/miui/home/library/utils/-$$Lambda$AsyncTaskExecutorHelper$SerialExecutor$s1YDuNxeylT249JniXws4_7Zquo;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->mSingleThreadExecutor:Ljava/util/concurrent/ExecutorService;
+
     return-void
+.end method
+
+.method static synthetic lambda$new$0(Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 1
+
+    .line 194
+    new-instance v0, Ljava/lang/Thread;
+
+    invoke-direct {v0, p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    return-object v0
 .end method
 
 
@@ -64,7 +79,7 @@
 
     monitor-enter p0
 
-    .line 190
+    .line 198
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->mTasks:Ljava/util/ArrayDeque;
 
@@ -74,17 +89,17 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayDeque;->offer(Ljava/lang/Object;)Z
 
-    .line 199
+    .line 207
     iget-object p1, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->mActive:Ljava/lang/Runnable;
 
     if-nez p1, :cond_0
 
-    .line 200
+    .line 208
     invoke-virtual {p0}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->scheduleNext()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 202
+    .line 210
     :cond_0
     monitor-exit p0
 
@@ -103,7 +118,7 @@
 
     monitor-enter p0
 
-    .line 205
+    .line 213
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->mTasks:Ljava/util/ArrayDeque;
 
@@ -117,7 +132,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 206
+    .line 214
     iget-object v0, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->mSingleThreadExecutor:Ljava/util/concurrent/ExecutorService;
 
     iget-object v1, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->mActive:Ljava/lang/Runnable;
@@ -126,7 +141,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 208
+    .line 216
     :cond_0
     monitor-exit p0
 

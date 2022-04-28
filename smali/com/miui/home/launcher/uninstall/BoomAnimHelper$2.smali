@@ -22,7 +22,7 @@
 .method constructor <init>(Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 89
+    .line 90
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$2;->val$animEndRunnable:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -35,7 +35,7 @@
 .method public onCancel(Ljava/lang/Object;)V
     .locals 0
 
-    .line 97
+    .line 98
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$2;->val$animEndRunnable:Ljava/lang/Runnable;
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
@@ -46,7 +46,7 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 0
 
-    .line 92
+    .line 93
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$2;->val$animEndRunnable:Ljava/lang/Runnable;
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V

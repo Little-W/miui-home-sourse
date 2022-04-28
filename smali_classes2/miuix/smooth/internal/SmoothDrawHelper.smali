@@ -12,7 +12,7 @@
 
 .field private mOutterPath:Landroid/graphics/Path;
 
-.field private mPathProvider:Lmiuix/smooth/SmoothPathProvider;
+.field private mPathProvider:Lmiuix/smooth/SmoothPathProvider2;
 
 .field private mRadii:[F
 
@@ -78,11 +78,11 @@
     iput-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPath:Landroid/graphics/Path;
 
     .line 35
-    new-instance v0, Lmiuix/smooth/SmoothPathProvider;
+    new-instance v0, Lmiuix/smooth/SmoothPathProvider2;
 
-    invoke-direct {v0}, Lmiuix/smooth/SmoothPathProvider;-><init>()V
+    invoke-direct {v0}, Lmiuix/smooth/SmoothPathProvider2;-><init>()V
 
-    iput-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mPathProvider:Lmiuix/smooth/SmoothPathProvider;
+    iput-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mPathProvider:Lmiuix/smooth/SmoothPathProvider2;
 
     .line 36
     new-instance v0, Landroid/graphics/RectF;
@@ -99,24 +99,28 @@
 
     if-nez p3, :cond_0
 
-    .line 100
-    iget-object p3, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mPathProvider:Lmiuix/smooth/SmoothPathProvider;
+    .line 101
+    iget-object p3, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mPathProvider:Lmiuix/smooth/SmoothPathProvider2;
 
-    invoke-virtual {p3, p2, p4, p5, p6}, Lmiuix/smooth/SmoothPathProvider;->buildSmoothData(Landroid/graphics/RectF;FFF)V
+    invoke-virtual {p3, p2, p4, p5, p6}, Lmiuix/smooth/SmoothPathProvider2;->buildSmoothData(Landroid/graphics/RectF;FFF)Lmiuix/smooth/SmoothPathProvider2$SmoothData;
+
+    move-result-object p2
 
     goto :goto_0
 
-    .line 102
+    .line 103
     :cond_0
-    iget-object p4, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mPathProvider:Lmiuix/smooth/SmoothPathProvider;
+    iget-object p4, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mPathProvider:Lmiuix/smooth/SmoothPathProvider2;
 
-    invoke-virtual {p4, p2, p3, p5, p6}, Lmiuix/smooth/SmoothPathProvider;->buildSmoothData(Landroid/graphics/RectF;[FFF)V
+    invoke-virtual {p4, p2, p3, p5, p6}, Lmiuix/smooth/SmoothPathProvider2;->buildSmoothData(Landroid/graphics/RectF;[FFF)Lmiuix/smooth/SmoothPathProvider2$SmoothData;
 
-    .line 104
+    move-result-object p2
+
+    .line 105
     :goto_0
-    iget-object p2, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mPathProvider:Lmiuix/smooth/SmoothPathProvider;
+    iget-object p3, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mPathProvider:Lmiuix/smooth/SmoothPathProvider2;
 
-    invoke-virtual {p2, p1}, Lmiuix/smooth/SmoothPathProvider;->getSmoothPath(Landroid/graphics/Path;)Landroid/graphics/Path;
+    invoke-virtual {p3, p1, p2}, Lmiuix/smooth/SmoothPathProvider2;->getSmoothPath(Landroid/graphics/Path;Lmiuix/smooth/SmoothPathProvider2$SmoothData;)Landroid/graphics/Path;
 
     move-result-object p1
 
@@ -128,19 +132,19 @@
 .method public drawMask(Landroid/graphics/Canvas;Landroid/graphics/Xfermode;)V
     .locals 1
 
-    .line 108
+    .line 109
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 109
+    .line 110
     iget-object p2, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPath:Landroid/graphics/Path;
 
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, p2, v0}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 110
+    .line 111
     iget-object p1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mClipPaint:Landroid/graphics/Paint;
 
     const/4 p2, 0x0
@@ -153,7 +157,7 @@
 .method public drawStroke(Landroid/graphics/Canvas;)V
     .locals 2
 
-    .line 114
+    .line 115
     iget v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeWidth:I
 
     if-eqz v0, :cond_0
@@ -168,7 +172,7 @@
 
     iget v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeColor:I
 
-    .line 115
+    .line 116
     invoke-static {v0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v0
@@ -185,10 +189,10 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 117
+    .line 118
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 118
+    .line 119
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokePaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeWidth:I
@@ -197,21 +201,21 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 119
+    .line 120
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokePaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeColor:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 120
+    .line 121
     iget-object v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mOutterPath:Landroid/graphics/Path;
 
     iget-object v1, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 121
+    .line 122
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     :cond_1
@@ -230,7 +234,7 @@
 .method public getSmoothPath(Landroid/graphics/Rect;)Landroid/graphics/Path;
     .locals 9
 
-    .line 126
+    .line 127
     iget v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeWidth:I
 
     if-eqz v0, :cond_0
@@ -245,7 +249,7 @@
 
     iget v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeColor:I
 
-    .line 127
+    .line 128
     invoke-static {v0}, Landroid/graphics/Color;->alpha(I)I
 
     move-result v0
@@ -264,7 +268,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 128
+    .line 129
     iget v0, p0, Lmiuix/smooth/internal/SmoothDrawHelper;->mStrokeWidth:I
 
     int-to-float v0, v0
@@ -278,12 +282,12 @@
     :cond_1
     move v8, v1
 
-    .line 129
+    .line 130
     new-instance v3, Landroid/graphics/Path;
 
     invoke-direct {v3}, Landroid/graphics/Path;-><init>()V
 
-    .line 130
+    .line 131
     new-instance v4, Landroid/graphics/RectF;
 
     invoke-direct {v4, p1}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V

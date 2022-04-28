@@ -22,12 +22,12 @@
 .method private createClientOptions(Lcom/miui/home/launcher/allapps/LauncherMode;)Lcom/miui/launcher/overlay/client/LauncherClient$ClientOptions;
     .locals 3
 
-    .line 181
+    .line 183
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherAssistantCompatMIUI;->mClient:Lcom/miui/launcher/overlay/client/LauncherClient;
 
     if-eqz v0, :cond_0
 
-    .line 182
+    .line 184
     invoke-virtual {v0}, Lcom/miui/launcher/overlay/client/LauncherClient;->getServerVersion()I
 
     move-result v0
@@ -50,7 +50,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 183
+    .line 185
     invoke-static {}, Lcom/miui/home/launcher/MIUIWidgetUtil;->isMIUIWidgetSupport()Z
 
     move-result v0
@@ -59,7 +59,7 @@
 
     goto :goto_1
 
-    .line 186
+    .line 188
     :cond_1
     invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/LauncherMode;->supportAssistant()Z
 
@@ -67,14 +67,14 @@
 
     if-eqz p1, :cond_2
 
-    .line 187
+    .line 189
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->supportAssistant()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 188
+    .line 190
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherAssistantCompatMIUI;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getContentResolver()Landroid/content/ContentResolver;
@@ -92,7 +92,7 @@
     :cond_2
     const/4 v2, 0x0
 
-    .line 191
+    .line 193
     :goto_1
     new-instance p1, Lcom/miui/launcher/overlay/client/LauncherClient$ClientOptions;
 
@@ -159,6 +159,16 @@
     if-eqz v0, :cond_0
 
     .line 175
+    invoke-virtual {v0}, Lcom/miui/launcher/overlay/client/LauncherClient;->onDetachedFromWindow()V
+
+    .line 176
+    iget-object v0, p0, Lcom/miui/home/launcher/LauncherAssistantCompatMIUI;->mClient:Lcom/miui/launcher/overlay/client/LauncherClient;
+
+    invoke-virtual {v0}, Lcom/miui/launcher/overlay/client/LauncherClient;->onDestroy()V
+
+    .line 177
+    iget-object v0, p0, Lcom/miui/home/launcher/LauncherAssistantCompatMIUI;->mClient:Lcom/miui/launcher/overlay/client/LauncherClient;
+
     invoke-virtual {v0}, Lcom/miui/launcher/overlay/client/LauncherClient;->disconnect()V
 
     :cond_0

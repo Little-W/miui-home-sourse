@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 2464
+    .line 2526
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$11;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,49 +47,49 @@
 .method public accept(Lcom/miui/home/launcher/ItemInfo;)V
     .locals 3
 
-    .line 2469
+    .line 2531
     instance-of v0, p1, Lcom/miui/home/launcher/FolderInfo;
 
     if-eqz v0, :cond_0
 
-    .line 2470
+    .line 2532
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$11;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$700(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$800(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$11;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/Workspace;->access$1200(Lcom/miui/home/launcher/Workspace;)I
+    invoke-static {v1}, Lcom/miui/home/launcher/Workspace;->access$1300(Lcom/miui/home/launcher/Workspace;)I
 
     move-result v1
 
     invoke-virtual {v0, v1, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 2471
+    .line 2533
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$11;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$1208(Lcom/miui/home/launcher/Workspace;)I
+    invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$1308(Lcom/miui/home/launcher/Workspace;)I
 
     goto :goto_0
 
-    .line 2472
+    .line 2534
     :cond_0
     iget v0, p1, Lcom/miui/home/launcher/ItemInfo;->itemType:I
 
     if-nez v0, :cond_1
 
-    .line 2473
+    .line 2535
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$11;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$700(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$800(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$11;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/Workspace;->access$700(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
+    invoke-static {v1}, Lcom/miui/home/launcher/Workspace;->access$800(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -99,7 +99,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace$11;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {v2}, Lcom/miui/home/launcher/Workspace;->access$1300(Lcom/miui/home/launcher/Workspace;)I
+    invoke-static {v2}, Lcom/miui/home/launcher/Workspace;->access$1400(Lcom/miui/home/launcher/Workspace;)I
 
     move-result v2
 
@@ -107,7 +107,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace$11;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {v2}, Lcom/miui/home/launcher/Workspace;->access$1400(Lcom/miui/home/launcher/Workspace;)I
+    invoke-static {v2}, Lcom/miui/home/launcher/Workspace;->access$1500(Lcom/miui/home/launcher/Workspace;)I
 
     move-result v2
 
@@ -117,7 +117,7 @@
 
     goto :goto_0
 
-    .line 2474
+    .line 2536
     :cond_1
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->isHybirdApp(Lcom/miui/home/launcher/ItemInfo;)Z
 
@@ -125,16 +125,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 2475
+    .line 2537
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$11;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$700(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$800(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$11;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/Workspace;->access$700(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
+    invoke-static {v1}, Lcom/miui/home/launcher/Workspace;->access$800(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -144,7 +144,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace$11;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {v2}, Lcom/miui/home/launcher/Workspace;->access$1400(Lcom/miui/home/launcher/Workspace;)I
+    invoke-static {v2}, Lcom/miui/home/launcher/Workspace;->access$1500(Lcom/miui/home/launcher/Workspace;)I
 
     move-result v2
 
@@ -152,27 +152,27 @@
 
     invoke-virtual {v0, v1, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 2476
+    .line 2538
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$11;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$1308(Lcom/miui/home/launcher/Workspace;)I
+    invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$1408(Lcom/miui/home/launcher/Workspace;)I
 
     goto :goto_0
 
-    .line 2478
+    .line 2540
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$11;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$700(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$800(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2479
+    .line 2541
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$11;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$1408(Lcom/miui/home/launcher/Workspace;)I
+    invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$1508(Lcom/miui/home/launcher/Workspace;)I
 
     :goto_0
     return-void
@@ -181,7 +181,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 2464
+    .line 2526
     check-cast p1, Lcom/miui/home/launcher/ItemInfo;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace$11;->accept(Lcom/miui/home/launcher/ItemInfo;)V

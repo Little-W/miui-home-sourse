@@ -29,7 +29,7 @@
 .method public static backupDatabase(Landroid/content/Context;)Landroid/os/Bundle;
     .locals 2
 
-    .line 310
+    .line 314
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -51,14 +51,14 @@
 
     invoke-direct {v0, p0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 311
+    .line 315
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 312
+    .line 316
     invoke-virtual {v0}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object p0
@@ -67,7 +67,7 @@
 
     invoke-static {p0, v1}, Landroid/system/Os;->chmod(Ljava/lang/String;I)V
 
-    .line 313
+    .line 317
     invoke-static {v0}, Lcom/miui/home/launcher/cloudbackup/BackupRestoreHomeService;->createFileInfoBundle(Ljava/io/File;)Landroid/os/Bundle;
 
     move-result-object p0
@@ -79,7 +79,7 @@
     :catch_0
     move-exception p0
 
-    .line 316
+    .line 320
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -101,17 +101,17 @@
         }
     .end annotation
 
-    .line 276
+    .line 280
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 277
+    .line 281
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
-    .line 278
+    .line 282
     :cond_0
     :goto_0
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
@@ -120,14 +120,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 279
+    .line 283
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     const-string v2, "\""
 
-    .line 280
+    .line 284
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -140,7 +140,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 281
+    .line 285
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
@@ -149,7 +149,7 @@
 
     const-string v1, ","
 
-    .line 282
+    .line 286
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -161,7 +161,7 @@
 .method public static reset()V
     .locals 3
 
-    .line 301
+    .line 305
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -170,28 +170,28 @@
 
     move-result-object v0
 
-    .line 302
+    .line 306
     sget-object v1, Lcom/miui/home/launcher/LauncherCategory$Category;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 303
+    .line 307
     invoke-static {}, Lcom/miui/home/launcher/LauncherCategory$Repository;->access$100()Landroid/net/Uri;
 
     move-result-object v1
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 304
+    .line 308
     invoke-static {}, Lcom/miui/home/launcher/LauncherCategory$Favorites;->access$200()Landroid/net/Uri;
 
     move-result-object v1
 
     invoke-virtual {v0, v1, v2, v2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 305
+    .line 309
     invoke-static {}, Lcom/miui/home/launcher/CategorySettingHelper;->getInstance()Lcom/miui/home/launcher/CategorySettingHelper;
 
     move-result-object v0
@@ -215,7 +215,7 @@
 
     const-string v0, "foo"
 
-    .line 322
+    .line 326
     invoke-virtual {p0, v0}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
@@ -224,7 +224,7 @@
 
     move-result-object v0
 
-    .line 323
+    .line 327
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -241,10 +241,12 @@
 
     const-string p1, "failed to create database folder"
 
-    .line 324
+    .line 328
+    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
-    .line 327
+    .line 331
     :cond_0
     new-instance v1, Ljava/io/File;
 
@@ -252,17 +254,17 @@
 
     invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 328
+    .line 332
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 329
+    .line 333
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 331
+    .line 335
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -282,7 +284,7 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    .line 332
+    .line 336
     invoke-virtual {v0}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v2
@@ -297,13 +299,13 @@
 
     if-eqz v2, :cond_2
 
-    .line 334
+    .line 338
     :try_start_0
     invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/cloudbackup/BackupRestoreHomeService;->copyFile(Landroid/content/Context;Landroid/net/Uri;Ljava/io/File;)V
 
     const-string v2, "Launcher.Backup"
 
-    .line 335
+    .line 339
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -317,6 +319,8 @@
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
+
+    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -325,7 +329,7 @@
     :catch_0
     move-exception v0
 
-    .line 337
+    .line 341
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0

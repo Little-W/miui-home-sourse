@@ -99,16 +99,25 @@
     return p1
 .end method
 
-.method static synthetic access$200(Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;)Lcom/miui/home/launcher/Launcher;
+.method static synthetic access$200(Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;)Ljava/lang/ref/WeakReference;
     .locals 0
 
     .line 29
-    iget-object p0, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    iget-object p0, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->mLauncher:Ljava/lang/ref/WeakReference;
 
     return-object p0
 .end method
 
-.method static synthetic access$300(Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;)Z
+.method static synthetic access$300(Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;)Ljava/lang/ref/WeakReference;
+    .locals 0
+
+    .line 29
+    iget-object p0, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->mLauncher:Ljava/lang/ref/WeakReference;
+
+    return-object p0
+.end method
+
+.method static synthetic access$400(Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;)Z
     .locals 0
 
     .line 29
@@ -126,15 +135,15 @@
 
     const/4 v0, 0x0
 
-    .line 120
+    .line 124
     iput-boolean v0, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->keepFeedAlive:Z
 
     const/4 v0, 0x1
 
-    .line 121
+    .line 125
     iput-boolean v0, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->mHasTryReconnect:Z
 
-    .line 122
+    .line 126
     invoke-super {p0}, Lcom/miui/home/launcher/overlay/OverlayLauncherClient;->disconnect()V
 
     return-void
@@ -143,10 +152,10 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 94
+    .line 98
     invoke-super {p0}, Lcom/miui/home/launcher/overlay/OverlayLauncherClient;->onDestroy()V
 
-    .line 95
+    .line 99
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -157,7 +166,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 96
+    .line 100
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -174,7 +183,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 109
+    .line 113
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/OverlayReconnectMessage;->getDirection()I
 
     move-result p1
@@ -183,18 +192,18 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 110
+    .line 114
     iput-boolean v0, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->isShowOverlayWhenConnected:Z
 
-    .line 111
+    .line 115
     iget p1, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->mUserLevel:I
 
     if-ne p1, v0, :cond_0
 
-    .line 112
+    .line 116
     iput-boolean v0, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->keepFeedAlive:Z
 
-    .line 114
+    .line 118
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->reconnect()V
 
@@ -210,7 +219,7 @@
 
     const-string v0, "com.miui.newhome"
 
-    .line 102
+    .line 106
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/PackageDataClearMessage;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -221,7 +230,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 103
+    .line 107
     invoke-virtual {p0}, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->reconnect()V
 
     :cond_0
@@ -247,12 +256,12 @@
 .method public onStop()V
     .locals 1
 
-    .line 88
+    .line 92
     invoke-super {p0}, Lcom/miui/home/launcher/overlay/OverlayLauncherClient;->onStop()V
 
     const/4 v0, 0x0
 
-    .line 89
+    .line 93
     iput-boolean v0, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->isShowOverlayWhenConnected:Z
 
     return-void
@@ -261,19 +270,29 @@
 .method public setOverlay(Lcom/miui/launcher/overlay/ILauncherOverlay;)V
     .locals 0
 
-    .line 127
+    .line 131
     invoke-super {p0, p1}, Lcom/miui/home/launcher/overlay/OverlayLauncherClient;->setOverlay(Lcom/miui/launcher/overlay/ILauncherOverlay;)V
 
     if-eqz p1, :cond_0
 
-    .line 128
+    .line 132
     iget-boolean p1, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->isShowOverlayWhenConnected:Z
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    iget-object p1, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->mLauncher:Ljava/lang/ref/WeakReference;
 
-    .line 130
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->mLauncher:Ljava/lang/ref/WeakReference;
+
+    .line 134
+    invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/miui/home/launcher/Launcher;
+
     invoke-static {p1}, Lcom/miui/home/launcher/overlay/feed/FeedOverlaySwipeController;->canSlidingUp(Lcom/miui/home/launcher/Launcher;)Z
 
     move-result p1
@@ -282,13 +301,13 @@
 
     const/4 p1, 0x1
 
-    .line 131
+    .line 135
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->showOverlay(I)V
 
     :cond_0
     const/4 p1, 0x0
 
-    .line 133
+    .line 137
     iput-boolean p1, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->isShowOverlayWhenConnected:Z
 
     return-void

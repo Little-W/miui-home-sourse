@@ -41,8 +41,8 @@
         <item quantity="one">Raahataan %1$d kohde</item>
     </plurals>
     <plurals name="announce_for_unread">
-        <item quantity="other">%2$s lukematon %1$s:sta</item>
-        <item quantity="one">%2$s lukematon %1$s:sta</item>
+        <item quantity="other">%2$s lukematta kohteesta %1$s</item>
+        <item quantity="one">%2$s lukematta kohteesta %1$s</item>
     </plurals>
     <plurals name="delete_wallpapers_message">
         <item quantity="other">Poistetaanko %1$d taustakuvaa?</item>

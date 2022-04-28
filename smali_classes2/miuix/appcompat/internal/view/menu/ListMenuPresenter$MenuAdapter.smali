@@ -222,7 +222,7 @@
     move-result-object p2
 
     .line 278
-    invoke-static {p2}, Lmiuix/internal/util/AnimHelper;->addPressAnim(Landroid/view/View;)V
+    invoke-static {p2}, Lmiuix/internal/util/AnimHelper;->addPressAnimWithBg(Landroid/view/View;)V
 
     .line 281
     :cond_0

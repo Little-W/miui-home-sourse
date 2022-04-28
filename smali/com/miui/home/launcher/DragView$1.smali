@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DragView;FFFFF)V
     .locals 0
 
-    .line 761
+    .line 765
     iput-object p1, p0, Lcom/miui/home/launcher/DragView$1;->this$0:Lcom/miui/home/launcher/DragView;
 
     iput p2, p0, Lcom/miui/home/launcher/DragView$1;->val$initialScale:F
@@ -58,7 +58,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 4
 
-    .line 764
+    .line 768
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -73,7 +73,7 @@
 
     sub-float/2addr v0, p1
 
-    .line 765
+    .line 769
     iget v1, p0, Lcom/miui/home/launcher/DragView$1;->val$initialScale:F
 
     iget v2, p0, Lcom/miui/home/launcher/DragView$1;->val$finalScale:F
@@ -84,17 +84,17 @@
 
     add-float/2addr v1, v2
 
-    .line 766
+    .line 770
     iget-object v2, p0, Lcom/miui/home/launcher/DragView$1;->this$0:Lcom/miui/home/launcher/DragView;
 
     invoke-virtual {v2, v1}, Lcom/miui/home/launcher/DragView;->setScaleX(F)V
 
-    .line 767
+    .line 771
     iget-object v2, p0, Lcom/miui/home/launcher/DragView$1;->this$0:Lcom/miui/home/launcher/DragView;
 
     invoke-virtual {v2, v1}, Lcom/miui/home/launcher/DragView;->setScaleY(F)V
 
-    .line 768
+    .line 772
     iget-object v1, p0, Lcom/miui/home/launcher/DragView$1;->this$0:Lcom/miui/home/launcher/DragView;
 
     iget v2, p0, Lcom/miui/home/launcher/DragView$1;->val$finalAlpha:F
@@ -109,7 +109,26 @@
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/DragView;->setAlpha(F)V
 
-    .line 769
+    .line 774
+    iget-object v1, p0, Lcom/miui/home/launcher/DragView$1;->this$0:Lcom/miui/home/launcher/DragView;
+
+    invoke-static {v1}, Lcom/miui/home/launcher/DragView;->access$000(Lcom/miui/home/launcher/DragView;)Lcom/miui/home/launcher/anim/BackgroundAnimController;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 775
+    iget-object v1, p0, Lcom/miui/home/launcher/DragView$1;->this$0:Lcom/miui/home/launcher/DragView;
+
+    invoke-static {v1}, Lcom/miui/home/launcher/DragView;->access$000(Lcom/miui/home/launcher/DragView;)Lcom/miui/home/launcher/anim/BackgroundAnimController;
+
+    move-result-object v1
+
+    invoke-interface {v1, v0}, Lcom/miui/home/launcher/anim/BackgroundAnimController;->updateBackgroundColor(F)V
+
+    .line 778
+    :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/DragView$1;->this$0:Lcom/miui/home/launcher/DragView;
 
     iget v2, p0, Lcom/miui/home/launcher/DragView$1;->val$fromRotation:F
@@ -124,10 +143,10 @@
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/DragView;->setRotation(F)V
 
-    .line 770
+    .line 779
     iget-object p1, p0, Lcom/miui/home/launcher/DragView$1;->this$0:Lcom/miui/home/launcher/DragView;
 
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/DragView;->access$000(Lcom/miui/home/launcher/DragView;F)V
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/DragView;->access$100(Lcom/miui/home/launcher/DragView;F)V
 
     return-void
 .end method

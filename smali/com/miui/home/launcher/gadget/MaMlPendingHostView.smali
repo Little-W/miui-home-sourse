@@ -57,14 +57,14 @@
 .method private getMaMlItemInfo()Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
     .locals 1
 
-    .line 115
+    .line 120
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getItemInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 116
+    .line 121
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getItemInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v0
@@ -82,12 +82,12 @@
 .method private install(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)V
     .locals 1
 
-    .line 110
+    .line 115
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
-    .line 111
+    .line 116
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Launcher;->installMaMl(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)V
 
     return-void
@@ -96,7 +96,7 @@
 .method private isCanAutoStartDownload()Z
     .locals 1
 
-    .line 137
+    .line 142
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -144,14 +144,14 @@
 .method private scheduleDownloadAction()V
     .locals 3
 
-    .line 141
+    .line 146
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getMaMlItemInfo()Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    .line 142
+    .line 147
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getMaMlItemInfo()Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
     move-result-object v0
@@ -162,7 +162,7 @@
 
     move-result v0
 
-    .line 143
+    .line 148
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->isCanAutoStartDownload()Z
 
     move-result v1
@@ -173,7 +173,7 @@
 
     goto :goto_1
 
-    .line 147
+    .line 152
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/widget/WidgetSettingHelper;->getInstance()Lcom/miui/home/launcher/widget/WidgetSettingHelper;
 
@@ -185,7 +185,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 148
+    .line 153
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -194,12 +194,12 @@
 
     if-eqz v1, :cond_1
 
-    const v1, 0x7f100217
+    const v1, 0x7f100262
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f100218
+    const v1, 0x7f100263
 
     :goto_0
     const/4 v2, 0x0
@@ -208,18 +208,18 @@
 
     move-result-object v0
 
-    .line 150
+    .line 155
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     goto :goto_2
 
-    .line 152
+    .line 157
     :cond_2
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->showMaMlDownloadWarnDialog()V
 
     goto :goto_2
 
-    .line 145
+    .line 150
     :cond_3
     :goto_1
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getMaMlItemInfo()Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
@@ -236,14 +236,14 @@
 .method private showMaMlDownloadWarnDialog()V
     .locals 4
 
-    .line 122
+    .line 127
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getMaMlItemInfo()Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 123
+    .line 128
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -266,15 +266,23 @@
 
 
 # virtual methods
+.method public disableCutRoundCorner()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
 .method protected getDefaultView()Landroid/view/View;
     .locals 4
 
-    .line 58
+    .line 63
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mDefaultView:Landroid/view/View;
 
     if-nez v0, :cond_3
 
-    .line 59
+    .line 64
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -283,7 +291,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d002e
+    const v1, 0x7f0d0044
 
     const/4 v2, 0x0
 
@@ -293,10 +301,10 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mDefaultView:Landroid/view/View;
 
-    .line 60
+    .line 65
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mDefaultView:Landroid/view/View;
 
-    const v1, 0x7f0a011b
+    const v1, 0x7f0a0147
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -306,10 +314,10 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mIcon:Landroid/widget/ImageView;
 
-    .line 61
+    .line 66
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mDefaultView:Landroid/view/View;
 
-    const v1, 0x7f0a0187
+    const v1, 0x7f0a01ce
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -319,10 +327,10 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mProgress:Landroid/widget/ProgressBar;
 
-    .line 62
+    .line 67
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mDefaultView:Landroid/view/View;
 
-    const v1, 0x7f0a00bd
+    const v1, 0x7f0a00de
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -332,12 +340,12 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mNeedDownloadMark:Landroid/widget/ImageView;
 
-    .line 64
+    .line 69
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mDefaultView:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 66
+    .line 71
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getMaMlItemInfo()Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
     move-result-object v0
@@ -346,12 +354,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 68
+    .line 73
     iget-object v2, v0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->transitionBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_0
 
-    .line 69
+    .line 74
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getContext()Landroid/content/Context;
@@ -369,7 +377,7 @@
     :cond_0
     if-nez v1, :cond_1
 
-    .line 73
+    .line 78
     :try_start_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getContext()Landroid/content/Context;
 
@@ -389,7 +397,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 75
+    .line 80
     new-instance v2, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getContext()Landroid/content/Context;
@@ -410,7 +418,7 @@
     :cond_1
     if-nez v1, :cond_2
 
-    .line 81
+    .line 86
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -421,12 +429,12 @@
 
     move-result-object v1
 
-    .line 82
+    .line 87
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f0804ba
+    const v2, 0x7f080522
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -434,20 +442,20 @@
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 83
+    .line 88
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mIcon:Landroid/widget/ImageView;
 
     sget-object v2, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 85
+    .line 90
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mIcon:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 88
+    .line 93
     :cond_3
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mDefaultView:Landroid/view/View;
 
@@ -488,13 +496,13 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 94
+    .line 99
     :try_start_0
     iget-boolean p1, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mIsDownloading:Z
 
     if-nez p1, :cond_0
 
-    .line 95
+    .line 100
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->scheduleDownloadAction()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -504,7 +512,7 @@
     :catch_0
     move-exception p1
 
-    .line 98
+    .line 103
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -526,11 +534,11 @@
     :cond_0
     move p1, p2
 
-    .line 104
+    .line 109
     :goto_0
     iput-boolean p1, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mIsDownloading:Z
 
-    .line 105
+    .line 110
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mNeedDownloadMark:Landroid/widget/ImageView;
 
     const/4 v1, 0x4
@@ -547,7 +555,7 @@
     :goto_1
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 106
+    .line 111
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->mProgress:Landroid/widget/ProgressBar;
 
     if-eqz p1, :cond_2

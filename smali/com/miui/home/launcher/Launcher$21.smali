@@ -1,11 +1,11 @@
 .class Lcom/miui/home/launcher/Launcher$21;
-.super Lcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;
+.super Landroid/database/ContentObserver;
 .source "Launcher.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->insertNewScreen(ILjava/lang/Runnable;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/launcher/Launcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,36 +17,35 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$action:Ljava/lang/Runnable;
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ItemInfo;JJIIZLjava/lang/Runnable;Ljava/lang/Runnable;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3361
+    .line 3724
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$21;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput-object p11, p0, Lcom/miui/home/launcher/Launcher$21;->val$action:Ljava/lang/Runnable;
-
-    invoke-direct/range {p0 .. p10}, Lcom/miui/home/launcher/Launcher$WaitForAddScreenReadyTask;-><init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ItemInfo;JJIIZLjava/lang/Runnable;)V
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public onChange(Z)V
+    .locals 0
 
-    .line 3364
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$21;->val$action:Ljava/lang/Runnable;
+    .line 3727
+    invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    if-eqz v0, :cond_0
+    .line 3728
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$21;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 3365
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3100(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 
-    :cond_0
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;->adaptHomeToWallpaperAsync()V
+
     return-void
 .end method

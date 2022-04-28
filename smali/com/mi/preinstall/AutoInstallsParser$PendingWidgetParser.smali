@@ -25,7 +25,7 @@
 .method private constructor <init>(Lcom/mi/preinstall/AutoInstallsParser;)V
     .locals 0
 
-    .line 129
+    .line 162
     iput-object p1, p0, Lcom/mi/preinstall/AutoInstallsParser$PendingWidgetParser;->this$0:Lcom/mi/preinstall/AutoInstallsParser;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lcom/mi/preinstall/AutoInstallsParser;Lcom/mi/preinstall/AutoInstallsParser$1;)V
     .locals 0
 
-    .line 129
+    .line 162
     invoke-direct {p0, p1}, Lcom/mi/preinstall/AutoInstallsParser$PendingWidgetParser;-><init>(Lcom/mi/preinstall/AutoInstallsParser;)V
 
     return-void
@@ -44,13 +44,14 @@
 
 
 # virtual methods
-.method public parseAndAdd(Landroid/content/res/XmlResourceParser;Ljava/util/List;)V
+.method public parseAndAdd(Landroid/content/res/XmlResourceParser;Landroid/util/ArrayMap;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/res/XmlResourceParser;",
-            "Ljava/util/List<",
+            "Landroid/util/ArrayMap<",
+            "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;)V"
         }
@@ -65,12 +66,12 @@
 
     const-string v0, "packageName"
 
-    .line 133
+    .line 166
     invoke-static {p1, v0}, Lcom/mi/preinstall/AutoInstallsParser;->access$200(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 134
+    .line 167
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -89,8 +90,10 @@
 
     if-nez v0, :cond_0
 
-    .line 135
-    invoke-interface {p2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    const/4 v0, 0x0
+
+    .line 168
+    invoke-virtual {p2, p1, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void

@@ -20,24 +20,22 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    .line 46
+    .line 15
     new-instance v0, Lcom/miui/home/launcher/backup/BackupSettingHelper;
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lcom/miui/home/launcher/backup/BackupSettingHelper;-><init>(Lcom/miui/home/launcher/backup/BackupSettingHelper$1;)V
+    invoke-direct {v0}, Lcom/miui/home/launcher/backup/BackupSettingHelper;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/backup/BackupSettingHelper$Holder;->sInstance:Lcom/miui/home/launcher/backup/BackupSettingHelper;
 
     return-void
 .end method
 
-.method static synthetic access$100()Lcom/miui/home/launcher/backup/BackupSettingHelper;
+.method static synthetic access$000()Lcom/miui/home/launcher/backup/BackupSettingHelper;
     .locals 1
 
-    .line 45
+    .line 14
     sget-object v0, Lcom/miui/home/launcher/backup/BackupSettingHelper$Holder;->sInstance:Lcom/miui/home/launcher/backup/BackupSettingHelper;
 
     return-object v0

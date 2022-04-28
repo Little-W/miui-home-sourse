@@ -71,6 +71,8 @@
 
     move-result-object v1
 
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 39
     iget-object v0, p0, Lcom/miui/home/recents/RecentsViewStateController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -174,9 +176,16 @@
     .line 62
     invoke-virtual {v0, v4}, Lcom/miui/home/recents/views/RecentsContainer;->setAlpha(F)V
 
+    const-string v3, "RecentsViewStateController"
+
+    const-string v6, "set RecentsContainer GONE when setState without animation"
+
+    .line 63
+    invoke-static {v3, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     move v3, v2
 
-    .line 64
+    .line 65
     :goto_1
     invoke-virtual {v1}, Lcom/miui/home/recents/views/RecentsView;->getTaskViews()Ljava/util/List;
 
@@ -188,7 +197,7 @@
 
     if-ge v3, v6, :cond_3
 
-    .line 65
+    .line 66
     invoke-virtual {v1}, Lcom/miui/home/recents/views/RecentsView;->getTaskViews()Ljava/util/List;
 
     move-result-object v6
@@ -199,20 +208,20 @@
 
     check-cast v6, Lcom/miui/home/recents/views/TaskView;
 
-    .line 66
+    .line 67
     invoke-virtual {v6, v5}, Lcom/miui/home/recents/views/TaskView;->setAlpha(F)V
 
-    .line 67
+    .line 68
     invoke-virtual {v6, v4}, Lcom/miui/home/recents/views/TaskView;->setTranslationX(F)V
 
-    .line 68
+    .line 69
     invoke-virtual {v6, v4}, Lcom/miui/home/recents/views/TaskView;->setTranslationY(F)V
 
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 70
+    .line 71
     :cond_3
     iget-object v1, p0, Lcom/miui/home/recents/RecentsViewStateController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -220,10 +229,10 @@
 
     const-wide/16 v1, 0x0
 
-    .line 72
+    .line 73
     invoke-virtual {v0, v1, v2, v1, v2}, Lcom/miui/home/recents/views/RecentsContainer;->startRecentsContainerFadeOutAnim(JJ)V
 
-    .line 73
+    .line 74
     invoke-virtual {v0, v1, v2, v1, v2}, Lcom/miui/home/recents/views/RecentsContainer;->startBackgroundFadeOutAnim(JJ)V
 
     :goto_2
@@ -240,7 +249,7 @@
 
     const-string p2, "RecentsViewStateController"
 
-    .line 80
+    .line 81
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -271,7 +280,9 @@
 
     move-result-object p3
 
-    .line 86
+    invoke-static {p2, p3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 87
     iget-object p2, p0, Lcom/miui/home/recents/RecentsViewStateController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getOverviewPanel()Landroid/view/View;
@@ -280,14 +291,14 @@
 
     check-cast p2, Lcom/miui/home/recents/views/RecentsView;
 
-    .line 87
+    .line 88
     iget-object p3, p0, Lcom/miui/home/recents/RecentsViewStateController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p3}, Lcom/miui/home/launcher/Launcher;->getRecentsContainer()Lcom/miui/home/recents/views/RecentsContainer;
 
     move-result-object p3
 
-    .line 89
+    .line 90
     sget-object v0, Lcom/miui/home/launcher/LauncherState;->OVERVIEW:Lcom/miui/home/recents/OverviewState;
 
     const/4 v1, 0x1
@@ -296,50 +307,50 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 90
+    .line 91
     iget-boolean v0, p1, Lcom/miui/home/launcher/LauncherState;->mIsFromFsGesture:Z
 
     if-nez v0, :cond_0
 
-    .line 91
+    .line 92
     iget-object v0, p0, Lcom/miui/home/recents/RecentsViewStateController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     sget-wide v3, Lcom/miui/home/launcher/common/BlurUtils;->DEFAULT_BLUR_ANIM_DURATION:J
 
     invoke-static {v0, v2, v3, v4}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->showStatusBar(Lcom/miui/home/launcher/Launcher;ZJ)V
 
-    .line 93
+    .line 94
     :cond_0
     iput-boolean v2, p0, Lcom/miui/home/recents/RecentsViewStateController;->mNeedPerformEndRunnable:Z
-
-    .line 94
-    iget-boolean v0, p1, Lcom/miui/home/launcher/LauncherState;->mIsFromFsGesture:Z
-
-    if-eqz v0, :cond_1
 
     .line 95
     invoke-virtual {p3, v2}, Lcom/miui/home/recents/views/RecentsContainer;->setVisibility(I)V
 
+    .line 96
+    iget-boolean v0, p1, Lcom/miui/home/launcher/LauncherState;->mIsFromFsGesture:Z
+
+    if-eqz v0, :cond_1
+
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 96
+    .line 97
     invoke-virtual {p3, v0}, Lcom/miui/home/recents/views/RecentsContainer;->setAlpha(F)V
 
-    .line 97
+    .line 98
     invoke-virtual {p2, v0}, Lcom/miui/home/recents/views/RecentsView;->setAlpha(F)V
 
-    .line 98
+    .line 99
     invoke-virtual {p2, v0}, Lcom/miui/home/recents/views/RecentsView;->setScaleX(F)V
 
-    .line 99
+    .line 100
     invoke-virtual {p2, v0}, Lcom/miui/home/recents/views/RecentsView;->setScaleY(F)V
 
     const/4 p3, 0x0
 
-    .line 100
+    .line 101
     invoke-virtual {p2, p3}, Lcom/miui/home/recents/views/RecentsView;->setTranslationY(F)V
 
-    .line 102
+    .line 103
     :cond_1
     iget-object p2, p0, Lcom/miui/home/recents/RecentsViewStateController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -347,7 +358,7 @@
 
     goto :goto_1
 
-    .line 103
+    .line 104
     :cond_2
     iget-object v0, p0, Lcom/miui/home/recents/RecentsViewStateController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -363,7 +374,7 @@
 
     if-ne v0, v3, :cond_6
 
-    .line 104
+    .line 105
     iget-object v0, p0, Lcom/miui/home/recents/RecentsViewStateController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isInEditing()Z
@@ -374,15 +385,15 @@
 
     invoke-static {v0, v3}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->showStatusBar(Lcom/miui/home/launcher/Launcher;Z)V
 
-    .line 105
+    .line 106
     iget-boolean v0, p1, Lcom/miui/home/launcher/LauncherState;->mIsIgnoreOverviewAnim:Z
 
     if-nez v0, :cond_5
 
-    .line 106
+    .line 107
     iput-boolean v1, p0, Lcom/miui/home/recents/RecentsViewStateController;->mNeedPerformEndRunnable:Z
 
-    .line 107
+    .line 108
     iget-object v0, p0, Lcom/miui/home/recents/RecentsViewStateController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getRecentsContainer()Lcom/miui/home/recents/views/RecentsContainer;
@@ -391,19 +402,19 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/views/RecentsContainer;->setIsExitRecentsAnimating(Z)V
 
-    .line 108
+    .line 109
     new-instance v0, Lcom/miui/home/recents/RecentsViewStateController$1;
 
     invoke-direct {v0, p0, p3}, Lcom/miui/home/recents/RecentsViewStateController$1;-><init>(Lcom/miui/home/recents/RecentsViewStateController;Lcom/miui/home/recents/views/RecentsContainer;)V
 
-    .line 118
+    .line 120
     invoke-virtual {p3}, Lcom/miui/home/recents/views/RecentsContainer;->getRecentMenuView()Lcom/miui/home/recents/views/RecentMenuView;
 
     move-result-object v3
 
     invoke-virtual {v3, v2}, Lcom/miui/home/recents/views/RecentMenuView;->removeMenu(Z)Z
 
-    .line 120
+    .line 122
     iget-object v3, p0, Lcom/miui/home/recents/RecentsViewStateController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/Launcher;->getRecentsContainer()Lcom/miui/home/recents/views/RecentsContainer;
@@ -416,7 +427,7 @@
 
     if-nez v3, :cond_4
 
-    .line 121
+    .line 123
     iget-object v2, p0, Lcom/miui/home/recents/RecentsViewStateController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v2}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->getTaskStackViewLayoutStyle(Landroid/content/Context;)I
@@ -425,7 +436,7 @@
 
     if-nez v2, :cond_3
 
-    .line 122
+    .line 124
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
     move-result-object v2
@@ -436,7 +447,7 @@
 
     goto :goto_0
 
-    .line 124
+    .line 126
     :cond_3
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
@@ -450,10 +461,10 @@
     :goto_0
     if-nez v2, :cond_5
 
-    .line 128
+    .line 130
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 131
+    .line 133
     :cond_5
     iget-object p2, p0, Lcom/miui/home/recents/RecentsViewStateController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -463,10 +474,10 @@
 
     const-wide/16 v0, 0x0
 
-    .line 133
+    .line 135
     invoke-virtual {p3, v0, v1, p1, p2}, Lcom/miui/home/recents/views/RecentsContainer;->startRecentsContainerFadeOutAnim(JJ)V
 
-    .line 134
+    .line 136
     invoke-virtual {p3, v0, v1, p1, p2}, Lcom/miui/home/recents/views/RecentsContainer;->startBackgroundFadeOutAnim(JJ)V
 
     :cond_6

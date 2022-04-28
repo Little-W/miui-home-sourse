@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/OnLongClickAgent;)V
     .locals 0
 
-    .line 98
+    .line 96
     iput-object p1, p0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->this$0:Lcom/miui/home/launcher/OnLongClickAgent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
 .method public rememberVersionTag()V
     .locals 1
 
-    .line 121
+    .line 113
     iget-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->this$0:Lcom/miui/home/launcher/OnLongClickAgent;
 
     invoke-static {v0}, Lcom/miui/home/launcher/OnLongClickAgent;->access$200(Lcom/miui/home/launcher/OnLongClickAgent;)Lcom/miui/home/launcher/OnLongClickAgent$VersionTagGenerator;
@@ -57,20 +57,20 @@
 .end method
 
 .method public run()V
-    .locals 2
+    .locals 5
 
-    .line 102
+    .line 100
     iget-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->this$0:Lcom/miui/home/launcher/OnLongClickAgent;
 
     invoke-static {v0}, Lcom/miui/home/launcher/OnLongClickAgent;->access$000(Lcom/miui/home/launcher/OnLongClickAgent;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->this$0:Lcom/miui/home/launcher/OnLongClickAgent;
 
-    .line 103
+    .line 101
     invoke-static {v0}, Lcom/miui/home/launcher/OnLongClickAgent;->access$100(Lcom/miui/home/launcher/OnLongClickAgent;)Landroid/view/ViewGroup;
 
     move-result-object v0
@@ -79,13 +79,13 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->zOriginalVersionTag:Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->this$0:Lcom/miui/home/launcher/OnLongClickAgent;
 
-    .line 104
+    .line 102
     invoke-static {v1}, Lcom/miui/home/launcher/OnLongClickAgent;->access$200(Lcom/miui/home/launcher/OnLongClickAgent;)Lcom/miui/home/launcher/OnLongClickAgent$VersionTagGenerator;
 
     move-result-object v1
@@ -94,23 +94,76 @@
 
     move-result-object v1
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v1, :cond_1
 
-    .line 105
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    .line 103
+    iget-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->this$0:Lcom/miui/home/launcher/OnLongClickAgent;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Looper;->getQueue()Landroid/os/MessageQueue;
+    invoke-static {v0}, Lcom/miui/home/launcher/OnLongClickAgent;->access$300(Lcom/miui/home/launcher/OnLongClickAgent;)Landroid/view/View$OnLongClickListener;
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress$1;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v1, p0}, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress$1;-><init>(Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;)V
+    .line 104
+    iget-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->this$0:Lcom/miui/home/launcher/OnLongClickAgent;
 
-    invoke-virtual {v0, v1}, Landroid/os/MessageQueue;->addIdleHandler(Landroid/os/MessageQueue$IdleHandler;)V
+    invoke-static {v0}, Lcom/miui/home/launcher/OnLongClickAgent;->access$300(Lcom/miui/home/launcher/OnLongClickAgent;)Landroid/view/View$OnLongClickListener;
 
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->this$0:Lcom/miui/home/launcher/OnLongClickAgent;
+
+    invoke-static {v1}, Lcom/miui/home/launcher/OnLongClickAgent;->access$100(Lcom/miui/home/launcher/OnLongClickAgent;)Landroid/view/ViewGroup;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Landroid/view/View$OnLongClickListener;->onLongClick(Landroid/view/View;)Z
+
+    .line 106
     :cond_0
+    invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/miui/home/launcher/common/messages/LongClickMessage;
+
+    iget-object v2, p0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->this$0:Lcom/miui/home/launcher/OnLongClickAgent;
+
+    invoke-static {v2}, Lcom/miui/home/launcher/OnLongClickAgent;->access$100(Lcom/miui/home/launcher/OnLongClickAgent;)Landroid/view/ViewGroup;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->this$0:Lcom/miui/home/launcher/OnLongClickAgent;
+
+    invoke-static {v3}, Lcom/miui/home/launcher/OnLongClickAgent;->access$400(Lcom/miui/home/launcher/OnLongClickAgent;)F
+
+    move-result v3
+
+    iget-object v4, p0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->this$0:Lcom/miui/home/launcher/OnLongClickAgent;
+
+    invoke-static {v4}, Lcom/miui/home/launcher/OnLongClickAgent;->access$500(Lcom/miui/home/launcher/OnLongClickAgent;)F
+
+    move-result v4
+
+    invoke-direct {v1, v2, v3, v4}, Lcom/miui/home/launcher/common/messages/LongClickMessage;-><init>(Landroid/view/View;FF)V
+
+    invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
+
+    .line 107
+    iget-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->this$0:Lcom/miui/home/launcher/OnLongClickAgent;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/OnLongClickAgent;->access$602(Lcom/miui/home/launcher/OnLongClickAgent;Z)Z
+
+    .line 108
+    iget-object v0, p0, Lcom/miui/home/launcher/OnLongClickAgent$CheckForLongPress;->this$0:Lcom/miui/home/launcher/OnLongClickAgent;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/OnLongClickAgent;->access$002(Lcom/miui/home/launcher/OnLongClickAgent;Z)Z
+
+    :cond_1
     return-void
 .end method

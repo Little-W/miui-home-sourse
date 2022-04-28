@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
     .locals 0
 
-    .line 529
+    .line 531
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$3;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 531
+    .line 533
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$3;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-static {p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$600(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V

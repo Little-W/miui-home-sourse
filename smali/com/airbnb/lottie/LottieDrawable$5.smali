@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/airbnb/lottie/LottieDrawable;F)V
     .locals 0
 
-    .line 487
+    .line 526
     iput-object p1, p0, Lcom/airbnb/lottie/LottieDrawable$5;->this$0:Lcom/airbnb/lottie/LottieDrawable;
 
     iput p2, p0, Lcom/airbnb/lottie/LottieDrawable$5;->val$minProgress:F
@@ -42,7 +42,7 @@
 .method public run(Lcom/airbnb/lottie/LottieComposition;)V
     .locals 1
 
-    .line 490
+    .line 529
     iget-object p1, p0, Lcom/airbnb/lottie/LottieDrawable$5;->this$0:Lcom/airbnb/lottie/LottieDrawable;
 
     iget v0, p0, Lcom/airbnb/lottie/LottieDrawable$5;->val$minProgress:F

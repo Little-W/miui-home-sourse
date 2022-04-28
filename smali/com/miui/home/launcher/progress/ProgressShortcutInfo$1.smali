@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->updateStatus(Lcom/miui/home/launcher/Launcher;ILjava/lang/String;Landroid/net/Uri;)V
+    value = Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->updateStatus(Lcom/miui/home/launcher/Launcher;ILjava/lang/String;Landroid/net/Uri;J)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,9 +26,11 @@
 
 .field final synthetic val$originalPercent:I
 
+.field final synthetic val$screenId:J
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;IILcom/miui/home/launcher/Launcher;)V
+.method constructor <init>(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;IILcom/miui/home/launcher/Launcher;J)V
     .locals 0
 
     .line 96
@@ -39,6 +41,8 @@
     iput p3, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$1;->val$deltaPercent:I
 
     iput-object p4, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
+
+    iput-wide p5, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$1;->val$screenId:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -83,7 +87,9 @@
     .line 101
     iget-object p1, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0, p1}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->access$000(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Lcom/miui/home/launcher/Launcher;)V
+    iget-wide v1, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$1;->val$screenId:J
+
+    invoke-static {v0, p1, v1, v2}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->access$000(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Lcom/miui/home/launcher/Launcher;J)V
 
     return-void
 .end method

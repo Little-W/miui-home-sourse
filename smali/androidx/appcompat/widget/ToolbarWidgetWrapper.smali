@@ -689,6 +689,19 @@
     return-object v0
 .end method
 
+.method public getVisibility()I
+    .locals 1
+
+    .line 666
+    iget-object v0, p0, Landroidx/appcompat/widget/ToolbarWidgetWrapper;->mToolbar:Landroidx/appcompat/widget/Toolbar;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/Toolbar;->getVisibility()I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public hasExpandedActionView()Z
     .locals 1
 

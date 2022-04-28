@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miui.home.launcher.hotseats.HotSeats android:gravity="center" android:layout_gravity="bottom" android:id="@id/hotseat_list" android:paddingTop="@dimen/hotseats_padding_top" android:paddingBottom="@dimen/hotseats_padding_bottom" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/hotseats_padding_side" android:paddingEnd="@dimen/hotseats_padding_side"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

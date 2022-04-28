@@ -260,7 +260,7 @@
 .method getDrawableResource()I
     .locals 1
 
-    const v0, 0x7f080193
+    const v0, 0x7f0801bd
 
     return v0
 .end method
@@ -411,9 +411,9 @@
     .line 72
     invoke-virtual {v0, v1, v4, v3, v2}, Lcom/miui/home/launcher/Launcher;->startSearch(Ljava/lang/String;ZLandroid/os/Bundle;Z)V
 
-    const v1, 0x7f01002f
+    const v1, 0x7f010030
 
-    const v3, 0x7f010030
+    const v3, 0x7f010031
 
     .line 73
     invoke-virtual {v0, v1, v3}, Lcom/miui/home/launcher/Launcher;->overridePendingTransition(II)V

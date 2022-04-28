@@ -41,7 +41,7 @@
 .method private updateCellInfo()V
     .locals 4
 
-    .line 232
+    .line 242
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -54,14 +54,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 233
+    .line 243
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 234
+    .line 244
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -72,7 +72,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 235
+    .line 245
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -81,21 +81,21 @@
 
     move-result-object v0
 
-    .line 236
+    .line 246
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->getTag()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
-    .line 237
+    .line 247
     iget-wide v2, v1, Lcom/miui/home/launcher/gadget/GadgetInfo;->screenId:J
 
     invoke-virtual {v0, v2, v3}, Lcom/miui/home/launcher/Workspace;->getScreenIndexById(J)I
 
     move-result v0
 
-    .line 238
+    .line 248
     iget-object v2, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     const-string v3, "screenIndex"
@@ -106,7 +106,7 @@
 
     invoke-static {v2, v3, v0}, Lcom/miui/launcher/utils/MamlUtils;->putVariableString(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 239
+    .line 249
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     const-string v2, "cellX"
@@ -119,7 +119,7 @@
 
     invoke-static {v0, v2, v3}, Lcom/miui/launcher/utils/MamlUtils;->putVariableString(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 240
+    .line 250
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     const-string v2, "cellY"
@@ -141,7 +141,7 @@
 .method public cleanUp()V
     .locals 2
 
-    .line 246
+    .line 256
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mAwesomeView:Landroid/view/View;
@@ -150,7 +150,7 @@
 
     const/4 v0, 0x0
 
-    .line 247
+    .line 257
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->setClockButtonListener(Lcom/miui/launcher/views/MamlButtonActionListener;)Z
 
     return-void
@@ -196,6 +196,28 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mElementContext:Ljava/lang/Object;
 
+    return-void
+.end method
+
+.method public notifyColorChanged()V
+    .locals 1
+
+    .line 227
+    iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mElementContext:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    .line 228
+    invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->updateLauncherComponentColorByWallpaper(Lcom/miui/home/launcher/gadget/ColorUpdatable;)V
+
+    .line 229
+    invoke-direct {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->updateCellInfo()V
+
+    :cond_0
     return-void
 .end method
 
@@ -420,7 +442,7 @@
     invoke-static {v0, v1, v2}, Lcom/miui/launcher/utils/MamlUtils;->putVariableString(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 183
-    invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->updateColor()V
+    invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->notifyColorChanged()V
 
     return-void
 
@@ -732,7 +754,7 @@
     .locals 0
 
     .line 70
-    invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->updateColor()V
+    invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->notifyColorChanged()V
 
     return-void
 .end method
@@ -831,19 +853,36 @@
     return-void
 .end method
 
-.method public updateColor()V
-    .locals 2
+.method public updateColor(I)V
+    .locals 5
 
-    .line 227
+    .line 235
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mRoot:Ljava/lang/Object;
+
+    if-eqz v0, :cond_1
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/AwesomeClock;->mElementContext:Ljava/lang/Object;
 
-    invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/WallpaperUtils;->updateGadgetColorByWallpaper(Lcom/miui/home/launcher/gadget/Gadget;Ljava/lang/Object;Ljava/lang/Object;)V
+    if-eqz v1, :cond_1
 
-    .line 228
-    invoke-direct {p0}, Lcom/miui/home/launcher/gadget/AwesomeClock;->updateCellInfo()V
+    const-string v2, "applied_light_wallpaper"
 
+    const/4 v3, 0x2
+
+    if-ne p1, v3, :cond_0
+
+    const-wide/high16 v3, 0x3ff0000000000000L    # 1.0
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 v3, 0x0
+
+    .line 236
+    :goto_0
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/miui/launcher/utils/MamlUtils;->updateVariable(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/String;D)V
+
+    :cond_1
     return-void
 .end method
 

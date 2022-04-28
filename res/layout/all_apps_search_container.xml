@@ -1,30 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.allapps.search.AllAppsSearchContainer
-    android:focusable="true"
-    android:clipChildren="false"
-    android:clipToPadding="false"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:alpha="0.0"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <ViewAnimator
-        android:id="@id/all_apps_search_fragment_container"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-        <fragment
-            android:name="com.miui.home.launcher.allapps.search.AppListSearchFragment"
-            android:id="@id/search_app_fragment"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" />
-        <fragment
-            android:name="com.miui.home.launcher.allapps.search.AppCategorySelectSearchFragment"
-            android:id="@id/search_category_fragment"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" />
+<com.miui.home.launcher.allapps.search.AllAppsSearchContainer android:focusable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ViewAnimator android:id="@id/all_apps_search_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <fragment android:name="com.miui.home.launcher.allapps.search.AppListSearchFragment" android:id="@id/search_app_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <fragment android:name="com.miui.home.launcher.allapps.search.AppCategorySelectSearchFragment" android:id="@id/search_category_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     </ViewAnimator>
-    <View
-        android:id="@id/all_apps_search_mask"
-        android:background="@color/alpha30black"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+    <include layout="@layout/all_apps_search_result_mask" />
 </com.miui.home.launcher.allapps.search.AllAppsSearchContainer>

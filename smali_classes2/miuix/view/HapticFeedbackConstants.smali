@@ -62,90 +62,90 @@
 
     const/high16 v0, 0x10000000
 
-    .line 37
+    .line 41
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_VIRTUAL_RELEASE:I
 
     const v0, 0x10000001
 
-    .line 38
+    .line 42
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_TAP_NORMAL:I
 
     const v0, 0x10000002
 
-    .line 39
+    .line 43
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_TAP_LIGHT:I
 
     const v0, 0x10000003
 
-    .line 40
+    .line 44
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_FLICK:I
 
     const v0, 0x10000004
 
-    .line 41
+    .line 45
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_SWITCH:I
 
     const v0, 0x10000005
 
-    .line 42
+    .line 46
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_MESH_HEAVY:I
 
     const v0, 0x10000006
 
-    .line 43
+    .line 47
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_MESH_NORMAL:I
 
     const v0, 0x10000007
 
-    .line 44
+    .line 48
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_MESH_LIGHT:I
 
     const v0, 0x10000008
 
-    .line 45
+    .line 49
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_LONG_PRESS:I
 
     const v0, 0x10000009
 
-    .line 46
+    .line 50
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_POPUP_NORMAL:I
 
     const v0, 0x1000000a
 
-    .line 47
+    .line 51
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_POPUP_LIGHT:I
 
     const v0, 0x1000000b
 
-    .line 48
+    .line 52
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_PICK_UP:I
 
     const v0, 0x1000000c
 
-    .line 49
+    .line 53
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_SCROLL_EDGE:I
 
     const v0, 0x1000000d
 
-    .line 50
+    .line 54
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_TRIGGER_DRAWER:I
 
     const v0, 0x1000000e
 
-    .line 51
+    .line 55
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_FLICK_LIGHT:I
 
     const v0, 0x1000000f
 
-    .line 52
+    .line 56
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_HOLD:I
 
     const v0, 0x10000010
 
-    .line 53
+    .line 57
     sput v0, Lmiuix/view/HapticFeedbackConstants;->MIUI_HAPTIC_END:I
 
-    .line 55
+    .line 59
     invoke-static {}, Lmiuix/view/HapticFeedbackConstants;->buildNames()V
 
     return-void
@@ -154,7 +154,7 @@
 .method private static buildNames()V
     .locals 3
 
-    .line 59
+    .line 63
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_VIRTUAL_RELEASE:I
@@ -163,7 +163,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 60
+    .line 64
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_TAP_NORMAL:I
@@ -172,7 +172,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 61
+    .line 65
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_TAP_LIGHT:I
@@ -181,7 +181,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 62
+    .line 66
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_FLICK:I
@@ -190,7 +190,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 63
+    .line 67
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_SWITCH:I
@@ -199,7 +199,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 64
+    .line 68
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_MESH_HEAVY:I
@@ -208,7 +208,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 65
+    .line 69
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_MESH_NORMAL:I
@@ -217,7 +217,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 66
+    .line 70
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_MESH_LIGHT:I
@@ -226,7 +226,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 67
+    .line 71
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_LONG_PRESS:I
@@ -235,7 +235,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 68
+    .line 72
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_POPUP_NORMAL:I
@@ -244,7 +244,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 69
+    .line 73
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_POPUP_LIGHT:I
@@ -253,7 +253,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 70
+    .line 74
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_PICK_UP:I
@@ -262,7 +262,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 71
+    .line 75
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_SCROLL_EDGE:I
@@ -271,7 +271,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 72
+    .line 76
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_TRIGGER_DRAWER:I
@@ -280,7 +280,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 73
+    .line 77
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_FLICK_LIGHT:I
@@ -289,7 +289,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroidx/collection/SparseArrayCompat;->append(ILjava/lang/Object;)V
 
-    .line 74
+    .line 78
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     sget v1, Lmiuix/view/HapticFeedbackConstants;->MIUI_HOLD:I
@@ -304,7 +304,7 @@
 .method public static nameOf(I)Ljava/lang/String;
     .locals 2
 
-    .line 32
+    .line 36
     sget-object v0, Lmiuix/view/HapticFeedbackConstants;->NAMES:Landroidx/collection/SparseArrayCompat;
 
     const-string v1, "IllegalFeedback"

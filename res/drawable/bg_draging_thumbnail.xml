@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/fold_edit_mode_workspace_thumbnail_background_draging_color"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners android:radius="@dimen/edit_mode_thumbnail_home_icon_radius" />
+            <solid android:color="@color/fold_edit_mode_workspace_thumbnail_background_draging_color" />
+        </shape>
+    </item>
+</ripple>

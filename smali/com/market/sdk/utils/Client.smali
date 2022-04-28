@@ -58,7 +58,7 @@
 
 .field public static final XIAOMI_SDK_VERSION_CODE:I = 0xb
 
-.field private static mIsInited:Z
+.field private static mIsInited:Z = false
 
 .field private static final mLock:Ljava/lang/Object;
 
@@ -384,7 +384,7 @@
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    const-string/jumbo v1, "window"
+    const-string v1, "window"
 
     .line 101
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;

@@ -234,6 +234,8 @@
     const-string p2, "transfer is closed"
 
     .line 166
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     .line 170
@@ -309,6 +311,8 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -322,6 +326,8 @@
     const-string v0, "call failed"
 
     .line 179
+    invoke-static {p2, v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :goto_0
     return-void
 .end method
@@ -490,11 +496,13 @@
     const-string v0, "Launcher.Transfer"
 
     const-string v1, "register transfer observer"
+
+    .line 113
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 113
     goto :goto_0
 
     :catch_0
@@ -504,10 +512,12 @@
     const-string v1, "Launcher.Transfer"
 
     const-string v2, "register transfer observer exception"
+
+    .line 115
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 115
     .line 118
     :cond_0
     :goto_0
@@ -549,10 +559,12 @@
     const-string v0, "Launcher.Transfer"
 
     const-string v1, "unregister transfer observer"
+
+    .line 124
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 124
     .line 126
     :cond_0
     monitor-exit p0
@@ -701,7 +713,7 @@
     .line 71
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0225
+    const v0, 0x7f0a0296
 
     .line 72
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->findViewById(I)Landroid/view/View;
@@ -712,7 +724,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBarTransferLayout;->mTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0a010f
+    const v0, 0x7f0a013b
 
     .line 73
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->findViewById(I)Landroid/view/View;
@@ -872,12 +884,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0800b8
+    const v0, 0x7f0800c5
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0800b7
+    const v0, 0x7f0800c4
 
     .line 373
     :goto_0
@@ -895,7 +907,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f06034b
+    const v1, 0x7f060395
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -909,7 +921,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f06034a
+    const v1, 0x7f060394
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -959,6 +971,8 @@
     const-string v1, "search bar extra layout is not shown"
 
     .line 301
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     .line 304

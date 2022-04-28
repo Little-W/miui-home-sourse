@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DropTargetBar;)V
     .locals 0
 
-    .line 69
+    .line 70
     iput-object p1, p0, Lcom/miui/home/launcher/DropTargetBar$1;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    .line 72
+    .line 73
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -49,7 +49,7 @@
 
     move-result p1
 
-    .line 73
+    .line 74
     iget-object v0, p0, Lcom/miui/home/launcher/DropTargetBar$1;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-static {v0}, Lcom/miui/home/launcher/DropTargetBar;->access$400(Lcom/miui/home/launcher/DropTargetBar;)Lcom/miui/home/launcher/Launcher;
@@ -64,7 +64,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/miui/home/launcher/DropTargetBar$1;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-static {v0}, Lcom/miui/home/launcher/DropTargetBar;->access$500(Lcom/miui/home/launcher/DropTargetBar;)Lcom/miui/home/launcher/UninstallDialogWrapper;

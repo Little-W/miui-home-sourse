@@ -45,7 +45,7 @@
 .method private makeFragmentNameByCategoryId(II)Ljava/lang/String;
     .locals 2
 
-    .line 87
+    .line 90
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -91,7 +91,7 @@
 .method getCategoryViewByCategoryId(I)Lcom/miui/home/launcher/allapps/category/ICategoryView;
     .locals 2
 
-    .line 45
+    .line 48
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     iget v1, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mViewPagerId:I
@@ -113,6 +113,13 @@
     .locals 4
 
     .line 41
+    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->getCount()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    .line 42
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mFragmentManager:Landroidx/fragment/app/FragmentManager;
 
     iget v1, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mViewPagerId:I
@@ -130,12 +137,17 @@
     check-cast p1, Lcom/miui/home/launcher/allapps/category/ICategoryView;
 
     return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
 .end method
 
 .method public getCount()I
     .locals 1
 
-    .line 60
+    .line 63
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mCategoryList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -167,17 +179,17 @@
 .method public getItemPosition(Ljava/lang/Object;)I
     .locals 2
 
-    .line 71
+    .line 74
     check-cast p1, Lcom/miui/home/launcher/allapps/category/ICategoryView;
 
-    .line 72
+    .line 75
     invoke-interface {p1}, Lcom/miui/home/launcher/allapps/category/ICategoryView;->getCategoryId()I
 
     move-result p1
 
     const/4 v0, 0x0
 
-    .line 73
+    .line 76
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mCategoryList:Ljava/util/ArrayList;
 
@@ -187,7 +199,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 74
+    .line 77
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mCategoryList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -220,7 +232,7 @@
 
     const/4 v0, 0x0
 
-    .line 49
+    .line 52
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->getCount()I
 
@@ -228,14 +240,14 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 50
+    .line 53
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->getCategoryViewByIndex(I)Lcom/miui/home/launcher/allapps/category/ICategoryView;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 51
+    .line 54
     invoke-interface {v1}, Lcom/miui/home/launcher/allapps/category/ICategoryView;->getCategoryId()I
 
     move-result v1
@@ -258,7 +270,7 @@
 .method public getPageTitle(I)Ljava/lang/CharSequence;
     .locals 1
 
-    .line 66
+    .line 69
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mCategoryList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -277,7 +289,7 @@
 .method protected makeFragmentName(IJ)Ljava/lang/String;
     .locals 1
 
-    .line 83
+    .line 86
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->mCategoryList:Ljava/util/ArrayList;
 
     long-to-int p2, p2

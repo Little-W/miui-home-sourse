@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;I[Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams;)V
     .locals 0
 
-    .line 111
+    .line 123
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$2;->this$0:Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
     iput p2, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$2;->val$toApplySeqNo:I
@@ -46,7 +46,7 @@
 .method public onFrameDraw(J)V
     .locals 4
 
-    .line 114
+    .line 126
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$2;->this$0:Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
     invoke-static {v0}, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->access$100(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;)Z
@@ -57,7 +57,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 115
+    .line 127
     iget-object p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$2;->this$0:Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
     invoke-static {p1}, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->access$200(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;)Landroid/os/Handler;
@@ -70,12 +70,12 @@
 
     move-result-object p1
 
-    .line 116
+    .line 128
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
     return-void
 
-    .line 119
+    .line 131
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$2;->this$0:Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
@@ -85,7 +85,7 @@
 
     invoke-static {v0, v2, p1, p2, v3}, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->access$300(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;ZJ[Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$SurfaceParams;)V
 
-    .line 120
+    .line 132
     iget-object p1, p0, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat$2;->this$0:Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
     invoke-static {p1}, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->access$200(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;)Landroid/os/Handler;
@@ -98,8 +98,42 @@
 
     move-result-object p1
 
-    .line 121
+    .line 133
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
+    .line 134
+    sget p1, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->sHwuiTaskTid0:I
+
+    if-nez p1, :cond_1
+
+    .line 135
+    invoke-static {}, Landroid/os/Process;->myTid()I
+
+    move-result p1
+
+    sput p1, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->sHwuiTaskTid0:I
+
+    .line 137
+    :cond_1
+    sget p1, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->sHwuiTaskTid1:I
+
+    if-nez p1, :cond_2
+
+    invoke-static {}, Landroid/os/Process;->myTid()I
+
+    move-result p1
+
+    sget p2, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->sHwuiTaskTid0:I
+
+    if-eq p1, p2, :cond_2
+
+    .line 138
+    invoke-static {}, Landroid/os/Process;->myTid()I
+
+    move-result p1
+
+    sput p1, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->sHwuiTaskTid1:I
+
+    :cond_2
     return-void
 .end method

@@ -190,74 +190,72 @@
 .end method
 
 .method private getListViewHeight()I
-    .locals 7
+    .locals 8
 
-    .line 152
+    .line 155
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mContentView:Landroid/view/View;
 
-    instance-of v0, v0, Landroid/widget/ListView;
+    const v1, 0x102000a
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ListView;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 153
-    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mContentView:Landroid/view/View;
-
-    check-cast v0, Landroid/widget/ListView;
-
+    .line 157
     invoke-virtual {v0}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
 
-    move-result-object v0
+    move-result-object v2
 
-    move v2, v1
+    move v3, v1
 
-    move v3, v2
+    move v4, v3
 
-    .line 154
+    .line 158
     :goto_0
-    invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
-
-    move-result v4
-
-    if-ge v2, v4, :cond_1
-
-    const/4 v4, 0x0
-
-    .line 155
-    iget-object v5, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mContentView:Landroid/view/View;
-
-    check-cast v5, Landroid/widget/ListView;
-
-    invoke-interface {v0, v2, v4, v5}, Landroid/widget/ListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v4
-
-    .line 156
-    invoke-static {v1, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+    invoke-interface {v2}, Landroid/widget/ListAdapter;->getCount()I
 
     move-result v5
 
-    .line 157
+    if-ge v3, v5, :cond_1
+
+    const/4 v5, 0x0
+
+    .line 159
+    invoke-interface {v2, v3, v5, v0}, Landroid/widget/ListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v5
+
+    .line 160
     invoke-static {v1, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v6
 
-    .line 156
-    invoke-virtual {v4, v5, v6}, Landroid/view/View;->measure(II)V
+    .line 161
+    invoke-static {v1, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
-    .line 158
-    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
+    move-result v7
 
-    move-result v4
+    .line 160
+    invoke-virtual {v5, v6, v7}, Landroid/view/View;->measure(II)V
 
-    add-int/2addr v3, v4
+    .line 162
+    invoke-virtual {v5}, Landroid/view/View;->getMeasuredHeight()I
 
-    add-int/lit8 v2, v2, 0x1
+    move-result v5
+
+    add-int/2addr v4, v5
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 161
+    .line 165
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mContentView:Landroid/view/View;
 
@@ -265,31 +263,31 @@
 
     move-result v2
 
-    .line 162
+    .line 166
     invoke-static {v1, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v3
 
-    .line 161
+    .line 165
     invoke-virtual {v0, v2, v3}, Landroid/view/View;->measure(II)V
 
-    .line 163
+    .line 167
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mContentView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v0
 
-    add-int/lit8 v3, v0, 0x0
+    add-int/lit8 v4, v0, 0x0
 
     :cond_1
-    return v3
+    return v4
 .end method
 
 .method private getMultipleChoiceViewHeight()I
     .locals 4
 
-    .line 170
+    .line 174
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mSeparateMenuView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
@@ -300,7 +298,7 @@
 
     if-nez v0, :cond_1
 
-    .line 171
+    .line 175
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mSeparateMenuView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -309,12 +307,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 172
+    .line 176
     instance-of v0, v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
     if-eqz v0, :cond_0
 
-    .line 173
+    .line 177
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mSeparateMenuView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -332,7 +330,7 @@
     :cond_0
     move v0, v1
 
-    .line 175
+    .line 179
     :goto_0
     iget-object v2, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mSeparateMenuView:Landroid/view/View;
 
@@ -340,15 +338,15 @@
 
     move-result v3
 
-    .line 176
+    .line 180
     invoke-static {v1, v1}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v1
 
-    .line 175
+    .line 179
     invoke-virtual {v2, v3, v1}, Landroid/view/View;->measure(II)V
 
-    .line 177
+    .line 181
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mSeparateMenuView:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
@@ -431,7 +429,7 @@
 .end method
 
 .method private showWithAnchor(Landroid/view/View;FF)V
-    .locals 7
+    .locals 9
 
     const/4 v0, 0x2
 
@@ -453,11 +451,11 @@
     const/4 p2, 0x1
 
     .line 123
-    aget v4, v1, p2
+    aget v1, v1, p2
 
     float-to-int p3, p3
 
-    add-int/2addr v4, p3
+    add-int/2addr v1, p3
 
     .line 124
     invoke-virtual {p1}, Landroid/view/View;->getRootView()Landroid/view/View;
@@ -465,53 +463,69 @@
     move-result-object p3
 
     .line 125
-    invoke-virtual {p3, v1}, Landroid/view/View;->getLocationInWindow([I)V
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->getWidth()I
 
-    .line 126
-    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
+    move-result v4
 
-    move-result v1
+    if-gt v3, v4, :cond_0
 
-    div-int/2addr v1, v0
-
-    if-gt v3, v1, :cond_0
+    move v4, p2
 
     goto :goto_0
 
     :cond_0
+    move v4, v2
+
+    .line 126
+    :goto_0
+    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
+
+    move-result v5
+
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->getWidth()I
+
+    move-result v6
+
+    sub-int/2addr v5, v6
+
+    if-lt v3, v5, :cond_1
+
+    goto :goto_1
+
+    :cond_1
     move p2, v2
 
     .line 127
-    :goto_0
+    :goto_1
     invoke-direct {p0}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->getListViewHeight()I
 
-    move-result v1
+    move-result v5
 
     .line 128
     invoke-direct {p0}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->getListViewHeight()I
 
-    move-result v3
+    move-result v6
 
-    div-int/2addr v3, v0
+    div-int/2addr v6, v0
 
-    sub-int/2addr v4, v3
+    sub-int/2addr v1, v6
 
-    int-to-float v0, v4
+    int-to-float v0, v1
 
     .line 129
     invoke-virtual {p3}, Landroid/view/View;->getHeight()I
 
-    move-result v3
+    move-result v1
 
-    int-to-float v3, v3
+    int-to-float v1, v1
 
-    const v4, 0x3dcccccd    # 0.1f
+    const v6, 0x3dcccccd    # 0.1f
 
-    mul-float/2addr v3, v4
+    mul-float/2addr v1, v6
 
-    cmpg-float v3, v0, v3
+    cmpg-float v1, v0, v1
 
-    if-gez v3, :cond_1
+    if-gez v1, :cond_2
 
     .line 130
     invoke-virtual {p3}, Landroid/view/View;->getHeight()I
@@ -520,34 +534,34 @@
 
     int-to-float v0, v0
 
-    mul-float/2addr v0, v4
+    mul-float/2addr v0, v6
 
     .line 132
-    :cond_1
+    :cond_2
     invoke-direct {p0}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->getMultipleChoiceViewHeight()I
 
-    move-result v3
+    move-result v1
 
-    add-int/2addr v1, v3
+    add-int/2addr v5, v1
 
-    int-to-float v1, v1
+    int-to-float v1, v5
 
-    add-float v3, v0, v1
+    add-float v5, v0, v1
 
     .line 133
     invoke-virtual {p3}, Landroid/view/View;->getHeight()I
 
-    move-result v5
+    move-result v7
 
-    int-to-float v5, v5
+    int-to-float v7, v7
 
-    const v6, 0x3f666666    # 0.9f
+    const v8, 0x3f666666    # 0.9f
 
-    mul-float/2addr v5, v6
+    mul-float/2addr v7, v8
 
-    cmpl-float v3, v3, v5
+    cmpl-float v5, v5, v7
 
-    if-lez v3, :cond_2
+    if-lez v5, :cond_3
 
     .line 134
     invoke-virtual {p3}, Landroid/view/View;->getHeight()I
@@ -556,23 +570,23 @@
 
     int-to-float v0, v0
 
-    mul-float/2addr v0, v6
+    mul-float/2addr v0, v8
 
     sub-float/2addr v0, v1
 
     .line 136
-    :cond_2
+    :cond_3
     invoke-virtual {p3}, Landroid/view/View;->getHeight()I
 
     move-result v1
 
     int-to-float v1, v1
 
-    mul-float/2addr v1, v4
+    mul-float/2addr v1, v6
 
     cmpg-float v1, v0, v1
 
-    if-gez v1, :cond_3
+    if-gez v1, :cond_4
 
     .line 137
     invoke-virtual {p3}, Landroid/view/View;->getHeight()I
@@ -581,7 +595,7 @@
 
     int-to-float v0, v0
 
-    mul-float/2addr v0, v4
+    mul-float/2addr v0, v6
 
     .line 138
     invoke-virtual {p3}, Landroid/view/View;->getHeight()I
@@ -590,25 +604,27 @@
 
     int-to-float v1, v1
 
-    const v3, 0x3f4ccccc    # 0.79999995f
+    const v5, 0x3f4ccccc    # 0.79999995f
 
-    mul-float/2addr v1, v3
+    mul-float/2addr v1, v5
 
     float-to-int v1, v1
 
     .line 139
     invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->setHeight(I)V
 
-    :cond_3
-    if-eqz p2, :cond_4
+    :cond_4
+    if-eqz v4, :cond_5
 
     .line 143
-    iget p2, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mMarginScreen:I
+    iget v3, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mMarginScreen:I
 
-    goto :goto_1
+    goto :goto_2
+
+    :cond_5
+    if-eqz p2, :cond_6
 
     .line 145
-    :cond_4
     invoke-virtual {p3}, Landroid/view/View;->getWidth()I
 
     move-result p2
@@ -621,13 +637,23 @@
 
     move-result p3
 
-    sub-int/2addr p2, p3
+    sub-int v3, p2, p3
 
-    :goto_1
-    float-to-int p3, v0
+    :cond_6
+    :goto_2
+    float-to-int p2, v0
 
-    .line 147
-    invoke-virtual {p0, p1, v2, p2, p3}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->showAtLocation(Landroid/view/View;III)V
+    .line 149
+    invoke-virtual {p0, p1, v2, v3, p2}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->showAtLocation(Landroid/view/View;III)V
+
+    .line 150
+    iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mRootView:Landroid/widget/FrameLayout;
+
+    invoke-virtual {p1}, Landroid/widget/FrameLayout;->getRootView()Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->changeWindowBackground(Landroid/view/View;)V
 
     return-void
 .end method
@@ -637,21 +663,21 @@
 .method protected prepareContentView(Landroid/content/Context;)V
     .locals 7
 
-    .line 184
+    .line 188
     new-instance v0, Landroid/widget/LinearLayout;
 
     invoke-direct {v0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mPopupContentView:Landroid/widget/LinearLayout;
 
-    .line 185
+    .line 189
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mPopupContentView:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 186
+    .line 190
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
@@ -668,7 +694,7 @@
 
     iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mSeparateMenuView:Landroid/view/View;
 
-    .line 187
+    .line 191
     sget v0, Lmiuix/appcompat/R$attr;->immersionWindowBackground:I
 
     invoke-static {p1, v0}, Lmiuix/internal/util/AttributeResolver;->resolveDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -677,17 +703,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 189
+    .line 193
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mBackgroundPadding:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 190
+    .line 194
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mRootView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 191
+    .line 195
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mSeparateMenuView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
@@ -700,7 +726,7 @@
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 193
+    .line 197
     :cond_0
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -710,7 +736,7 @@
 
     invoke-direct {v0, v4, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 195
+    .line 199
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -721,10 +747,10 @@
 
     move-result p1
 
-    .line 196
+    .line 200
     invoke-virtual {v0, v3, p1, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 197
+    .line 201
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mPopupContentView:Landroid/widget/LinearLayout;
 
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mRootView:Landroid/widget/FrameLayout;
@@ -737,17 +763,17 @@
 
     invoke-virtual {p1, v1, v5}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 198
+    .line 202
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mPopupContentView:Landroid/widget/LinearLayout;
 
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mSeparateMenuView:Landroid/view/View;
 
     invoke-virtual {p1, v1, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 199
+    .line 203
     invoke-virtual {p0, v2}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 200
+    .line 204
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mPopupContentView:Landroid/widget/LinearLayout;
 
     invoke-super {p0, p1}, Lmiuix/internal/widget/ListPopup;->setPopupWindowContentView(Landroid/view/View;)V
@@ -789,7 +815,7 @@
     .line 114
     iget-object p2, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->mSeparateMenuView:Landroid/view/View;
 
-    invoke-static {p2}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->setPopupShadowAlpha(Landroid/view/View;)V
+    invoke-virtual {p0, p2}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->setPopupShadowAlpha(Landroid/view/View;)V
 
     .line 115
     invoke-direct {p0, p1, p3, p4}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowImpl;->showWithAnchor(Landroid/view/View;FF)V

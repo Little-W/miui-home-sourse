@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/recents/RecentsReceiver$2$1$1;J)V
     .locals 0
 
-    .line 199
+    .line 180
     iput-object p1, p0, Lcom/miui/home/recents/RecentsReceiver$2$1$1$1;->this$3:Lcom/miui/home/recents/RecentsReceiver$2$1$1;
 
     iput-wide p2, p0, Lcom/miui/home/recents/RecentsReceiver$2$1$1$1;->val$freeAtLast:J
@@ -39,7 +39,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 4
 
-    .line 201
+    .line 182
     iget-object p1, p0, Lcom/miui/home/recents/RecentsReceiver$2$1$1$1;->this$3:Lcom/miui/home/recents/RecentsReceiver$2$1$1;
 
     iget-object p1, p1, Lcom/miui/home/recents/RecentsReceiver$2$1$1;->this$2:Lcom/miui/home/recents/RecentsReceiver$2$1;
@@ -54,7 +54,7 @@
 
     invoke-interface {p1, v0}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    .line 203
+    .line 184
     iget-object p1, p0, Lcom/miui/home/recents/RecentsReceiver$2$1$1$1;->this$3:Lcom/miui/home/recents/RecentsReceiver$2$1$1;
 
     iget-object p1, p1, Lcom/miui/home/recents/RecentsReceiver$2$1$1;->this$2:Lcom/miui/home/recents/RecentsReceiver$2$1;
@@ -81,7 +81,7 @@
 
     move-result-object p1
 
-    .line 204
+    .line 185
     iget-object v0, p0, Lcom/miui/home/recents/RecentsReceiver$2$1$1$1;->this$3:Lcom/miui/home/recents/RecentsReceiver$2$1$1;
 
     iget-object v0, v0, Lcom/miui/home/recents/RecentsReceiver$2$1$1;->this$2:Lcom/miui/home/recents/RecentsReceiver$2$1;
@@ -100,7 +100,7 @@
 
     move-result-object p1
 
-    .line 205
+    .line 186
     invoke-virtual {p1}, Landroid/widget/Toast;->show()V
 
     return-void

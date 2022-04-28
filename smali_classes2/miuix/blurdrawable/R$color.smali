@@ -15,6 +15,6 @@
 
 
 # static fields
-.field public static final miuix_blurdrawable_view_fg_dark:I = 0x7f0602bc
+.field public static final miuix_blurdrawable_view_fg_dark:I = 0x7f060300
 
-.field public static final miuix_blurdrawable_view_fg_light:I = 0x7f0602bd
+.field public static final miuix_blurdrawable_view_fg_light:I = 0x7f060301

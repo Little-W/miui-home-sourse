@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;)V
     .locals 0
 
-    .line 53
+    .line 51
     iput-object p1, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method public static synthetic lambda$run$0(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;Ljava/lang/Void;)Ljava/lang/Void;
     .locals 2
 
-    .line 57
+    .line 55
     invoke-static {}, Lcom/miui/home/launcher/uioverrides/WallpaperColorInfo;->getInstance()Lcom/miui/home/launcher/uioverrides/WallpaperColorInfo;
 
     move-result-object p1
@@ -55,7 +55,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/uioverrides/WallpaperColorInfo;->update(Lcom/miui/home/launcher/wallpaper/WallpaperColorsCompat;)V
 
-    .line 58
+    .line 56
     iget-object p1, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 
     invoke-static {p1}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;->access$200(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;)Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompat;
@@ -66,28 +66,28 @@
 
     move-result-object p1
 
-    .line 59
+    .line 57
     invoke-virtual {p1}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperInfo;->getColorMode()I
 
     move-result v0
 
     invoke-static {v0}, Lcom/miui/home/launcher/WallpaperUtils;->setCurrentWallpaperColorMode(I)V
 
-    .line 60
+    .line 58
     invoke-virtual {p1}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperInfo;->getStatusBarColorMode()I
 
     move-result v0
 
     invoke-static {v0}, Lcom/miui/home/launcher/WallpaperUtils;->setCurrentStatusBarAreaColorMode(I)V
 
-    .line 61
+    .line 59
     invoke-virtual {p1}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperInfo;->getSearchBarColorMode()I
 
     move-result v0
 
     invoke-static {v0}, Lcom/miui/home/launcher/WallpaperUtils;->setCurrentSearchBarAreaColorMode(I)V
 
-    .line 62
+    .line 60
     invoke-virtual {p1}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperInfo;->isScrollable()Z
 
     move-result p1
@@ -102,7 +102,7 @@
 .method public static synthetic lambda$run$1(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;Ljava/lang/Void;)V
     .locals 0
 
-    .line 64
+    .line 62
     iget-object p1, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 
     invoke-static {p1}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;->access$100(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;)V
@@ -115,7 +115,7 @@
 .method public run()V
     .locals 3
 
-    .line 56
+    .line 54
     new-instance v0, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$1$vBp8QSYt9evNAhcm28VQ7uSb1bc;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/wallpaper/-$$Lambda$DesktopWallpaperManager$1$vBp8QSYt9evNAhcm28VQ7uSb1bc;-><init>(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$1;)V

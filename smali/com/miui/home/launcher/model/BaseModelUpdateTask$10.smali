@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/model/BaseModelUpdateTask;->bindScreenRemoved(J)V
+    value = Lcom/miui/home/launcher/model/BaseModelUpdateTask;->bindScreenAdded(JII)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,17 +20,25 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/model/BaseModelUpdateTask;
 
+.field final synthetic val$position:I
+
 .field final synthetic val$screenId:J
+
+.field final synthetic val$screenType:I
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;J)V
+.method constructor <init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;JII)V
     .locals 0
 
-    .line 177
+    .line 183
     iput-object p1, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$10;->this$0:Lcom/miui/home/launcher/model/BaseModelUpdateTask;
 
     iput-wide p2, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$10;->val$screenId:J
+
+    iput p4, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$10;->val$screenType:I
+
+    iput p5, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$10;->val$position:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,12 +48,16 @@
 
 # virtual methods
 .method public execute(Lcom/miui/home/launcher/LauncherModel$Callbacks;)V
-    .locals 2
+    .locals 4
 
-    .line 180
+    .line 186
     iget-wide v0, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$10;->val$screenId:J
 
-    invoke-interface {p1, v0, v1}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->bindScreenRemoved(J)V
+    iget v2, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$10;->val$screenType:I
+
+    iget v3, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$10;->val$position:I
+
+    invoke-interface {p1, v0, v1, v2, v3}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->bindScreenAdded(JII)V
 
     return-void
 .end method

@@ -25,6 +25,22 @@
     return-void
 .end method
 
+.method private requestInputMethod(Landroid/app/Dialog;)V
+    .locals 1
+
+    .line 61
+    invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+
+    move-result-object p1
+
+    const/4 v0, 0x5
+
+    .line 62
+    invoke-virtual {p1, v0}, Landroid/view/Window;->setSoftInputMode(I)V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
@@ -119,12 +135,12 @@
 
     invoke-interface {p1, v1}, Lmiuix/preference/IPreferenceDialogFragment;->onPrepareDialogBuilder(Lmiuix/appcompat/app/AlertDialog$Builder;)V
 
-    .line 46
+    .line 45
     invoke-virtual {v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p1
 
-    .line 47
+    .line 48
     iget-object v0, p0, Lmiuix/preference/PreferenceDialogFragmentCompatDelegate;->mInternal:Lmiuix/preference/IPreferenceDialogFragment;
 
     invoke-interface {v0}, Lmiuix/preference/IPreferenceDialogFragment;->needInputMethod()Z
@@ -133,15 +149,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 48
-    invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    const/4 v1, 0x5
-
     .line 49
-    invoke-virtual {v0, v1}, Landroid/view/Window;->setSoftInputMode(I)V
+    invoke-direct {p0, p1}, Lmiuix/preference/PreferenceDialogFragmentCompatDelegate;->requestInputMethod(Landroid/app/Dialog;)V
 
     :cond_1
     return-object p1

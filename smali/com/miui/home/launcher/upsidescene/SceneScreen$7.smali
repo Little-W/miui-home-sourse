@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
     .locals 0
 
-    .line 974
+    .line 976
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$7;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 976
+    .line 978
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$7;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     const/4 p2, 0x0
 
     invoke-static {p1, p2}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$900(Lcom/miui/home/launcher/upsidescene/SceneScreen;Z)V
 
-    .line 977
+    .line 979
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$7;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     new-instance p2, Lcom/miui/home/launcher/upsidescene/SceneScreen$7$1;

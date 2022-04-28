@@ -48,12 +48,12 @@
 .method private constructor <init>(Lmiuix/preference/PreferenceFragment;)V
     .locals 1
 
-    .line 111
+    .line 283
     iput-object p1, p0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->this$0:Lmiuix/preference/PreferenceFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 112
+    .line 284
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -62,32 +62,32 @@
 
     const/4 p1, 0x0
 
-    .line 113
+    .line 285
     iput-object p1, p0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->currentMovetb:[I
 
-    .line 114
+    .line 286
     iput-object p1, p0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->currentEndtb:[I
 
     const/4 p1, 0x0
 
-    .line 115
+    .line 287
     iput p1, p0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->index:I
 
     const/4 v0, -0x1
 
-    .line 116
+    .line 288
     iput v0, p0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->preViewHY:I
 
-    .line 117
+    .line 289
     iput v0, p0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->nextViewY:I
 
-    .line 118
+    .line 290
     iput-boolean p1, p0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->endRadioButtonCategory:Z
 
-    .line 119
+    .line 291
     iput-boolean p1, p0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->startRadioButtonCategory:Z
 
-    .line 120
+    .line 292
     iput p1, p0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->type:I
 
     return-void
@@ -96,7 +96,7 @@
 .method synthetic constructor <init>(Lmiuix/preference/PreferenceFragment;Lmiuix/preference/PreferenceFragment$1;)V
     .locals 0
 
-    .line 111
+    .line 283
     invoke-direct {p0, p1}, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;-><init>(Lmiuix/preference/PreferenceFragment;)V
 
     return-void
@@ -107,7 +107,7 @@
 .method public addPreference(I)V
     .locals 1
 
-    .line 123
+    .line 295
     iget-object v0, p0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->preferenceList:Ljava/util/List;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -122,7 +122,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 128
+    .line 300
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -141,7 +141,7 @@
 
     iget-object v1, p0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->currentMovetb:[I
 
-    .line 130
+    .line 302
     invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v1
@@ -154,7 +154,7 @@
 
     iget-object v1, p0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->currentEndtb:[I
 
-    .line 131
+    .line 303
     invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v1

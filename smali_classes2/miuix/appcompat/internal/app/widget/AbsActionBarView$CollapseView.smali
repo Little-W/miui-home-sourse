@@ -66,10 +66,7 @@
 .method public animTo(FIILmiuix/animation/base/AnimConfig;)V
     .locals 4
 
-    .line 420
-    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->cancelAnim()V
-
-    .line 421
+    .line 414
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     const-string v1, "to"
@@ -90,7 +87,7 @@
     :goto_0
     float-to-double v2, p1
 
-    .line 422
+    .line 415
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -99,7 +96,7 @@
 
     int-to-double v1, p2
 
-    .line 423
+    .line 416
     invoke-virtual {p1, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -108,12 +105,12 @@
 
     int-to-double v0, p3
 
-    .line 424
+    .line 417
     invoke-virtual {p1, p2, v0, v1}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
-    .line 426
+    .line 419
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -135,7 +132,7 @@
 
     const/4 v0, 0x1
 
-    .line 427
+    .line 420
     new-array v1, v0, [Landroid/view/View;
 
     const/4 v2, 0x0
@@ -189,54 +186,6 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    return-void
-.end method
-
-.method public cancelAnim()V
-    .locals 4
-
-    .line 404
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/view/View;
-
-    const/4 v2, 0x1
-
-    .line 405
-    new-array v2, v2, [Landroid/view/View;
-
-    const/4 v3, 0x0
-
-    aput-object v1, v2, v3
-
-    invoke-static {v2}, Lmiuix/animation/Folme;->useAt([Landroid/view/View;)Lmiuix/animation/IFolme;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lmiuix/animation/IFolme;->state()Lmiuix/animation/IStateStyle;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lmiuix/animation/IStateStyle;->cancel()V
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
@@ -317,7 +266,7 @@
 .method public setAnimFrom(FII)V
     .locals 4
 
-    .line 410
+    .line 404
     new-instance v0, Lmiuix/animation/controller/AnimState;
 
     const-string v1, "from"
@@ -338,7 +287,7 @@
     :goto_0
     float-to-double v2, p1
 
-    .line 411
+    .line 405
     invoke-virtual {v0, v1, v2, v3}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -347,7 +296,7 @@
 
     int-to-double v1, p2
 
-    .line 412
+    .line 406
     invoke-virtual {p1, v0, v1, v2}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
@@ -356,12 +305,12 @@
 
     int-to-double v0, p3
 
-    .line 413
+    .line 407
     invoke-virtual {p1, p2, v0, v1}, Lmiuix/animation/controller/AnimState;->add(Ljava/lang/Object;D)Lmiuix/animation/controller/AnimState;
 
     move-result-object p1
 
-    .line 414
+    .line 408
     iget-object p2, p0, Lmiuix/appcompat/internal/app/widget/AbsActionBarView$CollapseView;->mViews:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -383,7 +332,7 @@
 
     const/4 v0, 0x1
 
-    .line 415
+    .line 409
     new-array v0, v0, [Landroid/view/View;
 
     const/4 v1, 0x0

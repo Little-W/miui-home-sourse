@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract updateColor()V
+.method public abstract notifyColorChanged()V
+.end method
+
+.method public abstract updateColor(I)V
 .end method

@@ -112,6 +112,7 @@
 
     invoke-virtual {v1}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->startDispatchingItemsChanged()V
 
+    .line 68
     throw v0
 .end method
 
@@ -261,6 +262,7 @@
 
     invoke-virtual {v1}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->startDispatchingItemsChanged()V
 
+    .line 88
     throw v0
 .end method
 

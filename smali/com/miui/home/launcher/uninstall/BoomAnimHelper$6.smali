@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/sound/SoundPoolHelper;F)V
     .locals 0
 
-    .line 169
+    .line 171
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$6;->val$soundPoolHelper:Lcom/miui/home/launcher/sound/SoundPoolHelper;
 
     iput p2, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$6;->val$volume:F
@@ -39,14 +39,14 @@
 .method public onBegin(Ljava/lang/Object;)V
     .locals 2
 
-    .line 172
+    .line 174
     invoke-static {}, Lcom/miui/home/launcher/sound/SoundPoolHelper;->getEnableDeleteSound()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 173
+    .line 175
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$6;->val$soundPoolHelper:Lcom/miui/home/launcher/sound/SoundPoolHelper;
 
     const/4 v0, 0x0

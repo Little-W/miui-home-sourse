@@ -40,7 +40,7 @@
 .method public getIconResId()I
     .locals 1
 
-    const v0, 0x7f0801c2
+    const v0, 0x7f0801f5
 
     return v0
 .end method
@@ -48,7 +48,7 @@
 .method public getLabelResId()I
     .locals 1
 
-    const v0, 0x7f100378
+    const v0, 0x7f1003fb
 
     return v0
 .end method

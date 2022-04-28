@@ -41,10 +41,10 @@
 
 .field public static final months_shortest:I = 0x7f03001b
 
-.field public static final solar_terms:I = 0x7f03001e
+.field public static final solar_terms:I = 0x7f03001f
 
-.field public static final week_days:I = 0x7f030024
+.field public static final week_days:I = 0x7f030025
 
-.field public static final week_days_short:I = 0x7f030025
+.field public static final week_days_short:I = 0x7f030026
 
-.field public static final week_days_shortest:I = 0x7f030026
+.field public static final week_days_shortest:I = 0x7f030027

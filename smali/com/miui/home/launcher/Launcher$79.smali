@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->checkDuplicateIconWhenRecommendAdded(Lcom/miui/home/launcher/ShortcutInfo;)Z
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/launcher/Launcher;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,17 +20,13 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$existItem:Lcom/miui/home/launcher/ShortcutInfo;
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 8174
+    .line 8502
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$79;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$79;->val$existItem:Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,14 +36,16 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    .line 8176
+    .line 8505
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$79;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$79;->val$existItem:Lcom/miui/home/launcher/ShortcutInfo;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$9500(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)Z
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->invalidateThumbnails()V
 
     return-void
 .end method

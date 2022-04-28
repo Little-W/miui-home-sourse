@@ -17,41 +17,41 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .line 40
+    .line 41
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 34
+    .line 35
     iput v0, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretProgress:F
 
-    .line 36
+    .line 37
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretPaint:Landroid/graphics/Paint;
 
-    .line 37
+    .line 38
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mPath:Landroid/graphics/Path;
 
-    .line 41
+    .line 42
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070054
+    const v1, 0x7f070055
 
-    .line 43
+    .line 44
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    .line 45
+    .line 46
     iget-object v2, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -66,44 +66,44 @@
 
     invoke-virtual {v2, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 46
+    .line 47
     iget-object p1, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretPaint:Landroid/graphics/Paint;
 
     const/4 v2, 0x1
 
     invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 47
+    .line 48
     iget-object p1, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretPaint:Landroid/graphics/Paint;
 
     int-to-float v1, v1
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 48
+    .line 49
     iget-object p1, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 49
+    .line 50
     iget-object p1, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 50
+    .line 51
     iget-object p1, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
 
     invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStrokeJoin(Landroid/graphics/Paint$Join;)V
 
-    const p1, 0x7f070053
+    const p1, 0x7f070054
 
-    .line 51
+    .line 52
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p1
@@ -118,7 +118,7 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 8
 
-    .line 67
+    .line 68
     iget-object v0, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getAlpha()I
@@ -137,7 +137,7 @@
 
     return-void
 
-    .line 72
+    .line 73
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->getBounds()Landroid/graphics/Rect;
 
@@ -157,7 +157,7 @@
 
     sub-float/2addr v0, v1
 
-    .line 73
+    .line 74
     invoke-virtual {p0}, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v1
@@ -176,7 +176,7 @@
 
     sub-float/2addr v1, v2
 
-    .line 74
+    .line 75
     invoke-virtual {p0}, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v2
@@ -197,7 +197,7 @@
 
     add-float/2addr v2, v3
 
-    .line 75
+    .line 76
     invoke-virtual {p0}, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v3
@@ -206,6 +206,28 @@
 
     int-to-float v3, v3
 
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->isBranchOpen()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    .line 77
+    iget-object v5, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretPaint:Landroid/graphics/Paint;
+
+    invoke-virtual {v5}, Landroid/graphics/Paint;->getStrokeWidth()F
+
+    move-result v5
+
+    mul-float/2addr v5, v4
+
+    goto :goto_0
+
+    :cond_1
     iget-object v5, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v5}, Landroid/graphics/Paint;->getStrokeWidth()F
@@ -214,6 +236,7 @@
 
     div-float/2addr v5, v4
 
+    :goto_0
     add-float/2addr v3, v5
 
     const/high16 v5, 0x40800000    # 4.0f
@@ -224,12 +247,12 @@
 
     sub-float/2addr v1, v5
 
-    .line 81
+    .line 83
     iget-object v5, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {v5}, Landroid/graphics/Path;->reset()V
 
-    .line 82
+    .line 84
     iget-object v5, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mPath:Landroid/graphics/Path;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->getNormalizedCaretProgress()F
@@ -246,7 +269,7 @@
 
     invoke-virtual {v5, v2, v6}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 83
+    .line 85
     iget-object v5, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mPath:Landroid/graphics/Path;
 
     div-float v4, v0, v4
@@ -263,7 +286,7 @@
 
     invoke-virtual {v5, v4, v6}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 84
+    .line 86
     iget-object v4, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mPath:Landroid/graphics/Path;
 
     add-float/2addr v2, v0
@@ -280,7 +303,7 @@
 
     invoke-virtual {v4, v2, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 85
+    .line 87
     iget-object v0, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mPath:Landroid/graphics/Path;
 
     iget-object v1, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretPaint:Landroid/graphics/Paint;
@@ -293,7 +316,7 @@
 .method public getCaretProgress()F
     .locals 1
 
-    .line 106
+    .line 108
     iget v0, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretProgress:F
 
     return v0
@@ -302,7 +325,7 @@
 .method public getIntrinsicHeight()I
     .locals 1
 
-    .line 56
+    .line 57
     iget v0, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretSizePx:I
 
     return v0
@@ -311,7 +334,7 @@
 .method public getIntrinsicWidth()I
     .locals 1
 
-    .line 61
+    .line 62
     iget v0, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretSizePx:I
 
     return v0
@@ -320,7 +343,7 @@
 .method public getNormalizedCaretProgress()F
     .locals 2
 
-    .line 115
+    .line 117
     iget v0, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretProgress:F
 
     const/high16 v1, -0x40800000    # -1.0f
@@ -345,12 +368,12 @@
 .method public setAlpha(I)V
     .locals 1
 
-    .line 126
+    .line 128
     iget-object v0, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 127
+    .line 129
     invoke-virtual {p0}, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->invalidateSelf()V
 
     return-void
@@ -359,10 +382,10 @@
 .method public setCaretProgress(F)V
     .locals 0
 
-    .line 96
+    .line 98
     iput p1, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretProgress:F
 
-    .line 97
+    .line 99
     invoke-virtual {p0}, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->invalidateSelf()V
 
     return-void
@@ -377,12 +400,12 @@
 .method public setPaintColor(I)V
     .locals 1
 
-    .line 136
+    .line 138
     iget-object v0, p0, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->mCaretPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 137
+    .line 139
     invoke-virtual {p0}, Lcom/miui/home/launcher/pageindicators/CaretDrawable;->invalidateSelf()V
 
     return-void

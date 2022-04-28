@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.shortcuts.IconAndTitleShortcutMenuItemContainer
-    android:orientation="vertical"
-    android:layout_width="0.0dip"
-    android:layout_height="fill_parent"
-    android:layout_weight="1.0"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.miui.home.launcher.shortcuts.AntiAliasImageView
-        android:layout_gravity="center_horizontal"
-        android:id="@id/item_icon"
-        android:layout_width="@dimen/vertical_shortcut_menu_item_icon_width"
-        android:layout_height="@dimen/vertical_shortcut_menu_item_icon_height"
-        android:layout_marginTop="@dimen/vertical_shortcut_menu_item_icon_marginTop"
-        android:scaleType="fitCenter" />
-    <TextView
-        android:textSize="@dimen/vertical_shortcut_menu_item_text_size"
-        android:layout_gravity="center"
-        android:id="@id/item_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/vertical_shortcut_menu_item_text_marginTop"
-        android:layout_marginBottom="@dimen/vertical_shortcut_menu_item_text_marginBottom"
-        android:fontFamily="miui-bold"
-        android:textDirection="locale"
-        android:paddingStart="@dimen/vertical_shortcut_menu_item_text_padding_horizontal"
-        android:paddingEnd="@dimen/vertical_shortcut_menu_item_text_padding_horizontal" />
+<com.miui.home.launcher.shortcuts.IconAndTitleShortcutMenuItemContainer android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.launcher.shortcuts.AntiAliasImageView android:layout_gravity="center_horizontal" android:id="@id/item_icon" android:layout_width="@dimen/vertical_shortcut_menu_item_icon_width" android:layout_height="@dimen/vertical_shortcut_menu_item_icon_height" android:layout_marginTop="@dimen/vertical_shortcut_menu_item_icon_marginTop" android:scaleType="fitCenter" />
+    <TextView android:textSize="@dimen/vertical_shortcut_menu_item_text_size" android:gravity="center" android:layout_gravity="center" android:id="@id/item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/vertical_shortcut_menu_item_text_marginTop" android:layout_marginBottom="@dimen/vertical_shortcut_menu_item_text_marginBottom" android:fontFamily="miui-bold" android:textDirection="locale" android:paddingStart="@dimen/vertical_shortcut_menu_item_text_padding_horizontal" android:paddingEnd="@dimen/vertical_shortcut_menu_item_text_padding_horizontal" />
 </com.miui.home.launcher.shortcuts.IconAndTitleShortcutMenuItemContainer>

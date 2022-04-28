@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">اس کے ساتھ اشتراک کریں</string>
     <string name="abc_shareactionprovider_share_with_application">%s کے ساتھ اشتراک کریں</string>
     <string name="abc_toolbar_collapse_description">سکیڑیں</string>
+    <string name="common_google_play_services_unknown_issue">‏%1$s کو Google Play سروسز کے ساتھ مسئلہ پیش آ رہا ہے۔ براہ کرم دوبارہ کوشش کریں۔</string>
     <string name="copy">کاپی کریں</string>
     <string name="expand_button_title">جدید ترین</string>
     <string name="not_set">سیٹ نہیں ہے</string>

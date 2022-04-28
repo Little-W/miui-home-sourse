@@ -22,7 +22,7 @@
 .method constructor <init>(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)V
     .locals 0
 
-    .line 364
+    .line 365
     iput-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$4;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
@@ -35,7 +35,7 @@
 .method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 4
 
-    .line 367
+    .line 368
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -50,7 +50,7 @@
 
     goto :goto_0
 
-    .line 370
+    .line 371
     :cond_0
     new-instance v0, Landroid/graphics/Rect;
 
@@ -66,7 +66,7 @@
 
     invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 371
+    .line 372
     iget v1, v0, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
@@ -77,7 +77,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 372
+    .line 373
     iget v1, v0, Landroid/graphics/Rect;->top:I
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
@@ -88,7 +88,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
-    .line 373
+    .line 374
     iget v1, v0, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
@@ -99,7 +99,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
-    .line 374
+    .line 375
     iget v1, v0, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
@@ -110,7 +110,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
-    .line 375
+    .line 376
     iget-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$4;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-virtual {p1}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->getContext()Landroid/content/Context;
@@ -129,7 +129,7 @@
 
     int-to-float p1, p1
 
-    .line 376
+    .line 377
     invoke-virtual {p2, v0, p1}, Landroid/graphics/Outline;->setRoundRect(Landroid/graphics/Rect;F)V
 
     return-void

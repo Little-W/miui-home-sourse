@@ -252,7 +252,11 @@
 
     if-ne p1, v1, :cond_0
 
-    invoke-static {}, Lmiuix/internal/util/DeviceHelper;->isTablet()Z
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lmiuix/internal/util/DeviceHelper;->isTablet(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -586,7 +590,11 @@
 
     if-ne p1, v0, :cond_2
 
-    invoke-static {}, Lmiuix/internal/util/DeviceHelper;->isTablet()Z
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lmiuix/internal/util/DeviceHelper;->isTablet(Landroid/content/Context;)Z
 
     move-result p1
 
@@ -779,7 +787,11 @@
     if-eqz p1, :cond_0
 
     .line 302
-    invoke-static {}, Lmiuix/internal/util/DeviceHelper;->isTablet()Z
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/AbsActionBarView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lmiuix/internal/util/DeviceHelper;->isTablet(Landroid/content/Context;)Z
 
     move-result v0
 

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;Landroid/os/Handler;)V
     .locals 0
 
-    .line 406
+    .line 424
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -33,163 +33,47 @@
 
 # virtual methods
 .method public onChange(Z)V
-    .locals 5
+    .locals 2
 
-    .line 409
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$500(Lcom/miui/home/recents/BaseRecentsImpl;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    .line 410
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p1
-
-    const-string v0, "elderly_mode"
-
-    const/4 v1, 0x0
-
-    invoke-static {p1, v0, v1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getBooleanFromSystem(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
-
-    move-result p1
-
-    .line 411
-    iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    const-string v2, "force_fsg_nav_bar"
-
-    invoke-static {v0, v2}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getGlobalBoolean(Landroid/content/ContentResolver;Ljava/lang/String;)Z
-
-    move-result v0
-
-    const-string v2, "RecentsImpl"
-
-    .line 412
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "mElderlyModeObserver    onChange    isElderlyMode="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v4, "   isFsMode="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    if-eqz p1, :cond_1
-
-    if-eqz v0, :cond_0
-
-    .line 417
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {p1, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$700(Lcom/miui/home/recents/BaseRecentsImpl;Z)V
-
-    .line 418
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$600(Lcom/miui/home/recents/BaseRecentsImpl;)V
-
-    .line 421
-    :cond_0
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
-
-    move-result-object p1
-
-    const-string v1, "is_fs_gesture_mode_before_elder_mode"
-
-    invoke-static {p1, v1, v0}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
-
-    goto :goto_0
-
-    .line 422
-    :cond_1
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
-
-    move-result-object p1
-
-    const-string v2, "is_fs_gesture_mode_before_elder_mode"
-
-    invoke-static {p1, v2}, Lcom/miui/home/launcher/common/PreferenceUtils;->contains(Landroid/content/Context;Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    .line 423
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
-
-    move-result-object p1
-
-    const-string v2, "is_fs_gesture_mode_before_elder_mode"
-
-    invoke-static {p1, v2, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Landroid/content/Context;Ljava/lang/String;Z)Z
-
-    move-result p1
-
-    const-string v1, "RecentsImpl"
-
-    .line 424
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "mElderlyModeObserver    onChange    savedFsMode="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    if-eq v0, p1, :cond_2
+    const-string p1, "RecentsImpl"
 
     .line 427
-    iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$700(Lcom/miui/home/recents/BaseRecentsImpl;Z)V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "mForceImmersiveNavBarListener    onChange    mIsInAnotherPro="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+
+    invoke-static {v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$600(Lcom/miui/home/recents/BaseRecentsImpl;)Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 428
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$600(Lcom/miui/home/recents/BaseRecentsImpl;)V
+    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$600(Lcom/miui/home/recents/BaseRecentsImpl;)Z
 
-    :cond_2
-    :goto_0
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 429
+    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$7;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+
+    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$700(Lcom/miui/home/recents/BaseRecentsImpl;)V
+
+    :cond_0
     return-void
 .end method

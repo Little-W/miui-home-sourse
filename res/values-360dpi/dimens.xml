@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="miuix_appcompat_dialog_progressbar_size">16.799988dip</dimen>
+    <dimen name="miuix_appcompat_scrollbar_thumb_vertical_padding">6.669983dip</dimen>
+    <dimen name="miuix_appcompat_scrollbar_thumb_vertical_radius">8.889984dip</dimen>
+    <dimen name="miuix_appcompat_scrollbar_thumb_vertical_width">3.5599976dip</dimen>
+</resources>

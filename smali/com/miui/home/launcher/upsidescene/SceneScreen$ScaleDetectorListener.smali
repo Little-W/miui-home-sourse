@@ -25,7 +25,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
     .locals 0
 
-    .line 69
+    .line 71
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;Lcom/miui/home/launcher/upsidescene/SceneScreen$1;)V
     .locals 0
 
-    .line 69
+    .line 71
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen$ScaleDetectorListener;-><init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
 
     return-void
@@ -47,7 +47,7 @@
 .method public onScale(Landroid/view/ScaleGestureDetector;)Z
     .locals 4
 
-    .line 86
+    .line 88
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-static {v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$200(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/upsidescene/AppsSelectView;
@@ -60,13 +60,13 @@
 
     return v1
 
-    .line 89
+    .line 91
     :cond_0
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
 
     move-result v0
 
-    .line 91
+    .line 93
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-static {v2}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$000(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
@@ -79,7 +79,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 92
+    .line 94
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getTimeDelta()J
 
     move-result-wide v2
@@ -103,7 +103,7 @@
 
     if-gez v2, :cond_2
 
-    .line 98
+    .line 100
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->onPinchIn(Landroid/view/ScaleGestureDetector;)Z
@@ -119,7 +119,7 @@
 
     if-lez v0, :cond_3
 
-    .line 102
+    .line 104
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->onPinchOut(Landroid/view/ScaleGestureDetector;)Z
@@ -135,7 +135,7 @@
 .method public onScaleBegin(Landroid/view/ScaleGestureDetector;)Z
     .locals 0
 
-    .line 77
+    .line 79
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-static {p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$000(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
@@ -154,7 +154,7 @@
 .method public onScaleEnd(Landroid/view/ScaleGestureDetector;)V
     .locals 1
 
-    .line 81
+    .line 83
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-static {p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$000(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
@@ -163,7 +163,7 @@
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/ScrollableScreen;->finishCurrentGesture()V
 
-    .line 82
+    .line 84
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$ScaleDetectorListener;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     const/4 v0, 0x1

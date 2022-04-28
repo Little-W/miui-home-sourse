@@ -37,7 +37,7 @@
 .method constructor <init>(Ljava/io/InputStream;Ljava/lang/String;)V
     .locals 0
 
-    .line 274
+    .line 293
     iput-object p1, p0, Lcom/airbnb/lottie/LottieCompositionFactory$4;->val$stream:Ljava/io/InputStream;
 
     iput-object p2, p0, Lcom/airbnb/lottie/LottieCompositionFactory$4;->val$cacheKey:Ljava/lang/String;
@@ -60,7 +60,7 @@
         }
     .end annotation
 
-    .line 277
+    .line 296
     iget-object v0, p0, Lcom/airbnb/lottie/LottieCompositionFactory$4;->val$stream:Ljava/io/InputStream;
 
     iget-object v1, p0, Lcom/airbnb/lottie/LottieCompositionFactory$4;->val$cacheKey:Ljava/lang/String;
@@ -80,7 +80,7 @@
         }
     .end annotation
 
-    .line 274
+    .line 293
     invoke-virtual {p0}, Lcom/airbnb/lottie/LottieCompositionFactory$4;->call()Lcom/airbnb/lottie/LottieResult;
 
     move-result-object v0

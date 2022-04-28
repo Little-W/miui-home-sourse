@@ -36,7 +36,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 81
+    .line 80
     new-instance v0, Lcom/miui/home/recents/GestureBackArrowView$ReadyState;
 
     const-string v1, "READY_STATE_NONE"
@@ -69,7 +69,7 @@
 
     const/4 v0, 0x3
 
-    .line 80
+    .line 79
     new-array v0, v0, [Lcom/miui/home/recents/GestureBackArrowView$ReadyState;
 
     sget-object v1, Lcom/miui/home/recents/GestureBackArrowView$ReadyState;->READY_STATE_NONE:Lcom/miui/home/recents/GestureBackArrowView$ReadyState;
@@ -97,7 +97,7 @@
         }
     .end annotation
 
-    .line 80
+    .line 79
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -106,7 +106,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/home/recents/GestureBackArrowView$ReadyState;
     .locals 1
 
-    .line 80
+    .line 79
     const-class v0, Lcom/miui/home/recents/GestureBackArrowView$ReadyState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -121,7 +121,7 @@
 .method public static values()[Lcom/miui/home/recents/GestureBackArrowView$ReadyState;
     .locals 1
 
-    .line 80
+    .line 79
     sget-object v0, Lcom/miui/home/recents/GestureBackArrowView$ReadyState;->$VALUES:[Lcom/miui/home/recents/GestureBackArrowView$ReadyState;
 
     invoke-virtual {v0}, [Lcom/miui/home/recents/GestureBackArrowView$ReadyState;->clone()Ljava/lang/Object;

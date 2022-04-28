@@ -27,7 +27,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 34
+    .line 35
     invoke-direct {p0}, Lcom/mi/google/gson/reflect/TypeToken;-><init>()V
 
     return-void

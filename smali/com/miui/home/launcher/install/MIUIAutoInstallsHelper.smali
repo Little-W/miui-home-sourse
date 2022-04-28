@@ -90,6 +90,8 @@
     const-string v1, "only support main space"
 
     .line 39
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return v2
 
     .line 42
@@ -121,6 +123,8 @@
     const-string v1, "recommend app exist"
 
     .line 47
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return v2
 
     :cond_2
@@ -135,6 +139,8 @@
     const-string v1, "only support miui12"
 
     .line 43
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return v2
 .end method
 

@@ -46,7 +46,7 @@
 
 .field private mShow:Z
 
-.field private mThumbnailHeightController:Lcom/miui/home/launcher/ThumbnailHeightController;
+.field private mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
 
 
 # direct methods
@@ -92,11 +92,11 @@
     iput-object p2, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mFolmes:Ljava/util/ArrayList;
 
     .line 167
-    new-instance p2, Lcom/miui/home/launcher/ThumbnailHeightController;
+    new-instance p2, Lcom/miui/home/launcher/ThumbnailMeasureController;
 
-    invoke-direct {p2}, Lcom/miui/home/launcher/ThumbnailHeightController;-><init>()V
+    invoke-direct {p2}, Lcom/miui/home/launcher/ThumbnailMeasureController;-><init>()V
 
-    iput-object p2, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mThumbnailHeightController:Lcom/miui/home/launcher/ThumbnailHeightController;
+    iput-object p2, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
 
     const/4 p2, 0x0
 
@@ -346,6 +346,8 @@
 
     move-result-object v2
 
+    invoke-static {v3, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_0
     const-string v2, "com.android.thememanager"
 
@@ -392,20 +394,20 @@
 
     const/4 v1, 0x1
 
-    const v2, 0x7f0800f0
+    const v2, 0x7f080112
 
     aput v2, v0, v1
 
     const/4 v1, 0x0
 
-    const v2, 0x7f0800ef
+    const v2, 0x7f080111
 
     .line 71
     aput v2, v0, v1
 
     const/4 v1, 0x2
 
-    const v2, 0x7f0800ee
+    const v2, 0x7f080110
 
     .line 72
     aput v2, v0, v1
@@ -436,7 +438,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700ba
+    const v1, 0x7f0700f5
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -533,7 +535,7 @@
 
     move-result v0
 
-    const v1, 0x7f0a010f
+    const v1, 0x7f0a013b
 
     .line 127
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -721,9 +723,9 @@
     .locals 0
 
     .line 265
-    iget-object p1, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mThumbnailHeightController:Lcom/miui/home/launcher/ThumbnailHeightController;
+    iget-object p1, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
 
-    invoke-virtual {p1, p0}, Lcom/miui/home/launcher/ThumbnailHeightController;->onScreenOrientationChanged(Landroid/view/View;)V
+    invoke-virtual {p1, p0}, Lcom/miui/home/launcher/ThumbnailMeasureController;->onScreenOrientationChanged(Landroid/view/View;)V
 
     return-void
 .end method
@@ -743,9 +745,15 @@
     .locals 0
 
     .line 171
-    iget-object p2, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mThumbnailHeightController:Lcom/miui/home/launcher/ThumbnailHeightController;
+    iget-object p1, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
 
-    invoke-virtual {p2}, Lcom/miui/home/launcher/ThumbnailHeightController;->makeMeasureSpec()I
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ThumbnailMeasureController;->makeWidthMeasureSpec()I
+
+    move-result p1
+
+    iget-object p2, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
+
+    invoke-virtual {p2}, Lcom/miui/home/launcher/ThumbnailMeasureController;->makeHeightMeasureSpec()I
 
     move-result p2
 
@@ -758,9 +766,9 @@
     .locals 1
 
     .line 175
-    iget-object v0, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mThumbnailHeightController:Lcom/miui/home/launcher/ThumbnailHeightController;
+    iget-object v0, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
 
-    invoke-virtual {v0, p0}, Lcom/miui/home/launcher/ThumbnailHeightController;->onScreenSizeChanged(Landroid/view/View;)V
+    invoke-virtual {v0, p0}, Lcom/miui/home/launcher/ThumbnailMeasureController;->onScreenSizeChanged(Landroid/view/View;)V
 
     return-void
 .end method
@@ -858,7 +866,7 @@
     .line 90
     iget-object v3, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v4, 0x7f0d010b
+    const v4, 0x7f0d0133
 
     invoke-virtual {v3, v4, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -889,7 +897,7 @@
     .line 93
     invoke-virtual {v3, p0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v4, 0x7f0a009e
+    const v4, 0x7f0a00b9
 
     .line 95
     invoke-virtual {v3, v4}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;
@@ -898,13 +906,13 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    const v5, 0x7f0a010f
+    const v5, 0x7f0a013b
 
     const/4 v6, 0x1
 
     if-ne v1, v6, :cond_0
 
-    const v7, 0x7f0a0069
+    const v7, 0x7f0a0071
 
     .line 97
     invoke-virtual {v3, v7}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;
@@ -920,7 +928,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f0800f1
+    const v9, 0x7f080113
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -950,7 +958,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0800f0
+    const v5, 0x7f080112
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

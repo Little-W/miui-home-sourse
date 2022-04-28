@@ -6,6 +6,14 @@
 .implements Lmiuix/visual/check/VisualCheckItem;
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lmiuix/visual/check/VisualCheckedTextView$InnerTransitionListener;
+    }
+.end annotation
+
+
 # static fields
 .field private static CHECKED_STATE:[I
 
@@ -32,7 +40,7 @@
 
     const/4 v0, 0x1
 
-    .line 34
+    .line 36
     new-array v1, v0, [I
 
     const/4 v2, 0x0
@@ -43,7 +51,7 @@
 
     sput-object v1, Lmiuix/visual/check/VisualCheckedTextView;->CHECKED_STATE:[I
 
-    .line 35
+    .line 37
     new-array v0, v0, [I
 
     const v1, -0x10100a0
@@ -56,12 +64,12 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 2
+    .locals 4
 
-    .line 38
+    .line 57
     invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 39
+    .line 58
     invoke-virtual {p0}, Lmiuix/visual/check/VisualCheckedTextView;->getTextColors()Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -84,7 +92,7 @@
 
     iput p1, p0, Lmiuix/visual/check/VisualCheckedTextView;->mUncheckedColor:I
 
-    .line 40
+    .line 59
     invoke-virtual {p0}, Lmiuix/visual/check/VisualCheckedTextView;->getTextColors()Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -107,14 +115,14 @@
 
     iput p1, p0, Lmiuix/visual/check/VisualCheckedTextView;->mCheckedColor:I
 
-    .line 41
-    new-instance p1, Lmiuix/visual/check/VisualCheckedTextView$1;
+    .line 60
+    new-instance p1, Lmiuix/visual/check/VisualCheckedTextView$InnerTransitionListener;
 
-    invoke-direct {p1, p0}, Lmiuix/visual/check/VisualCheckedTextView$1;-><init>(Lmiuix/visual/check/VisualCheckedTextView;)V
+    invoke-direct {p1, p0}, Lmiuix/visual/check/VisualCheckedTextView$InnerTransitionListener;-><init>(Lmiuix/visual/check/VisualCheckedTextView;)V
 
     iput-object p1, p0, Lmiuix/visual/check/VisualCheckedTextView;->mListener:Lmiuix/animation/listener/TransitionListener;
 
-    .line 49
+    .line 61
     new-instance p1, Lmiuix/animation/property/ColorProperty;
 
     const-string p2, "checkedTextView"
@@ -123,9 +131,27 @@
 
     iput-object p1, p0, Lmiuix/visual/check/VisualCheckedTextView;->mColorProperty:Lmiuix/animation/property/ColorProperty;
 
+    const-string p1, "text_color_checked"
+
+    .line 62
+    filled-new-array {p1}, [Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lmiuix/animation/Folme;->clean([Ljava/lang/Object;)V
+
+    const-string p1, "text_color_unchecked"
+
+    .line 63
+    filled-new-array {p1}, [Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lmiuix/animation/Folme;->clean([Ljava/lang/Object;)V
+
     const/4 p1, 0x1
 
-    .line 50
+    .line 64
     new-array p2, p1, [Ljava/lang/Object;
 
     const-string v0, "text_color_checked"
@@ -138,9 +164,15 @@
 
     move-result-object p2
 
+    const-wide/16 v2, 0x1
+
+    invoke-interface {p2, v2, v3}, Lmiuix/animation/IStateStyle;->setFlags(J)Lmiuix/animation/IStateStyle;
+
+    move-result-object p2
+
     iput-object p2, p0, Lmiuix/visual/check/VisualCheckedTextView;->iCheckedStateStyle:Lmiuix/animation/IStateStyle;
 
-    .line 51
+    .line 65
     new-array p1, p1, [Ljava/lang/Object;
 
     const-string p2, "text_color_unchecked"
@@ -148,6 +180,10 @@
     aput-object p2, p1, v1
 
     invoke-static {p1}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+
+    move-result-object p1
+
+    invoke-interface {p1, v2, v3}, Lmiuix/animation/IStateStyle;->setFlags(J)Lmiuix/animation/IStateStyle;
 
     move-result-object p1
 
@@ -163,14 +199,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 64
+    .line 78
     iget p1, p0, Lmiuix/visual/check/VisualCheckedTextView;->mCheckedColor:I
 
     invoke-virtual {p0, p1}, Lmiuix/visual/check/VisualCheckedTextView;->setTextColor(I)V
 
     goto :goto_0
 
-    .line 66
+    .line 80
     :cond_0
     iget-object p1, p0, Lmiuix/visual/check/VisualCheckedTextView;->iUnCheckedStateStyle:Lmiuix/animation/IStateStyle;
 
@@ -208,7 +244,7 @@
 
     iget v2, p0, Lmiuix/visual/check/VisualCheckedTextView;->mUncheckedColor:I
 
-    .line 67
+    .line 81
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -228,7 +264,7 @@
 .method public onVisualCheckBoxTouchEvent(Lmiuix/visual/check/VisualCheckBox;Landroid/view/MotionEvent;)V
     .locals 4
 
-    .line 56
+    .line 70
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
@@ -237,7 +273,7 @@
 
     if-ne p1, p2, :cond_0
 
-    .line 57
+    .line 71
     iget-object p1, p0, Lmiuix/visual/check/VisualCheckedTextView;->iCheckedStateStyle:Lmiuix/animation/IStateStyle;
 
     const/4 v0, 0x2

@@ -99,26 +99,38 @@
 
     invoke-direct {v4, v5, v2}, Lcom/miui/home/launcher/common/AdvertisingIdClient$AdInfo;-><init>(Ljava/lang/String;Z)V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object v4
-
-    :catch_0
-    move-exception v2
-
-    const-string v3, "AdvertisingIdClient"
-
-    const-string v4, "bindService: "
-
-    .line 59
     .line 62
-    :cond_0
     :try_start_1
     invoke-virtual {p0, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
     :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    const-string v0, "AdvertisingIdClient"
+
+    const-string v1, "unbindService: "
+
+    .line 64
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_0
+    return-object v4
+
+    .line 62
+    :cond_0
+    :try_start_2
+    invoke-virtual {p0, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    goto :goto_1
 
     :catch_1
     move-exception p0
@@ -128,8 +140,58 @@
     const-string v2, "unbindService: "
 
     .line 64
-    :goto_0
+    invoke-static {v0, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v2
+
+    :try_start_3
+    const-string v3, "AdvertisingIdClient"
+
+    const-string v4, "bindService: "
+
+    .line 59
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    .line 62
+    :try_start_4
+    invoke-virtual {p0, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
+
+    :goto_1
     return-object v1
+
+    :goto_2
+    :try_start_5
+    invoke-virtual {p0, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
+
+    goto :goto_3
+
+    :catch_3
+    move-exception p0
+
+    const-string v0, "AdvertisingIdClient"
+
+    const-string v2, "unbindService: "
+
+    .line 64
+    invoke-static {v0, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 66
+    :goto_3
+    throw v1
 
     .line 44
     :cond_1
@@ -147,7 +209,7 @@
 
     const-string v0, ""
 
-    .line 144
+    .line 145
     :try_start_0
     invoke-static {p0}, Lcom/miui/home/launcher/common/AdvertisingIdClient;->getAdvertisingIdInfo(Landroid/content/Context;)Lcom/miui/home/launcher/common/AdvertisingIdClient$AdInfo;
 
@@ -155,7 +217,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 146
+    .line 147
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/AdvertisingIdClient$AdInfo;->getId()Ljava/lang/String;
 
     move-result-object p0
@@ -169,7 +231,7 @@
     :catch_0
     move-exception p0
 
-    .line 149
+    .line 150
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0

@@ -45,7 +45,6 @@
         <item name="checkBoxDrawableTouchAnimEnable">@bool/check_widget_anim_enable</item>
         <item name="dialogListPreferredItemHeight">@dimen/miuix_appcompat_dialog_list_preferred_item_height</item>
         <item name="radioButtonDrawableTouchAnimEnable">@bool/check_widget_anim_enable</item>
-        <item name="slidingButtonStyle">@style/Widget.SlidingButton</item>
         <item name="startingWindowOverlay">@null</item>
         <item name="windowActionBar">false</item>
         <item name="windowActionBarMovable">false</item>
@@ -63,8 +62,10 @@
     <style name="AlertDialog.Theme.Dark" parent="@style/AlertDialog.Theme">
         <item name="android:textAppearanceMedium">@style/Miuix.AppCompat.TextAppearance.Medium.Dialog.Dark</item>
         <item name="android:windowBackground">@drawable/miuix_appcompat_dialog_bg_dark</item>
+        <item name="android:scrollbarThumbVertical">@drawable/miuix_appcompat_scrollbar_thumb_vertical_dark</item>
         <item name="android:textColorLink">@color/miuix_appcompat_link_text_dark</item>
         <item name="android:listChoiceIndicatorMultiple">@drawable/miuix_appcompat_btn_checkbox_dark</item>
+        <item name="android:textColorAlertDialogListItem">@color/miuix_appcompat_dialog_list_text_dark</item>
         <item name="actionBarBackground">@drawable/miuix_appcompat_dialog_title_bg_dark</item>
         <item name="actionBarTitleColor">@color/miuix_appcompat_action_bar_title_text_dark</item>
         <item name="buttonBackground">@drawable/btn_bg_dark</item>
@@ -86,16 +87,21 @@
         <item name="dialogCheckBoxTextColor">@color/miuix_appcompat_dialog_checkbox_text_color_dark</item>
         <item name="dialogListItemBackground">@drawable/miuix_appcompat_list_item_bg_dialog_dark</item>
         <item name="dialogMultiChoiceListItemBackground">@drawable/miuix_appcompat_list_item_bg_multichoice_dark</item>
+        <item name="dialogProgressBarStyle">@style/AlertDialog.Widget.ProgressBar.Dark</item>
         <item name="dialogTitleTextColor">@color/miuix_appcompat_dialog_title_text_color_dark</item>
         <item name="editTextColorDialog">@color/miuix_appcompat_edit_text_dialog_dark</item>
         <item name="editTextColorDialogBackground">@drawable/miuix_appcompat_edit_text_bg_dialog_dark</item>
         <item name="editTextColorHint">@color/miuix_appcompat_hint_edit_text_color_dark</item>
         <item name="editTextColorHintDialog">@color/miuix_appcompat_hint_edit_text_dialog_color_dark</item>
         <item name="miuixDialogRoundWindowBg">@drawable/miuix_appcompat_dialog_round_bg_dark</item>
+        <item name="pickerBackgroundColor">@color/miuix_appcompat_dialog_bg_color_dark</item>
         <item name="primaryButtonBackground">@drawable/miuix_appcompat_btn_bg_primary_dark</item>
         <item name="primaryButtonTextColor">@color/miuix_appcompat_button_text_color_guide_dark</item>
+        <item name="primarySelectorButtonBackground">@drawable/miuix_appcompat_btn_bg_dialog_selector_primary_dark</item>
         <item name="radioButtonOnDrawableBackgroundColor">@color/miuix_appcompat_checkbox_btn_on_background_color_dark</item>
         <item name="radioButtonOnDrawableForegroundColor">@color/miuix_appcompat_checkbox_btn_on_foreground_color_dark</item>
+        <item name="selectorButtonBackground">@drawable/miuix_appcompat_btn_bg_dialog_selector_dark</item>
+        <item name="slidingButtonStyle">@style/Widget.SlidingButton.Dark</item>
         <item name="spinnerBackground">@drawable/miuix_appcompat_spinner_bg_dark</item>
         <item name="textColorButton">@color/miuix_appcompat_button_text_dark</item>
         <item name="textColorDialogSingleChoiceItem">@color/miuix_appcompat_dialog_list_text_dark_single_choice</item>
@@ -104,8 +110,10 @@
     <style name="AlertDialog.Theme.Light" parent="@style/AlertDialog.Theme">
         <item name="android:textAppearanceMedium">@style/Miuix.AppCompat.TextAppearance.Medium.Dialog.Light</item>
         <item name="android:windowBackground">@drawable/miuix_appcompat_dialog_bg_light</item>
+        <item name="android:scrollbarThumbVertical">@drawable/miuix_appcompat_scrollbar_thumb_vertical_light</item>
         <item name="android:textColorLink">@color/miuix_appcompat_link_text_light</item>
         <item name="android:listChoiceIndicatorMultiple">@drawable/miuix_appcompat_btn_checkbox_light</item>
+        <item name="android:textColorAlertDialogListItem">@color/miuix_appcompat_dialog_list_text_light</item>
         <item name="actionBarBackground">@drawable/miuix_appcompat_dialog_title_bg_light</item>
         <item name="actionBarTitleColor">@color/miuix_appcompat_action_bar_title_text_light</item>
         <item name="buttonBackground">@drawable/btn_bg_light</item>
@@ -127,19 +135,36 @@
         <item name="dialogCheckBoxTextColor">@color/miuix_appcompat_dialog_checkbox_text_color_light</item>
         <item name="dialogListItemBackground">@drawable/miuix_appcompat_list_item_bg_dialog_light</item>
         <item name="dialogMultiChoiceListItemBackground">@drawable/miuix_appcompat_list_item_bg_multichoice_light</item>
+        <item name="dialogProgressBarStyle">@style/AlertDialog.Widget.ProgressBar.Light</item>
         <item name="dialogTitleTextColor">@color/miuix_appcompat_dialog_title_text_color</item>
         <item name="editTextColorDialog">@color/miuix_appcompat_edit_text_dialog_light</item>
         <item name="editTextColorDialogBackground">@drawable/miuix_appcompat_edit_text_bg_dialog_light</item>
         <item name="editTextColorHint">@color/miuix_appcompat_hint_edit_text_color_light</item>
         <item name="editTextColorHintDialog">@color/miuix_appcompat_hint_edit_text_dialog_color_light</item>
         <item name="miuixDialogRoundWindowBg">@drawable/miuix_appcompat_dialog_round_bg_light</item>
+        <item name="pickerBackgroundColor">@color/miuix_appcompat_dialog_bg_color_light</item>
         <item name="primaryButtonBackground">@drawable/miuix_appcompat_btn_bg_primary_light</item>
         <item name="primaryButtonTextColor">@color/miuix_appcompat_button_text_color_guide_light</item>
+        <item name="primarySelectorButtonBackground">@drawable/miuix_appcompat_btn_bg_dialog_selector_primary_light</item>
         <item name="radioButtonOnDrawableBackgroundColor">@color/miuix_appcompat_checkbox_btn_on_background_color_light</item>
         <item name="radioButtonOnDrawableForegroundColor">@color/miuix_appcompat_checkbox_btn_on_foreground_color_light</item>
+        <item name="selectorButtonBackground">@drawable/miuix_appcompat_btn_bg_dialog_selector_light</item>
+        <item name="slidingButtonStyle">@style/Widget.SlidingButton</item>
         <item name="spinnerBackground">@drawable/miuix_appcompat_spinner_bg</item>
         <item name="textColorButton">@color/miuix_appcompat_button_text_light</item>
         <item name="textColorDialogSingleChoiceItem">@color/miuix_appcompat_dialog_list_text_light_single_choice</item>
+    </style>
+    <style name="AlertDialog.Widget.ProgressBar.Dark" parent="@style/Widget.ProgressBar.Dark">
+        <item name="android:maxWidth">@dimen/miuix_appcompat_dialog_progressbar_size</item>
+        <item name="android:maxHeight">@dimen/miuix_appcompat_dialog_progressbar_size</item>
+        <item name="android:minWidth">@dimen/miuix_appcompat_dialog_progressbar_size</item>
+        <item name="android:minHeight">@dimen/miuix_appcompat_dialog_progressbar_size</item>
+    </style>
+    <style name="AlertDialog.Widget.ProgressBar.Light" parent="@style/Widget.ProgressBar.Light">
+        <item name="android:maxWidth">@dimen/miuix_appcompat_dialog_progressbar_size</item>
+        <item name="android:maxHeight">@dimen/miuix_appcompat_dialog_progressbar_size</item>
+        <item name="android:minWidth">@dimen/miuix_appcompat_dialog_progressbar_size</item>
+        <item name="android:minHeight">@dimen/miuix_appcompat_dialog_progressbar_size</item>
     </style>
     <style name="AllAppsTitle">
         <item name="android:textSize">@dimen/search_result_cate_size</item>
@@ -998,6 +1023,10 @@
     <style name="Base.Widget.AppCompat.Toolbar" parent="@style/Base.V7.Widget.AppCompat.Toolbar" />
     <style name="Base.Widget.AppCompat.Toolbar.Button.Navigation" parent="@android:style/Widget.Material.Toolbar.Button.Navigation" />
     <style name="BaseTheme" parent="@style/Theme.Light" />
+    <style name="BranchDeepViewFragment" parent="@style/Theme.AppCompat.Light.Dialog">
+        <item name="android:windowMinWidthMajor">85.0%</item>
+        <item name="android:windowMinWidthMinor">85.0%</item>
+    </style>
     <style name="CardView" parent="@style/Base.CardView">
         <item name="cardBackgroundColor">?android:colorBackgroundFloating</item>
     </style>
@@ -1032,8 +1061,62 @@
         <item name="checkwidget_checkOnForegroundColor">?radioButtonOnDrawableForegroundColor</item>
         <item name="checkwidget_touchAnimEnable">?radioButtonDrawableTouchAnimEnable</item>
     </style>
+    <style name="CollapseSubtitleStyle">
+        <item name="android:textAppearance">@style/Miuix.AppCompat.TextAppearance.WindowTitle.Subtitle</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="CollapseTitleStyle">
+        <item name="android:textAppearance">@style/Miuix.AppCompat.TextAppearance.WindowTitle</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="CommonDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:backgroundDimAmount">0.0</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/common_dialog_animations</item>
+        <item name="android:windowEnterAnimation">@anim/vertical_enter_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/vertical_exit_to_bottom</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:contentInsetLeft">0.0dip</item>
+        <item name="android:contentInsetRight">0.0dip</item>
+    </style>
+    <style name="DialogPanelStyle">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingTop">@dimen/miuix_appcompat_dialog_pannel_vertical_padding_top</item>
+        <item name="android:paddingBottom">@dimen/miuix_appcompat_dialog_pannel_vertical_padding_bottom</item>
+        <item name="android:clickable">true</item>
+        <item name="android:importantForAccessibility">no</item>
+    </style>
     <style name="EditDialog" parent="@style/AlertDialog">
         <item name="layout">@layout/edit_dialog</item>
+    </style>
+    <style name="ExpandSubtitleStyle">
+        <item name="android:textAppearance">@style/Miuix.AppCompat.TextAppearance.WindowTitle.Subtitle.Expand</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="ExpandTitleStyle">
+        <item name="android:textAppearance">@style/Miuix.AppCompat.TextAppearance.WindowTitle.Expand</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="FastScrollerPopup">
         <item name="android:textSize">@dimen/fastscroll_popup_text_size</item>
@@ -1073,12 +1156,31 @@
         <item name="android:textColor">@color/icon_title_text_dark</item>
         <item name="android:shadowColor">@color/icon_title_text_shadow_light</item>
     </style>
+    <style name="FolderTitle.noword" parent="@style/FolderTitle">
+        <item name="android:textSize">@dimen/folder_edit_text_text_size_noword</item>
+    </style>
     <style name="FolderTitle.recommend" parent="@style/FolderTitle">
         <item name="android:textSize">14.0sp</item>
     </style>
     <style name="FolderTitle.recommend.dark" parent="@style/FolderTitle.recommend">
         <item name="android:textColor">@color/icon_title_text_dark</item>
         <item name="android:shadowColor">@color/icon_title_text_shadow_light</item>
+    </style>
+    <style name="GeneralDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:backgroundDimAmount">0.0</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/general_dialog_animations</item>
+        <item name="android:windowEnterAnimation">@anim/vertical_enter_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/vertical_exit_to_bottom</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:contentInsetLeft">0.0dip</item>
+        <item name="android:contentInsetRight">0.0dip</item>
     </style>
     <style name="HomeTextAppearance">
         <item name="android:textSize">@dimen/secondary_text_size</item>
@@ -1259,9 +1361,22 @@
         <item name="android:textColor">?textColorMenuListItem</item>
         <item name="android:fontFamily">sans-serif-medium</item>
     </style>
+    <style name="Miuix.AppCompat.TextAppearance.NavigationPreference" parent="@style/Miuix.AppCompat.TextAppearance">
+        <item name="android:textSize">@dimen/miuix_preference_normal_text_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?preferenceNavigationTextColor</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="Miuix.AppCompat.TextAppearance.NavigationPreference.Second" parent="@style/Miuix.AppCompat.TextAppearance.NavigationPreference">
+        <item name="android:textSize">@dimen/miuix_preference_secondary_text_size</item>
+        <item name="android:textColor">?preferenceNavigationSecondaryTextColor</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
     <style name="Miuix.AppCompat.TextAppearance.PreferenceCategory" parent="@style/Miuix.AppCompat.TextAppearance">
         <item name="android:textSize">@dimen/miuix_preference_category_text_size</item>
         <item name="android:textColor">?preferenceCategoryTextColor</item>
+        <item name="android:paddingTop">@dimen/miuix_preference_category_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/miuix_preference_category_vertical_padding</item>
     </style>
     <style name="Miuix.AppCompat.TextAppearance.PreferenceList" parent="@style/Miuix.AppCompat.TextAppearance">
         <item name="android:textSize">@dimen/miuix_preference_normal_text_size</item>
@@ -1282,12 +1397,12 @@
     <style name="Miuix.AppCompat.TextAppearance.Spinner" parent="@style/Miuix.AppCompat.TextAppearance">
         <item name="android:textSize">@dimen/miuix_appcompat_spinner_text_size</item>
         <item name="android:textColor">?miuixAppcompatSpinnerTextColor</item>
-        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">mipro-medium</item>
     </style>
     <style name="Miuix.AppCompat.TextAppearance.Spinner.Integrated" parent="@style/Miuix.AppCompat.TextAppearance.Spinner">
         <item name="android:textSize">@dimen/miuix_appcompat_spinner_text_size_integrated</item>
         <item name="android:textColor">?miuixAppcompatIntegratedSpinnerTextColor</item>
-        <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
     <style name="Miuix.AppCompat.TextAppearance.Widget" parent="@style/Miuix.AppCompat.TextAppearance" />
     <style name="Miuix.AppCompat.TextAppearance.Widget.ActionButton" parent="@style/Miuix.AppCompat.TextAppearance.Widget">
@@ -1362,7 +1477,7 @@
     </style>
     <style name="Miuix.AppCompat.TextAppearance.WindowTitle.Subtitle.Expand" parent="@style/Miuix.AppCompat.TextAppearance.WindowTitle.Subtitle">
         <item name="android:textSize">@dimen/miuix_appcompat_expand_subtitle_text_size</item>
-        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:fontFamily">mipro-normal</item>
     </style>
     <style name="Miuix.DropDownPopupList" parent="">
         <item name="android:background">@drawable/miuix_appcompat_dropdown_listview_bg_light</item>
@@ -1461,10 +1576,12 @@
     <style name="Miuix.Spring.TextAppearance.indicator" parent="@style/Miuix.Spring.TextAppearance">
         <item name="android:textSize">@dimen/miuix_sbl_indicator_locked_labe_textsize</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     <style name="Miuix.Spring.TextAppearance.trigger" parent="@style/Miuix.Spring.TextAppearance">
         <item name="android:textSize">@dimen/miuix_sbl_tracking_progress_labe_textsize</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
     </style>
     <style name="NavBarTypeLottieAnim">
         <item name="android:background">@drawable/navigation_bar_type_item_icon_bg_selector</item>
@@ -1675,6 +1792,35 @@
     </style>
     <style name="PreferenceThemeOverlay.v14" parent="@style/PreferenceThemeOverlay" />
     <style name="PreferenceThemeOverlay.v14.Material" parent="@style/PreferenceThemeOverlay.v14" />
+    <style name="ProgressBarTextStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
+    <style name="ProgressBarTextStyle.Large" parent="@style/ProgressBarTextStyle">
+        <item name="android:textSize">@dimen/miuix_appcompat_progressbar_large_text_size</item>
+        <item name="android:paddingTop">@dimen/miuix_appcompat_progressbar_large_text_top_padding</item>
+        <item name="android:paddingBottom">@dimen/miuix_appcompat_progressbar_large_text_bottom_padding</item>
+        <item name="android:layout_marginTop">@dimen/miuix_appcompat_progressbar_large_icon_text_margin</item>
+    </style>
+    <style name="ProgressBarTextStyle.Large.Dark" parent="@style/ProgressBarTextStyle.Large">
+        <item name="android:textColor">@color/miuix_appcompat_progressbar_text_color_dark</item>
+    </style>
+    <style name="ProgressBarTextStyle.Large.Light" parent="@style/ProgressBarTextStyle.Large">
+        <item name="android:textColor">@color/miuix_appcompat_progressbar_text_color_light</item>
+    </style>
+    <style name="ProgressBarTextStyle.Small" parent="@style/ProgressBarTextStyle">
+        <item name="android:textSize">@dimen/miuix_appcompat_progressbar_small_text_size</item>
+        <item name="android:paddingTop">@dimen/miuix_appcompat_progressbar_small_text_top_padding</item>
+        <item name="android:paddingBottom">@dimen/miuix_appcompat_progressbar_small_text_bottom_padding</item>
+        <item name="android:layout_marginTop">@dimen/miuix_appcompat_progressbar_small_icon_text_margin</item>
+    </style>
+    <style name="ProgressBarTextStyle.Small.Dark" parent="@style/ProgressBarTextStyle.Small">
+        <item name="android:textColor">@color/miuix_appcompat_progressbar_text_color_dark</item>
+    </style>
+    <style name="ProgressBarTextStyle.Small.Light" parent="@style/ProgressBarTextStyle.Small">
+        <item name="android:textColor">@color/miuix_appcompat_progressbar_text_color_light</item>
+    </style>
     <style name="RecentMenuItem">
         <item name="android:background">@drawable/recent_menu_bg</item>
         <item name="android:layout_width">fill_parent</item>
@@ -1695,6 +1841,28 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@color/recent_navigation_bar_color</item>
+    </style>
+    <style name="ReversibleTagGroup">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="rtg_backgroundColor">#ffffffff</item>
+        <item name="rtg_borderColor">#ff49c120</item>
+        <item name="rtg_borderStrokeWidth">0.5dip</item>
+        <item name="rtg_checkedBackgroundColor">#ff49c120</item>
+        <item name="rtg_checkedBorderColor">#ff49c120</item>
+        <item name="rtg_checkedMarkerColor">#ffffffff</item>
+        <item name="rtg_checkedTextColor">#ffffffff</item>
+        <item name="rtg_dashBorderColor">#ffaaaaaa</item>
+        <item name="rtg_horizontalPadding">12.0dip</item>
+        <item name="rtg_horizontalSpacing">8.0dip</item>
+        <item name="rtg_inputHintColor">#80000000</item>
+        <item name="rtg_inputTextColor">#de000000</item>
+        <item name="rtg_isAppendMode">false</item>
+        <item name="rtg_pressedBackgroundColor">#ffededed</item>
+        <item name="rtg_textColor">#ff49c120</item>
+        <item name="rtg_textSize">13.0sp</item>
+        <item name="rtg_verticalPadding">3.0dip</item>
+        <item name="rtg_verticalSpacing">4.0dip</item>
     </style>
     <style name="RtlOverlay.DialogWindowTitle.AppCompat" parent="@style/Base.DialogWindowTitle.AppCompat">
         <item name="android:textAlignment">viewStart</item>
@@ -1785,6 +1953,9 @@
     <style name="ShortcutUninstallDialogTitle">
         <item name="android:textSize">18.179993sp</item>
         <item name="android:textColor">@color/shortcut_uninstall_dialog_title_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginStart">@dimen/miuix_appcompat_dialog_pannel_horizontal_margin</item>
+        <item name="android:layout_marginEnd">@dimen/miuix_appcompat_dialog_pannel_horizontal_margin</item>
     </style>
     <style name="TextAppearance.AppCompat" parent="@style/Base.TextAppearance.AppCompat" />
     <style name="TextAppearance.AppCompat.Body1" parent="@style/Base.TextAppearance.AppCompat.Body1" />
@@ -1896,13 +2067,20 @@
         <item name="actionBarExpandState">expand</item>
         <item name="actionBarExpandTabBarStyle">@style/Widget.ActionBar.TabBar.Expand</item>
         <item name="actionBarMovableLayoutStyle">@style/Widget.ActionBarMovableLayout</item>
+        <item name="actionBarPaddingEnd">@dimen/miuix_appcompat_action_bar_horizontal_padding_end</item>
+        <item name="actionBarPaddingStart">@dimen/miuix_appcompat_action_bar_horizontal_padding_start</item>
         <item name="actionBarResizable">true</item>
         <item name="actionBarSecondaryTabBarStyle">@style/Widget.ActionBar.TabBar.Secondary</item>
+        <item name="actionBarSplitMaxPercentageHeight">@dimen/miuix_appcompat_dialog_max_height_major</item>
         <item name="actionBarTabBadgeIcon">@drawable/miuix_appcompat_action_tab_badge</item>
         <item name="actionBarTabExpandStyle">@style/Widget.ActionBar.TabView.Expand</item>
         <item name="actionBarTabSecondaryStyle">@style/Widget.ActionBar.TabView.Secondary</item>
         <item name="buttonBarDefaultButtonStyle">@style/Widget.Button.Primary</item>
+        <item name="collapseSubtitleTheme">@style/CollapseSubtitleStyle</item>
+        <item name="collapseTitleTheme">@style/CollapseTitleStyle</item>
         <item name="editTextSearchStyle">@style/Widget.EditText.Search</item>
+        <item name="expandSubtitleTheme">@style/ExpandSubtitleStyle</item>
+        <item name="expandTitleTheme">@style/ExpandTitleStyle</item>
         <item name="immersionMenuLayout">@layout/miuix_appcompat_action_bar_immersion</item>
         <item name="panelMenuListWidth">296.0dip</item>
         <item name="textColorSearchBarCancel">@color/miuix_appcompat_search_action_mode_cancel_text_color</item>
@@ -2030,10 +2208,11 @@
         <item name="buttonBackground">@drawable/btn_bg_dark</item>
         <item name="buttonBackgroundWarning">@drawable/miuix_appcompat_btn_bg_warn_dark</item>
         <item name="buttonBarPrimaryButtonStyle">@style/Widget.Button.Primary</item>
-        <item name="buttonInlineDeleteBackground">@drawable/miuix_appcompat_btn_inline_delete_dark</item>
+        <item name="buttonInlineDeleteBackground">@drawable/miuix_appcompat_btn_inline_delete_light</item>
         <item name="buttonInlineDetailBackground">@drawable/miuix_appcompat_btn_inline_detail_dark</item>
         <item name="buttonInlineExpandBackground">@drawable/miuix_appcompat_btn_inline_expand_dark</item>
         <item name="buttonInlineShrinkBackground">@drawable/miuix_appcompat_btn_inline_shrink_dark</item>
+        <item name="buttonRectBlankPage">@style/Widget.Button.Rect.BlankPage.Dark</item>
         <item name="buttonRectStyleBackground">@drawable/miuix_appcompat_btn_bg_rect_dark</item>
         <item name="checkBoxButtonCompat">@drawable/miuix_appcompat_btn_checkbox_dark</item>
         <item name="checkBoxDrawableTouchAnimEnable">@bool/check_widget_anim_enable</item>
@@ -2070,11 +2249,13 @@
         <item name="dialogTitleTextColor">@color/miuix_appcompat_dialog_title_text_color_dark</item>
         <item name="editTextColorHint">@color/miuix_appcompat_hint_edit_text_color_dark</item>
         <item name="floatingActionButtonStyle">@style/Widget.FloatingActionButton.Dark</item>
+        <item name="guidePopupTextStyle">@style/Miuix.GuidePopupText.Dark</item>
         <item name="guidePopupViewStyle">@style/Widget.GuidePopupView.Dark</item>
         <item name="immersionButtonMoreBackground">@drawable/miuix_appcompat_action_mode_immersion_more_dark</item>
         <item name="immersionTextColor">@color/miuix_appcompat_immersion_text_dark</item>
         <item name="immersionViewItemBackground">@drawable/miuix_appcompat_immersion_item_bg_dark</item>
         <item name="immersionWindowBackground">@drawable/miuix_appcompat_immersion_window_bg_dark</item>
+        <item name="largeProgressBarTextStyle">@style/ProgressBarTextStyle.Large.Dark</item>
         <item name="listMenuBackground">@drawable/miuix_appcompat_list_menu_bg_dark</item>
         <item name="listMenuItemStyle">@style/Widget.ListMenuItem.Dark</item>
         <item name="listPopupItemBackground">@drawable/miuix_appcompat_list_popup_item_bg_dark</item>
@@ -2097,12 +2278,13 @@
         <item name="miuixAppcompatStateEditTextStyle">@style/Widget.StateEditText.Dark</item>
         <item name="miuixAppcompatVisibilityIcon">@drawable/miuix_appcompat_ic_visibility_selector_dark</item>
         <item name="numberPickerStyle">@style/Widget.NumberPicker.Dark</item>
+        <item name="pickerBackgroundColor">@color/miuix_appcompat_number_picker_highlight_region_bg_color_dark</item>
         <item name="popupWindowElevation">@dimen/miuix_appcompat_drop_down_menu_elevation</item>
         <item name="popupWindowMinWidth">@dimen/miuix_appcompat_drop_down_menu_min_width</item>
         <item name="popupWindowShadowAlpha">@dimen/drop_down_menu_shadow_alpha</item>
         <item name="primaryButtonBackground">@drawable/miuix_appcompat_btn_bg_primary_dark</item>
         <item name="primaryButtonTextColor">@color/miuix_appcompat_button_text_color_guide_dark</item>
-        <item name="progressBarHorizontalStyle">@style/Widget.ProgressBar.Horizontal</item>
+        <item name="progressBarHorizontalStyle">@style/Widget.ProgressBar.Horizontal.Dark</item>
         <item name="progressBarStyle">@style/Widget.ProgressBar.Dark</item>
         <item name="progressBarStyleSmall">@style/Widget.ProgressBar.Small.Dark</item>
         <item name="radioButtonDrawable">@drawable/miuix_appcompat_btn_radio_dark</item>
@@ -2114,10 +2296,12 @@
         <item name="searchEditTextColor">@color/miuix_appcompat_edit_text_search_color_dark</item>
         <item name="searchEditTextHintColor">@color/miuix_appcompat_edit_text_search_hint_color_dark</item>
         <item name="searchEditTextIconStart">@drawable/miuix_appcompat_ic_edit_text_search_dark</item>
+        <item name="searchEditTextIconStartWithPadding">@drawable/miuix_appcompat_ic_edit_text_search_dark_with_padding</item>
         <item name="searchEditTextStyle">@style/Widget.EditText.Search</item>
         <item name="seekBarProgressDrawable">@drawable/miuix_appcompat_seekbar_progress_dark</item>
         <item name="seekBarStyle">@style/Widget.SeekBar.Dark</item>
         <item name="slidingButtonStyle">@style/Widget.SlidingButton.Dark</item>
+        <item name="smallProgressBarTextStyle">@style/ProgressBarTextStyle.Small.Dark</item>
         <item name="spinnerBackground">@drawable/miuix_appcompat_spinner_bg_dark</item>
         <item name="spinnerDropDownItemBackground">@drawable/miuix_appcompat_spinner_popup_item_bg_dark</item>
         <item name="spinnerDropDownItemTextColor">@color/miuix_appcompat_dialog_list_text_dark_single_choice</item>
@@ -2187,6 +2371,30 @@
     <style name="Theme.Dark.Dialog.NoTitle" parent="@style/Theme.Dark.Dialog">
         <item name="windowActionBar">false</item>
     </style>
+    <style name="Theme.Dark.FloatingWindow" parent="@style/Theme.Dark">
+        <item name="android:windowBackground">@drawable/miuix_appcompat_floating_window_bg_dark</item>
+        <item name="android:windowIsTranslucent">@bool/miuix_appcompat_floating_window_is_translucent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:actionModeBackground">@drawable/miuix_appcompat_floating_action_mode_bg_dark</item>
+        <item name="android:actionBarSize">@dimen/miuix_appcompat_action_bar_floating_height</item>
+        <item name="android:actionModeSplitBackground">@drawable/miuix_appcompat_floating_action_bar_split_bg_dark</item>
+        <item name="actionBarExpandBackground">@drawable/miuix_appcompat_floating_action_bar_split_bg_expanded_dark</item>
+        <item name="actionBarSplitBackground">@drawable/miuix_appcompat_floating_action_bar_split_bg_dark</item>
+        <item name="actionbarSearchMaskColor">@color/miuix_appcompat_floating_action_bar_search_mask_color_dark</item>
+        <item name="isMiuixFloatingTheme">true</item>
+        <item name="listMenuBackground">@drawable/miuix_appcompat_floating_list_menu_bg_dark</item>
+        <item name="miuixAppcompatColorPrimary">@color/miuix_appcompat_floating_primary_color_dark</item>
+        <item name="windowFixedHeightMajor">@dimen/miuix_appcompat_floating_window_fixed_height_major</item>
+        <item name="windowFixedHeightMinor">@dimen/miuix_appcompat_floating_window_fixed_height_minor</item>
+        <item name="windowFixedWidthMajor">@dimen/miuix_appcompat_floating_window_fixed_width_major</item>
+        <item name="windowFixedWidthMinor">@dimen/miuix_appcompat_floating_window_fixed_width_minor</item>
+        <item name="windowFloating">@bool/miuix_appcompat_window_floating</item>
+        <item name="windowMaxHeightMajor">@dimen/miuix_appcompat_dialog_max_height_major</item>
+        <item name="windowMaxHeightMinor">@dimen/miuix_appcompat_dialog_max_height_minor</item>
+        <item name="windowMaxWidthMajor">@dimen/miuix_appcompat_dialog_max_width_major</item>
+        <item name="windowMaxWidthMinor">@dimen/miuix_appcompat_dialog_max_width_minor</item>
+        <item name="windowTranslucentStatus">opaque</item>
+    </style>
     <style name="Theme.Dark.Navigation" parent="@style/Theme.Dark">
         <item name="android:windowBackground">@drawable/miuix_appcompat_window_bg_navigation_dark</item>
         <item name="android:actionModeBackground">@drawable/miuix_appcompat_action_mode_bg_navigation_dark</item>
@@ -2217,6 +2425,7 @@
     <style name="Theme.DayNight.Dialog.FixedSize" parent="@style/Theme.Light.Dialog.FixedSize" />
     <style name="Theme.DayNight.Dialog.FixedSize.Small" parent="@style/Theme.Light.Dialog.FixedSize.Small" />
     <style name="Theme.DayNight.Dialog.NoTitle" parent="@style/Theme.Light.Dialog.NoTitle" />
+    <style name="Theme.DayNight.FloatingWindow" parent="@style/Theme.Light.FloatingWindow" />
     <style name="Theme.DayNight.Navigation" parent="@style/Theme.Light.Navigation" />
     <style name="Theme.DayNight.NoTitle" parent="@style/Theme.Light.NoTitle" />
     <style name="Theme.DayNight.Settings" parent="@style/Theme.Light.Settings" />
@@ -2317,6 +2526,7 @@
         <item name="buttonInlineDetailBackground">@drawable/miuix_appcompat_btn_inline_detail_light</item>
         <item name="buttonInlineExpandBackground">@drawable/miuix_appcompat_btn_inline_expand_light</item>
         <item name="buttonInlineShrinkBackground">@drawable/miuix_appcompat_btn_inline_shrink_light</item>
+        <item name="buttonRectBlankPage">@style/Widget.Button.Rect.BlankPage.Light</item>
         <item name="buttonRectStyleBackground">@drawable/miuix_appcompat_btn_bg_rect_light</item>
         <item name="checkBoxButtonCompat">@drawable/miuix_appcompat_btn_checkbox_light</item>
         <item name="checkBoxDrawableTouchAnimEnable">@bool/check_widget_anim_enable</item>
@@ -2353,11 +2563,13 @@
         <item name="dialogTitleTextColor">@color/miuix_appcompat_dialog_title_text_color</item>
         <item name="editTextColorHint">@color/miuix_appcompat_hint_edit_text_color_light</item>
         <item name="floatingActionButtonStyle">@style/Widget.FloatingActionButton</item>
+        <item name="guidePopupTextStyle">@style/Miuix.GuidePopupText</item>
         <item name="guidePopupViewStyle">@style/Widget.GuidePopupView</item>
         <item name="immersionButtonMoreBackground">@drawable/miuix_appcompat_action_mode_immersion_more_light</item>
         <item name="immersionTextColor">@color/miuix_appcompat_immersion_text_light</item>
         <item name="immersionViewItemBackground">@drawable/miuix_appcompat_immersion_item_bg_light</item>
         <item name="immersionWindowBackground">@drawable/miuix_appcompat_immersion_window_bg_light</item>
+        <item name="largeProgressBarTextStyle">@style/ProgressBarTextStyle.Large.Light</item>
         <item name="listMenuBackground">@drawable/miuix_appcompat_list_menu_bg_light</item>
         <item name="listMenuItemStyle">@style/Widget.ListMenuItem.Light</item>
         <item name="listPopupItemBackground">@drawable/miuix_appcompat_list_popup_item_bg_light</item>
@@ -2380,6 +2592,7 @@
         <item name="miuixAppcompatStateEditTextStyle">@style/Widget.StateEditText.Light</item>
         <item name="miuixAppcompatVisibilityIcon">@drawable/miuix_appcompat_ic_visibility_selector_light</item>
         <item name="numberPickerStyle">@style/Widget.NumberPicker</item>
+        <item name="pickerBackgroundColor">@color/miuix_appcompat_number_picker_highlight_region_bg_color</item>
         <item name="popupWindowElevation">@dimen/miuix_appcompat_drop_down_menu_elevation</item>
         <item name="popupWindowMinWidth">@dimen/miuix_appcompat_drop_down_menu_min_width</item>
         <item name="popupWindowShadowAlpha">@dimen/drop_down_menu_shadow_alpha</item>
@@ -2397,10 +2610,12 @@
         <item name="searchEditTextColor">@color/miuix_appcompat_edit_text_search_color_light</item>
         <item name="searchEditTextHintColor">@color/miuix_appcompat_edit_text_search_hint_color_light</item>
         <item name="searchEditTextIconStart">@drawable/miuix_appcompat_ic_edit_text_search</item>
+        <item name="searchEditTextIconStartWithPadding">@drawable/miuix_appcompat_ic_edit_text_search_with_padding</item>
         <item name="searchEditTextStyle">@style/Widget.EditText.Search</item>
         <item name="seekBarProgressDrawable">@drawable/miuix_appcompat_seekbar_progress_light</item>
         <item name="seekBarStyle">@style/Widget.SeekBar.Light</item>
         <item name="slidingButtonStyle">@style/Widget.SlidingButton</item>
+        <item name="smallProgressBarTextStyle">@style/ProgressBarTextStyle.Small.Light</item>
         <item name="spinnerBackground">@drawable/miuix_appcompat_spinner_bg</item>
         <item name="spinnerDropDownItemBackground">@drawable/miuix_appcompat_spinner_popup_item_bg_light</item>
         <item name="spinnerDropDownItemTextColor">@color/miuix_appcompat_dialog_list_text_light_single_choice</item>
@@ -2470,6 +2685,30 @@
     <style name="Theme.Light.Dialog.NoTitle" parent="@style/Theme.Light.Dialog">
         <item name="windowActionBar">false</item>
     </style>
+    <style name="Theme.Light.FloatingWindow" parent="@style/Theme.Light">
+        <item name="android:windowBackground">@drawable/miuix_appcompat_floating_window_bg_light</item>
+        <item name="android:windowIsTranslucent">@bool/miuix_appcompat_floating_window_is_translucent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:actionModeBackground">@drawable/miuix_appcompat_floating_action_mode_bg_light</item>
+        <item name="android:actionBarSize">@dimen/miuix_appcompat_action_bar_floating_height</item>
+        <item name="android:actionModeSplitBackground">@drawable/miuix_appcompat_floating_action_bar_split_bg_light</item>
+        <item name="actionBarExpandBackground">@drawable/miuix_appcompat_floating_action_bar_split_bg_expanded_light</item>
+        <item name="actionBarSplitBackground">@drawable/miuix_appcompat_floating_action_bar_split_bg_light</item>
+        <item name="actionbarSearchMaskColor">@color/miuix_appcompat_floating_action_bar_search_mask_color_light</item>
+        <item name="isMiuixFloatingTheme">true</item>
+        <item name="listMenuBackground">@drawable/miuix_appcompat_floating_list_menu_bg_light</item>
+        <item name="miuixAppcompatColorPrimary">@color/miuix_appcompat_floating_primary_color_light</item>
+        <item name="windowFixedHeightMajor">@dimen/miuix_appcompat_floating_window_fixed_height_major</item>
+        <item name="windowFixedHeightMinor">@dimen/miuix_appcompat_floating_window_fixed_height_minor</item>
+        <item name="windowFixedWidthMajor">@dimen/miuix_appcompat_floating_window_fixed_width_major</item>
+        <item name="windowFixedWidthMinor">@dimen/miuix_appcompat_floating_window_fixed_width_minor</item>
+        <item name="windowFloating">@bool/miuix_appcompat_window_floating</item>
+        <item name="windowMaxHeightMajor">@dimen/miuix_appcompat_dialog_max_height_major</item>
+        <item name="windowMaxHeightMinor">@dimen/miuix_appcompat_dialog_max_height_minor</item>
+        <item name="windowMaxWidthMajor">@dimen/miuix_appcompat_dialog_max_width_major</item>
+        <item name="windowMaxWidthMinor">@dimen/miuix_appcompat_dialog_max_width_minor</item>
+        <item name="windowTranslucentStatus">opaque</item>
+    </style>
     <style name="Theme.Light.Navigation" parent="@style/Theme.Light">
         <item name="android:windowBackground">@drawable/miuix_appcompat_window_bg_navigation_light</item>
         <item name="android:actionModeBackground">@drawable/miuix_appcompat_action_mode_bg_navigation_light</item>
@@ -2505,6 +2744,9 @@
     </style>
     <style name="Theme.PreferenceOverlay.Dark" parent="@style/V12.PreferenceThemeOverlay.Dark" />
     <style name="Theme.PreferenceOverlay.DayNight" parent="@style/Theme.PreferenceOverlay.Light" />
+    <style name="Theme.PreferenceOverlay.Floating.Dark" parent="@style/V12.PreferenceThemeOverlay.Floating.Dark" />
+    <style name="Theme.PreferenceOverlay.Floating.DayNight" parent="@style/Theme.PreferenceOverlay.Floating.Light" />
+    <style name="Theme.PreferenceOverlay.Floating.Light" parent="@style/V12.PreferenceThemeOverlay.Floating.Light" />
     <style name="Theme.PreferenceOverlay.Light" parent="@style/V12.PreferenceThemeOverlay.Light" />
     <style name="Theme.Translucent" parent="@style/Theme.DayNight">
         <item name="android:windowBackground">@color/miuix_appcompat_transparent</item>
@@ -2550,17 +2792,30 @@
     <style name="V12.PreferenceThemeOverlay" parent="@style/PreferenceThemeOverlay">
         <item name="android:scrollbars">vertical</item>
         <item name="android:divider">@null</item>
-        <item name="android:dividerHeight">0.0dip</item>
+        <item name="android:dividerHeight">@dimen/miuix_divider_height</item>
         <item name="checkBoxPreferenceStyle">@style/Miuix.Preference.CheckBoxPreference</item>
         <item name="dialogPreferenceStyle">@style/Miuix.Preference.DialogPreference</item>
         <item name="dropdownPreferenceStyle">@style/Miuix.Preference.DropDown</item>
         <item name="editTextPreferenceStyle">@style/Miuix.Preference.DialogPreference.EditTextPreference</item>
+        <item name="navigationPreferenceItemBackground">@drawable/miuix_preference_navigation_item_background</item>
         <item name="preferenceCategoryCheckableStyle">@style/Miuix.Preference.Category.Checkable</item>
         <item name="preferenceCategoryRadioStyle">@style/Miuix.Preference.Category.Radio</item>
         <item name="preferenceCategoryStyle">@style/Miuix.Preference.Category</item>
+        <item name="preferenceCheckableItemMaskPaddingEnd">@dimen/miuix_preference_checkable_item_bg_padding_end</item>
+        <item name="preferenceCheckableItemMaskPaddingStart">@dimen/miuix_preference_checkable_item_mask_padding_start</item>
+        <item name="preferenceCheckableItemSetMaskPaddingEnd">@dimen/miuix_preference_checkable_item_mask_padding_end</item>
         <item name="preferenceChoiceIndicatorSingle">@drawable/miuix_preference_btn_radio_arrow</item>
         <item name="preferenceFragmentCompatStyle">@style/Miuix.PreferenceFragment</item>
+        <item name="preferenceItemPaddingEnd">@dimen/miuix_preference_item_padding_end</item>
+        <item name="preferenceItemPaddingStart">@dimen/miuix_preference_item_padding_start</item>
+        <item name="preferenceRadioSetChildExtraPaddingStart">@dimen/miuix_preference_radio_set_item_padding_start</item>
+        <item name="preferenceRadioSetMaskPaddingStart">@dimen/miuix_preference_radio_set_radio_item_padding_start</item>
+        <item name="preferenceRadioTwoStateContentPaddingEnd">@dimen/miuix_preference_item_radio_two_state_bg_padding_end</item>
+        <item name="preferenceRadioTwoStateContentPaddingStart">@dimen/miuix_preference_item_radio_two_state_bg_padding_start</item>
         <item name="preferenceScreenStyle">@style/Miuix.Preference.PreferenceScreen</item>
+        <item name="preferenceSeekBarIconMarginStart">@dimen/miuix_preference_item_seekbar_icon_margin_start</item>
+        <item name="preferenceSeekBarPaddingEnd">@dimen/miuix_preference_seekbar_padding_end</item>
+        <item name="preferenceSeekBarPaddingStart">@dimen/miuix_preference_seekbar_padding_start</item>
         <item name="preferenceStyle">@style/Miuix.Preference</item>
         <item name="radioButtonPreferenceStyle">@style/Miuix.Preference.RadioButtonPreference</item>
         <item name="radioPreferenceItemTwoStateBackground">@drawable/miuix_preference_item_radio_two_state_background</item>
@@ -2586,10 +2841,49 @@
         <item name="preferenceCategoryTextColor">@color/miuix_preference_category_text_color_dark</item>
         <item name="preferenceCheckableMaskColor">@color/miuix_preference_list_item_bg_color_dark</item>
         <item name="preferenceItemBackground">@drawable/miuix_preference_item_background_dark</item>
+        <item name="preferenceItemBackgroundColor">@color/miuix_preference_list_item_bg_color_dark</item>
+        <item name="preferenceNavigationSecondaryTextColor">@color/miuix_preference_secondary_text_color_dark</item>
+        <item name="preferenceNavigationTextColor">@color/miuix_preference_primary_text_color_dark</item>
+        <item name="preferenceNormalCheckableMaskColor">@color/miuix_preference_list_item_bg_color_dark</item>
         <item name="preferencePrimaryTextColor">@color/miuix_preference_primary_text_dark</item>
         <item name="preferenceRightTextColor">@color/miuix_preference_right_text_color_dark</item>
         <item name="preferenceSecondaryTextColor">@color/miuix_preference_secondary_text_dark</item>
         <item name="radioPreferenceItemBackground">@drawable/miuix_preference_item_radio_background_dark</item>
+        <item name="seekBarPreferenceItemBackground">@drawable/miuix_preference_item_seekbar_background</item>
+        <item name="selectablePreferenceItemColorNormal">@color/miuix_appcompat_transparent</item>
+        <item name="selectablePreferenceItemColorSelected">@color/miuix_preference_selectable_item_fill_color_selected_dark</item>
+    </style>
+    <style name="V12.PreferenceThemeOverlay.Floating.Dark" parent="@style/V12.PreferenceThemeOverlay.Dark">
+        <item name="preferenceCheckableItemMaskPaddingEnd">@dimen/miuix_floating_preference_checkable_item_bg_padding_end</item>
+        <item name="preferenceCheckableItemMaskPaddingStart">@dimen/miuix_floating_preference_checkable_item_mask_padding_start</item>
+        <item name="preferenceCheckableItemSetMaskPaddingEnd">@dimen/miuix_floating_preference_checkable_item_mask_padding_end</item>
+        <item name="preferenceCheckableMaskColor">@color/miuix_appcompat_list_item_mask_floating_bg_color_dark</item>
+        <item name="preferenceItemBackgroundColor">@color/miuix_appcompat_list_item_floating_bg_color_dark</item>
+        <item name="preferenceItemPaddingEnd">@dimen/miuix_floating_preference_item_padding_end</item>
+        <item name="preferenceItemPaddingStart">@dimen/miuix_floating_preference_item_padding_start</item>
+        <item name="preferenceRadioSetChildExtraPaddingStart">@dimen/miuix_floating_preference_radio_set_item_padding_start</item>
+        <item name="preferenceRadioSetMaskPaddingStart">@dimen/miuix_floating_preference_radio_set_radio_item_padding_start</item>
+        <item name="preferenceRadioTwoStateContentPaddingEnd">@dimen/miuix_floating_preference_item_radio_two_state_bg_padding_end</item>
+        <item name="preferenceRadioTwoStateContentPaddingStart">@dimen/miuix_floating_preference_item_radio_two_state_bg_padding_start</item>
+        <item name="preferenceSeekBarIconMarginStart">@dimen/miuix_floating_preference_seekbar_icon_margin_start</item>
+        <item name="preferenceSeekBarPaddingEnd">@dimen/miuix_floating_preference_seekbar_padding_end</item>
+        <item name="preferenceSeekBarPaddingStart">@dimen/miuix_floating_preference_seekbar_padding_start</item>
+    </style>
+    <style name="V12.PreferenceThemeOverlay.Floating.Light" parent="@style/V12.PreferenceThemeOverlay.Light">
+        <item name="preferenceCheckableItemMaskPaddingEnd">@dimen/miuix_floating_preference_checkable_item_bg_padding_end</item>
+        <item name="preferenceCheckableItemMaskPaddingStart">@dimen/miuix_floating_preference_checkable_item_mask_padding_start</item>
+        <item name="preferenceCheckableItemSetMaskPaddingEnd">@dimen/miuix_floating_preference_checkable_item_mask_padding_end</item>
+        <item name="preferenceCheckableMaskColor">@color/miuix_appcompat_list_item_mask_floating_bg_color_light</item>
+        <item name="preferenceItemBackgroundColor">@color/miuix_appcompat_list_item_floating_bg_color_light</item>
+        <item name="preferenceItemPaddingEnd">@dimen/miuix_floating_preference_item_padding_end</item>
+        <item name="preferenceItemPaddingStart">@dimen/miuix_floating_preference_item_padding_start</item>
+        <item name="preferenceRadioSetChildExtraPaddingStart">@dimen/miuix_floating_preference_radio_set_item_padding_start</item>
+        <item name="preferenceRadioSetMaskPaddingStart">@dimen/miuix_floating_preference_radio_set_radio_item_padding_start</item>
+        <item name="preferenceRadioTwoStateContentPaddingEnd">@dimen/miuix_floating_preference_item_radio_two_state_bg_padding_end</item>
+        <item name="preferenceRadioTwoStateContentPaddingStart">@dimen/miuix_floating_preference_item_radio_two_state_bg_padding_start</item>
+        <item name="preferenceSeekBarIconMarginStart">@dimen/miuix_floating_preference_seekbar_icon_margin_start</item>
+        <item name="preferenceSeekBarPaddingEnd">@dimen/miuix_floating_preference_seekbar_padding_end</item>
+        <item name="preferenceSeekBarPaddingStart">@dimen/miuix_floating_preference_seekbar_padding_start</item>
     </style>
     <style name="V12.PreferenceThemeOverlay.Light" parent="@style/V12.PreferenceThemeOverlay">
         <item name="arrowRightFillColor">@color/miuix_appcompat_arrow_right_fill_color_light</item>
@@ -2608,10 +2902,41 @@
         <item name="preferenceCategoryTextColor">@color/miuix_preference_category_text_color_light</item>
         <item name="preferenceCheckableMaskColor">@color/miuix_preference_list_item_bg_color_light</item>
         <item name="preferenceItemBackground">@drawable/miuix_preference_item_background_light</item>
+        <item name="preferenceItemBackgroundColor">@color/miuix_preference_list_item_bg_color_light</item>
+        <item name="preferenceNavigationSecondaryTextColor">@color/miuix_preference_secondary_text_color_light</item>
+        <item name="preferenceNavigationTextColor">@color/miuix_preference_primary_text_color_light</item>
+        <item name="preferenceNormalCheckableMaskColor">@color/miuix_preference_list_item_bg_color_light</item>
         <item name="preferencePrimaryTextColor">@color/miuix_preference_primary_text_light</item>
         <item name="preferenceRightTextColor">@color/miuix_preference_right_text_color_light</item>
         <item name="preferenceSecondaryTextColor">@color/miuix_preference_secondary_text_light</item>
         <item name="radioPreferenceItemBackground">@drawable/miuix_preference_item_radio_background_light</item>
+        <item name="seekBarPreferenceItemBackground">@drawable/miuix_preference_item_seekbar_background</item>
+        <item name="selectablePreferenceItemColorNormal">@color/miuix_appcompat_transparent</item>
+        <item name="selectablePreferenceItemColorSelected">@color/miuix_preference_selectable_item_fill_color_selected_light</item>
+    </style>
+    <style name="WebViewActionBar">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    <style name="WebViewActionBarDark">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/black</item>
+    </style>
+    <style name="WebViewCustomDarkTheme" parent="@android:style/Theme.DeviceDefault">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowActionModeOverlay">false</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="android:actionBarTheme">@style/WebViewActionBarDark</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+    </style>
+    <style name="WebViewCustomLightTheme" parent="@android:style/Theme.DeviceDefault.Light">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowActionModeOverlay">false</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="android:actionBarTheme">@style/WebViewActionBar</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
     </style>
     <style name="Widget" />
     <style name="Widget.ActionBar" parent="@style/Widget">
@@ -2620,18 +2945,18 @@
         <item name="android:divider">@null</item>
         <item name="android:height">?android:actionBarSize</item>
         <item name="android:displayOptions">homeAsUp|showTitle</item>
-        <item name="android:titleTextStyle">@style/Miuix.AppCompat.TextAppearance.WindowTitle</item>
-        <item name="android:subtitleTextStyle">@style/Miuix.AppCompat.TextAppearance.WindowTitle.Subtitle</item>
+        <item name="android:titleTextStyle">?collapseTitleTheme</item>
+        <item name="android:subtitleTextStyle">?collapseSubtitleTheme</item>
         <item name="android:progressBarPadding">@dimen/miuix_appcompat_actionbar_progressbar_horizontal_padding</item>
         <item name="android:homeLayout">@layout/miuix_appcompat_action_bar_home</item>
         <item name="android:itemPadding">0.0dip</item>
         <item name="android:backgroundStacked">?actionBarStackBackground</item>
         <item name="android:backgroundSplit">?actionBarSplitBackground</item>
-        <item name="android:paddingStart">@dimen/miuix_appcompat_action_bar_horizontal_padding_start</item>
-        <item name="android:paddingEnd">@dimen/miuix_appcompat_action_bar_horizontal_padding_end</item>
+        <item name="android:paddingStart">?actionBarPaddingStart</item>
+        <item name="android:paddingEnd">?actionBarPaddingEnd</item>
         <item name="expandState">?actionBarExpandState</item>
-        <item name="expandSubtitleTextStyle">@style/Miuix.AppCompat.TextAppearance.WindowTitle.Subtitle.Expand</item>
-        <item name="expandTitleTextStyle">@style/Miuix.AppCompat.TextAppearance.WindowTitle.Expand</item>
+        <item name="expandSubtitleTextStyle">?expandSubtitleTheme</item>
+        <item name="expandTitleTextStyle">?expandTitleTheme</item>
         <item name="resizable">?actionBarResizable</item>
         <item name="tabIndicator">@null</item>
         <item name="translucentTabIndicator">true</item>
@@ -2788,8 +3113,8 @@
         <item name="android:titleTextStyle">@style/Miuix.AppCompat.TextAppearance.Widget.ActionMode.Title</item>
         <item name="android:subtitleTextStyle">@null</item>
         <item name="android:backgroundSplit">?android:actionModeSplitBackground</item>
-        <item name="android:paddingStart">@dimen/miuix_appcompat_action_bar_horizontal_padding_start</item>
-        <item name="android:paddingEnd">@dimen/miuix_appcompat_action_bar_horizontal_padding_end</item>
+        <item name="android:paddingStart">?actionBarPaddingStart</item>
+        <item name="android:paddingEnd">?actionBarPaddingEnd</item>
         <item name="expandTitleTextStyle">@style/Miuix.AppCompat.TextAppearance.WindowTitle.Expand</item>
     </style>
     <style name="Widget.ActionMode.ActionButton" parent="@style/Widget.ActionButton">
@@ -2998,6 +3323,8 @@
         <item name="android:background">?buttonBackground</item>
         <item name="android:singleLine">true</item>
         <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="miuixSelectGroupButtonBackground">?selectorButtonBackground</item>
     </style>
     <style name="Widget.Button.Dialog" parent="@style/Widget.Button">
         <item name="android:layout_width">wrap_content</item>
@@ -3032,6 +3359,7 @@
     <style name="Widget.Button.Primary" parent="@style/Widget.Button">
         <item name="android:textColor">?primaryButtonTextColor</item>
         <item name="android:background">?primaryButtonBackground</item>
+        <item name="miuixSelectGroupButtonBackground">?primarySelectorButtonBackground</item>
     </style>
     <style name="Widget.Button.Rect" parent="@style/Widget.Button">
         <item name="android:background">?buttonRectStyleBackground</item>
@@ -3073,6 +3401,7 @@
         <item name="android:layout_width">0.0dip</item>
         <item name="android:layout_height">0.0dip</item>
         <item name="android:button">?android:listChoiceIndicatorMultiple</item>
+        <item name="android:forceDarkAllowed">false</item>
         <item name="buttonCompat">?checkBoxButtonCompat</item>
     </style>
     <style name="Widget.CompoundButton.CheckBox.Dialog" parent="@style/Widget.CompoundButton.CheckBox">
@@ -3098,6 +3427,7 @@
         <item name="android:background">@null</item>
         <item name="android:layout_width">0.0dip</item>
         <item name="android:layout_height">0.0dip</item>
+        <item name="android:forceDarkAllowed">false</item>
     </style>
     <style name="Widget.CompoundButton.RadioButton.Circle" parent="@style/Widget.CompoundButton.RadioButton">
         <item name="android:button">?radioButtonDrawable</item>
@@ -3122,6 +3452,13 @@
         <item name="android:layout_weight">1.0</item>
         <item name="lunarCalendar">false</item>
     </style>
+    <style name="Widget.DateTimePicker.Big.Dark" parent="@style/Widget.DateTimePicker">
+        <item name="android:background">@drawable/miuix_appcompat_number_picker_big_bg_dark</item>
+    </style>
+    <style name="Widget.DateTimePicker.Big.DayNight" parent="@style/Widget.DateTimePicker.Big.Light" />
+    <style name="Widget.DateTimePicker.Big.Light" parent="@style/Widget.DateTimePicker">
+        <item name="android:background">@drawable/miuix_appcompat_number_picker_big_bg</item>
+    </style>
     <style name="Widget.DialogTitle" parent="@style/Widget">
         <item name="android:textAppearance">@style/Miuix.AppCompat.TextAppearance.DialogTitle</item>
         <item name="android:textSize">@dimen/miuix_appcompat_dialog_title_text_size</item>
@@ -3140,6 +3477,7 @@
         <item name="android:background">?spinnerDropDownItemBackground</item>
         <item name="android:layout_height">@dimen/miuix_appcompat_list_preferred_item_height_small</item>
         <item name="android:checkMark">?android:listChoiceIndicatorSingle</item>
+        <item name="android:minWidth">@dimen/miuix_appcompat_list_preferred_item_width_small</item>
         <item name="android:minHeight">@dimen/miuix_appcompat_list_preferred_item_height_small</item>
         <item name="android:paddingStart">@dimen/miuix_appcompat_dialog_button_bar_horizontal_padding</item>
         <item name="android:paddingEnd">@dimen/miuix_appcompat_dialog_button_bar_horizontal_padding</item>
@@ -3173,12 +3511,14 @@
         <item name="textHandleAndCursorColor">@color/miuix_appcompat_handle_and_cursor_color</item>
     </style>
     <style name="Widget.EditText.Clearable" parent="@style/Widget.EditText">
+        <item name="android:textSize">@dimen/miuix_appcompat_clearable_edit_text_size</item>
         <item name="android:paddingEnd">@dimen/edit_text_clear_icon_padding</item>
     </style>
     <style name="Widget.EditText.Dark" parent="@style/Widget.EditText">
         <item name="android:background">@drawable/miuix_appcompat_edit_text_bg_dark</item>
     </style>
     <style name="Widget.EditText.Dark.Clearable" parent="@style/Widget.EditText.Dark">
+        <item name="android:textSize">@dimen/miuix_appcompat_clearable_edit_text_size</item>
         <item name="android:paddingEnd">@dimen/edit_text_clear_icon_padding</item>
     </style>
     <style name="Widget.EditText.DayNight" parent="@style/Widget.EditText" />
@@ -3188,6 +3528,7 @@
         <item name="android:background">?editTextColorDialogBackground</item>
     </style>
     <style name="Widget.EditText.Search" parent="@style/Widget.EditText.Clearable">
+        <item name="android:textSize">@dimen/miuix_appcompat_search_edit_text_size</item>
         <item name="android:textColor">?searchEditTextColor</item>
         <item name="android:textColorHint">?searchEditTextHintColor</item>
         <item name="android:background">?searchEditTextBackground</item>
@@ -3381,6 +3722,10 @@
         <item name="android:paddingStart">0.0dip</item>
         <item name="android:paddingEnd">@dimen/miuix_preference_item_padding_inner</item>
     </style>
+    <style name="Widget.PreferenceItem.Navigation" parent="@style/Widget.PreferenceItem">
+        <item name="android:paddingTop">@dimen/miuix_preference_navigation_item_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/miuix_preference_navigation_item_padding_vertical</item>
+    </style>
     <style name="Widget.PreferenceItem.Radio" parent="@style/Widget.PreferenceItem">
         <item name="android:paddingTop">@dimen/miuix_preference_item_radio_padding_top</item>
         <item name="android:paddingBottom">@dimen/miuix_preference_item_radio_padding_bottom</item>
@@ -3499,6 +3844,7 @@
     </style>
     <style name="Widget.SlidingButton" parent="">
         <item name="android:background">@drawable/miuix_appcompat_sliding_btn_bg_light</item>
+        <item name="android:layerType">hardware</item>
         <item name="barOff">@drawable/miuix_appcompat_sliding_btn_bar_off_light</item>
         <item name="barOn">@drawable/miuix_appcompat_sliding_btn_bar_on_light</item>
         <item name="frame">@drawable/miuix_appcompat_sliding_btn_frame_light</item>
@@ -3508,6 +3854,7 @@
     </style>
     <style name="Widget.SlidingButton.Dark" parent="@style/Widget.SlidingButton">
         <item name="android:background">@drawable/miuix_appcompat_sliding_btn_bg_dark</item>
+        <item name="android:layerType">hardware</item>
         <item name="barOff">@drawable/miuix_appcompat_sliding_btn_bar_off_dark</item>
         <item name="barOn">@drawable/miuix_appcompat_sliding_btn_bar_on_dark</item>
         <item name="frame">@drawable/miuix_appcompat_sliding_btn_frame_dark</item>
@@ -3594,6 +3941,45 @@
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
     </style>
+    <style name="branch_title_style" parent="@style/text_small_style">
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textDirection">locale</item>
+        <item name="android:layout_marginStart">@dimen/dp10</item>
+        <item name="android:layout_marginEnd">@dimen/dp4</item>
+        <item name="android:layout_toStartOf">@id/tv_installed</item>
+        <item name="android:layout_toEndOf">@id/iv_app_icon</item>
+    </style>
+    <style name="common_dialog_animations">
+        <item name="android:windowEnterAnimation">@anim/vertical_enter_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/vertical_exit_to_bottom</item>
+    </style>
+    <style name="common_dialog_content">
+        <item name="android:textSize">@dimen/text_size_sp16</item>
+        <item name="android:textColor">@color/common_dialog_button_text</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="common_dialog_negative_btn">
+        <item name="android:textSize">@dimen/text_size_sp16</item>
+        <item name="android:textColor">@color/common_dialog_button_text</item>
+        <item name="android:background">@drawable/common_dialog_btn_bg</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="common_dialog_positive_btn">
+        <item name="android:textSize">@dimen/text_size_sp16</item>
+        <item name="android:textColor">@color/blue_common_dialog_positive</item>
+        <item name="android:background">@drawable/common_dialog_btn_bg</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    <style name="common_dialog_title">
+        <item name="android:textSize">@dimen/text_size_sp17_45</item>
+        <item name="android:textColor">@color/ui_mode_text</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
     <style name="edit_mode_top_menu_imageView">
         <item name="android:layout_gravity">center_horizontal</item>
         <item name="android:layout_width">@dimen/edit_mode_top_menu_height</item>
@@ -3608,6 +3994,12 @@
         <item name="android:layout_height">@dimen/wrap_content</item>
         <item name="android:layout_marginTop">@dimen/edit_mode_top_menu_text_view_margin_top</item>
         <item name="android:singleLine">true</item>
+    </style>
+    <style name="floationActivityAnimator">
+        <item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@android:anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@android:anim/fade_out</item>
     </style>
     <style name="folder_scrollbar_vertical">
         <item name="android:scrollbarThumbVertical">@drawable/folder_scrollbar_v</item>
@@ -3629,6 +4021,10 @@
         <item name="android:shadowDy">1.0</item>
         <item name="android:shadowRadius">1.0</item>
         <item name="android:layerType">software</item>
+    </style>
+    <style name="general_dialog_animations">
+        <item name="android:windowEnterAnimation">@anim/vertical_enter_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/vertical_exit_to_bottom</item>
     </style>
     <style name="menu_item">
         <item name="android:gravity">center_vertical</item>

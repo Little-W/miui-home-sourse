@@ -39,9 +39,9 @@
     .line 27
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f060376
+    const v1, 0x7f0603c7
 
-    const v2, 0x7f060375
+    const v2, 0x7f0603c6
 
     invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(II)V
 
@@ -50,9 +50,9 @@
     .line 28
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f060378
+    const v1, 0x7f0603c9
 
-    const v2, 0x7f060377
+    const v2, 0x7f0603c8
 
     invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(II)V
 
@@ -61,9 +61,9 @@
     .line 29
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f06037a
+    const v1, 0x7f0603cb
 
-    const v2, 0x7f060379
+    const v2, 0x7f0603ca
 
     invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(II)V
 
@@ -269,7 +269,7 @@
 
     const/4 v1, 0x3
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
     if-eq v0, v1, :cond_0
 
@@ -483,7 +483,7 @@
     .line 63
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a022c
+    const v0, 0x7f0a029f
 
     .line 64
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->findViewById(I)Landroid/view/View;
@@ -627,6 +627,8 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
+
+    invoke-static {p1, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz p2, :cond_2
 

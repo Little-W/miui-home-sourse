@@ -85,8 +85,8 @@
         <item quantity="one">1 മിനിറ്റ് മുമ്പ്</item>
     </plurals>
     <plurals name="remove_dialog_title_multi_format">
-        <item quantity="other">ഹോം സ്ക്രീനിനിൽ നിന്ന് %1$d ആപ്പുകൾ നീക്കംചെയ്യണോ?</item>
-        <item quantity="one">ഹോം സ്ക്രീനിനിൽ നിന്ന് %1$d ആപ്പ് നീക്കണോ?</item>
+        <item quantity="other">ഹോം സ്ക്രീനിൽ നിന്ന് %1$d ആപ്പുകൾ നീക്കംചെയ്യണോ?</item>
+        <item quantity="one">ഹോം സ്ക്രീനിൽ നിന്ന് %1$d ആപ്പ് നീക്കണോ?</item>
     </plurals>
     <plurals name="scroll_tip_format_when_announce_accessibility">
         <item quantity="other">പേജ് %1$d, %2$d ആപ്പുകൾ.</item>

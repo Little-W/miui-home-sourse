@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">Kongsi dengan</string>
     <string name="abc_shareactionprovider_share_with_application">Kongsi dengan %s</string>
     <string name="abc_toolbar_collapse_description">Runtuhkan</string>
+    <string name="common_google_play_services_unknown_issue">%1$s menghadapi masalah berhubung perkhidmatan Google Play. Sila cuba lagi.</string>
     <string name="copy">Salin</string>
     <string name="expand_button_title">Terperinci</string>
     <string name="not_set">Tidak ditetapkan</string>

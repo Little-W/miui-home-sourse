@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DragController;Lcom/miui/home/launcher/DragController$OutlineTask;Lcom/miui/home/launcher/DragView;)V
     .locals 0
 
-    .line 601
+    .line 615
     iput-object p1, p0, Lcom/miui/home/launcher/DragController$2;->this$0:Lcom/miui/home/launcher/DragController;
 
     iput-object p2, p0, Lcom/miui/home/launcher/DragController$2;->val$task:Lcom/miui/home/launcher/DragController$OutlineTask;
@@ -51,7 +51,7 @@
 .method protected doInBackground()Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 604
+    .line 618
     iget-object v0, p0, Lcom/miui/home/launcher/DragController$2;->val$task:Lcom/miui/home/launcher/DragController$OutlineTask;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DragController$OutlineTask;->getOutline()Landroid/graphics/Bitmap;
@@ -64,7 +64,7 @@
 .method protected bridge synthetic doInBackground()Ljava/lang/Object;
     .locals 1
 
-    .line 601
+    .line 615
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragController$2;->doInBackground()Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -75,12 +75,12 @@
 .method protected onPostExecute(Landroid/graphics/Bitmap;)V
     .locals 1
 
-    .line 609
+    .line 623
     iget-object v0, p0, Lcom/miui/home/launcher/DragController$2;->val$dragView:Lcom/miui/home/launcher/DragView;
 
     if-eqz v0, :cond_0
 
-    .line 610
+    .line 624
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/DragView;->setOutline(Landroid/graphics/Bitmap;)V
 
     :cond_0
@@ -90,7 +90,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 601
+    .line 615
     check-cast p1, Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/DragController$2;->onPostExecute(Landroid/graphics/Bitmap;)V

@@ -1,11 +1,14 @@
 .class Lcom/miui/home/launcher/Launcher$77;
-.super Lcom/miui/home/launcher/common/ResultRunnable;
+.super Ljava/lang/Object;
 .source "Launcher.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->getAllLoadedShortcut()Ljava/util/ArrayList;
+    value = Lcom/miui/home/launcher/Launcher;->addPreinstallAppToWorkspace(Lcom/miui/home/launcher/RemoteShortcutInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -13,28 +16,23 @@
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/miui/home/launcher/common/ResultRunnable<",
-        "Ljava/util/ArrayList<",
-        "Lcom/miui/home/launcher/ShortcutInfo;",
-        ">;>;"
-    }
-.end annotation
-
 
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
+.field final synthetic val$info:Lcom/miui/home/launcher/RemoteShortcutInfo;
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/RemoteShortcutInfo;)V
     .locals 0
 
-    .line 7843
+    .line 8288
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$77;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-direct {p0}, Lcom/miui/home/launcher/common/ResultRunnable;-><init>()V
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$77;->val$info:Lcom/miui/home/launcher/RemoteShortcutInfo;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -42,20 +40,54 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 11
 
-    .line 7846
-    new-instance v0, Ljava/util/ArrayList;
+    .line 8291
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$77;->val$info:Lcom/miui/home/launcher/RemoteShortcutInfo;
 
+    const-wide/16 v1, -0x64
+
+    iput-wide v1, v0, Lcom/miui/home/launcher/RemoteShortcutInfo;->container:J
+
+    .line 8292
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$77;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$3700(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
+    invoke-static {v1, v0}, Lcom/miui/home/launcher/Launcher;->access$9400(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/RemoteShortcutInfo;)Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    if-eqz v3, :cond_0
 
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher$77;->setResult(Ljava/lang/Object;)V
+    .line 8294
+    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$77;->this$0:Lcom/miui/home/launcher/Launcher;
 
+    iget-wide v4, v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->screenId:J
+
+    iget-wide v6, v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->container:J
+
+    iget v8, v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->cellX:I
+
+    iget v9, v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->cellY:I
+
+    const/4 v10, 0x0
+
+    invoke-virtual/range {v2 .. v10}, Lcom/miui/home/launcher/Launcher;->addItemToWorkspace(Lcom/miui/home/launcher/ItemInfo;JJIILjava/lang/Runnable;)V
+
+    .line 8296
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$77;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$500(Lcom/miui/home/launcher/Launcher;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/miui/home/launcher/Launcher$77$1;
+
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/Launcher$77$1;-><init>(Lcom/miui/home/launcher/Launcher$77;)V
+
+    const-wide/16 v2, 0x64
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_0
     return-void
 .end method

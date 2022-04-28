@@ -55,7 +55,7 @@
     .line 100
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/preinstall/BasePreinstallFolderAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    const v1, 0x7f0d0026
+    const v1, 0x7f0d0039
 
     invoke-static {v1, v0, p1, p2}, Lcom/miui/home/launcher/ShortcutIcon;->fromXml(ILcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;Lcom/miui/home/launcher/ShortcutInfo;)Lcom/miui/home/launcher/ShortcutIcon;
 

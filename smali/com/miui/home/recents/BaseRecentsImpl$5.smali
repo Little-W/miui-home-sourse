@@ -1,9 +1,6 @@
 .class Lcom/miui/home/recents/BaseRecentsImpl$5;
-.super Ljava/lang/Object;
+.super Landroid/database/ContentObserver;
 .source "BaseRecentsImpl.java"
-
-# interfaces
-.implements Lcom/miui/home/recents/ActivityObserverLauncher$ActivityObserverCallback;
 
 
 # annotations
@@ -22,54 +19,78 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;)V
+.method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;Landroid/os/Handler;)V
     .locals 0
 
-    .line 384
+    .line 400
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$5;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public activityResumed(Landroid/content/Intent;)V
+.method public static synthetic lambda$onChange$0(Lcom/miui/home/recents/BaseRecentsImpl$5;)V
     .locals 2
 
-    if-eqz p1, :cond_0
+    .line 405
+    iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$5;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    .line 388
-    invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+    invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$500(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/NavStubView;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 389
-    invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "RecentsImpl"
-
-    const-string v1, "mActivityStateObserver "
-
-    .line 390
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 391
+    .line 406
     iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$5;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    invoke-virtual {v0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->onResumed(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$500(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/NavStubView;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl$5;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+
+    iget-boolean v1, v1, Lcom/miui/home/recents/BaseRecentsImpl;->mHideGestureLine:Z
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/recents/NavStubView;->setHideGestureLine(Z)V
 
     :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public onChange(Z)V
+    .locals 2
+
+    .line 403
+    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$5;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+
+    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$200(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "hide_gesture_line"
+
+    invoke-static {v0, v1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getGlobalBoolean(Landroid/content/ContentResolver;Ljava/lang/String;)Z
+
+    move-result v0
+
+    iput-boolean v0, p1, Lcom/miui/home/recents/BaseRecentsImpl;->mHideGestureLine:Z
+
+    .line 404
+    sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->GESTURE_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
+
+    new-instance v0, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$5$YQgjliv_xVkbsdEtzo99e1GkR9k;
+
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$5$YQgjliv_xVkbsdEtzo99e1GkR9k;-><init>(Lcom/miui/home/recents/BaseRecentsImpl$5;)V
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
+
     return-void
 .end method

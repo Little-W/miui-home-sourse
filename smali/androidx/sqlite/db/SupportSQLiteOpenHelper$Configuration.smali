@@ -27,27 +27,22 @@
 
 .field public final name:Ljava/lang/String;
 
-.field public final useNoBackupDirectory:Z
-
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;Z)V
+.method constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;)V
     .locals 0
 
-    .line 337
+    .line 319
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 338
+    .line 320
     iput-object p1, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration;->context:Landroid/content/Context;
 
-    .line 339
+    .line 321
     iput-object p2, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration;->name:Ljava/lang/String;
 
-    .line 340
+    .line 322
     iput-object p3, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration;->callback:Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;
-
-    .line 341
-    iput-boolean p4, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration;->useNoBackupDirectory:Z
 
     return-void
 .end method
@@ -55,7 +50,7 @@
 .method public static builder(Landroid/content/Context;)Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;
     .locals 1
 
-    .line 351
+    .line 331
     new-instance v0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;
 
     invoke-direct {v0, p0}, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Configuration$Builder;-><init>(Landroid/content/Context;)V

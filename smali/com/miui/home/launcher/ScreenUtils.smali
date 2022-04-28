@@ -704,67 +704,140 @@
         }
     .end annotation
 
-    .line 249
+    .line 251
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 250
+    .line 252
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXMin(Landroid/content/Context;)I
 
     move-result v1
 
-    .line 251
+    .line 253
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXMax(Landroid/content/Context;)I
 
     move-result v2
 
-    .line 252
+    .line 254
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYMin(Landroid/content/Context;)I
 
     move-result v3
 
-    .line 253
+    .line 255
     invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountYMax(Landroid/content/Context;)I
 
     move-result v4
+
+    const-string v5, "pref_key_use_theme_cells_size"
+
+    const/4 v6, 0x0
+
+    .line 256
+    invoke-static {p0, v5, v6}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Landroid/content/Context;Ljava/lang/String;Z)Z
+
+    move-result p0
 
     if-ne v1, v2, :cond_0
 
     if-eq v3, v4, :cond_1
 
     :cond_0
-    const-string v5, "pref_key_use_theme_cells_size"
-
-    const/4 v6, 0x0
-
-    .line 255
-    invoke-static {p0, v5, v6}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Landroid/content/Context;Ljava/lang/String;Z)Z
-
-    move-result p0
-
     if-eqz p0, :cond_2
 
     :cond_1
     return-object v0
 
+    .line 260
     :cond_2
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_3
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isThemeCoverCellConfig()Z
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    .line 262
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v5, "x"
+
+    invoke-virtual {p0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 263
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, "x"
+
+    invoke-virtual {p0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 264
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "x"
+
+    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :cond_3
     :goto_0
-    if-gt v1, v2, :cond_4
+    if-gt v1, v2, :cond_5
 
     move p0, v3
 
     :goto_1
-    if-gt p0, v4, :cond_3
+    if-gt p0, v4, :cond_4
 
-    .line 260
+    .line 268
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string/jumbo v6, "x"
+    const-string v6, "x"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -780,12 +853,13 @@
 
     goto :goto_1
 
-    :cond_3
+    :cond_4
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_4
+    :cond_5
+    :goto_2
     return-object v0
 .end method
 
@@ -889,7 +963,7 @@
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    const/high16 v1, 0xc0000
 
     invoke-virtual {p1, p0, v1, v0}, Lcom/miui/home/library/compat/LauncherAppsCompat;->getApplicationInfo(Ljava/lang/String;ILandroid/os/UserHandle;)Landroid/content/pm/ApplicationInfo;
 
@@ -897,10 +971,15 @@
 
     if-eqz p0, :cond_0
 
-    const/4 v1, 0x1
+    const/4 p0, 0x1
+
+    goto :goto_0
 
     :cond_0
-    return v1
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
 .end method
 
 .method static synthetic lambda$asynIsAlreadyInstalled$0(Ljava/lang/String;Landroid/content/Context;Ljava/lang/Void;)Ljava/lang/Boolean;
@@ -936,14 +1015,14 @@
     const/4 v0, 0x0
 
     :try_start_0
-    const-string/jumbo v1, "x"
+    const-string v1, "x"
 
-    .line 268
+    .line 277
     invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 269
+    .line 278
     aget-object v1, p0, v0
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -954,7 +1033,7 @@
 
     const/4 v1, 0x1
 
-    .line 270
+    .line 279
     aget-object p0, p0, v1
 
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -972,7 +1051,7 @@
 
     const-string p1, "cells config string invalidate"
 
-    .line 273
+    .line 282
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0

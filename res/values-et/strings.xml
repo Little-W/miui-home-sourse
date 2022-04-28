@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">Jaga:</string>
     <string name="abc_shareactionprovider_share_with_application">Jagamine rakendusega %s</string>
     <string name="abc_toolbar_collapse_description">Ahendamine</string>
+    <string name="common_google_play_services_unknown_issue">Rakendusel %1$s on probleeme Google Play teenustega. Proovige uuesti.</string>
     <string name="copy">Kopeerimine</string>
     <string name="expand_button_title">Täpsemad</string>
     <string name="not_set">Määramata</string>

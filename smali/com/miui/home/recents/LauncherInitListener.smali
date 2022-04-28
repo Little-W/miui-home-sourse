@@ -34,46 +34,53 @@
         }
     .end annotation
 
-    .line 22
+    .line 23
     invoke-direct {p0}, Lcom/miui/home/recents/InternalStateHandler;-><init>()V
 
-    .line 23
+    .line 24
     iput-object p1, p0, Lcom/miui/home/recents/LauncherInitListener;->mOnInitListener:Ljava/util/function/BiPredicate;
 
     return-void
 .end method
 
-.method public static synthetic lambda$init$0(Lcom/miui/home/recents/LauncherInitListener;Landroid/os/CancellationSignal;Lcom/miui/home/launcher/Launcher;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Landroid/animation/AnimatorSet;
-    .locals 2
-
-    .line 38
-    invoke-virtual {p1}, Landroid/os/CancellationSignal;->cancel()V
+.method public static synthetic lambda$init$0(Lcom/miui/home/recents/LauncherInitListener;Landroid/os/CancellationSignal;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Landroid/animation/AnimatorSet;
+    .locals 3
 
     .line 39
+    invoke-virtual {p1}, Landroid/os/CancellationSignal;->cancel()V
+
+    .line 40
     iget-object p1, p0, Lcom/miui/home/recents/LauncherInitListener;->mRemoteAnimationProvider:Lcom/miui/home/recents/util/RemoteAnimationProvider;
 
     const/4 v0, 0x0
 
-    .line 40
+    .line 41
     iput-object v0, p0, Lcom/miui/home/recents/LauncherInitListener;->mRemoteAnimationProvider:Lcom/miui/home/recents/util/RemoteAnimationProvider;
+
+    .line 43
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
+
+    move-result-object v1
 
     if-eqz p1, :cond_0
 
-    .line 42
-    invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
+    if-eqz v1, :cond_0
 
-    move-result-object p2
+    .line 45
+    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
 
-    invoke-virtual {p2}, Lcom/miui/home/launcher/LauncherStateManager;->getState()Lcom/miui/home/launcher/LauncherState;
+    move-result-object v1
 
-    move-result-object p2
+    invoke-virtual {v1}, Lcom/miui/home/launcher/LauncherStateManager;->getState()Lcom/miui/home/launcher/LauncherState;
 
-    sget-object v1, Lcom/miui/home/launcher/LauncherState;->OVERVIEW:Lcom/miui/home/recents/OverviewState;
+    move-result-object v1
 
-    if-ne p2, v1, :cond_0
+    sget-object v2, Lcom/miui/home/launcher/LauncherState;->OVERVIEW:Lcom/miui/home/recents/OverviewState;
 
-    .line 43
-    invoke-interface {p1, p3}, Lcom/miui/home/recents/util/RemoteAnimationProvider;->createWindowAnimation([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Landroid/animation/AnimatorSet;
+    if-ne v1, v2, :cond_0
+
+    .line 46
+    invoke-interface {p1, p2}, Lcom/miui/home/recents/util/RemoteAnimationProvider;->createWindowAnimation([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Landroid/animation/AnimatorSet;
 
     move-result-object p1
 
@@ -88,31 +95,31 @@
 .method protected init(Lcom/miui/home/launcher/Launcher;Z)Z
     .locals 3
 
-    .line 28
+    .line 29
     iget-object v0, p0, Lcom/miui/home/recents/LauncherInitListener;->mRemoteAnimationProvider:Lcom/miui/home/recents/util/RemoteAnimationProvider;
 
     if-eqz v0, :cond_0
 
-    .line 30
+    .line 31
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAppTransitionManager()Lcom/miui/home/recents/LauncherAppTransitionManager;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
-    .line 34
+    .line 35
     new-instance v1, Landroid/os/CancellationSignal;
 
     invoke-direct {v1}, Landroid/os/CancellationSignal;-><init>()V
 
-    .line 35
-    new-instance v2, Lcom/miui/home/recents/-$$Lambda$LauncherInitListener$arlQtGkpdIwlM1-IQr3aNaoJDSo;
+    .line 36
+    new-instance v2, Lcom/miui/home/recents/-$$Lambda$LauncherInitListener$_j348U1NS51w3eNhwz90R4oVXhM;
 
-    invoke-direct {v2, p0, v1, p1}, Lcom/miui/home/recents/-$$Lambda$LauncherInitListener$arlQtGkpdIwlM1-IQr3aNaoJDSo;-><init>(Lcom/miui/home/recents/LauncherInitListener;Landroid/os/CancellationSignal;Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {v2, p0, v1}, Lcom/miui/home/recents/-$$Lambda$LauncherInitListener$_j348U1NS51w3eNhwz90R4oVXhM;-><init>(Lcom/miui/home/recents/LauncherInitListener;Landroid/os/CancellationSignal;)V
 
     invoke-virtual {v0, v2, v1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->setRemoteAnimationProvider(Lcom/miui/home/recents/util/RemoteAnimationProvider;Landroid/os/CancellationSignal;)V
 
-    .line 48
+    .line 51
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/LauncherInitListener;->mOnInitListener:Ljava/util/function/BiPredicate;
 
@@ -130,7 +137,7 @@
 .method public register()V
     .locals 0
 
-    .line 53
+    .line 56
     invoke-virtual {p0}, Lcom/miui/home/recents/LauncherInitListener;->initWhenReady()V
 
     return-void
@@ -139,13 +146,13 @@
 .method public registerAndStartActivity(Landroid/content/Intent;Lcom/miui/home/recents/util/RemoteAnimationProvider;Landroid/content/Context;Landroid/os/Handler;J)V
     .locals 0
 
-    .line 65
+    .line 68
     iput-object p2, p0, Lcom/miui/home/recents/LauncherInitListener;->mRemoteAnimationProvider:Lcom/miui/home/recents/util/RemoteAnimationProvider;
 
-    .line 67
+    .line 70
     invoke-virtual {p0}, Lcom/miui/home/recents/LauncherInitListener;->register()V
 
-    .line 69
+    .line 72
     invoke-interface {p2, p4, p5, p6}, Lcom/miui/home/recents/util/RemoteAnimationProvider;->toActivityOptions(Landroid/os/Handler;J)Landroid/app/ActivityOptions;
 
     move-result-object p2
@@ -154,7 +161,7 @@
 
     move-result-object p2
 
-    .line 70
+    .line 73
     new-instance p4, Landroid/content/Intent;
 
     invoke-direct {p4, p1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -173,10 +180,10 @@
 
     const/4 v0, 0x0
 
-    .line 58
+    .line 61
     iput-object v0, p0, Lcom/miui/home/recents/LauncherInitListener;->mRemoteAnimationProvider:Lcom/miui/home/recents/util/RemoteAnimationProvider;
 
-    .line 59
+    .line 62
     invoke-virtual {p0}, Lcom/miui/home/recents/LauncherInitListener;->clearReference()Z
 
     return-void

@@ -39,7 +39,7 @@
 .method protected getFirstViewBgResId()I
     .locals 1
 
-    const v0, 0x7f080508
+    const v0, 0x7f080581
 
     return v0
 .end method
@@ -82,7 +82,7 @@
 .method protected getLastViewBgResId()I
     .locals 1
 
-    const v0, 0x7f080504
+    const v0, 0x7f08057d
 
     return v0
 .end method
@@ -122,7 +122,7 @@
 .method protected getShortcutItemLayoutResId()I
     .locals 1
 
-    const v0, 0x7f0d0059
+    const v0, 0x7f0d0076
 
     return v0
 .end method

@@ -28,7 +28,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
     .locals 0
 
-    .line 158
+    .line 160
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$1;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -47,7 +47,7 @@
 .method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 161
+    .line 163
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$1;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-static {p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$300(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/Launcher;

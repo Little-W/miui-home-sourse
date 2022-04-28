@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source "SupportSQLiteOpenHelper.java"
 
-# interfaces
-.implements Ljava/io/Closeable;
-
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -18,9 +15,6 @@
 
 # virtual methods
 .method public abstract close()V
-.end method
-
-.method public abstract getDatabaseName()Ljava/lang/String;
 .end method
 
 .method public abstract getWritableDatabase()Landroidx/sqlite/db/SupportSQLiteDatabase;

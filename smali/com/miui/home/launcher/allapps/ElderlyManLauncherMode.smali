@@ -16,7 +16,7 @@
 .method private isQuickCallCellLayoutExist()Z
     .locals 3
 
-    .line 105
+    .line 110
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -27,7 +27,7 @@
 
     return v1
 
-    .line 107
+    .line 112
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
@@ -35,7 +35,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 108
+    .line 113
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object v0
@@ -65,7 +65,7 @@
 .method public getCurrentDefaultScreenId()J
     .locals 2
 
-    .line 90
+    .line 95
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/ElderlyManLauncherMode;->isQuickCallCellLayoutExist()Z
 
     move-result v0
@@ -139,7 +139,7 @@
 
     const/4 p1, 0x1
 
-    .line 76
+    .line 81
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p1

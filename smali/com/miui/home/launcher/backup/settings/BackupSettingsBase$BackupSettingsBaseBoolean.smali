@@ -1,4 +1,4 @@
-.class abstract Lcom/miui/home/launcher/backup/settings/BackupSettingsBase$BackupSettingsBaseBoolean;
+.class public abstract Lcom/miui/home/launcher/backup/settings/BackupSettingsBase$BackupSettingsBaseBoolean;
 .super Lcom/miui/home/launcher/backup/settings/BackupSettingsBase;
 .source "BackupSettingsBase.java"
 
@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x408
+    accessFlags = 0x409
     name = "BackupSettingsBaseBoolean"
 .end annotation
 

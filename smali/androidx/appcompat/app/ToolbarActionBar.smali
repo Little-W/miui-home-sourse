@@ -215,6 +215,29 @@
     return v0
 .end method
 
+.method public isShowing()Z
+    .locals 1
+
+    .line 418
+    iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
+
+    invoke-interface {v0}, Landroidx/appcompat/widget/DecorToolbar;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 0
 

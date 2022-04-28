@@ -7,34 +7,34 @@
 .method public static deleteSavedBitmapFile(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
-    .line 114
+    .line 119
     invoke-static {p0, p1}, Lcom/miui/home/launcher/util/BitmapUtil;->getSaveBitmapAbsPathByUniqueTag(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 115
+    .line 120
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 116
+    .line 121
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
-    .line 117
+    .line 122
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
     :cond_0
     return-void
 .end method
 
-.method private static getBitmapSavePath(Landroid/content/Context;)Ljava/lang/String;
+.method public static getBitmapSavePath(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 52
+    .line 57
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -59,7 +59,7 @@
 .method public static getSaveBitmapAbsPathByUniqueTag(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 100
+    .line 105
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -82,7 +82,7 @@
 .method public static saveBitmap(Landroid/graphics/Bitmap;Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
-    .line 107
+    .line 112
     invoke-static {p1}, Lcom/miui/home/launcher/util/BitmapUtil;->getBitmapSavePath(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p1
@@ -101,7 +101,7 @@
 
     if-eqz p0, :cond_5
 
-    .line 56
+    .line 61
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -110,13 +110,13 @@
 
     goto :goto_6
 
-    .line 60
+    .line 65
     :cond_0
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 62
+    .line 67
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v2
@@ -125,7 +125,7 @@
 
     if-nez v2, :cond_1
 
-    .line 63
+    .line 68
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
     move-result v1
@@ -140,7 +140,7 @@
 
     return v0
 
-    .line 72
+    .line 77
     :cond_2
     new-instance v1, Ljava/io/File;
 
@@ -148,7 +148,7 @@
 
     const/4 p1, 0x0
 
-    .line 75
+    .line 80
     :try_start_0
     new-instance p2, Ljava/io/FileOutputStream;
 
@@ -157,7 +157,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 77
+    .line 82
     :try_start_1
     sget-object p1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -165,13 +165,13 @@
 
     invoke-virtual {p0, p1, v1, p2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 79
+    .line 84
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->flush()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 87
+    .line 92
     :try_start_2
     invoke-virtual {p2}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -182,7 +182,7 @@
     :catch_0
     move-exception p0
 
-    .line 89
+    .line 94
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :goto_1
@@ -210,7 +210,7 @@
     :catch_2
     move-exception p0
 
-    .line 82
+    .line 87
     :goto_2
     :try_start_3
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
@@ -219,7 +219,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 87
+    .line 92
     :try_start_4
     invoke-virtual {p1}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
@@ -230,7 +230,7 @@
     :catch_3
     move-exception p0
 
-    .line 89
+    .line 94
     invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     :cond_3
@@ -240,7 +240,7 @@
     :goto_4
     if-eqz p1, :cond_4
 
-    .line 87
+    .line 92
     :try_start_5
     invoke-virtual {p1}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
@@ -251,10 +251,10 @@
     :catch_4
     move-exception p1
 
-    .line 89
+    .line 94
     invoke-virtual {p1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 92
+    .line 97
     :cond_4
     :goto_5
     throw p0

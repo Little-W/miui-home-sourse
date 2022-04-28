@@ -31,7 +31,7 @@
 
     const-string v8, "d"
 
-    .line 17
+    .line 19
     filled-new-array/range {v0 .. v8}, [Ljava/lang/String;
 
     move-result-object v0
@@ -46,7 +46,7 @@
 
     const-string v1, "v"
 
-    .line 28
+    .line 30
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -61,7 +61,7 @@
 .end method
 
 .method static parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/content/ShapeStroke;
-    .locals 18
+    .locals 17
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -70,7 +70,7 @@
 
     move-object/from16 v0, p0
 
-    .line 48
+    .line 50
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
@@ -95,22 +95,24 @@
 
     const/4 v12, 0x0
 
-    .line 50
+    .line 52
     :goto_0
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
     move-result v13
 
+    const/16 v14, 0x64
+
     if-eqz v13, :cond_7
 
-    .line 51
+    .line 53
     sget-object v13, Lcom/airbnb/lottie/parser/ShapeStrokeParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {v0, v13}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
 
     move-result v13
 
-    const/4 v14, 0x1
+    const/4 v15, 0x1
 
     packed-switch v13, :pswitch_data_0
 
@@ -118,16 +120,16 @@
 
     const/4 v2, 0x0
 
-    .line 117
+    .line 119
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
-    .line 77
+    .line 79
     :pswitch_0
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->beginArray()V
 
-    .line 78
+    .line 80
     :goto_1
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -135,14 +137,14 @@
 
     if-eqz v13, :cond_5
 
-    .line 82
+    .line 84
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->beginObject()V
+
+    const/4 v2, 0x0
 
     const/4 v13, 0x0
 
-    const/4 v15, 0x0
-
-    .line 83
+    .line 85
     :goto_2
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -150,32 +152,32 @@
 
     if-eqz v16, :cond_0
 
-    .line 84
-    sget-object v2, Lcom/airbnb/lottie/parser/ShapeStrokeParser;->DASH_PATTERN_NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+    .line 86
+    sget-object v1, Lcom/airbnb/lottie/parser/ShapeStrokeParser;->DASH_PATTERN_NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
-    invoke-virtual {v0, v2}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
+    invoke-virtual {v0, v1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
 
-    move-result v2
+    move-result v1
 
-    packed-switch v2, :pswitch_data_1
+    packed-switch v1, :pswitch_data_1
 
-    .line 92
+    .line 94
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipName()V
 
-    .line 93
+    .line 95
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_2
 
-    .line 89
+    .line 91
     :pswitch_1
     invoke-static/range {p0 .. p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseFloat(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
-    move-result-object v15
+    move-result-object v2
 
     goto :goto_2
 
-    .line 86
+    .line 88
     :pswitch_2
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -183,26 +185,24 @@
 
     goto :goto_2
 
-    .line 96
+    .line 98
     :cond_0
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->endObject()V
 
-    .line 98
+    .line 100
     invoke-virtual {v13}, Ljava/lang/String;->hashCode()I
 
-    move-result v2
+    move-result v1
 
-    const/16 v1, 0x64
+    if-eq v1, v14, :cond_3
 
-    if-eq v2, v1, :cond_3
+    const/16 v14, 0x67
 
-    const/16 v1, 0x67
+    if-eq v1, v14, :cond_2
 
-    if-eq v2, v1, :cond_2
+    const/16 v14, 0x6f
 
-    const/16 v1, 0x6f
-
-    if-eq v2, v1, :cond_1
+    if-eq v1, v14, :cond_1
 
     goto :goto_3
 
@@ -215,7 +215,7 @@
 
     if-eqz v1, :cond_4
 
-    const/16 v17, 0x0
+    const/4 v1, 0x0
 
     goto :goto_4
 
@@ -230,8 +230,6 @@
 
     const/4 v1, 0x2
 
-    move/from16 v17, v1
-
     goto :goto_4
 
     :cond_3
@@ -243,55 +241,58 @@
 
     if-eqz v1, :cond_4
 
-    move/from16 v17, v14
+    move v1, v15
 
     goto :goto_4
 
     :cond_4
     :goto_3
-    const/16 v17, -0x1
+    const/4 v1, -0x1
 
     :goto_4
-    packed-switch v17, :pswitch_data_2
+    packed-switch v1, :pswitch_data_2
 
     move-object/from16 v1, p1
 
-    goto :goto_1
+    goto :goto_5
 
     :pswitch_3
     move-object/from16 v1, p1
 
-    .line 104
-    invoke-virtual {v1, v14}, Lcom/airbnb/lottie/LottieComposition;->setHasDashPattern(Z)V
+    .line 106
+    invoke-virtual {v1, v15}, Lcom/airbnb/lottie/LottieComposition;->setHasDashPattern(Z)V
 
-    .line 105
-    invoke-interface {v3, v15}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 107
+    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_1
+    goto :goto_5
 
     :pswitch_4
     move-object/from16 v1, p1
 
-    move-object v5, v15
+    move-object v6, v2
+
+    :goto_5
+    const/16 v14, 0x64
 
     goto :goto_1
 
     :cond_5
     move-object/from16 v1, p1
 
-    .line 109
+    .line 111
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->endArray()V
 
-    .line 111
+    .line 113
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v2
 
-    if-ne v2, v14, :cond_6
+    if-ne v2, v15, :cond_6
 
     const/4 v2, 0x0
 
-    .line 113
+    .line 115
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v13
@@ -310,7 +311,7 @@
 
     const/4 v2, 0x0
 
-    .line 74
+    .line 76
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
     move-result v12
@@ -322,7 +323,7 @@
 
     const/4 v2, 0x0
 
-    .line 71
+    .line 73
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextDouble()D
 
     move-result-wide v13
@@ -336,7 +337,7 @@
 
     const/4 v2, 0x0
 
-    .line 68
+    .line 70
     invoke-static {}, Lcom/airbnb/lottie/model/content/ShapeStroke$LineJoinType;->values()[Lcom/airbnb/lottie/model/content/ShapeStroke$LineJoinType;
 
     move-result-object v10
@@ -345,7 +346,7 @@
 
     move-result v13
 
-    sub-int/2addr v13, v14
+    sub-int/2addr v13, v15
 
     aget-object v10, v10, v13
 
@@ -356,7 +357,7 @@
 
     const/4 v2, 0x0
 
-    .line 65
+    .line 67
     invoke-static {}, Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;->values()[Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;
 
     move-result-object v9
@@ -365,7 +366,7 @@
 
     move-result v13
 
-    sub-int/2addr v13, v14
+    sub-int/2addr v13, v15
 
     aget-object v9, v9, v13
 
@@ -376,10 +377,10 @@
 
     const/4 v2, 0x0
 
-    .line 62
+    .line 64
     invoke-static/range {p0 .. p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseInteger(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
 
-    move-result-object v7
+    move-result-object v4
 
     goto/16 :goto_0
 
@@ -388,7 +389,7 @@
 
     const/4 v2, 0x0
 
-    .line 59
+    .line 61
     invoke-static/range {p0 .. p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseFloat(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     move-result-object v8
@@ -400,10 +401,10 @@
 
     const/4 v2, 0x0
 
-    .line 56
+    .line 58
     invoke-static/range {p0 .. p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseColor(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;
 
-    move-result-object v6
+    move-result-object v7
 
     goto/16 :goto_0
 
@@ -412,26 +413,55 @@
 
     const/4 v2, 0x0
 
-    .line 53
+    .line 55
     invoke-virtual/range {p0 .. p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     goto/16 :goto_0
 
-    .line 121
     :cond_7
-    new-instance v13, Lcom/airbnb/lottie/model/content/ShapeStroke;
+    if-nez v4, :cond_8
 
-    move-object v0, v13
+    .line 125
+    new-instance v0, Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
 
-    move-object v1, v4
+    new-instance v1, Lcom/airbnb/lottie/value/Keyframe;
 
-    move-object v2, v5
+    const/16 v2, 0x64
 
-    move-object v4, v6
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-object v5, v7
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Lcom/airbnb/lottie/value/Keyframe;-><init>(Ljava/lang/Object;)V
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;-><init>(Ljava/util/List;)V
+
+    move-object v13, v0
+
+    goto :goto_6
+
+    :cond_8
+    move-object v13, v4
+
+    .line 126
+    :goto_6
+    new-instance v14, Lcom/airbnb/lottie/model/content/ShapeStroke;
+
+    move-object v0, v14
+
+    move-object v1, v5
+
+    move-object v2, v6
+
+    move-object v4, v7
+
+    move-object v5, v13
 
     move-object v6, v8
 
@@ -445,7 +475,7 @@
 
     invoke-direct/range {v0 .. v10}, Lcom/airbnb/lottie/model/content/ShapeStroke;-><init>(Ljava/lang/String;Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;Ljava/util/List;Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;Lcom/airbnb/lottie/model/content/ShapeStroke$LineJoinType;FZ)V
 
-    return-object v13
+    return-object v14
 
     :pswitch_data_0
     .packed-switch 0x0

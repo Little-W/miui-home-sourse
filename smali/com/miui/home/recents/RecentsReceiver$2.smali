@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/recents/RecentsReceiver;J)V
     .locals 0
 
-    .line 166
+    .line 147
     iput-object p1, p0, Lcom/miui/home/recents/RecentsReceiver$2;->this$0:Lcom/miui/home/recents/RecentsReceiver;
 
     iput-wide p2, p0, Lcom/miui/home/recents/RecentsReceiver$2;->val$freeAtFirst:J
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 9
 
-    .line 169
+    .line 150
     new-instance v0, Lmiuix/androidbasewidget/widget/CircleProgressBar;
 
     iget-object v1, p0, Lcom/miui/home/recents/RecentsReceiver$2;->this$0:Lcom/miui/home/recents/RecentsReceiver;
@@ -55,18 +55,18 @@
 
     const/4 v1, 0x1
 
-    .line 170
+    .line 151
     new-array v2, v1, [I
 
     const/4 v3, 0x0
 
-    const v4, 0x7f0800d0
+    const v4, 0x7f0800ec
 
     aput v4, v2, v3
 
     new-array v1, v1, [I
 
-    const v4, 0x7f0800d1
+    const v4, 0x7f0800ed
 
     aput v4, v1, v3
 
@@ -74,7 +74,7 @@
 
     invoke-virtual {v0, v2, v1, v3}, Lmiuix/androidbasewidget/widget/CircleProgressBar;->setDrawablesForLevels([I[I[I)V
 
-    .line 173
+    .line 154
     invoke-static {}, Lmiui/util/HardwareInfo;->getTotalPhysicalMemory()J
 
     move-result-wide v1
@@ -87,7 +87,7 @@
 
     invoke-virtual {v0, v1}, Lmiuix/androidbasewidget/widget/CircleProgressBar;->setMax(I)V
 
-    .line 174
+    .line 155
     invoke-static {}, Lmiui/util/HardwareInfo;->getTotalPhysicalMemory()J
 
     move-result-wide v1
@@ -104,7 +104,7 @@
 
     const-string v1, "RecentsReceiver"
 
-    .line 175
+    .line 156
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,14 +123,16 @@
 
     move-result-object v2
 
-    .line 177
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 158
     iget-object v1, p0, Lcom/miui/home/recents/RecentsReceiver$2;->this$0:Lcom/miui/home/recents/RecentsReceiver;
 
     invoke-static {v1}, Lcom/miui/home/recents/RecentsReceiver;->access$000(Lcom/miui/home/recents/RecentsReceiver;)Landroid/content/Context;
 
     move-result-object v1
 
-    const-string/jumbo v2, "window"
+    const-string v2, "window"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -138,7 +140,7 @@
 
     check-cast v1, Landroid/view/WindowManager;
 
-    .line 178
+    .line 159
     new-instance v8, Landroid/view/WindowManager$LayoutParams;
 
     const/4 v3, -0x2
@@ -157,10 +159,10 @@
 
     const/16 v2, 0x51
 
-    .line 184
+    .line 165
     iput v2, v8, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 185
+    .line 166
     iget-object v2, p0, Lcom/miui/home/recents/RecentsReceiver$2;->this$0:Lcom/miui/home/recents/RecentsReceiver;
 
     invoke-static {v2}, Lcom/miui/home/recents/RecentsReceiver;->access$000(Lcom/miui/home/recents/RecentsReceiver;)Landroid/content/Context;
@@ -171,7 +173,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070078
+    const v3, 0x7f07008a
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -179,14 +181,14 @@
 
     iput v2, v8, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    const v2, 0x7f11000c
+    const v2, 0x7f11000e
 
-    .line 186
+    .line 167
     iput v2, v8, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
     const-string v2, "privateFlags"
 
-    .line 187
+    .line 168
     sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     const-class v4, Landroid/view/WindowManager$LayoutParams;
@@ -195,18 +197,18 @@
 
     sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 188
+    .line 169
     invoke-static {v4, v5, v6}, Lcom/miui/launcher/utils/ReflectUtils;->getStaticFieldValue(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 187
+    .line 168
     invoke-static {v8, v2, v3, v4}, Lcom/miui/launcher/utils/ReflectUtils;->setValue(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Object;)V
 
-    .line 190
+    .line 171
     invoke-interface {v1, v0, v8}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 192
+    .line 173
     new-instance v2, Lcom/miui/home/recents/RecentsReceiver$2$1;
 
     invoke-direct {v2, p0, v0, v1}, Lcom/miui/home/recents/RecentsReceiver$2$1;-><init>(Lcom/miui/home/recents/RecentsReceiver$2;Lmiuix/androidbasewidget/widget/CircleProgressBar;Landroid/view/WindowManager;)V

@@ -103,6 +103,20 @@
     return-void
 .end method
 
+.method public onOverlayUpdate(II)V
+    .locals 1
+
+    .line 71
+    invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/overlay/LauncherOverlayMIUI;->onOverlayUpdate(II)V
+
+    .line 72
+    iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantLauncherOverlay;->mDragOverlay:Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;
+
+    invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/overlay/assistant/AssistantDragOverlay;->onOverlayUpdate(II)V
+
+    return-void
+.end method
+
 .method public onServiceStateChanged(Z)V
     .locals 1
 

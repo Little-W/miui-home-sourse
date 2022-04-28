@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "AllAppsSearchBarController.java"
 
+# interfaces
+.implements Lcom/mi/globallauncher/branchInterface/BranchSearchCallback;
+
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;

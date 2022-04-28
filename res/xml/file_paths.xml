@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <files-path
-        name="share_images"
-        path="images/" />
-    <files-path
-        name="home_preview.png"
-        path="." />
-    <files-path
-        name="pa_header"
-        path="/images/assistant" />
-    <root-path
-        name="data_app"
-        path="/data/app/" />
-    <files-path
-        name="maml_config"
-        path="/maml/config" />
-    <files-path
-        name="maml_res"
-        path="/maml/res" />
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <files-path name="share_images" path="images/" />
+    <files-path name="home_preview.png" path="." />
+    <files-path name="pa_header" path="/images/assistant" />
+    <root-path name="data_app" path="/data/app/" />
+    <files-path name="maml_config" path="/maml/config" />
+    <files-path name="maml_res" path="/maml/res" />
 </paths>

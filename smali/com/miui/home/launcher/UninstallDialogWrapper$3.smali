@@ -37,7 +37,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/UninstallDialogWrapper;Lcom/miui/home/launcher/uninstall/SecondConfirmDialog;)V
     .locals 0
 
-    .line 133
+    .line 135
     iput-object p1, p0, Lcom/miui/home/launcher/UninstallDialogWrapper$3;->this$0:Lcom/miui/home/launcher/UninstallDialogWrapper;
 
     iput-object p2, p0, Lcom/miui/home/launcher/UninstallDialogWrapper$3;->val$dialog:Lcom/miui/home/launcher/uninstall/SecondConfirmDialog;
@@ -52,7 +52,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 133
+    .line 135
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/UninstallDialogWrapper$3;->accept(Ljava/util/List;)V
@@ -71,7 +71,7 @@
         }
     .end annotation
 
-    .line 136
+    .line 138
     iget-object p1, p0, Lcom/miui/home/launcher/UninstallDialogWrapper$3;->this$0:Lcom/miui/home/launcher/UninstallDialogWrapper;
 
     iget-object v0, p0, Lcom/miui/home/launcher/UninstallDialogWrapper$3;->val$dialog:Lcom/miui/home/launcher/uninstall/SecondConfirmDialog;

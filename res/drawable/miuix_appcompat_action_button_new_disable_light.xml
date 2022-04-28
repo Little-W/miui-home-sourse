@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector
-    android:height="@dimen/miuix_appcompat_action_button_height"
-    android:width="@dimen/miuix_appcompat_action_button_width"
-    android:viewportWidth="75.0"
-    android:viewportHeight="74.0"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <path
-        android:fillColor="@color/miuix_appcompat_svg_icon_color_disable_light"
-        android:pathData="M34.5,13.4999C34.5,12.1192 35.6193,10.9999 37,10.9999C38.3807,10.9999 39.5,12.1192 39.5,13.4999V33.9999H60C61.3807,33.9999 62.5,35.1192 62.5,36.4999C62.5,37.8806 61.3807,38.9999 60,38.9999H39.5V60.4999C39.5,61.8806 38.3807,62.9999 37,62.9999C35.6193,62.9999 34.5,61.8806 34.5,60.4999V38.9999H14C12.6193,38.9999 11.5,37.8806 11.5,36.4999C11.5,35.1192 12.6193,33.9999 14,33.9999H34.5V13.4999Z"
-        android:fillType="evenOdd" />
+<vector android:height="@dimen/miuix_appcompat_action_button_height" android:width="@dimen/miuix_appcompat_action_button_width" android:viewportWidth="75.0" android:viewportHeight="74.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/miuix_appcompat_svg_icon_color_disable_light" android:pathData="M34.5,13.4999C34.5,12.1192 35.6193,10.9999 37,10.9999C38.3807,10.9999 39.5,12.1192 39.5,13.4999V33.9999H60C61.3807,33.9999 62.5,35.1192 62.5,36.4999C62.5,37.8806 61.3807,38.9999 60,38.9999H39.5V60.4999C39.5,61.8806 38.3807,62.9999 37,62.9999C35.6193,62.9999 34.5,61.8806 34.5,60.4999V38.9999H14C12.6193,38.9999 11.5,37.8806 11.5,36.4999C11.5,35.1192 12.6193,33.9999 14,33.9999H34.5V13.4999Z" android:fillType="evenOdd" />
 </vector>

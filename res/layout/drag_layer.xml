@@ -1,129 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.DragLayer
-    android:id="@id/drag_layer"
-    android:fitsSystemWindows="false"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.miui.home.launcher.search.SearchEdgeLayout
-        android:id="@id/screen"
-        android:clipToPadding="false"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:foregroundGravity="fill_horizontal|center|top">
-        <com.miui.home.launcher.FitSystemWindowView
-            android:id="@id/screen_content"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:foregroundGravity="fill_horizontal|center|top">
-            <com.miui.home.launcher.Workspace
-                android:id="@id/workspace"
-                android:paddingTop="@dimen/status_bar_height"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent" />
-            <com.miui.home.launcher.HotSeats
-                android:gravity="center"
-                android:layout_gravity="bottom"
-                android:id="@id/hotseat"
-                android:paddingTop="@dimen/hotseats_padding_top"
-                android:paddingBottom="@dimen/hotseats_padding_bottom"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:animationCache="false"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:paddingStart="@dimen/hotseats_padding_side"
-                android:paddingEnd="@dimen/hotseats_padding_side" />
+<com.miui.home.launcher.DragLayer android:id="@id/drag_layer" android:fitsSystemWindows="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.launcher.search.SearchEdgeLayout android:id="@id/screen" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foregroundGravity="fill_horizontal|center|top">
+        <com.miui.home.launcher.FitSystemWindowView android:id="@id/screen_content" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foregroundGravity="fill_horizontal|center|top">
+            <com.miui.home.launcher.Workspace android:id="@id/workspace" android:paddingTop="@dimen/status_bar_height" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <include android:id="@id/hotseats" layout="@layout/layout_hotseats" />
         </com.miui.home.launcher.FitSystemWindowView>
-        <include
-            layout="@layout/folder_cling" />
-        <com.miui.home.launcher.FitSystemWindowView
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-            <com.miui.home.launcher.WorkspaceThumbnailView
-                android:layout_gravity="bottom"
-                android:id="@id/workspace_preview"
-                android:visibility="invisible"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent" />
-            <com.miui.home.launcher.EditingEntryThumbnailView
-                android:layout_gravity="bottom"
-                android:id="@id/editing_entry_view"
-                android:visibility="invisible"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_marginStart="@dimen/editing_entry_thumbnail_view_margin_left_right"
-                android:layout_marginEnd="@dimen/editing_entry_thumbnail_view_margin_left_right" />
-            <include
-                android:id="@id/default_screen_preview"
-                android:visibility="gone"
-                layout="@layout/default_screen_preview" />
+        <include layout="@layout/folder_cling" />
+        <com.miui.home.launcher.FitSystemWindowView android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.miui.home.launcher.WorkspaceThumbnailView android:layout_gravity="bottom" android:id="@id/workspace_preview" android:visibility="invisible" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.miui.home.launcher.EditingEntryThumbnailView android:layout_gravity="bottom" android:id="@id/editing_entry_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="@dimen/editing_entry_thumbnail_view_margin_left_right" android:layout_marginEnd="@dimen/editing_entry_thumbnail_view_margin_left_right" />
+            <include android:id="@id/default_screen_preview" android:visibility="gone" layout="@layout/default_screen_preview" />
         </com.miui.home.launcher.FitSystemWindowView>
-        <include
-            layout="@layout/edit_mode_menu_on_top" />
-        <com.miui.home.launcher.view.ScrimView
-            android:id="@id/scrim_view"
-            android:focusable="false"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:importantForAccessibility="no" />
-        <include
-            android:id="@id/apps_view"
-            android:visibility="gone"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            layout="@layout/all_apps" />
-        <com.miui.home.launcher.SearchBarContainer
-            android:layout_gravity="bottom"
-            android:id="@id/search_bar_container"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-            <include
-                android:layout_gravity="center_horizontal"
-                android:id="@id/search_bar"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/search_bar_height"
-                android:layout_marginTop="@dimen/search_bar_margin_top"
-                android:layout_marginBottom="@dimen/search_bar_margin_bottom"
-                layout="@layout/layout_search_bar" />
+        <include layout="@layout/edit_mode_menu_on_top" />
+        <com.miui.home.launcher.view.ScrimView android:id="@id/scrim_view" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:importantForAccessibility="no" />
+        <include android:id="@id/apps_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/all_apps" />
+        <com.miui.home.launcher.SearchBarContainer android:layout_gravity="bottom" android:id="@id/search_bar_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include android:layout_gravity="center_horizontal" android:id="@id/search_bar" android:layout_width="wrap_content" android:layout_height="@dimen/search_bar_height" android:layout_marginTop="@dimen/search_bar_margin_top" android:layout_marginBottom="@dimen/search_bar_margin_bottom" layout="@layout/layout_search_bar" />
         </com.miui.home.launcher.SearchBarContainer>
     </com.miui.home.launcher.search.SearchEdgeLayout>
-    <include
-        android:id="@id/drop_target_bar"
-        layout="@layout/drop_target_bar" />
-    <com.miui.home.launcher.ErrorBar
-        android:gravity="center|top"
-        android:id="@id/error"
-        android:paddingTop="13.0dip"
-        android:visibility="invisible"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:singleLine="true"
-        style="@style/WorkspaceEditingTips" />
-    <FrameLayout
-        android:paddingTop="@dimen/status_bar_height"
-        android:layout_width="1.0px"
-        android:layout_height="fill_parent">
-        <FrameLayout
-            android:id="@id/default_position"
-            android:layout_width="1.0px"
-            android:layout_height="fill_parent"
-            android:importantForAccessibility="no" />
+    <include android:id="@id/drop_target_bar" layout="@layout/drop_target_bar" />
+    <com.miui.home.launcher.ErrorBar android:gravity="center|top" android:id="@id/error" android:paddingTop="13.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/WorkspaceEditingTips" />
+    <FrameLayout android:paddingTop="@dimen/status_bar_height" android:layout_width="1.0px" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/default_position" android:layout_width="1.0px" android:layout_height="fill_parent" android:importantForAccessibility="no" />
     </FrameLayout>
-    <include
-        layout="@layout/widgets_preview_layout" />
-    <FrameLayout
-        android:id="@id/drag_view_container"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+    <include layout="@layout/widgets_preview_layout" />
+    <FrameLayout android:id="@id/drag_view_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
 </com.miui.home.launcher.DragLayer>

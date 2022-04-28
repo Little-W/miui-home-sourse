@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="all_apps_scroller_text_size">7.0sp</dimen>
     <dimen name="freeStyleWidthCellHeight">161.0dip</dimen>
     <dimen name="freeStyleWidthCellWidth">120.0dip</dimen>
 </resources>

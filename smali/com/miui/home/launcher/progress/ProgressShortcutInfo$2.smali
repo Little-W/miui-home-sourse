@@ -32,7 +32,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 243
+    .line 234
     iput-object p1, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$2;->this$0:Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
     iput-object p2, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$2;->val$launcher:Lcom/miui/home/launcher/Launcher;
@@ -47,7 +47,7 @@
 .method public run()V
     .locals 3
 
-    .line 246
+    .line 237
     invoke-virtual {p0}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$2;->getResult()Ljava/lang/Object;
 
     move-result-object v0
@@ -60,14 +60,14 @@
 
     if-nez v0, :cond_0
 
-    .line 247
+    .line 238
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$2;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     iget-object v1, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$2;->this$0:Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/LauncherModel;->deleteItemFromDatabase(Landroid/content/Context;Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 248
+    .line 239
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$2;->this$0:Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
     const/4 v1, 0x0
@@ -76,7 +76,7 @@
 
     const-string v0, "ProgressShortcutInfo"
 
-    .line 249
+    .line 240
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -99,7 +99,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 250
+    .line 241
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$2;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     iget-object v1, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$2;->this$0:Lcom/miui/home/launcher/progress/ProgressShortcutInfo;

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:state_selected="true"
-        android:color="#ff0097ff" />
-    <item
-        android:color="@color/all_apps_color_mode_option_text_color" />
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:color="#ff0097ff" />
+    <item android:color="@color/all_apps_color_mode_option_text_color" />
 </selector>

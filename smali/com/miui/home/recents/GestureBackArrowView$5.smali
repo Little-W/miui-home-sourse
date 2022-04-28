@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/GestureBackArrowView;)V
     .locals 0
 
-    .line 379
+    .line 375
     iput-object p1, p0, Lcom/miui/home/recents/GestureBackArrowView$5;->this$0:Lcom/miui/home/recents/GestureBackArrowView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 4
 
-    .line 382
+    .line 378
     iget-object v0, p0, Lcom/miui/home/recents/GestureBackArrowView$5;->this$0:Lcom/miui/home/recents/GestureBackArrowView;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -53,7 +53,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/recents/GestureBackArrowView;->access$402(Lcom/miui/home/recents/GestureBackArrowView;F)F
 
-    .line 383
+    .line 379
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getCurrentPlayTime()J
 
     move-result-wide v0
@@ -70,7 +70,7 @@
 
     if-gez p1, :cond_0
 
-    .line 385
+    .line 381
     iget-object p1, p0, Lcom/miui/home/recents/GestureBackArrowView$5;->this$0:Lcom/miui/home/recents/GestureBackArrowView;
 
     const/4 v0, 0x0
@@ -81,7 +81,7 @@
 
     invoke-static {p1, v0}, Lcom/miui/home/recents/GestureBackArrowView;->access$202(Lcom/miui/home/recents/GestureBackArrowView;Z)Z
 
-    .line 387
+    .line 383
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/GestureBackArrowView$5;->this$0:Lcom/miui/home/recents/GestureBackArrowView;
 

@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">Կիսվել…</string>
     <string name="abc_shareactionprovider_share_with_application">Կիսվել %s հավելվածի միջոցով</string>
     <string name="abc_toolbar_collapse_description">Ծալել</string>
+    <string name="common_google_play_services_unknown_issue">%1$s հավելվածը Google Play ծառայությունների հետ կապված խնդիր ունի: Փորձեք նորից:</string>
     <string name="copy">Պատճենել</string>
     <string name="expand_button_title">Լրացուցիչ</string>
     <string name="not_set">Կարգավորված չէ</string>

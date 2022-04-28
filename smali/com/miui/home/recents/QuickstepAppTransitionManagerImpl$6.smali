@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)V
     .locals 0
 
-    .line 1433
+    .line 1561
     iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$6;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 1446
+    .line 1574
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$6;->onAnimationEnd(Landroid/animation/Animator;)V
 
     return-void
@@ -44,7 +44,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1441
+    .line 1569
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$6;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     const/4 v0, 0x0
@@ -57,7 +57,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1436
+    .line 1564
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$6;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     const/4 v0, 0x1

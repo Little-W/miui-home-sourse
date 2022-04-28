@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;)V
     .locals 0
 
-    .line 54
+    .line 55
     iput-object p1, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller$1;->this$0:Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -35,7 +35,7 @@
 .method public onScrolled(Landroidx/recyclerview/widget/RecyclerView;II)V
     .locals 0
 
-    .line 57
+    .line 58
     iget-object p1, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller$1;->this$0:Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
     invoke-static {p1}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->access$000(Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;)Lcom/miui/home/launcher/BaseRecyclerView;

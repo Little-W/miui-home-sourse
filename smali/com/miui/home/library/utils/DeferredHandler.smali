@@ -152,6 +152,19 @@
     throw p1
 .end method
 
+.method public postIdle(Ljava/lang/Runnable;)V
+    .locals 1
+
+    .line 87
+    new-instance v0, Lcom/miui/home/library/utils/DeferredHandler$IdleRunnable;
+
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/library/utils/DeferredHandler$IdleRunnable;-><init>(Lcom/miui/home/library/utils/DeferredHandler;Ljava/lang/Runnable;)V
+
+    invoke-virtual {p0, v0}, Lcom/miui/home/library/utils/DeferredHandler;->post(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
 .method scheduleNextLocked()V
     .locals 4
 

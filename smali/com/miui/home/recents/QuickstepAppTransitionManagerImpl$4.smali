@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/views/TaskView;)V
     .locals 0
 
-    .line 971
+    .line 1054
     iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     iput-object p2, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;->val$targetTaskView:Lcom/miui/home/recents/views/TaskView;
@@ -41,12 +41,12 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 985
+    .line 1068
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->setChildrenViewAlpha(F)V
 
     const/4 v1, 0x0
 
-    .line 986
+    .line 1069
     invoke-virtual {p0, v1, v1, v0}, Lcom/miui/home/recents/views/TaskView;->setHeaderTranslationAndAlpha(FFF)V
 
     :cond_0
@@ -58,7 +58,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 983
+    .line 1066
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;->val$targetTaskView:Lcom/miui/home/recents/views/TaskView;
@@ -75,7 +75,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 974
+    .line 1057
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;->val$targetTaskView:Lcom/miui/home/recents/views/TaskView;
 
     if-eqz p1, :cond_0
@@ -86,19 +86,19 @@
 
     if-nez p1, :cond_0
 
-    .line 975
+    .line 1058
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;->val$targetTaskView:Lcom/miui/home/recents/views/TaskView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/views/TaskView;->setChildrenViewAlpha(F)V
 
-    .line 976
+    .line 1059
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;->val$targetTaskView:Lcom/miui/home/recents/views/TaskView;
 
     invoke-virtual {p1, v0, v0, v0}, Lcom/miui/home/recents/views/TaskView;->setHeaderTranslationAndAlpha(FFF)V
 
-    .line 978
+    .line 1061
     :cond_0
     invoke-static {}, Lcom/miui/home/recents/DimLayer;->getInstance()Lcom/miui/home/recents/DimLayer;
 

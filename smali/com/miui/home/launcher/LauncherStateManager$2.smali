@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherStateManager;Lcom/miui/home/launcher/LauncherState;)V
     .locals 0
 
-    .line 297
+    .line 301
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherStateManager$2;->this$0:Lcom/miui/home/launcher/LauncherStateManager;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherStateManager$2;->val$state:Lcom/miui/home/launcher/LauncherState;
@@ -39,7 +39,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 302
+    .line 306
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherStateManager$2;->this$0:Lcom/miui/home/launcher/LauncherStateManager;
 
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherStateManager$2;->val$state:Lcom/miui/home/launcher/LauncherState;
@@ -52,7 +52,7 @@
 .method public onAnimationSuccess(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 307
+    .line 311
     iget-object p1, p0, Lcom/miui/home/launcher/LauncherStateManager$2;->this$0:Lcom/miui/home/launcher/LauncherStateManager;
 
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherStateManager$2;->val$state:Lcom/miui/home/launcher/LauncherState;

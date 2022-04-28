@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/DropTargetBar;)V
     .locals 0
 
-    .line 152
+    .line 153
     iput-object p1, p0, Lcom/miui/home/launcher/DropTargetBar$LauncherBottomMenuHandler;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/DropTargetBar;Lcom/miui/home/launcher/DropTargetBar$1;)V
     .locals 0
 
-    .line 152
+    .line 153
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/DropTargetBar$LauncherBottomMenuHandler;-><init>(Lcom/miui/home/launcher/DropTargetBar;)V
 
     return-void
@@ -47,7 +47,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 155
+    .line 156
     iget-object v0, p0, Lcom/miui/home/launcher/DropTargetBar$LauncherBottomMenuHandler;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/LauncherBottomMenuMessage;->isShow()Z
@@ -56,7 +56,7 @@
 
     invoke-static {v0, p1}, Lcom/miui/home/launcher/DropTargetBar;->access$1202(Lcom/miui/home/launcher/DropTargetBar;Z)Z
 
-    .line 156
+    .line 157
     iget-object p1, p0, Lcom/miui/home/launcher/DropTargetBar$LauncherBottomMenuHandler;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-static {p1}, Lcom/miui/home/launcher/DropTargetBar;->access$1000(Lcom/miui/home/launcher/DropTargetBar;)V

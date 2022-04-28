@@ -34,7 +34,7 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 494
+    .line 536
     iput-object p1, p0, Lcom/airbnb/lottie/LottieCompositionFactory$10;->val$cacheKey:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public onResult(Lcom/airbnb/lottie/LottieComposition;)V
     .locals 1
 
-    .line 497
+    .line 539
     invoke-static {}, Lcom/airbnb/lottie/LottieCompositionFactory;->access$000()Ljava/util/Map;
 
     move-result-object p1
@@ -62,7 +62,7 @@
 .method public bridge synthetic onResult(Ljava/lang/Object;)V
     .locals 0
 
-    .line 494
+    .line 536
     check-cast p1, Lcom/airbnb/lottie/LottieComposition;
 
     invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieCompositionFactory$10;->onResult(Lcom/airbnb/lottie/LottieComposition;)V

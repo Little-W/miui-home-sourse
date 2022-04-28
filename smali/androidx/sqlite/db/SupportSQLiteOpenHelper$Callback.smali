@@ -22,10 +22,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 130
+    .line 127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 131
+    .line 128
     iput p1, p0, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;->version:I
 
     return-void
@@ -36,7 +36,7 @@
 
     const-string v0, ":memory:"
 
-    .line 278
+    .line 274
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -58,7 +58,7 @@
     :cond_0
     const-string v0, "SupportSQLite"
 
-    .line 281
+    .line 277
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,7 +75,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 283
+    .line 279
     :try_start_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -83,7 +83,7 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 284
+    .line 280
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -94,7 +94,7 @@
 
     goto :goto_0
 
-    .line 287
+    .line 283
     :cond_1
     :try_start_1
     new-instance v0, Ljava/io/File;
@@ -109,7 +109,7 @@
 
     const-string v0, "SupportSQLite"
 
-    .line 289
+    .line 285
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -138,7 +138,7 @@
 
     const-string v1, "error while deleting corrupted database file"
 
-    .line 292
+    .line 288
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
@@ -152,7 +152,7 @@
 
     const-string v1, "delete failed: "
 
-    .line 297
+    .line 293
     invoke-static {v0, v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
@@ -177,7 +177,7 @@
 
     const-string v0, "SupportSQLite"
 
-    .line 236
+    .line 232
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -198,14 +198,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
+    .line 234
     invoke-interface {p1}, Landroidx/sqlite/db/SupportSQLiteDatabase;->isOpen()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 245
+    .line 241
     invoke-interface {p1}, Landroidx/sqlite/db/SupportSQLiteDatabase;->getPath()Ljava/lang/String;
 
     move-result-object p1
@@ -217,7 +217,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 254
+    .line 250
     :try_start_0
     invoke-interface {p1}, Landroidx/sqlite/db/SupportSQLiteDatabase;->getAttachedDbs()Ljava/util/List;
 
@@ -233,7 +233,7 @@
 
     goto :goto_1
 
-    .line 259
+    .line 255
     :catch_0
     :goto_0
     :try_start_1
@@ -247,7 +247,7 @@
     :goto_1
     if-eqz v0, :cond_1
 
-    .line 266
+    .line 262
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -265,7 +265,7 @@
 
     check-cast v0, Landroid/util/Pair;
 
-    .line 267
+    .line 263
     iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
@@ -274,7 +274,7 @@
 
     goto :goto_2
 
-    .line 272
+    .line 268
     :cond_1
     invoke-interface {p1}, Landroidx/sqlite/db/SupportSQLiteDatabase;->getPath()Ljava/lang/String;
 
@@ -282,7 +282,6 @@
 
     invoke-direct {p0, p1}, Landroidx/sqlite/db/SupportSQLiteOpenHelper$Callback;->deleteDatabaseFile(Ljava/lang/String;)V
 
-    .line 274
     :cond_2
     throw v1
 
@@ -290,7 +289,7 @@
     :goto_3
     if-eqz v0, :cond_3
 
-    .line 266
+    .line 262
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -308,7 +307,7 @@
 
     check-cast v0, Landroid/util/Pair;
 
-    .line 267
+    .line 263
     iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
@@ -317,7 +316,7 @@
 
     goto :goto_4
 
-    .line 272
+    .line 268
     :cond_3
     invoke-interface {p1}, Landroidx/sqlite/db/SupportSQLiteDatabase;->getPath()Ljava/lang/String;
 
@@ -335,7 +334,7 @@
 .method public onDowngrade(Landroidx/sqlite/db/SupportSQLiteDatabase;II)V
     .locals 2
 
-    .line 205
+    .line 201
     new-instance p1, Landroid/database/sqlite/SQLiteException;
 
     new-instance v0, Ljava/lang/StringBuilder;

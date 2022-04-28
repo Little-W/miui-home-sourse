@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/OverviewCommandHelper$RecentsActivityCommand;)V
     .locals 0
 
-    .line 156
+    .line 165
     iput-object p1, p0, Lcom/miui/home/recents/OverviewCommandHelper$RecentsActivityCommand$1;->this$1:Lcom/miui/home/recents/OverviewCommandHelper$RecentsActivityCommand;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 159
+    .line 168
     iget-object p1, p0, Lcom/miui/home/recents/OverviewCommandHelper$RecentsActivityCommand$1;->this$1:Lcom/miui/home/recents/OverviewCommandHelper$RecentsActivityCommand;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/OverviewCommandHelper$RecentsActivityCommand;->onTransitionComplete()V

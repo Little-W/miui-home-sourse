@@ -7,8 +7,8 @@
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/miui/home/launcher/Launcher;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/miui/home/launcher/Launcher;->notifyFsGestureHomeStatus(ZLjava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,21 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
+.field final synthetic val$enableBackGesture:Z
+
+.field final synthetic val$type:Ljava/lang/String;
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;ZLjava/lang/String;)V
     .locals 0
 
-    .line 8533
+    .line 8816
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$83;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iput-boolean p2, p0, Lcom/miui/home/launcher/Launcher$83;->val$enableBackGesture:Z
+
+    iput-object p3, p0, Lcom/miui/home/launcher/Launcher$83;->val$type:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,27 +44,24 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
-    .line 8536
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isSupportRecentsAndFsGesture()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "Launcher"
-
-    const-string v1, "reset shortcutMenuLayer alpha and scale"
-
-    .line 8537
-    .line 8538
+    .line 8819
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$83;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$9900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Application;
 
-    invoke-static {v0, v1, v1}, Lcom/miui/home/launcher/Launcher;->access$9800(Lcom/miui/home/launcher/Launcher;FF)V
+    move-result-object v0
 
-    :cond_0
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getRecentsImpl()Lcom/miui/home/recents/BaseRecentsImpl;
+
+    move-result-object v0
+
+    iget-boolean v1, p0, Lcom/miui/home/launcher/Launcher$83;->val$enableBackGesture:Z
+
+    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$83;->val$type:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Lcom/miui/home/recents/BaseRecentsImpl;->updateFsgWindowVisibilityState(ZLjava/lang/String;)V
+
     return-void
 .end method

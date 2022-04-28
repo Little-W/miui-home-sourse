@@ -71,7 +71,7 @@
 
     invoke-interface {v0, p1, p2}, Landroid/view/IRecentsAnimationController;->finish(ZZ)V
     :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
@@ -164,15 +164,15 @@
     .line 43
     new-instance v0, Lcom/android/systemui/shared/recents/model/ThumbnailData;
 
-    invoke-interface {p1}, Lcom/android/systemui/shared/recents/system/ITaskSnapshot;->getBitmap()Landroid/graphics/Bitmap;
+    invoke-interface {p1}, Lcom/android/systemui/shared/recents/system/ITaskSnapshot;->getTaskThumbnailInfo()Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
 
     move-result-object v1
 
-    invoke-interface {p1}, Lcom/android/systemui/shared/recents/system/ITaskSnapshot;->getTaskThumbnailInfo()Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
+    invoke-interface {p1}, Lcom/android/systemui/shared/recents/system/ITaskSnapshot;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    invoke-direct {v0, v1, p1}, Lcom/android/systemui/shared/recents/model/ThumbnailData;-><init>(Landroid/graphics/Bitmap;Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;)V
+    invoke-direct {v0, v1, p1}, Lcom/android/systemui/shared/recents/model/ThumbnailData;-><init>(Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;Landroid/graphics/Bitmap;)V
 
     return-object v0
 .end method

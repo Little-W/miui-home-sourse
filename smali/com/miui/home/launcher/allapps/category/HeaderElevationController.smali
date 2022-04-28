@@ -38,7 +38,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070056
+    const v1, 0x7f070057
 
     .line 31
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -66,7 +66,7 @@
 
     iput v1, p0, Lcom/miui/home/launcher/allapps/category/HeaderElevationController;->mOffset:I
 
-    const v1, 0x7f070057
+    const v1, 0x7f070058
 
     .line 33
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F

@@ -112,7 +112,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/miui/home/launcher/Application;->getCacheDir()Ljava/io/File;
+    invoke-virtual {v3}, Lcom/miui/home/launcher/Application;->getDataDir()Ljava/io/File;
 
     move-result-object v3
 
@@ -167,6 +167,8 @@
 
     move-result-object v1
 
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_0
 
     :cond_0
@@ -186,6 +188,8 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     :goto_0
@@ -236,6 +240,8 @@
 
     move-result-object v3
 
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 183
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -261,6 +267,8 @@
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
+
+    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 185
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -356,6 +364,8 @@
 
     move-result-object v3
 
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 173
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -441,6 +451,8 @@
     const-string v1, "user setting in lastest data"
 
     .line 249
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 252
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData;->mTarget:Lcom/miui/home/launcher/SearchBarStyleData$SearchBarJumpBean;
@@ -887,6 +899,8 @@
 
     move-result-object v2
 
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
@@ -1046,6 +1060,8 @@
 
     move-result-object v0
 
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 108
     :cond_3
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
@@ -1164,6 +1180,8 @@
     const-string v1, "data both empty"
 
     .line 165
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     :goto_0
     return-void
 .end method
@@ -1263,6 +1281,8 @@
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
+
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 82
     invoke-direct {p0}, Lcom/miui/home/launcher/SearchBarStyleData;->resetConfig()V
@@ -1402,7 +1422,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f070326
+    const v2, 0x7f0703ce
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -1792,8 +1812,36 @@
     .locals 1
 
     .line 341
+    iget-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData;->mStyle:Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->getBlurRadius()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    iget-object v0, p0, Lcom/miui/home/launcher/SearchBarStyleData;->mStyle:Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/SearchBarStyleData$SearchBarStyleBean;->getBlurLayerColor()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
     const/4 v0, 0x1
 
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return v0
 .end method
 

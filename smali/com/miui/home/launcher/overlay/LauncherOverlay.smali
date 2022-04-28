@@ -4,7 +4,13 @@
 
 
 # virtual methods
+.method public abstract getServerVersion()I
+.end method
+
 .method public abstract hideOverlay(Z)V
+.end method
+
+.method public abstract isGoogleOverlay()Z
 .end method
 
 .method public abstract onScrollChange(FZ)V

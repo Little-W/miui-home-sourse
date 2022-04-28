@@ -1,0 +1,945 @@
+.class public Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;
+.super Ljava/lang/Object;
+.source "HotSeatsListRecentsAppProvider.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$AppShortcutCache;,
+        Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$RecommendContainer;
+    }
+.end annotation
+
+
+# instance fields
+.field private final mContext:Landroid/content/Context;
+
+.field private final mHandler:Landroid/os/Handler;
+
+.field private final mHotSeatItemFetcher:Ljava/util/function/Supplier;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/function/Supplier<",
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/ItemInfo;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field private mMinTaskActiveTime:J
+
+.field private final mRecentsRecommendApps:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/AppInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private mRecommendContainer:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$RecommendContainer;
+
+.field private final mRecommendShortcutCache:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$AppShortcutCache;
+
+.field private final mTaskStackChangeListener:Lcom/android/systemui/shared/recents/system/TaskStackChangeListener;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Ljava/util/function/Supplier;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/util/function/Supplier<",
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/ItemInfo;",
+            ">;>;)V"
+        }
+    .end annotation
+
+    .line 64
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 44
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecentsRecommendApps:Ljava/util/List;
+
+    const-wide/16 v0, 0x0
+
+    .line 45
+    iput-wide v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mMinTaskActiveTime:J
+
+    .line 47
+    new-instance v0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$AppShortcutCache;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$AppShortcutCache;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$1;)V
+
+    iput-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecommendShortcutCache:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$AppShortcutCache;
+
+    .line 49
+    new-instance v0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$1;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$1;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mHandler:Landroid/os/Handler;
+
+    .line 57
+    new-instance v0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$2;
+
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$2;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
+
+    iput-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mTaskStackChangeListener:Lcom/android/systemui/shared/recents/system/TaskStackChangeListener;
+
+    .line 65
+    iput-object p1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mContext:Landroid/content/Context;
+
+    .line 67
+    iput-object p2, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mHotSeatItemFetcher:Ljava/util/function/Supplier;
+
+    .line 69
+    iget-object p1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mHandler:Landroid/os/Handler;
+
+    new-instance p2, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$WMh1JZNr9mpxsKg3fEGRR8fs2zo;
+
+    invoke-direct {p2, p0}, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$WMh1JZNr9mpxsKg3fEGRR8fs2zo;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method static synthetic access$100(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)Landroid/content/Context;
+    .locals 0
+
+    .line 35
+    iget-object p0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mContext:Landroid/content/Context;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;Z)V
+    .locals 0
+
+    .line 35
+    invoke-direct {p0, p1}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->handleUpdateRecommendTasks(Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$300(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
+    .locals 0
+
+    .line 35
+    invoke-direct {p0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->onTaskStackChangedBackground()V
+
+    return-void
+.end method
+
+.method private evaluateRecentsRecommendTasks()V
+    .locals 5
+
+    .line 112
+    invoke-direct {p0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->getTaskStack()Lcom/android/systemui/shared/recents/model/TaskStack;
+
+    move-result-object v0
+
+    .line 113
+    iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mHotSeatItemFetcher:Ljava/util/function/Supplier;
+
+    invoke-interface {v1}, Ljava/util/function/Supplier;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$zlP_EziSgX1X6j0Da7eVuEv_M4U;->INSTANCE:Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$zlP_EziSgX1X6j0Da7eVuEv_M4U;
+
+    .line 114
+    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$LYCXFFVSQ8uOcbyujAaasGY1I7Q;->INSTANCE:Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$LYCXFFVSQ8uOcbyujAaasGY1I7Q;
+
+    .line 115
+    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    .line 116
+    invoke-static {}, Ljava/util/stream/Collectors;->toSet()Ljava/util/stream/Collector;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/stream/Stream;->collect(Ljava/util/stream/Collector;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Set;
+
+    .line 118
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/miui/home/launcher/Application;->getModel()Lcom/miui/home/launcher/LauncherModel;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/miui/home/launcher/LauncherModel;->getAllAppList()Lcom/miui/home/launcher/AllAppsList;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/miui/home/launcher/AllAppsList;->getDataList()Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    .line 120
+    invoke-virtual {v0}, Lcom/android/systemui/shared/recents/model/TaskStack;->getStackTasks()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->stream()Ljava/util/stream/Stream;
+
+    move-result-object v0
+
+    new-instance v3, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$hWMCjDEPUVJ6tx7jFeMp3YRIKUE;
+
+    invoke-direct {v3, p0}, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$hWMCjDEPUVJ6tx7jFeMp3YRIKUE;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
+
+    .line 121
+    invoke-interface {v0, v3}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+
+    move-result-object v0
+
+    sget-object v3, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$L6UFcETnHdvtHPeaO-0rF05qkUg;->INSTANCE:Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$L6UFcETnHdvtHPeaO-0rF05qkUg;
+
+    .line 122
+    invoke-interface {v0, v3}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+
+    move-result-object v0
+
+    sget-object v3, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$odUSumLTcjede0aLID-8YWwyVOA;->INSTANCE:Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$odUSumLTcjede0aLID-8YWwyVOA;
+
+    .line 123
+    invoke-interface {v0, v3}, Ljava/util/stream/Stream;->sorted(Ljava/util/Comparator;)Ljava/util/stream/Stream;
+
+    move-result-object v0
+
+    new-instance v3, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$1LimeYBu81ehN-K5GLaJlg5RdDI;
+
+    invoke-direct {v3, v1}, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$1LimeYBu81ehN-K5GLaJlg5RdDI;-><init>(Ljava/util/Set;)V
+
+    .line 125
+    invoke-interface {v0, v3}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+
+    move-result-object v0
+
+    .line 126
+    invoke-direct {p0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->getLimitCount()I
+
+    move-result v1
+
+    int-to-long v3, v1
+
+    invoke-interface {v0, v3, v4}, Ljava/util/stream/Stream;->limit(J)Ljava/util/stream/Stream;
+
+    move-result-object v0
+
+    .line 127
+    invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->collect(Ljava/util/stream/Collector;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    .line 129
+    invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    sget-object v3, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$WvjZeH-wmqszy1TK-VUfMpxykho;->INSTANCE:Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$WvjZeH-wmqszy1TK-VUfMpxykho;
+
+    .line 130
+    invoke-interface {v1, v3}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+
+    move-result-object v1
+
+    sget-object v3, Lcom/miui/home/launcher/hotseats/-$$Lambda$OwjCR_Bd_QugxaGP4fF9aJN9nss;->INSTANCE:Lcom/miui/home/launcher/hotseats/-$$Lambda$OwjCR_Bd_QugxaGP4fF9aJN9nss;
+
+    .line 131
+    invoke-interface {v1, v3}, Ljava/util/stream/Stream;->min(Ljava/util/Comparator;)Ljava/util/Optional;
+
+    move-result-object v1
+
+    iget-wide v3, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mMinTaskActiveTime:J
+
+    .line 132
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Long;
+
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    iput-wide v3, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mMinTaskActiveTime:J
+
+    .line 134
+    invoke-interface {v0}, Ljava/util/List;->stream()Ljava/util/stream/Stream;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$TVthnnZhiakO-75uwJOyG3PR23s;
+
+    invoke-direct {v1, p0, v2}, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$TVthnnZhiakO-75uwJOyG3PR23s;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;Ljava/util/List;)V
+
+    .line 135
+    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/miui/home/launcher/hotseats/-$$Lambda$3Ui_BQizwAZoU5kTpXBc520RfyU;->INSTANCE:Lcom/miui/home/launcher/hotseats/-$$Lambda$3Ui_BQizwAZoU5kTpXBc520RfyU;
+
+    .line 136
+    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+
+    move-result-object v0
+
+    .line 137
+    invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/stream/Stream;->collect(Ljava/util/stream/Collector;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    .line 138
+    iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecentsRecommendApps:Ljava/util/List;
+
+    invoke-direct {p0, v1, v0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->rearrangeRecentsRecommendTasks(Ljava/util/List;Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method private findAppInfo(Ljava/util/List;Ljava/lang/String;I)Lcom/miui/home/launcher/AppInfo;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/AppInfo;",
+            ">;",
+            "Ljava/lang/String;",
+            "I)",
+            "Lcom/miui/home/launcher/AppInfo;"
+        }
+    .end annotation
+
+    .line 142
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/miui/home/launcher/AppInfo;
+
+    .line 143
+    invoke-virtual {v0}, Lcom/miui/home/launcher/AppInfo;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lcom/miui/home/launcher/AppInfo;->user:Landroid/os/UserHandle;
+
+    .line 144
+    invoke-static {v1}, Lcom/miui/launcher/utils/LauncherUtils;->getUserId(Landroid/os/UserHandle;)I
+
+    move-result v1
+
+    if-ne v1, p3, :cond_0
+
+    return-object v0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method private getLimitCount()I
+    .locals 1
+
+    const/4 v0, 0x3
+
+    return v0
+.end method
+
+.method private getTaskStack()Lcom/android/systemui/shared/recents/model/TaskStack;
+    .locals 3
+
+    .line 107
+    iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/miui/home/recents/RecentsModel;->getInstance(Landroid/content/Context;)Lcom/miui/home/recents/RecentsModel;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mContext:Landroid/content/Context;
+
+    const/4 v2, -0x1
+
+    invoke-virtual {v0, v1, v2}, Lcom/miui/home/recents/RecentsModel;->getSmartRecentsTaskLoadPlan(Landroid/content/Context;I)Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan;
+
+    move-result-object v0
+
+    .line 108
+    invoke-virtual {v0}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan;->getTaskStack()Lcom/android/systemui/shared/recents/model/TaskStack;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private handleUpdateRecommendTasks(Z)V
+    .locals 0
+
+    .line 100
+    invoke-direct {p0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->evaluateRecentsRecommendTasks()V
+
+    if-eqz p1, :cond_0
+
+    .line 102
+    invoke-direct {p0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->notifyRecommendUpdated()V
+
+    :cond_0
+    return-void
+.end method
+
+.method static synthetic lambda$evaluateRecentsRecommendTasks$1(Lcom/miui/home/launcher/ItemInfo;)Z
+    .locals 0
+
+    .line 114
+    invoke-virtual {p0}, Lcom/miui/home/launcher/ItemInfo;->getTargetComponent()Landroid/content/ComponentName;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method static synthetic lambda$evaluateRecentsRecommendTasks$2(Lcom/miui/home/launcher/ItemInfo;)Landroid/util/Pair;
+    .locals 2
+
+    .line 115
+    new-instance v0, Landroid/util/Pair;
+
+    iget-object v1, p0, Lcom/miui/home/launcher/ItemInfo;->user:Landroid/os/UserHandle;
+
+    invoke-static {v1}, Lcom/miui/launcher/utils/LauncherUtils;->getUserId(Landroid/os/UserHandle;)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/ItemInfo;->getTargetComponent()Landroid/content/ComponentName;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, v1, p0}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static synthetic lambda$evaluateRecentsRecommendTasks$3(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;Lcom/android/systemui/shared/recents/model/Task;)Z
+    .locals 4
+
+    .line 121
+    iget-object p1, p1, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+
+    iget-wide v0, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->lastActiveTime:J
+
+    iget-wide v2, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mMinTaskActiveTime:J
+
+    cmp-long p1, v0, v2
+
+    if-ltz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+.end method
+
+.method static synthetic lambda$evaluateRecentsRecommendTasks$4(Lcom/android/systemui/shared/recents/model/Task;)Z
+    .locals 0
+
+    .line 122
+    invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task;->hasMultipleTasks()Z
+
+    move-result p0
+
+    xor-int/lit8 p0, p0, 0x1
+
+    return p0
+.end method
+
+.method static synthetic lambda$evaluateRecentsRecommendTasks$5(Lcom/android/systemui/shared/recents/model/Task;Lcom/android/systemui/shared/recents/model/Task;)I
+    .locals 2
+
+    .line 123
+    iget-object p1, p1, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+
+    iget-wide v0, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->lastActiveTime:J
+
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+
+    iget-wide p0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->lastActiveTime:J
+
+    invoke-static {v0, v1, p0, p1}, Ljava/lang/Long;->compare(JJ)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic lambda$evaluateRecentsRecommendTasks$6(Ljava/util/Set;Lcom/android/systemui/shared/recents/model/Task;)Z
+    .locals 2
+
+    .line 125
+    new-instance v0, Landroid/util/Pair;
+
+    iget-object v1, p1, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+
+    iget v1, v1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iget-object p1, p1, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+
+    invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, p1}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    invoke-interface {p0, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static synthetic lambda$evaluateRecentsRecommendTasks$7(Lcom/android/systemui/shared/recents/model/Task;)Ljava/lang/Long;
+    .locals 2
+
+    .line 130
+    iget-object p0, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+
+    iget-wide v0, p0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->lastActiveTime:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic lambda$evaluateRecentsRecommendTasks$8(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;Ljava/util/List;Lcom/android/systemui/shared/recents/model/Task;)Lcom/miui/home/launcher/AppInfo;
+    .locals 1
+
+    .line 135
+    iget-object v0, p2, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+
+    invoke-virtual {v0}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object p2, p2, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+
+    iget p2, p2, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
+
+    invoke-direct {p0, p1, v0, p2}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->findAppInfo(Ljava/util/List;Ljava/lang/String;I)Lcom/miui/home/launcher/AppInfo;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public static synthetic lambda$new$0(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
+    .locals 0
+
+    .line 70
+    invoke-direct {p0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->evaluateRecentsRecommendTasks()V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$onAttachedToWindow$9(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
+    .locals 2
+
+    .line 192
+    invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mTaskStackChangeListener:Lcom/android/systemui/shared/recents/system/TaskStackChangeListener;
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->registerTaskStackListener(Lcom/android/systemui/shared/recents/system/TaskStackChangeListener;)V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$onDetachedFromWindow$10(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
+    .locals 2
+
+    .line 198
+    invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mTaskStackChangeListener:Lcom/android/systemui/shared/recents/system/TaskStackChangeListener;
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->unregisterTaskStackListener(Lcom/android/systemui/shared/recents/system/TaskStackChangeListener;)V
+
+    return-void
+.end method
+
+.method private notifyRecommendUpdated()V
+    .locals 1
+
+    .line 185
+    iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecommendContainer:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$RecommendContainer;
+
+    if-eqz v0, :cond_0
+
+    .line 186
+    invoke-interface {v0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$RecommendContainer;->onRecommendUpdate()V
+
+    :cond_0
+    return-void
+.end method
+
+.method private onTaskStackChangedBackground()V
+    .locals 2
+
+    const-wide/16 v0, 0x12c
+
+    .line 87
+    invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->postUpdateRecommendTasks(J)V
+
+    return-void
+.end method
+
+.method private postUpdateRecommendTasks(J)V
+    .locals 2
+
+    .line 91
+    iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mHandler:Landroid/os/Handler;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
+
+    .line 92
+    iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {v0, v1, p1, p2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+
+    return-void
+.end method
+
+.method private rearrangeRecentsRecommendTasks(Ljava/util/List;Ljava/util/List;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/AppInfo;",
+            ">;",
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/AppInfo;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 163
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 164
+    invoke-interface {v0, p2}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
+
+    .line 165
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 166
+    invoke-interface {v1, p1}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
+
+    .line 169
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :cond_0
+    :goto_0
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/miui/home/launcher/AppInfo;
+
+    .line 170
+    invoke-interface {p1, v0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    .line 172
+    invoke-interface {p1, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    .line 174
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    .line 175
+    invoke-interface {v1, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/miui/home/launcher/AppInfo;
+
+    invoke-interface {p1, v0, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 181
+    :cond_1
+    invoke-interface {p1, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public bindRecommendContainer(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$RecommendContainer;)V
+    .locals 0
+
+    .line 75
+    iput-object p1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecommendContainer:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$RecommendContainer;
+
+    return-void
+.end method
+
+.method public getRecommendApps()Ljava/util/List;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lcom/miui/home/launcher/ShortcutInfo;",
+            ">;"
+        }
+    .end annotation
+
+    .line 79
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 80
+    iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecentsRecommendApps:Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/miui/home/launcher/AppInfo;
+
+    .line 81
+    iget-object v3, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecommendShortcutCache:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$AppShortcutCache;
+
+    invoke-virtual {v3, v2}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$AppShortcutCache;->getShortcutInfo(Lcom/miui/home/launcher/AppInfo;)Lcom/miui/home/launcher/ShortcutInfo;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    return-object v0
+.end method
+
+.method public onAttachedToWindow()V
+    .locals 1
+
+    .line 191
+    new-instance v0, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$0eVnNuHB_4yhecDBfHnT2qWgJ7Y;
+
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$0eVnNuHB_4yhecDBfHnT2qWgJ7Y;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
+
+    invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public onDetachedFromWindow()V
+    .locals 1
+
+    .line 197
+    new-instance v0, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$8GnDfldPDgy27bzT9zJ-TqzeH2Y;
+
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$8GnDfldPDgy27bzT9zJ-TqzeH2Y;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
+
+    invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public removeCache(Lcom/miui/home/launcher/ShortcutInfo;)V
+    .locals 2
+
+    .line 203
+    iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecommendShortcutCache:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$AppShortcutCache;
+
+    iget-object v1, p1, Lcom/miui/home/launcher/ShortcutInfo;->user:Landroid/os/UserHandle;
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$AppShortcutCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 204
+    iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecommendShortcutCache:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$AppShortcutCache;
+
+    iget-object v1, p1, Lcom/miui/home/launcher/ShortcutInfo;->user:Landroid/os/UserHandle;
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$AppShortcutCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/HashMap;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    return-void
+.end method
+
+.method public requestUpdateRecommendTasks()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 96
+    invoke-direct {p0, v0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->handleUpdateRecommendTasks(Z)V
+
+    return-void
+.end method

@@ -25,7 +25,7 @@
 .method private constructor <init>(Lcom/miui/home/recents/RecentsModel;)V
     .locals 0
 
-    .line 148
+    .line 226
     iput-object p1, p0, Lcom/miui/home/recents/RecentsModel$HandlerCallbacks;->this$0:Lcom/miui/home/recents/RecentsModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/recents/RecentsModel;Lcom/miui/home/recents/RecentsModel$1;)V
     .locals 0
 
-    .line 148
+    .line 226
     invoke-direct {p0, p1}, Lcom/miui/home/recents/RecentsModel$HandlerCallbacks;-><init>(Lcom/miui/home/recents/RecentsModel;)V
 
     return-void
@@ -47,19 +47,26 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 4
 
-    .line 151
+    .line 229
     iget p1, p1, Landroid/os/Message;->what:I
 
-    const/4 v0, 0x0
+    const/16 v0, 0x64
 
-    const/16 v1, 0x64
+    if-eq p1, v0, :cond_0
 
-    if-eq p1, v1, :cond_0
+    const/4 p1, 0x0
 
-    return v0
+    return p1
 
-    .line 153
     :cond_0
+    const-string p1, "RecentsModel"
+
+    const-string v0, "onTaskStackChangedBackground    MSG_TASK_STACK_CHANGE"
+
+    .line 231
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 232
     iget-object p1, p0, Lcom/miui/home/recents/RecentsModel$HandlerCallbacks;->this$0:Lcom/miui/home/recents/RecentsModel;
 
     invoke-static {p1}, Lcom/miui/home/recents/RecentsModel;->access$100(Lcom/miui/home/recents/RecentsModel;)Landroid/content/Context;
@@ -74,51 +81,72 @@
 
     move-result-object p1
 
-    .line 156
-    iget-object v1, p0, Lcom/miui/home/recents/RecentsModel$HandlerCallbacks;->this$0:Lcom/miui/home/recents/RecentsModel;
+    .line 235
+    iget-object v0, p0, Lcom/miui/home/recents/RecentsModel$HandlerCallbacks;->this$0:Lcom/miui/home/recents/RecentsModel;
 
-    invoke-static {v1}, Lcom/miui/home/recents/RecentsModel;->access$100(Lcom/miui/home/recents/RecentsModel;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/miui/home/recents/RecentsModel;->access$100(Lcom/miui/home/recents/RecentsModel;)Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {p1, v1}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->createLoadPlan(Landroid/content/Context;)Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan;
+    invoke-static {v0}, Lcom/miui/home/recents/RecentsModel;->getInstance(Landroid/content/Context;)Lcom/miui/home/recents/RecentsModel;
 
-    move-result-object v1
+    move-result-object v0
 
-    const/4 v2, -0x1
+    invoke-virtual {v0}, Lcom/miui/home/recents/RecentsModel;->preloadRecents()V
 
-    .line 157
-    invoke-virtual {p1, v1, v2, v0}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->preloadTasks(Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan;IZ)V
+    .line 236
+    iget-object v0, p0, Lcom/miui/home/recents/RecentsModel$HandlerCallbacks;->this$0:Lcom/miui/home/recents/RecentsModel;
 
-    .line 158
-    new-instance v0, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;
+    invoke-static {v0}, Lcom/miui/home/recents/RecentsModel;->access$100(Lcom/miui/home/recents/RecentsModel;)Landroid/content/Context;
 
-    invoke-direct {v0}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;-><init>()V
+    move-result-object v0
 
-    const/4 v2, 0x2
+    invoke-static {v0}, Lcom/miui/home/recents/RecentsModel;->getInstance(Landroid/content/Context;)Lcom/miui/home/recents/RecentsModel;
 
-    .line 160
-    iput v2, v0, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->numVisibleTasks:I
+    move-result-object v0
 
-    .line 161
-    iput v2, v0, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->numVisibleTaskThumbnails:I
+    invoke-virtual {v0}, Lcom/miui/home/recents/RecentsModel;->getTaskLoadPlan()Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan;
 
-    const/4 v2, 0x1
+    move-result-object v0
 
-    .line 162
-    iput-boolean v2, v0, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->onlyLoadForCache:Z
+    const/4 v1, 0x1
 
-    .line 163
-    iput-boolean v2, v0, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->onlyLoadPausedActivities:Z
+    if-eqz v0, :cond_1
 
-    .line 164
+    .line 238
+    new-instance v2, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;
+
+    invoke-direct {v2}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;-><init>()V
+
+    .line 240
+    invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->getThumbnailCacheSize()I
+
+    move-result v3
+
+    iput v3, v2, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->numVisibleTasks:I
+
+    .line 241
+    invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->getThumbnailCacheSize()I
+
+    move-result v3
+
+    iput v3, v2, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->numVisibleTaskThumbnails:I
+
+    .line 242
+    iput-boolean v1, v2, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->onlyLoadForCache:Z
+
+    .line 243
+    iput-boolean v1, v2, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->onlyLoadPausedActivities:Z
+
+    .line 244
     iget-object v3, p0, Lcom/miui/home/recents/RecentsModel$HandlerCallbacks;->this$0:Lcom/miui/home/recents/RecentsModel;
 
     invoke-static {v3}, Lcom/miui/home/recents/RecentsModel;->access$100(Lcom/miui/home/recents/RecentsModel;)Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-virtual {p1, v3, v1, v0}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->loadTasks(Landroid/content/Context;Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan;Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;)V
+    invoke-virtual {p1, v3, v0, v2}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->loadTasks(Landroid/content/Context;Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan;Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;)V
 
-    return v2
+    :cond_1
+    return v1
 .end method

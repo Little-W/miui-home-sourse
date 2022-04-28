@@ -27,6 +27,8 @@
 
 .field private static sExecuteMonitorRunnable:Ljava/lang/Runnable;
 
+.field private static final sFolderRecommendSerialExecutor:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
+
 .field private static final sPoolWorkQueue:Ljava/util/concurrent/BlockingQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -49,46 +51,46 @@
     .end annotation
 .end field
 
-.field private static sScreenSerialExecutor:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
+.field private static final sScreenSerialExecutor:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
 
 .field private static final sThreadFactory:Ljava/util/concurrent/ThreadFactory;
 
-.field private static sUnlockSerialExecutor:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
+.field private static final sUnlockSerialExecutor:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 9
 
-    .line 31
+    .line 30
     new-instance v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$RejectedExecutionPolicy;
 
     invoke-direct {v0}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$RejectedExecutionPolicy;-><init>()V
 
     sput-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sRejectedPolicy:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$RejectedExecutionPolicy;
 
-    .line 32
+    .line 31
     new-instance v0, Lcom/miui/home/library/utils/DeferredHandler;
 
     invoke-direct {v0}, Lcom/miui/home/library/utils/DeferredHandler;-><init>()V
 
     sput-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sDeferredHandler:Lcom/miui/home/library/utils/DeferredHandler;
 
-    .line 33
+    .line 32
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sRejectedTaskList:Ljava/util/ArrayList;
 
-    .line 37
+    .line 36
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
     sput-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sPoolWorkQueue:Ljava/util/concurrent/BlockingQueue;
 
-    .line 39
+    .line 38
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -99,7 +101,7 @@
 
     sput v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->CPU_COUNT:I
 
-    .line 40
+    .line 39
     sget v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->CPU_COUNT:I
 
     add-int/lit8 v0, v0, -0x1
@@ -118,14 +120,14 @@
 
     sput v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->CORE_POOL_SIZE:I
 
-    .line 41
+    .line 40
     new-instance v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$1;
 
     invoke-direct {v0}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$1;-><init>()V
 
     sput-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sThreadFactory:Ljava/util/concurrent/ThreadFactory;
 
-    .line 50
+    .line 49
     new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
     sget v3, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->CORE_POOL_SIZE:I
@@ -146,13 +148,13 @@
 
     const/4 v1, 0x0
 
-    .line 53
+    .line 52
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
-    .line 54
+    .line 53
     sput-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->LAUNCHER_THREAD_POOL_EXECUTOR:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    .line 57
+    .line 56
     invoke-static {}, Lorg/greenrobot/eventbus/EventBus;->builder()Lorg/greenrobot/eventbus/EventBusBuilder;
 
     move-result-object v0
@@ -169,33 +171,48 @@
 
     sput-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sEventBus:Lorg/greenrobot/eventbus/EventBus;
 
-    .line 69
+    .line 68
     new-instance v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$2;
 
     invoke-direct {v0}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$2;-><init>()V
 
     sput-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sExecuteMonitorRunnable:Ljava/lang/Runnable;
 
-    .line 170
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+    .line 169
+    sget-object v0, Lcom/miui/home/library/utils/-$$Lambda$AsyncTaskExecutorHelper$iDxI8Ylh_5z4gr141LB7wkJ7RkU;->INSTANCE:Lcom/miui/home/library/utils/-$$Lambda$AsyncTaskExecutorHelper$iDxI8Ylh_5z4gr141LB7wkJ7RkU;
+
+    invoke-static {v0}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
     sput-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->DEBUG_EXECUTOR:Ljava/util/concurrent/Executor;
 
+    .line 171
+    new-instance v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
+
+    const-string v1, "Screen Task"
+
+    invoke-direct {v0, v1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sScreenSerialExecutor:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
+
     .line 172
     new-instance v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
 
-    invoke-direct {v0}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;-><init>()V
+    const-string v1, "Unlock Task"
 
-    sput-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sScreenSerialExecutor:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
+    invoke-direct {v0, v1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sUnlockSerialExecutor:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
 
     .line 173
     new-instance v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
 
-    invoke-direct {v0}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;-><init>()V
+    const-string v1, "Recommend Task"
 
-    sput-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sUnlockSerialExecutor:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
+    invoke-direct {v0, v1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;-><init>(Ljava/lang/String;)V
+
+    sput-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sFolderRecommendSerialExecutor:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
 
     return-void
 .end method
@@ -203,7 +220,7 @@
 .method static synthetic access$000()Ljava/util/ArrayList;
     .locals 1
 
-    .line 30
+    .line 29
     sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sRejectedTaskList:Ljava/util/ArrayList;
 
     return-object v0
@@ -212,7 +229,7 @@
 .method static synthetic access$100()V
     .locals 0
 
-    .line 30
+    .line 29
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->startExectueMonitor()V
 
     return-void
@@ -234,7 +251,7 @@
 
     const/4 v0, 0x0
 
-    .line 167
+    .line 166
     invoke-static {v0, p0, v0, p1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->execSerial(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;Ljava/util/concurrent/Executor;)V
 
     return-void
@@ -260,7 +277,7 @@
         }
     .end annotation
 
-    .line 124
+    .line 123
     new-instance v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$3;
 
     invoke-direct {v0, p0, p2, p1, p4}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$3;-><init>(Ljava/util/function/Function;Ljava/lang/Object;Ljava/util/function/Consumer;Ljava/util/function/Consumer;)V
@@ -269,7 +286,7 @@
 
     new-array p0, p0, [Ljava/lang/Void;
 
-    .line 147
+    .line 146
     invoke-virtual {v0, p3, p0}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$3;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     move-result-object p0
@@ -297,7 +314,7 @@
 
     const/4 v0, 0x0
 
-    .line 120
+    .line 119
     invoke-static {p0, p1, p2, p3, v0}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->exec(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)Landroid/os/AsyncTask;
 
     return-void
@@ -322,7 +339,7 @@
         }
     .end annotation
 
-    .line 155
+    .line 154
     sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->LAUNCHER_THREAD_POOL_EXECUTOR:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-static {p0, p1, p3, v0, p2}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->exec(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;Ljava/util/concurrent/Executor;Ljava/util/function/Consumer;)Landroid/os/AsyncTask;
@@ -348,7 +365,7 @@
         }
     .end annotation
 
-    .line 159
+    .line 158
     sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->LAUNCHER_THREAD_POOL_EXECUTOR:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-static {p0, p1, p2, v0}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->exec(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;Ljava/util/concurrent/Executor;)V
@@ -374,7 +391,7 @@
         }
     .end annotation
 
-    .line 151
+    .line 150
     invoke-static {p0, p1, p2, p3}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->exec(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;Ljava/util/concurrent/Executor;)V
 
     return-void
@@ -383,8 +400,17 @@
 .method public static getEventBus()Lorg/greenrobot/eventbus/EventBus;
     .locals 1
 
-    .line 60
+    .line 59
     sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sEventBus:Lorg/greenrobot/eventbus/EventBus;
+
+    return-object v0
+.end method
+
+.method public static getFolderRecommendSerialExecutor()Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
+    .locals 1
+
+    .line 184
+    sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sFolderRecommendSerialExecutor:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
 
     return-object v0
 .end method
@@ -392,7 +418,7 @@
 .method public static getParallelExecutor()Ljava/util/concurrent/Executor;
     .locals 1
 
-    .line 163
+    .line 162
     sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->LAUNCHER_THREAD_POOL_EXECUTOR:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-object v0
@@ -419,19 +445,19 @@
 .method public static initDefaultExecutor()V
     .locals 3
 
-    .line 64
+    .line 63
     sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->LAUNCHER_THREAD_POOL_EXECUTOR:Ljava/util/concurrent/ThreadPoolExecutor;
 
     sget-object v1, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sRejectedPolicy:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$RejectedExecutionPolicy;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
 
-    .line 65
+    .line 64
     sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->LAUNCHER_THREAD_POOL_EXECUTOR:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-static {v0}, Lcom/miui/launcher/utils/LauncherUtils;->setAsyncTaskDefaultExecutor(Ljava/util/concurrent/Executor;)V
 
-    .line 66
+    .line 65
     sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sDeferredHandler:Lcom/miui/home/library/utils/DeferredHandler;
 
     const-wide/16 v1, 0xc8
@@ -441,10 +467,23 @@
     return-void
 .end method
 
-.method static synthetic lambda$waitForUnlockAndRun$0(Landroid/os/UserHandle;Landroid/content/Context;Ljava/util/function/Consumer;Ljava/lang/Runnable;Ljava/lang/Void;)Ljava/lang/Boolean;
+.method static synthetic lambda$static$0(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 2
+
+    .line 169
+    new-instance v0, Ljava/lang/Thread;
+
+    const-string v1, "Debug Task"
+
+    invoke-direct {v0, p0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method static synthetic lambda$waitForUnlockAndRun$1(Landroid/os/UserHandle;Landroid/content/Context;Ljava/util/function/Consumer;Ljava/lang/Runnable;Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 224
+    .line 232
     :try_start_0
     invoke-static {p0, p1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->waitForUserUnlock(Landroid/os/UserHandle;Landroid/content/Context;)V
     :try_end_0
@@ -452,13 +491,13 @@
 
     if-eqz p3, :cond_0
 
-    .line 232
+    .line 240
     invoke-interface {p3}, Ljava/lang/Runnable;->run()V
 
     :cond_0
     const/4 p0, 0x1
 
-    .line 234
+    .line 242
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -470,13 +509,13 @@
 
     if-eqz p2, :cond_1
 
-    .line 227
+    .line 235
     invoke-interface {p2, p0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     :cond_1
     const/4 p0, 0x0
 
-    .line 229
+    .line 237
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
@@ -484,10 +523,10 @@
     return-object p0
 .end method
 
-.method static synthetic lambda$waitForUnlockAndRun$1(Ljava/lang/Runnable;Ljava/lang/Boolean;)V
+.method static synthetic lambda$waitForUnlockAndRun$2(Ljava/lang/Runnable;Ljava/lang/Boolean;)V
     .locals 0
 
-    .line 236
+    .line 244
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
@@ -496,7 +535,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 237
+    .line 245
     invoke-interface {p0}, Ljava/lang/Runnable;->run()V
 
     :cond_0
@@ -506,12 +545,12 @@
 .method private static startExectueMonitor()V
     .locals 2
 
-    .line 80
+    .line 79
     sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sDeferredHandler:Lcom/miui/home/library/utils/DeferredHandler;
 
     invoke-virtual {v0}, Lcom/miui/home/library/utils/DeferredHandler;->cancel()V
 
-    .line 81
+    .line 80
     sget-object v0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sDeferredHandler:Lcom/miui/home/library/utils/DeferredHandler;
 
     sget-object v1, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->sExecuteMonitorRunnable:Ljava/lang/Runnable;
@@ -537,23 +576,23 @@
         }
     .end annotation
 
-    .line 222
-    new-instance v0, Lcom/miui/home/library/utils/-$$Lambda$AsyncTaskExecutorHelper$EcOBHI4-sv299GWXXf7fN3nCIPA;
+    .line 230
+    new-instance v0, Lcom/miui/home/library/utils/-$$Lambda$AsyncTaskExecutorHelper$tmRL29r0UYnqR6SW3R4DwZKiENU;
 
-    invoke-direct {v0, p3, p4, p2, p0}, Lcom/miui/home/library/utils/-$$Lambda$AsyncTaskExecutorHelper$EcOBHI4-sv299GWXXf7fN3nCIPA;-><init>(Landroid/os/UserHandle;Landroid/content/Context;Ljava/util/function/Consumer;Ljava/lang/Runnable;)V
+    invoke-direct {v0, p3, p4, p2, p0}, Lcom/miui/home/library/utils/-$$Lambda$AsyncTaskExecutorHelper$tmRL29r0UYnqR6SW3R4DwZKiENU;-><init>(Landroid/os/UserHandle;Landroid/content/Context;Ljava/util/function/Consumer;Ljava/lang/Runnable;)V
 
-    new-instance p0, Lcom/miui/home/library/utils/-$$Lambda$AsyncTaskExecutorHelper$rfBMzO1mHVO1vtWRKSZgUclLNew;
+    new-instance p0, Lcom/miui/home/library/utils/-$$Lambda$AsyncTaskExecutorHelper$764D1E7H7VTvnh7oeu19nU5Hnek;
 
-    invoke-direct {p0, p1}, Lcom/miui/home/library/utils/-$$Lambda$AsyncTaskExecutorHelper$rfBMzO1mHVO1vtWRKSZgUclLNew;-><init>(Ljava/lang/Runnable;)V
+    invoke-direct {p0, p1}, Lcom/miui/home/library/utils/-$$Lambda$AsyncTaskExecutorHelper$764D1E7H7VTvnh7oeu19nU5Hnek;-><init>(Ljava/lang/Runnable;)V
 
-    .line 239
+    .line 247
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getUnlockSerialExecutor()Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
 
     move-result-object p1
 
     const/4 p2, 0x0
 
-    .line 222
+    .line 230
     invoke-static {v0, p0, p2, p1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->execSerial(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;Ljava/util/concurrent/Executor;)V
 
     return-void
@@ -573,7 +612,7 @@
         }
     .end annotation
 
-    .line 252
+    .line 260
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -597,7 +636,7 @@
         }
     .end annotation
 
-    .line 243
+    .line 251
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -617,10 +656,10 @@
         }
     .end annotation
 
-    .line 212
+    .line 220
     invoke-static {}, Lcom/miui/home/library/utils/Preconditions;->assertNonUiThread()V
 
-    .line 213
+    .line 221
     :goto_0
     invoke-static {p1}, Lcom/miui/home/library/compat/UserManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/UserManagerCompat;
 
@@ -634,7 +673,7 @@
 
     const-wide/16 v0, 0x32
 
-    .line 214
+    .line 222
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
 
     goto :goto_0
@@ -660,7 +699,7 @@
 
     const/4 v0, 0x0
 
-    .line 248
+    .line 256
     invoke-static {p0, v0, p1, p2, p3}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->waitForUnlockAndRun(Ljava/lang/Runnable;Ljava/lang/Runnable;Ljava/util/function/Consumer;Landroid/os/UserHandle;Landroid/content/Context;)V
 
     return-void

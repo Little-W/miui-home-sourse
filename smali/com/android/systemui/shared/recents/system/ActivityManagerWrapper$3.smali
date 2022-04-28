@@ -1,5 +1,5 @@
 .class Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$3;
-.super Landroid/view/IRecentsAnimationRunner$Stub;
+.super Landroid/app/IAssistDataReceiver$Stub;
 .source "ActivityManagerWrapper.java"
 
 
@@ -17,83 +17,43 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
-.field final synthetic val$animationHandler:Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;
+.field final synthetic val$assistDataReceiver:Lcom/android/systemui/shared/recents/system/AssistDataReceiver;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;)V
+.method constructor <init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;Lcom/android/systemui/shared/recents/system/AssistDataReceiver;)V
     .locals 0
 
-    .line 369
+    .line 436
     iput-object p1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$3;->this$0:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
-    iput-object p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$3;->val$animationHandler:Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;
+    iput-object p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$3;->val$assistDataReceiver:Lcom/android/systemui/shared/recents/system/AssistDataReceiver;
 
-    invoke-direct {p0}, Landroid/view/IRecentsAnimationRunner$Stub;-><init>()V
+    invoke-direct {p0}, Landroid/app/IAssistDataReceiver$Stub;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationCanceled(Landroid/app/ActivityManager$TaskSnapshot;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAnimationCanceled(Z)V
+.method public onHandleAssistData(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 402
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$3;->val$animationHandler:Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;
+    .line 438
+    iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$3;->val$assistDataReceiver:Lcom/android/systemui/shared/recents/system/AssistDataReceiver;
 
-    invoke-interface {v0, p1}, Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;->onAnimationCanceled(Z)V
+    invoke-virtual {v0, p1}, Lcom/android/systemui/shared/recents/system/AssistDataReceiver;->onHandleAssistData(Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method public onAnimationStart(Landroid/view/IRecentsAnimationController;[Landroid/view/RemoteAnimationTarget;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+.method public onHandleAssistScreenshot(Landroid/graphics/Bitmap;)V
     .locals 1
 
-    .line 374
-    new-instance v0, Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;
+    .line 441
+    iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$3;->val$assistDataReceiver:Lcom/android/systemui/shared/recents/system/AssistDataReceiver;
 
-    invoke-direct {v0, p1}, Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;-><init>(Landroid/view/IRecentsAnimationController;)V
-
-    .line 377
-    invoke-static {p2}, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->wrap([Landroid/view/RemoteAnimationTarget;)[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
-
-    move-result-object p1
-
-    .line 378
-    iget-object p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$3;->val$animationHandler:Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;
-
-    invoke-interface {p2, v0, p1, p3, p4}, Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;->onAnimationStart(Lcom/android/systemui/shared/recents/system/RecentsAnimationControllerCompat;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/view/IRecentsAnimationController;[Landroid/view/RemoteAnimationTarget;[Landroid/view/RemoteAnimationTarget;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
-    .locals 0
-
-    .line 387
-    invoke-virtual {p0, p1, p2, p4, p5}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$3;->onAnimationStart(Landroid/view/IRecentsAnimationController;[Landroid/view/RemoteAnimationTarget;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
-
-    return-void
-.end method
-
-.method public onTaskAppeared(Landroid/view/RemoteAnimationTarget;)V
-    .locals 2
-
-    .line 397
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$3;->val$animationHandler:Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;
-
-    new-instance v1, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
-
-    invoke-direct {v1, p1}, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;-><init>(Landroid/view/RemoteAnimationTarget;)V
-
-    invoke-interface {v0, v1}, Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;->onTaskAppeared(Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)V
+    invoke-virtual {v0, p1}, Lcom/android/systemui/shared/recents/system/AssistDataReceiver;->onHandleAssistScreenshot(Landroid/graphics/Bitmap;)V
 
     return-void
 .end method

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;)V
     .locals 0
 
-    .line 67
+    .line 86
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer$1;->this$0:Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,23 +38,21 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 70
+    .line 89
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer$1;->this$0:Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->access$000(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;)Landroid/view/View;
+    iget-object p1, p1, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mMask:Lcom/mi/globallauncher/search/SearchResultMaskView;
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+    invoke-virtual {p1}, Lcom/mi/globallauncher/search/SearchResultMaskView;->getVisibility()I
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 71
+    .line 90
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer$1;->this$0:Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->access$100(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;)Lcom/miui/home/launcher/Launcher;
+    invoke-static {p1}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->access$000(Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
 

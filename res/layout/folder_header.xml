@@ -1,48 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    android:gravity="center_vertical"
-    android:id="@id/folder_header"
-    android:paddingLeft="@dimen/folder_header_padding_left"
-    android:paddingRight="@dimen/folder_header_padding_right"
-    android:paddingBottom="@dimen/folder_header_padding_bottom"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView
-        android:gravity="center"
-        android:layout_gravity="center_vertical"
-        android:id="@id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:minWidth="50.0dip"
-        android:layout_weight="1.0"
-        android:layout_marginStart="@dimen/folder_edit_text_margin_left"
-        style="@style/FolderTitle" />
-    <LinearLayout
-        android:layout_gravity="center"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-        <EditText
-            android:textColor="@color/folder_setting_rename_text"
-            android:textColorHighlight="#77ffffff"
-            android:layout_gravity="center_vertical"
-            android:id="@id/rename_edit"
-            android:background="@drawable/folder_edit_text_background"
-            android:paddingTop="@dimen/folder_edit_text_padding_top"
-            android:paddingBottom="@dimen/folder_edit_text_padding_bottom"
-            android:visibility="invisible"
-            android:layout_width="0.0dip"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/folder_edit_text_margin_left"
-            android:layout_marginRight="@dimen/folder_edit_text_margin_right"
-            android:scrollHorizontally="true"
-            android:singleLine="true"
-            android:maxLength="30"
-            android:capitalize="none"
-            android:autoText="false"
-            android:layout_weight="1.0"
-            android:imeOptions="actionDone"
-            android:textCursorDrawable="@drawable/category_edit_name_cursor"
-            style="@style/FolderTitle" />
+<FrameLayout android:gravity="center_vertical" android:id="@id/folder_header" android:paddingLeft="@dimen/folder_header_padding_left" android:paddingRight="@dimen/folder_header_padding_right" android:paddingBottom="@dimen/folder_header_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="50.0dip" android:layout_weight="1.0" android:layout_marginStart="@dimen/folder_edit_text_margin_left" style="@style/FolderTitle" />
+    <LinearLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:textColor="@color/folder_setting_rename_text" android:textColorHighlight="#77ffffff" android:layout_gravity="center_vertical" android:id="@id/rename_edit" android:background="@drawable/folder_edit_text_background" android:paddingTop="@dimen/folder_edit_text_padding_top" android:paddingBottom="@dimen/folder_edit_text_padding_bottom" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/folder_edit_text_margin_left" android:layout_marginRight="@dimen/folder_edit_text_margin_right" android:scrollHorizontally="true" android:singleLine="true" android:maxLength="30" android:capitalize="none" android:autoText="false" android:layout_weight="1.0" android:imeOptions="actionDone" android:textCursorDrawable="@drawable/category_edit_name_cursor" style="@style/FolderTitle" />
     </LinearLayout>
 </FrameLayout>

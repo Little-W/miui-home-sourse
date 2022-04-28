@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/recents/BaseRecentsImpl;->registerSuperSavePowerObserver()V
+    value = Lcom/miui/home/recents/BaseRecentsImpl;->registerRecentsLayoutStyleObserver()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;Landroid/os/Handler;)V
     .locals 0
 
-    .line 194
+    .line 196
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$2;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,46 +35,24 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 197
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$2;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->getDefaultHomePackageName(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 198
-    iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$2;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p1, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->setIsUseMiuiHomeAsDefaultHome(Z)V
-
     .line 199
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$2;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
+    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$200(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-static {p1}, Lcom/miui/home/recents/OverviewComponentObserver;->getInstance(Landroid/content/Context;)Lcom/miui/home/recents/OverviewComponentObserver;
+    invoke-static {v0}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->getTaskStackViewLayoutStyle(Landroid/content/Context;)I
 
-    move-result-object p1
+    move-result v0
 
-    invoke-virtual {p1}, Lcom/miui/home/recents/OverviewComponentObserver;->updateOverviewTargets()V
+    iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl$2;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+
+    invoke-static {v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$200(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {p1, v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$300(Lcom/miui/home/recents/BaseRecentsImpl;ILandroid/content/Context;)V
 
     return-void
 .end method

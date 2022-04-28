@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    android:paddingLeft="?android:listPreferredItemPaddingLeft"
-    android:paddingTop="@dimen/miuix_preference_item_padding_top"
-    android:paddingRight="?android:listPreferredItemPaddingRight"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView
-        android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList"
-        android:fadingEdge="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/icon_size"
-        android:textAlignment="viewStart" />
-    <com.miui.home.settings.IconSizeSeekBar
-        android:id="@id/seek_bar"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12.0dip" />
+<LinearLayout android:orientation="vertical" android:paddingLeft="?android:listPreferredItemPaddingLeft" android:paddingTop="@dimen/miuix_preference_item_padding_top" android:paddingRight="?android:listPreferredItemPaddingRight" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/Miuix.AppCompat.TextAppearance.PreferenceList" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/icon_size" android:textAlignment="viewStart" />
+    <com.miui.home.settings.IconSizeSeekBar android:id="@id/seek_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" />
 </LinearLayout>

@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 2534
+    .line 2596
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$15;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,10 +48,10 @@
 .method public apply(Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 3
 
-    .line 2537
+    .line 2599
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$15;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$700(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
+    invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$800(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -72,7 +72,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 2538
+    .line 2600
     instance-of v1, v0, Lcom/miui/home/launcher/FolderInfo;
 
     if-eqz v1, :cond_0
@@ -87,7 +87,7 @@
 
     goto :goto_1
 
-    .line 2539
+    .line 2601
     :cond_0
     move-object v1, v0
 
@@ -97,18 +97,18 @@
 
     move-result-object v1
 
-    .line 2540
+    .line 2602
     :goto_1
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace$15;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {v2, v0, v1}, Lcom/miui/home/launcher/Workspace;->access$900(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/ItemInfo;Landroid/view/View;)V
+    invoke-static {v2, v0, v1}, Lcom/miui/home/launcher/Workspace;->access$1000(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/ItemInfo;Landroid/view/View;)V
 
     goto :goto_0
 
     :cond_1
     const/4 p1, 0x1
 
-    .line 2542
+    .line 2604
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -119,7 +119,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 2534
+    .line 2596
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace$15;->apply(Ljava/lang/Void;)Ljava/lang/Boolean;

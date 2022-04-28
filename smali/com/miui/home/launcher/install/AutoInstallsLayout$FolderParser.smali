@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/install/AutoInstallsLayout;)V
     .locals 1
 
-    .line 535
+    .line 561
     invoke-static {p1}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$1100(Lcom/miui/home/launcher/install/AutoInstallsLayout;)Landroid/util/ArrayMap;
 
     move-result-object v0
@@ -58,12 +58,12 @@
         }
     .end annotation
 
-    .line 538
+    .line 564
     iput-object p1, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$FolderParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 539
+    .line 565
     iput-object p2, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$FolderParser;->mFolderElements:Landroid/util/ArrayMap;
 
     return-void
@@ -80,18 +80,44 @@
         }
     .end annotation
 
-    const-string v0, "title"
+    const-string v0, "folderItems"
 
     const/4 v1, 0x0
 
-    .line 545
+    .line 570
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$600(Landroid/content/res/XmlResourceParser;Ljava/lang/String;I)I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 547
+    .line 572
+    iget-object p1, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$FolderParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$700(Lcom/miui/home/launcher/install/AutoInstallsLayout;)Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
+
+    move-result-object p1
+
+    const-string v0, "folder"
+
+    .line 573
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$1200(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)V
+
+    :cond_0
+    const-string v0, "title"
+
+    .line 576
+    invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$600(Landroid/content/res/XmlResourceParser;Ljava/lang/String;I)I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 578
     iget-object v2, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$FolderParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
     invoke-static {v2}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$700(Lcom/miui/home/launcher/install/AutoInstallsLayout;)Landroid/content/res/Resources;
@@ -104,22 +130,22 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const-string v0, "title"
 
-    .line 549
+    .line 580
     invoke-static {p1, v0}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 550
+    .line 581
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
-    .line 551
+    .line 582
     iget-object v0, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$FolderParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
     invoke-static {v0}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$400(Lcom/miui/home/launcher/install/AutoInstallsLayout;)Landroid/content/Context;
@@ -130,24 +156,24 @@
 
     move-result-object v0
 
-    const v2, 0x7f10019f
+    const v2, 0x7f1001de
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    :cond_1
+    :cond_2
     :goto_0
     const-string v2, "title"
 
-    .line 555
+    .line 586
     invoke-virtual {p3, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "label"
 
     const-string v2, "title"
 
-    .line 556
+    .line 587
     invoke-static {p1, v2}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -158,7 +184,7 @@
 
     const/4 v2, 0x2
 
-    .line 557
+    .line 588
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -169,7 +195,7 @@
 
     const/4 v3, 0x1
 
-    .line 558
+    .line 589
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -178,7 +204,7 @@
 
     const-string v0, "spanY"
 
-    .line 559
+    .line 590
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -189,7 +215,7 @@
 
     const/4 v3, 0x0
 
-    .line 560
+    .line 591
     invoke-static {p2, v0, v3, p3}, Lcom/miui/home/launcher/LauncherProvider;->safelyInsertDatabase(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide v3
@@ -198,26 +224,28 @@
 
     cmp-long v0, v3, v5
 
-    if-gez v0, :cond_2
+    if-gez v0, :cond_3
 
     const-string p1, "AutoInstalls"
 
     const-string p2, "Unable to add folder"
 
-    .line 562
+    .line 593
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     const-wide/16 p1, -0x1
 
     return-wide p1
 
-    .line 566
-    :cond_2
+    .line 597
+    :cond_3
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v0
 
     const-string v5, "profileId"
 
-    .line 567
+    .line 598
     invoke-virtual {p3, v5}, Landroid/content/ContentValues;->getAsLong(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v5
@@ -226,7 +254,7 @@
 
     move-result-wide v5
 
-    .line 569
+    .line 600
     :goto_1
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->next()I
 
@@ -234,33 +262,33 @@
 
     const/4 v8, 0x3
 
-    if-ne v7, v8, :cond_4
+    if-ne v7, v8, :cond_5
 
-    .line 570
+    .line 601
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v8
 
-    if-le v8, v0, :cond_3
+    if-le v8, v0, :cond_4
 
     goto :goto_2
 
-    :cond_3
+    :cond_4
     return-wide v3
 
-    :cond_4
+    :cond_5
     :goto_2
-    if-eq v7, v2, :cond_5
+    if-eq v7, v2, :cond_6
 
     goto :goto_1
 
-    .line 574
-    :cond_5
+    .line 605
+    :cond_6
     invoke-virtual {p3}, Landroid/content/ContentValues;->clear()V
 
     const-string v7, "profileId"
 
-    .line 575
+    .line 606
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v8
@@ -269,7 +297,7 @@
 
     const-string v7, "container"
 
-    .line 576
+    .line 607
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v8
@@ -280,14 +308,14 @@
 
     add-int/lit8 v8, v1, 0x1
 
-    .line 577
+    .line 608
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-virtual {p3, v7, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 579
+    .line 610
     iget-object v1, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$FolderParser;->mFolderElements:Landroid/util/ArrayMap;
 
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
@@ -300,17 +328,17 @@
 
     check-cast v1, Lcom/miui/home/launcher/install/AutoInstallsLayout$TagParser;
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
-    .line 581
+    .line 612
     invoke-interface {v1, p1, p2, p3}, Lcom/miui/home/launcher/install/AutoInstallsLayout$TagParser;->parseAndAdd(Landroid/content/res/XmlResourceParser;Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;)J
 
     move v1, v8
 
     goto :goto_1
 
-    .line 583
-    :cond_6
+    .line 614
+    :cond_7
     new-instance p2, Ljava/lang/RuntimeException;
 
     new-instance p3, Ljava/lang/StringBuilder;

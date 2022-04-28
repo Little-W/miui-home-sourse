@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/recents/GestureStateMachine;)V
     .locals 0
 
-    .line 232
+    .line 297
     iput-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/recents/GestureStateMachine;Lcom/miui/home/recents/GestureStateMachine$1;)V
     .locals 0
 
-    .line 232
+    .line 297
     invoke-direct {p0, p1}, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;-><init>(Lcom/miui/home/recents/GestureStateMachine;)V
 
     return-void
@@ -44,14 +44,14 @@
 .method public enter()V
     .locals 2
 
-    .line 235
+    .line 300
     iget-object v0, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
     const-string v1, "AppTaskHoldState enter"
 
-    invoke-static {v0, v1}, Lcom/miui/home/recents/GestureStateMachine;->access$800(Lcom/miui/home/recents/GestureStateMachine;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/miui/home/recents/GestureStateMachine;->access$900(Lcom/miui/home/recents/GestureStateMachine;Ljava/lang/String;)V
 
-    .line 236
+    .line 301
     iget-object v0, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
     iget-object v0, v0, Lcom/miui/home/recents/GestureStateMachine;->mNavStubView:Lcom/miui/home/recents/NavStubView;
@@ -64,7 +64,7 @@
 .method public processMessage(Landroid/os/Message;)Z
     .locals 3
 
-    .line 241
+    .line 306
     iget-object v0, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -83,16 +83,16 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/miui/home/recents/GestureStateMachine;->access$800(Lcom/miui/home/recents/GestureStateMachine;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/miui/home/recents/GestureStateMachine;->access$900(Lcom/miui/home/recents/GestureStateMachine;Ljava/lang/String;)V
 
-    .line 242
+    .line 307
     iget p1, p1, Landroid/os/Message;->what:I
 
     packed-switch p1, :pswitch_data_0
 
     goto/16 :goto_0
 
-    .line 273
+    .line 338
     :pswitch_0
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
@@ -104,7 +104,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 274
+    .line 339
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
     iget-object p1, p1, Lcom/miui/home/recents/GestureStateMachine;->mNavStubView:Lcom/miui/home/recents/NavStubView;
@@ -121,7 +121,7 @@
 
     goto/16 :goto_0
 
-    .line 276
+    .line 341
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
@@ -131,7 +131,7 @@
 
     goto/16 :goto_0
 
-    .line 266
+    .line 331
     :pswitch_1
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
@@ -143,7 +143,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 267
+    .line 332
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
     iget-object p1, p1, Lcom/miui/home/recents/GestureStateMachine;->mNavStubView:Lcom/miui/home/recents/NavStubView;
@@ -160,7 +160,7 @@
 
     goto :goto_0
 
-    .line 269
+    .line 334
     :cond_1
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
@@ -170,7 +170,7 @@
 
     goto :goto_0
 
-    .line 259
+    .line 324
     :pswitch_2
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
@@ -182,7 +182,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 260
+    .line 325
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
     iget-object p1, p1, Lcom/miui/home/recents/GestureStateMachine;->mNavStubView:Lcom/miui/home/recents/NavStubView;
@@ -199,7 +199,7 @@
 
     goto :goto_0
 
-    .line 262
+    .line 327
     :cond_2
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
@@ -209,7 +209,7 @@
 
     goto :goto_0
 
-    .line 256
+    .line 321
     :pswitch_3
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
@@ -227,7 +227,7 @@
 
     goto :goto_0
 
-    .line 253
+    .line 318
     :pswitch_4
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
@@ -245,7 +245,7 @@
 
     goto :goto_0
 
-    .line 247
+    .line 312
     :pswitch_5
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
@@ -255,7 +255,7 @@
 
     goto :goto_0
 
-    .line 250
+    .line 315
     :pswitch_6
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
@@ -273,7 +273,7 @@
 
     goto :goto_0
 
-    .line 244
+    .line 309
     :pswitch_7
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$AppTaskHoldState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 

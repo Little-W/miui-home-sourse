@@ -71,7 +71,7 @@
     .line 24
     invoke-super {p0}, Lcom/miui/home/launcher/ShortcutIcon;->onFinishInflate()V
 
-    const v0, 0x7f0a006e
+    const v0, 0x7f0a0077
 
     .line 25
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/oldman/ElderlyManShortcutIcon;->findViewById(I)Landroid/view/View;

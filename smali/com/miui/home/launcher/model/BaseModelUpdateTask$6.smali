@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/model/BaseModelUpdateTask;->bindCategoryOrderUpdate()V
+    value = Lcom/miui/home/launcher/model/BaseModelUpdateTask;->bindCategoryUpdate(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,17 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/model/BaseModelUpdateTask;
 
+.field final synthetic val$categoryId:I
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;)V
+.method constructor <init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;I)V
     .locals 0
 
-    .line 141
+    .line 147
     iput-object p1, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$6;->this$0:Lcom/miui/home/launcher/model/BaseModelUpdateTask;
+
+    iput p2, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$6;->val$categoryId:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,10 +40,12 @@
 
 # virtual methods
 .method public execute(Lcom/miui/home/launcher/LauncherModel$Callbacks;)V
-    .locals 0
+    .locals 1
 
-    .line 144
-    invoke-interface {p1}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->bindCategoryOrderUpdate()V
+    .line 150
+    iget v0, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$6;->val$categoryId:I
+
+    invoke-interface {p1, v0}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->bindCategoryUpdate(I)V
 
     return-void
 .end method

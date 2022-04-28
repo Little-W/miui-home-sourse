@@ -39,34 +39,34 @@
 .method public constructor <init>(Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;II)V
     .locals 2
 
-    .line 48
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 34
+    .line 35
     iput v0, p0, Lcom/miui/home/recents/GesturesBackController;->mDragDirection:I
 
     const/4 v1, 0x4
 
-    .line 35
+    .line 36
     iput v1, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
 
-    .line 36
+    .line 37
     iput v0, p0, Lcom/miui/home/recents/GesturesBackController;->mWithoutAnimatingDragDirection:I
 
     const/4 v0, 0x1
 
-    .line 49
+    .line 50
     iput-boolean v0, p0, Lcom/miui/home/recents/GesturesBackController;->mIsGestureAnimationEnabled:Z
 
-    .line 50
+    .line 51
     iput-object p1, p0, Lcom/miui/home/recents/GesturesBackController;->mCallback:Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;
 
-    .line 51
+    .line 52
     iput p2, p0, Lcom/miui/home/recents/GesturesBackController;->mGestureEdgeLeft:I
 
-    .line 52
+    .line 53
     iput p3, p0, Lcom/miui/home/recents/GesturesBackController;->mGestureEdgeRight:I
 
     return-void
@@ -88,7 +88,7 @@
 
     const/high16 v1, 0x43b40000    # 360.0f
 
-    .line 233
+    .line 242
     invoke-static {p0, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result p0
@@ -109,7 +109,7 @@
 
     div-double/2addr v0, v2
 
-    .line 234
+    .line 243
     invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v0
@@ -138,7 +138,7 @@
 
     const/high16 v1, 0x43b40000    # 360.0f
 
-    .line 238
+    .line 247
     invoke-static {p0, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result p0
@@ -171,20 +171,20 @@
     return p0
 .end method
 
-.method private processPointerEvent(Landroid/view/MotionEvent;)V
+.method private processPointerEvent(Landroid/view/MotionEvent;Lcom/miui/home/recents/GestureStubView;)V
     .locals 8
 
-    .line 139
+    .line 141
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
 
-    .line 140
+    .line 142
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v1
 
-    .line 142
+    .line 144
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v2
@@ -199,7 +199,7 @@
 
     goto/16 :goto_4
 
-    .line 159
+    .line 161
     :pswitch_0
     iget v2, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
 
@@ -207,13 +207,13 @@
 
     goto/16 :goto_4
 
-    .line 164
+    .line 166
     :cond_0
     iget v2, p0, Lcom/miui/home/recents/GesturesBackController;->mDragDirection:I
 
     if-ne v2, v5, :cond_1
 
-    .line 165
+    .line 167
     iget v2, p0, Lcom/miui/home/recents/GesturesBackController;->mDownX:F
 
     sub-float/2addr v0, v2
@@ -225,72 +225,90 @@
 
     sub-float v0, v2, v0
 
-    .line 166
+    .line 168
     :goto_0
     iget v2, p0, Lcom/miui/home/recents/GesturesBackController;->mDownY:F
 
-    sub-float v2, v1, v2
+    sub-float/2addr v1, v2
 
-    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
+    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
 
-    move-result v2
+    move-result v1
 
-    .line 167
-    iget v5, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
+    .line 169
+    iget v2, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
 
-    if-ne v5, v3, :cond_2
+    if-ne v2, v3, :cond_2
 
-    const/high16 v3, 0x41a00000    # 20.0f
-
-    cmpl-float v3, v0, v3
-
-    if-ltz v3, :cond_2
-
-    const/high16 v3, 0x40000000    # 2.0f
-
-    div-float/2addr v2, v3
+    const/high16 v2, 0x41a00000    # 20.0f
 
     cmpl-float v2, v0, v2
 
     if-ltz v2, :cond_2
 
-    .line 170
+    const/high16 v2, 0x40000000    # 2.0f
+
+    div-float/2addr v1, v2
+
+    cmpl-float v1, v0, v1
+
+    if-ltz v1, :cond_2
+
+    .line 172
     iput v4, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
 
-    .line 171
-    iget-object v2, p0, Lcom/miui/home/recents/GesturesBackController;->mCallback:Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;
-
-    iget-boolean v3, p0, Lcom/miui/home/recents/GesturesBackController;->mIsGestureAnimationEnabled:Z
-
-    invoke-interface {v2, v3, v1}, Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;->onSwipeStart(ZF)V
+    .line 174
+    new-array v1, v4, [I
 
     .line 175
-    :cond_2
-    iget v1, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
+    invoke-virtual {p2, v1}, Lcom/miui/home/recents/GestureStubView;->getLocationOnScreen([I)V
 
-    if-ne v1, v4, :cond_a
-
-    const-string v1, "GesturesBackController"
-
-    const-string v2, "onPointerEvent MotionEvent.ACTION_MOVE processMiuiGestures"
-
-    .line 177
     .line 180
-    iget-boolean v1, p0, Lcom/miui/home/recents/GesturesBackController;->mIsGestureAnimationEnabled:Z
+    iget-object p2, p0, Lcom/miui/home/recents/GesturesBackController;->mCallback:Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;
 
-    if-eqz v1, :cond_a
+    iget-boolean v2, p0, Lcom/miui/home/recents/GesturesBackController;->mIsGestureAnimationEnabled:Z
 
-    .line 181
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v3
+
+    aget v1, v1, v5
+
+    int-to-float v1, v1
+
+    add-float/2addr v3, v1
+
+    invoke-interface {p2, v2, v3}, Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;->onSwipeStart(ZF)V
+
+    .line 184
+    :cond_2
+    iget p2, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
+
+    if-ne p2, v4, :cond_a
+
+    const-string p2, "GesturesBackController"
+
+    const-string v1, "onPointerEvent MotionEvent.ACTION_MOVE processMiuiGestures"
+
+    .line 186
+    invoke-static {p2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 189
+    iget-boolean p2, p0, Lcom/miui/home/recents/GesturesBackController;->mIsGestureAnimationEnabled:Z
+
+    if-eqz p2, :cond_a
+
+    .line 190
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v1
 
-    .line 182
+    .line 191
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getDownTime()J
 
-    move-result-wide v3
+    move-result-wide p1
 
-    sub-long/2addr v1, v3
+    sub-long/2addr v1, p1
 
     long-to-int p1, v1
 
@@ -300,24 +318,24 @@
 
     float-to-int p1, p1
 
-    .line 184
-    iget-object v1, p0, Lcom/miui/home/recents/GesturesBackController;->mCallback:Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;
+    .line 193
+    iget-object p2, p0, Lcom/miui/home/recents/GesturesBackController;->mCallback:Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;
 
     invoke-static {v0, p1}, Lcom/miui/home/recents/GesturesBackController;->isFinished(FI)Z
 
     move-result p1
 
-    invoke-interface {v1, p1, v0}, Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;->onSwipeProcess(ZF)V
+    invoke-interface {p2, p1, v0}, Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;->onSwipeProcess(ZF)V
 
     goto/16 :goto_4
 
-    .line 190
+    .line 199
     :pswitch_1
-    iget v1, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
+    iget p2, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
 
-    if-ne v1, v4, :cond_7
+    if-ne p2, v4, :cond_7
 
-    .line 191
+    .line 200
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v1
@@ -328,51 +346,51 @@
 
     sub-long/2addr v1, v6
 
-    long-to-int v1, v1
+    long-to-int p2, v1
 
-    .line 192
-    iget v2, p0, Lcom/miui/home/recents/GesturesBackController;->mDragDirection:I
+    .line 201
+    iget v1, p0, Lcom/miui/home/recents/GesturesBackController;->mDragDirection:I
 
-    if-ne v2, v5, :cond_3
+    if-ne v1, v5, :cond_3
 
-    .line 193
-    iget v2, p0, Lcom/miui/home/recents/GesturesBackController;->mDownX:F
+    .line 202
+    iget v1, p0, Lcom/miui/home/recents/GesturesBackController;->mDownX:F
 
-    sub-float/2addr v0, v2
+    sub-float/2addr v0, v1
 
     goto :goto_1
 
     :cond_3
-    iget v2, p0, Lcom/miui/home/recents/GesturesBackController;->mDownX:F
+    iget v1, p0, Lcom/miui/home/recents/GesturesBackController;->mDownX:F
 
-    sub-float v0, v2, v0
+    sub-float v0, v1, v0
 
     :goto_1
-    int-to-float v1, v1
+    int-to-float p2, p2
 
-    div-float v1, v0, v1
+    div-float p2, v0, p2
 
-    float-to-int v1, v1
+    float-to-int p2, p2
 
-    .line 195
-    invoke-static {v0, v1}, Lcom/miui/home/recents/GesturesBackController;->isFinished(FI)Z
+    .line 204
+    invoke-static {v0, p2}, Lcom/miui/home/recents/GesturesBackController;->isFinished(FI)Z
 
-    move-result v2
+    move-result v1
 
-    .line 197
-    iget-boolean v3, p0, Lcom/miui/home/recents/GesturesBackController;->mIsGestureAnimationEnabled:Z
+    .line 206
+    iget-boolean v2, p0, Lcom/miui/home/recents/GesturesBackController;->mIsGestureAnimationEnabled:Z
 
-    if-eqz v3, :cond_5
+    if-eqz v2, :cond_5
 
-    const/16 v3, 0x10
+    const/16 v2, 0x10
 
-    .line 198
-    iput v3, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
+    .line 207
+    iput v2, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
 
-    .line 199
-    iget-object v3, p0, Lcom/miui/home/recents/GesturesBackController;->mCallback:Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;
+    .line 208
+    iget-object v2, p0, Lcom/miui/home/recents/GesturesBackController;->mCallback:Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;
 
-    if-ge v1, v4, :cond_4
+    if-ge p2, v4, :cond_4
 
     goto :goto_2
 
@@ -380,66 +398,68 @@
     const/4 v5, 0x0
 
     :goto_2
-    invoke-interface {v3, v2, v0, v5}, Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;->onSwipeStop(ZFZ)V
+    invoke-interface {v2, v1, v0, v5}, Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;->onSwipeStop(ZFZ)V
 
     goto :goto_3
 
     :cond_5
-    if-eqz v2, :cond_6
+    if-eqz v1, :cond_6
 
-    .line 201
+    .line 210
     iget-object v0, p0, Lcom/miui/home/recents/GesturesBackController;->mCallback:Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;
 
     invoke-interface {v0}, Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;->onSwipeStopDirect()V
 
-    .line 204
+    .line 213
     :cond_6
     :goto_3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
-    move-result-wide v3
+    move-result-wide v2
 
-    iput-wide v3, p0, Lcom/miui/home/recents/GesturesBackController;->mContinuousBackFinishTime:J
+    iput-wide v2, p0, Lcom/miui/home/recents/GesturesBackController;->mContinuousBackFinishTime:J
 
     const-string p1, "GesturesBackController"
 
-    .line 207
+    .line 216
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "onPointerEvent MotionEvent.ACTION_UP stopGestures isFinish:"
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v2, " speed:"
+    const-string v2, "onPointerEvent MotionEvent.ACTION_UP stopGestures isFinish:"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, " speed:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
+
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_7
     const/4 p1, -0x1
 
-    .line 212
+    .line 221
     iput p1, p0, Lcom/miui/home/recents/GesturesBackController;->mDragDirection:I
 
     goto :goto_4
 
-    .line 144
+    .line 146
     :pswitch_2
     iput v0, p0, Lcom/miui/home/recents/GesturesBackController;->mDownX:F
 
-    .line 145
+    .line 147
     iput v1, p0, Lcom/miui/home/recents/GesturesBackController;->mDownY:F
 
-    .line 147
+    .line 149
     iget p1, p0, Lcom/miui/home/recents/GesturesBackController;->mGestureEdgeLeft:I
 
     int-to-float p1, p1
@@ -448,15 +468,15 @@
 
     if-gtz p1, :cond_8
 
-    .line 148
+    .line 150
     iput v3, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
 
-    .line 149
+    .line 151
     iput v5, p0, Lcom/miui/home/recents/GesturesBackController;->mDragDirection:I
 
     goto :goto_4
 
-    .line 150
+    .line 152
     :cond_8
     iget p1, p0, Lcom/miui/home/recents/GesturesBackController;->mGestureEdgeRight:I
 
@@ -466,15 +486,15 @@
 
     if-ltz p1, :cond_9
 
-    .line 151
+    .line 153
     iput v3, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
 
-    .line 152
+    .line 154
     iput v4, p0, Lcom/miui/home/recents/GesturesBackController;->mDragDirection:I
 
     goto :goto_4
 
-    .line 154
+    .line 156
     :cond_9
     iput v5, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
 
@@ -496,17 +516,17 @@
 .method private processPointerEventWithoutAnimating(Landroid/view/MotionEvent;)V
     .locals 7
 
-    .line 91
+    .line 92
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
 
-    .line 92
+    .line 93
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v1
 
-    .line 93
+    .line 94
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v2
@@ -515,7 +535,7 @@
 
     const-string v2, "GesturesBackController"
 
-    .line 96
+    .line 97
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -540,11 +560,29 @@
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    const-string v1, " mGestureEdgeLeft:"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/miui/home/recents/GesturesBackController;->mGestureEdgeLeft:I
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " mGestureEdgeRight:"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/miui/home/recents/GesturesBackController;->mGestureEdgeRight:I
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 100
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 102
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v1
@@ -559,11 +597,11 @@
 
     goto :goto_1
 
-    .line 102
+    .line 104
     :pswitch_0
     iput v0, p0, Lcom/miui/home/recents/GesturesBackController;->mWithoutAnimatingDownX:F
 
-    .line 104
+    .line 106
     iget p1, p0, Lcom/miui/home/recents/GesturesBackController;->mGestureEdgeLeft:I
 
     int-to-float p1, p1
@@ -572,12 +610,12 @@
 
     if-gtz p1, :cond_0
 
-    .line 105
+    .line 107
     iput v3, p0, Lcom/miui/home/recents/GesturesBackController;->mWithoutAnimatingDragDirection:I
 
     goto :goto_1
 
-    .line 106
+    .line 108
     :cond_0
     iget p1, p0, Lcom/miui/home/recents/GesturesBackController;->mGestureEdgeRight:I
 
@@ -589,12 +627,12 @@
 
     const/4 p1, 0x2
 
-    .line 107
+    .line 109
     iput p1, p0, Lcom/miui/home/recents/GesturesBackController;->mWithoutAnimatingDragDirection:I
 
     goto :goto_1
 
-    .line 113
+    .line 115
     :cond_1
     :pswitch_1
     iget v1, p0, Lcom/miui/home/recents/GesturesBackController;->mWithoutAnimatingDragDirection:I
@@ -608,7 +646,7 @@
     :cond_2
     if-ne v1, v3, :cond_3
 
-    .line 118
+    .line 120
     iget v1, p0, Lcom/miui/home/recents/GesturesBackController;->mWithoutAnimatingDownX:F
 
     sub-float/2addr v0, v1
@@ -620,7 +658,7 @@
 
     sub-float v0, v1, v0
 
-    .line 119
+    .line 121
     :goto_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
@@ -646,7 +684,7 @@
 
     if-lez v1, :cond_4
 
-    .line 123
+    .line 125
     iget-object v1, p0, Lcom/miui/home/recents/GesturesBackController;->mCallback:Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;
 
     invoke-interface {v1}, Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;->onSwipeStopDirect()V
@@ -654,7 +692,7 @@
     :cond_4
     const-string v1, "GesturesBackController"
 
-    .line 127
+    .line 129
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -681,7 +719,9 @@
 
     move-result-object p1
 
-    .line 131
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 133
     iput v2, p0, Lcom/miui/home/recents/GesturesBackController;->mWithoutAnimatingDragDirection:I
 
     :cond_5
@@ -702,18 +742,18 @@
 .method enableGestureBackAnimation(Z)V
     .locals 0
 
-    .line 225
+    .line 234
     iput-boolean p1, p0, Lcom/miui/home/recents/GesturesBackController;->mIsGestureAnimationEnabled:Z
 
     return-void
 .end method
 
-.method public onPointerEvent(Landroid/view/MotionEvent;)V
+.method public onPointerEvent(Landroid/view/MotionEvent;Lcom/miui/home/recents/GestureStubView;)V
     .locals 4
 
     const-string v0, "GesturesBackController"
 
-    .line 57
+    .line 58
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -730,14 +770,16 @@
 
     move-result-object v1
 
-    .line 61
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 62
     iget v0, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
 
     const/16 v1, 0x10
 
     if-ne v0, v1, :cond_1
 
-    .line 63
+    .line 64
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v0
@@ -754,46 +796,52 @@
 
     const/4 v0, 0x4
 
-    .line 65
+    .line 66
     iput v0, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
 
-    .line 66
+    .line 67
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 67
-    invoke-direct {p0, p1}, Lcom/miui/home/recents/GesturesBackController;->processPointerEvent(Landroid/view/MotionEvent;)V
+    .line 68
+    invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/GesturesBackController;->processPointerEvent(Landroid/view/MotionEvent;Lcom/miui/home/recents/GestureStubView;)V
 
     const-string p1, "GesturesBackController"
 
-    const-string v0, "mSwipeStatus == SWIPE_STATUS_ANIMATING, processPointerEvent"
+    const-string p2, "mSwipeStatus == SWIPE_STATUS_ANIMATING, processPointerEvent"
 
-    .line 69
+    .line 70
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_0
 
-    .line 75
+    .line 76
     :cond_0
     invoke-direct {p0, p1}, Lcom/miui/home/recents/GesturesBackController;->processPointerEventWithoutAnimating(Landroid/view/MotionEvent;)V
 
     const-string p1, "GesturesBackController"
 
-    const-string v0, "mSwipeStatus == SWIPE_STATUS_ANIMATING, processPointerEventWithoutAnimating"
+    const-string p2, "mSwipeStatus == SWIPE_STATUS_ANIMATING, processPointerEventWithoutAnimating"
 
-    .line 77
+    .line 78
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_0
 
-    .line 82
+    .line 83
     :cond_1
-    invoke-direct {p0, p1}, Lcom/miui/home/recents/GesturesBackController;->processPointerEvent(Landroid/view/MotionEvent;)V
+    invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/GesturesBackController;->processPointerEvent(Landroid/view/MotionEvent;Lcom/miui/home/recents/GestureStubView;)V
 
     const-string p1, "GesturesBackController"
 
-    const-string v0, "mSwipeStatus != SWIPE_STATUS_ANIMATING, processPointerEvent"
+    const-string p2, "mSwipeStatus != SWIPE_STATUS_ANIMATING, processPointerEvent"
 
-    .line 84
+    .line 85
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_2
     :goto_0
     return-void
@@ -804,7 +852,7 @@
 
     const/4 v0, 0x1
 
-    .line 243
+    .line 252
     iput v0, p0, Lcom/miui/home/recents/GesturesBackController;->mSwipeStatus:I
 
     return-void
@@ -813,10 +861,10 @@
 .method setGestureEdgeWidth(II)V
     .locals 0
 
-    .line 220
+    .line 229
     iput p1, p0, Lcom/miui/home/recents/GesturesBackController;->mGestureEdgeLeft:I
 
-    .line 221
+    .line 230
     iput p2, p0, Lcom/miui/home/recents/GesturesBackController;->mGestureEdgeRight:I
 
     return-void

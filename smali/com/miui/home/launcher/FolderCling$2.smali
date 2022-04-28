@@ -111,6 +111,9 @@
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/ShortcutInfo;->startPending(Lcom/miui/home/launcher/PendingSource;)V
 
     .line 305
+    invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->saveCheckedStatus()V
+
+    .line 306
     iget-object v0, v0, Lcom/miui/home/launcher/FolderInfo;->icon:Lcom/miui/home/launcher/Folder$FolderCallback;
 
     invoke-interface {v0}, Lcom/miui/home/launcher/Folder$FolderCallback;->deleteSelf()V

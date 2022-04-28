@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/recents/OverviewCommandHelper;)V
     .locals 0
 
-    .line 89
+    .line 88
     iput-object p1, p0, Lcom/miui/home/recents/OverviewCommandHelper$HideRecentsCommand;->this$0:Lcom/miui/home/recents/OverviewCommandHelper;
 
     invoke-direct {p0, p1}, Lcom/miui/home/recents/OverviewCommandHelper$RecentsActivityCommand;-><init>(Lcom/miui/home/recents/OverviewCommandHelper;)V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/recents/OverviewCommandHelper;Lcom/miui/home/recents/OverviewCommandHelper$1;)V
     .locals 0
 
-    .line 89
+    .line 88
     invoke-direct {p0, p1}, Lcom/miui/home/recents/OverviewCommandHelper$HideRecentsCommand;-><init>(Lcom/miui/home/recents/OverviewCommandHelper;)V
 
     return-void
@@ -44,7 +44,7 @@
 .method protected handleCommand(J)Z
     .locals 0
 
-    .line 93
+    .line 92
     iget-object p1, p0, Lcom/miui/home/recents/OverviewCommandHelper$HideRecentsCommand;->mHelper:Lcom/miui/home/recents/ActivityControlHelper;
 
     invoke-interface {p1}, Lcom/miui/home/recents/ActivityControlHelper;->getVisibleRecentsView()Landroid/view/View;

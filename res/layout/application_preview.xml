@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:gravity="center_horizontal"
-    android:layout_gravity="center"
-    android:orientation="vertical"
-    android:clipChildren="false"
-    android:clipToPadding="false"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.miui.home.launcher.LauncherIconImageView
-        android:layout_gravity="center|top"
-        android:id="@id/icon_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/icon_padding_side"
-        android:layout_marginTop="@dimen/icon_padding_top"
-        android:layout_marginRight="@dimen/icon_padding_side"
-        android:scaleType="fitCenter" />
-    <include
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        layout="@layout/icon_title" />
+<LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.launcher.LauncherIconImageView android:layout_gravity="center|top" android:id="@id/icon_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/icon_padding_side" android:layout_marginTop="@dimen/icon_padding_top" android:layout_marginRight="@dimen/icon_padding_side" android:scaleType="fitCenter" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/icon_title" />
 </LinearLayout>

@@ -4,6 +4,8 @@
 
 
 # static fields
+.field public static final ACCEL:Landroid/view/animation/Interpolator;
+
 .field public static final ALPHA_IN:Landroid/view/animation/Interpolator;
 
 .field public static final ALPHA_OUT:Landroid/view/animation/Interpolator;
@@ -11,6 +13,8 @@
 .field public static final BACK_EASE_OUT:Lmiuix/view/animation/BackEaseOutInterpolator;
 
 .field public static final CUBIC_EASE_OUT:Landroid/view/animation/Interpolator;
+
+.field public static final DEACCEL:Landroid/view/animation/Interpolator;
 
 .field public static final EASE_IN_OUT:Landroid/view/animation/Interpolator;
 
@@ -41,14 +45,28 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 33
+    .line 35
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->LINEAR:Landroid/view/animation/Interpolator;
 
-    .line 34
+    .line 37
+    new-instance v0, Landroid/view/animation/AccelerateInterpolator;
+
+    invoke-direct {v0}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
+
+    sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->ACCEL:Landroid/view/animation/Interpolator;
+
+    .line 39
+    new-instance v0, Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
+
+    sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->DEACCEL:Landroid/view/animation/Interpolator;
+
+    .line 41
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -63,98 +81,98 @@
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->FAST_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
 
-    .line 35
+    .line 42
     new-instance v0, Landroid/view/animation/PathInterpolator;
 
     invoke-direct {v0, v3, v3, v2, v1}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->LINEAR_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
 
-    .line 36
+    .line 43
     new-instance v0, Lmiuix/view/animation/SineEaseInOutInterpolator;
 
     invoke-direct {v0}, Lmiuix/view/animation/SineEaseInOutInterpolator;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->EASE_IN_OUT:Landroid/view/animation/Interpolator;
 
-    .line 37
+    .line 44
     new-instance v0, Lmiuix/view/animation/CubicEaseOutInterpolator;
 
     invoke-direct {v0}, Lmiuix/view/animation/CubicEaseOutInterpolator;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->CUBIC_EASE_OUT:Landroid/view/animation/Interpolator;
 
-    .line 39
+    .line 46
     new-instance v0, Lcom/miui/home/launcher/anim/Interpolators$1;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/anim/Interpolators$1;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->ALPHA_OUT:Landroid/view/animation/Interpolator;
 
-    .line 45
+    .line 52
     new-instance v0, Lcom/miui/home/launcher/anim/Interpolators$2;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/anim/Interpolators$2;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->ALPHA_IN:Landroid/view/animation/Interpolator;
 
-    .line 52
+    .line 59
     new-instance v0, Lcom/miui/home/launcher/anim/Interpolators$3;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/anim/Interpolators$3;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->SCROLL:Landroid/view/animation/Interpolator;
 
-    .line 60
+    .line 67
     new-instance v0, Lcom/miui/home/launcher/anim/Interpolators$4;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/anim/Interpolators$4;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->SCROLL_CUBIC:Landroid/view/animation/Interpolator;
 
-    .line 74
+    .line 81
     new-instance v0, Lmiuix/view/animation/BackEaseOutInterpolator;
 
     invoke-direct {v0}, Lmiuix/view/animation/BackEaseOutInterpolator;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->BACK_EASE_OUT:Lmiuix/view/animation/BackEaseOutInterpolator;
 
-    .line 76
+    .line 83
     new-instance v0, Lcom/miui/home/launcher/anim/Interpolators$5;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/anim/Interpolators$5;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->FEED_WORKSPACE_ALPHA_OUT:Landroid/view/animation/Interpolator;
 
-    .line 87
+    .line 94
     new-instance v0, Lcom/miui/home/launcher/anim/Interpolators$6;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/anim/Interpolators$6;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->FEED_WORKSPACE_ALPHA_IN:Landroid/view/animation/Interpolator;
 
-    .line 98
+    .line 105
     new-instance v0, Lcom/miui/home/launcher/anim/Interpolators$7;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/anim/Interpolators$7;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->FEED_INDICATOR_ALPHA_OUT:Landroid/view/animation/Interpolator;
 
-    .line 109
+    .line 116
     new-instance v0, Lcom/miui/home/launcher/anim/Interpolators$8;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/anim/Interpolators$8;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->FEED_INDICATOR_ALPHA_IN:Landroid/view/animation/Interpolator;
 
-    .line 120
+    .line 127
     new-instance v0, Lcom/miui/home/launcher/anim/Interpolators$9;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/anim/Interpolators$9;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/anim/Interpolators;->FEED_HOTSEAT_ALPHA_OUT:Landroid/view/animation/Interpolator;
 
-    .line 131
+    .line 138
     new-instance v0, Lcom/miui/home/launcher/anim/Interpolators$10;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/anim/Interpolators$10;-><init>()V
@@ -167,7 +185,7 @@
 .method public static scrollInterpolatorForVelocity(F)Landroid/view/animation/Interpolator;
     .locals 1
 
-    .line 71
+    .line 78
     invoke-static {p0}, Ljava/lang/Math;->abs(F)F
 
     move-result p0

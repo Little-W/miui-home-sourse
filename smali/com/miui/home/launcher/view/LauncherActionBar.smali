@@ -68,7 +68,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0036
+    const v0, 0x7f0a003a
 
     .line 32
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/view/LauncherActionBar;->findViewById(I)Landroid/view/View;
@@ -102,7 +102,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f060095
+    const v2, 0x7f0600a5
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -113,7 +113,7 @@
     .line 44
     iget-object v0, p0, Lcom/miui/home/launcher/view/LauncherActionBar;->mBackImageView:Landroid/widget/ImageView;
 
-    const v1, 0x7f0800aa
+    const v1, 0x7f0800b1
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -127,7 +127,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f060094
+    const v2, 0x7f0600a4
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -138,7 +138,7 @@
     .line 47
     iget-object v0, p0, Lcom/miui/home/launcher/view/LauncherActionBar;->mBackImageView:Landroid/widget/ImageView;
 
-    const v1, 0x7f0800a9
+    const v1, 0x7f0800b0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

@@ -119,31 +119,31 @@
 .method public constructor <init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;Lcom/airbnb/lottie/model/content/GradientFill;)V
     .locals 2
 
-    .line 61
+    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 45
-    new-instance v0, Landroidx/collection/LongSparseArray;
-
-    invoke-direct {v0}, Landroidx/collection/LongSparseArray;-><init>()V
-
-    iput-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->linearGradientCache:Landroidx/collection/LongSparseArray;
 
     .line 46
     new-instance v0, Landroidx/collection/LongSparseArray;
 
     invoke-direct {v0}, Landroidx/collection/LongSparseArray;-><init>()V
 
-    iput-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->radialGradientCache:Landroidx/collection/LongSparseArray;
+    iput-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->linearGradientCache:Landroidx/collection/LongSparseArray;
 
     .line 47
+    new-instance v0, Landroidx/collection/LongSparseArray;
+
+    invoke-direct {v0}, Landroidx/collection/LongSparseArray;-><init>()V
+
+    iput-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->radialGradientCache:Landroidx/collection/LongSparseArray;
+
+    .line 48
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->path:Landroid/graphics/Path;
 
-    .line 48
+    .line 49
     new-instance v0, Lcom/airbnb/lottie/animation/LPaint;
 
     const/4 v1, 0x1
@@ -152,48 +152,48 @@
 
     iput-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->paint:Landroid/graphics/Paint;
 
-    .line 49
+    .line 50
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->boundsRect:Landroid/graphics/RectF;
 
-    .line 50
+    .line 51
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->paths:Ljava/util/List;
 
-    .line 62
+    .line 63
     iput-object p2, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->layer:Lcom/airbnb/lottie/model/layer/BaseLayer;
 
-    .line 63
+    .line 64
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/GradientFill;->getName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->name:Ljava/lang/String;
 
-    .line 64
+    .line 65
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/GradientFill;->isHidden()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->hidden:Z
 
-    .line 65
+    .line 66
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
 
-    .line 66
+    .line 67
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/GradientFill;->getGradientType()Lcom/airbnb/lottie/model/content/GradientType;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->type:Lcom/airbnb/lottie/model/content/GradientType;
 
-    .line 67
+    .line 68
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->path:Landroid/graphics/Path;
 
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/GradientFill;->getFillType()Landroid/graphics/Path$FillType;
@@ -202,7 +202,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Path;->setFillType(Landroid/graphics/Path$FillType;)V
 
-    .line 68
+    .line 69
     invoke-virtual {p1}, Lcom/airbnb/lottie/LottieDrawable;->getComposition()Lcom/airbnb/lottie/LottieComposition;
 
     move-result-object p1
@@ -219,7 +219,7 @@
 
     iput p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->cacheSteps:I
 
-    .line 70
+    .line 71
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/GradientFill;->getGradientColor()Lcom/airbnb/lottie/model/animatable/AnimatableGradientColorValue;
 
     move-result-object p1
@@ -230,17 +230,17 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    .line 71
+    .line 72
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
-    .line 72
+    .line 73
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
-    .line 74
+    .line 75
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/GradientFill;->getOpacity()Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
 
     move-result-object p1
@@ -251,17 +251,17 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->opacityAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    .line 75
+    .line 76
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->opacityAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
-    .line 76
+    .line 77
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->opacityAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
-    .line 78
+    .line 79
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/GradientFill;->getStartPoint()Lcom/airbnb/lottie/model/animatable/AnimatablePointValue;
 
     move-result-object p1
@@ -272,17 +272,17 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->startPointAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    .line 79
+    .line 80
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->startPointAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
-    .line 80
+    .line 81
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->startPointAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
-    .line 82
+    .line 83
     invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/GradientFill;->getEndPoint()Lcom/airbnb/lottie/model/animatable/AnimatablePointValue;
 
     move-result-object p1
@@ -293,12 +293,12 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->endPointAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    .line 83
+    .line 84
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->endPointAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
-    .line 84
+    .line 85
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->endPointAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
@@ -309,19 +309,19 @@
 .method private applyDynamicColorsIfNeeded([I)[I
     .locals 4
 
-    .line 211
+    .line 212
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorCallbackAnimation:Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;
 
     if-eqz v0, :cond_1
 
-    .line 212
+    .line 213
     invoke-virtual {v0}, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ljava/lang/Integer;
 
-    .line 213
+    .line 214
     array-length v1, p1
 
     array-length v2, v0
@@ -330,13 +330,13 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 214
+    .line 215
     :goto_0
     array-length v1, p1
 
     if-ge v3, v1, :cond_1
 
-    .line 215
+    .line 216
     aget-object v1, v0, v3
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
@@ -349,19 +349,19 @@
 
     goto :goto_0
 
-    .line 218
+    .line 219
     :cond_0
     array-length p1, v0
 
     new-array p1, p1, [I
 
-    .line 219
+    .line 220
     :goto_1
     array-length v1, v0
 
     if-ge v3, v1, :cond_1
 
-    .line 220
+    .line 221
     aget-object v1, v0, v3
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
@@ -381,7 +381,7 @@
 .method private getGradientHash()I
     .locals 4
 
-    .line 194
+    .line 195
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->startPointAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getProgress()F
@@ -398,7 +398,7 @@
 
     move-result v0
 
-    .line 195
+    .line 196
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->endPointAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getProgress()F
@@ -415,7 +415,7 @@
 
     move-result v1
 
-    .line 196
+    .line 197
     iget-object v2, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getProgress()F
@@ -464,12 +464,12 @@
 .method private getLinearGradient()Landroid/graphics/LinearGradient;
     .locals 14
 
-    .line 153
+    .line 154
     invoke-direct {p0}, Lcom/airbnb/lottie/animation/content/GradientFillContent;->getGradientHash()I
 
     move-result v0
 
-    .line 154
+    .line 155
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->linearGradientCache:Landroidx/collection/LongSparseArray;
 
     int-to-long v2, v0
@@ -484,7 +484,7 @@
 
     return-object v0
 
-    .line 158
+    .line 159
     :cond_0
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->startPointAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
@@ -494,7 +494,7 @@
 
     check-cast v0, Landroid/graphics/PointF;
 
-    .line 159
+    .line 160
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->endPointAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -503,7 +503,7 @@
 
     check-cast v1, Landroid/graphics/PointF;
 
-    .line 160
+    .line 161
     iget-object v4, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v4}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -512,7 +512,7 @@
 
     check-cast v4, Lcom/airbnb/lottie/model/content/GradientColor;
 
-    .line 161
+    .line 162
     invoke-virtual {v4}, Lcom/airbnb/lottie/model/content/GradientColor;->getColors()[I
 
     move-result-object v5
@@ -521,12 +521,12 @@
 
     move-result-object v11
 
-    .line 162
+    .line 163
     invoke-virtual {v4}, Lcom/airbnb/lottie/model/content/GradientColor;->getPositions()[F
 
     move-result-object v12
 
-    .line 163
+    .line 164
     new-instance v4, Landroid/graphics/LinearGradient;
 
     iget v7, v0, Landroid/graphics/PointF;->x:F
@@ -543,7 +543,7 @@
 
     invoke-direct/range {v6 .. v13}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
 
-    .line 165
+    .line 166
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->linearGradientCache:Landroidx/collection/LongSparseArray;
 
     invoke-virtual {v0, v2, v3, v4}, Landroidx/collection/LongSparseArray;->put(JLjava/lang/Object;)V
@@ -554,12 +554,12 @@
 .method private getRadialGradient()Landroid/graphics/RadialGradient;
     .locals 13
 
-    .line 170
+    .line 171
     invoke-direct {p0}, Lcom/airbnb/lottie/animation/content/GradientFillContent;->getGradientHash()I
 
     move-result v0
 
-    .line 171
+    .line 172
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->radialGradientCache:Landroidx/collection/LongSparseArray;
 
     int-to-long v2, v0
@@ -574,7 +574,7 @@
 
     return-object v0
 
-    .line 175
+    .line 176
     :cond_0
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->startPointAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
@@ -584,7 +584,7 @@
 
     check-cast v0, Landroid/graphics/PointF;
 
-    .line 176
+    .line 177
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->endPointAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -593,7 +593,7 @@
 
     check-cast v1, Landroid/graphics/PointF;
 
-    .line 177
+    .line 178
     iget-object v4, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v4}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -602,7 +602,7 @@
 
     check-cast v4, Lcom/airbnb/lottie/model/content/GradientColor;
 
-    .line 178
+    .line 179
     invoke-virtual {v4}, Lcom/airbnb/lottie/model/content/GradientColor;->getColors()[I
 
     move-result-object v5
@@ -611,21 +611,21 @@
 
     move-result-object v10
 
-    .line 179
+    .line 180
     invoke-virtual {v4}, Lcom/airbnb/lottie/model/content/GradientColor;->getPositions()[F
 
     move-result-object v11
 
-    .line 180
+    .line 181
     iget v7, v0, Landroid/graphics/PointF;->x:F
 
-    .line 181
+    .line 182
     iget v8, v0, Landroid/graphics/PointF;->y:F
 
-    .line 182
+    .line 183
     iget v0, v1, Landroid/graphics/PointF;->x:F
 
-    .line 183
+    .line 184
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
     sub-float/2addr v0, v7
@@ -636,7 +636,7 @@
 
     float-to-double v0, v1
 
-    .line 184
+    .line 185
     invoke-static {v4, v5, v0, v1}, Ljava/lang/Math;->hypot(DD)D
 
     move-result-wide v0
@@ -658,7 +658,7 @@
     :cond_1
     move v9, v0
 
-    .line 188
+    .line 189
     :goto_0
     new-instance v0, Landroid/graphics/RadialGradient;
 
@@ -668,7 +668,7 @@
 
     invoke-direct/range {v6 .. v12}, Landroid/graphics/RadialGradient;-><init>(FFF[I[FLandroid/graphics/Shader$TileMode;)V
 
-    .line 189
+    .line 190
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->radialGradientCache:Landroidx/collection/LongSparseArray;
 
     invoke-virtual {v1, v2, v3, v0}, Landroidx/collection/LongSparseArray;->put(JLjava/lang/Object;)V
@@ -690,19 +690,19 @@
         }
     .end annotation
 
-    .line 235
+    .line 236
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->OPACITY:Ljava/lang/Integer;
 
     if-ne p1, v0, :cond_0
 
-    .line 236
+    .line 237
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->opacityAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
 
     goto :goto_0
 
-    .line 237
+    .line 238
     :cond_0
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->COLOR_FILTER:Landroid/graphics/ColorFilter;
 
@@ -710,12 +710,12 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 238
+    .line 239
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorFilterAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     if-eqz p1, :cond_1
 
-    .line 239
+    .line 240
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->layer:Lcom/airbnb/lottie/model/layer/BaseLayer;
 
     invoke-virtual {v0, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->removeAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
@@ -723,12 +723,12 @@
     :cond_1
     if-nez p2, :cond_2
 
-    .line 243
+    .line 244
     iput-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorFilterAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     goto :goto_0
 
-    .line 245
+    .line 246
     :cond_2
     new-instance p1, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;
 
@@ -736,12 +736,12 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorFilterAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    .line 247
+    .line 248
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorFilterAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
-    .line 248
+    .line 249
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->layer:Lcom/airbnb/lottie/model/layer/BaseLayer;
 
     iget-object p2, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorFilterAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
@@ -750,18 +750,18 @@
 
     goto :goto_0
 
-    .line 250
+    .line 251
     :cond_3
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->GRADIENT_COLOR:[Ljava/lang/Integer;
 
     if-ne p1, v0, :cond_6
 
-    .line 251
+    .line 252
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorCallbackAnimation:Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;
 
     if-eqz p1, :cond_4
 
-    .line 252
+    .line 253
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->layer:Lcom/airbnb/lottie/model/layer/BaseLayer;
 
     invoke-virtual {v0, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->removeAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
@@ -769,25 +769,35 @@
     :cond_4
     if-nez p2, :cond_5
 
-    .line 256
+    .line 257
     iput-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorCallbackAnimation:Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;
 
     goto :goto_0
 
-    .line 259
+    .line 260
     :cond_5
+    iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->linearGradientCache:Landroidx/collection/LongSparseArray;
+
+    invoke-virtual {p1}, Landroidx/collection/LongSparseArray;->clear()V
+
+    .line 261
+    iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->radialGradientCache:Landroidx/collection/LongSparseArray;
+
+    invoke-virtual {p1}, Landroidx/collection/LongSparseArray;->clear()V
+
+    .line 262
     new-instance p1, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;
 
     invoke-direct {p1, p2}, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;-><init>(Lcom/airbnb/lottie/value/LottieValueCallback;)V
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorCallbackAnimation:Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;
 
-    .line 260
+    .line 263
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorCallbackAnimation:Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
-    .line 261
+    .line 264
     iget-object p1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->layer:Lcom/airbnb/lottie/model/layer/BaseLayer;
 
     iget-object p2, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorCallbackAnimation:Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;
@@ -802,7 +812,7 @@
 .method public draw(Landroid/graphics/Canvas;Landroid/graphics/Matrix;I)V
     .locals 4
 
-    .line 101
+    .line 102
     iget-boolean v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->hidden:Z
 
     if-eqz v0, :cond_0
@@ -812,10 +822,10 @@
     :cond_0
     const-string v0, "GradientFillContent#draw"
 
-    .line 104
+    .line 105
     invoke-static {v0}, Lcom/airbnb/lottie/L;->beginSection(Ljava/lang/String;)V
 
-    .line 105
+    .line 106
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->path:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
@@ -824,7 +834,7 @@
 
     move v1, v0
 
-    .line 106
+    .line 107
     :goto_0
     iget-object v2, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->paths:Ljava/util/List;
 
@@ -834,7 +844,7 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 107
+    .line 108
     iget-object v2, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->path:Landroid/graphics/Path;
 
     iget-object v3, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->paths:Ljava/util/List;
@@ -855,7 +865,7 @@
 
     goto :goto_0
 
-    .line 110
+    .line 111
     :cond_1
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->path:Landroid/graphics/Path;
 
@@ -863,41 +873,41 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/graphics/Path;->computeBounds(Landroid/graphics/RectF;Z)V
 
-    .line 113
+    .line 114
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->type:Lcom/airbnb/lottie/model/content/GradientType;
 
     sget-object v2, Lcom/airbnb/lottie/model/content/GradientType;->LINEAR:Lcom/airbnb/lottie/model/content/GradientType;
 
     if-ne v1, v2, :cond_2
 
-    .line 114
+    .line 115
     invoke-direct {p0}, Lcom/airbnb/lottie/animation/content/GradientFillContent;->getLinearGradient()Landroid/graphics/LinearGradient;
 
     move-result-object v1
 
     goto :goto_1
 
-    .line 116
+    .line 117
     :cond_2
     invoke-direct {p0}, Lcom/airbnb/lottie/animation/content/GradientFillContent;->getRadialGradient()Landroid/graphics/RadialGradient;
 
     move-result-object v1
 
-    .line 118
+    .line 119
     :goto_1
     invoke-virtual {v1, p2}, Landroid/graphics/Shader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 119
+    .line 120
     iget-object p2, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 121
+    .line 122
     iget-object p2, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->colorFilterAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     if-eqz p2, :cond_3
 
-    .line 122
+    .line 123
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -915,7 +925,7 @@
 
     div-float/2addr p2, p3
 
-    .line 125
+    .line 126
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->opacityAnimation:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -940,7 +950,7 @@
 
     float-to-int p2, p2
 
-    .line 126
+    .line 127
     iget-object p3, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->paint:Landroid/graphics/Paint;
 
     const/16 v1, 0xff
@@ -951,7 +961,7 @@
 
     invoke-virtual {p3, p2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 128
+    .line 129
     iget-object p2, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->path:Landroid/graphics/Path;
 
     iget-object p3, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->paint:Landroid/graphics/Paint;
@@ -960,7 +970,7 @@
 
     const-string p1, "GradientFillContent#draw"
 
-    .line 129
+    .line 130
     invoke-static {p1}, Lcom/airbnb/lottie/L;->endSection(Ljava/lang/String;)F
 
     return-void
@@ -969,7 +979,7 @@
 .method public getBounds(Landroid/graphics/RectF;Landroid/graphics/Matrix;Z)V
     .locals 3
 
-    .line 133
+    .line 134
     iget-object p3, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->path:Landroid/graphics/Path;
 
     invoke-virtual {p3}, Landroid/graphics/Path;->reset()V
@@ -978,7 +988,7 @@
 
     move v0, p3
 
-    .line 134
+    .line 135
     :goto_0
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->paths:Ljava/util/List;
 
@@ -988,7 +998,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 135
+    .line 136
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->path:Landroid/graphics/Path;
 
     iget-object v2, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->paths:Ljava/util/List;
@@ -1009,13 +1019,13 @@
 
     goto :goto_0
 
-    .line 138
+    .line 139
     :cond_0
     iget-object p2, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->path:Landroid/graphics/Path;
 
     invoke-virtual {p2, p1, p3}, Landroid/graphics/Path;->computeBounds(Landroid/graphics/RectF;Z)V
 
-    .line 140
+    .line 141
     iget p2, p1, Landroid/graphics/RectF;->left:F
 
     const/high16 p3, 0x3f800000    # 1.0f
@@ -1042,7 +1052,7 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .line 149
+    .line 150
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->name:Ljava/lang/String;
 
     return-object v0
@@ -1051,7 +1061,7 @@
 .method public onValueChanged()V
     .locals 1
 
-    .line 88
+    .line 89
     iget-object v0, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/LottieDrawable;->invalidateSelf()V
@@ -1074,7 +1084,7 @@
         }
     .end annotation
 
-    .line 229
+    .line 230
     invoke-static {p1, p2, p3, p4, p0}, Lcom/airbnb/lottie/utils/MiscUtils;->resolveKeyPath(Lcom/airbnb/lottie/model/KeyPath;ILjava/util/List;Lcom/airbnb/lottie/model/KeyPath;Lcom/airbnb/lottie/animation/content/KeyPathElementContent;)V
 
     return-void
@@ -1096,7 +1106,7 @@
 
     const/4 p1, 0x0
 
-    .line 92
+    .line 93
     :goto_0
     invoke-interface {p2}, Ljava/util/List;->size()I
 
@@ -1104,19 +1114,19 @@
 
     if-ge p1, v0, :cond_1
 
-    .line 93
+    .line 94
     invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/airbnb/lottie/animation/content/Content;
 
-    .line 94
+    .line 95
     instance-of v1, v0, Lcom/airbnb/lottie/animation/content/PathContent;
 
     if-eqz v1, :cond_0
 
-    .line 95
+    .line 96
     iget-object v1, p0, Lcom/airbnb/lottie/animation/content/GradientFillContent;->paths:Ljava/util/List;
 
     check-cast v0, Lcom/airbnb/lottie/animation/content/PathContent;

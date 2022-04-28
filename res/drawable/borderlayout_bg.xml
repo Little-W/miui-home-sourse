@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<miuix.smooth.SmoothGradientDrawable
-    android:radius="@dimen/borderlayout_bg_corner_radius"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners
-        android:radius="@dimen/borderlayout_bg_corner_radius" />
-    <stroke
-        android:width="@dimen/borderlayout_bg_stroke_width"
-        android:color="@color/visual_check_borderlayout_bg_stroke_color" />
+<miuix.smooth.SmoothGradientDrawable android:radius="@dimen/borderlayout_bg_corner_radius"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/borderlayout_bg_corner_radius" />
+    <stroke android:width="@dimen/borderlayout_bg_stroke_width" android:color="@color/visual_check_borderlayout_bg_stroke_color" />
 </miuix.smooth.SmoothGradientDrawable>

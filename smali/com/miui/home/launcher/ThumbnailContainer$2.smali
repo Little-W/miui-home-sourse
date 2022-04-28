@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ThumbnailContainer;I)V
     .locals 0
 
-    .line 239
+    .line 271
     iput-object p1, p0, Lcom/miui/home/launcher/ThumbnailContainer$2;->this$0:Lcom/miui/home/launcher/ThumbnailContainer;
 
     iput p2, p0, Lcom/miui/home/launcher/ThumbnailContainer$2;->val$index:I
@@ -51,7 +51,7 @@
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .line 239
+    .line 271
     invoke-virtual {p0}, Lcom/miui/home/launcher/ThumbnailContainer$2;->get()Ljava/lang/String;
 
     move-result-object v0
@@ -62,7 +62,7 @@
 .method public get()Ljava/lang/String;
     .locals 4
 
-    .line 242
+    .line 274
     iget-object v0, p0, Lcom/miui/home/launcher/ThumbnailContainer$2;->this$0:Lcom/miui/home/launcher/ThumbnailContainer;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ThumbnailContainer;->getResources()Landroid/content/res/Resources;
@@ -85,7 +85,7 @@
 
     aput-object v1, v2, v3
 
-    const v1, 0x7f100065
+    const v1, 0x7f100069
 
     invoke-virtual {v0, v1, v2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 

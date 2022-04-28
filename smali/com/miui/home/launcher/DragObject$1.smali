@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DragObject;)V
     .locals 0
 
-    .line 251
+    .line 245
     iput-object p1, p0, Lcom/miui/home/launcher/DragObject$1;->this$0:Lcom/miui/home/launcher/DragObject;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onInflateFinished(Landroid/view/View;ILandroid/view/ViewGroup;)V
     .locals 0
 
-    .line 254
+    .line 248
     iget-object p2, p0, Lcom/miui/home/launcher/DragObject$1;->this$0:Lcom/miui/home/launcher/DragObject;
 
     invoke-static {p2}, Lcom/miui/home/launcher/DragObject;->access$000(Lcom/miui/home/launcher/DragObject;)Z
@@ -47,14 +47,14 @@
 
     if-nez p2, :cond_0
 
-    .line 255
+    .line 249
     iget-object p2, p0, Lcom/miui/home/launcher/DragObject$1;->this$0:Lcom/miui/home/launcher/DragObject;
 
     check-cast p1, Lcom/miui/home/launcher/widget/NoSpaceToast;
 
     invoke-static {p2, p1}, Lcom/miui/home/launcher/DragObject;->access$102(Lcom/miui/home/launcher/DragObject;Lcom/miui/home/launcher/widget/NoSpaceToast;)Lcom/miui/home/launcher/widget/NoSpaceToast;
 
-    .line 256
+    .line 250
     iget-object p1, p0, Lcom/miui/home/launcher/DragObject$1;->this$0:Lcom/miui/home/launcher/DragObject;
 
     invoke-static {p1}, Lcom/miui/home/launcher/DragObject;->access$200(Lcom/miui/home/launcher/DragObject;)[Lcom/miui/home/launcher/DragView;
@@ -77,7 +77,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 257
+    .line 251
     iget-object p1, p0, Lcom/miui/home/launcher/DragObject$1;->this$0:Lcom/miui/home/launcher/DragObject;
 
     invoke-static {p1}, Lcom/miui/home/launcher/DragObject;->access$100(Lcom/miui/home/launcher/DragObject;)Lcom/miui/home/launcher/widget/NoSpaceToast;

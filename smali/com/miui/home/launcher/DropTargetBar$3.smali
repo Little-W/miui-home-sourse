@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DropTargetBar;)V
     .locals 0
 
-    .line 282
+    .line 284
     iput-object p1, p0, Lcom/miui/home/launcher/DropTargetBar$3;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/common/ConflictsListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onGainLock()V
     .locals 1
 
-    .line 292
+    .line 294
     iget-object v0, p0, Lcom/miui/home/launcher/DropTargetBar$3;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-static {v0}, Lcom/miui/home/launcher/DropTargetBar;->access$1400(Lcom/miui/home/launcher/DropTargetBar;)V
@@ -46,7 +46,7 @@
 .method public onLoseLock()V
     .locals 2
 
-    .line 286
+    .line 288
     iget-object v0, p0, Lcom/miui/home/launcher/DropTargetBar$3;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-static {v0}, Lcom/miui/home/launcher/DropTargetBar;->access$1300(Lcom/miui/home/launcher/DropTargetBar;)Lcom/miui/home/launcher/UninstallDropTarget;
@@ -57,7 +57,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/UninstallDropTarget;->setActive(Z)V
 
-    .line 287
+    .line 289
     invoke-virtual {p0}, Lcom/miui/home/launcher/DropTargetBar$3;->onReleaseLock()V
 
     return-void
@@ -66,7 +66,7 @@
 .method public onReleaseLock()V
     .locals 2
 
-    .line 297
+    .line 299
     iget-object v0, p0, Lcom/miui/home/launcher/DropTargetBar$3;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-static {v0}, Lcom/miui/home/launcher/DropTargetBar;->access$1500(Lcom/miui/home/launcher/DropTargetBar;)Ljava/util/List;
@@ -90,7 +90,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/ButtonDropTarget;
 
-    .line 298
+    .line 300
     invoke-virtual {v1}, Lcom/miui/home/launcher/ButtonDropTarget;->hideIfNeed()V
 
     goto :goto_0
@@ -102,7 +102,7 @@
 .method public onSomeoneReleaseLock()Z
     .locals 1
 
-    .line 304
+    .line 306
     iget-object v0, p0, Lcom/miui/home/launcher/DropTargetBar$3;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-static {v0}, Lcom/miui/home/launcher/DropTargetBar;->access$700(Lcom/miui/home/launcher/DropTargetBar;)V

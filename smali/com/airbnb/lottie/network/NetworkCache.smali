@@ -4,22 +4,18 @@
 
 
 # instance fields
-.field private final appContext:Landroid/content/Context;
+.field private final cacheProvider:Lcom/airbnb/lottie/network/LottieNetworkCacheProvider;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Lcom/airbnb/lottie/network/LottieNetworkCacheProvider;)V
     .locals 0
 
-    .line 24
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/airbnb/lottie/network/NetworkCache;->appContext:Landroid/content/Context;
+    .line 29
+    iput-object p1, p0, Lcom/airbnb/lottie/network/NetworkCache;->cacheProvider:Lcom/airbnb/lottie/network/LottieNetworkCacheProvider;
 
     return-void
 .end method
@@ -27,7 +23,7 @@
 .method private static filenameForUrl(Ljava/lang/String;Lcom/airbnb/lottie/network/FileExtension;Z)Ljava/lang/String;
     .locals 3
 
-    .line 153
+    .line 157
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,7 +71,7 @@
         }
     .end annotation
 
-    .line 130
+    .line 134
     new-instance v0, Ljava/io/File;
 
     invoke-direct {p0}, Lcom/airbnb/lottie/network/NetworkCache;->parentDir()Ljava/io/File;
@@ -92,7 +88,7 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 131
+    .line 135
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -101,7 +97,7 @@
 
     return-object v0
 
-    .line 134
+    .line 138
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -117,7 +113,7 @@
 
     invoke-direct {v0, v1, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 135
+    .line 139
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result p1
@@ -133,32 +129,26 @@
 .end method
 
 .method private parentDir()Ljava/io/File;
-    .locals 3
+    .locals 2
 
-    .line 142
-    new-instance v0, Ljava/io/File;
+    .line 146
+    iget-object v0, p0, Lcom/airbnb/lottie/network/NetworkCache;->cacheProvider:Lcom/airbnb/lottie/network/LottieNetworkCacheProvider;
 
-    iget-object v1, p0, Lcom/airbnb/lottie/network/NetworkCache;->appContext:Landroid/content/Context;
+    invoke-interface {v0}, Lcom/airbnb/lottie/network/LottieNetworkCacheProvider;->getCacheDir()Ljava/io/File;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+    move-result-object v0
 
-    move-result-object v1
-
-    const-string v2, "lottie_network_cache"
-
-    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    .line 143
+    .line 147
     invoke-virtual {v0}, Ljava/io/File;->isFile()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 144
+    .line 148
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 146
+    .line 150
     :cond_0
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -166,7 +156,7 @@
 
     if-nez v1, :cond_1
 
-    .line 147
+    .line 151
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     :cond_1
@@ -175,14 +165,14 @@
 
 
 # virtual methods
-.method fetch(Ljava/lang/String;)Landroidx/core/util/Pair;
+.method fetch(Ljava/lang/String;)Landroid/util/Pair;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Landroidx/core/util/Pair<",
+            "Landroid/util/Pair<",
             "Lcom/airbnb/lottie/network/FileExtension;",
             "Ljava/io/InputStream;",
             ">;"
@@ -191,7 +181,7 @@
 
     const/4 v0, 0x0
 
-    .line 53
+    .line 57
     :try_start_0
     invoke-direct {p0, p1}, Lcom/airbnb/lottie/network/NetworkCache;->getCachedFile(Ljava/lang/String;)Ljava/io/File;
 
@@ -203,7 +193,7 @@
 
     return-object v0
 
-    .line 63
+    .line 67
     :cond_0
     :try_start_1
     new-instance v2, Ljava/io/FileInputStream;
@@ -212,7 +202,7 @@
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 69
+    .line 73
     invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
@@ -225,16 +215,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 70
+    .line 74
     sget-object v0, Lcom/airbnb/lottie/network/FileExtension;->ZIP:Lcom/airbnb/lottie/network/FileExtension;
 
     goto :goto_0
 
-    .line 72
+    .line 76
     :cond_1
     sget-object v0, Lcom/airbnb/lottie/network/FileExtension;->JSON:Lcom/airbnb/lottie/network/FileExtension;
 
-    .line 75
+    .line 79
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -262,10 +252,10 @@
 
     invoke-static {p1}, Lcom/airbnb/lottie/utils/Logger;->debug(Ljava/lang/String;)V
 
-    .line 76
-    new-instance p1, Landroidx/core/util/Pair;
+    .line 80
+    new-instance p1, Landroid/util/Pair;
 
-    invoke-direct {p1, v0, v2}, Landroidx/core/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, v2}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-object p1
 
@@ -281,12 +271,12 @@
 
     const/4 v0, 0x1
 
-    .line 113
+    .line 117
     invoke-static {p1, p2, v0}, Lcom/airbnb/lottie/network/NetworkCache;->filenameForUrl(Ljava/lang/String;Lcom/airbnb/lottie/network/FileExtension;Z)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 114
+    .line 118
     new-instance p2, Ljava/io/File;
 
     invoke-direct {p0}, Lcom/airbnb/lottie/network/NetworkCache;->parentDir()Ljava/io/File;
@@ -295,7 +285,7 @@
 
     invoke-direct {p2, v0, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 115
+    .line 119
     invoke-virtual {p2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p1
@@ -308,17 +298,17 @@
 
     move-result-object p1
 
-    .line 116
+    .line 120
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 117
+    .line 121
     invoke-virtual {p2, v0}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result p1
 
-    .line 118
+    .line 122
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -341,7 +331,7 @@
 
     if-nez p1, :cond_0
 
-    .line 120
+    .line 124
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -390,12 +380,12 @@
 
     const/4 v0, 0x1
 
-    .line 85
+    .line 89
     invoke-static {p1, p3, v0}, Lcom/airbnb/lottie/network/NetworkCache;->filenameForUrl(Ljava/lang/String;Lcom/airbnb/lottie/network/FileExtension;Z)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 86
+    .line 90
     new-instance p3, Ljava/io/File;
 
     invoke-direct {p0}, Lcom/airbnb/lottie/network/NetworkCache;->parentDir()Ljava/io/File;
@@ -404,7 +394,7 @@
 
     invoke-direct {p3, v0, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 88
+    .line 92
     :try_start_0
     new-instance p1, Ljava/io/FileOutputStream;
 
@@ -414,11 +404,11 @@
 
     const/16 v0, 0x400
 
-    .line 91
+    .line 95
     :try_start_1
     new-array v0, v0, [B
 
-    .line 94
+    .line 98
     :goto_0
     invoke-virtual {p2, v0}, Ljava/io/InputStream;->read([B)I
 
@@ -430,24 +420,24 @@
 
     const/4 v2, 0x0
 
-    .line 95
+    .line 99
     invoke-virtual {p1, v0, v2, v1}, Ljava/io/OutputStream;->write([BII)V
 
     goto :goto_0
 
-    .line 98
+    .line 102
     :cond_0
     invoke-virtual {p1}, Ljava/io/OutputStream;->flush()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 100
+    .line 104
     :try_start_2
     invoke-virtual {p1}, Ljava/io/OutputStream;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 103
+    .line 107
     invoke-virtual {p2}, Ljava/io/InputStream;->close()V
 
     return-object p3
@@ -455,10 +445,11 @@
     :catchall_0
     move-exception p3
 
-    .line 100
+    .line 104
     :try_start_3
     invoke-virtual {p1}, Ljava/io/OutputStream;->close()V
 
+    .line 105
     throw p3
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -466,8 +457,9 @@
     :catchall_1
     move-exception p1
 
-    .line 103
+    .line 107
     invoke-virtual {p2}, Ljava/io/InputStream;->close()V
 
+    .line 108
     throw p1
 .end method

@@ -81,5 +81,6 @@
 
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
+    .line 39
     throw v0
 .end method

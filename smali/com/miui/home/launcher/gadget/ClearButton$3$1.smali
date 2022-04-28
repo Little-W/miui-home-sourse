@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/gadget/ClearButton$3;)V
     .locals 0
 
-    .line 151
+    .line 155
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton$3$1;->this$1:Lcom/miui/home/launcher/gadget/ClearButton$3;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 154
+    .line 158
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton$3$1;->this$1:Lcom/miui/home/launcher/gadget/ClearButton$3;
 
     iget-object p1, p1, Lcom/miui/home/launcher/gadget/ClearButton$3;->this$0:Lcom/miui/home/launcher/gadget/ClearButton;

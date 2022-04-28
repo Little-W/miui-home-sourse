@@ -11,7 +11,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nHideAppList.kt\nKotlin\n*S Kotlin\n*F\n+ 1 HideAppList.kt\ncom/miui/home/launcher/HideAppList\n*L\n1#1,78:1\n*E\n"
+    value = "SMAP\nHideAppList.kt\nKotlin\n*S Kotlin\n*F\n+ 1 HideAppList.kt\ncom/miui/home/launcher/HideAppList\n*L\n1#1,84:1\n*E\n"
 .end annotation
 
 
@@ -22,6 +22,16 @@
 
 
 # instance fields
+.field private mHiddenAppDynamicList:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList<",
+            "Lcom/miui/home/launcher/bean/HideAppBean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private mHiddenAppList:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -45,7 +55,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/HideAppList;->Companion:Lcom/miui/home/launcher/HideAppList$Companion;
 
-    .line 15
+    .line 16
     sget-object v0, Lkotlin/LazyThreadSafetyMode;->SYNCHRONIZED:Lkotlin/LazyThreadSafetyMode;
 
     sget-object v1, Lcom/miui/home/launcher/HideAppList$Companion$sHideAppList$2;->INSTANCE:Lcom/miui/home/launcher/HideAppList$Companion$sHideAppList$2;
@@ -62,23 +72,50 @@
 .end method
 
 .method private constructor <init>()V
-    .locals 1
+    .locals 2
 
     .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+    .line 11
+    new-instance v0, Ljava/util/ArrayList;
 
-    move-result-object v0
-
-    check-cast v0, Landroid/content/Context;
-
-    invoke-direct {p0, v0}, Lcom/miui/home/launcher/HideAppList;->getHideAppList(Landroid/content/Context;)Ljava/util/ArrayList;
-
-    move-result-object v0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
+
+    .line 12
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppDynamicList:Ljava/util/ArrayList;
+
+    .line 81
+    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
+
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/content/Context;
+
+    invoke-direct {p0, v1}, Lcom/miui/home/launcher/HideAppList;->getHideAppList(Landroid/content/Context;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/util/Collection;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    .line 82
+    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppDynamicList:Ljava/util/ArrayList;
+
+    iget-object v1, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
+
+    check-cast v1, Ljava/util/Collection;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     return-void
 .end method
@@ -114,14 +151,14 @@
         }
     .end annotation
 
-    .line 31
+    .line 32
     sget-object v0, Lcom/miui/home/launcher/HideAppList;->Companion:Lcom/miui/home/launcher/HideAppList$Companion;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/HideAppList$Companion;->getHideAppString(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 32
+    .line 33
     move-object v1, v0
 
     check-cast v1, Ljava/lang/CharSequence;
@@ -148,7 +185,7 @@
     :goto_1
     if-nez v1, :cond_2
 
-    .line 34
+    .line 35
     :try_start_0
     new-instance v1, Lcom/mi/google/gson/Gson;
 
@@ -166,7 +203,7 @@
 
     move-result-object v0
 
-    const-string v1, "Gson().fromJson(appList,…ideAppBean?>?>() {}.type)"
+    const-string v1, "Gson().fromJson(appList,\u2026ideAppBean?>?>() {}.type)"
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -176,7 +213,7 @@
 
     goto :goto_2
 
-    .line 36
+    .line 37
     :catch_0
     sget-object v0, Lcom/miui/home/launcher/HideAppList;->Companion:Lcom/miui/home/launcher/HideAppList$Companion;
 
@@ -184,7 +221,7 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/miui/home/launcher/HideAppList$Companion;->putHideAppToList(Landroid/content/Context;Ljava/lang/String;)Z
 
-    .line 37
+    .line 38
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -192,7 +229,7 @@
     :goto_2
     return-object v0
 
-    .line 40
+    .line 41
     :cond_2
     new-instance p1, Ljava/util/ArrayList;
 
@@ -225,45 +262,26 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 49
-    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
+    .line 50
+    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppDynamicList:Ljava/util/ArrayList;
 
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
-
-    :cond_0
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     const/4 p1, 0x1
 
     goto :goto_0
 
-    .line 51
-    :cond_1
-    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
+    .line 53
+    :cond_0
+    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppDynamicList:Ljava/util/ArrayList;
 
-    if-eqz v0, :cond_3
-
-    .line 52
-    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_2
-
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
-
-    :cond_2
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 53
+    .line 54
     sget-object p2, Lcom/miui/home/launcher/HideAppList;->Companion:Lcom/miui/home/launcher/HideAppList$Companion;
 
     new-instance v0, Lcom/mi/google/gson/Gson;
@@ -272,7 +290,7 @@
 
     new-instance v1, Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppDynamicList:Ljava/util/ArrayList;
 
     check-cast v2, Ljava/util/Collection;
 
@@ -285,42 +303,10 @@
     invoke-virtual {p2, p1, v0}, Lcom/miui/home/launcher/HideAppList$Companion;->putHideAppToList(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p1
-
-    goto :goto_0
-
-    .line 55
-    :cond_3
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 56
-    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 57
-    sget-object p2, Lcom/miui/home/launcher/HideAppList;->Companion:Lcom/miui/home/launcher/HideAppList$Companion;
-
-    new-instance v1, Lcom/mi/google/gson/Gson;
-
-    invoke-direct {v1}, Lcom/mi/google/gson/Gson;-><init>()V
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    check-cast v0, Ljava/util/Collection;
-
-    invoke-direct {v2, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-virtual {v1, v2}, Lcom/mi/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p2, p1, v0}, Lcom/miui/home/launcher/HideAppList$Companion;->putHideAppToList(Landroid/content/Context;Ljava/lang/String;)Z
-
-    move-result p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 49
+    .line 50
     :goto_0
     monitor-exit p0
 
@@ -344,46 +330,16 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 63
-    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
+    .line 60
+    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppDynamicList:Ljava/util/ArrayList;
 
-    check-cast v0, Ljava/util/Collection;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    :goto_1
-    if-nez v0, :cond_3
-
-    .line 64
-    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
-
-    if-nez v0, :cond_2
-
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
-
-    :cond_2
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 65
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    .line 61
     sget-object p2, Lcom/miui/home/launcher/HideAppList;->Companion:Lcom/miui/home/launcher/HideAppList$Companion;
 
     new-instance v0, Lcom/mi/google/gson/Gson;
@@ -392,7 +348,7 @@
 
     new-instance v1, Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppDynamicList:Ljava/util/ArrayList;
 
     check-cast v2, Ljava/util/Collection;
 
@@ -412,11 +368,13 @@
 
     return p1
 
-    .line 67
-    :cond_3
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 63
     monitor-exit p0
 
-    return v1
+    return p1
 
     :catchall_0
     move-exception p1
@@ -426,60 +384,92 @@
     throw p1
 .end method
 
+.method public final declared-synchronized getAllHiddenAppList()Ljava/util/HashSet;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/HashSet<",
+            "Lcom/miui/home/launcher/bean/HideAppBean;",
+            ">;"
+        }
+    .end annotation
+
+    monitor-enter p0
+
+    .line 74
+    :try_start_0
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    .line 75
+    iget-object v1, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
+
+    check-cast v1, Ljava/util/Collection;
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
+
+    .line 76
+    iget-object v1, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppDynamicList:Ljava/util/ArrayList;
+
+    check-cast v1, Ljava/util/Collection;
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 77
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
 .method public final isAppHided(Lcom/miui/home/launcher/bean/HideAppBean;)Z
     .locals 1
 
-    .line 44
-    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
+    .line 45
+    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppDynamicList:Ljava/util/ArrayList;
 
-    if-eqz v0, :cond_1
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->throwNpe()V
-
-    :cond_0
     check-cast v0, Ljava/lang/Iterable;
 
     invoke-static {v0, p1}, Lkotlin/collections/CollectionsKt;->contains(Ljava/lang/Iterable;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_1
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    :goto_0
     return p1
 .end method
 
 .method public final declared-synchronized updateHiddenApp()V
-    .locals 1
+    .locals 2
 
     monitor-enter p0
 
-    .line 72
+    .line 68
     :try_start_0
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
 
-    move-result-object v0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    check-cast v0, Landroid/content/Context;
+    .line 69
+    iget-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
 
-    invoke-direct {p0, v0}, Lcom/miui/home/launcher/HideAppList;->getHideAppList(Landroid/content/Context;)Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppDynamicList:Ljava/util/ArrayList;
 
-    move-result-object v0
+    check-cast v1, Ljava/util/Collection;
 
-    iput-object v0, p0, Lcom/miui/home/launcher/HideAppList;->mHiddenAppList:Ljava/util/ArrayList;
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 73
+    .line 70
     monitor-exit p0
 
     return-void

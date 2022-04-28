@@ -1,14 +1,11 @@
 .class Lcom/miui/home/recents/NavStubView$23;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "NavStubView.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/miui/home/recents/NavStubView;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/miui/home/recents/NavStubView;->startAppToWorldCirculate()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,45 +22,67 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 4173
+    .line 4880
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$23;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 4177
-    :try_start_0
-    iget-object v0, p0, Lcom/miui/home/recents/NavStubView$23;->this$0:Lcom/miui/home/recents/NavStubView;
+    .line 4900
+    sget-object p1, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$7800(Lcom/miui/home/recents/NavStubView;)Landroid/view/WindowManager;
+    const-string v0, "NavStubView::startAppToWorldCirculate = onAnimationCancel"
 
-    move-result-object v0
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget-object v1, p0, Lcom/miui/home/recents/NavStubView$23;->this$0:Lcom/miui/home/recents/NavStubView;
+    .line 4901
+    iget-object p1, p0, Lcom/miui/home/recents/NavStubView$23;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$7700(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/views/RecentsSmallWindowCrop;
+    new-instance v0, Lcom/miui/home/recents/NavStubView$23$2;
 
-    move-result-object v1
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/NavStubView$23$2;-><init>(Lcom/miui/home/recents/NavStubView$23;)V
 
-    invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeViewImmediate(Landroid/view/View;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v1, 0x1
 
-    goto :goto_0
+    invoke-virtual {p1, v1, v0}, Lcom/miui/home/recents/NavStubView;->finish(ZLjava/lang/Runnable;)V
 
-    .line 4179
-    :catch_0
-    sget-object v0, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
+    return-void
+.end method
 
-    const-string v1, "exitSmallWindowCrop error"
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
 
-    :goto_0
+    .line 4884
+    iget-object p1, p0, Lcom/miui/home/recents/NavStubView$23;->this$0:Lcom/miui/home/recents/NavStubView;
+
+    new-instance v0, Lcom/miui/home/recents/NavStubView$23$1;
+
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/NavStubView$23$1;-><init>(Lcom/miui/home/recents/NavStubView$23;)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v0}, Lcom/miui/home/recents/NavStubView;->finish(ZLjava/lang/Runnable;)V
+
+    .line 4890
+    invoke-static {}, Lcom/miui/home/recents/util/TraceUtils;->endSection()V
+
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    const-string p1, "appToWorldCirculateAim"
+
+    .line 4895
+    invoke-static {p1}, Lcom/miui/home/recents/util/TraceUtils;->beginSection(Ljava/lang/String;)V
+
     return-void
 .end method

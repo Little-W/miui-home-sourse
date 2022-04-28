@@ -25,7 +25,7 @@
 .method private constructor <init>(Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter;)V
     .locals 0
 
-    .line 574
+    .line 584
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter$PopupPresenterCallback;->this$0:Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter;Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter$1;)V
     .locals 0
 
-    .line 574
+    .line 584
     invoke-direct {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter$PopupPresenterCallback;-><init>(Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter;)V
 
     return-void
@@ -47,12 +47,12 @@
 .method public onCloseMenu(Lmiuix/appcompat/internal/view/menu/MenuBuilder;Z)V
     .locals 0
 
-    .line 588
+    .line 598
     instance-of p2, p1, Lmiuix/appcompat/internal/view/menu/SubMenuBuilder;
 
     if-eqz p2, :cond_0
 
-    .line 589
+    .line 599
     invoke-virtual {p1}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->getRootMenu()Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     move-result-object p1
@@ -74,7 +74,7 @@
 
     return v0
 
-    .line 582
+    .line 592
     :cond_0
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter$PopupPresenterCallback;->this$0:Lmiuix/appcompat/internal/view/menu/action/ActionMenuPresenter;
 

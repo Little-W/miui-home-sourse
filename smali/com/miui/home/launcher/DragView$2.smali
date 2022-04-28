@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DragView;)V
     .locals 0
 
-    .line 773
+    .line 782
     iput-object p1, p0, Lcom/miui/home/launcher/DragView$2;->this$0:Lcom/miui/home/launcher/DragView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,19 +35,19 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 776
+    .line 785
     iget-object p1, p0, Lcom/miui/home/launcher/DragView$2;->this$0:Lcom/miui/home/launcher/DragView;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/DragView;->access$100(Lcom/miui/home/launcher/DragView;)Z
+    invoke-static {p1}, Lcom/miui/home/launcher/DragView;->access$200(Lcom/miui/home/launcher/DragView;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 777
+    .line 786
     iget-object p1, p0, Lcom/miui/home/launcher/DragView$2;->this$0:Lcom/miui/home/launcher/DragView;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/DragView;->access$200(Lcom/miui/home/launcher/DragView;)V
+    invoke-static {p1}, Lcom/miui/home/launcher/DragView;->access$300(Lcom/miui/home/launcher/DragView;)V
 
     :cond_0
     return-void

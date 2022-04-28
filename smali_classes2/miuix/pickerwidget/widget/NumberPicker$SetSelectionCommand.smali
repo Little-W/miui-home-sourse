@@ -29,7 +29,7 @@
 .method constructor <init>(Lmiuix/pickerwidget/widget/NumberPicker;)V
     .locals 0
 
-    .line 2247
+    .line 2352
     iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,20 +37,20 @@
     return-void
 .end method
 
-.method static synthetic access$402(Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;I)I
+.method static synthetic access$1002(Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;I)I
     .locals 0
 
-    .line 2247
-    iput p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;->mSelectionStart:I
+    .line 2352
+    iput p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;->mSelectionEnd:I
 
     return p1
 .end method
 
-.method static synthetic access$502(Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;I)I
+.method static synthetic access$902(Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;I)I
     .locals 0
 
-    .line 2247
-    iput p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;->mSelectionEnd:I
+    .line 2352
+    iput p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;->mSelectionStart:I
 
     return p1
 .end method
@@ -60,12 +60,12 @@
 .method public run()V
     .locals 3
 
-    .line 2253
+    .line 2358
     iget v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;->mSelectionEnd:I
 
     iget-object v1, p0, Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
-    invoke-static {v1}, Lmiuix/pickerwidget/widget/NumberPicker;->access$100(Lmiuix/pickerwidget/widget/NumberPicker;)Landroid/widget/EditText;
+    invoke-static {v1}, Lmiuix/pickerwidget/widget/NumberPicker;->access$600(Lmiuix/pickerwidget/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v1
 
@@ -75,10 +75,10 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 2254
+    .line 2359
     iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$SetSelectionCommand;->this$0:Lmiuix/pickerwidget/widget/NumberPicker;
 
-    invoke-static {v0}, Lmiuix/pickerwidget/widget/NumberPicker;->access$100(Lmiuix/pickerwidget/widget/NumberPicker;)Landroid/widget/EditText;
+    invoke-static {v0}, Lmiuix/pickerwidget/widget/NumberPicker;->access$600(Lmiuix/pickerwidget/widget/NumberPicker;)Landroid/widget/EditText;
 
     move-result-object v0
 

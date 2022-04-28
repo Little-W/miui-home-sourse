@@ -22,6 +22,8 @@
 
 
 # instance fields
+.field private isCurrentNoWordMode:Z
+
 .field private mAlphaSeekBar:Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundAlphaSeekBar;
 
 .field private mColorAdapter:Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;
@@ -35,7 +37,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 36
+    .line 37
     invoke-direct {p0}, Landroidx/fragment/app/Fragment;-><init>()V
 
     return-void
@@ -46,7 +48,7 @@
 
     const/high16 v0, 0x41400000    # 12.0f
 
-    .line 118
+    .line 125
     :try_start_0
     invoke-static {p1}, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompat;
 
@@ -60,12 +62,12 @@
 
     mul-int/lit8 v1, p2, 0x9
 
-    .line 120
+    .line 127
     div-int/lit8 v1, v1, 0x10
 
     int-to-float v3, p2
 
-    .line 122
+    .line 129
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v4
@@ -76,7 +78,7 @@
 
     int-to-float v1, v1
 
-    .line 123
+    .line 130
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v4
@@ -85,19 +87,19 @@
 
     div-float/2addr v1, v4
 
-    .line 124
+    .line 131
     new-instance v7, Landroid/graphics/Matrix;
 
     invoke-direct {v7}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 125
+    .line 132
     invoke-virtual {v7, v1, v3}, Landroid/graphics/Matrix;->setScale(FF)V
 
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    .line 127
+    .line 134
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
@@ -108,12 +110,12 @@
 
     const/4 v8, 0x1
 
-    .line 126
+    .line 133
     invoke-static/range {v2 .. v8}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 128
+    .line 135
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -122,7 +124,7 @@
 
     move-result-object v1
 
-    .line 129
+    .line 136
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->dp2px(F)I
 
     move-result v2
@@ -138,13 +140,13 @@
     :catch_0
     move-exception v1
 
-    .line 133
+    .line 140
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
     mul-int/lit8 v1, p2, 0x9
 
-    .line 135
+    .line 142
     div-int/lit8 v1, v1, 0x10
 
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
@@ -153,16 +155,16 @@
 
     move-result-object p2
 
-    const v1, 0x7f0600d4
+    const v1, 0x7f0600fc
 
-    .line 136
+    .line 143
     invoke-virtual {p1, v1}, Landroid/content/Context;->getColor(I)I
 
     move-result v1
 
     invoke-virtual {p2, v1}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
-    .line 137
+    .line 144
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -171,7 +173,7 @@
 
     move-result-object p1
 
-    .line 138
+    .line 145
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->dp2px(F)I
 
     move-result p2
@@ -199,7 +201,7 @@
         }
     .end annotation
 
-    .line 73
+    .line 79
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -220,7 +222,7 @@
 .method public static synthetic lambda$onViewCreated$1(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;)V
     .locals 2
 
-    .line 73
+    .line 79
     new-instance v0, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundFragment$LtpLIPZ5-79oKqJbawQZdM9n5zU;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundFragment$LtpLIPZ5-79oKqJbawQZdM9n5zU;-><init>(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;)V
@@ -229,7 +231,7 @@
 
     move-result-object v0
 
-    .line 74
+    .line 80
     invoke-static {}, Lio/reactivex2/schedulers/Schedulers;->computation()Lio/reactivex2/Scheduler;
 
     move-result-object v1
@@ -238,7 +240,7 @@
 
     move-result-object v0
 
-    .line 75
+    .line 81
     invoke-static {}, Lio/reactivex2/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex2/Scheduler;
 
     move-result-object v1
@@ -251,7 +253,7 @@
 
     invoke-direct {v1, p0}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundFragment$dLE4Tp3O2qfYwnwot-UNG-9Ghuk;-><init>(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;)V
 
-    .line 76
+    .line 82
     invoke-virtual {v0, v1}, Lio/reactivex2/Observable;->subscribe(Lio/reactivex2/functions/Consumer;)Lio/reactivex2/disposables/Disposable;
 
     move-result-object v0
@@ -264,14 +266,14 @@
 .method private updatePreview(Landroid/graphics/drawable/Drawable;)V
     .locals 4
 
-    .line 90
+    .line 97
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mColorAdapter:Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;->getSelectedColor()Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     move-result-object v0
 
-    .line 91
+    .line 98
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mAlphaSeekBar:Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundAlphaSeekBar;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundAlphaSeekBar;->getCurrentSetAlphaValue()I
@@ -280,7 +282,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 93
+    .line 100
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -289,7 +291,7 @@
 
     move-result v2
 
-    .line 94
+    .line 101
     invoke-static {v2, v1}, Landroidx/core/graphics/ColorUtils;->setAlphaComponent(II)I
 
     move-result v2
@@ -298,12 +300,12 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 95
+    .line 102
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mPreview:Landroid/widget/ImageView;
 
     invoke-virtual {v2, p1}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 97
+    .line 104
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mPreview:Landroid/widget/ImageView;
 
@@ -311,7 +313,9 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2, v1}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getPreviewImage(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    iget-boolean v3, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->isCurrentNoWordMode:Z
+
+    invoke-virtual {v0, v2, v1, v3}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getPreviewImage(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -325,27 +329,27 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 102
+    .line 109
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mColorAdapter:Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;->getSelectedColor()Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     move-result-object p1
 
-    .line 103
+    .line 110
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mAlphaSeekBar:Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundAlphaSeekBar;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundAlphaSeekBar;->getCurrentSetAlphaValue()I
 
     move-result v0
 
-    .line 104
+    .line 111
     invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->setAllAppsColorMode(Lcom/miui/home/launcher/allapps/AllAppsColorMode;)V
 
-    .line 105
+    .line 112
     invoke-static {v0}, Lcom/miui/home/launcher/DeviceConfig;->setAllAppsBackgroundAlpha(I)V
 
-    .line 106
+    .line 113
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
 
     move-result-object v1
@@ -356,21 +360,21 @@
 
     invoke-virtual {v1, p1}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->setColorMode(Ljava/lang/String;)V
 
-    .line 107
+    .line 114
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->setBackgroundAlpha(I)V
 
-    .line 108
+    .line 115
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 109
+    .line 116
     new-instance p1, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.MAIN"
@@ -379,15 +383,15 @@
 
     const-string v0, "android.intent.category.HOME"
 
-    .line 110
+    .line 117
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 v0, 0x4000000
 
-    .line 111
+    .line 118
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 112
+    .line 119
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -401,37 +405,44 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 1
 
-    .line 45
+    .line 47
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onCreate(Landroid/os/Bundle;)V
 
-    .line 46
+    .line 48
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 47
+    .line 49
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
-    const v0, 0x7f100137
+    const v0, 0x7f100173
 
     invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentActivity;->setTitle(I)V
 
+    .line 51
     :cond_0
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->isCurrentNoWordMode:Z
+
     return-void
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const p3, 0x7f0d0048
+    const p3, 0x7f0d0065
 
     const/4 v0, 0x0
 
-    .line 54
+    .line 57
     invoke-virtual {p1, p3, p2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
@@ -442,10 +453,10 @@
 .method public onDestroyView()V
     .locals 1
 
-    .line 155
+    .line 162
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroyView()V
 
-    .line 156
+    .line 163
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mWallpaperDisposable:Lio/reactivex2/disposables/Disposable;
 
     if-eqz v0, :cond_0
@@ -456,7 +467,7 @@
 
     if-nez v0, :cond_0
 
-    .line 157
+    .line 164
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mWallpaperDisposable:Lio/reactivex2/disposables/Disposable;
 
     invoke-interface {v0}, Lio/reactivex2/disposables/Disposable;->dispose()V
@@ -468,7 +479,7 @@
 .method public onDrawerBackgroundAlphaChange(I)V
     .locals 0
 
-    .line 81
+    .line 88
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mPreview:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -483,7 +494,7 @@
 .method public onItemClick(Landroid/view/View;Lcom/miui/home/launcher/allapps/AllAppsColorMode;I)V
     .locals 0
 
-    .line 86
+    .line 93
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mPreview:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -498,7 +509,7 @@
 .method public bridge synthetic onItemClick(Landroid/view/View;Ljava/lang/Object;I)V
     .locals 0
 
-    .line 36
+    .line 37
     check-cast p2, Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->onItemClick(Landroid/view/View;Lcom/miui/home/launcher/allapps/AllAppsColorMode;I)V
@@ -509,7 +520,7 @@
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
     .locals 2
 
-    .line 144
+    .line 151
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
@@ -518,14 +529,14 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 145
+    .line 152
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 146
+    .line 153
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -537,7 +548,7 @@
 
     return p1
 
-    .line 150
+    .line 157
     :cond_1
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
@@ -547,19 +558,19 @@
 .end method
 
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
-    .locals 4
+    .locals 5
 
-    .line 59
+    .line 62
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    .line 60
+    .line 63
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsColorMode()Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     move-result-object p2
 
-    const v0, 0x7f0a0180
+    const v0, 0x7f0a01c5
 
-    .line 61
+    .line 64
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -568,9 +579,9 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mPreview:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a00c4
+    const v0, 0x7f0a00e5
 
-    .line 62
+    .line 65
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -579,21 +590,21 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mAlphaSeekBar:Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundAlphaSeekBar;
 
-    .line 63
+    .line 66
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mAlphaSeekBar:Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundAlphaSeekBar;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundAlphaSeekBar;->setDrawerBackgroundAlphaChangeListener(Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundAlphaSeekBar$DrawerBackgroundAlphaChangeListener;)V
 
-    const v0, 0x7f0a005f
+    const v0, 0x7f0a0064
 
-    .line 64
+    .line 67
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 65
+    .line 68
     new-instance v0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->getContext()Landroid/content/Context;
@@ -604,14 +615,14 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mColorAdapter:Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;
 
-    .line 66
+    .line 69
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mColorAdapter:Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;
 
     invoke-virtual {p2, p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;->setOnItemClickListener(Lcom/miui/home/launcher/common/OnItemClickListener;)V
 
-    const p2, 0x7f0a0097
+    const p2, 0x7f0a00b0
 
-    .line 67
+    .line 70
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -620,38 +631,63 @@
 
     const/4 p2, 0x0
 
-    .line 68
+    .line 71
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
 
-    .line 69
-    iget-object p2, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mColorAdapter:Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;
+    .line 72
+    iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mColorAdapter:Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;
 
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 70
-    new-instance p2, Landroidx/recyclerview/widget/GridLayoutManager;
+    .line 73
+    new-instance v0, Landroidx/recyclerview/widget/GridLayoutManager;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->getContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object v1
 
-    iget-object v1, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mColorAdapter:Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;
+    iget-object v2, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mColorAdapter:Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;
 
-    .line 71
-    invoke-virtual {v1}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;->getItemCount()I
+    .line 74
+    invoke-virtual {v2}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundColorAdapter;->getItemCount()I
 
-    move-result v1
+    move-result v2
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    invoke-direct {p2, v0, v1, v2, v3}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(Landroid/content/Context;IIZ)V
-
-    .line 70
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(Landroid/content/Context;IIZ)V
 
     .line 73
+    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
+
+    .line 76
+    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentActivity;->isInMultiWindowMode()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 77
+    iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mPreview:Landroid/widget/ImageView;
+
+    invoke-virtual {p1, p2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
+
+    .line 79
+    :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/DrawerBackgroundFragment;->mPreview:Landroid/widget/ImageView;
 
     new-instance p2, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$DrawerBackgroundFragment$kZk0fbh6j3u5Tp7GIk4RYKihiec;
@@ -660,5 +696,6 @@
 
     invoke-virtual {p1, p2}, Landroid/widget/ImageView;->post(Ljava/lang/Runnable;)Z
 
+    :goto_0
     return-void
 .end method

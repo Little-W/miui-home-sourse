@@ -253,7 +253,7 @@
 
     move-result-object p2
 
-    const-string p3, "Texture.Builder()\n      …           .build(engine)"
+    const-string p3, "Texture.Builder()\n      \u2026           .build(engine)"
 
     invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 

@@ -14,10 +14,10 @@
 .method protected constructor <init>(Ljava/lang/String;)V
     .locals 2
 
-    .line 20
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
+    .line 23
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -38,7 +38,7 @@
 .method public clear()V
     .locals 1
 
-    .line 92
+    .line 106
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -57,7 +57,7 @@
 .method public contains(Ljava/lang/String;)Z
     .locals 1
 
-    .line 96
+    .line 110
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
@@ -70,7 +70,7 @@
 .method public getBoolean(Ljava/lang/String;Z)Z
     .locals 1
 
-    .line 39
+    .line 41
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
@@ -83,7 +83,7 @@
 .method public getFloat(Ljava/lang/String;F)F
     .locals 1
 
-    .line 51
+    .line 53
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
@@ -96,7 +96,7 @@
 .method public getInt(Ljava/lang/String;I)I
     .locals 1
 
-    .line 43
+    .line 45
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
@@ -109,7 +109,7 @@
 .method public getLong(Ljava/lang/String;J)J
     .locals 1
 
-    .line 35
+    .line 37
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p1, p2, p3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
@@ -122,7 +122,7 @@
 .method public getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 47
+    .line 49
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -147,7 +147,7 @@
         }
     .end annotation
 
-    .line 55
+    .line 57
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences;->getStringSet(Ljava/lang/String;Ljava/util/Set;)Ljava/util/Set;
@@ -160,22 +160,22 @@
 .method public getValue(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 25
+    .line 27
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
-    .line 26
+    .line 28
     invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
 
     move-result-object v0
 
-    .line 27
+    .line 29
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 29
+    .line 31
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -197,7 +197,7 @@
 .method public putBoolean(Ljava/lang/String;Z)V
     .locals 1
 
-    .line 59
+    .line 61
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -216,7 +216,7 @@
 .method public putFloat(Ljava/lang/String;F)V
     .locals 1
 
-    .line 80
+    .line 94
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -235,7 +235,7 @@
 .method public putInt(Ljava/lang/String;I)V
     .locals 1
 
-    .line 67
+    .line 69
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -259,7 +259,7 @@
         }
     .end annotation
 
-    .line 72
+    .line 74
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -278,7 +278,7 @@
 .method public putLong(Ljava/lang/String;J)V
     .locals 1
 
-    .line 63
+    .line 65
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -297,7 +297,7 @@
 .method public putString(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 76
+    .line 90
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -325,7 +325,7 @@
         }
     .end annotation
 
-    .line 84
+    .line 98
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -344,7 +344,7 @@
 .method protected registerOnSharedPreferenceChangeListener()V
     .locals 1
 
-    .line 100
+    .line 114
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0, p0}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
@@ -355,7 +355,7 @@
 .method public remove(Ljava/lang/String;)V
     .locals 1
 
-    .line 88
+    .line 102
     iget-object v0, p0, Lcom/miui/home/launcher/common/BaseSharePreference;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;

@@ -367,6 +367,22 @@
     throw p1
 .end method
 
+.method public commitNow()V
+    .locals 2
+
+    .line 304
+    invoke-virtual {p0}, Landroidx/fragment/app/BackStackRecord;->disallowAddToBackStack()Landroidx/fragment/app/FragmentTransaction;
+
+    .line 305
+    iget-object v0, p0, Landroidx/fragment/app/BackStackRecord;->mManager:Landroidx/fragment/app/FragmentManager;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p0, v1}, Landroidx/fragment/app/FragmentManager;->execSingleAction(Landroidx/fragment/app/FragmentManager$OpGenerator;Z)V
+
+    return-void
+.end method
+
 .method public commitNowAllowingStateLoss()V
     .locals 2
 
@@ -2229,7 +2245,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_1
-    const-string/jumbo v1, "}"
+    const-string v1, "}"
 
     .line 53
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;

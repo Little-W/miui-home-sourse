@@ -128,6 +128,8 @@
     const-string v1, "loadBitmap, decode image error"
 
     .line 98
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     const/4 p0, 0x0
 
     return-object p0
@@ -311,6 +313,8 @@
 
     move-result-object p1
 
+    invoke-static {v2, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-object v1
 
     :cond_4
@@ -319,6 +323,8 @@
     const-string v0, "current wallpaper is default live wallpaper"
 
     .line 73
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 74
     iget-object p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperCompatLive;->mInfo:Landroid/app/WallpaperInfo;
 

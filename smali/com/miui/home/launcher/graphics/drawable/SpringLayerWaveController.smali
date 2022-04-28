@@ -12,7 +12,7 @@
 
 .field private final mFolderCling:Lcom/miui/home/launcher/FolderCling;
 
-.field private final mHotSeats:Lcom/miui/home/launcher/HotSeats;
+.field private final mHotSeats:Lcom/miui/home/launcher/hotseats/HotSeats;
 
 .field private final mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -50,11 +50,11 @@
     iput-object v0, p0, Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     .line 40
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/HotSeats;
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;->mHotSeats:Lcom/miui/home/launcher/HotSeats;
+    iput-object v0, p0, Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;->mHotSeats:Lcom/miui/home/launcher/hotseats/HotSeats;
 
     .line 41
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;
@@ -452,7 +452,7 @@
 
     aput-object v3, v0, v1
 
-    iget-object v1, p0, Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;->mHotSeats:Lcom/miui/home/launcher/HotSeats;
+    iget-object v1, p0, Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;->mHotSeats:Lcom/miui/home/launcher/hotseats/HotSeats;
 
     aput-object v1, v0, v2
 

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/UninstallDialog;)V
     .locals 0
 
-    .line 87
+    .line 88
     iput-object p1, p0, Lcom/miui/home/launcher/UninstallDialog$2;->this$0:Lcom/miui/home/launcher/UninstallDialog;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 90
+    .line 91
     iget-object p1, p0, Lcom/miui/home/launcher/UninstallDialog$2;->this$0:Lcom/miui/home/launcher/UninstallDialog;
 
     invoke-static {p1}, Lcom/miui/home/launcher/UninstallDialog;->access$000(Lcom/miui/home/launcher/UninstallDialog;)Lcom/miui/home/launcher/UninstallDialog$DeleteIconContainer;
@@ -46,7 +46,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/UninstallDialog$DeleteIconContainer;->setTranslationX(F)V
 
-    .line 91
+    .line 92
     iget-object p1, p0, Lcom/miui/home/launcher/UninstallDialog$2;->this$0:Lcom/miui/home/launcher/UninstallDialog;
 
     invoke-static {p1}, Lcom/miui/home/launcher/UninstallDialog;->access$000(Lcom/miui/home/launcher/UninstallDialog;)Lcom/miui/home/launcher/UninstallDialog$DeleteIconContainer;

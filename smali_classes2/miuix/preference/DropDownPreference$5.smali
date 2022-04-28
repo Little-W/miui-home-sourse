@@ -57,12 +57,12 @@
 
     .line 277
     :pswitch_0
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
 
     .line 278
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result p2
 

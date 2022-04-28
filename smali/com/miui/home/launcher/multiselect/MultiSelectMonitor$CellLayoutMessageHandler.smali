@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;)V
     .locals 0
 
-    .line 368
+    .line 369
     iput-object p1, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$CellLayoutMessageHandler;->this$0:Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$1;)V
     .locals 0
 
-    .line 368
+    .line 369
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$CellLayoutMessageHandler;-><init>(Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;)V
 
     return-void
@@ -47,7 +47,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 371
+    .line 372
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/CellLayoutMessage;->getMessage()I
 
     move-result v0
@@ -56,7 +56,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 372
+    .line 373
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/CellLayoutMessage;->getMessage()I
 
     move-result p1
@@ -65,7 +65,7 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 373
+    .line 374
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$CellLayoutMessageHandler;->this$0:Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
 

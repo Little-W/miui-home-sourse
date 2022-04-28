@@ -17,17 +17,6 @@
 
 
 # virtual methods
-.method public bridge synthetic getBackupValue()Ljava/lang/Boolean;
-    .locals 1
-
-    .line 8
-    invoke-super {p0}, Lcom/miui/home/launcher/backup/settings/BackupSettingsBase$BackupSettingsBaseBoolean;->getBackupValue()Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public getSettingsValue()Ljava/lang/Boolean;
     .locals 3
 
@@ -64,15 +53,6 @@
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public bridge synthetic putBackupValue(Ljava/lang/Boolean;)V
-    .locals 0
-
-    .line 8
-    invoke-super {p0, p1}, Lcom/miui/home/launcher/backup/settings/BackupSettingsBase$BackupSettingsBaseBoolean;->putBackupValue(Ljava/lang/Boolean;)V
-
-    return-void
 .end method
 
 .method public putSettingsValue(Ljava/lang/Boolean;)V

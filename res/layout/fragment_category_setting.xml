@@ -1,87 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout
-        android:gravity="center_vertical"
-        android:id="@id/app_category_switch_container"
-        android:background="@drawable/home_preference_item_bg"
-        android:layout_width="fill_parent"
-        android:layout_height="72.0dip">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="0.0dip"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.0"
-            android:layout_marginStart="@dimen/preference_item_padding_left">
-            <TextView
-                android:textAppearance="@style/HomeTextAppearance.PreferenceList"
-                android:id="@android:id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/category_group" />
-            <TextView
-                android:textAppearance="@style/HomeTextAppearance.List.Secondary.Preference"
-                android:ellipsize="end"
-                android:fadingEdge="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3.0dip"
-                android:text="@string/category_group_summary"
-                android:maxLines="2" />
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/app_category_switch_container" android:background="@drawable/home_preference_item_bg" android:layout_width="fill_parent" android:layout_height="72.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/preference_item_padding_left">
+            <TextView android:textAppearance="@style/HomeTextAppearance.PreferenceList" android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/category_group" />
+            <TextView android:textAppearance="@style/HomeTextAppearance.List.Secondary.Preference" android:ellipsize="end" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/category_group_summary" android:maxLines="2" />
         </LinearLayout>
-        <miuix.slidingwidget.widget.SlidingButton
-            android:layout_gravity="end|center"
-            android:id="@id/app_category_enable_sliding_button"
-            android:focusable="false"
-            android:clickable="false"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/preference_item_padding_right"
-            android:layout_marginEnd="@dimen/preference_item_padding_right" />
+        <miuix.slidingwidget.widget.SlidingButton android:layout_gravity="end|center" android:id="@id/app_category_enable_sliding_button" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/preference_item_padding_right" android:layout_marginEnd="@dimen/preference_item_padding_right" />
     </LinearLayout>
-    <View
-        android:id="@id/split_line"
-        android:background="@color/divider_line_color"
-        android:layout_width="fill_parent"
-        android:layout_height="0.6dip"
-        android:layout_marginTop="20.0dip"
-        android:layout_marginBottom="20.0dip"
-        android:layout_marginStart="@dimen/preference_item_padding_left"
-        android:layout_marginEnd="@dimen/preference_item_padding_right" />
-    <LinearLayout
-        android:orientation="vertical"
-        android:id="@id/category_list_container"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@id/apps_category_list"
-            android:paddingBottom="72.0dip"
-            android:clipToPadding="false"
-            android:layout_width="fill_parent"
-            android:layout_height="0.0dip"
-            android:layout_weight="1.0" />
-        <FrameLayout
-            android:orientation="vertical"
-            android:background="@drawable/home_preference_item_bg"
-            android:layout_width="fill_parent"
-            android:layout_height="72.0dip">
-            <View
-                android:background="@color/divider_line_color"
-                android:layout_width="fill_parent"
-                android:layout_height="0.6dip" />
-            <TextView
-                android:textSize="12.0sp"
-                android:gravity="center_horizontal"
-                android:layout_gravity="center"
-                android:id="@id/reset_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/cate_order_reset"
-                android:drawableTop="@drawable/ic_reset"
-                android:drawablePadding="3.0dip" />
+    <View android:id="@id/split_line" android:background="@color/divider_line_color" android:layout_width="fill_parent" android:layout_height="0.6dip" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:layout_marginStart="@dimen/preference_item_padding_left" android:layout_marginEnd="@dimen/preference_item_padding_right" />
+    <LinearLayout android:orientation="vertical" android:id="@id/category_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/apps_category_list" android:paddingBottom="72.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <FrameLayout android:orientation="vertical" android:background="@drawable/home_preference_item_bg" android:layout_width="fill_parent" android:layout_height="72.0dip">
+            <View android:background="@color/divider_line_color" android:layout_width="fill_parent" android:layout_height="0.6dip" />
+            <TextView android:textSize="12.0sp" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/reset_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cate_order_reset" android:drawableTop="@drawable/ic_reset" android:drawablePadding="3.0dip" />
         </FrameLayout>
     </LinearLayout>
 </LinearLayout>

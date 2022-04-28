@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-    android:layoutDirection="locale"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.miui.home.settings.preference.IconCustomizePreviewPreference
-        android:key="key_icon_customize_preview" />
-    <com.miui.home.settings.preference.ValuePreference
-        android:title="@string/icon_style"
-        android:key="key_icon_style" />
-    <PreferenceCategory
-        android:key="key_icon_scale_category">
-        <com.miui.home.settings.preference.IconCustomizeSaclePreference
-            android:key="key_icon_scale" />
+<PreferenceScreen android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.settings.preference.IconCustomizePreviewPreference android:key="key_icon_customize_preview" />
+    <com.miui.home.settings.preference.ValuePreference android:title="@string/icon_style" android:key="key_icon_style" />
+    <PreferenceCategory android:key="key_icon_scale_category">
+        <com.miui.home.settings.preference.IconCustomizeSaclePreference android:key="key_icon_scale" />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -53,6 +53,7 @@
 
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
+    .line 97
     throw p0
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
@@ -164,6 +165,7 @@
     :try_start_6
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
 
+    .line 131
     throw p0
     :try_end_6
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
@@ -301,4 +303,37 @@
 
     :goto_0
     return-object p0
+.end method
+
+.method public static stringToFile(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 227
+    new-instance v0, Ljava/io/FileWriter;
+
+    invoke-direct {v0, p0}, Ljava/io/FileWriter;-><init>(Ljava/lang/String;)V
+
+    .line 229
+    :try_start_0
+    invoke-virtual {v0, p1}, Ljava/io/FileWriter;->write(Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 231
+    invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    invoke-virtual {v0}, Ljava/io/FileWriter;->close()V
+
+    .line 232
+    throw p0
 .end method

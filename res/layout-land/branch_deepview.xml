@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/branch_deepview_image" android:background="@color/branch_deepview_image_background" android:padding="@dimen/branch_deepview_image_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:scaleType="fitCenter" android:layout_weight="0.5" />
+    <View android:background="@color/branch_deepview_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" android:alpha="0.2" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.5">
+        <include layout="@layout/branch_deepview_toolbar" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/branch_deepview_content" />
+            </LinearLayout>
+        </ScrollView>
+        <include layout="@layout/branch_deepview_button" />
+    </LinearLayout>
+</LinearLayout>

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/gadget/ClearButton$3$1;)V
     .locals 0
 
-    .line 154
+    .line 158
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;->this$2:Lcom/miui/home/launcher/gadget/ClearButton$3$1;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -33,7 +33,7 @@
 .method public static synthetic lambda$onAnimationEnd$0(Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;Ljava/lang/Void;)Ljava/lang/Integer;
     .locals 0
 
-    .line 158
+    .line 162
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;->this$2:Lcom/miui/home/launcher/gadget/ClearButton$3$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/gadget/ClearButton$3$1;->this$1:Lcom/miui/home/launcher/gadget/ClearButton$3;
@@ -58,7 +58,7 @@
 
     if-lez p1, :cond_0
 
-    .line 161
+    .line 165
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;->this$2:Lcom/miui/home/launcher/gadget/ClearButton$3$1;
 
     iget-object v1, v1, Lcom/miui/home/launcher/gadget/ClearButton$3$1;->this$1:Lcom/miui/home/launcher/gadget/ClearButton$3;
@@ -69,7 +69,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f10021b
+    const v2, 0x7f100266
 
     const/4 v3, 0x2
 
@@ -77,7 +77,7 @@
 
     int-to-long v4, p1
 
-    .line 163
+    .line 167
     invoke-static {v4, v5, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->getFormatedMemory(JZ)Ljava/lang/String;
 
     move-result-object p1
@@ -86,7 +86,7 @@
 
     const/4 p1, 0x1
 
-    .line 164
+    .line 168
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result p2
@@ -99,14 +99,14 @@
 
     aput-object p2, v3, p1
 
-    .line 161
+    .line 165
     invoke-virtual {v1, v2, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 166
+    .line 170
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;->this$2:Lcom/miui/home/launcher/gadget/ClearButton$3$1;
 
@@ -118,13 +118,13 @@
 
     move-result-object p1
 
-    const p2, 0x7f10021a
+    const p2, 0x7f100265
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 168
+    .line 172
     :goto_0
     iget-object p2, p0, Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;->this$2:Lcom/miui/home/launcher/gadget/ClearButton$3$1;
 
@@ -142,7 +142,7 @@
 
     invoke-virtual {p1}, Landroid/widget/Toast;->show()V
 
-    .line 171
+    .line 175
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;->this$2:Lcom/miui/home/launcher/gadget/ClearButton$3$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/gadget/ClearButton$3$1;->this$1:Lcom/miui/home/launcher/gadget/ClearButton$3;
@@ -151,7 +151,7 @@
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->access$202(Lcom/miui/home/launcher/gadget/ClearButton;I)I
 
-    .line 172
+    .line 176
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;->this$2:Lcom/miui/home/launcher/gadget/ClearButton$3$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/gadget/ClearButton$3$1;->this$1:Lcom/miui/home/launcher/gadget/ClearButton$3;
@@ -168,7 +168,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 157
+    .line 161
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;->this$2:Lcom/miui/home/launcher/gadget/ClearButton$3$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/gadget/ClearButton$3$1;->this$1:Lcom/miui/home/launcher/gadget/ClearButton$3;
@@ -191,7 +191,7 @@
 
     sub-int/2addr p1, v0
 
-    .line 158
+    .line 162
     new-instance v0, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$3$1$1$LdfMT65YMfIFyR4Nos97BwfWPJI;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$3$1$1$LdfMT65YMfIFyR4Nos97BwfWPJI;-><init>(Lcom/miui/home/launcher/gadget/ClearButton$3$1$1;)V

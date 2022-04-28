@@ -163,30 +163,19 @@
 
     if-eqz p1, :cond_2
 
-    const/4 v1, 0x2
+    const/4 v1, 0x1
 
     .line 51
     new-array v1, v1, [Ljava/lang/Integer;
 
-    const/16 v2, 0xb
-
-    .line 52
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    aput-object v2, v1, v3
+    const/4 v2, 0x0
 
     .line 53
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v3
 
-    const/4 v4, 0x1
-
-    aput-object v2, v1, v4
+    aput-object v3, v1, v2
 
     .line 52
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->getMatchedPackageNames([Ljava/lang/Integer;)Ljava/util/HashSet;
@@ -204,17 +193,17 @@
     :goto_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
-    move-result v2
+    move-result v3
 
-    if-ge v3, v2, :cond_1
+    if-ge v2, v3, :cond_1
 
     .line 57
-    invoke-interface {p0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v3
 
     .line 58
-    invoke-virtual {p1, v2}, Lcom/miui/home/launcher/commercial/CommercialCommons$Extractor;->getPackageName(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p1, v3}, Lcom/miui/home/launcher/commercial/CommercialCommons$Extractor;->getPackageName(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -225,10 +214,10 @@
     if-eqz v4, :cond_0
 
     .line 59
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 

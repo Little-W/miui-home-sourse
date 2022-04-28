@@ -297,15 +297,9 @@
 .method private createBadgedIconBitmap(Landroid/graphics/drawable/Drawable;Landroid/os/UserHandle;)Lcom/miui/home/launcher/graphics/DrawableInfo;
     .locals 1
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_2
 
     .line 338
-    invoke-static {p1}, Lcom/miui/launcher/utils/MamlUtils;->isMamlDrawable(Landroid/graphics/drawable/Drawable;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -314,21 +308,46 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_2
 
     instance-of v0, p1, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_2
 
     .line 340
+    invoke-static {p1}, Lcom/miui/launcher/utils/MamlUtils;->isFancyDrawable(Landroid/graphics/drawable/Drawable;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 341
+    invoke-static {p1}, Lcom/miui/launcher/utils/MamlUtils;->getQuietDrawable(Ljava/lang/Object;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 343
+    invoke-static {p1}, Lcom/miui/home/launcher/graphics/DrawableInfo;->fromDrawable(Landroid/graphics/drawable/Drawable;)Lcom/miui/home/launcher/graphics/DrawableInfo;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    move-object p1, v0
+
+    .line 348
+    :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/IconCache;->mContext:Landroid/content/Context;
 
     invoke-static {v0, p1, p2}, Lcom/miui/home/launcher/common/Utilities;->getUserBadgedIcon(Landroid/content/Context;Landroid/graphics/drawable/Drawable;Landroid/os/UserHandle;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    .line 342
-    :cond_0
+    .line 350
+    :cond_2
     invoke-static {p1}, Lcom/miui/home/launcher/graphics/DrawableInfo;->fromDrawable(Landroid/graphics/drawable/Drawable;)Lcom/miui/home/launcher/graphics/DrawableInfo;
 
     move-result-object p1
@@ -814,7 +833,7 @@
 
     const-string v0, "icon_folder.png"
 
-    const v1, 0x7f0801a0
+    const v1, 0x7f0801cd
 
     .line 296
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/IconCache;->getRawIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
@@ -829,7 +848,7 @@
 
     const-string v0, "icon_folder_light.png"
 
-    const v1, 0x7f0801a1
+    const v1, 0x7f0801ce
 
     .line 300
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/IconCache;->getRawIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
@@ -930,7 +949,7 @@
 
     const-string v0, "maml_download_light.png"
 
-    const v1, 0x7f0801a6
+    const v1, 0x7f0801d3
 
     .line 304
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/IconCache;->getRawIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;

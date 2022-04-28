@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/FolderCling;)V
     .locals 0
 
-    .line 523
+    .line 525
     iput-object p1, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/FolderCling;Lcom/miui/home/launcher/FolderCling$1;)V
     .locals 0
 
-    .line 523
+    .line 525
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;-><init>(Lcom/miui/home/launcher/FolderCling;)V
 
     return-void
@@ -47,7 +47,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 526
+    .line 528
     iget-object v0, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderCling;->isOpened()Z
@@ -58,7 +58,7 @@
 
     return-void
 
-    .line 529
+    .line 531
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
@@ -66,16 +66,16 @@
 
     move-result-object v0
 
-    .line 530
+    .line 532
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/FolderStateChangedMessage;->getMessage()I
 
     move-result p1
 
     const/4 v1, 0x5
 
-    const-wide/16 v2, 0x172
+    const/4 v2, 0x0
 
-    const/4 v4, 0x0
+    const-wide/16 v3, 0x172
 
     const/4 v5, 0x0
 
@@ -91,7 +91,7 @@
 
     goto/16 :goto_1
 
-    .line 553
+    .line 554
     :pswitch_0
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
@@ -99,21 +99,21 @@
 
     move-result v5
 
-    .line 554
+    .line 555
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {p1, v1}, Lcom/miui/home/launcher/FolderCling;->access$600(Lcom/miui/home/launcher/FolderCling;Z)I
 
     move-result p1
 
-    .line 555
+    .line 556
     iget-object v6, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v6, v1}, Lcom/miui/home/launcher/FolderCling;->access$700(Lcom/miui/home/launcher/FolderCling;Z)I
 
     move-result v6
 
-    .line 556
+    .line 557
     iget-object v7, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v7}, Lcom/miui/home/launcher/FolderCling;->access$800(Lcom/miui/home/launcher/FolderCling;)I
@@ -124,12 +124,12 @@
 
     invoke-virtual {v0, v7}, Lcom/miui/home/launcher/Folder;->setTranslationY(F)V
 
-    .line 557
+    .line 558
     iget-object v7, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v7, v1}, Lcom/miui/home/launcher/FolderCling;->access$900(Lcom/miui/home/launcher/FolderCling;Z)V
 
-    .line 558
+    .line 559
     invoke-virtual {v0}, Lcom/miui/home/launcher/Folder;->getTitle()Landroid/view/View;
 
     move-result-object v1
@@ -144,7 +144,7 @@
 
     invoke-virtual {v1, v7}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 559
+    .line 560
     invoke-virtual {v0}, Lcom/miui/home/launcher/Folder;->getTitle()Landroid/view/View;
 
     move-result-object v1
@@ -153,12 +153,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v1, v3, v4}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v1
 
-    .line 560
-    invoke-virtual {v1, v4}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
+    .line 561
+    invoke-virtual {v1, v2}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v1
 
@@ -176,7 +176,7 @@
 
     goto/16 :goto_1
 
-    .line 542
+    .line 544
     :pswitch_1
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
@@ -184,7 +184,7 @@
 
     move-result v5
 
-    .line 543
+    .line 545
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderCling;->access$400(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Launcher;
@@ -199,7 +199,7 @@
 
     move-result p1
 
-    .line 544
+    .line 546
     iget-object v1, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v1}, Lcom/miui/home/launcher/FolderCling;->access$400(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Launcher;
@@ -214,22 +214,9 @@
 
     move-result v1
 
-    .line 545
-    iget-object v2, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
-
-    invoke-static {v2}, Lcom/miui/home/launcher/FolderCling;->access$000(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Folder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/miui/home/launcher/Folder;->getContent()Lcom/miui/home/launcher/FolderGridView;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v4}, Lcom/miui/home/launcher/FolderGridView;->setTranslationY(F)V
-
     goto/16 :goto_1
 
-    .line 548
+    .line 549
     :pswitch_2
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
@@ -237,14 +224,14 @@
 
     move-result p1
 
-    .line 549
+    .line 550
     iget-object v1, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v1, v5}, Lcom/miui/home/launcher/FolderCling;->access$600(Lcom/miui/home/launcher/FolderCling;Z)I
 
     move-result v1
 
-    .line 550
+    .line 551
     iget-object v2, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v2, v5}, Lcom/miui/home/launcher/FolderCling;->access$700(Lcom/miui/home/launcher/FolderCling;Z)I
@@ -261,7 +248,7 @@
 
     goto/16 :goto_1
 
-    .line 536
+    .line 538
     :pswitch_3
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
@@ -296,7 +283,7 @@
     :cond_1
     move v1, v5
 
-    .line 537
+    .line 539
     :goto_0
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
@@ -304,7 +291,7 @@
 
     move-result v5
 
-    .line 538
+    .line 540
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderCling;->access$400(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Launcher;
@@ -319,7 +306,7 @@
 
     move-result p1
 
-    .line 539
+    .line 541
     iget-object v1, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v1}, Lcom/miui/home/launcher/FolderCling;->access$400(Lcom/miui/home/launcher/FolderCling;)Lcom/miui/home/launcher/Launcher;
@@ -336,7 +323,7 @@
 
     goto :goto_1
 
-    .line 563
+    .line 564
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
@@ -356,21 +343,21 @@
 
     move-result p1
 
-    .line 564
+    .line 565
     iget-object v1, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v1, v5}, Lcom/miui/home/launcher/FolderCling;->access$600(Lcom/miui/home/launcher/FolderCling;Z)I
 
     move-result v1
 
-    .line 565
+    .line 566
     iget-object v6, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v6, v5}, Lcom/miui/home/launcher/FolderCling;->access$700(Lcom/miui/home/launcher/FolderCling;Z)I
 
     move-result v6
 
-    .line 566
+    .line 567
     iget-object v7, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v7}, Lcom/miui/home/launcher/FolderCling;->access$800(Lcom/miui/home/launcher/FolderCling;)I
@@ -383,12 +370,12 @@
 
     invoke-virtual {v0, v7}, Lcom/miui/home/launcher/Folder;->setTranslationY(F)V
 
-    .line 567
+    .line 568
     iget-object v7, p0, Lcom/miui/home/launcher/FolderCling$UpdateFolderPaddingHandler;->this$0:Lcom/miui/home/launcher/FolderCling;
 
     invoke-static {v7, v5}, Lcom/miui/home/launcher/FolderCling;->access$900(Lcom/miui/home/launcher/FolderCling;Z)V
 
-    .line 568
+    .line 569
     invoke-virtual {v0}, Lcom/miui/home/launcher/Folder;->getTitle()Landroid/view/View;
 
     move-result-object v5
@@ -405,7 +392,7 @@
 
     invoke-virtual {v5, v7}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 569
+    .line 570
     invoke-virtual {v0}, Lcom/miui/home/launcher/Folder;->getTitle()Landroid/view/View;
 
     move-result-object v5
@@ -414,12 +401,12 @@
 
     move-result-object v5
 
-    invoke-virtual {v5, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+    invoke-virtual {v5, v3, v4}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-    move-result-object v2
+    move-result-object v3
 
-    .line 570
-    invoke-virtual {v2, v4}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
+    .line 571
+    invoke-virtual {v3, v2}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v2
 
@@ -433,20 +420,23 @@
 
     invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
 
+    .line 572
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Folder;->exitEditState()V
+
     move v5, p1
 
     move p1, v1
 
     move v1, v6
 
-    .line 573
+    .line 575
     :goto_1
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Folder;->setFolderBackgroundViewPaddingTop(I)V
 
-    .line 574
+    .line 576
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Folder;->setFolderHeaderPaddingBottom(I)V
 
-    .line 575
+    .line 577
     invoke-static {v0, v5}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingBottom(Landroid/view/View;I)V
 
     return-void

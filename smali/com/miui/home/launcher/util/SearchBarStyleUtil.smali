@@ -91,6 +91,8 @@
 
     move-result-object v1
 
+    invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 46
     :goto_0
     :try_start_1
@@ -152,6 +154,8 @@
 
     move-result-object v0
 
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_0
     :goto_1
     return-void
@@ -170,19 +174,19 @@
     :try_start_0
     const-string v1, "MD5"
 
-    .line 217
+    .line 218
     invoke-static {v1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
     move-result-object v0
     :try_end_0
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 221
+    .line 222
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 223
+    .line 224
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v2
@@ -195,18 +199,18 @@
 
     invoke-virtual {v0, v2, v3, p0}, Ljava/security/MessageDigest;->update([BII)V
 
-    .line 224
+    .line 225
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object p0
 
-    .line 226
+    .line 227
     :goto_0
     array-length v0, p0
 
     if-ge v3, v0, :cond_1
 
-    .line 227
+    .line 228
     aget-byte v0, p0, v3
 
     invoke-static {v0}, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->byte2Hex(B)Ljava/lang/String;
@@ -219,7 +223,7 @@
 
     goto :goto_0
 
-    .line 229
+    .line 230
     :cond_1
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -242,7 +246,7 @@
 
     goto :goto_0
 
-    .line 208
+    .line 209
     :cond_0
     invoke-static {p0}, Ljava/lang/Math;->abs(I)I
 
@@ -269,7 +273,7 @@
     :goto_0
     add-int/2addr v0, p0
 
-    .line 234
+    .line 235
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -288,7 +292,7 @@
     :goto_1
     invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 235
+    .line 236
     invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -307,60 +311,33 @@
 .end method
 
 .method public static getClientIdHash(Landroid/content/Context;)I
-    .locals 4
+    .locals 2
 
     .line 157
     invoke-static {p0}, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->getMD5Imei(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "SearchBarStyleUtil"
-
     .line 158
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "clientEI:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 159
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
+    const-string v0, "SearchBarStyleUtil"
+
+    const-string v1, "get oaid"
+
+    .line 159
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 160
     invoke-static {p0}, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->getOAID(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string p0, "SearchBarStyleUtil"
-
-    .line 161
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "clientOA:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 163
+    .line 162
     :cond_0
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -368,7 +345,7 @@
 
     if-nez p0, :cond_2
 
-    .line 164
+    .line 163
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result p0
@@ -385,6 +362,13 @@
 
     if-ge p0, v0, :cond_1
 
+    const-string v0, "SearchBarStyleUtil"
+
+    const-string v1, "setSearchBarTestHash"
+
+    .line 165
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 166
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
@@ -399,8 +383,15 @@
 
     return p0
 
-    .line 170
     :cond_2
+    const-string p0, "SearchBarStyleUtil"
+
+    const-string v0, "clientId is empty"
+
+    .line 170
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 171
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -533,6 +524,8 @@
 
     move-result-object p0
 
+    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 136
     :cond_2
     new-instance p0, Ljava/util/ArrayList;
@@ -615,6 +608,8 @@
 
     move-result-object v0
 
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_0
     const/4 v0, 0x0
 
@@ -624,7 +619,7 @@
 .method private static getMD5Imei(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 176
+    .line 177
     sget-object v0, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->sMD5Imei1:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -633,7 +628,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 177
+    .line 178
     sget-object v0, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->sImei1:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -642,10 +637,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 178
+    .line 179
     invoke-static {p0}, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->queryImeiList(Landroid/content/Context;)Ljava/util/List;
 
-    .line 180
+    .line 181
     :cond_0
     sget-object p0, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->sImei1:Ljava/lang/String;
 
@@ -655,7 +650,7 @@
 
     if-nez p0, :cond_1
 
-    .line 181
+    .line 182
     sget-object p0, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->sImei1:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->MD5_32(Ljava/lang/String;)Ljava/lang/String;
@@ -664,7 +659,7 @@
 
     sput-object p0, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->sMD5Imei1:Ljava/lang/String;
 
-    .line 183
+    .line 184
     :cond_1
     sget-object p0, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->sImei2:Ljava/lang/String;
 
@@ -674,7 +669,7 @@
 
     if-nez p0, :cond_2
 
-    .line 184
+    .line 185
     sget-object p0, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->sImei2:Ljava/lang/String;
 
     invoke-static {p0}, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->MD5_32(Ljava/lang/String;)Ljava/lang/String;
@@ -683,7 +678,7 @@
 
     sput-object p0, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->sMD5Imei2:Ljava/lang/String;
 
-    .line 188
+    .line 189
     :cond_2
     sget-object p0, Lcom/miui/home/launcher/util/SearchBarStyleUtil;->sMD5Imei1:Ljava/lang/String;
 
@@ -696,12 +691,12 @@
     :try_start_0
     const-string v0, "com.android.id.impl.IdProviderImpl"
 
-    .line 240
+    .line 241
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 241
+    .line 242
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v1
@@ -710,7 +705,7 @@
 
     const/4 v3, 0x1
 
-    .line 242
+    .line 243
     new-array v4, v3, [Ljava/lang/Class;
 
     const-class v5, Landroid/content/Context;
@@ -723,7 +718,7 @@
 
     move-result-object v0
 
-    .line 243
+    .line 244
     new-array v2, v3, [Ljava/lang/Object;
 
     aput-object p0, v2, v6
@@ -734,7 +729,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 245
+    .line 246
     check-cast p0, Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -744,7 +739,7 @@
     :catch_0
     move-exception p0
 
-    .line 248
+    .line 249
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0

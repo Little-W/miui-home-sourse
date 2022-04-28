@@ -44,32 +44,128 @@
 .end method
 
 .method public static addAppCategoryConfig(Landroid/content/ContentResolver;Lcom/miui/home/launcher/util/ComponentKey;I)Z
-    .locals 2
+    .locals 0
 
     .line 233
+    invoke-virtual {p1}, Lcom/miui/home/launcher/util/ComponentKey;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1, p2}, Lcom/miui/home/launcher/LauncherCategory$Favorites;->addAppCategoryConfig(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static addAppCategoryConfig(Landroid/content/ContentResolver;Lcom/miui/home/launcher/util/ComponentKey;Ljava/util/HashSet;)Z
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/ContentResolver;",
+            "Lcom/miui/home/launcher/util/ComponentKey;",
+            "Ljava/util/HashSet<",
+            "Ljava/lang/Integer;",
+            ">;)Z"
+        }
+    .end annotation
+
+    .line 244
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 245
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result p2
+
+    new-array p2, p2, [Landroid/content/ContentValues;
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    .line 246
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_0
+
+    .line 247
+    new-instance v3, Landroid/content/ContentValues;
+
+    invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
+
+    const-string v4, "componentKey"
+
+    .line 248
+    invoke-virtual {p1}, Lcom/miui/home/launcher/util/ComponentKey;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v4, "categoryId"
+
+    .line 249
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Integer;
+
+    invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 250
+    aput-object v3, p2, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 252
+    :cond_0
+    sget-object p1, Lcom/miui/home/launcher/LauncherCategory$Favorites;->CONTENT_URI:Landroid/net/Uri;
+
+    invoke-virtual {p0, p1, p2}, Landroid/content/ContentResolver;->bulkInsert(Landroid/net/Uri;[Landroid/content/ContentValues;)I
+
+    move-result p0
+
+    if-lez p0, :cond_1
+
+    const/4 v1, 0x1
+
+    :cond_1
+    return v1
+.end method
+
+.method public static addAppCategoryConfig(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    .locals 2
+
+    .line 237
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string v1, "componentKey"
 
-    .line 234
-    invoke-virtual {p1}, Lcom/miui/home/launcher/util/ComponentKey;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
+    .line 238
     invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "categoryId"
 
-    .line 235
+    .line 239
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
 
     invoke-virtual {v0, p1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 236
+    .line 240
     sget-object p1, Lcom/miui/home/launcher/LauncherCategory$Favorites;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {p0, p1, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
@@ -87,91 +183,6 @@
 
     :goto_0
     return p0
-.end method
-
-.method public static addAppCategoryConfig(Landroid/content/ContentResolver;Lcom/miui/home/launcher/util/ComponentKey;Ljava/util/HashSet;)Z
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/ContentResolver;",
-            "Lcom/miui/home/launcher/util/ComponentKey;",
-            "Ljava/util/HashSet<",
-            "Ljava/lang/Integer;",
-            ">;)Z"
-        }
-    .end annotation
-
-    .line 240
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    .line 241
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result p2
-
-    new-array p2, p2, [Landroid/content/ContentValues;
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    .line 242
-    :goto_0
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    if-ge v2, v3, :cond_0
-
-    .line 243
-    new-instance v3, Landroid/content/ContentValues;
-
-    invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
-
-    const-string v4, "componentKey"
-
-    .line 244
-    invoke-virtual {p1}, Lcom/miui/home/launcher/util/ComponentKey;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v4, "categoryId"
-
-    .line 245
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/Integer;
-
-    invoke-virtual {v3, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 246
-    aput-object v3, p2, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    .line 248
-    :cond_0
-    sget-object p1, Lcom/miui/home/launcher/LauncherCategory$Favorites;->CONTENT_URI:Landroid/net/Uri;
-
-    invoke-virtual {p0, p1, p2}, Landroid/content/ContentResolver;->bulkInsert(Landroid/net/Uri;[Landroid/content/ContentValues;)I
-
-    move-result p0
-
-    if-lez p0, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_1
-    return v1
 .end method
 
 .method static getAppCategoryConfig(Landroid/content/ContentResolver;Lcom/miui/home/launcher/util/ComponentKey;)Ljava/util/HashSet;
@@ -306,7 +317,7 @@
 .method public static removeAppCategoryConfig(Landroid/content/ContentResolver;I)Z
     .locals 5
 
-    .line 252
+    .line 256
     sget-object v0, Lcom/miui/home/launcher/LauncherCategory$Favorites;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "categoryId = ?"
@@ -341,7 +352,7 @@
 .method static removeAppCategoryConfig(Landroid/content/ContentResolver;Lcom/miui/home/launcher/util/ComponentKey;)Z
     .locals 5
 
-    .line 262
+    .line 266
     sget-object v0, Lcom/miui/home/launcher/LauncherCategory$Favorites;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "componentKey = ?"
@@ -350,7 +361,7 @@
 
     new-array v3, v2, [Ljava/lang/String;
 
-    .line 263
+    .line 267
     invoke-virtual {p1}, Lcom/miui/home/launcher/util/ComponentKey;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -359,7 +370,7 @@
 
     aput-object p1, v3, v4
 
-    .line 262
+    .line 266
     invoke-virtual {p0, v0, v1, v3}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result p0
@@ -378,7 +389,7 @@
 .method public static removeAppCategoryConfig(Landroid/content/ContentResolver;Lcom/miui/home/launcher/util/ComponentKey;I)Z
     .locals 4
 
-    .line 256
+    .line 260
     sget-object v0, Lcom/miui/home/launcher/LauncherCategory$Favorites;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "componentKey = ? and categoryId = ?"
@@ -387,7 +398,7 @@
 
     new-array v2, v2, [Ljava/lang/String;
 
-    .line 258
+    .line 262
     invoke-virtual {p1}, Lcom/miui/home/launcher/util/ComponentKey;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -404,7 +415,7 @@
 
     aput-object p1, v2, p2
 
-    .line 256
+    .line 260
     invoke-virtual {p0, v0, v1, v2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result p0
@@ -432,12 +443,12 @@
         }
     .end annotation
 
-    .line 267
+    .line 271
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 268
+    .line 272
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -455,7 +466,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/AppInfo;
 
-    .line 269
+    .line 273
     invoke-virtual {v1}, Lcom/miui/home/launcher/AppInfo;->toComponentKey()Lcom/miui/home/launcher/util/ComponentKey;
 
     move-result-object v1
@@ -464,7 +475,7 @@
 
     goto :goto_0
 
-    .line 271
+    .line 275
     :cond_0
     sget-object p1, Lcom/miui/home/launcher/LauncherCategory$Favorites;->CONTENT_URI:Landroid/net/Uri;
 

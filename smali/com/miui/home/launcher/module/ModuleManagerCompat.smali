@@ -63,6 +63,8 @@
     const-string v2, "ModuleManagerCompat"
 
     .line 59
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :goto_0
     return-void
 .end method
@@ -194,6 +196,8 @@
 
     move-result-object v2
 
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 84
     invoke-virtual {p1}, Landroid/app/Application;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
@@ -229,6 +233,8 @@
 
     move-result-object v0
 
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_0
 
     :cond_0
@@ -237,6 +243,8 @@
     const-string v1, "element is null"
 
     .line 95
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_0
 
     :cond_1
@@ -245,6 +253,8 @@
     const-string v1, "dexPathList is null"
 
     .line 98
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_2
     :goto_0
     const-string v0, "Launcher.ModuleManager"
@@ -267,6 +277,8 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -355,6 +367,8 @@
     const-string v1, "loadModules"
 
     .line 73
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :goto_1
     return-void
 

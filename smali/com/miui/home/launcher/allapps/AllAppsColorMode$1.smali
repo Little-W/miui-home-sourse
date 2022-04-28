@@ -20,7 +20,7 @@
 
     const/4 v0, 0x0
 
-    .line 14
+    .line 16
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;-><init>(Ljava/lang/String;ILcom/miui/home/launcher/allapps/AllAppsColorMode$1;)V
 
     return-void
@@ -31,9 +31,9 @@
 .method public getPreviewBackground(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    const v0, 0x7f0800e5
+    const v0, 0x7f080107
 
-    .line 31
+    .line 33
     invoke-static {p1, v0}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -44,12 +44,12 @@
 .method public getPreviewDesc(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 26
+    .line 28
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const v0, 0x7f100139
+    const v0, 0x7f100175
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -73,7 +73,7 @@
 
     return p1
 
-    .line 20
+    .line 22
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
 

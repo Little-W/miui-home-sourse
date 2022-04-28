@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/sound/SoundPoolHelper;)V
     .locals 0
 
-    .line 102
+    .line 103
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$3;->val$soundPoolHelper:Lcom/miui/home/launcher/sound/SoundPoolHelper;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -35,7 +35,7 @@
 .method public onBegin(Ljava/lang/Object;)V
     .locals 2
 
-    .line 105
+    .line 106
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$3;->val$soundPoolHelper:Lcom/miui/home/launcher/sound/SoundPoolHelper;
 
     const/4 v0, 0x0

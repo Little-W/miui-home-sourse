@@ -50,27 +50,15 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->isSearchBarAreaLight()Z
+    const v1, 0x7f0801d8
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const v1, 0x7f0801ab
-
-    goto :goto_0
-
-    :cond_0
-    const v1, 0x7f0801a9
-
-    :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     const-string v1, "SearchBarStyleUtil"
 
-    .line 55
+    .line 54
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -93,12 +81,14 @@
 
     move-result-object v2
 
-    .line 56
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 55
     instance-of v1, v0, Landroid/graphics/drawable/LayerDrawable;
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
-    .line 57
+    .line 56
     invoke-static {}, Lcom/miui/home/launcher/SearchBarStyleData;->getInstance()Lcom/miui/home/launcher/SearchBarStyleData;
 
     move-result-object v1
@@ -113,15 +103,15 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_0
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_1
+    :cond_0
     move-object v0, v1
 
-    :cond_2
-    :goto_1
+    :cond_1
+    :goto_0
     return-object v0
 .end method
 
@@ -139,26 +129,9 @@
 .method protected onPostExecute(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_0
 
-    .line 66
-    invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->isSearchBarAreaLight()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/16 v0, 0xff
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v0, 0xb3
-
-    :goto_0
-    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
-
-    .line 68
+    .line 65
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarLeftIconLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarLeftIconLayout;
 
     invoke-static {v0}, Lcom/miui/home/launcher/SearchBarLeftIconLayout;->access$100(Lcom/miui/home/launcher/SearchBarLeftIconLayout;)Landroid/widget/ImageView;
@@ -167,7 +140,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    :cond_1
+    :cond_0
     return-void
 .end method
 

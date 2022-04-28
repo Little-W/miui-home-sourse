@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DragView;FF)V
     .locals 0
 
-    .line 791
+    .line 799
     iput-object p1, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
 
     iput p2, p0, Lcom/miui/home/launcher/DragView$3;->val$toX:F
@@ -46,7 +46,7 @@
 .method public onAnimationUpdate(Lcom/miui/home/launcher/graphics/drawable/SpringLayerAnimator;)V
     .locals 3
 
-    .line 793
+    .line 801
     iget-object v0, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/graphics/drawable/SpringLayerAnimator;->getValueX()F
@@ -59,7 +59,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DragView;->setTranslationX(F)V
 
-    .line 794
+    .line 802
     iget-object v0, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/graphics/drawable/SpringLayerAnimator;->getValueY()F
@@ -72,10 +72,10 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/DragView;->setTranslationY(F)V
 
-    .line 795
+    .line 803
     iget-object p1, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/DragView;->access$300(Lcom/miui/home/launcher/DragView;)Lcom/miui/home/launcher/graphics/drawable/SpringLayerDragController;
+    invoke-static {p1}, Lcom/miui/home/launcher/DragView;->access$400(Lcom/miui/home/launcher/DragView;)Lcom/miui/home/launcher/graphics/drawable/SpringLayerDragController;
 
     move-result-object p1
 
@@ -85,16 +85,16 @@
 
     if-eqz p1, :cond_0
 
-    .line 796
+    .line 804
     iget-object p1, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/DragView;->access$300(Lcom/miui/home/launcher/DragView;)Lcom/miui/home/launcher/graphics/drawable/SpringLayerDragController;
+    invoke-static {p1}, Lcom/miui/home/launcher/DragView;->access$400(Lcom/miui/home/launcher/DragView;)Lcom/miui/home/launcher/graphics/drawable/SpringLayerDragController;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/graphics/drawable/SpringLayerDragController;->onUpdate()V
 
-    .line 797
+    .line 805
     iget-object p1, p0, Lcom/miui/home/launcher/DragView$3;->this$0:Lcom/miui/home/launcher/DragView;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragView;->invalidate()V

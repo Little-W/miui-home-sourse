@@ -362,7 +362,7 @@
 
     const/4 v0, 0x0
 
-    .line 436
+    .line 440
     :goto_0
     iget-object v1, p0, Lmiuix/preference/DropDownPreference;->mEntryValues:[Ljava/lang/CharSequence;
 
@@ -370,7 +370,7 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 437
+    .line 441
     aget-object v1, v1, v0
 
     invoke-static {v1, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -869,6 +869,23 @@
 
     .line 346
     :goto_0
+    iget-object p1, p0, Lmiuix/preference/DropDownPreference;->mSpinner:Lmiuix/appcompat/widget/Spinner;
+
+    if-eqz p1, :cond_1
+
+    .line 348
+    invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->getValue()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lmiuix/preference/DropDownPreference;->findSpinnerIndexOfValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Lmiuix/appcompat/widget/Spinner;->setSelection(I)V
+
+    .line 350
+    :cond_1
     invoke-virtual {p0}, Lmiuix/preference/DropDownPreference;->notifyChanged()V
 
     return-void
@@ -877,24 +894,24 @@
 .method public setEntryValues([Ljava/lang/CharSequence;)V
     .locals 2
 
-    .line 376
+    .line 380
     iget-object v0, p0, Lmiuix/preference/DropDownPreference;->mContentAdapter:Landroid/widget/ArrayAdapter;
 
     instance-of v1, v0, Lmiuix/preference/DropDownPreference$DropDownLayoutAdapter;
 
     if-eqz v1, :cond_0
 
-    .line 377
+    .line 381
     check-cast v0, Lmiuix/preference/DropDownPreference$DropDownLayoutAdapter;
 
     invoke-virtual {v0, p1}, Lmiuix/preference/DropDownPreference$DropDownLayoutAdapter;->setEntryValues([Ljava/lang/CharSequence;)V
 
-    .line 378
+    .line 382
     iget-object v0, p0, Lmiuix/preference/DropDownPreference;->mAdapter:Landroid/widget/ArrayAdapter;
 
     invoke-virtual {v0}, Landroid/widget/ArrayAdapter;->notifyDataSetChanged()V
 
-    .line 379
+    .line 383
     iput-object p1, p0, Lmiuix/preference/DropDownPreference;->mEntryValues:[Ljava/lang/CharSequence;
 
     :cond_0

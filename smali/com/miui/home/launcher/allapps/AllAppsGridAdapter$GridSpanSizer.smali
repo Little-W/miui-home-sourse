@@ -44,11 +44,11 @@
     .line 103
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$GridSpanSizer;->this$0:Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->getItem(I)Lcom/miui/home/launcher/allapps/AlphabeticalAppsList$AdapterItem;
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->getItem(I)Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
     move-result-object p1
 
-    iget p1, p1, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList$AdapterItem;->viewType:I
+    iget p1, p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->viewType:I
 
     invoke-static {p1}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter;->isIconViewType(I)Z
 

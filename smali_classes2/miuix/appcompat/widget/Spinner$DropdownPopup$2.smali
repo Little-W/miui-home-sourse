@@ -25,7 +25,7 @@
 .method constructor <init>(Lmiuix/appcompat/widget/Spinner$DropdownPopup;)V
     .locals 0
 
-    .line 1194
+    .line 1269
     iput-object p1, p0, Lmiuix/appcompat/widget/Spinner$DropdownPopup$2;->this$1:Lmiuix/appcompat/widget/Spinner$DropdownPopup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onDismiss()V
     .locals 1
 
-    .line 1197
+    .line 1272
     iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$DropdownPopup$2;->this$1:Lmiuix/appcompat/widget/Spinner$DropdownPopup;
 
     iget-object v0, v0, Lmiuix/appcompat/widget/Spinner$DropdownPopup;->this$0:Lmiuix/appcompat/widget/Spinner;

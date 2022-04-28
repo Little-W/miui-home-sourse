@@ -58,7 +58,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    const v1, 0x7f080540
+    const v1, 0x7f0805c0
 
     .line 80
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -83,7 +83,7 @@
     .line 98
     iget-object v1, p0, Lcom/miui/home/launcher/pageindicators/MultiSeekBarIndicator;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f100238
+    const v2, 0x7f100284
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -27,7 +27,7 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;)V
     .locals 0
 
-    .line 279
+    .line 274
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$OpenCloseAnimator;->this$0:Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 
     const/4 p1, 0x0
 
-    .line 323
+    .line 318
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$OpenCloseAnimator;->mCurrentAnimator:Landroid/animation/Animator;
 
     return-void
@@ -63,7 +63,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 318
+    .line 313
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView$OpenCloseAnimator;->mCurrentAnimator:Landroid/animation/Animator;
 
     return-void

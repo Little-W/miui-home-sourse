@@ -24,13 +24,13 @@
 .method public constructor <init>(ZZ)V
     .locals 0
 
-    .line 82
+    .line 91
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 83
+    .line 92
     iput-boolean p1, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog$DismissStatus;->isClickOnDialog:Z
 
-    .line 84
+    .line 93
     iput-boolean p2, p0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog$DismissStatus;->isCheckboxChecked:Z
 
     return-void

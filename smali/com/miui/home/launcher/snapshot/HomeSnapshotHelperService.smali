@@ -149,6 +149,8 @@
     const-string v1, "    Cannot create FreeHome screen because of invalid format."
 
     .line 93
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     const/4 v0, 0x0
 
     return v0
@@ -296,6 +298,8 @@
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 197
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
@@ -466,6 +470,8 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
+
+    invoke-static {p1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_6
     const/4 p0, 0x1

@@ -1,48 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.AutoLayoutThumbnailItem
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <FrameLayout
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@id/background"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <com.miui.home.launcher.ThumbnailIcon
-                    android:layout_gravity="center"
-                    android:id="@id/icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="centerInside" />
-                <TextView
-                    android:textColor="@color/thumbnail_item_content_text"
-                    android:id="@id/content_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="@style/WorkspaceIconTitle.Thumbnail" />
+<com.miui.home.launcher.AutoLayoutThumbnailItem android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/background" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.miui.home.launcher.ThumbnailIcon android:layout_gravity="center" android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" />
+                <TextView android:textColor="@color/thumbnail_item_content_text" android:id="@id/content_title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/WorkspaceIconTitle.Thumbnail" />
             </LinearLayout>
-            <ImageView
-                android:layout_gravity="center"
-                android:id="@id/foreground"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <ImageView android:layout_gravity="center" android:id="@id/foreground" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         </FrameLayout>
-        <TextView
-            android:id="@id/title"
-            android:visibility="gone"
-            android:layout_marginBottom="5.0dip"
-            style="@style/WorkspaceIconTitle.Thumbnail" />
+        <TextView android:id="@id/title" android:visibility="gone" android:layout_marginBottom="5.0dip" style="@style/WorkspaceIconTitle.Thumbnail" />
     </LinearLayout>
 </com.miui.home.launcher.AutoLayoutThumbnailItem>

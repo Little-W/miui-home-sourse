@@ -40,7 +40,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+    invoke-virtual {v2}, Landroid/content/Context;->getDataDir()Ljava/io/File;
 
     move-result-object v2
 

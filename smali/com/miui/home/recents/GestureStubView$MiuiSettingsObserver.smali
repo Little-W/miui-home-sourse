@@ -22,10 +22,10 @@
 .method constructor <init>(Lcom/miui/home/recents/GestureStubView;Landroid/os/Handler;)V
     .locals 0
 
-    .line 1174
+    .line 1229
     iput-object p1, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
-    .line 1175
+    .line 1230
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -36,7 +36,7 @@
 .method public onChange(Z)V
     .locals 3
 
-    .line 1191
+    .line 1246
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->access$1300(Lcom/miui/home/recents/GestureStubView;)Landroid/content/ContentResolver;
@@ -49,12 +49,12 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/miui/home/recents/GestureStubView;->access$3402(Lcom/miui/home/recents/GestureStubView;Z)Z
+    invoke-static {p1, v0}, Lcom/miui/home/recents/GestureStubView;->access$3502(Lcom/miui/home/recents/GestureStubView;Z)Z
 
-    .line 1192
+    .line 1247
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
-    invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->access$3600(Lcom/miui/home/recents/GestureStubView;)I
+    invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->access$3700(Lcom/miui/home/recents/GestureStubView;)I
 
     move-result v0
 
@@ -64,7 +64,7 @@
 
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
-    invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$3600(Lcom/miui/home/recents/GestureStubView;)I
+    invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$3700(Lcom/miui/home/recents/GestureStubView;)I
 
     move-result v0
 
@@ -79,7 +79,7 @@
 
     :cond_1
     :goto_0
-    invoke-static {p1, v1}, Lcom/miui/home/recents/GestureStubView;->access$3502(Lcom/miui/home/recents/GestureStubView;Z)Z
+    invoke-static {p1, v1}, Lcom/miui/home/recents/GestureStubView;->access$3602(Lcom/miui/home/recents/GestureStubView;Z)Z
 
     return-void
 .end method
@@ -87,7 +87,7 @@
 .method register()V
     .locals 3
 
-    .line 1179
+    .line 1234
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$1400(Lcom/miui/home/recents/GestureStubView;)Landroid/content/Context;
@@ -100,7 +100,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/recents/GestureStubView;->access$1302(Lcom/miui/home/recents/GestureStubView;Landroid/content/ContentResolver;)Landroid/content/ContentResolver;
 
-    .line 1180
+    .line 1235
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$1300(Lcom/miui/home/recents/GestureStubView;)Landroid/content/ContentResolver;
@@ -123,7 +123,7 @@
 .method unregister()V
     .locals 2
 
-    .line 1185
+    .line 1240
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$1400(Lcom/miui/home/recents/GestureStubView;)Landroid/content/Context;
@@ -136,7 +136,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/recents/GestureStubView;->access$1302(Lcom/miui/home/recents/GestureStubView;Landroid/content/ContentResolver;)Landroid/content/ContentResolver;
 
-    .line 1186
+    .line 1241
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->this$0:Lcom/miui/home/recents/GestureStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/GestureStubView;->access$1300(Lcom/miui/home/recents/GestureStubView;)Landroid/content/ContentResolver;

@@ -20,7 +20,7 @@
         }
     .end annotation
 
-    .line 87
+    .line 88
     invoke-direct/range {p0 .. p5}, Lcom/miui/home/launcher/install/AutoInstallsLayout;-><init>(Landroid/content/Context;Landroid/appwidget/AppWidgetHost;Landroid/content/res/Resources;Ljava/util/List;Ljava/lang/String;)V
 
     return-void
@@ -43,6 +43,8 @@
     const-string p1, "not support elderly mode layout"
 
     .line 32
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-object v0
 
     .line 37
@@ -62,40 +64,45 @@
 
     move-result v2
 
+    const v3, 0x7f10015e
+
     .line 40
-    new-instance v3, Landroid/net/Uri$Builder;
+    invoke-virtual {p0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    invoke-direct {v3}, Landroid/net/Uri$Builder;-><init>()V
-
-    const-string v4, "content"
+    move-result-object v3
 
     .line 41
-    invoke-virtual {v3, v4}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
+    new-instance v4, Landroid/net/Uri$Builder;
 
-    move-result-object v3
+    invoke-direct {v4}, Landroid/net/Uri$Builder;-><init>()V
 
-    const-string v4, "com.mi.globallayout.provider"
+    const-string v5, "content"
 
     .line 42
-    invoke-virtual {v3, v4}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
+    invoke-virtual {v4, v5}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    move-result-object v3
+    move-result-object v4
 
-    const-string v4, "layout"
+    const-string v5, "com.mi.globallayout.provider"
 
     .line 43
-    invoke-virtual {v3, v4}, Landroid/net/Uri$Builder;->path(Ljava/lang/String;)Landroid/net/Uri$Builder;
+    invoke-virtual {v4, v5}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    move-result-object v4
+
+    .line 44
+    invoke-virtual {v4, v3}, Landroid/net/Uri$Builder;->path(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v3
 
-    .line 44
+    .line 45
     invoke-virtual {v3}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v5
 
     const/4 v3, 0x3
 
-    .line 45
+    .line 46
     new-array v8, v3, [Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -152,7 +159,7 @@
 
     aput-object v1, v8, p2
 
-    .line 46
+    .line 47
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
@@ -172,7 +179,7 @@
 
     if-eqz p2, :cond_a
 
-    .line 47
+    .line 48
     :try_start_1
     invoke-interface {p2}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -182,7 +189,7 @@
 
     const-string v1, "packageName"
 
-    .line 48
+    .line 49
     invoke-interface {p2, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
@@ -193,7 +200,7 @@
 
     const-string v2, "layoutName"
 
-    .line 49
+    .line 50
     invoke-interface {p2, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
@@ -202,7 +209,7 @@
 
     move-result-object v2
 
-    .line 50
+    .line 51
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -217,7 +224,7 @@
 
     goto/16 :goto_1
 
-    .line 54
+    .line 55
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -229,17 +236,17 @@
 
     const-string v4, ","
 
-    .line 55
+    .line 56
     invoke-virtual {v2, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 56
+    .line 57
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 57
+    .line 58
     array-length v4, v2
 
     :goto_0
@@ -247,16 +254,16 @@
 
     aget-object v5, v2, v3
 
-    const-string/jumbo v6, "xml"
+    const-string v6, "xml"
 
-    .line 58
+    .line 59
     invoke-virtual {v8, v5, v6, v1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v6
 
     if-lez v6, :cond_2
 
-    .line 60
+    .line 61
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -265,7 +272,7 @@
 
     const-string v6, "OthersInRomConfigParser"
 
-    .line 61
+    .line 62
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -286,6 +293,8 @@
 
     move-result-object v5
 
+    invoke-static {v6, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
@@ -293,7 +302,7 @@
     :cond_2
     const-string p0, "OthersInRomConfigParser"
 
-    .line 63
+    .line 64
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -313,19 +322,21 @@
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     if-eqz p2, :cond_3
 
-    .line 79
+    .line 80
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
     :cond_3
     return-object v0
 
-    .line 67
+    .line 68
     :cond_4
     :try_start_2
     invoke-virtual {v9}, Ljava/util/ArrayList;->isEmpty()Z
@@ -337,25 +348,27 @@
     const-string p0, "OthersInRomConfigParser"
 
     const-string p1, "get xml error: layoutIds is empty"
+
+    .line 69
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 68
     if-eqz p2, :cond_5
 
-    .line 79
+    .line 80
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
     :cond_5
     return-object v0
 
-    .line 71
+    .line 72
     :cond_6
     :try_start_3
     new-instance v1, Lcom/miui/home/launcher/install/OthersInRomConfigParser;
 
-    const-string/jumbo v10, "workspace"
+    const-string v10, "workspace"
 
     move-object v5, v1
 
@@ -370,7 +383,7 @@
 
     if-eqz p2, :cond_7
 
-    .line 79
+    .line 80
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
     :cond_7
@@ -381,7 +394,7 @@
     :try_start_4
     const-string p0, "OthersInRomConfigParser"
 
-    .line 51
+    .line 52
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -401,13 +414,15 @@
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     if-eqz p2, :cond_9
 
-    .line 79
+    .line 80
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
     :cond_9
@@ -418,11 +433,13 @@
     const-string p0, "OthersInRomConfigParser"
 
     const-string p1, "get error cursor"
+
+    .line 74
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 73
     if-eqz p2, :cond_b
 
     goto :goto_2
@@ -442,13 +459,15 @@
     const-string p0, "OthersInRomConfigParser"
 
     const-string p1, "get remote config error"
+
+    .line 77
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 76
     if-eqz p2, :cond_b
 
-    .line 79
+    .line 80
     :goto_2
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
@@ -463,7 +482,7 @@
 
     invoke-interface {p2}, Landroid/database/Cursor;->close()V
 
-    .line 81
+    .line 82
     :cond_c
     throw p0
 .end method

@@ -439,6 +439,15 @@
     return-object v0
 .end method
 
+.method getVersion()I
+    .locals 1
+
+    .line 330
+    iget v0, p0, Landroidx/lifecycle/LiveData;->mVersion:I
+
+    return v0
+.end method
+
 .method public hasActiveObservers()Z
     .locals 1
 

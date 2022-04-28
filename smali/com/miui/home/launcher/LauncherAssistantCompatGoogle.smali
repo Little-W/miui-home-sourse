@@ -90,7 +90,7 @@
 .method private onWindowLayoutParamsChange()V
     .locals 3
 
-    .line 189
+    .line 190
     const-class v0, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
     const-string v1, "o"
@@ -105,13 +105,13 @@
 
     return-void
 
-    .line 193
+    .line 194
     :cond_0
     new-instance v1, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v1}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
-    .line 194
+    .line 195
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherAssistantCompatGoogle;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/Launcher;->getWindow()Landroid/view/Window;
@@ -126,10 +126,10 @@
 
     const-string v2, "LauncherMinusOneScreen"
 
-    .line 195
+    .line 196
     invoke-virtual {v1, v2}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 196
+    .line 197
     iget v2, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     and-int/lit8 v2, v2, -0x5
@@ -138,11 +138,11 @@
 
     const/4 v2, 0x1
 
-    .line 198
+    .line 199
     :try_start_0
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 199
+    .line 200
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherAssistantCompatGoogle;->mLauncherClient:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
 
     invoke-virtual {v0, v2, v1}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
@@ -154,7 +154,7 @@
     :catch_0
     move-exception v0
 
-    .line 201
+    .line 202
     invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
     :goto_0
@@ -212,6 +212,11 @@
     if-eqz v0, :cond_0
 
     .line 184
+    invoke-virtual {v0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->onDetachedFromWindow()V
+
+    .line 185
+    iget-object v0, p0, Lcom/miui/home/launcher/LauncherAssistantCompatGoogle;->mLauncherClient:Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;
+
     invoke-virtual {v0}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->disconnect()V
 
     :cond_0

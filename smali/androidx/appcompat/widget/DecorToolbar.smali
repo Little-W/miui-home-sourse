@@ -31,6 +31,9 @@
 .method public abstract getViewGroup()Landroid/view/ViewGroup;
 .end method
 
+.method public abstract getVisibility()I
+.end method
+
 .method public abstract hasExpandedActionView()Z
 .end method
 

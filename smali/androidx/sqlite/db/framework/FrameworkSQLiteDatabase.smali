@@ -134,22 +134,6 @@
     return-void
 .end method
 
-.method public execSQL(Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/database/SQLException;
-        }
-    .end annotation
-
-    .line 247
-    iget-object v0, p0, Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;->mDelegate:Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {v0, p1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-.end method
-
 .method public getAttachedDbs()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -199,25 +183,6 @@
     return v0
 .end method
 
-.method isDelegate(Landroid/database/sqlite/SQLiteDatabase;)Z
-    .locals 1
-
-    .line 322
-    iget-object v0, p0, Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;->mDelegate:Landroid/database/sqlite/SQLiteDatabase;
-
-    if-ne v0, p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    return p1
-.end method
-
 .method public isOpen()Z
     .locals 1
 
@@ -252,35 +217,6 @@
 
     .line 161
     invoke-virtual {v0, v1, p1, v2, v3}, Landroid/database/sqlite/SQLiteDatabase;->rawQueryWithFactory(Landroid/database/sqlite/SQLiteDatabase$CursorFactory;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public query(Landroidx/sqlite/db/SupportSQLiteQuery;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
-    .locals 6
-
-    .line 175
-    iget-object v0, p0, Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;->mDelegate:Landroid/database/sqlite/SQLiteDatabase;
-
-    new-instance v1, Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase$2;
-
-    invoke-direct {v1, p0, p1}, Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase$2;-><init>(Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;Landroidx/sqlite/db/SupportSQLiteQuery;)V
-
-    .line 182
-    invoke-interface {p1}, Landroidx/sqlite/db/SupportSQLiteQuery;->getSql()Ljava/lang/String;
-
-    move-result-object v2
-
-    sget-object v3, Landroidx/sqlite/db/framework/FrameworkSQLiteDatabase;->EMPTY_STRING_ARRAY:[Ljava/lang/String;
-
-    const/4 v4, 0x0
-
-    move-object v5, p2
-
-    .line 175
-    invoke-virtual/range {v0 .. v5}, Landroid/database/sqlite/SQLiteDatabase;->rawQueryWithFactory(Landroid/database/sqlite/SQLiteDatabase$CursorFactory;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 
     move-result-object p1
 

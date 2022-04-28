@@ -15,7 +15,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 29
+    .line 31
     new-instance v0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
 
     invoke-direct {v0}, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;-><init>()V
@@ -26,15 +26,19 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
-    .line 27
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x2
+    .line 33
+    new-instance v0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor$1;
 
-    .line 31
-    invoke-static {v0}, Ljava/util/concurrent/Executors;->newFixedThreadPool(I)Ljava/util/concurrent/ExecutorService;
+    invoke-direct {v0, p0}, Lcom/android/systemui/shared/recents/system/BackgroundExecutor$1;-><init>(Lcom/android/systemui/shared/recents/system/BackgroundExecutor;)V
+
+    const/4 v1, 0x2
+
+    invoke-static {v1, v0}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
@@ -46,7 +50,7 @@
 .method public static get()Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
     .locals 1
 
-    .line 37
+    .line 45
     sget-object v0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->sInstance:Lcom/android/systemui/shared/recents/system/BackgroundExecutor;
 
     return-object v0
@@ -66,7 +70,7 @@
         }
     .end annotation
 
-    .line 51
+    .line 59
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->mExecutorService:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
@@ -90,7 +94,7 @@
         }
     .end annotation
 
-    .line 59
+    .line 67
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->mExecutorService:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0, p1, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
@@ -114,7 +118,7 @@
         }
     .end annotation
 
-    .line 44
+    .line 52
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/BackgroundExecutor;->mExecutorService:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;

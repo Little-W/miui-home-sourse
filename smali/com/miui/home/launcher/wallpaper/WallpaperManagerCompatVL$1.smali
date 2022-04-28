@@ -54,7 +54,8 @@
 .method public run()V
     .locals 8
 
-    .line 163
+    .line 164
+    :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL$1;->val$weakWindowToken:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -67,7 +68,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 165
+    .line 166
     iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL$1;->this$0:Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL;
 
     iget-object v1, v0, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL;->mWm:Landroid/app/WallpaperManager;
@@ -83,7 +84,22 @@
     const/4 v7, 0x0
 
     invoke-virtual/range {v1 .. v7}, Landroid/app/WallpaperManager;->sendWallpaperCommand(Landroid/os/IBinder;Ljava/lang/String;IIILandroid/os/Bundle;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    .line 169
+    sget-object v1, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompat;->TAG:Ljava/lang/String;
+
+    const-string v2, "sendWallPaperCommand error"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
+    :goto_0
     return-void
 .end method

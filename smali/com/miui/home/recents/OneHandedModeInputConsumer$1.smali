@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/OneHandedModeInputConsumer;Landroid/os/Handler;)V
     .locals 0
 
-    .line 44
+    .line 35
     iput-object p1, p0, Lcom/miui/home/recents/OneHandedModeInputConsumer$1;->this$0:Lcom/miui/home/recents/OneHandedModeInputConsumer;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 47
+    .line 38
     iget-object p1, p0, Lcom/miui/home/recents/OneHandedModeInputConsumer$1;->this$0:Lcom/miui/home/recents/OneHandedModeInputConsumer;
 
     invoke-static {p1}, Lcom/miui/home/recents/OneHandedModeInputConsumer;->access$000(Lcom/miui/home/recents/OneHandedModeInputConsumer;)V

@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">ইয়াৰ জৰিয়তে শ্বেয়াৰ কৰক</string>
     <string name="abc_shareactionprovider_share_with_application">%sৰ জৰিয়তে শ্বেয়াৰ কৰক</string>
     <string name="abc_toolbar_collapse_description">সংকোচন কৰক</string>
+    <string name="common_google_play_services_unknown_issue">Google প্লে সেৱাত %1$s ত সমস্যা হৈ আছে। আকৌ চেষ্টা কৰক।</string>
     <string name="copy">প্ৰতিলিপি কৰক</string>
     <string name="expand_button_title">উন্নত</string>
     <string name="not_set">ছেট কৰা হোৱা নাই</string>

@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 698
+    .line 739
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 698
+    .line 739
     invoke-virtual {p0, p1}, Lmiuix/appcompat/widget/Spinner$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lmiuix/appcompat/widget/Spinner$SavedState;
 
     move-result-object p1
@@ -52,7 +52,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lmiuix/appcompat/widget/Spinner$SavedState;
     .locals 1
 
-    .line 700
+    .line 741
     new-instance v0, Lmiuix/appcompat/widget/Spinner$SavedState;
 
     invoke-direct {v0, p1}, Lmiuix/appcompat/widget/Spinner$SavedState;-><init>(Landroid/os/Parcel;)V
@@ -63,7 +63,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 698
+    .line 739
     invoke-virtual {p0, p1}, Lmiuix/appcompat/widget/Spinner$SavedState$1;->newArray(I)[Lmiuix/appcompat/widget/Spinner$SavedState;
 
     move-result-object p1
@@ -74,7 +74,7 @@
 .method public newArray(I)[Lmiuix/appcompat/widget/Spinner$SavedState;
     .locals 0
 
-    .line 704
+    .line 745
     new-array p1, p1, [Lmiuix/appcompat/widget/Spinner$SavedState;
 
     return-object p1

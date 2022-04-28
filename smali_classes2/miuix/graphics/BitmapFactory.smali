@@ -79,7 +79,7 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    const-string v0, "[㄀-ㄭㆠ-ㆺ一-鿌㐀-䶵\uf900-\ufad9\u2f00-\u2fd5\u2e80-\u2ef3㇀-㇣\u1100-\u11ffꥠ-ꥼힰ-ퟻㄱ-ㆎ가-힣぀-ゟ゠-ヿㇰ-ㇿ㆐-㆟ꀀ-ꒌ꒐-꓆]"
+    const-string v0, "[\u3100-\u312d\u31a0-\u31ba\u4e00-\u9fcc\u3400-\u4db5\uf900-\ufad9\u2f00-\u2fd5\u2e80-\u2ef3\u31c0-\u31e3\u1100-\u11ff\ua960-\ua97c\ud7b0-\ud7fb\u3131-\u318e\uac00-\ud7a3\u3040-\u309f\u30a0-\u30ff\u31f0-\u31ff\u3190-\u319f\ua000-\ua48c\ua490-\ua4c6]"
 
     .line 1051
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -88,85 +88,85 @@
 
     sput-object v0, Lmiuix/graphics/BitmapFactory;->ASIALANGPATTERN:Ljava/util/regex/Pattern;
 
-    const-string v1, "老师"
+    const-string v1, "\u8001\u5e08"
 
-    const-string v2, "先生"
+    const-string v2, "\u5148\u751f"
 
-    const-string v3, "老板"
+    const-string v3, "\u8001\u677f"
 
-    const-string v4, "仔"
+    const-string v4, "\u4ed4"
 
-    const-string v5, "手机"
+    const-string v5, "\u624b\u673a"
 
-    const-string v6, "叔"
+    const-string v6, "\u53d4"
 
-    const-string v7, "阿姨"
+    const-string v7, "\u963f\u59e8"
 
-    const-string v8, "宅"
+    const-string v8, "\u5b85"
 
-    const-string v9, "伯"
+    const-string v9, "\u4f2f"
 
-    const-string v10, "伯母"
+    const-string v10, "\u4f2f\u6bcd"
 
-    const-string v11, "伯父"
+    const-string v11, "\u4f2f\u7236"
 
-    const-string v12, "哥"
+    const-string v12, "\u54e5"
 
-    const-string v13, "姐"
+    const-string v13, "\u59d0"
 
-    const-string v14, "弟"
+    const-string v14, "\u5f1f"
 
-    const-string v15, "妹"
+    const-string v15, "\u59b9"
 
-    const-string v16, "舅"
+    const-string v16, "\u8205"
 
-    const-string v17, "姑"
+    const-string v17, "\u59d1"
 
-    const-string v18, "父"
+    const-string v18, "\u7236"
 
-    const-string v19, "主任"
+    const-string v19, "\u4e3b\u4efb"
 
-    const-string v20, "经理"
+    const-string v20, "\u7ecf\u7406"
 
-    const-string v21, "工作"
+    const-string v21, "\u5de5\u4f5c"
 
-    const-string v22, "同事"
+    const-string v22, "\u540c\u4e8b"
 
-    const-string v23, "律师"
+    const-string v23, "\u5f8b\u5e08"
 
-    const-string v24, "司机"
+    const-string v24, "\u53f8\u673a"
 
-    const-string v25, "师傅"
+    const-string v25, "\u5e08\u5085"
 
-    const-string v26, "师父"
+    const-string v26, "\u5e08\u7236"
 
-    const-string v27, "爷"
+    const-string v27, "\u7237"
 
-    const-string v28, "奶"
+    const-string v28, "\u5976"
 
-    const-string v29, "中介"
+    const-string v29, "\u4e2d\u4ecb"
 
-    const-string v30, "董"
+    const-string v30, "\u8463"
 
-    const-string v31, "总"
+    const-string v31, "\u603b"
 
-    const-string v32, "太太"
+    const-string v32, "\u592a\u592a"
 
-    const-string v33, "保姆"
+    const-string v33, "\u4fdd\u59c6"
 
-    const-string v34, "某"
+    const-string v34, "\u67d0"
 
-    const-string v35, "秘书"
+    const-string v35, "\u79d8\u4e66"
 
-    const-string v36, "处长"
+    const-string v36, "\u5904\u957f"
 
-    const-string v37, "局长"
+    const-string v37, "\u5c40\u957f"
 
-    const-string v38, "班长"
+    const-string v38, "\u73ed\u957f"
 
-    const-string v39, "兄"
+    const-string v39, "\u5144"
 
-    const-string v40, "助理"
+    const-string v40, "\u52a9\u7406"
 
     .line 1073
     filled-new-array/range {v1 .. v40}, [Ljava/lang/String;

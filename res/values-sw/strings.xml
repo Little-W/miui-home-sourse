@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">Shiriki na</string>
     <string name="abc_shareactionprovider_share_with_application">Shiriki ukitumia %s</string>
     <string name="abc_toolbar_collapse_description">Kunja</string>
+    <string name="common_google_play_services_unknown_issue">%1$s inakumbwa na hitilafu ya huduma za Google Play. Tafadhali jaribu tena.</string>
     <string name="copy">Nakili</string>
     <string name="expand_button_title">Mipangilio ya Kina</string>
     <string name="not_set">Haijawekwa</string>

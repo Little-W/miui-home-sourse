@@ -52,6 +52,27 @@
 
 
 # virtual methods
+.method public getServerVersion()I
+    .locals 1
+
+    .line 169
+    iget-object v0, p0, Lcom/miui/home/launcher/overlay/LauncherOverlayMIUI;->mClient:Lcom/miui/launcher/overlay/client/LauncherClient;
+
+    if-eqz v0, :cond_0
+
+    .line 170
+    invoke-virtual {v0}, Lcom/miui/launcher/overlay/client/LauncherClient;->getServerVersion()I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public hideOverlay(Z)V
     .locals 1
 
@@ -65,6 +86,14 @@
 
     :cond_0
     return-void
+.end method
+
+.method public isGoogleOverlay()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public onOverlayCall(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
@@ -285,6 +314,8 @@
 
     move-result-object v2
 
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     const/4 v1, 0x1
 
     if-ge p1, v1, :cond_1
@@ -313,6 +344,8 @@
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
+
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 163
     invoke-static {}, Landroid/os/Process;->myPid()I

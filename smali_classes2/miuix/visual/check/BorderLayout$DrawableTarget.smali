@@ -27,15 +27,15 @@
 .method constructor <init>(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 75
+    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 73
+    .line 78
     iput v0, p0, Lmiuix/visual/check/BorderLayout$DrawableTarget;->alpha:F
 
-    .line 76
+    .line 81
     iput-object p1, p0, Lmiuix/visual/check/BorderLayout$DrawableTarget;->mImg:Landroid/graphics/drawable/Drawable;
 
     return-void
@@ -46,7 +46,7 @@
 .method public getAlpha()F
     .locals 1
 
-    .line 80
+    .line 85
     iget v0, p0, Lmiuix/visual/check/BorderLayout$DrawableTarget;->alpha:F
 
     return v0
@@ -55,10 +55,10 @@
 .method public setAlpha(F)V
     .locals 2
 
-    .line 84
+    .line 89
     iput p1, p0, Lmiuix/visual/check/BorderLayout$DrawableTarget;->alpha:F
 
-    .line 85
+    .line 90
     iget-object v0, p0, Lmiuix/visual/check/BorderLayout$DrawableTarget;->mImg:Landroid/graphics/drawable/Drawable;
 
     const/high16 v1, 0x437f0000    # 255.0f

@@ -30,7 +30,7 @@
 
     const/4 v0, 0x0
 
-    .line 33
+    .line 34
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/home/launcher/DragableScreenView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -39,34 +39,34 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 44
+    .line 45
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/launcher/ScreenView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x0
 
-    .line 21
+    .line 22
     iput p1, p0, Lcom/miui/home/launcher/DragableScreenView;->mDragScrollState:I
 
-    .line 22
+    .line 23
     new-instance p1, Lcom/miui/home/launcher/DragableScreenView$ScrollRunnable;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/DragableScreenView$ScrollRunnable;-><init>(Lcom/miui/home/launcher/DragableScreenView;)V
 
     iput-object p1, p0, Lcom/miui/home/launcher/DragableScreenView;->mDragScrollRunnable:Lcom/miui/home/launcher/DragableScreenView$ScrollRunnable;
 
-    .line 23
+    .line 24
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/DragableScreenView;->mDragScrollHandler:Landroid/os/Handler;
 
-    .line 45
+    .line 46
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragableScreenView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const p2, 0x7f070325
+    const p2, 0x7f0703cd
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -82,7 +82,7 @@
 .method public getScrollZone()I
     .locals 1
 
-    .line 137
+    .line 140
     iget v0, p0, Lcom/miui/home/launcher/DragableScreenView;->mScrollZone:I
 
     return v0
@@ -107,7 +107,7 @@
 .method public onSecondaryPointerDown(Landroid/view/MotionEvent;I)V
     .locals 0
 
-    .line 94
+    .line 97
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/ScreenView;->onSecondaryPointerDown(Landroid/view/MotionEvent;I)V
 
     return-void
@@ -116,7 +116,7 @@
 .method public onSecondaryPointerMove(Landroid/view/MotionEvent;I)V
     .locals 0
 
-    .line 102
+    .line 105
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/ScreenView;->onSecondaryPointerMove(Landroid/view/MotionEvent;I)V
 
     return-void
@@ -125,7 +125,7 @@
 .method public onSecondaryPointerUp(Landroid/view/MotionEvent;I)V
     .locals 0
 
-    .line 98
+    .line 101
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/ScreenView;->onSecondaryPointerUp(Landroid/view/MotionEvent;I)V
 
     return-void
@@ -134,10 +134,10 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 4
 
-    .line 50
+    .line 51
     invoke-super {p0, p1}, Lcom/miui/home/launcher/ScreenView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 52
+    .line 53
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -152,7 +152,7 @@
 
     goto :goto_2
 
-    .line 54
+    .line 55
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragableScreenView;->getTouchState()I
 
@@ -162,7 +162,7 @@
 
     if-ne v0, v2, :cond_4
 
-    .line 56
+    .line 57
     iget v0, p0, Lcom/miui/home/launcher/DragableScreenView;->mActivePointerId:I
 
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->findPointerIndex(I)I
@@ -181,7 +181,7 @@
 
     if-lt p1, v2, :cond_2
 
-    .line 58
+    .line 59
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragableScreenView;->getWidth()I
 
     move-result v3
@@ -192,16 +192,16 @@
 
     goto :goto_0
 
-    .line 66
+    .line 67
     :cond_1
     iget p1, p0, Lcom/miui/home/launcher/DragableScreenView;->mDragScrollState:I
 
     if-ne p1, v1, :cond_4
 
-    .line 67
+    .line 68
     iput v0, p0, Lcom/miui/home/launcher/DragableScreenView;->mDragScrollState:I
 
-    .line 68
+    .line 69
     iget-object p1, p0, Lcom/miui/home/launcher/DragableScreenView;->mDragScrollHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/miui/home/launcher/DragableScreenView;->mDragScrollRunnable:Lcom/miui/home/launcher/DragableScreenView$ScrollRunnable;
@@ -210,17 +210,17 @@
 
     goto :goto_2
 
-    .line 59
+    .line 60
     :cond_2
     :goto_0
     iget v3, p0, Lcom/miui/home/launcher/DragableScreenView;->mDragScrollState:I
 
     if-nez v3, :cond_4
 
-    .line 60
+    .line 61
     iput v1, p0, Lcom/miui/home/launcher/DragableScreenView;->mDragScrollState:I
 
-    .line 61
+    .line 62
     iget-object v3, p0, Lcom/miui/home/launcher/DragableScreenView;->mDragScrollRunnable:Lcom/miui/home/launcher/DragableScreenView$ScrollRunnable;
 
     if-ge p1, v2, :cond_3
@@ -233,7 +233,7 @@
     :goto_1
     invoke-virtual {v3, v0}, Lcom/miui/home/launcher/DragableScreenView$ScrollRunnable;->setDirection(I)V
 
-    .line 64
+    .line 65
     iget-object p1, p0, Lcom/miui/home/launcher/DragableScreenView;->mDragScrollHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/miui/home/launcher/DragableScreenView;->mDragScrollRunnable:Lcom/miui/home/launcher/DragableScreenView$ScrollRunnable;
@@ -248,29 +248,31 @@
 .end method
 
 .method public scrollDragingLeft()V
-    .locals 1
+    .locals 2
 
-    .line 78
+    .line 79
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragableScreenView;->isScrolling()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 79
+    .line 80
     iget v0, p0, Lcom/miui/home/launcher/DragableScreenView;->mCurrentScreenIndex:I
 
     if-lez v0, :cond_1
 
     iget v0, p0, Lcom/miui/home/launcher/DragableScreenView;->mCurrentScreenIndex:I
 
-    add-int/lit8 v0, v0, -0x1
+    iget v1, p0, Lcom/miui/home/launcher/DragableScreenView;->mVisibleRange:I
+
+    sub-int/2addr v0, v1
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DragableScreenView;->snapToScreen(I)I
 
     goto :goto_0
 
-    .line 81
+    .line 82
     :cond_0
     iget v0, p0, Lcom/miui/home/launcher/DragableScreenView;->mNextScreenIndex:I
 
@@ -290,14 +292,14 @@
 .method public scrollDragingRight()V
     .locals 2
 
-    .line 86
+    .line 87
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragableScreenView;->isScrolling()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 87
+    .line 88
     iget v0, p0, Lcom/miui/home/launcher/DragableScreenView;->mCurrentScreenIndex:I
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/DragableScreenView;->getScreenCount()I
@@ -308,15 +310,18 @@
 
     if-ge v0, v1, :cond_1
 
+    .line 89
     iget v0, p0, Lcom/miui/home/launcher/DragableScreenView;->mCurrentScreenIndex:I
 
-    add-int/lit8 v0, v0, 0x1
+    iget v1, p0, Lcom/miui/home/launcher/DragableScreenView;->mVisibleRange:I
+
+    add-int/2addr v0, v1
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DragableScreenView;->snapToScreen(I)I
 
     goto :goto_0
 
-    .line 89
+    .line 92
     :cond_0
     iget v0, p0, Lcom/miui/home/launcher/DragableScreenView;->mNextScreenIndex:I
 

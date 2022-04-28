@@ -4,5 +4,8 @@
 
 
 # virtual methods
+.method public abstract dismiss()V
+.end method
+
 .method public abstract show(Landroid/view/View;Landroid/view/ViewGroup;FF)V
 .end method

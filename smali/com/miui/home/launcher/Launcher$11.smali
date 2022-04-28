@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 2080
+    .line 2171
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,129 +35,67 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 2092
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$1802(Lcom/miui/home/launcher/Launcher;Z)Z
-
-    .line 2093
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/FolderCling;->getFolder()Lcom/miui/home/launcher/Folder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Folder;->getOpenCloseAnimatorListenerAdapter()Landroid/animation/AnimatorListenerAdapter;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
-
-    .line 2094
+    .line 2174
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2300(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DefaultScreenPreviewView;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/miui/home/launcher/util/ViewCompat;->notifyChildOfDragStart(Landroid/view/View;)V
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    return-void
-.end method
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->setAlpha(F)V
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 4
+    .line 2175
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 2083
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2300(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DefaultScreenPreviewView;
 
-    const/4 v1, 0x1
+    move-result-object p1
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$1802(Lcom/miui/home/launcher/Launcher;Z)Z
+    const/4 v1, 0x0
 
-    .line 2084
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
+    invoke-virtual {p1, v1}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->setTranslationY(F)V
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
+    .line 2176
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    move-result-object v1
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
 
-    const/4 v2, 0x0
+    move-result-object p1
 
-    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/FolderCling;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Workspace;->setAlpha(F)V
 
-    move-result-object v1
+    .line 2177
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v1}, Landroid/view/View;->getAlpha()F
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/EditingEntryThumbnailView;
 
-    move-result v1
+    move-result-object p1
 
-    const/high16 v3, 0x3f800000    # 1.0f
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->setAlpha(F)V
 
-    sub-float v1, v3, v1
+    .line 2178
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$1902(Lcom/miui/home/launcher/Launcher;F)F
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2300(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DefaultScreenPreviewView;
 
-    .line 2085
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
+    move-result-object p1
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
+    const/16 v0, 0x8
 
-    move-result-object v1
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->setVisibility(I)V
 
-    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/FolderCling;->getChildAt(I)Landroid/view/View;
+    .line 2179
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    move-result-object v1
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2300(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DefaultScreenPreviewView;
 
-    invoke-virtual {v1}, Landroid/view/View;->getScaleX()F
+    move-result-object p1
 
-    move-result v1
+    const/4 v0, 0x0
 
-    sub-float v1, v3, v1
-
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$2102(Lcom/miui/home/launcher/Launcher;F)F
-
-    .line 2086
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/FolderCling;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getScaleY()F
-
-    move-result v1
-
-    sub-float/2addr v3, v1
-
-    invoke-static {v0, v3}, Lcom/miui/home/launcher/Launcher;->access$2202(Lcom/miui/home/launcher/Launcher;F)F
-
-    .line 2087
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/FolderCling;->getFolder()Lcom/miui/home/launcher/Folder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Folder;->getOpenCloseAnimatorListenerAdapter()Landroid/animation/AnimatorListenerAdapter;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->onShow(Z)V
 
     return-void
 .end method

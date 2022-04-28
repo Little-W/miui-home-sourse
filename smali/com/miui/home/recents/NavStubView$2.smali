@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;Lcom/miui/home/recents/views/TaskView;)V
     .locals 0
 
-    .line 674
+    .line 717
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$2;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iput-object p2, p0, Lcom/miui/home/recents/NavStubView$2;->val$tv:Lcom/miui/home/recents/views/TaskView;
@@ -39,7 +39,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 677
+    .line 720
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$2;->val$tv:Lcom/miui/home/recents/views/TaskView;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->animate()Landroid/view/ViewPropertyAnimator;
@@ -50,7 +50,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)Landroid/view/ViewPropertyAnimator;
 
-    .line 678
+    .line 721
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$2;->val$tv:Lcom/miui/home/recents/views/TaskView;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->animate()Landroid/view/ViewPropertyAnimator;

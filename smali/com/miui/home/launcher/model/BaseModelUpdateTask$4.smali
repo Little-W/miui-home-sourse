@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/model/BaseModelUpdateTask;->bindCategoryRemoved()V
+    value = Lcom/miui/home/launcher/model/BaseModelUpdateTask;->bindCategoryAdded()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/model/BaseModelUpdateTask;)V
     .locals 0
 
-    .line 123
+    .line 129
     iput-object p1, p0, Lcom/miui/home/launcher/model/BaseModelUpdateTask$4;->this$0:Lcom/miui/home/launcher/model/BaseModelUpdateTask;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,8 +38,8 @@
 .method public execute(Lcom/miui/home/launcher/LauncherModel$Callbacks;)V
     .locals 0
 
-    .line 126
-    invoke-interface {p1}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->bindCategoryRemoved()V
+    .line 132
+    invoke-interface {p1}, Lcom/miui/home/launcher/LauncherModel$Callbacks;->bindCategoryAdded()V
 
     return-void
 .end method

@@ -25,7 +25,7 @@
 .method constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)V
     .locals 0
 
-    .line 1158
+    .line 1188
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 1162
+    .line 1192
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->access$900(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)Landroid/widget/Scroller;
@@ -51,7 +51,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1163
+    .line 1193
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->access$900(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)Landroid/widget/Scroller;
@@ -72,12 +72,12 @@
 
     invoke-static {v0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->access$1002(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;I)I
 
-    .line 1164
+    .line 1194
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->requestLayout()V
 
-    .line 1165
+    .line 1195
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     invoke-static {v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->access$900(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)Landroid/widget/Scroller;
@@ -90,14 +90,14 @@
 
     if-nez v0, :cond_0
 
-    .line 1166
+    .line 1196
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     invoke-virtual {v0, p0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->postOnAnimation(Ljava/lang/Runnable;)V
 
     goto :goto_0
 
-    .line 1168
+    .line 1198
     :cond_0
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
@@ -117,7 +117,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1169
+    .line 1199
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     const/4 v1, 0x0
@@ -126,7 +126,7 @@
 
     goto :goto_0
 
-    .line 1170
+    .line 1200
     :cond_1
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
@@ -158,7 +158,7 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 1171
+    .line 1201
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$3;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     const/4 v1, 0x1

@@ -37,6 +37,14 @@
 
 
 # virtual methods
+.method public getServerVersion()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public hideOverlay(Z)V
     .locals 1
 
@@ -46,6 +54,14 @@
     invoke-virtual {v0, p1}, Lcom/google/android/libraries/gsa/launcherclient/LauncherClient;->hideOverlay(Z)V
 
     return-void
+.end method
+
+.method public isGoogleOverlay()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
 .method public onGoogleOverlayIconChanged(Landroid/graphics/Bitmap;)V

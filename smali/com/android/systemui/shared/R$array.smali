@@ -15,6 +15,10 @@
 
 
 # static fields
+.field public static final alphabet_table:I = 0x7f030000
+
+.field public static final alphabet_table_with_starred:I = 0x7f030001
+
 .field public static final am_pms:I = 0x7f030002
 
 .field public static final chinese_days:I = 0x7f030006
@@ -41,20 +45,22 @@
 
 .field public static final months_shortest:I = 0x7f03001b
 
-.field public static final solar_terms:I = 0x7f03001e
+.field public static final solar_terms:I = 0x7f03001f
 
-.field public static final week_days:I = 0x7f030024
+.field public static final wallpaper_provider_blacklist:I = 0x7f030022
 
-.field public static final week_days_short:I = 0x7f030025
+.field public static final week_days:I = 0x7f030025
 
-.field public static final week_days_shortest:I = 0x7f030026
+.field public static final week_days_short:I = 0x7f030026
+
+.field public static final week_days_shortest:I = 0x7f030027
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 0
 
-    .line 41
+    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

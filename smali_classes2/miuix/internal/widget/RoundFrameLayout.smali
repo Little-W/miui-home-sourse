@@ -10,6 +10,8 @@
 
 .field private mClipPath:Landroid/graphics/Path;
 
+.field private mEnableSmoothRound:Z
+
 .field private mLayer:Landroid/graphics/RectF;
 
 .field private mPaint:Landroid/graphics/Paint;
@@ -23,7 +25,7 @@
 
     const/4 v0, 0x0
 
-    .line 32
+    .line 36
     invoke-direct {p0, p1, v0}, Lmiuix/internal/widget/RoundFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -34,7 +36,7 @@
 
     const/4 v0, 0x0
 
-    .line 36
+    .line 40
     invoke-direct {p0, p1, p2, v0}, Lmiuix/internal/widget/RoundFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -43,10 +45,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 40
+    .line 44
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 41
+    const/4 p1, 0x0
+
+    .line 33
+    iput-boolean p1, p0, Lmiuix/internal/widget/RoundFrameLayout;->mEnableSmoothRound:Z
+
+    .line 45
     invoke-direct {p0}, Lmiuix/internal/widget/RoundFrameLayout;->init()V
 
     return-void
@@ -55,7 +62,7 @@
 .method private init()V
     .locals 4
 
-    .line 45
+    .line 49
     invoke-virtual {p0}, Lmiuix/internal/widget/RoundFrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -74,7 +81,7 @@
 
     const/16 v1, 0x8
 
-    .line 46
+    .line 50
     new-array v1, v1, [F
 
     const/4 v2, 0x0
@@ -111,49 +118,49 @@
 
     iput-object v1, p0, Lmiuix/internal/widget/RoundFrameLayout;->mRadii:[F
 
-    .line 47
+    .line 51
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mLayer:Landroid/graphics/RectF;
 
-    .line 48
+    .line 52
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mClipPath:Landroid/graphics/Path;
 
-    .line 49
+    .line 53
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mClipOutPath:Landroid/graphics/Path;
 
-    .line 50
+    .line 54
     new-instance v0, Landroid/graphics/Region;
 
     invoke-direct {v0}, Landroid/graphics/Region;-><init>()V
 
     iput-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mAreaRegion:Landroid/graphics/Region;
 
-    .line 51
+    .line 55
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mPaint:Landroid/graphics/Paint;
 
-    .line 52
+    .line 56
     iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mPaint:Landroid/graphics/Paint;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 53
+    .line 57
     iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
@@ -164,14 +171,14 @@
 .method private refreshRegion()V
     .locals 7
 
-    .line 72
+    .line 103
     iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mRadii:[F
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 76
+    .line 107
     :cond_0
     iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mLayer:Landroid/graphics/RectF;
 
@@ -181,7 +188,7 @@
 
     float-to-int v0, v0
 
-    .line 77
+    .line 108
     iget-object v1, p0, Lmiuix/internal/widget/RoundFrameLayout;->mLayer:Landroid/graphics/RectF;
 
     invoke-virtual {v1}, Landroid/graphics/RectF;->height()F
@@ -190,12 +197,12 @@
 
     float-to-int v1, v1
 
-    .line 78
+    .line 109
     new-instance v2, Landroid/graphics/RectF;
 
     invoke-direct {v2}, Landroid/graphics/RectF;-><init>()V
 
-    .line 79
+    .line 110
     invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v3
@@ -204,7 +211,7 @@
 
     iput v3, v2, Landroid/graphics/RectF;->left:F
 
-    .line 80
+    .line 111
     invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
     move-result v3
@@ -213,7 +220,7 @@
 
     iput v3, v2, Landroid/graphics/RectF;->top:F
 
-    .line 81
+    .line 112
     invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
 
     move-result v3
@@ -224,7 +231,7 @@
 
     iput v0, v2, Landroid/graphics/RectF;->right:F
 
-    .line 82
+    .line 113
     invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
     move-result v0
@@ -235,12 +242,12 @@
 
     iput v0, v2, Landroid/graphics/RectF;->bottom:F
 
-    .line 83
+    .line 114
     iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mClipPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    .line 84
+    .line 115
     iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mClipPath:Landroid/graphics/Path;
 
     iget-object v1, p0, Lmiuix/internal/widget/RoundFrameLayout;->mRadii:[F
@@ -249,7 +256,7 @@
 
     invoke-virtual {v0, v2, v1, v3}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;[FLandroid/graphics/Path$Direction;)V
 
-    .line 85
+    .line 116
     new-instance v0, Landroid/graphics/Region;
 
     iget v1, v2, Landroid/graphics/RectF;->left:F
@@ -270,19 +277,19 @@
 
     invoke-direct {v0, v1, v3, v4, v2}, Landroid/graphics/Region;-><init>(IIII)V
 
-    .line 87
+    .line 118
     iget-object v1, p0, Lmiuix/internal/widget/RoundFrameLayout;->mAreaRegion:Landroid/graphics/Region;
 
     iget-object v2, p0, Lmiuix/internal/widget/RoundFrameLayout;->mClipPath:Landroid/graphics/Path;
 
     invoke-virtual {v1, v2, v0}, Landroid/graphics/Region;->setPath(Landroid/graphics/Path;Landroid/graphics/Region;)Z
 
-    .line 89
+    .line 120
     iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mClipOutPath:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    .line 90
+    .line 121
     iget-object v1, p0, Lmiuix/internal/widget/RoundFrameLayout;->mClipOutPath:Landroid/graphics/Path;
 
     const/4 v2, 0x0
@@ -313,7 +320,7 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Path;->addRect(FFFFLandroid/graphics/Path$Direction;)V
 
-    .line 91
+    .line 122
     iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mClipOutPath:Landroid/graphics/Path;
 
     iget-object v1, p0, Lmiuix/internal/widget/RoundFrameLayout;->mClipPath:Landroid/graphics/Path;
@@ -330,7 +337,12 @@
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
     .locals 3
 
-    .line 65
+    .line 91
+    iget-boolean v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mEnableSmoothRound:Z
+
+    if-eqz v0, :cond_0
+
+    .line 92
     iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mLayer:Landroid/graphics/RectF;
 
     const/4 v1, 0x0
@@ -341,44 +353,59 @@
 
     move-result v0
 
-    .line 66
+    .line 93
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 67
+    .line 94
     invoke-virtual {p0, p1}, Lmiuix/internal/widget/RoundFrameLayout;->onClipDraw(Landroid/graphics/Canvas;)V
 
-    .line 68
+    .line 95
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
+    goto :goto_0
+
+    .line 97
+    :cond_0
+    invoke-virtual {p0, p1}, Lmiuix/internal/widget/RoundFrameLayout;->onClipDraw(Landroid/graphics/Canvas;)V
+
+    .line 98
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
+
+    :goto_0
     return-void
 .end method
 
 .method public onClipDraw(Landroid/graphics/Canvas;)V
     .locals 3
 
-    .line 95
+    .line 126
     iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mRadii:[F
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 98
+    .line 129
     :cond_0
+    iget-boolean v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mEnableSmoothRound:Z
+
+    if-eqz v0, :cond_1
+
+    .line 130
     iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mPaint:Landroid/graphics/Paint;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 99
+    .line 131
     iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 100
+    .line 132
     iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mPaint:Landroid/graphics/Paint;
 
     new-instance v1, Landroid/graphics/PorterDuffXfermode;
@@ -389,23 +416,32 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 101
+    .line 133
     iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mClipOutPath:Landroid/graphics/Path;
 
     iget-object v1, p0, Lmiuix/internal/widget/RoundFrameLayout;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
+    goto :goto_0
+
+    .line 135
+    :cond_1
+    iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mClipPath:Landroid/graphics/Path;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
+
+    :goto_0
     return-void
 .end method
 
 .method protected onSizeChanged(IIII)V
     .locals 0
 
-    .line 58
+    .line 73
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->onSizeChanged(IIII)V
 
-    .line 59
+    .line 74
     iget-object p3, p0, Lmiuix/internal/widget/RoundFrameLayout;->mLayer:Landroid/graphics/RectF;
 
     int-to-float p1, p1
@@ -416,8 +452,75 @@
 
     invoke-virtual {p3, p4, p4, p1, p2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 60
+    .line 75
     invoke-direct {p0}, Lmiuix/internal/widget/RoundFrameLayout;->refreshRegion()V
 
+    return-void
+.end method
+
+.method public setRadius(F)V
+    .locals 2
+
+    const/16 v0, 0x8
+
+    .line 61
+    new-array v0, v0, [F
+
+    const/4 v1, 0x0
+
+    aput p1, v0, v1
+
+    const/4 v1, 0x1
+
+    aput p1, v0, v1
+
+    const/4 v1, 0x2
+
+    aput p1, v0, v1
+
+    const/4 v1, 0x3
+
+    aput p1, v0, v1
+
+    const/4 v1, 0x4
+
+    aput p1, v0, v1
+
+    const/4 v1, 0x5
+
+    aput p1, v0, v1
+
+    const/4 v1, 0x6
+
+    aput p1, v0, v1
+
+    const/4 v1, 0x7
+
+    aput p1, v0, v1
+
+    invoke-virtual {p0, v0}, Lmiuix/internal/widget/RoundFrameLayout;->setRadius([F)V
+
+    return-void
+.end method
+
+.method public setRadius([F)V
+    .locals 1
+
+    .line 65
+    iget-object v0, p0, Lmiuix/internal/widget/RoundFrameLayout;->mRadii:[F
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([F[F)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 66
+    iput-object p1, p0, Lmiuix/internal/widget/RoundFrameLayout;->mRadii:[F
+
+    .line 67
+    invoke-virtual {p0}, Lmiuix/internal/widget/RoundFrameLayout;->invalidate()V
+
+    :cond_0
     return-void
 .end method

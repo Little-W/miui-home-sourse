@@ -2658,6 +2658,15 @@
     return-void
 .end method
 
+.method public setDefaultValue(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1571
+    iput-object p1, p0, Landroidx/preference/Preference;->mDefaultValue:Ljava/lang/Object;
+
+    return-void
+.end method
+
 .method public setEnabled(Z)V
     .locals 1
 

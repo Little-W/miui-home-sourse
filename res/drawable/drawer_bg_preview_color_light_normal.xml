@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list
-    xmlns:android="http://schemas.android.com/apk/res/android">
+  xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape>
-            <size
-                android:height="@dimen/drawer_color_item_height" />
+            <size android:height="@dimen/drawer_color_item_height" />
         </shape>
     </item>
-    <item
-        android:top="4.0dip"
-        android:bottom="4.0dip"
-        android:start="4.0dip"
-        android:end="4.0dip">
+    <item android:top="4.0dip" android:bottom="4.0dip" android:start="4.0dip" android:end="4.0dip">
         <shape>
-            <corners
-                android:radius="13.0dip" />
-            <solid
-                android:color="#ffffffff" />
-            <stroke
-                android:width="1.0dip"
-                android:color="@color/alpha10black" />
+            <corners android:radius="13.0dip" />
+            <solid android:color="#ffffffff" />
+            <stroke android:width="1.0dip" android:color="@color/alpha10black" />
         </shape>
     </item>
 </layer-list>

@@ -1,4 +1,4 @@
-.class final Lmiuix/internal/widget/ListPopup$3;
+.class Lmiuix/internal/widget/ListPopup$3;
 .super Landroid/view/ViewOutlineProvider;
 .source "ListPopup.java"
 
@@ -9,16 +9,22 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
+# instance fields
+.field final synthetic this$0:Lmiuix/internal/widget/ListPopup;
+
+
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lmiuix/internal/widget/ListPopup;)V
     .locals 0
 
-    .line 382
+    .line 421
+    iput-object p1, p0, Lmiuix/internal/widget/ListPopup$3;->this$0:Lmiuix/internal/widget/ListPopup;
+
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
@@ -29,7 +35,7 @@
 .method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 3
 
-    .line 385
+    .line 424
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -44,7 +50,7 @@
 
     goto :goto_0
 
-    .line 388
+    .line 427
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -60,14 +66,14 @@
 
     invoke-virtual {p2, v0}, Landroid/graphics/Outline;->setAlpha(F)V
 
-    .line 390
+    .line 429
     invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 391
+    .line 430
     invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1

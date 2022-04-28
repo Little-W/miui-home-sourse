@@ -194,16 +194,16 @@
     invoke-direct {p1, v0, p2, p3, v1}, Lcom/miui/home/launcher/AppWidgetResizeFrame;-><init>(Landroid/content/Context;Lcom/miui/home/launcher/LauncherWidgetView;Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/DragLayer;)V
 
     .line 126
-    new-instance p2, Lcom/miui/home/launcher/DragLayer$LayoutParams;
+    new-instance p2, Lcom/miui/home/launcher/SuperDraglayer$LayoutParams;
 
     const/4 p3, -0x1
 
-    invoke-direct {p2, p3, p3}, Lcom/miui/home/launcher/DragLayer$LayoutParams;-><init>(II)V
+    invoke-direct {p2, p3, p3}, Lcom/miui/home/launcher/SuperDraglayer$LayoutParams;-><init>(II)V
 
     const/4 p3, 0x1
 
     .line 127
-    iput-boolean p3, p2, Lcom/miui/home/launcher/DragLayer$LayoutParams;->customPosition:Z
+    iput-boolean p3, p2, Lcom/miui/home/launcher/SuperDraglayer$LayoutParams;->customPosition:Z
 
     .line 129
     iget-object p3, p0, Lcom/miui/home/launcher/WidgetResizeDragController;->mDragLayer:Lcom/miui/home/launcher/DragLayer;

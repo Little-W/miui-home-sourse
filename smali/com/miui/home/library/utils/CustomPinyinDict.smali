@@ -39,7 +39,7 @@
     .line 12
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "阿图什"
+    const-string v1, "\u963f\u56fe\u4ec0"
 
     const-string v2, "A"
 
@@ -56,7 +56,7 @@
     .line 13
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "蚌埠"
+    const-string v1, "\u868c\u57e0"
 
     const-string v2, "BENG"
 
@@ -71,7 +71,7 @@
     .line 14
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "泌阳"
+    const-string v1, "\u6ccc\u9633"
 
     const-string v2, "BI"
 
@@ -86,7 +86,7 @@
     .line 15
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长安"
+    const-string v1, "\u957f\u5b89"
 
     const-string v2, "CHANG"
 
@@ -101,7 +101,7 @@
     .line 16
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长白"
+    const-string v1, "\u957f\u767d"
 
     const-string v2, "CHANG"
 
@@ -116,7 +116,7 @@
     .line 17
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长春"
+    const-string v1, "\u957f\u6625"
 
     const-string v2, "CHANG"
 
@@ -131,7 +131,7 @@
     .line 18
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长岛"
+    const-string v1, "\u957f\u5c9b"
 
     const-string v2, "CHANG"
 
@@ -146,7 +146,7 @@
     .line 19
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长丰"
+    const-string v1, "\u957f\u4e30"
 
     const-string v2, "CHANG"
 
@@ -161,7 +161,7 @@
     .line 20
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长葛"
+    const-string v1, "\u957f\u845b"
 
     const-string v2, "CHANG"
 
@@ -176,7 +176,7 @@
     .line 21
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长海"
+    const-string v1, "\u957f\u6d77"
 
     const-string v2, "CHANG"
 
@@ -191,7 +191,7 @@
     .line 22
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长乐"
+    const-string v1, "\u957f\u4e50"
 
     const-string v2, "CHANG"
 
@@ -206,7 +206,7 @@
     .line 23
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长岭"
+    const-string v1, "\u957f\u5cad"
 
     const-string v2, "CHANG"
 
@@ -221,7 +221,7 @@
     .line 24
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长宁"
+    const-string v1, "\u957f\u5b81"
 
     const-string v2, "CHANG"
 
@@ -236,7 +236,7 @@
     .line 25
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长清"
+    const-string v1, "\u957f\u6e05"
 
     const-string v2, "CHANG"
 
@@ -251,7 +251,7 @@
     .line 26
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长沙"
+    const-string v1, "\u957f\u6c99"
 
     const-string v2, "CHANG"
 
@@ -266,7 +266,7 @@
     .line 27
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长寿"
+    const-string v1, "\u957f\u5bff"
 
     const-string v2, "CHANG"
 
@@ -281,7 +281,7 @@
     .line 28
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长顺"
+    const-string v1, "\u957f\u987a"
 
     const-string v2, "CHANG"
 
@@ -296,7 +296,7 @@
     .line 29
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长泰"
+    const-string v1, "\u957f\u6cf0"
 
     const-string v2, "CHANG"
 
@@ -311,7 +311,7 @@
     .line 30
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长汀"
+    const-string v1, "\u957f\u6c40"
 
     const-string v2, "CHANG"
 
@@ -326,7 +326,7 @@
     .line 31
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长武"
+    const-string v1, "\u957f\u6b66"
 
     const-string v2, "CHANG"
 
@@ -341,7 +341,7 @@
     .line 32
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长阳"
+    const-string v1, "\u957f\u9633"
 
     const-string v2, "CHANG"
 
@@ -356,7 +356,7 @@
     .line 33
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长兴"
+    const-string v1, "\u957f\u5174"
 
     const-string v2, "CHANG"
 
@@ -371,7 +371,7 @@
     .line 34
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长垣"
+    const-string v1, "\u957f\u57a3"
 
     const-string v2, "CHANG"
 
@@ -386,7 +386,7 @@
     .line 35
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "长治"
+    const-string v1, "\u957f\u6cbb"
 
     const-string v2, "CHANG"
 
@@ -401,7 +401,7 @@
     .line 36
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "重庆"
+    const-string v1, "\u91cd\u5e86"
 
     const-string v2, "CHONG"
 
@@ -416,7 +416,7 @@
     .line 37
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "都市"
+    const-string v1, "\u90fd\u5e02"
 
     const-string v2, "DU"
 
@@ -431,7 +431,7 @@
     .line 38
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "都匀"
+    const-string v1, "\u90fd\u5300"
 
     const-string v2, "DU"
 
@@ -446,7 +446,7 @@
     .line 39
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "都江堰"
+    const-string v1, "\u90fd\u6c5f\u5830"
 
     const-string v2, "DU"
 
@@ -463,7 +463,7 @@
     .line 40
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "都安"
+    const-string v1, "\u90fd\u5b89"
 
     const-string v2, "DU"
 
@@ -478,7 +478,7 @@
     .line 41
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "都昌"
+    const-string v1, "\u90fd\u660c"
 
     const-string v2, "DU"
 
@@ -493,7 +493,7 @@
     .line 42
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "涡阳"
+    const-string v1, "\u6da1\u9633"
 
     const-string v2, "GUO"
 
@@ -508,7 +508,7 @@
     .line 43
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "还呗"
+    const-string v1, "\u8fd8\u5457"
 
     const-string v2, "HUAN"
 
@@ -523,7 +523,7 @@
     .line 44
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "还钱"
+    const-string v1, "\u8fd8\u94b1"
 
     const-string v2, "HUAN"
 
@@ -538,7 +538,7 @@
     .line 45
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "且末"
+    const-string v1, "\u4e14\u672b"
 
     const-string v2, "JU"
 
@@ -553,7 +553,7 @@
     .line 46
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "筠连"
+    const-string v1, "\u7b60\u8fde"
 
     const-string v2, "JUN"
 
@@ -568,7 +568,7 @@
     .line 47
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "会计"
+    const-string v1, "\u4f1a\u8ba1"
 
     const-string v2, "KUAI"
 
@@ -583,7 +583,7 @@
     .line 48
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "乐亭"
+    const-string v1, "\u4e50\u4ead"
 
     const-string v2, "LAO"
 
@@ -598,7 +598,7 @@
     .line 49
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "萝卜"
+    const-string v1, "\u841d\u535c"
 
     const-string v2, "LUO"
 
@@ -613,7 +613,7 @@
     .line 50
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "番禺"
+    const-string v1, "\u756a\u79ba"
 
     const-string v2, "PAN"
 
@@ -628,7 +628,7 @@
     .line 51
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "犍为"
+    const-string v1, "\u728d\u4e3a"
 
     const-string v2, "QIAN"
 
@@ -643,7 +643,7 @@
     .line 52
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "单县"
+    const-string v1, "\u5355\u53bf"
 
     const-string v2, "SHAN"
 
@@ -658,7 +658,7 @@
     .line 53
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "莘县"
+    const-string v1, "\u8398\u53bf"
 
     const-string v2, "SHEN"
 
@@ -673,7 +673,7 @@
     .line 54
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "率土之滨"
+    const-string v1, "\u7387\u571f\u4e4b\u6ee8"
 
     const-string v2, "SHUAI"
 
@@ -692,7 +692,7 @@
     .line 55
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "水浒传"
+    const-string v1, "\u6c34\u6d52\u4f20"
 
     const-string v2, "SHUI"
 
@@ -709,7 +709,7 @@
     .line 56
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "蔚来"
+    const-string v1, "\u851a\u6765"
 
     const-string v2, "WEI"
 
@@ -724,7 +724,7 @@
     .line 57
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "厦门"
+    const-string v1, "\u53a6\u95e8"
 
     const-string v2, "XIA"
 
@@ -739,7 +739,7 @@
     .line 58
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "猇亭"
+    const-string v1, "\u7307\u4ead"
 
     const-string v2, "XIAO"
 
@@ -754,7 +754,7 @@
     .line 59
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "荥阳"
+    const-string v1, "\u8365\u9633"
 
     const-string v2, "XING"
 
@@ -769,7 +769,7 @@
     .line 60
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "畜牧"
+    const-string v1, "\u755c\u7267"
 
     const-string v2, "XU"
 
@@ -784,7 +784,7 @@
     .line 61
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "银行"
+    const-string v1, "\u94f6\u884c"
 
     const-string v2, "YIN"
 
@@ -799,7 +799,7 @@
     .line 62
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "音乐"
+    const-string v1, "\u97f3\u4e50"
 
     const-string v2, "YIN"
 
@@ -814,7 +814,7 @@
     .line 63
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "尉犁"
+    const-string v1, "\u5c09\u7281"
 
     const-string v2, "YU"
 
@@ -829,7 +829,7 @@
     .line 64
     sget-object v0, Lcom/miui/home/library/utils/CustomPinyinDict;->CITY:Ljava/util/HashMap;
 
-    const-string/jumbo v1, "乐清"
+    const-string v1, "\u4e50\u6e05"
 
     const-string v2, "YUE"
 

@@ -1,32 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.allapps.AllAppsCategoryContainer
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.miui.home.launcher.allapps.category.AllAppsCategoryListContainer
-        android:orientation="vertical"
-        android:id="@id/category_list_container"
-        android:focusable="true"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-        <include
-            layout="@layout/all_apps_category_tab" />
-        <com.miui.home.library.view.viewpager.ViewPager
-            android:id="@id/all_apps_viewpager"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" />
+<com.miui.home.launcher.allapps.AllAppsCategoryContainer android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.home.launcher.allapps.category.AllAppsCategoryListContainer android:orientation="vertical" android:id="@id/category_list_container" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/all_apps_category_tab" />
+        <com.miui.home.library.view.viewpager.ViewPager android:id="@id/all_apps_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     </com.miui.home.launcher.allapps.category.AllAppsCategoryListContainer>
-    <com.miui.home.launcher.allapps.category.AllAppsCategoryEditContainer
-        android:id="@id/category_edit_container"
-        android:focusable="true"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-        <fragment
-            android:name="com.miui.home.launcher.allapps.category.AppCategorySelectFragment"
-            android:id="@id/app_category_edit_fragment"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" />
+    <com.miui.home.launcher.allapps.category.AllAppsCategoryEditContainer android:id="@id/category_edit_container" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <fragment android:name="com.miui.home.launcher.allapps.category.AppCategorySelectFragment" android:id="@id/app_category_edit_fragment" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     </com.miui.home.launcher.allapps.category.AllAppsCategoryEditContainer>
 </com.miui.home.launcher.allapps.AllAppsCategoryContainer>

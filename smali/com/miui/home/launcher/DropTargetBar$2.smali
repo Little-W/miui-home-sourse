@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DropTargetBar;)V
     .locals 0
 
-    .line 127
+    .line 128
     iput-object p1, p0, Lcom/miui/home/launcher/DropTargetBar$2;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;-><init>()V
@@ -38,7 +38,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 130
+    .line 131
     iget-object v0, p0, Lcom/miui/home/launcher/DropTargetBar$2;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getCurrentEditState()I
@@ -47,7 +47,7 @@
 
     invoke-static {v0, p1}, Lcom/miui/home/launcher/DropTargetBar;->access$802(Lcom/miui/home/launcher/DropTargetBar;I)I
 
-    .line 131
+    .line 132
     iget-object p1, p0, Lcom/miui/home/launcher/DropTargetBar$2;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-static {p1}, Lcom/miui/home/launcher/DropTargetBar;->access$600(Lcom/miui/home/launcher/DropTargetBar;)Z
@@ -58,7 +58,7 @@
 
     return-void
 
-    .line 132
+    .line 133
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/DropTargetBar$2;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 

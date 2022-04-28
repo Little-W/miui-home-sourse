@@ -25,21 +25,21 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/miui/home/launcher/upsidescene/SceneScreen;Z)V
     .locals 2
 
-    .line 123
+    .line 124
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/ScreenView;-><init>(Landroid/content/Context;)V
 
-    .line 125
+    .line 126
     iput-object p2, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
-    .line 126
+    .line 127
     iput-boolean p3, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->mIsShowName:Z
 
     const/4 p1, 0x1
 
-    .line 127
+    .line 128
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setScrollWholeScreen(Z)V
 
-    .line 128
+    .line 129
     new-instance p2, Landroid/widget/FrameLayout$LayoutParams;
 
     const/4 p3, -0x1
@@ -50,9 +50,9 @@
 
     invoke-direct {p2, p3, v0, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    const p3, 0x7f08012e
+    const p3, 0x7f080150
 
-    const v0, 0x7f08012f
+    const v0, 0x7f080151
 
     invoke-virtual {p0, p2, p3, v0, p1}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setSlideBarPosition(Landroid/widget/FrameLayout$LayoutParams;IIZ)V
 
@@ -62,7 +62,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;)Landroid/content/Context;
     .locals 0
 
-    .line 24
+    .line 25
     iget-object p0, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -71,7 +71,7 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;Landroid/view/View;Landroid/graphics/drawable/Drawable;Lcom/miui/home/launcher/ItemInfo;)V
     .locals 0
 
-    .line 24
+    .line 25
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->doDrag(Landroid/view/View;Landroid/graphics/drawable/Drawable;Lcom/miui/home/launcher/ItemInfo;)V
 
     return-void
@@ -80,26 +80,26 @@
 .method private doDrag(Landroid/view/View;Landroid/graphics/drawable/Drawable;Lcom/miui/home/launcher/ItemInfo;)V
     .locals 10
 
-    .line 94
+    .line 95
     instance-of v0, p3, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 95
+    .line 96
     move-object v0, p3
 
     check-cast v0, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;
 
-    .line 96
+    .line 97
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 97
+    .line 98
     iget-object v3, v0, Lcom/miui/home/launcher/LauncherAppWidgetProviderInfo;->providerInfo:Landroid/appwidget/AppWidgetProviderInfo;
 
     iget-object v3, v3, Landroid/appwidget/AppWidgetProviderInfo;->provider:Landroid/content/ComponentName;
@@ -128,7 +128,7 @@
 
     if-eqz p2, :cond_1
 
-    .line 102
+    .line 103
     invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
     move-result-object p2
@@ -144,7 +144,7 @@
     :cond_1
     move-object v2, v0
 
-    .line 105
+    .line 106
     :goto_1
     iget-object p2, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
@@ -168,14 +168,14 @@
 
     div-float v7, p2, v0
 
-    .line 106
+    .line 107
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result p2
 
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
-    .line 107
+    .line 108
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getEditModeScaleFactor()F
 
     move-result v0
@@ -198,15 +198,15 @@
 
     const/4 v1, 0x0
 
-    .line 106
+    .line 107
     invoke-virtual {v2, v1, v1, p2, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     const/4 p2, 0x2
 
-    .line 109
+    .line 110
     new-array v0, p2, [I
 
-    .line 110
+    .line 111
     iget-object v3, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getLauncher()Lcom/miui/home/launcher/Launcher;
@@ -217,17 +217,17 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, p1, v0, v1}, Lcom/miui/home/launcher/DragLayer;->getLocationInDragLayer(Landroid/view/View;[IZ)F
+    invoke-static {p1, v3, v0, v1}, Lcom/miui/home/launcher/common/Utilities;->getLocationInParent(Landroid/view/View;Landroid/view/View;[IZ)F
 
-    .line 111
+    .line 112
     aget v1, v0, v1
 
     const/4 v3, 0x1
 
-    .line 112
+    .line 113
     aget v0, v0, v3
 
-    .line 113
+    .line 114
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v3
@@ -248,7 +248,7 @@
 
     add-int v5, v1, v3
 
-    .line 114
+    .line 115
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result p1
@@ -269,7 +269,7 @@
 
     add-int v6, v0, p1
 
-    .line 116
+    .line 117
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->getLauncher()Lcom/miui/home/launcher/Launcher;
@@ -288,10 +288,10 @@
 
     move-object v8, p0
 
-    .line 117
+    .line 118
     invoke-virtual/range {v1 .. v9}, Lcom/miui/home/launcher/DragController;->startDrag(Landroid/graphics/drawable/Drawable;ZLcom/miui/home/launcher/ItemInfo;IIFLcom/miui/home/launcher/DragSource;I)Z
 
-    .line 119
+    .line 120
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->onExternalDragStart()V
@@ -312,7 +312,7 @@
 .method public onDragCompleted(Lcom/miui/home/launcher/DropTarget;Lcom/miui/home/launcher/DragObject;)V
     .locals 0
 
-    .line 152
+    .line 153
     iget-object p1, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->mSceneScreen:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->onExternalDragEnd()V
@@ -343,7 +343,7 @@
         }
     .end annotation
 
-    .line 135
+    .line 136
     new-instance v0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;-><init>(Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;Ljava/util/List;)V
@@ -352,7 +352,7 @@
 
     move v1, p1
 
-    .line 136
+    .line 137
     :goto_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;->getCount()I
 
@@ -364,12 +364,12 @@
 
     const/4 v2, 0x0
 
-    .line 137
+    .line 138
     invoke-virtual {v0, v1, v2, v2}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v2
 
-    .line 138
+    .line 139
     invoke-virtual {p0}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -390,7 +390,7 @@
 
     goto :goto_0
 
-    .line 142
+    .line 143
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;->getCount()I
 
@@ -410,7 +410,7 @@
 
     const/16 p1, 0x8
 
-    .line 143
+    .line 144
     :cond_2
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setSlideBarVisibility(I)V
 

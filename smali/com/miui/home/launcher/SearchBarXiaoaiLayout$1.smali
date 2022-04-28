@@ -50,53 +50,41 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->isSearchBarAreaLight()Z
+    const v1, 0x7f0801de
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const v1, 0x7f0801b1
-
-    goto :goto_0
-
-    :cond_0
-    const v1, 0x7f0801af
-
-    :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 95
+    .line 94
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarXiaoaiLayout;
 
     instance-of v2, v0, Landroid/graphics/drawable/LayerDrawable;
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_0
 
     const/4 v2, 0x1
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_1
+    :cond_0
     const/4 v2, 0x0
 
-    :goto_1
+    :goto_0
     invoke-static {v1, v2}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->access$002(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;Z)Z
 
-    .line 96
+    .line 95
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarXiaoaiLayout;
 
     invoke-static {v1}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->access$000(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)Z
 
     move-result v1
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_2
 
     const-string v1, "SearchBarStyleUtil"
 
-    .line 97
+    .line 96
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -119,7 +107,9 @@
 
     move-result-object v2
 
-    .line 98
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 97
     invoke-static {}, Lcom/miui/home/launcher/SearchBarStyleData;->getInstance()Lcom/miui/home/launcher/SearchBarStyleData;
 
     move-result-object v1
@@ -134,15 +124,15 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_1
 
-    goto :goto_2
+    goto :goto_1
 
-    :cond_2
+    :cond_1
     move-object v0, v1
 
-    :cond_3
-    :goto_2
+    :cond_2
+    :goto_1
     return-object v0
 .end method
 
@@ -160,7 +150,7 @@
 .method protected onPostExecute(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 106
+    .line 105
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout$1;->this$0:Lcom/miui/home/launcher/SearchBarXiaoaiLayout;
 
     invoke-static {v0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->access$100(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)Landroid/widget/ImageView;

@@ -30,7 +30,7 @@
 
     move-object v0, p1
 
-    .line 638
+    .line 635
     iput-object v0, v8, Landroidx/recyclerview/widget/ItemTouchHelper$3;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
     move/from16 v0, p9
@@ -67,23 +67,23 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 641
+    .line 638
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/ItemTouchHelper$RecoverAnimation;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 642
+    .line 639
     iget-boolean p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->mOverridden:Z
 
     if-eqz p1, :cond_0
 
     return-void
 
-    .line 645
+    .line 642
     :cond_0
     iget p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->val$swipeDir:I
 
     if-gtz p1, :cond_1
 
-    .line 647
+    .line 644
     iget-object p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
     iget-object p1, p1, Landroidx/recyclerview/widget/ItemTouchHelper;->mCallback:Landroidx/recyclerview/widget/ItemTouchHelper$Callback;
@@ -98,7 +98,7 @@
 
     goto :goto_0
 
-    .line 651
+    .line 648
     :cond_1
     iget-object p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
@@ -112,20 +112,20 @@
 
     const/4 p1, 0x1
 
-    .line 652
+    .line 649
     iput-boolean p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->mIsPendingCleanup:Z
 
-    .line 653
+    .line 650
     iget p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->val$swipeDir:I
 
     if-lez p1, :cond_2
 
-    .line 656
+    .line 653
     iget-object v0, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
     invoke-virtual {v0, p0, p1}, Landroidx/recyclerview/widget/ItemTouchHelper;->postDispatchSwipe(Landroidx/recyclerview/widget/ItemTouchHelper$RecoverAnimation;I)V
 
-    .line 660
+    .line 657
     :cond_2
     :goto_0
     iget-object p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
@@ -138,7 +138,7 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 661
+    .line 658
     iget-object p1, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->this$0:Landroidx/recyclerview/widget/ItemTouchHelper;
 
     iget-object v0, p0, Landroidx/recyclerview/widget/ItemTouchHelper$3;->val$prevSelected:Landroidx/recyclerview/widget/RecyclerView$ViewHolder;

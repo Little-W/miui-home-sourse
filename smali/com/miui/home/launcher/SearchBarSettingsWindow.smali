@@ -39,7 +39,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d00fa
+    const v2, 0x7f0d0122
 
     const/4 v3, 0x0
 
@@ -47,7 +47,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0a01b8
+    const v2, 0x7f0a020c
 
     .line 30
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -86,7 +86,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const p1, 0x7f110156
+    const p1, 0x7f11016b
 
     .line 37
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->setAnimationStyle(I)V
@@ -100,24 +100,24 @@
 .method private getYOffset()I
     .locals 3
 
-    .line 71
+    .line 78
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 72
+    .line 79
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarSettingsWindow;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
 
     move-result-object v1
 
-    .line 73
+    .line 80
     iget-object v2, p0, Lcom/miui/home/launcher/SearchBarSettingsWindow;->mAnchor:Landroid/view/View;
 
     invoke-virtual {v1, v2, v0}, Landroid/widget/FrameLayout;->offsetDescendantRectToMyCoords(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 74
+    .line 81
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getHeight()I
 
     move-result v1
@@ -128,12 +128,12 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarSettingsWindow;->mAnchor:Landroid/view/View;
 
-    .line 75
+    .line 82
     invoke-virtual {v0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f07032d
+    const v2, 0x7f0703d5
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -147,7 +147,7 @@
 .method private launcherGlobalBrowserSetting()V
     .locals 3
 
-    .line 91
+    .line 98
     :try_start_0
     new-instance v0, Landroid/content/Intent;
 
@@ -157,15 +157,15 @@
 
     const-string v1, "com.android.browser"
 
-    .line 92
+    .line 99
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const v1, 0x10008000
 
-    .line 93
+    .line 100
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 94
+    .line 101
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarSettingsWindow;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->getContentView()Landroid/view/View;
@@ -187,7 +187,9 @@
 
     const-string v1, "Global search activity not found"
 
-    .line 96
+    .line 103
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     :goto_0
     return-void
 .end method
@@ -195,7 +197,7 @@
 .method private launcherGlobalSearchSetting()V
     .locals 3
 
-    .line 80
+    .line 87
     :try_start_0
     new-instance v0, Landroid/content/Intent;
 
@@ -205,15 +207,15 @@
 
     const-string v1, "com.android.quicksearchbox"
 
-    .line 81
+    .line 88
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const v1, 0x10008000
 
-    .line 82
+    .line 89
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 83
+    .line 90
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarSettingsWindow;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->getContentView()Landroid/view/View;
@@ -235,7 +237,9 @@
 
     const-string v1, "Global search activity not found"
 
-    .line 85
+    .line 92
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     :goto_0
     return-void
 .end method
@@ -243,14 +247,14 @@
 .method private setAnchor(Landroid/view/View;)V
     .locals 1
 
-    .line 46
+    .line 47
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->getLauncher(Landroid/view/View;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBarSettingsWindow;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 47
+    .line 48
     iput-object p1, p0, Lcom/miui/home/launcher/SearchBarSettingsWindow;->mAnchor:Landroid/view/View;
 
     return-void
@@ -261,7 +265,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 52
+    .line 53
     invoke-static {}, Lcom/miui/home/launcher/SearchBarStyleData;->getInstance()Lcom/miui/home/launcher/SearchBarStyleData;
 
     move-result-object p1
@@ -278,7 +282,7 @@
 
     goto :goto_0
 
-    .line 53
+    .line 54
     :cond_0
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
@@ -293,7 +297,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 54
+    .line 55
     invoke-static {}, Lcom/miui/home/launcher/SearchBarStyleData;->getInstance()Lcom/miui/home/launcher/SearchBarStyleData;
 
     move-result-object p1
@@ -304,7 +308,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 55
+    .line 56
     iget-object p1, p0, Lcom/miui/home/launcher/SearchBarSettingsWindow;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -319,15 +323,15 @@
 
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackSearchBarSettingClick(IILjava/lang/String;)V
 
-    .line 56
+    .line 57
     invoke-direct {p0}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->launcherGlobalBrowserSetting()V
 
-    .line 57
+    .line 58
     invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->dismiss()V
 
     return-void
 
-    .line 61
+    .line 62
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/SearchBarSettingsWindow;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -343,10 +347,10 @@
 
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackSearchBarSettingClick(IILjava/lang/String;)V
 
-    .line 62
+    .line 63
     invoke-direct {p0}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->launcherGlobalSearchSetting()V
 
-    .line 63
+    .line 64
     invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->dismiss()V
 
     return-void
@@ -355,7 +359,7 @@
 .method show()V
     .locals 4
 
-    .line 67
+    .line 68
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarSettingsWindow;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
@@ -371,6 +375,56 @@
     const/4 v3, 0x0
 
     invoke-virtual {p0, v0, v2, v3, v1}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->showAtLocation(Landroid/view/View;III)V
+
+    .line 69
+    invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarSettingsWindow;->getContentView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    .line 70
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string v2, "window"
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/WindowManager;
+
+    .line 71
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/WindowManager$LayoutParams;
+
+    .line 72
+    iget v3, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    or-int/lit8 v3, v3, 0x2
+
+    iput v3, v2, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    const/high16 v3, 0x3f000000    # 0.5f
+
+    .line 73
+    iput v3, v2, Landroid/view/WindowManager$LayoutParams;->dimAmount:F
+
+    .line 74
+    invoke-interface {v1, v0, v2}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method

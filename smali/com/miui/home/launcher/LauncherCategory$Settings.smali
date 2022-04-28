@@ -24,7 +24,7 @@
 
     const-string v0, "content://com.miui.home.launcher.category"
 
-    .line 289
+    .line 293
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -37,7 +37,7 @@
 .method public static call(Landroid/content/ContentResolver;Ljava/lang/String;)Landroid/os/Bundle;
     .locals 2
 
-    .line 296
+    .line 300
     sget-object v0, Lcom/miui/home/launcher/LauncherCategory$Settings;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v1, 0x0

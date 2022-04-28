@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/recents/GestureStateMachine;)V
     .locals 0
 
-    .line 69
+    .line 73
     iput-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$InitState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/recents/GestureStateMachine;Lcom/miui/home/recents/GestureStateMachine$1;)V
     .locals 0
 
-    .line 69
+    .line 73
     invoke-direct {p0, p1}, Lcom/miui/home/recents/GestureStateMachine$InitState;-><init>(Lcom/miui/home/recents/GestureStateMachine;)V
 
     return-void
@@ -44,7 +44,7 @@
 .method public processMessage(Landroid/os/Message;)Z
     .locals 3
 
-    .line 72
+    .line 76
     iget-object v0, p0, Lcom/miui/home/recents/GestureStateMachine$InitState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -63,9 +63,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/miui/home/recents/GestureStateMachine;->access$800(Lcom/miui/home/recents/GestureStateMachine;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/miui/home/recents/GestureStateMachine;->access$900(Lcom/miui/home/recents/GestureStateMachine;Ljava/lang/String;)V
 
-    .line 73
+    .line 77
     iget v0, p1, Landroid/os/Message;->what:I
 
     const/4 v1, 0x1
@@ -74,7 +74,7 @@
 
     goto :goto_1
 
-    .line 75
+    .line 79
     :cond_0
     iget v0, p1, Landroid/os/Message;->arg1:I
 
@@ -82,48 +82,10 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 76
-    iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$InitState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
-
-    invoke-static {p1}, Lcom/miui/home/recents/GestureStateMachine;->access$900(Lcom/miui/home/recents/GestureStateMachine;)Lcom/miui/home/recents/GestureStateMachine$HomeDragState;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcom/miui/home/recents/GestureStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
-
-    goto :goto_0
-
-    .line 77
-    :cond_1
-    iget v0, p1, Landroid/os/Message;->arg1:I
-
-    const/16 v2, 0x65
-
-    if-ne v0, v2, :cond_2
-
-    .line 78
-    iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$InitState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
-
-    invoke-static {p1}, Lcom/miui/home/recents/GestureStateMachine;->access$1000(Lcom/miui/home/recents/GestureStateMachine;)Lcom/miui/home/recents/GestureStateMachine$AppDragState;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcom/miui/home/recents/GestureStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
-
-    goto :goto_0
-
-    .line 79
-    :cond_2
-    iget v0, p1, Landroid/os/Message;->arg1:I
-
-    const/16 v2, 0x66
-
-    if-ne v0, v2, :cond_3
-
     .line 80
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$InitState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
-    invoke-static {p1}, Lcom/miui/home/recents/GestureStateMachine;->access$1100(Lcom/miui/home/recents/GestureStateMachine;)Lcom/miui/home/recents/GestureStateMachine$RecentsDragState;
+    invoke-static {p1}, Lcom/miui/home/recents/GestureStateMachine;->access$1000(Lcom/miui/home/recents/GestureStateMachine;)Lcom/miui/home/recents/GestureStateMachine$HomeDragState;
 
     move-result-object v0
 
@@ -132,6 +94,44 @@
     goto :goto_0
 
     .line 81
+    :cond_1
+    iget v0, p1, Landroid/os/Message;->arg1:I
+
+    const/16 v2, 0x65
+
+    if-ne v0, v2, :cond_2
+
+    .line 82
+    iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$InitState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
+
+    invoke-static {p1}, Lcom/miui/home/recents/GestureStateMachine;->access$1100(Lcom/miui/home/recents/GestureStateMachine;)Lcom/miui/home/recents/GestureStateMachine$AppWaitToDragState;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/recents/GestureStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
+
+    goto :goto_0
+
+    .line 83
+    :cond_2
+    iget v0, p1, Landroid/os/Message;->arg1:I
+
+    const/16 v2, 0x66
+
+    if-ne v0, v2, :cond_3
+
+    .line 84
+    iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$InitState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
+
+    invoke-static {p1}, Lcom/miui/home/recents/GestureStateMachine;->access$1200(Lcom/miui/home/recents/GestureStateMachine;)Lcom/miui/home/recents/GestureStateMachine$RecentsDragState;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/recents/GestureStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
+
+    goto :goto_0
+
+    .line 85
     :cond_3
     iget p1, p1, Landroid/os/Message;->arg1:I
 
@@ -139,16 +139,16 @@
 
     if-ne p1, v0, :cond_4
 
-    .line 82
+    .line 86
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$InitState;->this$0:Lcom/miui/home/recents/GestureStateMachine;
 
-    invoke-static {p1}, Lcom/miui/home/recents/GestureStateMachine;->access$1200(Lcom/miui/home/recents/GestureStateMachine;)Lcom/miui/home/recents/GestureStateMachine$QuickSwitchTaskHoldState;
+    invoke-static {p1}, Lcom/miui/home/recents/GestureStateMachine;->access$1300(Lcom/miui/home/recents/GestureStateMachine;)Lcom/miui/home/recents/GestureStateMachine$QuickSwitchTaskHoldState;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/GestureStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
-    .line 84
+    .line 88
     :cond_4
     :goto_0
     iget-object p1, p0, Lcom/miui/home/recents/GestureStateMachine$InitState;->this$0:Lcom/miui/home/recents/GestureStateMachine;

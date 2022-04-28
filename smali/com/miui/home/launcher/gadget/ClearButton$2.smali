@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/gadget/ClearButton;)V
     .locals 0
 
-    .line 66
+    .line 70
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton$2;->this$0:Lcom/miui/home/launcher/gadget/ClearButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +38,12 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 69
+    .line 73
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton$2;->this$0:Lcom/miui/home/launcher/gadget/ClearButton;
 
     invoke-static {p1}, Lcom/miui/home/launcher/gadget/ClearButton;->access$100(Lcom/miui/home/launcher/gadget/ClearButton;)V
 
-    .line 70
+    .line 74
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton$2;->this$0:Lcom/miui/home/launcher/gadget/ClearButton;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/gadget/ClearButton;->trackClick()V

@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static sIsDebugLogEnable:Z
+.field private static sIsDebugLogEnable:Z = false
 
 .field private static sRecordedLogHashMap:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -154,6 +154,8 @@
 
     move-result-object p0
 
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 .end method
 
@@ -196,51 +198,6 @@
     .line 105
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->addMessage(Ljava/lang/String;)V
 
-    return-void
-.end method
-
-.method public static setDebugLogState(Z)V
-    .locals 3
-
-    const-string v0, "MiuiHomeLog"
-
-    .line 32
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "setDebugLogState, enable="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 33
-    sget-boolean v0, Lcom/miui/home/launcher/MiuiHomeLog;->sIsDebugLogEnable:Z
-
-    if-eq v0, p0, :cond_0
-
-    .line 34
-    sput-boolean p0, Lcom/miui/home/launcher/MiuiHomeLog;->sIsDebugLogEnable:Z
-
-    .line 35
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object p0
-
-    const-string v0, "is_miui_home_debug_log_enable"
-
-    sget-boolean v1, Lcom/miui/home/launcher/MiuiHomeLog;->sIsDebugLogEnable:Z
-
-    invoke-static {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
-
-    :cond_0
     return-void
 .end method
 

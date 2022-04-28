@@ -1,75 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    android:id="@id/small_window_edit"
-    android:visibility="gone"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout
-        android:background="#33e3e3e3"
-        android:focusable="true"
-        android:clickable="true"
-        android:layout_width="fill_parent"
-        android:layout_height="306.89844dip">
-        <TextView
-            android:textSize="25.0sp"
-            android:textColor="@android:color/white"
-            android:id="@id/small_window_edit_title"
-            android:layout_width="259.0dip"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="58.179993dip"
-            android:text="@string/small_window_edit_title"
-            android:singleLine="true"
-            android:fontFamily="mipro-medium"
-            android:layout_marginStart="@dimen/small_window_left_padding" />
-        <TextView
-            android:textSize="13.0sp"
-            android:textColor="#66ffffff"
-            android:id="@id/small_window_edit_content"
-            android:layout_width="259.0dip"
-            android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:layout_below="@id/small_window_edit_title"
-            android:fontFamily="mipro-regular"
-            android:layout_alignStart="@id/small_window_edit_title" />
-        <Button
-            android:textSize="14.549988sp"
-            android:textColor="#b3000000"
-            android:id="@id/small_window_button_complete"
-            android:background="@drawable/button_complete_background"
-            android:layout_width="61.809998dip"
-            android:layout_height="28.359985dip"
-            android:text="@string/small_window_button_complete"
-            android:layout_alignBottom="@id/small_window_edit_title"
-            android:fontFamily="mipro-medium"
-            android:layout_marginEnd="@dimen/small_window_right_padding"
-            android:layout_alignParentEnd="true" />
-        <com.miui.home.smallwindow.SmallWindowSelectedView
-            android:id="@id/small_window_selected_girdview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="11.629974dip"
-            android:layout_below="@id/small_window_edit_content"
-            android:overScrollMode="never"
-            android:layout_marginStart="17.449982dip"
-            android:layout_marginEnd="17.449982dip" />
-        <TextView
-            android:textSize="13.0sp"
-            android:textColor="#66ffffff"
-            android:id="@id/empty"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="184.72998dip"
-            android:text="@string/small_window_empty"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="mipro-regular" />
+<LinearLayout android:orientation="vertical" android:id="@id/small_window_edit" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#33e3e3e3" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/small_window_edit_head_background_height">
+        <TextView android:textSize="@dimen/small_window_edit_title_text_size" android:textColor="@android:color/white" android:id="@id/small_window_edit_title" android:layout_width="259.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/small_window_edit_title_top_margin" android:text="@string/small_window_edit_title" android:singleLine="true" android:fontFamily="mipro-medium" android:layout_marginStart="@dimen/small_window_left_padding" />
+        <TextView android:textSize="13.0sp" android:textColor="#66ffffff" android:id="@id/small_window_edit_content" android:layout_width="259.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/small_window_edit_title" android:fontFamily="mipro-regular" android:layout_alignStart="@id/small_window_edit_title" />
+        <Button android:textSize="14.549988sp" android:textColor="#b3000000" android:id="@id/small_window_button_complete" android:background="@drawable/button_complete_background" android:layout_width="61.809998dip" android:layout_height="28.359985dip" android:text="@string/small_window_button_complete" android:layout_alignBottom="@id/small_window_edit_title" android:fontFamily="mipro-medium" android:layout_marginEnd="@dimen/small_window_right_padding" android:layout_alignParentEnd="true" />
+        <com.miui.home.smallwindow.SmallWindowSelectedView android:id="@id/small_window_selected_girdview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.629974dip" android:layout_below="@id/small_window_edit_content" android:overScrollMode="never" android:layout_marginStart="17.449982dip" android:layout_marginEnd="17.449982dip" />
+        <TextView android:textSize="13.0sp" android:textColor="#66ffffff" android:id="@id/empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="184.72998dip" android:text="@string/small_window_empty" android:layout_centerHorizontal="true" android:fontFamily="mipro-regular" />
     </RelativeLayout>
-    <com.miui.home.smallwindow.SmallWindowEditView
-        android:layout_gravity="center_vertical"
-        android:id="@id/small_window_alternative_girdview"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/edit_bottom_padding"
-        android:layout_marginStart="17.449982dip" />
+    <com.miui.home.smallwindow.SmallWindowEditView android:layout_gravity="center_vertical" android:id="@id/small_window_alternative_girdview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/edit_bottom_padding" android:layout_marginStart="17.449982dip" />
 </LinearLayout>

@@ -25,7 +25,7 @@
 .method private constructor <init>(Lmiuix/visual/check/VisualCheckBox;)V
     .locals 0
 
-    .line 83
+    .line 143
     iput-object p1, p0, Lmiuix/visual/check/VisualCheckBox$PassThroughHierarchyChangeListener;->this$0:Lmiuix/visual/check/VisualCheckBox;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lmiuix/visual/check/VisualCheckBox;Lmiuix/visual/check/VisualCheckBox$1;)V
     .locals 0
 
-    .line 83
+    .line 143
     invoke-direct {p0, p1}, Lmiuix/visual/check/VisualCheckBox$PassThroughHierarchyChangeListener;-><init>(Lmiuix/visual/check/VisualCheckBox;)V
 
     return-void
@@ -47,17 +47,17 @@
 .method public onChildViewAdded(Landroid/view/View;Landroid/view/View;)V
     .locals 1
 
-    .line 87
+    .line 147
     iget-object v0, p0, Lmiuix/visual/check/VisualCheckBox$PassThroughHierarchyChangeListener;->this$0:Lmiuix/visual/check/VisualCheckBox;
 
     if-ne p1, v0, :cond_0
 
-    .line 88
+    .line 148
     instance-of p1, p2, Lmiuix/visual/check/VisualCheckItem;
 
     if-eqz p1, :cond_0
 
-    .line 89
+    .line 149
     invoke-static {v0}, Lmiuix/visual/check/VisualCheckBox;->access$100(Lmiuix/visual/check/VisualCheckBox;)Ljava/util/List;
 
     move-result-object p1
@@ -73,17 +73,17 @@
 .method public onChildViewRemoved(Landroid/view/View;Landroid/view/View;)V
     .locals 1
 
-    .line 96
+    .line 156
     iget-object v0, p0, Lmiuix/visual/check/VisualCheckBox$PassThroughHierarchyChangeListener;->this$0:Lmiuix/visual/check/VisualCheckBox;
 
     if-ne p1, v0, :cond_0
 
-    .line 97
+    .line 157
     instance-of p1, p2, Lmiuix/visual/check/VisualCheckItem;
 
     if-eqz p1, :cond_0
 
-    .line 98
+    .line 158
     invoke-static {v0}, Lmiuix/visual/check/VisualCheckBox;->access$100(Lmiuix/visual/check/VisualCheckBox;)Ljava/util/List;
 
     move-result-object p1

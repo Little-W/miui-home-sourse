@@ -14,9 +14,9 @@
     <bool name="config_hardwareAccelerated">true</bool>
     <bool name="config_hide_hotseats_app_title">true</bool>
     <bool name="config_materialPreferenceIconSpaceReserved">false</bool>
-    <bool name="enable_system_alarm_service_default">false</bool>
-    <bool name="enable_system_foreground_service_default">true</bool>
-    <bool name="enable_system_job_service_default">true</bool>
+    <bool name="is_drawer_setting">false</bool>
+    <bool name="miuix_appcompat_floating_window_is_translucent">false</bool>
+    <bool name="miuix_appcompat_window_floating">false</bool>
     <bool name="preference_item_bg_enable_variablePadding">false</bool>
     <bool name="sliding_settings_in_desktop_mode_page">true</bool>
     <bool name="sliding_settings_in_miuihome_when_no_newhome">true</bool>
@@ -29,7 +29,5 @@
     <bool name="support_minus_one_screen_view_tag_blur">true</bool>
     <bool name="support_minus_one_screen_view_tag_listener">true</bool>
     <bool name="treat_as_land">false</bool>
-    <bool name="workmanager_test_configuration">false</bool>
     <bool name="xiaomi_market_message_decoupling">true</bool>
-    <bool name="is_miui_home_debug_log_enable">false</bool>
 </resources>

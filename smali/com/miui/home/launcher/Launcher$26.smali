@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3680
+    .line 3798
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$26;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,11 +35,10 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 3683
-    invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
+    .line 3801
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$26;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 3684
-    invoke-static {}, Lcom/miui/home/launcher/common/SecurityHide;->getSecurityHideItemsAsync()V
+    invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->updateIsDefaultIcon(Landroid/content/Context;)V
 
     return-void
 .end method

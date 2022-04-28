@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 11
+    .line 15
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/LauncherMode;-><init>()V
 
     return-void
@@ -69,7 +69,7 @@
 
     if-eqz p3, :cond_2
 
-    .line 26
+    .line 30
     invoke-super {p0, p1, p2, p3}, Lcom/miui/home/launcher/allapps/LauncherMode;->canLoadShortcutInfo(Ljava/util/HashMap;Lcom/miui/home/launcher/ShortcutInfo;Z)Z
 
     move-result p1
@@ -80,7 +80,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 27
+    .line 31
     invoke-virtual {p2}, Lcom/miui/home/launcher/ShortcutInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object p1
@@ -110,6 +110,42 @@
     const-string v0, ""
 
     return-object v0
+.end method
+
+.method public getLauncherDatabaseDir(Landroid/content/Context;)Ljava/io/File;
+    .locals 1
+
+    .line 59
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPocoLauncher()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "foo"
+
+    .line 60
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/io/File;->getParentFile()Ljava/io/File;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 62
+    :cond_0
+    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/DrawerLauncherMode;->getModeName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public getModeName()Ljava/lang/String;

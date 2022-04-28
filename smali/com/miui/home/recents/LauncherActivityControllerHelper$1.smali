@@ -31,7 +31,7 @@
 .method constructor <init>(Lcom/miui/home/recents/LauncherActivityControllerHelper;Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/LauncherState;Ljava/util/function/Consumer;)V
     .locals 0
 
-    .line 109
+    .line 117
     iput-object p1, p0, Lcom/miui/home/recents/LauncherActivityControllerHelper$1;->this$0:Lcom/miui/home/recents/LauncherActivityControllerHelper;
 
     iput-object p2, p0, Lcom/miui/home/recents/LauncherActivityControllerHelper$1;->val$activity:Lcom/miui/home/launcher/Launcher;
@@ -50,7 +50,7 @@
 .method public createActivityController(J)V
     .locals 6
 
-    .line 112
+    .line 120
     iget-object v0, p0, Lcom/miui/home/recents/LauncherActivityControllerHelper$1;->this$0:Lcom/miui/home/recents/LauncherActivityControllerHelper;
 
     iget-object v1, p0, Lcom/miui/home/recents/LauncherActivityControllerHelper$1;->val$activity:Lcom/miui/home/launcher/Launcher;

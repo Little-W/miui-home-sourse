@@ -174,13 +174,13 @@
     .line 308
     iget-object v0, p0, Lcom/miui/home/launcher/MinusOneScreenView;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/HotSeats;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getHotSeats()Lcom/miui/home/launcher/hotseats/HotSeats;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/miui/home/launcher/MinusOneScreenView;->mHotHeatTouchRect:Landroid/graphics/Rect;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/HotSeats;->getHitRect(Landroid/graphics/Rect;)V
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/hotseats/HotSeats;->getHitRect(Landroid/graphics/Rect;)V
 
     .line 309
     iget-object v0, p0, Lcom/miui/home/launcher/MinusOneScreenView;->mHotHeatTouchRect:Landroid/graphics/Rect;
@@ -1299,6 +1299,8 @@
 
     move-result-object v0
 
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     :goto_0
     return-void
 .end method
@@ -1498,6 +1500,8 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 99
     :cond_5

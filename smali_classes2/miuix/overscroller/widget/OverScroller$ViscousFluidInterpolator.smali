@@ -29,7 +29,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 1127
+    .line 1128
     invoke-static {v0}, Lmiuix/overscroller/widget/OverScroller$ViscousFluidInterpolator;->viscousFluid(F)F
 
     move-result v1
@@ -38,7 +38,7 @@
 
     sput v1, Lmiuix/overscroller/widget/OverScroller$ViscousFluidInterpolator;->VISCOUS_FLUID_NORMALIZE:F
 
-    .line 1129
+    .line 1130
     sget v1, Lmiuix/overscroller/widget/OverScroller$ViscousFluidInterpolator;->VISCOUS_FLUID_NORMALIZE:F
 
     invoke-static {v0}, Lmiuix/overscroller/widget/OverScroller$ViscousFluidInterpolator;->viscousFluid(F)F
@@ -57,7 +57,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 1117
+    .line 1118
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -80,7 +80,7 @@
 
     float-to-double v1, v1
 
-    .line 1135
+    .line 1136
     invoke-static {v1, v2}, Ljava/lang/Math;->exp(D)D
 
     move-result-wide v1
@@ -100,7 +100,7 @@
 
     float-to-double v2, p0
 
-    .line 1138
+    .line 1139
     invoke-static {v2, v3}, Ljava/lang/Math;->exp(D)D
 
     move-result-wide v2
@@ -124,7 +124,7 @@
 .method public getInterpolation(F)F
     .locals 1
 
-    .line 1146
+    .line 1147
     sget v0, Lmiuix/overscroller/widget/OverScroller$ViscousFluidInterpolator;->VISCOUS_FLUID_NORMALIZE:F
 
     invoke-static {p1}, Lmiuix/overscroller/widget/OverScroller$ViscousFluidInterpolator;->viscousFluid(F)F
@@ -139,7 +139,7 @@
 
     if-lez p1, :cond_0
 
-    .line 1148
+    .line 1149
     sget p1, Lmiuix/overscroller/widget/OverScroller$ViscousFluidInterpolator;->VISCOUS_FLUID_OFFSET:F
 
     add-float/2addr v0, p1

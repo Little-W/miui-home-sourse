@@ -23,7 +23,7 @@
 
     const-string v5, "hd"
 
-    .line 13
+    .line 16
     filled-new-array/range {v0 .. v5}, [Ljava/lang/String;
 
     move-result-object v0
@@ -38,7 +38,7 @@
 .end method
 
 .method static parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/content/ShapeFill;
-    .locals 9
+    .locals 10
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -51,52 +51,50 @@
 
     const/4 v2, 0x0
 
-    move v4, v1
+    move v5, v1
 
-    move v8, v4
+    move v9, v5
 
-    move-object v3, v2
+    move-object v4, v2
 
-    move-object v6, v3
-
-    move-object v7, v6
+    move-object v7, v4
 
     move v1, v0
 
-    .line 34
+    .line 37
     :goto_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
-    .line 35
-    sget-object v2, Lcom/airbnb/lottie/parser/ShapeFillParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+    .line 38
+    sget-object v3, Lcom/airbnb/lottie/parser/ShapeFillParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
-    invoke-virtual {p0, v2}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
+    invoke-virtual {p0, v3}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
 
-    move-result v2
+    move-result v3
 
-    packed-switch v2, :pswitch_data_0
+    packed-switch v3, :pswitch_data_0
 
-    .line 55
+    .line 58
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipName()V
 
-    .line 56
+    .line 59
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
-    .line 52
+    .line 55
     :pswitch_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
-    move-result v8
+    move-result v9
 
     goto :goto_0
 
-    .line 49
+    .line 52
     :pswitch_1
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextInt()I
 
@@ -104,58 +102,82 @@
 
     goto :goto_0
 
-    .line 46
+    .line 49
     :pswitch_2
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
-    move-result v4
+    move-result v5
+
+    goto :goto_0
+
+    .line 46
+    :pswitch_3
+    invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseInteger(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
+
+    move-result-object v2
 
     goto :goto_0
 
     .line 43
-    :pswitch_3
-    invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseInteger(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
+    :pswitch_4
+    invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseColor(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;
 
     move-result-object v7
 
     goto :goto_0
 
     .line 40
-    :pswitch_4
-    invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseColor(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;
-
-    move-result-object v6
-
-    goto :goto_0
-
-    .line 37
     :pswitch_5
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
     goto :goto_0
 
     :cond_0
-    if-ne v1, v0, :cond_1
+    if-nez v2, :cond_1
 
-    .line 60
+    .line 65
+    new-instance v2, Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
+
+    new-instance p0, Lcom/airbnb/lottie/value/Keyframe;
+
+    const/16 p1, 0x64
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lcom/airbnb/lottie/value/Keyframe;-><init>(Ljava/lang/Object;)V
+
+    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-direct {v2, p0}, Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;-><init>(Ljava/util/List;)V
+
+    :cond_1
+    move-object v8, v2
+
+    if-ne v1, v0, :cond_2
+
+    .line 66
     sget-object p0, Landroid/graphics/Path$FillType;->WINDING:Landroid/graphics/Path$FillType;
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     sget-object p0, Landroid/graphics/Path$FillType;->EVEN_ODD:Landroid/graphics/Path$FillType;
 
     :goto_1
-    move-object v5, p0
+    move-object v6, p0
 
-    .line 61
+    .line 67
     new-instance p0, Lcom/airbnb/lottie/model/content/ShapeFill;
 
-    move-object v2, p0
+    move-object v3, p0
 
-    invoke-direct/range {v2 .. v8}, Lcom/airbnb/lottie/model/content/ShapeFill;-><init>(Ljava/lang/String;ZLandroid/graphics/Path$FillType;Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;Z)V
+    invoke-direct/range {v3 .. v9}, Lcom/airbnb/lottie/model/content/ShapeFill;-><init>(Ljava/lang/String;ZLandroid/graphics/Path$FillType;Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;Z)V
 
     return-object p0
 

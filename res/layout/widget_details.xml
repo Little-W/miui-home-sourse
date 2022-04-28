@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.miui.home.launcher.widget.WidgetDetailsView android:gravity="center" android:orientation="vertical" android:id="@id/widget_details_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/item_details_corners_image" android:layout_width="169.44998dip" android:layout_height="163.29999dip">
+        <FrameLayout android:id="@id/item_details_preview" android:layout_width="169.44998dip" android:layout_height="163.29999dip" android:scaleType="centerInside" />
+        <ImageView android:id="@id/item_same_preview" android:layout_width="169.44998dip" android:layout_height="163.29999dip" android:scaleType="centerInside" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/item_details_corners_text" android:layout_width="169.44998dip" android:layout_height="43.97dip" android:layout_below="@id/item_preview">
+        <TextView android:textSize="17.449982dip" android:textColor="#ffffffff" android:gravity="start|center" android:id="@id/item_title" android:layout_width="fill_parent" android:layout_height="43.97dip" android:singleLine="true" android:textAlignment="viewStart" android:layout_marginStart="12.549988dip" />
+    </LinearLayout>
+    <TextView android:textSize="17.449982dip" android:textColor="#ffffffff" android:ellipsize="end" android:id="@id/item_details_text" android:layout_width="305.4453dip" android:layout_height="100.0dip" android:layout_marginTop="36.359985dip" android:lines="5" android:textAlignment="center" />
+    <Button android:gravity="center" android:id="@id/back_button" android:background="@drawable/item_details_back" android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginTop="43.359985dip" />
+</com.miui.home.launcher.widget.WidgetDetailsView>

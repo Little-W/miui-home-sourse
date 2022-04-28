@@ -67,6 +67,8 @@
     const-string p2, "OFFLINE_WIDGET data is null"
 
     .line 32
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     .line 35

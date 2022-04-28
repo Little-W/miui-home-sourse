@@ -3,12 +3,12 @@
 .source "Launcher.java"
 
 # interfaces
-.implements Landroid/widget/PopupWindow$OnDismissListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->showUpsideEnterOrExitTipIfNeed(Z)Z
+    value = Lcom/miui/home/launcher/Launcher;->uninstallCleanButton()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,17 +20,13 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$group:Landroid/widget/FrameLayout;
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/widget/FrameLayout;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 6895
+    .line 7488
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$65;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$65;->val$group:Landroid/widget/FrameLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,19 +35,22 @@
 
 
 # virtual methods
-.method public onDismiss()V
+.method public run()V
     .locals 2
 
-    .line 6897
+    .line 7491
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$65;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DragLayer;
+    const/16 v1, 0xc
+
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$8300(Lcom/miui/home/launcher/Launcher;I)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$65;->val$group:Landroid/widget/FrameLayout;
+    .line 7492
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$65;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/DragLayer;->removeView(Landroid/view/View;)V
+    invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Launcher;->bindGadgetsRemoved(Ljava/util/ArrayList;)V
 
     return-void
 .end method

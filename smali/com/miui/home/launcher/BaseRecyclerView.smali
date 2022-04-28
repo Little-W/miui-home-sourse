@@ -4,6 +4,8 @@
 
 
 # instance fields
+.field private mLetterScrollerEnable:Z
+
 .field protected mScrollbar:Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
 .field private mScrollerEnable:Z
@@ -15,7 +17,7 @@
 
     const/4 v0, 0x0
 
-    .line 49
+    .line 51
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/BaseRecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -26,7 +28,7 @@
 
     const/4 v0, 0x0
 
-    .line 53
+    .line 55
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/home/launcher/BaseRecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -35,10 +37,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 2
 
-    .line 57
+    .line 59
     invoke-direct {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 58
+    .line 60
     sget-object v0, Lcom/miui/home/R$styleable;->BaseRecyclerView:[I
 
     const/4 v1, 0x0
@@ -49,14 +51,14 @@
 
     const/4 p2, 0x1
 
-    .line 59
+    .line 61
     invoke-virtual {p1, v1, p2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result p2
 
     iput-boolean p2, p0, Lcom/miui/home/launcher/BaseRecyclerView;->mScrollerEnable:Z
 
-    .line 60
+    .line 62
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
@@ -67,14 +69,14 @@
 .method public bindFastScrollbar(Z)V
     .locals 5
 
-    .line 76
+    .line 83
     iget-boolean v0, p0, Lcom/miui/home/launcher/BaseRecyclerView;->mScrollerEnable:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 79
+    .line 86
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/BaseRecyclerView;->getParent()Landroid/view/ViewParent;
 
@@ -82,47 +84,41 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a00e8
+    const v1, 0x7f0a0107
 
-    .line 80
+    .line 87
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0a00e7
+    const v2, 0x7f0a0106
 
-    .line 81
+    .line 88
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
-    const v3, 0x7f0a00e6
+    const v3, 0x7f0a0105
 
-    .line 82
+    .line 89
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
-    .line 83
+    .line 90
     invoke-virtual {v2, p0, v1}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->setRecyclerView(Lcom/miui/home/launcher/BaseRecyclerView;Landroid/widget/TextView;)V
 
-    .line 84
+    .line 91
     invoke-virtual {v0, p0, v1}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->setRecyclerView(Lcom/miui/home/launcher/BaseRecyclerView;Landroid/widget/TextView;)V
 
-    .line 85
-    invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->isLetterFastScrollerEnable()Z
-
-    move-result v1
+    .line 92
+    iget-boolean v1, p0, Lcom/miui/home/launcher/BaseRecyclerView;->mLetterScrollerEnable:Z
 
     const/16 v3, 0x8
 
@@ -130,34 +126,34 @@
 
     if-eqz v1, :cond_1
 
-    .line 86
+    .line 93
     invoke-virtual {v2, v4}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->setVisibility(I)V
 
-    .line 87
+    .line 94
     invoke-virtual {v0, v3}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->setVisibility(I)V
 
-    .line 88
+    .line 95
     iput-object v2, p0, Lcom/miui/home/launcher/BaseRecyclerView;->mScrollbar:Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
     goto :goto_0
 
-    .line 90
+    .line 97
     :cond_1
     invoke-virtual {v2, v3}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->setVisibility(I)V
 
-    .line 91
+    .line 98
     invoke-virtual {v0, v4}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->setVisibility(I)V
 
-    .line 92
+    .line 99
     iput-object v0, p0, Lcom/miui/home/launcher/BaseRecyclerView;->mScrollbar:Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
     :goto_0
     if-eqz p1, :cond_2
 
-    .line 95
+    .line 102
     invoke-virtual {p0}, Lcom/miui/home/launcher/BaseRecyclerView;->requestLayout()V
 
-    .line 97
+    .line 104
     :cond_2
     invoke-virtual {p0, v4}, Lcom/miui/home/launcher/BaseRecyclerView;->onUpdateScrollbar(I)V
 
@@ -167,7 +163,7 @@
 .method protected getAvailableScrollBarHeight()I
     .locals 2
 
-    .line 129
+    .line 140
     invoke-virtual {p0}, Lcom/miui/home/launcher/BaseRecyclerView;->getScrollbarTrackHeight()I
 
     move-result v0
@@ -192,7 +188,7 @@
 .method public getScrollbar()Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
     .locals 1
 
-    .line 108
+    .line 119
     iget-object v0, p0, Lcom/miui/home/launcher/BaseRecyclerView;->mScrollbar:Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
     return-object v0
@@ -201,7 +197,7 @@
 .method public getScrollbarTrackHeight()I
     .locals 1
 
-    .line 115
+    .line 126
     iget-object v0, p0, Lcom/miui/home/launcher/BaseRecyclerView;->mScrollbar:Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->getHeight()I
@@ -217,27 +213,27 @@
 .method protected onAttachedToWindow()V
     .locals 1
 
-    .line 65
+    .line 67
     invoke-super {p0}, Landroidx/recyclerview/widget/RecyclerView;->onAttachedToWindow()V
 
     const/4 v0, 0x0
 
-    .line 66
+    .line 68
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/BaseRecyclerView;->bindFastScrollbar(Z)V
 
     return-void
 .end method
 
-.method public onColorModeChange()V
+.method public onColorModeChange(Lcom/miui/home/launcher/allapps/AllAppsColorMode;I)V
     .locals 1
 
-    .line 70
+    .line 72
     iget-object v0, p0, Lcom/miui/home/launcher/BaseRecyclerView;->mScrollbar:Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
     if-eqz v0, :cond_0
 
-    .line 71
-    invoke-virtual {v0}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->onColorModeChange()V
+    .line 73
+    invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->onColorModeChange(Lcom/miui/home/launcher/allapps/AllAppsColorMode;I)V
 
     :cond_0
     return-void
@@ -249,37 +245,57 @@
     return-void
 .end method
 
-.method public onScreenOrientationChanged()V
-    .locals 3
+.method protected onSizeChanged(IIII)V
+    .locals 0
 
-    .line 101
+    .line 109
+    invoke-super {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/RecyclerView;->onSizeChanged(IIII)V
+
+    .line 110
+    invoke-virtual {p0}, Lcom/miui/home/launcher/BaseRecyclerView;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/ViewGroup;
+
+    const p2, 0x7f0a0106
+
+    .line 111
+    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/miui/home/launcher/view/LetterRecyclerViewFastScroller;
+
+    if-eqz p1, :cond_0
+
+    .line 113
     invoke-virtual {p0}, Lcom/miui/home/launcher/BaseRecyclerView;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v0
+    move-result-object p2
 
-    const v1, 0x7f0700c4
+    const p3, 0x7f0700ff
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v0
+    move-result p2
 
-    .line 102
+    invoke-static {p1, p2}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingTop(Landroid/view/View;I)V
+
+    .line 114
     invoke-virtual {p0}, Lcom/miui/home/launcher/BaseRecyclerView;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object p2
 
-    const v2, 0x7f0700c3
+    const p3, 0x7f0700fe
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v1
+    move-result p2
 
-    .line 103
-    invoke-static {p0, v0}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingTop(Landroid/view/View;I)V
+    invoke-static {p1, p2}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingBottom(Landroid/view/View;I)V
 
-    .line 104
-    invoke-static {p0, v1}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingTop(Landroid/view/View;I)V
-
+    :cond_0
     return-void
 .end method
 
@@ -292,15 +308,29 @@
 .method public abstract scrollToPositionAtSection(Ljava/lang/String;)Ljava/lang/String;
 .end method
 
+.method public setLetterScrollerEnable(Z)V
+    .locals 0
+
+    .line 78
+    iput-boolean p1, p0, Lcom/miui/home/launcher/BaseRecyclerView;->mLetterScrollerEnable:Z
+
+    const/4 p1, 0x1
+
+    .line 79
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/BaseRecyclerView;->bindFastScrollbar(Z)V
+
+    return-void
+.end method
+
 .method public shouldContainerScroll(Landroid/view/MotionEvent;Landroid/view/View;)Z
     .locals 3
 
     const/4 v0, 0x2
 
-    .line 163
+    .line 174
     new-array v0, v0, [I
 
-    .line 164
+    .line 175
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v1
@@ -311,7 +341,7 @@
 
     aput v1, v0, v2
 
-    .line 165
+    .line 176
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result p1
@@ -322,12 +352,12 @@
 
     aput p1, v0, v1
 
-    .line 166
+    .line 177
     iget-object p1, p0, Lcom/miui/home/launcher/BaseRecyclerView;->mScrollbar:Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
     invoke-static {p1, p2, v0}, Lcom/miui/home/launcher/common/Utilities;->mapCoordInSelfToDescendant(Landroid/view/View;Landroid/view/View;[I)V
 
-    .line 169
+    .line 180
     invoke-virtual {p0}, Lcom/miui/home/launcher/BaseRecyclerView;->getCurrentScrollY()I
 
     move-result p1
@@ -345,7 +375,7 @@
 
     if-gtz p2, :cond_0
 
-    .line 143
+    .line 154
     iget-object p1, p0, Lcom/miui/home/launcher/BaseRecyclerView;->mScrollbar:Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
     const/4 p2, -0x1
@@ -361,7 +391,7 @@
 
     div-float/2addr p1, p2
 
-    .line 151
+    .line 162
     invoke-virtual {p0}, Lcom/miui/home/launcher/BaseRecyclerView;->getAvailableScrollBarHeight()I
 
     move-result p2
@@ -372,7 +402,7 @@
 
     float-to-int p1, p1
 
-    .line 154
+    .line 165
     iget-object p2, p0, Lcom/miui/home/launcher/BaseRecyclerView;->mScrollbar:Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->setThumbOffsetY(I)V

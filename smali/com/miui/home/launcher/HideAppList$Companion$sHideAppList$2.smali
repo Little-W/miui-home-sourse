@@ -58,7 +58,7 @@
 .method public final invoke()Lcom/miui/home/launcher/HideAppList;
     .locals 2
 
-    .line 16
+    .line 17
     new-instance v0, Lcom/miui/home/launcher/HideAppList;
 
     const/4 v1, 0x0
@@ -71,7 +71,7 @@
 .method public bridge synthetic invoke()Ljava/lang/Object;
     .locals 1
 
-    .line 13
+    .line 14
     invoke-virtual {p0}, Lcom/miui/home/launcher/HideAppList$Companion$sHideAppList$2;->invoke()Lcom/miui/home/launcher/HideAppList;
 
     move-result-object v0

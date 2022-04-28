@@ -22,114 +22,125 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 28
+    invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/CellBackground;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    .line 23
-    invoke-direct {p0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+    .line 32
+    invoke-direct {p0, p1, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
-    .line 15
+    .line 20
     iput-boolean p1, p0, Lcom/miui/home/launcher/CellBackground;->mSkipNextAutoLayoutAnimation:Z
 
-    .line 16
+    .line 21
     iput-boolean p1, p0, Lcom/miui/home/launcher/CellBackground;->mIsIconCellBackground:Z
 
-    .line 20
+    .line 25
     iput-boolean p1, p0, Lcom/miui/home/launcher/CellBackground;->mIsUseSmoothTransAnimation:Z
 
-    .line 81
+    .line 90
     new-instance p1, Landroid/animation/ObjectAnimator;
 
     invoke-direct {p1}, Landroid/animation/ObjectAnimator;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/CellBackground;->mAlphaOutAnimator:Landroid/animation/ObjectAnimator;
 
-    .line 82
+    .line 91
     new-instance p1, Landroid/animation/ObjectAnimator;
 
     invoke-direct {p1}, Landroid/animation/ObjectAnimator;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/CellBackground;->mAlphaInAnimator:Landroid/animation/ObjectAnimator;
 
-    .line 84
+    .line 93
     new-instance p1, Lcom/miui/home/launcher/CellBackground$2;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/CellBackground$2;-><init>(Lcom/miui/home/launcher/CellBackground;)V
 
     iput-object p1, p0, Lcom/miui/home/launcher/CellBackground;->mAutoLayoutAnimatorAnimateDelegate:Lcom/miui/home/launcher/AutoLayoutAnimation$AutoLayoutAnimatorAnimateDelegate;
 
-    .line 24
+    .line 33
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground;->mAlphaOutAnimator:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v0, 0x96
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 25
+    .line 34
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground;->mAlphaOutAnimator:Landroid/animation/ObjectAnimator;
 
-    sget-object v0, Lcom/miui/home/launcher/common/Ease$Sine;->easeOut:Landroid/animation/TimeInterpolator;
+    sget-object p2, Lcom/miui/home/launcher/common/Ease$Sine;->easeOut:Landroid/animation/TimeInterpolator;
 
-    invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    invoke-virtual {p1, p2}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 26
+    .line 35
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground;->mAlphaOutAnimator:Landroid/animation/ObjectAnimator;
 
-    sget-object v0, Landroid/view/View;->ALPHA:Landroid/util/Property;
+    sget-object p2, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->setProperty(Landroid/util/Property;)V
+    invoke-virtual {p1, p2}, Landroid/animation/ObjectAnimator;->setProperty(Landroid/util/Property;)V
 
-    .line 27
+    .line 36
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground;->mAlphaOutAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {p1, p0}, Landroid/animation/ObjectAnimator;->setTarget(Ljava/lang/Object;)V
 
-    .line 28
+    .line 37
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground;->mAlphaInAnimator:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v0, 0xc8
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 29
+    .line 38
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground;->mAlphaInAnimator:Landroid/animation/ObjectAnimator;
 
-    sget-object v0, Lcom/miui/home/launcher/common/Ease$Sine;->easeOut:Landroid/animation/TimeInterpolator;
+    sget-object p2, Lcom/miui/home/launcher/common/Ease$Sine;->easeOut:Landroid/animation/TimeInterpolator;
 
-    invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    invoke-virtual {p1, p2}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 30
+    .line 39
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground;->mAlphaInAnimator:Landroid/animation/ObjectAnimator;
 
-    sget-object v0, Landroid/view/View;->ALPHA:Landroid/util/Property;
+    sget-object p2, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->setProperty(Landroid/util/Property;)V
+    invoke-virtual {p1, p2}, Landroid/animation/ObjectAnimator;->setProperty(Landroid/util/Property;)V
 
-    .line 31
+    .line 40
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground;->mAlphaInAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {p1, p0}, Landroid/animation/ObjectAnimator;->setTarget(Ljava/lang/Object;)V
 
-    .line 32
+    .line 41
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground;->mAlphaInAnimator:Landroid/animation/ObjectAnimator;
 
-    const/4 v0, 0x2
+    const/4 p2, 0x2
 
-    new-array v0, v0, [F
+    new-array p2, p2, [F
 
-    fill-array-data v0, :array_0
+    fill-array-data p2, :array_0
 
-    invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->setFloatValues([F)V
+    invoke-virtual {p1, p2}, Landroid/animation/ObjectAnimator;->setFloatValues([F)V
 
-    .line 33
+    .line 42
     iget-object p1, p0, Lcom/miui/home/launcher/CellBackground;->mAlphaOutAnimator:Landroid/animation/ObjectAnimator;
 
-    new-instance v0, Lcom/miui/home/launcher/CellBackground$1;
+    new-instance p2, Lcom/miui/home/launcher/CellBackground$1;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/CellBackground$1;-><init>(Lcom/miui/home/launcher/CellBackground;)V
+    invoke-direct {p2, p0}, Lcom/miui/home/launcher/CellBackground$1;-><init>(Lcom/miui/home/launcher/CellBackground;)V
 
-    invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    invoke-virtual {p1, p2}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     return-void
 
@@ -145,7 +156,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/CellBackground;)Landroid/animation/ObjectAnimator;
     .locals 0
 
-    .line 13
+    .line 18
     iget-object p0, p0, Lcom/miui/home/launcher/CellBackground;->mAlphaInAnimator:Landroid/animation/ObjectAnimator;
 
     return-object p0
@@ -154,7 +165,7 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/CellBackground;)Landroid/animation/ObjectAnimator;
     .locals 0
 
-    .line 13
+    .line 18
     iget-object p0, p0, Lcom/miui/home/launcher/CellBackground;->mAlphaOutAnimator:Landroid/animation/ObjectAnimator;
 
     return-object p0
@@ -165,7 +176,7 @@
 .method public bindDragObject(Lcom/miui/home/launcher/DragObject;)V
     .locals 1
 
-    .line 54
+    .line 63
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->getDragView()Lcom/miui/home/launcher/DragView;
 
     move-result-object v0
@@ -178,7 +189,7 @@
 
     iput-boolean v0, p0, Lcom/miui/home/launcher/CellBackground;->mIsIconCellBackground:Z
 
-    .line 55
+    .line 64
     invoke-virtual {p1}, Lcom/miui/home/launcher/DragObject;->isDragingOneObjectWhichOccupiedCellMoreThan1X1()Z
 
     move-result p1
@@ -199,7 +210,7 @@
 .method public getSkipNextAutoLayoutAnimation()Z
     .locals 1
 
-    .line 73
+    .line 82
     iget-boolean v0, p0, Lcom/miui/home/launcher/CellBackground;->mSkipNextAutoLayoutAnimation:Z
 
     return v0
@@ -213,6 +224,47 @@
     return v0
 .end method
 
+.method public setCellTranslate(I)V
+    .locals 2
+
+    .line 120
+    sget-object v0, Landroid/widget/ImageView$ScaleType;->MATRIX:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/CellBackground;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+
+    .line 121
+    invoke-virtual {p0}, Lcom/miui/home/launcher/CellBackground;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    .line 122
+    new-instance v1, Landroid/graphics/Matrix;
+
+    invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
+
+    .line 123
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v0
+
+    sub-int/2addr p1, v0
+
+    int-to-float p1, p1
+
+    const/high16 v0, 0x40000000    # 2.0f
+
+    div-float/2addr p1, v0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, p1, v0}, Landroid/graphics/Matrix;->setTranslate(FF)V
+
+    .line 124
+    invoke-virtual {p0, v1}, Lcom/miui/home/launcher/CellBackground;->setImageMatrix(Landroid/graphics/Matrix;)V
+
+    return-void
+.end method
+
 .method public setEnableAutoLayoutAnimation(Z)V
     .locals 0
 
@@ -222,7 +274,7 @@
 .method protected setFrame(IIII)Z
     .locals 7
 
-    .line 98
+    .line 107
     iget-boolean v0, p0, Lcom/miui/home/launcher/CellBackground;->mIsUseSmoothTransAnimation:Z
 
     if-eqz v0, :cond_0
@@ -263,7 +315,7 @@
 .method public setSkipNextAutoLayoutAnimation(Z)V
     .locals 0
 
-    .line 68
+    .line 77
     iput-boolean p1, p0, Lcom/miui/home/launcher/CellBackground;->mSkipNextAutoLayoutAnimation:Z
 
     return-void
@@ -272,7 +324,7 @@
 .method public superSetFrame(IIII)Z
     .locals 0
 
-    .line 78
+    .line 87
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/ImageView;->setFrame(IIII)Z
 
     move-result p1

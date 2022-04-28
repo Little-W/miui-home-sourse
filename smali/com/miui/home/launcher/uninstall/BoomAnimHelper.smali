@@ -28,20 +28,20 @@
 
     const/4 v0, 0x2
 
-    .line 113
+    .line 114
     new-array v0, v0, [I
 
-    .line 114
+    .line 115
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
 
     move-result-object v7
 
-    .line 115
+    .line 116
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/Launcher;->getSpringLayerWaveController()Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;
 
     move-result-object v8
 
-    .line 117
+    .line 118
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
@@ -52,17 +52,17 @@
 
     const/4 v11, 0x0
 
-    .line 118
+    .line 119
     :goto_0
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
 
     move-result v1
 
-    if-ge v11, v1, :cond_3
+    if-ge v11, v1, :cond_4
 
     move-object/from16 v14, p1
 
-    .line 119
+    .line 120
     invoke-interface {v14, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -75,13 +75,20 @@
 
     move-result-object v6
 
-    if-nez v6, :cond_0
+    if-eqz v6, :cond_3
+
+    .line 122
+    invoke-virtual {v6}, Lcom/miui/home/launcher/ShortcutIcon;->getBoomAnimBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v3
+
+    if-nez v3, :cond_0
 
     move-object/from16 v16, v0
 
     goto :goto_2
 
-    .line 123
+    .line 125
     :cond_0
     invoke-virtual {v6}, Lcom/miui/home/launcher/ShortcutIcon;->isShown()Z
 
@@ -89,22 +96,17 @@
 
     if-eqz v1, :cond_2
 
-    .line 124
+    .line 126
     invoke-virtual {v6, v0}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageViewCenterPoint([I)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 125
+    .line 127
     new-instance v5, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
-    .line 126
-    invoke-virtual {v6}, Lcom/miui/home/launcher/ShortcutIcon;->getBoomAnimBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object v3
-
-    .line 127
+    .line 129
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
 
     move-result v16
@@ -127,26 +129,26 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;-><init>(Lcom/miui/home/launcher/DragLayer;Landroid/graphics/Bitmap;[III)V
 
-    .line 128
+    .line 130
     new-instance v1, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$4;
 
     invoke-direct {v1, v8, v0}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$4;-><init>(Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;Lcom/miui/home/launcher/ShortcutIcon;)V
 
     invoke-virtual {v10, v1}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;->addListener(Lmiuix/animation/listener/TransitionListener;)V
 
-    .line 139
+    .line 141
     new-instance v1, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$DisappearValueAnim;
 
     invoke-direct {v1, v0, v10}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$DisappearValueAnim;-><init>(Landroid/view/View;Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;)V
 
-    .line 140
+    .line 142
     invoke-virtual {v1, v12, v13}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$DisappearValueAnim;->setStartDelay(J)V
 
     const-wide/16 v2, 0x3c
 
     add-long/2addr v12, v2
 
-    .line 142
+    .line 144
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
@@ -166,8 +168,13 @@
     :goto_1
     const/4 v1, 0x0
 
-    .line 144
+    .line 146
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/ShortcutIcon;->setAlpha(F)V
+
+    goto :goto_2
+
+    :cond_3
+    move-object/from16 v16, v0
 
     :goto_2
     add-int/lit8 v11, v11, 0x1
@@ -176,33 +183,33 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
     move-object/from16 v15, p0
 
-    .line 148
+    .line 150
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/launcher/Launcher;->getSoundPoolHelper()Lcom/miui/home/launcher/sound/SoundPoolHelper;
 
     move-result-object v0
 
-    .line 149
+    .line 151
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_5
 
-    .line 151
+    .line 153
     invoke-interface/range {p2 .. p2}, Ljava/lang/Runnable;->run()V
 
     goto :goto_6
 
-    :cond_4
+    :cond_5
     const/4 v2, 0x0
 
     :goto_3
-    if-ge v2, v1, :cond_7
+    if-ge v2, v1, :cond_8
 
-    .line 154
+    .line 156
     invoke-virtual {v9, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -211,9 +218,9 @@
 
     add-int/lit8 v4, v1, -0x1
 
-    if-ne v2, v4, :cond_5
+    if-ne v2, v4, :cond_6
 
-    .line 156
+    .line 158
     invoke-virtual {v3}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$DisappearValueAnim;->getBoomValueAnimator()Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
     move-result-object v4
@@ -228,23 +235,23 @@
 
     goto :goto_4
 
-    :cond_5
+    :cond_6
     move-object/from16 v6, p2
 
-    .line 168
+    .line 170
     :goto_4
     rem-int/lit8 v4, v2, 0x2
 
-    if-nez v4, :cond_6
+    if-nez v4, :cond_7
 
     const/high16 v4, 0x3f800000    # 1.0f
 
     goto :goto_5
 
-    :cond_6
+    :cond_7
     const/high16 v4, 0x3f000000    # 0.5f
 
-    .line 169
+    .line 171
     :goto_5
     invoke-virtual {v3}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$DisappearValueAnim;->getBoomValueAnimator()Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
@@ -256,14 +263,14 @@
 
     invoke-virtual {v5, v7}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;->addListener(Lmiuix/animation/listener/TransitionListener;)V
 
-    .line 177
+    .line 179
     invoke-virtual {v3}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$DisappearValueAnim;->start()V
 
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    :cond_7
+    :cond_8
     :goto_6
     return-void
 .end method
@@ -271,7 +278,7 @@
 .method private static getShortcutIcon(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)Lcom/miui/home/launcher/ShortcutIcon;
     .locals 1
 
-    .line 35
+    .line 36
     sget-object v0, Lcom/miui/home/launcher/LauncherState;->ALL_APPS:Lcom/miui/home/launcher/LauncherState;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
@@ -280,7 +287,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 36
+    .line 37
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getAppsView()Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
     move-result-object p0
@@ -299,7 +306,7 @@
 
     return-object p0
 
-    .line 38
+    .line 39
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->getBuddyIconView()Lcom/miui/home/launcher/ShortcutIcon;
 
@@ -311,35 +318,35 @@
 .method public static widgetDoBoomAnim(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ItemInfo;Ljava/lang/Runnable;[I)V
     .locals 8
 
-    .line 43
+    .line 44
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
 
     move-result-object v1
 
-    .line 44
+    .line 45
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getSpringLayerWaveController()Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;
 
     move-result-object v6
 
-    .line 49
+    .line 50
     instance-of v0, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
     if-eqz v0, :cond_0
 
-    .line 50
+    .line 51
     check-cast p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
     iget-object p1, p1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->hostView:Lcom/miui/home/launcher/maml/MaMlWidgetView;
 
     goto :goto_0
 
-    .line 51
+    .line 52
     :cond_0
     instance-of v0, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
     if-eqz v0, :cond_1
 
-    .line 52
+    .line 53
     check-cast p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
     iget-object p1, p1, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->hostView:Lcom/miui/home/launcher/LauncherWidgetView;
@@ -350,12 +357,16 @@
     const/4 p1, 0x0
 
     :goto_0
-    if-nez p1, :cond_2
+    if-eqz p1, :cond_4
 
-    .line 56
-    invoke-interface {p2}, Ljava/lang/Runnable;->run()V
+    .line 57
+    invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->captureSnapshot(Landroid/view/View;)Landroid/graphics/Bitmap;
 
-    return-void
+    move-result-object v2
+
+    if-nez v2, :cond_2
+
+    goto :goto_2
 
     :cond_2
     const/4 v7, 0x0
@@ -364,31 +375,16 @@
 
     const/4 p3, 0x2
 
-    .line 62
+    .line 64
     new-array v0, p3, [I
 
-    .line 63
+    .line 65
     invoke-virtual {p1, v0}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 64
-    aget v2, v0, v7
+    .line 66
+    aget v3, v0, v7
 
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result v3
-
-    div-int/2addr v3, p3
-
-    add-int/2addr v2, v3
-
-    aput v2, v0, v7
-
-    const/4 v2, 0x1
-
-    .line 65
-    aget v3, v0, v2
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v4
 
@@ -396,7 +392,22 @@
 
     add-int/2addr v3, v4
 
-    aput v3, v0, v2
+    aput v3, v0, v7
+
+    const/4 v3, 0x1
+
+    .line 67
+    aget v4, v0, v3
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result v5
+
+    div-int/2addr v5, p3
+
+    add-int/2addr v4, v5
+
+    aput v4, v0, v3
 
     move-object v3, v0
 
@@ -405,14 +416,9 @@
     :cond_3
     move-object v3, p3
 
-    .line 67
+    .line 69
     :goto_1
     new-instance p3, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
-
-    .line 68
-    invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->captureSnapshot(Landroid/view/View;)Landroid/graphics/Bitmap;
-
-    move-result-object v2
 
     const/4 v4, 0x1
 
@@ -422,32 +428,32 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;-><init>(Lcom/miui/home/launcher/DragLayer;Landroid/graphics/Bitmap;[III)V
 
-    .line 72
+    .line 73
     invoke-virtual {p1, v7}, Landroid/view/View;->setClickable(Z)V
 
-    .line 73
+    .line 74
     new-instance v0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$1;
 
     invoke-direct {v0, v6, p1}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$1;-><init>(Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;Landroid/view/View;)V
 
     invoke-virtual {p3, v0}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;->addListener(Lmiuix/animation/listener/TransitionListener;)V
 
-    .line 84
+    .line 85
     new-instance v0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$DisappearValueAnim;
 
     invoke-direct {v0, p1, p3}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$DisappearValueAnim;-><init>(Landroid/view/View;Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;)V
 
     const-wide/16 v1, 0x0
 
-    .line 85
+    .line 86
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$DisappearValueAnim;->setStartDelay(J)V
 
-    .line 88
+    .line 89
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getSoundPoolHelper()Lcom/miui/home/launcher/sound/SoundPoolHelper;
 
     move-result-object p0
 
-    .line 89
+    .line 90
     invoke-virtual {v0}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$DisappearValueAnim;->getBoomValueAnimator()Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
     move-result-object p1
@@ -458,7 +464,7 @@
 
     invoke-virtual {p1, p3}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;->addListener(Lmiuix/animation/listener/TransitionListener;)V
 
-    .line 102
+    .line 103
     invoke-virtual {v0}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$DisappearValueAnim;->getBoomValueAnimator()Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;
 
     move-result-object p1
@@ -469,8 +475,15 @@
 
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/uninstall/BoomByFolmeAnimator;->addListener(Lmiuix/animation/listener/TransitionListener;)V
 
-    .line 108
+    .line 109
     invoke-virtual {v0}, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$DisappearValueAnim;->start()V
+
+    return-void
+
+    .line 58
+    :cond_4
+    :goto_2
+    invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
     return-void
 .end method

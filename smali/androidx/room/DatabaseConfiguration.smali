@@ -4,8 +4,6 @@
 
 
 # instance fields
-.field public final allowDestructiveMigrationOnDowngrade:Z
-
 .field public final allowMainThreadQueries:Z
 
 .field public final callbacks:Ljava/util/List;
@@ -19,10 +17,6 @@
 .end field
 
 .field public final context:Landroid/content/Context;
-
-.field public final copyFromAssetPath:Ljava/lang/String;
-
-.field public final copyFromFile:Ljava/io/File;
 
 .field public final journalMode:Landroidx/room/RoomDatabase$JournalMode;
 
@@ -38,8 +32,6 @@
 
 .field public final migrationContainer:Landroidx/room/RoomDatabase$MigrationContainer;
 
-.field public final multiInstanceInvalidation:Z
-
 .field public final name:Ljava/lang/String;
 
 .field public final queryExecutor:Ljava/util/concurrent/Executor;
@@ -48,11 +40,9 @@
 
 .field public final sqliteOpenHelperFactory:Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;
 
-.field public final transactionExecutor:Ljava/util/concurrent/Executor;
-
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;Landroidx/room/RoomDatabase$MigrationContainer;Ljava/util/List;ZLandroidx/room/RoomDatabase$JournalMode;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;ZZZLjava/util/Set;Ljava/lang/String;Ljava/io/File;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;Landroidx/room/RoomDatabase$MigrationContainer;Ljava/util/List;ZLandroidx/room/RoomDatabase$JournalMode;Ljava/util/concurrent/Executor;ZLjava/util/Set;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -66,123 +56,82 @@
             ">;Z",
             "Landroidx/room/RoomDatabase$JournalMode;",
             "Ljava/util/concurrent/Executor;",
-            "Ljava/util/concurrent/Executor;",
-            "ZZZ",
+            "Z",
             "Ljava/util/Set<",
             "Ljava/lang/Integer;",
-            ">;",
-            "Ljava/lang/String;",
-            "Ljava/io/File;",
-            ")V"
+            ">;)V"
         }
     .end annotation
 
-    .line 240
+    .line 113
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 241
+    .line 114
     iput-object p3, p0, Landroidx/room/DatabaseConfiguration;->sqliteOpenHelperFactory:Landroidx/sqlite/db/SupportSQLiteOpenHelper$Factory;
 
-    .line 242
+    .line 115
     iput-object p1, p0, Landroidx/room/DatabaseConfiguration;->context:Landroid/content/Context;
 
-    .line 243
+    .line 116
     iput-object p2, p0, Landroidx/room/DatabaseConfiguration;->name:Ljava/lang/String;
 
-    .line 244
+    .line 117
     iput-object p4, p0, Landroidx/room/DatabaseConfiguration;->migrationContainer:Landroidx/room/RoomDatabase$MigrationContainer;
 
-    .line 245
+    .line 118
     iput-object p5, p0, Landroidx/room/DatabaseConfiguration;->callbacks:Ljava/util/List;
 
-    .line 246
+    .line 119
     iput-boolean p6, p0, Landroidx/room/DatabaseConfiguration;->allowMainThreadQueries:Z
 
-    .line 247
+    .line 120
     iput-object p7, p0, Landroidx/room/DatabaseConfiguration;->journalMode:Landroidx/room/RoomDatabase$JournalMode;
 
-    .line 248
+    .line 121
     iput-object p8, p0, Landroidx/room/DatabaseConfiguration;->queryExecutor:Ljava/util/concurrent/Executor;
 
-    .line 249
-    iput-object p9, p0, Landroidx/room/DatabaseConfiguration;->transactionExecutor:Ljava/util/concurrent/Executor;
+    .line 122
+    iput-boolean p9, p0, Landroidx/room/DatabaseConfiguration;->requireMigration:Z
 
-    .line 250
-    iput-boolean p10, p0, Landroidx/room/DatabaseConfiguration;->multiInstanceInvalidation:Z
-
-    .line 251
-    iput-boolean p11, p0, Landroidx/room/DatabaseConfiguration;->requireMigration:Z
-
-    .line 252
-    iput-boolean p12, p0, Landroidx/room/DatabaseConfiguration;->allowDestructiveMigrationOnDowngrade:Z
-
-    .line 253
-    iput-object p13, p0, Landroidx/room/DatabaseConfiguration;->mMigrationNotRequiredFrom:Ljava/util/Set;
-
-    .line 254
-    iput-object p14, p0, Landroidx/room/DatabaseConfiguration;->copyFromAssetPath:Ljava/lang/String;
-
-    .line 255
-    iput-object p15, p0, Landroidx/room/DatabaseConfiguration;->copyFromFile:Ljava/io/File;
+    .line 123
+    iput-object p10, p0, Landroidx/room/DatabaseConfiguration;->mMigrationNotRequiredFrom:Ljava/util/Set;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public isMigrationRequired(II)Z
-    .locals 2
+.method public isMigrationRequiredFrom(I)Z
+    .locals 1
 
-    const/4 v0, 0x1
+    .line 135
+    iget-boolean v0, p0, Landroidx/room/DatabaseConfiguration;->requireMigration:Z
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_1
 
-    if-le p1, p2, :cond_0
+    iget-object v0, p0, Landroidx/room/DatabaseConfiguration;->mMigrationNotRequiredFrom:Ljava/util/Set;
 
-    move p2, v0
+    if-eqz v0, :cond_0
 
-    goto :goto_0
-
-    :cond_0
-    move p2, v1
-
-    :goto_0
-    if-eqz p2, :cond_1
-
-    .line 283
-    iget-boolean p2, p0, Landroidx/room/DatabaseConfiguration;->allowDestructiveMigrationOnDowngrade:Z
-
-    if-eqz p2, :cond_1
-
-    return v1
-
-    .line 290
-    :cond_1
-    iget-boolean p2, p0, Landroidx/room/DatabaseConfiguration;->requireMigration:Z
-
-    if-eqz p2, :cond_2
-
-    iget-object p2, p0, Landroidx/room/DatabaseConfiguration;->mMigrationNotRequiredFrom:Ljava/util/Set;
-
-    if-eqz p2, :cond_3
-
-    .line 292
+    .line 137
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    invoke-interface {p2, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_2
+    if-nez p1, :cond_1
 
-    goto :goto_1
+    :cond_0
+    const/4 p1, 0x1
 
-    :cond_2
-    move v0, v1
+    goto :goto_0
 
-    :cond_3
-    :goto_1
-    return v0
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
 .end method

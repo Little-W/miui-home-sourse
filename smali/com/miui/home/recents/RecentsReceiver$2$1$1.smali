@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/RecentsReceiver$2$1;)V
     .locals 0
 
-    .line 194
+    .line 175
     iput-object p1, p0, Lcom/miui/home/recents/RecentsReceiver$2$1$1;->this$2:Lcom/miui/home/recents/RecentsReceiver$2$1;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 7
 
-    .line 196
+    .line 177
     invoke-static {}, Lmiui/util/HardwareInfo;->getFreeMemory()J
 
     move-result-wide v0
@@ -50,7 +50,7 @@
 
     const-string p1, "RecentsReceiver"
 
-    .line 197
+    .line 178
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,7 +69,9 @@
 
     move-result-object v4
 
-    .line 199
+    invoke-static {p1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 180
     iget-object p1, p0, Lcom/miui/home/recents/RecentsReceiver$2$1$1;->this$2:Lcom/miui/home/recents/RecentsReceiver$2$1;
 
     iget-object p1, p1, Lcom/miui/home/recents/RecentsReceiver$2$1;->val$clearButton:Lmiuix/androidbasewidget/widget/CircleProgressBar;

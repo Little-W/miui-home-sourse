@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="config_icon_height">53.099976dip</dimen>
+    <dimen name="config_icon_width">53.099976dip</dimen>
+    <dimen name="edit_mode_thumbnail_home_icon_radius">15.269989dip</dimen>
+    <dimen name="edit_mode_workspace_thumbnail_view_height">110.5dip</dimen>
+    <dimen name="edit_mode_workspace_thumbnail_view_width">72.69998dip</dimen>
+    <dimen name="folder_content_margin_bottom">10.5dip</dimen>
+    <dimen name="folder_content_margin_top">-30.199982dip</dimen>
+    <dimen name="folder_edit_text_margin_left">57.0dip</dimen>
+    <dimen name="folder_edit_text_text_size_noword">32.0dip</dimen>
+    <dimen name="folder_grid_frame_margin_top">-35.0dip</dimen>
+    <dimen name="folder_item_horizontal_spacing">41.5dip</dimen>
+    <dimen name="folder_item_vertical_spacing">19.599976dip</dimen>
+    <dimen name="hotseats_margin_top">0.0dip</dimen>
+    <dimen name="hotseats_padding_top">0.0dip</dimen>
+    <dimen name="set_home_screen_gap">32.0dip</dimen>
+    <dimen name="set_home_screen_gap_edge">99.69998dip</dimen>
+    <dimen name="workspace_cell_padding_top">27.0dip</dimen>
+</resources>

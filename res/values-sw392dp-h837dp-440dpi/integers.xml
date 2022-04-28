@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="config_cell_count_x_drawer_mode">4</integer>
+</resources>

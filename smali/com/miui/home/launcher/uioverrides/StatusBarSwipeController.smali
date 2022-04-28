@@ -44,10 +44,10 @@
 .method public constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 2
 
-    .line 60
+    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
+    .line 54
     new-instance v0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController$DispatchTouchHandler;
 
     invoke-static {}, Lcom/miui/home/launcher/common/BackgroundThread;->getHandler()Landroid/os/Handler;
@@ -64,13 +64,13 @@
 
     const/4 v0, 0x0
 
-    .line 54
+    .line 55
     iput-boolean v0, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mIsDispatchingToStatusBar:Z
 
-    .line 61
+    .line 62
     iput-object p1, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 63
+    .line 64
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object p1
@@ -85,7 +85,7 @@
 
     iput p1, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mTouchSlop:F
 
-    .line 64
+    .line 65
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
@@ -98,7 +98,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;)Lcom/miui/home/recents/SystemUiProxyWrapper;
     .locals 0
 
-    .line 34
+    .line 35
     iget-object p0, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mSystemUiProxyWrapper:Lcom/miui/home/recents/SystemUiProxyWrapper;
 
     return-object p0
@@ -107,7 +107,7 @@
 .method private canInterceptTouch(Landroid/view/MotionEvent;)Z
     .locals 3
 
-    .line 183
+    .line 184
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     sget-object v1, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
@@ -124,16 +124,16 @@
 
     const-string v0, "can\'t intercept touch because launcher isn\'t in NORMAL"
 
-    .line 184
+    .line 185
     invoke-static {p1, v0}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
-    .line 188
+    .line 189
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->canTouchControllerInterceptTouchEvent()Z
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->canTouchControllerInterceptTouchEvent(Z)Z
 
     move-result v0
 
@@ -143,12 +143,12 @@
 
     const-string v0, "can\'t intercept touch because launcher state can\'t intercept touchEvent"
 
-    .line 189
+    .line 190
     invoke-static {p1, v0}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
-    .line 193
+    .line 194
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -166,12 +166,12 @@
 
     const-string v0, "can\'t intercept touch because pull_down action isn\'t notification"
 
-    .line 194
+    .line 195
     invoke-static {p1, v0}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
-    .line 199
+    .line 200
     :cond_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -191,13 +191,25 @@
 
     const-string v0, "can\'t intercept touch because DOWN_EVENT is in navigation area"
 
-    .line 200
+    .line 201
     invoke-static {p1, v0}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
-    .line 204
+    .line 205
     :cond_3
+    iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/AbstractFloatingView;->getTopOpenView(Lcom/miui/home/launcher/BaseDraggingActivity;)Lcom/miui/home/launcher/AbstractFloatingView;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    return v1
+
+    .line 209
+    :cond_4
     sget-object p1, Lcom/miui/home/recents/SystemUiProxyWrapper;->INSTANCE:Lcom/miui/home/recents/util/MainThreadInitializedObject;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/util/MainThreadInitializedObject;->getNoCreate()Ljava/lang/Object;
@@ -208,23 +220,23 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mSystemUiProxyWrapper:Lcom/miui/home/recents/SystemUiProxyWrapper;
 
-    .line 205
+    .line 210
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mSystemUiProxyWrapper:Lcom/miui/home/recents/SystemUiProxyWrapper;
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_5
 
     invoke-virtual {p1}, Lcom/miui/home/recents/SystemUiProxyWrapper;->isProxySurvive()Z
 
     move-result p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_5
 
     const/4 v1, 0x1
 
-    :cond_4
+    :cond_5
     const-string p1, "StatusBarController"
 
-    .line 206
+    .line 211
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -247,7 +259,7 @@
 .method private dispatchTouchToStatusBar(Landroid/view/MotionEvent;)V
     .locals 2
 
-    .line 87
+    .line 88
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mHandler:Landroid/os/Handler;
 
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
@@ -268,21 +280,21 @@
 .method private setWindowSlippery(Z)V
     .locals 3
 
-    .line 172
+    .line 173
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    .line 173
+    .line 174
     invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v1
 
     if-eqz p1, :cond_0
 
-    .line 175
+    .line 176
     iget p1, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     const/high16 v2, 0x20000000
@@ -293,7 +305,7 @@
 
     goto :goto_0
 
-    .line 177
+    .line 178
     :cond_0
     iget p1, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
@@ -303,7 +315,7 @@
 
     iput p1, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 179
+    .line 180
     :goto_0
     invoke-virtual {v0, v1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
@@ -315,7 +327,7 @@
 .method public disableTouchBySwipeStatusBar(Z)V
     .locals 1
 
-    .line 161
+    .line 162
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -326,7 +338,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 163
+    .line 164
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->disableTouchBySwipeStatusBar(Z)V
 
     :cond_0
@@ -336,7 +348,7 @@
 .method public isDispatchingToStatusBar()Z
     .locals 1
 
-    .line 168
+    .line 169
     iget-boolean v0, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mIsDispatchingToStatusBar:Z
 
     return v0
@@ -345,7 +357,7 @@
 .method public final onControllerInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 8
 
-    .line 102
+    .line 103
     iget-boolean v0, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mDisallowIntercept:Z
 
     const/4 v1, 0x0
@@ -354,39 +366,39 @@
 
     return v1
 
-    .line 105
+    .line 106
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
-    .line 106
+    .line 107
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v2
 
-    .line 107
+    .line 108
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v3
 
     if-nez v0, :cond_2
 
-    .line 109
+    .line 110
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->canInterceptTouch(Landroid/view/MotionEvent;)Z
 
     move-result v4
 
     iput-boolean v4, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mCanIntercept:Z
 
-    .line 110
+    .line 111
     iget-boolean v4, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mCanIntercept:Z
 
     if-nez v4, :cond_1
 
     return v1
 
-    .line 113
+    .line 114
     :cond_1
     iget-object v4, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mDownEventsPosition:Landroid/util/SparseArray;
 
@@ -406,7 +418,7 @@
 
     goto :goto_0
 
-    .line 114
+    .line 115
     :cond_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -416,7 +428,7 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 116
+    .line 117
     iget-object v4, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mDownEventsPosition:Landroid/util/SparseArray;
 
     new-instance v5, Landroid/graphics/PointF;
@@ -433,7 +445,7 @@
 
     invoke-virtual {v4, v3, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 118
+    .line 119
     :cond_3
     :goto_0
     iget-boolean v4, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mCanIntercept:Z
@@ -447,7 +459,7 @@
 
     if-ne v0, v4, :cond_7
 
-    .line 122
+    .line 123
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mDownEventsPosition:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -462,10 +474,12 @@
 
     const-string v0, "pull status bar error"
 
-    .line 124
+    .line 125
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return v1
 
-    .line 127
+    .line 128
     :cond_5
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getY(I)F
 
@@ -475,7 +489,7 @@
 
     sub-float/2addr v3, v4
 
-    .line 128
+    .line 129
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v2
@@ -484,7 +498,7 @@
 
     sub-float/2addr v2, v0
 
-    .line 132
+    .line 133
     iget v0, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mTouchSlop:F
 
     cmpl-float v0, v3, v0
@@ -507,24 +521,24 @@
 
     if-ne v0, v3, :cond_6
 
-    .line 133
+    .line 134
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 134
+    .line 135
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->dispatchTouchToStatusBar(Landroid/view/MotionEvent;)V
 
-    .line 135
+    .line 136
     iput-boolean v3, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mIsDispatchingToStatusBar:Z
 
-    .line 136
+    .line 137
     invoke-virtual {p0, v3}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->disableTouchBySwipeStatusBar(Z)V
 
-    .line 137
+    .line 138
     invoke-direct {p0, v3}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->setWindowSlippery(Z)V
 
     return v3
 
-    .line 140
+    .line 141
     :cond_6
     invoke-static {v2}, Ljava/lang/Math;->abs(F)F
 
@@ -538,7 +552,7 @@
 
     const-string p1, "StatusBarController"
 
-    .line 141
+    .line 142
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -567,7 +581,7 @@
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 142
+    .line 143
     iput-boolean v1, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mCanIntercept:Z
 
     :cond_7
@@ -577,10 +591,10 @@
 .method public final onControllerTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 150
+    .line 151
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->dispatchTouchToStatusBar(Landroid/view/MotionEvent;)V
 
-    .line 151
+    .line 152
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
@@ -596,13 +610,13 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 153
+    .line 154
     iput-boolean p1, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mIsDispatchingToStatusBar:Z
 
-    .line 154
+    .line 155
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->disableTouchBySwipeStatusBar(Z)V
 
-    .line 155
+    .line 156
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->setWindowSlippery(Z)V
 
     :cond_1
@@ -618,7 +632,7 @@
 .method public requestDisallowInterceptTouchEventVertical(Z)V
     .locals 0
 
-    .line 97
+    .line 98
     iput-boolean p1, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->mDisallowIntercept:Z
 
     return-void

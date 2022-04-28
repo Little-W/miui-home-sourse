@@ -54,17 +54,17 @@
         }
     .end annotation
 
-    .line 223
+    .line 239
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 221
+    .line 237
     iput v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;->cachedInterpolatedProgress:F
 
     const/4 v0, 0x0
 
-    .line 224
+    .line 240
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -88,7 +88,7 @@
         }
     .end annotation
 
-    .line 239
+    .line 255
     iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;->keyframe:Lcom/airbnb/lottie/value/Keyframe;
 
     return-object v0
@@ -97,7 +97,7 @@
 .method public getEndProgress()F
     .locals 1
 
-    .line 249
+    .line 265
     iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;->keyframe:Lcom/airbnb/lottie/value/Keyframe;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/value/Keyframe;->getEndProgress()F
@@ -110,7 +110,7 @@
 .method public getStartDelayProgress()F
     .locals 1
 
-    .line 244
+    .line 260
     iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;->keyframe:Lcom/airbnb/lottie/value/Keyframe;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/value/Keyframe;->getStartProgress()F
@@ -123,7 +123,7 @@
 .method public isCachedValueEnabled(F)Z
     .locals 1
 
-    .line 254
+    .line 270
     iget v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;->cachedInterpolatedProgress:F
 
     cmpl-float v0, v0, p1
@@ -134,7 +134,7 @@
 
     return p1
 
-    .line 257
+    .line 273
     :cond_0
     iput p1, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;->cachedInterpolatedProgress:F
 
@@ -154,7 +154,7 @@
 .method public isValueChanged(F)Z
     .locals 0
 
-    .line 234
+    .line 250
     iget-object p1, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;->keyframe:Lcom/airbnb/lottie/value/Keyframe;
 
     invoke-virtual {p1}, Lcom/airbnb/lottie/value/Keyframe;->isStatic()Z

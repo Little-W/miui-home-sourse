@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="Icon_name_classic_mode">Tetapan skrin utama</string>
     <string name="accessibility_all_app_custom_category_finish">Selesai</string>
     <string name="accessibility_all_app_custom_category_item_remove">Padam \"%1$s\" dari kategori</string>
     <string name="accessibility_clear_search_bar_text">Kosongkan bar carian</string>
@@ -13,7 +14,9 @@
     <string name="accessibility_recent_task_exit">Terbaru Ditutup</string>
     <string name="accessibility_recent_task_locked_state">Dikunci</string>
     <string name="accessibility_recent_task_memory_info">Jumalah RAM: %2$s | RAM yang tersedia: %1$s. Klik dua kali untuk padam.</string>
+    <string name="accessibility_recent_task_show_menu">Lebih pilihan</string>
     <string name="accessibility_recent_task_unlocked_state">Buka kunci</string>
+    <string name="accessibility_recents_item_dismissed">%1$s dikeluarkan dari Terbaru</string>
     <string name="accessibility_recents_item_open_app_info">Buka %s info aplikasi.</string>
     <string name="accessibility_splite_screen_primary">Ditambahkan sebagai apl utama di Skrin pecahan</string>
     <string name="accessibility_splite_screen_secondary">Ditambahkan sebagai apl sekunder di Skrin pecahan</string>
@@ -25,6 +28,7 @@
     <string name="add_screen">Tambah skrin</string>
     <string name="added_all_category">Semua apl berjaya ditambah</string>
     <string name="afternoon">Petang</string>
+    <string name="agree_button">Setuju</string>
     <string name="alexa_notification_add">Tambah</string>
     <string name="alexa_notification_cancel">Kemudian</string>
     <string name="alexa_notification_content">Tambah pintasan Alexa ke Pusat kawalan?</string>
@@ -115,6 +119,13 @@
     <string name="app_category_tools">Peralatan</string>
     <string name="app_category_travel">Perjalanan</string>
     <string name="app_category_vr">VR</string>
+    <string name="app_drawer_double_confirm_description">Ini akan mengubah susun atur Skrin Utama anda. Anda akan dapat mengembalikan perubahan ini di Tetapan kemudian.</string>
+    <string name="app_drawer_double_confirm_title">Perhatian</string>
+    <string name="app_drawer_feature_description">Apl menu adalah alat yang sempurna untuk mengatur semua aplikasi anda. Kategorikan apl secara automatik dan cari apa sahaja yang anda perlukan dalam sekelip mata!</string>
+    <string name="app_drawer_guide_description">Cari apa yang anda cari dalam apl kegemaran anda</string>
+    <string name="app_drawer_guide_title">Apl menu</string>
+    <string name="app_drawer_tip_title">Kami telah menggantikan Kandungan baru dengan Apl menu.</string>
+    <string name="app_install_state">Dipasang</string>
     <string name="app_name">smallWindow</string>
     <string name="application_name">Pelancar Sistem</string>
     <string name="apply">Guna</string>
@@ -132,13 +143,40 @@
     <string name="auto_add_app_shortcut">Letakkan apl baharu pada Skrin Utama</string>
     <string name="auto_delete_category_dialog_content">Aplikasi semasa akan dialih keluar dari kategori ini dan kategori akan dipadamkan. Padamkan kategori ini sekarang?</string>
     <string name="auto_delete_category_dialog_title">Memadam kategori</string>
-    <string name="auto_disable_screenbuttons_summary">Klik dua kali butang navigasi untuk mendayakan semula</string>
+    <string name="auto_disable_screenbuttons_summary">Nyahdaya butang navigasi secara automatik apabila bar status tidak dipaparkan. Klik dua kali mana-mana butang navigasi untuk mendayakan semula.</string>
     <string name="auto_disable_screenbuttons_title">Auto-nyahaktif butang navigasi</string>
     <string name="back">Kembali</string>
     <string name="backup_fail">Tidak dapat menyandar pelancar</string>
     <string name="bad_wallpaper_source_prompt">Gagal memuat latar hias</string>
+    <string name="branch_feature_description">Selain apl, Quick Finder juga boleh mencari kandungan dan item dalam apl atas talian.</string>
+    <string name="branch_guide_attention">Menggunakan carian yang dipertingkatkan memerlukan berkongsi permintaan carian anda, ID Google Ads, dan alamat IP dengan Branch Metrics Inc. Baca dan bersetuju dengan <a href="http://url1"><font color="#B3000000">Terma &amp; Syarat End User Discovery</font></a> dan <a href="http://url2"><font color="#B3000000"> Dasar Privasi Branch Discovery </font></a> sebelum menggunakan ciri ini.</string>
+    <string name="branch_guide_description_one">Kami akan memasukkan semua apl anda ke dalam Apl menu. Skrin Utama anda akan kelihatan kemas dan teratur.</string>
+    <string name="branch_guide_description_three">Dengan carian terbina dalam, anda akan dapat mencari apa sahaja yang anda perlukan dalam sekelip mata!</string>
+    <string name="branch_guide_description_two">Apl menu mengkategorikan apl secara automatik.</string>
+    <string name="branch_guide_tip_title">Setiap apl berada di tempatnya</string>
+    <string name="branch_guide_title">Memperkenalkan Apl Menu</string>
+    <string name="branch_guide_type_four_desc">Anda boleh kembali kepada cara lama dengan dua langkah mudah</string>
+    <string name="branch_guide_type_four_main">Dalam Tetapan, pergi ke Skrin Utama > Skrin Utama dan pilih \"Klasik\".</string>
+    <string name="branch_guide_type_four_step_one">Buka Tetapan</string>
+    <string name="branch_guide_type_four_step_two">Pilih Skrin Utama</string>
+    <string name="branch_guide_type_one_desc">Urus apl anda dengan Apl menu</string>
+    <string name="branch_guide_type_one_main">Simpan apl anda dalam Apl menu untuk menjadikan Skrin Utama anda kemas dan teratur.</string>
+    <string name="branch_new_feature">Ciri baru</string>
+    <string name="branch_privacy_policy">Dasar Privasi</string>
+    <string name="branch_search_guide_description">Hasil carian kami lebih komprehensif sekarang</string>
+    <string name="branch_search_guide_privacy">Perkhidmatan ini dikuasakan oleh Branch Metrics Inc. Maklumat lokasi anda, pertanyaan carian, dan ID Google Ads akan dikongsi dengan Branch. Baca dan setuju untuk dengan <a href="http://url1"><font color="#B3000000">Terma dan Syarat</font></a> dan <a href="http://url2"><font color="#B3000000">Dasar Privasi</font></a> sebelum menggunakan perkhidmatan ini.</string>
+    <string name="branch_search_guide_title">Cari apa yang anda cari dalam apl kegemaran anda</string>
+    <string name="branch_terms_condition">Terma dan Syarat</string>
+    <string name="branch_tip_title">Dengan Quick Finders, anda dapat mencari semua yang anda perlukan dalam sekelip mata.</string>
+    <string name="btn_agree">Setuju</string>
+    <string name="btn_cancel">Batal</string>
+    <string name="btn_close">Matikan</string>
+    <string name="btn_open">Hidupkan</string>
+    <string name="btn_request_permission">Beri kebenaran</string>
+    <string name="btn_set_right_now">Beri kebenaran</string>
     <string name="buffering">Meneruskan…</string>
     <string name="cancel_action">Batal</string>
+    <string name="cancel_botton">Batal</string>
     <string name="cancel_btn_label">Batal</string>
     <string name="cant_edit_lock_screen">Tidak dapat mengedit gaya skrin kunci</string>
     <string name="cant_remove_folder">Tidak dapat mengalih keluar folder</string>
@@ -160,6 +198,8 @@
     <string name="chooser_wallpaper">Pilih latar hias baharu</string>
     <string name="clearable_edittext_clear_description">Padam</string>
     <string name="close">Tutup</string>
+    <string name="close_multi_finger_slide_summary">Gerak isyarat ini akan diabaikan dalam beberapa senario (cth. permainan dan main balik video)</string>
+    <string name="close_multi_finger_slide_title">Jangan memberi respon kepada gerak isyarat tiga dan empat jari</string>
     <string name="cloud_app_restore_title">Belum Selesai</string>
     <string name="common_home_search_delete">Memadam bar carian</string>
     <string name="common_home_search_delete_cancle">Batal</string>
@@ -178,6 +218,13 @@
     <string name="content_description_workspace_thumbnail_item">Pratonton skrin, laman %1$s</string>
     <string name="current_preview">Pratonton</string>
     <string name="current_wallpaper">Semasa</string>
+    <string name="custom_define_permission_desc_android.permission.CALL_PHONE">Untuk membuat panggilan kepada kenalan kecemasan dalam Mod Ringkas</string>
+    <string name="custom_define_permission_desc_android.permission.READ_CONTACTS">Untuk memaparkan kenalan kecemasan dalam Mod Ringkas</string>
+    <string name="custom_define_permission_desc_android.permission.READ_PHONE_STATE">Untuk memaparkan status peranti</string>
+    <string name="custom_define_permission_desc_android.permission_group.CALENDAR">Untuk memaparkan widget Kalendar</string>
+    <string name="custom_define_permission_desc_android.permission_group.CAMERA">Untuk memaparkan widget Galeri</string>
+    <string name="custom_define_permission_desc_android.permission_group.LOCATION">For accessing WLAN widget name in Android Q</string>
+    <string name="custom_define_permission_desc_android.permission_group.STORAGE">Untuk mengakses dan menyimpan data Skrin Utama</string>
     <string name="custom_wallpaper_picker">Layari</string>
     <string name="date_picker_label_day" />
     <string name="date_picker_label_month" />
@@ -207,6 +254,7 @@
     <string name="deselect_all">Nyahpilih semua</string>
     <string name="disable_wallpaper_scroll">Matikan pusingan tepi</string>
     <string name="download_action">Muat turun</string>
+    <string name="drag_icon_to_homescreen_guide">Tekan dan tahan ikon aplikasi, kemudian leretnya untuk menambah pintasan Skrin Utama</string>
     <string name="drag_multiple_item_name" />
     <string name="drag_single_item_name" />
     <string name="drawer_background">Latar belakang</string>
@@ -238,9 +286,11 @@
     <string name="emptyplaylist">Sentuh untuk tambah lagu</string>
     <string name="enable_wallpaper_scroll">Hidupkan pusingan tepi</string>
     <string name="encryption">Penyulitan</string>
+    <string name="enter_search_setting_title">Buka carian selepas membuka Apl menu</string>
     <string name="eras_ad">Masihi</string>
     <string name="eras_bc">Sebelum Masihi</string>
     <string name="evening">Petang</string>
+    <string name="exit_overview_because_task_stack_changed">Terbaru ditutup kerana perubahan yang berlaku di latar belakang</string>
     <string name="failed_to_delete_temporary">Gagal untuk buang</string>
     <string name="failed_to_drop">Pindah gagal</string>
     <string name="failed_to_drop_widget_invalid">Widget ini tidak sah</string>
@@ -352,11 +402,14 @@
     <string name="gadget_weather_title_14">Cuaca</string>
     <string name="gadget_weather_title_24">Cuaca 4X2</string>
     <string name="global_search_hint">Carian</string>
+    <string name="got_it_botton">Ok faham</string>
     <string name="group_folder">Folder Baru</string>
     <string name="group_live_folders">Folder</string>
     <string name="group_shortcuts">Pintasan</string>
     <string name="guide_install_app_msg">Apl ini tidak dipasang pada peranti anda. Cari dan pasang apl ini sekarang?</string>
     <string name="guide_install_app_title">Cari dan pasang apl?</string>
+    <string name="guide_permission_title">Kebenaran diperlukan</string>
+    <string name="guide_privacy_dialog_title">Terma Perkhidmatan</string>
     <string name="guide_tips_editing_mode">Tekan &amp; tahan untuk mengambil sebuah widget</string>
     <string name="home_gesture_content_center">Pusat Kandungan</string>
     <string name="home_gesture_global_search">Carian</string>
@@ -387,6 +440,9 @@
     <string name="launcher_slide_up_title">Leret ke atas pada Skrin utama</string>
     <string name="launcher_sliding_up_gesture">Tolak ke atas di Skrin utama untuk membuka carian</string>
     <string name="launcher_title">Skrin utama &amp; Terbaru</string>
+    <string name="layout_guide_description">Sekiranya anda tidak menyukai Apl menu, anda selalu boleh kembali ke Skrin Utama klasik. Sekadar gunakan pintasan \"Tetapan skrin utama\" dan bertukar antara dua mod.</string>
+    <string name="layout_guide_tip_title">Anda boleh kembali ke cara yang lama dalam satu klikan</string>
+    <string name="layout_guide_title">Bagaimana untuk memadamkan Apl menu</string>
     <string name="like">Tambah ke kegemaran</string>
     <string name="liked">Ditambah ke kegemaran</string>
     <string name="loading_desktop">Sebentar…</string>
@@ -400,7 +456,7 @@
     <string name="lock_screen_wallpaper">Latar hias skrin kunci</string>
     <string name="maml_download_dialog_cancel_text">Menunggu Wi-Fi</string>
     <string name="maml_download_dialog_cancel_text_china">Menunggu WLAN</string>
-    <string name="maml_download_dialog_checkbox_text">Jangan paparkan lagi</string>
+    <string name="maml_download_dialog_checkbox_text">Jangan paparkan lagi untuk %d minit</string>
     <string name="maml_download_dialog_confirm_text">Muat turun</string>
     <string name="maml_download_dialog_message">%s MB data mudah alih akan digunakan untuk memuat turun item ini. Muat turun juga?</string>
     <string name="maml_download_dialog_title">Amaran penggunaan data</string>
@@ -424,6 +480,7 @@
     <string name="menu_launcher_setting">Tetapan Pelancar</string>
     <string name="menu_lock">Kunci susun atur skrin utama</string>
     <string name="menu_more">Lainnya</string>
+    <string name="menu_no_word">Jangan paparkan teks</string>
     <string name="menu_picktheme">Pilih tema</string>
     <string name="menu_reset_scene">Set semula ke susun atur asal</string>
     <string name="menu_search">Carian</string>
@@ -436,6 +493,7 @@
     <string name="midnight">Malam</string>
     <string name="minus_one_screen">App vault</string>
     <string name="miui_screen_config_title">Tetapan skrin utama</string>
+    <string name="miuix_access_state_desc">Dipilih</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Batal pilih</string>
     <string name="miuix_appcompat_action_mode_select_all">Pilih semua</string>
     <string name="miuix_appcompat_action_mode_title_empty">Pilih item</string>
@@ -502,8 +560,12 @@
     <string name="mtzgadget_missing_text">Widget tidak tersedia</string>
     <string name="multi_selecting_tips">Untuk memilih apl, tekan dan seret ikonnya dan letak di sini.</string>
     <string name="navigation_guide_app_quick_switch_hide_line_summary">Leret ke atas dari bahagian bawah skrin, kemudian leret ke kiri atau ke kanan</string>
+    <string name="navigation_guide_app_quick_switch_hide_line_summary_pad">Leret ke kiri atau kanan di bahagian bawah skrin</string>
     <string name="navigation_guide_app_quick_switch_summary">Leret ke kiri atau kanan dari indikator skrin penuh atau bahagian bawah skrin</string>
+    <string name="navigation_guide_app_quick_switch_summary_pad">Leret ke kiri atau kanan dari indikator skrin penuh atau bahagian bawah skrin</string>
+    <string name="navigation_guide_app_quick_switch_summary_spec_pad">Leret ke kiri atau kanan dari bahagian bawah skrin</string>
     <string name="navigation_guide_app_quick_switch_title">Bertukar antara apl</string>
+    <string name="navigation_guide_app_quick_switch_title_spec_with_quotation_pad">Bertukar antara apl</string>
     <string name="navigation_guide_app_summary">Leret ke kiri atau kanan dari tepi skrin di kawasan atas</string>
     <string name="navigation_guide_app_title">Tindakan pencetus aplikasi</string>
     <string name="navigation_guide_appswitch_anim_summary">Leret merentasi skrin bermula dari tepi untuk kembali ke apl sebelumnya</string>
@@ -512,24 +574,46 @@
     <string name="navigation_guide_appswitch_summary">Leret ke kiri atau kanan dari tepi skrin dan tahan buat seketika</string>
     <string name="navigation_guide_appswitch_title">Tukar ke apl sebelumnya</string>
     <string name="navigation_guide_back_summary">Leret ke kiri atau kanan dari tepi skrin</string>
+    <string name="navigation_guide_back_summary_pad">Leret dari tepi ke bahagian tengah skrin</string>
+    <string name="navigation_guide_back_summary_spec_pad">Leret dari sisi tepi ke bahagian tengah skrin</string>
     <string name="navigation_guide_back_title">Kembali</string>
+    <string name="navigation_guide_back_title_spec_with_quotation_pad">Kembali</string>
     <string name="navigation_guide_dialog_dont_show_again">Jangan tunjuk lagi</string>
     <string name="navigation_guide_dialog_ok">Pelajari</string>
     <string name="navigation_guide_dialog_skip">Kemudian</string>
     <string name="navigation_guide_dialog_summary">Pelajari gerakan apa yang anda boleh guna untuk navigasi sistem.</string>
     <string name="navigation_guide_dialog_title">Pelajari gerakan</string>
+    <string name="navigation_guide_dock_summary_pad">Slaid ke atas dari bahagian bawah skrin</string>
+    <string name="navigation_guide_dock_summary_spec_pad">Slaid ke atas dari tepi bawah skrin</string>
+    <string name="navigation_guide_dock_title_pad">Paparkan dok apl</string>
+    <string name="navigation_guide_dock_title_spec_pad">Paparkan dok apl di dalam apl</string>
+    <string name="navigation_guide_dock_title_spec_with_quotation_pad">Paparkan dok apl di dalam apl</string>
     <string name="navigation_guide_finish_text">Ok faham</string>
     <string name="navigation_guide_gesture_line_dialog_summary">Gerak isyarat baru untuk bertukar antara aplikasi akan digunakan selepas anda menyembunyikan indikator skrin penuh. Pelajari gerak isyarat ini sekarang?</string>
     <string name="navigation_guide_gesture_line_dialog_title">Pelajari gerakan isyarat baru</string>
     <string name="navigation_guide_hide_gesture_line_summary">Jangan paparkan indikator skrin penuh apabila menggunakan gerak isyarat skrin penuh</string>
     <string name="navigation_guide_hide_gesture_line_title">Sembunyikan indikator skrin penuh</string>
     <string name="navigation_guide_home_summary">Leret ke atas dari bahagian bawah skrin</string>
+    <string name="navigation_guide_home_summary_spec_pad">Leret ke atas dari tepi bawah skrin</string>
     <string name="navigation_guide_home_title">Pergi ke Skrin Utama</string>
+    <string name="navigation_guide_home_title_spec_with_quotation_pad">Pergi ke Skrin Utama</string>
+    <string name="navigation_guide_next_spec_pad">Seterusnya</string>
+    <string name="navigation_guide_prev_spec_pad">Kembali</string>
     <string name="navigation_guide_prohibit_gesture_hint">Tidak dapat menggunakan gerak isyarat skrin penuh semasa menonton demo</string>
+    <string name="navigation_guide_provision_see_more_pad">Lihat lebih banyak demo dalam Tetapan > Skrin Utama > Gerak isyarat skrin penuh</string>
     <string name="navigation_guide_provision_see_more_pad_with_virtual_key">Lihat lebih banyak demo dalam Tetapan > Skrin Utama > Navigasi sistem</string>
+    <string name="navigation_guide_provision_title_pad">Gerak isyarat skrin penuh</string>
     <string name="navigation_guide_recent_summary">Leret ke atas dari bahagian bawah skrin dan tangguh</string>
+    <string name="navigation_guide_recent_summary_pad">Leret ke atas dari bahagian bawah skrin dan tangguh</string>
+    <string name="navigation_guide_recent_summary_spec_pad">Leret ke atas dari tepi bawah skrin, jeda, dan angkat jari</string>
     <string name="navigation_guide_recent_title">Buka Terbaru</string>
+    <string name="navigation_guide_recent_title_spec_with_quotation_pad">Buka Terbaru</string>
     <string name="navigation_guide_settings">Demo gerakan</string>
+    <string name="navigation_position_center">Center</string>
+    <string name="navigation_position_left">Left</string>
+    <string name="navigation_position_right">Right</string>
+    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
+    <string name="navigation_position_title">Navigation buttons position</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Batal</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Tidak dapat menggunakan gerak isyarat skrin penuh dengan pelancar pihak ketiga. Bertukar ke pelancar sistem dan hidupkan gerak isyarat skrin penuh?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">Ok</string>
@@ -538,6 +622,7 @@
     <string name="navigation_type_title">Navigasi sistem</string>
     <string name="navigation_type_virtual_key">Butang</string>
     <string name="network_error">Tidak dapat menyambung ke rangkaian. Cuba lagi.</string>
+    <string name="new_feature_title">Apa yang baru</string>
     <string name="night">Petang</string>
     <string name="no_detail_page">Tiada butiran halaman</string>
     <string name="no_space_toast">Ruang tidak mencukupi</string>
@@ -551,7 +636,7 @@
     <string name="online_wallpaper">Dalam talian</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Batal</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Matikan</string>
-    <string name="open_personal_assistant_dialog_desc">Anda tidak akan dapat menggunakan App vault dan menerima kemaskininya. Nyahaktif sekarang?</string>
+    <string name="open_personal_assistant_dialog_desc">Setelah mematikan App vault, anda tidak akan dapat melihat atau menggunakan widget App vault. Versi terbaru mereka tidak akan tersedia untuk anda juga. Matikan juga?</string>
     <string name="open_personal_assistant_dialog_desc_international">Anda tidak akan dapat menggunakan Kad App vault (Saham, Pintasan, dll) dan menerima kemas kini selepas anda mematikan ciri ini.</string>
     <string name="open_personal_assistant_dialog_title">Matikan App vault</string>
     <string name="open_personal_assistant_settings">Tetapan App vault</string>
@@ -579,6 +664,7 @@
     <string name="photo_load_failed">Gagal untuk muatkan foto</string>
     <string name="please_slide_agian">Slaid semula</string>
     <string name="pm">PM</string>
+    <string name="popular_search">Popular</string>
     <string name="pref_cell_layout_size">Susun atur apl</string>
     <string name="pref_enable_drawing_cache_summary">Matikan untuk membebaskan memori (boleh menyebabkan lag)</string>
     <string name="pref_enable_drawing_cache_title">Cache lukisan</string>
@@ -598,6 +684,14 @@
     <string name="privacy_thumbnail_blur_summary">Pratonton aplikasi blur di Terbaru</string>
     <string name="privacy_thumbnail_blur_title">Pratonton apl blur</string>
     <string name="quick_app">Apl pantas</string>
+    <string name="quick_finder_feature_description">Quick Finder membolehkan anda mencari apl, kandungan dalam aplikasi, dan item atas talian dengan lebih pantas. Anda boleh mematikan ciri ini di Tetapan.</string>
+    <string name="quick_finder_tip_title">Cari semua yang anda perlukan dengan lebih pantas</string>
+    <string name="quick_search_all_app_desc">Paparkan semua apl di Apl menu</string>
+    <string name="quick_search_desc">Buka carian selepas membuka Apl menu</string>
+    <string name="quick_search_guide_all_apps">Semua apl</string>
+    <string name="quick_search_guide_ok_btn">Ok</string>
+    <string name="quick_search_guide_quick_search">Carian pantas</string>
+    <string name="quick_search_guide_title">Pilih mod lalai</string>
     <string name="recent_apps">Terbaru</string>
     <string name="recent_menu_item_info">Info</string>
     <string name="recent_menu_item_lock">Kunci</string>
@@ -626,6 +720,11 @@
     <string name="recents_title_market">Cari apl</string>
     <string name="recents_title_security_scan">Imbasan keselamatan</string>
     <string name="recents_tv_small_window_text">Tetingkap terapung</string>
+    <string name="recents_worldcirculate_text">Lepaskan untuk memilih</string>
+    <string name="recnets_worldcirculate_button_text">Mi Smart Hub</string>
+    <string name="recnets_worldcirculate_display_computer_info">Apl sedang berjalan di %s.</string>
+    <string name="recnets_worldcirculate_display_default_info">Klik untuk membawanya kembali ke sini.</string>
+    <string name="recnets_worldcirculate_display_pad_info">Apl sedang berjalan di %s.</string>
     <string name="recommend_apk_size_and_desc">%1$dMB | %2$s</string>
     <string name="recommend_app">Saranan apl</string>
     <string name="recommend_apps_default_title">Kosong</string>
@@ -643,6 +742,8 @@
     <string name="remove_invalidate_gadget_tips">Salah satu widget yang anda gunakan tidak lagi tersedia. Anda boleh menambah yang lain.</string>
     <string name="remove_sys_app_content">Anda dapat menambahkan pintasan Skrin Utama sekali lagi dalam Tetapan > Apl > Urus pintasan Skrin Utama. Alih keluar sekarang?</string>
     <string name="remove_sys_app_title">Padam pintasan Skrin Utama?</string>
+    <string name="request_permission_msg">Pelancar POCO memerlukan beberapa kebenaran untuk memberi anda akses ke fungsi penuhnya.</string>
+    <string name="request_permission_title">Kebenaran diperlukan</string>
     <string name="reset_cate_tip_content">Jika anda meneruskan, kumpulan apl lalai akan dipulihkan. Teruskan?</string>
     <string name="reset_cate_tip_title">Pulihkan kumpulan lalai</string>
     <string name="reset_description_first_time">Awda boleh memulih semula susun atur dari %1$s dalam tempoh 2 jam</string>
@@ -658,6 +759,8 @@
     <string name="screen_cells_config_title">Susun atur skrin utama</string>
     <string name="screen_locked_toast">Susun atur skrin utama dikunci.</string>
     <string name="screen_number">%d skrin</string>
+    <string name="search_bar_hint_content">Carian untuk apl dan kandungan</string>
+    <string name="search_guide_btn">Ok faham</string>
     <string name="search_in_apps_store">Mencari untuk \"%1$s\" di %2$s</string>
     <string name="search_no_result">Tidak dapat memuatkan hasil</string>
     <string name="select_all">Pilih semua</string>
@@ -665,6 +768,7 @@
     <string name="select_photo">Foto</string>
     <string name="send">Hantar</string>
     <string name="server_error">Ralat server berlaku. Tunggu sebentar dan cuba lagi.</string>
+    <string name="service_double_attention">Fungsi carian yang dipertingkatkan disediakan oleh Branch Metrics Inc. Untuk menjadikan ciri ini berfungsi, kami perlu berkongsi permintaan carian anda, ID Google Ads, dan alamat IP dengan Branch Metrics Inc. Baca dan bersetuju dengan <a href="http://url1"><font color="#B3000000">Terma &amp; Syarat End User Discovery</font></a> dan <a href="http://url2"><font color="#B3000000"> Dasar Privasi Branch Discovery </font></a> sebelum menggunakan ciri ini.</string>
     <string name="setting_wallpaper_tip">Klik atau seret untuk baiki</string>
     <string name="settings">Tetapan</string>
     <string name="settings_shortcut">Tetapan</string>
@@ -680,6 +784,7 @@
     <string name="show_most_popular_apps_you_used">Memaparkan apl yang paling kerap digunakan di dalam menu</string>
     <string name="show_recents_recommend_title">Papar saranan</string>
     <string name="slide_to_open_newhome">Leret ke atas untuk membuka Pusat Kandungan</string>
+    <string name="small_window">Tetingkap terapung</string>
     <string name="small_window_button_complete">Selesai</string>
     <string name="small_window_edit_content">Anda boleh menambah sehingga %d apl</string>
     <string name="small_window_edit_title">Apl semasa</string>
@@ -701,11 +806,13 @@
     <string name="status_installing">Memasang</string>
     <string name="status_paused">Henti seketika</string>
     <string name="status_pending">Menunggu</string>
+    <string name="suggestions">Cadangan</string>
     <string name="sunday">Ahad</string>
     <string name="sunday_short">Ahd</string>
     <string name="sunday_shortest">Ahd</string>
     <string name="swipe_the_desktop_to_the_left">Leret ke kiri pada Skrin Utama</string>
     <string name="swipe_the_desktop_to_the_right">Leret ke kanan pada Skrin Utama</string>
+    <string name="switch_on_button">Hidupkan</string>
     <string name="switch_personal_assistant_app_vault">App vault</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">Tiada</string>
@@ -716,6 +823,10 @@
     <string name="system_shortcuts_remove">Padam</string>
     <string name="system_text">Auto</string>
     <string name="task_access_locked_app_msg">Apl Kunci diaktifkan</string>
+    <string name="term_of_service">Terma dan syarat</string>
+    <string name="terms_of_services_one">Selamat datang ke Apl Menu dan Pencari Pantas. Pencari Pantas membolehkan anda mencari apl, kandungan dalam apl, dan item dalam talian dengan lebih pantas. Baca dan bersetuju dengan <a href="http://url1"><font color="#B3000000">Dasar Privasi</font></a> Xiaomi sebelum menggunakan ciri ini.</string>
+    <string name="terms_of_services_three">Anda boleh mematikan ciri ini di Tetapan.</string>
+    <string name="terms_of_services_two">Menggunakan carian yang dipertingkatkan memerlukan perkongsian maklumat peribadi yang diperlukan, termasuk pertanyaan carian anda, ID Iklan Google, dan alamat IP, dengan Branch Metrics Inc. Branch akan memproses maklumat peribadi anda sesuai dengan <a href="http://url1"><font color="#B3000000">Dasar Privasi Branch Discovery</font></a>. Baca dan bersetuju dengan <a href="http://url2"><font color="#B3000000"> Terma &amp; Syarat Pengguna Akhir Discovery</font></a> dan <a href="http://url3"><font color="#B3000000">Dasar Privasi Branch Discovery</font></a> sebelum menggunakan ciri ini.</string>
     <string name="the_anniversary_of_lifting_martial_law">Ulang Tahun Mengangkat Undang-Undang Bela Diri</string>
     <string name="the_anti_aggression_day">Hari Anti Pencerobohan</string>
     <string name="the_arbor_day">Hari Arbor</string>
@@ -782,6 +893,11 @@
     <string name="tuesday">Selasa</string>
     <string name="tuesday_short">Sel</string>
     <string name="tuesday_shortest">Sel</string>
+    <string name="uni_search_permission_content">Hidupkan ciri carian dalam talian. (Perkhidmatan carian disediakan oleh Branch.)</string>
+    <string name="uni_search_permission_msg">Benarkan Pelancar POCO untuk mengakses lokasi dan kenalan anda untuk meningkatkan hasil carian.</string>
+    <string name="uni_search_permission_title">Carian yang lebih baik</string>
+    <string name="uni_search_setting_summary">Cari kandungan secara langsung dalam apl</string>
+    <string name="uni_search_setting_title">Mod pertanyaan dalam apl</string>
     <string name="uninstall">Nyahpasang</string>
     <string name="uninstall_dialog_message">Nyahpasang akan memadam semua data apl.</string>
     <string name="uninstall_dialog_title_format">Nyahpasang %s?</string>

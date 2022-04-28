@@ -71,7 +71,7 @@
 
     move-object v7, v6
 
-    .line 33
+    .line 34
     :goto_1
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -79,7 +79,7 @@
 
     if-eqz p2, :cond_2
 
-    .line 34
+    .line 35
     sget-object p2, Lcom/airbnb/lottie/parser/CircleShapeParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {p0, p2}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
@@ -88,15 +88,15 @@
 
     packed-switch p2, :pswitch_data_0
 
-    .line 52
+    .line 53
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipName()V
 
-    .line 53
+    .line 54
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_1
 
-    .line 49
+    .line 50
     :pswitch_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextInt()I
 
@@ -113,7 +113,7 @@
 
     goto :goto_1
 
-    .line 45
+    .line 46
     :pswitch_1
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
@@ -121,7 +121,7 @@
 
     goto :goto_1
 
-    .line 42
+    .line 43
     :pswitch_2
     invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parsePoint(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatablePointValue;
 
@@ -129,7 +129,7 @@
 
     goto :goto_1
 
-    .line 39
+    .line 40
     :pswitch_3
     invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatablePathValueParser;->parseSplitPath(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableValue;
 
@@ -137,7 +137,7 @@
 
     goto :goto_1
 
-    .line 36
+    .line 37
     :pswitch_4
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -145,7 +145,7 @@
 
     goto :goto_1
 
-    .line 57
+    .line 58
     :cond_2
     new-instance p0, Lcom/airbnb/lottie/model/content/CircleShape;
 

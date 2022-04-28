@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 0
 
-    .line 456
+    .line 465
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$9;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 459
+    .line 468
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$9;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     iget-object p1, p1, Lcom/miui/home/launcher/ShortcutIcon;->mFolderCreationBg:Landroid/widget/ImageView;
@@ -44,7 +44,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 460
+    .line 469
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$9;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     iget-object p1, p1, Lcom/miui/home/launcher/ShortcutIcon;->mFolderCreationBg:Landroid/widget/ImageView;

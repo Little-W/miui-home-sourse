@@ -97,7 +97,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f03001d
+    const v1, 0x7f03001e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -339,6 +339,8 @@
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-nez v0, :cond_1
 

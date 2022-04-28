@@ -3,6 +3,7 @@
 .source "AllAppsSwipeController.java"
 
 # interfaces
+.implements Lcom/miui/home/launcher/LauncherStateManager$StateListener;
 .implements Lcom/miui/home/launcher/touch/SwipeDetector$Listener;
 .implements Lcom/miui/home/launcher/util/LauncherStateSwitch;
 .implements Lcom/miui/home/launcher/util/SwipeTouchController;
@@ -38,20 +39,20 @@
 .method public constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 2
 
-    .line 47
+    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
+    .line 46
     new-instance v0, Lcom/miui/home/launcher/util/FlingBlockCheck;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/util/FlingBlockCheck;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mFlingBlockCheck:Lcom/miui/home/launcher/util/FlingBlockCheck;
 
-    .line 48
+    .line 51
     iput-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 49
+    .line 52
     new-instance v0, Lcom/miui/home/launcher/touch/SwipeDetector;
 
     sget-object v1, Lcom/miui/home/launcher/touch/SwipeDetector;->VERTICAL:Lcom/miui/home/launcher/touch/SwipeDetector$Direction;
@@ -59,6 +60,15 @@
     invoke-direct {v0, p1, p0, v1}, Lcom/miui/home/launcher/touch/SwipeDetector;-><init>(Landroid/content/Context;Lcom/miui/home/launcher/touch/SwipeDetector$Listener;Lcom/miui/home/launcher/touch/SwipeDetector$Direction;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDetector:Lcom/miui/home/launcher/touch/SwipeDetector;
+
+    .line 53
+    iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Lcom/miui/home/launcher/LauncherStateManager;->addStateListener(Lcom/miui/home/launcher/LauncherStateManager$StateListener;)V
 
     return-void
 .end method
@@ -68,15 +78,15 @@
 
     const/4 v0, 0x0
 
-    .line 312
+    .line 327
     iput-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
-    .line 313
+    .line 328
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDetector:Lcom/miui/home/launcher/touch/SwipeDetector;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/touch/SwipeDetector;->finishedScrolling()V
 
-    .line 314
+    .line 329
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDetector:Lcom/miui/home/launcher/touch/SwipeDetector;
 
     const/4 v1, 0x0
@@ -89,7 +99,7 @@
 .method private getSwipeDirection()I
     .locals 4
 
-    .line 115
+    .line 119
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
@@ -102,7 +112,7 @@
 
     const/4 v1, 0x1
 
-    .line 117
+    .line 121
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->getTargetState(Lcom/miui/home/launcher/LauncherState;Z)Lcom/miui/home/launcher/LauncherState;
 
     move-result-object v2
@@ -116,7 +126,7 @@
     :cond_0
     move v1, v3
 
-    .line 120
+    .line 124
     :goto_0
     invoke-virtual {p0, v0, v3}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->getTargetState(Lcom/miui/home/launcher/LauncherState;Z)Lcom/miui/home/launcher/LauncherState;
 
@@ -133,7 +143,7 @@
 .method public static synthetic lambda$onDragEnd$0(Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;Lcom/miui/home/launcher/LauncherState;)V
     .locals 0
 
-    .line 268
+    .line 275
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->onSwipeInteractionCompleted(Lcom/miui/home/launcher/LauncherState;)V
 
     return-void
@@ -142,12 +152,12 @@
 .method private reinitCurrentAnimation(ZZ)Z
     .locals 1
 
-    .line 137
+    .line 141
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mFromState:Lcom/miui/home/launcher/LauncherState;
 
     if-nez v0, :cond_0
 
-    .line 138
+    .line 142
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
@@ -163,17 +173,17 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 140
+    .line 144
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mToState:Lcom/miui/home/launcher/LauncherState;
 
-    .line 145
+    .line 149
     :cond_1
     :goto_0
     invoke-virtual {p0, v0, p2}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->getTargetState(Lcom/miui/home/launcher/LauncherState;Z)Lcom/miui/home/launcher/LauncherState;
 
     move-result-object p1
 
-    .line 147
+    .line 151
     iget-object p2, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mFromState:Lcom/miui/home/launcher/LauncherState;
 
     if-ne v0, p2, :cond_2
@@ -190,26 +200,26 @@
 
     return p1
 
-    .line 151
+    .line 155
     :cond_4
     iput-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mFromState:Lcom/miui/home/launcher/LauncherState;
 
-    .line 152
+    .line 156
     iput-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mToState:Lcom/miui/home/launcher/LauncherState;
 
     const/4 p1, 0x0
 
-    .line 154
+    .line 158
     iput p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mStartProgress:F
 
-    .line 155
+    .line 159
     invoke-virtual {p0}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->initCurrentAnimation()F
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mProgressMultiplier:F
 
-    .line 156
+    .line 160
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->dispatchOnStart()V
@@ -222,22 +232,22 @@
 .method private resetCurrentAnimation(ZZF)V
     .locals 0
 
-    .line 198
+    .line 202
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->reinitCurrentAnimation(ZZ)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 199
+    .line 203
     iput p3, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDisplacementShift:F
 
-    .line 200
+    .line 204
     iget-boolean p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCanBlockFling:Z
 
     if-eqz p1, :cond_0
 
-    .line 201
+    .line 205
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mFlingBlockCheck:Lcom/miui/home/launcher/util/FlingBlockCheck;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/util/FlingBlockCheck;->blockFling()V
@@ -251,12 +261,12 @@
 .method public canCancel()Z
     .locals 1
 
-    .line 340
+    .line 355
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     if-eqz v0, :cond_0
 
-    .line 341
+    .line 356
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDetector:Lcom/miui/home/launcher/touch/SwipeDetector;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/touch/SwipeDetector;->isIdleState()Z
@@ -274,7 +284,7 @@
 .method protected canInterceptTouch(Landroid/view/MotionEvent;)Z
     .locals 4
 
-    .line 281
+    .line 288
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isDrawerMode()Z
@@ -297,7 +307,7 @@
 
     return v1
 
-    .line 284
+    .line 291
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
@@ -307,11 +317,11 @@
 
     return v2
 
-    .line 289
+    .line 296
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->canTouchControllerInterceptTouchEvent()Z
+    invoke-virtual {v0, v2}, Lcom/miui/home/launcher/Launcher;->canTouchControllerInterceptTouchEvent(Z)Z
 
     move-result v0
 
@@ -319,8 +329,20 @@
 
     return v1
 
-    .line 293
+    .line 300
     :cond_2
+    iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/AbstractFloatingView;->getTopOpenView(Lcom/miui/home/launcher/BaseDraggingActivity;)Lcom/miui/home/launcher/AbstractFloatingView;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    return v1
+
+    .line 304
+    :cond_3
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     sget-object v3, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
@@ -329,7 +351,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -339,12 +361,12 @@
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
     return v1
 
-    .line 297
-    :cond_3
+    .line 308
+    :cond_4
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     sget-object v3, Lcom/miui/home/launcher/LauncherState;->ALL_APPS:Lcom/miui/home/launcher/LauncherState;
@@ -353,7 +375,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -365,18 +387,32 @@
 
     move-result p1
 
-    if-nez p1, :cond_4
+    if-nez p1, :cond_5
 
     return v1
 
-    :cond_4
+    .line 312
+    :cond_5
+    invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/common/PreferenceUtils;->isDrawerModeEnable()Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    return v1
+
+    :cond_6
     return v2
 .end method
 
 .method protected getShiftRange()F
     .locals 1
 
-    .line 132
+    .line 136
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getAllAppsController()Lcom/miui/home/launcher/allapps/AllAppsTransitionController;
@@ -393,19 +429,19 @@
 .method protected getTargetState(Lcom/miui/home/launcher/LauncherState;Z)Lcom/miui/home/launcher/LauncherState;
     .locals 1
 
-    .line 318
+    .line 333
     sget-object v0, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
 
     if-ne p1, v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 319
+    .line 334
     sget-object p1, Lcom/miui/home/launcher/LauncherState;->ALL_APPS:Lcom/miui/home/launcher/LauncherState;
 
     return-object p1
 
-    .line 320
+    .line 335
     :cond_0
     sget-object v0, Lcom/miui/home/launcher/LauncherState;->ALL_APPS:Lcom/miui/home/launcher/LauncherState;
 
@@ -413,7 +449,7 @@
 
     if-nez p2, :cond_1
 
-    .line 321
+    .line 336
     sget-object p1, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
 
     return-object p1
@@ -425,7 +461,7 @@
 .method protected initCurrentAnimation()F
     .locals 8
 
-    .line 327
+    .line 342
     invoke-virtual {p0}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->getShiftRange()F
 
     move-result v0
@@ -436,7 +472,7 @@
 
     float-to-long v5, v1
 
-    .line 329
+    .line 344
     iget-object v1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
@@ -449,14 +485,14 @@
 
     move-object v7, p0
 
-    .line 330
+    .line 345
     invoke-virtual/range {v2 .. v7}, Lcom/miui/home/launcher/LauncherStateManager;->createAnimationToNewWorkspace(Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/LauncherState;JLcom/miui/home/launcher/util/LauncherStateSwitch;)Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
-    .line 331
+    .line 346
     iget-object v1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mFromState:Lcom/miui/home/launcher/LauncherState;
 
     iget-object v2, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -467,7 +503,7 @@
 
     mul-float/2addr v1, v0
 
-    .line 332
+    .line 347
     iget-object v2, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mToState:Lcom/miui/home/launcher/LauncherState;
 
     iget-object v3, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -490,7 +526,7 @@
 .method public final onControllerInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 5
 
-    .line 68
+    .line 72
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v0
@@ -501,12 +537,12 @@
 
     if-le v0, v1, :cond_0
 
-    .line 69
+    .line 73
     iput-boolean v1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mNoIntercept:Z
 
     return v2
 
-    .line 72
+    .line 76
     :cond_0
     iget-boolean v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDisallowIntercept:Z
 
@@ -514,7 +550,7 @@
 
     return v2
 
-    .line 75
+    .line 79
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -522,7 +558,7 @@
 
     if-nez v0, :cond_5
 
-    .line 76
+    .line 80
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->canInterceptTouch(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -531,14 +567,14 @@
 
     iput-boolean v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mNoIntercept:Z
 
-    .line 77
+    .line 81
     iget-boolean v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mNoIntercept:Z
 
     if-eqz v0, :cond_2
 
     return v2
 
-    .line 86
+    .line 90
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
@@ -550,7 +586,7 @@
 
     goto :goto_0
 
-    .line 90
+    .line 94
     :cond_3
     invoke-direct {p0}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->getSwipeDirection()I
 
@@ -558,7 +594,7 @@
 
     if-nez v0, :cond_4
 
-    .line 92
+    .line 96
     iput-boolean v1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mNoIntercept:Z
 
     return v2
@@ -566,13 +602,13 @@
     :cond_4
     move v3, v2
 
-    .line 96
+    .line 100
     :goto_0
     iget-object v4, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDetector:Lcom/miui/home/launcher/touch/SwipeDetector;
 
     invoke-virtual {v4, v0, v3}, Lcom/miui/home/launcher/touch/SwipeDetector;->setDetectableScrollConditions(IZ)V
 
-    .line 100
+    .line 104
     :cond_5
     iget-boolean v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mNoIntercept:Z
 
@@ -580,7 +616,7 @@
 
     return v2
 
-    .line 104
+    .line 108
     :cond_6
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -590,23 +626,23 @@
 
     if-eqz v0, :cond_7
 
-    .line 105
+    .line 109
     invoke-virtual {v0}, Lcom/miui/home/launcher/MinusOneScreenView;->isAlreadyScrolled()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 106
+    .line 110
     iput-boolean v1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mNoIntercept:Z
 
     return v2
 
-    .line 110
+    .line 114
     :cond_7
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->onControllerTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 111
+    .line 115
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDetector:Lcom/miui/home/launcher/touch/SwipeDetector;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/touch/SwipeDetector;->isDraggingOrSettling()Z
@@ -619,7 +655,7 @@
 .method public final onControllerTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 128
+    .line 132
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDetector:Lcom/miui/home/launcher/touch/SwipeDetector;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/touch/SwipeDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -632,7 +668,7 @@
 .method public onDrag(FF)Z
     .locals 5
 
-    .line 181
+    .line 185
     iget v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mProgressMultiplier:F
 
     iget v1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDisplacementShift:F
@@ -641,15 +677,15 @@
 
     mul-float/2addr v0, v1
 
-    .line 182
+    .line 186
     iget v1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mStartProgress:F
 
     add-float/2addr v0, v1
 
-    .line 183
+    .line 187
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->updateProgress(F)V
 
-    .line 184
+    .line 188
     iget v1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDisplacementShift:F
 
     sub-float v1, p1, v1
@@ -676,7 +712,7 @@
 
     if-gtz v2, :cond_1
 
-    .line 186
+    .line 190
     invoke-direct {p0, v3, v1, p1}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->resetCurrentAnimation(ZZF)V
 
     goto :goto_1
@@ -688,18 +724,18 @@
 
     if-ltz v0, :cond_2
 
-    .line 188
+    .line 192
     invoke-direct {p0, v4, v1, p1}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->resetCurrentAnimation(ZZF)V
 
     goto :goto_1
 
-    .line 190
+    .line 194
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mFlingBlockCheck:Lcom/miui/home/launcher/util/FlingBlockCheck;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/util/FlingBlockCheck;->onEvent()V
 
-    .line 193
+    .line 197
     :goto_1
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -715,56 +751,64 @@
 .method public onDragEnd(FZ)V
     .locals 10
 
+    .line 218
+    iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    if-eqz p2, :cond_0
+    if-eqz p2, :cond_1
 
-    .line 212
+    .line 219
     iget-object v2, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mFlingBlockCheck:Lcom/miui/home/launcher/util/FlingBlockCheck;
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/util/FlingBlockCheck;->isBlocked()Z
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
     move v2, v0
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     move v2, v1
 
     :goto_0
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
     move p2, v1
 
-    .line 218
-    :cond_1
+    .line 225
+    :cond_2
     iget-object v3, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->getProgressFraction()F
 
     move-result v3
 
-    .line 219
+    .line 226
     iget-object v4, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     invoke-virtual {v4}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->getInterpolator()Landroid/animation/TimeInterpolator;
 
     move-result-object v4
 
-    .line 220
+    .line 227
     invoke-interface {v4, v3}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
 
     move-result v4
 
-    if-eqz p2, :cond_3
+    if-eqz p2, :cond_4
 
-    .line 223
+    .line 230
     invoke-static {p1}, Ljava/lang/Math;->signum(F)F
 
     move-result p2
@@ -779,20 +823,20 @@
 
     move-result p2
 
-    if-nez p2, :cond_2
+    if-nez p2, :cond_3
 
-    .line 224
+    .line 231
     iget-object p2, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mToState:Lcom/miui/home/launcher/LauncherState;
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     iget-object p2, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mFromState:Lcom/miui/home/launcher/LauncherState;
 
     goto :goto_1
 
-    .line 227
-    :cond_3
+    .line 234
+    :cond_4
     iget-object p2, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mToState:Lcom/miui/home/launcher/LauncherState;
 
     sget-object v5, Lcom/miui/home/launcher/LauncherState;->ALL_APPS:Lcom/miui/home/launcher/LauncherState;
@@ -801,35 +845,35 @@
 
     cmpl-float p2, v4, p2
 
-    if-lez p2, :cond_4
+    if-lez p2, :cond_5
 
-    .line 229
+    .line 236
     iget-object p2, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mToState:Lcom/miui/home/launcher/LauncherState;
 
     goto :goto_1
 
-    :cond_4
+    :cond_5
     iget-object p2, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mFromState:Lcom/miui/home/launcher/LauncherState;
 
     :goto_1
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_6
 
-    .line 236
+    .line 243
     iget-object v2, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mFromState:Lcom/miui/home/launcher/LauncherState;
 
-    if-ne p2, v2, :cond_5
+    if-ne p2, v2, :cond_6
 
-    .line 237
+    .line 244
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherAnimUtils;->blockedFlingDurationFactor(F)I
 
     move-result v2
 
     goto :goto_2
 
-    :cond_5
+    :cond_6
     move v2, v0
 
-    .line 239
+    .line 246
     :goto_2
     iget-object v4, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mToState:Lcom/miui/home/launcher/LauncherState;
 
@@ -841,20 +885,20 @@
 
     const/4 v9, 0x0
 
-    if-ne p2, v4, :cond_7
+    if-ne p2, v4, :cond_8
 
     cmpl-float v4, v3, v8
 
-    if-ltz v4, :cond_6
+    if-ltz v4, :cond_7
 
     move v4, v8
 
     goto :goto_3
 
-    :cond_6
+    :cond_7
     mul-float/2addr v7, p1
 
-    .line 245
+    .line 252
     iget v4, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mProgressMultiplier:F
 
     mul-float/2addr v7, v4
@@ -865,14 +909,14 @@
 
     move-result v4
 
-    .line 248
+    .line 255
     invoke-static {v3, v9}, Ljava/lang/Math;->max(FF)F
 
     move-result v3
 
     sub-float v3, v8, v3
 
-    .line 247
+    .line 254
     invoke-static {p1, v3}, Lcom/miui/home/launcher/touch/SwipeDetector;->calculateDuration(FF)J
 
     move-result-wide v5
@@ -883,15 +927,15 @@
 
     goto :goto_3
 
-    .line 253
-    :cond_7
+    .line 260
+    :cond_8
     iget-object v4, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     invoke-virtual {v4}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->dispatchOnCancel()V
 
     cmpg-float v4, v3, v9
 
-    if-gtz v4, :cond_8
+    if-gtz v4, :cond_9
 
     move v4, v9
 
@@ -899,10 +943,10 @@
 
     goto :goto_3
 
-    :cond_8
+    :cond_9
     mul-float/2addr v7, p1
 
-    .line 260
+    .line 267
     iget v4, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mProgressMultiplier:F
 
     mul-float/2addr v7, v4
@@ -913,14 +957,14 @@
 
     move-result v4
 
-    .line 263
+    .line 270
     invoke-static {v3, v8}, Ljava/lang/Math;->min(FF)F
 
     move-result v3
 
     sub-float/2addr v3, v9
 
-    .line 262
+    .line 269
     invoke-static {p1, v3}, Lcom/miui/home/launcher/touch/SwipeDetector;->calculateDuration(FF)J
 
     move-result-wide v5
@@ -931,7 +975,7 @@
 
     move v8, v9
 
-    .line 267
+    .line 274
     :goto_3
     iget-object v2, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
@@ -941,7 +985,7 @@
 
     invoke-virtual {v2, v3}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->setEndAction(Ljava/lang/Runnable;)V
 
-    .line 270
+    .line 277
     iget-object p2, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->getAnimationPlayer()Landroid/animation/ValueAnimator;
@@ -950,7 +994,7 @@
 
     const/4 v2, 0x2
 
-    .line 271
+    .line 278
     new-array v2, v2, [F
 
     aput v4, v2, v1
@@ -959,25 +1003,25 @@
 
     invoke-virtual {p2, v2}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    .line 272
+    .line 279
     invoke-virtual {p2, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 273
+    .line 280
     invoke-static {p1}, Lcom/miui/home/launcher/anim/Interpolators;->scrollInterpolatorForVelocity(F)Landroid/view/animation/Interpolator;
 
     move-result-object p1
 
     invoke-virtual {p2, p1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 274
+    .line 281
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->dispatchOnStart()V
 
-    .line 275
+    .line 282
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 277
+    .line 284
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAllAppsController()Lcom/miui/home/launcher/allapps/AllAppsTransitionController;
@@ -992,7 +1036,7 @@
 .method public onDragStart(Z)V
     .locals 2
 
-    .line 162
+    .line 166
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
@@ -1003,25 +1047,25 @@
 
     move-result-object p1
 
-    .line 163
+    .line 167
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     const/4 v1, 0x0
 
     if-nez v0, :cond_0
 
-    .line 164
+    .line 168
     iput-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mFromState:Lcom/miui/home/launcher/LauncherState;
 
     const/4 p1, 0x0
 
-    .line 165
+    .line 169
     iput-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mToState:Lcom/miui/home/launcher/LauncherState;
 
-    .line 166
+    .line 170
     invoke-direct {p0}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->cancelAnimationControllers()V
 
-    .line 167
+    .line 171
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDetector:Lcom/miui/home/launcher/touch/SwipeDetector;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/touch/SwipeDetector;->wasInitialTouchPositive()Z
@@ -1032,16 +1076,16 @@
 
     const/4 p1, 0x0
 
-    .line 168
+    .line 172
     iput p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDisplacementShift:F
 
     goto :goto_0
 
-    .line 170
+    .line 174
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->pause()V
 
-    .line 171
+    .line 175
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->getProgressFraction()F
@@ -1050,7 +1094,7 @@
 
     iput p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mStartProgress:F
 
-    .line 173
+    .line 177
     :goto_0
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mFromState:Lcom/miui/home/launcher/LauncherState;
 
@@ -1063,12 +1107,12 @@
     :cond_1
     iput-boolean v1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCanBlockFling:Z
 
-    .line 174
+    .line 178
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mFlingBlockCheck:Lcom/miui/home/launcher/util/FlingBlockCheck;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/util/FlingBlockCheck;->unblockFling()V
 
-    .line 176
+    .line 180
     iget-object p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAllAppsController()Lcom/miui/home/launcher/allapps/AllAppsTransitionController;
@@ -1080,13 +1124,28 @@
     return-void
 .end method
 
+.method public onStateTransitionComplete(Lcom/miui/home/launcher/LauncherState;)V
+    .locals 0
+
+    .line 368
+    invoke-direct {p0}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->cancelAnimationControllers()V
+
+    return-void
+.end method
+
+.method public onStateTransitionStart(Lcom/miui/home/launcher/LauncherState;)V
+    .locals 0
+
+    return-void
+.end method
+
 .method protected onSwipeInteractionCompleted(Lcom/miui/home/launcher/LauncherState;)V
     .locals 2
 
-    .line 304
+    .line 319
     invoke-direct {p0}, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->cancelAnimationControllers()V
 
-    .line 305
+    .line 320
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
@@ -1097,14 +1156,14 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/miui/home/launcher/LauncherStateManager;->goToState(Lcom/miui/home/launcher/LauncherState;Z)V
 
-    .line 306
+    .line 321
     sget-object v0, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
 
     if-ne p1, v0, :cond_0
 
     const-string p1, "swipe"
 
-    .line 307
+    .line 322
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackAllAppsClose(Ljava/lang/String;)V
 
     :cond_0
@@ -1114,7 +1173,7 @@
 .method public requestDisallowInterceptTouchEventHorizontal(Z)V
     .locals 2
 
-    .line 54
+    .line 58
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDetector:Lcom/miui/home/launcher/touch/SwipeDetector;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/touch/SwipeDetector;->getDirection()Lcom/miui/home/launcher/touch/SwipeDetector$Direction;
@@ -1125,7 +1184,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 55
+    .line 59
     iput-boolean p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDisallowIntercept:Z
 
     :cond_0
@@ -1135,7 +1194,7 @@
 .method public requestDisallowInterceptTouchEventVertical(Z)V
     .locals 2
 
-    .line 61
+    .line 65
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDetector:Lcom/miui/home/launcher/touch/SwipeDetector;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/touch/SwipeDetector;->getDirection()Lcom/miui/home/launcher/touch/SwipeDetector$Direction;
@@ -1146,7 +1205,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 62
+    .line 66
     iput-boolean p1, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mDisallowIntercept:Z
 
     :cond_0
@@ -1156,10 +1215,14 @@
 .method protected updateProgress(F)V
     .locals 1
 
-    .line 207
+    .line 211
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/AllAppsSwipeController;->mCurrentAnimation:Lcom/miui/home/launcher/anim/AnimatorPlaybackController;
 
+    if-eqz v0, :cond_0
+
+    .line 212
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/anim/AnimatorPlaybackController;->setPlayFraction(F)V
 
+    :cond_0
     return-void
 .end method

@@ -57,24 +57,24 @@
 .method public static synthetic lambda$onClick$1(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 126
+    .line 125
     invoke-static {}, Lcom/miui/home/launcher/LauncherCategory;->reset()V
 
-    .line 127
+    .line 126
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 128
+    .line 127
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->forceReload()V
 
-    .line 130
+    .line 129
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -82,7 +82,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 131
+    .line 130
     new-instance p1, Landroid/content/Intent;
 
     const-string p2, "android.intent.action.MAIN"
@@ -91,15 +91,15 @@
 
     const-string p2, "android.intent.category.HOME"
 
-    .line 132
+    .line 131
     invoke-virtual {p1, p2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 p2, 0x4000000
 
-    .line 133
+    .line 132
     invoke-virtual {p1, p2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 134
+    .line 133
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p2
@@ -113,7 +113,7 @@
 .method public static synthetic lambda$onViewCreated$0(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;Landroid/view/View;)V
     .locals 1
 
-    .line 89
+    .line 88
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategorySwitch:Lmiuix/slidingwidget/widget/SlidingButton;
 
     invoke-virtual {p1}, Lmiuix/slidingwidget/widget/SlidingButton;->isChecked()Z
@@ -183,7 +183,7 @@
 
     const/4 v0, 0x1
 
-    .line 154
+    .line 153
     invoke-static {p0, v0}, Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;->startActivityForResult(Landroidx/fragment/app/Fragment;I)V
 
     return-void
@@ -213,8 +213,13 @@
 
     const/4 v0, 0x2
 
-    .line 159
+    .line 158
     invoke-static {p0, p1, v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectActivity;->startActivityForResult(Landroidx/fragment/app/Fragment;II)V
+
+    .line 159
+    iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategoryList:Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList;->updateCategoryList()V
 
     return-void
 .end method
@@ -274,7 +279,7 @@
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 0
 
-    .line 117
+    .line 116
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategoryContainer:Landroid/view/View;
 
     if-eqz p2, :cond_0
@@ -295,7 +300,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 122
+    .line 121
     new-instance p1, Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->getContext()Landroid/content/Context;
@@ -306,16 +311,16 @@
 
     invoke-direct {p1, v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v0, 0x7f100313
+    const v0, 0x7f100392
 
-    .line 123
+    .line 122
     invoke-virtual {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    const v0, 0x7f100312
+    const v0, 0x7f100391
 
-    .line 124
+    .line 123
     invoke-virtual {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
@@ -326,7 +331,7 @@
 
     const v1, 0x104000a
 
-    .line 125
+    .line 124
     invoke-virtual {p1, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
@@ -335,17 +340,17 @@
 
     const/4 v1, 0x0
 
-    .line 137
+    .line 136
     invoke-virtual {p1, v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    .line 138
+    .line 137
     invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p1
 
-    .line 139
+    .line 138
     invoke-virtual {p1}, Lmiuix/appcompat/app/AlertDialog;->show()V
 
     return-void
@@ -369,7 +374,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f100219
+    const v0, 0x7f100264
 
     invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentActivity;->setTitle(I)V
 
@@ -428,13 +433,6 @@
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
 
     .line 67
-    iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/allapps/AllAppsStore;->setEnable(Z)V
-
-    .line 68
     new-instance p1, Lcom/miui/home/launcher/model/AllAppsLoaderTask;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->getContext()Landroid/content/Context;
@@ -449,7 +447,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mLoaderTask:Lcom/miui/home/launcher/model/AllAppsLoaderTask;
 
-    .line 69
+    .line 68
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
@@ -462,7 +460,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/LauncherModel;->enqueueModelUpdateTask(Lcom/miui/home/launcher/LauncherModel$ModelUpdateTask;)V
 
-    .line 71
+    .line 70
     :goto_0
     new-instance p1, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList;
 
@@ -472,7 +470,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategoryList:Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList;
 
-    .line 72
+    .line 71
     new-instance p1, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -485,14 +483,14 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mAdapter:Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;
 
-    .line 73
+    .line 72
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategoryList:Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList;
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mAdapter:Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList;->setAdapter(Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;)V
 
-    .line 74
+    .line 73
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategoryList:Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList;->updateCategoryList()V
@@ -503,11 +501,11 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const p3, 0x7f0d0046
+    const p3, 0x7f0d0063
 
     const/4 v0, 0x0
 
-    .line 80
+    .line 79
     invoke-virtual {p1, p3, p2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
@@ -518,23 +516,23 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 144
+    .line 143
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
-    .line 145
+    .line 144
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mLoaderTask:Lcom/miui/home/launcher/model/AllAppsLoaderTask;
 
     if-eqz v0, :cond_0
 
-    .line 146
+    .line 145
     invoke-virtual {v0}, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->stopLocked()V
 
     const/4 v0, 0x0
 
-    .line 147
+    .line 146
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mLoaderTask:Lcom/miui/home/launcher/model/AllAppsLoaderTask;
 
-    .line 149
+    .line 148
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategoryList:Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapterList;
 
@@ -586,10 +584,10 @@
 .method public onStop()V
     .locals 2
 
-    .line 109
+    .line 108
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onStop()V
 
-    .line 110
+    .line 109
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategorySwitch:Lmiuix/slidingwidget/widget/SlidingButton;
 
     invoke-virtual {v0}, Lmiuix/slidingwidget/widget/SlidingButton;->isChecked()Z
@@ -606,7 +604,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 111
+    .line 110
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
 
     move-result-object v0
@@ -626,12 +624,12 @@
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 85
+    .line 84
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const p2, 0x7f0a005b
+    const p2, 0x7f0a0060
 
-    .line 87
+    .line 86
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -640,7 +638,7 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategorySwitchContainer:Landroid/widget/LinearLayout;
 
-    .line 88
+    .line 87
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategorySwitchContainer:Landroid/widget/LinearLayout;
 
     new-instance v0, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$o6hmby-2HnTU_IkkQFeWbJESsw8;
@@ -649,9 +647,9 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p2, 0x7f0a005a
+    const p2, 0x7f0a005f
 
-    .line 91
+    .line 90
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -660,7 +658,7 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategorySwitch:Lmiuix/slidingwidget/widget/SlidingButton;
 
-    .line 92
+    .line 91
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategorySwitch:Lmiuix/slidingwidget/widget/SlidingButton;
 
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
@@ -673,21 +671,21 @@
 
     invoke-virtual {p2, v0}, Lmiuix/slidingwidget/widget/SlidingButton;->setChecked(Z)V
 
-    .line 93
+    .line 92
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategorySwitch:Lmiuix/slidingwidget/widget/SlidingButton;
 
     invoke-virtual {p2, p0}, Lmiuix/slidingwidget/widget/SlidingButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const p2, 0x7f0a007f
+    const p2, 0x7f0a0095
 
-    .line 95
+    .line 94
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategoryContainer:Landroid/view/View;
 
-    .line 96
+    .line 95
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategoryContainer:Landroid/view/View;
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mCategorySwitch:Lmiuix/slidingwidget/widget/SlidingButton;
@@ -708,9 +706,9 @@
     :goto_0
     invoke-virtual {p2, v0}, Landroid/view/View;->setVisibility(I)V
 
-    const p2, 0x7f0a0060
+    const p2, 0x7f0a0065
 
-    .line 98
+    .line 97
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -719,7 +717,7 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    .line 99
+    .line 98
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance v0, Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -732,28 +730,28 @@
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 100
+    .line 99
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mAdapter:Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;->attachToRecyclerView(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    .line 101
+    .line 100
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;->mAdapter:Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    const p2, 0x7f0a019c
+    const p2, 0x7f0a01eb
 
-    .line 103
+    .line 102
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
-    .line 104
+    .line 103
     invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-void
@@ -773,14 +771,14 @@
 
     invoke-direct {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v1, 0x7f100129
+    const v1, 0x7f100164
 
     .line 179
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f100128
+    const v1, 0x7f100163
 
     .line 180
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -791,7 +789,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$xTsy2jZ8LlQrea_S5VYzM8Q26Lk;-><init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;I)V
 
-    const p1, 0x7f100127
+    const p1, 0x7f100162
 
     .line 181
     invoke-virtual {v0, p1, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;

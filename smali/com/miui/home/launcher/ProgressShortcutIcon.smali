@@ -43,7 +43,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 60
+    .line 62
     new-instance v0, Landroid/graphics/ColorMatrix;
 
     const/16 v1, 0x14
@@ -56,7 +56,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/ProgressShortcutIcon;->DARK_MATRIX:Landroid/graphics/ColorMatrix;
 
-    .line 66
+    .line 68
     new-instance v0, Landroid/graphics/ColorMatrixColorFilter;
 
     sget-object v1, Lcom/miui/home/launcher/ProgressShortcutIcon;->DARK_MATRIX:Landroid/graphics/ColorMatrix;
@@ -95,52 +95,52 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    .line 69
+    .line 71
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/ShortcutIcon;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
-    .line 47
+    .line 49
     iput-boolean p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mPauseWhenInit:Z
 
     const/4 p2, 0x0
 
-    .line 48
+    .line 50
     iput p2, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mUTime:F
 
     const-wide/16 v0, 0x0
 
-    .line 50
+    .line 52
     iput-wide v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mDetachTime:J
 
-    .line 205
+    .line 208
     iput-boolean p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mForbidUpdate:Z
 
-    .line 257
+    .line 260
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$9FeAKpimhZEQGf6mWk-YtSxeG1c;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$9FeAKpimhZEQGf6mWk-YtSxeG1c;-><init>(Lcom/miui/home/launcher/ProgressShortcutIcon;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mNormalTickCallback:Lcom/miui/maml/component/MamlView$OnExternCommandListener;
 
-    .line 278
+    .line 281
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$LZSI-JFxoYL5s47Obv52MzYBajM;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$ProgressShortcutIcon$LZSI-JFxoYL5s47Obv52MzYBajM;-><init>(Lcom/miui/home/launcher/ProgressShortcutIcon;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mPauseTickCallback:Lcom/miui/maml/component/MamlView$OnExternCommandListener;
 
-    .line 325
+    .line 328
     iput p2, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mLastResumeAnimationValue:F
 
-    .line 412
+    .line 415
     new-instance p2, Landroid/graphics/Paint;
 
     invoke-direct {p2}, Landroid/graphics/Paint;-><init>()V
 
     iput-object p2, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlPaint:Landroid/graphics/Paint;
 
-    .line 471
+    .line 474
     iput-boolean p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mNeedInit:Z
 
     return-void
@@ -149,7 +149,7 @@
 .method static synthetic access$002(Lcom/miui/home/launcher/ProgressShortcutIcon;Z)Z
     .locals 0
 
-    .line 35
+    .line 37
     iput-boolean p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mForbidUpdate:Z
 
     return p1
@@ -158,7 +158,7 @@
 .method static synthetic access$102(Lcom/miui/home/launcher/ProgressShortcutIcon;F)F
     .locals 0
 
-    .line 35
+    .line 37
     iput p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mLastResumeAnimationValue:F
 
     return p1
@@ -169,7 +169,7 @@
 
     const-string p2, "tick"
 
-    .line 262
+    .line 265
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -182,7 +182,7 @@
 
     goto :goto_0
 
-    .line 265
+    .line 268
     :cond_0
     iget p2, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mUTime:F
 
@@ -194,7 +194,7 @@
 
     const-string p2, "uTime"
 
-    .line 266
+    .line 269
     iget v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mUTime:F
 
     const/high16 v1, 0x42700000    # 60.0f
@@ -205,7 +205,7 @@
 
     invoke-virtual {p1, p2, v0, v1}, Lcom/miui/maml/component/MamlView;->putVariableNumber(Ljava/lang/String;D)V
 
-    .line 267
+    .line 270
     iget-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     if-eqz p1, :cond_1
@@ -228,21 +228,21 @@
 
     if-lez p1, :cond_1
 
-    .line 268
+    .line 271
     iget-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/LauncherIconImageView;->setVisibility(I)V
 
-    .line 269
+    .line 272
     invoke-direct {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->resetIconImage()V
 
-    .line 271
+    .line 274
     :cond_1
     iget-boolean p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mPauseWhenInit:Z
 
     if-eqz p1, :cond_2
 
-    .line 272
+    .line 275
     iget p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mUTime:F
 
     sub-float/2addr p1, p3
@@ -251,10 +251,10 @@
 
     const/4 p1, 0x0
 
-    .line 273
+    .line 276
     iput-boolean p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mPauseWhenInit:Z
 
-    .line 274
+    .line 277
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->pauseMamlView()V
 
     :cond_2
@@ -272,12 +272,12 @@
 
     const-string p3, "OnExternCommandListener  onPause"
 
-    .line 280
+    .line 283
     invoke-static {p2, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p2, "tick"
 
-    .line 281
+    .line 284
     invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -290,7 +290,7 @@
 
     goto :goto_0
 
-    .line 284
+    .line 287
     :cond_0
     invoke-virtual {p1}, Lcom/miui/maml/component/MamlView;->onPause()V
 
@@ -304,7 +304,7 @@
 .method public static synthetic lambda$startAfterDropAnimation$2(Lcom/miui/home/launcher/ProgressShortcutIcon;Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Landroid/animation/ValueAnimator;)V
     .locals 3
 
-    .line 361
+    .line 364
     invoke-virtual {p2}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p2
@@ -315,15 +315,15 @@
 
     move-result p2
 
-    .line 362
+    .line 365
     iget v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mLastResumeAnimationValue:F
 
     sub-float v0, p2, v0
 
-    .line 363
+    .line 366
     iput p2, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mLastResumeAnimationValue:F
 
-    .line 364
+    .line 367
     iget p2, p1, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressPercent:I
 
     int-to-float p2, p2
@@ -334,7 +334,7 @@
 
     mul-float/2addr v0, p2
 
-    .line 365
+    .line 368
     iget p2, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mLastResumeAnimationValue:F
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -345,7 +345,7 @@
 
     add-float/2addr v1, v0
 
-    .line 368
+    .line 371
     iget p1, p1, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressPercent:I
 
     int-to-float p1, p1
@@ -354,14 +354,14 @@
 
     if-ltz p1, :cond_0
 
-    .line 369
+    .line 372
     iget-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlResumeAnimation:Landroid/animation/ValueAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
 
     return-void
 
-    .line 372
+    .line 375
     :cond_0
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/ProgressShortcutIcon;->updateMamlView(F)V
 
@@ -371,7 +371,7 @@
 .method private resetIconImage()V
     .locals 2
 
-    .line 493
+    .line 496
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -382,10 +382,10 @@
 
     const/4 v1, 0x0
 
-    .line 495
+    .line 498
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 496
+    .line 499
     invoke-super {p0, v0, v1}, Lcom/miui/home/launcher/ShortcutIcon;->setIconImageView(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;)V
 
     :cond_0
@@ -395,12 +395,12 @@
 .method private startAfterDropAnimation()V
     .locals 8
 
-    .line 336
+    .line 339
     iget-boolean v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mRestorePercent:Z
 
     if-eqz v0, :cond_6
 
-    .line 337
+    .line 340
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlResumeAnimation:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
@@ -411,12 +411,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 338
+    .line 341
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlResumeAnimation:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 340
+    .line 343
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->getTag()Ljava/lang/Object;
 
@@ -424,7 +424,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
-    .line 341
+    .line 344
     iget v1, v0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressPercent:I
 
     int-to-float v1, v1
@@ -437,7 +437,7 @@
 
     return-void
 
-    .line 344
+    .line 347
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -458,12 +458,12 @@
     :cond_2
     const/4 v3, 0x1
 
-    .line 348
+    .line 351
     iput-boolean v3, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mForbidUpdate:Z
 
     const/4 v3, 0x2
 
-    .line 349
+    .line 352
     new-array v3, v3, [F
 
     fill-array-data v3, :array_0
@@ -474,7 +474,7 @@
 
     iput-object v3, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlResumeAnimation:Landroid/animation/ValueAnimator;
 
-    .line 350
+    .line 353
     iget-object v3, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlResumeAnimation:Landroid/animation/ValueAnimator;
 
     new-instance v4, Landroid/view/animation/LinearInterpolator;
@@ -489,7 +489,7 @@
 
     if-gez v5, :cond_3
 
-    .line 352
+    .line 355
     iget-object v3, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlResumeAnimation:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v3, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
@@ -503,7 +503,7 @@
 
     if-gez v7, :cond_4
 
-    .line 354
+    .line 357
     iget-object v1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlResumeAnimation:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1, v3, v4}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
@@ -517,20 +517,20 @@
 
     if-gez v1, :cond_5
 
-    .line 356
+    .line 359
     iget-object v1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlResumeAnimation:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1, v5, v6}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     goto :goto_0
 
-    .line 358
+    .line 361
     :cond_5
     iget-object v1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlResumeAnimation:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1, v3, v4}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 360
+    .line 363
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlResumeAnimation:Landroid/animation/ValueAnimator;
 
@@ -540,7 +540,7 @@
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 374
+    .line 377
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlResumeAnimation:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/miui/home/launcher/ProgressShortcutIcon$1;
@@ -549,14 +549,14 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 395
+    .line 398
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlResumeAnimation:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
     const/4 v0, 0x0
 
-    .line 396
+    .line 399
     iput-boolean v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mRestorePercent:Z
 
     :cond_6
@@ -576,14 +576,14 @@
 
     const/high16 v1, 0x42c80000    # 100.0f
 
-    .line 402
+    .line 405
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/common/Utilities;->boundToRange(FFF)F
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mDragMamlViewPercent:F
 
-    .line 403
+    .line 406
     iget p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mDragMamlViewPercent:F
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ProgressShortcutIcon;->putMamlPercent(F)V
@@ -596,17 +596,17 @@
 .method public destroyDownloadMaml()V
     .locals 3
 
-    .line 448
+    .line 451
     invoke-direct {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->resetIconImage()V
 
-    .line 449
+    .line 452
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     if-eqz v0, :cond_0
 
     const-string v0, "ProgressShortcutIcon"
 
-    .line 450
+    .line 453
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -617,7 +617,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
-    .line 451
+    .line 454
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v2
@@ -628,17 +628,17 @@
 
     move-result-object v1
 
-    .line 450
+    .line 453
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 452
+    .line 455
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     invoke-virtual {v0}, Lcom/miui/maml/component/MamlView;->onDestroy()V
 
     const/4 v0, 0x0
 
-    .line 453
+    .line 456
     iput-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     :cond_0
@@ -648,7 +648,7 @@
 .method protected drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
     .locals 4
 
-    .line 88
+    .line 90
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->isDrawingInThumbnailView()Z
 
     move-result v0
@@ -659,11 +659,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 90
+    .line 92
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
-    .line 92
+    .line 94
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->getDownloadTextureView()Landroid/view/TextureView;
 
     move-result-object v1
@@ -674,10 +674,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 94
+    .line 96
     iget-object v2, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mIconContainer:Landroid/widget/FrameLayout;
 
-    .line 95
+    .line 97
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->getLeft()I
 
     move-result v2
@@ -692,7 +692,7 @@
 
     iget-object v3, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mIconContainer:Landroid/widget/FrameLayout;
 
-    .line 96
+    .line 98
     invoke-virtual {v3}, Landroid/widget/FrameLayout;->getTop()I
 
     move-result v3
@@ -709,7 +709,7 @@
 
     invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
 
-    .line 94
+    .line 96
     invoke-virtual {p1, v1, v2, v0, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -719,10 +719,10 @@
     :catch_0
     move-exception v0
 
-    .line 99
+    .line 101
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 102
+    .line 104
     :cond_0
     :goto_0
     invoke-super {p0, p1, p2, p3, p4}, Lcom/miui/home/launcher/ShortcutIcon;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
@@ -735,29 +735,29 @@
 .method public drawDragView(Landroid/graphics/Canvas;)V
     .locals 5
 
-    .line 416
+    .line 419
     invoke-super {p0, p1}, Lcom/miui/home/launcher/ShortcutIcon;->drawDragView(Landroid/graphics/Canvas;)V
 
-    .line 417
+    .line 420
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 421
+    .line 424
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
 
     move-result-object v0
 
-    .line 422
+    .line 425
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->getIconContainer()Landroid/view/View;
 
     move-result-object v1
 
-    .line 423
+    .line 426
     iget-object v2, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     invoke-virtual {v2}, Lcom/miui/maml/component/MamlView;->getTag()Ljava/lang/Object;
@@ -766,10 +766,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 425
+    .line 428
     check-cast v2, Landroid/graphics/Bitmap;
 
-    .line 426
+    .line 429
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
     move-result v3
@@ -782,7 +782,7 @@
 
     int-to-float v3, v3
 
-    .line 427
+    .line 430
     invoke-virtual {v1}, Landroid/view/View;->getTop()I
 
     move-result v1
@@ -797,7 +797,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlPaint:Landroid/graphics/Paint;
 
-    .line 425
+    .line 428
     invoke-virtual {p1, v2, v3, v0, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -807,7 +807,7 @@
     :catch_0
     move-exception p1
 
-    .line 430
+    .line 433
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1
@@ -818,14 +818,14 @@
 .method public getDownloadTextureView()Landroid/view/TextureView;
     .locals 2
 
-    .line 186
+    .line 189
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 187
+    .line 190
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
@@ -835,7 +835,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 188
+    .line 191
     iget-object v1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     invoke-virtual {v1, v0}, Lcom/miui/maml/component/MamlView;->getChildAt(I)Landroid/view/View;
@@ -846,7 +846,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 189
+    .line 192
     iget-object v1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     invoke-virtual {v1, v0}, Lcom/miui/maml/component/MamlView;->getChildAt(I)Landroid/view/View;
@@ -871,7 +871,7 @@
 .method public getDownloadView()Lcom/miui/maml/component/MamlView;
     .locals 1
 
-    .line 182
+    .line 185
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     return-object v0
@@ -880,7 +880,7 @@
 .method public initMamlIfNeed(II)V
     .locals 1
 
-    .line 474
+    .line 477
     invoke-static {}, Lcom/miui/home/launcher/common/CpuLevelUtils;->needMamlDownload()Z
 
     move-result v0
@@ -889,7 +889,7 @@
 
     return-void
 
-    .line 477
+    .line 480
     :cond_0
     iget-boolean v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mNeedInit:Z
 
@@ -905,7 +905,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 479
+    .line 482
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
@@ -917,7 +917,7 @@
 
     const/4 p1, 0x1
 
-    .line 481
+    .line 484
     iput-boolean p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mNeedInit:Z
 
     return-void
@@ -925,15 +925,15 @@
     :cond_2
     const/4 v0, 0x0
 
-    .line 484
+    .line 487
     iput-boolean v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mNeedInit:Z
 
-    .line 485
+    .line 488
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mOriginBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/miui/home/launcher/ProgressShortcutIcon;->initMamlView(Landroid/graphics/Bitmap;II)V
 
-    .line 487
+    .line 490
     :cond_3
     iget-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
@@ -941,7 +941,7 @@
 
     const-string p2, "iconBitmap"
 
-    .line 488
+    .line 491
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mOriginBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1, p2, v0}, Lcom/miui/maml/component/MamlView;->putVariableObject(Ljava/lang/String;Ljava/lang/Object;)V
@@ -953,19 +953,19 @@
 .method public initMamlView(Landroid/graphics/Bitmap;II)V
     .locals 6
 
-    .line 124
+    .line 127
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
-    .line 125
+    .line 128
     invoke-virtual {v0}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 126
+    .line 129
     invoke-static {}, Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;->getInstance()Lcom/miui/home/launcher/install/MIUIAutoInstallsHelper;
 
     move-result-object v1
@@ -992,9 +992,9 @@
     goto/16 :goto_3
 
     :cond_1
-    const v0, 0x7f0a0253
+    const v0, 0x7f0a02d6
 
-    .line 134
+    .line 137
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -1005,10 +1005,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 137
+    .line 140
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->onIconSetNull()V
 
-    .line 138
+    .line 141
     invoke-virtual {v0}, Landroid/view/ViewStub;->inflate()Landroid/view/View;
 
     move-result-object v0
@@ -1017,14 +1017,14 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
-    .line 140
+    .line 143
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     instance-of v0, v0, Lcom/miui/home/launcher/ProgressIconImageView;
 
     if-eqz v0, :cond_2
 
-    .line 141
+    .line 144
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     check-cast v0, Lcom/miui/home/launcher/ProgressIconImageView;
@@ -1034,7 +1034,7 @@
     :cond_2
     const-string v0, "ProgressShortcutIcon"
 
-    .line 143
+    .line 146
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1045,7 +1045,7 @@
 
     iget-object v4, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
-    .line 144
+    .line 147
     invoke-virtual {v4}, Ljava/lang/Object;->hashCode()I
 
     move-result v4
@@ -1056,7 +1056,9 @@
 
     move-result-object v3
 
-    .line 143
+    .line 146
+    invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     move v0, v2
 
     goto :goto_0
@@ -1064,32 +1066,32 @@
     :cond_3
     move v0, v1
 
-    .line 146
+    .line 149
     :goto_0
     iget-object v3, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     if-eqz v3, :cond_7
 
-    .line 148
+    .line 151
     invoke-virtual {v3, v1}, Lcom/miui/maml/component/MamlView;->setClickable(Z)V
 
-    .line 149
+    .line 152
     iget-object v3, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     invoke-virtual {v3, v1}, Lcom/miui/maml/component/MamlView;->setLongClickable(Z)V
 
-    .line 150
+    .line 153
     iget-object v3, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     invoke-virtual {v3, v1}, Lcom/miui/maml/component/MamlView;->setFocusable(Z)V
 
-    .line 152
+    .line 155
     :try_start_0
     invoke-static {}, Lcom/miui/home/launcher/common/LauncherIconSizeProvider;->getInstance()Lcom/miui/home/launcher/common/LauncherIconSizeProvider;
 
     move-result-object v3
 
-    .line 153
+    .line 156
     iget-object v4, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     invoke-virtual {v4}, Lcom/miui/maml/component/MamlView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1102,7 +1104,7 @@
 
     iput v5, v4, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 154
+    .line 157
     iget-object v4, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     invoke-virtual {v4}, Lcom/miui/maml/component/MamlView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1115,7 +1117,7 @@
 
     iput v3, v4, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 155
+    .line 158
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v3
@@ -1130,14 +1132,14 @@
 
     if-eqz v3, :cond_4
 
-    .line 157
+    .line 160
     iget-object v4, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     const-string v5, "lightBitmap"
 
     invoke-virtual {v4, v5, v3}, Lcom/miui/maml/component/MamlView;->putVariableObject(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 159
+    .line 162
     :cond_4
     iget-object v3, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
@@ -1145,7 +1147,7 @@
 
     invoke-virtual {v3, v4, p1}, Lcom/miui/maml/component/MamlView;->putVariableObject(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 160
+    .line 163
     iget-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     const-string v3, "uWavePer"
@@ -1156,7 +1158,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 162
+    .line 165
     iget-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     const-string v0, "SetNeedDrawTick"
@@ -1165,10 +1167,10 @@
 
     int-to-float p1, p2
 
-    .line 163
+    .line 166
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ProgressShortcutIcon;->putMamlPercent(F)V
 
-    .line 165
+    .line 168
     :cond_5
     iget-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
@@ -1182,32 +1184,34 @@
 
     if-gt p3, p1, :cond_6
 
-    .line 167
+    .line 170
     iput-boolean v1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mPauseWhenInit:Z
 
     goto :goto_1
 
-    .line 169
+    .line 172
     :cond_6
     iput-boolean v2, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mPauseWhenInit:Z
 
-    .line 171
+    .line 174
     :goto_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->resumeMamlView()V
 
     const-string p1, "ProgressShortcutIcon"
 
     const-string p2, "Maml view init success"
+
+    .line 175
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 172
     goto :goto_2
 
     :catch_0
     move-exception p1
 
-    .line 174
+    .line 177
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
@@ -1217,16 +1221,18 @@
 
     const-string p2, "Maml view init fail"
 
-    .line 177
+    .line 180
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     :goto_2
     return-void
 
-    .line 130
+    .line 133
     :cond_8
     :goto_3
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->destroyDownloadMaml()V
 
-    .line 131
+    .line 134
     iget-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/LauncherIconImageView;->setVisibility(I)V
@@ -1234,10 +1240,21 @@
     return-void
 .end method
 
+.method protected initNoWordAdapter()Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;
+    .locals 1
+
+    .line 506
+    new-instance v0, Lcom/miui/home/launcher/ProgressShortcutIcon$2;
+
+    invoke-direct {v0, p0, p0}, Lcom/miui/home/launcher/ProgressShortcutIcon$2;-><init>(Lcom/miui/home/launcher/ProgressShortcutIcon;Lcom/miui/home/launcher/ItemIcon;)V
+
+    return-object v0
+.end method
+
 .method public needPostWhenDrop()Z
     .locals 1
 
-    .line 408
+    .line 411
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->pauseSelfIfNeed()V
 
     const/4 v0, 0x1
@@ -1248,22 +1265,24 @@
 .method protected onAttachedToWindow()V
     .locals 2
 
-    .line 298
+    .line 301
     invoke-super {p0}, Lcom/miui/home/launcher/ShortcutIcon;->onAttachedToWindow()V
 
     const-string v0, "ProgressShortcutIcon"
 
     const-string v1, "MamlView Attached To Window"
 
-    .line 299
-    .line 300
+    .line 302
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 303
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 303
+    .line 306
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->restoreIconStatus()V
 
@@ -1273,28 +1292,30 @@
 .method protected onDetachedFromWindow()V
     .locals 2
 
-    .line 308
+    .line 311
     invoke-super {p0}, Lcom/miui/home/launcher/ShortcutIcon;->onDetachedFromWindow()V
 
     const-string v0, "ProgressShortcutIcon"
 
     const-string v1, "MamlView Detached From Window"
 
-    .line 309
-    .line 310
+    .line 312
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 313
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 313
+    .line 316
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mNormalTickCallback:Lcom/miui/maml/component/MamlView$OnExternCommandListener;
 
     invoke-virtual {v0, v1}, Lcom/miui/maml/component/MamlView;->setOnExternCommandListener(Lcom/miui/maml/component/MamlView$OnExternCommandListener;)V
 
-    .line 314
+    .line 317
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->recordDragStatus()V
 
     return-void
@@ -1303,10 +1324,10 @@
 .method public onIconRemoved()V
     .locals 0
 
-    .line 459
+    .line 462
     invoke-super {p0}, Lcom/miui/home/launcher/ShortcutIcon;->onIconRemoved()V
 
-    .line 460
+    .line 463
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->destroyDownloadMaml()V
 
     return-void
@@ -1315,15 +1336,15 @@
 .method public onIconSetNull()V
     .locals 1
 
-    .line 465
+    .line 468
     invoke-super {p0}, Lcom/miui/home/launcher/ShortcutIcon;->onIconSetNull()V
 
-    .line 466
+    .line 469
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     if-eqz v0, :cond_0
 
-    .line 467
+    .line 470
     invoke-virtual {v0}, Lcom/miui/maml/component/MamlView;->onDestroy()V
 
     :cond_0
@@ -1333,17 +1354,17 @@
 .method public onProgressStatusChanged()V
     .locals 1
 
-    .line 74
+    .line 76
     invoke-super {p0}, Lcom/miui/home/launcher/ShortcutIcon;->onProgressStatusChanged()V
 
-    .line 75
+    .line 77
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
-    .line 76
+    .line 78
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->updateDownloadView(Lcom/miui/home/launcher/ShortcutInfo;)V
 
     return-void
@@ -1356,10 +1377,10 @@
 
     const-string v1, "pause in"
 
-    .line 288
+    .line 291
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 289
+    .line 292
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     if-nez v0, :cond_0
@@ -1368,12 +1389,12 @@
 
     const-string v1, "pause aborting"
 
-    .line 290
+    .line 293
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
 
-    .line 293
+    .line 296
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mPauseTickCallback:Lcom/miui/maml/component/MamlView$OnExternCommandListener;
 
@@ -1385,14 +1406,14 @@
 .method public pauseSelfIfNeed()V
     .locals 2
 
-    .line 198
+    .line 201
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
-    .line 199
+    .line 202
     iget v1, v0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressStatus:I
 
     if-ltz v1, :cond_0
@@ -1403,7 +1424,7 @@
 
     if-le v0, v1, :cond_1
 
-    .line 201
+    .line 204
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->pauseMamlView()V
 
@@ -1414,7 +1435,7 @@
 .method public putMamlPercent(F)V
     .locals 4
 
-    .line 225
+    .line 228
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     if-eqz v0, :cond_0
@@ -1431,7 +1452,7 @@
 
     float-to-double v2, v2
 
-    .line 226
+    .line 229
     invoke-virtual {v0, v1, v2, v3}, Lcom/miui/maml/component/MamlView;->putVariableNumber(Ljava/lang/String;D)V
 
     :cond_0
@@ -1447,7 +1468,7 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 236
+    .line 239
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->resumeMamlView()V
 
     goto :goto_1
@@ -1466,15 +1487,15 @@
     :cond_1
     const/4 p1, 0x1
 
-    .line 241
+    .line 244
     iput-boolean p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mPauseWhenInit:Z
 
-    .line 242
+    .line 245
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->resumeMamlView()V
 
     goto :goto_1
 
-    .line 238
+    .line 241
     :cond_2
     :goto_0
     iget-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
@@ -1483,7 +1504,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/LauncherIconImageView;->setVisibility(I)V
 
-    .line 239
+    .line 242
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->destroyDownloadMaml()V
 
     :goto_1
@@ -1493,7 +1514,7 @@
 .method public recordDragStatus()V
     .locals 2
 
-    .line 318
+    .line 321
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -1508,17 +1529,17 @@
 
     const/4 v0, 0x1
 
-    .line 319
+    .line 322
     iput-boolean v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mRestorePercent:Z
 
-    .line 320
+    .line 323
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mDetachTime:J
 
-    .line 322
+    .line 325
     iget v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mUTime:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -1533,7 +1554,7 @@
 .method public restoreIconStatus()V
     .locals 2
 
-    .line 328
+    .line 331
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -1548,7 +1569,7 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 330
+    .line 333
     invoke-direct {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->startAfterDropAnimation()V
 
     :cond_0
@@ -1558,17 +1579,17 @@
 .method public resumeMamlView()V
     .locals 2
 
-    .line 248
+    .line 251
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     if-eqz v0, :cond_0
 
-    .line 252
+    .line 255
     iget-object v1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mNormalTickCallback:Lcom/miui/maml/component/MamlView$OnExternCommandListener;
 
     invoke-virtual {v0, v1}, Lcom/miui/maml/component/MamlView;->setOnExternCommandListener(Lcom/miui/maml/component/MamlView$OnExternCommandListener;)V
 
-    .line 253
+    .line 256
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     invoke-virtual {v0}, Lcom/miui/maml/component/MamlView;->onResume()V
@@ -1580,17 +1601,17 @@
 .method public setDownloadTag()V
     .locals 2
 
-    .line 436
+    .line 439
     invoke-super {p0}, Lcom/miui/home/launcher/ShortcutIcon;->setDownloadTag()V
 
-    .line 437
+    .line 440
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 440
+    .line 443
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->getDownloadTextureView()Landroid/view/TextureView;
 
@@ -1598,12 +1619,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 442
+    .line 445
     invoke-virtual {v0}, Landroid/view/TextureView;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 443
+    .line 446
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->getDownloadView()Lcom/miui/maml/component/MamlView;
 
     move-result-object v1
@@ -1617,7 +1638,7 @@
 .method public setIconImageView(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;)V
     .locals 3
 
-    .line 108
+    .line 111
     invoke-static {}, Lcom/miui/home/launcher/common/CpuLevelUtils;->needMamlDownload()Z
 
     move-result v0
@@ -1630,7 +1651,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
-    .line 109
+    .line 112
     invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->getVisibility()I
 
     move-result v0
@@ -1639,17 +1660,17 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 110
+    .line 113
     instance-of v0, p1, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 111
+    .line 114
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 112
+    .line 115
     move-object v0, p1
 
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
@@ -1668,24 +1689,24 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mOriginBitmap:Landroid/graphics/Bitmap;
 
-    .line 114
+    .line 117
     :cond_0
     sget-object v0, Lcom/miui/home/launcher/ProgressShortcutIcon;->DARK_FILTER:Landroid/graphics/ColorFilter;
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 116
+    .line 119
     :cond_1
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/ShortcutIcon;->setIconImageView(Landroid/graphics/drawable/Drawable;Landroid/graphics/Bitmap;)V
 
-    .line 117
+    .line 120
     invoke-virtual {p0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->getTag()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
-    .line 118
+    .line 121
     iget p2, p1, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressPercent:I
 
     iget p1, p1, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressStatus:I
@@ -1698,17 +1719,17 @@
 .method public updateDownloadView(Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 2
 
-    .line 209
+    .line 212
     check-cast p1, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;
 
-    .line 210
+    .line 213
     iget v0, p1, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressPercent:I
 
     iget v1, p1, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressStatus:I
 
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/ProgressShortcutIcon;->initMamlIfNeed(II)V
 
-    .line 211
+    .line 214
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     if-eqz v0, :cond_0
@@ -1717,19 +1738,19 @@
 
     if-nez v0, :cond_0
 
-    .line 215
+    .line 218
     iget v0, p1, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressStatus:I
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->putMamlStatus(I)V
 
-    .line 216
+    .line 219
     iget v0, p1, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressPercent:I
 
     int-to-float v0, v0
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->putMamlPercent(F)V
 
-    .line 218
+    .line 221
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
@@ -1737,7 +1758,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 219
+    .line 222
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
     check-cast v0, Lcom/miui/home/launcher/ProgressIconImageView;
@@ -1753,14 +1774,14 @@
 .method public updateMamlDownloadVisible()V
     .locals 2
 
-    .line 81
+    .line 83
     iget-object v0, p0, Lcom/miui/home/launcher/ProgressShortcutIcon;->mMamlDownloadView:Lcom/miui/maml/component/MamlView;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 82
+    .line 84
     invoke-virtual {v0, v1}, Lcom/miui/maml/component/MamlView;->setVisibility(I)V
 
     :cond_0

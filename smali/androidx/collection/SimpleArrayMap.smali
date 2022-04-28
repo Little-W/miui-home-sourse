@@ -1431,6 +1431,80 @@
     throw p1
 .end method
 
+.method public putAll(Landroidx/collection/SimpleArrayMap;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/collection/SimpleArrayMap<",
+            "+TK;+TV;>;)V"
+        }
+    .end annotation
+
+    .line 498
+    iget v0, p1, Landroidx/collection/SimpleArrayMap;->mSize:I
+
+    .line 499
+    iget v1, p0, Landroidx/collection/SimpleArrayMap;->mSize:I
+
+    add-int/2addr v1, v0
+
+    invoke-virtual {p0, v1}, Landroidx/collection/SimpleArrayMap;->ensureCapacity(I)V
+
+    .line 500
+    iget v1, p0, Landroidx/collection/SimpleArrayMap;->mSize:I
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_0
+
+    if-lez v0, :cond_1
+
+    .line 502
+    iget-object v1, p1, Landroidx/collection/SimpleArrayMap;->mHashes:[I
+
+    iget-object v3, p0, Landroidx/collection/SimpleArrayMap;->mHashes:[I
+
+    invoke-static {v1, v2, v3, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 503
+    iget-object p1, p1, Landroidx/collection/SimpleArrayMap;->mArray:[Ljava/lang/Object;
+
+    iget-object v1, p0, Landroidx/collection/SimpleArrayMap;->mArray:[Ljava/lang/Object;
+
+    shl-int/lit8 v3, v0, 0x1
+
+    invoke-static {p1, v2, v1, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 504
+    iput v0, p0, Landroidx/collection/SimpleArrayMap;->mSize:I
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    if-ge v2, v0, :cond_1
+
+    .line 508
+    invoke-virtual {p1, v2}, Landroidx/collection/SimpleArrayMap;->keyAt(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v2}, Landroidx/collection/SimpleArrayMap;->valueAt(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v1, v3}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
 .method public putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -1824,7 +1898,7 @@
 
     if-eqz v0, :cond_0
 
-    const-string/jumbo v0, "{}"
+    const-string v0, "{}"
 
     return-object v0
 

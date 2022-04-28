@@ -30,28 +30,28 @@
 
     const/4 v0, 0x4
 
-    .line 341
+    .line 361
     new-array v1, v0, [F
 
     fill-array-data v1, :array_0
 
     sput-object v1, Lcom/miui/home/launcher/DragView$DragViewPropertyProvider;->MULTI_DRAG_VIEW_ROTATION:[F
 
-    .line 342
+    .line 362
     new-array v1, v0, [F
 
     fill-array-data v1, :array_1
 
     sput-object v1, Lcom/miui/home/launcher/DragView$DragViewPropertyProvider;->MULTI_DRAG_VIEW_OFFSET_X:[F
 
-    .line 343
+    .line 363
     new-array v1, v0, [F
 
     fill-array-data v1, :array_2
 
     sput-object v1, Lcom/miui/home/launcher/DragView$DragViewPropertyProvider;->MULTI_DRAG_VIEW_OFFSET_Y:[F
 
-    .line 344
+    .line 364
     new-array v0, v0, [F
 
     fill-array-data v0, :array_3
@@ -96,7 +96,7 @@
 .method public static getAlpha(II)F
     .locals 5
 
-    .line 356
+    .line 376
     sget-object v0, Lcom/miui/home/launcher/DragView$DragViewPropertyProvider;->MULTI_DRAG_VIEW_ALPHA:[F
 
     array-length v1, v0
@@ -114,7 +114,7 @@
 
     add-int/lit8 v4, v1, -0x1
 
-    .line 361
+    .line 381
     aget v0, v0, v4
 
     add-int/lit8 p0, p0, 0x1
@@ -123,7 +123,7 @@
 
     int-to-float p0, p0
 
-    .line 363
+    .line 383
     invoke-static {p1, v3}, Ljava/lang/Math;->min(II)I
 
     move-result p1
@@ -152,7 +152,7 @@
 
     goto :goto_0
 
-    .line 366
+    .line 386
     :cond_1
     invoke-static {v0, p0}, Lcom/miui/home/launcher/DragView$DragViewPropertyProvider;->getPropertyFromArray([FI)F
 
@@ -165,7 +165,7 @@
 .method public static getOffsetX(I)F
     .locals 1
 
-    .line 377
+    .line 397
     sget-object v0, Lcom/miui/home/launcher/DragView$DragViewPropertyProvider;->MULTI_DRAG_VIEW_OFFSET_X:[F
 
     invoke-static {v0, p0}, Lcom/miui/home/launcher/DragView$DragViewPropertyProvider;->getPropertyFromArray([FI)F
@@ -178,7 +178,7 @@
 .method public static getOffsetY(I)F
     .locals 1
 
-    .line 381
+    .line 401
     sget-object v0, Lcom/miui/home/launcher/DragView$DragViewPropertyProvider;->MULTI_DRAG_VIEW_OFFSET_Y:[F
 
     invoke-static {v0, p0}, Lcom/miui/home/launcher/DragView$DragViewPropertyProvider;->getPropertyFromArray([FI)F
@@ -191,7 +191,7 @@
 .method private static getPropertyFromArray([FI)F
     .locals 1
 
-    .line 348
+    .line 368
     array-length v0, p0
 
     if-lt p1, v0, :cond_0
@@ -200,7 +200,7 @@
 
     return p0
 
-    .line 351
+    .line 371
     :cond_0
     aget p0, p0, p1
 
@@ -210,7 +210,7 @@
 .method public static getRotation(I)F
     .locals 1
 
-    .line 373
+    .line 393
     sget-object v0, Lcom/miui/home/launcher/DragView$DragViewPropertyProvider;->MULTI_DRAG_VIEW_ROTATION:[F
 
     invoke-static {v0, p0}, Lcom/miui/home/launcher/DragView$DragViewPropertyProvider;->getPropertyFromArray([FI)F

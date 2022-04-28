@@ -1,11 +1,14 @@
 .class Lcom/miui/home/recents/BaseRecentsImpl$1;
-.super Landroid/database/ContentObserver;
+.super Ljava/lang/Object;
 .source "BaseRecentsImpl.java"
+
+# interfaces
+.implements Landroid/hardware/display/DisplayManager$DisplayListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/recents/BaseRecentsImpl;->registerRecentsLayoutStyleObserver()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/recents/BaseRecentsImpl;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,40 +22,54 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;)V
     .locals 0
 
-    .line 164
+    .line 149
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$1;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChange(Z)V
-    .locals 2
+.method public onDisplayAdded(I)V
+    .locals 1
 
-    .line 167
+    .line 153
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$1;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    invoke-static {p1, v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;Z)V
 
-    invoke-static {v0}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->getTaskStackViewLayoutStyle(Landroid/content/Context;)I
+    return-void
+.end method
 
-    move-result v0
+.method public onDisplayChanged(I)V
+    .locals 1
 
-    iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl$1;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+    .line 163
+    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$1;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    invoke-static {v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
+    const/4 v0, 0x1
 
-    move-result-object v1
+    invoke-static {p1, v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;Z)V
 
-    invoke-static {p1, v0, v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$200(Lcom/miui/home/recents/BaseRecentsImpl;ILandroid/content/Context;)V
+    return-void
+.end method
+
+.method public onDisplayRemoved(I)V
+    .locals 1
+
+    .line 158
+    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$1;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;Z)V
 
     return-void
 .end method

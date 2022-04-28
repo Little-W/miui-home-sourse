@@ -7,6 +7,7 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/miui/home/launcher/common/Ease$Sine;,
+        Lcom/miui/home/launcher/common/Ease$Quad;,
         Lcom/miui/home/launcher/common/Ease$Cubic;
     }
 .end annotation

@@ -34,23 +34,25 @@
         }
     .end annotation
 
-    .line 25
+    if-eqz p1, :cond_1
+
+    .line 26
     invoke-virtual {p1}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;->getBackgroundLayer()Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 27
+    .line 28
     invoke-interface {p2, v0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    .line 29
+    .line 30
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable;->getForegroundLayers()Ljava/util/List;
 
     move-result-object p1
 
-    .line 30
+    .line 31
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -68,7 +70,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/graphics/drawable/LayerAdaptiveIconDrawable$Layer;
 
-    .line 31
+    .line 32
     invoke-interface {p2, v0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
     goto :goto_0

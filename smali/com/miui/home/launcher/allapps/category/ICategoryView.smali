@@ -13,9 +13,6 @@
 .method public abstract getCategoryId()I
 .end method
 
-.method public abstract getFastScroller(Landroid/view/ViewGroup;Landroid/view/MotionEvent;Landroid/graphics/Point;)Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
-.end method
-
 .method public abstract getShowingShortcutIcon(Landroid/content/ComponentName;I)Lcom/miui/home/launcher/ShortcutIcon;
 .end method
 

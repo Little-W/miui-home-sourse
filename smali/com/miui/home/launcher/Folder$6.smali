@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Folder;)V
     .locals 0
 
-    .line 661
+    .line 730
     iput-object p1, p0, Lcom/miui/home/launcher/Folder$6;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    .line 664
+    .line 733
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$6;->this$0:Lcom/miui/home/launcher/Folder;
 
     iget-object p1, p1, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -53,7 +53,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/Folder$6;->this$0:Lcom/miui/home/launcher/Folder;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Folder;->access$2100(Lcom/miui/home/launcher/Folder;)Lcom/miui/home/launcher/NonOverlapLinearLayout;
+    invoke-static {v0}, Lcom/miui/home/launcher/Folder;->access$2000(Lcom/miui/home/launcher/Folder;)Lcom/miui/home/launcher/NonOverlapLinearLayout;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 665
+    .line 734
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$6;->this$0:Lcom/miui/home/launcher/Folder;
 
     iget-object p1, p1, Lcom/miui/home/launcher/Folder;->mLauncher:Lcom/miui/home/launcher/Launcher;

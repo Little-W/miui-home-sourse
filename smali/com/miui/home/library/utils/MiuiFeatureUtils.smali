@@ -12,9 +12,9 @@
 
 
 # static fields
-.field private static sConfigFilePath:Ljava/lang/String;
+.field private static sConfigFilePath:Ljava/lang/String; = null
 
-.field private static sConfigResult:Ljava/util/HashMap;
+.field private static sConfigResult:Ljava/util/HashMap; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
@@ -27,9 +27,9 @@
     .end annotation
 .end field
 
-.field private static sIsLiteMode:Z
+.field private static sIsLiteMode:Z = false
 
-.field private static sIsLiteModeSupported:Z
+.field private static sIsLiteModeSupported:Z = false
 
 .field private static sMiuisdkConfigResult:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -77,6 +77,8 @@
     const-string v1, "Failed to initialize MiuiFeatureUtils!"
 
     .line 159
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     :goto_0
     return-void
 .end method
@@ -250,6 +252,8 @@
     const-string v1, "Loaded and parsed feature configure file successfully"
 
     .line 65
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_5
     return-void
 .end method
@@ -343,6 +347,8 @@
 
     move-result-object p1
 
+    invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
     return p2
 .end method
 
@@ -401,6 +407,8 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return p1
 .end method

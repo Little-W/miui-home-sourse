@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/airbnb/lottie/R$styleable;
+        Lcom/airbnb/lottie/R$styleable;,
+        Lcom/airbnb/lottie/R$attr;
     }
 .end annotation

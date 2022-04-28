@@ -41,6 +41,10 @@
     iput-boolean v0, p0, Lcom/miui/home/launcher/gadget/Clock;->mTickerStopped:Z
 
     .line 35
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/Clock;->mContext:Landroid/content/Context;
 
     return-void
@@ -148,6 +152,8 @@
     const-string v1, "unregisterReceiver error."
 
     .line 97
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_0
     :goto_0
     return-void
@@ -222,6 +228,8 @@
     invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0
     return-void

@@ -239,6 +239,8 @@
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
+
+    invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -447,7 +449,7 @@
 
     move-result-object p1
 
-    const-string/jumbo v0, "yes"
+    const-string v0, "yes"
 
     .line 239
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -456,7 +458,7 @@
 
     if-nez v0, :cond_5
 
-    const-string/jumbo v0, "y"
+    const-string v0, "y"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

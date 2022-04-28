@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">Дараахтай хуваалцах</string>
     <string name="abc_shareactionprovider_share_with_application">%s-тай хуваалцах</string>
     <string name="abc_toolbar_collapse_description">Буулгах</string>
+    <string name="common_google_play_services_unknown_issue">%1$s-г Google Play-н үйлчилгээгээр ашиглахад асуудал гарлаа. Дахин оролдоно уу.</string>
     <string name="copy">Хуулах</string>
     <string name="expand_button_title">Дэлгэрэнгүй</string>
     <string name="not_set">Тохируулаагүй</string>

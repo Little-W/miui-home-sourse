@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<set
-    android:interpolator="@android:anim/decelerate_interpolator"
-    android:fillBefore="true"
-    android:fillAfter="true"
-    android:zAdjustment="top"
-    android:fillEnabled="true"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <alpha
-        android:duration="300"
-        android:fromAlpha="0.0"
-        android:toAlpha="1.0" />
+<set android:interpolator="@android:anim/decelerate_interpolator" android:fillBefore="true" android:fillAfter="true" android:zAdjustment="top" android:fillEnabled="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <alpha android:duration="300" android:fromAlpha="0.0" android:toAlpha="1.0" />
 </set>

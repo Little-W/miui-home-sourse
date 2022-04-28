@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector
-    android:height="@dimen/miuix_appcompat_action_mode_title_button_height"
-    android:width="@dimen/miuix_appcompat_action_mode_title_button_width"
-    android:viewportWidth="100.0"
-    android:viewportHeight="100.0"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <path
-        android:fillColor="@color/miuix_appcompat_svg_icon_color_disable_light"
-        android:pathData="M43,24C40.239,24 38,26.239 38,29V33H34H29H25.5C24.119,33 23,34.119 23,35.5C23,36.881 24.119,38 25.5,38H29V61.2C29,65.68 29,67.921 29.872,69.632C30.639,71.137 31.863,72.361 33.368,73.128C35.079,74 37.32,74 41.8,74H58.2C62.68,74 64.921,74 66.632,73.128C68.137,72.361 69.361,71.137 70.128,69.632C71,67.921 71,65.68 71,61.2V38H74.5C75.881,38 77,36.881 77,35.5C77,34.119 75.881,33 74.5,33H71H66H62V29C62,26.239 59.761,24 57,24H43ZM57,33V31C57,29.895 56.105,29 55,29H45C43.895,29 43,29.895 43,31V33H57ZM34,62.6V38H66V62.6C66,64.84 66,65.96 65.564,66.816C65.18,67.569 64.569,68.18 63.816,68.564C62.96,69 61.84,69 59.6,69H40.4C38.16,69 37.04,69 36.184,68.564C35.431,68.18 34.819,67.569 34.436,66.816C34,65.96 34,64.84 34,62.6Z"
-        android:fillType="evenOdd" />
+<vector android:height="@dimen/miuix_appcompat_action_mode_title_button_height" android:width="@dimen/miuix_appcompat_action_mode_title_button_width" android:viewportWidth="100.0" android:viewportHeight="100.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/miuix_appcompat_svg_icon_color_disable_light" android:pathData="M43,24C40.239,24 38,26.239 38,29V33H34H29H25.5C24.119,33 23,34.119 23,35.5C23,36.881 24.119,38 25.5,38H29V61.2C29,65.68 29,67.921 29.872,69.632C30.639,71.137 31.863,72.361 33.368,73.128C35.079,74 37.32,74 41.8,74H58.2C62.68,74 64.921,74 66.632,73.128C68.137,72.361 69.361,71.137 70.128,69.632C71,67.921 71,65.68 71,61.2V38H74.5C75.881,38 77,36.881 77,35.5C77,34.119 75.881,33 74.5,33H71H66H62V29C62,26.239 59.761,24 57,24H43ZM57,33V31C57,29.895 56.105,29 55,29H45C43.895,29 43,29.895 43,31V33H57ZM34,62.6V38H66V62.6C66,64.84 66,65.96 65.564,66.816C65.18,67.569 64.569,68.18 63.816,68.564C62.96,69 61.84,69 59.6,69H40.4C38.16,69 37.04,69 36.184,68.564C35.431,68.18 34.819,67.569 34.436,66.816C34,65.96 34,64.84 34,62.6Z" android:fillType="evenOdd" />
 </vector>

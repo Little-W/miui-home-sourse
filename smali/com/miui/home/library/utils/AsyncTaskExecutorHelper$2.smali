@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 69
+    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,14 +32,14 @@
 .method public run()V
     .locals 2
 
-    .line 71
+    .line 70
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->access$000()Ljava/util/ArrayList;
 
     move-result-object v0
 
     monitor-enter v0
 
-    .line 72
+    .line 71
     :try_start_0
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->access$000()Ljava/util/ArrayList;
 
@@ -51,10 +51,10 @@
 
     if-nez v1, :cond_0
 
-    .line 73
+    .line 72
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$RejectedExecutionPolicy;->executeRejectedTaskIfNeeded()V
 
-    .line 75
+    .line 74
     :cond_0
     monitor-exit v0
 

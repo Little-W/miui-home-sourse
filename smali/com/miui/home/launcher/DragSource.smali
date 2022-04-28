@@ -12,3 +12,6 @@
 
 .method public abstract onDropBack(Lcom/miui/home/launcher/DragObject;)V
 .end method
+
+.method public abstract setDragController(Lcom/miui/home/launcher/DragController;)V
+.end method

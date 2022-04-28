@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/gadget/MaMlPendingHostView;)V
     .locals 0
 
-    .line 123
+    .line 128
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView$1;->this$0:Lcom/miui/home/launcher/gadget/MaMlPendingHostView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +44,7 @@
 .method public onSure()V
     .locals 2
 
-    .line 130
+    .line 135
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView$1;->this$0:Lcom/miui/home/launcher/gadget/MaMlPendingHostView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->access$000(Lcom/miui/home/launcher/gadget/MaMlPendingHostView;)Lcom/miui/home/launcher/maml/MaMlWidgetInfo;

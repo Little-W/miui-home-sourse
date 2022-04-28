@@ -7,7 +7,7 @@
 .method public constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 17
+    .line 18
     sget-object v0, Lcom/miui/home/launcher/touch/SwipeDetector;->VERTICAL:Lcom/miui/home/launcher/touch/SwipeDetector$Direction;
 
     invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/overlay/OverlaySwipeController;-><init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/touch/SwipeDetector$Direction;)V
@@ -18,49 +18,49 @@
 .method public static canSlidingUp(Lcom/miui/home/launcher/Launcher;)Z
     .locals 10
 
-    .line 39
+    .line 40
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object v0
 
-    .line 40
+    .line 41
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->isFolderShowing()Z
 
     move-result v1
 
-    .line 41
+    .line 42
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getTouchState()I
 
     move-result v2
 
-    .line 42
+    .line 43
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->isScrolling()Z
 
     move-result v0
 
-    .line 43
+    .line 44
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
 
     move-result v3
 
-    .line 44
+    .line 45
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->isWidgetThumbnailViewShowing()Z
 
     move-result v4
 
-    .line 45
+    .line 46
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->isUninstallDialogShowing()Z
 
     move-result v5
 
-    .line 46
+    .line 47
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->isMinusScreenShowing()Z
 
     move-result v6
 
     const-string v7, "Launcher.Feed"
 
-    .line 47
+    .line 48
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,6 +105,8 @@
 
     move-result-object v8
 
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     if-nez v1, :cond_1
 
     if-nez v3, :cond_1
@@ -123,7 +125,7 @@
 
     if-eq v2, v1, :cond_1
 
-    .line 57
+    .line 58
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getLauncherGestureController()Lcom/miui/home/settings/LauncherGestureController;
 
     move-result-object v1
@@ -134,7 +136,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 58
+    .line 59
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->isFreeStyleExists()Z
 
     move-result v1
@@ -143,14 +145,21 @@
 
     if-nez v6, :cond_1
 
-    .line 60
+    .line 61
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getAssistantOverlayController()Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;
 
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->isShow()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    .line 62
+    invoke-static {p0}, Lcom/miui/home/launcher/AbstractFloatingView;->getTopOpenView(Lcom/miui/home/launcher/BaseDraggingActivity;)Lcom/miui/home/launcher/AbstractFloatingView;
+
     move-result-object p0
-
-    invoke-virtual {p0}, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->isShow()Z
-
-    move-result p0
 
     if-eqz p0, :cond_0
 
@@ -165,7 +174,9 @@
 
     const-string v0, "can not use"
 
-    .line 61
+    .line 63
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     const/4 p0, 0x0
 
     return p0
@@ -176,7 +187,7 @@
 .method protected canInterceptTouch(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 27
+    .line 28
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/feed/FeedOverlaySwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
@@ -189,7 +200,7 @@
 
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/feed/FeedOverlaySwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 28
+    .line 29
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -202,7 +213,7 @@
 
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/feed/FeedOverlaySwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 29
+    .line 30
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -219,7 +230,7 @@
 
     return v0
 
-    .line 32
+    .line 33
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/feed/FeedOverlaySwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -231,7 +242,7 @@
 
     return v0
 
-    .line 35
+    .line 36
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/feed/FeedOverlaySwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -245,7 +256,7 @@
 .method public getReconnectSlop()I
     .locals 1
 
-    .line 69
+    .line 71
     sget v0, Lcom/miui/home/launcher/ScreenView;->VIEW_CONFIGURATION_TOUCH_SLOP:I
 
     mul-int/lit8 v0, v0, 0x5

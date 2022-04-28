@@ -36,10 +36,10 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 174
+    .line 182
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 177
+    .line 185
     new-instance v0, Landroidx/collection/ArraySet;
 
     invoke-direct {v0}, Landroidx/collection/ArraySet;-><init>()V
@@ -52,7 +52,7 @@
 .method synthetic constructor <init>(Lmiuix/pickerwidget/widget/NumberPicker$1;)V
     .locals 0
 
-    .line 174
+    .line 182
     invoke-direct {p0}, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;-><init>()V
 
     return-void
@@ -63,12 +63,12 @@
 .method init(Landroid/content/Context;I)V
     .locals 3
 
-    .line 183
+    .line 191
     iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;->mSoundPlayer:Landroid/media/SoundPool;
 
     if-nez v0, :cond_0
 
-    .line 184
+    .line 192
     new-instance v0, Landroid/media/SoundPool;
 
     const/4 v1, 0x0
@@ -79,7 +79,7 @@
 
     iput-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;->mSoundPlayer:Landroid/media/SoundPool;
 
-    .line 185
+    .line 193
     iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;->mSoundPlayer:Landroid/media/SoundPool;
 
     sget v1, Lmiuix/pickerwidget/R$raw;->number_picker_value_change:I
@@ -90,7 +90,7 @@
 
     iput p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;->mSoundId:I
 
-    .line 188
+    .line 196
     :cond_0
     iget-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;->mRefs:Ljava/util/Set;
 
@@ -106,12 +106,12 @@
 .method play()V
     .locals 9
 
-    .line 192
+    .line 200
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 193
+    .line 201
     iget-object v2, p0, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;->mSoundPlayer:Landroid/media/SoundPool;
 
     if-eqz v2, :cond_0
@@ -126,7 +126,7 @@
 
     if-lez v3, :cond_0
 
-    .line 194
+    .line 202
     iget v3, p0, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;->mSoundId:I
 
     const/high16 v4, 0x3f800000    # 1.0f
@@ -141,7 +141,7 @@
 
     invoke-virtual/range {v2 .. v8}, Landroid/media/SoundPool;->play(IFFIIF)I
 
-    .line 195
+    .line 203
     iput-wide v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;->mPrevPlayTime:J
 
     :cond_0
@@ -151,7 +151,7 @@
 .method release(I)V
     .locals 1
 
-    .line 200
+    .line 208
     iget-object v0, p0, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;->mRefs:Ljava/util/Set;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -176,12 +176,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 201
+    .line 209
     invoke-virtual {p1}, Landroid/media/SoundPool;->release()V
 
     const/4 p1, 0x0
 
-    .line 202
+    .line 210
     iput-object p1, p0, Lmiuix/pickerwidget/widget/NumberPicker$SoundPlayHandler$SoundPlayerContainer;->mSoundPlayer:Landroid/media/SoundPool;
 
     :cond_0

@@ -232,6 +232,8 @@
 
     move-result-object v1
 
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 47
     iput-boolean p1, p0, Lcom/miui/home/launcher/newInstallIndicator/NewInstallIndicatorController;->mCanFolderShowIndicator:Z
 
@@ -261,6 +263,8 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 42
     iput p1, p0, Lcom/miui/home/launcher/newInstallIndicator/NewInstallIndicatorController;->mIndicatorColor:I

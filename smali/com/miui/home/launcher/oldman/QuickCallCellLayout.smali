@@ -126,7 +126,7 @@
     return-void
 .end method
 
-.method protected setAllLayoutValues(Z)V
+.method public setAllLayoutValues(Z)V
     .locals 0
 
     .line 76

@@ -22,10 +22,32 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3622
+    .line 3732
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$22;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$onChange$0(Lcom/miui/home/launcher/Launcher$22;)V
+    .locals 2
+
+    .line 3737
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$22;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->onScreenCellsChanged()V
+
+    .line 3738
+    invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/miui/home/launcher/common/messages/StartSwitchingNoWordModel;
+
+    invoke-direct {v1}, Lcom/miui/home/launcher/common/messages/StartSwitchingNoWordModel;-><init>()V
+
+    invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -35,17 +57,15 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 3625
+    .line 3735
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 3626
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$22;->this$0:Lcom/miui/home/launcher/Launcher;
+    .line 3736
+    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$Launcher$22$a3ubkfl5VUxjr0OdrkEFREMLN3k;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3100(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/-$$Lambda$Launcher$22$a3ubkfl5VUxjr0OdrkEFREMLN3k;-><init>(Lcom/miui/home/launcher/Launcher$22;)V
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;->adaptHomeToWallpaperAsync()V
+    invoke-static {p1}, Lcom/miui/home/launcher/util/noword/NoWordSettingHelperKt;->switchNoWordSetting(Ljava/lang/Runnable;)V
 
     return-void
 .end method

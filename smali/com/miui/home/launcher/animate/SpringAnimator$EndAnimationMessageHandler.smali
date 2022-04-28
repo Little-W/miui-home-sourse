@@ -9,32 +9,36 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0xa
     name = "EndAnimationMessageHandler"
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lcom/miui/home/launcher/animate/SpringAnimator;
+.field private mWkAnimator:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference<",
+            "Lcom/miui/home/launcher/animate/SpringAnimator;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method private constructor <init>(Lcom/miui/home/launcher/animate/SpringAnimator;)V
-    .locals 0
+.method public constructor <init>(Lcom/miui/home/launcher/animate/SpringAnimator;)V
+    .locals 1
 
-    .line 133
-    iput-object p1, p0, Lcom/miui/home/launcher/animate/SpringAnimator$EndAnimationMessageHandler;->this$0:Lcom/miui/home/launcher/animate/SpringAnimator;
-
+    .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 139
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-.method synthetic constructor <init>(Lcom/miui/home/launcher/animate/SpringAnimator;Lcom/miui/home/launcher/animate/SpringAnimator$1;)V
-    .locals 0
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    .line 133
-    invoke-direct {p0, p1}, Lcom/miui/home/launcher/animate/SpringAnimator$EndAnimationMessageHandler;-><init>(Lcom/miui/home/launcher/animate/SpringAnimator;)V
+    iput-object v0, p0, Lcom/miui/home/launcher/animate/SpringAnimator$EndAnimationMessageHandler;->mWkAnimator:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
@@ -47,10 +51,23 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 136
-    iget-object p1, p0, Lcom/miui/home/launcher/animate/SpringAnimator$EndAnimationMessageHandler;->this$0:Lcom/miui/home/launcher/animate/SpringAnimator;
+    .line 143
+    iget-object p1, p0, Lcom/miui/home/launcher/animate/SpringAnimator$EndAnimationMessageHandler;->mWkAnimator:Ljava/lang/ref/WeakReference;
 
+    if-eqz p1, :cond_0
+
+    .line 144
+    invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/miui/home/launcher/animate/SpringAnimator;
+
+    if-eqz p1, :cond_0
+
+    .line 146
     invoke-virtual {p1}, Lcom/miui/home/launcher/animate/SpringAnimator;->skipToEnd()V
 
+    :cond_0
     return-void
 .end method

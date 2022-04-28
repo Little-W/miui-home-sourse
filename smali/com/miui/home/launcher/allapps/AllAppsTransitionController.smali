@@ -42,7 +42,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 48
+    .line 50
     new-instance v0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController$1;
 
     const-class v1, Ljava/lang/Float;
@@ -59,13 +59,13 @@
 .method public constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 80
+    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 81
+    .line 83
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 82
+    .line 84
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     new-instance v0, Lcom/miui/home/launcher/allapps/-$$Lambda$W_ip1t4KFQ4HKdBcD50Hpx9VDI0;
@@ -74,7 +74,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->addOnDeviceProfileChangeListener(Lcom/miui/home/launcher/DeviceProfile$OnDeviceProfileChangeListener;)V
 
-    .line 83
+    .line 85
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHeight()I
 
     move-result p1
@@ -85,7 +85,7 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 84
+    .line 86
     iput p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mProgress:F
 
     return-void
@@ -94,7 +94,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/allapps/AllAppsTransitionController;)F
     .locals 0
 
-    .line 45
+    .line 47
     iget p0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mProgress:F
 
     return p0
@@ -103,17 +103,17 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/allapps/AllAppsTransitionController;F)V
     .locals 0
 
-    .line 45
+    .line 47
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->setProgress(F)V
 
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/miui/home/launcher/allapps/AllAppsTransitionController;)V
+.method static synthetic access$200(Lcom/miui/home/launcher/allapps/AllAppsTransitionController;Lcom/miui/home/launcher/LauncherState;Z)V
     .locals 0
 
-    .line 45
-    invoke-direct {p0}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->onProgressAnimationEnd()V
+    .line 47
+    invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->onProgressAnimationEnd(Lcom/miui/home/launcher/LauncherState;Z)V
 
     return-void
 .end method
@@ -121,16 +121,16 @@
 .method static synthetic access$300(Lcom/miui/home/launcher/allapps/AllAppsTransitionController;)V
     .locals 0
 
-    .line 45
+    .line 47
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->onProgressAnimationStart()V
 
     return-void
 .end method
 
-.method private onProgressAnimationEnd()V
+.method private onProgressAnimationEnd(Lcom/miui/home/launcher/LauncherState;Z)V
     .locals 2
 
-    .line 201
+    .line 203
     iget v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mProgress:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -139,35 +139,63 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
-
-    .line 202
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mAppsView:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->setVisibility(I)V
-
-    .line 203
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mAppsView:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->reset()V
+    if-nez v0, :cond_1
 
     .line 204
+    iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mAppsView:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
+
+    const/4 p2, 0x4
+
+    invoke-virtual {p1, p2}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->setVisibility(I)V
+
+    .line 205
+    iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mAppsView:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->reset()V
+
+    .line 206
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
-    move-result-object v0
+    move-result-object p1
 
-    new-instance v1, Lcom/miui/home/launcher/common/messages/CheckTransferMessage;
+    new-instance p2, Lcom/miui/home/launcher/common/messages/CheckTransferMessage;
 
-    invoke-direct {v1}, Lcom/miui/home/launcher/common/messages/CheckTransferMessage;-><init>()V
+    invoke-direct {p2}, Lcom/miui/home/launcher/common/messages/CheckTransferMessage;-><init>()V
 
-    invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
+
+    .line 207
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPocoLauncher()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 208
+    invoke-static {}, Lcom/mi/globallauncher/BranchClientImplement;->getInstance()Lcom/mi/globallauncher/BranchClientImplement;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {p1, p2}, Lcom/mi/globallauncher/BranchClientImplement;->updatePocoPageIndicator(Lcom/miui/home/launcher/Launcher;)V
 
     goto :goto_0
 
-    .line 205
+    .line 210
     :cond_0
+    invoke-static {}, Lcom/mi/globallauncher/BranchClientImplement;->getInstance()Lcom/mi/globallauncher/BranchClientImplement;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {p1, p2}, Lcom/mi/globallauncher/BranchClientImplement;->updateAllAppsIndicator(Lcom/miui/home/launcher/Launcher;)V
+
+    goto :goto_0
+
+    .line 212
+    :cond_1
     iget v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mProgress:F
 
     const/4 v1, 0x0
@@ -178,25 +206,30 @@
 
     const/4 v1, 0x0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
-    .line 206
+    .line 213
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mAppsView:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->setVisibility(I)V
 
-    .line 207
+    .line 214
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mAppsView:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->onScrollUpEnd()V
 
-    goto :goto_0
-
-    .line 209
-    :cond_1
+    .line 215
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mAppsView:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->setVisibility(I)V
+    invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->initBranchOnScrollUpEnd(Lcom/miui/home/launcher/LauncherState;Z)V
+
+    goto :goto_0
+
+    .line 217
+    :cond_2
+    iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mAppsView:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
+
+    invoke-virtual {p1, v1}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->setVisibility(I)V
 
     :goto_0
     return-void
@@ -205,7 +238,7 @@
 .method private onProgressAnimationStart()V
     .locals 2
 
-    .line 99
+    .line 101
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mAppsView:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
     const/4 v1, 0x0
@@ -220,18 +253,18 @@
 
     if-nez p2, :cond_0
 
-    .line 165
+    .line 167
     sget-object p2, Lcom/miui/home/launcher/anim/PropertySetter;->NO_ANIM_PROPERTY_SETTER:Lcom/miui/home/launcher/anim/PropertySetter;
 
     goto :goto_0
 
-    .line 166
+    .line 168
     :cond_0
     invoke-virtual {p2, p3}, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->getPropertySetter(Lcom/miui/home/launcher/anim/AnimatorSetBuilder;)Lcom/miui/home/launcher/anim/PropertySetter;
 
     move-result-object p2
 
-    .line 167
+    .line 169
     :goto_0
     iget-object p3, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -250,7 +283,7 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 170
+    .line 172
     :goto_1
     iget-object p3, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mAppsView:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
@@ -274,20 +307,20 @@
 .method private setProgress(F)V
     .locals 4
 
-    .line 110
+    .line 112
     iput p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mProgress:F
 
-    .line 111
+    .line 113
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mScrimView:Lcom/miui/home/launcher/view/ScrimView;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/view/ScrimView;->setProgress(F)V
 
-    .line 112
+    .line 114
     iget v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mShiftRange:F
 
     mul-float/2addr v0, p1
 
-    .line 114
+    .line 116
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mAppsView:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->setTranslationY(F)V
@@ -310,7 +343,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 119
+    .line 121
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getSystemUiController()Lcom/miui/home/launcher/util/SystemUiController;
@@ -333,7 +366,7 @@
 
     goto :goto_1
 
-    .line 121
+    .line 123
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -347,7 +380,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/util/SystemUiController;->updateUiState(Z)V
 
-    .line 123
+    .line 125
     :goto_1
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mCaretController:Lcom/miui/home/launcher/allapps/AllAppsCaretController;
 
@@ -362,13 +395,13 @@
 
 
 # virtual methods
-.method public getProgressAnimatorListener()Landroid/animation/AnimatorListenerAdapter;
+.method public getProgressAnimatorListener(Lcom/miui/home/launcher/LauncherState;Z)Landroid/animation/AnimatorListenerAdapter;
     .locals 1
 
-    .line 174
+    .line 176
     new-instance v0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController$2;
 
-    invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController$2;-><init>(Lcom/miui/home/launcher/allapps/AllAppsTransitionController;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController$2;-><init>(Lcom/miui/home/launcher/allapps/AllAppsTransitionController;Lcom/miui/home/launcher/LauncherState;Z)V
 
     return-object v0
 .end method
@@ -376,7 +409,7 @@
 .method public getShiftRange()F
     .locals 1
 
-    .line 88
+    .line 90
     iget v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mShiftRange:F
 
     return v0
@@ -385,7 +418,7 @@
 .method public isShow()Z
     .locals 4
 
-    .line 92
+    .line 94
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mAppsView:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
     if-eqz v0, :cond_0
@@ -411,7 +444,7 @@
 
     sget-object v1, Lcom/miui/home/launcher/LauncherState;->ALL_APPS:Lcom/miui/home/launcher/LauncherState;
 
-    .line 94
+    .line 96
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
 
     move-result v0
@@ -436,7 +469,7 @@
 .method public onDeviceProfileChanged(Lcom/miui/home/launcher/DeviceProfile;)V
     .locals 0
 
-    .line 233
+    .line 241
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHeight()I
 
     move-result p1
@@ -453,10 +486,10 @@
 
     const/4 v0, 0x1
 
-    .line 223
+    .line 231
     iput-boolean v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->isDragging:Z
 
-    .line 224
+    .line 232
     iput p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mContainerVelocity:F
 
     return-void
@@ -467,7 +500,7 @@
 
     const/4 v0, 0x0
 
-    .line 228
+    .line 236
     iput-boolean v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->isDragging:Z
 
     return-void
@@ -476,7 +509,7 @@
 .method public onDragStart()V
     .locals 2
 
-    .line 216
+    .line 224
     iget v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mProgress:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -494,15 +527,15 @@
 
     const/4 v0, 0x1
 
-    .line 217
+    .line 225
     iput-boolean v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->isDragging:Z
 
-    .line 218
+    .line 226
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mCaretController:Lcom/miui/home/launcher/allapps/AllAppsCaretController;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/allapps/AllAppsCaretController;->onDragStart()V
 
-    .line 219
+    .line 227
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
@@ -517,7 +550,7 @@
 .method public setState(Lcom/miui/home/launcher/LauncherState;)V
     .locals 2
 
-    .line 132
+    .line 134
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/LauncherState;->getAllAppsVerticalProgress(Lcom/miui/home/launcher/Launcher;)F
@@ -526,7 +559,7 @@
 
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->setProgress(F)V
 
-    .line 133
+    .line 135
     new-instance v0, Lcom/miui/home/launcher/anim/AnimatorSetBuilder;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/anim/AnimatorSetBuilder;-><init>()V
@@ -535,40 +568,44 @@
 
     invoke-direct {p0, p1, v1, v0}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->setAlphas(Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;Lcom/miui/home/launcher/anim/AnimatorSetBuilder;)V
 
-    .line 134
-    invoke-direct {p0}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->onProgressAnimationEnd()V
+    const/4 v0, 0x0
+
+    .line 136
+    invoke-direct {p0, p1, v0}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->onProgressAnimationEnd(Lcom/miui/home/launcher/LauncherState;Z)V
 
     return-void
 .end method
 
 .method public setStateWithAnimation(Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/anim/AnimatorSetBuilder;Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;)V
-    .locals 6
+    .locals 7
 
-    .line 144
+    .line 146
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/LauncherState;->getAllAppsVerticalProgress(Lcom/miui/home/launcher/Launcher;)F
 
     move-result v0
 
-    .line 145
+    .line 147
     iget v1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mProgress:F
 
     invoke-static {v1, v0}, Ljava/lang/Float;->compare(FF)I
 
     move-result v1
 
+    const/4 v2, 0x1
+
     if-nez v1, :cond_0
 
-    .line 146
+    .line 148
     invoke-direct {p0, p1, p3, p2}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->setAlphas(Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;Lcom/miui/home/launcher/anim/AnimatorSetBuilder;)V
 
-    .line 148
-    invoke-direct {p0}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->onProgressAnimationEnd()V
+    .line 150
+    invoke-direct {p0, p1, v2}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->onProgressAnimationEnd(Lcom/miui/home/launcher/LauncherState;Z)V
 
     return-void
 
-    .line 152
+    .line 154
     :cond_0
     iget-boolean v1, p3, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->userControlled:Z
 
@@ -581,51 +618,49 @@
     :cond_1
     sget-object v1, Lcom/miui/home/launcher/anim/Interpolators;->FAST_OUT_SLOW_IN:Landroid/view/animation/Interpolator;
 
-    .line 153
+    .line 155
     :goto_0
-    sget-object v2, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->ALL_APPS_PROGRESS:Landroid/util/Property;
+    sget-object v3, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->ALL_APPS_PROGRESS:Landroid/util/Property;
 
-    const/4 v3, 0x2
+    const/4 v4, 0x2
 
-    new-array v3, v3, [F
+    new-array v4, v4, [F
 
-    iget v4, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mProgress:F
+    iget v5, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mProgress:F
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    aput v4, v3, v5
+    aput v5, v4, v6
 
-    const/4 v4, 0x1
+    aput v0, v4, v2
 
-    aput v0, v3, v4
-
-    invoke-static {p0, v2, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+    invoke-static {p0, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
-    .line 154
-    iget-wide v2, p3, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->duration:J
+    .line 156
+    iget-wide v3, p3, Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;->duration:J
 
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v0, v3, v4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 155
-    invoke-virtual {p2, v5, v1}, Lcom/miui/home/launcher/anim/AnimatorSetBuilder;->getInterpolator(ILandroid/view/animation/Interpolator;)Landroid/view/animation/Interpolator;
+    .line 157
+    invoke-virtual {p2, v6, v1}, Lcom/miui/home/launcher/anim/AnimatorSetBuilder;->getInterpolator(ILandroid/view/animation/Interpolator;)Landroid/view/animation/Interpolator;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 156
-    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->getProgressAnimatorListener()Landroid/animation/AnimatorListenerAdapter;
+    .line 158
+    invoke-virtual {p0, p1, v2}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->getProgressAnimatorListener(Lcom/miui/home/launcher/LauncherState;Z)Landroid/animation/AnimatorListenerAdapter;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 158
+    .line 160
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/anim/AnimatorSetBuilder;->play(Landroid/animation/Animator;)V
 
-    .line 160
+    .line 162
     invoke-direct {p0, p1, p3, p2}, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->setAlphas(Lcom/miui/home/launcher/LauncherState;Lcom/miui/home/launcher/LauncherStateManager$AnimationConfig;Lcom/miui/home/launcher/anim/AnimatorSetBuilder;)V
 
     return-void
@@ -634,13 +669,13 @@
 .method public setupViews(Lcom/miui/home/launcher/allapps/AllAppsContainerView;)V
     .locals 2
 
-    .line 189
+    .line 191
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mAppsView:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
-    .line 190
+    .line 192
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    const v0, 0x7f0a01a6
+    const v0, 0x7f0a01fa
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->findViewById(I)Landroid/view/View;
 
@@ -650,7 +685,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mScrimView:Lcom/miui/home/launcher/view/ScrimView;
 
-    .line 192
+    .line 194
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsTransitionController;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -661,7 +696,7 @@
 
     move-result-object p1
 
-    .line 193
+    .line 195
     new-instance v0, Lcom/miui/home/launcher/allapps/AllAppsCaretController;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->getCaretDrawable()Lcom/miui/home/launcher/pageindicators/CaretDrawable;

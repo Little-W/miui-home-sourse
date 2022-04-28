@@ -19,36 +19,37 @@
 
 
 # direct methods
-.method public constructor <init>([Ljava/lang/String;)V
+.method protected varargs constructor <init>(Ljava/lang/String;[Ljava/lang/String;)V
     .locals 1
 
-    .line 698
+    .line 535
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 700
-    array-length v0, p1
+    .line 536
+    array-length v0, p2
 
-    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    add-int/lit8 v0, v0, 0x1
 
-    move-result-object p1
+    invoke-static {p2, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    check-cast p1, [Ljava/lang/String;
+    move-result-object v0
 
-    iput-object p1, p0, Landroidx/room/InvalidationTracker$Observer;->mTables:[Ljava/lang/String;
+    check-cast v0, [Ljava/lang/String;
+
+    iput-object v0, p0, Landroidx/room/InvalidationTracker$Observer;->mTables:[Ljava/lang/String;
+
+    .line 537
+    iget-object v0, p0, Landroidx/room/InvalidationTracker$Observer;->mTables:[Ljava/lang/String;
+
+    array-length p2, p2
+
+    aput-object p1, v0, p2
 
     return-void
 .end method
 
 
 # virtual methods
-.method isRemote()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public abstract onInvalidated(Ljava/util/Set;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {

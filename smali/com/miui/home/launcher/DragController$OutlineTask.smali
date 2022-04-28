@@ -26,16 +26,16 @@
 .method constructor <init>(Ljava/util/concurrent/Executor;Landroid/view/View;F)V
     .locals 0
 
-    .line 635
+    .line 649
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 636
+    .line 650
     iput-object p1, p0, Lcom/miui/home/launcher/DragController$OutlineTask;->executor:Ljava/util/concurrent/Executor;
 
-    .line 637
+    .line 651
     iput-object p2, p0, Lcom/miui/home/launcher/DragController$OutlineTask;->view:Landroid/view/View;
 
-    .line 638
+    .line 652
     iput p3, p0, Lcom/miui/home/launcher/DragController$OutlineTask;->scale:F
 
     return-void
@@ -44,19 +44,19 @@
 .method public static create(Landroid/view/View;F)Lcom/miui/home/launcher/DragController$OutlineTask;
     .locals 1
 
-    .line 624
+    .line 638
     instance-of v0, p0, Lcom/miui/home/launcher/ItemIcon;
 
     if-eqz v0, :cond_0
 
-    .line 625
+    .line 639
     new-instance v0, Lcom/miui/home/launcher/DragController$ItemIconOutlineTask;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/DragController$ItemIconOutlineTask;-><init>(Landroid/view/View;F)V
 
     return-object v0
 
-    .line 627
+    .line 641
     :cond_0
     new-instance v0, Lcom/miui/home/launcher/DragController$WidgetOutlineTask;
 

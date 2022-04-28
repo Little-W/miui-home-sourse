@@ -351,6 +351,9 @@
         <item>@string/month_november_shortest</item>
         <item>@string/month_december_shortest</item>
     </string-array>
+    <string-array name="not_show_uninstall_icon_array">
+        <item>com.mi.globalbrowser</item>
+    </string-array>
     <string-array name="quality_business_devices">
         <item>lithium</item>
     </string-array>
@@ -472,11 +475,18 @@
         <item>应用shortcut</item>
         <item>主题专题页</item>
         <item>经典组件</item>
+        <item>负一屏picker</item>
+        <item>负一屏推荐卡片推荐位</item>
+        <item>负一屏推荐卡片兜底图</item>
     </string-array>
     <string-array name="widget_component_add_way">
         <item>从picker详情页拖拽</item>
         <item>picker详情页添加按钮</item>
         <item>从picker首页拖拽</item>
+        <item>从瀑布流页拖拽</item>
+        <item>图文页添加按钮</item>
+        <item>编辑页应用按钮</item>
+        <item>首页横滑卡片添加按钮</item>
     </string-array>
     <string-array name="widget_component_default_source">
         <item>非默认</item>
@@ -487,6 +497,11 @@
         <item>shortcut删除</item>
         <item>拖拽</item>
         <item>uninstall</item>
+    </string-array>
+    <string-array name="widget_component_source">
+        <item>运营强插</item>
+        <item>主动添加</item>
+        <item>默认布局</item>
     </string-array>
     <string-array name="widget_drag_type_name">
         <item>桌面内</item>

@@ -30,21 +30,25 @@
 # instance fields
 .field final synthetic val$appContext:Landroid/content/Context;
 
+.field final synthetic val$cacheKey:Ljava/lang/String;
+
 .field final synthetic val$contextRef:Ljava/lang/ref/WeakReference;
 
 .field final synthetic val$rawRes:I
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/ref/WeakReference;Landroid/content/Context;I)V
+.method constructor <init>(Ljava/lang/ref/WeakReference;Landroid/content/Context;ILjava/lang/String;)V
     .locals 0
 
-    .line 214
+    .line 229
     iput-object p1, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$contextRef:Ljava/lang/ref/WeakReference;
 
     iput-object p2, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$appContext:Landroid/content/Context;
 
     iput p3, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$rawRes:I
+
+    iput-object p4, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$cacheKey:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,7 +58,7 @@
 
 # virtual methods
 .method public call()Lcom/airbnb/lottie/LottieResult;
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -64,7 +68,7 @@
         }
     .end annotation
 
-    .line 217
+    .line 232
     iget-object v0, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$contextRef:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -77,15 +81,17 @@
 
     goto :goto_0
 
-    .line 218
+    .line 233
     :cond_0
     iget-object v0, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$appContext:Landroid/content/Context;
 
-    .line 219
+    .line 234
     :goto_0
     iget v1, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$rawRes:I
 
-    invoke-static {v0, v1}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromRawResSync(Landroid/content/Context;I)Lcom/airbnb/lottie/LottieResult;
+    iget-object v2, p0, Lcom/airbnb/lottie/LottieCompositionFactory$3;->val$cacheKey:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromRawResSync(Landroid/content/Context;ILjava/lang/String;)Lcom/airbnb/lottie/LottieResult;
 
     move-result-object v0
 
@@ -100,7 +106,7 @@
         }
     .end annotation
 
-    .line 214
+    .line 229
     invoke-virtual {p0}, Lcom/airbnb/lottie/LottieCompositionFactory$3;->call()Lcom/airbnb/lottie/LottieResult;
 
     move-result-object v0

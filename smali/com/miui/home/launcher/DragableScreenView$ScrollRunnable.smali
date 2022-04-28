@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DragableScreenView;)V
     .locals 0
 
-    .line 108
+    .line 111
     iput-object p1, p0, Lcom/miui/home/launcher/DragableScreenView$ScrollRunnable;->this$0:Lcom/miui/home/launcher/DragableScreenView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,25 +40,25 @@
 .method public run()V
     .locals 2
 
-    .line 112
+    .line 115
     iget v0, p0, Lcom/miui/home/launcher/DragableScreenView$ScrollRunnable;->mDirection:I
 
     if-nez v0, :cond_0
 
-    .line 113
+    .line 116
     iget-object v0, p0, Lcom/miui/home/launcher/DragableScreenView$ScrollRunnable;->this$0:Lcom/miui/home/launcher/DragableScreenView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DragableScreenView;->scrollDragingLeft()V
 
     goto :goto_0
 
-    .line 115
+    .line 118
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/DragableScreenView$ScrollRunnable;->this$0:Lcom/miui/home/launcher/DragableScreenView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/DragableScreenView;->scrollDragingRight()V
 
-    .line 117
+    .line 120
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/DragableScreenView$ScrollRunnable;->this$0:Lcom/miui/home/launcher/DragableScreenView;
 
@@ -72,7 +72,7 @@
 .method public setDirection(I)V
     .locals 0
 
-    .line 121
+    .line 124
     iput p1, p0, Lcom/miui/home/launcher/DragableScreenView$ScrollRunnable;->mDirection:I
 
     return-void

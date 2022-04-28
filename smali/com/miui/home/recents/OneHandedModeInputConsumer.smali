@@ -8,10 +8,6 @@
 
 .field private mIsOneHandedModeEnabled:Z
 
-.field private final mOneHandStartUpperBound:I
-
-.field private final mOneHandStopUpperBound:I
-
 .field private final mOneHandedModeObserver:Landroid/database/ContentObserver;
 
 
@@ -19,15 +15,15 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 34
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 30
+    .line 28
     iput-boolean v0, p0, Lcom/miui/home/recents/OneHandedModeInputConsumer;->mIsOneHandedModeEnabled:Z
 
-    .line 44
+    .line 35
     new-instance v0, Lcom/miui/home/recents/OneHandedModeInputConsumer$1;
 
     new-instance v1, Landroid/os/Handler;
@@ -38,28 +34,11 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/OneHandedModeInputConsumer;->mOneHandedModeObserver:Landroid/database/ContentObserver;
 
-    .line 35
+    .line 31
     iput-object p1, p0, Lcom/miui/home/recents/OneHandedModeInputConsumer;->mContext:Landroid/content/Context;
 
-    .line 36
+    .line 32
     invoke-direct {p0}, Lcom/miui/home/recents/OneHandedModeInputConsumer;->setOneHandModeEnabled()V
-
-    .line 38
-    invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->getNavigationBarHeight(Landroid/content/Context;)I
-
-    move-result p1
-
-    iput p1, p0, Lcom/miui/home/recents/OneHandedModeInputConsumer;->mOneHandStartUpperBound:I
-
-    .line 40
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getRealScreenHeight()I
-
-    move-result p1
-
-    .line 41
-    div-int/lit8 p1, p1, 0x6
-
-    iput p1, p0, Lcom/miui/home/recents/OneHandedModeInputConsumer;->mOneHandStopUpperBound:I
 
     return-void
 .end method
@@ -67,7 +46,7 @@
 .method static synthetic access$000(Lcom/miui/home/recents/OneHandedModeInputConsumer;)V
     .locals 0
 
-    .line 14
+    .line 12
     invoke-direct {p0}, Lcom/miui/home/recents/OneHandedModeInputConsumer;->setOneHandModeEnabled()V
 
     return-void
@@ -76,7 +55,7 @@
 .method private setOneHandModeEnabled()V
     .locals 3
 
-    .line 63
+    .line 54
     iget-object v0, p0, Lcom/miui/home/recents/OneHandedModeInputConsumer;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -85,7 +64,7 @@
 
     const-string v1, "one_handed_mode_enabled"
 
-    .line 64
+    .line 55
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -96,7 +75,7 @@
 
     const/4 v2, 0x0
 
-    .line 63
+    .line 54
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
@@ -115,7 +94,7 @@
 
     const-string v0, "MiuiHome:OneHandedModeInputConsumer"
 
-    .line 65
+    .line 56
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -132,6 +111,8 @@
 
     move-result-object v1
 
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 .end method
 
@@ -140,7 +121,7 @@
 .method public isOneHandedModeActive()Z
     .locals 3
 
-    .line 76
+    .line 67
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -153,7 +134,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 78
+    .line 69
     invoke-virtual {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->getSystemUiStateFlags()I
 
     move-result v0
@@ -179,7 +160,7 @@
 .method public isOneHandedModeEnabled()Z
     .locals 1
 
-    .line 70
+    .line 61
     iget-boolean v0, p0, Lcom/miui/home/recents/OneHandedModeInputConsumer;->mIsOneHandedModeEnabled:Z
 
     return v0
@@ -188,7 +169,7 @@
 .method public registerOneHandModeObserver()V
     .locals 4
 
-    .line 52
+    .line 43
     iget-object v0, p0, Lcom/miui/home/recents/OneHandedModeInputConsumer;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -197,7 +178,7 @@
 
     const-string v1, "one_handed_mode_enabled"
 
-    .line 53
+    .line 44
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -218,7 +199,7 @@
 
     const-string p3, "MiuiHome:OneHandedModeInputConsumer"
 
-    .line 85
+    .line 76
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -233,65 +214,22 @@
 
     move-result-object v0
 
-    .line 86
+    invoke-static {p3, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 77
     invoke-virtual {p0}, Lcom/miui/home/recents/OneHandedModeInputConsumer;->isOneHandedModeActive()Z
 
     move-result p3
 
-    if-nez p3, :cond_0
+    const/4 v0, 0x0
 
-    const/high16 p3, 0x3f800000    # 1.0f
+    if-eqz p3, :cond_0
 
-    cmpl-float p3, p2, p3
+    cmpg-float p2, p2, v0
 
-    if-ltz p3, :cond_0
+    if-gez p2, :cond_1
 
-    iget p3, p0, Lcom/miui/home/recents/OneHandedModeInputConsumer;->mOneHandStartUpperBound:I
-
-    int-to-float p3, p3
-
-    cmpg-float p3, p2, p3
-
-    if-gtz p3, :cond_0
-
-    .line 88
-    sget-object p2, Lcom/miui/home/recents/SystemUiProxyWrapper;->INSTANCE:Lcom/miui/home/recents/util/MainThreadInitializedObject;
-
-    invoke-virtual {p2, p1}, Lcom/miui/home/recents/util/MainThreadInitializedObject;->get(Landroid/content/Context;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/miui/home/recents/SystemUiProxyWrapper;
-
-    invoke-virtual {p1}, Lcom/miui/home/recents/SystemUiProxyWrapper;->startOneHandedMode()V
-
-    goto :goto_0
-
-    .line 89
-    :cond_0
-    invoke-virtual {p0}, Lcom/miui/home/recents/OneHandedModeInputConsumer;->isOneHandedModeActive()Z
-
-    move-result p3
-
-    if-eqz p3, :cond_1
-
-    iget p3, p0, Lcom/miui/home/recents/OneHandedModeInputConsumer;->mOneHandStopUpperBound:I
-
-    neg-int p3, p3
-
-    int-to-float p3, p3
-
-    cmpl-float p3, p2, p3
-
-    if-ltz p3, :cond_1
-
-    const/high16 p3, -0x40800000    # -1.0f
-
-    cmpg-float p2, p2, p3
-
-    if-gtz p2, :cond_1
-
-    .line 90
+    .line 80
     sget-object p2, Lcom/miui/home/recents/SystemUiProxyWrapper;->INSTANCE:Lcom/miui/home/recents/util/MainThreadInitializedObject;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/recents/util/MainThreadInitializedObject;->get(Landroid/content/Context;)Ljava/lang/Object;
@@ -302,6 +240,24 @@
 
     invoke-virtual {p1}, Lcom/miui/home/recents/SystemUiProxyWrapper;->stopOneHandedMode()V
 
+    goto :goto_0
+
+    :cond_0
+    cmpl-float p2, p2, v0
+
+    if-lez p2, :cond_1
+
+    .line 85
+    sget-object p2, Lcom/miui/home/recents/SystemUiProxyWrapper;->INSTANCE:Lcom/miui/home/recents/util/MainThreadInitializedObject;
+
+    invoke-virtual {p2, p1}, Lcom/miui/home/recents/util/MainThreadInitializedObject;->get(Landroid/content/Context;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/miui/home/recents/SystemUiProxyWrapper;
+
+    invoke-virtual {p1}, Lcom/miui/home/recents/SystemUiProxyWrapper;->startOneHandedMode()V
+
     :cond_1
     :goto_0
     return-void
@@ -310,14 +266,14 @@
 .method public unregisterOneHandModeObserver()V
     .locals 2
 
-    .line 58
+    .line 49
     iget-object v0, p0, Lcom/miui/home/recents/OneHandedModeInputConsumer;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 59
+    .line 50
     iget-object v1, p0, Lcom/miui/home/recents/OneHandedModeInputConsumer;->mOneHandedModeObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V

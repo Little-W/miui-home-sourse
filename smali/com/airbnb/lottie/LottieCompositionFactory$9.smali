@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/airbnb/lottie/LottieComposition;)V
     .locals 0
 
-    .line 481
+    .line 523
     iput-object p1, p0, Lcom/airbnb/lottie/LottieCompositionFactory$9;->val$cachedComposition:Lcom/airbnb/lottie/LottieComposition;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -56,7 +56,7 @@
         }
     .end annotation
 
-    .line 484
+    .line 526
     new-instance v0, Lcom/airbnb/lottie/LottieResult;
 
     iget-object v1, p0, Lcom/airbnb/lottie/LottieCompositionFactory$9;->val$cachedComposition:Lcom/airbnb/lottie/LottieComposition;
@@ -74,7 +74,7 @@
         }
     .end annotation
 
-    .line 481
+    .line 523
     invoke-virtual {p0}, Lcom/airbnb/lottie/LottieCompositionFactory$9;->call()Lcom/airbnb/lottie/LottieResult;
 
     move-result-object v0

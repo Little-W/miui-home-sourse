@@ -40,41 +40,41 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
-    .line 213
+    .line 216
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 214
+    .line 217
     iput-object p1, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->view:Landroid/view/View;
 
-    .line 215
+    .line 218
     invoke-virtual {p1}, Landroid/view/View;->getX()F
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->x:F
 
-    .line 216
+    .line 219
     invoke-virtual {p1}, Landroid/view/View;->getY()F
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->y:F
 
-    .line 217
+    .line 220
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->width:I
 
-    .line 218
+    .line 221
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->height:I
 
-    .line 219
+    .line 222
     iget p1, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->x:F
 
     iget v0, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->width:I
@@ -87,7 +87,7 @@
 
     iput p1, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->centerX:F
 
-    .line 220
+    .line 223
     iget p1, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->y:F
 
     iget v0, p0, Lcom/miui/home/launcher/MIUIWidgetAddAnimator$AnimationWidget;->height:I

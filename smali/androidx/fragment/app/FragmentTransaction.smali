@@ -118,6 +118,19 @@
 
 
 # virtual methods
+.method public add(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    .line 189
+    invoke-virtual {p0, p1, p2, v0, v1}, Landroidx/fragment/app/FragmentTransaction;->doAddOp(ILandroidx/fragment/app/Fragment;Ljava/lang/String;I)V
+
+    return-object p0
+.end method
+
 .method public add(ILandroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/FragmentTransaction;
     .locals 1
 
@@ -239,6 +252,9 @@
 .end method
 
 .method public abstract commitAllowingStateLoss()I
+.end method
+
+.method public abstract commitNow()V
 .end method
 
 .method public abstract commitNowAllowingStateLoss()V

@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">Delite pomoću</string>
     <string name="abc_shareactionprovider_share_with_application">Delite pomoću aplikacije %s</string>
     <string name="abc_toolbar_collapse_description">Skupi</string>
+    <string name="common_google_play_services_unknown_issue">%1$s ima problema sa Google Play uslugama. Probajte ponovo.</string>
     <string name="copy">Kopiraj</string>
     <string name="expand_button_title">Napredno</string>
     <string name="not_set">Nije podešeno</string>

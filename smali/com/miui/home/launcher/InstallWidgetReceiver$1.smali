@@ -134,6 +134,8 @@
     const-string v1, "add widget success"
 
     .line 103
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_0
 
     .line 105
@@ -153,6 +155,8 @@
     const-string v1, "add widget failed"
 
     .line 106
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     :goto_0
     return-void
 .end method

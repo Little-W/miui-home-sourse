@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract process(Landroid/graphics/drawable/Drawable;)V
+.method public abstract process(Landroid/graphics/drawable/Drawable;I)V
 .end method
 
 .method public process(Lcom/miui/home/launcher/LauncherWidgetView;)V
@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public abstract process(Lcom/miui/home/launcher/ShortcutIcon;)V
+.method public abstract process(Lcom/miui/home/launcher/ShortcutIcon;I)V
 .end method
 
 .method public process(Lcom/miui/home/launcher/maml/MaMlWidgetView;)V

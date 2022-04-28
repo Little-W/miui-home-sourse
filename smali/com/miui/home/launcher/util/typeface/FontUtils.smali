@@ -98,6 +98,8 @@
 
     move-result-object p0
 
+    invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     :goto_0
     if-eqz v0, :cond_0
 

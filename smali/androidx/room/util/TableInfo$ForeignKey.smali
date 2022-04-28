@@ -60,26 +60,26 @@
         }
     .end annotation
 
-    .line 529
+    .line 456
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 530
+    .line 457
     iput-object p1, p0, Landroidx/room/util/TableInfo$ForeignKey;->referenceTable:Ljava/lang/String;
 
-    .line 531
+    .line 458
     iput-object p2, p0, Landroidx/room/util/TableInfo$ForeignKey;->onDelete:Ljava/lang/String;
 
-    .line 532
+    .line 459
     iput-object p3, p0, Landroidx/room/util/TableInfo$ForeignKey;->onUpdate:Ljava/lang/String;
 
-    .line 533
+    .line 460
     invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Landroidx/room/util/TableInfo$ForeignKey;->columnNames:Ljava/util/List;
 
-    .line 534
+    .line 461
     invoke-static {p5}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
@@ -105,7 +105,7 @@
 
     if-eqz p1, :cond_6
 
-    .line 540
+    .line 467
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -118,11 +118,11 @@
 
     goto :goto_0
 
-    .line 542
+    .line 469
     :cond_1
     check-cast p1, Landroidx/room/util/TableInfo$ForeignKey;
 
-    .line 544
+    .line 471
     iget-object v1, p0, Landroidx/room/util/TableInfo$ForeignKey;->referenceTable:Ljava/lang/String;
 
     iget-object v2, p1, Landroidx/room/util/TableInfo$ForeignKey;->referenceTable:Ljava/lang/String;
@@ -135,7 +135,7 @@
 
     return v0
 
-    .line 545
+    .line 472
     :cond_2
     iget-object v1, p0, Landroidx/room/util/TableInfo$ForeignKey;->onDelete:Ljava/lang/String;
 
@@ -149,7 +149,7 @@
 
     return v0
 
-    .line 546
+    .line 473
     :cond_3
     iget-object v1, p0, Landroidx/room/util/TableInfo$ForeignKey;->onUpdate:Ljava/lang/String;
 
@@ -163,7 +163,7 @@
 
     return v0
 
-    .line 548
+    .line 475
     :cond_4
     iget-object v1, p0, Landroidx/room/util/TableInfo$ForeignKey;->columnNames:Ljava/util/List;
 
@@ -177,7 +177,7 @@
 
     return v0
 
-    .line 549
+    .line 476
     :cond_5
     iget-object v0, p0, Landroidx/room/util/TableInfo$ForeignKey;->referenceColumnNames:Ljava/util/List;
 
@@ -197,7 +197,7 @@
 .method public hashCode()I
     .locals 2
 
-    .line 554
+    .line 481
     iget-object v0, p0, Landroidx/room/util/TableInfo$ForeignKey;->referenceTable:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -206,7 +206,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 555
+    .line 482
     iget-object v1, p0, Landroidx/room/util/TableInfo$ForeignKey;->onDelete:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -217,7 +217,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 556
+    .line 483
     iget-object v1, p0, Landroidx/room/util/TableInfo$ForeignKey;->onUpdate:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
@@ -228,7 +228,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 557
+    .line 484
     iget-object v1, p0, Landroidx/room/util/TableInfo$ForeignKey;->columnNames:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->hashCode()I
@@ -239,7 +239,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 558
+    .line 485
     iget-object v1, p0, Landroidx/room/util/TableInfo$ForeignKey;->referenceColumnNames:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->hashCode()I
@@ -254,7 +254,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 564
+    .line 491
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

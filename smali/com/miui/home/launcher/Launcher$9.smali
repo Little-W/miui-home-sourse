@@ -3,26 +3,17 @@
 .source "Launcher.java"
 
 # interfaces
-.implements Ljava/util/function/Consumer;
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->loadPaView()V
+    value = Lcom/miui/home/launcher/Launcher;->setupAnimations()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
-.end annotation
-
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/function/Consumer<",
-        "Ljava/lang/Void;",
-        ">;"
-    }
 .end annotation
 
 
@@ -34,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 2017
+    .line 2129
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,31 +35,63 @@
 
 
 # virtual methods
-.method public bridge synthetic accept(Ljava/lang/Object;)V
-    .locals 0
+.method public onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 1
 
-    .line 2017
-    check-cast p1, Ljava/lang/Void;
+    .line 2137
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$9;->accept(Ljava/lang/Void;)V
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/widget/WidgetsPreviewPage;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->getVisibility()I
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 2138
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/widget/WidgetsPreviewPage;
+
+    move-result-object p1
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->setVisibility(I)V
+
+    .line 2140
+    :cond_0
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/widget/WidgetsPreviewPage;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->onExitAnimationEnd()V
 
     return-void
 .end method
 
-.method public accept(Ljava/lang/Void;)V
-    .locals 1
+.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    .line 2020
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    .line 2132
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    const/4 v0, 0x0
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/widget/WidgetsPreviewPage;
 
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$1502(Lcom/miui/home/launcher/Launcher;Z)Z
+    move-result-object p1
 
-    .line 2021
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1600(Lcom/miui/home/launcher/Launcher;)V
+    invoke-virtual {p1}, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->onExitAnimationStart()V
 
     return-void
 .end method

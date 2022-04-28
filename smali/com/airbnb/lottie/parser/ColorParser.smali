@@ -25,7 +25,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 11
+    .line 10
     new-instance v0, Lcom/airbnb/lottie/parser/ColorParser;
 
     invoke-direct {v0}, Lcom/airbnb/lottie/parser/ColorParser;-><init>()V
@@ -38,7 +38,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 13
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -92,46 +92,61 @@
 
     move-result-wide v4
 
-    .line 23
+    .line 26
+    invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->peek()Lcom/airbnb/lottie/parser/moshi/JsonReader$Token;
+
+    move-result-object v6
+
+    sget-object v7, Lcom/airbnb/lottie/parser/moshi/JsonReader$Token;->NUMBER:Lcom/airbnb/lottie/parser/moshi/JsonReader$Token;
+
+    const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
+
+    if-ne v6, v7, :cond_2
+
+    .line 27
     invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextDouble()D
 
     move-result-wide v6
 
-    if-eqz p2, :cond_2
-
-    .line 25
-    invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->endArray()V
+    goto :goto_1
 
     :cond_2
-    const-wide/high16 p1, 0x3ff0000000000000L    # 1.0
+    move-wide v6, v8
 
-    cmpg-double v8, v0, p1
+    :goto_1
+    if-eqz p2, :cond_3
 
-    if-gtz v8, :cond_3
-
-    cmpg-double v8, v2, p1
-
-    if-gtz v8, :cond_3
-
-    cmpg-double v8, v4, p1
-
-    if-gtz v8, :cond_3
-
-    const-wide v8, 0x406fe00000000000L    # 255.0
-
-    mul-double/2addr v0, v8
-
-    mul-double/2addr v2, v8
-
-    mul-double/2addr v4, v8
-
-    cmpg-double p1, v6, p1
-
-    if-gtz p1, :cond_3
-
-    mul-double/2addr v6, v8
+    .line 30
+    invoke-virtual {p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->endArray()V
 
     :cond_3
+    cmpg-double p1, v0, v8
+
+    if-gtz p1, :cond_4
+
+    cmpg-double p1, v2, v8
+
+    if-gtz p1, :cond_4
+
+    cmpg-double p1, v4, v8
+
+    if-gtz p1, :cond_4
+
+    const-wide p1, 0x406fe00000000000L    # 255.0
+
+    mul-double/2addr v0, p1
+
+    mul-double/2addr v2, p1
+
+    mul-double/2addr v4, p1
+
+    cmpg-double v8, v6, v8
+
+    if-gtz v8, :cond_4
+
+    mul-double/2addr v6, p1
+
+    :cond_4
     double-to-int p1, v6
 
     double-to-int p2, v0
@@ -140,7 +155,7 @@
 
     double-to-int v1, v4
 
-    .line 38
+    .line 45
     invoke-static {p1, p2, v0, v1}, Landroid/graphics/Color;->argb(IIII)I
 
     move-result p1
@@ -160,7 +175,7 @@
         }
     .end annotation
 
-    .line 10
+    .line 9
     invoke-virtual {p0, p1, p2}, Lcom/airbnb/lottie/parser/ColorParser;->parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;F)Ljava/lang/Integer;
 
     move-result-object p1

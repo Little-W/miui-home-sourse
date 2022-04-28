@@ -82,7 +82,7 @@
     if-eqz p1, :cond_0
 
     .line 135
-    invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
+    invoke-virtual {p1}, Landroidx/fragment/app/FragmentTransaction;->commitNowAllowingStateLoss()V
 
     const/4 p1, 0x0
 

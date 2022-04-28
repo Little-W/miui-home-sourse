@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
     .locals 0
 
-    .line 873
+    .line 875
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$6;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 4
 
-    .line 875
+    .line 877
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$6;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-static {v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$000(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
@@ -61,7 +61,7 @@
 
     sub-int/2addr v0, v1
 
-    .line 876
+    .line 878
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$6;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-static {v1}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$000(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
@@ -78,7 +78,7 @@
 
     div-float/2addr v1, v0
 
-    .line 877
+    .line 879
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$6;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-static {v0}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$000(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
@@ -93,7 +93,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$6;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
-    .line 878
+    .line 880
     invoke-static {v2}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$000(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/upsidescene/ScrollableScreen;
 
     move-result-object v2
@@ -106,7 +106,7 @@
 
     div-float/2addr v0, v2
 
-    .line 879
+    .line 881
     iget-object v2, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen$6;->this$0:Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     invoke-static {v2}, Lcom/miui/home/launcher/upsidescene/SceneScreen;->access$300(Lcom/miui/home/launcher/upsidescene/SceneScreen;)Lcom/miui/home/launcher/Launcher;

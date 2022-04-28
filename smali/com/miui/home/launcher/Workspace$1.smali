@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 611
+    .line 572
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$1;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +38,12 @@
 .method public run()V
     .locals 1
 
-    .line 614
+    .line 575
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$1;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->cancelScroll()V
 
-    .line 615
+    .line 576
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$1;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$100(Lcom/miui/home/launcher/Workspace;)V

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<drawable android:radius="@dimen/hotseats_list_content_background_radius" class="miuix.smooth.SmoothContainerDrawable"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <child>
+        <shape android:shape="rectangle">
+            <solid android:color="#00afafaf" />
+        </shape>
+    </child>
+</drawable>

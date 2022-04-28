@@ -30,7 +30,7 @@
 .method constructor <init>(Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/launcher/Launcher;Lcom/miui/home/recents/views/RecentsView;)V
     .locals 0
 
-    .line 81
+    .line 86
     iput-object p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;
 
     iput-object p2, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->val$targets:[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
@@ -43,7 +43,7 @@
 
     const/4 p1, 0x0
 
-    .line 83
+    .line 88
     iput-boolean p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->mIsCancel:Z
 
     return-void
@@ -52,7 +52,7 @@
 .method public static synthetic lambda$onAnimationEnd$0(Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/launcher/Launcher;)V
     .locals 2
 
-    .line 94
+    .line 99
     iget-object v0, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;->access$000(Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;)Z
@@ -61,7 +61,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 95
+    .line 100
     iget-object v0, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;
 
     const/4 v1, 0x0
@@ -72,7 +72,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 96
+    .line 101
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;->isNewHomeViewAdded()Z
@@ -81,7 +81,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 97
+    .line 102
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
 
     move-result-object p1
@@ -92,7 +92,7 @@
 
     goto :goto_0
 
-    .line 98
+    .line 103
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;
 
@@ -102,7 +102,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 99
+    .line 104
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
 
     move-result-object p1
@@ -113,13 +113,13 @@
 
     goto :goto_0
 
-    .line 101
+    .line 106
     :cond_1
     iget-boolean p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->mIsCancel:Z
 
     if-nez p1, :cond_2
 
-    .line 102
+    .line 107
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
 
     move-result-object p1
@@ -140,10 +140,10 @@
 
     const/4 p1, 0x1
 
-    .line 87
+    .line 92
     iput-boolean p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->mIsCancel:Z
 
-    .line 88
+    .line 93
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;
 
     const/4 v0, 0x0
@@ -156,7 +156,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 3
 
-    .line 93
+    .line 98
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     iget-object v0, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->val$targets:[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
@@ -169,7 +169,7 @@
 
     invoke-virtual {p1, v2}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 106
+    .line 111
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;
 
     const/4 v0, 0x0
@@ -182,17 +182,17 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 111
+    .line 116
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->this$0:Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;
 
     const/4 v0, 0x1
 
     iput-boolean v0, p1, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;->mIsOpenAnimRunning:Z
 
-    .line 112
+    .line 117
     invoke-static {p1, v0}, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;->access$002(Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;Z)Z
 
-    .line 113
+    .line 118
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->val$recentsView:Lcom/miui/home/recents/views/RecentsView;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/RecentsView;->getTaskStackView()Lcom/miui/home/recents/views/TaskStackView;
@@ -203,7 +203,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/views/TaskStackView;->setAllThumbnailViewHardware(Z)V
 
-    .line 114
+    .line 119
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRotationHelper()Lcom/miui/home/recents/util/RotationHelper;

@@ -209,6 +209,19 @@
     return p1
 .end method
 
+.method public onShouldShowRequestPermissionRationale(Ljava/lang/String;)Z
+    .locals 1
+
+    .line 747
+    iget-object v0, p0, Landroidx/fragment/app/FragmentActivity$HostCallbacks;->this$0:Landroidx/fragment/app/FragmentActivity;
+
+    invoke-static {v0, p1}, Landroidx/core/app/ActivityCompat;->shouldShowRequestPermissionRationale(Landroid/app/Activity;Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
 .method public onSupportInvalidateOptionsMenu()V
     .locals 1
 

@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape
-    android:shape="rectangle"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <stroke
-        android:width="2.9099731dip"
-        android:color="@color/desktop_mode_selected_subtitile" />
-    <solid
-        android:color="@android:color/transparent" />
-    <corners
-        android:topLeftRadius="17.459991dip"
-        android:topRightRadius="17.459991dip"
-        android:bottomLeftRadius="17.459991dip"
-        android:bottomRightRadius="17.459991dip" />
-    <padding
-        android:left="7.279999dip"
-        android:top="7.279999dip"
-        android:right="7.279999dip"
-        android:bottom="7.279999dip" />
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="2.9099731dip" android:color="@color/desktop_mode_selected_subtitile" />
+    <solid android:color="@android:color/transparent" />
+    <corners android:topLeftRadius="17.459991dip" android:topRightRadius="17.459991dip" android:bottomLeftRadius="17.459991dip" android:bottomRightRadius="17.459991dip" />
+    <padding android:left="7.279999dip" android:top="7.279999dip" android:right="7.279999dip" android:bottom="7.279999dip" />
 </shape>

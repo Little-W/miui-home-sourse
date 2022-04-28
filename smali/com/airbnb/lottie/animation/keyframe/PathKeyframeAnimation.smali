@@ -14,7 +14,7 @@
 
 
 # instance fields
-.field private pathMeasure:Landroid/graphics/PathMeasure;
+.field private final pathMeasure:Landroid/graphics/PathMeasure;
 
 .field private pathMeasureKeyframe:Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;
 
@@ -54,7 +54,7 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/animation/keyframe/PathKeyframeAnimation;->pos:[F
 
-    .line 15
+    .line 14
     new-instance p1, Landroid/graphics/PathMeasure;
 
     invoke-direct {p1}, Landroid/graphics/PathMeasure;-><init>()V

@@ -125,20 +125,20 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 152
+    .line 156
     invoke-direct {p0}, Lcom/miui/home/recents/LauncherAppTransitionManager;-><init>()V
 
     const/high16 v0, 0x41a00000    # 20.0f
 
-    .line 135
+    .line 139
     iput v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mNoIconRadius:F
 
-    .line 153
+    .line 157
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
-    .line 154
+    .line 158
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, v0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -147,7 +147,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 156
+    .line 160
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
@@ -160,7 +160,7 @@
 
     goto :goto_0
 
-    .line 158
+    .line 162
     :cond_0
     new-instance v0, Ljava/lang/ref/WeakReference;
 
@@ -170,7 +170,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mDragLayer:Ljava/lang/ref/WeakReference;
 
-    .line 160
+    .line 164
     :goto_0
     new-instance v0, Landroid/os/Handler;
 
@@ -182,47 +182,36 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mHandler:Landroid/os/Handler;
 
-    .line 161
+    .line 165
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLayoutRtl()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIsRtl:Z
 
-    .line 163
+    .line 167
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 164
+    .line 168
     invoke-static {p1}, Lcom/miui/home/recents/util/Utilities;->getTaskViewCornerRadius(Landroid/content/Context;)F
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mTaskViewRadius:F
 
-    .line 165
+    .line 169
     iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mContext:Landroid/content/Context;
 
-    .line 167
+    .line 171
     invoke-direct {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->registerRemoteAnimations()V
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)Z
+.method static synthetic access$000(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Z
     .locals 0
 
-    .line 98
-    invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->launcherIsATargetWithMode([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method static synthetic access$100(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Z
-    .locals 0
-
-    .line 98
+    .line 102
     invoke-direct {p0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->isLaunchAppFromWidget([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Z
 
     move-result p0
@@ -230,185 +219,21 @@
     return p0
 .end method
 
-.method static synthetic access$1000(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/recents/util/RectFSpringAnim;
+.method static synthetic access$100(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)Z
     .locals 0
 
-    .line 98
-    invoke-direct {p0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startClosingWindowFromFeedAnimators([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/recents/util/RectFSpringAnim;
+    .line 102
+    invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->launcherIsATargetWithMode([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)Z
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method static synthetic access$1100(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/recents/util/RectFSpringAnim;
-    .locals 0
-
-    .line 98
-    invoke-direct {p0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startClosingWindowAnimators([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/recents/util/RectFSpringAnim;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method static synthetic access$1200(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;ZLcom/miui/home/recents/util/MultiAnimationEndDetector;)V
-    .locals 0
-
-    .line 98
-    invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startLauncherContentAnimator(ZLcom/miui/home/recents/util/MultiAnimationEndDetector;)V
-
-    return-void
-.end method
-
-.method static synthetic access$1300(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Landroid/os/Handler;
-    .locals 0
-
-    .line 98
-    iget-object p0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mHandler:Landroid/os/Handler;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1402(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;F)F
-    .locals 0
-
-    .line 98
-    iput p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mStartWorkspaceScrollX:F
-
-    return p1
-.end method
-
-.method static synthetic access$1502(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;F)F
-    .locals 0
-
-    .line 98
-    iput p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mStartMinusOneScreenScrollX:F
-
-    return p1
-.end method
-
-.method static synthetic access$1600(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Lcom/miui/home/recents/FloatingIconLayer;
-    .locals 0
-
-    .line 98
-    iget-object p0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mCloseFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
-
-    return-object p0
-.end method
-
-.method static synthetic access$1602(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/FloatingIconLayer;)Lcom/miui/home/recents/FloatingIconLayer;
-    .locals 0
-
-    .line 98
-    iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mCloseFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
-
-    return-object p1
-.end method
-
-.method static synthetic access$200(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Landroid/view/View;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;ZLandroid/graphics/Rect;Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;)V
-    .locals 0
-
-    .line 98
-    invoke-direct/range {p0 .. p5}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startIconLaunchAnimator(Landroid/view/View;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;ZLandroid/graphics/Rect;Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;)V
-
-    return-void
-.end method
-
-.method static synthetic access$300(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Lcom/miui/home/recents/FloatingIconLayer;
-    .locals 0
-
-    .line 98
-    iget-object p0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpenFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
-
-    return-object p0
-.end method
-
-.method static synthetic access$302(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/FloatingIconLayer;)Lcom/miui/home/recents/FloatingIconLayer;
-    .locals 0
-
-    .line 98
-    iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpenFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
-
-    return-object p1
-.end method
-
-.method static synthetic access$400(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Ljava/lang/ref/WeakReference;
-    .locals 0
-
-    .line 98
-    iget-object p0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpeningAnimTargetRef:Ljava/lang/ref/WeakReference;
-
-    return-object p0
-.end method
-
-.method static synthetic access$402(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Ljava/lang/ref/WeakReference;)Ljava/lang/ref/WeakReference;
-    .locals 0
-
-    .line 98
-    iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpeningAnimTargetRef:Ljava/lang/ref/WeakReference;
-
-    return-object p1
-.end method
-
-.method static synthetic access$500(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Z
-    .locals 0
-
-    .line 98
-    iget-boolean p0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIsReleaseOpenFloatingIconLayer:Z
+    move-result p0
 
     return p0
 .end method
 
-.method static synthetic access$600(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Ljava/lang/ref/WeakReference;
+.method static synthetic access$1000(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/recents/util/MultiAnimationEndDetector;)Lcom/miui/home/recents/util/RectFSpringAnim;
     .locals 0
 
-    .line 98
-    iget-object p0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingAnimTargetRef:Ljava/lang/ref/WeakReference;
-
-    return-object p0
-.end method
-
-.method static synthetic access$602(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Ljava/lang/ref/WeakReference;)Ljava/lang/ref/WeakReference;
-    .locals 0
-
-    .line 98
-    iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingAnimTargetRef:Ljava/lang/ref/WeakReference;
-
-    return-object p1
-.end method
-
-.method static synthetic access$700(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
-    .locals 0
-
-    .line 98
-    invoke-direct {p0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->invalidateAdaptiveIconDrawable(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
-
-    return-void
-.end method
-
-.method static synthetic access$800(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Lcom/miui/home/recents/util/RemoteAnimationProvider;
-    .locals 0
-
-    .line 98
-    iget-object p0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRemoteAnimationProvider:Lcom/miui/home/recents/util/RemoteAnimationProvider;
-
-    return-object p0
-.end method
-
-.method static synthetic access$802(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/util/RemoteAnimationProvider;)Lcom/miui/home/recents/util/RemoteAnimationProvider;
-    .locals 0
-
-    .line 98
-    iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRemoteAnimationProvider:Lcom/miui/home/recents/util/RemoteAnimationProvider;
-
-    return-object p1
-.end method
-
-.method static synthetic access$900(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/recents/util/MultiAnimationEndDetector;)Lcom/miui/home/recents/util/RectFSpringAnim;
-    .locals 0
-
-    .line 98
+    .line 102
     invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startClosingWindowToRecentsAnimators([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/recents/util/MultiAnimationEndDetector;)Lcom/miui/home/recents/util/RectFSpringAnim;
 
     move-result-object p0
@@ -416,10 +241,288 @@
     return-object p0
 .end method
 
+.method static synthetic access$1100(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/launcher/Launcher;)V
+    .locals 0
+
+    .line 102
+    invoke-direct {p0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->boostGesture(Lcom/miui/home/launcher/Launcher;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1200(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/recents/util/RectFSpringAnim;
+    .locals 0
+
+    .line 102
+    invoke-direct {p0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startClosingWindowFromFeedAnimators([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/recents/util/RectFSpringAnim;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$1300(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/recents/util/RectFSpringAnim;
+    .locals 0
+
+    .line 102
+    invoke-direct {p0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startClosingWindowAnimators([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/recents/util/RectFSpringAnim;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$1400(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;ZLcom/miui/home/recents/util/MultiAnimationEndDetector;)V
+    .locals 0
+
+    .line 102
+    invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startLauncherContentAnimator(ZLcom/miui/home/recents/util/MultiAnimationEndDetector;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1500(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/util/MultiAnimationEndDetector;Ljava/lang/Runnable;[Ljava/lang/Object;)V
+    .locals 0
+
+    .line 102
+    invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startEndDetector(Lcom/miui/home/recents/util/MultiAnimationEndDetector;Ljava/lang/Runnable;[Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method static synthetic access$1600(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Landroid/os/Handler;
+    .locals 0
+
+    .line 102
+    iget-object p0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mHandler:Landroid/os/Handler;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1702(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;F)F
+    .locals 0
+
+    .line 102
+    iput p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mStartWorkspaceScrollX:F
+
+    return p1
+.end method
+
+.method static synthetic access$1802(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;F)F
+    .locals 0
+
+    .line 102
+    iput p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mStartMinusOneScreenScrollX:F
+
+    return p1
+.end method
+
+.method static synthetic access$1900(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Lcom/miui/home/recents/FloatingIconLayer;
+    .locals 0
+
+    .line 102
+    iget-object p0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mCloseFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
+
+    return-object p0
+.end method
+
+.method static synthetic access$1902(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/FloatingIconLayer;)Lcom/miui/home/recents/FloatingIconLayer;
+    .locals 0
+
+    .line 102
+    iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mCloseFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
+
+    return-object p1
+.end method
+
+.method static synthetic access$200(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/launcher/Launcher;)V
+    .locals 0
+
+    .line 102
+    invoke-direct {p0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->boostMainThreadAndRenderThread(Lcom/miui/home/launcher/Launcher;)V
+
+    return-void
+.end method
+
+.method static synthetic access$300(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Landroid/view/View;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;ZLandroid/graphics/Rect;Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;)V
+    .locals 0
+
+    .line 102
+    invoke-direct/range {p0 .. p5}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startIconLaunchAnimator(Landroid/view/View;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;ZLandroid/graphics/Rect;Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;)V
+
+    return-void
+.end method
+
+.method static synthetic access$400(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Lcom/miui/home/recents/FloatingIconLayer;
+    .locals 0
+
+    .line 102
+    iget-object p0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpenFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
+
+    return-object p0
+.end method
+
+.method static synthetic access$402(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/FloatingIconLayer;)Lcom/miui/home/recents/FloatingIconLayer;
+    .locals 0
+
+    .line 102
+    iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpenFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
+
+    return-object p1
+.end method
+
+.method static synthetic access$500(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Ljava/lang/ref/WeakReference;
+    .locals 0
+
+    .line 102
+    iget-object p0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpeningAnimTargetRef:Ljava/lang/ref/WeakReference;
+
+    return-object p0
+.end method
+
+.method static synthetic access$502(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Ljava/lang/ref/WeakReference;)Ljava/lang/ref/WeakReference;
+    .locals 0
+
+    .line 102
+    iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpeningAnimTargetRef:Ljava/lang/ref/WeakReference;
+
+    return-object p1
+.end method
+
+.method static synthetic access$600(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Z
+    .locals 0
+
+    .line 102
+    iget-boolean p0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIsReleaseOpenFloatingIconLayer:Z
+
+    return p0
+.end method
+
+.method static synthetic access$700(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Ljava/lang/ref/WeakReference;
+    .locals 0
+
+    .line 102
+    iget-object p0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingAnimTargetRef:Ljava/lang/ref/WeakReference;
+
+    return-object p0
+.end method
+
+.method static synthetic access$702(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Ljava/lang/ref/WeakReference;)Ljava/lang/ref/WeakReference;
+    .locals 0
+
+    .line 102
+    iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingAnimTargetRef:Ljava/lang/ref/WeakReference;
+
+    return-object p1
+.end method
+
+.method static synthetic access$800(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
+    .locals 0
+
+    .line 102
+    invoke-direct {p0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->invalidateAdaptiveIconDrawable(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
+
+    return-void
+.end method
+
+.method static synthetic access$900(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Lcom/miui/home/recents/util/RemoteAnimationProvider;
+    .locals 0
+
+    .line 102
+    iget-object p0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRemoteAnimationProvider:Lcom/miui/home/recents/util/RemoteAnimationProvider;
+
+    return-object p0
+.end method
+
+.method static synthetic access$902(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/util/RemoteAnimationProvider;)Lcom/miui/home/recents/util/RemoteAnimationProvider;
+    .locals 0
+
+    .line 102
+    iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRemoteAnimationProvider:Lcom/miui/home/recents/util/RemoteAnimationProvider;
+
+    return-object p1
+.end method
+
+.method private boostGesture(Lcom/miui/home/launcher/Launcher;)V
+    .locals 7
+
+    .line 879
+    invoke-static {}, Lcom/miui/home/recents/TouchInteractionService;->isUseGesturePriorityThread()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    .line 880
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRootView()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 881
+    invoke-static {}, Lcom/miui/launcher/utils/BoostHelper;->getInstance()Lcom/miui/launcher/utils/BoostHelper;
+
+    move-result-object v1
+
+    const-wide/16 v2, 0x7d0
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRootView()Landroid/view/View;
+
+    move-result-object v4
+
+    sget v5, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->sHwuiTaskTid0:I
+
+    sget v6, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;->sHwuiTaskTid1:I
+
+    invoke-virtual/range {v1 .. v6}, Lcom/miui/launcher/utils/BoostHelper;->boostGesture(JLandroid/view/View;II)V
+
+    :cond_0
+    return-void
+.end method
+
+.method private boostMainThreadAndRenderThread(Lcom/miui/home/launcher/Launcher;)V
+    .locals 3
+
+    .line 872
+    invoke-static {}, Lcom/miui/home/recents/TouchInteractionService;->isUseGesturePriorityThread()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    .line 873
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRootView()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 874
+    invoke-static {}, Lcom/miui/launcher/utils/BoostHelper;->getInstance()Lcom/miui/launcher/utils/BoostHelper;
+
+    move-result-object v0
+
+    const-wide/16 v1, 0x7d0
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRootView()Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {v0, v1, v2, p1}, Lcom/miui/launcher/utils/BoostHelper;->boostMainThreadAndRenderThread(JLandroid/view/View;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method private cancelAppToHomeAnim()V
     .locals 2
 
-    .line 1360
+    .line 1489
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -430,14 +533,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1361
+    .line 1490
     invoke-virtual {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->getNavStubView()Lcom/miui/home/recents/NavStubView;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 1362
+    .line 1491
     invoke-virtual {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->getNavStubView()Lcom/miui/home/recents/NavStubView;
 
     move-result-object v0
@@ -449,23 +552,51 @@
 .end method
 
 .method private findClosingAnimTarget(Lcom/miui/home/launcher/Launcher;Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;
-    .locals 1
+    .locals 2
 
-    .line 1097
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_0
+
+    .line 1209
+    sget-object v1, Lcom/miui/home/launcher/LauncherState;->ASSISTANT_OVERLAY_STATE:Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayState;
+
+    invoke-virtual {p1, v1}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return-object v0
+
+    .line 1213
+    :cond_0
+    sget-object v1, Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;->INSTANCE:Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/util/noword/NoWordSettingHelper;->getSwitchingNoWordModel()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    return-object v0
+
+    .line 1215
+    :cond_1
     invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->findClosingWidgetView(Lcom/miui/home/launcher/Launcher;Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_2
 
-    .line 1099
+    .line 1217
     invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getClosingShortcutIcon(Lcom/miui/home/launcher/Launcher;Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/launcher/ShortcutIcon;
 
     move-result-object p1
 
     return-object p1
 
-    :cond_0
+    :cond_2
     return-object v0
 .end method
 
@@ -474,42 +605,103 @@
 
     const/4 v0, 0x0
 
-    if-eqz p2, :cond_4
+    if-nez p2, :cond_0
 
-    .line 1077
+    return-object v0
+
+    .line 1168
+    :cond_0
     iget-object v1, p2, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->packageName:Ljava/lang/String;
 
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    .line 1080
-    :cond_0
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
+    .line 1169
+    new-instance v1, Ljava/util/concurrent/FutureTask;
+
+    new-instance v2, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$adjDyiSuJNeoMPIzVI6LL8yU0FA;
+
+    invoke-direct {v2, p2}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$adjDyiSuJNeoMPIzVI6LL8yU0FA;-><init>(Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)V
+
+    invoke-direct {v1, v2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
+
+    .line 1179
+    invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getParallelExecutor()Ljava/util/concurrent/Executor;
+
+    move-result-object p2
+
+    invoke-interface {p2, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    const-wide/16 v2, 0x50
+
+    .line 1181
+    :try_start_0
+    sget-object p2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v1, v2, v3, p2}, Ljava/util/concurrent/FutureTask;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const/4 p2, 0x1
+
+    .line 1183
+    invoke-virtual {v1, p2}, Ljava/util/concurrent/FutureTask;->cancel(Z)Z
+
+    move-object p2, v0
+
+    goto :goto_0
+
+    .line 1187
+    :cond_1
+    iget-object p2, p2, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->packageName:Ljava/lang/String;
+
+    .line 1189
+    :goto_0
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
     return-object v0
 
-    .line 1083
-    :cond_1
+    .line 1192
+    :cond_2
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    return-object v0
+
+    .line 1195
+    :cond_3
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWidgetTypeIconAnimHelper()Lcom/miui/home/launcher/util/WidgetTypeIconAnimHelper;
 
     move-result-object v1
 
-    .line 1084
+    .line 1196
     invoke-virtual {v1}, Lcom/miui/home/launcher/util/WidgetTypeIconAnimHelper;->getWidgetViewInfo()Lcom/miui/home/launcher/util/WidgetTypeIconAnimHelper$LaunchAppWidgetViewInfo;
 
     move-result-object v1
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_4
 
     return-object v0
 
-    .line 1088
-    :cond_2
+    .line 1200
+    :cond_4
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object p1
@@ -524,36 +716,30 @@
 
     cmp-long p1, v2, v4
 
-    if-nez p1, :cond_3
+    if-nez p1, :cond_5
 
-    iget-object p1, p2, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->packageName:Ljava/lang/String;
-
-    .line 1089
-    invoke-virtual {v1, p1}, Lcom/miui/home/launcher/util/WidgetTypeIconAnimHelper$LaunchAppWidgetViewInfo;->isMatchClosingAppPackage(Ljava/lang/String;)Z
+    .line 1201
+    invoke-virtual {v1, p2}, Lcom/miui/home/launcher/util/WidgetTypeIconAnimHelper$LaunchAppWidgetViewInfo;->isMatchClosingAppPackage(Ljava/lang/String;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_5
 
-    .line 1090
+    .line 1202
     invoke-virtual {v1}, Lcom/miui/home/launcher/util/WidgetTypeIconAnimHelper$LaunchAppWidgetViewInfo;->getStartActivityWidgetView()Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;
 
     move-result-object p1
 
     return-object p1
 
-    :cond_3
-    return-object v0
-
-    :cond_4
-    :goto_0
+    :cond_5
     return-object v0
 .end method
 
 .method private finishPendingGestureController()V
     .locals 2
 
-    .line 175
+    .line 179
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -564,21 +750,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 176
+    .line 180
     invoke-virtual {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->getNavStubView()Lcom/miui/home/recents/NavStubView;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 177
+    .line 181
     invoke-virtual {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->getNavStubView()Lcom/miui/home/recents/NavStubView;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lcom/miui/home/recents/NavStubView;->finishPendingController()V
 
-    .line 178
+    .line 182
     invoke-virtual {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->getNavStubView()Lcom/miui/home/recents/NavStubView;
 
     move-result-object v0
@@ -592,7 +778,7 @@
 .method private getClosingShortcutIcon(Lcom/miui/home/launcher/Launcher;Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/launcher/ShortcutIcon;
     .locals 3
 
-    .line 1048
+    .line 1131
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
     move-result v0
@@ -609,7 +795,7 @@
 
     goto :goto_1
 
-    .line 1051
+    .line 1134
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getClosingShortcutIcon()Lcom/miui/home/launcher/ShortcutIcon;
 
@@ -617,33 +803,40 @@
 
     if-eqz v0, :cond_1
 
-    .line 1052
+    const-string p2, "QuickstepAppTransitionManagerImpl"
+
+    const-string v0, "getClosingShortcutIcon:launcher.getClosingShortcutIcon"
+
+    .line 1135
+    invoke-static {p2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1136
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getClosingShortcutIcon()Lcom/miui/home/launcher/ShortcutIcon;
 
     move-result-object p1
 
     return-object p1
 
-    .line 1054
+    .line 1138
     :cond_1
     new-instance v0, Ljava/util/concurrent/FutureTask;
 
-    new-instance v2, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$G22Pw-uMzQz1-H5P-LsaPzgv4OM;
+    new-instance v2, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$NuJUsszL0hMVPcN1WqQNFrKOz74;
 
-    invoke-direct {v2, p2, p1}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$G22Pw-uMzQz1-H5P-LsaPzgv4OM;-><init>(Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {v2, p2, p1}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$NuJUsszL0hMVPcN1WqQNFrKOz74;-><init>(Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/launcher/Launcher;)V
 
     invoke-direct {v0, v2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
-    .line 1066
+    .line 1152
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getParallelExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p1
 
     invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    const-wide/16 p1, 0x32
+    const-wide/16 p1, 0x50
 
-    .line 1068
+    .line 1154
     :try_start_0
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -658,9 +851,16 @@
     goto :goto_0
 
     :catch_0
+    const-string p1, "QuickstepAppTransitionManagerImpl"
+
+    const-string p2, "getClosingShortcutIcon:timeout"
+
+    .line 1156
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     const/4 p1, 0x1
 
-    .line 1070
+    .line 1157
     invoke-virtual {v0, p1}, Ljava/util/concurrent/FutureTask;->cancel(Z)Z
 
     move-object p1, v1
@@ -676,21 +876,21 @@
 .method private getHomeStackBound()Landroid/graphics/Rect;
     .locals 4
 
-    .line 390
+    .line 403
     invoke-virtual {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 392
+    .line 405
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getRootViewRect()Landroid/graphics/Rect;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 394
+    .line 407
     :cond_0
     new-instance v0, Landroid/graphics/Rect;
 
@@ -715,7 +915,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 1036
+    .line 1119
     :try_start_0
     invoke-interface {p1}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->getIconImageViewOriginalLocation()Landroid/graphics/Rect;
 
@@ -732,15 +932,17 @@
 
     const-string v1, "can\'t get icon location"
 
-    .line 1038
-    .line 1039
+    .line 1121
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 1122
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getClosingAppDefaultDisappearRect()Landroid/graphics/Rect;
 
     move-result-object p1
 
     goto :goto_0
 
-    .line 1042
+    .line 1125
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getClosingAppDefaultDisappearRect()Landroid/graphics/Rect;
 
@@ -750,15 +952,89 @@
     return-object p1
 .end method
 
+.method private getLauncherTaskId(Lcom/miui/home/launcher/Launcher;)I
+    .locals 4
+
+    .line 733
+    new-instance v0, Ljava/util/concurrent/FutureTask;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$JlRmIwFJon_2LVXwNCTGHSdpCyM;
+
+    invoke-direct {v1, p1}, Lcom/miui/home/recents/-$$Lambda$JlRmIwFJon_2LVXwNCTGHSdpCyM;-><init>(Lcom/miui/home/launcher/Launcher;)V
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
+
+    .line 734
+    invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getParallelExecutor()Ljava/util/concurrent/Executor;
+
+    move-result-object p1
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    const-wide/16 v1, 0x1f4
+
+    .line 737
+    :try_start_0
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v0, v1, v2, p1}, Ljava/util/concurrent/FutureTask;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    const-string v1, "QuickstepAppTransitionManagerImpl"
+
+    .line 739
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "getLauncherTaskId: exception: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    const/4 p1, 0x1
+
+    .line 740
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/FutureTask;->cancel(Z)Z
+
+    const/4 p1, -0x1
+
+    :goto_0
+    return p1
+.end method
+
 .method private getWallpaperOpenRunner(Z)Lcom/android/systemui/shared/recents/system/RemoteAnimationRunnerCompat;
     .locals 3
 
-    .line 745
+    .line 787
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mWallpaperOpenLauncherAnimationRunner:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$WallpaperOpenLauncherAnimationRunner;
 
     if-nez v0, :cond_0
 
-    .line 746
+    .line 788
     new-instance v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$WallpaperOpenLauncherAnimationRunner;
 
     iget-object v1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mHandler:Landroid/os/Handler;
@@ -769,7 +1045,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mWallpaperOpenLauncherAnimationRunner:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$WallpaperOpenLauncherAnimationRunner;
 
-    .line 749
+    .line 791
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mWallpaperOpenLauncherAnimationRunner:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$WallpaperOpenLauncherAnimationRunner;
 
@@ -779,7 +1055,7 @@
 .method private getWindowTargetBounds([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)Landroid/graphics/Rect;
     .locals 5
 
-    .line 335
+    .line 348
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceWidth()I
@@ -794,7 +1070,7 @@
 
     invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 336
+    .line 349
     array-length v1, p1
 
     :goto_0
@@ -802,7 +1078,7 @@
 
     aget-object v2, p1, v3
 
-    .line 337
+    .line 350
     iget v4, v2, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->mode:I
 
     if-ne v4, p2, :cond_0
@@ -813,7 +1089,7 @@
 
     iget-object v4, v2, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->sourceContainerBounds:Landroid/graphics/Rect;
 
-    .line 338
+    .line 351
     invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
 
     move-result v4
@@ -822,19 +1098,19 @@
 
     iget-object v4, v2, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->sourceContainerBounds:Landroid/graphics/Rect;
 
-    .line 339
+    .line 352
     invoke-virtual {v4}, Landroid/graphics/Rect;->height()I
 
     move-result v4
 
     if-lez v4, :cond_0
 
-    .line 340
+    .line 353
     iget-object p1, v2, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->sourceContainerBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 341
+    .line 354
     iget-object p1, v2, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->position:Landroid/graphics/Point;
 
     iget p1, p1, Landroid/graphics/Point;->x:I
@@ -867,12 +1143,12 @@
 .method private invalidateAdaptiveIconDrawable(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
     .locals 1
 
-    .line 1339
+    .line 1468
     instance-of v0, p1, Lcom/miui/home/launcher/ShortcutIcon;
 
     if-eqz v0, :cond_0
 
-    .line 1340
+    .line 1469
     check-cast p1, Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->getIconImageView()Lcom/miui/home/launcher/LauncherIconImageView;
@@ -888,7 +1164,7 @@
 .method private isInAppModeGesture()Z
     .locals 2
 
-    .line 1486
+    .line 1614
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -899,14 +1175,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1487
+    .line 1615
     invoke-virtual {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->getNavStubView()Lcom/miui/home/recents/NavStubView;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 1488
+    .line 1616
     invoke-virtual {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->getNavStubView()Lcom/miui/home/recents/NavStubView;
 
     move-result-object v0
@@ -931,7 +1207,7 @@
 .method private isLaunchAppFromWidget([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Z
     .locals 1
 
-    .line 707
+    .line 749
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mLauncher:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -977,15 +1253,15 @@
     return-void
 .end method
 
-.method static synthetic lambda$getClosingShortcutIcon$5(Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/ShortcutIcon;
-    .locals 4
+.method static synthetic lambda$findClosingWidgetView$7(Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Ljava/lang/String;
+    .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
         }
     .end annotation
 
-    .line 1055
+    .line 1170
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v0
@@ -994,7 +1270,74 @@
 
     move-result-object v0
 
-    .line 1056
+    .line 1171
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/app/ActivityManager$RecentTaskInfo;
+
+    .line 1172
+    iget v3, v1, Landroid/app/ActivityManager$RecentTaskInfo;->persistentId:I
+
+    iget v4, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->taskId:I
+
+    if-ne v3, v4, :cond_0
+
+    .line 1173
+    invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
+
+    move-result-object p0
+
+    invoke-virtual {p0, v1}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getComponentName(Landroid/app/ActivityManager$RecentTaskInfo;)Landroid/content/ComponentName;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    .line 1174
+    invoke-virtual {p0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    :cond_1
+    return-object v2
+
+    :cond_2
+    return-object v2
+.end method
+
+.method static synthetic lambda$getClosingShortcutIcon$6(Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/ShortcutIcon;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .line 1139
+    invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getRecentTasks()Ljava/util/List;
+
+    move-result-object v0
+
+    .line 1140
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1012,14 +1355,14 @@
 
     check-cast v1, Landroid/app/ActivityManager$RecentTaskInfo;
 
-    .line 1057
+    .line 1141
     iget v2, v1, Landroid/app/ActivityManager$RecentTaskInfo;->persistentId:I
 
     iget v3, p0, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->taskId:I
 
     if-ne v2, v3, :cond_0
 
-    .line 1058
+    .line 1142
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object p0
@@ -1028,7 +1371,7 @@
 
     move-result-object p0
 
-    .line 1059
+    .line 1143
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v0
@@ -1037,7 +1380,14 @@
 
     move-result v0
 
-    .line 1060
+    const-string v1, "QuickstepAppTransitionManagerImpl"
+
+    const-string v2, "getClosingShortcutIcon:CloseShortcutIconUtils.getCloseShortcutIcon"
+
+    .line 1144
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1145
     invoke-static {p0, v0, p1}, Lcom/miui/home/recents/CloseShortcutIconUtils;->getCloseShortcutIcon(Landroid/content/ComponentName;ILcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/ShortcutIcon;
 
     move-result-object p0
@@ -1045,6 +1395,13 @@
     return-object p0
 
     :cond_1
+    const-string p0, "QuickstepAppTransitionManagerImpl"
+
+    const-string p1, "getClosingShortcutIcon:null"
+
+    .line 1148
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     const/4 p0, 0x0
 
     return-object p0
@@ -1058,17 +1415,17 @@
     return-void
 .end method
 
-.method public static synthetic lambda$resetContentView$9(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)V
+.method public static synthetic lambda$resetContentView$11(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)V
     .locals 3
 
-    .line 1472
+    .line 1600
     invoke-virtual {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1474
+    .line 1602
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getShortcutMenuLayer()Lcom/miui/home/launcher/ShortcutMenuLayer;
 
     move-result-object v1
@@ -1077,52 +1434,52 @@
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/ShortcutMenuLayer;->setAlpha(F)V
 
-    .line 1475
+    .line 1603
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getShortcutMenuLayer()Lcom/miui/home/launcher/ShortcutMenuLayer;
 
     move-result-object v1
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/ShortcutMenuLayer;->setScaleX(F)V
 
-    .line 1476
+    .line 1604
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getShortcutMenuLayer()Lcom/miui/home/launcher/ShortcutMenuLayer;
 
     move-result-object v1
 
     invoke-virtual {v1, v2}, Lcom/miui/home/launcher/ShortcutMenuLayer;->setScaleY(F)V
 
-    .line 1478
+    .line 1606
     invoke-direct {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->isInAppModeGesture()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1479
+    .line 1607
     invoke-static {v0}, Lcom/miui/home/launcher/common/BlurUtils;->fastBlurWhenFinishOpenOrCloseApp(Lcom/miui/home/launcher/Launcher;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static synthetic lambda$resetRecentsContentView$2(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)V
+.method public static synthetic lambda$resetRecentsContentView$3(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)V
     .locals 6
 
-    .line 856
+    .line 937
     invoke-virtual {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 857
+    .line 938
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getRecentsView()Lcom/miui/home/recents/views/RecentsView;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 858
+    .line 939
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getRecentsView()Lcom/miui/home/recents/views/RecentsView;
 
     move-result-object v1
@@ -1137,7 +1494,7 @@
 
     move v2, v1
 
-    .line 859
+    .line 940
     :goto_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getRecentsView()Lcom/miui/home/recents/views/RecentsView;
 
@@ -1153,7 +1510,7 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 860
+    .line 941
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getRecentsView()Lcom/miui/home/recents/views/RecentsView;
 
     move-result-object v3
@@ -1168,7 +1525,7 @@
 
     check-cast v3, Lcom/miui/home/recents/views/TaskView;
 
-    .line 861
+    .line 942
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
     move-result-object v4
@@ -1181,15 +1538,15 @@
 
     const/4 v4, 0x0
 
-    .line 862
+    .line 943
     invoke-virtual {v3, v4}, Lcom/miui/home/recents/views/TaskView;->setTranslationY(F)V
 
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 863
+    .line 944
     invoke-virtual {v3, v4}, Lcom/miui/home/recents/views/TaskView;->setAlpha(F)V
 
-    .line 864
+    .line 945
     invoke-static {v3, v1}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->setTaskViewLayerType(Lcom/miui/home/recents/views/TaskView;I)V
 
     add-int/lit8 v2, v2, 0x1
@@ -1203,30 +1560,30 @@
 .method public static synthetic lambda$setRemoteAnimationProvider$0(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/util/RemoteAnimationProvider;)V
     .locals 1
 
-    .line 352
+    .line 365
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRemoteAnimationProvider:Lcom/miui/home/recents/util/RemoteAnimationProvider;
 
     if-ne p1, v0, :cond_0
 
     const/4 p1, 0x0
 
-    .line 353
+    .line 366
     iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRemoteAnimationProvider:Lcom/miui/home/recents/util/RemoteAnimationProvider;
 
     :cond_0
     return-void
 .end method
 
-.method public static synthetic lambda$startClosingWindowAnimators$6(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
+.method public static synthetic lambda$startClosingWindowAnimators$8(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
     .locals 0
 
-    .line 1246
+    .line 1364
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->resetShortcutIconAlpha(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
 
     return-void
 .end method
 
-.method public static synthetic lambda$startClosingWindowAnimators$7(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;IILcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;Lcom/miui/home/launcher/Launcher;Landroid/view/View;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/RectFSpringAnim;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Landroid/graphics/Rect;Landroid/graphics/Rect;FLcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Landroid/graphics/RectF;FFF)V
+.method public static synthetic lambda$startClosingWindowAnimators$9(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;IILcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;ZLcom/miui/home/launcher/Launcher;Landroid/view/View;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/RectFSpringAnim;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Landroid/graphics/Rect;Landroid/graphics/Rect;FLcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Landroid/graphics/RectF;FFF)V
     .locals 19
 
     move-object/from16 v0, p0
@@ -1237,30 +1594,30 @@
 
     move-object/from16 v3, p3
 
-    move-object/from16 v4, p5
+    move-object/from16 v4, p6
 
-    move-object/from16 v5, p6
+    move-object/from16 v5, p7
 
-    move-object/from16 v6, p7
+    move-object/from16 v6, p8
 
-    move-object/from16 v7, p8
+    move-object/from16 v7, p9
 
-    move-object/from16 v8, p9
+    move-object/from16 v8, p10
 
-    move-object/from16 v9, p13
+    move-object/from16 v9, p14
 
-    move-object/from16 v10, p14
+    move-object/from16 v10, p15
 
-    move/from16 v11, p15
+    move/from16 v11, p16
 
-    move/from16 v12, p16
+    move/from16 v12, p17
 
-    .line 1189
+    .line 1304
     invoke-static {v1, v2, v10}, Lcom/miui/home/launcher/util/CoordinateTransforms;->transformCoordinate(IILandroid/graphics/RectF;)Landroid/graphics/RectF;
 
     move-result-object v13
 
-    .line 1191
+    .line 1306
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isUseSimpleAnim()Z
 
     move-result v14
@@ -1287,7 +1644,7 @@
     :goto_0
     const/4 v9, 0x0
 
-    .line 1192
+    .line 1307
     invoke-static {v9, v14}, Ljava/lang/Math;->max(FF)F
 
     move-result v14
@@ -1305,7 +1662,7 @@
     :cond_1
     sub-float v9, v15, v11
 
-    .line 1193
+    .line 1308
     invoke-static {v9}, Ljava/lang/Math;->abs(F)F
 
     move-result v14
@@ -1320,7 +1677,7 @@
 
     const-wide/high16 v1, 0x3ff8000000000000L    # 1.5
 
-    .line 1194
+    .line 1309
     invoke-static {v7, v8, v1, v2}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v1
@@ -1336,7 +1693,7 @@
 
     const/4 v2, 0x0
 
-    .line 1196
+    .line 1311
     :goto_1
     invoke-static {v2, v1}, Ljava/lang/Math;->max(FF)F
 
@@ -1346,37 +1703,42 @@
 
     move-result v1
 
-    .line 1198
+    if-eqz p4, :cond_3
+
+    const/4 v1, 0x0
+
+    .line 1316
+    :cond_3
     instance-of v2, v3, Lcom/miui/home/launcher/anim/WidgetTypeAnimTarget;
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     move v2, v15
 
     goto :goto_4
 
-    :cond_3
+    :cond_4
     cmpl-float v2, v1, v15
 
-    if-nez v2, :cond_4
+    if-nez v2, :cond_5
 
     const/4 v2, 0x0
 
     goto :goto_2
 
-    :cond_4
+    :cond_5
     move v2, v15
 
-    .line 1201
+    .line 1319
     :goto_2
-    invoke-virtual/range {p4 .. p4}, Lcom/miui/home/launcher/Launcher;->isFolderShowing()Z
+    invoke-virtual/range {p5 .. p5}, Lcom/miui/home/launcher/Launcher;->isFolderShowing()Z
 
     move-result v7
 
-    if-nez v7, :cond_5
+    if-nez v7, :cond_6
 
-    .line 1202
-    invoke-virtual/range {p4 .. p4}, Lcom/miui/home/launcher/Launcher;->getShortcutMenuLayer()Lcom/miui/home/launcher/ShortcutMenuLayer;
+    .line 1320
+    invoke-virtual/range {p5 .. p5}, Lcom/miui/home/launcher/Launcher;->getShortcutMenuLayer()Lcom/miui/home/launcher/ShortcutMenuLayer;
 
     move-result-object v7
 
@@ -1386,41 +1748,41 @@
 
     goto :goto_3
 
-    :cond_5
+    :cond_6
     move v7, v15
 
     :goto_3
     mul-float/2addr v2, v7
 
     :goto_4
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_7
 
-    .line 1206
+    .line 1324
     invoke-static {}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->getInstance()Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;
 
     move-result-object v7
 
     invoke-virtual {v7, v10}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->transformPositionRelativeToAncestor(Landroid/graphics/RectF;)V
 
-    .line 1208
-    :cond_6
+    .line 1326
+    :cond_7
     invoke-virtual {v5, v1}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setTargetAlpha(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     move-result-object v7
 
-    .line 1209
+    .line 1327
     invoke-virtual {v7, v13}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setRect(Landroid/graphics/RectF;)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     move-result-object v7
 
     const/4 v8, 0x0
 
-    .line 1210
+    .line 1328
     invoke-virtual {v7, v8}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setClipProgress(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     move-result-object v7
 
-    .line 1211
+    .line 1329
     invoke-static/range {p2 .. p2}, Lcom/miui/home/recents/util/RotationHelper;->isLandscapeRotation(I)Z
 
     move-result v9
@@ -1437,35 +1799,35 @@
 
     move-result-object v7
 
-    .line 1212
+    .line 1330
     invoke-virtual {v7, v12}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setRadius(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
-    .line 1214
+    .line 1332
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isUseSimpleAnim()Z
 
     move-result v7
 
-    if-nez v7, :cond_9
+    if-nez v7, :cond_a
 
     cmpl-float v1, v2, v8
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_9
 
-    .line 1215
+    .line 1333
     iget-object v1, v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_9
 
     invoke-virtual {v1}, Lcom/miui/home/recents/views/FloatingIconView;->getVisibility()I
 
     move-result v1
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_9
 
-    if-eqz v6, :cond_7
+    if-eqz v6, :cond_8
 
-    .line 1216
-    invoke-virtual/range {p7 .. p7}, Lcom/miui/home/recents/util/RectFSpringAnim;->getPreviousRect()Landroid/graphics/RectF;
+    .line 1334
+    invoke-virtual/range {p8 .. p8}, Lcom/miui/home/recents/util/RectFSpringAnim;->getPreviousRect()Landroid/graphics/RectF;
 
     move-result-object v1
 
@@ -1473,10 +1835,10 @@
 
     move-result v1
 
-    if-nez v1, :cond_7
+    if-nez v1, :cond_8
 
-    .line 1217
-    invoke-virtual/range {p7 .. p7}, Lcom/miui/home/recents/util/RectFSpringAnim;->getPreviousRect()Landroid/graphics/RectF;
+    .line 1335
+    invoke-virtual/range {p8 .. p8}, Lcom/miui/home/recents/util/RectFSpringAnim;->getPreviousRect()Landroid/graphics/RectF;
 
     move-result-object v1
 
@@ -1488,31 +1850,31 @@
 
     move/from16 v7, p2
 
-    .line 1218
+    .line 1336
     invoke-static {v6, v7, v1}, Lcom/miui/home/launcher/util/CoordinateTransforms;->transformCoordinate(IILandroid/graphics/RectF;)Landroid/graphics/RectF;
 
     move-result-object v1
 
     invoke-virtual {v5, v1}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setRect(Landroid/graphics/RectF;)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
-    move-object/from16 v7, p8
+    move-object/from16 v7, p9
 
-    move-object/from16 v8, p9
+    move-object/from16 v8, p10
 
-    .line 1219
+    .line 1337
     invoke-virtual {v7, v8, v5}, Lcom/miui/home/recents/util/ClipAnimationHelper;->applyTransformNew(Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;)Landroid/graphics/RectF;
 
-    .line 1220
+    .line 1338
     invoke-virtual {v5, v13}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setRect(Landroid/graphics/RectF;)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     goto :goto_5
 
-    :cond_7
-    move-object/from16 v7, p8
+    :cond_8
+    move-object/from16 v7, p9
 
-    move-object/from16 v8, p9
+    move-object/from16 v8, p10
 
-    .line 1222
+    .line 1340
     :goto_5
     new-instance v1, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
@@ -1520,7 +1882,7 @@
 
     invoke-virtual {v5, v1}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setSyncTransactionApplier(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
-    .line 1223
+    .line 1341
     iget-object v1, v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
 
     const/4 v4, 0x0
@@ -1529,30 +1891,30 @@
 
     goto :goto_6
 
-    :cond_8
-    move-object/from16 v7, p8
+    :cond_9
+    move-object/from16 v7, p9
 
-    move-object/from16 v8, p9
+    move-object/from16 v8, p10
 
-    .line 1225
+    .line 1343
     :goto_6
     invoke-virtual {v7, v8, v5}, Lcom/miui/home/recents/util/ClipAnimationHelper;->applyTransformNew(Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;)Landroid/graphics/RectF;
 
-    .line 1227
+    .line 1345
     iget-object v1, v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
 
-    if-eqz v1, :cond_b
+    if-eqz v1, :cond_c
 
-    if-eqz v3, :cond_b
+    if-eqz v3, :cond_c
 
-    .line 1228
-    invoke-virtual/range {p14 .. p14}, Landroid/graphics/RectF;->height()F
+    .line 1346
+    invoke-virtual/range {p15 .. p15}, Landroid/graphics/RectF;->height()F
 
     move-result v1
 
     mul-float/2addr v1, v15
 
-    invoke-virtual/range {p10 .. p10}, Landroid/graphics/Rect;->height()I
+    invoke-virtual/range {p11 .. p11}, Landroid/graphics/Rect;->height()I
 
     move-result v4
 
@@ -1570,34 +1932,34 @@
 
     neg-float v1, v1
 
-    .line 1229
+    .line 1347
     invoke-virtual {v10, v1, v1}, Landroid/graphics/RectF;->inset(FF)V
 
-    .line 1231
-    invoke-virtual/range {p11 .. p11}, Landroid/graphics/Rect;->width()I
+    .line 1349
+    invoke-virtual/range {p12 .. p12}, Landroid/graphics/Rect;->width()I
 
-    invoke-virtual/range {p14 .. p14}, Landroid/graphics/RectF;->width()F
+    invoke-virtual/range {p15 .. p15}, Landroid/graphics/RectF;->width()F
 
-    .line 1232
+    .line 1350
     invoke-virtual {v7, v10}, Lcom/miui/home/recents/util/ClipAnimationHelper;->modifyRectFToHome(Landroid/graphics/RectF;)V
 
-    .line 1233
+    .line 1351
     iget-object v1, v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
 
-    div-float v3, v12, p12
+    div-float v3, v12, p13
 
     invoke-virtual {v1, v10, v2, v11, v3}, Lcom/miui/home/recents/views/FloatingIconView;->update(Landroid/graphics/RectF;FFF)V
 
     goto/16 :goto_7
 
-    :cond_9
+    :cond_a
     move v9, v8
 
-    move-object/from16 v7, p8
+    move-object/from16 v7, p9
 
-    move-object/from16 v8, p9
+    move-object/from16 v8, p10
 
-    .line 1237
+    .line 1355
     invoke-static {v9, v11}, Ljava/lang/Math;->max(FF)F
 
     move-result v13
@@ -1606,7 +1968,7 @@
 
     move-result v13
 
-    .line 1238
+    .line 1356
     sget-object v16, Lcom/miui/home/launcher/LauncherState;->OVERVIEW:Lcom/miui/home/recents/OverviewState;
 
     invoke-virtual/range {v16 .. v16}, Lcom/miui/home/recents/OverviewState;->getShortcutMenuLayerScale()F
@@ -1615,7 +1977,7 @@
 
     sget-object v17, Lcom/miui/home/launcher/LauncherState;->OVERVIEW:Lcom/miui/home/recents/OverviewState;
 
-    .line 1239
+    .line 1357
     invoke-virtual/range {v17 .. v17}, Lcom/miui/home/recents/OverviewState;->getShortcutMenuLayerScale()F
 
     move-result v17
@@ -1630,7 +1992,7 @@
 
     add-float v13, v16, v17
 
-    .line 1238
+    .line 1356
     invoke-static {v9, v13}, Ljava/lang/Math;->max(FF)F
 
     move-result v13
@@ -1639,21 +2001,21 @@
 
     move-result v9
 
-    move-object/from16 v13, p13
+    move-object/from16 v13, p14
 
-    .line 1240
+    .line 1358
     invoke-virtual {v13, v11}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setTargetAlpha(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     move-result-object v14
 
     invoke-virtual {v14, v9}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setScale(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
-    .line 1241
+    .line 1359
     invoke-virtual {v7, v8, v5, v13}, Lcom/miui/home/recents/util/ClipAnimationHelper;->applyTransformNew(Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;)Landroid/graphics/RectF;
 
-    if-eqz v3, :cond_a
+    if-eqz v3, :cond_b
 
-    .line 1244
+    .line 1362
     invoke-interface/range {p3 .. p3}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->getIconImageView()Landroid/view/View;
 
     move-result-object v5
@@ -1664,52 +2026,52 @@
 
     cmpl-float v5, v5, v15
 
-    if-eqz v5, :cond_a
+    if-eqz v5, :cond_b
 
-    if-eqz v6, :cond_a
+    if-eqz v6, :cond_b
 
     const/high16 v5, 0x40000000    # 2.0f
 
-    .line 1245
+    .line 1363
     invoke-virtual {v6, v5}, Lcom/miui/home/recents/util/RectFSpringAnim;->isClosedToTarget(F)Z
 
     move-result v5
 
-    if-eqz v5, :cond_a
+    if-eqz v5, :cond_b
 
-    .line 1246
+    .line 1364
     sget-object v5, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
-    new-instance v6, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$zHysnE21L0-LziobYMqhWA8lgpE;
+    new-instance v6, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$fUfK6mbSJFnX8KrLYVqzHD6tXdI;
 
-    invoke-direct {v6, v0, v3}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$zHysnE21L0-LziobYMqhWA8lgpE;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
+    invoke-direct {v6, v0, v3}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$fUfK6mbSJFnX8KrLYVqzHD6tXdI;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
 
     invoke-virtual {v5, v6}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 1249
-    :cond_a
+    .line 1367
+    :cond_b
     iget-object v3, v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mCloseFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
 
-    if-eqz v3, :cond_b
+    if-eqz v3, :cond_c
 
     cmpg-float v1, v1, v15
 
-    if-gez v1, :cond_b
+    if-gez v1, :cond_c
 
-    .line 1250
-    invoke-static/range {p5 .. p5}, Lcom/android/systemui/shared/recents/system/SurfaceControlUtils;->getSurfaceControlCompat(Landroid/view/View;)Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
+    .line 1368
+    invoke-static/range {p6 .. p6}, Lcom/android/systemui/shared/recents/system/SurfaceControlUtils;->getSurfaceControlCompat(Landroid/view/View;)Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     move-result-object v1
 
-    div-float v4, v12, p12
+    div-float v4, v12, p13
 
     move-object/from16 p1, v3
 
     move-object/from16 p2, v1
 
-    move-object/from16 p3, p14
+    move-object/from16 p3, p15
 
-    move/from16 p4, p15
+    move/from16 p4, p16
 
     move/from16 p5, v4
 
@@ -1717,8 +2079,8 @@
 
     invoke-virtual/range {p1 .. p6}, Lcom/miui/home/recents/FloatingIconLayer;->showFloatingIcon(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Landroid/graphics/RectF;FFF)V
 
-    .line 1255
-    :cond_b
+    .line 1373
+    :cond_c
     :goto_7
     invoke-static {}, Lcom/miui/home/recents/DimLayer;->getInstance()Lcom/miui/home/recents/DimLayer;
 
@@ -1736,34 +2098,34 @@
 
     move-result v2
 
-    .line 1256
-    invoke-virtual/range {p9 .. p9}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getHomeSurfaceControlCompat()Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
+    .line 1374
+    invoke-virtual/range {p10 .. p10}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getHomeSurfaceControlCompat()Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     move-result-object v3
 
     const/4 v4, 0x1
 
-    .line 1255
+    .line 1373
     invoke-virtual {v1, v2, v3, v4}, Lcom/miui/home/recents/DimLayer;->dim(FLcom/android/systemui/shared/recents/system/SurfaceControlCompat;Z)V
 
     return-void
 .end method
 
-.method static synthetic lambda$startClosingWindowFromFeedAnimators$8(Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Landroid/graphics/RectF;FFF)V
+.method static synthetic lambda$startClosingWindowFromFeedAnimators$10(Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Landroid/graphics/RectF;FFF)V
     .locals 2
 
-    .line 1422
+    .line 1550
     iget p4, p3, Landroid/graphics/RectF;->left:F
 
-    .line 1423
+    .line 1551
     iget p6, p3, Landroid/graphics/RectF;->top:F
 
-    .line 1424
+    .line 1552
     invoke-virtual {p3}, Landroid/graphics/RectF;->width()F
 
     move-result v0
 
-    .line 1425
+    .line 1553
     invoke-virtual {p3}, Landroid/graphics/RectF;->height()F
 
     move-result v1
@@ -1776,7 +2138,7 @@
 
     const/high16 p3, 0x3f800000    # 1.0f
 
-    .line 1427
+    .line 1555
     invoke-virtual {p0, p3}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setTargetAlpha(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     move-result-object p3
@@ -1789,7 +2151,7 @@
 
     move-result-object p3
 
-    .line 1428
+    .line 1556
     invoke-virtual {p3, v0}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setWidth(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     move-result-object p3
@@ -1806,13 +2168,13 @@
 
     invoke-virtual {p3, p5}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setRadius(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
-    .line 1429
+    .line 1557
     invoke-virtual {p1, p2, p0}, Lcom/miui/home/recents/util/ClipAnimationHelper;->applyTransformNew(Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;)Landroid/graphics/RectF;
 
     return-void
 .end method
 
-.method static synthetic lambda$startClosingWindowToRecentsAnimators$3(Lcom/miui/home/recents/views/TaskView;FFZLcom/miui/home/recents/views/RecentsView;Landroid/graphics/RectF;Landroid/graphics/RectF;)V
+.method static synthetic lambda$startClosingWindowToRecentsAnimators$4(Lcom/miui/home/recents/views/TaskView;FFZLcom/miui/home/recents/views/RecentsView;Landroid/graphics/RectF;Landroid/graphics/RectF;)V
     .locals 6
 
     if-eqz p0, :cond_1
@@ -1823,13 +2185,13 @@
 
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 957
+    .line 1040
     invoke-virtual {p0, p2}, Lcom/miui/home/recents/views/TaskView;->setChildrenViewAlpha(F)V
 
     :cond_0
     const/4 p2, 0x0
 
-    .line 959
+    .line 1042
     invoke-virtual {p0, p2, p2, p1}, Lcom/miui/home/recents/views/TaskView;->setHeaderTranslationAndAlpha(FFF)V
 
     :cond_1
@@ -1847,23 +2209,23 @@
 
     move v5, p1
 
-    .line 962
+    .line 1045
     invoke-virtual/range {v0 .. v5}, Lcom/miui/home/recents/views/RecentsView;->alignTaskViewWhenAppToRecent(Lcom/miui/home/recents/views/TaskView;Landroid/graphics/RectF;Landroid/graphics/RectF;FF)V
 
     :cond_2
     return-void
 .end method
 
-.method static synthetic lambda$startClosingWindowToRecentsAnimators$4(Lcom/miui/home/launcher/Launcher;Landroid/graphics/Rect;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Lcom/miui/home/recents/views/TaskView;FZLcom/miui/home/recents/views/RecentsView;Landroid/graphics/RectF;FFF)V
+.method static synthetic lambda$startClosingWindowToRecentsAnimators$5(Lcom/miui/home/launcher/Launcher;ILandroid/graphics/Rect;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Lcom/miui/home/recents/views/TaskView;FZLcom/miui/home/recents/views/RecentsView;Landroid/graphics/RectF;FFF)V
     .locals 12
 
-    move-object v0, p1
+    move-object v0, p2
 
-    move-object v1, p2
+    move-object v1, p3
 
-    move-object/from16 v6, p9
+    move-object/from16 v6, p10
 
-    .line 941
+    .line 1024
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getRecentsView()Lcom/miui/home/recents/views/RecentsView;
 
     move-result-object v2
@@ -1872,20 +2234,20 @@
 
     move-result-object v2
 
-    const/4 v3, 0x0
+    move v3, p1
 
-    invoke-virtual {v2, v3}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViewWithoutHeaderRectF(I)Landroid/graphics/RectF;
+    invoke-virtual {v2, p1}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViewWithoutHeaderRectF(I)Landroid/graphics/RectF;
 
     move-result-object v7
 
-    .line 942
+    .line 1025
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 943
+    .line 1026
     iget v2, v7, Landroid/graphics/RectF;->left:F
 
     iget v3, v0, Landroid/graphics/Rect;->left:I
@@ -1894,7 +2256,7 @@
 
     sub-float/2addr v2, v3
 
-    .line 944
+    .line 1027
     iget v3, v7, Landroid/graphics/RectF;->top:F
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -1903,77 +2265,77 @@
 
     sub-float/2addr v3, v0
 
-    .line 945
+    .line 1028
     invoke-virtual {v6, v2, v3}, Landroid/graphics/RectF;->offset(FF)V
 
-    move/from16 v0, p12
+    move/from16 v0, p13
 
     goto :goto_0
 
     :cond_0
-    move/from16 v0, p12
+    move/from16 v0, p13
 
-    .line 948
+    .line 1031
     :goto_0
-    invoke-virtual {p2, v0}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setTargetAlpha(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
+    invoke-virtual {p3, v0}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setTargetAlpha(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     move-result-object v0
 
-    .line 949
+    .line 1032
     invoke-virtual {v0, v6}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setRect(Landroid/graphics/RectF;)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     move-result-object v0
 
     const/4 v8, 0x0
 
-    .line 950
+    .line 1033
     invoke-virtual {v0, v8}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setClipProgress(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     move-result-object v0
 
-    move/from16 v2, p11
+    move/from16 v2, p12
 
-    .line 951
+    .line 1034
     invoke-virtual {v0, v2}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setRadius(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
-    move-object v0, p3
+    move-object/from16 v0, p4
 
-    move-object/from16 v9, p4
+    move-object/from16 v9, p5
 
-    .line 952
-    invoke-virtual {p3, v9, p2}, Lcom/miui/home/recents/util/ClipAnimationHelper;->applyTransformNew(Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;)Landroid/graphics/RectF;
+    .line 1035
+    invoke-virtual {v0, v9, p3}, Lcom/miui/home/recents/util/ClipAnimationHelper;->applyTransformNew(Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;)Landroid/graphics/RectF;
 
-    .line 954
+    .line 1037
     sget-object v10, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
-    new-instance v11, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$OC6tIQdrapw54bBtBVZZR0WTPJ0;
+    new-instance v11, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$OMDab5s94Qvv9vwNMG_qCdCuoO8;
 
     move-object v0, v11
 
-    move-object/from16 v1, p5
+    move-object/from16 v1, p6
 
-    move/from16 v2, p10
+    move/from16 v2, p11
 
-    move/from16 v3, p6
+    move/from16 v3, p7
 
-    move/from16 v4, p7
+    move/from16 v4, p8
 
-    move-object/from16 v5, p8
+    move-object/from16 v5, p9
 
-    move-object/from16 v6, p9
+    move-object/from16 v6, p10
 
-    invoke-direct/range {v0 .. v7}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$OC6tIQdrapw54bBtBVZZR0WTPJ0;-><init>(Lcom/miui/home/recents/views/TaskView;FFZLcom/miui/home/recents/views/RecentsView;Landroid/graphics/RectF;Landroid/graphics/RectF;)V
+    invoke-direct/range {v0 .. v7}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$OMDab5s94Qvv9vwNMG_qCdCuoO8;-><init>(Lcom/miui/home/recents/views/TaskView;FFZLcom/miui/home/recents/views/RecentsView;Landroid/graphics/RectF;Landroid/graphics/RectF;)V
 
     invoke-virtual {v10, v11}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 967
+    .line 1050
     invoke-static {}, Lcom/miui/home/recents/DimLayer;->getInstance()Lcom/miui/home/recents/DimLayer;
 
     move-result-object v0
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    sub-float v2, v1, p10
+    sub-float v2, v1, p11
 
     invoke-static {v1, v2}, Ljava/lang/Math;->min(FF)F
 
@@ -1983,20 +2345,29 @@
 
     move-result v1
 
-    .line 968
-    invoke-virtual/range {p4 .. p4}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getHomeSurfaceControlCompat()Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
+    .line 1051
+    invoke-virtual/range {p5 .. p5}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getHomeSurfaceControlCompat()Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     move-result-object v2
 
     const/4 v3, 0x1
 
-    .line 967
+    .line 1050
     invoke-virtual {v0, v1, v2, v3}, Lcom/miui/home/recents/DimLayer;->dim(FLcom/android/systemui/shared/recents/system/SurfaceControlCompat;Z)V
 
     return-void
 .end method
 
-.method public static synthetic lambda$startOpeningWindowAnimators$1(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/util/RectFSpringAnim;ZLcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;IIFZLandroid/graphics/RectF;FFF)V
+.method static synthetic lambda$startOpeningWindowAnimators$1(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;F)V
+    .locals 0
+
+    .line 562
+    invoke-interface {p0, p1}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->onLaunchAppWindowAlphaChange(F)V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$startOpeningWindowAnimators$2(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/util/RectFSpringAnim;ZLcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;IIFZLandroid/graphics/RectF;FFF)V
     .locals 15
 
     move-object v0, p0
@@ -2015,7 +2386,7 @@
 
     move/from16 v7, p13
 
-    .line 502
+    .line 519
     invoke-virtual/range {p1 .. p1}, Lcom/miui/home/recents/util/RectFSpringAnim;->isRequestEnd()Z
 
     move-result v8
@@ -2024,23 +2395,11 @@
 
     return-void
 
-    .line 505
+    .line 522
     :cond_0
     iget-object v8, v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpeningAnimTargetRef:Ljava/lang/ref/WeakReference;
 
-    if-eqz v8, :cond_9
-
-    invoke-virtual {v8}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v8
-
-    if-nez v8, :cond_1
-
-    goto/16 :goto_3
-
-    .line 508
-    :cond_1
-    iget-object v8, v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpeningAnimTargetRef:Ljava/lang/ref/WeakReference;
+    if-eqz v8, :cond_1
 
     invoke-virtual {v8}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -2048,6 +2407,12 @@
 
     check-cast v8, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;
 
+    goto :goto_0
+
+    :cond_1
+    const/4 v8, 0x0
+
+    :goto_0
     const/4 v9, 0x0
 
     const/high16 v10, 0x3f800000    # 1.0f
@@ -2056,9 +2421,9 @@
 
     move/from16 v11, p14
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 513
+    .line 527
     :cond_2
     instance-of v11, v8, Lcom/miui/home/launcher/anim/WidgetTypeAnimTarget;
 
@@ -2068,7 +2433,7 @@
 
     div-float v11, v6, v11
 
-    .line 514
+    .line 528
     invoke-static {v9, v11}, Ljava/lang/Math;->max(FF)F
 
     move-result v11
@@ -2077,7 +2442,7 @@
 
     move-result v11
 
-    goto :goto_0
+    goto :goto_1
 
     :cond_3
     const v11, 0x3dcccccd    # 0.1f
@@ -2088,7 +2453,7 @@
 
     div-float/2addr v11, v12
 
-    .line 516
+    .line 530
     invoke-static {v9, v11}, Ljava/lang/Math;->max(FF)F
 
     move-result v11
@@ -2097,8 +2462,8 @@
 
     move-result v11
 
-    .line 519
-    :goto_0
+    .line 533
+    :goto_1
     invoke-virtual {v1, v11}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setTargetAlpha(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     move-result-object v12
@@ -2113,7 +2478,7 @@
 
     invoke-virtual {v12, v7}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setRadius(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
-    .line 521
+    .line 535
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isUseSimpleAnim()Z
 
     move-result v12
@@ -2126,14 +2491,14 @@
 
     div-float v13, v12, v13
 
-    .line 522
+    .line 536
     invoke-static {v9, v13}, Ljava/lang/Math;->max(FF)F
 
     move-result v13
 
     invoke-static {v10, v13}, Ljava/lang/Math;->min(FF)F
 
-    .line 523
+    .line 537
     sget-object v13, Lcom/miui/home/launcher/LauncherState;->OVERVIEW:Lcom/miui/home/recents/OverviewState;
 
     invoke-virtual {v13}, Lcom/miui/home/recents/OverviewState;->getShortcutMenuLayerScale()F
@@ -2154,24 +2519,24 @@
 
     add-float/2addr v13, v10
 
-    .line 524
+    .line 538
     invoke-virtual {v2, v12}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setTargetAlpha(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     move-result-object v12
 
     invoke-virtual {v12, v13}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setScale(F)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
-    .line 525
+    .line 539
     invoke-virtual {v3, v4, v1, v2}, Lcom/miui/home/recents/util/ClipAnimationHelper;->applyTransformNew(Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;)Landroid/graphics/RectF;
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 527
+    .line 541
     :cond_4
     invoke-virtual {v3, v4, v1}, Lcom/miui/home/recents/util/ClipAnimationHelper;->applyTransformNew(Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;)Landroid/graphics/RectF;
 
-    .line 530
-    :goto_1
+    .line 544
+    :goto_2
     invoke-virtual/range {p6 .. p6}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->isTranslucent()Z
 
     move-result v1
@@ -2180,7 +2545,7 @@
 
     if-nez v1, :cond_5
 
-    .line 531
+    .line 545
     invoke-static {}, Lcom/miui/home/recents/DimLayer;->getInstance()Lcom/miui/home/recents/DimLayer;
 
     move-result-object v1
@@ -2193,15 +2558,15 @@
 
     move-result v9
 
-    .line 532
+    .line 546
     invoke-virtual/range {p6 .. p6}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getHomeSurfaceControlCompat()Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
 
     move-result-object v12
 
-    .line 531
+    .line 545
     invoke-virtual {v1, v9, v12, v2}, Lcom/miui/home/recents/DimLayer;->dim(FLcom/android/systemui/shared/recents/system/SurfaceControlCompat;Z)V
 
-    .line 535
+    .line 549
     :cond_5
     iget-object v1, v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpenFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
 
@@ -2215,10 +2580,10 @@
 
     if-gez v9, :cond_6
 
-    .line 537
+    .line 551
     invoke-virtual {v3, v5}, Lcom/miui/home/recents/util/ClipAnimationHelper;->modifyRectFToHome(Landroid/graphics/RectF;)V
 
-    .line 538
+    .line 552
     iget-object v1, v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpenFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
 
     invoke-virtual/range {p6 .. p6}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getHomeSurfaceControlCompat()Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;
@@ -2229,7 +2594,7 @@
 
     move/from16 v4, p8
 
-    .line 539
+    .line 553
     invoke-static {v3, v4, v5}, Lcom/miui/home/launcher/util/CoordinateTransforms;->transformCoordinate(IILandroid/graphics/RectF;)Landroid/graphics/RectF;
 
     move-result-object v3
@@ -2250,44 +2615,50 @@
 
     move/from16 p8, v5
 
-    .line 538
+    .line 552
     invoke-virtual/range {p3 .. p8}, Lcom/miui/home/recents/FloatingIconLayer;->showFloatingIcon(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;Landroid/graphics/RectF;FFF)V
 
-    goto :goto_2
+    goto :goto_3
 
-    .line 542
+    .line 556
     :cond_6
     invoke-virtual {v1}, Lcom/miui/home/recents/FloatingIconLayer;->release()V
 
-    .line 543
+    .line 557
     iput-boolean v2, v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIsReleaseOpenFloatingIconLayer:Z
 
     :cond_7
-    :goto_2
+    :goto_3
     if-nez p10, :cond_8
 
     if-eqz v8, :cond_8
 
+    .line 561
+    invoke-interface {v8}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->needChangeIconAlpha()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
     if-nez p2, :cond_8
 
-    .line 548
-    invoke-interface {v8, v11}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->onLaunchAppWindowAlphaChange(F)V
+    .line 562
+    sget-object v1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
-    .line 551
+    new-instance v2, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$TJdwyJAuGkjoFVVlVgy56DMOH40;
+
+    invoke-direct {v2, v8, v11}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$TJdwyJAuGkjoFVVlVgy56DMOH40;-><init>(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;F)V
+
+    invoke-virtual {v1, v2}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
+
     :cond_8
-    invoke-static {}, Lcom/miui/home/recents/util/TraceUtils;->endSection()V
-
-    return-void
-
-    :cond_9
-    :goto_3
     return-void
 .end method
 
 .method private launcherIsATargetWithMode([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)Z
     .locals 7
 
-    .line 683
+    .line 709
     invoke-virtual {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -2298,21 +2669,21 @@
 
     if-eqz p1, :cond_3
 
-    .line 684
+    .line 710
     array-length v2, p1
 
     const/4 v3, 0x1
 
     if-lt v2, v3, :cond_3
 
-    .line 685
+    .line 711
     aget-object v2, p1, v1
 
     iget-object v2, v2, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->packageName:Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
-    .line 686
+    .line 712
     array-length v2, p1
 
     move v4, v1
@@ -2322,7 +2693,7 @@
 
     aget-object v5, p1, v4
 
-    .line 687
+    .line 713
     iget v6, v5, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->mode:I
 
     if-ne v6, p2, :cond_0
@@ -2346,13 +2717,13 @@
 
     goto :goto_0
 
-    .line 692
+    .line 718
     :cond_1
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getTaskId()I
+    invoke-direct {p0, v0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncherTaskId(Lcom/miui/home/launcher/Launcher;)I
 
     move-result v0
 
-    .line 693
+    .line 719
     array-length v2, p1
 
     move v4, v1
@@ -2362,7 +2733,7 @@
 
     aget-object v5, p1, v4
 
-    .line 694
+    .line 720
     iget v6, v5, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->mode:I
 
     if-ne v6, p2, :cond_2
@@ -2385,7 +2756,7 @@
 .method private registerRemoteAnimations()V
     .locals 9
 
-    .line 641
+    .line 664
     invoke-virtual {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -2394,7 +2765,7 @@
 
     return-void
 
-    .line 645
+    .line 668
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->hasControlRemoteAppTransitionPermission()Z
 
@@ -2402,12 +2773,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 646
+    .line 669
     new-instance v1, Lcom/android/systemui/shared/recents/system/RemoteAnimationDefinitionCompat;
 
     invoke-direct {v1}, Lcom/android/systemui/shared/recents/system/RemoteAnimationDefinitionCompat;-><init>()V
 
-    .line 647
+    .line 670
     new-instance v8, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;
 
     const/4 v2, 0x0
@@ -2430,12 +2801,12 @@
 
     const/4 v3, 0x1
 
-    .line 649
+    .line 672
     iget-object v4, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRemoteAnimationAdapterCompat:Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/android/systemui/shared/recents/system/RemoteAnimationDefinitionCompat;->addRemoteAnimation(IILcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;)V
 
-    .line 652
+    .line 675
     new-instance v2, Lcom/android/systemui/shared/recents/system/ActivityCompat;
 
     invoke-direct {v2, v0}, Lcom/android/systemui/shared/recents/system/ActivityCompat;-><init>(Landroid/app/Activity;)V
@@ -2449,12 +2820,12 @@
 .method private resetContentView()V
     .locals 2
 
-    .line 1471
+    .line 1599
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$-ulb_JsJ_hiLRWHKe8WkiWLGorA;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$qEsW74ptYD5j34NsLusWPPJO038;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$-ulb_JsJ_hiLRWHKe8WkiWLGorA;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$qEsW74ptYD5j34NsLusWPPJO038;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 
@@ -2464,12 +2835,12 @@
 .method private resetRecentsContentView()V
     .locals 2
 
-    .line 855
+    .line 936
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$prdPFSKa8yUBGSxyg1F8-mw5ZLw;
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$mpZpu8uSXUcdboBQ1Eoj5i-8IAo;
 
-    invoke-direct {v1, p0}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$prdPFSKa8yUBGSxyg1F8-mw5ZLw;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)V
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$mpZpu8uSXUcdboBQ1Eoj5i-8IAo;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/MainThreadExecutor;->execute(Ljava/lang/Runnable;)V
 
@@ -2477,7 +2848,7 @@
 .end method
 
 .method private startClosingWindowAnimators([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/recents/util/RectFSpringAnim;
-    .locals 28
+    .locals 32
 
     move-object/from16 v15, p0
 
@@ -2487,8 +2858,10 @@
 
     const-string v2, "startClosingWindowAnimators"
 
-    .line 1108
-    .line 1109
+    .line 1226
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1227
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v14
@@ -2499,23 +2872,23 @@
 
     return-object v13
 
-    .line 1114
+    .line 1232
     :cond_0
-    new-instance v10, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
+    new-instance v11, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
 
     const/4 v1, 0x1
 
-    invoke-direct {v10, v0, v1}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;-><init>([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)V
+    invoke-direct {v11, v0, v1}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;-><init>([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)V
 
-    .line 1115
-    invoke-virtual {v10}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getFirstTarget()Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
+    .line 1233
+    invoke-virtual {v11}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getFirstTarget()Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
 
     move-result-object v2
 
     if-nez v2, :cond_1
 
-    .line 1116
-    invoke-virtual {v10}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getHomeTarget()Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
+    .line 1234
+    invoke-virtual {v11}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getHomeTarget()Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
 
     move-result-object v3
 
@@ -2523,15 +2896,24 @@
 
     return-object v13
 
-    .line 1120
+    .line 1237
     :cond_1
+    iget-object v3, v15, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mContext:Landroid/content/Context;
+
+    const-string v4, "closeWindow"
+
+    const-string v5, "navigation_bar"
+
+    invoke-static {v3, v4, v5}, Lcom/miui/home/recents/util/StateBroadcastUtils;->sendStateBroadcast(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1240
     invoke-virtual {v14}, Lcom/miui/home/launcher/Launcher;->getCurrentDisplayRotation()I
 
     move-result v3
 
-    const-string/jumbo v4, "window"
+    const-string v4, "window"
 
-    .line 1121
+    .line 1241
     invoke-virtual {v14, v4}, Lcom/miui/home/launcher/Launcher;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
@@ -2546,302 +2928,362 @@
 
     move-result v4
 
-    .line 1122
+    .line 1242
     invoke-direct {v15, v0, v1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getWindowTargetBounds([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 1123
+    .line 1243
     invoke-static {v3, v4, v0}, Lcom/miui/home/launcher/util/CoordinateTransforms;->transformCoordinate(IILandroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object v12
 
-    .line 1125
-    invoke-direct {v15, v14, v2}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->findClosingAnimTarget(Lcom/miui/home/launcher/Launcher;Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;
+    const/4 v10, 0x0
 
-    move-result-object v5
+    if-eqz v2, :cond_2
 
-    .line 1126
-    instance-of v0, v5, Landroid/view/View;
+    .line 1245
+    iget-object v0, v2, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->packageName:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
-    move-object v0, v5
+    const-string v0, "com.celltick.lockscreen"
 
-    check-cast v0, Landroid/view/View;
+    iget-object v5, v2, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->packageName:Ljava/lang/String;
 
-    move-object v11, v0
+    .line 1246
+    invoke-static {v0, v5}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    move v5, v1
 
     goto :goto_0
 
     :cond_2
-    move-object v11, v13
+    move v5, v10
 
-    .line 1128
     :goto_0
-    invoke-direct {v15, v5}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getIconRect(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)Landroid/graphics/Rect;
+    if-eqz v5, :cond_3
 
-    move-result-object v9
-
-    .line 1130
-    new-instance v8, Lcom/miui/home/recents/util/ClipAnimationHelper;
-
-    invoke-direct {v8}, Lcom/miui/home/recents/util/ClipAnimationHelper;-><init>()V
-
-    if-eqz v2, :cond_3
+    move-object v9, v13
 
     goto :goto_1
 
-    .line 1131
+    .line 1247
     :cond_3
-    invoke-virtual {v10}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getHomeTarget()Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
+    invoke-direct {v15, v14, v2}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->findClosingAnimTarget(Lcom/miui/home/launcher/Launcher;Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;
+
+    move-result-object v0
+
+    move-object v9, v0
+
+    .line 1248
+    :goto_1
+    nop
+
+    instance-of v0, v9, Landroid/view/View;
+
+    if-eqz v0, :cond_4
+
+    move-object v0, v9
+
+    check-cast v0, Landroid/view/View;
+
+    move-object v8, v0
+
+    goto :goto_2
+
+    :cond_4
+    move-object v8, v13
+
+    .line 1250
+    :goto_2
+    invoke-direct {v15, v9}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getIconRect(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)Landroid/graphics/Rect;
+
+    move-result-object v7
+
+    .line 1252
+    new-instance v6, Lcom/miui/home/recents/util/ClipAnimationHelper;
+
+    invoke-direct {v6}, Lcom/miui/home/recents/util/ClipAnimationHelper;-><init>()V
+
+    if-eqz v2, :cond_5
+
+    goto :goto_3
+
+    .line 1253
+    :cond_5
+    invoke-virtual {v11}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getHomeTarget()Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
 
     move-result-object v2
 
-    :goto_1
-    invoke-virtual {v8, v2}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateSourceStack(Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)V
+    :goto_3
+    invoke-virtual {v6, v2}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateSourceStack(Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)V
 
-    .line 1132
+    .line 1254
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getHomeStackBound()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    invoke-virtual {v8, v0}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateHomeStack(Landroid/graphics/Rect;)V
+    invoke-virtual {v6, v0}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateHomeStack(Landroid/graphics/Rect;)V
 
-    const/4 v0, 0x0
+    .line 1255
+    invoke-virtual {v6, v10}, Lcom/miui/home/recents/util/ClipAnimationHelper;->prepareAnimation(Z)V
 
-    .line 1133
-    invoke-virtual {v8, v0}, Lcom/miui/home/recents/util/ClipAnimationHelper;->prepareAnimation(Z)V
+    .line 1256
+    invoke-virtual {v6, v12}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateTargetRect(Landroid/graphics/Rect;)V
 
-    .line 1134
-    invoke-virtual {v8, v12}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateTargetRect(Landroid/graphics/Rect;)V
+    .line 1258
+    new-instance v2, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
-    .line 1136
-    new-instance v7, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
+    invoke-direct {v2}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;-><init>()V
 
-    invoke-direct {v7}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;-><init>()V
+    .line 1259
+    sget-object v0, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
 
-    .line 1137
-    sget-object v1, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
+    invoke-virtual {v14, v0}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
 
-    invoke-virtual {v14, v1}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
+    move-result v0
 
-    move-result v1
+    iput-boolean v0, v2, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->launcherStateNormal:Z
 
-    iput-boolean v1, v7, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->launcherStateNormal:Z
-
-    .line 1138
+    .line 1260
     new-instance v16, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     invoke-direct/range {v16 .. v16}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;-><init>()V
 
-    .line 1140
+    .line 1262
     invoke-static {v14}, Lcom/miui/home/recents/util/Utilities;->getWindowCornerRadius(Landroid/content/Context;)F
+
+    move-result v0
+
+    if-eqz v9, :cond_6
+
+    .line 1264
+    new-instance v1, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v1, v9}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v1, v15, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingAnimTargetRef:Ljava/lang/ref/WeakReference;
+
+    .line 1265
+    invoke-interface {v9}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->getIconTransparentEdge()I
 
     move-result v1
 
-    if-eqz v5, :cond_4
+    .line 1266
+    invoke-virtual {v7, v1, v1}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 1142
-    new-instance v2, Ljava/lang/ref/WeakReference;
+    :cond_6
+    const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-direct {v2, v5}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v2, v15, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingAnimTargetRef:Ljava/lang/ref/WeakReference;
-
-    .line 1143
-    invoke-interface {v5}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->getIconTransparentEdge()I
-
-    move-result v2
-
-    .line 1144
-    invoke-virtual {v9, v2, v2}, Landroid/graphics/Rect;->inset(II)V
-
-    :cond_4
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    .line 1146
+    .line 1268
     invoke-virtual {v12}, Landroid/graphics/Rect;->width()I
 
-    move-result v6
+    move-result v10
 
-    int-to-float v6, v6
+    int-to-float v10, v10
 
-    mul-float/2addr v6, v2
+    mul-float/2addr v10, v1
 
-    invoke-virtual {v9}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
 
-    move-result v2
+    move-result v1
 
-    int-to-float v2, v2
+    int-to-float v1, v1
 
-    div-float/2addr v6, v2
+    div-float/2addr v10, v1
 
-    if-eqz v5, :cond_5
+    if-eqz v9, :cond_7
 
-    .line 1148
-    invoke-static {v5}, Lcom/miui/home/launcher/PathDataIconUtil;->getCornerRadiusEstimate(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)F
+    .line 1270
+    invoke-static {v9}, Lcom/miui/home/launcher/PathDataIconUtil;->getCornerRadiusEstimate(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)F
 
-    move-result v2
+    move-result v1
 
-    goto :goto_2
+    goto :goto_4
 
-    :cond_5
-    iget v2, v15, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mNoIconRadius:F
+    :cond_7
+    iget v1, v15, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mNoIconRadius:F
 
-    :goto_2
-    mul-float/2addr v2, v6
+    :goto_4
+    mul-float/2addr v1, v10
 
-    const-string v13, "QuickstepAppTransitionManagerImpl"
+    .line 1271
+    new-instance v13, Landroid/graphics/RectF;
 
-    .line 1149
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {v13, v12}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    move/from16 v17, v0
 
-    move/from16 v17, v1
-
-    const-string v1, "radiusScale = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, " , endRadius = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 1150
+    .line 1272
     new-instance v0, Landroid/graphics/RectF;
 
-    invoke-direct {v0, v12}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
+    invoke-direct {v0, v7}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
-    .line 1151
-    new-instance v1, Landroid/graphics/RectF;
-
-    invoke-direct {v1, v9}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
-
-    .line 1152
+    .line 1273
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
-    move-result v13
+    move-result v18
 
-    move/from16 v18, v2
+    move/from16 v19, v1
+
+    const/4 v1, 0x0
+
+    if-eqz v18, :cond_8
+
+    .line 1274
+    invoke-virtual {v13, v1, v1}, Landroid/graphics/RectF;->offsetTo(FF)V
+
+    .line 1276
+    invoke-virtual {v0, v13}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
+
+    const v1, 0x3e4ccccd    # 0.2f
+
+    .line 1277
+    invoke-static {v0, v1}, Lcom/miui/home/recents/util/Utilities;->scaleRectAboutCenter(Landroid/graphics/RectF;F)V
+
+    move-object/from16 v24, v2
+
+    move-object/from16 v25, v6
+
+    const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    if-eqz v13, :cond_6
+    goto :goto_5
 
-    .line 1153
-    invoke-virtual {v0, v2, v2}, Landroid/graphics/RectF;->offsetTo(FF)V
+    :cond_8
+    move-object/from16 v24, v2
 
-    .line 1155
-    invoke-virtual {v1, v0}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
+    move-object/from16 v25, v6
 
-    const v13, 0x3e4ccccd    # 0.2f
+    move/from16 v1, v17
 
-    .line 1156
-    invoke-static {v1, v13}, Lcom/miui/home/recents/util/Utilities;->scaleRectAboutCenter(Landroid/graphics/RectF;F)V
+    move/from16 v2, v19
 
-    move/from16 v21, v2
+    :goto_5
+    const-string v6, "QuickstepAppTransitionManagerImpl"
 
-    move/from16 v22, v21
+    move-object/from16 v26, v12
 
-    goto :goto_3
+    .line 1279
+    new-instance v12, Ljava/lang/StringBuilder;
 
-    :cond_6
-    move/from16 v21, v17
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    move/from16 v22, v18
+    const-string v15, "radiusScale = "
 
-    :goto_3
-    const-string v13, "QuickstepAppTransitionManagerImpl"
+    invoke-virtual {v12, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1159
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v10}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v15, " , startRadius = "
 
-    move/from16 v25, v6
+    invoke-virtual {v12, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v6, "startClosingWindowAnimators:startRect="
+    invoke-virtual {v12, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v15, " , endRadius = "
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v6, ", targetRect="
+    invoke-virtual {v12, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v12
 
-    const-string v6, ", currentRotation="
+    invoke-static {v6, v12}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v6, "QuickstepAppTransitionManagerImpl"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 1281
+    new-instance v12, Ljava/lang/StringBuilder;
 
-    const-string v6, ", homeRotation="
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v15, "startClosingWindowAnimators:startRect="
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v6, ", isUseSimpleAnim="
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v15, ", targetRect="
 
-    .line 1163
+    invoke-virtual {v12, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v15, ", currentRotation="
+
+    invoke-virtual {v12, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v15, ", homeRotation="
+
+    invoke-virtual {v12, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v12, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v15, ", isUseSimpleAnim="
+
+    invoke-virtual {v12, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1285
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isUseSimpleAnim()Z
 
-    move-result v6
+    move-result v15
 
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v15}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v12
 
-    .line 1159
-    .line 1165
-    new-instance v13, Lcom/miui/home/recents/util/RectFSpringAnim;
+    .line 1281
+    invoke-static {v6, v12}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/high16 v23, 0x3f800000    # 1.0f
+    .line 1287
+    new-instance v15, Lcom/miui/home/recents/util/RectFSpringAnim;
 
-    const/16 v24, 0x0
+    const/high16 v22, 0x3f800000    # 1.0f
+
+    const/16 v23, 0x0
+
+    move-object/from16 v17, v15
 
     move-object/from16 v18, v13
 
     move-object/from16 v19, v0
 
-    move-object/from16 v20, v1
+    move/from16 v20, v1
 
-    invoke-direct/range {v18 .. v24}, Lcom/miui/home/recents/util/RectFSpringAnim;-><init>(Landroid/graphics/RectF;Landroid/graphics/RectF;FFFF)V
+    move/from16 v21, v2
 
-    .line 1166
-    instance-of v0, v5, Lcom/miui/home/launcher/anim/WidgetTypeAnimTarget;
+    invoke-direct/range {v17 .. v23}, Lcom/miui/home/recents/util/RectFSpringAnim;-><init>(Landroid/graphics/RectF;Landroid/graphics/RectF;FFFF)V
 
-    if-eqz v0, :cond_7
+    .line 1288
+    instance-of v0, v9, Lcom/miui/home/launcher/anim/WidgetTypeAnimTarget;
+
+    if-eqz v0, :cond_9
 
     const/16 v0, 0x3ea
 
-    goto :goto_4
+    goto :goto_6
 
-    :cond_7
+    :cond_9
     const/16 v0, 0x3e9
 
-    :goto_4
-    invoke-virtual {v13, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->setProgressCalculateType(I)V
+    :goto_6
+    invoke-virtual {v15, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->setProgressCalculateType(I)V
 
-    .line 1168
-    invoke-virtual {v13}, Lcom/miui/home/recents/util/RectFSpringAnim;->initCloseToHomeAnimParam()V
+    .line 1290
+    invoke-virtual {v15}, Lcom/miui/home/recents/util/RectFSpringAnim;->initCloseToHomeAnimParam()V
 
     const/high16 v0, -0x3b060000    # -2000.0f
 
@@ -2849,45 +3291,12 @@
 
     const/4 v2, 0x0
 
-    .line 1170
-    invoke-virtual {v13, v2, v0, v1, v2}, Lcom/miui/home/recents/util/RectFSpringAnim;->setVelocity(FFFF)V
+    .line 1292
+    invoke-virtual {v15, v2, v0, v1, v2}, Lcom/miui/home/recents/util/RectFSpringAnim;->setVelocity(FFFF)V
 
-    .line 1172
-    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isUseSimpleAnim()Z
+    if-eqz v8, :cond_a
 
-    move-result v0
-
-    if-nez v0, :cond_9
-
-    if-eqz v5, :cond_8
-
-    const/4 v0, 0x0
-
-    .line 1174
-    invoke-static {v14, v5, v0}, Lcom/miui/home/recents/views/FloatingIconView;->getFloatingIconView(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;Z)Lcom/miui/home/recents/views/FloatingIconView;
-
-    move-result-object v0
-
-    goto :goto_5
-
-    :cond_8
-    const/4 v0, 0x0
-
-    :goto_5
-    iput-object v0, v15, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
-
-    .line 1175
-    iget-object v0, v15, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
-
-    if-eqz v0, :cond_9
-
-    .line 1176
-    invoke-virtual {v13, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->addAnimatorListener(Lcom/miui/home/recents/util/RectFSpringAnim$RectFSpringAnimListener;)V
-
-    :cond_9
-    if-eqz v11, :cond_a
-
-    .line 1180
+    .line 1295
     invoke-static {}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->getInstance()Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;
 
     move-result-object v0
@@ -2896,25 +3305,25 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v11, v1}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->savePositionRelativeToAncestor(Landroid/view/View;Landroid/view/View;)V
+    invoke-virtual {v0, v8, v1}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->savePositionRelativeToAncestor(Landroid/view/View;Landroid/view/View;)V
 
-    .line 1182
+    .line 1297
     :cond_a
-    instance-of v0, v5, Lcom/miui/home/launcher/ShortcutIcon;
+    instance-of v0, v9, Lcom/miui/home/launcher/ShortcutIcon;
 
     if-eqz v0, :cond_b
 
-    .line 1183
-    move-object v0, v5
+    .line 1298
+    move-object v0, v9
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutIcon;
 
-    invoke-virtual {v13, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->setIconTitle(Lcom/miui/home/launcher/ShortcutIcon;)V
+    invoke-virtual {v15, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->setIconTitle(Lcom/miui/home/launcher/ShortcutIcon;)V
 
     :cond_b
-    if-eqz v11, :cond_c
+    if-eqz v8, :cond_c
 
-    .line 1186
+    .line 1301
     invoke-static {}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->getInstance()Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;
 
     move-result-object v0
@@ -2923,94 +3332,140 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v11, v1}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->savePositionRelativeToAncestor(Landroid/view/View;Landroid/view/View;)V
+    invoke-virtual {v0, v8, v1}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->savePositionRelativeToAncestor(Landroid/view/View;Landroid/view/View;)V
 
-    .line 1188
+    .line 1303
     :cond_c
-    new-instance v6, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$Fa4wNAw8QaGgUKwPp0LFec4Ne5s;
+    new-instance v13, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$g5rlowPJW7n8LE8vBjQGvSCZNxc;
 
-    move-object v0, v6
+    move-object v0, v13
 
     move-object/from16 v1, p0
 
+    move-object/from16 v12, v24
+
     move v2, v4
 
-    move-object v4, v5
+    move-object v4, v9
 
-    move-object v5, v14
+    move-object/from16 v17, v25
 
-    move-object v15, v6
+    move-object v6, v14
 
-    move/from16 v17, v25
+    move-object/from16 v18, v7
 
-    move-object v6, v11
+    move-object v7, v8
 
-    move-object/from16 v18, v8
+    move-object/from16 v27, v8
 
-    move-object v8, v13
+    move-object v8, v12
 
-    move-object/from16 v19, v9
+    move-object v12, v9
 
-    move-object/from16 v9, v18
+    move-object v9, v15
 
-    move-object/from16 v26, v11
+    move/from16 v19, v10
 
-    move-object/from16 v11, v19
+    move-object/from16 v10, v17
 
-    move-object/from16 v18, v15
+    move-object/from16 v28, v12
 
-    move-object v15, v13
+    move-object/from16 v17, v26
 
-    move/from16 v13, v17
+    move-object/from16 v12, v18
 
-    move-object/from16 v27, v14
+    move-object/from16 v29, v13
 
-    move-object/from16 v14, v16
+    move-object/from16 v13, v17
 
-    invoke-direct/range {v0 .. v14}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$Fa4wNAw8QaGgUKwPp0LFec4Ne5s;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;IILcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;Lcom/miui/home/launcher/Launcher;Landroid/view/View;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/RectFSpringAnim;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Landroid/graphics/Rect;Landroid/graphics/Rect;FLcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;)V
+    move-object/from16 v30, v14
 
-    move-object/from16 v0, v18
+    move/from16 v14, v19
 
-    invoke-virtual {v15, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->addOnUpdateListener(Lcom/miui/home/recents/util/RectFSpringAnim$OnUpdateListener;)V
+    move-object/from16 v31, v15
 
-    .line 1259
-    new-instance v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;
+    move-object/from16 v15, v16
 
-    move-object/from16 v13, v26
+    invoke-direct/range {v0 .. v15}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$g5rlowPJW7n8LE8vBjQGvSCZNxc;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;IILcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;ZLcom/miui/home/launcher/Launcher;Landroid/view/View;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/RectFSpringAnim;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Landroid/graphics/Rect;Landroid/graphics/Rect;FLcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;)V
 
-    move-object/from16 v2, v27
+    move-object/from16 v1, v29
 
-    invoke-direct {v0, v1, v2, v13}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/launcher/Launcher;Landroid/view/View;)V
+    move-object/from16 v0, v31
 
-    invoke-virtual {v15, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->addAnimatorListener(Landroid/animation/Animator$AnimatorListener;)V
+    invoke-virtual {v0, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->addOnUpdateListener(Lcom/miui/home/recents/util/RectFSpringAnim$OnUpdateListener;)V
 
-    .line 1329
+    .line 1377
+    new-instance v1, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;
+
+    move-object/from16 v13, v27
+
+    move-object/from16 v3, v30
+
+    move-object/from16 v2, p0
+
+    invoke-direct {v1, v2, v3, v13}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/launcher/Launcher;Landroid/view/View;)V
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->addAnimatorListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 1451
     invoke-static {}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->getInstance()Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
-    invoke-virtual {v0, v15, v2}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->setupAnimAndBreakLast(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v1, v0, v4}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->setupAnimAndBreakLast(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 1330
+    .line 1452
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isUseSimpleAnim()Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_d
+    if-nez v1, :cond_e
 
-    .line 1331
-    invoke-virtual {v15}, Lcom/miui/home/recents/util/RectFSpringAnim;->startInGestureThread()V
+    move-object/from16 v13, v28
 
-    goto :goto_6
+    if-eqz v13, :cond_d
 
-    .line 1333
+    const/4 v1, 0x0
+
+    .line 1454
+    invoke-static {v3, v13, v1}, Lcom/miui/home/recents/views/FloatingIconView;->getFloatingIconView(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;Z)Lcom/miui/home/recents/views/FloatingIconView;
+
+    move-result-object v13
+
+    move-object v4, v13
+
     :cond_d
-    invoke-virtual {v15}, Lcom/miui/home/recents/util/RectFSpringAnim;->startInMainThread()V
+    iput-object v4, v2, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
 
-    :goto_6
-    return-object v15
+    .line 1455
+    iget-object v1, v2, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
+
+    if-eqz v1, :cond_e
+
+    .line 1456
+    invoke-virtual {v0, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->addAnimatorListener(Lcom/miui/home/recents/util/RectFSpringAnim$RectFSpringAnimListener;)V
+
+    .line 1459
+    :cond_e
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isUseSimpleAnim()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_f
+
+    .line 1460
+    invoke-virtual {v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->startInGestureThread()V
+
+    goto :goto_7
+
+    .line 1462
+    :cond_f
+    invoke-virtual {v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->startInMainThread()V
+
+    :goto_7
+    return-object v0
 .end method
 
 .method private startClosingWindowFromFeedAnimators([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/recents/util/RectFSpringAnim;
@@ -3020,8 +3475,10 @@
 
     const-string v1, "startClosingWindowFromFeedAnimators"
 
-    .line 1367
-    .line 1368
+    .line 1496
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1497
     invoke-virtual {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -3032,7 +3489,7 @@
 
     return-object v1
 
-    .line 1372
+    .line 1501
     :cond_0
     new-instance v2, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
 
@@ -3040,7 +3497,7 @@
 
     invoke-direct {v2, p1, v3}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;-><init>([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)V
 
-    .line 1373
+    .line 1502
     invoke-virtual {v2}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getFirstTarget()Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
 
     move-result-object v4
@@ -3049,18 +3506,18 @@
 
     return-object v1
 
-    .line 1378
+    .line 1507
     :cond_1
     invoke-direct {p0, p1, v3}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getWindowTargetBounds([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)Landroid/graphics/Rect;
 
     move-result-object p1
 
-    .line 1380
+    .line 1509
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 1381
+    .line 1510
     iget v3, v1, Landroid/graphics/Rect;->left:I
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
@@ -3071,7 +3528,7 @@
 
     iput v3, v1, Landroid/graphics/Rect;->left:I
 
-    .line 1382
+    .line 1511
     iget v3, v1, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
@@ -3082,15 +3539,15 @@
 
     iput v3, v1, Landroid/graphics/Rect;->right:I
 
-    .line 1384
+    .line 1513
     new-instance v3, Lcom/miui/home/recents/util/ClipAnimationHelper;
 
     invoke-direct {v3}, Lcom/miui/home/recents/util/ClipAnimationHelper;-><init>()V
 
-    .line 1385
+    .line 1514
     invoke-virtual {v3, v4}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateSourceStack(Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)V
 
-    .line 1386
+    .line 1515
     invoke-direct {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getHomeStackBound()Landroid/graphics/Rect;
 
     move-result-object v4
@@ -3099,18 +3556,18 @@
 
     const/4 v4, 0x0
 
-    .line 1387
+    .line 1516
     invoke-virtual {v3, v4}, Lcom/miui/home/recents/util/ClipAnimationHelper;->prepareAnimation(Z)V
 
-    .line 1388
+    .line 1517
     invoke-virtual {v3, p1}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateTargetRect(Landroid/graphics/Rect;)V
 
-    .line 1390
+    .line 1519
     new-instance v4, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     invoke-direct {v4}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;-><init>()V
 
-    .line 1391
+    .line 1520
     iget-object v5, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mDragLayer:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v5}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -3121,14 +3578,14 @@
 
     if-eqz v5, :cond_2
 
-    .line 1393
+    .line 1522
     new-instance v6, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;
 
     invoke-direct {v6, v5}, Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;-><init>(Landroid/view/View;)V
 
     invoke-virtual {v4, v6}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->setSyncTransactionApplier(Lcom/android/systemui/shared/recents/system/SyncRtSurfaceTransactionApplierCompat;)Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
-    .line 1395
+    .line 1524
     :cond_2
     sget-object v5, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
 
@@ -3138,14 +3595,14 @@
 
     iput-boolean v5, v4, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->launcherStateNormal:Z
 
-    .line 1397
+    .line 1526
     invoke-static {v0}, Lcom/miui/home/recents/util/Utilities;->getWindowCornerRadius(Landroid/content/Context;)F
 
     move-result v9
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 1399
+    .line 1528
     iget v5, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mNoIconRadius:F
 
     mul-float/2addr v5, v0
@@ -3166,25 +3623,25 @@
 
     div-float v10, v5, v0
 
-    .line 1401
+    .line 1530
     new-instance v7, Landroid/graphics/RectF;
 
     invoke-direct {v7, p1}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
-    .line 1402
+    .line 1531
     new-instance v8, Landroid/graphics/RectF;
 
     invoke-direct {v8, v1}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
-    .line 1403
+    .line 1532
     invoke-virtual {v3, v7}, Lcom/miui/home/recents/util/ClipAnimationHelper;->modifyRectFToSource(Landroid/graphics/RectF;)V
 
-    .line 1404
+    .line 1533
     invoke-virtual {v3, v8}, Lcom/miui/home/recents/util/ClipAnimationHelper;->modifyRectFToSource(Landroid/graphics/RectF;)V
 
     const-string v0, "QuickstepAppTransitionManagerImpl"
 
-    .line 1406
+    .line 1535
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -3205,7 +3662,9 @@
 
     move-result-object p1
 
-    .line 1409
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1538
     new-instance p1, Lcom/miui/home/recents/util/RectFSpringAnim;
 
     const/high16 v11, 0x3f800000    # 1.0f
@@ -3216,12 +3675,7 @@
 
     invoke-direct/range {v6 .. v12}, Lcom/miui/home/recents/util/RectFSpringAnim;-><init>(Landroid/graphics/RectF;Landroid/graphics/RectF;FFFF)V
 
-    const/16 v0, 0x3e9
-
-    .line 1410
-    invoke-virtual {p1, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->setProgressCalculateType(I)V
-
-    .line 1411
+    .line 1539
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERX:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     const v1, 0x3ed70a3d    # 0.42f
@@ -3230,12 +3684,12 @@
 
     invoke-virtual {p1, v0, v5, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
 
-    .line 1412
+    .line 1540
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERY:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     invoke-virtual {p1, v0, v5, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
 
-    .line 1413
+    .line 1541
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_WIDTH:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     const v6, 0x3f666666    # 0.9f
@@ -3244,7 +3698,7 @@
 
     invoke-virtual {p1, v0, v6, v7}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
 
-    .line 1414
+    .line 1542
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RADIUS:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     const v6, 0x3e4ccccd    # 0.2f
@@ -3253,14 +3707,14 @@
 
     invoke-virtual {p1, v0, v7, v6}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
 
-    .line 1415
+    .line 1543
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_RATIO:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     const v6, 0x3ebd70a4    # 0.37f
 
     invoke-virtual {p1, v0, v5, v6}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
 
-    .line 1416
+    .line 1544
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->ALPHA:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     invoke-virtual {p1, v0, v7, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
@@ -3271,24 +3725,24 @@
 
     const/4 v5, 0x0
 
-    .line 1418
+    .line 1546
     invoke-virtual {p1, v5, v0, v1, v5}, Lcom/miui/home/recents/util/RectFSpringAnim;->setVelocity(FFFF)V
 
-    .line 1420
-    new-instance v0, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$yrLkwcMuGGrXEOsBA-bX8shoxUs;
+    .line 1548
+    new-instance v0, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$Hskr3GK0fmgg9JXZIlJyc9enYEI;
 
-    invoke-direct {v0, v4, v3, v2}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$yrLkwcMuGGrXEOsBA-bX8shoxUs;-><init>(Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;)V
+    invoke-direct {v0, v4, v3, v2}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$Hskr3GK0fmgg9JXZIlJyc9enYEI;-><init>(Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;)V
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->addOnUpdateListener(Lcom/miui/home/recents/util/RectFSpringAnim$OnUpdateListener;)V
 
-    .line 1433
+    .line 1561
     new-instance v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$6;
 
     invoke-direct {v0, p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$6;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)V
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->addAnimatorListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1449
+    .line 1577
     invoke-virtual {p1}, Lcom/miui/home/recents/util/RectFSpringAnim;->startInMainThread()V
 
     return-object p1
@@ -3305,8 +3759,10 @@
 
     const-string v3, "startClosingWindowToRecentsAnimators"
 
-    .line 875
-    .line 876
+    .line 956
+    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 957
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v5
@@ -3317,30 +3773,30 @@
 
     return-object v2
 
-    .line 881
+    .line 962
     :cond_0
-    new-instance v9, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
+    new-instance v10, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
 
     const/4 v3, 0x1
 
-    invoke-direct {v9, v1, v3}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;-><init>([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)V
+    invoke-direct {v10, v1, v3}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;-><init>([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)V
 
-    .line 882
-    new-instance v7, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
+    .line 963
+    new-instance v8, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
-    invoke-direct {v7}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;-><init>()V
+    invoke-direct {v8}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;-><init>()V
 
-    .line 883
+    .line 964
     sget-object v4, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
 
     invoke-virtual {v5, v4}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
 
     move-result v4
 
-    iput-boolean v4, v7, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->launcherStateNormal:Z
+    iput-boolean v4, v8, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->launcherStateNormal:Z
 
-    .line 884
-    invoke-virtual {v9}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getFirstTarget()Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
+    .line 965
+    invoke-virtual {v10}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getFirstTarget()Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
 
     move-result-object v4
 
@@ -3348,148 +3804,169 @@
 
     return-object v2
 
-    .line 889
+    .line 970
     :cond_1
-    new-instance v6, Landroid/graphics/Rect;
+    new-instance v7, Landroid/graphics/Rect;
 
-    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
 
-    .line 890
+    .line 971
     invoke-virtual {v5}, Lcom/miui/home/launcher/Launcher;->getOverviewPanel()Landroid/view/View;
 
     move-result-object v2
 
     check-cast v2, Lcom/miui/home/recents/views/RecentsView;
 
-    .line 891
+    .line 972
     invoke-virtual {v0, v2, v1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->findTargetTaskView(Lcom/miui/home/recents/views/RecentsView;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/recents/views/TaskView;
 
-    move-result-object v14
+    move-result-object v15
 
-    .line 893
+    .line 974
     invoke-direct {v0, v1, v3}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getWindowTargetBounds([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)Landroid/graphics/Rect;
 
     move-result-object v1
 
-    .line 895
+    .line 976
     invoke-virtual {v2}, Lcom/miui/home/recents/views/RecentsView;->getTaskStackView()Lcom/miui/home/recents/views/TaskStackView;
 
-    move-result-object v8
+    move-result-object v6
 
-    .line 896
-    invoke-virtual {v8}, Lcom/miui/home/recents/views/TaskStackView;->scrollToDefaultCenterTaskViewIndex()V
+    .line 977
+    invoke-virtual {v6}, Lcom/miui/home/recents/views/TaskStackView;->scrollToDefaultCenterTaskViewIndex()V
 
-    .line 898
+    .line 979
+    invoke-virtual {v2}, Lcom/miui/home/recents/views/RecentsView;->getRunningTaskIndex()I
+
+    move-result v6
+
+    const/4 v14, 0x0
+
+    invoke-static {v14, v6}, Ljava/lang/Math;->max(II)I
+
+    move-result v6
+
+    .line 980
     invoke-virtual {v2}, Lcom/miui/home/recents/views/RecentsView;->getTaskStackView()Lcom/miui/home/recents/views/TaskStackView;
 
-    move-result-object v8
+    move-result-object v9
 
-    const/4 v15, 0x0
+    invoke-virtual {v9, v6}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViewWithoutHeaderRectF(I)Landroid/graphics/RectF;
 
-    invoke-virtual {v8, v15}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViewWithoutHeaderRectF(I)Landroid/graphics/RectF;
+    move-result-object v9
 
-    move-result-object v8
+    if-eqz v9, :cond_2
 
-    invoke-virtual {v8, v6}, Landroid/graphics/RectF;->roundOut(Landroid/graphics/Rect;)V
+    .line 981
+    invoke-virtual {v2}, Lcom/miui/home/recents/views/RecentsView;->getTaskStackView()Lcom/miui/home/recents/views/TaskStackView;
 
-    .line 899
-    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
+    move-result-object v9
 
-    move-result v8
+    invoke-virtual {v9, v6}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViewWithoutHeaderRectF(I)Landroid/graphics/RectF;
 
-    if-eqz v8, :cond_2
+    move-result-object v9
 
-    invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
+    invoke-virtual {v9, v7}, Landroid/graphics/RectF;->roundOut(Landroid/graphics/Rect;)V
 
-    move-result v8
-
-    if-nez v8, :cond_3
-
-    .line 900
+    .line 983
     :cond_2
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
 
-    move-result v8
+    move-result v9
 
-    int-to-float v8, v8
+    if-eqz v9, :cond_3
 
-    const/high16 v10, 0x3e800000    # 0.25f
+    invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
 
-    mul-float/2addr v8, v10
+    move-result v9
 
-    float-to-int v8, v8
+    if-nez v9, :cond_4
 
-    .line 901
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    mul-float/2addr v11, v10
-
-    float-to-int v10, v11
-
-    .line 902
-    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
-
-    move-result v11
-
-    int-to-float v11, v11
-
-    const/high16 v12, 0x3f400000    # 0.75f
-
-    mul-float/2addr v11, v12
-
-    float-to-int v11, v11
-
-    .line 903
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
-
-    move-result v13
-
-    int-to-float v13, v13
-
-    mul-float/2addr v13, v12
-
-    float-to-int v12, v13
-
-    .line 900
-    invoke-virtual {v6, v8, v10, v11, v12}, Landroid/graphics/Rect;->set(IIII)V
-
-    .line 905
+    .line 984
     :cond_3
-    new-instance v8, Lcom/miui/home/recents/util/ClipAnimationHelper;
+    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
-    invoke-direct {v8}, Lcom/miui/home/recents/util/ClipAnimationHelper;-><init>()V
+    move-result v9
 
-    .line 906
-    invoke-virtual {v8, v4}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateSourceStack(Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)V
+    int-to-float v9, v9
 
-    .line 907
+    const/high16 v11, 0x3e800000    # 0.25f
+
+    mul-float/2addr v9, v11
+
+    float-to-int v9, v9
+
+    .line 985
+    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
+
+    move-result v12
+
+    int-to-float v12, v12
+
+    mul-float/2addr v12, v11
+
+    float-to-int v11, v12
+
+    .line 986
+    invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
+
+    move-result v12
+
+    int-to-float v12, v12
+
+    const/high16 v13, 0x3f400000    # 0.75f
+
+    mul-float/2addr v12, v13
+
+    float-to-int v12, v12
+
+    .line 987
+    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    mul-float/2addr v3, v13
+
+    float-to-int v3, v3
+
+    .line 984
+    invoke-virtual {v7, v9, v11, v12, v3}, Landroid/graphics/Rect;->set(IIII)V
+
+    .line 989
+    :cond_4
+    new-instance v9, Lcom/miui/home/recents/util/ClipAnimationHelper;
+
+    invoke-direct {v9}, Lcom/miui/home/recents/util/ClipAnimationHelper;-><init>()V
+
+    .line 990
+    invoke-virtual {v9, v4}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateSourceStack(Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)V
+
+    .line 991
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getHomeStackBound()Landroid/graphics/Rect;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v8, v4}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateHomeStack(Landroid/graphics/Rect;)V
+    invoke-virtual {v9, v3}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateHomeStack(Landroid/graphics/Rect;)V
 
-    .line 908
-    invoke-virtual {v8, v15}, Lcom/miui/home/recents/util/ClipAnimationHelper;->prepareAnimation(Z)V
+    .line 992
+    invoke-virtual {v9, v14}, Lcom/miui/home/recents/util/ClipAnimationHelper;->prepareAnimation(Z)V
 
-    .line 909
-    invoke-virtual {v8, v1}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateTargetRect(Landroid/graphics/Rect;)V
+    .line 993
+    invoke-virtual {v9, v1}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateTargetRect(Landroid/graphics/Rect;)V
 
-    .line 911
+    .line 995
     invoke-static {v5}, Lcom/miui/home/recents/util/Utilities;->getWindowCornerRadius(Landroid/content/Context;)F
 
-    move-result v4
+    move-result v3
 
-    .line 912
-    iget v10, v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mTaskViewRadius:F
+    .line 996
+    iget v4, v0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mTaskViewRadius:F
 
     const/high16 v11, 0x3f800000    # 1.0f
 
-    mul-float/2addr v10, v11
+    mul-float/2addr v4, v11
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
@@ -3497,68 +3974,70 @@
 
     int-to-float v12, v12
 
-    mul-float/2addr v10, v12
+    mul-float/2addr v4, v12
 
-    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
+    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
 
     move-result v12
 
     int-to-float v12, v12
 
-    div-float/2addr v10, v12
+    div-float/2addr v4, v12
 
     const-string v12, "QuickstepAppTransitionManagerImpl"
 
-    .line 914
+    .line 998
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "startClosingWindowToRecentsAnimators:startRect="
+    const-string v11, "startClosingWindowToRecentsAnimators:startRect="
 
-    invoke-virtual {v13, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v13, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v13, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v3, "   targetRect="
+    const-string v11, "   targetRect="
 
-    invoke-virtual {v13, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v13, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v13, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v13, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v11
 
-    .line 917
-    new-instance v3, Landroid/graphics/RectF;
+    invoke-static {v12, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {v3, v1}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
+    .line 1001
+    new-instance v11, Landroid/graphics/RectF;
 
-    .line 918
+    invoke-direct {v11, v1}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
+
+    .line 1002
     new-instance v1, Landroid/graphics/RectF;
 
-    invoke-direct {v1, v6}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
+    invoke-direct {v1, v7}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
-    .line 920
+    .line 1004
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
     move-result v12
 
     const/4 v13, 0x0
 
-    if-eqz v12, :cond_4
+    if-eqz v12, :cond_5
 
-    .line 921
-    invoke-virtual {v3, v13, v13}, Landroid/graphics/RectF;->offsetTo(FF)V
+    .line 1005
+    invoke-virtual {v11, v13, v13}, Landroid/graphics/RectF;->offsetTo(FF)V
 
-    .line 922
-    invoke-virtual {v1, v3}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
+    .line 1006
+    invoke-virtual {v1, v11}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    const v4, 0x3e4ccccd    # 0.2f
+    const v3, 0x3e4ccccd    # 0.2f
 
-    .line 923
-    invoke-static {v1, v4}, Lcom/miui/home/recents/util/Utilities;->scaleRectAboutCenter(Landroid/graphics/RectF;F)V
+    .line 1007
+    invoke-static {v1, v3}, Lcom/miui/home/recents/util/Utilities;->scaleRectAboutCenter(Landroid/graphics/RectF;F)V
 
     move/from16 v20, v13
 
@@ -3568,159 +4047,172 @@
 
     goto :goto_0
 
-    :cond_4
-    move/from16 v20, v4
+    :cond_5
+    move/from16 v20, v3
 
-    move/from16 v21, v10
+    move/from16 v21, v4
 
-    move/from16 v23, v11
+    const/high16 v23, 0x3f800000    # 1.0f
 
-    .line 927
+    .line 1011
     :goto_0
-    new-instance v13, Lcom/miui/home/recents/util/RectFSpringAnim;
+    new-instance v3, Lcom/miui/home/recents/util/RectFSpringAnim;
 
     const/high16 v22, 0x3f800000    # 1.0f
 
-    move-object/from16 v17, v13
+    move-object/from16 v17, v3
 
-    move-object/from16 v18, v3
+    move-object/from16 v18, v11
 
     move-object/from16 v19, v1
 
     invoke-direct/range {v17 .. v23}, Lcom/miui/home/recents/util/RectFSpringAnim;-><init>(Landroid/graphics/RectF;Landroid/graphics/RectF;FFFF)V
 
-    const/16 v1, 0x3e9
-
-    .line 928
-    invoke-virtual {v13, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->setProgressCalculateType(I)V
-
-    .line 929
+    .line 1012
     sget-object v1, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERX:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
-    const v3, 0x3eb33333    # 0.35f
+    const v4, 0x3eb33333    # 0.35f
 
-    const v4, 0x3f733333    # 0.95f
+    const v11, 0x3f733333    # 0.95f
 
-    invoke-virtual {v13, v1, v4, v3}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
+    invoke-virtual {v3, v1, v11, v4}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
 
-    .line 930
+    .line 1013
     sget-object v1, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERY:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
-    invoke-virtual {v13, v1, v4, v3}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
+    invoke-virtual {v3, v1, v11, v4}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
 
-    .line 931
+    .line 1014
     sget-object v1, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_WIDTH:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
-    invoke-virtual {v13, v1, v4, v3}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
+    invoke-virtual {v3, v1, v11, v4}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
 
-    .line 932
+    .line 1015
     sget-object v1, Lcom/miui/home/recents/util/RectFSpringAnim;->RADIUS:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
-    const v3, 0x3f7d70a4    # 0.99f
+    const v4, 0x3f7d70a4    # 0.99f
 
-    const v10, 0x3e99999a    # 0.3f
+    const v12, 0x3e99999a    # 0.3f
 
-    invoke-virtual {v13, v1, v3, v10}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
+    invoke-virtual {v3, v1, v4, v12}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
 
-    .line 933
+    .line 1016
     sget-object v1, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_RATIO:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
-    invoke-virtual {v13, v1, v4, v10}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
+    invoke-virtual {v3, v1, v11, v12}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
 
-    .line 934
+    .line 1017
     sget-object v1, Lcom/miui/home/recents/util/RectFSpringAnim;->ALPHA:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
-    invoke-virtual {v13, v1, v3, v10}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
+    invoke-virtual {v3, v1, v4, v12}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
 
-    .line 937
+    .line 1020
     invoke-virtual {v2}, Lcom/miui/home/recents/views/RecentsView;->getHeight()I
 
     move-result v1
 
     invoke-virtual {v2}, Lcom/miui/home/recents/views/RecentsView;->getWidth()I
 
-    move-result v3
+    move-result v4
 
-    if-ge v1, v3, :cond_5
+    if-ge v1, v4, :cond_6
 
     const/16 v16, 0x1
 
     goto :goto_1
 
-    :cond_5
-    move/from16 v16, v15
+    :cond_6
+    move/from16 v16, v14
 
     :goto_1
     invoke-static/range {v16 .. v16}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->isUseTaskStackLayoutStyleHorizontalAnim(Z)Z
 
-    move-result v12
+    move-result v13
 
-    const-string v1, "selene"
+    const v12, 0x3f7ae148    # 0.98f
 
-    .line 939
-    sget-object v3, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    const-string v1, "eos"
-
-    sget-object v3, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    const v1, 0x3f7eb852    # 0.995f
-
-    goto :goto_3
-
-    :cond_7
-    :goto_2
-    const v1, 0x3f7ae148    # 0.98f
-
-    :goto_3
-    move v11, v1
-
-    .line 940
-    new-instance v1, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$FgZvBTG9R1-xmhJl0YOUCWHhCXw;
+    .line 1023
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$-vkUSoo6rNAIMoBv27i92Lak_Kg;
 
     move-object v4, v1
 
-    move-object v10, v14
+    move-object v11, v15
 
-    move-object v3, v13
+    move-object v14, v2
 
-    move-object v13, v2
-
-    invoke-direct/range {v4 .. v13}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$FgZvBTG9R1-xmhJl0YOUCWHhCXw;-><init>(Lcom/miui/home/launcher/Launcher;Landroid/graphics/Rect;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Lcom/miui/home/recents/views/TaskView;FZLcom/miui/home/recents/views/RecentsView;)V
+    invoke-direct/range {v4 .. v14}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$-vkUSoo6rNAIMoBv27i92Lak_Kg;-><init>(Lcom/miui/home/launcher/Launcher;ILandroid/graphics/Rect;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;Lcom/miui/home/recents/views/TaskView;FZLcom/miui/home/recents/views/RecentsView;)V
 
     invoke-virtual {v3, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->addOnUpdateListener(Lcom/miui/home/recents/util/RectFSpringAnim$OnUpdateListener;)V
 
-    .line 971
+    .line 1054
     new-instance v1, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;
 
-    invoke-direct {v1, v0, v14}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/views/TaskView;)V
+    invoke-direct {v1, v0, v15}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$4;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/views/TaskView;)V
 
     invoke-virtual {v3, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->addAnimatorListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 991
+    .line 1074
     invoke-virtual {v3}, Lcom/miui/home/recents/util/RectFSpringAnim;->startInGestureThread()V
 
     move-object/from16 v1, p2
 
-    .line 993
-    invoke-virtual {v0, v15, v2, v14, v1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startRecentsContentAnimator(ZLcom/miui/home/recents/views/RecentsView;Lcom/miui/home/recents/views/TaskView;Lcom/miui/home/recents/util/MultiAnimationEndDetector;)V
+    const/4 v4, 0x0
+
+    .line 1076
+    invoke-virtual {v0, v4, v2, v15, v1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startRecentsContentAnimator(ZLcom/miui/home/recents/views/RecentsView;Lcom/miui/home/recents/views/TaskView;Lcom/miui/home/recents/util/MultiAnimationEndDetector;)V
 
     return-object v3
+.end method
+
+.method private varargs startEndDetector(Lcom/miui/home/recents/util/MultiAnimationEndDetector;Ljava/lang/Runnable;[Ljava/lang/Object;)V
+    .locals 3
+
+    if-eqz p3, :cond_0
+
+    .line 887
+    array-length v0, p3
+
+    if-lez v0, :cond_0
+
+    .line 888
+    array-length v0, p3
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_0
+
+    aget-object v2, p3, v1
+
+    .line 889
+    invoke-virtual {p1, v2}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;->addAnimation(Ljava/lang/Object;)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 893
+    :cond_0
+    invoke-virtual {p1}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;->hasAnimation()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    .line 894
+    invoke-virtual {p1, p2}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;->addEndRunnable(Ljava/lang/Runnable;)V
+
+    .line 895
+    invoke-virtual {p1}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;->startDetect()V
+
+    goto :goto_1
+
+    .line 897
+    :cond_1
+    invoke-interface {p2}, Ljava/lang/Runnable;->run()V
+
+    :goto_1
+    return-void
 .end method
 
 .method private startIconLaunchAnimator(Landroid/view/View;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;ZLandroid/graphics/Rect;Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;)V
@@ -3728,7 +4220,7 @@
 
     const-string v0, "QuickstepAppTransitionManagerImpl"
 
-    .line 278
+    .line 290
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3749,40 +4241,48 @@
 
     move-result-object v1
 
-    .line 280
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 292
     invoke-virtual {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
-    return-void
+    if-eqz p5, :cond_0
+
+    .line 295
+    invoke-virtual {p5}, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->finish()V
 
     :cond_0
+    return-void
+
+    :cond_1
     const/4 v1, 0x0
 
-    .line 284
+    .line 299
     invoke-direct {p0, p2, v1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getWindowTargetBounds([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)Landroid/graphics/Rect;
 
     move-result-object v5
 
-    .line 286
-    new-instance v1, Lcom/miui/home/recents/util/MultiAnimationEndDetector;
+    .line 301
+    new-instance v2, Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
-    invoke-direct {v1}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;-><init>()V
+    invoke-direct {v2}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;-><init>()V
 
-    iput-object v1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchAnimatorEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
+    iput-object v2, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchAnimatorEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
-    .line 287
+    .line 302
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchAnimatorEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
+    iget-object v2, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchAnimatorEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/LauncherStateManager;->setCurrentAnimation(Lcom/miui/home/recents/util/MultiAnimationEndDetector;)V
+    invoke-virtual {v0, v2}, Lcom/miui/home/launcher/LauncherStateManager;->setCurrentAnimation(Lcom/miui/home/recents/util/MultiAnimationEndDetector;)V
 
-    .line 290
+    .line 305
     invoke-static {p5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance v7, Lcom/miui/home/recents/-$$Lambda$AlEeBxjHFsy1SRWRXeztzuuTMeo;
@@ -3797,21 +4297,14 @@
 
     move-object v6, p4
 
-    .line 289
+    .line 304
     invoke-direct/range {v2 .. v7}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startOpeningWindowAnimators(Landroid/view/View;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Landroid/graphics/Rect;Landroid/graphics/Rect;Ljava/lang/Runnable;)Lcom/miui/home/recents/util/RectFSpringAnim;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRectFSpringAnim:Lcom/miui/home/recents/util/RectFSpringAnim;
 
-    .line 291
-    iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchAnimatorEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
-
-    iget-object p2, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRectFSpringAnim:Lcom/miui/home/recents/util/RectFSpringAnim;
-
-    invoke-virtual {p1, p2}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;->addAnimation(Ljava/lang/Object;)V
-
-    .line 292
+    .line 306
     invoke-static {p5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance p1, Lcom/miui/home/recents/-$$Lambda$AlEeBxjHFsy1SRWRXeztzuuTMeo;
@@ -3820,27 +4313,28 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchFinishRunnable:Ljava/lang/Runnable;
 
-    .line 293
-    iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchAnimatorEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
-
-    iget-object p2, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchFinishRunnable:Ljava/lang/Runnable;
-
-    invoke-virtual {p1, p2}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;->addEndRunnable(Ljava/lang/Runnable;)V
-
-    if-eqz p3, :cond_1
-
     const/4 p1, 0x1
 
-    .line 296
+    if-eqz p3, :cond_2
+
+    .line 309
     iget-object p2, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchAnimatorEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
     invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startLauncherContentAnimator(ZLcom/miui/home/recents/util/MultiAnimationEndDetector;)V
 
-    .line 298
-    :cond_1
-    iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchAnimatorEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
+    .line 311
+    :cond_2
+    iget-object p2, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchAnimatorEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
-    invoke-virtual {p1}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;->startDetect()V
+    iget-object p3, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchFinishRunnable:Ljava/lang/Runnable;
+
+    new-array p1, p1, [Ljava/lang/Object;
+
+    iget-object p4, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRectFSpringAnim:Lcom/miui/home/recents/util/RectFSpringAnim;
+
+    aput-object p4, p1, v1
+
+    invoke-direct {p0, p2, p3, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->startEndDetector(Lcom/miui/home/recents/util/MultiAnimationEndDetector;Ljava/lang/Runnable;[Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -3850,7 +4344,7 @@
 
     const-string v0, "QuickstepAppTransitionManagerImpl"
 
-    .line 363
+    .line 376
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3865,7 +4359,9 @@
 
     move-result-object v1
 
-    .line 364
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 377
     invoke-virtual {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -3874,11 +4370,11 @@
 
     return-void
 
-    .line 368
+    .line 381
     :cond_0
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Launcher;->animateWallpaperZoom(Z)V
 
-    .line 371
+    .line 384
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
 
     move-result-object v1
@@ -3891,7 +4387,7 @@
 
     if-eq v1, v2, :cond_3
 
-    .line 372
+    .line 385
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isUseSimpleAnim()Z
 
     move-result v1
@@ -3900,7 +4396,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 374
+    .line 387
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
     move-result-object v1
@@ -3913,7 +4409,7 @@
 
     goto :goto_0
 
-    .line 376
+    .line 389
     :cond_1
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
@@ -3925,17 +4421,17 @@
 
     invoke-virtual {v1, v2, p2}, Lcom/miui/home/recents/util/SpringAnimationUtils;->startShortcutMenuLayerFadeInAnim(Lcom/miui/home/launcher/ShortcutMenuLayer;Lcom/miui/home/recents/util/MultiAnimationEndDetector;)V
 
-    .line 380
+    .line 393
     :cond_2
     :goto_0
     invoke-static {p1, v0}, Lcom/miui/home/launcher/common/BlurUtils;->fastBlurWhenStartOpenOrCloseApp(ZLcom/miui/home/launcher/Launcher;)Landroid/animation/ValueAnimator;
 
-    .line 381
+    .line 394
     iget-boolean p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mNeedResetContentView:Z
 
     if-eqz p1, :cond_3
 
-    .line 382
+    .line 395
     new-instance p1, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$nQMgAD5UW7Hbj8oUkwxIm5eqHn8;
 
     invoke-direct {p1, p0}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$nQMgAD5UW7Hbj8oUkwxIm5eqHn8;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)V
@@ -3947,7 +4443,7 @@
 .end method
 
 .method private startOpeningWindowAnimators(Landroid/view/View;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Landroid/graphics/Rect;Landroid/graphics/Rect;Ljava/lang/Runnable;)Lcom/miui/home/recents/util/RectFSpringAnim;
-    .locals 26
+    .locals 25
 
     move-object/from16 v12, p0
 
@@ -3961,7 +4457,7 @@
 
     const-string v4, "QuickstepAppTransitionManagerImpl"
 
-    .line 404
+    .line 417
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -3976,29 +4472,31 @@
 
     move-result-object v5
 
-    .line 405
+    invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 418
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v13
 
     const/4 v14, 0x0
 
-    if-eqz v13, :cond_14
+    if-eqz v13, :cond_16
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_16
 
     if-nez v1, :cond_0
 
-    goto/16 :goto_d
+    goto/16 :goto_e
 
-    .line 409
+    .line 422
     :cond_0
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->cancelAppToHomeAnim()V
 
-    .line 411
+    .line 424
     iget-object v4, v12, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v5, "window"
+    const-string v5, "window"
 
     invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -4014,9 +4512,9 @@
 
     move-result v8
 
-    const-string/jumbo v4, "window"
+    const-string v4, "window"
 
-    .line 412
+    .line 425
     invoke-virtual {v13, v4}, Lcom/miui/home/launcher/Launcher;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
@@ -4031,14 +4529,14 @@
 
     move-result v9
 
-    .line 414
+    .line 427
     new-instance v15, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
 
     const/4 v11, 0x0
 
     invoke-direct {v15, v1, v11}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;-><init>([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;I)V
 
-    .line 417
+    .line 430
     invoke-virtual {v15}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->getFirstTarget()Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;
 
     move-result-object v1
@@ -4047,16 +4545,16 @@
 
     return-object v14
 
-    .line 421
+    .line 434
     :cond_1
     new-instance v6, Lcom/miui/home/recents/util/ClipAnimationHelper;
 
     invoke-direct {v6}, Lcom/miui/home/recents/util/ClipAnimationHelper;-><init>()V
 
-    .line 422
+    .line 435
     invoke-virtual {v6, v1}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateSourceStack(Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)V
 
-    .line 423
+    .line 436
     invoke-direct/range {p0 .. p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getHomeStackBound()Landroid/graphics/Rect;
 
     move-result-object v4
@@ -4065,26 +4563,32 @@
 
     const/4 v4, 0x1
 
-    .line 424
+    .line 437
     invoke-virtual {v6, v4}, Lcom/miui/home/recents/util/ClipAnimationHelper;->prepareAnimation(Z)V
 
-    .line 425
+    .line 438
     invoke-virtual {v6, v2}, Lcom/miui/home/recents/util/ClipAnimationHelper;->updateTargetRect(Landroid/graphics/Rect;)V
 
-    .line 427
+    .line 440
     iput-object v14, v12, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpeningAnimTargetRef:Ljava/lang/ref/WeakReference;
 
-    .line 429
+    .line 442
     instance-of v5, v0, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;
 
     if-eqz v5, :cond_2
 
-    .line 430
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
+
+    .line 443
     move-object v5, v0
 
     check-cast v5, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;
 
-    .line 431
+    .line 444
     new-instance v7, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v7, v5}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -4098,18 +4602,18 @@
     :cond_2
     move-object v10, v14
 
-    .line 434
+    .line 447
     :goto_0
     invoke-virtual {v6}, Lcom/miui/home/recents/util/ClipAnimationHelper;->getSourceStackBounds()Landroid/graphics/Rect;
 
     move-result-object v5
 
-    .line 435
+    .line 448
     new-instance v7, Landroid/graphics/RectF;
 
     invoke-direct {v7, v2}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
-    .line 436
+    .line 449
     iget v4, v5, Landroid/graphics/Rect;->top:I
 
     neg-int v4, v4
@@ -4120,12 +4624,12 @@
 
     invoke-virtual {v7, v11, v4}, Landroid/graphics/RectF;->offset(FF)V
 
-    .line 438
+    .line 451
     new-instance v4, Landroid/graphics/RectF;
 
     invoke-direct {v4}, Landroid/graphics/RectF;-><init>()V
 
-    .line 439
+    .line 452
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
 
     move-result v16
@@ -4134,23 +4638,23 @@
 
     if-eqz v16, :cond_3
 
-    .line 440
+    .line 453
     invoke-virtual {v4, v7}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
     const v3, 0x3f6b851f    # 0.92f
 
-    .line 441
+    .line 454
     invoke-static {v4, v3}, Lcom/miui/home/recents/util/Utilities;->scaleRectAboutCenter(Landroid/graphics/RectF;F)V
 
     goto :goto_1
 
-    .line 443
+    .line 456
     :cond_3
     invoke-static {v9, v8, v3}, Lcom/miui/home/launcher/util/CoordinateTransforms;->transformCoordinate(IILandroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object v3
 
-    .line 444
+    .line 457
     invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
 
     move-result v16
@@ -4163,7 +4667,7 @@
 
     if-nez v16, :cond_5
 
-    .line 446
+    .line 459
     :cond_4
     invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->width()I
 
@@ -4175,7 +4679,7 @@
 
     float-to-int v14, v14
 
-    .line 447
+    .line 460
     invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->height()I
 
     move-result v0
@@ -4186,7 +4690,7 @@
 
     float-to-int v0, v0
 
-    .line 448
+    .line 461
     invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->width()I
 
     move-result v11
@@ -4199,7 +4703,7 @@
 
     float-to-int v11, v11
 
-    .line 449
+    .line 462
     invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->height()I
 
     move-result v2
@@ -4210,25 +4714,25 @@
 
     float-to-int v2, v2
 
-    .line 445
+    .line 458
     invoke-virtual {v3, v14, v0, v11, v2}, Landroid/graphics/Rect;->set(IIII)V
 
     :cond_5
     if-eqz v10, :cond_6
 
-    .line 453
+    .line 466
     invoke-interface {v10}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->getIconTransparentEdge()I
 
     move-result v0
 
-    .line 454
+    .line 467
     invoke-virtual {v3, v0, v0}, Landroid/graphics/Rect;->inset(II)V
 
-    .line 456
+    .line 469
     :cond_6
     invoke-virtual {v4, v3}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    .line 457
+    .line 470
     iget v0, v5, Landroid/graphics/Rect;->left:I
 
     neg-int v0, v0
@@ -4239,241 +4743,283 @@
 
     invoke-virtual {v3, v0, v2}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 460
+    .line 473
     :goto_1
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
-    move-result v14
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    .line 461
-    invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->width()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    mul-float/2addr v2, v0
-
-    invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
-
     move-result v0
 
-    div-float v11, v2, v0
+    if-nez v0, :cond_8
 
-    if-eqz v10, :cond_7
+    .line 474
+    iget-boolean v2, v1, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->isTranslucent:Z
 
-    .line 463
-    invoke-static {v10}, Lcom/miui/home/launcher/PathDataIconUtil;->getCornerRadiusEstimate(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)F
-
-    move-result v0
+    if-eqz v2, :cond_7
 
     goto :goto_2
 
     :cond_7
-    iget v0, v12, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mNoIconRadius:F
-
-    :goto_2
-    mul-float/2addr v0, v11
-
-    if-eqz v14, :cond_8
-
-    const/16 v20, 0x0
+    const/4 v14, 0x0
 
     goto :goto_3
 
-    .line 464
     :cond_8
-    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    :goto_2
+    const/4 v14, 0x1
 
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/miui/home/recents/util/Utilities;->getWindowCornerRadius(Landroid/content/Context;)F
-
-    move-result v2
-
-    move/from16 v20, v2
-
-    .line 465
     :goto_3
-    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    .line 475
+    invoke-virtual/range {p3 .. p3}, Landroid/graphics/Rect;->width()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    mul-float/2addr v3, v2
+
+    invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
 
     move-result v2
 
-    if-eqz v2, :cond_9
+    div-float v11, v3, v2
 
-    move/from16 v19, v20
+    if-eqz v10, :cond_9
+
+    .line 477
+    invoke-static {v10}, Lcom/miui/home/launcher/PathDataIconUtil;->getCornerRadiusEstimate(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)F
+
+    move-result v2
 
     goto :goto_4
 
     :cond_9
-    move/from16 v19, v0
+    iget v2, v12, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mNoIconRadius:F
 
-    .line 469
     :goto_4
+    mul-float/2addr v2, v11
+
+    if-eqz v0, :cond_a
+
+    const/4 v0, 0x0
+
+    goto :goto_5
+
+    .line 478
+    :cond_a
+    invoke-virtual/range {p1 .. p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/miui/home/recents/util/Utilities;->getWindowCornerRadius(Landroid/content/Context;)F
+
+    move-result v0
+
+    .line 479
+    :goto_5
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_b
+
+    move v2, v0
+
+    .line 483
+    :cond_b
     new-instance v5, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     invoke-direct {v5}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;-><init>()V
 
-    .line 470
-    sget-object v0, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
+    .line 484
+    sget-object v3, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
 
-    invoke-virtual {v13, v0}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
+    invoke-virtual {v13, v3}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
 
-    move-result v0
+    move-result v3
 
-    iput-boolean v0, v5, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->launcherStateNormal:Z
+    iput-boolean v3, v5, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;->launcherStateNormal:Z
 
-    .line 471
+    .line 485
     new-instance v23, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;
 
     invoke-direct/range {v23 .. v23}, Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;-><init>()V
 
-    .line 472
-    iget-object v0, v12, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
+    .line 486
+    iget-object v3, v12, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
 
-    if-eqz v0, :cond_a
+    if-eqz v3, :cond_c
 
-    invoke-virtual {v0}, Lcom/miui/home/recents/views/FloatingIconView;->isAttachedToWindow()Z
+    invoke-virtual {v3}, Lcom/miui/home/recents/views/FloatingIconView;->isAttachedToWindow()Z
 
-    move-result v0
+    move-result v3
 
-    if-eqz v0, :cond_a
-
-    .line 473
-    iget-object v0, v12, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
-
-    invoke-virtual {v0}, Lcom/miui/home/recents/views/FloatingIconView;->forceToEnd()V
-
-    const/4 v0, 0x0
-
-    .line 474
-    iput-object v0, v12, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
-
-    :cond_a
-    const-string v0, "QuickstepAppTransitionManagerImpl"
-
-    .line 477
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "startOpeningWindowAnimators, currentDisplayRotation="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v3, ", homeRotation="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v3, ", startRectF="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", endRectF="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 484
-    iget-boolean v0, v1, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->isTranslucent:Z
-
-    if-eqz v0, :cond_b
-
-    instance-of v0, v10, Lcom/miui/home/launcher/anim/WidgetTypeAnimTarget;
-
-    if-eqz v0, :cond_b
-
-    const/16 v24, 0x1
-
-    goto :goto_5
-
-    :cond_b
-    const/16 v24, 0x0
-
-    :goto_5
-    if-eqz v24, :cond_c
+    if-eqz v3, :cond_c
 
     .line 487
-    new-instance v0, Lcom/miui/home/recents/util/RectFSpringAnim;
+    iget-object v3, v12, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
 
-    new-instance v1, Landroid/graphics/RectF;
+    invoke-virtual {v3}, Lcom/miui/home/recents/views/FloatingIconView;->forceToEnd()V
 
-    invoke-direct {v1, v7}, Landroid/graphics/RectF;-><init>(Landroid/graphics/RectF;)V
+    const/4 v3, 0x0
+
+    .line 488
+    iput-object v3, v12, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
+
+    .line 491
+    :cond_c
+    iget-boolean v1, v1, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->isTranslucent:Z
+
+    if-eqz v1, :cond_d
+
+    instance-of v1, v10, Lcom/miui/home/launcher/anim/WidgetTypeAnimTarget;
+
+    if-eqz v1, :cond_d
+
+    const/4 v3, 0x1
+
+    goto :goto_6
+
+    :cond_d
+    const/4 v3, 0x0
+
+    :goto_6
+    const-string v1, "QuickstepAppTransitionManagerImpl"
+
+    move-object/from16 v24, v13
+
+    .line 492
+    new-instance v13, Ljava/lang/StringBuilder;
+
+    invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
+
+    move/from16 p2, v14
+
+    const-string v14, "startOpeningWindowAnimators, currentDisplayRotation="
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v14, ", homeRotation="
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v14, ", startRectF="
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v14, ", endRectF="
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v14, ", startRadius = "
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v14, ", endRadius = "
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v14, ", isUseTranslucentAnim = "
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v13
+
+    invoke-static {v1, v13}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-eqz v3, :cond_e
+
+    .line 504
+    new-instance v1, Lcom/miui/home/recents/util/RectFSpringAnim;
 
     new-instance v2, Landroid/graphics/RectF;
 
     invoke-direct {v2, v7}, Landroid/graphics/RectF;-><init>(Landroid/graphics/RectF;)V
 
-    const/16 v21, 0x0
+    new-instance v4, Landroid/graphics/RectF;
 
-    const/high16 v22, 0x3f800000    # 1.0f
-
-    move-object/from16 v16, v0
-
-    move-object/from16 v17, v1
-
-    move-object/from16 v18, v2
-
-    move/from16 v19, v20
-
-    invoke-direct/range {v16 .. v22}, Lcom/miui/home/recents/util/RectFSpringAnim;-><init>(Landroid/graphics/RectF;Landroid/graphics/RectF;FFFF)V
-
-    move-object v7, v0
-
-    goto :goto_6
-
-    .line 489
-    :cond_c
-    new-instance v0, Lcom/miui/home/recents/util/RectFSpringAnim;
-
-    new-instance v1, Landroid/graphics/RectF;
-
-    invoke-direct {v1, v4}, Landroid/graphics/RectF;-><init>(Landroid/graphics/RectF;)V
+    invoke-direct {v4, v7}, Landroid/graphics/RectF;-><init>(Landroid/graphics/RectF;)V
 
     const/16 v21, 0x0
 
     const/high16 v22, 0x3f800000    # 1.0f
 
-    move-object/from16 v16, v0
+    move-object/from16 v16, v1
 
-    move-object/from16 v17, v1
+    move-object/from16 v17, v2
 
-    move-object/from16 v18, v7
+    move-object/from16 v18, v4
+
+    move/from16 v19, v0
+
+    move/from16 v20, v0
 
     invoke-direct/range {v16 .. v22}, Lcom/miui/home/recents/util/RectFSpringAnim;-><init>(Landroid/graphics/RectF;Landroid/graphics/RectF;FFFF)V
 
-    move-object v7, v0
-
-    .line 491
-    :goto_6
-    instance-of v0, v10, Lcom/miui/home/launcher/anim/WidgetTypeAnimTarget;
-
-    if-eqz v0, :cond_d
-
-    const/16 v0, 0x3ea
+    move-object v13, v1
 
     goto :goto_7
 
-    :cond_d
+    .line 506
+    :cond_e
+    new-instance v1, Lcom/miui/home/recents/util/RectFSpringAnim;
+
+    new-instance v13, Landroid/graphics/RectF;
+
+    invoke-direct {v13, v4}, Landroid/graphics/RectF;-><init>(Landroid/graphics/RectF;)V
+
+    const/16 v21, 0x0
+
+    const/high16 v22, 0x3f800000    # 1.0f
+
+    move-object/from16 v16, v1
+
+    move-object/from16 v17, v13
+
+    move-object/from16 v18, v7
+
+    move/from16 v19, v2
+
+    move/from16 v20, v0
+
+    invoke-direct/range {v16 .. v22}, Lcom/miui/home/recents/util/RectFSpringAnim;-><init>(Landroid/graphics/RectF;Landroid/graphics/RectF;FFFF)V
+
+    move-object v13, v1
+
+    .line 508
+    :goto_7
+    instance-of v0, v10, Lcom/miui/home/launcher/anim/WidgetTypeAnimTarget;
+
+    if-eqz v0, :cond_f
+
+    const/16 v0, 0x3ea
+
+    goto :goto_8
+
+    :cond_f
     const/16 v0, 0x3e9
 
-    :goto_7
-    invoke-virtual {v7, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->setProgressCalculateType(I)V
+    :goto_8
+    invoke-virtual {v13, v0}, Lcom/miui/home/recents/util/RectFSpringAnim;->setProgressCalculateType(I)V
 
-    .line 493
+    .line 510
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERX:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
@@ -4482,57 +5028,24 @@
 
     const v2, 0x3e851eb8    # 0.26f
 
-    const v3, 0x3e4ccccd    # 0.2f
-
-    if-eqz v1, :cond_e
-
-    move v1, v3
-
-    goto :goto_8
-
-    :cond_e
-    move v1, v2
-
-    :goto_8
-    const v4, 0x3f7d70a4    # 0.99f
-
-    invoke-virtual {v7, v0, v4, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
-
-    .line 494
-    sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERY:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
-
-    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_f
-
-    move v2, v3
-
-    :cond_f
-    invoke-virtual {v7, v0, v4, v2}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
-
-    .line 495
-    sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_WIDTH:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
-
-    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
-
-    move-result v1
+    const v4, 0x3e4ccccd    # 0.2f
 
     if-eqz v1, :cond_10
 
-    move v1, v3
+    move v1, v4
 
     goto :goto_9
 
     :cond_10
-    const v1, 0x3ec7ae14    # 0.39f
+    move v1, v2
 
     :goto_9
-    invoke-virtual {v7, v0, v4, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
+    const v7, 0x3f7d70a4    # 0.99f
 
-    .line 496
-    sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_RATIO:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
+    invoke-virtual {v13, v0, v7, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
+
+    .line 511
+    sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_CENTERY:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
 
@@ -4540,78 +5053,107 @@
 
     if-eqz v1, :cond_11
 
-    goto :goto_a
+    move v2, v4
 
     :cond_11
-    const v3, 0x3ea8f5c3    # 0.33f
+    invoke-virtual {v13, v0, v7, v2}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
+
+    .line 512
+    sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_WIDTH:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
+
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_12
+
+    move v1, v4
+
+    goto :goto_a
+
+    :cond_12
+    const v1, 0x3ec7ae14    # 0.39f
 
     :goto_a
-    invoke-virtual {v7, v0, v4, v3}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
+    invoke-virtual {v13, v0, v7, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
 
-    .line 497
+    .line 513
+    sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RECT_RATIO:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
+
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_13
+
+    goto :goto_b
+
+    :cond_13
+    const v4, 0x3ea8f5c3    # 0.33f
+
+    :goto_b
+    invoke-virtual {v13, v0, v7, v4}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
+
+    .line 514
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->RADIUS:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     const/high16 v1, 0x3e800000    # 0.25f
 
-    invoke-virtual {v7, v0, v4, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
+    invoke-virtual {v13, v0, v7, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
 
-    .line 498
+    .line 515
     sget-object v0, Lcom/miui/home/recents/util/RectFSpringAnim;->ALPHA:Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;
 
     const v1, 0x3e19999a    # 0.15f
 
-    invoke-virtual {v7, v0, v4, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
+    invoke-virtual {v13, v0, v7, v1}, Lcom/miui/home/recents/util/RectFSpringAnim;->setAnimParam(Landroidx/dynamicanimation/animation/FloatPropertyCompat;FF)V
 
-    const/4 v4, 0x0
+    const/4 v14, 0x0
 
-    .line 500
-    iput-boolean v4, v12, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIsReleaseOpenFloatingIconLayer:Z
+    .line 517
+    iput-boolean v14, v12, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIsReleaseOpenFloatingIconLayer:Z
 
-    .line 501
-    new-instance v3, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$Cz-d7nPJhZQ4eBUB0i9i2xRcSyU;
+    .line 518
+    new-instance v7, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$nvw6n7cxH3Yj_6X7gFV5Xpb7SPc;
 
-    move-object v0, v3
+    move-object v0, v7
 
     move-object/from16 v1, p0
 
-    move-object v2, v7
+    move-object v2, v13
 
-    move-object v12, v3
-
-    move/from16 v3, v24
-
-    move/from16 v16, v4
+    move/from16 v16, v3
 
     move-object v4, v5
 
     move-object/from16 v5, v23
 
-    move-object/from16 p5, v13
-
-    move-object v13, v7
+    move-object v14, v7
 
     move-object v7, v15
 
-    move-object/from16 v25, v10
+    move-object v12, v10
 
     move v10, v11
 
-    move v11, v14
+    const/16 v17, 0x0
 
-    invoke-direct/range {v0 .. v11}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$Cz-d7nPJhZQ4eBUB0i9i2xRcSyU;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/util/RectFSpringAnim;ZLcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;IIFZ)V
+    move/from16 v11, p2
 
-    invoke-virtual {v13, v12}, Lcom/miui/home/recents/util/RectFSpringAnim;->addOnUpdateListener(Lcom/miui/home/recents/util/RectFSpringAnim$OnUpdateListener;)V
+    invoke-direct/range {v0 .. v11}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$nvw6n7cxH3Yj_6X7gFV5Xpb7SPc;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/util/RectFSpringAnim;ZLcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper$TransformParams;Lcom/miui/home/recents/util/ClipAnimationHelper;Lcom/miui/home/recents/util/RemoteAnimationTargetSet;IIFZ)V
 
-    .line 554
+    invoke-virtual {v13, v14}, Lcom/miui/home/recents/util/RectFSpringAnim;->addOnUpdateListener(Lcom/miui/home/recents/util/RectFSpringAnim$OnUpdateListener;)V
+
+    .line 566
     new-instance v6, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$2;
 
     move-object v0, v6
 
-    move/from16 v2, v24
+    move/from16 v2, v16
 
-    move-object/from16 v3, p5
+    move-object/from16 v3, v24
 
-    move v4, v14
+    move/from16 v4, p2
 
     move-object v5, v15
 
@@ -4619,25 +5161,25 @@
 
     invoke-virtual {v13, v6}, Lcom/miui/home/recents/util/RectFSpringAnim;->addAnimatorListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    move-object/from16 v14, v25
+    .line 648
+    instance-of v0, v12, Lcom/miui/home/launcher/ShortcutIcon;
 
-    .line 625
-    instance-of v0, v14, Lcom/miui/home/launcher/ShortcutIcon;
+    if-eqz v0, :cond_14
 
-    if-eqz v0, :cond_12
+    .line 649
+    move-object v14, v12
 
-    .line 626
     check-cast v14, Lcom/miui/home/launcher/ShortcutIcon;
 
-    goto :goto_b
+    goto :goto_c
 
-    :cond_12
+    :cond_14
     const/4 v14, 0x0
 
-    :goto_b
-    if-eqz v14, :cond_13
+    :goto_c
+    if-eqz v14, :cond_15
 
-    .line 628
+    .line 651
     invoke-static {}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->getInstance()Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;
 
     move-result-object v0
@@ -4646,9 +5188,9 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_15
 
-    .line 629
+    .line 652
     invoke-static {}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->getInstance()Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;
 
     move-result-object v0
@@ -4663,13 +5205,13 @@
 
     move-result v11
 
-    goto :goto_c
+    goto :goto_d
 
-    :cond_13
-    move/from16 v11, v16
+    :cond_15
+    move/from16 v11, v17
 
-    .line 631
-    :goto_c
+    .line 654
+    :goto_d
     invoke-static {}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->getInstance()Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;
 
     move-result-object v0
@@ -4678,13 +5220,13 @@
 
     invoke-virtual {v0, v13, v1, v11}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->setupAnimAndBreakLast(Ljava/lang/Object;Ljava/lang/Object;Z)V
 
-    .line 632
+    .line 655
     invoke-virtual {v13}, Lcom/miui/home/recents/util/RectFSpringAnim;->startInGestureThread()V
 
     return-object v13
 
-    :cond_14
-    :goto_d
+    :cond_16
+    :goto_e
     move-object v1, v14
 
     return-object v1
@@ -4695,7 +5237,7 @@
 .method public breakOpenAnim()V
     .locals 2
 
-    .line 307
+    .line 320
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchAnimatorEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
     if-eqz v0, :cond_0
@@ -4706,14 +5248,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 308
+    .line 321
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchAnimatorEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
     iget-object v1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchFinishRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;->removeEndRunnable(Ljava/lang/Runnable;)V
 
-    .line 310
+    .line 323
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mTaskLaunchEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
@@ -4725,20 +5267,20 @@
 
     if-eqz v0, :cond_1
 
-    .line 311
+    .line 324
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mTaskLaunchEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
     iget-object v1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mTaskLaunchFinishRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;->removeEndRunnable(Ljava/lang/Runnable;)V
 
-    .line 313
+    .line 326
     :cond_1
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRectFSpringAnim:Lcom/miui/home/recents/util/RectFSpringAnim;
 
     if-eqz v0, :cond_2
 
-    .line 314
+    .line 327
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRectFSpringAnim:Lcom/miui/home/recents/util/RectFSpringAnim;
 
     const/4 v1, 0x0
@@ -4754,7 +5296,7 @@
 
     const/4 v0, 0x0
 
-    .line 359
+    .line 372
     iput-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRemoteAnimationProvider:Lcom/miui/home/recents/util/RemoteAnimationProvider;
 
     return-void
@@ -4766,29 +5308,29 @@
 .method public doAnimationFinish()V
     .locals 2
 
-    .line 319
+    .line 332
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchFinishRunnable:Ljava/lang/Runnable;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 320
+    .line 333
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 321
+    .line 334
     iput-object v1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchFinishRunnable:Ljava/lang/Runnable;
 
-    .line 323
+    .line 336
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mTaskLaunchFinishRunnable:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_1
 
-    .line 324
+    .line 337
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 325
+    .line 338
     iput-object v1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mTaskLaunchFinishRunnable:Ljava/lang/Runnable;
 
     :cond_1
@@ -4798,7 +5340,7 @@
 .method public findTargetTaskView(Lcom/miui/home/recents/views/RecentsView;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/recents/views/TaskView;
     .locals 6
 
-    .line 1000
+    .line 1083
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -4810,14 +5352,14 @@
 
     aget-object v3, p2, v1
 
-    .line 1001
+    .line 1084
     iget v4, v3, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->mode:I
 
     const/4 v5, 0x1
 
     if-ne v4, v5, :cond_0
 
-    .line 1002
+    .line 1085
     iget p2, v3, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->taskId:I
 
     goto :goto_1
@@ -4837,7 +5379,7 @@
 
     return-object p1
 
-    .line 1011
+    .line 1094
     :cond_2
     invoke-virtual {p1, p2}, Lcom/miui/home/recents/views/RecentsView;->getTaskView(I)Lcom/miui/home/recents/views/TaskView;
 
@@ -4855,7 +5397,7 @@
 
     const-string v1, "QuickstepAppTransitionManagerImpl"
 
-    .line 188
+    .line 192
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -4872,10 +5414,12 @@
 
     move-result-object v2
 
-    .line 189
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 193
     iget-object v1, v7, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "window"
+    const-string v2, "window"
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -4891,17 +5435,17 @@
 
     move-result v1
 
-    .line 190
+    .line 194
     invoke-static {v1}, Lcom/miui/home/launcher/DeviceConfig;->setRotationBerforStart(I)V
 
-    .line 191
+    .line 195
     invoke-direct {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->hasControlRemoteAppTransitionPermission()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 192
+    .line 196
     new-instance v1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v1, v0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -4910,27 +5454,27 @@
 
     const/4 v1, 0x0
 
-    .line 193
+    .line 197
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->isLaunchingFromRecents(Landroid/view/View;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Z
 
     move-result v8
 
-    .line 194
+    .line 198
     invoke-direct {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->finishPendingGestureController()V
 
-    .line 196
+    .line 200
     new-instance v4, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v4, v0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    .line 197
+    .line 201
     new-instance v5, Ljava/lang/ref/WeakReference;
 
     move-object/from16 v1, p1
 
     invoke-direct {v5, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    .line 198
+    .line 202
     new-instance v10, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$1;
 
     iget-object v2, v7, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mHandler:Landroid/os/Handler;
@@ -4953,7 +5497,7 @@
 
     goto :goto_1
 
-    .line 228
+    .line 240
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isLowLevelOrLiteDevice()Z
 
@@ -4980,7 +5524,7 @@
 
     sub-long v13, v0, v2
 
-    .line 232
+    .line 244
     new-instance v0, Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;
 
     move-object v9, v0
@@ -4995,10 +5539,10 @@
 
     const/4 v0, 0x1
 
-    .line 234
+    .line 246
     iput-boolean v0, v7, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mNeedResetContentView:Z
 
-    .line 235
+    .line 247
     iget-object v0, v7, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mActivityOptions:Landroid/app/ActivityOptions;
 
     return-object v0
@@ -5006,7 +5550,7 @@
     :cond_2
     move-object/from16 v1, p1
 
-    .line 237
+    .line 249
     invoke-super/range {p0 .. p3}, Lcom/miui/home/recents/LauncherAppTransitionManager;->getActivityLaunchOptions(Lcom/miui/home/launcher/Launcher;Landroid/view/View;Landroid/graphics/Rect;)Landroid/app/ActivityOptions;
 
     move-result-object v0
@@ -5017,7 +5561,7 @@
 .method protected getLauncher()Lcom/miui/home/launcher/Launcher;
     .locals 1
 
-    .line 171
+    .line 175
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mLauncher:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -5039,14 +5583,14 @@
 
     if-eqz p1, :cond_3
 
-    .line 711
+    .line 753
     array-length v1, p1
 
     if-nez v1, :cond_0
 
     goto :goto_1
 
-    .line 714
+    .line 756
     :cond_0
     array-length v1, p1
 
@@ -5059,7 +5603,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 715
+    .line 757
     iget v4, v3, Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;->mode:I
 
     if-ne v4, p2, :cond_1
@@ -5094,7 +5638,7 @@
 .method protected isNewHomeOverlayAttachedAndEnable()Z
     .locals 3
 
-    .line 732
+    .line 774
     invoke-virtual {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -5105,7 +5649,7 @@
 
     return v1
 
-    .line 736
+    .line 778
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getFeedOverlayController()Lcom/miui/home/launcher/overlay/feed/FeedOverlayTransitionController;
 
@@ -5117,7 +5661,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 737
+    .line 779
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getLauncherGestureController()Lcom/miui/home/settings/LauncherGestureController;
 
     move-result-object v0
@@ -5137,7 +5681,7 @@
 .method protected isNewHomeViewAdded()Z
     .locals 2
 
-    .line 724
+    .line 766
     invoke-virtual {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -5148,7 +5692,7 @@
 
     return v1
 
-    .line 728
+    .line 770
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getNewHomeView()Lcom/miui/newhome/view/gestureview/NewHomeView;
 
@@ -5165,7 +5709,7 @@
 .method public isTaskLaunchAnimRunning()Z
     .locals 1
 
-    .line 658
+    .line 681
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mTaskLaunchEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
     if-eqz v0, :cond_0
@@ -5190,12 +5734,12 @@
 .method public onCreateWallpaperOpenAnimation([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;)Z
     .locals 1
 
-    .line 754
+    .line 796
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mWallpaperOpenLauncherAnimationRunner:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$WallpaperOpenLauncherAnimationRunner;
 
     if-eqz v0, :cond_0
 
-    .line 755
+    .line 797
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$WallpaperOpenLauncherAnimationRunner;->onCreateAnimation([Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;)V
 
     const/4 p1, 0x1
@@ -5213,7 +5757,7 @@
 
     const/4 v0, 0x0
 
-    .line 242
+    .line 254
     iput-boolean v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mNeedResetContentView:Z
 
     return-void
@@ -5222,48 +5766,55 @@
 .method public release()V
     .locals 2
 
-    .line 663
+    .line 686
     invoke-super {p0}, Lcom/miui/home/recents/LauncherAppTransitionManager;->release()V
 
     const/4 v0, 0x0
 
-    .line 664
+    .line 687
     iput-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRemoteAnimationAdapterCompat:Lcom/android/systemui/shared/recents/system/RemoteAnimationAdapterCompat;
 
-    .line 665
+    .line 688
     iput-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mWallpaperOpenLauncherAnimationRunner:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$WallpaperOpenLauncherAnimationRunner;
 
-    .line 666
+    .line 689
     iput-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mLaunchingViewRef:Ljava/lang/ref/WeakReference;
 
-    .line 667
+    .line 690
     iput-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mActivityOptions:Landroid/app/ActivityOptions;
 
-    .line 668
+    .line 691
     iput-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIconLaunchAnimatorEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
-    .line 669
+    .line 692
     iget-object v1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpenFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
 
     if-eqz v1, :cond_0
 
-    .line 670
+    .line 693
     invoke-virtual {v1}, Lcom/miui/home/recents/FloatingIconLayer;->release()V
 
-    .line 671
+    .line 694
     iput-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpenFloatingIconLayer:Lcom/miui/home/recents/FloatingIconLayer;
 
-    .line 673
+    .line 696
     :cond_0
     iput-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mClosingFloatingIconView:Lcom/miui/home/recents/views/FloatingIconView;
 
-    .line 674
+    .line 697
     iput-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRectFSpringAnim:Lcom/miui/home/recents/util/RectFSpringAnim;
 
-    .line 675
+    .line 698
+    invoke-static {}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->getInstance()Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/miui/home/recents/breakableAnim/IconAndTaskBreakableAnimManager;->releaseAnim()V
+
+    .line 699
     iput-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mTaskLaunchEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
-    .line 676
+    .line 700
     iput-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mTaskLaunchFinishRunnable:Ljava/lang/Runnable;
 
     return-void
@@ -5272,7 +5823,7 @@
 .method public resetShortcutIconAlpha(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
     .locals 5
 
-    .line 1345
+    .line 1474
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mOpeningAnimTargetRef:Ljava/lang/ref/WeakReference;
 
     const/4 v1, 0x1
@@ -5297,7 +5848,7 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 1346
+    .line 1475
     iget-boolean v3, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIsOpenAnimRunning:Z
 
     if-eqz v3, :cond_2
@@ -5313,7 +5864,7 @@
     :goto_1
     const-string v2, "QuickstepAppTransitionManagerImpl"
 
-    .line 1348
+    .line 1477
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -5348,9 +5899,11 @@
 
     move-result-object v0
 
+    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     if-eqz v1, :cond_3
 
-    .line 1354
+    .line 1483
     invoke-interface {p1}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->getIconImageView()Landroid/view/View;
 
     move-result-object v0
@@ -5359,7 +5912,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1355
+    .line 1484
     invoke-direct {p0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->invalidateAdaptiveIconDrawable(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
 
     :cond_3
@@ -5369,10 +5922,10 @@
 .method public setRemoteAnimationProvider(Lcom/miui/home/recents/util/RemoteAnimationProvider;Landroid/os/CancellationSignal;)V
     .locals 1
 
-    .line 350
+    .line 363
     iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mRemoteAnimationProvider:Lcom/miui/home/recents/util/RemoteAnimationProvider;
 
-    .line 351
+    .line 364
     new-instance v0, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$0hd7dLizcINlHoqEqInuns_g_as;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$0hd7dLizcINlHoqEqInuns_g_as;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/util/RemoteAnimationProvider;)V
@@ -5385,7 +5938,7 @@
 .method public startRecentsContentAnimator(ZLcom/miui/home/recents/views/RecentsView;Lcom/miui/home/recents/views/TaskView;Lcom/miui/home/recents/util/MultiAnimationEndDetector;)V
     .locals 9
 
-    .line 821
+    .line 902
     invoke-virtual {p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -5401,7 +5954,7 @@
 
     if-eqz p2, :cond_5
 
-    .line 827
+    .line 908
     invoke-virtual {p2}, Lcom/miui/home/recents/views/RecentsView;->getHeight()I
 
     move-result v3
@@ -5430,7 +5983,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 829
+    .line 910
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getRecentsContainer()Lcom/miui/home/recents/views/RecentsContainer;
 
     move-result-object v0
@@ -5443,7 +5996,7 @@
 
     if-eqz v3, :cond_5
 
-    .line 831
+    .line 912
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
     move-result-object v0
@@ -5462,7 +6015,7 @@
     :cond_3
     if-eqz v3, :cond_5
 
-    .line 835
+    .line 916
     invoke-static {}, Lcom/miui/home/recents/util/SpringAnimationUtils;->getInstance()Lcom/miui/home/recents/util/SpringAnimationUtils;
 
     move-result-object v0
@@ -5480,7 +6033,7 @@
     :goto_1
     if-eqz p1, :cond_6
 
-    .line 841
+    .line 922
     new-instance p2, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$dIqAYnFB-oSVl3P-lry2-HPaUCI;
 
     invoke-direct {p2, p0}, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$dIqAYnFB-oSVl3P-lry2-HPaUCI;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)V
@@ -5492,8 +6045,8 @@
 
     if-eqz p3, :cond_7
 
-    .line 843
-    invoke-virtual {p3}, Lcom/miui/home/recents/views/TaskView;->getPackageName()Ljava/lang/String;
+    .line 924
+    invoke-virtual {p3}, Lcom/miui/home/recents/views/TaskView;->getTopPackageName()Ljava/lang/String;
 
     move-result-object p1
 
@@ -5510,7 +6063,7 @@
     :cond_7
     if-eqz v1, :cond_8
 
-    .line 845
+    .line 926
     new-instance p1, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$3;
 
     invoke-direct {p1, p0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$3;-><init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)V

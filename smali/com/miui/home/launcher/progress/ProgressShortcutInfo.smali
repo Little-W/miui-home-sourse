@@ -93,7 +93,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f10036a
+    const v0, 0x7f1003eb
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -139,11 +139,11 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Lcom/miui/home/launcher/Launcher;)V
+.method static synthetic access$000(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;Lcom/miui/home/launcher/Launcher;J)V
     .locals 0
 
     .line 38
-    invoke-direct {p0, p1}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->updateProgressIcon(Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->updateProgressIcon(Lcom/miui/home/launcher/Launcher;J)V
 
     return-void
 .end method
@@ -151,7 +151,7 @@
 .method private isAutoInstallShortcut()Z
     .locals 2
 
-    .line 270
+    .line 261
     iget v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->itemFlags:I
 
     const/16 v1, 0x10
@@ -174,7 +174,7 @@
 .method private isInstalledByServer(Landroid/content/Context;)Z
     .locals 2
 
-    .line 263
+    .line 254
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mAppProgressServer:Ljava/lang/String;
 
@@ -257,8 +257,8 @@
     return-void
 .end method
 
-.method private updateProgressIcon(Lcom/miui/home/launcher/Launcher;)V
-    .locals 5
+.method private updateProgressIcon(Lcom/miui/home/launcher/Launcher;J)V
+    .locals 3
 
     .line 131
     invoke-virtual {p1, p0}, Lcom/miui/home/launcher/Launcher;->getParentFolderInfo(Lcom/miui/home/launcher/ShortcutInfo;)Lcom/miui/home/launcher/FolderInfo;
@@ -273,25 +273,17 @@
     .line 133
     iget-wide v1, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->screenId:J
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
+    cmp-long p2, v1, p2
 
-    move-result-object v3
+    if-eqz p2, :cond_0
 
-    invoke-virtual {v3}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenId()J
+    iget-wide p2, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->container:J
 
-    move-result-wide v3
+    const-wide/16 v1, -0x65
 
-    cmp-long v1, v1, v3
+    cmp-long p2, p2, v1
 
-    if-eqz v1, :cond_0
-
-    iget-wide v1, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->container:J
-
-    const-wide/16 v3, -0x65
-
-    cmp-long v1, v1, v3
-
-    if-eqz v1, :cond_0
+    if-eqz p2, :cond_0
 
     if-eqz v0, :cond_3
 
@@ -302,11 +294,11 @@
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderCling;->getFolderId()J
 
-    move-result-wide v1
+    move-result-wide p1
 
-    iget-wide v3, v0, Lcom/miui/home/launcher/FolderInfo;->id:J
+    iget-wide v0, v0, Lcom/miui/home/launcher/FolderInfo;->id:J
 
-    cmp-long p1, v1, v3
+    cmp-long p1, p1, v0
 
     if-nez p1, :cond_3
 
@@ -324,9 +316,9 @@
     .line 139
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->isOpened()Z
 
-    move-result v1
+    move-result p2
 
-    if-eqz v1, :cond_2
+    if-eqz p2, :cond_2
 
     .line 140
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isFolderAnimating()Z
@@ -342,7 +334,7 @@
 
     .line 143
     :cond_2
-    iget-wide v1, v0, Lcom/miui/home/launcher/FolderInfo;->screenId:J
+    iget-wide p2, v0, Lcom/miui/home/launcher/FolderInfo;->screenId:J
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
@@ -350,9 +342,9 @@
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Workspace;->getCurrentScreenId()J
 
-    move-result-wide v3
+    move-result-wide v1
 
-    cmp-long p1, v1, v3
+    cmp-long p1, p2, v1
 
     if-nez p1, :cond_3
 
@@ -396,19 +388,19 @@
 .method public getBuddyIconView(Landroid/view/ViewGroup;)Lcom/miui/home/launcher/ShortcutIcon;
     .locals 1
 
-    .line 276
+    .line 267
     invoke-super {p0, p1}, Lcom/miui/home/launcher/RemoteShortcutInfo;->getBuddyIconView(Landroid/view/ViewGroup;)Lcom/miui/home/launcher/ShortcutIcon;
 
     move-result-object p1
 
     if-nez p1, :cond_0
 
-    .line 277
+    .line 268
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mBuddyIconView:Lcom/miui/home/launcher/ShortcutIcon;
 
     if-eqz v0, :cond_0
 
-    .line 279
+    .line 270
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mBuddyIconView:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutIcon;->onIconRemoved()V
@@ -442,21 +434,21 @@
 .method public handleClick(Lcom/miui/home/launcher/Launcher;Landroid/view/View;)Z
     .locals 3
 
-    .line 217
+    .line 208
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/RemoteShortcutInfo;->handleClick(Lcom/miui/home/launcher/Launcher;Landroid/view/View;)Z
 
     move-result p2
 
     if-nez p2, :cond_2
 
-    .line 218
+    .line 209
     invoke-direct {p0}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->isAutoInstallShortcut()Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    .line 220
+    .line 211
     :try_start_0
     new-instance p2, Landroid/content/Intent;
 
@@ -466,19 +458,19 @@
 
     const-string v0, "com.miui.core"
 
-    .line 221
+    .line 212
     invoke-virtual {p2, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "extra_package_name"
 
-    .line 222
+    .line 213
     invoke-virtual {p0}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 223
+    .line 214
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/Launcher;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -488,12 +480,12 @@
     :catch_0
     move-exception p1
 
-    .line 225
+    .line 216
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 227
+    .line 218
     :cond_0
     iget-object p2, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mAppProgressServer:Ljava/lang/String;
 
@@ -505,13 +497,13 @@
 
     if-eqz p2, :cond_1
 
-    .line 229
+    .line 220
     :try_start_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 230
+    .line 221
     new-instance p2, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.VIEW"
@@ -536,7 +528,7 @@
 
     invoke-direct {p2, v0, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 231
+    .line 222
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
@@ -556,12 +548,12 @@
     :catch_1
     move-exception p1
 
-    .line 233
+    .line 224
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 235
+    .line 226
     :cond_1
     iget p2, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressStatus:I
 
@@ -569,7 +561,7 @@
 
     if-eq p2, v0, :cond_2
 
-    .line 236
+    .line 227
     invoke-static {p1}, Lcom/miui/home/launcher/progress/ProgressManager;->getManager(Landroid/content/Context;)Lcom/miui/home/launcher/progress/ProgressManager;
 
     move-result-object p1
@@ -695,6 +687,8 @@
     const-string p2, "progress shortcut\'s intent or component is null"
 
     .line 166
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     :goto_0
     return-void
 .end method
@@ -702,7 +696,7 @@
 .method public onProgressFinished(Lcom/miui/home/launcher/Launcher;)V
     .locals 2
 
-    .line 243
+    .line 234
     invoke-virtual {p0}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -769,51 +763,22 @@
     return-void
 .end method
 
-.method public onReplaced(Landroid/content/Context;Lcom/miui/home/launcher/ShortcutInfo;)V
-    .locals 2
-
-    .line 208
-    invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/RemoteShortcutInfo;->onReplaced(Landroid/content/Context;Lcom/miui/home/launcher/ShortcutInfo;)V
-
-    const-string v0, "com.miui.cloudbackup"
-
-    .line 209
-    iget-object v1, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mAppProgressServer:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x4
-
-    .line 210
-    iput v0, p2, Lcom/miui/home/launcher/ShortcutInfo;->itemFlags:I
-
-    .line 211
-    invoke-static {p1, p2}, Lcom/miui/home/launcher/LauncherModel;->updateItemInDatabase(Landroid/content/Context;Lcom/miui/home/launcher/ItemInfo;)V
-
-    :cond_0
-    return-void
-.end method
-
 .method public setBuddyIconView(Lcom/miui/home/launcher/ShortcutIcon;Landroid/view/ViewGroup;)V
     .locals 1
 
     if-nez p1, :cond_0
 
-    .line 286
+    .line 277
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mBuddyIconView:Lcom/miui/home/launcher/ShortcutIcon;
 
     if-eqz v0, :cond_0
 
-    .line 288
+    .line 279
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mBuddyIconView:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutIcon;->onIconSetNull()V
 
-    .line 290
+    .line 281
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/RemoteShortcutInfo;->setBuddyIconView(Lcom/miui/home/launcher/ShortcutIcon;Landroid/view/ViewGroup;)V
 
@@ -849,8 +814,8 @@
     return-void
 .end method
 
-.method public updateStatus(Lcom/miui/home/launcher/Launcher;ILjava/lang/String;Landroid/net/Uri;)V
-    .locals 5
+.method public updateStatus(Lcom/miui/home/launcher/Launcher;ILjava/lang/String;Landroid/net/Uri;J)V
+    .locals 9
 
     .line 83
     invoke-virtual {p0}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->needShowProgress()Z
@@ -862,71 +827,79 @@
     if-ltz p2, :cond_1
 
     .line 84
-    iget v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressPercent:I
+    iget v3, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressPercent:I
 
-    if-eq v0, p2, :cond_1
+    if-eq v3, p2, :cond_1
 
-    sub-int v1, p2, v0
+    sub-int v4, p2, v3
 
     .line 87
-    iget-object v2, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
 
-    if-nez v2, :cond_0
+    if-nez v0, :cond_0
 
     .line 88
-    new-instance v2, Landroid/animation/ValueAnimator;
+    new-instance v0, Landroid/animation/ValueAnimator;
 
-    invoke-direct {v2}, Landroid/animation/ValueAnimator;-><init>()V
+    invoke-direct {v0}, Landroid/animation/ValueAnimator;-><init>()V
 
-    iput-object v2, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
+    iput-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
 
     .line 89
-    iget-object v2, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v3, Landroid/view/animation/LinearInterpolator;
+    new-instance v1, Landroid/view/animation/LinearInterpolator;
 
-    invoke-direct {v3}, Landroid/view/animation/LinearInterpolator;-><init>()V
+    invoke-direct {v1}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
-    invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     .line 90
-    iget-object v2, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
 
-    const/4 v3, 0x2
+    const/4 v1, 0x2
 
-    new-array v3, v3, [F
+    new-array v1, v1, [F
 
-    fill-array-data v3, :array_0
+    fill-array-data v1, :array_0
 
-    invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
     goto :goto_0
 
     .line 92
     :cond_0
-    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
 
     .line 93
-    iget-object v2, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
 
-    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->cancel()V
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
     .line 95
     :goto_0
-    iget-object v2, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
 
-    const-wide/16 v3, 0x226
+    const-wide/16 v1, 0x226
 
-    invoke-virtual {v2, v3, v4}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     .line 96
-    iget-object v2, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
+    iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
 
-    new-instance v3, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$1;
+    new-instance v8, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$1;
 
-    invoke-direct {v3, p0, v0, v1, p1}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$1;-><init>(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;IILcom/miui/home/launcher/Launcher;)V
+    move-object v1, v8
 
-    invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    move-object v2, p0
+
+    move-object v5, p1
+
+    move-wide v6, p5
+
+    invoke-direct/range {v1 .. v7}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo$1;-><init>(Lcom/miui/home/launcher/progress/ProgressShortcutInfo;IILcom/miui/home/launcher/Launcher;J)V
+
+    invoke-virtual {v0, v8}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 104
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mChangeProgressAnimator:Landroid/animation/ValueAnimator;
@@ -975,7 +948,7 @@
     iput p2, p0, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->mProgressStatus:I
 
     .line 114
-    invoke-direct {p0, p1}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->updateProgressIcon(Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {p0, p1, p5, p6}, Lcom/miui/home/launcher/progress/ProgressShortcutInfo;->updateProgressIcon(Lcom/miui/home/launcher/Launcher;J)V
 
     :cond_5
     if-eqz p4, :cond_8

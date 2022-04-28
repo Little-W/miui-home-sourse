@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="THUMBNAIL_VIEW_COLUMN_NUM">4</integer>
+    <integer name="config_cell_count_x_drawer_mode">6</integer>
+</resources>

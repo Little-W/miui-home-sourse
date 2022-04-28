@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3698
+    .line 3813
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$28;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -33,72 +33,45 @@
 
 # virtual methods
 .method public onChange(Z)V
-    .locals 2
+    .locals 3
 
-    .line 3701
-    sget-object p1, Lcom/miui/home/launcher/DeviceConfig;->INSTANCE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
+    .line 3816
+    new-instance p1, Landroid/content/Intent;
 
+    const-string v0, "android.intent.action.PACKAGE_CHANGED"
+
+    invoke-direct {p1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v0, "android.intent.extra.PACKAGES"
+
+    const-string v1, "com.android.contacts"
+
+    .line 3817
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v0, "package"
+
+    const-string v1, "com.android.contacts"
+
+    const/4 v2, 0x0
+
+    .line 3818
+    invoke-static {v0, v1, v2}, Landroid/net/Uri;->fromParts(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
+
+    .line 3819
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$28;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/util/MainThreadInitializedObject;->get(Landroid/content/Context;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/miui/home/launcher/DeviceConfig;
-
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$28;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getApplicationContext()Landroid/content/Context;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$3200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherModel;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$28;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v0, v1}, Lcom/miui/home/launcher/DeviceConfig;->loadScreenSize(Landroid/content/Context;Landroid/content/res/Resources;)V
-
-    .line 3702
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenSizeChanged()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 3703
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$28;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->onScreenSizeChanged()V
-
-    .line 3705
-    :cond_0
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$28;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3300(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FitSystemWindowView;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->performLayoutNow(Landroid/view/View;)V
-
-    .line 3706
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$28;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->performLayoutNow(Landroid/view/View;)V
-
-    .line 3707
-    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$28;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/search/SearchEdgeLayout;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/search/SearchEdgeLayout;->refreshSize()V
+    invoke-virtual {v0, v1, p1}, Lcom/miui/home/launcher/LauncherModel;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
 
     return-void
 .end method

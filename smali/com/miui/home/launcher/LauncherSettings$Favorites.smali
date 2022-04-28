@@ -20,14 +20,43 @@
 # static fields
 .field public static final CONTENT_URI:Landroid/net/Uri;
 
+.field public static final CONTENT_URI_STRING:Ljava/lang/String;
+
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    const-string v0, "content://com.miui.home.launcher.settings/favorites"
+    .line 159
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 162
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "content://"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Lcom/miui/home/launcher/LauncherSettings;->AUTHORITY:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "favorites"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/miui/home/launcher/LauncherSettings$Favorites;->CONTENT_URI_STRING:Ljava/lang/String;
+
+    .line 163
+    sget-object v0, Lcom/miui/home/launcher/LauncherSettings$Favorites;->CONTENT_URI_STRING:Ljava/lang/String;
+
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -40,12 +69,16 @@
 .method public static getContentUri(J)Landroid/net/Uri;
     .locals 2
 
-    .line 173
+    .line 174
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "content://com.miui.home.launcher.settings/favorites/"
+    sget-object v1, Lcom/miui/home/launcher/LauncherSettings$Favorites;->CONTENT_URI_STRING:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -65,12 +98,12 @@
 .method public static getJoinContentUri(Ljava/lang/String;)Landroid/net/Uri;
     .locals 2
 
-    .line 177
+    .line 178
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "content://com.miui.home.launcher.settings/favorites"
+    sget-object v1, Lcom/miui/home/launcher/LauncherSettings$Favorites;->CONTENT_URI_STRING:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

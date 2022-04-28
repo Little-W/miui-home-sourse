@@ -23,23 +23,23 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/os/IBinder;)V
-    .locals 3
+    .locals 6
 
     const-string v0, "context"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string/jumbo v0, "windowToken"
+    const-string v0, "windowToken"
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 31
+    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
+    .line 35
     iput-object p2, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mWindowToken:Landroid/os/IBinder;
 
-    .line 34
+    .line 36
     const-class v0, Landroid/app/WallpaperManager;
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -50,7 +50,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mWallpaperManager:Landroid/app/WallpaperManager;
 
-    .line 35
+    .line 37
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -71,26 +71,64 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mFolmeTarget:Ljava/lang/String;
 
-    .line 36
+    .line 38
+    invoke-static {}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->access$getUSE_PHY_ANIM$p()Z
+
+    move-result p1
+
+    const/4 p2, 0x2
+
+    const/4 v0, -0x2
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-eqz p1, :cond_0
+
     new-instance p1, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
 
-    const/4 p2, 0x2
+    new-array v3, p2, [F
 
-    new-array v0, p2, [F
+    fill-array-data v3, :array_0
 
-    fill-array-data v0, :array_0
-
-    const/4 v1, -0x2
-
-    invoke-virtual {p1, v1, v0}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
+    invoke-virtual {p1, v0, v3}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
 
+    goto :goto_0
+
+    .line 39
+    :cond_0
+    new-instance p1, Lmiuix/animation/base/AnimConfig;
+
+    invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
+
+    const/16 v3, 0xc
+
+    new-array v4, v2, [F
+
+    const/high16 v5, 0x44960000    # 1200.0f
+
+    aput v5, v4, v1
+
+    invoke-virtual {p1, v3, v4}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
+
+    move-result-object p1
+
+    .line 38
+    :goto_0
     iput-object p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomInAnimConfig:Lmiuix/animation/base/AnimConfig;
 
-    .line 37
+    .line 40
+    invoke-static {}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->access$getUSE_PHY_ANIM$p()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
     new-instance p1, Lmiuix/animation/base/AnimConfig;
 
     invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
@@ -99,74 +137,54 @@
 
     fill-array-data p2, :array_1
 
-    invoke-virtual {p1, v1, p2}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
+    invoke-virtual {p1, v0, p2}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
 
     move-result-object p1
 
+    goto :goto_1
+
+    .line 41
+    :cond_1
+    new-instance p1, Lmiuix/animation/base/AnimConfig;
+
+    invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
+
+    const/4 p2, 0x6
+
+    new-array v0, v2, [F
+
+    const/high16 v2, 0x43660000    # 230.0f
+
+    aput v2, v0, v1
+
+    invoke-virtual {p1, p2, v0}, Lmiuix/animation/base/AnimConfig;->setEase(I[F)Lmiuix/animation/base/AnimConfig;
+
+    move-result-object p1
+
+    .line 40
+    :goto_1
     iput-object p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomOutAnimConfig:Lmiuix/animation/base/AnimConfig;
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 39
+    .line 42
     iput p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomOut:F
 
-    .line 42
-    new-instance p2, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$mZoomListener$1;
+    .line 45
+    new-instance p1, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$mZoomListener$1;
 
-    invoke-direct {p2, p0}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$mZoomListener$1;-><init>(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)V
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$mZoomListener$1;-><init>(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)V
 
-    iput-object p2, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomListener:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$mZoomListener$1;
-
-    .line 50
-    invoke-direct {p0, p1}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->setWallpaperZoomOut(F)V
-
-    const/4 p2, 0x1
-
-    .line 51
-    new-array v0, p2, [Ljava/lang/Object;
-
-    iget-object v1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mFolmeTarget:Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    invoke-static {v0}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
-
-    move-result-object v0
-
-    .line 52
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Lmiuix/animation/IStateStyle;->setTo(Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+    iput-object p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomListener:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$mZoomListener$1;
 
     .line 53
-    iget-object p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomInAnimConfig:Lmiuix/animation/base/AnimConfig;
+    new-instance p1, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$1;
 
-    new-array v0, p2, [Lmiuix/animation/listener/TransitionListener;
+    invoke-direct {p1, p0}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$1;-><init>(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)V
 
-    iget-object v1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomListener:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$mZoomListener$1;
+    check-cast p1, Ljava/lang/Runnable;
 
-    check-cast v1, Lmiuix/animation/listener/TransitionListener;
-
-    aput-object v1, v0, v2
-
-    invoke-virtual {p1, v0}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
-
-    .line 54
-    iget-object p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomOutAnimConfig:Lmiuix/animation/base/AnimConfig;
-
-    new-array p2, p2, [Lmiuix/animation/listener/TransitionListener;
-
-    iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomListener:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$mZoomListener$1;
-
-    check-cast v0, Lmiuix/animation/listener/TransitionListener;
-
-    aput-object v0, p2, v2
-
-    invoke-virtual {p1, p2}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
+    invoke-static {p1}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
     return-void
 
@@ -174,48 +192,84 @@
 
     :array_0
     .array-data 4
-        0x3fa66666    # 1.3f
-        0x3fa66666    # 1.3f
+        0x3f8ccccd    # 1.1f
+        0x3f8ccccd    # 1.1f
     .end array-data
 
     :array_1
     .array-data 4
-        0x3fc00000    # 1.5f
-        0x3f19999a    # 0.6f
+        0x3f800000    # 1.0f
+        0x3f000000    # 0.5f
     .end array-data
 .end method
 
-.method public static final synthetic access$getMWallpaperManager$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)Landroid/app/WallpaperManager;
+.method public static final synthetic access$animateZoomOutTo(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;FZ)V
     .locals 0
 
-    .line 31
-    iget-object p0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mWallpaperManager:Landroid/app/WallpaperManager;
+    .line 33
+    invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->animateZoomOutTo(FZ)V
+
+    return-void
+.end method
+
+.method public static final synthetic access$getMFolmeTarget$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)Ljava/lang/String;
+    .locals 0
+
+    .line 33
+    iget-object p0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mFolmeTarget:Ljava/lang/String;
 
     return-object p0
 .end method
 
-.method public static final synthetic access$getMWindowToken$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)Landroid/os/IBinder;
+.method public static final synthetic access$getMZoomInAnimConfig$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)Lmiuix/animation/base/AnimConfig;
     .locals 0
 
-    .line 31
-    iget-object p0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mWindowToken:Landroid/os/IBinder;
+    .line 33
+    iget-object p0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomInAnimConfig:Lmiuix/animation/base/AnimConfig;
 
     return-object p0
 .end method
 
-.method public static final synthetic access$getMZoomOut$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)F
+.method public static final synthetic access$getMZoomListener$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$mZoomListener$1;
     .locals 0
 
-    .line 31
-    iget p0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomOut:F
+    .line 33
+    iget-object p0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomListener:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$mZoomListener$1;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getMZoomOutAnimConfig$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)Lmiuix/animation/base/AnimConfig;
+    .locals 0
+
+    .line 33
+    iget-object p0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomOutAnimConfig:Lmiuix/animation/base/AnimConfig;
+
+    return-object p0
+.end method
+
+.method public static final synthetic access$getMZoomedIn$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)Z
+    .locals 0
+
+    .line 33
+    iget-boolean p0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomedIn:Z
 
     return p0
+.end method
+
+.method public static final synthetic access$setMZoomedIn$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;Z)V
+    .locals 0
+
+    .line 33
+    iput-boolean p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomedIn:Z
+
+    return-void
 .end method
 
 .method public static final synthetic access$setWallpaperZoomOut(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;F)V
     .locals 0
 
-    .line 31
+    .line 33
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->setWallpaperZoomOut(F)V
 
     return-void
@@ -224,7 +278,7 @@
 .method private final animateZoomOutTo(FZ)V
     .locals 4
 
-    .line 70
+    .line 78
     iget v0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomOut:F
 
     cmpg-float v0, v0, p1
@@ -236,7 +290,7 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 73
+    .line 81
     new-array v1, v0, [Ljava/lang/Object;
 
     iget-object v2, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mFolmeTarget:Ljava/lang/String;
@@ -273,52 +327,79 @@
 .end method
 
 .method private final setWallpaperZoomOut(F)V
-    .locals 2
+    .locals 4
 
     const/4 v0, 0x0
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 77
+    .line 85
     invoke-static {p1, v0, v1}, Lkotlin/ranges/RangesKt;->coerceIn(FFF)F
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomOut:F
 
-    .line 79
-    new-instance p1, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$setWallpaperZoomOut$1;
+    .line 88
+    :try_start_0
+    invoke-static {}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->access$getUPDATE_ZOOM_METHOD$p()Ljava/lang/reflect/Method;
 
-    invoke-direct {p1, p0}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$setWallpaperZoomOut$1;-><init>(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)V
+    move-result-object p1
 
-    check-cast p1, Ljava/lang/Runnable;
+    if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
+    iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mWallpaperManager:Landroid/app/WallpaperManager;
 
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mWindowToken:Landroid/os/IBinder;
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x1
+
+    iget v3, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomOut:F
+
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    invoke-virtual {p1, v0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    .line 90
+    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_0
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
 .method public final abortAnimations()V
-    .locals 3
+    .locals 1
 
-    const/4 v0, 0x1
+    .line 72
+    new-instance v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$abortAnimations$1;
 
-    .line 66
-    new-array v0, v0, [Ljava/lang/Object;
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$abortAnimations$1;-><init>(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)V
 
-    iget-object v1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mFolmeTarget:Ljava/lang/String;
+    check-cast v0, Ljava/lang/Runnable;
 
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    invoke-static {v0}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lmiuix/animation/IStateStyle;->cancel()V
+    invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -326,33 +407,14 @@
 .method public final animateWallpaperZoom(Z)V
     .locals 1
 
-    .line 58
-    invoke-static {}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManagerKt;->access$getZOOM_ENABLED$p()Z
+    .line 63
+    new-instance v0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$animateWallpaperZoom$1;
 
-    move-result v0
+    invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$animateWallpaperZoom$1;-><init>(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;Z)V
 
-    if-eqz v0, :cond_1
+    check-cast v0, Ljava/lang/Runnable;
 
-    iget-boolean v0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomedIn:Z
-
-    if-eq v0, p1, :cond_1
-
-    if-eqz p1, :cond_0
-
-    const/high16 v0, 0x3f000000    # 0.5f
-
-    goto :goto_0
-
-    :cond_0
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    .line 59
-    :goto_0
-    invoke-direct {p0, v0, p1}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->animateZoomOutTo(FZ)V
-
-    .line 62
-    :cond_1
-    iput-boolean p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->mZoomedIn:Z
+    invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
     return-void
 .end method

@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherModel$LoaderTask;Lcom/miui/home/launcher/LauncherModel$Callbacks;Z)V
     .locals 0
 
-    .line 1502
+    .line 1570
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$7;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$7;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 3
 
-    .line 1504
+    .line 1572
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$7;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$7;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
@@ -57,12 +57,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1505
+    .line 1573
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$7;->val$callbacks:Lcom/miui/home/launcher/LauncherModel$Callbacks;
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$LoaderTask$7;->this$1:Lcom/miui/home/launcher/LauncherModel$LoaderTask;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->access$1900(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)Z
+    invoke-static {v1}, Lcom/miui/home/launcher/LauncherModel$LoaderTask;->access$2100(Lcom/miui/home/launcher/LauncherModel$LoaderTask;)Z
 
     move-result v1
 

@@ -31,20 +31,20 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/miui/home/recents/OverviewComponentObserver;)V
     .locals 0
 
-    .line 51
+    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
+    .line 51
     iput-object p1, p0, Lcom/miui/home/recents/OverviewCommandHelper;->mContext:Landroid/content/Context;
 
-    .line 53
+    .line 52
     new-instance p1, Lcom/miui/home/launcher/MainThreadExecutor;
 
     invoke-direct {p1}, Lcom/miui/home/launcher/MainThreadExecutor;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/recents/OverviewCommandHelper;->mMainThreadExecutor:Lcom/miui/home/launcher/MainThreadExecutor;
 
-    .line 55
+    .line 54
     iput-object p2, p0, Lcom/miui/home/recents/OverviewCommandHelper;->mOverviewComponentObserver:Lcom/miui/home/recents/OverviewComponentObserver;
 
     return-void
@@ -53,7 +53,7 @@
 .method static synthetic access$100(Lcom/miui/home/recents/OverviewCommandHelper;)Lcom/miui/home/recents/OverviewComponentObserver;
     .locals 0
 
-    .line 42
+    .line 41
     iget-object p0, p0, Lcom/miui/home/recents/OverviewCommandHelper;->mOverviewComponentObserver:Lcom/miui/home/recents/OverviewComponentObserver;
 
     return-object p0
@@ -62,7 +62,7 @@
 .method static synthetic access$200(Lcom/miui/home/recents/OverviewCommandHelper;)Landroid/content/Context;
     .locals 0
 
-    .line 42
+    .line 41
     iget-object p0, p0, Lcom/miui/home/recents/OverviewCommandHelper;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -71,7 +71,7 @@
 .method static synthetic access$300(Lcom/miui/home/recents/OverviewCommandHelper;)J
     .locals 2
 
-    .line 42
+    .line 41
     iget-wide v0, p0, Lcom/miui/home/recents/OverviewCommandHelper;->mLastToggleTime:J
 
     return-wide v0
@@ -80,7 +80,7 @@
 .method static synthetic access$302(Lcom/miui/home/recents/OverviewCommandHelper;J)J
     .locals 0
 
-    .line 42
+    .line 41
     iput-wide p1, p0, Lcom/miui/home/recents/OverviewCommandHelper;->mLastToggleTime:J
 
     return-wide p1
@@ -89,7 +89,7 @@
 .method static synthetic access$400(Lcom/miui/home/recents/OverviewCommandHelper;)Lcom/miui/home/launcher/MainThreadExecutor;
     .locals 0
 
-    .line 42
+    .line 41
     iget-object p0, p0, Lcom/miui/home/recents/OverviewCommandHelper;->mMainThreadExecutor:Lcom/miui/home/launcher/MainThreadExecutor;
 
     return-object p0
@@ -100,7 +100,7 @@
 .method public onOverviewHidden()V
     .locals 3
 
-    .line 69
+    .line 68
     iget-object v0, p0, Lcom/miui/home/recents/OverviewCommandHelper;->mMainThreadExecutor:Lcom/miui/home/launcher/MainThreadExecutor;
 
     new-instance v1, Lcom/miui/home/recents/OverviewCommandHelper$HideRecentsCommand;
@@ -117,7 +117,7 @@
 .method public onOverviewShown(Z)V
     .locals 2
 
-    .line 65
+    .line 64
     iget-object v0, p0, Lcom/miui/home/recents/OverviewCommandHelper;->mMainThreadExecutor:Lcom/miui/home/launcher/MainThreadExecutor;
 
     new-instance v1, Lcom/miui/home/recents/OverviewCommandHelper$ShowRecentsCommand;
@@ -132,17 +132,17 @@
 .method public onOverviewToggle()V
     .locals 2
 
-    .line 59
+    .line 58
     invoke-static {}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 
     move-result-object v0
 
     const-string v1, "recentapps"
 
-    .line 60
+    .line 59
     invoke-virtual {v0, v1}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->closeSystemWindows(Ljava/lang/String;)V
 
-    .line 61
+    .line 60
     iget-object v0, p0, Lcom/miui/home/recents/OverviewCommandHelper;->mMainThreadExecutor:Lcom/miui/home/launcher/MainThreadExecutor;
 
     new-instance v1, Lcom/miui/home/recents/OverviewCommandHelper$RecentsActivityCommand;

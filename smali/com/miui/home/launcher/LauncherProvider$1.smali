@@ -20,29 +20,25 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/LauncherProvider;
 
-.field final synthetic val$homePreview:Landroid/graphics/Bitmap;
+.field final synthetic val$context:Landroid/content/Context;
 
-.field final synthetic val$isHotseatsNeedAlpha:Z
-
-.field final synthetic val$isOnlyShortCut:Z
+.field final synthetic val$lockScreenSnapshot:Landroid/graphics/Bitmap;
 
 .field final synthetic val$wallpaperColorMode:I
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/LauncherProvider;ILandroid/graphics/Bitmap;ZZ)V
+.method constructor <init>(Lcom/miui/home/launcher/LauncherProvider;Landroid/content/Context;ILandroid/graphics/Bitmap;)V
     .locals 0
 
-    .line 586
+    .line 592
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherProvider$1;->this$0:Lcom/miui/home/launcher/LauncherProvider;
 
-    iput p2, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$wallpaperColorMode:I
+    iput-object p2, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$context:Landroid/content/Context;
 
-    iput-object p3, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$homePreview:Landroid/graphics/Bitmap;
+    iput p3, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$wallpaperColorMode:I
 
-    iput-boolean p4, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$isOnlyShortCut:Z
-
-    iput-boolean p5, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$isHotseatsNeedAlpha:Z
+    iput-object p4, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$lockScreenSnapshot:Landroid/graphics/Bitmap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -52,18 +48,29 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 6
 
-    .line 589
-    iget v0, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$wallpaperColorMode:I
+    .line 596
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getStatusBarHeight()I
 
-    iget-object v1, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$homePreview:Landroid/graphics/Bitmap;
+    move-result v5
 
-    iget-boolean v2, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$isOnlyShortCut:Z
+    .line 597
+    iget-object v0, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$context:Landroid/content/Context;
 
-    iget-boolean v3, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$isHotseatsNeedAlpha:Z
+    iget v1, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$wallpaperColorMode:I
 
-    invoke-static {v0, v1, v2, v3}, Lcom/miui/home/launcher/WallpaperUtils;->correctHomeScreenPreview(ILandroid/graphics/Bitmap;ZZ)V
+    iget-object v2, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$lockScreenSnapshot:Landroid/graphics/Bitmap;
+
+    .line 598
+    invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
+
+    move-result v3
+
+    const/4 v4, 0x0
+
+    .line 597
+    invoke-static/range {v0 .. v5}, Lcom/miui/launcher/utils/MamlUtils;->snapshootLockscreen(Landroid/content/Context;ILandroid/graphics/Bitmap;ZII)Landroid/graphics/Bitmap;
 
     return-void
 .end method

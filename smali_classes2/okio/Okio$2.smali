@@ -183,6 +183,15 @@
     throw p1
 .end method
 
+.method public timeout()Lokio/Timeout;
+    .locals 1
+
+    .line 156
+    iget-object v0, p0, Lokio/Okio$2;->val$timeout:Lokio/Timeout;
+
+    return-object v0
+.end method
+
 .method public toString()Ljava/lang/String;
     .locals 2
 

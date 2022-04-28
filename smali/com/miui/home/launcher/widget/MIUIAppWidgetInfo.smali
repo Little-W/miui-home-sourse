@@ -4,6 +4,8 @@
 
 
 # instance fields
+.field public miuiAutoScale:Z
+
 .field public miuiWidgetRefresh:Ljava/lang/String;
 
 .field public miuiWidgetRefreshMinInterval:I
@@ -34,7 +36,7 @@
 .method public getMIUIWidgetRefreshMinInterval()J
     .locals 2
 
-    .line 41
+    .line 43
     iget v0, p0, Lcom/miui/home/launcher/widget/MIUIAppWidgetInfo;->miuiWidgetRefreshMinInterval:I
 
     if-gtz v0, :cond_0
@@ -59,7 +61,7 @@
 .method public initMiuiAttribute(Landroid/content/ComponentName;)V
     .locals 1
 
-    .line 60
+    .line 62
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -70,20 +72,25 @@
 
     if-eqz p1, :cond_0
 
-    .line 62
+    .line 64
     iget-boolean v0, p1, Lcom/miui/home/launcher/widget/AppWidgetProviderMeta;->isMIUIWidget:Z
 
     iput-boolean v0, p0, Lcom/miui/home/launcher/widget/MIUIAppWidgetInfo;->isMIUIWidget:Z
 
-    .line 63
+    .line 65
     iget-object v0, p1, Lcom/miui/home/launcher/widget/AppWidgetProviderMeta;->refreshMode:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/MIUIAppWidgetInfo;->miuiWidgetRefresh:Ljava/lang/String;
 
-    .line 64
-    iget p1, p1, Lcom/miui/home/launcher/widget/AppWidgetProviderMeta;->minRefreshInterval:I
+    .line 66
+    iget v0, p1, Lcom/miui/home/launcher/widget/AppWidgetProviderMeta;->minRefreshInterval:I
 
-    iput p1, p0, Lcom/miui/home/launcher/widget/MIUIAppWidgetInfo;->miuiWidgetRefreshMinInterval:I
+    iput v0, p0, Lcom/miui/home/launcher/widget/MIUIAppWidgetInfo;->miuiWidgetRefreshMinInterval:I
+
+    .line 67
+    iget-boolean p1, p1, Lcom/miui/home/launcher/widget/AppWidgetProviderMeta;->miuiAutoScale:Z
+
+    iput-boolean p1, p0, Lcom/miui/home/launcher/widget/MIUIAppWidgetInfo;->miuiAutoScale:Z
 
     :cond_0
     return-void
@@ -94,7 +101,7 @@
 
     const-string v0, "exposure"
 
-    .line 37
+    .line 39
     iget-object v1, p0, Lcom/miui/home/launcher/widget/MIUIAppWidgetInfo;->miuiWidgetRefresh:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -113,7 +120,7 @@
 
     return-object p1
 
-    .line 48
+    .line 50
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -123,10 +130,10 @@
 
     const-string v1, "appWidgetIds"
 
-    .line 49
+    .line 51
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[I)Landroid/content/Intent;
 
-    .line 50
+    .line 52
     invoke-virtual {v0, p2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     return-object v0

@@ -52,7 +52,7 @@
     .line 55
     iget-object p2, p0, Lcom/miui/home/launcher/view/DefaultRecyclerViewFastScroller;->mTrackPaint:Landroid/graphics/Paint;
 
-    const p3, 0x7f060032
+    const p3, 0x7f060033
 
     invoke-static {p1, p3}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -84,7 +84,7 @@
     .line 60
     iget-object p2, p0, Lcom/miui/home/launcher/view/DefaultRecyclerViewFastScroller;->mThumbPaint:Landroid/graphics/Paint;
 
-    const p3, 0x7f060030
+    const p3, 0x7f060031
 
     invoke-static {p1, p3}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -104,7 +104,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0700cb
+    const p2, 0x7f070106
 
     .line 64
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -113,7 +113,7 @@
 
     iput p2, p0, Lcom/miui/home/launcher/view/DefaultRecyclerViewFastScroller;->mTrackWidth:I
 
-    const p2, 0x7f0700ca
+    const p2, 0x7f070105
 
     .line 66
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

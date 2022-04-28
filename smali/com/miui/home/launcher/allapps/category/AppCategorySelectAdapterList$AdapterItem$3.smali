@@ -18,7 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 80
+    .line 81
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;-><init>()V
 
     return-void
@@ -37,7 +37,7 @@
 .method public areItemsTheSame(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;)Z
     .locals 1
 
-    .line 83
+    .line 84
     iget v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem$3;->viewType:I
 
     iget p1, p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;->viewType:I

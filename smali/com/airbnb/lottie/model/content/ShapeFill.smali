@@ -24,25 +24,25 @@
 .method public constructor <init>(Ljava/lang/String;ZLandroid/graphics/Path$FillType;Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;Z)V
     .locals 0
 
-    .line 22
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
+    .line 24
     iput-object p1, p0, Lcom/airbnb/lottie/model/content/ShapeFill;->name:Ljava/lang/String;
 
-    .line 24
+    .line 25
     iput-boolean p2, p0, Lcom/airbnb/lottie/model/content/ShapeFill;->fillEnabled:Z
 
-    .line 25
+    .line 26
     iput-object p3, p0, Lcom/airbnb/lottie/model/content/ShapeFill;->fillType:Landroid/graphics/Path$FillType;
 
-    .line 26
+    .line 27
     iput-object p4, p0, Lcom/airbnb/lottie/model/content/ShapeFill;->color:Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;
 
-    .line 27
+    .line 28
     iput-object p5, p0, Lcom/airbnb/lottie/model/content/ShapeFill;->opacity:Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
 
-    .line 28
+    .line 29
     iput-boolean p6, p0, Lcom/airbnb/lottie/model/content/ShapeFill;->hidden:Z
 
     return-void
@@ -53,7 +53,7 @@
 .method public getColor()Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;
     .locals 1
 
-    .line 36
+    .line 37
     iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeFill;->color:Lcom/airbnb/lottie/model/animatable/AnimatableColorValue;
 
     return-object v0
@@ -62,7 +62,7 @@
 .method public getFillType()Landroid/graphics/Path$FillType;
     .locals 1
 
-    .line 44
+    .line 45
     iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeFill;->fillType:Landroid/graphics/Path$FillType;
 
     return-object v0
@@ -71,7 +71,7 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .line 32
+    .line 33
     iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeFill;->name:Ljava/lang/String;
 
     return-object v0
@@ -80,7 +80,7 @@
 .method public getOpacity()Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
     .locals 1
 
-    .line 40
+    .line 41
     iget-object v0, p0, Lcom/airbnb/lottie/model/content/ShapeFill;->opacity:Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
 
     return-object v0
@@ -89,7 +89,7 @@
 .method public isHidden()Z
     .locals 1
 
-    .line 48
+    .line 49
     iget-boolean v0, p0, Lcom/airbnb/lottie/model/content/ShapeFill;->hidden:Z
 
     return v0
@@ -98,7 +98,7 @@
 .method public toContent(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;)Lcom/airbnb/lottie/animation/content/Content;
     .locals 1
 
-    .line 52
+    .line 53
     new-instance v0, Lcom/airbnb/lottie/animation/content/FillContent;
 
     invoke-direct {v0, p1, p2, p0}, Lcom/airbnb/lottie/animation/content/FillContent;-><init>(Lcom/airbnb/lottie/LottieDrawable;Lcom/airbnb/lottie/model/layer/BaseLayer;Lcom/airbnb/lottie/model/content/ShapeFill;)V
@@ -109,7 +109,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 57
+    .line 58
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

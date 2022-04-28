@@ -72,12 +72,12 @@
 
     const/4 v0, 0x3
 
-    .line 282
+    .line 287
     new-array v0, v0, [Ljava/lang/Integer;
 
     const/16 v1, 0xe
 
-    .line 283
+    .line 288
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -88,14 +88,14 @@
 
     const/4 v1, 0x1
 
-    .line 284
+    .line 289
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     aput-object v3, v0, v1
 
-    .line 285
+    .line 290
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -106,10 +106,10 @@
 
     sput-object v0, Lcom/miui/home/launcher/ApplicationsMessage;->TYPE_ALL:[Ljava/lang/Integer;
 
-    .line 286
+    .line 291
     new-array v0, v1, [Ljava/lang/Integer;
 
-    .line 287
+    .line 292
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -148,7 +148,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mObservers:Ljava/util/HashMap;
 
-    .line 349
+    .line 354
     new-instance v0, Lcom/miui/home/launcher/ApplicationsMessage$3;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/ApplicationsMessage$3;-><init>(Lcom/miui/home/launcher/ApplicationsMessage;)V
@@ -204,7 +204,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f05001e
+    const v0, 0x7f05001d
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -309,20 +309,20 @@
 .method private clearAllMessage()V
     .locals 9
 
-    .line 240
+    .line 245
     iget-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 243
+    .line 248
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getAllLoadedShortcut()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 244
+    .line 249
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -341,7 +341,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 245
+    .line 250
     iget-object v2, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mSelfUpdateItems:Ljava/util/HashSet;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
@@ -354,7 +354,7 @@
 
     if-nez v2, :cond_1
 
-    .line 246
+    .line 251
     invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->getComponentName()Landroid/content/ComponentName;
 
     move-result-object v4
@@ -375,7 +375,7 @@
 
     goto :goto_0
 
-    .line 249
+    .line 254
     :cond_2
     new-instance v0, Ljava/util/HashSet;
 
@@ -387,7 +387,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 250
+    .line 255
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -406,7 +406,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/AppInfo;
 
-    .line 251
+    .line 256
     iget-object v2, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mSelfUpdateItems:Ljava/util/HashSet;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/AppInfo;->getPackageName()Ljava/lang/String;
@@ -421,7 +421,7 @@
 
     const/4 v2, 0x0
 
-    .line 252
+    .line 257
     invoke-direct {p0, v1, v2, v2, v2}, Lcom/miui/home/launcher/ApplicationsMessage;->updateAppsViewMessage(Lcom/miui/home/launcher/AppInfo;Ljava/lang/String;Ljava/lang/String;[B)V
 
     goto :goto_1
@@ -443,7 +443,7 @@
         }
     .end annotation
 
-    .line 290
+    .line 295
     iget-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
@@ -607,17 +607,112 @@
     return-void
 .end method
 
+.method static synthetic lambda$updateFolderMessage$0(Lcom/miui/home/launcher/FolderInfo;Ljava/lang/Void;)Ljava/lang/Integer;
+    .locals 2
+
+    .line 222
+    new-instance p1, Ljava/util/HashSet;
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/FolderInfo;->getContents()Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    .line 224
+    invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    const/4 p1, 0x0
+
+    :catch_0
+    :cond_0
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
+
+    .line 225
+    invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->isEmptyMessage()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 227
+    :try_start_0
+    invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getMessageText()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    add-int/2addr p1, v0
+
+    goto :goto_0
+
+    .line 232
+    :cond_1
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic lambda$updateFolderMessage$1(Lcom/miui/home/launcher/FolderIcon;Ljava/lang/Integer;)V
+    .locals 1
+
+    .line 235
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    .line 236
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderIcon;->setMessage(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 238
+    :cond_0
+    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/FolderIcon;->setMessage(Ljava/lang/String;)V
+
+    :goto_0
+    return-void
+.end method
+
 .method private updateAppsViewMessage(Landroid/content/ComponentName;Ljava/lang/String;Ljava/lang/String;[BLandroid/os/UserHandle;)V
     .locals 7
 
     if-eqz p1, :cond_0
 
-    .line 316
+    .line 321
     iget-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     if-eqz v0, :cond_0
 
-    .line 317
+    .line 322
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getAllAppsStore()Lcom/miui/home/launcher/allapps/AllAppsStore;
 
     move-result-object v1
@@ -643,12 +738,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 322
+    .line 327
     iget-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     if-eqz v0, :cond_0
 
-    .line 323
+    .line 328
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getAllAppsStore()Lcom/miui/home/launcher/allapps/AllAppsStore;
 
     move-result-object v0
@@ -662,7 +757,7 @@
 .method private updateMessage(Landroid/content/ComponentName;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;[B)V
     .locals 8
 
-    .line 258
+    .line 263
     iget-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     if-nez v0, :cond_0
@@ -674,7 +769,7 @@
 
     const-string v0, ""
 
-    .line 261
+    .line 266
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -683,7 +778,7 @@
 
     goto :goto_2
 
-    .line 264
+    .line 269
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -693,14 +788,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 265
+    .line 270
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 266
+    .line 271
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p2
@@ -718,7 +813,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 267
+    .line 272
     invoke-direct {p0, v0, p4, p5, p6}, Lcom/miui/home/launcher/ApplicationsMessage;->updateWorkspaceMessage(Lcom/miui/home/launcher/ShortcutInfo;Ljava/lang/String;Ljava/lang/String;[B)V
 
     goto :goto_0
@@ -726,14 +821,14 @@
     :cond_2
     const-string v0, "."
 
-    .line 271
+    .line 276
     invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 272
+    .line 277
     new-instance v0, Landroid/content/ComponentName;
 
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -762,7 +857,7 @@
 
     goto :goto_1
 
-    .line 274
+    .line 279
     :cond_3
     new-instance v0, Landroid/content/ComponentName;
 
@@ -785,7 +880,7 @@
 
     move v7, p3
 
-    .line 276
+    .line 281
     invoke-direct/range {v2 .. v7}, Lcom/miui/home/launcher/ApplicationsMessage;->updateWorkspaceMessage(Landroid/content/ComponentName;Ljava/lang/String;Ljava/lang/String;[BI)V
 
     goto :goto_3
@@ -804,10 +899,10 @@
 
     move v5, p3
 
-    .line 262
+    .line 267
     invoke-direct/range {v0 .. v5}, Lcom/miui/home/launcher/ApplicationsMessage;->updateWorkspaceMessage(Landroid/content/ComponentName;Ljava/lang/String;Ljava/lang/String;[BI)V
 
-    .line 279
+    .line 284
     :cond_5
     :goto_3
     iget-object p2, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -836,21 +931,21 @@
 
     if-eqz p1, :cond_0
 
-    .line 295
+    .line 300
     invoke-direct {p0, p1, p5}, Lcom/miui/home/launcher/ApplicationsMessage;->getWorkspaceShortcutInfo(Landroid/content/ComponentName;I)Ljava/util/List;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 296
+    .line 301
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result p5
 
     if-nez p5, :cond_0
 
-    .line 297
+    .line 302
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -868,7 +963,7 @@
 
     check-cast p5, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 298
+    .line 303
     invoke-direct {p0, p5, p2, p3, p4}, Lcom/miui/home/launcher/ApplicationsMessage;->updateWorkspaceMessage(Lcom/miui/home/launcher/ShortcutInfo;Ljava/lang/String;Ljava/lang/String;[B)V
 
     goto :goto_0
@@ -882,7 +977,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 305
+    .line 310
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->isHideApplicationMessage()Z
 
     move-result v0
@@ -893,10 +988,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 306
+    .line 311
     invoke-virtual {p1, p2, p3, p4}, Lcom/miui/home/launcher/ShortcutInfo;->setMessage(Ljava/lang/String;Ljava/lang/String;[B)V
 
-    .line 307
+    .line 312
     iget-object p2, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/Launcher;->getParentFolderInfo(Lcom/miui/home/launcher/ShortcutInfo;)Lcom/miui/home/launcher/FolderInfo;
@@ -905,10 +1000,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 309
+    .line 314
     invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->notifyDataSetChanged()V
 
-    .line 310
+    .line 315
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ApplicationsMessage;->updateFolderMessage(Lcom/miui/home/launcher/FolderInfo;)V
 
     :cond_0
@@ -930,7 +1025,7 @@
 
     const/4 v0, 0x1
 
-    .line 359
+    .line 364
     new-array v0, v0, [Ljava/lang/Object;
 
     iget-object v1, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLoadingFinishMessageHandler:Lcom/miui/home/launcher/common/messages/LoadingFinishMessageHandler;
@@ -949,12 +1044,12 @@
 .method public onDestroy()V
     .locals 4
 
-    .line 334
+    .line 339
     iget-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mMessageReceiver:Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;
 
     if-eqz v0, :cond_0
 
-    .line 335
+    .line 340
     iget-object v1, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Launcher;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
@@ -962,17 +1057,17 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 337
+    .line 342
     iput-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mMessageReceiver:Lcom/miui/home/launcher/ApplicationsMessage$MessageReceiver;
 
-    .line 338
+    .line 343
     iget-object v1, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 339
+    .line 344
     iget-object v2, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mObservers:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -999,21 +1094,21 @@
 
     if-eqz v3, :cond_1
 
-    .line 341
+    .line 346
     invoke-virtual {v1, v3}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     goto :goto_0
 
-    .line 344
+    .line 349
     :cond_2
     iget-object v1, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mObservers:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 345
+    .line 350
     iput-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 346
+    .line 351
     iput-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLastLaunchShortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
 
     return-void
@@ -1022,7 +1117,7 @@
 .method public onLaunchApplication(Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 2
 
-    .line 328
+    .line 333
     iget-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mSelfUpdateItems:Ljava/util/HashSet;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
@@ -1035,7 +1130,7 @@
 
     if-nez v0, :cond_0
 
-    .line 329
+    .line 334
     iput-object p1, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLastLaunchShortcutInfo:Lcom/miui/home/launcher/ShortcutInfo;
 
     :cond_0
@@ -1128,18 +1223,16 @@
 .end method
 
 .method public updateFolderMessage(Lcom/miui/home/launcher/FolderInfo;)V
-    .locals 4
+    .locals 2
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_1
 
     .line 215
     iget-object v0, p0, Lcom/miui/home/launcher/ApplicationsMessage;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_1
 
-    const/4 v1, 0x0
-
-    .line 217
+    .line 216
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Launcher;->getFolderIcon(Lcom/miui/home/launcher/FolderInfo;)Lcom/miui/home/launcher/FolderIcon;
 
     move-result-object v0
@@ -1148,78 +1241,20 @@
 
     return-void
 
-    .line 222
+    .line 220
     :cond_0
-    new-instance v2, Ljava/util/HashSet;
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$m5vW58NwLl0BYKuf5YGY-1D6ks4;
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/FolderInfo;->getContents()Ljava/util/List;
+    invoke-direct {v1, p1}, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$m5vW58NwLl0BYKuf5YGY-1D6ks4;-><init>(Lcom/miui/home/launcher/FolderInfo;)V
 
-    move-result-object p1
+    new-instance p1, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$Jdj4Y1rHvLsRDE89UUAouh4_L-Y;
 
-    invoke-direct {v2, p1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+    invoke-direct {p1, v0}, Lcom/miui/home/launcher/-$$Lambda$ApplicationsMessage$Jdj4Y1rHvLsRDE89UUAouh4_L-Y;-><init>(Lcom/miui/home/launcher/FolderIcon;)V
 
-    .line 223
-    invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    invoke-static {v1, p1, v0}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->execParallel(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;)V
 
-    :catch_0
     :cond_1
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
-
-    .line 224
-    invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->isEmptyMessage()Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    .line 226
-    :try_start_0
-    invoke-virtual {v2}, Lcom/miui/home/launcher/ShortcutInfo;->getMessageText()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v2
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    add-int/2addr v1, v2
-
-    goto :goto_0
-
-    :cond_2
-    if-nez v1, :cond_3
-
-    const/4 p1, 0x0
-
-    .line 232
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderIcon;->setMessage(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    .line 234
-    :cond_3
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderIcon;->setMessage(Ljava/lang/String;)V
-
-    :cond_4
-    :goto_1
     return-void
 .end method

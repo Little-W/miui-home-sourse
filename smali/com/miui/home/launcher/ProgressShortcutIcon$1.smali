@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ProgressShortcutIcon;)V
     .locals 0
 
-    .line 374
+    .line 377
     iput-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon$1;->this$0:Lcom/miui/home/launcher/ProgressShortcutIcon;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 387
+    .line 390
     iget-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon$1;->this$0:Lcom/miui/home/launcher/ProgressShortcutIcon;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->access$002(Lcom/miui/home/launcher/ProgressShortcutIcon;Z)Z
 
-    .line 388
+    .line 391
     iget-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon$1;->this$0:Lcom/miui/home/launcher/ProgressShortcutIcon;
 
     const/4 v0, 0x0
@@ -58,14 +58,14 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 381
+    .line 384
     iget-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon$1;->this$0:Lcom/miui/home/launcher/ProgressShortcutIcon;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/ProgressShortcutIcon;->access$002(Lcom/miui/home/launcher/ProgressShortcutIcon;Z)Z
 
-    .line 382
+    .line 385
     iget-object p1, p0, Lcom/miui/home/launcher/ProgressShortcutIcon$1;->this$0:Lcom/miui/home/launcher/ProgressShortcutIcon;
 
     const/4 v0, 0x0

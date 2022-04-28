@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;)V
     .locals 0
 
-    .line 182
+    .line 183
     iput-object p1, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$1;->this$0:Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +49,7 @@
 
     const/4 v0, 0x0
 
-    .line 185
+    .line 186
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ShortcutInfo;->setIsChecked(Z)V
 
     return-void
@@ -58,7 +58,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 182
+    .line 183
     check-cast p1, Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$1;->accept(Lcom/miui/home/launcher/ShortcutInfo;)V

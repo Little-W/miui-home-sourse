@@ -8,15 +8,8 @@
     <dimen name="date_picker_layout_padding">29.099976dip</dimen>
     <dimen name="date_picker_lunar_text_size">17.449982sp</dimen>
     <dimen name="edit_text_clear_icon_padding">14.279999dip</dimen>
-    <dimen name="menu_background_radius">2.899994dip</dimen>
-    <dimen name="menu_icon_margin_end">19.599976dip</dimen>
-    <dimen name="menu_item_height_double">64.79999dip</dimen>
-    <dimen name="menu_item_height_multi">61.099976dip</dimen>
-    <dimen name="menu_item_height_one">75.599976dip</dimen>
-    <dimen name="menu_item_padding_left">29.0dip</dimen>
-    <dimen name="menu_item_width">181.79999dip</dimen>
-    <dimen name="menu_text_size">16.0sp</dimen>
     <dimen name="miuix_appcompat_action_bar_default_height">58.19998dip</dimen>
+    <dimen name="miuix_appcompat_action_bar_floating_height">58.19998dip</dimen>
     <dimen name="miuix_appcompat_action_bar_horizontal_padding_end">17.5dip</dimen>
     <dimen name="miuix_appcompat_action_bar_horizontal_padding_start">21.099976dip</dimen>
     <dimen name="miuix_appcompat_action_bar_stacked_tab_max_width">196.35999dip</dimen>
@@ -35,11 +28,13 @@
     <dimen name="miuix_appcompat_action_bar_tab_secondary_expand_text_size">18.909973sp</dimen>
     <dimen name="miuix_appcompat_action_bar_tab_secondary_margin">24.0dip</dimen>
     <dimen name="miuix_appcompat_action_bar_tab_text_size">20.369995sp</dimen>
-    <dimen name="miuix_appcompat_action_bar_title_bottom_padding">12.0dip</dimen>
+    <dimen name="miuix_appcompat_action_bar_title_bottom_padding">12.72998dip</dimen>
     <dimen name="miuix_appcompat_action_bar_title_expand_item_padding_end">8.719971dip</dimen>
     <dimen name="miuix_appcompat_action_bar_title_horizontal_padding">26.909973dip</dimen>
     <dimen name="miuix_appcompat_action_bar_title_tab_collapse_bottom_padding">8.369995dip</dimen>
-    <dimen name="miuix_appcompat_action_bar_title_top_padding">2.899994dip</dimen>
+    <dimen name="miuix_appcompat_action_bar_title_tab_collapse_top_padding">8.369995dip</dimen>
+    <dimen name="miuix_appcompat_action_bar_title_tab_horizontal_padding">29.099976dip</dimen>
+    <dimen name="miuix_appcompat_action_bar_title_top_padding">2.9099731dip</dimen>
     <dimen name="miuix_appcompat_action_button_bg_bottom_padding">15.269989dip</dimen>
     <dimen name="miuix_appcompat_action_button_bg_top_padding">15.269989dip</dimen>
     <dimen name="miuix_appcompat_action_button_height">27.0dip</dimen>
@@ -61,7 +56,9 @@
     <dimen name="miuix_appcompat_alphabet_indexer_item_height">11.639984dip</dimen>
     <dimen name="miuix_appcompat_alphabet_indexer_item_margin">3.2729797dip</dimen>
     <dimen name="miuix_appcompat_alphabet_indexer_margin_end">14.539978dip</dimen>
+    <dimen name="miuix_appcompat_alphabet_indexer_min_item_margin">1.8199768dip</dimen>
     <dimen name="miuix_appcompat_alphabet_indexer_min_width">20.699982dip</dimen>
+    <dimen name="miuix_appcompat_alphabet_indexer_omit_item_height">4.3599854dip</dimen>
     <dimen name="miuix_appcompat_alphabet_indexer_overlay_offset">54.549988dip</dimen>
     <dimen name="miuix_appcompat_alphabet_indexer_overlay_text_size">29.089996dip</dimen>
     <dimen name="miuix_appcompat_alphabet_indexer_padding_vertical">7.5999756dip</dimen>
@@ -77,7 +74,7 @@
     <dimen name="miuix_appcompat_arrow_popup_triangle_padding">32.72998dip</dimen>
     <dimen name="miuix_appcompat_arrow_popup_triangle_padding_adjust">-10.579987dip</dimen>
     <dimen name="miuix_appcompat_arrow_popup_triangle_top_w">20.369995dip</dimen>
-    <dimen name="miuix_appcompat_arrow_popup_view_min_height">79.28dip</dimen>
+    <dimen name="miuix_appcompat_arrow_popup_view_min_height">77.09dip</dimen>
     <dimen name="miuix_appcompat_arrow_popup_view_paddingBottom">18.189972dip</dimen>
     <dimen name="miuix_appcompat_arrow_popup_view_paddingEnd">16.0dip</dimen>
     <dimen name="miuix_appcompat_arrow_popup_view_paddingStart">15.629974dip</dimen>
@@ -99,15 +96,15 @@
     <dimen name="miuix_appcompat_check_widget_height_v19">41.23999dip</dimen>
     <dimen name="miuix_appcompat_check_widget_width">25.5dip</dimen>
     <dimen name="miuix_appcompat_check_widget_width_v19">41.23999dip</dimen>
+    <dimen name="miuix_appcompat_clearable_edit_text_size">14.509979sp</dimen>
     <dimen name="miuix_appcompat_config_prefDialogWidth">349.08594dip</dimen>
     <dimen name="miuix_appcompat_context_menu_separate_item_horizontal_padding">29.099976dip</dimen>
     <dimen name="miuix_appcompat_context_menu_separate_item_margin_top">14.539978dip</dimen>
     <dimen name="miuix_appcompat_context_menu_separate_item_padding_bottom">22.549988dip</dimen>
     <dimen name="miuix_appcompat_context_menu_separate_item_padding_top">22.549988dip</dimen>
     <dimen name="miuix_appcompat_context_menu_window_margin_screen">14.539978dip</dimen>
-    <dimen name="miuix_appcompat_date_picker_checkbox_padding_horizontal">29.089996dip</dimen>
-    <dimen name="miuix_appcompat_date_picker_checkbox_padding_vertical">21.799988dip</dimen>
-    <dimen name="miuix_appcompat_date_picker_dialog_margin_bottom">0.0dip</dimen>
+    <dimen name="miuix_appcompat_context_menu_window_margin_statusbar">8.0dip</dimen>
+    <dimen name="miuix_appcompat_date_picker_checkbox_padding_vertical">1.6299744dip</dimen>
     <dimen name="miuix_appcompat_date_picker_dialog_margin_horizontal">35.299988dip</dimen>
     <dimen name="miuix_appcompat_date_picker_lunar_text_size">17.449982sp</dimen>
     <dimen name="miuix_appcompat_date_picker_text_size">13.089996sp</dimen>
@@ -140,7 +137,9 @@
     <dimen name="miuix_appcompat_dialog_fixed_width_minor">572.72656dip</dimen>
     <dimen name="miuix_appcompat_dialog_fixed_width_minor_small">600.0dip</dimen>
     <dimen name="miuix_appcompat_dialog_icon_drawable_padding">10.909973dip</dimen>
-    <dimen name="miuix_appcompat_dialog_list_item_padding_horizontal">29.089996dip</dimen>
+    <dimen name="miuix_appcompat_dialog_list_item_padding_end">29.089996dip</dimen>
+    <dimen name="miuix_appcompat_dialog_list_item_padding_start">29.089996dip</dimen>
+    <dimen name="miuix_appcompat_dialog_list_item_padding_vertical">15.269989dip</dimen>
     <dimen name="miuix_appcompat_dialog_list_padding_bottom_no_buttons">14.539978dip</dimen>
     <dimen name="miuix_appcompat_dialog_list_preferred_item_height">58.189972dip</dimen>
     <dimen name="miuix_appcompat_dialog_list_preferred_item_height_large">72.75998dip</dimen>
@@ -155,6 +154,7 @@
     <dimen name="miuix_appcompat_dialog_progress_message_padding_vertical">5.4499817dip</dimen>
     <dimen name="miuix_appcompat_dialog_progress_message_text_size">17.449982sp</dimen>
     <dimen name="miuix_appcompat_dialog_progress_vertical_margin">17.449982dip</dimen>
+    <dimen name="miuix_appcompat_dialog_progressbar_size">21.819977dip</dimen>
     <dimen name="miuix_appcompat_dialog_title_bg_height">36.75998dip</dimen>
     <dimen name="miuix_appcompat_dialog_title_horizontal_padding">29.089996dip</dimen>
     <dimen name="miuix_appcompat_dialog_title_text_size">18.199982sp</dimen>
@@ -193,15 +193,23 @@
     <dimen name="miuix_appcompat_filter_sort_tab_view_text_size">14.509979sp</dimen>
     <dimen name="miuix_appcompat_filter_sort_view_corner">13.089996dip</dimen>
     <dimen name="miuix_appcompat_filter_sort_view_padding">3.6299744dip</dimen>
-    <dimen name="miuix_appcompat_guide_popup_horizontal_padding">16.0dip</dimen>
+    <dimen name="miuix_appcompat_floating_action_button_main_margin_bottom_no_navigationbar">29.359985dip</dimen>
+    <dimen name="miuix_appcompat_floating_action_button_main_margin_bottom_with_navigationbar">11.889984dip</dimen>
+    <dimen name="miuix_appcompat_floating_action_button_main_margin_left">19.829987dip</dimen>
+    <dimen name="miuix_appcompat_floating_action_button_main_margin_right">19.829987dip</dimen>
+    <dimen name="miuix_appcompat_floating_action_button_main_margin_top">19.829987dip</dimen>
+    <dimen name="miuix_appcompat_floating_window_drag_handle_height">16.359985dip</dimen>
+    <dimen name="miuix_appcompat_guide_popup_horizontal_padding">16.359985dip</dimen>
     <dimen name="miuix_appcompat_guide_popup_line_length">69.04999dip</dimen>
     <dimen name="miuix_appcompat_guide_popup_start_point_radius">2.9499817dip</dimen>
     <dimen name="miuix_appcompat_guide_popup_text_radius">55.309998dip</dimen>
     <dimen name="miuix_appcompat_guide_popup_text_size">13.849976sp</dimen>
-    <dimen name="miuix_appcompat_guide_popup_vertical_padding">10.909973dip</dimen>
+    <dimen name="miuix_appcompat_guide_popup_vertical_padding">12.359985dip</dimen>
     <dimen name="miuix_appcompat_guide_popup_window_min_height">43.639984dip</dimen>
     <dimen name="miuix_appcompat_guide_popup_window_min_width">163.63998dip</dimen>
     <dimen name="miuix_appcompat_guide_popup_window_padding">10.909973dip</dimen>
+    <dimen name="miuix_appcompat_ic_clear_height">18.189972dip</dimen>
+    <dimen name="miuix_appcompat_ic_clear_width">18.189972dip</dimen>
     <dimen name="miuix_appcompat_ic_visible_height">24.0dip</dimen>
     <dimen name="miuix_appcompat_ic_visible_width">24.0dip</dimen>
     <dimen name="miuix_appcompat_immersion_menu_icon_margin_end">14.539978dip</dimen>
@@ -218,6 +226,7 @@
     <dimen name="miuix_appcompat_list_preferred_item_height_small">58.179993dip</dimen>
     <dimen name="miuix_appcompat_list_preferred_item_padding_left">29.099976dip</dimen>
     <dimen name="miuix_appcompat_list_preferred_item_padding_right">29.099976dip</dimen>
+    <dimen name="miuix_appcompat_list_preferred_item_width_small">181.82dip</dimen>
     <dimen name="miuix_appcompat_message_view_bg_height">42.19998dip</dimen>
     <dimen name="miuix_appcompat_message_view_bg_radius">17.449982dip</dimen>
     <dimen name="miuix_appcompat_message_view_icon_height">26.179993dip</dimen>
@@ -228,8 +237,13 @@
     <dimen name="miuix_appcompat_message_view_padding_start">12.399994dip</dimen>
     <dimen name="miuix_appcompat_message_view_padding_vertical">11.269989dip</dimen>
     <dimen name="miuix_appcompat_message_view_text_margin_right">32.599976dip</dimen>
+    <dimen name="miuix_appcompat_message_view_text_padding_start">5.0dip</dimen>
     <dimen name="miuix_appcompat_message_view_text_size">14.5sp</dimen>
     <dimen name="miuix_appcompat_normal_text_size">18.179993sp</dimen>
+    <dimen name="miuix_appcompat_number_picker_bg_corners">13.089996dip</dimen>
+    <dimen name="miuix_appcompat_number_picker_bg_height">220.35999dip</dimen>
+    <dimen name="miuix_appcompat_number_picker_bg_width">76.129974dip</dimen>
+    <dimen name="miuix_appcompat_number_picker_big_bg_width">173.10999dip</dimen>
     <dimen name="miuix_appcompat_number_picker_highlight_region_height">59.50998dip</dimen>
     <dimen name="miuix_appcompat_number_picker_label_margin_left">1.4499817dip</dimen>
     <dimen name="miuix_appcompat_number_picker_label_margin_top">2.1799927dip</dimen>
@@ -249,11 +263,19 @@
     <dimen name="miuix_appcompat_popup_menu_item_min_width">213.0dip</dimen>
     <dimen name="miuix_appcompat_popup_menu_item_padding_horizontal">17.399994dip</dimen>
     <dimen name="miuix_appcompat_progress_bar_height">28.099976dip</dimen>
+    <dimen name="miuix_appcompat_progress_bar_line_height">5.799988dip</dimen>
     <dimen name="miuix_appcompat_progress_bar_line_radius">72.69998dip</dimen>
-    <dimen name="miuix_appcompat_progress_bar_line_width">5.799988dip</dimen>
     <dimen name="miuix_appcompat_progress_indeterminate_size">21.819977dip</dimen>
-    <dimen name="miuix_appcompat_progressbar_size">21.799988dip</dimen>
-    <dimen name="miuix_appcompat_progressbar_size_small">20.0dip</dimen>
+    <dimen name="miuix_appcompat_progressbar_large_icon_text_margin">4.0dip</dimen>
+    <dimen name="miuix_appcompat_progressbar_large_text_bottom_padding">2.5499878dip</dimen>
+    <dimen name="miuix_appcompat_progressbar_large_text_size">15.279999dip</dimen>
+    <dimen name="miuix_appcompat_progressbar_large_text_top_padding">2.5499878dip</dimen>
+    <dimen name="miuix_appcompat_progressbar_size">32.0dip</dimen>
+    <dimen name="miuix_appcompat_progressbar_size_small">24.0dip</dimen>
+    <dimen name="miuix_appcompat_progressbar_small_icon_text_margin">2.5499878dip</dimen>
+    <dimen name="miuix_appcompat_progressbar_small_text_bottom_padding">3.6399841dip</dimen>
+    <dimen name="miuix_appcompat_progressbar_small_text_size">13.819977dip</dimen>
+    <dimen name="miuix_appcompat_progressbar_small_text_top_padding">3.6399841dip</dimen>
     <dimen name="miuix_appcompat_radio_button_drawable_padding">6.899994dip</dimen>
     <dimen name="miuix_appcompat_radio_button_height">41.5dip</dimen>
     <dimen name="miuix_appcompat_radio_button_width">41.5dip</dimen>
@@ -264,16 +286,19 @@
     <dimen name="miuix_appcompat_ratingbar_size_large">19.639984dip</dimen>
     <dimen name="miuix_appcompat_ratingbar_size_small">10.909973dip</dimen>
     <dimen name="miuix_appcompat_round_corner_radius">17.449982dip</dimen>
+    <dimen name="miuix_appcompat_scrollbar_thumb_vertical_padding">7.279999dip</dimen>
+    <dimen name="miuix_appcompat_scrollbar_thumb_vertical_radius">7.279999dip</dimen>
+    <dimen name="miuix_appcompat_scrollbar_thumb_vertical_width">3.6399841dip</dimen>
     <dimen name="miuix_appcompat_search_action_mode_cancel_text_padding_end">21.089996dip</dimen>
     <dimen name="miuix_appcompat_search_action_mode_cancel_text_padding_start">21.089996dip</dimen>
     <dimen name="miuix_appcompat_search_action_mode_cancel_text_size">15.299988sp</dimen>
     <dimen name="miuix_appcompat_search_action_mode_cancel_width">72.72998dip</dimen>
     <dimen name="miuix_appcompat_search_edit_text_size">14.549988sp</dimen>
     <dimen name="miuix_appcompat_search_mode_bg_padding">25.449982dip</dimen>
-    <dimen name="miuix_appcompat_search_mode_bg_padding_bottom">10.909973dip</dimen>
     <dimen name="miuix_appcompat_search_mode_bg_padding_top">3.6299744dip</dimen>
     <dimen name="miuix_appcompat_search_mode_bg_radius">21.799988dip</dimen>
     <dimen name="miuix_appcompat_search_mode_bg_size">43.639984dip</dimen>
+    <dimen name="miuix_appcompat_search_view_default_height">58.19998dip</dimen>
     <dimen name="miuix_appcompat_searchbar_bg_height">43.599976dip</dimen>
     <dimen name="miuix_appcompat_secondary_text_size">13.089996sp</dimen>
     <dimen name="miuix_appcompat_seekbar_height">29.099976dip</dimen>
@@ -285,6 +310,7 @@
     <dimen name="miuix_appcompat_sliding_button_height">26.909973dip</dimen>
     <dimen name="miuix_appcompat_sliding_button_mask_vertical_padding">14.0dip</dimen>
     <dimen name="miuix_appcompat_sliding_button_slider_horizontal_padding">6.909973dip</dimen>
+    <dimen name="miuix_appcompat_sliding_button_slider_max_offset">2.1799927dip</dimen>
     <dimen name="miuix_appcompat_sliding_button_slider_size">13.089996dip</dimen>
     <dimen name="miuix_appcompat_sliding_button_slider_vertical_padding">20.919983dip</dimen>
     <dimen name="miuix_appcompat_sliding_button_width">48.72998dip</dimen>
@@ -306,6 +332,7 @@
     <dimen name="miuix_appcompat_spinner_popup_item_bg_padding_vertical">17.449982dip</dimen>
     <dimen name="miuix_appcompat_spinner_right_widget_height">17.449982dip</dimen>
     <dimen name="miuix_appcompat_spinner_right_widget_width">17.449982dip</dimen>
+    <dimen name="miuix_appcompat_spinner_round_corner_radius">17.449982dip</dimen>
     <dimen name="miuix_appcompat_spinner_text_max_width_integrated">130.9dip</dimen>
     <dimen name="miuix_appcompat_spinner_text_size">13.089996sp</dimen>
     <dimen name="miuix_appcompat_spinner_text_size_integrated">15.269989sp</dimen>
@@ -315,15 +342,29 @@
     <dimen name="miuix_appcompat_title_text_size">20.369995sp</dimen>
     <dimen name="miuix_appcompat_triangle_arrow_size">18.549988dip</dimen>
     <dimen name="miuix_appcompat_window_dialog_radius">13.089996dip</dimen>
+    <item type="dimen" name="miuix_floating_preference_checkable_item_bg_padding_end">@dimen/miuix_preference_checkable_item_bg_padding_end</item>
+    <item type="dimen" name="miuix_floating_preference_checkable_item_mask_padding_end">@dimen/miuix_preference_checkable_item_mask_padding_end</item>
+    <item type="dimen" name="miuix_floating_preference_checkable_item_mask_padding_start">@dimen/miuix_preference_checkable_item_mask_padding_start</item>
+    <item type="dimen" name="miuix_floating_preference_item_padding_end">@dimen/miuix_preference_item_padding_end</item>
+    <item type="dimen" name="miuix_floating_preference_item_padding_start">@dimen/miuix_preference_item_padding_start</item>
+    <item type="dimen" name="miuix_floating_preference_item_radio_two_state_bg_padding_end">@dimen/miuix_preference_item_radio_two_state_bg_padding_end</item>
+    <item type="dimen" name="miuix_floating_preference_item_radio_two_state_bg_padding_start">@dimen/miuix_preference_item_radio_two_state_bg_padding_start</item>
+    <item type="dimen" name="miuix_floating_preference_radio_set_item_padding_start">@dimen/miuix_preference_radio_set_item_padding_start</item>
+    <item type="dimen" name="miuix_floating_preference_radio_set_radio_item_padding_start">@dimen/miuix_preference_radio_set_radio_item_padding_start</item>
+    <item type="dimen" name="miuix_floating_preference_seekbar_icon_margin_start">@dimen/miuix_preference_item_seekbar_icon_margin_start</item>
+    <item type="dimen" name="miuix_floating_preference_seekbar_padding_end">@dimen/miuix_preference_seekbar_padding_end</item>
+    <item type="dimen" name="miuix_floating_preference_seekbar_padding_start">@dimen/miuix_preference_seekbar_padding_start</item>
     <dimen name="miuix_popup_dropdown_item_min_width">182.19998dip</dimen>
     <dimen name="miuix_preference_btn_radio_height">20.359985dip</dimen>
     <dimen name="miuix_preference_btn_radio_width">20.359985dip</dimen>
     <dimen name="miuix_preference_category_divider_gap_height">21.819977dip</dimen>
+    <dimen name="miuix_preference_category_divider_height">0.76dip</dimen>
     <dimen name="miuix_preference_category_gap_height">44.359985dip</dimen>
     <dimen name="miuix_preference_category_height">79.26999dip</dimen>
     <dimen name="miuix_preference_category_no_title_height">44.359985dip</dimen>
     <dimen name="miuix_preference_category_text_size">13.099976sp</dimen>
     <dimen name="miuix_preference_category_title_height">34.899994dip</dimen>
+    <dimen name="miuix_preference_category_vertical_padding">4.0dip</dimen>
     <dimen name="miuix_preference_checkable_item_bg_padding_end">13.099976dip</dimen>
     <dimen name="miuix_preference_checkable_item_mask_padding_bottom">5.4599915dip</dimen>
     <dimen name="miuix_preference_checkable_item_mask_padding_end">1.0999756dip</dimen>
@@ -353,9 +394,9 @@
     <dimen name="miuix_preference_item_padding_top">16.72998dip</dimen>
     <dimen name="miuix_preference_item_radio_padding_bottom">16.369995dip</dimen>
     <dimen name="miuix_preference_item_radio_padding_end">29.099976dip</dimen>
-    <dimen name="miuix_preference_item_radio_padding_start">0.0dip</dimen>
     <dimen name="miuix_preference_item_radio_padding_top">16.369995dip</dimen>
     <dimen name="miuix_preference_item_radio_two_state_bg_padding_end">29.099976dip</dimen>
+    <item type="dimen" name="miuix_preference_item_radio_two_state_bg_padding_start">@dimen/miuix_preference_item_padding_start</item>
     <dimen name="miuix_preference_item_seekbar_icon_height">23.269989dip</dimen>
     <dimen name="miuix_preference_item_seekbar_icon_margin_end">11.639984dip</dimen>
     <dimen name="miuix_preference_item_seekbar_icon_width">23.269989dip</dimen>
@@ -367,13 +408,23 @@
     <dimen name="miuix_preference_main_icon_padding_end">14.549988dip</dimen>
     <dimen name="miuix_preference_main_margin_end">29.089996dip</dimen>
     <dimen name="miuix_preference_main_margin_start">21.089996dip</dimen>
+    <dimen name="miuix_preference_navigation_item_content_padding_end">19.279999dip</dimen>
+    <dimen name="miuix_preference_navigation_item_content_padding_start">13.089996dip</dimen>
+    <dimen name="miuix_preference_navigation_item_mask_padding_horizontal">8.0dip</dimen>
+    <dimen name="miuix_preference_navigation_item_mask_padding_vertical">2.539978dip</dimen>
+    <dimen name="miuix_preference_navigation_item_min_height">58.149994dip</dimen>
+    <dimen name="miuix_preference_navigation_item_padding_vertical">16.0dip</dimen>
+    <dimen name="miuix_preference_navigation_text_max_width">163.63998dip</dimen>
     <dimen name="miuix_preference_normal_text_size">18.179993sp</dimen>
-    <dimen name="miuix_preference_radio_set_item_padding_start">29.449982dip</dimen>
-    <dimen name="miuix_preference_radio_set_radio_item_padding_start">29.089996dip</dimen>
+    <dimen name="miuix_preference_radio_item_min_height">58.149994dip</dimen>
+    <dimen name="miuix_preference_radio_set_item_padding_start">29.0dip</dimen>
+    <dimen name="miuix_preference_radio_set_radio_item_padding_start">29.099976dip</dimen>
     <dimen name="miuix_preference_right_text_size">15.269989sp</dimen>
     <dimen name="miuix_preference_rv_bottom_padding">14.549988dip</dimen>
     <dimen name="miuix_preference_rv_top_padding">7.269989dip</dimen>
     <dimen name="miuix_preference_secondary_text_size">13.819977sp</dimen>
+    <dimen name="miuix_preference_seekbar_padding_end">29.099976dip</dimen>
+    <dimen name="miuix_preference_seekbar_padding_start">29.099976dip</dimen>
     <dimen name="miuix_preference_summary_margin_top">1.4499817dip</dimen>
     <dimen name="miuix_preference_text_max_width">163.63dip</dimen>
     <dimen name="miuix_preference_text_padding_bottom">6.549988dip</dimen>
@@ -406,6 +457,21 @@
     <dimen name="miuix_sbl_tracking_up_progress_bg_marginbottom">14.549988dip</dimen>
     <dimen name="miuix_sbl_tracking_up_progress_bg_margintop">14.549988dip</dimen>
     <dimen name="sliding_button_border">0.33000004dip</dimen>
+    <dimen name="small_window_container_item_image_size">52.0dip</dimen>
+    <dimen name="small_window_container_title_top_margin">15.0dip</dimen>
+    <dimen name="small_window_edit_head_background_height">306.89844dip</dimen>
+    <dimen name="small_window_edit_header_text_size">19.639984sp</dimen>
+    <dimen name="small_window_edit_icon_badge_size">40.0dip</dimen>
+    <dimen name="small_window_edit_icon_height">67.0dip</dimen>
+    <dimen name="small_window_edit_icon_image_size">60.26999dip</dimen>
+    <dimen name="small_window_edit_icon_width">69.0dip</dimen>
+    <dimen name="small_window_edit_title_text_size">25.0sp</dimen>
+    <dimen name="small_window_edit_title_top_margin">58.179993dip</dimen>
+    <dimen name="small_window_item_title_margin_top">6.549988dip</dimen>
+    <dimen name="small_window_item_title_text_size">13.099976sp</dimen>
+    <dimen name="small_window_selected_icon_badge_size">40.0dip</dimen>
+    <dimen name="small_window_selected_icon_image_size">50.899994dip</dimen>
+    <dimen name="small_window_selected_icon_size">60.0dip</dimen>
     <dimen name="word_photo_border_size">0.36dip</dimen>
     <dimen name="word_photo_size">39.299988dip</dimen>
 </resources>

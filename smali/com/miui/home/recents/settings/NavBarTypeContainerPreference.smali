@@ -28,6 +28,8 @@
 
 .field private mFullScreenLottieView:Lcom/airbnb/lottie/LottieAnimationView;
 
+.field private mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
+
 .field private mListener:Lcom/miui/home/recents/settings/NavBarTypeContainerPreference$OnNavBarTypeChanged;
 
 .field private final mOnClickListener:Landroid/view/View$OnClickListener;
@@ -39,26 +41,26 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 40
+    .line 42
     invoke-direct {p0, p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 36
+    .line 37
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mAllNavBarTypeViewList:Ljava/util/ArrayList;
 
-    .line 61
+    .line 63
     new-instance p1, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference$1;
 
     invoke-direct {p1, p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference$1;-><init>(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
 
     iput-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    const p1, 0x7f0d00c7
+    const p1, 0x7f0d00ed
 
-    .line 41
+    .line 43
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->setLayoutResource(I)V
 
     return-void
@@ -67,61 +69,70 @@
 .method static synthetic access$000(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)Lcom/miui/home/recents/settings/NavigationBarTypeView;
     .locals 0
 
-    .line 29
+    .line 30
     iget-object p0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mCurrentNavBarTypeView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
     return-object p0
 .end method
 
-.method static synthetic access$100(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)Lcom/miui/home/recents/settings/NavigationBarTypeView;
+.method static synthetic access$100(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
     .locals 0
 
-    .line 29
+    .line 30
+    iget-object p0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
+
+    return-object p0
+.end method
+
+.method static synthetic access$200(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)Lcom/miui/home/recents/settings/NavigationBarTypeView;
+    .locals 0
+
+    .line 30
     iget-object p0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mFullScreenGestureView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
     return-object p0
 .end method
 
-.method static synthetic access$200(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
+.method static synthetic access$300(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
     .locals 0
 
-    .line 29
+    .line 30
     invoke-direct {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->showDialogToSetMiuiHomeAsDefault()V
 
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
+.method static synthetic access$400(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
     .locals 0
 
-    .line 29
+    .line 30
     invoke-direct {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->showDialogToGestureTutorial()V
 
     return-void
 .end method
 
-.method static synthetic access$400(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;Z)V
+.method static synthetic access$500(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;Z)V
     .locals 0
 
-    .line 29
+    .line 30
     invoke-direct {p0, p1}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->setForceFSGNavBar(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$500(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;Lcom/miui/home/recents/settings/NavigationBarTypeView;)V
+.method static synthetic access$600(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;Lcom/miui/home/recents/settings/NavigationBarTypeView;)V
     .locals 0
 
-    .line 29
+    .line 30
     invoke-direct {p0, p1}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->setSelectItem(Lcom/miui/home/recents/settings/NavigationBarTypeView;)V
 
     return-void
 .end method
 
-.method static synthetic access$600(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)Lcom/miui/home/recents/settings/NavigationBarTypeView;
+.method static synthetic access$700(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)Lcom/miui/home/recents/settings/NavigationBarTypeView;
     .locals 0
 
-    .line 29
+    .line 30
     iget-object p0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mVirtualKeyView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
     return-object p0
@@ -130,7 +141,7 @@
 .method static synthetic lambda$showDialogToGestureTutorial$3()V
     .locals 0
 
-    .line 119
+    .line 122
     invoke-static {}, Lcom/miui/home/recents/settings/AnalyticsUtils;->trackClickLearnBtnEvent()V
 
     return-void
@@ -141,15 +152,15 @@
 
     const/4 v0, 0x1
 
-    .line 122
+    .line 125
     invoke-direct {p0, v0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->setForceFSGNavBar(Z)V
 
-    .line 123
+    .line 126
     iget-object v1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mFullScreenGestureView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
     invoke-direct {p0, v1}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->setSelectItem(Lcom/miui/home/recents/settings/NavigationBarTypeView;)V
 
-    .line 124
+    .line 127
     invoke-static {}, Lcom/miui/home/recents/settings/NavigationBarTypeSP;->getInstance()Lcom/miui/home/recents/settings/NavigationBarTypeSP;
 
     move-result-object v1
@@ -160,18 +171,23 @@
 
     invoke-virtual {v1, p1}, Lcom/miui/home/recents/settings/NavigationBarTypeSP;->setNeedShowNavGuide(Z)V
 
+    const/4 p1, 0x0
+
+    .line 128
+    iput-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
+
     return-void
 .end method
 
 .method public static synthetic lambda$showDialogToSetMiuiHomeAsDefault$2(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;Landroid/content/DialogInterface;I)V
     .locals 3
 
-    .line 100
+    .line 103
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    .line 101
+    .line 104
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -186,27 +202,27 @@
 
     const-class v2, Lcom/miui/home/launcher/Launcher;
 
-    .line 102
+    .line 105
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 100
+    .line 103
     invoke-static {p1, p2, v0}, Lcom/miui/home/launcher/common/Utilities;->changeDefaultHome(Landroid/content/Context;Ljava/lang/String;Landroid/content/ComponentName;)V
 
     const/4 p1, 0x1
 
-    .line 103
+    .line 106
     invoke-direct {p0, p1}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->setForceFSGNavBar(Z)V
 
-    .line 104
+    .line 107
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mFullScreenGestureView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
     invoke-direct {p0, p1}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->setSelectItem(Lcom/miui/home/recents/settings/NavigationBarTypeView;)V
 
-    .line 105
+    .line 108
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -229,7 +245,7 @@
 .method public static synthetic lambda$updateFullScreenViewAnim$0(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 87
+    .line 90
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -248,7 +264,7 @@
 .method public static synthetic lambda$updateFullScreenViewAnim$1(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;Ljava/lang/Boolean;)V
     .locals 1
 
-    .line 89
+    .line 92
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mFullScreenLottieView:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -257,17 +273,17 @@
 
     if-nez p1, :cond_0
 
-    const p1, 0x7f0f0001
+    const p1, 0x7f0f0002
 
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f0f0002
+    const p1, 0x7f0f0003
 
     :goto_0
     invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setAnimation(I)V
 
-    .line 91
+    .line 94
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mFullScreenLottieView:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {p1}, Lcom/airbnb/lottie/LottieAnimationView;->playAnimation()V
@@ -280,7 +296,7 @@
 
     const-string v0, "NavBarTypeContainerPreference"
 
-    .line 130
+    .line 134
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -295,7 +311,9 @@
 
     move-result-object v1
 
-    .line 131
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 135
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -308,7 +326,7 @@
 
     invoke-static {v0, v1, p1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->putBooleanToGlobal(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
-    .line 132
+    .line 136
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -325,18 +343,18 @@
 .method private setSelectItem(Lcom/miui/home/recents/settings/NavigationBarTypeView;)V
     .locals 2
 
-    .line 140
+    .line 144
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mCurrentNavBarTypeView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 141
+    .line 145
     :cond_0
     iput-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mCurrentNavBarTypeView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
-    .line 142
+    .line 146
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mAllNavBarTypeViewList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -356,7 +374,7 @@
 
     check-cast v0, Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
-    .line 143
+    .line 147
     iget-object v1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mCurrentNavBarTypeView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
     if-ne v0, v1, :cond_1
@@ -373,13 +391,13 @@
 
     goto :goto_0
 
-    .line 145
+    .line 149
     :cond_2
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mListener:Lcom/miui/home/recents/settings/NavBarTypeContainerPreference$OnNavBarTypeChanged;
 
     if-eqz p1, :cond_3
 
-    .line 146
+    .line 150
     invoke-interface {p1}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference$OnNavBarTypeChanged;->onNavBarTypeChanged()V
 
     :cond_3
@@ -389,7 +407,7 @@
 .method private showDialogToGestureTutorial()V
     .locals 2
 
-    .line 116
+    .line 119
     new-instance v0, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
 
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->getContext()Landroid/content/Context;
@@ -398,34 +416,48 @@
 
     invoke-direct {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f10028b
+    iput-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
 
-    .line 117
+    .line 120
+    iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
+
+    const v1, 0x7f1002e2
+
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setTitle(I)V
 
-    const v1, 0x7f10028a
+    .line 121
+    iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
 
-    .line 118
+    const v1, 0x7f1002e1
+
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setMessage(I)V
 
-    .line 119
+    .line 122
+    iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
+
     sget-object v1, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$WdaaK7-qzrc6HC0VrQZsBxNLTT0;->INSTANCE:Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$WdaaK7-qzrc6HC0VrQZsBxNLTT0;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setClickPosButtonRunnable(Ljava/lang/Runnable;)V
 
+    .line 123
+    iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
+
     const-string v1, "com.miui.systemui.fsgesture.introduce"
 
-    .line 120
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setPositiveButtonIntentAction(Ljava/lang/String;)V
 
-    .line 121
+    .line 124
+    iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
+
     new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$jJnuarjaIvNM0WMOTqsOMPSJ5Pc;
 
     invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$jJnuarjaIvNM0WMOTqsOMPSJ5Pc;-><init>(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setClickDialogButtonConsume(Ljava/util/function/Consumer;)V
 
-    .line 126
+    .line 130
+    iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
+
     invoke-virtual {v0}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->show()V
 
     return-void
@@ -434,10 +466,10 @@
 .method private showDialogToSetMiuiHomeAsDefault()V
     .locals 3
 
-    .line 97
+    .line 100
     new-instance v0, Lmiuix/appcompat/app/AlertDialog$Builder;
 
-    .line 98
+    .line 101
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -448,45 +480,45 @@
 
     invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$xRC8XKr4JwAzzOwGzEOecvusUBk;-><init>(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
 
-    const v2, 0x7f10029a
+    const v2, 0x7f100304
 
-    .line 99
+    .line 102
     invoke-virtual {v0, v2, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f100298
+    const v1, 0x7f100302
 
     const/4 v2, 0x0
 
-    .line 107
+    .line 110
     invoke-virtual {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 108
+    .line 111
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    .line 109
+    .line 112
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object v0
 
-    const v1, 0x7f10029b
+    const v1, 0x7f100305
 
-    .line 110
+    .line 113
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog;->setTitle(I)V
 
-    .line 111
+    .line 114
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const v2, 0x7f100299
+    const v2, 0x7f100303
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -494,7 +526,7 @@
 
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 112
+    .line 115
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->show()V
 
     return-void
@@ -503,7 +535,7 @@
 .method private updateFullScreenViewAnim()V
     .locals 3
 
-    .line 87
+    .line 90
     new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$6bJyeLXyWQesLQ1Bjq0wsSlpftc;
 
     invoke-direct {v0, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$6bJyeLXyWQesLQ1Bjq0wsSlpftc;-><init>(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
@@ -522,7 +554,7 @@
 .method private updateSelectedView()V
     .locals 1
 
-    .line 136
+    .line 140
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -551,15 +583,15 @@
 .method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
     .locals 2
 
-    .line 46
+    .line 48
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
-    .line 48
+    .line 50
     iget-object p1, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
-    const v0, 0x7f0a0254
+    const v0, 0x7f0a02d7
 
-    .line 49
+    .line 51
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -568,23 +600,23 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mVirtualKeyView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
-    .line 50
+    .line 52
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mVirtualKeyView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
     iget-object v1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/NavigationBarTypeView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 51
+    .line 53
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mAllNavBarTypeViewList:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mVirtualKeyView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v0, 0x7f0a00fc
+    const v0, 0x7f0a011e
 
-    .line 53
+    .line 55
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -593,9 +625,9 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mFullScreenGestureView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
-    const v0, 0x7f0a00fd
+    const v0, 0x7f0a011f
 
-    .line 54
+    .line 56
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -604,24 +636,24 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mFullScreenLottieView:Lcom/airbnb/lottie/LottieAnimationView;
 
-    .line 55
+    .line 57
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mFullScreenGestureView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/settings/NavigationBarTypeView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 56
+    .line 58
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mAllNavBarTypeViewList:Ljava/util/ArrayList;
 
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mFullScreenGestureView:Lcom/miui/home/recents/settings/NavigationBarTypeView;
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 57
+    .line 59
     invoke-direct {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->updateSelectedView()V
 
-    .line 58
+    .line 60
     invoke-direct {p0}, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->updateFullScreenViewAnim()V
 
     return-void
@@ -630,7 +662,7 @@
 .method public setOnNavBarTypeChangedListener(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference$OnNavBarTypeChanged;)V
     .locals 0
 
-    .line 155
+    .line 159
     iput-object p1, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mListener:Lcom/miui/home/recents/settings/NavBarTypeContainerPreference$OnNavBarTypeChanged;
 
     return-void

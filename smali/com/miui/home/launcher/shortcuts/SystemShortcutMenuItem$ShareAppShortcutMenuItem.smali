@@ -22,20 +22,20 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 107
+    .line 106
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 104
+    .line 103
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;->mApkFile:Ljava/io/File;
 
-    .line 108
+    .line 107
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    const v1, 0x7f100332
+    const v1, 0x7f1003b2
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -43,12 +43,12 @@
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;->setShortTitle(Ljava/lang/CharSequence;)V
 
-    .line 109
+    .line 108
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    const v1, 0x7f08050b
+    const v1, 0x7f080584
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -62,14 +62,14 @@
 .method private getApkFile()Ljava/io/File;
     .locals 3
 
-    .line 176
+    .line 175
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 179
+    .line 178
     :try_start_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -85,7 +85,7 @@
 
     move-result-object v0
 
-    .line 180
+    .line 179
     new-instance v1, Ljava/io/File;
 
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->sourceDir:Ljava/lang/String;
@@ -103,7 +103,9 @@
 
     const-string v2, "get share apk file"
 
-    .line 182
+    .line 181
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_0
     const/4 v0, 0x0
 
@@ -113,14 +115,14 @@
 .method public static synthetic lambda$getOnClickListener$0(Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;Landroid/view/View;)V
     .locals 2
 
-    .line 121
+    .line 120
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 122
+    .line 121
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;->mApkFile:Ljava/io/File;
 
     if-eqz v0, :cond_1
@@ -135,14 +137,14 @@
 
     const/4 v1, 0x0
 
-    .line 123
+    .line 122
     invoke-static {p1, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Landroid/content/Context;Ljava/lang/String;Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 124
+    .line 123
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;->mApkFile:Ljava/io/File;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;->getPackage()Ljava/lang/String;
@@ -153,7 +155,7 @@
 
     goto :goto_0
 
-    .line 126
+    .line 125
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;->mApkFile:Ljava/io/File;
 
@@ -171,7 +173,7 @@
 .method public static synthetic lambda$showDisclaimerDialog$1(Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;Lcom/miui/home/launcher/Launcher;Ljava/io/File;Ljava/lang/String;Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 152
+    .line 151
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;->shareApk(Lcom/miui/home/launcher/Launcher;Ljava/io/File;Ljava/lang/String;)V
 
     return-void
@@ -180,7 +182,7 @@
 .method private shareApk(Lcom/miui/home/launcher/Launcher;Ljava/io/File;Ljava/lang/String;)V
     .locals 5
 
-    .line 133
+    .line 132
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.SEND"
@@ -189,29 +191,33 @@
 
     const/4 v1, 0x1
 
-    .line 134
+    .line 133
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     const-string v1, "application/vnd.android.package-archive"
 
-    .line 135
+    .line 134
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    const-string v1, "com.miui.home.fileprovider"
+    const v1, 0x7f100351
 
-    .line 136
+    .line 135
+    invoke-virtual {p1, v1}, Lcom/miui/home/launcher/Launcher;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
     invoke-static {p1, v1, p2}, Landroidx/core/content/FileProvider;->getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v1
 
     const-string v2, "android.intent.extra.STREAM"
 
-    .line 138
+    .line 137
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     const-string v2, "android.intent.extra.PACKAGE_NAME"
 
-    .line 139
+    .line 138
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
@@ -220,12 +226,12 @@
 
     const-string v2, "com.miui.mishare.extra.MISHARE_APK_PACKAGE_NAME"
 
-    .line 140
+    .line 139
     invoke-virtual {v0, v2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v2, "ShortcutMenu"
 
-    .line 141
+    .line 140
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -254,7 +260,7 @@
 
     const/4 p2, 0x0
 
-    .line 143
+    .line 142
     invoke-static {v0, p2}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
     move-result-object p2
@@ -263,7 +269,7 @@
 
     const-string p1, "share"
 
-    .line 144
+    .line 143
     invoke-static {p3, p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackClickShortcutMenuItem(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -272,21 +278,21 @@
 .method private showDisclaimerDialog(Lcom/miui/home/launcher/Launcher;Ljava/io/File;Ljava/lang/String;)V
     .locals 2
 
-    .line 148
+    .line 147
     new-instance v0, Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-direct {v0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f100336
+    const v1, 0x7f1003b6
 
-    .line 149
+    .line 148
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f100334
+    const v1, 0x7f1003b4
 
-    .line 150
+    .line 149
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
@@ -295,33 +301,33 @@
 
     invoke-direct {v1, p0, p1, p2, p3}, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$ShareAppShortcutMenuItem$JysaqrL2S1Uwoi4tEHc5hXC_gtY;-><init>(Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;Lcom/miui/home/launcher/Launcher;Ljava/io/File;Ljava/lang/String;)V
 
-    const p2, 0x7f100335
+    const p2, 0x7f1003b5
 
-    .line 151
+    .line 150
     invoke-virtual {v0, p2, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p2
 
     const/4 p3, 0x0
 
-    .line 154
+    .line 153
     invoke-virtual {p2, p3}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p2
 
-    .line 155
+    .line 154
     invoke-virtual {p2}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p2
 
-    .line 156
+    .line 155
     invoke-virtual {p2}, Lmiuix/appcompat/app/AlertDialog;->show()V
 
     const-string p2, "is_share_apk_disclaimer_shown"
 
     const/4 p3, 0x1
 
-    .line 157
+    .line 156
     invoke-static {p1, p2, p3}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
 
     return-void
@@ -332,7 +338,7 @@
 .method public getOnClickListener()Landroid/view/View$OnClickListener;
     .locals 1
 
-    .line 120
+    .line 119
     new-instance v0, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$ShareAppShortcutMenuItem$BKbcT66aeHJWcNxcbLVgqEbqcOw;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/shortcuts/-$$Lambda$SystemShortcutMenuItem$ShareAppShortcutMenuItem$BKbcT66aeHJWcNxcbLVgqEbqcOw;-><init>(Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;)V
@@ -343,7 +349,7 @@
 .method public isValid(Lcom/miui/home/launcher/ItemInfo;)Z
     .locals 3
 
-    .line 162
+    .line 161
     invoke-super {p0, p1}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->isValid(Lcom/miui/home/launcher/ItemInfo;)Z
 
     move-result v0
@@ -352,14 +358,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 163
+    .line 162
     invoke-virtual {p1}, Lcom/miui/home/launcher/ItemInfo;->isApplicatoin()Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 164
+    .line 163
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;->getUserHandle()Landroid/os/UserHandle;
 
     move-result-object p1
@@ -374,7 +380,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 165
+    .line 164
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
@@ -389,14 +395,14 @@
 
     if-nez p1, :cond_1
 
-    .line 166
+    .line 165
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;->getApkFile()Ljava/io/File;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;->mApkFile:Ljava/io/File;
 
-    .line 167
+    .line 166
     iget-object p1, p0, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;->mApkFile:Ljava/io/File;
 
     if-eqz p1, :cond_0
@@ -412,7 +418,7 @@
     :cond_0
     const-string p1, "ShortcutMenu"
 
-    .line 168
+    .line 167
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -448,12 +454,12 @@
 .method protected resetData()V
     .locals 1
 
-    .line 114
+    .line 113
     invoke-super {p0}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->resetData()V
 
     const/4 v0, 0x0
 
-    .line 115
+    .line 114
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem$ShareAppShortcutMenuItem;->mApkFile:Ljava/io/File;
 
     return-void

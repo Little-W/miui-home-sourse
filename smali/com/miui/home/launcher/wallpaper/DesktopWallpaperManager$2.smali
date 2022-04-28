@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;)V
     .locals 0
 
-    .line 69
+    .line 67
     iput-object p1, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$2;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 72
+    .line 70
     iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$2;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 
     invoke-static {v0}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;->access$300(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;)Lcom/miui/home/launcher/Launcher;
@@ -55,10 +55,12 @@
 
     const-string v1, "adaptHomeToWallpaper, launcher is destroy"
 
-    .line 73
+    .line 71
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
-    .line 77
+    .line 75
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$2;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 
@@ -70,14 +72,43 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     const-string v0, "Launcher_DesktopWallpaperManager"
 
     const-string v1, "adaptHomeToWallpaper, launcher is loading"
 
+    .line 76
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 77
+    iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$2;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;->access$300(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;)Lcom/miui/home/launcher/Launcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getLoadingAnimation()Lcom/miui/home/launcher/compat/UserPresentLoadingAnimation;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
     .line 78
-    .line 79
+    iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$2;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;->access$300(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;)Lcom/miui/home/launcher/Launcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getLoadingAnimation()Lcom/miui/home/launcher/compat/UserPresentLoadingAnimation;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/compat/UserPresentLoadingAnimation;->showLoading()V
+
+    .line 80
+    :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$2;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 
     invoke-static {v0}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;->access$300(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;)Lcom/miui/home/launcher/Launcher;
@@ -94,18 +125,20 @@
 
     return-void
 
-    :cond_1
+    :cond_2
     const-string v0, "Launcher_DesktopWallpaperManager"
 
     const-string v1, "adaptHomeToWallpaper, notify everyone"
 
-    .line 82
     .line 83
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 84
     iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$2;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 
     invoke-static {v0}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;->access$400(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;)V
 
-    .line 84
+    .line 85
     iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager$2;->this$0:Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 
     invoke-static {v0}, Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;->access$300(Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;)Lcom/miui/home/launcher/Launcher;

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->onNewIntentWhenAlreadyOnHome()V
+    value = Lcom/miui/home/launcher/Launcher;->locateAppInner(Lcom/miui/home/launcher/ShortcutInfo;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,17 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
+.field final synthetic val$targetInfo:Lcom/miui/home/launcher/ShortcutInfo;
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 0
 
-    .line 2620
+    .line 2862
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$15;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$15;->val$targetInfo:Lcom/miui/home/launcher/ShortcutInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -36,14 +40,24 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
-    .line 2622
+    .line 2864
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$15;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    const/4 v1, 0x7
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DragLayer;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->setEditingState(I)V
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$15;->val$targetInfo:Lcom/miui/home/launcher/ShortcutInfo;
+
+    invoke-virtual {v1}, Lcom/miui/home/launcher/ShortcutInfo;->getBuddyIconView()Lcom/miui/home/launcher/ShortcutIcon;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/DragLayer;->highlightLocatedApp(Lcom/miui/home/launcher/ItemIcon;Z)I
 
     return-void
 .end method

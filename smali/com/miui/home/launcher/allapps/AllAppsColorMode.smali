@@ -27,7 +27,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 14
+    .line 16
     new-instance v0, Lcom/miui/home/launcher/allapps/AllAppsColorMode$1;
 
     const-string v1, "LIGHT"
@@ -38,7 +38,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->LIGHT:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
-    .line 34
+    .line 36
     new-instance v0, Lcom/miui/home/launcher/allapps/AllAppsColorMode$2;
 
     const-string v1, "DARK"
@@ -49,7 +49,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->DARK:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
-    .line 54
+    .line 56
     new-instance v0, Lcom/miui/home/launcher/allapps/AllAppsColorMode$3;
 
     const-string v1, "SYSTEM"
@@ -62,7 +62,7 @@
 
     const/4 v0, 0x3
 
-    .line 13
+    .line 15
     new-array v0, v0, [Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     sget-object v1, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->LIGHT:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
@@ -90,7 +90,7 @@
         }
     .end annotation
 
-    .line 13
+    .line 15
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -99,7 +99,7 @@
 .method synthetic constructor <init>(Ljava/lang/String;ILcom/miui/home/launcher/allapps/AllAppsColorMode$1;)V
     .locals 0
 
-    .line 13
+    .line 15
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -108,7 +108,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/miui/home/launcher/allapps/AllAppsColorMode;
     .locals 1
 
-    .line 13
+    .line 15
     const-class v0, Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -123,7 +123,7 @@
 .method public static values()[Lcom/miui/home/launcher/allapps/AllAppsColorMode;
     .locals 1
 
-    .line 13
+    .line 15
     sget-object v0, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->$VALUES:[Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     invoke-virtual {v0}, [Lcom/miui/home/launcher/allapps/AllAppsColorMode;->clone()Ljava/lang/Object;
@@ -140,16 +140,16 @@
 .method public getAppSelectInputHintColor(Landroid/content/Context;I)I
     .locals 0
 
-    .line 219
+    .line 234
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060068
+    const p2, 0x7f060069
 
-    .line 220
+    .line 235
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -157,9 +157,9 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060067
+    const p2, 0x7f060068
 
-    .line 222
+    .line 237
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -170,16 +170,16 @@
 .method public getAppSelectInputLineColor(Landroid/content/Context;I)I
     .locals 0
 
-    .line 227
+    .line 242
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06006a
+    const p2, 0x7f06006b
 
-    .line 228
+    .line 243
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -187,9 +187,9 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060069
+    const p2, 0x7f06006a
 
-    .line 230
+    .line 245
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -200,16 +200,16 @@
 .method public getAppSelectInputTextColor(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 0
 
-    .line 211
+    .line 226
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060026
+    const p2, 0x7f060027
 
-    .line 212
+    .line 227
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -217,9 +217,9 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f060025
+    const p2, 0x7f060026
 
-    .line 214
+    .line 229
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -230,16 +230,16 @@
 .method public getAppTextColor(Landroid/content/Context;I)I
     .locals 0
 
-    .line 83
+    .line 90
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06002a
+    const p2, 0x7f06002b
 
-    .line 84
+    .line 91
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -247,9 +247,9 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060029
+    const p2, 0x7f06002a
 
-    .line 86
+    .line 93
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -260,16 +260,16 @@
 .method public getBackgroundColor(Landroid/content/Context;I)I
     .locals 0
 
-    .line 75
+    .line 82
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060337
+    const p2, 0x7f060381
 
-    .line 76
+    .line 83
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -277,9 +277,9 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060336
+    const p2, 0x7f060380
 
-    .line 78
+    .line 85
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -298,16 +298,16 @@
 
     if-ltz v0, :cond_0
 
-    const p2, 0x7f060086
+    const p2, 0x7f060090
 
-    .line 200
+    .line 215
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 
     return p1
 
-    .line 202
+    .line 217
     :cond_0
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
@@ -315,9 +315,9 @@
 
     if-eqz p2, :cond_1
 
-    const p2, 0x7f060088
+    const p2, 0x7f060092
 
-    .line 203
+    .line 218
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -325,9 +325,9 @@
     return p1
 
     :cond_1
-    const p2, 0x7f060087
+    const p2, 0x7f060091
 
-    .line 205
+    .line 220
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -338,16 +338,16 @@
 .method public getCategoryTitleNormalColor(Landroid/content/Context;I)I
     .locals 0
 
-    .line 191
+    .line 206
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060085
+    const p2, 0x7f06008f
 
-    .line 192
+    .line 207
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -355,9 +355,9 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060084
+    const p2, 0x7f06008e
 
-    .line 194
+    .line 209
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -368,16 +368,16 @@
 .method public getDividerColor(Landroid/content/Context;I)I
     .locals 0
 
-    .line 107
+    .line 114
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06002c
+    const p2, 0x7f06002d
 
-    .line 108
+    .line 115
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -385,9 +385,9 @@
     return p1
 
     :cond_0
-    const p2, 0x7f06002b
+    const p2, 0x7f06002c
 
-    .line 110
+    .line 117
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -398,16 +398,16 @@
 .method public getEditIconDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
     .locals 0
 
-    .line 243
+    .line 258
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f08018b
+    const p2, 0x7f0801b6
 
-    .line 244
+    .line 259
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -415,9 +415,9 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f08018a
+    const p2, 0x7f0801b5
 
-    .line 246
+    .line 261
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -431,19 +431,21 @@
 .method public abstract getPreviewDesc(Landroid/content/Context;)Ljava/lang/String;
 .end method
 
-.method public getPreviewImage(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+.method public getPreviewImage(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
     .locals 0
 
-    .line 171
+    if-eqz p3, :cond_1
+
+    .line 179
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f080530
+    const p2, 0x7f0805b0
 
-    .line 172
+    .line 180
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -451,9 +453,36 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f08052f
+    const p2, 0x7f0805ae
 
-    .line 174
+    .line 182
+    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 185
+    :cond_1
+    invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    const p2, 0x7f0805af
+
+    .line 186
+    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_2
+    const p2, 0x7f0805ad
+
+    .line 188
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -464,16 +493,16 @@
 .method public getPrimaryTextColor(Landroid/content/Context;I)I
     .locals 0
 
-    .line 91
+    .line 98
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06001f
+    const p2, 0x7f060020
 
-    .line 92
+    .line 99
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -481,9 +510,9 @@
     return p1
 
     :cond_0
-    const p2, 0x7f06001e
+    const p2, 0x7f06001f
 
-    .line 94
+    .line 101
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -494,16 +523,16 @@
 .method public getScrollerTextColor(Landroid/content/Context;I)I
     .locals 0
 
-    .line 115
+    .line 122
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06002f
+    const p2, 0x7f060030
 
-    .line 116
+    .line 123
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -511,9 +540,9 @@
     return p1
 
     :cond_0
-    const p2, 0x7f06002e
+    const p2, 0x7f06002f
 
-    .line 118
+    .line 125
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -524,19 +553,19 @@
 .method public getSearchBarBackgroundResource(I)I
     .locals 0
 
-    .line 123
+    .line 130
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f0800bb
+    const p1, 0x7f0800c8
 
     return p1
 
     :cond_0
-    const p1, 0x7f0800ba
+    const p1, 0x7f0800c7
 
     return p1
 .end method
@@ -544,16 +573,16 @@
 .method public getSearchBarIconTintColor(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 0
 
-    .line 131
+    .line 138
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060341
+    const p2, 0x7f06038b
 
-    .line 132
+    .line 139
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -561,9 +590,9 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f060340
+    const p2, 0x7f06038a
 
-    .line 134
+    .line 141
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
@@ -574,16 +603,16 @@
 .method public getSearchBarInputClearColor(Landroid/content/Context;I)I
     .locals 0
 
-    .line 155
+    .line 162
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f0600ba
+    const p2, 0x7f0600d7
 
-    .line 156
+    .line 163
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -591,9 +620,9 @@
     return p1
 
     :cond_0
-    const p2, 0x7f0600b9
+    const p2, 0x7f0600d6
 
-    .line 158
+    .line 165
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -604,16 +633,16 @@
 .method public getSearchBarInputHintColor(Landroid/content/Context;I)I
     .locals 0
 
-    .line 147
+    .line 154
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06033f
+    const p2, 0x7f060389
 
-    .line 148
+    .line 155
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -621,9 +650,9 @@
     return p1
 
     :cond_0
-    const p2, 0x7f06033e
+    const p2, 0x7f060388
 
-    .line 150
+    .line 157
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -634,16 +663,16 @@
 .method public getSearchBarInputTextColor(Landroid/content/Context;I)I
     .locals 0
 
-    .line 139
+    .line 146
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060345
+    const p2, 0x7f06038f
 
-    .line 140
+    .line 147
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -651,9 +680,9 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060344
+    const p2, 0x7f06038e
 
-    .line 142
+    .line 149
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -664,16 +693,16 @@
 .method public getSearchEmptyDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
     .locals 0
 
-    .line 163
+    .line 170
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f0804fe
+    const p2, 0x7f080576
 
-    .line 164
+    .line 171
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -681,9 +710,9 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f0804fd
+    const p2, 0x7f080575
 
-    .line 166
+    .line 173
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -694,16 +723,16 @@
 .method public getSecondaryTextColor(Landroid/content/Context;I)I
     .locals 0
 
-    .line 99
+    .line 106
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060024
+    const p2, 0x7f060025
 
-    .line 100
+    .line 107
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -711,9 +740,9 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060023
+    const p2, 0x7f060024
 
-    .line 102
+    .line 109
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -724,16 +753,16 @@
 .method public getSettingButtonColor(Landroid/content/Context;I)I
     .locals 0
 
-    .line 183
+    .line 198
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060028
+    const p2, 0x7f060029
 
-    .line 184
+    .line 199
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -741,9 +770,9 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060027
+    const p2, 0x7f060028
 
-    .line 186
+    .line 201
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
     move-result p1
@@ -754,19 +783,19 @@
 .method public getTextClearIconResource(I)I
     .locals 0
 
-    .line 235
+    .line 250
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f08019a
+    const p1, 0x7f0801c4
 
     return p1
 
     :cond_0
-    const p1, 0x7f080199
+    const p1, 0x7f0801c3
 
     return p1
 .end method

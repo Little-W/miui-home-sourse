@@ -1,14 +1,11 @@
 .class Lcom/miui/home/launcher/CellLayout$5;
-.super Ljava/lang/Object;
+.super Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;
 .source "CellLayout.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/CellLayout;->onDrop(Lcom/miui/home/launcher/DragObject;Landroid/view/View;)Z
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/launcher/CellLayout;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,95 +17,50 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/CellLayout;
 
-.field final synthetic val$d:Lcom/miui/home/launcher/DragObject;
-
-.field final synthetic val$dragInfo:Lcom/miui/home/launcher/ItemInfo;
-
-.field final synthetic val$v:Landroid/view/View;
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/DragObject;Landroid/view/View;)V
+.method constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 1150
+    .line 2112
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$5;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/CellLayout$5;->val$dragInfo:Lcom/miui/home/launcher/ItemInfo;
-
-    iput-object p3, p0, Lcom/miui/home/launcher/CellLayout$5;->val$d:Lcom/miui/home/launcher/DragObject;
-
-    iput-object p4, p0, Lcom/miui/home/launcher/CellLayout$5;->val$v:Landroid/view/View;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onMessageEvent(Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;)V
+    .locals 2
+    .annotation runtime Lorg/greenrobot/eventbus/Subscribe;
+        threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
+    .end annotation
 
-    .line 1152
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$5;->val$dragInfo:Lcom/miui/home/launcher/ItemInfo;
+    .line 2115
+    invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getCurrentEditState()I
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/ItemInfo;->finishPending()V
+    move-result v0
 
-    .line 1153
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$5;->val$d:Lcom/miui/home/launcher/DragObject;
+    const/4 v1, 0x7
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/DragObject;->getDragSource()Lcom/miui/home/launcher/DragSource;
+    if-ne v0, v1, :cond_0
 
-    move-result-object v0
+    .line 2116
+    invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/EditModeChangedMessage;->getLastEditState()I
 
-    instance-of v0, v0, Lcom/miui/home/launcher/HotSeats;
+    move-result p1
 
-    if-eqz v0, :cond_0
+    const/16 v0, 0x11
 
-    iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$5;->val$v:Landroid/view/View;
+    if-ne p1, v0, :cond_0
 
-    instance-of v1, v0, Lcom/miui/home/launcher/ItemIcon;
+    .line 2117
+    iget-object p1, p0, Lcom/miui/home/launcher/CellLayout$5;->this$0:Lcom/miui/home/launcher/CellLayout;
 
-    if-eqz v1, :cond_0
-
-    .line 1154
-    check-cast v0, Lcom/miui/home/launcher/ItemIcon;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/ItemIcon;->getTitleContainer()Landroid/view/View;
-
-    move-result-object v0
-
-    const-string v1, "alpha"
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [F
-
-    fill-array-data v2, :array_0
-
-    invoke-static {v0, v1, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    const-wide/16 v1, 0x12c
-
-    .line 1155
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    .line 1156
-    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
+    invoke-virtual {p1}, Lcom/miui/home/launcher/CellLayout;->clearCellBackground()V
 
     :cond_0
     return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
 .end method

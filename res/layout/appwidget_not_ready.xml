@@ -1,38 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-        <ImageView
-            android:layout_gravity="center"
-            android:id="@id/image"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true" />
-        <FrameLayout
-            android:layout_gravity="center|right|top"
-            android:background="@drawable/need_download_icon_mask"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="11.0dip"
-            android:layout_marginEnd="11.0dip">
-            <ImageView
-                android:layout_gravity="center"
-                android:id="@id/download_mark"
-                android:visibility="visible"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/need_download_icon" />
-            <android.widget.ProgressBar
-                android:layout_gravity="center"
-                android:id="@id/progressbar"
-                android:visibility="invisible"
-                android:layout_width="30.0dip"
-                android:layout_height="30.0dip" />
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_gravity="center" android:id="@id/image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:adjustViewBounds="true" />
+        <FrameLayout android:layout_gravity="center|right|top" android:background="@drawable/need_download_icon_mask" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:layout_marginEnd="11.0dip">
+            <ImageView android:layout_gravity="center" android:id="@id/download_mark" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/need_download_icon" />
+            <android.widget.ProgressBar android:layout_gravity="center" android:id="@id/progressbar" android:visibility="invisible" android:layout_width="30.0dip" android:layout_height="30.0dip" />
         </FrameLayout>
     </FrameLayout>
 </FrameLayout>

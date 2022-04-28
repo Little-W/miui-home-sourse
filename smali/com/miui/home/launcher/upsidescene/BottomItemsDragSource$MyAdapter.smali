@@ -40,12 +40,12 @@
         }
     .end annotation
 
-    .line 50
+    .line 51
     iput-object p1, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;->this$0:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 51
+    .line 52
     iput-object p2, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;->mItemDatas:Ljava/util/List;
 
     return-void
@@ -56,7 +56,7 @@
 .method public getCount()I
     .locals 1
 
-    .line 56
+    .line 57
     iget-object v0, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;->mItemDatas:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -69,7 +69,7 @@
 .method public getItem(I)Ljava/lang/Object;
     .locals 0
 
-    .line 61
+    .line 62
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -88,7 +88,7 @@
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 2
 
-    .line 71
+    .line 72
     iget-object p2, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;->mItemDatas:Ljava/util/List;
 
     invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -97,14 +97,14 @@
 
     check-cast p1, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;
 
-    .line 73
+    .line 74
     iget-object p2, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;->this$0:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     invoke-static {p2}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->access$000(Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;)Landroid/content/Context;
 
     move-result-object p2
 
-    const p3, 0x7f0d0050
+    const p3, 0x7f0d006d
 
     const/4 v0, 0x0
 
@@ -114,30 +114,30 @@
 
     check-cast p2, Landroid/view/ViewGroup;
 
-    const p3, 0x7f0a023c
+    const p3, 0x7f0a02b2
 
-    .line 74
+    .line 75
     invoke-virtual {p2, p3}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object p3
 
     check-cast p3, Landroid/widget/TextView;
 
-    const v0, 0x7f0a011c
+    const v0, 0x7f0a0148
 
-    .line 75
+    .line 76
     invoke-virtual {p2, v0}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 76
+    .line 77
     iget-object v1, p1, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;->title:Ljava/lang/String;
 
     invoke-virtual {p3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 77
+    .line 78
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;->this$0:Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;
 
     iget-boolean v1, v1, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->mIsShowName:Z
@@ -148,18 +148,18 @@
 
     invoke-virtual {p3, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 78
+    .line 79
     :cond_0
     iget-object p3, p1, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;->itemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     invoke-virtual {p2, p3}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
 
-    .line 79
+    .line 80
     iget-object p3, p1, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;->icon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 81
+    .line 82
     new-instance p3, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter$1;
 
     invoke-direct {p3, p0, v0, p1}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter$1;-><init>(Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$MyAdapter;Landroid/widget/ImageView;Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource$ItemData;)V

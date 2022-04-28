@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/airbnb/lottie/LottieTask;)V
     .locals 0
 
-    .line 123
+    .line 127
     iput-object p1, p0, Lcom/airbnb/lottie/LottieTask$1;->this$0:Lcom/airbnb/lottie/LottieTask;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 125
+    .line 129
     iget-object v0, p0, Lcom/airbnb/lottie/LottieTask$1;->this$0:Lcom/airbnb/lottie/LottieTask;
 
     invoke-static {v0}, Lcom/airbnb/lottie/LottieTask;->access$000(Lcom/airbnb/lottie/LottieTask;)Lcom/airbnb/lottie/LottieResult;
@@ -49,7 +49,7 @@
 
     return-void
 
-    .line 129
+    .line 133
     :cond_0
     iget-object v0, p0, Lcom/airbnb/lottie/LottieTask$1;->this$0:Lcom/airbnb/lottie/LottieTask;
 
@@ -57,14 +57,14 @@
 
     move-result-object v0
 
-    .line 130
+    .line 134
     invoke-virtual {v0}, Lcom/airbnb/lottie/LottieResult;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 131
+    .line 135
     iget-object v1, p0, Lcom/airbnb/lottie/LottieTask$1;->this$0:Lcom/airbnb/lottie/LottieTask;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/LottieResult;->getValue()Ljava/lang/Object;
@@ -75,7 +75,7 @@
 
     goto :goto_0
 
-    .line 133
+    .line 137
     :cond_1
     iget-object v1, p0, Lcom/airbnb/lottie/LottieTask$1;->this$0:Lcom/airbnb/lottie/LottieTask;
 

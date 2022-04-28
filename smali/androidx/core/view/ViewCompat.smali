@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Landroidx/core/view/ViewCompat$Api29Impl;,
         Landroidx/core/view/ViewCompat$UnhandledKeyEventManager;,
         Landroidx/core/view/ViewCompat$AccessibilityPaneVisibilityManager;,
         Landroidx/core/view/ViewCompat$AccessibilityViewProperty;,
@@ -815,7 +814,7 @@
 
     move-result-object p0
 
-    const-string/jumbo v0, "window"
+    const-string v0, "window"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1150,6 +1149,58 @@
     :catch_1
     :cond_2
     const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static getPaddingEnd(Landroid/view/View;)I
+    .locals 2
+
+    .line 1802
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x11
+
+    if-lt v0, v1, :cond_0
+
+    .line 1803
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingEnd()I
+
+    move-result p0
+
+    return p0
+
+    .line 1805
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingRight()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static getPaddingStart(Landroid/view/View;)I
+    .locals 2
+
+    .line 1786
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x11
+
+    if-lt v0, v1, :cond_0
+
+    .line 1787
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingStart()I
+
+    move-result p0
+
+    return p0
+
+    .line 1789
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result p0
 
     return p0
 .end method
@@ -2096,30 +2147,6 @@
 
     :cond_1
     :goto_0
-    return-void
-.end method
-
-.method public static saveAttributeDataForStyleable(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
-    .locals 2
-    .param p1    # Landroid/content/Context;
-        .annotation build Landroid/annotation/SuppressLint;
-            value = {
-                "ContextFirst"
-            }
-        .end annotation
-    .end param
-
-    .line 513
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1d
-
-    if-lt v0, v1, :cond_0
-
-    .line 514
-    invoke-static/range {p0 .. p6}, Landroidx/core/view/ViewCompat$Api29Impl;->saveAttributeDataForStyleable(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
-
-    :cond_0
     return-void
 .end method
 

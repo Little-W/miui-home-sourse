@@ -41,7 +41,7 @@
         }
     .end annotation
 
-    .line 24
+    .line 25
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->beginObject()V
 
     const/4 v0, 0x0
@@ -54,7 +54,7 @@
 
     move-object v1, v2
 
-    .line 25
+    .line 26
     :goto_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -62,7 +62,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 26
+    .line 27
     sget-object v4, Lcom/airbnb/lottie/parser/FontParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {p0, v4}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
@@ -71,15 +71,15 @@
 
     packed-switch v4, :pswitch_data_0
 
-    .line 40
+    .line 41
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipName()V
 
-    .line 41
+    .line 42
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
-    .line 37
+    .line 38
     :pswitch_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextDouble()D
 
@@ -89,7 +89,7 @@
 
     goto :goto_0
 
-    .line 34
+    .line 35
     :pswitch_1
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -97,7 +97,7 @@
 
     goto :goto_0
 
-    .line 31
+    .line 32
     :pswitch_2
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -105,7 +105,7 @@
 
     goto :goto_0
 
-    .line 28
+    .line 29
     :pswitch_3
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -113,11 +113,11 @@
 
     goto :goto_0
 
-    .line 44
+    .line 45
     :cond_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->endObject()V
 
-    .line 46
+    .line 47
     new-instance p0, Lcom/airbnb/lottie/model/Font;
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/airbnb/lottie/model/Font;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;F)V

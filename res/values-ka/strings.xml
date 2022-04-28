@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">გაზიარება:</string>
     <string name="abc_shareactionprovider_share_with_application">%s-ით გაზიარება</string>
     <string name="abc_toolbar_collapse_description">ჩაკეცვა</string>
+    <string name="common_google_play_services_unknown_issue">%1$s-ს Google Play Services-თან პრობლემა შეექმნა. გთხოვთ, ცადოთ ხელახლა.</string>
     <string name="copy">კოპირება</string>
     <string name="expand_button_title">დამატებით</string>
     <string name="not_set">არ არის დაყენებული</string>

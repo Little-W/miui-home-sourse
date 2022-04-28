@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/UninstallDialogWrapper;)V
     .locals 0
 
-    .line 139
+    .line 141
     iput-object p1, p0, Lcom/miui/home/launcher/UninstallDialogWrapper$4;->this$0:Lcom/miui/home/launcher/UninstallDialogWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 139
+    .line 141
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/UninstallDialogWrapper$4;->accept(Ljava/util/List;)V
@@ -67,7 +67,7 @@
         }
     .end annotation
 
-    .line 142
+    .line 144
     iget-object p1, p0, Lcom/miui/home/launcher/UninstallDialogWrapper$4;->this$0:Lcom/miui/home/launcher/UninstallDialogWrapper;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/UninstallDialogWrapper;->onCancelUninstall()Z

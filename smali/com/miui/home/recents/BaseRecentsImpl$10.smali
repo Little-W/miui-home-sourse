@@ -28,7 +28,7 @@
 .method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;)V
     .locals 0
 
-    .line 549
+    .line 574
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$10;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,44 +44,51 @@
     return-void
 .end method
 
-.method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
+.method public static synthetic lambda$onReceive$0(Lcom/miui/home/recents/BaseRecentsImpl$10;Landroid/content/Intent;Landroid/content/Context;)V
     .locals 2
 
-    const-string p1, "android.intent.action.USER_SWITCHED"
+    const-string v0, "android.intent.action.USER_SWITCHED"
 
-    .line 552
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    .line 578
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result v0
 
-    if-eqz p1, :cond_3
+    if-eqz v0, :cond_3
 
-    .line 553
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$10;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+    .line 579
+    invoke-static {p2}, Lcom/miui/home/recents/RecentsModel;->getInstance(Landroid/content/Context;)Lcom/miui/home/recents/RecentsModel;
 
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1100(Lcom/miui/home/recents/BaseRecentsImpl;)Z
+    move-result-object p2
 
-    move-result p1
+    invoke-virtual {p2}, Lcom/miui/home/recents/RecentsModel;->clearRecentsTaskLoadPlan()V
 
-    if-nez p1, :cond_0
+    .line 580
+    iget-object p2, p0, Lcom/miui/home/recents/BaseRecentsImpl$10;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+
+    invoke-static {p2}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1100(Lcom/miui/home/recents/BaseRecentsImpl;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
 
     return-void
 
     :cond_0
-    const-string p1, "android.intent.extra.user_handle"
+    const-string p2, "android.intent.extra.user_handle"
 
     const/4 v0, -0x1
 
-    .line 556
-    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    .line 583
+    invoke-virtual {p1, p2, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p1
 
-    .line 557
+    .line 584
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object p2
@@ -92,17 +99,17 @@
 
     if-ne p2, p1, :cond_2
 
-    .line 559
+    .line 586
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$10;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$502(Lcom/miui/home/recents/BaseRecentsImpl;Z)Z
+    invoke-static {p1, v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$602(Lcom/miui/home/recents/BaseRecentsImpl;Z)Z
 
-    .line 560
+    .line 587
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$10;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
+    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$200(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
 
     move-result-object p1
 
@@ -118,20 +125,11 @@
 
     if-eqz p1, :cond_4
 
-    .line 562
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$10;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$800(Lcom/miui/home/recents/BaseRecentsImpl;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    .line 564
+    .line 591
     :try_start_0
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$10;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$400(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/NavStubView;
+    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$500(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/NavStubView;
 
     move-result-object p1
 
@@ -139,7 +137,7 @@
 
     const-string p1, "RecentsImpl"
 
-    .line 565
+    .line 592
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -154,12 +152,14 @@
 
     move-result-object p2
 
-    .line 566
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 593
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$10;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1200(Lcom/miui/home/recents/BaseRecentsImpl;)V
 
-    .line 568
+    .line 595
     :cond_1
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$10;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
@@ -172,26 +172,26 @@
     :catch_0
     move-exception p1
 
-    .line 570
+    .line 597
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 574
+    .line 601
     :cond_2
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$10;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2}, Lcom/miui/home/recents/BaseRecentsImpl;->access$502(Lcom/miui/home/recents/BaseRecentsImpl;Z)Z
+    invoke-static {p1, p2}, Lcom/miui/home/recents/BaseRecentsImpl;->access$602(Lcom/miui/home/recents/BaseRecentsImpl;Z)Z
 
-    .line 576
+    .line 603
     :try_start_1
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$10;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1400(Lcom/miui/home/recents/BaseRecentsImpl;)V
 
-    .line 577
+    .line 604
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$10;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1500(Lcom/miui/home/recents/BaseRecentsImpl;)V
@@ -203,32 +203,49 @@
     :catch_1
     move-exception p1
 
-    .line 579
+    .line 606
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
     :cond_3
-    const-string p1, "android.intent.action.USER_PRESENT"
+    const-string p2, "android.intent.action.USER_PRESENT"
 
-    .line 582
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    .line 609
+    invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object p1
 
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 583
+    .line 610
     iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$10;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->adaptToTopActivity()V
 
     :cond_4
     :goto_0
+    return-void
+.end method
+
+.method private onReceive$___twin___(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 2
+
+    .line 577
+    iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$10;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+
+    iget-object v0, v0, Lcom/miui/home/recents/BaseRecentsImpl;->mHandler:Landroid/os/Handler;
+
+    new-instance v1, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$10$Oh4pU9W-UN6NO_gbhtPy9AVJWkM;
+
+    invoke-direct {v1, p0, p2, p1}, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$10$Oh4pU9W-UN6NO_gbhtPy9AVJWkM;-><init>(Lcom/miui/home/recents/BaseRecentsImpl$10;Landroid/content/Intent;Landroid/content/Context;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
     return-void
 .end method
 

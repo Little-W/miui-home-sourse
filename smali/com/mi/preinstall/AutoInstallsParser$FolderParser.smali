@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/mi/preinstall/AutoInstallsParser;)V
     .locals 1
 
-    .line 144
+    .line 177
     invoke-static {p1}, Lcom/mi/preinstall/AutoInstallsParser;->access$400(Lcom/mi/preinstall/AutoInstallsParser;)Landroid/util/ArrayMap;
 
     move-result-object v0
@@ -58,12 +58,12 @@
         }
     .end annotation
 
-    .line 147
+    .line 180
     iput-object p1, p0, Lcom/mi/preinstall/AutoInstallsParser$FolderParser;->this$0:Lcom/mi/preinstall/AutoInstallsParser;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 148
+    .line 181
     iput-object p2, p0, Lcom/mi/preinstall/AutoInstallsParser$FolderParser;->mFolderElements:Landroid/util/ArrayMap;
 
     return-void
@@ -71,13 +71,14 @@
 
 
 # virtual methods
-.method public parseAndAdd(Landroid/content/res/XmlResourceParser;Ljava/util/List;)V
+.method public parseAndAdd(Landroid/content/res/XmlResourceParser;Landroid/util/ArrayMap;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/res/XmlResourceParser;",
-            "Ljava/util/List<",
+            "Landroid/util/ArrayMap<",
+            "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;)V"
         }
@@ -85,17 +86,17 @@
 
     .annotation system Ldalvik/annotation/Throws;
         value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
+            Ljava/io/IOException;,
+            Lorg/xmlpull/v1/XmlPullParserException;
         }
     .end annotation
 
-    .line 154
+    .line 188
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v0
 
-    .line 155
+    .line 189
     :goto_0
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->next()I
 
@@ -105,7 +106,7 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 156
+    .line 190
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v2
@@ -125,7 +126,7 @@
 
     goto :goto_0
 
-    .line 160
+    .line 194
     :cond_2
     iget-object v1, p0, Lcom/mi/preinstall/AutoInstallsParser$FolderParser;->mFolderElements:Landroid/util/ArrayMap;
 
@@ -143,9 +144,9 @@
 
     goto :goto_0
 
-    .line 164
+    .line 198
     :cond_3
-    invoke-interface {v1, p1, p2}, Lcom/mi/preinstall/AutoInstallsParser$TagParser;->parseAndAdd(Landroid/content/res/XmlResourceParser;Ljava/util/List;)V
+    invoke-interface {v1, p1, p2}, Lcom/mi/preinstall/AutoInstallsParser$TagParser;->parseAndAdd(Landroid/content/res/XmlResourceParser;Landroid/util/ArrayMap;)V
 
     goto :goto_0
 .end method

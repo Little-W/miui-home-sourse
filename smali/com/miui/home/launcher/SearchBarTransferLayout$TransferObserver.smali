@@ -318,6 +318,8 @@
 
     move-result-object v6
 
+    invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     const-string v3, "Launcher.Transfer"
 
     .line 211
@@ -334,6 +336,8 @@
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
+
+    invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v3, "Launcher.Transfer"
 
@@ -352,6 +356,8 @@
 
     move-result-object v6
 
+    invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     const-string v3, "Launcher.Transfer"
 
     .line 213
@@ -368,6 +374,8 @@
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
+
+    invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v3, "Launcher.Transfer"
 
@@ -386,6 +394,8 @@
 
     move-result-object v6
 
+    invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     const-string v3, "Launcher.Transfer"
 
     .line 215
@@ -402,6 +412,8 @@
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
+
+    invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string v3, "Launcher.Transfer"
 
@@ -420,6 +432,8 @@
 
     move-result-object v6
 
+    invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     const-string v3, "Launcher.Transfer"
 
     .line 217
@@ -436,6 +450,8 @@
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v6
+
+    invoke-static {v3, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v3, 0x0
 
@@ -508,6 +524,8 @@
     const-string v2, "set success"
 
     .line 225
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_0
 
     .line 227
@@ -538,6 +556,8 @@
     const-string v2, "missing meta"
 
     .line 229
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_0
 
     .line 232
@@ -566,11 +586,13 @@
     const-string v1, "Launcher.Transfer"
 
     const-string v2, "cursor null"
+
+    .line 234
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 234
     :goto_0
     if-eqz v0, :cond_4
 
@@ -638,6 +660,8 @@
     const-string v1, "query error"
 
     .line 239
+    invoke-static {p1, v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_4
     :goto_2
     return-void

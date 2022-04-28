@@ -327,6 +327,8 @@
 
     move-result-object v1
 
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 15
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
@@ -551,6 +553,8 @@
     move-result p0
 
     return p0
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

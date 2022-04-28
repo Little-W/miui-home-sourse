@@ -1,6 +1,9 @@
 .class Lcom/miui/home/recents/BaseRecentsImpl$6;
-.super Landroid/database/ContentObserver;
+.super Ljava/lang/Object;
 .source "BaseRecentsImpl.java"
+
+# interfaces
+.implements Lcom/miui/home/recents/ActivityObserverLauncher$ActivityObserverCallback;
 
 
 # annotations
@@ -19,58 +22,55 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;Landroid/os/Handler;)V
+.method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;)V
     .locals 0
 
-    .line 396
+    .line 412
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$6;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
-    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChange(Z)V
+.method public activityResumed(Landroid/content/Intent;)V
     .locals 2
 
-    const-string p1, "RecentsImpl"
+    if-eqz p1, :cond_0
 
-    .line 399
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "mForceImmersiveNavBarListener    onChange    mIsInAnotherPro="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/miui/home/recents/BaseRecentsImpl$6;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {v1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$500(Lcom/miui/home/recents/BaseRecentsImpl;)Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 416
+    invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 400
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$6;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+    if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$500(Lcom/miui/home/recents/BaseRecentsImpl;)Z
+    .line 417
+    invoke-virtual {p1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
-    move-result p1
+    move-result-object p1
 
-    if-nez p1, :cond_0
+    invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
-    .line 401
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$6;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+    move-result-object p1
 
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$600(Lcom/miui/home/recents/BaseRecentsImpl;)V
+    const-string v0, "RecentsImpl"
+
+    const-string v1, "mActivityStateObserver "
+
+    .line 418
+    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 419
+    iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$6;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+
+    invoke-virtual {v0, p1}, Lcom/miui/home/recents/BaseRecentsImpl;->onResumed(Ljava/lang/String;)V
 
     :cond_0
     return-void

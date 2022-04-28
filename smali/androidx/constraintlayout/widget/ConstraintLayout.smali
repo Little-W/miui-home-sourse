@@ -87,6 +87,321 @@
 
 
 # direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
+
+    .line 570
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
+
+    .line 499
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mChildrenByIds:Landroid/util/SparseArray;
+
+    .line 502
+    new-instance p1, Ljava/util/ArrayList;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintHelpers:Ljava/util/ArrayList;
+
+    .line 507
+    new-instance p1, Ljava/util/ArrayList;
+
+    const/16 v0, 0x64
+
+    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mVariableDimensionsWidgets:Ljava/util/ArrayList;
+
+    .line 509
+    new-instance p1, Landroidx/constraintlayout/solver/widgets/ConstraintWidgetContainer;
+
+    invoke-direct {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintWidgetContainer;-><init>()V
+
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLayoutWidget:Landroidx/constraintlayout/solver/widgets/ConstraintWidgetContainer;
+
+    const/4 p1, 0x0
+
+    .line 511
+    iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinWidth:I
+
+    .line 512
+    iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinHeight:I
+
+    const v0, 0x7fffffff
+
+    .line 513
+    iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxWidth:I
+
+    .line 514
+    iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxHeight:I
+
+    const/4 v0, 0x1
+
+    .line 516
+    iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mDirtyHierarchy:Z
+
+    const/4 v0, 0x7
+
+    .line 517
+    iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOptimizationLevel:I
+
+    const/4 v0, 0x0
+
+    .line 518
+    iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
+
+    const/4 v1, -0x1
+
+    .line 520
+    iput v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSetId:I
+
+    .line 522
+    new-instance v2, Ljava/util/HashMap;
+
+    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v2, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mDesignIds:Ljava/util/HashMap;
+
+    .line 525
+    iput v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidth:I
+
+    .line 526
+    iput v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeight:I
+
+    .line 527
+    iput v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidthSize:I
+
+    .line 528
+    iput v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeightSize:I
+
+    .line 529
+    iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidthMode:I
+
+    .line 530
+    iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeightMode:I
+
+    .line 571
+    invoke-direct {p0, v0}, Landroidx/constraintlayout/widget/ConstraintLayout;->init(Landroid/util/AttributeSet;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 2
+
+    .line 575
+    invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 499
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mChildrenByIds:Landroid/util/SparseArray;
+
+    .line 502
+    new-instance p1, Ljava/util/ArrayList;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintHelpers:Ljava/util/ArrayList;
+
+    .line 507
+    new-instance p1, Ljava/util/ArrayList;
+
+    const/16 v0, 0x64
+
+    invoke-direct {p1, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mVariableDimensionsWidgets:Ljava/util/ArrayList;
+
+    .line 509
+    new-instance p1, Landroidx/constraintlayout/solver/widgets/ConstraintWidgetContainer;
+
+    invoke-direct {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintWidgetContainer;-><init>()V
+
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLayoutWidget:Landroidx/constraintlayout/solver/widgets/ConstraintWidgetContainer;
+
+    const/4 p1, 0x0
+
+    .line 511
+    iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinWidth:I
+
+    .line 512
+    iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinHeight:I
+
+    const v0, 0x7fffffff
+
+    .line 513
+    iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxWidth:I
+
+    .line 514
+    iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxHeight:I
+
+    const/4 v0, 0x1
+
+    .line 516
+    iput-boolean v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mDirtyHierarchy:Z
+
+    const/4 v0, 0x7
+
+    .line 517
+    iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOptimizationLevel:I
+
+    const/4 v0, 0x0
+
+    .line 518
+    iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
+
+    const/4 v0, -0x1
+
+    .line 520
+    iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSetId:I
+
+    .line 522
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mDesignIds:Ljava/util/HashMap;
+
+    .line 525
+    iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidth:I
+
+    .line 526
+    iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeight:I
+
+    .line 527
+    iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidthSize:I
+
+    .line 528
+    iput v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeightSize:I
+
+    .line 529
+    iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidthMode:I
+
+    .line 530
+    iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeightMode:I
+
+    .line 576
+    invoke-direct {p0, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->init(Landroid/util/AttributeSet;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 1
+
+    .line 580
+    invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    .line 499
+    new-instance p1, Landroid/util/SparseArray;
+
+    invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mChildrenByIds:Landroid/util/SparseArray;
+
+    .line 502
+    new-instance p1, Ljava/util/ArrayList;
+
+    const/4 p3, 0x4
+
+    invoke-direct {p1, p3}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintHelpers:Ljava/util/ArrayList;
+
+    .line 507
+    new-instance p1, Ljava/util/ArrayList;
+
+    const/16 p3, 0x64
+
+    invoke-direct {p1, p3}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mVariableDimensionsWidgets:Ljava/util/ArrayList;
+
+    .line 509
+    new-instance p1, Landroidx/constraintlayout/solver/widgets/ConstraintWidgetContainer;
+
+    invoke-direct {p1}, Landroidx/constraintlayout/solver/widgets/ConstraintWidgetContainer;-><init>()V
+
+    iput-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLayoutWidget:Landroidx/constraintlayout/solver/widgets/ConstraintWidgetContainer;
+
+    const/4 p1, 0x0
+
+    .line 511
+    iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinWidth:I
+
+    .line 512
+    iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinHeight:I
+
+    const p3, 0x7fffffff
+
+    .line 513
+    iput p3, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxWidth:I
+
+    .line 514
+    iput p3, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxHeight:I
+
+    const/4 p3, 0x1
+
+    .line 516
+    iput-boolean p3, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mDirtyHierarchy:Z
+
+    const/4 p3, 0x7
+
+    .line 517
+    iput p3, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOptimizationLevel:I
+
+    const/4 p3, 0x0
+
+    .line 518
+    iput-object p3, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
+
+    const/4 p3, -0x1
+
+    .line 520
+    iput p3, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSetId:I
+
+    .line 522
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mDesignIds:Ljava/util/HashMap;
+
+    .line 525
+    iput p3, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidth:I
+
+    .line 526
+    iput p3, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeight:I
+
+    .line 527
+    iput p3, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidthSize:I
+
+    .line 528
+    iput p3, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeightSize:I
+
+    .line 529
+    iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureWidthMode:I
+
+    .line 530
+    iput p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLastMeasureHeightMode:I
+
+    .line 581
+    invoke-direct {p0, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->init(Landroid/util/AttributeSet;)V
+
+    return-void
+.end method
+
 .method private final getTargetWidget(I)Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
     .locals 1
 
@@ -155,6 +470,203 @@
 
     :goto_0
     return-object p1
+.end method
+
+.method private init(Landroid/util/AttributeSet;)V
+    .locals 7
+
+    .line 595
+    iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLayoutWidget:Landroidx/constraintlayout/solver/widgets/ConstraintWidgetContainer;
+
+    invoke-virtual {v0, p0}, Landroidx/constraintlayout/solver/widgets/ConstraintWidgetContainer;->setCompanionWidget(Ljava/lang/Object;)V
+
+    .line 596
+    iget-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mChildrenByIds:Landroid/util/SparseArray;
+
+    invoke-virtual {p0}, Landroidx/constraintlayout/widget/ConstraintLayout;->getId()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1, p0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/4 v0, 0x0
+
+    .line 597
+    iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
+
+    if-eqz p1, :cond_7
+
+    .line 599
+    invoke-virtual {p0}, Landroidx/constraintlayout/widget/ConstraintLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    sget-object v2, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout:[I
+
+    invoke-virtual {v1, p1, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    .line 600
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->getIndexCount()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-ge v3, v1, :cond_6
+
+    .line 602
+    invoke-virtual {p1, v3}, Landroid/content/res/TypedArray;->getIndex(I)I
+
+    move-result v4
+
+    .line 603
+    sget v5, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_android_minWidth:I
+
+    if-ne v4, v5, :cond_0
+
+    .line 604
+    iget v5, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinWidth:I
+
+    invoke-virtual {p1, v4, v5}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v4
+
+    iput v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinWidth:I
+
+    goto :goto_2
+
+    .line 605
+    :cond_0
+    sget v5, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_android_minHeight:I
+
+    if-ne v4, v5, :cond_1
+
+    .line 606
+    iget v5, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinHeight:I
+
+    invoke-virtual {p1, v4, v5}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v4
+
+    iput v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMinHeight:I
+
+    goto :goto_2
+
+    .line 607
+    :cond_1
+    sget v5, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_android_maxWidth:I
+
+    if-ne v4, v5, :cond_2
+
+    .line 608
+    iget v5, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxWidth:I
+
+    invoke-virtual {p1, v4, v5}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v4
+
+    iput v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxWidth:I
+
+    goto :goto_2
+
+    .line 609
+    :cond_2
+    sget v5, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_android_maxHeight:I
+
+    if-ne v4, v5, :cond_3
+
+    .line 610
+    iget v5, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxHeight:I
+
+    invoke-virtual {p1, v4, v5}, Landroid/content/res/TypedArray;->getDimensionPixelOffset(II)I
+
+    move-result v4
+
+    iput v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mMaxHeight:I
+
+    goto :goto_2
+
+    .line 611
+    :cond_3
+    sget v5, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_layout_optimizationLevel:I
+
+    if-ne v4, v5, :cond_4
+
+    .line 612
+    iget v5, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOptimizationLevel:I
+
+    invoke-virtual {p1, v4, v5}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v4
+
+    iput v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOptimizationLevel:I
+
+    goto :goto_2
+
+    .line 613
+    :cond_4
+    sget v5, Landroidx/constraintlayout/widget/R$styleable;->ConstraintLayout_Layout_constraintSet:I
+
+    if-ne v4, v5, :cond_5
+
+    .line 614
+    invoke-virtual {p1, v4, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v4
+
+    .line 616
+    :try_start_0
+    new-instance v5, Landroidx/constraintlayout/widget/ConstraintSet;
+
+    invoke-direct {v5}, Landroidx/constraintlayout/widget/ConstraintSet;-><init>()V
+
+    iput-object v5, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
+
+    .line 617
+    iget-object v5, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
+
+    invoke-virtual {p0}, Landroidx/constraintlayout/widget/ConstraintLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6, v4}, Landroidx/constraintlayout/widget/ConstraintSet;->load(Landroid/content/Context;I)V
+    :try_end_0
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    .line 619
+    :catch_0
+    iput-object v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSet:Landroidx/constraintlayout/widget/ConstraintSet;
+
+    .line 621
+    :goto_1
+    iput v4, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mConstraintSetId:I
+
+    :cond_5
+    :goto_2
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    .line 624
+    :cond_6
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 626
+    :cond_7
+    iget-object p1, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mLayoutWidget:Landroidx/constraintlayout/solver/widgets/ConstraintWidgetContainer;
+
+    iget v0, p0, Landroidx/constraintlayout/widget/ConstraintLayout;->mOptimizationLevel:I
+
+    invoke-virtual {p1, v0}, Landroidx/constraintlayout/solver/widgets/ConstraintWidgetContainer;->setOptimizationLevel(I)V
+
+    return-void
 .end method
 
 .method private internalMeasureChildren(II)V

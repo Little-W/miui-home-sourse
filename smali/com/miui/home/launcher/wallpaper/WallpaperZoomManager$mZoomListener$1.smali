@@ -27,7 +27,7 @@
         }
     .end annotation
 
-    .line 42
+    .line 45
     iput-object p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$mZoomListener$1;->this$0:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -48,7 +48,7 @@
         }
     .end annotation
 
-    .line 45
+    .line 48
     iget-object p1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$mZoomListener$1;->this$0:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;
 
     invoke-static {p1, p3}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->access$setWallpaperZoomOut(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;F)V

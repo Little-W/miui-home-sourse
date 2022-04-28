@@ -47,126 +47,39 @@
 
 # direct methods
 .method private constructor <init>(Lmiuix/preference/PreferenceFragment;Landroid/content/Context;)V
-    .locals 2
+    .locals 0
 
-    .line 158
+    .line 330
     iput-object p1, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
 
-    .line 159
-    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .line 331
+    invoke-virtual {p0, p2}, Lmiuix/preference/PreferenceFragment$FrameDecoration;->initMaskPadding(Landroid/content/Context;)V
 
-    move-result-object v0
+    .line 333
+    new-instance p1, Landroid/graphics/Paint;
 
-    sget v1, Lmiuix/preference/R$dimen;->miuix_preference_checkable_item_mask_padding_top:I
+    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    iput-object p1, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mClipPaint:Landroid/graphics/Paint;
 
-    move-result v0
+    .line 334
+    invoke-virtual {p0}, Lmiuix/preference/PreferenceFragment$FrameDecoration;->updateClipPaintColor()V
 
-    iput v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingTop:I
+    .line 335
+    iget-object p1, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mClipPaint:Landroid/graphics/Paint;
 
-    .line 161
-    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const/4 p2, 0x1
 
-    move-result-object v0
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    sget v1, Lmiuix/preference/R$dimen;->miuix_preference_checkable_item_mask_padding_bottom:I
+    .line 337
+    new-instance p1, Ljava/util/HashMap;
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    move-result v0
-
-    iput v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingBottom:I
-
-    .line 163
-    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lmiuix/preference/R$dimen;->miuix_preference_checkable_item_mask_padding_start:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    iput v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingStart:I
-
-    .line 165
-    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lmiuix/preference/R$dimen;->miuix_preference_checkable_item_mask_padding_end:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    iput v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingEnd:I
-
-    .line 167
-    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Lmiuix/preference/R$dimen;->miuix_preference_checkable_item_mask_radius:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    iput v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskRadius:I
-
-    .line 170
-    new-instance v0, Landroid/graphics/Paint;
-
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
-
-    iput-object v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mClipPaint:Landroid/graphics/Paint;
-
-    .line 171
-    iget-object v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mClipPaint:Landroid/graphics/Paint;
-
-    sget v1, Lmiuix/preference/R$attr;->preferenceCheckableMaskColor:I
-
-    invoke-static {p2, v1}, Lmiuix/internal/util/AttributeResolver;->resolveColor(Landroid/content/Context;I)I
-
-    move-result p2
-
-    invoke-virtual {v0, p2}, Landroid/graphics/Paint;->setColor(I)V
-
-    .line 172
-    iget-object p2, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mClipPaint:Landroid/graphics/Paint;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    .line 174
-    new-instance p2, Ljava/util/HashMap;
-
-    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p2, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRectMaps:Ljava/util/Map;
-
-    .line 175
-    invoke-virtual {p1}, Lmiuix/preference/PreferenceFragment;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->heightPixels:I
-
-    iput p1, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mHeightPixels:I
+    iput-object p1, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRectMaps:Ljava/util/Map;
 
     return-void
 .end method
@@ -174,7 +87,7 @@
 .method synthetic constructor <init>(Lmiuix/preference/PreferenceFragment;Landroid/content/Context;Lmiuix/preference/PreferenceFragment$1;)V
     .locals 0
 
-    .line 140
+    .line 312
     invoke-direct {p0, p1, p2}, Lmiuix/preference/PreferenceFragment$FrameDecoration;-><init>(Lmiuix/preference/PreferenceFragment;Landroid/content/Context;)V
 
     return-void
@@ -183,7 +96,7 @@
 .method static synthetic access$100(Lmiuix/preference/PreferenceFragment$FrameDecoration;)Landroid/graphics/Paint;
     .locals 0
 
-    .line 140
+    .line 312
     iget-object p0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mClipPaint:Landroid/graphics/Paint;
 
     return-object p0
@@ -192,7 +105,7 @@
 .method static synthetic access$200(Lmiuix/preference/PreferenceFragment$FrameDecoration;)I
     .locals 0
 
-    .line 140
+    .line 312
     iget p0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingTop:I
 
     return p0
@@ -201,7 +114,7 @@
 .method static synthetic access$300(Lmiuix/preference/PreferenceFragment$FrameDecoration;)I
     .locals 0
 
-    .line 140
+    .line 312
     iget p0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingBottom:I
 
     return p0
@@ -210,7 +123,7 @@
 .method static synthetic access$400(Lmiuix/preference/PreferenceFragment$FrameDecoration;)I
     .locals 0
 
-    .line 140
+    .line 312
     iget p0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingStart:I
 
     return p0
@@ -219,7 +132,7 @@
 .method static synthetic access$500(Lmiuix/preference/PreferenceFragment$FrameDecoration;)I
     .locals 0
 
-    .line 140
+    .line 312
     iget p0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingEnd:I
 
     return p0
@@ -228,7 +141,7 @@
 .method static synthetic access$600(Lmiuix/preference/PreferenceFragment$FrameDecoration;)I
     .locals 0
 
-    .line 140
+    .line 312
     iget p0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskRadius:I
 
     return p0
@@ -245,17 +158,17 @@
 
     if-ge p2, p3, :cond_1
 
-    .line 205
+    .line 379
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildAt(I)Landroid/view/View;
 
     move-result-object p2
 
-    .line 206
+    .line 380
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result p1
 
-    .line 207
+    .line 381
     iget-object p2, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
 
     invoke-static {p2}, Lmiuix/preference/PreferenceFragment;->access$700(Lmiuix/preference/PreferenceFragment;)Lmiuix/preference/PreferenceGroupAdapter;
@@ -266,7 +179,7 @@
 
     move-result-object p1
 
-    .line 208
+    .line 382
     instance-of p1, p1, Lmiuix/preference/RadioSetPreferenceCategory;
 
     if-eqz p1, :cond_0
@@ -281,9 +194,9 @@
 .end method
 
 .method private drawMask(Landroid/graphics/Canvas;IIIIZZZZ)V
-    .locals 3
+    .locals 4
 
-    .line 358
+    .line 532
     iget-object v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
 
     invoke-static {v0}, Lmiuix/preference/PreferenceFragment;->access$800(Lmiuix/preference/PreferenceFragment;)Z
@@ -294,7 +207,7 @@
 
     return-void
 
-    .line 361
+    .line 535
     :cond_0
     new-instance v0, Landroid/graphics/RectF;
 
@@ -310,7 +223,7 @@
 
     if-eqz p9, :cond_1
 
-    .line 362
+    .line 536
     iget v1, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingEnd:I
 
     goto :goto_0
@@ -321,7 +234,7 @@
     :goto_0
     if-eqz p9, :cond_2
 
-    .line 363
+    .line 537
     iget p9, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingStart:I
 
     goto :goto_1
@@ -329,8 +242,56 @@
     :cond_2
     iget p9, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingEnd:I
 
-    .line 364
+    .line 538
     :goto_1
+    iget-object v2, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
+
+    invoke-static {v2}, Lmiuix/preference/PreferenceFragment;->access$1000(Lmiuix/preference/PreferenceFragment;)Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
+
+    invoke-static {v2}, Lmiuix/preference/PreferenceFragment;->access$1100(Lmiuix/preference/PreferenceFragment;)I
+
+    move-result v2
+
+    goto :goto_2
+
+    :cond_3
+    move v2, v3
+
+    :goto_2
+    add-int/2addr v1, v2
+
+    .line 539
+    iget-object v2, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
+
+    invoke-static {v2}, Lmiuix/preference/PreferenceFragment;->access$1000(Lmiuix/preference/PreferenceFragment;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    iget-object v2, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
+
+    invoke-static {v2}, Lmiuix/preference/PreferenceFragment;->access$1100(Lmiuix/preference/PreferenceFragment;)I
+
+    move-result v2
+
+    goto :goto_3
+
+    :cond_4
+    move v2, v3
+
+    :goto_3
+    add-int/2addr p9, v2
+
+    .line 540
     new-instance v2, Landroid/graphics/RectF;
 
     add-int/2addr p2, v1
@@ -343,42 +304,40 @@
 
     invoke-direct {v2, p2, p3, p4, p5}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 365
+    .line 541
     new-instance p2, Landroid/graphics/Path;
 
     invoke-direct {p2}, Landroid/graphics/Path;-><init>()V
 
     const/4 p3, 0x0
 
-    if-eqz p6, :cond_3
+    if-eqz p6, :cond_5
 
-    .line 366
+    .line 542
     iget p4, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskRadius:I
 
     int-to-float p4, p4
 
-    goto :goto_2
+    goto :goto_4
 
-    :cond_3
+    :cond_5
     move p4, p3
 
-    :goto_2
-    if-eqz p7, :cond_4
+    :goto_4
+    if-eqz p7, :cond_6
 
-    .line 367
+    .line 543
     iget p3, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskRadius:I
 
     int-to-float p3, p3
 
-    :cond_4
+    :cond_6
     const/16 p5, 0x8
 
-    .line 368
+    .line 544
     new-array p5, p5, [F
 
-    const/4 p6, 0x0
-
-    aput p4, p5, p6
+    aput p4, p5, v3
 
     const/4 p6, 0x1
 
@@ -408,12 +367,12 @@
 
     aput p3, p5, p4
 
-    .line 371
+    .line 547
     sget-object p3, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {p2, v2, p5, p3}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;[FLandroid/graphics/Path$Direction;)V
 
-    .line 373
+    .line 549
     iget-object p3, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mClipPaint:Landroid/graphics/Paint;
 
     const/16 p4, 0x1f
@@ -422,14 +381,14 @@
 
     move-result p3
 
-    .line 374
+    .line 550
     iget-object p4, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mClipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, p4}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    if-eqz p8, :cond_5
+    if-eqz p8, :cond_7
 
-    .line 376
+    .line 552
     iget-object p4, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mClipPaint:Landroid/graphics/Paint;
 
     new-instance p5, Landroid/graphics/PorterDuffXfermode;
@@ -440,10 +399,10 @@
 
     invoke-virtual {p4, p5}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    goto :goto_3
+    goto :goto_5
 
-    .line 378
-    :cond_5
+    .line 554
+    :cond_7
     iget-object p4, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mClipPaint:Landroid/graphics/Paint;
 
     new-instance p5, Landroid/graphics/PorterDuffXfermode;
@@ -454,20 +413,20 @@
 
     invoke-virtual {p4, p5}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 380
-    :goto_3
+    .line 556
+    :goto_5
     iget-object p4, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mClipPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, p2, p4}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 381
+    .line 557
     iget-object p2, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mClipPaint:Landroid/graphics/Paint;
 
     const/4 p4, 0x0
 
     invoke-virtual {p2, p4}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 382
+    .line 558
     invoke-virtual {p1, p3}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     return-void
@@ -482,7 +441,7 @@
 
     if-eqz p2, :cond_2
 
-    .line 181
+    .line 355
     invoke-virtual {p2}, Landroid/view/View;->getBottom()I
 
     move-result p5
@@ -505,14 +464,14 @@
 
     if-ge p3, p4, :cond_5
 
-    .line 185
+    .line 359
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView;->getChildAt(I)Landroid/view/View;
 
     move-result-object p2
 
     if-eqz p2, :cond_1
 
-    .line 187
+    .line 361
     invoke-virtual {p2}, Landroid/view/View;->getY()F
 
     move-result p1
@@ -534,14 +493,14 @@
     :goto_2
     if-le p3, p4, :cond_5
 
-    .line 193
+    .line 367
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView;->getChildAt(I)Landroid/view/View;
 
     move-result-object p2
 
     if-eqz p2, :cond_4
 
-    .line 195
+    .line 369
     invoke-virtual {p2}, Landroid/view/View;->getY()F
 
     move-result p1
@@ -568,7 +527,7 @@
 .method private updateOperationTopAndBottom(Landroidx/recyclerview/widget/RecyclerView;Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;)V
     .locals 10
 
-    .line 315
+    .line 489
     iget-object v0, p2, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->preferenceList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -592,7 +551,7 @@
     :goto_0
     if-ge v3, v0, :cond_5
 
-    .line 317
+    .line 491
     iget-object v8, p2, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->preferenceList:Ljava/util/List;
 
     invoke-interface {v8, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -605,19 +564,19 @@
 
     move-result v8
 
-    .line 318
+    .line 492
     invoke-virtual {p1, v8}, Landroidx/recyclerview/widget/RecyclerView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v8
 
     if-eqz v8, :cond_2
 
-    .line 321
+    .line 495
     invoke-virtual {v8}, Landroid/view/View;->getTop()I
 
     move-result v9
 
-    .line 322
+    .line 496
     invoke-virtual {v8}, Landroid/view/View;->getBottom()I
 
     move-result v8
@@ -638,7 +597,7 @@
 
     move v5, v8
 
-    .line 335
+    .line 509
     :cond_2
     iget v8, p2, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->nextViewY:I
 
@@ -650,14 +609,14 @@
 
     if-le v8, v9, :cond_3
 
-    .line 336
+    .line 510
     iget v6, p2, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->nextViewY:I
 
     iget v8, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingTop:I
 
     sub-int/2addr v6, v8
 
-    .line 339
+    .line 513
     :cond_3
     iget v8, p2, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->preViewHY:I
 
@@ -669,7 +628,7 @@
 
     if-ge v8, v9, :cond_4
 
-    .line 340
+    .line 514
     iget v7, p2, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->nextViewY:I
 
     iget v8, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingTop:I
@@ -684,7 +643,7 @@
     :cond_5
     const/4 p1, 0x2
 
-    .line 343
+    .line 517
     new-array v0, p1, [I
 
     aput v4, v0, v1
@@ -704,7 +663,7 @@
 
     move v4, v7
 
-    .line 352
+    .line 526
     :cond_7
     new-array p1, p1, [I
 
@@ -722,7 +681,7 @@
 .method public getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 0
 
-    .line 387
+    .line 563
     iget-object p4, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
 
     invoke-static {p4}, Lmiuix/preference/PreferenceFragment;->access$800(Lmiuix/preference/PreferenceFragment;)Z
@@ -733,13 +692,13 @@
 
     return-void
 
-    .line 390
+    .line 566
     :cond_0
     invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result p2
 
-    .line 391
+    .line 567
     iget-object p4, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
 
     invoke-static {p4}, Lmiuix/preference/PreferenceFragment;->access$700(Lmiuix/preference/PreferenceFragment;)Lmiuix/preference/PreferenceGroupAdapter;
@@ -752,7 +711,7 @@
 
     if-eqz p4, :cond_4
 
-    .line 393
+    .line 569
     invoke-virtual {p4}, Landroidx/preference/Preference;->getParent()Landroidx/preference/PreferenceGroup;
 
     move-result-object p4
@@ -761,14 +720,14 @@
 
     if-eqz p4, :cond_4
 
-    .line 394
+    .line 570
     invoke-static {p3}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result p4
 
     if-eqz p4, :cond_1
 
-    .line 395
+    .line 571
     invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getScrollBarSize()I
 
     move-result p3
@@ -777,7 +736,7 @@
 
     goto :goto_0
 
-    .line 397
+    .line 573
     :cond_1
     invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getScrollBarSize()I
 
@@ -785,7 +744,7 @@
 
     iput p3, p1, Landroid/graphics/Rect;->right:I
 
-    .line 399
+    .line 575
     :goto_0
     iget-object p3, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
 
@@ -801,7 +760,7 @@
 
     if-ne p2, p3, :cond_2
 
-    .line 401
+    .line 577
     iget p2, p1, Landroid/graphics/Rect;->top:I
 
     iget p3, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingTop:I
@@ -810,7 +769,7 @@
 
     iput p2, p1, Landroid/graphics/Rect;->top:I
 
-    .line 402
+    .line 578
     iget p2, p1, Landroid/graphics/Rect;->bottom:I
 
     iget p3, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingBottom:I
@@ -826,7 +785,7 @@
 
     if-ne p2, p3, :cond_3
 
-    .line 404
+    .line 580
     iget p2, p1, Landroid/graphics/Rect;->top:I
 
     iget p3, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingTop:I
@@ -842,7 +801,7 @@
 
     if-ne p2, p3, :cond_4
 
-    .line 406
+    .line 582
     iget p2, p1, Landroid/graphics/Rect;->bottom:I
 
     iget p3, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingBottom:I
@@ -856,6 +815,82 @@
     return-void
 .end method
 
+.method public initMaskPadding(Landroid/content/Context;)V
+    .locals 2
+
+    .line 341
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lmiuix/preference/R$dimen;->miuix_preference_checkable_item_mask_padding_top:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingTop:I
+
+    .line 343
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lmiuix/preference/R$dimen;->miuix_preference_checkable_item_mask_padding_bottom:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingBottom:I
+
+    .line 345
+    sget v0, Lmiuix/preference/R$attr;->preferenceCheckableItemMaskPaddingStart:I
+
+    invoke-static {p1, v0}, Lmiuix/internal/util/AttributeResolver;->resolveDimensionPixelSize(Landroid/content/Context;I)I
+
+    move-result v0
+
+    iput v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingStart:I
+
+    .line 346
+    sget v0, Lmiuix/preference/R$attr;->preferenceCheckableItemSetMaskPaddingEnd:I
+
+    invoke-static {p1, v0}, Lmiuix/internal/util/AttributeResolver;->resolveDimensionPixelSize(Landroid/content/Context;I)I
+
+    move-result v0
+
+    iput v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingEnd:I
+
+    .line 347
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Lmiuix/preference/R$dimen;->miuix_preference_checkable_item_mask_radius:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskRadius:I
+
+    .line 349
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p1
+
+    iget p1, p1, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    iput p1, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mHeightPixels:I
+
+    return-void
+.end method
+
 .method public onDrawOver(Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 21
 
@@ -863,7 +898,7 @@
 
     move-object/from16 v6, p2
 
-    .line 219
+    .line 393
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
 
     invoke-static {v0}, Lmiuix/preference/PreferenceFragment;->access$800(Lmiuix/preference/PreferenceFragment;)Z
@@ -874,23 +909,23 @@
 
     return-void
 
-    .line 222
+    .line 396
     :cond_0
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRectMaps:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 223
+    .line 397
     invoke-virtual/range {p2 .. p2}, Landroidx/recyclerview/widget/RecyclerView;->getChildCount()I
 
     move-result v7
 
-    .line 225
+    .line 399
     invoke-static/range {p2 .. p2}, Landroidx/appcompat/widget/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
 
     move-result v11
 
-    .line 226
+    .line 400
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
 
     invoke-static {v0}, Lmiuix/preference/PreferenceFragment;->access$700(Lmiuix/preference/PreferenceFragment;)Lmiuix/preference/PreferenceGroupAdapter;
@@ -901,7 +936,7 @@
 
     move-result-object v0
 
-    .line 227
+    .line 401
     iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/Integer;
@@ -910,7 +945,7 @@
 
     move-result v12
 
-    .line 228
+    .line 402
     iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
@@ -930,17 +965,17 @@
 
     if-ge v8, v7, :cond_8
 
-    .line 231
+    .line 405
     invoke-virtual {v6, v8}, Landroidx/recyclerview/widget/RecyclerView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
-    .line 232
+    .line 406
     invoke-virtual {v6, v4}, Landroidx/recyclerview/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result v0
 
-    .line 233
+    .line 407
     iget-object v1, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
 
     invoke-static {v1}, Lmiuix/preference/PreferenceFragment;->access$700(Lmiuix/preference/PreferenceFragment;)Lmiuix/preference/PreferenceGroupAdapter;
@@ -953,7 +988,7 @@
 
     if-eqz v1, :cond_7
 
-    .line 234
+    .line 408
     invoke-virtual {v1}, Landroidx/preference/Preference;->getParent()Landroidx/preference/PreferenceGroup;
 
     move-result-object v1
@@ -962,7 +997,7 @@
 
     if-eqz v1, :cond_7
 
-    .line 235
+    .line 409
     iget-object v1, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
 
     invoke-static {v1}, Lmiuix/preference/PreferenceFragment;->access$700(Lmiuix/preference/PreferenceFragment;)Lmiuix/preference/PreferenceGroupAdapter;
@@ -990,7 +1025,7 @@
 
     goto :goto_2
 
-    .line 238
+    .line 412
     :cond_2
     :goto_1
     new-instance v0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
@@ -1001,7 +1036,7 @@
 
     iput-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
-    .line 239
+    .line 413
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
     iget v1, v0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->type:I
@@ -1010,7 +1045,7 @@
 
     iput v1, v0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->type:I
 
-    .line 240
+    .line 414
     iget-object v1, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
     iput-boolean v5, v1, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->startRadioButtonCategory:Z
@@ -1039,14 +1074,14 @@
 
     move/from16 v5, v17
 
-    .line 241
+    .line 415
     invoke-direct/range {v0 .. v5}, Lmiuix/preference/PreferenceFragment$FrameDecoration;->findNearViewY(Landroidx/recyclerview/widget/RecyclerView;Landroid/view/View;IIZ)I
 
     move-result v0
 
     iput v0, v14, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->preViewHY:I
 
-    .line 242
+    .line 416
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
     invoke-virtual {v0, v8}, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->addPreference(I)V
@@ -1058,18 +1093,18 @@
 
     if-ne v9, v0, :cond_5
 
-    .line 246
+    .line 420
     :cond_3
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
     if-eqz v0, :cond_4
 
-    .line 247
+    .line 421
     invoke-virtual {v0, v8}, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->addPreference(I)V
 
     goto :goto_3
 
-    .line 249
+    .line 423
     :cond_4
     new-instance v0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
@@ -1081,12 +1116,12 @@
 
     iput-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
-    .line 250
+    .line 424
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
     invoke-virtual {v0, v8}, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->addPreference(I)V
 
-    .line 252
+    .line 426
     :goto_3
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
@@ -1096,7 +1131,7 @@
 
     iput v1, v0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->type:I
 
-    .line 254
+    .line 428
     :cond_5
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
@@ -1108,7 +1143,7 @@
 
     if-ne v9, v15, :cond_7
 
-    .line 255
+    .line 429
     :cond_6
     iget-object v9, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
@@ -1130,7 +1165,7 @@
 
     iput v0, v9, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->nextViewY:I
 
-    .line 256
+    .line 430
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
     iget-object v1, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRectMaps:Ljava/util/Map;
@@ -1141,7 +1176,7 @@
 
     iput v1, v0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->index:I
 
-    .line 257
+    .line 431
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
     invoke-direct {v10, v6, v8, v7}, Lmiuix/preference/PreferenceFragment$FrameDecoration;->checkEndRadioButtonPreferenceCategory(Landroidx/recyclerview/widget/RecyclerView;II)Z
@@ -1150,7 +1185,7 @@
 
     iput-boolean v1, v0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->endRadioButtonCategory:Z
 
-    .line 258
+    .line 432
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
     iget v1, v0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->type:I
@@ -1159,7 +1194,7 @@
 
     iput v1, v0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->type:I
 
-    .line 259
+    .line 433
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRectMaps:Ljava/util/Map;
 
     iget-object v1, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
@@ -1176,7 +1211,7 @@
 
     const/4 v0, 0x0
 
-    .line 260
+    .line 434
     iput-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
     :cond_7
@@ -1187,7 +1222,7 @@
     :cond_8
     move v14, v5
 
-    .line 265
+    .line 439
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
     if-eqz v0, :cond_9
@@ -1200,14 +1235,14 @@
 
     if-lez v0, :cond_9
 
-    .line 266
+    .line 440
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
     const/4 v1, -0x1
 
     iput v1, v0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->nextViewY:I
 
-    .line 267
+    .line 441
     iget-object v1, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRectMaps:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->size()I
@@ -1216,14 +1251,14 @@
 
     iput v1, v0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->index:I
 
-    .line 268
+    .line 442
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->endRadioButtonCategory:Z
 
-    .line 269
+    .line 443
     iget-object v1, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRectMaps:Ljava/util/Map;
 
     iget v0, v0, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->index:I
@@ -1238,10 +1273,10 @@
 
     const/4 v0, 0x0
 
-    .line 270
+    .line 444
     iput-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRect:Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
-    .line 273
+    .line 447
     :cond_9
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRectMaps:Ljava/util/Map;
 
@@ -1253,7 +1288,7 @@
 
     if-lez v0, :cond_e
 
-    .line 275
+    .line 449
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRectMaps:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -1277,19 +1312,19 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 276
+    .line 450
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
-    .line 277
+    .line 451
     invoke-direct {v10, v6, v1}, Lmiuix/preference/PreferenceFragment$FrameDecoration;->updateOperationTopAndBottom(Landroidx/recyclerview/widget/RecyclerView;Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;)V
 
     goto :goto_4
 
-    .line 280
+    .line 454
     :cond_a
     iget-object v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mPreferenceGroupRectMaps:Ljava/util/Map;
 
@@ -1314,7 +1349,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 281
+    .line 455
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -1325,7 +1360,7 @@
 
     move-result v1
 
-    .line 282
+    .line 456
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -1334,14 +1369,14 @@
 
     check-cast v9, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;
 
-    .line 284
+    .line 458
     iget-object v0, v9, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->currentMovetb:[I
 
     aget v17, v0, v14
 
     if-nez v1, :cond_b
 
-    .line 286
+    .line 460
     iget-object v0, v9, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->currentEndtb:[I
 
     const/16 v18, 0x0
@@ -1355,7 +1390,7 @@
     :cond_b
     const/16 v18, 0x0
 
-    .line 289
+    .line 463
     iget v0, v9, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->preViewHY:I
 
     iget v1, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingBottom:I
@@ -1364,7 +1399,7 @@
 
     move/from16 v19, v0
 
-    .line 292
+    .line 466
     :goto_6
     iget v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingTop:I
 
@@ -1392,7 +1427,7 @@
 
     invoke-direct/range {v0 .. v9}, Lmiuix/preference/PreferenceFragment$FrameDecoration;->drawMask(Landroid/graphics/Canvas;IIIIZZZZ)V
 
-    .line 293
+    .line 467
     iget v0, v10, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mMaskPaddingBottom:I
 
     add-int v5, v17, v0
@@ -1403,7 +1438,7 @@
 
     invoke-direct/range {v0 .. v9}, Lmiuix/preference/PreferenceFragment$FrameDecoration;->drawMask(Landroid/graphics/Canvas;IIIIZZZZ)V
 
-    .line 295
+    .line 469
     iget v0, v15, Lmiuix/preference/PreferenceFragment$PreferenceGroupRect;->type:I
 
     and-int/2addr v0, v14
@@ -1455,5 +1490,74 @@
     goto :goto_5
 
     :cond_e
+    return-void
+.end method
+
+.method public updateClipPaintColor()V
+    .locals 3
+
+    .line 588
+    iget-object v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
+
+    invoke-virtual {v0}, Lmiuix/preference/PreferenceFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lmiuix/appcompat/app/AppCompatActivity;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
+
+    invoke-virtual {v0}, Lmiuix/preference/PreferenceFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    check-cast v0, Lmiuix/appcompat/app/AppCompatActivity;
+
+    invoke-virtual {v0}, Lmiuix/appcompat/app/AppCompatActivity;->isInFloatingWindowMode()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 590
+    iget-object v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mClipPaint:Landroid/graphics/Paint;
+
+    iget-object v1, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
+
+    invoke-virtual {v1}, Lmiuix/preference/PreferenceFragment;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    sget v2, Lmiuix/preference/R$attr;->preferenceNormalCheckableMaskColor:I
+
+    invoke-static {v1, v2}, Lmiuix/internal/util/AttributeResolver;->resolveColor(Landroid/content/Context;I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    goto :goto_0
+
+    .line 592
+    :cond_0
+    iget-object v0, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->mClipPaint:Landroid/graphics/Paint;
+
+    iget-object v1, p0, Lmiuix/preference/PreferenceFragment$FrameDecoration;->this$0:Lmiuix/preference/PreferenceFragment;
+
+    invoke-virtual {v1}, Lmiuix/preference/PreferenceFragment;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    sget v2, Lmiuix/preference/R$attr;->preferenceCheckableMaskColor:I
+
+    invoke-static {v1, v2}, Lmiuix/internal/util/AttributeResolver;->resolveColor(Landroid/content/Context;I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    :goto_0
     return-void
 .end method

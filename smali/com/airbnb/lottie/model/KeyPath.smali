@@ -3,6 +3,10 @@
 .source "KeyPath.java"
 
 
+# static fields
+.field public static final COMPOSITION:Lcom/airbnb/lottie/model/KeyPath;
+
+
 # instance fields
 .field private final keys:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -18,13 +22,32 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    .line 51
+    new-instance v0, Lcom/airbnb/lottie/model/KeyPath;
+
+    const-string v1, "COMPOSITION"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/airbnb/lottie/model/KeyPath;-><init>([Ljava/lang/String;)V
+
+    sput-object v0, Lcom/airbnb/lottie/model/KeyPath;->COMPOSITION:Lcom/airbnb/lottie/model/KeyPath;
+
+    return-void
+.end method
+
 .method private constructor <init>(Lcom/airbnb/lottie/model/KeyPath;)V
     .locals 2
 
-    .line 55
+    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
+    .line 64
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p1, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
@@ -33,7 +56,7 @@
 
     iput-object v0, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
-    .line 57
+    .line 65
     iget-object p1, p1, Lcom/airbnb/lottie/model/KeyPath;->resolvedElement:Lcom/airbnb/lottie/model/KeyPathElement;
 
     iput-object p1, p0, Lcom/airbnb/lottie/model/KeyPath;->resolvedElement:Lcom/airbnb/lottie/model/KeyPathElement;
@@ -44,10 +67,10 @@
 .method public varargs constructor <init>([Ljava/lang/String;)V
     .locals 0
 
-    .line 48
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
+    .line 57
     invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
@@ -60,7 +83,7 @@
 .method private endsWithGlobstar()Z
     .locals 2
 
-    .line 203
+    .line 211
     iget-object v0, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -89,7 +112,7 @@
 
     const-string v0, "__container"
 
-    .line 199
+    .line 207
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -102,12 +125,12 @@
 .method public addKey(Ljava/lang/String;)Lcom/airbnb/lottie/model/KeyPath;
     .locals 2
 
-    .line 70
+    .line 78
     new-instance v0, Lcom/airbnb/lottie/model/KeyPath;
 
     invoke-direct {v0, p0}, Lcom/airbnb/lottie/model/KeyPath;-><init>(Lcom/airbnb/lottie/model/KeyPath;)V
 
-    .line 71
+    .line 79
     iget-object v1, v0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -118,7 +141,7 @@
 .method public fullyResolvesTo(Ljava/lang/String;I)Z
     .locals 5
 
-    .line 150
+    .line 158
     iget-object v0, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -131,7 +154,7 @@
 
     return v1
 
-    .line 153
+    .line 161
     :cond_0
     iget-object v0, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
@@ -152,7 +175,7 @@
     :cond_1
     move v0, v1
 
-    .line 154
+    .line 162
     :goto_0
     iget-object v3, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
@@ -164,14 +187,14 @@
 
     const-string v4, "**"
 
-    .line 155
+    .line 163
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_6
 
-    .line 158
+    .line 166
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -200,7 +223,7 @@
     :goto_2
     if-nez v0, :cond_4
 
-    .line 159
+    .line 167
     iget-object v0, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -228,7 +251,7 @@
     :cond_6
     if-nez v0, :cond_7
 
-    .line 162
+    .line 170
     iget-object v3, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
     add-int/lit8 v4, p2, 0x1
@@ -255,7 +278,7 @@
     :goto_3
     if-eqz v3, :cond_a
 
-    .line 164
+    .line 172
     iget-object p1, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -268,7 +291,7 @@
 
     iget-object p1, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
-    .line 165
+    .line 173
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p1
@@ -297,7 +320,7 @@
     :cond_b
     add-int/2addr p2, v2
 
-    .line 171
+    .line 179
     iget-object v0, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -310,7 +333,7 @@
 
     return v1
 
-    .line 177
+    .line 185
     :cond_c
     iget-object v0, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
@@ -330,7 +353,7 @@
 .method public getResolvedElement()Lcom/airbnb/lottie/model/KeyPathElement;
     .locals 1
 
-    .line 92
+    .line 100
     iget-object v0, p0, Lcom/airbnb/lottie/model/KeyPath;->resolvedElement:Lcom/airbnb/lottie/model/KeyPathElement;
 
     return-object v0
@@ -339,7 +362,7 @@
 .method public incrementDepthBy(Ljava/lang/String;I)I
     .locals 3
 
-    .line 125
+    .line 133
     invoke-direct {p0, p1}, Lcom/airbnb/lottie/model/KeyPath;->isContainer(Ljava/lang/String;)Z
 
     move-result v0
@@ -350,7 +373,7 @@
 
     return v1
 
-    .line 129
+    .line 137
     :cond_0
     iget-object v0, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
@@ -372,7 +395,7 @@
 
     return v2
 
-    .line 133
+    .line 141
     :cond_1
     iget-object v0, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
@@ -386,7 +409,7 @@
 
     return v1
 
-    .line 137
+    .line 145
     :cond_2
     iget-object v0, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
@@ -415,7 +438,7 @@
 .method public matches(Ljava/lang/String;I)Z
     .locals 3
 
-    .line 101
+    .line 109
     invoke-direct {p0, p1}, Lcom/airbnb/lottie/model/KeyPath;->isContainer(Ljava/lang/String;)Z
 
     move-result v0
@@ -426,7 +449,7 @@
 
     return v1
 
-    .line 105
+    .line 113
     :cond_0
     iget-object v0, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
@@ -440,7 +463,7 @@
 
     return v2
 
-    .line 108
+    .line 116
     :cond_1
     iget-object v0, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
@@ -458,7 +481,7 @@
 
     iget-object p1, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
-    .line 109
+    .line 117
     invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -475,7 +498,7 @@
 
     iget-object p1, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
-    .line 110
+    .line 118
     invoke-interface {p1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -505,7 +528,7 @@
 
     const-string v0, "__container"
 
-    .line 188
+    .line 196
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -516,7 +539,7 @@
 
     return v0
 
-    .line 191
+    .line 199
     :cond_0
     iget-object p1, p0, Lcom/airbnb/lottie/model/KeyPath;->keys:Ljava/util/List;
 
@@ -557,12 +580,12 @@
 .method public resolve(Lcom/airbnb/lottie/model/KeyPathElement;)Lcom/airbnb/lottie/model/KeyPath;
     .locals 1
 
-    .line 80
+    .line 88
     new-instance v0, Lcom/airbnb/lottie/model/KeyPath;
 
     invoke-direct {v0, p0}, Lcom/airbnb/lottie/model/KeyPath;-><init>(Lcom/airbnb/lottie/model/KeyPath;)V
 
-    .line 81
+    .line 89
     iput-object p1, v0, Lcom/airbnb/lottie/model/KeyPath;->resolvedElement:Lcom/airbnb/lottie/model/KeyPathElement;
 
     return-object v0
@@ -571,7 +594,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 211
+    .line 219
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

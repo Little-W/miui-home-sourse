@@ -25,7 +25,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/install/AutoInstallsLayout;)V
     .locals 0
 
-    .line 433
+    .line 449
     iput-object p1, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$PendingWidgetParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/install/AutoInstallsLayout;Lcom/miui/home/launcher/install/AutoInstallsLayout$1;)V
     .locals 0
 
-    .line 433
+    .line 449
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/install/AutoInstallsLayout$PendingWidgetParser;-><init>(Lcom/miui/home/launcher/install/AutoInstallsLayout;)V
 
     return-void
@@ -55,19 +55,19 @@
 
     const-string v0, "packageName"
 
-    .line 438
+    .line 454
     invoke-static {p1, v0}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     const-string v0, "className"
 
-    .line 439
+    .line 455
     invoke-static {p1, v0}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v7
 
-    .line 440
+    .line 456
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -76,16 +76,61 @@
 
     if-nez v0, :cond_8
 
-    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
-    .line 445
     :cond_0
+    const/4 v0, -0x1
+
+    :try_start_0
+    const-string v4, "spanX"
+
+    .line 465
+    invoke-static {p1, v4}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v4
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    const-string v5, "spanY"
+
+    .line 466
+    invoke-static {p1, v5}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+    :try_end_1
+    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
+
+    move v9, v0
+
+    move v8, v4
+
+    goto :goto_0
+
+    :catch_0
+    move v4, v0
+
+    :catch_1
+    move v9, v0
+
+    move v8, v4
+
+    .line 469
+    :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$PendingWidgetParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
     invoke-static {v0}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$400(Lcom/miui/home/launcher/install/AutoInstallsLayout;)Landroid/content/Context;
@@ -102,72 +147,56 @@
 
     if-eqz v0, :cond_1
 
-    .line 446
+    .line 470
     iget-object v0, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$PendingWidgetParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
     invoke-static {v0}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$800(Lcom/miui/home/launcher/install/AutoInstallsLayout;)Landroid/appwidget/AppWidgetHost;
 
-    move-result-object v0
+    move-result-object v10
 
-    invoke-static {p1, p2, p3, v4, v0}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$900(Landroid/content/res/XmlResourceParser;Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;Ljava/lang/String;Landroid/appwidget/AppWidgetHost;)J
+    move-object v4, p1
+
+    move-object v5, p2
+
+    move-object v6, p3
+
+    invoke-static/range {v4 .. v10}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$900(Landroid/content/res/XmlResourceParser;Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;Ljava/lang/String;IILandroid/appwidget/AppWidgetHost;)J
 
     move-result-wide p1
 
     return-wide p1
 
+    .line 474
     :cond_1
-    const-string v0, "spanX"
-
-    .line 450
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v6
-
-    const-string v0, "spanY"
-
-    .line 451
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v7
-
-    .line 454
     new-instance v10, Landroid/os/Bundle;
 
     invoke-direct {v10}, Landroid/os/Bundle;-><init>()V
 
-    .line 455
+    .line 475
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v0
 
-    .line 457
-    :goto_0
+    .line 477
+    :goto_1
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->next()I
+
+    move-result v4
+
+    const/4 v5, 0x3
+
+    if-ne v4, v5, :cond_4
+
+    .line 478
+    invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
 
     move-result v5
 
-    const/4 v8, 0x3
+    if-le v5, v0, :cond_2
 
-    if-ne v5, v8, :cond_4
+    goto/16 :goto_2
 
-    .line 458
-    invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getDepth()I
-
-    move-result v8
-
-    if-le v8, v0, :cond_2
-
-    goto/16 :goto_1
-
-    .line 475
+    .line 495
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$PendingWidgetParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
@@ -181,10 +210,10 @@
 
     if-eqz p1, :cond_3
 
-    .line 476
+    .line 496
     iget-object p1, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$PendingWidgetParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
-    .line 477
+    .line 497
     invoke-static {p1}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$1000(Lcom/miui/home/launcher/install/AutoInstallsLayout;)Landroid/content/pm/PackageManager;
 
     move-result-object v5
@@ -193,46 +222,56 @@
 
     invoke-static {p1}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$400(Lcom/miui/home/launcher/install/AutoInstallsLayout;)Landroid/content/Context;
 
-    move-result-object v8
+    move-result-object p1
 
-    iget-object p1, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$PendingWidgetParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
+    iget-object v0, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$PendingWidgetParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$800(Lcom/miui/home/launcher/install/AutoInstallsLayout;)Landroid/appwidget/AppWidgetHost;
+    invoke-static {v0}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$800(Lcom/miui/home/launcher/install/AutoInstallsLayout;)Landroid/appwidget/AppWidgetHost;
 
-    move-result-object v9
+    move-result-object v0
 
     move-object v1, p2
 
     move-object v2, p3
 
-    .line 476
+    move-object v4, v7
+
+    move v6, v8
+
+    move v7, v9
+
+    move-object v8, p1
+
+    move-object v9, v0
+
+    .line 496
     invoke-static/range {v1 .. v10}, Lcom/miui/home/launcher/LauncherProvider$DatabaseHelper;->addAppWidget(Landroid/database/sqlite/SQLiteDatabase;Landroid/content/ContentValues;Ljava/lang/String;Ljava/lang/String;Landroid/content/pm/PackageManager;IILandroid/content/Context;Landroid/appwidget/AppWidgetHost;Landroid/os/Bundle;)J
 
     move-result-wide p1
 
     return-wide p1
 
-    .line 480
+    .line 500
     :cond_3
-    :try_start_0
+    :try_start_2
     new-instance p1, Landroid/content/ComponentName;
 
-    invoke-direct {p1, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, v3, v7}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 481
+    .line 501
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 482
+    .line 502
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 483
+    .line 503
     invoke-virtual {v0, v10}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
     const-string v3, "appWidgetId"
 
-    .line 484
+    .line 504
     iget-object v4, p0, Lcom/miui/home/launcher/install/AutoInstallsLayout$PendingWidgetParser;->this$0:Lcom/miui/home/launcher/install/AutoInstallsLayout;
 
     invoke-static {v4}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$800(Lcom/miui/home/launcher/install/AutoInstallsLayout;)Landroid/appwidget/AppWidgetHost;
@@ -253,7 +292,7 @@
 
     const/4 v4, 0x0
 
-    .line 485
+    .line 505
     invoke-virtual {v0, v4}, Landroid/content/Intent;->toUri(I)Ljava/lang/String;
 
     move-result-object v0
@@ -264,7 +303,7 @@
 
     const/16 v3, 0x8
 
-    .line 486
+    .line 506
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -275,7 +314,7 @@
 
     const/4 v3, 0x4
 
-    .line 487
+    .line 507
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -284,8 +323,8 @@
 
     const-string v0, "spanX"
 
-    .line 488
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 508
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
@@ -293,8 +332,8 @@
 
     const-string v0, "spanY"
 
-    .line 489
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 509
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
@@ -302,7 +341,7 @@
 
     const-string v0, "appWidgetProvider"
 
-    .line 490
+    .line 510
     invoke-virtual {p1}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object p1
@@ -313,71 +352,73 @@
 
     const/4 v0, 0x0
 
-    .line 491
+    .line 511
     invoke-static {p2, p1, v0, p3}, Lcom/miui/home/launcher/LauncherProvider;->safelyInsertDatabase(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide p1
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_2
+    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_2
 
     return-wide p1
 
-    :catch_0
+    :catch_2
     move-exception p1
 
     const-string p2, "AutoInstalls"
 
     const-string p3, "Problem allocating appWidgetId"
 
-    .line 493
+    .line 513
+    invoke-static {p2, p3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     return-wide v1
 
     :cond_4
-    :goto_1
-    const/4 v8, 0x2
+    :goto_2
+    const/4 v5, 0x2
 
-    if-eq v5, v8, :cond_5
+    if-eq v4, v5, :cond_5
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
     :cond_5
-    const-string v5, "extra"
+    const-string v4, "extra"
 
-    .line 463
+    .line 483
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v5
 
-    invoke-virtual {v5, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v4
 
-    if-eqz v5, :cond_7
+    if-eqz v4, :cond_7
 
-    const-string v5, "key"
+    const-string v4, "key"
 
-    .line 464
+    .line 484
+    invoke-static {p1, v4}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "value"
+
+    .line 485
     invoke-static {p1, v5}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    const-string v8, "value"
-
-    .line 465
-    invoke-static {p1, v8}, Lcom/miui/home/launcher/install/AutoInstallsLayout;->access$300(Landroid/content/res/XmlResourceParser;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
+    if-eqz v4, :cond_6
 
     if-eqz v5, :cond_6
 
-    if-eqz v8, :cond_6
+    .line 487
+    invoke-virtual {v10, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 467
-    invoke-virtual {v10, v5, v8}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    goto/16 :goto_1
 
-    goto/16 :goto_0
-
-    .line 469
+    .line 489
     :cond_6
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -387,7 +428,7 @@
 
     throw p1
 
-    .line 472
+    .line 492
     :cond_7
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -398,11 +439,13 @@
     throw p1
 
     :cond_8
-    :goto_2
+    :goto_3
     const-string p1, "AutoInstalls"
 
     const-string p2, "Skipping invalid <appwidget> with no component"
 
-    .line 441
+    .line 457
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-wide v1
 .end method

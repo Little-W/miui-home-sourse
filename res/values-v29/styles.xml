@@ -5,4 +5,23 @@
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:enforceNavigationBarContrast">false</item>
     </style>
+    <style name="Widget.ActionBarButtonIconStyle" parent="@style/Widget">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="Widget.ActionMode.Button" parent="@android:style/Widget.Button">
+        <item name="android:textAppearance">@style/Miuix.AppCompat.TextAppearance.Widget.ActionMode.Title.Button</item>
+        <item name="android:textSize">@dimen/miuix_appcompat_secondary_text_size</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:minHeight">0.0dip</item>
+        <item name="android:text">@android:string/cancel</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
 </resources>

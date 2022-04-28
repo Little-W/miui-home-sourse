@@ -3,14 +3,6 @@
 .source "LauncherIconImageView.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/miui/home/launcher/LauncherIconImageView$_lancet;
-    }
-.end annotation
-
-
 # instance fields
 .field private mIconSizeProvider:Lcom/miui/home/launcher/common/IconSizeProvider;
 
@@ -74,14 +66,6 @@
     return-object p0
 .end method
 
-.method static synthetic access$001(Lcom/miui/home/launcher/LauncherIconImageView;Landroid/graphics/Canvas;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/miui/home/launcher/LauncherIconImageView;->draw$___twin___(Landroid/graphics/Canvas;)V
-
-    return-void
-.end method
-
 .method static synthetic access$101(Lcom/miui/home/launcher/LauncherIconImageView;Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
@@ -91,24 +75,8 @@
     return-void
 .end method
 
-.method private draw$___twin___(Landroid/graphics/Canvas;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/widget/ImageView;->draw(Landroid/graphics/Canvas;)V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public draw(Landroid/graphics/Canvas;)V
-    .locals 0
-
-    invoke-static {p0, p1}, Lcom/miui/home/launcher/LauncherIconImageView$_lancet;->com_miui_home_launcher_aop_ViewTraversalTrace_draw(Lcom/miui/home/launcher/LauncherIconImageView;Landroid/graphics/Canvas;)V
-
-    return-void
-.end method
-
 .method public invalidateAdaptiveIconDrawable()V
     .locals 1
 
@@ -186,6 +154,8 @@
     const-string v1, "invalidateDrawable error"
 
     .line 77
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :goto_0
     return-void
 .end method

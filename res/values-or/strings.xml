@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">ଏହାଙ୍କ ସହ ସେୟାର୍‌ କରନ୍ତୁ</string>
     <string name="abc_shareactionprovider_share_with_application">%s ସହ ସେୟାର୍‍ କରନ୍ତୁ</string>
     <string name="abc_toolbar_collapse_description">ସଂକୁଚିତ କରନ୍ତୁ</string>
+    <string name="common_google_play_services_unknown_issue">%1$sର Google Play ସେବା ସହ ଏକ ସମସ୍ୟା ରହିଛି। ଦୟାକରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।</string>
     <string name="copy">କପି କରନ୍ତୁ</string>
     <string name="expand_button_title">ଅଧିକ ଉନ୍ନତ</string>
     <string name="not_set">ସେଟ୍ ହୋଇନାହିଁ</string>

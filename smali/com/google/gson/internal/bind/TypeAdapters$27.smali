@@ -113,7 +113,7 @@
 
     move-result v1
 
-    const-string/jumbo v8, "year"
+    const-string v8, "year"
 
     .line 617
     invoke-virtual {v8, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -245,7 +245,7 @@
     :cond_0
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->beginObject()Lcom/google/gson/stream/JsonWriter;
 
-    const-string/jumbo v0, "year"
+    const-string v0, "year"
 
     .line 642
     invoke-virtual {p1, v0}, Lcom/google/gson/stream/JsonWriter;->name(Ljava/lang/String;)Lcom/google/gson/stream/JsonWriter;

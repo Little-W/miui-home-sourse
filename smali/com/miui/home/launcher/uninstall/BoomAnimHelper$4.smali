@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 0
 
-    .line 128
+    .line 130
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$4;->val$springLayerWaveController:Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;
 
     iput-object p2, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$4;->val$shortcutIcon:Lcom/miui/home/launcher/ShortcutIcon;
@@ -39,30 +39,28 @@
 .method public onBegin(Ljava/lang/Object;)V
     .locals 2
 
-    .line 131
+    .line 133
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onBegin(Ljava/lang/Object;)V
 
-    .line 132
+    .line 134
     iget-object p1, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$4;->val$springLayerWaveController:Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;
 
     if-eqz p1, :cond_0
 
-    .line 133
+    .line 135
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$4;->val$shortcutIcon:Lcom/miui/home/launcher/ShortcutIcon;
 
     const/16 v1, 0x32
 
     invoke-virtual {p1, v0, v1}, Lcom/miui/home/launcher/graphics/drawable/SpringLayerWaveController;->startWaveAnimation(Landroid/view/View;I)V
 
-    .line 135
+    .line 137
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->getInstance()Lcom/miui/home/launcher/common/HapticFeedbackCompat;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/miui/home/launcher/uninstall/BoomAnimHelper$4;->val$shortcutIcon:Lcom/miui/home/launcher/ShortcutIcon;
-
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->performBoom(Landroid/view/View;)V
+    invoke-virtual {p1}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->performBoom()V
 
     return-void
 .end method

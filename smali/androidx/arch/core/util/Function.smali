@@ -14,3 +14,13 @@
         "Ljava/lang/Object;"
     }
 .end annotation
+
+
+# virtual methods
+.method public abstract apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TI;)TO;"
+        }
+    .end annotation
+.end method

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/LauncherProvider;->call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    value = Lcom/miui/home/launcher/LauncherProvider;->runOnUiThread(Ljava/lang/Runnable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,25 +20,17 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/LauncherProvider;
 
-.field final synthetic val$context:Landroid/content/Context;
-
-.field final synthetic val$lockScreenSnapshot:Landroid/graphics/Bitmap;
-
-.field final synthetic val$wallpaperColorMode:I
+.field final synthetic val$runnable:Ljava/lang/Runnable;
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/LauncherProvider;Landroid/content/Context;ILandroid/graphics/Bitmap;)V
+.method constructor <init>(Lcom/miui/home/launcher/LauncherProvider;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 605
+    .line 681
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherProvider$2;->this$0:Lcom/miui/home/launcher/LauncherProvider;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/LauncherProvider$2;->val$context:Landroid/content/Context;
-
-    iput p3, p0, Lcom/miui/home/launcher/LauncherProvider$2;->val$wallpaperColorMode:I
-
-    iput-object p4, p0, Lcom/miui/home/launcher/LauncherProvider$2;->val$lockScreenSnapshot:Landroid/graphics/Bitmap;
+    iput-object p2, p0, Lcom/miui/home/launcher/LauncherProvider$2;->val$runnable:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,29 +40,35 @@
 
 # virtual methods
 .method public run()V
-    .locals 6
+    .locals 2
 
-    .line 609
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getStatusBarHeight()I
+    .line 684
+    iget-object v0, p0, Lcom/miui/home/launcher/LauncherProvider$2;->val$runnable:Ljava/lang/Runnable;
 
-    move-result v5
+    monitor-enter v0
 
-    .line 610
-    iget-object v0, p0, Lcom/miui/home/launcher/LauncherProvider$2;->val$context:Landroid/content/Context;
+    .line 685
+    :try_start_0
+    iget-object v1, p0, Lcom/miui/home/launcher/LauncherProvider$2;->val$runnable:Ljava/lang/Runnable;
 
-    iget v1, p0, Lcom/miui/home/launcher/LauncherProvider$2;->val$wallpaperColorMode:I
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    iget-object v2, p0, Lcom/miui/home/launcher/LauncherProvider$2;->val$lockScreenSnapshot:Landroid/graphics/Bitmap;
+    .line 686
+    iget-object v1, p0, Lcom/miui/home/launcher/LauncherProvider$2;->val$runnable:Ljava/lang/Runnable;
 
-    .line 611
-    invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
+    invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
-    move-result v3
-
-    const/4 v4, 0x0
-
-    .line 610
-    invoke-static/range {v0 .. v5}, Lcom/miui/launcher/utils/MamlUtils;->snapshootLockscreen(Landroid/content/Context;ILandroid/graphics/Bitmap;ZII)Landroid/graphics/Bitmap;
+    .line 687
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method

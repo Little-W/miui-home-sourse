@@ -10,11 +10,11 @@
     </string-array>
     <string-array name="editing_mode_entries">
         <item>ფონი</item>
-        <item>Widget-ები</item>
+        <item>ვიჯეტები</item>
         <item>პარამეტრები</item>
     </string-array>
     <string-array name="gadget_weather_image">
-        <item>სუფთა</item>
+        <item>მოწმენდილი</item>
         <item>მოღრუბლული</item>
         <item>ბინდიანი</item>
         <item>ნისლიანი</item>

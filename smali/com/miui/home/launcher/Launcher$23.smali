@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3630
+    .line 3743
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$23;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -33,7 +33,7 @@
 .method public static synthetic lambda$onChange$0(Lcom/miui/home/launcher/Launcher$23;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 3634
+    .line 3747
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$23;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getApplicationContext()Landroid/content/Context;
@@ -50,7 +50,7 @@
 .method public static synthetic lambda$onChange$1(Lcom/miui/home/launcher/Launcher$23;Ljava/lang/Object;)V
     .locals 1
 
-    .line 3636
+    .line 3749
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$23;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isScreenCellsLocked()Z
@@ -67,7 +67,7 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 3633
+    .line 3746
     new-instance p1, Lcom/miui/home/launcher/-$$Lambda$Launcher$23$i4l04Y2xr6nERBso5A6kY1lwJKc;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/-$$Lambda$Launcher$23$i4l04Y2xr6nERBso5A6kY1lwJKc;-><init>(Lcom/miui/home/launcher/Launcher$23;)V

@@ -12,7 +12,7 @@
         }
     .end annotation
 
-    .line 23
+    .line 24
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->beginObject()V
 
     const/4 v0, 0x0
@@ -25,7 +25,7 @@
 
     move-object v3, v2
 
-    .line 24
+    .line 25
     :goto_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -33,12 +33,12 @@
 
     if-eqz v5, :cond_a
 
-    .line 25
+    .line 26
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 26
+    .line 27
     invoke-virtual {v5}, Ljava/lang/String;->hashCode()I
 
     move-result v6
@@ -128,12 +128,12 @@
     :goto_2
     packed-switch v6, :pswitch_data_0
 
-    .line 58
+    .line 59
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
-    .line 55
+    .line 56
     :pswitch_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
@@ -141,7 +141,7 @@
 
     goto :goto_0
 
-    .line 52
+    .line 53
     :pswitch_1
     invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseInteger(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;
 
@@ -149,7 +149,7 @@
 
     goto :goto_0
 
-    .line 49
+    .line 50
     :pswitch_2
     invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/AnimatableValueParser;->parseShapeData(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/model/animatable/AnimatableShapeValue;
 
@@ -157,7 +157,7 @@
 
     goto :goto_0
 
-    .line 28
+    .line 29
     :pswitch_3
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -242,7 +242,7 @@
     :goto_4
     packed-switch v8, :pswitch_data_1
 
-    .line 44
+    .line 45
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -263,7 +263,7 @@
 
     invoke-static {v1}, Lcom/airbnb/lottie/utils/Logger;->warning(Ljava/lang/String;)V
 
-    .line 45
+    .line 46
     sget-object v1, Lcom/airbnb/lottie/model/content/Mask$MaskMode;->MASK_MODE_ADD:Lcom/airbnb/lottie/model/content/Mask$MaskMode;
 
     goto/16 :goto_0
@@ -271,37 +271,37 @@
     :pswitch_4
     const-string v1, "Animation contains intersect masks. They are not supported but will be treated like add masks."
 
-    .line 39
+    .line 40
     invoke-virtual {p1, v1}, Lcom/airbnb/lottie/LottieComposition;->addWarning(Ljava/lang/String;)V
 
-    .line 41
+    .line 42
     sget-object v1, Lcom/airbnb/lottie/model/content/Mask$MaskMode;->MASK_MODE_INTERSECT:Lcom/airbnb/lottie/model/content/Mask$MaskMode;
 
     goto/16 :goto_0
 
-    .line 36
+    .line 37
     :pswitch_5
     sget-object v1, Lcom/airbnb/lottie/model/content/Mask$MaskMode;->MASK_MODE_NONE:Lcom/airbnb/lottie/model/content/Mask$MaskMode;
 
     goto/16 :goto_0
 
-    .line 33
+    .line 34
     :pswitch_6
     sget-object v1, Lcom/airbnb/lottie/model/content/Mask$MaskMode;->MASK_MODE_SUBTRACT:Lcom/airbnb/lottie/model/content/Mask$MaskMode;
 
     goto/16 :goto_0
 
-    .line 30
+    .line 31
     :pswitch_7
     sget-object v1, Lcom/airbnb/lottie/model/content/Mask$MaskMode;->MASK_MODE_ADD:Lcom/airbnb/lottie/model/content/Mask$MaskMode;
 
     goto/16 :goto_0
 
-    .line 61
+    .line 62
     :cond_a
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->endObject()V
 
-    .line 63
+    .line 64
     new-instance p0, Lcom/airbnb/lottie/model/content/Mask;
 
     invoke-direct {p0, v1, v2, v3, v4}, Lcom/airbnb/lottie/model/content/Mask;-><init>(Lcom/airbnb/lottie/model/content/Mask$MaskMode;Lcom/airbnb/lottie/model/animatable/AnimatableShapeValue;Lcom/airbnb/lottie/model/animatable/AnimatableIntegerValue;Z)V

@@ -75,6 +75,8 @@
 
     move-result-object p1
 
+    invoke-static {p2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
     :goto_0
     return-void
 .end method

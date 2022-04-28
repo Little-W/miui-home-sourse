@@ -221,7 +221,7 @@
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    const/16 p3, 0x12
+    const/16 p3, 0x13
 
     .line 50
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -276,7 +276,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "executeDatabase: 查询数据库异常: "
+    const-string v2, "executeDatabase: \u67e5\u8be2\u6570\u636e\u5e93\u5f02\u5e38: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -445,7 +445,7 @@
     :goto_3
     iget-object p2, p0, Lcom/miui/home/launcher/model/MamlRemoveTask;->TAG:Ljava/lang/String;
 
-    const-string p3, "executeDatabase: 没有查到小部件"
+    const-string p3, "executeDatabase: \u6ca1\u6709\u67e5\u5230\u5c0f\u90e8\u4ef6"
 
     invoke-static {p2, p3}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -455,7 +455,7 @@
     :catch_1
     iget-object p2, p0, Lcom/miui/home/launcher/model/MamlRemoveTask;->TAG:Ljava/lang/String;
 
-    const-string p3, "executeDatabase: Json 解析异常"
+    const-string p3, "executeDatabase: Json \u89e3\u6790\u5f02\u5e38"
 
     invoke-static {p2, p3}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="miuix_appcompat_dialog_max_height_major">89.25001%</item>
+    <item type="dimen" name="miuix_appcompat_dialog_max_height_minor">75.0%</item>
+    <dimen name="miuix_appcompat_list_preferred_item_height_small">53.819977dip</dimen>
+</resources>

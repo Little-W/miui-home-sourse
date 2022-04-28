@@ -277,7 +277,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "查询数据库异常: "
+    const-string v2, "\u67e5\u8be2\u6570\u636e\u5e93\u5f02\u5e38: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -299,7 +299,7 @@
 
     const-string p2, "WidgetRemoveTask"
 
-    const-string/jumbo p3, "没有查到小部件"
+    const-string p3, "\u6ca1\u6709\u67e5\u5230\u5c0f\u90e8\u4ef6"
 
     .line 71
     invoke-static {p2, p3}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
@@ -342,7 +342,7 @@
 
     const-string p2, "WidgetRemoveTask"
 
-    const-string/jumbo p3, "没有查到小部件"
+    const-string p3, "\u6ca1\u6709\u67e5\u5230\u5c0f\u90e8\u4ef6"
 
     .line 80
     invoke-static {p2, p3}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
@@ -483,7 +483,7 @@
     :catch_1
     const-string p2, "WidgetRemoveTask"
 
-    const-string p3, "Json 解析异常"
+    const-string p3, "Json \u89e3\u6790\u5f02\u5e38"
 
     .line 55
     invoke-static {p2, p3}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V

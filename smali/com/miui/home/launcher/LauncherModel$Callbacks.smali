@@ -37,6 +37,17 @@
     .end annotation
 .end method
 
+.method public abstract bindAppWidgetUpdated(Ljava/util/ArrayList;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Lcom/miui/home/launcher/LauncherAppWidgetInfo;",
+            ">;)V"
+        }
+    .end annotation
+.end method
+
 .method public abstract bindAppsChanged(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -95,6 +106,9 @@
             ">;)V"
         }
     .end annotation
+.end method
+
+.method public abstract bindMamlWidgetUpdate(Ljava/lang/String;I)V
 .end method
 
 .method public abstract bindScreenAdded(JII)V

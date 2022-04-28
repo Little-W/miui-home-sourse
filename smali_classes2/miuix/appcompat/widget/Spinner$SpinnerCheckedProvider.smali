@@ -25,10 +25,10 @@
 .method public constructor <init>(Lmiuix/appcompat/widget/Spinner;)V
     .locals 0
 
-    .line 1243
+    .line 1322
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1244
+    .line 1323
     iput-object p1, p0, Lmiuix/appcompat/widget/Spinner$SpinnerCheckedProvider;->mSpinner:Lmiuix/appcompat/widget/Spinner;
 
     return-void
@@ -39,7 +39,7 @@
 .method public isChecked(I)Z
     .locals 1
 
-    .line 1249
+    .line 1328
     iget-object v0, p0, Lmiuix/appcompat/widget/Spinner$SpinnerCheckedProvider;->mSpinner:Lmiuix/appcompat/widget/Spinner;
 
     invoke-virtual {v0}, Lmiuix/appcompat/widget/Spinner;->getSelectedItemPosition()I

@@ -194,7 +194,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar$LabelAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d006c
+    const v1, 0x7f0d008c
 
     const/4 v2, 0x0
 

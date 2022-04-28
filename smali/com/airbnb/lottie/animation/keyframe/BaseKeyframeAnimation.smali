@@ -174,14 +174,14 @@
         }
     .end annotation
 
-    .line 161
+    .line 177
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 162
+    .line 178
     new-instance p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$EmptyKeyframeWrapper;
 
     const/4 v0, 0x0
@@ -190,7 +190,7 @@
 
     return-object p0
 
-    .line 164
+    .line 180
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -200,14 +200,14 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 165
+    .line 181
     new-instance v0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;
 
     invoke-direct {v0, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$SingleKeyframeWrapper;-><init>(Ljava/util/List;)V
 
     return-object v0
 
-    .line 167
+    .line 183
     :cond_1
     new-instance v0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$KeyframesWrapperImpl;
 
@@ -377,26 +377,26 @@
 .method public getProgress()F
     .locals 1
 
-    .line 141
+    .line 150
     iget v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->progress:F
 
     return v0
 .end method
 
 .method public getValue()Ljava/lang/Object;
-    .locals 2
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TA;"
         }
     .end annotation
 
-    .line 128
-    invoke-virtual {p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getInterpolatedCurrentKeyframeProgress()F
+    .line 130
+    invoke-virtual {p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getLinearCurrentKeyframeProgress()F
 
     move-result v0
 
-    .line 129
+    .line 131
     iget-object v1, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->valueCallback:Lcom/airbnb/lottie/value/LottieValueCallback;
 
     if-nez v1, :cond_0
@@ -409,23 +409,60 @@
 
     if-eqz v1, :cond_0
 
-    .line 130
+    .line 132
     iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->cachedGetValue:Ljava/lang/Object;
 
     return-object v0
 
-    .line 133
+    .line 134
     :cond_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getCurrentKeyframe()Lcom/airbnb/lottie/value/Keyframe;
 
     move-result-object v1
 
-    .line 134
+    .line 136
+    iget-object v2, v1, Lcom/airbnb/lottie/value/Keyframe;->xInterpolator:Landroid/view/animation/Interpolator;
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, v1, Lcom/airbnb/lottie/value/Keyframe;->yInterpolator:Landroid/view/animation/Interpolator;
+
+    if-eqz v2, :cond_1
+
+    .line 137
+    iget-object v2, v1, Lcom/airbnb/lottie/value/Keyframe;->xInterpolator:Landroid/view/animation/Interpolator;
+
+    invoke-interface {v2, v0}, Landroid/view/animation/Interpolator;->getInterpolation(F)F
+
+    move-result v2
+
+    .line 138
+    iget-object v3, v1, Lcom/airbnb/lottie/value/Keyframe;->yInterpolator:Landroid/view/animation/Interpolator;
+
+    invoke-interface {v3, v0}, Landroid/view/animation/Interpolator;->getInterpolation(F)F
+
+    move-result v3
+
+    .line 139
+    invoke-virtual {p0, v1, v0, v2, v3}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue(Lcom/airbnb/lottie/value/Keyframe;FFF)Ljava/lang/Object;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 141
+    :cond_1
+    invoke-virtual {p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getInterpolatedCurrentKeyframeProgress()F
+
+    move-result v0
+
+    .line 142
     invoke-virtual {p0, v1, v0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue(Lcom/airbnb/lottie/value/Keyframe;F)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 135
+    .line 145
+    :goto_0
     iput-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->cachedGetValue:Ljava/lang/Object;
 
     return-object v0
@@ -439,6 +476,26 @@
             "TK;>;F)TA;"
         }
     .end annotation
+.end method
+
+.method protected getValue(Lcom/airbnb/lottie/value/Keyframe;FFF)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/airbnb/lottie/value/Keyframe<",
+            "TK;>;FFF)TA;"
+        }
+    .end annotation
+
+    .line 173
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "This animation does not support split dimensions!"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 .method public notifyListeners()V
@@ -573,23 +630,23 @@
         }
     .end annotation
 
-    .line 145
+    .line 154
     iget-object v0, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->valueCallback:Lcom/airbnb/lottie/value/LottieValueCallback;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 146
+    .line 155
     invoke-virtual {v0, v1}, Lcom/airbnb/lottie/value/LottieValueCallback;->setAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
-    .line 148
+    .line 157
     :cond_0
     iput-object p1, p0, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->valueCallback:Lcom/airbnb/lottie/value/LottieValueCallback;
 
     if-eqz p1, :cond_1
 
-    .line 150
+    .line 159
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/value/LottieValueCallback;->setAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
 
     :cond_1

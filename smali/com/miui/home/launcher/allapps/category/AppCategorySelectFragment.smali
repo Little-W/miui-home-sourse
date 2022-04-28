@@ -81,14 +81,14 @@
 .method private hideKeyboard()V
     .locals 2
 
-    .line 190
+    .line 189
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->getView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 191
+    .line 190
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -110,7 +110,7 @@
 .method public static synthetic lambda$onBackPressed$3(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 283
+    .line 282
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->save()V
 
     return-void
@@ -119,7 +119,7 @@
 .method public static synthetic lambda$onBackPressed$4(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 284
+    .line 283
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->back()V
 
     return-void
@@ -128,7 +128,7 @@
 .method public static synthetic lambda$onViewCreated$0(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/view/View;)V
     .locals 1
 
-    .line 139
+    .line 138
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleEditor:Landroid/widget/EditText;
 
     const-string v0, ""
@@ -141,7 +141,7 @@
 .method public static synthetic lambda$onViewCreated$1(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/view/View;)V
     .locals 0
 
-    .line 143
+    .line 142
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->back()V
 
     return-void
@@ -150,7 +150,7 @@
 .method public static synthetic lambda$onViewCreated$2(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;Landroid/view/View;)V
     .locals 0
 
-    .line 144
+    .line 143
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->save()V
 
     return-void
@@ -159,12 +159,12 @@
 .method private refreshSpanCount()V
     .locals 3
 
-    .line 264
+    .line 263
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->refreshSpanCount()V
 
-    .line 265
+    .line 264
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAppsList:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;
 
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -181,25 +181,25 @@
 .method private updatePoolSize()V
     .locals 3
 
-    .line 269
+    .line 268
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 272
+    .line 271
     :cond_0
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getRecycledViewPool()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
 
     move-result-object v0
 
-    .line 273
+    .line 272
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
 
     move-result v1
 
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXDrawerMode()I
 
     move-result v2
 
@@ -211,12 +211,12 @@
 
     const/4 v1, 0x2
 
-    .line 274
+    .line 273
     invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->setMaxRecycledViews(II)V
 
     const/4 v1, 0x3
 
-    .line 275
+    .line 274
     invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;->setMaxRecycledViews(II)V
 
     return-void
@@ -225,7 +225,7 @@
 .method private updateUIColorMode()V
     .locals 4
 
-    .line 153
+    .line 152
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->getView()Landroid/view/View;
 
     move-result-object v0
@@ -234,7 +234,7 @@
 
     return-void
 
-    .line 156
+    .line 155
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleClear:Landroid/widget/ImageView;
 
@@ -248,7 +248,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 157
+    .line 156
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->getContext()Landroid/content/Context;
@@ -261,17 +261,17 @@
 
     move-result-object v0
 
-    .line 158
+    .line 157
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mBack:Lcom/miui/home/launcher/util/typeface/TypefaceIconView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/util/typeface/TypefaceIconView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 159
+    .line 158
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mSave:Lcom/miui/home/launcher/util/typeface/TypefaceIconView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/util/typeface/TypefaceIconView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 160
+    .line 159
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleEditor:Landroid/widget/EditText;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
@@ -288,7 +288,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 161
+    .line 160
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleEditor:Landroid/widget/EditText;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
@@ -305,7 +305,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHintTextColor(I)V
 
-    .line 162
+    .line 161
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleLine:Landroid/view/View;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
@@ -330,12 +330,12 @@
 .method public back()V
     .locals 1
 
-    .line 166
+    .line 165
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mListener:Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment$AppCategorySelectListener;
 
     invoke-interface {v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment$AppCategorySelectListener;->onBack()V
 
-    .line 167
+    .line 166
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->hideKeyboard()V
 
     return-void
@@ -352,7 +352,7 @@
         }
     .end annotation
 
-    .line 210
+    .line 209
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/AllAppsStore;->setApps(Ljava/util/List;)V
@@ -374,14 +374,14 @@
         }
     .end annotation
 
-    .line 232
+    .line 231
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->setAnimEnable(Z)V
 
-    .line 233
+    .line 232
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->checkList(Ljava/util/List;Ljava/util/List;)V
@@ -392,7 +392,7 @@
 .method public getActiveRecyclerView()Landroidx/recyclerview/widget/RecyclerView;
     .locals 1
 
-    .line 228
+    .line 227
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     return-object v0
@@ -401,7 +401,7 @@
 .method public getCategoryId()I
     .locals 1
 
-    .line 249
+    .line 248
     iget v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mCategoryId:I
 
     return v0
@@ -418,7 +418,7 @@
         }
     .end annotation
 
-    .line 237
+    .line 236
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->getSelectedApps()Ljava/util/Collection;
@@ -431,7 +431,7 @@
 .method onBackPressed()Z
     .locals 3
 
-    .line 279
+    .line 278
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleEditor:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -448,7 +448,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
-    .line 280
+    .line 279
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->getAddApps()Ljava/util/List;
 
     move-result-object v0
@@ -473,13 +473,13 @@
 
     goto :goto_0
 
-    .line 288
+    .line 287
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->back()V
 
     goto :goto_1
 
-    .line 281
+    .line 280
     :cond_1
     :goto_0
     new-instance v0, Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -492,41 +492,41 @@
 
     invoke-direct {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v1, 0x7f1000b0
+    const v1, 0x7f1000dd
 
-    .line 282
+    .line 281
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f1000b2
+    const v1, 0x7f1000df
 
     new-instance v2, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$KZoDRb95m-IcS1Pf_eaD6EpkhNU;
 
     invoke-direct {v2, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$KZoDRb95m-IcS1Pf_eaD6EpkhNU;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;)V
 
-    .line 283
+    .line 282
     invoke-virtual {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f1000b1
+    const v1, 0x7f1000de
 
     new-instance v2, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$CSExbwl9CONCQJjmF6i97HqcvKs;
 
     invoke-direct {v2, p0}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$CSExbwl9CONCQJjmF6i97HqcvKs;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;)V
 
-    .line 284
+    .line 283
     invoke-virtual {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    .line 285
+    .line 284
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object v0
 
-    .line 286
+    .line 285
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->show()V
 
     :goto_1
@@ -595,13 +595,6 @@
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
 
     .line 99
-    iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/allapps/AllAppsStore;->setEnable(Z)V
-
-    .line 100
     new-instance p1, Lcom/miui/home/launcher/model/AllAppsLoaderTask;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->getContext()Landroid/content/Context;
@@ -616,7 +609,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mLoaderTask:Lcom/miui/home/launcher/model/AllAppsLoaderTask;
 
-    .line 101
+    .line 100
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
@@ -629,7 +622,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/LauncherModel;->enqueueModelUpdateTask(Lcom/miui/home/launcher/LauncherModel$ModelUpdateTask;)V
 
-    .line 104
+    .line 103
     :goto_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isDarkMode()Z
 
@@ -647,7 +640,7 @@
     :goto_1
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
-    .line 105
+    .line 104
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -656,14 +649,14 @@
 
     if-eqz p1, :cond_3
 
-    .line 106
+    .line 105
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsColorMode()Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
-    .line 108
+    .line 107
     :cond_3
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -685,7 +678,7 @@
     :goto_2
     iput p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mBackgroundAlpha:I
 
-    .line 110
+    .line 109
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAllCategoryList:Lcom/miui/home/launcher/AllCategoryList;
 
     iget v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mCategoryId:I
@@ -696,7 +689,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mCategoryName:Ljava/lang/String;
 
-    .line 112
+    .line 111
     new-instance p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->getContext()Landroid/content/Context;
@@ -711,7 +704,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAppsList:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;
 
-    .line 113
+    .line 112
     new-instance p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->getContext()Landroid/content/Context;
@@ -728,14 +721,14 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
-    .line 114
+    .line 113
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAppsList:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->setAdapter(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;)V
 
-    .line 115
+    .line 114
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAppsList:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;
 
     iget v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mCategoryId:I
@@ -746,7 +739,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->updateItemFilter(Lcom/miui/home/launcher/util/ItemInfoMatcher;)V
 
-    .line 117
+    .line 116
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -757,7 +750,7 @@
 
     if-nez p1, :cond_5
 
-    .line 118
+    .line 117
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -771,11 +764,11 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    const p3, 0x7f0d0047
+    const p3, 0x7f0d0064
 
     const/4 v0, 0x0
 
-    .line 125
+    .line 124
     invoke-virtual {p1, p3, p2, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object p1
@@ -786,29 +779,29 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 197
+    .line 196
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
 
-    .line 198
+    .line 197
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mLoaderTask:Lcom/miui/home/launcher/model/AllAppsLoaderTask;
 
     if-eqz v0, :cond_0
 
-    .line 199
+    .line 198
     invoke-virtual {v0}, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->stopLocked()V
 
     const/4 v0, 0x0
 
-    .line 200
+    .line 199
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mLoaderTask:Lcom/miui/home/launcher/model/AllAppsLoaderTask;
 
-    .line 202
+    .line 201
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAppsList:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->onDestroy()V
 
-    .line 203
+    .line 202
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -819,7 +812,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 204
+    .line 203
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -836,7 +829,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 260
+    .line 259
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->refreshSpanCount()V
 
     return-void
@@ -848,7 +841,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 215
+    .line 214
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -857,7 +850,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 216
+    .line 215
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -870,7 +863,7 @@
 
     if-nez v0, :cond_0
 
-    .line 217
+    .line 216
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -883,7 +876,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 218
+    .line 217
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsColorMode()Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
@@ -891,26 +884,26 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
-    .line 219
+    .line 218
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsBackgroundAlpha()I
 
     move-result p1
 
     iput p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mBackgroundAlpha:I
 
-    .line 220
+    .line 219
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
     if-eqz p1, :cond_1
 
-    .line 221
+    .line 220
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mColorMode:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     iget v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mBackgroundAlpha:I
 
     invoke-virtual {p1, v0, v1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->setColorMode(Lcom/miui/home/launcher/allapps/AllAppsColorMode;I)V
 
-    .line 223
+    .line 222
     :cond_1
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->updateUIColorMode()V
 
@@ -924,10 +917,10 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 254
+    .line 253
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->updatePoolSize()V
 
-    .line 255
+    .line 254
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->refreshSpanCount()V
 
     return-void
@@ -936,12 +929,12 @@
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
     .locals 2
 
-    .line 130
+    .line 129
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const p2, 0x7f0a0061
+    const p2, 0x7f0a0066
 
-    .line 131
+    .line 130
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -950,7 +943,7 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    .line 132
+    .line 131
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
@@ -961,21 +954,21 @@
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 133
+    .line 132
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 134
+    .line 133
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     const/4 v0, 0x1
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
 
-    .line 135
+    .line 134
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance v0, Lcom/miui/home/launcher/keyboard/FocusedItemDecorator;
@@ -986,9 +979,9 @@
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
-    const p2, 0x7f0a00d3
+    const p2, 0x7f0a00f2
 
-    .line 137
+    .line 136
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -997,9 +990,9 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleEditor:Landroid/widget/EditText;
 
-    const p2, 0x7f0a0076
+    const p2, 0x7f0a008b
 
-    .line 138
+    .line 137
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1008,7 +1001,7 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleClear:Landroid/widget/ImageView;
 
-    .line 139
+    .line 138
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleClear:Landroid/widget/ImageView;
 
     new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$K0vomCpBHG9Q-A6wvYJ6V2q_seg;
@@ -1017,9 +1010,9 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const p2, 0x7f0a0075
+    const p2, 0x7f0a0089
 
-    .line 141
+    .line 140
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1028,9 +1021,9 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mBack:Lcom/miui/home/launcher/util/typeface/TypefaceIconView;
 
-    const p2, 0x7f0a0077
+    const p2, 0x7f0a008c
 
-    .line 142
+    .line 141
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
@@ -1039,7 +1032,7 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mSave:Lcom/miui/home/launcher/util/typeface/TypefaceIconView;
 
-    .line 143
+    .line 142
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mBack:Lcom/miui/home/launcher/util/typeface/TypefaceIconView;
 
     new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$uqq2-92gkLmajjufVnNRDUbobGM;
@@ -1048,7 +1041,7 @@
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/util/typeface/TypefaceIconView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 144
+    .line 143
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mSave:Lcom/miui/home/launcher/util/typeface/TypefaceIconView;
 
     new-instance v0, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$xmTXLQQ9p10wtO05TJcXsUAQSnk;
@@ -1057,31 +1050,31 @@
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/util/typeface/TypefaceIconView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 145
+    .line 144
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleEditor:Landroid/widget/EditText;
 
     invoke-virtual {p2}, Landroid/widget/EditText;->clearFocus()V
 
-    .line 146
+    .line 145
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleEditor:Landroid/widget/EditText;
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mCategoryName:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    const p2, 0x7f0a00d9
+    const p2, 0x7f0a00f8
 
-    .line 147
+    .line 146
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleLine:Landroid/view/View;
 
-    .line 148
+    .line 147
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->updateUIColorMode()V
 
-    .line 149
+    .line 148
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->updatePoolSize()V
 
     return-void
@@ -1090,7 +1083,7 @@
 .method public save()V
     .locals 7
 
-    .line 171
+    .line 170
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mTitleEditor:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -1121,7 +1114,7 @@
     :goto_0
     move-object v4, v0
 
-    .line 172
+    .line 171
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1130,7 +1123,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 173
+    .line 172
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1139,7 +1132,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f1000ad
+    const v3, 0x7f1000da
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1153,7 +1146,7 @@
 
     return-void
 
-    .line 176
+    .line 175
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
@@ -1167,7 +1160,7 @@
 
     if-nez v0, :cond_2
 
-    .line 177
+    .line 176
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mListener:Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment$AppCategorySelectListener;
 
     iget v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mCategoryId:I
@@ -1182,7 +1175,7 @@
 
     return-void
 
-    .line 180
+    .line 179
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mCategoryName:Ljava/lang/String;
 
@@ -1192,7 +1185,7 @@
 
     if-nez v0, :cond_3
 
-    .line 181
+    .line 180
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -1211,12 +1204,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 182
+    .line 181
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const v2, 0x7f1000ac
+    const v2, 0x7f1000d9
 
     invoke-static {v0, v2, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -1226,7 +1219,7 @@
 
     return-void
 
-    .line 185
+    .line 184
     :cond_3
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->mListener:Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment$AppCategorySelectListener;
 
@@ -1248,7 +1241,7 @@
 
     invoke-interface/range {v1 .. v6}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment$AppCategorySelectListener;->onSave(ILjava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;)V
 
-    .line 186
+    .line 185
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->hideKeyboard()V
 
     return-void

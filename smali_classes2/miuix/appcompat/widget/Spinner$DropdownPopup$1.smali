@@ -27,7 +27,7 @@
 .method constructor <init>(Lmiuix/appcompat/widget/Spinner$DropdownPopup;Lmiuix/appcompat/widget/Spinner;)V
     .locals 0
 
-    .line 1052
+    .line 1096
     iput-object p1, p0, Lmiuix/appcompat/widget/Spinner$DropdownPopup$1;->this$1:Lmiuix/appcompat/widget/Spinner$DropdownPopup;
 
     iput-object p2, p0, Lmiuix/appcompat/widget/Spinner$DropdownPopup$1;->val$this$0:Lmiuix/appcompat/widget/Spinner;
@@ -51,21 +51,21 @@
         }
     .end annotation
 
-    .line 1055
+    .line 1099
     iget-object p1, p0, Lmiuix/appcompat/widget/Spinner$DropdownPopup$1;->this$1:Lmiuix/appcompat/widget/Spinner$DropdownPopup;
 
     iget-object p1, p1, Lmiuix/appcompat/widget/Spinner$DropdownPopup;->this$0:Lmiuix/appcompat/widget/Spinner;
 
     invoke-virtual {p1, p3}, Lmiuix/appcompat/widget/Spinner;->setSelection(I)V
 
-    .line 1056
+    .line 1100
     iget-object p1, p0, Lmiuix/appcompat/widget/Spinner$DropdownPopup$1;->this$1:Lmiuix/appcompat/widget/Spinner$DropdownPopup;
 
     iget-object p1, p1, Lmiuix/appcompat/widget/Spinner$DropdownPopup;->this$0:Lmiuix/appcompat/widget/Spinner;
 
     invoke-static {p1}, Lmiuix/appcompat/widget/Spinner;->access$300(Lmiuix/appcompat/widget/Spinner;)V
 
-    .line 1057
+    .line 1101
     iget-object p1, p0, Lmiuix/appcompat/widget/Spinner$DropdownPopup$1;->this$1:Lmiuix/appcompat/widget/Spinner$DropdownPopup;
 
     iget-object p1, p1, Lmiuix/appcompat/widget/Spinner$DropdownPopup;->this$0:Lmiuix/appcompat/widget/Spinner;
@@ -76,7 +76,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 1058
+    .line 1102
     iget-object p1, p0, Lmiuix/appcompat/widget/Spinner$DropdownPopup$1;->this$1:Lmiuix/appcompat/widget/Spinner$DropdownPopup;
 
     iget-object p1, p1, Lmiuix/appcompat/widget/Spinner$DropdownPopup;->this$0:Lmiuix/appcompat/widget/Spinner;
@@ -91,7 +91,7 @@
 
     invoke-virtual {p1, p2, p3, p4, p5}, Lmiuix/appcompat/widget/Spinner;->performItemClick(Landroid/view/View;IJ)Z
 
-    .line 1060
+    .line 1104
     :cond_0
     iget-object p1, p0, Lmiuix/appcompat/widget/Spinner$DropdownPopup$1;->this$1:Lmiuix/appcompat/widget/Spinner$DropdownPopup;
 

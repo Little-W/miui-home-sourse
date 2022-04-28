@@ -17,7 +17,13 @@
 # instance fields
 .field public mBadge:Landroid/graphics/drawable/Drawable;
 
+.field public mDescription:Ljava/lang/String;
+
+.field public mDetailsPreview:Landroid/view/View;
+
 .field public mIsPreview:Z
+
+.field public mIsShowDetails:Z
 
 .field public mPreview:Landroid/graphics/drawable/Drawable;
 
@@ -28,7 +34,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 98
+    .line 122
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

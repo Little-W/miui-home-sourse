@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/UninstallDialogWrapper;)V
     .locals 0
 
-    .line 243
+    .line 247
     iput-object p1, p0, Lcom/miui/home/launcher/UninstallDialogWrapper$8;->this$0:Lcom/miui/home/launcher/UninstallDialogWrapper;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/common/ConflictsListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onGainLock()V
     .locals 3
 
-    .line 247
+    .line 251
     iget-object v0, p0, Lcom/miui/home/launcher/UninstallDialogWrapper$8;->this$0:Lcom/miui/home/launcher/UninstallDialogWrapper;
 
     const/4 v1, 0x1

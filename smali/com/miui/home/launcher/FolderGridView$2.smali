@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderGridView;)V
     .locals 0
 
-    .line 314
+    .line 308
     iput-object p1, p0, Lcom/miui/home/launcher/FolderGridView$2;->this$0:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 317
+    .line 311
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView$2;->this$0:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderGridView;->access$000(Lcom/miui/home/launcher/FolderGridView;)Lcom/miui/home/launcher/ShortcutsAdapter;
@@ -51,7 +51,7 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 318
+    .line 312
     iget-object v1, p0, Lcom/miui/home/launcher/FolderGridView$2;->this$0:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/FolderGridView;->getLastVisiblePosition()I
@@ -72,14 +72,14 @@
 
     if-le v1, v2, :cond_0
 
-    .line 319
+    .line 313
     iget-object v1, p0, Lcom/miui/home/launcher/FolderGridView$2;->this$0:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/FolderGridView;->setSelection(I)V
 
     goto :goto_0
 
-    .line 321
+    .line 315
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/FolderGridView$2;->this$0:Lcom/miui/home/launcher/FolderGridView;
 

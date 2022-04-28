@@ -29,7 +29,7 @@
     .line 185
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const v0, 0x7f0a0114
+    const v0, 0x7f0a0140
 
     .line 186
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -40,7 +40,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->icon:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0118
+    const v0, 0x7f0a0144
 
     .line 187
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -51,7 +51,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter$IconViewHolder;->title:Landroid/widget/TextView;
 
-    const v0, 0x7f0a00d5
+    const v0, 0x7f0a00f4
 
     .line 188
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -97,12 +97,12 @@
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f10010c
+    const p1, 0x7f10013d
 
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f10010d
+    const p1, 0x7f10013e
 
     :goto_0
     const/4 v1, 0x1

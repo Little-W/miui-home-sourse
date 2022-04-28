@@ -947,6 +947,8 @@
 
     move-result-object v1
 
+    invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_0
 
     :cond_2
@@ -1398,6 +1400,8 @@
 
     move-result-object v0
 
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     const/4 v0, 0x0
 
     return-object v0
@@ -1607,6 +1611,8 @@
 
     move-result-object v1
 
+    invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_1
 
     :cond_5
@@ -1629,6 +1635,8 @@
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
+
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v2
 .end method
@@ -2640,6 +2648,8 @@
     const-string v2, "not found \'name\' in scene."
 
     .line 109
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-object v0
 
     .line 112

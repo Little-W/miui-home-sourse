@@ -16,7 +16,7 @@
 
 .field private static final TAG:Ljava/lang/String; = "TaskStackChangeListeners"
 
-.field private static sIsOnTaskSnapshotChangedTransactCodeValid:Z
+.field private static sIsOnTaskSnapshotChangedTransactCodeValid:Z = false
 
 .field private static sOnTaskSnapshotChangedTransactCode:I
 
@@ -163,7 +163,7 @@
         }
     .end annotation
 
-    .line 154
+    .line 163
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x7
@@ -183,7 +183,7 @@
 
     const/4 v0, -0x1
 
-    .line 144
+    .line 153
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->onActivityForcedResizable(Ljava/lang/String;II)V
 
     return-void
@@ -197,7 +197,7 @@
         }
     .end annotation
 
-    .line 149
+    .line 158
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x6
@@ -206,7 +206,7 @@
 
     move-result-object p1
 
-    .line 150
+    .line 159
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -220,7 +220,7 @@
         }
     .end annotation
 
-    .line 158
+    .line 167
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0xb
@@ -242,7 +242,7 @@
 
     const/4 v1, -0x1
 
-    .line 105
+    .line 114
     invoke-virtual {p0, v0, v1}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->onActivityPinned(Ljava/lang/String;I)V
 
     return-void
@@ -258,7 +258,7 @@
 
     const/4 v0, -0x1
 
-    .line 109
+    .line 118
     invoke-virtual {p0, p1, v0, p2}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->onActivityPinned(Ljava/lang/String;II)V
 
     return-void
@@ -272,14 +272,14 @@
         }
     .end annotation
 
-    .line 113
+    .line 122
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 114
+    .line 123
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1, p2, p3, p1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
@@ -310,14 +310,14 @@
         }
     .end annotation
 
-    .line 122
+    .line 131
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 123
+    .line 132
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
@@ -333,14 +333,14 @@
         }
     .end annotation
 
-    .line 128
+    .line 137
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 129
+    .line 138
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x0
@@ -349,7 +349,7 @@
 
     move-result-object p1
 
-    .line 130
+    .line 139
     invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
 
     return-void
@@ -363,14 +363,14 @@
         }
     .end annotation
 
-    .line 139
+    .line 148
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 140
+    .line 149
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
@@ -386,14 +386,14 @@
         }
     .end annotation
 
-    .line 134
+    .line 143
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0x9
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 135
+    .line 144
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
@@ -401,10 +401,61 @@
     return-void
 .end method
 
+.method public onTaskDisplayChanged(II)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 107
+    invoke-super {p0, p1, p2}, Landroid/app/TaskStackListener;->onTaskDisplayChanged(II)V
+
+    .line 108
+    sget-object v0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onTaskDisplayChanged =  taskId = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, " newDisplayId = "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 109
+    iget-object p1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
+
+    const/16 p2, 0xc
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->removeMessages(I)V
+
+    .line 110
+    iget-object p1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    return-void
+.end method
+
 .method public onTaskProfileLocked(II)V
     .locals 2
 
-    .line 162
+    .line 171
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0x8
@@ -426,14 +477,14 @@
         }
     .end annotation
 
-    .line 167
+    .line 176
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 168
+    .line 177
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x0
@@ -455,14 +506,14 @@
         }
     .end annotation
 
-    .line 174
+    .line 183
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 175
+    .line 184
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     const/4 v2, 0x0
@@ -484,30 +535,30 @@
         }
     .end annotation
 
-    .line 92
+    .line 93
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mTaskStackListeners:Ljava/util/List;
 
     monitor-enter v0
 
-    .line 93
+    .line 94
     :try_start_0
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mTmpListeners:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    .line 94
+    .line 95
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mTmpListeners:Ljava/util/List;
 
     iget-object v2, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mTaskStackListeners:Ljava/util/List;
 
     invoke-interface {v1, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 95
+    .line 96
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 96
+    .line 97
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mTmpListeners:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -521,7 +572,7 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 97
+    .line 98
     iget-object v2, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mTmpListeners:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -536,13 +587,13 @@
 
     goto :goto_0
 
-    .line 100
+    .line 101
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 101
+    .line 102
     iget-object v0, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
@@ -552,7 +603,7 @@
     :catchall_0
     move-exception v1
 
-    .line 95
+    .line 96
     :try_start_1
     monitor-exit v0
     :try_end_1

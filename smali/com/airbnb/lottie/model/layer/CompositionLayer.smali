@@ -284,29 +284,29 @@
         }
     .end annotation
 
-    .line 199
+    .line 207
     invoke-super {p0, p1, p2}, Lcom/airbnb/lottie/model/layer/BaseLayer;->addValueCallback(Ljava/lang/Object;Lcom/airbnb/lottie/value/LottieValueCallback;)V
 
-    .line 201
+    .line 209
     sget-object v0, Lcom/airbnb/lottie/LottieProperty;->TIME_REMAP:Ljava/lang/Float;
 
     if-ne p1, v0, :cond_1
 
     if-nez p2, :cond_0
 
-    .line 203
+    .line 211
     iget-object p1, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->timeRemapping:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     if-eqz p1, :cond_1
 
     const/4 p2, 0x0
 
-    .line 204
+    .line 212
     invoke-virtual {p1, p2}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->setValueCallback(Lcom/airbnb/lottie/value/LottieValueCallback;)V
 
     goto :goto_0
 
-    .line 207
+    .line 215
     :cond_0
     new-instance p1, Lcom/airbnb/lottie/animation/keyframe/ValueCallbackKeyframeAnimation;
 
@@ -314,12 +314,12 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->timeRemapping:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
-    .line 208
+    .line 216
     iget-object p1, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->timeRemapping:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->addUpdateListener(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$AnimationListener;)V
 
-    .line 209
+    .line 217
     iget-object p1, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->timeRemapping:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {p0, p1}, Lcom/airbnb/lottie/model/layer/CompositionLayer;->addAnimation(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;)V
@@ -334,10 +334,10 @@
 
     const-string v0, "CompositionLayer#draw"
 
-    .line 92
+    .line 99
     invoke-static {v0}, Lcom/airbnb/lottie/L;->beginSection(Ljava/lang/String;)V
 
-    .line 93
+    .line 100
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->newClipRect:Landroid/graphics/RectF;
 
     iget-object v1, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layerModel:Lcom/airbnb/lottie/model/layer/Layer;
@@ -360,12 +360,12 @@
 
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 94
+    .line 101
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->newClipRect:Landroid/graphics/RectF;
 
     invoke-virtual {p2, v0}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 97
+    .line 104
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/LottieDrawable;->isApplyingOpacityToLayersEnabled()Z
@@ -398,12 +398,12 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 99
+    .line 106
     iget-object v3, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layerPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v3, p3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 100
+    .line 107
     iget-object v3, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->newClipRect:Landroid/graphics/RectF;
 
     iget-object v4, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layerPaint:Landroid/graphics/Paint;
@@ -412,7 +412,7 @@
 
     goto :goto_1
 
-    .line 102
+    .line 109
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
@@ -421,7 +421,7 @@
 
     move p3, v1
 
-    .line 106
+    .line 113
     :cond_2
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layers:Ljava/util/List;
 
@@ -434,7 +434,7 @@
     :goto_2
     if-ltz v0, :cond_5
 
-    .line 108
+    .line 115
     iget-object v1, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->newClipRect:Landroid/graphics/RectF;
 
     invoke-virtual {v1}, Landroid/graphics/RectF;->isEmpty()Z
@@ -443,7 +443,7 @@
 
     if-nez v1, :cond_3
 
-    .line 109
+    .line 116
     iget-object v1, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->newClipRect:Landroid/graphics/RectF;
 
     invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/RectF;)Z
@@ -458,7 +458,7 @@
     :goto_3
     if-eqz v1, :cond_4
 
-    .line 112
+    .line 119
     iget-object v1, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layers:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -467,7 +467,7 @@
 
     check-cast v1, Lcom/airbnb/lottie/model/layer/BaseLayer;
 
-    .line 113
+    .line 120
     invoke-virtual {v1, p1, p2, p3}, Lcom/airbnb/lottie/model/layer/BaseLayer;->draw(Landroid/graphics/Canvas;Landroid/graphics/Matrix;I)V
 
     :cond_4
@@ -475,13 +475,13 @@
 
     goto :goto_2
 
-    .line 116
+    .line 123
     :cond_5
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     const-string p1, "CompositionLayer#draw"
 
-    .line 117
+    .line 124
     invoke-static {p1}, Lcom/airbnb/lottie/L;->endSection(Ljava/lang/String;)F
 
     return-void
@@ -490,10 +490,10 @@
 .method public getBounds(Landroid/graphics/RectF;Landroid/graphics/Matrix;Z)V
     .locals 3
 
-    .line 121
+    .line 128
     invoke-super {p0, p1, p2, p3}, Lcom/airbnb/lottie/model/layer/BaseLayer;->getBounds(Landroid/graphics/RectF;Landroid/graphics/Matrix;Z)V
 
-    .line 122
+    .line 129
     iget-object p2, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layers:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->size()I
@@ -507,14 +507,14 @@
     :goto_0
     if-ltz p2, :cond_0
 
-    .line 123
+    .line 130
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->rect:Landroid/graphics/RectF;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1, v1, v1, v1}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 124
+    .line 131
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layers:Ljava/util/List;
 
     invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -529,7 +529,7 @@
 
     invoke-virtual {v0, v1, v2, p3}, Lcom/airbnb/lottie/model/layer/BaseLayer;->getBounds(Landroid/graphics/RectF;Landroid/graphics/Matrix;Z)V
 
-    .line 125
+    .line 132
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->rect:Landroid/graphics/RectF;
 
     invoke-virtual {p1, v0}, Landroid/graphics/RectF;->union(Landroid/graphics/RectF;)V
@@ -559,7 +559,7 @@
 
     const/4 v0, 0x0
 
-    .line 191
+    .line 199
     :goto_0
     iget-object v1, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layers:Ljava/util/List;
 
@@ -569,7 +569,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 192
+    .line 200
     iget-object v1, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layers:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -588,18 +588,53 @@
     return-void
 .end method
 
+.method public setOutlineMasksAndMattes(Z)V
+    .locals 2
+
+    .line 92
+    invoke-super {p0, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->setOutlineMasksAndMattes(Z)V
+
+    .line 93
+    iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layers:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/airbnb/lottie/model/layer/BaseLayer;
+
+    .line 94
+    invoke-virtual {v1, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->setOutlineMasksAndMattes(Z)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
 .method public setProgress(F)V
     .locals 3
 
-    .line 130
+    .line 137
     invoke-super {p0, p1}, Lcom/airbnb/lottie/model/layer/BaseLayer;->setProgress(F)V
 
-    .line 131
+    .line 138
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->timeRemapping:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     if-eqz v0, :cond_0
 
-    .line 135
+    .line 142
     iget-object p1, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->lottieDrawable:Lcom/airbnb/lottie/LottieDrawable;
 
     invoke-virtual {p1}, Lcom/airbnb/lottie/LottieDrawable;->getComposition()Lcom/airbnb/lottie/LottieComposition;
@@ -614,7 +649,7 @@
 
     add-float/2addr p1, v0
 
-    .line 136
+    .line 143
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layerModel:Lcom/airbnb/lottie/model/layer/Layer;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/model/layer/Layer;->getComposition()Lcom/airbnb/lottie/LottieComposition;
@@ -625,7 +660,7 @@
 
     move-result v0
 
-    .line 137
+    .line 144
     iget-object v1, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->timeRemapping:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     invoke-virtual {v1}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;->getValue()Ljava/lang/Object;
@@ -654,13 +689,13 @@
 
     div-float p1, v1, p1
 
-    .line 140
+    .line 147
     :cond_0
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->timeRemapping:Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     if-nez v0, :cond_1
 
-    .line 141
+    .line 148
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layerModel:Lcom/airbnb/lottie/model/layer/Layer;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/model/layer/Layer;->getStartProgress()F
@@ -669,7 +704,7 @@
 
     sub-float/2addr p1, v0
 
-    .line 143
+    .line 151
     :cond_1
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layerModel:Lcom/airbnb/lottie/model/layer/Layer;
 
@@ -683,7 +718,21 @@
 
     if-eqz v0, :cond_2
 
-    .line 144
+    const-string v0, "__container"
+
+    iget-object v1, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layerModel:Lcom/airbnb/lottie/model/layer/Layer;
+
+    invoke-virtual {v1}, Lcom/airbnb/lottie/model/layer/Layer;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 152
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layerModel:Lcom/airbnb/lottie/model/layer/Layer;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/model/layer/Layer;->getTimeStretch()F
@@ -692,7 +741,7 @@
 
     div-float/2addr p1, v0
 
-    .line 146
+    .line 154
     :cond_2
     iget-object v0, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layers:Ljava/util/List;
 
@@ -705,7 +754,7 @@
     :goto_0
     if-ltz v0, :cond_3
 
-    .line 147
+    .line 155
     iget-object v1, p0, Lcom/airbnb/lottie/model/layer/CompositionLayer;->layers:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;

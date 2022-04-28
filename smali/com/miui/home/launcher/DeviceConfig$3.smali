@@ -26,17 +26,17 @@
 .method constructor <init>()V
     .locals 1
 
-    .line 221
+    .line 244
     invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
 
     const-string v0, "tier1_5"
 
-    .line 222
+    .line 245
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DeviceConfig$3;->add(Ljava/lang/Object;)Z
 
     const-string v0, "tier2"
 
-    .line 223
+    .line 246
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DeviceConfig$3;->add(Ljava/lang/Object;)Z
 
     return-void

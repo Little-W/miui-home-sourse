@@ -32,7 +32,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 186
+    .line 202
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method synthetic constructor <init>(Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$1;)V
     .locals 0
 
-    .line 186
+    .line 202
     invoke-direct {p0}, Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation$EmptyKeyframeWrapper;-><init>()V
 
     return-void
@@ -59,7 +59,7 @@
         }
     .end annotation
 
-    .line 199
+    .line 215
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "not implemented"
@@ -88,7 +88,7 @@
 .method public isCachedValueEnabled(F)Z
     .locals 1
 
-    .line 214
+    .line 230
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string v0, "not implemented"

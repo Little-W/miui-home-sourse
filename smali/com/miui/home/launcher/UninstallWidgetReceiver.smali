@@ -139,6 +139,8 @@
     const-string p2, "provider name is null"
 
     .line 29
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     .line 32
@@ -162,6 +164,8 @@
     const-string p2, "forbid remove other package widget"
 
     .line 33
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     .line 36
@@ -180,6 +184,8 @@
     const-string p2, "launcher is not ready,process later"
 
     .line 39
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     .line 42
@@ -195,6 +201,8 @@
     const-string p2, "widget not added"
 
     .line 43
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     .line 46
@@ -210,6 +218,8 @@
     const-string p2, "widget remove failed: workspace is null"
 
     .line 47
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 
     .line 50
@@ -285,6 +295,8 @@
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
+
+    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 

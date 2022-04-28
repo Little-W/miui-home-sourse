@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderIcon;)V
     .locals 0
 
-    .line 742
+    .line 757
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$12;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-direct {p0}, Lcom/miui/home/library/mirror/MirrorDragListener;-><init>()V
@@ -35,7 +35,7 @@
 .method public onDragEnd(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 0
 
-    .line 766
+    .line 781
     iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$12;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$1100(Lcom/miui/home/launcher/FolderIcon;)Ljava/lang/Runnable;
@@ -50,7 +50,7 @@
 .method public onDragEnter(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 2
 
-    .line 751
+    .line 766
     iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$12;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$1100(Lcom/miui/home/launcher/FolderIcon;)Ljava/lang/Runnable;
@@ -67,7 +67,7 @@
 .method public onDragExit(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 0
 
-    .line 761
+    .line 776
     iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$12;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$1100(Lcom/miui/home/launcher/FolderIcon;)Ljava/lang/Runnable;
@@ -88,7 +88,7 @@
 .method public onDragStart(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 0
 
-    .line 746
+    .line 761
     iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$12;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$1100(Lcom/miui/home/launcher/FolderIcon;)Ljava/lang/Runnable;
@@ -103,7 +103,7 @@
 .method public onDrop(Landroid/view/View;Landroid/view/DragEvent;)V
     .locals 0
 
-    .line 771
+    .line 786
     iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$12;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-static {p1}, Lcom/miui/home/launcher/FolderIcon;->access$1100(Lcom/miui/home/launcher/FolderIcon;)Ljava/lang/Runnable;

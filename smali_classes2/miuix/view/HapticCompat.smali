@@ -3,6 +3,14 @@
 .source "HapticCompat.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lmiuix/view/HapticCompat$WeakReferenceHandler;
+    }
+.end annotation
+
+
 # static fields
 .field private static sProviders:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -14,23 +22,32 @@
     .end annotation
 .end field
 
+.field private static final sSingleThread:Ljava/util/concurrent/Executor;
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 15
+    .line 19
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lmiuix/view/HapticCompat;->sProviders:Ljava/util/List;
 
+    .line 21
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    sput-object v0, Lmiuix/view/HapticCompat;->sSingleThread:Ljava/util/concurrent/Executor;
+
     const-string v0, "miuix.view.LinearVibrator"
 
     const-string v1, "miuix.view.ExtendedVibrator"
 
-    .line 82
+    .line 116
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
@@ -43,7 +60,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 12
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,7 +69,7 @@
 .method private static varargs loadProviders([Ljava/lang/String;)V
     .locals 8
 
-    .line 71
+    .line 105
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -66,7 +83,7 @@
 
     const-string v4, "HapticCompat"
 
-    .line 72
+    .line 106
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -85,7 +102,7 @@
 
     const/4 v4, 0x1
 
-    .line 74
+    .line 108
     :try_start_0
     const-class v5, Lmiuix/view/HapticCompat;
 
@@ -106,7 +123,7 @@
 
     const-string v7, "load provider %s failed."
 
-    .line 76
+    .line 110
     new-array v4, v4, [Ljava/lang/Object;
 
     aput-object v3, v4, v1
@@ -129,7 +146,7 @@
 .method public static obtainFeedBack(I)I
     .locals 3
 
-    .line 57
+    .line 91
     sget-object v0, Lmiuix/view/HapticCompat;->sProviders:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -149,12 +166,12 @@
 
     check-cast v1, Lmiuix/view/HapticFeedbackProvider;
 
-    .line 58
+    .line 92
     instance-of v2, v1, Lmiuix/view/LinearVibrator;
 
     if-eqz v2, :cond_0
 
-    .line 59
+    .line 93
     check-cast v1, Lmiuix/view/LinearVibrator;
 
     invoke-virtual {v1, p0}, Lmiuix/view/LinearVibrator;->obtainFeedBack(I)I
@@ -186,7 +203,7 @@
 
     const-string v3, "perform haptic: 0x%08x"
 
-    .line 20
+    .line 26
     new-array v1, v1, [Ljava/lang/Object;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -201,14 +218,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21
+    .line 27
     invoke-virtual {p0, p1}, Landroid/view/View;->performHapticFeedback(I)Z
 
     move-result p0
 
     return p0
 
-    .line 24
+    .line 30
     :cond_0
     sget v3, Lmiuix/view/HapticFeedbackConstants;->MIUI_HAPTIC_END:I
 
@@ -220,7 +237,7 @@
 
     const/4 v3, 0x2
 
-    .line 25
+    .line 31
     new-array v3, v3, [Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -245,7 +262,7 @@
 
     return v2
 
-    .line 29
+    .line 35
     :cond_1
     sget-object v0, Lmiuix/view/HapticCompat;->sProviders:Ljava/util/List;
 
@@ -266,7 +283,7 @@
 
     check-cast v3, Lmiuix/view/HapticFeedbackProvider;
 
-    .line 30
+    .line 36
     invoke-interface {v3, p0, p1}, Lmiuix/view/HapticFeedbackProvider;->performHapticFeedback(Landroid/view/View;I)Z
 
     move-result v3
@@ -279,12 +296,57 @@
     return v2
 .end method
 
+.method public static performHapticFeedbackAsync(Landroid/view/View;I)V
+    .locals 2
+    .annotation build Landroidx/annotation/Keep;
+    .end annotation
+
+    .line 63
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    .line 65
+    invoke-static {p0, p1}, Lmiuix/view/HapticCompat;->performHapticFeedback(Landroid/view/View;I)Z
+
+    goto :goto_1
+
+    .line 67
+    :cond_1
+    sget-object v0, Lmiuix/view/HapticCompat;->sSingleThread:Ljava/util/concurrent/Executor;
+
+    new-instance v1, Lmiuix/view/HapticCompat$WeakReferenceHandler;
+
+    invoke-direct {v1, p0, p1}, Lmiuix/view/HapticCompat$WeakReferenceHandler;-><init>(Landroid/view/View;I)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :goto_1
+    return-void
+.end method
+
 .method static registerProvider(Lmiuix/view/HapticFeedbackProvider;)V
     .locals 1
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .line 67
+    .line 101
     sget-object v0, Lmiuix/view/HapticCompat;->sProviders:Ljava/util/List;
 
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z

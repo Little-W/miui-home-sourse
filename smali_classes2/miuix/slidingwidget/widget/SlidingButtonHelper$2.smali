@@ -30,7 +30,7 @@
 .method constructor <init>(Lmiuix/slidingwidget/widget/SlidingButtonHelper;Ljava/lang/String;)V
     .locals 0
 
-    .line 138
+    .line 139
     iput-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper$2;->this$0:Lmiuix/slidingwidget/widget/SlidingButtonHelper;
 
     invoke-direct {p0, p2}, Lmiuix/animation/property/FloatProperty;-><init>(Ljava/lang/String;)V
@@ -43,7 +43,7 @@
 .method public getValue(Landroid/widget/CompoundButton;)F
     .locals 0
 
-    .line 141
+    .line 142
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper$2;->this$0:Lmiuix/slidingwidget/widget/SlidingButtonHelper;
 
     invoke-static {p1}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->access$000(Lmiuix/slidingwidget/widget/SlidingButtonHelper;)F
@@ -56,7 +56,7 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 138
+    .line 139
     check-cast p1, Landroid/widget/CompoundButton;
 
     invoke-virtual {p0, p1}, Lmiuix/slidingwidget/widget/SlidingButtonHelper$2;->getValue(Landroid/widget/CompoundButton;)F
@@ -69,7 +69,7 @@
 .method public setValue(Landroid/widget/CompoundButton;F)V
     .locals 0
 
-    .line 146
+    .line 147
     iget-object p1, p0, Lmiuix/slidingwidget/widget/SlidingButtonHelper$2;->this$0:Lmiuix/slidingwidget/widget/SlidingButtonHelper;
 
     invoke-static {p1, p2}, Lmiuix/slidingwidget/widget/SlidingButtonHelper;->access$002(Lmiuix/slidingwidget/widget/SlidingButtonHelper;F)F
@@ -80,7 +80,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 138
+    .line 139
     check-cast p1, Landroid/widget/CompoundButton;
 
     invoke-virtual {p0, p1, p2}, Lmiuix/slidingwidget/widget/SlidingButtonHelper$2;->setValue(Landroid/widget/CompoundButton;F)V

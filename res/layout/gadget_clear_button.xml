@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:paddingTop="@dimen/icon_padding_top"
-    android:clipChildren="false"
-    android:clipToPadding="false"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout
-        android:id="@id/icon_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true">
-        <com.miui.home.launcher.LauncherIconImageView
-            android:layout_gravity="center"
-            android:id="@id/background"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitCenter" />
-        <com.miui.home.launcher.common.ClearIconImageView
-            android:layout_gravity="center"
-            android:id="@id/clear_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+<com.miui.home.launcher.util.noword.NoWordAutoAdaptRelativeLayout android:id="@id/clear_content_body" android:paddingTop="@dimen/icon_padding_top" android:focusable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/gadget_clear_button_label"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/icon_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <com.miui.home.launcher.LauncherIconImageView android:layout_gravity="center" android:id="@id/background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" />
+        <com.miui.home.launcher.common.ClearIconImageView android:layout_gravity="center" android:id="@id/clear_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/gadget_clear_button_label" />
     </FrameLayout>
-    <include
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@id/icon_container"
-        android:layout_centerHorizontal="true"
-        layout="@layout/icon_title" />
-</RelativeLayout>
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/icon_container" android:layout_centerHorizontal="true" layout="@layout/icon_title" />
+</com.miui.home.launcher.util.noword.NoWordAutoAdaptRelativeLayout>

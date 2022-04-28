@@ -26,6 +26,12 @@
 
 
 # virtual methods
+.method public deadlineNanoTime(J)Lokio/Timeout;
+    .locals 0
+
+    return-object p0
+.end method
+
 .method public throwIfReached()V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
@@ -35,4 +41,10 @@
     .end annotation
 
     return-void
+.end method
+
+.method public timeout(JLjava/util/concurrent/TimeUnit;)Lokio/Timeout;
+    .locals 0
+
+    return-object p0
 .end method

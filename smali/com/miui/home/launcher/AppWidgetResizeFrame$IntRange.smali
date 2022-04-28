@@ -24,7 +24,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 510
+    .line 509
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/AppWidgetResizeFrame$1;)V
     .locals 0
 
-    .line 510
+    .line 509
     invoke-direct {p0}, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;-><init>()V
 
     return-void
@@ -46,7 +46,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 532
+    .line 531
     iget p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->start:I
 
     add-int/2addr p1, p3
@@ -61,7 +61,7 @@
 
     if-eqz p2, :cond_1
 
-    .line 533
+    .line 532
     iget p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->end:I
 
     add-int/2addr p1, p3
@@ -80,29 +80,29 @@
 .method public applyDeltaAndBound(ZZIIIILcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;)I
     .locals 0
 
-    .line 551
+    .line 550
     invoke-virtual {p0, p1, p2, p3, p7}, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->applyDelta(ZZILcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;)V
 
-    .line 552
+    .line 551
     iget p3, p7, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->start:I
 
     if-gez p3, :cond_0
 
     const/4 p3, 0x0
 
-    .line 553
+    .line 552
     iput p3, p7, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->start:I
 
-    .line 555
+    .line 554
     :cond_0
     iget p3, p7, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->end:I
 
     if-le p3, p6, :cond_1
 
-    .line 556
+    .line 555
     iput p6, p7, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->end:I
 
-    .line 558
+    .line 557
     :cond_1
     invoke-virtual {p7}, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->size()I
 
@@ -112,7 +112,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 560
+    .line 559
     iget p3, p7, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->end:I
 
     sub-int/2addr p3, p4
@@ -124,14 +124,14 @@
     :cond_2
     if-eqz p2, :cond_3
 
-    .line 562
+    .line 561
     iget p3, p7, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->start:I
 
     add-int/2addr p3, p4
 
     iput p3, p7, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->end:I
 
-    .line 565
+    .line 564
     :cond_3
     :goto_0
     invoke-virtual {p7}, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->size()I
@@ -142,7 +142,7 @@
 
     if-eqz p1, :cond_4
 
-    .line 567
+    .line 566
     iget p1, p7, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->end:I
 
     sub-int/2addr p1, p5
@@ -154,7 +154,7 @@
     :cond_4
     if-eqz p2, :cond_5
 
-    .line 569
+    .line 568
     iget p1, p7, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->start:I
 
     add-int/2addr p1, p5
@@ -165,7 +165,7 @@
     :goto_1
     if-eqz p2, :cond_6
 
-    .line 572
+    .line 571
     invoke-virtual {p7}, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->size()I
 
     move-result p1
@@ -194,10 +194,10 @@
 .method public set(II)V
     .locals 0
 
-    .line 519
+    .line 518
     iput p1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->start:I
 
-    .line 520
+    .line 519
     iput p2, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->end:I
 
     return-void
@@ -206,7 +206,7 @@
 .method public size()I
     .locals 2
 
-    .line 524
+    .line 523
     iget v0, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->end:I
 
     iget v1, p0, Lcom/miui/home/launcher/AppWidgetResizeFrame$IntRange;->start:I

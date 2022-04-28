@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 1861
+    .line 1915
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/Workspace$1;)V
     .locals 0
 
-    .line 1861
+    .line 1915
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;-><init>(Lcom/miui/home/launcher/Workspace;)V
 
     return-void
@@ -47,7 +47,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 1864
+    .line 1918
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Workspace;->getLastCellScreen()Lcom/miui/home/launcher/CellScreen;
@@ -66,14 +66,22 @@
 
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    .line 1865
+    .line 1919
     invoke-virtual {p1}, Lcom/miui/home/launcher/Workspace;->needShowLastEmptyScreen()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 1866
+    iget-object p1, p0, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;->this$0:Lcom/miui/home/launcher/Workspace;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$600(Lcom/miui/home/launcher/Workspace;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 1920
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Workspace;->getScreenCount()I
@@ -84,7 +92,7 @@
 
     goto :goto_0
 
-    .line 1868
+    .line 1922
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;->this$0:Lcom/miui/home/launcher/Workspace;
 
@@ -104,14 +112,14 @@
 
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    .line 1869
+    .line 1923
     invoke-virtual {p1}, Lcom/miui/home/launcher/Workspace;->needShowLastEmptyScreen()Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    .line 1870
+    .line 1924
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$EditModeItemClickedHandler;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Workspace;->getLastCellScreen()Lcom/miui/home/launcher/CellScreen;

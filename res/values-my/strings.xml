@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">နှင့် မျှဝေရန်</string>
     <string name="abc_shareactionprovider_share_with_application">%s ဖြင့် မျှဝေရန်</string>
     <string name="abc_toolbar_collapse_description">လျှော့ပြရန်</string>
+    <string name="common_google_play_services_unknown_issue">%1$s သည် Google Play ဝန်ဆောင်မှုများနှင့် ပြဿနာအနည်းငယ် ရှိနေပါသည်။ ထပ်လုပ်ကြည့်ပါ။</string>
     <string name="copy">မိတ္တူကူးရန်</string>
     <string name="expand_button_title">အဆင့်မြင့်</string>
     <string name="not_set">သတ်မှတ်မထားပါ</string>

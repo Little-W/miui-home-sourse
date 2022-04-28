@@ -1,85 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    android:id="@id/spring_container"
-    android:focusableInTouchMode="true"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <RelativeLayout
-        android:orientation="vertical"
-        android:id="@id/edit_header"
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/all_apps_tab_height">
-        <com.miui.home.launcher.util.typeface.TypefaceIconView
-            android:textSize="@dimen/all_apps_select_app_button_size"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:id="@id/btn_cancel"
-            android:layout_width="36.0dip"
-            android:layout_height="36.0dip"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/back"
-            android:animateFirstView="false"
-            android:layout_marginStart="18.0dip"
-            android:layout_alignParentStart="true"
-            app:pattern="@integer/quit" />
-        <com.miui.home.launcher.util.typeface.TypefaceIconView
-            android:textSize="@dimen/all_apps_select_app_button_size"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:id="@id/btn_ok"
-            android:layout_width="36.0dip"
-            android:layout_height="36.0dip"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/accessibility_all_app_custom_category_finish"
-            android:animateFirstView="false"
-            android:layout_marginEnd="18.0dip"
-            android:layout_alignParentEnd="true"
-            app:pattern="@integer/complete" />
-        <RelativeLayout
-            android:id="@id/title_container"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="12.0dip"
-            android:layout_marginEnd="12.0dip"
-            android:layout_toStartOf="@id/btn_ok"
-            android:layout_toEndOf="@id/btn_cancel">
-            <EditText
-                android:gravity="center"
-                android:id="@id/edit_category_text"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/category_drawer_name_hint"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="32.0dip"
-                style="@style/style_category_edit" />
-            <ImageView
-                android:id="@id/btn_del"
-                android:layout_width="32.0dip"
-                android:layout_height="32.0dip"
-                android:layout_centerVertical="true"
-                android:contentDescription="@string/accessibility_clear_search_bar_text"
-                android:layout_alignParentEnd="true" />
-            <View
-                android:id="@id/edit_text_bottom_line"
-                android:background="@color/category_edit_text_line"
-                android:layout_width="fill_parent"
-                android:layout_height="1.0dip"
-                android:layout_marginBottom="5.0dip"
-                android:layout_alignParentBottom="true" />
+<LinearLayout android:orientation="vertical" android:id="@id/spring_container" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:id="@id/edit_header" android:layout_width="fill_parent" android:layout_height="@dimen/all_apps_tab_height">
+        <com.miui.home.launcher.util.typeface.TypefaceIconView android:textSize="@dimen/all_apps_select_app_button_size" android:textStyle="bold" android:gravity="center" android:id="@id/btn_cancel" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_centerVertical="true" android:contentDescription="@string/back" android:animateFirstView="false" android:layout_marginStart="18.0dip" android:layout_alignParentStart="true" app:pattern="@integer/quit" />
+        <com.miui.home.launcher.util.typeface.TypefaceIconView android:textSize="@dimen/all_apps_select_app_button_size" android:textStyle="bold" android:gravity="center" android:id="@id/btn_ok" android:layout_width="36.0dip" android:layout_height="36.0dip" android:layout_centerVertical="true" android:contentDescription="@string/accessibility_all_app_custom_category_finish" android:animateFirstView="false" android:layout_marginEnd="18.0dip" android:layout_alignParentEnd="true" app:pattern="@integer/complete" />
+        <RelativeLayout android:id="@id/title_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" android:layout_toStartOf="@id/btn_ok" android:layout_toEndOf="@id/btn_cancel">
+            <EditText android:gravity="center" android:id="@id/edit_category_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/category_drawer_name_hint" android:layout_centerVertical="true" android:layout_marginEnd="32.0dip" style="@style/style_category_edit" />
+            <ImageView android:id="@id/btn_del" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_centerVertical="true" android:contentDescription="@string/accessibility_clear_search_bar_text" android:layout_alignParentEnd="true" />
+            <View android:id="@id/edit_text_bottom_line" android:background="@color/category_edit_text_line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="5.0dip" android:layout_alignParentBottom="true" />
         </RelativeLayout>
     </RelativeLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@id/apps_list_view"
-        android:paddingLeft="@dimen/all_apps_list_padding_side"
-        android:paddingTop="@dimen/all_apps_list_padding_top"
-        android:paddingRight="@dimen/all_apps_list_padding_side"
-        android:focusable="true"
-        android:clipToPadding="false"
-        android:descendantFocusability="afterDescendants"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/apps_list_view" android:paddingLeft="@dimen/all_apps_list_padding_side" android:paddingTop="@dimen/all_apps_list_padding_top" android:paddingRight="@dimen/all_apps_list_padding_side" android:focusable="true" android:clipToPadding="false" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" />
 </LinearLayout>

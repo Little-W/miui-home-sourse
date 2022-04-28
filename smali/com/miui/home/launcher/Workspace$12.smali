@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 2484
+    .line 2546
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$12;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public accept(Lcom/miui/home/launcher/ItemInfo;)V
     .locals 1
 
-    .line 2487
+    .line 2549
     instance-of v0, p1, Lcom/miui/home/launcher/FolderInfo;
 
     if-nez v0, :cond_0
@@ -56,11 +56,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 2488
+    .line 2550
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$12;->this$0:Lcom/miui/home/launcher/Workspace;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$700(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$800(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 2484
+    .line 2546
     check-cast p1, Lcom/miui/home/launcher/ItemInfo;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace$12;->accept(Lcom/miui/home/launcher/ItemInfo;)V

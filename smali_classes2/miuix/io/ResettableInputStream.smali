@@ -395,6 +395,7 @@
     .line 192
     iput-object v1, p0, Lmiuix/io/ResettableInputStream;->mLastException:Ljava/io/IOException;
 
+    .line 193
     throw v2
 
     :catchall_1

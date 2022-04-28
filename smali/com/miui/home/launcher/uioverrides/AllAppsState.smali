@@ -7,7 +7,7 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 12
+    .line 13
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -16,7 +16,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b0008
+    const v1, 0x7f0b0009
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -42,7 +42,7 @@
 .method public getHotSeatsTranslationY(Lcom/miui/home/launcher/Launcher;)F
     .locals 0
 
-    .line 27
+    .line 35
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/uioverrides/AllAppsState;->getWorkspaceTranslationY(Lcom/miui/home/launcher/Launcher;)F
 
     move-result p1
@@ -51,18 +51,39 @@
 .end method
 
 .method public getSearchBarProperty(Lcom/miui/home/launcher/Launcher;)[F
-    .locals 3
+    .locals 5
 
-    const/4 v0, 0x5
+    .line 44
+    sget-object v0, Lcom/miui/home/LauncherDecoupleHelper;->INSTANCE:Lcom/miui/home/LauncherDecoupleHelper;
 
-    .line 36
-    new-array v0, v0, [F
+    invoke-virtual {v0, p1}, Lcom/miui/home/LauncherDecoupleHelper;->isShowSearchBar(Lcom/miui/home/launcher/Launcher;)Z
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    move-result v0
 
-    const/4 v2, 0x0
+    const/4 v1, 0x5
 
-    aput v1, v0, v2
+    .line 45
+    new-array v1, v1, [F
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    const/4 v3, 0x0
+
+    if-eqz v0, :cond_0
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v3
+
+    :goto_0
+    const/4 v4, 0x0
+
+    aput v0, v1, v4
+
+    const/4 v0, 0x1
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAppsView()Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
@@ -72,25 +93,21 @@
 
     move-result p1
 
-    const/4 v2, 0x1
-
-    aput p1, v0, v2
+    aput p1, v1, v0
 
     const/4 p1, 0x2
 
-    aput v1, v0, p1
+    aput v2, v1, p1
 
-    const/4 p1, 0x0
+    const/4 p1, 0x3
 
-    const/4 v1, 0x3
+    aput v3, v1, p1
 
-    aput p1, v0, v1
+    const/4 p1, 0x4
 
-    const/4 v1, 0x4
+    aput v3, v1, p1
 
-    aput p1, v0, v1
-
-    return-object v0
+    return-object v1
 .end method
 
 .method public getVisibleElements(Lcom/miui/home/launcher/Launcher;)I
@@ -104,7 +121,7 @@
 .method public getWorkspaceTranslationY(Lcom/miui/home/launcher/Launcher;)F
     .locals 1
 
-    .line 22
+    .line 30
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAllAppsController()Lcom/miui/home/launcher/allapps/AllAppsTransitionController;
 
     move-result-object p1
@@ -120,4 +137,21 @@
     mul-float/2addr p1, v0
 
     return p1
+.end method
+
+.method public onExitState(Lcom/miui/home/launcher/Launcher;)V
+    .locals 1
+
+    .line 18
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isInShortcutMenuState()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 19
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->hideShortcutMenuWithoutAnim()V
+
+    :cond_0
+    return-void
 .end method

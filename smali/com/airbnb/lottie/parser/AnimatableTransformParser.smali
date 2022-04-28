@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static ANIMATABLE_NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+.field private static final ANIMATABLE_NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
-.field private static NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+.field private static final NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
 
 # direct methods

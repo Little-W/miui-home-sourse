@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;Landroid/os/Looper;)V
     .locals 0
 
-    .line 71
+    .line 72
     iput-object p1, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController$DispatchTouchHandler;->this$0:Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;
 
-    .line 72
+    .line 73
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -36,12 +36,12 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    .line 77
+    .line 78
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast p1, Landroid/view/MotionEvent;
 
-    .line 78
+    .line 79
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController$DispatchTouchHandler;->this$0:Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;
 
     invoke-static {v0}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->access$000(Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;)Lcom/miui/home/recents/SystemUiProxyWrapper;
@@ -52,7 +52,7 @@
 
     const-string v0, "StatusBarController"
 
-    .line 79
+    .line 80
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,7 +69,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->debug(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
+    .line 81
     iget-object v0, p0, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController$DispatchTouchHandler;->this$0:Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;
 
     invoke-static {v0}, Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;->access$000(Lcom/miui/home/launcher/uioverrides/StatusBarSwipeController;)Lcom/miui/home/recents/SystemUiProxyWrapper;
@@ -78,7 +78,7 @@
 
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/SystemUiProxyWrapper;->onStatusBarMotionEvent(Landroid/view/MotionEvent;)V
 
-    .line 81
+    .line 82
     invoke-virtual {p1}, Landroid/view/MotionEvent;->recycle()V
 
     :cond_0

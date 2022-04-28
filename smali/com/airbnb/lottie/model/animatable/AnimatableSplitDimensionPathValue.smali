@@ -28,13 +28,13 @@
 .method public constructor <init>(Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;)V
     .locals 0
 
-    .line 18
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
+    .line 18
     iput-object p1, p0, Lcom/airbnb/lottie/model/animatable/AnimatableSplitDimensionPathValue;->animatableXDimension:Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
-    .line 20
+    .line 19
     iput-object p2, p0, Lcom/airbnb/lottie/model/animatable/AnimatableSplitDimensionPathValue;->animatableYDimension:Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     return-void
@@ -54,12 +54,12 @@
         }
     .end annotation
 
-    .line 34
+    .line 33
     new-instance v0, Lcom/airbnb/lottie/animation/keyframe/SplitDimensionPathKeyframeAnimation;
 
     iget-object v1, p0, Lcom/airbnb/lottie/model/animatable/AnimatableSplitDimensionPathValue;->animatableXDimension:Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
-    .line 35
+    .line 34
     invoke-virtual {v1}, Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;->createAnimation()Lcom/airbnb/lottie/animation/keyframe/BaseKeyframeAnimation;
 
     move-result-object v1
@@ -87,7 +87,7 @@
         }
     .end annotation
 
-    .line 25
+    .line 24
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Cannot call getKeyframes on AnimatableSplitDimensionPathValue."
@@ -100,7 +100,7 @@
 .method public isStatic()Z
     .locals 1
 
-    .line 30
+    .line 29
     iget-object v0, p0, Lcom/airbnb/lottie/model/animatable/AnimatableSplitDimensionPathValue;->animatableXDimension:Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;
 
     invoke-virtual {v0}, Lcom/airbnb/lottie/model/animatable/AnimatableFloatValue;->isStatic()Z

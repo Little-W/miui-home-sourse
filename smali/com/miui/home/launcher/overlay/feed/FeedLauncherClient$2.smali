@@ -46,23 +46,46 @@
     .line 72
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient$2;->this$0:Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->access$200(Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;)Lcom/miui/home/launcher/Launcher;
+    invoke-static {v0}, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->access$200(Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;)Ljava/lang/ref/WeakReference;
 
     move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    .line 73
+    iget-object v0, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient$2;->this$0:Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->access$300(Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;)Ljava/lang/ref/WeakReference;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    const-string v1, "com.miui.newhome.USER_LEVEL"
+    const-string v2, "com.miui.newhome.USER_LEVEL"
 
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    invoke-static {v0, v2, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 75
+    :cond_0
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -83,7 +106,7 @@
 .method protected onPostExecute(Ljava/lang/Integer;)V
     .locals 1
 
-    .line 77
+    .line 81
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient$2;->this$0:Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;
 
     if-eqz p1, :cond_0
@@ -100,7 +123,7 @@
     :goto_0
     invoke-static {v0, p1}, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->access$002(Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;I)I
 
-    .line 78
+    .line 82
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient$2;->this$0:Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;
 
     invoke-static {p1}, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->access$100(Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;)Z
@@ -127,13 +150,13 @@
 
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient$2;->this$0:Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->access$300(Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;)Z
+    invoke-static {p1}, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->access$400(Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 79
+    .line 83
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient$2;->this$0:Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/overlay/feed/FeedLauncherClient;->connect()V

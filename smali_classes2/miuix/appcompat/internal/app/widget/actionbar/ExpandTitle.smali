@@ -29,7 +29,7 @@
 .method private getChildLayoutParams()Landroid/widget/LinearLayout$LayoutParams;
     .locals 2
 
-    .line 59
+    .line 51
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v1, -0x2
@@ -42,19 +42,19 @@
 .method public static synthetic lambda$init$0(Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;)V
     .locals 3
 
-    .line 37
+    .line 33
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleLayout:Landroid/widget/LinearLayout;
 
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mContext:Landroid/content/Context;
 
     const v2, 0x101039c
 
-    .line 38
+    .line 34
     invoke-static {v1, v2}, Lmiuix/internal/util/AttributeResolver;->resolveDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 37
+    .line 33
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -65,16 +65,16 @@
 .method public getLayout()Landroid/view/View;
     .locals 1
 
-    .line 108
+    .line 88
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleLayout:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
 
 .method public init()V
-    .locals 3
+    .locals 4
 
-    .line 34
+    .line 29
     new-instance v0, Landroid/widget/LinearLayout;
 
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mContext:Landroid/content/Context;
@@ -83,63 +83,57 @@
 
     iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleLayout:Landroid/widget/LinearLayout;
 
-    .line 35
+    .line 30
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleLayout:Landroid/widget/LinearLayout;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setImportantForAccessibility(I)V
+
+    .line 31
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleLayout:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setEnabled(Z)V
 
-    .line 36
+    .line 32
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleLayout:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 37
+    .line 33
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleLayout:Landroid/widget/LinearLayout;
 
-    new-instance v2, Lmiuix/appcompat/internal/app/widget/actionbar/-$$Lambda$ExpandTitle$NLszNe257985l_FAmks4ECrUi5c;
+    new-instance v1, Lmiuix/appcompat/internal/app/widget/actionbar/-$$Lambda$ExpandTitle$NLszNe257985l_FAmks4ECrUi5c;
 
-    invoke-direct {v2, p0}, Lmiuix/appcompat/internal/app/widget/actionbar/-$$Lambda$ExpandTitle$NLszNe257985l_FAmks4ECrUi5c;-><init>(Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;)V
+    invoke-direct {v1, p0}, Lmiuix/appcompat/internal/app/widget/actionbar/-$$Lambda$ExpandTitle$NLszNe257985l_FAmks4ECrUi5c;-><init>(Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;)V
 
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->post(Ljava/lang/Runnable;)Z
 
-    .line 40
+    .line 36
     new-instance v0, Landroid/widget/TextView;
 
-    iget-object v2, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mContext:Landroid/content/Context;
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    sget v2, Lmiuix/appcompat/R$attr;->expandTitleTheme:I
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v3, v2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleView:Landroid/widget/TextView;
 
-    .line 41
+    .line 37
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleView:Landroid/widget/TextView;
 
-    sget v2, Lmiuix/appcompat/R$id;->action_bar_title:I
+    sget v1, Lmiuix/appcompat/R$id;->action_bar_title_expand:I
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setId(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setId(I)V
 
-    .line 42
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleView:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setFocusable(Z)V
-
-    .line 43
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleView:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setFocusableInTouchMode(Z)V
-
-    .line 44
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleView:Landroid/widget/TextView;
-
-    sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
-
-    .line 45
+    .line 38
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleLayout:Landroid/widget/LinearLayout;
 
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleView:Landroid/widget/TextView;
@@ -150,37 +144,32 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 47
+    .line 40
     new-instance v0, Landroid/widget/TextView;
 
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mContext:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+    sget v2, Lmiuix/appcompat/R$attr;->expandSubtitleTheme:I
+
+    invoke-direct {v0, v1, v3, v2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandSubtitleView:Landroid/widget/TextView;
 
-    .line 48
+    .line 41
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandSubtitleView:Landroid/widget/TextView;
 
-    sget v1, Lmiuix/appcompat/R$id;->action_bar_subtitle:I
+    sget v1, Lmiuix/appcompat/R$id;->action_bar_subtitle_expand:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setId(I)V
 
-    .line 49
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandSubtitleView:Landroid/widget/TextView;
-
-    sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
-
-    .line 50
+    .line 42
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandSubtitleView:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 51
+    .line 43
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleLayout:Landroid/widget/LinearLayout;
 
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandSubtitleView:Landroid/widget/TextView;
@@ -191,14 +180,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 52
+    .line 44
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 53
+    .line 45
     iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandSubtitleView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -207,7 +196,7 @@
 
     check-cast v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 54
+    .line 46
     sget v2, Lmiuix/appcompat/R$dimen;->action_bar_subtitle_top_margin:I
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -216,7 +205,7 @@
 
     iput v2, v1, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    .line 55
+    .line 47
     sget v2, Lmiuix/appcompat/R$dimen;->action_bar_subtitle_bottom_margin:I
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
@@ -231,7 +220,7 @@
 .method public setEnabled(Z)V
     .locals 1
 
-    .line 92
+    .line 72
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setEnabled(Z)V
@@ -242,7 +231,7 @@
 .method public setOnClickListener(Landroid/view/View$OnClickListener;)V
     .locals 1
 
-    .line 64
+    .line 56
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -255,7 +244,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 87
+    .line 67
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandSubtitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -264,26 +253,10 @@
     return-void
 .end method
 
-.method public setSubTitleTextAppearance(I)V
-    .locals 2
-
-    if-eqz p1, :cond_0
-
-    .line 75
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandSubtitleView:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0, v1, p1}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
-
-    :cond_0
-    return-void
-.end method
-
 .method public setSubTitleVisibility(I)V
     .locals 1
 
-    .line 96
+    .line 76
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandSubtitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setVisibility(I)V
@@ -296,7 +269,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 81
+    .line 61
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
@@ -305,26 +278,10 @@
     return-void
 .end method
 
-.method public setTitleTextAppearance(I)V
-    .locals 2
-
-    if-eqz p1, :cond_0
-
-    .line 69
-    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleView:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0, v1, p1}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
-
-    :cond_0
-    return-void
-.end method
-
 .method public setTitleVisibility(I)V
     .locals 1
 
-    .line 100
+    .line 80
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setVisibility(I)V
@@ -335,7 +292,7 @@
 .method public setVisibility(I)V
     .locals 1
 
-    .line 104
+    .line 84
     iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/actionbar/ExpandTitle;->mExpandTitleLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setVisibility(I)V

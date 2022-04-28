@@ -262,28 +262,3 @@
 
     throw v0
 .end method
-
-.method public static inMemoryDatabaseBuilder(Landroid/content/Context;Ljava/lang/Class;)Landroidx/room/RoomDatabase$Builder;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Landroidx/room/RoomDatabase;",
-            ">(",
-            "Landroid/content/Context;",
-            "Ljava/lang/Class<",
-            "TT;>;)",
-            "Landroidx/room/RoomDatabase$Builder<",
-            "TT;>;"
-        }
-    .end annotation
-
-    .line 73
-    new-instance v0, Landroidx/room/RoomDatabase$Builder;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Landroidx/room/RoomDatabase$Builder;-><init>(Landroid/content/Context;Ljava/lang/Class;Ljava/lang/String;)V
-
-    return-object v0
-.end method

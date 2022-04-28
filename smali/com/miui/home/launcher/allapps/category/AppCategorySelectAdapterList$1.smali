@@ -30,7 +30,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;)V
     .locals 0
 
-    .line 329
+    .line 330
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$1;->this$0:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/DiffUtil$ItemCallback;-><init>()V
@@ -43,7 +43,7 @@
 .method public areContentsTheSame(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;)Z
     .locals 0
 
-    .line 337
+    .line 338
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;->areContentsTheSame(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;)Z
 
     move-result p1
@@ -54,7 +54,7 @@
 .method public bridge synthetic areContentsTheSame(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 329
+    .line 330
     check-cast p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;
 
     check-cast p2, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;
@@ -69,7 +69,7 @@
 .method public areItemsTheSame(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;)Z
     .locals 0
 
-    .line 332
+    .line 333
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;->areItemsTheSame(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;)Z
 
     move-result p1
@@ -80,7 +80,7 @@
 .method public bridge synthetic areItemsTheSame(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 329
+    .line 330
     check-cast p1, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;
 
     check-cast p2, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;

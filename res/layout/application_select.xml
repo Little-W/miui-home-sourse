@@ -1,43 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:layout_gravity="center"
-    android:focusable="true"
-    android:clipChildren="false"
-    android:clipToPadding="false"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout
-        android:id="@id/icon_container"
-        android:paddingLeft="@dimen/icon_padding_side"
-        android:paddingTop="@dimen/icon_padding_top"
-        android:paddingRight="@dimen/icon_padding_side"
-        android:clipChildren="false"
-        android:clipToPadding="false"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true">
-        <com.miui.home.launcher.LauncherIconImageView
-            android:layout_gravity="center|top"
-            android:id="@id/icon_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="fitCenter" />
+<RelativeLayout android:layout_gravity="center" android:focusable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/icon_container" android:paddingLeft="@dimen/icon_padding_side" android:paddingTop="@dimen/icon_padding_top" android:paddingRight="@dimen/icon_padding_side" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <com.miui.home.launcher.LauncherIconImageView android:layout_gravity="center|top" android:id="@id/icon_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" />
     </FrameLayout>
-    <include
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@id/icon_container"
-        android:layout_centerHorizontal="true"
-        layout="@layout/icon_title" />
-    <com.miui.home.launcher.view.EditCheckBox
-        android:id="@id/edit_mode_checkbox"
-        android:focusable="false"
-        android:clickable="false"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/edit_mode_application_checkbox_margin_top"
-        android:importantForAccessibility="no"
-        android:layout_marginEnd="@dimen/edit_mode_application_checkbox_margin_end"
-        android:layout_alignEnd="@id/icon_container" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/icon_container" android:layout_centerHorizontal="true" layout="@layout/icon_title" />
+    <com.miui.home.launcher.view.EditCheckBox android:id="@id/edit_mode_checkbox" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/edit_mode_application_checkbox_margin_top" android:importantForAccessibility="no" android:layout_marginEnd="@dimen/edit_mode_application_checkbox_margin_end" android:layout_alignEnd="@id/icon_container" />
 </RelativeLayout>

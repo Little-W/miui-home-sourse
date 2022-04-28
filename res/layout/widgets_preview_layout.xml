@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.widget.WidgetsPreviewPage
-    android:orientation="vertical"
-    android:id="@id/widgets_layout"
-    android:visibility="gone"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <include
-        android:id="@id/widgets_layout_actionBar"
-        layout="@layout/launcher_action_bar" />
-    <com.miui.home.launcher.widget.WidgetThumbnailView
-        android:id="@id/widgets_view"
-        android:paddingBottom="@dimen/widget_cell_padding"
-        android:visibility="visible"
-        android:clipToPadding="false"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+<com.miui.home.launcher.widget.WidgetsPreviewPage android:orientation="vertical" android:id="@id/widgets_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/widget_details_view" layout="@layout/widget_details" />
+    <include android:id="@id/widgets_layout_actionBar" layout="@layout/launcher_action_bar" />
+    <com.miui.home.launcher.widget.WidgetThumbnailView android:id="@id/widgets_view" android:visibility="visible" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" />
 </com.miui.home.launcher.widget.WidgetsPreviewPage>

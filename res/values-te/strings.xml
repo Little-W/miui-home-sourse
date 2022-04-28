@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">వీరితో షేర్ చేస్తుంది</string>
     <string name="abc_shareactionprovider_share_with_application">%sతో షేర్ చేస్తుంది</string>
     <string name="abc_toolbar_collapse_description">కుదిస్తుంది</string>
+    <string name="common_google_play_services_unknown_issue">%1$s Google Play సేవలతో సమస్య కలిగి ఉంది. దయచేసి మళ్లీ ప్రయత్నించండి.</string>
     <string name="copy">కాపీ చేయి</string>
     <string name="expand_button_title">అధునాతనం</string>
     <string name="not_set">సెట్ చేయలేదు</string>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/divider_container" android:background="@color/white" android:paddingTop="@dimen/dp5" android:paddingBottom="@dimen/dp5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dp12" android:paddingEnd="@dimen/dp12"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/start_divider" android:background="@color/ui_mode_10_black" android:layout_width="fill_parent" android:layout_height="@dimen/dp0_7" />
+    <TextView android:textSize="@dimen/text_size_sp10" android:id="@id/divider_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/in_app_result_by" android:drawablePadding="@dimen/dp3" android:layout_weight="0.0" android:layout_marginStart="@dimen/dp16" android:layout_marginEnd="@dimen/dp16" style="@style/text_small_style" />
+    <View android:id="@id/end_divider" android:background="@color/ui_mode_10_black" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="@dimen/dp0_7" android:layout_weight="1.0" />
+</LinearLayout>

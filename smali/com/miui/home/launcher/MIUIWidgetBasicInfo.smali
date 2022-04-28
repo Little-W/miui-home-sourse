@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/miui/home/launcher/MIUIWidgetBasicInfo$UpgradeListener;,
         Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;
     }
 .end annotation
@@ -33,6 +34,8 @@
 .field public isEditable:Z
 
 .field public isMIUIWidget:Z
+
+.field private mUpgradeListener:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$UpgradeListener;
 
 .field public movement:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$WidgetMovement;
 
@@ -280,6 +283,21 @@
     return-void
 .end method
 
+.method public onUpgrade(II)V
+    .locals 1
+
+    .line 174
+    iget-object v0, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->mUpgradeListener:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$UpgradeListener;
+
+    if-eqz v0, :cond_0
+
+    .line 175
+    invoke-interface {v0, p1, p2}, Lcom/miui/home/launcher/MIUIWidgetBasicInfo$UpgradeListener;->onUpgrade(II)V
+
+    :cond_0
+    return-void
+.end method
+
 .method protected parsePendingWidgetParams(Landroid/content/Intent;)V
     .locals 0
 
@@ -291,6 +309,15 @@
 
     .line 170
     iput p1, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->defaultSource:I
+
+    return-void
+.end method
+
+.method public setUpgradeListener(Lcom/miui/home/launcher/MIUIWidgetBasicInfo$UpgradeListener;)V
+    .locals 0
+
+    .line 218
+    iput-object p1, p0, Lcom/miui/home/launcher/MIUIWidgetBasicInfo;->mUpgradeListener:Lcom/miui/home/launcher/MIUIWidgetBasicInfo$UpgradeListener;
 
     return-void
 .end method

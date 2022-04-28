@@ -22,24 +22,24 @@
 .method constructor <init>()V
     .locals 2
 
-    .line 189
+    .line 208
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 192
+    .line 211
     invoke-static {}, Ljava/text/Collator;->getInstance()Ljava/text/Collator;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$StringMatcher;->mCollator:Ljava/text/Collator;
 
-    .line 193
+    .line 212
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$StringMatcher;->mCollator:Ljava/text/Collator;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/text/Collator;->setStrength(I)V
 
-    .line 194
+    .line 213
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$StringMatcher;->mCollator:Ljava/text/Collator;
 
     const/4 v1, 0x1
@@ -52,7 +52,7 @@
 .method public static getInstance()Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$StringMatcher;
     .locals 1
 
-    .line 216
+    .line 235
     new-instance v0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$StringMatcher;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$StringMatcher;-><init>()V
@@ -65,7 +65,7 @@
 .method public matches(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 4
 
-    .line 201
+    .line 220
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$StringMatcher;->mCollator:Ljava/text/Collator;
 
     invoke-virtual {v0, p1, p2}, Ljava/text/Collator;->compare(Ljava/lang/String;Ljava/lang/String;)I
@@ -83,7 +83,7 @@
     :pswitch_0
     return v1
 
-    .line 209
+    .line 228
     :pswitch_1
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/DefaultAppSearchAlgorithm$StringMatcher;->mCollator:Ljava/text/Collator;
 

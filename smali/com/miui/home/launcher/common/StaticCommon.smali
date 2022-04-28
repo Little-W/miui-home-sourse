@@ -80,5 +80,7 @@
     const-string v1, "StaticCommon"
 
     .line 28
+    invoke-static {v1, p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     return p1
 .end method

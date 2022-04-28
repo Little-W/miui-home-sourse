@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/Workspace$CellInfo;Landroid/view/View;)V
     .locals 0
 
-    .line 2514
+    .line 2576
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$14;->this$0:Lcom/miui/home/launcher/Workspace;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Workspace$14;->val$cellInfo:Lcom/miui/home/launcher/Workspace$CellInfo;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 4
 
-    .line 2517
+    .line 2579
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$14;->this$0:Lcom/miui/home/launcher/Workspace;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$14;->val$cellInfo:Lcom/miui/home/launcher/Workspace$CellInfo;
@@ -57,7 +57,7 @@
 
     move-result-object v0
 
-    .line 2518
+    .line 2580
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$14;->val$icon:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -66,26 +66,26 @@
 
     if-eq v1, v0, :cond_1
 
-    .line 2519
+    .line 2581
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$14;->val$icon:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
-    .line 2520
+    .line 2582
     instance-of v2, v1, Landroid/view/ViewGroup;
 
     if-eqz v2, :cond_0
 
-    .line 2521
+    .line 2583
     check-cast v1, Landroid/view/ViewGroup;
 
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace$14;->val$icon:Landroid/view/View;
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 2523
+    .line 2585
     :cond_0
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$14;->val$icon:Landroid/view/View;
 

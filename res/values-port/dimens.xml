@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="clear_container_padding_bottom">22.0dip</dimen>
+    <dimen name="worldcirculate_smallwindow_crop_height_padding_horizontal">13.089996dip</dimen>
+    <dimen name="worldcirculate_smallwindow_crop_height_padding_vertical">43.639984dip</dimen>
+</resources>

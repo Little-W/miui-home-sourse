@@ -39,7 +39,7 @@
 
     const/16 v0, 0x80
 
-    .line 193
+    .line 189
     new-array v0, v0, [Ljava/lang/String;
 
     sput-object v0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->REPLACEMENT_CHARS:[Ljava/lang/String;
@@ -53,7 +53,7 @@
 
     if-gt v1, v2, :cond_0
 
-    .line 195
+    .line 191
     sget-object v2, Lcom/airbnb/lottie/parser/moshi/JsonReader;->REPLACEMENT_CHARS:[Ljava/lang/String;
 
     const-string v3, "\\u%04x"
@@ -78,7 +78,7 @@
 
     goto :goto_0
 
-    .line 197
+    .line 193
     :cond_0
     sget-object v0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->REPLACEMENT_CHARS:[Ljava/lang/String;
 
@@ -92,42 +92,42 @@
 
     const-string v2, "\\\\"
 
-    .line 198
+    .line 194
     aput-object v2, v0, v1
 
     const/16 v1, 0x9
 
     const-string v2, "\\t"
 
-    .line 199
+    .line 195
     aput-object v2, v0, v1
 
     const/16 v1, 0x8
 
     const-string v2, "\\b"
 
-    .line 200
+    .line 196
     aput-object v2, v0, v1
 
     const/16 v1, 0xa
 
     const-string v2, "\\n"
 
-    .line 201
+    .line 197
     aput-object v2, v0, v1
 
     const/16 v1, 0xd
 
     const-string v2, "\\r"
 
-    .line 202
+    .line 198
     aput-object v2, v0, v1
 
     const/16 v1, 0xc
 
     const-string v2, "\\f"
 
-    .line 203
+    .line 199
     aput-object v2, v0, v1
 
     return-void
@@ -136,22 +136,22 @@
 .method constructor <init>()V
     .locals 2
 
-    .line 226
+    .line 228
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x20
 
-    .line 227
+    .line 229
     new-array v1, v0, [I
 
     iput-object v1, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->scopes:[I
 
-    .line 228
+    .line 230
     new-array v1, v0, [Ljava/lang/String;
 
     iput-object v1, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->pathNames:[Ljava/lang/String;
 
-    .line 229
+    .line 231
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->pathIndices:[I
@@ -167,7 +167,7 @@
         }
     .end annotation
 
-    .line 180
+    .line 175
     invoke-static {p0, p1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->string(Lokio/BufferedSink;Ljava/lang/String;)V
 
     return-void
@@ -176,7 +176,7 @@
 .method public static of(Lokio/BufferedSource;)Lcom/airbnb/lottie/parser/moshi/JsonReader;
     .locals 1
 
-    .line 222
+    .line 224
     new-instance v0, Lcom/airbnb/lottie/parser/moshi/JsonUtf8Reader;
 
     invoke-direct {v0, p0}, Lcom/airbnb/lottie/parser/moshi/JsonUtf8Reader;-><init>(Lokio/BufferedSource;)V
@@ -192,15 +192,15 @@
         }
     .end annotation
 
-    .line 400
+    .line 399
     sget-object v0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->REPLACEMENT_CHARS:[Ljava/lang/String;
 
     const/16 v1, 0x22
 
-    .line 401
+    .line 400
     invoke-interface {p0, v1}, Lokio/BufferedSink;->writeByte(I)Lokio/BufferedSink;
 
-    .line 403
+    .line 402
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -212,7 +212,7 @@
     :goto_0
     if-ge v3, v2, :cond_5
 
-    .line 405
+    .line 404
     invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -221,7 +221,7 @@
 
     if-ge v5, v6, :cond_0
 
-    .line 408
+    .line 407
     aget-object v5, v0, v5
 
     if-nez v5, :cond_2
@@ -248,10 +248,10 @@
     :goto_1
     if-ge v4, v3, :cond_3
 
-    .line 420
+    .line 419
     invoke-interface {p0, p1, v4, v3}, Lokio/BufferedSink;->writeUtf8(Ljava/lang/String;II)Lokio/BufferedSink;
 
-    .line 422
+    .line 421
     :cond_3
     invoke-interface {p0, v5}, Lokio/BufferedSink;->writeUtf8(Ljava/lang/String;)Lokio/BufferedSink;
 
@@ -266,10 +266,10 @@
     :cond_5
     if-ge v4, v2, :cond_6
 
-    .line 426
+    .line 425
     invoke-interface {p0, p1, v4, v2}, Lokio/BufferedSink;->writeUtf8(Ljava/lang/String;II)Lokio/BufferedSink;
 
-    .line 428
+    .line 427
     :cond_6
     invoke-interface {p0, v1}, Lokio/BufferedSink;->writeByte(I)Lokio/BufferedSink;
 
@@ -313,7 +313,7 @@
 .method public final getPath()Ljava/lang/String;
     .locals 4
 
-    .line 363
+    .line 362
     iget v0, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->stackSize:I
 
     iget-object v1, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->scopes:[I
@@ -388,7 +388,7 @@
 .method final pushScope(I)V
     .locals 3
 
-    .line 233
+    .line 235
     iget v0, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->stackSize:I
 
     iget-object v1, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->scopes:[I
@@ -401,7 +401,7 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 237
+    .line 239
     array-length v0, v1
 
     mul-int/lit8 v0, v0, 0x2
@@ -412,7 +412,7 @@
 
     iput-object v0, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->scopes:[I
 
-    .line 238
+    .line 240
     iget-object v0, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->pathNames:[Ljava/lang/String;
 
     array-length v1, v0
@@ -427,7 +427,7 @@
 
     iput-object v0, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->pathNames:[Ljava/lang/String;
 
-    .line 239
+    .line 241
     iget-object v0, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->pathIndices:[I
 
     array-length v1, v0
@@ -442,7 +442,7 @@
 
     goto :goto_0
 
-    .line 235
+    .line 237
     :cond_0
     new-instance p1, Lcom/airbnb/lottie/parser/moshi/JsonDataException;
 
@@ -468,7 +468,7 @@
 
     throw p1
 
-    .line 241
+    .line 243
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/airbnb/lottie/parser/moshi/JsonReader;->scopes:[I
@@ -516,7 +516,7 @@
         }
     .end annotation
 
-    .line 249
+    .line 251
     new-instance v0, Lcom/airbnb/lottie/parser/moshi/JsonEncodingException;
 
     new-instance v1, Ljava/lang/StringBuilder;

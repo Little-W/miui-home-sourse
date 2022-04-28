@@ -11,6 +11,10 @@
 
 
 # instance fields
+.field private mHorizontalCheckBox:Lmiuix/visual/check/VisualCheckBox;
+
+.field private mVerticalCheckBox:Lmiuix/visual/check/VisualCheckBox;
+
 .field private mVisualCheckGroup:Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;
 
 
@@ -24,94 +28,149 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 24
+    .line 29
     invoke-direct {p0, p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const p1, 0x7f0d010a
+    const p1, 0x7f0d0132
 
-    .line 25
+    .line 30
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->setLayoutResource(I)V
 
     return-void
 .end method
 
-.method private initCheckedBox()V
-    .locals 4
+.method public static synthetic lambda$initCheckedBox$0(Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;Ljava/lang/Void;)Ljava/lang/Boolean;
+    .locals 1
 
-    .line 52
+    .line 60
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->getContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-static {v0}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->getTaskStackViewLayoutStyle(Landroid/content/Context;)I
+    invoke-static {p1}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->getTaskStackViewLayoutStyle(Landroid/content/Context;)I
 
-    move-result v0
+    move-result p1
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    if-ne v0, v1, :cond_0
+    if-ne p1, v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    .line 53
     :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public static synthetic lambda$initCheckedBox$1(Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;Ljava/lang/Boolean;)V
+    .locals 2
+
+    .line 62
     iget-object v0, p0, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->mVisualCheckGroup:Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;
 
-    const v2, 0x7f0a0249
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v2}, Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;->findViewById(I)Landroid/view/View;
+    .line 63
+    iget-object v0, p0, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->mVerticalCheckBox:Lmiuix/visual/check/VisualCheckBox;
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    check-cast v0, Lmiuix/visual/check/VisualCheckBox;
+    move-result v1
 
-    .line 54
-    iget-object v2, p0, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->mVisualCheckGroup:Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;
+    xor-int/lit8 v1, v1, 0x1
 
-    const v3, 0x7f0a010c
+    invoke-virtual {v0, v1}, Lmiuix/visual/check/VisualCheckBox;->setChecked(Z)V
 
-    invoke-virtual {v2, v3}, Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;->findViewById(I)Landroid/view/View;
+    .line 65
+    :cond_0
+    iget-object v0, p0, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->mHorizontalCheckBox:Lmiuix/visual/check/VisualCheckBox;
 
-    move-result-object v2
+    if-eqz v0, :cond_1
 
-    check-cast v2, Lmiuix/visual/check/VisualCheckBox;
+    .line 66
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    xor-int/lit8 v3, v1, 0x1
+    move-result p1
 
-    .line 55
-    invoke-virtual {v0, v3}, Lmiuix/visual/check/VisualCheckBox;->setChecked(Z)V
+    invoke-virtual {v0, p1}, Lmiuix/visual/check/VisualCheckBox;->setChecked(Z)V
 
-    .line 56
-    invoke-virtual {v2, v1}, Lmiuix/visual/check/VisualCheckBox;->setChecked(Z)V
-
+    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
-    .locals 0
+.method public initCheckedBox()V
+    .locals 3
 
-    .line 30
+    .line 59
+    new-instance v0, Lcom/miui/home/recents/settings/-$$Lambda$TaskStackViewLayoutStyleContainerPreference$9XKrGhEjk-uY3dW6JMgeMPGB3Jg;
+
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/settings/-$$Lambda$TaskStackViewLayoutStyleContainerPreference$9XKrGhEjk-uY3dW6JMgeMPGB3Jg;-><init>(Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;)V
+
+    new-instance v1, Lcom/miui/home/recents/settings/-$$Lambda$TaskStackViewLayoutStyleContainerPreference$1xlDvIdDAPTElHcwSZSW4165vFk;
+
+    invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$TaskStackViewLayoutStyleContainerPreference$1xlDvIdDAPTElHcwSZSW4165vFk;-><init>(Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;)V
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->execParallel(Ljava/util/function/Function;Ljava/util/function/Consumer;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
+    .locals 1
+
+    .line 35
     invoke-super {p0, p1}, Landroidx/preference/Preference;->onBindViewHolder(Landroidx/preference/PreferenceViewHolder;)V
 
-    .line 31
+    .line 36
     iget-object p1, p1, Landroidx/preference/PreferenceViewHolder;->itemView:Landroid/view/View;
 
     check-cast p1, Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;
 
     iput-object p1, p0, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->mVisualCheckGroup:Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;
 
-    .line 32
+    .line 37
     iget-object p1, p0, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->mVisualCheckGroup:Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;
 
     invoke-virtual {p1, p0}, Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;->setOnCheckedChangeListener(Lmiuix/visual/check/VisualCheckGroup$OnCheckedChangeListener;)V
 
-    .line 33
-    invoke-direct {p0}, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->initCheckedBox()V
+    .line 38
+    iget-object p1, p0, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->mVisualCheckGroup:Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;
+
+    const v0, 0x7f0a02ca
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lmiuix/visual/check/VisualCheckBox;
+
+    iput-object p1, p0, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->mVerticalCheckBox:Lmiuix/visual/check/VisualCheckBox;
+
+    .line 39
+    iget-object p1, p0, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->mVisualCheckGroup:Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;
+
+    const v0, 0x7f0a0135
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/recents/settings/MonospacedChildViewVisualCheckGroup;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lmiuix/visual/check/VisualCheckBox;
+
+    iput-object p1, p0, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->mHorizontalCheckBox:Lmiuix/visual/check/VisualCheckBox;
+
+    .line 40
+    invoke-virtual {p0}, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->initCheckedBox()V
 
     return-void
 .end method
@@ -119,15 +178,15 @@
 .method public onCheckedChanged(Lmiuix/visual/check/VisualCheckGroup;I)V
     .locals 2
 
-    const p1, 0x7f0a010c
+    const p1, 0x7f0a0135
 
     if-eq p2, p1, :cond_1
 
-    const p1, 0x7f0a0249
+    const p1, 0x7f0a02ca
 
     if-eq p2, p1, :cond_0
 
-    .line 46
+    .line 53
     sget-object p1, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -144,9 +203,11 @@
 
     move-result-object p2
 
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_0
 
-    .line 43
+    .line 50
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->getContext()Landroid/content/Context;
 
@@ -158,7 +219,7 @@
 
     goto :goto_0
 
-    .line 40
+    .line 47
     :cond_1
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/TaskStackViewLayoutStyleContainerPreference;->getContext()Landroid/content/Context;
 

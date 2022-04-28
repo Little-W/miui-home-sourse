@@ -47,7 +47,7 @@
 
     move-object v1, v0
 
-    .line 22
+    .line 23
     :goto_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->hasNext()Z
 
@@ -55,7 +55,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 23
+    .line 24
     sget-object v3, Lcom/airbnb/lottie/parser/MergePathsParser;->NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
     invoke-virtual {p0, v3}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->selectName(Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;)I
@@ -64,15 +64,15 @@
 
     packed-switch v3, :pswitch_data_0
 
-    .line 34
+    .line 35
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipName()V
 
-    .line 35
+    .line 36
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->skipValue()V
 
     goto :goto_0
 
-    .line 31
+    .line 32
     :pswitch_0
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextBoolean()Z
 
@@ -80,7 +80,7 @@
 
     goto :goto_0
 
-    .line 28
+    .line 29
     :pswitch_1
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextInt()I
 
@@ -92,7 +92,7 @@
 
     goto :goto_0
 
-    .line 25
+    .line 26
     :pswitch_2
     invoke-virtual {p0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->nextString()Ljava/lang/String;
 
@@ -100,7 +100,7 @@
 
     goto :goto_0
 
-    .line 39
+    .line 40
     :cond_0
     new-instance p0, Lcom/airbnb/lottie/model/content/MergePaths;
 

@@ -15,12 +15,13 @@
 
 
 # virtual methods
-.method public abstract parseAndAdd(Landroid/content/res/XmlResourceParser;Ljava/util/List;)V
+.method public abstract parseAndAdd(Landroid/content/res/XmlResourceParser;Landroid/util/ArrayMap;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/res/XmlResourceParser;",
-            "Ljava/util/List<",
+            "Landroid/util/ArrayMap<",
+            "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;)V"
         }

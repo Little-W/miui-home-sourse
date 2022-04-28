@@ -26,20 +26,20 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;Lmiuix/appcompat/internal/view/menu/MenuBuilder;)V
     .locals 0
 
-    .line 248
+    .line 247
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     const/4 p1, -0x1
 
-    .line 246
+    .line 245
     iput p1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->mExpandedIndex:I
 
-    .line 249
+    .line 248
     iput-object p2, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->mAdapterMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
-    .line 250
+    .line 249
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->findExpandedIndex()V
 
     return-void
@@ -48,7 +48,7 @@
 .method static synthetic access$000(Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
     .locals 0
 
-    .line 242
+    .line 241
     iget-object p0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->mAdapterMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     return-object p0
@@ -59,7 +59,7 @@
 .method findExpandedIndex()V
     .locals 5
 
-    .line 293
+    .line 292
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;
 
     invoke-static {v0}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->access$400(Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
@@ -72,7 +72,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 295
+    .line 294
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;
 
     invoke-static {v1}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->access$400(Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
@@ -83,7 +83,7 @@
 
     move-result-object v1
 
-    .line 296
+    .line 295
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -93,7 +93,7 @@
     :goto_0
     if-ge v3, v2, :cond_1
 
-    .line 298
+    .line 297
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -102,7 +102,7 @@
 
     if-ne v4, v0, :cond_0
 
-    .line 300
+    .line 299
     iput v3, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->mExpandedIndex:I
 
     return-void
@@ -115,7 +115,7 @@
     :cond_1
     const/4 v0, -0x1
 
-    .line 305
+    .line 304
     iput v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->mExpandedIndex:I
 
     return-void
@@ -124,7 +124,7 @@
 .method public getCount()I
     .locals 2
 
-    .line 254
+    .line 253
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;
 
     invoke-static {v0}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->access$100(Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;)Z
@@ -135,7 +135,7 @@
 
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->mAdapterMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
-    .line 255
+    .line 254
     invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->getNonActionItems()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -149,20 +149,20 @@
 
     move-result-object v0
 
-    .line 256
+    .line 255
     :goto_0
     iget v1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->mExpandedIndex:I
 
     if-gez v1, :cond_1
 
-    .line 257
+    .line 256
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
     return v0
 
-    .line 259
+    .line 258
     :cond_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -176,7 +176,7 @@
 .method public bridge synthetic getItem(I)Ljava/lang/Object;
     .locals 0
 
-    .line 242
+    .line 241
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->getItem(I)Lmiuix/appcompat/internal/view/menu/MenuItemImpl;
 
     move-result-object p1
@@ -187,7 +187,7 @@
 .method public getItem(I)Lmiuix/appcompat/internal/view/menu/MenuItemImpl;
     .locals 2
 
-    .line 263
+    .line 262
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;
 
     invoke-static {v0}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->access$100(Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;)Z
@@ -198,7 +198,7 @@
 
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->mAdapterMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
-    .line 264
+    .line 263
     invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->getNonActionItems()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -212,7 +212,7 @@
 
     move-result-object v0
 
-    .line 265
+    .line 264
     :goto_0
     iget v1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->mExpandedIndex:I
 
@@ -222,7 +222,7 @@
 
     add-int/lit8 p1, p1, 0x1
 
-    .line 268
+    .line 267
     :cond_1
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -248,7 +248,7 @@
 
     if-nez p2, :cond_0
 
-    .line 279
+    .line 278
     iget-object p2, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;
 
     invoke-static {p2}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->access$300(Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;)Landroid/view/LayoutInflater;
@@ -265,10 +265,10 @@
 
     move-result-object p2
 
-    .line 280
+    .line 279
     invoke-static {p2}, Lmiuix/internal/util/AnimHelper;->addPressAnimWithBg(Landroid/view/View;)V
 
-    .line 282
+    .line 281
     :cond_0
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->getCount()I
 
@@ -276,19 +276,19 @@
 
     invoke-static {p2, p1, p3}, Lmiuix/internal/util/TaggingDrawableUtil;->updateItemPadding(Landroid/view/View;II)V
 
-    .line 284
+    .line 283
     move-object p3, p2
 
     check-cast p3, Lmiuix/appcompat/internal/view/menu/MenuView$ItemView;
 
-    .line 285
+    .line 284
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->this$0:Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;
 
     iget-boolean v1, v1, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mForceShowIcon:Z
 
     if-eqz v1, :cond_1
 
-    .line 286
+    .line 285
     move-object v1, p2
 
     check-cast v1, Lmiuix/appcompat/internal/view/menu/ListMenuItemView;
@@ -297,7 +297,7 @@
 
     invoke-virtual {v1, v2}, Lmiuix/appcompat/internal/view/menu/ListMenuItemView;->setForceShowIcon(Z)V
 
-    .line 288
+    .line 287
     :cond_1
     invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->getItem(I)Lmiuix/appcompat/internal/view/menu/MenuItemImpl;
 
@@ -311,10 +311,10 @@
 .method public notifyDataSetChanged()V
     .locals 0
 
-    .line 310
+    .line 309
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->findExpandedIndex()V
 
-    .line 311
+    .line 310
     invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
     return-void

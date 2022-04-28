@@ -37,7 +37,7 @@
 .method getDrawableResource()I
     .locals 1
 
-    const v0, 0x7f08018d
+    const v0, 0x7f0801b8
 
     return v0
 .end method
@@ -105,9 +105,9 @@
     .line 31
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->startActivity(Landroid/content/Intent;)V
 
-    const v1, 0x7f01002f
+    const v1, 0x7f010030
 
-    const v2, 0x7f010030
+    const v2, 0x7f010031
 
     .line 32
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/Launcher;->overridePendingTransition(II)V

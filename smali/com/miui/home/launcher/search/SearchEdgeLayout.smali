@@ -68,7 +68,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0700ee
+    const p2, 0x7f070135
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -243,6 +243,8 @@
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     if-eqz v0, :cond_0
 

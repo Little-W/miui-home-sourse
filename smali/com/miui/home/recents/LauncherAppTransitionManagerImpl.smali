@@ -45,12 +45,18 @@
 
     move-result-object p1
 
-    if-nez p1, :cond_0
+    if-nez p1, :cond_1
 
+    if-eqz p5, :cond_0
+
+    .line 66
+    invoke-virtual {p5}, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->finish()V
+
+    :cond_0
     return-void
 
-    .line 67
-    :cond_0
+    .line 70
+    :cond_1
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getOverviewPanel()Landroid/view/View;
 
     move-result-object v0
@@ -61,60 +67,63 @@
 
     xor-int/2addr p4, v1
 
-    .line 71
+    .line 74
     invoke-static {p1, p2, p3}, Lcom/miui/home/recents/TaskViewUtils;->findTaskViewToLaunch(Lcom/miui/home/launcher/Launcher;Landroid/view/View;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;)Lcom/miui/home/recents/views/TaskView;
 
     move-result-object p2
 
-    if-nez p4, :cond_2
+    if-nez p4, :cond_3
 
-    .line 73
+    .line 76
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
     move-result p4
 
-    if-eqz p4, :cond_1
+    if-eqz p4, :cond_2
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     const/4 p4, 0x0
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     :goto_0
     move p4, v1
 
-    .line 74
+    .line 77
     :goto_1
     invoke-static {p2, p4, p3, v0}, Lcom/miui/home/recents/TaskViewUtils;->getRecentsWindowAnimatorNew(Lcom/miui/home/recents/views/TaskView;Z[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/recents/views/RecentsView;)Lcom/miui/home/recents/util/RectFSpringAnim;
 
     move-result-object v2
 
-    if-nez v2, :cond_3
+    if-nez v2, :cond_5
 
-    .line 77
-    invoke-virtual {p5}, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->finish()V
-
-    return-void
+    if-eqz p5, :cond_4
 
     .line 81
-    :cond_3
+    invoke-virtual {p5}, Lcom/miui/home/recents/LauncherAnimationRunner$AnimationResult;->finish()V
+
+    :cond_4
+    return-void
+
+    .line 86
+    :cond_5
     new-instance v3, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;
 
     invoke-direct {v3, p0, p3, p1, v0}, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl$1;-><init>(Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;[Lcom/android/systemui/shared/recents/system/RemoteAnimationTargetCompat;Lcom/miui/home/launcher/Launcher;Lcom/miui/home/recents/views/RecentsView;)V
 
     invoke-virtual {v2, v3}, Lcom/miui/home/recents/util/RectFSpringAnim;->addAnimatorListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 118
+    .line 123
     new-instance p3, Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
     invoke-direct {p3}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;-><init>()V
 
     iput-object p3, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;->mTaskLaunchEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
-    .line 119
+    .line 124
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
 
     move-result-object p1
@@ -123,22 +132,22 @@
 
     invoke-virtual {p1, p3}, Lcom/miui/home/launcher/LauncherStateManager;->setCurrentAnimation(Lcom/miui/home/recents/util/MultiAnimationEndDetector;)V
 
-    if-eqz p4, :cond_4
+    if-eqz p4, :cond_6
 
     const/4 p2, 0x0
 
-    .line 121
-    :cond_4
+    .line 126
+    :cond_6
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;->mTaskLaunchEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
     invoke-virtual {p0, v1, v0, p2, p1}, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;->startRecentsContentAnimator(ZLcom/miui/home/recents/views/RecentsView;Lcom/miui/home/recents/views/TaskView;Lcom/miui/home/recents/util/MultiAnimationEndDetector;)V
 
-    .line 123
+    .line 128
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;->mTaskLaunchEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
     invoke-virtual {p1, v2}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;->addAnimation(Ljava/lang/Object;)V
 
-    .line 124
+    .line 129
     invoke-static {p5}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     new-instance p1, Lcom/miui/home/recents/-$$Lambda$AlEeBxjHFsy1SRWRXeztzuuTMeo;
@@ -147,19 +156,19 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;->mTaskLaunchFinishRunnable:Ljava/lang/Runnable;
 
-    .line 125
+    .line 130
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;->mTaskLaunchEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
     iget-object p2, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;->mTaskLaunchFinishRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p1, p2}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;->addEndRunnable(Ljava/lang/Runnable;)V
 
-    .line 126
+    .line 131
     iget-object p1, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;->mTaskLaunchEndDetector:Lcom/miui/home/recents/util/MultiAnimationEndDetector;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/util/MultiAnimationEndDetector;->startDetect()V
 
-    .line 127
+    .line 132
     invoke-virtual {v2}, Lcom/miui/home/recents/util/RectFSpringAnim;->startInGestureThread()V
 
     return-void
@@ -211,7 +220,7 @@
 
     const/4 v0, 0x0
 
-    .line 131
+    .line 136
     iput-boolean v0, p0, Lcom/miui/home/recents/LauncherAppTransitionManagerImpl;->isNeedResetLauncherState:Z
 
     return-void

@@ -117,7 +117,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1101cb
+    const v1, 0x7f1101e2
 
     const/4 v2, 0x1
 
@@ -182,7 +182,7 @@
     .line 55
     invoke-virtual {v1, p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectFragment;->updateCategory(I)V
 
-    const p1, 0x7f0a0048
+    const p1, 0x7f0a004d
 
     .line 56
     invoke-virtual {v0, p1, v1}, Landroidx/fragment/app/FragmentTransaction;->replace(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
@@ -229,14 +229,14 @@
 
     invoke-direct {v0, p0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v1, 0x7f10009e
+    const v1, 0x7f1000a9
 
     .line 79
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f10009d
+    const v1, 0x7f1000a8
 
     .line 80
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -247,7 +247,7 @@
 
     invoke-direct {v1, p0, p1, p2}, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectActivity$B2g3zYpwq8o4qh3j54XozsR0y9s;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectActivity;ILjava/util/Collection;)V
 
-    const p1, 0x7f100127
+    const p1, 0x7f100162
 
     .line 81
     invoke-virtual {v0, p1, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -275,7 +275,7 @@
 .end method
 
 .method public onSave(ILjava/lang/String;Ljava/lang/String;Ljava/util/Collection;Ljava/util/Collection;)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -295,6 +295,8 @@
 
     move-result p2
 
+    const/4 v0, -0x1
+
     if-nez p2, :cond_0
 
     .line 94
@@ -306,13 +308,16 @@
 
     move-result-object p2
 
-    new-instance v0, Lcom/miui/home/launcher/model/CategoryNameUpdateTask;
+    new-instance v1, Lcom/miui/home/launcher/model/CategoryNameUpdateTask;
 
-    invoke-direct {v0, p1, p3}, Lcom/miui/home/launcher/model/CategoryNameUpdateTask;-><init>(ILjava/lang/String;)V
+    invoke-direct {v1, p1, p3}, Lcom/miui/home/launcher/model/CategoryNameUpdateTask;-><init>(ILjava/lang/String;)V
 
-    invoke-virtual {p2, v0}, Lcom/miui/home/launcher/LauncherModel;->enqueueModelUpdateTask(Lcom/miui/home/launcher/LauncherModel$ModelUpdateTask;)V
+    invoke-virtual {p2, v1}, Lcom/miui/home/launcher/LauncherModel;->enqueueModelUpdateTask(Lcom/miui/home/launcher/LauncherModel$ModelUpdateTask;)V
 
-    .line 96
+    .line 95
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectActivity;->setResult(I)V
+
+    .line 97
     :cond_0
     invoke-interface {p4}, Ljava/util/Collection;->isEmpty()Z
 
@@ -326,7 +331,7 @@
 
     if-nez p2, :cond_2
 
-    .line 97
+    .line 98
     :cond_1
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
@@ -342,13 +347,11 @@
 
     invoke-virtual {p2, p3}, Lcom/miui/home/launcher/LauncherModel;->enqueueModelUpdateTask(Lcom/miui/home/launcher/LauncherModel$ModelUpdateTask;)V
 
-    :cond_2
-    const/4 p1, -0x1
-
     .line 99
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectActivity;->setResult(I)V
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectActivity;->setResult(I)V
 
-    .line 100
+    .line 101
+    :cond_2
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectActivity;->onBack()V
 
     return-void

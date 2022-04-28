@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="58.179993dip" android:width="58.179993dip" android:viewportWidth="160.0" android:viewportHeight="160.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="#ffffffff" android:pathData="M80,0L80,0A80,80 0,0 1,160 80L160,80A80,80 0,0 1,80 160L80,160A80,80 0,0 1,0 80L0,80A80,80 0,0 1,80 0z" android:fillAlpha="0.2" />
+    <path android:fillColor="#ffffffff" android:pathData="M42.069,51.964L117.931,51.964A5.497,5.497 0,0 1,123.428 57.462L123.428,102.539A5.497,5.497 0,0 1,117.931 108.037L42.069,108.037A5.497,5.497 0,0 1,36.571 102.539L36.571,57.462A5.497,5.497 0,0 1,42.069 51.964z" />
+    <path android:fillColor="@drawable/$world_circulation_pad_icon__0" android:pathData="M42.619,55.813L117.382,55.813A2.199,2.199 0,0 1,119.58 58.011L119.58,101.99A2.199,2.199 0,0 1,117.382 104.189L42.619,104.189A2.199,2.199 0,0 1,40.42 101.99L40.42,58.011A2.199,2.199 0,0 1,42.619 55.813z" />
+</vector>

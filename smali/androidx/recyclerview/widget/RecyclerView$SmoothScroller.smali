@@ -43,15 +43,15 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 12173
+    .line 11776
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 12157
+    .line 11760
     iput v0, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mTargetPosition:I
 
-    .line 12174
+    .line 11777
     new-instance v0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;
 
     const/4 v1, 0x0
@@ -68,20 +68,20 @@
 .method public computeScrollVectorForPosition(I)Landroid/graphics/PointF;
     .locals 2
 
-    .line 12231
+    .line 11835
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     move-result-object v0
 
-    .line 12232
+    .line 11836
     instance-of v1, v0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$ScrollVectorProvider;
 
     if-eqz v1, :cond_0
 
-    .line 12233
+    .line 11837
     check-cast v0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$ScrollVectorProvider;
 
-    .line 12234
+    .line 11838
     invoke-interface {v0, p1}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$ScrollVectorProvider;->computeScrollVectorForPosition(I)Landroid/graphics/PointF;
 
     move-result-object p1
@@ -91,7 +91,7 @@
     :cond_0
     const-string p1, "RecyclerView"
 
-    .line 12236
+    .line 11840
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -102,7 +102,7 @@
 
     const-class v1, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$ScrollVectorProvider;
 
-    .line 12237
+    .line 11841
     invoke-virtual {v1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
 
     move-result-object v1
@@ -113,7 +113,7 @@
 
     move-result-object v0
 
-    .line 12236
+    .line 11840
     invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x0
@@ -124,7 +124,7 @@
 .method public findViewByPosition(I)Landroid/view/View;
     .locals 1
 
-    .line 12368
+    .line 11972
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mLayout:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -139,7 +139,7 @@
 .method public getChildCount()I
     .locals 1
 
-    .line 12361
+    .line 11965
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView;->mLayout:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
@@ -154,7 +154,7 @@
 .method public getChildPosition(Landroid/view/View;)I
     .locals 1
 
-    .line 12354
+    .line 11958
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->getChildLayoutPosition(Landroid/view/View;)I
@@ -167,7 +167,7 @@
 .method public getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
     .locals 1
 
-    .line 12247
+    .line 11851
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     return-object v0
@@ -176,7 +176,7 @@
 .method public getTargetPosition()I
     .locals 1
 
-    .line 12299
+    .line 11903
     iget v0, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mTargetPosition:I
 
     return v0
@@ -185,7 +185,7 @@
 .method public isPendingInitialRun()Z
     .locals 1
 
-    .line 12281
+    .line 11885
     iget-boolean v0, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mPendingInitialRun:Z
 
     return v0
@@ -194,7 +194,7 @@
 .method public isRunning()Z
     .locals 1
 
-    .line 12289
+    .line 11893
     iget-boolean v0, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRunning:Z
 
     return v0
@@ -203,7 +203,7 @@
 .method protected normalize(Landroid/graphics/PointF;)V
     .locals 3
 
-    .line 12395
+    .line 11998
     iget v0, p1, Landroid/graphics/PointF;->x:F
 
     iget v1, p1, Landroid/graphics/PointF;->x:F
@@ -226,14 +226,14 @@
 
     double-to-float v0, v0
 
-    .line 12397
+    .line 12000
     iget v1, p1, Landroid/graphics/PointF;->x:F
 
     div-float/2addr v1, v0
 
     iput v1, p1, Landroid/graphics/PointF;->x:F
 
-    .line 12398
+    .line 12001
     iget v1, p1, Landroid/graphics/PointF;->y:F
 
     div-float/2addr v1, v0
@@ -246,10 +246,10 @@
 .method onAnimation(II)V
     .locals 5
 
-    .line 12303
+    .line 11907
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    .line 12304
+    .line 11908
     iget v1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mTargetPosition:I
 
     const/4 v2, -0x1
@@ -258,11 +258,11 @@
 
     if-nez v0, :cond_1
 
-    .line 12305
+    .line 11909
     :cond_0
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->stop()V
 
-    .line 12313
+    .line 11917
     :cond_1
     iget-boolean v1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mPendingInitialRun:Z
 
@@ -278,7 +278,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 12314
+    .line 11918
     iget v1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mTargetPosition:I
 
     invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->computeScrollVectorForPosition(I)Landroid/graphics/PointF;
@@ -287,7 +287,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 12315
+    .line 11919
     iget v3, v1, Landroid/graphics/PointF;->x:F
 
     const/4 v4, 0x0
@@ -302,11 +302,11 @@
 
     if-eqz v3, :cond_3
 
-    .line 12316
+    .line 11920
     :cond_2
     iget v3, v1, Landroid/graphics/PointF;->x:F
 
-    .line 12317
+    .line 11921
     invoke-static {v3}, Ljava/lang/Math;->signum(F)F
 
     move-result v3
@@ -315,28 +315,28 @@
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
-    .line 12318
+    .line 11922
     invoke-static {v1}, Ljava/lang/Math;->signum(F)F
 
     move-result v1
 
     float-to-int v1, v1
 
-    .line 12316
+    .line 11920
     invoke-virtual {v0, v3, v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->scrollStep(II[I)V
 
     :cond_3
     const/4 v1, 0x0
 
-    .line 12323
+    .line 11927
     iput-boolean v1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mPendingInitialRun:Z
 
-    .line 12325
+    .line 11929
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mTargetView:Landroid/view/View;
 
     if-eqz v1, :cond_5
 
-    .line 12327
+    .line 11931
     invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->getChildPosition(Landroid/view/View;)I
 
     move-result v1
@@ -345,7 +345,7 @@
 
     if-ne v1, v3, :cond_4
 
-    .line 12328
+    .line 11932
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mTargetView:Landroid/view/View;
 
     iget-object v2, v0, Landroidx/recyclerview/widget/RecyclerView;->mState:Landroidx/recyclerview/widget/RecyclerView$State;
@@ -354,12 +354,12 @@
 
     invoke-virtual {p0, v1, v2, v3}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->onTargetFound(Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;)V
 
-    .line 12329
+    .line 11933
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRecyclingAction:Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;
 
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;->runIfNecessary(Landroidx/recyclerview/widget/RecyclerView;)V
 
-    .line 12330
+    .line 11934
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->stop()V
 
     goto :goto_0
@@ -369,51 +369,51 @@
 
     const-string v3, "Passed over target position while smooth scrolling."
 
-    .line 12332
+    .line 11936
     invoke-static {v1, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12333
+    .line 11937
     iput-object v2, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mTargetView:Landroid/view/View;
 
-    .line 12336
+    .line 11940
     :cond_5
     :goto_0
     iget-boolean v1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRunning:Z
 
     if-eqz v1, :cond_6
 
-    .line 12337
+    .line 11941
     iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView;->mState:Landroidx/recyclerview/widget/RecyclerView$State;
 
     iget-object v2, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRecyclingAction:Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;
 
     invoke-virtual {p0, p1, p2, v1, v2}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->onSeekTargetStep(IILandroidx/recyclerview/widget/RecyclerView$State;Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;)V
 
-    .line 12338
+    .line 11942
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRecyclingAction:Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;->hasJumpTarget()Z
 
     move-result p1
 
-    .line 12339
+    .line 11943
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRecyclingAction:Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller$Action;->runIfNecessary(Landroidx/recyclerview/widget/RecyclerView;)V
 
     if-eqz p1, :cond_6
 
-    .line 12342
+    .line 11946
     iget-boolean p1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRunning:Z
 
     if-eqz p1, :cond_6
 
     const/4 p1, 0x1
 
-    .line 12343
+    .line 11947
     iput-boolean p1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mPendingInitialRun:Z
 
-    .line 12344
+    .line 11948
     iget-object p1, v0, Landroidx/recyclerview/widget/RecyclerView;->mViewFlinger:Landroidx/recyclerview/widget/RecyclerView$ViewFlinger;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$ViewFlinger;->postOnAnimation()V
@@ -425,7 +425,7 @@
 .method protected onChildAttachedToWindow(Landroid/view/View;)V
     .locals 2
 
-    .line 12381
+    .line 11985
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->getChildPosition(Landroid/view/View;)I
 
     move-result v0
@@ -436,7 +436,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 12382
+    .line 11986
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mTargetView:Landroid/view/View;
 
     :cond_0
@@ -458,7 +458,7 @@
 .method public setTargetPosition(I)V
     .locals 0
 
-    .line 12217
+    .line 11820
     iput p1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mTargetPosition:I
 
     return-void
@@ -467,19 +467,19 @@
 .method start(Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
     .locals 3
 
-    .line 12192
+    .line 11795
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView;->mViewFlinger:Landroidx/recyclerview/widget/RecyclerView$ViewFlinger;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$ViewFlinger;->stop()V
 
-    .line 12194
+    .line 11797
     iget-boolean v0, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mStarted:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "RecyclerView"
 
-    .line 12195
+    .line 11798
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -502,7 +502,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 12196
+    .line 11799
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
@@ -521,24 +521,24 @@
 
     move-result-object v1
 
-    .line 12195
+    .line 11798
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12201
+    .line 11804
     :cond_0
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    .line 12202
+    .line 11805
     iput-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
-    .line 12203
+    .line 11806
     iget p1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mTargetPosition:I
 
     const/4 p2, -0x1
 
     if-eq p1, p2, :cond_1
 
-    .line 12206
+    .line 11809
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView;->mState:Landroidx/recyclerview/widget/RecyclerView$State;
@@ -549,13 +549,13 @@
 
     const/4 p1, 0x1
 
-    .line 12207
+    .line 11810
     iput-boolean p1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRunning:Z
 
-    .line 12208
+    .line 11811
     iput-boolean p1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mPendingInitialRun:Z
 
-    .line 12209
+    .line 11812
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->getTargetPosition()I
 
     move-result p2
@@ -566,22 +566,22 @@
 
     iput-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mTargetView:Landroid/view/View;
 
-    .line 12210
+    .line 11813
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->onStart()V
 
-    .line 12211
+    .line 11814
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object p2, p2, Landroidx/recyclerview/widget/RecyclerView;->mViewFlinger:Landroidx/recyclerview/widget/RecyclerView$ViewFlinger;
 
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView$ViewFlinger;->postOnAnimation()V
 
-    .line 12213
+    .line 11816
     iput-boolean p1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mStarted:Z
 
     return-void
 
-    .line 12204
+    .line 11807
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -595,7 +595,7 @@
 .method protected final stop()V
     .locals 3
 
-    .line 12257
+    .line 11861
     iget-boolean v0, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRunning:Z
 
     if-nez v0, :cond_0
@@ -605,13 +605,13 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 12260
+    .line 11864
     iput-boolean v0, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRunning:Z
 
-    .line 12261
+    .line 11865
     invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->onStop()V
 
-    .line 12262
+    .line 11866
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView;->mState:Landroidx/recyclerview/widget/RecyclerView$State;
@@ -622,24 +622,24 @@
 
     const/4 v1, 0x0
 
-    .line 12263
+    .line 11867
     iput-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mTargetView:Landroid/view/View;
 
-    .line 12264
+    .line 11868
     iput v2, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mTargetPosition:I
 
-    .line 12265
+    .line 11869
     iput-boolean v0, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mPendingInitialRun:Z
 
-    .line 12267
+    .line 11871
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView$LayoutManager;->onSmoothScrollerStopped(Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;)V
 
-    .line 12269
+    .line 11873
     iput-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mLayoutManager:Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
-    .line 12270
+    .line 11874
     iput-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$SmoothScroller;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     return-void

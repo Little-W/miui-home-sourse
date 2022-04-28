@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/DropTargetBar;)V
     .locals 0
 
-    .line 119
+    .line 120
     iput-object p1, p0, Lcom/miui/home/launcher/DropTargetBar$ShortcutIconCheckChangedHandler;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/DropTargetBar;Lcom/miui/home/launcher/DropTargetBar$1;)V
     .locals 0
 
-    .line 119
+    .line 120
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/DropTargetBar$ShortcutIconCheckChangedHandler;-><init>(Lcom/miui/home/launcher/DropTargetBar;)V
 
     return-void
@@ -47,7 +47,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 122
+    .line 123
     iget-object p1, p0, Lcom/miui/home/launcher/DropTargetBar$ShortcutIconCheckChangedHandler;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 
     invoke-static {p1}, Lcom/miui/home/launcher/DropTargetBar;->access$600(Lcom/miui/home/launcher/DropTargetBar;)Z
@@ -58,7 +58,7 @@
 
     return-void
 
-    .line 123
+    .line 124
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/DropTargetBar$ShortcutIconCheckChangedHandler;->this$0:Lcom/miui/home/launcher/DropTargetBar;
 

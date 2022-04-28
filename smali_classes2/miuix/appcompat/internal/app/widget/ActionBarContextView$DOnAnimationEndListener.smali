@@ -27,12 +27,12 @@
 .method public constructor <init>(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;Z)V
     .locals 0
 
-    .line 1012
+    .line 1042
     iput-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$DOnAnimationEndListener;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1013
+    .line 1043
     iput-boolean p2, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$DOnAnimationEndListener;->mFinalVisibility:Z
 
     return-void
@@ -43,26 +43,26 @@
 .method public onAnimationEnd(Lmiuix/animation/physics/DynamicAnimation;ZFF)V
     .locals 0
 
-    .line 1018
+    .line 1048
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$DOnAnimationEndListener;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     const/4 p2, 0x0
 
     invoke-static {p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->access$600(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;Z)V
 
-    .line 1019
+    .line 1049
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$DOnAnimationEndListener;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     invoke-static {p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->access$302(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;Z)Z
 
-    .line 1020
+    .line 1050
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$DOnAnimationEndListener;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     iget-boolean p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$DOnAnimationEndListener;->mFinalVisibility:Z
 
     invoke-virtual {p1, p3}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->notifyAnimationEnd(Z)V
 
-    .line 1021
+    .line 1051
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$DOnAnimationEndListener;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     invoke-static {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->access$700(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;)I
@@ -73,25 +73,25 @@
 
     if-ne p1, p3, :cond_0
 
-    .line 1022
+    .line 1052
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$DOnAnimationEndListener;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     invoke-virtual {p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->killMode()V
 
-    .line 1024
+    .line 1054
     :cond_0
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$DOnAnimationEndListener;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     invoke-static {p1, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->access$702(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;I)I
 
-    .line 1026
+    .line 1056
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$DOnAnimationEndListener;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     const/4 p3, 0x0
 
     invoke-static {p1, p3}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->access$802(Lmiuix/appcompat/internal/app/widget/ActionBarContextView;Lmiuix/animation/physics/SpringAnimationSet;)Lmiuix/animation/physics/SpringAnimationSet;
 
-    .line 1027
+    .line 1057
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$DOnAnimationEndListener;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     iget-boolean p3, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$DOnAnimationEndListener;->mFinalVisibility:Z
@@ -110,7 +110,7 @@
     :goto_0
     invoke-virtual {p1, p3}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setVisibility(I)V
 
-    .line 1028
+    .line 1058
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$DOnAnimationEndListener;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     iget-object p1, p1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mSplitView:Lmiuix/appcompat/internal/app/widget/ActionBarContainer;
@@ -123,7 +123,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 1029
+    .line 1059
     iget-object p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView$DOnAnimationEndListener;->this$0:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
 
     iget-object p1, p1, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMenuView:Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;

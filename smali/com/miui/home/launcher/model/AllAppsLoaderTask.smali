@@ -83,7 +83,7 @@
 
     monitor-enter p0
 
-    .line 131
+    .line 132
     :try_start_0
     iget-boolean v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mStopped:Z
     :try_end_0
@@ -104,7 +104,7 @@
 .method public static synthetic lambda$run$0(Lcom/miui/home/launcher/model/AllAppsLoaderTask;)V
     .locals 2
 
-    .line 96
+    .line 97
     invoke-direct {p0}, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->isStopped()Z
 
     move-result v0
@@ -113,7 +113,7 @@
 
     return-void
 
-    .line 99
+    .line 100
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mCallback:Lcom/miui/home/launcher/model/AllAppsLoaderTask$LoaderCallback;
 
@@ -131,26 +131,26 @@
 .method private removeInvalidateCategory()V
     .locals 4
 
-    .line 105
+    .line 106
     iget-object v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mAllAppsList:Lcom/miui/home/launcher/AllAppsList;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/AllAppsList;->getAllAppsList()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 106
+    .line 107
     iget-object v1, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mAllCategoryList:Lcom/miui/home/launcher/AllCategoryList;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/AllCategoryList;->getAllCategoryId()Ljava/util/Collection;
 
     move-result-object v1
 
-    .line 108
+    .line 109
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
-    .line 109
+    .line 110
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -168,7 +168,7 @@
 
     check-cast v3, Lcom/miui/home/launcher/AppInfo;
 
-    .line 110
+    .line 111
     invoke-virtual {v3}, Lcom/miui/home/launcher/AppInfo;->getCategories()Ljava/util/HashSet;
 
     move-result-object v3
@@ -177,18 +177,18 @@
 
     goto :goto_0
 
-    .line 114
+    .line 115
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mResolver:Landroid/content/ContentResolver;
 
     invoke-static {v0, v2}, Lcom/miui/home/launcher/LauncherCategory$Category;->removeEmptyCategory(Landroid/content/ContentResolver;Ljava/util/Collection;)V
 
-    .line 116
+    .line 117
     invoke-interface {v1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 117
+    .line 118
     :cond_1
     :goto_1
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -197,21 +197,21 @@
 
     if-eqz v1, :cond_2
 
-    .line 118
+    .line 119
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 119
+    .line 120
     invoke-virtual {v2, v1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 120
+    .line 121
     iget-object v3, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mAllCategoryList:Lcom/miui/home/launcher/AllCategoryList;
 
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
@@ -220,7 +220,7 @@
 
     invoke-virtual {v3, v1}, Lcom/miui/home/launcher/AllCategoryList;->removeCategory(I)V
 
-    .line 121
+    .line 122
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_1
@@ -278,6 +278,11 @@
     invoke-virtual {v0}, Lcom/miui/home/launcher/AllAppsList;->clearAll()V
 
     .line 63
+    iget-object v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mAllCategoryList:Lcom/miui/home/launcher/AllCategoryList;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/AllCategoryList;->clear()V
+
+    .line 65
     iget-object v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mProvider:Lcom/miui/home/launcher/model/LauncherAppsProvider;
 
     invoke-interface {v0}, Lcom/miui/home/launcher/model/LauncherAppsProvider;->getAllLauncherActivityInfo()Ljava/util/Collection;
@@ -290,12 +295,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 64
+    .line 66
     iget-object v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mProvider:Lcom/miui/home/launcher/model/LauncherAppsProvider;
 
     invoke-interface {v0}, Lcom/miui/home/launcher/model/LauncherAppsProvider;->loadApps()V
 
-    .line 66
+    .line 68
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mProvider:Lcom/miui/home/launcher/model/LauncherAppsProvider;
 
@@ -303,7 +308,7 @@
 
     move-result-object v0
 
-    .line 67
+    .line 69
     iget-boolean v1, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->isDrawMode:Z
 
     if-eqz v1, :cond_3
@@ -318,7 +323,7 @@
 
     if-nez v1, :cond_3
 
-    .line 68
+    .line 70
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -336,7 +341,7 @@
 
     check-cast v2, Landroid/content/pm/LauncherActivityInfo;
 
-    .line 69
+    .line 71
     iget-object v3, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mResolver:Landroid/content/ContentResolver;
 
     invoke-virtual {v2}, Landroid/content/pm/LauncherActivityInfo;->getComponentName()Landroid/content/ComponentName;
@@ -351,12 +356,12 @@
 
     move-result-object v3
 
-    .line 70
+    .line 72
     iget-object v4, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mResolver:Landroid/content/ContentResolver;
 
     invoke-static {v4, v3}, Lcom/miui/home/launcher/LauncherCategory$Category;->addDefaultAppCategory(Landroid/content/ContentResolver;Ljava/util/HashSet;)Z
 
-    .line 71
+    .line 73
     iget-object v4, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mResolver:Landroid/content/ContentResolver;
 
     invoke-static {v2}, Lcom/miui/home/launcher/util/ComponentKey;->from(Landroid/content/pm/LauncherActivityInfo;)Lcom/miui/home/launcher/util/ComponentKey;
@@ -365,7 +370,7 @@
 
     invoke-static {v4, v2, v3}, Lcom/miui/home/launcher/LauncherCategory$Favorites;->addAppCategoryConfig(Landroid/content/ContentResolver;Lcom/miui/home/launcher/util/ComponentKey;Ljava/util/HashSet;)Z
 
-    .line 72
+    .line 74
     invoke-static {}, Lcom/miui/home/launcher/CategorySettingHelper;->getInstance()Lcom/miui/home/launcher/CategorySettingHelper;
 
     move-result-object v2
@@ -374,7 +379,7 @@
 
     goto :goto_0
 
-    .line 75
+    .line 77
     :cond_3
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -394,7 +399,7 @@
 
     check-cast v1, Landroid/content/pm/LauncherActivityInfo;
 
-    .line 76
+    .line 78
     iget-object v2, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mAllAppsList:Lcom/miui/home/launcher/AllAppsList;
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/AllAppsList;->getAppFilter()Lcom/miui/home/launcher/AppFilter;
@@ -411,12 +416,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 77
+    .line 79
     invoke-virtual {v1}, Landroid/content/pm/LauncherActivityInfo;->getUser()Landroid/os/UserHandle;
 
     move-result-object v2
 
-    .line 78
+    .line 80
     iget-object v3, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mAllAppsList:Lcom/miui/home/launcher/AllAppsList;
 
     new-instance v4, Lcom/miui/home/launcher/AppInfo;
@@ -433,28 +438,23 @@
 
     goto :goto_1
 
-    .line 81
+    .line 83
     :cond_5
     iget-object v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mAllAppsList:Lcom/miui/home/launcher/AllAppsList;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/AllAppsList;->clearAllExceptData()V
 
-    .line 83
+    .line 85
     iget-boolean v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->isDrawMode:Z
 
     if-eqz v0, :cond_6
 
-    .line 84
-    iget-object v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mAllCategoryList:Lcom/miui/home/launcher/AllCategoryList;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/AllCategoryList;->clear()V
-
-    .line 85
+    .line 86
     iget-object v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mAllCategoryList:Lcom/miui/home/launcher/AllCategoryList;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/AllCategoryList;->loadAllAppCategory()V
 
-    .line 86
+    .line 87
     iget-object v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mResolver:Landroid/content/ContentResolver;
 
     iget-object v1, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mAllAppsList:Lcom/miui/home/launcher/AllAppsList;
@@ -465,10 +465,10 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/LauncherCategory$Favorites;->removeInvalidateConfig(Landroid/content/ContentResolver;Ljava/util/Collection;)V
 
-    .line 87
+    .line 88
     invoke-direct {p0}, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->removeInvalidateCategory()V
 
-    .line 90
+    .line 91
     :cond_6
     invoke-direct {p0}, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->isStopped()Z
 
@@ -478,13 +478,13 @@
 
     return-void
 
-    .line 94
+    .line 95
     :cond_7
     iget-object v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mCallback:Lcom/miui/home/launcher/model/AllAppsLoaderTask$LoaderCallback;
 
     if-eqz v0, :cond_8
 
-    .line 95
+    .line 96
     iget-object v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mUiExecutor:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcom/miui/home/launcher/model/-$$Lambda$AllAppsLoaderTask$btPf75HhhHEF3PFJf2cXyQO8WPc;
@@ -504,13 +504,13 @@
 
     const/4 v0, 0x1
 
-    .line 127
+    .line 128
     :try_start_0
     iput-boolean v0, p0, Lcom/miui/home/launcher/model/AllAppsLoaderTask;->mStopped:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 128
+    .line 129
     monitor-exit p0
 
     return-void

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
+.field private static final NAMES:Lcom/airbnb/lottie/parser/moshi/JsonReader$Options;
 
 
 # direct methods
@@ -13,11 +13,11 @@
 
     const-string v0, "k"
 
-    const-string/jumbo v1, "x"
+    const-string v1, "x"
 
-    const-string/jumbo v2, "y"
+    const-string v2, "y"
 
-    .line 21
+    .line 20
     filled-new-array {v0, v1, v2}, [Ljava/lang/String;
 
     move-result-object v0

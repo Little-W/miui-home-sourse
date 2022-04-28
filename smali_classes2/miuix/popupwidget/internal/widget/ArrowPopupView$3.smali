@@ -22,7 +22,7 @@
 .method constructor <init>(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)V
     .locals 0
 
-    .line 286
+    .line 287
     iput-object p1, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$3;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
@@ -35,7 +35,7 @@
 .method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 5
 
-    .line 289
+    .line 290
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -50,18 +50,18 @@
 
     goto/16 :goto_7
 
-    .line 292
+    .line 293
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v0
 
-    .line 293
+    .line 294
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result p1
 
-    .line 294
+    .line 295
     new-instance v1, Landroid/graphics/Rect;
 
     const/4 v2, 0x0
@@ -72,17 +72,17 @@
 
     sub-int/2addr v0, p1
 
-    .line 296
+    .line 297
     div-int/lit8 v0, v0, 0x2
 
-    .line 297
+    .line 298
     iget p1, v1, Landroid/graphics/Rect;->left:I
 
     add-int/2addr p1, v0
 
     iput p1, v1, Landroid/graphics/Rect;->left:I
 
-    .line 298
+    .line 299
     iget p1, v1, Landroid/graphics/Rect;->right:I
 
     sub-int/2addr p1, v0
@@ -94,30 +94,30 @@
     :cond_1
     sub-int/2addr p1, v0
 
-    .line 300
+    .line 301
     div-int/lit8 p1, p1, 0x2
 
-    .line 301
+    .line 302
     iget v0, v1, Landroid/graphics/Rect;->top:I
 
     add-int/2addr v0, p1
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 302
+    .line 303
     iget v0, v1, Landroid/graphics/Rect;->bottom:I
 
     sub-int/2addr v0, p1
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 304
+    .line 305
     :goto_0
     new-instance p1, Landroid/graphics/Path;
 
     invoke-direct {p1}, Landroid/graphics/Path;-><init>()V
 
-    .line 306
+    .line 307
     iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$3;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-static {v0}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->access$500(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)I
@@ -142,7 +142,7 @@
 
     goto/16 :goto_5
 
-    .line 345
+    .line 346
     :pswitch_0
     iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$3;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
@@ -158,7 +158,7 @@
 
     invoke-virtual {p1, v4, v0}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 346
+    .line 347
     iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$3;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-static {v0}, Lmiuix/internal/util/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
@@ -167,7 +167,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 347
+    .line 348
     iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$3;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-static {v0}, Lmiuix/popupwidget/internal/widget/ArrowPopupView;->access$600(Lmiuix/popupwidget/internal/widget/ArrowPopupView;)Landroid/graphics/drawable/Drawable;
@@ -204,7 +204,7 @@
 
     goto :goto_1
 
-    .line 349
+    .line 350
     :cond_2
     iget v0, v1, Landroid/graphics/Rect;->right:I
 
@@ -244,13 +244,13 @@
 
     invoke-virtual {p1, v0, v3, v2, v4}, Landroid/graphics/Path;->quadTo(FFFF)V
 
-    .line 351
+    .line 352
     :goto_1
     invoke-virtual {p1}, Landroid/graphics/Path;->close()V
 
     goto/16 :goto_5
 
-    .line 336
+    .line 337
     :pswitch_1
     iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$3;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
@@ -266,7 +266,7 @@
 
     invoke-virtual {p1, v4, v0}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 337
+    .line 338
     iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$3;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-static {v0}, Lmiuix/internal/util/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
@@ -275,7 +275,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 338
+    .line 339
     iget v0, v1, Landroid/graphics/Rect;->right:I
 
     int-to-float v0, v0
@@ -316,7 +316,7 @@
 
     goto :goto_2
 
-    .line 340
+    .line 341
     :cond_3
     iget-object v0, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$3;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
@@ -352,13 +352,13 @@
 
     invoke-virtual {p1, v4, v0, v2, v3}, Landroid/graphics/Path;->quadTo(FFFF)V
 
-    .line 342
+    .line 343
     :goto_2
     invoke-virtual {p1}, Landroid/graphics/Path;->close()V
 
     goto/16 :goto_5
 
-    .line 308
+    .line 309
     :pswitch_2
     iget v0, v1, Landroid/graphics/Rect;->right:I
 
@@ -370,7 +370,7 @@
 
     div-float/2addr v0, v3
 
-    .line 309
+    .line 310
     iget v2, v1, Landroid/graphics/Rect;->left:I
 
     int-to-float v2, v2
@@ -381,7 +381,7 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 310
+    .line 311
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
     move-result v2
@@ -400,12 +400,12 @@
 
     invoke-virtual {p1, v0, v2, v3, v4}, Landroid/graphics/Path;->quadTo(FFFF)V
 
-    .line 311
+    .line 312
     invoke-virtual {p1}, Landroid/graphics/Path;->close()V
 
     goto/16 :goto_5
 
-    .line 325
+    .line 326
     :cond_4
     iget v0, v1, Landroid/graphics/Rect;->bottom:I
 
@@ -417,7 +417,7 @@
 
     div-float/2addr v0, v3
 
-    .line 326
+    .line 327
     iget-object v2, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$3;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-static {v2}, Lmiuix/internal/util/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
@@ -426,7 +426,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 327
+    .line 328
     iget v2, v1, Landroid/graphics/Rect;->right:I
 
     int-to-float v2, v2
@@ -437,7 +437,7 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 328
+    .line 329
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v2
@@ -458,7 +458,7 @@
 
     goto :goto_3
 
-    .line 330
+    .line 331
     :cond_5
     iget v2, v1, Landroid/graphics/Rect;->left:I
 
@@ -470,7 +470,7 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 331
+    .line 332
     iget v2, v1, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
@@ -491,13 +491,13 @@
 
     invoke-virtual {p1, v2, v0, v3, v4}, Landroid/graphics/Path;->quadTo(FFFF)V
 
-    .line 333
+    .line 334
     :goto_3
     invoke-virtual {p1}, Landroid/graphics/Path;->close()V
 
     goto :goto_5
 
-    .line 314
+    .line 315
     :cond_6
     iget v0, v1, Landroid/graphics/Rect;->bottom:I
 
@@ -509,7 +509,7 @@
 
     div-float/2addr v0, v3
 
-    .line 315
+    .line 316
     iget-object v2, p0, Lmiuix/popupwidget/internal/widget/ArrowPopupView$3;->this$0:Lmiuix/popupwidget/internal/widget/ArrowPopupView;
 
     invoke-static {v2}, Lmiuix/internal/util/ViewUtils;->isLayoutRtl(Landroid/view/View;)Z
@@ -518,7 +518,7 @@
 
     if-eqz v2, :cond_7
 
-    .line 316
+    .line 317
     iget v2, v1, Landroid/graphics/Rect;->left:I
 
     int-to-float v2, v2
@@ -529,7 +529,7 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 317
+    .line 318
     iget v2, v1, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
@@ -552,7 +552,7 @@
 
     goto :goto_4
 
-    .line 319
+    .line 320
     :cond_7
     iget v2, v1, Landroid/graphics/Rect;->right:I
 
@@ -564,7 +564,7 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 320
+    .line 321
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v2
@@ -583,11 +583,11 @@
 
     invoke-virtual {p1, v2, v0, v3, v4}, Landroid/graphics/Path;->quadTo(FFFF)V
 
-    .line 322
+    .line 323
     :goto_4
     invoke-virtual {p1}, Landroid/graphics/Path;->close()V
 
-    .line 354
+    .line 355
     :goto_5
     invoke-virtual {p1}, Landroid/graphics/Path;->isConvex()Z
 
@@ -595,7 +595,7 @@
 
     if-eqz v0, :cond_8
 
-    .line 355
+    .line 356
     invoke-virtual {p2, p1}, Landroid/graphics/Outline;->setConvexPath(Landroid/graphics/Path;)V
 
     goto :goto_6
@@ -605,10 +605,10 @@
 
     const-string v0, "outline path is not convex"
 
-    .line 357
+    .line 358
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 359
+    .line 360
     invoke-virtual {p2, v1}, Landroid/graphics/Outline;->setOval(Landroid/graphics/Rect;)V
 
     :goto_6

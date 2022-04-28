@@ -140,7 +140,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f06034d
+    const v1, 0x7f060397
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -157,7 +157,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f06034e
+    const v1, 0x7f060398
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -183,7 +183,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f06034c
+    const v3, 0x7f060396
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -206,7 +206,7 @@
     .line 140
     iget-object v0, p0, Lcom/miui/home/launcher/search/SearchEdgeEffect;->mCirclePaint:Landroid/graphics/Paint;
 
-    const v1, 0x7f060318
+    const v1, 0x7f060360
 
     invoke-static {p1, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -938,7 +938,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f06034d
+    const v0, 0x7f060397
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -955,7 +955,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f06034e
+    const v0, 0x7f060398
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -974,7 +974,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f06034c
+    const v1, 0x7f060396
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -989,7 +989,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060318
+    const v1, 0x7f060360
 
     invoke-static {v0, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 

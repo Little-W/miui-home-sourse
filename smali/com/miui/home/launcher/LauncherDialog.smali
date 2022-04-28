@@ -28,7 +28,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0a00a2
+    const v0, 0x7f0a00bd
 
     .line 55
     invoke-virtual {p0, v0}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;

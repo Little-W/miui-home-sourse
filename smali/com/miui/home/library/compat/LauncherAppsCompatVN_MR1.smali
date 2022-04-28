@@ -39,6 +39,8 @@
     const-string v2, "Failed to make shortcut manager call"
 
     .line 22
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     const/4 v0, 0x0
 
     return v0

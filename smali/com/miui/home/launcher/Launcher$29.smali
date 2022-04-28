@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3711
+    .line 3823
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -33,79 +33,77 @@
 
 # virtual methods
 .method public onChange(Z)V
-    .locals 5
+    .locals 2
 
-    .line 3714
+    .line 3826
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3300(Lcom/miui/home/launcher/Launcher;)V
+
+    .line 3827
+    sget-object p1, Lcom/miui/home/launcher/DeviceConfig;->INSTANCE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
+
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/util/MainThreadInitializedObject;->get(Landroid/content/Context;)Ljava/lang/Object;
 
     move-result-object p1
 
-    const-string v0, "miui_home_screen_cells_size"
+    check-cast p1, Lcom/miui/home/launcher/DeviceConfig;
 
-    invoke-static {p1, v0}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getStringFromSystem(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    move-result-object p1
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getApplicationContext()Landroid/content/Context;
 
-    .line 3716
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    move-result-object v0
 
-    move-result v0
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    if-nez v0, :cond_1
+    invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
 
-    const/4 v0, 0x2
+    move-result-object v1
 
-    .line 3717
-    new-array v0, v0, [I
+    invoke-virtual {p1, v0, v1}, Lcom/miui/home/launcher/DeviceConfig;->loadScreenSize(Landroid/content/Context;Landroid/content/res/Resources;)V
 
-    .line 3718
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/ScreenUtils;->parseCellsSize(Ljava/lang/String;[I)Z
+    .line 3828
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenSizeChanged()Z
 
-    const/4 v1, 0x0
+    move-result p1
 
-    .line 3719
-    aget v2, v0, v1
+    if-eqz p1, :cond_0
 
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
+    .line 3829
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    move-result v3
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->onScreenSizeChanged()V
 
-    const/4 v4, 0x1
-
-    if-ne v2, v3, :cond_0
-
-    aget v2, v0, v4
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
-
-    move-result v3
-
-    if-eq v2, v3, :cond_1
-
-    .line 3720
+    .line 3831
     :cond_0
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    aget v1, v0, v1
-
-    aget v0, v0, v4
-
-    invoke-static {v2, v1, v0}, Lcom/miui/home/launcher/DeviceConfig;->setScreenCells(Landroid/content/Context;II)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 3721
-    invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackScreenCellsSizeChanged(Ljava/lang/String;)V
-
-    .line 3722
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->onScreenCellsChanged()V
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FitSystemWindowView;
 
-    :cond_1
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->performLayoutNow(Landroid/view/View;)V
+
+    .line 3832
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->performLayoutNow(Landroid/view/View;)V
+
+    .line 3833
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3500(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/search/SearchEdgeLayout;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/search/SearchEdgeLayout;->refreshSize()V
+
     return-void
 .end method

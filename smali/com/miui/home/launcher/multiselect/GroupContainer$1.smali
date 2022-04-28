@@ -49,22 +49,36 @@
 
     .line 32
     :cond_0
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->isScrolling()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    return-void
+
+    .line 33
+    :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/GroupContainer$1;->this$0:Lcom/miui/home/launcher/multiselect/GroupContainer;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/multiselect/GroupContainer;->isNormalState()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    .line 33
+    .line 34
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->autoFolder()V
 
     const-string p1, "group"
 
-    .line 34
+    .line 35
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackEditModeTopMenuClickEvent(Ljava/lang/String;)V
 
-    :cond_1
+    :cond_2
     return-void
 .end method

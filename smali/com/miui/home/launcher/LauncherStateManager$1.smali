@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherStateManager;I)V
     .locals 0
 
-    .line 247
+    .line 251
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherStateManager$1;->this$0:Lcom/miui/home/launcher/LauncherStateManager;
 
     iput p2, p0, Lcom/miui/home/launcher/LauncherStateManager$1;->val$finalState:I
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 250
+    .line 254
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherStateManager$1;->this$0:Lcom/miui/home/launcher/LauncherStateManager;
 
     invoke-static {v0}, Lcom/miui/home/launcher/LauncherStateManager;->access$200(Lcom/miui/home/launcher/LauncherStateManager;)Lcom/miui/home/launcher/Launcher;

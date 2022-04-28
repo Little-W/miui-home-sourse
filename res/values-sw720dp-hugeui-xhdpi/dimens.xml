@@ -7,6 +7,7 @@
     <dimen name="folder_content_width">480.0dip</dimen>
     <dimen name="folder_top_padding">58.0dip</dimen>
     <dimen name="hotseats_height">137.0dip</dimen>
+    <dimen name="hotseats_height_land">127.0dip</dimen>
     <dimen name="hotseats_padding_side">8.0dip</dimen>
     <dimen name="workspace_cell_height">125.0dip</dimen>
     <dimen name="workspace_cell_padding_side_rotatable">74.0dip</dimen>

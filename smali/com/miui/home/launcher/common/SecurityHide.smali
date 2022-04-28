@@ -360,6 +360,8 @@
     const-string v1, "getSecurityHideItems"
 
     .line 53
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     const/4 p0, 0x0
 
     return-object p0

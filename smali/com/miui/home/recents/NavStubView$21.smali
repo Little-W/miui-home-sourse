@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 4394
+    .line 4843
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$21;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,19 +36,26 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 3
 
-    .line 4398
+    .line 4847
     :try_start_0
+    sget-object v0, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
+
+    const-string v1, "NavStubView::mRemoveTopViewRunnable"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 4848
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$21;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$7600(Lcom/miui/home/recents/NavStubView;)Landroid/view/WindowManager;
+    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$8400(Lcom/miui/home/recents/NavStubView;)Landroid/view/WindowManager;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$21;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$7500(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/views/RecentsSmallWindowCrop;
+    invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$8300(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/views/RecentsTopWindowCrop;
 
     move-result-object v1
 
@@ -58,11 +65,15 @@
 
     goto :goto_0
 
-    .line 4400
     :catch_0
-    sget-object v0, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
+    move-exception v0
 
-    const-string v1, "exitSmallWindowCrop error"
+    .line 4850
+    sget-object v1, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
+
+    const-string v2, "NavStubView::mRemoveTopViewRunnable error"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
     return-void

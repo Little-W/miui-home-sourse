@@ -109,6 +109,8 @@
     const-string v0, "animateToFinalPosition error"
 
     .line 111
+    invoke-static {p1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :goto_0
     return-void
 .end method
@@ -182,6 +184,8 @@
     const-string v1, "cancel error"
 
     .line 90
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_1
     :goto_0
     return-void
@@ -250,6 +254,8 @@
     const-string v1, "end error"
 
     .line 74
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_1
     :goto_0
     return-void
@@ -353,6 +359,8 @@
     const-string v1, "resetForceValueThreshold error"
 
     .line 45
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :goto_0
     return-void
 .end method
@@ -431,6 +439,8 @@
     const-string v1, "startAnimationInternal error"
 
     .line 60
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_1
     :goto_0
     return-void

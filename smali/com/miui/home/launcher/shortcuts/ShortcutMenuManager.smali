@@ -418,6 +418,8 @@
     const-string v2, "Failed to get shortcut icon"
 
     .line 108
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_0
     const/4 v0, 0x0
 
@@ -770,6 +772,8 @@
     const-string p4, "Failed to query for shortcuts"
 
     .line 260
+    invoke-static {p3, p4, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :goto_0
     if-nez p1, :cond_1
 
@@ -1011,6 +1015,8 @@
     const-string v2, "Failed to make shortcut manager call"
 
     .line 281
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_0
     const/4 v0, 0x0
 
@@ -1116,6 +1122,8 @@
     const-string v0, "Failed to start shortcut"
 
     .line 150
+    invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_1
     :goto_1
     return-void
@@ -1169,6 +1177,8 @@
     const-string v0, "Failed to start shortcut"
 
     .line 128
+    invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_0
     :goto_0
     return-void

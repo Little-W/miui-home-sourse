@@ -1,4 +1,4 @@
-.class final Landroidx/recyclerview/widget/AdapterHelper;
+.class Landroidx/recyclerview/widget/AdapterHelper;
 .super Ljava/lang/Object;
 .source "AdapterHelper.java"
 

@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/util/List;)V
     .locals 0
 
-    .line 268
+    .line 284
     iput-object p1, p0, Lcom/miui/home/launcher/uninstall/UninstallController$6;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/uninstall/UninstallController$6;->val$shortcutInfos:Ljava/util/List;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 271
+    .line 287
     iget-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallController$6;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getUninstallController()Lcom/miui/home/launcher/uninstall/UninstallController;

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static sHadShowTip:Ljava/util/Map;
+.field private static sHadShowTip:Ljava/util/Map; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
@@ -15,7 +15,7 @@
     .end annotation
 .end field
 
-.field private static sIsHaveWorkUser:Z
+.field private static sIsHaveWorkUser:Z = false
 
 
 # direct methods
@@ -35,7 +35,7 @@
 .method public static init(Landroid/content/Context;)V
     .locals 4
 
-    .line 86
+    .line 106
     invoke-static {p0}, Lcom/miui/home/library/compat/UserManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/library/compat/UserManagerCompat;
 
     move-result-object p0
@@ -46,7 +46,7 @@
 
     sput-boolean p0, Lcom/miui/home/launcher/util/WorkProfileHelper;->sIsHaveWorkUser:Z
 
-    .line 87
+    .line 107
     sget-object p0, Lcom/miui/home/launcher/util/WorkProfileHelper;->sHadShowTip:Ljava/util/Map;
 
     const-string v0, "had_show_work_profile_drawer"
@@ -67,7 +67,7 @@
 
     invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 88
+    .line 108
     sget-object p0, Lcom/miui/home/launcher/util/WorkProfileHelper;->sHadShowTip:Ljava/util/Map;
 
     const-string v0, "had_show_work_profile_folder"
@@ -84,7 +84,7 @@
 
     invoke-interface {p0, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 89
+    .line 109
     sget-object p0, Lcom/miui/home/launcher/util/WorkProfileHelper;->sHadShowTip:Ljava/util/Map;
 
     const-string v0, "had_show_work_profile_person"
@@ -107,7 +107,7 @@
 .method private static isShowTip(Ljava/lang/String;)Z
     .locals 3
 
-    .line 77
+    .line 97
     sget-boolean v0, Lcom/miui/home/launcher/util/WorkProfileHelper;->sIsHaveWorkUser:Z
 
     if-eqz v0, :cond_1
@@ -128,7 +128,7 @@
 
     goto :goto_0
 
-    .line 80
+    .line 100
     :cond_0
     sget-object v0, Lcom/miui/home/launcher/util/WorkProfileHelper;->sHadShowTip:Ljava/util/Map;
 
@@ -142,7 +142,7 @@
 
     const/4 v0, 0x0
 
-    .line 81
+    .line 101
     invoke-static {v0, p0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
 
     return v1
@@ -154,31 +154,153 @@
     return p0
 .end method
 
-.method static synthetic lambda$showNext$1(Landroid/content/DialogInterface;I)V
+.method static synthetic lambda$showLessThanAndroidS$1(Ljava/util/function/Consumer;Landroid/content/Context;Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 55
-    invoke-interface {p0}, Landroid/content/DialogInterface;->dismiss()V
-
-    return-void
-.end method
-
-.method static synthetic lambda$showWorkProfileTipsOnDrawer$0(Ljava/util/function/Consumer;Landroid/content/Context;Landroid/content/DialogInterface;I)V
-    .locals 0
-
-    .line 38
+    .line 59
     invoke-interface {p2}, Landroid/content/DialogInterface;->dismiss()V
 
     if-eqz p0, :cond_0
 
     const/4 p2, 0x0
 
-    .line 40
+    .line 61
     invoke-interface {p0, p2}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    .line 42
+    .line 63
     :cond_0
     invoke-static {p1}, Lcom/miui/home/launcher/util/WorkProfileHelper;->showNext(Landroid/content/Context;)V
+
+    return-void
+.end method
+
+.method static synthetic lambda$showMoreThanAndroidR$0(Landroid/content/DialogInterface;I)V
+    .locals 0
+
+    .line 47
+    invoke-interface {p0}, Landroid/content/DialogInterface;->dismiss()V
+
+    return-void
+.end method
+
+.method static synthetic lambda$showNext$2(Landroid/content/DialogInterface;I)V
+    .locals 0
+
+    .line 75
+    invoke-interface {p0}, Landroid/content/DialogInterface;->dismiss()V
+
+    return-void
+.end method
+
+.method private static showLessThanAndroidS(Landroid/content/Context;Ljava/util/function/Consumer;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/util/function/Consumer<",
+            "Ljava/lang/Void;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 55
+    new-instance v0, Lmiuix/appcompat/app/AlertDialog$Builder;
+
+    const v1, 0x7f110005
+
+    invoke-direct {v0, p0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
+
+    const v1, 0x7f10046c
+
+    .line 56
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    const v1, 0x7f100468
+
+    .line 57
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$PCEu1T0PdrspxuFiL8u3y7rM6Y4;
+
+    invoke-direct {v1, p1, p0}, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$PCEu1T0PdrspxuFiL8u3y7rM6Y4;-><init>(Ljava/util/function/Consumer;Landroid/content/Context;)V
+
+    const p0, 0x7f10046a
+
+    .line 58
+    invoke-virtual {v0, p0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
+
+    move-result-object p0
+
+    const/4 p1, 0x0
+
+    .line 65
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Lmiuix/appcompat/app/AlertDialog$Builder;
+
+    move-result-object p0
+
+    .line 66
+    invoke-virtual {p0}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
+
+    move-result-object p0
+
+    .line 67
+    invoke-virtual {p0}, Lmiuix/appcompat/app/AlertDialog;->show()V
+
+    return-void
+.end method
+
+.method private static showMoreThanAndroidR(Landroid/content/Context;)V
+    .locals 2
+
+    .line 43
+    new-instance v0, Lmiuix/appcompat/app/AlertDialog$Builder;
+
+    const v1, 0x7f110005
+
+    invoke-direct {v0, p0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
+
+    const p0, 0x7f10046c
+
+    .line 44
+    invoke-virtual {v0, p0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
+
+    move-result-object p0
+
+    const v0, 0x7f10046b
+
+    .line 45
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
+
+    move-result-object p0
+
+    sget-object v0, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$c0eOu5mP7FONOvptpoRjlWefEmI;->INSTANCE:Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$c0eOu5mP7FONOvptpoRjlWefEmI;
+
+    const v1, 0x7f100469
+
+    .line 46
+    invoke-virtual {p0, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    .line 49
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Lmiuix/appcompat/app/AlertDialog$Builder;
+
+    move-result-object p0
+
+    .line 50
+    invoke-virtual {p0}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
+
+    move-result-object p0
+
+    .line 51
+    invoke-virtual {p0}, Lmiuix/appcompat/app/AlertDialog;->show()V
 
     return-void
 .end method
@@ -186,49 +308,49 @@
 .method private static showNext(Landroid/content/Context;)V
     .locals 2
 
-    .line 51
+    .line 71
     new-instance v0, Lmiuix/appcompat/app/AlertDialog$Builder;
 
     const v1, 0x7f110005
 
     invoke-direct {v0, p0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const p0, 0x7f1003e2
+    const p0, 0x7f10046c
 
-    .line 52
+    .line 72
     invoke-virtual {v0, p0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p0
 
-    const v0, 0x7f1003e1
+    const v0, 0x7f10046b
 
-    .line 53
+    .line 73
     invoke-virtual {p0, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p0
 
-    sget-object v0, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$Yx0QgB3cFnQPbiBvVb_a-TtQvbw;->INSTANCE:Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$Yx0QgB3cFnQPbiBvVb_a-TtQvbw;
+    sget-object v0, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$C3cN0gUl7acBK8QtSu2ijGA4K-0;->INSTANCE:Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$C3cN0gUl7acBK8QtSu2ijGA4K-0;
 
-    const v1, 0x7f1003df
+    const v1, 0x7f100469
 
-    .line 54
+    .line 74
     invoke-virtual {p0, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    .line 57
+    .line 77
     invoke-virtual {p0, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p0
 
-    .line 58
+    .line 78
     invoke-virtual {p0}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object p0
 
-    .line 59
+    .line 79
     invoke-virtual {p0}, Lmiuix/appcompat/app/AlertDialog;->show()V
 
     return-void
@@ -241,7 +363,7 @@
 
     return-void
 
-    .line 66
+    .line 86
     :cond_0
     invoke-static {p2}, Lcom/miui/home/launcher/util/WorkProfileHelper;->isShowTip(Ljava/lang/String;)Z
 
@@ -254,21 +376,21 @@
     :cond_1
     const-string v0, "had_show_work_profile_folder"
 
-    .line 69
+    .line 89
     invoke-static {p2, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p2
 
     if-eqz p2, :cond_2
 
-    const p2, 0x7f1003e1
+    const p2, 0x7f10046b
 
     goto :goto_0
 
     :cond_2
-    const p2, 0x7f1003de
+    const p2, 0x7f100468
 
-    .line 70
+    .line 90
     :goto_0
     new-instance v0, Lmiuix/popupwidget/widget/GuidePopupWindow;
 
@@ -276,22 +398,22 @@
 
     const/16 p0, 0x8
 
-    .line 71
+    .line 91
     invoke-virtual {v0, p0}, Lmiuix/popupwidget/widget/GuidePopupWindow;->setArrowMode(I)V
 
-    .line 72
+    .line 92
     invoke-virtual {v0, p2}, Lmiuix/popupwidget/widget/GuidePopupWindow;->setGuideText(I)V
 
     const/4 p0, 0x0
 
-    .line 73
+    .line 93
     invoke-virtual {v0, p1, p0, p0}, Lmiuix/popupwidget/widget/GuidePopupWindow;->show(Landroid/view/View;II)V
 
     return-void
 .end method
 
 .method public static showWorkProfileTipsOnDrawer(Landroid/content/Context;Ljava/util/function/Consumer;)V
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -315,51 +437,21 @@
 
     .line 34
     :cond_0
-    new-instance v0, Lmiuix/appcompat/app/AlertDialog$Builder;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const v1, 0x7f110005
+    const/16 v1, 0x1e
 
-    invoke-direct {v0, p0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
-
-    const v1, 0x7f1003e2
+    if-gt v0, v1, :cond_1
 
     .line 35
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
+    invoke-static {p0, p1}, Lcom/miui/home/launcher/util/WorkProfileHelper;->showLessThanAndroidS(Landroid/content/Context;Ljava/util/function/Consumer;)V
 
-    move-result-object v0
-
-    const v1, 0x7f1003de
-
-    .line 36
-    invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    const v1, 0x7f1003e0
-
-    new-instance v2, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$0G66q0Cnr7qJdQWnTXtdJKIiaVI;
-
-    invoke-direct {v2, p1, p0}, Lcom/miui/home/launcher/util/-$$Lambda$WorkProfileHelper$0G66q0Cnr7qJdQWnTXtdJKIiaVI;-><init>(Ljava/util/function/Consumer;Landroid/content/Context;)V
+    goto :goto_0
 
     .line 37
-    invoke-virtual {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
+    :cond_1
+    invoke-static {p0}, Lcom/miui/home/launcher/util/WorkProfileHelper;->showMoreThanAndroidR(Landroid/content/Context;)V
 
-    move-result-object p0
-
-    const/4 p1, 0x0
-
-    .line 44
-    invoke-virtual {p0, p1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setCancelable(Z)Lmiuix/appcompat/app/AlertDialog$Builder;
-
-    move-result-object p0
-
-    .line 45
-    invoke-virtual {p0}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
-
-    move-result-object p0
-
-    .line 46
-    invoke-virtual {p0}, Lmiuix/appcompat/app/AlertDialog;->show()V
-
+    :goto_0
     return-void
 .end method

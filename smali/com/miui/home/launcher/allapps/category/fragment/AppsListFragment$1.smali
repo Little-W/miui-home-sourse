@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;I)V
     .locals 0
 
-    .line 205
+    .line 200
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1;->this$0:Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;
 
     iput p2, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1;->val$position:I
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 208
+    .line 203
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1;->this$0:Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;
 
     iget-object v0, v0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
@@ -53,12 +53,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 209
+    .line 204
     new-instance v0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1$1;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1$1;-><init>(Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1;)V
 
-    .line 218
+    .line 213
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1;->this$0:Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;
 
     iget-object v1, v1, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
@@ -67,7 +67,7 @@
 
     goto :goto_0
 
-    .line 220
+    .line 215
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment$1;->this$0:Lcom/miui/home/launcher/allapps/category/fragment/AppsListFragment;
 

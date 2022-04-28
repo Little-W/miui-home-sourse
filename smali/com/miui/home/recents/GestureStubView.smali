@@ -99,6 +99,8 @@
 
 .field private mNotchRect:Landroid/graphics/Rect;
 
+.field private mOnComputeInternalInsetsListener:Lcom/android/systemui/shared/recents/touchableRegion/OnComputeInternalInsetsListenerCompat;
+
 .field private mPendingResetStatus:Z
 
 .field private mRotation:I
@@ -111,6 +113,8 @@
 
 .field private mSwipeInRightDirection:Z
 
+.field private mUseEmptyTouchableRegion:Z
+
 .field private mVibrator:Landroid/os/Vibrator;
 
 .field private mWindowManager:Landroid/view/WindowManager;
@@ -120,37 +124,37 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .line 293
+    .line 312
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x2
 
-    .line 108
+    .line 112
     new-array v1, v0, [I
 
     iput-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mLocation:[I
 
     const/4 v1, -0x1
 
-    .line 110
+    .line 114
     iput v1, p0, Lcom/miui/home/recents/GestureStubView;->mCurrAction:I
 
-    .line 111
+    .line 115
     iput v1, p0, Lcom/miui/home/recents/GestureStubView;->mScreenWidth:I
 
-    .line 112
+    .line 116
     iput v1, p0, Lcom/miui/home/recents/GestureStubView;->mScreenHeight:I
 
-    .line 113
+    .line 117
     iput v1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubPos:I
 
-    .line 114
+    .line 118
     iput v1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubSize:I
 
-    .line 115
+    .line 119
     iput v1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubDefaultSize:I
 
-    .line 117
+    .line 121
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
@@ -159,45 +163,55 @@
 
     const/4 v1, 0x0
 
-    .line 123
+    .line 127
     iput v1, p0, Lcom/miui/home/recents/GestureStubView;->mRotation:I
 
     const/high16 v2, -0x40800000    # -1.0f
 
-    .line 124
+    .line 128
     iput v2, p0, Lcom/miui/home/recents/GestureStubView;->mDensity:F
 
-    .line 125
+    .line 129
     iput-boolean v1, p0, Lcom/miui/home/recents/GestureStubView;->mNeedAdjustArrowPosition:Z
 
-    .line 126
+    .line 130
     iput-boolean v1, p0, Lcom/miui/home/recents/GestureStubView;->mDisableQuickSwitch:Z
 
-    .line 144
+    .line 148
     new-instance v2, Lcom/miui/home/recents/GestureStubView$1;
 
     invoke-direct {v2, p0}, Lcom/miui/home/recents/GestureStubView$1;-><init>(Lcom/miui/home/recents/GestureStubView;)V
 
-    iput-object v2, p0, Lcom/miui/home/recents/GestureStubView;->mAnimatorListener:Landroid/animation/Animator$AnimatorListener;
+    iput-object v2, p0, Lcom/miui/home/recents/GestureStubView;->mOnComputeInternalInsetsListener:Lcom/android/systemui/shared/recents/touchableRegion/OnComputeInternalInsetsListenerCompat;
 
-    .line 169
+    .line 161
     new-instance v2, Lcom/miui/home/recents/GestureStubView$2;
 
     invoke-direct {v2, p0}, Lcom/miui/home/recents/GestureStubView$2;-><init>(Lcom/miui/home/recents/GestureStubView;)V
 
+    iput-object v2, p0, Lcom/miui/home/recents/GestureStubView;->mAnimatorListener:Landroid/animation/Animator$AnimatorListener;
+
+    .line 188
+    new-instance v2, Lcom/miui/home/recents/GestureStubView$3;
+
+    invoke-direct {v2, p0}, Lcom/miui/home/recents/GestureStubView$3;-><init>(Lcom/miui/home/recents/GestureStubView;)V
+
     iput-object v2, p0, Lcom/miui/home/recents/GestureStubView;->mGesturesBackCallback:Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;
 
-    .line 502
+    .line 522
+    iput-boolean v1, p0, Lcom/miui/home/recents/GestureStubView;->mUseEmptyTouchableRegion:Z
+
+    .line 536
     new-instance v2, Landroid/content/res/Configuration;
 
     invoke-direct {v2}, Landroid/content/res/Configuration;-><init>()V
 
     iput-object v2, p0, Lcom/miui/home/recents/GestureStubView;->mLastConfiguration:Landroid/content/res/Configuration;
 
-    .line 295
+    .line 314
     iput-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mContext:Landroid/content/Context;
 
-    .line 297
+    .line 316
     iget-object v2, p0, Lcom/miui/home/recents/GestureStubView;->mLastConfiguration:Landroid/content/res/Configuration;
 
     invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->getResources()Landroid/content/res/Resources;
@@ -210,13 +224,13 @@
 
     invoke-virtual {v2, v3}, Landroid/content/res/Configuration;->updateFrom(Landroid/content/res/Configuration;)I
 
-    .line 299
+    .line 318
     iput-boolean v1, p0, Lcom/miui/home/recents/GestureStubView;->mIsGestureStarted:Z
 
-    .line 300
+    .line 319
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubPos:I
 
-    .line 302
+    .line 321
     new-instance v0, Lcom/miui/home/recents/GestureStubView$H;
 
     const/4 v1, 0x0
@@ -225,9 +239,9 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mHandler:Lcom/miui/home/recents/GestureStubView$H;
 
-    const-string/jumbo v0, "window"
+    const-string v0, "window"
 
-    .line 303
+    .line 322
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -236,7 +250,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 305
+    .line 324
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -249,16 +263,16 @@
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mRotation:I
 
-    .line 307
+    .line 326
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->closeForceDarkAllowed(Landroid/view/View;)V
 
-    .line 309
+    .line 328
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->initNotchRect()V
 
-    .line 310
+    .line 329
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->initGestureStubSize()V
 
-    .line 311
+    .line 330
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->getGestureStubWindowParam()Landroid/view/WindowManager$LayoutParams;
@@ -267,7 +281,7 @@
 
     invoke-interface {v0, p0, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 312
+    .line 331
     new-instance v0, Lcom/miui/home/recents/GestureStubView$StubViewDisplayListener;
 
     invoke-direct {v0, p0, v1}, Lcom/miui/home/recents/GestureStubView$StubViewDisplayListener;-><init>(Lcom/miui/home/recents/GestureStubView;Lcom/miui/home/recents/GestureStubView$1;)V
@@ -276,7 +290,7 @@
 
     const-string v0, "display"
 
-    .line 313
+    .line 332
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -287,7 +301,7 @@
 
     const-string v0, "keyguard"
 
-    .line 314
+    .line 333
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -296,7 +310,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mKeyguardManager:Landroid/app/KeyguardManager;
 
-    .line 315
+    .line 334
     new-instance v0, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;
 
     iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mHandler:Lcom/miui/home/recents/GestureStubView$H;
@@ -305,14 +319,14 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mSettingsObserver:Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;
 
-    .line 316
+    .line 335
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 317
+    .line 336
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mContentResolver:Landroid/content/ContentResolver;
 
     invoke-static {p1}, Lcom/miui/home/recents/GestureStubView;->isUserSetUp(Landroid/content/ContentResolver;)Z
@@ -321,7 +335,7 @@
 
     sput-boolean p1, Lcom/miui/home/recents/GestureStubView;->isUserSetUp:Z
 
-    .line 319
+    .line 338
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mContext:Landroid/content/Context;
 
     const-string v0, "vibrator"
@@ -334,36 +348,27 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mVibrator:Landroid/os/Vibrator;
 
-    const/16 p1, 0x8
+    const/4 p1, 0x1
 
-    .line 320
-    invoke-virtual {p0, p1}, Lcom/miui/home/recents/GestureStubView;->setVisibility(I)V
+    .line 339
+    invoke-direct {p0, p1}, Lcom/miui/home/recents/GestureStubView;->setKeepHidden(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$002(Lcom/miui/home/recents/GestureStubView;Z)Z
+.method static synthetic access$000(Lcom/miui/home/recents/GestureStubView;)Z
     .locals 0
 
-    .line 51
-    iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mAnimating:Z
+    .line 55
+    iget-boolean p0, p0, Lcom/miui/home/recents/GestureStubView;->mUseEmptyTouchableRegion:Z
 
-    return p1
-.end method
-
-.method static synthetic access$100(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GestureStubView$H;
-    .locals 0
-
-    .line 51
-    iget-object p0, p0, Lcom/miui/home/recents/GestureStubView;->mHandler:Lcom/miui/home/recents/GestureStubView$H;
-
-    return-object p0
+    return p0
 .end method
 
 .method static synthetic access$1000(Lcom/miui/home/recents/GestureStubView;)Z
     .locals 0
 
-    .line 51
+    .line 55
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->isSwipeRightInDirection()Z
 
     move-result p0
@@ -371,10 +376,19 @@
     return p0
 .end method
 
+.method static synthetic access$102(Lcom/miui/home/recents/GestureStubView;Z)Z
+    .locals 0
+
+    .line 55
+    iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mAnimating:Z
+
+    return p1
+.end method
+
 .method static synthetic access$1100(Lcom/miui/home/recents/GestureStubView;IZ)V
     .locals 0
 
-    .line 51
+    .line 55
     invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/GestureStubView;->injectKeyEvent(IZ)V
 
     return-void
@@ -383,7 +397,7 @@
 .method static synthetic access$1200(Lcom/miui/home/recents/GestureStubView;)Landroid/app/KeyguardManager;
     .locals 0
 
-    .line 51
+    .line 55
     iget-object p0, p0, Lcom/miui/home/recents/GestureStubView;->mKeyguardManager:Landroid/app/KeyguardManager;
 
     return-object p0
@@ -392,7 +406,7 @@
 .method static synthetic access$1300(Lcom/miui/home/recents/GestureStubView;)Landroid/content/ContentResolver;
     .locals 0
 
-    .line 51
+    .line 55
     iget-object p0, p0, Lcom/miui/home/recents/GestureStubView;->mContentResolver:Landroid/content/ContentResolver;
 
     return-object p0
@@ -401,7 +415,7 @@
 .method static synthetic access$1302(Lcom/miui/home/recents/GestureStubView;Landroid/content/ContentResolver;)Landroid/content/ContentResolver;
     .locals 0
 
-    .line 51
+    .line 55
     iput-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mContentResolver:Landroid/content/ContentResolver;
 
     return-object p1
@@ -410,7 +424,7 @@
 .method static synthetic access$1400(Lcom/miui/home/recents/GestureStubView;)Landroid/content/Context;
     .locals 0
 
-    .line 51
+    .line 55
     iget-object p0, p0, Lcom/miui/home/recents/GestureStubView;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -419,7 +433,7 @@
 .method static synthetic access$1500(Lcom/miui/home/recents/GestureStubView;)I
     .locals 0
 
-    .line 51
+    .line 55
     iget p0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubPos:I
 
     return p0
@@ -428,7 +442,7 @@
 .method static synthetic access$1600(Lcom/miui/home/recents/GestureStubView;)Landroid/os/Vibrator;
     .locals 0
 
-    .line 51
+    .line 55
     iget-object p0, p0, Lcom/miui/home/recents/GestureStubView;->mVibrator:Landroid/os/Vibrator;
 
     return-object p0
@@ -437,7 +451,7 @@
 .method static synthetic access$1700(Lcom/miui/home/recents/GestureStubView;)Landroid/animation/Animator$AnimatorListener;
     .locals 0
 
-    .line 51
+    .line 55
     iget-object p0, p0, Lcom/miui/home/recents/GestureStubView;->mAnimatorListener:Landroid/animation/Animator$AnimatorListener;
 
     return-object p0
@@ -446,7 +460,7 @@
 .method static synthetic access$1800(Lcom/miui/home/recents/GestureStubView;I)V
     .locals 0
 
-    .line 51
+    .line 55
     invoke-direct {p0, p1}, Lcom/miui/home/recents/GestureStubView;->injectKeyEvent(I)V
 
     return-void
@@ -455,7 +469,7 @@
 .method static synthetic access$200(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GestureBackArrowView;
     .locals 0
 
-    .line 51
+    .line 55
     iget-object p0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureBackArrowView:Lcom/miui/home/recents/GestureBackArrowView;
 
     return-object p0
@@ -464,7 +478,7 @@
 .method static synthetic access$2100(Lcom/miui/home/recents/GestureStubView;)Landroid/view/MotionEvent;
     .locals 0
 
-    .line 51
+    .line 55
     iget-object p0, p0, Lcom/miui/home/recents/GestureStubView;->mDownEvent:Landroid/view/MotionEvent;
 
     return-object p0
@@ -473,7 +487,7 @@
 .method static synthetic access$2102(Lcom/miui/home/recents/GestureStubView;Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
     .locals 0
 
-    .line 51
+    .line 55
     iput-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mDownEvent:Landroid/view/MotionEvent;
 
     return-object p1
@@ -482,7 +496,7 @@
 .method static synthetic access$2200(Lcom/miui/home/recents/GestureStubView;)F
     .locals 0
 
-    .line 51
+    .line 55
     iget p0, p0, Lcom/miui/home/recents/GestureStubView;->mCurrX:F
 
     return p0
@@ -491,133 +505,142 @@
 .method static synthetic access$2300(Lcom/miui/home/recents/GestureStubView;)F
     .locals 0
 
-    .line 51
+    .line 55
     iget p0, p0, Lcom/miui/home/recents/GestureStubView;->mCurrY:F
 
     return p0
 .end method
 
-.method static synthetic access$2400(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GesturesBackController;
+.method static synthetic access$2400(Lcom/miui/home/recents/GestureStubView;Z)V
     .locals 0
 
-    .line 51
+    .line 55
+    invoke-direct {p0, p1}, Lcom/miui/home/recents/GestureStubView;->setKeepHidden(Z)V
+
+    return-void
+.end method
+
+.method static synthetic access$2500(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GesturesBackController;
+    .locals 0
+
+    .line 55
     iget-object p0, p0, Lcom/miui/home/recents/GestureStubView;->mGesturesBackController:Lcom/miui/home/recents/GesturesBackController;
 
     return-object p0
 .end method
 
-.method static synthetic access$2502(Lcom/miui/home/recents/GestureStubView;Z)Z
+.method static synthetic access$2602(Lcom/miui/home/recents/GestureStubView;Z)Z
     .locals 0
 
-    .line 51
+    .line 55
     iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mPendingResetStatus:Z
 
     return p1
 .end method
 
-.method static synthetic access$2600(Lcom/miui/home/recents/GestureStubView;)Z
+.method static synthetic access$2700(Lcom/miui/home/recents/GestureStubView;Ljava/lang/String;)V
     .locals 0
 
-    .line 51
-    iget-boolean p0, p0, Lcom/miui/home/recents/GestureStubView;->mKeepHidden:Z
-
-    return p0
-.end method
-
-.method static synthetic access$2700(Lcom/miui/home/recents/GestureStubView;)V
-    .locals 0
-
-    .line 51
-    invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->hideGestureStub()V
-
-    return-void
-.end method
-
-.method static synthetic access$2800(Lcom/miui/home/recents/GestureStubView;)I
-    .locals 0
-
-    .line 51
-    iget p0, p0, Lcom/miui/home/recents/GestureStubView;->mCurrAction:I
-
-    return p0
-.end method
-
-.method static synthetic access$2900(Lcom/miui/home/recents/GestureStubView;I)V
-    .locals 0
-
-    .line 51
-    invoke-direct {p0, p1}, Lcom/miui/home/recents/GestureStubView;->injectMotionEvent(I)V
-
-    return-void
-.end method
-
-.method static synthetic access$300(Lcom/miui/home/recents/GestureStubView;Ljava/lang/String;)V
-    .locals 0
-
-    .line 51
+    .line 55
     invoke-direct {p0, p1}, Lcom/miui/home/recents/GestureStubView;->resetRenderProperty(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method static synthetic access$3000(Lcom/miui/home/recents/GestureStubView;)V
+.method static synthetic access$2800(Lcom/miui/home/recents/GestureStubView;)V
     .locals 0
 
-    .line 51
+    .line 55
+    invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->hideGestureStub()V
+
+    return-void
+.end method
+
+.method static synthetic access$2900(Lcom/miui/home/recents/GestureStubView;)I
+    .locals 0
+
+    .line 55
+    iget p0, p0, Lcom/miui/home/recents/GestureStubView;->mCurrAction:I
+
+    return p0
+.end method
+
+.method static synthetic access$300(Lcom/miui/home/recents/GestureStubView;)Lcom/miui/home/recents/GestureStubView$H;
+    .locals 0
+
+    .line 55
+    iget-object p0, p0, Lcom/miui/home/recents/GestureStubView;->mHandler:Lcom/miui/home/recents/GestureStubView$H;
+
+    return-object p0
+.end method
+
+.method static synthetic access$3000(Lcom/miui/home/recents/GestureStubView;I)V
+    .locals 0
+
+    .line 55
+    invoke-direct {p0, p1}, Lcom/miui/home/recents/GestureStubView;->injectMotionEvent(I)V
+
+    return-void
+.end method
+
+.method static synthetic access$3100(Lcom/miui/home/recents/GestureStubView;)V
+    .locals 0
+
+    .line 55
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->updateAssistXPosition()V
 
     return-void
 .end method
 
-.method static synthetic access$3100(Lcom/miui/home/recents/GestureStubView;)F
+.method static synthetic access$3200(Lcom/miui/home/recents/GestureStubView;)F
     .locals 0
 
-    .line 51
+    .line 55
     iget p0, p0, Lcom/miui/home/recents/GestureStubView;->mDownX:F
 
     return p0
 .end method
 
-.method static synthetic access$3200(Lcom/miui/home/recents/GestureStubView;)I
+.method static synthetic access$3300(Lcom/miui/home/recents/GestureStubView;)I
     .locals 0
 
-    .line 51
+    .line 55
     iget p0, p0, Lcom/miui/home/recents/GestureStubView;->mScreenWidth:I
 
     return p0
 .end method
 
-.method static synthetic access$3300(Lcom/miui/home/recents/GestureStubView;Z)V
+.method static synthetic access$3400(Lcom/miui/home/recents/GestureStubView;Z)V
     .locals 0
 
-    .line 51
+    .line 55
     invoke-direct {p0, p1}, Lcom/miui/home/recents/GestureStubView;->adaptRotation(Z)V
 
     return-void
 .end method
 
-.method static synthetic access$3402(Lcom/miui/home/recents/GestureStubView;Z)Z
+.method static synthetic access$3502(Lcom/miui/home/recents/GestureStubView;Z)Z
     .locals 0
 
-    .line 51
+    .line 55
     iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mHideNotch:Z
 
     return p1
 .end method
 
-.method static synthetic access$3502(Lcom/miui/home/recents/GestureStubView;Z)Z
+.method static synthetic access$3602(Lcom/miui/home/recents/GestureStubView;Z)Z
     .locals 0
 
-    .line 51
+    .line 55
     iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mNeedAdaptRotation:Z
 
     return p1
 .end method
 
-.method static synthetic access$3600(Lcom/miui/home/recents/GestureStubView;)I
+.method static synthetic access$3700(Lcom/miui/home/recents/GestureStubView;)I
     .locals 0
 
-    .line 51
+    .line 55
     iget p0, p0, Lcom/miui/home/recents/GestureStubView;->mRotation:I
 
     return p0
@@ -626,7 +649,7 @@
 .method static synthetic access$400(Lcom/miui/home/recents/GestureStubView;)Z
     .locals 0
 
-    .line 51
+    .line 55
     iget-boolean p0, p0, Lcom/miui/home/recents/GestureStubView;->mIsGestureStarted:Z
 
     return p0
@@ -635,7 +658,7 @@
 .method static synthetic access$402(Lcom/miui/home/recents/GestureStubView;Z)Z
     .locals 0
 
-    .line 51
+    .line 55
     iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mIsGestureStarted:Z
 
     return p1
@@ -644,7 +667,7 @@
 .method static synthetic access$500(Lcom/miui/home/recents/GestureStubView;)V
     .locals 0
 
-    .line 51
+    .line 55
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->clearMessages()V
 
     return-void
@@ -653,7 +676,7 @@
 .method static synthetic access$600(Lcom/miui/home/recents/GestureStubView;)V
     .locals 0
 
-    .line 51
+    .line 55
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->renderView()V
 
     return-void
@@ -662,7 +685,7 @@
 .method static synthetic access$700(Lcom/miui/home/recents/GestureStubView;)Z
     .locals 0
 
-    .line 51
+    .line 55
     iget-boolean p0, p0, Lcom/miui/home/recents/GestureStubView;->mNeedAdjustArrowPosition:Z
 
     return p0
@@ -671,7 +694,7 @@
 .method static synthetic access$800(Lcom/miui/home/recents/GestureStubView;F)[I
     .locals 0
 
-    .line 51
+    .line 55
     invoke-direct {p0, p1}, Lcom/miui/home/recents/GestureStubView;->calcBackArrowParamsAtNotchSide(F)[I
 
     move-result-object p0
@@ -682,7 +705,7 @@
 .method static synthetic access$900(Lcom/miui/home/recents/GestureStubView;I)Z
     .locals 0
 
-    .line 51
+    .line 55
     invoke-direct {p0, p1}, Lcom/miui/home/recents/GestureStubView;->isInSpeedLimit(I)Z
 
     move-result p0
@@ -693,14 +716,14 @@
 .method private adaptAlignNotchArrowXStart()I
     .locals 2
 
-    .line 416
+    .line 439
     iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mHideNotch:Z
 
     if-nez v0, :cond_1
 
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mNotchRect:Landroid/graphics/Rect;
 
-    .line 417
+    .line 440
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -713,7 +736,7 @@
 
     goto :goto_0
 
-    .line 420
+    .line 443
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mNotchRect:Landroid/graphics/Rect;
 
@@ -735,7 +758,7 @@
 .method private adaptBesideNotchArrowXStart()I
     .locals 1
 
-    .line 395
+    .line 418
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->isFocusWindowAdaptNotch()Z
 
     move-result v0
@@ -746,7 +769,7 @@
 
     return v0
 
-    .line 398
+    .line 421
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mNotchRect:Landroid/graphics/Rect;
 
@@ -762,7 +785,7 @@
 .method private adaptNotch()V
     .locals 4
 
-    .line 589
+    .line 623
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNotch()Z
 
     move-result v0
@@ -777,7 +800,7 @@
 
     if-lez v0, :cond_4
 
-    .line 590
+    .line 624
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mDisplay:Landroid/view/Display;
 
     invoke-virtual {v0}, Landroid/view/Display;->getRotation()I
@@ -794,23 +817,23 @@
 
     if-eq v0, v3, :cond_0
 
-    .line 610
+    .line 644
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubDefaultSize:I
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubSize:I
 
-    .line 611
+    .line 645
     iput-boolean v1, p0, Lcom/miui/home/recents/GestureStubView;->mNeedAdjustArrowPosition:Z
 
     goto :goto_0
 
-    .line 601
+    .line 635
     :cond_0
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubPos:I
 
     if-ne v0, v2, :cond_1
 
-    .line 602
+    .line 636
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubDefaultSize:I
 
     iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mNotchRect:Landroid/graphics/Rect;
@@ -823,7 +846,7 @@
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubSize:I
 
-    .line 603
+    .line 637
     iput-boolean v2, p0, Lcom/miui/home/recents/GestureStubView;->mNeedAdjustArrowPosition:Z
 
     goto :goto_0
@@ -831,23 +854,23 @@
     :cond_1
     if-nez v0, :cond_4
 
-    .line 605
+    .line 639
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubDefaultSize:I
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubSize:I
 
-    .line 606
+    .line 640
     iput-boolean v1, p0, Lcom/miui/home/recents/GestureStubView;->mNeedAdjustArrowPosition:Z
 
     goto :goto_0
 
-    .line 592
+    .line 626
     :cond_2
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubPos:I
 
     if-nez v0, :cond_3
 
-    .line 593
+    .line 627
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubDefaultSize:I
 
     iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mNotchRect:Landroid/graphics/Rect;
@@ -860,7 +883,7 @@
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubSize:I
 
-    .line 594
+    .line 628
     iput-boolean v2, p0, Lcom/miui/home/recents/GestureStubView;->mNeedAdjustArrowPosition:Z
 
     goto :goto_0
@@ -868,12 +891,12 @@
     :cond_3
     if-ne v0, v2, :cond_4
 
-    .line 596
+    .line 630
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubDefaultSize:I
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubSize:I
 
-    .line 597
+    .line 631
     iput-boolean v1, p0, Lcom/miui/home/recents/GestureStubView;->mNeedAdjustArrowPosition:Z
 
     :cond_4
@@ -884,18 +907,18 @@
 .method private adaptNotchHidden()V
     .locals 1
 
-    .line 1139
+    .line 1189
     iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mNeedAdaptRotation:Z
 
     if-eqz v0, :cond_0
 
-    .line 1140
+    .line 1190
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->rotateGesture()V
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 1142
+    .line 1192
     iput-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mNeedAdaptRotation:Z
 
     return-void
@@ -904,7 +927,7 @@
 .method private adaptPNotchScreen(Landroid/view/WindowManager$LayoutParams;)V
     .locals 2
 
-    .line 745
+    .line 798
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1c
@@ -914,24 +937,24 @@
     :try_start_0
     const-string v0, "android.view.WindowManager$LayoutParams"
 
-    .line 747
+    .line 800
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v1, "layoutInDisplayCutoutMode"
 
-    .line 748
+    .line 801
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    .line 749
+    .line 802
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 750
+    .line 803
     invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Field;->setInt(Ljava/lang/Object;I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -945,7 +968,9 @@
 
     const-string v1, "adaptPNotchScreen"
 
-    .line 752
+    .line 805
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_0
     :goto_0
     return-void
@@ -954,7 +979,7 @@
 .method private adaptRotation(Z)V
     .locals 3
 
-    .line 1129
+    .line 1179
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mDisplay:Landroid/view/Display;
 
     invoke-virtual {p1}, Landroid/view/Display;->getRotation()I
@@ -963,7 +988,7 @@
 
     const-string v0, "GestureStubView"
 
-    .line 1130
+    .line 1180
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -986,15 +1011,17 @@
 
     move-result-object v1
 
-    .line 1132
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1182
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mRotation:I
 
     if-eq p1, v0, :cond_0
 
-    .line 1133
+    .line 1183
     iput p1, p0, Lcom/miui/home/recents/GestureStubView;->mRotation:I
 
-    .line 1134
+    .line 1184
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->rotateGesture()V
 
     :cond_0
@@ -1004,14 +1031,14 @@
 .method private calcBackArrowParamsAtNotchSide(F)[I
     .locals 5
 
-    .line 354
+    .line 377
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mRotation:I
 
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_2
 
-    .line 365
+    .line 388
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mNotchRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->left:I
@@ -1022,12 +1049,12 @@
 
     if-gez v0, :cond_0
 
-    .line 366
+    .line 389
     sget-object v0, Lcom/miui/home/recents/GestureStubView$EventPosition;->UPON_NOTCH:Lcom/miui/home/recents/GestureStubView$EventPosition;
 
     goto :goto_0
 
-    .line 367
+    .line 390
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mNotchRect:Landroid/graphics/Rect;
 
@@ -1039,18 +1066,18 @@
 
     if-lez v0, :cond_1
 
-    .line 368
+    .line 391
     sget-object v0, Lcom/miui/home/recents/GestureStubView$EventPosition;->BELOW_NOTCH:Lcom/miui/home/recents/GestureStubView$EventPosition;
 
     goto :goto_0
 
-    .line 370
+    .line 393
     :cond_1
     sget-object v0, Lcom/miui/home/recents/GestureStubView$EventPosition;->ALIGN_NOTCH:Lcom/miui/home/recents/GestureStubView$EventPosition;
 
     goto :goto_0
 
-    .line 356
+    .line 379
     :cond_2
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mScreenWidth:I
 
@@ -1066,12 +1093,12 @@
 
     if-gez v0, :cond_3
 
-    .line 357
+    .line 380
     sget-object v0, Lcom/miui/home/recents/GestureStubView$EventPosition;->UPON_NOTCH:Lcom/miui/home/recents/GestureStubView$EventPosition;
 
     goto :goto_0
 
-    .line 358
+    .line 381
     :cond_3
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mScreenWidth:I
 
@@ -1087,23 +1114,23 @@
 
     if-lez v0, :cond_4
 
-    .line 359
+    .line 382
     sget-object v0, Lcom/miui/home/recents/GestureStubView$EventPosition;->BELOW_NOTCH:Lcom/miui/home/recents/GestureStubView$EventPosition;
 
     goto :goto_0
 
-    .line 361
+    .line 384
     :cond_4
     sget-object v0, Lcom/miui/home/recents/GestureStubView$EventPosition;->ALIGN_NOTCH:Lcom/miui/home/recents/GestureStubView$EventPosition;
 
     :goto_0
     const/4 v2, 0x3
 
-    .line 375
+    .line 398
     new-array v2, v2, [I
 
-    .line 376
-    sget-object v3, Lcom/miui/home/recents/GestureStubView$3;->$SwitchMap$com$miui$home$recents$GestureStubView$EventPosition:[I
+    .line 399
+    sget-object v3, Lcom/miui/home/recents/GestureStubView$4;->$SwitchMap$com$miui$home$recents$GestureStubView$EventPosition:[I
 
     invoke-virtual {v0}, Lcom/miui/home/recents/GestureStubView$EventPosition;->ordinal()I
 
@@ -1119,7 +1146,7 @@
 
     goto :goto_1
 
-    .line 384
+    .line 407
     :pswitch_0
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mNotchRect:Landroid/graphics/Rect;
 
@@ -1129,14 +1156,14 @@
 
     aput p1, v2, v4
 
-    .line 385
+    .line 408
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->adaptAlignNotchArrowXStart()I
 
     move-result p1
 
     aput p1, v2, v1
 
-    .line 386
+    .line 409
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mNotchRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
@@ -1168,7 +1195,7 @@
 
     aput p1, v2, v4
 
-    .line 380
+    .line 403
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->adaptBesideNotchArrowXStart()I
 
     move-result p1
@@ -1193,14 +1220,14 @@
 .method private clearMessages()V
     .locals 2
 
-    .line 908
+    .line 960
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mHandler:Lcom/miui/home/recents/GestureStubView$H;
 
     const/16 v1, 0x100
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/GestureStubView$H;->removeMessages(I)V
 
-    .line 909
+    .line 961
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mHandler:Lcom/miui/home/recents/GestureStubView$H;
 
     const/16 v1, 0xff
@@ -1213,7 +1240,7 @@
 .method private getAnimatingLayoutParam()Landroid/view/WindowManager$LayoutParams;
     .locals 7
 
-    .line 758
+    .line 811
     new-instance v6, Landroid/view/WindowManager$LayoutParams;
 
     const/4 v1, -0x1
@@ -1230,12 +1257,12 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/view/WindowManager$LayoutParams;-><init>(IIIII)V
 
-    .line 766
+    .line 819
     invoke-direct {p0, v6}, Lcom/miui/home/recents/GestureStubView;->adaptPNotchScreen(Landroid/view/WindowManager$LayoutParams;)V
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 767
+    .line 820
     iput v0, v6, Landroid/view/WindowManager$LayoutParams;->alpha:F
 
     return-object v6
@@ -1246,10 +1273,10 @@
 
     const/4 v0, 0x0
 
-    .line 689
+    .line 742
     invoke-direct {p0, v0}, Lcom/miui/home/recents/GestureStubView;->adaptRotation(Z)V
 
-    .line 690
+    .line 743
     iget v1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubPos:I
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -1258,7 +1285,7 @@
 
     if-ne v1, v3, :cond_0
 
-    .line 691
+    .line 744
     iget v1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubSize:I
 
     const/4 v4, -0x1
@@ -1269,11 +1296,11 @@
 
     goto :goto_1
 
-    .line 694
+    .line 747
     :cond_0
     iget v4, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubSize:I
 
-    .line 695
+    .line 748
     iget v1, p0, Lcom/miui/home/recents/GestureStubView;->mRotation:I
 
     const v5, 0x3f19999a    # 0.6f
@@ -1284,7 +1311,7 @@
 
     goto :goto_0
 
-    .line 699
+    .line 752
     :cond_1
     iget v1, p0, Lcom/miui/home/recents/GestureStubView;->mScreenWidth:I
 
@@ -1300,7 +1327,7 @@
 
     goto :goto_1
 
-    .line 696
+    .line 749
     :cond_2
     :goto_0
     iget-boolean v1, p0, Lcom/miui/home/recents/GestureStubView;->mIsInMultiWindowMode:Z
@@ -1313,7 +1340,7 @@
 
     move v5, v2
 
-    .line 697
+    .line 750
     :cond_3
     iget v1, p0, Lcom/miui/home/recents/GestureStubView;->mScreenHeight:I
 
@@ -1327,13 +1354,13 @@
 
     move v6, v4
 
-    .line 702
+    .line 755
     :goto_1
     iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
     if-nez v1, :cond_4
 
-    .line 703
+    .line 756
     new-instance v1, Landroid/view/WindowManager$LayoutParams;
 
     const/16 v8, 0x7eb
@@ -1348,29 +1375,29 @@
 
     iput-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
-    .line 711
+    .line 764
     iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {p0, v1}, Lcom/miui/home/recents/GestureStubView;->adaptPNotchScreen(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 712
+    .line 765
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/GestureStubView;->setBackgroundColor(I)V
 
-    .line 713
+    .line 766
     iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->alpha:F
 
     goto :goto_2
 
-    .line 715
+    .line 768
     :cond_4
     iput v6, v1, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 716
+    .line 769
     iput v7, v1, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 719
+    .line 772
     :goto_2
     iget v1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubPos:I
 
@@ -1378,17 +1405,17 @@
 
     if-ne v1, v3, :cond_5
 
-    .line 720
+    .line 773
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
     iput v2, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
     const-string v1, "GestureStubBottom"
 
-    .line 721
+    .line 774
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 722
+    .line 775
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
     return-object v0
@@ -1408,7 +1435,7 @@
     :cond_7
     const/4 v1, 0x5
 
-    .line 729
+    .line 782
     :goto_3
     iget v4, p0, Lcom/miui/home/recents/GestureStubView;->mRotation:I
 
@@ -1421,7 +1448,7 @@
     :cond_8
     const/16 v2, 0x10
 
-    .line 735
+    .line 788
     iget-object v3, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
     const/4 v4, 0x0
@@ -1434,7 +1461,7 @@
     :goto_4
     const/high16 v3, 0x41c80000    # 25.0f
 
-    .line 731
+    .line 784
     invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -1453,12 +1480,12 @@
 
     div-float/2addr v4, v3
 
-    .line 732
+    .line 785
     iget-object v3, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
     iput v4, v3, Landroid/view/WindowManager$LayoutParams;->verticalMargin:F
 
-    .line 738
+    .line 791
     :goto_5
     iget-object v3, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
@@ -1475,11 +1502,11 @@
     :cond_a
     const-string v0, "GestureStubRight"
 
-    .line 739
+    .line 792
     :goto_6
     invoke-virtual {v3, v0}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 741
+    .line 794
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
     return-object v0
@@ -1498,32 +1525,32 @@
 
     const/4 v0, 0x1
 
-    .line 454
-    iput-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mKeepHidden:Z
+    .line 477
+    invoke-direct {p0, v0}, Lcom/miui/home/recents/GestureStubView;->setKeepHidden(Z)V
 
-    .line 455
+    .line 478
     iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mDownEvent:Landroid/view/MotionEvent;
 
     if-eqz v1, :cond_0
 
-    .line 456
+    .line 479
     invoke-virtual {v1}, Landroid/view/MotionEvent;->recycle()V
 
     const/4 v1, 0x0
 
-    .line 457
+    .line 480
     iput-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mDownEvent:Landroid/view/MotionEvent;
 
-    .line 459
+    .line 482
     :cond_0
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/GestureStubView;->disableTouch(Z)V
 
-    .line 460
+    .line 483
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureBackArrowView:Lcom/miui/home/recents/GestureBackArrowView;
 
     if-eqz v0, :cond_1
 
-    .line 461
+    .line 484
     invoke-virtual {v0}, Lcom/miui/home/recents/GestureBackArrowView;->reset()V
 
     :cond_1
@@ -1531,7 +1558,9 @@
 
     const-string v1, "hideGestureStub"
 
-    .line 465
+    .line 488
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 .end method
 
@@ -1540,10 +1569,10 @@
 
     const/4 v0, 0x2
 
-    .line 547
+    .line 581
     new-array v0, v0, [I
 
-    .line 548
+    .line 582
     iget v1, p0, Lcom/miui/home/recents/GestureStubView;->mRotation:I
 
     const/4 v2, 0x0
@@ -1552,7 +1581,7 @@
 
     if-ne v1, v3, :cond_0
 
-    .line 549
+    .line 583
     iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mNotchRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
@@ -1565,7 +1594,7 @@
 
     aput v1, v0, v2
 
-    .line 550
+    .line 584
     iget v1, p0, Lcom/miui/home/recents/GestureStubView;->mScreenWidth:I
 
     sub-int/2addr v1, v4
@@ -1579,12 +1608,12 @@
 
     if-ne v1, v4, :cond_1
 
-    .line 552
+    .line 586
     iget v1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubDefaultSize:I
 
     aput v1, v0, v2
 
-    .line 553
+    .line 587
     iget v2, p0, Lcom/miui/home/recents/GestureStubView;->mScreenWidth:I
 
     sub-int/2addr v2, v1
@@ -1601,13 +1630,13 @@
 
     goto :goto_0
 
-    .line 555
+    .line 589
     :cond_1
     iget v1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubDefaultSize:I
 
     aput v1, v0, v2
 
-    .line 556
+    .line 590
     iget v2, p0, Lcom/miui/home/recents/GestureStubView;->mScreenWidth:I
 
     sub-int/2addr v2, v1
@@ -1621,15 +1650,15 @@
 .method private initGestureStubSize()V
     .locals 5
 
-    .line 540
+    .line 574
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->initScreenSizeAndDensity()V
 
-    .line 541
+    .line 575
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->initGestureEdgeSize()[I
 
     move-result-object v0
 
-    .line 542
+    .line 576
     new-instance v1, Lcom/miui/home/recents/GesturesBackController;
 
     iget-object v2, p0, Lcom/miui/home/recents/GestureStubView;->mGesturesBackCallback:Lcom/miui/home/recents/GesturesBackController$GesturesBackCallback;
@@ -1652,7 +1681,7 @@
 .method private initNotchRect()V
     .locals 3
 
-    .line 324
+    .line 343
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -1665,12 +1694,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 326
+    .line 345
     iget v1, p0, Lcom/miui/home/recents/GestureStubView;->mRotation:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 337
+    .line 356
     invoke-virtual {v0}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -1679,7 +1708,7 @@
 
     goto :goto_0
 
-    .line 334
+    .line 353
     :pswitch_0
     invoke-virtual {v0}, Landroid/view/DisplayCutout;->getBoundingRectRight()Landroid/graphics/Rect;
 
@@ -1689,7 +1718,7 @@
 
     goto :goto_0
 
-    .line 331
+    .line 350
     :pswitch_1
     invoke-virtual {v0}, Landroid/view/DisplayCutout;->getBoundingRectBottom()Landroid/graphics/Rect;
 
@@ -1699,7 +1728,7 @@
 
     goto :goto_0
 
-    .line 328
+    .line 347
     :pswitch_2
     invoke-virtual {v0}, Landroid/view/DisplayCutout;->getBoundingRectLeft()Landroid/graphics/Rect;
 
@@ -1711,7 +1740,7 @@
     :goto_0
     const-string v0, "GestureStubView"
 
-    .line 341
+    .line 360
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1728,7 +1757,11 @@
 
     move-result-object v1
 
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1
@@ -1741,12 +1774,12 @@
 .method private initScreenSizeAndDensity()V
     .locals 3
 
-    .line 562
+    .line 596
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
-    .line 563
+    .line 597
     iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -1755,42 +1788,42 @@
 
     iput-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mDisplay:Landroid/view/Display;
 
-    .line 564
+    .line 598
     iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mDisplay:Landroid/view/Display;
 
     invoke-virtual {v1, v0}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
-    .line 566
+    .line 600
     iget v1, v0, Landroid/graphics/Point;->y:I
 
     iget v2, v0, Landroid/graphics/Point;->x:I
 
     if-le v1, v2, :cond_0
 
-    .line 567
+    .line 601
     iget v1, v0, Landroid/graphics/Point;->x:I
 
     iput v1, p0, Lcom/miui/home/recents/GestureStubView;->mScreenWidth:I
 
-    .line 568
+    .line 602
     iget v0, v0, Landroid/graphics/Point;->y:I
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mScreenHeight:I
 
     goto :goto_0
 
-    .line 570
+    .line 604
     :cond_0
     iget v1, v0, Landroid/graphics/Point;->y:I
 
     iput v1, p0, Lcom/miui/home/recents/GestureStubView;->mScreenWidth:I
 
-    .line 571
+    .line 605
     iget v0, v0, Landroid/graphics/Point;->x:I
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mScreenHeight:I
 
-    .line 574
+    .line 608
     :goto_0
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mScreenWidth:I
 
@@ -1804,14 +1837,14 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 582
+    .line 616
     iput v2, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubSize:I
 
     iput v2, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubDefaultSize:I
 
     goto :goto_1
 
-    .line 576
+    .line 610
     :cond_1
     iput v2, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubSize:I
 
@@ -1822,12 +1855,12 @@
     :cond_2
     const/16 v0, 0x28
 
-    .line 579
+    .line 613
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubSize:I
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubDefaultSize:I
 
-    .line 585
+    .line 619
     :goto_1
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mContext:Landroid/content/Context;
 
@@ -1851,7 +1884,7 @@
 
     const/4 v0, 0x1
 
-    .line 959
+    .line 1011
     invoke-direct {p0, p1, v0}, Lcom/miui/home/recents/GestureStubView;->injectKeyEvent(IZ)V
 
     return-void
@@ -1864,7 +1897,7 @@
 
     const-string v0, "GestureStubView"
 
-    .line 964
+    .line 1016
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1881,12 +1914,14 @@
 
     move-result-object v2
 
-    .line 967
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1019
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v17
 
-    .line 968
+    .line 1020
     new-instance v0, Landroid/view/KeyEvent;
 
     const/4 v9, 0x0
@@ -1913,7 +1948,7 @@
 
     invoke-direct/range {v4 .. v16}, Landroid/view/KeyEvent;-><init>(JJIIIIIIII)V
 
-    .line 971
+    .line 1023
     new-instance v2, Landroid/view/KeyEvent;
 
     const/4 v9, 0x1
@@ -1922,7 +1957,7 @@
 
     invoke-direct/range {v4 .. v16}, Landroid/view/KeyEvent;-><init>(JJIIIIIIII)V
 
-    .line 974
+    .line 1026
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/recents/GestureStubView;->getDisplay()Landroid/view/Display;
 
     move-result-object v3
@@ -1933,7 +1968,7 @@
 
     invoke-static {v0, v3}, Lcom/android/systemui/shared/recents/system/InputEventCompat;->setDisplayId(Landroid/view/InputEvent;I)V
 
-    .line 975
+    .line 1027
     invoke-virtual/range {p0 .. p0}, Lcom/miui/home/recents/GestureStubView;->getDisplay()Landroid/view/Display;
 
     move-result-object v3
@@ -1948,7 +1983,7 @@
 
     if-eqz p2, :cond_1
 
-    .line 978
+    .line 1030
     invoke-static {}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->getInstance()Lcom/miui/home/launcher/common/HapticFeedbackCompat;
 
     move-result-object v4
@@ -1959,21 +1994,21 @@
 
     if-eqz v4, :cond_0
 
-    .line 979
+    .line 1031
     invoke-static {}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->getInstance()Lcom/miui/home/launcher/common/HapticFeedbackCompat;
 
     move-result-object v4
 
-    invoke-virtual {v4, v1}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->performGestureBackHandUp(Landroid/view/View;)V
+    invoke-virtual {v4}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->performGestureBackHandUp()V
 
-    .line 980
+    .line 1032
     iget-object v4, v1, Lcom/miui/home/recents/GestureStubView;->mGestureBackArrowView:Lcom/miui/home/recents/GestureBackArrowView;
 
     invoke-virtual {v4, v3}, Lcom/miui/home/recents/GestureBackArrowView;->setArrowFeedBackDone(Z)V
 
     goto :goto_0
 
-    .line 982
+    .line 1034
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->getInstance()Lcom/miui/home/launcher/common/HapticFeedbackCompat;
 
@@ -1986,7 +2021,7 @@
     :try_start_0
     const-string v4, "android.hardware.input.InputManager"
 
-    .line 988
+    .line 1040
     invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v4
@@ -1995,7 +2030,7 @@
 
     const/4 v6, 0x0
 
-    .line 989
+    .line 1041
     new-array v7, v6, [Ljava/lang/Class;
 
     invoke-virtual {v4, v5, v7}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
@@ -2004,14 +2039,14 @@
 
     const/4 v5, 0x0
 
-    .line 990
+    .line 1042
     new-array v7, v6, [Ljava/lang/Object;
 
     invoke-virtual {v4, v5, v7}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 993
+    .line 1045
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v5
@@ -2034,7 +2069,7 @@
 
     move-result-object v5
 
-    .line 994
+    .line 1046
     new-array v7, v8, [Ljava/lang/Object;
 
     aput-object v0, v7, v6
@@ -2047,7 +2082,7 @@
 
     invoke-virtual {v5, v4, v7}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 995
+    .line 1047
     new-array v0, v8, [Ljava/lang/Object;
 
     aput-object v2, v0, v6
@@ -2067,7 +2102,7 @@
     :catch_0
     move-exception v0
 
-    .line 997
+    .line 1049
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_1
@@ -2083,7 +2118,7 @@
 .method private isFocusWindowAdaptNotch()Z
     .locals 5
 
-    .line 405
+    .line 428
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -2099,7 +2134,7 @@
 
     move-result-object v0
 
-    .line 406
+    .line 429
     new-array v1, v2, [Ljava/lang/Object;
 
     const/4 v3, 0x0
@@ -2108,7 +2143,7 @@
 
     move-result-object v0
 
-    .line 407
+    .line 430
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -2121,7 +2156,7 @@
 
     move-result-object v0
 
-    .line 408
+    .line 431
     new-array v1, v2, [Ljava/lang/Object;
 
     invoke-virtual {v0, v3, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
@@ -2145,7 +2180,9 @@
 
     const-string v2, "adaptBesideNotchArrowXStart"
 
-    .line 410
+    .line 433
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     const/4 v0, 0x1
 
     :goto_0
@@ -2155,14 +2192,14 @@
 .method private isInSpeedLimit(I)Z
     .locals 3
 
-    .line 251
+    .line 270
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mDownEvent:Landroid/view/MotionEvent;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    .line 252
+    .line 271
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mCurrX:F
 
     iget v2, p0, Lcom/miui/home/recents/GestureStubView;->mAssistX1:F
@@ -2205,7 +2242,7 @@
 .method private isSwipeRightInDirection()Z
     .locals 3
 
-    .line 267
+    .line 286
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubPos:I
 
     if-nez v0, :cond_0
@@ -2236,16 +2273,16 @@
     :cond_1
     const/4 v0, 0x0
 
-    .line 269
+    .line 288
     iput-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mSwipeInRightDirection:Z
 
     goto :goto_0
 
-    .line 271
+    .line 290
     :cond_2
     iput-boolean v1, p0, Lcom/miui/home/recents/GestureStubView;->mSwipeInRightDirection:Z
 
-    .line 273
+    .line 292
     :goto_0
     iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mSwipeInRightDirection:Z
 
@@ -2255,7 +2292,7 @@
 .method private static isUserSetUp(Landroid/content/ContentResolver;)Z
     .locals 2
 
-    .line 285
+    .line 304
     sget-boolean v0, Lcom/miui/home/recents/GestureStubView;->isUserSetUp:Z
 
     if-nez v0, :cond_1
@@ -2264,7 +2301,7 @@
 
     const/4 v1, 0x0
 
-    .line 286
+    .line 305
     invoke-static {p0, v0, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
@@ -2273,7 +2310,7 @@
 
     const-string v0, "user_setup_complete"
 
-    .line 287
+    .line 306
     invoke-static {p0, v0, v1}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
@@ -2285,7 +2322,7 @@
     :cond_0
     sput-boolean v1, Lcom/miui/home/recents/GestureStubView;->isUserSetUp:Z
 
-    .line 289
+    .line 308
     :cond_1
     sget-boolean p0, Lcom/miui/home/recents/GestureStubView;->isUserSetUp:Z
 
@@ -2295,153 +2332,233 @@
 .method private renderView()V
     .locals 2
 
-    .line 668
+    .line 710
     iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mKeepHidden:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 671
+    .line 713
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 672
+    .line 714
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->getAnimatingLayoutParam()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v1
 
-    .line 671
+    .line 713
     invoke-interface {v0, p0, v1}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     const-string v0, "GestureStubView"
 
     const-string v1, "renderView"
 
-    .line 674
-    .line 676
-    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
+    .line 716
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 
-    .line 677
+    .line 718
     iput-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mNeedRender:Z
 
-    .line 678
-    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->getParent()Landroid/view/ViewParent;
+    .line 719
+    invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->tryRequestTransparentRegionForParent()V
 
-    move-result-object v0
-
-    invoke-interface {v0, p0}, Landroid/view/ViewParent;->requestTransparentRegion(Landroid/view/View;)V
-
-    :cond_1
     return-void
 .end method
 
 .method private resetRenderProperty(Ljava/lang/String;)V
-    .locals 3
+    .locals 6
 
-    .line 653
+    .line 687
     iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mKeepHidden:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 656
+    .line 690
     :cond_0
-    iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mWindowManager:Landroid/view/WindowManager;
+    iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
-    .line 657
+    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->width:I
+
+    .line 691
+    iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
+
+    iget v1, v1, Landroid/view/WindowManager$LayoutParams;->height:I
+
+    .line 692
+    iget-object v2, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
+
+    iget v2, v2, Landroid/view/WindowManager$LayoutParams;->gravity:I
+
+    .line 693
+    iget-object v3, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
+
+    iget v3, v3, Landroid/view/WindowManager$LayoutParams;->verticalMargin:F
+
+    .line 694
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->getGestureStubWindowParam()Landroid/view/WindowManager$LayoutParams;
 
-    move-result-object v1
+    .line 695
+    iget-object v4, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
-    .line 656
-    invoke-interface {v0, p0, v1}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    iget v4, v4, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    const-string v0, "GestureStubView"
+    const/4 v5, 0x0
 
-    .line 659
-    new-instance v1, Ljava/lang/StringBuilder;
+    if-ne v0, v4, :cond_2
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
-    const-string v2, "resetRenderProperty: "
+    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne v1, v0, :cond_2
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    move-result-object p1
+    if-ne v2, v0, :cond_2
 
-    .line 661
-    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->getParent()Landroid/view/ViewParent;
+    iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
-    move-result-object p1
+    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->verticalMargin:F
 
-    if-eqz p1, :cond_1
+    cmpl-float v0, v3, v0
 
-    const/4 p1, 0x0
+    if-eqz v0, :cond_1
 
-    .line 662
-    iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mNeedRender:Z
-
-    .line 663
-    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p1
-
-    invoke-interface {p1, p0}, Landroid/view/ViewParent;->requestTransparentRegion(Landroid/view/View;)V
+    goto :goto_0
 
     :cond_1
+    move v0, v5
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    const-string v1, "showGestureStub"
+
+    .line 697
+    invoke-static {p1, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    if-eqz v0, :cond_4
+
+    .line 698
+    :cond_3
+    iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mWindowManager:Landroid/view/WindowManager;
+
+    iget-object v2, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
+
+    invoke-interface {v1, p0, v2}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_4
+    const-string v1, "GestureStubView"
+
+    .line 702
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "resetRenderProperty: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "   isLayoutParamChanged="
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 705
+    iput-boolean v5, p0, Lcom/miui/home/recents/GestureStubView;->mNeedRender:Z
+
+    .line 706
+    invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->tryRequestTransparentRegionForParent()V
+
     return-void
 .end method
 
 .method private rotateGesture()V
     .locals 2
 
-    .line 1146
+    .line 1196
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubDefaultSize:I
 
     invoke-direct {p0, v0}, Lcom/miui/home/recents/GestureStubView;->setSize(I)V
 
-    .line 1147
-    iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureBackArrowView:Lcom/miui/home/recents/GestureBackArrowView;
+    const-string v0, "GestureStubView_Touch"
 
-    if-eqz v0, :cond_0
+    const-string v1, "rotateGesture---requestApplyInsets"
 
-    .line 1148
-    new-instance v0, Landroid/graphics/Point;
+    .line 1197
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
+    .line 1198
+    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->requestApplyInsets()V
 
-    .line 1149
-    iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mWindowManager:Landroid/view/WindowManager;
+    return-void
+.end method
 
-    invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+.method private setKeepHidden(Z)V
+    .locals 3
+
+    const-string v0, "GestureStubView_Touch"
+
+    .line 514
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "setKeepHidden    old="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/miui/home/recents/GestureStubView;->mKeepHidden:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, "   new="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mDisplay:Landroid/view/Display;
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1150
-    iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mDisplay:Landroid/view/Display;
+    .line 516
+    iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mKeepHidden:Z
 
-    invoke-virtual {v1, v0}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
+    if-eq v0, p1, :cond_0
 
-    .line 1151
-    iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureBackArrowView:Lcom/miui/home/recents/GestureBackArrowView;
+    .line 517
+    iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mKeepHidden:Z
 
-    iget v0, v0, Landroid/graphics/Point;->x:I
-
-    invoke-virtual {v1, v0}, Lcom/miui/home/recents/GestureBackArrowView;->setDisplayWidth(I)V
+    .line 518
+    invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->updateTouchable()V
 
     :cond_0
     return-void
@@ -2450,25 +2567,25 @@
 .method private setSize(I)V
     .locals 3
 
-    .line 617
+    .line 651
     iput p1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubDefaultSize:I
 
     iput p1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubSize:I
 
-    .line 618
+    .line 652
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->adaptNotch()V
 
-    .line 619
+    .line 653
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mGesturesBackController:Lcom/miui/home/recents/GesturesBackController;
 
     if-eqz p1, :cond_0
 
-    .line 620
+    .line 654
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->initGestureEdgeSize()[I
 
     move-result-object p1
 
-    .line 621
+    .line 655
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGesturesBackController:Lcom/miui/home/recents/GesturesBackController;
 
     const/4 v1, 0x0
@@ -2481,7 +2598,7 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/miui/home/recents/GesturesBackController;->setGestureEdgeWidth(II)V
 
-    .line 625
+    .line 659
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->isAttachedToWindow()Z
@@ -2492,7 +2609,7 @@
 
     const-string p1, "setSize"
 
-    .line 626
+    .line 660
     invoke-direct {p0, p1}, Lcom/miui/home/recents/GestureStubView;->resetRenderProperty(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -2502,7 +2619,7 @@
     :catch_0
     move-exception p1
 
-    .line 629
+    .line 663
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_1
@@ -2513,7 +2630,7 @@
 .method static supportNextTask(Landroid/app/KeyguardManager;Landroid/content/ContentResolver;)Z
     .locals 0
 
-    .line 281
+    .line 300
     invoke-virtual {p0}, Landroid/app/KeyguardManager;->isKeyguardLocked()Z
 
     move-result p0
@@ -2537,10 +2654,43 @@
     return p0
 .end method
 
+.method private tryRequestTransparentRegionForParent()V
+    .locals 1
+
+    .line 726
+    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->isAttachedToWindow()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 730
+    :cond_0
+    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    return-void
+
+    .line 734
+    :cond_1
+    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    invoke-interface {v0, p0}, Landroid/view/ViewParent;->requestTransparentRegion(Landroid/view/View;)V
+
+    return-void
+.end method
+
 .method private updateAssistXPosition()V
     .locals 4
 
-    .line 258
+    .line 277
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mAssistX1:F
 
     iget v1, p0, Lcom/miui/home/recents/GestureStubView;->mCurrX:F
@@ -2555,7 +2705,7 @@
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mAssistX1:F
 
-    .line 259
+    .line 278
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mAssistX2:F
 
     sub-float/2addr v1, v0
@@ -2571,90 +2721,14 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public adaptAndRender()V
-    .locals 1
-
-    .line 903
-    invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->adaptNotch()V
-
-    const-string v0, "adaptAndRender"
-
-    .line 904
-    invoke-direct {p0, v0}, Lcom/miui/home/recents/GestureStubView;->resetRenderProperty(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public clearGestureStub()V
-    .locals 2
-
-    .line 531
-    invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->hideGestureStub()V
-
-    .line 532
-    iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mWindowManager:Landroid/view/WindowManager;
-
-    invoke-interface {v0, p0}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
-
-    const-string v0, "GestureStubView"
-
-    const-string v1, "clearGestureStub"
-
-    .line 535
-    return-void
-.end method
-
-.method public disableQuickSwitch(Z)V
-    .locals 0
-
-    .line 884
-    iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mDisableQuickSwitch:Z
-
-    return-void
-.end method
-
-.method public disableTouch(Z)V
-    .locals 1
-
-    .line 471
-    iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mDisableTouch:Z
-
-    if-eq v0, p1, :cond_0
-
-    .line 472
-    iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mDisableTouch:Z
-
-    .line 473
-    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->disableTouchDirectly()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public disableTouchBySwipeStatusBar(Z)V
-    .locals 1
-
-    .line 479
-    iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mDisableTouchBySwipeStatusBar:Z
-
-    if-eq v0, p1, :cond_0
-
-    .line 480
-    iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mDisableTouchBySwipeStatusBar:Z
-
-    .line 481
-    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->disableTouchDirectly()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public disableTouchDirectly()V
+.method private updateTouchable()V
     .locals 4
 
-    .line 486
+    .line 524
+    iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mKeepHidden:Z
+
+    if-nez v0, :cond_1
+
     iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mDisableTouch:Z
 
     if-nez v0, :cond_1
@@ -2675,14 +2749,22 @@
     const/4 v0, 0x1
 
     :goto_1
-    const-string v1, "GestureStubView"
+    const-string v1, "GestureStubView_Touch"
 
-    .line 487
+    .line 525
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "disableTouchDirectly    disableTouch="
+    const-string v3, "updateTouchable    old="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v3, p0, Lcom/miui/home/recents/GestureStubView;->mUseEmptyTouchableRegion:Z
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, "   new="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2692,63 +2774,187 @@
 
     move-result-object v2
 
-    .line 488
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 527
+    iget-boolean v1, p0, Lcom/miui/home/recents/GestureStubView;->mUseEmptyTouchableRegion:Z
+
+    if-eq v1, v0, :cond_2
+
+    .line 528
+    iput-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mUseEmptyTouchableRegion:Z
+
+    .line 529
     invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->isAttachedToWindow()Z
 
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    .line 490
-    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/view/WindowManager$LayoutParams;
+    move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 492
-    iget v0, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
+    const-string v0, "GestureStubView_Touch"
 
-    or-int/lit8 v0, v0, 0x10
+    const-string v1, "  updateTouchable---requestApplyInsets"
 
-    iput v0, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
+    .line 530
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_2
+    .line 531
+    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->requestApplyInsets()V
 
-    .line 495
     :cond_2
-    iget v0, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
+    return-void
+.end method
 
-    and-int/lit8 v0, v0, -0x11
 
-    iput v0, v1, Landroid/view/WindowManager$LayoutParams;->flags:I
+# virtual methods
+.method public adaptAndRender()V
+    .locals 1
 
-    .line 498
-    :goto_2
+    .line 955
+    invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->adaptNotch()V
+
+    const-string v0, "adaptAndRender"
+
+    .line 956
+    invoke-direct {p0, v0}, Lcom/miui/home/recents/GestureStubView;->resetRenderProperty(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public clearGestureStub()V
+    .locals 2
+
+    .line 565
+    invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->hideGestureStub()V
+
+    .line 566
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mWindowManager:Landroid/view/WindowManager;
 
-    invoke-interface {v0, p0, v1}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-interface {v0, p0}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    :cond_3
+    const-string v0, "GestureStubView"
+
+    const-string v1, "clearGestureStub"
+
+    .line 569
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public disableQuickSwitch(Z)V
+    .locals 0
+
+    .line 937
+    iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mDisableQuickSwitch:Z
+
+    return-void
+.end method
+
+.method public disableTouch(Z)V
+    .locals 3
+
+    const-string v0, "GestureStubView_Touch"
+
+    .line 494
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "disableTouch    old="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/miui/home/recents/GestureStubView;->mDisableTouch:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, "   new="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 496
+    iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mDisableTouch:Z
+
+    if-eq v0, p1, :cond_0
+
+    .line 497
+    iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mDisableTouch:Z
+
+    .line 498
+    invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->updateTouchable()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public disableTouchBySwipeStatusBar(Z)V
+    .locals 3
+
+    const-string v0, "GestureStubView_Touch"
+
+    .line 504
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "disableTouchBySwipeStatusBar    old="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v2, p0, Lcom/miui/home/recents/GestureStubView;->mDisableTouchBySwipeStatusBar:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v2, "   new="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 506
+    iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mDisableTouchBySwipeStatusBar:Z
+
+    if-eq v0, p1, :cond_0
+
+    .line 507
+    iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mDisableTouchBySwipeStatusBar:Z
+
+    .line 508
+    invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->updateTouchable()V
+
+    :cond_0
     return-void
 .end method
 
 .method public enableGestureBackAnimation(Z)V
     .locals 3
 
-    .line 876
+    .line 929
     iput-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mIsGestureAnimationEnabled:Z
 
-    .line 877
+    .line 930
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGesturesBackController:Lcom/miui/home/recents/GesturesBackController;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/GesturesBackController;->enableGestureBackAnimation(Z)V
 
     const-string v0, "GestureStubView"
 
-    .line 879
+    .line 932
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2763,32 +2969,34 @@
 
     move-result-object p1
 
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 .end method
 
 .method public gatherTransparentRegion(Landroid/graphics/Region;)Z
     .locals 10
 
-    .line 635
+    .line 669
     iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mNeedRender:Z
 
     if-nez v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 636
+    .line 670
     invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->getWidth()I
 
     move-result v0
 
-    .line 637
+    .line 671
     invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->getHeight()I
 
     move-result v1
 
     const-string v2, "GestureStubView"
 
-    .line 639
+    .line 673
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2809,16 +3017,18 @@
 
     move-result-object v3
 
+    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     if-lez v0, :cond_0
 
     if-lez v1, :cond_0
 
-    .line 642
+    .line 676
     iget-object v2, p0, Lcom/miui/home/recents/GestureStubView;->mLocation:[I
 
     invoke-virtual {p0, v2}, Lcom/miui/home/recents/GestureStubView;->getLocationInWindow([I)V
 
-    .line 643
+    .line 677
     iget-object v2, p0, Lcom/miui/home/recents/GestureStubView;->mLocation:[I
 
     const/4 v3, 0x0
@@ -2827,14 +3037,14 @@
 
     const/4 v4, 0x1
 
-    .line 644
+    .line 678
     aget v6, v2, v4
 
     add-int v7, v5, v0
 
     add-int v8, v6, v1
 
-    .line 645
+    .line 679
     sget-object v9, Landroid/graphics/Region$Op;->UNION:Landroid/graphics/Region$Op;
 
     move-object v4, p1
@@ -2843,7 +3053,7 @@
 
     return v3
 
-    .line 649
+    .line 683
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->gatherTransparentRegion(Landroid/graphics/Region;)Z
 
@@ -2855,14 +3065,14 @@
 .method public hideGestureStubDelay()V
     .locals 4
 
-    .line 449
+    .line 472
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mHandler:Lcom/miui/home/recents/GestureStubView$H;
 
     const/16 v1, 0x103
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/GestureStubView$H;->removeMessages(I)V
 
-    .line 450
+    .line 473
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mHandler:Lcom/miui/home/recents/GestureStubView$H;
 
     const-wide/16 v2, 0x12c
@@ -2875,7 +3085,7 @@
 .method public isDisableQuickSwitch()Z
     .locals 1
 
-    .line 888
+    .line 941
     iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mDisableQuickSwitch:Z
 
     if-nez v0, :cond_1
@@ -2904,15 +3114,18 @@
 .method protected onAttachedToWindow()V
     .locals 3
 
-    .line 346
+    .line 365
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
-    .line 347
+    .line 366
+    invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->tryRequestTransparentRegionForParent()V
+
+    .line 367
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mSettingsObserver:Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->register()V
 
-    .line 348
+    .line 368
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mDisplayListener:Lcom/miui/home/recents/GestureStubView$StubViewDisplayListener;
@@ -2921,16 +3134,35 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/display/DisplayManager;->registerDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;Landroid/os/Handler;)V
 
+    const-string v0, "GestureStubView_Touch"
+
+    const-string v1, "onAttachedToWindow---requestApplyInsets"
+
+    .line 369
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 370
+    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mOnComputeInternalInsetsListener:Lcom/android/systemui/shared/recents/touchableRegion/OnComputeInternalInsetsListenerCompat;
+
+    invoke-static {v0, v1}, Lcom/android/systemui/shared/recents/touchableRegion/TouchableRegionCompat;->addOnComputeInternalInsetsListener(Landroid/view/ViewTreeObserver;Lcom/android/systemui/shared/recents/touchableRegion/OnComputeInternalInsetsListenerCompat;)V
+
+    .line 371
+    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->requestApplyInsets()V
+
     return-void
 .end method
 
 .method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 4
 
-    .line 506
+    .line 540
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 508
+    .line 542
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mLastConfiguration:Landroid/content/res/Configuration;
 
     invoke-virtual {v0, p1}, Landroid/content/res/Configuration;->updateFrom(Landroid/content/res/Configuration;)I
@@ -2939,7 +3171,7 @@
 
     const-string v0, "GestureStubView"
 
-    .line 509
+    .line 543
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2953,6 +3185,8 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     and-int/lit16 v0, p1, 0x400
 
@@ -2996,44 +3230,39 @@
     :goto_2
     if-nez p1, :cond_3
 
-    .line 514
-    iget-boolean p1, p0, Lcom/miui/home/recents/GestureStubView;->mKeepHidden:Z
-
-    if-nez p1, :cond_5
-
     if-eqz v3, :cond_5
 
     if-eqz v0, :cond_5
 
-    .line 515
+    .line 549
     :cond_3
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->initScreenSizeAndDensity()V
 
-    .line 516
+    .line 550
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureBackArrowView:Lcom/miui/home/recents/GestureBackArrowView;
 
     if-eqz p1, :cond_4
 
-    .line 517
+    .line 551
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/GestureStubView;->removeView(Landroid/view/View;)V
 
-    .line 519
+    .line 553
     :cond_4
     iget p1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubPos:I
 
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/GestureStubView;->setGestureStubPosition(I)V
 
-    .line 520
+    .line 554
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mGesturesBackController:Lcom/miui/home/recents/GesturesBackController;
 
     if-eqz p1, :cond_5
 
-    .line 521
+    .line 555
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->initGestureEdgeSize()[I
 
     move-result-object p1
 
-    .line 522
+    .line 556
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGesturesBackController:Lcom/miui/home/recents/GesturesBackController;
 
     aget v3, p1, v2
@@ -3042,11 +3271,11 @@
 
     invoke-virtual {v0, v3, p1}, Lcom/miui/home/recents/GesturesBackController;->setGestureEdgeWidth(II)V
 
-    .line 526
+    .line 560
     :cond_5
     invoke-direct {p0, v2}, Lcom/miui/home/recents/GestureStubView;->adaptRotation(Z)V
 
-    .line 527
+    .line 561
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->adaptNotchHidden()V
 
     return-void
@@ -3055,20 +3284,29 @@
 .method protected onDetachedFromWindow()V
     .locals 2
 
-    .line 426
+    .line 449
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
-    .line 427
+    .line 450
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mSettingsObserver:Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/GestureStubView$MiuiSettingsObserver;->unregister()V
 
-    .line 428
+    .line 451
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mDisplayManager:Landroid/hardware/display/DisplayManager;
 
     iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mDisplayListener:Lcom/miui/home/recents/GestureStubView$StubViewDisplayListener;
 
     invoke-virtual {v0, v1}, Landroid/hardware/display/DisplayManager;->unregisterDisplayListener(Landroid/hardware/display/DisplayManager$DisplayListener;)V
+
+    .line 452
+    invoke-virtual {p0}, Lcom/miui/home/recents/GestureStubView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/recents/GestureStubView;->mOnComputeInternalInsetsListener:Lcom/android/systemui/shared/recents/touchableRegion/OnComputeInternalInsetsListenerCompat;
+
+    invoke-static {v0, v1}, Lcom/android/systemui/shared/recents/touchableRegion/TouchableRegionCompat;->removeOnComputeInternalInsetsListener(Landroid/view/ViewTreeObserver;Lcom/android/systemui/shared/recents/touchableRegion/OnComputeInternalInsetsListenerCompat;)V
 
     return-void
 .end method
@@ -3076,7 +3314,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 10
 
-    .line 773
+    .line 826
     iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mKeepHidden:Z
 
     const/4 v1, 0x0
@@ -3085,7 +3323,7 @@
 
     return v1
 
-    .line 776
+    .line 829
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -3093,7 +3331,7 @@
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mCurrAction:I
 
-    .line 778
+    .line 831
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mCurrAction:I
 
     const/16 v2, 0xff
@@ -3106,7 +3344,7 @@
 
     goto/16 :goto_0
 
-    .line 800
+    .line 853
     :pswitch_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -3114,14 +3352,14 @@
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mCurrX:F
 
-    .line 801
+    .line 854
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mCurrY:F
 
-    .line 803
+    .line 856
     iget v0, p0, Lcom/miui/home/recents/GestureStubView;->mCurrY:F
 
     iget v4, p0, Lcom/miui/home/recents/GestureStubView;->mDownY:F
@@ -3154,7 +3392,7 @@
 
     if-nez v0, :cond_5
 
-    .line 806
+    .line 859
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mHandler:Lcom/miui/home/recents/GestureStubView$H;
 
     invoke-virtual {v0, v2}, Lcom/miui/home/recents/GestureStubView$H;->obtainMessage(I)Landroid/os/Message;
@@ -3167,10 +3405,12 @@
 
     const-string v2, "up-slide detected, sendMessage MSG_SET_GESTURE_STUB_UNTOUCHABLE"
 
-    .line 809
+    .line 862
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     goto/16 :goto_0
 
-    .line 818
+    .line 871
     :pswitch_1
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mDownEvent:Landroid/view/MotionEvent;
 
@@ -3178,7 +3418,7 @@
 
     return v3
 
-    .line 823
+    .line 876
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -3186,19 +3426,19 @@
 
     iput v6, p0, Lcom/miui/home/recents/GestureStubView;->mCurrX:F
 
-    .line 824
+    .line 877
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v6
 
     iput v6, p0, Lcom/miui/home/recents/GestureStubView;->mCurrY:F
 
-    .line 825
+    .line 878
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v6
 
-    .line 828
+    .line 881
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v8
@@ -3213,10 +3453,10 @@
 
     if-nez v4, :cond_2
 
-    .line 830
+    .line 883
     invoke-direct {p0}, Lcom/miui/home/recents/GestureStubView;->clearMessages()V
 
-    .line 832
+    .line 885
     iget v4, p0, Lcom/miui/home/recents/GestureStubView;->mCurrX:F
 
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getRawX()F
@@ -3225,7 +3465,7 @@
 
     sub-float/2addr v4, v5
 
-    .line 833
+    .line 886
     iget v5, p0, Lcom/miui/home/recents/GestureStubView;->mCurrY:F
 
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getRawY()F
@@ -3234,12 +3474,12 @@
 
     sub-float/2addr v5, v0
 
-    .line 835
+    .line 888
     iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mIsGestureStarted:Z
 
     if-nez v0, :cond_2
 
-    .line 836
+    .line 889
     invoke-static {v4}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
@@ -3250,7 +3490,7 @@
 
     if-gtz v0, :cond_2
 
-    .line 837
+    .line 890
     invoke-static {v5}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
@@ -3259,7 +3499,7 @@
 
     if-gtz v0, :cond_2
 
-    .line 838
+    .line 891
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mHandler:Lcom/miui/home/recents/GestureStubView$H;
 
     invoke-virtual {v0, v2}, Lcom/miui/home/recents/GestureStubView$H;->obtainMessage(I)Landroid/os/Message;
@@ -3270,7 +3510,7 @@
 
     const-string v0, "GestureStubView"
 
-    .line 842
+    .line 895
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3291,10 +3531,12 @@
 
     move-result-object v2
 
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_2
     const-string v0, "GestureStubView"
 
-    .line 851
+    .line 904
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3319,7 +3561,9 @@
 
     move-result-object v2
 
-    .line 855
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 908
     iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mIsGestureStarted:Z
 
     if-eqz v0, :cond_3
@@ -3328,7 +3572,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 856
+    .line 909
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mHandler:Lcom/miui/home/recents/GestureStubView$H;
 
     const/16 v2, 0x102
@@ -3341,13 +3585,13 @@
 
     invoke-virtual {v0, v2, v4, v5}, Lcom/miui/home/recents/GestureStubView$H;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 860
+    .line 913
     :cond_3
     iput-boolean v1, p0, Lcom/miui/home/recents/GestureStubView;->mIsGestureStarted:Z
 
     goto :goto_0
 
-    .line 780
+    .line 833
     :pswitch_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -3361,7 +3605,7 @@
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mCurrX:F
 
-    .line 781
+    .line 834
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v0
@@ -3370,15 +3614,15 @@
 
     iput v0, p0, Lcom/miui/home/recents/GestureStubView;->mCurrY:F
 
-    .line 782
+    .line 835
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mDownEvent:Landroid/view/MotionEvent;
 
     if-eqz v0, :cond_4
 
-    .line 783
+    .line 836
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 785
+    .line 838
     :cond_4
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
@@ -3386,30 +3630,32 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mDownEvent:Landroid/view/MotionEvent;
 
-    .line 788
+    .line 841
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mHandler:Lcom/miui/home/recents/GestureStubView$H;
 
     const/16 v2, 0x100
 
     invoke-virtual {v0, v2}, Lcom/miui/home/recents/GestureStubView$H;->removeMessages(I)V
 
-    .line 789
+    .line 842
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mHandler:Lcom/miui/home/recents/GestureStubView$H;
 
-    .line 790
+    .line 843
     invoke-virtual {v0, v2}, Lcom/miui/home/recents/GestureStubView$H;->obtainMessage(I)Landroid/os/Message;
 
     move-result-object v2
 
-    .line 789
+    .line 842
     invoke-virtual {v0, v2, v4, v5}, Lcom/miui/home/recents/GestureStubView$H;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     const-string v0, "GestureStubView"
 
     const-string v2, "onTouch ACTION_DOWN sendMessageDelayed MSG_CHECK_GESTURE_STUB_TOUCHABLE"
 
-    .line 794
-    .line 866
+    .line 847
+    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 919
     :cond_5
     :goto_0
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGesturesBackController:Lcom/miui/home/recents/GesturesBackController;
@@ -3426,8 +3672,8 @@
 
     if-nez v2, :cond_6
 
-    .line 868
-    invoke-virtual {v0, p1}, Lcom/miui/home/recents/GesturesBackController;->onPointerEvent(Landroid/view/MotionEvent;)V
+    .line 921
+    invoke-virtual {v0, p1, p0}, Lcom/miui/home/recents/GesturesBackController;->onPointerEvent(Landroid/view/MotionEvent;Lcom/miui/home/recents/GestureStubView;)V
 
     return v3
 
@@ -3448,10 +3694,10 @@
 .method public setGestureStubPosition(I)V
     .locals 2
 
-    .line 892
+    .line 945
     iput p1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubPos:I
 
-    .line 893
+    .line 946
     new-instance p1, Lcom/miui/home/recents/GestureBackArrowView;
 
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mContext:Landroid/content/Context;
@@ -3462,17 +3708,17 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureBackArrowView:Lcom/miui/home/recents/GestureBackArrowView;
 
-    .line 894
+    .line 947
     iget-object p1, p0, Lcom/miui/home/recents/GestureStubView;->mGestureBackArrowView:Lcom/miui/home/recents/GestureBackArrowView;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/GestureStubView;->addView(Landroid/view/View;)V
 
-    .line 896
+    .line 949
     new-instance p1, Landroid/graphics/Point;
 
     invoke-direct {p1}, Landroid/graphics/Point;-><init>()V
 
-    .line 897
+    .line 950
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -3481,17 +3727,19 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mDisplay:Landroid/view/Display;
 
-    .line 898
+    .line 951
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mDisplay:Landroid/view/Display;
 
     invoke-virtual {v0, p1}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
 
-    .line 899
-    iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureBackArrowView:Lcom/miui/home/recents/GestureBackArrowView;
+    return-void
+.end method
 
-    iget p1, p1, Landroid/graphics/Point;->x:I
+.method public setVisibility(I)V
+    .locals 0
 
-    invoke-virtual {v0, p1}, Lcom/miui/home/recents/GestureBackArrowView;->setDisplayWidth(I)V
+    .line 1207
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
     return-void
 .end method
@@ -3499,14 +3747,14 @@
 .method public showGestureStub()V
     .locals 2
 
-    .line 433
+    .line 457
     iget-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mAnimating:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 437
+    .line 461
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mHandler:Lcom/miui/home/recents/GestureStubView$H;
 
@@ -3516,24 +3764,23 @@
 
     const/4 v0, 0x0
 
-    .line 438
-    iput-boolean v0, p0, Lcom/miui/home/recents/GestureStubView;->mKeepHidden:Z
+    .line 462
+    invoke-direct {p0, v0}, Lcom/miui/home/recents/GestureStubView;->setKeepHidden(Z)V
 
     const-string v1, "showGestureStub"
 
-    .line 439
+    .line 463
     invoke-direct {p0, v1}, Lcom/miui/home/recents/GestureStubView;->resetRenderProperty(Ljava/lang/String;)V
 
-    .line 440
-    invoke-virtual {p0, v0}, Lcom/miui/home/recents/GestureStubView;->setVisibility(I)V
-
-    .line 441
+    .line 464
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/GestureStubView;->disableTouch(Z)V
 
     const-string v0, "GestureStubView"
 
     const-string v1, "showGestureStub"
 
-    .line 444
+    .line 467
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 .end method

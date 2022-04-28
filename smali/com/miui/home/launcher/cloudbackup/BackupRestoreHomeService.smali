@@ -11,10 +11,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 37
+    .line 41
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 51
+    .line 55
     new-instance v0, Lcom/miui/home/launcher/cloudbackup/BackupRestoreHomeService$1;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/cloudbackup/BackupRestoreHomeService$1;-><init>(Lcom/miui/home/launcher/cloudbackup/BackupRestoreHomeService;)V
@@ -34,7 +34,7 @@
 
     const/4 v0, 0x0
 
-    .line 182
+    .line 194
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -51,7 +51,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 186
+    .line 198
     :try_start_1
     new-instance p1, Ljava/io/FileInputStream;
 
@@ -64,7 +64,7 @@
     .catch Landroid/system/ErrnoException; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 187
+    .line 199
     :try_start_2
     invoke-virtual {p1}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
@@ -73,7 +73,7 @@
     .catch Landroid/system/ErrnoException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 188
+    .line 200
     :try_start_3
     new-instance v8, Ljava/io/FileOutputStream;
 
@@ -82,7 +82,7 @@
     .catch Landroid/system/ErrnoException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 189
+    .line 201
     :try_start_4
     invoke-virtual {v8}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
@@ -90,7 +90,7 @@
 
     const-wide/16 v4, 0x0
 
-    .line 190
+    .line 202
     invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->size()J
 
     move-result-wide v6
@@ -101,7 +101,7 @@
 
     invoke-virtual/range {v2 .. v7}, Ljava/nio/channels/FileChannel;->transferFrom(Ljava/nio/channels/ReadableByteChannel;JJ)J
 
-    .line 191
+    .line 203
     invoke-virtual {p2}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -114,7 +114,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 192
+    .line 204
     invoke-virtual {p2}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object p2
@@ -126,20 +126,20 @@
     .catch Landroid/system/ErrnoException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 198
+    .line 210
     :cond_0
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
-    .line 199
+    .line 211
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
-    .line 200
+    .line 212
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
-    .line 201
+    .line 213
     invoke-static {v8}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
-    .line 202
+    .line 214
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
     goto/16 :goto_1
@@ -244,7 +244,7 @@
 
     goto :goto_0
 
-    .line 184
+    .line 196
     :cond_1
     :try_start_5
     new-instance p1, Ljava/io/IOException;
@@ -288,25 +288,27 @@
 
     const-string v3, " ErrnoException when copyFile home files"
 
-    .line 195
-    .line 196
+    .line 207
+    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 208
     invoke-virtual {p2}, Landroid/system/ErrnoException;->printStackTrace()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_5
 
-    .line 198
+    .line 210
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
-    .line 199
+    .line 211
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
-    .line 200
+    .line 212
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
-    .line 201
+    .line 213
     invoke-static {v8}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
-    .line 202
+    .line 214
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
     :goto_1
@@ -315,23 +317,23 @@
     :catchall_5
     move-exception p2
 
-    .line 198
+    .line 210
     :goto_2
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
-    .line 199
+    .line 211
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
-    .line 200
+    .line 212
     invoke-static {p1}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
-    .line 201
+    .line 213
     invoke-static {v8}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
-    .line 202
+    .line 214
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->closeFileSafely(Ljava/io/Closeable;)V
 
-    .line 203
+    .line 215
     throw p2
 .end method
 
@@ -343,7 +345,7 @@
         }
     .end annotation
 
-    .line 146
+    .line 158
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
@@ -367,14 +369,14 @@
         }
     .end annotation
 
-    .line 150
+    .line 162
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     const/high16 v1, 0x10000000
 
-    .line 151
+    .line 163
     invoke-static {p0, v1}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p0
@@ -383,7 +385,7 @@
 
     const-string p0, "Launcher.Backup"
 
-    .line 153
+    .line 165
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -402,17 +404,19 @@
 
     move-result-object p1
 
+    invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     return-object v0
 
     :cond_0
     const-string v1, "fileName"
 
-    .line 156
+    .line 168
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p1, "parcelFileDescriptor"
 
-    .line 157
+    .line 169
     invoke-virtual {v0, p1, p0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     return-object v0
@@ -421,14 +425,14 @@
 .method public static deleteContents(Ljava/io/File;)V
     .locals 4
 
-    .line 162
+    .line 174
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    .line 164
+    .line 176
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -438,17 +442,17 @@
 
     aget-object v2, p0, v1
 
-    .line 165
+    .line 177
     invoke-virtual {v2}, Ljava/io/File;->isDirectory()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 168
+    .line 180
     invoke-static {v2}, Lcom/miui/home/launcher/cloudbackup/BackupRestoreHomeService;->deleteContents(Ljava/io/File;)V
 
-    .line 170
+    .line 182
     :cond_0
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
@@ -465,7 +469,7 @@
 .method protected attachBaseContext(Landroid/content/Context;)V
     .locals 0
 
-    .line 43
+    .line 47
     invoke-static {p1}, Lcom/miui/home/launcher/common/StorageContextGetter;->getContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p1
@@ -478,7 +482,7 @@
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
     .locals 0
 
-    .line 48
+    .line 52
     iget-object p1, p0, Lcom/miui/home/launcher/cloudbackup/BackupRestoreHomeService;->mBackupRestoreHomeStub:Lcom/miui/home/launcher/cloudbackup/IBackupRestoreHome$Stub;
 
     return-object p1

@@ -78,21 +78,31 @@
 .method public onExitState(Lcom/miui/home/launcher/Launcher;)V
     .locals 4
 
-    .line 67
+    .line 65
     sget-object v0, Lcom/miui/home/recents/OverviewState;->TAG:Ljava/lang/String;
 
     const-string v1, "onExitState"
 
-    .line 68
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 66
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->usingFsGesture()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    .line 67
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
     invoke-virtual {v0, v1}, Landroid/view/Window;->setNavigationBarColor(I)V
 
     .line 69
+    :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRecentsContainer()Lcom/miui/home/recents/views/RecentsContainer;
 
     move-result-object v0
@@ -117,13 +127,13 @@
     .line 73
     iget-boolean v0, p0, Lcom/miui/home/recents/OverviewState;->mIsIgnoreWallpaperZoom:Z
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     .line 74
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/Launcher;->animateWallpaperZoom(Z)V
 
     .line 76
-    :cond_0
+    :cond_1
     iput-boolean v1, p0, Lcom/miui/home/recents/OverviewState;->mIsIgnoreWallpaperZoom:Z
 
     return-void
@@ -136,6 +146,8 @@
     sget-object v0, Lcom/miui/home/recents/OverviewState;->TAG:Ljava/lang/String;
 
     const-string v1, "onStateEnabled"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 44
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRecentsContainer()Lcom/miui/home/recents/views/RecentsContainer;
@@ -173,7 +185,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f06031e
+    const v4, 0x7f060366
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -181,37 +193,27 @@
 
     invoke-virtual {v2, v3}, Landroid/view/Window;->setNavigationBarColor(I)V
 
-    goto :goto_0
-
     .line 51
     :cond_0
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWindow()Landroid/view/Window;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Landroid/view/Window;->setNavigationBarColor(I)V
-
-    .line 53
-    :goto_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRotationHelper()Lcom/miui/home/recents/util/RotationHelper;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Lcom/miui/home/recents/util/RotationHelper;->updateRotationAnimation(I)V
 
-    const v2, 0x7f100024
+    const v2, 0x7f100025
 
-    .line 54
+    .line 52
     invoke-static {v2}, Lcom/miui/home/launcher/common/Utilities;->announceForAccessibility(I)V
 
-    .line 55
+    .line 53
     invoke-static {p1}, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompat;
 
     move-result-object v2
 
     const-string v3, "action_open_recent"
 
-    .line 56
+    .line 54
     invoke-virtual {v0}, Lcom/miui/home/recents/views/RecentsContainer;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v0
@@ -220,10 +222,10 @@
 
     const/4 v0, 0x1
 
-    .line 57
+    .line 55
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->animateWallpaperZoom(Z)V
 
-    .line 58
+    .line 56
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v2
@@ -234,21 +236,21 @@
 
     invoke-virtual {v2, v3}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
-    .line 59
+    .line 57
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRotationHelper()Lcom/miui/home/recents/util/RotationHelper;
 
     move-result-object v2
 
     invoke-virtual {v2, v0}, Lcom/miui/home/recents/util/RotationHelper;->setCurrentStateRequest(I)V
 
-    .line 60
+    .line 58
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isWidgetThumbnailViewShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 61
+    .line 59
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/Launcher;->showWidgetsPreviewLayout(Z)V
 
     :cond_1
@@ -262,6 +264,8 @@
     sget-object v0, Lcom/miui/home/recents/OverviewState;->TAG:Ljava/lang/String;
 
     const-string v1, "onStateTransitionEnd"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 82
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRotationHelper()Lcom/miui/home/recents/util/RotationHelper;

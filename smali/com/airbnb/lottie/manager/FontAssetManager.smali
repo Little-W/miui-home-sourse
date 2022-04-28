@@ -49,24 +49,24 @@
 .method public constructor <init>(Landroid/graphics/drawable/Drawable$Callback;Lcom/airbnb/lottie/FontAssetDelegate;)V
     .locals 1
 
-    .line 29
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
+    .line 18
     new-instance v0, Lcom/airbnb/lottie/model/MutablePair;
 
     invoke-direct {v0}, Lcom/airbnb/lottie/model/MutablePair;-><init>()V
 
     iput-object v0, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->tempPair:Lcom/airbnb/lottie/model/MutablePair;
 
-    .line 22
+    .line 23
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->fontMap:Ljava/util/Map;
 
-    .line 24
+    .line 27
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -75,30 +75,30 @@
 
     const-string v0, ".ttf"
 
-    .line 27
+    .line 30
     iput-object v0, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->defaultFontFileExtension:Ljava/lang/String;
 
-    .line 30
+    .line 33
     iput-object p2, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->delegate:Lcom/airbnb/lottie/FontAssetDelegate;
 
-    .line 31
+    .line 34
     instance-of p2, p1, Landroid/view/View;
 
     if-nez p2, :cond_0
 
     const-string p1, "LottieDrawable must be inside of a view for images to work."
 
-    .line 32
+    .line 35
     invoke-static {p1}, Lcom/airbnb/lottie/utils/Logger;->warning(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
-    .line 33
+    .line 36
     iput-object p1, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->assetManager:Landroid/content/res/AssetManager;
 
     return-void
 
-    .line 37
+    .line 40
     :cond_0
     check-cast p1, Landroid/view/View;
 
@@ -118,7 +118,7 @@
 .method private getFontFamily(Ljava/lang/String;)Landroid/graphics/Typeface;
     .locals 2
 
-    .line 68
+    .line 71
     iget-object v0, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->fontFamilies:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -134,17 +134,17 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 74
+    .line 77
     iget-object v1, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->delegate:Lcom/airbnb/lottie/FontAssetDelegate;
 
     if-eqz v1, :cond_1
 
-    .line 75
+    .line 78
     invoke-virtual {v1, p1}, Lcom/airbnb/lottie/FontAssetDelegate;->fetchFont(Ljava/lang/String;)Landroid/graphics/Typeface;
 
     move-result-object v0
 
-    .line 78
+    .line 81
     :cond_1
     iget-object v1, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->delegate:Lcom/airbnb/lottie/FontAssetDelegate;
 
@@ -152,14 +152,14 @@
 
     if-nez v0, :cond_2
 
-    .line 79
+    .line 82
     invoke-virtual {v1, p1}, Lcom/airbnb/lottie/FontAssetDelegate;->getFontPath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     if-eqz v1, :cond_2
 
-    .line 81
+    .line 84
     iget-object v0, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->assetManager:Landroid/content/res/AssetManager;
 
     invoke-static {v0, v1}, Landroid/graphics/Typeface;->createFromAsset(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -169,7 +169,7 @@
     :cond_2
     if-nez v0, :cond_3
 
-    .line 86
+    .line 89
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -188,14 +188,14 @@
 
     move-result-object v0
 
-    .line 87
+    .line 90
     iget-object v1, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->assetManager:Landroid/content/res/AssetManager;
 
     invoke-static {v1, v0}, Landroid/graphics/Typeface;->createFromAsset(Landroid/content/res/AssetManager;Ljava/lang/String;)Landroid/graphics/Typeface;
 
     move-result-object v0
 
-    .line 90
+    .line 93
     :cond_3
     iget-object v1, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->fontFamilies:Ljava/util/Map;
 
@@ -209,14 +209,14 @@
 
     const-string v0, "Italic"
 
-    .line 96
+    .line 99
     invoke-virtual {p2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     const-string v1, "Bold"
 
-    .line 97
+    .line 100
     invoke-virtual {p2, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result p2
@@ -246,7 +246,7 @@
     :cond_2
     const/4 p2, 0x0
 
-    .line 106
+    .line 109
     :goto_0
     invoke-virtual {p1}, Landroid/graphics/Typeface;->getStyle()I
 
@@ -256,7 +256,7 @@
 
     return-object p1
 
-    .line 110
+    .line 113
     :cond_3
     invoke-static {p1, p2}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
 
@@ -270,12 +270,12 @@
 .method public getTypeface(Ljava/lang/String;Ljava/lang/String;)Landroid/graphics/Typeface;
     .locals 2
 
-    .line 56
+    .line 59
     iget-object v0, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->tempPair:Lcom/airbnb/lottie/model/MutablePair;
 
     invoke-virtual {v0, p1, p2}, Lcom/airbnb/lottie/model/MutablePair;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 57
+    .line 60
     iget-object v0, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->fontMap:Ljava/util/Map;
 
     iget-object v1, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->tempPair:Lcom/airbnb/lottie/model/MutablePair;
@@ -290,18 +290,18 @@
 
     return-object v0
 
-    .line 61
+    .line 64
     :cond_0
     invoke-direct {p0, p1}, Lcom/airbnb/lottie/manager/FontAssetManager;->getFontFamily(Ljava/lang/String;)Landroid/graphics/Typeface;
 
     move-result-object p1
 
-    .line 62
+    .line 65
     invoke-direct {p0, p1, p2}, Lcom/airbnb/lottie/manager/FontAssetManager;->typefaceForStyle(Landroid/graphics/Typeface;Ljava/lang/String;)Landroid/graphics/Typeface;
 
     move-result-object p1
 
-    .line 63
+    .line 66
     iget-object p2, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->fontMap:Ljava/util/Map;
 
     iget-object v0, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->tempPair:Lcom/airbnb/lottie/model/MutablePair;
@@ -314,7 +314,7 @@
 .method public setDelegate(Lcom/airbnb/lottie/FontAssetDelegate;)V
     .locals 0
 
-    .line 41
+    .line 44
     iput-object p1, p0, Lcom/airbnb/lottie/manager/FontAssetManager;->delegate:Lcom/airbnb/lottie/FontAssetDelegate;
 
     return-void

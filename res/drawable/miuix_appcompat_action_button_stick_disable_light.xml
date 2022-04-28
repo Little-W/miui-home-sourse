@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vector
-    android:height="@dimen/miuix_appcompat_action_button_height"
-    android:width="@dimen/miuix_appcompat_action_button_width"
-    android:viewportWidth="75.0"
-    android:viewportHeight="74.0"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <path
-        android:fillColor="@color/miuix_appcompat_svg_icon_color_disable_light"
-        android:pathData="M60.5,14.5C60.5,13.1193 59.3807,12 58,12L16,12C14.6193,12 13.5,13.1193 13.5,14.5C13.5,15.8807 14.6193,17 16,17L58,17C59.3807,17 60.5,15.8807 60.5,14.5ZM20.8862,43.1364L34.5,29.5225V60.5C34.5,61.8807 35.6193,63 37,63C38.3807,63 39.5,61.8807 39.5,60.5V29.5485L53.102,43.1505C54.0783,44.1268 55.6612,44.1268 56.6375,43.1505C57.6138,42.1742 57.6138,40.5913 56.6375,39.615L38.9133,21.8907C38.4547,21.3461 37.7677,21 37,21L36.9927,21C36.351,20.9985 35.7088,21.2426 35.2192,21.7322L17.3506,39.6008C16.3743,40.5771 16.3743,42.16 17.3506,43.1364C18.327,44.1127 19.9099,44.1127 20.8862,43.1364Z"
-        android:fillType="evenOdd" />
+<vector android:height="@dimen/miuix_appcompat_action_button_height" android:width="@dimen/miuix_appcompat_action_button_width" android:viewportWidth="75.0" android:viewportHeight="74.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/miuix_appcompat_svg_icon_color_disable_light" android:pathData="M60.5,14.5C60.5,13.1193 59.3807,12 58,12L16,12C14.6193,12 13.5,13.1193 13.5,14.5C13.5,15.8807 14.6193,17 16,17L58,17C59.3807,17 60.5,15.8807 60.5,14.5ZM20.8862,43.1364L34.5,29.5225V60.5C34.5,61.8807 35.6193,63 37,63C38.3807,63 39.5,61.8807 39.5,60.5V29.5485L53.102,43.1505C54.0783,44.1268 55.6612,44.1268 56.6375,43.1505C57.6138,42.1742 57.6138,40.5913 56.6375,39.615L38.9133,21.8907C38.4547,21.3461 37.7677,21 37,21L36.9927,21C36.351,20.9985 35.7088,21.2426 35.2192,21.7322L17.3506,39.6008C16.3743,40.5771 16.3743,42.16 17.3506,43.1364C18.327,44.1127 19.9099,44.1127 20.8862,43.1364Z" android:fillType="evenOdd" />
 </vector>

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellScreen;)V
     .locals 0
 
-    .line 256
+    .line 295
     iput-object p1, p0, Lcom/miui/home/launcher/CellScreen$3;->this$0:Lcom/miui/home/launcher/CellScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 259
+    .line 298
     iget-object v0, p0, Lcom/miui/home/launcher/CellScreen$3;->this$0:Lcom/miui/home/launcher/CellScreen;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellScreen;->updateLayout()V

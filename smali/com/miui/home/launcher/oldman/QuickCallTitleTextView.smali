@@ -15,7 +15,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0702f1
+    const v1, 0x7f070398
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -27,7 +27,7 @@
 
     invoke-virtual {p0, v1, v0}, Lcom/miui/home/launcher/oldman/QuickCallTitleTextView;->setTextSize(IF)V
 
-    const v0, 0x7f1002af
+    const v0, 0x7f10031a
 
     .line 18
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -41,7 +41,7 @@
     .line 19
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/oldman/QuickCallTitleTextView;->setGravity(I)V
 
-    const v0, 0x7f06031a
+    const v0, 0x7f060362
 
     .line 20
     invoke-virtual {p1, v0}, Landroid/content/Context;->getColor(I)I

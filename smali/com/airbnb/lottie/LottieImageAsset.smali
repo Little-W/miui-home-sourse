@@ -21,22 +21,22 @@
 .method public constructor <init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 20
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
+    .line 24
     iput p1, p0, Lcom/airbnb/lottie/LottieImageAsset;->width:I
 
-    .line 22
+    .line 25
     iput p2, p0, Lcom/airbnb/lottie/LottieImageAsset;->height:I
 
-    .line 23
+    .line 26
     iput-object p3, p0, Lcom/airbnb/lottie/LottieImageAsset;->id:Ljava/lang/String;
 
-    .line 24
+    .line 27
     iput-object p4, p0, Lcom/airbnb/lottie/LottieImageAsset;->fileName:Ljava/lang/String;
 
-    .line 25
+    .line 28
     iput-object p5, p0, Lcom/airbnb/lottie/LottieImageAsset;->dirName:Ljava/lang/String;
 
     return-void
@@ -47,7 +47,7 @@
 .method public getBitmap()Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 52
+    .line 55
     iget-object v0, p0, Lcom/airbnb/lottie/LottieImageAsset;->bitmap:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -56,7 +56,7 @@
 .method public getFileName()Ljava/lang/String;
     .locals 1
 
-    .line 41
+    .line 44
     iget-object v0, p0, Lcom/airbnb/lottie/LottieImageAsset;->fileName:Ljava/lang/String;
 
     return-object v0
@@ -65,7 +65,7 @@
 .method public getHeight()I
     .locals 1
 
-    .line 33
+    .line 36
     iget v0, p0, Lcom/airbnb/lottie/LottieImageAsset;->height:I
 
     return v0
@@ -74,7 +74,7 @@
 .method public getId()Ljava/lang/String;
     .locals 1
 
-    .line 37
+    .line 40
     iget-object v0, p0, Lcom/airbnb/lottie/LottieImageAsset;->id:Ljava/lang/String;
 
     return-object v0
@@ -83,7 +83,7 @@
 .method public getWidth()I
     .locals 1
 
-    .line 29
+    .line 32
     iget v0, p0, Lcom/airbnb/lottie/LottieImageAsset;->width:I
 
     return v0
@@ -92,7 +92,7 @@
 .method public setBitmap(Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .line 59
+    .line 67
     iput-object p1, p0, Lcom/airbnb/lottie/LottieImageAsset;->bitmap:Landroid/graphics/Bitmap;
 
     return-void

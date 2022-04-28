@@ -14,28 +14,28 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Bitmap;Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;)V
+.method public constructor <init>(Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;Landroid/graphics/Bitmap;)V
     .locals 1
 
     .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 35
-    iput-object p1, p0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnail:Landroid/graphics/Bitmap;
+    iput-object p2, p0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnail:Landroid/graphics/Bitmap;
 
     .line 36
-    iget-object p1, p0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnail:Landroid/graphics/Bitmap;
+    iget-object p2, p0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnail:Landroid/graphics/Bitmap;
 
-    if-eqz p1, :cond_0
+    if-eqz p2, :cond_0
 
     const/4 v0, 0x0
 
     .line 37
-    invoke-virtual {p1, v0}, Landroid/graphics/Bitmap;->setHasAlpha(Z)V
+    invoke-virtual {p2, v0}, Landroid/graphics/Bitmap;->setHasAlpha(Z)V
 
     .line 39
     :cond_0
-    iput-object p2, p0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
+    iput-object p1, p0, Lcom/android/systemui/shared/recents/model/ThumbnailData;->thumbnailInfo:Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
 
     return-void
 .end method

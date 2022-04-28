@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/gadget/ClearButton;)V
     .locals 0
 
-    .line 149
+    .line 153
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton$3;->this$0:Lcom/miui/home/launcher/gadget/ClearButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +38,12 @@
 .method public run()V
     .locals 3
 
-    .line 151
+    .line 155
     new-instance v0, Lcom/miui/home/launcher/gadget/ClearButton$3$1;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/ClearButton$3$1;-><init>(Lcom/miui/home/launcher/gadget/ClearButton$3;)V
 
-    .line 178
+    .line 182
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/ClearButton$3;->this$0:Lcom/miui/home/launcher/gadget/ClearButton;
 
     const/4 v2, 0x0

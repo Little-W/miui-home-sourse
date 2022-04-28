@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/BaseRecentsImpl;Landroid/os/Handler;)V
     .locals 0
 
-    .line 533
+    .line 556
     iput-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -30,73 +30,88 @@
     return-void
 .end method
 
+.method public static synthetic lambda$onChange$0(Lcom/miui/home/recents/BaseRecentsImpl$9;)V
+    .locals 3
+
+    .line 560
+    iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+
+    .line 561
+    invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$200(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v1, "show_gesture_appswitch_feature"
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v2, 0x1
+
+    .line 563
+    :cond_0
+    iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+
+    invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$900(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/GestureStubView;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 564
+    iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+
+    invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$900(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/GestureStubView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Lcom/miui/home/recents/GestureStubView;->disableQuickSwitch(Z)V
+
+    .line 567
+    :cond_1
+    iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+
+    invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1000(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/GestureStubView;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    .line 568
+    iget-object v0, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+
+    invoke-static {v0}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1000(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/GestureStubView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Lcom/miui/home/recents/GestureStubView;->disableQuickSwitch(Z)V
+
+    :cond_2
+    return-void
+.end method
+
 
 # virtual methods
 .method public onChange(Z)V
-    .locals 2
+    .locals 1
 
-    .line 536
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
+    .line 559
+    sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->BACKGROUND_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
-    .line 537
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$100(Lcom/miui/home/recents/BaseRecentsImpl;)Landroid/content/Context;
+    new-instance v0, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$9$B5PcBQCntJPZUO5HVfGo_7Wt6vM;
 
-    move-result-object p1
+    invoke-direct {v0, p0}, Lcom/miui/home/recents/-$$Lambda$BaseRecentsImpl$9$B5PcBQCntJPZUO5HVfGo_7Wt6vM;-><init>(Lcom/miui/home/recents/BaseRecentsImpl$9;)V
 
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {p1, v0}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 
-    move-result-object p1
-
-    const-string v0, "show_gesture_appswitch_feature"
-
-    const/4 v1, 0x0
-
-    invoke-static {p1, v0, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    const/4 v1, 0x1
-
-    .line 539
-    :cond_0
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$900(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/GestureStubView;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    .line 540
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$900(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/GestureStubView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Lcom/miui/home/recents/GestureStubView;->disableQuickSwitch(Z)V
-
-    .line 543
-    :cond_1
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1000(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/GestureStubView;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    .line 544
-    iget-object p1, p0, Lcom/miui/home/recents/BaseRecentsImpl$9;->this$0:Lcom/miui/home/recents/BaseRecentsImpl;
-
-    invoke-static {p1}, Lcom/miui/home/recents/BaseRecentsImpl;->access$1000(Lcom/miui/home/recents/BaseRecentsImpl;)Lcom/miui/home/recents/GestureStubView;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Lcom/miui/home/recents/GestureStubView;->disableQuickSwitch(Z)V
-
-    :cond_2
     return-void
 .end method

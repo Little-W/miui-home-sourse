@@ -28,7 +28,7 @@
 
 # direct methods
 .method public constructor <init>(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;Landroid/view/View;)V
-    .locals 3
+    .locals 4
 
     .line 374
     iput-object p1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->this$0:Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;
@@ -36,7 +36,7 @@
     .line 375
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    const v0, 0x7f0a0259
+    const v0, 0x7f0a02de
 
     .line 376
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -47,7 +47,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mTitle:Landroid/widget/TextView;
 
-    const v0, 0x7f0a025a
+    const v0, 0x7f0a02df
 
     .line 377
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -77,15 +77,24 @@
 
     invoke-static {p1}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->access$000(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)Lcom/miui/home/launcher/widget/WidgetThumbnailView;
 
-    move-result-object p1
+    move-result-object v3
 
-    invoke-direct {v0, v1, v2, p1}, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;-><init>(Lcom/miui/home/launcher/Launcher;Landroid/view/View$OnLongClickListener;Landroid/view/View$OnClickListener;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;-><init>(Lcom/miui/home/launcher/Launcher;Landroid/view/View$OnLongClickListener;Landroid/view/View$OnClickListener;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mWidgetsHorizontalAdapter:Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;
 
-    const p1, 0x7f0a025c
-
     .line 381
+    iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mWidgetsHorizontalAdapter:Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->access$000(Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;)Lcom/miui/home/launcher/widget/WidgetThumbnailView;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->setWidgetDetailsCallback(Lcom/miui/home/launcher/widget/WidgetDetailsCallback;)V
+
+    const p1, 0x7f0a02e1
+
+    .line 382
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -94,7 +103,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mRowRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    .line 382
+    .line 383
     iget-object p1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mRowRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     new-instance p2, Landroidx/recyclerview/widget/LinearLayoutManager;
@@ -109,7 +118,7 @@
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
-    .line 383
+    .line 384
     iget-object p1, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mRowRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
     iget-object p2, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter$ViewHolder;->mWidgetsHorizontalAdapter:Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;

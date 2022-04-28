@@ -70,7 +70,12 @@
     .line 37
     invoke-virtual {p2, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
+    const-string v0, "com.miui.home:string/default_folder_title_hot"
+
     .line 38
+    invoke-virtual {p2, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    .line 39
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/newInstallIndicator/CN/CNNewInstallIndicatorController;->getShortcutInfosInFolders(Ljava/util/Collection;Ljava/util/HashSet;)Ljava/util/HashSet;
 
     move-result-object p1

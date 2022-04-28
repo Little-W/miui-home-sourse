@@ -37,7 +37,7 @@
 .method constructor <init>()V
     .locals 2
 
-    .line 22
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 19
@@ -72,7 +72,7 @@
 
     return-object p1
 
-    .line 30
+    .line 29
     :cond_0
     iget-object v0, p0, Lcom/airbnb/lottie/model/LottieCompositionCache;->cache:Landroidx/collection/LruCache;
 
@@ -92,7 +92,7 @@
 
     return-void
 
-    .line 37
+    .line 36
     :cond_0
     iget-object v0, p0, Lcom/airbnb/lottie/model/LottieCompositionCache;->cache:Landroidx/collection/LruCache;
 

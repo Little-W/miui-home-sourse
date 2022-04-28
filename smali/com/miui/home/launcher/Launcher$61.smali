@@ -3,12 +3,12 @@
 .source "Launcher.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/miui/home/launcher/gadget/MaMlUtil$MaMlDownloadListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->lambda$checkAllAppsLabel$38(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutInfo;Landroid/content/pm/PackageManager;Landroid/content/Intent;Z)V
+    value = Lcom/miui/home/launcher/Launcher;->installMaMl(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,51 +20,149 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$info:Lcom/miui/home/launcher/ShortcutInfo;
-
-.field final synthetic val$result:Ljava/lang/CharSequence;
+.field final synthetic val$info:Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/lang/CharSequence;Lcom/miui/home/launcher/ShortcutInfo;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)V
     .locals 0
 
-    .line 6387
+    .line 6844
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$61;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$61;->val$result:Ljava/lang/CharSequence;
-
-    iput-object p3, p0, Lcom/miui/home/launcher/Launcher$61;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
+    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$61;->val$info:Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method static synthetic lambda$onDownloadProgress$1(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;I)V
+    .locals 0
+
+    .line 6859
+    iget-object p0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->hostView:Lcom/miui/home/launcher/maml/MaMlWidgetView;
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getHostView()Lcom/miui/home/launcher/maml/MaMlHostView;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;
+
+    invoke-virtual {p0, p1, p1}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->updateProgress(II)V
+
+    return-void
+.end method
+
+.method static synthetic lambda$onDownloadStatusChange$0(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)V
+    .locals 2
+
+    .line 6851
+    iget-object p0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->hostView:Lcom/miui/home/launcher/maml/MaMlWidgetView;
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getHostView()Lcom/miui/home/launcher/maml/MaMlHostView;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;
+
+    const/16 v0, -0x64
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;->updateProgress(II)V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public run()V
+.method public onDownloadProgress(I)V
     .locals 3
 
-    .line 6390
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$61;->val$result:Ljava/lang/CharSequence;
+    .line 6858
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$61;->val$info:Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
+
+    iget-object v0, v0, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->hostView:Lcom/miui/home/launcher/maml/MaMlWidgetView;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->getHostView()Lcom/miui/home/launcher/maml/MaMlHostView;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lcom/miui/home/launcher/gadget/MaMlPendingHostView;
 
     if-eqz v0, :cond_0
 
-    .line 6391
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$61;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
+    .line 6859
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$61;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$61;->this$0:Lcom/miui/home/launcher/Launcher;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
-    invoke-virtual {v1, v0, v2}, Lcom/miui/home/launcher/ShortcutInfo;->setLabelAndUpdateDB(Ljava/lang/CharSequence;Landroid/content/Context;)V
+    move-result-object v0
 
-    .line 6392
-    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$61;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$61;->val$info:Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$61;->this$0:Lcom/miui/home/launcher/Launcher;
+    new-instance v2, Lcom/miui/home/launcher/-$$Lambda$Launcher$61$0xWEHN1N9abIUPTZaqm6lEObDpk;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/ShortcutInfo;->updateBuddyIconView(Lcom/miui/home/launcher/Launcher;)V
+    invoke-direct {v2, v1, p1}, Lcom/miui/home/launcher/-$$Lambda$Launcher$61$0xWEHN1N9abIUPTZaqm6lEObDpk;-><init>(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;I)V
+
+    invoke-virtual {v0, v2}, Lcom/miui/home/launcher/Workspace;->post(Ljava/lang/Runnable;)Z
 
     :cond_0
+    return-void
+.end method
+
+.method public onDownloadStatusChange(I)V
+    .locals 3
+
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_0
+
+    .line 6848
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$61;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherModel;
+
+    move-result-object p1
+
+    new-instance v0, Lcom/miui/home/launcher/model/MamlUpdateTask;
+
+    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$61;->val$info:Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
+
+    iget-object v1, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->productId:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/miui/home/launcher/Launcher$61;->val$info:Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
+
+    iget v2, v2, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->versionCode:I
+
+    invoke-direct {v0, v1, v2}, Lcom/miui/home/launcher/model/MamlUpdateTask;-><init>(Ljava/lang/String;I)V
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/LauncherModel;->enqueueModelUpdateTask(Lcom/miui/home/launcher/LauncherModel$ModelUpdateTask;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x5
+
+    if-ne p1, v0, :cond_1
+
+    .line 6851
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$61;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$61;->val$info:Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
+
+    new-instance v1, Lcom/miui/home/launcher/-$$Lambda$Launcher$61$1mZxxv9QvcB6XH5NPizQoDc6cKs;
+
+    invoke-direct {v1, v0}, Lcom/miui/home/launcher/-$$Lambda$Launcher$61$1mZxxv9QvcB6XH5NPizQoDc6cKs;-><init>(Lcom/miui/home/launcher/maml/MaMlWidgetInfo;)V
+
+    invoke-virtual {p1, v1}, Lcom/miui/home/launcher/Workspace;->post(Ljava/lang/Runnable;)Z
+
+    :cond_1
+    :goto_0
     return-void
 .end method

@@ -227,6 +227,23 @@
     return p1
 .end method
 
+.method protected final removeMessages(I)V
+    .locals 1
+
+    .line 1948
+    iget-object v0, p0, Lcom/android/internal/util/StateMachine;->mSmHandler:Lcom/android/internal/util/StateMachine$SmHandler;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 1951
+    :cond_0
+    invoke-virtual {v0, p1}, Lcom/android/internal/util/StateMachine$SmHandler;->removeMessages(I)V
+
+    return-void
+.end method
+
 .method public sendMessage(I)V
     .locals 1
 
@@ -265,6 +282,27 @@
     move-result-object p1
 
     invoke-virtual {v0, p1}, Lcom/android/internal/util/StateMachine$SmHandler;->sendMessage(Landroid/os/Message;)Z
+
+    return-void
+.end method
+
+.method public sendMessageDelayed(IJ)V
+    .locals 1
+
+    .line 1785
+    iget-object v0, p0, Lcom/android/internal/util/StateMachine;->mSmHandler:Lcom/android/internal/util/StateMachine$SmHandler;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 1788
+    :cond_0
+    invoke-virtual {p0, p1}, Lcom/android/internal/util/StateMachine;->obtainMessage(I)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1, p2, p3}, Lcom/android/internal/util/StateMachine$SmHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     return-void
 .end method

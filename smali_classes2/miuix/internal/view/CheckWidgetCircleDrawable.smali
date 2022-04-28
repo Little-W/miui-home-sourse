@@ -123,11 +123,18 @@
 
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 54
+    .line 53
+    iget-object p1, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mStrokePaint:Landroid/graphics/Paint;
+
+    const/high16 p2, 0x40000000    # 2.0f
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    .line 55
     :cond_1
     iput p5, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mStrokeNormalAlpha:I
 
-    .line 55
+    .line 56
     iput p6, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mStrokeDisableAlpha:I
 
     return-void
@@ -138,12 +145,12 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 6
 
-    .line 85
+    .line 86
     invoke-virtual {p0}, Lmiuix/internal/view/CheckWidgetCircleDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 86
+    .line 87
     iget v1, v0, Landroid/graphics/Rect;->right:I
 
     iget v2, v0, Landroid/graphics/Rect;->left:I
@@ -152,7 +159,7 @@
 
     div-int/lit8 v1, v1, 0x2
 
-    .line 87
+    .line 88
     iget v2, v0, Landroid/graphics/Rect;->top:I
 
     iget v3, v0, Landroid/graphics/Rect;->bottom:I
@@ -161,7 +168,7 @@
 
     div-int/lit8 v2, v2, 0x2
 
-    .line 88
+    .line 89
     iget v3, v0, Landroid/graphics/Rect;->right:I
 
     iget v4, v0, Landroid/graphics/Rect;->left:I
@@ -186,12 +193,12 @@
 
     int-to-float v0, v0
 
-    .line 89
+    .line 90
     iget v3, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mScale:F
 
     mul-float/2addr v3, v0
 
-    const/high16 v4, 0x40400000    # 3.0f
+    const/high16 v4, 0x3f800000    # 1.0f
 
     sub-float/2addr v3, v4
 
@@ -199,15 +206,17 @@
 
     invoke-virtual {p1, v1, v2, v3, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 90
+    .line 91
     iget-boolean v3, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mHasStroke:Z
 
     if-eqz v3, :cond_0
 
-    .line 91
+    .line 92
     iget v3, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mScale:F
 
     mul-float/2addr v0, v3
+
+    sub-float/2addr v0, v4
 
     sub-float/2addr v0, v4
 
@@ -222,7 +231,7 @@
 .method public getAlpha()I
     .locals 1
 
-    .line 80
+    .line 81
     iget-object v0, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getAlpha()I
@@ -243,22 +252,22 @@
 .method public setAlpha(I)V
     .locals 1
 
-    .line 68
+    .line 69
     iget-object v0, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 69
+    .line 70
     iget-boolean v0, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mHasStroke:Z
 
     if-eqz v0, :cond_1
 
-    .line 70
+    .line 71
     iget v0, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mUncheckedNormalAlpha:I
 
     if-ne p1, v0, :cond_0
 
-    .line 71
+    .line 72
     iget-object p1, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mStrokePaint:Landroid/graphics/Paint;
 
     iget v0, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mStrokeNormalAlpha:I
@@ -267,13 +276,13 @@
 
     goto :goto_0
 
-    .line 72
+    .line 73
     :cond_0
     iget v0, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mUncheckedDisableAlpha:I
 
     if-ne p1, v0, :cond_1
 
-    .line 73
+    .line 74
     iget-object p1, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mStrokePaint:Landroid/graphics/Paint;
 
     iget v0, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mStrokeDisableAlpha:I
@@ -288,7 +297,7 @@
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 1
 
-    .line 97
+    .line 98
     iget-object v0, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
@@ -299,7 +308,7 @@
 .method public setScale(F)V
     .locals 0
 
-    .line 63
+    .line 64
     iput p1, p0, Lmiuix/internal/view/CheckWidgetCircleDrawable;->mScale:F
 
     return-void

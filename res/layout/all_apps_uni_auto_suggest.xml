@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/suggest_container" android:background="@color/transparent" android:paddingBottom="@dimen/dp9" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/text_size_sp14" android:textStyle="bold" android:textColor="@color/black" android:id="@id/suggest_title" android:paddingTop="@dimen/dp14" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif" />
+    <com.mi.globallauncher.view.ReversibleTagGroup android:id="@id/suggest_group" app:rtg_backgroundColor="@color/transparent" app:rtg_borderColor="@color/transparent" app:rtg_borderStrokeWidth="@dimen/dp0_7" app:rtg_checkedBackgroundColor="@color/transparent" app:rtg_max_row_count="1" app:rtg_pressedBackgroundColor="@color/ui_mode_10_black" app:rtg_textColor="@color/ui_mode_60_black" app:rtg_textSize="@dimen/text_size_sp13" app:rtg_verticalPadding="@dimen/dp8" app:rtg_verticalSpacing="@dimen/dp8" style="@style/ReversibleTagGroup" />
+</LinearLayout>

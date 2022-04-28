@@ -1,11 +1,11 @@
 .class Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$2;
-.super Landroid/app/IAssistDataReceiver$Stub;
+.super Ljava/util/HashSet;
 .source "ActivityManagerWrapper.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;->startRecentsActivityBelowAndroidS(Landroid/content/Intent;Lcom/android/systemui/shared/recents/system/AssistDataReceiver;Lcom/android/systemui/shared/recents/system/RecentsAnimationListener;)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -13,47 +13,32 @@
     name = null
 .end annotation
 
-
-# instance fields
-.field final synthetic this$0:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
-
-.field final synthetic val$assistDataReceiver:Lcom/android/systemui/shared/recents/system/AssistDataReceiver;
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/util/HashSet<",
+        "Landroid/content/ComponentName;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;Lcom/android/systemui/shared/recents/system/AssistDataReceiver;)V
-    .locals 0
+.method constructor <init>()V
+    .locals 3
 
-    .line 358
-    iput-object p1, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$2;->this$0:Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper;
+    .line 219
+    invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object p2, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$2;->val$assistDataReceiver:Lcom/android/systemui/shared/recents/system/AssistDataReceiver;
+    .line 220
+    new-instance v0, Landroid/content/ComponentName;
 
-    invoke-direct {p0}, Landroid/app/IAssistDataReceiver$Stub;-><init>()V
+    const-string v1, "com.google.android.apps.googleassistant"
 
-    return-void
-.end method
+    const-string v2, "com.google.android.apps.googleassistant.AssistantActivity"
 
+    invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-# virtual methods
-.method public onHandleAssistData(Landroid/os/Bundle;)V
-    .locals 1
-
-    .line 360
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$2;->val$assistDataReceiver:Lcom/android/systemui/shared/recents/system/AssistDataReceiver;
-
-    invoke-virtual {v0, p1}, Lcom/android/systemui/shared/recents/system/AssistDataReceiver;->onHandleAssistData(Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public onHandleAssistScreenshot(Landroid/graphics/Bitmap;)V
-    .locals 1
-
-    .line 363
-    iget-object v0, p0, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$2;->val$assistDataReceiver:Lcom/android/systemui/shared/recents/system/AssistDataReceiver;
-
-    invoke-virtual {v0, p1}, Lcom/android/systemui/shared/recents/system/AssistDataReceiver;->onHandleAssistScreenshot(Landroid/graphics/Bitmap;)V
+    invoke-virtual {p0, v0}, Lcom/android/systemui/shared/recents/system/ActivityManagerWrapper$2;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method

@@ -33,7 +33,7 @@
 
     const/4 v0, 0x0
 
-    const v1, 0x7f0d010f
+    const v1, 0x7f0d0137
 
     invoke-virtual {p1, v1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -61,7 +61,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f100227
+    const v1, 0x7f100272
 
     .line 20
     invoke-virtual {p1, v1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;

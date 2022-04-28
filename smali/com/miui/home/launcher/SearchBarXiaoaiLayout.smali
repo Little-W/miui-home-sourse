@@ -174,6 +174,8 @@
 
     move-result-object v0
 
+    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
     :goto_0
     return-void
 .end method
@@ -183,14 +185,14 @@
 
     const-string v0, "com.miui.voiceassist"
 
-    .line 191
+    .line 190
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 192
+    .line 191
     invoke-direct {p0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->refreshXiaoAi()V
 
     :cond_0
@@ -200,7 +202,7 @@
 .method private refreshXiaoAi()V
     .locals 1
 
-    .line 160
+    .line 159
     new-instance v0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout$2;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout$2;-><init>(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)V
@@ -213,7 +215,7 @@
 .method private registerObserver()V
     .locals 4
 
-    .line 130
+    .line 129
     invoke-virtual {p0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -228,14 +230,14 @@
 
     if-nez v0, :cond_0
 
-    .line 131
+    .line 130
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 132
+    .line 131
     new-instance v1, Lcom/miui/home/launcher/SearchBarXiaoaiLayout$XiaoaiObserver;
 
     new-instance v2, Landroid/os/Handler;
@@ -254,7 +256,7 @@
 
     const-string v1, "key_home_screen_search_bar_show_xiaoai_icon"
 
-    .line 133
+    .line 132
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -272,26 +274,26 @@
 .method private unregisterObserver()V
     .locals 2
 
-    .line 140
+    .line 139
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->mXiaoaiObserver:Landroid/database/ContentObserver;
 
     if-eqz v0, :cond_0
 
-    .line 141
+    .line 140
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 142
+    .line 141
     iget-object v1, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->mXiaoaiObserver:Landroid/database/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
     const/4 v0, 0x0
 
-    .line 143
+    .line 142
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->mXiaoaiObserver:Landroid/database/ContentObserver;
 
     :cond_0
@@ -303,7 +305,7 @@
 .method public isXiaoaiShow()Z
     .locals 1
 
-    .line 177
+    .line 176
     iget-object v0, p0, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->mXiaoai:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getVisibility()I
@@ -326,17 +328,17 @@
 .method protected onAttachedToWindow()V
     .locals 1
 
-    .line 113
+    .line 112
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
-    .line 114
+    .line 113
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$SearchBarXiaoaiLayout$BW4GpVeQ9o36wpP2GvvZidLYqJw;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$SearchBarXiaoaiLayout$BW4GpVeQ9o36wpP2GvvZidLYqJw;-><init>(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
-    .line 115
+    .line 114
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -347,7 +349,7 @@
 
     if-nez v0, :cond_0
 
-    .line 116
+    .line 115
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -385,17 +387,17 @@
 .method protected onDetachedFromWindow()V
     .locals 1
 
-    .line 122
+    .line 121
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
-    .line 123
+    .line 122
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$SearchBarXiaoaiLayout$mjZygN2tX3RA_R64om5iwdlMrVc;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$SearchBarXiaoaiLayout$mjZygN2tX3RA_R64om5iwdlMrVc;-><init>(Lcom/miui/home/launcher/SearchBarXiaoaiLayout;)V
 
     invoke-static {v0}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
-    .line 124
+    .line 123
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -406,7 +408,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 125
+    .line 124
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -423,7 +425,7 @@
     .line 54
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0269
+    const v0, 0x7f0a02f3
 
     .line 55
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->findViewById(I)Landroid/view/View;
@@ -472,7 +474,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 182
+    .line 181
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/PackageAddMessage;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -488,7 +490,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 187
+    .line 186
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/PackageRemoveMessage;->getPackageName()Ljava/lang/String;
 
     move-result-object p1
@@ -508,12 +510,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0800b8
+    const v0, 0x7f0800c5
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0800b7
+    const v0, 0x7f0800c4
 
     :goto_0
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarXiaoaiLayout;->setBackgroundResource(I)V

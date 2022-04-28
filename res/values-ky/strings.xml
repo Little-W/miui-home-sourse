@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">Төмөнкү менен бөлүшүү</string>
     <string name="abc_shareactionprovider_share_with_application">%s аркылуу бөлүшүү</string>
     <string name="abc_toolbar_collapse_description">Жыйыштыруу</string>
+    <string name="common_google_play_services_unknown_issue">%1$s колдонмосунун Google Play кызматтары менен иштөөдө көйгөй чыкты. Кайра аракет кылыңыз.</string>
     <string name="copy">Көчүрүү</string>
     <string name="expand_button_title">Өркүндөтүлгөн</string>
     <string name="not_set">Коюлган эмес</string>

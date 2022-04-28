@@ -20,6 +20,24 @@
 # instance fields
 .field mRunnable:Ljava/lang/Runnable;
 
+.field final synthetic this$0:Lcom/miui/home/library/utils/DeferredHandler;
+
+
+# direct methods
+.method constructor <init>(Lcom/miui/home/library/utils/DeferredHandler;Ljava/lang/Runnable;)V
+    .locals 0
+
+    .line 63
+    iput-object p1, p0, Lcom/miui/home/library/utils/DeferredHandler$IdleRunnable;->this$0:Lcom/miui/home/library/utils/DeferredHandler;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 64
+    iput-object p2, p0, Lcom/miui/home/library/utils/DeferredHandler$IdleRunnable;->mRunnable:Ljava/lang/Runnable;
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public run()V

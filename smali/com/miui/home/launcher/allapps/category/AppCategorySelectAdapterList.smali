@@ -78,44 +78,44 @@
 .method public constructor <init>(Landroid/content/Context;Lcom/miui/home/launcher/allapps/AllAppsStore;Z)V
     .locals 1
 
-    .line 114
+    .line 115
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 101
+    .line 102
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
 
-    .line 103
+    .line 104
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapterItems:Ljava/util/ArrayList;
 
-    .line 106
+    .line 107
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mCachedSectionNames:Ljava/util/HashMap;
 
-    .line 111
+    .line 112
     new-instance v0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;-><init>(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;)V
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSelectedFilter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;
 
-    .line 115
+    .line 116
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mContext:Landroid/content/Context;
 
-    .line 116
+    .line 117
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
 
-    .line 117
+    .line 118
     new-instance p1, Lcom/miui/home/launcher/compat/AlphabeticIndexCompat;
 
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mContext:Landroid/content/Context;
@@ -124,7 +124,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mIndexer:Lcom/miui/home/launcher/compat/AlphabeticIndexCompat;
 
-    .line 118
+    .line 119
     new-instance p1, Lcom/miui/home/launcher/allapps/AppInfoComparator;
 
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mContext:Landroid/content/Context;
@@ -133,12 +133,12 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAppNameComparator:Lcom/miui/home/launcher/allapps/AppInfoComparator;
 
-    .line 119
+    .line 120
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
 
     invoke-virtual {p1, p0}, Lcom/miui/home/launcher/allapps/AllAppsStore;->addUpdateListener(Lcom/miui/home/launcher/allapps/AllAppsStore$OnUpdateListener;)V
 
-    .line 120
+    .line 121
     iput-boolean p3, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mIsSearchMode:Z
 
     return-void
@@ -147,7 +147,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;)Lcom/miui/home/launcher/util/ItemInfoMatcher;
     .locals 0
 
-    .line 33
+    .line 34
     iget-object p0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mItemFilter:Lcom/miui/home/launcher/util/ItemInfoMatcher;
 
     return-object p0
@@ -156,7 +156,7 @@
 .method private getAndUpdateCachedSectionName(Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 2
 
-    .line 255
+    .line 256
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mCachedSectionNames:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -167,14 +167,14 @@
 
     if-nez v0, :cond_0
 
-    .line 257
+    .line 258
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mIndexer:Lcom/miui/home/launcher/compat/AlphabeticIndexCompat;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/compat/AlphabeticIndexCompat;->computeSectionName(Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 258
+    .line 259
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mCachedSectionNames:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -194,25 +194,25 @@
         }
     .end annotation
 
-    .line 284
+    .line 285
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSearchResults:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 285
+    .line 286
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
 
-    .line 287
+    .line 288
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 288
+    .line 289
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -233,7 +233,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/AppInfo;
 
-    .line 289
+    .line 290
     iget-object v3, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSearchResults:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Lcom/miui/home/launcher/AppInfo;->toComponentKey()Lcom/miui/home/launcher/util/ComponentKey;
@@ -246,7 +246,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 290
+    .line 291
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -258,24 +258,24 @@
 .method private refillAdapterItems()V
     .locals 6
 
-    .line 215
+    .line 216
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapterItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 217
+    .line 218
     iget-boolean v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mIsSearchMode:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
-    .line 218
+    .line 219
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->getFiltersApps()Ljava/util/List;
 
     move-result-object v0
 
-    .line 219
+    .line 220
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -293,7 +293,7 @@
 
     check-cast v3, Lcom/miui/home/launcher/AppInfo;
 
-    .line 220
+    .line 221
     iget-object v4, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapterItems:Ljava/util/ArrayList;
 
     iget-object v5, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSelectedFilter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;
@@ -310,7 +310,7 @@
 
     goto :goto_0
 
-    .line 222
+    .line 223
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->hasFilter()Z
 
@@ -318,14 +318,14 @@
 
     if-eqz v1, :cond_7
 
-    .line 223
+    .line 224
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 224
+    .line 225
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapterItems:Ljava/util/ArrayList;
 
     invoke-static {}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;->asEmptySearch()Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$AdapterItem;
@@ -336,13 +336,13 @@
 
     goto/16 :goto_4
 
-    .line 226
+    .line 227
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapterItems:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f10020a
+    const v2, 0x7f100255
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -356,7 +356,7 @@
 
     goto/16 :goto_4
 
-    .line 230
+    .line 231
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
 
@@ -378,7 +378,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/AppInfo;
 
-    .line 231
+    .line 232
     iget-object v3, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSelectedFilter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;
 
     invoke-virtual {v3, v2, v1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;->matches(Lcom/miui/home/launcher/ItemInfo;Landroid/content/ComponentName;)Z
@@ -387,7 +387,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 232
+    .line 233
     iget-object v3, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapterItems:Ljava/util/ArrayList;
 
     const/4 v4, 0x1
@@ -400,7 +400,7 @@
 
     goto :goto_1
 
-    .line 236
+    .line 237
     :cond_4
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapterItems:Ljava/util/ArrayList;
 
@@ -416,12 +416,12 @@
 
     if-ne v0, v2, :cond_5
 
-    .line 237
+    .line 238
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapterItems:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f100032
+    const v3, 0x7f100035
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -435,13 +435,13 @@
 
     goto :goto_2
 
-    .line 239
+    .line 240
     :cond_5
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapterItems:Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f1000b5
+    const v3, 0x7f1000e2
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -453,7 +453,7 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 242
+    .line 243
     :goto_2
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
 
@@ -475,7 +475,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/AppInfo;
 
-    .line 243
+    .line 244
     iget-object v3, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSelectedFilter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;
 
     invoke-virtual {v3, v2, v1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;->matches(Lcom/miui/home/launcher/ItemInfo;Landroid/content/ComponentName;)Z
@@ -484,7 +484,7 @@
 
     if-nez v3, :cond_6
 
-    .line 244
+    .line 245
     iget-object v3, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapterItems:Ljava/util/ArrayList;
 
     const/4 v4, 0x0
@@ -505,12 +505,12 @@
 .method private refreshRecyclerView()V
     .locals 3
 
-    .line 209
+    .line 210
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 210
+    .line 211
     new-instance v1, Ljava/util/ArrayList;
 
     iget-object v2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapterItems:Ljava/util/ArrayList;
@@ -526,10 +526,10 @@
 .method private updateAdapterItems()V
     .locals 0
 
-    .line 204
+    .line 205
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->refillAdapterItems()V
 
-    .line 205
+    .line 206
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->refreshRecyclerView()V
 
     return-void
@@ -548,12 +548,12 @@
         }
     .end annotation
 
-    .line 317
+    .line 318
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 318
+    .line 319
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -574,7 +574,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/AppInfo;
 
-    .line 319
+    .line 320
     iget-object v3, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mItemFilter:Lcom/miui/home/launcher/util/ItemInfoMatcher;
 
     const/4 v4, 0x0
@@ -593,7 +593,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 320
+    .line 321
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -613,12 +613,12 @@
         }
     .end annotation
 
-    .line 327
+    .line 328
     new-instance v0, Lcom/miui/home/launcher/MainThreadExecutor;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/MainThreadExecutor;-><init>()V
 
-    .line 328
+    .line 329
     new-instance v1, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
 
     new-instance v2, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$1;
@@ -627,17 +627,17 @@
 
     invoke-direct {v1, v2}, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;-><init>(Landroidx/recyclerview/widget/DiffUtil$ItemCallback;)V
 
-    .line 340
+    .line 341
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->setMainThreadExecutor(Ljava/util/concurrent/Executor;)Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
 
     move-result-object v1
 
-    .line 341
+    .line 342
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->setBackgroundThreadExecutor(Ljava/util/concurrent/Executor;)Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
 
     move-result-object v0
 
-    .line 342
+    .line 343
     invoke-virtual {v0}, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;->build()Landroidx/recyclerview/widget/AsyncDifferConfig;
 
     move-result-object v0
@@ -656,12 +656,12 @@
         }
     .end annotation
 
-    .line 307
+    .line 308
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 308
+    .line 309
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -682,7 +682,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/AppInfo;
 
-    .line 309
+    .line 310
     iget-object v3, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mItemFilter:Lcom/miui/home/launcher/util/ItemInfoMatcher;
 
     const/4 v4, 0x0
@@ -701,7 +701,7 @@
 
     if-nez v3, :cond_0
 
-    .line 310
+    .line 311
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -721,12 +721,12 @@
         }
     .end annotation
 
-    .line 297
+    .line 298
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 298
+    .line 299
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -747,7 +747,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/AppInfo;
 
-    .line 299
+    .line 300
     iget-object v3, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSelectedFilter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;
 
     const/4 v4, 0x0
@@ -758,7 +758,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 300
+    .line 301
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -770,7 +770,7 @@
 .method public hasFilter()Z
     .locals 1
 
-    .line 267
+    .line 268
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSearchResults:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
@@ -797,12 +797,12 @@
         }
     .end annotation
 
-    .line 139
+    .line 140
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->clear()V
 
-    .line 140
+    .line 141
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
 
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
@@ -813,14 +813,14 @@
 
     invoke-interface {p1, p2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 141
+    .line 142
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
 
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAppNameComparator:Lcom/miui/home/launcher/allapps/AppInfoComparator;
 
     invoke-static {p1, p2}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 145
+    .line 146
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mContext:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -833,7 +833,7 @@
 
     iget-object p1, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 146
+    .line 147
     sget-object p2, Ljava/util/Locale;->SIMPLIFIED_CHINESE:Ljava/util/Locale;
 
     invoke-virtual {p1, p2}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
@@ -842,7 +842,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 150
+    .line 151
     new-instance p1, Ljava/util/TreeMap;
 
     new-instance p2, Lcom/miui/home/launcher/util/LabelComparator;
@@ -851,7 +851,7 @@
 
     invoke-direct {p1, p2}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
 
-    .line 151
+    .line 152
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -871,7 +871,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/AppInfo;
 
-    .line 153
+    .line 154
     invoke-virtual {v0}, Lcom/miui/home/launcher/AppInfo;->getLable()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -880,7 +880,7 @@
 
     move-result-object v1
 
-    .line 156
+    .line 157
     invoke-virtual {p1, v1}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
@@ -889,27 +889,27 @@
 
     if-nez v2, :cond_0
 
-    .line 158
+    .line 159
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 159
+    .line 160
     invoke-virtual {p1, v1, v2}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 161
+    .line 162
     :cond_0
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 165
+    .line 166
     :cond_1
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->clear()V
 
-    .line 166
+    .line 167
     invoke-virtual {p1}, Ljava/util/TreeMap;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -931,7 +931,7 @@
 
     check-cast p2, Ljava/util/Map$Entry;
 
-    .line 167
+    .line 168
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -944,7 +944,7 @@
 
     goto :goto_1
 
-    .line 171
+    .line 172
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
 
@@ -965,7 +965,7 @@
 
     check-cast p2, Lcom/miui/home/launcher/AppInfo;
 
-    .line 173
+    .line 174
     invoke-virtual {p2}, Lcom/miui/home/launcher/AppInfo;->getLable()Ljava/lang/CharSequence;
 
     move-result-object p2
@@ -976,6 +976,13 @@
 
     .line 177
     :cond_3
+    sget-object p1, Lcom/miui/home/LauncherDecoupleHelper;->INSTANCE:Lcom/miui/home/LauncherDecoupleHelper;
+
+    iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mApps:Ljava/util/List;
+
+    invoke-virtual {p1, p2}, Lcom/miui/home/LauncherDecoupleHelper;->filterHideApps(Ljava/util/List;)V
+
+    .line 178
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->updateAdapterItems()V
 
     return-void
@@ -984,7 +991,7 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 124
+    .line 125
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAllAppsStore:Lcom/miui/home/launcher/allapps/AllAppsStore;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/allapps/AllAppsStore;->removeUpdateListener(Lcom/miui/home/launcher/allapps/AllAppsStore$OnUpdateListener;)V
@@ -995,7 +1002,7 @@
 .method public setAdapter(Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;)V
     .locals 0
 
-    .line 134
+    .line 135
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
     return-void
@@ -1006,20 +1013,20 @@
 
     if-eqz p2, :cond_0
 
-    .line 194
+    .line 195
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSelectedFilter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;->add(Lcom/miui/home/launcher/AppInfo;)V
 
     goto :goto_0
 
-    .line 196
+    .line 197
     :cond_0
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSelectedFilter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;->remove(Lcom/miui/home/launcher/AppInfo;)V
 
-    .line 198
+    .line 199
     :goto_0
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
@@ -1031,10 +1038,10 @@
 
     move-result p1
 
-    .line 199
+    .line 200
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->updateAdapterItems()V
 
-    .line 200
+    .line 201
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->getLayoutManager()Landroidx/recyclerview/widget/GridLayoutManager;
@@ -1060,7 +1067,7 @@
         }
     .end annotation
 
-    .line 181
+    .line 182
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1078,14 +1085,14 @@
 
     check-cast v0, Lcom/miui/home/launcher/AppInfo;
 
-    .line 182
+    .line 183
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSelectedFilter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;->add(Lcom/miui/home/launcher/AppInfo;)V
 
     goto :goto_0
 
-    .line 184
+    .line 185
     :cond_0
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1104,14 +1111,14 @@
 
     check-cast p2, Lcom/miui/home/launcher/AppInfo;
 
-    .line 185
+    .line 186
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSelectedFilter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;
 
     invoke-virtual {v0, p2}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;->remove(Lcom/miui/home/launcher/AppInfo;)V
 
     goto :goto_1
 
-    .line 187
+    .line 188
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
@@ -1123,10 +1130,10 @@
 
     move-result p1
 
-    .line 188
+    .line 189
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->updateAdapterItems()V
 
-    .line 189
+    .line 190
     iget-object p2, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mAdapter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;
 
     invoke-virtual {p2}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapter;->getLayoutManager()Landroidx/recyclerview/widget/GridLayoutManager;
@@ -1149,7 +1156,7 @@
         }
     .end annotation
 
-    .line 274
+    .line 275
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSearchResults:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
@@ -1160,7 +1167,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 275
+    .line 276
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -1169,11 +1176,11 @@
 
     move v1, v2
 
-    .line 276
+    .line 277
     :cond_0
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSearchResults:Ljava/util/ArrayList;
 
-    .line 277
+    .line 278
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1
@@ -1191,15 +1198,15 @@
 .method public updateItemFilter(Lcom/miui/home/launcher/util/ItemInfoMatcher;)V
     .locals 1
 
-    .line 128
+    .line 129
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mSelectedFilter:Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList$SelectedFilter;->clear()V
 
-    .line 129
+    .line 130
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/AppCategorySelectAdapterList;->mItemFilter:Lcom/miui/home/launcher/util/ItemInfoMatcher;
 
-    .line 130
+    .line 131
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1

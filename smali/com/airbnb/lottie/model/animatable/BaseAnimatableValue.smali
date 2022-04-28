@@ -42,7 +42,7 @@
         }
     .end annotation
 
-    .line 18
+    .line 16
     new-instance v0, Lcom/airbnb/lottie/value/Keyframe;
 
     invoke-direct {v0, p1}, Lcom/airbnb/lottie/value/Keyframe;-><init>(Ljava/lang/Object;)V
@@ -67,10 +67,10 @@
         }
     .end annotation
 
-    .line 21
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
+    .line 20
     iput-object p1, p0, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->keyframes:Ljava/util/List;
 
     return-void
@@ -89,7 +89,7 @@
         }
     .end annotation
 
-    .line 26
+    .line 24
     iget-object v0, p0, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->keyframes:Ljava/util/List;
 
     return-object v0
@@ -98,7 +98,7 @@
 .method public isStatic()Z
     .locals 3
 
-    .line 31
+    .line 29
     iget-object v0, p0, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->keyframes:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -143,12 +143,12 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 35
+    .line 33
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 36
+    .line 34
     iget-object v1, p0, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->keyframes:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
@@ -159,7 +159,7 @@
 
     const-string v1, "values="
 
-    .line 37
+    .line 35
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lcom/airbnb/lottie/model/animatable/BaseAnimatableValue;->keyframes:Ljava/util/List;
@@ -174,7 +174,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 39
+    .line 37
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

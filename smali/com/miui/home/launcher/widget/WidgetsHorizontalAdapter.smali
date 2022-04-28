@@ -20,6 +20,8 @@
 
 
 # instance fields
+.field private mClickCallBack:Lcom/miui/home/launcher/widget/WidgetDetailsCallback;
+
 .field private final mContext:Landroid/content/Context;
 
 .field private final mIconLongClickListener:Landroid/view/View$OnLongClickListener;
@@ -45,17 +47,17 @@
 .method public constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/view/View$OnLongClickListener;Landroid/view/View$OnClickListener;)V
     .locals 1
 
-    .line 47
+    .line 49
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 37
+    .line 38
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mContext:Landroid/content/Context;
 
-    .line 40
+    .line 41
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -66,13 +68,13 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    .line 48
+    .line 50
     iput-object p2, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mIconLongClickListener:Landroid/view/View$OnLongClickListener;
 
-    .line 49
+    .line 51
     iput-object p3, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mOnClickListener:Landroid/view/View$OnClickListener;
 
-    .line 50
+    .line 52
     new-instance p2, Lcom/miui/home/launcher/WidgetPreviewLoader;
 
     invoke-direct {p2, p1}, Lcom/miui/home/launcher/WidgetPreviewLoader;-><init>(Landroid/content/Context;)V
@@ -87,7 +89,7 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 76
+    .line 82
     iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mItemInfos:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
@@ -96,7 +98,7 @@
 
     return v0
 
-    .line 79
+    .line 85
     :cond_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -108,7 +110,7 @@
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
 
-    .line 36
+    .line 37
     check-cast p1, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;
 
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->onBindViewHolder(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;I)V
@@ -119,7 +121,7 @@
 .method public onBindViewHolder(Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;I)V
     .locals 5
 
-    .line 62
+    .line 68
     iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mItemInfos:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -128,13 +130,13 @@
 
     check-cast v0, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 63
+    .line 69
     iput-object v0, p1, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;->mItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
-    .line 65
+    .line 70
     iget-object v1, p1, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;->mWidgetCell:Lcom/miui/home/launcher/widget/WidgetCell;
 
-    .line 66
+    .line 71
     iget-object v2, p1, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;->mWidgetCell:Lcom/miui/home/launcher/widget/WidgetCell;
 
     new-instance v3, Landroid/graphics/Matrix;
@@ -145,17 +147,22 @@
 
     invoke-virtual {v2, v0, p1, v3, v4}, Lcom/miui/home/launcher/widget/WidgetCell;->applyFromCellItem(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;Landroid/graphics/Matrix;Lcom/miui/home/launcher/WidgetPreviewLoader;)V
 
-    .line 67
+    .line 72
     iget-object p1, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mIconLongClickListener:Landroid/view/View$OnLongClickListener;
 
     invoke-virtual {v1, p1}, Lcom/miui/home/launcher/widget/WidgetCell;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 68
+    .line 73
     iget-object p1, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v1, p1}, Lcom/miui/home/launcher/widget/WidgetCell;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 69
+    .line 74
+    iget-object p1, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mClickCallBack:Lcom/miui/home/launcher/widget/WidgetDetailsCallback;
+
+    invoke-virtual {v1, p1}, Lcom/miui/home/launcher/widget/WidgetCell;->setWidgetDetailsCallback(Lcom/miui/home/launcher/widget/WidgetDetailsCallback;)V
+
+    .line 75
     invoke-virtual {v1}, Lcom/miui/home/launcher/widget/WidgetCell;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
@@ -168,7 +175,7 @@
 
     goto :goto_0
 
-    .line 71
+    .line 77
     :cond_0
     iget-object p2, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mContext:Landroid/content/Context;
 
@@ -176,13 +183,13 @@
 
     move-result-object p2
 
-    const v0, 0x7f07038f
+    const v0, 0x7f07045c
 
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p2
 
-    .line 70
+    .line 76
     :goto_0
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;->setMarginStart(I)V
 
@@ -192,7 +199,7 @@
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
 
-    .line 36
+    .line 37
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;
 
     move-result-object p1
@@ -203,10 +210,10 @@
 .method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;
     .locals 2
 
-    .line 56
+    .line 62
     iget-object p2, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v0, 0x7f0d0112
+    const v0, 0x7f0d013b
 
     const/4 v1, 0x0
 
@@ -214,7 +221,7 @@
 
     move-result-object p1
 
-    .line 57
+    .line 63
     new-instance p2, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;
 
     invoke-direct {p2, p1}, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter$ViewHolder;-><init>(Landroid/view/View;)V
@@ -233,8 +240,17 @@
         }
     .end annotation
 
-    .line 93
+    .line 103
     iput-object p1, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mItemInfos:Ljava/util/ArrayList;
+
+    return-void
+.end method
+
+.method public setWidgetDetailsCallback(Lcom/miui/home/launcher/widget/WidgetDetailsCallback;)V
+    .locals 0
+
+    .line 56
+    iput-object p1, p0, Lcom/miui/home/launcher/widget/WidgetsHorizontalAdapter;->mClickCallBack:Lcom/miui/home/launcher/widget/WidgetDetailsCallback;
 
     return-void
 .end method

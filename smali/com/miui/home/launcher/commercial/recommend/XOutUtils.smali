@@ -60,6 +60,8 @@
 
     move-result-object v0
 
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return v1
 
     :cond_1
@@ -68,6 +70,8 @@
     const-string v0, "canRecommendScreenShow, isShowXout=false"
 
     .line 22
+    invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return v1
 .end method
 

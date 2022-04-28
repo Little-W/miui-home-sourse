@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/airbnb/lottie/LottieDrawable;Ljava/lang/String;)V
     .locals 0
 
-    .line 543
+    .line 586
     iput-object p1, p0, Lcom/airbnb/lottie/LottieDrawable$8;->this$0:Lcom/airbnb/lottie/LottieDrawable;
 
     iput-object p2, p0, Lcom/airbnb/lottie/LottieDrawable$8;->val$markerName:Ljava/lang/String;
@@ -42,7 +42,7 @@
 .method public run(Lcom/airbnb/lottie/LottieComposition;)V
     .locals 1
 
-    .line 546
+    .line 589
     iget-object p1, p0, Lcom/airbnb/lottie/LottieDrawable$8;->this$0:Lcom/airbnb/lottie/LottieDrawable;
 
     iget-object v0, p0, Lcom/airbnb/lottie/LottieDrawable$8;->val$markerName:Ljava/lang/String;

@@ -52,6 +52,14 @@
 .method public abstract getDisplayOptions()I
 .end method
 
+.method public getHideOffset()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public getThemedContext()Landroid/content/Context;
     .locals 1
 
@@ -66,6 +74,9 @@
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public abstract isShowing()Z
 .end method
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V

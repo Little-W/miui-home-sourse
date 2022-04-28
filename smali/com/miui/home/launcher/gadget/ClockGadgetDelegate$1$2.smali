@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1;)V
     .locals 0
 
-    .line 305
+    .line 324
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2;->this$1:Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1;
 
     invoke-direct {p0}, Lcom/miui/launcher/views/MamlOnExternCommandListener;-><init>()V
@@ -37,14 +37,14 @@
 
     const-string p2, "click"
 
-    .line 308
+    .line 327
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 309
+    .line 328
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2;->this$1:Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1;->this$0:Lcom/miui/home/launcher/gadget/ClockGadgetDelegate;

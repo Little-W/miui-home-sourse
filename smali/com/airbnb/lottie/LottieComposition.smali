@@ -126,7 +126,7 @@
 
     const/4 v0, 0x0
 
-    .line 66
+    .line 68
     iput v0, p0, Lcom/airbnb/lottie/LottieComposition;->maskAndMatteCount:I
 
     return-void
@@ -137,10 +137,10 @@
 .method public addWarning(Ljava/lang/String;)V
     .locals 1
 
-    .line 89
+    .line 91
     invoke-static {p1}, Lcom/airbnb/lottie/utils/Logger;->warning(Ljava/lang/String;)V
 
-    .line 90
+    .line 92
     iget-object v0, p0, Lcom/airbnb/lottie/LottieComposition;->warnings:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
@@ -151,7 +151,7 @@
 .method public getBounds()Landroid/graphics/Rect;
     .locals 1
 
-    .line 137
+    .line 139
     iget-object v0, p0, Lcom/airbnb/lottie/LottieComposition;->bounds:Landroid/graphics/Rect;
 
     return-object v0
@@ -168,7 +168,7 @@
         }
     .end annotation
 
-    .line 169
+    .line 179
     iget-object v0, p0, Lcom/airbnb/lottie/LottieComposition;->characters:Landroidx/collection/SparseArrayCompat;
 
     return-object v0
@@ -177,7 +177,7 @@
 .method public getDuration()F
     .locals 2
 
-    .line 141
+    .line 143
     invoke-virtual {p0}, Lcom/airbnb/lottie/LottieComposition;->getDurationFrames()F
 
     move-result v0
@@ -200,7 +200,7 @@
 .method public getDurationFrames()F
     .locals 2
 
-    .line 201
+    .line 216
     iget v0, p0, Lcom/airbnb/lottie/LottieComposition;->endFrame:F
 
     iget v1, p0, Lcom/airbnb/lottie/LottieComposition;->startFrame:F
@@ -231,16 +231,31 @@
         }
     .end annotation
 
-    .line 173
+    .line 183
     iget-object v0, p0, Lcom/airbnb/lottie/LottieComposition;->fonts:Ljava/util/Map;
 
     return-object v0
 .end method
 
+.method public getFrameForProgress(F)F
+    .locals 2
+
+    .line 155
+    iget v0, p0, Lcom/airbnb/lottie/LottieComposition;->startFrame:F
+
+    iget v1, p0, Lcom/airbnb/lottie/LottieComposition;->endFrame:F
+
+    invoke-static {v0, v1, p1}, Lcom/airbnb/lottie/utils/MiscUtils;->lerp(FFF)F
+
+    move-result p1
+
+    return p1
+.end method
+
 .method public getFrameRate()F
     .locals 1
 
-    .line 155
+    .line 165
     iget v0, p0, Lcom/airbnb/lottie/LottieComposition;->frameRate:F
 
     return v0
@@ -258,7 +273,7 @@
         }
     .end annotation
 
-    .line 197
+    .line 212
     iget-object v0, p0, Lcom/airbnb/lottie/LottieComposition;->images:Ljava/util/Map;
 
     return-object v0
@@ -275,52 +290,47 @@
         }
     .end annotation
 
-    .line 159
+    .line 169
     iget-object v0, p0, Lcom/airbnb/lottie/LottieComposition;->layers:Ljava/util/List;
 
     return-object v0
 .end method
 
 .method public getMarker(Ljava/lang/String;)Lcom/airbnb/lottie/model/Marker;
-    .locals 3
+    .locals 4
 
-    .line 182
+    .line 192
     iget-object v0, p0, Lcom/airbnb/lottie/LottieComposition;->markers:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
-    const/4 v0, 0x0
+    move-result v0
 
-    .line 183
+    const/4 v1, 0x0
+
     :goto_0
-    iget-object v1, p0, Lcom/airbnb/lottie/LottieComposition;->markers:Ljava/util/List;
+    if-ge v1, v0, :cond_1
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    .line 194
+    iget-object v2, p0, Lcom/airbnb/lottie/LottieComposition;->markers:Ljava/util/List;
 
-    move-result v1
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    if-ge v0, v1, :cond_1
+    move-result-object v2
 
-    .line 184
-    iget-object v1, p0, Lcom/airbnb/lottie/LottieComposition;->markers:Ljava/util/List;
+    check-cast v2, Lcom/airbnb/lottie/model/Marker;
 
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 195
+    invoke-virtual {v2, p1}, Lcom/airbnb/lottie/model/Marker;->matchesName(Ljava/lang/String;)Z
 
-    move-result-object v1
+    move-result v3
 
-    check-cast v1, Lcom/airbnb/lottie/model/Marker;
+    if-eqz v3, :cond_0
 
-    .line 185
-    invoke-virtual {v1, p1}, Lcom/airbnb/lottie/model/Marker;->matchesName(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    return-object v1
+    return-object v2
 
     :cond_0
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
@@ -333,7 +343,7 @@
 .method public getMaskAndMatteCount()I
     .locals 1
 
-    .line 116
+    .line 118
     iget v0, p0, Lcom/airbnb/lottie/LottieComposition;->maskAndMatteCount:I
 
     return v0
@@ -342,7 +352,7 @@
 .method public getPerformanceTracker()Lcom/airbnb/lottie/PerformanceTracker;
     .locals 1
 
-    .line 128
+    .line 130
     iget-object v0, p0, Lcom/airbnb/lottie/LottieComposition;->performanceTracker:Lcom/airbnb/lottie/PerformanceTracker;
 
     return-object v0
@@ -361,7 +371,7 @@
         }
     .end annotation
 
-    .line 165
+    .line 175
     iget-object v0, p0, Lcom/airbnb/lottie/LottieComposition;->precomps:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -376,7 +386,7 @@
 .method public getStartFrame()F
     .locals 1
 
-    .line 146
+    .line 147
     iget v0, p0, Lcom/airbnb/lottie/LottieComposition;->startFrame:F
 
     return v0
@@ -385,7 +395,7 @@
 .method public hasDashPattern()Z
     .locals 1
 
-    .line 108
+    .line 110
     iget-boolean v0, p0, Lcom/airbnb/lottie/LottieComposition;->hasDashPattern:Z
 
     return v0
@@ -394,7 +404,7 @@
 .method public incrementMatteOrMaskCount(I)V
     .locals 1
 
-    .line 100
+    .line 102
     iget v0, p0, Lcom/airbnb/lottie/LottieComposition;->maskAndMatteCount:I
 
     add-int/2addr v0, p1
@@ -439,37 +449,37 @@
         }
     .end annotation
 
-    .line 74
+    .line 76
     iput-object p1, p0, Lcom/airbnb/lottie/LottieComposition;->bounds:Landroid/graphics/Rect;
 
-    .line 75
+    .line 77
     iput p2, p0, Lcom/airbnb/lottie/LottieComposition;->startFrame:F
 
-    .line 76
+    .line 78
     iput p3, p0, Lcom/airbnb/lottie/LottieComposition;->endFrame:F
 
-    .line 77
+    .line 79
     iput p4, p0, Lcom/airbnb/lottie/LottieComposition;->frameRate:F
 
-    .line 78
+    .line 80
     iput-object p5, p0, Lcom/airbnb/lottie/LottieComposition;->layers:Ljava/util/List;
 
-    .line 79
+    .line 81
     iput-object p6, p0, Lcom/airbnb/lottie/LottieComposition;->layerMap:Landroidx/collection/LongSparseArray;
 
-    .line 80
+    .line 82
     iput-object p7, p0, Lcom/airbnb/lottie/LottieComposition;->precomps:Ljava/util/Map;
 
-    .line 81
+    .line 83
     iput-object p8, p0, Lcom/airbnb/lottie/LottieComposition;->images:Ljava/util/Map;
 
-    .line 82
+    .line 84
     iput-object p9, p0, Lcom/airbnb/lottie/LottieComposition;->characters:Landroidx/collection/SparseArrayCompat;
 
-    .line 83
+    .line 85
     iput-object p10, p0, Lcom/airbnb/lottie/LottieComposition;->fonts:Ljava/util/Map;
 
-    .line 84
+    .line 86
     iput-object p11, p0, Lcom/airbnb/lottie/LottieComposition;->markers:Ljava/util/List;
 
     return-void
@@ -478,7 +488,7 @@
 .method public layerModelForId(J)Lcom/airbnb/lottie/model/layer/Layer;
     .locals 1
 
-    .line 133
+    .line 135
     iget-object v0, p0, Lcom/airbnb/lottie/LottieComposition;->layerMap:Landroidx/collection/LongSparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroidx/collection/LongSparseArray;->get(J)Ljava/lang/Object;
@@ -493,7 +503,7 @@
 .method public setHasDashPattern(Z)V
     .locals 0
 
-    .line 95
+    .line 97
     iput-boolean p1, p0, Lcom/airbnb/lottie/LottieComposition;->hasDashPattern:Z
 
     return-void
@@ -502,7 +512,7 @@
 .method public setPerformanceTrackingEnabled(Z)V
     .locals 1
 
-    .line 124
+    .line 126
     iget-object v0, p0, Lcom/airbnb/lottie/LottieComposition;->performanceTracker:Lcom/airbnb/lottie/PerformanceTracker;
 
     invoke-virtual {v0, p1}, Lcom/airbnb/lottie/PerformanceTracker;->setEnabled(Z)V
@@ -513,14 +523,14 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 206
+    .line 221
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "LottieComposition:\n"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 207
+    .line 222
     iget-object v1, p0, Lcom/airbnb/lottie/LottieComposition;->layers:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -542,7 +552,7 @@
 
     const-string v3, "\t"
 
-    .line 208
+    .line 223
     invoke-virtual {v2, v3}, Lcom/airbnb/lottie/model/layer/Layer;->toString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -551,7 +561,7 @@
 
     goto :goto_0
 
-    .line 210
+    .line 225
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

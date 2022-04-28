@@ -23,14 +23,14 @@
     .end annotation
 .end field
 
-.field private imagesFolder:Ljava/lang/String;
+.field private final imagesFolder:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 23
+    .line 21
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -55,22 +55,16 @@
         }
     .end annotation
 
-    .line 31
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
-    iput-object p2, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->imagesFolder:Ljava/lang/String;
-
-    .line 33
+    .line 29
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result p2
+    move-result v0
 
-    if-nez p2, :cond_0
+    if-nez v0, :cond_0
 
-    iget-object p2, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->imagesFolder:Ljava/lang/String;
-
-    .line 34
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -79,41 +73,45 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->charAt(I)C
 
-    move-result p2
+    move-result v0
 
-    const/16 v0, 0x2f
+    const/16 v1, 0x2f
 
-    if-eq p2, v0, :cond_0
+    if-eq v0, v1, :cond_0
 
-    .line 35
-    new-instance p2, Ljava/lang/StringBuilder;
+    .line 30
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->imagesFolder:Ljava/lang/String;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->imagesFolder:Ljava/lang/String;
 
-    .line 38
+    goto :goto_0
+
+    .line 32
     :cond_0
+    iput-object p2, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->imagesFolder:Ljava/lang/String;
+
+    .line 34
+    :goto_0
     instance-of p2, p1, Landroid/view/View;
 
     if-nez p2, :cond_1
 
     const-string p1, "LottieDrawable must be inside of a view for images to work."
 
-    .line 39
+    .line 35
     invoke-static {p1}, Lcom/airbnb/lottie/utils/Logger;->warning(Ljava/lang/String;)V
 
-    .line 40
+    .line 36
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
@@ -122,12 +120,12 @@
 
     const/4 p1, 0x0
 
-    .line 41
+    .line 37
     iput-object p1, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->context:Landroid/content/Context;
 
     return-void
 
-    .line 45
+    .line 41
     :cond_1
     check-cast p1, Landroid/view/View;
 
@@ -137,10 +135,10 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->context:Landroid/content/Context;
 
-    .line 46
+    .line 42
     iput-object p4, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->imageAssets:Ljava/util/Map;
 
-    .line 47
+    .line 43
     invoke-virtual {p0, p3}, Lcom/airbnb/lottie/manager/ImageAssetManager;->setDelegate(Lcom/airbnb/lottie/ImageAssetDelegate;)V
 
     return-void
@@ -149,12 +147,12 @@
 .method private putBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 126
+    .line 129
     sget-object v0, Lcom/airbnb/lottie/manager/ImageAssetManager;->bitmapHashLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 127
+    .line 130
     :try_start_0
     iget-object v1, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->imageAssets:Ljava/util/Map;
 
@@ -166,7 +164,7 @@
 
     invoke-virtual {p1, p2}, Lcom/airbnb/lottie/LottieImageAsset;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 128
+    .line 131
     monitor-exit v0
 
     return-object p2
@@ -174,7 +172,7 @@
     :catchall_0
     move-exception p1
 
-    .line 129
+    .line 132
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -187,7 +185,7 @@
 .method public bitmapForId(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 7
 
-    .line 70
+    .line 66
     iget-object v0, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->imageAssets:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -202,7 +200,7 @@
 
     return-object v1
 
-    .line 74
+    .line 71
     :cond_0
     invoke-virtual {v0}, Lcom/airbnb/lottie/LottieImageAsset;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -212,49 +210,49 @@
 
     return-object v2
 
-    .line 79
+    .line 76
     :cond_1
     iget-object v2, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->delegate:Lcom/airbnb/lottie/ImageAssetDelegate;
 
     if-eqz v2, :cond_3
 
-    .line 80
+    .line 77
     invoke-interface {v2, v0}, Lcom/airbnb/lottie/ImageAssetDelegate;->fetchBitmap(Lcom/airbnb/lottie/LottieImageAsset;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    .line 82
+    .line 79
     invoke-direct {p0, p1, v0}, Lcom/airbnb/lottie/manager/ImageAssetManager;->putBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     :cond_2
     return-object v0
 
-    .line 87
+    .line 84
     :cond_3
     invoke-virtual {v0}, Lcom/airbnb/lottie/LottieImageAsset;->getFileName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 88
+    .line 85
     new-instance v3, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v3}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
     const/4 v4, 0x1
 
-    .line 89
+    .line 86
     iput-boolean v4, v3, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
     const/16 v5, 0xa0
 
-    .line 90
+    .line 87
     iput v5, v3, Landroid/graphics/BitmapFactory$Options;->inDensity:I
 
     const-string v5, "data:"
 
-    .line 92
+    .line 89
     invoke-virtual {v2, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v5
@@ -271,7 +269,7 @@
 
     const/16 v0, 0x2c
 
-    .line 96
+    .line 93
     :try_start_0
     invoke-virtual {v2, v0}, Ljava/lang/String;->indexOf(I)I
 
@@ -291,14 +289,14 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 101
+    .line 98
     array-length v1, v0
 
     invoke-static {v0, v2, v1, v3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 102
+    .line 99
     invoke-direct {p0, p1, v0}, Lcom/airbnb/lottie/manager/ImageAssetManager;->putBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p1
@@ -310,12 +308,12 @@
 
     const-string v0, "data URL did not have correct base64 format."
 
-    .line 98
+    .line 95
     invoke-static {v0, p1}, Lcom/airbnb/lottie/utils/Logger;->warning(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v1
 
-    .line 107
+    .line 104
     :cond_4
     :try_start_1
     iget-object v4, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->imagesFolder:Ljava/lang/String;
@@ -326,7 +324,7 @@
 
     if-nez v4, :cond_5
 
-    .line 111
+    .line 108
     iget-object v4, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->context:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
@@ -351,14 +349,17 @@
 
     move-result-object v2
     :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 116
+    .line 115
+    :try_start_2
     invoke-static {v2, v1, v3}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v1
+    :try_end_2
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 117
+    .line 120
     invoke-virtual {v0}, Lcom/airbnb/lottie/LottieImageAsset;->getWidth()I
 
     move-result v2
@@ -371,16 +372,26 @@
 
     move-result-object v0
 
-    .line 118
+    .line 121
     invoke-direct {p0, p1, v0}, Lcom/airbnb/lottie/manager/ImageAssetManager;->putBitmap(Ljava/lang/String;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     return-object p1
 
-    .line 108
+    :catch_1
+    move-exception p1
+
+    const-string v0, "Unable to decode image."
+
+    .line 117
+    invoke-static {v0, p1}, Lcom/airbnb/lottie/utils/Logger;->warning(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v1
+
+    .line 105
     :cond_5
-    :try_start_2
+    :try_start_3
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string v0, "You must set an images folder before loading an image. Set it with LottieComposition#setImagesFolder or LottieDrawable#setImagesFolder"
@@ -388,15 +399,15 @@
     invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    :catch_1
+    :catch_2
     move-exception p1
 
     const-string v0, "Unable to open asset."
 
-    .line 113
+    .line 110
     invoke-static {v0, p1}, Lcom/airbnb/lottie/utils/Logger;->warning(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v1
@@ -407,7 +418,7 @@
 
     if-nez p1, :cond_0
 
-    .line 122
+    .line 125
     iget-object v0, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->context:Landroid/content/Context;
 
     if-eqz v0, :cond_1
@@ -436,7 +447,7 @@
 .method public setDelegate(Lcom/airbnb/lottie/ImageAssetDelegate;)V
     .locals 0
 
-    .line 51
+    .line 47
     iput-object p1, p0, Lcom/airbnb/lottie/manager/ImageAssetManager;->delegate:Lcom/airbnb/lottie/ImageAssetDelegate;
 
     return-void

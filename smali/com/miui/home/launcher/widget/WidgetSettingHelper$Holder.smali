@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 19
+    .line 20
     new-instance v0, Lcom/miui/home/launcher/widget/WidgetSettingHelper;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/widget/WidgetSettingHelper;-><init>()V
@@ -35,7 +35,7 @@
 .method static synthetic access$000()Lcom/miui/home/launcher/widget/WidgetSettingHelper;
     .locals 1
 
-    .line 18
+    .line 19
     sget-object v0, Lcom/miui/home/launcher/widget/WidgetSettingHelper$Holder;->sInstance:Lcom/miui/home/launcher/widget/WidgetSettingHelper;
 
     return-object v0

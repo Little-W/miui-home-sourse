@@ -45,7 +45,7 @@
 
 .field private static final PREF_FORMAT:Ljava/lang/String; = "com.miui.newhome.preferences.%s"
 
-.field public static final STYLES_THEME_PHOTOS:I = 0x7f1101dc
+.field public static final STYLES_THEME_PHOTOS:I = 0x7f1101f4
 
 .field private static final TAG:Ljava/lang/String; = "HomeFeedContainer"
 
@@ -390,6 +390,8 @@
     const-string v1, "Exception"
 
     .line 553
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_0
     :goto_0
     return-void
@@ -405,7 +407,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f07034d
+    const v1, 0x7f0703f8
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -851,6 +853,8 @@
     const-string v3, "Exception"
 
     .line 566
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :goto_0
     return v0
 .end method
@@ -1048,6 +1052,8 @@
 
     move-result-object v0
 
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 393
     iget-object p1, p0, Lcom/miui/home/launcher/view/HomeFeedContainer;->mNewHomeView:Lcom/miui/newhome/view/gestureview/NewHomeView;
 
@@ -1162,6 +1168,8 @@
     const-string v1, "Exception"
 
     .line 109
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :goto_0
     return-void
 .end method
@@ -1211,6 +1219,8 @@
     const-string v1, "loadView start"
 
     .line 148
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     const-string v0, "com.miui.newhome.view.gestureview.NewHomeView"
 
     .line 149
@@ -1283,6 +1293,8 @@
     const-string v2, "Exception"
 
     .line 157
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     return-object p1
 .end method
 
@@ -1900,6 +1912,8 @@
     const-string v1, " reflect error"
 
     .line 226
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_3
     :goto_0
     return-void
@@ -1981,5 +1995,7 @@
     const-string p2, "slideUpIsContentCenter false NewHome remove feed view"
 
     .line 411
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return-void
 .end method

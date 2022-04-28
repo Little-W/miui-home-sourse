@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 832
+    .line 880
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Lcom/android/systemui/shared/recents/touchableRegion/OnComputeInternalInsetsListenerCompat;-><init>()V
@@ -37,10 +37,10 @@
 
     const/4 v0, 0x3
 
-    .line 835
+    .line 883
     invoke-virtual {p1, v0}, Lcom/android/systemui/shared/recents/touchableRegion/InternalInsetsInfoCompat;->setTouchableInsets(I)V
 
-    .line 836
+    .line 884
     new-instance v0, Landroid/graphics/Region;
 
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
@@ -57,7 +57,7 @@
 
     iget-object v3, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 837
+    .line 885
     invoke-virtual {v3}, Lcom/miui/home/recents/NavStubView;->getLeft()I
 
     move-result v3
@@ -86,9 +86,9 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/graphics/Region;-><init>(IIII)V
 
-    .line 838
-    sget-object v1, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
+    const-string v1, "NavStubView_Touch"
 
+    .line 886
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -109,7 +109,7 @@
 
     iget-object v3, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 839
+    .line 887
     invoke-static {v3}, Lcom/miui/home/recents/NavStubView;->access$1100(Lcom/miui/home/recents/NavStubView;)Z
 
     move-result v3
@@ -122,8 +122,47 @@
 
     iget-object v3, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    .line 840
+    .line 888
     invoke-static {v3}, Lcom/miui/home/recents/NavStubView;->access$1200(Lcom/miui/home/recents/NavStubView;)Z
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, "   mKeepHidden="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
+
+    .line 889
+    invoke-static {v3}, Lcom/miui/home/recents/NavStubView;->access$1300(Lcom/miui/home/recents/NavStubView;)Z
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, "   mDisableTouch="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
+
+    .line 890
+    invoke-static {v3}, Lcom/miui/home/recents/NavStubView;->access$1400(Lcom/miui/home/recents/NavStubView;)Z
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v3, "   mUseEmptyTouchableRegion="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v3, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
+
+    .line 891
+    invoke-static {v3}, Lcom/miui/home/recents/NavStubView;->access$1500(Lcom/miui/home/recents/NavStubView;)Z
 
     move-result v3
 
@@ -133,15 +172,25 @@
 
     move-result-object v2
 
-    .line 838
-    .line 842
+    .line 886
+    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 892
+    iget-object v1, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
+
+    invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$1500(Lcom/miui/home/recents/NavStubView;)Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_3
+
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$1100(Lcom/miui/home/recents/NavStubView;)Z
 
     move-result v1
-
-    const/4 v2, 0x0
 
     if-nez v1, :cond_0
 
@@ -153,16 +202,9 @@
 
     if-nez v1, :cond_0
 
-    .line 843
-    new-instance v0, Landroid/graphics/Region;
-
-    invoke-direct {v0, v2, v2, v2, v2}, Landroid/graphics/Region;-><init>(IIII)V
-
-    invoke-virtual {p1, v0}, Lcom/android/systemui/shared/recents/touchableRegion/InternalInsetsInfoCompat;->setTouchableRegion(Landroid/graphics/Region;)V
-
     goto/16 :goto_0
 
-    .line 844
+    .line 895
     :cond_0
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -188,17 +230,17 @@
 
     if-nez v1, :cond_2
 
-    .line 845
+    .line 896
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
-    .line 846
+    .line 897
     new-instance v3, Landroid/graphics/RectF;
 
     iget-object v4, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v4}, Lcom/miui/home/recents/NavStubView;->access$1300(Lcom/miui/home/recents/NavStubView;)[F
+    invoke-static {v4}, Lcom/miui/home/recents/NavStubView;->access$1600(Lcom/miui/home/recents/NavStubView;)[F
 
     move-result-object v4
 
@@ -214,7 +256,7 @@
 
     iget-object v5, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v5}, Lcom/miui/home/recents/NavStubView;->access$1300(Lcom/miui/home/recents/NavStubView;)[F
+    invoke-static {v5}, Lcom/miui/home/recents/NavStubView;->access$1600(Lcom/miui/home/recents/NavStubView;)[F
 
     move-result-object v5
 
@@ -232,19 +274,19 @@
 
     invoke-direct {v3, v2, v4, v5, v6}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 847
+    .line 898
     sget-object v2, Landroid/graphics/Path$Direction;->CCW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {v1, v3, v2}, Landroid/graphics/Path;->addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
 
-    .line 848
-    sget-object v2, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
+    const-string v2, "NavStubView_Touch"
 
+    .line 899
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "onComputeInternalInsets  path.addRect: centerRectF="
+    const-string v5, "  onComputeInternalInsets  path.addRect: centerRectF="
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -254,7 +296,9 @@
 
     move-result-object v3
 
-    .line 849
+    invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 900
     iget-object v2, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iget-object v2, v2, Lcom/miui/home/recents/NavStubView;->mFsGestureAssistHelper:Lcom/miui/home/recents/FsGestureAssistHelper;
@@ -265,7 +309,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 850
+    .line 901
     iget-object v2, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iget-object v2, v2, Lcom/miui/home/recents/NavStubView;->mFsGestureAssistHelper:Lcom/miui/home/recents/FsGestureAssistHelper;
@@ -274,7 +318,7 @@
 
     move-result v2
 
-    .line 851
+    .line 902
     new-instance v3, Landroid/graphics/RectF;
 
     iget-object v4, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
@@ -305,7 +349,7 @@
 
     invoke-direct {v3, v4, v5, v6, v7}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 852
+    .line 903
     new-instance v4, Landroid/graphics/RectF;
 
     iget-object v5, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
@@ -344,24 +388,24 @@
 
     invoke-direct {v4, v2, v5, v6, v7}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 853
+    .line 904
     sget-object v2, Landroid/graphics/Path$Direction;->CCW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {v1, v3, v2}, Landroid/graphics/Path;->addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
 
-    .line 854
+    .line 905
     sget-object v2, Landroid/graphics/Path$Direction;->CCW:Landroid/graphics/Path$Direction;
 
     invoke-virtual {v1, v4, v2}, Landroid/graphics/Path;->addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
 
-    .line 855
-    sget-object v2, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
+    const-string v2, "NavStubView_Touch"
 
+    .line 906
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "onComputeInternalInsets  path.addRect: leftAssistantRectF="
+    const-string v6, "  onComputeInternalInsets  path.addRect: leftAssistantRectF="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -377,16 +421,55 @@
 
     move-result-object v3
 
-    .line 858
+    invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 909
     :cond_1
     invoke-virtual {p1, v1, v0}, Lcom/android/systemui/shared/recents/touchableRegion/InternalInsetsInfoCompat;->setTouchableRegionPath(Landroid/graphics/Path;Landroid/graphics/Region;)V
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 860
+    .line 911
     :cond_2
     invoke-virtual {p1, v0}, Lcom/android/systemui/shared/recents/touchableRegion/InternalInsetsInfoCompat;->setTouchableRegion(Landroid/graphics/Region;)V
 
+    const-string p1, "NavStubView_Touch"
+
+    .line 912
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "  onComputeInternalInsets  region="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    .line 893
+    :cond_3
     :goto_0
+    new-instance v0, Landroid/graphics/Region;
+
+    invoke-direct {v0, v2, v2, v2, v2}, Landroid/graphics/Region;-><init>(IIII)V
+
+    invoke-virtual {p1, v0}, Lcom/android/systemui/shared/recents/touchableRegion/InternalInsetsInfoCompat;->setTouchableRegion(Landroid/graphics/Region;)V
+
+    const-string p1, "NavStubView_Touch"
+
+    const-string v0, "  onComputeInternalInsets  empty"
+
+    .line 894
+    invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
     return-void
 .end method

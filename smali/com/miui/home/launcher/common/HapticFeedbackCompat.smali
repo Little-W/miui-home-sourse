@@ -109,6 +109,8 @@
     const-string v1, "performHapticFeedback error"
 
     .line 58
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :goto_0
     return-void
 .end method
@@ -131,13 +133,13 @@
     return-void
 .end method
 
-.method public abstract performBoom(Landroid/view/View;)V
+.method public abstract performBoom()V
 .end method
 
-.method public abstract performClearAllRecentTasks(Landroid/view/View;)V
+.method public abstract performClearAllRecentTasks()V
 .end method
 
-.method public abstract performEnough(Landroid/view/View;)V
+.method public abstract performEnough()V
 .end method
 
 .method public abstract performEnterEditMode(Landroid/view/View;Lcom/miui/home/launcher/EditStateChangeReason;)V
@@ -149,10 +151,10 @@
 .method public abstract performEnterRecent(Landroid/view/View;)V
 .end method
 
-.method public abstract performGestureBackHandUp(Landroid/view/View;)V
+.method public abstract performGestureBackHandUp()V
 .end method
 
-.method public abstract performGestureReadyBack(Landroid/view/View;)V
+.method public abstract performGestureReadyBack()V
 .end method
 
 .method public abstract performHold(Landroid/view/View;)V
@@ -173,5 +175,5 @@
 .method public abstract performRecentViewLockChanged(Landroid/view/View;Z)V
 .end method
 
-.method public abstract performUninstall(Landroid/view/View;)V
+.method public abstract performUninstall()V
 .end method

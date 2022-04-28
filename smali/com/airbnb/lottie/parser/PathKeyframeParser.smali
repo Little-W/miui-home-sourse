@@ -5,7 +5,7 @@
 
 # direct methods
 .method static parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;)Lcom/airbnb/lottie/animation/keyframe/PathKeyframe;
-    .locals 3
+    .locals 7
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -28,16 +28,24 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 22
     :goto_0
+    move v5, v0
+
+    .line 22
     invoke-static {}, Lcom/airbnb/lottie/utils/Utils;->dpScale()F
 
-    move-result v1
+    move-result v3
 
-    sget-object v2, Lcom/airbnb/lottie/parser/PathParser;->INSTANCE:Lcom/airbnb/lottie/parser/PathParser;
+    sget-object v4, Lcom/airbnb/lottie/parser/PathParser;->INSTANCE:Lcom/airbnb/lottie/parser/PathParser;
+
+    const/4 v6, 0x0
+
+    move-object v1, p0
+
+    move-object v2, p1
 
     .line 21
-    invoke-static {p0, p1, v1, v2, v0}, Lcom/airbnb/lottie/parser/KeyframeParser;->parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;FLcom/airbnb/lottie/parser/ValueParser;Z)Lcom/airbnb/lottie/value/Keyframe;
+    invoke-static/range {v1 .. v6}, Lcom/airbnb/lottie/parser/KeyframeParser;->parse(Lcom/airbnb/lottie/parser/moshi/JsonReader;Lcom/airbnb/lottie/LottieComposition;FLcom/airbnb/lottie/parser/ValueParser;ZZ)Lcom/airbnb/lottie/value/Keyframe;
 
     move-result-object p0
 

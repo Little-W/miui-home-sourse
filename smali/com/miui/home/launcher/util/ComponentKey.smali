@@ -15,18 +15,18 @@
 .method public constructor <init>(Landroid/content/ComponentName;Landroid/os/UserHandle;)V
     .locals 2
 
-    .line 34
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
+    .line 39
     iput-object p1, p0, Lcom/miui/home/launcher/util/ComponentKey;->componentName:Landroid/content/ComponentName;
 
-    .line 36
+    .line 40
     iput-object p2, p0, Lcom/miui/home/launcher/util/ComponentKey;->user:Landroid/os/UserHandle;
 
     const/4 v0, 0x2
 
-    .line 37
+    .line 41
     new-array v0, v0, [Ljava/lang/Object;
 
     const/4 v1, 0x0
@@ -49,7 +49,7 @@
 .method public static from(Landroid/content/pm/LauncherActivityInfo;)Lcom/miui/home/launcher/util/ComponentKey;
     .locals 2
 
-    .line 41
+    .line 68
     new-instance v0, Lcom/miui/home/launcher/util/ComponentKey;
 
     invoke-virtual {p0}, Landroid/content/pm/LauncherActivityInfo;->getComponentName()Landroid/content/ComponentName;
@@ -70,10 +70,10 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .line 51
+    .line 78
     check-cast p1, Lcom/miui/home/launcher/util/ComponentKey;
 
-    .line 52
+    .line 79
     iget-object v0, p1, Lcom/miui/home/launcher/util/ComponentKey;->componentName:Landroid/content/ComponentName;
 
     iget-object v1, p0, Lcom/miui/home/launcher/util/ComponentKey;->componentName:Landroid/content/ComponentName;
@@ -108,7 +108,7 @@
 .method public hashCode()I
     .locals 1
 
-    .line 46
+    .line 73
     iget v0, p0, Lcom/miui/home/launcher/util/ComponentKey;->mHashCode:I
 
     return v0
@@ -117,7 +117,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 60
+    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderGridView;Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 0
 
-    .line 222
+    .line 216
     iput-object p1, p0, Lcom/miui/home/launcher/FolderGridView$1;->this$0:Lcom/miui/home/launcher/FolderGridView;
 
     iput-object p2, p0, Lcom/miui/home/launcher/FolderGridView$1;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 224
+    .line 218
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView$1;->this$0:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderGridView;->access$000(Lcom/miui/home/launcher/FolderGridView;)Lcom/miui/home/launcher/ShortcutsAdapter;

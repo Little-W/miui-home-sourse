@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;)V
     .locals 0
 
-    .line 378
+    .line 379
     iput-object p1, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$FolderStateChangedHandler;->this$0:Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$1;)V
     .locals 0
 
-    .line 378
+    .line 379
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$FolderStateChangedHandler;-><init>(Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;)V
 
     return-void
@@ -47,7 +47,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 381
+    .line 382
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/FolderStateChangedMessage;->getMessage()I
 
     move-result v0
@@ -56,14 +56,14 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 382
+    .line 383
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/FolderStateChangedMessage;->getMessage()I
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    .line 383
+    .line 384
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor$FolderStateChangedHandler;->this$0:Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
 

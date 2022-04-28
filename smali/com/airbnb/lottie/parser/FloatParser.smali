@@ -54,7 +54,7 @@
         }
     .end annotation
 
-    .line 14
+    .line 15
     invoke-static {p1}, Lcom/airbnb/lottie/parser/JsonUtils;->valueFromObject(Lcom/airbnb/lottie/parser/moshi/JsonReader;)F
 
     move-result p1

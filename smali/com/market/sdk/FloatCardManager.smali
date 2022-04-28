@@ -813,7 +813,7 @@
     :cond_0
     const-string p1, "MarketManager"
 
-    const-string/jumbo v0, "you can only set target market package name in international build!"
+    const-string v0, "you can only set target market package name in international build!"
 
     .line 44
     invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I

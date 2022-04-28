@@ -29,6 +29,10 @@
 
 .field public static final enum INVERT:Lcom/airbnb/lottie/model/layer/Layer$MatteType;
 
+.field public static final enum LUMA:Lcom/airbnb/lottie/model/layer/Layer$MatteType;
+
+.field public static final enum LUMA_INVERTED:Lcom/airbnb/lottie/model/layer/Layer$MatteType;
+
 .field public static final enum NONE:Lcom/airbnb/lottie/model/layer/Layer$MatteType;
 
 .field public static final enum UNKNOWN:Lcom/airbnb/lottie/model/layer/Layer$MatteType;
@@ -36,7 +40,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 8
 
     .line 30
     new-instance v0, Lcom/airbnb/lottie/model/layer/Layer$MatteType;
@@ -74,15 +78,37 @@
     .line 33
     new-instance v0, Lcom/airbnb/lottie/model/layer/Layer$MatteType;
 
-    const-string v1, "UNKNOWN"
+    const-string v1, "LUMA"
 
     const/4 v5, 0x3
 
     invoke-direct {v0, v1, v5}, Lcom/airbnb/lottie/model/layer/Layer$MatteType;-><init>(Ljava/lang/String;I)V
 
+    sput-object v0, Lcom/airbnb/lottie/model/layer/Layer$MatteType;->LUMA:Lcom/airbnb/lottie/model/layer/Layer$MatteType;
+
+    .line 34
+    new-instance v0, Lcom/airbnb/lottie/model/layer/Layer$MatteType;
+
+    const-string v1, "LUMA_INVERTED"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v0, v1, v6}, Lcom/airbnb/lottie/model/layer/Layer$MatteType;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/airbnb/lottie/model/layer/Layer$MatteType;->LUMA_INVERTED:Lcom/airbnb/lottie/model/layer/Layer$MatteType;
+
+    .line 35
+    new-instance v0, Lcom/airbnb/lottie/model/layer/Layer$MatteType;
+
+    const-string v1, "UNKNOWN"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v0, v1, v7}, Lcom/airbnb/lottie/model/layer/Layer$MatteType;-><init>(Ljava/lang/String;I)V
+
     sput-object v0, Lcom/airbnb/lottie/model/layer/Layer$MatteType;->UNKNOWN:Lcom/airbnb/lottie/model/layer/Layer$MatteType;
 
-    const/4 v0, 0x4
+    const/4 v0, 0x6
 
     .line 29
     new-array v0, v0, [Lcom/airbnb/lottie/model/layer/Layer$MatteType;
@@ -99,9 +125,17 @@
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/airbnb/lottie/model/layer/Layer$MatteType;->UNKNOWN:Lcom/airbnb/lottie/model/layer/Layer$MatteType;
+    sget-object v1, Lcom/airbnb/lottie/model/layer/Layer$MatteType;->LUMA:Lcom/airbnb/lottie/model/layer/Layer$MatteType;
 
     aput-object v1, v0, v5
+
+    sget-object v1, Lcom/airbnb/lottie/model/layer/Layer$MatteType;->LUMA_INVERTED:Lcom/airbnb/lottie/model/layer/Layer$MatteType;
+
+    aput-object v1, v0, v6
+
+    sget-object v1, Lcom/airbnb/lottie/model/layer/Layer$MatteType;->UNKNOWN:Lcom/airbnb/lottie/model/layer/Layer$MatteType;
+
+    aput-object v1, v0, v7
 
     sput-object v0, Lcom/airbnb/lottie/model/layer/Layer$MatteType;->$VALUES:[Lcom/airbnb/lottie/model/layer/Layer$MatteType;
 

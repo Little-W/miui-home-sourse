@@ -56,19 +56,19 @@
     return v0
 .end method
 
-.method public performBoom(Landroid/view/View;)V
+.method public performBoom()V
     .locals 0
 
     return-void
 .end method
 
-.method public performClearAllRecentTasks(Landroid/view/View;)V
+.method public performClearAllRecentTasks()V
     .locals 0
 
     return-void
 .end method
 
-.method public performEnough(Landroid/view/View;)V
+.method public performEnough()V
     .locals 0
 
     return-void
@@ -106,13 +106,13 @@
     return-void
 .end method
 
-.method public performGestureBackHandUp(Landroid/view/View;)V
+.method public performGestureBackHandUp()V
     .locals 0
 
     return-void
 .end method
 
-.method public performGestureReadyBack(Landroid/view/View;)V
+.method public performGestureReadyBack()V
     .locals 0
 
     return-void
@@ -161,7 +161,7 @@
     return-void
 .end method
 
-.method public performUninstall(Landroid/view/View;)V
+.method public performUninstall()V
     .locals 0
 
     return-void

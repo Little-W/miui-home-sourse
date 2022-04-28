@@ -29,7 +29,7 @@
 .method constructor <init>(Landroid/content/ContentResolver;Landroid/net/Uri;Landroid/content/ContentValues;)V
     .locals 0
 
-    .line 497
+    .line 516
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherModel$1;->val$cr:Landroid/content/ContentResolver;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherModel$1;->val$uri:Landroid/net/Uri;
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 4
 
-    .line 499
+    .line 518
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherModel$1;->val$cr:Landroid/content/ContentResolver;
 
     iget-object v1, p0, Lcom/miui/home/launcher/LauncherModel$1;->val$uri:Landroid/net/Uri;
@@ -61,7 +61,7 @@
 
     if-gez v0, :cond_0
 
-    .line 500
+    .line 519
     invoke-static {}, Lcom/miui/home/launcher/backup/LauncherBackupAgent;->isRestoring()Z
 
     move-result v0
@@ -72,8 +72,10 @@
 
     const-string v1, "update Item in database failed"
 
-    .line 501
-    .line 502
+    .line 520
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 521
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0

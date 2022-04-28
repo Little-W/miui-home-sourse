@@ -53,6 +53,17 @@
     return v0
 .end method
 
+.method public static synthetic lambda$getDefaultView$0(Lcom/miui/home/launcher/PendingAppWidgetHostView;)V
+    .locals 1
+
+    .line 52
+    iget-object v0, p0, Lcom/miui/home/launcher/PendingAppWidgetHostView;->mDefaultView:Landroid/view/View;
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method protected getDefaultView()Landroid/view/View;
@@ -72,7 +83,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d002e
+    const v1, 0x7f0d0044
 
     const/4 v2, 0x0
 
@@ -85,7 +96,7 @@
     .line 48
     iget-object v0, p0, Lcom/miui/home/launcher/PendingAppWidgetHostView;->mDefaultView:Landroid/view/View;
 
-    const v1, 0x7f0a011b
+    const v1, 0x7f0a0147
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -98,7 +109,7 @@
     .line 49
     iget-object v0, p0, Lcom/miui/home/launcher/PendingAppWidgetHostView;->mDefaultView:Landroid/view/View;
 
-    const v1, 0x7f0a00bd
+    const v1, 0x7f0a00de
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -111,7 +122,7 @@
     .line 50
     iget-object v0, p0, Lcom/miui/home/launcher/PendingAppWidgetHostView;->mDefaultView:Landroid/view/View;
 
-    const v1, 0x7f0a0187
+    const v1, 0x7f0a01ce
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -122,9 +133,13 @@
     iput-object v0, p0, Lcom/miui/home/launcher/PendingAppWidgetHostView;->mProgress:Landroid/widget/ProgressBar;
 
     .line 52
-    iget-object v0, p0, Lcom/miui/home/launcher/PendingAppWidgetHostView;->mDefaultView:Landroid/view/View;
+    new-instance v0, Lcom/miui/home/launcher/-$$Lambda$PendingAppWidgetHostView$Rv1xP3llsWwXowQJw3HRLdPOgdc;
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$PendingAppWidgetHostView$Rv1xP3llsWwXowQJw3HRLdPOgdc;-><init>(Lcom/miui/home/launcher/PendingAppWidgetHostView;)V
+
+    const-wide/16 v1, 0x3e8
+
+    invoke-virtual {p0, v0, v1, v2}, Lcom/miui/home/launcher/PendingAppWidgetHostView;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 53
     iget-object v0, p0, Lcom/miui/home/launcher/PendingAppWidgetHostView;->mWidgetInfo:Lcom/miui/home/launcher/LauncherAppWidgetInfo;
@@ -219,7 +234,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0804ba
+    const v2, 0x7f080522
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

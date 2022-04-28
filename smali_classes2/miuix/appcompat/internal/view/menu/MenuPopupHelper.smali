@@ -60,36 +60,36 @@
 .method public constructor <init>(Landroid/content/Context;Lmiuix/appcompat/internal/view/menu/MenuBuilder;Landroid/view/View;Z)V
     .locals 1
 
-    .line 70
+    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
+    .line 58
     sget v0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->ITEM_LAYOUT:I
 
     iput v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mMenuItemLayout:I
 
-    .line 71
+    .line 70
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mContext:Landroid/content/Context;
 
-    .line 72
+    .line 71
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 73
+    .line 72
     iput-object p2, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
-    .line 74
+    .line 73
     iput-boolean p4, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mOverflowOnly:Z
 
-    .line 76
+    .line 75
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    .line 77
+    .line 76
     invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object p4
@@ -100,22 +100,22 @@
 
     sget v0, Lmiuix/appcompat/R$dimen;->miuix_appcompat_config_prefDialogWidth:I
 
-    .line 78
+    .line 77
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p1
 
-    .line 77
+    .line 76
     invoke-static {p4, p1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
     iput p1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPopupMaxWidth:I
 
-    .line 80
+    .line 79
     iput-object p3, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mAnchorView:Landroid/view/View;
 
-    .line 82
+    .line 81
     invoke-virtual {p2, p0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->addMenuPresenter(Lmiuix/appcompat/internal/view/menu/MenuPresenter;)V
 
     return-void
@@ -170,14 +170,14 @@
 .method public dismiss(Z)V
     .locals 0
 
-    .line 125
+    .line 124
     invoke-virtual {p0}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->isShowing()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 126
+    .line 125
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPopup:Lmiuix/internal/widget/ListPopup;
 
     invoke-virtual {p1}, Lmiuix/internal/widget/ListPopup;->dismiss()V
@@ -211,7 +211,7 @@
 .method public isShowing()Z
     .locals 1
 
-    .line 136
+    .line 135
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPopup:Lmiuix/internal/widget/ListPopup;
 
     if-eqz v0, :cond_0
@@ -236,7 +236,7 @@
 .method public onCloseMenu(Lmiuix/appcompat/internal/view/menu/MenuBuilder;Z)V
     .locals 1
 
-    .line 205
+    .line 204
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     if-eq p1, v0, :cond_0
@@ -246,15 +246,15 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 209
+    .line 208
     invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->dismiss(Z)V
 
-    .line 210
+    .line 209
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPresenterCallback:Lmiuix/appcompat/internal/view/menu/MenuPresenter$Callback;
 
     if-eqz v0, :cond_1
 
-    .line 211
+    .line 210
     invoke-interface {v0, p1, p2}, Lmiuix/appcompat/internal/view/menu/MenuPresenter$Callback;->onCloseMenu(Lmiuix/appcompat/internal/view/menu/MenuBuilder;Z)V
 
     :cond_1
@@ -266,10 +266,10 @@
 
     const/4 v0, 0x0
 
-    .line 131
+    .line 130
     iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPopup:Lmiuix/internal/widget/ListPopup;
 
-    .line 132
+    .line 131
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/MenuBuilder;->close()V
@@ -289,10 +289,10 @@
         }
     .end annotation
 
-    .line 141
+    .line 140
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mAdapter:Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;
 
-    .line 142
+    .line 141
     invoke-static {p1}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->access$000(Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;)Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
     move-result-object p2
@@ -311,7 +311,7 @@
 .method public onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
     .locals 1
 
-    .line 146
+    .line 145
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result p1
@@ -326,7 +326,7 @@
 
     if-ne p2, p1, :cond_0
 
-    .line 147
+    .line 146
     invoke-virtual {p0, p3}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->dismiss(Z)V
 
     return v0
@@ -338,7 +338,7 @@
 .method public onSubMenuSelected(Lmiuix/appcompat/internal/view/menu/SubMenuBuilder;)Z
     .locals 7
 
-    .line 177
+    .line 176
     invoke-virtual {p1}, Lmiuix/appcompat/internal/view/menu/SubMenuBuilder;->hasVisibleItems()Z
 
     move-result v0
@@ -347,7 +347,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 178
+    .line 177
     new-instance v0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;
 
     iget-object v2, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mContext:Landroid/content/Context;
@@ -356,12 +356,12 @@
 
     invoke-direct {v0, v2, p1, v3, v1}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;-><init>(Landroid/content/Context;Lmiuix/appcompat/internal/view/menu/MenuBuilder;Landroid/view/View;Z)V
 
-    .line 179
+    .line 178
     iget-object v2, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPresenterCallback:Lmiuix/appcompat/internal/view/menu/MenuPresenter$Callback;
 
     invoke-virtual {v0, v2}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->setCallback(Lmiuix/appcompat/internal/view/menu/MenuPresenter$Callback;)V
 
-    .line 182
+    .line 181
     invoke-virtual {p1}, Lmiuix/appcompat/internal/view/menu/SubMenuBuilder;->size()I
 
     move-result v2
@@ -373,12 +373,12 @@
 
     if-ge v3, v2, :cond_1
 
-    .line 184
+    .line 183
     invoke-virtual {p1, v3}, Lmiuix/appcompat/internal/view/menu/SubMenuBuilder;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object v5
 
-    .line 185
+    .line 184
     invoke-interface {v5}, Landroid/view/MenuItem;->isVisible()Z
 
     move-result v6
@@ -403,23 +403,23 @@
     :cond_1
     move v2, v1
 
-    .line 190
+    .line 189
     :goto_1
     invoke-virtual {v0, v2}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->setForceShowIcon(Z)V
 
-    .line 192
+    .line 191
     invoke-virtual {v0}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->tryShow()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 193
+    .line 192
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPresenterCallback:Lmiuix/appcompat/internal/view/menu/MenuPresenter$Callback;
 
     if-eqz v0, :cond_2
 
-    .line 194
+    .line 193
     invoke-interface {v0, p1}, Lmiuix/appcompat/internal/view/menu/MenuPresenter$Callback;->onOpenSubMenu(Lmiuix/appcompat/internal/view/menu/MenuBuilder;)Z
 
     :cond_2
@@ -432,7 +432,7 @@
 .method public setCallback(Lmiuix/appcompat/internal/view/menu/MenuPresenter$Callback;)V
     .locals 0
 
-    .line 172
+    .line 171
     iput-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPresenterCallback:Lmiuix/appcompat/internal/view/menu/MenuPresenter$Callback;
 
     return-void
@@ -441,7 +441,7 @@
 .method public setForceShowIcon(Z)V
     .locals 0
 
-    .line 90
+    .line 89
     iput-boolean p1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mForceShowIcon:Z
 
     return-void
@@ -450,7 +450,7 @@
 .method public setMenuItemLayout(I)V
     .locals 0
 
-    .line 98
+    .line 97
     iput p1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mMenuItemLayout:I
 
     return-void
@@ -459,7 +459,7 @@
 .method public tryShow()Z
     .locals 3
 
-    .line 108
+    .line 107
     new-instance v0, Lmiuix/internal/widget/ListPopup;
 
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mContext:Landroid/content/Context;
@@ -468,7 +468,7 @@
 
     iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPopup:Lmiuix/internal/widget/ListPopup;
 
-    .line 109
+    .line 108
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPopup:Lmiuix/internal/widget/ListPopup;
 
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mContext:Landroid/content/Context;
@@ -485,68 +485,56 @@
 
     invoke-virtual {v0, v1}, Lmiuix/internal/widget/ListPopup;->setMaxAllowedHeight(I)V
 
-    .line 110
+    .line 109
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPopup:Lmiuix/internal/widget/ListPopup;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lmiuix/internal/widget/ListPopup;->setHasShadow(Z)V
 
-    .line 111
+    .line 110
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPopup:Lmiuix/internal/widget/ListPopup;
 
     invoke-virtual {v0, p0}, Lmiuix/internal/widget/ListPopup;->setOnDismissListener(Landroid/widget/PopupWindow$OnDismissListener;)V
 
-    .line 112
+    .line 111
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPopup:Lmiuix/internal/widget/ListPopup;
 
     invoke-virtual {v0, p0}, Lmiuix/internal/widget/ListPopup;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 114
+    .line 113
     new-instance v0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
+    iget-object v2, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mMenu:Lmiuix/appcompat/internal/view/menu/MenuBuilder;
 
-    invoke-direct {v0, p0, v1}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;-><init>(Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;Lmiuix/appcompat/internal/view/menu/MenuBuilder;)V
+    invoke-direct {v0, p0, v2}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;-><init>(Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;Lmiuix/appcompat/internal/view/menu/MenuBuilder;)V
 
     iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mAdapter:Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;
 
-    .line 115
+    .line 114
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPopup:Lmiuix/internal/widget/ListPopup;
 
-    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mAdapter:Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;
+    iget-object v2, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mAdapter:Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;
 
-    invoke-virtual {v0, v1}, Lmiuix/internal/widget/ListPopup;->setAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {v0, v2}, Lmiuix/internal/widget/ListPopup;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 117
+    .line 116
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPopup:Lmiuix/internal/widget/ListPopup;
 
     invoke-virtual {v0}, Lmiuix/internal/widget/ListPopup;->getMinMarginScreen()I
 
-    move-result v1
+    move-result v2
 
-    neg-int v1, v1
+    neg-int v2, v2
 
-    invoke-virtual {v0, v1}, Lmiuix/internal/widget/ListPopup;->setHorizontalOffset(I)V
+    invoke-virtual {v0, v2}, Lmiuix/internal/widget/ListPopup;->setHorizontalOffset(I)V
 
-    .line 118
+    .line 117
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPopup:Lmiuix/internal/widget/ListPopup;
-
-    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mAnchorView:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    add-int/lit16 v1, v1, -0x96
-
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
-
-    move-result v1
 
     invoke-virtual {v0, v1}, Lmiuix/internal/widget/ListPopup;->setVerticalOffset(I)V
 
-    .line 119
+    .line 118
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPopup:Lmiuix/internal/widget/ListPopup;
 
     iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mAnchorView:Landroid/view/View;
@@ -555,7 +543,7 @@
 
     invoke-virtual {v0, v1, v2}, Lmiuix/internal/widget/ListPopup;->show(Landroid/view/View;Landroid/view/ViewGroup;)V
 
-    .line 120
+    .line 119
     iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mPopup:Lmiuix/internal/widget/ListPopup;
 
     invoke-virtual {v0}, Lmiuix/internal/widget/ListPopup;->getListView()Landroid/widget/ListView;
@@ -572,12 +560,12 @@
 .method public updateMenuView(Z)V
     .locals 0
 
-    .line 165
+    .line 164
     iget-object p1, p0, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper;->mAdapter:Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;
 
     if-eqz p1, :cond_0
 
-    .line 166
+    .line 165
     invoke-virtual {p1}, Lmiuix/appcompat/internal/view/menu/MenuPopupHelper$MenuAdapter;->notifyDataSetChanged()V
 
     :cond_0

@@ -3,12 +3,12 @@
 .source "Launcher.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/Launcher;->handleActivityNotFound(Ljava/lang/String;Landroid/content/Intent;)Z
+    value = Lcom/miui/home/launcher/Launcher;->showSceneScreenCore(Lcom/miui/home/launcher/upsidescene/SceneScreen;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,17 +20,13 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/Launcher;
 
-.field final synthetic val$pkgName:Ljava/lang/String;
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;)V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 4898
+    .line 5376
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$48;->this$0:Lcom/miui/home/launcher/Launcher;
-
-    iput-object p2, p0, Lcom/miui/home/launcher/Launcher$48;->val$pkgName:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,69 +35,47 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public run()V
+    .locals 5
 
-    .line 4900
-    new-instance p1, Landroid/content/Intent;
-
-    const-string p2, "android.intent.action.VIEW"
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "market://details?id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/miui/home/launcher/Launcher$48;->val$pkgName:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    invoke-direct {p1, p2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    const-string p2, "com.xiaomi.market"
-
-    const-string v0, "com.xiaomi.market.ui.AppDetailActivity"
-
-    .line 4901
-    invoke-virtual {p1, p2, v0}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 4903
-    :try_start_0
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
-
-    move-result-object p2
-
+    .line 5378
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$48;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getSceneScreen()Lcom/miui/home/launcher/upsidescene/SceneScreen;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    const-string v1, "translationY"
 
-    invoke-virtual {p2, v0, p1, v1}, Lcom/miui/home/launcher/Application;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/view/View;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v2, 0x1
 
-    goto :goto_0
+    .line 5379
+    new-array v2, v2, [F
 
-    :catch_0
-    move-exception p1
+    const/4 v3, 0x0
 
-    .line 4905
-    invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
+    const/4 v4, 0x0
 
-    :goto_0
+    aput v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    .line 5380
+    new-instance v1, Lcom/miui/home/launcher/Launcher$48$1;
+
+    invoke-direct {v1, p0}, Lcom/miui/home/launcher/Launcher$48$1;-><init>(Lcom/miui/home/launcher/Launcher$48;)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 5390
+    invoke-virtual {v0}, Landroid/animation/Animator;->start()V
+
+    .line 5392
+    iget-object v0, p0, Lcom/miui/home/launcher/Launcher$48;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$7200(Lcom/miui/home/launcher/Launcher;)V
+
     return-void
 .end method

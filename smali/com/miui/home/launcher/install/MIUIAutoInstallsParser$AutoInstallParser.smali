@@ -68,6 +68,8 @@
     const-string v0, "Skipping invalid <autoinstall> with no package name."
 
     .line 168
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return v2
 
     :cond_0
@@ -153,6 +155,8 @@
     const-string v0, "Skipping invalid <autoinstall> with not in install list."
 
     .line 177
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return v2
 
     .line 180
@@ -191,6 +195,8 @@
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
+
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x1
 

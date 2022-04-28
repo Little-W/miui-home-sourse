@@ -24,14 +24,6 @@
     .end annotation
 .end method
 
-.method public abstract execSQL(Ljava/lang/String;[Ljava/lang/Object;)V
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/database/SQLException;
-        }
-    .end annotation
-.end method
-
 .method public abstract getAttachedDbs()Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -55,9 +47,6 @@
 .end method
 
 .method public abstract query(Landroidx/sqlite/db/SupportSQLiteQuery;)Landroid/database/Cursor;
-.end method
-
-.method public abstract query(Landroidx/sqlite/db/SupportSQLiteQuery;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 .end method
 
 .method public abstract query(Ljava/lang/String;)Landroid/database/Cursor;

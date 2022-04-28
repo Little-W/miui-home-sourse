@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3884
+    .line 4010
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$SearchBarObserver;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 3885
+    .line 4011
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -34,12 +34,28 @@
 
 # virtual methods
 .method public onChange(Z)V
-    .locals 0
+    .locals 1
 
-    .line 3890
+    const-string p1, "Launcher"
+
+    const-string v0, "SearchBarObserver onChange"
+
+    .line 4016
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 4017
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$SearchBarObserver;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->reloadSearchBarIfNeed()V
+
+    .line 4018
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$SearchBarObserver;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2500(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/hotseats/HotSeats;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/hotseats/HotSeats;->refreshSearchIcon()V
 
     return-void
 .end method

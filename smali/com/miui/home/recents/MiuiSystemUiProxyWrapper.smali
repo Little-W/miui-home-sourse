@@ -137,6 +137,8 @@
     const-string v3, "getMiddleSplitScreenSecondaryBounds error"
 
     .line 81
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     return-object v1
 .end method
 

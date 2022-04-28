@@ -30,62 +30,62 @@
 .method public constructor <init>(Landroid/content/res/Resources;Lcom/miui/home/launcher/ItemIcon;)V
     .locals 3
 
-    .line 278
+    .line 298
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const v0, 0x7f07009d
+    const v0, 0x7f0700d7
 
-    .line 279
+    .line 299
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelBgRadius:F
 
-    .line 281
+    .line 301
     invoke-direct {p0, p2}, Lcom/miui/home/launcher/DragView$CountLabel;->getCountLabelCenterPos(Lcom/miui/home/launcher/ItemIcon;)[F
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelCenterPos:[F
 
-    .line 283
+    .line 303
     new-instance p2, Landroid/graphics/Paint;
 
     invoke-direct {p2}, Landroid/graphics/Paint;-><init>()V
 
     iput-object p2, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelBgPaint:Landroid/graphics/Paint;
 
-    .line 284
+    .line 304
     iget-object p2, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelBgPaint:Landroid/graphics/Paint;
 
     const/4 v0, -0x1
 
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 285
+    .line 305
     iget-object p2, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelBgPaint:Landroid/graphics/Paint;
 
     const/4 v0, 0x1
 
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 287
+    .line 307
     new-instance p2, Landroid/graphics/Paint;
 
     invoke-direct {p2}, Landroid/graphics/Paint;-><init>()V
 
     iput-object p2, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelNumPaint:Landroid/graphics/Paint;
 
-    .line 288
+    .line 308
     iget-object p2, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelNumPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 289
+    .line 309
     iget-object p2, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelNumPaint:Landroid/graphics/Paint;
 
-    const v1, 0x7f060306
+    const v1, 0x7f06034c
 
     const/4 v2, 0x0
 
@@ -95,22 +95,22 @@
 
     invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 290
+    .line 310
     iget-object p2, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelNumPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
-    .line 291
+    .line 311
     iget-object p2, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelNumPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 292
+    .line 312
     iget-object p2, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelNumPaint:Landroid/graphics/Paint;
 
-    const v1, 0x7f07009e
+    const v1, 0x7f0700d8
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -118,14 +118,14 @@
 
     invoke-virtual {p2, p1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 294
+    .line 314
     iget-object p1, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelNumPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1}, Landroid/graphics/Paint;->getFontMetrics()Landroid/graphics/Paint$FontMetrics;
 
     move-result-object p1
 
-    .line 295
+    .line 315
     iget-object p2, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelCenterPos:[F
 
     aget p2, p2, v0
@@ -154,12 +154,12 @@
 .method private getCountLabelCenterPos(Lcom/miui/home/launcher/ItemIcon;)[F
     .locals 3
 
-    .line 299
+    .line 319
     invoke-virtual {p1}, Lcom/miui/home/launcher/ItemIcon;->getIconContainer()Landroid/view/View;
 
     move-result-object p1
 
-    .line 300
+    .line 320
     invoke-virtual {p1}, Landroid/view/View;->getRight()I
 
     move-result v0
@@ -170,7 +170,7 @@
 
     sub-float/2addr v0, v1
 
-    .line 301
+    .line 321
     invoke-virtual {p1}, Landroid/view/View;->getTop()I
 
     move-result p1
@@ -183,7 +183,7 @@
 
     const/4 v1, 0x2
 
-    .line 302
+    .line 322
     new-array v1, v1, [F
 
     const/4 v2, 0x0
@@ -202,7 +202,7 @@
 .method public draw(Landroid/graphics/Canvas;I)V
     .locals 5
 
-    .line 311
+    .line 331
     iget-object v0, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelCenterPos:[F
 
     const/4 v1, 0x0
@@ -219,7 +219,7 @@
 
     invoke-virtual {p1, v2, v0, v3, v4}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 312
+    .line 332
     invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object p2
@@ -240,12 +240,12 @@
 .method public updateAlpha(I)V
     .locals 1
 
-    .line 306
+    .line 326
     iget-object v0, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelBgPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 307
+    .line 327
     iget-object v0, p0, Lcom/miui/home/launcher/DragView$CountLabel;->mCountLabelNumPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V

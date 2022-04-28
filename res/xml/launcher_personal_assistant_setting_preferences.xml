@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <miuix.preference.RadioButtonPreferenceCategory
-        android:key="home_switch_personal_assistant">
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <miuix.preference.RadioButtonPreferenceCategory android:key="home_switch_personal_assistant">
         <miuix.preference.RadioSetPreferenceCategory>
-            <miuix.preference.RadioButtonPreference
-                android:icon="@drawable/icon_mi_app_vault"
-                android:persistent="false"
-                android:title="@string/switch_personal_assistant_app_vault"
-                android:key="personal_assistant_app_vault" />
+            <miuix.preference.RadioButtonPreference android:icon="@drawable/icon_mi_app_vault" android:persistent="false" android:title="@string/switch_personal_assistant_app_vault" android:key="personal_assistant_app_vault" />
         </miuix.preference.RadioSetPreferenceCategory>
         <miuix.preference.RadioSetPreferenceCategory>
-            <miuix.preference.RadioButtonPreference
-                android:icon="@drawable/icon_google_discover"
-                android:persistent="false"
-                android:title="@string/switch_personal_assistant_google"
-                android:key="personal_assistant_google" />
+            <miuix.preference.RadioButtonPreference android:icon="@drawable/icon_google_discover" android:persistent="false" android:title="@string/switch_personal_assistant_google" android:key="personal_assistant_google" />
         </miuix.preference.RadioSetPreferenceCategory>
         <miuix.preference.RadioSetPreferenceCategory>
-            <miuix.preference.RadioButtonPreference
-                android:icon="@drawable/icon_assistant_none"
-                android:persistent="false"
-                android:title="@string/switch_personal_assistant_none"
-                android:key="personal_assistant_none" />
+            <miuix.preference.RadioButtonPreference android:icon="@drawable/icon_assistant_none" android:persistent="false" android:title="@string/switch_personal_assistant_none" android:key="personal_assistant_none" />
         </miuix.preference.RadioSetPreferenceCategory>
     </miuix.preference.RadioButtonPreferenceCategory>
 </PreferenceScreen>

@@ -33,7 +33,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 49
+    .line 50
     new-instance v0, Lcom/miui/home/launcher/LauncherState;
 
     const/4 v1, 0x0
@@ -44,35 +44,35 @@
 
     sput-object v0, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
 
-    .line 50
+    .line 51
     new-instance v0, Lcom/miui/home/launcher/touch/FeedState;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/touch/FeedState;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/LauncherState;->FEED_STATE:Lcom/miui/home/launcher/LauncherState;
 
-    .line 51
+    .line 52
     new-instance v0, Lcom/miui/home/launcher/uioverrides/AllAppsState;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/uioverrides/AllAppsState;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/LauncherState;->ALL_APPS:Lcom/miui/home/launcher/LauncherState;
 
-    .line 52
+    .line 53
     new-instance v0, Lcom/miui/home/recents/OverviewState;
 
     invoke-direct {v0}, Lcom/miui/home/recents/OverviewState;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/LauncherState;->OVERVIEW:Lcom/miui/home/recents/OverviewState;
 
-    .line 53
+    .line 54
     new-instance v0, Lcom/miui/home/launcher/overlay/feed/FeedOverlayState;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/overlay/feed/FeedOverlayState;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/LauncherState;->FEED_OVERLAY_STATE:Lcom/miui/home/launcher/overlay/feed/FeedOverlayState;
 
-    .line 54
+    .line 55
     new-instance v0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayState;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayState;-><init>()V
@@ -85,18 +85,18 @@
 .method public constructor <init>(II)V
     .locals 1
 
-    .line 69
+    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 65
+    .line 66
     iput-boolean v0, p0, Lcom/miui/home/launcher/LauncherState;->mIsIgnoreOverviewAnim:Z
 
-    .line 67
+    .line 68
     iput-boolean v0, p0, Lcom/miui/home/launcher/LauncherState;->mIsFromFsGesture:Z
 
-    .line 70
+    .line 71
     iput p1, p0, Lcom/miui/home/launcher/LauncherState;->transitionDuration:I
 
     and-int/lit8 p1, p2, 0x4
@@ -105,7 +105,7 @@
 
     const/4 v0, 0x1
 
-    .line 71
+    .line 72
     :cond_0
     iput-boolean v0, p0, Lcom/miui/home/launcher/LauncherState;->disableRestore:Z
 
@@ -115,7 +115,7 @@
 .method protected static dispatchWindowStateChanged(Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 136
+    .line 137
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getWindow()Landroid/view/Window;
 
     move-result-object p0
@@ -152,7 +152,7 @@
 .method public getHistoryForState(Lcom/miui/home/launcher/LauncherState;)Lcom/miui/home/launcher/LauncherState;
     .locals 1
 
-    .line 167
+    .line 168
     sget-object v0, Lcom/miui/home/launcher/LauncherState;->OVERVIEW:Lcom/miui/home/recents/OverviewState;
 
     if-ne p1, v0, :cond_0
@@ -182,7 +182,7 @@
 .method public getHotseatAlpha(Lcom/miui/home/launcher/Launcher;)F
     .locals 1
 
-    .line 144
+    .line 145
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isInNormalEditing()Z
 
     move-result v0
@@ -221,7 +221,7 @@
 .method public getScreenIndicatorTranslationY(Lcom/miui/home/launcher/Launcher;)F
     .locals 1
 
-    .line 95
+    .line 96
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isInEditing()Z
 
     move-result v0
@@ -234,7 +234,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 96
+    .line 97
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object p1
@@ -245,7 +245,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 98
+    .line 99
     invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
     move-result p1
@@ -261,14 +261,14 @@
 .method public getSearchBarProperty(Lcom/miui/home/launcher/Launcher;)[F
     .locals 6
 
-    .line 148
+    .line 149
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isShowSearchBar()Z
 
     move-result v0
 
     const/4 v1, 0x5
 
-    .line 149
+    .line 150
     new-array v1, v1, [F
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -343,7 +343,7 @@
 .method public getVisibleElements(Lcom/miui/home/launcher/Launcher;)I
     .locals 0
 
-    .line 117
+    .line 118
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isDefaultScreenPreviewShowing()Z
 
     move-result p1
@@ -363,7 +363,7 @@
 .method public getWorkspaceAlpha(Lcom/miui/home/launcher/Launcher;)F
     .locals 0
 
-    .line 140
+    .line 141
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isFolderShowing()Z
 
     move-result p1
@@ -406,17 +406,17 @@
 .method public onStateEnabled(Lcom/miui/home/launcher/Launcher;)V
     .locals 2
 
-    .line 105
+    .line 106
     invoke-static {p1}, Lcom/miui/home/launcher/LauncherState;->dispatchWindowStateChanged(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 106
+    .line 107
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRotationHelper()Lcom/miui/home/recents/util/RotationHelper;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 107
+    .line 108
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRotationHelper()Lcom/miui/home/recents/util/RotationHelper;
 
     move-result-object v0
@@ -425,7 +425,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/util/RotationHelper;->updateRotationAnimation(I)V
 
-    .line 108
+    .line 109
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRotationHelper()Lcom/miui/home/recents/util/RotationHelper;
 
     move-result-object p1
@@ -441,14 +441,14 @@
 .method public onStateTransitionEnd(Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 153
+    .line 154
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRotationHelper()Lcom/miui/home/recents/util/RotationHelper;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 154
+    .line 155
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getRotationHelper()Lcom/miui/home/recents/util/RotationHelper;
 
     move-result-object p1

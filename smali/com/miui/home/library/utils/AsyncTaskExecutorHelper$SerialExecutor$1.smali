@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 190
+    .line 198
     iput-object p1, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor$1;->this$0:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
 
     iput-object p2, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor$1;->val$r:Ljava/lang/Runnable;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 193
+    .line 201
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor$1;->val$r:Ljava/lang/Runnable;
 
@@ -50,7 +50,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 195
+    .line 203
     iget-object v0, p0, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor$1;->this$0:Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;
 
     invoke-virtual {v0}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->scheduleNext()V
@@ -64,6 +64,6 @@
 
     invoke-virtual {v1}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper$SerialExecutor;->scheduleNext()V
 
-    .line 196
+    .line 204
     throw v0
 .end method

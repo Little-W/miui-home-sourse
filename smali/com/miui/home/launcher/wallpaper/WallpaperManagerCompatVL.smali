@@ -123,6 +123,8 @@
     move-result-object p1
 
     .line 130
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     return v1
 .end method
 
@@ -147,14 +149,14 @@
 .method private getDesktopWallpaperColorMode(ZLandroid/graphics/Bitmap;Landroid/graphics/Rect;)I
     .locals 1
 
-    .line 173
+    .line 177
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->supportCheckRegionalWallpaper()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 174
+    .line 178
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL;->getWallpaperColorMode(ZLandroid/graphics/Bitmap;)I
 
     move-result p1
@@ -166,14 +168,14 @@
 
     const/4 p1, 0x1
 
-    .line 177
+    .line 181
     invoke-virtual {p0, p1, p3}, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL;->getWallpaperColors(ILandroid/graphics/Rect;)Lcom/miui/home/launcher/wallpaper/WallpaperColorsCompat;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    .line 179
+    .line 183
     invoke-virtual {p1}, Lcom/miui/home/launcher/wallpaper/WallpaperColorsCompat;->getColorMode()I
 
     move-result p1
@@ -183,7 +185,7 @@
     :cond_1
     if-nez p2, :cond_2
 
-    .line 183
+    .line 187
     invoke-virtual {p0}, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL;->getCurrentWallpaper()Landroid/graphics/Bitmap;
 
     move-result-object p2
@@ -191,7 +193,7 @@
     :cond_2
     if-eqz p2, :cond_3
 
-    .line 186
+    .line 190
     invoke-static {p3, p2}, Lcom/miui/home/launcher/WallpaperUtils;->getWallpaperColorModeInArea(Landroid/graphics/Rect;Landroid/graphics/Bitmap;)I
 
     move-result p1
@@ -543,6 +545,8 @@
 
     const-string v2, "force to dark mode"
 
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     goto :goto_1
 
     .line 69
@@ -585,6 +589,8 @@
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
+
+    invoke-static {v3, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 72
     invoke-direct {p0, v1, v0}, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompatVL;->getWallpaperColorMode(ZLandroid/graphics/Bitmap;)I
@@ -643,6 +649,8 @@
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     move-object v0, v4
 

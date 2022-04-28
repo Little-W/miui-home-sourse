@@ -310,11 +310,11 @@
 
     const/4 v3, 0x3
 
-    const v4, 0x7f1001bc
+    const v4, 0x7f1001fb
 
-    const v5, 0x7f080163
+    const v5, 0x7f080185
 
-    const v6, 0x7f080162
+    const v6, 0x7f080184
 
     const/4 v7, 0x2
 
@@ -337,11 +337,11 @@
 
     const/4 v3, 0x2
 
-    const v4, 0x7f1001bc
+    const v4, 0x7f1001fb
 
-    const v5, 0x7f080163
+    const v5, 0x7f080185
 
-    const v6, 0x7f080162
+    const v6, 0x7f080184
 
     const/4 v7, 0x2
 
@@ -591,9 +591,9 @@
 
     const/4 v3, 0x1
 
-    const v4, 0x7f1001c6
+    const v4, 0x7f100205
 
-    const v5, 0x7f080171
+    const v5, 0x7f080193
 
     const/4 v6, -0x1
 
@@ -615,11 +615,11 @@
 
     const/4 v3, 0x1
 
-    const v4, 0x7f1001be
+    const v4, 0x7f1001fd
 
-    const v5, 0x7f08016c
+    const v5, 0x7f08018e
 
-    const v6, 0x7f08016d
+    const v6, 0x7f08018f
 
     const/4 v7, 0x5
 
@@ -639,9 +639,9 @@
 
     const/4 v3, 0x1
 
-    const v4, 0x7f1001b6
+    const v4, 0x7f1001f5
 
-    const v5, 0x7f08015e
+    const v5, 0x7f080180
 
     const/4 v6, -0x1
 
@@ -663,11 +663,11 @@
 
     const/4 v3, 0x3
 
-    const v4, 0x7f1001bb
+    const v4, 0x7f1001fa
 
-    const v5, 0x7f080163
+    const v5, 0x7f080185
 
-    const v6, 0x7f080165
+    const v6, 0x7f080187
 
     const/4 v7, 0x2
 
@@ -687,11 +687,11 @@
 
     const/4 v3, 0x1
 
-    const v4, 0x7f1001bb
+    const v4, 0x7f1001fa
 
-    const v5, 0x7f080163
+    const v5, 0x7f080185
 
-    const v6, 0x7f080164
+    const v6, 0x7f080186
 
     const/4 v7, 0x2
 
@@ -711,11 +711,11 @@
 
     const/4 v3, 0x2
 
-    const v4, 0x7f1001bb
+    const v4, 0x7f1001fa
 
-    const v5, 0x7f080163
+    const v5, 0x7f080185
 
-    const v6, 0x7f080164
+    const v6, 0x7f080186
 
     const/4 v7, 0x2
 
@@ -735,9 +735,9 @@
 
     const/4 v3, 0x1
 
-    const v4, 0x7f1001bb
+    const v4, 0x7f1001fa
 
-    const v5, 0x7f080161
+    const v5, 0x7f080183
 
     const/4 v6, -0x1
 
@@ -782,11 +782,11 @@
 
     const/4 v3, 0x2
 
-    const v4, 0x7f1001b9
+    const v4, 0x7f1001f8
 
-    const v5, 0x7f080163
+    const v5, 0x7f080185
 
-    const v6, 0x7f080164
+    const v6, 0x7f080186
 
     const/4 v7, 0x2
 

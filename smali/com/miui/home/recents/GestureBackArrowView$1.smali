@@ -57,9 +57,7 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/miui/home/recents/GestureBackArrowView$1;->this$0:Lcom/miui/home/recents/GestureBackArrowView;
-
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->performGestureReadyBack(Landroid/view/View;)V
+    invoke-virtual {p1}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->performGestureReadyBack()V
 
     .line 244
     iget-object p1, p0, Lcom/miui/home/recents/GestureBackArrowView$1;->this$0:Lcom/miui/home/recents/GestureBackArrowView;

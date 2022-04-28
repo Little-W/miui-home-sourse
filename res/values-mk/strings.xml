@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">Сподели со</string>
     <string name="abc_shareactionprovider_share_with_application">Сподели со %s</string>
     <string name="abc_toolbar_collapse_description">Собери</string>
+    <string name="common_google_play_services_unknown_issue">%1$s има проблеми со услугите на Google Play. Обидете се повторно.</string>
     <string name="copy">Копирај</string>
     <string name="expand_button_title">Напредни</string>
     <string name="not_set">Не е поставено</string>

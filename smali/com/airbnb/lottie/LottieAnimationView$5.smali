@@ -1,85 +1,120 @@
-.class synthetic Lcom/airbnb/lottie/LottieAnimationView$5;
+.class Lcom/airbnb/lottie/LottieAnimationView$5;
 .super Ljava/lang/Object;
 .source "LottieAnimationView.java"
 
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/airbnb/lottie/LottieAnimationView;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/airbnb/lottie/LottieAnimationView;->fromAssets(Ljava/lang/String;)Lcom/airbnb/lottie/LottieTask;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/concurrent/Callable<",
+        "Lcom/airbnb/lottie/LottieResult<",
+        "Lcom/airbnb/lottie/LottieComposition;",
+        ">;>;"
+    }
+.end annotation
 
-# static fields
-.field static final synthetic $SwitchMap$com$airbnb$lottie$RenderMode:[I
+
+# instance fields
+.field final synthetic this$0:Lcom/airbnb/lottie/LottieAnimationView;
+
+.field final synthetic val$assetName:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/airbnb/lottie/LottieAnimationView;Ljava/lang/String;)V
+    .locals 0
 
-    .line 1051
-    invoke-static {}, Lcom/airbnb/lottie/RenderMode;->values()[Lcom/airbnb/lottie/RenderMode;
+    .line 449
+    iput-object p1, p0, Lcom/airbnb/lottie/LottieAnimationView$5;->this$0:Lcom/airbnb/lottie/LottieAnimationView;
+
+    iput-object p2, p0, Lcom/airbnb/lottie/LottieAnimationView$5;->val$assetName:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public call()Lcom/airbnb/lottie/LottieResult;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/airbnb/lottie/LottieResult<",
+            "Lcom/airbnb/lottie/LottieComposition;",
+            ">;"
+        }
+    .end annotation
+
+    .line 451
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$5;->this$0:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-static {v0}, Lcom/airbnb/lottie/LottieAnimationView;->access$300(Lcom/airbnb/lottie/LottieAnimationView;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 452
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$5;->this$0:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieAnimationView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    array-length v0, v0
+    iget-object v1, p0, Lcom/airbnb/lottie/LottieAnimationView$5;->val$assetName:Ljava/lang/String;
 
-    new-array v0, v0, [I
+    invoke-static {v0, v1}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromAssetSync(Landroid/content/Context;Ljava/lang/String;)Lcom/airbnb/lottie/LottieResult;
 
-    sput-object v0, Lcom/airbnb/lottie/LottieAnimationView$5;->$SwitchMap$com$airbnb$lottie$RenderMode:[I
+    move-result-object v0
 
-    :try_start_0
-    sget-object v0, Lcom/airbnb/lottie/LottieAnimationView$5;->$SwitchMap$com$airbnb$lottie$RenderMode:[I
+    goto :goto_0
 
-    sget-object v1, Lcom/airbnb/lottie/RenderMode;->HARDWARE:Lcom/airbnb/lottie/RenderMode;
+    :cond_0
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$5;->this$0:Lcom/airbnb/lottie/LottieAnimationView;
 
-    invoke-virtual {v1}, Lcom/airbnb/lottie/RenderMode;->ordinal()I
+    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieAnimationView;->getContext()Landroid/content/Context;
 
-    move-result v1
+    move-result-object v0
 
-    const/4 v2, 0x1
+    iget-object v1, p0, Lcom/airbnb/lottie/LottieAnimationView$5;->val$assetName:Ljava/lang/String;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v2, 0x0
 
-    :catch_0
-    :try_start_1
-    sget-object v0, Lcom/airbnb/lottie/LottieAnimationView$5;->$SwitchMap$com$airbnb$lottie$RenderMode:[I
+    invoke-static {v0, v1, v2}, Lcom/airbnb/lottie/LottieCompositionFactory;->fromAssetSync(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/airbnb/lottie/LottieResult;
 
-    sget-object v1, Lcom/airbnb/lottie/RenderMode;->SOFTWARE:Lcom/airbnb/lottie/RenderMode;
+    move-result-object v0
 
-    invoke-virtual {v1}, Lcom/airbnb/lottie/RenderMode;->ordinal()I
+    :goto_0
+    return-object v0
+.end method
 
-    move-result v1
+.method public bridge synthetic call()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
 
-    const/4 v2, 0x2
+    .line 449
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieAnimationView$5;->call()Lcom/airbnb/lottie/LottieResult;
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    move-result-object v0
 
-    :catch_1
-    :try_start_2
-    sget-object v0, Lcom/airbnb/lottie/LottieAnimationView$5;->$SwitchMap$com$airbnb$lottie$RenderMode:[I
-
-    sget-object v1, Lcom/airbnb/lottie/RenderMode;->AUTOMATIC:Lcom/airbnb/lottie/RenderMode;
-
-    invoke-virtual {v1}, Lcom/airbnb/lottie/RenderMode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    return-void
+    return-object v0
 .end method

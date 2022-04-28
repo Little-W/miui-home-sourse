@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderGridView;)V
     .locals 0
 
-    .line 465
+    .line 459
     iput-object p1, p0, Lcom/miui/home/launcher/FolderGridView$5;->this$0:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 4
 
-    .line 467
+    .line 461
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView$5;->this$0:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderGridView;->access$300(Lcom/miui/home/launcher/FolderGridView;)I
@@ -47,7 +47,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 468
+    .line 462
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView$5;->this$0:Lcom/miui/home/launcher/FolderGridView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/FolderGridView;->access$300(Lcom/miui/home/launcher/FolderGridView;)I
@@ -60,7 +60,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/FolderGridView;->smoothScrollBy(II)V
 
-    .line 469
+    .line 463
     iget-object v0, p0, Lcom/miui/home/launcher/FolderGridView$5;->this$0:Lcom/miui/home/launcher/FolderGridView;
 
     iget-object v1, v0, Lcom/miui/home/launcher/FolderGridView;->mConfirmAutoScroll:Ljava/lang/Runnable;

@@ -54,7 +54,7 @@
         }
     .end annotation
 
-    .line 15
+    .line 16
     invoke-static {p1, p2}, Lcom/airbnb/lottie/parser/JsonUtils;->jsonToPoint(Lcom/airbnb/lottie/parser/moshi/JsonReader;F)Landroid/graphics/PointF;
 
     move-result-object p1

@@ -21,21 +21,6 @@
     return-void
 .end method
 
-.method public static getBackgroundLooper()Landroid/os/Looper;
-    .locals 1
-
-    .line 44
-    invoke-static {}, Lcom/miui/home/launcher/common/BackgroundThread;->getHandler()Landroid/os/Handler;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public static getHandler()Landroid/os/Handler;
     .locals 3
 

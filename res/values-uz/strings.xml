@@ -27,6 +27,7 @@
     <string name="abc_shareactionprovider_share_with">Ulashish</string>
     <string name="abc_shareactionprovider_share_with_application">%s orqali ulashish</string>
     <string name="abc_toolbar_collapse_description">Yig‘ish</string>
+    <string name="common_google_play_services_unknown_issue">%1$s ilovasini Google Play xizmatlariga ulab bo‘lmadi. Qaytadan urinib ko‘ring.</string>
     <string name="copy">Nusxa olish</string>
     <string name="expand_button_title">Kengaytirilgan</string>
     <string name="not_set">Tayinlanmagan</string>

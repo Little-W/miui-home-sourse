@@ -1,126 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.miui.home.launcher.SearchBar
-    android:orientation="horizontal"
-    android:focusable="true"
-    android:clipChildren="false"
-    android:clipToPadding="false"
-    android:layout_width="fill_parent"
-    android:layout_height="@dimen/search_bar_height"
-    android:contentDescription="@string/announce_for_search_bar"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:launcher="http://schemas.android.com/apk/res-auto">
-    <com.miui.home.launcher.SearchBarDesktopLayout
-        android:id="@id/search_bar_desktop_layout"
-        android:background="@drawable/bg_search_bar_light"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-        <com.miui.home.launcher.SearchBarLeftIconLayout
-            android:id="@id/search_bar_content_icon_layout"
-            android:background="@drawable/bg_search_bar_button_light"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:paddingStart="@dimen/search_bar_padding_horizontal"
-            android:paddingEnd="@dimen/search_bar_padding_horizontal">
-            <ImageView
-                android:id="@id/search_bar_content_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:src="@drawable/icon_search_light" />
+<com.miui.home.launcher.SearchBar android:orientation="horizontal" android:focusable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="@dimen/search_bar_height" android:contentDescription="@string/announce_for_search_bar"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:launcher="http://schemas.android.com/apk/res-auto">
+    <com.miui.home.launcher.SearchBarDesktopLayout android:id="@id/search_bar_desktop_layout" android:background="@drawable/bg_search_bar_light" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.miui.home.launcher.SearchBarLeftIconLayout android:id="@id/search_bar_content_icon_layout" android:background="@drawable/bg_search_bar_button_light" android:layout_width="wrap_content" android:layout_height="fill_parent" android:contentDescription="@string/gadget_search_label" android:paddingStart="@dimen/search_bar_padding_horizontal" android:paddingEnd="@dimen/search_bar_padding_horizontal">
+            <ImageView android:id="@id/search_bar_content_icon" android:layout_width="24.0dip" android:layout_height="fill_parent" android:src="@drawable/icon_search_light" />
         </com.miui.home.launcher.SearchBarLeftIconLayout>
-        <com.miui.home.launcher.SearchBarExtraLayout
-            android:id="@id/search_bar_extra_layout"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_toEndOf="@id/search_icon">
-            <com.miui.home.launcher.SearchBarXiaoaiLayout
-                android:layout_gravity="end"
-                android:id="@id/search_bar_xiaoai_layout"
-                android:background="@drawable/bg_search_bar_button_light"
-                android:focusable="true"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:contentDescription="@string/announce_for_xiaoai"
-                android:paddingStart="@dimen/search_bar_padding_horizontal"
-                android:paddingEnd="@dimen/search_bar_padding_horizontal">
-                <ImageView
-                    android:id="@id/xiaoai_button"
-                    android:paddingTop="@dimen/search_bar_icon_padding"
-                    android:paddingBottom="@dimen/search_bar_icon_padding"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:src="@drawable/icon_xiaoai_light" />
+        <com.miui.home.launcher.SearchBarExtraLayout android:id="@id/search_bar_extra_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toEndOf="@id/search_icon">
+            <com.miui.home.launcher.SearchBarXiaoaiLayout android:layout_gravity="end" android:id="@id/search_bar_xiaoai_layout" android:background="@drawable/bg_search_bar_button_light" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:contentDescription="@string/announce_for_xiaoai" android:paddingStart="@dimen/search_bar_padding_horizontal" android:paddingEnd="@dimen/search_bar_padding_horizontal">
+                <ImageView android:id="@id/xiaoai_button" android:paddingTop="@dimen/search_bar_icon_padding" android:paddingBottom="@dimen/search_bar_icon_padding" android:layout_width="24.0dip" android:layout_height="fill_parent" android:src="@drawable/icon_xiaoai_light" />
             </com.miui.home.launcher.SearchBarXiaoaiLayout>
-            <com.miui.home.launcher.SearchBarTransferLayout
-                android:gravity="end"
-                android:layout_gravity="end"
-                android:orientation="horizontal"
-                android:id="@id/search_bar_transfer_layout"
-                android:background="@drawable/bg_search_bar_button_light"
-                android:focusable="true"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:paddingStart="@dimen/search_bar_padding_horizontal_small"
-                android:paddingEnd="@dimen/search_bar_padding_horizontal_small">
-                <TextView
-                    android:ellipsize="end"
-                    android:layout_gravity="center_vertical"
-                    android:id="@id/title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:maxLines="1"
-                    android:layout_marginEnd="@dimen/search_bar_text_margin"
-                    style="@style/SearchBarTransferText" />
-                <ImageView
-                    android:id="@id/icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent" />
+            <com.miui.home.launcher.SearchBarTransferLayout android:gravity="end" android:layout_gravity="end" android:orientation="horizontal" android:id="@id/search_bar_transfer_layout" android:background="@drawable/bg_search_bar_button_light" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="@dimen/search_bar_padding_horizontal_small" android:paddingEnd="@dimen/search_bar_padding_horizontal_small">
+                <TextView android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginEnd="@dimen/search_bar_text_margin" style="@style/SearchBarTransferText" />
+                <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="fill_parent" />
             </com.miui.home.launcher.SearchBarTransferLayout>
         </com.miui.home.launcher.SearchBarExtraLayout>
     </com.miui.home.launcher.SearchBarDesktopLayout>
-    <com.miui.home.launcher.SearchBarDrawerLayout
-        android:id="@id/search_bar_drawer_layout"
-        android:background="@drawable/bg_search_bar_input_dark"
-        android:visibility="invisible"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:paddingStart="0.0dip"
-        android:paddingEnd="@dimen/search_bar_padding_horizontal">
-        <ImageView
-            android:id="@id/search_bar_input_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:src="@drawable/icon_search_light"
-            android:tint="@color/search_bar_input_icon_tint_drawer_light"
-            android:paddingStart="@dimen/search_bar_padding_horizontal"
-            android:paddingEnd="@dimen/search_bar_text_margin" />
-        <com.miui.home.launcher.ExtendedEditText
-            android:gravity="center_vertical"
-            android:layout_gravity="start"
-            android:id="@id/search_bar_input"
-            android:background="@android:color/transparent"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:clickable="true"
-            android:saveEnabled="false"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:hint="@string/all_apps_search_app"
-            android:maxLines="1"
-            android:scrollHorizontally="true"
-            android:singleLine="true"
-            android:inputType="textCapWords|textNoSuggestions"
-            android:imeOptions="actionSearch|flagNoExtractUi"
-            android:layout_toEndOf="@id/search_bar_input_icon"
-            style="@style/SearchBarText" />
-        <com.miui.home.launcher.util.typeface.TypefaceIconView
-            android:textSize="@dimen/search_icon_size"
-            android:id="@id/search_bar_input_clear"
-            android:visibility="invisible"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/accessibility_clear_search_bar_text"
-            android:layout_alignParentEnd="true"
-            launcher:pattern="@integer/delete" />
+    <com.miui.home.launcher.SearchBarDrawerLayout android:id="@id/search_bar_drawer_layout" android:background="@drawable/bg_search_bar_input_light" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="0.0dip" android:paddingEnd="@dimen/search_bar_padding_horizontal">
+        <ImageView android:id="@id/search_bar_input_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/icon_search_light" android:tint="@color/search_bar_input_icon_tint_drawer_light" android:paddingStart="@dimen/search_bar_padding_horizontal" android:paddingEnd="@dimen/search_bar_text_margin" />
+        <com.miui.home.launcher.ExtendedEditText android:gravity="center_vertical" android:layout_gravity="start" android:id="@id/search_bar_input" android:background="@android:color/transparent" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="@string/all_apps_search_app" android:maxLines="1" android:scrollHorizontally="true" android:singleLine="true" android:inputType="textCapWords|textNoSuggestions" android:imeOptions="actionSearch|flagNoExtractUi" android:layout_marginEnd="@dimen/search_bar_text_margin" android:layout_toStartOf="@id/search_bar_input_clear" android:layout_toEndOf="@id/search_bar_input_icon" style="@style/SearchBarText" />
+        <com.miui.home.launcher.util.typeface.TypefaceIconView android:textSize="@dimen/search_icon_size" android:id="@id/search_bar_input_clear" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:contentDescription="@string/accessibility_clear_search_bar_text" android:paddingStart="@dimen/search_bar_text_margin" android:layout_alignParentEnd="true" launcher:pattern="@integer/delete" />
     </com.miui.home.launcher.SearchBarDrawerLayout>
 </com.miui.home.launcher.SearchBar>

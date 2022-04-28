@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/UninstallDialogWrapper;)V
     .locals 0
 
-    .line 204
+    .line 208
     iput-object p1, p0, Lcom/miui/home/launcher/UninstallDialogWrapper$7;->this$0:Lcom/miui/home/launcher/UninstallDialogWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,9 +38,9 @@
 .method public run()V
     .locals 1
 
-    const v0, 0x7f100076
+    const v0, 0x7f10007a
 
-    .line 207
+    .line 211
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->announceForAccessibility(I)V
 
     return-void

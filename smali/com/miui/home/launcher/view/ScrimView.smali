@@ -21,8 +21,6 @@
 
 .field protected mCurrentFlatColor:I
 
-.field private mCurrentProgressAnimator:Landroid/animation/Animator;
-
 .field private mDrawPath:Landroid/graphics/Path;
 
 .field protected mEndFlatColor:I
@@ -506,71 +504,6 @@
     invoke-virtual {p0}, Lcom/miui/home/launcher/view/ScrimView;->invalidate()V
 
     :cond_0
-    return-void
-.end method
-
-.method public setProgressAnim(FI)V
-    .locals 6
-
-    .line 105
-    iget-object v0, p0, Lcom/miui/home/launcher/view/ScrimView;->mCurrentProgressAnimator:Landroid/animation/Animator;
-
-    if-eqz v0, :cond_0
-
-    .line 106
-    invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
-
-    .line 108
-    :cond_0
-    iget v0, p0, Lcom/miui/home/launcher/view/ScrimView;->mEndFlatColor:I
-
-    .line 109
-    iget v1, p0, Lcom/miui/home/launcher/view/ScrimView;->mEndFlatColorAlpha:I
-
-    .line 110
-    sget-object v2, Lcom/miui/home/launcher/view/ScrimView;->PROGRESS:Landroid/util/Property;
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [F
-
-    const/4 v4, 0x0
-
-    iget v5, p0, Lcom/miui/home/launcher/view/ScrimView;->mProgress:F
-
-    aput v5, v3, v4
-
-    const/4 v4, 0x1
-
-    aput p1, v3, v4
-
-    invoke-static {p0, v2, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/miui/home/launcher/view/ScrimView;->mCurrentProgressAnimator:Landroid/animation/Animator;
-
-    .line 111
-    iget-object p1, p0, Lcom/miui/home/launcher/view/ScrimView;->mCurrentProgressAnimator:Landroid/animation/Animator;
-
-    new-instance v2, Lcom/miui/home/launcher/view/ScrimView$2;
-
-    invoke-direct {v2, p0, v0, v1}, Lcom/miui/home/launcher/view/ScrimView$2;-><init>(Lcom/miui/home/launcher/view/ScrimView;II)V
-
-    invoke-virtual {p1, v2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    .line 125
-    iget-object p1, p0, Lcom/miui/home/launcher/view/ScrimView;->mCurrentProgressAnimator:Landroid/animation/Animator;
-
-    int-to-long v0, p2
-
-    invoke-virtual {p1, v0, v1}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
-
-    .line 126
-    iget-object p1, p0, Lcom/miui/home/launcher/view/ScrimView;->mCurrentProgressAnimator:Landroid/animation/Animator;
-
-    invoke-virtual {p1}, Landroid/animation/Animator;->start()V
-
     return-void
 .end method
 

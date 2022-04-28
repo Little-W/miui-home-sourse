@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2;Ljava/lang/String;)V
     .locals 0
 
-    .line 309
+    .line 328
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2$1;->this$2:Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2;
 
     iput-object p2, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2$1;->val$strPara:Ljava/lang/String;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 4
 
-    .line 311
+    .line 330
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2$1;->this$2:Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2;
 
     iget-object v0, v0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2;->this$1:Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1;
@@ -59,7 +59,7 @@
 
     if-nez v0, :cond_0
 
-    .line 312
+    .line 331
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2$1;->this$2:Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2;
 
     iget-object v0, v0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2;->this$1:Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1;
@@ -100,7 +100,7 @@
 
     move-result-object v0
 
-    .line 313
+    .line 332
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -109,7 +109,7 @@
 
     const-string v1, "Launcher.ClockGadgetDelegate"
 
-    .line 314
+    .line 333
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -148,34 +148,36 @@
 
     move-result-object v2
 
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     :try_start_0
     const-string v1, "CLICK"
 
-    .line 316
+    .line 335
     invoke-static {v1}, Lcom/xiaomi/analytics/Actions;->newAdAction(Ljava/lang/String;)Lcom/xiaomi/analytics/AdAction;
 
     move-result-object v1
 
     const-string v2, "ex"
 
-    .line 317
+    .line 336
     invoke-virtual {v1, v2, v0}, Lcom/xiaomi/analytics/AdAction;->addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/analytics/Action;
 
     const-string v0, "e"
 
     const-string v2, "CLICK"
 
-    .line 318
+    .line 337
     invoke-virtual {v1, v0, v2}, Lcom/xiaomi/analytics/AdAction;->addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/analytics/Action;
 
     const-string v0, "btn"
 
-    .line 319
+    .line 338
     iget-object v2, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2$1;->val$strPara:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Lcom/xiaomi/analytics/AdAction;->addParam(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/analytics/Action;
 
-    .line 320
+    .line 339
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2$1;->this$2:Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2;
 
     iget-object v0, v0, Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1$2;->this$1:Lcom/miui/home/launcher/gadget/ClockGadgetDelegate$1;
@@ -199,7 +201,7 @@
     :catch_0
     move-exception v0
 
-    .line 322
+    .line 341
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0

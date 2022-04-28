@@ -114,6 +114,31 @@
     return-object v0
 .end method
 
+.method public static varargs ofPropertyValuesHolder(Landroid/view/View;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
+    .locals 1
+
+    .line 117
+    new-instance v0, Landroid/animation/ObjectAnimator;
+
+    invoke-direct {v0}, Landroid/animation/ObjectAnimator;-><init>()V
+
+    .line 118
+    invoke-virtual {v0, p0}, Landroid/animation/ObjectAnimator;->setTarget(Ljava/lang/Object;)V
+
+    .line 119
+    invoke-virtual {v0, p1}, Landroid/animation/ObjectAnimator;->setValues([Landroid/animation/PropertyValuesHolder;)V
+
+    .line 120
+    invoke-static {v0}, Lcom/miui/home/launcher/LauncherAnimUtils;->cancelOnDestroyActivity(Landroid/animation/Animator;)V
+
+    .line 121
+    new-instance p1, Lcom/miui/home/launcher/FirstFrameAnimatorHelper;
+
+    invoke-direct {p1, v0, p0}, Lcom/miui/home/launcher/FirstFrameAnimatorHelper;-><init>(Landroid/animation/ValueAnimator;Landroid/view/View;)V
+
+    return-object v0
+.end method
+
 .method public static varargs ofPropertyValuesHolder(Ljava/lang/Object;Landroid/view/View;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
     .locals 1
 

@@ -3,6 +3,7 @@
 .source "ClearButton.java"
 
 # interfaces
+.implements Lcom/miui/home/launcher/UpdateIconSize;
 .implements Lcom/miui/home/launcher/interfaces/PresentAnimationResettable;
 
 
@@ -14,6 +15,10 @@
 .field private mAnimationExecutionTime:I
 
 .field protected mClearIcon:Lcom/miui/home/launcher/common/ClearIconImageView;
+
+.field private mContentBody:Landroid/view/View;
+
+.field private mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
 .field private mIsPaused:Z
 
@@ -40,7 +45,7 @@
 
     const-string v0, "LT26i"
 
-    .line 32
+    .line 33
     sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -79,10 +84,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 51
+    .line 54
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/gadget/Gadget;-><init>(Landroid/content/Context;)V
 
-    .line 44
+    .line 47
     new-instance p1, Lcom/miui/home/launcher/gadget/ClearButton$1;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/gadget/ClearButton$1;-><init>(Lcom/miui/home/launcher/gadget/ClearButton;)V
@@ -95,7 +100,7 @@
 .method static synthetic access$000(Lcom/miui/home/launcher/gadget/ClearButton;)V
     .locals 0
 
-    .line 30
+    .line 31
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/ClearButton;->refreshAndSchedue()V
 
     return-void
@@ -104,7 +109,7 @@
 .method static synthetic access$100(Lcom/miui/home/launcher/gadget/ClearButton;)V
     .locals 0
 
-    .line 30
+    .line 31
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/ClearButton;->execClear()V
 
     return-void
@@ -113,7 +118,7 @@
 .method static synthetic access$200(Lcom/miui/home/launcher/gadget/ClearButton;)I
     .locals 0
 
-    .line 30
+    .line 31
     iget p0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mPreUsedMemory:I
 
     return p0
@@ -122,7 +127,7 @@
 .method static synthetic access$202(Lcom/miui/home/launcher/gadget/ClearButton;I)I
     .locals 0
 
-    .line 30
+    .line 31
     iput p1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mPreUsedMemory:I
 
     return p1
@@ -131,7 +136,7 @@
 .method static synthetic access$300(Lcom/miui/home/launcher/gadget/ClearButton;)I
     .locals 0
 
-    .line 30
+    .line 31
     iget p0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mProgress:I
 
     return p0
@@ -140,7 +145,7 @@
 .method static synthetic access$400(Lcom/miui/home/launcher/gadget/ClearButton;)Landroid/content/Context;
     .locals 0
 
-    .line 30
+    .line 31
     iget-object p0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mContext:Landroid/content/Context;
 
     return-object p0
@@ -149,7 +154,7 @@
 .method static synthetic access$500(Lcom/miui/home/launcher/gadget/ClearButton;)V
     .locals 0
 
-    .line 30
+    .line 31
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/ClearButton;->startSchedule()V
 
     return-void
@@ -158,7 +163,7 @@
 .method static synthetic access$600(Lcom/miui/home/launcher/gadget/ClearButton;)I
     .locals 0
 
-    .line 30
+    .line 31
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/ClearButton;->getFreeMemory()I
 
     move-result p0
@@ -169,26 +174,26 @@
 .method private execClear()V
     .locals 4
 
-    .line 131
+    .line 135
     iget v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mPreUsedMemory:I
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 136
+    .line 140
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/ClearButton;->stopSchedule()V
 
-    .line 139
+    .line 143
     iget v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mProgress:I
 
     iput v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mPreUsedMemory:I
 
-    .line 140
+    .line 144
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/ClearButton;->doClear()V
 
-    .line 142
+    .line 146
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mLabel:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -197,7 +202,7 @@
 
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 143
+    .line 147
     sget-boolean v1, Lcom/miui/home/launcher/gadget/ClearButton;->sIsSony:Z
 
     if-nez v1, :cond_1
@@ -208,7 +213,7 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 144
+    .line 148
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mTitleContainer:Landroid/view/ViewGroup;
 
     invoke-virtual {v1}, Landroid/view/ViewGroup;->getWidth()I
@@ -233,15 +238,15 @@
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
 
-    .line 145
+    .line 149
     iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    .line 146
+    .line 150
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mLabel:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 149
+    .line 153
     :cond_1
     new-instance v0, Lcom/miui/home/launcher/gadget/ClearButton$3;
 
@@ -288,7 +293,7 @@
 
     const-string p1, "%.0fG"
 
-    .line 229
+    .line 233
     new-array v0, v0, [Ljava/lang/Object;
 
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -306,7 +311,7 @@
     :cond_1
     const-string p1, "%.1fG"
 
-    .line 231
+    .line 235
     new-array v0, v0, [Ljava/lang/Object;
 
     invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -321,7 +326,7 @@
 
     return-object p0
 
-    .line 225
+    .line 229
     :cond_2
     :goto_0
     new-instance p2, Ljava/lang/StringBuilder;
@@ -344,7 +349,7 @@
 .method private getFreeMemory()I
     .locals 4
 
-    .line 220
+    .line 224
     invoke-static {}, Lcom/miui/daemon/performance/PerfShielderManager;->getFreeMemory()Ljava/lang/Long;
 
     move-result-object v0
@@ -365,7 +370,7 @@
 .method public static synthetic lambda$refreshMemoryUsed$0(Lcom/miui/home/launcher/gadget/ClearButton;Ljava/lang/Void;)Ljava/lang/Integer;
     .locals 0
 
-    .line 195
+    .line 199
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/ClearButton;->getFreeMemory()I
 
     move-result p1
@@ -380,7 +385,7 @@
 .method public static synthetic lambda$refreshMemoryUsed$1(Lcom/miui/home/launcher/gadget/ClearButton;Landroid/animation/Animator$AnimatorListener;Ljava/lang/Integer;)V
     .locals 3
 
-    .line 197
+    .line 201
     iget v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mTotalMemory:I
 
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
@@ -391,12 +396,12 @@
 
     mul-int/lit8 p2, v0, 0x64
 
-    .line 198
+    .line 202
     iget v1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mTotalMemory:I
 
     div-int/2addr p2, v1
 
-    .line 199
+    .line 203
     iget v2, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mProgress:I
 
     mul-int/lit8 v2, v2, 0x64
@@ -405,7 +410,7 @@
 
     if-eq p2, v2, :cond_0
 
-    .line 201
+    .line 205
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/gadget/ClearButton;->setButtonAniamtor(ILandroid/animation/Animator$AnimatorListener;)V
 
     :cond_0
@@ -417,10 +422,10 @@
 
     const/4 v0, 0x0
 
-    .line 189
+    .line 193
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->refreshMemoryUsed(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 190
+    .line 194
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/ClearButton;->startSchedule()V
 
     return-void
@@ -429,14 +434,14 @@
 .method private setProgressByAnimator(ILandroid/animation/Animator$AnimatorListener;)V
     .locals 3
 
-    .line 241
+    .line 245
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/ClearButton;->stopProgressAnimator()V
 
     const-string v0, "progress"
 
     const/4 v1, 0x1
 
-    .line 242
+    .line 246
     new-array v1, v1, [I
 
     const/4 v2, 0x0
@@ -449,7 +454,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mProgessAnimator:Landroid/animation/ObjectAnimator;
 
-    .line 243
+    .line 247
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mProgessAnimator:Landroid/animation/ObjectAnimator;
 
     iget v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mAnimationExecutionTime:I
@@ -458,7 +463,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 244
+    .line 248
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mProgessAnimator:Landroid/animation/ObjectAnimator;
 
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mLinearInterpolator:Landroid/view/animation/LinearInterpolator;
@@ -467,12 +472,12 @@
 
     if-eqz p2, :cond_0
 
-    .line 246
+    .line 250
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mProgessAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {p1, p2}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 248
+    .line 252
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mProgessAnimator:Landroid/animation/ObjectAnimator;
 
@@ -484,12 +489,12 @@
 .method private startSchedule()V
     .locals 3
 
-    .line 207
+    .line 211
     iget-boolean v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mIsPaused:Z
 
     if-nez v0, :cond_0
 
-    .line 208
+    .line 212
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mRefreshAndScheduleRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v1, 0x1388
@@ -503,7 +508,7 @@
 .method private stopProgressAnimator()V
     .locals 1
 
-    .line 252
+    .line 256
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mProgessAnimator:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
@@ -514,7 +519,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 253
+    .line 257
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mProgessAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
@@ -526,7 +531,7 @@
 .method private stopSchedule()V
     .locals 1
 
-    .line 213
+    .line 217
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mRefreshAndScheduleRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->removeCallbacks(Ljava/lang/Runnable;)Z
@@ -539,12 +544,12 @@
 
     mul-int/lit8 p1, p1, 0x64
 
-    .line 184
+    .line 188
     iget v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mTotalMemory:I
 
     div-int/2addr p1, v0
 
-    .line 185
+    .line 189
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mLabel:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -574,13 +579,39 @@
 .method public getProgress()I
     .locals 1
 
-    .line 258
+    .line 262
     iget v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mProgress:I
 
     return v0
 .end method
 
+.method public iconContainerId()I
+    .locals 1
+
+    const v0, 0x7f0a013c
+
+    return v0
+.end method
+
+.method public iconView()Landroid/view/View;
+    .locals 1
+
+    .line 282
+    iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
+
+    return-object v0
+.end method
+
 .method abstract initClearIcon()V
+.end method
+
+.method public invalidateViewWhenEditModeChange()Landroid/view/View;
+    .locals 1
+
+    .line 292
+    iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mContentBody:Landroid/view/View;
+
+    return-object v0
 .end method
 
 .method public needReset()Z
@@ -600,7 +631,7 @@
 .method public onCreate()V
     .locals 4
 
-    .line 56
+    .line 59
     invoke-static {}, Lmiui/util/HardwareInfo;->getTotalPhysicalMemory()J
 
     move-result-wide v0
@@ -613,16 +644,25 @@
 
     iput v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mTotalMemory:I
 
-    .line 57
+    .line 60
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0d0054
+    const v1, 0x7f0d0071
 
     invoke-static {v0, v1, p0}, Lcom/miui/home/launcher/gadget/ClearButton;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0a0119
+    const v0, 0x7f0a00a9
 
-    .line 58
+    .line 61
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mContentBody:Landroid/view/View;
+
+    const v0, 0x7f0a0145
+
+    .line 62
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -631,28 +671,32 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mTitleContainer:Landroid/view/ViewGroup;
 
-    const v0, 0x7f0a0069
+    const v0, 0x7f0a0071
 
-    .line 59
+    .line 63
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageView;
+    check-cast v0, Lcom/miui/home/launcher/LauncherIconImageView;
 
-    .line 60
-    iget-object v1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mContext:Landroid/content/Context;
+    iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->loadClearBackground(Landroid/content/Context;)Landroid/graphics/drawable/BitmapDrawable;
+    .line 64
+    iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mContext:Landroid/content/Context;
 
-    move-result-object v1
+    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->loadClearBackground(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
 
-    .line 61
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    move-result-object v0
 
-    const v0, 0x7f0a0091
+    .line 65
+    iget-object v1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
 
-    .line 62
+    invoke-virtual {v1, v0}, Lcom/miui/home/launcher/LauncherIconImageView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    const v0, 0x7f0a00aa
+
+    .line 66
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -661,9 +705,9 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mClearIcon:Lcom/miui/home/launcher/common/ClearIconImageView;
 
-    const v0, 0x7f0a0118
+    const v0, 0x7f0a0144
 
-    .line 63
+    .line 67
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/gadget/ClearButton;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -672,14 +716,14 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mLabel:Landroid/widget/TextView;
 
-    .line 64
+    .line 68
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mLinearInterpolator:Landroid/view/animation/LinearInterpolator;
 
-    .line 65
+    .line 69
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mClearIcon:Lcom/miui/home/launcher/common/ClearIconImageView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/common/ClearIconImageView;->getAnimationExecutionTime()I
@@ -688,7 +732,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mAnimationExecutionTime:I
 
-    .line 66
+    .line 70
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mClearIcon:Lcom/miui/home/launcher/common/ClearIconImageView;
 
     new-instance v1, Lcom/miui/home/launcher/gadget/ClearButton$2;
@@ -697,7 +741,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/common/ClearIconImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 73
+    .line 77
     invoke-virtual {p0}, Lcom/miui/home/launcher/gadget/ClearButton;->initClearIcon()V
 
     return-void
@@ -732,10 +776,10 @@
 
     const/4 v0, 0x1
 
-    .line 91
+    .line 95
     iput-boolean v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mIsPaused:Z
 
-    .line 92
+    .line 96
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/ClearButton;->stopSchedule()V
 
     return-void
@@ -746,10 +790,10 @@
 
     const/4 v0, 0x0
 
-    .line 85
+    .line 89
     iput-boolean v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mIsPaused:Z
 
-    .line 86
+    .line 90
     invoke-direct {p0}, Lcom/miui/home/launcher/gadget/ClearButton;->refreshAndSchedue()V
 
     return-void
@@ -770,14 +814,14 @@
 .method public onWallpaperColorChanged()V
     .locals 4
 
-    .line 80
+    .line 84
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mLabel:Landroid/widget/TextView;
 
-    const v2, 0x7f1102eb
+    const v2, 0x7f110310
 
-    const v3, 0x7f1102ee
+    const v3, 0x7f110313
 
     invoke-static {v0, v1, v2, v3}, Lcom/miui/home/launcher/common/Utilities;->adaptTitleStyleToWallpaper(Landroid/content/Context;Landroid/widget/TextView;II)V
 
@@ -787,7 +831,7 @@
 .method protected refreshMemoryUsed(Landroid/animation/Animator$AnimatorListener;)V
     .locals 2
 
-    .line 194
+    .line 198
     new-instance v0, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$rL7BVG-vct2OHrKyXhx2rO58qFU;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/gadget/-$$Lambda$ClearButton$rL7BVG-vct2OHrKyXhx2rO58qFU;-><init>(Lcom/miui/home/launcher/gadget/ClearButton;)V
@@ -806,7 +850,7 @@
 .method protected setButtonAniamtor(ILandroid/animation/Animator$AnimatorListener;)V
     .locals 0
 
-    .line 267
+    .line 272
     invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/gadget/ClearButton;->setProgressByAnimator(ILandroid/animation/Animator$AnimatorListener;)V
 
     return-void
@@ -815,17 +859,41 @@
 .method public setProgress(I)V
     .locals 0
 
-    .line 262
+    .line 266
     iput p1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mProgress:I
 
-    .line 263
+    .line 267
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/gadget/ClearButton;->updateLabel(I)V
+
+    .line 268
+    iget-object p1, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mNoWordAdapter:Lcom/miui/home/launcher/util/noword/NoWordGadgetAdapter;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/util/noword/NoWordGadgetAdapter;->invalidateBindElementWhenLauncherInEditMode()V
 
     return-void
 .end method
 
+.method public titleViewId()I
+    .locals 1
+
+    const v0, 0x7f0a0144
+
+    return v0
+.end method
+
 .method public updateConfig(Landroid/os/Bundle;)V
     .locals 0
+
+    return-void
+.end method
+
+.method public updateSizeOnIconSizeChanged()V
+    .locals 1
+
+    .line 297
+    iget-object v0, p0, Lcom/miui/home/launcher/gadget/ClearButton;->mIconImageView:Lcom/miui/home/launcher/LauncherIconImageView;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/LauncherIconImageView;->requestLayout()V
 
     return-void
 .end method

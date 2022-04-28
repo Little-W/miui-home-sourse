@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fake_landscape_screen_minor_size">376.0dip</dimen>
+</resources>

@@ -34,7 +34,7 @@
 .method private static getClockLastModifiedTime(Landroid/content/Context;Ljava/lang/String;)J
     .locals 2
 
-    .line 131
+    .line 135
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -55,7 +55,7 @@
 
     if-ne p0, v0, :cond_0
 
-    .line 144
+    .line 148
     new-instance p0, Ljava/io/File;
 
     const-string v0, "/system/media/theme/.data/content/dual_clock_2x4/dual_clock.mrc"
@@ -69,7 +69,7 @@
 
     if-ne p0, v0, :cond_1
 
-    .line 146
+    .line 150
     new-instance p0, Ljava/io/File;
 
     const-string v0, "/system/media/theme/.data/content/dual_clock_3x4/dual_clock.mrc"
@@ -87,7 +87,7 @@
 .method private static getDualClockLastModifiedTime(Landroid/content/Context;)J
     .locals 3
 
-    .line 135
+    .line 139
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -154,14 +154,14 @@
 .method static isDualClockExits(I)Z
     .locals 0
 
-    .line 152
+    .line 156
     invoke-static {p0}, Lcom/miui/home/launcher/gadget/DualClockUtils;->getDualClockFile(I)Ljava/io/File;
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 153
+    .line 157
     invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
     move-result p0
@@ -182,7 +182,7 @@
 .method static isDualClockFile(Ljava/io/File;)Z
     .locals 1
 
-    .line 157
+    .line 161
     new-instance v0, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
     invoke-static {p0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
@@ -193,7 +193,7 @@
 
     const-string p0, "dualClock"
 
-    .line 158
+    .line 162
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/gadget/GadgetInfo;->getBoolean(Ljava/lang/String;)Z
 
     move-result p0
@@ -225,7 +225,7 @@
 .method static replaceToDualClock(Ljava/io/File;Ljava/io/File;)Z
     .locals 0
 
-    .line 123
+    .line 127
     invoke-static {p1, p0}, Lmiuix/core/util/FileUtils;->copyFile(Ljava/io/File;Ljava/io/File;)Z
 
     move-result p0
@@ -236,7 +236,7 @@
 .method private static replaceToThemeClock(Ljava/io/File;Ljava/lang/String;)Z
     .locals 0
 
-    .line 127
+    .line 131
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p0
@@ -251,7 +251,7 @@
 .method public static setDualClockLastModifiedTime(Landroid/content/Context;J)V
     .locals 1
 
-    .line 139
+    .line 143
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -291,6 +291,8 @@
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v1, 0x0
 
@@ -341,6 +343,8 @@
 
     move-result-object v4
 
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 76
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -379,16 +383,29 @@
 .end method
 
 .method public static updateBackup(Landroid/content/Context;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 83
+    invoke-static {p0, v0}, Lcom/miui/home/launcher/gadget/DualClockUtils;->updateBackup(Landroid/content/Context;Z)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static updateBackup(Landroid/content/Context;Z)Z
     .locals 21
 
     move-object/from16 v0, p0
 
-    .line 84
+    .line 88
     invoke-static {}, Lcom/miui/home/launcher/gadget/DualClockUtils;->shouldUseDualClock()Z
 
     move-result v1
 
-    .line 85
+    .line 89
     sget-object v2, Lcom/miui/home/launcher/gadget/DualClockUtils;->CLOCK_GADGET_TYPE:[I
 
     array-length v3, v2
@@ -402,12 +419,12 @@
 
     aget v7, v2, v5
 
-    .line 86
+    .line 90
     new-instance v8, Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;
 
     invoke-direct {v8, v7}, Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;-><init>(I)V
 
-    .line 87
+    .line 91
     new-instance v9, Ljava/io/File;
 
     invoke-virtual {v8, v0}, Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;->getBackupDir(Landroid/content/Context;)Ljava/lang/String;
@@ -416,7 +433,7 @@
 
     invoke-direct {v9, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 88
+    .line 92
     invoke-virtual {v9}, Ljava/io/File;->isDirectory()Z
 
     move-result v10
@@ -425,7 +442,7 @@
 
     goto :goto_1
 
-    .line 91
+    .line 95
     :cond_0
     invoke-virtual {v9}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
@@ -440,7 +457,7 @@
 
     goto/16 :goto_5
 
-    .line 95
+    .line 99
     :cond_1
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -460,22 +477,22 @@
 
     move-result-object v10
 
-    .line 96
+    .line 100
     invoke-static {v0, v10}, Lcom/miui/home/launcher/gadget/DualClockUtils;->getClockLastModifiedTime(Landroid/content/Context;Ljava/lang/String;)J
 
     move-result-wide v10
 
-    .line 97
+    .line 101
     invoke-static/range {p0 .. p0}, Lcom/miui/home/launcher/gadget/DualClockUtils;->getDualClockLastModifiedTime(Landroid/content/Context;)J
 
     move-result-wide v12
 
-    .line 98
+    .line 102
     invoke-virtual {v8}, Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;->getBackupNamePrefix()Ljava/lang/String;
 
     move-result-object v14
 
-    .line 99
+    .line 103
     array-length v15, v9
 
     move/from16 v16, v6
@@ -487,22 +504,24 @@
 
     aget-object v4, v9, v6
 
-    .line 100
+    .line 104
     invoke-virtual {v4}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 101
+    .line 105
     invoke-virtual {v4}, Ljava/io/File;->lastModified()J
 
     move-result-wide v17
 
-    .line 102
+    .line 106
     invoke-virtual {v0, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
+
+    if-nez p1, :cond_2
 
     cmp-long v0, v17, v12
 
@@ -512,7 +531,7 @@
 
     if-gez v0, :cond_5
 
-    .line 104
+    .line 108
     :cond_2
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
@@ -520,7 +539,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 105
+    .line 109
     new-instance v0, Ljava/io/File;
 
     move-object/from16 v17, v2
@@ -535,7 +554,7 @@
 
     move-result v0
 
-    .line 106
+    .line 110
     invoke-static {v7}, Lcom/miui/home/launcher/gadget/DualClockUtils;->isDualClockExits(I)Z
 
     move-result v2
@@ -548,7 +567,7 @@
 
     move/from16 v18, v3
 
-    .line 109
+    .line 113
     invoke-static {v7}, Lcom/miui/home/launcher/gadget/DualClockUtils;->getDualClockFile(I)Ljava/io/File;
 
     move-result-object v3
@@ -562,7 +581,7 @@
     :cond_3
     move/from16 v18, v3
 
-    .line 111
+    .line 115
     invoke-virtual {v8}, Lcom/miui/home/launcher/gadget/ConfigableGadget$BackupManager;->getPathInTheme()Ljava/lang/String;
 
     move-result-object v3
@@ -576,7 +595,7 @@
 
     move-object/from16 v19, v8
 
-    .line 113
+    .line 117
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -616,6 +635,8 @@
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
+
+    invoke-static {v4, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 v0, 0x1
 

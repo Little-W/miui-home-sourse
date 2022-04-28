@@ -55,7 +55,7 @@
 .method protected addBreakableListener(Landroid/animation/ValueAnimator;Landroid/animation/AnimatorListenerAdapter;)V
     .locals 0
 
-    .line 29
+    .line 35
     invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     return-void
@@ -94,7 +94,7 @@
 .method protected getCurrentAnimParam()Ljava/lang/Float;
     .locals 1
 
-    .line 41
+    .line 47
     iget-object v0, p0, Lcom/miui/home/recents/breakableAnim/HomeBreakableAnimManager;->mCurrentAnim:Ljava/lang/Object;
 
     if-nez v0, :cond_0
@@ -140,7 +140,7 @@
 .method public isAnimChainOn()Z
     .locals 1
 
-    .line 51
+    .line 57
     iget-object v0, p0, Lcom/miui/home/recents/breakableAnim/HomeBreakableAnimManager;->mCurrentAnim:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
@@ -173,7 +173,7 @@
 
     const/4 v0, 0x2
 
-    .line 35
+    .line 41
     new-array v0, v0, [F
 
     const/4 v1, 0x0

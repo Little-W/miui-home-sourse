@@ -35,15 +35,15 @@
 .method private constructor <init>()V
     .locals 2
 
-    .line 69
+    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 70
+    .line 71
     iput-boolean v0, p0, Lcom/miui/home/launcher/common/AdvertisingIdClient$AdvertisingConnection;->retrieved:Z
 
-    .line 71
+    .line 72
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     const/4 v1, 0x1
@@ -58,7 +58,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/common/AdvertisingIdClient$1;)V
     .locals 0
 
-    .line 69
+    .line 70
     invoke-direct {p0}, Lcom/miui/home/launcher/common/AdvertisingIdClient$AdvertisingConnection;-><init>()V
 
     return-void
@@ -74,17 +74,17 @@
         }
     .end annotation
 
-    .line 86
+    .line 87
     iget-boolean v0, p0, Lcom/miui/home/launcher/common/AdvertisingIdClient$AdvertisingConnection;->retrieved:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 88
+    .line 89
     iput-boolean v0, p0, Lcom/miui/home/launcher/common/AdvertisingIdClient$AdvertisingConnection;->retrieved:Z
 
-    .line 89
+    .line 90
     iget-object v0, p0, Lcom/miui/home/launcher/common/AdvertisingIdClient$AdvertisingConnection;->queue:Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/LinkedBlockingQueue;->take()Ljava/lang/Object;
@@ -95,7 +95,7 @@
 
     return-object v0
 
-    .line 87
+    .line 88
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -107,7 +107,7 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 0
 
-    .line 75
+    .line 76
     :try_start_0
     iget-object p1, p0, Lcom/miui/home/launcher/common/AdvertisingIdClient$AdvertisingConnection;->queue:Ljava/util/concurrent/LinkedBlockingQueue;
 
@@ -120,7 +120,7 @@
     :catch_0
     move-exception p1
 
-    .line 77
+    .line 78
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0

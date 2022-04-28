@@ -27,6 +27,8 @@
     <attr name="actionBarMovableLayoutStyle" format="reference" />
     <attr name="actionBarMoveIcon" format="reference" />
     <attr name="actionBarNewIcon" format="reference" />
+    <attr name="actionBarPaddingEnd" format="dimension" />
+    <attr name="actionBarPaddingStart" format="dimension" />
     <attr name="actionBarPasteIcon" format="reference" />
     <attr name="actionBarPauseIcon" format="reference" />
     <attr name="actionBarPopupTheme" format="reference" />
@@ -45,6 +47,7 @@
         <enum name="wrap_content" value="0" />
     </attr>
     <attr name="actionBarSplitBackground" format="reference" />
+    <attr name="actionBarSplitMaxPercentageHeight" format="dimension|fraction" />
     <attr name="actionBarSplitStyle" format="reference" />
     <attr name="actionBarStackBackground" format="reference" />
     <attr name="actionBarStackedBackground" format="reference" />
@@ -106,6 +109,21 @@
     <attr name="alertDialogCenterButtons" format="boolean" />
     <attr name="alertDialogStyle" format="reference" />
     <attr name="alertDialogTheme" format="reference" />
+    <attr name="alignContent">
+        <enum name="center" value="2" />
+        <enum name="flex_end" value="1" />
+        <enum name="flex_start" value="0" />
+        <enum name="space_around" value="4" />
+        <enum name="space_between" value="3" />
+        <enum name="stretch" value="5" />
+    </attr>
+    <attr name="alignItems">
+        <enum name="baseline" value="3" />
+        <enum name="center" value="2" />
+        <enum name="flex_end" value="1" />
+        <enum name="flex_start" value="0" />
+        <enum name="stretch" value="4" />
+    </attr>
     <attr name="allowDividerAbove" format="boolean" />
     <attr name="allowDividerAfterLastItem" format="boolean" />
     <attr name="allowDividerBelow" format="boolean" />
@@ -126,7 +144,7 @@
     <attr name="arrowRightFillColor" format="reference|color" />
     <attr name="arrowRightStrokeColor" format="reference|color" />
     <attr name="arrowShaftLength" format="dimension" />
-    <attr name="aspectRatio" format="float" />
+    <attr name="aspectRatio" format="dimension" />
     <attr name="autoCompleteTextViewStyle" format="reference" />
     <attr name="autoRemoveCache" format="boolean" />
     <attr name="autoSizeMaxTextSize" format="dimension" />
@@ -189,6 +207,7 @@
     <attr name="buttonInlineExpandBackground" format="reference" />
     <attr name="buttonInlineShrinkBackground" format="reference" />
     <attr name="buttonPanelSideLayout" format="reference" />
+    <attr name="buttonRectBlankPage" format="reference" />
     <attr name="buttonRectStyleBackground" format="reference" />
     <attr name="buttonStyle" format="reference" />
     <attr name="buttonStyleSmall" format="reference" />
@@ -258,6 +277,8 @@
     <attr name="closeItemLayout" format="reference" />
     <attr name="collapseContentDescription" format="string" />
     <attr name="collapseIcon" format="reference" />
+    <attr name="collapseSubtitleTheme" format="reference" />
+    <attr name="collapseTitleTheme" format="reference" />
     <attr name="color" format="color" />
     <attr name="colorAccent" format="color" />
     <attr name="colorBackgroundFloating" format="color" />
@@ -329,6 +350,7 @@
     <attr name="dialogMultiChoiceListItemBackground" format="reference" />
     <attr name="dialogPreferenceStyle" format="reference" />
     <attr name="dialogPreferredPadding" format="dimension" />
+    <attr name="dialogProgressBarStyle" format="reference" />
     <attr name="dialogSimpleListTitleColor" format="reference|color" />
     <attr name="dialogTheme" format="reference" />
     <attr name="dialogTitle" format="string" />
@@ -350,9 +372,14 @@
         <flag name="useLogo" value="0x00000001" />
     </attr>
     <attr name="divider" format="reference" />
+    <attr name="dividerDrawable" format="reference" />
+    <attr name="dividerDrawableHorizontal" format="reference" />
+    <attr name="dividerDrawableVertical" format="reference" />
     <attr name="dividerHorizontal" format="reference" />
     <attr name="dividerPadding" format="dimension" />
     <attr name="dividerVertical" format="reference" />
+    <attr name="draggableMaxPercentProgress" format="fraction" />
+    <attr name="draggableMinPercentProgress" format="fraction" />
     <attr name="drawableBottomCompat" format="reference" />
     <attr name="drawableEndCompat" format="reference" />
     <attr name="drawableLeftCompat" format="reference" />
@@ -400,7 +427,9 @@
     <attr name="expandBackground" format="reference" />
     <attr name="expandState" format="reference" />
     <attr name="expandSubtitleTextStyle" format="reference" />
+    <attr name="expandSubtitleTheme" format="reference" />
     <attr name="expandTitleTextStyle" format="reference" />
+    <attr name="expandTitleTheme" format="reference" />
     <attr name="fabColor" format="reference|color" />
     <attr name="fabShadowEnabled" format="boolean" />
     <attr name="fastScrollEnabled" format="boolean" />
@@ -414,6 +443,17 @@
     <attr name="filterSortTabViewTextColor" format="reference|color" />
     <attr name="filterSortViewBackground" format="reference" />
     <attr name="firstBaselineToTopHeight" format="dimension" />
+    <attr name="flexDirection">
+        <enum name="column" value="2" />
+        <enum name="column_reverse" value="3" />
+        <enum name="row" value="0" />
+        <enum name="row_reverse" value="1" />
+    </attr>
+    <attr name="flexWrap">
+        <enum name="nowrap" value="0" />
+        <enum name="wrap" value="1" />
+        <enum name="wrap_reverse" value="2" />
+    </attr>
     <attr name="floatingActionButtonStyle" format="reference" />
     <attr name="font" format="reference" />
     <attr name="fontFamily" format="string" />
@@ -438,8 +478,11 @@
     <attr name="foregroundPrimaryDisableColor" format="reference|color" />
     <attr name="fragment" format="string" />
     <attr name="frame" format="reference" />
+    <attr name="freezesAnimation" format="boolean" />
     <attr name="gapBetweenBars" format="dimension" />
+    <attr name="gifSource" format="reference|string" />
     <attr name="goIcon" format="reference" />
+    <attr name="guidePopupTextStyle" format="reference" />
     <attr name="guidePopupViewStyle" format="reference" />
     <attr name="height" format="dimension" />
     <attr name="hideOnContentScroll" format="boolean" />
@@ -480,16 +523,35 @@
     <attr name="initialExpandedChildrenCount" format="integer" />
     <attr name="innerPath" format="string" />
     <attr name="isLightTheme" format="boolean" />
+    <attr name="isMiuixFloatingTheme" format="boolean" />
+    <attr name="isOpaque" format="boolean" />
     <attr name="isPreferenceVisible" format="boolean" />
     <attr name="itemPadding" format="dimension" />
     <attr name="itemSpacing" format="dimension" />
+    <attr name="justifyContent">
+        <enum name="center" value="2" />
+        <enum name="flex_end" value="1" />
+        <enum name="flex_start" value="0" />
+        <enum name="space_around" value="4" />
+        <enum name="space_between" value="3" />
+        <enum name="space_evenly" value="5" />
+    </attr>
     <attr name="key" format="string" />
     <attr name="keylines" format="reference" />
     <attr name="labelPadding" format="dimension" />
     <attr name="labelTextColor" format="reference|color" />
+    <attr name="largeProgressBarTextStyle" format="reference" />
     <attr name="lastBaselineToBottomHeight" format="dimension" />
     <attr name="layout" format="reference" />
     <attr name="layoutManager" format="string" />
+    <attr name="layout_alignSelf">
+        <enum name="auto" value="-1" />
+        <enum name="baseline" value="3" />
+        <enum name="center" value="2" />
+        <enum name="flex_end" value="1" />
+        <enum name="flex_start" value="0" />
+        <enum name="stretch" value="4" />
+    </attr>
     <attr name="layout_anchor" format="reference" />
     <attr name="layout_anchorGravity">
         <flag name="bottom" value="0x00000050" />
@@ -611,12 +673,16 @@
     </attr>
     <attr name="layout_editor_absoluteX" format="dimension" />
     <attr name="layout_editor_absoluteY" format="dimension" />
+    <attr name="layout_flexBasisPercent" format="fraction" />
+    <attr name="layout_flexGrow" format="float" />
+    <attr name="layout_flexShrink" format="float" />
     <attr name="layout_goneMarginBottom" format="dimension" />
     <attr name="layout_goneMarginEnd" format="dimension" />
     <attr name="layout_goneMarginLeft" format="dimension" />
     <attr name="layout_goneMarginRight" format="dimension" />
     <attr name="layout_goneMarginStart" format="dimension" />
     <attr name="layout_goneMarginTop" format="dimension" />
+    <attr name="layout_ignoreInsets" format="boolean" />
     <attr name="layout_insetEdge">
         <enum name="bottom" value="80" />
         <enum name="end" value="8388613" />
@@ -627,6 +693,10 @@
         <enum name="top" value="48" />
     </attr>
     <attr name="layout_keyline" format="integer" />
+    <attr name="layout_maxHeight" format="dimension" />
+    <attr name="layout_maxWidth" format="dimension" />
+    <attr name="layout_minHeight" format="dimension" />
+    <attr name="layout_minWidth" format="dimension" />
     <attr name="layout_optimizationLevel">
         <flag name="barrier" value="0x00000002" />
         <flag name="chains" value="0x00000004" />
@@ -636,6 +706,8 @@
         <flag name="none" value="0x00000000" />
         <flag name="standard" value="0x00000007" />
     </attr>
+    <attr name="layout_order" format="integer" />
+    <attr name="layout_wrapBefore" format="boolean" />
     <attr name="leftArrow" format="reference" />
     <attr name="level" format="integer" />
     <attr name="lineGravity" format="integer">
@@ -673,12 +745,15 @@
     <attr name="longAxisCells" format="integer" />
     <attr name="longAxisEndPadding" format="dimension" />
     <attr name="longAxisStartPadding" format="dimension" />
+    <attr name="loopCount" format="integer" />
+    <attr name="lottieAnimationViewStyle" format="reference" />
     <attr name="lottie_autoPlay" format="boolean" />
     <attr name="lottie_cacheComposition" format="boolean" />
     <attr name="lottie_colorFilter" format="color" />
     <attr name="lottie_enableMergePathsForKitKatAndAbove" format="boolean" />
     <attr name="lottie_fallbackRes" format="reference" />
     <attr name="lottie_fileName" format="string" />
+    <attr name="lottie_ignoreDisabledSystemAnimations" format="boolean" />
     <attr name="lottie_imageAssetsFolder" format="string" />
     <attr name="lottie_loop" format="boolean" />
     <attr name="lottie_progress" format="float" />
@@ -701,6 +776,7 @@
     <attr name="maxDate" format="string" />
     <attr name="maxHeight" format="dimension" />
     <attr name="maxLevel" format="integer" />
+    <attr name="maxLine" format="integer" />
     <attr name="maxMiddle" format="float" />
     <attr name="maxWidth" format="dimension" />
     <attr name="measureWithLargestChild" format="boolean" />
@@ -743,6 +819,7 @@
     <attr name="miuixAppcompatWidgetManager" format="string" />
     <attr name="miuixAppcompatWidgetPadding" format="reference|dimension" />
     <attr name="miuixDialogRoundWindowBg" format="reference" />
+    <attr name="miuixSelectGroupButtonBackground" format="reference" />
     <attr name="miuix_strokeColor" format="reference|color" />
     <attr name="miuix_strokeWidth" format="reference|dimension" />
     <attr name="moduleContent">
@@ -760,6 +837,7 @@
         <enum name="normal" value="0" />
         <enum name="tabMode" value="2" />
     </attr>
+    <attr name="navigationPreferenceItemBackground" format="reference" />
     <attr name="negativeButtonText" format="string" />
     <attr name="numberPickerStyle" format="reference" />
     <attr name="numericModifiers">
@@ -788,6 +866,7 @@
     <attr name="patternColor" format="color" />
     <attr name="patternStyle" format="integer" />
     <attr name="persistent" format="boolean" />
+    <attr name="pickerBackgroundColor" format="reference|color" />
     <attr name="popupMenuStyle" format="reference" />
     <attr name="popupTheme" format="reference" />
     <attr name="popupWindowElevation" format="reference|dimension" />
@@ -801,6 +880,9 @@
     <attr name="preferenceCategoryStyle" format="reference" />
     <attr name="preferenceCategoryTextColor" format="reference|color" />
     <attr name="preferenceCategoryTitleTextAppearance" format="reference" />
+    <attr name="preferenceCheckableItemMaskPaddingEnd" format="reference|dimension" />
+    <attr name="preferenceCheckableItemMaskPaddingStart" format="reference|dimension" />
+    <attr name="preferenceCheckableItemSetMaskPaddingEnd" format="reference|dimension" />
     <attr name="preferenceCheckableMaskColor" format="reference" />
     <attr name="preferenceChoiceIndicatorSingle" format="reference" />
     <attr name="preferenceFragmentCompatStyle" format="reference" />
@@ -808,10 +890,23 @@
     <attr name="preferenceFragmentStyle" format="reference" />
     <attr name="preferenceInformationStyle" format="reference" />
     <attr name="preferenceItemBackground" format="reference" />
+    <attr name="preferenceItemBackgroundColor" format="reference|color" />
+    <attr name="preferenceItemPaddingEnd" format="reference|dimension" />
+    <attr name="preferenceItemPaddingStart" format="reference|dimension" />
+    <attr name="preferenceNavigationSecondaryTextColor" format="reference|color" />
+    <attr name="preferenceNavigationTextColor" format="reference|color" />
+    <attr name="preferenceNormalCheckableMaskColor" format="reference" />
     <attr name="preferencePrimaryTextColor" format="reference|color" />
+    <attr name="preferenceRadioSetChildExtraPaddingStart" format="reference|dimension" />
+    <attr name="preferenceRadioSetMaskPaddingStart" format="reference|dimension" />
+    <attr name="preferenceRadioTwoStateContentPaddingEnd" format="reference|dimension" />
+    <attr name="preferenceRadioTwoStateContentPaddingStart" format="reference|dimension" />
     <attr name="preferenceRightTextColor" format="reference|color" />
     <attr name="preferenceScreenStyle" format="reference" />
     <attr name="preferenceSecondaryTextColor" format="reference|color" />
+    <attr name="preferenceSeekBarIconMarginStart" format="reference|dimension" />
+    <attr name="preferenceSeekBarPaddingEnd" format="reference|dimension" />
+    <attr name="preferenceSeekBarPaddingStart" format="reference|dimension" />
     <attr name="preferenceStyle" format="reference" />
     <attr name="preferenceTheme" format="reference" />
     <attr name="preserveIconSpacing" format="boolean" />
@@ -819,6 +914,7 @@
     <attr name="primaryButtonBackground" format="reference" />
     <attr name="primaryButtonTextColor" format="reference|color" />
     <attr name="primaryKey" format="string" />
+    <attr name="primarySelectorButtonBackground" format="reference" />
     <attr name="progressBackgroundDrawable" format="reference|color" />
     <attr name="progressBarBackground" format="reference|color" />
     <attr name="progressBarColorHorizontal" format="reference|color" />
@@ -851,6 +947,27 @@
     <attr name="retained" format="string" />
     <attr name="reverseLayout" format="boolean" />
     <attr name="rightArrow" format="reference" />
+    <attr name="rtg_backgroundColor" format="color" />
+    <attr name="rtg_borderColor" format="color" />
+    <attr name="rtg_borderStrokeWidth" format="dimension" />
+    <attr name="rtg_checkedBackgroundColor" format="color" />
+    <attr name="rtg_checkedBorderColor" format="color" />
+    <attr name="rtg_checkedMarkerColor" format="color" />
+    <attr name="rtg_checkedTextColor" format="color" />
+    <attr name="rtg_dashBorderColor" format="color" />
+    <attr name="rtg_horizontalPadding" format="dimension" />
+    <attr name="rtg_horizontalSpacing" format="dimension" />
+    <attr name="rtg_inputHint" format="string" />
+    <attr name="rtg_inputHintColor" format="color" />
+    <attr name="rtg_inputTextColor" format="color" />
+    <attr name="rtg_isAppendMode" format="boolean" />
+    <attr name="rtg_max_row_count" format="integer" />
+    <attr name="rtg_pressedBackgroundColor" format="color" />
+    <attr name="rtg_reverse_layout" format="boolean" />
+    <attr name="rtg_textColor" format="color" />
+    <attr name="rtg_textSize" format="dimension" />
+    <attr name="rtg_verticalPadding" format="dimension" />
+    <attr name="rtg_verticalSpacing" format="dimension" />
     <attr name="screen" format="string" />
     <attr name="scrollOrientation" format="integer">
         <flag name="angle" value="0x00000004" />
@@ -865,17 +982,22 @@
     <attr name="searchEditTextColor" format="reference|color" />
     <attr name="searchEditTextHintColor" format="reference|color" />
     <attr name="searchEditTextIconStart" format="reference" />
+    <attr name="searchEditTextIconStartWithPadding" format="reference" />
     <attr name="searchEditTextStyle" format="reference" />
     <attr name="searchHintIcon" format="reference" />
     <attr name="searchIcon" format="reference" />
     <attr name="searchViewStyle" format="reference" />
     <attr name="seekBarIncrement" format="integer" />
+    <attr name="seekBarPreferenceItemBackground" format="reference" />
     <attr name="seekBarPreferenceStyle" format="reference" />
     <attr name="seekBarProgressDrawable" format="reference" />
     <attr name="seekBarStyle" format="reference" />
     <attr name="selectable" format="boolean" />
     <attr name="selectableItemBackground" format="reference" />
     <attr name="selectableItemBackgroundBorderless" format="reference" />
+    <attr name="selectablePreferenceItemColorNormal" format="reference" />
+    <attr name="selectablePreferenceItemColorSelected" format="reference" />
+    <attr name="selectorButtonBackground" format="reference" />
     <attr name="shortAxisCells" format="integer" />
     <attr name="shortAxisEndPadding" format="dimension" />
     <attr name="shortAxisStartPadding" format="dimension" />
@@ -888,6 +1010,24 @@
         <flag name="withText" value="0x00000004" />
     </attr>
     <attr name="showDay" format="boolean" />
+    <attr name="showDivider">
+        <flag name="beginning" value="0x00000001" />
+        <flag name="end" value="0x00000004" />
+        <flag name="middle" value="0x00000002" />
+        <flag name="none" value="0x00000000" />
+    </attr>
+    <attr name="showDividerHorizontal">
+        <flag name="beginning" value="0x00000001" />
+        <flag name="end" value="0x00000004" />
+        <flag name="middle" value="0x00000002" />
+        <flag name="none" value="0x00000000" />
+    </attr>
+    <attr name="showDividerVertical">
+        <flag name="beginning" value="0x00000001" />
+        <flag name="end" value="0x00000004" />
+        <flag name="middle" value="0x00000002" />
+        <flag name="none" value="0x00000000" />
+    </attr>
     <attr name="showDividers">
         <flag name="beginning" value="0x00000001" />
         <flag name="end" value="0x00000004" />
@@ -908,6 +1048,7 @@
     <attr name="sliding_dot_bar" format="reference" />
     <attr name="sliding_panel" format="reference" />
     <attr name="sliding_shadow_dot_bar" format="reference" />
+    <attr name="smallProgressBarTextStyle" format="reference" />
     <attr name="spanCount" format="integer" />
     <attr name="spanX" format="string" />
     <attr name="spanY" format="string" />
@@ -1086,10 +1227,17 @@
     <attr name="windowActionModeOverlay" format="boolean" />
     <attr name="windowContentMask" format="reference|color" />
     <attr name="windowDisablePreview" format="boolean" />
+    <attr name="windowExtraPaddingHorizontal">
+        <enum name="invalid" value="0" />
+        <enum name="large" value="2" />
+        <enum name="small" value="1" />
+    </attr>
+    <attr name="windowExtraPaddingHorizontalEnable" format="reference|boolean" />
     <attr name="windowFixedHeightMajor" format="dimension|fraction" />
     <attr name="windowFixedHeightMinor" format="dimension|fraction" />
     <attr name="windowFixedWidthMajor" format="dimension|fraction" />
     <attr name="windowFixedWidthMinor" format="dimension|fraction" />
+    <attr name="windowFloating" format="boolean" />
     <attr name="windowLayoutMode">
         <enum name="bottom" value="1" />
         <enum name="normal" value="0" />

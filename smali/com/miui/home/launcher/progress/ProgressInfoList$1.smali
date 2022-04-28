@@ -208,6 +208,8 @@
     const-string v4, "ProgressInfoList init"
 
     .line 72
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     goto :goto_0
 
     :catchall_0

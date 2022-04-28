@@ -29,6 +29,26 @@
 
 
 # virtual methods
+.method public dismiss()V
+    .locals 1
+
+    .line 41
+    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowHelper;->mContextMenuPopupWindow:Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindow;
+
+    if-eqz v0, :cond_0
+
+    .line 42
+    invoke-interface {v0}, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindow;->dismiss()V
+
+    const/4 v0, 0x0
+
+    .line 43
+    iput-object v0, p0, Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindowHelper;->mContextMenuPopupWindow:Lmiuix/appcompat/internal/view/menu/context/ContextMenuPopupWindow;
+
+    :cond_0
+    return-void
+.end method
+
 .method public onDismiss()V
     .locals 3
 
