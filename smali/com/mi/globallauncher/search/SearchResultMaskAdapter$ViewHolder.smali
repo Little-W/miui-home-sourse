@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)V
     .locals 0
 
-    .line 211
+    .line 213
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$ViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;Lcom/mi/globallauncher/search/SearchResultMaskAdapter$1;)V
     .locals 0
 
-    .line 211
+    .line 213
     invoke-direct {p0, p1}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$ViewHolder;-><init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)V
 
     return-void

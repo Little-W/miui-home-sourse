@@ -85,7 +85,7 @@
     .line 69
     iput p3, p0, Lcom/miui/home/recents/views/RecentsView;->mRunningTaskId:I
 
-    .line 555
+    .line 557
     iput-boolean p2, p0, Lcom/miui/home/recents/views/RecentsView;->mInOverviewState:Z
 
     const/4 p2, 0x0
@@ -98,7 +98,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f0d0117
+    const p3, 0x7f0d0118
 
     .line 92
     invoke-virtual {p1, p3, p0, p2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
@@ -161,14 +161,14 @@
 
     if-eqz p1, :cond_3
 
-    .line 583
+    .line 585
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    .line 584
+    .line 586
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object v0
@@ -179,7 +179,7 @@
 
     goto/16 :goto_1
 
-    .line 587
+    .line 589
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
 
@@ -193,7 +193,7 @@
 
     move-result v0
 
-    .line 588
+    .line 590
     invoke-virtual {p2}, Landroid/graphics/RectF;->centerY()F
 
     move-result v1
@@ -204,7 +204,7 @@
 
     sub-float/2addr v1, v2
 
-    .line 589
+    .line 591
     invoke-virtual {p2}, Landroid/graphics/RectF;->width()F
 
     move-result v2
@@ -217,7 +217,7 @@
 
     const/4 v3, 0x0
 
-    .line 590
+    .line 592
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsView;->getTaskViews()Ljava/util/List;
 
@@ -229,7 +229,7 @@
 
     if-ge v3, v4, :cond_2
 
-    .line 591
+    .line 593
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsView;->getTaskViews()Ljava/util/List;
 
     move-result-object v4
@@ -242,7 +242,7 @@
 
     if-eq p1, v4, :cond_1
 
-    .line 593
+    .line 595
     invoke-virtual {v4}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object v5
@@ -259,7 +259,7 @@
 
     int-to-float v5, v5
 
-    .line 594
+    .line 596
     invoke-virtual {p2}, Landroid/graphics/RectF;->width()F
 
     move-result v6
@@ -274,7 +274,7 @@
 
     mul-float/2addr v5, v6
 
-    .line 595
+    .line 597
     invoke-virtual {p2}, Landroid/graphics/RectF;->centerX()F
 
     move-result v6
@@ -287,7 +287,7 @@
 
     add-float/2addr v5, v6
 
-    .line 596
+    .line 598
     invoke-virtual {v4}, Lcom/miui/home/recents/views/TaskView;->getWidth()I
 
     move-result v6
@@ -300,7 +300,7 @@
 
     invoke-virtual {v4, v6}, Lcom/miui/home/recents/views/TaskView;->setPivotX(F)V
 
-    .line 597
+    .line 599
     invoke-virtual {v4}, Lcom/miui/home/recents/views/TaskView;->getHeight()I
 
     move-result v6
@@ -311,19 +311,19 @@
 
     invoke-virtual {v4, v6}, Lcom/miui/home/recents/views/TaskView;->setPivotY(F)V
 
-    .line 598
+    .line 600
     invoke-virtual {v4, v2}, Lcom/miui/home/recents/views/TaskView;->setScaleX(F)V
 
-    .line 599
+    .line 601
     invoke-virtual {v4, v2}, Lcom/miui/home/recents/views/TaskView;->setScaleY(F)V
 
-    .line 600
+    .line 602
     invoke-virtual {v4, v5}, Lcom/miui/home/recents/views/TaskView;->setTranslationX(F)V
 
-    .line 601
+    .line 603
     invoke-virtual {v4, v1}, Lcom/miui/home/recents/views/TaskView;->setTranslationY(F)V
 
-    .line 602
+    .line 604
     invoke-virtual {v4}, Lcom/miui/home/recents/views/TaskView;->getHeaderView()Lcom/miui/home/recents/views/TaskViewHeader;
 
     move-result-object v4
@@ -710,7 +710,7 @@
 
     move v6, p5
 
-    .line 571
+    .line 573
     invoke-direct/range {v1 .. v6}, Lcom/miui/home/recents/views/RecentsView;->alignTaskByVisualRectF(Lcom/miui/home/recents/views/TaskView;Landroid/graphics/RectF;Landroid/graphics/RectF;FF)V
 
     return-void
@@ -733,7 +733,7 @@
 
     move v6, p5
 
-    .line 577
+    .line 579
     invoke-direct/range {v1 .. v6}, Lcom/miui/home/recents/views/RecentsView;->alignTaskByVisualRectF(Lcom/miui/home/recents/views/TaskView;Landroid/graphics/RectF;Landroid/graphics/RectF;FF)V
 
     return-void
@@ -805,7 +805,7 @@
 .method public getSpringAnimationImpl()Lcom/miui/home/recents/util/SpringAnimationImpl;
     .locals 1
 
-    .line 552
+    .line 554
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsView;->mSpringAnimationImpl:Lcom/miui/home/recents/util/SpringAnimationImpl;
 
     return-object v0
@@ -835,14 +835,14 @@
 .method public getTaskIdByIndex(I)I
     .locals 1
 
-    .line 520
+    .line 522
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/RecentsView;->getTaskViewAt(I)Lcom/miui/home/recents/views/TaskView;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 521
+    .line 523
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object v0
@@ -869,7 +869,7 @@
 .method public getTaskIndexById(I)I
     .locals 1
 
-    .line 515
+    .line 517
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/RecentsView;->getTaskView(I)Lcom/miui/home/recents/views/TaskView;
 
     move-result-object p1
@@ -880,7 +880,7 @@
 
     goto :goto_0
 
-    .line 516
+    .line 518
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsView;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
@@ -974,7 +974,7 @@
 .method public getTaskViewAt(I)Lcom/miui/home/recents/views/TaskView;
     .locals 1
 
-    .line 525
+    .line 527
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsView;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViews()Ljava/util/List;
@@ -991,7 +991,7 @@
 
     goto :goto_0
 
-    .line 529
+    .line 531
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsView;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
@@ -1017,7 +1017,7 @@
 .method public getTaskViewCount()I
     .locals 1
 
-    .line 534
+    .line 536
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsView;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackView;->getTaskViews()Ljava/util/List;
@@ -1142,7 +1142,7 @@
     return-void
 .end method
 
-.method public isAnyTaskIdInvalid(Ljava/util/Set;)Z
+.method public isAnyWorldCirculateTaskIdInvalid(Ljava/util/Set;)Z
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1197,6 +1197,18 @@
 
     if-eqz v2, :cond_0
 
+    .line 507
+    invoke-virtual {v1}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
+
+    iget-boolean v2, v2, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->isWorldCirculate:Z
+
+    if-eqz v2, :cond_0
+
+    .line 508
     invoke-virtual {v1}, Lcom/miui/home/recents/views/TaskView;->getTask()Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object v1
@@ -1682,13 +1694,13 @@
     if-nez p2, :cond_2
 
     .line 114
-    new-instance p1, Lcom/miui/home/recents/views/TaskStackViewStack;
+    new-instance p1, Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsView;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Lcom/miui/home/recents/views/TaskStackViewStack;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Lcom/miui/home/recents/views/TaskStackView;-><init>(Landroid/content/Context;)V
 
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsView;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
@@ -1872,20 +1884,20 @@
 .method public setInOverviewState(Z)V
     .locals 1
 
-    .line 558
+    .line 560
     iget-boolean v0, p0, Lcom/miui/home/recents/views/RecentsView;->mInOverviewState:Z
 
     if-eq v0, p1, :cond_1
 
-    .line 559
+    .line 561
     iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsView;->mInOverviewState:Z
 
-    .line 560
+    .line 562
     iget-boolean p1, p0, Lcom/miui/home/recents/views/RecentsView;->mInOverviewState:Z
 
     if-eqz p1, :cond_0
 
-    .line 561
+    .line 563
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsView;->reloadStackView()V
 
     goto :goto_0
@@ -1893,10 +1905,10 @@
     :cond_0
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 563
+    .line 565
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/RecentsView;->setAlpha(F)V
 
-    .line 564
+    .line 566
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsView;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 
     const/4 v0, 0x0
@@ -1911,7 +1923,7 @@
 .method public setRunningTaskHidden(IZ)V
     .locals 0
 
-    .line 545
+    .line 547
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/RecentsView;->getTaskView(I)Lcom/miui/home/recents/views/TaskView;
 
     move-result-object p1
@@ -1927,7 +1939,7 @@
     :cond_0
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 547
+    .line 549
     :goto_0
     invoke-virtual {p1, p2}, Lcom/miui/home/recents/views/TaskView;->setChildrenViewAlpha(F)V
 
@@ -2254,7 +2266,7 @@
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f100366
+    const p1, 0x7f100365
 
     .line 159
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/RecentsView;->showEmptyView(I)V
@@ -2292,14 +2304,14 @@
 .method public updateThumbnail(ILcom/android/systemui/shared/recents/model/ThumbnailData;)V
     .locals 0
 
-    .line 538
+    .line 540
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/RecentsView;->getTaskView(I)Lcom/miui/home/recents/views/TaskView;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 540
+    .line 542
     invoke-virtual {p1, p2}, Lcom/miui/home/recents/views/TaskView;->setThumbnail(Lcom/android/systemui/shared/recents/model/ThumbnailData;)V
 
     :cond_0

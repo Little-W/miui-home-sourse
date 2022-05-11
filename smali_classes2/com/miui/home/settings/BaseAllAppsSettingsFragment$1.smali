@@ -3,12 +3,12 @@
 .source "BaseAllAppsSettingsFragment.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.implements Lcom/mi/globallauncher/poco/PocoBranchGuideCallBack;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->showInstallDialog()V
+    value = Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->branchSettingChange(Ljava/lang/Boolean;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)V
     .locals 0
 
-    .line 276
+    .line 255
     iput-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment$1;->this$0:Lcom/miui/home/settings/BaseAllAppsSettingsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,23 +35,38 @@
 
 
 # virtual methods
-.method public onCancel(Landroid/content/DialogInterface;)V
-    .locals 1
+.method public onDialogDismiss()V
+    .locals 2
 
-    .line 279
-    iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment$1;->this$0:Lcom/miui/home/settings/BaseAllAppsSettingsFragment;
-
-    invoke-static {p1}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->access$100(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)Lcom/miui/home/settings/preference/ListPreference;
-
-    move-result-object p1
-
+    .line 258
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment$1;->this$0:Lcom/miui/home/settings/BaseAllAppsSettingsFragment;
 
-    invoke-static {v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->access$000(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->access$000(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ListPreference;->setValue(Ljava/lang/String;)V
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->isQuickSearchSwitchOn()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setChecked(Z)V
+
+    .line 259
+    iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment$1;->this$0:Lcom/miui/home/settings/BaseAllAppsSettingsFragment;
+
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->isBranchSwitchOn()Z
+
+    move-result v1
+
+    invoke-static {v0, v1}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->access$100(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;Z)V
 
     return-void
 .end method

@@ -922,11 +922,13 @@
     .line 257
     iget-object v0, p0, Lcom/miui/home/launcher/progress/ApplicationProgressProcessor;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_2
+
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isDrawerMode()Z
 
     move-result v0
-
-    const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
@@ -940,7 +942,7 @@
 
     if-nez v0, :cond_0
 
-    return v1
+    goto :goto_0
 
     .line 260
     :cond_0
@@ -962,6 +964,10 @@
     return p1
 
     :cond_1
+    return v1
+
+    :cond_2
+    :goto_0
     return v1
 .end method
 

@@ -30,7 +30,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/hotseats/HotSeatsList;)V
     .locals 0
 
-    .line 100
+    .line 99
     iput-object p1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsList$2;->this$0:Lcom/miui/home/launcher/hotseats/HotSeatsList;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/DiffUtil$ItemCallback;-><init>()V
@@ -43,7 +43,7 @@
 .method public areContentsTheSame(Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;)Z
     .locals 0
 
-    .line 108
+    .line 107
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->areContentsTheSame(Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;)Z
 
     move-result p1
@@ -54,7 +54,7 @@
 .method public bridge synthetic areContentsTheSame(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 100
+    .line 99
     check-cast p1, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
 
     check-cast p2, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
@@ -69,7 +69,7 @@
 .method public areItemsTheSame(Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;)Z
     .locals 0
 
-    .line 103
+    .line 102
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;->areItemsTheSame(Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;)Z
 
     move-result p1
@@ -80,7 +80,7 @@
 .method public bridge synthetic areItemsTheSame(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 100
+    .line 99
     check-cast p1, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;
 
     check-cast p2, Lcom/miui/home/launcher/hotseats/HotSeatsList$AdapterItem;

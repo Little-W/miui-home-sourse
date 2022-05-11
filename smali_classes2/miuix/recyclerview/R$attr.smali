@@ -61,14 +61,14 @@
 
 .field public static final name:I = 0x7f04025c
 
-.field public static final recyclerViewStyle:I = 0x7f0402bd
+.field public static final recyclerViewStyle:I = 0x7f0402be
 
-.field public static final reverseLayout:I = 0x7f0402c1
+.field public static final reverseLayout:I = 0x7f0402c2
 
-.field public static final spanCount:I = 0x7f04030b
+.field public static final spanCount:I = 0x7f04030c
 
-.field public static final stackFromEnd:I = 0x7f04031a
+.field public static final stackFromEnd:I = 0x7f04031b
 
-.field public static final targetLevel:I = 0x7f04033e
+.field public static final targetLevel:I = 0x7f04033f
 
-.field public static final ttcIndex:I = 0x7f04038d
+.field public static final ttcIndex:I = 0x7f04038e

@@ -622,7 +622,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100065
+    const v1, 0x7f100066
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -1357,7 +1357,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070464
+    const v3, 0x7f07046f
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

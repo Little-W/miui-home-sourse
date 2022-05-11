@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;Landroid/os/Looper;)V
     .locals 0
 
-    .line 49
+    .line 50
     iput-object p1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$1;->this$0:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -35,29 +35,27 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 1
 
-    .line 52
+    .line 53
     iget p1, p1, Landroid/os/Message;->what:I
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$1;->this$0:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;
-
-    invoke-static {p1}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->access$100(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)Landroid/content/Context;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->isLargeScreen(Landroid/content/Context;)Z
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 53
+    .line 54
     iget-object p1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$1;->this$0:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->access$200(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;Z)V
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->access$100(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;Z)V
 
     :cond_0
     return-void

@@ -129,20 +129,20 @@
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     .line 76
-    iget-object v0, p0, Lcom/miui/home/settings/AllDeleteAppActivity;->appInfoList:Ljava/util/List;
-
-    invoke-direct {p0}, Lcom/miui/home/settings/AllDeleteAppActivity;->getPreinstallDeleteAppinfo()Ljava/util/List;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Collection;
-
-    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    .line 77
     invoke-direct {p0}, Lcom/miui/home/settings/AllDeleteAppActivity;->getInstallList()Ljava/util/List;
 
     move-result-object v0
+
+    .line 77
+    iget-object v1, p0, Lcom/miui/home/settings/AllDeleteAppActivity;->appInfoList:Ljava/util/List;
+
+    invoke-direct {p0}, Lcom/miui/home/settings/AllDeleteAppActivity;->getPreinstallDeleteAppinfo()Ljava/util/List;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Collection;
+
+    invoke-interface {v1, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     const/4 v1, 0x0
 
@@ -738,7 +738,7 @@
 .method private final initView()V
     .locals 3
 
-    const v0, 0x7f0a02c1
+    const v0, 0x7f0a02c8
 
     .line 202
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/AllDeleteAppActivity;->findViewById(I)Landroid/view/View;
@@ -809,7 +809,7 @@
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    const v0, 0x7f0a0175
+    const v0, 0x7f0a0178
 
     .line 206
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/AllDeleteAppActivity;->findViewById(I)Landroid/view/View;
@@ -1168,7 +1168,7 @@
     .line 46
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllDeleteAppActivity;->setContentView(I)V
 
-    const p1, 0x7f100167
+    const p1, 0x7f100168
 
     .line 47
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllDeleteAppActivity;->setTitle(I)V

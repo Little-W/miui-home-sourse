@@ -33,7 +33,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;FLcom/miui/home/recents/views/TaskView;FF)V
     .locals 0
 
-    .line 706
+    .line 705
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$3;->this$0:Lcom/miui/home/recents/NavStubView;
 
     iput p2, p0, Lcom/miui/home/recents/NavStubView$3;->val$startFullscreenProgress:F
@@ -54,12 +54,12 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 3
 
-    .line 709
+    .line 708
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result p1
 
-    .line 710
+    .line 709
     iget v0, p0, Lcom/miui/home/recents/NavStubView$3;->val$startFullscreenProgress:F
 
     const/4 v1, 0x0
@@ -70,12 +70,12 @@
 
     add-float/2addr v0, v1
 
-    .line 711
+    .line 710
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$3;->val$tv:Lcom/miui/home/recents/views/TaskView;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/recents/views/TaskView;->setFullscreenProgress(F)V
 
-    .line 712
+    .line 711
     iget v0, p0, Lcom/miui/home/recents/NavStubView$3;->val$startRadius:F
 
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$3;->this$0:Lcom/miui/home/recents/NavStubView;
@@ -92,7 +92,7 @@
 
     add-float/2addr v0, v1
 
-    .line 713
+    .line 712
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$3;->val$tv:Lcom/miui/home/recents/views/TaskView;
 
     invoke-virtual {v1}, Lcom/miui/home/recents/views/TaskView;->getThumbnailView()Lcom/miui/home/recents/views/TaskViewThumbnail;
@@ -103,7 +103,7 @@
 
     invoke-virtual {v1, v0}, Lcom/miui/home/recents/views/TaskViewThumbnail;->setCornerRadius(I)V
 
-    .line 714
+    .line 713
     iget v0, p0, Lcom/miui/home/recents/NavStubView$3;->val$startRatio:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -114,7 +114,7 @@
 
     add-float/2addr v0, v1
 
-    .line 715
+    .line 714
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$3;->val$tv:Lcom/miui/home/recents/views/TaskView;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/TaskView;->getThumbnailView()Lcom/miui/home/recents/views/TaskViewThumbnail;

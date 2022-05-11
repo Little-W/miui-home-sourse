@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">ആപ്പ് ഡ്രോയർ തുറക്കുന്നതിനായി മുകളിലേക്ക് സ്വൈപ്പുചെയ്യുന്നത് കരുതിവച്ചിരിക്കുന്നു. സാധാരണ ഹോം സ്‌ക്രീൻ മോഡിലേക്ക് മാറി വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="all_apps_suggestions">ആപ്പ് നിർദ്ദേശങ്ങൾ</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">ഫോൾഡറിലെ %1$d സ്ഥാനത്തേക്ക് നീക്കി</string>
     <string name="announce_for_checked">%1$s, പരിശോധിച്ചു</string>
     <string name="announce_for_choose_default_screen">ഡിഫോൾട്ട് ഹോം സ്ക്രീനായി സ്ക്രീൻ %1$d ക്രമീകരിക്കുക</string>
@@ -609,11 +610,11 @@
     <string name="navigation_guide_recent_title">സമീപകാലത്തുള്ളവ തുറക്കുക</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">സമീപകാലത്തുള്ളവ തുറക്കുക</string>
     <string name="navigation_guide_settings">ഗെസ്ച്വർ ഡെമോകൾ</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">മധ്യം</string>
+    <string name="navigation_position_left">ഇടത്</string>
+    <string name="navigation_position_right">വലത്</string>
+    <string name="navigation_position_summary">നാവിഗേഷൻ ബട്ടണുകളുടെ ഇഷ്‌ടാനുസൃത സ്ഥാനങ്ങൾ ഹോം സ്‌ക്രീനിൽ മാത്രമേ പ്രയോഗിക്കാൻ കഴിയൂ</string>
+    <string name="navigation_position_title">നാവിഗേഷൻ ബട്ടണുകളുടെ സ്ഥാനം</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">റദ്ദാക്കുക</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">മൂന്നാം കക്ഷി ലോഞ്ചറുകൾ ഉപയോഗിച്ച് പൂർണ്ണ സ്‌ക്രീൻ ആംഗ്യങ്ങൾ ഉപയോഗിക്കാനാകില്ല. സിസ്റ്റം ലോഞ്ചറിലേക്ക് മാറി പൂർണ്ണ സ്‌ക്രീൻ ആംഗ്യങ്ങൾ ഓണാക്കണോ?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">ശരി</string>

@@ -299,7 +299,7 @@
     :pswitch_0
     iget-object p2, p1, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;->icon:Landroid/widget/ImageView;
 
-    const v0, 0x7f0801c9
+    const v0, 0x7f0801c8
 
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -348,7 +348,7 @@
     .line 77
     iget-object v0, p1, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter$ViewHolder;->icon:Landroid/widget/ImageView;
 
-    const v1, 0x7f0801ca
+    const v1, 0x7f0801c9
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -461,7 +461,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/settings/CategoryOrderAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0080
+    const v1, 0x7f0d0081
 
     const/4 v2, 0x0
 

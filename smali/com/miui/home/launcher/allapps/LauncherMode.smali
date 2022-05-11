@@ -651,16 +651,20 @@
 .end method
 
 .method public isHomeSupportSearchBar(Landroid/content/Context;)Z
-    .locals 1
+    .locals 0
 
     .line 218
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/LauncherMode;->isHomeSupportIconSearchBar(Landroid/content/Context;)Z
 
-    move-result v0
+    move-result p1
 
-    if-eqz v0, :cond_0
+    if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->isLargeScreen(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
 
     move-result p1
 

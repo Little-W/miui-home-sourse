@@ -1,11 +1,14 @@
 .class Lcom/miui/home/recents/views/RecentsContainer$11;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "RecentsContainer.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/recents/views/RecentsContainer;->doClearAnim()V
+    value = Lcom/miui/home/recents/views/RecentsContainer;->endForClear()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,45 +28,80 @@
     .line 797
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
-
-    .line 805
-    iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
-
-    invoke-virtual {p1}, Lcom/miui/home/recents/views/RecentsContainer;->dismissRecentsToLaunchTargetTaskOrHome()V
-
-    .line 806
-    iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
-
-    invoke-static {p1}, Lcom/miui/home/recents/views/RecentsContainer;->access$1300(Lcom/miui/home/recents/views/RecentsContainer;)V
-
-    .line 807
-    iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$1202(Lcom/miui/home/recents/views/RecentsContainer;Z)Z
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 1
+.method public run()V
+    .locals 9
 
     .line 800
-    iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
+    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
-    const/4 v0, 0x1
+    invoke-virtual {v0}, Lcom/miui/home/recents/views/RecentsContainer;->getFreeMemory()J
 
-    invoke-static {p1, v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$1202(Lcom/miui/home/recents/views/RecentsContainer;Z)Z
+    move-result-wide v7
+
+    .line 801
+    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
+
+    invoke-static {v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$1300(Lcom/miui/home/recents/views/RecentsContainer;)J
+
+    move-result-wide v1
+
+    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
+
+    invoke-static {v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$1400(Lcom/miui/home/recents/views/RecentsContainer;)J
+
+    move-result-wide v5
+
+    move-wide v3, v7
+
+    invoke-static/range {v1 .. v6}, Lcom/miui/home/launcher/AnalyticalDataCollectorForRecents;->sendOneKeyCleanEvent(JJJ)V
+
+    .line 802
+    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
+
+    invoke-virtual {v0}, Lcom/miui/home/recents/views/RecentsContainer;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
+
+    invoke-static {v1}, Lcom/miui/home/recents/views/RecentsContainer;->access$1300(Lcom/miui/home/recents/views/RecentsContainer;)J
+
+    move-result-wide v1
+
+    invoke-static {v0, v1, v2, v7, v8}, Lcom/miui/home/recents/views/RecentsContainer;->getToastMsg(Landroid/content/Context;JJ)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 803
+    iget-object v1, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
+
+    invoke-virtual {v1}, Lcom/miui/home/recents/views/RecentsContainer;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v1, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    .line 804
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     return-void
 .end method

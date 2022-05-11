@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">एप ड्रॉवर उघडण्यासाठी स्वाईप अप राखीव आहे. नियमित होम स्क्रीनवर स्विच करा आणि पुन्हा प्रयत्न करा.</string>
     <string name="all_apps_suggestions">एप सूचना</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">एनिमेशन रेट</string>
     <string name="announce_for_app_move_in_folder">फोल्डरमध्ये %1$d स्थितीत हलवले</string>
     <string name="announce_for_checked">%1$s, तपासले</string>
     <string name="announce_for_choose_default_screen">%1$d स्क्रीन डिफॉल्ट होम स्क्रीन म्हणून सेट करा</string>
@@ -645,7 +646,7 @@
     <string name="ota_layout_adjustment_content">नवीन आवृत्तीमध्ये अंतर्गत आणि बाह्य होम स्क्रीन लेआउट सिंक्रोनाइज केले गेले.</string>
     <string name="ota_layout_adjustment_title">होम स्क्रीन लेआऊट</string>
     <string name="out_of_space">या होम स्क्रीनवर अधिक जागा नाही</string>
-    <string name="perfect_icons_switch_summary">तृतीय पक्षाच्या एप चिन्हांवर अ‍ॅनिमेशन प्रदान करा</string>
+    <string name="perfect_icons_switch_summary">थर्ड पार्टी एप चिन्हांवर अ‍ॅनिमेशन प्रदान करा</string>
     <string name="perfect_icons_switch_title">ग्लोबल आयकॉन अ‍ॅनिमेशन</string>
     <string name="permdesc_install_shortcut">युजरच्या हस्तक्षेपाशिवाय एपला शॉर्टकट्स जोडू देते.</string>
     <string name="permdesc_install_widget">एपला वापरकर्त्याकडून अतिरिक्त कृती न करता विजेट जोडण्याची अनुमती देते.</string>

@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 2990
+    .line 2994
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +38,7 @@
 .method public process(Lcom/miui/home/launcher/ShortcutIcon;I)V
     .locals 0
 
-    .line 2996
+    .line 3000
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutIcon;->updateMamlDownloadVisible()V
 
     return-void

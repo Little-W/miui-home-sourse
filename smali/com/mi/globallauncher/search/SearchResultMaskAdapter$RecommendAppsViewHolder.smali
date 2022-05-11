@@ -30,14 +30,14 @@
 .method constructor <init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;Landroid/view/View;)V
     .locals 1
 
-    .line 326
+    .line 328
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$ViewHolder;-><init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;Lcom/mi/globallauncher/search/SearchResultMaskAdapter$1;)V
 
-    .line 327
+    .line 329
     sget p1, Lcom/mi/globallauncher/R$id;->recommend_container:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -48,7 +48,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;->recommendContainer:Landroid/widget/LinearLayout;
 
-    .line 328
+    .line 330
     sget p1, Lcom/mi/globallauncher/R$id;->recommend_title:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -59,7 +59,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;->recommendTitle:Landroid/widget/TextView;
 
-    .line 329
+    .line 331
     sget p1, Lcom/mi/globallauncher/R$id;->recommend_line_1:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -70,7 +70,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;->recommendLine1:Landroid/widget/GridView;
 
-    .line 330
+    .line 332
     sget p1, Lcom/mi/globallauncher/R$id;->recommend_line_2:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -89,14 +89,14 @@
 .method updateView(I)V
     .locals 2
 
-    .line 335
+    .line 337
     iget-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;->recommendContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {p1}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    .line 336
+    .line 338
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     invoke-static {v0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->access$100(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Z
@@ -105,7 +105,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 337
+    .line 339
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;->recommendContainer:Landroid/widget/LinearLayout;
 
     sget v1, Lcom/mi/globallauncher/R$drawable;->branch_item_card_bg:I
@@ -116,7 +116,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 338
+    .line 340
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;->recommendTitle:Landroid/widget/TextView;
 
     sget v1, Lcom/mi/globallauncher/R$color;->black:I
@@ -129,7 +129,7 @@
 
     goto :goto_0
 
-    .line 340
+    .line 342
     :cond_0
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;->recommendContainer:Landroid/widget/LinearLayout;
 
@@ -141,7 +141,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 341
+    .line 343
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;->recommendTitle:Landroid/widget/TextView;
 
     sget v1, Lcom/mi/globallauncher/R$color;->white:I
@@ -152,7 +152,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 344
+    .line 346
     :goto_0
     new-instance p1, Lcom/mi/globallauncher/advertise/adapter/RecommendGamesGridAdapter;
 
@@ -164,7 +164,7 @@
 
     invoke-direct {p1, v0}, Lcom/mi/globallauncher/advertise/adapter/RecommendGamesGridAdapter;-><init>(Landroid/content/Context;)V
 
-    .line 345
+    .line 347
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     invoke-static {v0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->access$700(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Ljava/util/List;
@@ -173,7 +173,7 @@
 
     invoke-virtual {p1, v0}, Lcom/mi/globallauncher/advertise/adapter/RecommendGamesGridAdapter;->setRecommendGameItems(Ljava/util/List;)V
 
-    .line 346
+    .line 348
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     invoke-static {v0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->access$800(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Lcom/mi/globallauncher/advertise/adapter/RecommendGamesGridAdapter$RecommendGameClickListener;
@@ -182,12 +182,12 @@
 
     invoke-virtual {p1, v0}, Lcom/mi/globallauncher/advertise/adapter/RecommendGamesGridAdapter;->setGameClickListener(Lcom/mi/globallauncher/advertise/adapter/RecommendGamesGridAdapter$RecommendGameClickListener;)V
 
-    .line 348
+    .line 350
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$RecommendAppsViewHolder;->recommendLine1:Landroid/widget/GridView;
 
     invoke-virtual {v0, p1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 349
+    .line 351
     invoke-virtual {p1}, Lcom/mi/globallauncher/advertise/adapter/RecommendGamesGridAdapter;->notifyDataSetChanged()V
 
     return-void

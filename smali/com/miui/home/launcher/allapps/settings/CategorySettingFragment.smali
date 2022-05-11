@@ -311,14 +311,14 @@
 
     invoke-direct {p1, v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v0, 0x7f100392
+    const v0, 0x7f100391
 
     .line 122
     invoke-virtual {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    const v0, 0x7f100391
+    const v0, 0x7f100390
 
     .line 123
     invoke-virtual {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -374,7 +374,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f100264
+    const v0, 0x7f100265
 
     invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentActivity;->setTitle(I)V
 
@@ -676,7 +676,7 @@
 
     invoke-virtual {p2, p0}, Lmiuix/slidingwidget/widget/SlidingButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const p2, 0x7f0a0095
+    const p2, 0x7f0a0096
 
     .line 94
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -744,7 +744,7 @@
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    const p2, 0x7f0a01eb
+    const p2, 0x7f0a01f2
 
     .line 102
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -771,14 +771,14 @@
 
     invoke-direct {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v1, 0x7f100164
+    const v1, 0x7f100165
 
     .line 179
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f100163
+    const v1, 0x7f100164
 
     .line 180
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -789,7 +789,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/miui/home/launcher/allapps/settings/-$$Lambda$CategorySettingFragment$xTsy2jZ8LlQrea_S5VYzM8Q26Lk;-><init>(Lcom/miui/home/launcher/allapps/settings/CategorySettingFragment;I)V
 
-    const p1, 0x7f100162
+    const p1, 0x7f100163
 
     .line 181
     invoke-virtual {v0, p1, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;

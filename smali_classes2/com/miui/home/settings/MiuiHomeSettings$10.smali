@@ -39,7 +39,7 @@
 .method constructor <init>(Lcom/miui/home/settings/MiuiHomeSettings;Landroid/content/Context;Z)V
     .locals 0
 
-    .line 644
+    .line 671
     iput-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$10;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     iput-object p2, p0, Lcom/miui/home/settings/MiuiHomeSettings$10;->val$context:Landroid/content/Context;
@@ -56,7 +56,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 644
+    .line 671
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/MiuiHomeSettings$10;->apply(Ljava/lang/Void;)Ljava/lang/Void;
@@ -69,21 +69,21 @@
 .method public apply(Ljava/lang/Void;)Ljava/lang/Void;
     .locals 2
 
-    .line 647
+    .line 674
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$10;->val$context:Landroid/content/Context;
 
     iget-boolean v0, p0, Lcom/miui/home/settings/MiuiHomeSettings$10;->val$isOpen:Z
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/DeviceConfig;->setCurrentThemeSupportSearchBar(Landroid/content/Context;Z)Z
 
-    .line 648
+    .line 675
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$10;->val$context:Landroid/content/Context;
 
     const-string v0, "home_search_desktop_setting"
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/DeviceConfig;->setSearchBarSource(Landroid/content/Context;Ljava/lang/String;)Z
 
-    .line 649
+    .line 676
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1

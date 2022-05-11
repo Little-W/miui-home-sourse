@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static sControlViewHashCode:I
+.field private static sControlViewHashCode:I = 0x0
 
-.field private static sHasGetProperty:Z
+.field private static sHasGetProperty:Z = false
 
 .field private static sRefreshRateList:[I
 

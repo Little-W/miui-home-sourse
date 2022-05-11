@@ -347,7 +347,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d0085
+    const v2, 0x7f0d0086
 
     const/4 v3, 0x0
 
@@ -830,7 +830,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070179
+    const v1, 0x7f07017f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1007,7 +1007,7 @@
     .line 240
     invoke-super {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->onFinishInflate()V
 
-    const v0, 0x7f0a02dc
+    const v0, 0x7f0a02e5
 
     .line 241
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->findViewById(I)Landroid/view/View;
@@ -1018,7 +1018,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/maml/MaMlWidgetView;->mWidgetContainer:Lcom/miui/home/launcher/LauncherWidgetContainerView;
 
-    const v0, 0x7f0a0144
+    const v0, 0x7f0a0147
 
     .line 242
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->findViewById(I)Landroid/view/View;
@@ -1207,7 +1207,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f070179
+    const v0, 0x7f07017f
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

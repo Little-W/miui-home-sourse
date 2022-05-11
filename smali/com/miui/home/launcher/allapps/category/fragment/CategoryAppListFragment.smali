@@ -108,7 +108,7 @@
 .method public bindCategoryUpdate()V
     .locals 3
 
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/CategoryAppListFragment;->mAppsList:Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;
 
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -125,7 +125,7 @@
 .method public getActiveRecyclerView()Landroidx/recyclerview/widget/RecyclerView;
     .locals 1
 
-    .line 69
+    .line 70
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/CategoryAppListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     return-object v0
@@ -134,7 +134,7 @@
 .method public getCategoryId()I
     .locals 1
 
-    .line 79
+    .line 80
     iget v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/CategoryAppListFragment;->mCategoryId:I
 
     return v0
@@ -183,15 +183,30 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/allapps/AllAppsCategoryContainer;->editCategory(I)V
 
+    .line 61
+    iget-object p1, p0, Lcom/miui/home/launcher/allapps/category/fragment/CategoryAppListFragment;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAppsView()Lcom/miui/home/launcher/allapps/AllAppsContainerView;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->getSearchBarController()Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->updateSearchHint(Z)V
+
     goto :goto_0
 
-    .line 62
+    .line 63
     :cond_0
     invoke-super {p0, p1}, Lcom/miui/home/launcher/allapps/category/fragment/DrawerAppsListFragment;->onClick(Landroid/view/View;)V
 
     const-string p1, "category"
 
-    .line 63
+    .line 64
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackAllAppsClick(Ljava/lang/String;)V
 
     :goto_0
@@ -267,14 +282,14 @@
 .method public resetView()V
     .locals 1
 
-    .line 89
+    .line 90
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/CategoryAppListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 92
+    .line 93
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/CategoryAppListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
@@ -284,7 +299,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 93
+    .line 94
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/CategoryAppListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->scrollToTop()V
@@ -296,7 +311,7 @@
 .method public shouldContainerScroll(Landroid/view/MotionEvent;)Z
     .locals 3
 
-    .line 99
+    .line 100
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/CategoryAppListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
     const/4 v1, 0x0
@@ -305,7 +320,7 @@
 
     return v1
 
-    .line 102
+    .line 103
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/CategoryAppListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 
@@ -321,7 +336,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/CategoryAppListFragment;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 103
+    .line 104
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
 
     move-result-object v0
@@ -340,7 +355,7 @@
 
     return v1
 
-    .line 106
+    .line 107
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/fragment/CategoryAppListFragment;->mRecyclerView:Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;
 

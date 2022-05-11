@@ -93,6 +93,7 @@
     <string name="all_apps_slide_up_tips">抽屜模式下上滑手勢已被佔用，請切換為標準模式後設定</string>
     <string name="all_apps_suggestions">應用程式建議</string>
     <string name="am">上午</string>
+    <string name="animation_rate_title">動畫速率</string>
     <string name="announce_for_app_move_in_folder">移動至資料夾內的第%1$d 個位置</string>
     <string name="announce_for_checked">%1$s，已選取</string>
     <string name="announce_for_choose_default_screen">已將第%1$d畫面設定為主畫面</string>
@@ -628,11 +629,11 @@
     <string name="navigation_guide_recent_title">切換最近任務</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">“切換最近任務”</string>
     <string name="navigation_guide_settings">操作教學</string>
-    <string name="navigation_position_center">屏幕中间</string>
-    <string name="navigation_position_left">屏幕左侧</string>
-    <string name="navigation_position_right">屏幕右侧</string>
-    <string name="navigation_position_summary">虚拟键位置设置仅针对主屏幕生效</string>
-    <string name="navigation_position_title">虚拟键位置</string>
+    <string name="navigation_position_center">螢幕中間</string>
+    <string name="navigation_position_left">螢幕左側</string>
+    <string name="navigation_position_right">螢幕右側</string>
+    <string name="navigation_position_summary">虛擬鍵位置設定僅針對主螢幕生效</string>
+    <string name="navigation_position_title">虛擬鍵位置</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">取消</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">非系統桌面不支援使用全螢幕手勢，是否切換到系統桌面，並開啟全螢幕手勢？</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">確定</string>

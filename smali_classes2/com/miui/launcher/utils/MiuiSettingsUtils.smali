@@ -22,6 +22,8 @@
 
 .field public static final IS_DEFAULT_ICON:Ljava/lang/String; = "is_default_icon"
 
+.field public static final KEY_GESTURE_HOME_ANIMATOR:Ljava/lang/String; = "gesture_home_animator"
+
 .field public static final KEY_LAUNCHER_SEARCH_ICON_STATUS:Ljava/lang/String; = "launcher_search_icon_status"
 
 .field public static final KEY_LOCK_SCREEN_MODE:Ljava/lang/String; = "lock_screen_mode"
@@ -99,7 +101,7 @@
 
     const/4 v1, -0x2
 
-    .line 119
+    .line 124
     invoke-static {p0, p1, v0, v1}, Landroid/provider/MiuiSettings$System;->getBooleanForUser(Landroid/content/ContentResolver;Ljava/lang/String;ZI)Z
 
     move-result p0
@@ -110,7 +112,7 @@
 .method public static getBooleanFromCurrentUser(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
     .locals 1
 
-    .line 123
+    .line 128
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -129,7 +131,7 @@
 .method public static getBooleanFromFeatureParse(Ljava/lang/String;Z)Z
     .locals 0
 
-    .line 98
+    .line 99
     invoke-static {p0, p1}, Lcom/miui/launcher/utils/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -140,8 +142,19 @@
 .method public static getBooleanFromSystem(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
     .locals 0
 
-    .line 90
+    .line 91
     invoke-static {p0, p1, p2}, Landroid/provider/MiuiSettings$System;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static getBooleanFromSystemProperties(Ljava/lang/String;Z)Z
+    .locals 0
+
+    .line 115
+    invoke-static {p0, p1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
 
@@ -151,7 +164,7 @@
 .method public static getCloudDataBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Z)Z
     .locals 0
 
-    .line 53
+    .line 54
     invoke-static {p0, p1, p2, p3}, Landroid/provider/MiuiSettings$SettingsCloudData;->getCloudDataBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -162,7 +175,7 @@
 .method public static getCloudDataLong(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;J)J
     .locals 0
 
-    .line 58
+    .line 59
     invoke-static {p0, p1, p2, p3, p4}, Landroid/provider/MiuiSettings$SettingsCloudData;->getCloudDataLong(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;J)J
 
     move-result-wide p0
@@ -173,7 +186,7 @@
 .method public static getCloudDataString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 63
+    .line 64
     invoke-static {p0, p1, p2, p3}, Landroid/provider/MiuiSettings$SettingsCloudData;->getCloudDataString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -184,7 +197,7 @@
 .method public static getFloatFromFeatureParse(Ljava/lang/String;F)F
     .locals 0
 
-    .line 102
+    .line 103
     invoke-static {p0, p1}, Lcom/miui/launcher/utils/FeatureParser;->getFloat(Ljava/lang/String;F)Ljava/lang/Float;
 
     move-result-object p0
@@ -199,8 +212,19 @@
 .method public static getGlobalBoolean(Landroid/content/ContentResolver;Ljava/lang/String;)Z
     .locals 0
 
-    .line 67
+    .line 68
     invoke-static {p0, p1}, Landroid/provider/MiuiSettings$Global;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static getIntFromSystem(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+    .locals 0
+
+    .line 132
+    invoke-static {p0, p1, p2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
 
@@ -210,7 +234,7 @@
 .method public static getIntFromSystemProperties(Ljava/lang/String;I)I
     .locals 0
 
-    .line 106
+    .line 107
     invoke-static {p0, p1}, Lcom/miui/launcher/utils/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result p0
@@ -221,7 +245,7 @@
 .method public static getSearchBarEngineResource(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .line 160
+    .line 173
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -238,7 +262,7 @@
 .method public static getSearchBarShowInitiate(Landroid/content/Context;)Z
     .locals 2
 
-    .line 148
+    .line 161
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -267,7 +291,7 @@
 .method public static getStringFromSystem(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 94
+    .line 95
     invoke-static {p0, p1}, Landroid/provider/MiuiSettings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -278,7 +302,7 @@
 .method public static getStringFromSystemProperites(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 110
+    .line 111
     invoke-static {p0, p1}, Lcom/miui/launcher/utils/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -291,7 +315,7 @@
 
     const-string v0, "animate_settings_status"
 
-    .line 140
+    .line 153
     invoke-static {v0}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -302,7 +326,7 @@
 .method public static getSystemAnimationStatus(Landroid/content/Context;Z)I
     .locals 2
 
-    .line 135
+    .line 148
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -313,12 +337,12 @@
 
     xor-int/lit8 p1, p1, 0x1
 
-    .line 136
+    .line 149
     invoke-static {v1, p1}, Lcom/miui/launcher/utils/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p1
 
-    .line 135
+    .line 148
     invoke-static {p0, v0, p1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result p0
@@ -329,7 +353,7 @@
 .method public static isDeleteSoundEffectEnable(Landroid/content/Context;)Z
     .locals 4
 
-    .line 167
+    .line 180
     :try_start_0
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
@@ -345,7 +369,7 @@
 
     move-result v0
 
-    .line 168
+    .line 181
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -361,12 +385,12 @@
     :catch_0
     move-exception v0
 
-    .line 170
+    .line 183
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     const/4 v0, 0x1
 
-    .line 172
+    .line 185
     :goto_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -386,7 +410,7 @@
 .method public static isEnabledForceTouch(Landroid/content/Context;)Z
     .locals 0
 
-    .line 86
+    .line 87
     invoke-static {p0}, Landroid/provider/MiuiSettings$ForceTouch;->isEnabled(Landroid/content/Context;)Z
 
     move-result p0
@@ -397,7 +421,7 @@
 .method public static isSystemAnimationOpen(Landroid/content/Context;Z)Z
     .locals 0
 
-    .line 131
+    .line 144
     invoke-static {p0, p1}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getSystemAnimationStatus(Landroid/content/Context;Z)I
 
     move-result p0
@@ -420,7 +444,7 @@
 
     const/4 v0, -0x2
 
-    .line 115
+    .line 120
     invoke-static {p0, p1, p2, v0}, Landroid/provider/MiuiSettings$System;->putBooleanForUser(Landroid/content/ContentResolver;Ljava/lang/String;ZI)Z
 
     return-void
@@ -429,7 +453,7 @@
 .method public static putBooleanToGlobal(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
     .locals 0
 
-    .line 82
+    .line 83
     invoke-static {p0, p1, p2}, Landroid/provider/MiuiSettings$Global;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
     move-result p0
@@ -440,8 +464,19 @@
 .method public static putBooleanToSystem(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
     .locals 0
 
-    .line 77
+    .line 78
     invoke-static {p0, p1, p2}, Landroid/provider/MiuiSettings$System;->putBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static putIntToSecure(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
+    .locals 0
+
+    .line 140
+    invoke-static {p0, p1, p2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     move-result p0
 
@@ -451,7 +486,7 @@
 .method public static putIntToSystem(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
     .locals 0
 
-    .line 127
+    .line 136
     invoke-static {p0, p1, p2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     move-result p0
@@ -462,7 +497,7 @@
 .method public static putStringToSystem(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 0
 
-    .line 72
+    .line 73
     invoke-static {p0, p1, p2}, Landroid/provider/MiuiSettings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
@@ -473,7 +508,7 @@
 .method public static setSearchBarAnalyTestCode(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
 
-    .line 156
+    .line 169
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -488,7 +523,7 @@
 .method public static setSearchBarClickTarget(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
 
-    .line 144
+    .line 157
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -503,7 +538,7 @@
 .method public static setSearchBarTestCode(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
 
-    .line 152
+    .line 165
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0

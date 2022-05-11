@@ -20,3 +20,11 @@
 
     return-void
 .end method
+
+
+# virtual methods
+.method public abstract setExpandState(I)V
+.end method
+
+.method public abstract setResizable(Z)V
+.end method

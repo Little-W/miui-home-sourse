@@ -15,6 +15,8 @@
     .end annotation
 .end field
 
+.field public static final MIUI_WIDGET_LARGE_SCREEN_FLAG:Ljava/lang/String; = "miuiLargeScreenDevice"
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -22,7 +24,7 @@
 
     const/4 v0, 0x3
 
-    .line 32
+    .line 34
     new-array v0, v0, [Lkotlin/Pair;
 
     new-instance v1, Lkotlin/Pair;
@@ -75,7 +77,7 @@
 
     const/4 v0, 0x0
 
-    .line 49
+    .line 51
     :try_start_0
     sget-object v1, Lcom/miui/home/launcher/widget/device/MIUIWidgetDeviceAdapter;->ADAPTERS:Ljava/util/Map;
 
@@ -89,7 +91,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 50
+    .line 52
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -98,7 +100,7 @@
 
     return-object v0
 
-    .line 53
+    .line 55
     :cond_0
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
@@ -110,7 +112,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/widget/device/MIUIWidgetDeviceAdapter;
 
-    .line 54
+    .line 56
     invoke-interface {v1, p0}, Lcom/miui/home/launcher/widget/device/MIUIWidgetDeviceAdapter;->init(Landroid/app/Activity;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -120,7 +122,7 @@
     :catch_0
     move-exception p0
 
-    .line 57
+    .line 59
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return-object v0
@@ -129,7 +131,7 @@
 .method public static miuiLargeScreenDevice(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 68
+    .line 72
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceType()Lcom/miui/home/launcher/DeviceType;
 
     move-result-object v0
@@ -150,10 +152,64 @@
 
     const/4 v1, 0x1
 
-    .line 69
+    .line 73
     invoke-virtual {p0, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     :cond_0
+    return-void
+.end method
+
+.method public static updateMIUILargeScreenDeviceOptions(Landroid/content/Context;I)V
+    .locals 3
+
+    .line 78
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isPhone()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 82
+    :cond_0
+    invoke-static {p0}, Landroid/appwidget/AppWidgetManager;->getInstance(Landroid/content/Context;)Landroid/appwidget/AppWidgetManager;
+
+    move-result-object p0
+
+    .line 83
+    invoke-virtual {p0, p1}, Landroid/appwidget/AppWidgetManager;->getAppWidgetOptions(I)Landroid/os/Bundle;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    const-string v1, "miuiLargeScreenDevice"
+
+    const/4 v2, 0x1
+
+    .line 84
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "miuiLargeScreenDevice"
+
+    .line 87
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    .line 88
+    invoke-virtual {p0, p1, v0}, Landroid/appwidget/AppWidgetManager;->updateAppWidgetOptions(ILandroid/os/Bundle;)V
+
+    return-void
+
+    :cond_2
+    :goto_0
     return-void
 .end method
 

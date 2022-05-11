@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">ઉપરની તરફ સ્વાઇપ કરવાનું ઍપ્લિકેશન ડ્રોઅર માટે અનામત રાખવામાં આવ્યું છે. નિયમિત હોમ સ્ક્રીન મોડ પર સ્વિચ કરો અને ફરીથી પ્રયાસ કરો.</string>
     <string name="all_apps_suggestions">ઍપ્લિકેશન સૂચનો</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">ફોલ્ડરમાં %1$d સ્થાન પર ખસેડ્યું</string>
     <string name="announce_for_checked">%1$s, તપાસાયેલ</string>
     <string name="announce_for_choose_default_screen">સ્ક્રીન %1$d ને ડિફૉલ્ટ હોમ સ્ક્રીન સેટિંગ તરીકે સેટ કરો</string>
@@ -609,11 +610,11 @@
     <string name="navigation_guide_recent_title">તાજેતરના ખોલો</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">રીસેન્ટ્સ ખોલો</string>
     <string name="navigation_guide_settings">જેસ્ચરના ડેમો</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">સેન્ટર</string>
+    <string name="navigation_position_left">ડાબે</string>
+    <string name="navigation_position_right">જમણે</string>
+    <string name="navigation_position_summary">નેવિગેશન બટનોની કસ્ટમ સ્થિતિ ફક્ત હોમ સ્ક્રીન પર જ લાગુ કરી શકાય છે</string>
+    <string name="navigation_position_title">નેવિગેશન બટનની સ્થિતિ</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">રદ કરો</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">થર્ડ પાર્ટી લોંચર્સ સાથે પૂર્ણ સ્ક્રીન જેશ્ચર્સનો ઉપયોગ કરી શકતા નથી. સિસ્ટમ લોંચર પર સ્વિચ કરીએ અને પૂર્ણ સ્ક્રીન જેશ્ચર્સ ચાલુ કરીએ?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">ઑકે</string>

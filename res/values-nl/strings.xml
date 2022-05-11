@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">Omhoog vegen wordt gebruikt voor het openen van de App-lade. Schakel over naar de normale Startscherm modus en probeer het opnieuw.</string>
     <string name="all_apps_suggestions">App-suggesties</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Animatiesnelheid</string>
     <string name="announce_for_app_move_in_folder">Verplaatst naar positie %1$d in de map</string>
     <string name="announce_for_checked">%1$s, gecontroleerd</string>
     <string name="announce_for_choose_default_screen">Stel scherm %1$d in als het standaard Startscherm</string>
@@ -639,11 +640,11 @@
     <string name="navigation_guide_recent_title">Recent openen</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Recent openen</string>
     <string name="navigation_guide_settings">Demonstraties van gebaren</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">Midden</string>
+    <string name="navigation_position_left">Links</string>
+    <string name="navigation_position_right">Rechts</string>
+    <string name="navigation_position_summary">Aangepaste posities van navigatieknoppen kunnen alleen worden toegepast op het Startscherm</string>
+    <string name="navigation_position_title">Positie navigatieknoppen</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Annuleren</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Kan geen volledig scherm gebaren gebruiken met launchers van derden. Overschakelen naar het systeemlauncher en volledig scherm gebaren inschakelen?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">OК</string>

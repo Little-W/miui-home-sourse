@@ -106,52 +106,71 @@
 .method private initViewDisplayInDrag()V
     .locals 3
 
-    .line 199
+    .line 200
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isSupportSmallWindow()Z
 
     move-result v0
 
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    const v2, 0x3e99999a    # 0.3f
+
     if-eqz v0, :cond_1
 
-    .line 200
+    .line 201
     iget-boolean v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mIsSupportMiniSmallWindow:Z
 
     if-nez v0, :cond_0
 
-    .line 201
+    .line 202
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowContent:Landroid/view/ViewGroup;
 
-    const v1, 0x3e99999a    # 0.3f
-
-    invoke-virtual {p0, v0, v1}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewAlpha(Landroid/view/View;F)V
+    invoke-virtual {p0, v0, v2}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewAlpha(Landroid/view/View;F)V
 
     goto :goto_0
 
-    .line 203
+    .line 204
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowContent:Landroid/view/ViewGroup;
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    invoke-virtual {p0, v0, v1}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewAlpha(Landroid/view/View;F)V
+
+    .line 207
+    :cond_1
+    :goto_0
+    iget-boolean v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mIsSupportWorldcirculate:Z
+
+    if-eqz v0, :cond_2
+
+    .line 208
+    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateContent:Landroid/view/ViewGroup;
 
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewAlpha(Landroid/view/View;F)V
 
-    .line 206
-    :cond_1
-    :goto_0
+    goto :goto_1
+
+    .line 210
+    :cond_2
+    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateContent:Landroid/view/ViewGroup;
+
+    invoke-virtual {p0, v0, v2}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewAlpha(Landroid/view/View;F)V
+
+    .line 212
+    :goto_1
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowContent:Landroid/view/ViewGroup;
 
     iget v1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->ITEM_BG_INITIAL_COLOR:I
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewBgColor(Landroid/view/View;I)V
 
-    .line 207
+    .line 213
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateContent:Landroid/view/ViewGroup;
 
     iget v1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->ITEM_BG_INITIAL_COLOR:I
 
     invoke-direct {p0, v0, v1}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewBgColor(Landroid/view/View;I)V
 
-    .line 208
+    .line 214
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowIcon:Landroid/view/View;
 
     iget-boolean v1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mIsFirstAnim:Z
@@ -162,7 +181,7 @@
 
     invoke-direct {p0, v0, v2, v2, v1}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewTranslation(Landroid/view/View;FFZ)V
 
-    .line 209
+    .line 215
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateIcon:Landroid/view/View;
 
     iget-boolean v1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mIsFirstAnim:Z
@@ -171,24 +190,24 @@
 
     invoke-direct {p0, v0, v2, v2, v1}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewTranslation(Landroid/view/View;FFZ)V
 
-    .line 210
+    .line 216
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowHoldText:Landroid/widget/TextView;
 
     invoke-virtual {p0, v0, v2}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewAlpha(Landroid/view/View;F)V
 
-    .line 211
+    .line 217
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateHoldText:Landroid/widget/TextView;
 
     invoke-virtual {p0, v0, v2}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewAlpha(Landroid/view/View;F)V
 
-    .line 212
+    .line 218
     sget v0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->TOP_WINDOW_CROP_STATUS_UNDEFINED:I
 
     iput v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mLastCropStatus:I
 
     const/4 v0, 0x0
 
-    .line 213
+    .line 219
     iput v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mOpenContent:I
 
     return-void
@@ -205,7 +224,7 @@
 .method private isToHoldState(FFF)Z
     .locals 5
 
-    .line 144
+    .line 145
     iget-boolean p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mIsLandscape:Z
 
     const/4 v0, 0x1
@@ -216,7 +235,7 @@
 
     if-nez p1, :cond_1
 
-    .line 145
+    .line 146
     iget p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mScreenHeight:I
 
     int-to-float p1, p1
@@ -255,7 +274,7 @@
     :goto_0
     return v0
 
-    .line 147
+    .line 148
     :cond_1
     iget p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mScreenHeight:I
 
@@ -299,39 +318,47 @@
 .method private isUpdateViewDisplayOnDrag(FF)Z
     .locals 2
 
-    .line 172
+    .line 173
+    iget-boolean p2, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mIsSupportWorldcirculate:Z
+
+    const/4 v0, 0x2
+
+    const/high16 v1, 0x3f000000    # 0.5f
+
+    if-eqz p2, :cond_0
+
     iget p2, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mScreenWidth:I
 
     int-to-float p2, p2
 
     div-float p2, p1, p2
 
-    const/high16 v0, 0x3f000000    # 0.5f
-
-    cmpg-float p2, p2, v0
-
-    const/4 v1, 0x2
+    cmpg-float p2, p2, v1
 
     if-gez p2, :cond_0
 
     iget p2, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mOpenContent:I
 
-    if-ne p2, v1, :cond_1
+    if-ne p2, v0, :cond_1
 
     :cond_0
+    iget-boolean p2, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mIsSupportMiniSmallWindow:Z
+
+    if-eqz p2, :cond_2
+
     iget p2, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mScreenWidth:I
 
     int-to-float p2, p2
 
     div-float/2addr p1, p2
 
-    cmpl-float p1, p1, v0
+    cmpl-float p1, p1, v1
 
     if-ltz p1, :cond_2
 
     iget p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mOpenContent:I
 
-    if-ne p1, v1, :cond_2
+    if-ne p1, v0, :cond_2
 
     :cond_1
     const/4 p1, 0x1
@@ -348,7 +375,7 @@
 .method private setViewBgColor(Landroid/view/View;I)V
     .locals 0
 
-    .line 301
+    .line 307
     invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
@@ -357,7 +384,7 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mItemBg:Landroid/graphics/drawable/GradientDrawable;
 
-    .line 302
+    .line 308
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mItemBg:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {p1, p2}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
@@ -370,7 +397,7 @@
 
     if-eqz p4, :cond_1
 
-    .line 218
+    .line 224
     invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
     move-result p2
@@ -379,19 +406,19 @@
 
     if-nez p2, :cond_0
 
-    .line 219
+    .line 225
     invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p2
 
     invoke-virtual {p2}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 220
+    .line 226
     invoke-virtual {p1, p3}, Landroid/view/View;->setTranslationY(F)V
 
     goto :goto_0
 
-    .line 222
+    .line 228
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
@@ -417,12 +444,12 @@
 
     const-wide/16 v2, 0x0
 
-    .line 223
+    .line 229
     invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v0
 
-    .line 224
+    .line 230
     invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -437,7 +464,7 @@
 
     iget-object p2, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mDecelerateInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 225
+    .line 231
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -446,7 +473,7 @@
 
     goto :goto_0
 
-    .line 228
+    .line 234
     :cond_1
     invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -454,10 +481,10 @@
 
     invoke-virtual {p4}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 229
+    .line 235
     invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 230
+    .line 236
     invoke-virtual {p1, p3}, Landroid/view/View;->setTranslationY(F)V
 
     :goto_0
@@ -467,7 +494,7 @@
 .method private updateAppToWorldCirculateRectF()V
     .locals 6
 
-    .line 291
+    .line 297
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateContent:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getLeft()I
@@ -488,7 +515,7 @@
 
     div-float/2addr v0, v1
 
-    .line 292
+    .line 298
     iget-object v2, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateContent:Landroid/view/ViewGroup;
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getTop()I
@@ -507,7 +534,7 @@
 
     div-float/2addr v2, v1
 
-    .line 293
+    .line 299
     iget-object v1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mAppToWorldCirculateRectF:Landroid/graphics/RectF;
 
     const/high16 v3, 0x42480000    # 50.0f
@@ -536,7 +563,7 @@
 .method public enterHoldState(FF)Z
     .locals 2
 
-    .line 178
+    .line 179
     iget v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mLastCropStatus:I
 
     sget v1, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->TOP_WINDOW_CROP_STATUS_HOLD:I
@@ -556,7 +583,7 @@
 
     return p1
 
-    .line 179
+    .line 180
     :cond_1
     :goto_0
     iget-object p2, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->TAG:Ljava/lang/String;
@@ -565,10 +592,10 @@
 
     invoke-static {p2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 180
+    .line 181
     invoke-direct {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->initViewDisplayInDrag()V
 
-    .line 181
+    .line 182
     iget p2, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mScreenWidth:I
 
     int-to-float p2, p2
@@ -587,12 +614,16 @@
 
     if-gez p1, :cond_2
 
-    .line 182
+    iget-boolean p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mIsSupportWorldcirculate:Z
+
+    if-eqz p1, :cond_2
+
+    .line 183
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateHoldText:Landroid/widget/TextView;
 
     invoke-virtual {p0, p1, v0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewAlpha(Landroid/view/View;F)V
 
-    .line 183
+    .line 184
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateIcon:Landroid/view/View;
 
     iget v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowContentTransY:I
@@ -601,7 +632,7 @@
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewTranslation(Landroid/view/View;FFZ)V
 
-    .line 184
+    .line 185
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateContent:Landroid/view/ViewGroup;
 
     iget p2, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->WORLD_BG_IS_CHOSEN_COLOR:I
@@ -610,23 +641,23 @@
 
     const/4 p1, 0x2
 
-    .line 185
+    .line 186
     iput p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mOpenContent:I
 
     goto :goto_1
 
-    .line 186
+    .line 187
     :cond_2
     iget-boolean p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mIsSupportMiniSmallWindow:Z
 
     if-eqz p1, :cond_3
 
-    .line 187
+    .line 188
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowHoldText:Landroid/widget/TextView;
 
     invoke-virtual {p0, p1, v0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewAlpha(Landroid/view/View;F)V
 
-    .line 188
+    .line 189
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowIcon:Landroid/view/View;
 
     iget v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowContentTransY:I
@@ -635,17 +666,17 @@
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewTranslation(Landroid/view/View;FFZ)V
 
-    .line 189
+    .line 190
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowContent:Landroid/view/ViewGroup;
 
     iget p2, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->SMALL_BG_IS_CHOSEN_COLOR:I
 
     invoke-direct {p0, p1, p2}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewBgColor(Landroid/view/View;I)V
 
-    .line 190
+    .line 191
     iput v1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mOpenContent:I
 
-    .line 192
+    .line 193
     :cond_3
     :goto_1
     sget p1, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->TOP_WINDOW_CROP_STATUS_HOLD:I
@@ -658,21 +689,21 @@
 .method public enterShowState()V
     .locals 5
 
-    .line 153
+    .line 154
     iget v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mLastCropStatus:I
 
     sget v1, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->TOP_WINDOW_CROP_STATUS_SHOW:I
 
     if-eq v0, v1, :cond_1
 
-    .line 154
+    .line 155
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->TAG:Ljava/lang/String;
 
     const-string v1, "enterShowState"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
+    .line 156
     iget-boolean v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mIsFirstAnim:Z
 
     const/4 v1, 0x0
@@ -681,7 +712,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 156
+    .line 157
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -698,25 +729,25 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 157
+    .line 158
     iput-boolean v1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mIsFirstAnim:Z
 
-    .line 159
+    .line 160
     :cond_0
     invoke-virtual {p0, p0, v2}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setViewAlpha(Landroid/view/View;F)V
 
-    .line 160
+    .line 161
     invoke-direct {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->initViewDisplayInDrag()V
 
-    .line 161
+    .line 162
     sget v0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->TOP_WINDOW_CROP_STATUS_SHOW:I
 
     iput v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mLastCropStatus:I
 
-    .line 162
+    .line 163
     iput v1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mOpenContent:I
 
-    .line 163
+    .line 164
     invoke-direct {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->updateAppToWorldCirculateRectF()V
 
     :cond_1
@@ -728,10 +759,10 @@
 
     const/4 v0, 0x0
 
-    .line 236
+    .line 242
     iput-boolean v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mIsInit:Z
 
-    .line 237
+    .line 243
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isUseSimpleAnim()Z
 
     move-result v0
@@ -740,7 +771,7 @@
 
     if-nez v0, :cond_0
 
-    .line 238
+    .line 244
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
@@ -763,12 +794,12 @@
 
     move-result-object p1
 
-    .line 246
+    .line 252
     invoke-virtual {p1}, Landroid/view/ViewPropertyAnimator;->start()V
 
     goto :goto_0
 
-    .line 248
+    .line 254
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -776,12 +807,12 @@
 
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 249
+    .line 255
     invoke-virtual {p0, v1}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setAlpha(F)V
 
     if-eqz p1, :cond_1
 
-    .line 251
+    .line 257
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     :cond_1
@@ -792,7 +823,7 @@
 .method public getAppToWorldCirculateRectF()Landroid/graphics/RectF;
     .locals 1
 
-    .line 297
+    .line 303
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mAppToWorldCirculateRectF:Landroid/graphics/RectF;
 
     return-object v0
@@ -852,7 +883,7 @@
     return-object v6
 .end method
 
-.method public initTopWindowCrop(ZIIZ)V
+.method public initTopWindowCrop(ZIIZZ)V
     .locals 2
 
     .line 107
@@ -906,17 +937,20 @@
     :goto_0
     iput-boolean v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mIsSupportMiniSmallWindow:Z
 
+    .line 116
+    iput-boolean p5, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mIsSupportWorldcirculate:Z
+
     const/4 p1, 0x0
 
-    .line 116
+    .line 117
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setAlpha(F)V
 
-    .line 117
+    .line 118
     iget-object p2, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowHoldText:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 118
+    .line 119
     iget-object p2, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateHoldText:Landroid/widget/TextView;
 
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setAlpha(F)V
@@ -930,7 +964,7 @@
     .line 65
     invoke-super {p0}, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->onFinishInflate()V
 
-    const v0, 0x7f0a024e
+    const v0, 0x7f0a0255
 
     .line 66
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->findViewById(I)Landroid/view/View;
@@ -939,7 +973,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowIcon:Landroid/view/View;
 
-    const v0, 0x7f0a01da
+    const v0, 0x7f0a01e1
 
     .line 67
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->findViewById(I)Landroid/view/View;
@@ -950,7 +984,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowHoldText:Landroid/widget/TextView;
 
-    const v0, 0x7f0a024d
+    const v0, 0x7f0a0254
 
     .line 68
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->findViewById(I)Landroid/view/View;
@@ -961,7 +995,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowContent:Landroid/view/ViewGroup;
 
-    const v0, 0x7f0a01dd
+    const v0, 0x7f0a01e4
 
     .line 70
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->findViewById(I)Landroid/view/View;
@@ -970,7 +1004,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateIcon:Landroid/view/View;
 
-    const v0, 0x7f0a01dc
+    const v0, 0x7f0a01e3
 
     .line 71
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->findViewById(I)Landroid/view/View;
@@ -981,7 +1015,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateHoldText:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02ef
+    const v0, 0x7f0a02f8
 
     .line 72
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->findViewById(I)Landroid/view/View;
@@ -1058,14 +1092,14 @@
 .method public startTopWindow(Landroid/graphics/RectF;Landroid/app/ActivityManager$RunningTaskInfo;)V
     .locals 2
 
-    .line 259
+    .line 265
     iget v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mOpenContent:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 260
+    .line 266
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -1074,7 +1108,7 @@
 
     goto :goto_0
 
-    .line 261
+    .line 267
     :cond_0
     iget p2, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mOpenContent:I
 
@@ -1082,7 +1116,7 @@
 
     if-ne p2, v0, :cond_1
 
-    .line 262
+    .line 268
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->startSmallWindow(Landroid/graphics/RectF;)V
 
     :cond_1
@@ -1093,14 +1127,14 @@
 .method public updateConfiguration()V
     .locals 4
 
-    .line 268
+    .line 274
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowIcon:Landroid/view/View;
 
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f080589
+    const v2, 0x7f08058a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1108,7 +1142,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 269
+    .line 275
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowHoldText:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
@@ -1123,14 +1157,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 270
+    .line 276
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowHoldText:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v3, 0x7f100370
+    const v3, 0x7f10036f
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1138,14 +1172,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 271
+    .line 277
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateIcon:Landroid/view/View;
 
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v3, 0x7f0805ca
+    const v3, 0x7f0805cb
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1153,7 +1187,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 272
+    .line 278
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateHoldText:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
@@ -1166,14 +1200,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 273
+    .line 279
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateHoldText:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f100379
+    const v2, 0x7f100378
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1181,12 +1215,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 274
+    .line 280
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f07048a
+    const v1, 0x7f070495
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1194,12 +1228,12 @@
 
     iput v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWidth:I
 
-    .line 275
+    .line 281
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070485
+    const v1, 0x7f070490
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1207,37 +1241,37 @@
 
     iput v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mHeight:I
 
-    .line 276
+    .line 282
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070487
+    const v1, 0x7f070492
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    .line 277
+    .line 283
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f070486
+    const v2, 0x7f070491
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    .line 278
+    .line 284
     invoke-virtual {p0, v1, v0, v1, v0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->setPadding(IIII)V
 
-    .line 279
+    .line 285
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f070484
+    const v1, 0x7f07048f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1245,7 +1279,7 @@
 
     iput v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowContentTransY:I
 
-    .line 280
+    .line 286
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateContent:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1254,12 +1288,12 @@
 
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 281
+    .line 287
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f070489
+    const v2, 0x7f070494
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1267,12 +1301,12 @@
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 282
+    .line 288
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v3, 0x7f070488
+    const v3, 0x7f070493
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1280,12 +1314,12 @@
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 283
+    .line 289
     iget-object v1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mWorldcirculateContent:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 284
+    .line 290
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowContent:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1294,7 +1328,7 @@
 
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 285
+    .line 291
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -1305,7 +1339,7 @@
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 286
+    .line 292
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -1316,7 +1350,7 @@
 
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 287
+    .line 293
     iget-object v1, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mSmallwindowContent:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -1327,17 +1361,17 @@
 .method public updateState(FFF)Z
     .locals 2
 
-    .line 123
+    .line 124
     iget v0, p0, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->mLastCropStatus:I
 
     sget v1, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->TOP_WINDOW_CROP_STATUS_UNDEFINED:I
 
     if-ne v0, v1, :cond_0
 
-    .line 124
+    .line 125
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->enterShowState()V
 
-    .line 127
+    .line 128
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->isToHoldState(FFF)Z
 
@@ -1345,14 +1379,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 128
+    .line 129
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->enterHoldState(FF)Z
 
     move-result p1
 
     return p1
 
-    .line 130
+    .line 131
     :cond_1
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->isToDragState(FFF)Z
 
@@ -1360,12 +1394,12 @@
 
     if-eqz p3, :cond_2
 
-    .line 131
+    .line 132
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->enterDragState(FF)V
 
     goto :goto_0
 
-    .line 133
+    .line 134
     :cond_2
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsWorldCirculateAndSmallWindowCrop;->enterShowState()V
 

@@ -12,6 +12,8 @@
 
 .field private mBackgroundArray:[Landroid/graphics/drawable/Drawable;
 
+.field private mBackgroundBackup:Landroid/graphics/drawable/Drawable;
+
 .field private mBlurBackgroundView:Lmiuix/blurdrawable/widget/BlurBackgroundView;
 
 .field private mCurBarExpandState:I
@@ -49,6 +51,8 @@
 .field private mShowListener:Landroid/animation/AnimatorListenerAdapter;
 
 .field private mSplitBackground:Landroid/graphics/drawable/Drawable;
+
+.field private mSplitBackgroundBackup:Landroid/graphics/drawable/Drawable;
 
 .field private mStackedBackground:Landroid/graphics/drawable/Drawable;
 
@@ -331,6 +335,59 @@
     return-void
 .end method
 
+.method private clearBackground()V
+    .locals 2
+
+    .line 279
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mBackground:Landroid/graphics/drawable/Drawable;
+
+    iput-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mBackgroundBackup:Landroid/graphics/drawable/Drawable;
+
+    const/4 v0, 0x0
+
+    .line 280
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setPrimaryBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 281
+    iget-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mIsSplit:Z
+
+    if-eqz v1, :cond_0
+
+    .line 282
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mSplitBackground:Landroid/graphics/drawable/Drawable;
+
+    iput-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mSplitBackgroundBackup:Landroid/graphics/drawable/Drawable;
+
+    .line 283
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setSplitBackground(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
+
+    .line 285
+    :cond_0
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mActionBarView:Lmiuix/appcompat/internal/app/widget/ActionBarView;
+
+    if-eqz v1, :cond_1
+
+    .line 286
+    invoke-virtual {v1, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 288
+    :cond_1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mActionBarContextView:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    if-eqz v0, :cond_2
+
+    const/4 v1, 0x1
+
+    .line 289
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->updateBackground(Z)V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
 .method private onMeasureSplit(II)V
     .locals 3
 
@@ -419,6 +476,72 @@
     invoke-virtual {p0, p2, p2}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setMeasuredDimension(II)V
 
     :cond_4
+    return-void
+.end method
+
+.method private resetBackground()V
+    .locals 2
+
+    .line 295
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mIsSplit:Z
+
+    if-eqz v0, :cond_1
+
+    .line 296
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mSplitBackground:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_0
+
+    .line 297
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setSplitBackground(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_1
+
+    .line 298
+    :cond_0
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mSplitBackgroundBackup:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_4
+
+    .line 299
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setSplitBackground(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_1
+
+    .line 302
+    :cond_1
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mBackground:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_2
+
+    .line 303
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setPrimaryBackground(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_0
+
+    .line 304
+    :cond_2
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mBackgroundBackup:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_3
+
+    .line 305
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setPrimaryBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 308
+    :cond_3
+    :goto_0
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mActionBarContextView:Lmiuix/appcompat/internal/app/widget/ActionBarContextView;
+
+    if-eqz v0, :cond_4
+
+    const/4 v1, 0x0
+
+    .line 309
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->updateBackground(Z)V
+
+    :cond_4
+    :goto_1
     return-void
 .end method
 
@@ -698,6 +821,24 @@
     invoke-direct {p0, v0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->setAllClipToPadding(Landroid/view/ViewGroup;Z)V
 
     :cond_0
+    return-void
+.end method
+
+.method private updateBackground(Z)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    .line 272
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->clearBackground()V
+
+    goto :goto_0
+
+    .line 274
+    :cond_0
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->resetBackground()V
+
+    :goto_0
     return-void
 .end method
 
@@ -1927,6 +2068,106 @@
 
     :cond_3
     return-void
+.end method
+
+.method public setBlurBackground(Z)Z
+    .locals 3
+
+    .line 242
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mIsShowBlurBackgroundView:Z
+
+    if-ne v0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    .line 246
+    :cond_0
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mIsSplit:Z
+
+    if-eqz v0, :cond_3
+
+    .line 247
+    iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mIsShowBlurBackgroundView:Z
+
+    .line 248
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mBlurBackgroundView:Lmiuix/blurdrawable/widget/BlurBackgroundView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lmiuix/blurdrawable/widget/BlurBackgroundView;->setBlurBackground(Z)Z
+
+    .line 249
+    invoke-direct {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->updateBackground(Z)V
+
+    move v0, v1
+
+    .line 250
+    :goto_0
+    invoke-virtual {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getChildCount()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_4
+
+    .line 251
+    invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    instance-of v2, v2, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+
+    if-eqz v2, :cond_2
+
+    .line 252
+    invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;
+
+    .line 253
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->setBlurBackground(Z)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 255
+    invoke-virtual {v0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->updateBackground(Z)V
+
+    :cond_1
+    move v0, v2
+
+    :cond_2
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 260
+    :cond_3
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mBlurBackgroundView:Lmiuix/blurdrawable/widget/BlurBackgroundView;
+
+    invoke-virtual {v0, p1}, Lmiuix/blurdrawable/widget/BlurBackgroundView;->setBlurBackground(Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    xor-int/lit8 v1, p1, 0x1
+
+    .line 262
+    invoke-direct {p0, v1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->updateAllClipView(Z)V
+
+    .line 263
+    iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->mIsShowBlurBackgroundView:Z
+
+    .line 264
+    invoke-direct {p0, p1}, Lmiuix/appcompat/internal/app/widget/ActionBarContainer;->updateBackground(Z)V
+
+    :cond_4
+    return v0
 .end method
 
 .method public setIsMiuixFloating(Z)V

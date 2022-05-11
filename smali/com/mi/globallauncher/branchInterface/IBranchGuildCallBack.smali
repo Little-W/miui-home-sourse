@@ -19,6 +19,9 @@
 .method public abstract launcherNull()Z
 .end method
 
+.method public abstract onPrivacyAgreed()V
+.end method
+
 .method public abstract searchBarRequestFocus()V
 .end method
 

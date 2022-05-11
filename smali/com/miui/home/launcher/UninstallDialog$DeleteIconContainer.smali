@@ -78,7 +78,7 @@
     return-void
 .end method
 
-.method public removeShortcutIcon(Lcom/miui/home/launcher/ShortcutIcon;)V
+.method public removeItemIcon(Lcom/miui/home/launcher/ItemIcon;)V
     .locals 3
 
     .line 493

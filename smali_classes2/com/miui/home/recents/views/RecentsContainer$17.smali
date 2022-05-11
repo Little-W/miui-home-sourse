@@ -3,12 +3,12 @@
 .source "RecentsContainer.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/recents/views/RecentsContainer;->updateExitMultiModeBtnVisible()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/recents/views/RecentsContainer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
     .locals 0
 
-    .line 1500
+    .line 1501
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$17;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,30 +35,22 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 1
+.method public run()V
+    .locals 2
 
-    .line 1503
-    sget-object p1, Lcom/miui/home/recents/SystemUiProxyWrapper;->INSTANCE:Lcom/miui/home/recents/util/MainThreadInitializedObject;
+    .line 1504
+    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$17;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
-    invoke-virtual {p1}, Lcom/miui/home/recents/util/MainThreadInitializedObject;->getNoCreate()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$2000(Lcom/miui/home/recents/views/RecentsContainer;)Z
 
-    move-result-object p1
+    move-result v1
 
-    check-cast p1, Lcom/miui/home/recents/SystemUiProxyWrapper;
-
-    if-eqz p1, :cond_0
+    invoke-static {v0, v1}, Lcom/miui/home/recents/views/RecentsContainer;->access$1902(Lcom/miui/home/recents/views/RecentsContainer;Z)Z
 
     .line 1505
-    invoke-virtual {p1}, Lcom/miui/home/recents/SystemUiProxyWrapper;->exitSplitScreen()V
+    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$17;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
-    const-string p1, "RecentsContainer"
+    invoke-static {v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$2100(Lcom/miui/home/recents/views/RecentsContainer;)V
 
-    const-string v0, "exit splitScreen mode ---- click exit button."
-
-    .line 1506
-    invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
     return-void
 .end method

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3724
+    .line 3693
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$21;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,13 +35,13 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 3727
+    .line 3696
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 3728
+    .line 3697
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$21;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3100(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2800(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/wallpaper/DesktopWallpaperManager;
 
     move-result-object p1
 

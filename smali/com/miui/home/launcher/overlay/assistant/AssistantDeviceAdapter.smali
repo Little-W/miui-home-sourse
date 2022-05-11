@@ -19,7 +19,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 19
+    .line 20
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getDeviceType()Lcom/miui/home/launcher/DeviceType;
 
     move-result-object v0
@@ -44,13 +44,13 @@
 .method public constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 25
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
+    .line 27
     iput-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    .line 27
+    .line 28
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
@@ -65,7 +65,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->mConfiguration:Landroid/content/res/Configuration;
 
-    .line 28
+    .line 29
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->mConfiguration:Landroid/content/res/Configuration;
 
     iget p1, p1, Landroid/content/res/Configuration;->screenLayout:I
@@ -78,14 +78,18 @@
 .end method
 
 .method public static inOverlapMode(Landroid/content/Context;)Z
-    .locals 1
+    .locals 0
 
-    .line 54
-    sget-boolean v0, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->IS_PHONE:Z
+    .line 55
+    sget-boolean p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->IS_PHONE:Z
 
-    if-nez v0, :cond_0
+    if-nez p0, :cond_0
 
-    invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->isLargeScreen(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
 
     move-result p0
 
@@ -105,7 +109,7 @@
 .method public static synthetic lambda$onConfigurationChanged$0(Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;Ljava/lang/Void;)Ljava/lang/Integer;
     .locals 1
 
-    .line 44
+    .line 45
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     const-string v0, "com.miui.personalassistant"
@@ -124,7 +128,7 @@
 .method public static synthetic lambda$onConfigurationChanged$1(Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;Ljava/lang/Integer;)V
     .locals 1
 
-    .line 46
+    .line 47
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -133,7 +137,7 @@
 
     if-lt p1, v0, :cond_0
 
-    .line 47
+    .line 48
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getStateManager()Lcom/miui/home/launcher/LauncherStateManager;
@@ -151,35 +155,35 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 2
 
-    .line 32
+    .line 33
     sget-boolean v0, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->IS_PHONE:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 36
+    .line 37
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->mConfiguration:Landroid/content/res/Configuration;
 
     invoke-virtual {v0, p1}, Landroid/content/res/Configuration;->updateFrom(Landroid/content/res/Configuration;)I
 
-    .line 37
+    .line 38
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->mConfiguration:Landroid/content/res/Configuration;
 
     iget p1, p1, Landroid/content/res/Configuration;->screenLayout:I
 
     and-int/lit8 p1, p1, 0xf
 
-    .line 38
+    .line 39
     iget v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->mScreenSize:I
 
     if-eq p1, v0, :cond_1
 
-    .line 39
+    .line 40
     iput p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->mScreenSize:I
 
-    .line 43
+    .line 44
     new-instance p1, Lcom/miui/home/launcher/overlay/assistant/-$$Lambda$AssistantDeviceAdapter$wVTN6PMo2oYHAzqKf5ufKoM0wZ4;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/overlay/assistant/-$$Lambda$AssistantDeviceAdapter$wVTN6PMo2oYHAzqKf5ufKoM0wZ4;-><init>(Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;)V

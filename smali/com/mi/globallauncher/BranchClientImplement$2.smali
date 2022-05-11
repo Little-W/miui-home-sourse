@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/BranchClientImplement;)V
     .locals 0
 
-    .line 194
+    .line 199
     iput-object p1, p0, Lcom/mi/globallauncher/BranchClientImplement$2;->this$0:Lcom/mi/globallauncher/BranchClientImplement;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public appsViewVisibility()Z
     .locals 1
 
-    .line 212
+    .line 217
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -67,7 +67,7 @@
 .method public closeAllAppsDialog()V
     .locals 2
 
-    .line 233
+    .line 238
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -82,7 +82,7 @@
 
     invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->hideDeepViewDialog(Landroidx/fragment/app/FragmentManager;)V
 
-    .line 234
+    .line 239
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -95,7 +95,7 @@
 .method public getLauncher()Landroid/app/Activity;
     .locals 1
 
-    .line 239
+    .line 244
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -106,7 +106,7 @@
 .method public isLightMode()Ljava/lang/Boolean;
     .locals 2
 
-    .line 207
+    .line 212
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsColorMode()Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     move-result-object v0
@@ -129,7 +129,7 @@
 .method public launcherNull()Z
     .locals 1
 
-    .line 197
+    .line 202
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -147,10 +147,29 @@
     return v0
 .end method
 
+.method public onPrivacyAgreed()V
+    .locals 3
+
+    .line 249
+    invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/mi/globallauncher/messages/BranchSwitchChangeMessage;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2}, Lcom/mi/globallauncher/messages/BranchSwitchChangeMessage;-><init>(Z)V
+
+    invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
 .method public searchBarRequestFocus()V
     .locals 1
 
-    .line 217
+    .line 222
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -171,7 +190,7 @@
 .method public setTextLinkOpenWithWebView(Landroid/widget/TextView;Landroid/widget/TextView;Ljava/lang/Boolean;)V
     .locals 2
 
-    .line 227
+    .line 232
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -182,7 +201,7 @@
 
     invoke-static {v0, p1, v1}, Lcom/mi/globallauncher/view/BranchSearchGuide;->setMiTextLinkOpenWithWebView(Landroid/app/Activity;Landroid/widget/TextView;Z)V
 
-    .line 228
+    .line 233
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
@@ -199,7 +218,7 @@
 .method public showGuide()Lcom/mi/globallauncher/view/TapTargetView;
     .locals 2
 
-    .line 222
+    .line 227
     invoke-static {}, Lcom/mi/globallauncher/DragIconGuide;->getInstance()Lcom/mi/globallauncher/DragIconGuide;
 
     move-result-object v0
@@ -222,7 +241,7 @@
 .method public updateAllAppsIndicator()V
     .locals 2
 
-    .line 202
+    .line 207
     invoke-static {}, Lcom/mi/globallauncher/BranchClientImplement;->getInstance()Lcom/mi/globallauncher/BranchClientImplement;
 
     move-result-object v0

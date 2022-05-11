@@ -309,6 +309,22 @@
     return-void
 .end method
 
+.method private clearBackground()V
+    .locals 2
+
+    .line 125
+    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundView:Landroid/view/View;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 126
+    invoke-virtual {p0, v1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
 .method private extractBackground()V
     .locals 2
 
@@ -458,6 +474,34 @@
 
     :goto_1
     return p1
+.end method
+
+.method private resetBackground()V
+    .locals 3
+
+    .line 130
+    iget-object v0, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mBackgroundView:Landroid/view/View;
+
+    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mOverflowMenuState:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;
+
+    sget-object v2, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;->Collapsed:Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView$OverflowMenuState;
+
+    if-ne v1, v2, :cond_0
+
+    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mCollapseBackground:Landroid/graphics/drawable/Drawable;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mExpandBackground:Landroid/graphics/drawable/Drawable;
+
+    :goto_0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 132
+    invoke-direct {p0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->extractBackground()V
+
+    return-void
 .end method
 
 
@@ -1723,4 +1767,28 @@
     const/4 p1, 0x0
 
     return p1
+.end method
+
+.method public updateBackground(Z)V
+    .locals 0
+
+    .line 115
+    iput-boolean p1, p0, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->mIsShowBlurBackground:Z
+
+    if-eqz p1, :cond_0
+
+    .line 117
+    invoke-direct {p0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->clearBackground()V
+
+    goto :goto_0
+
+    .line 119
+    :cond_0
+    invoke-direct {p0}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->resetBackground()V
+
+    .line 121
+    :goto_0
+    invoke-virtual {p0, p1}, Lmiuix/appcompat/internal/view/menu/action/PhoneActionMenuView;->setBlurBackground(Z)Z
+
+    return-void
 .end method

@@ -27,7 +27,7 @@
 .end method
 
 .method private branchInit(Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;)V
-    .locals 2
+    .locals 1
 
     .line 60
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
@@ -40,24 +40,13 @@
 
     .line 63
     :cond_0
-    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialInit()Lcom/mi/globallauncher/branchInterface/ICommercialInit;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/mi/globallauncher/privacy/-$$Lambda$PrivacyInit$ssYO4q7o3vBIEFUbdFoFgibYSCw;
-
-    invoke-direct {v1, p1}, Lcom/mi/globallauncher/privacy/-$$Lambda$PrivacyInit$ssYO4q7o3vBIEFUbdFoFgibYSCw;-><init>(Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;)V
-
-    invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/ICommercialInit;->setReport(Lcom/mi/globallauncher/config/CommercialCloudConfigJobService$DailyAnalyticReport;)V
-
-    .line 69
     new-instance v0, Lcom/mi/globallauncher/privacy/PrivacyInit$2;
 
     invoke-direct {v0, p0, p1}, Lcom/mi/globallauncher/privacy/PrivacyInit$2;-><init>(Lcom/mi/globallauncher/privacy/PrivacyInit;Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;)V
 
     invoke-static {v0}, Lcom/mi/globallauncher/config/CommercialCloudConfigJobService;->setConfigCallback(Lcom/mi/globallauncher/config/CommercialCloudConfigJobService$ConfigCallback;)V
 
-    .line 81
+    .line 75
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialInit()Lcom/mi/globallauncher/branchInterface/ICommercialInit;
 
     move-result-object p1
@@ -72,7 +61,7 @@
 
     invoke-interface {p1, v0}, Lcom/mi/globallauncher/branchInterface/ICommercialInit;->initCloudConfigForMiuiHome(Landroid/content/Context;)V
 
-    .line 82
+    .line 76
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object p1
@@ -87,7 +76,7 @@
 
     invoke-interface {p1, v0}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->setAllUserBranchEnabled(Z)V
 
-    .line 83
+    .line 77
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object p1
@@ -102,7 +91,7 @@
 
     invoke-interface {p1, v0}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->setQuickSearchRemoteConfigEnabled(Z)V
 
-    .line 84
+    .line 78
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object p1
@@ -135,38 +124,6 @@
 
     .line 56
     invoke-direct {p0, p2}, Lcom/mi/globallauncher/privacy/PrivacyInit;->branchInit(Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;)V
-
-    return-void
-.end method
-
-.method static synthetic lambda$branchInit$0(Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;)V
-    .locals 2
-
-    .line 65
-    invoke-interface {p0}, Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;->isDrawerMode()Z
-
-    move-result p0
-
-    .line 66
-    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->isBranchOpen()Z
-
-    move-result v0
-
-    .line 67
-    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->isQuickSearchOpen()Z
-
-    move-result v1
-
-    .line 64
-    invoke-static {p0, v0, v1}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackSwitchState(ZZZ)V
 
     return-void
 .end method

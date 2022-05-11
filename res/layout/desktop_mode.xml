@@ -9,7 +9,7 @@
     </miuix.visual.check.VisualCheckBox>
     <miuix.visual.check.VisualCheckBox android:orientation="vertical" android:id="@id/drawer" android:focusable="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content">
         <miuix.visual.check.BorderLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <com.miui.home.settings.FixedAspectRatioLottieAnimView android:layout_gravity="center_horizontal" android:background="@drawable/desktop_mode_icon_frame_status" android:duplicateParentState="true" android:layout_width="@dimen/desktop_mode_subtitle_width" android:layout_height="@dimen/desktop_mode_subtitle_height" android:scaleType="fitXY" app:aspectRatio="@dimen/desktop_mode_ratio" app:lottie_autoPlay="true" app:lottie_fileName="drawer_mode_animation.json" app:lottie_loop="true" />
+            <com.miui.home.settings.FixedAspectRatioLottieAnimView android:layout_gravity="center_horizontal" android:id="@id/drawer_mode_view" android:background="@drawable/desktop_mode_icon_frame_status" android:duplicateParentState="true" android:layout_width="@dimen/desktop_mode_subtitle_width" android:layout_height="@dimen/desktop_mode_subtitle_height" android:scaleType="fitXY" app:aspectRatio="@dimen/desktop_mode_ratio" app:lottie_autoPlay="true" app:lottie_loop="true" />
         </miuix.visual.check.BorderLayout>
         <miuix.visual.check.VisualCheckedTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="@dimen/desktop_mode_subtitle_width" android:text="@string/all_apps_setting_drawer_title" style="@style/SettingsVisualCheckBoxTitle" />
     </miuix.visual.check.VisualCheckBox>

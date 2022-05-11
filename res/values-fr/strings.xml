@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">"Glissez vers le haut pour ouvrir Tiroir application. Changez pour le mode écran d'accueil normal et réessayez."</string>
     <string name="all_apps_suggestions">"Suggestions d'applications"</string>
     <string name="am">Matin</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">Déplacé à la position %1$d dans le dossier</string>
     <string name="announce_for_checked">%1$s, vérifié</string>
     <string name="announce_for_choose_default_screen">"Définir l'écran %1$d comme l'écran d'accueil par défaut"</string>
@@ -639,11 +640,11 @@
     <string name="navigation_guide_recent_title">Ouvrir Récents</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Ouvrir Récents</string>
     <string name="navigation_guide_settings">Démos de gestes</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">Centre</string>
+    <string name="navigation_position_left">Gauche</string>
+    <string name="navigation_position_right">Droite</string>
+    <string name="navigation_position_summary">"Les positions personnalisées des boutons de navigation ne peuvent être appliquées qu'à l'Écran d'accueil"</string>
+    <string name="navigation_position_title">Position des boutons de navigation</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Annuler</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">"Impossible d'utiliser des gestes en plein écran avec des lanceurs tiers. Basculer vers le lanceur du système et activer les gestes en plein écran ?"</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">OK </string>

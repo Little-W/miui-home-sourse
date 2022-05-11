@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim;)V
     .locals 0
 
-    .line 70
+    .line 73
     iput-object p1, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim$1;->this$0:Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -44,7 +44,7 @@
         }
     .end annotation
 
-    .line 73
+    .line 76
     sget-object p1, Lmiuix/animation/property/ViewProperty;->AUTO_ALPHA:Lmiuix/animation/property/ViewProperty;
 
     invoke-static {p2, p1}, Lmiuix/animation/listener/UpdateInfo;->findBy(Ljava/util/Collection;Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/listener/UpdateInfo;
@@ -55,7 +55,7 @@
 
     return-void
 
-    .line 77
+    .line 80
     :cond_0
     invoke-virtual {p1}, Lmiuix/animation/listener/UpdateInfo;->getFloatValue()F
 
@@ -85,7 +85,7 @@
 
     div-float v1, p1, p2
 
-    .line 78
+    .line 81
     iget-object p1, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim$1;->this$0:Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim;
 
     iget-object v0, p1, Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim;->mTopMenuContainer:Lcom/miui/home/launcher/multiselect/TopMenuContainer;
@@ -94,7 +94,7 @@
 
     iget p2, p1, Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim;->mImageViewAnimStartColor:I
 
-    .line 79
+    .line 82
     invoke-static {p1, p2}, Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim;->access$200(Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim;I)I
 
     move-result v2
@@ -111,7 +111,7 @@
 
     iget p2, p1, Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim;->mTextViewAnimStartColor:I
 
-    .line 80
+    .line 83
     invoke-static {p1, p2}, Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim;->access$200(Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim;I)I
 
     move-result v4
@@ -124,7 +124,7 @@
 
     move-result v5
 
-    .line 78
+    .line 81
     invoke-virtual/range {v0 .. v5}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->updateImageAndTextColor(FIIII)V
 
     return-void

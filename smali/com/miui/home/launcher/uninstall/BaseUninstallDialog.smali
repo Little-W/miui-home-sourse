@@ -213,7 +213,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f0d0128
+    const v0, 0x7f0d0129
 
     const/4 v1, 0x0
 
@@ -536,7 +536,7 @@
 
     if-eqz v0, :cond_0
 
-    const v2, 0x7f1000d3
+    const v2, 0x7f1000d4
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

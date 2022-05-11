@@ -159,7 +159,7 @@
 
     const/4 v1, 0x1
 
-    .line 533
+    .line 523
     invoke-virtual {p0, v0, v1}, Lcom/mi/globallauncher/manager/CommercialPreference;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -170,7 +170,7 @@
 .method public getEnterFolderTimestamp()J
     .locals 2
 
-    .line 482
+    .line 472
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -328,7 +328,7 @@
 .method public getShowNewFeatureCounts()I
     .locals 1
 
-    .line 426
+    .line 416
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -343,7 +343,7 @@
 .method public getShowNewFeatureTime()J
     .locals 2
 
-    .line 441
+    .line 431
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -407,7 +407,7 @@
 .method public getUpdateDrawerModeForCloudConfig()Z
     .locals 1
 
-    .line 492
+    .line 482
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -452,7 +452,7 @@
 .method public hasChangedDrawerMode()Z
     .locals 1
 
-    .line 406
+    .line 396
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -479,25 +479,10 @@
     return v0
 .end method
 
-.method public hasShowBranchSearchGuideInSetting()Z
-    .locals 2
-
-    const-string v0, "show_branch_guide_in_setting"
-
-    const/4 v1, 0x0
-
-    .line 356
-    invoke-virtual {p0, v0, v1}, Lcom/mi/globallauncher/manager/CommercialPreference;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public hideSettingsTip()V
     .locals 1
 
-    .line 421
+    .line 411
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -559,7 +544,7 @@
 
     const/4 v1, 0x0
 
-    .line 396
+    .line 386
     invoke-virtual {p0, v0, v1}, Lcom/mi/globallauncher/manager/CommercialPreference;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -570,7 +555,7 @@
 .method public isChangeToDrawerForBranch()Z
     .locals 1
 
-    .line 466
+    .line 456
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -589,7 +574,7 @@
 
     const/4 v1, 0x0
 
-    .line 386
+    .line 376
     invoke-virtual {p0, v0, v1}, Lcom/mi/globallauncher/manager/CommercialPreference;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -600,7 +585,7 @@
 .method public isDragIconToHomeGuideShow()Z
     .locals 1
 
-    .line 456
+    .line 446
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -615,7 +600,7 @@
 .method public isFirstTimeEnterDrawer()Z
     .locals 1
 
-    .line 502
+    .line 492
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -649,7 +634,7 @@
 
     const/4 v1, 0x0
 
-    .line 376
+    .line 366
     invoke-virtual {p0, v0, v1}, Lcom/mi/globallauncher/manager/CommercialPreference;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -675,7 +660,7 @@
 .method public isNewFeatureFirstShow()Z
     .locals 1
 
-    .line 522
+    .line 512
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -690,7 +675,7 @@
 .method public isNewFeatureShowed()Z
     .locals 1
 
-    .line 512
+    .line 502
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -754,7 +739,7 @@
 
     const/4 v1, 0x0
 
-    .line 543
+    .line 533
     invoke-virtual {p0, v0, v1}, Lcom/mi/globallauncher/manager/CommercialPreference;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -765,7 +750,7 @@
 .method public needShowSettingTip()Z
     .locals 1
 
-    .line 416
+    .line 406
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -784,7 +769,7 @@
 
     const/4 v1, 0x0
 
-    .line 366
+    .line 356
     invoke-virtual {p0, v0, v1}, Lcom/mi/globallauncher/manager/CommercialPreference;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -898,7 +883,7 @@
 .method public resetShowNewFeatureCounts()V
     .locals 1
 
-    .line 436
+    .line 426
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -911,7 +896,7 @@
 .method public resetShowNewFeatureTime()V
     .locals 1
 
-    .line 451
+    .line 441
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -972,7 +957,7 @@
 
     const-string v0, "is_show_branch_new_version"
 
-    .line 538
+    .line 528
     invoke-virtual {p0, v0, p1}, Lcom/mi/globallauncher/manager/CommercialPreference;->putInt(Ljava/lang/String;I)V
 
     return-void
@@ -983,7 +968,7 @@
 
     const-string v0, "branch_switch_on"
 
-    .line 401
+    .line 391
     invoke-virtual {p0, v0, p1}, Lcom/mi/globallauncher/manager/CommercialPreference;->putBoolean(Ljava/lang/String;Z)V
 
     return-void
@@ -992,7 +977,7 @@
 .method public setChangeToDrawerForBranch()V
     .locals 1
 
-    .line 471
+    .line 461
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -1007,7 +992,7 @@
 
     const-string v0, "is_cloud_config_received"
 
-    .line 391
+    .line 381
     invoke-virtual {p0, v0, p1}, Lcom/mi/globallauncher/manager/CommercialPreference;->putBoolean(Ljava/lang/String;Z)V
 
     return-void
@@ -1016,7 +1001,7 @@
 .method public setDragIconToHomeGuideShow()V
     .locals 1
 
-    .line 461
+    .line 451
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -1029,7 +1014,7 @@
 .method public setEnterFolderTimestamp(J)V
     .locals 1
 
-    .line 477
+    .line 467
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -1053,7 +1038,7 @@
 .method public setFirstTimeEnterDrawer(Z)V
     .locals 1
 
-    .line 497
+    .line 487
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -1090,7 +1075,7 @@
 
     const-string v0, "branch_guide_1_show"
 
-    .line 381
+    .line 371
     invoke-virtual {p0, v0, p1}, Lcom/mi/globallauncher/manager/CommercialPreference;->putBoolean(Ljava/lang/String;Z)V
 
     return-void
@@ -1099,7 +1084,7 @@
 .method public setHasChangedDrawerMode(Z)V
     .locals 1
 
-    .line 411
+    .line 401
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -1182,7 +1167,7 @@
 .method public setNewFeatureFirstShow(Z)V
     .locals 1
 
-    .line 517
+    .line 507
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -1195,7 +1180,7 @@
 .method public setNewFeatureShowed(Z)V
     .locals 1
 
-    .line 507
+    .line 497
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -1210,7 +1195,7 @@
 
     const-string v0, "open_drawer_by_default"
 
-    .line 371
+    .line 361
     invoke-virtual {p0, v0, p1}, Lcom/mi/globallauncher/manager/CommercialPreference;->putBoolean(Ljava/lang/String;Z)V
 
     return-void
@@ -1260,17 +1245,6 @@
     return-void
 .end method
 
-.method public setShowBranchSearchGuideInSetting(Z)V
-    .locals 1
-
-    const-string v0, "show_branch_guide_in_setting"
-
-    .line 361
-    invoke-virtual {p0, v0, p1}, Lcom/mi/globallauncher/manager/CommercialPreference;->putBoolean(Ljava/lang/String;Z)V
-
-    return-void
-.end method
-
 .method public setUniSearchPermissionButtonClicked()V
     .locals 2
 
@@ -1309,7 +1283,7 @@
 .method public setUpdateDrawerModeForCloudConfig(Z)V
     .locals 1
 
-    .line 487
+    .line 477
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -1324,7 +1298,7 @@
 
     const-string v0, "use_mi_app_store"
 
-    .line 548
+    .line 538
     invoke-virtual {p0, v0, p1}, Lcom/mi/globallauncher/manager/CommercialPreference;->putBoolean(Ljava/lang/String;Z)V
 
     return-void
@@ -1420,7 +1394,7 @@
 .method public updateShowNewFeatureCounts()V
     .locals 1
 
-    .line 431
+    .line 421
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0
@@ -1433,7 +1407,7 @@
 .method public updateShowNewFeatureTime()V
     .locals 1
 
-    .line 446
+    .line 436
     invoke-static {}, Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;->getInstance()Lcom/mi/globallauncher/manager/CommercialPreferenceUtils;
 
     move-result-object v0

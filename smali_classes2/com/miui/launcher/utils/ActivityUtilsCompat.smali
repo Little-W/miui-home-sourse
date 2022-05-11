@@ -17,7 +17,7 @@
     return-void
 .end method
 
-.method public static getLaunchActivityOptions(Landroid/view/View;Landroid/graphics/Rect;)Landroid/os/Bundle;
+.method public static getLaunchActivityOptions(Landroid/view/View;Landroid/graphics/Rect;)Landroid/app/ActivityOptions;
     .locals 11
 
     if-nez p0, :cond_0
@@ -75,11 +75,6 @@
 
     move-result-object p0
 
-    .line 62
-    invoke-virtual {p0}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
-
-    move-result-object p0
-
     return-object p0
 
     .line 64
@@ -114,11 +109,6 @@
 
     move-result-object p0
 
-    .line 65
-    invoke-virtual {p0}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
-
-    move-result-object p0
-
     return-object p0
 
     .line 67
@@ -137,10 +127,6 @@
     move-result v0
 
     invoke-static {p0, v1, v1, p1, v0}, Landroid/app/ActivityOptions;->makeClipRevealAnimation(Landroid/view/View;IIII)Landroid/app/ActivityOptions;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object p0
 
@@ -165,10 +151,6 @@
     move-object v0, p0
 
     invoke-static/range {v0 .. v5}, Landroid/app/ActivityOptions;->makeClipRevealAnimation(Landroid/view/View;IIIIZ)Landroid/app/ActivityOptions;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/app/ActivityOptions;->toBundle()Landroid/os/Bundle;
 
     move-result-object p0
 

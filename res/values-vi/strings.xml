@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">Trượt lên được dành riêng để mở Ngăn ứng dụng. Chuyển sang chế độ Màn hình chính thông thường và thử lại.</string>
     <string name="all_apps_suggestions">Đề xuất ứng dụng</string>
     <string name="am">SA</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">Đã di chuyển đến vị trí %1$d trong thư mục</string>
     <string name="announce_for_checked">%1$s, đã kiểm tra</string>
     <string name="announce_for_choose_default_screen">Đặt màn hình %1$d làm Màn hình chính mặc định</string>
@@ -642,7 +643,7 @@
     <string name="navigation_position_center">Giữa</string>
     <string name="navigation_position_left">Trái</string>
     <string name="navigation_position_right">Phải</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
+    <string name="navigation_position_summary">Tùy chỉnh vị trí nút điều hướng chỉ có thể áp dụng Màn hình chính</string>
     <string name="navigation_position_title">Vị trí phím điều hướng</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Hủy</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Không thể sử dụng cử chỉ màn hình tràn cạnh với trình khởi chạy của bên thứ ba. Chuyển sang trình khởi chạy hệ thống và bật cử chỉ màn hình tràn cạnh?</string>

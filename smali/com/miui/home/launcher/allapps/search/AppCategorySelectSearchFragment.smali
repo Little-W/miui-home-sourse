@@ -482,7 +482,7 @@
     .line 93
     invoke-super {p0, p1, p2}, Landroidx/fragment/app/Fragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const p2, 0x7f0a025f
+    const p2, 0x7f0a0266
 
     .line 94
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -543,7 +543,7 @@
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
 
-    const p2, 0x7f0a0089
+    const p2, 0x7f0a008a
 
     .line 105
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -554,7 +554,7 @@
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/search/AppCategorySelectSearchFragment;->mBackButton:Lcom/miui/home/launcher/util/typeface/TypefaceIconView;
 
-    const p2, 0x7f0a008c
+    const p2, 0x7f0a008d
 
     .line 106
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

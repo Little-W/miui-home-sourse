@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">At swipe opad er reserveret til åbning af app-skuffe. Skift til almindelig startskærmstilstand og prøv igen.</string>
     <string name="all_apps_suggestions">Forslag til app</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Animationshastighed</string>
     <string name="announce_for_app_move_in_folder">Flyttet til position %1$d i mappen</string>
     <string name="announce_for_checked">%1$s, markeret</string>
     <string name="announce_for_choose_default_screen">Sæt skærm %1$d som standard startskærmen</string>
@@ -640,10 +641,10 @@
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Åbn nylige</string>
     <string name="navigation_guide_settings">Demo af fagter</string>
     <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_left">Venstre</string>
+    <string name="navigation_position_right">Højre</string>
+    <string name="navigation_position_summary">Brugerdefinerede positioner af navigationsknapper kan kun anvendes på startskærmen</string>
+    <string name="navigation_position_title">Navigeringsknappers placering</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Annuller</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Kan ikke bruge fuldskærmshåndbevægelser med tredjeparts-opstartere. Skift til system-opstarteren, og aktivér fuldskærmshåndbevægelser.</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">OK</string>

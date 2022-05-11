@@ -33,6 +33,8 @@
 
 .field private isContentSearch:Z
 
+.field private isInstalled:Z
+
 .field private list:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -52,20 +54,20 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 40
+    .line 43
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 34
+    .line 36
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->list:Ljava/util/List;
 
-    .line 41
+    .line 44
     iput-object p1, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->mContext:Landroid/content/Context;
 
-    .line 42
+    .line 45
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
@@ -78,7 +80,7 @@
 .method static synthetic access$000(Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;)Ljava/util/List;
     .locals 0
 
-    .line 30
+    .line 32
     iget-object p0, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->list:Ljava/util/List;
 
     return-object p0
@@ -87,8 +89,17 @@
 .method static synthetic access$100(Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;)Z
     .locals 0
 
-    .line 30
+    .line 32
     iget-boolean p0, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->mIsInLightMode:Z
+
+    return p0
+.end method
+
+.method static synthetic access$200(Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;)Z
+    .locals 0
+
+    .line 32
+    iget-boolean p0, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->isInstalled:Z
 
     return p0
 .end method
@@ -98,7 +109,7 @@
 .method public getItemCount()I
     .locals 1
 
-    .line 85
+    .line 89
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->list:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -111,7 +122,7 @@
 .method public getItemViewType(I)I
     .locals 0
 
-    .line 91
+    .line 95
     iget-boolean p1, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->isContentSearch:Z
 
     return p1
@@ -120,12 +131,12 @@
 .method public onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 1
 
-    .line 76
+    .line 80
     instance-of v0, p1, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;
 
     if-eqz v0, :cond_0
 
-    .line 77
+    .line 81
     check-cast p1, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;
 
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->list:Ljava/util/List;
@@ -140,13 +151,13 @@
 
     goto :goto_0
 
-    .line 78
+    .line 82
     :cond_0
     instance-of v0, p1, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchLinearViewHolder;
 
     if-eqz v0, :cond_1
 
-    .line 79
+    .line 83
     check-cast p1, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchLinearViewHolder;
 
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->list:Ljava/util/List;
@@ -173,7 +184,7 @@
 
     goto :goto_0
 
-    .line 68
+    .line 72
     :pswitch_0
     new-instance v0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchLinearViewHolder;
 
@@ -191,7 +202,7 @@
 
     goto :goto_0
 
-    .line 65
+    .line 69
     :pswitch_1
     new-instance p1, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter$BranchGridViewHolder;
 
@@ -222,12 +233,12 @@
 .method public setEmptyList()V
     .locals 1
 
-    .line 56
+    .line 60
     iget-object v0, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->list:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 57
+    .line 61
     invoke-virtual {p0}, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->notifyDataSetChanged()V
 
     return-void
@@ -236,41 +247,44 @@
 .method public setIsInLightMode(Z)V
     .locals 0
 
-    .line 95
+    .line 99
     iput-boolean p1, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->mIsInLightMode:Z
 
     return-void
 .end method
 
-.method public setList(Ljava/util/List;IZ)V
-    .locals 1
+.method public setList(Ljava/util/List;IZZ)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
             "Lio/branch/search/BranchLinkResult;",
-            ">;IZ)V"
+            ">;IZZ)V"
         }
     .end annotation
 
-    .line 46
+    .line 49
     iput-boolean p3, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->isContentSearch:Z
 
-    .line 47
+    .line 50
+    iput-boolean p4, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->isInstalled:Z
+
+    .line 51
     iget-object p3, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->list:Ljava/util/List;
 
     invoke-interface {p3}, Ljava/util/List;->clear()V
 
     if-eqz p1, :cond_0
 
-    .line 48
+    .line 52
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p3
 
     if-eqz p3, :cond_0
 
-    .line 49
+    .line 53
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result p3
@@ -279,18 +293,18 @@
 
     move-result p2
 
-    .line 50
+    .line 54
     iget-object p3, p0, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->list:Ljava/util/List;
 
-    const/4 v0, 0x0
+    const/4 p4, 0x0
 
-    invoke-interface {p1, v0, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
+    invoke-interface {p1, p4, p2}, Ljava/util/List;->subList(II)Ljava/util/List;
 
     move-result-object p1
 
     invoke-interface {p3, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 52
+    .line 56
     :cond_0
     invoke-virtual {p0}, Lcom/mi/globallauncher/local/BranchLinearAndGridAdapter;->notifyDataSetChanged()V
 

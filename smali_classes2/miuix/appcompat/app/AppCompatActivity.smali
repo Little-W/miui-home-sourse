@@ -225,6 +225,19 @@
     return-void
 .end method
 
+.method public getAppCompatActionBar()Lmiuix/appcompat/app/ActionBar;
+    .locals 1
+
+    .line 34
+    iget-object v0, p0, Lmiuix/appcompat/app/AppCompatActivity;->mAppDelegate:Lmiuix/appcompat/app/AppDelegate;
+
+    invoke-virtual {v0}, Lmiuix/appcompat/app/AppDelegate;->getActionBar()Lmiuix/appcompat/app/ActionBar;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public getExtraHorizontalPaddingLevel()I
     .locals 1
 

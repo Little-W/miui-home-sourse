@@ -24,7 +24,7 @@
 .method public constructor <init>(Lcom/miui/maml/ScreenElementRoot$ExtraResource;)V
     .locals 0
 
-    .line 956
+    .line 957
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$Resource;->this$0:Lcom/miui/maml/ScreenElementRoot$ExtraResource;
 
     invoke-direct {p0, p1}, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;-><init>(Lcom/miui/maml/ScreenElementRoot$ExtraResource;)V
@@ -35,13 +35,13 @@
 .method public constructor <init>(Lcom/miui/maml/ScreenElementRoot$ExtraResource;Ljava/lang/String;Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;)V
     .locals 0
 
-    .line 959
+    .line 960
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$Resource;->this$0:Lcom/miui/maml/ScreenElementRoot$ExtraResource;
 
-    .line 960
+    .line 961
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;-><init>(Lcom/miui/maml/ScreenElementRoot$ExtraResource;Ljava/lang/String;Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;)V
 
-    .line 961
+    .line 962
     sget-object p1, Lcom/miui/maml/ScreenElementRoot$4;->$SwitchMap$com$miui$maml$ScreenElementRoot$ExtraResource$MetricsType:[I
 
     invoke-virtual {p3}, Lcom/miui/maml/ScreenElementRoot$ExtraResource$MetricsType;->ordinal()I
@@ -54,7 +54,7 @@
 
     goto :goto_0
 
-    .line 966
+    .line 967
     :pswitch_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -76,7 +76,7 @@
 
     goto :goto_0
 
-    .line 963
+    .line 964
     :pswitch_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -113,7 +113,7 @@
 .method protected onParseInfo([Ljava/lang/String;)V
     .locals 2
 
-    .line 972
+    .line 973
     array-length v0, p1
 
     const/4 v1, 0x2
@@ -138,7 +138,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 977
+    .line 978
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

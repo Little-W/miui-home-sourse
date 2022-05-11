@@ -115,6 +115,7 @@
     <item type="id" name="branch_deepview_title" />
     <item type="id" name="branch_item_container" />
     <item type="id" name="branch_url_id" />
+    <item type="id" name="branch_web" />
     <item type="id" name="btnCancel" />
     <item type="id" name="btnEdit" />
     <item type="id" name="btnOk" />
@@ -196,6 +197,7 @@
     <item type="id" name="drag_view_container" />
     <item type="id" name="drawer" />
     <item type="id" name="drawer_background_alpha_seek_bar" />
+    <item type="id" name="drawer_mode_view" />
     <item type="id" name="drop_target_bar" />
     <item type="id" name="editDragSource" />
     <item type="id" name="editModeBottomBar" />
@@ -232,6 +234,7 @@
     <item type="id" name="folder_animation_fake_icon" />
     <item type="id" name="folder_cling" />
     <item type="id" name="folder_content" />
+    <item type="id" name="folder_grid" />
     <item type="id" name="folder_header" />
     <item type="id" name="folder_recommend_header" />
     <item type="id" name="foreground" />
@@ -355,6 +358,7 @@
     <item type="id" name="minus_one_layer" />
     <item type="id" name="minute" />
     <item type="id" name="mirrored_text_group" />
+    <item type="id" name="miui_widget_auto_scale_factor_tag" />
     <item type="id" name="miui_widget_auto_scale_tag" />
     <item type="id" name="miuix_animation_tag_foreground_color" />
     <item type="id" name="miuix_animation_tag_init_layout" />
@@ -375,6 +379,9 @@
     <item type="id" name="number_picker_input" />
     <item type="id" name="off" />
     <item type="id" name="on" />
+    <item type="id" name="pair_icon1" />
+    <item type="id" name="pair_icon2" />
+    <item type="id" name="pair_icon_container" />
     <item type="id" name="parentPanel" />
     <item type="id" name="permission_guide_content" />
     <item type="id" name="permission_guide_title" />
@@ -613,6 +620,8 @@
     <item type="id" name="uninstall_drop_target" />
     <item type="id" name="uninstall_icons_container" />
     <item type="id" name="up" />
+    <item type="id" name="user_present_animation_child_to_pivot_x" />
+    <item type="id" name="user_present_animation_child_to_pivot_y" />
     <item type="id" name="user_present_animation_delay" />
     <item type="id" name="user_present_animation_state_style" />
     <item type="id" name="vertical_layout" />
@@ -621,6 +630,7 @@
     <item type="id" name="view_animation_scaleY" />
     <item type="id" name="view_animation_translationX" />
     <item type="id" name="view_animation_translationY" />
+    <item type="id" name="view_animation_z" />
     <item type="id" name="view_pager" />
     <item type="id" name="view_stub_type1" />
     <item type="id" name="view_stub_type4" />
@@ -631,7 +641,6 @@
     <item type="id" name="virtual_key" />
     <item type="id" name="visible_removing_fragment_view_tag" />
     <item type="id" name="voice" />
-    <item type="id" name="webview" />
     <item type="id" name="widget_container" />
     <item type="id" name="widget_details_view" />
     <item type="id" name="widget_line_title" />

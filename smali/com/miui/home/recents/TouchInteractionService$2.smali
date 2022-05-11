@@ -28,7 +28,7 @@
 .method constructor <init>(Lcom/miui/home/recents/TouchInteractionService;)V
     .locals 0
 
-    .line 185
+    .line 184
     iput-object p1, p0, Lcom/miui/home/recents/TouchInteractionService$2;->this$0:Lcom/miui/home/recents/TouchInteractionService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -47,7 +47,7 @@
 .method public static synthetic lambda$onReceive$0(Lcom/miui/home/recents/TouchInteractionService$2;)V
     .locals 1
 
-    .line 189
+    .line 188
     iget-object v0, p0, Lcom/miui/home/recents/TouchInteractionService$2;->this$0:Lcom/miui/home/recents/TouchInteractionService;
 
     invoke-static {v0}, Lcom/miui/home/recents/TouchInteractionService;->access$400(Lcom/miui/home/recents/TouchInteractionService;)V
@@ -60,7 +60,7 @@
 
     const-string p1, "android.intent.action.USER_UNLOCKED"
 
-    .line 188
+    .line 187
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p2
@@ -71,7 +71,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 189
+    .line 188
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/MainThreadExecutor;->getHandler()Landroid/os/Handler;
@@ -88,7 +88,7 @@
 
     const-string p2, "onReceive    ACTION_USER_UNLOCKED"
 
-    .line 190
+    .line 189
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0

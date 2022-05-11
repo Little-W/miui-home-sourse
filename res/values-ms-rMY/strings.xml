@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">Meleret ke atas disediakan untuk membuka Apl menu. Bertukar ke mod Skrin Utama biasa dan cuba lagi.</string>
     <string name="all_apps_suggestions">Saranan apl</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Kadar animasi</string>
     <string name="announce_for_app_move_in_folder">Pindah ke posisi %1$d di dalam folder</string>
     <string name="announce_for_checked">%1$s, disemak</string>
     <string name="announce_for_choose_default_screen">Tetapkan skrin %1$d sebagai skrin lalai Laman utama</string>
@@ -609,11 +610,11 @@
     <string name="navigation_guide_recent_title">Buka Terbaru</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Buka Terbaru</string>
     <string name="navigation_guide_settings">Demo gerakan</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">Tengah</string>
+    <string name="navigation_position_left">Kiri</string>
+    <string name="navigation_position_right">Kanan</string>
+    <string name="navigation_position_summary">Kedudukan tersuai butang navigasi hanya boleh digunakan pada Skrin Utama</string>
+    <string name="navigation_position_title">Kedudukan butang navigasi</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Batal</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Tidak dapat menggunakan gerak isyarat skrin penuh dengan pelancar pihak ketiga. Bertukar ke pelancar sistem dan hidupkan gerak isyarat skrin penuh?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">Ok</string>

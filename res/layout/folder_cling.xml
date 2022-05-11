@@ -3,6 +3,6 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <com.miui.home.launcher.FitSystemWindowView android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <include layout="@layout/folder" />
-        <include android:layout_gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/small_icons_recommend_screen" />
+        <include android:layout_gravity="bottom|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/recommend_margin_start" android:layout_marginEnd="@dimen/recommend_margin_end" layout="@layout/small_icons_recommend_screen" />
     </com.miui.home.launcher.FitSystemWindowView>
 </com.miui.home.launcher.FolderCling>

@@ -26,7 +26,7 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 112
+    .line 111
     invoke-direct {p0, p1}, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;-><init>(Ljava/lang/String;)V
 
     return-void
@@ -37,7 +37,7 @@
 .method public getValue(Lcom/miui/home/recents/util/RectFSpringAnim;)F
     .locals 0
 
-    .line 115
+    .line 114
     invoke-static {p1}, Lcom/miui/home/recents/util/RectFSpringAnim;->access$800(Lcom/miui/home/recents/util/RectFSpringAnim;)F
 
     move-result p1
@@ -48,7 +48,7 @@
 .method public bridge synthetic getValue(Ljava/lang/Object;)F
     .locals 0
 
-    .line 112
+    .line 111
     check-cast p1, Lcom/miui/home/recents/util/RectFSpringAnim;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/util/RectFSpringAnim$4;->getValue(Lcom/miui/home/recents/util/RectFSpringAnim;)F
@@ -61,21 +61,21 @@
 .method public setValue(Lcom/miui/home/recents/util/RectFSpringAnim;F)V
     .locals 1
 
-    .line 120
+    .line 119
     invoke-virtual {p1}, Lcom/miui/home/recents/util/RectFSpringAnim;->isRequestEnd()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 121
+    .line 120
     invoke-super {p0, p1, p2}, Lcom/miui/home/recents/util/RectFSpringAnim$VelocityFloatPropertyCompat;->setValue(Ljava/lang/Object;F)V
 
-    .line 123
+    .line 122
     :cond_0
     invoke-static {p1, p2}, Lcom/miui/home/recents/util/RectFSpringAnim;->access$802(Lcom/miui/home/recents/util/RectFSpringAnim;F)F
 
-    .line 124
+    .line 123
     invoke-static {p1}, Lcom/miui/home/recents/util/RectFSpringAnim;->access$900(Lcom/miui/home/recents/util/RectFSpringAnim;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     move-result-object p2
@@ -86,7 +86,7 @@
 
     if-eqz p2, :cond_1
 
-    .line 125
+    .line 124
     invoke-static {p1}, Lcom/miui/home/recents/util/RectFSpringAnim;->access$300(Lcom/miui/home/recents/util/RectFSpringAnim;)V
 
     :cond_1
@@ -96,7 +96,7 @@
 .method public bridge synthetic setValue(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 112
+    .line 111
     check-cast p1, Lcom/miui/home/recents/util/RectFSpringAnim;
 
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/util/RectFSpringAnim$4;->setValue(Lcom/miui/home/recents/util/RectFSpringAnim;F)V

@@ -16,5 +16,5 @@
 .method public abstract needToShowPocoSearchGuide()Z
 .end method
 
-.method public abstract showBranchSearchGuideView(Landroid/app/Activity;ZLcom/mi/globallauncher/poco/PocoBranchGuideCallBack;)V
+.method public abstract showPocoBranchSearchGuideView(Landroid/app/Activity;ZLcom/mi/globallauncher/poco/PocoBranchGuideCallBack;)V
 .end method

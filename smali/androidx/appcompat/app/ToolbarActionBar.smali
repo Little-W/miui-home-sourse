@@ -360,6 +360,53 @@
     return-void
 .end method
 
+.method public setDisplayHomeAsUpEnabled(Z)V
+    .locals 1
+
+    const/4 v0, 0x4
+
+    if-eqz p1, :cond_0
+
+    move p1, v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 275
+    :goto_0
+    invoke-virtual {p0, p1, v0}, Landroidx/appcompat/app/ToolbarActionBar;->setDisplayOptions(II)V
+
+    return-void
+.end method
+
+.method public setDisplayOptions(II)V
+    .locals 2
+
+    .line 259
+    iget-object v0, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
+
+    invoke-interface {v0}, Landroidx/appcompat/widget/DecorToolbar;->getDisplayOptions()I
+
+    move-result v0
+
+    .line 260
+    iget-object v1, p0, Landroidx/appcompat/app/ToolbarActionBar;->mDecorToolbar:Landroidx/appcompat/widget/DecorToolbar;
+
+    and-int/2addr p1, p2
+
+    not-int p2, p2
+
+    and-int/2addr p2, v0
+
+    or-int/2addr p1, p2
+
+    invoke-interface {v1, p1}, Landroidx/appcompat/widget/DecorToolbar;->setDisplayOptions(I)V
+
+    return-void
+.end method
+
 .method public setElevation(F)V
     .locals 1
 

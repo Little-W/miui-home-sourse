@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Ljava/util/Collection;
-.implements Lkotlin/jvm/internal/markers/KMappedMarker;
 
 
 # annotations
@@ -15,8 +14,7 @@
         ">",
         "Ljava/lang/Object;",
         "Ljava/util/Collection<",
-        "TT;>;",
-        "Lkotlin/jvm/internal/markers/KMappedMarker;"
+        "TT;>;"
     }
 .end annotation
 

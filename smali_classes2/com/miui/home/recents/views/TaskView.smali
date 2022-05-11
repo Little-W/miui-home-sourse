@@ -414,7 +414,7 @@
 
     if-nez p2, :cond_0
 
-    const p2, 0x7f0a0286
+    const p2, 0x7f0a028d
 
     .line 332
     invoke-virtual {p0, p2}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -653,7 +653,7 @@
     .line 348
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskView;->mWorldCirculateImageView:Landroid/widget/ImageView;
 
-    const v2, 0x7f0805c9
+    const v2, 0x7f0805ca
 
     invoke-virtual {p2, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -665,7 +665,7 @@
 
     move-result-object v2
 
-    const v4, 0x7f10037d
+    const v4, 0x7f10037c
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -705,7 +705,7 @@
     .line 352
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskView;->mWorldCirculateImageView:Landroid/widget/ImageView;
 
-    const v2, 0x7f0805c8
+    const v2, 0x7f0805c9
 
     invoke-virtual {p2, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -717,7 +717,7 @@
 
     move-result-object v2
 
-    const v4, 0x7f10037b
+    const v4, 0x7f10037a
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1507,7 +1507,7 @@
     .line 169
     invoke-super {p0}, Lcom/miui/home/recents/views/FixedSizeFrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0285
+    const v0, 0x7f0a028c
 
     .line 171
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1518,7 +1518,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mHeaderView:Lcom/miui/home/recents/views/TaskViewHeader;
 
-    const v0, 0x7f0a0289
+    const v0, 0x7f0a0290
 
     .line 172
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1529,7 +1529,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mThumbnailView:Lcom/miui/home/recents/views/TaskViewThumbnail;
 
-    const v0, 0x7f0a0284
+    const v0, 0x7f0a028b
 
     .line 173
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1538,7 +1538,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mAccessLockView:Landroid/view/View;
 
-    const v0, 0x7f0a0288
+    const v0, 0x7f0a028f
 
     .line 174
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1547,7 +1547,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mScreeningView:Landroid/view/View;
 
-    const v0, 0x7f0a0287
+    const v0, 0x7f0a028e
 
     .line 175
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1558,7 +1558,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mPrivacyProtectImageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a02ec
+    const v0, 0x7f0a02f5
 
     .line 176
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1569,7 +1569,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mWorldCirculateContainer:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a02ed
+    const v0, 0x7f0a02f6
 
     .line 177
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;
@@ -1580,7 +1580,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/TaskView;->mWorldCirculateImageView:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a02ee
+    const v0, 0x7f0a02f7
 
     .line 178
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->findViewById(I)Landroid/view/View;

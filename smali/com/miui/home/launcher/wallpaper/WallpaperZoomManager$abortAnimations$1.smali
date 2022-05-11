@@ -35,28 +35,16 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 1
 
-    const/4 v0, 0x1
+    .line 68
+    iget-object v0, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$abortAnimations$1;->this$0:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;
 
-    .line 73
-    new-array v0, v0, [Ljava/lang/Object;
-
-    iget-object v1, p0, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager$abortAnimations$1;->this$0:Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;
-
-    invoke-static {v1}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->access$getMFolmeTarget$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    aput-object v1, v0, v2
-
-    invoke-static {v0}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+    invoke-static {v0}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->access$getMSpringAnimation$p(Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;)Landroidx/dynamicanimation/animation/SpringAnimation;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lmiuix/animation/IStateStyle;->cancel()V
+    invoke-virtual {v0}, Landroidx/dynamicanimation/animation/SpringAnimation;->cancel()V
 
     return-void
 .end method

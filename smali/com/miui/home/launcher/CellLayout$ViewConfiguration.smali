@@ -51,26 +51,26 @@
 .method private constructor <init>(Lcom/miui/home/launcher/CellLayout;)V
     .locals 0
 
-    .line 1833
+    .line 1831
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1837
+    .line 1835
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->map:Ljava/util/HashMap;
 
-    .line 1838
+    .line 1836
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->sortedViews:Ljava/util/ArrayList;
 
-    .line 1861
+    .line 1859
     new-instance p1, Lcom/miui/home/launcher/CellLayout$ViewConfiguration$SpanComparator;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/CellLayout$ViewConfiguration$SpanComparator;-><init>(Lcom/miui/home/launcher/CellLayout$ViewConfiguration;)V
@@ -83,7 +83,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/CellLayout;Lcom/miui/home/launcher/CellLayout$1;)V
     .locals 0
 
-    .line 1833
+    .line 1831
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;-><init>(Lcom/miui/home/launcher/CellLayout;)V
 
     return-void
@@ -94,7 +94,7 @@
 .method addView(Landroid/view/View;)V
     .locals 6
 
-    .line 1841
+    .line 1839
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->map:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -109,7 +109,7 @@
 
     return-void
 
-    .line 1842
+    .line 1840
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->this$0:Lcom/miui/home/launcher/CellLayout;
 
@@ -117,7 +117,7 @@
 
     move-result-object v0
 
-    .line 1843
+    .line 1841
     iget-object v1, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->map:Ljava/util/HashMap;
 
     new-instance v2, Lcom/miui/home/launcher/ItemInfo;
@@ -134,7 +134,7 @@
 
     invoke-virtual {v1, p1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1844
+    .line 1842
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->sortedViews:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -145,12 +145,12 @@
 .method clear()V
     .locals 1
 
-    .line 1857
+    .line 1855
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->map:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 1858
+    .line 1856
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->sortedViews:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
@@ -161,7 +161,7 @@
 .method resetViewConfig()V
     .locals 4
 
-    .line 1848
+    .line 1846
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->sortedViews:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -181,14 +181,14 @@
 
     check-cast v1, Landroid/view/View;
 
-    .line 1849
+    .line 1847
     iget-object v2, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-static {v2, v1}, Lcom/miui/home/launcher/CellLayout;->access$1500(Lcom/miui/home/launcher/CellLayout;Landroid/view/View;)Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object v2
 
-    .line 1850
+    .line 1848
     iget-object v3, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->map:Ljava/util/HashMap;
 
     invoke-virtual {v3, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -197,12 +197,12 @@
 
     check-cast v1, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 1851
+    .line 1849
     iget v3, v1, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
     iput v3, v2, Lcom/miui/home/launcher/ItemInfo;->cellX:I
 
-    .line 1852
+    .line 1850
     iget v1, v1, Lcom/miui/home/launcher/ItemInfo;->cellY:I
 
     iput v1, v2, Lcom/miui/home/launcher/ItemInfo;->cellY:I

@@ -30,7 +30,7 @@
         }
     .end annotation
 
-    .line 77
+    .line 79
     iput-object p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter$1;->this$0:Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 79
+    .line 81
     iget-object p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter$1;->this$0:Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;
 
     invoke-static {p1}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->access$getMLauncher$p(Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;)Lcom/miui/home/launcher/Launcher;
@@ -56,7 +56,7 @@
 
     if-nez p1, :cond_0
 
-    .line 80
+    .line 82
     iget-object p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter$1;->this$0:Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->getMBindElement()Landroid/view/View;
@@ -67,12 +67,12 @@
 
     move-result-object p1
 
-    .line 81
+    .line 83
     instance-of v0, p1, Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 82
+    .line 84
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter$1;->this$0:Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;
 
     check-cast p1, Landroid/view/View;
@@ -83,7 +83,7 @@
 
     invoke-static {v0, p1}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->access$setMLauncher$p(Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;Lcom/miui/home/launcher/Launcher;)V
 
-    .line 85
+    .line 87
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter$1;->this$0:Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;
 

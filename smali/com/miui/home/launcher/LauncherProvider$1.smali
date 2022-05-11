@@ -31,7 +31,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/LauncherProvider;Landroid/content/Context;ILandroid/graphics/Bitmap;)V
     .locals 0
 
-    .line 592
+    .line 576
     iput-object p1, p0, Lcom/miui/home/launcher/LauncherProvider$1;->this$0:Lcom/miui/home/launcher/LauncherProvider;
 
     iput-object p2, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$context:Landroid/content/Context;
@@ -50,26 +50,26 @@
 .method public run()V
     .locals 6
 
-    .line 596
+    .line 580
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getStatusBarHeight()I
 
     move-result v5
 
-    .line 597
+    .line 581
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$context:Landroid/content/Context;
 
     iget v1, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$wallpaperColorMode:I
 
     iget-object v2, p0, Lcom/miui/home/launcher/LauncherProvider$1;->val$lockScreenSnapshot:Landroid/graphics/Bitmap;
 
-    .line 598
+    .line 582
     invoke-static {}, Lcom/miui/home/launcher/WallpaperUtils;->hasAppliedLightWallpaper()Z
 
     move-result v3
 
     const/4 v4, 0x0
 
-    .line 597
+    .line 581
     invoke-static/range {v0 .. v5}, Lcom/miui/launcher/utils/MamlUtils;->snapshootLockscreen(Landroid/content/Context;ILandroid/graphics/Bitmap;ZII)Landroid/graphics/Bitmap;
 
     return-void

@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">Das Hochwischen dient allein dem Öffnen der App-Schublade. Wechsele zum normalen Startbildschirmmodus und versuche es erneut.</string>
     <string name="all_apps_suggestions">App-Vorschläge</string>
     <string name="am">morgens</string>
+    <string name="animation_rate_title">Animationsrate</string>
     <string name="announce_for_app_move_in_folder">Nach Position %1$d im Ordner verschoben</string>
     <string name="announce_for_checked">%1$s, überprüft</string>
     <string name="announce_for_choose_default_screen">Bildschirm %1$d als Standardstartbildschirm festlegen</string>
@@ -639,11 +640,11 @@
     <string name="navigation_guide_recent_title">Zuletzt geöffnete Apps öffnen</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Letzte Apps öffnen</string>
     <string name="navigation_guide_settings">Demogesten</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">Mittig</string>
+    <string name="navigation_position_left">Links</string>
+    <string name="navigation_position_right">Rechts</string>
+    <string name="navigation_position_summary">Benutzerdefinierte Positionen der Navigationstasten sind nur für den Startbildschirm möglich</string>
+    <string name="navigation_position_title">Position der Navigationstasten</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Abbrechen</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Vollbildgesten können nicht mit Drittparteien-Launchern verwendet werden. Auf den System-Launcher umschalten oder Vollbildgesten einschalten?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">OK</string>

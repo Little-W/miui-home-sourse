@@ -654,6 +654,41 @@
     return v0
 .end method
 
+.method private clearBackground()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    .line 485
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 486
+    iget-boolean v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mSplitActionBar:Z
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMenuView:Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;
+
+    if-eqz v1, :cond_0
+
+    .line 487
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMenuView:Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;
+
+    invoke-virtual {v1, v0}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 489
+    :cond_0
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMovableContainer:Landroid/widget/FrameLayout;
+
+    if-eqz v1, :cond_1
+
+    .line 490
+    invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_1
+    return-void
+.end method
+
 .method private getViewSpringAnima(Landroid/view/View;FFF)Lmiuix/animation/physics/SpringAnimation;
     .locals 2
 
@@ -832,6 +867,34 @@
     iput-boolean p1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mRequestAnimation:Z
 
     :cond_2
+    return-void
+.end method
+
+.method private resetBackground()V
+    .locals 2
+
+    .line 478
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mActionModeBackground:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p0, v0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    .line 479
+    iget-boolean v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mSplitActionBar:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMenuView:Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;
+
+    if-eqz v0, :cond_0
+
+    .line 480
+    iget-object v0, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mMenuView:Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;
+
+    iget-object v1, p0, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->mSplitBackground:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, v1}, Lmiuix/appcompat/internal/view/menu/action/ActionMenuView;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
     return-void
 .end method
 
@@ -4062,4 +4125,22 @@
 
     :goto_0
     return v0
+.end method
+
+.method public updateBackground(Z)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    .line 471
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->clearBackground()V
+
+    goto :goto_0
+
+    .line 473
+    :cond_0
+    invoke-direct {p0}, Lmiuix/appcompat/internal/app/widget/ActionBarContextView;->resetBackground()V
+
+    :goto_0
+    return-void
 .end method

@@ -2,7 +2,7 @@
 <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <WebView android:id="@id/branch_web" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar_load" android:layout_width="@dimen/dp40" android:layout_height="@dimen/dp40" android:indeterminate="true" />
     </FrameLayout>
 </LinearLayout>

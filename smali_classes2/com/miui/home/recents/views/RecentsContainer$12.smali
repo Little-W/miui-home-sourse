@@ -3,17 +3,27 @@
 .source "RecentsContainer.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/function/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/recents/views/RecentsContainer;->endForClear()V
+    value = Lcom/miui/home/recents/views/RecentsContainer;->refreshMemoryInfo()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x0
     name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/function/Function<",
+        "Ljava/lang/Void;",
+        "Ljava/lang/Long;",
+        ">;"
+    }
 .end annotation
 
 
@@ -25,7 +35,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
     .locals 0
 
-    .line 815
+    .line 835
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$12;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,73 +45,32 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 9
+.method public apply(Ljava/lang/Void;)Ljava/lang/Long;
+    .locals 2
 
-    .line 818
-    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$12;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
+    .line 838
+    iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$12;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
-    invoke-virtual {v0}, Lcom/miui/home/recents/views/RecentsContainer;->getFreeMemory()J
+    invoke-virtual {p1}, Lcom/miui/home/recents/views/RecentsContainer;->getFreeMemory()J
 
-    move-result-wide v7
+    move-result-wide v0
 
-    .line 819
-    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$12;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-static {v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$1400(Lcom/miui/home/recents/views/RecentsContainer;)J
+    move-result-object p1
 
-    move-result-wide v1
+    return-object p1
+.end method
 
-    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$12;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
+.method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$1500(Lcom/miui/home/recents/views/RecentsContainer;)J
+    .line 835
+    check-cast p1, Ljava/lang/Void;
 
-    move-result-wide v5
+    invoke-virtual {p0, p1}, Lcom/miui/home/recents/views/RecentsContainer$12;->apply(Ljava/lang/Void;)Ljava/lang/Long;
 
-    move-wide v3, v7
+    move-result-object p1
 
-    invoke-static/range {v1 .. v6}, Lcom/miui/home/launcher/AnalyticalDataCollectorForRecents;->sendOneKeyCleanEvent(JJJ)V
-
-    .line 820
-    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$12;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
-
-    invoke-virtual {v0}, Lcom/miui/home/recents/views/RecentsContainer;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/miui/home/recents/views/RecentsContainer$12;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
-
-    invoke-static {v1}, Lcom/miui/home/recents/views/RecentsContainer;->access$1400(Lcom/miui/home/recents/views/RecentsContainer;)J
-
-    move-result-wide v1
-
-    invoke-static {v0, v1, v2, v7, v8}, Lcom/miui/home/recents/views/RecentsContainer;->getToastMsg(Landroid/content/Context;JJ)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 821
-    iget-object v1, p0, Lcom/miui/home/recents/views/RecentsContainer$12;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
-
-    invoke-virtual {v1}, Lcom/miui/home/recents/views/RecentsContainer;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    .line 822
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    return-void
+    return-object p1
 .end method

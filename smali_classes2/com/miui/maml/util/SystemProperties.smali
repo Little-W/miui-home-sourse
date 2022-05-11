@@ -9,13 +9,13 @@
 
 
 # static fields
-.field private static isSupportGet:Z
+.field private static isSupportGet:Z = false
 
-.field private static isSupportGetBoolean:Z
+.field private static isSupportGetBoolean:Z = false
 
-.field private static isSupportGetInt:Z
+.field private static isSupportGetInt:Z = false
 
-.field private static isSupportGetLong:Z
+.field private static isSupportGetLong:Z = false
 
 
 # direct methods

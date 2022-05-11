@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Lcom/miui/home/launcher/IconContainer;
+.implements Lcom/miui/home/launcher/WallpaperUtils$WallpaperColorChangedListener;
 .implements Lcom/miui/home/launcher/interfaces/PresentAnimationResettable;
 .implements Lcom/miui/home/launcher/interfaces/UserPresentLoadingAnimIgnore;
 
@@ -31,7 +32,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 24
+    .line 30
     new-instance v0, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer$1;
 
     const-class v1, Ljava/lang/Float;
@@ -48,15 +49,15 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 41
+    .line 47
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 37
+    .line 43
     iput p1, p0, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->mTargetScale:F
 
-    .line 38
+    .line 44
     sget-object p1, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->SCALE_PROPERTY:Landroid/util/Property;
 
     const/4 p2, 0x2
@@ -73,7 +74,7 @@
 
     const/4 p1, 0x1
 
-    .line 42
+    .line 48
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->setWillNotDraw(Z)V
 
     return-void
@@ -90,7 +91,7 @@
 .method public getTargetScale()F
     .locals 1
 
-    .line 55
+    .line 61
     iget v0, p0, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->mTargetScale:F
 
     return v0
@@ -112,10 +113,19 @@
     return v0
 .end method
 
-.method public removeShortcutIcon(Lcom/miui/home/launcher/ShortcutIcon;)V
+.method public onWallpaperColorChanged()V
+    .locals 0
+
+    .line 83
+    invoke-static {p0}, Lcom/miui/home/launcher/WallpaperUtils;->varyViewGroupByWallpaper(Landroid/view/ViewGroup;)V
+
+    return-void
+.end method
+
+.method public removeItemIcon(Lcom/miui/home/launcher/ItemIcon;)V
     .locals 1
 
-    .line 60
+    .line 66
     invoke-virtual {p0}, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -124,14 +134,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 61
+    .line 67
     invoke-virtual {p0}, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/IconContainer;
 
-    invoke-interface {v0, p1}, Lcom/miui/home/launcher/IconContainer;->removeShortcutIcon(Lcom/miui/home/launcher/ShortcutIcon;)V
+    invoke-interface {v0, p1}, Lcom/miui/home/launcher/IconContainer;->removeItemIcon(Lcom/miui/home/launcher/ItemIcon;)V
 
     :cond_0
     return-void
@@ -140,19 +150,19 @@
 .method public setTargetScale(F)V
     .locals 4
 
-    .line 46
+    .line 52
     iget v0, p0, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->mTargetScale:F
 
     cmpl-float v0, v0, p1
 
     if-eqz v0, :cond_0
 
-    .line 47
+    .line 53
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->mAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 48
+    .line 54
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->mAnimator:Landroid/animation/ObjectAnimator;
 
     const/4 v1, 0x2
@@ -181,12 +191,12 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setFloatValues([F)V
 
-    .line 49
+    .line 55
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->mAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 50
+    .line 56
     iput p1, p0, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->mTargetScale:F
 
     :cond_0

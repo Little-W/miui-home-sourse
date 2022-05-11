@@ -35,7 +35,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 2596
+    .line 2615
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$15;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 .method public apply(Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 3
 
-    .line 2599
+    .line 2618
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$15;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$800(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
@@ -72,7 +72,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 2600
+    .line 2619
     instance-of v1, v0, Lcom/miui/home/launcher/FolderInfo;
 
     if-eqz v1, :cond_0
@@ -87,7 +87,7 @@
 
     goto :goto_1
 
-    .line 2601
+    .line 2620
     :cond_0
     move-object v1, v0
 
@@ -97,7 +97,7 @@
 
     move-result-object v1
 
-    .line 2602
+    .line 2621
     :goto_1
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace$15;->this$0:Lcom/miui/home/launcher/Workspace;
 
@@ -108,7 +108,7 @@
     :cond_1
     const/4 p1, 0x1
 
-    .line 2604
+    .line 2623
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -119,7 +119,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 2596
+    .line 2615
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace$15;->apply(Ljava/lang/Void;)Ljava/lang/Boolean;

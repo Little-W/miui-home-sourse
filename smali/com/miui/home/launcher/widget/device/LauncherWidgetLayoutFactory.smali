@@ -14,6 +14,8 @@
 
 
 # instance fields
+.field private mAutoScaleFactorTag:I
+
 .field private mAutoScaleTag:I
 
 
@@ -21,7 +23,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 28
+    .line 26
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -36,14 +38,14 @@
 
     sput-object v0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->DM:Landroid/util/DisplayMetrics;
 
-    .line 30
+    .line 28
     sget-object v0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->DM:Landroid/util/DisplayMetrics;
 
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
     sput v0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->DEFAULT_DENSITY:F
 
-    .line 31
+    .line 29
     sget-object v0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->DM:Landroid/util/DisplayMetrics;
 
     iget v0, v0, Landroid/util/DisplayMetrics;->scaledDensity:F
@@ -56,13 +58,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 35
+    .line 34
     invoke-direct {p0}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;-><init>()V
 
-    const v0, 0x7f0a019e
+    const v0, 0x7f0a01a2
+
+    .line 35
+    iput v0, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleTag:I
+
+    const v0, 0x7f0a01a1
 
     .line 36
-    iput v0, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleTag:I
+    iput v0, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleFactorTag:I
 
     return-void
 .end method
@@ -70,7 +77,7 @@
 .method public static scaleDensity(Landroid/util/DisplayMetrics;F)V
     .locals 2
 
-    .line 80
+    .line 76
     iget v0, p0, Landroid/util/DisplayMetrics;->density:F
 
     sget v1, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->DEFAULT_DENSITY:F
@@ -81,10 +88,10 @@
 
     mul-float/2addr v1, p1
 
-    .line 81
+    .line 77
     iput v1, p0, Landroid/util/DisplayMetrics;->density:F
 
-    .line 83
+    .line 79
     :cond_0
     iget v0, p0, Landroid/util/DisplayMetrics;->scaledDensity:F
 
@@ -96,7 +103,7 @@
 
     mul-float/2addr v1, p1
 
-    .line 84
+    .line 80
     iput v1, p0, Landroid/util/DisplayMetrics;->scaledDensity:F
 
     :cond_1
@@ -135,14 +142,23 @@
 .end method
 
 .method protected onPostCreateView(Landroid/view/View;Landroid/view/View;)V
-    .locals 1
+    .locals 2
 
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 91
+    .line 87
     iget v0, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleTag:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {p2, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    .line 88
+    iget v0, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleFactorTag:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -157,61 +173,21 @@
 .method protected onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    .line 51
-    invoke-virtual {p3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string p4, "com.miui.personalassistant"
-
-    invoke-virtual {p2, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
+    if-nez p1, :cond_0
 
     return-void
 
     .line 55
     :cond_0
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object p2
-
-    .line 56
-    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p4
-
-    .line 57
-    invoke-static {p2}, Lcom/miui/home/launcher/DeviceConfig;->isLargeScreen(Landroid/content/Context;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    const-string p1, "LauncherWidgetLayoutFactory"
-
-    const-string p2, "not in large screen mode"
-
-    .line 58
-    invoke-static {p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    return-void
-
-    :cond_1
-    if-eqz p1, :cond_2
-
-    .line 63
     iget p2, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleTag:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object p2
 
-    const-string p2, "LauncherWidgetLayoutFactory"
+    const-string p4, "LauncherWidgetLayoutFactory"
 
-    .line 64
+    .line 56
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -226,33 +202,73 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p4, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    if-eqz p1, :cond_2
+    if-eqz p2, :cond_1
 
-    const/4 p2, 0x0
+    const/4 p4, 0x0
 
-    .line 65
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    .line 57
+    invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object p2
+    move-result-object p4
 
-    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2, p4}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result p2
 
-    if-eqz p1, :cond_2
+    if-eqz p2, :cond_1
 
     return-void
 
-    .line 70
+    :cond_1
+    const p2, 0x7f070172
+
+    .line 62
+    invoke-virtual {p3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object p4
+
+    const-string v0, "com.miui.personalassistant"
+
+    invoke-virtual {p4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p4
+
+    if-eqz p4, :cond_2
+
+    const p2, 0x7f07038e
+
+    .line 65
     :cond_2
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object p4
+
+    invoke-virtual {p4}, Lcom/miui/home/launcher/Application;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p4
+
+    invoke-static {p4, p2}, Landroidx/core/content/res/ResourcesCompat;->getFloat(Landroid/content/res/Resources;I)F
+
+    move-result p2
+
+    .line 66
+    iget p4, p0, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->mAutoScaleFactorTag:I
+
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    invoke-virtual {p1, p4, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    .line 67
     invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -261,14 +277,6 @@
 
     move-result-object p1
 
-    const p2, 0x7f070387
-
-    .line 71
-    invoke-static {p4, p2}, Landroidx/core/content/res/ResourcesCompat;->getFloat(Landroid/content/res/Resources;I)F
-
-    move-result p2
-
-    .line 70
     invoke-static {p1, p2}, Lcom/miui/home/launcher/widget/device/LauncherWidgetLayoutFactory;->scaleDensity(Landroid/util/DisplayMetrics;F)V
 
     return-void

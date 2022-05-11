@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">위로 스와이프하여 앱 서랍을 실행합니다. 표준 홈 화면 모드로 전환하시고 다시 시도하십시오.</string>
     <string name="all_apps_suggestions">앱 제안</string>
     <string name="am">오전</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">폴더 내의 %1$d번째 위치로 이동됨</string>
     <string name="announce_for_checked">%1$s, 확인됨</string>
     <string name="announce_for_choose_default_screen">%1$d번째 화면을 기본 홈 화면으로 설정</string>
@@ -639,11 +640,11 @@
     <string name="navigation_guide_recent_title">최근 열기</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">최근 열기</string>
     <string name="navigation_guide_settings">제스처 학습</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">중앙</string>
+    <string name="navigation_position_left">왼쪽</string>
+    <string name="navigation_position_right">오른쪽</string>
+    <string name="navigation_position_summary">탐색 버튼의 사용자지정 위치는 홈 화면에만 적용 가능</string>
+    <string name="navigation_position_title">탐색 버튼 위치</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">취소</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">제3자 런처에서는 전체화면 제스처를 사용할 수 없습니다. 시스템 런처로 전환하고 전체화면 제스처를 켜시겠습니까?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">확인</string>

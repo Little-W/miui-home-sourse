@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 2369
+    .line 2364
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/miui/home/launcher/ScreenView$SavedState;
     .locals 2
 
-    .line 2371
+    .line 2366
     new-instance v0, Lcom/miui/home/launcher/ScreenView$SavedState;
 
     const/4 v1, 0x0
@@ -54,7 +54,7 @@
 .method public bridge synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 2369
+    .line 2364
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ScreenView$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/miui/home/launcher/ScreenView$SavedState;
 
     move-result-object p1
@@ -65,7 +65,7 @@
 .method public newArray(I)[Lcom/miui/home/launcher/ScreenView$SavedState;
     .locals 0
 
-    .line 2375
+    .line 2370
     new-array p1, p1, [Lcom/miui/home/launcher/ScreenView$SavedState;
 
     return-object p1
@@ -74,7 +74,7 @@
 .method public bridge synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 2369
+    .line 2364
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ScreenView$SavedState$1;->newArray(I)[Lcom/miui/home/launcher/ScreenView$SavedState;
 
     move-result-object p1

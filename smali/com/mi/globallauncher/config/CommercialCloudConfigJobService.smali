@@ -432,21 +432,7 @@
 
     if-nez v1, :cond_6
 
-    const-string v1, "com.mi.android.globallauncher"
-
-    invoke-static {}, Lcom/mi/globallauncher/manager/BranchImplement;->getInstance()Lcom/mi/globallauncher/manager/BranchImplement;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Lcom/mi/globallauncher/manager/BranchImplement;->getApplication()Landroid/app/Application;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/app/Application;->getPackageName()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {}, Lcom/mi/globallauncher/util/CommonUtilities;->isPocoLauncher()Z
 
     move-result v1
 

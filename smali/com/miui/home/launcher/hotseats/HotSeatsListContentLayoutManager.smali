@@ -107,7 +107,7 @@
 .method private getItemOffset(Landroid/view/View;)F
     .locals 1
 
-    .line 120
+    .line 121
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result p1
@@ -160,7 +160,7 @@
 
     move v2, v1
 
-    .line 94
+    .line 95
     :goto_0
     iget-object v3, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mAdapter:Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;
 
@@ -170,14 +170,14 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 95
+    .line 96
     iget-object v3, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mAdapter:Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;
 
     invoke-virtual {v3, v1}, Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;->getItemViewType(I)I
 
     move-result v3
 
-    .line 96
+    .line 97
     iget-object v4, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mViewWidths:Landroid/util/SparseIntArray;
 
     invoke-virtual {v4, v3, v0}, Landroid/util/SparseIntArray;->get(II)I
@@ -197,7 +197,7 @@
 .method getDecoration()Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager$OffsetDecoration;
     .locals 1
 
-    .line 148
+    .line 149
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mDecoration:Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager$OffsetDecoration;
 
     return-object v0
@@ -206,12 +206,12 @@
 .method public onLayoutCompleted(Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 5
 
-    .line 125
+    .line 126
     invoke-super {p0, p1}, Lcom/google/android/flexbox/FlexboxLayoutManager;->onLayoutCompleted(Landroidx/recyclerview/widget/RecyclerView$State;)V
 
     const/4 v0, 0x0
 
-    .line 128
+    .line 129
     :goto_0
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$State;->getItemCount()I
 
@@ -219,19 +219,19 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 129
+    .line 130
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->findViewByPosition(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 130
+    .line 131
     instance-of v2, v1, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;
 
     if-eqz v2, :cond_0
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 131
+    .line 132
     invoke-direct {p0, v1}, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->getItemOffset(Landroid/view/View;)F
 
     move-result v3
@@ -246,7 +246,7 @@
 
     add-float/2addr v3, v2
 
-    .line 132
+    .line 133
     check-cast v1, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;
 
     invoke-virtual {v1, v3}, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->setTargetScale(F)V
@@ -263,7 +263,7 @@
 .method public updateOffsetIfNeed()V
     .locals 3
 
-    .line 105
+    .line 106
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mContent:Lcom/miui/home/launcher/hotseats/HotSeatsListContent;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/hotseats/HotSeatsListContent;->getMeasuredWidth()I
@@ -286,7 +286,7 @@
 
     sub-int/2addr v0, v1
 
-    .line 106
+    .line 107
     invoke-virtual {p0}, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->getContentWidth()I
 
     move-result v1
@@ -304,7 +304,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 112
+    .line 113
     :goto_0
     iget v2, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mTotalOffset:I
 
@@ -314,14 +314,14 @@
 
     if-eq v2, v1, :cond_2
 
-    .line 113
+    .line 114
     :cond_1
     iput v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mTotalOffset:I
 
-    .line 114
+    .line 115
     iput v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mContentWidth:I
 
-    .line 115
+    .line 116
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mContent:Lcom/miui/home/launcher/hotseats/HotSeatsListContent;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/hotseats/HotSeatsListContent;->invalidateItemDecorations()V
@@ -331,7 +331,7 @@
 .end method
 
 .method public updateViewWidth()V
-    .locals 4
+    .locals 3
 
     .line 77
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -346,89 +346,71 @@
     invoke-virtual {v1}, Landroid/util/SparseIntArray;->clear()V
 
     .line 79
-    iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mViewWidths:Landroid/util/SparseIntArray;
-
     invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getHotSeatsCellWidth()I
 
-    move-result v2
-
-    const/4 v3, 0x2
-
-    invoke-virtual {v1, v3, v2}, Landroid/util/SparseIntArray;->put(II)V
+    move-result v0
 
     .line 80
     iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mViewWidths:Landroid/util/SparseIntArray;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getHotSeatsCellWidth()I
+    const/4 v2, 0x2
 
-    move-result v2
-
-    const/16 v3, 0x20
-
-    invoke-virtual {v1, v3, v2}, Landroid/util/SparseIntArray;->put(II)V
+    invoke-virtual {v1, v2, v0}, Landroid/util/SparseIntArray;->put(II)V
 
     .line 81
     iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mViewWidths:Landroid/util/SparseIntArray;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getHotSeatsCellWidth()I
+    const/16 v2, 0x20
 
-    move-result v2
-
-    const/4 v3, 0x4
-
-    invoke-virtual {v1, v3, v2}, Landroid/util/SparseIntArray;->put(II)V
+    invoke-virtual {v1, v2, v0}, Landroid/util/SparseIntArray;->put(II)V
 
     .line 82
     iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mViewWidths:Landroid/util/SparseIntArray;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getHotSeatsCellWidth()I
+    const/4 v2, 0x4
 
-    move-result v2
-
-    const/16 v3, 0x8
-
-    invoke-virtual {v1, v3, v2}, Landroid/util/SparseIntArray;->put(II)V
+    invoke-virtual {v1, v2, v0}, Landroid/util/SparseIntArray;->put(II)V
 
     .line 83
     iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mViewWidths:Landroid/util/SparseIntArray;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getHotSeatsCellWidth()I
+    const/16 v2, 0x8
 
-    move-result v2
-
-    const/16 v3, 0x10
-
-    invoke-virtual {v1, v3, v2}, Landroid/util/SparseIntArray;->put(II)V
+    invoke-virtual {v1, v2, v0}, Landroid/util/SparseIntArray;->put(II)V
 
     .line 84
     iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mViewWidths:Landroid/util/SparseIntArray;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/DeviceProfile;->getHotSeatsCellWidth()I
+    const/16 v2, 0x10
 
-    move-result v0
+    invoke-virtual {v1, v2, v0}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 85
+    iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mViewWidths:Landroid/util/SparseIntArray;
 
     const/16 v2, 0x80
 
     invoke-virtual {v1, v2, v0}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 85
-    iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mViewWidths:Landroid/util/SparseIntArray;
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getHotSeatsCellWidth()I
-
-    move-result v1
-
     .line 86
+    iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mViewWidths:Landroid/util/SparseIntArray;
+
+    const/16 v2, 0x100
+
+    invoke-virtual {v1, v2, v0}, Landroid/util/SparseIntArray;->put(II)V
+
+    .line 87
+    iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->mViewWidths:Landroid/util/SparseIntArray;
+
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getIconWidth()I
 
     move-result v2
 
-    sub-int/2addr v1, v2
+    sub-int/2addr v0, v2
 
     const/16 v2, 0x40
 
-    .line 85
-    invoke-virtual {v0, v2, v1}, Landroid/util/SparseIntArray;->put(II)V
+    invoke-virtual {v1, v2, v0}, Landroid/util/SparseIntArray;->put(II)V
 
     return-void
 .end method

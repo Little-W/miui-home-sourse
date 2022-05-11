@@ -28,6 +28,8 @@
 
 .field protected mIsSupportMiniSmallWindow:Z
 
+.field protected mIsSupportWorldcirculate:Z
+
 .field protected mLastCropStatus:I
 
 .field protected mOpenContent:I
@@ -41,7 +43,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 46
+    .line 47
     invoke-static {}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->isSupportStartSmallWithPosition()Z
 
     move-result v0
@@ -54,7 +56,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 49
+    .line 50
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     .line 24
@@ -104,12 +106,15 @@
     .line 36
     iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsInit:Z
 
-    const/4 p1, 0x1
-
     .line 40
     iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsSupportMiniSmallWindow:Z
 
-    .line 43
+    .line 41
+    iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsSupportWorldcirculate:Z
+
+    const/4 p1, 0x1
+
+    .line 44
     iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsFirstAnim:Z
 
     return-void
@@ -118,7 +123,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 53
+    .line 54
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 24
@@ -168,12 +173,15 @@
     .line 36
     iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsInit:Z
 
-    const/4 p1, 0x1
-
     .line 40
     iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsSupportMiniSmallWindow:Z
 
-    .line 43
+    .line 41
+    iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsSupportWorldcirculate:Z
+
+    const/4 p1, 0x1
+
+    .line 44
     iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsFirstAnim:Z
 
     return-void
@@ -182,7 +190,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 57
+    .line 58
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 24
@@ -232,12 +240,15 @@
     .line 36
     iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsInit:Z
 
-    const/4 p1, 0x1
-
     .line 40
     iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsSupportMiniSmallWindow:Z
 
-    .line 43
+    .line 41
+    iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsSupportWorldcirculate:Z
+
+    const/4 p1, 0x1
+
+    .line 44
     iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsFirstAnim:Z
 
     return-void
@@ -246,7 +257,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 0
 
-    .line 61
+    .line 62
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
     .line 24
@@ -296,15 +307,18 @@
     .line 36
     iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsInit:Z
 
-    const/4 p1, 0x1
-
     .line 40
     iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsSupportMiniSmallWindow:Z
 
-    .line 43
+    .line 41
+    iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsSupportWorldcirculate:Z
+
+    const/4 p1, 0x1
+
+    .line 44
     iput-boolean p1, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsFirstAnim:Z
 
-    .line 62
+    .line 63
     invoke-static {p0}, Lcom/miui/home/launcher/common/Utilities;->closeForceDarkAllowed(Landroid/view/View;)V
 
     return-void
@@ -340,19 +354,19 @@
 .method public getOpenContent()I
     .locals 1
 
-    .line 137
+    .line 138
     iget v0, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mOpenContent:I
 
     return v0
 .end method
 
-.method public abstract initTopWindowCrop(ZIIZ)V
+.method public abstract initTopWindowCrop(ZIIZZ)V
 .end method
 
 .method public isInHoldState()Z
     .locals 2
 
-    .line 101
+    .line 102
     iget-boolean v0, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsInit:Z
 
     if-eqz v0, :cond_0
@@ -381,7 +395,7 @@
 .method public isInit()Z
     .locals 1
 
-    .line 105
+    .line 106
     iget-boolean v0, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mIsInit:Z
 
     return v0
@@ -395,7 +409,7 @@
 
     const-wide/16 v0, 0x0
 
-    .line 86
+    .line 87
     invoke-virtual {p0, p1, p2, v0, v1}, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->setViewAlpha(Landroid/view/View;FJ)V
 
     return-void
@@ -404,7 +418,7 @@
 .method public setViewAlpha(Landroid/view/View;FJ)V
     .locals 2
 
-    .line 90
+    .line 91
     invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
 
     move-result v0
@@ -413,14 +427,14 @@
 
     if-nez v0, :cond_0
 
-    .line 91
+    .line 92
     invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p3
 
     invoke-virtual {p3}, Landroid/view/ViewPropertyAnimator;->cancel()V
 
-    .line 92
+    .line 93
     invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
 
     goto :goto_0
@@ -428,7 +442,7 @@
     :cond_0
     const/high16 v0, 0x437a0000    # 250.0f
 
-    .line 94
+    .line 95
     invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
 
     move-result v1
@@ -443,7 +457,7 @@
 
     float-to-long v0, v1
 
-    .line 95
+    .line 96
     invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -462,7 +476,7 @@
 
     iget-object p2, p0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->mDecelerateInterpolator:Landroid/view/animation/Interpolator;
 
-    .line 96
+    .line 97
     invoke-virtual {p1, p2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object p1
@@ -480,7 +494,7 @@
 
     return-void
 
-    .line 112
+    .line 113
     :cond_0
     sget-boolean v0, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->sIsSupportStartSmallWithPosition:Z
 
@@ -496,7 +510,7 @@
 
     if-nez v0, :cond_2
 
-    .line 113
+    .line 114
     invoke-virtual {p1}, Landroid/graphics/RectF;->centerX()F
 
     move-result v0
@@ -524,7 +538,7 @@
     :try_start_0
     const-string v4, "android.util.MiuiMultiWindowUtils"
 
-    .line 116
+    .line 117
     invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v4
@@ -551,7 +565,7 @@
 
     new-array v7, v7, [Ljava/lang/Object;
 
-    .line 119
+    .line 120
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->getContext()Landroid/content/Context;
 
     move-result-object v9
@@ -586,7 +600,7 @@
 
     aput-object p1, v7, v2
 
-    .line 115
+    .line 116
     invoke-static {v4, v5, v6, v8, v7}, Lcom/miui/launcher/utils/ReflectUtils;->callStaticMethod(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -596,7 +610,7 @@
     :catch_0
     move-exception p1
 
-    .line 121
+    .line 122
     invoke-virtual {p1}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
 
     goto :goto_1
@@ -605,7 +619,7 @@
     :try_start_1
     const-string v0, "android.util.MiuiMultiWindowUtils"
 
-    .line 126
+    .line 127
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -626,7 +640,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    .line 129
+    .line 130
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsTopWindowCrop;->getContext()Landroid/content/Context;
 
     move-result-object v7
@@ -655,7 +669,7 @@
 
     aput-object v1, v2, v3
 
-    .line 125
+    .line 126
     invoke-static {v0, v4, v5, v6, v2}, Lcom/miui/launcher/utils/ReflectUtils;->callStaticMethod(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catch Ljava/lang/ClassNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
@@ -665,7 +679,7 @@
     :catch_1
     move-exception p1
 
-    .line 131
+    .line 132
     invoke-virtual {p1}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
 
     :goto_1

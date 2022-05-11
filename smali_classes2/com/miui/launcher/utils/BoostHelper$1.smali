@@ -31,7 +31,7 @@
 .method constructor <init>(Lcom/miui/launcher/utils/BoostHelper;Landroid/view/View;JJ)V
     .locals 0
 
-    .line 123
+    .line 128
     iput-object p1, p0, Lcom/miui/launcher/utils/BoostHelper$1;->this$0:Lcom/miui/launcher/utils/BoostHelper;
 
     iput-object p2, p0, Lcom/miui/launcher/utils/BoostHelper$1;->val$view:Landroid/view/View;
@@ -50,13 +50,13 @@
 .method public run()V
     .locals 11
 
-    .line 127
+    .line 132
     :try_start_0
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
 
-    .line 128
+    .line 133
     iget-object v1, p0, Lcom/miui/launcher/utils/BoostHelper$1;->this$0:Lcom/miui/launcher/utils/BoostHelper;
 
     iget-object v2, p0, Lcom/miui/launcher/utils/BoostHelper$1;->val$view:Landroid/view/View;
@@ -65,7 +65,7 @@
 
     move-result v1
 
-    .line 129
+    .line 134
     iget-object v2, p0, Lcom/miui/launcher/utils/BoostHelper$1;->this$0:Lcom/miui/launcher/utils/BoostHelper;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -74,14 +74,14 @@
 
     invoke-static {v2, v3, v4}, Lcom/miui/launcher/utils/BoostHelper;->access$102(Lcom/miui/launcher/utils/BoostHelper;J)J
 
-    .line 130
+    .line 135
     iget-object v2, p0, Lcom/miui/launcher/utils/BoostHelper$1;->this$0:Lcom/miui/launcher/utils/BoostHelper;
 
     iget-wide v3, p0, Lcom/miui/launcher/utils/BoostHelper$1;->val$duration:J
 
     invoke-static {v2, v3, v4}, Lcom/miui/launcher/utils/BoostHelper;->access$202(Lcom/miui/launcher/utils/BoostHelper;J)J
 
-    .line 131
+    .line 136
     iget-object v2, p0, Lcom/miui/launcher/utils/BoostHelper$1;->this$0:Lcom/miui/launcher/utils/BoostHelper;
 
     invoke-static {v2}, Lcom/miui/launcher/utils/BoostHelper;->access$300(Lcom/miui/launcher/utils/BoostHelper;)Ljava/lang/Class;
@@ -94,7 +94,7 @@
 
     if-nez v2, :cond_0
 
-    .line 132
+    .line 137
     iget-object v2, p0, Lcom/miui/launcher/utils/BoostHelper$1;->this$0:Lcom/miui/launcher/utils/BoostHelper;
 
     const-string v5, "miui.turbosched.TurboSchedManager"
@@ -105,7 +105,7 @@
 
     invoke-static {v2, v5}, Lcom/miui/launcher/utils/BoostHelper;->access$302(Lcom/miui/launcher/utils/BoostHelper;Ljava/lang/Class;)Ljava/lang/Class;
 
-    .line 133
+    .line 138
     iget-object v2, p0, Lcom/miui/launcher/utils/BoostHelper$1;->this$0:Lcom/miui/launcher/utils/BoostHelper;
 
     iget-object v5, p0, Lcom/miui/launcher/utils/BoostHelper$1;->this$0:Lcom/miui/launcher/utils/BoostHelper;
@@ -140,7 +140,7 @@
 
     invoke-static {v2, v5}, Lcom/miui/launcher/utils/BoostHelper;->access$402(Lcom/miui/launcher/utils/BoostHelper;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 135
+    .line 140
     :cond_0
     iget-object v2, p0, Lcom/miui/launcher/utils/BoostHelper$1;->this$0:Lcom/miui/launcher/utils/BoostHelper;
 
@@ -160,7 +160,7 @@
 
     goto :goto_0
 
-    .line 139
+    .line 144
     :cond_1
     iget-object v2, p0, Lcom/miui/launcher/utils/BoostHelper$1;->this$0:Lcom/miui/launcher/utils/BoostHelper;
 
@@ -184,7 +184,7 @@
 
     const-string v10, "[I"
 
-    .line 141
+    .line 146
     invoke-static {v10}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v10
@@ -213,12 +213,12 @@
 
     aput-object v0, v10, v4
 
-    .line 139
+    .line 144
     invoke-static/range {v5 .. v10}, Lcom/miui/launcher/utils/ReflectUtils;->invoke(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)V
 
     const-string v0, "Launcher.Boost"
 
-    .line 142
+    .line 147
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -239,7 +239,7 @@
 
     goto :goto_1
 
-    .line 136
+    .line 141
     :cond_2
     :goto_0
     iget-object v0, p0, Lcom/miui/launcher/utils/BoostHelper$1;->this$0:Lcom/miui/launcher/utils/BoostHelper;

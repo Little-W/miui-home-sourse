@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/launcher/utils/BoostHelper;[IJ)V
     .locals 0
 
-    .line 157
+    .line 162
     iput-object p1, p0, Lcom/miui/launcher/utils/BoostHelper$2;->this$0:Lcom/miui/launcher/utils/BoostHelper;
 
     iput-object p2, p0, Lcom/miui/launcher/utils/BoostHelper$2;->val$threadIds:[I
@@ -46,7 +46,7 @@
 .method public run()V
     .locals 8
 
-    .line 161
+    .line 166
     :try_start_0
     iget-object v0, p0, Lcom/miui/launcher/utils/BoostHelper$2;->val$threadIds:[I
 
@@ -54,7 +54,7 @@
 
     if-lez v0, :cond_0
 
-    .line 162
+    .line 167
     iget-object v0, p0, Lcom/miui/launcher/utils/BoostHelper$2;->this$0:Lcom/miui/launcher/utils/BoostHelper;
 
     invoke-static {v0}, Lcom/miui/launcher/utils/BoostHelper;->access$600(Lcom/miui/launcher/utils/BoostHelper;)Ljava/lang/Class;
@@ -71,7 +71,7 @@
 
     const-string v5, "[I"
 
-    .line 163
+    .line 168
     invoke-static {v5}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v5
@@ -100,7 +100,7 @@
 
     aput-object v5, v3, v7
 
-    .line 162
+    .line 167
     invoke-static {v0, v1, v2, v4, v3}, Lcom/miui/launcher/utils/ReflectUtils;->callStaticMethod(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0

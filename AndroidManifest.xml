@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" android:sharedUserId="@string/sharedUserId" package="com.miui.home" platformBuildVersionCode="427004555" platformBuildVersionName="ALPHA-4.27.0.4555-04081948">
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" android:sharedUserId="@string/sharedUserId" package="com.miui.home" platformBuildVersionCode="436004709" platformBuildVersionName="RELEASE-4.36.0.4709-05021842">
     <permission android:description="@string/permdesc_install_shortcut" android:label="@string/permlab_install_shortcut" android:name="com.android.launcher.permission.INSTALL_SHORTCUT" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
     <permission android:description="@string/permdesc_uninstall_shortcut" android:label="@string/permlab_uninstall_shortcut" android:name="com.miui.home.launcher.permission.UNINSTALL_SHORTCUT" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
     <permission android:description="@string/permdesc_install_widget" android:label="@string/permlab_install_widget" android:name="com.miui.home.launcher.permission.INSTALL_WIDGET" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="normal"/>
@@ -6,8 +6,7 @@
     <permission android:description="@string/permdesc_read_settings" android:label="@string/permlab_read_settings" android:name="com.android.launcher.permission.READ_SETTINGS" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="signatureOrSystem"/>
     <permission android:description="@string/permdesc_write_settings" android:label="@string/permlab_write_settings" android:name="com.android.launcher.permission.WRITE_SETTINGS" android:permissionGroup="android.permission-group.SYSTEM_TOOLS" android:protectionLevel="signatureOrSystem"/>
     <permission android:name="com.miui.home.launcher.permission.LOADING_STATUS" android:protectionLevel="normal"/>
-    <permission android:name="com.miui.home.launcher.permission.REMOVE_WIDGET" android:protectionLevel="signature"/>
-    <permission android:name="com.miui.home.launcher.permission.PUSH_REFRESH_WIDGET" android:protectionLevel="signatureOrSystem"/> // The MaMl widget runs in home need it to access data in powerkeeper. <uses-permission android:name="miui.permission.powerkeeper.POWER_DATA"/>
+    <permission android:name="com.miui.home.launcher.permission.REMOVE_WIDGET" android:protectionLevel="signature"/> // The MaMl widget runs in home need it to access data in powerkeeper. <uses-permission android:name="miui.permission.powerkeeper.POWER_DATA"/>
     <uses-permission android:name="miui.permission.powerkeeper.HIDDEN_MODE_PROVIDER"/>
     <uses-permission android:name="android.permission.SET_WALLPAPER_COMPONENT"/>
     <uses-permission android:name="android.permission.BIND_WALLPAPER"/>
@@ -88,6 +87,7 @@
     <uses-permission android:name="com.miui.securitycore.permission.XSPACE_DUAL"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
     <uses-permission android:name="com.android.updater.permission.ACCESS_UPDATESERVICE"/>
     <uses-permission android:name="com.miui.systemAdSolution.adSwitch.PROVIDER"/>
     <uses-permission android:name="android.permission.START_TASKS_FROM_RECENTS"/>
@@ -181,11 +181,6 @@
         <receiver android:name="com.miui.home.launcher.offlinewidget.OfflineMamlReceiver" android:permission="com.miui.home.launcher.permission.REMOVE_WIDGET">
             <intent-filter>
                 <action android:name="com.miui.personalassistant.ACTION_OFFLINE_MAML"/>
-            </intent-filter>
-        </receiver>
-        <receiver android:name="com.miui.home.launcher.widget.pushrefresh.PushRefreshReceiver" android:permission="com.miui.home.launcher.permission.PUSH_REFRESH_WIDGET">
-            <intent-filter>
-                <action android:name="com.miui.home.launcher.action.PUSH_REFRESH_WIDGET"/>
             </intent-filter>
         </receiver>
         <receiver android:name="com.miui.home.launcher.InstallWidgetReceiver" android:permission="com.miui.home.launcher.permission.INSTALL_WIDGET">
@@ -355,7 +350,7 @@
         <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_imJJwWS7uH8pJ9WsNX2dTipbDtlKqWd7"/>
         <meta-data android:name="io.branch.sdk.BranchTestKey" android:value="key_test_pdHLA0I9vOZcI56yJZ9NDjciuunIu1zn"/>
         <meta-data android:name="io.branch.sdk.TestMode" android:value="true"/>
-        <activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:directBootAware="false" android:excludeFromRecents="true" android:launchMode="singleTop" android:name="com.mi.globallauncher.CommercialWebViewActivity" android:screenOrientation="portrait" android:theme="@style/WebViewCustomLightTheme"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:directBootAware="false" android:excludeFromRecents="true" android:launchMode="singleTop" android:name="com.mi.globallauncher.activity.CommercialWebViewActivity" android:screenOrientation="portrait" android:theme="@style/WebViewCustomLightTheme"/>
         <service android:name="com.mi.globallauncher.config.CommercialCloudConfigJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <service android:exported="false" android:label="Branch local content update service" android:name="io.branch.search.internal.rawsqlite.BundleUpdateService" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <service android:exported="false" android:label="DISCONTINUED Branch local content update service" android:name="io.branch.search.internal.rawsqlite.SQLUpdaterService" android:permission="android.permission.BIND_JOB_SERVICE"/>

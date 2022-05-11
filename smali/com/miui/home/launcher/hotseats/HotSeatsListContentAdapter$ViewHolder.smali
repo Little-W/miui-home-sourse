@@ -22,13 +22,13 @@
 .method public constructor <init>(Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;Landroid/view/View;)V
     .locals 0
 
-    .line 225
+    .line 237
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    .line 226
+    .line 238
     iput-object p2, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter$ViewHolder;->content:Landroid/view/View;
 
-    .line 228
+    .line 240
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/hotseats/FlexboxItemContainer;->addView(Landroid/view/View;)V
 
     return-void
@@ -39,7 +39,7 @@
 .method public getContent()Landroid/view/View;
     .locals 1
 
-    .line 232
+    .line 244
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter$ViewHolder;->content:Landroid/view/View;
 
     return-object v0

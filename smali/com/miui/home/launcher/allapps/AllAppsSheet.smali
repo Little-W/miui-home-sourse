@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 36
+    .line 37
     sget-object v0, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->SYSTEM:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     sput-object v0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->COLOR_MODE:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
@@ -35,17 +35,17 @@
 
     const/4 v0, 0x0
 
-    .line 63
+    .line 64
     invoke-direct {p0, p1, p2, v0}, Lcom/miui/home/launcher/view/AbstractSlideInView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 40
+    .line 41
     new-instance p1, Landroid/graphics/Point;
 
     invoke-direct {p1}, Landroid/graphics/Point;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mFastScrollerOffset:Landroid/graphics/Point;
 
-    .line 64
+    .line 65
     iput-object p0, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mContent:Landroid/view/View;
 
     return-void
@@ -56,10 +56,10 @@
 
     const/4 v0, 0x1
 
-    .line 88
+    .line 89
     iput-boolean v0, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mIsOpen:Z
 
-    .line 89
+    .line 90
     sget-object v0, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->SYSTEM:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -72,7 +72,7 @@
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/AllAppsSheet;->setBackgroundColor(I)V
 
-    .line 90
+    .line 91
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getSystemUiController()Lcom/miui/home/launcher/util/SystemUiController;
@@ -87,10 +87,10 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/util/SystemUiController;->updateUiState(Z)V
 
-    .line 91
+    .line 92
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/AllAppsSheet;->removeFragment()V
 
-    .line 92
+    .line 93
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/AllAppsSheet;->showFragment()V
 
     return-void
@@ -99,34 +99,34 @@
 .method private removeFragment()V
     .locals 2
 
-    .line 111
+    .line 112
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mFragment:Lcom/miui/home/launcher/allapps/AllAppsSheetFragment;
 
     if-eqz v0, :cond_0
 
-    .line 112
+    .line 113
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 113
+    .line 114
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object v0
 
-    .line 114
+    .line 115
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mFragment:Lcom/miui/home/launcher/allapps/AllAppsSheetFragment;
 
     invoke-virtual {v0, v1}, Landroidx/fragment/app/FragmentTransaction;->remove(Landroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
-    .line 115
+    .line 116
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->commit()I
 
     const/4 v0, 0x0
 
-    .line 116
+    .line 117
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mFragment:Lcom/miui/home/launcher/allapps/AllAppsSheetFragment;
 
     :cond_0
@@ -136,7 +136,7 @@
 .method public static shouldShow(Lcom/miui/home/launcher/Launcher;)Z
     .locals 2
 
-    .line 44
+    .line 45
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -151,22 +151,26 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 45
+    .line 46
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 46
+    .line 47
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->isInMultiWindowMode()Z
 
-    move-result v0
+    move-result p0
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    .line 47
-    invoke-static {p0}, Lcom/miui/home/launcher/DeviceConfig;->isLargeScreen(Landroid/content/Context;)Z
+    .line 48
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
 
     move-result p0
 
@@ -186,7 +190,7 @@
 .method public static show(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/allapps/AllAppsSheet;
     .locals 4
 
-    .line 51
+    .line 52
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->isAllAppsSheetShow()Z
 
     move-result v0
@@ -195,7 +199,7 @@
 
     const/16 v0, 0x400
 
-    .line 52
+    .line 53
     invoke-static {p0, v0}, Lcom/miui/home/launcher/AbstractFloatingView;->getTopOpenViewWithType(Lcom/miui/home/launcher/BaseDraggingActivity;I)Lcom/miui/home/launcher/AbstractFloatingView;
 
     move-result-object p0
@@ -204,7 +208,7 @@
 
     return-object p0
 
-    .line 55
+    .line 56
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getLayoutInflater()Landroid/view/LayoutInflater;
 
@@ -212,7 +216,7 @@
 
     const v1, 0x7f0d0032
 
-    .line 56
+    .line 57
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
 
     move-result-object v2
@@ -225,14 +229,14 @@
 
     check-cast v0, Lcom/miui/home/launcher/allapps/AllAppsSheet;
 
-    .line 57
+    .line 58
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getDragLayer()Lcom/miui/home/launcher/DragLayer;
 
     move-result-object p0
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/DragLayer;->addView(Landroid/view/View;)V
 
-    .line 58
+    .line 59
     invoke-direct {v0}, Lcom/miui/home/launcher/allapps/AllAppsSheet;->handleOpen()V
 
     return-object v0
@@ -241,33 +245,33 @@
 .method private showFragment()V
     .locals 3
 
-    .line 96
+    .line 97
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
 
     move-result-object v0
 
-    .line 97
+    .line 98
     invoke-static {}, Lcom/miui/home/launcher/allapps/AllAppsSheetFragment;->newInstance()Lcom/miui/home/launcher/allapps/AllAppsSheetFragment;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mFragment:Lcom/miui/home/launcher/allapps/AllAppsSheetFragment;
 
-    .line 98
+    .line 99
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object v0
 
-    .line 99
+    .line 100
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mFragment:Lcom/miui/home/launcher/allapps/AllAppsSheetFragment;
 
     const v2, 0x7f0a0067
 
     invoke-virtual {v0, v2, v1}, Landroidx/fragment/app/FragmentTransaction;->add(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/FragmentTransaction;
 
-    .line 100
+    .line 101
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentTransaction;->commitAllowingStateLoss()I
 
     return-void
@@ -280,13 +284,13 @@
 
     const/4 p1, 0x0
 
-    .line 105
+    .line 106
     iput-boolean p1, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mIsOpen:Z
 
-    .line 106
+    .line 107
     invoke-direct {p0}, Lcom/miui/home/launcher/allapps/AllAppsSheet;->removeFragment()V
 
-    .line 107
+    .line 108
     invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/AllAppsSheet;->onCloseComplete()V
 
     return-void
@@ -313,10 +317,10 @@
 .method protected onAttachedToWindow()V
     .locals 1
 
-    .line 69
+    .line 70
     invoke-super {p0}, Lcom/miui/home/launcher/view/AbstractSlideInView;->onAttachedToWindow()V
 
-    .line 70
+    .line 71
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -327,7 +331,7 @@
 
     if-nez v0, :cond_0
 
-    .line 71
+    .line 72
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -357,10 +361,10 @@
 .method protected onDetachedFromWindow()V
     .locals 1
 
-    .line 163
+    .line 164
     invoke-super {p0}, Lcom/miui/home/launcher/view/AbstractSlideInView;->onDetachedFromWindow()V
 
-    .line 164
+    .line 165
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -371,7 +375,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 165
+    .line 166
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -385,19 +389,19 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 127
+    .line 128
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 128
+    .line 129
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mFragment:Lcom/miui/home/launcher/allapps/AllAppsSheetFragment;
 
     if-eqz v0, :cond_0
 
-    .line 129
+    .line 130
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mFastScrollerOffset:Landroid/graphics/Point;
 
     invoke-virtual {v0, p0, p1, v1}, Lcom/miui/home/launcher/allapps/AllAppsSheetFragment;->getFastScroller(Landroid/view/ViewGroup;Landroid/view/MotionEvent;Landroid/graphics/Point;)Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
@@ -406,13 +410,13 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mTouchHandler:Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
-    .line 132
+    .line 133
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mTouchHandler:Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
     if-eqz v0, :cond_1
 
-    .line 133
+    .line 134
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mFastScrollerOffset:Landroid/graphics/Point;
 
     invoke-virtual {v0, p1, v1}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->handleTouchEvent(Landroid/view/MotionEvent;Landroid/graphics/Point;)Z
@@ -433,7 +437,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 82
+    .line 83
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -446,7 +450,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 83
+    .line 84
     sget-object p1, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->SYSTEM:Lcom/miui/home/launcher/allapps/AllAppsColorMode;
 
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -471,12 +475,12 @@
         }
     .end annotation
 
-    .line 141
+    .line 142
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mTouchHandler:Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
     if-eqz v0, :cond_0
 
-    .line 142
+    .line 143
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/AllAppsSheet;->mFastScrollerOffset:Landroid/graphics/Point;
 
     invoke-virtual {v0, p1, v1}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->handleTouchEvent(Landroid/view/MotionEvent;Landroid/graphics/Point;)Z
@@ -494,22 +498,22 @@
 .method public setInsets(Landroid/graphics/Rect;)V
     .locals 1
 
-    .line 155
+    .line 156
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingLeft(Landroid/view/View;I)V
 
-    .line 156
+    .line 157
     iget v0, p1, Landroid/graphics/Rect;->top:I
 
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingTop(Landroid/view/View;I)V
 
-    .line 157
+    .line 158
     iget v0, p1, Landroid/graphics/Rect;->right:I
 
     invoke-static {p0, v0}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingRight(Landroid/view/View;I)V
 
-    .line 158
+    .line 159
     iget p1, p1, Landroid/graphics/Rect;->bottom:I
 
     invoke-static {p0, p1}, Lcom/miui/home/launcher/common/ViewFunctions;->setViewPaddingBottom(Landroid/view/View;I)V

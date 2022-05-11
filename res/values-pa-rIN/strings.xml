@@ -54,7 +54,7 @@
     <string name="all_apps_search_app">ਐਪਾਂ ਲਈ ਖੋਜ ਕਰੋ</string>
     <string name="all_apps_search_market_message">ਆਨਲਾਈਨ ਖੋਜ ਕਰੋ</string>
     <string name="all_apps_setting_classic_title">ਕਲਾਸਿਕ</string>
-    <string name="all_apps_setting_desktop_desc">"ਹੋਮ ਸਕ੍ਰੀਨ 'ਤੇ ਸਾਰੀਆਂ ਇੰਸਟਾਲ ਕੀਤੀਆਂ ਐਪਾਂ ਦਿਖਾਓ। ਉਪਲਬਧ ਸ਼ਾਰਟਕਟ, ਪ੍ਰਬੰਧਕ ਜਾਂ ਅਣ-ਇੰਸਟਾਲ ਐਪ ਦੇਖਣ ਲਈ ਦੇਖਣ ਲਈ ਐਪ ਦੇ ਪ੍ਰਤੀਕ ਨੂੰ ਦਬਾਈ ਰੱਖੋ।"</string>
+    <string name="all_apps_setting_desktop_desc">"ਹੋਮ ਸਕ੍ਰੀਨ 'ਤੇ ਸਾਰੀਆਂ ਇੰਸਟਾਲ ਕੀਤੀਆਂ ਐਪਾਂ ਦਿਖਾਓ। ਉਪਲਬਧ ਸ਼ਾਰਟਕੱਟ, ਪ੍ਰਬੰਧਕ ਜਾਂ ਅਣ-ਇੰਸਟਾਲ ਐਪ ਦੇਖਣ ਲਈ ਦੇਖਣ ਲਈ ਐਪ ਦੇ ਪ੍ਰਤੀਕ ਨੂੰ ਦਬਾਈ ਰੱਖੋ।"</string>
     <string name="all_apps_setting_desktop_title">ਨਿਯਮਿਤ</string>
     <string name="all_apps_setting_drawer_desc">"ਸਾਰੀਆਂ ਇੰਸਟਾਲ ਕੀਤੀਆਂ ਐਪਾਂ ਐਪ ਡ੍ਰਾਅਰ ਵਿੱਚ ਰੱਖੋ ਜੋ ਹੋਮ ਸਕ੍ਰੀਨ ਦੇ ਉੱਪਰ ਵੱਲ ਸ੍ਵਾਈਪ ਕਰਕੇ ਖੋਲ੍ਹੀਆਂ ਜਾ ਸਕਦੀ ਆਂ ਹਨ। ਤੁਸੀਂ ਹਾਲੇ ਵੀ ਉਹਨਾਂ ਐਪਾਂ ਨੂੰ ਲੱਭ ਸਕੋਗੇ ਜੋ ਤੁਸੀਂ ਐਪ ਡ੍ਰਾਅਰ ਵਿੱਚ ਹੋਮ ਸਕ੍ਰੀਨ 'ਤੇ ਲੈ ਗਏ ਸੀ।"</string>
     <string name="all_apps_setting_drawer_tips_desc">"ਹੋਮ ਸਕ੍ਰੀਨ 'ਤੇ ਉੱਪਰ ਵੱਲ ਸ੍ਵਾਈਪ ਕਰਕੇ ਐਪ ਡ੍ਰਾਅਰ ਖੋਲ੍ਹਿਆ ਗਿਆ ਹੈ। ਐਪ ਡ੍ਰਾਅਰ ਨਾਲ ਹੋਮ ਸਕ੍ਰੀਨ 'ਤੇ ਸਵਿੱਚ ਕਰਨ ਨਾਲ ਸਾਰੀ ਸਮੱਗਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੁੰਦੀ। ਫਿਰ ਵੀ ਸਵਿੱਚ ਕਰਨਾ ਹੈ?"</string>
@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">"ਐਪ ਡ੍ਰਾਅਰ ਨੂੰ ਖਲ੍ਹਣ ਲਈ ਉੱਪਰ ਵੱਲ ਸ੍ਵਾਈਪ ਕਰਨਾ ਰਾਖਵਾਂ ਹੈ। ਨਿਯਮਿਤ ਹੋਮ ਸਕ੍ਰੀਨ ਮੋਡ 'ਤੇ ਸਵਿੱਚ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"</string>
     <string name="all_apps_suggestions">ਐਪ ਸੁਝਾਅ</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">ਐਨੀਮੇਸ਼ਨ ਰੇਟ</string>
     <string name="announce_for_app_move_in_folder">"ਫ਼ੋਲਡਰ ਵਿੱਚ %1$d ਸਥਿਤੀ 'ਤੇ ਲੈ ਜਾਓ"</string>
     <string name="announce_for_checked">%1$s, ਜਾਂਚਿਆ ਗਿਆ</string>
     <string name="announce_for_choose_default_screen">ਸਕ੍ਰੀਨ %1$d ਵਜੋਂ ਪੂਰਵ-ਨਿਰਧਾਰਤ ਹੋਮ ਸਕ੍ਰੀਨ ਸੈੱਟ ਕਰੋ</string>
@@ -254,7 +255,7 @@
     <string name="deselect_all">ਸਾਰੀਆਂ ਚੋਣਾਂ ਮਿਟਾਓ</string>
     <string name="disable_wallpaper_scroll">ਸਾਈਡ-ਸਕ੍ਰੋਲਿੰਗ ਬੰਦ ਕਰੋ</string>
     <string name="download_action">ਡਾਊਨਲੋਡ ਕਰੋ</string>
-    <string name="drag_icon_to_homescreen_guide">ਇੱਕ ਐਪ ਪ੍ਰਤੀਕ ਨੂੰ ਦਬਾਈ ਰੱਖੋ, ਫਿਰ ਹੋਮ ਸਕ੍ਰੀਨ ਸ਼ਾਰਟਕਟ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਇਸਨੂੰ ਘਸੀਟੋ</string>
+    <string name="drag_icon_to_homescreen_guide">ਇੱਕ ਐਪ ਪ੍ਰਤੀਕ ਨੂੰ ਦਬਾਈ ਰੱਖੋ, ਫਿਰ ਹੋਮ ਸਕ੍ਰੀਨ ਸ਼ਾਰਟਕੱਟ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਇਸਨੂੰ ਘਸੀਟੋ</string>
     <string name="drag_multiple_item_name" />
     <string name="drag_single_item_name" />
     <string name="drawer_background">ਬੈਕਗ੍ਰਾਊਂਡਾਂ</string>
@@ -358,7 +359,7 @@
     <string name="free_style_edit_drawer">ਡ੍ਰਾਅਰ</string>
     <string name="free_style_edit_move_tip">ਪ੍ਰਤੀਕ ਹਿਲਾਉਣ ਲਈ ਸਪਰਸ਼ ਕਰਕੇ ਰੱਖੋ</string>
     <string name="free_style_edit_tab_free_component">ਓਬਜੈਕਟਸ</string>
-    <string name="free_style_edit_tab_shortcut">ਸ਼ਾਰਟਕਟ</string>
+    <string name="free_style_edit_tab_shortcut">ਸ਼ਾਰਟਕੱਟ</string>
     <string name="free_style_edit_tab_widget">ਵਿਜੇਟ</string>
     <string name="free_style_enter_tip">Mi ਸਪੇਸ ਦੇਖਣ ਲਈ, ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਸਕ੍ਰੀਨ ਦੇ ਉੱਪਰਲੇ ਪਾਸੇ ਤੋਂ ਹੇਠਾਂ ਵੱਲ ਸ੍ਵਾਈਪ ਕਰੋ</string>
     <string name="free_style_exit_tip">"ਹੋਮ ਸਕ੍ਰੀਨ 'ਤੇ ਵਾਪਸ ਜਾਣ ਲਈ, ਦੋ ਉਂਗਲਾਂ ਨਾਲ ਸਕ੍ਰੀਨ ਦੇ ਹੇਠਲੇ ਪਾਸੇ ਤੋਂ ਉੱਪਰ ਵੱਲ ਸ੍ਵਾਈਪ ਕਰੋ"</string>
@@ -405,7 +406,7 @@
     <string name="got_it_botton">ਸਮਝ ਲਿਆ</string>
     <string name="group_folder">ਨਵਾਂ ਫ਼ੋਲਡਰ</string>
     <string name="group_live_folders">ਫ਼ੋਲਡਰ</string>
-    <string name="group_shortcuts">ਸ਼ਾਰਟਕਟ</string>
+    <string name="group_shortcuts">ਸ਼ਾਰਟਕੱਟ</string>
     <string name="guide_install_app_msg">"ਇਹ ਐਪ ਤੁਹਾਡੇ ਡੀਵਾਈਸ 'ਤੇ ਇੰਸਟਾਲ ਨਹੀਂ ਹੈ। ਕੀ ਹੁਣੇ ਐਪ ਲੱਭਣੀ ਅਤੇ ਇੰਸਟਾਲ ਕਰਨੀ ਹੈ?"</string>
     <string name="guide_install_app_title">ਐਪ ਲੱਭਣਾ ਅਤੇ ਇੰਸਟਾਲ ਕਰਨਾ ਹੈ?</string>
     <string name="guide_permission_title">ਮਨਜ਼ੂਰੀਆਂ ਲੋੜੀਂਦੀਆਂ ਹਨ</string>
@@ -647,18 +648,18 @@
     <string name="out_of_space">"ਇਸ ਹੋਮ ਸਕ੍ਰੀਨ 'ਤੇ ਹੋਰ ਥਾਂ ਨਹੀਂ ਹੈ"</string>
     <string name="perfect_icons_switch_summary">ਤੀਜੀ ਧੀਰ ਐਪ ਪ੍ਰਤੀਕਾਂ ਉੱਤੇ ਐਨੀਮੇਸ਼ਨਾਂ ਰੇਂਡਰ ਕਰੋ</string>
     <string name="perfect_icons_switch_title">ਵਿਸ਼ਵ-ਵਿਆਪੀ ਪ੍ਰਤੀਕ ਐਨੀਮੇਸ਼ਨ</string>
-    <string name="permdesc_install_shortcut">ਐਪ ਨੂੰ, ਵਰਤੋਂਕਾਰ ਦੇ ਦਖ਼ਲ ਤੋਂ ਬਿਨਾ ਸ਼ਾਰਟਕਟ ਸ਼ਾਮਲ ਕਰਨ ਦਿੰਦਾ ਹੈ।</string>
+    <string name="permdesc_install_shortcut">ਐਪ ਨੂੰ, ਵਰਤੋਂਕਾਰ ਦੇ ਦਖ਼ਲ ਤੋਂ ਬਿਨਾ ਸ਼ਾਰਟਕੱਟ ਸ਼ਾਮਲ ਕਰਨ ਦਿੰਦਾ ਹੈ।</string>
     <string name="permdesc_install_widget">ਐਪ ਨੂੰ ਵਰਤੋਂਕਾਰ ਵੱਲੋਂ ਕੋਈ ਹੋਰ ਕਾਰਵਾਈ ਕੀਤੇ ਬਿਨਾਂ ਵਿਜੇਟ ਸ਼ਾਮਲ ਕਰਨ ਦਿੰਦਾ ਹੈ।</string>
     <string name="permdesc_read_settings">ਐਪ ਨੂੰ ਹੋਮ ਸਕ੍ਰੀਨ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਅਤੇ ਸ਼ਾਰਟਕੱਟਾਂ ਨੂੰ ਪੜ੍ਹਨ ਦਿਓ।</string>
-    <string name="permdesc_uninstall_shortcut">ਐਪ ਨੂੰ ਵਰਤੋਂਕਾਰ ਦੀ ਦਖ਼ਲ ਤੋਂ ਬਿਨਾ ਸ਼ਾਰਟਕਟ ਹਟਾਉਣ ਦਿੰਦਾ ਹੈ।</string>
+    <string name="permdesc_uninstall_shortcut">ਐਪ ਨੂੰ ਵਰਤੋਂਕਾਰ ਦੀ ਦਖ਼ਲ ਤੋਂ ਬਿਨਾ ਸ਼ਾਰਟਕੱਟ ਹਟਾਉਣ ਦਿੰਦਾ ਹੈ।</string>
     <string name="permdesc_uninstall_widget">ਐਪ ਨੂੰ ਵਰਤੋਂਕਾਰ ਵੱਲੋਂ ਕੋਈ ਹੋਰ ਕਾਰਵਾਈ ਕੀਤੇ ਬਿਨਾਂ ਵਿਜੇਟ ਹਟਾਉਣ ਦਿੰਦਾ ਹੈ।</string>
     <string name="permdesc_write_settings">ਐਪ ਨੂੰ ਹੋਮ ਸਕ੍ਰੀਨ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਅਤੇ ਸ਼ਾਰਟਕੱਟਾਂ ਨੂੰ ਬਦਲਣ ਦਿਓ।</string>
     <string name="permlab_install_shortcut">ਸ਼ਾਰਟਕੱਟ ਇੰਸਟਾਲ ਕਰੋ</string>
     <string name="permlab_install_widget">ਵਿਜੇਟ ਇੰਸਟਾਲ ਕਰੋ</string>
     <string name="permlab_read_settings">ਹੋਮ ਸਕ੍ਰੀਨ ਸੈਟਿੰਗਾਂ ਅਤੇ ਸ਼ਾਰਟਕੱਟ ਪੜ੍ਹੋ</string>
-    <string name="permlab_uninstall_shortcut">ਸ਼ਾਰਟਕਟ ਅਣ-ਇੰਸਟਾਲ ਕਰੋ</string>
+    <string name="permlab_uninstall_shortcut">ਸ਼ਾਰਟਕੱਟ ਅਣ-ਇੰਸਟਾਲ ਕਰੋ</string>
     <string name="permlab_uninstall_widget">ਵਿਜੇਟ ਅਣ-ਇੰਸਟਾਲ ਕਰੋ</string>
-    <string name="permlab_write_settings">ਹੋਮ ਸਕ੍ਰੀਨ ਸੈਟਿੰਗਾਂ ਅਤੇ ਸ਼ਾਰਟਕਟਾਂ ਦਾ ਸੰਪਾਦਨ ਕਰੋ</string>
+    <string name="permlab_write_settings">ਹੋਮ ਸਕ੍ਰੀਨ ਸੈਟਿੰਗਾਂ ਅਤੇ ਸ਼ਾਰਟਕੱਟਾਂ ਦਾ ਸੰਪਾਦਨ ਕਰੋ</string>
     <string name="photo_adjust">ਪੂਰਵ-ਝਲਕ</string>
     <string name="photo_confirm">ਸੈੱਟ ਕਰੋ</string>
     <string name="photo_load_failed">ਫ਼ੋਟੋ ਨੂੰ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ</string>
@@ -716,7 +717,7 @@
     <string name="recents_title_app_manager">ਐਪਾਂ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ</string>
     <string name="recents_title_game">ਖੇਡਾਂ</string>
     <string name="recents_title_garbage_cleanup">ਕਲੀਨਰ</string>
-    <string name="recents_title_garbage_deepclean">ਗਹਿਣ ਸਫ਼ਾਈ</string>
+    <string name="recents_title_garbage_deepclean">ਗਹਿਰੀ ਸਫ਼ਾਈ</string>
     <string name="recents_title_market">ਐਪਾਂ ਲੱਭੋ</string>
     <string name="recents_title_security_scan">ਸੁਰੱਖਿਆ ਸਕੈਨ</string>
     <string name="recents_tv_small_window_text">ਫ਼ਲੋਟਿੰਗ ਵਿੰਡੋਜ਼</string>
@@ -875,7 +876,7 @@
     <string name="time_picker_label_minute">ਮਿੰ</string>
     <string name="title_jeejen">Jeejen ਹੋਮ ਸਕ੍ਰੀਨ</string>
     <string name="title_select_live_folder">ਫ਼ੋਲਡਰ ਚੁਣੋ</string>
-    <string name="title_select_shortcut">ਸ਼ਾਰਟਕਟ ਚੁਣੋ</string>
+    <string name="title_select_shortcut">ਸ਼ਾਰਟਕੱਟ ਚੁਣੋ</string>
     <string name="toast_drag_to_assistant_reject">ਐਪ ਵਾਲੇਟ ਸ਼ੁਰੂ ਕਰਨਾ…</string>
     <string name="toast_screen_icons_misplaced">ਹੋਰ ਸਰੋਤ ਤੋਂ ਮੁੜ-ਸਟੋਰ ਕਰੋ, ਕੁਝ ਪ੍ਰਤੀਕ ਬੇਟਿਕਾਣੇ ਹੋ ਸਕਦੇ ਹਨ।</string>
     <string name="today">ਅੱਜ</string>

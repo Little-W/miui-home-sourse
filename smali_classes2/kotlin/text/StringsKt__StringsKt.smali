@@ -21,43 +21,6 @@
     return-object p0
 .end method
 
-.method public static final contains(Ljava/lang/CharSequence;CZ)Z
-    .locals 7
-
-    const-string v0, "$this$contains"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const/4 v3, 0x0
-
-    const/4 v5, 0x2
-
-    const/4 v6, 0x0
-
-    move-object v1, p0
-
-    move v2, p1
-
-    move v4, p2
-
-    .line 1063
-    invoke-static/range {v1 .. v6}, Lkotlin/text/StringsKt;->indexOf$default(Ljava/lang/CharSequence;CIZILjava/lang/Object;)I
-
-    move-result p0
-
-    if-ltz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-.end method
-
 .method public static final contains(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
     .locals 11
 
@@ -139,24 +102,6 @@
 
     :goto_0
     return v1
-.end method
-
-.method public static synthetic contains$default(Ljava/lang/CharSequence;CZILjava/lang/Object;)Z
-    .locals 0
-
-    and-int/lit8 p3, p3, 0x2
-
-    if-eqz p3, :cond_0
-
-    const/4 p2, 0x0
-
-    .line 1062
-    :cond_0
-    invoke-static {p0, p1, p2}, Lkotlin/text/StringsKt;->contains(Ljava/lang/CharSequence;CZ)Z
-
-    move-result p0
-
-    return p0
 .end method
 
 .method public static synthetic contains$default(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
@@ -1359,79 +1304,6 @@
     return-object p0
 .end method
 
-.method private static final rangesDelimitedBy$StringsKt__StringsKt(Ljava/lang/CharSequence;[CIZI)Lkotlin/sequences/Sequence;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/CharSequence;",
-            "[CIZI)",
-            "Lkotlin/sequences/Sequence<",
-            "Lkotlin/ranges/IntRange;",
-            ">;"
-        }
-    .end annotation
-
-    if-ltz p4, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    .line 1146
-    new-instance v0, Lkotlin/text/DelimitedRangesSequence;
-
-    new-instance v1, Lkotlin/text/StringsKt__StringsKt$rangesDelimitedBy$2;
-
-    invoke-direct {v1, p1, p3}, Lkotlin/text/StringsKt__StringsKt$rangesDelimitedBy$2;-><init>([CZ)V
-
-    check-cast v1, Lkotlin/jvm/functions/Function2;
-
-    invoke-direct {v0, p0, p2, p4, v1}, Lkotlin/text/DelimitedRangesSequence;-><init>(Ljava/lang/CharSequence;IILkotlin/jvm/functions/Function2;)V
-
-    check-cast v0, Lkotlin/sequences/Sequence;
-
-    return-object v0
-
-    .line 1144
-    :cond_1
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p1, "Limit must be non-negative, but was "
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const/16 p1, 0x2e
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    throw p1
-.end method
-
 .method private static final rangesDelimitedBy$StringsKt__StringsKt(Ljava/lang/CharSequence;[Ljava/lang/String;IZI)Lkotlin/sequences/Sequence;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
@@ -1510,40 +1382,6 @@
     check-cast p1, Ljava/lang/Throwable;
 
     throw p1
-.end method
-
-.method static synthetic rangesDelimitedBy$StringsKt__StringsKt$default(Ljava/lang/CharSequence;[CIZIILjava/lang/Object;)Lkotlin/sequences/Sequence;
-    .locals 1
-
-    and-int/lit8 p6, p5, 0x2
-
-    const/4 v0, 0x0
-
-    if-eqz p6, :cond_0
-
-    move p2, v0
-
-    :cond_0
-    and-int/lit8 p6, p5, 0x4
-
-    if-eqz p6, :cond_1
-
-    move p3, v0
-
-    :cond_1
-    and-int/lit8 p5, p5, 0x8
-
-    if-eqz p5, :cond_2
-
-    move p4, v0
-
-    .line 1143
-    :cond_2
-    invoke-static {p0, p1, p2, p3, p4}, Lkotlin/text/StringsKt__StringsKt;->rangesDelimitedBy$StringsKt__StringsKt(Ljava/lang/CharSequence;[CIZI)Lkotlin/sequences/Sequence;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method static synthetic rangesDelimitedBy$StringsKt__StringsKt$default(Ljava/lang/CharSequence;[Ljava/lang/String;IZIILjava/lang/Object;)Lkotlin/sequences/Sequence;
@@ -1656,121 +1494,6 @@
     :cond_3
     :goto_1
     return v0
-.end method
-
-.method public static final split(Ljava/lang/CharSequence;[CZI)Ljava/util/List;
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/CharSequence;",
-            "[CZI)",
-            "Ljava/util/List<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    const-string v0, "$this$split"
-
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "delimiters"
-
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 1231
-    array-length v0, p1
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x0
-
-    .line 1232
-    aget-char p1, p1, v0
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p0, p1, p2, p3}, Lkotlin/text/StringsKt__StringsKt;->split$StringsKt__StringsKt(Ljava/lang/CharSequence;Ljava/lang/String;ZI)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    const/4 v5, 0x2
-
-    const/4 v6, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move v3, p2
-
-    move v4, p3
-
-    .line 1235
-    invoke-static/range {v0 .. v6}, Lkotlin/text/StringsKt__StringsKt;->rangesDelimitedBy$StringsKt__StringsKt$default(Ljava/lang/CharSequence;[CIZIILjava/lang/Object;)Lkotlin/sequences/Sequence;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lkotlin/sequences/SequencesKt;->asIterable(Lkotlin/sequences/Sequence;)Ljava/lang/Iterable;
-
-    move-result-object p1
-
-    .line 1436
-    new-instance p2, Ljava/util/ArrayList;
-
-    const/16 p3, 0xa
-
-    invoke-static {p1, p3}, Lkotlin/collections/CollectionsKt;->collectionSizeOrDefault(Ljava/lang/Iterable;I)I
-
-    move-result p3
-
-    invoke-direct {p2, p3}, Ljava/util/ArrayList;-><init>(I)V
-
-    check-cast p2, Ljava/util/Collection;
-
-    .line 1437
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p3
-
-    if-eqz p3, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p3
-
-    .line 1438
-    check-cast p3, Lkotlin/ranges/IntRange;
-
-    .line 1235
-    invoke-static {p0, p3}, Lkotlin/text/StringsKt;->substring(Ljava/lang/CharSequence;Lkotlin/ranges/IntRange;)Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-interface {p2, p3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 1439
-    :cond_1
-    check-cast p2, Ljava/util/List;
-
-    return-object p2
 .end method
 
 .method public static final split(Ljava/lang/CharSequence;[Ljava/lang/String;ZI)Ljava/util/List;
@@ -2076,33 +1799,6 @@
     check-cast p1, Ljava/lang/Throwable;
 
     throw p1
-.end method
-
-.method public static synthetic split$default(Ljava/lang/CharSequence;[CZIILjava/lang/Object;)Ljava/util/List;
-    .locals 1
-
-    and-int/lit8 p5, p4, 0x2
-
-    const/4 v0, 0x0
-
-    if-eqz p5, :cond_0
-
-    move p2, v0
-
-    :cond_0
-    and-int/lit8 p4, p4, 0x4
-
-    if-eqz p4, :cond_1
-
-    move p3, v0
-
-    .line 1230
-    :cond_1
-    invoke-static {p0, p1, p2, p3}, Lkotlin/text/StringsKt;->split(Ljava/lang/CharSequence;[CZI)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method public static synthetic split$default(Ljava/lang/CharSequence;[Ljava/lang/String;ZIILjava/lang/Object;)Ljava/util/List;

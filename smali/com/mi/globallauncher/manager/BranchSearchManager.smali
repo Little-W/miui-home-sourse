@@ -27,8 +27,6 @@
 
 .field private mBranchOpen:Z
 
-.field private mBranchSwitchChangeListener:Lcom/mi/globallauncher/branchInterface/BranchSwitchChangeListener;
-
 .field private mChangeToDrawerByDefault:Z
 
 .field private mQuickSearchEnabled:Z
@@ -174,15 +172,15 @@
 .method private changeBranchOptState()V
     .locals 3
 
-    .line 100
+    .line 88
     iget-boolean v0, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mBranchOpen:Z
 
     if-eqz v0, :cond_0
 
-    .line 101
+    .line 89
     invoke-static {}, Lio/branch/search/BranchSearch;->optInToTracking()V
 
-    .line 102
+    .line 90
     new-instance v0, Lio/branch/search/CustomEvent;
 
     invoke-direct {v0}, Lio/branch/search/CustomEvent;-><init>()V
@@ -203,11 +201,11 @@
 
     goto :goto_0
 
-    .line 104
+    .line 92
     :cond_0
     invoke-static {}, Lio/branch/search/BranchSearch;->optOutOfTracking()V
 
-    .line 105
+    .line 93
     new-instance v0, Lio/branch/search/CustomEvent;
 
     invoke-direct {v0}, Lio/branch/search/CustomEvent;-><init>()V
@@ -284,7 +282,7 @@
 .method public branchOpenWithOptChange()Z
     .locals 1
 
-    .line 94
+    .line 82
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchSearchManager;->isBranchRemoteConfigEnabled()Z
 
     move-result v0
@@ -307,10 +305,10 @@
     :goto_0
     iput-boolean v0, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mBranchOpen:Z
 
-    .line 95
+    .line 83
     invoke-direct {p0}, Lcom/mi/globallauncher/manager/BranchSearchManager;->changeBranchOptState()V
 
-    .line 96
+    .line 84
     iget-boolean v0, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mBranchOpen:Z
 
     return v0
@@ -319,7 +317,7 @@
 .method public changeToDrawerByDefault(Z)V
     .locals 0
 
-    .line 59
+    .line 56
     iput-boolean p1, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mChangeToDrawerByDefault:Z
 
     return-void
@@ -328,7 +326,7 @@
 .method public getBranchKey()Ljava/lang/String;
     .locals 1
 
-    .line 230
+    .line 215
     sget-object v0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mBranchKey:Ljava/lang/String;
 
     return-object v0
@@ -337,7 +335,7 @@
 .method public getLocation()Landroid/location/Location;
     .locals 1
 
-    .line 235
+    .line 220
     sget-object v0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mLocation:Landroid/location/Location;
 
     return-object v0
@@ -348,7 +346,7 @@
 
     const-string v0, "BranchDeepViewFragment"
 
-    .line 250
+    .line 235
     invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object p1
@@ -357,7 +355,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 252
+    .line 237
     invoke-virtual {p1}, Landroidx/fragment/app/DialogFragment;->dismiss()V
 
     :cond_0
@@ -367,7 +365,7 @@
 .method public isBranchHasBeenOpened()Z
     .locals 1
 
-    .line 137
+    .line 122
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -382,10 +380,10 @@
 .method public isBranchOpen()Z
     .locals 1
 
-    .line 79
+    .line 67
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchSearchManager;->updateBranchOpen()V
 
-    .line 80
+    .line 68
     iget-boolean v0, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mBranchOpen:Z
 
     if-eqz v0, :cond_0
@@ -410,7 +408,7 @@
 .method public isBranchRemoteConfigEnabled()Z
     .locals 1
 
-    .line 111
+    .line 99
     iget-boolean v0, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mBranchEnabledForAllUser:Z
 
     if-nez v0, :cond_1
@@ -437,7 +435,7 @@
 .method public isBranchSearchGuideRemoteConfigEnabled()Z
     .locals 2
 
-    .line 147
+    .line 132
     sget-object v0, Lcom/mi/globallauncher/config/CommercialRemoteConfig;->mInstance:Lcom/mi/globallauncher/config/CommercialRemoteConfig;
 
     const-string v1, "show_branch_search_guide"
@@ -456,7 +454,7 @@
 .method public isBranchSwitchOn()Z
     .locals 1
 
-    .line 116
+    .line 104
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -471,7 +469,7 @@
 .method public isChangeToDrawerByDefault()Z
     .locals 1
 
-    .line 64
+    .line 61
     iget-boolean v0, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mChangeToDrawerByDefault:Z
 
     return v0
@@ -480,10 +478,10 @@
 .method public isQuickSearchOpen()Z
     .locals 1
 
-    .line 177
+    .line 162
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchSearchManager;->updateQuickSearchOpen()V
 
-    .line 178
+    .line 163
     iget-boolean v0, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mQuickSearchOpen:Z
 
     return v0
@@ -492,7 +490,7 @@
 .method public isQuickSearchRemoteConfigEnabled()Z
     .locals 1
 
-    .line 162
+    .line 147
     iget-boolean v0, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mQuickSearchEnabled:Z
 
     return v0
@@ -501,7 +499,7 @@
 .method public isQuickSearchSwitchOn()Z
     .locals 1
 
-    .line 183
+    .line 168
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -516,7 +514,7 @@
 .method public isShowNewFeatureRemoteConfigEnabled()Z
     .locals 1
 
-    .line 152
+    .line 137
     iget-boolean v0, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mShowNewFeature:Z
 
     return v0
@@ -525,7 +523,7 @@
 .method public needToShowSearchSuggestion()Z
     .locals 1
 
-    .line 240
+    .line 225
     sget-boolean v0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mNeedShowSearchSuggest:Z
 
     return v0
@@ -534,7 +532,7 @@
 .method public onFirstEnterSearch()V
     .locals 3
 
-    .line 193
+    .line 178
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -547,7 +545,7 @@
 
     if-nez v0, :cond_0
 
-    .line 194
+    .line 179
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -556,7 +554,7 @@
 
     invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setShouldQuickSearchGuideShow(Z)V
 
-    .line 195
+    .line 180
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -574,7 +572,7 @@
 .method public setAllUserBranchEnabled(Z)V
     .locals 0
 
-    .line 220
+    .line 205
     iput-boolean p1, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mBranchEnabledForAllUser:Z
 
     return-void
@@ -583,7 +581,7 @@
 .method public setBranchHasBeenOpened(Z)V
     .locals 1
 
-    .line 142
+    .line 127
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -598,16 +596,18 @@
 
     if-eqz p1, :cond_0
 
-    .line 130
+    .line 115
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialInit()Lcom/mi/globallauncher/branchInterface/ICommercialInit;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-static {}, Lcom/mi/globallauncher/util/CommonUtilities;->isPocoLauncher()Z
+
+    move-result v1
 
     invoke-interface {v0, v1, p2}, Lcom/mi/globallauncher/branchInterface/ICommercialInit;->initBranchSdk(ZZ)V
 
-    .line 132
+    .line 117
     :cond_0
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/manager/BranchSearchManager;->setBranchSwitchOn(Z)V
 
@@ -617,17 +617,8 @@
 .method public setBranchKey(Ljava/lang/String;)V
     .locals 0
 
-    .line 225
+    .line 210
     sput-object p1, Lcom/mi/globallauncher/manager/BranchSearchManager;->mBranchKey:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setBranchSwitchChangeListener(Lcom/mi/globallauncher/branchInterface/BranchSwitchChangeListener;)V
-    .locals 0
-
-    .line 74
-    iput-object p1, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mBranchSwitchChangeListener:Lcom/mi/globallauncher/branchInterface/BranchSwitchChangeListener;
 
     return-void
 .end method
@@ -635,29 +626,20 @@
 .method public setBranchSwitchOn(Z)V
     .locals 1
 
-    .line 121
+    .line 109
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
 
     invoke-interface {v0, p1}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setBranchSwitchOn(Z)V
 
-    .line 122
-    iget-object p1, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mBranchSwitchChangeListener:Lcom/mi/globallauncher/branchInterface/BranchSwitchChangeListener;
-
-    if-eqz p1, :cond_0
-
-    .line 123
-    invoke-interface {p1}, Lcom/mi/globallauncher/branchInterface/BranchSwitchChangeListener;->onBranchSwitchChanged()V
-
-    :cond_0
     return-void
 .end method
 
 .method public setNeedToShowSearchSuggestion(Z)V
     .locals 0
 
-    .line 245
+    .line 230
     sput-boolean p1, Lcom/mi/globallauncher/manager/BranchSearchManager;->mNeedShowSearchSuggest:Z
 
     return-void
@@ -666,7 +648,7 @@
 .method public setNewUserBranchEnabled(Z)V
     .locals 0
 
-    .line 215
+    .line 200
     iput-boolean p1, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mBranchEnabledForNewUser:Z
 
     return-void
@@ -675,7 +657,7 @@
 .method public setQuickSearchRemoteConfigEnabled(Z)V
     .locals 0
 
-    .line 167
+    .line 152
     iput-boolean p1, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mQuickSearchEnabled:Z
 
     return-void
@@ -684,7 +666,7 @@
 .method public setQuickSearchSwitchOn(Z)V
     .locals 1
 
-    .line 188
+    .line 173
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -697,7 +679,7 @@
 .method public setShowNewFeatureRemoteConfigEnabled(Z)V
     .locals 0
 
-    .line 157
+    .line 142
     iput-boolean p1, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mShowNewFeature:Z
 
     return-void
@@ -706,14 +688,14 @@
 .method public shouldEnterSearch()Z
     .locals 1
 
-    .line 201
+    .line 186
     invoke-static {}, Lcom/mi/globallauncher/view/BranchSearchGuide;->needToShowSearchGuide()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 202
+    .line 187
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchSearchManager;->isQuickSearchOpen()Z
 
     move-result v0
@@ -741,21 +723,21 @@
 .method public shouldShowNewFeatureForQuickSearch()Z
     .locals 2
 
-    .line 207
+    .line 192
     invoke-static {}, Lcom/mi/globallauncher/search/SearchResultMaskView;->shouldShowQuickSearchGuide()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 208
+    .line 193
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchSearchManager;->isBranchSwitchOn()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 209
+    .line 194
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -768,7 +750,7 @@
 
     if-nez v0, :cond_0
 
-    .line 210
+    .line 195
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -795,10 +777,10 @@
 .method public updateBranchOpen()V
     .locals 2
 
-    .line 85
+    .line 73
     iget-boolean v0, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mBranchOpen:Z
 
-    .line 86
+    .line 74
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchSearchManager;->isBranchRemoteConfigEnabled()Z
 
     move-result v1
@@ -821,12 +803,12 @@
     :goto_0
     iput-boolean v1, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mBranchOpen:Z
 
-    .line 87
+    .line 75
     iget-boolean v1, p0, Lcom/mi/globallauncher/manager/BranchSearchManager;->mBranchOpen:Z
 
     if-eq v0, v1, :cond_1
 
-    .line 88
+    .line 76
     invoke-direct {p0}, Lcom/mi/globallauncher/manager/BranchSearchManager;->changeBranchOptState()V
 
     :cond_1
@@ -836,7 +818,7 @@
 .method public updateQuickSearchOpen()V
     .locals 1
 
-    .line 172
+    .line 157
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchSearchManager;->isQuickSearchRemoteConfigEnabled()Z
 
     move-result v0

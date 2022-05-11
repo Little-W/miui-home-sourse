@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">ការអូសឡើងត្រូវបានបម្រុងទុកសម្រាប់ការបើកថតកម្មវិធី។ ប្តូរទៅម៉ូដអេក្រង់ដើមធម្មតា ហើយព្យាយាមម្តងទៀត។</string>
     <string name="all_apps_suggestions">ការផ្តល់យោបល់នៃកម្មវិធី</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">បានផ្លាស់ទីទៅទីតាំង %1$d នៅក្នុងថត</string>
     <string name="announce_for_checked">%1$s បានពិនិត្យរួច</string>
     <string name="announce_for_choose_default_screen">កំណត់អេក្រង់ %1$d ជាអេក្រង់លំនាំដើម</string>
@@ -609,11 +610,11 @@
     <string name="navigation_guide_recent_title">បើក ថ្មីៗ</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">បើក ថ្មីៗ</string>
     <string name="navigation_guide_settings">កាវិការសាកល្បង</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">កណ្ដាល</string>
+    <string name="navigation_position_left">ឆ្វេង</string>
+    <string name="navigation_position_right">ស្តាំ</string>
+    <string name="navigation_position_summary">ទីតាំងផ្ទាល់ខ្លួននៃប៊ូតុងនាវាចរណ៍អាចត្រូវបានតែអនុវត្តនៅអេក្រង់ដើមតែប៉ុណ្ណោះ</string>
+    <string name="navigation_position_title">ទីតាំងប៊ូតុងនាវាចរណ៍</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">បោះបង់</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">មិនអាចប្រើកាយវិការពេញអេក្រង់ជាមួយឧបករណ៍បើកភាគីទីបីបានទេ។ សូមប្តូរទៅ Launcher ប្រព័ន្ធ ហើយបើកកាយវិការពេញអេក្រង់ឬ?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">យល់ព្រម</string>

@@ -5,7 +5,6 @@
 # interfaces
 .implements Ljava/util/Iterator;
 .implements Lkotlin/coroutines/Continuation;
-.implements Lkotlin/jvm/internal/markers/KMappedMarker;
 
 
 # annotations
@@ -20,8 +19,7 @@
         "TT;>;",
         "Lkotlin/coroutines/Continuation<",
         "Lkotlin/Unit;",
-        ">;",
-        "Lkotlin/jvm/internal/markers/KMappedMarker;"
+        ">;"
     }
 .end annotation
 

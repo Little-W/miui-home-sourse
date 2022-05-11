@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Ljava/util/ListIterator;
-.implements Lkotlin/jvm/internal/markers/KMappedMarker;
 
 
 # static fields

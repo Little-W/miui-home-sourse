@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">অ্যাপ ড্রয়ার খোলার জন্য উপরে সোয়াইপ করে খোলা আগে থেকেই ব্যবহার করা হচ্ছে।সাধারণ হোম স্ক্রিন মোডে গিয়ে আবার চেষ্টা করুন।</string>
     <string name="all_apps_suggestions">অ্যাপ প্রস্তাব</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">%1$d ফোল্ডারে পাঠানো হয়েছে</string>
     <string name="announce_for_checked">%1$s，চেক করা হয়েছে</string>
     <string name="announce_for_choose_default_screen">%1$d কে ডিফল্টহোম স্ক্রিন হিসেবে সেট করুন</string>
@@ -609,11 +610,11 @@
     <string name="navigation_guide_recent_title">সাম্প্রতিকগুলি খুলুন</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">সাম্প্রতিকগুলি খুলুন</string>
     <string name="navigation_guide_settings">অঙ্গভঙ্গি ডেমোগুলি</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">মাঝখানে</string>
+    <string name="navigation_position_left">বাঁয়ে</string>
+    <string name="navigation_position_right">ডান দিকে</string>
+    <string name="navigation_position_summary">নেভিগেশন বোতাম ইচ্ছে মতো শুধু হোম স্ক্রিনে ব্যবহার করা যাবে</string>
+    <string name="navigation_position_title">নেভিগেশন বোতাম অবস্থান</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">বাতিল করুন</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">তৃতীয় পক্ষের লঞ্চারের জন্য পূর্ণ স্ক্রিন জেশ্চার ব্যবহার করতে পারবেন না। সিস্টেম লঞ্চারে ফিরে গিয়ে পূর্ণ স্ক্রিন জেশ্চার চালু করতে চান?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">ঠিক আছ</string>

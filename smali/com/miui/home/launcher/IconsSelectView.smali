@@ -42,7 +42,7 @@
     .line 81
     invoke-static {p1, v0, p0}, Lcom/miui/home/launcher/IconsSelectView;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const p1, 0x7f0a00b3
+    const p1, 0x7f0a00b4
 
     .line 83
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/IconsSelectView;->findViewById(I)Landroid/view/View;
@@ -51,7 +51,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/IconsSelectView;->mContainer:Landroid/view/View;
 
-    const p1, 0x7f0a0296
+    const p1, 0x7f0a029d
 
     .line 84
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/IconsSelectView;->findViewById(I)Landroid/view/View;
@@ -62,7 +62,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/IconsSelectView;->mTitle:Landroid/widget/TextView;
 
-    const p1, 0x7f0a0088
+    const p1, 0x7f0a0089
 
     .line 85
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/IconsSelectView;->findViewById(I)Landroid/view/View;
@@ -73,7 +73,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/IconsSelectView;->mBtnOK:Landroid/widget/TextView;
 
-    const p1, 0x7f0a0086
+    const p1, 0x7f0a0087
 
     .line 86
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/IconsSelectView;->findViewById(I)Landroid/view/View;
@@ -84,7 +84,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/IconsSelectView;->mBtnCancel:Landroid/widget/TextView;
 
-    const p1, 0x7f0a0112
+    const p1, 0x7f0a0114
 
     .line 87
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/IconsSelectView;->findViewById(I)Landroid/view/View;
@@ -95,7 +95,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/IconsSelectView;->mAppsGrid:Landroid/widget/GridView;
 
-    const p1, 0x7f0a0091
+    const p1, 0x7f0a0092
 
     .line 88
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/IconsSelectView;->findViewById(I)Landroid/view/View;
@@ -214,7 +214,7 @@
     return-void
 
     :cond_0
-    const v0, 0x7f0a0236
+    const v0, 0x7f0a023d
 
     if-eqz p2, :cond_1
 
@@ -228,7 +228,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f0801da
+    const p2, 0x7f0801d9
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundResource(I)V
 

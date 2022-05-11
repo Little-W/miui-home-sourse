@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static LOG_LEVEL:I = 0x5
+.field public static LOG_LEVEL:I = 0x4
 
 
 # direct methods

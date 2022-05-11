@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 4179
+    .line 4162
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 4189
+    .line 4172
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
@@ -50,7 +50,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 4190
+    .line 4173
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
@@ -65,7 +65,7 @@
 
     invoke-virtual {p1, v0, v0}, Lcom/miui/home/launcher/LauncherStateManager;->exitOverviewStateIfNeed(ZZ)V
 
-    .line 4191
+    .line 4174
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
@@ -78,7 +78,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/views/RecentsContainer;->setIsExitRecentsAnimating(Z)V
 
-    .line 4193
+    .line 4176
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
@@ -86,7 +86,7 @@
 
     invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$7600(Lcom/miui/home/recents/NavStubView;Lcom/miui/home/recents/NavStubView$ModeGesture;)V
 
-    .line 4194
+    .line 4177
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
     const-string v0, "startHomeAnimation"
@@ -99,7 +99,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 4182
+    .line 4165
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
@@ -114,7 +114,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 4183
+    .line 4166
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;

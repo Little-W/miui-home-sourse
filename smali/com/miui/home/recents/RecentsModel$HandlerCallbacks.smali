@@ -25,7 +25,7 @@
 .method private constructor <init>(Lcom/miui/home/recents/RecentsModel;)V
     .locals 0
 
-    .line 226
+    .line 227
     iput-object p1, p0, Lcom/miui/home/recents/RecentsModel$HandlerCallbacks;->this$0:Lcom/miui/home/recents/RecentsModel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/recents/RecentsModel;Lcom/miui/home/recents/RecentsModel$1;)V
     .locals 0
 
-    .line 226
+    .line 227
     invoke-direct {p0, p1}, Lcom/miui/home/recents/RecentsModel$HandlerCallbacks;-><init>(Lcom/miui/home/recents/RecentsModel;)V
 
     return-void
@@ -47,7 +47,7 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 4
 
-    .line 229
+    .line 230
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/16 v0, 0x64
@@ -63,10 +63,10 @@
 
     const-string v0, "onTaskStackChangedBackground    MSG_TASK_STACK_CHANGE"
 
-    .line 231
+    .line 232
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
+    .line 233
     iget-object p1, p0, Lcom/miui/home/recents/RecentsModel$HandlerCallbacks;->this$0:Lcom/miui/home/recents/RecentsModel;
 
     invoke-static {p1}, Lcom/miui/home/recents/RecentsModel;->access$100(Lcom/miui/home/recents/RecentsModel;)Landroid/content/Context;
@@ -81,7 +81,7 @@
 
     move-result-object p1
 
-    .line 235
+    .line 236
     iget-object v0, p0, Lcom/miui/home/recents/RecentsModel$HandlerCallbacks;->this$0:Lcom/miui/home/recents/RecentsModel;
 
     invoke-static {v0}, Lcom/miui/home/recents/RecentsModel;->access$100(Lcom/miui/home/recents/RecentsModel;)Landroid/content/Context;
@@ -94,7 +94,7 @@
 
     invoke-virtual {v0}, Lcom/miui/home/recents/RecentsModel;->preloadRecents()V
 
-    .line 236
+    .line 237
     iget-object v0, p0, Lcom/miui/home/recents/RecentsModel$HandlerCallbacks;->this$0:Lcom/miui/home/recents/RecentsModel;
 
     invoke-static {v0}, Lcom/miui/home/recents/RecentsModel;->access$100(Lcom/miui/home/recents/RecentsModel;)Landroid/content/Context;
@@ -113,32 +113,32 @@
 
     if-eqz v0, :cond_1
 
-    .line 238
+    .line 239
     new-instance v2, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;
 
     invoke-direct {v2}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;-><init>()V
-
-    .line 240
-    invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->getThumbnailCacheSize()I
-
-    move-result v3
-
-    iput v3, v2, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->numVisibleTasks:I
 
     .line 241
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->getThumbnailCacheSize()I
 
     move-result v3
 
-    iput v3, v2, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->numVisibleTaskThumbnails:I
+    iput v3, v2, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->numVisibleTasks:I
 
     .line 242
-    iput-boolean v1, v2, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->onlyLoadForCache:Z
+    invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/RecentsTaskLoader;->getThumbnailCacheSize()I
+
+    move-result v3
+
+    iput v3, v2, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->numVisibleTaskThumbnails:I
 
     .line 243
-    iput-boolean v1, v2, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->onlyLoadPausedActivities:Z
+    iput-boolean v1, v2, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->onlyLoadForCache:Z
 
     .line 244
+    iput-boolean v1, v2, Lcom/android/systemui/shared/recents/model/RecentsTaskLoadPlan$Options;->onlyLoadPausedActivities:Z
+
+    .line 245
     iget-object v3, p0, Lcom/miui/home/recents/RecentsModel$HandlerCallbacks;->this$0:Lcom/miui/home/recents/RecentsModel;
 
     invoke-static {v3}, Lcom/miui/home/recents/RecentsModel;->access$100(Lcom/miui/home/recents/RecentsModel;)Landroid/content/Context;

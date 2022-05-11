@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">Rrëshqitja lart kushtohet hapjes së Sirtarit të Aplikacionit. Ndërro në modalitetin Ekranin Bazë dhe provo sërish.</string>
     <string name="all_apps_suggestions">Sugjerimet e aplikacionit</string>
     <string name="am">PARADITE</string>
+    <string name="animation_rate_title">Vleresimi animacionit</string>
     <string name="announce_for_app_move_in_folder">Zhvendosur në pozicionin %1$d të dosjes</string>
     <string name="announce_for_checked">%1$s, kontrolluar</string>
     <string name="announce_for_choose_default_screen">Vendos ekranin %1$d si ekranin Kryesor të paracaktuar</string>
@@ -613,7 +614,7 @@
     <string name="navigation_position_left">Majtas</string>
     <string name="navigation_position_right">Djathtas</string>
     <string name="navigation_position_summary">Pozicionet e personalizuara të butonave të navigimit mund të aplikohen vetëm në ekranin bazë</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_title">Pozicioni i butonave te navigimit</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Anullo</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Nuk mund të përdoren gjestet në ekran të plotë me lëshuesit e palëve të treta. Të kalojmë në lëshuesin e sistemit dhe të aktivizojmë gjestet në ekran të plotë?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">Në rregull</string>
@@ -621,7 +622,7 @@
     <string name="navigation_type_full_screen">Gjestet</string>
     <string name="navigation_type_title">Navigimi i sistemit</string>
     <string name="navigation_type_virtual_key">Butonat</string>
-    <string name="network_error">Nuk mund të behej lidhja me rrjetin. Provo sërish.</string>
+    <string name="network_error">Nuk mund të lidhej me rrjetin. Provo sërish.</string>
     <string name="new_feature_title">Çfarë risish ka</string>
     <string name="night">Mbrëmje</string>
     <string name="no_detail_page">Asnjë detaj për faqen</string>

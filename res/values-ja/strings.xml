@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">上にスワイプするとアプリドロワーが開きます。通常のホーム画面モードに切り替えてからもう一度操作してください。</string>
     <string name="all_apps_suggestions">アプリの提案</string>
     <string name="am">午前</string>
+    <string name="animation_rate_title">アニメーションレート</string>
     <string name="announce_for_app_move_in_folder">フォルダー内の%1$dの位置に移動しました</string>
     <string name="announce_for_checked">%1$s、チェックしました</string>
     <string name="announce_for_choose_default_screen">画面%1$dをデフォルトのホーム画面に設定しました</string>
@@ -639,11 +640,11 @@
     <string name="navigation_guide_recent_title">\"最近のタスク\"を開く</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">\"最近のタスク\"を開く</string>
     <string name="navigation_guide_settings">ジェスチャーデモ</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">中央</string>
+    <string name="navigation_position_left">左</string>
+    <string name="navigation_position_right">右</string>
+    <string name="navigation_position_summary">ナビゲーションボタンの位置のカスタム設定は、ホーム画面にのみ適用できます</string>
+    <string name="navigation_position_title">ナビゲーションボタンの位置</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">キャンセル</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">サードパーティ製ランチャーではフルスクリーンジェスチャーを使用できません。システムランチャーに切り替えて、フルスクリーンジェスチャーをオンにしますか？</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">OK</string>

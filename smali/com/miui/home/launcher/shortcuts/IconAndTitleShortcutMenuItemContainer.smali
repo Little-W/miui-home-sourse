@@ -65,7 +65,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070142
+    const v2, 0x7f070147
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -78,7 +78,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070141
+    const v2, 0x7f070146
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -91,7 +91,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070140
+    const v2, 0x7f070145
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -325,7 +325,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070455
+    const v2, 0x7f070460
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -390,7 +390,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070457
+    const v2, 0x7f070462
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -403,7 +403,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070458
+    const v2, 0x7f070463
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -436,7 +436,7 @@
     .line 32
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0160
+    const v0, 0x7f0a0163
 
     .line 33
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->findViewById(I)Landroid/view/View;
@@ -447,7 +447,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mIcon:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a0167
+    const v0, 0x7f0a016a
 
     .line 34
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->findViewById(I)Landroid/view/View;

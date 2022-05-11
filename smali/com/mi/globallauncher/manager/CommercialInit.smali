@@ -24,7 +24,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 28
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,30 +33,30 @@
 .method public static getInstance()Lcom/mi/globallauncher/branchInterface/ICommercialInit;
     .locals 2
 
-    .line 32
+    .line 38
     sget-object v0, Lcom/mi/globallauncher/manager/CommercialInit;->instance:Lcom/mi/globallauncher/manager/CommercialInit;
 
     if-nez v0, :cond_1
 
-    .line 33
+    .line 39
     const-class v0, Lcom/mi/globallauncher/manager/CommercialInit;
 
     monitor-enter v0
 
-    .line 34
+    .line 40
     :try_start_0
     sget-object v1, Lcom/mi/globallauncher/manager/CommercialInit;->instance:Lcom/mi/globallauncher/manager/CommercialInit;
 
     if-nez v1, :cond_0
 
-    .line 35
+    .line 41
     new-instance v1, Lcom/mi/globallauncher/manager/CommercialInit;
 
     invoke-direct {v1}, Lcom/mi/globallauncher/manager/CommercialInit;-><init>()V
 
     sput-object v1, Lcom/mi/globallauncher/manager/CommercialInit;->instance:Lcom/mi/globallauncher/manager/CommercialInit;
 
-    .line 37
+    .line 43
     :cond_0
     monitor-exit v0
 
@@ -71,7 +71,7 @@
 
     throw v1
 
-    .line 39
+    .line 45
     :cond_1
     :goto_0
     sget-object v0, Lcom/mi/globallauncher/manager/CommercialInit;->instance:Lcom/mi/globallauncher/manager/CommercialInit;
@@ -82,7 +82,7 @@
 .method public static synthetic lambda$initBranchSdk$0(Lcom/mi/globallauncher/manager/CommercialInit;ZLio/branch/search/BranchConfiguration;)V
     .locals 2
 
-    .line 54
+    .line 60
     :try_start_0
     invoke-static {}, Lio/branch/search/BranchSearch;->getInstance()Lio/branch/search/BranchSearch;
 
@@ -97,10 +97,10 @@
 
     const-string p1, "key_live_iaLbGNNMAOlaTMS3QYDpamdduAm7qHjc"
 
-    .line 58
+    .line 64
     invoke-virtual {p2, p1}, Lio/branch/search/BranchConfiguration;->setBranchKey(Ljava/lang/String;)Lio/branch/search/BranchConfiguration;
 
-    .line 59
+    .line 65
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object p1
@@ -114,10 +114,10 @@
     :cond_1
     const-string p1, "key_live_imJJwWS7uH8pJ9WsNX2dTipbDtlKqWd7"
 
-    .line 61
+    .line 67
     invoke-virtual {p2, p1}, Lio/branch/search/BranchConfiguration;->setBranchKey(Ljava/lang/String;)Lio/branch/search/BranchConfiguration;
 
-    .line 62
+    .line 68
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object p1
@@ -126,12 +126,12 @@
 
     invoke-interface {p1, v0}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->setBranchKey(Ljava/lang/String;)V
 
-    .line 63
+    .line 69
     iget-object p1, p0, Lcom/mi/globallauncher/manager/CommercialInit;->report:Lcom/mi/globallauncher/config/CommercialCloudConfigJobService$DailyAnalyticReport;
 
     invoke-static {p1}, Lcom/mi/globallauncher/config/CommercialCloudConfigJobService;->setDailyReport(Lcom/mi/globallauncher/config/CommercialCloudConfigJobService$DailyAnalyticReport;)V
 
-    .line 65
+    .line 71
     :goto_0
     iget-object p1, p2, Lio/branch/search/BranchConfiguration;->B:Lio/branch/search/j3;
 
@@ -139,12 +139,12 @@
 
     move-result-object p1
 
-    .line 66
+    .line 72
     iget-object v0, p2, Lio/branch/search/BranchConfiguration;->C:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 67
+    .line 73
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchImplement;->getInstance()Lcom/mi/globallauncher/manager/BranchImplement;
 
     move-result-object p1
@@ -164,7 +164,7 @@
 
     const-string p2, "CommercialInit"
 
-    .line 69
+    .line 75
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -194,7 +194,7 @@
 .method public cancelSchedulerService()V
     .locals 2
 
-    .line 96
+    .line 102
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -203,7 +203,7 @@
 
     return-void
 
-    .line 99
+    .line 105
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchImplement;->getInstance()Lcom/mi/globallauncher/manager/BranchImplement;
 
@@ -221,7 +221,7 @@
 
     check-cast v0, Landroid/app/job/JobScheduler;
 
-    .line 100
+    .line 106
     invoke-virtual {v0}, Landroid/app/job/JobScheduler;->cancelAll()V
 
     return-void
@@ -230,7 +230,7 @@
 .method public getContext()Landroid/content/Context;
     .locals 1
 
-    .line 105
+    .line 111
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchImplement;->getInstance()Lcom/mi/globallauncher/manager/BranchImplement;
 
     move-result-object v0
@@ -245,7 +245,7 @@
 .method public getReport()Lcom/mi/globallauncher/config/CommercialCloudConfigJobService$DailyAnalyticReport;
     .locals 1
 
-    .line 110
+    .line 116
     iget-object v0, p0, Lcom/mi/globallauncher/manager/CommercialInit;->report:Lcom/mi/globallauncher/config/CommercialCloudConfigJobService$DailyAnalyticReport;
 
     return-object v0
@@ -254,7 +254,7 @@
 .method public initBranchOnScrollUpEnd(Lcom/mi/globallauncher/branchInterface/BranchInitInterface;)V
     .locals 2
 
-    .line 120
+    .line 126
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -263,7 +263,7 @@
 
     return-void
 
-    .line 123
+    .line 129
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
@@ -277,21 +277,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 124
+    .line 130
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
 
     invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setNewFeatureShowed(Z)V
 
-    .line 125
+    .line 131
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
 
     invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->updateShowNewFeatureCounts()V
 
-    .line 127
+    .line 133
     :cond_1
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
@@ -299,7 +299,7 @@
 
     invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setNewFeatureFirstShow(Z)V
 
-    .line 129
+    .line 135
     invoke-static {}, Lio/branch/search/BranchSearch;->getInstance()Lio/branch/search/BranchSearch;
 
     move-result-object v0
@@ -316,14 +316,18 @@
 
     if-eqz v0, :cond_2
 
-    .line 130
-    invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
+    .line 136
+    invoke-static {}, Lcom/mi/globallauncher/util/CommonUtilities;->isPocoLauncher()Z
 
     move-result v0
 
-    invoke-virtual {p0, v1, v0}, Lcom/mi/globallauncher/manager/CommercialInit;->initBranchSdk(ZZ)V
+    invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
-    .line 132
+    move-result v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/mi/globallauncher/manager/CommercialInit;->initBranchSdk(ZZ)V
+
+    .line 138
     :cond_2
     sget-boolean v0, Lmiuix/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
@@ -339,7 +343,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 133
+    .line 139
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -350,7 +354,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 134
+    .line 140
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -361,12 +365,12 @@
 
     if-nez v0, :cond_3
 
-    .line 135
+    .line 141
     invoke-interface {p1}, Lcom/mi/globallauncher/branchInterface/BranchInitInterface;->showBranchSearchGuideView()V
 
     goto :goto_0
 
-    .line 137
+    .line 143
     :cond_3
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
@@ -378,14 +382,14 @@
 
     if-eqz v0, :cond_4
 
-    .line 138
+    .line 144
     invoke-interface {p1}, Lcom/mi/globallauncher/branchInterface/BranchInitInterface;->isBranchSearchGuideViewVisible()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 139
+    .line 145
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -396,14 +400,14 @@
 
     if-nez v0, :cond_4
 
-    .line 140
+    .line 146
     invoke-interface {p1}, Lcom/mi/globallauncher/branchInterface/BranchInitInterface;->handleDragAndHideAppsGuideViewAfterGuide()V
 
-    .line 142
+    .line 148
     :cond_4
     invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackEnterDrawer()V
 
-    .line 143
+    .line 149
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -414,7 +418,7 @@
 
     if-nez v0, :cond_5
 
-    .line 144
+    .line 150
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object p1
@@ -425,7 +429,7 @@
 
     goto :goto_0
 
-    .line 146
+    .line 152
     :cond_5
     invoke-interface {p1}, Lcom/mi/globallauncher/branchInterface/BranchInitInterface;->enterQuickSearchIfNeeded()V
 
@@ -438,7 +442,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 45
+    .line 51
     :try_start_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
@@ -465,7 +469,7 @@
     :goto_0
     if-eqz p2, :cond_3
 
-    .line 46
+    .line 52
     invoke-static {}, Lio/branch/search/BranchSearch;->getInstance()Lio/branch/search/BranchSearch;
 
     move-result-object p2
@@ -474,13 +478,13 @@
 
     goto :goto_4
 
-    .line 49
+    .line 55
     :cond_1
     new-instance p2, Lio/branch/search/BranchConfiguration;
 
     invoke-direct {p2}, Lio/branch/search/BranchConfiguration;-><init>()V
 
-    .line 50
+    .line 56
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -498,11 +502,11 @@
     :cond_2
     sget-object v0, Lio/branch/search/BranchConfiguration$BranchTrackingStatus;->OPTED_OUT:Lio/branch/search/BranchConfiguration$BranchTrackingStatus;
 
-    .line 51
+    .line 57
     :goto_1
     invoke-virtual {p2, v0}, Lio/branch/search/BranchConfiguration;->trackingStatus(Lio/branch/search/BranchConfiguration$BranchTrackingStatus;)Lio/branch/search/BranchConfiguration;
 
-    .line 52
+    .line 58
     invoke-static {}, Lcom/mi/globallauncher/util/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -520,7 +524,7 @@
     :goto_2
     const-string p2, "CommercialInit"
 
-    .line 73
+    .line 79
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -552,7 +556,7 @@
 .method public initCloudConfigForMiuiHome(Landroid/content/Context;)V
     .locals 1
 
-    .line 79
+    .line 85
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -564,23 +568,102 @@
     :cond_0
     const-string v0, "jobscheduler"
 
-    .line 82
+    .line 88
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/job/JobScheduler;
 
-    .line 83
+    .line 89
     invoke-static {p1, v0}, Lcom/mi/globallauncher/config/CommercialCloudConfigJobService;->setupUpdateService(Landroid/content/Context;Landroid/app/job/JobScheduler;)V
 
+    return-void
+.end method
+
+.method public initPocoBranchOnScrollUpEnd(Lcom/mi/globallauncher/branchInterface/PocoBranchInitInterface;Landroid/app/Activity;Z)V
+    .locals 2
+
+    .line 159
+    invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackEnterDrawer()V
+
+    .line 160
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getPocoBranchSearchManager()Lcom/mi/globallauncher/poco/IPocoBranchSearchGuideManager;
+
+    move-result-object v0
+
+    invoke-interface {v0, p2}, Lcom/mi/globallauncher/poco/IPocoBranchSearchGuideManager;->needToShowBranchSearchGuideForUsers(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 161
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getPocoBranchSearchManager()Lcom/mi/globallauncher/poco/IPocoBranchSearchGuideManager;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/mi/globallauncher/manager/CommercialInit$1;
+
+    invoke-direct {v1, p0, p1}, Lcom/mi/globallauncher/manager/CommercialInit$1;-><init>(Lcom/mi/globallauncher/manager/CommercialInit;Lcom/mi/globallauncher/branchInterface/PocoBranchInitInterface;)V
+
+    invoke-interface {v0, p2, p3, v1}, Lcom/mi/globallauncher/poco/IPocoBranchSearchGuideManager;->showPocoBranchSearchGuideView(Landroid/app/Activity;ZLcom/mi/globallauncher/poco/PocoBranchGuideCallBack;)V
+
+    goto :goto_0
+
+    .line 169
+    :cond_0
+    invoke-static {}, Lio/branch/search/BranchSearch;->getInstance()Lio/branch/search/BranchSearch;
+
+    move-result-object p2
+
+    if-nez p2, :cond_1
+
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->isBranchSwitchOn()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    .line 170
+    invoke-static {}, Lcom/mi/globallauncher/util/CommonUtilities;->isPocoLauncher()Z
+
+    move-result p2
+
+    invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
+
+    move-result p3
+
+    invoke-virtual {p0, p2, p3}, Lcom/mi/globallauncher/manager/CommercialInit;->initBranchSdk(ZZ)V
+
+    .line 172
+    :cond_1
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->isQuickSearchSwitchOn()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    .line 173
+    invoke-interface {p1}, Lcom/mi/globallauncher/branchInterface/PocoBranchInitInterface;->callEnterQuickSearchIfNeeded()V
+
+    :cond_2
+    :goto_0
     return-void
 .end method
 
 .method public onTerminate()V
     .locals 1
 
-    .line 88
+    .line 94
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -589,7 +672,7 @@
 
     return-void
 
-    .line 91
+    .line 97
     :cond_0
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/CommercialInit;->cancelSchedulerService()V
 
@@ -599,7 +682,7 @@
 .method public setReport(Lcom/mi/globallauncher/config/CommercialCloudConfigJobService$DailyAnalyticReport;)V
     .locals 0
 
-    .line 115
+    .line 121
     iput-object p1, p0, Lcom/mi/globallauncher/manager/CommercialInit;->report:Lcom/mi/globallauncher/config/CommercialCloudConfigJobService$DailyAnalyticReport;
 
     return-void

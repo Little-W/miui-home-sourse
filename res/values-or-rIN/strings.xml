@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">ଆପ୍ ଡ୍ରୟର ଖୋଲିବା ପାଇଁ ସ୍ୱାଇପ୍ ଅପ୍ ସଂରକ୍ଷିତ। ସାଧାରଣ ହୋମସ୍କ୍ରିନ ମୋଡକୁ ସୁଇଚ୍ କରନ୍ତୁ ଏବଂ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ।</string>
     <string name="all_apps_suggestions">ଆପ ମତାମତ</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">ଫୋଲଡରରେ %1$d ସ୍ଥିତିକୁ ମୁଭ ହୋଇଛି</string>
     <string name="announce_for_checked">%1$s, ଚେକ୍ ହୋଇଛି</string>
     <string name="announce_for_choose_default_screen">ସ୍କ୍ରିନ୍ %1$dକୁ ଡିଫଲ୍ଟ ହୋମ୍‌ ସ୍କ୍ରିନ୍ ଭାବେ ସେଟ୍ କରନ୍ତୁ</string>
@@ -609,11 +610,11 @@
     <string name="navigation_guide_recent_title">ବର୍ତ୍ତମାନକୁ ଖୋଲନ୍ତୁ</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">ବର୍ତ୍ତମାନକୁ ଖୋଲନ୍ତୁ</string>
     <string name="navigation_guide_settings">ଜେଶ୍ଚର ଡେମୋ</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">ସେଣ୍ଟର</string>
+    <string name="navigation_position_left">ବାମ</string>
+    <string name="navigation_position_right">ଡାହାଣ</string>
+    <string name="navigation_position_summary">ନାଭିଗେସନ ବଟନର କଷ୍ଟମ ପୋଜିସନ କେବଳ ହୋମ ସ୍କ୍ରିନରେ ହିଁ ଲାଗୁ ହୋଇପାରିବ</string>
+    <string name="navigation_position_title">ନାଭିଗେସନ ବଟନ ପୋଜିସନ</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">ବାତିଲ</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">ତୃତୀୟ ପକ୍ଷ ଲଞ୍ଚର୍ ସହିତ ପୂର୍ଣ୍ଣ ସ୍କ୍ରିନ ଜେଶ୍ଚର ବ୍ୟବହାର କରିପାରିବ ନାହିଁ। ସିଷ୍ଟମ ଲଞ୍ଚରକୁ ସୁଇଚ୍ କରି ପୂର୍ଣ୍ଣ ସ୍କ୍ରିନ ଜେଶ୍ଚର ଚାଲୁ କରିବେ?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">ଓକେ</string>

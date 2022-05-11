@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">"L'actualització està reservada per obrir el Calaix d'aplicacions. Canvieu al mode normal de la Pantalla d'Inici i proveu-ho de nou."</string>
     <string name="all_apps_suggestions">"Suggeriments d'aplicacions"</string>
     <string name="am">a. m.</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">"S'ha traslladat a la posició %1$d a la carpeta"</string>
     <string name="announce_for_checked">%1$s, comprovat</string>
     <string name="announce_for_choose_default_screen">"Establiu la pantalla %1$d com la Pantalla d'Inici per defecte"</string>
@@ -521,7 +522,7 @@
     <string name="menu_workspace_preview">"Previsualitzacions de la Pantalla d'Inici"</string>
     <string name="mi_wallpaper">Temes MIUI</string>
     <string name="midnight">Nit</string>
-    <string name="minus_one_screen">"Volta d'aplicacions"</string>
+    <string name="minus_one_screen">"Calaix d'aplicacions"</string>
     <string name="miui_screen_config_title">"Configuració de la Pantalla d'Inici"</string>
     <string name="miuix_access_state_desc">Seleccionat</string>
     <string name="miuix_appcompat_action_mode_deselect_all">Anul·la la selecció</string>
@@ -639,11 +640,11 @@
     <string name="navigation_guide_recent_title">Obre recents</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Obre recents</string>
     <string name="navigation_guide_settings">Demostracions gestuals</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">Centre</string>
+    <string name="navigation_position_left">Esquerra</string>
+    <string name="navigation_position_right">Dreta</string>
+    <string name="navigation_position_summary">"Les posicions personalitzades dels botons de navegació només es poden aplicar a la pantalla d'inici"</string>
+    <string name="navigation_position_title">Posició dels botons de navegació</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Cancel·la</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">No es poden fer gestos a pantalla completa amb els iniciadors de tercers. Voleu canviar al llançador del sistemaa i activar els gestos de pantalla completa?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">"D'acord"</string>
@@ -671,7 +672,7 @@
     <string name="open_personal_assistant_dialog_desc_international">"No podreu utilitzar les cartes de la Volta d'aplicacions (existències, dreceres, etc.) i rebre actualitzacions després de desactivar aquesta funció."</string>
     <string name="open_personal_assistant_dialog_title">"Desactiveu la Volta d'aplicacions"</string>
     <string name="open_personal_assistant_settings">"Configuració del Calaix d'aplicacions"</string>
-    <string name="open_personal_assistant_title">"Volta d'aplicacions"</string>
+    <string name="open_personal_assistant_title">"Calaix d'aplicacions"</string>
     <string name="ota_layout_adjustment_button_text">Entesos</string>
     <string name="ota_layout_adjustment_content">"Els dissenys de la Pantalla d'inici i exterior es van sincronitzar amb la nova versió."</string>
     <string name="ota_layout_adjustment_title">"Disposició de la Pantalla d'Inici"</string>
@@ -848,7 +849,7 @@
     <string name="swipe_the_desktop_to_the_left">"Llisqueu a l'esquerra a la Pantalla d'Inici"</string>
     <string name="swipe_the_desktop_to_the_right">"Llisqueu a la dreta a la Pantalla d'Inici"</string>
     <string name="switch_on_button">Encendre</string>
-    <string name="switch_personal_assistant_app_vault">"Volta d'aplicacions"</string>
+    <string name="switch_personal_assistant_app_vault">"Calaix d'aplicacions"</string>
     <string name="switch_personal_assistant_google">Google Discover</string>
     <string name="switch_personal_assistant_none">Cap</string>
     <string name="switch_screen_button_order">Invertir els botons</string>

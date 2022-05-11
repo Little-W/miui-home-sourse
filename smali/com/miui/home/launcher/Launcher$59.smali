@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/lang/CharSequence;Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 0
 
-    .line 6545
+    .line 6528
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$59;->val$result:Ljava/lang/CharSequence;
@@ -46,19 +46,19 @@
 .method public run()V
     .locals 3
 
-    .line 6548
+    .line 6531
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->val$result:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
 
-    .line 6549
+    .line 6532
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$59;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
 
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1, v0, v2}, Lcom/miui/home/launcher/ShortcutInfo;->setLabelAndUpdateDB(Ljava/lang/CharSequence;Landroid/content/Context;)V
 
-    .line 6550
+    .line 6533
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$59;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$59;->this$0:Lcom/miui/home/launcher/Launcher;

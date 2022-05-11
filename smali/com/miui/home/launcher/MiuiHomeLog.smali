@@ -159,34 +159,6 @@
     return-void
 .end method
 
-.method public static printAndClearMessage(Ljava/lang/String;)V
-    .locals 1
-
-    .line 120
-    sget-object v0, Lcom/miui/home/launcher/MiuiHomeLog;->sRecordedLogHashMap:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 121
-    sget-object v0, Lcom/miui/home/launcher/MiuiHomeLog;->sRecordedLogHashMap:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;
-
-    .line 122
-    invoke-virtual {p0}, Lcom/miui/home/launcher/MiuiHomeLog$RecordedLogHelper;->printAll()V
-
-    :cond_0
-    return-void
-.end method
-
 .method public static saveRecorded(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 

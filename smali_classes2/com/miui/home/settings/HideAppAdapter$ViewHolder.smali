@@ -81,7 +81,7 @@
     .line 98
     iget-object p1, p0, Lcom/miui/home/settings/HideAppAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    const p2, 0x7f0a0130
+    const p2, 0x7f0a0133
 
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

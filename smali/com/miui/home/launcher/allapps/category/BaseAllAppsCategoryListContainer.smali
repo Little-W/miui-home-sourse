@@ -955,7 +955,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/util/typeface/TypefaceIconView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0295
+    const v0, 0x7f0a029c
 
     .line 107
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;->findViewById(I)Landroid/view/View;
@@ -1010,7 +1010,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/library/view/viewpager/ViewPager;->setAdapter(Lcom/miui/home/library/view/viewpager/PagerAdapter;)V
 
-    const v0, 0x7f0a017d
+    const v0, 0x7f0a0180
 
     .line 114
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;->findViewById(I)Landroid/view/View;

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher$77;)V
     .locals 0
 
-    .line 8296
+    .line 8282
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$77$1;->this$1:Lcom/miui/home/launcher/Launcher$77;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 8299
+    .line 8285
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$77$1;->this$1:Lcom/miui/home/launcher/Launcher$77;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Launcher$77;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -65,7 +65,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$9500(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$9200(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;)Z
 
     return-void
 .end method

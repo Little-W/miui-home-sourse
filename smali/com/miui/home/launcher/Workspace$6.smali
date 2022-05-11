@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;Landroid/view/View;Lcom/miui/home/launcher/ItemInfo;)V
     .locals 0
 
-    .line 1465
+    .line 1486
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$6;->this$0:Lcom/miui/home/launcher/Workspace;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Workspace$6;->val$v:Landroid/view/View;
@@ -46,19 +46,19 @@
 .method public run()V
     .locals 2
 
-    .line 1467
+    .line 1488
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$6;->val$v:Landroid/view/View;
 
     instance-of v1, v0, Lcom/miui/home/launcher/ShortcutIcon;
 
     if-eqz v1, :cond_0
 
-    .line 1468
+    .line 1489
     check-cast v0, Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutIcon;->showAllChildViewWhenDrawChild()V
 
-    .line 1470
+    .line 1491
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$6;->val$info:Lcom/miui/home/launcher/ItemInfo;
 

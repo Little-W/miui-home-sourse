@@ -15,6 +15,8 @@
 
 
 # instance fields
+.field isCanceled:Z
+
 .field final synthetic val$openingTargets:Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
 
 .field final synthetic val$skipViewChanges:Z
@@ -26,7 +28,7 @@
 .method constructor <init>(Lcom/miui/home/recents/util/RemoteAnimationTargetSet;ZLcom/miui/home/recents/views/TaskView;)V
     .locals 0
 
-    .line 185
+    .line 182
     iput-object p1, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$openingTargets:Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
 
     iput-boolean p2, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$skipViewChanges:Z
@@ -41,7 +43,7 @@
 .method static synthetic lambda$onAnimationEnd$0(Lcom/miui/home/recents/util/RemoteAnimationTargetSet;)V
     .locals 0
 
-    .line 197
+    .line 196
     invoke-virtual {p0}, Lcom/miui/home/recents/util/RemoteAnimationTargetSet;->release()V
 
     return-void
@@ -52,7 +54,7 @@
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 200
+    .line 199
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->setChildrenViewAlpha(F)V
 
     return-void
@@ -60,10 +62,21 @@
 
 
 # virtual methods
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    const/4 p1, 0x1
+
+    .line 211
+    iput-boolean p1, p0, Lcom/miui/home/recents/TaskViewUtils$1;->isCanceled:Z
+
+    return-void
+.end method
+
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 196
+    .line 195
     sget-object p1, Lcom/miui/home/recents/FloatingIconLayer;->FLOATING_ICON_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     iget-object v0, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$openingTargets:Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
@@ -74,12 +87,12 @@
 
     invoke-virtual {p1, v1}, Lcom/miui/home/library/utils/LooperExecutor;->execute(Ljava/lang/Runnable;)V
 
-    .line 199
+    .line 198
     iget-boolean p1, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$skipViewChanges:Z
 
     if-nez p1, :cond_0
 
-    .line 200
+    .line 199
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
     iget-object v0, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$taskView:Lcom/miui/home/recents/views/TaskView;
@@ -92,6 +105,19 @@
 
     .line 202
     :cond_0
+    iget-boolean p1, p0, Lcom/miui/home/recents/TaskViewUtils$1;->isCanceled:Z
+
+    if-nez p1, :cond_1
+
+    .line 203
+    invoke-static {}, Lcom/miui/home/recents/DimLayer;->getInstance()Lcom/miui/home/recents/DimLayer;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lcom/miui/home/recents/DimLayer;->removeDimLayer()V
+
+    .line 206
+    :cond_1
     invoke-static {}, Lcom/miui/home/recents/util/TraceUtils;->endSection()V
 
     return-void
@@ -102,10 +128,10 @@
 
     const-string p1, "openAppAnimFromRecents"
 
-    .line 188
+    .line 187
     invoke-static {p1}, Lcom/miui/home/recents/util/TraceUtils;->beginSection(Ljava/lang/String;)V
 
-    .line 189
+    .line 188
     iget-object p1, p0, Lcom/miui/home/recents/TaskViewUtils$1;->val$openingTargets:Lcom/miui/home/recents/util/RemoteAnimationTargetSet;
 
     if-eqz p1, :cond_0
@@ -116,7 +142,7 @@
 
     if-nez p1, :cond_0
 
-    .line 190
+    .line 189
     invoke-static {}, Lcom/miui/home/recents/DimLayer;->getInstance()Lcom/miui/home/recents/DimLayer;
 
     move-result-object p1

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;)V
     .locals 0
 
-    .line 605
+    .line 606
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$1;->this$0:Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
         }
     .end annotation
 
-    .line 608
+    .line 609
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$1;->this$0:Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;
 
     iget-object v0, v0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;->mAdapterItems:Ljava/util/ArrayList;
@@ -57,7 +57,7 @@
 .method public getResources()Landroid/content/res/Resources;
     .locals 1
 
-    .line 613
+    .line 614
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$1;->this$0:Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;
 
     invoke-static {v0}, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;->access$000(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;)Lcom/miui/home/launcher/Launcher;
@@ -74,7 +74,7 @@
 .method public refreshBaseRecyclerView()V
     .locals 1
 
-    .line 618
+    .line 619
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$1;->this$0:Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;->refreshRecyclerView()V

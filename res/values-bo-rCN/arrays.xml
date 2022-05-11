@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="animation_rate_entries">
+        <item>བརྗིད་ཆགས་པོ།</item>
+        <item>དོ་སྙོམས།</item>
+        <item>མགྱོགས་མྱུར།</item>
+    </string-array>
     <string-array name="editing_mode_entries">
         <item>རྩིག་ཤོག་བཟོ་བཅོས།</item>
         <item>ལྷུ་ཆས་ཆུང་ངུ་སྣོན།</item>

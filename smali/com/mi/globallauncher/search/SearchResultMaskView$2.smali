@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/search/SearchResultMaskView;)V
     .locals 0
 
-    .line 224
+    .line 222
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskView$2;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onBranchQueryHintError(Lio/branch/search/BranchLocalError;)V
     .locals 0
 
-    .line 240
+    .line 238
     invoke-virtual {p1}, Lio/branch/search/BranchLocalError;->getMessage()Ljava/lang/String;
 
     move-result-object p1
@@ -53,7 +53,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 227
+    .line 225
     invoke-virtual {p1}, Lio/branch/search/BranchQueryHintResult;->getHints()Ljava/util/List;
 
     move-result-object v0
@@ -64,7 +64,7 @@
 
     if-lez v0, :cond_1
 
-    .line 228
+    .line 226
     invoke-virtual {p1}, Lio/branch/search/BranchQueryHintResult;->getHints()Ljava/util/List;
 
     move-result-object p1
@@ -87,12 +87,12 @@
 
     check-cast v0, Lio/branch/search/BranchQueryHint;
 
-    .line 229
+    .line 227
     invoke-virtual {v0}, Lio/branch/search/BranchQueryHint;->getQuery()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 230
+    .line 228
     iget-object v2, p0, Lcom/mi/globallauncher/search/SearchResultMaskView$2;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskView;
 
     invoke-static {v2}, Lcom/mi/globallauncher/search/SearchResultMaskView;->access$200(Lcom/mi/globallauncher/search/SearchResultMaskView;)Ljava/util/List;
@@ -111,7 +111,7 @@
 
     if-nez v1, :cond_0
 
-    .line 231
+    .line 229
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskView$2;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskView;
 
     invoke-static {v1}, Lcom/mi/globallauncher/search/SearchResultMaskView;->access$200(Lcom/mi/globallauncher/search/SearchResultMaskView;)Ljava/util/List;
@@ -126,7 +126,7 @@
 
     goto :goto_0
 
-    .line 235
+    .line 233
     :cond_1
     iget-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskView$2;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskView;
 

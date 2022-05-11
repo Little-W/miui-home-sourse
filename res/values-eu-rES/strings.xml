@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">Gorantz arrastatzea Aplikazio-kaxa irekitzeko erreserbatuta dago. Aldatu Hasierako pantailako modu ohikora eta saiatu berriro.</string>
     <string name="all_apps_suggestions">Aplikazio iradokizunak</string>
     <string name="am">a.m.</string>
+    <string name="animation_rate_title">Animazio tasa</string>
     <string name="announce_for_app_move_in_folder">%1$d posiziora mugituta karpetan</string>
     <string name="announce_for_checked">%1$s, aztertuta</string>
     <string name="announce_for_choose_default_screen">%1$d pantaila hasierako pantaila lehenetsia bezala ezarri</string>
@@ -609,11 +610,11 @@
     <string name="navigation_guide_recent_title">Arestikoak ireki</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Arestikoak ireki</string>
     <string name="navigation_guide_settings">Keinuen Demoak</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">Erdia</string>
+    <string name="navigation_position_left">Ezkerra</string>
+    <string name="navigation_position_right">Eskuina</string>
+    <string name="navigation_position_summary">Nabigazio botoien posizio pertsonalizatuak Hasierako pantailan bakarrik erabil daitezke</string>
+    <string name="navigation_position_title">Nabigazio botoien posizioa</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Ezeztatu</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Ezin dira pantaila osoko keinuak erabili hirugarrenen abiarazleekin. Sistemaren abiarazlera aldatu eta pantaila osoko keinuak aktibatu?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">Ados</string>

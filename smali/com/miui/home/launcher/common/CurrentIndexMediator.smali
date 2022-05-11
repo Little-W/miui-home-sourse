@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/Launcher;)V
+.method public constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 1
 
     .line 20
@@ -27,7 +27,11 @@
     iput-object p1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediator;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     .line 22
-    iput-object p2, p0, Lcom/miui/home/launcher/common/CurrentIndexMediator;->mLauncher:Lcom/miui/home/launcher/Launcher;
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediator;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     return-void
 .end method

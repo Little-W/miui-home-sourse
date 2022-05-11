@@ -26,20 +26,20 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/Launcher;)V
+.method public constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 25
-    invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;-><init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/Launcher;)V
+    .line 24
+    invoke-direct {p0, p1}, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;-><init>(Lcom/miui/home/launcher/Workspace;)V
 
-    .line 21
+    .line 20
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mCurrenRangeIndex:Ljava/util/List;
 
-    .line 22
+    .line 21
     new-instance p1, Ljava/util/ArrayList;
 
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
@@ -52,10 +52,10 @@
 .method public static synthetic lambda$getCurrentRangeScreenID$0(Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;Ljava/lang/Integer;)Ljava/lang/Long;
     .locals 2
 
-    .line 89
+    .line 88
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
-    .line 90
+    .line 89
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result p1
@@ -64,7 +64,7 @@
 
     move-result-wide v0
 
-    .line 89
+    .line 88
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -77,7 +77,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 123
+    .line 122
     invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -86,7 +86,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 124
+    .line 123
     invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p0
@@ -102,12 +102,12 @@
 .method private updateCurrentCellLayoutStatus(Z)V
     .locals 3
 
-    .line 56
+    .line 55
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->getCurrentAllScreenIndex()Ljava/util/List;
 
     move-result-object v0
 
-    .line 57
+    .line 56
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -131,7 +131,7 @@
 
     const/4 v2, 0x0
 
-    .line 58
+    .line 57
     invoke-virtual {p0, v1, p1, v2}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->updateSingleCellLayoutStatus(IZI)V
 
     goto :goto_0
@@ -145,7 +145,7 @@
 .method protected getAccessibilityItemCount()I
     .locals 3
 
-    .line 109
+    .line 108
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isWorkspaceLoading()Z
@@ -156,12 +156,12 @@
 
     if-nez v0, :cond_0
 
-    .line 110
+    .line 109
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->getCurrentAllScreenIndex()Ljava/util/List;
 
     move-result-object v0
 
-    .line 111
+    .line 110
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -183,7 +183,7 @@
 
     move-result v2
 
-    .line 112
+    .line 111
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->getSingleCellLayoutAccessibilityCount(I)I
 
     move-result v2
@@ -207,7 +207,7 @@
         }
     .end annotation
 
-    .line 79
+    .line 78
     iget v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mCurrentScreenIndex:I
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->getCurrentRangeScreenID(I)Ljava/util/List;
@@ -228,7 +228,7 @@
         }
     .end annotation
 
-    .line 64
+    .line 63
     iget v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mCurrentScreenIndex:I
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->getCurrentRangeIndex(I)Ljava/util/List;
@@ -249,14 +249,14 @@
         }
     .end annotation
 
-    .line 68
+    .line 67
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mCurrenRangeIndex:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     move v0, p1
 
-    .line 69
+    .line 68
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
@@ -270,7 +270,7 @@
 
     if-ltz v0, :cond_0
 
-    .line 70
+    .line 69
     iget-object v1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Workspace;->getChildCount()I
@@ -279,7 +279,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 71
+    .line 70
     iget-object v1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mCurrenRangeIndex:Ljava/util/List;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -293,7 +293,7 @@
 
     goto :goto_0
 
-    .line 74
+    .line 73
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mCurrenRangeIndex:Ljava/util/List;
 
@@ -311,12 +311,12 @@
         }
     .end annotation
 
-    .line 88
+    .line 87
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mCurrenRangeID:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 89
+    .line 88
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mCurrenRangeID:Ljava/util/List;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->getCurrentRangeIndex(I)Ljava/util/List;
@@ -335,7 +335,7 @@
 
     move-result-object p1
 
-    .line 90
+    .line 89
     invoke-static {}, Ljava/util/stream/Collectors;->toList()Ljava/util/stream/Collector;
 
     move-result-object v1
@@ -346,10 +346,10 @@
 
     check-cast p1, Ljava/util/Collection;
 
-    .line 89
+    .line 88
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 91
+    .line 90
     iget-object p1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mCurrenRangeID:Ljava/util/List;
 
     return-object p1
@@ -358,7 +358,7 @@
 .method public isInCurrentScreen(I)Z
     .locals 2
 
-    .line 84
+    .line 83
     iget v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mCurrentScreenIndex:I
 
     if-gt v0, p1, :cond_0
@@ -389,12 +389,12 @@
 .method public notifyCurrentScreenShowingItem()V
     .locals 3
 
-    .line 120
+    .line 119
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->getCurrentAllScreenIndex()Ljava/util/List;
 
     move-result-object v0
 
-    .line 121
+    .line 120
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -416,7 +416,7 @@
 
     move-result v1
 
-    .line 122
+    .line 121
     iget-object v2, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v2, v1}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
@@ -438,7 +438,7 @@
 
     const/4 v0, 0x0
 
-    .line 35
+    .line 34
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->updateCurrentCellLayoutStatus(Z)V
 
     return-void
@@ -449,7 +449,7 @@
 
     const/4 v0, 0x1
 
-    .line 30
+    .line 29
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->updateCurrentCellLayoutStatus(Z)V
 
     return-void
@@ -458,21 +458,29 @@
 .method protected updateCellLayoutVisibility(I)V
     .locals 4
 
-    .line 45
-    iget v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mPreScreenIndex:I
+    .line 44
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->getCurrentRangeIndex(I)Ljava/util/List;
-
-    move-result-object v0
-
-    .line 46
-    iget v1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mCurrentScreenIndex:I
+    iget v1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mPreScreenIndex:I
 
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->getCurrentRangeIndex(I)Ljava/util/List;
 
     move-result-object v1
 
-    .line 47
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 45
+    new-instance v1, Ljava/util/ArrayList;
+
+    iget v2, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mCurrentScreenIndex:I
+
+    invoke-virtual {p0, v2}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->getCurrentRangeIndex(I)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 46
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -496,12 +504,12 @@
 
     const/4 v3, 0x0
 
-    .line 48
+    .line 47
     invoke-virtual {p0, v2, v3, p1}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->updateSingleCellLayoutStatus(IZI)V
 
     goto :goto_0
 
-    .line 50
+    .line 49
     :cond_0
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -526,7 +534,7 @@
 
     const/4 v2, 0x1
 
-    .line 51
+    .line 50
     invoke-virtual {p0, v1, v2, p1}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->updateSingleCellLayoutStatus(IZI)V
 
     goto :goto_1
@@ -538,7 +546,7 @@
 .method public updateIndex(IZ)V
     .locals 0
 
-    .line 40
+    .line 39
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->updateIndex(IZ)V
 
     return-void
@@ -547,26 +555,26 @@
 .method protected updateSingleGadgetLifeCycle(Lcom/miui/home/launcher/gadget/Gadget;)V
     .locals 5
 
-    .line 96
+    .line 95
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
-    .line 97
+    .line 96
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->getCurrentAllScreenID()Ljava/util/List;
 
     move-result-object v1
 
-    .line 98
+    .line 97
     iget v2, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->mPreScreenIndex:I
 
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/common/CurrentIndexMediatorFoldImpl;->getCurrentRangeScreenID(I)Ljava/util/List;
 
     move-result-object v2
 
-    .line 99
+    .line 98
     iget-wide v3, v0, Lcom/miui/home/launcher/gadget/GadgetInfo;->screenId:J
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -579,12 +587,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 100
+    .line 99
     invoke-virtual {p1}, Lcom/miui/home/launcher/gadget/Gadget;->onResume()V
 
     goto :goto_0
 
-    .line 101
+    .line 100
     :cond_0
     iget-wide v0, v0, Lcom/miui/home/launcher/gadget/GadgetInfo;->screenId:J
 
@@ -598,7 +606,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 102
+    .line 101
     invoke-virtual {p1}, Lcom/miui/home/launcher/gadget/Gadget;->onPause()V
 
     :cond_1

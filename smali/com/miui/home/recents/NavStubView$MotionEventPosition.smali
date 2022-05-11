@@ -26,7 +26,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 4730
+    .line 4692
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$MotionEventPosition;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,14 +39,14 @@
 .method public update(Landroid/view/MotionEvent;)Lcom/miui/home/recents/NavStubView$MotionEventPosition;
     .locals 1
 
-    .line 4735
+    .line 4697
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
 
     iput v0, p0, Lcom/miui/home/recents/NavStubView$MotionEventPosition;->rawX:F
 
-    .line 4736
+    .line 4698
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result p1

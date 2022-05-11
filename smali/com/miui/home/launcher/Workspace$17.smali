@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 2845
+    .line 2865
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$17;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 5
 
-    .line 2848
+    .line 2868
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$17;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->isInNormalEditingMode()Z
@@ -49,7 +49,7 @@
 
     const/4 v0, 0x0
 
-    .line 2849
+    .line 2869
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$17;->this$0:Lcom/miui/home/launcher/Workspace;
 
@@ -59,7 +59,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 2850
+    .line 2870
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$17;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Workspace;->getCellScreen(I)Lcom/miui/home/launcher/CellScreen;
@@ -72,7 +72,7 @@
 
     const/4 v4, 0x1
 
-    .line 2851
+    .line 2871
     invoke-virtual {v1, v4, v2, v3}, Lcom/miui/home/launcher/CellScreen;->setEditMode(ZILcom/miui/home/launcher/EditStateChangeReason;)Z
 
     add-int/lit8 v0, v0, 0x1

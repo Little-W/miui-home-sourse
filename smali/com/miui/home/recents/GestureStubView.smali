@@ -1257,15 +1257,21 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/view/WindowManager$LayoutParams;-><init>(IIIII)V
 
-    .line 819
-    invoke-direct {p0, v6}, Lcom/miui/home/recents/GestureStubView;->adaptPNotchScreen(Landroid/view/WindowManager$LayoutParams;)V
+    iput-object v6, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    .line 819
+    iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
+
+    invoke-direct {p0, v0}, Lcom/miui/home/recents/GestureStubView;->adaptPNotchScreen(Landroid/view/WindowManager$LayoutParams;)V
 
     .line 820
-    iput v0, v6, Landroid/view/WindowManager$LayoutParams;->alpha:F
+    iget-object v0, p0, Lcom/miui/home/recents/GestureStubView;->mGestureStubParams:Landroid/view/WindowManager$LayoutParams;
 
-    return-object v6
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->alpha:F
+
+    return-object v0
 .end method
 
 .method private getGestureStubWindowParam()Landroid/view/WindowManager$LayoutParams;

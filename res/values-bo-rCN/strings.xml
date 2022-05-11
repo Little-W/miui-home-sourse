@@ -66,6 +66,7 @@
     <string name="all_apps_slide_up_tips">ཤུར་ལྕོག་་དཔེ་ཚུལ་གྱི་སྐབས་སུ་ལག་བརྡ་ཡར་འདྲེད་བྱེད་པ་བསྐངས་ཟིན། ཚད་ལྡན་དཔེ་ཚུལ་ལ་བརྗེས་རྗེས་སྒྲིག་འགོད་གནང་རོགས།</string>
     <string name="all_apps_suggestions">ཉེར་སྤྱོད་བསམ་འཆར།</string>
     <string name="am">སྔ་དྲོ།</string>
+    <string name="animation_rate_title">འགུལ་རིས་མྱུར་ཚོད།</string>
     <string name="announce_for_app_move_in_folder">ཡིག་ཁུག་ནང་གི་ཨང་རིམ་%1$dལ་སྤོ་བ།</string>
     <string name="announce_for_checked">%1$s བདམས་ཟིན།</string>
     <string name="announce_for_choose_default_screen">བརྙན་ཨང་%1$dནི་གཙོ་བརྙན་ལ་སྒྲིག་འགོད་བྱས་ཟིན།</string>
@@ -598,11 +599,11 @@
     <string name="navigation_guide_recent_title">ཉེ་ཆར་གྱི་ལས་འགན་ལ་བརྗེ་བ།</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">“ཉེ་ཆར་གྱི་ལས་འགན་རྗེས།”</string>
     <string name="navigation_guide_settings">བཀོལ་སྤྱོད་སློབ་རིམ།</string>
-    <string name="navigation_position_center">屏幕中间</string>
-    <string name="navigation_position_left">屏幕左侧</string>
-    <string name="navigation_position_right">屏幕右侧</string>
-    <string name="navigation_position_summary">虚拟键位置设置仅针对主屏幕生效</string>
-    <string name="navigation_position_title">虚拟键位置</string>
+    <string name="navigation_position_center">འཆར་ངོས་ཀྱི་དཀྱིལ།</string>
+    <string name="navigation_position_left">འཆར་ངོས་ཀྱི་གཡོན་ངོས།</string>
+    <string name="navigation_position_right">འཆར་ངོས་ཀྱི་གཡས་ངོས།</string>
+    <string name="navigation_position_summary">རྟོག་བཟོའི་མཐེབ་བཀྱག་གི་གནས་ཡུལ་ནི་བརྙན་ཡོལ་གཙོ་བོ་ཁོ་ནར་སྤྱོད་ཐུབ།</string>
+    <string name="navigation_position_title">རྟོག་བཟོའི་མཐེབ་བཀྱག་གནས་ཡུལ།</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">རྩིས་མེད།</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">མ་ལག་ཅོག་ངོས་མ་ཡིན་པར་ཡོངས་ཁེབས་བརྙན་ལག་བརྡ་བེད་སྤྱོད་བྱ་མི་ཐུབ། མ་ལག་ཅོག་ངོས་སུ་བརྗེ་ནས་ཡོངས་ཁེབས་བརྙན་ལག་བརྡ་ཁ་ཕྱེའམ།</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">གཏན་འཁེལ།</string>

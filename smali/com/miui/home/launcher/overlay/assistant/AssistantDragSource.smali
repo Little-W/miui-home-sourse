@@ -120,12 +120,6 @@
     return-void
 .end method
 
-.method public setDragController(Lcom/miui/home/launcher/DragController;)V
-    .locals 0
-
-    return-void
-.end method
-
 .method public transform(Landroid/view/View;[III)V
     .locals 2
 

@@ -6,10 +6,6 @@
 .implements Landroid/view/LayoutInflater$Factory2;
 
 
-# static fields
-.field private static final TAG:Ljava/lang/String; = "MIUIWidgetLayoutFactory"
-
-
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -25,7 +21,7 @@
 .method public onCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/view/View;
     .locals 1
 
-    .line 43
+    .line 42
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     move-result v0
@@ -305,225 +301,225 @@
 
     goto/16 :goto_2
 
-    .line 121
+    .line 120
     :pswitch_0
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 122
+    .line 121
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetViewFlipper;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetViewFlipper;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto/16 :goto_2
 
-    .line 117
+    .line 116
     :pswitch_1
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 118
+    .line 117
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetTextView;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto/16 :goto_2
 
-    .line 113
+    .line 112
     :pswitch_2
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 114
+    .line 113
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetTextClock;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetTextClock;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto/16 :goto_2
 
-    .line 109
+    .line 108
     :pswitch_3
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 110
+    .line 109
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetSwitch;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetSwitch;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto/16 :goto_2
 
-    .line 105
+    .line 104
     :pswitch_4
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 106
+    .line 105
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetStackView;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetStackView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto/16 :goto_2
 
-    .line 101
+    .line 100
     :pswitch_5
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 102
+    .line 101
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetRelativeLayout;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetRelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto/16 :goto_2
 
-    .line 97
+    .line 96
     :pswitch_6
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 98
+    .line 97
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetRadioButton;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetRadioButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto/16 :goto_2
 
-    .line 93
+    .line 92
     :pswitch_7
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 94
+    .line 93
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetProgressBar;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetProgressBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto/16 :goto_2
 
-    .line 89
+    .line 88
     :pswitch_8
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 90
+    .line 89
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetListView;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto :goto_2
 
-    .line 85
+    .line 84
     :pswitch_9
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 86
+    .line 85
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetLinearLayout;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetLinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto :goto_2
 
-    .line 81
+    .line 80
     :pswitch_a
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 82
+    .line 81
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetImageView;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto :goto_2
 
-    .line 77
+    .line 76
     :pswitch_b
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 78
+    .line 77
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetImageButton;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto :goto_2
 
-    .line 73
+    .line 72
     :pswitch_c
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 74
+    .line 73
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetGridView;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetGridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto :goto_2
 
-    .line 69
+    .line 68
     :pswitch_d
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 70
+    .line 69
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetGridLayout;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetGridLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto :goto_2
 
-    .line 65
+    .line 64
     :pswitch_e
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 66
+    .line 65
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetFrameLayout;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto :goto_2
 
-    .line 61
+    .line 60
     :pswitch_f
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 62
+    .line 61
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetChronometer;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetChronometer;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto :goto_2
 
-    .line 57
+    .line 56
     :pswitch_10
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 58
+    .line 57
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetCheckBox;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetCheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto :goto_2
 
-    .line 53
+    .line 52
     :pswitch_11
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 54
+    .line 53
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetButton;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto :goto_2
 
-    .line 49
+    .line 48
     :pswitch_12
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 50
+    .line 49
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetAnalogClock;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetAnalogClock;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto :goto_2
 
-    .line 45
+    .line 44
     :pswitch_13
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPreCreateView(Landroid/view/View;Ljava/lang/String;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 46
+    .line 45
     new-instance p2, Lcom/miui/miuiwidget/views/MIUIWidgetAdapterViewFlipper;
 
     invoke-direct {p2, p3, p4}, Lcom/miui/miuiwidget/views/MIUIWidgetAdapterViewFlipper;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 127
+    .line 126
     :goto_2
     invoke-virtual {p0, p1, p2}, Lcom/miui/miuiwidget/MIUIWidgetLayoutFactory;->onPostCreateView(Landroid/view/View;Landroid/view/View;)V
 

@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/AllAppsContainerView;Lcom/miui/home/launcher/LauncherState;Z)V
     .locals 0
 
-    .line 19
+    .line 20
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsContainerView$1;->this$0:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
     iput-object p2, p0, Lcom/miui/home/launcher/allapps/AllAppsContainerView$1;->val$state:Lcom/miui/home/launcher/LauncherState;
@@ -44,7 +44,7 @@
 .method public static synthetic lambda$enterQuickSearchIfNeeded$0(Lcom/miui/home/launcher/allapps/AllAppsContainerView$1;)V
     .locals 1
 
-    .line 39
+    .line 40
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsContainerView$1;->this$0:Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/AllAppsContainerView;->callEnterQuickSearchIfNeeded()V
@@ -57,7 +57,7 @@
 .method public enterQuickSearchIfNeeded()V
     .locals 3
 
-    .line 39
+    .line 40
     new-instance v0, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsContainerView$1$KK4BFFEHsHxKf7Dub8FL5D0UtT0;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/allapps/-$$Lambda$AllAppsContainerView$1$KK4BFFEHsHxKf7Dub8FL5D0UtT0;-><init>(Lcom/miui/home/launcher/allapps/AllAppsContainerView$1;)V
@@ -72,7 +72,7 @@
 .method public handleDragAndHideAppsGuideViewAfterGuide()V
     .locals 1
 
-    .line 34
+    .line 35
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchGuildController()Lcom/mi/globallauncher/branchInterface/IBranchGuildController;
 
     move-result-object v0
@@ -85,7 +85,7 @@
 .method public isBranchSearchGuideViewVisible()Z
     .locals 1
 
-    .line 29
+    .line 30
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchGuildController()Lcom/mi/globallauncher/branchInterface/IBranchGuildController;
 
     move-result-object v0
@@ -100,7 +100,7 @@
 .method public showBranchSearchGuideView()V
     .locals 1
 
-    .line 22
+    .line 23
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/AllAppsContainerView$1;->val$state:Lcom/miui/home/launcher/LauncherState;
 
     instance-of v0, v0, Lcom/miui/home/launcher/uioverrides/AllAppsState;
@@ -111,7 +111,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 23
+    .line 24
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchGuildController()Lcom/mi/globallauncher/branchInterface/IBranchGuildController;
 
     move-result-object v0

@@ -4,14 +4,26 @@
 
 
 # virtual methods
-.method public abstract onAgreeBtnClicked()V
+.method public onAgreeBtnClicked()V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract onCloseBtnClicked()V
+.method public onCloseBtnClicked()V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract onDialogDismiss()V
+.method public onDialogDismiss()V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract onDialogShow()V
+.method public onDialogShow()V
+    .locals 0
+
+    return-void
 .end method

@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">การปัดขึ้นถูกสงวนไว้สำหรับการเปิดลิ้นชักแอป เปลี่ยนเป็นโหมดหน้าจอหลักปกติแล้วลองอีกครั้ง</string>
     <string name="all_apps_suggestions">ข้อแนะนำแอป</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">อัตราภาพเคลื่อนไหว</string>
     <string name="announce_for_app_move_in_folder">ย้ายไปที่ตำแหน่ง %1$d ในโฟลเดอร์</string>
     <string name="announce_for_checked">%1$s เลือกแล้ว</string>
     <string name="announce_for_choose_default_screen">ตั้งค่าหน้าจอ %1$d เป็นหน้าจอหลักเริ่มต้น</string>
@@ -639,11 +640,11 @@
     <string name="navigation_guide_recent_title">เปิดล่าสุด</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">เปิดล่าสุด</string>
     <string name="navigation_guide_settings">การสาธิตท่าทางสัมผัส</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">กลาง</string>
+    <string name="navigation_position_left">ซ้าย</string>
+    <string name="navigation_position_right">ขวา</string>
+    <string name="navigation_position_summary">ตำแหน่งที่กำหนดเองของปุ่มนำทางสามารถใช้ได้กับหน้าจอหลักเท่านั้น</string>
+    <string name="navigation_position_title">ตำแหน่งปุ่มนำทาง</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">ยกเลิก </string>
     <string name="navigation_set_miui_home_as_default_dialog_message">ไม่สามารถใช้ท่าทางเต็มหน้าจอกับตัวเรียกใช้งานบุคคลที่สาม สลับไปที่ตัวเรียกใช้ระบบและเปิดท่าทางเต็มหน้าจอหรือไม่?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">ตกลง</string>

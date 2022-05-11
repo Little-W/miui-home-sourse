@@ -21,7 +21,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 55
+    .line 61
     new-instance v0, Lcom/mi/globallauncher/BranchClientImplement;
 
     invoke-direct {v0}, Lcom/mi/globallauncher/BranchClientImplement;-><init>()V
@@ -34,25 +34,25 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 57
+    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, ""
+
+    .line 62
+    iput-object v0, p0, Lcom/mi/globallauncher/BranchClientImplement;->hotSuggestLastQueryWord:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    .line 115
+    .line 121
     iput-boolean v0, p0, Lcom/mi/globallauncher/BranchClientImplement;->newFeatureTagShowing:Z
 
-    .line 141
+    .line 146
     iput-boolean v0, p0, Lcom/mi/globallauncher/BranchClientImplement;->newPocoFeatureShowing:Z
 
     const-string v0, ""
 
-    .line 314
-    iput-object v0, p0, Lcom/mi/globallauncher/BranchClientImplement;->hotSuggestLastQueryWord:Ljava/lang/String;
-
-    const-string v0, ""
-
-    .line 327
+    .line 336
     iput-object v0, p0, Lcom/mi/globallauncher/BranchClientImplement;->branchLastQueryWord:Ljava/lang/String;
 
     return-void
@@ -61,7 +61,7 @@
 .method public static getInstance()Lcom/mi/globallauncher/BranchClientImplement;
     .locals 1
 
-    .line 61
+    .line 68
     sget-object v0, Lcom/mi/globallauncher/BranchClientImplement;->instance:Lcom/mi/globallauncher/BranchClientImplement;
 
     return-object v0
@@ -76,7 +76,7 @@
 
     return-object p1
 
-    .line 76
+    .line 82
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->getIconPackage()Ljava/lang/String;
 
@@ -84,7 +84,7 @@
 
     if-nez v0, :cond_1
 
-    .line 78
+    .line 84
     invoke-virtual {p1}, Lcom/miui/home/launcher/ShortcutInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
@@ -93,37 +93,34 @@
     return-object v0
 .end method
 
-.method static synthetic lambda$onBindViewHolder$0(Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;Ljava/lang/String;)V
-    .locals 1
+.method static synthetic lambda$onBindViewHolder$0(Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;Ljava/lang/String;)V
+    .locals 2
 
-    .line 276
-    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->clearRvData()V
-
-    .line 277
+    .line 286
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
-    move-result-object p0
+    move-result-object v0
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-interface {p0, v0}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->setNeedToShowSearchSuggestion(Z)V
+    invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->setNeedToShowSearchSuggestion(Z)V
 
-    .line 278
-    invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
+    .line 287
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    invoke-virtual {p1, p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->setSearchText(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->setSearchText(Ljava/lang/String;)V
 
-    .line 279
-    invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->resetEventReportValues()V
+    .line 288
+    invoke-virtual {p0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->resetEventReportValues()V
 
     const/4 p0, 0x2
 
-    .line 280
+    .line 289
     invoke-static {p0}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchSearchResultClick(I)V
 
-    .line 281
+    .line 290
     invoke-static {p0}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchHotItemClick(I)V
 
     return-void
@@ -134,7 +131,7 @@
 
     const/4 p0, 0x5
 
-    .line 290
+    .line 299
     invoke-static {p0}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchSearchResultClick(I)V
 
     return-void
@@ -143,42 +140,60 @@
 .method private trackShowBranchHotSuggest(ILjava/lang/String;Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;)V
     .locals 1
 
-    .line 317
+    .line 324
     iget-object v0, p0, Lcom/mi/globallauncher/BranchClientImplement;->hotSuggestLastQueryWord:Ljava/lang/String;
+
+    if-eqz v0, :cond_1
 
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 318
+    .line 325
     invoke-virtual {p3, v0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->setHasReportedBranchShowHotSuggest(Z)V
 
-    .line 319
+    if-nez p2, :cond_0
+
+    const-string p2, ""
+
+    .line 326
+    :cond_0
     iput-object p2, p0, Lcom/mi/globallauncher/BranchClientImplement;->hotSuggestLastQueryWord:Ljava/lang/String;
 
-    :cond_0
-    if-eqz p3, :cond_1
+    :cond_1
+    if-eqz p3, :cond_2
 
-    .line 321
+    .line 328
     invoke-virtual {p3}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->hasReportedBranchShowHotSuggest()Z
 
     move-result p2
 
-    if-nez p2, :cond_1
+    if-nez p2, :cond_2
 
-    .line 322
+    const/4 p2, 0x1
+
+    .line 329
+    invoke-virtual {p3, p2}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->setHasReportedBranchShowHotSuggest(Z)V
+
+    .line 330
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
+
+    move-result-object p2
+
+    invoke-interface {p2}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->needToShowSearchSuggestion()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    .line 331
     invoke-static {p1}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchHotItemShow(I)V
 
-    const/4 p1, 0x1
-
-    .line 323
-    invoke-virtual {p3, p1}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->setHasReportedBranchShowHotSuggest(Z)V
-
-    :cond_1
+    :cond_2
     return-void
 .end method
 
@@ -196,7 +211,7 @@
         }
     .end annotation
 
-    .line 354
+    .line 363
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -229,7 +244,7 @@
 .method public branchQuery(Ljava/lang/String;)Z
     .locals 2
 
-    .line 349
+    .line 358
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     const/4 v1, 0x1
@@ -246,7 +261,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 350
+    .line 359
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result p1
@@ -262,10 +277,73 @@
     return v1
 .end method
 
+.method public branchSwitchTrack(Landroid/content/Context;)V
+    .locals 3
+
+    .line 367
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string v1, "yyyy-MM-dd"
+
+    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    new-instance v1, Ljava/util/Date;
+
+    invoke-direct {v1}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {v0, v1}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 368
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->isBranchOpen()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "branch_open_state_daily"
+
+    const-string v2, ""
+
+    invoke-static {p1, v1, v2}, Lcom/miui/home/launcher/common/PreferenceUtils;->getString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 369
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->isBranchOpen()Z
+
+    move-result v1
+
+    invoke-static {v1}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackSwitchState(Z)V
+
+    const-string v1, "branch_open_state_daily"
+
+    .line 370
+    invoke-static {p1, v1, v0}, Lcom/miui/home/launcher/common/PreferenceUtils;->putString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public getBranchDatabaseReady()Z
     .locals 1
 
-    .line 345
+    .line 354
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isDrawerMode()Z
 
     move-result v0
@@ -338,7 +416,7 @@
 
     return-object p1
 
-    .line 254
+    .line 264
     :cond_0
     new-instance p2, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;
 
@@ -354,7 +432,7 @@
 
     return-object p2
 
-    .line 260
+    .line 270
     :cond_1
     new-instance p2, Landroid/view/View;
 
@@ -364,7 +442,7 @@
 
     invoke-direct {p2, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 261
+    .line 271
     new-instance p1, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
     const/4 p3, -0x1
@@ -375,14 +453,14 @@
 
     invoke-virtual {p2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 262
+    .line 272
     new-instance p1, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
 
     invoke-direct {p1, p2}, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;-><init>(Landroid/view/View;)V
 
     return-object p1
 
-    .line 258
+    .line 268
     :cond_2
     new-instance p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
 
@@ -398,7 +476,7 @@
 
     return-object p2
 
-    .line 249
+    .line 259
     :cond_3
     new-instance p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
 
@@ -414,7 +492,7 @@
 
     return-object p2
 
-    .line 251
+    .line 261
     :cond_4
     new-instance p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
 
@@ -430,7 +508,7 @@
 
     return-object p2
 
-    .line 256
+    .line 266
     :cond_5
     new-instance p2, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;
 
@@ -450,7 +528,7 @@
 .method public internationalInitMethod(Lcom/miui/home/launcher/Application;)V
     .locals 2
 
-    .line 171
+    .line 176
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchImplement;->getInstance()Lcom/mi/globallauncher/manager/BranchImplement;
 
     move-result-object v0
@@ -461,12 +539,12 @@
 
     invoke-virtual {v0, p1, v1}, Lcom/mi/globallauncher/manager/BranchImplement;->initPrivacy(Landroid/app/Application;Lcom/mi/globallauncher/branchInterface/PrivacyInitCallBack;)V
 
-    .line 193
+    .line 198
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
 
-    .line 194
+    .line 199
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchGuildController()Lcom/mi/globallauncher/branchInterface/IBranchGuildController;
 
     move-result-object v0
@@ -514,7 +592,7 @@
 
     goto/16 :goto_0
 
-    .line 298
+    .line 307
     :cond_0
     invoke-virtual {p2}, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->getAdapterItems()Ljava/util/List;
 
@@ -526,7 +604,7 @@
 
     check-cast p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
-    .line 299
+    .line 308
     check-cast p3, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsBackgroundAlpha()I
@@ -549,7 +627,7 @@
 
     goto/16 :goto_0
 
-    .line 294
+    .line 303
     :cond_1
     invoke-virtual {p2}, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->getAdapterItems()Ljava/util/List;
 
@@ -561,7 +639,7 @@
 
     check-cast p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
-    .line 295
+    .line 304
     check-cast p3, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsBackgroundAlpha()I
@@ -582,7 +660,7 @@
 
     goto/16 :goto_0
 
-    .line 309
+    .line 318
     :cond_2
     iget-object p1, p3, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
@@ -606,7 +684,7 @@
 
     goto :goto_0
 
-    .line 305
+    .line 314
     :cond_3
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchSearchResultUtils()Lcom/mi/globallauncher/branchInterface/IBranchSearchResultUtils;
 
@@ -614,7 +692,7 @@
 
     iget-object p2, p3, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 306
+    .line 315
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsBackgroundAlpha()I
 
     move-result p3
@@ -623,12 +701,12 @@
 
     move-result p3
 
-    .line 305
+    .line 314
     invoke-interface {p1, p2, p3}, Lcom/mi/globallauncher/branchInterface/IBranchSearchResultUtils;->setupBranchSearchResultDivider(Landroid/view/View;Z)V
 
     goto :goto_0
 
-    .line 271
+    .line 281
     :cond_4
     invoke-virtual {p2}, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->getAdapterItems()Ljava/util/List;
 
@@ -640,7 +718,7 @@
 
     check-cast p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
-    .line 272
+    .line 282
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchSearchResultUtils()Lcom/mi/globallauncher/branchInterface/IBranchSearchResultUtils;
 
     move-result-object p4
@@ -651,14 +729,14 @@
 
     invoke-interface {p4, v0}, Lcom/mi/globallauncher/branchInterface/IBranchSearchResultUtils;->setAutoSuggestList(Ljava/util/List;)V
 
-    .line 273
+    .line 283
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchSearchResultUtils()Lcom/mi/globallauncher/branchInterface/IBranchSearchResultUtils;
 
     move-result-object p4
 
     iget-object p3, p3, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 274
+    .line 284
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsBackgroundAlpha()I
 
     move-result v0
@@ -669,16 +747,16 @@
 
     iget-object p1, p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->sectionName:Ljava/lang/String;
 
-    new-instance v0, Lcom/mi/globallauncher/-$$Lambda$BranchClientImplement$rd7NvgtI4I2AG-3opDO4JQguuW4;
+    new-instance v0, Lcom/mi/globallauncher/-$$Lambda$BranchClientImplement$BD1kS6TKGFJbYCyPfOkU7BjhP4k;
 
-    invoke-direct {v0, p2, p6}, Lcom/mi/globallauncher/-$$Lambda$BranchClientImplement$rd7NvgtI4I2AG-3opDO4JQguuW4;-><init>(Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;)V
+    invoke-direct {v0, p6}, Lcom/mi/globallauncher/-$$Lambda$BranchClientImplement$BD1kS6TKGFJbYCyPfOkU7BjhP4k;-><init>(Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;)V
 
-    .line 273
+    .line 283
     invoke-interface {p4, p3, p5, p1, v0}, Lcom/mi/globallauncher/branchInterface/IBranchSearchResultUtils;->setupAutoSuggestView(Landroid/view/View;ZLjava/lang/String;Lcom/mi/globallauncher/view/ReversibleTagGroup$OnTagClickListener;)V
 
     const/4 p1, 0x2
 
-    .line 283
+    .line 292
     invoke-virtual {p2}, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->getQuery()Ljava/lang/String;
 
     move-result-object p2
@@ -687,7 +765,7 @@
 
     goto :goto_0
 
-    .line 286
+    .line 295
     :cond_5
     invoke-virtual {p2}, Lcom/miui/home/launcher/allapps/AlphabeticalAppsList;->getAdapterItems()Ljava/util/List;
 
@@ -699,14 +777,14 @@
 
     check-cast p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
-    .line 287
+    .line 296
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchSearchResultUtils()Lcom/mi/globallauncher/branchInterface/IBranchSearchResultUtils;
 
     move-result-object v0
 
     iget-object v1, p3, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 288
+    .line 297
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsBackgroundAlpha()I
 
     move-result p2
@@ -727,7 +805,7 @@
 
     const/4 v6, 0x0
 
-    .line 287
+    .line 296
     invoke-interface/range {v0 .. v6}, Lcom/mi/globallauncher/branchInterface/IBranchSearchResultUtils;->setupBranchItemView(Landroid/view/View;ZLio/branch/search/BranchLinkResult;ILandroid/view/View$OnClickListener;Z)V
 
     :cond_6
@@ -738,7 +816,7 @@
 .method public onResume(Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 84
+    .line 90
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -747,7 +825,7 @@
 
     return-void
 
-    .line 87
+    .line 93
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isElderlyManMode()Z
 
@@ -755,10 +833,10 @@
 
     if-nez v0, :cond_1
 
-    .line 88
+    .line 94
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/BranchClientImplement;->updateDrawerModeForCloudConfig(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 89
+    .line 95
     sget-object v0, Lcom/miui/home/launcher/LauncherState;->ALL_APPS:Lcom/miui/home/launcher/LauncherState;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
@@ -767,7 +845,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 90
+    .line 96
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAppsView()Lcom/miui/home/launcher/allapps/AllAppsContainerView;
 
     move-result-object p1
@@ -781,7 +859,7 @@
 .method public showNewFeatureTag(Lcom/miui/home/launcher/Launcher;)Z
     .locals 2
 
-    .line 161
+    .line 166
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -792,7 +870,7 @@
 
     return v1
 
-    .line 164
+    .line 169
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isDrawerMode()Z
 
@@ -802,7 +880,7 @@
 
     return v1
 
-    .line 167
+    .line 172
     :cond_1
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchStatic()Lcom/mi/globallauncher/branchInterface/IBranchStaticInterface;
 
@@ -818,21 +896,18 @@
 .method public trackInfo(Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 1
 
-    .line 65
+    .line 72
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
 
-    .line 66
+    .line 73
     invoke-direct {p0, p1}, Lcom/mi/globallauncher/BranchClientImplement;->getShortInfoPackageName(Lcom/miui/home/launcher/ShortcutInfo;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 67
-    invoke-static {p1}, Lcom/miui/privacy/track/TrackManager;->trackPlayStoreClick(Ljava/lang/String;)V
-
-    .line 68
-    invoke-static {p1}, Lcom/miui/privacy/track/TrackManager;->trackGetappsClick(Ljava/lang/String;)V
+    .line 74
+    invoke-static {p1}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackGpOrGetApps(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -841,7 +916,7 @@
 .method public trackShowBranchFrequentLocalApp(Ljava/lang/String;)V
     .locals 1
 
-    .line 330
+    .line 339
     iget-object v0, p0, Lcom/mi/globallauncher/BranchClientImplement;->branchLastQueryWord:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -850,7 +925,7 @@
 
     if-nez v0, :cond_0
 
-    .line 331
+    .line 340
     iput-object p1, p0, Lcom/mi/globallauncher/BranchClientImplement;->branchLastQueryWord:Ljava/lang/String;
 
     :cond_0
@@ -860,35 +935,40 @@
 .method public trackShowBranchResult(Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;I)V
     .locals 1
 
-    const/16 v0, 0x1000
+    const/high16 v0, 0x20000
 
-    if-ne v0, p2, :cond_0
+    if-eq v0, p2, :cond_0
 
-    if-eqz p1, :cond_0
+    const/high16 v0, 0x10000
 
-    .line 337
+    if-ne v0, p2, :cond_1
+
+    :cond_0
+    if-eqz p1, :cond_1
+
+    .line 346
     invoke-virtual {p1}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->hasReportedBranchShowEvent()Z
 
     move-result p2
 
-    if-nez p2, :cond_0
+    if-nez p2, :cond_1
 
-    .line 338
+    .line 347
     invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchSearchResultShow()V
 
     const/4 p2, 0x1
 
-    .line 339
+    .line 348
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->setHasReportedBranchShowEvent(Z)V
 
-    :cond_0
+    :cond_1
     return-void
 .end method
 
 .method public updateAllAppsIndicator(Lcom/miui/home/launcher/Launcher;)V
     .locals 6
 
-    .line 118
+    .line 124
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -897,7 +977,7 @@
 
     return-void
 
-    .line 121
+    .line 127
     :cond_0
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/BranchClientImplement;->showNewFeatureTag(Lcom/miui/home/launcher/Launcher;)Z
 
@@ -907,7 +987,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 123
+    .line 129
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
 
     move-result-object v0
@@ -916,27 +996,18 @@
 
     invoke-virtual {v0, v2}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->updateAllAppsIndicator(Z)V
 
-    .line 124
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
-
-    move-result-object v0
-
-    const/16 v3, 0x8
-
-    invoke-virtual {v0, v3}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->setVisibility(I)V
-
-    .line 125
+    .line 130
     iget-boolean v0, p0, Lcom/mi/globallauncher/BranchClientImplement;->newFeatureTagShowing:Z
 
     if-nez v0, :cond_1
 
-    .line 126
+    .line 131
     invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackNewFeatureTagShow()V
 
-    .line 127
+    .line 132
     iput-boolean v2, p0, Lcom/mi/globallauncher/BranchClientImplement;->newFeatureTagShowing:Z
 
-    .line 129
+    .line 134
     :cond_1
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
@@ -952,7 +1023,7 @@
 
     if-nez v0, :cond_3
 
-    .line 130
+    .line 135
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -961,7 +1032,7 @@
 
     goto :goto_0
 
-    .line 133
+    .line 138
     :cond_2
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
 
@@ -969,10 +1040,10 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->updateAllAppsIndicator(Z)V
 
-    .line 134
+    .line 139
     iput-boolean v1, p0, Lcom/mi/globallauncher/BranchClientImplement;->newFeatureTagShowing:Z
 
-    .line 136
+    .line 141
     :cond_3
     :goto_0
     sget-object v0, Lcom/miui/home/launcher/LauncherState;->NORMAL:Lcom/miui/home/launcher/LauncherState;
@@ -983,7 +1054,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 137
+    .line 142
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
 
     move-result-object p1
@@ -997,7 +1068,7 @@
 .method public updateDrawerModeForCloudConfig(Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 96
+    .line 102
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -1006,7 +1077,7 @@
 
     return-void
 
-    .line 99
+    .line 105
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPocoLauncher()Z
 
@@ -1014,12 +1085,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 100
+    .line 106
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/BranchClientImplement;->updatePocoPageIndicator(Lcom/miui/home/launcher/Launcher;)V
 
     return-void
 
-    .line 104
+    .line 110
     :cond_1
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isElderlyManMode()Z
 
@@ -1037,7 +1108,7 @@
 
     if-nez v0, :cond_2
 
-    .line 105
+    .line 111
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -1048,7 +1119,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 106
+    .line 112
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -1061,29 +1132,29 @@
 
     const/4 v0, 0x7
 
-    .line 107
+    .line 113
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->setEditingState(I)V
 
     const/4 v0, 0x1
 
-    .line 108
+    .line 114
     invoke-static {p1, v0}, Lcom/miui/home/launcher/allapps/LauncherModeController;->setDrawerModeEnable(Landroid/content/Context;Z)V
 
-    .line 109
+    .line 115
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchStatic()Lcom/mi/globallauncher/branchInterface/IBranchStaticInterface;
 
     move-result-object v0
 
     invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/IBranchStaticInterface;->updateDrawerModeForCloudConfig()V
 
-    .line 110
+    .line 116
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchGuildController()Lcom/mi/globallauncher/branchInterface/IBranchGuildController;
 
     move-result-object v0
 
     invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/IBranchGuildController;->showBranchSearchGuideView()V
 
-    .line 112
+    .line 118
     :cond_2
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/BranchClientImplement;->updateAllAppsIndicator(Lcom/miui/home/launcher/Launcher;)V
 
@@ -1093,7 +1164,7 @@
 .method public updatePocoPageIndicator(Lcom/miui/home/launcher/Launcher;)V
     .locals 1
 
-    .line 144
+    .line 149
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -1102,14 +1173,8 @@
 
     return-void
 
-    .line 147
+    .line 152
     :cond_0
-    invoke-static {p1}, Lcom/mi/globallauncher/util/CommonUtilities;->isFirstInstall(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getPocoBranchSearchManager()Lcom/mi/globallauncher/poco/IPocoBranchSearchGuideManager;
 
     move-result-object v0
@@ -1120,8 +1185,7 @@
 
     if-nez v0, :cond_2
 
-    .line 148
-    :cond_1
+    .line 153
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -1130,33 +1194,12 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
-
-    .line 149
-    :cond_2
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
-
-    move-result-object p1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->updateAllAppsIndicator(Z)V
-
-    .line 150
-    iget-boolean p1, p0, Lcom/mi/globallauncher/BranchClientImplement;->newPocoFeatureShowing:Z
-
-    if-nez p1, :cond_4
-
-    .line 151
-    invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackNewFeatureTagShow()V
-
-    .line 152
-    iput-boolean v0, p0, Lcom/mi/globallauncher/BranchClientImplement;->newPocoFeatureShowing:Z
+    if-eqz v0, :cond_1
 
     goto :goto_0
 
-    .line 155
-    :cond_3
+    .line 160
+    :cond_1
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
 
     move-result-object p1
@@ -1165,10 +1208,34 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->updateAllAppsIndicator(Z)V
 
-    .line 156
+    .line 161
     iput-boolean v0, p0, Lcom/mi/globallauncher/BranchClientImplement;->newPocoFeatureShowing:Z
 
-    :cond_4
+    goto :goto_1
+
+    .line 154
+    :cond_2
     :goto_0
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
+
+    move-result-object p1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->updateAllAppsIndicator(Z)V
+
+    .line 155
+    iget-boolean p1, p0, Lcom/mi/globallauncher/BranchClientImplement;->newPocoFeatureShowing:Z
+
+    if-nez p1, :cond_3
+
+    .line 156
+    invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackNewFeatureTagShow()V
+
+    .line 157
+    iput-boolean v0, p0, Lcom/mi/globallauncher/BranchClientImplement;->newPocoFeatureShowing:Z
+
+    :cond_3
+    :goto_1
     return-void
 .end method

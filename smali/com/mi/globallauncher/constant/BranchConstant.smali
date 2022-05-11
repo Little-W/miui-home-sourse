@@ -84,8 +84,6 @@
 
 .field public static final SHOULD_SHOWN_BRANCH_SEARCH_GUIDE:Ljava/lang/String; = "show_branch_search_guide"
 
-.field public static final SHOW_BRANCH_GUIDE_IN_SETTING:Ljava/lang/String; = "show_branch_guide_in_setting"
-
 .field public static final SHOW_NEW_FEATURE_COUNTS:Ljava/lang/String; = "show_new_feature_counts"
 
 .field public static final SHOW_NEW_FEATURE_TIME:Ljava/lang/String; = "show_new_feature_time"

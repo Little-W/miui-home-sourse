@@ -204,6 +204,11 @@
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->branchGuideAgreed()V
 
     .line 237
+    iget-object p1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
+
+    invoke-interface {p1}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->onPrivacyAgreed()V
+
+    .line 238
     invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchTermServiceAlertOk()V
 
     return-void
@@ -426,7 +431,7 @@
 .method private updateSearchGuidePrivacyDialogColor(Landroid/view/View;Z)V
     .locals 7
 
-    .line 242
+    .line 243
     sget v0, Lcom/mi/globallauncher/R$id;->dialog_bg:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -435,7 +440,7 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    .line 243
+    .line 244
     sget v1, Lcom/mi/globallauncher/R$id;->txt_title:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -444,7 +449,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 244
+    .line 245
     sget v2, Lcom/mi/globallauncher/R$id;->txt_content1:I
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -453,7 +458,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 245
+    .line 246
     sget v3, Lcom/mi/globallauncher/R$id;->txt_content2:I
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -462,7 +467,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 246
+    .line 247
     sget v4, Lcom/mi/globallauncher/R$id;->txt_content3:I
 
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -471,7 +476,7 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 247
+    .line 248
     sget v5, Lcom/mi/globallauncher/R$id;->btn_cancel:I
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -480,7 +485,7 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    .line 248
+    .line 249
     sget v6, Lcom/mi/globallauncher/R$id;->btn_ok:I
 
     invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -491,12 +496,12 @@
 
     if-eqz p2, :cond_0
 
-    .line 250
+    .line 251
     sget p2, Lcom/mi/globallauncher/R$drawable;->common_dialog_background_light:I
 
     invoke-virtual {v0, p2}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
 
-    .line 251
+    .line 252
     iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
 
     sget v0, Lcom/mi/globallauncher/R$color;->black:I
@@ -507,17 +512,6 @@
 
     invoke-virtual {v1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 252
-    iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
-
-    sget v0, Lcom/mi/globallauncher/R$color;->alpha70black:I
-
-    invoke-static {p2, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
-
-    move-result p2
-
-    invoke-virtual {v2, p2}, Landroid/widget/TextView;->setTextColor(I)V
-
     .line 253
     iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
 
@@ -527,7 +521,7 @@
 
     move-result p2
 
-    invoke-virtual {v3, p2}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v2, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 254
     iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
@@ -538,7 +532,7 @@
 
     move-result p2
 
-    invoke-virtual {v4, p2}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v3, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 255
     iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
@@ -549,27 +543,38 @@
 
     move-result p2
 
-    invoke-virtual {v5, p2}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v4, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 256
+    iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
+
+    sget v0, Lcom/mi/globallauncher/R$color;->alpha70black:I
+
+    invoke-static {p2, v0}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result p2
+
+    invoke-virtual {v5, p2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 257
     sget p2, Lcom/mi/globallauncher/R$drawable;->common_dialog_btn_bg_light:I
 
     invoke-virtual {v5, p2}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 257
+    .line 258
     sget p2, Lcom/mi/globallauncher/R$drawable;->common_dialog_btn_bg_light:I
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
     goto :goto_0
 
-    .line 259
+    .line 260
     :cond_0
     sget p2, Lcom/mi/globallauncher/R$drawable;->common_dialog_background_dark:I
 
     invoke-virtual {v0, p2}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
 
-    .line 260
+    .line 261
     iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
 
     sget v0, Lcom/mi/globallauncher/R$color;->white:I
@@ -580,7 +585,7 @@
 
     invoke-virtual {v1, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 261
+    .line 262
     iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
 
     sget v0, Lcom/mi/globallauncher/R$color;->alpha50white:I
@@ -591,7 +596,7 @@
 
     invoke-virtual {v2, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 262
+    .line 263
     iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
 
     sget v0, Lcom/mi/globallauncher/R$color;->alpha50white:I
@@ -602,7 +607,7 @@
 
     invoke-virtual {v3, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 263
+    .line 264
     iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
 
     sget v0, Lcom/mi/globallauncher/R$color;->alpha50white:I
@@ -613,7 +618,7 @@
 
     invoke-virtual {v4, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 264
+    .line 265
     iget-object p2, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mContext:Landroid/app/Application;
 
     sget v0, Lcom/mi/globallauncher/R$color;->alpha50white:I
@@ -624,12 +629,12 @@
 
     invoke-virtual {v5, p2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 265
+    .line 266
     sget p2, Lcom/mi/globallauncher/R$drawable;->common_dialog_btn_bg_dark:I
 
     invoke-virtual {v5, p2}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 266
+    .line 267
     sget p2, Lcom/mi/globallauncher/R$drawable;->common_dialog_btn_bg_dark:I
 
     invoke-virtual {p1, p2}, Landroid/widget/TextView;->setBackgroundResource(I)V
@@ -643,15 +648,15 @@
 .method public branchGuideAgreed()V
     .locals 2
 
-    .line 272
+    .line 273
     iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideView:Lcom/mi/globallauncher/view/BranchSearchGuide;
 
     if-eqz v0, :cond_0
 
-    .line 273
+    .line 274
     invoke-virtual {v0}, Lcom/mi/globallauncher/view/BranchSearchGuide;->onAgreeBtnClicked()V
 
-    .line 275
+    .line 276
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
@@ -661,20 +666,20 @@
 
     invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->setQuickSearchSwitchOn(Z)V
 
-    .line 276
+    .line 277
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
 
     invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setGuildType1AlreadyShow(Z)V
 
-    .line 277
+    .line 278
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->hideBranchSearchGuideView()V
 
-    .line 278
+    .line 279
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->showBranchSearchGuideView()V
 
-    .line 279
+    .line 280
     invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchSearchGuideOpen()V
 
     return-void
@@ -683,7 +688,7 @@
 .method public closeAllAppsDialog()V
     .locals 1
 
-    .line 292
+    .line 293
     invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
     move-result v0
@@ -692,7 +697,7 @@
 
     return-void
 
-    .line 295
+    .line 296
     :cond_0
     iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
 
@@ -704,7 +709,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 296
+    .line 297
     iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
 
     if-eqz v0, :cond_1
@@ -715,21 +720,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 297
+    .line 298
     iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
 
     invoke-virtual {v0}, Lcom/mi/globallauncher/view/GeneralDialog;->dismiss()V
 
     const/4 v0, 0x0
 
-    .line 298
+    .line 299
     iput-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchPrivacyDialog:Lcom/mi/globallauncher/view/GeneralDialog;
 
-    .line 300
+    .line 301
     :cond_1
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->hideBranchSearchGuideView()V
 
-    .line 301
+    .line 302
     iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->callback:Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;
 
     invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/IBranchGuildCallBack;->closeAllAppsDialog()V
@@ -741,7 +746,7 @@
 .method public controlOnBackPressed(Z)Z
     .locals 2
 
-    .line 327
+    .line 328
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->isBranchSearchGuideViewVisible()Z
 
     move-result v0
@@ -750,18 +755,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 328
+    .line 329
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->hideBranchSearchGuideView()V
 
     if-eqz p1, :cond_0
 
-    .line 330
+    .line 331
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->handleAfterBranchSearchGuideViewHide()V
 
     :cond_0
     return v1
 
-    .line 333
+    .line 334
     :cond_1
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->isDragIconGuideVisible()Z
 
@@ -769,7 +774,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 334
+    .line 335
     invoke-virtual {p0}, Lcom/mi/globallauncher/manager/BranchGuildController;->hideDragIconGuideViewIfNeeded()V
 
     return v1
@@ -980,7 +985,7 @@
 .method public hideDragIconGuideViewIfNeeded()V
     .locals 2
 
-    .line 284
+    .line 285
     iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mDragIconGuide:Lcom/mi/globallauncher/view/TapTargetView;
 
     if-eqz v0, :cond_0
@@ -991,7 +996,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 285
+    .line 286
     iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mDragIconGuide:Lcom/mi/globallauncher/view/TapTargetView;
 
     const/4 v1, 0x1
@@ -1000,7 +1005,7 @@
 
     const/4 v0, 0x0
 
-    .line 286
+    .line 287
     iput-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mDragIconGuide:Lcom/mi/globallauncher/view/TapTargetView;
 
     :cond_0
@@ -1034,7 +1039,7 @@
 .method public isBranchSearchGuideViewVisible()Z
     .locals 1
 
-    .line 307
+    .line 308
     iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mBranchSearchGuideDialog:Lcom/mi/globallauncher/view/GeneralFullScreenDialog;
 
     if-eqz v0, :cond_0
@@ -1059,7 +1064,7 @@
 .method public isDragIconGuideVisible()Z
     .locals 1
 
-    .line 312
+    .line 313
     iget-object v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->mDragIconGuide:Lcom/mi/globallauncher/view/TapTargetView;
 
     if-eqz v0, :cond_0
@@ -1084,7 +1089,7 @@
 .method public isHasBranch()Z
     .locals 1
 
-    .line 317
+    .line 318
     iget-boolean v0, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->hasBranch:Z
 
     return v0
@@ -1093,7 +1098,7 @@
 .method public setHasBranch(Z)V
     .locals 0
 
-    .line 322
+    .line 323
     iput-boolean p1, p0, Lcom/mi/globallauncher/manager/BranchGuildController;->hasBranch:Z
 
     return-void

@@ -61,7 +61,7 @@
     goto :goto_0
 
     :cond_0
-    const/high16 v0, 0x3f400000    # 0.75f
+    const v0, 0x3f59999a    # 0.85f
 
     :goto_0
     return v0

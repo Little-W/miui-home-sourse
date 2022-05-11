@@ -109,63 +109,26 @@
 
 # virtual methods
 .method public final calculateCellSize(Landroid/content/Context;)V
-    .locals 4
+    .locals 3
 
     const-string v0, "context"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 91
-    iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingWidth:I
+    iget p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingWidth:I
 
-    int-to-float v0, v0
+    int-to-float p1, p1
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    mul-float/2addr v0, v1
+    mul-float/2addr p1, v0
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellHorizontalSpacing()I
 
-    move-result v2
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, -0x1
-
-    mul-int/2addr v2, v3
-
-    int-to-float v2, v2
-
-    sub-float/2addr v0, v2
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    div-float/2addr v0, v2
-
-    invoke-static {v0}, Ljava/lang/Math;->round(F)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWidth:I
-
-    .line 92
-    iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingHeight:I
-
-    int-to-float v0, v0
-
-    mul-float/2addr v0, v1
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellVerticalSpacing()I
-
     move-result v1
 
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
     move-result v2
 
@@ -175,73 +138,123 @@
 
     int-to-float v1, v1
 
-    sub-float/2addr v0, v1
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    div-float/2addr v0, v1
-
-    invoke-static {v0}, Ljava/lang/Math;->round(F)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellHeight:I
-
-    .line 93
-    iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
+    sub-float/2addr p1, v1
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
     move-result v1
 
-    div-int/2addr v0, v1
+    int-to-float v1, v1
 
-    sget v1, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMinWidth:I
+    div-float/2addr p1, v1
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWidth:I
+
+    .line 92
+    iget p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWorkingHeight:I
+
+    int-to-float p1, p1
+
+    mul-float/2addr p1, v0
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellVerticalSpacing()I
 
     move-result v0
-
-    iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mWidgetCellWidth:I
-
-    .line 94
-    iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenHeight:I
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getStatusBarHeight()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    sget v1, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellPaddingTop:I
-
-    sub-int/2addr v0, v1
-
-    .line 95
-    sget v1, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellPaddingBottom:I
-
-    sub-int/2addr v0, v1
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
 
     move-result v1
 
-    div-int/2addr v0, v1
+    add-int/lit8 v1, v1, -0x1
 
-    sget v1, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMinHeight:I
+    mul-int/2addr v0, v1
 
-    .line 94
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+    int-to-float v0, v0
+
+    sub-float/2addr p1, v0
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
 
     move-result v0
 
-    iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mWidgetCellHeight:I
+    int-to-float v0, v0
+
+    div-float/2addr p1, v0
+
+    invoke-static {p1}, Ljava/lang/Math;->round(F)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellHeight:I
+
+    .line 93
+    iget p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
+
+    move-result v0
+
+    div-int/2addr p1, v0
+
+    sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMinWidth:I
+
+    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mWidgetCellWidth:I
+
+    .line 94
+    iget p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenHeight:I
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getStatusBarHeight()I
+
+    move-result v0
+
+    sub-int/2addr p1, v0
+
+    sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellPaddingTop:I
+
+    sub-int/2addr p1, v0
+
+    .line 95
+    sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellPaddingBottom:I
+
+    sub-int/2addr p1, v0
+
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountY()I
+
+    move-result v0
+
+    div-int/2addr p1, v0
+
+    sget v0, Lcom/miui/home/launcher/DeviceConfig;->sWidgetCellMinHeight:I
+
+    .line 94
+    invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mWidgetCellHeight:I
 
     .line 96
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object p1
+
+    const-string v0, "Application.getInstance()"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Application;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    .line 97
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -250,60 +263,54 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
 
-    move-result-object v0
+    move-result v0
 
-    .line 97
-    invoke-static {p1}, Lcom/miui/home/launcher/DeviceConfig;->isLargeScreen(Landroid/content/Context;)Z
+    if-eqz v0, :cond_0
 
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const p1, 0x7f07014a
+    const v0, 0x7f07014f
 
     .line 98
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result p1
-
-    iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsCellWidth:I
+    move-result v0
 
     goto :goto_0
 
     .line 100
     :cond_0
-    iget p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWidth:I
+    iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellWidth:I
 
-    iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsCellWidth:I
+    .line 97
+    :goto_0
+    iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsCellWidth:I
 
     .line 102
-    :goto_0
-    iget p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellHeight:I
+    iget v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mCellHeight:I
 
-    iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsCellHeight:I
+    iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsCellHeight:I
 
-    const p1, 0x7f070094
+    const v0, 0x7f070094
 
     .line 103
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    const v1, 0x7f070159
-
-    .line 104
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x2
+    const v1, 0x7f07015e
 
-    add-int/2addr p1, v0
+    .line 104
+    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    mul-int/lit8 p1, p1, 0x2
+
+    add-int/2addr v0, p1
 
     .line 103
-    iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsCellContentHeight:I
+    iput v0, p0, Lcom/miui/home/launcher/DeviceProfile;->mHotSeatsCellContentHeight:I
 
     return-void
 .end method
@@ -448,7 +455,15 @@
     iput p1, p0, Lcom/miui/home/launcher/DeviceProfile;->mScreenWidth:I
 
     .line 79
-    invoke-static {p3}, Lcom/miui/home/launcher/DeviceConfig;->isLargeScreen(Landroid/content/Context;)Z
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object p3
+
+    const-string v0, "Application.getInstance()"
+
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p3}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
 
     move-result p3
 

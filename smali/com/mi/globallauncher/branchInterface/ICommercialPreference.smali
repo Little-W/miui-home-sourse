@@ -79,9 +79,6 @@
 .method public abstract hasRequestedLocationPermission()Z
 .end method
 
-.method public abstract hasShowBranchSearchGuideInSetting()Z
-.end method
-
 .method public abstract hideSettingsTip()V
 .end method
 
@@ -248,9 +245,6 @@
 .end method
 
 .method public abstract setShouldShownBranchSearchGuide(Z)V
-.end method
-
-.method public abstract setShowBranchSearchGuideInSetting(Z)V
 .end method
 
 .method public abstract setUniSearchPermissionButtonClicked()V

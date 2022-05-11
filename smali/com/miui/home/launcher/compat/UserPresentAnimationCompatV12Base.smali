@@ -6,14 +6,10 @@
 .implements Lcom/miui/home/launcher/DeviceProfile$OnDeviceProfileChangeListener;
 
 
-# static fields
-.field private static final LOCATION:[I
-
-.field private static final MATRIX_VALUE:[F
-
-
 # instance fields
-.field private final mCamera:Landroid/graphics/Camera;
+.field protected final LOCATION:[I
+
+.field private final mAnimationValue:[F
 
 .field private final mCameraTranslationZ:F
 
@@ -21,62 +17,61 @@
 
 .field private final mDelayRandomRatio:F
 
-.field private final mMatrix:Landroid/graphics/Matrix;
-
 .field private mMinDelay:I
 
 .field protected mPivot:[I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method constructor <init>(Lcom/miui/home/launcher/Launcher;FFF)V
     .locals 1
 
-    const/16 v0, 0x9
-
-    .line 18
-    new-array v0, v0, [F
-
-    sput-object v0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->MATRIX_VALUE:[F
+    .line 29
+    invoke-direct {p0, p1}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;-><init>(Lcom/miui/home/launcher/Launcher;)V
 
     const/4 v0, 0x2
 
-    .line 19
+    .line 18
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->LOCATION:[I
+    iput-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->LOCATION:[I
+
+    const v0, 0x7fffffff
+
+    .line 20
+    iput v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mMinDelay:I
+
+    const/4 v0, 0x3
+
+    .line 25
+    new-array v0, v0, [F
+
+    iput-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mAnimationValue:[F
+
+    .line 30
+    invoke-direct {p0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->changePivot()V
+
+    .line 31
+    iput p2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mCameraTranslationZ:F
+
+    .line 32
+    iput p3, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mDelayDistanceRatio:F
+
+    .line 33
+    iput p4, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mDelayRandomRatio:F
+
+    .line 34
+    invoke-virtual {p1, p0}, Lcom/miui/home/launcher/Launcher;->addOnDeviceProfileChangeListener(Lcom/miui/home/launcher/DeviceProfile$OnDeviceProfileChangeListener;)V
 
     return-void
 .end method
 
-.method constructor <init>(Lcom/miui/home/launcher/Launcher;FFFF)V
-    .locals 4
-
-    .line 32
-    invoke-direct {p0, p1}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;-><init>(Lcom/miui/home/launcher/Launcher;)V
-
-    const v0, 0x7fffffff
-
-    .line 24
-    iput v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mMinDelay:I
-
-    .line 33
-    new-instance v0, Landroid/graphics/Camera;
-
-    invoke-direct {v0}, Landroid/graphics/Camera;-><init>()V
-
-    iput-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mCamera:Landroid/graphics/Camera;
-
-    .line 34
-    new-instance v0, Landroid/graphics/Matrix;
-
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
-
-    iput-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mMatrix:Landroid/graphics/Matrix;
+.method private changePivot()V
+    .locals 6
 
     const/4 v0, 0x2
 
-    .line 35
+    .line 51
     new-array v1, v0, [I
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
@@ -93,7 +88,13 @@
 
     move-result v0
 
-    div-int/lit8 v0, v0, 0x3
+    int-to-double v2, v0
+
+    const-wide/high16 v4, 0x4004000000000000L    # 2.5
+
+    div-double/2addr v2, v4
+
+    double-to-int v0, v2
 
     const/4 v2, 0x1
 
@@ -101,99 +102,68 @@
 
     iput-object v1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mPivot:[I
 
-    .line 36
-    iget-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mCamera:Landroid/graphics/Camera;
-
-    invoke-virtual {v0}, Landroid/graphics/Camera;->getLocationX()F
-
-    move-result v1
-
-    iget-object v3, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mPivot:[I
-
-    aget v2, v3, v2
-
-    int-to-float v2, v2
-
-    invoke-static {v2}, Lcom/miui/home/launcher/common/Utilities;->px2in(F)F
-
-    move-result v2
-
-    neg-float v2, v2
-
-    invoke-virtual {v0, v1, v2, p2}, Landroid/graphics/Camera;->setLocation(FFF)V
-
-    .line 37
-    iput p3, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mCameraTranslationZ:F
-
-    .line 38
-    iput p4, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mDelayDistanceRatio:F
-
-    .line 39
-    iput p5, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mDelayRandomRatio:F
-
-    .line 40
-    invoke-virtual {p1, p0}, Lcom/miui/home/launcher/Launcher;->addOnDeviceProfileChangeListener(Lcom/miui/home/launcher/DeviceProfile$OnDeviceProfileChangeListener;)V
-
     return-void
 .end method
 
 
 # virtual methods
+.method protected conversionValueFrom3DTo2D(IIF)[F
+    .locals 2
+
+    int-to-float p1, p1
+
+    int-to-float p2, p2
+
+    .line 76
+    invoke-static {p1, p2, p3}, Lcom/miui/home/launcher/util/CameraLite;->to2D(FFF)Landroid/graphics/PointF;
+
+    move-result-object v0
+
+    .line 77
+    iget v1, v0, Landroid/graphics/PointF;->x:F
+
+    sub-float/2addr v1, p1
+
+    .line 78
+    iget p1, v0, Landroid/graphics/PointF;->y:F
+
+    sub-float/2addr p1, p2
+
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    .line 79
+    invoke-static {p2, p3}, Lcom/miui/home/launcher/util/CameraLite;->valueTo2D(FF)F
+
+    move-result p2
+
+    .line 80
+    iget-object p3, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mAnimationValue:[F
+
+    const/4 v0, 0x0
+
+    aput v1, p3, v0
+
+    const/4 v0, 0x1
+
+    .line 81
+    aput p1, p3, v0
+
+    const/4 p1, 0x2
+
+    .line 82
+    aput p2, p3, p1
+
+    return-object p3
+.end method
+
 .method public abstract endAnimation(Landroid/view/View;)V
 .end method
 
 .method public onDeviceProfileChanged(Lcom/miui/home/launcher/DeviceProfile;)V
-    .locals 3
+    .locals 0
 
-    const/4 p1, 0x2
-
-    .line 53
-    new-array v0, p1, [I
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
-
-    move-result v1
-
-    div-int/2addr v1, p1
-
-    const/4 p1, 0x0
-
-    aput v1, v0, p1
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenHeight()I
-
-    move-result p1
-
-    div-int/lit8 p1, p1, 0x3
-
-    const/4 v1, 0x1
-
-    aput p1, v0, v1
-
-    iput-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mPivot:[I
-
-    .line 54
-    iget-object p1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mCamera:Landroid/graphics/Camera;
-
-    invoke-virtual {p1}, Landroid/graphics/Camera;->getLocationX()F
-
-    move-result v0
-
-    iget-object v2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mPivot:[I
-
-    aget v1, v2, v1
-
-    int-to-float v1, v1
-
-    invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->px2in(F)F
-
-    move-result v1
-
-    neg-float v1, v1
-
-    iget v2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mCameraTranslationZ:F
-
-    invoke-virtual {p1, v0, v1, v2}, Landroid/graphics/Camera;->setLocation(FFF)V
+    .line 47
+    invoke-direct {p0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->changePivot()V
 
     return-void
 .end method
@@ -201,7 +171,7 @@
 .method public prepareAnimation()V
     .locals 4
 
-    .line 45
+    .line 39
     iget-wide v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mPreparedScreenId:J
 
     const-wide/16 v2, -0x1
@@ -212,10 +182,10 @@
 
     const v0, 0x7fffffff
 
-    .line 46
+    .line 40
     iput v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mMinDelay:I
 
-    .line 48
+    .line 42
     :cond_0
     invoke-super {p0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatComplex;->prepareAnimation()V
 
@@ -227,25 +197,25 @@
 
     if-eqz p1, :cond_0
 
-    const v0, 0x7f0a02c7
+    const v0, 0x7f0a02d0
 
-    .line 59
+    .line 56
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 60
+    .line 57
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->endAnimation(Landroid/view/View;)V
 
-    .line 61
-    sget-object v1, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->LOCATION:[I
+    .line 58
+    iget-object v1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->LOCATION:[I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 62
-    sget-object v1, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->LOCATION:[I
+    .line 59
+    iget-object v1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->LOCATION:[I
 
     const/4 v2, 0x0
 
@@ -261,8 +231,8 @@
 
     add-int/2addr v1, v3
 
-    .line 63
-    sget-object v3, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->LOCATION:[I
+    .line 60
+    iget-object v3, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->LOCATION:[I
 
     const/4 v5, 0x1
 
@@ -276,7 +246,7 @@
 
     add-int/2addr v3, v6
 
-    .line 64
+    .line 61
     iget-object v6, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mPivot:[I
 
     aget v7, v6, v2
@@ -297,7 +267,7 @@
 
     int-to-float v6, v6
 
-    .line 65
+    .line 62
     iget v7, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mDelayDistanceRatio:F
 
     mul-float/2addr v6, v7
@@ -322,14 +292,14 @@
 
     double-to-int v6, v6
 
-    .line 66
+    .line 63
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
 
     invoke-virtual {p1, v0, v7}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 67
+    .line 64
     iget v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mMinDelay:I
 
     invoke-static {v6, v0}, Ljava/lang/Math;->min(II)I
@@ -338,101 +308,61 @@
 
     iput v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mMinDelay:I
 
+    .line 65
+    iget-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mPivot:[I
+
+    aget v6, v0, v2
+
+    sub-int/2addr v1, v6
+
+    .line 66
+    aget v0, v0, v5
+
+    sub-int/2addr v3, v0
+
+    const v0, 0x7f0a02ce
+
+    .line 67
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    invoke-virtual {p1, v0, v6}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    const v0, 0x7f0a02cf
+
+    .line 68
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    invoke-virtual {p1, v0, v6}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    .line 69
+    iget v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mCameraTranslationZ:F
+
+    invoke-virtual {p0, v1, v3, v0}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->conversionValueFrom3DTo2D(IIF)[F
+
+    move-result-object v0
+
     .line 70
-    iget-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mCamera:Landroid/graphics/Camera;
+    aget v8, v0, v4
 
-    invoke-virtual {v0}, Landroid/graphics/Camera;->save()V
+    aget v9, v0, v4
 
-    .line 71
-    iget-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mCamera:Landroid/graphics/Camera;
+    const v10, 0x3e19999a    # 0.15f
 
-    iget-object v6, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mPivot:[I
+    aget v11, v0, v2
 
-    aget v7, v6, v2
-
-    sub-int/2addr v1, v7
-
-    int-to-float v1, v1
-
-    aget v6, v6, v5
-
-    sub-int/2addr v6, v3
-
-    int-to-float v3, v6
-
-    iget v6, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mCameraTranslationZ:F
-
-    invoke-virtual {v0, v1, v3, v6}, Landroid/graphics/Camera;->translate(FFF)V
-
-    .line 72
-    iget-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mCamera:Landroid/graphics/Camera;
-
-    iget-object v1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mMatrix:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Camera;->getMatrix(Landroid/graphics/Matrix;)V
-
-    .line 73
-    iget-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mCamera:Landroid/graphics/Camera;
-
-    invoke-virtual {v0}, Landroid/graphics/Camera;->restore()V
-
-    .line 74
-    iget-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mMatrix:Landroid/graphics/Matrix;
-
-    sget-object v1, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->MATRIX_VALUE:[F
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->getValues([F)V
-
-    .line 76
-    sget-object v0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->MATRIX_VALUE:[F
-
-    aget v0, v0, v2
-
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->boundToRangeAnimatorParams(F)F
-
-    move-result v8
-
-    .line 77
-    sget-object v0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->MATRIX_VALUE:[F
-
-    const/4 v1, 0x4
-
-    aget v0, v0, v1
-
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->boundToRangeAnimatorParams(F)F
-
-    move-result v9
-
-    .line 78
-    sget-object v0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->MATRIX_VALUE:[F
-
-    aget v0, v0, v4
-
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->boundToRangeAnimatorParams(F)F
-
-    move-result v11
-
-    .line 79
-    sget-object v0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->MATRIX_VALUE:[F
-
-    const/4 v1, 0x5
-
-    aget v0, v0, v1
-
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->boundToRangeAnimatorParams(F)F
-
-    move-result v12
-
-    const v10, 0x3d75c28f    # 0.06f
+    aget v12, v0, v5
 
     move-object v6, p0
 
     move-object v7, p1
 
-    .line 80
     invoke-virtual/range {v6 .. v12}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->setViewPrepareInfo(Landroid/view/View;FFFFF)V
 
-    .line 81
+    .line 71
     iget p1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mNumOfAnimatedView:I
 
     add-int/2addr p1, v5
@@ -446,26 +376,26 @@
 .method protected setViewPrepareInfo(Landroid/view/View;FFFFF)V
     .locals 0
 
-    .line 87
+    .line 88
     invoke-virtual {p1, p4}, Landroid/view/View;->setAlpha(F)V
 
-    .line 88
+    .line 89
     invoke-virtual {p1, p2}, Landroid/view/View;->setScaleX(F)V
 
-    .line 89
+    .line 90
     invoke-virtual {p1, p3}, Landroid/view/View;->setScaleY(F)V
 
-    .line 90
+    .line 91
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->ignoreTranslation(Landroid/view/View;)Z
 
     move-result p2
 
     if-nez p2, :cond_0
 
-    .line 91
+    .line 92
     invoke-virtual {p1, p5}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 93
+    .line 94
     :cond_0
     invoke-virtual {p1, p6}, Landroid/view/View;->setTranslationY(F)V
 
@@ -475,19 +405,19 @@
 .method final showUserPresentAnimation(Landroid/view/View;)V
     .locals 4
 
-    const v0, 0x7f0a02c7
+    const v0, 0x7f0a02d0
 
-    .line 98
+    .line 99
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 99
+    .line 100
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->prepareUserPresentAnimation(Landroid/view/View;)V
 
-    .line 102
+    .line 103
     :cond_0
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -499,7 +429,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 103
+    .line 104
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -518,10 +448,10 @@
     :goto_0
     const/4 v3, 0x0
 
-    .line 105
+    .line 106
     invoke-virtual {p1, v0, v3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    .line 106
+    .line 107
     iget v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->mMinDelay:I
 
     const v3, 0x7fffffff
@@ -545,7 +475,7 @@
 
     move-result v0
 
-    .line 110
+    .line 109
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12Base;->ignoreTranslation(Landroid/view/View;)Z
 
     move-result v1

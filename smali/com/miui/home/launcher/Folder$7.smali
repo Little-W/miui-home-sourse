@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Folder;)V
     .locals 0
 
-    .line 724
+    .line 729
     iput-object p1, p0, Lcom/miui/home/launcher/Folder$7;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 727
+    .line 732
     iget-object p1, p0, Lcom/miui/home/launcher/Folder$7;->this$0:Lcom/miui/home/launcher/Folder;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Folder;->access$2000(Lcom/miui/home/launcher/Folder;)Lcom/miui/home/launcher/NonOverlapLinearLayout;

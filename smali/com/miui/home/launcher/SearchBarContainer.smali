@@ -540,7 +540,7 @@
 .method public setupViews()V
     .locals 1
 
-    const v0, 0x7f0a0202
+    const v0, 0x7f0a0209
 
     .line 35
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarContainer;->findViewById(I)Landroid/view/View;

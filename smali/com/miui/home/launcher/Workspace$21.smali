@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 3698
+    .line 3730
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$21;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/common/messages/EditStateChangedMessageHandler;-><init>()V
@@ -40,7 +40,7 @@
 
     const/4 p1, 0x0
 
-    .line 3701
+    .line 3733
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$21;->this$0:Lcom/miui/home/launcher/Workspace;
 
@@ -50,7 +50,7 @@
 
     if-ge p1, v0, :cond_1
 
-    .line 3702
+    .line 3734
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$21;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
@@ -59,7 +59,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 3704
+    .line 3736
     invoke-virtual {v0}, Lcom/miui/home/launcher/CellLayout;->requestLayout()V
 
     :cond_0

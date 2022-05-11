@@ -67,9 +67,6 @@
 .method public abstract setBranchKey(Ljava/lang/String;)V
 .end method
 
-.method public abstract setBranchSwitchChangeListener(Lcom/mi/globallauncher/branchInterface/BranchSwitchChangeListener;)V
-.end method
-
 .method public abstract setBranchSwitchOn(Z)V
 .end method
 

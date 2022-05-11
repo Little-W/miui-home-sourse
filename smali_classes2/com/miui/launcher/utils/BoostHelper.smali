@@ -12,6 +12,8 @@
 
 
 # instance fields
+.field private mEnableRTMode:Z
+
 .field private mIsSchedRTDisabled:Z
 
 .field private mIsTurboSchedDisabled:Z
@@ -68,7 +70,7 @@
 .method private constructor <init>()V
     .locals 7
 
-    .line 38
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
@@ -105,7 +107,10 @@
 
     const/4 v1, 0x1
 
-    .line 40
+    .line 37
+    iput-boolean v1, p0, Lcom/miui/launcher/utils/BoostHelper;->mEnableRTMode:Z
+
+    .line 41
     :try_start_0
     iget-object v2, p0, Lcom/miui/launcher/utils/BoostHelper;->mProcessManagerClass:Ljava/lang/Class;
 
@@ -113,14 +118,14 @@
 
     const-string v2, "miui.process.ProcessManager"
 
-    .line 41
+    .line 42
     invoke-static {v2}, Lcom/miui/launcher/utils/ReflectUtils;->getClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/miui/launcher/utils/BoostHelper;->mProcessManagerClass:Ljava/lang/Class;
 
-    .line 42
+    .line 43
     iget-object v2, p0, Lcom/miui/launcher/utils/BoostHelper;->mProcessManagerClass:Ljava/lang/Class;
 
     const-string v3, "beginSchedThreads"
@@ -129,7 +134,7 @@
 
     new-array v5, v0, [Ljava/lang/Class;
 
-    .line 43
+    .line 44
     invoke-static {v4, v5}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v4
@@ -146,35 +151,77 @@
 
     aput-object v6, v5, v0
 
-    sget-object v0, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+    sget-object v6, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
-    aput-object v0, v5, v1
+    aput-object v6, v5, v1
 
-    .line 42
+    .line 43
     invoke-static {v2, v3, v4, v5}, Lcom/miui/launcher/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    move-result-object v0
+    move-result-object v2
 
-    iput-object v0, p0, Lcom/miui/launcher/utils/BoostHelper;->mSchedThreadsMethod:Ljava/lang/reflect/Method;
+    iput-object v2, p0, Lcom/miui/launcher/utils/BoostHelper;->mSchedThreadsMethod:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 48
+    goto :goto_0
+
     :catch_0
+    move-exception v2
+
+    const-string v3, "Launcher.Boost"
+
+    const-string v4, "reflect error"
+
+    .line 47
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
     :cond_0
-    iget-object v0, p0, Lcom/miui/launcher/utils/BoostHelper;->mProcessManagerClass:Ljava/lang/Class;
+    :goto_0
+    :try_start_1
+    const-string v2, "persist.sys.enable_rtmode"
 
-    if-eqz v0, :cond_1
+    .line 51
+    invoke-static {v2, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    iget-object v0, p0, Lcom/miui/launcher/utils/BoostHelper;->mSchedThreadsMethod:Ljava/lang/reflect/Method;
+    move-result v2
 
-    if-nez v0, :cond_2
+    iput-boolean v2, p0, Lcom/miui/launcher/utils/BoostHelper;->mEnableRTMode:Z
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 49
+    goto :goto_1
+
+    :catch_1
+    move-exception v2
+
+    const-string v3, "Launcher.Boost"
+
+    const-string v4, "get property error"
+
+    .line 53
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    .line 55
+    :goto_1
+    iget-object v2, p0, Lcom/miui/launcher/utils/BoostHelper;->mProcessManagerClass:Ljava/lang/Class;
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Lcom/miui/launcher/utils/BoostHelper;->mSchedThreadsMethod:Ljava/lang/reflect/Method;
+
+    if-eqz v2, :cond_1
+
+    iget-boolean v2, p0, Lcom/miui/launcher/utils/BoostHelper;->mEnableRTMode:Z
+
+    if-nez v2, :cond_2
+
     :cond_1
-    iput-boolean v1, p0, Lcom/miui/launcher/utils/BoostHelper;->mIsSchedRTDisabled:Z
+    move v0, v1
 
     :cond_2
+    iput-boolean v0, p0, Lcom/miui/launcher/utils/BoostHelper;->mIsSchedRTDisabled:Z
+
     return-void
 .end method
 
@@ -269,17 +316,17 @@
 .method private bindCoreInternal(Landroid/view/View;J)V
     .locals 11
 
-    .line 114
+    .line 119
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 115
+    .line 120
     iget-wide v2, p0, Lcom/miui/launcher/utils/BoostHelper;->mStartTime:J
 
     sub-long/2addr v0, v2
 
-    .line 116
+    .line 121
     iget-wide v2, p0, Lcom/miui/launcher/utils/BoostHelper;->mLastDuration:J
 
     sub-long/2addr v2, v0
@@ -299,7 +346,7 @@
     :cond_0
     move-wide v5, p2
 
-    .line 118
+    .line 123
     :goto_0
     invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->max(JJ)J
 
@@ -311,7 +358,7 @@
 
     return-void
 
-    .line 122
+    .line 127
     :cond_1
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
@@ -321,7 +368,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 123
+    .line 128
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v9
@@ -348,7 +395,7 @@
 .method private boostThreadInternal(J[I)V
     .locals 2
 
-    .line 157
+    .line 162
     invoke-static {}, Lcom/android/internal/os/BackgroundThread;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -365,7 +412,7 @@
 .method public static getInstance()Lcom/miui/launcher/utils/BoostHelper;
     .locals 1
 
-    .line 54
+    .line 59
     sget-object v0, Lcom/miui/launcher/utils/BoostHelper;->sInstance:Lcom/miui/launcher/utils/BoostHelper;
 
     return-object v0
@@ -379,29 +426,29 @@
         }
     .end annotation
 
-    .line 62
+    .line 67
     iget v0, p0, Lcom/miui/launcher/utils/BoostHelper;->mRenderThreadTid:I
 
     if-nez v0, :cond_1
 
-    .line 63
+    .line 68
     invoke-virtual {p1}, Landroid/view/View;->getThreadedRenderer()Landroid/view/ThreadedRenderer;
 
     move-result-object p1
 
-    .line 64
+    .line 69
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 65
+    .line 70
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x1c
 
     if-le v1, v2, :cond_0
 
-    .line 66
+    .line 71
     invoke-virtual {v0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object v0
@@ -411,7 +458,7 @@
 
     const/4 v2, 0x1
 
-    .line 70
+    .line 75
     new-array v3, v2, [Ljava/lang/Class;
 
     sget-object v4, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
@@ -424,25 +471,25 @@
 
     move-result-object v1
 
-    .line 71
+    .line 76
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
     const-string v3, "mNativeProxy"
 
-    .line 73
+    .line 78
     invoke-virtual {v0, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    .line 74
+    .line 79
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 75
+    .line 80
     invoke-virtual {v0, p1}, Ljava/lang/reflect/Field;->getLong(Ljava/lang/Object;)J
 
     move-result-wide v3
 
-    .line 77
+    .line 82
     new-array v0, v2, [Ljava/lang/Object;
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -463,7 +510,7 @@
 
     const-string v0, "Launcher.Boost"
 
-    .line 78
+    .line 83
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -480,10 +527,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 79
+    .line 84
     iput p1, p0, Lcom/miui/launcher/utils/BoostHelper;->mRenderThreadTid:I
 
-    .line 81
+    .line 86
     :cond_1
     iget p1, p0, Lcom/miui/launcher/utils/BoostHelper;->mRenderThreadTid:I
 
@@ -495,14 +542,14 @@
 .method public bindCore(Landroid/view/View;J)V
     .locals 1
 
-    .line 150
+    .line 155
     iget-boolean v0, p0, Lcom/miui/launcher/utils/BoostHelper;->mIsTurboSchedDisabled:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 153
+    .line 158
     :cond_0
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/launcher/utils/BoostHelper;->bindCoreInternal(Landroid/view/View;J)V
 
@@ -512,20 +559,20 @@
 .method public boost(Landroid/view/View;Z)V
     .locals 4
 
-    .line 86
+    .line 91
     :try_start_0
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
 
-    .line 87
+    .line 92
     invoke-direct {p0, p1}, Lcom/miui/launcher/utils/BoostHelper;->getRenderThreadId(Landroid/view/View;)I
 
     move-result p1
 
     const-string v1, "Launcher.Boost"
 
-    .line 89
+    .line 94
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -560,7 +607,7 @@
 
     const-string p2, "render-thread tid = 0, do not boost"
 
-    .line 92
+    .line 97
     invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-void
@@ -568,7 +615,7 @@
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 96
+    .line 101
     invoke-static {v0}, Landroid/os/Process;->getThreadPriority(I)I
 
     move-result p2
@@ -577,7 +624,7 @@
 
     const-string p2, "Launcher.Boost"
 
-    .line 97
+    .line 102
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -596,7 +643,7 @@
 
     invoke-static {p2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
+    .line 103
     invoke-static {p1}, Landroid/os/Process;->getThreadPriority(I)I
 
     move-result p2
@@ -605,7 +652,7 @@
 
     const-string p2, "Launcher.Boost"
 
-    .line 99
+    .line 104
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -628,24 +675,24 @@
 
     const/16 v1, -0x14
 
-    .line 100
+    .line 105
     invoke-static {v0, v1, p2}, Landroid/os/MiuiProcess;->setThreadPriority(IILjava/lang/String;)V
 
     const-string p2, "Launcher.Boost"
 
-    .line 101
+    .line 106
     invoke-static {p1, v1, p2}, Landroid/os/MiuiProcess;->setThreadPriority(IILjava/lang/String;)V
 
     const-string p1, "Launcher.Boost"
 
     const-string p2, "ui thread and render thread are boosted"
 
-    .line 102
+    .line 107
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 104
+    .line 109
     :cond_1
     iget p2, p0, Lcom/miui/launcher/utils/BoostHelper;->mOldUIPriority:I
 
@@ -653,7 +700,7 @@
 
     invoke-static {v0, p2, v1}, Landroid/os/MiuiProcess;->setThreadPriority(IILjava/lang/String;)V
 
-    .line 105
+    .line 110
     iget p2, p0, Lcom/miui/launcher/utils/BoostHelper;->mOldRenderPriority:I
 
     const-string v0, "Launcher.Boost"
@@ -664,7 +711,7 @@
 
     const-string p2, "ui thread and render thread are reset"
 
-    .line 106
+    .line 111
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
@@ -678,7 +725,7 @@
 
     const-string v0, "boost failed"
 
-    .line 109
+    .line 114
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -688,27 +735,27 @@
 .method public boostGesture(JLandroid/view/View;II)V
     .locals 2
 
-    .line 196
+    .line 201
     iget-boolean v0, p0, Lcom/miui/launcher/utils/BoostHelper;->mIsSchedRTDisabled:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 199
+    .line 204
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 200
+    .line 205
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v1
 
     if-lez v1, :cond_1
 
-    .line 201
+    .line 206
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v1
@@ -719,20 +766,20 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 204
+    .line 209
     :cond_1
     :try_start_0
     invoke-direct {p0, p3}, Lcom/miui/launcher/utils/BoostHelper;->getRenderThreadId(Landroid/view/View;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 207
+    .line 212
     :catch_0
     iget p3, p0, Lcom/miui/launcher/utils/BoostHelper;->mRenderThreadTid:I
 
     if-lez p3, :cond_2
 
-    .line 208
+    .line 213
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -742,7 +789,7 @@
     :cond_2
     if-lez p4, :cond_3
 
-    .line 211
+    .line 216
     invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -752,14 +799,14 @@
     :cond_3
     if-lez p5, :cond_4
 
-    .line 214
+    .line 219
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
 
     invoke-virtual {v0, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 216
+    .line 221
     :cond_4
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -767,7 +814,7 @@
 
     if-lez p3, :cond_6
 
-    .line 217
+    .line 222
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result p3
@@ -776,7 +823,7 @@
 
     const/4 p4, 0x0
 
-    .line 218
+    .line 223
     :goto_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -784,7 +831,7 @@
 
     if-ge p4, p5, :cond_5
 
-    .line 219
+    .line 224
     invoke-virtual {v0, p4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p5
@@ -801,7 +848,7 @@
 
     goto :goto_0
 
-    .line 221
+    .line 226
     :cond_5
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/launcher/utils/BoostHelper;->boostThreadInternal(J[I)V
 
@@ -812,27 +859,27 @@
 .method public boostMainThreadAndRenderThread(JLandroid/view/View;)V
     .locals 3
 
-    .line 172
+    .line 177
     iget-boolean v0, p0, Lcom/miui/launcher/utils/BoostHelper;->mIsSchedRTDisabled:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 175
+    .line 180
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 176
+    .line 181
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v1
 
     if-lez v1, :cond_1
 
-    .line 177
+    .line 182
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v1
@@ -843,27 +890,27 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 180
+    .line 185
     :cond_1
     :try_start_0
     invoke-direct {p0, p3}, Lcom/miui/launcher/utils/BoostHelper;->getRenderThreadId(Landroid/view/View;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 183
+    .line 188
     :catch_0
     iget p3, p0, Lcom/miui/launcher/utils/BoostHelper;->mRenderThreadTid:I
 
     if-lez p3, :cond_2
 
-    .line 184
+    .line 189
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
 
     invoke-virtual {v0, p3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 186
+    .line 191
     :cond_2
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -871,7 +918,7 @@
 
     if-lez p3, :cond_4
 
-    .line 187
+    .line 192
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result p3
@@ -880,7 +927,7 @@
 
     const/4 v1, 0x0
 
-    .line 188
+    .line 193
     :goto_0
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -888,7 +935,7 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 189
+    .line 194
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -905,7 +952,7 @@
 
     goto :goto_0
 
-    .line 191
+    .line 196
     :cond_3
     invoke-direct {p0, p1, p2, p3}, Lcom/miui/launcher/utils/BoostHelper;->boostThreadInternal(J[I)V
 
@@ -916,7 +963,7 @@
 .method public isSchedRTDisabled()Z
     .locals 1
 
-    .line 58
+    .line 63
     iget-boolean v0, p0, Lcom/miui/launcher/utils/BoostHelper;->mIsSchedRTDisabled:Z
 
     return v0

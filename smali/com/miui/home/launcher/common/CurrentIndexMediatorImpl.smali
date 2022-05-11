@@ -8,15 +8,15 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/Launcher;)V
+.method public constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 32
-    invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/common/CurrentIndexMediator;-><init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/Launcher;)V
+    .line 31
+    invoke-direct {p0, p1}, Lcom/miui/home/launcher/common/CurrentIndexMediator;-><init>(Lcom/miui/home/launcher/Workspace;)V
 
     const/4 p1, -0x1
 
-    .line 29
+    .line 28
     iput p1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mPreScreenIndex:I
 
     return-void
@@ -25,19 +25,19 @@
 .method private announceForAccessibilityIfNeed()V
     .locals 7
 
-    .line 135
+    .line 134
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isAccessibilityEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 136
+    .line 135
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->getAccessibilityItemCount()I
 
     move-result v0
 
-    .line 137
+    .line 136
     iget-object v1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Workspace;->getContext()Landroid/content/Context;
@@ -62,7 +62,7 @@
 
     add-int/2addr v5, v6
 
-    .line 139
+    .line 138
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -75,12 +75,12 @@
 
     aput-object v4, v3, v6
 
-    .line 138
+    .line 137
     invoke-virtual {v1, v2, v0, v3}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 140
+    .line 139
     iget-object v1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Workspace;->announceForAccessibility(Ljava/lang/CharSequence;)V
@@ -92,7 +92,7 @@
 .method static synthetic lambda$getSingleCellLayoutAccessibilityCount$0([ILandroid/view/View;)V
     .locals 1
 
-    .line 154
+    .line 153
     instance-of v0, p1, Lcom/miui/home/launcher/ShortcutIcon;
 
     if-nez v0, :cond_0
@@ -104,7 +104,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 155
+    .line 154
     aget v0, p0, p1
 
     add-int/lit8 v0, v0, 0x1
@@ -120,7 +120,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 171
+    .line 170
     invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
@@ -129,7 +129,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 172
+    .line 171
     invoke-virtual {p0}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p0
@@ -158,14 +158,14 @@
 
     if-eqz p1, :cond_0
 
-    .line 117
+    .line 116
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 118
+    .line 117
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -175,7 +175,7 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 119
+    .line 118
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -210,7 +210,7 @@
 
     const/4 v0, 0x0
 
-    .line 163
+    .line 162
     :goto_0
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
@@ -218,7 +218,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 164
+    .line 163
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -236,7 +236,7 @@
 .method protected getAccessibilityItemCount()I
     .locals 1
 
-    .line 145
+    .line 144
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isWorkspaceLoading()Z
@@ -245,7 +245,7 @@
 
     if-nez v0, :cond_0
 
-    .line 146
+    .line 145
     iget v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mCurrentScreenIndex:I
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->getSingleCellLayoutAccessibilityCount(I)I
@@ -297,14 +297,14 @@
 
     const/4 v0, 0x1
 
-    .line 152
+    .line 151
     new-array v0, v0, [I
 
     const/4 v1, 0x0
 
     aput v1, v0, v1
 
-    .line 153
+    .line 152
     iget-object v2, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v2, p1}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
@@ -317,7 +317,7 @@
 
     invoke-virtual {p0, p1, v2}, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->doForEachChildView(Landroid/view/ViewGroup;Ljava/util/function/Consumer;)V
 
-    .line 158
+    .line 157
     aget p1, v0, v1
 
     return p1
@@ -330,7 +330,7 @@
 
     move v1, v0
 
-    .line 95
+    .line 94
     :goto_0
     iget-object v2, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
@@ -340,7 +340,7 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 96
+    .line 95
     iget v2, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mCurrentScreenIndex:I
 
     if-ne v1, v2, :cond_0
@@ -366,7 +366,7 @@
 .method public isInCurrentScreen(I)Z
     .locals 1
 
-    .line 91
+    .line 90
     iget v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mCurrentScreenIndex:I
 
     if-ne p1, v0, :cond_0
@@ -385,7 +385,7 @@
 .method public notifyCurrentScreenShowingItem()V
     .locals 2
 
-    .line 170
+    .line 169
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->getCurrentCellLayout()Lcom/miui/home/launcher/CellLayout;
@@ -402,10 +402,10 @@
 .method public onCreate()V
     .locals 0
 
-    .line 37
+    .line 36
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->initCellLayoutLifeCycle()V
 
-    .line 38
+    .line 37
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->notifyCurrentScreenShowingItem()V
 
     return-void
@@ -414,7 +414,7 @@
 .method public onPause()V
     .locals 3
 
-    .line 76
+    .line 75
     iget v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mCurrentScreenIndex:I
 
     const/4 v1, 0x0
@@ -429,7 +429,7 @@
 .method public onResume()V
     .locals 2
 
-    .line 43
+    .line 42
     iget v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mCurrentScreenIndex:I
 
     const/4 v1, 0x1
@@ -442,14 +442,14 @@
 .method protected updateCellLayoutVisibility(I)V
     .locals 2
 
-    .line 101
+    .line 100
     iget v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mPreScreenIndex:I
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1, p1}, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->updateSingleCellLayoutStatus(IZI)V
 
-    .line 102
+    .line 101
     iget v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mCurrentScreenIndex:I
 
     const/4 v1, 0x1
@@ -462,7 +462,7 @@
 .method protected updateData()V
     .locals 4
 
-    .line 56
+    .line 55
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     if-eqz v0, :cond_3
@@ -473,7 +473,7 @@
 
     goto :goto_0
 
-    .line 59
+    .line 58
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -487,26 +487,26 @@
 
     const/4 v0, 0x3
 
-    .line 60
+    .line 59
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->updateCellLayoutVisibility(I)V
 
-    .line 61
+    .line 60
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->onWorkspaceScroll()V
 
-    .line 62
+    .line 61
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->notifyCurrentScreenShowingItem()V
 
-    .line 63
+    .line 62
     invoke-direct {p0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->announceForAccessibilityIfNeed()V
 
-    .line 64
+    .line 63
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->updateStatusBarClock()V
 
-    .line 65
+    .line 64
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -523,7 +523,7 @@
 
     invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
-    .line 66
+    .line 65
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
@@ -532,7 +532,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 67
+    .line 66
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getAllAppsIndicator()Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;
@@ -541,7 +541,7 @@
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/pageindicators/AllAppsIndicator;->refreshAllAppsArrow()V
 
-    .line 69
+    .line 68
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
@@ -551,7 +551,7 @@
 
     if-nez v0, :cond_2
 
-    .line 70
+    .line 69
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getUserPresentAnimation()Lcom/miui/home/launcher/compat/UserPresentAnimationCompat;
@@ -571,17 +571,17 @@
 .method public updateIndex(IZ)V
     .locals 1
 
-    .line 48
+    .line 47
     iget v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mCurrentScreenIndex:I
 
     iput v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mPreScreenIndex:I
 
-    .line 49
+    .line 48
     iput p1, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mCurrentScreenIndex:I
 
     if-eqz p2, :cond_0
 
-    .line 51
+    .line 50
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->updateData()V
 
     :cond_0
@@ -591,7 +591,7 @@
 .method protected updateSingleCellLayoutStatus(IZI)V
     .locals 1
 
-    .line 106
+    .line 105
     iget-object v0, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mWorkspace:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/Workspace;->getCellLayout(I)Lcom/miui/home/launcher/CellLayout;
@@ -602,12 +602,12 @@
 
     if-eqz p2, :cond_0
 
-    .line 109
+    .line 108
     invoke-virtual {p1, p3}, Lcom/miui/home/launcher/CellLayout;->onVisible(I)V
 
     goto :goto_0
 
-    .line 111
+    .line 110
     :cond_0
     invoke-virtual {p1, p3}, Lcom/miui/home/launcher/CellLayout;->onInvisible(I)V
 
@@ -619,14 +619,14 @@
 .method protected updateSingleGadgetLifeCycle(Lcom/miui/home/launcher/gadget/Gadget;)V
     .locals 5
 
-    .line 125
+    .line 124
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/miui/home/launcher/gadget/GadgetInfo;
 
-    .line 126
+    .line 125
     iget-wide v1, v0, Lcom/miui/home/launcher/gadget/GadgetInfo;->screenId:J
 
     iget v3, p0, Lcom/miui/home/launcher/common/CurrentIndexMediatorImpl;->mPreScreenIndex:I
@@ -637,12 +637,12 @@
 
     if-nez v1, :cond_0
 
-    .line 127
+    .line 126
     invoke-virtual {p1}, Lcom/miui/home/launcher/gadget/Gadget;->onPause()V
 
     goto :goto_0
 
-    .line 128
+    .line 127
     :cond_0
     iget-wide v0, v0, Lcom/miui/home/launcher/gadget/GadgetInfo;->screenId:J
 
@@ -654,7 +654,7 @@
 
     if-nez v0, :cond_1
 
-    .line 129
+    .line 128
     invoke-virtual {p1}, Lcom/miui/home/launcher/gadget/Gadget;->onResume()V
 
     :cond_1

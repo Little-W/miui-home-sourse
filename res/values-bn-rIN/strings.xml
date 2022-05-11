@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">অ্যাপ ড্রয়ার খোলার জন্য উপরে সোয়াইপ করে খোলা আগে থেকেই ব্যবহার করা হচ্ছে।সাধারণ হোম স্ক্রিন মোডে গিয়ে আবার চেষ্টা করুন।</string>
     <string name="all_apps_suggestions">অ্যাপ প্রস্তাব</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">%1$d ফোল্ডারে পাঠানো হয়েছে</string>
     <string name="announce_for_checked">%1$s，চেক করা হয়েছে</string>
     <string name="announce_for_choose_default_screen">%1$d কে ডিফল্টহোম স্ক্রিন হিসেবে সেট করুন</string>

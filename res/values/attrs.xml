@@ -915,6 +915,7 @@
     <attr name="primaryButtonTextColor" format="reference|color" />
     <attr name="primaryKey" format="string" />
     <attr name="primarySelectorButtonBackground" format="reference" />
+    <attr name="productId" format="string" />
     <attr name="progressBackgroundDrawable" format="reference|color" />
     <attr name="progressBarBackground" format="reference|color" />
     <attr name="progressBarColorHorizontal" format="reference|color" />
@@ -1218,6 +1219,7 @@
     <attr name="updatesContinuously" format="boolean" />
     <attr name="uri" format="string" />
     <attr name="useSimpleSummaryProvider" format="boolean" />
+    <attr name="versionCode" format="string" />
     <attr name="viewInflaterClass" format="string" />
     <attr name="voiceIcon" format="reference" />
     <attr name="widgetLayout" format="reference" />

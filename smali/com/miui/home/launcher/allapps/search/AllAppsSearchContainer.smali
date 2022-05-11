@@ -185,7 +185,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700c3
+    const v1, 0x7f0700c5
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -197,7 +197,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0700bd
+    const v2, 0x7f0700bf
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -282,7 +282,7 @@
 .method protected getSearchAppId()I
     .locals 1
 
-    const v0, 0x7f0a0200
+    const v0, 0x7f0a0207
 
     return v0
 .end method
@@ -290,7 +290,7 @@
 .method protected getSearchCategoryId()I
     .locals 1
 
-    const v0, 0x7f0a0210
+    const v0, 0x7f0a0217
 
     return v0
 .end method
@@ -560,7 +560,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->mCategoryFragment:Lcom/miui/home/launcher/allapps/search/AppCategorySelectSearchFragment;
 
-    const v0, 0x7f0a0228
+    const v0, 0x7f0a022f
 
     .line 82
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchContainer;->findViewById(I)Landroid/view/View;

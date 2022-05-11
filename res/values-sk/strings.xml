@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">Potiahnutie nahor je obsadené pre otvorenie Ponuky aplikácií. Prepnite na bežnú Domovskú obrazovku a skúste to znovu.</string>
     <string name="all_apps_suggestions">Odporúčané aplikácie</string>
     <string name="am">dop.</string>
+    <string name="animation_rate_title">Hodnota animácie</string>
     <string name="announce_for_app_move_in_folder">Presunuté do umiestnenia %1$d v priečinku</string>
     <string name="announce_for_checked">%1$s, označené</string>
     <string name="announce_for_choose_default_screen">Nastaviť obrazovku %1$d ako predvolenú Domovskú obrazovku</string>
@@ -639,11 +640,11 @@
     <string name="navigation_guide_recent_title">Otvoriť Nedávne</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Otvoriť Nedávne</string>
     <string name="navigation_guide_settings">Demá s gestami</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">Na stred</string>
+    <string name="navigation_position_left">Vľavo</string>
+    <string name="navigation_position_right">Vpravo</string>
+    <string name="navigation_position_summary">Prispôsobenú polohu navigačných tlačidiel možno použiť iba na Domovskej obrazovke</string>
+    <string name="navigation_position_title">Poloha navigačných tlačidiel</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Zrušiť</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">So spúšťačmi tretích strán nie je možné používať gestá na celú obrazovku. Prepnúť na systémový launcher a zapnúť gestá na celú obrazovku?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">OK</string>

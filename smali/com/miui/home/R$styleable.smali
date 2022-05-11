@@ -1181,23 +1181,27 @@
 
 .field public static final Favorite_presets_container:I = 0xa
 
-.field public static final Favorite_retained:I = 0xb
+.field public static final Favorite_productId:I = 0xb
 
-.field public static final Favorite_screen:I = 0xc
+.field public static final Favorite_retained:I = 0xc
 
-.field public static final Favorite_spanX:I = 0xd
+.field public static final Favorite_screen:I = 0xd
 
-.field public static final Favorite_spanY:I = 0xe
+.field public static final Favorite_spanX:I = 0xe
 
-.field public static final Favorite_title:I = 0xf
+.field public static final Favorite_spanY:I = 0xf
 
-.field public static final Favorite_toggleId:I = 0x10
+.field public static final Favorite_title:I = 0x10
 
-.field public static final Favorite_uri:I = 0x11
+.field public static final Favorite_toggleId:I = 0x11
 
-.field public static final Favorite_x:I = 0x12
+.field public static final Favorite_uri:I = 0x12
 
-.field public static final Favorite_y:I = 0x13
+.field public static final Favorite_versionCode:I = 0x13
+
+.field public static final Favorite_x:I = 0x14
+
+.field public static final Favorite_y:I = 0x15
 
 .field public static final FilterSortTabView:[I
 
@@ -2484,7 +2488,7 @@
 
     const/16 v0, 0x38
 
-    .line 14959
+    .line 14991
     new-array v0, v0, [I
 
     fill-array-data v0, :array_0
@@ -2493,7 +2497,7 @@
 
     const/4 v0, 0x1
 
-    .line 15715
+    .line 15747
     new-array v1, v0, [I
 
     const/4 v2, 0x0
@@ -2506,14 +2510,14 @@
 
     const/4 v1, 0x3
 
-    .line 15762
+    .line 15794
     new-array v3, v1, [I
 
     fill-array-data v3, :array_1
 
     sput-object v3, Lcom/miui/home/R$styleable;->ActionBarMovableLayout:[I
 
-    .line 15818
+    .line 15850
     new-array v3, v0, [I
 
     const v4, 0x101013f
@@ -2522,14 +2526,14 @@
 
     sput-object v3, Lcom/miui/home/R$styleable;->ActionMenuItemView:[I
 
-    .line 15834
+    .line 15866
     new-array v3, v2, [I
 
     sput-object v3, Lcom/miui/home/R$styleable;->ActionMenuView:[I
 
     const/16 v3, 0xd
 
-    .line 15871
+    .line 15903
     new-array v4, v3, [I
 
     fill-array-data v4, :array_2
@@ -2538,7 +2542,7 @@
 
     const/4 v4, 0x2
 
-    .line 16055
+    .line 16087
     new-array v5, v4, [I
 
     fill-array-data v5, :array_3
@@ -2547,7 +2551,7 @@
 
     const/16 v5, 0xb
 
-    .line 16117
+    .line 16149
     new-array v5, v5, [I
 
     fill-array-data v5, :array_4
@@ -2556,14 +2560,14 @@
 
     const/4 v5, 0x6
 
-    .line 16275
+    .line 16307
     new-array v6, v5, [I
 
     fill-array-data v6, :array_5
 
     sput-object v6, Lcom/miui/home/R$styleable;->AnimatedStateListDrawableCompat:[I
 
-    .line 16366
+    .line 16398
     new-array v6, v4, [I
 
     fill-array-data v6, :array_6
@@ -2572,21 +2576,21 @@
 
     const/4 v6, 0x4
 
-    .line 16413
+    .line 16445
     new-array v7, v6, [I
 
     fill-array-data v7, :array_7
 
     sput-object v7, Lcom/miui/home/R$styleable;->AnimatedStateListDrawableTransition:[I
 
-    .line 16484
+    .line 16516
     new-array v7, v6, [I
 
     fill-array-data v7, :array_8
 
     sput-object v7, Lcom/miui/home/R$styleable;->AppCompatImageView:[I
 
-    .line 16572
+    .line 16604
     new-array v7, v6, [I
 
     fill-array-data v7, :array_9
@@ -2595,7 +2599,7 @@
 
     const/4 v7, 0x7
 
-    .line 16662
+    .line 16694
     new-array v8, v7, [I
 
     fill-array-data v8, :array_a
@@ -2604,7 +2608,7 @@
 
     const/16 v8, 0x15
 
-    .line 16823
+    .line 16855
     new-array v9, v8, [I
 
     fill-array-data v9, :array_b
@@ -2613,7 +2617,7 @@
 
     const/16 v9, 0x7d
 
-    .line 17407
+    .line 17439
     new-array v9, v9, [I
 
     fill-array-data v9, :array_c
@@ -2622,14 +2626,14 @@
 
     const/16 v9, 0xe
 
-    .line 19173
+    .line 19205
     new-array v10, v9, [I
 
     fill-array-data v10, :array_d
 
     sput-object v10, Lcom/miui/home/R$styleable;->ArrowPopupView:[I
 
-    .line 19373
+    .line 19405
     new-array v10, v0, [I
 
     const v11, 0x7f040077
@@ -2638,14 +2642,14 @@
 
     sput-object v10, Lcom/miui/home/R$styleable;->AspectRatioLottieAnimView:[I
 
-    .line 19404
+    .line 19436
     new-array v10, v4, [I
 
     fill-array-data v10, :array_e
 
     sput-object v10, Lcom/miui/home/R$styleable;->BackgroundStyle:[I
 
-    .line 19443
+    .line 19475
     new-array v10, v0, [I
 
     const v11, 0x7f040167
@@ -2654,7 +2658,7 @@
 
     sput-object v10, Lcom/miui/home/R$styleable;->BaseRecyclerView:[I
 
-    .line 19467
+    .line 19499
     new-array v10, v0, [I
 
     const v11, 0x7f0400c8
@@ -2663,7 +2667,7 @@
 
     sput-object v10, Lcom/miui/home/R$styleable;->BorderLayout:[I
 
-    .line 19494
+    .line 19526
     new-array v10, v0, [I
 
     const v11, 0x7f04006d
@@ -2672,7 +2676,7 @@
 
     sput-object v10, Lcom/miui/home/R$styleable;->ButtonBarLayout:[I
 
-    .line 19544
+    .line 19576
     new-array v3, v3, [I
 
     fill-array-data v3, :array_f
@@ -2681,14 +2685,14 @@
 
     const/16 v3, 0x8
 
-    .line 19749
+    .line 19781
     new-array v10, v3, [I
 
     fill-array-data v10, :array_10
 
     sput-object v10, Lcom/miui/home/R$styleable;->CellLayout:[I
 
-    .line 19880
+    .line 19912
     new-array v10, v5, [I
 
     fill-array-data v10, :array_11
@@ -2697,14 +2701,14 @@
 
     const/16 v10, 0xa
 
-    .line 19981
+    .line 20013
     new-array v11, v10, [I
 
     fill-array-data v11, :array_12
 
     sput-object v11, Lcom/miui/home/R$styleable;->CheckWidgetDrawable:[I
 
-    .line 20134
+    .line 20166
     new-array v11, v0, [I
 
     const v12, 0x7f0400b8
@@ -2713,7 +2717,7 @@
 
     sput-object v11, Lcom/miui/home/R$styleable;->CheckedTextView:[I
 
-    .line 20160
+    .line 20192
     new-array v11, v0, [I
 
     const v12, 0x7f040192
@@ -2722,14 +2726,14 @@
 
     sput-object v11, Lcom/miui/home/R$styleable;->ClippedImageView:[I
 
-    .line 20191
+    .line 20223
     new-array v11, v1, [I
 
     fill-array-data v11, :array_13
 
     sput-object v11, Lcom/miui/home/R$styleable;->ColorStateListItem:[I
 
-    .line 20242
+    .line 20274
     new-array v11, v6, [I
 
     fill-array-data v11, :array_14
@@ -2738,14 +2742,14 @@
 
     const/16 v11, 0x3c
 
-    .line 20438
+    .line 20470
     new-array v11, v11, [I
 
     fill-array-data v11, :array_15
 
     sput-object v11, Lcom/miui/home/R$styleable;->ConstraintLayout_Layout:[I
 
-    .line 21340
+    .line 21372
     new-array v11, v4, [I
 
     fill-array-data v11, :array_16
@@ -2754,35 +2758,35 @@
 
     const/16 v11, 0x50
 
-    .line 21541
+    .line 21573
     new-array v11, v11, [I
 
     fill-array-data v11, :array_17
 
     sput-object v11, Lcom/miui/home/R$styleable;->ConstraintSet:[I
 
-    .line 22701
+    .line 22733
     new-array v11, v4, [I
 
     fill-array-data v11, :array_18
 
     sput-object v11, Lcom/miui/home/R$styleable;->CoordinatorLayout:[I
 
-    .line 22763
+    .line 22795
     new-array v11, v7, [I
 
     fill-array-data v11, :array_19
 
     sput-object v11, Lcom/miui/home/R$styleable;->CoordinatorLayout_Layout:[I
 
-    .line 22947
+    .line 22979
     new-array v11, v10, [I
 
     fill-array-data v11, :array_1a
 
     sput-object v11, Lcom/miui/home/R$styleable;->DatePicker:[I
 
-    .line 23075
+    .line 23107
     new-array v11, v0, [I
 
     const v12, 0x7f040227
@@ -2791,7 +2795,7 @@
 
     sput-object v11, Lcom/miui/home/R$styleable;->DateTimePicker:[I
 
-    .line 23100
+    .line 23132
     new-array v11, v0, [I
 
     const v12, 0x7f04012b
@@ -2802,21 +2806,21 @@
 
     const/16 v11, 0xc
 
-    .line 23154
+    .line 23186
     new-array v12, v11, [I
 
     fill-array-data v12, :array_1b
 
     sput-object v12, Lcom/miui/home/R$styleable;->DialogPreference:[I
 
-    .line 23329
+    .line 23361
     new-array v12, v3, [I
 
     fill-array-data v12, :array_1c
 
     sput-object v12, Lcom/miui/home/R$styleable;->DrawableStates:[I
 
-    .line 23454
+    .line 23486
     new-array v12, v3, [I
 
     fill-array-data v12, :array_1d
@@ -2825,139 +2829,139 @@
 
     const/4 v12, 0x5
 
-    .line 23585
+    .line 23617
     new-array v13, v12, [I
 
     fill-array-data v13, :array_1e
 
     sput-object v13, Lcom/miui/home/R$styleable;->DropDownPreference:[I
 
-    .line 23663
+    .line 23695
     new-array v13, v0, [I
 
-    const v14, 0x7f040355
+    const v14, 0x7f040356
 
     aput v14, v13, v2
 
     sput-object v13, Lcom/miui/home/R$styleable;->EditText:[I
 
-    .line 23693
+    .line 23725
     new-array v13, v0, [I
 
-    const v14, 0x7f040391
+    const v14, 0x7f040392
 
     aput v14, v13, v2
 
     sput-object v13, Lcom/miui/home/R$styleable;->EditTextPreference:[I
 
-    const/16 v13, 0x14
+    const/16 v13, 0x16
 
-    .line 23757
+    .line 23793
     new-array v13, v13, [I
 
     fill-array-data v13, :array_1f
 
     sput-object v13, Lcom/miui/home/R$styleable;->Favorite:[I
 
-    .line 23985
+    .line 24042
     new-array v13, v12, [I
 
     fill-array-data v13, :array_20
 
     sput-object v13, Lcom/miui/home/R$styleable;->FilterSortTabView:[I
 
-    .line 24073
+    .line 24130
     new-array v13, v6, [I
 
     fill-array-data v13, :array_21
 
     sput-object v13, Lcom/miui/home/R$styleable;->FilterSortView:[I
 
-    .line 24155
+    .line 24212
     new-array v13, v11, [I
 
     fill-array-data v13, :array_22
 
     sput-object v13, Lcom/miui/home/R$styleable;->FlexboxLayout:[I
 
-    .line 24396
+    .line 24453
     new-array v13, v10, [I
 
     fill-array-data v13, :array_23
 
     sput-object v13, Lcom/miui/home/R$styleable;->FlexboxLayout_Layout:[I
 
-    .line 24560
+    .line 24617
     new-array v13, v4, [I
 
     fill-array-data v13, :array_24
 
     sput-object v13, Lcom/miui/home/R$styleable;->FloatingActionButton:[I
 
-    .line 24603
+    .line 24660
     new-array v13, v1, [I
 
     fill-array-data v13, :array_25
 
     sput-object v13, Lcom/miui/home/R$styleable;->FlowLayout:[I
 
-    .line 24674
+    .line 24731
     new-array v13, v5, [I
 
     fill-array-data v13, :array_26
 
     sput-object v13, Lcom/miui/home/R$styleable;->FontFamily:[I
 
-    .line 24810
+    .line 24867
     new-array v13, v10, [I
 
     fill-array-data v13, :array_27
 
     sput-object v13, Lcom/miui/home/R$styleable;->FontFamilyFont:[I
 
-    .line 24961
+    .line 25018
     new-array v13, v1, [I
 
     fill-array-data v13, :array_28
 
     sput-object v13, Lcom/miui/home/R$styleable;->Fragment:[I
 
-    .line 25009
+    .line 25066
     new-array v13, v4, [I
 
     fill-array-data v13, :array_29
 
     sput-object v13, Lcom/miui/home/R$styleable;->FragmentContainerView:[I
 
-    .line 25045
+    .line 25102
     new-array v13, v4, [I
 
     fill-array-data v13, :array_2a
 
     sput-object v13, Lcom/miui/home/R$styleable;->GifTextureView:[I
 
-    .line 25085
+    .line 25142
     new-array v13, v4, [I
 
     fill-array-data v13, :array_2b
 
     sput-object v13, Lcom/miui/home/R$styleable;->GifView:[I
 
-    .line 25140
+    .line 25197
     new-array v13, v11, [I
 
     fill-array-data v13, :array_2c
 
     sput-object v13, Lcom/miui/home/R$styleable;->GradientColor:[I
 
-    .line 25324
+    .line 25381
     new-array v13, v4, [I
 
     fill-array-data v13, :array_2d
 
     sput-object v13, Lcom/miui/home/R$styleable;->GradientColorItem:[I
 
-    .line 25361
+    .line 25418
     new-array v13, v0, [I
 
     const v14, 0x7f040257
@@ -2966,14 +2970,14 @@
 
     sput-object v13, Lcom/miui/home/R$styleable;->GroupButton:[I
 
-    .line 25399
+    .line 25456
     new-array v13, v7, [I
 
     fill-array-data v13, :array_2e
 
     sput-object v13, Lcom/miui/home/R$styleable;->GuidePopupView:[I
 
-    .line 25526
+    .line 25583
     new-array v13, v0, [I
 
     const v14, 0x7f0401e9
@@ -2982,7 +2986,7 @@
 
     sput-object v13, Lcom/miui/home/R$styleable;->InsettableFrameLayout_Layout:[I
 
-    .line 25550
+    .line 25607
     new-array v13, v0, [I
 
     const v14, 0x7f040155
@@ -2991,14 +2995,14 @@
 
     sput-object v13, Lcom/miui/home/R$styleable;->LabelSeekBar:[I
 
-    .line 25582
+    .line 25639
     new-array v13, v1, [I
 
     fill-array-data v13, :array_2f
 
     sput-object v13, Lcom/miui/home/R$styleable;->Level:[I
 
-    .line 25630
+    .line 25687
     new-array v13, v0, [I
 
     const v14, 0x10100c4
@@ -3009,28 +3013,28 @@
 
     const/16 v13, 0x9
 
-    .line 25678
+    .line 25735
     new-array v14, v13, [I
 
     fill-array-data v14, :array_30
 
     sput-object v14, Lcom/miui/home/R$styleable;->LinearLayoutCompat:[I
 
-    .line 25848
+    .line 25905
     new-array v14, v6, [I
 
     fill-array-data v14, :array_31
 
     sput-object v14, Lcom/miui/home/R$styleable;->LinearLayoutCompat_Layout:[I
 
-    .line 25948
+    .line 26005
     new-array v14, v4, [I
 
     fill-array-data v14, :array_32
 
     sput-object v14, Lcom/miui/home/R$styleable;->ListPopupWindow:[I
 
-    .line 26000
+    .line 26057
     new-array v14, v12, [I
 
     fill-array-data v14, :array_33
@@ -3039,21 +3043,21 @@
 
     const/16 v14, 0x11
 
-    .line 26112
+    .line 26169
     new-array v14, v14, [I
 
     fill-array-data v14, :array_34
 
     sput-object v14, Lcom/miui/home/R$styleable;->LottieAnimationView:[I
 
-    .line 26325
+    .line 26382
     new-array v14, v12, [I
 
     fill-array-data v14, :array_35
 
     sput-object v14, Lcom/miui/home/R$styleable;->MamlView:[I
 
-    .line 26408
+    .line 26465
     new-array v14, v5, [I
 
     fill-array-data v14, :array_36
@@ -3062,129 +3066,129 @@
 
     const/16 v14, 0x17
 
-    .line 26555
+    .line 26612
     new-array v14, v14, [I
 
     fill-array-data v14, :array_37
 
     sput-object v14, Lcom/miui/home/R$styleable;->MenuItem:[I
 
-    .line 26932
+    .line 26989
     new-array v14, v13, [I
 
     fill-array-data v14, :array_38
 
     sput-object v14, Lcom/miui/home/R$styleable;->MenuView:[I
 
-    .line 27072
+    .line 27129
     new-array v14, v6, [I
 
     fill-array-data v14, :array_39
 
     sput-object v14, Lcom/miui/home/R$styleable;->MessageView:[I
 
-    .line 27159
+    .line 27216
     new-array v14, v9, [I
 
     fill-array-data v14, :array_3a
 
     sput-object v14, Lcom/miui/home/R$styleable;->MiuiDragShadow:[I
 
-    .line 27362
+    .line 27419
     new-array v13, v13, [I
 
     fill-array-data v13, :array_3b
 
     sput-object v13, Lcom/miui/home/R$styleable;->MiuixAppcompatAlphabetIndexer:[I
 
-    .line 27509
+    .line 27566
     new-array v13, v1, [I
 
     fill-array-data v13, :array_3c
 
     sput-object v13, Lcom/miui/home/R$styleable;->MiuixManifest:[I
 
-    .line 27572
+    .line 27629
     new-array v13, v12, [I
 
     fill-array-data v13, :array_3d
 
     sput-object v13, Lcom/miui/home/R$styleable;->MiuixManifestModule:[I
 
-    .line 27655
+    .line 27712
     new-array v13, v1, [I
 
     fill-array-data v13, :array_3e
 
     sput-object v13, Lcom/miui/home/R$styleable;->MiuixManifestUsesSdk:[I
 
-    .line 27717
+    .line 27774
     new-array v13, v3, [I
 
     fill-array-data v13, :array_3f
 
     sput-object v13, Lcom/miui/home/R$styleable;->MiuixSmoothContainerDrawable:[I
 
-    .line 27861
+    .line 27918
     new-array v13, v3, [I
 
     fill-array-data v13, :array_40
 
     sput-object v13, Lcom/miui/home/R$styleable;->MiuixSmoothFrameLayout:[I
 
-    .line 27995
+    .line 28052
     new-array v13, v1, [I
 
     fill-array-data v13, :array_41
 
     sput-object v13, Lcom/miui/home/R$styleable;->MiuixSmoothGradientDrawable:[I
 
-    .line 28066
+    .line 28123
     new-array v13, v6, [I
 
     fill-array-data v13, :array_42
 
     sput-object v13, Lcom/miui/home/R$styleable;->MultiSelectListPreference:[I
 
-    .line 28151
+    .line 28208
     new-array v13, v10, [I
 
     fill-array-data v13, :array_43
 
     sput-object v13, Lcom/miui/home/R$styleable;->NumberPicker:[I
 
-    .line 28306
+    .line 28363
     new-array v13, v4, [I
 
     fill-array-data v13, :array_44
 
     sput-object v13, Lcom/miui/home/R$styleable;->OverflowMenuButton:[I
 
-    .line 28351
+    .line 28408
     new-array v13, v6, [I
 
     fill-array-data v13, :array_45
 
     sput-object v13, Lcom/miui/home/R$styleable;->PlaceholderDrawablePadding:[I
 
-    .line 28423
+    .line 28480
     new-array v13, v4, [I
 
     fill-array-data v13, :array_46
 
     sput-object v13, Lcom/miui/home/R$styleable;->PlaceholderDrawableSize:[I
 
-    .line 28469
+    .line 28526
     new-array v13, v1, [I
 
     fill-array-data v13, :array_47
 
     sput-object v13, Lcom/miui/home/R$styleable;->PopupWindow:[I
 
-    .line 28521
+    .line 28578
     new-array v13, v0, [I
 
-    const v14, 0x7f04031e
+    const v14, 0x7f04031f
 
     aput v14, v13, v2
 
@@ -3192,35 +3196,35 @@
 
     const/16 v13, 0x24
 
-    .line 28621
+    .line 28678
     new-array v13, v13, [I
 
     fill-array-data v13, :array_48
 
     sput-object v13, Lcom/miui/home/R$styleable;->Preference:[I
 
-    .line 29070
+    .line 29127
     new-array v13, v6, [I
 
     fill-array-data v13, :array_49
 
     sput-object v13, Lcom/miui/home/R$styleable;->PreferenceFragment:[I
 
-    .line 29144
+    .line 29201
     new-array v13, v6, [I
 
     fill-array-data v13, :array_4a
 
     sput-object v13, Lcom/miui/home/R$styleable;->PreferenceFragmentCompat:[I
 
-    .line 29217
+    .line 29274
     new-array v13, v1, [I
 
     fill-array-data v13, :array_4b
 
     sput-object v13, Lcom/miui/home/R$styleable;->PreferenceGroup:[I
 
-    .line 29279
+    .line 29336
     new-array v13, v6, [I
 
     fill-array-data v13, :array_4c
@@ -3229,28 +3233,28 @@
 
     const/16 v13, 0x10
 
-    .line 29375
+    .line 29432
     new-array v13, v13, [I
 
     fill-array-data v13, :array_4d
 
     sput-object v13, Lcom/miui/home/R$styleable;->PreferenceTheme:[I
 
-    .line 29604
+    .line 29661
     new-array v13, v4, [I
 
     fill-array-data v13, :array_4e
 
     sput-object v13, Lcom/miui/home/R$styleable;->ProgressBar:[I
 
-    .line 29640
+    .line 29697
     new-array v13, v4, [I
 
     fill-array-data v13, :array_4f
 
     sput-object v13, Lcom/miui/home/R$styleable;->RadioButtonPreference:[I
 
-    .line 29678
+    .line 29735
     new-array v13, v0, [I
 
     const v14, 0x7f0402a5
@@ -3259,30 +3263,30 @@
 
     sput-object v13, Lcom/miui/home/R$styleable;->RadioSetPreferenceCategory:[I
 
-    .line 29702
+    .line 29759
     new-array v13, v0, [I
 
-    const v14, 0x7f0402bc
+    const v14, 0x7f0402bd
 
     aput v14, v13, v2
 
     sput-object v13, Lcom/miui/home/R$styleable;->RatioImageView:[I
 
-    .line 29727
+    .line 29784
     new-array v4, v4, [I
 
     fill-array-data v4, :array_50
 
     sput-object v4, Lcom/miui/home/R$styleable;->RecycleListView:[I
 
-    .line 29789
+    .line 29846
     new-array v4, v11, [I
 
     fill-array-data v4, :array_51
 
     sput-object v4, Lcom/miui/home/R$styleable;->RecyclerView:[I
 
-    .line 29996
+    .line 30053
     new-array v4, v8, [I
 
     fill-array-data v4, :array_52
@@ -3291,63 +3295,63 @@
 
     const/16 v4, 0x11
 
-    .line 30295
+    .line 30352
     new-array v4, v4, [I
 
     fill-array-data v4, :array_53
 
     sput-object v4, Lcom/miui/home/R$styleable;->SearchView:[I
 
-    .line 30609
+    .line 30666
     new-array v4, v10, [I
 
     fill-array-data v4, :array_54
 
     sput-object v4, Lcom/miui/home/R$styleable;->SeekBar:[I
 
-    .line 30770
+    .line 30827
     new-array v4, v7, [I
 
     fill-array-data v4, :array_55
 
     sput-object v4, Lcom/miui/home/R$styleable;->SeekBarPreference:[I
 
-    .line 30881
+    .line 30938
     new-array v4, v3, [I
 
     fill-array-data v4, :array_56
 
     sput-object v4, Lcom/miui/home/R$styleable;->SlidingButton:[I
 
-    .line 31010
+    .line 31067
     new-array v4, v7, [I
 
     fill-array-data v4, :array_57
 
     sput-object v4, Lcom/miui/home/R$styleable;->SpectrumVisualizer:[I
 
-    .line 31114
+    .line 31171
     new-array v3, v3, [I
 
     fill-array-data v3, :array_58
 
     sput-object v3, Lcom/miui/home/R$styleable;->Spinner:[I
 
-    .line 31250
+    .line 31307
     new-array v3, v1, [I
 
     fill-array-data v3, :array_59
 
     sput-object v3, Lcom/miui/home/R$styleable;->SpringBackLayout:[I
 
-    .line 31323
+    .line 31380
     new-array v3, v5, [I
 
     fill-array-data v3, :array_5a
 
     sput-object v3, Lcom/miui/home/R$styleable;->StateListDrawable:[I
 
-    .line 31412
+    .line 31469
     new-array v3, v0, [I
 
     const v4, 0x1010199
@@ -3356,21 +3360,21 @@
 
     sput-object v3, Lcom/miui/home/R$styleable;->StateListDrawableItem:[I
 
-    .line 31466
+    .line 31523
     new-array v3, v9, [I
 
     fill-array-data v3, :array_5b
 
     sput-object v3, Lcom/miui/home/R$styleable;->SwitchCompat:[I
 
-    .line 31706
+    .line 31763
     new-array v3, v10, [I
 
     fill-array-data v3, :array_5c
 
     sput-object v3, Lcom/miui/home/R$styleable;->SwitchPreference:[I
 
-    .line 31854
+    .line 31911
     new-array v3, v10, [I
 
     fill-array-data v3, :array_5d
@@ -3379,7 +3383,7 @@
 
     const/16 v3, 0x10
 
-    .line 32013
+    .line 32070
     new-array v3, v3, [I
 
     fill-array-data v3, :array_5e
@@ -3388,42 +3392,42 @@
 
     const/16 v3, 0x1e
 
-    .line 32297
+    .line 32354
     new-array v3, v3, [I
 
     fill-array-data v3, :array_5f
 
     sput-object v3, Lcom/miui/home/R$styleable;->Toolbar:[I
 
-    .line 32738
+    .line 32795
     new-array v3, v1, [I
 
     fill-array-data v3, :array_60
 
     sput-object v3, Lcom/miui/home/R$styleable;->TypefaceIconView:[I
 
-    .line 32792
+    .line 32849
     new-array v3, v12, [I
 
     fill-array-data v3, :array_61
 
     sput-object v3, Lcom/miui/home/R$styleable;->View:[I
 
-    .line 32891
+    .line 32948
     new-array v3, v1, [I
 
     fill-array-data v3, :array_62
 
     sput-object v3, Lcom/miui/home/R$styleable;->ViewBackgroundHelper:[I
 
-    .line 32963
+    .line 33020
     new-array v1, v1, [I
 
     fill-array-data v1, :array_63
 
     sput-object v1, Lcom/miui/home/R$styleable;->ViewStubCompat:[I
 
-    .line 33017
+    .line 33074
     new-array v1, v0, [I
 
     const v3, 0x7f0400c9
@@ -3434,14 +3438,14 @@
 
     const/16 v1, 0x1d
 
-    .line 33109
+    .line 33166
     new-array v1, v1, [I
 
     fill-array-data v1, :array_64
 
     sput-object v1, Lcom/miui/home/R$styleable;->Window:[I
 
-    .line 33567
+    .line 33624
     new-array v0, v0, [I
 
     const v1, 0x7f04023b
@@ -3450,7 +3454,7 @@
 
     sput-object v0, Lcom/miui/home/R$styleable;->miuiPopupMenu:[I
 
-    .line 33599
+    .line 33656
     new-array v0, v6, [I
 
     fill-array-data v0, :array_65
@@ -3509,23 +3513,23 @@
         0x7f04020f
         0x7f04025f
         0x7f040278
-        0x7f0402ab
         0x7f0402ac
-        0x7f0402bf
-        0x7f04032c
-        0x7f04032f
-        0x7f04033d
-        0x7f040372
-        0x7f040374
-        0x7f04037d
-        0x7f04038c
+        0x7f0402ad
+        0x7f0402c0
+        0x7f04032d
+        0x7f040330
+        0x7f04033e
+        0x7f040373
+        0x7f040375
+        0x7f04037e
+        0x7f04038d
     .end array-data
 
     :array_1
     .array-data 4
         0x7f040266
-        0x7f0402da
         0x7f0402db
+        0x7f0402dc
     .end array-data
 
     :array_2
@@ -3541,8 +3545,8 @@
         0x7f0400dd
         0x7f04015e
         0x7f040185
-        0x7f04032f
-        0x7f04037d
+        0x7f040330
+        0x7f04037e
     .end array-data
 
     :array_3
@@ -3561,9 +3565,9 @@
         0x7f0401fd
         0x7f0401fe
         0x7f04025b
-        0x7f0402ae
-        0x7f0402ff
-        0x7f040301
+        0x7f0402af
+        0x7f040300
+        0x7f040302
     .end array-data
 
     :array_5
@@ -3593,17 +3597,17 @@
     :array_8
     .array-data 4
         0x1010119
-        0x7f040319
-        0x7f040370
+        0x7f04031a
         0x7f040371
+        0x7f040372
     .end array-data
 
     :array_9
     .array-data 4
         0x1010142
-        0x7f04036d
         0x7f04036e
         0x7f04036f
+        0x7f040370
     .end array-data
 
     :array_a
@@ -3638,8 +3642,8 @@
         0x7f040179
         0x7f0401ad
         0x7f0401f6
-        0x7f04033f
-        0x7f040356
+        0x7f040340
+        0x7f040357
     .end array-data
 
     :array_c
@@ -3733,18 +3737,17 @@
         0x7f040270
         0x7f040277
         0x7f04027c
-        0x7f0402b6
-        0x7f0402b9
+        0x7f0402b7
         0x7f0402ba
         0x7f0402bb
-        0x7f0402e6
-        0x7f0402eb
-        0x7f0402ed
+        0x7f0402bc
+        0x7f0402e7
+        0x7f0402ec
         0x7f0402ee
-        0x7f040311
-        0x7f040314
-        0x7f040338
-        0x7f040340
+        0x7f0402ef
+        0x7f040312
+        0x7f040315
+        0x7f040339
         0x7f040341
         0x7f040342
         0x7f040343
@@ -3752,23 +3755,24 @@
         0x7f040345
         0x7f040346
         0x7f040347
-        0x7f040349
-        0x7f040353
-        0x7f04037f
+        0x7f040348
+        0x7f04034a
+        0x7f040354
         0x7f040380
         0x7f040381
         0x7f040382
-        0x7f040392
-        0x7f040395
+        0x7f040383
+        0x7f040394
         0x7f040397
-        0x7f040398
-        0x7f04039d
-        0x7f04039e
+        0x7f040399
+        0x7f04039a
         0x7f04039f
         0x7f0403a0
-        0x7f0403a7
-        0x7f0403a8
+        0x7f0403a1
+        0x7f0403a2
         0x7f0403a9
+        0x7f0403aa
+        0x7f0403ab
     .end array-data
 
     :array_d
@@ -3781,18 +3785,18 @@
         0x7f04008f
         0x7f0400fb
         0x7f0401f3
-        0x7f0402c2
-        0x7f040373
-        0x7f040384
+        0x7f0402c3
+        0x7f040374
         0x7f040385
         0x7f040386
         0x7f040387
+        0x7f040388
     .end array-data
 
     :array_e
     .array-data 4
         0x101030e
-        0x7f0402ed
+        0x7f0402ee
     .end array-data
 
     :array_f
@@ -3819,9 +3823,9 @@
         0x7f040211
         0x7f040212
         0x7f040213
-        0x7f0402f2
         0x7f0402f3
         0x7f0402f4
+        0x7f0402f5
     .end array-data
 
     :array_11
@@ -3830,8 +3834,8 @@
         0x10101f0
         0x10101f1
         0x7f04012c
-        0x7f040332
         0x7f040333
+        0x7f040334
     .end array-data
 
     :array_12
@@ -4020,7 +4024,7 @@
     :array_18
     .array-data 4
         0x7f0401a9
-        0x7f040329
+        0x7f04032a
     .end array-data
 
     :array_19
@@ -4041,11 +4045,11 @@
         0x7f040227
         0x7f040229
         0x7f040236
-        0x7f0402f7
-        0x7f0402fc
-        0x7f040300
-        0x7f040315
-        0x7f04031c
+        0x7f0402f8
+        0x7f0402fd
+        0x7f040301
+        0x7f040316
+        0x7f04031d
     .end array-data
 
     :array_1b
@@ -4066,14 +4070,14 @@
 
     :array_1c
     .array-data 4
-        0x7f040320
         0x7f040321
         0x7f040322
         0x7f040323
         0x7f040324
         0x7f040325
-        0x7f040327
+        0x7f040326
         0x7f040328
+        0x7f040329
     .end array-data
 
     :array_1d
@@ -4084,8 +4088,8 @@
         0x7f0400e2
         0x7f04013c
         0x7f040180
-        0x7f04030e
-        0x7f04035b
+        0x7f04030f
+        0x7f04035c
     .end array-data
 
     :array_1e
@@ -4110,15 +4114,17 @@
         0x7f040233
         0x7f040268
         0x7f0402a2
-        0x7f0402c0
-        0x7f0402d8
-        0x7f04030c
+        0x7f0402a7
+        0x7f0402c1
+        0x7f0402d9
         0x7f04030d
-        0x7f040372
-        0x7f04037e
-        0x7f040390
-        0x7f0403af
-        0x7f0403b0
+        0x7f04030e
+        0x7f040373
+        0x7f04037f
+        0x7f040391
+        0x7f040393
+        0x7f0403b1
+        0x7f0403b2
     .end array-data
 
     :array_20
@@ -4149,9 +4155,9 @@
         0x7f04016e
         0x7f0401a7
         0x7f04022c
-        0x7f0402f8
         0x7f0402f9
         0x7f0402fa
+        0x7f0402fb
     .end array-data
 
     :array_23
@@ -4202,7 +4208,7 @@
         0x7f040178
         0x7f040179
         0x7f04017a
-        0x7f04038d
+        0x7f04038e
     .end array-data
 
     :array_28
@@ -4259,15 +4265,15 @@
         0x1010098
         0x7f0401f7
         0x7f04026d
-        0x7f04031b
-        0x7f040348
+        0x7f04031c
+        0x7f040349
     .end array-data
 
     :array_2f
     .array-data 4
         0x7f04022b
         0x7f040237
-        0x7f04033e
+        0x7f04033f
     .end array-data
 
     :array_30
@@ -4280,7 +4286,7 @@
         0x7f04012f
         0x7f040134
         0x7f04022f
-        0x7f0402fb
+        0x7f0402fc
     .end array-data
 
     :array_31
@@ -4303,7 +4309,7 @@
         0x10101f8
         0x7f040155
         0x7f040158
-        0x7f040391
+        0x7f040392
     .end array-data
 
     :array_34
@@ -4332,8 +4338,8 @@
         0x7f040079
         0x7f0401a0
         0x7f040271
-        0x7f0402be
-        0x7f040388
+        0x7f0402bf
+        0x7f040389
     .end array-data
 
     :array_36
@@ -4369,8 +4375,8 @@
         0x7f04018e
         0x7f04018f
         0x7f040263
-        0x7f0402f6
-        0x7f040383
+        0x7f0402f7
+        0x7f040384
     .end array-data
 
     :array_38
@@ -4383,7 +4389,7 @@
         0x1010130
         0x1010131
         0x7f0402a1
-        0x7f04032a
+        0x7f04032b
     .end array-data
 
     :array_39
@@ -4396,7 +4402,6 @@
 
     :array_3a
     .array-data 4
-        0x7f04035f
         0x7f040360
         0x7f040361
         0x7f040362
@@ -4410,6 +4415,7 @@
         0x7f04036a
         0x7f04036b
         0x7f04036c
+        0x7f04036d
     .end array-data
 
     :array_3b
@@ -4438,14 +4444,14 @@
         0x7f04022b
         0x7f040237
         0x7f04025c
-        0x7f04033e
+        0x7f04033f
     .end array-data
 
     :array_3e
     .array-data 4
         0x7f04022b
         0x7f040237
-        0x7f04033e
+        0x7f04033f
     .end array-data
 
     :array_3f
@@ -4497,8 +4503,8 @@
         0x7f0401aa
         0x7f0401ab
         0x7f040276
-        0x7f040358
         0x7f040359
+        0x7f04035a
     .end array-data
 
     :array_44
@@ -4560,12 +4566,12 @@
         0x7f0401ae
         0x7f040264
         0x7f040275
-        0x7f0402ec
-        0x7f0402f5
-        0x7f040302
-        0x7f040331
-        0x7f040372
-        0x7f040394
+        0x7f0402ed
+        0x7f0402f6
+        0x7f040303
+        0x7f040332
+        0x7f040373
+        0x7f040396
     .end array-data
 
     :array_49
@@ -4614,9 +4620,9 @@
         0x7f04029a
         0x7f04029f
         0x7f0402a0
-        0x7f0402e9
-        0x7f040336
+        0x7f0402ea
         0x7f040337
+        0x7f040338
     .end array-data
 
     :array_4e
@@ -4648,14 +4654,13 @@
         0x7f040165
         0x7f040166
         0x7f0401af
-        0x7f0402c1
-        0x7f04030b
-        0x7f04031a
+        0x7f0402c2
+        0x7f04030c
+        0x7f04031b
     .end array-data
 
     :array_52
     .array-data 4
-        0x7f0402c3
         0x7f0402c4
         0x7f0402c5
         0x7f0402c6
@@ -4676,6 +4681,7 @@
         0x7f0402d5
         0x7f0402d6
         0x7f0402d7
+        0x7f0402d8
     .end array-data
 
     :array_53
@@ -4690,13 +4696,13 @@
         0x7f040182
         0x7f040190
         0x7f0401ae
-        0x7f0402af
         0x7f0402b0
-        0x7f0402e4
+        0x7f0402b1
         0x7f0402e5
-        0x7f04032b
-        0x7f040330
-        0x7f040393
+        0x7f0402e6
+        0x7f04032c
+        0x7f040331
+        0x7f040395
     .end array-data
 
     :array_54
@@ -4710,7 +4716,7 @@
         0x7f04022d
         0x7f040234
         0x7f040238
-        0x7f0402a7
+        0x7f0402a8
     .end array-data
 
     :array_55
@@ -4719,9 +4725,9 @@
         0x1010136
         0x7f040063
         0x7f040235
-        0x7f0402e7
-        0x7f0402fd
-        0x7f04038f
+        0x7f0402e8
+        0x7f0402fe
+        0x7f040390
     .end array-data
 
     :array_56
@@ -4731,20 +4737,20 @@
         0x7f040088
         0x7f040089
         0x7f04017e
-        0x7f040303
         0x7f040304
         0x7f040305
+        0x7f040306
     .end array-data
 
     :array_57
     .array-data 4
         0x7f04006f
         0x7f0400af
-        0x7f040307
         0x7f040308
         0x7f040309
-        0x7f04033c
-        0x7f04038e
+        0x7f04030a
+        0x7f04033d
+        0x7f04038f
     .end array-data
 
     :array_58
@@ -4756,14 +4762,14 @@
         0x7f040143
         0x7f040144
         0x7f040278
-        0x7f040313
+        0x7f040314
     .end array-data
 
     :array_59
     .array-data 4
-        0x7f0402d9
-        0x7f0402dc
-        0x7f040318
+        0x7f0402da
+        0x7f0402dd
+        0x7f040319
     .end array-data
 
     :array_5a
@@ -4781,17 +4787,17 @@
         0x1010124
         0x1010125
         0x1010142
-        0x7f0402fe
-        0x7f040317
-        0x7f040334
+        0x7f0402ff
+        0x7f040318
         0x7f040335
-        0x7f040339
-        0x7f04035c
+        0x7f040336
+        0x7f04033a
         0x7f04035d
         0x7f04035e
-        0x7f040389
+        0x7f04035f
         0x7f04038a
         0x7f04038b
+        0x7f04038c
     .end array-data
 
     :array_5c
@@ -4802,10 +4808,10 @@
         0x101036b
         0x101036c
         0x7f04012c
-        0x7f040332
         0x7f040333
-        0x7f04033a
+        0x7f040334
         0x7f04033b
+        0x7f04033c
     .end array-data
 
     :array_5d
@@ -4816,10 +4822,10 @@
         0x101036b
         0x101036c
         0x7f04012c
-        0x7f040332
         0x7f040333
-        0x7f04033a
+        0x7f040334
         0x7f04033b
+        0x7f04033c
     .end array-data
 
     :array_5e
@@ -4838,8 +4844,8 @@
         0x1010585
         0x7f040171
         0x7f040179
-        0x7f04033f
-        0x7f040356
+        0x7f040340
+        0x7f040357
     .end array-data
 
     :array_5f
@@ -4862,11 +4868,10 @@
         0x7f04025d
         0x7f04025e
         0x7f040278
-        0x7f04032c
         0x7f04032d
         0x7f04032e
-        0x7f040372
-        0x7f040375
+        0x7f04032f
+        0x7f040373
         0x7f040376
         0x7f040377
         0x7f040378
@@ -4874,6 +4879,7 @@
         0x7f04037a
         0x7f04037b
         0x7f04037c
+        0x7f04037d
     .end array-data
 
     :array_60
@@ -4889,7 +4895,7 @@
         0x10100da
         0x7f04026a
         0x7f04026b
-        0x7f04035a
+        0x7f04035b
     .end array-data
 
     :array_62
@@ -4918,12 +4924,10 @@
         0x7f040198
         0x7f040199
         0x7f0401a2
-        0x7f04031d
-        0x7f040395
-        0x7f040396
+        0x7f04031e
         0x7f040397
-        0x7f04039a
-        0x7f04039b
+        0x7f040398
+        0x7f040399
         0x7f04039c
         0x7f04039d
         0x7f04039e
@@ -4935,8 +4939,10 @@
         0x7f0403a4
         0x7f0403a5
         0x7f0403a6
-        0x7f0403ab
-        0x7f0403ac
+        0x7f0403a7
+        0x7f0403a8
+        0x7f0403ad
+        0x7f0403ae
     .end array-data
 
     :array_65

@@ -35,7 +35,7 @@
     .line 20
     invoke-direct {p0, p1, p2}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const p1, 0x7f0d007a
+    const p1, 0x7f0d007b
 
     .line 21
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/preference/IconCustomizeSaclePreference;->setLayoutResource(I)V
@@ -120,7 +120,7 @@
 
     if-eqz p1, :cond_1
 
-    const v0, 0x7f0a022f
+    const v0, 0x7f0a0236
 
     .line 28
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceViewHolder;->findViewById(I)Landroid/view/View;

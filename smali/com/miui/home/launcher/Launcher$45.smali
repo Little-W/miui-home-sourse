@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Z)V
     .locals 0
 
-    .line 4381
+    .line 4354
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-boolean p2, p0, Lcom/miui/home/launcher/Launcher$45;->val$forceRefresh:Z
@@ -49,14 +49,14 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 9
 
-    .line 4384
+    .line 4357
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$6302(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$6002(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 4385
+    .line 4358
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/WallpaperUtils;->getLockWallpaperProvider(Landroid/content/Context;)Ljava/lang/String;
@@ -65,7 +65,7 @@
 
     const-string v1, "com.xiaomi.ad.LockScreenAdProvider"
 
-    .line 4387
+    .line 4360
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -76,7 +76,7 @@
 
     const-string v2, "com.miui.home.none_provider"
 
-    .line 4388
+    .line 4361
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -85,7 +85,7 @@
 
     goto/16 :goto_0
 
-    .line 4390
+    .line 4363
     :cond_0
     iget-boolean v2, p0, Lcom/miui/home/launcher/Launcher$45;->val$forceRefresh:Z
 
@@ -99,19 +99,19 @@
 
     if-eqz v2, :cond_1
 
-    .line 4391
+    .line 4364
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 4392
+    .line 4365
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v2}, Lcom/miui/home/launcher/WallpaperUtils;->getLastRequestLockWallpaperTime(Landroid/content/Context;)J
 
     move-result-wide v6
 
-    .line 4393
+    .line 4366
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v2}, Lcom/miui/home/launcher/WallpaperUtils;->getLockWallpaperUpdateMinute(Landroid/content/Context;)I
@@ -134,14 +134,14 @@
 
     if-gez v2, :cond_1
 
-    .line 4395
+    .line 4368
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4398
+    .line 4371
     :cond_1
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -151,7 +151,7 @@
 
     invoke-static {v2, v4, v5}, Lcom/miui/home/launcher/WallpaperUtils;->setLastRequestLockWallpaperTime(Landroid/content/Context;J)Z
 
-    .line 4399
+    .line 4372
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -178,71 +178,71 @@
 
     if-nez v2, :cond_2
 
-    .line 4400
+    .line 4373
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4402
+    .line 4375
     :cond_2
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-boolean v4, p0, Lcom/miui/home/launcher/Launcher$45;->val$forceRefresh:Z
 
-    invoke-static {v2, v1, v4, p1, v3}, Lcom/miui/home/launcher/Launcher;->access$6400(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;ZLjava/lang/String;Z)Z
+    invoke-static {v2, v1, v4, p1, v3}, Lcom/miui/home/launcher/Launcher;->access$6100(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;ZLjava/lang/String;Z)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 4403
+    .line 4376
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-boolean v1, p0, Lcom/miui/home/launcher/Launcher$45;->val$forceRefresh:Z
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$6500(Lcom/miui/home/launcher/Launcher;)Z
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$6200(Lcom/miui/home/launcher/Launcher;)Z
 
     move-result v2
 
-    invoke-static {v0, p1, v1, p1, v2}, Lcom/miui/home/launcher/Launcher;->access$6400(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;ZLjava/lang/String;Z)Z
+    invoke-static {v0, p1, v1, p1, v2}, Lcom/miui/home/launcher/Launcher;->access$6100(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;ZLjava/lang/String;Z)Z
 
     move-result p1
 
-    .line 4404
+    .line 4377
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0, v3}, Lcom/miui/home/launcher/Launcher;->access$6502(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {v0, v3}, Lcom/miui/home/launcher/Launcher;->access$6202(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 4405
+    .line 4378
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4407
+    .line 4380
     :cond_3
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$6502(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$6202(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 4408
+    .line 4381
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const-wide/16 v1, 0x0
 
     invoke-static {p1, v1, v2}, Lcom/miui/home/launcher/WallpaperUtils;->setLastRequestLockWallpaperTime(Landroid/content/Context;J)Z
 
-    .line 4409
+    .line 4382
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4388
+    .line 4361
     :cond_4
     :goto_0
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -255,7 +255,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 4381
+    .line 4354
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$45;->doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
@@ -268,21 +268,21 @@
 .method protected onPostExecute(Ljava/lang/Boolean;)V
     .locals 2
 
-    .line 4415
+    .line 4388
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$6302(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$6002(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 4416
+    .line 4389
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 4417
+    .line 4390
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -293,7 +293,7 @@
 
     goto :goto_0
 
-    .line 4419
+    .line 4392
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -308,7 +308,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 4381
+    .line 4354
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$45;->onPostExecute(Ljava/lang/Boolean;)V

@@ -31,7 +31,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 7921
+    .line 7906
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$74;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/common/ResultRunnable;-><init>()V
@@ -44,12 +44,12 @@
 .method public run()V
     .locals 2
 
-    .line 7924
+    .line 7909
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$74;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$3800(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
+    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$3500(Lcom/miui/home/launcher/Launcher;)Ljava/util/HashSet;
 
     move-result-object v1
 

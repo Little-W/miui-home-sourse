@@ -30,7 +30,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;)V
     .locals 0
 
-    .line 675
+    .line 677
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$3;->this$0:Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/DiffUtil$ItemCallback;-><init>()V
@@ -43,7 +43,7 @@
 .method public areContentsTheSame(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;)Z
     .locals 0
 
-    .line 683
+    .line 685
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->areContentsTheSame(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;)Z
 
     move-result p1
@@ -54,7 +54,7 @@
 .method public bridge synthetic areContentsTheSame(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 675
+    .line 677
     check-cast p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
     check-cast p2, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
@@ -69,7 +69,7 @@
 .method public areItemsTheSame(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;)Z
     .locals 0
 
-    .line 678
+    .line 680
     invoke-virtual {p1, p2}, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;->areItemsTheSame(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;)Z
 
     move-result p1
@@ -80,7 +80,7 @@
 .method public bridge synthetic areItemsTheSame(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 0
 
-    .line 675
+    .line 677
     check-cast p1, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;
 
     check-cast p2, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$AdapterItem;

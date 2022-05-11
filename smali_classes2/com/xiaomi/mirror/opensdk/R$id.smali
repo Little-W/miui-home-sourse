@@ -15,11 +15,11 @@
 
 
 # static fields
-.field public static final icon:I = 0x7f0a013b
+.field public static final icon:I = 0x7f0a013e
 
-.field public static final tag_mirror_menu_query_listener:I = 0x7f0a027b
+.field public static final tag_mirror_menu_query_listener:I = 0x7f0a0282
 
-.field public static final text:I = 0x7f0a028a
+.field public static final text:I = 0x7f0a0291
 
 
 # direct methods

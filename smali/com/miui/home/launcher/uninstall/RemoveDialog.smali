@@ -85,7 +85,7 @@
     :cond_0
     invoke-direct {p1, v0, v1}, Lcom/miui/home/launcher/uninstall/SecondConfirmDialog;-><init>(Landroid/content/Context;Ljava/util/List;)V
 
-    const v0, 0x7f100136
+    const v0, 0x7f100137
 
     .line 42
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/uninstall/SecondConfirmDialog;->setPositiveButTitle(I)V

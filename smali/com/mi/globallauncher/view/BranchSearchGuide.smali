@@ -221,7 +221,7 @@
     .line 346
     new-instance v1, Landroid/content/Intent;
 
-    const-class v2, Lcom/mi/globallauncher/CommercialWebViewActivity;
+    const-class v2, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 

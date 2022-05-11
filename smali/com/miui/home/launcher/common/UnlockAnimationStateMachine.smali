@@ -16,11 +16,11 @@
 
 .field private mLooperExecutor:Lcom/miui/home/library/utils/LooperExecutor;
 
-.field private mOldDisplayState:I
+.field protected mOldDisplayState:I
 
 .field private mResetIdleStateRunnable:Ljava/lang/Runnable;
 
-.field private mResumeShowAnimationRunnable:Ljava/lang/Runnable;
+.field protected mResumeShowAnimationRunnable:Ljava/lang/Runnable;
 
 .field protected mState:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
 
@@ -207,57 +207,8 @@
     const-string v0, "onResume"
 
     .line 170
-    invoke-direct {p0, v0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->showAnimation(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->showAnimation(Ljava/lang/String;)V
 
-    return-void
-.end method
-
-.method private onScreenOff()V
-    .locals 3
-
-    const-string v0, "Launcher_UnlockAnimationStateMachine"
-
-    .line 98
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "onScreenOff = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mState:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 99
-    iget-object v0, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->getDisplayState(Landroid/content/Context;)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    const-string v0, "Launcher_UnlockAnimationStateMachine"
-
-    const-string v1, "setPrepare on screen off"
-
-    .line 100
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 101
-    invoke-direct {p0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->setPrepare()V
-
-    :cond_0
     return-void
 .end method
 
@@ -326,90 +277,6 @@
     return-void
 .end method
 
-.method private showAnimation(Ljava/lang/String;)V
-    .locals 3
-
-    const-string v0, "Launcher_UnlockAnimationStateMachine"
-
-    .line 135
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "showAnimation = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mState:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 136
-    iget-object v0, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mState:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
-
-    sget-object v1, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;->PREPARE:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
-
-    if-eq v0, v1, :cond_0
-
-    iget-object v0, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mState:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
-
-    sget-object v1, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;->RESUME_WAIT:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
-
-    if-ne v0, v1, :cond_1
-
-    .line 137
-    :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mResetIdleStateRunnable:Ljava/lang/Runnable;
-
-    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->useViewToRemoveCallbacks(Ljava/lang/Runnable;)V
-
-    const-string v0, "Launcher_UnlockAnimationStateMachine"
-
-    .line 138
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "showAnimation:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string p1, "show_animation"
-
-    .line 139
-    invoke-static {p1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
-
-    .line 140
-    iget-object p1, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->showPresent()V
-
-    .line 141
-    invoke-static {}, Landroid/os/Trace;->endSection()V
-
-    .line 142
-    sget-object p1, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;->IDLE:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
-
-    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->setState(Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;)V
-
-    :cond_1
-    return-void
-.end method
-
 
 # virtual methods
 .method public onDisplayChange()V
@@ -462,7 +329,7 @@
     if-ne v0, v1, :cond_1
 
     .line 88
-    invoke-direct {p0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->onScreenOff()V
+    invoke-virtual {p0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->onScreenOff()V
 
     :cond_1
     const/4 v1, 0x2
@@ -484,7 +351,7 @@
     const-string v1, "onDisplayChange"
 
     .line 92
-    invoke-direct {p0, v1}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->showAnimation(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->showAnimation(Ljava/lang/String;)V
 
     .line 94
     :cond_2
@@ -632,7 +499,7 @@
     const-string v0, "onResume"
 
     .line 152
-    invoke-direct {p0, v0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->showAnimation(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->showAnimation(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -666,6 +533,55 @@
 
     :cond_2
     :goto_0
+    return-void
+.end method
+
+.method protected onScreenOff()V
+    .locals 3
+
+    const-string v0, "Launcher_UnlockAnimationStateMachine"
+
+    .line 98
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onScreenOff = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mState:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 99
+    iget-object v0, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->getDisplayState(Landroid/content/Context;)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    const-string v0, "Launcher_UnlockAnimationStateMachine"
+
+    const-string v1, "setPrepare on screen off"
+
+    .line 100
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 101
+    invoke-direct {p0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->setPrepare()V
+
+    :cond_0
     return-void
 .end method
 
@@ -762,7 +678,7 @@
     const-string v0, "onUserPresent"
 
     .line 175
-    invoke-direct {p0, v0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->showAnimation(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->showAnimation(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -808,7 +724,7 @@
     const-string v0, "onWindowFocus"
 
     .line 130
-    invoke-direct {p0, v0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->showAnimation(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->showAnimation(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -839,5 +755,89 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    return-void
+.end method
+
+.method protected showAnimation(Ljava/lang/String;)V
+    .locals 3
+
+    const-string v0, "Launcher_UnlockAnimationStateMachine"
+
+    .line 135
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "showAnimation = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mState:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 136
+    iget-object v0, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mState:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
+
+    sget-object v1, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;->PREPARE:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mState:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
+
+    sget-object v1, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;->RESUME_WAIT:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
+
+    if-ne v0, v1, :cond_1
+
+    .line 137
+    :cond_0
+    iget-object v0, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mResetIdleStateRunnable:Ljava/lang/Runnable;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->useViewToRemoveCallbacks(Ljava/lang/Runnable;)V
+
+    const-string v0, "Launcher_UnlockAnimationStateMachine"
+
+    .line 138
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "showAnimation:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-string p1, "show_animation"
+
+    .line 139
+    invoke-static {p1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
+
+    .line 140
+    iget-object p1, p0, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->showPresent()V
+
+    .line 141
+    invoke-static {}, Landroid/os/Trace;->endSection()V
+
+    .line 142
+    sget-object p1, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;->IDLE:Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;
+
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/common/UnlockAnimationStateMachine;->setState(Lcom/miui/home/launcher/common/UnlockAnimationStateMachine$STATE;)V
+
+    :cond_1
     return-void
 .end method

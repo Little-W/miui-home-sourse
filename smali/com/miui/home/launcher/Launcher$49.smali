@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 5405
+    .line 5384
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$49;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,10 +35,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 5407
+    .line 5386
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$49;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherModel;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherModel;
 
     move-result-object p1
 

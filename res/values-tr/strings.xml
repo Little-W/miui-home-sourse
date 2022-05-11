@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">Yukarı doğru kaydırmak, Uygulama çekmecesi için ayrılmıştır. Normal Ana ekran moduna geçin ve tekrar deneyin.</string>
     <string name="all_apps_suggestions">Uygulama tavsiyeleri</string>
     <string name="am">ÖÖ</string>
+    <string name="animation_rate_title">Animasyon oranı</string>
     <string name="announce_for_app_move_in_folder">Klasör içinde %1$d konumuna taşındı</string>
     <string name="announce_for_checked">%1$s, kontrol edildi</string>
     <string name="announce_for_choose_default_screen">%1$d numaralı ekranı varsayılan Ana ekran olarak ayarla</string>
@@ -639,11 +640,11 @@
     <string name="navigation_guide_recent_title">Son kullanılanları aç</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Son kullanılanları aç</string>
     <string name="navigation_guide_settings">Hareket önizlemeleri</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">Orta</string>
+    <string name="navigation_position_left">Sol</string>
+    <string name="navigation_position_right">Sağ</string>
+    <string name="navigation_position_summary">Navigasyon tuşlarının özel konumları yalnızca Ana ekrana uygulanabilir</string>
+    <string name="navigation_position_title">Navigasyon tuşları konumu</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">İptal</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Tam ekran hareketleri üçüncü taraf başlatıcılarla kullanılamıyor. Sistem başlatıcıyı değiştir ve tam ekran hareketlerini aç?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">Tamam</string>

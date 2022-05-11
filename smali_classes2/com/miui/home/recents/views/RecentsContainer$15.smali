@@ -3,12 +3,12 @@
 .source "RecentsContainer.java"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/miui/home/recents/views/RecentsContainer;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/miui/home/recents/views/RecentsContainer;->killProcess(Lcom/android/systemui/shared/recents/model/Task;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,13 +20,17 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
+.field final synthetic val$task:Lcom/android/systemui/shared/recents/model/Task;
+
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
+.method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;Lcom/android/systemui/shared/recents/model/Task;)V
     .locals 0
 
-    .line 1403
+    .line 1427
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$15;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
+
+    iput-object p2, p0, Lcom/miui/home/recents/views/RecentsContainer$15;->val$task:Lcom/android/systemui/shared/recents/model/Task;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,28 +39,13 @@
 
 
 # virtual methods
-.method public onPreDraw()Z
+.method public run()V
     .locals 1
 
-    .line 1406
-    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$15;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
+    .line 1430
+    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$15;->val$task:Lcom/android/systemui/shared/recents/model/Task;
 
-    invoke-static {v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$800(Lcom/miui/home/recents/views/RecentsContainer;)Lcom/miui/home/recents/views/RecentsView;
+    invoke-static {v0}, Lcom/android/systemui/shared/recents/system/ProcessManagerWrapper;->doSwapUPClean(Lcom/android/systemui/shared/recents/model/Task;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/recents/views/RecentsView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
-
-    .line 1407
-    iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$15;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
-
-    invoke-virtual {v0}, Lcom/miui/home/recents/views/RecentsContainer;->prepareFsGestureEnterRecents()V
-
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

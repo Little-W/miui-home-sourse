@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">"ওপৰলৈ ছোৱাইপ কৰাটো এপ ড্ৰয়াৰ খোলাৰ বাবে সংৰক্ষিত আছে। নিয়মীয়া গৃহ স্ক্ৰীণ ম'ডলৈ সলনি কৰক আৰু পুনৰ চেষ্টা কৰক।"</string>
     <string name="all_apps_suggestions">এপ পৰামৰ্শসমূহ</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">এনিমেশ্বন হাৰ</string>
     <string name="announce_for_app_move_in_folder">"ফ'ল্ডাৰটোত %1$d অৱস্থানলৈ লৈ যাওক"</string>
     <string name="announce_for_checked">%1$s, পৰীক্ষিত</string>
     <string name="announce_for_choose_default_screen">"স্ক্ৰীণ %1$d-ক ডিফ'ল্ট গৃহ স্ক্ৰীণ ৰূপে ছেট কৰক"</string>
@@ -609,11 +610,11 @@
     <string name="navigation_guide_recent_title">শেহতীয়াসমূহ খোলক</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">শেহতীয়াসমূহ খোলক</string>
     <string name="navigation_guide_settings">"জেশ্বাৰ ডেম'সমূহ"</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">কেন্দ্ৰ</string>
+    <string name="navigation_position_left">বাঁও</string>
+    <string name="navigation_position_right">সোঁ</string>
+    <string name="navigation_position_summary">নেভিগেশ্বন বুটামসমূহৰ কাষ্টম অৱস্থান কেৱল গৃহ স্ক্ৰীণতহে প্ৰয়োগ কৰিব পাৰি</string>
+    <string name="navigation_position_title">নেভিগেশ্বন বুটামসমূহৰ অৱস্থান</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">বাতিল</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">তৃতীয় পক্ষৰ লঞ্চাৰৰ সৈতে পূৰ্ণ স্ক্রীণ জেশ্বাৰ ব্যৱহাৰ কৰিব নোৱাৰি। ছিষ্টেম লঞ্চাৰলৈ সলনি আৰু পূৰ্ণ স্ক্রীণ জেশ্বাৰ অন কৰিবনে?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">ঠিক</string>

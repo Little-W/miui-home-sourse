@@ -16,6 +16,10 @@
 
 .field private mLauncherIconWidth:I
 
+.field private mLauncherPairIconHeight:I
+
+.field private mLauncherPairIconWidth:I
+
 .field private mResource:Landroid/content/res/Resources;
 
 .field private mTitleTop:I
@@ -25,13 +29,13 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 19
+    .line 21
     invoke-direct {p0}, Lcom/miui/home/launcher/compat/LauncherThemeCompat;-><init>()V
 
-    .line 20
+    .line 22
     iput-object p1, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mContext:Landroid/content/Context;
 
-    .line 21
+    .line 23
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
@@ -46,10 +50,10 @@
 .method public enableAndResetCache()V
     .locals 3
 
-    .line 26
+    .line 28
     iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
-    const v1, 0x7f07015f
+    const v1, 0x7f070164
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -57,19 +61,19 @@
 
     iput v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mTitleTop:I
 
-    .line 27
+    .line 29
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isElderlyManMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 28
+    .line 30
     iget v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mTitleTop:I
 
     iget-object v1, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
-    const v2, 0x7f0700f9
+    const v2, 0x7f0700fe
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -79,11 +83,11 @@
 
     iput v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mTitleTop:I
 
-    .line 30
+    .line 32
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
-    const v1, 0x7f07012c
+    const v1, 0x7f070131
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -91,10 +95,10 @@
 
     iput v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mFolderPreviewWidth:I
 
-    .line 31
+    .line 33
     iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
-    const v1, 0x7f07012a
+    const v1, 0x7f07012f
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -102,10 +106,10 @@
 
     iput v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mFolderPreviewHeight:I
 
-    .line 32
+    .line 34
     iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
-    const v1, 0x7f07012b
+    const v1, 0x7f070130
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -113,7 +117,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mFolderPreviewItemPadding:I
 
-    .line 33
+    .line 35
     iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
     const v1, 0x7f070097
@@ -124,7 +128,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mLauncherIconWidth:I
 
-    .line 34
+    .line 36
     iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
     const v1, 0x7f070094
@@ -135,13 +139,35 @@
 
     iput v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mLauncherIconHeight:I
 
+    .line 37
+    iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
+
+    const v1, 0x7f07009a
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mLauncherPairIconWidth:I
+
+    .line 38
+    iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
+
+    const v1, 0x7f070099
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mLauncherPairIconHeight:I
+
     return-void
 .end method
 
 .method public getFolderPreviewHeight()I
     .locals 1
 
-    .line 49
+    .line 53
     iget v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mFolderPreviewHeight:I
 
     return v0
@@ -150,7 +176,7 @@
 .method public getFolderPreviewItemPadding()I
     .locals 1
 
-    .line 54
+    .line 58
     iget v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mFolderPreviewItemPadding:I
 
     return v0
@@ -159,7 +185,7 @@
 .method public getFolderPreviewWidth()I
     .locals 1
 
-    .line 44
+    .line 48
     iget v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mFolderPreviewWidth:I
 
     return v0
@@ -168,7 +194,7 @@
 .method public getLauncherIconHeight()I
     .locals 1
 
-    .line 64
+    .line 68
     iget v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mLauncherIconHeight:I
 
     return v0
@@ -177,8 +203,26 @@
 .method public getLauncherIconWidth()I
     .locals 1
 
-    .line 59
+    .line 63
     iget v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mLauncherIconWidth:I
+
+    return v0
+.end method
+
+.method public getLauncherPairIconHeight()I
+    .locals 1
+
+    .line 78
+    iget v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mLauncherPairIconHeight:I
+
+    return v0
+.end method
+
+.method public getLauncherPairIconWidth()I
+    .locals 1
+
+    .line 73
+    iget v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mLauncherPairIconWidth:I
 
     return v0
 .end method
@@ -186,7 +230,7 @@
 .method public getTitleMarginTop()I
     .locals 1
 
-    .line 39
+    .line 43
     iget v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mTitleTop:I
 
     return v0

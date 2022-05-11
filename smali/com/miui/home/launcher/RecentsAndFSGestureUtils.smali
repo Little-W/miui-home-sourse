@@ -91,7 +91,7 @@
 
     const/4 v1, 0x0
 
-    .line 193
+    .line 209
     :try_start_0
     new-array v0, v0, [Ljava/lang/Class;
 
@@ -113,7 +113,7 @@
 
     const-string v2, "android.util.MiuiMultiWindowUtils"
 
-    .line 194
+    .line 210
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
@@ -122,12 +122,12 @@
 
     const-class v5, Ljava/util/List;
 
-    .line 196
+    .line 212
     invoke-static {v5, v0}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 194
+    .line 210
     invoke-static {v2, v4, v5, v0}, Lcom/miui/launcher/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
@@ -144,7 +144,7 @@
     :catch_0
     move-exception v0
 
-    .line 201
+    .line 217
     invoke-virtual {v0}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
 
     return v1
@@ -153,12 +153,12 @@
 .method public static canTaskEnterMiniSmallWindow(Landroid/content/Context;Lcom/miui/home/launcher/Launcher;Ljava/lang/String;I)Z
     .locals 2
 
-    .line 134
+    .line 141
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->IS_FOLD_DEVICE:Z
 
     if-eqz v0, :cond_3
 
-    .line 136
+    .line 143
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
     move-result v0
@@ -171,7 +171,7 @@
 
     const-string p1, "Now is multi window"
 
-    .line 137
+    .line 144
     invoke-static {p2, p3, v1, p1}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->canTaskEnterSmallWindowLog(Ljava/lang/String;IZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -180,7 +180,7 @@
 
     return v1
 
-    .line 140
+    .line 147
     :cond_0
     invoke-static {}, Lcom/miui/home/smallwindow/SmallWindowStateHelper;->getInstance()Lcom/miui/home/smallwindow/SmallWindowStateHelper;
 
@@ -196,7 +196,7 @@
 
     const-string p1, "Now is showing small window"
 
-    .line 141
+    .line 148
     invoke-static {p2, p3, v1, p1}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->canTaskEnterSmallWindowLog(Ljava/lang/String;IZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -205,7 +205,7 @@
 
     return v1
 
-    .line 144
+    .line 151
     :cond_1
     invoke-static {p1, p3}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->findTaskWithId(Lcom/miui/home/launcher/Launcher;I)Lcom/android/systemui/shared/recents/model/Task;
 
@@ -213,7 +213,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 145
+    .line 152
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task;->hasMultipleTasks()Z
 
     move-result p1
@@ -224,7 +224,7 @@
 
     const-string p1, "task has multiple tasks"
 
-    .line 146
+    .line 153
     invoke-static {p2, p3, v1, p1}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->canTaskEnterSmallWindowLog(Ljava/lang/String;IZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -233,7 +233,7 @@
 
     return v1
 
-    .line 149
+    .line 156
     :cond_2
     invoke-static {p0, p2, p3}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->supportEnterMiniSmallWindow(Landroid/content/Context;Ljava/lang/String;I)Z
 
@@ -241,7 +241,7 @@
 
     return p0
 
-    .line 151
+    .line 158
     :cond_3
     invoke-static {p0, p2, p3}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->canTaskEnterSmallWindow(Landroid/content/Context;Ljava/lang/String;I)Z
 
@@ -253,7 +253,7 @@
 .method public static canTaskEnterSmallWindow(Landroid/content/Context;Ljava/lang/String;I)Z
     .locals 2
 
-    .line 121
+    .line 128
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
     move-result v0
@@ -270,7 +270,7 @@
 
     const-string v0, "Now is multi window"
 
-    .line 122
+    .line 129
     invoke-static {p1, p2, v1, v0}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->canTaskEnterSmallWindowLog(Ljava/lang/String;IZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -279,7 +279,7 @@
 
     return v1
 
-    .line 126
+    .line 133
     :cond_0
     invoke-static {}, Lcom/miui/home/smallwindow/SmallWindowStateHelper;->getInstance()Lcom/miui/home/smallwindow/SmallWindowStateHelper;
 
@@ -295,7 +295,7 @@
 
     const-string v0, "Now is showing small window"
 
-    .line 127
+    .line 134
     invoke-static {p1, p2, v1, v0}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->canTaskEnterSmallWindowLog(Ljava/lang/String;IZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -304,7 +304,7 @@
 
     return v1
 
-    .line 130
+    .line 137
     :cond_1
     invoke-static {p0, p1, p2}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->supportEnterMiniSmallWindow(Landroid/content/Context;Ljava/lang/String;I)Z
 
@@ -352,6 +352,83 @@
     return-object p0
 .end method
 
+.method public static canTaskEnterWorldcirculate(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;I)Z
+    .locals 2
+
+    .line 163
+    invoke-static {p0, p2}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->findTaskWithId(Lcom/miui/home/launcher/Launcher;I)Lcom/android/systemui/shared/recents/model/Task;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    .line 164
+    invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task;->hasMultipleTasks()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const-string p0, "RecentsAndFSGestureUtils"
+
+    const-string v0, "task has multiple tasks"
+
+    const/4 v1, 0x0
+
+    .line 165
+    invoke-static {p1, p2, v1, v0}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->canTaskEnterWorldcirculateLog(Ljava/lang/String;IZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v1
+
+    :cond_0
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method private static canTaskEnterWorldcirculateLog(Ljava/lang/String;IZLjava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    .line 107
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "canTaskEnterWorldcirculate, pkg="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, ", taskId="
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, ", result="
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p0, ", because "
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method private static findTaskWithId(Lcom/miui/home/launcher/Launcher;I)Lcom/android/systemui/shared/recents/model/Task;
     .locals 1
 
@@ -363,12 +440,12 @@
 
     const-string p1, "findTaskWithId: launcher is null, return"
 
-    .line 176
+    .line 192
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return-object v0
 
-    .line 179
+    .line 195
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getRecentsView()Lcom/miui/home/recents/views/RecentsView;
 
@@ -376,7 +453,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 183
+    .line 199
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsView;->getStack()Lcom/android/systemui/shared/recents/model/TaskStack;
 
     move-result-object p0
@@ -389,7 +466,7 @@
     :goto_0
     if-eqz p0, :cond_2
 
-    .line 186
+    .line 202
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/TaskStack;->findTaskWithId(I)Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object v0
@@ -483,7 +560,7 @@
     :try_start_0
     const-string v1, "android.util.MiuiMultiWindowUtils"
 
-    .line 237
+    .line 253
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -506,7 +583,7 @@
 
     aput-object p0, v4, v7
 
-    .line 236
+    .line 252
     invoke-static {v1, v2, v3, v5, v4}, Lcom/miui/launcher/utils/ReflectUtils;->callStaticMethod(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -518,7 +595,7 @@
     :try_start_1
     const-string v0, "RecentsAndFSGestureUtils"
 
-    .line 241
+    .line 257
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -574,7 +651,7 @@
 
     const-string v2, "getFreeformSuggestionList error"
 
-    .line 243
+    .line 259
     invoke-static {v1, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     move-object p0, v0
@@ -586,7 +663,7 @@
 .method public static getTaskStackViewLayoutStyle(Landroid/content/Context;)I
     .locals 2
 
-    .line 249
+    .line 265
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -693,7 +770,7 @@
 .method private static isPkgSupportSmallWindow(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
-    .line 226
+    .line 242
     invoke-static {p0}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->getSuggestionList(Landroid/content/Context;)Ljava/util/List;
 
     move-result-object p0
@@ -704,7 +781,7 @@
 
     return p0
 
-    .line 230
+    .line 246
     :cond_0
     invoke-interface {p0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -754,7 +831,7 @@
     :try_start_0
     const-string v1, "android.util.MiuiMultiWindowUtils"
 
-    .line 108
+    .line 115
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -765,7 +842,7 @@
 
     new-array v4, v0, [Ljava/lang/Class;
 
-    .line 110
+    .line 117
     invoke-static {v3, v4}, Lcom/miui/launcher/utils/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v3
@@ -790,14 +867,14 @@
 
     aput-object v7, v4, v5
 
-    .line 108
+    .line 115
     invoke-static {v1, v2, v3, v4}, Lcom/miui/launcher/utils/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
     const-string v2, "RecentsAndFSGestureUtils"
 
-    .line 112
+    .line 119
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -830,7 +907,7 @@
 
     const-string v3, "isSupportStartSmallWithPosition error"
 
-    .line 115
+    .line 122
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v0
@@ -841,7 +918,7 @@
 
     const-string v0, "activity"
 
-    .line 207
+    .line 223
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -852,7 +929,7 @@
 
     const/4 p0, 0x1
 
-    .line 210
+    .line 226
     :try_start_0
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -872,14 +949,14 @@
 
     new-array v5, p0, [Ljava/lang/Object;
 
-    .line 211
+    .line 227
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v7
 
     aput-object v7, v5, v6
 
-    .line 210
+    .line 226
     invoke-static/range {v0 .. v5}, Lcom/miui/launcher/utils/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -899,7 +976,7 @@
 
     const-string v1, "RecentsAndFSGestureUtils"
 
-    .line 213
+    .line 229
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -995,7 +1072,7 @@
 .method public static isUseTaskStackLayoutStyleHorizontalAnim(Z)Z
     .locals 1
 
-    .line 219
+    .line 235
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -1006,7 +1083,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 220
+    .line 236
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncherApplication()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -1023,7 +1100,7 @@
 
     if-nez p0, :cond_0
 
-    .line 222
+    .line 238
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
     move-result p0
@@ -1044,14 +1121,14 @@
 .method static synthetic lambda$lockOrUnlockApp$0(Lcom/android/systemui/shared/recents/model/Task;ZLjava/lang/Void;)Ljava/lang/Boolean;
     .locals 1
 
-    .line 259
+    .line 275
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task;->hasMultipleTasks()Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 260
+    .line 276
     iget-object p2, p0, Lcom/android/systemui/shared/recents/model/Task;->cti1Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     invoke-virtual {p2}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
@@ -1074,7 +1151,7 @@
 
     iget-object p2, p0, Lcom/android/systemui/shared/recents/model/Task;->cti2Key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
-    .line 261
+    .line 277
     invoke-virtual {p2}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getComponent()Landroid/content/ComponentName;
 
     move-result-object p2
@@ -1100,7 +1177,7 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 260
+    .line 276
     :goto_0
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1108,7 +1185,7 @@
 
     return-object p0
 
-    .line 263
+    .line 279
     :cond_1
     iget-object p2, p0, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
@@ -1138,7 +1215,7 @@
 .method static synthetic lambda$lockOrUnlockApp$1(Lcom/android/systemui/shared/recents/model/Task;ZLjava/lang/Runnable;Ljava/lang/Boolean;)V
     .locals 1
 
-    .line 267
+    .line 283
     invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p3
@@ -1147,7 +1224,7 @@
 
     const-string p2, "RecentsAndFSGestureUtils"
 
-    .line 268
+    .line 284
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1172,14 +1249,14 @@
 
     return-void
 
-    .line 271
+    .line 287
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/Task;->setLocked(Z)V
 
-    .line 272
+    .line 288
     invoke-virtual {p0}, Lcom/android/systemui/shared/recents/model/Task;->onLockedChange()V
 
-    .line 273
+    .line 289
     invoke-interface {p2}, Ljava/lang/Runnable;->run()V
 
     return-void
@@ -1188,7 +1265,7 @@
 .method public static lockOrUnlockApp(Lcom/android/systemui/shared/recents/model/Task;ZLjava/lang/Runnable;)V
     .locals 2
 
-    .line 257
+    .line 273
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$RecentsAndFSGestureUtils$U478jG3SIGRHUcH65DY0OP9BwNc;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/-$$Lambda$RecentsAndFSGestureUtils$U478jG3SIGRHUcH65DY0OP9BwNc;-><init>(Lcom/android/systemui/shared/recents/model/Task;Z)V
@@ -1207,7 +1284,7 @@
 .method public static setTaskStackViewLayoutStyle(Landroid/content/Context;I)V
     .locals 1
 
-    .line 253
+    .line 269
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1222,7 +1299,7 @@
 .method private static supportEnterMiniSmallWindow(Landroid/content/Context;Ljava/lang/String;I)Z
     .locals 2
 
-    .line 156
+    .line 172
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isSupportSmallWindow()Z
 
     move-result v0
@@ -1235,7 +1312,7 @@
 
     const-string v0, "Display don\'t support"
 
-    .line 157
+    .line 173
     invoke-static {p1, p2, v1, v0}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->canTaskEnterSmallWindowLog(Ljava/lang/String;IZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -1244,7 +1321,7 @@
 
     return v1
 
-    .line 160
+    .line 176
     :cond_0
     invoke-static {p0, p2}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->isTaskSupportSmallWindow(Landroid/content/Context;I)Z
 
@@ -1256,7 +1333,7 @@
 
     const-string v0, "task don\'t support"
 
-    .line 161
+    .line 177
     invoke-static {p1, p2, v1, v0}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->canTaskEnterSmallWindowLog(Ljava/lang/String;IZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -1265,7 +1342,7 @@
 
     return v1
 
-    .line 164
+    .line 180
     :cond_1
     sget-boolean v0, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->CAN_ONLY_USE_TASK_ID_TO_DISTINGUISH_SMALL_WINDOW:Z
 
@@ -1277,7 +1354,7 @@
 
     const/4 v1, 0x1
 
-    .line 165
+    .line 181
     invoke-static {p1, p2, v1, v0}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->canTaskEnterSmallWindowLog(Ljava/lang/String;IZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -1286,7 +1363,7 @@
 
     return v1
 
-    .line 168
+    .line 184
     :cond_2
     invoke-static {p0, p1}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->isPkgSupportSmallWindow(Landroid/content/Context;Ljava/lang/String;)Z
 
@@ -1296,7 +1373,7 @@
 
     const-string v1, "use taskId and pkg to distinguish"
 
-    .line 169
+    .line 185
     invoke-static {p1, p2, p0, v1}, Lcom/miui/home/launcher/RecentsAndFSGestureUtils;->canTaskEnterSmallWindowLog(Ljava/lang/String;IZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1

@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">Жест вверх используется для открытия меню приложений. Включите обычный режим рабочего стола и повторите попытку.</string>
     <string name="all_apps_suggestions">Недавние приложения</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Частота анимации</string>
     <string name="announce_for_app_move_in_folder">Перемещено в позицию %1$d в папке</string>
     <string name="announce_for_checked">%1$s, выбрано</string>
     <string name="announce_for_choose_default_screen">Установить экран %1$d в качестве основного</string>
@@ -639,11 +640,11 @@
     <string name="navigation_guide_recent_title">Открыть Недавние</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Открыть Недавние</string>
     <string name="navigation_guide_settings">Демонстрация жестов</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">По центру</string>
+    <string name="navigation_position_left">Слева</string>
+    <string name="navigation_position_right">Справа</string>
+    <string name="navigation_position_summary">Пользовательское расположение кнопок навигации можно применить только к рабочему столу.</string>
+    <string name="navigation_position_title">Расположение кнопок навигации</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Отмена</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Полноэкранные жесты несовместимы со сторонним рабочим столом. Включить системный рабочий стол и активировать полноэкранные жесты?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">OK</string>

@@ -63,6 +63,16 @@
         <item>@string/am</item>
         <item>@string/pm</item>
     </string-array>
+    <string-array name="animation_rate_entries">
+        <item>Elegance</item>
+        <item>Balance</item>
+        <item>Minimalist</item>
+    </string-array>
+    <string-array name="animation_rate_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
     <array name="app_locating_animation_scaler">
         <item>1.0</item>
         <item>1.4</item>
@@ -483,10 +493,6 @@
         <item>从picker详情页拖拽</item>
         <item>picker详情页添加按钮</item>
         <item>从picker首页拖拽</item>
-        <item>从瀑布流页拖拽</item>
-        <item>图文页添加按钮</item>
-        <item>编辑页应用按钮</item>
-        <item>首页横滑卡片添加按钮</item>
     </string-array>
     <string-array name="widget_component_default_source">
         <item>非默认</item>
@@ -497,11 +503,6 @@
         <item>shortcut删除</item>
         <item>拖拽</item>
         <item>uninstall</item>
-    </string-array>
-    <string-array name="widget_component_source">
-        <item>运营强插</item>
-        <item>主动添加</item>
-        <item>默认布局</item>
     </string-array>
     <string-array name="widget_drag_type_name">
         <item>桌面内</item>

@@ -28,14 +28,14 @@
 .method constructor <init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;Landroid/view/View;)V
     .locals 1
 
-    .line 284
+    .line 286
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$ViewHolder;-><init>(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;Lcom/mi/globallauncher/search/SearchResultMaskAdapter$1;)V
 
-    .line 285
+    .line 287
     sget p1, Lcom/mi/globallauncher/R$id;->search_result_hint:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -46,7 +46,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->searchResultHintContainer:Landroid/widget/LinearLayout;
 
-    .line 286
+    .line 288
     sget p1, Lcom/mi/globallauncher/R$id;->uni_search_hint:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -57,7 +57,7 @@
 
     iput-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->uniSearchHintGroup:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
-    .line 287
+    .line 289
     sget p1, Lcom/mi/globallauncher/R$id;->search_hint_title:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -74,14 +74,14 @@
 .method private updateSearchResultHints()V
     .locals 3
 
-    .line 299
+    .line 301
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->searchResultHintContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 300
+    .line 302
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
     invoke-static {v1}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter;->access$100(Lcom/mi/globallauncher/search/SearchResultMaskAdapter;)Z
@@ -90,7 +90,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 301
+    .line 303
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->searchHintTitle:Landroid/widget/TextView;
 
     sget v2, Lcom/mi/globallauncher/R$color;->black:I
@@ -101,7 +101,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 302
+    .line 304
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->uniSearchHintGroup:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
     sget v2, Lcom/mi/globallauncher/R$color;->alpha60black:I
@@ -112,7 +112,7 @@
 
     invoke-virtual {v1, v2}, Lcom/mi/globallauncher/view/ReversibleTagGroup;->setTextColor(I)V
 
-    .line 303
+    .line 305
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->uniSearchHintGroup:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
     sget v2, Lcom/mi/globallauncher/R$color;->white:I
@@ -125,7 +125,7 @@
 
     goto :goto_0
 
-    .line 305
+    .line 307
     :cond_0
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->searchHintTitle:Landroid/widget/TextView;
 
@@ -137,7 +137,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 306
+    .line 308
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->uniSearchHintGroup:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
     sget v2, Lcom/mi/globallauncher/R$color;->alpha90white:I
@@ -148,7 +148,7 @@
 
     invoke-virtual {v1, v2}, Lcom/mi/globallauncher/view/ReversibleTagGroup;->setTextColor(I)V
 
-    .line 307
+    .line 309
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->uniSearchHintGroup:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
     sget v2, Lcom/mi/globallauncher/R$color;->dark_mode_bg_color:I
@@ -159,7 +159,7 @@
 
     invoke-virtual {v1, v0}, Lcom/mi/globallauncher/view/ReversibleTagGroup;->setBackgroundColor(I)V
 
-    .line 310
+    .line 312
     :goto_0
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
 
@@ -193,7 +193,7 @@
 
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->uniSearchHintGroup:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
-    .line 311
+    .line 313
     invoke-virtual {v0}, Lcom/mi/globallauncher/view/ReversibleTagGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -204,7 +204,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 312
+    .line 314
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->uniSearchHintGroup:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
     iget-object v1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;
@@ -217,7 +217,7 @@
 
     goto :goto_1
 
-    .line 314
+    .line 316
     :cond_1
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->uniSearchHintGroup:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
@@ -227,7 +227,7 @@
 
     invoke-virtual {v0, v1}, Lcom/mi/globallauncher/view/ReversibleTagGroup;->setTags(Ljava/util/List;)V
 
-    .line 315
+    .line 317
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->searchResultHintContainer:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x0
@@ -243,14 +243,14 @@
 .method updateView(I)V
     .locals 1
 
-    .line 292
+    .line 294
     iget-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->uniSearchHintGroup:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
     if-nez p1, :cond_0
 
     return-void
 
-    .line 293
+    .line 295
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -258,10 +258,10 @@
 
     invoke-virtual {p1, v0}, Lcom/mi/globallauncher/view/ReversibleTagGroup;->setTags(Ljava/util/List;)V
 
-    .line 294
+    .line 296
     invoke-direct {p0}, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->updateSearchResultHints()V
 
-    .line 295
+    .line 297
     iget-object p1, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->uniSearchHintGroup:Lcom/mi/globallauncher/view/ReversibleTagGroup;
 
     iget-object v0, p0, Lcom/mi/globallauncher/search/SearchResultMaskAdapter$SearchHintViewHolder;->this$0:Lcom/mi/globallauncher/search/SearchResultMaskAdapter;

@@ -33,7 +33,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout;[IILcom/miui/home/launcher/CellLayout$LayoutParams;I)V
     .locals 0
 
-    .line 649
+    .line 647
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$1;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     iput-object p2, p0, Lcom/miui/home/launcher/CellLayout$1;->val$cellXY:[I
@@ -54,7 +54,7 @@
 .method public run()V
     .locals 8
 
-    .line 652
+    .line 650
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$1;->this$0:Lcom/miui/home/launcher/CellLayout;
 
     invoke-static {v0}, Lcom/miui/home/launcher/CellLayout;->access$000(Lcom/miui/home/launcher/CellLayout;)Landroid/app/WallpaperManager;

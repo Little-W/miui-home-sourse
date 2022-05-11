@@ -13,7 +13,7 @@
 .method public acceptItem(Lcom/miui/home/launcher/ItemInfo;)Z
     .locals 0
 
-    .line 36
+    .line 34
     invoke-virtual {p1}, Lcom/miui/home/launcher/ItemInfo;->canAcceptByHotSeats()Z
 
     move-result p1
@@ -92,9 +92,6 @@
 .method public abstract removeAllItemIcons()V
 .end method
 
-.method public abstract removeItemIcon(Lcom/miui/home/launcher/ItemIcon;)V
-.end method
-
 .method public abstract removeRecentCache(Lcom/miui/home/launcher/ShortcutInfo;)V
 .end method
 
@@ -113,9 +110,6 @@
     .locals 0
 
     return-void
-.end method
-
-.method public abstract setupViews(Lcom/miui/home/launcher/hotseats/HotSeats;)V
 .end method
 
 .method public abstract startLoading()V

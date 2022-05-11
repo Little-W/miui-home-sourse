@@ -6,6 +6,8 @@
 # instance fields
 .field protected mCanChangeMenuPositionWhenCovered:Z
 
+.field protected mHorizontalMinMarginToBorder:I
+
 .field protected mMenuSize:I
 
 .field protected mMenuViewRelativeToTaskViewPosition:Lcom/miui/home/recents/util/RelativePosition;
@@ -77,7 +79,7 @@
 .method private boundMenuViewInHorizontal([I)V
     .locals 4
 
-    .line 114
+    .line 115
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mRecentsViewRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->right:I
@@ -86,28 +88,30 @@
 
     sub-int/2addr v0, v1
 
-    const/16 v1, 0x14
+    iget v1, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mHorizontalMinMarginToBorder:I
 
     sub-int/2addr v0, v1
 
-    const/4 v2, 0x0
-
-    .line 115
-    :goto_0
-    array-length v3, p1
-
-    if-ge v2, v3, :cond_0
+    const/4 v1, 0x0
 
     .line 116
-    aget v3, p1, v2
+    :goto_0
+    array-length v2, p1
 
-    invoke-static {v3, v1, v0}, Lcom/miui/home/launcher/common/Utilities;->boundToRange(III)I
+    if-ge v1, v2, :cond_0
 
-    move-result v3
+    .line 117
+    aget v2, p1, v1
 
-    aput v3, p1, v2
+    iget v3, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mHorizontalMinMarginToBorder:I
 
-    add-int/lit8 v2, v2, 0x1
+    invoke-static {v2, v3, v0}, Lcom/miui/home/launcher/common/Utilities;->boundToRange(III)I
+
+    move-result v2
+
+    aput v2, p1, v1
+
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
@@ -118,14 +122,14 @@
 .method private calcMenuViewRelativeToTaskViewPositionInVertical()V
     .locals 4
 
-    .line 66
+    .line 67
     invoke-virtual {p0}, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->calcPosYWhenPivotYInCenter()[I
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 67
+    .line 68
     aget v1, v0, v1
 
     iget-object v2, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mRecentsViewRect:Landroid/graphics/Rect;
@@ -138,7 +142,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 68
+    .line 69
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mMenuViewRelativeToTaskViewPosition:Lcom/miui/home/recents/util/RelativePosition;
 
     const/16 v1, 0x8
@@ -147,7 +151,7 @@
 
     goto :goto_0
 
-    .line 69
+    .line 70
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->getMenuCount()I
 
@@ -171,7 +175,7 @@
 
     if-le v0, v1, :cond_1
 
-    .line 70
+    .line 71
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mMenuViewRelativeToTaskViewPosition:Lcom/miui/home/recents/util/RelativePosition;
 
     const/4 v1, 0x2
@@ -180,7 +184,7 @@
 
     goto :goto_0
 
-    .line 72
+    .line 73
     :cond_1
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mMenuViewRelativeToTaskViewPosition:Lcom/miui/home/recents/util/RelativePosition;
 
@@ -195,7 +199,7 @@
 .method private calcPivotY()I
     .locals 3
 
-    .line 78
+    .line 79
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mMenuViewRelativeToTaskViewPosition:Lcom/miui/home/recents/util/RelativePosition;
 
     const/16 v1, 0x8
@@ -208,7 +212,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 79
+    .line 80
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mTaskViewVisibleRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
@@ -221,7 +225,7 @@
 
     goto :goto_0
 
-    .line 80
+    .line 81
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mMenuViewRelativeToTaskViewPosition:Lcom/miui/home/recents/util/RelativePosition;
 
@@ -231,7 +235,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 81
+    .line 82
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mTaskViewVisibleRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -244,7 +248,7 @@
 
     goto :goto_0
 
-    .line 83
+    .line 84
     :cond_1
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mRecentsViewRect:Landroid/graphics/Rect;
 
@@ -259,12 +263,12 @@
 .method private calcPosX(Z)[I
     .locals 6
 
-    .line 89
+    .line 90
     invoke-virtual {p0}, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->calcPosXByRelativePosition()[I
 
     move-result-object v0
 
-    .line 90
+    .line 91
     invoke-direct {p0, v0}, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->boundMenuViewInHorizontal([I)V
 
     if-eqz p1, :cond_5
@@ -273,13 +277,13 @@
 
     move v1, p1
 
-    .line 92
+    .line 93
     :goto_0
     array-length v2, v0
 
     if-ge v1, v2, :cond_5
 
-    .line 93
+    .line 94
     aget v2, v0, v1
 
     iget-object v3, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mTaskViewVisibleRect:Landroid/graphics/Rect;
@@ -350,7 +354,7 @@
     :goto_1
     if-nez v2, :cond_4
 
-    .line 99
+    .line 100
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mMenuViewRelativeToTaskViewPosition:Lcom/miui/home/recents/util/RelativePosition;
 
     const/4 v1, 0x4
@@ -361,30 +365,30 @@
 
     if-eqz v0, :cond_3
 
-    .line 100
+    .line 101
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mMenuViewRelativeToTaskViewPosition:Lcom/miui/home/recents/util/RelativePosition;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/util/RelativePosition;->clearPosition(I)V
 
-    .line 101
+    .line 102
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mMenuViewRelativeToTaskViewPosition:Lcom/miui/home/recents/util/RelativePosition;
 
     invoke-virtual {v0, v4}, Lcom/miui/home/recents/util/RelativePosition;->setPosition(I)V
 
     goto :goto_2
 
-    .line 103
+    .line 104
     :cond_3
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mMenuViewRelativeToTaskViewPosition:Lcom/miui/home/recents/util/RelativePosition;
 
     invoke-virtual {v0, v4}, Lcom/miui/home/recents/util/RelativePosition;->clearPosition(I)V
 
-    .line 104
+    .line 105
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mMenuViewRelativeToTaskViewPosition:Lcom/miui/home/recents/util/RelativePosition;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/util/RelativePosition;->setPosition(I)V
 
-    .line 106
+    .line 107
     :goto_2
     invoke-direct {p0, p1}, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->calcPosX(Z)[I
 
@@ -408,17 +412,17 @@
 
     int-to-float p4, p4
 
-    .line 60
+    .line 61
     invoke-virtual {p1, p4}, Landroid/view/View;->setPivotX(F)V
 
     sub-int/2addr p5, p3
 
     int-to-float p4, p5
 
-    .line 61
+    .line 62
     invoke-virtual {p1, p4}, Landroid/view/View;->setPivotY(F)V
 
-    .line 62
+    .line 63
     iget p4, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mMenuSize:I
 
     add-int p5, p2, p4
@@ -447,7 +451,7 @@
 .method protected abstract getMenuCount()I
 .end method
 
-.method public init(Landroid/graphics/Rect;Landroid/graphics/Rect;II)V
+.method public init(Landroid/graphics/Rect;Landroid/graphics/Rect;III)V
     .locals 0
 
     .line 32
@@ -463,6 +467,9 @@
     iput p4, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mVerticalMinMarginToBorder:I
 
     .line 36
+    iput p5, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mHorizontalMinMarginToBorder:I
+
+    .line 37
     iget-object p1, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mMenuViewRelativeToTaskViewPosition:Lcom/miui/home/recents/util/RelativePosition;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/util/RelativePosition;->resetPosition()V
@@ -473,34 +480,34 @@
 .method public layoutMenuItem()V
     .locals 11
 
-    .line 45
+    .line 46
     invoke-direct {p0}, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->calcMenuViewRelativeToTaskViewPositionInVertical()V
 
-    .line 46
+    .line 47
     invoke-direct {p0}, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->calcPivotY()I
 
     move-result v6
 
-    .line 47
+    .line 48
     invoke-virtual {p0}, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->calcMenuViewPosY()[I
 
     move-result-object v7
 
-    .line 49
+    .line 50
     iget-boolean v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mCanChangeMenuPositionWhenCovered:Z
 
     invoke-direct {p0, v0}, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->calcPosX(Z)[I
 
     move-result-object v8
 
-    .line 50
+    .line 51
     invoke-virtual {p0}, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->calcPivotX()I
 
     move-result v9
 
     const-string v0, "MenuViewPositionCalculator"
 
-    .line 52
+    .line 53
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -523,7 +530,7 @@
 
     move v10, v0
 
-    .line 54
+    .line 55
     :goto_0
     invoke-virtual {p0}, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->getMenuCount()I
 
@@ -531,7 +538,7 @@
 
     if-ge v10, v0, :cond_0
 
-    .line 55
+    .line 56
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mMenuViews:[Landroid/view/View;
 
     aget-object v1, v0, v10
@@ -559,12 +566,12 @@
 .method public setPosInHorizontal(IZ)V
     .locals 1
 
-    .line 40
+    .line 41
     iget-object v0, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mMenuViewRelativeToTaskViewPosition:Lcom/miui/home/recents/util/RelativePosition;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/util/RelativePosition;->setPosition(I)V
 
-    .line 41
+    .line 42
     iput-boolean p2, p0, Lcom/miui/home/recents/views/MenuViewPositionCalculator;->mCanChangeMenuPositionWhenCovered:Z
 
     return-void

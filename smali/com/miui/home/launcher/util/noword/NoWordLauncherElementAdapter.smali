@@ -18,7 +18,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/SourceDebugExtension;
-    value = "SMAP\nNoWordLauncherElementAdapter.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NoWordLauncherElementAdapter.kt\ncom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter\n*L\n1#1,287:1\n*E\n"
+    value = "SMAP\nNoWordLauncherElementAdapter.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NoWordLauncherElementAdapter.kt\ncom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter\n*L\n1#1,295:1\n*E\n"
 .end annotation
 
 
@@ -69,19 +69,19 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 37
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mBindElement:Landroid/view/View;
 
-    .line 40
+    .line 42
     new-instance p1, Landroid/text/TextPaint;
 
     const/4 v0, 0x1
 
     invoke-direct {p1, v0}, Landroid/text/TextPaint;-><init>(I)V
 
-    .line 41
+    .line 43
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->getCurrentMode()Lcom/miui/home/launcher/allapps/LauncherMode;
 
     move-result-object v1
@@ -94,7 +94,7 @@
 
     move-result v1
 
-    .line 42
+    .line 44
     iget-object v2, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mBindElement:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -109,7 +109,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070479
+    const v3, 0x7f070484
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -117,10 +117,10 @@
 
     mul-float/2addr v1, v2
 
-    .line 41
+    .line 43
     invoke-virtual {p1, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 43
+    .line 45
     iget-object v1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mBindElement:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
@@ -135,36 +135,13 @@
 
     invoke-virtual {p1, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 44
+    .line 46
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {p1, v1}, Landroid/text/TextPaint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 40
+    .line 42
     iput-object p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mForegroundTextPaint:Landroid/text/TextPaint;
-
-    .line 50
-    iget-object p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mBindElement:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const-string v1, "mBindElement.context"
-
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    const v1, 0x7f070374
-
-    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    iput p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mTitleMarginBottom:I
 
     .line 52
     iget-object p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mBindElement:Landroid/view/View;
@@ -181,7 +158,30 @@
 
     move-result-object p1
 
-    const v1, 0x7f070375
+    const v1, 0x7f07037b
+
+    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mTitleMarginBottom:I
+
+    .line 54
+    iget-object p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mBindElement:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    const-string v1, "mBindElement.context"
+
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const v1, 0x7f07037c
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -191,13 +191,13 @@
 
     const-string p1, ""
 
-    .line 59
+    .line 61
     iput-object p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mDrawTitle:Ljava/lang/String;
 
-    .line 69
+    .line 71
     iput-boolean v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mIsCanChangeCanvasAlphaWhenDrawIcon:Z
 
-    .line 77
+    .line 79
     iget-object p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mBindElement:Landroid/view/View;
 
     new-instance v0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter$1;
@@ -214,7 +214,7 @@
 .method public static final synthetic access$getMLauncher$p(Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;)Lcom/miui/home/launcher/Launcher;
     .locals 0
 
-    .line 37
+    .line 39
     iget-object p0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     return-object p0
@@ -223,7 +223,7 @@
 .method public static final synthetic access$initBindElementChild(Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;)V
     .locals 0
 
-    .line 37
+    .line 39
     invoke-direct {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->initBindElementChild()V
 
     return-void
@@ -232,7 +232,7 @@
 .method public static final synthetic access$setMLauncher$p(Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 37
+    .line 39
     iput-object p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     return-void
@@ -241,12 +241,12 @@
 .method private final initBindElementChild()V
     .locals 2
 
-    .line 98
+    .line 100
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mTitle:Landroid/widget/TextView;
 
     if-nez v0, :cond_0
 
-    .line 99
+    .line 101
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mBindElement:Landroid/view/View;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->titleViewId()I
@@ -261,26 +261,26 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mTitle:Landroid/widget/TextView;
 
-    .line 101
+    .line 103
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mIcon:Landroid/view/View;
 
     if-nez v0, :cond_1
 
-    .line 102
+    .line 104
     invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->iconView()Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mIcon:Landroid/view/View;
 
-    .line 104
+    .line 106
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mIconContainer:Landroid/view/View;
 
     if-nez v0, :cond_2
 
-    .line 105
+    .line 107
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mBindElement:Landroid/view/View;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->iconContainerId()I
@@ -293,7 +293,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mIconContainer:Landroid/view/View;
 
-    .line 107
+    .line 109
     :cond_2
     invoke-direct {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->isLauncherInEdit()Z
 
@@ -307,7 +307,7 @@
 .method private final initDrawTitleConfig(Landroid/view/View;)V
     .locals 8
 
-    .line 181
+    .line 189
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mTitle:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
@@ -328,7 +328,7 @@
 
     const-string v1, "NoWordSettingHelper"
 
-    .line 182
+    .line 190
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -353,7 +353,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
+    .line 191
     iget-object v1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mIconContainer:Landroid/view/View;
 
     const/4 v2, 0x0
@@ -374,7 +374,7 @@
 
     return-void
 
-    .line 186
+    .line 194
     :cond_2
     invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
@@ -392,7 +392,7 @@
 
     sub-float/2addr v3, v4
 
-    .line 187
+    .line 195
     iget v4, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mDrawTitleRegionMaxWidth:F
 
     cmpg-float v4, v4, v3
@@ -431,24 +431,24 @@
 
     if-eqz v4, :cond_c
 
-    .line 188
+    .line 196
     :cond_4
     iput v3, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mDrawTitleRegionMaxWidth:F
 
-    .line 189
+    .line 197
     iput-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mDrawTitle:Ljava/lang/String;
 
-    .line 190
+    .line 198
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 191
+    .line 199
     instance-of v3, v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
     if-eqz v3, :cond_5
 
-    .line 192
+    .line 200
     move-object v3, v0
 
     check-cast v3, Landroid/view/ViewGroup$MarginLayoutParams;
@@ -460,7 +460,7 @@
     :cond_5
     move v3, v2
 
-    .line 196
+    .line 204
     :goto_3
     instance-of v4, v0, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -468,33 +468,33 @@
 
     if-eqz v4, :cond_6
 
-    .line 197
+    .line 205
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
     iget v2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
     goto :goto_4
 
-    .line 199
+    .line 207
     :cond_6
     instance-of v4, v0, Landroid/widget/LinearLayout$LayoutParams;
 
     if-eqz v4, :cond_7
 
-    .line 200
+    .line 208
     check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
 
     iget v2, v0, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
     goto :goto_4
 
-    .line 202
+    .line 210
     :cond_7
     instance-of v4, v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     if-eqz v4, :cond_9
 
-    .line 204
+    .line 212
     check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/16 v4, 0xd
@@ -509,7 +509,7 @@
 
     const/16 v4, 0xf
 
-    .line 205
+    .line 213
     invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout$LayoutParams;->getRule(I)I
 
     move-result v0
@@ -523,7 +523,7 @@
     :goto_4
     if-ne v2, v6, :cond_a
 
-    .line 214
+    .line 222
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result p1
@@ -544,14 +544,14 @@
 
     add-float/2addr p1, v0
 
-    .line 216
+    .line 224
     iget v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mTitleMarginBottom:I
 
     int-to-float v0, v0
 
     add-float/2addr p1, v0
 
-    .line 218
+    .line 226
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mForegroundTextPaint:Landroid/text/TextPaint;
 
     iget-object v2, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mDrawTitle:Ljava/lang/String;
@@ -560,37 +560,37 @@
 
     move-result v0
 
-    .line 220
+    .line 228
     iget v2, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mDrawTitleRegionMaxWidth:F
 
     cmpl-float v0, v0, v2
 
     if-lez v0, :cond_b
 
-    .line 223
+    .line 231
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mDrawTitle:Ljava/lang/String;
 
     check-cast v0, Ljava/lang/CharSequence;
 
-    .line 224
+    .line 232
     iget-object v3, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mForegroundTextPaint:Landroid/text/TextPaint;
 
-    .line 226
+    .line 234
     sget-object v4, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
-    .line 222
+    .line 230
     invoke-static {v0, v3, v2, v4}, Landroid/text/TextUtils;->ellipsize(Ljava/lang/CharSequence;Landroid/text/TextPaint;FLandroid/text/TextUtils$TruncateAt;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 227
+    .line 235
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mDrawTitle:Ljava/lang/String;
 
-    .line 229
+    .line 237
     :cond_b
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mBindElement:Landroid/view/View;
 
@@ -604,7 +604,7 @@
 
     iput v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mDrawTitleX:F
 
-    .line 230
+    .line 238
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mForegroundTextPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getFontMetrics()Landroid/graphics/Paint$FontMetrics;
@@ -615,7 +615,7 @@
 
     sub-float/2addr v1, p1
 
-    .line 232
+    .line 240
     iget p1, v0, Landroid/graphics/Paint$FontMetrics;->descent:F
 
     sub-float/2addr v1, p1
@@ -626,10 +626,65 @@
     return-void
 .end method
 
+.method private final isHotseatsItemIcon()Z
+    .locals 6
+
+    .line 175
+    iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mBindElement:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v0, v0, Lcom/miui/home/launcher/ItemInfo;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    .line 176
+    iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mBindElement:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    check-cast v0, Lcom/miui/home/launcher/ItemInfo;
+
+    iget-wide v2, v0, Lcom/miui/home/launcher/ItemInfo;->container:J
+
+    const/16 v0, -0x65
+
+    int-to-long v4, v0
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_1
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lkotlin/TypeCastException;
+
+    const-string v1, "null cannot be cast to non-null type com.miui.home.launcher.ItemInfo"
+
+    invoke-direct {v0, v1}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    :goto_0
+    return v1
+.end method
+
 .method private final isLauncherInEdit()Z
     .locals 2
 
-    .line 175
+    .line 173
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x1
@@ -666,19 +721,19 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 156
+    .line 154
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mIcon:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    .line 157
+    .line 155
     invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->iconView()Landroid/view/View;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mIcon:Landroid/view/View;
 
-    .line 159
+    .line 157
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mIcon:Landroid/view/View;
 
@@ -686,14 +741,14 @@
 
     if-nez p2, :cond_1
 
-    .line 161
+    .line 159
     invoke-direct {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->isLauncherInEdit()Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 162
+    .line 160
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
 
     move-result p2
@@ -704,17 +759,17 @@
 
     if-eqz p2, :cond_1
 
-    .line 164
+    .line 162
     invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->canDrawForegroundTitle()Z
 
     move-result p2
 
     if-eqz p2, :cond_1
 
-    .line 166
+    .line 164
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->initDrawTitleConfig(Landroid/view/View;)V
 
-    .line 167
+    .line 165
     iget-object p2, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mDrawTitle:Ljava/lang/String;
 
     iget v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mDrawTitleX:F
@@ -734,14 +789,14 @@
 .method public changeViewAlpha(Z)V
     .locals 3
 
-    .line 239
+    .line 247
     invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->viewChangeAlphaWhenEditModeChange()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 240
+    .line 248
     invoke-virtual {v0}, Landroid/view/View;->getAlpha()F
 
     move-result v1
@@ -761,7 +816,7 @@
     :cond_0
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 241
+    .line 249
     :goto_0
     invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
 
@@ -777,7 +832,7 @@
         }
     .end annotation
 
-    .line 37
+    .line 39
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mBindElement:Landroid/view/View;
 
     return-object v0
@@ -786,14 +841,14 @@
 .method public final invalidateBindElement()V
     .locals 1
 
-    .line 124
+    .line 122
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 125
+    .line 123
     invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->invalidateViewWhenEditModeChange()Landroid/view/View;
 
     move-result-object v0
@@ -809,7 +864,7 @@
 .method public final invalidateBindElementWhenLauncherInEditMode()V
     .locals 1
 
-    .line 134
+    .line 132
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
 
     move-result v0
@@ -822,7 +877,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 135
+    .line 133
     invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->invalidateViewWhenEditModeChange()Landroid/view/View;
 
     move-result-object v0
@@ -838,16 +893,53 @@
 .method public invalidateViewWhenEditModeChange()Landroid/view/View;
     .locals 1
 
-    .line 236
+    .line 244
     iget-object v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mBindElement:Landroid/view/View;
 
     return-object v0
 .end method
 
+.method public isCanChangeAlphaWhenEditModeChange()Z
+    .locals 1
+
+    .line 182
+    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->isLauncherInEdit()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->isHotseatsItemIcon()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mIsCanChangeCanvasAlphaWhenDrawIcon:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
 .method public final onBindElementFinishInflate()V
     .locals 0
 
-    .line 94
+    .line 96
     invoke-direct {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->initBindElementChild()V
 
     return-void
@@ -856,36 +948,14 @@
 .method public final onEditModeChange(Z)V
     .locals 0
 
-    .line 116
-    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
+    .line 117
+    invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->isCanChangeAlphaWhenEditModeChange()Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
-
-    iget-boolean p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mIsCanChangeCanvasAlphaWhenDrawIcon:Z
-
-    if-eqz p1, :cond_0
-
-    .line 118
-    invoke-direct {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->isLauncherInEdit()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    .line 115
-    :goto_0
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->changeViewAlpha(Z)V
 
-    .line 120
+    .line 118
     invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->invalidateBindElement()V
 
     return-void
@@ -898,7 +968,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 144
+    .line 142
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
 
     move-result v0
@@ -927,34 +997,16 @@
 .end method
 
 .method public final setCanChangeCanvasAlphaWhenDrawIcon(Z)V
-    .locals 1
+    .locals 0
 
-    .line 72
+    .line 74
     iput-boolean p1, p0, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->mIsCanChangeCanvasAlphaWhenDrawIcon:Z
 
-    .line 73
-    invoke-direct {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->isLauncherInEdit()Z
+    .line 75
+    invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->isCanChangeAlphaWhenEditModeChange()Z
 
-    move-result v0
+    move-result p1
 
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;->changeViewAlpha(Z)V
 
     return-void

@@ -21,7 +21,7 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 277
+    .line 285
     check-cast p1, Landroid/view/View;
 
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/util/noword/NoWordLauncherElementAdapter;-><init>(Landroid/view/View;)V
@@ -34,7 +34,7 @@
 .method public iconContainerId()I
     .locals 1
 
-    .line 278
+    .line 286
     invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordGadgetAdapter;->getMBindElement()Landroid/view/View;
 
     move-result-object v0
@@ -51,7 +51,7 @@
 .method public iconView()Landroid/view/View;
     .locals 1
 
-    .line 280
+    .line 288
     invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordGadgetAdapter;->getMBindElement()Landroid/view/View;
 
     move-result-object v0
@@ -68,7 +68,7 @@
 .method public invalidateViewWhenEditModeChange()Landroid/view/View;
     .locals 1
 
-    .line 285
+    .line 293
     invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordGadgetAdapter;->getMBindElement()Landroid/view/View;
 
     move-result-object v0
@@ -95,7 +95,7 @@
 .method public titleViewId()I
     .locals 1
 
-    .line 282
+    .line 290
     invoke-virtual {p0}, Lcom/miui/home/launcher/util/noword/NoWordGadgetAdapter;->getMBindElement()Landroid/view/View;
 
     move-result-object v0

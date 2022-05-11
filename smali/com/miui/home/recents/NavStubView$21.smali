@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 4843
+    .line 4807
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$21;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 4847
+    .line 4811
     :try_start_0
     sget-object v0, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
@@ -46,7 +46,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4848
+    .line 4812
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$21;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$8400(Lcom/miui/home/recents/NavStubView;)Landroid/view/WindowManager;
@@ -68,7 +68,7 @@
     :catch_0
     move-exception v0
 
-    .line 4850
+    .line 4814
     sget-object v1, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
     const-string v2, "NavStubView::mRemoveTopViewRunnable error"

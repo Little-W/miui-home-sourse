@@ -299,7 +299,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 338
+    .line 346
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
@@ -314,21 +314,21 @@
 
     if-nez v0, :cond_2
 
-    .line 340
+    .line 348
     invoke-static {p1}, Lcom/miui/launcher/utils/MamlUtils;->isFancyDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 341
+    .line 349
     invoke-static {p1}, Lcom/miui/launcher/utils/MamlUtils;->getQuietDrawable(Ljava/lang/Object;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 343
+    .line 351
     invoke-static {p1}, Lcom/miui/home/launcher/graphics/DrawableInfo;->fromDrawable(Landroid/graphics/drawable/Drawable;)Lcom/miui/home/launcher/graphics/DrawableInfo;
 
     move-result-object p1
@@ -338,7 +338,7 @@
     :cond_0
     move-object p1, v0
 
-    .line 348
+    .line 356
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/IconCache;->mContext:Landroid/content/Context;
 
@@ -346,7 +346,7 @@
 
     move-result-object p1
 
-    .line 350
+    .line 358
     :cond_2
     invoke-static {p1}, Lcom/miui/home/launcher/graphics/DrawableInfo;->fromDrawable(Landroid/graphics/drawable/Drawable;)Lcom/miui/home/launcher/graphics/DrawableInfo;
 
@@ -536,22 +536,22 @@
 .method private getRawIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 310
+    .line 318
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/IconCache;->getRawIcon(Ljava/lang/String;)Lcom/miui/home/launcher/graphics/DrawableInfo;
 
     move-result-object p1
 
-    .line 311
+    .line 319
     iget-object v0, p1, Lcom/miui/home/launcher/graphics/DrawableInfo;->icon:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 312
+    .line 320
     iget-object p1, p1, Lcom/miui/home/launcher/graphics/DrawableInfo;->icon:Landroid/graphics/drawable/Drawable;
 
     return-object p1
 
-    .line 314
+    .line 322
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/IconCache;->mContext:Landroid/content/Context;
 
@@ -567,7 +567,7 @@
 
     monitor-enter p0
 
-    .line 319
+    .line 327
     :try_start_0
     new-instance v0, Landroid/content/ComponentName;
 
@@ -575,7 +575,7 @@
 
     invoke-direct {v0, v1, p1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 320
+    .line 328
     new-instance v1, Lcom/miui/home/launcher/util/ComponentKey;
 
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
@@ -584,7 +584,7 @@
 
     invoke-direct {v1, v0, v2}, Lcom/miui/home/launcher/util/ComponentKey;-><init>(Landroid/content/ComponentName;Landroid/os/UserHandle;)V
 
-    .line 321
+    .line 329
     iget-object v0, p0, Lcom/miui/home/launcher/IconCache;->mCache:Lcom/miui/home/launcher/graphics/DrawableCache;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/graphics/DrawableCache;->get(Lcom/miui/home/launcher/util/ComponentKey;)Lcom/miui/home/launcher/graphics/DrawableInfo;
@@ -593,12 +593,12 @@
 
     if-nez v0, :cond_0
 
-    .line 323
+    .line 331
     new-instance v0, Lcom/miui/home/launcher/graphics/DrawableInfo;
 
     invoke-direct {v0}, Lcom/miui/home/launcher/graphics/DrawableInfo;-><init>()V
 
-    .line 324
+    .line 332
     iget-object v2, p0, Lcom/miui/home/launcher/IconCache;->mIconProvider:Lcom/miui/home/launcher/IconProvider;
 
     invoke-virtual {v2, p1}, Lcom/miui/home/launcher/IconProvider;->getRawIcon(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -611,19 +611,19 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/graphics/DrawableInfo;->applyTo(Lcom/miui/home/launcher/graphics/DrawableInfo;)V
 
-    .line 325
+    .line 333
     iget-object p1, v0, Lcom/miui/home/launcher/graphics/DrawableInfo;->icon:Landroid/graphics/drawable/Drawable;
 
     if-eqz p1, :cond_0
 
-    .line 326
+    .line 334
     iget-object p1, p0, Lcom/miui/home/launcher/IconCache;->mCache:Lcom/miui/home/launcher/graphics/DrawableCache;
 
     invoke-virtual {p1, v1, v0}, Lcom/miui/home/launcher/graphics/DrawableCache;->put(Lcom/miui/home/launcher/util/ComponentKey;Lcom/miui/home/launcher/graphics/DrawableInfo;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 329
+    .line 337
     :cond_0
     monitor-exit p0
 
@@ -833,7 +833,7 @@
 
     const-string v0, "icon_folder.png"
 
-    const v1, 0x7f0801cd
+    const v1, 0x7f0801cc
 
     .line 296
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/IconCache;->getRawIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
@@ -848,7 +848,7 @@
 
     const-string v0, "icon_folder_light.png"
 
-    const v1, 0x7f0801ce
+    const v1, 0x7f0801cd
 
     .line 300
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/IconCache;->getRawIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
@@ -949,17 +949,47 @@
 
     const-string v0, "maml_download_light.png"
 
-    const v1, 0x7f0801d3
+    const v1, 0x7f0801d2
 
-    .line 304
+    .line 312
     invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/IconCache;->getRawIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 306
+    .line 314
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method getPairIconBgDark()Landroid/graphics/drawable/Drawable;
+    .locals 2
+
+    const-string v0, "pair_icon_bg_dark.xml"
+
+    const v1, 0x7f080532
+
+    .line 308
+    invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/IconCache;->getRawIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method getPairIconBgLight()Landroid/graphics/drawable/Drawable;
+    .locals 2
+
+    const-string v0, "pair_icon_bg_light.xml"
+
+    const v1, 0x7f080533
+
+    .line 304
+    invoke-direct {p0, v0, v1}, Lcom/miui/home/launcher/IconCache;->getRawIcon(Ljava/lang/String;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 

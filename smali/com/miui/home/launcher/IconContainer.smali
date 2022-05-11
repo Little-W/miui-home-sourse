@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract removeShortcutIcon(Lcom/miui/home/launcher/ShortcutIcon;)V
+.method public abstract removeItemIcon(Lcom/miui/home/launcher/ItemIcon;)V
 .end method

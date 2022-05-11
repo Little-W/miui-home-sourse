@@ -84,7 +84,7 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    const v1, 0x7f0a0107
+    const v1, 0x7f0a0109
 
     .line 87
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -93,7 +93,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f0a0106
+    const v2, 0x7f0a0108
 
     .line 88
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -102,7 +102,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;
 
-    const v3, 0x7f0a0105
+    const v3, 0x7f0a0107
 
     .line 89
     invoke-virtual {v0, v3}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -258,7 +258,7 @@
 
     check-cast p1, Landroid/view/ViewGroup;
 
-    const p2, 0x7f0a0106
+    const p2, 0x7f0a0108
 
     .line 111
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -274,7 +274,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f0700ff
+    const p3, 0x7f070104
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -287,7 +287,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f0700fe
+    const p3, 0x7f070103
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

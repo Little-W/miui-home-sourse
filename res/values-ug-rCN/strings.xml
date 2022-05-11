@@ -66,6 +66,7 @@
     <string name="all_apps_slide_up_tips">تارتما ھالىتىدە ئۈستىگە سىيرىش قول ئىشارىتى ئىگىلىۋېلىنغان،نورمال ھالەتكە ئالماشتۇرغاندىن كېيىن ئاندىن تەڭشەڭ</string>
     <string name="all_apps_suggestions">ئەپ تەۋسىيەسى</string>
     <string name="am">چ ب</string>
+    <string name="animation_rate_title">ھەرىكەت سۈرئىتى</string>
     <string name="announce_for_app_move_in_folder">ھۆججەت قىسقۇچتىكى %1$dچى ئورۇنغا يۆتكەش</string>
     <string name="announce_for_checked">%1$s، تاللاندى</string>
     <string name="announce_for_choose_default_screen">%1$d-ئېكران باش ئېكران قىلىندى</string>
@@ -598,11 +599,11 @@
     <string name="navigation_guide_recent_title">يېقىنقى ۋەزىپىنى ئالماشتۇرۇش</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">\"يېقىنقى ۋەزىپىگە ئالماشتۇرۇش\"</string>
     <string name="navigation_guide_settings">مەشغۇلات دەرسلىكى</string>
-    <string name="navigation_position_center">屏幕中间</string>
-    <string name="navigation_position_left">屏幕左侧</string>
-    <string name="navigation_position_right">屏幕右侧</string>
-    <string name="navigation_position_summary">虚拟键位置设置仅针对主屏幕生效</string>
-    <string name="navigation_position_title">虚拟键位置</string>
+    <string name="navigation_position_center">ئېكران ئوتتۇرىدا</string>
+    <string name="navigation_position_left">ئېكران سول تەرىپىدە</string>
+    <string name="navigation_position_right">ئېكران ئوڭ تەرىپىدا</string>
+    <string name="navigation_position_summary">مەۋھۇم كونۇپكا ئورنى تەڭشىكى پەقەت ئاساسىي ئېكراندا كۈچكە ئىگە</string>
+    <string name="navigation_position_title">مەۋھۇم كونۇپكا ئورنى</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">بىكار قىلىش</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">سىستېما ئېكران يۈزىدىن باشقىسى پۈتۈن ئېكران قول ئىشارىتىنى قوللىمايدۇ، سىستېما ئېكران يۈزىگە ئالماشتۇرۇپ، پۈتۈن ئېكران قول ئىشارىتىنى ئاچامسىز؟</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">جەزملەش</string>

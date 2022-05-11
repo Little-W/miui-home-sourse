@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Ljava/util/ListIterator;
-.implements Lkotlin/jvm/internal/markers/KMappedMarker;
 
 
 # annotations
@@ -22,8 +21,7 @@
         "Lkotlin/collections/AbstractList<",
         "TE;>.IteratorImpl;",
         "Ljava/util/ListIterator<",
-        "TE;>;",
-        "Lkotlin/jvm/internal/markers/KMappedMarker;"
+        "TE;>;"
     }
 .end annotation
 

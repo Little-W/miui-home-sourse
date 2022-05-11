@@ -62,7 +62,6 @@
         </command>
     </command>
     <favorite launcher:className="com.xiaomi.youpin.activity.SplashActivity" launcher:packageName="com.xiaomi.youpin" launcher:screen="1" launcher:x="1" launcher:y="2" />
-    <shortcut launcher:className="com.miui.newhome.business.ui.MainActivity" launcher:iconResource="com.miui.newhome:drawable/ic_newhome" launcher:packageName="com.miui.newhome" launcher:retained="true" launcher:screen="1" launcher:title="com.miui.newhome:string/app_name" launcher:x="2" launcher:y="2" />
     <include layout="@xml/layout_folder_recommend" />
     <include layout="@xml/layout_hotseats" />
 </favorites>

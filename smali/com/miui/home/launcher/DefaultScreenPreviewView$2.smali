@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/DefaultScreenPreviewView;)V
     .locals 0
 
-    .line 131
+    .line 154
     iput-object p1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView$2;->this$0:Lcom/miui/home/launcher/DefaultScreenPreviewView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,19 +38,19 @@
 .method public onClick(Landroid/view/View;)V
     .locals 5
 
-    .line 133
+    .line 156
     instance-of v0, p1, Lcom/miui/home/launcher/DefaultScreenPreviewBorder;
 
     if-eqz v0, :cond_1
 
-    .line 134
+    .line 157
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Ljava/lang/Long;
 
-    .line 135
+    .line 158
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView$2;->this$0:Lcom/miui/home/launcher/DefaultScreenPreviewView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->access$000(Lcom/miui/home/launcher/DefaultScreenPreviewView;)Lcom/miui/home/launcher/Workspace;
@@ -65,14 +65,14 @@
 
     move-result v0
 
-    .line 136
+    .line 159
     new-instance v1, Lcom/miui/home/launcher/DefaultScreenPreviewView$2$1;
 
     invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView$2$1;-><init>(Lcom/miui/home/launcher/DefaultScreenPreviewView$2;I)V
 
     invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->announceForAccessibility(Ljava/util/function/Supplier;)V
 
-    .line 142
+    .line 165
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -97,7 +97,7 @@
 
     if-nez v0, :cond_0
 
-    .line 143
+    .line 166
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView$2;->this$0:Lcom/miui/home/launcher/DefaultScreenPreviewView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->access$000(Lcom/miui/home/launcher/DefaultScreenPreviewView;)Lcom/miui/home/launcher/Workspace;
@@ -114,7 +114,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/Workspace;->setCurrentScreenById(J)V
 
-    .line 144
+    .line 167
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView$2;->this$0:Lcom/miui/home/launcher/DefaultScreenPreviewView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->access$000(Lcom/miui/home/launcher/DefaultScreenPreviewView;)Lcom/miui/home/launcher/Workspace;
@@ -131,7 +131,7 @@
 
     goto :goto_0
 
-    .line 146
+    .line 169
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView$2;->this$0:Lcom/miui/home/launcher/DefaultScreenPreviewView;
 
@@ -145,7 +145,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/Workspace;->setCurrentScreenById(J)V
 
-    .line 147
+    .line 170
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView$2;->this$0:Lcom/miui/home/launcher/DefaultScreenPreviewView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->access$000(Lcom/miui/home/launcher/DefaultScreenPreviewView;)Lcom/miui/home/launcher/Workspace;
@@ -158,7 +158,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/Workspace;->setDefaultScreenId(J)V
 
-    .line 149
+    .line 172
     :goto_0
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView$2;->this$0:Lcom/miui/home/launcher/DefaultScreenPreviewView;
 
@@ -172,14 +172,14 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/Workspace;->setFoldDefaultScreenId(J)V
 
-    .line 151
+    .line 174
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/DeviceConfig;->saveCurrentDefaultScreenId(J)V
 
-    .line 152
+    .line 175
     iget-object p1, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView$2;->this$0:Lcom/miui/home/launcher/DefaultScreenPreviewView;
 
     invoke-static {p1}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->access$100(Lcom/miui/home/launcher/DefaultScreenPreviewView;)V

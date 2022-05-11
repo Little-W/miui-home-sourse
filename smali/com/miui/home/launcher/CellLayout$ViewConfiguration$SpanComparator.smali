@@ -36,14 +36,14 @@
 .method constructor <init>(Lcom/miui/home/launcher/CellLayout$ViewConfiguration;)V
     .locals 0
 
-    .line 1863
+    .line 1861
     iput-object p1, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration$SpanComparator;->this$1:Lcom/miui/home/launcher/CellLayout$ViewConfiguration;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 1864
+    .line 1862
     iput p1, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration$SpanComparator;->whichDirection:I
 
     return-void
@@ -54,7 +54,7 @@
 .method public compare(Landroid/view/View;Landroid/view/View;)I
     .locals 1
 
-    .line 1867
+    .line 1865
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration$SpanComparator;->this$1:Lcom/miui/home/launcher/CellLayout$ViewConfiguration;
 
     iget-object v0, v0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->map:Ljava/util/HashMap;
@@ -65,7 +65,7 @@
 
     check-cast p1, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 1868
+    .line 1866
     iget-object v0, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration$SpanComparator;->this$1:Lcom/miui/home/launcher/CellLayout$ViewConfiguration;
 
     iget-object v0, v0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration;->map:Ljava/util/HashMap;
@@ -76,7 +76,7 @@
 
     check-cast p2, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 1869
+    .line 1867
     iget v0, p0, Lcom/miui/home/launcher/CellLayout$ViewConfiguration$SpanComparator;->whichDirection:I
 
     packed-switch v0, :pswitch_data_0
@@ -85,7 +85,7 @@
 
     return p1
 
-    .line 1875
+    .line 1873
     :pswitch_0
     iget v0, p2, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
@@ -103,7 +103,7 @@
 
     return v0
 
-    .line 1873
+    .line 1871
     :pswitch_1
     iget p2, p2, Lcom/miui/home/launcher/ItemInfo;->spanY:I
 
@@ -113,7 +113,7 @@
 
     return p2
 
-    .line 1871
+    .line 1869
     :pswitch_2
     iget p2, p2, Lcom/miui/home/launcher/ItemInfo;->spanX:I
 
@@ -136,7 +136,7 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 1863
+    .line 1861
     check-cast p1, Landroid/view/View;
 
     check-cast p2, Landroid/view/View;

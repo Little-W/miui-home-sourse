@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">Үстіге қарай сүйреу қолданба тартпасы үшін сақталған. Әдепкі басты экран режиміне ауысып, қайталаңыз.</string>
     <string name="all_apps_suggestions">Қолданба ұсыныстары</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Анимация жылдамдығы</string>
     <string name="announce_for_app_move_in_folder">Бумада %1$d орнына көшірілді</string>
     <string name="announce_for_checked">%1$s, тексерілді</string>
     <string name="announce_for_choose_default_screen">%1$d экранды әдепкі Басты экран қылып орнату</string>
@@ -609,11 +610,11 @@
     <string name="navigation_guide_recent_title">Соңғыларды ашу</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Жуырдағыларды ашу</string>
     <string name="navigation_guide_settings">Қимылдарды көрсету</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">Орта</string>
+    <string name="navigation_position_left">Сол</string>
+    <string name="navigation_position_right">Оң</string>
+    <string name="navigation_position_summary">Навигация батырмаларының айрықша орны тек Басты экранға ғана қолданылады</string>
+    <string name="navigation_position_title">Навигация батырмалар орны</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Болдырмау</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Үшінші тарап жұмыс үстелінде толық экран қимылдарын пайдалану мүмкін емес. Жүйе жұмыс үстеліне ауысып, толық экран қимылдары қосылсын ба?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">OK</string>

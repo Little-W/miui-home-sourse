@@ -201,7 +201,7 @@
 
     return-void
 
-    .line 599
+    .line 601
     :cond_0
     invoke-virtual {p0}, Lcom/miui/maml/elements/ImageScreenElement;->getVariables()Lcom/miui/maml/data/Variables;
 
@@ -221,7 +221,7 @@
 
     move-object v1, p1
 
-    .line 600
+    .line 602
     invoke-static/range {v0 .. v6}, Lcom/miui/maml/util/TextFormatter;->fromElement(Lcom/miui/maml/data/Variables;Lorg/w3c/dom/Element;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/miui/maml/util/TextFormatter;
 
     move-result-object v0
@@ -230,7 +230,7 @@
 
     const-string v0, "srcid"
 
-    .line 601
+    .line 603
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/elements/ImageScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -243,7 +243,7 @@
 
     const-string v0, "antiAlias"
 
-    .line 604
+    .line 606
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/elements/ImageScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -260,14 +260,14 @@
 
     iput-boolean v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mAntiAlias:Z
 
-    .line 605
+    .line 607
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mPaint:Landroid/graphics/Paint;
 
     iget-boolean v2, p0, Lcom/miui/maml/elements/ImageScreenElement;->mAntiAlias:Z
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    .line 606
+    .line 608
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mMaskPaint:Landroid/graphics/Paint;
 
     new-instance v2, Landroid/graphics/PorterDuffXfermode;
@@ -278,7 +278,7 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 607
+    .line 609
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mMaskPaint:Landroid/graphics/Paint;
 
     iget-boolean v2, p0, Lcom/miui/maml/elements/ImageScreenElement;->mAntiAlias:Z
@@ -287,7 +287,7 @@
 
     const-string v0, "srcX"
 
-    .line 608
+    .line 610
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/elements/ImageScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -300,7 +300,7 @@
 
     const-string v0, "srcY"
 
-    .line 609
+    .line 611
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/elements/ImageScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -313,7 +313,7 @@
 
     const-string v0, "srcW"
 
-    .line 610
+    .line 612
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/elements/ImageScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -326,7 +326,7 @@
 
     const-string v0, "srcH"
 
-    .line 611
+    .line 613
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/elements/ImageScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -339,7 +339,7 @@
 
     const-string v0, "w"
 
-    .line 612
+    .line 614
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/elements/ImageScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -352,7 +352,7 @@
 
     const-string v0, "h"
 
-    .line 613
+    .line 615
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/elements/ImageScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -363,7 +363,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mExpH:Lcom/miui/maml/data/Expression;
 
-    .line 614
+    .line 616
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mExpSrcW:Lcom/miui/maml/data/Expression;
 
     if-eqz v0, :cond_1
@@ -372,17 +372,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 615
+    .line 617
     iput-boolean v1, p0, Lcom/miui/maml/elements/ImageScreenElement;->mHasSrcRect:Z
 
-    .line 616
+    .line 618
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mSrcRect:Landroid/graphics/Rect;
 
-    .line 618
+    .line 620
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mExpH:Lcom/miui/maml/data/Expression;
 
@@ -392,7 +392,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 619
+    .line 621
     iput-boolean v1, p0, Lcom/miui/maml/elements/ImageScreenElement;->mHasWidthAndHeight:Z
 
     :cond_2
@@ -400,19 +400,19 @@
 
     const/4 v2, 0x0
 
-    .line 622
+    .line 624
     invoke-virtual {p0, p1, v0, v2}, Lcom/miui/maml/elements/ImageScreenElement;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mRawBlurRadius:I
 
-    .line 624
+    .line 626
     invoke-virtual {p0, p1}, Lcom/miui/maml/elements/ImageScreenElement;->loadMesh(Lorg/w3c/dom/Element;)V
 
     const-string v0, "xfermodeNum"
 
-    .line 626
+    .line 628
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/elements/ImageScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -423,14 +423,14 @@
 
     iput-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mXfermodeNumExp:Lcom/miui/maml/data/Expression;
 
-    .line 627
+    .line 629
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mXfermodeNumExp:Lcom/miui/maml/data/Expression;
 
     if-nez v0, :cond_3
 
     const-string v0, "xfermode"
 
-    .line 628
+    .line 630
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/elements/ImageScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -439,7 +439,7 @@
 
     move-result-object v0
 
-    .line 629
+    .line 631
     iget-object v2, p0, Lcom/miui/maml/elements/ImageScreenElement;->mPaint:Landroid/graphics/Paint;
 
     new-instance v3, Landroid/graphics/PorterDuffXfermode;
@@ -451,7 +451,7 @@
     :cond_3
     const-string v0, "useVirtualScreen"
 
-    .line 633
+    .line 635
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/elements/ImageScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -462,7 +462,7 @@
 
     const-string v2, "srcType"
 
-    .line 634
+    .line 636
     invoke-virtual {p0, p1, v2}, Lcom/miui/maml/elements/ImageScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -471,38 +471,38 @@
 
     const-string v2, "VirtualScreen"
 
-    .line 635
+    .line 637
     :cond_4
     invoke-virtual {p0, v2}, Lcom/miui/maml/elements/ImageScreenElement;->setSrcType(Ljava/lang/String;)V
 
     const-string v0, "loadAsync"
 
-    .line 637
+    .line 639
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/elements/ImageScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 638
+    .line 640
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_5
 
-    .line 639
+    .line 641
     invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mLoadAsync:Z
 
-    .line 640
+    .line 642
     iput-boolean v1, p0, Lcom/miui/maml/elements/ImageScreenElement;->mIsLoadAsyncSet:Z
 
     :cond_5
     const-string v0, "retainWhenInvisible"
 
-    .line 642
+    .line 644
     invoke-virtual {p0, p1, v0}, Lcom/miui/maml/elements/ImageScreenElement;->getAttr(Lorg/w3c/dom/Element;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -513,12 +513,12 @@
 
     iput-boolean v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mRetainWhenInvisible:Z
 
-    .line 644
+    .line 646
     iget-boolean v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mHasName:Z
 
     if-eqz v0, :cond_6
 
-    .line 645
+    .line 647
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -545,7 +545,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mBmpSizeWidthVar:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 646
+    .line 648
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -572,7 +572,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mBmpSizeHeightVar:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 647
+    .line 649
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -599,7 +599,7 @@
 
     iput-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mHasBitmapVar:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 649
+    .line 651
     :cond_6
     invoke-direct {p0, p1}, Lcom/miui/maml/elements/ImageScreenElement;->loadMask(Lorg/w3c/dom/Element;)V
 
@@ -609,19 +609,19 @@
 .method private loadMask(Lorg/w3c/dom/Element;)V
     .locals 5
 
-    .line 653
+    .line 655
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mMasks:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 654
+    .line 656
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mMasks:Ljava/util/ArrayList;
 
-    .line 656
+    .line 658
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mMasks:Ljava/util/ArrayList;
 
@@ -629,14 +629,14 @@
 
     const-string v0, "Mask"
 
-    .line 658
+    .line 660
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getElementsByTagName(Ljava/lang/String;)Lorg/w3c/dom/NodeList;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 659
+    .line 661
     :goto_0
     invoke-interface {p1}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -644,7 +644,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 660
+    .line 662
     iget-object v1, p0, Lcom/miui/maml/elements/ImageScreenElement;->mMasks:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/miui/maml/elements/ImageScreenElement$Mask;
@@ -680,7 +680,7 @@
 
     move/from16 v11, p4
 
-    .line 680
+    .line 682
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/ImageScreenElement;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v0
@@ -699,30 +699,30 @@
 
     return-void
 
-    .line 684
+    .line 686
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 685
+    .line 687
     invoke-virtual/range {p2 .. p2}, Lcom/miui/maml/elements/ImageScreenElement$Mask;->getX()F
 
     move-result v0
 
     float-to-double v13, v0
 
-    .line 686
+    .line 688
     invoke-virtual/range {p2 .. p2}, Lcom/miui/maml/elements/ImageScreenElement$Mask;->getY()F
 
     move-result v0
 
     float-to-double v5, v0
 
-    .line 687
+    .line 689
     invoke-virtual/range {p2 .. p2}, Lcom/miui/maml/elements/ImageScreenElement$Mask;->getRotation()F
 
     move-result v0
 
-    .line 688
+    .line 690
     invoke-virtual/range {p2 .. p2}, Lcom/miui/maml/elements/ImageScreenElement$Mask;->isAlignAbsolute()Z
 
     move-result v1
@@ -731,7 +731,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 689
+    .line 691
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/ImageScreenElement;->getRotation()F
 
     move-result v1
@@ -765,22 +765,22 @@
 
     div-double v21, v0, v19
 
-    .line 696
+    .line 698
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/ImageScreenElement;->getPivotX()F
 
     move-result v0
 
-    .line 697
+    .line 699
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/ImageScreenElement;->getPivotY()F
 
     move-result v1
 
-    .line 698
+    .line 700
     iget-object v2, v8, Lcom/miui/maml/elements/ImageScreenElement;->mRotateXYpair:Lcom/miui/maml/elements/ImageScreenElement$pair;
 
     if-nez v2, :cond_2
 
-    .line 699
+    .line 701
     new-instance v2, Lcom/miui/maml/elements/ImageScreenElement$pair;
 
     invoke-direct {v2, v15}, Lcom/miui/maml/elements/ImageScreenElement$pair;-><init>(Lcom/miui/maml/elements/ImageScreenElement$1;)V
@@ -792,7 +792,7 @@
 
     float-to-double v0, v1
 
-    .line 701
+    .line 703
     iget-object v7, v8, Lcom/miui/maml/elements/ImageScreenElement;->mRotateXYpair:Lcom/miui/maml/elements/ImageScreenElement$pair;
 
     move-wide/from16 v23, v0
@@ -811,7 +811,7 @@
 
     int-to-double v0, v10
 
-    .line 703
+    .line 705
     iget-object v2, v8, Lcom/miui/maml/elements/ImageScreenElement;->mRotateXYpair:Lcom/miui/maml/elements/ImageScreenElement$pair;
 
     iget-object v2, v2, Lcom/miui/maml/elements/ImageScreenElement$pair;->p1:Ljava/lang/Object;
@@ -826,7 +826,7 @@
 
     int-to-double v0, v11
 
-    .line 704
+    .line 706
     iget-object v2, v8, Lcom/miui/maml/elements/ImageScreenElement;->mRotateXYpair:Lcom/miui/maml/elements/ImageScreenElement$pair;
 
     iget-object v2, v2, Lcom/miui/maml/elements/ImageScreenElement$pair;->p2:Ljava/lang/Object;
@@ -839,7 +839,7 @@
 
     add-double v27, v0, v2
 
-    .line 707
+    .line 709
     invoke-virtual/range {p2 .. p2}, Lcom/miui/maml/elements/ImageScreenElement$Mask;->getPivotX()F
 
     move-result v0
@@ -876,7 +876,7 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/miui/maml/elements/ImageScreenElement;->rotateXY(DDDLcom/miui/maml/elements/ImageScreenElement$pair;)V
 
-    .line 709
+    .line 711
     iget-object v0, v8, Lcom/miui/maml/elements/ImageScreenElement;->mRotateXYpair:Lcom/miui/maml/elements/ImageScreenElement$pair;
 
     iget-object v0, v0, Lcom/miui/maml/elements/ImageScreenElement$pair;->p1:Ljava/lang/Object;
@@ -895,7 +895,7 @@
 
     add-double/2addr v13, v0
 
-    .line 710
+    .line 712
     iget-object v0, v8, Lcom/miui/maml/elements/ImageScreenElement;->mRotateXYpair:Lcom/miui/maml/elements/ImageScreenElement$pair;
 
     iget-object v0, v0, Lcom/miui/maml/elements/ImageScreenElement$pair;->p2:Ljava/lang/Object;
@@ -924,14 +924,14 @@
 
     add-double/2addr v0, v2
 
-    .line 713
+    .line 715
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v0
 
     div-double/2addr v13, v0
 
-    .line 714
+    .line 716
     invoke-static {v13, v14}, Ljava/lang/Math;->asin(D)D
 
     move-result-wide v2
@@ -951,7 +951,7 @@
 
     sub-double v21, v21, v2
 
-    .line 716
+    .line 718
     :goto_0
     invoke-static/range {v21 .. v22}, Ljava/lang/Math;->sin(D)D
 
@@ -959,7 +959,7 @@
 
     mul-double v13, v0, v2
 
-    .line 717
+    .line 719
     invoke-static/range {v21 .. v22}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide v2
@@ -968,7 +968,7 @@
 
     move/from16 v0, v16
 
-    .line 719
+    .line 721
     :goto_1
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/ImageScreenElement;->getX()F
 
@@ -978,7 +978,7 @@
 
     sub-double/2addr v13, v1
 
-    .line 720
+    .line 722
     invoke-virtual/range {p0 .. p0}, Lcom/miui/maml/elements/ImageScreenElement;->getY()F
 
     move-result v1
@@ -992,7 +992,7 @@
     :cond_4
     move-wide/from16 v23, v5
 
-    .line 722
+    .line 724
     :goto_2
     invoke-virtual/range {p2 .. p2}, Lcom/miui/maml/elements/ImageScreenElement$Mask;->getPivotX()F
 
@@ -1028,7 +1028,7 @@
 
     double-to-int v1, v5
 
-    .line 725
+    .line 727
     invoke-virtual/range {p2 .. p2}, Lcom/miui/maml/elements/ImageScreenElement$Mask;->getWidth()F
 
     move-result v2
@@ -1039,12 +1039,12 @@
 
     if-gez v2, :cond_5
 
-    .line 727
+    .line 729
     invoke-virtual {v12}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    .line 728
+    .line 730
     :cond_5
     invoke-virtual/range {p2 .. p2}, Lcom/miui/maml/elements/ImageScreenElement$Mask;->getHeight()F
 
@@ -1056,7 +1056,7 @@
 
     if-gez v3, :cond_6
 
-    .line 730
+    .line 732
     invoke-virtual {v12}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
@@ -1072,7 +1072,7 @@
 
     move-object/from16 v3, p0
 
-    .line 731
+    .line 733
     :goto_3
     iget-object v5, v3, Lcom/miui/maml/elements/ImageScreenElement;->mDesRect:Landroid/graphics/Rect;
 
@@ -1086,7 +1086,7 @@
 
     invoke-virtual {v5, v0, v1, v2, v4}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 732
+    .line 734
     iget-object v0, v3, Lcom/miui/maml/elements/ImageScreenElement;->mMaskPaint:Landroid/graphics/Paint;
 
     invoke-virtual/range {p2 .. p2}, Lcom/miui/maml/elements/ImageScreenElement$Mask;->getAlpha()I
@@ -1095,14 +1095,14 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 733
+    .line 735
     iget-object v0, v3, Lcom/miui/maml/elements/ImageScreenElement;->mDesRect:Landroid/graphics/Rect;
 
     iget-object v1, v3, Lcom/miui/maml/elements/ImageScreenElement;->mMaskPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v9, v12, v15, v0, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 734
+    .line 736
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
     return-void
@@ -1126,7 +1126,7 @@
 
     add-double/2addr v0, v2
 
-    .line 665
+    .line 667
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v0
@@ -1139,7 +1139,7 @@
 
     div-double v2, p1, v0
 
-    .line 668
+    .line 670
     invoke-static {v2, v3}, Ljava/lang/Math;->acos(D)D
 
     move-result-wide v2
@@ -1150,7 +1150,7 @@
 
     sub-double/2addr v4, p5
 
-    .line 670
+    .line 672
     invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
 
     move-result-wide p5
@@ -1165,7 +1165,7 @@
 
     iput-object p1, p7, Lcom/miui/maml/elements/ImageScreenElement$pair;->p1:Ljava/lang/Object;
 
-    .line 671
+    .line 673
     invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide p1
@@ -1182,7 +1182,7 @@
 
     goto :goto_0
 
-    .line 673
+    .line 675
     :cond_0
     invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -1190,7 +1190,7 @@
 
     iput-object p1, p7, Lcom/miui/maml/elements/ImageScreenElement$pair;->p1:Ljava/lang/Object;
 
-    .line 674
+    .line 676
     invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object p1
@@ -1204,10 +1204,10 @@
 .method private updateBitmap(Z)V
     .locals 1
 
-    .line 738
+    .line 740
     invoke-virtual {p0, p1}, Lcom/miui/maml/elements/ImageScreenElement;->updateBitmapImpl(Z)V
 
-    .line 739
+    .line 741
     iget-boolean v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mIsLoadAsyncSet:Z
 
     if-nez v0, :cond_0
@@ -1216,7 +1216,7 @@
 
     const/4 p1, 0x1
 
-    .line 740
+    .line 742
     iput-boolean p1, p0, Lcom/miui/maml/elements/ImageScreenElement;->mLoadAsync:Z
 
     :cond_0
@@ -2080,7 +2080,7 @@
 .method protected getBitmap(Z)Lcom/miui/maml/elements/BitmapProvider$VersionedBitmap;
     .locals 4
 
-    .line 586
+    .line 588
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mBitmap:Lcom/miui/maml/elements/BitmapProvider$VersionedBitmap;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/BitmapProvider$VersionedBitmap;->getBitmap()Landroid/graphics/Bitmap;
@@ -2089,18 +2089,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 587
+    .line 589
     iget-object p1, p0, Lcom/miui/maml/elements/ImageScreenElement;->mBitmap:Lcom/miui/maml/elements/BitmapProvider$VersionedBitmap;
 
     return-object p1
 
-    .line 588
+    .line 590
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mBitmapProvider:Lcom/miui/maml/elements/BitmapProvider;
 
     if-eqz v0, :cond_1
 
-    .line 589
+    .line 591
     invoke-virtual {p0}, Lcom/miui/maml/elements/ImageScreenElement;->getSrc()Ljava/lang/String;
 
     move-result-object v1
@@ -2666,24 +2666,32 @@
 
     iget v1, p1, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
 
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mConfiguration:Landroid/content/res/Configuration;
+
+    iget v0, v0, Landroid/content/res/Configuration;->densityDpi:I
+
+    iget v1, p1, Landroid/content/res/Configuration;->densityDpi:I
+
     if-eq v0, v1, :cond_3
 
-    .line 548
+    .line 550
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mBitmapProvider:Lcom/miui/maml/elements/BitmapProvider;
 
     if-eqz v0, :cond_1
 
-    .line 549
+    .line 551
     invoke-virtual {v0}, Lcom/miui/maml/elements/BitmapProvider;->finish()V
 
-    .line 552
+    .line 554
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mMasks:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_2
 
-    .line 553
+    .line 555
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2701,33 +2709,33 @@
 
     check-cast v1, Lcom/miui/maml/elements/ImageScreenElement$Mask;
 
-    .line 554
+    .line 556
     invoke-virtual {v1}, Lcom/miui/maml/elements/ImageScreenElement$Mask;->finish()V
 
     goto :goto_0
 
-    .line 557
+    .line 559
     :cond_2
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mBitmap:Lcom/miui/maml/elements/BitmapProvider$VersionedBitmap;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/BitmapProvider$VersionedBitmap;->reset()V
 
-    .line 558
+    .line 560
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mCurrentBitmap:Lcom/miui/maml/elements/BitmapProvider$VersionedBitmap;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/BitmapProvider$VersionedBitmap;->reset()V
 
     const/4 v0, 0x0
 
-    .line 559
+    .line 561
     iput-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mBlurBitmap:Landroid/graphics/Bitmap;
 
     const/4 v0, 0x0
 
-    .line 561
+    .line 563
     invoke-direct {p0, v0}, Lcom/miui/maml/elements/ImageScreenElement;->updateBitmap(Z)V
 
-    .line 563
+    .line 565
     :cond_3
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mConfiguration:Landroid/content/res/Configuration;
 
@@ -3229,12 +3237,12 @@
 .method protected updateBitmapImpl(Z)V
     .locals 1
 
-    .line 577
+    .line 579
     invoke-virtual {p0, p1}, Lcom/miui/maml/elements/ImageScreenElement;->getBitmap(Z)Lcom/miui/maml/elements/BitmapProvider$VersionedBitmap;
 
     move-result-object p1
 
-    .line 578
+    .line 580
     iget v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mBlurRadius:I
 
     if-lez v0, :cond_0
@@ -3249,16 +3257,16 @@
 
     const/4 v0, 0x1
 
-    .line 579
+    .line 581
     iput-boolean v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mPendingBlur:Z
 
-    .line 580
+    .line 582
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mCurrentBitmap:Lcom/miui/maml/elements/BitmapProvider$VersionedBitmap;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/elements/BitmapProvider$VersionedBitmap;->set(Lcom/miui/maml/elements/BitmapProvider$VersionedBitmap;)V
 
-    .line 582
+    .line 584
     invoke-virtual {p0}, Lcom/miui/maml/elements/ImageScreenElement;->updateBitmapVars()V
 
     return-void
@@ -3267,12 +3275,12 @@
 .method protected updateBitmapVars()V
     .locals 3
 
-    .line 567
+    .line 569
     iget-boolean v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mHasName:Z
 
     if-eqz v0, :cond_1
 
-    .line 570
+    .line 572
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mBmpSizeWidthVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {p0}, Lcom/miui/maml/elements/ImageScreenElement;->getBitmapWidth()I
@@ -3287,7 +3295,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 571
+    .line 573
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mBmpSizeHeightVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {p0}, Lcom/miui/maml/elements/ImageScreenElement;->getBitmapHeight()I
@@ -3302,7 +3310,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 572
+    .line 574
     iget-object v0, p0, Lcom/miui/maml/elements/ImageScreenElement;->mHasBitmapVar:Lcom/miui/maml/data/IndexedVariable;
 
     iget-object v1, p0, Lcom/miui/maml/elements/ImageScreenElement;->mCurrentBitmap:Lcom/miui/maml/elements/BitmapProvider$VersionedBitmap;

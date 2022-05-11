@@ -660,6 +660,8 @@
 
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlaySwipeController;->mTransitionController:Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;
 
+    if-eqz p1, :cond_0
+
     invoke-virtual {p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->isScrolling()Z
 
     move-result p1
@@ -689,14 +691,19 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_2
 
-    .line 98
-    invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/overlay/OverlaySwipeController;->onDrag(FF)Z
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
-    move-result p1
+    move-result-object v0
 
-    return p1
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
 
     .line 100
     :cond_0
@@ -727,6 +734,15 @@
 
     :cond_1
     const/4 p1, 0x1
+
+    return p1
+
+    .line 98
+    :cond_2
+    :goto_0
+    invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/overlay/OverlaySwipeController;->onDrag(FF)Z
+
+    move-result p1
 
     return p1
 .end method

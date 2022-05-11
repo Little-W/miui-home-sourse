@@ -58,17 +58,6 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/mi/globallauncher/BranchClientImplement;->getInstance()Lcom/mi/globallauncher/BranchClientImplement;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/mi/globallauncher/BranchClientImplement;->showNewFeatureTag(Lcom/miui/home/launcher/Launcher;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 32
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -83,7 +72,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 33
+    .line 32
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->getSearchBar()Lcom/miui/home/launcher/SearchBar;
 
     move-result-object p1
@@ -94,13 +83,13 @@
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/SearchBarDrawerLayout;->requestFocus()Z
 
-    .line 34
+    .line 33
     invoke-virtual {p2}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->showKeyboard()V
 
     :cond_0
     const/4 p1, 0x0
 
-    .line 36
+    .line 35
     iput-boolean p1, p0, Lcom/mi/globallauncher/BranchAllAppsContainerView;->afterReset:Z
 
     return-void

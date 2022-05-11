@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;)V
     .locals 0
 
-    .line 625
+    .line 626
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$2;->this$0:Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +46,7 @@
         }
     .end annotation
 
-    .line 633
+    .line 634
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$2;->this$0:Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;
 
     iget-object v0, v0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;->mAdapterItems:Ljava/util/ArrayList;
@@ -57,7 +57,7 @@
 .method public refreshBaseRecyclerView()V
     .locals 1
 
-    .line 628
+    .line 629
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList$2;->this$0:Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/allapps/BaseAlphabeticalAppsList;->refreshRecyclerView()V

@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">Pārvilkšana uz augšu ir paredzēta, lai atvērtu Lietotņu atvilktni. Pārslēdzieties uz parasto Sākuma ekrāna režīmu un mēģiniet vēlreiz.</string>
     <string name="all_apps_suggestions">Lietotņu ieteikumi</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">Pārvietots %1$d pozīcijā mapē</string>
     <string name="announce_for_checked">%1$s, pārbaudīts</string>
     <string name="announce_for_choose_default_screen">Uzstādīt %1$d. ekrānu kā noklusējuma Sākuma ekrānu</string>
@@ -639,11 +640,11 @@
     <string name="navigation_guide_recent_title">Atvērt Nesenajos</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Atvērt Nesenos</string>
     <string name="navigation_guide_settings">Žestu demonstrācija</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">Centrā</string>
+    <string name="navigation_position_left">Pa kreisi</string>
+    <string name="navigation_position_right">Pa labi</string>
+    <string name="navigation_position_summary">Navigācijas pogu pozīciju pielāgošana var tikt piemērota Sākuma ekrānam</string>
+    <string name="navigation_position_title">Navigācijas pogu pozīcijas</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Atcelt</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Nevar izmantot pilnekrāna žestus ar trešo pušu palaidējiem. Vai pārslēgt uz sistēmas palaidēju un ieslēgt pilnekrāna žestus?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">LABI</string>

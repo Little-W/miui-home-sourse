@@ -26,7 +26,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentMenuView;Landroid/os/Handler;Landroid/graphics/Bitmap;Landroid/graphics/Rect;)V
     .locals 0
 
-    .line 279
+    .line 283
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentMenuView$2;->this$0:Lcom/miui/home/recents/views/RecentMenuView;
 
     iput-object p3, p0, Lcom/miui/home/recents/views/RecentMenuView$2;->val$thumbnail:Landroid/graphics/Bitmap;
@@ -51,12 +51,12 @@
         }
     .end annotation
 
-    .line 282
+    .line 286
     new-instance v0, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecCompat;
 
     iget-object v1, p0, Lcom/miui/home/recents/views/RecentMenuView$2;->this$0:Lcom/miui/home/recents/views/RecentMenuView;
 
-    .line 283
+    .line 287
     invoke-static {v1}, Lcom/miui/home/recents/views/RecentMenuView;->access$400(Lcom/miui/home/recents/views/RecentMenuView;)Lcom/android/systemui/shared/recents/model/Task;
 
     move-result-object v1
@@ -71,7 +71,7 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/systemui/shared/recents/view/AppTransitionAnimationSpecCompat;-><init>(ILandroid/graphics/Bitmap;Landroid/graphics/Rect;)V
 
-    .line 282
+    .line 286
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0

@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">Ilovaning menyusini ochish uchun tepaga suring. Bosh ekrani rejimiga o‘ting va qayta urinib ko‘ring.</string>
     <string name="all_apps_suggestions">Tavsiya etilgan ilovalar</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">Papkada %1$d joylashuviga ko‘chirildi</string>
     <string name="announce_for_checked">%1$s, belgilandi</string>
     <string name="announce_for_choose_default_screen">%1$d ekranni birlamchi Bosh ekran sifatiladi o‘rnatish</string>

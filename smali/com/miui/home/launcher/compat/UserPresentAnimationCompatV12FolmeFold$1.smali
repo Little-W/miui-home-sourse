@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12FolmeFold;Landroid/view/View;)V
     .locals 0
 
-    .line 221
+    .line 230
     iput-object p1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12FolmeFold$1;->this$0:Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12FolmeFold;
 
     iput-object p2, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12FolmeFold$1;->val$view:Landroid/view/View;
@@ -39,10 +39,10 @@
 .method public onCancel(Ljava/lang/Object;)V
     .locals 1
 
-    .line 224
+    .line 233
     invoke-super {p0, p1}, Lmiuix/animation/listener/TransitionListener;->onCancel(Ljava/lang/Object;)V
 
-    .line 225
+    .line 234
     iget-object p1, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12FolmeFold$1;->this$0:Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12FolmeFold;
 
     iget-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentAnimationCompatV12FolmeFold$1;->val$view:Landroid/view/View;

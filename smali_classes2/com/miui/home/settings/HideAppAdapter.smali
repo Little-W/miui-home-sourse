@@ -209,7 +209,7 @@
 
     iget-object v0, p0, Lcom/miui/home/settings/HideAppAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0075
+    const v1, 0x7f0d0076
 
     const/4 v2, 0x0
 

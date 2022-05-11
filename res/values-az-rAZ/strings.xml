@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">Yuxarı sürüşdürmək, Tətbiq çəkməcəsi üçün saxlanılır. Normal Əsas ekran rejiminə dəyişdirin və yenidən cəhd edin.</string>
     <string name="all_apps_suggestions">Tətbiq təklifləri</string>
     <string name="am">GƏ</string>
+    <string name="animation_rate_title">Animasiya dərəcəsi</string>
     <string name="announce_for_app_move_in_folder">Qovluq daxilində %1$d mövqeyinə köçürüldü</string>
     <string name="announce_for_checked">%1$s，yoxlanıldı</string>
     <string name="announce_for_choose_default_screen">%1$d nömrəli ekranı varsayılan Əsas ekran olaraq təyin et</string>
@@ -609,11 +610,11 @@
     <string name="navigation_guide_recent_title">Sonuncuları aç</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Sonuncuları aç</string>
     <string name="navigation_guide_settings">Jest nümunələri</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">Mərkəz</string>
+    <string name="navigation_position_left">Sol</string>
+    <string name="navigation_position_right">Sağ</string>
+    <string name="navigation_position_summary">Naviqasiya düymələrinin fərdi mövqeləri yalnız Əsas ekrana tətbiq edilə bilər</string>
+    <string name="navigation_position_title">Naviqasiya düymələrinin mövqeyi</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Ləğv et</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Üçüncü başlatma cihazları ilə tam ekran jestlərindən istifadə edilə bilməz. Sistem başlatma sisteminə keçin və tam ekran jestlərini aktiv edin?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">Oldu</string>

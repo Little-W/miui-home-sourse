@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/FolderInfo;)V
     .locals 0
 
-    .line 6425
+    .line 6408
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$56;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$56;->val$info:Lcom/miui/home/launcher/FolderInfo;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 1
 
-    .line 6428
+    .line 6411
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$56;->val$info:Lcom/miui/home/launcher/FolderInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->notifyDataSetChanged()V

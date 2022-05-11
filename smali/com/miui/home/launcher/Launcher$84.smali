@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 8834
+    .line 8820
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$84;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 4
 
-    .line 8837
+    .line 8823
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$84;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->isDestroyed()Z
@@ -49,7 +49,7 @@
 
     return-void
 
-    .line 8840
+    .line 8826
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -59,13 +59,13 @@
 
     const-string v1, "com.android.systemui"
 
-    .line 8841
+    .line 8827
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 8842
+    .line 8828
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$84;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$10100(Lcom/miui/home/launcher/Launcher;)Landroid/content/ServiceConnection;
+    invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$9800(Lcom/miui/home/launcher/Launcher;)Landroid/content/ServiceConnection;
 
     move-result-object v2
 
@@ -75,11 +75,11 @@
 
     move-result v0
 
-    invoke-static {v1, v0}, Lcom/miui/home/launcher/Launcher;->access$10002(Lcom/miui/home/launcher/Launcher;Z)Z
+    invoke-static {v1, v0}, Lcom/miui/home/launcher/Launcher;->access$9702(Lcom/miui/home/launcher/Launcher;Z)Z
 
     const-string v0, "Launcher"
 
-    .line 8843
+    .line 8829
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -90,7 +90,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$84;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v2}, Lcom/miui/home/launcher/Launcher;->access$10000(Lcom/miui/home/launcher/Launcher;)Z
+    invoke-static {v2}, Lcom/miui/home/launcher/Launcher;->access$9700(Lcom/miui/home/launcher/Launcher;)Z
 
     move-result v2
 

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;)V
     .locals 0
 
-    .line 342
+    .line 346
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView$2;->this$0:Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onSearchHintClick(Ljava/lang/String;)V
     .locals 2
 
-    .line 345
+    .line 349
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -47,14 +47,14 @@
 
     invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->setNeedToShowSearchSuggestion(Z)V
 
-    .line 346
+    .line 350
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView$2;->this$0:Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;
 
     iget-object v0, v0, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;->mSearchBarController:Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->setSearchText(Ljava/lang/String;)V
 
-    .line 347
+    .line 351
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView$2;->this$0:Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;
 
     iget-object p1, p1, Lcom/miui/home/launcher/allapps/BaseAllAppsContainerView;->mSearchBarController:Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;
@@ -63,7 +63,7 @@
 
     const/4 p1, 0x1
 
-    .line 348
+    .line 352
     invoke-static {p1}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchHotItemClick(I)V
 
     return-void
@@ -74,7 +74,7 @@
 
     const/4 v0, 0x1
 
-    .line 353
+    .line 357
     invoke-static {v0}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchHotItemShow(I)V
 
     return-void

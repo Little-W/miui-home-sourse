@@ -51,6 +51,11 @@
         <item>ת</item>
         <item>\#</item>
     </string-array>
+    <string-array name="animation_rate_entries">
+        <item>אלגנטיות</item>
+        <item>איזון</item>
+        <item>מינימליסטי</item>
+    </string-array>
     <string-array name="cell_layout_size_entries">
         <item>4x4</item>
         <item>4x5</item>

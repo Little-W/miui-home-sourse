@@ -43,7 +43,7 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 49
+    .line 50
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -52,7 +52,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 53
+    .line 54
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -61,7 +61,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 57
+    .line 58
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -70,7 +70,7 @@
 .method static synthetic access$000(Landroid/app/Activity;IZ)V
     .locals 0
 
-    .line 31
+    .line 32
     invoke-static {p0, p1, p2}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->goToWebViewActivity(Landroid/app/Activity;IZ)V
 
     return-void
@@ -102,7 +102,7 @@
 
     return-object p0
 
-    .line 219
+    .line 221
     :pswitch_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -116,7 +116,7 @@
 
     return-object p0
 
-    .line 217
+    .line 219
     :pswitch_1
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -140,7 +140,7 @@
 .method public static getPocoBranchSearchGuideView(Landroid/content/Context;)Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;
     .locals 2
 
-    .line 90
+    .line 92
     invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p0
@@ -161,24 +161,24 @@
 .method private static goToWebViewActivity(Landroid/app/Activity;IZ)V
     .locals 3
 
-    .line 193
+    .line 195
     invoke-static {p1}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->getBranchUrl(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 194
+    .line 196
     invoke-static {p0, p1}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->getBranchUrlTitle(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 195
+    .line 197
     new-instance v1, Landroid/content/Intent;
 
-    const-class v2, Lcom/mi/globallauncher/CommercialWebViewActivity;
+    const-class v2, Lcom/mi/globallauncher/activity/CommercialWebViewActivity;
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 196
+    .line 198
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -187,21 +187,21 @@
 
     const-string v2, "extra_title"
 
-    .line 197
+    .line 199
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     :cond_0
     const-string p1, "extra_url"
 
-    .line 199
+    .line 201
     invoke-virtual {v1, p1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p1, "extra_ui_mode"
 
-    .line 200
+    .line 202
     invoke-virtual {v1, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 201
+    .line 203
     invoke-virtual {p0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
     return-void
@@ -210,7 +210,7 @@
 .method private static guideViewNotShownOrShouldShowAgain()Z
     .locals 4
 
-    .line 68
+    .line 69
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -221,7 +221,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 69
+    .line 70
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -232,7 +232,7 @@
 
     if-nez v0, :cond_0
 
-    .line 70
+    .line 71
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -269,10 +269,10 @@
 
     if-eqz p0, :cond_0
 
-    .line 129
+    .line 131
     invoke-interface {p0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide$BranchGuideViewClickListener;->onAgreeBtnClicked()V
 
-    .line 131
+    .line 133
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
@@ -296,7 +296,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 136
+    .line 138
     invoke-interface {p0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide$BranchGuideViewClickListener;->onCloseBtnClicked()V
 
     :cond_0
@@ -306,7 +306,7 @@
 .method public static needToShowPocoSearchGuide()Z
     .locals 1
 
-    .line 61
+    .line 62
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -317,7 +317,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 62
+    .line 63
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -328,7 +328,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 63
+    .line 64
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -339,7 +339,7 @@
 
     if-nez v0, :cond_0
 
-    .line 64
+    .line 65
     invoke-static {}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->guideViewNotShownOrShouldShowAgain()Z
 
     move-result v0
@@ -360,27 +360,27 @@
 .method public static setTextLinkOpenWithWebView(Landroid/app/Activity;Landroid/widget/TextView;Z)V
     .locals 8
 
-    .line 154
+    .line 156
     invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 155
+    .line 157
     instance-of v1, v0, Landroid/text/Spannable;
 
     if-eqz v1, :cond_4
 
-    .line 156
+    .line 158
     new-instance v1, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v1, v0}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 157
+    .line 159
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
-    .line 158
+    .line 160
     const-class v2, Landroid/text/style/URLSpan;
 
     const/4 v3, 0x0
@@ -391,14 +391,14 @@
 
     check-cast v0, [Landroid/text/style/URLSpan;
 
-    .line 159
+    .line 161
     array-length v2, v0
 
     if-nez v2, :cond_0
 
     return-void
 
-    .line 162
+    .line 164
     :cond_0
     array-length v2, v0
 
@@ -407,20 +407,20 @@
 
     aget-object v4, v0, v3
 
-    .line 163
+    .line 165
     invoke-virtual {v1, v4}, Landroid/text/SpannableStringBuilder;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v5
 
-    .line 164
+    .line 166
     invoke-virtual {v1, v4}, Landroid/text/SpannableStringBuilder;->getSpanEnd(Ljava/lang/Object;)I
 
     move-result v6
 
-    .line 165
+    .line 167
     invoke-virtual {v1, v4}, Landroid/text/SpannableStringBuilder;->removeSpan(Ljava/lang/Object;)V
 
-    .line 166
+    .line 168
     invoke-virtual {v4}, Landroid/text/style/URLSpan;->getURL()Ljava/lang/String;
 
     move-result-object v4
@@ -431,7 +431,7 @@
 
     goto :goto_1
 
-    .line 168
+    .line 170
     :cond_1
     new-instance v7, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide$1;
 
@@ -447,7 +447,7 @@
 
     goto :goto_0
 
-    .line 187
+    .line 189
     :cond_3
     sget p2, Lcom/mi/globallauncher/R$color;->url_text_highlight:I
 
@@ -457,7 +457,7 @@
 
     invoke-virtual {p1, p0}, Landroid/widget/TextView;->setHighlightColor(I)V
 
-    .line 188
+    .line 190
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_4
@@ -469,7 +469,7 @@
 .method public getPrivacyCheckBox()Landroid/widget/CheckBox;
     .locals 1
 
-    .line 146
+    .line 148
     iget-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mPrivacyCheckBox:Landroid/widget/CheckBox;
 
     return-object v0
@@ -478,7 +478,7 @@
 .method public getPrivacyTextView()Landroid/widget/TextView;
     .locals 1
 
-    .line 150
+    .line 152
     iget-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mPrivacyText:Landroid/widget/TextView;
 
     return-object v0
@@ -487,7 +487,7 @@
 .method public initPocoBranchSearchGuideView(ZLcom/mi/globallauncher/poco/PocoBranchSearchGuide$BranchGuideViewClickListener;Z)V
     .locals 2
 
-    .line 94
+    .line 96
     sget v0, Lcom/mi/globallauncher/R$id;->search_guide_title:I
 
     invoke-virtual {p0, v0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -498,7 +498,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mGuideTitle:Landroid/widget/TextView;
 
-    .line 95
+    .line 97
     sget v0, Lcom/mi/globallauncher/R$id;->search_guide_desc:I
 
     invoke-virtual {p0, v0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -509,7 +509,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mGuideDesc:Landroid/widget/TextView;
 
-    .line 96
+    .line 98
     sget v0, Lcom/mi/globallauncher/R$id;->search_guide_close:I
 
     invoke-virtual {p0, v0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -520,7 +520,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mCloseBtn:Landroid/widget/ImageView;
 
-    .line 97
+    .line 99
     sget v0, Lcom/mi/globallauncher/R$id;->search_guide_gif:I
 
     invoke-virtual {p0, v0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -531,7 +531,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mGuideGif:Lcom/airbnb/lottie/LottieAnimationView;
 
-    .line 98
+    .line 100
     sget v0, Lcom/mi/globallauncher/R$id;->search_guide_privacy_checkbox:I
 
     invoke-virtual {p0, v0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -542,7 +542,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mPrivacyCheckBox:Landroid/widget/CheckBox;
 
-    .line 99
+    .line 101
     sget v0, Lcom/mi/globallauncher/R$id;->search_guide_privacy:I
 
     invoke-virtual {p0, v0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -553,7 +553,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mPrivacyText:Landroid/widget/TextView;
 
-    .line 100
+    .line 102
     sget v0, Lcom/mi/globallauncher/R$id;->search_guide_btn:I
 
     invoke-virtual {p0, v0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->findViewById(I)Landroid/view/View;
@@ -566,7 +566,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 103
+    .line 105
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mGuideTitle:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->getContext()Landroid/content/Context;
@@ -581,7 +581,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 104
+    .line 106
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mGuideDesc:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->getContext()Landroid/content/Context;
@@ -596,7 +596,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 105
+    .line 107
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mPrivacyText:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->getContext()Landroid/content/Context;
@@ -611,14 +611,14 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 106
+    .line 108
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mCloseBtn:Landroid/widget/ImageView;
 
     sget v0, Lcom/mi/globallauncher/R$drawable;->search_guide_close_btn:I
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 107
+    .line 109
     invoke-virtual {p0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -633,7 +633,7 @@
 
     goto :goto_0
 
-    .line 109
+    .line 111
     :cond_0
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mGuideTitle:Landroid/widget/TextView;
 
@@ -649,7 +649,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 110
+    .line 112
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mGuideDesc:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->getContext()Landroid/content/Context;
@@ -664,7 +664,7 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 111
+    .line 113
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mPrivacyText:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->getContext()Landroid/content/Context;
@@ -679,14 +679,14 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 112
+    .line 114
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mCloseBtn:Landroid/widget/ImageView;
 
     sget v0, Lcom/mi/globallauncher/R$drawable;->search_guide_close_btn_dark:I
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 113
+    .line 115
     invoke-virtual {p0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -702,14 +702,14 @@
     :goto_0
     if-eqz p3, :cond_1
 
-    .line 117
+    .line 119
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mGuideTitle:Landroid/widget/TextView;
 
     sget p3, Lcom/mi/globallauncher/R$string;->branch_search_guide_title:I
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setText(I)V
 
-    .line 118
+    .line 120
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mGuideDesc:Landroid/widget/TextView;
 
     sget p3, Lcom/mi/globallauncher/R$string;->branch_search_guide_description:I
@@ -718,7 +718,7 @@
 
     goto :goto_1
 
-    .line 120
+    .line 122
     :cond_1
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mGuideTitle:Landroid/widget/TextView;
 
@@ -726,14 +726,14 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setText(I)V
 
-    .line 121
+    .line 123
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mGuideDesc:Landroid/widget/TextView;
 
     sget p3, Lcom/mi/globallauncher/R$string;->app_drawer_guide_description:I
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setText(I)V
 
-    .line 123
+    .line 125
     :goto_1
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mPrivacyText:Landroid/widget/TextView;
 
@@ -741,14 +741,14 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setText(I)V
 
-    .line 124
+    .line 126
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mAgreeBtn:Landroid/widget/TextView;
 
     sget p3, Lcom/mi/globallauncher/R$string;->search_guide_btn:I
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setText(I)V
 
-    .line 126
+    .line 128
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mPrivacyText:Landroid/widget/TextView;
 
     invoke-static {}, Landroid/text/method/LinkMovementMethod;->getInstance()Landroid/text/method/MovementMethod;
@@ -757,7 +757,7 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
-    .line 127
+    .line 129
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mAgreeBtn:Landroid/widget/TextView;
 
     new-instance p3, Lcom/mi/globallauncher/poco/-$$Lambda$PocoBranchSearchGuide$lzsTxFneRV_lTeZc1QME138t8Iw;
@@ -766,12 +766,12 @@
 
     invoke-virtual {p1, p3}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 133
+    .line 135
     sget-object p1, Lcom/mi/globallauncher/poco/-$$Lambda$PocoBranchSearchGuide$zN_CTOnTXmv0-YGxkwZFsFE1Jj8;->INSTANCE:Lcom/mi/globallauncher/poco/-$$Lambda$PocoBranchSearchGuide$zN_CTOnTXmv0-YGxkwZFsFE1Jj8;
 
     invoke-virtual {p0, p1}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 134
+    .line 136
     iget-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mCloseBtn:Landroid/widget/ImageView;
 
     new-instance p3, Lcom/mi/globallauncher/poco/-$$Lambda$PocoBranchSearchGuide$Nt8EluE91ymPrEoDJQLh48VLkZ0;
@@ -786,7 +786,7 @@
 .method public isPrivacyCheckBoxChecked()Z
     .locals 1
 
-    .line 142
+    .line 144
     iget-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;->mPrivacyCheckBox:Landroid/widget/CheckBox;
 
     invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
@@ -796,17 +796,26 @@
     return v0
 .end method
 
-.method public onAgreeBtnClicked(Z)V
-    .locals 2
+.method public onAgreeBtnClicked()V
+    .locals 3
 
-    .line 83
+    .line 84
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->setQuickSearchSwitchOn(Z)V
+
+    .line 85
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
 
     invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setBranchSearchGuideOpenClicked()V
 
-    .line 84
+    .line 86
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
@@ -817,14 +826,16 @@
 
     if-nez v0, :cond_0
 
-    .line 85
+    .line 87
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    invoke-static {}, Lcom/mi/globallauncher/util/BranchSwitchController;->isIndiaRegion()Z
 
-    invoke-interface {v0, v1, p1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->setBranchInitSwitchOn(ZZ)V
+    move-result v2
+
+    invoke-interface {v0, v1, v2}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->setBranchInitSwitchOn(ZZ)V
 
     :cond_0
     return-void
@@ -833,7 +844,7 @@
 .method public onHide()V
     .locals 3
 
-    .line 74
+    .line 75
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -846,7 +857,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 75
+    .line 76
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0
@@ -857,7 +868,7 @@
 
     goto :goto_0
 
-    .line 77
+    .line 78
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
@@ -867,7 +878,7 @@
 
     invoke-interface {v0, v1}, Lcom/mi/globallauncher/branchInterface/ICommercialPreference;->setShouldShownBranchSearchGuide(Z)V
 
-    .line 78
+    .line 79
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getCommercialPref()Lcom/mi/globallauncher/branchInterface/ICommercialPreference;
 
     move-result-object v0

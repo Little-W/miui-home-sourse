@@ -13,7 +13,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 9
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,14 +22,14 @@
 .method public static getNavigationBarHeight(Landroid/content/Context;)I
     .locals 3
 
-    .line 36
+    .line 42
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 37
+    .line 43
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
@@ -40,7 +40,7 @@
 
     goto :goto_0
 
-    .line 39
+    .line 45
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -55,14 +55,14 @@
 
     const-string v2, "android"
 
-    .line 42
+    .line 48
     invoke-virtual {p0, v0, v1, v2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     if-lez v0, :cond_1
 
-    .line 44
+    .line 50
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p0
@@ -78,14 +78,14 @@
 .method public static isFirstInstall(Landroid/content/Context;)Z
     .locals 6
 
-    .line 20
+    .line 22
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 22
+    .line 24
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -95,7 +95,7 @@
 
     move-result-object p0
 
-    .line 23
+    .line 25
     iget-wide v2, p0, Landroid/content/pm/PackageInfo;->firstInstallTime:J
 
     iget-wide v4, p0, Landroid/content/pm/PackageInfo;->lastUpdateTime:J
@@ -114,7 +114,7 @@
     :catch_0
     move-exception p0
 
-    .line 25
+    .line 27
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     return v1
@@ -127,8 +127,33 @@
 
     const-string v1, "ro.miui.product.home"
 
-    .line 31
+    .line 33
     invoke-static {v1}, Lcom/mi/globallauncher/util/SystemPropertiesCompat;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static isPocoLauncher()Z
+    .locals 2
+
+    const-string v0, "com.mi.android.globallauncher"
+
+    .line 37
+    invoke-static {}, Lcom/mi/globallauncher/manager/BranchImplement;->getInstance()Lcom/mi/globallauncher/manager/BranchImplement;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/mi/globallauncher/manager/BranchImplement;->getApplication()Landroid/app/Application;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/app/Application;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -142,7 +167,7 @@
 .method public static isProvisioned(Landroid/content/Context;)Z
     .locals 2
 
-    .line 15
+    .line 17
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0

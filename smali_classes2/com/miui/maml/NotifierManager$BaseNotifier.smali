@@ -44,17 +44,17 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 188
+    .line 197
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 184
+    .line 193
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
-    .line 189
+    .line 198
     iput-object p1, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mContext:Landroid/content/Context;
 
     return-void
@@ -63,12 +63,12 @@
 .method private final checkListeners()V
     .locals 2
 
-    .line 221
+    .line 230
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 222
+    .line 231
     :try_start_0
     invoke-direct {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->checkListenersLocked()I
 
@@ -76,10 +76,10 @@
 
     if-nez v1, :cond_0
 
-    .line 224
+    .line 233
     invoke-virtual {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->pause()V
 
-    .line 226
+    .line 235
     :cond_0
     monitor-exit v0
 
@@ -100,10 +100,10 @@
 
     const/4 v0, 0x0
 
-    .line 230
+    .line 239
     iput v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mActiveCount:I
 
-    .line 231
+    .line 240
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -115,7 +115,7 @@
     :goto_0
     if-ltz v0, :cond_2
 
-    .line 232
+    .line 241
     iget-object v1, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -124,7 +124,7 @@
 
     check-cast v1, Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;
 
-    .line 233
+    .line 242
     iget-object v2, v1, Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;->ref:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -133,14 +133,14 @@
 
     if-nez v2, :cond_0
 
-    .line 234
+    .line 243
     iget-object v1, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     goto :goto_1
 
-    .line 235
+    .line 244
     :cond_0
     invoke-static {v1}, Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;->access$000(Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;)Z
 
@@ -148,7 +148,7 @@
 
     if-nez v1, :cond_1
 
-    .line 236
+    .line 245
     iget v1, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mActiveCount:I
 
     add-int/lit8 v1, v1, 0x1
@@ -161,7 +161,7 @@
 
     goto :goto_0
 
-    .line 238
+    .line 247
     :cond_2
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
@@ -171,7 +171,7 @@
 
     iput v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mRefCount:I
 
-    .line 239
+    .line 248
     iget v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mRefCount:I
 
     return v0
@@ -180,7 +180,7 @@
 .method private final findListenerLocked(Lcom/miui/maml/NotifierManager$OnNotifyListener;)Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;
     .locals 3
 
-    .line 213
+    .line 222
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -200,7 +200,7 @@
 
     check-cast v1, Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;
 
-    .line 214
+    .line 223
     iget-object v2, v1, Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;->ref:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v2}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -222,12 +222,12 @@
 .method public final addListener(Lcom/miui/maml/NotifierManager$OnNotifyListener;)V
     .locals 3
 
-    .line 193
+    .line 202
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 194
+    .line 203
     :try_start_0
     invoke-direct {p0, p1}, Lcom/miui/maml/NotifierManager$BaseNotifier;->findListenerLocked(Lcom/miui/maml/NotifierManager$OnNotifyListener;)Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;
 
@@ -235,7 +235,7 @@
 
     if-nez v1, :cond_0
 
-    .line 195
+    .line 204
     iget-object v1, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;
@@ -244,13 +244,13 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 196
+    .line 205
     invoke-direct {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->checkListenersLocked()I
 
-    .line 197
+    .line 206
     invoke-virtual {p0, p1}, Lcom/miui/maml/NotifierManager$BaseNotifier;->onListenerAdded(Lcom/miui/maml/NotifierManager$OnNotifyListener;)V
 
-    .line 199
+    .line 208
     :cond_0
     monitor-exit v0
 
@@ -269,7 +269,7 @@
 .method public finish()V
     .locals 0
 
-    .line 293
+    .line 302
     invoke-virtual {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->unregister()V
 
     return-void
@@ -278,10 +278,10 @@
 .method public final getActiveCount()I
     .locals 1
 
-    .line 271
+    .line 280
     invoke-direct {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->checkListeners()V
 
-    .line 272
+    .line 281
     iget v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mActiveCount:I
 
     return v0
@@ -290,10 +290,10 @@
 .method public final getRef()I
     .locals 1
 
-    .line 276
+    .line 285
     invoke-direct {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->checkListeners()V
 
-    .line 277
+    .line 286
     iget v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mRefCount:I
 
     return v0
@@ -302,7 +302,7 @@
 .method public init()V
     .locals 0
 
-    .line 281
+    .line 290
     invoke-virtual {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->register()V
 
     return-void
@@ -317,15 +317,15 @@
 .method protected onNotify(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/Object;)V
     .locals 3
 
-    .line 301
+    .line 310
     invoke-direct {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->checkListeners()V
 
-    .line 302
+    .line 311
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 303
+    .line 312
     :try_start_0
     iget-object v1, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
@@ -346,12 +346,12 @@
 
     check-cast v2, Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;
 
-    .line 304
+    .line 313
     invoke-virtual {v2, p1, p2, p3}, Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;->onNotify(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 306
+    .line 315
     :cond_0
     monitor-exit v0
 
@@ -376,7 +376,7 @@
 .method public pause()V
     .locals 0
 
-    .line 289
+    .line 298
     invoke-virtual {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->unregister()V
 
     return-void
@@ -385,12 +385,12 @@
 .method public final pauseListener(Lcom/miui/maml/NotifierManager$OnNotifyListener;)I
     .locals 2
 
-    .line 257
+    .line 266
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 258
+    .line 267
     :try_start_0
     invoke-direct {p0, p1}, Lcom/miui/maml/NotifierManager$BaseNotifier;->findListenerLocked(Lcom/miui/maml/NotifierManager$OnNotifyListener;)Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;
 
@@ -398,28 +398,28 @@
 
     if-nez p1, :cond_0
 
-    .line 261
+    .line 270
     invoke-direct {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->checkListenersLocked()I
 
     const-string p1, "NotifierManager"
 
     const-string v1, "pauseListener, listener not exist"
 
-    .line 262
+    .line 271
     invoke-static {p1, v1}, Lcom/miui/maml/util/MamlLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 263
+    .line 272
     iget p1, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mRefCount:I
 
     monitor-exit v0
 
     return p1
 
-    .line 265
+    .line 274
     :cond_0
     invoke-virtual {p1}, Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;->pause()V
 
-    .line 266
+    .line 275
     iget p1, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mRefCount:I
 
     monitor-exit v0
@@ -429,7 +429,7 @@
     :catchall_0
     move-exception p1
 
-    .line 267
+    .line 276
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -440,25 +440,25 @@
 .method protected register()V
     .locals 3
 
-    .line 310
+    .line 319
     iget-boolean v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mRegistered:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 312
+    .line 321
     :cond_0
     invoke-virtual {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->onRegister()V
 
     const/4 v0, 0x1
 
-    .line 313
+    .line 322
     iput-boolean v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mRegistered:Z
 
     const-string v0, "NotifierManager"
 
-    .line 315
+    .line 324
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -485,12 +485,12 @@
 .method public final removeListener(Lcom/miui/maml/NotifierManager$OnNotifyListener;)V
     .locals 2
 
-    .line 203
+    .line 212
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 204
+    .line 213
     :try_start_0
     invoke-direct {p0, p1}, Lcom/miui/maml/NotifierManager$BaseNotifier;->findListenerLocked(Lcom/miui/maml/NotifierManager$OnNotifyListener;)Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;
 
@@ -498,15 +498,15 @@
 
     if-eqz p1, :cond_0
 
-    .line 206
+    .line 215
     iget-object v1, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 207
+    .line 216
     invoke-direct {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->checkListenersLocked()I
 
-    .line 209
+    .line 218
     :cond_0
     monitor-exit v0
 
@@ -525,7 +525,7 @@
 .method public resume()V
     .locals 0
 
-    .line 285
+    .line 294
     invoke-virtual {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->register()V
 
     return-void
@@ -534,12 +534,12 @@
 .method public final resumeListener(Lcom/miui/maml/NotifierManager$OnNotifyListener;)I
     .locals 2
 
-    .line 243
+    .line 252
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mListeners:Ljava/util/ArrayList;
 
     monitor-enter v0
 
-    .line 244
+    .line 253
     :try_start_0
     invoke-direct {p0, p1}, Lcom/miui/maml/NotifierManager$BaseNotifier;->findListenerLocked(Lcom/miui/maml/NotifierManager$OnNotifyListener;)Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;
 
@@ -547,28 +547,28 @@
 
     if-nez p1, :cond_0
 
-    .line 247
+    .line 256
     invoke-direct {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->checkListenersLocked()I
 
     const-string p1, "NotifierManager"
 
     const-string v1, "resumeListener, listener not exist"
 
-    .line 248
+    .line 257
     invoke-static {p1, v1}, Lcom/miui/maml/util/MamlLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 249
+    .line 258
     iget p1, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mRefCount:I
 
     monitor-exit v0
 
     return p1
 
-    .line 251
+    .line 260
     :cond_0
     invoke-virtual {p1}, Lcom/miui/maml/NotifierManager$BaseNotifier$Listener;->resume()V
 
-    .line 252
+    .line 261
     iget p1, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mRefCount:I
 
     monitor-exit v0
@@ -578,7 +578,7 @@
     :catchall_0
     move-exception p1
 
-    .line 253
+    .line 262
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -589,14 +589,14 @@
 .method protected unregister()V
     .locals 3
 
-    .line 319
+    .line 328
     iget-boolean v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mRegistered:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 322
+    .line 331
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Lcom/miui/maml/NotifierManager$BaseNotifier;->onUnregister()V
@@ -610,7 +610,7 @@
 
     const-string v1, "NotifierManager"
 
-    .line 324
+    .line 333
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -620,12 +620,12 @@
     :goto_0
     const/4 v0, 0x0
 
-    .line 326
+    .line 335
     iput-boolean v0, p0, Lcom/miui/maml/NotifierManager$BaseNotifier;->mRegistered:Z
 
     const-string v0, "NotifierManager"
 
-    .line 328
+    .line 337
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V

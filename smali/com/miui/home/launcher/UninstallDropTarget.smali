@@ -187,7 +187,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f100070
+    const v0, 0x7f100071
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -241,7 +241,7 @@
     .line 109
     invoke-super {p0, p1}, Lcom/miui/home/launcher/ButtonDropTarget;->onDragEnter(Lcom/miui/home/launcher/DragObject;)V
 
-    const v0, 0x7f100067
+    const v0, 0x7f100068
 
     .line 110
     invoke-static {v0}, Lcom/miui/home/launcher/common/Utilities;->announceForAccessibility(I)V

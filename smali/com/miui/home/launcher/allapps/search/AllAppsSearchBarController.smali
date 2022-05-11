@@ -254,7 +254,7 @@
 
     invoke-virtual {p2, p0}, Lcom/miui/home/launcher/ExtendedEditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    const p2, 0x7f0a020a
+    const p2, 0x7f0a0211
 
     .line 70
     invoke-virtual {p3, p2}, Lcom/miui/home/launcher/Launcher;->findViewById(I)Landroid/view/View;
@@ -489,46 +489,48 @@
     return-void
 .end method
 
-.method public updateSearchHint()V
-    .locals 2
+.method public updateSearchHint(Z)V
+    .locals 1
+
+    if-eqz p1, :cond_0
 
     .line 157
-    sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+    sget-boolean p1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
-    if-eqz v0, :cond_0
+    if-eqz p1, :cond_0
 
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isElderlyManMode()Z
 
-    move-result v0
+    move-result p1
 
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-interface {v0}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->isBranchOpen()Z
+    invoke-interface {p1}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->isBranchOpen()Z
 
-    move-result v0
+    move-result p1
 
-    if-eqz v0, :cond_0
+    if-eqz p1, :cond_0
 
     .line 158
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->mInput:Lcom/miui/home/launcher/ExtendedEditText;
+    iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->mInput:Lcom/miui/home/launcher/ExtendedEditText;
 
-    const v1, 0x7f1003a0
+    const v0, 0x7f10039f
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/ExtendedEditText;->setHint(I)V
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ExtendedEditText;->setHint(I)V
 
     goto :goto_0
 
     .line 160
     :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->mInput:Lcom/miui/home/launcher/ExtendedEditText;
+    iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->mInput:Lcom/miui/home/launcher/ExtendedEditText;
 
-    const v1, 0x7f10004e
+    const v0, 0x7f10004e
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/ExtendedEditText;->setHint(I)V
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ExtendedEditText;->setHint(I)V
 
     :goto_0
     return-void

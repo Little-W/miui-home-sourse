@@ -16,5 +16,5 @@
 .method public abstract removeQuickSetting()V
 .end method
 
-.method public abstract setChecked(Z)V
+.method public abstract setMiHomePrivacyDialogDismiss(Z)V
 .end method

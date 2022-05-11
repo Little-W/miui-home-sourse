@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentMenuView;)V
     .locals 0
 
-    .line 124
+    .line 128
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentMenuView$1;->this$0:Lcom/miui/home/recents/views/RecentMenuView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 137
+    .line 141
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentMenuView$1;->this$0:Lcom/miui/home/recents/views/RecentMenuView;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/RecentMenuView;->access$000(Lcom/miui/home/recents/views/RecentMenuView;)Z
@@ -44,7 +44,7 @@
 
     if-nez p1, :cond_0
 
-    .line 138
+    .line 142
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentMenuView$1;->this$0:Lcom/miui/home/recents/views/RecentMenuView;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/RecentMenuView;->access$100(Lcom/miui/home/recents/views/RecentMenuView;)Lcom/miui/home/recents/views/TaskView;
@@ -55,7 +55,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/views/TaskView;->setTranslationZ(F)V
 
-    .line 139
+    .line 143
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentMenuView$1;->this$0:Lcom/miui/home/recents/views/RecentMenuView;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/RecentMenuView;->access$100(Lcom/miui/home/recents/views/RecentMenuView;)Lcom/miui/home/recents/views/TaskView;
@@ -70,7 +70,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->setAlpha(F)V
 
-    .line 140
+    .line 144
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentMenuView$1;->this$0:Lcom/miui/home/recents/views/RecentMenuView;
 
     const/16 v0, 0x8
@@ -84,7 +84,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 127
+    .line 131
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentMenuView$1;->this$0:Lcom/miui/home/recents/views/RecentMenuView;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/RecentMenuView;->access$000(Lcom/miui/home/recents/views/RecentMenuView;)Z
@@ -93,7 +93,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 128
+    .line 132
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentMenuView$1;->this$0:Lcom/miui/home/recents/views/RecentMenuView;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/RecentMenuView;->access$100(Lcom/miui/home/recents/views/RecentMenuView;)Lcom/miui/home/recents/views/TaskView;
@@ -104,7 +104,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/views/TaskView;->setTranslationZ(F)V
 
-    .line 129
+    .line 133
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -117,7 +117,7 @@
 
     goto :goto_0
 
-    .line 131
+    .line 135
     :cond_0
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
@@ -135,7 +135,7 @@
 
     invoke-virtual {p1, v0}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
-    .line 132
+    .line 136
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentMenuView$1;->this$0:Lcom/miui/home/recents/views/RecentMenuView;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/RecentMenuView;->access$300(Lcom/miui/home/recents/views/RecentMenuView;)Lcom/miui/home/recents/views/TaskStackView;

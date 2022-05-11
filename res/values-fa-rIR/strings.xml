@@ -67,6 +67,7 @@
     <string name="all_apps_slide_up_tips">بالا کشیدن صفحه اصلی برای کشوی برنامه تنظیم شده است. به حالت صفحه اصلی تعویض کرده و دوباره تلاش کنید.</string>
     <string name="all_apps_suggestions">پیشنهاد برنامه</string>
     <string name="am">ق.ظ</string>
+    <string name="animation_rate_title">نرخ پویانمایی</string>
     <string name="announce_for_app_move_in_folder">به موقعیت %1$d در پوشه منتقل شد</string>
     <string name="announce_for_checked">%1$s، انتخاب شد</string>
     <string name="announce_for_choose_default_screen">تنظیم صفحه %1$d به عنوان صفحه اصلی پیش‌فرض</string>
@@ -609,11 +610,11 @@
     <string name="navigation_guide_recent_title">باز کردن موارد تازه</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">باز کردن موارد تازه</string>
     <string name="navigation_guide_settings">آموزش حرکات انگشت</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">مرکز</string>
+    <string name="navigation_position_left">چپ</string>
+    <string name="navigation_position_right">راست</string>
+    <string name="navigation_position_summary">موقعیت‌های سفارشی دکمه‌های پیمایش فقط می‌توانند در صفحه اصلی به‌کار برده شوند</string>
+    <string name="navigation_position_title">موقعیت دکمه‌های پیمایش</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">لغو</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">در لانچرهای سوم‌شخص نمی‌توان از اشارات تمام‌صفحه استفاده کرد. به لانچر سیستم تعویض و اشارات تمام صفحه روشن شود؟</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">تأیید</string>

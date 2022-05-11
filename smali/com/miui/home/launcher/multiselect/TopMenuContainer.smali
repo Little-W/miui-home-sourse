@@ -189,7 +189,7 @@
 
     const/4 v0, 0x3
 
-    .line 170
+    .line 177
     new-array v0, v0, [Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->getGoneState()Lcom/miui/home/launcher/multiselect/TopMenuState;
@@ -226,7 +226,7 @@
 .method static synthetic lambda$onWallpaperColorChanged$0(Lcom/miui/home/launcher/multiselect/TopMenuState;)V
     .locals 0
 
-    .line 177
+    .line 184
     invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/TopMenuState;->onWallpaperColorChanged()V
 
     return-void
@@ -237,10 +237,10 @@
 
     const/16 v0, 0x8
 
-    .line 72
+    .line 79
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->setVisibility(I)V
 
-    .line 73
+    .line 80
     sget-object v0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->GONE_STATE:Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->setTopMenuContainerTopMenuState(Lcom/miui/home/launcher/multiselect/TopMenuState;)V
@@ -251,7 +251,7 @@
 .method private setTopMenuContainerTopMenuState(Lcom/miui/home/launcher/multiselect/TopMenuState;)V
     .locals 0
 
-    .line 147
+    .line 154
     iput-object p1, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mTopMenuContainerTopMenuState:Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     return-void
@@ -262,7 +262,7 @@
 .method protected changeStateWhenPressed(Landroid/view/MotionEvent;)V
     .locals 3
 
-    .line 151
+    .line 158
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
@@ -277,7 +277,7 @@
 
     goto :goto_0
 
-    .line 154
+    .line 161
     :pswitch_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->isNormalState()Z
 
@@ -285,17 +285,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 155
+    .line 162
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->changeToPressedState(Z)V
 
-    .line 156
+    .line 163
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mTopMenuContainerAnim:Lcom/miui/home/launcher/multiselect/TopMenuContainerAnim;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/multiselect/TopMenuContainerAnim;->onTouchEvent(Landroid/view/MotionEvent;)V
 
     goto :goto_0
 
-    .line 161
+    .line 168
     :cond_0
     :pswitch_1
     invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->isPressedState()Z
@@ -304,10 +304,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 162
+    .line 169
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->changeToNormalState(Z)V
 
-    .line 163
+    .line 170
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mTopMenuContainerAnim:Lcom/miui/home/launcher/multiselect/TopMenuContainerAnim;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/multiselect/TopMenuContainerAnim;->onTouchEvent(Landroid/view/MotionEvent;)V
@@ -326,7 +326,7 @@
 .method public changeToGoneState(Z)V
     .locals 1
 
-    .line 109
+    .line 116
     invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->getGoneState()Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     move-result-object v0
@@ -339,7 +339,7 @@
 .method public changeToNormalState(Z)V
     .locals 1
 
-    .line 105
+    .line 112
     invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->getNormalState()Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     move-result-object v0
@@ -352,7 +352,7 @@
 .method public changeToPressedState(Z)V
     .locals 1
 
-    .line 101
+    .line 108
     invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->getPressedState()Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     move-result-object v0
@@ -365,7 +365,7 @@
 .method protected getGoneState()Lcom/miui/home/launcher/multiselect/TopMenuState;
     .locals 1
 
-    .line 117
+    .line 124
     sget-object v0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->GONE_STATE:Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     return-object v0
@@ -374,7 +374,7 @@
 .method protected getNormalState()Lcom/miui/home/launcher/multiselect/TopMenuState;
     .locals 1
 
-    .line 113
+    .line 120
     sget-object v0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->NORMAL_STATE:Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     return-object v0
@@ -383,7 +383,7 @@
 .method protected getPressedState()Lcom/miui/home/launcher/multiselect/TopMenuState;
     .locals 1
 
-    .line 139
+    .line 146
     sget-object v0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->PRESSED_STATE:Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     return-object v0
@@ -392,7 +392,7 @@
 .method protected isGoneState()Z
     .locals 2
 
-    .line 121
+    .line 128
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mTopMenuContainerTopMenuState:Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->getGoneState()Lcom/miui/home/launcher/multiselect/TopMenuState;
@@ -415,7 +415,7 @@
 .method protected isNormalState()Z
     .locals 2
 
-    .line 125
+    .line 132
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mTopMenuContainerTopMenuState:Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->getNormalState()Lcom/miui/home/launcher/multiselect/TopMenuState;
@@ -438,7 +438,7 @@
 .method protected isPressedState()Z
     .locals 2
 
-    .line 143
+    .line 150
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mTopMenuContainerTopMenuState:Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->getPressedState()Lcom/miui/home/launcher/multiselect/TopMenuState;
@@ -461,7 +461,7 @@
 .method protected isState(Lcom/miui/home/launcher/multiselect/TopMenuState;)Z
     .locals 1
 
-    .line 129
+    .line 136
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mTopMenuContainerTopMenuState:Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     if-ne v0, p1, :cond_0
@@ -480,12 +480,12 @@
 .method protected onFinishInflate()V
     .locals 1
 
-    .line 63
+    .line 70
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a029f
+    const v0, 0x7f0a02a6
 
-    .line 64
+    .line 71
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -497,13 +497,54 @@
     return-void
 .end method
 
+.method protected onLayout(ZIIII)V
+    .locals 0
+
+    .line 63
+    invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
+
+    .line 64
+    invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->getWidth()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    const/high16 p2, 0x40000000    # 2.0f
+
+    div-float/2addr p1, p2
+
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->setPivotX(F)V
+
+    .line 65
+    invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->getHeight()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->getWidth()I
+
+    move-result p3
+
+    int-to-float p3, p3
+
+    div-float/2addr p3, p2
+
+    sub-float/2addr p1, p3
+
+    invoke-virtual {p0, p1}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->setPivotY(F)V
+
+    return-void
+.end method
+
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
-    .line 134
+    .line 141
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->changeStateWhenPressed(Landroid/view/MotionEvent;)V
 
-    .line 135
+    .line 142
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -514,7 +555,7 @@
 .method public onWallpaperColorChanged()V
     .locals 3
 
-    .line 175
+    .line 182
     invoke-direct {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->getAllTopMenuStates()Ljava/util/List;
 
     move-result-object v0
@@ -525,20 +566,20 @@
 
     sget-object v1, Lcom/miui/home/launcher/multiselect/-$$Lambda$TopMenuContainer$T1wO_RwXNWMwEmFwUWU5aY58Ewo;->INSTANCE:Lcom/miui/home/launcher/multiselect/-$$Lambda$TopMenuContainer$T1wO_RwXNWMwEmFwUWU5aY58Ewo;
 
-    .line 176
+    .line 183
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
-    .line 179
+    .line 186
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mTopMenuContainerTopMenuState:Lcom/miui/home/launcher/multiselect/TopMenuState;
 
-    .line 180
+    .line 187
     sget-object v1, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->GONE_STATE:Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     const/4 v2, 0x0
 
     invoke-virtual {p0, v1, v2}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->updateContainer(Lcom/miui/home/launcher/multiselect/TopMenuState;Z)V
 
-    .line 181
+    .line 188
     invoke-virtual {p0, v0, v2}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->updateContainer(Lcom/miui/home/launcher/multiselect/TopMenuState;Z)V
 
     return-void
@@ -547,7 +588,7 @@
 .method protected setImageResource(I)V
     .locals 1
 
-    .line 68
+    .line 75
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mImageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -558,24 +599,24 @@
 .method protected updateContainer(Lcom/miui/home/launcher/multiselect/TopMenuState;Z)V
     .locals 3
 
-    .line 77
+    .line 84
     iget-object v0, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mTopMenuContainerTopMenuState:Lcom/miui/home/launcher/multiselect/TopMenuState;
 
     if-eq v0, p1, :cond_3
 
     if-eqz p1, :cond_3
 
-    .line 79
+    .line 86
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->setTopMenuContainerTopMenuState(Lcom/miui/home/launcher/multiselect/TopMenuState;)V
 
-    .line 80
+    .line 87
     invoke-virtual {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->isGoneState()Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    .line 82
+    .line 89
     iget-object p1, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mTopMenuContainerAnim:Lcom/miui/home/launcher/multiselect/TopMenuContainerAnim;
 
     instance-of p1, p1, Lcom/miui/home/launcher/multiselect/TopMenuContainerFolmeAnim;
@@ -587,10 +628,10 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 83
+    .line 90
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->setVisibility(I)V
 
-    .line 87
+    .line 94
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->TAG:Ljava/lang/String;
 
@@ -632,7 +673,7 @@
 
     if-eqz p2, :cond_2
 
-    .line 89
+    .line 96
     iget-object p1, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mTopMenuContainerAnim:Lcom/miui/home/launcher/multiselect/TopMenuContainerAnim;
 
     iget-object p2, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mTopMenuContainerTopMenuState:Lcom/miui/home/launcher/multiselect/TopMenuState;
@@ -641,7 +682,7 @@
 
     goto :goto_0
 
-    .line 91
+    .line 98
     :cond_2
     iget-object p1, p0, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->mTopMenuContainerAnim:Lcom/miui/home/launcher/multiselect/TopMenuContainerAnim;
 

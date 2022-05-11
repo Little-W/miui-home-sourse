@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView$23;)V
     .locals 0
 
-    .line 4901
+    .line 4865
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$23$2;->this$1:Lcom/miui/home/recents/NavStubView$23;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 4904
+    .line 4868
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$23$2;->this$1:Lcom/miui/home/recents/NavStubView$23;
 
     iget-object v0, v0, Lcom/miui/home/recents/NavStubView$23;->this$0:Lcom/miui/home/recents/NavStubView;

@@ -22,6 +22,9 @@
 .method public abstract initCloudConfigForMiuiHome(Landroid/content/Context;)V
 .end method
 
+.method public abstract initPocoBranchOnScrollUpEnd(Lcom/mi/globallauncher/branchInterface/PocoBranchInitInterface;Landroid/app/Activity;Z)V
+.end method
+
 .method public abstract onTerminate()V
 .end method
 

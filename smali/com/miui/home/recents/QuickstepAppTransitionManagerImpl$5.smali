@@ -28,7 +28,7 @@
 .method constructor <init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/launcher/Launcher;Landroid/view/View;)V
     .locals 0
 
-    .line 1377
+    .line 1384
     iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     iput-object p2, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->val$launcher:Lcom/miui/home/launcher/Launcher;
@@ -39,7 +39,7 @@
 
     const/4 p1, 0x0
 
-    .line 1412
+    .line 1419
     iput-boolean p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->isCanceled:Z
 
     return-void
@@ -50,7 +50,7 @@
 
     const-string v0, "QuickstepAppTransitionManagerImpl"
 
-    .line 1426
+    .line 1433
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -69,18 +69,18 @@
 
     if-eqz p1, :cond_0
 
-    .line 1428
+    .line 1435
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->resetShortcutIconAlpha(Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
 
-    .line 1429
+    .line 1436
     invoke-interface {p1}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->onEnterHomeAnimFinish()V
 
-    .line 1430
+    .line 1437
     invoke-virtual {p2}, Lcom/miui/home/launcher/Launcher;->clearCurSelectedShortcutIcon()V
 
-    .line 1432
+    .line 1439
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
@@ -90,7 +90,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 1433
+    .line 1440
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$1900(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Lcom/miui/home/recents/FloatingIconLayer;
@@ -106,7 +106,7 @@
 .method public static synthetic lambda$onAnimationStart$0(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;)V
     .locals 2
 
-    .line 1401
+    .line 1408
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     const/4 v1, 0x0
@@ -117,7 +117,7 @@
 
     invoke-static {v0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$1902(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/FloatingIconLayer;)Lcom/miui/home/recents/FloatingIconLayer;
 
-    .line 1402
+    .line 1409
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$1900(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Lcom/miui/home/recents/FloatingIconLayer;
@@ -126,14 +126,14 @@
 
     if-eqz p1, :cond_1
 
-    .line 1403
+    .line 1410
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     iget-boolean p1, p1, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIsClosingAnimRunning:Z
 
     if-eqz p1, :cond_0
 
-    .line 1404
+    .line 1411
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     invoke-static {p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$1900(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Lcom/miui/home/recents/FloatingIconLayer;
@@ -144,7 +144,7 @@
 
     goto :goto_0
 
-    .line 1406
+    .line 1413
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
@@ -166,10 +166,10 @@
 
     const/4 v0, 0x1
 
-    .line 1447
+    .line 1454
     iput-boolean v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->isCanceled:Z
 
-    .line 1448
+    .line 1455
     invoke-virtual {p0, p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->onAnimationEnd(Landroid/animation/Animator;)V
 
     return-void
@@ -178,14 +178,14 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 4
 
-    .line 1415
+    .line 1422
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     const/4 v0, 0x0
 
     iput-boolean v0, p1, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIsClosingAnimRunning:Z
 
-    .line 1416
+    .line 1423
     invoke-static {p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$700(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Ljava/lang/ref/WeakReference;
 
     move-result-object p1
@@ -206,7 +206,7 @@
 
     goto :goto_1
 
-    .line 1419
+    .line 1426
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
@@ -220,21 +220,21 @@
 
     check-cast p1, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;
 
-    .line 1420
+    .line 1427
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$702(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Ljava/lang/ref/WeakReference;)Ljava/lang/ref/WeakReference;
 
-    .line 1421
+    .line 1428
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isUseSimpleAnim()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 1422
+    .line 1429
     iget-boolean v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->isCanceled:Z
 
     if-eqz v0, :cond_1
@@ -247,7 +247,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1423
+    .line 1430
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     invoke-static {v0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$1900(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Lcom/miui/home/recents/FloatingIconLayer;
@@ -262,7 +262,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/FloatingIconLayer;->hideFloatingIcon(Lcom/android/systemui/shared/recents/system/SurfaceControlCompat;)V
 
-    .line 1425
+    .line 1432
     :cond_1
     sget-object v0, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 
@@ -281,15 +281,15 @@
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 1438
+    .line 1445
     invoke-interface {p1}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->onEnterHomeAnimFinish()V
 
-    .line 1439
+    .line 1446
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->clearCurSelectedShortcutIcon()V
 
-    .line 1442
+    .line 1449
     :cond_3
     :goto_0
     invoke-static {}, Lcom/miui/home/recents/util/TraceUtils;->endSection()V
@@ -306,17 +306,17 @@
 
     const-string p1, "appToHomeAnim"
 
-    .line 1380
+    .line 1387
     invoke-static {p1}, Lcom/miui/home/recents/util/TraceUtils;->beginSection(Ljava/lang/String;)V
 
-    .line 1381
+    .line 1388
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     const/4 v0, 0x1
 
     iput-boolean v0, p1, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->mIsClosingAnimRunning:Z
 
-    .line 1382
+    .line 1389
     invoke-static {p1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$700(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)Ljava/lang/ref/WeakReference;
 
     move-result-object p1
@@ -337,7 +337,7 @@
 
     goto/16 :goto_1
 
-    .line 1385
+    .line 1392
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
@@ -351,12 +351,12 @@
 
     check-cast p1, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;
 
-    .line 1386
+    .line 1393
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     if-eqz v0, :cond_2
 
-    .line 1387
+    .line 1394
     iget-object v1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
@@ -371,7 +371,7 @@
 
     invoke-static {v1, v0}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$1702(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;F)F
 
-    .line 1388
+    .line 1395
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     iget-object v1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->val$launcher:Lcom/miui/home/launcher/Launcher;
@@ -384,7 +384,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 1389
+    .line 1396
     iget-object v1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->val$launcher:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Launcher;->getMinusOneScreenView()Lcom/miui/home/launcher/MinusOneScreenView;
@@ -402,13 +402,13 @@
     :cond_1
     move v1, v2
 
-    .line 1388
+    .line 1395
     :goto_0
     invoke-static {v0, v1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$1802(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;F)F
 
     const-string v0, "QuickstepAppTransitionManagerImpl"
 
-    .line 1390
+    .line 1397
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -427,17 +427,17 @@
 
     if-eqz p1, :cond_2
 
-    .line 1392
+    .line 1399
     invoke-interface {p1}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->getIconImageView()Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1393
+    .line 1400
     invoke-interface {p1}, Lcom/miui/home/launcher/anim/LaunchAppAndBackHomeAnimTarget;->onEnterHomeAnimStart()V
 
-    .line 1396
+    .line 1403
     :cond_2
     invoke-static {}, Lcom/miui/home/recents/DimLayer;->getInstance()Lcom/miui/home/recents/DimLayer;
 
@@ -445,21 +445,21 @@
 
     invoke-virtual {v0}, Lcom/miui/home/recents/DimLayer;->createDimLayer()V
 
-    .line 1398
+    .line 1405
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isUseSimpleAnim()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 1399
+    .line 1406
     iget-object v0, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$5;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;->access$1902(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;Lcom/miui/home/recents/FloatingIconLayer;)Lcom/miui/home/recents/FloatingIconLayer;
 
-    .line 1400
+    .line 1407
     sget-object v0, Lcom/miui/home/recents/FloatingIconLayer;->FLOATING_ICON_EXECUTOR:Lcom/miui/home/library/utils/LooperExecutor;
 
     new-instance v1, Lcom/miui/home/recents/-$$Lambda$QuickstepAppTransitionManagerImpl$5$8xAi3m5cx8lu7pY6luYCDcX1TNQ;

@@ -338,7 +338,7 @@
 
     invoke-virtual {p2, v0}, Lcom/miui/home/launcher/allapps/AllAppsRecyclerView;->setLetterScrollerEnable(Z)V
 
-    const p2, 0x7f0a0106
+    const p2, 0x7f0a0108
 
     .line 47
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

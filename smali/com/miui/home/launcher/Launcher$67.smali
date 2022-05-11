@@ -31,7 +31,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V
     .locals 0
 
-    .line 7527
+    .line 7512
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$67;->val$sender:Ljava/lang/String;
@@ -50,23 +50,23 @@
 .method public run()V
     .locals 5
 
-    .line 7530
+    .line 7515
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$67;->val$sender:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$67;->val$name:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/Launcher;->access$8400(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-static {v0, v1, v2}, Lcom/miui/home/launcher/Launcher;->access$8100(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 7531
+    .line 7516
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 7532
+    .line 7517
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -85,7 +85,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 7533
+    .line 7518
     iget-object v3, p0, Lcom/miui/home/launcher/Launcher$67;->val$sender:Ljava/lang/String;
 
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -106,26 +106,26 @@
 
     if-eqz v3, :cond_0
 
-    .line 7534
+    .line 7519
     iget-object v3, p0, Lcom/miui/home/launcher/Launcher$67;->val$context:Landroid/content/Context;
 
     invoke-static {v3, v2}, Lcom/miui/home/launcher/LauncherModel;->deleteItemFromDatabase(Landroid/content/Context;Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 7535
+    .line 7520
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 7538
+    .line 7523
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->bindShortcutsRemoved(Ljava/util/ArrayList;)V
 
-    .line 7539
+    .line 7524
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$8500(Lcom/miui/home/launcher/Launcher;Ljava/util/List;)V
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$8200(Lcom/miui/home/launcher/Launcher;Ljava/util/List;)V
 
     return-void
 .end method

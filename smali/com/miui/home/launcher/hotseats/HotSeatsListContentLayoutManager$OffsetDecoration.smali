@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;)V
     .locals 0
 
-    .line 151
+    .line 152
     iput-object p1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager$OffsetDecoration;->this$0:Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager$1;)V
     .locals 0
 
-    .line 151
+    .line 152
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager$OffsetDecoration;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;)V
 
     return-void
@@ -44,7 +44,7 @@
 .method public getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
     .locals 0
 
-    .line 155
+    .line 156
     invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getMeasuredHeight()I
 
     move-result p3
@@ -59,7 +59,7 @@
 
     iput p3, p1, Landroid/graphics/Rect;->top:I
 
-    .line 156
+    .line 157
     iget-object p3, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager$OffsetDecoration;->this$0:Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;
 
     invoke-static {p3, p2}, Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;->access$100(Lcom/miui/home/launcher/hotseats/HotSeatsListContentLayoutManager;Landroid/view/View;)F

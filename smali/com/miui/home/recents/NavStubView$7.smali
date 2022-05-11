@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 2235
+    .line 2227
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$7;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onGlobalLayout()V
     .locals 2
 
-    .line 2238
+    .line 2230
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$7;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
@@ -59,7 +59,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 2239
+    .line 2231
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$7;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3600(Lcom/miui/home/recents/NavStubView;)V

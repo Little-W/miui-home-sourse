@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">Deslizar para cima é uma ação reservada para abrir a Gaveta de aplicações. Mude para o modo Regular do Ecrã inicial e tente novamente.</string>
     <string name="all_apps_suggestions">Sugestões de aplicações</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">Movido para a posição %1$d na pasta</string>
     <string name="announce_for_checked">%1$s, selecionado</string>
     <string name="announce_for_choose_default_screen">Selecionar ecrã %1$d com Ecrã inicial predefinido</string>
@@ -639,11 +640,11 @@
     <string name="navigation_guide_recent_title">Abrir aplicações recentes</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Abrir aplicações recentes</string>
     <string name="navigation_guide_settings">Demos de gestos</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">Centro</string>
+    <string name="navigation_position_left">Esquerda</string>
+    <string name="navigation_position_right">Direita</string>
+    <string name="navigation_position_summary">A posição personalizada dos botões de navegação só pode ser aplicada ao Ecrã inicial</string>
+    <string name="navigation_position_title">Posição dos botões de navegação</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Cancelar</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Não é possível utilizar os Gestos de Ecrã infinito com launchers de terceiros. Mudar para o launcher do sistema e ligar os Gestos de Ecrã infinito?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">OK</string>

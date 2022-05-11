@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Z)V
     .locals 0
 
-    .line 5422
+    .line 5401
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$50;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-boolean p2, p0, Lcom/miui/home/launcher/Launcher$50;->val$isLoadingViewGoOut:Z
@@ -39,15 +39,15 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 5424
+    .line 5403
     iget-boolean p1, p0, Lcom/miui/home/launcher/Launcher$50;->val$isLoadingViewGoOut:Z
 
     if-eqz p1, :cond_0
 
-    .line 5425
+    .line 5404
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$50;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$7300(Lcom/miui/home/launcher/Launcher;)Landroid/view/ViewGroup;
+    invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$7000(Lcom/miui/home/launcher/Launcher;)Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -59,18 +59,18 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$50;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$7300(Lcom/miui/home/launcher/Launcher;)Landroid/view/ViewGroup;
+    invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$7000(Lcom/miui/home/launcher/Launcher;)Landroid/view/ViewGroup;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 5426
+    .line 5405
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$50;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$7302(Lcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;)Landroid/view/ViewGroup;
+    invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$7002(Lcom/miui/home/launcher/Launcher;Landroid/view/ViewGroup;)Landroid/view/ViewGroup;
 
     :cond_0
     return-void

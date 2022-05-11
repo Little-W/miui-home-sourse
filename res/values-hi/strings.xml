@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">ऐप्प तिजोरी खोलने के लिए ऊपर स्वाइप करना आरक्षित है. सामान्य होम स्क्रीन मोड पर जाएंं और फिर से कोशिश करें.</string>
     <string name="all_apps_suggestions">ऐप्प सुझाव</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">ऐनिमेशन दर</string>
     <string name="announce_for_app_move_in_folder">फ़ोल्डर में %1$d स्थिति पर ले जाया गया</string>
     <string name="announce_for_checked">%1$s, जांची गई</string>
     <string name="announce_for_choose_default_screen">स्क्रीन %1$d को डिफ़ॉल्ट होम स्क्रीन के रूप में सेट करें</string>
@@ -639,11 +640,11 @@
     <string name="navigation_guide_recent_title">हाल ही में देखे गए स्क्रीन खोलें</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">हाल ही के खोलें</string>
     <string name="navigation_guide_settings">इशारों का डेमो</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">केंद्र</string>
+    <string name="navigation_position_left">बाएं</string>
+    <string name="navigation_position_right">दाएं</string>
+    <string name="navigation_position_summary">नेविगेशन बटन की कस्टम पोजीशन सिर्फ़ होम स्क्रीन पर लागू की जा सकती है</string>
+    <string name="navigation_position_title">नेविगेशन बटन पोजीशन</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">रद्द करें</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">तृतीय पक्ष लॉन्चर के साथ पूर्ण स्क्रीन इशारों का उपयोग नहीं किया जा सकता. सिस्टम लॉन्चर का इस्तेमाल करें और पूर्ण स्क्रीन इशारे चालू करें?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">ठीक</string>

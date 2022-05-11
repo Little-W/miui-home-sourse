@@ -22,15 +22,19 @@
 
 .field final synthetic val$linkResult:Lio/branch/search/BranchLinkResult;
 
+.field final synthetic val$packageName:Ljava/lang/String;
+
 
 # direct methods
-.method constructor <init>(Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;Lio/branch/search/BranchLinkResult;)V
+.method constructor <init>(Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;Ljava/lang/String;Lio/branch/search/BranchLinkResult;)V
     .locals 0
 
     .line 90
     iput-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder$1;->this$0:Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;
 
-    iput-object p2, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder$1;->val$linkResult:Lio/branch/search/BranchLinkResult;
+    iput-object p2, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder$1;->val$packageName:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder$1;->val$linkResult:Lio/branch/search/BranchLinkResult;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,6 +47,16 @@
     .locals 2
 
     .line 93
+    iget-object p1, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder$1;->val$packageName:Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackGpOrGetApps(Ljava/lang/String;)V
+
+    const/4 p1, 0x5
+
+    .line 94
+    invoke-static {p1}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchSearchResultClick(I)V
+
+    .line 95
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchSearchResultUtils()Lcom/mi/globallauncher/branchInterface/IBranchSearchResultUtils;
 
     move-result-object p1

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
     .locals 0
 
-    .line 670
+    .line 697
     iput-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$13;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +40,10 @@
 
     const/4 p1, 0x0
 
-    .line 674
+    .line 701
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackPersonalAssistantSwitch(Z)V
 
-    .line 675
+    .line 702
     iget-object p2, p0, Lcom/miui/home/settings/MiuiHomeSettings$13;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-virtual {p2}, Lcom/miui/home/settings/MiuiHomeSettings;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -56,7 +56,7 @@
 
     invoke-static {p2, v0, p1}, Lcom/miui/home/settings/MiuiHomeSettings;->access$400(Lcom/miui/home/settings/MiuiHomeSettings;Landroid/content/ContentResolver;Z)V
 
-    .line 676
+    .line 703
     iget-object p2, p0, Lcom/miui/home/settings/MiuiHomeSettings$13;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-static {p2}, Lcom/miui/home/settings/MiuiHomeSettings;->access$500(Lcom/miui/home/settings/MiuiHomeSettings;)Lmiuix/appcompat/app/AlertDialog;
@@ -65,7 +65,7 @@
 
     invoke-virtual {p2}, Lmiuix/appcompat/app/AlertDialog;->dismiss()V
 
-    .line 677
+    .line 704
     iget-object p2, p0, Lcom/miui/home/settings/MiuiHomeSettings$13;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     iget-object p2, p2, Lcom/miui/home/settings/MiuiHomeSettings;->mOpenPersonalAssistantSettings:Lcom/miui/home/settings/preference/ValuePreference;

@@ -93,6 +93,7 @@
     <string name="all_apps_slide_up_tips">抽屉模式下上滑手势已被占用，请切换为标准模式后设置</string>
     <string name="all_apps_suggestions">应用建议</string>
     <string name="am">上午</string>
+    <string name="animation_rate_title">动画速率</string>
     <string name="announce_for_app_move_in_folder">移动至文件夹内的第%1$d个位置</string>
     <string name="announce_for_checked">%1$s，已选中</string>
     <string name="announce_for_choose_default_screen">已将第%1$d屏设置为主屏</string>
@@ -426,7 +427,6 @@
     <string name="gadget_weather_title">天气</string>
     <string name="gadget_weather_title_14">天气4X1</string>
     <string name="gadget_weather_title_24">天气4X2</string>
-    <string name="garbage_count">共有 %1$s 个对象没有回收</string>
     <string name="global_search_hint">点击搜索</string>
     <string name="got_it_botton">我知道了</string>
     <string name="group_folder">新建文件夹</string>
@@ -493,7 +493,6 @@
     <string name="memory_clear_result">成功释放了%1$s内存</string>
     <string name="memory_clear_result_giga">成功释放了%1$sG内存</string>
     <string name="memory_clear_result_mega">成功释放了%1$sM内存</string>
-    <string name="memory_leak">内存泄漏</string>
     <string name="menu_add">添加</string>
     <string name="menu_auto_fill_of_uninstall">卸载应用后自动补位</string>
     <string name="menu_back_desktop">返回桌面</string>
@@ -659,7 +658,6 @@
     <string name="noon">中午</string>
     <string name="normal_wallpaper">桌面壁纸</string>
     <string name="not_set">未设置</string>
-    <string name="notification_channel_alerts">提醒</string>
     <string name="notification_installed">成功安装</string>
     <string name="notification_open_button">打开</string>
     <string name="notification_reset_title">桌面图标整理完毕</string>

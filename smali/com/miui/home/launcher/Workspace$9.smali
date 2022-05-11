@@ -37,7 +37,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;Ljava/util/HashMap;)V
     .locals 0
 
-    .line 2456
+    .line 2475
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$9;->this$0:Lcom/miui/home/launcher/Workspace;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Workspace$9;->val$categoryFolder:Ljava/util/HashMap;
@@ -52,7 +52,7 @@
 .method public apply(Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 6
 
-    .line 2459
+    .line 2478
     iget-object p1, p0, Lcom/miui/home/launcher/Workspace$9;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Workspace;->access$800(Lcom/miui/home/launcher/Workspace;)Ljava/util/ArrayList;
@@ -79,15 +79,15 @@
 
     check-cast v0, Lcom/miui/home/launcher/ItemInfo;
 
-    .line 2460
+    .line 2479
     instance-of v2, v0, Lcom/miui/home/launcher/FolderInfo;
 
     if-eqz v2, :cond_3
 
-    .line 2461
+    .line 2480
     check-cast v0, Lcom/miui/home/launcher/FolderInfo;
 
-    .line 2462
+    .line 2481
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$9;->val$categoryFolder:Ljava/util/HashMap;
 
     const/4 v2, 0x0
@@ -102,7 +102,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 2463
+    .line 2482
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$9;->val$categoryFolder:Ljava/util/HashMap;
 
     invoke-virtual {v0, v2}, Lcom/miui/home/launcher/FolderInfo;->getTitle(Landroid/content/Context;)Ljava/lang/CharSequence;
@@ -115,7 +115,7 @@
 
     check-cast v1, Lcom/miui/home/launcher/FolderInfo;
 
-    .line 2464
+    .line 2483
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->getContents()Ljava/util/List;
 
     move-result-object v2
@@ -137,14 +137,14 @@
 
     check-cast v3, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 2465
+    .line 2484
     iget-object v4, p0, Lcom/miui/home/launcher/Workspace$9;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {v4, v3, v1}, Lcom/miui/home/launcher/Workspace;->access$900(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/FolderInfo;)V
 
     goto :goto_1
 
-    .line 2467
+    .line 2486
     :cond_1
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$9;->this$0:Lcom/miui/home/launcher/Workspace;
 
@@ -156,7 +156,7 @@
 
     goto :goto_0
 
-    .line 2469
+    .line 2488
     :cond_2
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$9;->val$categoryFolder:Ljava/util/HashMap;
 
@@ -170,7 +170,7 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2470
+    .line 2489
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$9;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/FolderInfo;->getBuddyIconView()Lcom/miui/home/launcher/FolderIcon;
@@ -181,23 +181,23 @@
 
     goto :goto_0
 
-    .line 2472
+    .line 2491
     :cond_3
     instance-of v2, v0, Lcom/miui/home/launcher/ShortcutInfo;
 
     if-eqz v2, :cond_0
 
-    .line 2473
+    .line 2492
     check-cast v0, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 2474
+    .line 2493
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->isShortcut()Z
 
     move-result v2
 
     if-nez v2, :cond_4
 
-    .line 2475
+    .line 2494
     invoke-static {}, Lcom/miui/home/launcher/common/AppCategoryManager;->getInstance()Lcom/miui/home/launcher/common/AppCategoryManager;
 
     move-result-object v2
@@ -222,7 +222,7 @@
 
     move-result-object v1
 
-    .line 2476
+    .line 2495
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace$9;->this$0:Lcom/miui/home/launcher/Workspace;
 
     iget-object v3, p0, Lcom/miui/home/launcher/Workspace$9;->val$categoryFolder:Ljava/util/HashMap;
@@ -231,7 +231,7 @@
 
     goto/16 :goto_0
 
-    .line 2477
+    .line 2496
     :cond_4
     invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->isHybridApp()Z
 
@@ -239,20 +239,20 @@
 
     if-eqz v1, :cond_5
 
-    .line 2479
+    .line 2498
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$9;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/Workspace;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f100354
+    const v2, 0x7f100353
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2480
+    .line 2499
     iget-object v2, p0, Lcom/miui/home/launcher/Workspace$9;->this$0:Lcom/miui/home/launcher/Workspace;
 
     iget-object v3, p0, Lcom/miui/home/launcher/Workspace$9;->val$categoryFolder:Ljava/util/HashMap;
@@ -261,7 +261,7 @@
 
     goto/16 :goto_0
 
-    .line 2483
+    .line 2502
     :cond_5
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$9;->this$0:Lcom/miui/home/launcher/Workspace;
 
@@ -273,7 +273,7 @@
 
     goto/16 :goto_0
 
-    .line 2487
+    .line 2506
     :cond_6
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -285,7 +285,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 2456
+    .line 2475
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Workspace$9;->apply(Ljava/lang/Void;)Ljava/lang/Boolean;

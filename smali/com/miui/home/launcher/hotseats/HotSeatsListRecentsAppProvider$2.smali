@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
     .locals 0
 
-    .line 57
+    .line 58
     iput-object p1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$2;->this$0:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;
 
     invoke-direct {p0}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListener;-><init>()V
@@ -35,10 +35,10 @@
 .method public onTaskStackChangedBackground()V
     .locals 1
 
-    .line 60
+    .line 61
     iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$2;->this$0:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;
 
-    invoke-static {v0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->access$300(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
+    invoke-static {v0}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->access$200(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;)V
 
     return-void
 .end method

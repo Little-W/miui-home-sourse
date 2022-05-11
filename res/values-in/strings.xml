@@ -94,6 +94,7 @@
     <string name="all_apps_slide_up_tips">Gerakan menggeser ke atas telah dipakai untuk membuka Laci aplikasi. Berganti ke mode Layar utama reguler dan coba lagi.</string>
     <string name="all_apps_suggestions">Rekomendasi aplikasi</string>
     <string name="am">AM</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">Dipindahkan ke posisi %1$d di folder</string>
     <string name="announce_for_checked">%1$s, dipilih</string>
     <string name="announce_for_choose_default_screen">Setel layar %1$d sebagai Layar utama bawaan</string>
@@ -639,11 +640,11 @@
     <string name="navigation_guide_recent_title">Buka bagian Terkini</string>
     <string name="navigation_guide_recent_title_spec_with_quotation_pad">Buka bagian Terkini</string>
     <string name="navigation_guide_settings">Demonstrasi gerakan</string>
-    <string name="navigation_position_center">Center</string>
-    <string name="navigation_position_left">Left</string>
-    <string name="navigation_position_right">Right</string>
-    <string name="navigation_position_summary">Custom positions of navigation buttons can only be applied to Home screen</string>
-    <string name="navigation_position_title">Navigation buttons position</string>
+    <string name="navigation_position_center">Tengah</string>
+    <string name="navigation_position_left">Kiri</string>
+    <string name="navigation_position_right">Kanan</string>
+    <string name="navigation_position_summary">Posisi kustom tombol navigasi hanya dapat diterapkan ke Layar utama</string>
+    <string name="navigation_position_title">Posisi tombol navigasi</string>
     <string name="navigation_set_miui_home_as_default_dialog_cancel">Batal</string>
     <string name="navigation_set_miui_home_as_default_dialog_message">Tidak dapat menggunakan gerakan layar penuh dengan peluncur pihak ketiga. Beralih ke peluncur sistem dan hidupkan gerakan layar penuh?</string>
     <string name="navigation_set_miui_home_as_default_dialog_ok">Oke</string>

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 7499
+    .line 7484
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$66;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,16 +38,16 @@
 .method public run()V
     .locals 2
 
-    .line 7502
+    .line 7487
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$66;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/16 v1, 0xe
 
-    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$8300(Lcom/miui/home/launcher/Launcher;I)Ljava/util/ArrayList;
+    invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$8000(Lcom/miui/home/launcher/Launcher;I)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 7503
+    .line 7488
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$66;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/Launcher;->bindGadgetsRemoved(Ljava/util/ArrayList;)V

@@ -187,7 +187,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    const v0, 0x7f0a0096
+    const v0, 0x7f0a0097
 
     .line 184
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherMenu;->findViewById(I)Landroid/view/View;
@@ -198,7 +198,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mCellType1:Landroid/widget/Button;
 
-    const v0, 0x7f0a0097
+    const v0, 0x7f0a0098
 
     .line 185
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherMenu;->findViewById(I)Landroid/view/View;
@@ -209,7 +209,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mCellType2:Landroid/widget/Button;
 
-    const v0, 0x7f0a0098
+    const v0, 0x7f0a0099
 
     .line 186
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherMenu;->findViewById(I)Landroid/view/View;
@@ -614,7 +614,7 @@
     .line 68
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a0194
+    const v0, 0x7f0a0197
 
     .line 69
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherMenu;->findViewById(I)Landroid/view/View;
@@ -625,7 +625,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mNoWordSetting:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0195
+    const v0, 0x7f0a0198
 
     .line 70
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherMenu;->findViewById(I)Landroid/view/View;
@@ -653,7 +653,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     :cond_0
-    const v0, 0x7f0a0189
+    const v0, 0x7f0a018c
 
     .line 74
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherMenu;->findViewById(I)Landroid/view/View;
@@ -664,7 +664,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mDefaultScreenPreview:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0188
+    const v0, 0x7f0a018b
 
     .line 75
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherMenu;->findViewById(I)Landroid/view/View;
@@ -675,7 +675,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mCellsSetting:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0187
+    const v0, 0x7f0a018a
 
     .line 76
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherMenu;->findViewById(I)Landroid/view/View;
@@ -686,7 +686,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mAutoFill:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0192
+    const v0, 0x7f0a0195
 
     .line 77
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherMenu;->findViewById(I)Landroid/view/View;
@@ -697,7 +697,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mLock:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0193
+    const v0, 0x7f0a0196
 
     .line 78
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherMenu;->findViewById(I)Landroid/view/View;
@@ -708,7 +708,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mMore:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a01ad
+    const v0, 0x7f0a01b1
 
     .line 79
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherMenu;->findViewById(I)Landroid/view/View;
@@ -730,7 +730,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mAutoFillSlidingButton:Lmiuix/slidingwidget/widget/SlidingButton;
 
-    const v0, 0x7f0a0179
+    const v0, 0x7f0a017c
 
     .line 81
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/LauncherMenu;->findViewById(I)Landroid/view/View;
@@ -893,7 +893,7 @@
     .line 174
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mMenuTransEffect:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f0801ec
+    const v1, 0x7f0801eb
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
@@ -906,7 +906,7 @@
     .line 177
     iget-object v0, p0, Lcom/miui/home/launcher/LauncherMenu;->mMenuTransEffect:Landroid/widget/LinearLayout;
 
-    const v1, 0x7f0801eb
+    const v1, 0x7f0801ea
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 

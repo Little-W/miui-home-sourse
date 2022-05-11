@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 4880
+    .line 4844
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$23;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,14 +35,14 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 4900
+    .line 4864
     sget-object p1, Lcom/miui/home/recents/NavStubView;->TAG:Ljava/lang/String;
 
     const-string v0, "NavStubView::startAppToWorldCirculate = onAnimationCancel"
 
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4901
+    .line 4865
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$23;->this$0:Lcom/miui/home/recents/NavStubView;
 
     new-instance v0, Lcom/miui/home/recents/NavStubView$23$2;
@@ -59,7 +59,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 4884
+    .line 4848
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$23;->this$0:Lcom/miui/home/recents/NavStubView;
 
     new-instance v0, Lcom/miui/home/recents/NavStubView$23$1;
@@ -70,7 +70,7 @@
 
     invoke-virtual {p1, v1, v0}, Lcom/miui/home/recents/NavStubView;->finish(ZLjava/lang/Runnable;)V
 
-    .line 4890
+    .line 4854
     invoke-static {}, Lcom/miui/home/recents/util/TraceUtils;->endSection()V
 
     return-void
@@ -81,7 +81,7 @@
 
     const-string p1, "appToWorldCirculateAim"
 
-    .line 4895
+    .line 4859
     invoke-static {p1}, Lcom/miui/home/recents/util/TraceUtils;->beginSection(Ljava/lang/String;)V
 
     return-void

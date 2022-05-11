@@ -277,51 +277,51 @@
 
 .field public static final ic_contact_photo_mask:I = 0x7f0801b2
 
-.field public static final miuix_appcompat_number_picker_bg:I = 0x7f080440
+.field public static final miuix_appcompat_number_picker_bg:I = 0x7f08043f
 
-.field public static final miuix_appcompat_number_picker_bg_dark:I = 0x7f080441
+.field public static final miuix_appcompat_number_picker_bg_dark:I = 0x7f080440
 
-.field public static final miuix_appcompat_number_picker_bg_normal:I = 0x7f080442
+.field public static final miuix_appcompat_number_picker_bg_normal:I = 0x7f080441
 
-.field public static final miuix_appcompat_number_picker_bg_normal_dark:I = 0x7f080443
+.field public static final miuix_appcompat_number_picker_bg_normal_dark:I = 0x7f080442
 
-.field public static final notification_action_background:I = 0x7f080525
+.field public static final notification_action_background:I = 0x7f080524
 
-.field public static final notification_bg:I = 0x7f080527
+.field public static final notification_bg:I = 0x7f080526
 
-.field public static final notification_bg_low:I = 0x7f080528
+.field public static final notification_bg_low:I = 0x7f080527
 
-.field public static final notification_bg_low_normal:I = 0x7f080529
+.field public static final notification_bg_low_normal:I = 0x7f080528
 
-.field public static final notification_bg_low_pressed:I = 0x7f08052a
+.field public static final notification_bg_low_pressed:I = 0x7f080529
 
-.field public static final notification_bg_normal:I = 0x7f08052b
+.field public static final notification_bg_normal:I = 0x7f08052a
 
-.field public static final notification_bg_normal_pressed:I = 0x7f08052c
+.field public static final notification_bg_normal_pressed:I = 0x7f08052b
 
-.field public static final notification_icon_background:I = 0x7f08052d
+.field public static final notification_icon_background:I = 0x7f08052c
 
-.field public static final notification_template_icon_bg:I = 0x7f08052e
+.field public static final notification_template_icon_bg:I = 0x7f08052d
 
-.field public static final notification_template_icon_low_bg:I = 0x7f08052f
+.field public static final notification_template_icon_low_bg:I = 0x7f08052e
 
-.field public static final notification_tile_bg:I = 0x7f080530
+.field public static final notification_tile_bg:I = 0x7f08052f
 
-.field public static final notify_panel_notification_icon_bg:I = 0x7f080532
+.field public static final notify_panel_notification_icon_bg:I = 0x7f080531
 
-.field public static final sliding_panel_visualization_bg:I = 0x7f080586
+.field public static final sliding_panel_visualization_bg:I = 0x7f080587
 
-.field public static final sliding_panel_visualization_dot_bar:I = 0x7f080587
+.field public static final sliding_panel_visualization_dot_bar:I = 0x7f080588
 
-.field public static final sliding_panel_visualization_shadow_dot_bar:I = 0x7f080588
+.field public static final sliding_panel_visualization_shadow_dot_bar:I = 0x7f080589
 
-.field public static final tooltip_frame_dark:I = 0x7f08059f
+.field public static final tooltip_frame_dark:I = 0x7f0805a0
 
-.field public static final tooltip_frame_light:I = 0x7f0805a0
+.field public static final tooltip_frame_light:I = 0x7f0805a1
 
-.field public static final word_photo_bg_dark:I = 0x7f0805be
+.field public static final word_photo_bg_dark:I = 0x7f0805bf
 
-.field public static final word_photo_bg_light:I = 0x7f0805bf
+.field public static final word_photo_bg_light:I = 0x7f0805c0
 
 
 # direct methods

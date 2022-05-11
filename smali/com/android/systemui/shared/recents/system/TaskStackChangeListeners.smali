@@ -16,7 +16,7 @@
 
 .field private static final TAG:Ljava/lang/String; = "TaskStackChangeListeners"
 
-.field private static sIsOnTaskSnapshotChangedTransactCodeValid:Z
+.field private static sIsOnTaskSnapshotChangedTransactCodeValid:Z = false
 
 .field private static sOnTaskSnapshotChangedTransactCode:I
 

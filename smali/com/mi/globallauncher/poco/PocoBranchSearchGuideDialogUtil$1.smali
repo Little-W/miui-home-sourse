@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;->showBranchSearchGuideView(Landroid/app/Activity;ZLcom/mi/globallauncher/poco/PocoBranchGuideCallBack;)V
+    value = Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;->showPocoBranchSearchGuideView(Landroid/app/Activity;ZLcom/mi/globallauncher/poco/PocoBranchGuideCallBack;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -29,7 +29,7 @@
 .method constructor <init>(Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;Landroid/app/Activity;Z)V
     .locals 0
 
-    .line 45
+    .line 43
     iput-object p1, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil$1;->this$0:Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;
 
     iput-object p2, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil$1;->val$mLauncher:Landroid/app/Activity;
@@ -46,7 +46,7 @@
 .method public onAgreeBtnClicked()V
     .locals 4
 
-    .line 56
+    .line 55
     iget-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil$1;->this$0:Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;
 
     invoke-static {v0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;->access$100(Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;)Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;
@@ -55,7 +55,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 57
+    .line 56
     iget-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil$1;->this$0:Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;
 
     invoke-static {v0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;->access$100(Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;)Lcom/mi/globallauncher/poco/PocoBranchSearchGuide;
@@ -68,14 +68,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 58
+    .line 57
     iget-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil$1;->this$0:Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;
 
     invoke-static {v0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;->access$200(Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;)V
 
     goto :goto_0
 
-    .line 60
+    .line 59
     :cond_0
     iget-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil$1;->this$0:Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;
 
@@ -101,25 +101,28 @@
 .method public onCloseBtnClicked()V
     .locals 1
 
-    .line 48
+    .line 46
     iget-object v0, p0, Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil$1;->this$0:Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;
 
     invoke-virtual {v0}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;->dismissBranchSearchGuide()V
 
-    .line 49
+    .line 47
     invoke-static {}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;->access$000()Lcom/mi/globallauncher/poco/PocoBranchGuideCallBack;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 50
+    .line 48
     invoke-static {}, Lcom/mi/globallauncher/poco/PocoBranchSearchGuideDialogUtil;->access$000()Lcom/mi/globallauncher/poco/PocoBranchGuideCallBack;
 
     move-result-object v0
 
     invoke-interface {v0}, Lcom/mi/globallauncher/poco/PocoBranchGuideCallBack;->onCloseBtnClicked()V
 
+    .line 50
     :cond_0
+    invoke-static {}, Lcom/miui/privacy/track/SensorsAnalyticsCollector;->trackBranchSearchGuideClose()V
+
     return-void
 .end method

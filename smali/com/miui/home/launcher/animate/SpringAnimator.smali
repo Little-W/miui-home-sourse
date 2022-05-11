@@ -373,6 +373,17 @@
     return-void
 .end method
 
+.method public setStartVelocity(F)V
+    .locals 1
+
+    .line 103
+    iget-object v0, p0, Lcom/miui/home/launcher/animate/SpringAnimator;->mSpringAnimation:Landroidx/dynamicanimation/animation/SpringAnimation;
+
+    invoke-virtual {v0, p1}, Landroidx/dynamicanimation/animation/SpringAnimation;->setStartVelocity(F)Landroidx/dynamicanimation/animation/DynamicAnimation;
+
+    return-void
+.end method
+
 .method public setUpdateListener(Lcom/miui/home/launcher/animate/SpringAnimator$UpdateListener;)V
     .locals 0
 

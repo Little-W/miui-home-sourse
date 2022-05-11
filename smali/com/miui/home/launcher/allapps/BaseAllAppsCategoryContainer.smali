@@ -403,7 +403,7 @@
     .line 41
     invoke-super {p0}, Landroid/widget/ViewSwitcher;->onFinishInflate()V
 
-    const v0, 0x7f0a0095
+    const v0, 0x7f0a0096
 
     .line 42
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/BaseAllAppsCategoryContainer;->findViewById(I)Landroid/view/View;
@@ -414,7 +414,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/BaseAllAppsCategoryContainer;->mListContainer:Lcom/miui/home/launcher/allapps/category/AllAppsCategoryListContainer;
 
-    const v0, 0x7f0a0094
+    const v0, 0x7f0a0095
 
     .line 43
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/BaseAllAppsCategoryContainer;->findViewById(I)Landroid/view/View;

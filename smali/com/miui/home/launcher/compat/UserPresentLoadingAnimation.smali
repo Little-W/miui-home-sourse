@@ -281,7 +281,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d0140
+    const v1, 0x7f0d0141
 
     const/4 v2, 0x0
 
@@ -298,7 +298,7 @@
     .line 84
     iget-object v0, p0, Lcom/miui/home/launcher/compat/UserPresentLoadingAnimation;->mWorkspaceLoadingView:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0a017b
+    const v1, 0x7f0a017e
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 

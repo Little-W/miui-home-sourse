@@ -7,8 +7,6 @@
     <dimen name="config_icon_height">63.5dip</dimen>
     <dimen name="config_icon_inner_padding">1.9099731dip</dimen>
     <dimen name="config_icon_width">63.5dip</dimen>
-    <dimen name="default_screen_preview_thumbnail_view_height">177.57dip</dimen>
-    <dimen name="default_screen_preview_thumbnail_view_width">118.379974dip</dimen>
     <dimen name="desktop_mode_padding_left">13.719971dip</dimen>
     <dimen name="desktop_mode_padding_right">13.719971dip</dimen>
     <dimen name="desktop_mode_subtitle_width">192.00998dip</dimen>
@@ -18,7 +16,6 @@
     <dimen name="editing_panel_height">142.47998dip</dimen>
     <dimen name="folder_bottom_padding">106.859985dip</dimen>
     <dimen name="folder_content_padding_left">5.0dip</dimen>
-    <dimen name="folder_content_padding_right">0.0dip</dimen>
     <dimen name="folder_content_width">305.89844dip</dimen>
     <dimen name="folder_preview_item_padding">0.31000006dip</dimen>
     <dimen name="folder_top_padding">80.00998dip</dimen>
@@ -26,12 +23,10 @@
     <dimen name="hotseats_height_navigation">71.629974dip</dimen>
     <dimen name="hotseats_margin_top">14.669983dip</dimen>
     <dimen name="hotseats_margin_top_search_bar">4.1999817dip</dimen>
-    <dimen name="hotseats_padding_bottom">0.0dip</dimen>
     <dimen name="hotseats_padding_side">4.189972dip</dimen>
-    <dimen name="hotseats_padding_top">0.0dip</dimen>
     <dimen name="miui_widget_background_radius">17.709991dip</dimen>
     <dimen name="recents_task_view_header_height">42.0dip</dimen>
-    <dimen name="recents_task_view_header_title_text_size">0.0sp</dimen>
+    <dimen name="recents_task_view_header_title_text_size">13.649994sp</dimen>
     <dimen name="recommend_loading_item_padding">23.049988dip</dimen>
     <dimen name="recommend_panel_height">110.0dip</dimen>
     <dimen name="search_bar_margin_bottom">31.429993dip</dimen>

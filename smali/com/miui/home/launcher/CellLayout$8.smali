@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 3028
+    .line 3032
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +36,7 @@
 
     if-eq p2, v0, :cond_0
 
-    .line 3034
+    .line 3038
     invoke-static {p1}, Lcom/miui/home/launcher/graphics/drawable/MamlCompat;->onPause(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
@@ -46,7 +46,7 @@
 .method public process(Lcom/miui/home/launcher/LauncherWidgetView;)V
     .locals 0
 
-    .line 3044
+    .line 3048
     invoke-virtual {p1}, Lcom/miui/home/launcher/LauncherWidgetView;->onInvisible()V
 
     return-void
@@ -61,7 +61,7 @@
 .method public process(Lcom/miui/home/launcher/maml/MaMlWidgetView;)V
     .locals 0
 
-    .line 3049
+    .line 3053
     invoke-virtual {p1}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->onInvisible()V
 
     return-void

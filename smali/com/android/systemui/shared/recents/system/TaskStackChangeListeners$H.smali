@@ -480,6 +480,28 @@
     invoke-static {v1}, Landroid/os/Trace;->beginSection(Ljava/lang/String;)V
 
     .line 219
+    iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    invoke-static {v1}, Lcom/android/systemui/shared/recents/utilities/Utilities;->createTaskSnapshotCompat(Ljava/lang/Object;)Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
+
+    move-result-object v1
+
+    .line 220
+    new-instance v3, Lcom/android/systemui/shared/recents/model/ThumbnailData;
+
+    .line 221
+    invoke-interface {v1}, Lcom/android/systemui/shared/recents/system/ITaskSnapshot;->getTaskThumbnailInfo()Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
+
+    move-result-object v4
+
+    .line 222
+    invoke-interface {v1}, Lcom/android/systemui/shared/recents/system/ITaskSnapshot;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v1
+
+    invoke-direct {v3, v4, v1}, Lcom/android/systemui/shared/recents/model/ThumbnailData;-><init>(Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;Landroid/graphics/Bitmap;)V
+
+    .line 223
     iget-object v1, p0, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners$H;->this$0:Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;
 
     invoke-static {v1}, Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;->access$000(Lcom/android/systemui/shared/recents/system/TaskStackChangeListeners;)Ljava/util/List;
@@ -494,28 +516,6 @@
 
     :goto_b
     if-ltz v1, :cond_2
-
-    .line 220
-    iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    invoke-static {v2}, Lcom/android/systemui/shared/recents/utilities/Utilities;->createTaskSnapshotCompat(Ljava/lang/Object;)Lcom/android/systemui/shared/recents/system/ITaskSnapshot;
-
-    move-result-object v2
-
-    .line 221
-    new-instance v3, Lcom/android/systemui/shared/recents/model/ThumbnailData;
-
-    .line 222
-    invoke-interface {v2}, Lcom/android/systemui/shared/recents/system/ITaskSnapshot;->getTaskThumbnailInfo()Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;
-
-    move-result-object v4
-
-    .line 223
-    invoke-interface {v2}, Lcom/android/systemui/shared/recents/system/ITaskSnapshot;->getBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object v2
-
-    invoke-direct {v3, v4, v2}, Lcom/android/systemui/shared/recents/model/ThumbnailData;-><init>(Lcom/android/systemui/shared/recents/model/TaskThumbnailInfo;Landroid/graphics/Bitmap;)V
 
     .line 224
     invoke-virtual {v3}, Lcom/android/systemui/shared/recents/model/ThumbnailData;->isValidate()Z

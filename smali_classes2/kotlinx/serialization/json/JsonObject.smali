@@ -4,7 +4,6 @@
 
 # interfaces
 .implements Ljava/util/Map;
-.implements Lkotlin/jvm/internal/markers/KMappedMarker;
 
 
 # annotations
@@ -20,8 +19,7 @@
         "Ljava/util/Map<",
         "Ljava/lang/String;",
         "Lkotlinx/serialization/json/JsonElement;",
-        ">;",
-        "Lkotlin/jvm/internal/markers/KMappedMarker;"
+        ">;"
     }
 .end annotation
 
