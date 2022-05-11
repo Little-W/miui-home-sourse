@@ -15,13 +15,13 @@
 # static fields
 .field private static final TAG:Ljava/lang/String; = "MarketUpdateAgent"
 
-.field private static mAppInfo:Lcom/market/sdk/LocalAppInfo; = null
+.field private static mAppInfo:Lcom/market/sdk/LocalAppInfo;
 
-.field private static mAutoPopup:Z = false
+.field private static mAutoPopup:Z
 
-.field private static mCheckUpdateOnlyWifi:Z = false
+.field private static mCheckUpdateOnlyWifi:Z
 
-.field private static mContext:Ljava/lang/ref/WeakReference; = null
+.field private static mContext:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
@@ -31,9 +31,9 @@
     .end annotation
 .end field
 
-.field private static mIsInited:Z = false
+.field private static mIsInited:Z
 
-.field private static mIsLoading:Z = false
+.field private static mIsLoading:Z
 
 .field private static mIsPathcerLibraryLoaded:Z
 
