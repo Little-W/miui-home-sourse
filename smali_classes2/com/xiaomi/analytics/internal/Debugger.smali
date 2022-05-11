@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static volatile sInstance:Lcom/xiaomi/analytics/internal/Debugger; = null
+.field private static volatile sInstance:Lcom/xiaomi/analytics/internal/Debugger;
 
-.field public static sUseStaging:Z = false
+.field public static sUseStaging:Z
 
 
 # instance fields

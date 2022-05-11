@@ -23,7 +23,7 @@
 
 .field private static final TAG:Ljava/lang/String; = "AsyncQuery"
 
-.field private static final localLOGV:Z = false
+.field private static final localLOGV:Z
 
 .field private static sLooper:Landroid/os/Looper;
 

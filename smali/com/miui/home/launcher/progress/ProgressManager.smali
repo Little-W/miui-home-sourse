@@ -22,7 +22,7 @@
     .end annotation
 .end field
 
-.field private static mObservingUri:Z = false
+.field private static mObservingUri:Z
 
 .field private static sProgressManager:Lcom/miui/home/launcher/progress/ProgressManager;
 

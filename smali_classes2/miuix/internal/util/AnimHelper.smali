@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static volatile sIsDebugEnabled:Z = false
+.field private static volatile sIsDebugEnabled:Z
 
 
 # direct methods
