@@ -1549,7 +1549,7 @@
     <dimen name="recents_task_view_header_button_padding">4.0dip</dimen>
     <dimen name="recents_task_view_header_height">40.0dip</dimen>
     <dimen name="recents_task_view_header_title_margin_end">25.0dip</dimen>
-    <dimen name="recents_task_view_header_title_text_size">13.0sp</dimen>
+    <dimen name="recents_task_view_header_title_text_size">0.0sp</dimen>
     <item type="dimen" name="recents_task_view_padding_ratio">0.0</item>
     <dimen name="recents_task_view_rounded_corners_radius_max">110.0dip</dimen>
     <dimen name="recents_task_view_rounded_corners_radius_min">30.0dip</dimen>
