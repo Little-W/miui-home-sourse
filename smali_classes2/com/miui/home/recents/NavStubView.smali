@@ -8939,7 +8939,7 @@
     const/4 v0, 0x0
 
     .line 736
-    invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskView;->setTranslationZ(F)V
+
 
     const/4 v0, 0x0
 
@@ -9088,7 +9088,6 @@
 
     int-to-float v4, v4
 
-    invoke-virtual {v11, v4}, Lcom/miui/home/recents/views/TaskView;->setTranslationZ(F)V
 
     .line 708
     invoke-virtual {v11}, Lcom/miui/home/recents/views/TaskView;->getFullscreenProgress()F
@@ -9211,6 +9210,8 @@
     .line 740
     :cond_2
     iput-boolean v1, p0, Lcom/miui/home/recents/NavStubView;->mIsResetTaskView:Z
+
+    invoke-virtual {p0}, Lcom/miui/home/recents/NavStubView;->sendFakeEvent()V
 
     return-void
 .end method
@@ -21220,6 +21221,26 @@
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_1
+    return-void
+.end method
+
+.method public sendFakeEvent()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/miui/home/recents/NavStubView;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getRecentsView()Lcom/miui/home/recents/views/RecentsView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/recents/views/RecentsView;->getTaskStackView()Lcom/miui/home/recents/views/TaskStackView;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/miui/home/recents/views/TaskStackViewStack;
+
+    invoke-virtual {v0}, Lcom/miui/home/recents/views/TaskStackViewStack;->fakeEventWithDelay()V
+
     return-void
 .end method
 
