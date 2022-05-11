@@ -14,7 +14,7 @@
 # static fields
 .field private static final BASE_TIME:J
 
-.field private static ENABLED:Z = false
+.field private static ENABLED:Z
 
 .field private static final LOCK:Ljava/lang/Object;
 

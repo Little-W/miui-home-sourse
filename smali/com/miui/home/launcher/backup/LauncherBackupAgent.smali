@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static sIsRestoring:Z = false
+.field private static sIsRestoring:Z
 
 
 # instance fields
