@@ -29,7 +29,7 @@
     <dimen name="hotseats_padding_top">0.0dip</dimen>
     <dimen name="miui_widget_background_radius">17.709991dip</dimen>
     <dimen name="recents_task_view_header_height">42.0dip</dimen>
-    <dimen name="recents_task_view_header_title_text_size">13.649994sp</dimen>
+    <dimen name="recents_task_view_header_title_text_size">0.0sp</dimen>
     <dimen name="recommend_loading_item_padding">23.049988dip</dimen>
     <dimen name="recommend_panel_height">110.0dip</dimen>
     <dimen name="search_bar_margin_bottom">31.429993dip</dimen>
