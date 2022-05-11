@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static isCopyPAIExecute:Z = false
+.field private static isCopyPAIExecute:Z
 
 
 # direct methods
