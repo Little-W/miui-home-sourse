@@ -56,7 +56,7 @@
 
 .field public static final IS_MIUI_13:Z
 
-.field public static LOW_MEMORY_DEVICES:Ljava/util/Set; = null
+.field public static LOW_MEMORY_DEVICES:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -68,7 +68,7 @@
 
 .field public static final MIUI_BIG_VERSION:Ljava/lang/String;
 
-.field public static MIUI_VERSION:F = 0.0f
+.field public static MIUI_VERSION:F
 
 .field public static final MIUI_VERSION_CODE:I
 
@@ -92,7 +92,7 @@
     .end annotation
 .end field
 
-.field public static USE_SIMPLE_ANIMATION_EFFECT_DEVICES:Ljava/util/Set; = null
+.field public static USE_SIMPLE_ANIMATION_EFFECT_DEVICES:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -102,7 +102,7 @@
     .end annotation
 .end field
 
-.field public static USE_SMOOTH_ANIMATION_EFFECT_DEVICES:Ljava/util/Set; = null
+.field public static USE_SMOOTH_ANIMATION_EFFECT_DEVICES:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -112,7 +112,7 @@
     .end annotation
 .end field
 
-.field private static mIncompatibleAppList:Ljava/util/List; = null
+.field private static mIncompatibleAppList:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -124,23 +124,23 @@
 
 .field private static final mMetrics:Landroid/util/DisplayMetrics;
 
-.field private static sBoostGPUInstance:Ljava/lang/Object; = null
+.field private static sBoostGPUInstance:Ljava/lang/Object;
 
-.field private static sBoostMethod:Ljava/lang/reflect/Method; = null
+.field private static sBoostMethod:Ljava/lang/reflect/Method;
 
 .field private static final sCanvas:Landroid/graphics/Canvas;
 
-.field private static sDefaultAnimatorInterPolator:Landroid/view/animation/Interpolator; = null
+.field private static sDefaultAnimatorInterPolator:Landroid/view/animation/Interpolator;
 
-.field private static sHasShowScreenLockedToast:Z = false
+.field private static sHasShowScreenLockedToast:Z
 
-.field private static sIconDarkShadowPaint:Landroid/graphics/Paint; = null
+.field private static sIconDarkShadowPaint:Landroid/graphics/Paint;
 
-.field private static sIconShadowBlurPaint:Landroid/graphics/Paint; = null
+.field private static sIconShadowBlurPaint:Landroid/graphics/Paint;
 
 .field private static final sInverseMatrix:Landroid/graphics/Matrix;
 
-.field private static sIsStaging:Z = false
+.field private static sIsStaging:Z
 
 .field private static sMQueueField:Ljava/lang/reflect/Field;
 
