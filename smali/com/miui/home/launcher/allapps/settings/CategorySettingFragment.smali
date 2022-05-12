@@ -744,7 +744,7 @@
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    const p2, 0x7f0a01f2
+    const p2, 0x7f0a01f4
 
     .line 102
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;

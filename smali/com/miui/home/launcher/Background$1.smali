@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Background;)V
     .locals 0
 
-    .line 135
+    .line 138
     iput-object p1, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/common/messages/LoadingFinishMessageHandler;-><init>()V
@@ -35,7 +35,7 @@
 .method protected onLoadingFinished()V
     .locals 3
 
-    .line 138
+    .line 141
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Background;->access$100(Lcom/miui/home/launcher/Background;)Lcom/miui/home/launcher/animate/SpreadCircle;
@@ -44,7 +44,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Background;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 139
+    .line 142
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Background;->access$100(Lcom/miui/home/launcher/Background;)Lcom/miui/home/launcher/animate/SpreadCircle;
@@ -53,7 +53,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
-    .line 140
+    .line 143
     invoke-virtual {v1}, Lcom/miui/home/launcher/Background;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -66,10 +66,10 @@
 
     int-to-float v1, v1
 
-    .line 139
+    .line 142
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/animate/SpreadCircle;->setMinRadius(F)V
 
-    .line 141
+    .line 144
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Background;->access$100(Lcom/miui/home/launcher/Background;)Lcom/miui/home/launcher/animate/SpreadCircle;
@@ -78,7 +78,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
-    .line 142
+    .line 145
     invoke-virtual {v1}, Lcom/miui/home/launcher/Background;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -91,10 +91,10 @@
 
     int-to-float v1, v1
 
-    .line 141
+    .line 144
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/animate/SpreadCircle;->setMaxRadius(F)V
 
-    .line 143
+    .line 146
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Background;->access$100(Lcom/miui/home/launcher/Background;)Lcom/miui/home/launcher/animate/SpreadCircle;
@@ -105,7 +105,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/animate/SpreadCircle;->setDuraton(J)V
 
-    .line 144
+    .line 147
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Background;->getResources()Landroid/content/res/Resources;
@@ -120,7 +120,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Background;->access$202(Lcom/miui/home/launcher/Background;I)I
 
-    .line 145
+    .line 148
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Background;->getResources()Landroid/content/res/Resources;
@@ -135,7 +135,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Background;->access$302(Lcom/miui/home/launcher/Background;I)I
 
-    .line 147
+    .line 150
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Background;->access$400(Lcom/miui/home/launcher/Background;)Landroid/animation/ValueAnimator;
@@ -146,7 +146,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 148
+    .line 151
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Background;->access$500(Lcom/miui/home/launcher/Background;)Landroid/animation/ValueAnimator;
@@ -155,7 +155,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 149
+    .line 152
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Background;->access$400(Lcom/miui/home/launcher/Background;)Landroid/animation/ValueAnimator;
@@ -166,7 +166,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 150
+    .line 153
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Background;->access$500(Lcom/miui/home/launcher/Background;)Landroid/animation/ValueAnimator;
@@ -177,7 +177,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 151
+    .line 154
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Background;->access$400(Lcom/miui/home/launcher/Background;)Landroid/animation/ValueAnimator;
@@ -192,7 +192,7 @@
 
     invoke-virtual {v0, v2}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    .line 152
+    .line 155
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Background;->access$500(Lcom/miui/home/launcher/Background;)Landroid/animation/ValueAnimator;
@@ -205,7 +205,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    .line 154
+    .line 157
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Background;->access$400(Lcom/miui/home/launcher/Background;)Landroid/animation/ValueAnimator;
@@ -218,7 +218,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 161
+    .line 164
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Background;->access$400(Lcom/miui/home/launcher/Background;)Landroid/animation/ValueAnimator;
@@ -231,7 +231,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 168
+    .line 171
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Background;->access$500(Lcom/miui/home/launcher/Background;)Landroid/animation/ValueAnimator;
@@ -244,7 +244,7 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 175
+    .line 178
     iget-object v0, p0, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Background;->invalidate()V

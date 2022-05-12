@@ -315,7 +315,7 @@
     .line 124
     iget-object v0, p0, Lcom/miui/home/launcher/TransitionEffectThumbnailView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0136
+    const v1, 0x7f0d0138
 
     const/4 v2, 0x0
 
@@ -368,7 +368,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setTag(Ljava/lang/Object;)V
 
-    const v2, 0x7f0a029d
+    const v2, 0x7f0a029f
 
     .line 131
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
@@ -493,7 +493,7 @@
 
     const v1, 0x7f0a013e
 
-    const v2, 0x7f0a029d
+    const v2, 0x7f0a029f
 
     if-eqz v0, :cond_0
 
@@ -789,7 +789,7 @@
     .line 86
     iget-object v0, p0, Lcom/miui/home/launcher/TransitionEffectThumbnailView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0d0137
+    const v1, 0x7f0d0139
 
     const/4 v2, 0x0
 

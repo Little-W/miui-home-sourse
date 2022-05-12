@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static sEnable:Z
+.field public static sEnable:Z = false
 
 
 # direct methods

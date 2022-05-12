@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">Rrëshqitja lart kushtohet hapjes së Sirtarit të Aplikacionit. Ndërro në modalitetin Ekranin Bazë dhe provo sërish.</string>
     <string name="all_apps_suggestions">Sugjerimet e aplikacionit</string>
     <string name="am">PARADITE</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Zhvendosur në pozicionin %1$d të dosjes</string>
     <string name="announce_for_checked">%1$s, kontrolluar</string>
     <string name="announce_for_choose_default_screen">Vendos ekranin %1$d si ekranin Kryesor të paracaktuar</string>
@@ -622,7 +622,7 @@
     <string name="navigation_type_full_screen">Gjestet</string>
     <string name="navigation_type_title">Navigimi i sistemit</string>
     <string name="navigation_type_virtual_key">Butonat</string>
-    <string name="network_error">Nuk mund të behej lidhja me rrjetin. Provo sërish.</string>
+    <string name="network_error">Nuk mund të lidhej me rrjetin. Provo sërish.</string>
     <string name="new_feature_title">Çfarë risish ka</string>
     <string name="night">Mbrëmje</string>
     <string name="no_detail_page">Asnjë detaj për faqen</string>

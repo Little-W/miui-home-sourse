@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">ການປັດຂຶ້ນຖືກສະຫງວນໄວ້ສຳລັບການເປີດລີ້ນຊັກແອັບ. ສັບປ່ຽນເປັນໂໝດໜ້າຈໍຫຼັກປົກກະຕິແລະລອງອີກຄັ້ງ.</string>
     <string name="all_apps_suggestions">ການແນະນຳແອັບ</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">ຍ້າຍໄປທີ່ຕຳແໜ່ງ %1$d ໃນໂຟລເດີ</string>
     <string name="announce_for_checked">%1$s, ກວດສອບແລ້ວ</string>
     <string name="announce_for_choose_default_screen">ຕັ້ງຄ່າໜ້າຈໍ %1$d ເປັນຄ່າເລີ່ມຕົ້ນໜ້າຈໍຫຼັກ</string>

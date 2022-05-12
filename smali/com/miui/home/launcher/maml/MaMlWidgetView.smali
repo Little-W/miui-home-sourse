@@ -1007,7 +1007,7 @@
     .line 240
     invoke-super {p0}, Lcom/miui/home/launcher/widget/LauncherAppWidgetHostViewContainer;->onFinishInflate()V
 
-    const v0, 0x7f0a02e5
+    const v0, 0x7f0a02e7
 
     .line 241
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/maml/MaMlWidgetView;->findViewById(I)Landroid/view/View;

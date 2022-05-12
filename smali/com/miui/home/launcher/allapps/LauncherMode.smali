@@ -571,6 +571,12 @@
 
     if-eqz v1, :cond_0
 
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
     const-string v1, "content_center"
 
     goto :goto_0

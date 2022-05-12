@@ -582,7 +582,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetCell;->mBadge:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a02e6
+    const v0, 0x7f0a02e8
 
     .line 70
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetCell;->findViewById(I)Landroid/view/View;

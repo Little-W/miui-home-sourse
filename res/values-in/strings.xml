@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Gerakan menggeser ke atas telah dipakai untuk membuka Laci aplikasi. Berganti ke mode Layar utama reguler dan coba lagi.</string>
     <string name="all_apps_suggestions">Rekomendasi aplikasi</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Dipindahkan ke posisi %1$d di folder</string>
     <string name="announce_for_checked">%1$s, dipilih</string>
     <string name="announce_for_choose_default_screen">Setel layar %1$d sebagai Layar utama bawaan</string>

@@ -158,7 +158,7 @@
     .line 39
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a02ed
+    const v0, 0x7f0a02ef
 
     .line 40
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->findViewById(I)Landroid/view/View;
@@ -169,7 +169,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->mWidgetThumbnailView:Lcom/miui/home/launcher/widget/WidgetThumbnailView;
 
-    const v0, 0x7f0a02e6
+    const v0, 0x7f0a02e8
 
     .line 41
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->findViewById(I)Landroid/view/View;
@@ -201,7 +201,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/widget/WidgetDetailsView;->setWidgetDetailsCallback(Lcom/miui/home/launcher/widget/WidgetDetailsCallback;)V
 
-    const v0, 0x7f0a02ec
+    const v0, 0x7f0a02ee
 
     .line 59
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->findViewById(I)Landroid/view/View;

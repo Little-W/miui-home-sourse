@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
     .locals 0
 
-    .line 372
+    .line 379
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$2;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onLongClick(Landroid/view/View;)Z
     .locals 2
 
-    .line 374
+    .line 381
     new-instance p1, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.MAIN"
@@ -49,22 +49,22 @@
 
     const-string v1, "com.android.settings.applications.ManageApplicationsActivity"
 
-    .line 375
+    .line 382
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v0, "com.android.settings.APPLICATION_LIST_TYPE"
 
     const/4 v1, 0x2
 
-    .line 378
+    .line 385
     invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const/high16 v0, 0x10000000
 
-    .line 379
+    .line 386
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 380
+    .line 387
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$2;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/RecentsContainer;->getContext()Landroid/content/Context;

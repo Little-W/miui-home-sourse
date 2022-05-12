@@ -89,28 +89,28 @@
 
 .field public static final notification_main_column_container:I = 0x7f0a01b6
 
-.field public static final right:I = 0x7f0a01f5
+.field public static final right:I = 0x7f0a01f7
 
-.field public static final right_icon:I = 0x7f0a01f7
+.field public static final right_icon:I = 0x7f0a01f9
 
-.field public static final right_side:I = 0x7f0a01f8
+.field public static final right_side:I = 0x7f0a01fa
 
-.field public static final start:I = 0x7f0a026b
+.field public static final start:I = 0x7f0a026d
 
-.field public static final status_bar_latest_event_content:I = 0x7f0a026d
+.field public static final status_bar_latest_event_content:I = 0x7f0a026f
 
-.field public static final tag_transition_group:I = 0x7f0a0287
+.field public static final tag_transition_group:I = 0x7f0a0289
 
-.field public static final tag_unhandled_key_event_manager:I = 0x7f0a0288
+.field public static final tag_unhandled_key_event_manager:I = 0x7f0a028a
 
-.field public static final tag_unhandled_key_listeners:I = 0x7f0a0289
+.field public static final tag_unhandled_key_listeners:I = 0x7f0a028b
 
-.field public static final text:I = 0x7f0a0291
+.field public static final text:I = 0x7f0a0293
 
-.field public static final text2:I = 0x7f0a0292
+.field public static final text2:I = 0x7f0a0294
 
-.field public static final time:I = 0x7f0a0299
+.field public static final time:I = 0x7f0a029b
 
-.field public static final title:I = 0x7f0a029d
+.field public static final title:I = 0x7f0a029f
 
-.field public static final top:I = 0x7f0a02a4
+.field public static final top:I = 0x7f0a02a6

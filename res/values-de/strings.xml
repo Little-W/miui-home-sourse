@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Das Hochwischen dient allein dem Öffnen der App-Schublade. Wechsele zum normalen Startbildschirmmodus und versuche es erneut.</string>
     <string name="all_apps_suggestions">App-Vorschläge</string>
     <string name="am">morgens</string>
-    <string name="animation_rate_title">Animationsrate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Nach Position %1$d im Ordner verschoben</string>
     <string name="announce_for_checked">%1$s, überprüft</string>
     <string name="announce_for_choose_default_screen">Bildschirm %1$d als Standardstartbildschirm festlegen</string>

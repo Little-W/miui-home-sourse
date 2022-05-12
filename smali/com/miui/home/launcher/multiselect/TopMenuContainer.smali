@@ -483,7 +483,7 @@
     .line 70
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a02a6
+    const v0, 0x7f0a02a8
 
     .line 71
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->findViewById(I)Landroid/view/View;

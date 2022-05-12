@@ -31,7 +31,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
     .locals 0
 
-    .line 1821
+    .line 1834
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$19;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0}, Lcom/mi/google/gson/reflect/TypeToken;-><init>()V

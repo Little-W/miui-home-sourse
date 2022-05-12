@@ -53,17 +53,17 @@
 
 .field public static final notification_main_column_container:I = 0x7f0a01b6
 
-.field public static final right_icon:I = 0x7f0a01f7
+.field public static final right_icon:I = 0x7f0a01f9
 
-.field public static final right_side:I = 0x7f0a01f8
+.field public static final right_side:I = 0x7f0a01fa
 
-.field public static final text:I = 0x7f0a0291
+.field public static final text:I = 0x7f0a0293
 
-.field public static final text2:I = 0x7f0a0292
+.field public static final text2:I = 0x7f0a0294
 
-.field public static final time:I = 0x7f0a0299
+.field public static final time:I = 0x7f0a029b
 
-.field public static final title:I = 0x7f0a029d
+.field public static final title:I = 0x7f0a029f
 
 
 # direct methods

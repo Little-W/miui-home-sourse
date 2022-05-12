@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Pārvilkšana uz augšu ir paredzēta, lai atvērtu Lietotņu atvilktni. Pārslēdzieties uz parasto Sākuma ekrāna režīmu un mēģiniet vēlreiz.</string>
     <string name="all_apps_suggestions">Lietotņu ieteikumi</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Pārvietots %1$d pozīcijā mapē</string>
     <string name="announce_for_checked">%1$s, pārbaudīts</string>
     <string name="announce_for_choose_default_screen">Uzstādīt %1$d. ekrānu kā noklusējuma Sākuma ekrānu</string>

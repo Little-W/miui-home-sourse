@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Prevlačenje nagore je rezervirano za otvaranje Ladice za aplikacije. Prebacite na zadani Početni ekran i pokušajte ponovo.</string>
     <string name="all_apps_suggestions">Prijedlozi aplikacija</string>
     <string name="am">Prije podne</string>
-    <string name="animation_rate_title">Brzina animacije</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Premješteno na poziciju %1$d u folderu</string>
     <string name="announce_for_checked">%1$s, provjereno</string>
     <string name="announce_for_choose_default_screen">Postavi ekran %1$d kao zadani početni ekran</string>

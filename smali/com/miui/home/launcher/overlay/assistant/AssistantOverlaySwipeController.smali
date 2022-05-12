@@ -640,42 +640,57 @@
 .end method
 
 .method public onControllerInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 0
+    .locals 1
 
     .line 85
+    iget-object v0, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlaySwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->inOverlapMode(Landroid/content/Context;)Z
+
+    move-result v0
+
+    .line 86
     invoke-super {p0, p1}, Lcom/miui/home/launcher/overlay/OverlaySwipeController;->onControllerInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
 
-    if-nez p1, :cond_1
+    if-nez p1, :cond_2
 
-    iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlaySwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
-
-    .line 86
-    invoke-static {p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantDeviceAdapter;->inOverlapMode(Landroid/content/Context;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
+    if-eqz v0, :cond_0
 
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlaySwipeController;->mTransitionController:Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;
 
     if-eqz p1, :cond_0
 
+    .line 87
     invoke-virtual {p1}, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;->isScrolling()Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-nez p1, :cond_2
+
+    :cond_0
+    if-eqz v0, :cond_1
+
+    iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlaySwipeController;->mLauncher:Lcom/miui/home/launcher/Launcher;
+
+    sget-object v0, Lcom/miui/home/launcher/LauncherState;->ASSISTANT_OVERLAY_STATE:Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayState;
+
+    .line 88
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 p1, 0x0
 
     goto :goto_1
 
-    :cond_1
+    :cond_2
     :goto_0
     const/4 p1, 0x1
 
@@ -686,7 +701,7 @@
 .method public onDrag(FF)Z
     .locals 2
 
-    .line 97
+    .line 99
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isPhone()Z
 
     move-result v0
@@ -705,13 +720,13 @@
 
     goto :goto_0
 
-    .line 100
+    .line 102
     :cond_0
     iget-object p2, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlaySwipeController;->mLauncherOverlay:Lcom/miui/home/launcher/overlay/LauncherOverlay;
 
     if-eqz p2, :cond_1
 
-    .line 101
+    .line 103
     iget-object p2, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlaySwipeController;->mLauncherOverlay:Lcom/miui/home/launcher/overlay/LauncherOverlay;
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -737,7 +752,7 @@
 
     return p1
 
-    .line 98
+    .line 100
     :cond_2
     :goto_0
     invoke-super {p0, p1, p2}, Lcom/miui/home/launcher/overlay/OverlaySwipeController;->onDrag(FF)Z
@@ -750,7 +765,7 @@
 .method public setAssistantTransitionController(Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;)V
     .locals 0
 
-    .line 92
+    .line 94
     iput-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantOverlaySwipeController;->mTransitionController:Lcom/miui/home/launcher/overlay/assistant/AssistantOverlayTransitionController;
 
     return-void

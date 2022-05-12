@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">Gorantz arrastatzea Aplikazio-kaxa irekitzeko erreserbatuta dago. Aldatu Hasierako pantailako modu ohikora eta saiatu berriro.</string>
     <string name="all_apps_suggestions">Aplikazio iradokizunak</string>
     <string name="am">a.m.</string>
-    <string name="animation_rate_title">Animazio tasa</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">%1$d posiziora mugituta karpetan</string>
     <string name="announce_for_checked">%1$s, aztertuta</string>
     <string name="announce_for_choose_default_screen">%1$d pantaila hasierako pantaila lehenetsia bezala ezarri</string>

@@ -207,7 +207,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0a0298
+    const v1, 0x7f0a029a
 
     .line 103
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

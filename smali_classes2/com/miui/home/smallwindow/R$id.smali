@@ -25,24 +25,24 @@
 
 .field public static final icon:I = 0x7f0a013e
 
-.field public static final small_window:I = 0x7f0a024c
+.field public static final small_window:I = 0x7f0a024e
 
-.field public static final small_window_alternative_girdview:I = 0x7f0a024d
+.field public static final small_window_alternative_girdview:I = 0x7f0a024f
 
-.field public static final small_window_button_complete:I = 0x7f0a024e
+.field public static final small_window_button_complete:I = 0x7f0a0250
 
-.field public static final small_window_edit:I = 0x7f0a024f
+.field public static final small_window_edit:I = 0x7f0a0251
 
-.field public static final small_window_edit_content:I = 0x7f0a0250
+.field public static final small_window_edit_content:I = 0x7f0a0252
 
-.field public static final small_window_edit_title:I = 0x7f0a0251
+.field public static final small_window_edit_title:I = 0x7f0a0253
 
-.field public static final small_window_list:I = 0x7f0a0252
+.field public static final small_window_list:I = 0x7f0a0254
 
-.field public static final small_window_selected_girdview:I = 0x7f0a0253
+.field public static final small_window_selected_girdview:I = 0x7f0a0255
 
-.field public static final split:I = 0x7f0a0260
+.field public static final split:I = 0x7f0a0262
 
-.field public static final text:I = 0x7f0a0291
+.field public static final text:I = 0x7f0a0293
 
-.field public static final title:I = 0x7f0a029d
+.field public static final title:I = 0x7f0a029f

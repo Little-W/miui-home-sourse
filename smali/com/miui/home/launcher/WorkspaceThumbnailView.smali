@@ -471,7 +471,7 @@
     .line 162
     iget-object v3, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v4, 0x7f0d0142
+    const v4, 0x7f0d0144
 
     invoke-virtual {v3, v4, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -489,7 +489,7 @@
     .line 164
     invoke-virtual {v0, v3}, Landroid/view/View;->setImportantForAccessibility(I)V
 
-    const v3, 0x7f0a0298
+    const v3, 0x7f0a029a
 
     .line 166
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;

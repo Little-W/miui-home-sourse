@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">上にスワイプするとアプリドロワーが開きます。通常のホーム画面モードに切り替えてからもう一度操作してください。</string>
     <string name="all_apps_suggestions">アプリの提案</string>
     <string name="am">午前</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">アニメーションの速度</string>
     <string name="announce_for_app_move_in_folder">フォルダー内の%1$dの位置に移動しました</string>
     <string name="announce_for_checked">%1$s、チェックしました</string>
     <string name="announce_for_choose_default_screen">画面%1$dをデフォルトのホーム画面に設定しました</string>

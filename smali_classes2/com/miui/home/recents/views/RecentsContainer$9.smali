@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;Landroid/os/Handler;)V
     .locals 0
 
-    .line 601
+    .line 608
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$9;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 3
 
-    .line 604
+    .line 611
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$9;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/RecentsContainer;->getContext()Landroid/content/Context;

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 3333
+    .line 3338
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$AppToRecentsUpdateListener;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,10 +36,10 @@
 .method public static synthetic lambda$onUpdate$0(Lcom/miui/home/recents/NavStubView$AppToRecentsUpdateListener;F)V
     .locals 2
 
-    .line 3348
+    .line 3353
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$AppToRecentsUpdateListener;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
+    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3500(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
@@ -47,16 +47,16 @@
 
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$AppToRecentsUpdateListener;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$5900(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/views/TaskView;
+    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$6000(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/views/TaskView;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 3349
+    .line 3354
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$AppToRecentsUpdateListener;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$5900(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/views/TaskView;
+    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$6000(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/recents/views/TaskView;
 
     move-result-object v0
 
@@ -75,7 +75,7 @@
 
     const/4 v0, 0x0
 
-    .line 3336
+    .line 3341
     invoke-static {v0, p2}, Ljava/lang/Math;->max(FF)F
 
     move-result v0
@@ -90,21 +90,21 @@
 
     iget-object v2, p0, Lcom/miui/home/recents/NavStubView$AppToRecentsUpdateListener;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v2}, Lcom/miui/home/recents/NavStubView;->access$5600(Lcom/miui/home/recents/NavStubView;)F
+    invoke-static {v2}, Lcom/miui/home/recents/NavStubView;->access$5700(Lcom/miui/home/recents/NavStubView;)F
 
     move-result v2
 
     mul-float/2addr v0, v2
 
-    .line 3337
+    .line 3342
     iget-object v2, p0, Lcom/miui/home/recents/NavStubView$AppToRecentsUpdateListener;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v2, v0}, Lcom/miui/home/recents/NavStubView;->access$5700(Lcom/miui/home/recents/NavStubView;F)V
+    invoke-static {v2, v0}, Lcom/miui/home/recents/NavStubView;->access$5800(Lcom/miui/home/recents/NavStubView;F)V
 
-    .line 3343
+    .line 3348
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$AppToRecentsUpdateListener;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3800(Lcom/miui/home/recents/NavStubView;)Z
+    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3900(Lcom/miui/home/recents/NavStubView;)Z
 
     move-result v0
 
@@ -116,16 +116,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 3344
+    .line 3349
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$AppToRecentsUpdateListener;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$4500(Lcom/miui/home/recents/NavStubView;)F
+    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$4600(Lcom/miui/home/recents/NavStubView;)F
 
     move-result v0
 
     iget-object v2, p0, Lcom/miui/home/recents/NavStubView$AppToRecentsUpdateListener;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v2}, Lcom/miui/home/recents/NavStubView;->access$4500(Lcom/miui/home/recents/NavStubView;)F
+    invoke-static {v2}, Lcom/miui/home/recents/NavStubView;->access$4600(Lcom/miui/home/recents/NavStubView;)F
 
     move-result v2
 
@@ -135,12 +135,12 @@
 
     add-float/2addr v0, v1
 
-    .line 3345
+    .line 3350
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$AppToRecentsUpdateListener;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v1, p1, v0, p3, p4}, Lcom/miui/home/recents/NavStubView;->access$5800(Lcom/miui/home/recents/NavStubView;Landroid/graphics/RectF;FFF)Landroid/graphics/RectF;
+    invoke-static {v1, p1, v0, p3, p4}, Lcom/miui/home/recents/NavStubView;->access$5900(Lcom/miui/home/recents/NavStubView;Landroid/graphics/RectF;FFF)Landroid/graphics/RectF;
 
-    .line 3347
+    .line 3352
     :cond_0
     sget-object p1, Lcom/miui/home/recents/TouchInteractionService;->MAIN_THREAD_EXECUTOR:Lcom/miui/home/launcher/MainThreadExecutor;
 

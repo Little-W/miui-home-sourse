@@ -1290,7 +1290,7 @@
 
     move-result p1
 
-    const v0, 0x7f0a029d
+    const v0, 0x7f0a029f
 
     if-eq p1, v0, :cond_0
 
@@ -1652,7 +1652,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mContentBackground:Landroid/graphics/drawable/Drawable;
 
-    const v0, 0x7f0a029d
+    const v0, 0x7f0a029f
 
     .line 215
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
@@ -1677,7 +1677,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mHeader:Landroid/view/View;
 
-    const v0, 0x7f0a01f0
+    const v0, 0x7f0a01f2
 
     .line 218
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;
@@ -1701,7 +1701,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/Folder;->mImm:Landroid/view/inputmethod/InputMethodManager;
 
-    const v0, 0x7f0a01e6
+    const v0, 0x7f0a01e8
 
     .line 220
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/Folder;->findViewById(I)Landroid/view/View;

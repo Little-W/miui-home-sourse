@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">"L'actualització està reservada per obrir el Calaix d'aplicacions. Canvieu al mode normal de la Pantalla d'Inici i proveu-ho de nou."</string>
     <string name="all_apps_suggestions">"Suggeriments d'aplicacions"</string>
     <string name="am">a. m.</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">"S'ha traslladat a la posició %1$d a la carpeta"</string>
     <string name="announce_for_checked">%1$s, comprovat</string>
     <string name="announce_for_choose_default_screen">"Establiu la pantalla %1$d com la Pantalla d'Inici per defecte"</string>

@@ -3,12 +3,12 @@
 .source "FolderIcon.java"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/FolderIcon;->deleteSelf()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/launcher/FolderIcon;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/FolderIcon;)V
     .locals 0
 
-    .line 527
+    .line 452
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$9;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,24 +35,47 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 1
+.method public run()V
+    .locals 3
 
-    .line 530
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    .line 531
+    .line 455
     iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$9;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$200(Lcom/miui/home/launcher/FolderIcon;)Landroid/animation/ValueAnimator;
 
-    move-result p1
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/FolderIcon;->setAlpha(F)V
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
+
+    .line 456
+    iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$9;->this$0:Lcom/miui/home/launcher/FolderIcon;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$900(Lcom/miui/home/launcher/FolderIcon;)Lcom/miui/home/launcher/Launcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getFolderCling()Lcom/miui/home/launcher/FolderCling;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/miui/home/launcher/FolderCling;->prepareAutoOpening()V
+
+    .line 457
+    iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$9;->this$0:Lcom/miui/home/launcher/FolderIcon;
+
+    invoke-static {v0}, Lcom/miui/home/launcher/FolderIcon;->access$900(Lcom/miui/home/launcher/FolderIcon;)Lcom/miui/home/launcher/Launcher;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/miui/home/launcher/FolderIcon$9;->this$0:Lcom/miui/home/launcher/FolderIcon;
+
+    invoke-static {v1}, Lcom/miui/home/launcher/FolderIcon;->access$1000(Lcom/miui/home/launcher/FolderIcon;)Lcom/miui/home/launcher/FolderInfo;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/Launcher;->openFolder(Lcom/miui/home/launcher/FolderInfo;Landroid/view/View;)V
 
     return-void
 .end method

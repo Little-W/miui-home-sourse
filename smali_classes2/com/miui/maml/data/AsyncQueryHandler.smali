@@ -23,21 +23,13 @@
 
 .field private static final TAG:Ljava/lang/String; = "AsyncQuery"
 
-.field private static final localLOGV:Z
+.field private static final localLOGV:Z = false
 
 .field private static sLooper:Landroid/os/Looper;
 
 
 # instance fields
-.field final mResolver:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference<",
-            "Landroid/content/ContentResolver;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private final mResolver:Landroid/content/ContentResolver;
 
 .field private mWorkerThreadHandler:Landroid/os/Handler;
 
@@ -52,51 +44,47 @@
 .method public constructor <init>(Landroid/content/ContentResolver;)V
     .locals 2
 
-    .line 133
+    .line 139
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 134
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    .line 140
+    iput-object p1, p0, Lcom/miui/maml/data/AsyncQueryHandler;->mResolver:Landroid/content/ContentResolver;
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/miui/maml/data/AsyncQueryHandler;->mResolver:Ljava/lang/ref/WeakReference;
-
-    .line 135
+    .line 141
     const-class p1, Landroid/content/AsyncQueryHandler;
 
     monitor-enter p1
 
-    .line 136
+    .line 142
     :try_start_0
     sget-object v0, Lcom/miui/maml/data/AsyncQueryHandler;->sLooper:Landroid/os/Looper;
 
     if-nez v0, :cond_0
 
-    .line 137
+    .line 143
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "AsyncQueryWorker"
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 138
+    .line 144
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 140
+    .line 146
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     sput-object v0, Lcom/miui/maml/data/AsyncQueryHandler;->sLooper:Landroid/os/Looper;
 
-    .line 143
+    .line 149
     :cond_0
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 144
+    .line 150
     sget-object p1, Lcom/miui/maml/data/AsyncQueryHandler;->sLooper:Landroid/os/Looper;
 
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/AsyncQueryHandler;->createHandler(Landroid/os/Looper;)Landroid/os/Handler;
@@ -110,7 +98,7 @@
     :catchall_0
     move-exception v0
 
-    .line 143
+    .line 149
     :try_start_1
     monitor-exit p1
     :try_end_1
@@ -122,51 +110,47 @@
 .method public constructor <init>(Landroid/os/Looper;Landroid/content/ContentResolver;)V
     .locals 1
 
-    .line 148
+    .line 154
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 149
-    new-instance p1, Ljava/lang/ref/WeakReference;
+    .line 155
+    iput-object p2, p0, Lcom/miui/maml/data/AsyncQueryHandler;->mResolver:Landroid/content/ContentResolver;
 
-    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lcom/miui/maml/data/AsyncQueryHandler;->mResolver:Ljava/lang/ref/WeakReference;
-
-    .line 150
+    .line 156
     const-class p1, Landroid/content/AsyncQueryHandler;
 
     monitor-enter p1
 
-    .line 151
+    .line 157
     :try_start_0
     sget-object p2, Lcom/miui/maml/data/AsyncQueryHandler;->sLooper:Landroid/os/Looper;
 
     if-nez p2, :cond_0
 
-    .line 152
+    .line 158
     new-instance p2, Landroid/os/HandlerThread;
 
     const-string v0, "AsyncQueryWorker"
 
     invoke-direct {p2, v0}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 153
+    .line 159
     invoke-virtual {p2}, Landroid/os/HandlerThread;->start()V
 
-    .line 155
+    .line 161
     invoke-virtual {p2}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object p2
 
     sput-object p2, Lcom/miui/maml/data/AsyncQueryHandler;->sLooper:Landroid/os/Looper;
 
-    .line 157
+    .line 163
     :cond_0
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 158
+    .line 164
     sget-object p1, Lcom/miui/maml/data/AsyncQueryHandler;->sLooper:Landroid/os/Looper;
 
     invoke-virtual {p0, p1}, Lcom/miui/maml/data/AsyncQueryHandler;->createHandler(Landroid/os/Looper;)Landroid/os/Handler;
@@ -180,7 +164,7 @@
     :catchall_0
     move-exception p2
 
-    .line 157
+    .line 163
     :try_start_1
     monitor-exit p1
     :try_end_1
@@ -189,12 +173,21 @@
     throw p2
 .end method
 
+.method static synthetic access$000(Lcom/miui/maml/data/AsyncQueryHandler;)Landroid/content/ContentResolver;
+    .locals 0
+
+    .line 37
+    iget-object p0, p0, Lcom/miui/maml/data/AsyncQueryHandler;->mResolver:Landroid/content/ContentResolver;
+
+    return-object p0
+.end method
+
 
 # virtual methods
 .method public final cancelOperation(I)V
     .locals 1
 
-    .line 217
+    .line 223
     iget-object v0, p0, Lcom/miui/maml/data/AsyncQueryHandler;->mWorkerThreadHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->removeMessages(I)V
@@ -205,7 +198,7 @@
 .method protected createHandler(Landroid/os/Looper;)Landroid/os/Handler;
     .locals 1
 
-    .line 162
+    .line 168
     new-instance v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerHandler;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/maml/data/AsyncQueryHandler$WorkerHandler;-><init>(Lcom/miui/maml/data/AsyncQueryHandler;Landroid/os/Looper;)V
@@ -222,22 +215,22 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 355
+    .line 361
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;
 
-    .line 362
+    .line 368
     iget v1, p1, Landroid/os/Message;->what:I
 
-    .line 363
+    .line 369
     iget p1, p1, Landroid/os/Message;->arg1:I
 
     packed-switch p1, :pswitch_data_0
 
     goto :goto_0
 
-    .line 380
+    .line 386
     :pswitch_0
     iget-object p1, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->cookie:Ljava/lang/Object;
 
@@ -253,7 +246,7 @@
 
     goto :goto_0
 
-    .line 376
+    .line 382
     :pswitch_1
     iget-object p1, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->cookie:Ljava/lang/Object;
 
@@ -269,7 +262,7 @@
 
     goto :goto_0
 
-    .line 372
+    .line 378
     :pswitch_2
     iget-object p1, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->cookie:Ljava/lang/Object;
 
@@ -281,7 +274,7 @@
 
     goto :goto_0
 
-    .line 368
+    .line 374
     :pswitch_3
     iget-object p1, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->cookie:Ljava/lang/Object;
 
@@ -326,7 +319,7 @@
 .method public final startDelete(ILjava/lang/Object;Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)V
     .locals 1
 
-    .line 287
+    .line 293
     iget-object v0, p0, Lcom/miui/maml/data/AsyncQueryHandler;->mWorkerThreadHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -335,33 +328,33 @@
 
     const/4 v0, 0x4
 
-    .line 288
+    .line 294
     iput v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 290
+    .line 296
     new-instance v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;
 
     invoke-direct {v0}, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;-><init>()V
 
-    .line 291
+    .line 297
     iput-object p0, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->handler:Landroid/os/Handler;
 
-    .line 292
+    .line 298
     iput-object p3, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->uri:Landroid/net/Uri;
 
-    .line 293
+    .line 299
     iput-object p2, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->cookie:Ljava/lang/Object;
 
-    .line 294
+    .line 300
     iput-object p4, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->selection:Ljava/lang/String;
 
-    .line 295
+    .line 301
     iput-object p5, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->selectionArgs:[Ljava/lang/String;
 
-    .line 296
+    .line 302
     iput-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 298
+    .line 304
     iget-object p2, p0, Lcom/miui/maml/data/AsyncQueryHandler;->mWorkerThreadHandler:Landroid/os/Handler;
 
     invoke-virtual {p2, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -372,7 +365,7 @@
 .method public final startInsert(ILjava/lang/Object;Landroid/net/Uri;Landroid/content/ContentValues;)V
     .locals 1
 
-    .line 233
+    .line 239
     iget-object v0, p0, Lcom/miui/maml/data/AsyncQueryHandler;->mWorkerThreadHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -381,30 +374,30 @@
 
     const/4 v0, 0x2
 
-    .line 234
+    .line 240
     iput v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 236
+    .line 242
     new-instance v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;
 
     invoke-direct {v0}, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;-><init>()V
 
-    .line 237
+    .line 243
     iput-object p0, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->handler:Landroid/os/Handler;
 
-    .line 238
+    .line 244
     iput-object p3, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->uri:Landroid/net/Uri;
 
-    .line 239
+    .line 245
     iput-object p2, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->cookie:Ljava/lang/Object;
 
-    .line 240
+    .line 246
     iput-object p4, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->values:Landroid/content/ContentValues;
 
-    .line 241
+    .line 247
     iput-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 243
+    .line 249
     iget-object p2, p0, Lcom/miui/maml/data/AsyncQueryHandler;->mWorkerThreadHandler:Landroid/os/Handler;
 
     invoke-virtual {p2, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -415,7 +408,7 @@
 .method public startQuery(ILjava/lang/Object;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 191
+    .line 197
     iget-object v0, p0, Lcom/miui/maml/data/AsyncQueryHandler;->mWorkerThreadHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -424,39 +417,39 @@
 
     const/4 v0, 0x1
 
-    .line 192
+    .line 198
     iput v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 194
+    .line 200
     new-instance v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;
 
     invoke-direct {v0}, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;-><init>()V
 
-    .line 195
+    .line 201
     iput-object p0, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->handler:Landroid/os/Handler;
 
-    .line 196
+    .line 202
     iput-object p3, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->uri:Landroid/net/Uri;
 
-    .line 197
+    .line 203
     iput-object p4, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->projection:[Ljava/lang/String;
 
-    .line 198
+    .line 204
     iput-object p5, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->selection:Ljava/lang/String;
 
-    .line 199
+    .line 205
     iput-object p6, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->selectionArgs:[Ljava/lang/String;
 
-    .line 200
+    .line 206
     iput-object p7, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->orderBy:Ljava/lang/String;
 
-    .line 201
+    .line 207
     iput-object p2, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->cookie:Ljava/lang/Object;
 
-    .line 202
+    .line 208
     iput-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 204
+    .line 210
     iget-object p2, p0, Lcom/miui/maml/data/AsyncQueryHandler;->mWorkerThreadHandler:Landroid/os/Handler;
 
     invoke-virtual {p2, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -467,7 +460,7 @@
 .method public final startUpdate(ILjava/lang/Object;Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)V
     .locals 1
 
-    .line 259
+    .line 265
     iget-object v0, p0, Lcom/miui/maml/data/AsyncQueryHandler;->mWorkerThreadHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
@@ -476,36 +469,36 @@
 
     const/4 v0, 0x3
 
-    .line 260
+    .line 266
     iput v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 262
+    .line 268
     new-instance v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;
 
     invoke-direct {v0}, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;-><init>()V
 
-    .line 263
+    .line 269
     iput-object p0, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->handler:Landroid/os/Handler;
 
-    .line 264
+    .line 270
     iput-object p3, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->uri:Landroid/net/Uri;
 
-    .line 265
+    .line 271
     iput-object p2, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->cookie:Ljava/lang/Object;
 
-    .line 266
+    .line 272
     iput-object p4, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->values:Landroid/content/ContentValues;
 
-    .line 267
+    .line 273
     iput-object p5, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->selection:Ljava/lang/String;
 
-    .line 268
+    .line 274
     iput-object p6, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->selectionArgs:[Ljava/lang/String;
 
-    .line 269
+    .line 275
     iput-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 271
+    .line 277
     iget-object p2, p0, Lcom/miui/maml/data/AsyncQueryHandler;->mWorkerThreadHandler:Landroid/os/Handler;
 
     invoke-virtual {p2, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z

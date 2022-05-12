@@ -713,7 +713,7 @@
     .line 71
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a029d
+    const v0, 0x7f0a029f
 
     .line 72
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarTransferLayout;->findViewById(I)Landroid/view/View;

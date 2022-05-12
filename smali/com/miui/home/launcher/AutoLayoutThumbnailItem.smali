@@ -129,7 +129,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->iconForeground:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a029d
+    const v0, 0x7f0a029f
 
     .line 39
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->findViewById(I)Landroid/view/View;

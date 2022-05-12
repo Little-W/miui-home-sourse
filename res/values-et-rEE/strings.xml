@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">Nipsamine on reserveeritud Rakenduste sahtli avamisele. Lülita tavalisele avakuva režiimile ja proovi uuesti.</string>
     <string name="all_apps_suggestions">Rakenduse soovitused</string>
     <string name="am">EL</string>
-    <string name="animation_rate_title">Animatsiooni kiirus</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Teisaldatud asukohta %1$d kaustas</string>
     <string name="announce_for_checked">%1$s, kontrollitud</string>
     <string name="announce_for_choose_default_screen">Sea ekraan %1$d kodulehe vaikekuvaks</string>

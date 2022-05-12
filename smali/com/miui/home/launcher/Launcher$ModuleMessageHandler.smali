@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 9610
+    .line 9602
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$ModuleMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/Launcher$1;)V
     .locals 0
 
-    .line 9610
+    .line 9602
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Launcher$ModuleMessageHandler;-><init>(Lcom/miui/home/launcher/Launcher;)V
 
     return-void
@@ -47,7 +47,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 9613
+    .line 9605
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$ModuleMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$10200(Lcom/miui/home/launcher/Launcher;)Z
@@ -64,7 +64,7 @@
 
     const-string v0, "com.miui.newhome"
 
-    .line 9614
+    .line 9606
     invoke-virtual {p1}, Lcom/miui/home/launcher/module/ModuleLoadMessage;->getModule()Ljava/lang/String;
 
     move-result-object p1
@@ -75,12 +75,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 9615
+    .line 9607
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$ModuleMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$4000(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 9616
+    .line 9608
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$ModuleMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->addOrRemoveNewHome()V

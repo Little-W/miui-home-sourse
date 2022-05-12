@@ -74,9 +74,9 @@
         <item>\#</item>
     </string-array>
     <string-array name="animation_rate_entries">
-        <item>ظرافت</item>
-        <item>تعادل</item>
-        <item>کمینه‌گرایی</item>
+        <item>Relaxed</item>
+        <item>Balanced</item>
+        <item>Fast</item>
     </string-array>
     <string-array name="cell_layout_size_entries">
         <item>۴x۴</item>

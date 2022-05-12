@@ -139,7 +139,7 @@
 
     iget-object p1, p1, Lcom/miui/home/recents/GestureStateMachine;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
-    invoke-virtual {p1}, Lcom/miui/home/recents/NavStubView;->startFirstTask()V
+    invoke-virtual {p1}, Lcom/miui/home/recents/NavStubView;->startFirstTaskOrToHome()V
 
     goto :goto_0
 
@@ -191,7 +191,7 @@
 
     iget-object p1, p1, Lcom/miui/home/recents/GestureStateMachine;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
-    invoke-virtual {p1}, Lcom/miui/home/recents/NavStubView;->startFirstTask()V
+    invoke-virtual {p1}, Lcom/miui/home/recents/NavStubView;->startFirstTaskOrToHome()V
 
     goto :goto_0
 
@@ -211,7 +211,7 @@
 
     iget-object p1, p1, Lcom/miui/home/recents/GestureStateMachine;->mNavStubView:Lcom/miui/home/recents/NavStubView;
 
-    invoke-virtual {p1}, Lcom/miui/home/recents/NavStubView;->startFirstTask()V
+    invoke-virtual {p1}, Lcom/miui/home/recents/NavStubView;->startFirstTaskOrToHome()V
 
     goto :goto_0
 

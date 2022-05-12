@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">Yuxarı sürüşdürmək, Tətbiq çəkməcəsi üçün saxlanılır. Normal Əsas ekran rejiminə dəyişdirin və yenidən cəhd edin.</string>
     <string name="all_apps_suggestions">Tətbiq təklifləri</string>
     <string name="am">GƏ</string>
-    <string name="animation_rate_title">Animasiya dərəcəsi</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Qovluq daxilində %1$d mövqeyinə köçürüldü</string>
     <string name="announce_for_checked">%1$s，yoxlanıldı</string>
     <string name="announce_for_choose_default_screen">%1$d nömrəli ekranı varsayılan Əsas ekran olaraq təyin et</string>

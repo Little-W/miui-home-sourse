@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Превлачењем нагоре се отвара Ладица са апликацијама. Пребаците на редовни режим Почетног екрана и покушајте опет.</string>
     <string name="all_apps_suggestions">Предлози апликација</string>
     <string name="am">Пре подне</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Премештено на позицију %1$d у фолдеру</string>
     <string name="announce_for_checked">%1$s, проверенo</string>
     <string name="announce_for_choose_default_screen">Поставите екран %1$d као задати Почетни екран</string>

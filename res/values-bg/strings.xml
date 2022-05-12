@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Плъзгането е резервирано за Чекмедже за приложения. Превключете към нормалния Начален екран и опитайте отново.</string>
     <string name="all_apps_suggestions">Предложения за приложения</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Скорост на анимацията</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Преместено на позиция %1$d в папката</string>
     <string name="announce_for_checked">%1$s, проверени</string>
     <string name="announce_for_choose_default_screen">Задайте екран %1$d за Начален екран по подразбиране</string>

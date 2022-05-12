@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
     .locals 0
 
-    .line 392
+    .line 399
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$3;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,14 +38,14 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    .line 395
+    .line 402
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$3;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$100(Lcom/miui/home/recents/views/RecentsContainer;Z)V
 
-    .line 396
+    .line 403
     invoke-static {}, Lcom/miui/home/launcher/AnalyticalDataCollectorForRecents;->sendClickTxtSmallWindowContainerEvent()V
 
     return-void

@@ -45,7 +45,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/AllAppsGridAdapter$SearchMarketViewHolder;->icon:Landroid/widget/ImageView;
 
-    const p1, 0x7f0a0231
+    const p1, 0x7f0a0233
 
     .line 422
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

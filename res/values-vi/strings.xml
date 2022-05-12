@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Trượt lên được dành riêng để mở Ngăn ứng dụng. Chuyển sang chế độ Màn hình chính thông thường và thử lại.</string>
     <string name="all_apps_suggestions">Đề xuất ứng dụng</string>
     <string name="am">SA</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Tốc độ ảnh động</string>
     <string name="announce_for_app_move_in_folder">Đã di chuyển đến vị trí %1$d trong thư mục</string>
     <string name="announce_for_checked">%1$s, đã kiểm tra</string>
     <string name="announce_for_choose_default_screen">Đặt màn hình %1$d làm Màn hình chính mặc định</string>

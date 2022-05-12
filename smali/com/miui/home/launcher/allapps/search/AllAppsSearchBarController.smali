@@ -254,7 +254,7 @@
 
     invoke-virtual {p2, p0}, Lcom/miui/home/launcher/ExtendedEditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    const p2, 0x7f0a0211
+    const p2, 0x7f0a0213
 
     .line 70
     invoke-virtual {p3, p2}, Lcom/miui/home/launcher/Launcher;->findViewById(I)Landroid/view/View;

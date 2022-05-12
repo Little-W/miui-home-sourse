@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">A felhúzás az App Drawer megnyitására van fenntartva. Váltson normál Kezdőképernyő módra és próbálja újra.</string>
     <string name="all_apps_suggestions">Javasolt alkalmazások</string>
     <string name="am">DE</string>
-    <string name="animation_rate_title">Animációs sebesség</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">A(z) %1$d helyzetre ugrott a mappában</string>
     <string name="announce_for_checked">%1$s, ellenőrizve</string>
     <string name="announce_for_choose_default_screen">%1$d. képernyő beállítása alapértelmezett Kezdőképernyőnek</string>

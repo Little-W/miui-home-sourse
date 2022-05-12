@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">ആപ്പ് ഡ്രോയർ തുറക്കുന്നതിനായി മുകളിലേക്ക് സ്വൈപ്പുചെയ്യുന്നത് കരുതിവച്ചിരിക്കുന്നു. സാധാരണ ഹോം സ്‌ക്രീൻ മോഡിലേക്ക് മാറി വീണ്ടും ശ്രമിക്കുക.</string>
     <string name="all_apps_suggestions">ആപ്പ് നിർദ്ദേശങ്ങൾ</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">ആനിമേഷൻ വേഗത</string>
     <string name="announce_for_app_move_in_folder">ഫോൾഡറിലെ %1$d സ്ഥാനത്തേക്ക് നീക്കി</string>
     <string name="announce_for_checked">%1$s, പരിശോധിച്ചു</string>
     <string name="announce_for_choose_default_screen">ഡിഫോൾട്ട് ഹോം സ്ക്രീനായി സ്ക്രീൻ %1$d ക്രമീകരിക്കുക</string>

@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">ऐप्प तिजोरी खोलने के लिए ऊपर स्वाइप करना आरक्षित है. सामान्य होम स्क्रीन मोड पर जाएंं और फिर से कोशिश करें.</string>
     <string name="all_apps_suggestions">ऐप्प सुझाव</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">ऐनिमेशन दर</string>
+    <string name="animation_rate_title">ऐनिमेशन की गति</string>
     <string name="announce_for_app_move_in_folder">फ़ोल्डर में %1$d स्थिति पर ले जाया गया</string>
     <string name="announce_for_checked">%1$s, जांची गई</string>
     <string name="announce_for_choose_default_screen">स्क्रीन %1$d को डिफ़ॉल्ट होम स्क्रीन के रूप में सेट करें</string>

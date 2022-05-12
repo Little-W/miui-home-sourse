@@ -3963,7 +3963,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreenMode()Z
 
     move-result v0
 
@@ -5094,7 +5094,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreenMode()Z
 
     move-result v0
 
@@ -5175,7 +5175,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
+    invoke-virtual {v0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreenMode()Z
 
     move-result v0
 
@@ -6005,7 +6005,7 @@
 .method public static isFoldDevice()Z
     .locals 1
 
-    .line 2441
+    .line 2432
     sget-boolean v0, Lcom/miui/home/launcher/DeviceConfig;->IS_FOLD_DEVICE:Z
 
     return v0
@@ -6312,55 +6312,6 @@
     return v0
 .end method
 
-.method public static isLargeScreenInMultiWindowMode()Z
-    .locals 3
-
-    .line 2432
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    .line 2435
-    :cond_0
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWindowManager()Landroid/view/WindowManager;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
-
-    move-result-object v0
-
-    .line 2436
-    invoke-virtual {v0}, Landroid/view/Display;->getMode()Landroid/view/Display$Mode;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Display$Mode;->getPhysicalWidth()I
-
-    move-result v0
-
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
-
-    move-result v2
-
-    if-le v0, v2, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_1
-    return v1
-.end method
-
 .method public static isLayoutRtl()Z
     .locals 1
 
@@ -6484,7 +6435,7 @@
 .method public static isPhone()Z
     .locals 2
 
-    .line 2454
+    .line 2445
     sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->DEVICE:Lcom/miui/home/launcher/DeviceType;
 
     sget-object v1, Lcom/miui/home/launcher/DeviceType;->PHONE:Lcom/miui/home/launcher/DeviceType;
@@ -6735,7 +6686,7 @@
     :try_start_0
     const-string v1, "android.app.ActivityOptions"
 
-    .line 2459
+    .line 2450
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -6762,7 +6713,7 @@
     :goto_0
     const-string v2, "Launcher.DeviceConfig"
 
-    .line 2462
+    .line 2453
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -6786,7 +6737,7 @@
     :catch_0
     move-exception v1
 
-    .line 2465
+    .line 2456
     invoke-virtual {v1}, Ljava/lang/ClassNotFoundException;->printStackTrace()V
 
     return v0
@@ -9025,15 +8976,15 @@
 .method public static setRotatable(Z)V
     .locals 1
 
-    .line 2445
+    .line 2436
     sput-boolean p0, Lcom/miui/home/launcher/DeviceConfig;->sRotatable:Z
 
-    .line 2446
+    .line 2437
     sget-boolean p0, Lcom/miui/home/launcher/DeviceConfig;->sRotatable:Z
 
     if-eqz p0, :cond_0
 
-    .line 2447
+    .line 2438
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object p0
@@ -9044,7 +8995,7 @@
 
     goto :goto_0
 
-    .line 2449
+    .line 2440
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
@@ -10959,12 +10910,12 @@
     sput-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
 
     .line 878
-    sget-object v0, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
-
-    invoke-virtual {v0, p1}, Lcom/miui/home/launcher/DeviceProfile;->subNavigationBarHeight(Landroid/content/Context;)V
+    invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/DeviceConfig;->updateScreenSize(Landroid/content/Context;Landroid/content/res/Resources;)V
 
     .line 879
-    invoke-direct {p0, p1, p2}, Lcom/miui/home/launcher/DeviceConfig;->updateScreenSize(Landroid/content/Context;Landroid/content/res/Resources;)V
+    sget-object p2, Lcom/miui/home/launcher/DeviceConfig;->mActiveProfile:Lcom/miui/home/launcher/DeviceProfile;
+
+    invoke-virtual {p2, p1}, Lcom/miui/home/launcher/DeviceProfile;->subNavigationBarHeight(Landroid/content/Context;)V
 
     .line 880
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenOrientationChanged()Z

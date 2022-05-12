@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 4162
+    .line 4175
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,10 +35,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 4172
+    .line 4185
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
+    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3500(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
 
@@ -50,10 +50,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 4173
+    .line 4186
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
+    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3500(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
 
@@ -65,10 +65,10 @@
 
     invoke-virtual {p1, v0, v0}, Lcom/miui/home/launcher/LauncherStateManager;->exitOverviewStateIfNeed(ZZ)V
 
-    .line 4174
+    .line 4187
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
+    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3500(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
 
@@ -78,20 +78,20 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/recents/views/RecentsContainer;->setIsExitRecentsAnimating(Z)V
 
-    .line 4176
+    .line 4189
     :cond_0
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
     sget-object v0, Lcom/miui/home/recents/NavStubView$ModeGesture;->IDLE:Lcom/miui/home/recents/NavStubView$ModeGesture;
 
-    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$7600(Lcom/miui/home/recents/NavStubView;Lcom/miui/home/recents/NavStubView$ModeGesture;)V
+    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$7700(Lcom/miui/home/recents/NavStubView;Lcom/miui/home/recents/NavStubView$ModeGesture;)V
 
-    .line 4177
+    .line 4190
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
     const-string v0, "startHomeAnimation"
 
-    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$7400(Lcom/miui/home/recents/NavStubView;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/miui/home/recents/NavStubView;->access$7500(Lcom/miui/home/recents/NavStubView;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -99,10 +99,10 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 4165
+    .line 4178
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
+    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3500(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
 
@@ -114,10 +114,10 @@
 
     if-eqz p1, :cond_0
 
-    .line 4166
+    .line 4179
     iget-object p1, p0, Lcom/miui/home/recents/NavStubView$19;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
+    invoke-static {p1}, Lcom/miui/home/recents/NavStubView;->access$3500(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object p1
 

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Background$1;)V
     .locals 0
 
-    .line 161
+    .line 164
     iput-object p1, p0, Lcom/miui/home/launcher/Background$1$2;->this$1:Lcom/miui/home/launcher/Background$1;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,10 +35,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 164
+    .line 167
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 165
+    .line 168
     iget-object p1, p0, Lcom/miui/home/launcher/Background$1$2;->this$1:Lcom/miui/home/launcher/Background$1;
 
     iget-object p1, p1, Lcom/miui/home/launcher/Background$1;->this$0:Lcom/miui/home/launcher/Background;

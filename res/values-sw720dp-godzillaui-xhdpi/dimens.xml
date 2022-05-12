@@ -6,8 +6,6 @@
     <dimen name="folder_content_padding_left">32.0dip</dimen>
     <dimen name="folder_content_width">480.0dip</dimen>
     <dimen name="folder_top_padding">58.0dip</dimen>
-    <dimen name="hotseats_height">137.0dip</dimen>
-    <dimen name="hotseats_height_land">127.0dip</dimen>
     <dimen name="hotseats_padding_side">8.0dip</dimen>
     <dimen name="workspace_cell_height">125.0dip</dimen>
     <dimen name="workspace_cell_padding_side_rotatable">74.0dip</dimen>
@@ -15,7 +13,6 @@
     <dimen name="workspace_cell_width">112.0dip</dimen>
     <dimen name="workspace_icon_text_notification_size">17.5dip</dimen>
     <dimen name="workspace_icon_text_size">18.0dip</dimen>
-    <dimen name="workspace_widget_cell_min_height">115.0dip</dimen>
     <dimen name="folder_preview_height">65.0dip</dimen>
     <dimen name="folder_preview_width">65.0dip</dimen>
 </resources>

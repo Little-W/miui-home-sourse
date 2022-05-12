@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
     .locals 0
 
-    .line 4332
+    .line 4345
     iput-object p1, p0, Lcom/miui/home/recents/NavStubView$20;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 4335
+    .line 4348
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$20;->this$0:Lcom/miui/home/recents/NavStubView;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/NavStubView;->getContext()Landroid/content/Context;
@@ -51,19 +51,19 @@
 
     invoke-static {v0, v1, v2}, Lcom/miui/home/recents/util/StateBroadcastUtils;->sendStateBroadcast(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4337
+    .line 4350
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$20;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
+    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3500(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 4338
+    .line 4351
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$20;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3400(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
+    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$3500(Lcom/miui/home/recents/NavStubView;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
@@ -77,13 +77,13 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/home/launcher/LauncherStateManager;->exitOverviewStateIfNeed(ZZ)V
 
-    .line 4340
+    .line 4353
     :cond_0
     iget-object v0, p0, Lcom/miui/home/recents/NavStubView$20;->this$0:Lcom/miui/home/recents/NavStubView;
 
     const-string v1, "performRecentsToHome"
 
-    invoke-static {v0, v1}, Lcom/miui/home/recents/NavStubView;->access$7400(Lcom/miui/home/recents/NavStubView;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/miui/home/recents/NavStubView;->access$7500(Lcom/miui/home/recents/NavStubView;Ljava/lang/String;)V
 
     return-void
 .end method

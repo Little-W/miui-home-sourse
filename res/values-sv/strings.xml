@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Dra uppåt är reserverat till att öppna applådan. Byt till normalt hemskärmsläge och försök igen.</string>
     <string name="all_apps_suggestions">Appförslag</string>
     <string name="am">F.m</string>
-    <string name="animation_rate_title">Animeringshastighet</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Flyttade till position %1$d i mappen</string>
     <string name="announce_for_checked">%1$s, markerad</string>
     <string name="announce_for_choose_default_screen">Ställ in skärm %1$d som standard för Hemskärmen</string>

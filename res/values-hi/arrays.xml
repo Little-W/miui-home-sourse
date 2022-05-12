@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="animation_rate_entries">
-        <item>एलीगेन्स</item>
-        <item>बैलेंस</item>
-        <item>मिनीमिलिस्ट</item>
+        <item>आराम</item>
+        <item>संतुलित</item>
+        <item>तेज़</item>
     </string-array>
     <string-array name="cell_layout_size_entries">
         <item>4x4</item>

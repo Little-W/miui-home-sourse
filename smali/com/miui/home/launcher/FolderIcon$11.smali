@@ -1,14 +1,11 @@
 .class Lcom/miui/home/launcher/FolderIcon$11;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "FolderIcon.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/launcher/FolderIcon;->onDropBack(Lcom/miui/home/launcher/DragObject;)V
+    value = Lcom/miui/home/launcher/FolderIcon;->deleteSelf()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,50 +17,32 @@
 # instance fields
 .field final synthetic this$0:Lcom/miui/home/launcher/FolderIcon;
 
-.field final synthetic val$info:Lcom/miui/home/launcher/ShortcutInfo;
-
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/launcher/FolderIcon;Lcom/miui/home/launcher/ShortcutInfo;)V
+.method constructor <init>(Lcom/miui/home/launcher/FolderIcon;)V
     .locals 0
 
-    .line 691
+    .line 553
     iput-object p1, p0, Lcom/miui/home/launcher/FolderIcon$11;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
-    iput-object p2, p0, Lcom/miui/home/launcher/FolderIcon$11;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 693
-    iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$11;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
+    .line 556
+    iget-object p1, p0, Lcom/miui/home/launcher/FolderIcon$11;->this$0:Lcom/miui/home/launcher/FolderIcon;
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->restoreCheckedStatus()V
+    new-instance v0, Lcom/miui/home/launcher/FolderIcon$11$1;
 
-    .line 694
-    iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$11;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
+    invoke-direct {v0, p0}, Lcom/miui/home/launcher/FolderIcon$11$1;-><init>(Lcom/miui/home/launcher/FolderIcon$11;)V
 
-    invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->getBuddyIconView()Lcom/miui/home/launcher/ShortcutIcon;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 696
-    invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutIcon;->showAllChildViewWhenDrawChild()V
-
-    .line 698
-    :cond_0
-    iget-object v0, p0, Lcom/miui/home/launcher/FolderIcon$11;->val$info:Lcom/miui/home/launcher/ShortcutInfo;
-
-    invoke-virtual {v0}, Lcom/miui/home/launcher/ShortcutInfo;->finishPending()V
+    invoke-virtual {p1, v0}, Lcom/miui/home/launcher/FolderIcon;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

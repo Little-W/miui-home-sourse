@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">Meleret ke atas disediakan untuk membuka Apl menu. Bertukar ke mod Skrin Utama biasa dan cuba lagi.</string>
     <string name="all_apps_suggestions">Saranan apl</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Kadar animasi</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Pindah ke posisi %1$d di dalam folder</string>
     <string name="announce_for_checked">%1$s, disemak</string>
     <string name="announce_for_choose_default_screen">Tetapkan skrin %1$d sebagai skrin lalai Laman utama</string>

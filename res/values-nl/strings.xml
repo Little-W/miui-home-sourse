@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Omhoog vegen wordt gebruikt voor het openen van de App-lade. Schakel over naar de normale Startscherm modus en probeer het opnieuw.</string>
     <string name="all_apps_suggestions">App-suggesties</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animatiesnelheid</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Verplaatst naar positie %1$d in de map</string>
     <string name="announce_for_checked">%1$s, gecontroleerd</string>
     <string name="announce_for_choose_default_screen">Stel scherm %1$d in als het standaard Startscherm</string>

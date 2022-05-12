@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/maml/NotifierManager$DarkModeNotifier;)V
     .locals 0
 
-    .line 462
+    .line 471
     iput-object p1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier$3;->this$0:Lcom/miui/maml/NotifierManager$DarkModeNotifier;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +38,12 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 470
+    .line 479
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier$3;->this$0:Lcom/miui/maml/NotifierManager$DarkModeNotifier;
 
     invoke-static {v0, p1}, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->access$400(Lcom/miui/maml/NotifierManager$DarkModeNotifier;Landroid/content/res/Configuration;)V
 
-    .line 471
+    .line 480
     iget-object p1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier$3;->this$0:Lcom/miui/maml/NotifierManager$DarkModeNotifier;
 
     invoke-static {p1}, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->access$200(Lcom/miui/maml/NotifierManager$DarkModeNotifier;)V

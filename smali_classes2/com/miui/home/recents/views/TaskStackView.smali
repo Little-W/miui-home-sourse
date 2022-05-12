@@ -1527,7 +1527,7 @@
     .line 1081
     iget-object p1, p0, Lcom/miui/home/recents/views/TaskStackView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v0, 0x7f0d011d
+    const v0, 0x7f0d011c
 
     const/4 v1, 0x0
 
@@ -2318,6 +2318,10 @@
 
     .line 598
     invoke-direct {p0}, Lcom/miui/home/recents/views/TaskStackView;->isLandscapeConsiderKeptPortrait()Z
+
+    move-result v2
+
+    invoke-static {v2}, Lcom/miui/home/recents/util/Utilities;->isNeedRotate(Z)Z
 
     move-result v2
 

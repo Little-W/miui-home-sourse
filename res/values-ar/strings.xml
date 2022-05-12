@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">التمرير لأعلى مخصص لفتح درج التطبيقات. قم بالتبديل إلى وضع الشاشة الرئيسية العادي وحاول مجددا.</string>
     <string name="all_apps_suggestions">اقتراحات التطبيقات</string>
     <string name="am">ص</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">تم نقلها إلى الموقع %1$d في المجلد</string>
     <string name="announce_for_checked">%1$s، محددة</string>
     <string name="announce_for_choose_default_screen">تعيين الصفحة %1$d كالصفحة الرئيسية الإفتراضية</string>

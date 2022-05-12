@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">At swipe opad er reserveret til åbning af app-skuffe. Skift til almindelig startskærmstilstand og prøv igen.</string>
     <string name="all_apps_suggestions">Forslag til app</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animationshastighed</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Flyttet til position %1$d i mappen</string>
     <string name="announce_for_checked">%1$s, markeret</string>
     <string name="announce_for_choose_default_screen">Sæt skærm %1$d som standard startskærmen</string>

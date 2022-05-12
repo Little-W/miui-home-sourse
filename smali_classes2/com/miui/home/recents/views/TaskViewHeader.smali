@@ -559,7 +559,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    const v0, 0x7f0a026f
+    const v0, 0x7f0a0271
 
     .line 106
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->findViewById(I)Landroid/view/View;
@@ -575,7 +575,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    const v0, 0x7f0a029d
+    const v0, 0x7f0a029f
 
     .line 108
     invoke-virtual {p0, v0}, Lcom/miui/home/recents/views/TaskViewHeader;->findViewById(I)Landroid/view/View;

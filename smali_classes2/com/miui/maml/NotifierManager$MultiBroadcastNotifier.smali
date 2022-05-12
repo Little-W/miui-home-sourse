@@ -22,10 +22,10 @@
 .method public varargs constructor <init>(Landroid/content/Context;[Ljava/lang/String;)V
     .locals 0
 
-    .line 564
+    .line 636
     invoke-direct {p0, p1}, Lcom/miui/maml/NotifierManager$BroadcastNotifier;-><init>(Landroid/content/Context;)V
 
-    .line 565
+    .line 637
     iput-object p2, p0, Lcom/miui/maml/NotifierManager$MultiBroadcastNotifier;->mIntents:[Ljava/lang/String;
 
     return-void
@@ -36,12 +36,12 @@
 .method protected createIntentFilter()Landroid/content/IntentFilter;
     .locals 5
 
-    .line 570
+    .line 642
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 571
+    .line 643
     iget-object v1, p0, Lcom/miui/maml/NotifierManager$MultiBroadcastNotifier;->mIntents:[Ljava/lang/String;
 
     array-length v2, v1
@@ -53,7 +53,7 @@
 
     aget-object v4, v1, v3
 
-    .line 572
+    .line 644
     invoke-virtual {v0, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     add-int/lit8 v3, v3, 0x1

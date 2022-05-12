@@ -45,7 +45,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->mContext:Landroid/content/Context;
 
-    const v0, 0x7f0a01fd
+    const v0, 0x7f0a01ff
 
     .line 54
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -56,7 +56,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->container:Landroid/widget/RelativeLayout;
 
-    const v0, 0x7f0a01f9
+    const v0, 0x7f0a01fb
 
     .line 55
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -89,7 +89,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appIcon:Landroid/widget/ImageView;
 
-    const v0, 0x7f0a02b1
+    const v0, 0x7f0a02b3
 
     .line 58
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -100,7 +100,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appName:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02b3
+    const v0, 0x7f0a02b5
 
     .line 59
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -111,7 +111,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appDes:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02b2
+    const v0, 0x7f0a02b4
 
     .line 60
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -122,7 +122,7 @@
 
     iput-object v0, p0, Lcom/mi/globallauncher/LdsBranchSearchResultViewHolder;->appNameCenter:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02b5
+    const v0, 0x7f0a02b7
 
     .line 61
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

@@ -1562,6 +1562,12 @@
 
     if-eqz p2, :cond_0
 
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isFoldDevice()Z
+
+    move-result p2
+
+    if-nez p2, :cond_0
+
     const-string p2, "launcher_slideup_gesture"
 
     const-string v0, "content_center"

@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">بالا کشیدن صفحه اصلی برای کشوی برنامه تنظیم شده است. به حالت صفحه اصلی تعویض کرده و دوباره تلاش کنید.</string>
     <string name="all_apps_suggestions">پیشنهاد برنامه</string>
     <string name="am">ق.ظ</string>
-    <string name="animation_rate_title">نرخ پویانمایی</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">به موقعیت %1$d در پوشه منتقل شد</string>
     <string name="announce_for_checked">%1$s، انتخاب شد</string>
     <string name="announce_for_choose_default_screen">تنظیم صفحه %1$d به عنوان صفحه اصلی پیش‌فرض</string>

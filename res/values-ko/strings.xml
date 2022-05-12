@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">위로 스와이프하여 앱 서랍을 실행합니다. 표준 홈 화면 모드로 전환하시고 다시 시도하십시오.</string>
     <string name="all_apps_suggestions">앱 제안</string>
     <string name="am">오전</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">폴더 내의 %1$d번째 위치로 이동됨</string>
     <string name="announce_for_checked">%1$s, 확인됨</string>
     <string name="announce_for_choose_default_screen">%1$d번째 화면을 기본 홈 화면으로 설정</string>

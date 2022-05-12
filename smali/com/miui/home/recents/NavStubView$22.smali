@@ -1,68 +1,69 @@
-.class Lcom/miui/home/recents/NavStubView$22;
+.class synthetic Lcom/miui/home/recents/NavStubView$22;
 .super Ljava/lang/Object;
 .source "NavStubView.java"
 
-# interfaces
-.implements Lcom/miui/home/recents/util/RectFSpringAnim$OnUpdateListener;
-
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/miui/home/recents/NavStubView;->startAppToWorldCirculate()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/miui/home/recents/NavStubView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x1008
     name = null
 .end annotation
 
 
-# instance fields
-.field final synthetic this$0:Lcom/miui/home/recents/NavStubView;
+# static fields
+.field static final synthetic $SwitchMap$com$miui$home$recents$NavStubView$ModeGesture:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/miui/home/recents/NavStubView;)V
-    .locals 0
-
-    .line 4837
-    iput-object p1, p0, Lcom/miui/home/recents/NavStubView$22;->this$0:Lcom/miui/home/recents/NavStubView;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public onUpdate(Landroid/graphics/RectF;FFF)V
+.method static constructor <clinit>()V
     .locals 3
 
-    .line 4840
-    iget-object v0, p0, Lcom/miui/home/recents/NavStubView$22;->this$0:Lcom/miui/home/recents/NavStubView;
+    .line 2763
+    invoke-static {}, Lcom/miui/home/recents/NavStubView$ModeGesture;->values()[Lcom/miui/home/recents/NavStubView$ModeGesture;
 
-    invoke-static {v0}, Lcom/miui/home/recents/NavStubView;->access$4500(Lcom/miui/home/recents/NavStubView;)F
+    move-result-object v0
 
-    move-result v0
+    array-length v0, v0
 
-    iget-object v1, p0, Lcom/miui/home/recents/NavStubView$22;->this$0:Lcom/miui/home/recents/NavStubView;
+    new-array v0, v0, [I
 
-    invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$4500(Lcom/miui/home/recents/NavStubView;)F
+    sput-object v0, Lcom/miui/home/recents/NavStubView$22;->$SwitchMap$com$miui$home$recents$NavStubView$ModeGesture:[I
+
+    :try_start_0
+    sget-object v0, Lcom/miui/home/recents/NavStubView$22;->$SwitchMap$com$miui$home$recents$NavStubView$ModeGesture:[I
+
+    sget-object v1, Lcom/miui/home/recents/NavStubView$ModeGesture;->APP_MODE_GESTURE:Lcom/miui/home/recents/NavStubView$ModeGesture;
+
+    invoke-virtual {v1}, Lcom/miui/home/recents/NavStubView$ModeGesture;->ordinal()I
 
     move-result v1
 
-    const/high16 v2, 0x3f800000    # 1.0f
+    const/4 v2, 0x1
 
-    sub-float/2addr v2, v1
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    mul-float/2addr v2, p2
+    :catch_0
+    :try_start_1
+    sget-object v0, Lcom/miui/home/recents/NavStubView$22;->$SwitchMap$com$miui$home$recents$NavStubView$ModeGesture:[I
 
-    add-float/2addr v0, v2
+    sget-object v1, Lcom/miui/home/recents/NavStubView$ModeGesture;->HOME_MODE_GESTURE:Lcom/miui/home/recents/NavStubView$ModeGesture;
 
-    .line 4841
-    iget-object p2, p0, Lcom/miui/home/recents/NavStubView$22;->this$0:Lcom/miui/home/recents/NavStubView;
+    invoke-virtual {v1}, Lcom/miui/home/recents/NavStubView$ModeGesture;->ordinal()I
 
-    invoke-static {p2, p1, v0, p3, p4}, Lcom/miui/home/recents/NavStubView;->access$5800(Lcom/miui/home/recents/NavStubView;Landroid/graphics/RectF;FFF)Landroid/graphics/RectF;
+    move-result v1
 
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
     return-void
 .end method

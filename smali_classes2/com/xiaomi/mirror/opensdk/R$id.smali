@@ -17,9 +17,9 @@
 # static fields
 .field public static final icon:I = 0x7f0a013e
 
-.field public static final tag_mirror_menu_query_listener:I = 0x7f0a0282
+.field public static final tag_mirror_menu_query_listener:I = 0x7f0a0284
 
-.field public static final text:I = 0x7f0a0291
+.field public static final text:I = 0x7f0a0293
 
 
 # direct methods

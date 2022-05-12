@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Ylös pyyhkäiseminen on varattu Sovelluslaatikon avaamiseen. Vaihda tavalliseen aloitusnäyttötilaan ja yritä uudelleen.</string>
     <string name="all_apps_suggestions">Sovellusehdotukset</string>
     <string name="am">ap.</string>
-    <string name="animation_rate_title">Animaationopeus</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Siirrettiin sijalle %1$d kansiossa</string>
     <string name="announce_for_checked">%1$s, tarkastettu</string>
     <string name="announce_for_choose_default_screen">Ruutu %1$d asetettu oletusaloitusnäytöksi</string>

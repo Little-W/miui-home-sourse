@@ -71,7 +71,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f0a0236
+    const v0, 0x7f0a0238
 
     .line 35
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -82,7 +82,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/view/LabelSeekBar;->mSeekBar:Lmiuix/androidbasewidget/widget/SeekBar;
 
-    const v0, 0x7f0a0237
+    const v0, 0x7f0a0239
 
     .line 36
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;

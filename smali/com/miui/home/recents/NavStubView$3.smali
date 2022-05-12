@@ -80,7 +80,7 @@
 
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$3;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$8700(Lcom/miui/home/recents/NavStubView;)F
+    invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$8600(Lcom/miui/home/recents/NavStubView;)F
 
     move-result v1
 

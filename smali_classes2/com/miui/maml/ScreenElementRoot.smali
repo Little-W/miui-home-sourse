@@ -331,22 +331,22 @@
 
     const/4 v0, 0x0
 
-    .line 293
+    .line 294
     invoke-direct {p0, v0, v0}, Lcom/miui/maml/elements/ScreenElement;-><init>(Lorg/w3c/dom/Element;Lcom/miui/maml/ScreenElementRoot;)V
 
     const/high16 v0, 0x41f00000    # 30.0f
 
-    .line 115
+    .line 116
     iput v0, p0, Lcom/miui/maml/ScreenElementRoot;->DEFAULT_FRAME_RATE:F
 
-    .line 148
+    .line 149
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mPreTickers:Ljava/util/ArrayList;
 
-    .line 156
+    .line 157
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -355,49 +355,49 @@
 
     const/4 v0, 0x0
 
-    .line 168
+    .line 169
     iput-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mSupportAccessibilityService:Z
 
-    .line 169
+    .line 170
     iput-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mBlurWindow:Z
 
     const/4 v1, 0x1
 
-    .line 170
+    .line 171
     iput-boolean v1, p0, Lcom/miui/maml/ScreenElementRoot;->mTouchable:Z
 
-    .line 180
+    .line 181
     iput-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mDisableCutRoundCorner:Z
 
-    .line 191
+    .line 192
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mHoverMatrix:Landroid/graphics/Matrix;
 
-    .line 193
+    .line 194
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAnimationItems:Landroid/util/ArrayMap;
 
-    .line 194
+    .line 195
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mElements:Landroid/util/ArrayMap;
 
-    .line 241
+    .line 242
     new-instance v0, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;
 
     invoke-direct {v0}, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mFramerateHelper:Lcom/miui/maml/ScreenElementRoot$FramerateHelper;
 
-    .line 261
+    .line 262
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -406,37 +406,37 @@
 
     const/4 v0, -0x1
 
-    .line 274
+    .line 275
     iput v0, p0, Lcom/miui/maml/ScreenElementRoot;->mCapability:I
 
-    .line 286
+    .line 287
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAccessibleElements:Ljava/util/List;
 
-    .line 290
+    .line 291
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRenderMutex:Ljava/lang/Object;
 
-    .line 295
+    .line 296
     iput-object p0, p0, Lcom/miui/maml/ScreenElementRoot;->mRoot:Lcom/miui/maml/ScreenElementRoot;
 
-    .line 296
+    .line 297
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
-    .line 297
+    .line 298
     new-instance p1, Lcom/miui/maml/data/VariableUpdaterManager;
 
     invoke-direct {p1, p0}, Lcom/miui/maml/data/VariableUpdaterManager;-><init>(Lcom/miui/maml/ScreenElementRoot;)V
 
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableUpdaterManager:Lcom/miui/maml/data/VariableUpdaterManager;
 
-    .line 298
+    .line 299
     new-instance p1, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v0, "touch_x"
@@ -451,7 +451,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mTouchX:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 299
+    .line 300
     new-instance p1, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v0, "touch_y"
@@ -466,7 +466,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mTouchY:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 300
+    .line 301
     new-instance p1, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v0, "touch_begin_x"
@@ -481,7 +481,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mTouchBeginX:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 301
+    .line 302
     new-instance p1, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v0, "touch_begin_y"
@@ -496,7 +496,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mTouchBeginY:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 302
+    .line 303
     new-instance p1, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v0, "touch_begin_time"
@@ -511,12 +511,12 @@
 
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mTouchBeginTime:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 303
+    .line 304
     new-instance p1, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v0, "intercept_sys_touch"
 
-    .line 304
+    .line 305
     invoke-virtual {p0}, Lcom/miui/maml/ScreenElementRoot;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v2
@@ -527,7 +527,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mNeedDisallowInterceptTouchEventVar:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 305
+    .line 306
     new-instance p1, Lcom/miui/maml/SoundManager;
 
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
@@ -536,14 +536,14 @@
 
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mSoundManager:Lcom/miui/maml/SoundManager;
 
-    .line 306
+    .line 307
     new-instance p1, Lcom/miui/maml/SystemCommandListener;
 
     invoke-direct {p1, p0}, Lcom/miui/maml/SystemCommandListener;-><init>(Lcom/miui/maml/ScreenElementRoot;)V
 
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mSystemExternCommandListener:Lcom/miui/maml/ScreenElementRoot$OnExternCommandListener;
 
-    .line 307
+    .line 308
     new-instance p1, Landroid/content/res/Configuration;
 
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
@@ -568,7 +568,7 @@
 .method static synthetic access$000(Lcom/miui/maml/ScreenElementRoot;)Lcom/miui/maml/CommandTriggers;
     .locals 0
 
-    .line 68
+    .line 69
     iget-object p0, p0, Lcom/miui/maml/ScreenElementRoot;->mExternalCommandManager:Lcom/miui/maml/CommandTriggers;
 
     return-object p0
@@ -577,7 +577,7 @@
 .method static synthetic access$100(Lcom/miui/maml/ScreenElementRoot;)Ljava/util/ArrayList;
     .locals 0
 
-    .line 68
+    .line 69
     iget-object p0, p0, Lcom/miui/maml/ScreenElementRoot;->mRendererControllers:Ljava/util/ArrayList;
 
     return-object p0
@@ -590,7 +590,7 @@
 
     return-void
 
-    .line 610
+    .line 611
     :cond_0
     new-instance v0, Lcom/miui/maml/util/ConfigFile;
 
@@ -598,14 +598,14 @@
 
     iput-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mConfig:Lcom/miui/maml/util/ConfigFile;
 
-    .line 611
+    .line 612
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mConfig:Lcom/miui/maml/util/ConfigFile;
 
     iget-boolean v1, p0, Lcom/miui/maml/ScreenElementRoot;->mSaveConfigViaProvider:Z
 
     invoke-virtual {v0, v1}, Lcom/miui/maml/util/ConfigFile;->setSaveViaProvider(Z)V
 
-    .line 612
+    .line 613
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mConfig:Lcom/miui/maml/util/ConfigFile;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/util/ConfigFile;->load(Ljava/lang/String;)Z
@@ -614,7 +614,7 @@
 
     if-nez p1, :cond_1
 
-    .line 614
+    .line 615
     iget-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object p1, p1, Lcom/miui/maml/ScreenContext;->mResourceManager:Lcom/miui/maml/ResourceManager;
@@ -623,12 +623,12 @@
 
     move-result-object p1
 
-    .line 615
+    .line 616
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mConfig:Lcom/miui/maml/util/ConfigFile;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/util/ConfigFile;->loadDefaultSettings(Lorg/w3c/dom/Element;)V
 
-    .line 617
+    .line 618
     :cond_1
     iget-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mConfig:Lcom/miui/maml/util/ConfigFile;
 
@@ -655,7 +655,7 @@
 
     check-cast v0, Lcom/miui/maml/util/ConfigFile$Variable;
 
-    .line 618
+    .line 619
     iget-object v1, v0, Lcom/miui/maml/util/ConfigFile$Variable;->type:Ljava/lang/String;
 
     const-string v2, "string"
@@ -666,7 +666,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 619
+    .line 620
     iget-object v1, v0, Lcom/miui/maml/util/ConfigFile$Variable;->name:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
@@ -679,7 +679,7 @@
 
     goto :goto_0
 
-    .line 620
+    .line 621
     :cond_3
     iget-object v1, v0, Lcom/miui/maml/util/ConfigFile$Variable;->type:Ljava/lang/String;
 
@@ -691,7 +691,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 622
+    .line 623
     :try_start_0
     iget-object v1, v0, Lcom/miui/maml/util/ConfigFile$Variable;->value:Ljava/lang/String;
 
@@ -699,7 +699,7 @@
 
     move-result-wide v1
 
-    .line 623
+    .line 624
     iget-object v0, v0, Lcom/miui/maml/util/ConfigFile$Variable;->name:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
@@ -712,7 +712,7 @@
 
     goto :goto_0
 
-    .line 628
+    .line 629
     :cond_4
     iget-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mConfig:Lcom/miui/maml/util/ConfigFile;
 
@@ -737,7 +737,7 @@
 
     check-cast v0, Lcom/miui/maml/util/Task;
 
-    .line 629
+    .line 630
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v1, v1, Lcom/miui/maml/ScreenContext;->mVariables:Lcom/miui/maml/data/Variables;
@@ -762,7 +762,7 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/miui/maml/data/Variables;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 630
+    .line 631
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v1, v1, Lcom/miui/maml/ScreenContext;->mVariables:Lcom/miui/maml/data/Variables;
@@ -787,7 +787,7 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/miui/maml/data/Variables;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 631
+    .line 632
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v1, v1, Lcom/miui/maml/ScreenContext;->mVariables:Lcom/miui/maml/data/Variables;
@@ -821,14 +821,14 @@
 .method private loadRawAttrs(Lorg/w3c/dom/Element;)V
     .locals 4
 
-    .line 1205
+    .line 1206
     invoke-interface {p1}, Lorg/w3c/dom/Element;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    .line 1206
+    .line 1207
     :goto_0
     invoke-interface {p1}, Lorg/w3c/dom/NamedNodeMap;->getLength()I
 
@@ -836,12 +836,12 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 1207
+    .line 1208
     invoke-interface {p1, v0}, Lorg/w3c/dom/NamedNodeMap;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v1
 
-    .line 1208
+    .line 1209
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mRawAttrs:Ljava/util/HashMap;
 
     invoke-interface {v1}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
@@ -867,32 +867,32 @@
 
     const-string v0, "useVariableUpdater"
 
-    .line 1215
+    .line 1216
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 1216
+    .line 1217
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1217
+    .line 1218
     iget-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableUpdaterManager:Lcom/miui/maml/data/VariableUpdaterManager;
 
     invoke-virtual {p0, p1}, Lcom/miui/maml/ScreenElementRoot;->onAddVariableUpdater(Lcom/miui/maml/data/VariableUpdaterManager;)V
 
     goto :goto_0
 
-    .line 1219
+    .line 1220
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableUpdaterManager:Lcom/miui/maml/data/VariableUpdaterManager;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/data/VariableUpdaterManager;->addFromTag(Ljava/lang/String;)V
 
-    .line 1222
+    .line 1223
     :goto_0
     new-instance p1, Lcom/miui/maml/data/DarkModeVariableUpdater;
 
@@ -900,7 +900,19 @@
 
     invoke-direct {p1, v0}, Lcom/miui/maml/data/DarkModeVariableUpdater;-><init>(Lcom/miui/maml/data/VariableUpdaterManager;)V
 
-    .line 1223
+    .line 1224
+    iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableUpdaterManager:Lcom/miui/maml/data/VariableUpdaterManager;
+
+    invoke-virtual {v0, p1}, Lcom/miui/maml/data/VariableUpdaterManager;->add(Lcom/miui/maml/data/VariableUpdater;)V
+
+    .line 1227
+    new-instance p1, Lcom/miui/maml/data/ConfigChangeVariableUpdater;
+
+    iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableUpdaterManager:Lcom/miui/maml/data/VariableUpdaterManager;
+
+    invoke-direct {p1, v0}, Lcom/miui/maml/data/ConfigChangeVariableUpdater;-><init>(Lcom/miui/maml/data/VariableUpdaterManager;)V
+
+    .line 1228
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableUpdaterManager:Lcom/miui/maml/data/VariableUpdaterManager;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/data/VariableUpdaterManager;->add(Lcom/miui/maml/data/VariableUpdater;)V
@@ -913,19 +925,19 @@
 
     const-string v0, "scaleByDensity"
 
-    .line 1123
+    .line 1124
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1124
+    .line 1125
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1125
+    .line 1126
     invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v0
@@ -937,21 +949,21 @@
 
     const/4 v1, 0x0
 
-    .line 1127
+    .line 1128
     invoke-static {p1, v0, v1}, Lcom/miui/maml/util/Utils;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/maml/ScreenElementRoot;->mDefaultScreenWidth:I
 
-    .line 1128
+    .line 1129
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mDefaultScreenWidth:I
 
     if-nez v0, :cond_1
 
     const-string v0, "screenWidth"
 
-    .line 1129
+    .line 1130
     invoke-static {p1, v0, v1}, Lcom/miui/maml/util/Utils;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result v0
@@ -961,28 +973,28 @@
     :cond_1
     const-string v0, "defaultResourceDensity"
 
-    .line 1131
+    .line 1132
     invoke-static {p1, v0, v1}, Lcom/miui/maml/util/Utils;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRawDefaultResourceDensity:I
 
-    .line 1132
+    .line 1133
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRawDefaultResourceDensity:I
 
     if-nez v0, :cond_2
 
     const-string v0, "resDensity"
 
-    .line 1133
+    .line 1134
     invoke-static {p1, v0, v1}, Lcom/miui/maml/util/Utils;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result v0
 
     iput v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRawDefaultResourceDensity:I
 
-    .line 1135
+    .line 1136
     :cond_2
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRawDefaultResourceDensity:I
 
@@ -992,7 +1004,7 @@
 
     iput v0, p0, Lcom/miui/maml/ScreenElementRoot;->mDefaultResourceDensity:I
 
-    .line 1136
+    .line 1137
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mDefaultScreenWidth:I
 
     const/16 v2, 0x1e0
@@ -1005,21 +1017,21 @@
 
     if-nez v0, :cond_3
 
-    .line 1137
+    .line 1138
     iput v2, p0, Lcom/miui/maml/ScreenElementRoot;->mDefaultScreenWidth:I
 
-    .line 1138
+    .line 1139
     iput v3, p0, Lcom/miui/maml/ScreenElementRoot;->mDefaultResourceDensity:I
 
     goto :goto_0
 
-    .line 1139
+    .line 1140
     :cond_3
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mDefaultResourceDensity:I
 
     if-nez v0, :cond_4
 
-    .line 1141
+    .line 1142
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mDefaultScreenWidth:I
 
     mul-int/2addr v0, v3
@@ -1030,7 +1042,7 @@
 
     goto :goto_0
 
-    .line 1142
+    .line 1143
     :cond_4
     iget v4, p0, Lcom/miui/maml/ScreenElementRoot;->mDefaultScreenWidth:I
 
@@ -1038,12 +1050,12 @@
 
     mul-int/2addr v0, v2
 
-    .line 1143
+    .line 1144
     div-int/2addr v0, v3
 
     iput v0, p0, Lcom/miui/maml/ScreenElementRoot;->mDefaultScreenWidth:I
 
-    .line 1146
+    .line 1147
     :cond_5
     :goto_0
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
@@ -1054,7 +1066,7 @@
 
     invoke-virtual {v0, v4}, Lcom/miui/maml/ResourceManager;->setDefaultResourceDensity(I)V
 
-    .line 1148
+    .line 1149
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v0, v0, Lcom/miui/maml/ScreenContext;->mContext:Landroid/content/Context;
@@ -1067,44 +1079,44 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    .line 1149
+    .line 1150
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v4
 
-    .line 1150
+    .line 1151
     iget v5, p0, Lcom/miui/maml/ScreenElementRoot;->mResizeScale:F
 
     invoke-static {v0, v5}, Lcom/miui/maml/util/DeviceUtils;->getTargetScreenWH(Landroid/view/WindowManager;F)[I
 
     move-result-object v0
 
-    .line 1151
+    .line 1152
     aget v5, v0, v1
 
     iput v5, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenWidth:I
 
     const/4 v5, 0x1
 
-    .line 1152
+    .line 1153
     aget v0, v0, v5
 
     iput v0, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenHeight:I
 
-    .line 1153
+    .line 1154
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 1154
+    .line 1155
     invoke-virtual {v4, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 1155
+    .line 1156
     iget v0, v0, Landroid/util/DisplayMetrics;->densityDpi:I
 
     iput v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRawTargetDensity:I
 
-    .line 1157
+    .line 1158
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v0, v0, Lcom/miui/maml/ScreenContext;->mContext:Landroid/content/Context;
@@ -1117,30 +1129,30 @@
 
     move-result-object v0
 
-    .line 1158
+    .line 1159
     iget v0, v0, Landroid/content/res/Configuration;->screenLayout:I
 
     and-int/lit8 v0, v0, 0xf
 
-    .line 1161
+    .line 1162
     iget v4, p0, Lcom/miui/maml/ScreenElementRoot;->mRawDefaultResourceDensity:I
 
     if-nez v4, :cond_6
 
-    .line 1163
+    .line 1164
     iget v4, p0, Lcom/miui/maml/ScreenElementRoot;->mDefaultScreenWidth:I
 
     mul-int/2addr v4, v3
 
     div-int/2addr v4, v2
 
-    .line 1165
+    .line 1166
     :cond_6
     new-instance v2, Lcom/miui/maml/ScreenElementRoot$ExtraResource;
 
     invoke-direct {v2, p1, v4}, Lcom/miui/maml/ScreenElementRoot$ExtraResource;-><init>(Lorg/w3c/dom/Element;I)V
 
-    .line 1166
+    .line 1167
     iget v3, p0, Lcom/miui/maml/ScreenElementRoot;->mRawTargetDensity:I
 
     iget v4, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenWidth:I
@@ -1151,7 +1163,7 @@
 
     const-string v4, "ScreenElementRoot"
 
-    .line 1167
+    .line 1168
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1172,7 +1184,7 @@
 
     invoke-static {v4, v5}, Lcom/miui/maml/util/MamlLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1168
+    .line 1169
     iget v4, v3, Lcom/miui/maml/ScreenElementRoot$ExtraResource$Resource;->mDensity:I
 
     invoke-static {v4}, Lcom/miui/maml/ResourceManager;->translateDensity(I)I
@@ -1187,7 +1199,7 @@
 
     float-to-int v4, v4
 
-    .line 1169
+    .line 1170
     iget-object v5, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v5, v5, Lcom/miui/maml/ScreenContext;->mResourceManager:Lcom/miui/maml/ResourceManager;
@@ -1196,7 +1208,7 @@
 
     invoke-virtual {v5, v3, v4}, Lcom/miui/maml/ResourceManager;->setExtraResource(Ljava/lang/String;I)V
 
-    .line 1172
+    .line 1173
     iget v3, p0, Lcom/miui/maml/ScreenElementRoot;->mRawTargetDensity:I
 
     iget v4, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenWidth:I
@@ -1207,7 +1219,7 @@
 
     const-string v2, "ScreenElementRoot"
 
-    .line 1173
+    .line 1174
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1228,7 +1240,7 @@
 
     invoke-static {v2, v3}, Lcom/miui/maml/util/MamlLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1177
+    .line 1178
     iget-boolean v2, p0, Lcom/miui/maml/ScreenElementRoot;->mScaleByDensity:Z
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -1237,7 +1249,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 1178
+    .line 1179
     iget v2, p0, Lcom/miui/maml/ScreenElementRoot;->mRawTargetDensity:I
 
     invoke-static {v2}, Lcom/miui/maml/ResourceManager;->translateDensity(I)I
@@ -1246,14 +1258,14 @@
 
     iput v2, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetDensity:I
 
-    .line 1180
+    .line 1181
     iget v2, v0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScale:F
 
     cmpg-float v2, v2, v4
 
     if-gtz v2, :cond_7
 
-    .line 1181
+    .line 1182
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetDensity:I
 
     int-to-float v0, v0
@@ -1268,7 +1280,7 @@
 
     goto :goto_1
 
-    .line 1183
+    .line 1184
     :cond_7
     iget v2, p0, Lcom/miui/maml/ScreenElementRoot;->mRawTargetDensity:I
 
@@ -1282,7 +1294,7 @@
 
     div-float/2addr v2, v3
 
-    .line 1184
+    .line 1185
     iget v0, v0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScale:F
 
     mul-float/2addr v0, v2
@@ -1291,7 +1303,7 @@
 
     goto :goto_1
 
-    .line 1187
+    .line 1188
     :cond_8
     iget v2, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenWidth:I
 
@@ -1305,7 +1317,7 @@
 
     iput v2, p0, Lcom/miui/maml/ScreenElementRoot;->mScale:F
 
-    .line 1188
+    .line 1189
     iget v2, p0, Lcom/miui/maml/ScreenElementRoot;->mDefaultResourceDensity:I
 
     int-to-float v2, v2
@@ -1318,14 +1330,14 @@
 
     iput v2, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetDensity:I
 
-    .line 1190
+    .line 1191
     iget v2, v0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScale:F
 
     cmpl-float v2, v2, v4
 
     if-lez v2, :cond_9
 
-    .line 1191
+    .line 1192
     iget v2, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenWidth:I
 
     int-to-float v2, v2
@@ -1338,7 +1350,7 @@
 
     div-float/2addr v2, v3
 
-    .line 1192
+    .line 1193
     iget v0, v0, Lcom/miui/maml/ScreenElementRoot$ExtraResource$ScaleMetrics;->mScale:F
 
     mul-float/2addr v0, v2
@@ -1349,7 +1361,7 @@
     :goto_1
     const-string v0, "ScreenElementRoot"
 
-    .line 1195
+    .line 1196
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1368,7 +1380,7 @@
 
     invoke-static {v0, v2}, Lcom/miui/maml/util/MamlLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1196
+    .line 1197
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v0, v0, Lcom/miui/maml/ScreenContext;->mResourceManager:Lcom/miui/maml/ResourceManager;
@@ -1379,7 +1391,7 @@
 
     const-string v0, "width"
 
-    .line 1198
+    .line 1199
     invoke-static {p1, v0, v1}, Lcom/miui/maml/util/Utils;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result v0
@@ -1388,14 +1400,14 @@
 
     const-string v0, "height"
 
-    .line 1199
+    .line 1200
     invoke-static {p1, v0, v1}, Lcom/miui/maml/util/Utils;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result p1
 
     iput p1, p0, Lcom/miui/maml/ScreenElementRoot;->mRawHeight:I
 
-    .line 1200
+    .line 1201
     iget p1, p0, Lcom/miui/maml/ScreenElementRoot;->mRawWidth:I
 
     int-to-float p1, p1
@@ -1412,7 +1424,7 @@
 
     iput p1, p0, Lcom/miui/maml/ScreenElementRoot;->mWidth:F
 
-    .line 1201
+    .line 1202
     iget p1, p0, Lcom/miui/maml/ScreenElementRoot;->mRawHeight:I
 
     int-to-float p1, p1
@@ -1435,12 +1447,12 @@
 .method private traverseElements()V
     .locals 1
 
-    .line 849
+    .line 850
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRendererControllers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 850
+    .line 851
     new-instance v0, Lcom/miui/maml/ScreenElementRoot$2;
 
     invoke-direct {v0, p0}, Lcom/miui/maml/ScreenElementRoot$2;-><init>(Lcom/miui/maml/ScreenElementRoot;)V
@@ -1455,10 +1467,10 @@
 .method public acceptVisitor(Lcom/miui/maml/elements/ScreenElementVisitor;)V
     .locals 1
 
-    .line 1621
+    .line 1626
     invoke-super {p0, p1}, Lcom/miui/maml/elements/ScreenElement;->acceptVisitor(Lcom/miui/maml/elements/ScreenElementVisitor;)V
 
-    .line 1622
+    .line 1627
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/elements/ElementGroup;->acceptVisitor(Lcom/miui/maml/elements/ScreenElementVisitor;)V
@@ -1469,7 +1481,7 @@
 .method public addAccessibleElements(Lcom/miui/maml/elements/AnimatedScreenElement;)V
     .locals 1
 
-    .line 366
+    .line 367
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAccessibleElements:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1478,7 +1490,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/maml/elements/AnimatedScreenElement;->setVirtualViewId(I)V
 
-    .line 367
+    .line 368
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAccessibleElements:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -1497,12 +1509,12 @@
         }
     .end annotation
 
-    .line 387
+    .line 388
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAccessibleElements:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 388
+    .line 389
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -1520,7 +1532,7 @@
 
     check-cast v0, Lcom/miui/maml/elements/AnimatedScreenElement;
 
-    .line 389
+    .line 390
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mAccessibleElements:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
@@ -1538,7 +1550,7 @@
 .method public addAnimationItem(Ljava/lang/String;Lcom/miui/maml/animation/BaseAnimation$AnimationItem;)V
     .locals 1
 
-    .line 1757
+    .line 1763
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAnimationItems:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->containsKey(Ljava/lang/Object;)Z
@@ -1547,7 +1559,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1758
+    .line 1764
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAnimationItems:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1556,21 +1568,21 @@
 
     check-cast p1, Ljava/util/ArrayList;
 
-    .line 1759
+    .line 1765
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1761
+    .line 1767
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1762
+    .line 1768
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1763
+    .line 1769
     iget-object p2, p0, Lcom/miui/maml/ScreenElementRoot;->mAnimationItems:Landroid/util/ArrayMap;
 
     invoke-virtual {p2, p1, v0}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -1582,7 +1594,7 @@
 .method public addElement(Ljava/lang/String;Ljava/lang/ref/WeakReference;)V
     .locals 1
 
-    .line 1780
+    .line 1786
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mElements:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -1593,7 +1605,7 @@
 .method public addPreTicker(Lcom/miui/maml/elements/ITicker;)V
     .locals 1
 
-    .line 1364
+    .line 1369
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mPreTickers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -1604,7 +1616,7 @@
 .method public allowScreenRotation()Z
     .locals 1
 
-    .line 1654
+    .line 1660
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAllowScreenRotation:Z
 
     return v0
@@ -1613,12 +1625,12 @@
 .method public attachToVsync()V
     .locals 4
 
-    .line 1567
+    .line 1572
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mController:Lcom/miui/maml/RendererController;
 
     if-eqz v0, :cond_1
 
-    .line 1570
+    .line 1575
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRendererControllers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1630,7 +1642,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 1572
+    .line 1577
     invoke-static {}, Lcom/miui/maml/RenderVsyncUpdater;->getInstance()Lcom/miui/maml/RenderVsyncUpdater;
 
     move-result-object v2
@@ -1652,7 +1664,7 @@
     :cond_0
     return-void
 
-    .line 1568
+    .line 1573
     :cond_1
     new-instance v0, Ljava/lang/NullPointerException;
 
@@ -1666,7 +1678,7 @@
 .method public createFramerateToken(Ljava/lang/String;)Lcom/miui/maml/FramerateTokenList$FramerateToken;
     .locals 0
 
-    .line 311
+    .line 312
     invoke-virtual {p0, p1}, Lcom/miui/maml/ScreenElementRoot;->createToken(Ljava/lang/String;)Lcom/miui/maml/FramerateTokenList$FramerateToken;
 
     move-result-object p1
@@ -1677,12 +1689,12 @@
 .method public detachFromVsync()V
     .locals 4
 
-    .line 1577
+    .line 1582
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mController:Lcom/miui/maml/RendererController;
 
     if-eqz v0, :cond_1
 
-    .line 1580
+    .line 1585
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRendererControllers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1694,7 +1706,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 1582
+    .line 1587
     invoke-static {}, Lcom/miui/maml/RenderVsyncUpdater;->getInstance()Lcom/miui/maml/RenderVsyncUpdater;
 
     move-result-object v2
@@ -1716,7 +1728,7 @@
     :cond_0
     return-void
 
-    .line 1578
+    .line 1583
     :cond_1
     new-instance v0, Ljava/lang/NullPointerException;
 
@@ -1730,7 +1742,7 @@
 .method protected doRender(Landroid/graphics/Canvas;)V
     .locals 3
 
-    .line 481
+    .line 482
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mFinished:Z
 
     if-nez v0, :cond_4
@@ -1741,7 +1753,7 @@
 
     goto :goto_1
 
-    .line 484
+    .line 485
     :cond_0
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mClearCanvas:Z
 
@@ -1749,12 +1761,12 @@
 
     const/4 v0, 0x0
 
-    .line 485
+    .line 486
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 490
+    .line 491
     :cond_1
     :try_start_0
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
@@ -1771,7 +1783,7 @@
 
     const-string v1, "ScreenElementRoot"
 
-    .line 494
+    .line 495
     invoke-virtual {v0}, Ljava/lang/OutOfMemoryError;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -1783,21 +1795,21 @@
     :catch_1
     move-exception v0
 
-    .line 492
+    .line 493
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 497
+    .line 498
     :goto_0
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mShowFramerate:Z
 
     if-eqz v0, :cond_2
 
-    .line 498
+    .line 499
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mFramerateHelper:Lcom/miui/maml/ScreenElementRoot$FramerateHelper;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;->draw(Landroid/graphics/Canvas;)V
 
-    .line 501
+    .line 502
     :cond_2
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mFrames:I
 
@@ -1805,12 +1817,12 @@
 
     iput v0, p0, Lcom/miui/maml/ScreenElementRoot;->mFrames:I
 
-    .line 502
+    .line 503
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mController:Lcom/miui/maml/RendererController;
 
     invoke-virtual {v0}, Lcom/miui/maml/RendererController;->doneRender()V
 
-    .line 504
+    .line 505
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mDarkWallpaperMode:Z
 
     if-eqz v0, :cond_3
@@ -1825,7 +1837,7 @@
 
     const/high16 v0, 0x19000000
 
-    .line 505
+    .line 506
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->drawColor(I)V
 
     :cond_3
@@ -1839,7 +1851,7 @@
 .method protected doTick(J)V
     .locals 7
 
-    .line 399
+    .line 400
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mFinished:Z
 
     if-nez v0, :cond_7
@@ -1850,22 +1862,22 @@
 
     goto/16 :goto_3
 
-    .line 402
+    .line 403
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableBinderManager:Lcom/miui/maml/data/VariableBinderManager;
 
     if-eqz v0, :cond_1
 
-    .line 403
+    .line 404
     invoke-virtual {v0}, Lcom/miui/maml/data/VariableBinderManager;->tick()V
 
-    .line 405
+    .line 406
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableUpdaterManager:Lcom/miui/maml/data/VariableUpdaterManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/maml/data/VariableUpdaterManager;->tick(J)V
 
-    .line 408
+    .line 409
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mPreTickers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1879,7 +1891,7 @@
     :goto_0
     if-ge v2, v0, :cond_2
 
-    .line 410
+    .line 411
     iget-object v3, p0, Lcom/miui/maml/ScreenElementRoot;->mPreTickers:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1894,13 +1906,13 @@
 
     goto :goto_0
 
-    .line 413
+    .line 414
     :cond_2
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/maml/elements/ElementGroup;->tick(J)V
 
-    .line 416
+    .line 417
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mNeedDisallowInterceptTouchEventVar:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v0}, Lcom/miui/maml/data/IndexedVariable;->getDouble()D
@@ -1922,18 +1934,18 @@
     :cond_3
     move v0, v1
 
-    .line 417
+    .line 418
     :goto_1
     iput-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mNeedDisallowInterceptTouchEvent:Z
 
-    .line 420
+    .line 421
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mFrameRateVar:Lcom/miui/maml/data/IndexedVariable;
 
     const-wide/16 v3, 0x0
 
     if-nez v0, :cond_4
 
-    .line 421
+    .line 422
     new-instance v0, Lcom/miui/maml/data/IndexedVariable;
 
     const-string v5, "frame_rate"
@@ -1946,10 +1958,10 @@
 
     iput-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mFrameRateVar:Lcom/miui/maml/data/IndexedVariable;
 
-    .line 422
+    .line 423
     iput-wide v3, p0, Lcom/miui/maml/ScreenElementRoot;->mCheckPoint:J
 
-    .line 425
+    .line 426
     :cond_4
     iget-wide v5, p0, Lcom/miui/maml/ScreenElementRoot;->mCheckPoint:J
 
@@ -1957,7 +1969,7 @@
 
     if-nez v0, :cond_5
 
-    .line 426
+    .line 427
     iput-wide p1, p0, Lcom/miui/maml/ScreenElementRoot;->mCheckPoint:J
 
     goto :goto_2
@@ -1971,7 +1983,7 @@
 
     if-ltz v0, :cond_6
 
-    .line 430
+    .line 431
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mFrames:I
 
     mul-int/lit16 v0, v0, 0x3e8
@@ -1982,22 +1994,22 @@
 
     long-to-int v0, v4
 
-    .line 431
+    .line 432
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mFramerateHelper:Lcom/miui/maml/ScreenElementRoot$FramerateHelper;
 
     invoke-virtual {v2, v0}, Lcom/miui/maml/ScreenElementRoot$FramerateHelper;->set(I)V
 
-    .line 432
+    .line 433
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mFrameRateVar:Lcom/miui/maml/data/IndexedVariable;
 
     int-to-double v3, v0
 
     invoke-virtual {v2, v3, v4}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 433
+    .line 434
     iput v1, p0, Lcom/miui/maml/ScreenElementRoot;->mFrames:I
 
-    .line 434
+    .line 435
     iput-wide p1, p0, Lcom/miui/maml/ScreenElementRoot;->mCheckPoint:J
 
     :cond_6
@@ -2012,7 +2024,7 @@
 .method public doneRender()V
     .locals 1
 
-    .line 1587
+    .line 1592
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mController:Lcom/miui/maml/RendererController;
 
     invoke-virtual {v0}, Lcom/miui/maml/RendererController;->doneRender()V
@@ -2023,7 +2035,7 @@
 .method public findBinder(Ljava/lang/String;)Lcom/miui/maml/data/VariableBinder;
     .locals 1
 
-    .line 476
+    .line 477
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableBinderManager:Lcom/miui/maml/data/VariableBinderManager;
 
     if-eqz v0, :cond_0
@@ -2046,7 +2058,7 @@
 
     const-string v0, "__root"
 
-    .line 469
+    .line 470
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2055,7 +2067,7 @@
 
     return-object p0
 
-    .line 472
+    .line 473
     :cond_0
     invoke-virtual {p0, p1}, Lcom/miui/maml/ScreenElementRoot;->getElement(Ljava/lang/String;)Lcom/miui/maml/elements/ScreenElement;
 
@@ -2067,7 +2079,7 @@
 .method public findTask(Ljava/lang/String;)Lcom/miui/maml/util/Task;
     .locals 1
 
-    .line 1257
+    .line 1262
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mConfig:Lcom/miui/maml/util/ConfigFile;
 
     if-nez v0, :cond_0
@@ -2088,7 +2100,7 @@
 .method public finish()V
     .locals 2
 
-    .line 1295
+    .line 1300
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mFinished:Z
 
     if-nez v0, :cond_5
@@ -2099,7 +2111,7 @@
 
     goto :goto_0
 
-    .line 1297
+    .line 1302
     :cond_0
     invoke-super {p0}, Lcom/miui/maml/elements/ScreenElement;->finish()V
 
@@ -2107,29 +2119,29 @@
 
     const-string v1, "finish"
 
-    .line 1298
+    .line 1303
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1300
+    .line 1305
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     const-string v1, "preFinish"
 
     invoke-virtual {v0, v1}, Lcom/miui/maml/elements/ElementGroup;->performAction(Ljava/lang/String;)V
 
-    .line 1301
+    .line 1306
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/ElementGroup;->finish()V
 
-    .line 1302
+    .line 1307
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     const-string v1, "finish"
 
     invoke-virtual {v0, v1}, Lcom/miui/maml/elements/ElementGroup;->performAction(Ljava/lang/String;)V
 
-    .line 1304
+    .line 1309
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mConfig:Lcom/miui/maml/util/ConfigFile;
 
     if-eqz v0, :cond_1
@@ -2138,7 +2150,7 @@
 
     if-nez v1, :cond_1
 
-    .line 1305
+    .line 1310
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v1, v1, Lcom/miui/maml/ScreenContext;->mContext:Landroid/content/Context;
@@ -2149,40 +2161,40 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/maml/util/ConfigFile;->save(Landroid/content/Context;)Z
 
-    .line 1308
+    .line 1313
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableBinderManager:Lcom/miui/maml/data/VariableBinderManager;
 
     if-eqz v0, :cond_2
 
-    .line 1309
+    .line 1314
     invoke-virtual {v0}, Lcom/miui/maml/data/VariableBinderManager;->finish()V
 
-    .line 1311
+    .line 1316
     :cond_2
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mExternalCommandManager:Lcom/miui/maml/CommandTriggers;
 
     if-eqz v0, :cond_3
 
-    .line 1312
+    .line 1317
     invoke-virtual {v0}, Lcom/miui/maml/CommandTriggers;->finish()V
 
-    .line 1314
+    .line 1319
     :cond_3
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableUpdaterManager:Lcom/miui/maml/data/VariableUpdaterManager;
 
     if-eqz v0, :cond_4
 
-    .line 1315
+    .line 1320
     invoke-virtual {v0}, Lcom/miui/maml/data/VariableUpdaterManager;->finish()V
 
-    .line 1317
+    .line 1322
     :cond_4
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mSoundManager:Lcom/miui/maml/SoundManager;
 
     invoke-virtual {v0}, Lcom/miui/maml/SoundManager;->release()V
 
-    .line 1318
+    .line 1323
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v0, v0, Lcom/miui/maml/ScreenContext;->mResourceManager:Lcom/miui/maml/ResourceManager;
@@ -2193,15 +2205,15 @@
 
     const/4 v0, 0x1
 
-    .line 1319
+    .line 1324
     iput-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mFinished:Z
 
     const/4 v0, 0x0
 
-    .line 1320
+    .line 1325
     iput-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mKeepResource:Z
 
-    .line 1323
+    .line 1328
     invoke-static {}, Lcom/miui/maml/data/Expression$FunctionExpression;->resetFunctions()V
 
     return-void
@@ -2222,7 +2234,7 @@
         }
     .end annotation
 
-    .line 371
+    .line 372
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAccessibleElements:Ljava/util/List;
 
     return-object v0
@@ -2241,7 +2253,7 @@
         }
     .end annotation
 
-    .line 1768
+    .line 1774
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAnimationItems:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2256,7 +2268,7 @@
 .method public getCacheDir()Ljava/lang/String;
     .locals 1
 
-    .line 339
+    .line 340
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mCacheDir:Ljava/lang/String;
 
     return-object v0
@@ -2265,7 +2277,7 @@
 .method public getCapability(I)Z
     .locals 1
 
-    .line 1692
+    .line 1698
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mCapability:I
 
     and-int/2addr p1, v0
@@ -2286,7 +2298,7 @@
 .method public getContext()Lcom/miui/maml/ScreenContext;
     .locals 1
 
-    .line 454
+    .line 455
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     return-object v0
@@ -2304,7 +2316,7 @@
         }
     .end annotation
 
-    .line 1558
+    .line 1563
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mViewManagerRef:Ljava/lang/ref/WeakReference;
 
     const/4 v1, 0x0
@@ -2325,12 +2337,12 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 1560
+    .line 1565
     invoke-interface {v0}, Lcom/miui/maml/util/MamlViewManager;->getViewLocationOnScreen()Landroid/graphics/Rect;
 
     move-result-object v1
 
-    .line 1561
+    .line 1566
     invoke-interface {v0}, Lcom/miui/maml/util/MamlViewManager;->getViewContext()Landroid/content/Context;
 
     move-result-object v0
@@ -2348,7 +2360,7 @@
 .method public getDefaultScreenWidth()I
     .locals 1
 
-    .line 1286
+    .line 1291
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mDefaultScreenWidth:I
 
     return v0
@@ -2357,7 +2369,7 @@
 .method public getElement(Ljava/lang/String;)Lcom/miui/maml/elements/ScreenElement;
     .locals 1
 
-    .line 1772
+    .line 1778
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mElements:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2368,7 +2380,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 1774
+    .line 1780
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p1
@@ -2386,7 +2398,7 @@
 .method public final getFontScale()F
     .locals 1
 
-    .line 1723
+    .line 1729
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mFontScale:F
 
     return v0
@@ -2395,7 +2407,7 @@
 .method public getHeight()F
     .locals 1
 
-    .line 1360
+    .line 1365
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mHeight:F
 
     return v0
@@ -2404,7 +2416,7 @@
 .method public getHoverElement()Lcom/miui/maml/elements/AnimatedScreenElement;
     .locals 1
 
-    .line 1437
+    .line 1442
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mHoverElement:Lcom/miui/maml/elements/AnimatedScreenElement;
 
     return-object v0
@@ -2413,7 +2425,7 @@
 .method public getMamlAccessHelper()Lcom/miui/maml/util/MamlAccessHelper;
     .locals 1
 
-    .line 1753
+    .line 1759
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mMamlAccessHelper:Lcom/miui/maml/util/MamlAccessHelper;
 
     return-object v0
@@ -2422,7 +2434,7 @@
 .method public getMamlSurface()Lcom/miui/maml/component/MamlSurface;
     .locals 1
 
-    .line 1826
+    .line 1832
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mMamlSurfaceRef:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
@@ -2445,7 +2457,7 @@
 .method public getRawAttr(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 445
+    .line 446
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRawAttrs:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2460,7 +2472,7 @@
 .method public getRenderMutex()Ljava/lang/Object;
     .locals 1
 
-    .line 394
+    .line 395
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRenderMutex:Ljava/lang/Object;
 
     return-object v0
@@ -2469,7 +2481,7 @@
 .method public getRendererController()Lcom/miui/maml/RendererController;
     .locals 1
 
-    .line 1627
+    .line 1632
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mController:Lcom/miui/maml/RendererController;
 
     return-object v0
@@ -2478,7 +2490,7 @@
 .method public getResourceDensity()I
     .locals 1
 
-    .line 1274
+    .line 1279
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mDefaultResourceDensity:I
 
     return v0
@@ -2487,7 +2499,7 @@
 .method public getRootTag()Ljava/lang/String;
     .locals 1
 
-    .line 838
+    .line 839
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRootTag:Ljava/lang/String;
 
     return-object v0
@@ -2496,7 +2508,7 @@
 .method public final getScale()F
     .locals 2
 
-    .line 1265
+    .line 1270
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mScale:F
 
     const/4 v1, 0x0
@@ -2509,7 +2521,7 @@
 
     const-string v1, "scale not initialized!"
 
-    .line 1266
+    .line 1271
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -2523,7 +2535,7 @@
 .method public getScreenHeight()I
     .locals 1
 
-    .line 1352
+    .line 1357
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenHeight:I
 
     return v0
@@ -2532,7 +2544,7 @@
 .method public getScreenWidth()I
     .locals 1
 
-    .line 1348
+    .line 1353
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenWidth:I
 
     return v0
@@ -2541,7 +2553,7 @@
 .method public getStyle(Ljava/lang/String;)Lcom/miui/maml/StylesManager$Style;
     .locals 2
 
-    .line 842
+    .line 843
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -2552,7 +2564,7 @@
 
     return-object v1
 
-    .line 844
+    .line 845
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mStylesManager:Lcom/miui/maml/StylesManager;
 
@@ -2569,7 +2581,7 @@
 .method public getSystemFrameRate()F
     .locals 2
 
-    .line 1808
+    .line 1814
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v0, v0, Lcom/miui/maml/ScreenContext;->mContext:Landroid/content/Context;
@@ -2582,12 +2594,12 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    .line 1809
+    .line 1815
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
 
-    .line 1810
+    .line 1816
     invoke-virtual {v0}, Landroid/view/Display;->getRefreshRate()F
 
     move-result v0
@@ -2598,7 +2610,7 @@
 .method public getTargetDensity()I
     .locals 1
 
-    .line 1278
+    .line 1283
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetDensity:I
 
     return v0
@@ -2607,12 +2619,12 @@
 .method public getViewManager()Lcom/miui/maml/util/MamlViewManager;
     .locals 1
 
-    .line 1712
+    .line 1718
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mViewManagerRef:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
 
-    .line 1713
+    .line 1719
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -2630,7 +2642,7 @@
 .method public getWidth()F
     .locals 1
 
-    .line 1356
+    .line 1361
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mWidth:F
 
     return v0
@@ -2639,7 +2651,7 @@
 .method public getmConfiguration()Landroid/content/res/Configuration;
     .locals 1
 
-    .line 200
+    .line 201
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mConfiguration:Landroid/content/res/Configuration;
 
     return-object v0
@@ -2654,14 +2666,14 @@
 .method public init()V
     .locals 6
 
-    .line 515
+    .line 516
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mLoaded:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 519
+    .line 520
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
@@ -2669,37 +2681,37 @@
 
     const-string v1, "__objRoot"
 
-    .line 520
+    .line 521
     invoke-virtual {v0, v1, p0}, Lcom/miui/maml/data/Variables;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "__objContext"
 
-    .line 521
+    .line 522
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/maml/data/Variables;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 523
+    .line 524
     invoke-super {p0}, Lcom/miui/maml/elements/ScreenElement;->init()V
 
     const-string v1, "ScreenElementRoot"
 
     const-string v2, "init"
 
-    .line 524
+    .line 525
     invoke-static {v1, v2}, Lcom/miui/maml/util/MamlLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 526
+    .line 527
     iget v1, p0, Lcom/miui/maml/ScreenElementRoot;->mFrameRate:F
 
     invoke-virtual {p0, v1}, Lcom/miui/maml/ScreenElementRoot;->requestFramerate(F)V
 
     const/4 v1, -0x1
 
-    .line 528
+    .line 529
     iput v1, p0, Lcom/miui/maml/ScreenElementRoot;->mCapability:I
 
-    .line 529
+    .line 530
     invoke-static {}, Lcom/miui/maml/util/HideSdkDependencyUtils;->isShowDebugLayout()Z
 
     move-result v1
@@ -2708,17 +2720,17 @@
 
     const/4 v1, 0x0
 
-    .line 531
+    .line 532
     iput-boolean v1, p0, Lcom/miui/maml/ScreenElementRoot;->mFinished:Z
 
-    .line 532
+    .line 533
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v2, v2, Lcom/miui/maml/ScreenContext;->mResourceManager:Lcom/miui/maml/ResourceManager;
 
     invoke-virtual {v2}, Lcom/miui/maml/ResourceManager;->init()V
 
-    .line 535
+    .line 536
     invoke-virtual {p0}, Lcom/miui/maml/ScreenElementRoot;->getContext()Lcom/miui/maml/ScreenContext;
 
     move-result-object v2
@@ -2739,14 +2751,14 @@
 
     const-string v2, "__fontScale"
 
-    .line 536
+    .line 537
     iget v3, p0, Lcom/miui/maml/ScreenElementRoot;->mFontScale:F
 
     float-to-double v3, v3
 
     invoke-virtual {v0, v2, v3, v4}, Lcom/miui/maml/data/Variables;->put(Ljava/lang/String;D)V
 
-    .line 539
+    .line 540
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v2, v2, Lcom/miui/maml/ScreenContext;->mContext:Landroid/content/Context;
@@ -2773,7 +2785,7 @@
 
     const-string v2, "raw_screen_width"
 
-    .line 541
+    .line 542
     iget v3, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenWidth:I
 
     int-to-double v3, v3
@@ -2782,7 +2794,7 @@
 
     const-string v2, "raw_screen_height"
 
-    .line 542
+    .line 543
     iget v3, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenHeight:I
 
     int-to-double v3, v3
@@ -2791,7 +2803,7 @@
 
     const-string v2, "screen_width"
 
-    .line 543
+    .line 544
     iget v3, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenWidth:I
 
     int-to-float v3, v3
@@ -2806,7 +2818,7 @@
 
     const-string v2, "screen_height"
 
-    .line 544
+    .line 545
     iget v3, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenHeight:I
 
     int-to-float v3, v3
@@ -2819,7 +2831,7 @@
 
     invoke-virtual {v0, v2, v3, v4}, Lcom/miui/maml/data/Variables;->put(Ljava/lang/String;D)V
 
-    .line 545
+    .line 546
     iget v2, p0, Lcom/miui/maml/ScreenElementRoot;->mRawWidth:I
 
     if-lez v2, :cond_1
@@ -2828,10 +2840,10 @@
 
     int-to-double v4, v2
 
-    .line 546
+    .line 547
     invoke-virtual {v0, v3, v4, v5}, Lcom/miui/maml/data/Variables;->put(Ljava/lang/String;D)V
 
-    .line 548
+    .line 549
     :cond_1
     iget v2, p0, Lcom/miui/maml/ScreenElementRoot;->mRawHeight:I
 
@@ -2841,13 +2853,13 @@
 
     int-to-double v4, v2
 
-    .line 549
+    .line 550
     invoke-virtual {v0, v3, v4, v5}, Lcom/miui/maml/data/Variables;->put(Ljava/lang/String;D)V
 
     :cond_2
     const-string v2, "view_width"
 
-    .line 551
+    .line 552
     iget v3, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenWidth:I
 
     int-to-float v3, v3
@@ -2862,7 +2874,7 @@
 
     const-string v2, "view_height"
 
-    .line 552
+    .line 553
     iget v3, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenHeight:I
 
     int-to-float v3, v3
@@ -2877,7 +2889,7 @@
 
     const-string v2, "__raw_density"
 
-    .line 554
+    .line 555
     iget v3, p0, Lcom/miui/maml/ScreenElementRoot;->mRawTargetDensity:I
 
     int-to-double v3, v3
@@ -2886,7 +2898,7 @@
 
     const-string v2, "__scale_factor"
 
-    .line 555
+    .line 556
     iget v3, p0, Lcom/miui/maml/ScreenElementRoot;->mScale:F
 
     float-to-double v3, v3
@@ -2897,10 +2909,10 @@
 
     const-wide/high16 v3, 0x4018000000000000L    # 6.0
 
-    .line 556
+    .line 557
     invoke-virtual {v0, v2, v3, v4}, Lcom/miui/maml/data/Variables;->put(Ljava/lang/String;D)V
 
-    .line 559
+    .line 560
     :try_start_0
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
@@ -2912,7 +2924,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 560
+    .line 561
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v2, v2, Lcom/miui/maml/ScreenContext;->mContext:Landroid/content/Context;
@@ -2925,14 +2937,14 @@
 
     const-string v3, "com.android.thememanager"
 
-    .line 562
+    .line 563
     invoke-virtual {v2, v3, v1}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object v2
 
     if-eqz v2, :cond_3
 
-    .line 564
+    .line 565
     iget v1, v2, Landroid/content/pm/PackageInfo;->versionCode:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -2944,7 +2956,7 @@
 
     const-string v3, "thememanager not found"
 
-    .line 569
+    .line 570
     invoke-static {v2, v3}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
@@ -2953,14 +2965,14 @@
 
     int-to-double v3, v1
 
-    .line 571
+    .line 572
     invoke-virtual {v0, v2, v3, v4}, Lcom/miui/maml/data/Variables;->put(Ljava/lang/String;D)V
 
     const-string v1, "__miui_version_name"
 
     const-string v2, "ro.miui.ui.version.name"
 
-    .line 573
+    .line 574
     invoke-static {v2}, Lcom/miui/maml/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -2971,7 +2983,7 @@
 
     const-string v2, "ro.miui.ui.version.code"
 
-    .line 574
+    .line 575
     invoke-static {v2}, Lcom/miui/maml/util/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -2980,48 +2992,48 @@
 
     const-string v1, "__android_version"
 
-    .line 575
+    .line 576
     sget-object v2, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/maml/data/Variables;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
     const-string v1, "__system_version"
 
-    .line 576
+    .line 577
     sget-object v2, Landroid/os/Build$VERSION;->INCREMENTAL:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Lcom/miui/maml/data/Variables;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 577
+    .line 578
     invoke-virtual {p0}, Lcom/miui/maml/ScreenElementRoot;->loadConfig()V
 
-    .line 580
+    .line 581
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableUpdaterManager:Lcom/miui/maml/data/VariableUpdaterManager;
 
     if-eqz v0, :cond_4
 
-    .line 581
+    .line 582
     invoke-virtual {v0}, Lcom/miui/maml/data/VariableUpdaterManager;->init()V
 
-    .line 584
+    .line 585
     :cond_4
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableBinderManager:Lcom/miui/maml/data/VariableBinderManager;
 
     if-eqz v0, :cond_5
 
-    .line 585
+    .line 586
     invoke-virtual {v0}, Lcom/miui/maml/data/VariableBinderManager;->init()V
 
-    .line 588
+    .line 589
     :cond_5
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mExternalCommandManager:Lcom/miui/maml/CommandTriggers;
 
     if-eqz v0, :cond_6
 
-    .line 589
+    .line 590
     invoke-virtual {v0}, Lcom/miui/maml/CommandTriggers;->init()V
 
-    .line 592
+    .line 593
     :cond_6
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
@@ -3029,19 +3041,19 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/maml/elements/ElementGroup;->performAction(Ljava/lang/String;)V
 
-    .line 593
+    .line 594
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/ElementGroup;->init()V
 
-    .line 594
+    .line 595
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     const-string v1, "postInit"
 
     invoke-virtual {v0, v1}, Lcom/miui/maml/elements/ElementGroup;->performAction(Ljava/lang/String;)V
 
-    .line 596
+    .line 597
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRoot:Lcom/miui/maml/ScreenElementRoot;
 
     const/4 v1, 0x0
@@ -3050,15 +3062,15 @@
 
     const/4 v0, 0x1
 
-    .line 597
+    .line 598
     iput-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mNeedReset:Z
 
-    .line 598
+    .line 599
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mController:Lcom/miui/maml/RendererController;
 
     invoke-virtual {v1, v0}, Lcom/miui/maml/RendererController;->setNeedReset(Z)V
 
-    .line 599
+    .line 600
     invoke-virtual {p0}, Lcom/miui/maml/ScreenElementRoot;->requestUpdate()V
 
     return-void
@@ -3067,7 +3079,7 @@
 .method public isDisableCutRoundCorner()Z
     .locals 1
 
-    .line 1282
+    .line 1287
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mDisableCutRoundCorner:Z
 
     return v0
@@ -3076,7 +3088,7 @@
 .method public isMamlBlurWindow()Z
     .locals 1
 
-    .line 1727
+    .line 1733
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mBlurWindow:Z
 
     return v0
@@ -3085,7 +3097,7 @@
 .method public isSupportAccessibilityService()Z
     .locals 1
 
-    .line 1688
+    .line 1694
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mSupportAccessibilityService:Z
 
     return v0
@@ -3094,7 +3106,7 @@
 .method public isTransparentSurface()Z
     .locals 1
 
-    .line 1830
+    .line 1836
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mTransparentSurface:Z
 
     return v0
@@ -3103,7 +3115,7 @@
 .method public isUseHardwareCanvas()Z
     .locals 1
 
-    .line 1731
+    .line 1737
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mUseHardwareCanvas:Z
 
     return v0
@@ -3112,17 +3124,17 @@
 .method public issueExternCommand(Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
     .locals 3
 
-    .line 1392
+    .line 1397
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mSystemExternCommandListener:Lcom/miui/maml/ScreenElementRoot$OnExternCommandListener;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/miui/maml/ScreenElementRoot$OnExternCommandListener;->onCommand(Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
 
-    .line 1394
+    .line 1399
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mExternCommandListener:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_0
 
-    .line 1395
+    .line 1400
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -3131,12 +3143,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1397
+    .line 1402
     invoke-interface {v0, p1, p2, p3}, Lcom/miui/maml/ScreenElementRoot$OnExternCommandListener;->onCommand(Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
 
     const-string v0, "ScreenElementRoot"
 
-    .line 1398
+    .line 1403
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3165,13 +3177,13 @@
 
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1401
+    .line 1406
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mMamlViewExternCommandListener:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_1
 
-    .line 1402
+    .line 1407
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -3180,12 +3192,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1404
+    .line 1409
     invoke-interface {v0, p1, p2, p3}, Lcom/miui/maml/ScreenElementRoot$OnExternCommandListener;->onCommand(Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
 
     const-string v0, "ScreenElementRoot"
 
-    .line 1405
+    .line 1410
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3214,13 +3226,13 @@
 
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1408
+    .line 1413
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mMamlSurfaceExternCommandListener:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_2
 
-    .line 1409
+    .line 1414
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -3229,12 +3241,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 1411
+    .line 1416
     invoke-interface {v0, p1, p2, p3}, Lcom/miui/maml/ScreenElementRoot$OnExternCommandListener;->onCommand(Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;)V
 
     const-string v0, "ScreenElementRoot"
 
-    .line 1412
+    .line 1417
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3272,16 +3284,16 @@
 
     const/4 v0, 0x0
 
-    .line 771
+    .line 772
     :try_start_0
     iput-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mLoaded:Z
 
-    .line 772
+    .line 773
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v1
 
-    .line 773
+    .line 774
     iget-object v3, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v3, v3, Lcom/miui/maml/ScreenContext;->mResourceManager:Lcom/miui/maml/ResourceManager;
@@ -3296,12 +3308,12 @@
 
     const-string v2, "load error, manifest root is null"
 
-    .line 775
+    .line 776
     invoke-static {v1, v2}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
-    .line 778
+    .line 779
     :cond_0
     invoke-interface {v3}, Lorg/w3c/dom/Element;->getNodeName()Ljava/lang/String;
 
@@ -3309,23 +3321,23 @@
 
     iput-object v4, p0, Lcom/miui/maml/ScreenElementRoot;->mRootTag:Ljava/lang/String;
 
-    .line 779
+    .line 780
     invoke-direct {p0, v3}, Lcom/miui/maml/ScreenElementRoot;->loadRawAttrs(Lorg/w3c/dom/Element;)V
 
-    .line 780
+    .line 781
     invoke-direct {p0, v3}, Lcom/miui/maml/ScreenElementRoot;->processUseVariableUpdater(Lorg/w3c/dom/Element;)V
 
-    .line 783
+    .line 784
     invoke-direct {p0, v3}, Lcom/miui/maml/ScreenElementRoot;->setupScale(Lorg/w3c/dom/Element;)V
 
     const-string v4, "VariableBinders"
 
-    .line 785
+    .line 786
     invoke-static {v3, v4}, Lcom/miui/maml/util/Utils;->getChild(Lorg/w3c/dom/Element;Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v4
 
-    .line 787
+    .line 788
     new-instance v5, Lcom/miui/maml/data/VariableBinderManager;
 
     invoke-direct {v5, v4, p0}, Lcom/miui/maml/data/VariableBinderManager;-><init>(Lorg/w3c/dom/Element;Lcom/miui/maml/ScreenElementRoot;)V
@@ -3334,14 +3346,14 @@
 
     const-string v4, "ExternalCommands"
 
-    .line 789
+    .line 790
     invoke-static {v3, v4}, Lcom/miui/maml/util/Utils;->getChild(Lorg/w3c/dom/Element;Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v4
 
     if-eqz v4, :cond_1
 
-    .line 791
+    .line 792
     new-instance v5, Lcom/miui/maml/CommandTriggers;
 
     invoke-direct {v5, v4, p0}, Lcom/miui/maml/CommandTriggers;-><init>(Lorg/w3c/dom/Element;Lcom/miui/maml/elements/ScreenElement;)V
@@ -3351,14 +3363,14 @@
     :cond_1
     const-string v4, "Styles"
 
-    .line 795
+    .line 796
     invoke-static {v3, v4}, Lcom/miui/maml/util/Utils;->getChild(Lorg/w3c/dom/Element;Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v4
 
     if-eqz v4, :cond_2
 
-    .line 797
+    .line 798
     new-instance v5, Lcom/miui/maml/StylesManager;
 
     invoke-direct {v5, v4}, Lcom/miui/maml/StylesManager;-><init>(Lorg/w3c/dom/Element;)V
@@ -3368,7 +3380,7 @@
     :cond_2
     const-string v4, "selfRender"
 
-    .line 800
+    .line 801
     invoke-interface {v3, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -3381,7 +3393,7 @@
 
     const-string v4, "transparentSurface"
 
-    .line 801
+    .line 802
     invoke-interface {v3, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -3394,7 +3406,7 @@
 
     const-string v4, "frameRate"
 
-    .line 802
+    .line 803
     iget v5, p0, Lcom/miui/maml/ScreenElementRoot;->DEFAULT_FRAME_RATE:F
 
     invoke-static {v3, v4, v5}, Lcom/miui/maml/util/Utils;->getAttrAsFloat(Lorg/w3c/dom/Element;Ljava/lang/String;F)F
@@ -3405,7 +3417,7 @@
 
     const-string v4, "customizedDarkModeWallpaper"
 
-    .line 803
+    .line 804
     invoke-interface {v3, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -3418,7 +3430,7 @@
 
     const-string v4, "disableCutRoundCorner"
 
-    .line 804
+    .line 805
     invoke-interface {v3, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -3431,7 +3443,7 @@
 
     const-string v4, "clearCanvas"
 
-    .line 805
+    .line 806
     invoke-interface {v3, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -3444,7 +3456,7 @@
 
     const-string v4, "supportAccessibityService"
 
-    .line 806
+    .line 807
     invoke-interface {v3, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -3457,7 +3469,7 @@
 
     const-string v4, "allowScreenRotation"
 
-    .line 807
+    .line 808
     invoke-interface {v3, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -3470,7 +3482,7 @@
 
     const-string v4, "blurWindow"
 
-    .line 808
+    .line 809
     invoke-interface {v3, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -3483,7 +3495,7 @@
 
     const-string v4, "useHardwareCanvas"
 
-    .line 809
+    .line 810
     invoke-interface {v3, v4}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
@@ -3498,7 +3510,7 @@
 
     const/4 v5, 0x1
 
-    .line 810
+    .line 811
     invoke-static {v3, v4, v5}, Lcom/miui/maml/util/Utils;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result v4
@@ -3515,28 +3527,28 @@
     :goto_0
     iput-boolean v4, p0, Lcom/miui/maml/ScreenElementRoot;->mNeedFolmeClean:Z
 
-    .line 811
+    .line 812
     new-instance v4, Lcom/miui/maml/RendererController;
 
     invoke-direct {v4}, Lcom/miui/maml/RendererController;-><init>()V
 
     iput-object v4, p0, Lcom/miui/maml/ScreenElementRoot;->mController:Lcom/miui/maml/RendererController;
 
-    .line 812
+    .line 813
     iget-object v4, p0, Lcom/miui/maml/ScreenElementRoot;->mController:Lcom/miui/maml/RendererController;
 
     iget-boolean v6, p0, Lcom/miui/maml/ScreenElementRoot;->mSelfRender:Z
 
     invoke-virtual {v4, v6}, Lcom/miui/maml/RendererController;->setSelfRender(Z)V
 
-    .line 813
+    .line 814
     new-instance v4, Lcom/miui/maml/ScreenElementRoot$InnerGroup;
 
     invoke-direct {v4, v3, p0}, Lcom/miui/maml/ScreenElementRoot$InnerGroup;-><init>(Lorg/w3c/dom/Element;Lcom/miui/maml/ScreenElementRoot;)V
 
     iput-object v4, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
-    .line 814
+    .line 815
     iget-object v4, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     invoke-virtual {v4}, Lcom/miui/maml/elements/ElementGroup;->getElements()Ljava/util/ArrayList;
@@ -3553,7 +3565,7 @@
 
     const-string v2, "load error, no element loaded"
 
-    .line 815
+    .line 816
     invoke-static {v1, v2}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
@@ -3561,14 +3573,14 @@
     :cond_4
     const-string v4, "version"
 
-    .line 818
+    .line 819
     invoke-static {v3, v4, v5}, Lcom/miui/maml/util/Utils;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result v4
 
     iput v4, p0, Lcom/miui/maml/ScreenElementRoot;->mVersion:I
 
-    .line 819
+    .line 820
     invoke-virtual {p0, v3}, Lcom/miui/maml/ScreenElementRoot;->onLoad(Lorg/w3c/dom/Element;)Z
 
     move-result v3
@@ -3579,18 +3591,18 @@
 
     const-string v2, "load error, onLoad fail"
 
-    .line 820
+    .line 821
     invoke-static {v1, v2}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
-    .line 826
+    .line 827
     :cond_5
     invoke-direct {p0}, Lcom/miui/maml/ScreenElementRoot;->traverseElements()V
 
     const-string v3, "ScreenElementRoot"
 
-    .line 828
+    .line 829
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -3617,7 +3629,7 @@
 
     invoke-static {v3, v1}, Lcom/miui/maml/util/MamlLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 829
+    .line 830
     iput-boolean v5, p0, Lcom/miui/maml/ScreenElementRoot;->mLoaded:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -3631,7 +3643,7 @@
 
     const-string v3, "load error! "
 
-    .line 832
+    .line 833
     invoke-static {v2, v3, v1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return v0
@@ -3640,7 +3652,7 @@
 .method public loadConfig()V
     .locals 1
 
-    .line 603
+    .line 604
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mConfigPath:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/miui/maml/ScreenElementRoot;->loadConfig(Ljava/lang/String;)V
@@ -3651,7 +3663,7 @@
 .method public needDisallowInterceptTouchEvent()Z
     .locals 1
 
-    .line 750
+    .line 751
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mNeedDisallowInterceptTouchEvent:Z
 
     return v0
@@ -3660,7 +3672,7 @@
 .method public needFolmeClean()Z
     .locals 1
 
-    .line 1735
+    .line 1741
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mNeedFolmeClean:Z
 
     return v0
@@ -3669,7 +3681,7 @@
 .method protected onAddVariableUpdater(Lcom/miui/maml/data/VariableUpdaterManager;)V
     .locals 1
 
-    .line 315
+    .line 316
     new-instance v0, Lcom/miui/maml/data/DateTimeVariableUpdater;
 
     invoke-direct {v0, p1}, Lcom/miui/maml/data/DateTimeVariableUpdater;-><init>(Lcom/miui/maml/data/VariableUpdaterManager;)V
@@ -3682,19 +3694,19 @@
 .method public onCommand(Ljava/lang/String;)V
     .locals 1
 
-    .line 1327
+    .line 1332
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mExternalCommandManager:Lcom/miui/maml/CommandTriggers;
 
     if-eqz v0, :cond_0
 
-    .line 1328
+    .line 1333
     new-instance v0, Lcom/miui/maml/ScreenElementRoot$3;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/maml/ScreenElementRoot$3;-><init>(Lcom/miui/maml/ScreenElementRoot;Ljava/lang/String;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/maml/ScreenElementRoot;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 1339
+    .line 1344
     invoke-virtual {p0}, Lcom/miui/maml/ScreenElementRoot;->requestUpdate()V
 
     :cond_0
@@ -3704,23 +3716,23 @@
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 2
 
-    .line 1631
+    .line 1636
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAllowScreenRotation:Z
 
     if-eqz v0, :cond_0
 
-    .line 1632
+    .line 1637
     invoke-virtual {p0, p1}, Lcom/miui/maml/ScreenElementRoot;->setConfiguration(Landroid/content/res/Configuration;)V
 
     const-string v0, "orientationChange"
 
-    .line 1633
+    .line 1638
     invoke-virtual {p0, v0}, Lcom/miui/maml/ScreenElementRoot;->onCommand(Ljava/lang/String;)V
 
-    .line 1634
+    .line 1639
     invoke-virtual {p0}, Lcom/miui/maml/ScreenElementRoot;->requestUpdate()V
 
-    .line 1637
+    .line 1642
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mConfiguration:Landroid/content/res/Configuration;
 
@@ -3744,13 +3756,21 @@
 
     iget v1, p1, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
 
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mConfiguration:Landroid/content/res/Configuration;
+
+    iget v0, v0, Landroid/content/res/Configuration;->densityDpi:I
+
+    iget v1, p1, Landroid/content/res/Configuration;->densityDpi:I
+
     if-eq v0, v1, :cond_3
 
-    .line 1640
+    .line 1646
     :cond_1
     invoke-static {}, Lcom/miui/maml/ResourceManager;->clear()V
 
-    .line 1641
+    .line 1647
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v0, v0, Lcom/miui/maml/ScreenContext;->mResourceManager:Lcom/miui/maml/ResourceManager;
@@ -3765,19 +3785,19 @@
 
     const-string v0, "load error, manifest root is null"
 
-    .line 1643
+    .line 1649
     invoke-static {p1, v0}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 1646
+    .line 1652
     :cond_2
     invoke-direct {p0, v0}, Lcom/miui/maml/ScreenElementRoot;->setupScale(Lorg/w3c/dom/Element;)V
 
-    .line 1647
+    .line 1653
     invoke-virtual {p0}, Lcom/miui/maml/ScreenElementRoot;->requestUpdate()V
 
-    .line 1649
+    .line 1655
     :cond_3
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mConfiguration:Landroid/content/res/Configuration;
 
@@ -3791,7 +3811,7 @@
 
     const/4 v0, 0x0
 
-    .line 742
+    .line 743
     :try_start_0
     iget-boolean v1, p0, Lcom/miui/maml/ScreenElementRoot;->mFinished:Z
 
@@ -3826,7 +3846,7 @@
 
     const-string v1, "ScreenElementRoot"
 
-    .line 744
+    .line 745
     invoke-virtual {p1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -3839,15 +3859,15 @@
 .method public onHoverChange(Lcom/miui/maml/elements/AnimatedScreenElement;Ljava/lang/String;)V
     .locals 0
 
-    .line 1426
+    .line 1431
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mHoverElement:Lcom/miui/maml/elements/AnimatedScreenElement;
 
-    .line 1428
+    .line 1433
     iget-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mHoverChangeListenerRef:Ljava/lang/ref/WeakReference;
 
     if-eqz p1, :cond_0
 
-    .line 1429
+    .line 1434
     invoke-virtual {p1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object p1
@@ -3862,7 +3882,7 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 1432
+    .line 1437
     invoke-interface {p1, p2}, Lcom/miui/maml/ScreenElementRoot$OnHoverChangeListener;->onHoverChange(Ljava/lang/String;)V
 
     :cond_1
@@ -3882,7 +3902,7 @@
 
     const/4 v0, 0x0
 
-    .line 689
+    .line 690
     :try_start_0
     iget-boolean v1, p0, Lcom/miui/maml/ScreenElementRoot;->mFinished:Z
 
@@ -3898,27 +3918,27 @@
 
     goto/16 :goto_1
 
-    .line 692
+    .line 693
     :cond_0
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mHoverElement:Lcom/miui/maml/elements/AnimatedScreenElement;
 
     if-eqz v1, :cond_3
 
-    .line 693
+    .line 694
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mHoverElement:Lcom/miui/maml/elements/AnimatedScreenElement;
 
     invoke-virtual {v1}, Lcom/miui/maml/elements/AnimatedScreenElement;->getWidth()F
 
     move-result v1
 
-    .line 694
+    .line 695
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mHoverElement:Lcom/miui/maml/elements/AnimatedScreenElement;
 
     invoke-virtual {v2}, Lcom/miui/maml/elements/AnimatedScreenElement;->getHeight()F
 
     move-result v2
 
-    .line 695
+    .line 696
     iget-object v3, p0, Lcom/miui/maml/ScreenElementRoot;->mHoverElement:Lcom/miui/maml/elements/AnimatedScreenElement;
 
     invoke-virtual {v3}, Lcom/miui/maml/elements/AnimatedScreenElement;->getAbsoluteLeft()F
@@ -3931,7 +3951,7 @@
 
     add-float/2addr v3, v1
 
-    .line 696
+    .line 697
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mHoverElement:Lcom/miui/maml/elements/AnimatedScreenElement;
 
     invoke-virtual {v1}, Lcom/miui/maml/elements/AnimatedScreenElement;->getAbsoluteTop()F
@@ -3942,7 +3962,7 @@
 
     add-float/2addr v1, v2
 
-    .line 697
+    .line 698
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mHoverMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -3959,17 +3979,17 @@
 
     invoke-virtual {v2, v3, v1}, Landroid/graphics/Matrix;->setTranslate(FF)V
 
-    .line 698
+    .line 699
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mHoverMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->transform(Landroid/graphics/Matrix;)V
 
-    .line 699
+    .line 700
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mHoverElement:Lcom/miui/maml/elements/AnimatedScreenElement;
 
     invoke-virtual {v1, p1}, Lcom/miui/maml/elements/AnimatedScreenElement;->onTouch(Landroid/view/MotionEvent;)Z
 
-    .line 700
+    .line 701
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v1
@@ -3978,7 +3998,7 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 701
+    .line 702
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result p1
@@ -3990,13 +4010,13 @@
     :cond_1
     const/4 p1, 0x0
 
-    .line 702
+    .line 703
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mHoverElement:Lcom/miui/maml/elements/AnimatedScreenElement;
 
     :cond_2
     return v2
 
-    .line 707
+    .line 708
     :cond_3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -4008,7 +4028,7 @@
 
     move-result-wide v1
 
-    .line 708
+    .line 709
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v3
@@ -4019,17 +4039,17 @@
 
     move-result-wide v3
 
-    .line 710
+    .line 711
     iget-object v5, p0, Lcom/miui/maml/ScreenElementRoot;->mTouchX:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v5, v1, v2}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 711
+    .line 712
     iget-object v5, p0, Lcom/miui/maml/ScreenElementRoot;->mTouchY:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v5, v3, v4}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 712
+    .line 713
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v5
@@ -4038,24 +4058,24 @@
 
     goto :goto_0
 
-    .line 723
+    .line 724
     :pswitch_0
     iput-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mNeedDisallowInterceptTouchEvent:Z
 
     goto :goto_0
 
-    .line 714
+    .line 715
     :pswitch_1
     iget-object v5, p0, Lcom/miui/maml/ScreenElementRoot;->mTouchBeginX:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v5, v1, v2}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 715
+    .line 716
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mTouchBeginY:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-virtual {v1, v3, v4}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 716
+    .line 717
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mTouchBeginTime:Lcom/miui/maml/data/IndexedVariable;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -4066,10 +4086,10 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/miui/maml/data/IndexedVariable;->set(D)V
 
-    .line 718
+    .line 719
     iput-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mNeedDisallowInterceptTouchEvent:Z
 
-    .line 727
+    .line 728
     :goto_0
     :pswitch_2
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
@@ -4080,7 +4100,7 @@
 
     if-nez p1, :cond_4
 
-    .line 730
+    .line 731
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mController:Lcom/miui/maml/RendererController;
 
     invoke-virtual {v1}, Lcom/miui/maml/RendererController;->requestUpdate()V
@@ -4100,7 +4120,7 @@
 
     const-string v1, "ScreenElementRoot"
 
-    .line 734
+    .line 735
     invoke-virtual {p1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -4128,14 +4148,14 @@
 .method public pause()V
     .locals 2
 
-    .line 637
+    .line 638
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mLoaded:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 640
+    .line 641
     :cond_0
     invoke-super {p0}, Lcom/miui/maml/elements/ScreenElement;->pause()V
 
@@ -4143,53 +4163,53 @@
 
     const-string v1, "pause"
 
-    .line 641
+    .line 642
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 643
+    .line 644
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     const-string v1, "pause"
 
     invoke-virtual {v0, v1}, Lcom/miui/maml/elements/ElementGroup;->performAction(Ljava/lang/String;)V
 
-    .line 644
+    .line 645
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/ElementGroup;->pause()V
 
-    .line 645
+    .line 646
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mSoundManager:Lcom/miui/maml/SoundManager;
 
     invoke-virtual {v0}, Lcom/miui/maml/SoundManager;->pause()V
 
-    .line 646
+    .line 647
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableBinderManager:Lcom/miui/maml/data/VariableBinderManager;
 
     if-eqz v0, :cond_1
 
-    .line 647
+    .line 648
     invoke-virtual {v0}, Lcom/miui/maml/data/VariableBinderManager;->pause()V
 
-    .line 649
+    .line 650
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mExternalCommandManager:Lcom/miui/maml/CommandTriggers;
 
     if-eqz v0, :cond_2
 
-    .line 650
+    .line 651
     invoke-virtual {v0}, Lcom/miui/maml/CommandTriggers;->pause()V
 
-    .line 652
+    .line 653
     :cond_2
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableUpdaterManager:Lcom/miui/maml/data/VariableUpdaterManager;
 
     if-eqz v0, :cond_3
 
-    .line 653
+    .line 654
     invoke-virtual {v0}, Lcom/miui/maml/data/VariableUpdaterManager;->pause()V
 
-    .line 654
+    .line 655
     :cond_3
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
@@ -4199,15 +4219,15 @@
 
     const/4 v0, 0x0
 
-    .line 655
+    .line 656
     invoke-virtual {p0, v0, v0}, Lcom/miui/maml/ScreenElementRoot;->onHoverChange(Lcom/miui/maml/elements/AnimatedScreenElement;Ljava/lang/String;)V
 
-    .line 656
+    .line 657
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mConfig:Lcom/miui/maml/util/ConfigFile;
 
     if-eqz v0, :cond_4
 
-    .line 657
+    .line 658
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v1, v1, Lcom/miui/maml/ScreenContext;->mContext:Landroid/content/Context;
@@ -4225,10 +4245,10 @@
 .method protected pauseAnim(J)V
     .locals 1
 
-    .line 1598
+    .line 1603
     invoke-super {p0, p1, p2}, Lcom/miui/maml/elements/ScreenElement;->pauseAnim(J)V
 
-    .line 1599
+    .line 1604
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/maml/elements/ElementGroup;->pauseAnim(J)V
@@ -4239,12 +4259,12 @@
 .method protected playAnim(JJJZZ)V
     .locals 10
 
-    .line 1592
+    .line 1597
     invoke-super/range {p0 .. p8}, Lcom/miui/maml/elements/ScreenElement;->playAnim(JJJZZ)V
 
     move-object v0, p0
 
-    .line 1593
+    .line 1598
     iget-object v1, v0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     move-wide v2, p1
@@ -4265,7 +4285,7 @@
 .method public playSound(Ljava/lang/String;)I
     .locals 3
 
-    .line 1227
+    .line 1232
     new-instance v0, Lcom/miui/maml/SoundManager$SoundOptions;
 
     const/4 v1, 0x0
@@ -4284,7 +4304,7 @@
 .method public playSound(Ljava/lang/String;Lcom/miui/maml/SoundManager$SoundOptions;)I
     .locals 2
 
-    .line 1232
+    .line 1237
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -4295,7 +4315,7 @@
 
     return v1
 
-    .line 1235
+    .line 1240
     :cond_0
     invoke-virtual {p0}, Lcom/miui/maml/ScreenElementRoot;->shouldPlaySound()Z
 
@@ -4303,7 +4323,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1236
+    .line 1241
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mSoundManager:Lcom/miui/maml/SoundManager;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/maml/SoundManager;->playSound(Ljava/lang/String;Lcom/miui/maml/SoundManager$SoundOptions;)I
@@ -4319,7 +4339,7 @@
 .method public playSound(ILcom/miui/maml/SoundManager$Command;)V
     .locals 1
 
-    .line 1245
+    .line 1250
     :try_start_0
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mSoundManager:Lcom/miui/maml/SoundManager;
 
@@ -4334,7 +4354,7 @@
 
     const-string p2, "ScreenElementRoot"
 
-    .line 1247
+    .line 1252
     invoke-virtual {p1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
 
     move-result-object p1
@@ -4348,7 +4368,7 @@
 .method public postDelayed(Ljava/lang/Runnable;J)Z
     .locals 1
 
-    .line 458
+    .line 459
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mFinished:Z
 
     if-nez v0, :cond_1
@@ -4359,7 +4379,7 @@
 
     goto :goto_0
 
-    .line 460
+    .line 461
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
@@ -4379,12 +4399,12 @@
 .method public postMessage(Landroid/view/MotionEvent;)V
     .locals 1
 
-    .line 1505
+    .line 1510
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mLoaded:Z
 
     if-eqz v0, :cond_0
 
-    .line 1506
+    .line 1511
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mController:Lcom/miui/maml/RendererController;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/RendererController;->postMessage(Landroid/view/MotionEvent;)V
@@ -4396,7 +4416,7 @@
 .method protected putRawAttr(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 441
+    .line 442
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRawAttrs:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -4411,14 +4431,14 @@
 .method public removeAccessibleElement(Lcom/miui/maml/elements/AnimatedScreenElement;)V
     .locals 1
 
-    .line 375
+    .line 376
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAccessibleElements:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     const/high16 v0, -0x80000000
 
-    .line 376
+    .line 377
     invoke-virtual {p1, v0}, Lcom/miui/maml/elements/AnimatedScreenElement;->setVirtualViewId(I)V
 
     return-void
@@ -4427,7 +4447,7 @@
 .method public removeAllAccessibleElements()V
     .locals 3
 
-    .line 380
+    .line 381
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAccessibleElements:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -4449,12 +4469,12 @@
 
     const/high16 v2, -0x80000000
 
-    .line 381
+    .line 382
     invoke-virtual {v1, v2}, Lcom/miui/maml/elements/AnimatedScreenElement;->setVirtualViewId(I)V
 
     goto :goto_0
 
-    .line 383
+    .line 384
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAccessibleElements:Ljava/util/List;
 
@@ -4466,7 +4486,7 @@
 .method public removeCallbacks(Ljava/lang/Runnable;)V
     .locals 1
 
-    .line 464
+    .line 465
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/ScreenContext;->removeCallbacks(Ljava/lang/Runnable;)V
@@ -4477,7 +4497,7 @@
 .method public removeElement(Ljava/lang/String;)V
     .locals 1
 
-    .line 1784
+    .line 1790
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mElements:Landroid/util/ArrayMap;
 
     invoke-virtual {v0, p1}, Landroid/util/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -4488,7 +4508,7 @@
 .method public removePreTicker(Lcom/miui/maml/elements/ITicker;)V
     .locals 1
 
-    .line 1368
+    .line 1373
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mPreTickers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
@@ -4499,10 +4519,10 @@
 .method public requestFrameRateByCommand(F)V
     .locals 1
 
-    .line 1788
+    .line 1794
     iput p1, p0, Lcom/miui/maml/ScreenElementRoot;->mFrameRate:F
 
-    .line 1789
+    .line 1795
     invoke-virtual {p0, p1}, Lcom/miui/maml/ScreenElementRoot;->requestFramerate(F)V
 
     const/4 v0, 0x0
@@ -4511,7 +4531,7 @@
 
     if-lez p1, :cond_0
 
-    .line 1791
+    .line 1797
     invoke-virtual {p0}, Lcom/miui/maml/ScreenElementRoot;->requestUpdate()V
 
     :cond_0
@@ -4521,12 +4541,12 @@
 .method public requestUpdate()V
     .locals 3
 
-    .line 1547
+    .line 1552
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mLoaded:Z
 
     if-eqz v0, :cond_0
 
-    .line 1548
+    .line 1553
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRendererControllers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -4538,7 +4558,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 1550
+    .line 1555
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mRendererControllers:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4547,7 +4567,7 @@
 
     check-cast v2, Lcom/miui/maml/RendererController;
 
-    .line 1551
+    .line 1556
     invoke-virtual {v2}, Lcom/miui/maml/RendererController;->requestUpdate()V
 
     add-int/lit8 v1, v1, 0x1
@@ -4561,10 +4581,10 @@
 .method public reset(J)V
     .locals 1
 
-    .line 1610
+    .line 1615
     invoke-super {p0, p1, p2}, Lcom/miui/maml/elements/ScreenElement;->reset(J)V
 
-    .line 1611
+    .line 1616
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/maml/elements/ElementGroup;->reset(J)V
@@ -4575,14 +4595,14 @@
 .method public resume()V
     .locals 2
 
-    .line 663
+    .line 664
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mLoaded:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 666
+    .line 667
     :cond_0
     invoke-super {p0}, Lcom/miui/maml/elements/ScreenElement;->resume()V
 
@@ -4590,55 +4610,55 @@
 
     const-string v1, "resume"
 
-    .line 667
+    .line 668
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 668
+    .line 669
     invoke-static {}, Lcom/miui/maml/util/HideSdkDependencyUtils;->isShowDebugLayout()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mShowDebugLayout:Z
 
-    .line 670
+    .line 671
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     const-string v1, "resume"
 
     invoke-virtual {v0, v1}, Lcom/miui/maml/elements/ElementGroup;->performAction(Ljava/lang/String;)V
 
-    .line 671
+    .line 672
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/ElementGroup;->resume()V
 
-    .line 673
+    .line 674
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableBinderManager:Lcom/miui/maml/data/VariableBinderManager;
 
     if-eqz v0, :cond_1
 
-    .line 674
+    .line 675
     invoke-virtual {v0}, Lcom/miui/maml/data/VariableBinderManager;->resume()V
 
-    .line 676
+    .line 677
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mExternalCommandManager:Lcom/miui/maml/CommandTriggers;
 
     if-eqz v0, :cond_2
 
-    .line 677
+    .line 678
     invoke-virtual {v0}, Lcom/miui/maml/CommandTriggers;->resume()V
 
-    .line 679
+    .line 680
     :cond_2
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVariableUpdaterManager:Lcom/miui/maml/data/VariableUpdaterManager;
 
     if-eqz v0, :cond_3
 
-    .line 680
+    .line 681
     invoke-virtual {v0}, Lcom/miui/maml/data/VariableUpdaterManager;->resume()V
 
-    .line 682
+    .line 683
     :cond_3
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
@@ -4646,7 +4666,7 @@
 
     invoke-virtual {v0}, Lcom/miui/maml/ResourceManager;->resume()V
 
-    .line 683
+    .line 684
     invoke-virtual {p0}, Lcom/miui/maml/ScreenElementRoot;->setSyncInterval()V
 
     return-void
@@ -4655,10 +4675,10 @@
 .method protected resumeAnim(J)V
     .locals 1
 
-    .line 1604
+    .line 1609
     invoke-super {p0, p1, p2}, Lcom/miui/maml/elements/ScreenElement;->resumeAnim(J)V
 
-    .line 1605
+    .line 1610
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/maml/elements/ElementGroup;->resumeAnim(J)V
@@ -4669,7 +4689,7 @@
 .method public saveVar(Ljava/lang/String;Ljava/lang/Double;)V
     .locals 3
 
-    .line 1441
+    .line 1446
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mConfig:Lcom/miui/maml/util/ConfigFile;
 
     if-nez v0, :cond_0
@@ -4678,7 +4698,7 @@
 
     const-string p2, "fail to saveVar, config file is null"
 
-    .line 1442
+    .line 1447
     invoke-static {p1, p2}, Lcom/miui/maml/util/MamlLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -4688,12 +4708,12 @@
 
     const-string p2, "null"
 
-    .line 1447
+    .line 1452
     invoke-virtual {v0, p1, p2}, Lcom/miui/maml/util/ConfigFile;->putNumber(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1449
+    .line 1454
     :cond_1
     invoke-virtual {p2}, Ljava/lang/Double;->doubleValue()D
 
@@ -4708,7 +4728,7 @@
 .method public saveVar(Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .line 1454
+    .line 1459
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mConfig:Lcom/miui/maml/util/ConfigFile;
 
     if-nez v0, :cond_0
@@ -4717,12 +4737,12 @@
 
     const-string p2, "fail to saveVar, config file is null"
 
-    .line 1455
+    .line 1460
     invoke-static {p1, p2}, Lcom/miui/maml/util/MamlLog;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 1458
+    .line 1463
     :cond_0
     invoke-virtual {v0, p1, p2}, Lcom/miui/maml/util/ConfigFile;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -4732,12 +4752,12 @@
 .method public selfFinish()V
     .locals 1
 
-    .line 1471
+    .line 1476
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mLoaded:Z
 
     if-eqz v0, :cond_0
 
-    .line 1472
+    .line 1477
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mController:Lcom/miui/maml/RendererController;
 
     invoke-virtual {v0}, Lcom/miui/maml/RendererController;->finish()V
@@ -4749,12 +4769,12 @@
 .method public selfInit()V
     .locals 1
 
-    .line 1465
+    .line 1470
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mLoaded:Z
 
     if-eqz v0, :cond_0
 
-    .line 1466
+    .line 1471
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mController:Lcom/miui/maml/RendererController;
 
     invoke-virtual {v0}, Lcom/miui/maml/RendererController;->init()V
@@ -4766,7 +4786,7 @@
 .method public selfPause()V
     .locals 3
 
-    .line 1477
+    .line 1482
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRendererControllers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -4778,7 +4798,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 1479
+    .line 1484
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mRendererControllers:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4800,7 +4820,7 @@
 .method public selfResume()V
     .locals 3
 
-    .line 1484
+    .line 1489
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRendererControllers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -4812,7 +4832,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 1486
+    .line 1491
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mRendererControllers:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4834,7 +4854,7 @@
 .method public setAutoDarkenWallpaper(Z)V
     .locals 0
 
-    .line 1818
+    .line 1824
     iput-boolean p1, p0, Lcom/miui/maml/ScreenElementRoot;->mAutoDarkenWallpaper:Z
 
     return-void
@@ -4851,7 +4871,7 @@
 .method public setCacheDir(Ljava/lang/String;)V
     .locals 0
 
-    .line 335
+    .line 336
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mCacheDir:Ljava/lang/String;
 
     return-void
@@ -4862,7 +4882,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 1681
+    .line 1687
     iget p2, p0, Lcom/miui/maml/ScreenElementRoot;->mCapability:I
 
     or-int/2addr p1, p2
@@ -4871,7 +4891,7 @@
 
     goto :goto_0
 
-    .line 1683
+    .line 1689
     :cond_0
     iget p2, p0, Lcom/miui/maml/ScreenElementRoot;->mCapability:I
 
@@ -4888,7 +4908,7 @@
 .method public setClearCanvas(Z)V
     .locals 0
 
-    .line 1704
+    .line 1710
     iput-boolean p1, p0, Lcom/miui/maml/ScreenElementRoot;->mClearCanvas:Z
 
     return-void
@@ -4897,12 +4917,12 @@
 .method public setColorFilter(Landroid/graphics/ColorFilter;)V
     .locals 1
 
-    .line 1739
+    .line 1745
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     if-eqz v0, :cond_0
 
-    .line 1740
+    .line 1746
     invoke-virtual {v0, p1}, Lcom/miui/maml/elements/ElementGroup;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
     :cond_0
@@ -4912,7 +4932,7 @@
 .method public setConfig(Ljava/lang/String;)V
     .locals 0
 
-    .line 319
+    .line 320
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mConfigPath:Ljava/lang/String;
 
     return-void
@@ -4921,19 +4941,19 @@
 .method public setConfiguration(Landroid/content/res/Configuration;)V
     .locals 5
 
-    .line 1658
+    .line 1664
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mAllowScreenRotation:Z
 
     if-eqz v0, :cond_0
 
-    .line 1659
+    .line 1665
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v0, v0, Lcom/miui/maml/ScreenContext;->mVariables:Lcom/miui/maml/data/Variables;
 
     const-string v1, "orientation"
 
-    .line 1660
+    .line 1666
     iget-object v2, p0, Lcom/miui/maml/ScreenElementRoot;->mContext:Lcom/miui/maml/ScreenContext;
 
     iget-object v2, v2, Lcom/miui/maml/ScreenContext;->mVariables:Lcom/miui/maml/data/Variables;
@@ -4942,15 +4962,15 @@
 
     int-to-double v3, v3
 
-    .line 1661
+    .line 1667
     invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v3
 
-    .line 1660
+    .line 1666
     invoke-static {v1, v2, v3}, Lcom/miui/maml/util/Utils;->putVariableNumber(Ljava/lang/String;Lcom/miui/maml/data/Variables;Ljava/lang/Double;)V
 
-    .line 1662
+    .line 1668
     iget p1, p1, Landroid/content/res/Configuration;->orientation:I
 
     packed-switch p1, :pswitch_data_0
@@ -4960,7 +4980,7 @@
     :pswitch_0
     const-string p1, "raw_screen_width"
 
-    .line 1664
+    .line 1670
     iget v1, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenHeight:I
 
     int-to-double v1, v1
@@ -4969,7 +4989,7 @@
 
     const-string p1, "raw_screen_height"
 
-    .line 1665
+    .line 1671
     iget v1, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenWidth:I
 
     int-to-double v1, v1
@@ -4978,7 +4998,7 @@
 
     const-string p1, "screen_width"
 
-    .line 1666
+    .line 1672
     iget v1, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenHeight:I
 
     int-to-float v1, v1
@@ -4993,7 +5013,7 @@
 
     const-string p1, "screen_height"
 
-    .line 1667
+    .line 1673
     iget v1, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenWidth:I
 
     int-to-float v1, v1
@@ -5011,7 +5031,7 @@
     :pswitch_1
     const-string p1, "raw_screen_width"
 
-    .line 1670
+    .line 1676
     iget v1, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenWidth:I
 
     int-to-double v1, v1
@@ -5020,7 +5040,7 @@
 
     const-string p1, "raw_screen_height"
 
-    .line 1671
+    .line 1677
     iget v1, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenHeight:I
 
     int-to-double v1, v1
@@ -5029,7 +5049,7 @@
 
     const-string p1, "screen_width"
 
-    .line 1672
+    .line 1678
     iget v1, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenWidth:I
 
     int-to-float v1, v1
@@ -5044,7 +5064,7 @@
 
     const-string p1, "screen_height"
 
-    .line 1673
+    .line 1679
     iget v1, p0, Lcom/miui/maml/ScreenElementRoot;->mTargetScreenHeight:I
 
     int-to-float v1, v1
@@ -5071,7 +5091,7 @@
 .method public setDarkWallpaperMode(Z)V
     .locals 0
 
-    .line 1745
+    .line 1751
     iput-boolean p1, p0, Lcom/miui/maml/ScreenElementRoot;->mDarkWallpaperMode:Z
 
     return-void
@@ -5080,7 +5100,7 @@
 .method public setDefaultFramerate(F)V
     .locals 0
 
-    .line 449
+    .line 450
     iput p1, p0, Lcom/miui/maml/ScreenElementRoot;->DEFAULT_FRAME_RATE:F
 
     return-void
@@ -5089,7 +5109,7 @@
 .method public final setKeepResource(Z)V
     .locals 0
 
-    .line 1290
+    .line 1295
     iput-boolean p1, p0, Lcom/miui/maml/ScreenElementRoot;->mKeepResource:Z
 
     return-void
@@ -5098,7 +5118,7 @@
 .method public setMamlAccessHelper(Lcom/miui/maml/util/MamlAccessHelper;)V
     .locals 0
 
-    .line 1749
+    .line 1755
     iput-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mMamlAccessHelper:Lcom/miui/maml/util/MamlAccessHelper;
 
     return-void
@@ -5107,7 +5127,7 @@
 .method public setMamlSurface(Lcom/miui/maml/component/MamlSurface;)V
     .locals 1
 
-    .line 1822
+    .line 1828
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -5126,7 +5146,7 @@
 
     goto :goto_0
 
-    .line 1387
+    .line 1392
     :cond_0
     new-instance v0, Ljava/lang/ref/WeakReference;
 
@@ -5149,7 +5169,7 @@
 
     goto :goto_0
 
-    .line 1382
+    .line 1387
     :cond_0
     new-instance v0, Ljava/lang/ref/WeakReference;
 
@@ -5172,7 +5192,7 @@
 
     goto :goto_0
 
-    .line 1377
+    .line 1382
     :cond_0
     new-instance v0, Ljava/lang/ref/WeakReference;
 
@@ -5189,7 +5209,7 @@
 .method public setOnHoverChangeListener(Lcom/miui/maml/ScreenElementRoot$OnHoverChangeListener;)V
     .locals 1
 
-    .line 1422
+    .line 1427
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -5202,12 +5222,12 @@
 .method public setRenderControllerListener(Lcom/miui/maml/RendererController$Listener;)V
     .locals 1
 
-    .line 1492
+    .line 1497
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mLoaded:Z
 
     if-eqz v0, :cond_0
 
-    .line 1493
+    .line 1498
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mController:Lcom/miui/maml/RendererController;
 
     invoke-virtual {v0, p1}, Lcom/miui/maml/RendererController;->setListener(Lcom/miui/maml/RendererController$Listener;)V
@@ -5219,12 +5239,12 @@
 .method public setRenderControllerRenderable(Lcom/miui/maml/RendererController$IRenderable;)V
     .locals 1
 
-    .line 1499
+    .line 1504
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mLoaded:Z
 
     if-eqz v0, :cond_0
 
-    .line 1500
+    .line 1505
     new-instance v0, Lcom/miui/maml/SingleRootListener;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/maml/SingleRootListener;-><init>(Lcom/miui/maml/ScreenElementRoot;Lcom/miui/maml/RendererController$IRenderable;)V
@@ -5238,7 +5258,7 @@
 .method public setResizeRadio(F)V
     .locals 0
 
-    .line 1834
+    .line 1840
     iput p1, p0, Lcom/miui/maml/ScreenElementRoot;->mResizeScale:F
 
     return-void
@@ -5247,7 +5267,7 @@
 .method public setSaveConfigOnlyInPause(Z)V
     .locals 0
 
-    .line 330
+    .line 331
     iput-boolean p1, p0, Lcom/miui/maml/ScreenElementRoot;->mSaveConfigOnlyInPause:Z
 
     return-void
@@ -5256,15 +5276,15 @@
 .method public setSaveConfigViaProvider(Z)V
     .locals 1
 
-    .line 323
+    .line 324
     iput-boolean p1, p0, Lcom/miui/maml/ScreenElementRoot;->mSaveConfigViaProvider:Z
 
-    .line 324
+    .line 325
     iget-object p1, p0, Lcom/miui/maml/ScreenElementRoot;->mConfig:Lcom/miui/maml/util/ConfigFile;
 
     if-eqz p1, :cond_0
 
-    .line 325
+    .line 326
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mSaveConfigViaProvider:Z
 
     invoke-virtual {p1, v0}, Lcom/miui/maml/util/ConfigFile;->setSaveViaProvider(Z)V
@@ -5276,7 +5296,7 @@
 .method public setScaleByDensity(Z)V
     .locals 0
 
-    .line 874
+    .line 875
     iput-boolean p1, p0, Lcom/miui/maml/ScreenElementRoot;->mScaleByDensity:Z
 
     return-void
@@ -5285,7 +5305,7 @@
 .method public setSyncInterval()V
     .locals 2
 
-    .line 1797
+    .line 1803
     invoke-virtual {p0}, Lcom/miui/maml/ScreenElementRoot;->getSystemFrameRate()F
 
     move-result v0
@@ -5296,7 +5316,7 @@
 
     const/16 v1, 0x3e8
 
-    .line 1799
+    .line 1805
     div-int/2addr v1, v0
 
     goto :goto_0
@@ -5314,7 +5334,7 @@
     :cond_1
     move v0, v1
 
-    .line 1804
+    .line 1810
     :goto_1
     invoke-static {}, Lcom/miui/maml/RenderVsyncUpdater;->getInstance()Lcom/miui/maml/RenderVsyncUpdater;
 
@@ -5328,7 +5348,7 @@
 .method public setTouchable(Z)V
     .locals 0
 
-    .line 1814
+    .line 1820
     iput-boolean p1, p0, Lcom/miui/maml/ScreenElementRoot;->mTouchable:Z
 
     return-void
@@ -5337,7 +5357,7 @@
 .method public setViewManager(Lcom/miui/maml/util/MamlViewManager;)V
     .locals 1
 
-    .line 1708
+    .line 1714
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -5358,7 +5378,7 @@
 .method public showCategory(Ljava/lang/String;Z)V
     .locals 1
 
-    .line 1616
+    .line 1621
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mInnerGroup:Lcom/miui/maml/elements/ElementGroup;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/maml/elements/ElementGroup;->showCategory(Ljava/lang/String;Z)V
@@ -5369,7 +5389,7 @@
 .method public showFramerate(Z)V
     .locals 0
 
-    .line 510
+    .line 511
     iput-boolean p1, p0, Lcom/miui/maml/ScreenElementRoot;->mShowFramerate:Z
 
     return-void
@@ -5378,12 +5398,12 @@
 .method public tick(J)V
     .locals 2
 
-    .line 344
+    .line 345
     iget-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mNeedReset:Z
 
     if-eqz v0, :cond_0
 
-    .line 345
+    .line 346
     new-instance v0, Lcom/miui/maml/ScreenElementRoot$1;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/miui/maml/ScreenElementRoot$1;-><init>(Lcom/miui/maml/ScreenElementRoot;J)V
@@ -5392,15 +5412,15 @@
 
     const/4 v0, 0x0
 
-    .line 359
+    .line 360
     iput-boolean v0, p0, Lcom/miui/maml/ScreenElementRoot;->mNeedReset:Z
 
-    .line 360
+    .line 361
     iget-object v1, p0, Lcom/miui/maml/ScreenElementRoot;->mController:Lcom/miui/maml/RendererController;
 
     invoke-virtual {v1, v0}, Lcom/miui/maml/RendererController;->setNeedReset(Z)V
 
-    .line 362
+    .line 363
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/miui/maml/ScreenElementRoot;->doTick(J)V
 
@@ -5410,7 +5430,7 @@
 .method public update(J)J
     .locals 7
 
-    .line 1532
+    .line 1537
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRendererControllers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -5424,7 +5444,7 @@
     :goto_0
     if-ge v3, v0, :cond_2
 
-    .line 1534
+    .line 1539
     iget-object v4, p0, Lcom/miui/maml/ScreenElementRoot;->mRendererControllers:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5433,7 +5453,7 @@
 
     check-cast v4, Lcom/miui/maml/RendererController;
 
-    .line 1535
+    .line 1540
     invoke-virtual {v4}, Lcom/miui/maml/RendererController;->isSelfPaused()Z
 
     move-result v5
@@ -5448,7 +5468,7 @@
 
     goto :goto_1
 
-    .line 1538
+    .line 1543
     :cond_0
     invoke-virtual {v4, p1, p2}, Lcom/miui/maml/RendererController;->update(J)J
 
@@ -5473,7 +5493,7 @@
 .method public updateIfNeeded(J)J
     .locals 7
 
-    .line 1513
+    .line 1518
     iget-object v0, p0, Lcom/miui/maml/ScreenElementRoot;->mRendererControllers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -5487,7 +5507,7 @@
     :goto_0
     if-ge v3, v0, :cond_2
 
-    .line 1515
+    .line 1520
     iget-object v4, p0, Lcom/miui/maml/ScreenElementRoot;->mRendererControllers:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5496,7 +5516,7 @@
 
     check-cast v4, Lcom/miui/maml/RendererController;
 
-    .line 1516
+    .line 1521
     invoke-virtual {v4}, Lcom/miui/maml/RendererController;->isSelfPaused()Z
 
     move-result v5
@@ -5511,7 +5531,7 @@
 
     goto :goto_1
 
-    .line 1519
+    .line 1524
     :cond_0
     invoke-virtual {v4, p1, p2}, Lcom/miui/maml/RendererController;->updateIfNeeded(J)J
 
@@ -5536,7 +5556,7 @@
 .method public final version()I
     .locals 1
 
-    .line 1719
+    .line 1725
     iget v0, p0, Lcom/miui/maml/ScreenElementRoot;->mVersion:I
 
     return v0

@@ -1050,7 +1050,7 @@
     .line 71
     invoke-super {p0}, Lcom/miui/blur/sdk/backdrop/BackdropBlurRelativeLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a020c
+    const v0, 0x7f0a020e
 
     .line 72
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarDesktopLayout;->findViewById(I)Landroid/view/View;
@@ -1061,7 +1061,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/SearchBarDesktopLayout;->mSearchIconLayout:Lcom/miui/home/launcher/SearchBarLeftIconLayout;
 
-    const v0, 0x7f0a020f
+    const v0, 0x7f0a0211
 
     .line 73
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/SearchBarDesktopLayout;->findViewById(I)Landroid/view/View;

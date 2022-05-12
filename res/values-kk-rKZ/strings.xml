@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">Үстіге қарай сүйреу қолданба тартпасы үшін сақталған. Әдепкі басты экран режиміне ауысып, қайталаңыз.</string>
     <string name="all_apps_suggestions">Қолданба ұсыныстары</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Анимация жылдамдығы</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Бумада %1$d орнына көшірілді</string>
     <string name="announce_for_checked">%1$s, тексерілді</string>
     <string name="announce_for_choose_default_screen">%1$d экранды әдепкі Басты экран қылып орнату</string>

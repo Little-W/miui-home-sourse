@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)V
     .locals 0
 
-    .line 278
+    .line 276
     iput-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment$3;->this$0:Lcom/miui/home/settings/BaseAllAppsSettingsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 1
 
-    .line 280
+    .line 278
     new-instance p1, Landroid/content/Intent;
 
     const-string p2, "android.intent.action.VIEW"
@@ -55,10 +55,10 @@
 
     const-string v0, "com.xiaomi.market.ui.AppDetailActivity"
 
-    .line 281
+    .line 279
     invoke-virtual {p1, p2, v0}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 283
+    .line 281
     :try_start_0
     iget-object p2, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment$3;->this$0:Lcom/miui/home/settings/BaseAllAppsSettingsFragment;
 
@@ -68,7 +68,7 @@
 
     const/4 p1, 0x1
 
-    .line 284
+    .line 282
     invoke-static {p1}, Lcom/miui/home/settings/LauncherGestureController;->putSlideUpAppInstalling(Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -78,7 +78,7 @@
     :catch_0
     move-exception p1
 
-    .line 286
+    .line 284
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0

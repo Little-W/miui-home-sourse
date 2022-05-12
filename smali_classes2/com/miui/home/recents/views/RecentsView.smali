@@ -1694,13 +1694,13 @@
     if-nez p2, :cond_2
 
     .line 114
-    new-instance p1, Lcom/miui/home/recents/views/TaskStackViewStack;
+    new-instance p1, Lcom/miui/home/recents/views/TaskStackView;
 
     invoke-virtual {p0}, Lcom/miui/home/recents/views/RecentsView;->getContext()Landroid/content/Context;
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Lcom/miui/home/recents/views/TaskStackViewStack;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Lcom/miui/home/recents/views/TaskStackView;-><init>(Landroid/content/Context;)V
 
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsView;->mTaskStackView:Lcom/miui/home/recents/views/TaskStackView;
 

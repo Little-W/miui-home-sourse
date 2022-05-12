@@ -127,7 +127,7 @@
 .method public endAnimation(Landroid/view/View;)V
     .locals 2
 
-    const v0, 0x7f0a02d1
+    const v0, 0x7f0a02d3
 
     .line 105
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -162,7 +162,7 @@
 .method protected setViewPrepareInfo(Landroid/view/View;FFFFF)V
     .locals 5
 
-    const v0, 0x7f0a02d1
+    const v0, 0x7f0a02d3
 
     .line 115
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
@@ -352,7 +352,7 @@
 
     move-result-object p2
 
-    const v1, 0x7f0a02d1
+    const v1, 0x7f0a02d3
 
     .line 86
     invoke-virtual {p1, v1}, Landroid/view/View;->getTag(I)Ljava/lang/Object;

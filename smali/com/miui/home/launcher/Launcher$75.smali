@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 8150
+    .line 8147
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,19 +38,19 @@
 .method public run()V
     .locals 5
 
-    .line 8153
+    .line 8150
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->usingFsGesture()Z
 
     move-result v0
 
-    .line 8154
+    .line 8151
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->showBackGestureInEditingMode()Z
 
     move-result v1
 
     const-string v2, "Launcher"
 
-    .line 8155
+    .line 8152
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,7 +73,7 @@
 
     iget-object v4, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 8157
+    .line 8154
     invoke-static {v4}, Lcom/miui/home/launcher/Launcher;->access$8500(Lcom/miui/home/launcher/Launcher;)Z
 
     move-result v4
@@ -86,7 +86,7 @@
 
     iget-object v4, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 8158
+    .line 8155
     invoke-static {v4}, Lcom/miui/home/launcher/Launcher;->access$8600(Lcom/miui/home/launcher/Launcher;)Z
 
     move-result v4
@@ -97,10 +97,10 @@
 
     move-result-object v3
 
-    .line 8155
+    .line 8152
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8159
+    .line 8156
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v2}, Lcom/miui/home/launcher/Launcher;->access$8700(Lcom/miui/home/launcher/Launcher;)Lcom/android/systemui/fsgesture/IFsGestureService;
@@ -118,7 +118,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 8161
+    .line 8158
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$8500(Lcom/miui/home/launcher/Launcher;)Z
@@ -135,7 +135,7 @@
 
     if-nez v0, :cond_6
 
-    .line 8162
+    .line 8159
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -169,7 +169,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 8163
+    .line 8160
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const-string v2, "typefrom_landscape_overview"
@@ -178,7 +178,7 @@
 
     goto :goto_1
 
-    .line 8165
+    .line 8162
     :cond_2
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -190,7 +190,7 @@
 
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 8166
+    .line 8163
     invoke-virtual {v2}, Lcom/miui/home/launcher/Launcher;->isFolderShowing()Z
 
     move-result v2
@@ -221,7 +221,7 @@
 
     sget-object v3, Lcom/miui/home/launcher/LauncherState;->OVERVIEW:Lcom/miui/home/recents/OverviewState;
 
-    .line 8167
+    .line 8164
     invoke-virtual {v2, v3}, Lcom/miui/home/launcher/Launcher;->isInState(Lcom/miui/home/launcher/LauncherState;)Z
 
     move-result v2
@@ -243,14 +243,14 @@
     :cond_3
     const/4 v1, 0x0
 
-    .line 8165
+    .line 8162
     :cond_4
     :goto_0
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$8900(Lcom/miui/home/launcher/Launcher;Z)V
 
     goto :goto_1
 
-    .line 8171
+    .line 8168
     :cond_5
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$75;->this$0:Lcom/miui/home/launcher/Launcher;
 

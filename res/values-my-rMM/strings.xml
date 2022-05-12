@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">အပေါ်သို့ဆွဲတင်ခြင်းအား အက်ပ်အံဆွဲကို ဖွင့်ခြင်းအတွက် သီးသန့်ထားရှိခြင်း ဖြစ်ပါသည်။ ပုံမှန်မူလမျက်နှာပြင်မုဒ်သို့ပြောင်း၍ ထပ်မံကြည့်စားကြည့်ပါ။</string>
     <string name="all_apps_suggestions">အက်ပ် အကြံပြုချက်များ</string>
     <string name="am">နံနက်</string>
-    <string name="animation_rate_title">အန်နီမေးရှင်းနှုန်း</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">ဖိုလ်ဒါ၏ %1$d နေရာသို့ ရွေ့ပါ</string>
     <string name="announce_for_checked">%1$s၊ စစ်ဆေးပြီး</string>
     <string name="announce_for_choose_default_screen">မျက်နှာပြင် %1$d အား မူလ ပင်မ မျက်နှာပြင်အဖြစ် သတ်မှတ်မည်</string>

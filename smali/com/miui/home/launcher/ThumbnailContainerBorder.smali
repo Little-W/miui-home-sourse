@@ -142,7 +142,7 @@
     .line 29
     invoke-super {p0}, Lcom/miui/home/launcher/AutoLayoutThumbnailItem;->onFinishInflate()V
 
-    const v0, 0x7f0a0298
+    const v0, 0x7f0a029a
 
     .line 30
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/ThumbnailContainerBorder;->findViewById(I)Landroid/view/View;

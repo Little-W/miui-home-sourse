@@ -157,7 +157,7 @@
     .line 41
     invoke-super {p0, p1}, Lcom/miui/home/settings/DefaultHomeSettings;->onCreate(Landroid/os/Bundle;)V
 
-    const p1, 0x7f0d0127
+    const p1, 0x7f0d0129
 
     .line 42
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/DefaultHomeWithJeejenSettings;->setContentView(I)V

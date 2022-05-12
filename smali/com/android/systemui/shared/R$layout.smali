@@ -339,25 +339,25 @@
 
 .field public static final preference_widget_switch_compat:I = 0x7f0d0114
 
-.field public static final select_dialog_item_material:I = 0x7f0d0124
+.field public static final select_dialog_item_material:I = 0x7f0d0126
 
-.field public static final select_dialog_multichoice_material:I = 0x7f0d0125
+.field public static final select_dialog_multichoice_material:I = 0x7f0d0127
 
-.field public static final select_dialog_singlechoice_material:I = 0x7f0d0126
+.field public static final select_dialog_singlechoice_material:I = 0x7f0d0128
 
-.field public static final small_window_container:I = 0x7f0d012b
+.field public static final small_window_container:I = 0x7f0d012d
 
-.field public static final small_window_edit:I = 0x7f0d012c
+.field public static final small_window_edit:I = 0x7f0d012e
 
-.field public static final small_window_edit_icon:I = 0x7f0d012d
+.field public static final small_window_edit_icon:I = 0x7f0d012f
 
-.field public static final small_window_header:I = 0x7f0d012e
+.field public static final small_window_header:I = 0x7f0d0130
 
-.field public static final small_window_seclected_icon:I = 0x7f0d012f
+.field public static final small_window_seclected_icon:I = 0x7f0d0131
 
-.field public static final small_window_split:I = 0x7f0d0130
+.field public static final small_window_split:I = 0x7f0d0132
 
-.field public static final support_simple_spinner_dropdown_item:I = 0x7f0d0132
+.field public static final support_simple_spinner_dropdown_item:I = 0x7f0d0134
 
 
 # direct methods

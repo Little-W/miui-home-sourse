@@ -36,7 +36,7 @@
         }
     .end annotation
 
-    .line 84
+    .line 78
     iput-object p1, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->this$0:Lcom/miui/home/settings/DeleteAppAdapter;
 
     iput-object p2, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->$appInfo:Lcom/miui/home/settings/DeleteAppInfo;
@@ -53,7 +53,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .line 86
+    .line 80
     iget-object p1, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->$appInfo:Lcom/miui/home/settings/DeleteAppInfo;
 
     invoke-virtual {p1}, Lcom/miui/home/settings/DeleteAppInfo;->getStatus()I
@@ -64,7 +64,7 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 88
+    .line 82
     :try_start_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -78,7 +78,7 @@
 
     move-result-object p1
 
-    .line 89
+    .line 83
     iget-object v0, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->$appInfo:Lcom/miui/home/settings/DeleteAppInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/settings/DeleteAppInfo;->getPackageName()Ljava/lang/String;
@@ -89,7 +89,7 @@
 
     move-result-object p1
 
-    .line 90
+    .line 84
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -105,7 +105,7 @@
     :catch_0
     move-exception p1
 
-    .line 92
+    .line 86
     iget-object v0, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->this$0:Lcom/miui/home/settings/DeleteAppAdapter;
 
     invoke-static {v0}, Lcom/miui/home/settings/DeleteAppAdapter;->access$getTAG$p(Lcom/miui/home/settings/DeleteAppAdapter;)Ljava/lang/String;
@@ -146,7 +146,7 @@
 
     goto :goto_0
 
-    .line 94
+    .line 88
     :cond_0
     iget-object p1, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->$appInfo:Lcom/miui/home/settings/DeleteAppInfo;
 
@@ -158,21 +158,21 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 95
+    .line 89
     iget-object p1, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->$appInfo:Lcom/miui/home/settings/DeleteAppInfo;
 
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/DeleteAppInfo;->setStatus(I)V
 
-    .line 96
+    .line 90
     iget-object p1, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->this$0:Lcom/miui/home/settings/DeleteAppAdapter;
 
     iget v0, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->$position:I
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/DeleteAppAdapter;->notifyItemChanged(I)V
 
-    .line 97
+    .line 91
     iget-object p1, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->$appInfo:Lcom/miui/home/settings/DeleteAppInfo;
 
     invoke-virtual {p1}, Lcom/miui/home/settings/DeleteAppInfo;->getFromType()Lcom/miui/home/settings/DeleteAppInfo$FromType;
@@ -183,10 +183,10 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 98
+    .line 92
     iget-object p1, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->this$0:Lcom/miui/home/settings/DeleteAppAdapter;
 
-    .line 99
+    .line 93
     iget-object v0, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->$appInfo:Lcom/miui/home/settings/DeleteAppInfo;
 
     invoke-virtual {v0}, Lcom/miui/home/settings/DeleteAppInfo;->getPackageName()Ljava/lang/String;
@@ -197,39 +197,27 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 100
-    iget-object v1, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->this$0:Lcom/miui/home/settings/DeleteAppAdapter;
+    .line 94
+    iget-object v1, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->$appInfo:Lcom/miui/home/settings/DeleteAppInfo;
 
-    invoke-static {v1}, Lcom/miui/home/settings/DeleteAppAdapter;->access$getMContext$p(Lcom/miui/home/settings/DeleteAppAdapter;)Landroid/app/Activity;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v1}, Lcom/miui/home/settings/DeleteAppInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 101
-    iget-object v2, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->$appInfo:Lcom/miui/home/settings/DeleteAppInfo;
-
-    invoke-virtual {v2}, Lcom/miui/home/settings/DeleteAppInfo;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 100
-    invoke-static {v1, v2}, Lcom/miui/launcher/utils/MiuiSettingsUtils;->getStringFromSystem(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/miui/launcher/utils/UninstallAppPreInstallUtils;->getMiuiPreinstallAppPath(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v2, "MiuiSettingsUtils.getStr\u2026     appInfo.packageName)"
+    const-string v2, "UninstallAppPreInstallUt\u2026Path(appInfo.packageName)"
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 98
+    .line 92
     invoke-static {p1, v0, v1}, Lcom/miui/home/settings/DeleteAppAdapter;->access$installAppByPackagePath(Lcom/miui/home/settings/DeleteAppAdapter;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 104
+    .line 97
     :cond_1
     iget-object p1, p0, Lcom/miui/home/settings/DeleteAppAdapter$onBindViewHolder$1;->this$0:Lcom/miui/home/settings/DeleteAppAdapter;
 

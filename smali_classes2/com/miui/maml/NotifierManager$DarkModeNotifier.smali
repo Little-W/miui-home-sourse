@@ -44,10 +44,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 481
+    .line 490
     invoke-direct {p0, p1}, Lcom/miui/maml/NotifierManager$BaseNotifier;-><init>(Landroid/content/Context;)V
 
-    .line 446
+    .line 455
     new-instance p1, Lcom/miui/maml/NotifierManager$DarkModeNotifier$1;
 
     const/4 v0, 0x0
@@ -56,28 +56,28 @@
 
     iput-object p1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mDarkModeObserver:Landroid/database/ContentObserver;
 
-    .line 454
+    .line 463
     new-instance p1, Lcom/miui/maml/NotifierManager$DarkModeNotifier$2;
 
     invoke-direct {p1, p0, v0}, Lcom/miui/maml/NotifierManager$DarkModeNotifier$2;-><init>(Lcom/miui/maml/NotifierManager$DarkModeNotifier;Landroid/os/Handler;)V
 
     iput-object p1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mDarkWallpaperModeObserver:Landroid/database/ContentObserver;
 
-    .line 462
+    .line 471
     new-instance p1, Lcom/miui/maml/NotifierManager$DarkModeNotifier$3;
 
     invoke-direct {p1, p0}, Lcom/miui/maml/NotifierManager$DarkModeNotifier$3;-><init>(Lcom/miui/maml/NotifierManager$DarkModeNotifier;)V
 
     iput-object p1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mComponentCallback:Landroid/content/ComponentCallbacks2;
 
-    .line 482
+    .line 491
     invoke-static {}, Lcom/miui/maml/util/HideSdkDependencyUtils;->SettingsSecure_UI_NIGHT_MODE()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mDarkModeName:Ljava/lang/String;
 
-    .line 483
+    .line 492
     invoke-static {}, Lcom/miui/maml/util/HideSdkDependencyUtils;->SystemSettingsSystem_DARKEN_WALLPAPER_UNDER_DARK_MODE()Ljava/lang/String;
 
     move-result-object p1
@@ -90,7 +90,7 @@
 .method static synthetic access$100(Lcom/miui/maml/NotifierManager$DarkModeNotifier;)V
     .locals 0
 
-    .line 433
+    .line 442
     invoke-direct {p0}, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->updateDarkMode()V
 
     return-void
@@ -99,7 +99,7 @@
 .method static synthetic access$200(Lcom/miui/maml/NotifierManager$DarkModeNotifier;)V
     .locals 0
 
-    .line 433
+    .line 442
     invoke-direct {p0}, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->checkIfNeedToNotify()V
 
     return-void
@@ -108,7 +108,7 @@
 .method static synthetic access$300(Lcom/miui/maml/NotifierManager$DarkModeNotifier;)V
     .locals 0
 
-    .line 433
+    .line 442
     invoke-direct {p0}, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->updateDarkWallpaperMode()V
 
     return-void
@@ -117,7 +117,7 @@
 .method static synthetic access$400(Lcom/miui/maml/NotifierManager$DarkModeNotifier;Landroid/content/res/Configuration;)V
     .locals 0
 
-    .line 433
+    .line 442
     invoke-direct {p0, p1}, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->updateUIModeNight(Landroid/content/res/Configuration;)V
 
     return-void
@@ -126,7 +126,7 @@
 .method private checkIfNeedToNotify()V
     .locals 4
 
-    .line 546
+    .line 555
     iget-boolean v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mIsDarkMode:Z
 
     if-nez v0, :cond_1
@@ -146,7 +146,7 @@
     :goto_0
     const/4 v0, 0x1
 
-    .line 549
+    .line 558
     :goto_1
     iget-boolean v1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mIsDarkWallpaperMode:Z
 
@@ -154,16 +154,16 @@
 
     or-int/lit8 v0, v0, 0x2
 
-    .line 552
+    .line 561
     :cond_2
     iget v1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mMamlDarkMode:I
 
     if-eq v0, v1, :cond_3
 
-    .line 553
+    .line 562
     iput v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mMamlDarkMode:I
 
-    .line 554
+    .line 563
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -174,7 +174,7 @@
 
     const-string v1, "NotifierManager"
 
-    .line 555
+    .line 564
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -198,7 +198,7 @@
 .method private updateDarkMode()V
     .locals 3
 
-    .line 530
+    .line 539
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -231,7 +231,7 @@
 .method private updateDarkWallpaperMode()V
     .locals 3
 
-    .line 535
+    .line 544
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -254,7 +254,7 @@
 .method private updateUIModeNight(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .line 540
+    .line 549
     iget p1, p1, Landroid/content/res/Configuration;->uiMode:I
 
     and-int/lit8 p1, p1, 0x30
@@ -281,7 +281,7 @@
 .method protected onListenerAdded(Lcom/miui/maml/NotifierManager$OnNotifyListener;)V
     .locals 2
 
-    .line 526
+    .line 535
     iget v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mMamlDarkMode:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -298,7 +298,7 @@
 .method protected onRegister()V
     .locals 4
 
-    .line 488
+    .line 497
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mDarkModeName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -317,7 +317,7 @@
 
     goto :goto_1
 
-    .line 492
+    .line 501
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mContext:Landroid/content/Context;
@@ -328,7 +328,7 @@
 
     iget-object v1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mDarkModeName:Ljava/lang/String;
 
-    .line 493
+    .line 502
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -337,10 +337,10 @@
 
     const/4 v3, 0x0
 
-    .line 492
+    .line 501
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 496
+    .line 505
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -349,17 +349,17 @@
 
     iget-object v1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mDarkWallpaperModeName:Ljava/lang/String;
 
-    .line 497
+    .line 506
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mDarkWallpaperModeObserver:Landroid/database/ContentObserver;
 
-    .line 496
+    .line 505
     invoke-virtual {v0, v1, v3, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 499
+    .line 508
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mComponentCallback:Landroid/content/ComponentCallbacks2;
@@ -373,17 +373,17 @@
     :catch_0
     move-exception v0
 
-    .line 501
+    .line 510
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 504
+    .line 513
     :goto_0
     invoke-direct {p0}, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->updateDarkMode()V
 
-    .line 505
+    .line 514
     invoke-direct {p0}, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->updateDarkWallpaperMode()V
 
-    .line 506
+    .line 515
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -396,7 +396,7 @@
 
     invoke-direct {p0, v0}, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->updateUIModeNight(Landroid/content/res/Configuration;)V
 
-    .line 507
+    .line 516
     invoke-direct {p0}, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->checkIfNeedToNotify()V
 
     return-void
@@ -409,7 +409,7 @@
 .method protected onUnregister()V
     .locals 2
 
-    .line 512
+    .line 521
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mDarkModeName:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -428,7 +428,7 @@
 
     goto :goto_1
 
-    .line 516
+    .line 525
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mContext:Landroid/content/Context;
@@ -441,7 +441,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 517
+    .line 526
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -452,7 +452,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 518
+    .line 527
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->mComponentCallback:Landroid/content/ComponentCallbacks2;
@@ -466,7 +466,7 @@
     :catch_0
     move-exception v0
 
-    .line 520
+    .line 529
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     :goto_0

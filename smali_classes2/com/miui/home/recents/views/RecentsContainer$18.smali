@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
     .locals 0
 
-    .line 1546
+    .line 1559
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$18;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 1549
+    .line 1562
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$18;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$2100(Lcom/miui/home/recents/views/RecentsContainer;)Z
@@ -47,7 +47,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/recents/views/RecentsContainer;->access$2002(Lcom/miui/home/recents/views/RecentsContainer;Z)Z
 
-    .line 1550
+    .line 1563
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$18;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$2200(Lcom/miui/home/recents/views/RecentsContainer;)V

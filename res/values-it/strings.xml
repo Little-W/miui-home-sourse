@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">"Lo scorrimento verso l'alto è riservato all'apertura del Cassetto app. Passa alla normale modalità schermata Home e riprova."</string>
     <string name="all_apps_suggestions">Suggerimenti app</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Spostato in posizione %1$d nella cartella</string>
     <string name="announce_for_checked">%1$s, verificati</string>
     <string name="announce_for_choose_default_screen">Imposta schermata %1$d come schermata Home predefinita</string>

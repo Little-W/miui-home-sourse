@@ -79,7 +79,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/Background;->mLongClickHandler:Lcom/miui/home/launcher/Background$LongClickHandler;
 
-    .line 135
+    .line 138
     new-instance p1, Lcom/miui/home/launcher/Background$1;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/Background$1;-><init>(Lcom/miui/home/launcher/Background;)V
@@ -331,7 +331,7 @@
 .method public touchedAtValidArea(F)Z
     .locals 2
 
-    .line 130
+    .line 133
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getWorkspaceInvalidateEdgeWidth()I
 
     move-result v0
@@ -342,7 +342,7 @@
 
     if-lez v1, :cond_0
 
-    .line 132
+    .line 135
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getScreenWidth()I
 
     move-result v1

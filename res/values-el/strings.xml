@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Το σύρσιμο προς τα επάνω διατίθεται για το άνοιγμα του Συρταριού εφαρμογών. Πραγματοποιήστε εναλλαγή σε κανονική λειτουργία Αρχικής οθόνης και προσπαθήστε ξανά.</string>
     <string name="all_apps_suggestions">Προτάσεις εφαρμογών</string>
     <string name="am">ΠΜ</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Μετακινήθηκε στη θέση %1$d στο φάκελο</string>
     <string name="announce_for_checked">%1$s, ελέγχθηκε</string>
     <string name="announce_for_choose_default_screen">Ορισμός οθόνης %1$d ως προεπιλεγμένη Αρχική οθόνη</string>

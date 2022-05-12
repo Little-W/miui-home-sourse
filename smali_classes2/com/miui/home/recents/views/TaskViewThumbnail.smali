@@ -311,6 +311,11 @@
 .method private calculateInsets(Z)V
     .locals 3
 
+    .line 159
+    invoke-static {p1}, Lcom/miui/home/recents/util/Utilities;->isNeedRotate(Z)Z
+
+    move-result p1
+
     if-nez p1, :cond_0
 
     .line 160

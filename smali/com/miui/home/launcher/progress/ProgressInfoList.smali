@@ -6,7 +6,7 @@
 # static fields
 .field private static final sPrepareLock:Ljava/lang/Object;
 
-.field private static sProgressInfoReady:Z
+.field private static sProgressInfoReady:Z = false
 
 
 # instance fields

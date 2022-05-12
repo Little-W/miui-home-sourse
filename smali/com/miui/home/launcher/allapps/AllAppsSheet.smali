@@ -149,34 +149,49 @@
 
     const/4 v1, 0x2
 
-    if-ne v0, v1, :cond_0
+    if-ne v0, v1, :cond_1
 
     .line 46
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPadDevice()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     .line 47
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->isInMultiWindowMode()Z
 
     move-result p0
 
-    if-eqz p0, :cond_0
+    if-eqz p0, :cond_1
 
     .line 48
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLargeScreenInMultiWindowMode()Z
+    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreenMode()Z
 
     move-result p0
 
-    if-nez p0, :cond_0
+    if-eqz p0, :cond_0
 
+    sget-object p0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "cetus"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    :cond_0
     const/4 p0, 0x1
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 p0, 0x0
 
     :goto_0

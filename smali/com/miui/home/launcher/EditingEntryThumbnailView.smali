@@ -952,7 +952,7 @@
     .line 90
     iget-object v3, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mInflater:Landroid/view/LayoutInflater;
 
-    const v4, 0x7f0d0134
+    const v4, 0x7f0d0136
 
     invoke-virtual {v3, v4, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)V
     .locals 0
 
-    .line 255
+    .line 253
     iput-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment$1;->this$0:Lcom/miui/home/settings/BaseAllAppsSettingsFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onDialogDismiss()V
     .locals 2
 
-    .line 258
+    .line 256
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment$1;->this$0:Lcom/miui/home/settings/BaseAllAppsSettingsFragment;
 
     invoke-static {v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->access$000(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)Lcom/miui/home/settings/preference/CheckBoxPreference;
@@ -55,7 +55,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setChecked(Z)V
 
-    .line 259
+    .line 257
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment$1;->this$0:Lcom/miui/home/settings/BaseAllAppsSettingsFragment;
 
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;

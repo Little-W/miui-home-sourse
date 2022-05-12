@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/FolderInfo;)V
     .locals 0
 
-    .line 6436
+    .line 6433
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$57;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$57;->val$info:Lcom/miui/home/launcher/FolderInfo;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 6439
+    .line 6436
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$57;->val$info:Lcom/miui/home/launcher/FolderInfo;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$57;->this$0:Lcom/miui/home/launcher/Launcher;

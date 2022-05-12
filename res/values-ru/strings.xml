@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Жест вверх используется для открытия меню приложений. Включите обычный режим рабочего стола и повторите попытку.</string>
     <string name="all_apps_suggestions">Недавние приложения</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Частота анимации</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Перемещено в позицию %1$d в папке</string>
     <string name="announce_for_checked">%1$s, выбрано</string>
     <string name="announce_for_choose_default_screen">Установить экран %1$d в качестве основного</string>

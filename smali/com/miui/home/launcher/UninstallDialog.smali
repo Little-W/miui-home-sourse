@@ -1357,7 +1357,7 @@
     .line 70
     invoke-super {p0}, Lcom/miui/launcher/views/LauncherFrameLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a029d
+    const v0, 0x7f0a029f
 
     .line 71
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/UninstallDialog;->findViewById(I)Landroid/view/View;

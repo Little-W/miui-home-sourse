@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
     .locals 0
 
-    .line 1416
+    .line 1429
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$15;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onPreDraw()Z
     .locals 1
 
-    .line 1419
+    .line 1432
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$15;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-static {v0}, Lcom/miui/home/recents/views/RecentsContainer;->access$800(Lcom/miui/home/recents/views/RecentsContainer;)Lcom/miui/home/recents/views/RecentsView;
@@ -51,7 +51,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 1420
+    .line 1433
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentsContainer$15;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-virtual {v0}, Lcom/miui/home/recents/views/RecentsContainer;->prepareFsGestureEnterRecents()V

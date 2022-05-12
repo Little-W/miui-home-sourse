@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/recents/views/RecentsContainer;)V
     .locals 0
 
-    .line 810
+    .line 823
     iput-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,17 +35,17 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 818
+    .line 831
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-virtual {p1}, Lcom/miui/home/recents/views/RecentsContainer;->dismissRecentsToLaunchTargetTaskOrHome()V
 
-    .line 819
+    .line 832
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     invoke-static {p1}, Lcom/miui/home/recents/views/RecentsContainer;->access$1300(Lcom/miui/home/recents/views/RecentsContainer;)V
 
-    .line 820
+    .line 833
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     const/4 v0, 0x0
@@ -58,7 +58,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 813
+    .line 826
     iget-object p1, p0, Lcom/miui/home/recents/views/RecentsContainer$11;->this$0:Lcom/miui/home/recents/views/RecentsContainer;
 
     const/4 v0, 0x1

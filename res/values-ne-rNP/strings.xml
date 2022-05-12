@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">माथि स्वाइप अप गर्ने एप ड्रयर खोल्नका लागि आरक्षित छ। नियमित होम स्क्रिन मोडमा स्विच गर्नुहोस् र फेरि प्रयास गर्नुहोस्।</string>
     <string name="all_apps_suggestions">एप सुझावहरू</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">फोल्डरको %1$d स्थानमा लगियो</string>
     <string name="announce_for_checked">%1$s, जाँची सक्यो</string>
     <string name="announce_for_choose_default_screen">स्क्रीन %1$d पूर्वनिर्धारित होम स्क्रिनको रूपमा सेट गर्नुहोस्</string>

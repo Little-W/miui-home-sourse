@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">An ajiye ja ta sama don budewar Akwatin manhaja. Canza zuwa yanayin Allon farko na daidai sai ka sake gwadawa.</string>
     <string name="all_apps_suggestions">Shawararin manhaja</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">An matsa zuwa matsayi na %1$d a cikin foldan</string>
     <string name="announce_for_checked">Ya bincika, %1$s</string>
     <string name="announce_for_choose_default_screen">Saita allon %1$d a matsayin Allon farko na asali</string>

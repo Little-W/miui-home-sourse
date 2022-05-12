@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/ShortcutInfo;)V
     .locals 0
 
-    .line 2838
+    .line 2835
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$15;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$15;->val$targetInfo:Lcom/miui/home/launcher/ShortcutInfo;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 3
 
-    .line 2840
+    .line 2837
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$15;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$2400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DragLayer;

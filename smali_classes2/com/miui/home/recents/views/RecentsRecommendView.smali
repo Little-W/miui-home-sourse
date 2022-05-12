@@ -198,11 +198,11 @@
 
     if-eq p1, v1, :cond_3
 
-    const v1, 0x7f0a0235
+    const v1, 0x7f0a0237
 
     if-eq p1, v1, :cond_2
 
-    const v1, 0x7f0a0297
+    const v1, 0x7f0a0299
 
     if-eq p1, v1, :cond_0
 
@@ -460,7 +460,7 @@
 
     iput-object v0, p0, Lcom/miui/home/recents/views/RecentsRecommendView;->mFirstItem:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0a0235
+    const v0, 0x7f0a0237
 
     const v1, 0x7f08054c
 
@@ -499,7 +499,7 @@
     const v1, 0x7f100377
 
     :goto_1
-    const v2, 0x7f0a0297
+    const v2, 0x7f0a0299
 
     .line 71
     invoke-direct {p0, v2, v0, v1}, Lcom/miui/home/recents/views/RecentsRecommendView;->initItem(III)Landroid/widget/LinearLayout;
@@ -740,7 +740,7 @@
     .line 137
     iput-boolean v0, p0, Lcom/miui/home/recents/views/RecentsRecommendView;->mIsMarketEnabled:Z
 
-    const v0, 0x7f0a0297
+    const v0, 0x7f0a0299
 
     .line 139
     iget-boolean v1, p0, Lcom/miui/home/recents/views/RecentsRecommendView;->mIsMarketEnabled:Z

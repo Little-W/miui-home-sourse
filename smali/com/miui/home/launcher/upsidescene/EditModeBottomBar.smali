@@ -798,7 +798,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mEditDragSource:Landroid/view/ViewGroup;
 
-    const v0, 0x7f0a027a
+    const v0, 0x7f0a027c
 
     .line 89
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
@@ -807,7 +807,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelShortcut:Landroid/view/View;
 
-    const v0, 0x7f0a0279
+    const v0, 0x7f0a027b
 
     .line 90
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;
@@ -816,7 +816,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mTabLabelFreeButton:Landroid/view/View;
 
-    const v0, 0x7f0a027b
+    const v0, 0x7f0a027d
 
     .line 91
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->findViewById(I)Landroid/view/View;

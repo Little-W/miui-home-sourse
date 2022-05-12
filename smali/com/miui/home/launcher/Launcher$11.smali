@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 2148
+    .line 2145
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,7 +35,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 2151
+    .line 2148
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DefaultScreenPreviewView;
@@ -46,7 +46,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->setAlpha(F)V
 
-    .line 2152
+    .line 2149
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DefaultScreenPreviewView;
@@ -57,7 +57,7 @@
 
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->setTranslationY(F)V
 
-    .line 2153
+    .line 2150
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1400(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/Workspace;
@@ -66,7 +66,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/Workspace;->setAlpha(F)V
 
-    .line 2154
+    .line 2151
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2100(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/EditingEntryThumbnailView;
@@ -75,7 +75,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->setAlpha(F)V
 
-    .line 2155
+    .line 2152
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DefaultScreenPreviewView;
@@ -86,7 +86,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DefaultScreenPreviewView;->setVisibility(I)V
 
-    .line 2156
+    .line 2153
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$11;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2000(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/DefaultScreenPreviewView;

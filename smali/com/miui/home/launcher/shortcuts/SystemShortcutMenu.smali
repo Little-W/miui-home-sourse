@@ -206,7 +206,7 @@
 .method protected getShortcutItemLayoutResId()I
     .locals 1
 
-    const v0, 0x7f0d013a
+    const v0, 0x7f0d013c
 
     return v0
 .end method

@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 8851
+    .line 8848
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$LongClickInBackgroundMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/Launcher$1;)V
     .locals 0
 
-    .line 8851
+    .line 8848
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Launcher$LongClickInBackgroundMessageHandler;-><init>(Lcom/miui/home/launcher/Launcher;)V
 
     return-void
@@ -42,23 +42,35 @@
 
 # virtual methods
 .method public onMessageEvent(Lcom/miui/home/launcher/common/messages/LongClickInBackgroundMessage;)V
-    .locals 2
+    .locals 3
     .annotation runtime Lorg/greenrobot/eventbus/Subscribe;
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 8854
+    .line 8851
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$LongClickInBackgroundMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    new-instance v0, Lcom/miui/home/launcher/EditStateChangeReason;
+    invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->isInMultiWindowMode()Z
 
-    const-string v1, "event_long_click_in_edit"
+    move-result p1
 
-    invoke-direct {v0, v1}, Lcom/miui/home/launcher/EditStateChangeReason;-><init>(Ljava/lang/String;)V
+    if-eqz p1, :cond_0
 
-    const/16 v1, 0x8
+    return-void
 
-    invoke-virtual {p1, v1, v0}, Lcom/miui/home/launcher/Launcher;->setEditingState(ILcom/miui/home/launcher/EditStateChangeReason;)V
+    .line 8854
+    :cond_0
+    iget-object p1, p0, Lcom/miui/home/launcher/Launcher$LongClickInBackgroundMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
+
+    const/16 v0, 0x8
+
+    new-instance v1, Lcom/miui/home/launcher/EditStateChangeReason;
+
+    const-string v2, "event_long_click_in_edit"
+
+    invoke-direct {v1, v2}, Lcom/miui/home/launcher/EditStateChangeReason;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v0, v1}, Lcom/miui/home/launcher/Launcher;->setEditingState(ILcom/miui/home/launcher/EditStateChangeReason;)V
 
     .line 8855
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$LongClickInBackgroundMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;

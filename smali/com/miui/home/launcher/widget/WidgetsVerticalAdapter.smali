@@ -1685,7 +1685,7 @@
     .line 281
     iget-object p2, p0, Lcom/miui/home/launcher/widget/WidgetsVerticalAdapter;->mLayoutInflater:Landroid/view/LayoutInflater;
 
-    const v0, 0x7f0d013e
+    const v0, 0x7f0d0140
 
     const/4 v1, 0x0
 

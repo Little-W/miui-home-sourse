@@ -521,7 +521,7 @@
     .line 42
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a029d
+    const v0, 0x7f0a029f
 
     .line 43
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;->findViewById(I)Landroid/view/View;
@@ -543,7 +543,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;->mDescription:Landroid/widget/TextView;
 
-    const v0, 0x7f0a02cb
+    const v0, 0x7f0a02cd
 
     .line 45
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/uninstall/UninstallDialogViewContainer;->findViewById(I)Landroid/view/View;

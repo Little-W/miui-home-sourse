@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Podrsaj navzgor je prihranjen za odpiranje Predala z aplikacijami. Preklopite na normalen način Začetnega zaslona in poskusite ponovno.</string>
     <string name="all_apps_suggestions">Priporočila aplikacij</string>
     <string name="am">dop.</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Hitrost animacije</string>
     <string name="announce_for_app_move_in_folder">Premaknjeno na položaj %1$d v mapi</string>
     <string name="announce_for_checked">%1$s, označen</string>
     <string name="announce_for_choose_default_screen">Nastavite zaslon %1$d kot privzeti Začetni zaslon</string>

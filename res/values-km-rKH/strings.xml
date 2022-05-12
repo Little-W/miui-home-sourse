@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">ការអូសឡើងត្រូវបានបម្រុងទុកសម្រាប់ការបើកថតកម្មវិធី។ ប្តូរទៅម៉ូដអេក្រង់ដើមធម្មតា ហើយព្យាយាមម្តងទៀត។</string>
     <string name="all_apps_suggestions">ការផ្តល់យោបល់នៃកម្មវិធី</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">បានផ្លាស់ទីទៅទីតាំង %1$d នៅក្នុងថត</string>
     <string name="announce_for_checked">%1$s បានពិនិត្យរួច</string>
     <string name="announce_for_choose_default_screen">កំណត់អេក្រង់ %1$d ជាអេក្រង់លំនាំដើម</string>

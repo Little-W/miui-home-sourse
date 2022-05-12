@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">పైకి స్వైప్ చేయడమనేది యాప్ డ్రాని తెరిచేందుకు ప్రత్యేకంగా కేటాయించబడింది. సాధారణ హోమ్ స్క్రీన్ మోడ్‌కి మారి, మళ్లీ ప్రయత్నించండి.</string>
     <string name="all_apps_suggestions">అప్లికేషన్ సూచనలు</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">యానిమేషన్ రేటు</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">ఫోల్డర్‌లో %1$d స్థానానికి తరలించబడింది</string>
     <string name="announce_for_checked">%1$s, చెక్ చేయబడింది</string>
     <string name="announce_for_choose_default_screen">డిఫాల్ట్ హోమ్ స్క్రీన్‌గా స్క్రీన్ %1$d సెట్ చేయి</string>

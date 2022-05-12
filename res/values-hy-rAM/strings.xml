@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">Ժեստը օգտագործվում է դիմումների ընտրացանկը բացելու համար: Միացրեք աշխատասեղանի նորմալ ռեժիմը և կրկին փորձեք:</string>
     <string name="all_apps_suggestions">Հավելվածի առաջարկություններ</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Անիմացիայի տոկոսադրույք</string>
+    <string name="animation_rate_title">Անիմացիայի արագություն</string>
     <string name="announce_for_app_move_in_folder">Տեղափոխվել է դիրքորոշում %1$d թղթապանակում։</string>
     <string name="announce_for_checked">%1$s, ստուգվել է</string>
     <string name="announce_for_choose_default_screen">Դնել էկրանը %1$d որպես ընդհանուր Գլխավոր էկրան</string>

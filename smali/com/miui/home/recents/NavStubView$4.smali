@@ -208,27 +208,11 @@
     :cond_0
     iget-object v1, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-virtual {v1}, Lcom/miui/home/recents/NavStubView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/content/res/Configuration;->orientation:I
-
-    const/4 v3, 0x2
-
-    if-ne v1, v3, :cond_2
-
-    iget-object v1, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
-
-    invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$1100(Lcom/miui/home/recents/NavStubView;)Z
+    invoke-static {v1}, Lcom/miui/home/recents/NavStubView;->access$1600(Lcom/miui/home/recents/NavStubView;)Z
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-eqz v1, :cond_2
 
     .line 894
     new-instance v1, Landroid/graphics/Path;
@@ -240,7 +224,7 @@
 
     iget-object v4, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v4}, Lcom/miui/home/recents/NavStubView;->access$1600(Lcom/miui/home/recents/NavStubView;)[F
+    invoke-static {v4}, Lcom/miui/home/recents/NavStubView;->access$1700(Lcom/miui/home/recents/NavStubView;)[F
 
     move-result-object v4
 
@@ -256,7 +240,7 @@
 
     iget-object v5, p0, Lcom/miui/home/recents/NavStubView$4;->this$0:Lcom/miui/home/recents/NavStubView;
 
-    invoke-static {v5}, Lcom/miui/home/recents/NavStubView;->access$1600(Lcom/miui/home/recents/NavStubView;)[F
+    invoke-static {v5}, Lcom/miui/home/recents/NavStubView;->access$1700(Lcom/miui/home/recents/NavStubView;)[F
 
     move-result-object v5
 

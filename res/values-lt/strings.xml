@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Slinkimas aukštyn yra skirtas „Programų skydelio“ paleidimui. Perjunkite į įprastą pagrinidinio ekrano režimą ir pabandykite dar kartą.</string>
     <string name="all_apps_suggestions">Siūlomos programos</string>
     <string name="am">Priešpiet</string>
-    <string name="animation_rate_title">Animacijos greitis</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Perkelta į „%1$d“ padėtį aplanke</string>
     <string name="announce_for_checked">%1$s, patikrinta</string>
     <string name="announce_for_choose_default_screen">Nustatyti %1$d ekraną numatytuoju pagrindiniu ekranu</string>

@@ -1914,7 +1914,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppShortcutMenu:Lcom/miui/home/launcher/shortcuts/AppShortcutMenu;
 
-    const v0, 0x7f0a0278
+    const v0, 0x7f0a027a
 
     .line 65
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->findViewById(I)Landroid/view/View;
@@ -1925,7 +1925,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mSystemShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
-    const v0, 0x7f0a02e9
+    const v0, 0x7f0a02eb
 
     .line 66
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->findViewById(I)Landroid/view/View;
@@ -1936,7 +1936,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mWidgetShortcutMenu:Lcom/miui/home/launcher/shortcuts/SystemShortcutMenu;
 
-    const v0, 0x7f0a02af
+    const v0, 0x7f0a02b1
 
     .line 67
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->findViewById(I)Landroid/view/View;
@@ -1945,7 +1945,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->mAppSystemTransparentSpace:Landroid/view/View;
 
-    const v0, 0x7f0a02b0
+    const v0, 0x7f0a02b2
 
     .line 68
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->findViewById(I)Landroid/view/View;

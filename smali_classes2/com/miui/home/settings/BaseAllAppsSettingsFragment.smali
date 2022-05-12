@@ -67,20 +67,20 @@
 .method public constructor <init>()V
     .locals 3
 
-    .line 48
+    .line 46
     invoke-direct {p0}, Lmiuix/preference/PreferenceFragment;-><init>()V
 
     const-string v0, "global_search"
 
-    .line 82
+    .line 80
     iput-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->GLOBAL_SEARCH:Ljava/lang/String;
 
     const-string v0, "no_action"
 
-    .line 84
+    .line 82
     iput-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->NO_ACTION:Ljava/lang/String;
 
-    .line 85
+    .line 83
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -93,7 +93,7 @@
 
     iput-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->KEY_GLOBAL_SEARCH:Ljava/lang/String;
 
-    .line 86
+    .line 84
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -106,7 +106,7 @@
 
     iput-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->KEY_CONTENT_CENTER:Ljava/lang/String;
 
-    .line 87
+    .line 85
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -119,7 +119,7 @@
 
     iput-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->KEY_NO_ACTION:Ljava/lang/String;
 
-    .line 91
+    .line 89
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -132,7 +132,7 @@
 
     iput-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->FAST_SCROLLER_DEFAULT:Ljava/lang/String;
 
-    .line 92
+    .line 90
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -147,7 +147,7 @@
 
     const/4 v0, 0x2
 
-    .line 93
+    .line 91
     new-array v0, v0, [Ljava/lang/String;
 
     iget-object v1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->FAST_SCROLLER_DEFAULT:Ljava/lang/String;
@@ -170,7 +170,7 @@
 .method static synthetic access$000(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)Lcom/miui/home/settings/preference/CheckBoxPreference;
     .locals 0
 
-    .line 48
+    .line 46
     iget-object p0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mQuickSearchSetting:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     return-object p0
@@ -179,7 +179,7 @@
 .method static synthetic access$100(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;Z)V
     .locals 0
 
-    .line 48
+    .line 46
     invoke-direct {p0, p1}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->updateBranchStateOnChanged(Z)V
 
     return-void
@@ -188,7 +188,7 @@
 .method static synthetic access$200(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)Ljava/lang/String;
     .locals 0
 
-    .line 48
+    .line 46
     iget-object p0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->currSlidUpConfig:Ljava/lang/String;
 
     return-object p0
@@ -197,7 +197,7 @@
 .method static synthetic access$300(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)Lcom/miui/home/settings/preference/ListPreference;
     .locals 0
 
-    .line 48
+    .line 46
     iget-object p0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mLauncherSlideUp:Lcom/miui/home/settings/preference/ListPreference;
 
     return-object p0
@@ -206,7 +206,7 @@
 .method private branchSettingChange(Ljava/lang/Boolean;)V
     .locals 3
 
-    .line 250
+    .line 248
     invoke-virtual {p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
@@ -219,7 +219,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 251
+    .line 249
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isMiuiLauncher()Z
 
     move-result p1
@@ -228,7 +228,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 252
+    .line 250
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchSettingManager()Lcom/mi/globallauncher/branchInterface/IBranchSettingManager;
 
     move-result-object p1
@@ -249,7 +249,7 @@
 
     goto :goto_0
 
-    .line 254
+    .line 252
     :cond_0
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getPocoBranchSearchManager()Lcom/mi/globallauncher/poco/IPocoBranchSearchGuideManager;
 
@@ -273,7 +273,7 @@
 
     goto :goto_0
 
-    .line 264
+    .line 262
     :cond_1
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
@@ -283,7 +283,7 @@
 
     invoke-interface {p1, v0}, Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;->setBranchSwitchOn(Z)V
 
-    .line 265
+    .line 263
     invoke-direct {p0, v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->updateBranchStateOnChanged(Z)V
 
     :goto_0
@@ -293,14 +293,14 @@
 .method private initSlideUpContentMap()V
     .locals 3
 
-    .line 168
+    .line 166
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mSlideUpContentMap:Ljava/util/Map;
 
-    .line 169
+    .line 167
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mSlideUpContentMap:Ljava/util/Map;
 
     iget-object v1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->KEY_GLOBAL_SEARCH:Ljava/lang/String;
@@ -309,7 +309,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 170
+    .line 168
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mSlideUpContentMap:Ljava/util/Map;
 
     iget-object v1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->KEY_CONTENT_CENTER:Ljava/lang/String;
@@ -318,7 +318,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 171
+    .line 169
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mSlideUpContentMap:Ljava/util/Map;
 
     iget-object v1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->KEY_NO_ACTION:Ljava/lang/String;
@@ -333,7 +333,7 @@
 .method public static synthetic lambda$onCreatePreferences$0(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;Ljava/lang/Void;)Ljava/lang/Void;
     .locals 0
 
-    .line 130
+    .line 128
     invoke-virtual {p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -348,7 +348,7 @@
 .method public static synthetic lambda$onCreatePreferences$1(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;Ljava/lang/Void;)V
     .locals 1
 
-    .line 133
+    .line 131
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object p1
@@ -367,7 +367,7 @@
 
     iput-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->currSlidUpConfig:Ljava/lang/String;
 
-    .line 134
+    .line 132
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mLauncherSlideUp:Lcom/miui/home/settings/preference/ListPreference;
 
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->currSlidUpConfig:Ljava/lang/String;
@@ -380,7 +380,7 @@
 .method private showInstallDialog()V
     .locals 3
 
-    .line 269
+    .line 267
     new-instance v0, Lmiuix/appcompat/app/AlertDialog$Builder;
 
     invoke-virtual {p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->getContext()Landroid/content/Context;
@@ -391,14 +391,14 @@
 
     const v1, 0x7f10004c
 
-    .line 270
+    .line 268
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
     const v1, 0x7f10004b
 
-    .line 271
+    .line 269
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
@@ -409,7 +409,7 @@
 
     const v2, 0x7f1000d4
 
-    .line 272
+    .line 270
     invoke-virtual {v0, v2, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
@@ -420,7 +420,7 @@
 
     const v2, 0x7f100240
 
-    .line 278
+    .line 276
     invoke-virtual {v0, v2, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
@@ -429,17 +429,17 @@
 
     invoke-direct {v1, p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment$2;-><init>(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)V
 
-    .line 290
+    .line 288
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    .line 296
+    .line 294
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->create()Lmiuix/appcompat/app/AlertDialog;
 
     move-result-object v0
 
-    .line 297
+    .line 295
     invoke-virtual {v0}, Lmiuix/appcompat/app/AlertDialog;->show()V
 
     return-void
@@ -448,12 +448,12 @@
 .method private updateBranchStateOnChanged(Z)V
     .locals 2
 
-    .line 367
+    .line 365
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mBranchSetting:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setChecked(Z)V
 
-    .line 368
+    .line 366
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -464,7 +464,7 @@
 
     invoke-virtual {v0, v1}, Lorg/greenrobot/eventbus/EventBus;->post(Ljava/lang/Object;)V
 
-    .line 369
+    .line 367
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object p1
@@ -477,14 +477,14 @@
 .method private updateViewIfDesktopModeChange(Z)V
     .locals 2
 
-    .line 312
+    .line 310
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mClassicSettings:Landroidx/preference/PreferenceCategory;
 
     xor-int/lit8 v1, p1, 0x1
 
     invoke-virtual {v0, v1}, Landroidx/preference/PreferenceCategory;->setVisible(Z)V
 
-    .line 313
+    .line 311
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mDrawerSettings:Landroidx/preference/PreferenceCategory;
 
     invoke-virtual {v0, p1}, Landroidx/preference/PreferenceCategory;->setVisible(Z)V
@@ -497,7 +497,7 @@
 .method public OnDesktopModeTemporaryChange(Z)V
     .locals 0
 
-    .line 336
+    .line 334
     invoke-direct {p0, p1}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->updateViewIfDesktopModeChange(Z)V
 
     return-void
@@ -506,12 +506,12 @@
 .method public changeBranchSetting()V
     .locals 2
 
-    .line 351
+    .line 349
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mBranchSetting:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    .line 352
+    .line 350
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mBranchSetting:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
@@ -530,12 +530,12 @@
 .method public changeQuickSetting()V
     .locals 2
 
-    .line 362
+    .line 360
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mQuickSearchSetting:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    .line 363
+    .line 361
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mQuickSearchSetting:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
@@ -556,7 +556,7 @@
 
     const-string v0, "desktop_mode"
 
-    .line 195
+    .line 193
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -567,7 +567,7 @@
 
     const-string v0, "classic_settings"
 
-    .line 196
+    .line 194
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -578,7 +578,7 @@
 
     const-string v0, "launcher_slide_up"
 
-    .line 197
+    .line 195
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -589,7 +589,7 @@
 
     const-string v0, "launcher_slide_up_global_pref"
 
-    .line 198
+    .line 196
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -600,7 +600,7 @@
 
     const-string v0, "drawer_settings"
 
-    .line 199
+    .line 197
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -611,7 +611,7 @@
 
     const-string v0, "key_recommend_apps"
 
-    .line 200
+    .line 198
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -622,7 +622,7 @@
 
     const-string v0, "key_app_category"
 
-    .line 201
+    .line 199
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -633,7 +633,7 @@
 
     const-string v0, "key_drawer_background"
 
-    .line 202
+    .line 200
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -644,7 +644,7 @@
 
     const-string v0, "fast_scroller_style"
 
-    .line 203
+    .line 201
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -655,7 +655,7 @@
 
     const-string v0, "key_auto_add_new_app_shortcut"
 
-    .line 204
+    .line 202
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -666,7 +666,7 @@
 
     const-string v0, "key_branch_open"
 
-    .line 205
+    .line 203
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -677,7 +677,7 @@
 
     const-string v0, "key_quick_search_in_drawer"
 
-    .line 206
+    .line 204
     invoke-virtual {p0, v0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
 
     move-result-object v0
@@ -696,7 +696,7 @@
 
     if-ne p1, p2, :cond_1
 
-    .line 302
+    .line 300
     invoke-virtual {p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -711,14 +711,14 @@
 
     const-string p2, "content_center"
 
-    .line 303
+    .line 301
     invoke-static {p2, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 304
+    .line 302
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mLauncherSlideUp:Lcom/miui/home/settings/preference/ListPreference;
 
     iget-object p2, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->KEY_CONTENT_CENTER:Ljava/lang/String;
@@ -727,7 +727,7 @@
 
     goto :goto_0
 
-    .line 306
+    .line 304
     :cond_0
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mLauncherSlideUp:Lcom/miui/home/settings/preference/ListPreference;
 
@@ -745,27 +745,27 @@
 
     const/high16 p1, 0x7f130000
 
-    .line 97
+    .line 95
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->setPreferencesFromResource(ILjava/lang/String;)V
 
-    .line 98
+    .line 96
     invoke-virtual {p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->findPreferences()V
 
-    .line 99
+    .line 97
     invoke-virtual {p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object p1
 
     const-string p2, "is_drawer_setting"
 
-    .line 100
+    .line 98
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result p2
 
     const-string v0, "is_slide_up_setting"
 
-    .line 101
+    .line 99
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result p1
@@ -774,12 +774,12 @@
 
     if-eqz p2, :cond_0
 
-    .line 103
+    .line 101
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mDesktopMode:Lcom/miui/home/settings/preference/DesktopModePreference;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/DesktopModePreference;->setVisible(Z)V
 
-    .line 104
+    .line 102
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mClassicSettings:Landroidx/preference/PreferenceCategory;
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceCategory;->setVisible(Z)V
@@ -789,28 +789,28 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 106
+    .line 104
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mDesktopMode:Lcom/miui/home/settings/preference/DesktopModePreference;
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/DesktopModePreference;->setVisible(Z)V
 
-    .line 107
+    .line 105
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mDrawerSettings:Landroidx/preference/PreferenceCategory;
 
     invoke-virtual {p1, v0}, Landroidx/preference/PreferenceCategory;->setVisible(Z)V
 
     goto :goto_0
 
-    .line 109
+    .line 107
     :cond_1
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isDrawerMode()Z
 
     move-result p1
 
-    .line 110
+    .line 108
     invoke-direct {p0, p1}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->updateViewIfDesktopModeChange(Z)V
 
-    .line 112
+    .line 110
     :goto_0
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mAutoAddNewAppShortcut:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
@@ -832,22 +832,22 @@
 
     invoke-virtual {p1, p2}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setDefaultValue(Ljava/lang/Object;)V
 
-    .line 113
+    .line 111
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mDesktopMode:Lcom/miui/home/settings/preference/DesktopModePreference;
 
     invoke-virtual {p1, p0}, Lcom/miui/home/settings/preference/DesktopModePreference;->setOnDesktopModeTemporaryChangeListener(Lcom/miui/home/settings/preference/DesktopModePreference$OnDesktopModeTemporaryChangeListener;)V
 
-    .line 115
+    .line 113
     invoke-direct {p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->initSlideUpContentMap()V
 
-    .line 117
+    .line 115
     invoke-static {}, Lcom/miui/home/launcher/search/SearchEdgeLayout;->useNewSlidingSetting()Z
 
     move-result p1
 
     if-eqz p1, :cond_4
 
-    .line 119
+    .line 117
     sget-boolean p1, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     const/4 p2, 0x2
@@ -865,7 +865,7 @@
     :cond_2
     const/4 p1, 0x3
 
-    .line 122
+    .line 120
     new-array p1, p1, [Ljava/lang/String;
 
     iget-object v2, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->KEY_GLOBAL_SEARCH:Ljava/lang/String;
@@ -882,7 +882,7 @@
 
     goto :goto_2
 
-    .line 120
+    .line 118
     :cond_3
     :goto_1
     new-array p1, p2, [Ljava/lang/String;
@@ -895,30 +895,30 @@
 
     aput-object p2, p1, v1
 
-    .line 124
+    .line 122
     :goto_2
     iget-object p2, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mLauncherSlideUp:Lcom/miui/home/settings/preference/ListPreference;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/settings/preference/ListPreference;->setEntries([Ljava/lang/CharSequence;)V
 
-    .line 125
+    .line 123
     iget-object p2, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mLauncherSlideUp:Lcom/miui/home/settings/preference/ListPreference;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/settings/preference/ListPreference;->setEntryValues([Ljava/lang/CharSequence;)V
 
-    .line 126
+    .line 124
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mLauncherSlideUp:Lcom/miui/home/settings/preference/ListPreference;
 
     invoke-virtual {p1, p0}, Lcom/miui/home/settings/preference/ListPreference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    .line 127
+    .line 125
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mClassicSettings:Landroidx/preference/PreferenceCategory;
 
     iget-object p2, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mSwipeUpHomeSettingGlobal:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     invoke-virtual {p1, p2}, Landroidx/preference/PreferenceCategory;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 129
+    .line 127
     new-instance p1, Lcom/miui/home/settings/-$$Lambda$BaseAllAppsSettingsFragment$JF7DGhO-g7bEFZuOGh6avsz9giI;
 
     invoke-direct {p1, p0}, Lcom/miui/home/settings/-$$Lambda$BaseAllAppsSettingsFragment$JF7DGhO-g7bEFZuOGh6avsz9giI;-><init>(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)V
@@ -933,7 +933,7 @@
 
     goto :goto_4
 
-    .line 137
+    .line 135
     :cond_4
     invoke-static {}, Lcom/miui/home/launcher/search/SearchEdgeLayout;->showOldSlidingSetting()Z
 
@@ -941,12 +941,12 @@
 
     if-eqz p1, :cond_5
 
-    .line 138
+    .line 136
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mSwipeUpHomeSettingGlobal:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     invoke-virtual {p1, p0}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    .line 139
+    .line 137
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mSwipeUpHomeSettingGlobal:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     invoke-virtual {p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -961,7 +961,7 @@
 
     goto :goto_3
 
-    .line 141
+    .line 139
     :cond_5
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mClassicSettings:Landroidx/preference/PreferenceCategory;
 
@@ -969,7 +969,7 @@
 
     invoke-virtual {p1, p2}, Landroidx/preference/PreferenceCategory;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 143
+    .line 141
     :goto_3
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mClassicSettings:Landroidx/preference/PreferenceCategory;
 
@@ -977,7 +977,7 @@
 
     invoke-virtual {p1, p2}, Landroidx/preference/PreferenceCategory;->removePreference(Landroidx/preference/Preference;)Z
 
-    .line 145
+    .line 143
     :goto_4
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchSettingManager()Lcom/mi/globallauncher/branchInterface/IBranchSettingManager;
 
@@ -985,19 +985,19 @@
 
     invoke-interface {p1, p0}, Lcom/mi/globallauncher/branchInterface/IBranchSettingManager;->setBranchSettingCallBack(Lcom/mi/globallauncher/branchInterface/IBranchSettingCallBack;)V
 
-    .line 146
+    .line 144
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchSettingManager()Lcom/mi/globallauncher/branchInterface/IBranchSettingManager;
 
     move-result-object p1
 
     invoke-interface {p1}, Lcom/mi/globallauncher/branchInterface/IBranchSettingManager;->controlBranchSetting()V
 
-    .line 147
+    .line 145
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mRecommendApps:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     invoke-virtual {p1, p0}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    .line 149
+    .line 147
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mAppCategory:Lcom/miui/home/settings/preference/ValuePreference;
 
     new-instance p2, Landroid/content/Intent;
@@ -1008,7 +1008,7 @@
 
     invoke-virtual {p1, p2}, Lcom/miui/home/settings/preference/ValuePreference;->setIntent(Landroid/content/Intent;)V
 
-    .line 151
+    .line 149
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mDrawerBackground:Lcom/miui/home/settings/preference/ValuePreference;
 
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getAllAppsColorMode()Lcom/miui/home/launcher/allapps/AllAppsColorMode;
@@ -1025,7 +1025,7 @@
 
     invoke-virtual {p1, p2}, Lcom/miui/home/settings/preference/ValuePreference;->setValue(Ljava/lang/String;)V
 
-    .line 152
+    .line 150
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mDrawerBackground:Lcom/miui/home/settings/preference/ValuePreference;
 
     new-instance p2, Landroid/content/Intent;
@@ -1036,26 +1036,26 @@
 
     invoke-virtual {p1, p2}, Lcom/miui/home/settings/preference/ValuePreference;->setIntent(Landroid/content/Intent;)V
 
-    .line 153
+    .line 151
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mFastScrollerStyle:Lcom/miui/home/settings/preference/ListPreference;
 
     iget-object p2, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->entries:[Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Lcom/miui/home/settings/preference/ListPreference;->setEntries([Ljava/lang/CharSequence;)V
 
-    .line 154
+    .line 152
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mFastScrollerStyle:Lcom/miui/home/settings/preference/ListPreference;
 
     iget-object p2, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->entries:[Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Lcom/miui/home/settings/preference/ListPreference;->setEntryValues([Ljava/lang/CharSequence;)V
 
-    .line 155
+    .line 153
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mFastScrollerStyle:Lcom/miui/home/settings/preference/ListPreference;
 
     invoke-virtual {p1, p0}, Lcom/miui/home/settings/preference/ListPreference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
 
-    .line 156
+    .line 154
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mAutoAddNewAppShortcut:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     invoke-virtual {p1, p0}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroidx/preference/Preference$OnPreferenceChangeListener;)V
@@ -1066,10 +1066,10 @@
 .method public onDestroy()V
     .locals 1
 
-    .line 330
+    .line 328
     invoke-super {p0}, Lmiuix/preference/PreferenceFragment;->onDestroy()V
 
-    .line 331
+    .line 329
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->getBranchSettingManager()Lcom/mi/globallauncher/branchInterface/IBranchSettingManager;
 
     move-result-object v0
@@ -1082,10 +1082,10 @@
 .method public onDestroyView()V
     .locals 1
 
-    .line 182
+    .line 180
     invoke-super {p0}, Lmiuix/preference/PreferenceFragment;->onDestroyView()V
 
-    .line 183
+    .line 181
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0
@@ -1101,7 +1101,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 188
+    .line 186
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;->getKey()Ljava/lang/String;
 
     move-result-object v0
@@ -1114,7 +1114,7 @@
 
     if-nez v0, :cond_0
 
-    .line 189
+    .line 187
     invoke-virtual {p1}, Lcom/miui/home/launcher/common/messages/AllAppsSettingChangeMessage;->getKey()Ljava/lang/String;
 
     move-result-object p1
@@ -1127,7 +1127,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 190
+    .line 188
     :cond_0
     iget-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mDrawerBackground:Lcom/miui/home/settings/preference/ValuePreference;
 
@@ -1152,7 +1152,7 @@
 .method public onOptionsItemSelected(Landroid/view/MenuItem;)Z
     .locals 2
 
-    .line 211
+    .line 209
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
@@ -1161,14 +1161,14 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 212
+    .line 210
     invoke-virtual {p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 213
+    .line 211
     invoke-virtual {p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -1180,7 +1180,7 @@
 
     return p1
 
-    .line 217
+    .line 215
     :cond_1
     invoke-super {p0, p1}, Lmiuix/preference/PreferenceFragment;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
@@ -1192,10 +1192,10 @@
 .method public onPause()V
     .locals 1
 
-    .line 324
+    .line 322
     invoke-super {p0}, Lmiuix/preference/PreferenceFragment;->onPause()V
 
-    .line 325
+    .line 323
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mDesktopMode:Lcom/miui/home/settings/preference/DesktopModePreference;
 
     invoke-virtual {v0}, Lcom/miui/home/settings/preference/DesktopModePreference;->setDesktopMode()V
@@ -1206,14 +1206,14 @@
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 4
 
-    .line 222
+    .line 220
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mRecommendApps:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     const/4 v1, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 223
+    .line 221
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
 
     move-result-object p1
@@ -1228,7 +1228,7 @@
 
     goto/16 :goto_0
 
-    .line 224
+    .line 222
     :cond_0
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mFastScrollerStyle:Lcom/miui/home/settings/preference/ListPreference;
 
@@ -1236,7 +1236,7 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 225
+    .line 223
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
 
     move-result-object p1
@@ -1252,13 +1252,13 @@
 
     goto/16 :goto_0
 
-    .line 226
+    .line 224
     :cond_2
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mAutoAddNewAppShortcut:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     if-ne p1, v0, :cond_3
 
-    .line 227
+    .line 225
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
 
     move-result-object p1
@@ -1273,18 +1273,18 @@
 
     goto :goto_0
 
-    .line 228
+    .line 226
     :cond_3
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mLauncherSlideUp:Lcom/miui/home/settings/preference/ListPreference;
 
     if-ne p1, v0, :cond_5
 
-    .line 229
+    .line 227
     invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 230
+    .line 228
     iget-object p2, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mSlideUpContentMap:Ljava/util/Map;
 
     invoke-interface {p2, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1295,7 +1295,7 @@
 
     const-string v0, "content_center"
 
-    .line 231
+    .line 229
     invoke-static {p2, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1308,12 +1308,12 @@
 
     if-nez v0, :cond_4
 
-    .line 232
+    .line 230
     invoke-direct {p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->showInstallDialog()V
 
     goto :goto_0
 
-    .line 234
+    .line 232
     :cond_4
     invoke-virtual {p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->getContext()Landroid/content/Context;
 
@@ -1323,26 +1323,26 @@
 
     invoke-static {v0, v3, p2}, Lcom/miui/home/settings/LauncherGestureController;->putSystemString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 235
+    .line 233
     iget-object p2, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mLauncherSlideUp:Lcom/miui/home/settings/preference/ListPreference;
 
     invoke-virtual {p2, p1}, Lcom/miui/home/settings/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
-    .line 236
+    .line 234
     invoke-static {v2}, Lcom/miui/home/settings/LauncherGestureController;->putSlideUpAppInstalling(Z)V
 
-    .line 237
+    .line 235
     iput-object p1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->currSlidUpConfig:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 239
+    .line 237
     :cond_5
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mSwipeUpHomeSettingGlobal:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     if-ne p1, v0, :cond_6
 
-    .line 240
+    .line 238
     invoke-virtual {p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p1
@@ -1357,26 +1357,26 @@
 
     goto :goto_0
 
-    .line 241
+    .line 239
     :cond_6
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mBranchSetting:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     if-ne p1, v0, :cond_7
 
-    .line 242
+    .line 240
     check-cast p2, Ljava/lang/Boolean;
 
     invoke-direct {p0, p2}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->branchSettingChange(Ljava/lang/Boolean;)V
 
     goto :goto_0
 
-    .line 243
+    .line 241
     :cond_7
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mQuickSearchSetting:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     if-ne p1, v0, :cond_8
 
-    .line 244
+    .line 242
     invoke-static {}, Lcom/mi/globallauncher/manager/BranchInterface;->branchSearchIns()Lcom/mi/globallauncher/branchInterface/IBranchSearchManager;
 
     move-result-object p1
@@ -1397,10 +1397,10 @@
 .method public onResume()V
     .locals 2
 
-    .line 318
+    .line 316
     invoke-super {p0}, Lmiuix/preference/PreferenceFragment;->onResume()V
 
-    .line 319
+    .line 317
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mDesktopMode:Lcom/miui/home/settings/preference/DesktopModePreference;
 
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->isDrawerMode()Z
@@ -1415,10 +1415,10 @@
 .method public onStart()V
     .locals 3
 
-    .line 161
+    .line 159
     invoke-super {p0}, Lmiuix/preference/PreferenceFragment;->onStart()V
 
-    .line 162
+    .line 160
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mRecommendApps:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
@@ -1431,7 +1431,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/settings/preference/CheckBoxPreference;->setChecked(Z)V
 
-    .line 163
+    .line 161
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mFastScrollerStyle:Lcom/miui/home/settings/preference/ListPreference;
 
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
@@ -1462,7 +1462,7 @@
     :goto_0
     invoke-virtual {v0, v1}, Lcom/miui/home/settings/preference/ListPreference;->setValue(Ljava/lang/String;)V
 
-    .line 164
+    .line 162
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mAutoAddNewAppShortcut:Lcom/miui/home/settings/preference/CheckBoxPreference;
 
     invoke-static {}, Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;->getInstance()Lcom/miui/home/launcher/allapps/settings/AllAppsSettingHelper;
@@ -1481,10 +1481,10 @@
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
     .locals 0
 
-    .line 176
+    .line 174
     invoke-super {p0, p1, p2}, Lmiuix/preference/PreferenceFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    .line 177
+    .line 175
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object p1
@@ -1497,7 +1497,7 @@
 .method public removeBranchSetting()V
     .locals 2
 
-    .line 346
+    .line 344
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mDrawerSettings:Landroidx/preference/PreferenceCategory;
 
     iget-object v1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mBranchSetting:Lcom/miui/home/settings/preference/CheckBoxPreference;
@@ -1510,7 +1510,7 @@
 .method public removeQuickSetting()V
     .locals 2
 
-    .line 357
+    .line 355
     iget-object v0, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mDrawerSettings:Landroidx/preference/PreferenceCategory;
 
     iget-object v1, p0, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->mQuickSearchSetting:Lcom/miui/home/settings/preference/CheckBoxPreference;
@@ -1523,7 +1523,7 @@
 .method public setMiHomePrivacyDialogDismiss(Z)V
     .locals 0
 
-    .line 341
+    .line 339
     invoke-direct {p0, p1}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment;->updateBranchStateOnChanged(Z)V
 
     return-void

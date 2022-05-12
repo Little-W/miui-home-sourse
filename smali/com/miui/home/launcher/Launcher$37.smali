@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3905
+    .line 3902
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$37;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 3908
+    .line 3905
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$37;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/search/SearchEdgeLayout;
@@ -44,12 +44,12 @@
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/search/SearchEdgeLayout;->refreshSettings()V
 
-    .line 3909
+    .line 3906
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$37;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$4000(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 3910
+    .line 3907
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$37;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->addOrRemoveNewHome()V

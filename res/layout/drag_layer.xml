@@ -4,7 +4,7 @@
     <com.miui.home.launcher.search.SearchEdgeLayout android:id="@id/screen" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foregroundGravity="fill_horizontal|center|top">
         <com.miui.home.launcher.FitSystemWindowView android:id="@id/screen_content" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:foregroundGravity="fill_horizontal|center|top">
             <com.miui.home.launcher.Workspace android:id="@id/workspace" android:paddingTop="@dimen/status_bar_height" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-            <include android:id="@id/hotseats" layout="@layout/layout_hotseats" />
+            <include android:id="@id/hotseat" layout="@layout/layout_hotseats" />
         </com.miui.home.launcher.FitSystemWindowView>
         <include layout="@layout/folder_cling" />
         <com.miui.home.launcher.FitSystemWindowView android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">

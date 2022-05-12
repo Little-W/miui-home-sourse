@@ -247,7 +247,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
-    const p1, 0x7f0a01f6
+    const p1, 0x7f0a01f8
 
     .line 191
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;

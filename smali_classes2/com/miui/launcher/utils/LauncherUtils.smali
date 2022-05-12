@@ -22,11 +22,11 @@
 
 .field private static sIsAutoFillEmpty:Z = true
 
-.field private static sIsDoubleTapLock:Z
+.field private static sIsDoubleTapLock:Z = false
 
-.field private static sIsNoWordModel:Z
+.field private static sIsNoWordModel:Z = false
 
-.field private static sIsScreenCellsLocked:Z
+.field private static sIsScreenCellsLocked:Z = false
 
 
 # direct methods

@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">"Glissez vers le haut pour ouvrir Tiroir application. Changez pour le mode écran d'accueil normal et réessayez."</string>
     <string name="all_apps_suggestions">"Suggestions d'applications"</string>
     <string name="am">Matin</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Déplacé à la position %1$d dans le dossier</string>
     <string name="announce_for_checked">%1$s, vérifié</string>
     <string name="announce_for_choose_default_screen">"Définir l'écran %1$d comme l'écran d'accueil par défaut"</string>

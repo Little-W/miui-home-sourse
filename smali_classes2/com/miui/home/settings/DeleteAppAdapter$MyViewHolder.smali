@@ -39,14 +39,14 @@
 
     invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->checkParameterIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 139
+    .line 132
     iput-object p1, p0, Lcom/miui/home/settings/DeleteAppAdapter$MyViewHolder;->this$0:Lcom/miui/home/settings/DeleteAppAdapter;
 
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
     const p1, 0x7f0a0061
 
-    .line 140
+    .line 133
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -61,7 +61,7 @@
 
     const p1, 0x7f0a0062
 
-    .line 141
+    .line 134
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -74,9 +74,9 @@
 
     iput-object p1, p0, Lcom/miui/home/settings/DeleteAppAdapter$MyViewHolder;->name:Landroid/widget/TextView;
 
-    const p1, 0x7f0a02b4
+    const p1, 0x7f0a02b6
 
-    .line 142
+    .line 135
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
@@ -97,7 +97,7 @@
 .method public final getIcon()Landroid/widget/ImageView;
     .locals 1
 
-    .line 140
+    .line 133
     iget-object v0, p0, Lcom/miui/home/settings/DeleteAppAdapter$MyViewHolder;->icon:Landroid/widget/ImageView;
 
     return-object v0
@@ -106,7 +106,7 @@
 .method public final getInstallBut()Landroid/widget/TextView;
     .locals 1
 
-    .line 142
+    .line 135
     iget-object v0, p0, Lcom/miui/home/settings/DeleteAppAdapter$MyViewHolder;->installBut:Landroid/widget/TextView;
 
     return-object v0
@@ -115,7 +115,7 @@
 .method public final getName()Landroid/widget/TextView;
     .locals 1
 
-    .line 141
+    .line 134
     iget-object v0, p0, Lcom/miui/home/settings/DeleteAppAdapter$MyViewHolder;->name:Landroid/widget/TextView;
 
     return-object v0

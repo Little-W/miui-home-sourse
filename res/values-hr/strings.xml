@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Pomicanje prema gore rezervirano je za otvaranje ladice aplikacija. Prebacite se na uobičajeni način početnog zaslona i pokušajte ponovo.</string>
     <string name="all_apps_suggestions">Prijedlozi aplikacija</string>
     <string name="am">prijep.</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Prebačeno na položaj %1$d u mapi</string>
     <string name="announce_for_checked">%1$s, provjereno</string>
     <string name="announce_for_choose_default_screen">Postavi zaslon %1$d kao zadani Početni zaslon</string>

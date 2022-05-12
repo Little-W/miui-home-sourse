@@ -273,7 +273,7 @@
     .line 52
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
-    const v0, 0x7f0a02ef
+    const v0, 0x7f0a02f1
 
     .line 53
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->findViewById(I)Landroid/view/View;
@@ -282,7 +282,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->mDivider:Landroid/view/View;
 
-    const v0, 0x7f0a02f0
+    const v0, 0x7f0a02f2
 
     .line 54
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/allapps/WorkFooterContainer;->findViewById(I)Landroid/view/View;

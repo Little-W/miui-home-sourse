@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Deslizar hacia arriba está reservado para abrir el Cajón de aplicaciones. Cambia al Modo pantalla de inicio normal y vuelve a intentarlo.</string>
     <string name="all_apps_suggestions">Sugerencias de aplicaciones</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation rate</string>
+    <string name="animation_rate_title">Animation speed</string>
     <string name="announce_for_app_move_in_folder">Movido a la posición %1$d en la carpeta</string>
     <string name="announce_for_checked">%1$s, verificado</string>
     <string name="announce_for_choose_default_screen">Establecer la pantalla %1$d como pantalla de inicio por defecto</string>

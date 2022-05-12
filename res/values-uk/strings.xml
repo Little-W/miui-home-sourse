@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Рух вгору призначений для відкриття Помічника програм. Перейдіть на звичайний режим Робочого столу та повторіть спробу.</string>
     <string name="all_apps_suggestions">Пропозиції програми</string>
     <string name="am">ДО</string>
-    <string name="animation_rate_title">Частота анімації</string>
+    <string name="animation_rate_title">Швидкість анімації</string>
     <string name="announce_for_app_move_in_folder">Переміщено на позицію %1$d у папці</string>
     <string name="announce_for_checked">%1$s, вибрано</string>
     <string name="announce_for_choose_default_screen">Встановити екран %1$d як екран за замовчуванням</string>

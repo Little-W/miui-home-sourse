@@ -91,7 +91,7 @@
     .line 48
     iget-object p1, p0, Lcom/miui/home/launcher/UninstallDialogWrapper;->mDropTargetBar:Lcom/miui/home/launcher/DropTargetBar;
 
-    const v0, 0x7f0a02c9
+    const v0, 0x7f0a02cb
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DropTargetBar;->findViewById(I)Landroid/view/View;
 
