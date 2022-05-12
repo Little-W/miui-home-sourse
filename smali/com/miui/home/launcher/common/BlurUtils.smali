@@ -8,13 +8,7 @@
 
 .field public static LONG_BLUR_ANIM_DURATION:J = 0x15eL
 
-.field public static RECENTS_BLUR_TYPE_COMPLETE:I = 0x2
-
-.field public static RECENTS_BLUR_TYPE_NO:I = 0x0
-
-.field public static RECENTS_BLUR_TYPE_SIMPLE:I = 0x1
-
-.field public static USE_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
+.field public static NOT_SUPPORT_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/ArraySet<",
@@ -23,6 +17,12 @@
         }
     .end annotation
 .end field
+
+.field public static RECENTS_BLUR_TYPE_COMPLETE:I = 0x2
+
+.field public static RECENTS_BLUR_TYPE_NO:I = 0x0
+
+.field public static RECENTS_BLUR_TYPE_SIMPLE:I = 0x1
 
 .field public static USE_COMPLETE_BLUR_DEVICE_LIST:Landroid/util/ArraySet;
     .annotation system Ldalvik/annotation/Signature;
@@ -79,140 +79,126 @@
 
     sput-object v0, Lcom/miui/home/launcher/common/BlurUtils;->sWindowBlurRatio:Ljava/util/WeakHashMap;
 
-    .line 301
+    .line 302
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
-    sput-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
-
-    .line 304
-    sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
-
-    const-string v1, "cmi"
-
-    invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
+    sput-object v0, Lcom/miui/home/launcher/common/BlurUtils;->NOT_SUPPORT_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
 
     .line 305
-    sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
+    sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->NOT_SUPPORT_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
 
-    const-string v1, "cas"
+    const-string v1, "c77c94c20edf86a105433f4bc671d348"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     .line 306
-    sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
+    sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->NOT_SUPPORT_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
 
-    const-string v1, "umi"
+    const-string v1, "ee85a4dafbc7b06dc199d81b9719bb6d"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     .line 307
-    sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
+    sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->NOT_SUPPORT_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
 
-    const-string v1, "lmi"
+    const-string v1, "e9c89c65810858c3c7fd7b34d0aa3e86"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     .line 308
-    sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
+    sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->NOT_SUPPORT_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
 
-    const-string v1, "lmipro"
+    const-string v1, "aa622d1829f3f68127c00e2df48320b5"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
     .line 309
-    sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
+    sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->NOT_SUPPORT_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
 
-    const-string v1, "star"
-
-    invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
-
-    .line 310
-    sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
-
-    const-string v1, "venus"
+    const-string v1, "1dc47431416c67a3a53be5779aa31308"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 313
+    .line 312
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_DEVICE_LIST:Landroid/util/ArraySet;
 
-    .line 316
+    .line 315
     sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_DEVICE_LIST:Landroid/util/ArraySet;
 
     const-string v1, "cmi"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 317
+    .line 316
     sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_DEVICE_LIST:Landroid/util/ArraySet;
 
     const-string v1, "cas"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 318
+    .line 317
     sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_DEVICE_LIST:Landroid/util/ArraySet;
 
     const-string v1, "umi"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 319
+    .line 318
     sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_DEVICE_LIST:Landroid/util/ArraySet;
 
     const-string v1, "lmi"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 320
+    .line 319
     sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_DEVICE_LIST:Landroid/util/ArraySet;
 
     const-string v1, "lmipro"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 321
+    .line 320
     sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_DEVICE_LIST:Landroid/util/ArraySet;
 
     const-string v1, "cepheus"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 322
+    .line 321
     sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_DEVICE_LIST:Landroid/util/ArraySet;
 
     const-string v1, "crux"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 323
+    .line 322
     sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_DEVICE_LIST:Landroid/util/ArraySet;
 
     const-string v1, "raphael"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 326
+    .line 325
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_ON_DEV_DEVICE_LIST:Landroid/util/ArraySet;
 
-    .line 329
+    .line 328
     sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_ON_DEV_DEVICE_LIST:Landroid/util/ArraySet;
 
     const-string v1, "venus"
 
     invoke-virtual {v0, v1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 330
+    .line 329
     sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_ON_DEV_DEVICE_LIST:Landroid/util/ArraySet;
 
     const-string v1, "apollo"
@@ -832,19 +818,19 @@
 .method private static getBlurType()I
     .locals 2
 
-    .line 339
+    .line 338
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isInMultiWindowMode()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 340
+    .line 339
     sget v0, Lcom/miui/home/launcher/common/BlurUtils;->RECENTS_BLUR_TYPE_NO:I
 
     return v0
 
-    .line 342
+    .line 341
     :cond_0
     sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_DEVICE_LIST:Landroid/util/ArraySet;
 
@@ -873,25 +859,25 @@
 
     if-eqz v0, :cond_3
 
-    .line 345
+    .line 344
     invoke-static {}, Lcom/android/systemui/shared/recents/utilities/Utilities;->atLeastAndroidS()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 346
+    .line 345
     sget v0, Lcom/miui/home/launcher/common/BlurUtils;->RECENTS_BLUR_TYPE_SIMPLE:I
 
     return v0
 
-    .line 348
+    .line 347
     :cond_2
     sget v0, Lcom/miui/home/launcher/common/BlurUtils;->RECENTS_BLUR_TYPE_COMPLETE:I
 
     return v0
 
-    .line 350
+    .line 349
     :cond_3
     invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isUseSimpleAnim()Z
 
@@ -899,12 +885,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 351
+    .line 350
     sget v0, Lcom/miui/home/launcher/common/BlurUtils;->RECENTS_BLUR_TYPE_NO:I
 
     return v0
 
-    .line 353
+    .line 352
     :cond_4
     sget v0, Lcom/miui/home/launcher/common/BlurUtils;->RECENTS_BLUR_TYPE_SIMPLE:I
 
@@ -945,21 +931,21 @@
 .method private static getLauncherBlur(Lcom/miui/home/launcher/Launcher;)F
     .locals 1
 
-    .line 358
+    .line 357
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->isMinusUseBlurAnimation()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 359
+    .line 358
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->getMinusBlurRatio()F
 
     move-result p0
 
     return p0
 
-    .line 361
+    .line 360
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/Launcher;->isShouldBlur()Z
 
@@ -1039,7 +1025,7 @@
 .method private static isUseCompleteBlurOnDev()Z
     .locals 2
 
-    .line 334
+    .line 333
     sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->USE_COMPLETE_BLUR_ON_DEV_DEVICE_LIST:Landroid/util/ArraySet;
 
     sget-object v1, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
@@ -1099,6 +1085,46 @@
     sget v1, Lcom/miui/home/launcher/common/BlurUtils;->RECENTS_BLUR_TYPE_NO:I
 
     if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public static isUserBlurWhenOpenFolder()Z
+    .locals 2
+
+    .line 298
+    invoke-static {}, Lcom/miui/home/launcher/common/DeviceLevelUtils;->isHighLevelDeviceFromFolme()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/miui/home/launcher/common/BlurUtils;->NOT_SUPPORT_BLUR_WHEN_OPEN_FOLDER_DEVICE_LIST:Landroid/util/ArraySet;
+
+    sget-object v1, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
+
+    .line 299
+    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/miui/home/launcher/common/Utilities;->getMd5([B)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/util/ArraySet;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     const/4 v0, 0x1
 

@@ -124,12 +124,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0801c5
+    const v0, 0x7f0801cb
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0801c4
+    const v0, 0x7f0801ca
 
     :goto_0
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -171,12 +171,12 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f100465
+    const v0, 0x7f100468
 
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f100466
+    const v0, 0x7f100469
 
     .line 69
     :goto_0

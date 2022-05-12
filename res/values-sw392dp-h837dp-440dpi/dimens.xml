@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="all_apps_scroller_text_size">8.699982sp</dimen>
     <dimen name="edit_mode_application_checkbox_margin_end">0.0dip</dimen>
     <dimen name="edit_mode_application_checkbox_margin_top">0.0dip</dimen>
     <dimen name="edit_mode_thumbnail_home_icon_radius">18.179993dip</dimen>
     <dimen name="edit_mode_thumbnail_item_pk_add_size">36.359985dip</dimen>
     <dimen name="edit_mode_thumbnail_item_size">53.359985dip</dimen>
     <dimen name="edit_mode_thumbnail_widget_pick_bg_width">220.72dip</dimen>
+    <dimen name="editing_entry_thumbnail_view_margin_left_right">0.0dip</dimen>
+    <dimen name="fastscroll_letter_side_padding_bottom">10.899994dip</dimen>
+    <dimen name="fastscroll_letter_side_padding_top">10.899994dip</dimen>
+    <dimen name="fastscroll_popup_margin">20.0dip</dimen>
+    <dimen name="fastscroll_popup_margin_top">-10.899994dip</dimen>
+    <dimen name="fastscroll_popup_padding_right">18.0dip</dimen>
+    <dimen name="fastscroll_popup_text_size">29.099976sp</dimen>
     <dimen name="folder_content_margin_top">24.0dip</dimen>
     <dimen name="folder_content_padding_left">0.0dip</dimen>
+    <dimen name="folder_content_padding_right">0.0dip</dimen>
     <dimen name="folder_content_width_noword">280.6953dip</dimen>
     <dimen name="folder_edit_text_margin_left">18.0dip</dimen>
     <dimen name="folder_edit_text_text_size_noword">35.599976dip</dimen>

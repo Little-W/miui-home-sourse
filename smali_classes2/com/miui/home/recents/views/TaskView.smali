@@ -653,7 +653,7 @@
     .line 348
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskView;->mWorldCirculateImageView:Landroid/widget/ImageView;
 
-    const v2, 0x7f0805ca
+    const v2, 0x7f0805d0
 
     invoke-virtual {p2, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -665,7 +665,7 @@
 
     move-result-object v2
 
-    const v4, 0x7f10037c
+    const v4, 0x7f10037f
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -705,7 +705,7 @@
     .line 352
     iget-object p2, p0, Lcom/miui/home/recents/views/TaskView;->mWorldCirculateImageView:Landroid/widget/ImageView;
 
-    const v2, 0x7f0805c9
+    const v2, 0x7f0805cf
 
     invoke-virtual {p2, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -717,7 +717,7 @@
 
     move-result-object v2
 
-    const v4, 0x7f10037a
+    const v4, 0x7f10037d
 
     invoke-virtual {v2, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

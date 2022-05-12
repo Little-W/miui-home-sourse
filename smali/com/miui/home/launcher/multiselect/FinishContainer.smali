@@ -55,7 +55,7 @@
     .line 25
     invoke-super {p0}, Lcom/miui/home/launcher/multiselect/TopMenuContainer;->onFinishInflate()V
 
-    const v0, 0x7f0801f5
+    const v0, 0x7f0801fb
 
     .line 27
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/multiselect/FinishContainer;->setImageResource(I)V

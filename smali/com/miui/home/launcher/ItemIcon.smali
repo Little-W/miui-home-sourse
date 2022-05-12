@@ -373,7 +373,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f070162
+    const v2, 0x7f07016c
 
     .line 143
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -501,7 +501,7 @@
 
     sget-object p3, Lcom/miui/home/launcher/ItemIcon;->sTmpRect:Landroid/graphics/Rect;
 
-    const v4, 0x7f0600fe
+    const v4, 0x7f060100
 
     .line 157
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getColor(I)I

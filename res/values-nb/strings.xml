@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Sveiping opp er reservert for åpning av app-skuffen. Bytt til vanlig startskjermmodus og prøv igjen.</string>
     <string name="all_apps_suggestions">App-forslag</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animasjonshastighet</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">Flyttet til posisjon %1$d i mappen</string>
     <string name="announce_for_checked">%1$s, merket av</string>
     <string name="announce_for_choose_default_screen">Sett skjerm %1$d som standard startskjerm</string>

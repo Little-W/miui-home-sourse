@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 1914
+    .line 1915
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$8;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 1917
+    .line 1918
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -53,7 +53,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1918
+    .line 1919
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0

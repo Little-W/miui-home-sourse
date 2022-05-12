@@ -3,6 +3,6 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <include android:id="@id/all_apps_category_container" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/all_apps_search_bar_holder" layout="@layout/all_apps_category_container" />
     <include android:id="@id/all_apps_search_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/all_apps_search_container" />
-    <View android:layout_gravity="top" android:id="@id/all_apps_search_bar_divider" android:background="@color/allapps_divider_color_light" android:layout_width="fill_parent" android:layout_height="0.39999998dip" android:layout_above="@id/all_apps_search_bar_holder" />
+    <View android:layout_gravity="top" android:id="@id/all_apps_search_bar_divider" android:background="@color/allapps_divider_color_light" android:layout_width="fill_parent" android:layout_height="@dimen/all_apps_search_bar_divider_height" android:layout_above="@id/all_apps_search_bar_holder" />
     <com.miui.home.launcher.allapps.AllAppsSearchBarHolderView android:id="@id/all_apps_search_bar_holder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
 </com.miui.home.launcher.allapps.AllAppsContainerView>

@@ -3,6 +3,8 @@
     <dimen name="config_icon_height">58.0dip</dimen>
     <dimen name="config_icon_width">58.0dip</dimen>
     <dimen name="editing_panel_height">120.0dip</dimen>
+    <dimen name="hotseats_height">80.0dip</dimen>
+    <dimen name="hotseats_height_navigation">70.0dip</dimen>
     <dimen name="hotseats_padding_side">8.0dip</dimen>
     <dimen name="workspace_cell_padding_side">8.0dip</dimen>
     <dimen name="workspace_cell_padding_top">4.0dip</dimen>

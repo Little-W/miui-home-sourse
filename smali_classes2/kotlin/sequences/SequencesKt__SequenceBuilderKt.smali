@@ -51,3 +51,39 @@
 
     return-object v0
 .end method
+
+.method public static final sequence(Lkotlin/jvm/functions/Function2;)Lkotlin/sequences/Sequence;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Lkotlin/sequences/SequenceScope<",
+            "-TT;>;-",
+            "Lkotlin/coroutines/Continuation<",
+            "-",
+            "Lkotlin/Unit;",
+            ">;+",
+            "Ljava/lang/Object;",
+            ">;)",
+            "Lkotlin/sequences/Sequence<",
+            "TT;>;"
+        }
+    .end annotation
+
+    const-string v0, "block"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 25
+    new-instance v0, Lkotlin/sequences/SequencesKt__SequenceBuilderKt$sequence$$inlined$Sequence$1;
+
+    invoke-direct {v0, p0}, Lkotlin/sequences/SequencesKt__SequenceBuilderKt$sequence$$inlined$Sequence$1;-><init>(Lkotlin/jvm/functions/Function2;)V
+
+    check-cast v0, Lkotlin/sequences/Sequence;
+
+    return-object v0
+.end method

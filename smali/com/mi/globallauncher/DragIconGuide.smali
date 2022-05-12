@@ -112,7 +112,7 @@
 
     move-result-object p1
 
-    const v2, 0x7f0603e5
+    const v2, 0x7f0603e7
 
     .line 88
     invoke-virtual {p1, v2}, Lcom/mi/globallauncher/view/TapTarget;->targetCircleColor(I)Lcom/mi/globallauncher/view/TapTarget;

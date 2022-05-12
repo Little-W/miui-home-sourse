@@ -10,6 +10,7 @@
     <dimen name="edit_mode_application_checkbox_margin_end">0.0dip</dimen>
     <dimen name="edit_mode_application_checkbox_margin_top">0.0dip</dimen>
     <dimen name="edit_mode_thumbnail_home_icon_radius">15.269989dip</dimen>
+    <dimen name="fastscroll_popup_size">61.799988dip</dimen>
     <dimen name="fold_edit_cellscreen_translationx_distance">16.449982dip</dimen>
     <dimen name="folder_content_margin_top">68.0dip</dimen>
     <dimen name="folder_content_padding_left">53.0dip</dimen>

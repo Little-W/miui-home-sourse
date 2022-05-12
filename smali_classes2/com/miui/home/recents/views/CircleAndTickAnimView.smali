@@ -115,7 +115,7 @@
     .line 59
     invoke-virtual {p0}, Lcom/miui/home/recents/views/CircleAndTickAnimView;->stopAnimator()V
 
-    const p1, 0x7f080530
+    const p1, 0x7f080536
 
     const p2, 0x7f0800e1
 
@@ -543,7 +543,7 @@
     .line 115
     iget-object v0, p0, Lcom/miui/home/recents/views/CircleAndTickAnimView;->mTickPaint:Landroid/graphics/Paint;
 
-    const v1, 0x7f060372
+    const v1, 0x7f060374
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getColor(I)I
 

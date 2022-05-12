@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 9548
+    .line 9563
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$WidgetSizeOptionUpdateHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/Launcher$1;)V
     .locals 0
 
-    .line 9548
+    .line 9563
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Launcher$WidgetSizeOptionUpdateHandler;-><init>(Lcom/miui/home/launcher/Launcher;)V
 
     return-void
@@ -42,7 +42,7 @@
 .method public static synthetic lambda$updateWidgetsSizeOption$0(Lcom/miui/home/launcher/Launcher$WidgetSizeOptionUpdateHandler;[Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
     .locals 0
 
-    .line 9568
+    .line 9583
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Launcher$WidgetSizeOptionUpdateHandler;->updateWidgetsSizeOption([Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
 
     return-void
@@ -51,7 +51,7 @@
 .method private updateWidgetsSizeOption()V
     .locals 5
 
-    .line 9565
+    .line 9580
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$WidgetSizeOptionUpdateHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$10200(Lcom/miui/home/launcher/Launcher;)Z
@@ -60,7 +60,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 9566
+    .line 9581
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$WidgetSizeOptionUpdateHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$10300(Lcom/miui/home/launcher/Launcher;)Ljava/util/Set;
@@ -73,7 +73,7 @@
 
     new-array v0, v0, [Lcom/miui/home/launcher/LauncherAppWidgetInfo;
 
-    .line 9567
+    .line 9582
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$WidgetSizeOptionUpdateHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v1}, Lcom/miui/home/launcher/Launcher;->access$10300(Lcom/miui/home/launcher/Launcher;)Ljava/util/Set;
@@ -82,14 +82,14 @@
 
     invoke-interface {v1, v0}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 9568
+    .line 9583
     new-instance v1, Lcom/miui/home/launcher/-$$Lambda$Launcher$WidgetSizeOptionUpdateHandler$XT_Ehf380je86uyTZG6snDo5a1w;
 
     invoke-direct {v1, p0, v0}, Lcom/miui/home/launcher/-$$Lambda$Launcher$WidgetSizeOptionUpdateHandler$XT_Ehf380je86uyTZG6snDo5a1w;-><init>(Lcom/miui/home/launcher/Launcher$WidgetSizeOptionUpdateHandler;[Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
 
     invoke-static {v1}, Lcom/miui/home/launcher/common/BackgroundThread;->post(Ljava/lang/Runnable;)V
 
-    .line 9570
+    .line 9585
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -99,7 +99,7 @@
 
     aget-object v3, v0, v2
 
-    .line 9571
+    .line 9586
     iget-object v4, v3, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->hostView:Lcom/miui/home/launcher/LauncherWidgetView;
 
     if-eqz v4, :cond_0
@@ -112,7 +112,7 @@
 
     if-eqz v4, :cond_0
 
-    .line 9572
+    .line 9587
     iget-object v3, v3, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->hostView:Lcom/miui/home/launcher/LauncherWidgetView;
 
     invoke-virtual {v3}, Lcom/miui/home/launcher/LauncherWidgetView;->getHostView()Landroid/appwidget/AppWidgetHostView;
@@ -126,7 +126,7 @@
 
     goto :goto_0
 
-    .line 9576
+    .line 9591
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$WidgetSizeOptionUpdateHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -152,12 +152,12 @@
 
     check-cast v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;
 
-    .line 9577
+    .line 9592
     iget-object v2, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->hostView:Lcom/miui/home/launcher/maml/MaMlWidgetView;
 
     if-eqz v2, :cond_2
 
-    .line 9578
+    .line 9593
     iget-object v1, v1, Lcom/miui/home/launcher/maml/MaMlWidgetInfo;->hostView:Lcom/miui/home/launcher/maml/MaMlWidgetView;
 
     const/4 v2, 0x1
@@ -173,7 +173,7 @@
 .method private updateWidgetsSizeOption([Lcom/miui/home/launcher/LauncherAppWidgetInfo;)V
     .locals 6
 
-    .line 9585
+    .line 9600
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -183,14 +183,14 @@
 
     aget-object v2, p1, v1
 
-    .line 9586
+    .line 9601
     iget v3, v2, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->status:I
 
     const/4 v4, 0x1
 
     if-ne v3, v4, :cond_0
 
-    .line 9587
+    .line 9602
     iget-object v3, v2, Lcom/miui/home/launcher/LauncherAppWidgetInfo;->hostView:Lcom/miui/home/launcher/LauncherWidgetView;
 
     iget-object v4, p0, Lcom/miui/home/launcher/Launcher$WidgetSizeOptionUpdateHandler;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -218,7 +218,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 9551
+    .line 9566
     invoke-direct {p0}, Lcom/miui/home/launcher/Launcher$WidgetSizeOptionUpdateHandler;->updateWidgetsSizeOption()V
 
     return-void
@@ -230,7 +230,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 9561
+    .line 9576
     invoke-direct {p0}, Lcom/miui/home/launcher/Launcher$WidgetSizeOptionUpdateHandler;->updateWidgetsSizeOption()V
 
     return-void
@@ -242,7 +242,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 9556
+    .line 9571
     invoke-direct {p0}, Lcom/miui/home/launcher/Launcher$WidgetSizeOptionUpdateHandler;->updateWidgetsSizeOption()V
 
     return-void

@@ -49,7 +49,7 @@
     .line 39
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 183
+    .line 187
     new-instance p1, Lcom/miui/home/launcher/view/-$$Lambda$BaseRecyclerViewFastScroller$xH62CHtR01IgpsErjMjQMGnAsZE;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/view/-$$Lambda$BaseRecyclerViewFastScroller$xH62CHtR01IgpsErjMjQMGnAsZE;-><init>(Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;)V
@@ -65,7 +65,7 @@
     .line 43
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 183
+    .line 187
     new-instance p1, Lcom/miui/home/launcher/view/-$$Lambda$BaseRecyclerViewFastScroller$xH62CHtR01IgpsErjMjQMGnAsZE;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/view/-$$Lambda$BaseRecyclerViewFastScroller$xH62CHtR01IgpsErjMjQMGnAsZE;-><init>(Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;)V
@@ -81,7 +81,7 @@
     .line 47
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 183
+    .line 187
     new-instance p1, Lcom/miui/home/launcher/view/-$$Lambda$BaseRecyclerViewFastScroller$xH62CHtR01IgpsErjMjQMGnAsZE;
 
     invoke-direct {p1, p0}, Lcom/miui/home/launcher/view/-$$Lambda$BaseRecyclerViewFastScroller$xH62CHtR01IgpsErjMjQMGnAsZE;-><init>(Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;)V
@@ -103,24 +103,24 @@
 .method private dragEnd()V
     .locals 2
 
-    .line 186
+    .line 190
     iget-boolean v0, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mIsDragging:Z
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 187
+    .line 191
     iput-boolean v0, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mIsDragging:Z
 
-    .line 188
+    .line 192
     invoke-virtual {p0}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->getRecyclerView()Lcom/miui/home/launcher/BaseRecyclerView;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lcom/miui/home/launcher/BaseRecyclerView;->onFastScrollCompleted()V
 
-    .line 189
+    .line 193
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->animatePopupVisibility(Z)V
 
     :cond_0
@@ -213,7 +213,7 @@
 .method public getThumbOffsetY()I
     .locals 1
 
-    .line 102
+    .line 106
     iget v0, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mThumbOffsetY:I
 
     return v0
@@ -222,7 +222,7 @@
 .method public handleTouchEvent(Landroid/view/MotionEvent;Landroid/graphics/Point;)Z
     .locals 4
 
-    .line 149
+    .line 153
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -233,7 +233,7 @@
 
     sub-int/2addr v0, v1
 
-    .line 150
+    .line 154
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
@@ -244,7 +244,7 @@
 
     sub-int/2addr v1, p2
 
-    .line 151
+    .line 155
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
@@ -253,18 +253,18 @@
 
     goto :goto_0
 
-    .line 165
+    .line 169
     :pswitch_0
     iget-boolean p1, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mIsDragging:Z
 
     if-eqz p1, :cond_2
 
-    .line 166
+    .line 170
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->updateFastScrollSectionNameAndThumbOffset(I)V
 
     goto :goto_0
 
-    .line 171
+    .line 175
     :pswitch_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -280,7 +280,7 @@
 
     if-gez p1, :cond_0
 
-    .line 172
+    .line 176
     iget-object p1, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mDragEndRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v0, 0x3e8
@@ -289,34 +289,34 @@
 
     const-string p1, "click"
 
-    .line 173
+    .line 177
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackAllAppsIndex(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 175
+    .line 179
     :cond_0
     invoke-direct {p0}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->dragEnd()V
 
     const-string p1, "slide"
 
-    .line 176
+    .line 180
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackAllAppsIndex(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 153
+    .line 157
     :pswitch_2
     iget-boolean p1, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mIsDragging:Z
 
     if-eqz p1, :cond_1
 
-    .line 154
+    .line 158
     iget-object p1, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mDragEndRunnable:Ljava/lang/Runnable;
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 156
+    .line 160
     :cond_1
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->isNearScrollBar(II)Z
 
@@ -326,26 +326,26 @@
 
     const/4 p1, 0x1
 
-    .line 157
+    .line 161
     iput-boolean p1, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mIsDragging:Z
 
-    .line 158
+    .line 162
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->setThumbDetached(Z)V
 
-    .line 159
+    .line 163
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mStartDraggingTime:J
 
-    .line 160
+    .line 164
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->animatePopupVisibility(Z)V
 
-    .line 161
+    .line 165
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->updateFastScrollSectionNameAndThumbOffset(I)V
 
-    .line 180
+    .line 184
     :cond_2
     :goto_0
     iget-boolean p1, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mIsDragging:Z
@@ -374,7 +374,7 @@
 .method public isDraggingThumb()Z
     .locals 1
 
-    .line 196
+    .line 200
     iget-boolean v0, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mIsDragging:Z
 
     return v0
@@ -383,7 +383,7 @@
 .method public isHitInParent(Landroid/view/ViewGroup;FFLandroid/graphics/Point;)Z
     .locals 5
 
-    .line 118
+    .line 122
     invoke-virtual {p0}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->getThumbOffsetY()I
 
     move-result v0
@@ -394,18 +394,18 @@
 
     return p1
 
-    .line 121
+    .line 125
     :cond_0
     sget-object v0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->sTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 122
+    .line 126
     sget-object v0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->sTempRect:Landroid/graphics/Rect;
 
     invoke-virtual {p1, p0, v0}, Landroid/view/ViewGroup;->offsetDescendantRectToMyCoords(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 123
+    .line 127
     sget-object p1, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->sTempRect:Landroid/graphics/Rect;
 
     iget v0, p1, Landroid/graphics/Rect;->left:I
@@ -438,7 +438,7 @@
 
     if-eqz p4, :cond_1
 
-    .line 125
+    .line 129
     sget-object p1, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->sTempRect:Landroid/graphics/Rect;
 
     iget p1, p1, Landroid/graphics/Rect;->left:I
@@ -449,7 +449,7 @@
 
     invoke-virtual {p4, p1, v0}, Landroid/graphics/Point;->set(II)V
 
-    .line 127
+    .line 131
     :cond_1
     sget-object p1, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->sTempRect:Landroid/graphics/Rect;
 
@@ -469,7 +469,7 @@
 
     if-ltz p1, :cond_0
 
-    .line 134
+    .line 138
     invoke-virtual {p0}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->getWidth()I
 
     move-result v0
@@ -498,7 +498,7 @@
 .method public isThumbDetached()Z
     .locals 1
 
-    .line 114
+    .line 118
     iget-boolean v0, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mIsThumbDetached:Z
 
     return v0
@@ -515,8 +515,27 @@
 
     const/4 v0, 0x0
 
-    .line 106
+    .line 110
     iput-boolean v0, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mIsThumbDetached:Z
+
+    return-void
+.end method
+
+.method protected setPopupBackground(Lcom/miui/home/launcher/allapps/AllAppsColorMode;I)V
+    .locals 2
+
+    .line 86
+    iget-object v0, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mPopupView:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->getFastScrollerPopupDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -594,7 +613,7 @@
 .method public setThumbDetached(Z)V
     .locals 0
 
-    .line 110
+    .line 114
     iput-boolean p1, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mIsThumbDetached:Z
 
     return-void
@@ -603,18 +622,18 @@
 .method public setThumbOffsetY(I)V
     .locals 1
 
-    .line 94
+    .line 98
     iget v0, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mThumbOffsetY:I
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 97
+    .line 101
     :cond_0
     iput p1, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mThumbOffsetY:I
 
-    .line 98
+    .line 102
     invoke-virtual {p0}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->invalidate()V
 
     return-void
@@ -626,7 +645,7 @@
 .method protected updatePopupY(I)V
     .locals 2
 
-    .line 86
+    .line 90
     iget-object v0, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mPopupView:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getHeight()I
@@ -637,7 +656,7 @@
 
     int-to-float p1, p1
 
-    .line 87
+    .line 91
     invoke-virtual {p0}, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->getRecyclerView()Lcom/miui/home/launcher/BaseRecyclerView;
 
     move-result-object v0
@@ -672,7 +691,7 @@
 
     move-result p1
 
-    .line 88
+    .line 92
     iget-object v0, p0, Lcom/miui/home/launcher/view/BaseRecyclerViewFastScroller;->mPopupView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTranslationY(F)V

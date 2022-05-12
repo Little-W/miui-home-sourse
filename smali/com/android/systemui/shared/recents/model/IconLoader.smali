@@ -39,6 +39,8 @@
     .end annotation
 .end field
 
+.field private mMetrics:Landroid/util/DisplayMetrics;
+
 .field mPm:Landroid/content/pm/PackageManager;
 
 
@@ -46,7 +48,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 62
+    .line 66
     invoke-static {}, Lcom/android/systemui/shared/recents/model/IconLoader;->isMiuiLiteVersion()Z
 
     move-result v0
@@ -72,26 +74,39 @@
         }
     .end annotation
 
-    .line 49
+    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
+    .line 53
     iput-object p1, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mContext:Landroid/content/Context;
 
-    .line 51
+    .line 54
+    iget-object v0, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mMetrics:Landroid/util/DisplayMetrics;
+
+    .line 55
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 52
+    .line 56
     iput-object p2, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mIconCache:Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;
 
-    .line 53
+    .line 57
     iput-object p3, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mActivityInfoCache:Landroid/util/LruCache;
 
-    .line 56
+    .line 60
     sget-object p2, Landroid/graphics/Bitmap$Config;->ALPHA_8:Landroid/graphics/Bitmap$Config;
 
     const/4 p3, 0x1
@@ -102,10 +117,10 @@
 
     const/4 p3, 0x0
 
-    .line 57
+    .line 61
     invoke-virtual {p2, p3}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
-    .line 58
+    .line 62
     new-instance p3, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -116,7 +131,7 @@
 
     iput-object p3, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mDefaultIcon:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 59
+    .line 63
     iput p4, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mDeviceLevel:I
 
     return-void
@@ -125,35 +140,55 @@
 .method private convertToDrawingLiteDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
     .locals 5
 
-    .line 251
+    .line 255
     instance-of v0, p1, Landroid/graphics/drawable/AdaptiveIconDrawable;
 
     if-eqz v0, :cond_0
 
-    .line 252
+    .line 256
     check-cast p1, Landroid/graphics/drawable/AdaptiveIconDrawable;
 
-    .line 253
+    .line 258
     invoke-virtual {p1}, Landroid/graphics/drawable/AdaptiveIconDrawable;->getIntrinsicWidth()I
 
     move-result v0
 
+    const/high16 v1, 0x42700000    # 60.0f
+
+    invoke-virtual {p0, v1}, Lcom/android/systemui/shared/recents/model/IconLoader;->dp2px(F)I
+
+    move-result v2
+
+    invoke-static {v0, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    .line 259
     invoke-virtual {p1}, Landroid/graphics/drawable/AdaptiveIconDrawable;->getIntrinsicHeight()I
+
+    move-result v2
+
+    invoke-virtual {p0, v1}, Lcom/android/systemui/shared/recents/model/IconLoader;->dp2px(F)I
+
+    move-result v1
+
+    invoke-static {v2, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v1
 
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
+    .line 257
     invoke-static {v0, v1, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 254
+    .line 261
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 255
+    .line 262
     invoke-virtual {v1}, Landroid/graphics/Canvas;->getWidth()I
 
     move-result v2
@@ -166,10 +201,10 @@
 
     invoke-virtual {p1, v4, v4, v2, v3}, Landroid/graphics/drawable/AdaptiveIconDrawable;->setBounds(IIII)V
 
-    .line 256
+    .line 263
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/AdaptiveIconDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 257
+    .line 264
     new-instance p1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-direct {p1, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
@@ -183,7 +218,7 @@
 .method private getBadgedIcon(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 198
+    .line 202
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/os/UserHandle;
@@ -206,7 +241,7 @@
 
     const/4 v2, 0x0
 
-    .line 79
+    .line 83
     :try_start_0
     sget-object v3, Lcom/android/systemui/shared/recents/model/IconLoader;->sGetIconMethod:Ljava/lang/reflect/Method;
 
@@ -226,7 +261,7 @@
 
     if-nez v3, :cond_0
 
-    .line 80
+    .line 84
     const-class v3, Lmiui/content/res/IconCustomizer;
 
     const-string v11, "getIcon"
@@ -259,7 +294,7 @@
 
     aput-object v14, v13, v4
 
-    .line 81
+    .line 85
     invoke-static {v12, v13}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getMethodSignature(Ljava/lang/Class;[Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v12
@@ -290,14 +325,14 @@
 
     aput-object v14, v13, v4
 
-    .line 80
+    .line 84
     invoke-static {v3, v11, v12, v13}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->getMethod(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v3
 
     sput-object v3, Lcom/android/systemui/shared/recents/model/IconLoader;->sGetIconMethod:Ljava/lang/reflect/Method;
 
-    .line 84
+    .line 88
     :cond_0
     sget-object v3, Lcom/android/systemui/shared/recents/model/IconLoader;->sGetIconMethod:Ljava/lang/reflect/Method;
 
@@ -342,7 +377,7 @@
 
     move-object/from16 v4, p1
 
-    .line 86
+    .line 90
     :try_start_2
     invoke-static {v4, v0, v1, v2}, Lmiui/content/res/IconCustomizer;->getCustomizedIcon(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/BitmapDrawable;
 
@@ -375,7 +410,7 @@
 
     const-string v2, "invokeObject"
 
-    .line 89
+    .line 93
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1
@@ -390,7 +425,7 @@
 
     if-eqz p1, :cond_4
 
-    .line 95
+    .line 99
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getTopComponentOrBaseComponent()Landroid/content/ComponentName;
 
     move-result-object v1
@@ -399,7 +434,7 @@
 
     goto :goto_0
 
-    .line 98
+    .line 102
     :cond_0
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getTopComponentOrBaseComponent()Landroid/content/ComponentName;
 
@@ -409,7 +444,7 @@
 
     move-result-object v4
 
-    .line 99
+    .line 103
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getTopComponentOrBaseComponent()Landroid/content/ComponentName;
 
     move-result-object v1
@@ -418,7 +453,7 @@
 
     move-result-object v5
 
-    .line 100
+    .line 104
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/IconLoader;->getAndUpdateActivityInfo(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Landroid/content/pm/ActivityInfo;
 
     move-result-object v1
@@ -427,16 +462,16 @@
 
     return-object v0
 
-    .line 104
+    .line 108
     :cond_1
     invoke-virtual {v1}, Landroid/content/pm/ActivityInfo;->getIconResource()I
 
     move-result v6
 
-    .line 105
+    .line 109
     iget-object v7, v1, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 106
+    .line 110
     iget-object v3, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mContext:Landroid/content/Context;
 
     const/4 v8, 0x0
@@ -449,7 +484,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 108
+    .line 112
     iget v1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
 
     invoke-static {v1}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserId(I)Z
@@ -458,14 +493,14 @@
 
     if-eqz v1, :cond_2
 
-    .line 109
+    .line 113
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mContext:Landroid/content/Context;
 
     invoke-static {v1, v0}, Lmiui/securityspace/XSpaceUserHandle;->getXSpaceIcon(Landroid/content/Context;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 111
+    .line 115
     :cond_2
     iget p1, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
 
@@ -484,7 +519,7 @@
 .method public static isMiuiLiteVersion()Z
     .locals 3
 
-    .line 67
+    .line 71
     :try_start_0
     const-class v0, Lmiui/os/Build;
 
@@ -498,7 +533,7 @@
 
     const/4 v1, 0x0
 
-    .line 68
+    .line 72
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -520,7 +555,7 @@
 
     const-string v2, "reflect failed when get is miui lite device"
 
-    .line 70
+    .line 74
     invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v0, 0x0
@@ -530,10 +565,27 @@
 
 
 # virtual methods
+.method public dp2px(F)I
+    .locals 2
+
+    .line 271
+    iget-object v0, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mMetrics:Landroid/util/DisplayMetrics;
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, p1, v0}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+
+    move-result p1
+
+    float-to-int p1, p1
+
+    return p1
+.end method
+
 .method public getAndInvalidateIfModified(Lcom/android/systemui/shared/recents/model/Task$TaskKey;Landroid/app/ActivityManager$TaskDescription;Landroid/content/res/Resources;Z)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 119
+    .line 123
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mIconCache:Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;
 
     invoke-virtual {v0, p1}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->getAndInvalidateIfModified(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Ljava/lang/Object;
@@ -549,20 +601,20 @@
     :cond_0
     if-eqz p4, :cond_3
 
-    .line 127
+    .line 131
     :try_start_0
     sget-boolean p4, Lcom/android/systemui/shared/recents/model/IconLoader;->IS_MIUI_LITE_DEVICE:Z
 
     if-eqz p4, :cond_1
 
-    .line 128
+    .line 132
     invoke-direct {p0, p1}, Lcom/android/systemui/shared/recents/model/IconLoader;->getCustomizedIcon(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
     goto :goto_0
 
-    .line 130
+    .line 134
     :cond_1
     iget p4, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
 
@@ -573,7 +625,7 @@
     :goto_0
     if-eqz p2, :cond_2
 
-    .line 133
+    .line 137
     iget-object p3, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mIconCache:Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;
 
     invoke-virtual {p3, p1, p2}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->put(Lcom/android/systemui/shared/recents/model/Task$TaskKey;Ljava/lang/Object;)V
@@ -589,10 +641,10 @@
 
     const-string p4, "getBadgedTaskDescriptionIcon error"
 
-    .line 137
+    .line 141
     invoke-static {p3, p4, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 141
+    .line 145
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/systemui/shared/recents/model/IconLoader;->getAndUpdateActivityInfo(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Landroid/content/pm/ActivityInfo;
 
@@ -600,7 +652,7 @@
 
     if-eqz p2, :cond_3
 
-    .line 143
+    .line 147
     iget p3, p1, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
 
     invoke-virtual {p0, p2, p3}, Lcom/android/systemui/shared/recents/model/IconLoader;->getBadgedActivityIcon(Landroid/content/pm/ActivityInfo;I)Landroid/graphics/drawable/Drawable;
@@ -609,7 +661,7 @@
 
     if-eqz p2, :cond_3
 
-    .line 145
+    .line 149
     iget-object p3, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mIconCache:Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;
 
     invoke-virtual {p3, p1, p2}, Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;->put(Lcom/android/systemui/shared/recents/model/Task$TaskKey;Ljava/lang/Object;)V
@@ -625,12 +677,12 @@
 .method getAndUpdateActivityInfo(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Landroid/content/pm/ActivityInfo;
     .locals 4
 
-    .line 202
+    .line 206
     invoke-virtual {p1}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getTopComponentOrBaseComponent()Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 203
+    .line 207
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mActivityInfoCache:Landroid/util/LruCache;
 
     invoke-virtual {v1, v0}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -641,7 +693,7 @@
 
     if-nez v1, :cond_2
 
-    .line 205
+    .line 209
     invoke-static {}, Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;
 
     move-result-object v1
@@ -658,7 +710,7 @@
 
     goto :goto_0
 
-    .line 211
+    .line 215
     :cond_0
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mActivityInfoCache:Landroid/util/LruCache;
 
@@ -670,7 +722,7 @@
     :goto_0
     const-string p1, "IconLoader"
 
-    .line 207
+    .line 211
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -705,7 +757,7 @@
 .method public getBadgedActivityIcon(Landroid/content/pm/ActivityInfo;I)Landroid/graphics/drawable/Drawable;
     .locals 4
 
-    .line 159
+    .line 163
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mPm:Landroid/content/pm/PackageManager;
 
     const/4 v1, 0x0
@@ -714,7 +766,7 @@
 
     return-object v1
 
-    .line 162
+    .line 166
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mContext:Landroid/content/Context;
 
@@ -728,7 +780,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 164
+    .line 168
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1}, Lcom/android/systemui/shared/recents/webapps/WebAppInfo;->getIcon(Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
@@ -738,7 +790,7 @@
     :cond_1
     if-nez v1, :cond_2
 
-    .line 167
+    .line 171
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mPm:Landroid/content/pm/PackageManager;
@@ -752,14 +804,14 @@
     :cond_2
     if-nez v1, :cond_3
 
-    .line 170
+    .line 174
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mPm:Landroid/content/pm/PackageManager;
 
     invoke-virtual {p1, v0}, Landroid/content/pm/ActivityInfo;->loadIcon(Landroid/content/pm/PackageManager;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 173
+    .line 177
     :cond_3
     invoke-static {p2}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUserId(I)Z
 
@@ -767,14 +819,14 @@
 
     if-eqz p1, :cond_4
 
-    .line 174
+    .line 178
     iget-object p1, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mContext:Landroid/content/Context;
 
     invoke-static {p1, v1}, Lmiui/securityspace/XSpaceUserHandle;->getXSpaceIcon(Landroid/content/Context;Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 176
+    .line 180
     :cond_4
     invoke-direct {p0, v1, p2}, Lcom/android/systemui/shared/recents/model/IconLoader;->getBadgedIcon(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
 
@@ -786,14 +838,14 @@
 .method public getBadgedTaskDescriptionIcon(Landroid/app/ActivityManager$TaskDescription;ILandroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 184
+    .line 188
     invoke-virtual {p1}, Landroid/app/ActivityManager$TaskDescription;->getInMemoryIcon()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 186
+    .line 190
     invoke-virtual {p1}, Landroid/app/ActivityManager$TaskDescription;->getIconFilename()Ljava/lang/String;
 
     move-result-object p1
@@ -805,7 +857,7 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 189
+    .line 193
     new-instance p1, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-direct {p1, p3, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
@@ -825,7 +877,7 @@
 .method public getDefaultIcon()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 264
+    .line 275
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mDefaultIcon:Landroid/graphics/drawable/BitmapDrawable;
 
     return-object v0
@@ -834,7 +886,7 @@
 .method public getIcon(Lcom/android/systemui/shared/recents/model/Task;)Landroid/graphics/drawable/Drawable;
     .locals 4
 
-    .line 217
+    .line 221
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mIconCache:Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;
 
     iget-object v1, p1, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
@@ -847,12 +899,12 @@
 
     if-nez v0, :cond_3
 
-    .line 221
+    .line 225
     sget-boolean v0, Lcom/android/systemui/shared/recents/model/IconLoader;->IS_MIUI_LITE_DEVICE:Z
 
     if-eqz v0, :cond_0
 
-    .line 222
+    .line 226
     iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     invoke-direct {p0, v0}, Lcom/android/systemui/shared/recents/model/IconLoader;->getCustomizedIcon(Lcom/android/systemui/shared/recents/model/Task$TaskKey;)Landroid/graphics/drawable/Drawable;
@@ -861,7 +913,7 @@
 
     goto :goto_0
 
-    .line 224
+    .line 228
     :cond_0
     iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->taskDescription:Landroid/app/ActivityManager$TaskDescription;
 
@@ -871,12 +923,12 @@
 
     iget-object v2, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mContext:Landroid/content/Context;
 
-    .line 225
+    .line 229
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    .line 224
+    .line 228
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/systemui/shared/recents/model/IconLoader;->getBadgedTaskDescriptionIcon(Landroid/app/ActivityManager$TaskDescription;ILandroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -884,14 +936,14 @@
     :goto_0
     if-nez v0, :cond_1
 
-    .line 228
+    .line 232
     invoke-static {}, Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;->getInstance()Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;
 
     move-result-object v1
 
     iget-object v2, p1, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
-    .line 229
+    .line 233
     invoke-virtual {v2}, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->getTopComponentOrBaseComponent()Landroid/content/ComponentName;
 
     move-result-object v2
@@ -900,7 +952,7 @@
 
     iget v3, v3, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
 
-    .line 228
+    .line 232
     invoke-virtual {v1, v2, v3}, Lcom/android/systemui/shared/recents/system/PackageManagerWrapper;->getActivityInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;
 
     move-result-object v1
@@ -909,7 +961,7 @@
 
     const-string v0, "IconLoader"
 
-    .line 231
+    .line 235
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -928,7 +980,7 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
+    .line 236
     iget-object v0, p1, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;
 
     iget v0, v0, Lcom/android/systemui/shared/recents/model/Task$TaskKey;->userId:I
@@ -940,16 +992,16 @@
     :cond_1
     if-nez v0, :cond_2
 
-    .line 237
+    .line 241
     iget-object v0, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mDefaultIcon:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 242
+    .line 246
     :cond_2
     invoke-direct {p0, v0}, Lcom/android/systemui/shared/recents/model/IconLoader;->convertToDrawingLiteDrawable(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 243
+    .line 247
     iget-object v1, p0, Lcom/android/systemui/shared/recents/model/IconLoader;->mIconCache:Lcom/android/systemui/shared/recents/model/TaskKeyLruCache;
 
     iget-object p1, p1, Lcom/android/systemui/shared/recents/model/Task;->key:Lcom/android/systemui/shared/recents/model/Task$TaskKey;

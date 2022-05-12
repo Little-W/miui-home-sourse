@@ -49,15 +49,6 @@
 
     iget-object p1, p1, Lcom/miui/maml/util/HideSdkDependencyUtils$1;->val$context:Landroid/content/Context;
 
-    iget-object p2, p0, Lcom/miui/maml/util/HideSdkDependencyUtils$1$1;->val$conn:Landroid/content/ServiceConnection;
-
-    invoke-virtual {p1, p2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
-
-    .line 198
-    iget-object p1, p0, Lcom/miui/maml/util/HideSdkDependencyUtils$1$1;->this$0:Lcom/miui/maml/util/HideSdkDependencyUtils$1;
-
-    iget-object p1, p1, Lcom/miui/maml/util/HideSdkDependencyUtils$1;->val$context:Landroid/content/Context;
-
     iget-object p2, p0, Lcom/miui/maml/util/HideSdkDependencyUtils$1$1;->this$0:Lcom/miui/maml/util/HideSdkDependencyUtils$1;
 
     iget-object p2, p2, Lcom/miui/maml/util/HideSdkDependencyUtils$1;->val$intent:Landroid/content/Intent;
@@ -66,7 +57,16 @@
 
     iget-object p3, p3, Lcom/miui/maml/util/HideSdkDependencyUtils$1;->val$bundle:Landroid/os/Bundle;
 
-    invoke-static {p1, p2, p3}, Lcom/miui/maml/util/Utils;->startActivityBg(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
+    invoke-static {p1, p2, p3}, Lcom/miui/maml/util/Utils;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
+
+    .line 198
+    iget-object p1, p0, Lcom/miui/maml/util/HideSdkDependencyUtils$1$1;->this$0:Lcom/miui/maml/util/HideSdkDependencyUtils$1;
+
+    iget-object p1, p1, Lcom/miui/maml/util/HideSdkDependencyUtils$1;->val$context:Landroid/content/Context;
+
+    iget-object p2, p0, Lcom/miui/maml/util/HideSdkDependencyUtils$1$1;->val$conn:Landroid/content/ServiceConnection;
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
     return-void
 .end method

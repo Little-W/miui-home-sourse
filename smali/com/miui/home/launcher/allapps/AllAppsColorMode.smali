@@ -267,7 +267,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060381
+    const p2, 0x7f060383
 
     .line 83
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -277,7 +277,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060380
+    const p2, 0x7f060382
 
     .line 85
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -398,6 +398,66 @@
 .method public getEditIconDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
     .locals 0
 
+    .line 266
+    invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    const p2, 0x7f0801b8
+
+    .line 267
+    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const p2, 0x7f0801b7
+
+    .line 269
+    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public getFastScrollerPopupDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    .locals 0
+
+    .line 282
+    invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    const p2, 0x7f0801bb
+
+    .line 283
+    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const p2, 0x7f0801ba
+
+    .line 285
+    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public getFastscrollerLetterRadius(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    .locals 0
+
     .line 258
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
 
@@ -405,7 +465,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f0801b6
+    const p2, 0x7f080118
 
     .line 259
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -415,7 +475,7 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f0801b5
+    const p2, 0x7f080117
 
     .line 261
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -443,7 +503,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f0805b1
+    const p2, 0x7f0805b7
 
     .line 180
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -453,7 +513,7 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f0805af
+    const p2, 0x7f0805b5
 
     .line 182
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -470,7 +530,7 @@
 
     if-eqz p2, :cond_2
 
-    const p2, 0x7f0805b0
+    const p2, 0x7f0805b6
 
     .line 186
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -480,7 +540,7 @@
     return-object p1
 
     :cond_2
-    const p2, 0x7f0805ae
+    const p2, 0x7f0805b4
 
     .line 188
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -580,7 +640,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06038b
+    const p2, 0x7f06038d
 
     .line 139
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
@@ -590,7 +650,7 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f06038a
+    const p2, 0x7f06038c
 
     .line 141
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColorStateList(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
@@ -640,7 +700,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f060389
+    const p2, 0x7f06038b
 
     .line 155
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -650,7 +710,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f060388
+    const p2, 0x7f06038a
 
     .line 157
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -670,7 +730,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f06038f
+    const p2, 0x7f060391
 
     .line 147
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -680,7 +740,7 @@
     return p1
 
     :cond_0
-    const p2, 0x7f06038e
+    const p2, 0x7f060390
 
     .line 149
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
@@ -700,7 +760,7 @@
 
     if-eqz p2, :cond_0
 
-    const p2, 0x7f080577
+    const p2, 0x7f08057d
 
     .line 171
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -710,7 +770,7 @@
     return-object p1
 
     :cond_0
-    const p2, 0x7f080576
+    const p2, 0x7f08057c
 
     .line 173
     invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
@@ -780,6 +840,36 @@
     return p1
 .end method
 
+.method public getSettingsDrawable(Landroid/content/Context;I)I
+    .locals 0
+
+    .line 274
+    invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/AllAppsColorMode;->isLightMode(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    const p2, 0x7f0600fa
+
+    .line 275
+    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const p2, 0x7f0600f9
+
+    .line 277
+    invoke-static {p1, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
+
+    move-result p1
+
+    return p1
+.end method
+
 .method public getTextClearIconResource(I)I
     .locals 0
 
@@ -790,12 +880,12 @@
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f0801c3
+    const p1, 0x7f0801c9
 
     return p1
 
     :cond_0
-    const p1, 0x7f0801c2
+    const p1, 0x7f0801c8
 
     return p1
 .end method

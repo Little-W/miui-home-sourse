@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">Potiahnutie nahor je obsadené pre otvorenie Ponuky aplikácií. Prepnite na bežnú Domovskú obrazovku a skúste to znovu.</string>
     <string name="all_apps_suggestions">Odporúčané aplikácie</string>
     <string name="am">dop.</string>
-    <string name="animation_rate_title">Hodnota animácie</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">Presunuté do umiestnenia %1$d v priečinku</string>
     <string name="announce_for_checked">%1$s, označené</string>
     <string name="announce_for_choose_default_screen">Nastaviť obrazovku %1$d ako predvolenú Domovskú obrazovku</string>

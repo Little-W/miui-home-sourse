@@ -24,10 +24,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/net/Uri;)V
     .locals 1
 
-    .line 426
+    .line 417
     invoke-direct {p0, p1}, Lcom/miui/maml/NotifierManager$BaseNotifier;-><init>(Landroid/content/Context;)V
 
-    .line 414
+    .line 405
     new-instance p1, Lcom/miui/maml/NotifierManager$ContentChangeNotifier$1;
 
     const/4 v0, 0x0
@@ -36,7 +36,7 @@
 
     iput-object p1, p0, Lcom/miui/maml/NotifierManager$ContentChangeNotifier;->mObserver:Landroid/database/ContentObserver;
 
-    .line 427
+    .line 418
     iput-object p2, p0, Lcom/miui/maml/NotifierManager$ContentChangeNotifier;->mUri:Landroid/net/Uri;
 
     return-void
@@ -47,7 +47,7 @@
 .method protected onRegister()V
     .locals 4
 
-    .line 432
+    .line 423
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$ContentChangeNotifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -64,7 +64,7 @@
 
     const/4 v0, 0x1
 
-    .line 433
+    .line 424
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -79,7 +79,7 @@
 .method protected onUnregister()V
     .locals 2
 
-    .line 438
+    .line 429
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$ContentChangeNotifier;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;

@@ -843,7 +843,7 @@
 
     move-result-object p3
 
-    const v0, 0x7f080534
+    const v0, 0x7f08053a
 
     .line 78
     invoke-virtual {p3, v0}, Lcom/squareup/picasso/RequestCreator;->placeholder(I)Lcom/squareup/picasso/RequestCreator;

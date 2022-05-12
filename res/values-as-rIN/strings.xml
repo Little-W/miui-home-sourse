@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">"ওপৰলৈ ছোৱাইপ কৰাটো এপ ড্ৰয়াৰ খোলাৰ বাবে সংৰক্ষিত আছে। নিয়মীয়া গৃহ স্ক্ৰীণ ম'ডলৈ সলনি কৰক আৰু পুনৰ চেষ্টা কৰক।"</string>
     <string name="all_apps_suggestions">এপ পৰামৰ্শসমূহ</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">এনিমেশ্বন হাৰ</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">"ফ'ল্ডাৰটোত %1$d অৱস্থানলৈ লৈ যাওক"</string>
     <string name="announce_for_checked">%1$s, পৰীক্ষিত</string>
     <string name="announce_for_choose_default_screen">"স্ক্ৰীণ %1$d-ক ডিফ'ল্ট গৃহ স্ক্ৰীণ ৰূপে ছেট কৰক"</string>

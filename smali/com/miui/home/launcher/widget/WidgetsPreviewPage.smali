@@ -38,7 +38,7 @@
 
     move-result-object p2
 
-    const p3, 0x7f0603e6
+    const p3, 0x7f0603e8
 
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -210,7 +210,7 @@
 
     check-cast v0, Lcom/miui/home/launcher/view/LauncherActionBar;
 
-    const v1, 0x7f100464
+    const v1, 0x7f100467
 
     .line 60
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/view/LauncherActionBar;->setTitle(I)V

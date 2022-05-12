@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/maml/NotifierManager$DarkModeNotifier;Landroid/os/Handler;)V
     .locals 0
 
-    .line 455
+    .line 446
     iput-object p1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier$1;->this$0:Lcom/miui/maml/NotifierManager$DarkModeNotifier;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,12 +35,12 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 458
+    .line 449
     iget-object p1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier$1;->this$0:Lcom/miui/maml/NotifierManager$DarkModeNotifier;
 
     invoke-static {p1}, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->access$100(Lcom/miui/maml/NotifierManager$DarkModeNotifier;)V
 
-    .line 459
+    .line 450
     iget-object p1, p0, Lcom/miui/maml/NotifierManager$DarkModeNotifier$1;->this$0:Lcom/miui/maml/NotifierManager$DarkModeNotifier;
 
     invoke-static {p1}, Lcom/miui/maml/NotifierManager$DarkModeNotifier;->access$200(Lcom/miui/maml/NotifierManager$DarkModeNotifier;)V

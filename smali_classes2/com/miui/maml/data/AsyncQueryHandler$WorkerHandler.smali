@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/maml/data/AsyncQueryHandler;Landroid/os/Looper;)V
     .locals 0
 
-    .line 65
+    .line 67
     iput-object p1, p0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerHandler;->this$0:Lcom/miui/maml/data/AsyncQueryHandler;
 
-    .line 66
+    .line 68
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
@@ -36,48 +36,40 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 8
 
-    .line 71
+    .line 73
     iget-object v0, p0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerHandler;->this$0:Lcom/miui/maml/data/AsyncQueryHandler;
 
-    invoke-static {v0}, Lcom/miui/maml/data/AsyncQueryHandler;->access$000(Lcom/miui/maml/data/AsyncQueryHandler;)Landroid/content/ContentResolver;
+    iget-object v0, v0, Lcom/miui/maml/data/AsyncQueryHandler;->mResolver:Ljava/lang/ref/WeakReference;
 
-    move-result-object v1
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Landroid/content/ContentResolver;
 
     if-nez v1, :cond_0
 
-    const-string p1, "ContentProviderBinder"
-
-    const-string v0, "resolver == null"
-
-    .line 74
-    invoke-static {p1, v0}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
-
     return-void
 
+    .line 76
     :cond_0
-    const-string v0, "ContentProviderBinder"
-
-    const-string v2, "resolver not null, go on!"
-
-    .line 78
-    invoke-static {v0, v2}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 80
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;
 
-    .line 82
+    .line 78
     iget v7, p1, Landroid/os/Message;->what:I
 
-    .line 83
+    .line 79
     iget v2, p1, Landroid/os/Message;->arg1:I
 
     packed-switch v2, :pswitch_data_0
 
     goto :goto_1
 
-    .line 119
+    .line 113
     :pswitch_0
     iget-object v2, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->uri:Landroid/net/Uri;
 
@@ -97,7 +89,7 @@
 
     goto :goto_1
 
-    .line 114
+    .line 108
     :pswitch_1
     iget-object v2, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->uri:Landroid/net/Uri;
 
@@ -119,7 +111,7 @@
 
     goto :goto_1
 
-    .line 110
+    .line 104
     :pswitch_2
     iget-object v2, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->uri:Landroid/net/Uri;
 
@@ -133,7 +125,7 @@
 
     goto :goto_1
 
-    .line 89
+    .line 85
     :pswitch_3
     :try_start_0
     iget-object v2, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->uri:Landroid/net/Uri;
@@ -152,18 +144,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 95
+    .line 91
     invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
-
-    goto :goto_0
-
-    :cond_1
-    const-string v2, "AsyncQuery"
-
-    const-string v3, "failed to query, cursor is null"
-
-    .line 97
-    invoke-static {v2, v3}, Lcom/miui/maml/util/MamlLog;->w(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -176,21 +158,22 @@
 
     const-string v3, "Exception thrown during handling EVENT_ARG_QUERY"
 
-    .line 100
+    .line 94
     invoke-static {v2, v3, v1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     const/4 v1, 0x0
 
-    .line 104
+    .line 98
+    :cond_1
     :goto_0
     iget-object v2, p0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerHandler;->this$0:Lcom/miui/maml/data/AsyncQueryHandler;
 
     invoke-virtual {v2, v1}, Lcom/miui/maml/data/AsyncQueryHandler;->doUpdateOfCursor(Landroid/database/Cursor;)V
 
-    .line 105
+    .line 99
     invoke-static {v1}, Lmiuix/core/util/IOUtils;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 125
+    .line 119
     :goto_1
     iget-object v1, v0, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->handler:Landroid/os/Handler;
 
@@ -198,20 +181,18 @@
 
     move-result-object v1
 
-    .line 126
+    .line 120
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 127
+    .line 121
     iget p1, p1, Landroid/os/Message;->arg1:I
 
     iput p1, v1, Landroid/os/Message;->arg1:I
 
-    .line 134
+    .line 128
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
     return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1

@@ -635,6 +635,49 @@
     return-object p0
 .end method
 
+.method public static final startsWith(Ljava/lang/String;Ljava/lang/String;IZ)Z
+    .locals 6
+
+    const-string v0, "$this$startsWith"
+
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "prefix"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->checkNotNullParameter(Ljava/lang/Object;Ljava/lang/String;)V
+
+    if-nez p3, :cond_0
+
+    .line 406
+    invoke-virtual {p0, p1, p2}, Ljava/lang/String;->startsWith(Ljava/lang/String;I)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 v3, 0x0
+
+    .line 408
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    move-object v0, p0
+
+    move v1, p2
+
+    move-object v2, p1
+
+    move v5, p3
+
+    invoke-static/range {v0 .. v5}, Lkotlin/text/StringsKt;->regionMatches(Ljava/lang/String;ILjava/lang/String;IIZ)Z
+
+    move-result p0
+
+    return p0
+.end method
+
 .method public static final startsWith(Ljava/lang/String;Ljava/lang/String;Z)Z
     .locals 6
 
@@ -672,6 +715,24 @@
     move v5, p2
 
     invoke-static/range {v0 .. v5}, Lkotlin/text/StringsKt;->regionMatches(Ljava/lang/String;ILjava/lang/String;IIZ)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static synthetic startsWith$default(Ljava/lang/String;Ljava/lang/String;IZILjava/lang/Object;)Z
+    .locals 0
+
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_0
+
+    const/4 p3, 0x0
+
+    .line 404
+    :cond_0
+    invoke-static {p0, p1, p2, p3}, Lkotlin/text/StringsKt;->startsWith(Ljava/lang/String;Ljava/lang/String;IZ)Z
 
     move-result p0
 

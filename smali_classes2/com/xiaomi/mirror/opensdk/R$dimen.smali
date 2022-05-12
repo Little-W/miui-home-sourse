@@ -15,43 +15,43 @@
 
 
 # static fields
-.field public static final menu_background_radius:I = 0x7f070174
+.field public static final menu_background_radius:I = 0x7f07017f
 
-.field public static final menu_elevation:I = 0x7f070176
+.field public static final menu_elevation:I = 0x7f070181
 
-.field public static final menu_icon_margin_end:I = 0x7f070177
+.field public static final menu_icon_margin_end:I = 0x7f070182
 
-.field public static final menu_item_height_double:I = 0x7f070178
+.field public static final menu_item_height_double:I = 0x7f070183
 
-.field public static final menu_item_height_multi:I = 0x7f070179
+.field public static final menu_item_height_multi:I = 0x7f070184
 
-.field public static final menu_item_height_one:I = 0x7f07017a
+.field public static final menu_item_height_one:I = 0x7f070185
 
-.field public static final menu_item_padding_left:I = 0x7f07017b
+.field public static final menu_item_padding_left:I = 0x7f070186
 
-.field public static final menu_item_padding_right:I = 0x7f07017c
+.field public static final menu_item_padding_right:I = 0x7f070187
 
-.field public static final menu_item_width:I = 0x7f07017d
+.field public static final menu_item_width:I = 0x7f070188
 
-.field public static final menu_text_size:I = 0x7f07017e
+.field public static final menu_text_size:I = 0x7f070189
 
-.field public static final text_max_size:I = 0x7f07042f
+.field public static final text_max_size:I = 0x7f07043a
 
-.field public static final thumbnail_border_round_oval:I = 0x7f07043b
+.field public static final thumbnail_border_round_oval:I = 0x7f070446
 
-.field public static final thumbnail_border_width:I = 0x7f07043c
+.field public static final thumbnail_border_width:I = 0x7f070447
 
-.field public static final thumbnail_height:I = 0x7f07043d
+.field public static final thumbnail_height:I = 0x7f070448
 
-.field public static final thumbnail_max_width:I = 0x7f07043e
+.field public static final thumbnail_max_width:I = 0x7f070449
 
-.field public static final thumbnail_min_width:I = 0x7f07043f
+.field public static final thumbnail_min_width:I = 0x7f07044a
 
-.field public static final thumbnail_shadow_layer_radius:I = 0x7f070440
+.field public static final thumbnail_shadow_layer_radius:I = 0x7f07044b
 
-.field public static final thumbnail_shadow_layer_x:I = 0x7f070441
+.field public static final thumbnail_shadow_layer_x:I = 0x7f07044c
 
-.field public static final thumbnail_shadow_layer_y:I = 0x7f070442
+.field public static final thumbnail_shadow_layer_y:I = 0x7f07044d
 
 
 # direct methods

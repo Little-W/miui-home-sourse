@@ -194,12 +194,12 @@
 
     if-eqz v1, :cond_1
 
-    const v1, 0x7f100263
+    const v1, 0x7f100264
 
     goto :goto_0
 
     :cond_1
-    const v1, 0x7f100264
+    const v1, 0x7f100265
 
     :goto_0
     const/4 v2, 0x0
@@ -434,7 +434,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f080521
+    const v2, 0x7f080527
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

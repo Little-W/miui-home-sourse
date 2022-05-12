@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Map$Entry;
+.implements Lkotlin/jvm/internal/markers/KMappedMarker;
 
 
 # annotations
@@ -25,7 +26,8 @@
         ">",
         "Ljava/lang/Object;",
         "Ljava/util/Map$Entry<",
-        "TK;TV;>;"
+        "TK;TV;>;",
+        "Lkotlin/jvm/internal/markers/KMappedMarker;"
     }
 .end annotation
 

@@ -701,14 +701,14 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    const v2, 0x7f0801b4
+    const v2, 0x7f0801b6
 
     goto :goto_0
 
     :cond_8
     iget-object v1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    const v2, 0x7f0801b3
+    const v2, 0x7f0801b5
 
     :goto_0
     invoke-static {v1, v2}, Landroidx/core/content/ContextCompat;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;

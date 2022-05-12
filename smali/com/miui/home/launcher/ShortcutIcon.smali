@@ -210,7 +210,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f060101
+    const v1, 0x7f060103
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -391,7 +391,7 @@
     .line 267
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/ShortcutIcon;->setEnableAutoLayoutAnimation(Z)V
 
-    const p0, 0x7f060101
+    const p0, 0x7f060103
 
     .line 269
     invoke-virtual {v2, p0}, Landroid/content/res/Resources;->getColor(I)I
@@ -735,7 +735,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070131
+    const v2, 0x7f07013b
 
     .line 479
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F

@@ -24,10 +24,10 @@
 
     const/4 v0, 0x0
 
-    .line 402
+    .line 393
     invoke-direct {p0, p1, v0}, Lcom/miui/maml/NotifierManager$ContentChangeNotifier;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
 
-    .line 403
+    .line 394
     invoke-static {}, Lcom/miui/maml/util/MobileDataUtils;->getInstance()Lcom/miui/maml/util/MobileDataUtils;
 
     move-result-object p1
@@ -42,7 +42,7 @@
 .method protected onRegister()V
     .locals 3
 
-    .line 408
+    .line 399
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$MobileDataNotifier;->mMobileDataUtils:Lcom/miui/maml/util/MobileDataUtils;
 
     iget-object v1, p0, Lcom/miui/maml/NotifierManager$MobileDataNotifier;->mContext:Landroid/content/Context;
@@ -53,7 +53,7 @@
 
     const/4 v0, 0x1
 
-    .line 409
+    .line 400
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0

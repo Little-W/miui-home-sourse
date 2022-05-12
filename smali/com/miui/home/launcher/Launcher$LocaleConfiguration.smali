@@ -26,15 +26,15 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 1252
+    .line 1260
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 1254
+    .line 1262
     iput v0, p0, Lcom/miui/home/launcher/Launcher$LocaleConfiguration;->mcc:I
 
-    .line 1255
+    .line 1263
     iput v0, p0, Lcom/miui/home/launcher/Launcher$LocaleConfiguration;->mnc:I
 
     return-void
@@ -43,7 +43,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/Launcher$1;)V
     .locals 0
 
-    .line 1252
+    .line 1260
     invoke-direct {p0}, Lcom/miui/home/launcher/Launcher$LocaleConfiguration;-><init>()V
 
     return-void

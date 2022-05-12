@@ -215,3 +215,14 @@
 
     return p0
 .end method
+
+.method public static useDefaultPath(Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    .line 54
+    invoke-static {p0}, Lcom/miui/launcher/utils/UninstallAppPreInstallUtils;->getMiuiPreinstallAppPath(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

@@ -22,7 +22,7 @@
 .method constructor <init>(Landroid/view/View;Landroid/view/View;)V
     .locals 0
 
-    .line 44
+    .line 50
     iput-object p1, p0, Lcom/miui/home/settings/DeleteAppAdapter$onCreateViewHolder$1;->$emptyView:Landroid/view/View;
 
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V

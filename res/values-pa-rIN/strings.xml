@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">"ਐਪ ਡ੍ਰਾਅਰ ਨੂੰ ਖਲ੍ਹਣ ਲਈ ਉੱਪਰ ਵੱਲ ਸ੍ਵਾਈਪ ਕਰਨਾ ਰਾਖਵਾਂ ਹੈ। ਨਿਯਮਿਤ ਹੋਮ ਸਕ੍ਰੀਨ ਮੋਡ 'ਤੇ ਸਵਿੱਚ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"</string>
     <string name="all_apps_suggestions">ਐਪ ਸੁਝਾਅ</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">ਐਨੀਮੇਸ਼ਨ ਰੇਟ</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">"ਫ਼ੋਲਡਰ ਵਿੱਚ %1$d ਸਥਿਤੀ 'ਤੇ ਲੈ ਜਾਓ"</string>
     <string name="announce_for_checked">%1$s, ਜਾਂਚਿਆ ਗਿਆ</string>
     <string name="announce_for_choose_default_screen">ਸਕ੍ਰੀਨ %1$d ਵਜੋਂ ਪੂਰਵ-ਨਿਰਧਾਰਤ ਹੋਮ ਸਕ੍ਰੀਨ ਸੈੱਟ ਕਰੋ</string>

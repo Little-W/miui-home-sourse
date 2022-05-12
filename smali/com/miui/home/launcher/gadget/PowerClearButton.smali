@@ -103,7 +103,7 @@
     .line 19
     iget-object v0, p0, Lcom/miui/home/launcher/gadget/PowerClearButton;->mClearIcon:Lcom/miui/home/launcher/common/ClearIconImageView;
 
-    const v1, 0x7f080194
+    const v1, 0x7f080196
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/common/ClearIconImageView;->setImageResource(I)V
 

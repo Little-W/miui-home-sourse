@@ -449,9 +449,9 @@
 
     const v0, 0x7f0a010e
 
-    const v1, 0x7f080543
+    const v1, 0x7f080549
 
-    const v2, 0x7f100373
+    const v2, 0x7f100376
 
     .line 65
     invoke-direct {p0, v0, v1, v2}, Lcom/miui/home/recents/views/RecentsRecommendView;->initItem(III)Landroid/widget/LinearLayout;
@@ -462,9 +462,9 @@
 
     const v0, 0x7f0a0235
 
-    const v1, 0x7f080546
+    const v1, 0x7f08054c
 
-    const v2, 0x7f100376
+    const v2, 0x7f100379
 
     .line 68
     invoke-direct {p0, v0, v1, v2}, Lcom/miui/home/recents/views/RecentsRecommendView;->initItem(III)Landroid/widget/LinearLayout;
@@ -478,12 +478,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080545
+    const v0, 0x7f08054b
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f080544
+    const v0, 0x7f08054a
 
     .line 73
     :goto_0
@@ -491,12 +491,12 @@
 
     if-eqz v1, :cond_1
 
-    const v1, 0x7f100375
+    const v1, 0x7f100378
 
     goto :goto_1
 
     :cond_1
-    const v1, 0x7f100374
+    const v1, 0x7f100377
 
     :goto_1
     const v2, 0x7f0a0297
@@ -515,12 +515,12 @@
 
     if-eqz v1, :cond_2
 
-    const v1, 0x7f080542
+    const v1, 0x7f080548
 
     goto :goto_2
 
     :cond_2
-    const v1, 0x7f080541
+    const v1, 0x7f080547
 
     .line 76
     :goto_2
@@ -528,12 +528,12 @@
 
     if-eqz v2, :cond_3
 
-    const v2, 0x7f100372
+    const v2, 0x7f100375
 
     goto :goto_3
 
     :cond_3
-    const v2, 0x7f100371
+    const v2, 0x7f100374
 
     .line 74
     :goto_3
@@ -747,12 +747,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f080545
+    const v1, 0x7f08054b
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f080544
+    const v1, 0x7f08054a
 
     .line 140
     :goto_0
@@ -760,12 +760,12 @@
 
     if-eqz v2, :cond_1
 
-    const v2, 0x7f100375
+    const v2, 0x7f100378
 
     goto :goto_1
 
     :cond_1
-    const v2, 0x7f100374
+    const v2, 0x7f100377
 
     .line 138
     :goto_1
@@ -811,12 +811,12 @@
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f080542
+    const v0, 0x7f080548
 
     goto :goto_2
 
     :cond_3
-    const v0, 0x7f080541
+    const v0, 0x7f080547
 
     .line 149
     :goto_2
@@ -824,12 +824,12 @@
 
     if-eqz v1, :cond_4
 
-    const v1, 0x7f100372
+    const v1, 0x7f100375
 
     goto :goto_3
 
     :cond_4
-    const v1, 0x7f100371
+    const v1, 0x7f100374
 
     .line 147
     :goto_3

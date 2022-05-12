@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">மேல் நோக்கி ஸ்வைப் செய்வது, செயலி வைப்பகத்திற்காக ஒதுக்கப்பட்டுள்ளது. வழக்கமான முகப்புத் திரை பயன்முறைக்கு மாறி, மீண்டும் முயலவும்.</string>
     <string name="all_apps_suggestions">செயலி பரிந்துரைகள்</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">அனிமேஷன் வீதம்</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">கோப்புறையில் %1$d நிலைக்கு நகர்த்தப்பட்டது</string>
     <string name="announce_for_checked">%1$s, சரிபார்க்கப்பட்டது</string>
     <string name="announce_for_choose_default_screen">%1$d திரையை இயல்புநிலை முகப்புத் திரையாக அமைத்தது</string>

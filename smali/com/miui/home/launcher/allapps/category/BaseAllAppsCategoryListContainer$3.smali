@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;)V
     .locals 0
 
-    .line 318
+    .line 321
     iput-object p1, p0, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer$3;->this$0:Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,26 +38,26 @@
 .method public run()V
     .locals 2
 
-    .line 321
+    .line 324
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer$3;->this$0:Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;
 
     invoke-static {v0}, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;->access$100(Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 322
+    .line 325
     iget-object v1, p0, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer$3;->this$0:Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;
 
     iget-object v1, v1, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;->mPagerAdapter:Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;
 
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/allapps/category/AllAppsCategoryPagerAdapter;->setCategoryList(Ljava/util/ArrayList;)V
 
-    .line 323
+    .line 326
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer$3;->this$0:Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;
 
     invoke-static {v0}, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;->access$200(Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;)V
 
-    .line 324
+    .line 327
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer$3;->this$0:Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;
 
     iget-object v0, v0, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;->mLauncher:Lcom/miui/home/launcher/Launcher;
@@ -70,7 +70,7 @@
 
     if-nez v0, :cond_0
 
-    .line 325
+    .line 328
     iget-object v0, p0, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer$3;->this$0:Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;
 
     invoke-static {v0}, Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;->access$300(Lcom/miui/home/launcher/allapps/category/BaseAllAppsCategoryListContainer;)V

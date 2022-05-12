@@ -75,12 +75,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080581
+    const v0, 0x7f080587
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f08057f
+    const v0, 0x7f080585
 
     :goto_0
     return v0
@@ -161,12 +161,12 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f08057f
+    const v0, 0x7f080585
 
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f080581
+    const v0, 0x7f080587
 
     :goto_0
     return v0

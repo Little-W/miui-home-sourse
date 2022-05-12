@@ -166,11 +166,7 @@
     if-eqz p0, :cond_0
 
     .line 48
-    invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lcom/miui/home/launcher/Application;->isInFoldLargeScreen()Z
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isLargeScreenInMultiWindowMode()Z
 
     move-result p0
 

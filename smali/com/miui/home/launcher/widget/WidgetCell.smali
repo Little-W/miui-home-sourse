@@ -232,7 +232,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/widget/WidgetCell;->mContext:Landroid/content/Context;
 
-    const v1, 0x7f0801e7
+    const v1, 0x7f0801ed
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -310,7 +310,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070469
+    const v1, 0x7f070474
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -344,7 +344,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f07046a
+    const p2, 0x7f070475
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -501,7 +501,7 @@
     .line 93
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f070469
+    const v1, 0x7f070474
 
     .line 96
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

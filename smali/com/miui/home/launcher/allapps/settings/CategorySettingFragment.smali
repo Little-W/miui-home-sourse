@@ -311,14 +311,14 @@
 
     invoke-direct {p1, v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v0, 0x7f100391
+    const v0, 0x7f100394
 
     .line 122
     invoke-virtual {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object p1
 
-    const v0, 0x7f100390
+    const v0, 0x7f100393
 
     .line 123
     invoke-virtual {p1, v0}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -374,7 +374,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f100265
+    const v0, 0x7f100266
 
     invoke-virtual {p1, v0}, Landroidx/fragment/app/FragmentActivity;->setTitle(I)V
 

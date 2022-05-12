@@ -1324,20 +1324,20 @@
 
     return v0
 
-    .line 2805
+    .line 2789
     :cond_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 2806
+    .line 2790
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
     const-string v3, "iconType"
 
-    .line 2807
+    .line 2791
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -1346,14 +1346,14 @@
 
     const-string v3, "iconResource"
 
-    .line 2808
+    .line 2792
     invoke-virtual {v2, v3, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v3, "iconPackage"
 
     const/16 v4, 0x3a
 
-    .line 2809
+    .line 2793
     invoke-virtual {p2, v4}, Ljava/lang/String;->indexOf(I)I
 
     move-result v4
@@ -1366,7 +1366,7 @@
 
     const-string p2, "container"
 
-    .line 2810
+    .line 2794
     invoke-static {p7, p8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p7
@@ -1375,7 +1375,7 @@
 
     const-string p2, "cellX"
 
-    .line 2811
+    .line 2795
     invoke-static {p9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p7
@@ -1384,7 +1384,7 @@
 
     const-string p2, "cellY"
 
-    .line 2812
+    .line 2796
     invoke-static {p10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p7
@@ -1395,7 +1395,7 @@
 
     const/4 p7, 0x1
 
-    .line 2813
+    .line 2797
     invoke-static {p7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p8
@@ -1404,32 +1404,32 @@
 
     const-string p2, "spanY"
 
-    .line 2814
+    .line 2798
     invoke-static {p7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p8
 
     invoke-virtual {v2, p2, p8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2815
+    .line 2799
     invoke-virtual {v1, p3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2816
+    .line 2800
     invoke-virtual {v1, p4, p5}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 p2, 0x10200000
 
-    .line 2817
+    .line 2801
     invoke-virtual {v1, p2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     const-string p2, "android.intent.category.DEFAULT"
 
-    .line 2819
+    .line 2803
     invoke-virtual {v1, p2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p2, "intent"
 
-    .line 2820
+    .line 2804
     invoke-virtual {v1, v0}, Landroid/content/Intent;->toUri(I)Ljava/lang/String;
 
     move-result-object p3
@@ -1438,12 +1438,12 @@
 
     const-string p2, "title"
 
-    .line 2821
+    .line 2805
     invoke-virtual {v2, p2, p6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "itemType"
 
-    .line 2822
+    .line 2806
     invoke-static {p7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -1452,7 +1452,7 @@
 
     const-string p2, "iconType"
 
-    .line 2823
+    .line 2807
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -1463,7 +1463,7 @@
 
     const/4 p3, 0x0
 
-    .line 2824
+    .line 2808
     invoke-static {p1, p2, p3, v2}, Lcom/miui/home/launcher/LauncherProvider;->safelyInsertDatabase(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     return p7
@@ -1478,7 +1478,7 @@
 
     return-wide v0
 
-    .line 2773
+    .line 2757
     :cond_0
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1498,7 +1498,7 @@
 
     return-wide v0
 
-    .line 2776
+    .line 2760
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
@@ -1508,7 +1508,7 @@
 
     const/4 v2, 0x0
 
-    .line 2777
+    .line 2761
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -1517,19 +1517,19 @@
 
     const-string v1, "iconResource"
 
-    .line 2778
+    .line 2762
     invoke-virtual {p1, v1, p4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p4, "iconPackage"
 
-    .line 2779
+    .line 2763
     invoke-virtual {p1, p4, p5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p4, "spanX"
 
     const/4 p5, 0x1
 
-    .line 2780
+    .line 2764
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -1538,17 +1538,17 @@
 
     const-string p4, "spanY"
 
-    .line 2781
+    .line 2765
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
     invoke-virtual {p1, p4, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 2782
+    .line 2766
     invoke-virtual {v0, p7}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2783
+    .line 2767
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result p4
@@ -1561,13 +1561,13 @@
 
     if-nez p4, :cond_2
 
-    .line 2784
+    .line 2768
     invoke-virtual {v0, p2, p3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     :cond_2
     if-eqz p8, :cond_3
 
-    .line 2787
+    .line 2771
     invoke-static {p8}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p2
@@ -1577,12 +1577,12 @@
     :cond_3
     const-string p2, "android.intent.category.DEFAULT"
 
-    .line 2789
+    .line 2773
     invoke-virtual {v0, p2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string p2, "intent"
 
-    .line 2790
+    .line 2774
     invoke-virtual {v0, v2}, Landroid/content/Intent;->toUri(I)Ljava/lang/String;
 
     move-result-object p3
@@ -1591,12 +1591,12 @@
 
     const-string p2, "title"
 
-    .line 2791
+    .line 2775
     invoke-virtual {p1, p2, p6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "itemType"
 
-    .line 2792
+    .line 2776
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -1605,7 +1605,7 @@
 
     const-string p2, "iconType"
 
-    .line 2793
+    .line 2777
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -1616,7 +1616,7 @@
 
     const-string p2, "isShortcut"
 
-    .line 2795
+    .line 2779
     invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
@@ -1628,7 +1628,7 @@
 
     const/4 p3, 0x0
 
-    .line 2797
+    .line 2781
     invoke-static {p0, p2, p3, p1}, Lcom/miui/home/launcher/LauncherProvider;->safelyInsertDatabase(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide p0

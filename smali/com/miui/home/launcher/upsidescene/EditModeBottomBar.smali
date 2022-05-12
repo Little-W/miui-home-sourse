@@ -121,7 +121,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f08015e
+    const v4, 0x7f080160
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -154,7 +154,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f080160
+    const v4, 0x7f080162
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -187,7 +187,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f08015f
+    const v4, 0x7f080161
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -220,7 +220,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f080195
+    const v4, 0x7f080197
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -228,7 +228,7 @@
 
     iget-object v4, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f100436
+    const v5, 0x7f100439
 
     .line 302
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -917,7 +917,7 @@
     .line 107
     invoke-virtual {v9, v6}, Landroid/widget/TextView;->setText(I)V
 
-    const v6, 0x7f100436
+    const v6, 0x7f100439
 
     .line 108
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V
@@ -959,27 +959,27 @@
 
     check-cast v5, Landroid/widget/ImageView;
 
-    const v10, 0x7f08015b
+    const v10, 0x7f08015d
 
     .line 115
     invoke-virtual {v6, v10}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v6, 0x7f08015e
+    const v6, 0x7f080160
 
     .line 116
     invoke-virtual {v7, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v6, 0x7f080160
+    const v6, 0x7f080162
 
     .line 117
     invoke-virtual {v8, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v6, 0x7f08015f
+    const v6, 0x7f080161
 
     .line 118
     invoke-virtual {v9, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v6, 0x7f080195
+    const v6, 0x7f080197
 
     .line 119
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -1041,9 +1041,9 @@
 
     invoke-direct {v7, v8, v9, v10}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    const v8, 0x7f080150
+    const v8, 0x7f080152
 
-    const v9, 0x7f080151
+    const v9, 0x7f080153
 
     invoke-virtual {v5, v7, v8, v9, v6}, Lcom/miui/home/launcher/ScreenView;->setSlideBarPosition(Landroid/widget/FrameLayout$LayoutParams;IIZ)V
 

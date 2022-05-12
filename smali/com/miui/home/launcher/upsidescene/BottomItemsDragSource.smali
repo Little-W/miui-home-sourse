@@ -50,9 +50,9 @@
 
     invoke-direct {p2, p3, v0, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    const p3, 0x7f080150
+    const p3, 0x7f080152
 
-    const v0, 0x7f080151
+    const v0, 0x7f080153
 
     invoke-virtual {p0, p2, p3, v0, p1}, Lcom/miui/home/launcher/upsidescene/BottomItemsDragSource;->setSlideBarPosition(Landroid/widget/FrameLayout$LayoutParams;IIZ)V
 

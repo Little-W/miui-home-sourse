@@ -10,8 +10,13 @@
     <dimen name="edit_mode_thumbnail_item_pk_add_size">29.679993dip</dimen>
     <dimen name="edit_mode_thumbnail_item_size">42.73999dip</dimen>
     <dimen name="edit_mode_thumbnail_widget_pick_bg_width">179.59dip</dimen>
+    <dimen name="fastscroll_popup_margin">20.0dip</dimen>
+    <dimen name="fastscroll_popup_padding_right">20.0dip</dimen>
+    <dimen name="fastscroll_popup_size">61.799988dip</dimen>
+    <dimen name="fastscroll_popup_text_size">29.099976sp</dimen>
     <dimen name="folder_content_margin_top">24.0dip</dimen>
     <dimen name="folder_content_padding_left">0.0dip</dimen>
+    <dimen name="folder_content_padding_right">0.0dip</dimen>
     <dimen name="folder_content_width_noword">280.6953dip</dimen>
     <dimen name="folder_edit_text_margin_left">18.0dip</dimen>
     <dimen name="folder_edit_text_text_size_noword">35.599976dip</dimen>

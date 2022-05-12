@@ -15,4 +15,4 @@
 
 
 # static fields
-.field public static final miuix_folme_color_touch_tint:I = 0x7f060302
+.field public static final miuix_folme_color_touch_tint:I = 0x7f060304

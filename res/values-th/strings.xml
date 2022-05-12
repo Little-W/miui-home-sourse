@@ -94,7 +94,7 @@
     <string name="all_apps_slide_up_tips">การปัดขึ้นถูกสงวนไว้สำหรับการเปิดลิ้นชักแอป เปลี่ยนเป็นโหมดหน้าจอหลักปกติแล้วลองอีกครั้ง</string>
     <string name="all_apps_suggestions">ข้อแนะนำแอป</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">อัตราภาพเคลื่อนไหว</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">ย้ายไปที่ตำแหน่ง %1$d ในโฟลเดอร์</string>
     <string name="announce_for_checked">%1$s เลือกแล้ว</string>
     <string name="announce_for_choose_default_screen">ตั้งค่าหน้าจอ %1$d เป็นหน้าจอหลักเริ่มต้น</string>

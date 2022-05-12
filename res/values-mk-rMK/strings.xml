@@ -67,7 +67,7 @@
     <string name="all_apps_slide_up_tips">Лизгањето нагоре служи за отварање на Фиоката за апл. Промени на стандардниот режим на Почетен екран и обиди се повторно.</string>
     <string name="all_apps_suggestions">Предлози за апликации</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Стапка на анимација</string>
+    <string name="animation_rate_title">Animation rate</string>
     <string name="announce_for_app_move_in_folder">Преместено на позиција %1$d во папката</string>
     <string name="announce_for_checked">%1$s, проверенo</string>
     <string name="announce_for_choose_default_screen">Поставете го екран %1$d како стандарден Почетен екран</string>

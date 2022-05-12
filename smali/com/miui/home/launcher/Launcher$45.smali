@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Z)V
     .locals 0
 
-    .line 4354
+    .line 4362
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-boolean p2, p0, Lcom/miui/home/launcher/Launcher$45;->val$forceRefresh:Z
@@ -49,14 +49,14 @@
 .method protected varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
     .locals 9
 
-    .line 4357
+    .line 4365
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$6002(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 4358
+    .line 4366
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/WallpaperUtils;->getLockWallpaperProvider(Landroid/content/Context;)Ljava/lang/String;
@@ -65,7 +65,7 @@
 
     const-string v1, "com.xiaomi.ad.LockScreenAdProvider"
 
-    .line 4360
+    .line 4368
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -76,7 +76,7 @@
 
     const-string v2, "com.miui.home.none_provider"
 
-    .line 4361
+    .line 4369
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -85,7 +85,7 @@
 
     goto/16 :goto_0
 
-    .line 4363
+    .line 4371
     :cond_0
     iget-boolean v2, p0, Lcom/miui/home/launcher/Launcher$45;->val$forceRefresh:Z
 
@@ -99,19 +99,19 @@
 
     if-eqz v2, :cond_1
 
-    .line 4364
+    .line 4372
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 4365
+    .line 4373
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v2}, Lcom/miui/home/launcher/WallpaperUtils;->getLastRequestLockWallpaperTime(Landroid/content/Context;)J
 
     move-result-wide v6
 
-    .line 4366
+    .line 4374
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v2}, Lcom/miui/home/launcher/WallpaperUtils;->getLockWallpaperUpdateMinute(Landroid/content/Context;)I
@@ -134,14 +134,14 @@
 
     if-gez v2, :cond_1
 
-    .line 4368
+    .line 4376
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4371
+    .line 4379
     :cond_1
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -151,7 +151,7 @@
 
     invoke-static {v2, v4, v5}, Lcom/miui/home/launcher/WallpaperUtils;->setLastRequestLockWallpaperTime(Landroid/content/Context;J)Z
 
-    .line 4372
+    .line 4380
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -178,14 +178,14 @@
 
     if-nez v2, :cond_2
 
-    .line 4373
+    .line 4381
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4375
+    .line 4383
     :cond_2
     iget-object v2, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -197,7 +197,7 @@
 
     if-nez v1, :cond_3
 
-    .line 4376
+    .line 4384
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-boolean v1, p0, Lcom/miui/home/launcher/Launcher$45;->val$forceRefresh:Z
@@ -210,39 +210,39 @@
 
     move-result p1
 
-    .line 4377
+    .line 4385
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0, v3}, Lcom/miui/home/launcher/Launcher;->access$6202(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 4378
+    .line 4386
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4380
+    .line 4388
     :cond_3
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1, v0}, Lcom/miui/home/launcher/Launcher;->access$6202(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 4381
+    .line 4389
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const-wide/16 v1, 0x0
 
     invoke-static {p1, v1, v2}, Lcom/miui/home/launcher/WallpaperUtils;->setLastRequestLockWallpaperTime(Landroid/content/Context;J)Z
 
-    .line 4382
+    .line 4390
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
     return-object p1
 
-    .line 4361
+    .line 4369
     :cond_4
     :goto_0
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -255,7 +255,7 @@
 .method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 4354
+    .line 4362
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$45;->doInBackground([Ljava/lang/Void;)Ljava/lang/Boolean;
@@ -268,21 +268,21 @@
 .method protected onPostExecute(Ljava/lang/Boolean;)V
     .locals 2
 
-    .line 4388
+    .line 4396
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$6002(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 4389
+    .line 4397
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 4390
+    .line 4398
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -293,7 +293,7 @@
 
     goto :goto_0
 
-    .line 4392
+    .line 4400
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$45;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -308,7 +308,7 @@
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 4354
+    .line 4362
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/Launcher$45;->onPostExecute(Ljava/lang/Boolean;)V

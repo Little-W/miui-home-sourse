@@ -10,10 +10,15 @@
     <dimen name="folder_bottom_padding">90.54999dip</dimen>
     <dimen name="folder_content_padding_left">5.0dip</dimen>
     <dimen name="folder_content_width">292.0dip</dimen>
+    <dimen name="folder_preview_item_padding">0.30000007dip</dimen>
     <dimen name="folder_top_padding">76.369995dip</dimen>
     <dimen name="hotseats_height">82.91dip</dimen>
+    <dimen name="hotseats_padding_bottom">0.0dip</dimen>
     <dimen name="hotseats_padding_side">4.0dip</dimen>
+    <item type="dimen" name="launcher_miui_widget_density_scale_factor">1.0</item>
+    <dimen name="miui_widget_background_radius">16.72998dip</dimen>
     <item type="dimen" name="miui_widget_bounds_offset_scale_factor">0.9</item>
+    <item type="dimen" name="pa_miui_widget_density_scale_factor">1.0</item>
     <dimen name="recommend_loading_item_padding">22.0dip</dimen>
     <dimen name="status_bar_height">18.199982dip</dimen>
     <dimen name="workspace_cell_height">88.72998dip</dimen>

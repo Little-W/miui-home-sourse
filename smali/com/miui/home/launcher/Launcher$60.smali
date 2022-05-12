@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/view/View;)V
     .locals 0
 
-    .line 6751
+    .line 6767
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$60;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$60;->val$hostView:Landroid/view/View;
@@ -39,7 +39,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;Z)V
     .locals 0
 
-    .line 6754
+    .line 6770
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$60;->val$hostView:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
@@ -50,7 +50,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 6756
+    .line 6772
     iget-object p2, p0, Lcom/miui/home/launcher/Launcher$60;->val$hostView:Landroid/view/View;
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V

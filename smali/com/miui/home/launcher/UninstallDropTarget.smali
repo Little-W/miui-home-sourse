@@ -31,11 +31,11 @@
     .line 35
     new-instance v0, Lcom/miui/home/launcher/multiselect/TopMenuColor;
 
-    const v1, 0x7f0603cc
+    const v1, 0x7f0603ce
 
-    const v2, 0x7f0603cb
+    const v2, 0x7f0603cd
 
-    const v3, 0x7f0603ca
+    const v3, 0x7f0603cc
 
     invoke-direct {v0, v1, v1, v2, v3}, Lcom/miui/home/launcher/multiselect/TopMenuColor;-><init>(IIII)V
 

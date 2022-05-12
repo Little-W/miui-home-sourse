@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 5887
+    .line 5903
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$AppWidgetResetObserver;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 5888
+    .line 5904
     new-instance p1, Landroid/os/Handler;
 
     invoke-direct {p1}, Landroid/os/Handler;-><init>()V
@@ -40,7 +40,7 @@
 .method public onChange(Z)V
     .locals 0
 
-    .line 5893
+    .line 5909
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$AppWidgetResetObserver;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$7300(Lcom/miui/home/launcher/Launcher;)V

@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Ljava/util/Iterator;
+.implements Lkotlin/jvm/internal/markers/KMappedMarker;
 
 
 # annotations
@@ -12,7 +13,8 @@
         "Ljava/lang/Object;",
         "Ljava/util/Iterator<",
         "Ljava/lang/Integer;",
-        ">;"
+        ">;",
+        "Lkotlin/jvm/internal/markers/KMappedMarker;"
     }
 .end annotation
 

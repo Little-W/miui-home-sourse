@@ -93,7 +93,7 @@
     <string name="all_apps_slide_up_tips">抽屜模式下上滑手勢已被佔用，請切換為標準模式後設定</string>
     <string name="all_apps_suggestions">應用程式建議</string>
     <string name="am">上午</string>
-    <string name="animation_rate_title">動畫速率</string>
+    <string name="animation_rate_title">动画速率</string>
     <string name="announce_for_app_move_in_folder">移動至資料夾內的第%1$d 個位置</string>
     <string name="announce_for_checked">%1$s，已選取</string>
     <string name="announce_for_choose_default_screen">已將第%1$d畫面設定為主畫面</string>

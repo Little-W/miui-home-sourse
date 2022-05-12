@@ -26,10 +26,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .line 358
+    .line 349
     invoke-direct {p0, p1}, Lcom/miui/maml/NotifierManager$BaseNotifier;-><init>(Landroid/content/Context;)V
 
-    .line 346
+    .line 337
     new-instance p1, Lcom/miui/maml/NotifierManager$BroadcastNotifier$1;
 
     invoke-direct {p1, p0}, Lcom/miui/maml/NotifierManager$BroadcastNotifier$1;-><init>(Lcom/miui/maml/NotifierManager$BroadcastNotifier;)V
@@ -42,17 +42,17 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
-    .line 362
+    .line 353
     invoke-direct {p0, p1}, Lcom/miui/maml/NotifierManager$BaseNotifier;-><init>(Landroid/content/Context;)V
 
-    .line 346
+    .line 337
     new-instance p1, Lcom/miui/maml/NotifierManager$BroadcastNotifier$1;
 
     invoke-direct {p1, p0}, Lcom/miui/maml/NotifierManager$BroadcastNotifier$1;-><init>(Lcom/miui/maml/NotifierManager$BroadcastNotifier;)V
 
     iput-object p1, p0, Lcom/miui/maml/NotifierManager$BroadcastNotifier;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 363
+    .line 354
     iput-object p2, p0, Lcom/miui/maml/NotifierManager$BroadcastNotifier;->mAction:Ljava/lang/String;
 
     return-void
@@ -63,7 +63,7 @@
 .method protected createIntentFilter()Landroid/content/IntentFilter;
     .locals 2
 
-    .line 389
+    .line 380
     invoke-virtual {p0}, Lcom/miui/maml/NotifierManager$BroadcastNotifier;->getIntentAction()Ljava/lang/String;
 
     move-result-object v0
@@ -74,7 +74,7 @@
 
     goto :goto_0
 
-    .line 390
+    .line 381
     :cond_0
     new-instance v1, Landroid/content/IntentFilter;
 
@@ -89,7 +89,7 @@
 .method protected getIntentAction()Ljava/lang/String;
     .locals 1
 
-    .line 394
+    .line 385
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$BroadcastNotifier;->mAction:Ljava/lang/String;
 
     return-object v0
@@ -98,19 +98,19 @@
 .method protected onRegister()V
     .locals 3
 
-    .line 368
+    .line 359
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$BroadcastNotifier;->mIntentFilter:Landroid/content/IntentFilter;
 
     if-nez v0, :cond_0
 
-    .line 369
+    .line 360
     invoke-virtual {p0}, Lcom/miui/maml/NotifierManager$BroadcastNotifier;->createIntentFilter()Landroid/content/IntentFilter;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/miui/maml/NotifierManager$BroadcastNotifier;->mIntentFilter:Landroid/content/IntentFilter;
 
-    .line 370
+    .line 361
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$BroadcastNotifier;->mIntentFilter:Landroid/content/IntentFilter;
 
@@ -120,12 +120,12 @@
 
     const-string v1, "onRegister: mIntentFilter is null"
 
-    .line 371
+    .line 362
     invoke-static {v0, v1}, Lcom/miui/maml/util/MamlLog;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 374
+    .line 365
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$BroadcastNotifier;->mContext:Landroid/content/Context;
 
@@ -139,7 +139,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 376
+    .line 367
     iget-object v1, p0, Lcom/miui/maml/NotifierManager$BroadcastNotifier;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x0
@@ -153,7 +153,7 @@
 .method protected onUnregister()V
     .locals 2
 
-    .line 383
+    .line 374
     :try_start_0
     iget-object v0, p0, Lcom/miui/maml/NotifierManager$BroadcastNotifier;->mContext:Landroid/content/Context;
 

@@ -287,7 +287,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView;->TAG:Ljava/lang/String;
 
-    const p1, 0x7f0805c3
+    const p1, 0x7f0805c9
 
     .line 73
     iput p1, p0, Lcom/miui/home/launcher/ScreenView;->mSeekPointResId:I
@@ -549,7 +549,7 @@
 
     iput-object p1, p0, Lcom/miui/home/launcher/ScreenView;->TAG:Ljava/lang/String;
 
-    const p1, 0x7f0805c3
+    const p1, 0x7f0805c9
 
     .line 73
     iput p1, p0, Lcom/miui/home/launcher/ScreenView;->mSeekPointResId:I
@@ -1135,7 +1135,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070112
+    const v1, 0x7f07011c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1150,7 +1150,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070111
+    const v1, 0x7f07011b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1165,7 +1165,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070113
+    const v1, 0x7f07011d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -6651,7 +6651,7 @@
     .line 1037
     iget-object v9, p0, Lcom/miui/home/launcher/ScreenView;->mContext:Landroid/content/Context;
 
-    const v10, 0x7f10039e
+    const v10, 0x7f1003a1
 
     new-array v11, v6, [Ljava/lang/Object;
 
@@ -8107,9 +8107,9 @@
 .method public setSlideBarPosition(Landroid/widget/FrameLayout$LayoutParams;)V
     .locals 3
 
-    const v0, 0x7f080563
+    const v0, 0x7f080569
 
-    const v1, 0x7f080564
+    const v1, 0x7f08056a
 
     const/4 v2, 0x0
 

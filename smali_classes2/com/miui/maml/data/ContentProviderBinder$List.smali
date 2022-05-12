@@ -28,12 +28,12 @@
 .method public constructor <init>(Lorg/w3c/dom/Element;Lcom/miui/maml/ScreenElementRoot;)V
     .locals 2
 
-    .line 222
+    .line 212
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "name"
 
-    .line 223
+    .line 213
     invoke-interface {p1, v0}, Lorg/w3c/dom/Element;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -44,14 +44,14 @@
 
     const v1, 0x7fffffff
 
-    .line 224
+    .line 214
     invoke-static {p1, v0, v1}, Lcom/miui/maml/util/Utils;->getAttrAsInt(Lorg/w3c/dom/Element;Ljava/lang/String;I)I
 
     move-result p1
 
     iput p1, p0, Lcom/miui/maml/data/ContentProviderBinder$List;->mMaxCount:I
 
-    .line 225
+    .line 215
     iput-object p2, p0, Lcom/miui/maml/data/ContentProviderBinder$List;->mRoot:Lcom/miui/maml/ScreenElementRoot;
 
     return-void
@@ -66,13 +66,13 @@
 
     return-void
 
-    .line 232
+    .line 222
     :cond_0
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder$List;->mList:Lcom/miui/maml/elements/ListScreenElement;
 
     if-nez v0, :cond_2
 
-    .line 233
+    .line 223
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder$List;->mRoot:Lcom/miui/maml/ScreenElementRoot;
 
     iget-object v1, p0, Lcom/miui/maml/data/ContentProviderBinder$List;->mName:Ljava/lang/String;
@@ -81,17 +81,17 @@
 
     move-result-object v0
 
-    .line 234
+    .line 224
     instance-of v1, v0, Lcom/miui/maml/elements/ListScreenElement;
 
     if-eqz v1, :cond_1
 
-    .line 235
+    .line 225
     check-cast v0, Lcom/miui/maml/elements/ListScreenElement;
 
     iput-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder$List;->mList:Lcom/miui/maml/elements/ListScreenElement;
 
-    .line 237
+    .line 227
     :cond_1
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder$List;->mList:Lcom/miui/maml/elements/ListScreenElement;
 
@@ -99,7 +99,7 @@
 
     const-string p1, "ContentProviderBinder"
 
-    .line 238
+    .line 228
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -120,41 +120,41 @@
 
     return-void
 
-    .line 242
+    .line 232
     :cond_2
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder$List;->mList:Lcom/miui/maml/elements/ListScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/ListScreenElement;->removeAllItems()V
 
-    .line 243
+    .line 233
     iget-object v0, p0, Lcom/miui/maml/data/ContentProviderBinder$List;->mList:Lcom/miui/maml/elements/ListScreenElement;
 
     invoke-virtual {v0}, Lcom/miui/maml/elements/ListScreenElement;->getColumnsInfo()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 244
+    .line 234
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 245
+    .line 235
     new-array v2, v1, [I
 
-    .line 246
+    .line 236
     new-array v3, v1, [Ljava/lang/Object;
 
     const/4 v4, 0x0
 
     move v5, v4
 
-    .line 247
+    .line 237
     :goto_0
     array-length v6, v2
 
     if-ge v5, v6, :cond_3
 
-    .line 249
+    .line 239
     :try_start_0
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -181,7 +181,7 @@
 
     const-string v1, "ContentProviderBinder"
 
-    .line 251
+    .line 241
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -218,16 +218,16 @@
 
     return-void
 
-    .line 256
+    .line 246
     :cond_3
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 257
+    .line 247
     invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
 
     move-result v5
 
-    .line 258
+    .line 248
     iget v6, p0, Lcom/miui/maml/data/ContentProviderBinder$List;->mMaxCount:I
 
     if-le v5, v6, :cond_4
@@ -247,27 +247,27 @@
 
     const/4 v8, 0x0
 
-    .line 263
+    .line 253
     aput-object v8, v3, v7
 
-    .line 264
+    .line 254
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Lcom/miui/maml/elements/ListScreenElement$ColumnInfo;
 
-    .line 265
+    .line 255
     aget v9, v2, v7
 
-    .line 266
+    .line 256
     invoke-interface {p1, v9}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v10
 
     if-nez v10, :cond_5
 
-    .line 267
+    .line 257
     sget-object v10, Lcom/miui/maml/data/ContentProviderBinder$2;->$SwitchMap$com$miui$maml$elements$ListScreenElement$ColumnInfo$Type:[I
 
     iget-object v11, v8, Lcom/miui/maml/elements/ListScreenElement$ColumnInfo;->mType:Lcom/miui/maml/elements/ListScreenElement$ColumnInfo$Type;
@@ -280,7 +280,7 @@
 
     packed-switch v10, :pswitch_data_0
 
-    .line 278
+    .line 268
     sget-object v10, Lcom/miui/maml/data/ContentProviderBinder$2;->$SwitchMap$com$miui$maml$elements$ListScreenElement$ColumnInfo$Type:[I
 
     iget-object v8, v8, Lcom/miui/maml/elements/ListScreenElement$ColumnInfo;->mType:Lcom/miui/maml/elements/ListScreenElement$ColumnInfo$Type;
@@ -295,7 +295,7 @@
 
     goto :goto_3
 
-    .line 272
+    .line 262
     :pswitch_0
     invoke-interface {p1, v9}, Landroid/database/Cursor;->getBlob(I)[B
 
@@ -303,7 +303,7 @@
 
     if-eqz v8, :cond_5
 
-    .line 274
+    .line 264
     array-length v9, v8
 
     invoke-static {v8, v4, v9}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
@@ -314,7 +314,7 @@
 
     goto :goto_3
 
-    .line 269
+    .line 259
     :pswitch_1
     invoke-interface {p1, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
@@ -324,7 +324,7 @@
 
     goto :goto_3
 
-    .line 289
+    .line 279
     :pswitch_2
     invoke-interface {p1, v9}, Landroid/database/Cursor;->getLong(I)J
 
@@ -338,7 +338,7 @@
 
     goto :goto_3
 
-    .line 286
+    .line 276
     :pswitch_3
     invoke-interface {p1, v9}, Landroid/database/Cursor;->getInt(I)I
 
@@ -352,7 +352,7 @@
 
     goto :goto_3
 
-    .line 283
+    .line 273
     :pswitch_4
     invoke-interface {p1, v9}, Landroid/database/Cursor;->getFloat(I)F
 
@@ -366,7 +366,7 @@
 
     goto :goto_3
 
-    .line 280
+    .line 270
     :pswitch_5
     invoke-interface {p1, v9}, Landroid/database/Cursor;->getDouble(I)D
 
@@ -384,13 +384,13 @@
 
     goto :goto_2
 
-    .line 296
+    .line 286
     :cond_6
     iget-object v7, p0, Lcom/miui/maml/data/ContentProviderBinder$List;->mList:Lcom/miui/maml/elements/ListScreenElement;
 
     invoke-virtual {v7, v3}, Lcom/miui/maml/elements/ListScreenElement;->addItem([Ljava/lang/Object;)V
 
-    .line 297
+    .line 287
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
     add-int/lit8 v6, v6, 0x1

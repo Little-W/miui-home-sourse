@@ -27,16 +27,16 @@
 
 .field public static final branch_deepview_loading:I = 0x7f06007f
 
-.field public static final notification_action_color_filter:I = 0x7f060350
+.field public static final notification_action_color_filter:I = 0x7f060352
 
-.field public static final notification_icon_bg_color:I = 0x7f060351
+.field public static final notification_icon_bg_color:I = 0x7f060353
 
-.field public static final notification_material_background_media_default_color:I = 0x7f060352
+.field public static final notification_material_background_media_default_color:I = 0x7f060354
 
-.field public static final primary_text_default_material_dark:I = 0x7f06035c
+.field public static final primary_text_default_material_dark:I = 0x7f06035e
 
-.field public static final ripple_material_light:I = 0x7f06037e
+.field public static final ripple_material_light:I = 0x7f060380
 
-.field public static final secondary_text_default_material_dark:I = 0x7f06039f
+.field public static final secondary_text_default_material_dark:I = 0x7f0603a1
 
-.field public static final secondary_text_default_material_light:I = 0x7f0603a0
+.field public static final secondary_text_default_material_light:I = 0x7f0603a2

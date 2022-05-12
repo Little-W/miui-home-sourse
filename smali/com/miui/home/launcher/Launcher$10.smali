@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 2119
+    .line 2127
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$10;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,14 +35,14 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 2128
+    .line 2136
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$10;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$1802(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 2129
+    .line 2137
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$10;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
@@ -59,7 +59,7 @@
 
     invoke-virtual {v0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 2130
+    .line 2138
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$10;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
@@ -74,14 +74,14 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 2122
+    .line 2130
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$10;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$1802(Lcom/miui/home/launcher/Launcher;Z)Z
 
-    .line 2123
+    .line 2131
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$10;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$1900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;

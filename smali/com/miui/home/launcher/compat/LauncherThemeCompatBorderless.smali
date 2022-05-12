@@ -53,7 +53,7 @@
     .line 28
     iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
-    const v1, 0x7f070164
+    const v1, 0x7f07016e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -73,7 +73,7 @@
 
     iget-object v1, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
-    const v2, 0x7f0700fe
+    const v2, 0x7f070101
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -87,7 +87,7 @@
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
-    const v1, 0x7f070131
+    const v1, 0x7f07013b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -98,7 +98,7 @@
     .line 33
     iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
-    const v1, 0x7f07012f
+    const v1, 0x7f070139
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -109,7 +109,7 @@
     .line 34
     iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
-    const v1, 0x7f070130
+    const v1, 0x7f07013a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -120,7 +120,7 @@
     .line 35
     iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
-    const v1, 0x7f070097
+    const v1, 0x7f07009a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -131,7 +131,7 @@
     .line 36
     iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
-    const v1, 0x7f070094
+    const v1, 0x7f070097
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -142,7 +142,7 @@
     .line 37
     iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
-    const v1, 0x7f07009a
+    const v1, 0x7f07009d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -153,7 +153,7 @@
     .line 38
     iget-object v0, p0, Lcom/miui/home/launcher/compat/LauncherThemeCompatBorderless;->mResource:Landroid/content/res/Resources;
 
-    const v1, 0x7f070099
+    const v1, 0x7f07009c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

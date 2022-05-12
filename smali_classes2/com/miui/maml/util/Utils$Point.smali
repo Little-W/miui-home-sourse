@@ -24,13 +24,13 @@
 .method public constructor <init>(DD)V
     .locals 0
 
-    .line 134
+    .line 132
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 135
+    .line 133
     iput-wide p1, p0, Lcom/miui/maml/util/Utils$Point;->x:D
 
-    .line 136
+    .line 134
     iput-wide p3, p0, Lcom/miui/maml/util/Utils$Point;->y:D
 
     return-void
@@ -41,7 +41,7 @@
 .method public Offset(Lcom/miui/maml/util/Utils$Point;)V
     .locals 4
 
-    .line 140
+    .line 138
     iget-wide v0, p0, Lcom/miui/maml/util/Utils$Point;->x:D
 
     iget-wide v2, p1, Lcom/miui/maml/util/Utils$Point;->x:D
@@ -50,7 +50,7 @@
 
     iput-wide v0, p0, Lcom/miui/maml/util/Utils$Point;->x:D
 
-    .line 141
+    .line 139
     iget-wide v0, p0, Lcom/miui/maml/util/Utils$Point;->y:D
 
     iget-wide v2, p1, Lcom/miui/maml/util/Utils$Point;->y:D
@@ -65,7 +65,7 @@
 .method minus(Lcom/miui/maml/util/Utils$Point;)Lcom/miui/maml/util/Utils$Point;
     .locals 7
 
-    .line 145
+    .line 143
     new-instance v0, Lcom/miui/maml/util/Utils$Point;
 
     iget-wide v1, p0, Lcom/miui/maml/util/Utils$Point;->x:D

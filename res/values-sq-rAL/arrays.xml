@@ -2,7 +2,7 @@
 <resources>
     <string-array name="animation_rate_entries">
         <item>Elegance</item>
-        <item>Gjendja</item>
+        <item>Balance</item>
         <item>Minimalist</item>
     </string-array>
     <string-array name="cell_layout_size_entries">

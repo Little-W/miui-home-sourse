@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3734
+    .line 3742
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$25;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,7 +35,7 @@
 .method public onChange(Z)V
     .locals 1
 
-    .line 3737
+    .line 3745
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getParallelExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object p1
