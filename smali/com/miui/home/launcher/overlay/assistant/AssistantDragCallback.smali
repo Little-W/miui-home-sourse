@@ -318,7 +318,7 @@
     .line 116
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragCallback;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    const p2, 0x7f100435
+    const p2, 0x7f100439
 
     const/4 p3, 0x0
 
@@ -1153,7 +1153,7 @@
     .line 102
     iget-object p1, p0, Lcom/miui/home/launcher/overlay/assistant/AssistantDragCallback;->mLauncher:Lcom/miui/home/launcher/Launcher;
 
-    const v0, 0x7f100435
+    const v0, 0x7f100439
 
     const/4 v1, 0x0
 

@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">Tunggu sehingga peranti anda but semula sepenuhnya sebelum membuka aplikasi</string>
     <string name="add_custom_category">Khas</string>
     <string name="add_screen">Tambah skrin</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Semua apl berjaya ditambah</string>
     <string name="afternoon">Petang</string>
     <string name="agree_button">Setuju</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">Ikon berjaya disusun</string>
     <string name="one_key_call_title">Klik untuk dail</string>
     <string name="online_wallpaper">Dalam talian</string>
+    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Batal</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Matikan</string>
     <string name="open_personal_assistant_dialog_desc">Setelah mematikan App vault, anda tidak akan dapat melihat atau menggunakan widget App vault. Versi terbaru mereka tidak akan tersedia untuk anda juga. Matikan juga?</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">Susun atur Skrin Utama dalaman dan luaran diselaraskan dalam versi baru.</string>
     <string name="ota_layout_adjustment_title">Susun atur Skrin Utama</string>
     <string name="out_of_space">Tiada lagi ruang di Skrin Utama ini.</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Render animasi pada ikon aplikasi pihak ketiga</string>
     <string name="perfect_icons_switch_title">Animasi ikon global</string>
     <string name="permdesc_install_shortcut">Benarkan apl untuk tambah pintasan tanpa campur tangan pengguna.</string>

@@ -443,7 +443,7 @@
     move-result-object v0
 
     .line 83
-    invoke-static {}, Lio/reactivex2/android/schedulers/AndroidSchedulers;->mainThread()Lio/reactivex2/Scheduler;
+    invoke-static {}, Lio/reactivex2/schedulers/Schedulers;->io()Lio/reactivex2/Scheduler;
 
     move-result-object v1
 

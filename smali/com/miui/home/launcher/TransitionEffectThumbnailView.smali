@@ -126,7 +126,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/TransitionEffectThumbnailView;->mResources:Landroid/content/res/Resources;
 
-    const v1, 0x7f07040d
+    const v1, 0x7f070414
 
     .line 54
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -516,7 +516,7 @@
     .line 183
     iget-object v4, p0, Lcom/miui/home/launcher/TransitionEffectThumbnailView;->mResources:Landroid/content/res/Resources;
 
-    const v5, 0x7f0603d0
+    const v5, 0x7f0603d1
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -547,7 +547,7 @@
     .line 189
     iget-object v2, p0, Lcom/miui/home/launcher/TransitionEffectThumbnailView;->mResources:Landroid/content/res/Resources;
 
-    const v3, 0x7f0603cf
+    const v3, 0x7f0603d0
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 

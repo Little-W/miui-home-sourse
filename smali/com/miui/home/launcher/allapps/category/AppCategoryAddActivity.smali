@@ -165,7 +165,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f1000dc
+    const p2, 0x7f1000dd
 
     invoke-virtual {p0, p2}, Lcom/miui/home/launcher/allapps/category/AppCategoryAddActivity;->getString(I)Ljava/lang/String;
 

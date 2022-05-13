@@ -273,7 +273,7 @@
 .method public onCreatePreferences(Landroid/os/Bundle;Ljava/lang/String;)V
     .locals 0
 
-    const p1, 0x7f130013
+    const p1, 0x7f130014
 
     .line 51
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/LauncherPersonalAssistantSettingActivity$LauncherPersonalAssistantSettingFragment;->addPreferencesFromResource(I)V

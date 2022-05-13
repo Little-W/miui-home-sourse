@@ -31,7 +31,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V
     .locals 0
 
-    .line 7525
+    .line 7533
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iput-object p2, p0, Lcom/miui/home/launcher/Launcher$67;->val$sender:Ljava/lang/String;
@@ -50,7 +50,7 @@
 .method public run()V
     .locals 5
 
-    .line 7528
+    .line 7536
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
     iget-object v1, p0, Lcom/miui/home/launcher/Launcher$67;->val$sender:Ljava/lang/String;
@@ -61,12 +61,12 @@
 
     move-result-object v0
 
-    .line 7529
+    .line 7537
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 7530
+    .line 7538
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -85,7 +85,7 @@
 
     check-cast v2, Lcom/miui/home/launcher/ShortcutInfo;
 
-    .line 7531
+    .line 7539
     iget-object v3, p0, Lcom/miui/home/launcher/Launcher$67;->val$sender:Ljava/lang/String;
 
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -106,23 +106,23 @@
 
     if-eqz v3, :cond_0
 
-    .line 7532
+    .line 7540
     iget-object v3, p0, Lcom/miui/home/launcher/Launcher$67;->val$context:Landroid/content/Context;
 
     invoke-static {v3, v2}, Lcom/miui/home/launcher/LauncherModel;->deleteItemFromDatabase(Landroid/content/Context;Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 7533
+    .line 7541
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 7536
+    .line 7544
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Launcher;->bindShortcutsRemoved(Ljava/util/ArrayList;)V
 
-    .line 7537
+    .line 7545
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$67;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/Launcher;->access$8200(Lcom/miui/home/launcher/Launcher;Ljava/util/List;)V

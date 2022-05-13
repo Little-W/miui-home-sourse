@@ -45,12 +45,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f070118
+    const v1, 0x7f07011e
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f070119
+    const v1, 0x7f07011f
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -59,21 +59,21 @@
 
     iput v1, p0, Lcom/miui/home/launcher/anim/FoldEditEnterAnim;->mFoldEditBgMargin:I
 
-    const v1, 0x7f07011a
+    const v1, 0x7f070120
 
     .line 37
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v1
 
-    const v2, 0x7f0600c2
+    const v2, 0x7f0600c3
 
     .line 38
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
-    const v3, 0x7f0600c1
+    const v3, 0x7f0600c2
 
     .line 39
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getColor(I)I
@@ -425,12 +425,12 @@
 
     if-eqz v1, :cond_0
 
-    const v1, 0x7f070118
+    const v1, 0x7f07011e
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f070119
+    const v1, 0x7f07011f
 
     :goto_0
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

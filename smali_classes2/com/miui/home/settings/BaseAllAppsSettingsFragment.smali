@@ -85,7 +85,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100230
+    const v1, 0x7f100232
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f10022f
+    const v1, 0x7f100231
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -111,7 +111,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100231
+    const v1, 0x7f100233
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -124,7 +124,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100058
+    const v1, 0x7f100059
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -137,7 +137,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100057
+    const v1, 0x7f100058
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -389,14 +389,14 @@
 
     invoke-direct {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f10004c
+    const v1, 0x7f10004d
 
     .line 268
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setTitle(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f10004b
+    const v1, 0x7f10004c
 
     .line 269
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -407,7 +407,7 @@
 
     invoke-direct {v1, p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment$4;-><init>(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)V
 
-    const v2, 0x7f1000d4
+    const v2, 0x7f1000d5
 
     .line 270
     invoke-virtual {v0, v2, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
@@ -418,7 +418,7 @@
 
     invoke-direct {v1, p0}, Lcom/miui/home/settings/BaseAllAppsSettingsFragment$3;-><init>(Lcom/miui/home/settings/BaseAllAppsSettingsFragment;)V
 
-    const v2, 0x7f100240
+    const v2, 0x7f100242
 
     .line 276
     invoke-virtual {v0, v2, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;

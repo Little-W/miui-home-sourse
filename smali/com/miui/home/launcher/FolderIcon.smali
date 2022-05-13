@@ -287,14 +287,14 @@
 .method private calculateItemIconSize(Landroid/content/res/Resources;)V
     .locals 3
 
-    const v0, 0x7f07013b
+    const v0, 0x7f070142
 
     .line 353
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
-    const v1, 0x7f070139
+    const v1, 0x7f070140
 
     .line 354
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -1256,7 +1256,7 @@
 
     aput-object v1, v0, v2
 
-    const v1, 0x7f10006d
+    const v1, 0x7f10006e
 
     invoke-virtual {p1, v1, v0}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 

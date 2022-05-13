@@ -105,7 +105,7 @@
 
     iput-object p2, p0, Lcom/miui/home/recents/views/TaskViewHeader;->mAppInfoDescFormat:Ljava/lang/String;
 
-    const p2, 0x7f0703cc
+    const p2, 0x7f0703d3
 
     .line 81
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

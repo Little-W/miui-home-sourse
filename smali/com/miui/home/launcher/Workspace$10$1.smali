@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace$10;)V
     .locals 0
 
-    .line 2524
+    .line 2536
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$10$1;->this$1:Lcom/miui/home/launcher/Workspace$10;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
 
     const/4 v0, 0x0
 
-    .line 2527
+    .line 2539
     :goto_0
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$10$1;->this$1:Lcom/miui/home/launcher/Workspace$10;
 
@@ -52,7 +52,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 2528
+    .line 2540
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$10$1;->this$1:Lcom/miui/home/launcher/Workspace$10;
 
     iget-object v1, v1, Lcom/miui/home/launcher/Workspace$10;->this$0:Lcom/miui/home/launcher/Workspace;
@@ -63,7 +63,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 2530
+    .line 2542
     invoke-virtual {v1}, Lcom/miui/home/launcher/CellLayout;->relayoutByOccupiedCells()V
 
     :cond_0
@@ -71,7 +71,7 @@
 
     goto :goto_0
 
-    .line 2533
+    .line 2545
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$10$1;->this$1:Lcom/miui/home/launcher/Workspace$10;
 
@@ -79,7 +79,7 @@
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Workspace;->checkAllScreensToSelfDelete()V
 
-    .line 2534
+    .line 2546
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$10$1;->this$1:Lcom/miui/home/launcher/Workspace$10;
 
     iget-object v0, v0, Lcom/miui/home/launcher/Workspace$10;->this$0:Lcom/miui/home/launcher/Workspace;

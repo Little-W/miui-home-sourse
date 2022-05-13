@@ -52,6 +52,7 @@
     <string name="activity_not_unlocked">重启后需等待应用响应，请稍后再试</string>
     <string name="add_custom_category">自定义</string>
     <string name="add_screen">增加屏幕</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">全部应用已添加</string>
     <string name="afternoon">下午</string>
     <string name="agree_button">同意</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">桌面图标整理完毕</string>
     <string name="one_key_call_title">一键呼叫</string>
     <string name="online_wallpaper">在线壁纸</string>
+    <string name="open_pad_personal_assistant_settings">桌面小部件</string>
     <string name="open_personal_assistant_dialog_btn_cancel">取消</string>
     <string name="open_personal_assistant_dialog_btn_confirm">关闭</string>
     <string name="open_personal_assistant_dialog_desc">关闭后你将无法在桌面最左屏查看小部件信息，使用小部件服务，同时也意味着无法收到后续的优化更新，是否确认关闭？</string>

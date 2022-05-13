@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Az alkalmazások megnyitása előtt várjon, amíyg eszköze teljesen újrabootol</string>
     <string name="add_custom_category">Egyedi</string>
     <string name="add_screen">Képernyő hozzáadása</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Összes alkalmazás sikeresen hozzáadva</string>
     <string name="afternoon">Délután</string>
     <string name="agree_button">Elfogadom</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">A felhúzás az App Drawer megnyitására van fenntartva. Váltson normál Kezdőképernyő módra és próbálja újra.</string>
     <string name="all_apps_suggestions">Javasolt alkalmazások</string>
     <string name="am">DE</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Animációs sebesség</string>
     <string name="announce_for_app_move_in_folder">A(z) %1$d helyzetre ugrott a mappában</string>
     <string name="announce_for_checked">%1$s, ellenőrizve</string>
     <string name="announce_for_choose_default_screen">%1$d. képernyő beállítása alapértelmezett Kezdőképernyőnek</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Ikonok sikeresen elrendezve</string>
     <string name="one_key_call_title">Koppintson a tárcsázáshoz</string>
     <string name="online_wallpaper">Online</string>
+    <string name="open_pad_personal_assistant_settings">Kezdőképernyő widgetek</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Mégse</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Kikapcsolás</string>
     <string name="open_personal_assistant_dialog_desc">A Gyorselérési kártyák kikapcsolása után nem fogja látni és nem fogja tudni használni a Gyorselérési kártyák kisalkalmazást. Ezek frissített verziója sem lesz elérhető az Ön számára. Mindenképpen kikapcsolja?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">A belső és a külső kezdőképernyő elrendezése szinkronizálva van az új verzióban.</string>
     <string name="ota_layout_adjustment_title">Kezdőképernyő-elrendezések</string>
     <string name="out_of_space">Nincs több hely ezen a képernyőn.</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Animációk megjelenítése harmadik felek alkalmazásikonjain</string>
     <string name="perfect_icons_switch_title">Globális ikonanimációk</string>
     <string name="permdesc_install_shortcut">Lehetővé teszi az alkalmazás számára a parancsikonok létrehozását a felhasználó beavatkozása nélkül.</string>

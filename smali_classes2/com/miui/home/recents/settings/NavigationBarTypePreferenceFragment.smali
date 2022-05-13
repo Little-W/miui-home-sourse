@@ -313,7 +313,7 @@
 
     const-string v1, "com.android.settings.KeyShortcutSettingsFragment"
 
-    const v2, 0x7f100244
+    const v2, 0x7f100246
 
     .line 111
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->getContext()Landroid/content/Context;
@@ -343,7 +343,7 @@
 
     const-string v1, "com.android.settings.AutoDisableScreenButtonsAppListSettings"
 
-    const v2, 0x7f1000ac
+    const v2, 0x7f1000ad
 
     .line 114
     invoke-virtual {p0}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->getContext()Landroid/content/Context;
@@ -667,7 +667,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f1002d8
+    const v2, 0x7f1002da
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -851,7 +851,7 @@
     .line 287
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mNavigationPosition:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v0, 0x7f100300
+    const v0, 0x7f100302
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setValue(I)V
 
@@ -870,7 +870,7 @@
     .line 289
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mNavigationPosition:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v0, 0x7f100301
+    const v0, 0x7f100303
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setValue(I)V
 
@@ -880,7 +880,7 @@
     :cond_1
     iget-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mNavigationPosition:Lcom/miui/home/settings/preference/ValuePreference;
 
-    const v0, 0x7f1002ff
+    const v0, 0x7f100301
 
     invoke-virtual {p1, v0}, Lcom/miui/home/settings/preference/ValuePreference;->setValue(I)V
 
@@ -1046,12 +1046,12 @@
 
     invoke-direct {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f1002ec
+    const v1, 0x7f1002ee
 
     .line 272
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setTitle(I)V
 
-    const v1, 0x7f1002eb
+    const v1, 0x7f1002ed
 
     .line 273
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setMessage(I)V
@@ -1080,12 +1080,12 @@
 
     if-eqz p1, :cond_0
 
-    const v1, 0x7f1002cd
+    const v1, 0x7f1002cf
 
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f1002cf
+    const v1, 0x7f1002d1
 
     :goto_0
     invoke-virtual {v0, v1}, Landroidx/preference/Preference;->setSummary(I)V
@@ -1425,7 +1425,7 @@
 
     iput-object p1, p0, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->mContext:Landroid/content/Context;
 
-    const p1, 0x7f13001e
+    const p1, 0x7f13001f
 
     .line 85
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/settings/NavigationBarTypePreferenceFragment;->setPreferencesFromResource(ILjava/lang/String;)V

@@ -447,7 +447,7 @@
 
     if-eqz v0, :cond_0
 
-    const v1, 0x7f0603eb
+    const v1, 0x7f0603ec
 
     .line 78
     invoke-interface {v0}, Lcom/mi/globallauncher/BranchAllAppsIndicator$IBranchAllAppsIndicatorCallBack;->getHandleMessage()Landroid/widget/TextView;

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 1991
+    .line 1995
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$7;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onViewAttachedToWindow(Landroid/view/View;)V
     .locals 3
 
-    .line 1994
+    .line 1998
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$7;->this$0:Lcom/miui/home/launcher/Launcher;
 
     new-instance v1, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;
@@ -71,7 +71,7 @@
 .method public onViewDetachedFromWindow(Landroid/view/View;)V
     .locals 1
 
-    .line 1999
+    .line 2003
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$7;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1300(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;
@@ -80,7 +80,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 2000
+    .line 2004
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$7;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1300(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;
@@ -89,7 +89,7 @@
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/wallpaper/WallpaperZoomManager;->abortAnimations()V
 
-    .line 2001
+    .line 2005
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$7;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/4 v0, 0x0

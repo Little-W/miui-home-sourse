@@ -264,7 +264,7 @@
 
     aput-object v5, v3, v6
 
-    const v5, 0x7f100140
+    const v5, 0x7f100141
 
     invoke-virtual {p1, v5, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -479,7 +479,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700a4
+    const v1, 0x7f0700a7
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -503,7 +503,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0703a7
+    const v1, 0x7f0703ae
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -525,7 +525,7 @@
     .line 58
     iget-object v0, p0, Lcom/miui/home/launcher/DefaultScreenPreviewView;->mDefaultScreenPreviewActionBar:Lcom/miui/home/launcher/view/LauncherActionBar;
 
-    const v1, 0x7f100160
+    const v1, 0x7f100161
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/view/LauncherActionBar;->setTitle(I)V
 
@@ -606,7 +606,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0703fd
+    const v1, 0x7f070404
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -617,7 +617,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0703fc
+    const v2, 0x7f070403
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -628,7 +628,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0700a5
+    const v3, 0x7f0700a8
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -692,7 +692,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0700a6
+    const v5, 0x7f0700a9
 
     invoke-static {v4, v5}, Landroidx/core/content/res/ResourcesCompat;->getFloat(Landroid/content/res/Resources;I)F
 

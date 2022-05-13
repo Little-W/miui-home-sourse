@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">ਐਪਾਂ ਖੋਲ੍ਹਣ ਤੋਂ ਪਹਿਲਾਂ ਆਪਣੇ ਡੀਵਾਈਸ ਦੇ ਪੂਰੀ ਤਰ੍ਹਾਂ ਰੀਬੂਟ ਕੀਤੇ ਜਾਣ ਤੱਕ ਉਡੀਕ ਕਰੋ</string>
     <string name="add_custom_category">ਕਸਟਮ</string>
     <string name="add_screen">ਸਕ੍ਰੀਨ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">ਸਾਰੀਆਂ ਐਪਾਂ ਸਫ਼ਲਤਾਪੂਰਵਕ ਸ਼ਾਮਲ ਕੀਤੀਆਂ ਗਈਆਂ</string>
     <string name="afternoon">ਬਾਅਦ ਦੁਪਹਿਰ</string>
     <string name="agree_button">ਸਹਿਮਤ ਹਾਂ</string>
@@ -67,7 +68,7 @@
     <string name="all_apps_slide_up_tips">"ਐਪ ਡ੍ਰਾਅਰ ਨੂੰ ਖਲ੍ਹਣ ਲਈ ਉੱਪਰ ਵੱਲ ਸ੍ਵਾਈਪ ਕਰਨਾ ਰਾਖਵਾਂ ਹੈ। ਨਿਯਮਿਤ ਹੋਮ ਸਕ੍ਰੀਨ ਮੋਡ 'ਤੇ ਸਵਿੱਚ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"</string>
     <string name="all_apps_suggestions">ਐਪ ਸੁਝਾਅ</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">ਐਨੀਮੇਸ਼ਨ ਗਤੀ</string>
     <string name="announce_for_app_move_in_folder">"ਫ਼ੋਲਡਰ ਵਿੱਚ %1$d ਸਥਿਤੀ 'ਤੇ ਲੈ ਜਾਓ"</string>
     <string name="announce_for_checked">%1$s, ਜਾਂਚਿਆ ਗਿਆ</string>
     <string name="announce_for_choose_default_screen">ਸਕ੍ਰੀਨ %1$d ਵਜੋਂ ਪੂਰਵ-ਨਿਰਧਾਰਤ ਹੋਮ ਸਕ੍ਰੀਨ ਸੈੱਟ ਕਰੋ</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">ਆਈਕਾਨ ਸਫ਼ਲਤਾਪੂਰਵਕ ਵਿਵਸਥਿਤ ਕੀਤੇ ਗਏ</string>
     <string name="one_key_call_title">ਡਾਇਲ ਕਰਨ ਲਈ ਟੈਪ ਕਰੋ</string>
     <string name="online_wallpaper">ਆਨਲਾਈਨ</string>
+    <string name="open_pad_personal_assistant_settings">ਹੋਮ ਸਕ੍ਰੀਨ ਵਿਜੇਟ</string>
     <string name="open_personal_assistant_dialog_btn_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="open_personal_assistant_dialog_btn_confirm">ਬੰਦ ਕਰੋ</string>
     <string name="open_personal_assistant_dialog_desc">ਤੁਹਾਡੇ ਵੱਲੋਂ ਐਪ ਵਾਲੇਟ ਬੰਦ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਤੁਸੀਂ ਐਪ ਵਾਲੇਟ ਵਿਜੇਟ ਨੂੰ ਦੇਖ ਜਾਂ ਉਹਨਾਂ ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਕਰ ਸਕੋਗੇ। ਉਹਨਾਂ ਦੇ ਅੱਪਡੇਟ ਕੀਤੇ ਵਰਜਨ ਵੀ ਉਪਲਬਧ ਨਹੀਂ ਹੋਣਗੇ। ਫਿਰ ਵੀ ਬੰਦ ਕਰਨਾ ਹੈ?</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">ਅੰਦਰਲੇ ਅਤੇ ਬਾਹਰਲੇ ਹੋਮ ਸਕ੍ਰੀਨ ਲੇਆਉਟ ਨਵੇਂ ਵਰਜਨ ਵਿੱਚ ਸਿੰਕ੍ਰੋਨਾਈਜ਼ ਕੀਤੇ ਗਏ ਸਨ।</string>
     <string name="ota_layout_adjustment_title">ਹੋਮ ਸਕ੍ਰੀਨ ਲੇਆਉਟ</string>
     <string name="out_of_space">"ਇਸ ਹੋਮ ਸਕ੍ਰੀਨ 'ਤੇ ਹੋਰ ਥਾਂ ਨਹੀਂ ਹੈ"</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">ਤੀਜੀ ਧੀਰ ਐਪ ਪ੍ਰਤੀਕਾਂ ਉੱਤੇ ਐਨੀਮੇਸ਼ਨਾਂ ਰੇਂਡਰ ਕਰੋ</string>
     <string name="perfect_icons_switch_title">ਵਿਸ਼ਵ-ਵਿਆਪੀ ਪ੍ਰਤੀਕ ਐਨੀਮੇਸ਼ਨ</string>
     <string name="permdesc_install_shortcut">ਐਪ ਨੂੰ, ਵਰਤੋਂਕਾਰ ਦੇ ਦਖ਼ਲ ਤੋਂ ਬਿਨਾ ਸ਼ਾਰਟਕੱਟ ਸ਼ਾਮਲ ਕਰਨ ਦਿੰਦਾ ਹੈ।</string>

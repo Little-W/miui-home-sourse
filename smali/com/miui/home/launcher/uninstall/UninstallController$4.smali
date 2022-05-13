@@ -78,7 +78,7 @@
 
     aput-object v2, v1, v3
 
-    const v2, 0x7f100067
+    const v2, 0x7f100068
 
     .line 249
     invoke-virtual {v0, v2, v1}, Lcom/miui/home/launcher/Application;->getString(I[Ljava/lang/Object;)Ljava/lang/String;

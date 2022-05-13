@@ -228,7 +228,7 @@
     return-void
 
     :cond_1
-    const p2, 0x7f07017d
+    const p2, 0x7f070184
 
     .line 62
     invoke-virtual {p3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -243,7 +243,7 @@
 
     if-eqz p4, :cond_2
 
-    const p2, 0x7f070399
+    const p2, 0x7f0703a0
 
     .line 65
     :cond_2

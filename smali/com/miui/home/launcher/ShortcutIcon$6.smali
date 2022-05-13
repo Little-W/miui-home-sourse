@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ShortcutIcon;)V
     .locals 0
 
-    .line 340
+    .line 339
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$6;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 2
 
-    .line 343
+    .line 342
     invoke-static {}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->getMonitor()Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;
 
     move-result-object v0
@@ -53,12 +53,12 @@
 
     invoke-virtual {v0, p2, v1}, Lcom/miui/home/launcher/multiselect/MultiSelectMonitor;->onShortCutIconChecked(ZLcom/miui/home/launcher/ShortcutInfo;)V
 
-    .line 344
+    .line 343
     iget-object p2, p0, Lcom/miui/home/launcher/ShortcutIcon$6;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     invoke-static {p2}, Lcom/miui/home/launcher/ShortcutIcon;->access$200(Lcom/miui/home/launcher/ShortcutIcon;)V
 
-    .line 345
+    .line 344
     invoke-static {}, Lcom/miui/home/launcher/common/HapticFeedbackCompat;->getInstance()Lcom/miui/home/launcher/common/HapticFeedbackCompat;
 
     move-result-object p2

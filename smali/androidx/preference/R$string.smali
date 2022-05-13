@@ -69,20 +69,20 @@
 
 .field public static final abc_toolbar_collapse_description:I = 0x7f10001b
 
-.field public static final copy:I = 0x7f100141
+.field public static final copy:I = 0x7f100142
 
-.field public static final expand_button_title:I = 0x7f1001a5
+.field public static final expand_button_title:I = 0x7f1001a7
 
-.field public static final not_set:I = 0x7f100317
+.field public static final not_set:I = 0x7f100319
 
-.field public static final preference_copied:I = 0x7f10034b
+.field public static final preference_copied:I = 0x7f10034f
 
-.field public static final search_menu_title:I = 0x7f1003a5
+.field public static final search_menu_title:I = 0x7f1003a9
 
-.field public static final status_bar_notification_info_overflow:I = 0x7f1003e4
+.field public static final status_bar_notification_info_overflow:I = 0x7f1003e8
 
-.field public static final summary_collapsed_preference_list:I = 0x7f1003ef
+.field public static final summary_collapsed_preference_list:I = 0x7f1003f3
 
-.field public static final v7_preference_off:I = 0x7f100455
+.field public static final v7_preference_off:I = 0x7f100459
 
-.field public static final v7_preference_on:I = 0x7f100456
+.field public static final v7_preference_on:I = 0x7f10045a

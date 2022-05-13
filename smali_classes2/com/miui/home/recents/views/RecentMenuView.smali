@@ -177,7 +177,7 @@
 
     move-result-object p3
 
-    const p4, 0x7f0703c5
+    const p4, 0x7f0703cc
 
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -190,7 +190,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f0703c4
+    const p3, 0x7f0703cb
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -751,7 +751,7 @@
     .line 321
     iget-object v0, p0, Lcom/miui/home/recents/views/RecentMenuView;->mScreeningToast:Landroid/widget/Toast;
 
-    const v3, 0x7f10036c
+    const v3, 0x7f100370
 
     if-eqz v0, :cond_0
 
@@ -1125,7 +1125,7 @@
 
     move-result-object v10
 
-    const v11, 0x7f0703cc
+    const v11, 0x7f0703d3
 
     invoke-virtual {v10, v11}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1585,7 +1585,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f100360
+    const v2, 0x7f100364
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2052,7 +2052,7 @@
 
     move-result-object v3
 
-    const v5, 0x7f100363
+    const v5, 0x7f100367
 
     invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2066,7 +2066,7 @@
 
     move-result-object v3
 
-    const v5, 0x7f100361
+    const v5, 0x7f100365
 
     invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2444,7 +2444,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0703c5
+    const v2, 0x7f0703cc
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2457,7 +2457,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0703c4
+    const v1, 0x7f0703cb
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

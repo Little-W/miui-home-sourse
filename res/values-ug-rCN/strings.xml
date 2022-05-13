@@ -25,6 +25,7 @@
     <string name="activity_not_unlocked">قايتا قوزغاتقاندىن كېيىن ئەپ ئىنكاسىنى ساقلىشى كېرەك،سەل تۇرۇپ سىناڭ</string>
     <string name="add_custom_category">ئۆزى بەلگىلەش</string>
     <string name="add_screen">ئېكران قوشۇش</string>
+    <string name="add_to_workspace">ئۈستەلگە قوشۇش</string>
     <string name="added_all_category">ھەممە ئەپ قوشۇلدى</string>
     <string name="afternoon">چ ك</string>
     <string name="agree_button">قوشۇلۇش</string>
@@ -623,6 +624,7 @@
     <string name="notification_reset_title">ئۈستەليۈزى سىنبەلگىسى رەتلەندى</string>
     <string name="one_key_call_title">بىر كونۇپكىدا چاقىرىش</string>
     <string name="online_wallpaper">توردىكى تەگلىك</string>
+    <string name="open_pad_personal_assistant_settings">ئېكران يۈزى كىچىك دىتالى</string>
     <string name="open_personal_assistant_dialog_btn_cancel">بىكار قىلىش</string>
     <string name="open_personal_assistant_dialog_btn_confirm">تاقاش</string>
     <string name="open_personal_assistant_dialog_desc">تاقىغاندىن كېيىن سىز ئۈستەل يۈزىدىكى ئەڭ سول ئېكراندىن كىچىك زاپچاسلارنىڭ ئۇچۇرىنى كۆرەلمەيسىز، كىچىك زاپچاسلار مۇلازىمىتىنى ئىشلىتەلمەيسىز، شۇنىڭ بىلەن بىر ۋاقىتتا كېيىنكى ئەلالاشتۇرۇش، يېڭىلاشنى قوبۇل قىلالمايسىز، تاقاشنى جەزىملەشتۈرەمسىز؟</string>

@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Vent til din enhet er fullstendig omstartet før du åpner applikasjoner</string>
     <string name="add_custom_category">Egendefinert</string>
     <string name="add_screen">Legg til skjerm</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Alle appene er lagt til</string>
     <string name="afternoon">Ettermiddag</string>
     <string name="agree_button">Godta</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">Sveiping opp er reservert for åpning av app-skuffen. Bytt til vanlig startskjermmodus og prøv igjen.</string>
     <string name="all_apps_suggestions">App-forslag</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Animasjonshastighet</string>
     <string name="announce_for_app_move_in_folder">Flyttet til posisjon %1$d i mappen</string>
     <string name="announce_for_checked">%1$s, merket av</string>
     <string name="announce_for_choose_default_screen">Sett skjerm %1$d som standard startskjerm</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Ordnet ikoner</string>
     <string name="one_key_call_title">Trykk for å taste</string>
     <string name="online_wallpaper">På nett</string>
+    <string name="open_pad_personal_assistant_settings">Startskjerm-widgets</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Avbryt</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Slå av</string>
     <string name="open_personal_assistant_dialog_desc">Etter at du har slått av Apphvelv, kan du ikke se eller bruke widgets for Apphvelv. Deres oppdaterte versjoner vil heller ikke være tilgjengelig for deg. Slå av likevel?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">Indre og ytre startskjemoppsett ble synkronisert i den nye versjonen.</string>
     <string name="ota_layout_adjustment_title">Startskjemoppsett</string>
     <string name="out_of_space">Ikke mer ledig plass på Startskjermen</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Gjengi animasjoner på ikoner for tredjepartsapper</string>
     <string name="perfect_icons_switch_title">Globale ikonanimasjoner</string>
     <string name="permdesc_install_shortcut">Tillater en app å legge til snarveier uten brukerintervensjon.</string>

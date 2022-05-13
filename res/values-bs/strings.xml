@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Prije otvaranja aplikacija, sačekajte da se uređaj u potpunosti resetira</string>
     <string name="add_custom_category">Prilagođeno</string>
     <string name="add_screen">Dodaj ekran</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Sve aplikacije uspješno dodane</string>
     <string name="afternoon">Popodne</string>
     <string name="agree_button">Prihvatam</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">Prevlačenje nagore je rezervirano za otvaranje Ladice za aplikacije. Prebacite na zadani Početni ekran i pokušajte ponovo.</string>
     <string name="all_apps_suggestions">Prijedlozi aplikacija</string>
     <string name="am">Prije podne</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Brzina animacije</string>
     <string name="announce_for_app_move_in_folder">Premješteno na poziciju %1$d u folderu</string>
     <string name="announce_for_checked">%1$s, provjereno</string>
     <string name="announce_for_choose_default_screen">Postavi ekran %1$d kao zadani početni ekran</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Uspješno posložene ikone</string>
     <string name="one_key_call_title">Dodirni za poziv</string>
     <string name="online_wallpaper">Na mreži</string>
+    <string name="open_pad_personal_assistant_settings">Widgeti Početnog ekrana</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Otkaži</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Isključi</string>
     <string name="open_personal_assistant_dialog_desc">Nakon što isključite Trezor aplikacija, nećete moći vidjeti ili koristiti widgete Trezora aplikacija. Njihove ažurirane verzije vam neće biti dostupnen također. Ipak isključiti?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">Unutrašnji i vanjski izgledi Početnog ekrana su sinhronizirani u novoj verziji.</string>
     <string name="ota_layout_adjustment_title">Izgledi Početnog ekrana</string>
     <string name="out_of_space">Nema više prostora na početnom ekranu</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Prikaži animaciju na ikonama aplikacija trećih strana</string>
     <string name="perfect_icons_switch_title">Animacije globalnih ikona</string>
     <string name="permdesc_install_shortcut">Dozvoljava aplikaciji da doda prečice bez miješanja korisnika.</string>

@@ -492,14 +492,14 @@
 
     invoke-direct {v0, v1, v2}, Lmiuix/appcompat/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
 
-    const v1, 0x7f1000de
+    const v1, 0x7f1000df
 
     .line 283
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setMessage(I)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f1000e0
+    const v1, 0x7f1000e1
 
     new-instance v2, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$KZoDRb95m-IcS1Pf_eaD6EpkhNU;
 
@@ -510,7 +510,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1000df
+    const v1, 0x7f1000e0
 
     new-instance v2, Lcom/miui/home/launcher/allapps/category/-$$Lambda$AppCategorySelectFragment$CSExbwl9CONCQJjmF6i97HqcvKs;
 
@@ -1153,7 +1153,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f1000db
+    const v3, 0x7f1000dc
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1230,7 +1230,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f1000da
+    const v2, 0x7f1000db
 
     invoke-static {v0, v2, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 

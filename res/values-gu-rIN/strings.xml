@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">એપ્સ ખોલતા પહેલાં તમારું ડિવાઇસ પૂરી રીતે રિબૂટ થઈ જાય ત્યાં સુધી રાહ જુઓ</string>
     <string name="add_custom_category">કસ્ટમ</string>
     <string name="add_screen">સ્ક્રીન ઉમેરો</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">બધી ઍપ્લિકેશનો સફળતાપૂર્વક ઉમેરી</string>
     <string name="afternoon">બપોર પછી</string>
     <string name="agree_button">સંમત</string>
@@ -67,7 +68,7 @@
     <string name="all_apps_slide_up_tips">ઉપરની તરફ સ્વાઇપ કરવાનું ઍપ્લિકેશન ડ્રોઅર માટે અનામત રાખવામાં આવ્યું છે. નિયમિત હોમ સ્ક્રીન મોડ પર સ્વિચ કરો અને ફરીથી પ્રયાસ કરો.</string>
     <string name="all_apps_suggestions">ઍપ્લિકેશન સૂચનો</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">એનિમેશન સ્પીડ</string>
     <string name="announce_for_app_move_in_folder">ફોલ્ડરમાં %1$d સ્થાન પર ખસેડ્યું</string>
     <string name="announce_for_checked">%1$s, તપાસાયેલ</string>
     <string name="announce_for_choose_default_screen">સ્ક્રીન %1$d ને ડિફૉલ્ટ હોમ સ્ક્રીન સેટિંગ તરીકે સેટ કરો</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">આઇકન સફળતાપૂર્વક ગોઠવ્યા</string>
     <string name="one_key_call_title">ડાયલ કરવા માટે ટૅપ કરો</string>
     <string name="online_wallpaper">ઑનલાઇન</string>
+    <string name="open_pad_personal_assistant_settings">હોમ સ્ક્રીન વિજેટ્સ</string>
     <string name="open_personal_assistant_dialog_btn_cancel">રદ કરો</string>
     <string name="open_personal_assistant_dialog_btn_confirm">બંધ કરો</string>
     <string name="open_personal_assistant_dialog_desc">તમે એપ વૉલ્ટ બંધ કર્યા પછી, તમે એપ વૉલ્ટ વિજેટ્સને જોઈ અથવા તેનો ઉપયોગ કરી શકશો નહીં. તેમના અપડેટ કરેલા વર્ઝન તમારા માટે પણ ઉપલબ્ધ રહેશે નહીં. કોઈપણ રીતે બંધ કરીએ?</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">આંતરિક અને બાહ્ય હોમ સ્ક્રીન લેઆઉટ નવા વર્ઝનમાં સિંક્રનાઇઝ કરવામાં આવ્યા હતા.</string>
     <string name="ota_layout_adjustment_title">હોમ સ્ક્રીન લેઆઉટ</string>
     <string name="out_of_space">આ હોમ સ્ક્રીન પર હવે વધુ જગ્યા નથી</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">ત્રાહિત પક્ષના ઍપ આઇકન પર એનિમેશન રેન્ડર કરો</string>
     <string name="perfect_icons_switch_title">બ્લોબલ આઇકન એનિમેશન</string>
     <string name="permdesc_install_shortcut">વપરાશકર્તા હસ્તક્ષેપ વિના ઍપ્લિકેશનને શૉર્ટકટ ઉમેરવા દે છે.</string>

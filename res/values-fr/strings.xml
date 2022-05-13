@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">"Attendez que votre appareil soit complètement redémarré avant d'ouvrir les applications"</string>
     <string name="add_custom_category">Personnaliser</string>
     <string name="add_screen">Ajouter un écran</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Ajout de toutes les applications avec succès</string>
     <string name="afternoon">Après midi</string>
     <string name="agree_button">"J'accepte"</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">"Glissez vers le haut pour ouvrir Tiroir application. Changez pour le mode écran d'accueil normal et réessayez."</string>
     <string name="all_apps_suggestions">"Suggestions d'applications"</string>
     <string name="am">Matin</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">"Vitesse de l'animation"</string>
     <string name="announce_for_app_move_in_folder">Déplacé à la position %1$d dans le dossier</string>
     <string name="announce_for_checked">%1$s, vérifié</string>
     <string name="announce_for_choose_default_screen">"Définir l'écran %1$d comme l'écran d'accueil par défaut"</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Icônes organisées avec succès</string>
     <string name="one_key_call_title">Appuyez pour composer</string>
     <string name="online_wallpaper">En ligne</string>
+    <string name="open_pad_personal_assistant_settings">"Widgets de l'Écran d’accueil"</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Annuler</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Désactiver</string>
     <string name="open_personal_assistant_dialog_desc">"Après avoir désactivé le coffre-fort d'applications, vous ne pourrez plus voir ni utiliser les widgets du coffre-fort d'applications. Leurs versions mises à jour ne seront pas non plus disponibles pour vous. Éteindre quand même ?"</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">"Les dispositions de l'écran d'accueil interne et externe ont été synchronisées dans la nouvelle version."</string>
     <string name="ota_layout_adjustment_title">"Paramètres et disposition de l'écran d'accueil"</string>
     <string name="out_of_space">"Plus d'espace sur cet écran d'accueil"</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">"Rendre des animations sur des icônes d'applications tierces"</string>
     <string name="perfect_icons_switch_title">"Animations d'icônes globales"</string>
     <string name="permdesc_install_shortcut">"Permet à une application d'ajouter des raccourcis sans l'intervention de l'utilisateur."</string>

@@ -377,7 +377,7 @@
     .line 147
     iput-object v1, p0, Lcom/miui/home/launcher/UninstallDialogWrapper;->mUninstallConfirmAppDialog:Lmiuix/appcompat/app/AlertDialog;
 
-    const v0, 0x7f100137
+    const v0, 0x7f100138
 
     .line 148
     invoke-virtual {v1, v0}, Lcom/miui/home/launcher/uninstall/SecondConfirmDialog;->setPositiveButTitle(I)V

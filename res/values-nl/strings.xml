@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Wacht totdat uw apparaat volledig opnieuw is opgestart voordat u apps opent</string>
     <string name="add_custom_category">Aangepast</string>
     <string name="add_screen">Scherm toevoegen</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Alle apps succesvol toegevoegd</string>
     <string name="afternoon">Middag</string>
     <string name="agree_button">Akkoord</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">Omhoog vegen wordt gebruikt voor het openen van de App-lade. Schakel over naar de normale Startscherm modus en probeer het opnieuw.</string>
     <string name="all_apps_suggestions">App-suggesties</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Animatiesnelheid</string>
     <string name="announce_for_app_move_in_folder">Verplaatst naar positie %1$d in de map</string>
     <string name="announce_for_checked">%1$s, gecontroleerd</string>
     <string name="announce_for_choose_default_screen">Stel scherm %1$d in als het standaard Startscherm</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Pictogrammen correct gerangschikt</string>
     <string name="one_key_call_title">Tik om te bellen</string>
     <string name="online_wallpaper">Online</string>
+    <string name="open_pad_personal_assistant_settings">Startscherm-widgets</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Annuleren</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Uitschakelen</string>
     <string name="open_personal_assistant_dialog_desc">Nadat u App-kluis heeft uitgeschakeld, kunt u App-kluis widgets niet meer zien of gebruiken. Hun bijgewerkte versies zijn ook niet voor u beschikbaar. Toch uitschakelen?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">In de nieuwe versie zijn de binnen- en buitenkant van het Startscherm lay-out gesynchroniseerd.</string>
     <string name="ota_layout_adjustment_title">Startscherm lay-out</string>
     <string name="out_of_space">Geen ruimte meer op dit Startscherm</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Render animaties op app-iconen van derden</string>
     <string name="perfect_icons_switch_title">Wereldwijde icoon-animaties</string>
     <string name="permdesc_install_shortcut">Een app toestaan snelkoppelingen toe te voegen zonder actie van de gebruiker.</string>

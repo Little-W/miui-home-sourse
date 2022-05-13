@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;I)V
     .locals 0
 
-    .line 1136
+    .line 1144
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$5;->this$0:Lcom/miui/home/launcher/Workspace;
 
     iput p2, p0, Lcom/miui/home/launcher/Workspace$5;->val$finalScreen:I
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 5
 
-    .line 1138
+    .line 1146
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$5;->this$0:Lcom/miui/home/launcher/Workspace;
 
     iget v1, p0, Lcom/miui/home/launcher/Workspace$5;->val$finalScreen:I
@@ -55,7 +55,7 @@
 
     move-result v0
 
-    .line 1139
+    .line 1147
     iget-object v1, p0, Lcom/miui/home/launcher/Workspace$5;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {v1}, Lcom/miui/home/launcher/Workspace;->access$400(Lcom/miui/home/launcher/Workspace;)Ljava/lang/Runnable;

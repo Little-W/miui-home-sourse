@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">செயலிகளைத் திறக்கும் முன்பு, உங்கள் சாதனம் முழுமையாக மறுதொடக்கம் ஆகும் வரை காத்திருக்கவும்</string>
     <string name="add_custom_category">தனிப்பயன்</string>
     <string name="add_screen">திரையை சேர்</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">எல்லா செயலிகளும் வெற்றிகரமாகச் சேர்க்கப்பட்டன</string>
     <string name="afternoon">பிற்பகல்</string>
     <string name="agree_button">ஏற்கிறேன்</string>
@@ -67,7 +68,7 @@
     <string name="all_apps_slide_up_tips">மேல் நோக்கி ஸ்வைப் செய்வது, செயலி வைப்பகத்திற்காக ஒதுக்கப்பட்டுள்ளது. வழக்கமான முகப்புத் திரை பயன்முறைக்கு மாறி, மீண்டும் முயலவும்.</string>
     <string name="all_apps_suggestions">செயலி பரிந்துரைகள்</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">அனிமேஷன் வேகம்</string>
     <string name="announce_for_app_move_in_folder">கோப்புறையில் %1$d நிலைக்கு நகர்த்தப்பட்டது</string>
     <string name="announce_for_checked">%1$s, சரிபார்க்கப்பட்டது</string>
     <string name="announce_for_choose_default_screen">%1$d திரையை இயல்புநிலை முகப்புத் திரையாக அமைத்தது</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">ஐகான்கள் வெற்றிகரமாக வரிசைப்படுத்தப்பட்டன</string>
     <string name="one_key_call_title">டயல்செய்வதற்குத் தட்டவும்</string>
     <string name="online_wallpaper">ஆன்லைன்</string>
+    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
     <string name="open_personal_assistant_dialog_btn_cancel">ரத்துசெய்</string>
     <string name="open_personal_assistant_dialog_btn_confirm">அணை</string>
     <string name="open_personal_assistant_dialog_desc">செயலி வைப்பகத்தை நீங்கள் அணைத்த பிறகு, செயலி வைப்பக விட்ஜெட்களை நீங்கள் பார்க்கவோ, பயன்படுத்தவோ முடியாது. அவற்றின் புதுப்பிக்கப்பட்ட பதிப்புகளும் உங்களுக்குக் கிடைக்காது. இருந்தாலும் அணைக்கவா?</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">புதிய பதிப்பில் உட்புற மற்றும் வெளிப்புற முகப்புத் திரை தளவமைப்புகள் ஒத்திசைக்கப்படும்.</string>
     <string name="ota_layout_adjustment_title">முகப்பு திரை வடிவமைப்புகள்</string>
     <string name="out_of_space">இந்த முகப்பு திரையில் மேலும் இடமில்லை</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">மூன்றாம் தரப்பு செயலி ஐகான்களில் அனிமேஷன்களைக் காட்டு</string>
     <string name="perfect_icons_switch_title">ஒட்டுமொத்த ஐகான் அனிமேஷன்கள்</string>
     <string name="permdesc_install_shortcut">பயனர் குறுக்கீடு இல்லாமல் பயன்பாடு குறுக்குவழிகளை சேர்க்க அனுமதிக்கும்.</string>

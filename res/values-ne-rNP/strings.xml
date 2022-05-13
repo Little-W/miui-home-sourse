@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">एपहरू खोल्न अघि तपाईंको डिभाइस पूर्ण रूपमा रिबुट नहुन्जेलसम्म पर्खनुहोस्</string>
     <string name="add_custom_category">अनुकूलन गर्नुहोस्</string>
     <string name="add_screen">स्क्रिन थप्नुहोस्</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">सबै एपहरू सफलतापूर्वक थपियो</string>
     <string name="afternoon">दिउँसो</string>
     <string name="agree_button">समहत छु</string>
@@ -67,7 +68,7 @@
     <string name="all_apps_slide_up_tips">माथि स्वाइप अप गर्ने एप ड्रयर खोल्नका लागि आरक्षित छ। नियमित होम स्क्रिन मोडमा स्विच गर्नुहोस् र फेरि प्रयास गर्नुहोस्।</string>
     <string name="all_apps_suggestions">एप सुझावहरू</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">एनिमेसन गति</string>
     <string name="announce_for_app_move_in_folder">फोल्डरको %1$d स्थानमा लगियो</string>
     <string name="announce_for_checked">%1$s, जाँची सक्यो</string>
     <string name="announce_for_choose_default_screen">स्क्रीन %1$d पूर्वनिर्धारित होम स्क्रिनको रूपमा सेट गर्नुहोस्</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">आइकनहरू सफलतापूर्वक व्यवस्थित गरियो</string>
     <string name="one_key_call_title">डायल गर्न ट्याप गर्नुहोस्</string>
     <string name="online_wallpaper">अनलाइन</string>
+    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
     <string name="open_personal_assistant_dialog_btn_cancel">रद्द गर्नुहोस्</string>
     <string name="open_personal_assistant_dialog_btn_confirm">अफ गर्नुहोस्</string>
     <string name="open_personal_assistant_dialog_desc">तपाईंले एप भल्ट बन्द गरेपछि, तपाईंले एप भल्ट विजेट हरू हेर्न वा प्रयोग गर्न सक्नुहुने छैन। तिनीहरूको अपडेट गरिएको संस्करण पनि उपलब्ध हुने छैन। जे भए पनि बन्द गर्नुहुन्छ?</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">बाहिरी र भित्री होम स्क्रिन लेटाउटहरू नयाँ संस्करणसंग सिंक गरियो।</string>
     <string name="ota_layout_adjustment_title">होम स्क्रिन लेटाउट</string>
     <string name="out_of_space">यस होम स्क्रिनमा थप खाली ठाउँ छैन</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">तेस्रो पार्टी एप आइकनहरूमा एनिमेसनहरू प्रस्तुत गर्नुहोस्</string>
     <string name="perfect_icons_switch_title">ग्लोबल आइकन एनिमेसनहरू</string>
     <string name="permdesc_install_shortcut">प्रयोगकर्ता इन्टरभेन्सन बिना एपलाई सर्टकटहरू थप्न अनुमति दिनुहोस्।</string>

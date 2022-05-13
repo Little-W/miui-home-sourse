@@ -52,6 +52,7 @@
     <string name="activity_not_unlocked">重啟後需等待應用程式回應，請稍後再試</string>
     <string name="add_custom_category">自訂</string>
     <string name="add_screen">增加螢幕</string>
+    <string name="add_to_workspace">增加至桌面</string>
     <string name="added_all_category">全部應用程式已增加</string>
     <string name="afternoon">下午</string>
     <string name="agree_button">同意</string>
@@ -654,6 +655,7 @@
     <string name="notification_reset_title">桌面圖示整理完畢</string>
     <string name="one_key_call_title">一鍵呼叫</string>
     <string name="online_wallpaper">線上桌布</string>
+    <string name="open_pad_personal_assistant_settings">桌面小工具</string>
     <string name="open_personal_assistant_dialog_btn_cancel">取消</string>
     <string name="open_personal_assistant_dialog_btn_confirm">關閉</string>
     <string name="open_personal_assistant_dialog_desc">關閉後你將無法在桌面最左螢幕檢視小工具資訊，使用小工具服務，同時也意味著無法收到後續的最佳化更新，是否確認關閉？</string>

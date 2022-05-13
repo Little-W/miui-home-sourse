@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">Espera ata que o teu dispositivo se reinicie completamente antes de abrir aplicacións</string>
     <string name="add_custom_category">Personalizado</string>
     <string name="add_screen">Engadir pantalla</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Engadíronse todas as aplicacións correctamente</string>
     <string name="afternoon">Tarde</string>
     <string name="agree_button">Aceptar</string>
@@ -67,7 +68,7 @@
     <string name="all_apps_slide_up_tips">Esvarar cara arriba está reservado para abrir o caixón de aplicacións. Cambia ao modo normal de pantalla de Inicio e téntao de novo.</string>
     <string name="all_apps_suggestions">Aplicacións recomendadas</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Velocidade de animación</string>
     <string name="announce_for_app_move_in_folder">Moveuse á posición %1$d na carpeta</string>
     <string name="announce_for_checked">%1$s, verificado</string>
     <string name="announce_for_choose_default_screen">Establecer a pantalla %1$d como pantalla de inicio predefinida</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">Iconas arranxadas con éxito</string>
     <string name="one_key_call_title">Toca para marcar</string>
     <string name="online_wallpaper">En liña</string>
+    <string name="open_pad_personal_assistant_settings">Widgets da Pantalla de inicio</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Cancelar</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Desactivar</string>
     <string name="open_personal_assistant_dialog_desc">Despois de desactivar a Bóveda de Aplicacións, non poderás ver nin utilizar os asistentes da Bóveda de Aplicacións. As súas versións actualizadas tampouco estarán dispoñibles para ti. Desexas desactivala de todos modos?</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">As disposicións de pantalla de inicio interior e exterior sincronizáronse na nova versión.</string>
     <string name="ota_layout_adjustment_title">Disposicións da pantalla de inicio</string>
     <string name="out_of_space">Non queda espazo nesta pantalla de inicio</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Representar animacións nas iconas das aplicacións de terceiros</string>
     <string name="perfect_icons_switch_title">Animacións de iconas globais</string>
     <string name="permdesc_install_shortcut">Permite que a aplicación engada atallos sen intervención do usuario.</string>

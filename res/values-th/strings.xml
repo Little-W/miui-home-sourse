@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">รอจนกว่าอุปกรณ์ของคุณจะรีบูตอย่างสมบูรณ์ก่อนที่จะเปิดแอป</string>
     <string name="add_custom_category">กำหนดเอง</string>
     <string name="add_screen">เพิ่มหน้าจอ</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">เพิ่มแอปทั้งหมดสำเร็จแล้ว</string>
     <string name="afternoon">บ่าย</string>
     <string name="agree_button">ยอมรับ</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">จัดเรียงไอคอนเรียบร้อยแล้ว</string>
     <string name="one_key_call_title">แตะเพื่อโทร</string>
     <string name="online_wallpaper">ออนไลน์</string>
+    <string name="open_pad_personal_assistant_settings">วิดเจ็ตหน้าจอหลัก</string>
     <string name="open_personal_assistant_dialog_btn_cancel">ยกเลิก</string>
     <string name="open_personal_assistant_dialog_btn_confirm">ปิดใช้งาน</string>
     <string name="open_personal_assistant_dialog_desc">หลังจากที่คุณปิด App vault คุณจะไม่สามารถดูหรือใช้วิดเจ็ต App vault ได้ เวอร์ชันที่อัปเดตของพวกเขาจะไม่สามารถใช้ได้สำหรับคุณเช่นกัน ปิดต่อไป?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">เค้าโครงหน้าจอหลักภายในและภายนอกได้รับการซิงโครไนซ์ในเวอร์ชันใหม่</string>
     <string name="ota_layout_adjustment_title">รูปแบบหน้าจอหลัก</string>
     <string name="out_of_space">ไม่มีที่ว่างบนหน้าจอหลักแล้ว</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">แสดงภาพเคลื่อนไหวบนไอคอนแอปของบุคคลที่สาม</string>
     <string name="perfect_icons_switch_title">ภาพไอคอนเคลื่อนไหวทั่วโลก</string>
     <string name="permdesc_install_shortcut">อนุญาตให้แอปเพิ่ม ปุ่มลัดโดยอัตโนมัติ</string>

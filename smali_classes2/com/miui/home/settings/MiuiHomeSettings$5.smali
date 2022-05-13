@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
     .locals 0
 
-    .line 311
+    .line 304
     iput-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$5;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +49,7 @@
 .method public bridge synthetic apply(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 311
+    .line 304
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/MiuiHomeSettings$5;->apply(Ljava/lang/Void;)[Ljava/lang/Boolean;
@@ -64,10 +64,10 @@
 
     const/4 p1, 0x2
 
-    .line 314
+    .line 307
     new-array p1, p1, [Ljava/lang/Boolean;
 
-    .line 315
+    .line 308
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -76,7 +76,7 @@
 
     move-result v0
 
-    .line 316
+    .line 309
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -85,7 +85,7 @@
 
     aput-object v0, p1, v1
 
-    .line 317
+    .line 310
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
@@ -94,7 +94,7 @@
 
     move-result v0
 
-    .line 318
+    .line 311
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0

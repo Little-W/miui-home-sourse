@@ -26,7 +26,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/ShortcutIcon;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;)V
     .locals 0
 
-    .line 134
+    .line 133
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$2;->this$0:Lcom/miui/home/launcher/ShortcutIcon;
 
     iput-object p2, p0, Lcom/miui/home/launcher/ShortcutIcon$2;->val$item2AnimOut:Landroid/animation/ObjectAnimator;
@@ -43,7 +43,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 137
+    .line 136
     invoke-static {}, Lcom/miui/home/launcher/ShortcutIcon;->access$000()Z
 
     move-result p1
@@ -58,12 +58,12 @@
 
     if-nez p1, :cond_0
 
-    .line 138
+    .line 137
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$2;->val$item2AnimOut:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 139
+    .line 138
     iget-object p1, p0, Lcom/miui/home/launcher/ShortcutIcon$2;->val$item3AnimIn:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->start()V

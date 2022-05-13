@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">ပိတ်ပြီးပြန်ဖွင့်သောအခါ ခဏစောင့်ရပါမည်</string>
     <string name="add_custom_category">စိတ်ကြိုက်</string>
     <string name="add_screen">မျက်နှာပြင်အား ပေါင်းထည့်ပါ</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">အက်ပ်အားလုံးကို အောင်မြင်စွာ ပေါင်းထည့်ပြီးပါပြီ</string>
     <string name="afternoon">နေ့လယ်</string>
     <string name="agree_button">သဘောတူပါသည်</string>
@@ -67,7 +68,7 @@
     <string name="all_apps_slide_up_tips">အပေါ်သို့ဆွဲတင်ခြင်းအား အက်ပ်အံဆွဲကို ဖွင့်ခြင်းအတွက် သီးသန့်ထားရှိခြင်း ဖြစ်ပါသည်။ ပုံမှန်မူလမျက်နှာပြင်မုဒ်သို့ပြောင်း၍ ထပ်မံကြည့်စားကြည့်ပါ။</string>
     <string name="all_apps_suggestions">အက်ပ် အကြံပြုချက်များ</string>
     <string name="am">နံနက်</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">အန်နီမေးရှင်းနှုန်း</string>
     <string name="announce_for_app_move_in_folder">ဖိုလ်ဒါ၏ %1$d နေရာသို့ ရွေ့ပါ</string>
     <string name="announce_for_checked">%1$s၊ စစ်ဆေးပြီး</string>
     <string name="announce_for_choose_default_screen">မျက်နှာပြင် %1$d အား မူလ ပင်မ မျက်နှာပြင်အဖြစ် သတ်မှတ်မည်</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">အိုင်ကွန်များကို စီစဉ်ပြီးပါပြီ</string>
     <string name="one_key_call_title">ဖုန်းခေါ်ရန် တို့ပါ</string>
     <string name="online_wallpaper">အွန်လိုင်း</string>
+    <string name="open_pad_personal_assistant_settings">ပင်မမျက်နှာပြင် ဝိဂျက်များ</string>
     <string name="open_personal_assistant_dialog_btn_cancel">ပယ်ဖျက်မည်</string>
     <string name="open_personal_assistant_dialog_btn_confirm">ပိတ်မည်</string>
     <string name="open_personal_assistant_dialog_desc">အက်(ပ်)ပေါင်းစုစနစ်ကို ပိတ်ပြီးနောက် အက်(ပ်)ပေါင်းစုဝိဂျက်များကို မြင်နိုင် သို့မဟုတ် သုံးနိုင်တော့မည်မဟုတ်ပါ။ ၎င်းတို့၏ အပ်ပဒိတ်ဗားရှင်းကိုလည်း သင်ရတော့မည်မဟုတ်ပါ။ မဖြစ်မနေပိတ်လိုသလား။</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">ဗားရှင်းအသစ်တွင် အတွင်းအပြင် ပင်မမျက်နှာပြင် အပြင်အဆင်များကို ဆင့်(ခ်)လုပ်ထားသည်။</string>
     <string name="ota_layout_adjustment_title">ပင်မမျက်နှာပြင် အပြင်အဆင်များ</string>
     <string name="out_of_space">ဤပင်မမျက်နှာပြင်ပေါ်တွင် နေရာလွတ် မရှိတော့ပါ</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">ပြင်ပပါတီအက်(ပ်)သင်္ကေတများတွင် ရုပ်ကြွများထည့်ရန်</string>
     <string name="perfect_icons_switch_title">ကမ္ဘာသုံး ရုပ်ကြွသင်္ကေတများ</string>
     <string name="permdesc_install_shortcut">အက်ပ်တစ်ခုကို သုံးစွဲသူ ကြားဝင် မဆောင်ရွက်ဘဲ ရှော့ကဒ်များအား ပေါင်းထည့်ရန် ခွင့်ပြုပါ။</string>

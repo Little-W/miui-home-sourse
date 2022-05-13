@@ -97,12 +97,12 @@
 
     if-eqz p1, :cond_0
 
-    const p1, 0x7f10013e
+    const p1, 0x7f10013f
 
     goto :goto_0
 
     :cond_0
-    const p1, 0x7f10013f
+    const p1, 0x7f100140
 
     :goto_0
     const/4 v1, 0x1

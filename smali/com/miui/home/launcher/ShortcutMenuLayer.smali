@@ -49,7 +49,7 @@
 
     const/4 p1, 0x0
 
-    .line 118
+    .line 120
     iput-boolean p1, p0, Lcom/miui/home/launcher/ShortcutMenuLayer;->mIsNeedSkipTouch:Z
 
     .line 48
@@ -70,19 +70,19 @@
 
     const/4 v0, 0x2
 
-    .line 167
+    .line 169
     new-array v0, v0, [F
 
     const/4 v1, 0x0
 
-    .line 169
+    .line 171
     invoke-virtual {p1, v1}, Lcom/miui/home/launcher/DragObject;->getDragView(I)Lcom/miui/home/launcher/DragView;
 
     move-result-object p1
 
     const/4 v2, 0x1
 
-    .line 168
+    .line 170
     invoke-static {p1, p0, v0, v2, v1}, Lcom/miui/home/launcher/common/Utilities;->getDescendantCoordRelativeToAncestor(Landroid/view/View;Landroid/view/View;[FZZ)F
 
     return-object v0
@@ -91,7 +91,7 @@
 .method private isRequestingShortcutMenuItems()Z
     .locals 1
 
-    .line 140
+    .line 142
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutMenuLayer;->mRequestingItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     if-eqz v0, :cond_0
@@ -112,7 +112,7 @@
 
     const/4 v0, 0x0
 
-    .line 175
+    .line 177
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/DragObject;->getDragView(I)Lcom/miui/home/launcher/DragView;
 
     move-result-object p1
@@ -121,7 +121,7 @@
 
     move-result-object p1
 
-    .line 176
+    .line 178
     instance-of v1, p1, Lcom/miui/home/launcher/ItemIcon;
 
     if-eqz v1, :cond_0
@@ -143,7 +143,7 @@
 .method static synthetic lambda$showShortcutMenu$0(Lcom/miui/home/launcher/ItemInfo;Ljava/lang/Void;)Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;
     .locals 0
 
-    .line 107
+    .line 102
     invoke-static {}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuManager;->getInstance()Lcom/miui/home/launcher/shortcuts/ShortcutMenuManager;
 
     move-result-object p1
@@ -172,7 +172,7 @@
 
     move v6, p5
 
-    .line 108
+    .line 103
     invoke-direct/range {v0 .. v6}, Lcom/miui/home/launcher/ShortcutMenuLayer;->onQuerySucceed(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;[FZ[II)V
 
     return-void
@@ -181,10 +181,46 @@
 .method public static synthetic lambda$showShortcutMenu$2(Lcom/miui/home/launcher/ShortcutMenuLayer;Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;)V
     .locals 0
 
-    .line 109
+    .line 104
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/ShortcutMenuLayer;->onQueryCancel(Lcom/miui/home/launcher/ItemInfo;)V
 
     return-void
+.end method
+
+.method private obtainCellWidth(Lcom/miui/home/launcher/ItemInfo;)I
+    .locals 1
+
+    .line 110
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ItemInfo;->isInHotseat()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p1}, Lcom/miui/home/launcher/ItemInfo;->isInHotseatRecommend()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    .line 113
+    :cond_0
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWidth()I
+
+    move-result p1
+
+    return p1
+
+    .line 111
+    :cond_1
+    :goto_0
+    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getHotSeatsCellWidth()I
+
+    move-result p1
+
+    return p1
 .end method
 
 .method private onQueryCancel(Lcom/miui/home/launcher/ItemInfo;)V
@@ -192,7 +228,7 @@
 
     const-string v0, "Launcher.ShortcutMenuLayer"
 
-    .line 144
+    .line 146
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -209,7 +245,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 145
+    .line 147
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutMenuLayer;->mRequestingItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -220,7 +256,7 @@
 
     const/4 p1, 0x0
 
-    .line 146
+    .line 148
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/ShortcutMenuLayer;->setRequestingItemInfo(Lcom/miui/home/launcher/ItemInfo;)V
 
     :cond_0
@@ -232,7 +268,7 @@
 
     const-string v0, "Launcher.ShortcutMenuLayer"
 
-    .line 153
+    .line 155
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -251,20 +287,20 @@
 
     const/4 v0, 0x0
 
-    .line 154
+    .line 156
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/ShortcutMenuLayer;->setRequestingItemInfo(Lcom/miui/home/launcher/ItemInfo;)V
 
-    .line 155
+    .line 157
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutMenuLayer;->mShortcutMenu:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {v0, p1, p2}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->bindShortcut(Lcom/miui/home/launcher/ItemInfo;Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;)V
 
-    .line 156
+    .line 158
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutMenuLayer;->mShortcutMenu:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {v0, p3, p4, p5, p6}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->show([FZ[II)V
 
-    .line 157
+    .line 159
     invoke-virtual {p2}, Lcom/miui/home/launcher/shortcuts/AllShortcutMenuItems;->getWidgetShortcutMenuItems()Ljava/util/List;
 
     move-result-object p2
@@ -277,7 +313,7 @@
 .method private setRequestingItemInfo(Lcom/miui/home/launcher/ItemInfo;)V
     .locals 0
 
-    .line 136
+    .line 138
     iput-object p1, p0, Lcom/miui/home/launcher/ShortcutMenuLayer;->mRequestingItemInfo:Lcom/miui/home/launcher/ItemInfo;
 
     return-void
@@ -295,7 +331,7 @@
         }
     .end annotation
 
-    .line 161
+    .line 163
     instance-of v0, p1, Lcom/miui/home/launcher/ShortcutInfo;
 
     if-eqz v0, :cond_0
@@ -308,7 +344,7 @@
 
     if-lez p2, :cond_0
 
-    .line 162
+    .line 164
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutMenuLayer;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -324,7 +360,7 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 127
+    .line 129
     iget-boolean v0, p0, Lcom/miui/home/launcher/ShortcutMenuLayer;->mIsNeedSkipTouch:Z
 
     if-eqz v0, :cond_0
@@ -333,17 +369,17 @@
 
     const-string v0, "don\'t dispatch touch because mIsNeedSkipTouch"
 
-    .line 128
+    .line 130
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     const/4 p1, 0x0
 
-    .line 129
+    .line 131
     invoke-virtual {p0, p1}, Lcom/miui/home/launcher/ShortcutMenuLayer;->setIsNeedSkipTouch(Z)V
 
     return p1
 
-    .line 132
+    .line 134
     :cond_0
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherFrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -355,7 +391,7 @@
 .method public getBindedItemInfo()Lcom/miui/home/launcher/ItemInfo;
     .locals 1
 
-    .line 198
+    .line 200
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutMenuLayer;->mShortcutMenu:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->getBindedItemInfo()Lcom/miui/home/launcher/ItemInfo;
@@ -385,7 +421,7 @@
 .method public hideShortcutMenu(Lcom/miui/home/launcher/EditStateChangeReason;)V
     .locals 2
 
-    .line 184
+    .line 186
     invoke-direct {p0}, Lcom/miui/home/launcher/ShortcutMenuLayer;->isRequestingShortcutMenuItems()Z
 
     move-result v0
@@ -398,19 +434,19 @@
 
     const/4 v1, 0x1
 
-    .line 185
+    .line 187
     invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 187
+    .line 189
     iput-object v0, p0, Lcom/miui/home/launcher/ShortcutMenuLayer;->mRequestAppShortcutAsyncTask:Landroid/os/AsyncTask;
 
-    .line 188
+    .line 190
     invoke-static {}, Lcom/miui/home/launcher/shortcuts/SystemShortcutMenuItem;->resetAllSystemShortcutMenuItems()V
 
-    .line 189
+    .line 191
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutMenuLayer;->mShortcutMenu:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {v0, p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->hide(Lcom/miui/home/launcher/EditStateChangeReason;)V
@@ -421,10 +457,10 @@
 .method public onDescendantInvalidated(Landroid/view/View;Landroid/view/View;)V
     .locals 2
 
-    .line 231
+    .line 233
     invoke-super {p0, p1, p2}, Lcom/miui/launcher/views/LauncherFrameLayout;->onDescendantInvalidated(Landroid/view/View;Landroid/view/View;)V
 
-    .line 232
+    .line 234
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object p1
@@ -435,7 +471,7 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 233
+    .line 235
     new-instance p1, Ljava/lang/RuntimeException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -458,7 +494,7 @@
 
     const-string v0, "invalidate error"
 
-    .line 237
+    .line 239
     invoke-static {p2, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -468,7 +504,7 @@
 .method public onDisplayRotationChanged(I)V
     .locals 1
 
-    .line 115
+    .line 117
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isKeepRecentsViewPortrait()Z
 
     move-result v0
@@ -497,19 +533,19 @@
 .method public onDragEnd(Lcom/miui/home/launcher/DragObject;)V
     .locals 3
 
-    .line 203
+    .line 205
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutMenuLayer;->getBindedItemInfo()Lcom/miui/home/launcher/ItemInfo;
 
     move-result-object p1
 
-    .line 204
+    .line 206
     instance-of v0, p1, Lcom/miui/home/launcher/ShortcutInfo;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 205
+    .line 207
     :cond_0
     check-cast p1, Lcom/miui/home/launcher/ShortcutInfo;
 
@@ -517,7 +553,7 @@
 
     move-result-object p1
 
-    .line 206
+    .line 208
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -526,7 +562,7 @@
 
     const-string v0, "ShortcutMenu"
 
-    .line 207
+    .line 209
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -543,7 +579,7 @@
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/MiuiHomeLog;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 208
+    .line 210
     invoke-static {p1}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackShowingShortcutMenuWhenDropIcon(Ljava/lang/String;)V
 
     :cond_1
@@ -584,7 +620,7 @@
 .method public onScreenSizeChanged()V
     .locals 1
 
-    .line 213
+    .line 215
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutMenuLayer;->mShortcutMenu:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->onScreenSizeChanged()V
@@ -595,12 +631,12 @@
 .method public setIsNeedSkipTouch(Z)V
     .locals 3
 
-    .line 121
+    .line 123
     iput-boolean p1, p0, Lcom/miui/home/launcher/ShortcutMenuLayer;->mIsNeedSkipTouch:Z
 
     const-string v0, "Launcher.ShortcutMenuLayer"
 
-    .line 122
+    .line 124
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -623,7 +659,7 @@
 .method public setScaleX(F)V
     .locals 1
 
-    .line 218
+    .line 220
     invoke-virtual {p0}, Lcom/miui/home/launcher/ShortcutMenuLayer;->getScaleX()F
 
     move-result v0
@@ -638,14 +674,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 219
+    .line 221
     invoke-static {p0}, Lcom/miui/home/launcher/Launcher;->getLauncher(Landroid/view/View;)Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->refreshSearchBarBlur()V
 
-    .line 221
+    .line 223
     :cond_0
     invoke-super {p0, p1}, Lcom/miui/launcher/views/LauncherFrameLayout;->setScaleX(F)V
 
@@ -655,7 +691,7 @@
 .method public setWithoutAnimNextHide()V
     .locals 1
 
-    .line 180
+    .line 182
     iget-object v0, p0, Lcom/miui/home/launcher/ShortcutMenuLayer;->mShortcutMenu:Lcom/miui/home/launcher/shortcuts/ShortcutMenu;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/shortcuts/ShortcutMenu;->setWithoutAnimNextHide()V
@@ -805,45 +841,11 @@
     aput v0, v6, v2
 
     .line 99
-    iget-wide v0, v8, Lcom/miui/home/launcher/ItemInfo;->container:J
+    invoke-direct {p0, v8}, Lcom/miui/home/launcher/ShortcutMenuLayer;->obtainCellWidth(Lcom/miui/home/launcher/ItemInfo;)I
 
-    const-wide/16 v2, -0x65
-
-    cmp-long p1, v0, v2
-
-    if-eqz p1, :cond_6
-
-    iget-wide v0, v8, Lcom/miui/home/launcher/ItemInfo;->container:J
-
-    const-wide/16 v2, -0x66
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_5
-
-    goto :goto_0
-
-    .line 103
-    :cond_5
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellWidth()I
-
-    move-result p1
-
-    move v7, p1
-
-    goto :goto_1
+    move-result v7
 
     .line 101
-    :cond_6
-    :goto_0
-    invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getHotSeatsCellWidth()I
-
-    move-result p1
-
-    move v7, p1
-
-    .line 106
-    :goto_1
     new-instance p1, Lcom/miui/home/launcher/-$$Lambda$ShortcutMenuLayer$8OxjhgR8XQX7uIkDGDjMweuAwrc;
 
     invoke-direct {p1, v8}, Lcom/miui/home/launcher/-$$Lambda$ShortcutMenuLayer$8OxjhgR8XQX7uIkDGDjMweuAwrc;-><init>(Lcom/miui/home/launcher/ItemInfo;)V

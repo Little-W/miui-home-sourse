@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Pred otvorením aplikácií počkajte, kým vaše zariadenie úplne dokončí reštartovanie</string>
     <string name="add_custom_category">Vlastné</string>
     <string name="add_screen">Pridať obrazovku</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Všetky aplikácie úspešne pridané</string>
     <string name="afternoon">Popoludní</string>
     <string name="agree_button">Súhlasím</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">Potiahnutie nahor je obsadené pre otvorenie Ponuky aplikácií. Prepnite na bežnú Domovskú obrazovku a skúste to znovu.</string>
     <string name="all_apps_suggestions">Odporúčané aplikácie</string>
     <string name="am">dop.</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Rýchlosť animácie</string>
     <string name="announce_for_app_move_in_folder">Presunuté do umiestnenia %1$d v priečinku</string>
     <string name="announce_for_checked">%1$s, označené</string>
     <string name="announce_for_choose_default_screen">Nastaviť obrazovku %1$d ako predvolenú Domovskú obrazovku</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Ikony úspešne usporiadané</string>
     <string name="one_key_call_title">Dotykom vytočiť</string>
     <string name="online_wallpaper">Online</string>
+    <string name="open_pad_personal_assistant_settings">Widgety Domovskej obrazovky</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Zrušiť</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Vypnúť</string>
     <string name="open_personal_assistant_dialog_desc">Po tom, ako vypnete Trezor aplikácií, nebudete môcť zobrazovať ani používať widgety Trezoru aplikácií. Ich aktualizované verzie vám tiež nebudú k dispozícii. Napriek tomu vypnúť?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">V novej verzii boli synchronizované vnútorné a vonkajšie rozloženie Domovskej obrazovky.</string>
     <string name="ota_layout_adjustment_title">Rozloženia domovskej obrazovky</string>
     <string name="out_of_space">Žiadne miesto na Domovskej obrazovke</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Vykresľovať animácie na ikonách aplikácií tretích strán</string>
     <string name="perfect_icons_switch_title">Animácie globálnych ikon</string>
     <string name="permdesc_install_shortcut">Povoľuje aplikácií pridávať odkazy bez zásahu užívateľa.</string>

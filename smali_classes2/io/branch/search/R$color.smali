@@ -15,28 +15,28 @@
 
 
 # static fields
-.field public static final branch_deepview_background:I = 0x7f06007a
+.field public static final branch_deepview_background:I = 0x7f06007b
 
-.field public static final branch_deepview_button_background:I = 0x7f06007b
+.field public static final branch_deepview_button_background:I = 0x7f06007c
 
-.field public static final branch_deepview_button_text:I = 0x7f06007c
+.field public static final branch_deepview_button_text:I = 0x7f06007d
 
-.field public static final branch_deepview_divider:I = 0x7f06007d
+.field public static final branch_deepview_divider:I = 0x7f06007e
 
-.field public static final branch_deepview_image_background:I = 0x7f06007e
+.field public static final branch_deepview_image_background:I = 0x7f06007f
 
-.field public static final branch_deepview_loading:I = 0x7f06007f
+.field public static final branch_deepview_loading:I = 0x7f060080
 
-.field public static final notification_action_color_filter:I = 0x7f060352
+.field public static final notification_action_color_filter:I = 0x7f060353
 
-.field public static final notification_icon_bg_color:I = 0x7f060353
+.field public static final notification_icon_bg_color:I = 0x7f060354
 
-.field public static final notification_material_background_media_default_color:I = 0x7f060354
+.field public static final notification_material_background_media_default_color:I = 0x7f060355
 
-.field public static final primary_text_default_material_dark:I = 0x7f06035e
+.field public static final primary_text_default_material_dark:I = 0x7f06035f
 
-.field public static final ripple_material_light:I = 0x7f060380
+.field public static final ripple_material_light:I = 0x7f060381
 
-.field public static final secondary_text_default_material_dark:I = 0x7f0603a1
+.field public static final secondary_text_default_material_dark:I = 0x7f0603a2
 
-.field public static final secondary_text_default_material_light:I = 0x7f0603a2
+.field public static final secondary_text_default_material_light:I = 0x7f0603a3

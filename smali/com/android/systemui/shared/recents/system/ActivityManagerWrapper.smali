@@ -2263,6 +2263,57 @@
     return-void
 .end method
 
+.method public supportsSplitScreen(Landroid/content/ComponentName;)Z
+    .locals 8
+
+    .line 752
+    const-class v0, Landroid/app/IActivityTaskManager;
+
+    invoke-static {}, Landroid/app/ActivityTaskManager;->getService()Landroid/app/IActivityTaskManager;
+
+    move-result-object v1
+
+    const-string v2, "supportsSplitScreen"
+
+    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    const/4 v4, 0x1
+
+    new-array v5, v4, [Ljava/lang/Class;
+
+    const-class v6, Landroid/content/ComponentName;
+
+    const/4 v7, 0x0
+
+    aput-object v6, v5, v7
+
+    new-array v6, v4, [Ljava/lang/Object;
+
+    aput-object p1, v6, v7
+
+    move-object v4, v5
+
+    move-object v5, v6
+
+    invoke-static/range {v0 .. v5}, Lcom/android/systemui/shared/recents/utilities/ReflectUtils;->invokeObject(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 755
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    return v7
+.end method
+
 .method public trimMemory(I)V
     .locals 1
 

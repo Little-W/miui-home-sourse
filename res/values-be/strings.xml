@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Да таго як адкрываць праграмы, дачакайцеся поўнага завяршэння перазагрузкі вашай прылады</string>
     <string name="add_custom_category">Карыстальніцкая</string>
     <string name="add_screen">Дадаць экран</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Усе праграмы паспяхова дададзены</string>
     <string name="afternoon">Поўдзень</string>
     <string name="agree_button">Згадзіцца</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">Правядзенне ўверх зарэзервавана для адкрыцця Меню праграм. Пераключыцеся ў звычайны рэжым Галоўнага экрана і паспрабуйце зноў.</string>
     <string name="all_apps_suggestions">Прапановы праграм</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Хуткасць анімацыі</string>
     <string name="announce_for_app_move_in_folder">Перамешчана ў пазіцыю %1$d у папцы</string>
     <string name="announce_for_checked">%1$s, праверана</string>
     <string name="announce_for_choose_default_screen">Усталяваць экран %1$d як пачатковы</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Значкі паспяхова ўпарадкаваны</string>
     <string name="one_key_call_title">Націснце для набору нумара</string>
     <string name="online_wallpaper">Анлайн</string>
+    <string name="open_pad_personal_assistant_settings">Віджэты Галоўнага экрана</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Скасаваць</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Адключыць</string>
     <string name="open_personal_assistant_dialog_desc">Пасля выключэння Стужкі віджэтаў вы не зможаце ўбачыць віджэты або выкарыстоўваць іх. Абноўленыя версіі віджэтаў таксама не будуць даступныя для вас. Усё роўна выключыць?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">У новай версіі былі сінхранізаваныя ўнутраны і знешні макеты галоўнага экрана.</string>
     <string name="ota_layout_adjustment_title">Макеты галоўнага экрана</string>
     <string name="out_of_space">На гэтым экране няма вольнага месца</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Выконваць рэндэрынг анімацыі значкоў пабочных праграм.</string>
     <string name="perfect_icons_switch_title">Глабальныя анімацыі значкоў</string>
     <string name="permdesc_install_shortcut">Дазваляе праграме дадаваць ярлыкі без удзелу карыстальніка.</string>

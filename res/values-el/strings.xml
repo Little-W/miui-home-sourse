@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Περιμένετε μέχρι η συσκευή σας να επανεκκινηθεί πλήρως πριν ανοίξετε τις εφαρμογές</string>
     <string name="add_custom_category">Προσαρμοσμένη</string>
     <string name="add_screen">Προσθήκη οθόνης</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Επιτυχής προσθήκη όλων των εφαρμογών</string>
     <string name="afternoon">Απόγευμα</string>
     <string name="agree_button">Αποδοχή</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">Το σύρσιμο προς τα επάνω διατίθεται για το άνοιγμα του Συρταριού εφαρμογών. Πραγματοποιήστε εναλλαγή σε κανονική λειτουργία Αρχικής οθόνης και προσπαθήστε ξανά.</string>
     <string name="all_apps_suggestions">Προτάσεις εφαρμογών</string>
     <string name="am">ΠΜ</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Ταχύτητα κινούμενων σχεδίων</string>
     <string name="announce_for_app_move_in_folder">Μετακινήθηκε στη θέση %1$d στο φάκελο</string>
     <string name="announce_for_checked">%1$s, ελέγχθηκε</string>
     <string name="announce_for_choose_default_screen">Ορισμός οθόνης %1$d ως προεπιλεγμένη Αρχική οθόνη</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Επιτυχής ταξινόμηση εκονιδίων</string>
     <string name="one_key_call_title">Πατήστε για κλήση</string>
     <string name="online_wallpaper">Online</string>
+    <string name="open_pad_personal_assistant_settings">Γραφικά στοιχεία Αρχικής οθόνης</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Ακύρωση</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Απενεργοποίηση</string>
     <string name="open_personal_assistant_dialog_desc">Αφού απενεργοποιήσετε την Αποθήκη εφαρμογών, δεν θα μπορείτε να δείτε ή να χρησιμοποιήσετε γραφικά στοιχεία Αποθήκης εφαρμογών. Οι ενημερωμένες εκδόσεις τους δεν θα είναι διαθέσιμες και σε εσάς. Να απενεργοποιηθεί ούτως ή άλλως;</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">Η εσωτερική και η εξωτερική διάταξη Αρχικής οθόνης συγχρονίστηκαν στη νέα έκδοση.</string>
     <string name="ota_layout_adjustment_title">Διάταξη Αρχικής οθόνης</string>
     <string name="out_of_space">Δεν υπάρχει πια χώρος σε αυτήν την Αρχική Οθόνη</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Απόδοση κινουμένων εικόνων σε εικονίδια εφαρμογής τρίτου</string>
     <string name="perfect_icons_switch_title">Κινούμενα σχέδια παγκοσμίου εικονιδίου</string>
     <string name="permdesc_install_shortcut">Επιτρέπει σε μια εφαρμογή την προσθήκη συντομεύσεων χωρίς την μεσολάβηση του χρήστη.</string>

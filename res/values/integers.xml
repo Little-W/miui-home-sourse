@@ -49,6 +49,7 @@
     <integer name="config_tooltipAnimTime">150</integer>
     <integer name="config_top_uninstall_dialog_visibility_anim_duration">250</integer>
     <integer name="config_widget_cell_count">4</integer>
+    <integer name="db_screen_create_index">0</integer>
     <integer name="delete">0x0000E00F</integer>
     <integer name="dialog_enter_duration">280</integer>
     <integer name="dialog_exit_duration">150</integer>
@@ -74,4 +75,5 @@
     <integer name="window_alpha_animation_duration">167</integer>
     <integer name="window_translation_animation_duration">417</integer>
     <integer name="window_translucent_status">100</integer>
+    <integer name="workspace_thumbnail_mode_ratio">0</integer>
 </resources>

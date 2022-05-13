@@ -1,4 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="config_icon_height">56.0dip</dimen>
+    <item type="dimen" name="config_icon_height_theme_version_0">@dimen/config_icon_height</item>
+    <dimen name="config_icon_width">56.0dip</dimen>
+    <item type="dimen" name="config_icon_width_theme_version_0">@dimen/config_icon_width</item>
+    <dimen name="editing_panel_height">136.0dip</dimen>
+    <dimen name="folder_bottom_padding">90.0dip</dimen>
+    <dimen name="folder_content_padding_left">5.0dip</dimen>
+    <dimen name="folder_content_padding_right">0.0dip</dimen>
+    <dimen name="folder_content_width">292.0dip</dimen>
+    <dimen name="folder_preview_item_padding">0.30000007dip</dimen>
+    <dimen name="folder_top_padding">69.0dip</dimen>
+    <dimen name="hotseats_height">82.0dip</dimen>
+    <dimen name="hotseats_padding_bottom">0.0dip</dimen>
+    <dimen name="hotseats_padding_side">1.0dip</dimen>
+    <dimen name="hotseats_padding_top">0.0dip</dimen>
+    <dimen name="icon_padding_top">6.0dip</dimen>
+    <dimen name="recommend_loading_item_padding">21.0dip</dimen>
+    <dimen name="status_bar_height">20.0dip</dimen>
+    <dimen name="toggle_size">32.0dip</dimen>
+    <dimen name="workspace_cell_height">78.0dip</dimen>
+    <dimen name="workspace_cell_padding_side">10.0dip</dimen>
+    <dimen name="workspace_cell_padding_top">3.0dip</dimen>
+    <dimen name="workspace_cell_width">80.0dip</dimen>
     <dimen name="workspace_icon_text_notification_size">10.0sp</dimen>
+    <dimen name="workspace_icon_text_size">10.5sp</dimen>
+    <dimen name="workspace_invalidate_edge_width">20.0dip</dimen>
+    <dimen name="folder_preview_height">40.0dip</dimen>
+    <dimen name="folder_preview_width">40.0dip</dimen>
 </resources>

@@ -6,6 +6,7 @@
     <color name="allapps_setting_bg_color">#ff000000</color>
     <color name="allapps_setting_subtitle">#66ffffff</color>
     <color name="allapps_setting_title">#ffffffff</color>
+    <color name="app_pair_background_color">#ff1f1f1f</color>
     <color name="bg_item_category">@color/black</color>
     <color name="bg_item_category_select">#ff353439</color>
     <color name="branch_deepview_background">#ff242425</color>

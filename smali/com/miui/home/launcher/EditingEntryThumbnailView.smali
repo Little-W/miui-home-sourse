@@ -121,7 +121,7 @@
 
     const/4 p2, 0x0
 
-    .line 251
+    .line 252
     iput-boolean p2, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mShow:Z
 
     .line 58
@@ -204,7 +204,7 @@
         }
     .end annotation
 
-    .line 242
+    .line 243
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->getFolmes()Ljava/util/ArrayList;
@@ -217,7 +217,7 @@
 
     move-result-object v0
 
-    .line 243
+    .line 244
     invoke-interface {v0, p1}, Ljava/util/stream/Stream;->forEach(Ljava/util/function/Consumer;)V
 
     return-void
@@ -234,7 +234,7 @@
         }
     .end annotation
 
-    .line 211
+    .line 212
     iget-object v0, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mFolmes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -243,7 +243,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 212
+    .line 213
     invoke-virtual {p0}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->getChildCount()I
 
     move-result v0
@@ -255,14 +255,14 @@
     :goto_0
     if-ge v2, v0, :cond_0
 
-    .line 215
+    .line 216
     invoke-virtual {p0, v2}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
     const/4 v4, 0x1
 
-    .line 216
+    .line 217
     new-array v4, v4, [Landroid/view/View;
 
     aput-object v3, v4, v1
@@ -271,7 +271,7 @@
 
     move-result-object v4
 
-    .line 217
+    .line 218
     invoke-interface {v4}, Lmiuix/animation/IFolme;->touch()Lmiuix/animation/ITouchStyle;
 
     move-result-object v5
@@ -280,7 +280,7 @@
 
     invoke-interface {v5, v3, v6}, Lmiuix/animation/ITouchStyle;->handleTouchOf(Landroid/view/View;[Lmiuix/animation/base/AnimConfig;)V
 
-    .line 218
+    .line 219
     iget-object v3, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mFolmes:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -289,7 +289,7 @@
 
     goto :goto_0
 
-    .line 221
+    .line 222
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mFolmes:Ljava/util/ArrayList;
 
@@ -299,34 +299,34 @@
 .method private goThemeWallpaper()V
     .locals 4
 
-    .line 225
+    .line 226
     iget-object v0, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 226
+    .line 227
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
     const v2, 0x10808000
 
-    .line 227
+    .line 228
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 228
+    .line 229
     sget-boolean v2, Lcom/miui/home/launcher/common/Utilities;->ATLEAST_MIUI_12:Z
 
     if-eqz v2, :cond_0
 
     const-string v2, "miui.intent.action.THEME_WALLPAPER_PICKER_PAGE"
 
-    .line 229
+    .line 230
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 231
+    .line 232
     :try_start_0
     invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_0
@@ -339,7 +339,7 @@
 
     const-string v3, "EditingEntryThumbnailView"
 
-    .line 234
+    .line 235
     invoke-virtual {v2}, Ljava/lang/Exception;->getLocalizedMessage()Ljava/lang/String;
 
     move-result-object v2
@@ -351,10 +351,10 @@
 
     const-string v3, "com.android.thememanager.settings.WallpaperSettingsActivity"
 
-    .line 237
+    .line 238
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 238
+    .line 239
     invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     return-void
@@ -436,7 +436,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700fd
+    const v1, 0x7f070103
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -450,14 +450,14 @@
 .method public static synthetic lambda$hideWithFolmeAnim$1(Lcom/miui/home/launcher/EditingEntryThumbnailView;Lmiuix/animation/IFolme;)V
     .locals 5
 
-    .line 269
+    .line 270
     invoke-interface {p1}, Lmiuix/animation/IFolme;->visible()Lmiuix/animation/IVisibleStyle;
 
     move-result-object v0
 
     invoke-interface {v0}, Lmiuix/animation/IVisibleStyle;->cancel()V
 
-    .line 270
+    .line 271
     invoke-interface {p1}, Lmiuix/animation/IFolme;->visible()Lmiuix/animation/IVisibleStyle;
 
     move-result-object v0
@@ -494,14 +494,14 @@
 .method public static synthetic lambda$showWithFolmeAnim$0(Lcom/miui/home/launcher/EditingEntryThumbnailView;Lmiuix/animation/IFolme;)V
     .locals 3
 
-    .line 260
+    .line 261
     invoke-interface {p1}, Lmiuix/animation/IFolme;->visible()Lmiuix/animation/IVisibleStyle;
 
     move-result-object v0
 
     invoke-interface {v0}, Lmiuix/animation/IVisibleStyle;->cancel()V
 
-    .line 261
+    .line 262
     invoke-interface {p1}, Lmiuix/animation/IFolme;->visible()Lmiuix/animation/IVisibleStyle;
 
     move-result-object p1
@@ -602,7 +602,7 @@
 .method public hideWithFolmeAnim()V
     .locals 1
 
-    .line 268
+    .line 269
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$EditingEntryThumbnailView$L_sk608EKl8RMfTwc9IYVB92zxg;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$EditingEntryThumbnailView$L_sk608EKl8RMfTwc9IYVB92zxg;-><init>(Lcom/miui/home/launcher/EditingEntryThumbnailView;)V
@@ -611,7 +611,7 @@
 
     const/4 v0, 0x0
 
-    .line 283
+    .line 284
     iput-boolean v0, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mShow:Z
 
     return-void
@@ -628,7 +628,7 @@
 .method public isShowing()Z
     .locals 1
 
-    .line 253
+    .line 254
     iget-boolean v0, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mShow:Z
 
     return v0
@@ -726,7 +726,7 @@
 .method public onDeviceProfileChanged(Lcom/miui/home/launcher/DeviceProfile;)V
     .locals 0
 
-    .line 288
+    .line 289
     iget-object p1, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
 
     invoke-virtual {p1, p0}, Lcom/miui/home/launcher/ThumbnailMeasureController;->onScreenOrientationChanged(Landroid/view/View;)V
@@ -739,7 +739,7 @@
 
     const/16 v0, 0x8
 
-    .line 248
+    .line 249
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->setVisibility(I)V
 
     return-void
@@ -836,7 +836,7 @@
 
     iget-object p2, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
 
-    invoke-virtual {p2}, Lcom/miui/home/launcher/ThumbnailMeasureController;->makeHeightMeasureSpec()I
+    invoke-virtual {p2}, Lcom/miui/home/launcher/ThumbnailMeasureController;->makeEditingEntryHeightMeasureSpec()I
 
     move-result p2
 
@@ -846,12 +846,25 @@
 .end method
 
 .method public onScreenSizeChanged()V
-    .locals 1
+    .locals 2
 
     .line 200
-    invoke-virtual {p0}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->setDrawable()V
+    invoke-virtual {p0}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f070103
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->setFixedGap(I)V
 
     .line 201
+    invoke-virtual {p0}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->setDrawable()V
+
+    .line 202
     iget-object v0, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mThumbnailMeasureController:Lcom/miui/home/launcher/ThumbnailMeasureController;
 
     invoke-virtual {v0, p0}, Lcom/miui/home/launcher/ThumbnailMeasureController;->onScreenSizeChanged(Landroid/view/View;)V
@@ -862,10 +875,10 @@
 .method public prepareToShow()V
     .locals 1
 
-    .line 206
+    .line 207
     invoke-virtual {p0}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->reLoadThumbnails()V
 
-    .line 207
+    .line 208
     iget-object v0, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mFolmes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
@@ -1207,10 +1220,10 @@
 
     const/4 v0, 0x0
 
-    .line 258
+    .line 259
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->setVisibility(I)V
 
-    .line 259
+    .line 260
     new-instance v0, Lcom/miui/home/launcher/-$$Lambda$EditingEntryThumbnailView$1aFbIuve4aijMwhNwQxkmB8Me84;
 
     invoke-direct {v0, p0}, Lcom/miui/home/launcher/-$$Lambda$EditingEntryThumbnailView$1aFbIuve4aijMwhNwQxkmB8Me84;-><init>(Lcom/miui/home/launcher/EditingEntryThumbnailView;)V
@@ -1219,7 +1232,7 @@
 
     const/4 v0, 0x1
 
-    .line 263
+    .line 264
     iput-boolean v0, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView;->mShow:Z
 
     return-void

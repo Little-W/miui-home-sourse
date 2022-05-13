@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/EditingEntryThumbnailView;Lmiuix/animation/IFolme;)V
     .locals 0
 
-    .line 270
+    .line 271
     iput-object p1, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView$1;->this$0:Lcom/miui/home/launcher/EditingEntryThumbnailView;
 
     iput-object p2, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView$1;->val$iFolme:Lmiuix/animation/IFolme;
@@ -39,12 +39,12 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 1
 
-    .line 273
+    .line 274
     sget-object v0, Lmiuix/animation/IVisibleStyle$VisibleType;->HIDE:Lmiuix/animation/IVisibleStyle$VisibleType;
 
     if-ne p1, v0, :cond_0
 
-    .line 274
+    .line 275
     iget-object p1, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView$1;->this$0:Lcom/miui/home/launcher/EditingEntryThumbnailView;
 
     invoke-static {p1}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->access$000(Lcom/miui/home/launcher/EditingEntryThumbnailView;)Ljava/util/ArrayList;
@@ -55,7 +55,7 @@
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 275
+    .line 276
     iget-object p1, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView$1;->this$0:Lcom/miui/home/launcher/EditingEntryThumbnailView;
 
     invoke-static {p1}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->access$000(Lcom/miui/home/launcher/EditingEntryThumbnailView;)Ljava/util/ArrayList;
@@ -72,10 +72,10 @@
 
     const-string v0, "onHideComplete"
 
-    .line 276
+    .line 277
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
+    .line 278
     iget-object p1, p0, Lcom/miui/home/launcher/EditingEntryThumbnailView$1;->this$0:Lcom/miui/home/launcher/EditingEntryThumbnailView;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/EditingEntryThumbnailView;->onHideComplete()V

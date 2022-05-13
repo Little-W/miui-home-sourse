@@ -51,18 +51,18 @@
 
 .field public static final config_tooltipAnimTime:I = 0x7f0b002e
 
-.field public static final dialog_enter_duration:I = 0x7f0b0032
+.field public static final dialog_enter_duration:I = 0x7f0b0033
 
-.field public static final dialog_exit_duration:I = 0x7f0b0033
+.field public static final dialog_exit_duration:I = 0x7f0b0034
 
-.field public static final drop_down_menu_enter_duration:I = 0x7f0b0034
+.field public static final drop_down_menu_enter_duration:I = 0x7f0b0035
 
-.field public static final drop_down_menu_exit_duration:I = 0x7f0b0035
+.field public static final drop_down_menu_exit_duration:I = 0x7f0b0036
 
-.field public static final immersion_menu_enter_duration:I = 0x7f0b003c
+.field public static final immersion_menu_enter_duration:I = 0x7f0b003d
 
-.field public static final immersion_menu_exit_duration:I = 0x7f0b003d
+.field public static final immersion_menu_exit_duration:I = 0x7f0b003e
 
-.field public static final status_bar_notification_info_maxnum:I = 0x7f0b0045
+.field public static final status_bar_notification_info_maxnum:I = 0x7f0b0046
 
-.field public static final window_translucent_status:I = 0x7f0b0049
+.field public static final window_translucent_status:I = 0x7f0b004a

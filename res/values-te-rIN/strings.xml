@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">అప్లికేషన్‌లను తెరిచే ముందు మీ పరికరం పూర్తిగా రీబూట్ అయ్యే వరకు వేచి ఉండండి</string>
     <string name="add_custom_category">అనుకూలీకృత</string>
     <string name="add_screen">స్క్రీన్‌ని జోడించు</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">అన్ని యాప్‌లు విజయవంతంగా జోడించబడ్డాయి</string>
     <string name="afternoon">మధ్యాహ్నం</string>
     <string name="agree_button">అంగీకరిస్తున్నాను</string>
@@ -67,7 +68,7 @@
     <string name="all_apps_slide_up_tips">పైకి స్వైప్ చేయడమనేది యాప్ డ్రాని తెరిచేందుకు ప్రత్యేకంగా కేటాయించబడింది. సాధారణ హోమ్ స్క్రీన్ మోడ్‌కి మారి, మళ్లీ ప్రయత్నించండి.</string>
     <string name="all_apps_suggestions">అప్లికేషన్ సూచనలు</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">యానిమేషన్ వేగం</string>
     <string name="announce_for_app_move_in_folder">ఫోల్డర్‌లో %1$d స్థానానికి తరలించబడింది</string>
     <string name="announce_for_checked">%1$s, చెక్ చేయబడింది</string>
     <string name="announce_for_choose_default_screen">డిఫాల్ట్ హోమ్ స్క్రీన్‌గా స్క్రీన్ %1$d సెట్ చేయి</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">చిహ్నాలు విజయవంతంగా అమర్చబడ్డాయి</string>
     <string name="one_key_call_title">డయల్ చేసేందుకు ట్యాప్ చేయండి</string>
     <string name="online_wallpaper">ఆన్‌లైన్</string>
+    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
     <string name="open_personal_assistant_dialog_btn_cancel">రద్దు చేయి</string>
     <string name="open_personal_assistant_dialog_btn_confirm">ఆఫ్ చేయండి</string>
     <string name="open_personal_assistant_dialog_desc">మీరు యాప్ వాల్ట్‌ని ఆఫ్ చేసిన తరువాత, యాప్ వాల్ట్ విడ్జెట్‌లను చూడలేరు లేదా ఉపయోగించలేరు. వాటి అప్‌డేట్ చేసిన వెర్షన్‌లు కూడా మీకు అందుబాటులో ఉండవు. ఏదేమైనా ఆఫ్ చేయాలా?</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">అంతర్గత మరియు బాహ్య హోమ్ స్క్రీన్ లేఅవుట్‌లు కొత్త వెర్షన్‌లో సింక్ చేయబడ్డాయి.</string>
     <string name="ota_layout_adjustment_title">హోమ్ స్క్రీన్ లేఅవుట్‌లు</string>
     <string name="out_of_space">ఈ హోమ్ స్క్రీన్‌లో మరింత ఖాళీ లేదు</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">మూడవ పక్ష యాప్ చిహ్నాలపై యానిమేషన్‌లు అమలు చేస్తుంది</string>
     <string name="perfect_icons_switch_title">గ్లోబల్ ఐకాన్ యానిమేషన్‌లు</string>
     <string name="permdesc_install_shortcut">వినియోగదారు అనుమతి లేకుండా సత్వరమార్గాలను జోడించడానికి అప్లికేషన్‌ను అనుమతిస్తుంది.</string>

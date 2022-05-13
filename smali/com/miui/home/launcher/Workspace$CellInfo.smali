@@ -32,7 +32,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 1964
+    .line 1976
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,25 +47,25 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 1974
+    .line 1986
     iget p1, p0, Lcom/miui/home/launcher/Workspace$CellInfo;->screenOrder:I
 
     if-lez p1, :cond_0
 
     add-int/lit8 p1, p1, -0x1
 
-    .line 1975
+    .line 1987
     iput p1, p0, Lcom/miui/home/launcher/Workspace$CellInfo;->screenOrder:I
 
     goto :goto_0
 
-    .line 1977
+    .line 1989
     :cond_0
     iput v0, p0, Lcom/miui/home/launcher/Workspace$CellInfo;->screenOrder:I
 
     goto :goto_0
 
-    .line 1980
+    .line 1992
     :cond_1
     iget p1, p0, Lcom/miui/home/launcher/Workspace$CellInfo;->screenOrder:I
 
@@ -80,7 +80,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 1986
+    .line 1998
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

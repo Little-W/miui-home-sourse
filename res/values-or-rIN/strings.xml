@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">ଆପ୍ସ ଖୋଲିବା ପୂର୍ବରୁ ଆପଣଙ୍କ ଡିଭାଇସ ସମ୍ପୂର୍ଣ୍ଣରୂପେ ରିବୁଟ୍ ହେବା ପର୍ଯ୍ୟନ୍ତ ଅପେକ୍ଷା କରନ୍ତୁ</string>
     <string name="add_custom_category">କଷ୍ଟମ୍</string>
     <string name="add_screen">ସ୍କ୍ରିନ୍‌ ଯୋଡ଼ନ୍ତୁ</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">ସଫଳତାର ସହିତ ସମସ୍ତ ଆପ୍ସ ଯୋଗ କରାଗଲା</string>
     <string name="afternoon">ମଧ୍ୟାହ୍ନ</string>
     <string name="agree_button">ସହମତ</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">ସଫଳତାର ସହିତ ଆଇକନ ସଜା ଯାଇଛି</string>
     <string name="one_key_call_title">ଡାଏଲ୍ କରିବା ପାଇଁ ଟେପ୍ କରନ୍ତୁ</string>
     <string name="online_wallpaper">ଅନ୍‌ଲାଇନ୍‍</string>
+    <string name="open_pad_personal_assistant_settings">ହୋମ ସ୍କ୍ରିନ୍ ୱିଜେଟ୍</string>
     <string name="open_personal_assistant_dialog_btn_cancel">ବାତିଲ୍</string>
     <string name="open_personal_assistant_dialog_btn_confirm">ବନ୍ଦ କରନ୍ତୁ</string>
     <string name="open_personal_assistant_dialog_desc">ଆପଣ ଆପ୍ ଭଲ୍ଟ ବନ୍ଦ କଲା ପରେ ଆପଣ ଆପ୍ ଭଲ୍ଟ ୱିଜେଟ୍ ଦେଖିବାକୁ ବା ବ୍ୟବହାର କରିବାକୁ ସକ୍ଷମ ହେବେ ନାହିଁ। ସେଗୁଡ଼ିକର ଅପଡେଟ୍ ହୋଇଥିବା ସଂସ୍କରଣ ମଧ୍ୟ ଆପଣଙ୍କ ପାଇଁ ଉପଲବ୍ଧ ହେବ ନାହିଁ। ଯେ କୌଣସି ଭାବେ ବନ୍ଦ କରିବେ?</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">ନୂତନ ସଂସ୍କରଣରେ ଭିତର ଏବଂ ବାହାର ହୋମ ସ୍କ୍ରିନ୍ ଲେଆଉଟ୍ ସିଙ୍କ୍ରୋନାଇଜ୍ ହୋଇଛି।</string>
     <string name="ota_layout_adjustment_title">ହୋମ୍‌ ସ୍କ୍ରିନ୍ ଲେଆଉଟ୍‌</string>
     <string name="out_of_space">ଏହି ହୋମ୍‌ସ୍କ୍ରିନ୍‌ରେ ଅଧିକ ସ୍ଥାନ ନାହିଁ</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">ତୃତୀୟପକ୍ଷ ଆପ୍ ଆଇକନଗୁଡ଼ିକ ଉପରେ ଆନିମେସନ୍ ରେଣ୍ଡର୍ କରନ୍ତୁ</string>
     <string name="perfect_icons_switch_title">ଗ୍ଲୋବାଲ ଆଇକନ ଆନିମେସନ୍</string>
     <string name="permdesc_install_shortcut">ଉପଭୋକ୍ତାଙ୍କ ହସ୍ତକ୍ଷେପ ବିନା ସର୍ଟକଟ୍‌ଗୁଡ଼ିକ ଯୋଡ଼ିବା ପାଇଁ ଏକ ଆପ୍ଲିକେସନକୁ ଅନୁମତି ଦେଇଥାଏ।</string>

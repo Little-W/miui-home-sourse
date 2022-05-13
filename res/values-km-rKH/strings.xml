@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">សូមរងចាំរហូតដល់ឧបករណ៍របស់អ្នកចាប់ផ្ដើមឡើងវិញពេញលេញ មុននឹងបើកកម្មវិធីនានា</string>
     <string name="add_custom_category">តាម​បំណង</string>
     <string name="add_screen">បន្ថែម​អេក្រង់</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">កម្មវិធីទាំងអស់បានបន្ថែមដោយជោគជ័យ</string>
     <string name="afternoon">ពេលរសៀល</string>
     <string name="agree_button">យល់ព្រម</string>
@@ -67,7 +68,7 @@
     <string name="all_apps_slide_up_tips">ការអូសឡើងត្រូវបានបម្រុងទុកសម្រាប់ការបើកថតកម្មវិធី។ ប្តូរទៅម៉ូដអេក្រង់ដើមធម្មតា ហើយព្យាយាមម្តងទៀត។</string>
     <string name="all_apps_suggestions">ការផ្តល់យោបល់នៃកម្មវិធី</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">ល្បឿនចលនារូបភាព</string>
     <string name="announce_for_app_move_in_folder">បានផ្លាស់ទីទៅទីតាំង %1$d នៅក្នុងថត</string>
     <string name="announce_for_checked">%1$s បានពិនិត្យរួច</string>
     <string name="announce_for_choose_default_screen">កំណត់អេក្រង់ %1$d ជាអេក្រង់លំនាំដើម</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">រៀបចំរូបតំណាងដោយជោគជ័យ</string>
     <string name="one_key_call_title">ចុច ដើម្បីតេ</string>
     <string name="online_wallpaper">លើបណ្តាញ</string>
+    <string name="open_pad_personal_assistant_settings">ធាតុក្រាហ្វិកនៃអេក្រង់ដើម</string>
     <string name="open_personal_assistant_dialog_btn_cancel">បោះបង់</string>
     <string name="open_personal_assistant_dialog_btn_confirm">បិទ</string>
     <string name="open_personal_assistant_dialog_desc">បន្ទាប់ពីអ្នកបិទឃ្លាំងកម្មវិធីអ្នកនឹងមិនអាចមើលឬប្រើធាតុក្រាហ្វិកឈ្លាំងកម្មវិធីបានទេ។ កំណែជំនាន់ដែលបានអាប់ដេតរបស់ពួកវាក៏នឹងលែងមានសម្រាប់អ្នកដែរ។ នៅតែបិទឬ?</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">ប្លង់អេក្រង់ដើមខាងក្នុងនិងខាងក្រៅត្រូវបានធ្វើសមកាលកម្មនៅក្នុងកំណែជំនាន់ថ្មី។</string>
     <string name="ota_layout_adjustment_title">ប្លង់អេក្រង់ដើម</string>
     <string name="out_of_space">គ្មាន​ចន្លោះ​នៅសល់​នៅ​លើ​អេក្រង់​ដើម​នេះទេ</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">បង្ហាញចលនានៅលើរូបតំណាងកម្មវិធីភាគីទីបី</string>
     <string name="perfect_icons_switch_title">ចលនារូបតំណាងសកល</string>
     <string name="permdesc_install_shortcut">អនុញ្ញាត​ឱ្យ​កម្មវិធី​បន្ថែម​នូវ​ផ្លូវកាត់​នានា​បាន​ដោយ​មិនចាំបាច់​មាន​អន្តរាគមន៍​របស់​អ្នកប្រើ។</string>

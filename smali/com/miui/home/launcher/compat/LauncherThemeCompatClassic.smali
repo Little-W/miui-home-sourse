@@ -23,7 +23,7 @@
 
     move-result v0
 
-    const v1, 0x7f070139
+    const v1, 0x7f070140
 
     .line 34
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/compat/LauncherThemeCompatClassic;->isThemeOverride(I)Z
@@ -53,7 +53,7 @@
 
     move-result v0
 
-    const v1, 0x7f07013a
+    const v1, 0x7f070141
 
     .line 43
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/compat/LauncherThemeCompatClassic;->isThemeOverride(I)Z
@@ -83,7 +83,7 @@
 
     move-result v0
 
-    const v1, 0x7f07013b
+    const v1, 0x7f070142
 
     .line 25
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/compat/LauncherThemeCompatClassic;->isThemeOverride(I)Z
@@ -113,7 +113,7 @@
 
     move-result v0
 
-    const v1, 0x7f07016e
+    const v1, 0x7f070175
 
     .line 16
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/compat/LauncherThemeCompatClassic;->isThemeOverride(I)Z

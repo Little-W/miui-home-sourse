@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Espere até o dispositivo reiniciar totalmente antes de abrir aplicações</string>
     <string name="add_custom_category">Personalizado</string>
     <string name="add_screen">Adicionar ecrã</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Todas as aplicações adicionadas com sucesso</string>
     <string name="afternoon">Tarde</string>
     <string name="agree_button">Aceitar</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Ícones organizados com êxito</string>
     <string name="one_key_call_title">Toque para marcar</string>
     <string name="online_wallpaper">Online</string>
+    <string name="open_pad_personal_assistant_settings">Widgets do Ecrã inicial</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Cancelar</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Desligar</string>
     <string name="open_personal_assistant_dialog_desc">Depois que desligar o Cofre de aplicações, não poderá ver ou utilizar os widgets do Cofre de aplicações. Da mesma forma, as suas versões atualizadas não vão estar disponíveis para si. Desligar na mesma?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">As disposições do Ecrã inicial internos e externos foram sincronizados na nova versão.</string>
     <string name="ota_layout_adjustment_title">Disposições do Ecrã inicial</string>
     <string name="out_of_space">Não há mais espaço neste Ecrã inicial</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Renderizar animações em ícones de aplicações de terceiros</string>
     <string name="perfect_icons_switch_title">Animações globais de ícone</string>
     <string name="permdesc_install_shortcut">Permite que uma aplicação adicione atalhos sem intervenção do utilizador.</string>

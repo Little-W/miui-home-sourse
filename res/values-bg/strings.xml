@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Изчакайте устройството ви да се рестартира напълно, преди да отваряте приложения</string>
     <string name="add_custom_category">По избор</string>
     <string name="add_screen">Добави бутон за екрани</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Всички приложения са добавени успешно</string>
     <string name="afternoon">Следобяд</string>
     <string name="agree_button">Приемам</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">Плъзгането е резервирано за Чекмедже за приложения. Превключете към нормалния Начален екран и опитайте отново.</string>
     <string name="all_apps_suggestions">Предложения за приложения</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Скорост на анимацията</string>
     <string name="announce_for_app_move_in_folder">Преместено на позиция %1$d в папката</string>
     <string name="announce_for_checked">%1$s, проверени</string>
     <string name="announce_for_choose_default_screen">Задайте екран %1$d за Начален екран по подразбиране</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Успешно подредени икони</string>
     <string name="one_key_call_title">Натиснете за набиране</string>
     <string name="online_wallpaper">Онлайн</string>
+    <string name="open_pad_personal_assistant_settings">Приспособления за Начален екран</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Отмени</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Изключи</string>
     <string name="open_personal_assistant_dialog_desc">След като изключите Трезор за приложения няма да можете да виждате или използвате приспособленията от Трезора за приложения. Техните обновените версии няма да бъдат налични за Вас. Желаете ли да го изключите въпреки това?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">Вътрешните и външните оформления на Началния екран са синхронизирани в новата версия.</string>
     <string name="ota_layout_adjustment_title">Оформления на Начален екран</string>
     <string name="out_of_space">На този екран няма свободно място.</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Създава анимации върху иконки на приложения от трета страна</string>
     <string name="perfect_icons_switch_title">Анимации за глобална иконка</string>
     <string name="permdesc_install_shortcut">Позволява на приложението да добавя преки пътища без намеса от потребителя.</string>

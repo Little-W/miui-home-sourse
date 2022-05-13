@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">انتظر حتى يتم إعادة تشغيل جهازك بالكامل قبل فتح التطبيقات</string>
     <string name="add_custom_category">تخصيص</string>
     <string name="add_screen">إضافة الشاشة</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">تم إضافة جميع التطبيقات بنجاح</string>
     <string name="afternoon">بعد الظهر</string>
     <string name="agree_button">أوافق</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">التمرير لأعلى مخصص لفتح درج التطبيقات. قم بالتبديل إلى وضع الشاشة الرئيسية العادي وحاول مجددا.</string>
     <string name="all_apps_suggestions">اقتراحات التطبيقات</string>
     <string name="am">ص</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">سرعة الحركة</string>
     <string name="announce_for_app_move_in_folder">تم نقلها إلى الموقع %1$d في المجلد</string>
     <string name="announce_for_checked">%1$s، محددة</string>
     <string name="announce_for_choose_default_screen">تعيين الصفحة %1$d كالصفحة الرئيسية الإفتراضية</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">تم ترتيب الأيقونات بنجاح</string>
     <string name="one_key_call_title">انقر للاتصال</string>
     <string name="online_wallpaper">من الانترنت</string>
+    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
     <string name="open_personal_assistant_dialog_btn_cancel">إلغاء</string>
     <string name="open_personal_assistant_dialog_btn_confirm">إيقاف التشغيل</string>
     <string name="open_personal_assistant_dialog_desc">لن تتمكن من عرض أدوات منصة التطبيقات أو استخدامها بعد إيقاف تشغيله منصة التطبيقات. وأيضا لن تكون آخر إصداراتهم متاحة لك. هل ترغب في المتابعة؟</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">تمت مزامنة تخطيطات الشاشة الرئيسية الأمامية والخارجية في الإصدار الجديد.</string>
     <string name="ota_layout_adjustment_title">تنسيقات الشاشة الرئيسية</string>
     <string name="out_of_space">لا توجد مساحة إضافية على هذه الشاشة</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">تقديم الرسوم المتحركة في أيقونات برامج الجهة الثالثة</string>
     <string name="perfect_icons_switch_title">الرسوم المتحركة للرموز العالمية</string>
     <string name="permdesc_install_shortcut">السماح لتطبيق بإضافة اختصارات بدون تدخل المستخدم.</string>

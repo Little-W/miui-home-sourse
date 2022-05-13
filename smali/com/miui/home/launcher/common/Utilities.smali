@@ -46,7 +46,7 @@
 
 .field public static final IS_MIUI_13:Z
 
-.field public static LOW_MEMORY_DEVICES:Ljava/util/Set;
+.field public static LOW_MEMORY_DEVICES:Ljava/util/Set; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -58,7 +58,7 @@
 
 .field public static final MIUI_BIG_VERSION:Ljava/lang/String;
 
-.field public static MIUI_VERSION:F
+.field public static MIUI_VERSION:F = 0.0f
 
 .field public static final MIUI_VERSION_CODE:I
 
@@ -82,7 +82,7 @@
     .end annotation
 .end field
 
-.field public static USE_SIMPLE_ANIMATION_EFFECT_DEVICES:Ljava/util/Set;
+.field public static USE_SIMPLE_ANIMATION_EFFECT_DEVICES:Ljava/util/Set; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -92,7 +92,7 @@
     .end annotation
 .end field
 
-.field public static USE_SMOOTH_ANIMATION_EFFECT_DEVICES:Ljava/util/Set;
+.field public static USE_SMOOTH_ANIMATION_EFFECT_DEVICES:Ljava/util/Set; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
@@ -102,7 +102,7 @@
     .end annotation
 .end field
 
-.field private static mIncompatibleAppList:Ljava/util/List;
+.field private static mIncompatibleAppList:Ljava/util/List; = null
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
@@ -114,23 +114,23 @@
 
 .field private static final mMetrics:Landroid/util/DisplayMetrics;
 
-.field private static sBoostGPUInstance:Ljava/lang/Object;
+.field private static sBoostGPUInstance:Ljava/lang/Object; = null
 
-.field private static sBoostMethod:Ljava/lang/reflect/Method;
+.field private static sBoostMethod:Ljava/lang/reflect/Method; = null
 
 .field private static final sCanvas:Landroid/graphics/Canvas;
 
-.field private static sDefaultAnimatorInterPolator:Landroid/view/animation/Interpolator;
+.field private static sDefaultAnimatorInterPolator:Landroid/view/animation/Interpolator; = null
 
-.field private static sHasShowScreenLockedToast:Z
+.field private static sHasShowScreenLockedToast:Z = false
 
-.field private static sIconDarkShadowPaint:Landroid/graphics/Paint;
+.field private static sIconDarkShadowPaint:Landroid/graphics/Paint; = null
 
-.field private static sIconShadowBlurPaint:Landroid/graphics/Paint;
+.field private static sIconShadowBlurPaint:Landroid/graphics/Paint; = null
 
 .field private static final sInverseMatrix:Landroid/graphics/Matrix;
 
-.field private static sIsStaging:Z
+.field private static sIsStaging:Z = false
 
 .field private static sMQueueField:Ljava/lang/reflect/Field;
 
@@ -922,7 +922,7 @@
 
     if-eqz v0, :cond_0
 
-    const p2, 0x7f060104
+    const p2, 0x7f060105
 
     move v1, p3
 
@@ -933,7 +933,7 @@
     goto :goto_0
 
     :cond_0
-    const p3, 0x7f060103
+    const p3, 0x7f060104
 
     .line 1461
     :goto_0
@@ -3210,7 +3210,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0703a9
+    const v2, 0x7f0703b0
 
     .line 1721
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -3464,7 +3464,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1003f7
+    const v1, 0x7f1003fb
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -3487,7 +3487,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1003f6
+    const v1, 0x7f1003fa
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -3501,7 +3501,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1003f8
+    const v1, 0x7f1003fc
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/Application;->getString(I)Ljava/lang/String;
 
@@ -4252,6 +4252,47 @@
     move-result p0
 
     return p0
+.end method
+
+.method public static getDrawableByResourceName(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    .locals 3
+
+    .line 2589
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const-string v1, "drawable"
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, p1, v1, v2}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 2591
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
 .end method
 
 .method public static getDrawableFromPackage(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
@@ -8707,7 +8748,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f07009a
+    const v3, 0x7f07009d
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -9619,7 +9660,7 @@
 
     move-result-object p0
 
-    const v0, 0x7f07048e
+    const v0, 0x7f070495
 
     .line 1438
     sget-object v1, Lcom/miui/home/launcher/common/Utilities;->sTmpValue:Landroid/util/TypedValue;
@@ -9635,7 +9676,7 @@
 
     move-result v0
 
-    const v1, 0x7f07048c
+    const v1, 0x7f070493
 
     .line 1440
     sget-object v3, Lcom/miui/home/launcher/common/Utilities;->sTmpValue:Landroid/util/TypedValue;
@@ -9649,7 +9690,7 @@
 
     move-result v1
 
-    const v3, 0x7f07048d
+    const v3, 0x7f070494
 
     .line 1442
     sget-object v4, Lcom/miui/home/launcher/common/Utilities;->sTmpValue:Landroid/util/TypedValue;
@@ -9704,7 +9745,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f1003a0
+    const v1, 0x7f1003a4
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

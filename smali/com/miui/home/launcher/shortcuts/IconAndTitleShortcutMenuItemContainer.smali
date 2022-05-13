@@ -15,7 +15,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 27
+    .line 26
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -30,7 +30,7 @@
 
     return p1
 
-    .line 73
+    .line 72
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mTitle:Landroid/widget/TextView;
 
@@ -52,7 +52,7 @@
 .method private getMenuItemTitleMaxWidth()I
     .locals 3
 
-    .line 77
+    .line 76
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -65,7 +65,20 @@
 
     move-result-object v1
 
-    const v2, 0x7f070151
+    const v2, 0x7f070158
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v1
+
+    sub-float/2addr v0, v1
+
+    .line 77
+    invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f070157
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -78,7 +91,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070150
+    const v2, 0x7f070156
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -87,19 +100,6 @@
     sub-float/2addr v0, v1
 
     .line 79
-    invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f07014f
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v1
-
-    sub-float/2addr v0, v1
-
-    .line 80
     iget-object v1, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mTitle:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getTotalPaddingLeft()I
@@ -128,14 +128,14 @@
 .method private getSuitableTitle(Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;)Ljava/lang/CharSequence;
     .locals 3
 
-    .line 64
+    .line 63
     invoke-virtual {p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->getLongTitle()Ljava/lang/CharSequence;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 65
+    .line 64
     invoke-direct {p0, v0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->calculateWordsWidth(Ljava/lang/CharSequence;)F
 
     move-result v1
@@ -152,7 +152,7 @@
 
     return-object v0
 
-    .line 68
+    .line 67
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->getShortTitle()Ljava/lang/CharSequence;
 
@@ -164,7 +164,7 @@
 .method private isTextHeightMoreThanViewHeight()Z
     .locals 2
 
-    .line 59
+    .line 58
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->getOrientation()I
 
     move-result v0
@@ -173,7 +173,7 @@
 
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mTitle:Landroid/widget/TextView;
 
-    .line 60
+    .line 59
     invoke-virtual {v0}, Landroid/widget/TextView;->getLineHeight()I
 
     move-result v0
@@ -200,10 +200,10 @@
 .method public static synthetic lambda$bindShortcutMenuItem$0(Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;Landroid/view/View$OnClickListener;Landroid/view/View;)V
     .locals 0
 
-    .line 52
+    .line 51
     invoke-interface {p1, p2}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    .line 53
+    .line 52
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -222,7 +222,7 @@
 .method public bindShortcutMenuItem(Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;)V
     .locals 2
 
-    .line 45
+    .line 44
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mIcon:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->getIconDrawable()Landroid/graphics/drawable/Drawable;
@@ -231,7 +231,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 46
+    .line 45
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mTitle:Landroid/widget/TextView;
 
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->getSuitableTitle(Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;)Ljava/lang/CharSequence;
@@ -240,7 +240,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 47
+    .line 46
     invoke-direct {p0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->isTextHeightMoreThanViewHeight()Z
 
     move-result v0
@@ -249,25 +249,25 @@
 
     if-eqz v0, :cond_0
 
-    .line 48
+    .line 47
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mTitle:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 50
+    .line 49
     :cond_0
     invoke-virtual {p1}, Lcom/miui/home/launcher/shortcuts/ShortcutMenuItem;->getOnClickListener()Landroid/view/View$OnClickListener;
 
     move-result-object p1
 
-    .line 51
+    .line 50
     new-instance v0, Lcom/miui/home/launcher/shortcuts/-$$Lambda$IconAndTitleShortcutMenuItemContainer$z4cOhrWYBLo5Ojjb7eb1Dehsvx0;
 
     invoke-direct {v0, p0, p1}, Lcom/miui/home/launcher/shortcuts/-$$Lambda$IconAndTitleShortcutMenuItemContainer$z4cOhrWYBLo5Ojjb7eb1Dehsvx0;-><init>(Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 55
+    .line 54
     iput-boolean v1, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mHasData:Z
 
     return-void
@@ -286,7 +286,7 @@
 
     return v1
 
-    .line 102
+    .line 101
     :cond_0
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->getMeasuredHeight()I
 
@@ -294,14 +294,14 @@
 
     if-lez v0, :cond_1
 
-    .line 103
+    .line 102
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->getMeasuredHeight()I
 
     move-result p1
 
     return p1
 
-    .line 105
+    .line 104
     :cond_1
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mTitle:Landroid/widget/TextView;
 
@@ -311,7 +311,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 106
+    .line 105
     invoke-virtual {v0}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -320,12 +320,12 @@
 
     int-to-float v0, v0
 
-    .line 107
+    .line 106
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f07046b
+    const v2, 0x7f070472
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -333,14 +333,14 @@
 
     add-float/2addr v0, v1
 
-    .line 108
+    .line 107
     iget-object v1, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mTitle:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getLineHeight()I
 
     move-result v1
 
-    .line 109
+    .line 108
     iget-object v2, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mTitle:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
@@ -385,12 +385,12 @@
 
     int-to-float p1, v1
 
-    .line 111
+    .line 110
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f07046d
+    const v2, 0x7f070474
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -398,12 +398,12 @@
 
     add-float/2addr p1, v1
 
-    .line 112
+    .line 111
     invoke-virtual {p0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f07046e
+    const v2, 0x7f070475
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -424,7 +424,7 @@
 .method public hasData()Z
     .locals 1
 
-    .line 91
+    .line 90
     iget-boolean v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mHasData:Z
 
     return v0
@@ -433,12 +433,12 @@
 .method protected onFinishInflate()V
     .locals 2
 
-    .line 32
+    .line 31
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     const v0, 0x7f0a0163
 
-    .line 33
+    .line 32
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -449,7 +449,7 @@
 
     const v0, 0x7f0a016a
 
-    .line 34
+    .line 33
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -458,7 +458,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mTitle:Landroid/widget/TextView;
 
-    .line 35
+    .line 34
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
@@ -479,7 +479,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 36
+    .line 35
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mTitle:Landroid/widget/TextView;
 
     sget-object v1, Landroid/text/TextUtils$TruncateAt;->START:Landroid/text/TextUtils$TruncateAt;
@@ -493,24 +493,24 @@
 .method public reset()V
     .locals 2
 
-    .line 84
+    .line 83
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mTitle:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 85
+    .line 84
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mIcon:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 86
+    .line 85
     invoke-virtual {p0, v1}, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     const/4 v0, 0x0
 
-    .line 87
+    .line 86
     iput-boolean v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mHasData:Z
 
     return-void
@@ -519,7 +519,7 @@
 .method public setIconScaleType(Landroid/widget/ImageView$ScaleType;)V
     .locals 1
 
-    .line 41
+    .line 40
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mIcon:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
@@ -530,7 +530,7 @@
 .method public setTitleTextColor(I)V
     .locals 1
 
-    .line 95
+    .line 94
     iget-object v0, p0, Lcom/miui/home/launcher/shortcuts/IconAndTitleShortcutMenuItemContainer;->mTitle:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V

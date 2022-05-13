@@ -264,7 +264,7 @@
 .method public areContentsTheSame(Lcom/miui/home/launcher/ItemInfo;)Z
     .locals 2
 
-    .line 465
+    .line 469
     iget-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->mTitle:Ljava/lang/CharSequence;
 
     iget-object v1, p1, Lcom/miui/home/launcher/ItemInfo;->mTitle:Ljava/lang/CharSequence;
@@ -279,14 +279,14 @@
 
     iget-object v1, p1, Lcom/miui/home/launcher/ItemInfo;->mLabel:Ljava/lang/CharSequence;
 
-    .line 466
+    .line 470
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 467
+    .line 471
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemInfo;->isDisabled()Z
 
     move-result v0
@@ -319,7 +319,7 @@
 .method public canBeDeleted(Landroid/content/Context;)Z
     .locals 0
 
-    .line 423
+    .line 427
     iget-boolean p1, p0, Lcom/miui/home/launcher/ItemInfo;->mIsRetained:Z
 
     xor-int/lit8 p1, p1, 0x1
@@ -412,7 +412,7 @@
 .method public findMyPendingSource()Lcom/miui/home/launcher/PendingSource;
     .locals 6
 
-    .line 375
+    .line 379
     invoke-static {}, Lcom/miui/home/launcher/Application;->getLauncher()Lcom/miui/home/launcher/Launcher;
 
     move-result-object v0
@@ -423,7 +423,7 @@
 
     return-object v1
 
-    .line 377
+    .line 381
     :cond_0
     iget-wide v2, p0, Lcom/miui/home/launcher/ItemInfo;->container:J
 
@@ -433,7 +433,7 @@
 
     if-nez v4, :cond_1
 
-    .line 378
+    .line 382
     invoke-virtual {v0}, Lcom/miui/home/launcher/Launcher;->getWorkspace()Lcom/miui/home/launcher/Workspace;
 
     move-result-object v0
@@ -453,7 +453,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 381
+    .line 385
     invoke-virtual {v0, v2, v3}, Lcom/miui/home/launcher/Launcher;->getFolderInfoById(J)Lcom/miui/home/launcher/FolderInfo;
 
     move-result-object v1
@@ -471,17 +471,17 @@
 .method public finishPending()V
     .locals 1
 
-    .line 359
+    .line 363
     iget-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->mPendingSource:Lcom/miui/home/launcher/PendingSource;
 
     if-eqz v0, :cond_0
 
-    .line 360
+    .line 364
     invoke-interface {v0, p0}, Lcom/miui/home/launcher/PendingSource;->removePendingItem(Lcom/miui/home/launcher/PendingItem;)V
 
     const/4 v0, 0x0
 
-    .line 361
+    .line 365
     iput-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->mPendingSource:Lcom/miui/home/launcher/PendingSource;
 
     :cond_0
@@ -516,7 +516,7 @@
 .method public getLastLaunchTime()J
     .locals 2
 
-    .line 431
+    .line 435
     iget-wide v0, p0, Lcom/miui/home/launcher/ItemInfo;->mLastLaunchTime:J
 
     return-wide v0
@@ -525,7 +525,7 @@
 .method public getLaunchCounts()[I
     .locals 1
 
-    .line 393
+    .line 397
     iget-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->mLaunchCounts:[I
 
     return-object v0
@@ -534,14 +534,14 @@
 .method public getTargetComponent()Landroid/content/ComponentName;
     .locals 1
 
-    .line 450
+    .line 454
     invoke-virtual {p0}, Lcom/miui/home/launcher/ItemInfo;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 452
+    .line 456
     invoke-virtual {v0}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v0
@@ -610,7 +610,7 @@
 .method public hasSamePosition(Lcom/miui/home/launcher/ItemInfo;)Z
     .locals 4
 
-    .line 409
+    .line 413
     iget-wide v0, p0, Lcom/miui/home/launcher/ItemInfo;->container:J
 
     iget-wide v2, p1, Lcom/miui/home/launcher/ItemInfo;->container:J
@@ -653,7 +653,7 @@
 .method public isApplicatoin()Z
     .locals 1
 
-    .line 427
+    .line 431
     iget v0, p0, Lcom/miui/home/launcher/ItemInfo;->itemType:I
 
     if-nez v0, :cond_0
@@ -720,6 +720,39 @@
     const/4 v0, 0x0
 
     :goto_0
+    return v0
+.end method
+
+.method public isInHotseatRecommend()Z
+    .locals 4
+
+    .line 358
+    iget-wide v0, p0, Lcom/miui/home/launcher/ItemInfo;->container:J
+
+    const-wide/16 v2, -0x66
+
+    cmp-long v2, v0, v2
+
+    if-eqz v2, :cond_1
+
+    const-wide/16 v2, -0x67
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
     return v0
 .end method
 
@@ -796,7 +829,7 @@
 .method public isPending()Z
     .locals 1
 
-    .line 389
+    .line 393
     iget-object v0, p0, Lcom/miui/home/launcher/ItemInfo;->mPendingSource:Lcom/miui/home/launcher/PendingSource;
 
     if-eqz v0, :cond_0
@@ -1369,15 +1402,15 @@
 .method public startPending(Lcom/miui/home/launcher/PendingSource;)V
     .locals 0
 
-    .line 367
+    .line 371
     iput-object p1, p0, Lcom/miui/home/launcher/ItemInfo;->mPendingSource:Lcom/miui/home/launcher/PendingSource;
 
-    .line 368
+    .line 372
     iget-object p1, p0, Lcom/miui/home/launcher/ItemInfo;->mPendingSource:Lcom/miui/home/launcher/PendingSource;
 
     if-eqz p1, :cond_0
 
-    .line 369
+    .line 373
     invoke-interface {p1, p0}, Lcom/miui/home/launcher/PendingSource;->addPendingItem(Lcom/miui/home/launcher/PendingItem;)V
 
     :cond_0

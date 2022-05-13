@@ -221,7 +221,7 @@
 
     invoke-virtual {p0, v0, p2}, Lcom/miui/home/launcher/ItemIcon;->setLayerType(ILandroid/graphics/Paint;)V
 
-    const p2, 0x7f0600ce
+    const p2, 0x7f0600cf
 
     .line 98
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getColor(I)I
@@ -373,7 +373,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f07016c
+    const v2, 0x7f070173
 
     .line 143
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
@@ -501,7 +501,7 @@
 
     sget-object p3, Lcom/miui/home/launcher/ItemIcon;->sTmpRect:Landroid/graphics/Rect;
 
-    const v4, 0x7f060100
+    const v4, 0x7f060101
 
     .line 157
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getColor(I)I

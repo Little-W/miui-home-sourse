@@ -17,7 +17,7 @@
 # instance fields
 .field public final alpha:F
 
-.field final cornerRadius:F
+.field public final cornerRadius:F
 
 .field public final isShow:Z
 

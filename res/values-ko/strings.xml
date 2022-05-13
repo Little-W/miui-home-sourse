@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">앱을 여시기 전 기기가 완전히 재부팅될 때까지 기다려주십시오</string>
     <string name="add_custom_category">사용자지정</string>
     <string name="add_screen">화면 추가</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">모든 앱 추가 성공</string>
     <string name="afternoon">오후</string>
     <string name="agree_button">동의</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">아이콘 정렬 성공</string>
     <string name="one_key_call_title">탭하여 전화걸기</string>
     <string name="online_wallpaper">온라인</string>
+    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
     <string name="open_personal_assistant_dialog_btn_cancel">취소</string>
     <string name="open_personal_assistant_dialog_btn_confirm">끄기</string>
     <string name="open_personal_assistant_dialog_desc">앱 서랍을 끄신 후에는 앱 서랍 위젯을 확인하거나 사용할 수 없게 됩니다. 업데이트된 버전도 사용할 수 없게 됩니다. 그래도 끄시겠습니까?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">새 버전에서는 내부 및 외부 홈 화면 레이아웃이 동기화되었습니다.</string>
     <string name="ota_layout_adjustment_title">홈 화면 레이아웃</string>
     <string name="out_of_space">이 홈 화면에 더 이상의 공간이 없습니다.</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">타사 앱 아이콘에 애니메이션 렌더링</string>
     <string name="perfect_icons_switch_title">글로벌 아이콘 애니메이션</string>
     <string name="permdesc_install_shortcut">앱이 사용자의 조작 없이 바로가기를 추가할 수 있도록 허용</string>

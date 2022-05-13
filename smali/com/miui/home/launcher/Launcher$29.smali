@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3797
+    .line 3801
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -35,12 +35,12 @@
 .method public onChange(Z)V
     .locals 2
 
-    .line 3800
+    .line 3804
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3000(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 3801
+    .line 3805
     sget-object p1, Lcom/miui/home/launcher/DeviceConfig;->INSTANCE:Lcom/miui/home/launcher/util/MainThreadInitializedObject;
 
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
@@ -65,19 +65,19 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/miui/home/launcher/DeviceConfig;->loadScreenSize(Landroid/content/Context;Landroid/content/res/Resources;)V
 
-    .line 3802
+    .line 3806
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isScreenSizeChanged()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    .line 3803
+    .line 3807
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->onScreenSizeChanged()V
 
-    .line 3805
+    .line 3809
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -87,7 +87,7 @@
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->performLayoutNow(Landroid/view/View;)V
 
-    .line 3806
+    .line 3810
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/FolderCling;
@@ -96,7 +96,7 @@
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->performLayoutNow(Landroid/view/View;)V
 
-    .line 3807
+    .line 3811
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$29;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$3200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/search/SearchEdgeLayout;

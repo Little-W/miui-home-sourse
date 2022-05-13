@@ -35,7 +35,7 @@
 .method public static commitInt(Landroid/content/Context;Ljava/lang/String;I)V
     .locals 0
 
-    .line 128
+    .line 129
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -48,7 +48,7 @@
 .method public static contains(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 0
 
-    .line 144
+    .line 145
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -63,7 +63,7 @@
 .method public static getBoolean(Landroid/content/Context;Ljava/lang/String;Z)Z
     .locals 0
 
-    .line 108
+    .line 109
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -78,7 +78,7 @@
 .method private getIconSizeScaleDefaultValue()F
     .locals 4
 
-    .line 179
+    .line 180
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
 
     move-result v0
@@ -89,13 +89,13 @@
 
     return v0
 
-    .line 182
+    .line 183
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v0
 
-    .line 183
+    .line 184
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
     move-result v1
@@ -110,7 +110,7 @@
 
     return v3
 
-    .line 186
+    .line 187
     :cond_1
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountX()I
 
@@ -122,7 +122,7 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 187
+    .line 188
     invoke-static {v0}, Lcom/miui/home/launcher/DeviceConfig;->getCellCountXMax(Landroid/content/Context;)I
 
     move-result v1
@@ -164,7 +164,7 @@
 .method public static getInt(Landroid/content/Context;Ljava/lang/String;I)I
     .locals 0
 
-    .line 120
+    .line 121
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -179,7 +179,7 @@
 .method public static getLong(Landroid/content/Context;Ljava/lang/String;J)J
     .locals 0
 
-    .line 100
+    .line 101
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -194,7 +194,7 @@
 .method public static getString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 116
+    .line 117
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -222,7 +222,7 @@
         }
     .end annotation
 
-    .line 152
+    .line 153
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -237,7 +237,7 @@
 .method public static getValue(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 156
+    .line 157
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -252,7 +252,7 @@
 .method public static putBoolean(Landroid/content/Context;Ljava/lang/String;Z)V
     .locals 0
 
-    .line 104
+    .line 105
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -265,7 +265,7 @@
 .method public static putFloat(Landroid/content/Context;Ljava/lang/String;F)V
     .locals 0
 
-    .line 132
+    .line 133
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -278,7 +278,7 @@
 .method public static putInt(Landroid/content/Context;Ljava/lang/String;I)V
     .locals 0
 
-    .line 124
+    .line 125
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -291,7 +291,7 @@
 .method public static putLong(Landroid/content/Context;Ljava/lang/String;J)V
     .locals 0
 
-    .line 96
+    .line 97
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -304,7 +304,7 @@
 .method public static putString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 112
+    .line 113
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -327,7 +327,7 @@
         }
     .end annotation
 
-    .line 148
+    .line 149
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -340,7 +340,7 @@
 .method public static removeKey(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
-    .line 140
+    .line 141
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
     move-result-object p0
@@ -359,7 +359,7 @@
 
     const/4 v1, 0x0
 
-    .line 280
+    .line 281
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -370,7 +370,7 @@
 .method public getIconScalePrefKey()Ljava/lang/String;
     .locals 1
 
-    .line 164
+    .line 165
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isNoWordModel()Z
 
     move-result v0
@@ -390,7 +390,7 @@
 .method public getIconSizeScale()F
     .locals 1
 
-    .line 160
+    .line 161
     invoke-static {}, Lcom/miui/home/launcher/allapps/LauncherModeController;->getCurrentMode()Lcom/miui/home/launcher/allapps/LauncherMode;
 
     move-result-object v0
@@ -405,7 +405,7 @@
 .method public getIconSizeScaleFromSP()F
     .locals 3
 
-    .line 171
+    .line 172
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/PreferenceUtils;->getIconScalePrefKey()Ljava/lang/String;
 
     move-result-object v0
@@ -436,7 +436,7 @@
 
     const/4 v1, 0x0
 
-    .line 236
+    .line 237
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -451,7 +451,7 @@
 
     const-string v1, ""
 
-    .line 252
+    .line 253
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -466,7 +466,7 @@
 
     const-string v1, ""
 
-    .line 260
+    .line 261
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -481,7 +481,7 @@
 
     const-wide/16 v1, 0x0
 
-    .line 244
+    .line 245
     invoke-virtual {p0, v0, v1, v2}, Lcom/miui/home/launcher/common/PreferenceUtils;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
@@ -496,7 +496,7 @@
 
     const/4 v1, 0x0
 
-    .line 268
+    .line 269
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -509,7 +509,7 @@
 
     const-string v0, "is_all_apps_drawer_mode_enable"
 
-    .line 203
+    .line 204
     invoke-virtual {p0, v0}, Lcom/miui/home/launcher/common/PreferenceUtils;->contains(Ljava/lang/String;)Z
 
     move-result v0
@@ -520,7 +520,7 @@
 .method public hasSetIconSizeScale()Z
     .locals 1
 
-    .line 175
+    .line 176
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/PreferenceUtils;->getIconScalePrefKey()Ljava/lang/String;
 
     move-result-object v0
@@ -535,7 +535,7 @@
 .method public isDrawerModeEnable()Z
     .locals 4
 
-    .line 209
+    .line 210
     invoke-static {}, Lcom/miui/home/launcher/common/Utilities;->isPocoLauncher()Z
 
     move-result v0
@@ -546,7 +546,7 @@
 
     return v1
 
-    .line 212
+    .line 213
     :cond_0
     invoke-static {}, Lcom/miui/home/launcher/common/PreferenceUtils;->getInstance()Lcom/miui/home/launcher/common/PreferenceUtils;
 
@@ -562,14 +562,14 @@
 
     const-string v0, "is_all_apps_drawer_mode_enable"
 
-    .line 213
+    .line 214
     invoke-virtual {p0, v0, v2}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
     return v0
 
-    .line 215
+    .line 216
     :cond_1
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
@@ -581,7 +581,7 @@
 
     const-string v3, "miui_home_drawer_default_enable"
 
-    .line 216
+    .line 217
     invoke-static {v0, v3, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
@@ -602,7 +602,7 @@
 
     const-string v0, "key_need_add_recommend_folder"
 
-    .line 276
+    .line 277
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Ljava/lang/String;Z)V
 
     return-void
@@ -613,7 +613,7 @@
 
     const-string v0, "is_all_apps_drawer_mode_enable"
 
-    .line 221
+    .line 222
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Ljava/lang/String;Z)V
 
     return-void
@@ -622,7 +622,7 @@
 .method public setIconSizeScale(F)V
     .locals 1
 
-    .line 199
+    .line 200
     invoke-virtual {p0}, Lcom/miui/home/launcher/common/PreferenceUtils;->getIconScalePrefKey()Ljava/lang/String;
 
     move-result-object v0
@@ -637,7 +637,7 @@
 
     const-string v0, "ignore_align_screen_list"
 
-    .line 240
+    .line 241
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -648,7 +648,7 @@
 
     const-string v0, "key_search_bar_data_from_provider_new"
 
-    .line 256
+    .line 257
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -659,7 +659,7 @@
 
     const-string v0, "key_search_bar_data_from_cloud"
 
-    .line 264
+    .line 265
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -670,7 +670,7 @@
 
     const-string v0, "key_search_bar_data_update_time"
 
-    .line 248
+    .line 249
     invoke-virtual {p0, v0, p1, p2}, Lcom/miui/home/launcher/common/PreferenceUtils;->putLong(Ljava/lang/String;J)V
 
     return-void
@@ -681,7 +681,7 @@
 
     const-string v0, "key_search_bar_test_hash"
 
-    .line 272
+    .line 273
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putInt(Ljava/lang/String;I)V
 
     return-void
@@ -692,7 +692,7 @@
 
     const-string v0, "should_align_screen"
 
-    .line 232
+    .line 233
     invoke-virtual {p0, v0, p1}, Lcom/miui/home/launcher/common/PreferenceUtils;->putBoolean(Ljava/lang/String;Z)V
 
     return-void
@@ -705,7 +705,7 @@
 
     const/4 v1, 0x0
 
-    .line 228
+    .line 229
     invoke-virtual {p0, v0, v1}, Lcom/miui/home/launcher/common/PreferenceUtils;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0

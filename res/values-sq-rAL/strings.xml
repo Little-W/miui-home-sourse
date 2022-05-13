@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">Prit derisa pajijsa jote të jetë plotësisht e rinisur përpara se të hapësh aplikacionet</string>
     <string name="add_custom_category">Përshtatje</string>
     <string name="add_screen">Shto ekranin</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Të gjithë aplikacionet u shtuan me sukses</string>
     <string name="afternoon">Pasdite</string>
     <string name="agree_button">Pajtohem</string>
@@ -67,7 +68,7 @@
     <string name="all_apps_slide_up_tips">Rrëshqitja lart kushtohet hapjes së Sirtarit të Aplikacionit. Ndërro në modalitetin Ekranin Bazë dhe provo sërish.</string>
     <string name="all_apps_suggestions">Sugjerimet e aplikacionit</string>
     <string name="am">PARADITE</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Shpejtesia e animacionit</string>
     <string name="announce_for_app_move_in_folder">Zhvendosur në pozicionin %1$d të dosjes</string>
     <string name="announce_for_checked">%1$s, kontrolluar</string>
     <string name="announce_for_choose_default_screen">Vendos ekranin %1$d si ekranin Kryesor të paracaktuar</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">Ikonat u rregulluan me sukses</string>
     <string name="one_key_call_title">Kliko për të parë</string>
     <string name="online_wallpaper">Në linjë</string>
+    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Anulo</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Fik</string>
     <string name="open_personal_assistant_dialog_desc">Pasi të fikni kasafortën e aplikacionit, nuk do të jeni në gjendje të shihni ose përdorni veglat e kasafortës së aplikacionit. Versionet e tyre të përditësuara nuk do të jenë në dispozicion për ju gjithashtu. Të fiket gjithsesi?</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">Paraqitjet e brendshme dhe të jashtme të ekranit bazë u sinkronizuan në versionin e ri.</string>
     <string name="ota_layout_adjustment_title">Paraqitja e ekranit bazë</string>
     <string name="out_of_space">Nuk ka më hapësirë në këtë Ekran kryesor</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Jep animacione në ikonat e aplikacionit të palëve të treta</string>
     <string name="perfect_icons_switch_title">Animime globale ikonash</string>
     <string name="permdesc_install_shortcut">Lejo një aplikacion të shtojë shkrurtore pa ndërhyrjen e përdoruesit.</string>

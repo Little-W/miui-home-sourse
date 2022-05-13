@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">"Espereu fins que es reiniciï completament el dispositiu abans d'obrir les aplicacions"</string>
     <string name="add_custom_category">Personalitzar</string>
     <string name="add_screen">Afegeix una pantalla</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">"Totes les aplicacions s'han afegit correctament"</string>
     <string name="afternoon">Tarda</string>
     <string name="agree_button">Accepto</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">"L'actualització està reservada per obrir el Calaix d'aplicacions. Canvieu al mode normal de la Pantalla d'Inici i proveu-ho de nou."</string>
     <string name="all_apps_suggestions">"Suggeriments d'aplicacions"</string>
     <string name="am">a. m.</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">"Velocitat d'animació"</string>
     <string name="announce_for_app_move_in_folder">"S'ha traslladat a la posició %1$d a la carpeta"</string>
     <string name="announce_for_checked">%1$s, comprovat</string>
     <string name="announce_for_choose_default_screen">"Establiu la pantalla %1$d com la Pantalla d'Inici per defecte"</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">"S'han organitzat les icones amb èxit"</string>
     <string name="one_key_call_title">Prem per a marcar</string>
     <string name="online_wallpaper">En línia</string>
+    <string name="open_pad_personal_assistant_settings">"Ginys de la Pantalla d'inici"</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Cancel·leu</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Desactiva</string>
     <string name="open_personal_assistant_dialog_desc">"Després de desactivar el magatzem d'aplicacions, no podreu veure ni utilitzar els ginys del Calaix d'aplicacions. Les seves versions actualitzades tampoc no estaran disponibles per a vosaltres. Voleu apagar-lo igualment?"</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">"Els dissenys de la Pantalla d'inici i exterior es van sincronitzar amb la nova versió."</string>
     <string name="ota_layout_adjustment_title">"Disposició de la Pantalla d'Inici"</string>
     <string name="out_of_space">"No queda més espai en aquesta Pantalla d'Inici"</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">"Renderitza les animacions de les icones d'aplicacions de tercers"</string>
     <string name="perfect_icons_switch_title">"Animacions d'icones globals"</string>
     <string name="permdesc_install_shortcut">"Permet a una aplicació afegir accessos directes sense intervenció de l'usuari."</string>

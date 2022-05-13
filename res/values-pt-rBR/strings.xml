@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Aguarde até que seu dispositivo seja totalmente reiniciado antes de abrir apps</string>
     <string name="add_custom_category">Personalizado</string>
     <string name="add_screen">Adicionar tela</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Todos os apps adicionados com sucesso</string>
     <string name="afternoon">Tarde</string>
     <string name="agree_button">Aceitar</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Ícones organizados com sucesso</string>
     <string name="one_key_call_title">Toque para discar</string>
     <string name="online_wallpaper">Online</string>
+    <string name="open_pad_personal_assistant_settings">Widgets da Tela inicial</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Cancelar</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Desativar</string>
     <string name="open_personal_assistant_dialog_desc">Depois que você desativar o App vault, você não poderá ver ou usar os widgets do App vault. Da mesma forma, suas versões atualizadas não estarão disponíveis para você. Desativar mesmo assim?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">Os Layouts da Tela inicial internos e externos foram sincronizados na nova versão.</string>
     <string name="ota_layout_adjustment_title">Layouts da Tela inicial</string>
     <string name="out_of_space">Não há mais espaço nesta Tela inicial</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Renderizar animações em ícones de apps de terceiros</string>
     <string name="perfect_icons_switch_title">Animações globais de ícone</string>
     <string name="permdesc_install_shortcut">Permite que um app adicione atalhos sem a intervenção do usuário.</string>

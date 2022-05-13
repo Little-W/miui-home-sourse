@@ -27,7 +27,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 159
+    .line 167
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,7 +54,7 @@
 
     sput-object v0, Lcom/miui/home/launcher/LauncherSettings$Favorites;->CONTENT_URI_STRING:Ljava/lang/String;
 
-    .line 163
+    .line 171
     sget-object v0, Lcom/miui/home/launcher/LauncherSettings$Favorites;->CONTENT_URI_STRING:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -69,7 +69,7 @@
 .method public static getContentUri(J)Landroid/net/Uri;
     .locals 2
 
-    .line 174
+    .line 182
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -98,7 +98,7 @@
 .method public static getJoinContentUri(Ljava/lang/String;)Landroid/net/Uri;
     .locals 2
 
-    .line 178
+    .line 186
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

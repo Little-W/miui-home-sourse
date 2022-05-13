@@ -197,7 +197,7 @@
 .method public onCreatePreferences(Landroid/os/Bundle;Ljava/lang/String;)V
     .locals 2
 
-    const p1, 0x7f130012
+    const p1, 0x7f130013
 
     .line 50
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/settings/IconCustomizeFragment;->setPreferencesFromResource(ILjava/lang/String;)V

@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Uygulamaları açmadan önce cihazınız tamamen yeniden başlatılana kadar bekleyin</string>
     <string name="add_custom_category">Özel</string>
     <string name="add_screen">Ekran ekle</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Tüm uygulamalar başarıyla eklendi</string>
     <string name="afternoon">Öğleden sonra</string>
     <string name="agree_button">Kabul et</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">Yukarı doğru kaydırmak, Uygulama çekmecesi için ayrılmıştır. Normal Ana ekran moduna geçin ve tekrar deneyin.</string>
     <string name="all_apps_suggestions">Uygulama tavsiyeleri</string>
     <string name="am">ÖÖ</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Animasyon hızı</string>
     <string name="announce_for_app_move_in_folder">Klasör içinde %1$d konumuna taşındı</string>
     <string name="announce_for_checked">%1$s, kontrol edildi</string>
     <string name="announce_for_choose_default_screen">%1$d numaralı ekranı varsayılan Ana ekran olarak ayarla</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Simgeler başarıyla düzenlendi</string>
     <string name="one_key_call_title">Aramak için dokunun</string>
     <string name="online_wallpaper">Çevrimiçi</string>
+    <string name="open_pad_personal_assistant_settings">Ana ekran araçları</string>
     <string name="open_personal_assistant_dialog_btn_cancel">İptal</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Kapat</string>
     <string name="open_personal_assistant_dialog_desc">Uygulama kasasını kapattıktan sonra Uygulama kasası araçlarını göremeyecek veya kullanamayacaksınız. Güncellenen sürümleri de kullanılamaz olacaktır. Yine de kapatılsın mı?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">İç ve dış Ana ekran düzeni yeni sürümde senkronize edildi.</string>
     <string name="ota_layout_adjustment_title">Ana ekran düzeni</string>
     <string name="out_of_space">Ana ekranda yeterli boş alan yok</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Animasyonları üçüncü taraf uygulama simgelerinde oluştur</string>
     <string name="perfect_icons_switch_title">Küresel simge animasyonları</string>
     <string name="permdesc_install_shortcut">Bir uygulamanın kullanıcı izni olmadan kısayol(lar) eklemesine izin verir.</string>

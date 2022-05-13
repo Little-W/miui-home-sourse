@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">ആപ്പുകൾ തുറക്കുന്നതിന് മുമ്പ് നിങ്ങളുടെ ഉപകരണം പൂർണ്ണമായി റീബൂട്ടുചെയ്യപ്പെടുന്നത് വരെ കാത്തിരിക്കുക</string>
     <string name="add_custom_category">ഇഷ്‌ടാനുസൃതം</string>
     <string name="add_screen">സ്ക്രീൻ ചേർക്കുക</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">എല്ലാ ആപ്പുകളും ചേർത്തു</string>
     <string name="afternoon">ഉച്ചകഴിഞ്ഞ്</string>
     <string name="agree_button">അംഗീകരിക്കുക</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">ഐക്കണുകൾ ക്രമീകരിച്ചു</string>
     <string name="one_key_call_title">ഡയൽ ചെയ്യാൻ ടാപ്പുചെയ്യുക</string>
     <string name="online_wallpaper">ഓൺലൈൻ</string>
+    <string name="open_pad_personal_assistant_settings">ഹോം സ്ക്രീൻ വിജറ്റുകൾ</string>
     <string name="open_personal_assistant_dialog_btn_cancel">റദ്ദാക്കുക</string>
     <string name="open_personal_assistant_dialog_btn_confirm">ഓഫാക്കുക</string>
     <string name="open_personal_assistant_dialog_desc">നിങ്ങൾ ആപ്പ് വോൾട്ട് ഓഫാക്കിയതിനുശേഷം, നിങ്ങൾക്ക് ആപ്പ് വോൾട്ട് വിജറ്റുകൾ കാണാനോ ഉപയോഗിക്കാനോ കഴിയില്ല. അവരുടെ അപ്ഡേറ്റുചെയ്ത പതിപ്പുകൾ നിങ്ങൾക്ക് ലഭ്യമാകില്ല. എന്തായാലും ഓഫാക്കണോ?</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">പുതിയ പതിപ്പിൽ ആന്തരികവും ബാഹ്യവുമായ ഹോം സ്ക്രീൻ ലേഔട്ടുകൾ സമന്വയിപ്പിച്ചിരിക്കുന്നു.</string>
     <string name="ota_layout_adjustment_title">ഹോം സ്ക്രീൻ ലേഔട്ടുകൾ</string>
     <string name="out_of_space">ഈ ഹോം സ്ക്രീനിൽ ഇനി സ്ഥലമില്ല</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">മൂന്നാം കക്ഷി ആപ്പ് ഐക്കണുകളിൽ ആനിമേഷനുകൾ റെൻഡർ ചെയ്യുക</string>
     <string name="perfect_icons_switch_title">ആഗോള ഐക്കൺ ആനിമേഷനുകൾ</string>
     <string name="permdesc_install_shortcut">ഉപയോക്താവിന്റെ ഇടപെടൽ കൂടാതെ എളുപ്പവഴികൾ ചേർക്കാൻ ആപ്പിനെ അനുവദിക്കുന്നു.</string>

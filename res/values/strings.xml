@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Wait until your device is fully rebooted before opening apps</string>
     <string name="add_custom_category">Custom</string>
     <string name="add_screen">Add screen</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Added all apps successfully</string>
     <string name="afternoon">Afternoon</string>
     <string name="agree_button">Agree</string>
@@ -304,7 +305,7 @@
     <string name="close_multi_finger_slide_summary">These gestures will be ignored in some scenarios (e.g. games and videos playback)</string>
     <string name="close_multi_finger_slide_title">"Don't respond to three- and four-finger gestures"</string>
     <string name="cloud_app_restore_title">Pending</string>
-    <string name="com.crashlytics.android.build_id">e9e517ed002e4bdaac49d1094e34b66e</string>
+    <string name="com.crashlytics.android.build_id">e768f4bdbf5345a485ce42965add0bb8</string>
     <string name="common_google_play_services_unknown_issue">%1$s is having trouble with Google Play services. Please try again.</string>
     <string name="common_home_search_delete">Removing search bar</string>
     <string name="common_home_search_delete_cancle">Cancel</string>
@@ -368,6 +369,7 @@
     <string name="dialog_work_profile_content_2">Work apps &amp; data are visible to your IT admin</string>
     <string name="dialog_work_profile_title">Work profile</string>
     <string name="disable_wallpaper_scroll">Turn side-scrolling off</string>
+    <string name="discovery_data_constant_part_end">&amp;ref=com.miui.home&amp;senderPackageName=com.miui.home&amp;ext_xxx=com.miui.home &amp;show_cta=true&amp;overlayPosition=1&amp;startDownload=true&amp;showToast=true&amp;extInstallUIType=1</string>
     <string name="download_action">Download</string>
     <string name="drag_icon_to_homescreen_guide">Press and hold an app icon, then drag it to add a Home screen shortcut</string>
     <string name="drag_multiple_item_name" />
@@ -798,6 +800,7 @@
     <string name="notification_reset_title">Arranged icons successfully</string>
     <string name="one_key_call_title">Tap to dial</string>
     <string name="online_wallpaper">Online</string>
+    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Cancel</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Turn off</string>
     <string name="open_personal_assistant_dialog_desc">"After you turn off App vault, you won't be able to see or use App vault widgets. Their updated versions won't be available to you as well. Turn off anyway?"</string>
@@ -810,6 +813,7 @@
     <string name="ota_layout_adjustment_content">Inner and outer Home screen layouts were synchronized in the new version.</string>
     <string name="ota_layout_adjustment_title">Home screen layouts</string>
     <string name="out_of_space">No more room on this Home screen</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Render animations on third party app icons</string>
     <string name="perfect_icons_switch_title">Global icon animations</string>
     <string name="permdesc_install_shortcut">Allows an app to add shortcuts without user intervention.</string>

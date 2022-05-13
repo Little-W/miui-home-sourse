@@ -3951,7 +3951,7 @@
     .line 973
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f100398
+    const v2, 0x7f10039c
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3967,7 +3967,7 @@
     .line 975
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f1000d2
+    const v2, 0x7f1000d3
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3980,7 +3980,7 @@
     .line 976
     iget-object v1, p0, Lcom/miui/home/launcher/upsidescene/SceneScreen;->mContext:Landroid/content/Context;
 
-    const v2, 0x7f100137
+    const v2, 0x7f100138
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

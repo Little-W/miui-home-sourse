@@ -6,7 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$GroupShortcutCache;,
+        Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$PairShortcutCache;,
         Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$RecommendContainer;
     }
 .end annotation
@@ -34,7 +34,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/miui/home/launcher/GroupShortcutInfo;",
+            "Lcom/miui/home/launcher/PairShortcutInfo;",
             ">;"
         }
     .end annotation
@@ -42,7 +42,7 @@
 
 .field private mRecommendContainer:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$RecommendContainer;
 
-.field private final mRecommendShortcutCache:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$GroupShortcutCache;
+.field private final mRecommendShortcutCache:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$PairShortcutCache;
 
 .field private final mTaskStackChangeListener:Lcom/android/systemui/shared/recents/system/TaskStackChangeListener;
 
@@ -77,13 +77,13 @@
     iput-wide v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mMinTaskActiveTime:J
 
     .line 48
-    new-instance v0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$GroupShortcutCache;
+    new-instance v0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$PairShortcutCache;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$GroupShortcutCache;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$1;)V
+    invoke-direct {v0, v1}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$PairShortcutCache;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$1;)V
 
-    iput-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecommendShortcutCache:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$GroupShortcutCache;
+    iput-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecommendShortcutCache:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$PairShortcutCache;
 
     .line 50
     new-instance v0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$1;
@@ -310,23 +310,23 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$qgjTCiiemB9prBXvjdmP6U-eu6M;
+    new-instance v1, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$cN7hhR3WR5Wa4aN5CF-VEVFzguI;
 
-    invoke-direct {v1, p0, v2}, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$qgjTCiiemB9prBXvjdmP6U-eu6M;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;Ljava/util/List;)V
+    invoke-direct {v1, p0, v2}, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$cN7hhR3WR5Wa4aN5CF-VEVFzguI;-><init>(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;Ljava/util/List;)V
 
     .line 136
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->map(Ljava/util/function/Function;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    sget-object v1, Lcom/miui/home/launcher/hotseats/-$$Lambda$bXBYQWx7Epf8QV1hAYTERXHHFxw;->INSTANCE:Lcom/miui/home/launcher/hotseats/-$$Lambda$bXBYQWx7Epf8QV1hAYTERXHHFxw;
+    sget-object v1, Lcom/miui/home/launcher/hotseats/-$$Lambda$QJ5EfGO-eN5XAdp8pXyZujTOcMo;->INSTANCE:Lcom/miui/home/launcher/hotseats/-$$Lambda$QJ5EfGO-eN5XAdp8pXyZujTOcMo;
 
     .line 137
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
 
     move-result-object v0
 
-    sget-object v1, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$fXINR-G7LKlUfbJJ3aQ4Iu-NC4o;->INSTANCE:Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$fXINR-G7LKlUfbJJ3aQ4Iu-NC4o;
+    sget-object v1, Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$Vsd_j7BAWt-2dURpDDWFuarzb9s;->INSTANCE:Lcom/miui/home/launcher/hotseats/-$$Lambda$HotSeatsListRecentsAppProvider$Vsd_j7BAWt-2dURpDDWFuarzb9s;
 
     .line 138
     invoke-interface {v0, v1}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
@@ -435,7 +435,7 @@
     return-object p1
 .end method
 
-.method private findGroupShortcutInfo(Lcom/android/systemui/shared/recents/model/Task;Ljava/util/List;)Lcom/miui/home/launcher/GroupShortcutInfo;
+.method private findGroupShortcutInfo(Lcom/android/systemui/shared/recents/model/Task;Ljava/util/List;)Lcom/miui/home/launcher/PairShortcutInfo;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -444,7 +444,7 @@
             "Ljava/util/List<",
             "Lcom/miui/home/launcher/AppInfo;",
             ">;)",
-            "Lcom/miui/home/launcher/GroupShortcutInfo;"
+            "Lcom/miui/home/launcher/PairShortcutInfo;"
         }
     .end annotation
 
@@ -600,9 +600,9 @@
 
     .line 181
     :cond_4
-    new-instance v0, Lcom/miui/home/launcher/GroupShortcutInfo;
+    new-instance v0, Lcom/miui/home/launcher/PairShortcutInfo;
 
-    invoke-direct {v0, p2, p1}, Lcom/miui/home/launcher/GroupShortcutInfo;-><init>(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutInfo;)V
+    invoke-direct {v0, p2, p1}, Lcom/miui/home/launcher/PairShortcutInfo;-><init>(Lcom/miui/home/launcher/ShortcutInfo;Lcom/miui/home/launcher/ShortcutInfo;)V
 
     return-object v0
 .end method
@@ -808,22 +808,22 @@
     return-object p0
 .end method
 
-.method public static synthetic lambda$evaluateRecentsRecommendTasks$7(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;Ljava/util/List;Lcom/android/systemui/shared/recents/model/Task;)Lcom/miui/home/launcher/GroupShortcutInfo;
+.method public static synthetic lambda$evaluateRecentsRecommendTasks$7(Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;Ljava/util/List;Lcom/android/systemui/shared/recents/model/Task;)Lcom/miui/home/launcher/PairShortcutInfo;
     .locals 0
 
     .line 136
-    invoke-direct {p0, p2, p1}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->findGroupShortcutInfo(Lcom/android/systemui/shared/recents/model/Task;Ljava/util/List;)Lcom/miui/home/launcher/GroupShortcutInfo;
+    invoke-direct {p0, p2, p1}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->findGroupShortcutInfo(Lcom/android/systemui/shared/recents/model/Task;Ljava/util/List;)Lcom/miui/home/launcher/PairShortcutInfo;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method static synthetic lambda$evaluateRecentsRecommendTasks$8(Lcom/miui/home/launcher/GroupShortcutInfo;)Z
+.method static synthetic lambda$evaluateRecentsRecommendTasks$8(Lcom/miui/home/launcher/PairShortcutInfo;)Z
     .locals 0
 
     .line 138
-    invoke-virtual {p0}, Lcom/miui/home/launcher/GroupShortcutInfo;->getShortcutInfo1()Lcom/miui/home/launcher/ShortcutInfo;
+    invoke-virtual {p0}, Lcom/miui/home/launcher/PairShortcutInfo;->getShortcutInfo1()Lcom/miui/home/launcher/ShortcutInfo;
 
     move-result-object p0
 
@@ -944,10 +944,10 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/miui/home/launcher/GroupShortcutInfo;",
+            "Lcom/miui/home/launcher/PairShortcutInfo;",
             ">;",
             "Ljava/util/List<",
-            "Lcom/miui/home/launcher/GroupShortcutInfo;",
+            "Lcom/miui/home/launcher/PairShortcutInfo;",
             ">;)V"
         }
     .end annotation
@@ -985,7 +985,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/miui/home/launcher/GroupShortcutInfo;
+    check-cast v0, Lcom/miui/home/launcher/PairShortcutInfo;
 
     .line 203
     invoke-interface {p1, v0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
@@ -1011,7 +1011,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/miui/home/launcher/GroupShortcutInfo;
+    check-cast v2, Lcom/miui/home/launcher/PairShortcutInfo;
 
     invoke-interface {p1, v0, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
@@ -1041,7 +1041,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/miui/home/launcher/GroupShortcutInfo;",
+            "Lcom/miui/home/launcher/PairShortcutInfo;",
             ">;"
         }
     .end annotation
@@ -1069,12 +1069,12 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/miui/home/launcher/GroupShortcutInfo;
+    check-cast v2, Lcom/miui/home/launcher/PairShortcutInfo;
 
     .line 82
-    iget-object v3, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecommendShortcutCache:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$GroupShortcutCache;
+    iget-object v3, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecommendShortcutCache:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$PairShortcutCache;
 
-    invoke-virtual {v3, v2}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$GroupShortcutCache;->getGroupShortcutInfo(Lcom/miui/home/launcher/GroupShortcutInfo;)Lcom/miui/home/launcher/GroupShortcutInfo;
+    invoke-virtual {v3, v2}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$PairShortcutCache;->getGroupShortcutInfo(Lcom/miui/home/launcher/PairShortcutInfo;)Lcom/miui/home/launcher/PairShortcutInfo;
 
     move-result-object v2
 
@@ -1116,11 +1116,11 @@
     .locals 2
 
     .line 247
-    iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecommendShortcutCache:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$GroupShortcutCache;
+    iget-object v0, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider;->mRecommendShortcutCache:Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$PairShortcutCache;
 
     iget-object v1, p1, Lcom/miui/home/launcher/ShortcutInfo;->user:Landroid/os/UserHandle;
 
-    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$GroupShortcutCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/miui/home/launcher/hotseats/HotSeatsListRecentsAppProvider$PairShortcutCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 

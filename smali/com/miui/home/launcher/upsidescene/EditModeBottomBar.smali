@@ -129,7 +129,7 @@
 
     iget-object v4, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f1001e3
+    const v5, 0x7f1001e5
 
     .line 293
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -162,7 +162,7 @@
 
     iget-object v4, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f1001df
+    const v5, 0x7f1001e1
 
     .line 296
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -195,7 +195,7 @@
 
     iget-object v4, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f1001e7
+    const v5, 0x7f1001e9
 
     .line 299
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -228,7 +228,7 @@
 
     iget-object v4, p0, Lcom/miui/home/launcher/upsidescene/EditModeBottomBar;->mContext:Landroid/content/Context;
 
-    const v5, 0x7f100439
+    const v5, 0x7f10043d
 
     .line 302
     invoke-virtual {v4, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -897,27 +897,27 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    const v10, 0x7f1001e4
+    const v10, 0x7f1001e6
 
     .line 104
     invoke-virtual {v6, v10}, Landroid/widget/TextView;->setText(I)V
 
-    const v6, 0x7f1001e3
+    const v6, 0x7f1001e5
 
     .line 105
     invoke-virtual {v7, v6}, Landroid/widget/TextView;->setText(I)V
 
-    const v6, 0x7f1001df
+    const v6, 0x7f1001e1
 
     .line 106
     invoke-virtual {v8, v6}, Landroid/widget/TextView;->setText(I)V
 
-    const v6, 0x7f1001e7
+    const v6, 0x7f1001e9
 
     .line 107
     invoke-virtual {v9, v6}, Landroid/widget/TextView;->setText(I)V
 
-    const v6, 0x7f100439
+    const v6, 0x7f10043d
 
     .line 108
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(I)V

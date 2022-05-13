@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">"Dakata har sai na'urarka ta sake kunnawa sosai kafin budewar manhaja"</string>
     <string name="add_custom_category">Tsara da kanka</string>
     <string name="add_screen">Kara allon</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">An yi nasarar kara manhaja</string>
     <string name="afternoon">Yamma</string>
     <string name="agree_button">Yarda</string>
@@ -67,7 +68,7 @@
     <string name="all_apps_slide_up_tips">An ajiye ja ta sama don budewar Akwatin manhaja. Canza zuwa yanayin Allon farko na daidai sai ka sake gwadawa.</string>
     <string name="all_apps_suggestions">Shawararin manhaja</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Saurin yin wasa</string>
     <string name="announce_for_app_move_in_folder">An matsa zuwa matsayi na %1$d a cikin foldan</string>
     <string name="announce_for_checked">Ya bincika, %1$s</string>
     <string name="announce_for_choose_default_screen">Saita allon %1$d a matsayin Allon farko na asali</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">An yi nasarar gyara tambari</string>
     <string name="one_key_call_title">Taba ka buga</string>
     <string name="online_wallpaper">Na kan layi</string>
+    <string name="open_pad_personal_assistant_settings">Wijet na Allon farko</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Soke</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Kashe</string>
     <string name="open_personal_assistant_dialog_desc">"Bayan kun kashe taskar manhaja, ba za ku iya gani ko amfani da wijet na Ma'ajiyar manhaja ba. Sabbin sigoginsu kuma ba za su same ku ba. Kashe ta wata hanya?"</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">An daidaita tsarin allo na ciki da waje a cikin sabon sigar.</string>
     <string name="ota_layout_adjustment_title">Shimfidar Allon waje</string>
     <string name="out_of_space">Babu wuri kuma akan allon farko</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Wasu wasanni akan tambarin wasu manhaja daban</string>
     <string name="perfect_icons_switch_title">Tambarin global</string>
     <string name="permdesc_install_shortcut">Bada dama ma manhaja ya kara gajeren hanya ba tare da wani aikin mai amfani ba.</string>

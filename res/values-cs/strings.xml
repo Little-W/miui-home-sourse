@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Před otevřením aplikací vyčkejte, dokud nebude restart zařízení dokončen</string>
     <string name="add_custom_category">Vlastní</string>
     <string name="add_screen">Přidat obrazovku</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Všechny aplikace úspěšně přidány</string>
     <string name="afternoon">Odpoledne</string>
     <string name="agree_button">Souhlasím</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">Potáhnutí nahoru je nyní přiřazeno otevření Nabídky aplikací. Přepěně do režimu Běžné Domovské obrazovky a zkuste to znovu.</string>
     <string name="all_apps_suggestions">Doporučení aplikací</string>
     <string name="am">dop.</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Rychlost animace</string>
     <string name="announce_for_app_move_in_folder">Aplikace ve složce byla přesunuta na pozici číslo %1$d</string>
     <string name="announce_for_checked">%1$s, označeno</string>
     <string name="announce_for_choose_default_screen">Nastavit obrazovku %1$d jako výchozí Domovskou obrazovku</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Ikony byly uspořádány</string>
     <string name="one_key_call_title">Klepněte pro volání</string>
     <string name="online_wallpaper">Online</string>
+    <string name="open_pad_personal_assistant_settings">Widgety Domovské obrazovky</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Zrušit</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Vypnout</string>
     <string name="open_personal_assistant_dialog_desc">Po vypnutí Aplikačního trezoru nebudete moci zobrazit ani využívat widgety této funkce. Aktualizovaná verze těchto widgetů také nebude dostupná. Přesto vypnout?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">Rozložení přední a vnější Domovské obrazovky byly v nové verzi synchronizovány.</string>
     <string name="ota_layout_adjustment_title">Rozložení Domovské obrazovky</string>
     <string name="out_of_space">Na ploše není dostatek místa</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Vykreslovat animace ikon aplikací třetích stran</string>
     <string name="perfect_icons_switch_title">Animace pro globální ikony</string>
     <string name="permdesc_install_shortcut">Povoluje aplikaci přidat zástupce bez zásahu uživatele.</string>

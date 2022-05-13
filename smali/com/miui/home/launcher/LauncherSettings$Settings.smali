@@ -33,35 +33,35 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 521
+    .line 529
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/miui/home/launcher/LauncherSettings$Settings;->SYSTEM_SETTINGS:Ljava/util/HashSet;
 
-    .line 522
+    .line 530
     sget-object v0, Lcom/miui/home/launcher/LauncherSettings$Settings;->SYSTEM_SETTINGS:Ljava/util/HashSet;
 
     const-string v1, "key_home_screen_search_bar"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 523
+    .line 531
     sget-object v0, Lcom/miui/home/launcher/LauncherSettings$Settings;->SYSTEM_SETTINGS:Ljava/util/HashSet;
 
     const-string v1, "key_home_screen_search_bar_source"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 524
+    .line 532
     sget-object v0, Lcom/miui/home/launcher/LauncherSettings$Settings;->SYSTEM_SETTINGS:Ljava/util/HashSet;
 
     const-string v1, "key_home_screen_search_bar_long_press_action"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 525
+    .line 533
     sget-object v0, Lcom/miui/home/launcher/LauncherSettings$Settings;->SYSTEM_SETTINGS:Ljava/util/HashSet;
 
     const-string v1, "key_home_screen_search_bar_show_xiaoai_icon"
@@ -76,12 +76,12 @@
 
     if-eqz p0, :cond_1
 
-    .line 530
+    .line 538
     invoke-virtual {p0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 531
+    .line 539
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -100,7 +100,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 532
+    .line 540
     sget-object v2, Lcom/miui/home/launcher/LauncherSettings$Settings;->SYSTEM_SETTINGS:Ljava/util/HashSet;
 
     invoke-virtual {v2, v1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -109,7 +109,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 534
+    .line 542
     invoke-static {}, Lcom/miui/home/launcher/Application;->getInstance()Lcom/miui/home/launcher/Application;
 
     move-result-object v2
@@ -122,7 +122,7 @@
 
     move-result-object v3
 
-    .line 533
+    .line 541
     invoke-static {v2, v1, v3}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     goto :goto_0

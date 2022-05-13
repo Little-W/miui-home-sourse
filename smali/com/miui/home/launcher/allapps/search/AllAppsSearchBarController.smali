@@ -518,7 +518,7 @@
     .line 158
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->mInput:Lcom/miui/home/launcher/ExtendedEditText;
 
-    const v0, 0x7f1003a2
+    const v0, 0x7f1003a6
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ExtendedEditText;->setHint(I)V
 
@@ -528,7 +528,7 @@
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/allapps/search/AllAppsSearchBarController;->mInput:Lcom/miui/home/launcher/ExtendedEditText;
 
-    const v0, 0x7f10004e
+    const v0, 0x7f10004f
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/ExtendedEditText;->setHint(I)V
 

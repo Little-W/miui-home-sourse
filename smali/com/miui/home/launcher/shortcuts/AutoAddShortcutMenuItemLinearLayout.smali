@@ -381,7 +381,7 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    const v2, 0x7f0603ab
+    const v2, 0x7f0603ac
 
     .line 106
     invoke-virtual {p0, v1, v2}, Lcom/miui/home/launcher/shortcuts/AutoAddShortcutMenuItemLinearLayout;->setItemTextColor(II)V

@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Prieš paleisdami programas, palaukite, kol jūsų įrenginys persikraus</string>
     <string name="add_custom_category">Pasirinktinė</string>
     <string name="add_screen">Pridėti ekraną</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Visos programos sėkmingai pridėtos</string>
     <string name="afternoon">Popietė</string>
     <string name="agree_button">Sutinku</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">Slinkimas aukštyn yra skirtas „Programų skydelio“ paleidimui. Perjunkite į įprastą pagrinidinio ekrano režimą ir pabandykite dar kartą.</string>
     <string name="all_apps_suggestions">Siūlomos programos</string>
     <string name="am">Priešpiet</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Animacijos greitis</string>
     <string name="announce_for_app_move_in_folder">Perkelta į „%1$d“ padėtį aplanke</string>
     <string name="announce_for_checked">%1$s, patikrinta</string>
     <string name="announce_for_choose_default_screen">Nustatyti %1$d ekraną numatytuoju pagrindiniu ekranu</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Piktogramos sėkmingai išrikiuotos</string>
     <string name="one_key_call_title">Bakstelėkite, norėdami rinkti</string>
     <string name="online_wallpaper">Internete</string>
+    <string name="open_pad_personal_assistant_settings">Pagrindinio ekrano valdikliai</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Atšaukti</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Išjungti</string>
     <string name="open_personal_assistant_dialog_desc">Išjungę programų saugyklą, negalėsite matyti ar naudoti programų saugyklos valdiklių. Jų atnaujintos versijos taip pat nebus prieinamos. Vis tiek išjungti?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">Vidinis ir išorinis pagrindinio ekrano išdėstymai buvo susinchronizuoti naujoje versijoje.</string>
     <string name="ota_layout_adjustment_title">Pagrindinio ekrano išdėstymas</string>
     <string name="out_of_space">Pagrindiniame ekrane nėra laisvos vietos</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Generuoti animaciją trečiųjų šalių programos piktogramose</string>
     <string name="perfect_icons_switch_title">Pasaulinės piktogramų animacijos</string>
     <string name="permdesc_install_shortcut">Leidimas programai sukurti nuorodas be naudotojo patvirtinimo.</string>

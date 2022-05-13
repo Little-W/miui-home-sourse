@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 9615
+    .line 9639
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/miui/home/launcher/Launcher;Lcom/miui/home/launcher/Launcher$1;)V
     .locals 0
 
-    .line 9615
+    .line 9639
     invoke-direct {p0, p1}, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;-><init>(Lcom/miui/home/launcher/Launcher;)V
 
     return-void
@@ -47,7 +47,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 9619
+    .line 9643
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Launcher;->access$10200(Lcom/miui/home/launcher/Launcher;)Z
@@ -56,7 +56,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 9620
+    .line 9644
     iget-boolean p1, p1, Lcom/miui/home/recents/messages/ChangeLauncherStateEvent;->mIsToFeedState:Z
 
     if-eqz p1, :cond_2
@@ -73,7 +73,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 9621
+    .line 9645
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$10800(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/overlay/feed/FeedOverlayTransitionController;
@@ -88,7 +88,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 9622
+    .line 9646
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$4700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherStateManager;
@@ -101,7 +101,7 @@
 
     goto :goto_0
 
-    .line 9624
+    .line 9648
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -111,17 +111,17 @@
 
     if-nez p1, :cond_1
 
-    .line 9625
+    .line 9649
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$4000(Lcom/miui/home/launcher/Launcher;)V
 
-    .line 9626
+    .line 9650
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->addOrRemoveNewHome()V
 
-    .line 9628
+    .line 9652
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -131,7 +131,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 9629
+    .line 9653
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$4700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/LauncherStateManager;
@@ -153,7 +153,7 @@
         threadMode = .enum Lorg/greenrobot/eventbus/ThreadMode;->MAIN:Lorg/greenrobot/eventbus/ThreadMode;
     .end annotation
 
-    .line 9638
+    .line 9662
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$10900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/recents/LauncherAppTransitionManager;
@@ -162,7 +162,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 9639
+    .line 9663
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$RecentMessageHandler;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$10900(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/recents/LauncherAppTransitionManager;

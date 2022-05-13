@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
     .locals 0
 
-    .line 301
+    .line 294
     iput-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$4;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,14 +47,14 @@
 .method public accept(Ljava/lang/Boolean;)V
     .locals 1
 
-    .line 304
+    .line 297
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 305
+    .line 298
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$4;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-static {p1}, Lcom/miui/home/settings/MiuiHomeSettings;->access$100(Lcom/miui/home/settings/MiuiHomeSettings;)Landroidx/preference/PreferenceCategory;
@@ -76,7 +76,7 @@
 .method public bridge synthetic accept(Ljava/lang/Object;)V
     .locals 0
 
-    .line 301
+    .line 294
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/MiuiHomeSettings$4;->accept(Ljava/lang/Boolean;)V

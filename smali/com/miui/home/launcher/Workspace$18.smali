@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 3258
+    .line 3270
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$18;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onGlobalLayout()V
     .locals 2
 
-    .line 3262
+    .line 3274
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$18;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$200(Lcom/miui/home/launcher/Workspace;)Lcom/miui/home/launcher/Launcher;
@@ -51,7 +51,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 3263
+    .line 3275
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$18;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$200(Lcom/miui/home/launcher/Workspace;)Lcom/miui/home/launcher/Launcher;
@@ -66,7 +66,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->loadThumbnails(Z)V
 
-    .line 3265
+    .line 3277
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$18;->this$0:Lcom/miui/home/launcher/Workspace;
 

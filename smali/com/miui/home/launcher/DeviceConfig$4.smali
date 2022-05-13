@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 1703
+    .line 1694
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
 
     const-string p1, ".db"
 
-    .line 1707
+    .line 1698
     invoke-virtual {p2, p1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result p1

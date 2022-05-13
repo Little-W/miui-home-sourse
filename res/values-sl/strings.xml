@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Preden odprete aplikacije, počakajte, da se naprava popolnoma ponovno zažene</string>
     <string name="add_custom_category">Prilagojeno</string>
     <string name="add_screen">Dodaj zaslon</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Vse aplikacije so bile uspešno dodane</string>
     <string name="afternoon">Popoldne</string>
     <string name="agree_button">Strinjam se</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Ikone uspešno razvrščene</string>
     <string name="one_key_call_title">Tapnite za klicanje</string>
     <string name="online_wallpaper">Online</string>
+    <string name="open_pad_personal_assistant_settings">Pripomočki Začetnega zaslona</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Prekliči</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Izklopi</string>
     <string name="open_personal_assistant_dialog_desc">Ko izklopite Shrambo aplikacij, ne boste mogli videti ali uporabljati pripomočkov za Shrambo aplikacij. Njihove posodobljene različice tudi vam ne bodo na voljo. Želite vseeno izklopiti?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">Razporeditve notranjega in zunanjega Začetnega zaslona so bile v novi različici sinhronizirane.</string>
     <string name="ota_layout_adjustment_title">Razporeditev Začetnega zaslona</string>
     <string name="out_of_space">Na tem Začetnem zaslonu ni več prostora</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Upodabljanje animacij na ikonah drugih aplikacij</string>
     <string name="perfect_icons_switch_title">Animacije globalnih ikon</string>
     <string name="permdesc_install_shortcut">Dovoli aplikaciji, da doda bližnjice brez posredovanja uporabnika.</string>

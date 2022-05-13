@@ -23,7 +23,7 @@
 
 .field public static final config_tooltipAnimTime:I = 0x7f0b002e
 
-.field public static final status_bar_notification_info_maxnum:I = 0x7f0b0045
+.field public static final status_bar_notification_info_maxnum:I = 0x7f0b0046
 
 
 # direct methods

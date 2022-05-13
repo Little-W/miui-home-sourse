@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/WorkspaceThumbnailView;)V
     .locals 0
 
-    .line 245
+    .line 247
     iput-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public switchScreenAnimFinish()V
     .locals 2
 
-    .line 259
+    .line 261
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
     const/4 v1, 0x0
@@ -51,7 +51,7 @@
 .method public switchScreenInAnimEnd()V
     .locals 1
 
-    .line 248
+    .line 250
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
     invoke-static {v0}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->access$300(Lcom/miui/home/launcher/WorkspaceThumbnailView;)V
@@ -62,14 +62,14 @@
 .method public switchScreenOutAnimStart()V
     .locals 2
 
-    .line 253
+    .line 255
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->access$202(Lcom/miui/home/launcher/WorkspaceThumbnailView;Z)Z
 
-    .line 254
+    .line 256
     iget-object v0, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$2;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->updateborderLine(Z)V

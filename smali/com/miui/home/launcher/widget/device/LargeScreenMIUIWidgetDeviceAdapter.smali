@@ -3,6 +3,7 @@
 .source "LargeScreenMIUIWidgetDeviceAdapter.java"
 
 # interfaces
+.implements Landroid/view/ViewTreeObserver$OnDrawListener;
 .implements Landroid/view/ViewTreeObserver$OnWindowFocusChangeListener;
 .implements Lcom/miui/home/launcher/widget/device/MIUIWidgetDeviceAdapter;
 
@@ -32,7 +33,7 @@
 .method public static synthetic lambda$attachPreviewLayer$0(Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;Ljava/lang/Void;)Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 145
+    .line 146
     iget-object p1, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mContext:Landroid/app/Activity;
 
     invoke-static {p1}, Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompat;->getInstance(Landroid/content/Context;)Lcom/miui/home/launcher/wallpaper/WallpaperManagerCompat;
@@ -43,7 +44,7 @@
 
     move-result-object p1
 
-    .line 146
+    .line 147
     iget-object v0, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mContext:Landroid/app/Activity;
 
     const/16 v1, 0x64
@@ -58,7 +59,7 @@
 .method public static synthetic lambda$attachPreviewLayer$1(Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;Landroid/graphics/Bitmap;)V
     .locals 3
 
-    .line 149
+    .line 150
     :try_start_0
     iget-object v0, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mTouchedView:Landroid/view/View;
 
@@ -66,7 +67,7 @@
 
     return-void
 
-    .line 152
+    .line 153
     :cond_0
     iget-object v0, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mPreviewLayer:Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;
 
@@ -82,7 +83,7 @@
 
     invoke-virtual {v0, v1}, Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 153
+    .line 154
     iget-object p1, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mPreviewLayer:Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;
 
     iget-object v0, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mTouchedView:Landroid/view/View;
@@ -93,14 +94,14 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;->drawPreview(Landroid/graphics/Bitmap;)V
 
-    .line 154
+    .line 155
     iget-object p1, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mTouchedView:Landroid/view/View;
 
     instance-of p1, p1, Lcom/miui/home/launcher/HostViewContainer;
 
     if-eqz p1, :cond_1
 
-    .line 155
+    .line 156
     iget-object p1, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mPreviewLayer:Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;
 
     iget-object v0, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mTouchedView:Landroid/view/View;
@@ -113,7 +114,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;->setPreviewCorner(F)V
 
-    .line 157
+    .line 158
     :cond_1
     iget-object p1, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mContext:Landroid/app/Activity;
 
@@ -131,7 +132,7 @@
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 158
+    .line 159
     iget-object p1, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mPreviewLayer:Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;
 
     iget-object v0, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mTouchedView:Landroid/view/View;
@@ -155,10 +156,10 @@
 
     const-string v1, "attachPreviewLayer error"
 
-    .line 160
+    .line 161
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 161
+    .line 162
     invoke-virtual {p0}, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->exitEditMode()V
 
     :goto_0
@@ -170,12 +171,12 @@
 .method protected attachPreviewLayer()V
     .locals 3
 
-    .line 140
+    .line 141
     iget-object v0, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mPreviewLayer:Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;
 
     if-nez v0, :cond_0
 
-    .line 141
+    .line 142
     new-instance v0, Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;
 
     iget-object v1, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mContext:Landroid/app/Activity;
@@ -184,7 +185,7 @@
 
     iput-object v0, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mPreviewLayer:Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;
 
-    .line 144
+    .line 145
     :cond_0
     new-instance v0, Lcom/miui/home/launcher/widget/device/-$$Lambda$LargeScreenMIUIWidgetDeviceAdapter$A1fVs8THBugeQBoZk5MmbsmrTnI;
 
@@ -204,28 +205,28 @@
 .method protected createPreviewBitmap(Landroid/view/View;)Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 200
+    .line 202
     instance-of v0, p1, Lcom/miui/home/launcher/HostViewContainer;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     if-eqz v0, :cond_0
 
-    .line 201
+    .line 203
     check-cast p1, Lcom/miui/home/launcher/HostViewContainer;
 
     invoke-interface {p1}, Lcom/miui/home/launcher/HostViewContainer;->getHostView()Landroid/view/View;
 
     move-result-object p1
 
-    .line 202
+    .line 204
     invoke-static {p1, v1}, Lcom/miui/home/launcher/DragController;->createViewBitmap(Landroid/view/View;F)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     return-object p1
 
-    .line 204
+    .line 206
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mTouchedView:Landroid/view/View;
 
@@ -239,14 +240,14 @@
 .method protected detachPreviewLayer()V
     .locals 2
 
-    .line 177
+    .line 179
     iget-object v0, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mPreviewLayer:Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 180
+    .line 182
     :cond_0
     invoke-virtual {v0}, Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;->getParent()Landroid/view/ViewParent;
 
@@ -254,7 +255,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 181
+    .line 183
     iget-object v0, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mPreviewLayer:Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;
 
     invoke-virtual {v0}, Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;->getParent()Landroid/view/ViewParent;
@@ -267,7 +268,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 182
+    .line 184
     iget-object v0, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mPreviewLayer:Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;
 
     const/4 v1, 0x0
@@ -354,23 +355,39 @@
     .line 130
     invoke-virtual {p2, p1, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
+    .line 131
+    iget-object p1, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mTouchedView:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Landroid/view/ViewTreeObserver;->addOnDrawListener(Landroid/view/ViewTreeObserver$OnDrawListener;)V
+
     return-void
 .end method
 
 .method protected exitEditMode()V
     .locals 1
 
-    .line 167
+    .line 168
     iget-object v0, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mTouchedView:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 168
+    .line 169
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnDrawListener(Landroid/view/ViewTreeObserver$OnDrawListener;)V
+
+    .line 170
     invoke-virtual {p0}, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->detachPreviewLayer()V
 
     const/4 v0, 0x0
 
-    .line 169
+    .line 171
     iput-object v0, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mTouchedView:Landroid/view/View;
 
     :cond_0
@@ -380,7 +397,7 @@
 .method protected getOffsetWidgetScreenBound(Landroid/view/View;I)Landroid/graphics/Rect;
     .locals 0
 
-    .line 134
+    .line 135
     check-cast p1, Lcom/miui/miuiwidget/LargeScreenTouchTarget;
 
     invoke-interface {p1}, Lcom/miui/miuiwidget/LargeScreenTouchTarget;->getBoundsOnScreen()Landroid/graphics/Rect;
@@ -448,9 +465,32 @@
 .method public onDestroy()V
     .locals 0
 
-    .line 196
+    .line 198
     invoke-virtual {p0}, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->exitEditMode()V
 
+    return-void
+.end method
+
+.method public onDraw()V
+    .locals 2
+
+    .line 211
+    iget-object v0, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mTouchedView:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->mPreviewLayer:Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;
+
+    if-eqz v1, :cond_0
+
+    .line 212
+    invoke-virtual {p0, v0}, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->createPreviewBitmap(Landroid/view/View;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lcom/miui/home/launcher/widget/device/MIUIWidgetPreviewLayer;->drawPreview(Landroid/graphics/Bitmap;)V
+
+    :cond_0
     return-void
 .end method
 
@@ -459,7 +499,7 @@
 
     const-string v0, "MIUIWidgetDeviceAdapter.LargeScreenMIUIWidgetDeviceAdapter"
 
-    .line 188
+    .line 190
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -478,7 +518,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 190
+    .line 192
     invoke-virtual {p0}, Lcom/miui/home/launcher/widget/device/LargeScreenMIUIWidgetDeviceAdapter;->exitEditMode()V
 
     :cond_0

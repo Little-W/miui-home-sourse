@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;)V
     .locals 0
 
-    .line 928
+    .line 932
     iput-object p1, p0, Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl$3;->this$0:Lcom/miui/home/recents/QuickstepAppTransitionManagerImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 3
 
-    .line 931
+    .line 935
     invoke-static {}, Lcom/miui/home/library/utils/AsyncTaskExecutorHelper;->getEventBus()Lorg/greenrobot/eventbus/EventBus;
 
     move-result-object v0

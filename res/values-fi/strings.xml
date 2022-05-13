@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Odota ennen sovellusten avaamista, että laite on käynnistynyt uudelleen täysin</string>
     <string name="add_custom_category">Mukautettu</string>
     <string name="add_screen">Lisää näyttö</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Kaikki sovellukset lisätty onnistuneesti</string>
     <string name="afternoon">Iltapäivä</string>
     <string name="agree_button">Hyväksy</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">Ylös pyyhkäiseminen on varattu Sovelluslaatikon avaamiseen. Vaihda tavalliseen aloitusnäyttötilaan ja yritä uudelleen.</string>
     <string name="all_apps_suggestions">Sovellusehdotukset</string>
     <string name="am">ap.</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Animaationopeus</string>
     <string name="announce_for_app_move_in_folder">Siirrettiin sijalle %1$d kansiossa</string>
     <string name="announce_for_checked">%1$s, tarkastettu</string>
     <string name="announce_for_choose_default_screen">Ruutu %1$d asetettu oletusaloitusnäytöksi</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Kuvakkeet järjestetty onnistuneesti</string>
     <string name="one_key_call_title">Soita napauttamalla</string>
     <string name="online_wallpaper">Online</string>
+    <string name="open_pad_personal_assistant_settings">Aloitusnäytön vinjetit</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Peruuta</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Poista käytöstä</string>
     <string name="open_personal_assistant_dialog_desc">Kun olet poistanut Sovellusholvin käytöstä, et voi nähdä tai käyttää Sovellusholvin widgettejä. Niiden päivitetyt versiot eivät myöskään ole käytettävissäsi. Poista käytöstä siitä huolimatta?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">Aloitusnäytön ulko- ja sisäasettelut synkronoitiin uudessa versiossa.</string>
     <string name="ota_layout_adjustment_title">Aloitusnäytön ulkoasut</string>
     <string name="out_of_space">Tällä Aloitusnäytöllä ei ole enempää tilaa</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Animaatioita kolmannen osapuolen sovelluskuvakkeista</string>
     <string name="perfect_icons_switch_title">Globaalit kuvakeanimaatiot</string>
     <string name="permdesc_install_shortcut">Sallii sovelluksen lisätä pikavalintoja ilman käyttäjän erillistä lupaa.</string>

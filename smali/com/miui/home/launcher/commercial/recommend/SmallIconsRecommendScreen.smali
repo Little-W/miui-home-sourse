@@ -62,7 +62,7 @@
     .line 210
     iget-object v0, p0, Lcom/miui/home/launcher/commercial/recommend/SmallIconsRecommendScreen;->mRecommendTitle:Landroid/widget/TextView;
 
-    const v1, 0x7f100385
+    const v1, 0x7f100389
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

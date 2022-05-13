@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="editing_panel_height">125.0dip</dimen>
+    <dimen name="folder_bottom_padding">78.0dip</dimen>
+    <dimen name="folder_content_padding_left">14.0dip</dimen>
+    <dimen name="folder_content_width">310.0dip</dimen>
+    <dimen name="folder_top_padding">58.0dip</dimen>
     <dimen name="freeStyleWidthCellHeight">161.0dip</dimen>
     <dimen name="freeStyleWidthCellWidth">120.0dip</dimen>
+    <dimen name="hotseats_height">102.0dip</dimen>
     <dimen name="hotseats_padding_side">8.0dip</dimen>
+    <dimen name="workspace_cell_height">96.0dip</dimen>
+    <dimen name="workspace_cell_padding_side">10.0dip</dimen>
+    <dimen name="workspace_cell_width">82.0dip</dimen>
+    <dimen name="workspace_icon_text_notification_size">16.0dip</dimen>
+    <dimen name="workspace_icon_text_size">16.0dip</dimen>
 </resources>

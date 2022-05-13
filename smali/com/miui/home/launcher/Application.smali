@@ -431,7 +431,7 @@
 .method private resolveVersionAndCheckUpgrade(Landroid/content/Context;)V
     .locals 2
 
-    const v0, 0x1a0c29e7
+    const v0, 0x1a0c2a0e
 
     .line 222
     iput v0, p0, Lcom/miui/home/launcher/Application;->mCurrentVersion:I

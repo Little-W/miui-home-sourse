@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final xiaomi_update_sdk_file_paths:I = 0x7f130028
+.field public static final xiaomi_update_sdk_file_paths:I = 0x7f130029
 
 
 # direct methods

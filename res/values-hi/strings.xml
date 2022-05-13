@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">ऐप्स खोलने से पहले, डिवाइस के पूरी तरह से रीबूट हो जाने तक इंतज़ार करें</string>
     <string name="add_custom_category">कस्टम</string>
     <string name="add_screen">स्क्रीन जोड़ें</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">सभी ऐप्स जोड़ दिए गए हैं</string>
     <string name="afternoon">दोपहर</string>
     <string name="agree_button">सहमत हैं</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">आइकन सफलतापूर्वक व्यवस्थित करें</string>
     <string name="one_key_call_title">डायल करने के लिए टैप करें</string>
     <string name="online_wallpaper">ऑनलाइन</string>
+    <string name="open_pad_personal_assistant_settings">होम स्क्रीन विजेट</string>
     <string name="open_personal_assistant_dialog_btn_cancel">रद्द करें</string>
     <string name="open_personal_assistant_dialog_btn_confirm">बंद करें</string>
     <string name="open_personal_assistant_dialog_desc">ऐप्प तिजोरी को बंद करने के बाद, आप ऐप्प तिजोरी विजेट्स को देख या उपयोग नहीं कर पाएंगे. साथ ही, उनके अपडेट किए गए संस्करण आपके लिए उपलब्ध नहीं होंगे. फिर भी बंद करें?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">नए संस्करण में आंतरिक और बाहरी होम स्क्रीन लेआउट को सिंक किया गया है.</string>
     <string name="ota_layout_adjustment_title">होम स्क्रीन लेआउट</string>
     <string name="out_of_space">इस होम स्क्रीन पर और अधिक स्थान नहीं है</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">तृतीय पक्ष के ऐप्प आइकन पर एनिमेशन रेंडर करें</string>
     <string name="perfect_icons_switch_title">ग्लोबल आइकन एनिमेशन</string>
     <string name="permdesc_install_shortcut">इससे ऐप्प, उपयोगकर्ता के हस्तक्षेप के बिना शॉर्टकट जोड़ सकता है.</string>

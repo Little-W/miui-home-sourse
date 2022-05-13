@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Перед відкриття програм зачекайте на перезавантаження вашого пристрою</string>
     <string name="add_custom_category">Власний</string>
     <string name="add_screen">Додати екран</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Групи було додано успішно</string>
     <string name="afternoon">Після обіду</string>
     <string name="agree_button">Погодитися</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Іконки упорядковано успішно</string>
     <string name="one_key_call_title">Натисніть, щоб набрати номер</string>
     <string name="online_wallpaper">Онлайн</string>
+    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Скасувати</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Вимкнути</string>
     <string name="open_personal_assistant_dialog_desc">Після вимкнення стрічки віджетів ви не зможете побачити віджети або використовувати їх. Оновлені версії віджетів також не будуть доступні для вас. Все одно вимкнути?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">Внутрішній та зовнішній вигляд робочого столу були синхронізовані в новій версії</string>
     <string name="ota_layout_adjustment_title">Вигляд робочого столу</string>
     <string name="out_of_space">На робочому столі немає вільного місця</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Візуалізація анімації на значках сторонніх програм</string>
     <string name="perfect_icons_switch_title">Анімація основної іконки</string>
     <string name="permdesc_install_shortcut">Дозволяє програмі додавати ярлики без участі користувача.</string>

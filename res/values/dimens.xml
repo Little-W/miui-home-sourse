@@ -116,6 +116,9 @@
     <dimen name="all_apps_vertical_spacing">8.0dip</dimen>
     <dimen name="all_apps_work_profile_tab_footer_bottom_padding">20.0dip</dimen>
     <dimen name="all_apps_work_profile_tab_footer_top_padding">16.0dip</dimen>
+    <dimen name="app_pair_icon_size">54.0dip</dimen>
+    <dimen name="app_pair_shadow_size">291.0dip</dimen>
+    <dimen name="app_pair_split_line_width">8.0dip</dimen>
     <dimen name="app_shortcut_menu_item_height">61.799988dip</dimen>
     <dimen name="app_shortcut_menu_item_width">218.19998dip</dimen>
     <dimen name="borderlayout_bg_corner_radius">14.669983dip</dimen>
@@ -230,6 +233,7 @@
     <dimen name="edit_mode_application_checkbox_margin_end">1.0dip</dimen>
     <dimen name="edit_mode_application_checkbox_margin_top">1.5dip</dimen>
     <dimen name="edit_mode_border_radius">16.0dip</dimen>
+    <dimen name="edit_mode_indicator_diff">0.0dip</dimen>
     <dimen name="edit_mode_menu_on_top_margin_top">8.339996dip</dimen>
     <dimen name="edit_mode_menu_on_top_margin_top_multi_window">5.0dip</dimen>
     <dimen name="edit_mode_menu_on_top_margin_top_notch">37.0dip</dimen>
@@ -240,10 +244,12 @@
     <dimen name="edit_mode_thumbnail_item_size">53.359985dip</dimen>
     <dimen name="edit_mode_thumbnail_radius">13.0dip</dimen>
     <dimen name="edit_mode_thumbnail_widget_pick_bg_width">220.72dip</dimen>
+    <item type="dimen" name="edit_mode_thumbnail_workspace_diff_ratio">1.0</item>
     <dimen name="edit_mode_top_menu_container_width">61.44998dip</dimen>
     <dimen name="edit_mode_top_menu_height">47.26999dip</dimen>
     <dimen name="edit_mode_top_menu_side_button_margin_screen_edge">15.0dip</dimen>
     <dimen name="edit_mode_top_menu_text_view_margin_top">2.0dip</dimen>
+    <dimen name="edit_mode_workspace_indicator_diff_height">0.0dip</dimen>
     <dimen name="edit_mode_workspace_thumbnail_border_current_stroke_width">3.3299866dip</dimen>
     <dimen name="edit_mode_workspace_thumbnail_border_gap">5.3299866dip</dimen>
     <dimen name="edit_mode_workspace_thumbnail_border_normal_stroke_width">0.6600001dip</dimen>
@@ -298,6 +304,7 @@
     <dimen name="folder_edit_text_frame_radius">19.279999dip</dimen>
     <dimen name="folder_edit_text_frame_width">1.0dip</dimen>
     <dimen name="folder_edit_text_margin_left">22.099976dip</dimen>
+    <dimen name="folder_edit_text_margin_left_noword">0.0dip</dimen>
     <dimen name="folder_edit_text_margin_right">20.099976dip</dimen>
     <dimen name="folder_edit_text_padding_bottom">28.329987dip</dimen>
     <dimen name="folder_edit_text_padding_top">28.329987dip</dimen>
@@ -968,10 +975,10 @@
     <dimen name="recents_task_view_header_height">40.0dip</dimen>
     <dimen name="recents_task_view_header_height_tablet_land">64.0dip</dimen>
     <dimen name="recents_task_view_header_title_margin_end">25.0dip</dimen>
-    <dimen name="recents_task_view_header_title_text_size">0.0sp</dimen>
+    <dimen name="recents_task_view_header_title_text_size">13.0sp</dimen>
     <dimen name="recents_task_view_privacy_protect_icon_marginTop">20.0dip</dimen>
-    <dimen name="recents_task_view_rounded_corners_radius_max">110.0dip</dimen>
-    <dimen name="recents_task_view_rounded_corners_radius_min">30.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_max">25.0dip</dimen>
+    <dimen name="recents_task_view_rounded_corners_radius_min">7.0dip</dimen>
     <dimen name="recents_tip_margin_top">20.0dip</dimen>
     <dimen name="recents_tv_small_window_text_size">13.099976sp</dimen>
     <dimen name="recents_view_configuration_touch_slop">5.0dip</dimen>

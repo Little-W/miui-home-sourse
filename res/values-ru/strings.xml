@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Перед открытием приложений дождитесь завершения полной перезагрузки устройства</string>
     <string name="add_custom_category">Настроить</string>
     <string name="add_screen">Добавить экран</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Все приложения успешно добавлены</string>
     <string name="afternoon">День</string>
     <string name="agree_button">Согласиться</string>
@@ -94,7 +95,7 @@
     <string name="all_apps_slide_up_tips">Жест вверх используется для открытия меню приложений. Включите обычный режим рабочего стола и повторите попытку.</string>
     <string name="all_apps_suggestions">Недавние приложения</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">Скорость анимации</string>
     <string name="announce_for_app_move_in_folder">Перемещено в позицию %1$d в папке</string>
     <string name="announce_for_checked">%1$s, выбрано</string>
     <string name="announce_for_choose_default_screen">Установить экран %1$d в качестве основного</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Значки упорядочены</string>
     <string name="one_key_call_title">Нажмите для набора</string>
     <string name="online_wallpaper">Онлайн</string>
+    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Отмена</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Отключить</string>
     <string name="open_personal_assistant_dialog_desc">После отключения Ленты виджетов вы не сможете видеть и использовать соответствующие виджеты. Их обновленные версии также станут недоступны. Вы действительно хотите продолжить?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">В новой версии были синхронизированы внутренняя и внешняя раскладки рабочего стола.</string>
     <string name="ota_layout_adjustment_title">Раскладка рабочего стола</string>
     <string name="out_of_space">На этом экране нет свободного места</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Отрисовка анимации значков сторонних приложений.</string>
     <string name="perfect_icons_switch_title">Глобальные анимации значков</string>
     <string name="permdesc_install_shortcut">Позволяет приложению добавлять ярлыки без участия пользователя.</string>

@@ -2316,7 +2316,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f0703e7
+    const p3, 0x7f0703ee
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -2330,7 +2330,7 @@
 
     move-result-object p1
 
-    const p3, 0x7f0703e6
+    const p3, 0x7f0703ed
 
     invoke-virtual {p1, p3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 

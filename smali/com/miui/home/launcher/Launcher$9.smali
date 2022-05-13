@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 2106
+    .line 2110
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 2114
+    .line 2118
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/widget/WidgetsPreviewPage;
@@ -51,7 +51,7 @@
 
     if-nez p1, :cond_0
 
-    .line 2115
+    .line 2119
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/widget/WidgetsPreviewPage;
@@ -62,7 +62,7 @@
 
     invoke-virtual {p1, v0}, Lcom/miui/home/launcher/widget/WidgetsPreviewPage;->setVisibility(I)V
 
-    .line 2117
+    .line 2121
     :cond_0
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
 
@@ -84,7 +84,7 @@
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 0
 
-    .line 2109
+    .line 2113
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$9;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$1700(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/widget/WidgetsPreviewPage;

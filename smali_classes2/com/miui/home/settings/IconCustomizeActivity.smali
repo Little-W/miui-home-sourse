@@ -49,7 +49,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f100239
+    const v1, 0x7f10023b
 
     .line 34
     invoke-virtual {p0, v1}, Lcom/miui/home/settings/IconCustomizeActivity;->setTitle(I)V
@@ -57,7 +57,7 @@
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f10023c
+    const v1, 0x7f10023e
 
     .line 36
     invoke-virtual {p0, v1}, Lcom/miui/home/settings/IconCustomizeActivity;->setTitle(I)V

@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">Ilovalarni ochishdan oldin qurilmani to‘liq o‘chirib yoqilishini kuting</string>
     <string name="add_custom_category">Maxsus</string>
     <string name="add_screen">Ekran qo‘shish</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Barcha ilovalar muvaffaqiyatli qo‘shildi</string>
     <string name="afternoon">Kunduzi</string>
     <string name="agree_button">Rozi bo‘lish</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">Belgilar muvaffaqiyatli joylashtirildi</string>
     <string name="one_key_call_title">Terish uchun bosing</string>
     <string name="online_wallpaper">Onlayn</string>
+    <string name="open_pad_personal_assistant_settings">Bosh ekran vidjetlari</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Bekor qilish</string>
     <string name="open_personal_assistant_dialog_btn_confirm">O‘chirish</string>
     <string name="open_personal_assistant_dialog_desc">Ilovalar omborxonasi o‘chirilgandan so‘ng, siz uning vidjetlarini ko‘rmaysiz yoki ishlata olmaysiz. Ularning yangilangan versiyalari siz uchun mavjud bo‘lmaydi. Baribir o‘chirilsinmi?</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">Bosh ekran ichki va tashqi ko‘rinishi yangi versiyada sinxronlandi.</string>
     <string name="ota_layout_adjustment_title">Bosh ekran tashqi ko‘rinishi</string>
     <string name="out_of_space">Bosh ekranda bo‘sh joy yo‘q</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Uchinchi tomon ilovasi belgilarida animatsiyalarni namoyish etish</string>
     <string name="perfect_icons_switch_title">Global belgi animatsiyalari</string>
     <string name="permdesc_install_shortcut">Ilovaga yorliqlarni foydalanuvchi ishtirokisiz qo‘shishga ruxsat beradi.</string>

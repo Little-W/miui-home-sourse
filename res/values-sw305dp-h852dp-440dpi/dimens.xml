@@ -16,11 +16,13 @@
     <dimen name="fastscroll_popup_text_size">29.099976sp</dimen>
     <dimen name="folder_content_margin_top">24.0dip</dimen>
     <dimen name="folder_content_padding_left">0.0dip</dimen>
+    <dimen name="folder_content_padding_right">0.0dip</dimen>
     <dimen name="folder_content_width_noword">280.6953dip</dimen>
     <dimen name="folder_edit_text_margin_left">18.0dip</dimen>
     <dimen name="folder_edit_text_text_size_noword">35.599976dip</dimen>
     <dimen name="folder_grid_margin_top">17.329987dip</dimen>
     <dimen name="folder_item_horizontal_spacing_noword">28.0dip</dimen>
+    <dimen name="folder_item_vertical_spacing_noword">0.0dip</dimen>
     <dimen name="folder_preview_item_padding">0.0dip</dimen>
     <dimen name="hotseats_margin_top_search_bar">24.5dip</dimen>
     <dimen name="icon_padding_top">4.0dip</dimen>

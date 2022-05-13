@@ -116,25 +116,9 @@
     :cond_0
     const-string v2, "ContentProviderBinder"
 
+    const-string v3, "resolver not null, go on!"
+
     .line 483
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "resolver not null, go on! args.uri = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v4, p0, Lcom/miui/maml/data/ContentProviderBinder$WorkerTask;->mWorkArgs:Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;
-
-    iget-object v4, v4, Lcom/miui/maml/data/AsyncQueryHandler$WorkerArgs;->uri:Landroid/net/Uri;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
     invoke-static {v2, v3}, Lcom/miui/maml/util/MamlLog;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 487

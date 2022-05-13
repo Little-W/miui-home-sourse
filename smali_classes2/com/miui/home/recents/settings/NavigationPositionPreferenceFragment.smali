@@ -22,7 +22,7 @@
 .method public onCreatePreferences(Landroid/os/Bundle;Ljava/lang/String;)V
     .locals 0
 
-    const p1, 0x7f13001f
+    const p1, 0x7f130020
 
     .line 16
     invoke-virtual {p0, p1, p2}, Lcom/miui/home/recents/settings/NavigationPositionPreferenceFragment;->setPreferencesFromResource(ILjava/lang/String;)V

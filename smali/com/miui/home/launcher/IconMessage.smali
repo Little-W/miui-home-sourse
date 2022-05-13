@@ -263,7 +263,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0600fc
+    const v2, 0x7f0600fd
 
     invoke-static {v1, v2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -446,7 +446,7 @@
 
     move-result-object p1
 
-    const v0, 0x7f10023a
+    const v0, 0x7f10023c
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 

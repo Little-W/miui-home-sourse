@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Workspace;)V
     .locals 0
 
-    .line 915
+    .line 916
     iput-object p1, p0, Lcom/miui/home/launcher/Workspace$2;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +40,10 @@
 
     const-string v0, "pinch"
 
-    .line 918
+    .line 919
     invoke-static {v0}, Lcom/miui/home/launcher/AnalyticalDataCollector;->trackEditMode(Ljava/lang/String;)V
 
-    .line 919
+    .line 920
     iget-object v0, p0, Lcom/miui/home/launcher/Workspace$2;->this$0:Lcom/miui/home/launcher/Workspace;
 
     invoke-static {v0}, Lcom/miui/home/launcher/Workspace;->access$200(Lcom/miui/home/launcher/Workspace;)Lcom/miui/home/launcher/Launcher;

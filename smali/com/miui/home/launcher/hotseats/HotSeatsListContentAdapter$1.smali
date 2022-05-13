@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;)V
     .locals 0
 
-    .line 116
+    .line 115
     iput-object p1, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter$1;->this$0:Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onGenericMotion(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 119
+    .line 118
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionButton()I
 
     move-result v0
@@ -55,7 +55,7 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 120
+    .line 119
     iget-object p2, p0, Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter$1;->this$0:Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;
 
     invoke-static {p2}, Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;->access$000(Lcom/miui/home/launcher/hotseats/HotSeatsListContentAdapter;)Landroid/view/View$OnLongClickListener;

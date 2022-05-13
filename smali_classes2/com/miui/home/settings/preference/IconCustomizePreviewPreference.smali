@@ -290,7 +290,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f07009f
+    const v2, 0x7f0700a2
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -342,7 +342,7 @@
     :cond_0
     new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
-    const v2, 0x7f0600fe
+    const v2, 0x7f0600ff
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getColor(I)I
 

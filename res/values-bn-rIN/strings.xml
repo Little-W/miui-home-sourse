@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">অ্যাপ্স খোলার আগে দেখে নিন আপনার ডিভাইস ঠিকমত রিবুট হয়েছে কিনা</string>
     <string name="add_custom_category">নিজের মতো</string>
     <string name="add_screen">স্ক্রিন যোগ করুন</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">সব অ্যাপ সফলভাবে যোগ করা হয়েছে</string>
     <string name="afternoon">দুপুর</string>
     <string name="agree_button">রাজি হন</string>
@@ -67,7 +68,7 @@
     <string name="all_apps_slide_up_tips">অ্যাপ ড্রয়ার খোলার জন্য উপরে সোয়াইপ করে খোলা আগে থেকেই ব্যবহার করা হচ্ছে।সাধারণ হোম স্ক্রিন মোডে গিয়ে আবার চেষ্টা করুন।</string>
     <string name="all_apps_suggestions">অ্যাপ প্রস্তাব</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">অ্যানিমেশন রেট</string>
     <string name="announce_for_app_move_in_folder">%1$d ফোল্ডারে পাঠানো হয়েছে</string>
     <string name="announce_for_checked">%1$s，চেক করা হয়েছে</string>
     <string name="announce_for_choose_default_screen">%1$d কে ডিফল্টহোম স্ক্রিন হিসেবে সেট করুন</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">আইকন সফলভাবে সাজানো হয়েছে</string>
     <string name="one_key_call_title">ডায়াল করতে ট্যাপ করুন</string>
     <string name="online_wallpaper">অনলাইন</string>
+    <string name="open_pad_personal_assistant_settings">হোম স্ক্রিন উইজেট</string>
     <string name="open_personal_assistant_dialog_btn_cancel">বাতিল করুন</string>
     <string name="open_personal_assistant_dialog_btn_confirm">বন্ধ করুন</string>
     <string name="open_personal_assistant_dialog_desc">অ্যাপ ভল্ট বন্ধ করার পর আপনি আর অ্যাপ ভল্ট উইজেট দেখতে বা ব্যবহার করতে পারবেন না। এদের আপডেট করা ভার্সনও আপনার কাছে আর উপলভ্য হবে না। তবুও বন্ধ করে দিতে চান?</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">ভেতরের ও বাইরের হোম স্ক্রিন লেআউট নতুন ভার্সনে সিঙ্ক করা হয়েছে</string>
     <string name="ota_layout_adjustment_title">হোম স্ক্রিন লেআউট</string>
     <string name="out_of_space">এই হোম স্ক্রিনে আর জায়গা নেই</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">তৃতীয় পক্ষের অ্যাপ আইকনে অ্যানিমেশান রেন্ডার করুন</string>
     <string name="perfect_icons_switch_title">গ্লোবাল আইকন অ্যানিমেশন</string>
     <string name="permdesc_install_shortcut">ব্যবহারকারীর হস্তক্ষেপ ছাড়া একটি অ্যাপকে শর্টকাট যোগ করতে দিন।</string>

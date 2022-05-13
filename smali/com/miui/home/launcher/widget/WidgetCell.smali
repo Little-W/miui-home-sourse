@@ -310,7 +310,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070474
+    const v1, 0x7f07047b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -344,7 +344,7 @@
 
     move-result-object p1
 
-    const p2, 0x7f070475
+    const p2, 0x7f07047c
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -492,7 +492,7 @@
 
     aput-object v3, v2, v6
 
-    const v3, 0x7f10007d
+    const v3, 0x7f10007e
 
     invoke-virtual {v0, v3, v2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -501,7 +501,7 @@
     .line 93
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f070474
+    const v1, 0x7f07047b
 
     .line 96
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I

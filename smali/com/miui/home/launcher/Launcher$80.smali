@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/Launcher;)V
     .locals 0
 
-    .line 8628
+    .line 8650
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$80;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 2
 
-    .line 8631
+    .line 8653
     invoke-static {}, Lcom/miui/home/launcher/DeviceConfig;->isSupportRecentsAndFsGesture()Z
 
     move-result v0
@@ -49,10 +49,10 @@
 
     const-string v1, "reset shortcutMenuLayer alpha and scale"
 
-    .line 8632
+    .line 8654
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8633
+    .line 8655
     iget-object v0, p0, Lcom/miui/home/launcher/Launcher$80;->this$0:Lcom/miui/home/launcher/Launcher;
 
     const/high16 v1, 0x3f800000    # 1.0f

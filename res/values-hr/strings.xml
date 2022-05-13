@@ -53,6 +53,7 @@
     <string name="activity_not_unlocked">Pričekajte da se uređaj potpuno ponovno pokrene prije otvaranja aplikacija</string>
     <string name="add_custom_category">Prilagođeno</string>
     <string name="add_screen">Dodaj tipku zaslona</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">Sve su aplikacije uspješno dodane</string>
     <string name="afternoon">Popodne</string>
     <string name="agree_button">Slažem se</string>
@@ -666,6 +667,7 @@
     <string name="notification_reset_title">Uspješno raspoređene ikone</string>
     <string name="one_key_call_title">Dodirni za poziv</string>
     <string name="online_wallpaper">Online</string>
+    <string name="open_pad_personal_assistant_settings">Home screen widgets</string>
     <string name="open_personal_assistant_dialog_btn_cancel">Odustani</string>
     <string name="open_personal_assistant_dialog_btn_confirm">Isključi</string>
     <string name="open_personal_assistant_dialog_desc">Nakon što isključite trezor aplikacija, nećete moći vidjeti niti koristiti widgete trezora aplikacija. Njihove ažurirane inačice neće vam biti dostupne. Svejedno isključiti?</string>
@@ -677,6 +679,7 @@
     <string name="ota_layout_adjustment_content">Unutarnji i vanjski rasporedi Početnog zaslona su sinkronizirani s novom verzijom.</string>
     <string name="ota_layout_adjustment_title">Rasporedi Početnog zaslona</string>
     <string name="out_of_space">Na ovom zaslonu više nema mjesta.</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">Prikažite animacije na ikonama aplikacija trećih strana</string>
     <string name="perfect_icons_switch_title">Animacije globalnih ikona</string>
     <string name="permdesc_install_shortcut">Dopušta aplikaciji dodavanje prečica bez intervencije korisnika.</string>

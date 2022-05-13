@@ -1168,7 +1168,7 @@
     .line 46
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllDeleteAppActivity;->setContentView(I)V
 
-    const p1, 0x7f100168
+    const p1, 0x7f100169
 
     .line 47
     invoke-virtual {p0, p1}, Lcom/miui/home/settings/AllDeleteAppActivity;->setTitle(I)V

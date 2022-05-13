@@ -24,9 +24,11 @@
     <dimen name="icon_padding_top">4.0dip</dimen>
     <dimen name="icon_title_margin_top">-3.0dip</dimen>
     <dimen name="launcher_action_bar_title_size">20.0dip</dimen>
+    <item type="dimen" name="launcher_miui_widget_density_scale_factor">0.9</item>
     <dimen name="navigation_guide_item_icon_height">133.0dip</dimen>
     <dimen name="navigation_guide_item_icon_width">118.0dip</dimen>
     <dimen name="navigation_guide_text_margin_horizontal">21.0dip</dimen>
+    <item type="dimen" name="pa_miui_widget_density_scale_factor">0.9</item>
     <dimen name="recents_horizontal_layout_task_view_gap">21.0dip</dimen>
     <item type="dimen" name="recents_task_rect_scale">0.313</item>
     <item type="dimen" name="recents_task_stack_view_ratio">1.1</item>

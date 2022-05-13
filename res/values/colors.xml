@@ -80,6 +80,7 @@
     <color name="androidx_core_ripple_material_light">#1f000000</color>
     <color name="androidx_core_secondary_text_default_material_light">#8a000000</color>
     <color name="app_locate_mask_color">#cc000000</color>
+    <color name="app_pair_background_color">@color/white</color>
     <color name="app_select_input_hint_color_dark">@color/alpha40white</color>
     <color name="app_select_input_hint_color_light">@color/alpha40black</color>
     <color name="app_select_input_line_color_dark">#33ffffff</color>

@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">המתן עד שהמכשיר שברשותך יאותחל לפני שתפתח יישומים</string>
     <string name="add_custom_category">מותאם אישית</string>
     <string name="add_screen">הוסף מסך</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">כל האפליקציות נוספו בהצלחה</string>
     <string name="afternoon">אחר הצהריים</string>
     <string name="agree_button">מסכים</string>
@@ -67,7 +68,7 @@
     <string name="all_apps_slide_up_tips">החלקה כלפי מעלה נשמרת עבור מגירת היישומים. החלף למסך בית רגיל ונסה שוב.</string>
     <string name="all_apps_suggestions">הצעות ליישומים</string>
     <string name="am">AM</string>
-    <string name="animation_rate_title">Animation speed</string>
+    <string name="animation_rate_title">מהירות אנימציה</string>
     <string name="announce_for_app_move_in_folder">הועבר למיקום %1$d בתיקייה</string>
     <string name="announce_for_checked">%1$s, סומן</string>
     <string name="announce_for_choose_default_screen">"הגדר את מסך %1$d כברירת המחדל עבור 'מסך הבית'"</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">סידור הצלמיות בוצע בהצלחה</string>
     <string name="one_key_call_title">לחץ כדי לחייג</string>
     <string name="online_wallpaper">מקוון</string>
+    <string name="open_pad_personal_assistant_settings">"ווידג'טים של מסך הבית"</string>
     <string name="open_personal_assistant_dialog_btn_cancel">ביטול</string>
     <string name="open_personal_assistant_dialog_btn_confirm">כיבוי</string>
     <string name="open_personal_assistant_dialog_desc">"לאחר השבתת כספת היישומים, לא ניתן יהיה להשתמש בווידג'טים של כספת היישומים או לראות אותם. גם הגרסאות המעודכנות שלהם לא יהיו זמינות עבורך. להשבית אותה בכל זאת?"</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">בגרסה החדשה בוצע סנכרון בין הפריסה החיצונית והפריסה הפנימית של מסך הבית.</string>
     <string name="ota_layout_adjustment_title">"פריסות 'מסך הבית'"</string>
     <string name="out_of_space">אין עוד מקום פנוי בדף מסך הבית הזה</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">"רנדור אנימציות בצלמיות של אפליקציות צד ג'"</string>
     <string name="perfect_icons_switch_title">צלמיות אנימציה גלובליות</string>
     <string name="permdesc_install_shortcut">אפשר ליישום להוסיף קיצורי דרך ללא התערבות המשתמש.</string>

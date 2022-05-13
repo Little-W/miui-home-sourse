@@ -26,6 +26,7 @@
     <string name="activity_not_unlocked">एप्स उघडण्यापूर्वी तुमचे डिव्हाइस पूर्णपणे रिबूट होईपर्यंत प्रतीक्षा करा</string>
     <string name="add_custom_category">कस्टम</string>
     <string name="add_screen">स्कीन जोडा</string>
+    <string name="add_to_workspace">添加至桌面</string>
     <string name="added_all_category">यशस्वीरित्या सर्व एप्स जोडली</string>
     <string name="afternoon">दुपार</string>
     <string name="agree_button">सहमती</string>
@@ -635,6 +636,7 @@
     <string name="notification_reset_title">यशस्वीपणे आयकॉन्सची क्रमवारी लावली</string>
     <string name="one_key_call_title">डायल करण्यासाठी टॅप करा</string>
     <string name="online_wallpaper">ऑनलाइन</string>
+    <string name="open_pad_personal_assistant_settings">होम स्क्रीन विजेट</string>
     <string name="open_personal_assistant_dialog_btn_cancel">रद्द</string>
     <string name="open_personal_assistant_dialog_btn_confirm">बंद करा</string>
     <string name="open_personal_assistant_dialog_desc">एप व्हॉल्ट बंद केल्यानंतर, तुम्ही एप व्हॉल्ट विजेट पाहू किंवा वापरू शकणार नाही. त्यांच्या अद्ययावत आवृत्त्या तुमच्यासाठी उपलब्ध होणार नाहीत. तरीही बंद करायचे?</string>
@@ -646,6 +648,7 @@
     <string name="ota_layout_adjustment_content">नवीन आवृत्तीमध्ये अंतर्गत आणि बाह्य होम स्क्रीन लेआउट सिंक्रोनाइज केले गेले.</string>
     <string name="ota_layout_adjustment_title">होम स्क्रीन लेआऊट</string>
     <string name="out_of_space">या होम स्क्रीनवर अधिक जागा नाही</string>
+    <string name="pair_icon_name">%1$s|%2$s</string>
     <string name="perfect_icons_switch_summary">थर्ड पार्टी एप चिन्हांवर अ‍ॅनिमेशन प्रदान करा</string>
     <string name="perfect_icons_switch_title">ग्लोबल आयकॉन अ‍ॅनिमेशन</string>
     <string name="permdesc_install_shortcut">युजरच्या हस्तक्षेपाशिवाय एपला शॉर्टकट्स जोडू देते.</string>

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/miui/home/launcher/WorkspaceThumbnailView;)V
     .locals 0
 
-    .line 538
+    .line 541
     iput-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$3;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
     invoke-direct {p0}, Lmiuix/animation/listener/TransitionListener;-><init>()V
@@ -35,7 +35,7 @@
 .method public onComplete(Ljava/lang/Object;)V
     .locals 0
 
-    .line 541
+    .line 544
     iget-object p1, p0, Lcom/miui/home/launcher/WorkspaceThumbnailView$3;->this$0:Lcom/miui/home/launcher/WorkspaceThumbnailView;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/WorkspaceThumbnailView;->onHideComplete()V

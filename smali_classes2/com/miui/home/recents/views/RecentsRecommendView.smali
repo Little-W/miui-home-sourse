@@ -451,7 +451,7 @@
 
     const v1, 0x7f080549
 
-    const v2, 0x7f100376
+    const v2, 0x7f10037a
 
     .line 65
     invoke-direct {p0, v0, v1, v2}, Lcom/miui/home/recents/views/RecentsRecommendView;->initItem(III)Landroid/widget/LinearLayout;
@@ -464,7 +464,7 @@
 
     const v1, 0x7f08054c
 
-    const v2, 0x7f100379
+    const v2, 0x7f10037d
 
     .line 68
     invoke-direct {p0, v0, v1, v2}, Lcom/miui/home/recents/views/RecentsRecommendView;->initItem(III)Landroid/widget/LinearLayout;
@@ -491,12 +491,12 @@
 
     if-eqz v1, :cond_1
 
-    const v1, 0x7f100378
+    const v1, 0x7f10037c
 
     goto :goto_1
 
     :cond_1
-    const v1, 0x7f100377
+    const v1, 0x7f10037b
 
     :goto_1
     const v2, 0x7f0a0299
@@ -528,12 +528,12 @@
 
     if-eqz v2, :cond_3
 
-    const v2, 0x7f100375
+    const v2, 0x7f100379
 
     goto :goto_3
 
     :cond_3
-    const v2, 0x7f100374
+    const v2, 0x7f100378
 
     .line 74
     :goto_3
@@ -760,12 +760,12 @@
 
     if-eqz v2, :cond_1
 
-    const v2, 0x7f100378
+    const v2, 0x7f10037c
 
     goto :goto_1
 
     :cond_1
-    const v2, 0x7f100377
+    const v2, 0x7f10037b
 
     .line 138
     :goto_1
@@ -824,12 +824,12 @@
 
     if-eqz v1, :cond_4
 
-    const v1, 0x7f100375
+    const v1, 0x7f100379
 
     goto :goto_3
 
     :cond_4
-    const v1, 0x7f100374
+    const v1, 0x7f100378
 
     .line 147
     :goto_3

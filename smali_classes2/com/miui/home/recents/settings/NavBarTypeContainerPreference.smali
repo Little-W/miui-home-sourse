@@ -421,14 +421,14 @@
     .line 120
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
 
-    const v1, 0x7f1002e4
+    const v1, 0x7f1002e6
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setTitle(I)V
 
     .line 121
     iget-object v0, p0, Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;->mGestureLearnAlertDialog:Lcom/miui/home/recents/settings/GestureLearnAlertDialog;
 
-    const v1, 0x7f1002e3
+    const v1, 0x7f1002e5
 
     invoke-virtual {v0, v1}, Lcom/miui/home/recents/settings/GestureLearnAlertDialog;->setMessage(I)V
 
@@ -480,14 +480,14 @@
 
     invoke-direct {v1, p0}, Lcom/miui/home/recents/settings/-$$Lambda$NavBarTypeContainerPreference$xRC8XKr4JwAzzOwGzEOecvusUBk;-><init>(Lcom/miui/home/recents/settings/NavBarTypeContainerPreference;)V
 
-    const v2, 0x7f100306
+    const v2, 0x7f100308
 
     .line 102
     invoke-virtual {v0, v2, v1}, Lmiuix/appcompat/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lmiuix/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    const v1, 0x7f100304
+    const v1, 0x7f100306
 
     const/4 v2, 0x0
 
@@ -508,7 +508,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f100307
+    const v1, 0x7f100309
 
     .line 113
     invoke-virtual {v0, v1}, Lmiuix/appcompat/app/AlertDialog;->setTitle(I)V
@@ -518,7 +518,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f100305
+    const v2, 0x7f100307
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

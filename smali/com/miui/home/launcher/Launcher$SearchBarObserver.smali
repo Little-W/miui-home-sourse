@@ -22,10 +22,10 @@
 .method public constructor <init>(Lcom/miui/home/launcher/Launcher;Landroid/os/Handler;)V
     .locals 0
 
-    .line 3983
+    .line 3987
     iput-object p1, p0, Lcom/miui/home/launcher/Launcher$SearchBarObserver;->this$0:Lcom/miui/home/launcher/Launcher;
 
-    .line 3984
+    .line 3988
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
@@ -40,15 +40,15 @@
 
     const-string v0, "SearchBarObserver onChange"
 
-    .line 3989
+    .line 3993
     invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3990
+    .line 3994
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$SearchBarObserver;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-virtual {p1}, Lcom/miui/home/launcher/Launcher;->reloadSearchBarIfNeed()V
 
-    .line 3991
+    .line 3995
     iget-object p1, p0, Lcom/miui/home/launcher/Launcher$SearchBarObserver;->this$0:Lcom/miui/home/launcher/Launcher;
 
     invoke-static {p1}, Lcom/miui/home/launcher/Launcher;->access$2200(Lcom/miui/home/launcher/Launcher;)Lcom/miui/home/launcher/hotseats/HotSeats;

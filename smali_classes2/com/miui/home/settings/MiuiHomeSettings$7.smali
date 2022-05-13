@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/miui/home/settings/MiuiHomeSettings;)V
     .locals 0
 
-    .line 652
+    .line 645
     iput-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$7;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
-    .line 656
+    .line 649
     iget-object p1, p0, Lcom/miui/home/settings/MiuiHomeSettings$7;->this$0:Lcom/miui/home/settings/MiuiHomeSettings;
 
     iget-object p1, p1, Lcom/miui/home/settings/MiuiHomeSettings;->mSearchBarSetting:Lcom/miui/home/settings/preference/CheckBoxPreference;
